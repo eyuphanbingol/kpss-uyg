@@ -55,7 +55,7 @@ window.getKpssData = function () {
                 notlar:window.tarih_13_notlari || [],
                 sorular:window.tarih_13_sorulari || [] 
             },
-            "Milli Mücadeler Hazırlık Dönemi":{
+            "I. TBMM DÖNEMİ VE GELİŞMELERİ":{
                 notlar:window.tarih_14_notlari || [],
                 sorular:window.tarih_14_sorulari || [] 
             }
