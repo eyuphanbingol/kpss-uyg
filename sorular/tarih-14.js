@@ -6,14 +6,14 @@ window.tarih_14_sorulari = [
     {
         question: "Soru 1: I. TBMM açılmadan önce yeni meclisin adı konusunda çeşitli öneriler gündeme gelmiştir.\n\nAşağıdakilerden hangisi bu öneriler arasında yer almamıştır?",
         options: [
-            "A) Kurtay",
+            "A) Kurultay",
             "B) Millet Meclisi",
             "C) Meclis-i Kebir",
             "D) Meclis-i Müessisan",
             "E) Meclis-i Ayan"
         ],
         correctAnswerIndex: 4,
-        explanation: "Meclis-i Ayan, Osmanlı dönemindeki üst meclisin adıdır ve I. TBMM için önerilen isimler arasında yer almaz. Önerilen isimler arasında Kurtay, Millet Meclisi, Meclis-i Kebir ve Meclis-i Müessisan bulunmaktadır."
+        explanation: "Meclis-i Ayan, Osmanlı dönemindeki üst meclisin adıdır ve I. TBMM için önerilen isimler arasında yer almaz. Önerilen isimler arasında Kurultay, Millet Meclisi, Meclis-i Kebir ve Meclis-i Müessisan bulunmaktadır."
     },
     {
         question: "Soru 2: Mustafa Kemal, Ankara'da açılacak yeni meclis için aşağıdaki isimlerden hangisini önermiştir?",
