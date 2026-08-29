@@ -9,7 +9,7 @@ window.tarih_14_notlari = [
     </div>
     <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
         <ul class="list-disc list-inside space-y-1 text-xs">
-            <li>Kurtay</li>
+            <li>Kurultay</li>
             <li>Millet Meclisi</li>
             <li>Meclisi Kebir</li>
             <li>Meclisi Müessisan</li>
