@@ -18,6 +18,7 @@ window.cografya_4_notlari = [
             🦎 1. KARSTİK PLATOLAR (Teke ve Taşeli)
         </span>
     </div>
+     
     <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <p>Akdeniz Bölgesi'nde yer alan, kireç taşlarının (kalker) erimesiyle oluşmuş engebeli platolardır.</p>
@@ -29,6 +30,10 @@ window.cografya_4_notlari = [
             </ul>
         </div>
     </div>
+    <!-- 🗺️ HARİTA / RESİM ALANI -->
+            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
+                <img src="./src/img/tr_plato.png" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+            </div>
     `,
 
     `
@@ -41,6 +46,10 @@ window.cografya_4_notlari = [
         <p>Magmadan çıkan lavların çöküntü alanlarını doldurması ve ardından akarsularca yarılmasıyla oluşan platolardır.</p>
         <p class="mt-2">Doğu Anadolu ve İç Anadolu'da görülür.</p>
     </div>
+    <!-- 🗺️ HARİTA / RESİM ALANI -->
+            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
+                <img src="./src/img/tr_plato.png" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+            </div>
     `,
 
     `
@@ -61,6 +70,10 @@ window.cografya_4_notlari = [
             </ul>
         </div>
     </div>
+    <!-- 🗺️ HARİTA / RESİM ALANI -->
+            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
+                <img src="./src/img/tr_plato.png" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+            </div>
     `,
 
     `
@@ -77,6 +90,10 @@ window.cografya_4_notlari = [
             </ul>
         </div>
     </div>
+    <!-- 🗺️ HARİTA / RESİM ALANI -->
+            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
+                <img src="./src/img/tr_plato.png" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+            </div>
     `,
 
     `
@@ -88,6 +105,10 @@ window.cografya_4_notlari = [
     <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm max-w-2xl mx-auto">
         <p>Dağlık ve engebeli alanların dış kuvvetler tarafından milyonlarca yıl boyunca aşındırılarak deniz seviyesine yakın bir düzlük haline getirilmesiyle oluşurlar.</p>
     </div>
+    <!-- 🗺️ HARİTA / RESİM ALANI -->
+            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
+                <img src="./src/img/tr_plato.png" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+            </div>
     `,
 
     `
@@ -106,6 +127,10 @@ window.cografya_4_notlari = [
             </ul>
         </div>
     </div>
+    <!-- 🗺️ HARİTA / RESİM ALANI -->
+            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
+                <img src="./src/img/tr_plato.png" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+            </div>
     `,
 
     `
@@ -118,6 +143,10 @@ window.cografya_4_notlari = [
         <p>Karadeniz Bölgesi'nde yer alan bir aşınım platosudur.</p>
         <p class="mt-2">Çatalca-Kocaeli'nin aksine yeşil doğası korunmuş olup, üzerinde aktif olarak <b class="text-rose-600 dark:text-rose-400">tarım faaliyetleri</b> yapılmaktadır.</p>
     </div>
+    <!-- 🗺️ HARİTA / RESİM ALANI -->
+            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
+                <img src="./src/img/tr_plato.png" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+            </div>
     `,
 
     `
@@ -127,6 +156,7 @@ window.cografya_4_notlari = [
         </span>
     </div>
     <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    
         <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30">
             <p>Sert tabakaların yatay duruşlu olduğu, karasal iklimin hüküm sürdüğü iç bölgelerdeki geniş düzlüklerdir.</p>
             
@@ -150,6 +180,12 @@ window.cografya_4_notlari = [
                 <li><b class="text-rose-600 dark:text-rose-400">Hayvancılık:</b> Bozkır bitki örtüsünün cılız otlarından dolayı <b class="text-rose-600 dark:text-rose-400">küçükbaş hayvan (koyun) yetiştiriciliği</b> çok yaygındır.</li>
             </ul>
         </div>
+        
     </div>
+    <!-- 🗺️ HARİTA / RESİM ALANI -->
+            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
+                <img src="./src/img/tr_plato.png" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+            </div>
+    
     `
 ];
