@@ -21,6 +21,11 @@
                     autoRefreshToken: true,
                     detectSessionInUrl: true,
                     flowType: "pkce"
+                },
+                global: {
+                    fetch: function (input, init) {
+                        return window.fetch(input, init);
+                    }
                 }
             });
             client.auth.onAuthStateChange(function (event) {

@@ -20,7 +20,7 @@
                     if (window.SyncEngine) window.SyncEngine.sync();
                     if (props.onDone) props.onDone();
                 }
-            } catch (e) { setMsg(String(e.message || e)); }
+            } catch (e) { setMsg("Bağlantı kurulamadı. Sayfayı yenile (önbelleği temizle). " + String(e.message || e)); }
             setBusy(false);
         }
 

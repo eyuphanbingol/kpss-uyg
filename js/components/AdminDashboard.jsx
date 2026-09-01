@@ -17,12 +17,13 @@
                 return;
             }
             sb.rpc("admin_kpis").then(function (r) {
-                if (!r.error) setKpi(r.data);
-            });
+                if (r.error) setMsg("KPI: " + r.error.message);
+                else setKpi(r.data);
+            }).catch(function (e) { setMsg("Ağ hatası (KPI): " + (e && e.message)); });
             sb.from("admin_user_directory").select("*").limit(100).then(function (r) {
                 if (r.error) setMsg("Admin view/RLS: " + r.error.message);
                 else setRows(r.data || []);
-            });
+            }).catch(function (e) { setMsg("Ağ hatası (liste): " + (e && e.message)); });
         }, [isAdmin]);
 
         async function act(name, payload) {

@@ -1,6 +1,6 @@
-const CACHE = "kpss-shell-v3";
+const CACHE = "kpss-shell-v5";
 
-self.addEventListener("install", function (e) {
+self.addEventListener("install", function () {
     self.skipWaiting();
 });
 
@@ -14,16 +14,8 @@ self.addEventListener("activate", function (e) {
 
 self.addEventListener("fetch", function (e) {
     if (e.request.method !== "GET") return;
-    var url = e.request.url;
-    if (url.indexOf("/js/") !== -1 || url.indexOf("app.jsx") !== -1 || url.indexOf("unpkg.com") !== -1) {
-        e.respondWith(fetch(e.request));
-        return;
-    }
-    e.respondWith(
-        fetch(e.request).then(function (res) {
-            return res;
-        }).catch(function () {
-            return caches.match(e.request);
-        })
-    );
+    var url;
+    try { url = new URL(e.request.url); } catch (err) { return; }
+    if (url.origin !== self.location.origin) return;
+    e.respondWith(fetch(e.request));
 });
