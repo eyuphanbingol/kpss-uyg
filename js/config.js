@@ -1,5 +1,5 @@
 (function (global) {
-    var URL = "https://feblrqillsrfslbmrkjyc.supabase.co";
+    var URL = "https://feblrqillsrfsbmrkjyc.supabase.co";
     var ANON = "sb_publishable_3TaCTFJJiJtEdQtF_ZbCCw_Pxf-pzRE";
 
     global.APP_CONFIG = {
