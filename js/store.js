@@ -336,6 +336,9 @@
             if (opts && opts.quiet) persistQuiet();
             else emit();
         },
+        notify: function () {
+            listeners.forEach(function (fn) { fn(clone(state)); });
+        },
         completeOnboarding: function (p) {
             state.profile.onboarded = true;
             state.profile.name = (p.name || "").trim();

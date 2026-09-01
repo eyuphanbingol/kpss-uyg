@@ -1,13 +1,32 @@
 (function (global) {
     var client = null;
-    var cfg = global.KpssConfig || {};
+
+    function creds() {
+        var app = global.APP_CONFIG || {};
+        var kpss = global.KpssConfig || {};
+        return {
+            url: app.SUPABASE_URL || kpss.supabaseUrl,
+            key: app.SUPABASE_ANON_KEY || kpss.supabaseAnonKey
+        };
+    }
 
     function getClient() {
         if (client) return client;
-        if (!global.supabase || !cfg.supabaseUrl || !cfg.supabaseAnonKey) return null;
+        var c = creds();
+        if (!global.supabase || !c.url || !c.key) return null;
         try {
-            client = global.supabase.createClient(cfg.supabaseUrl, cfg.supabaseAnonKey, {
-                auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
+            client = global.supabase.createClient(c.url, c.key, {
+                auth: {
+                    persistSession: true,
+                    autoRefreshToken: true,
+                    detectSessionInUrl: true,
+                    flowType: "pkce"
+                }
+            });
+            client.auth.onAuthStateChange(function (event) {
+                if (event === "SIGNED_IN" || event === "TOKEN_REFRESHED" || event === "INITIAL_SESSION") {
+                    if (global.SyncEngine && global.SyncEngine.sync) global.SyncEngine.sync();
+                }
             });
         } catch (e) {
             client = null;

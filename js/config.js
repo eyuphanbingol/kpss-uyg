@@ -1,9 +1,18 @@
 (function (global) {
+    var URL = "https://feblrqillsrfslbmrkjyc.supabase.co";
+    var ANON = "sb_publishable_3TaCTFJJiJtEdQtF_ZbCCw_Pxf-pzRE";
+
+    global.APP_CONFIG = {
+        SUPABASE_URL: URL,
+        SUPABASE_ANON_KEY: ANON
+    };
+
     global.KpssConfig = {
-        supabaseUrl: "https://feblrqillsrfslbmrkjyc.supabase.co",
-        supabaseAnonKey: "sb_publishable_3TaCTFJJiJtEdQtF_ZbCCw_Pxf-pzRE",
+        supabaseUrl: URL,
+        supabaseAnonKey: ANON,
         appName: "KPSS Eğitim Alanı",
         platform: "web",
+        productionUrl: "https://kpss-uyg.vercel.app",
         freeWeeklyExams: 2,
         freeDailyMixed: 3,
         examDateByLevel: {

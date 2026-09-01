@@ -104,13 +104,17 @@
             var local = global.StudentStore.getState();
             var remoteRow = await sb.from("student_states").select("*").eq("user_id", uid).maybeSingle();
             var remote = remoteRow.data && remoteRow.data.payload;
+            var dbRole = remoteRow.data && remoteRow.data.role;
             var merged = mergePayload(local, remote);
             merged.userProfile.authUserId = uid;
             merged.userProfile.email = session.user.email || merged.userProfile.email;
+            if (dbRole === "admin" || merged.userProfile.role === "admin") {
+                merged.userProfile.role = "admin";
+            }
             merged.updatedAt = global.StudentStore.nowIso();
             global.StudentStore.replaceState(merged, { quiet: true });
             var nick = merged.userProfile.nickname || "ogrenci";
-            await sb.from("student_states").upsert({
+            var row = {
                 user_id: uid,
                 payload: merged,
                 updated_at: merged.updatedAt,
@@ -121,7 +125,10 @@
                 premium: !!merged.userProfile.premium,
                 last_study_at: merged.streak.lastDay,
                 questions_total: merged.counters.questions || 0
-            });
+            };
+            if (merged.userProfile.role === "admin") row.role = "admin";
+            await sb.from("student_states").upsert(row);
+            if (global.StudentStore.notify) global.StudentStore.notify();
             var today = global.StudentStore.todayStr();
             var sess = merged.sessions[today] || { questions: 0 };
             if (sess.questions) {
