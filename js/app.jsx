@@ -136,8 +136,9 @@ function Onboarding(props) {
     return (
         <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-end sm:items-center justify-center p-4">
             <div className="w-full max-w-md bg-white dark:bg-stone-900 rounded-3xl p-6 sm:p-8 shadow-2xl fade-in">
-                <h2 className="text-2xl font-black text-stone-900 dark:text-white mb-1">Profilini tamamla</h2>
-                <p className="text-sm text-stone-500 mb-5">Google ile giriş yaptın. Adın ve eğitim düzeyin uygulamayı açmak için gerekli.</p>
+                <img src="icons/atanom.png" alt="Atanom" className="h-16 w-16 mx-auto mb-3 object-contain" />
+                <h2 className="text-2xl font-black text-stone-900 dark:text-white mb-1 text-center">Atanom</h2>
+                <p className="text-sm text-stone-500 mb-5 text-center">Google ile giriş yaptın. Adın ve eğitim düzeyin uygulamayı açmak için gerekli.</p>
                 <label className="block text-xs font-bold text-stone-500 mb-1">Adın</label>
                 <input value={name} onChange={function (e) { setName(e.target.value); }} placeholder="Örn. Ayşe"
                     className="w-full mb-4 px-4 py-3 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-800 font-medium" />
@@ -871,9 +872,9 @@ function ResultView(props) {
                     const url = window.ShareCard.draw({
                         nickname: nick, pct: oran, correct: score, total: total,
                         streak: (props.student && props.student.streak && props.student.streak.count) || 0,
-                        caption: "Net kartı · KPSS Eğitim Alanı"
+                        caption: "Net kartı · Atanom"
                     });
-                    window.ShareCard.download(url, "kpss-net-karti.png");
+                    window.ShareCard.download(url, "atanom-net-karti.png");
                 }} className="w-full mb-3 p-4 rounded-2xl btn-primary text-white font-semibold">Net kartını indir</button>
                 <div className="flex gap-3">
                     <button onClick={props.onRetry} className="flex-1 btn-primary text-white p-4 rounded-2xl font-semibold">Tekrar</button>
@@ -1281,7 +1282,7 @@ function Ben(props) {
                 if (window.NotificationEngine) window.NotificationEngine.requestPush().then(function (r) {
                     if (r.ok) {
                         var n = window.NotificationEngine.streakNudge(st);
-                        if (n) window.NotificationEngine.showLocal("KPSS", n);
+                        if (n) window.NotificationEngine.showLocal("Atanom", n);
                     }
                 });
             }} className="w-full mb-3 p-3.5 rounded-2xl glass text-left card-hover">

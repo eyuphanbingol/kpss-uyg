@@ -285,9 +285,9 @@
                 <aside className="hidden md:flex w-64 shrink-0 flex-col border-r border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-950 shadow-lg">
                     <div className="px-5 py-6 border-b border-stone-200 dark:border-stone-800">
                         <div className="flex items-center gap-3">
-                            <div className="h-10 w-10 rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center text-white font-bold text-sm">
-                                KPSS
-                            </div>
+                            {window.AtanomLogo
+                                ? window.AtanomLogo("h-10 w-10 object-contain")
+                                : <img src="icons/atanom.png" alt="Atanom" className="h-10 w-10 object-contain" />}
                             <div>
                                 <p className="text-sm font-bold gradient-text">Yönetim Paneli</p>
                                 <p className="text-[10px] text-stone-400 truncate max-w-[140px]">{email}</p>

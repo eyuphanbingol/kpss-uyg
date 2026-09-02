@@ -10,7 +10,8 @@
     global.KpssConfig = {
         supabaseUrl: URL,
         supabaseAnonKey: ANON,
-        appName: "KPSS Eğitim Alanı",
+        appName: "Atanom",
+        logoUrl: "icons/atanom.png",
         platform: "web",
         productionUrl: "https://kpss-uyg.vercel.app",
         freeWeeklyExams: 2,

@@ -5,11 +5,11 @@
         c.width = 1080;
         c.height = 1920;
         var ctx = c.getContext("2d");
-        ctx.fillStyle = "#1E1B4B";
+        ctx.fillStyle = "#0D2C4D";
         ctx.fillRect(0, 0, 1080, 1920);
-        ctx.fillStyle = "#C9A227";
-        ctx.font = "600 36px Manrope, sans-serif";
-        ctx.fillText("KPSS EĞİTİM ALANI", 80, 160);
+        ctx.fillStyle = "#C5A059";
+        ctx.font = "700 42px Manrope, sans-serif";
+        ctx.fillText("ATANOM", 80, 160);
         ctx.fillStyle = "rgba(243,230,196,0.7)";
         ctx.font = "400 28px Inter, sans-serif";
         ctx.fillText(opts.nickname || "öğrenci", 80, 220);

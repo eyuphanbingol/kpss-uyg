@@ -145,10 +145,12 @@
                     
                     {/* Header */}
                     <div className="text-center mb-6">
-                        <div className="inline-flex h-16 w-16 rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-600 items-center justify-center text-white text-3xl shadow-lg shadow-indigo-500/20 mb-3">
-                            🚀
+                        <div className="inline-flex items-center justify-center mb-3">
+                            {window.AtanomLogo
+                                ? window.AtanomLogo("h-20 w-20 object-contain")
+                                : <img src="icons/atanom.png" alt="Atanom" className="h-20 w-20 object-contain" />}
                         </div>
-                        <h2 className="text-2xl font-black gradient-text">Hazır mısın?</h2>
+                        <h2 className="text-2xl font-black gradient-text">Atanom</h2>
                         <p className="text-sm text-stone-400 mt-1 max-w-xs mx-auto">
                             Hedefine doğru ilk adımı atalım
                         </p>

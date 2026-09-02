@@ -26,4 +26,13 @@
             strokeLinejoin: "round"
         }, React.createElement("path", { d: P[name] || P.check }));
     };
+
+    g.AtanomLogo = function (cls) {
+        var src = (g.KpssConfig && g.KpssConfig.logoUrl) || "icons/atanom.png";
+        return React.createElement("img", {
+            src: src,
+            alt: (g.KpssConfig && g.KpssConfig.appName) || "Atanom",
+            className: cls || "h-16 w-16 object-contain"
+        });
+    };
 })(window);
