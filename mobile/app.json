@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "Atanom",
+    "slug": "atanom",
+    "scheme": "atanom",
+    "version": "1.0.0",
+    "platforms": ["ios", "android"],
+    "icon": "./assets/atanom.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/atanom.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0D2C4D"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "app.atanom.mobile"
+    },
+    "android": {
+      "package": "app.atanom.mobile",
+      "adaptiveIcon": {
+        "backgroundColor": "#0D2C4D",
+        "foregroundImage": "./assets/atanom.png"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": ["expo-web-browser"]
+  }
+}
