@@ -169,31 +169,197 @@
     <script src="js/icons.js?v=15"></script>
 
     <style>
+        /* ===== GENEL ===== */
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            min-height: 100vh;
+        }
+
+        /* ===== KARMAŞIK ARKA PLAN ===== */
+        .app-bg {
+            background: radial-gradient(ellipse at 10% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+                        radial-gradient(ellipse at 90% 80%, rgba(236, 72, 153, 0.06) 0%, transparent 50%),
+                        #f8fafc;
+        }
+        .dark .app-bg {
+            background: radial-gradient(ellipse at 10% 20%, rgba(99, 102, 241, 0.12) 0%, transparent 50%),
+                        radial-gradient(ellipse at 90% 80%, rgba(236, 72, 153, 0.08) 0%, transparent 50%),
+                        #0f172a;
+        }
+
+        /* ===== CAM KART (GLASSMORPHISM) ===== */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px) saturate(1.2);
+            -webkit-backdrop-filter: blur(16px) saturate(1.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+        }
+        .dark .glass {
+            background: rgba(15, 23, 42, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ===== KART HOVER ===== */
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(226, 232, 240, 0.6);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px) scale(1.01);
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+        .dark .card-hover:hover {
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.5);
+            border-color: rgba(99, 102, 241, 0.2);
+        }
+
+        /* ===== BUTON GRADIENT ===== */
+        .btn-primary {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            border: none;
+            color: #fff;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(79, 70, 229, 0.45);
+        }
+        .btn-primary:active { transform: scale(0.97); }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            color: #1e293b;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .dark .btn-secondary {
+            background: rgba(30, 41, 59, 0.6);
+            border-color: rgba(71, 85, 105, 0.5);
+            color: #e2e8f0;
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.95);
+            border-color: #94a3b8;
+            transform: translateY(-2px);
+        }
+        .dark .btn-secondary:hover {
+            background: rgba(30, 41, 59, 0.9);
+            border-color: #64748b;
+        }
+
+        /* ===== GRADIENT METIN ===== */
+        .gradient-text {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ===== NAVBAR GLASS ===== */
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px) saturate(1.4);
+            -webkit-backdrop-filter: blur(20px) saturate(1.4);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.05);
+        }
+        .dark .nav-glass {
+            background: rgba(15, 23, 42, 0.85);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ===== STREAK BADGE ===== */
+        .streak-badge {
+            background: linear-gradient(135deg, #f59e0b, #f97316);
+            color: #fff;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 9999px;
+            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+        }
+
+        /* ===== PROGRESS RING ===== */
+        .progress-ring {
+            transition: stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+
+        /* ===== ANIMASYONLAR ===== */
+        .fade-in {
+            animation: fadeIn 0.4s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .slide-up {
+            animation: slideUp 0.35s cubic-bezier(0.2, 0.9, 0.3, 1);
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(24px) scale(0.97); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .pulse-glow {
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.3); }
+            50% { box-shadow: 0 0 0 12px rgba(79, 70, 229, 0); }
+        }
+
+        /* ===== DERS IKONLARI ===== */
+        .ders-icon {
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.08), rgba(124, 58, 237, 0.08));
+            border: 1px solid rgba(79, 70, 229, 0.1);
+            transition: all 0.3s ease;
+        }
+        .ders-icon:hover {
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.15), rgba(124, 58, 237, 0.15));
+            transform: scale(1.05);
+        }
+
+        /* ===== YUVARLAK KARTLAR ===== */
+        .rounded-3xl { border-radius: 1.5rem; }
+        .rounded-2xl { border-radius: 1.25rem; }
+        .rounded-xl { border-radius: 1rem; }
+
+        /* ===== INPUT ===== */
+        input, select, textarea {
+            transition: all 0.2s ease;
+            border: 1px solid #e2e8f0;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #4f46e5;
+            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+            outline: none;
+        }
+        .dark input, .dark select, .dark textarea {
+            background: #1e293b;
+            border-color: #334155;
+            color: #f1f5f9;
+        }
+        .dark input:focus, .dark select:focus, .dark textarea:focus {
+            border-color: #818cf8;
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+        }
+
         body { font-family: Inter, sans-serif; }
         h1, h2, .font-display { font-family: Manrope, Inter, sans-serif; }
         .font-stat { font-family: "Space Grotesk", Inter, sans-serif; }
-
-        .glass {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .dark .glass {
-            background: rgba(15, 23, 42, 0.88);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .card-hover {
-            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        @media (hover: hover) and (pointer: fine) {
-            .card-hover:hover {
-                transform: translateY(-3px);
-                box-shadow: 0 16px 32px -16px rgba(15, 23, 42, 0.28);
-            }
-        }
 
         .option-btn {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
