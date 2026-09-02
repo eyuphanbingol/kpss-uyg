@@ -1402,6 +1402,9 @@ function App() {
                 window.JsxLoader.load("AdminDashboard", "js/components/AdminDashboard.jsx").then(function (C) {
                     if (C) setAdminCmp(function () { return C; });
                     setRoleChecked(true);
+                }).catch(function (e) {
+                    console.warn(e);
+                    setRoleChecked(true);
                 });
             } else {
                 setRoleChecked(true);
@@ -1692,7 +1695,15 @@ function App() {
         };
         return Adm
             ? React.createElement(Adm, { student: student, onSignOut: signOut })
-            : <div className="min-h-screen flex items-center justify-center text-sm text-zinc-400">Yükleniyor</div>;
+            : (
+                <div className="min-h-screen flex items-center justify-center p-8">
+                    <div className="text-center max-w-sm">
+                        <p className="text-sm text-zinc-500 mb-4">Yönetim paneli yüklenemedi. Sayfayı yenile.</p>
+                        <button onClick={function () { window.location.reload(); }} className="px-4 py-2 rounded-xl border font-medium">Yenile</button>
+                        <button onClick={signOut} className="mt-3 block w-full px-4 py-2 rounded-xl font-medium">Çıkış</button>
+                    </div>
+                </div>
+            );
     }
 
     function closeTool() {

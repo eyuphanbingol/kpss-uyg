@@ -749,7 +749,6 @@
                                                 act("delete_user", { user_id: detail.user_id });
                                             }} className="text-xs font-medium px-3 py-1.5 rounded-lg bg-rose-600 text-white">Kullanıcıyı sil</button>
                                         </div>
-                                        </div>
                                     </div>
                                 )}
                             </div>
