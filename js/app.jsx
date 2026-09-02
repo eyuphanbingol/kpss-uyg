@@ -1267,7 +1267,7 @@ function App() {
     const [pwRecovery, setPwRecovery] = useState(function () {
         return !!(window.SupabaseClient && window.SupabaseClient.recoveryPending && window.SupabaseClient.recoveryPending());
     });
-    const [announce, setAnnounce] = useState("");
+    const [OnboardCmp, setOnboardCmp] = useState(null);
 
     const LAZY = {
         onboarding: ["OnboardingScreen", "js/components/OnboardingScreen.jsx"],
@@ -1284,9 +1284,10 @@ function App() {
     };
 
     useEffect(function () {
-        if (!student.profile.onboarded && window.JsxLoader) {
-            window.JsxLoader.load("OnboardingScreen", "js/components/OnboardingScreen.jsx");
-        }
+        if (student.profile.onboarded || !window.JsxLoader) return;
+        window.JsxLoader.load("OnboardingScreen", "js/components/OnboardingScreen.jsx").then(function (C) {
+            if (C) setOnboardCmp(function () { return C; });
+        });
     }, [student.profile.onboarded]);
 
     useEffect(function () {
@@ -1722,6 +1723,13 @@ function App() {
                     </div>
                 </div>
             );
+    }
+
+    if (!student.profile.onboarded) {
+        var Ob = OnboardCmp || (window.KpssComponents && window.KpssComponents.OnboardingScreen);
+        return Ob
+            ? React.createElement(Ob, { student: student, isDark: isDark, toggleDark: function () { StudentStore.setDark(!isDark); } })
+            : <div className="min-h-screen flex items-center justify-center text-sm text-zinc-400">Yükleniyor</div>;
     }
 
     function closeTool() {

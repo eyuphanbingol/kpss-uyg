@@ -564,20 +564,27 @@
             var m = (user && user.user_metadata) || {};
             var name = (pending && pending.name) || m.full_name || m.name || "";
             if (!name && user && user.email) name = String(user.email).split("@")[0];
-            var dates = (global.KpssConfig && global.KpssConfig.examDateByLevel) || {};
-            var level = (pending && pending.educationLevel) || m.education_level || "lisans";
-            global.StudentStore.completeOnboarding({
-                name: name,
-                nickname: name,
-                examDate: (pending && pending.examDate) || m.exam_date || dates[level] || state.profile.examDate,
-                dailyMinutes: 45,
-                dailyQuestions: 25,
-                educationLevel: level,
-                targetType: (pending && pending.targetType) || m.target_type || "B",
-                kvkkConsent: true,
-                weeklyHours: 7,
-                referredBy: (pending && pending.referredBy) || ""
-            });
+            if (pending) {
+                var dates = (global.KpssConfig && global.KpssConfig.examDateByLevel) || {};
+                var level = pending.educationLevel || m.education_level || "lisans";
+                global.StudentStore.completeOnboarding({
+                    name: name,
+                    nickname: name,
+                    examDate: pending.examDate || m.exam_date || dates[level] || state.profile.examDate,
+                    dailyMinutes: 45,
+                    dailyQuestions: 25,
+                    educationLevel: level,
+                    targetType: pending.targetType || m.target_type || "B",
+                    kvkkConsent: true,
+                    weeklyHours: 7,
+                    referredBy: pending.referredBy || ""
+                });
+                return;
+            }
+            if (name && !state.profile.name) {
+                state.profile.name = String(name).trim();
+                persistQuiet();
+            }
         },
         bindToUser: function (uid, email) {
             var prev = state.userProfile && state.userProfile.authUserId;

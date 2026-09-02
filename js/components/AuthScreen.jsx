@@ -709,6 +709,7 @@
                     </svg>
                     Google ile Devam
                 </button>
+                <p className="text-[11px] text-stone-400 text-center">İlk kez Google ile gelince ad, eğitim ve kulvar sorulur.</p>
             </div>
         ) : null;
 
