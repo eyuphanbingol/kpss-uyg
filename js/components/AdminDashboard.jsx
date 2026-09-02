@@ -161,6 +161,8 @@
                 var res = await sb.functions.invoke("admin-action", { body: Object.assign({ action: name }, payload) });
                 if (res.error) {
                     setMsg(res.error.message);
+                } else if (res.data && res.data.ok === false) {
+                    setMsg(res.data.error || "İşlem başarısız.");
                 } else {
                     setMsg("✅ İşlem başarıyla uygulandı.");
                     setLog(function (L) {
@@ -169,6 +171,7 @@
                     if (name === "inspect_user" && res.data) {
                         setDetail(res.data.data || res.data);
                     }
+                    if (name === "delete_user") setDetail(null);
                     load();
                 }
             } catch (e) {
@@ -638,17 +641,37 @@
                                                             </td>
                                                             <td className="px-4 py-3">
                                                                 <div className="flex flex-wrap gap-1 justify-end">
-                                                                    <button disabled={busy} onClick={function () {
-                                                                        if (!confirm("Bu kullanıcıya 30 gün Premium verilsin mi?")) return;
-                                                                        act("grant_premium", { user_id: u.user_id, days: 30 });
-                                                                    }} className="text-[10px] font-medium px-2 py-1 rounded-lg bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300 hover:bg-amber-200 transition-colors">
-                                                                        +30g ⭐
-                                                                    </button>
+                                                                    {u.premium ? (
+                                                                        <button disabled={busy} onClick={function () {
+                                                                            if (!confirm("Bu kullanıcının Premium'u alınsın mı?")) return;
+                                                                            act("revoke_premium", { user_id: u.user_id });
+                                                                        }} className="text-[10px] font-medium px-2 py-1 rounded-lg bg-stone-100 text-stone-700 dark:bg-stone-800 dark:text-stone-300 hover:bg-stone-200 transition-colors">
+                                                                            Premium al
+                                                                        </button>
+                                                                    ) : (
+                                                                        <button disabled={busy} onClick={function () {
+                                                                            if (!confirm("Bu kullanıcıya 30 gün Premium verilsin mi?")) return;
+                                                                            act("grant_premium", { user_id: u.user_id, days: 30 });
+                                                                        }} className="text-[10px] font-medium px-2 py-1 rounded-lg bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300 hover:bg-amber-200 transition-colors">
+                                                                            +30g ⭐
+                                                                        </button>
+                                                                    )}
                                                                     <button disabled={busy} onClick={function () { inspect(u.user_id); }} className="text-[10px] font-medium px-2 py-1 rounded-lg bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300 hover:bg-indigo-200 transition-colors">
                                                                         Detay
                                                                     </button>
                                                                     <button disabled={busy} onClick={function () { if (confirm("Bu kullanıcı engellensin mi?")) act("block", { user_id: u.user_id }); }} className="text-[10px] font-medium px-2 py-1 rounded-lg bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300 hover:bg-rose-200 transition-colors">
                                                                         🚫
+                                                                    </button>
+                                                                    <button disabled={busy} onClick={function () {
+                                                                        if (u.user_id === (student.userProfile && student.userProfile.authUserId)) {
+                                                                            alert("Kendi hesabını silemezsin.");
+                                                                            return;
+                                                                        }
+                                                                        if (!confirm("Bu kullanıcı kalıcı silinsin mi? Giriş yapamaz, verisi gider.")) return;
+                                                                        if (!confirm("Emin misin? Bu geri alınmaz.")) return;
+                                                                        act("delete_user", { user_id: u.user_id });
+                                                                    }} className="text-[10px] font-medium px-2 py-1 rounded-lg bg-rose-600 text-white hover:bg-rose-700 transition-colors">
+                                                                        Sil
                                                                     </button>
                                                                 </div>
                                                             </td>
@@ -704,6 +727,28 @@
                                                 </div>
                                             </div>
                                             <button onClick={function () { setDetail(null); }} className="text-stone-400 hover:text-stone-600">✕</button>
+                                        </div>
+                                        <div className="flex flex-wrap gap-2 mt-4">
+                                            {detail.premium ? (
+                                                <button disabled={busy} onClick={function () {
+                                                    if (!confirm("Premium alınsın mı?")) return;
+                                                    act("revoke_premium", { user_id: detail.user_id });
+                                                }} className="text-xs font-medium px-3 py-1.5 rounded-lg border border-stone-200 dark:border-stone-700">Premium al</button>
+                                            ) : (
+                                                <button disabled={busy} onClick={function () {
+                                                    if (!confirm("30 gün Premium verilsin mi?")) return;
+                                                    act("grant_premium", { user_id: detail.user_id, days: 30 });
+                                                }} className="text-xs font-medium px-3 py-1.5 rounded-lg bg-amber-100 text-amber-700">+30g Premium</button>
+                                            )}
+                                            <button disabled={busy} onClick={function () {
+                                                if (detail.user_id === (student.userProfile && student.userProfile.authUserId)) {
+                                                    alert("Kendi hesabını silemezsin.");
+                                                    return;
+                                                }
+                                                if (!confirm("Kullanıcı kalıcı silinsin mi? Bu geri alınmaz.")) return;
+                                                act("delete_user", { user_id: detail.user_id });
+                                            }} className="text-xs font-medium px-3 py-1.5 rounded-lg bg-rose-600 text-white">Kullanıcıyı sil</button>
+                                        </div>
                                         </div>
                                     </div>
                                 )}

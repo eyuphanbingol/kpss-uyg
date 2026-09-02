@@ -141,6 +141,21 @@ Deno.serve(async (req) => {
     const reqObj = Object.assign({}, existing, { status: "rejected", at: new Date().toISOString() });
     const next = writeEduReq(payload, reqObj);
     await admin.from("student_states").update({ payload: next }).eq("user_id", body.user_id);
+  } else if (action === "delete_user") {
+    const uid = String(body.user_id || "").trim();
+    if (!uid) return json({ ok: false, error: "missing user" }, 400);
+    if (uid === user.id) return json({ ok: false, error: "Kendini silemezsin" }, 400);
+    const { data: target } = await admin.from("student_states").select("role").eq("user_id", uid).maybeSingle();
+    if (target && target.role === "admin") return json({ ok: false, error: "Admin silinemez" }, 400);
+    await admin.from("referrals").delete().eq("owner", uid);
+    await admin.from("instructor_group_members").delete().eq("user_id", uid);
+    await admin.from("instructor_groups").delete().eq("owner", uid);
+    await admin.from("exam_ranks").delete().eq("user_id", uid);
+    await admin.from("leaderboard_weekly").delete().eq("user_id", uid);
+    await admin.from("student_states").delete().eq("user_id", uid);
+    const del = await admin.auth.admin.deleteUser(uid);
+    if (del.error) return json({ ok: false, error: del.error.message }, 500);
+    return json({ ok: true });
   } else if (action === "inspect_user") {
     const { data } = await admin.from("student_states").select("nickname,education_level,target_type,premium,questions_total,last_study_at,payload,platform,role").eq("user_id", body.user_id).maybeSingle();
     const p = data?.payload || {};
@@ -149,6 +164,7 @@ Deno.serve(async (req) => {
       ok: true,
       data: {
         nickname: data?.nickname,
+        user_id: body.user_id,
         education_level: data?.education_level,
         target_type: data?.target_type,
         premium: data?.premium,
