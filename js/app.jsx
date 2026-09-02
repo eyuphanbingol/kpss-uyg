@@ -1279,6 +1279,9 @@ function App() {
     const [AdminCmp, setAdminCmp] = useState(null);
     const [lazyErr, setLazyErr] = useState("");
     const [roleChecked, setRoleChecked] = useState(false);
+    const [pwRecovery, setPwRecovery] = useState(function () {
+        return !!(window.SupabaseClient && window.SupabaseClient.recoveryPending && window.SupabaseClient.recoveryPending());
+    });
 
     const LAZY = {
         onboarding: ["OnboardingScreen", "js/components/OnboardingScreen.jsx"],
@@ -1322,9 +1325,14 @@ function App() {
         if (!sb) { setAuthReady(true); return; }
         sb.auth.getSession().then(function (r) {
             var sess = r.data && r.data.session;
+            var recovering = !!(window.SupabaseClient && window.SupabaseClient.recoveryPending && window.SupabaseClient.recoveryPending());
+            if (recovering) {
+                if (window.SupabaseClient.markRecovery) window.SupabaseClient.markRecovery();
+                setPwRecovery(true);
+            }
             setAuthSession(sess || null);
             setAuthReady(true);
-            if (sess) {
+            if (sess && !recovering) {
                 if (window.StudentStore && window.StudentStore.bindToUser) {
                     window.StudentStore.bindToUser(sess.user.id, sess.user.email);
                 }
@@ -1336,12 +1344,26 @@ function App() {
         }).catch(function () { setAuthReady(true); });
         var sub = sb.auth.onAuthStateChange(function (event, sess) {
             setAuthReady(true);
+            if (event === "PASSWORD_RECOVERY") {
+                if (window.SupabaseClient && window.SupabaseClient.markRecovery) window.SupabaseClient.markRecovery();
+                setPwRecovery(true);
+                if (sess) setAuthSession(sess);
+                return;
+            }
             if (event === "SIGNED_OUT") {
                 setAuthSession(null);
+                setPwRecovery(false);
                 if (window.StudentStore && window.StudentStore.bindToUser) window.StudentStore.bindToUser(null);
                 return;
             }
             if (!sess) return;
+            var recovering = event === "SIGNED_IN" && window.SupabaseClient && window.SupabaseClient.recoveryPending && window.SupabaseClient.recoveryPending();
+            if (recovering) {
+                if (window.SupabaseClient.markRecovery) window.SupabaseClient.markRecovery();
+                setPwRecovery(true);
+                setAuthSession(sess);
+                return;
+            }
             setAuthSession(sess);
             if (window.StudentStore && window.StudentStore.bindToUser) {
                 window.StudentStore.bindToUser(sess.user.id, sess.user.email);
@@ -1357,12 +1379,12 @@ function App() {
     }, []);
 
     useEffect(function () {
-        if (authReady && !authSession && window.JsxLoader) {
+        if (authReady && (!authSession || pwRecovery) && window.JsxLoader) {
             window.JsxLoader.load("AuthScreen", "js/components/AuthScreen.jsx").then(function (C) {
                 if (C) setGateAuth(function () { return C; });
             });
         }
-    }, [authReady, authSession]);
+    }, [authReady, authSession, pwRecovery]);
 
     useEffect(function () {
         if (!authSession) {
@@ -1624,9 +1646,18 @@ function App() {
         return <div className="min-h-screen flex items-center justify-center text-sm text-zinc-400">Yükleniyor</div>;
     }
     var AuthCmp = GateAuth || (window.KpssComponents && window.KpssComponents.AuthScreen);
-    if (!authSession) {
+    if (!authSession || pwRecovery) {
         return AuthCmp
-            ? React.createElement(AuthCmp, { gate: true, onDone: function () { if (window.SyncEngine) window.SyncEngine.sync(); } })
+            ? React.createElement(AuthCmp, {
+                gate: true,
+                recovery: pwRecovery,
+                onPasswordUpdated: function () {
+                    if (window.SupabaseClient && window.SupabaseClient.clearRecovery) window.SupabaseClient.clearRecovery();
+                    setPwRecovery(false);
+                    if (window.SyncEngine) window.SyncEngine.sync();
+                },
+                onDone: function () { if (window.SyncEngine) window.SyncEngine.sync(); }
+            })
             : <div className="min-h-screen flex items-center justify-center text-sm text-zinc-400">Yükleniyor</div>;
     }
     if (!roleChecked) {

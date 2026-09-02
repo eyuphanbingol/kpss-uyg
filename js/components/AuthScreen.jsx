@@ -54,6 +54,11 @@
         const [busy, setBusy] = useState(false);
         const [showPassword, setShowPassword] = useState(false);
         const [rememberMe, setRememberMe] = useState(false);
+        const [recovery, setRecovery] = useState(function () {
+            return !!(props.recovery || (window.SupabaseClient && window.SupabaseClient.recoveryPending && window.SupabaseClient.recoveryPending()));
+        });
+        const [newPass, setNewPass] = useState("");
+        const [newPass2, setNewPass2] = useState("");
 
         const sb = window.SupabaseClient && window.SupabaseClient.get();
         const field = "w-full px-4 py-3 rounded-2xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 text-[15px] focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all";
@@ -63,10 +68,26 @@
         const passRef = useRef(null);
         const nameRef = useRef(null);
 
-        // ---------- Focus ----------
         useEffect(function () {
-            if (mode === "in" && emailRef.current) emailRef.current.focus();
-        }, [mode]);
+            if (props.recovery) setRecovery(true);
+        }, [props.recovery]);
+
+        useEffect(function () {
+            if (!sb) return;
+            var sub = sb.auth.onAuthStateChange(function (event) {
+                if (event === "PASSWORD_RECOVERY") {
+                    if (window.SupabaseClient && window.SupabaseClient.markRecovery) window.SupabaseClient.markRecovery();
+                    setRecovery(true);
+                }
+            });
+            return function () {
+                if (sub && sub.data && sub.data.subscription) sub.data.subscription.unsubscribe();
+            };
+        }, []);
+
+        useEffect(function () {
+            if (mode === "in" && !recovery && emailRef.current) emailRef.current.focus();
+        }, [mode, recovery]);
 
         // ---------- Levels ----------
         var levels = [
@@ -112,6 +133,28 @@
         }
 
         // ---------- Submit ----------
+        async function saveNewPassword() {
+            if (!sb) { setMsg("Sunucu bağlı değil."); return; }
+            if (!validatePassword(newPass)) { setMsg("Yeni şifre en az 6 karakter olmalı."); return; }
+            if (newPass !== newPass2) { setMsg("Şifreler eşleşmiyor."); return; }
+            setBusy(true);
+            setMsg("");
+            try {
+                var res = await sb.auth.updateUser({ password: newPass });
+                if (res.error) throw res.error;
+                if (window.SupabaseClient && window.SupabaseClient.clearRecovery) window.SupabaseClient.clearRecovery();
+                setRecovery(false);
+                setNewPass("");
+                setNewPass2("");
+                setMsg("✅ Şifren güncellendi.");
+                if (props.onPasswordUpdated) props.onPasswordUpdated();
+                else if (props.onDone) props.onDone();
+            } catch (e) {
+                setMsg((e && e.message) || "Şifre güncellenemedi.");
+            }
+            setBusy(false);
+        }
+
         async function submit() {
             if (!sb) { setMsg("Sunucu bağlı değil."); return; }
             if (!email || !validateEmail(email)) { setMsg("Geçerli bir e-posta adresi girin."); return; }
@@ -581,7 +624,7 @@
                             }
                             if (sb) {
                                 sb.auth.resetPasswordForEmail(email, {
-                                    redirectTo: window.location.origin + window.location.pathname + "?reset=true"
+                                    redirectTo: window.location.origin + "/?reset=1"
                                 }).then(function () {
                                     setMsg("✅ Şifre sıfırlama bağlantısı e-posta adresinize gönderildi.");
                                 }).catch(function (e) {
@@ -634,6 +677,27 @@
 
         var form = (
             <div className={props.gate ? "" : "p-6 sm:p-8"}>
+                {recovery ? (
+                    <div className="space-y-4">
+                        <p className="text-sm text-stone-500">Yeni şifreni yaz. En az 6 karakter.</p>
+                        <div>
+                            <label className="text-sm font-medium text-stone-600 dark:text-stone-300 block mb-1.5">Yeni şifre</label>
+                            <input type={showPassword ? "text" : "password"} value={newPass} onChange={function (e) { setNewPass(e.target.value); }} className={field} placeholder="••••••••" autoComplete="new-password" />
+                        </div>
+                        <div>
+                            <label className="text-sm font-medium text-stone-600 dark:text-stone-300 block mb-1.5">Yeni şifre (tekrar)</label>
+                            <input type={showPassword ? "text" : "password"} value={newPass2} onChange={function (e) { setNewPass2(e.target.value); }} className={field} placeholder="••••••••" autoComplete="new-password" />
+                        </div>
+                        <label className="flex items-center gap-2 text-sm text-stone-500 cursor-pointer">
+                            <input type="checkbox" checked={showPassword} onChange={function (e) { setShowPassword(e.target.checked); }} className="w-4 h-4 rounded border-stone-300 text-indigo-600" />
+                            Şifreyi göster
+                        </label>
+                        <button type="button" disabled={busy} onClick={saveNewPassword} className="w-full py-3.5 rounded-2xl btn-primary text-white font-semibold disabled:opacity-40">
+                            {busy ? "⏳" : "Şifreyi kaydet"}
+                        </button>
+                    </div>
+                ) : (
+                    <div>
                 {/* Mode Toggle */}
                 <div className="flex p-1.5 rounded-2xl bg-stone-100 dark:bg-stone-800 mb-6">
                     <button 
@@ -687,6 +751,8 @@
                         </button>
                     </div>
                 )}
+                    </div>
+                )}
 
                 {msg && (
                     <div className={"mt-4 p-4 rounded-2xl text-sm flex items-start gap-3 " + 
@@ -716,12 +782,14 @@
                             KPSS
                         </div>
                         <h1 className="text-2xl md:text-3xl font-black gradient-text">
-                            {mode === "up" ? "Hesap Oluştur" : "Hoş Geldin"}
+                            {recovery ? "Yeni şifre" : (mode === "up" ? "Hesap Oluştur" : "Hoş Geldin")}
                         </h1>
                         <p className="text-sm text-stone-400 dark:text-stone-500 mt-1">
-                            {mode === "up" 
+                            {recovery
+                                ? "Maildeki bağlantı seni buraya getirdi"
+                                : (mode === "up"
                                 ? "Hedefine doğru ilk adımı at" 
-                                : "Kaldığın yerden devam et"}
+                                : "Kaldığın yerden devam et")}
                         </p>
                     </div>
 
