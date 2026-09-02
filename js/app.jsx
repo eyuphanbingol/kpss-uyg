@@ -576,7 +576,7 @@ function Eksikler(props) {
             <div className="flex justify-between items-start mb-6">
                 <div>
                     <h1 className="text-2xl font-display font-bold">Eksikler</h1>
-                    <p className="text-slate-500 text-sm">Isı haritası, yanlış defteri, vadesi gelen tekrar</p>
+                    <p className="text-slate-500 text-sm">Konu durumu. Not ve soru yalnızca Dersler’den.</p>
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
@@ -593,17 +593,20 @@ function Eksikler(props) {
                         <h2 className={"font-black mb-2 " + t.text}>{t.icon} {ders}</h2>
                         <div className="space-y-1.5">
                             {byDers[ders].map(function (r) {
-                                const heat = r.mastery === "zayif" ? "heat-zayif" : r.mastery === "orta" ? "heat-orta" : r.mastery === "iyi" ? "heat-iyi" : "";
-                                const m = masteryLabel(r.mastery);
+                                const done = StudentStore.topicComplete(r, {
+                                    sorular: new Array(r.soruSayisi || 0),
+                                    notlar: new Array(r.notSayisi || 0)
+                                });
                                 return (
-                                    <button key={r.konu} onClick={function () { props.openKonu(r.ders, r.konu); }}
-                                        className={"w-full flex justify-between items-center p-3 rounded-xl bg-stone-50 dark:bg-stone-900 border " + (r.mastery === "zayif" ? "border-coral-500" : "border-stone-300")}>
-                                        <span className="text-sm font-semibold text-left pr-2">{r.konu}</span>
-                                        <span className="flex items-center gap-2 shrink-0">
-                                            <span className="text-sm font-black">{r.lastPct == null ? "—" : "%" + r.lastPct}</span>
-                                            <span className={"text-[10px] font-bold px-2 py-0.5 rounded-full " + m.cls}>{m.text}</span>
+                                    <div key={r.konu}
+                                        className={"w-full flex justify-between items-center p-3 rounded-xl border pointer-events-none " + (done
+                                            ? "bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800"
+                                            : "bg-stone-50 dark:bg-stone-900 border-stone-200 dark:border-stone-800 opacity-45")}>
+                                        <span className={"text-sm text-left pr-2 " + (done ? "font-semibold text-emerald-800 dark:text-emerald-200" : "font-medium text-stone-500")}>{r.konu}</span>
+                                        <span className={"text-[10px] font-semibold px-2 py-0.5 rounded-full shrink-0 " + (done ? "bg-emerald-100 text-emerald-700" : "bg-stone-100 text-stone-400")}>
+                                            {done ? "Bitti" : "Bekliyor"}
                                         </span>
-                                    </button>
+                                    </div>
                                 );
                             })}
                         </div>
@@ -1113,7 +1116,7 @@ function App() {
     } else if (nav === "bugun") {
         body = <Bugun student={student} plan={plan} isDark={isDark} toggleDark={toggleDark} onTask={onTask} openKonu={openKonu} />;
     } else if (nav === "eksikler") {
-        body = <Eksikler plan={plan} isDark={isDark} toggleDark={toggleDark} openKonu={openKonu}
+        body = <Eksikler plan={plan} isDark={isDark} toggleDark={toggleDark}
             onReview={function () { startSession(plan.due.slice(0, 30), { mode: "review" }); }}
             onWrong={function () { startSession(plan.wrong.slice(0, 30), { mode: "wrong" }); }} />;
     } else if (nav === "deneme") {
