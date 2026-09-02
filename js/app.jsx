@@ -1411,8 +1411,7 @@ function App() {
                 return;
             }
             if (!sess) return;
-            var recovering = event === "SIGNED_IN" && window.SupabaseClient && window.SupabaseClient.recoveryPending && window.SupabaseClient.recoveryPending();
-            if (recovering) {
+            if (window.SupabaseClient && window.SupabaseClient.recoveryPending && window.SupabaseClient.recoveryPending()) {
                 if (window.SupabaseClient.markRecovery) window.SupabaseClient.markRecovery();
                 setPwRecovery(true);
                 setAuthSession(sess);

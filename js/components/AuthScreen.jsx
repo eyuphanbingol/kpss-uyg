@@ -223,6 +223,7 @@
                 } else if (mode === "up" && !(res.data && res.data.session)) {
                     setMsg("✅ Kayıt tamam! E-postanıza gelen linke tıklayarak hesabınızı doğrulayın.");
                 } else {
+                    if (window.SupabaseClient && window.SupabaseClient.clearRecovery) window.SupabaseClient.clearRecovery();
                     finishLocal(res.data && res.data.user);
                 }
             } catch (e) {
@@ -244,6 +245,7 @@
 
             setBusy(true);
             setMsg("");
+            if (window.SupabaseClient && window.SupabaseClient.clearRecovery) window.SupabaseClient.clearRecovery();
 
             try {
                 var res = await sb.auth.signInWithOAuth({
@@ -665,8 +667,12 @@
                             setBusy(true);
                             setMsg("");
                             try {
+                                if (window.SupabaseClient && window.SupabaseClient.markRecovery) {
+                                    window.SupabaseClient.markRecovery();
+                                }
+                                var resetTo = window.location.origin + (window.location.pathname || "/") + "?reset=1";
                                 var res = await sb.auth.resetPasswordForEmail(email.trim(), {
-                                    redirectTo: window.location.origin + "/"
+                                    redirectTo: resetTo
                                 });
                                 if (res.error) throw res.error;
                                 setMsg("✅ Şifre sıfırlama bağlantısı gönderildi. Spam klasörüne de bak. Birkaç dakikada gelmezse biraz bekleyip tekrar dene.");

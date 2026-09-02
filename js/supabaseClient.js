@@ -5,18 +5,10 @@
     function recoveryFromUrl() {
         var s = String(window.location.search || "");
         var h = String(window.location.hash || "");
-        if (/(?:[?&]code=)/.test(s) && !/(?:[?&]reset=)/.test(s) && !/type=recovery/.test(s) && !/type=recovery/.test(h)) {
-            return false;
-        }
         return /(?:[?&]reset=)/.test(s) || /type=recovery/.test(s) || /type=recovery/.test(h);
     }
 
     function recoveryPending() {
-        var s = String(window.location.search || "");
-        if (/(?:[?&]code=)/.test(s) && !/(?:[?&]reset=)/.test(s) && !/type=recovery/.test(s)) {
-            try { sessionStorage.removeItem(RECOVERY_KEY); } catch (e) {}
-            return false;
-        }
         try {
             if (sessionStorage.getItem(RECOVERY_KEY) === "1") return true;
         } catch (e) {}
@@ -109,9 +101,9 @@
             });
             client.auth.onAuthStateChange(function (event) {
                 if (event === "PASSWORD_RECOVERY") markRecovery();
-                if (event === "SIGNED_IN" && recoveryPending()) markRecovery();
+                if (event === "SIGNED_IN" && (recoveryPending() || recoveryFromUrl())) markRecovery();
                 if (event === "SIGNED_IN" || event === "TOKEN_REFRESHED" || event === "INITIAL_SESSION") {
-                    if (recoveryPending()) return;
+                    if (recoveryPending() || recoveryFromUrl()) return;
                     if (global.SyncEngine && global.SyncEngine.sync) global.SyncEngine.sync();
                 }
             });
