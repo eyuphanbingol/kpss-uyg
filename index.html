@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>KPSS Eğitim Alanı</title>
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#4f46e5">
+    <meta name="theme-color" content="#18181b">
     <link rel="apple-touch-icon" href="icons/icon-192.png">
 
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
@@ -98,18 +98,18 @@
     <script src="sorular/guncel-3.js"></script>
 
     <script src="data.js"></script>
-    <script src="js/config.js?v=6"></script>
-    <script src="js/store.js?v=6"></script>
-    <script src="js/planner.js?v=6"></script>
-    <script src="js/scoreEngine.js?v=6"></script>
-    <script src="js/paymentClient.js?v=6"></script>
-    <script src="js/notificationEngine.js?v=6"></script>
-    <script src="js/instructorDashboard.js?v=6"></script>
-    <script src="js/shareCard.js?v=6"></script>
+    <script src="js/config.js?v=8"></script>
+    <script src="js/store.js?v=12"></script>
+    <script src="js/planner.js?v=8"></script>
+    <script src="js/scoreEngine.js?v=8"></script>
+    <script src="js/paymentClient.js?v=8"></script>
+    <script src="js/notificationEngine.js?v=8"></script>
+    <script src="js/instructorDashboard.js?v=8"></script>
+    <script src="js/shareCard.js?v=8"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.86.0/dist/umd/supabase.js"></script>
-    <script src="js/supabaseClient.js?v=6"></script>
-    <script src="js/syncEngine.js?v=6"></script>
-    <script src="js/jsxLoader.js?v=6"></script>
+    <script src="js/supabaseClient.js?v=10"></script>
+    <script src="js/syncEngine.js?v=10"></script>
+    <script src="js/jsxLoader.js?v=12"></script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
@@ -129,11 +129,13 @@
         }
 
         .card-hover {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .card-hover:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        @media (hover: hover) and (pointer: fine) {
+            .card-hover:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 16px 32px -16px rgba(15, 23, 42, 0.28);
+            }
         }
 
         .option-btn {
@@ -213,12 +215,46 @@
         .heat-zayif { background: linear-gradient(90deg, rgba(244,63,94,0.18), transparent); }
         .heat-orta { background: linear-gradient(90deg, rgba(245,158,11,0.18), transparent); }
         .heat-iyi { background: linear-gradient(90deg, rgba(16,185,129,0.18), transparent); }
+
+        html { background: #f4f4f5; }
+        body.app-bg { background: #f4f4f5; color: #18181b; }
+        html.dark, .dark body.app-bg { background: #09090b; color: #fafafa; }
+
+        .panel {
+            background: #fff;
+            border: 1px solid #e4e4e7;
+        }
+        .dark .panel {
+            background: #18181b;
+            border-color: #27272a;
+        }
+
+        .overlay-scrim {
+            background: rgba(9, 9, 11, 0.45);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .overlay-sheet {
+            background: #fff;
+            border-radius: 1.25rem;
+            border: 1px solid #e4e4e7;
+        }
+        .dark .overlay-sheet {
+            background: #18181b;
+            border-color: #27272a;
+        }
+
+        input[type="range"] { accent-color: #4f46e5; }
+        button:focus-visible, input:focus-visible, select:focus-visible {
+            outline: 2px solid #4f46e5;
+            outline-offset: 2px;
+        }
     </style>
 </head>
 
-<body class="min-h-screen bg-slate-100 text-slate-800 antialiased transition-colors duration-300">
+<body class="app-bg min-h-screen text-slate-800 antialiased transition-colors duration-300">
     <div id="root"></div>
-    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=6"></script>
+    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=12"></script>
     <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.getRegistrations().then(function (regs) {

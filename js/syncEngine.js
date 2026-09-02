@@ -101,11 +101,31 @@
         syncing = true;
         try {
             var uid = session.user.id;
+            var email = session.user.email || "";
+            if (global.StudentStore.bindToUser) global.StudentStore.bindToUser(uid, email);
             var local = global.StudentStore.getState();
+            if (local.userProfile && local.userProfile.authUserId && local.userProfile.authUserId !== uid) {
+                local = global.StudentStore.migrate(null);
+            }
             var remoteRow = await sb.from("student_states").select("*").eq("user_id", uid).maybeSingle();
             var remote = remoteRow.data && remoteRow.data.payload;
             var dbRole = remoteRow.data && remoteRow.data.role;
-            var merged = mergePayload(local, remote);
+            var remoteOwner = remote && remote.userProfile && remote.userProfile.authUserId;
+            if (remoteOwner && remoteOwner !== uid) remote = null;
+            var createdAt = session.user.created_at ? new Date(session.user.created_at).getTime() : 0;
+            var newAccount = createdAt && (Date.now() - createdAt) < 15 * 60 * 1000;
+            var emptyLocal = global.StudentStore.isEmptyProgress(local);
+            if (newAccount && emptyLocal && remote && !global.StudentStore.isEmptyProgress(remote)) {
+                remote = null;
+            }
+            var merged;
+            if (emptyLocal && remote) {
+                merged = global.StudentStore.migrate(remote);
+            } else if (!remote) {
+                merged = local;
+            } else {
+                merged = mergePayload(local, remote);
+            }
             merged.userProfile.authUserId = uid;
             merged.userProfile.email = session.user.email || merged.userProfile.email;
             if (dbRole === "admin" || merged.userProfile.role === "admin") {

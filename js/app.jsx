@@ -30,7 +30,7 @@ function useStudent() {
 
 function Shell(props) {
     return (
-        <div className={"mx-auto px-4 py-6 sm:py-8 " + (props.wide ? "max-w-3xl" : "max-w-2xl") + (props.padBottom === false ? "" : " pb-28")}>
+        <div className={"mx-auto px-4 py-6 sm:py-8 " + (props.wide ? "max-w-3xl" : "max-w-2xl") + (props.padBottom === false ? "" : " pb-32")}>
             {props.children}
         </div>
     );
@@ -39,7 +39,7 @@ function Shell(props) {
 function ThemeBtn(props) {
     return (
         <button onClick={props.onClick}
-            className="p-2.5 rounded-xl bg-white dark:bg-slate-800 shadow-md border border-slate-200 dark:border-slate-700 hover:scale-110 transition-all"
+            className="p-2 rounded-lg border border-zinc-200 dark:border-zinc-700 text-zinc-500"
             aria-label="Tema">
             {props.isDark ? (
                 <svg className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" /></svg>
@@ -89,14 +89,14 @@ function BottomNav(props) {
         { id: "ben", label: "Ben", icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" }
     ];
     return (
-        <nav className="fixed bottom-0 inset-x-0 z-40 glass border-t border-slate-200 dark:border-slate-700">
-            <div className="max-w-2xl mx-auto grid grid-cols-5 px-1 py-1.5">
+        <nav className="fixed bottom-0 inset-x-0 z-40 bg-white/95 dark:bg-zinc-950/95 border-t border-zinc-200 dark:border-zinc-800" style={{ paddingBottom: "max(8px, env(safe-area-inset-bottom))" }}>
+            <div className="max-w-2xl mx-auto grid grid-cols-5 px-1 pt-1">
                 {tabs.map(function (tab) {
                     const on = props.nav === tab.id;
                     return (
                         <button key={tab.id} onClick={function () { props.onChange(tab.id); }}
-                            className={"flex flex-col items-center gap-0.5 py-2 rounded-xl text-[11px] font-bold transition " + (on ? "text-indigo-600 dark:text-indigo-400" : "text-slate-400")}>
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={on ? 2.4 : 2} d={tab.icon} /></svg>
+                            className={"flex flex-col items-center gap-0.5 py-2 rounded-xl text-[11px] font-medium transition " + (on ? "text-zinc-900 dark:text-white" : "text-zinc-400")}>
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={on ? 2.2 : 1.7} d={tab.icon} /></svg>
                             {tab.label}
                         </button>
                     );
@@ -141,92 +141,50 @@ function Bugun(props) {
     const qPct = Math.min(100, Math.round(((plan.session.questions || 0) / (plan.qGoal || 1)) * 100));
     return (
         <Shell>
-            <div className="flex justify-between items-start mb-6">
+            <div className="flex justify-between items-start mb-8">
                 <div>
-                    <p className="text-sm font-semibold text-slate-500">Merhaba{name ? ", " + name : ""}</p>
-                    <h1 className="text-3xl font-black text-slate-900 dark:text-white">Bugünkü ders</h1>
+                    <p className="text-sm text-zinc-500">Merhaba{name ? ", " + name : ""}</p>
+                    <h1 className="text-2xl font-semibold tracking-tight mt-0.5">Bugün</h1>
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
-            <div className="grid grid-cols-3 gap-3 mb-6">
-                <div className="rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 p-4 text-center">
-                    <div className="text-2xl font-black text-indigo-600">{plan.daysLeft == null ? "—" : plan.daysLeft}</div>
-                    <div className="text-[11px] font-bold text-slate-400 mt-1">gün kaldı</div>
+            <div className="grid grid-cols-3 gap-2 mb-5">
+                <div className="rounded-2xl panel p-3 text-center">
+                    <div className="text-lg font-semibold">{plan.daysLeft == null ? "—" : plan.daysLeft}</div>
+                    <div className="text-[11px] text-zinc-400 mt-0.5">gün</div>
                 </div>
-                <div className="rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 p-4 text-center">
-                    <div className="text-2xl font-black text-amber-500">{plan.streak}</div>
-                    <div className="text-[11px] font-bold text-slate-400 mt-1">gün seri</div>
+                <div className="rounded-2xl panel p-3 text-center">
+                    <div className="text-lg font-semibold">{plan.streak}</div>
+                    <div className="text-[11px] text-zinc-400 mt-0.5">seri</div>
                 </div>
-                <div className="rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 p-4 text-center">
-                    <div className="text-2xl font-black text-emerald-600">{plan.session.questions || 0}/{plan.qGoal}</div>
-                    <div className="text-[11px] font-bold text-slate-400 mt-1">soru hedefi</div>
+                <div className="rounded-2xl panel p-3 text-center">
+                    <div className="text-lg font-semibold">{plan.session.questions || 0}/{plan.qGoal}</div>
+                    <div className="text-[11px] text-zinc-400 mt-0.5">soru</div>
                 </div>
             </div>
-            <div className="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-full mb-6 overflow-hidden">
-                <div className="h-full bg-gradient-to-r from-indigo-500 to-emerald-500" style={{ width: qPct + "%" }} />
+            <div className="w-full h-1.5 bg-zinc-200 dark:bg-zinc-800 rounded-full mb-6 overflow-hidden">
+                <div className="h-full bg-zinc-900 dark:bg-white" style={{ width: qPct + "%" }} />
             </div>
-            <div className="p-5 rounded-3xl bg-gradient-to-br from-indigo-600 to-violet-800 text-white shadow-xl mb-6">
-                <p className="text-xs font-bold uppercase tracking-wider text-white/70 mb-2">Koç notu</p>
-                <p className="text-[15px] leading-relaxed font-medium">{plan.coach}</p>
-            </div>
-            <h2 className="text-sm font-black text-slate-500 uppercase tracking-wider mb-3">Şimdi yap</h2>
-            <div className="space-y-3">
+            {plan.coach ? <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed">{plan.coach}</p> : null}
+            <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-3">Sırada</p>
+            <div className="space-y-2">
                 {plan.tasks.length === 0 ? (
-                    <div className="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-dashed border-slate-300 text-center text-slate-500">Bugün için görev kalmadı. Denemeden karışık pratik aç.</div>
-                ) : plan.tasks.map(function (task) {
+                    <div className="p-5 rounded-2xl panel text-sm text-zinc-500">Bugünlük bitti. Denemeden pratik açabilirsin.</div>
+                ) : plan.tasks.slice(0, 3).map(function (task) {
                     return (
                         <button key={task.id} onClick={function () { props.onTask(task); }}
-                            className="w-full text-left p-5 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition card-hover">
-                            <div className="flex justify-between items-start gap-3">
+                            className="w-full text-left p-4 panel rounded-2xl">
+                            <div className="flex justify-between items-center gap-3">
                                 <div>
-                                    <div className="font-black text-slate-900 dark:text-white">{task.title}</div>
-                                    <div className="text-sm text-slate-500 mt-0.5">{task.detail}</div>
-                                    <div className="text-xs text-slate-400 mt-2">{task.why}</div>
+                                    <div className="font-medium">{task.title}</div>
+                                    <div className="text-sm text-zinc-500 mt-0.5">{task.detail}</div>
                                 </div>
-                                <span className="text-indigo-500 font-bold text-sm shrink-0">Başla →</span>
+                                <span className="text-zinc-400 text-sm shrink-0">Başla</span>
                             </div>
                         </button>
                     );
                 })}
             </div>
-            {plan.weekly ? (
-                <div className="mt-8">
-                    <h2 className="text-sm font-black text-slate-500 uppercase tracking-wider mb-3">Haftalık ritim</h2>
-                    <div className="grid grid-cols-7 gap-1">
-                        {plan.weekly.map(function (d) {
-                            return (
-                                <div key={d.day} className="p-1.5 rounded-lg bg-white dark:bg-slate-800 border text-center">
-                                    <div className="text-[10px] font-black">{d.day}</div>
-                                    <div className="text-[9px] text-slate-400">{d.minutes}dk</div>
-                                </div>
-                            );
-                        })}
-                    </div>
-                </div>
-            ) : null}
-            {plan.weak.length > 0 ? (
-                <div className="mt-8">
-                    <h2 className="text-sm font-black text-slate-500 uppercase tracking-wider mb-3">En zayıf konular</h2>
-                    <div className="space-y-2">
-                        {plan.weak.slice(0, 4).map(function (r) {
-                            const m = masteryLabel(r.mastery);
-                            return (
-                                <button key={r.ders + r.konu} onClick={function () { props.openKonu(r.ders, r.konu); }}
-                                    className="w-full flex items-center justify-between p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200">
-                                    <div className="text-left">
-                                        <div className="text-xs text-slate-400 font-bold">{r.ders}</div>
-                                        <div className="font-semibold text-sm">{r.konu}</div>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <span className="text-sm font-black">{r.lastPct == null ? "—" : "%" + r.lastPct}</span>
-                                        <span className={"text-[10px] font-bold px-2 py-1 rounded-full " + m.cls}>{m.text}</span>
-                                    </div>
-                                </button>
-                            );
-                        })}
-                    </div>
-                </div>
-            ) : null}
         </Shell>
     );
 }
@@ -236,17 +194,11 @@ function DersHome(props) {
     const stats = StudyPlanner.catalogStats(kpssData);
     return (
         <Shell>
-            <div className="flex justify-end mb-6"><ThemeBtn isDark={props.isDark} onClick={props.toggleDark} /></div>
-            <header className="text-center mb-10">
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-sm font-semibold mb-4 ring-1 ring-inset ring-indigo-500/20">
-                    2026 müfredatı · kişisel takip
-                </div>
-                <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-3">
-                    KPSS <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">Eğitim Alanı</span>
-                </h1>
-                <p className="text-slate-600 dark:text-slate-400">Not, test, eksik ve tekrar — dershane sırasıyla.</p>
-            </header>
-            <div className="grid sm:grid-cols-2 gap-5">
+            <div className="flex justify-between items-center mb-6">
+                <h1 className="text-2xl font-semibold tracking-tight">Dersler</h1>
+                <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
+            </div>
+            <div className="space-y-2">
                 {Object.keys(kpssData).map(function (ders) {
                     const t = themeFor(ders, props.isDark);
                     const s = stats[ders] || { konuSayisi: 0, soruSayisi: 0 };
@@ -254,29 +206,17 @@ function DersHome(props) {
                     const done = rows.filter(function (r) { return r.mastery === "iyi"; }).length;
                     return (
                         <button key={ders} onClick={function () { props.onDers(ders); }}
-                            className={"group relative overflow-hidden text-left p-7 rounded-3xl text-white bg-gradient-to-br " + t.grad + " shadow-2xl ring-1 ring-white/20 card-hover"}>
-                            <div className="relative z-10">
-                                <div className="text-5xl mb-4">{t.icon}</div>
-                                <h2 className="text-2xl font-bold mb-1">{ders}</h2>
-                                <p className="text-white/80 text-sm font-medium">{s.konuSayisi} konu · {s.soruSayisi} soru</p>
-                                <p className="text-white/70 text-xs mt-2 font-semibold">{done}/{rows.length} konu iyi seviyede</p>
+                            className="w-full text-left p-4 panel rounded-2xl flex items-center gap-4">
+                            <div className={"h-11 w-11 rounded-xl bg-gradient-to-br " + t.grad + " flex items-center justify-center text-lg shrink-0"}>{t.icon}</div>
+                            <div className="min-w-0 flex-1">
+                                <h2 className="font-medium">{ders}</h2>
+                                <p className="text-sm text-zinc-500">{s.konuSayisi} konu · {s.soruSayisi} soru{rows.length ? " · " + done + " iyi" : ""}</p>
                             </div>
-                            <span className="absolute -right-8 -bottom-8 text-9xl opacity-10">{t.icon}</span>
+                            <span className="text-zinc-300">›</span>
                         </button>
                     );
                 })}
             </div>
-            {(window.KpssConfig && window.KpssConfig.modules || []).filter(function (m) { return !m.ready; }).map(function (m) {
-                return (
-                    <div key={m.id} className="mt-4 p-4 rounded-2xl border border-dashed bg-white dark:bg-slate-800 flex justify-between items-center">
-                        <div>
-                            <div className="font-bold">{m.title}</div>
-                            <div className="text-xs text-slate-400">Kulvarın parçası olabilir; soru seti henüz yok.</div>
-                        </div>
-                        <span className="text-[10px] font-black px-2 py-1 rounded-full bg-amber-100 text-amber-800">Yakında</span>
-                    </div>
-                );
-            })}
         </Shell>
     );
 }
@@ -296,7 +236,7 @@ function KonuList(props) {
                 <div className={"h-14 w-14 rounded-2xl bg-gradient-to-br " + t.grad + " flex items-center justify-center text-white text-2xl shadow-lg"}>{t.icon}</div>
                 <div>
                     <h1 className="text-3xl font-black">{ders}</h1>
-                    <p className="text-slate-500 text-sm">Konu seç · net ve not ilerlemen kayıtlı</p>
+            <p className="text-zinc-500 text-sm">Sırayla ilerle. Konu bitince sonraki açılır.</p>
                 </div>
             </div>
             <div className="space-y-3">
@@ -308,31 +248,25 @@ function KonuList(props) {
                     const nLen = (kd.notlar || []).length;
                     const notePct = !nLen ? 0 : (tp.notesDone ? 100 : (!stored ? 0 : Math.round(((tp.noteIndex + 1) / nLen) * 100)));
                     const heat = tp.mastery === "zayif" ? "heat-zayif" : tp.mastery === "orta" ? "heat-orta" : tp.mastery === "iyi" ? "heat-iyi" : "";
+                    const open = StudentStore.isKonuOpen(ders, konular, idx, props.kpssData);
+                    const done = StudentStore.topicComplete(tp, kd);
                     return (
-                        <button key={konu} onClick={function () { props.onKonu(konu); }}
-                            className={"w-full text-left p-5 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 shadow-sm card-hover " + heat}>
+                        <button key={konu} disabled={!open} onClick={function () { if (open) props.onKonu(konu); }}
+                            className={"w-full text-left p-5 panel rounded-2xl " + (open ? heat : "opacity-45")}>
                             <div className="flex justify-between items-start gap-3">
-                                <button onClick={function () {
-                        if (!window.ShareCard) return;
-                        const nick = (props.student && props.student.userProfile && props.student.userProfile.nickname) || "öğrenci";
-                        const url = window.ShareCard.draw({
-                            nickname: nick, pct: oran, correct: score, total: total,
-                            streak: (props.student && props.student.streak && props.student.streak.count) || 0,
-                            caption: "Net kartı · KPSS Eğitim Alanı"
-                        });
-                        window.ShareCard.download(url, "kpss-net-karti.png");
-                    }} className="w-full mb-3 p-4 rounded-2xl border font-bold">Instagram / WhatsApp kartı indir</button>
-                    <div className="flex gap-3">
-                                    <div className={"h-10 w-10 rounded-xl bg-gradient-to-br " + t.grad + " flex items-center justify-center text-white font-bold text-sm"}>{idx + 1}</div>
-                                    <div>
+                                <div className="flex gap-3 min-w-0">
+                                    <div className={"h-10 w-10 rounded-xl bg-gradient-to-br " + t.grad + " flex items-center justify-center text-white font-bold text-sm shrink-0"}>{done ? "✓" : (open ? idx + 1 : "🔒")}</div>
+                                    <div className="min-w-0">
                                         <div className="font-bold text-slate-800 dark:text-slate-100">{konu}</div>
-                                        <p className="text-xs text-slate-400 mt-1">{(kd.notlar || []).length} not · {(kd.sorular || []).length} soru · not %{tp.notesDone ? 100 : notePct}{tp.masteryScore ? " · hakimiyet " + tp.masteryScore : ""}</p>
+                                        <p className="text-xs text-slate-400 mt-1">{open ? ((kd.notlar || []).length + " not · " + (kd.sorular || []).length + " soru") : "Önce önceki konuyu bitir"}</p>
                                     </div>
                                 </div>
-                                <div className="text-right shrink-0">
-                                    <div className="font-black text-sm">{tp.lastPct == null ? "—" : "%" + tp.lastPct}</div>
-                                    <span className={"text-[10px] font-bold px-2 py-0.5 rounded-full " + m.cls}>{m.text}</span>
-                                </div>
+                                {open ? (
+                                    <div className="text-right shrink-0">
+                                        <div className="font-black text-sm">{tp.lastPct == null ? "—" : "%" + tp.lastPct}</div>
+                                        <span className={"text-[10px] font-bold px-2 py-0.5 rounded-full " + m.cls}>{m.text}</span>
+                                    </div>
+                                ) : null}
                             </div>
                         </button>
                     );
@@ -401,8 +335,16 @@ function NotesView(props) {
                     <div className="absolute bottom-6 left-0 right-0 px-6 flex justify-between items-center">
                         <button disabled={idx === 0} onClick={function () { props.onIndex(idx - 1); }}
                             className={"p-3 rounded-xl font-bold " + (idx === 0 ? "opacity-30" : "bg-indigo-50 text-indigo-600")}>Önceki</button>
-                        <button disabled={idx === notlar.length - 1} onClick={function () { props.onIndex(idx + 1); }}
-                            className={"p-3 rounded-xl font-bold " + (idx === notlar.length - 1 ? "opacity-30" : "bg-indigo-50 text-indigo-600")}>Sonraki</button>
+                        {idx === notlar.length - 1 ? (
+                            <button onClick={function () {
+                                if (props.ders && props.konu) StudentStore.markNotesComplete(props.ders, props.konu);
+                                if (props.hasTest) props.onTest();
+                                else props.onBack();
+                            }} className="p-3 rounded-xl font-bold bg-zinc-900 text-white">{props.hasTest ? "Teste geç" : "Konuyu bitir"}</button>
+                        ) : (
+                            <button onClick={function () { props.onIndex(idx + 1); }}
+                                className="p-3 rounded-xl font-bold bg-indigo-50 text-indigo-600">Sonraki</button>
+                        )}
                     </div>
                 </div>
             ) : (
@@ -624,8 +566,8 @@ function DenemeSetup(props) {
         <Shell>
             <div className="flex justify-between mb-6">
                 <div>
-                    <h1 className="text-3xl font-black">Deneme / pratik</h1>
-                    <p className="text-slate-500 text-sm">Karışık mini test. ÖSYM kopyası değil; tempo ve konu kırılımı için.</p>
+                    <h1 className="text-2xl font-semibold tracking-tight">Deneme</h1>
+                    <p className="text-sm text-zinc-500">Karışık pratik.</p>
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
@@ -656,116 +598,57 @@ function DenemeSetup(props) {
 
 function Ben(props) {
     const st = props.student;
-    const plan = props.plan;
-    const days = Object.keys(st.sessions).sort().slice(-14);
     let totQ = 0, totC = 0;
     Object.keys(st.sessions).forEach(function (d) {
         totQ += st.sessions[d].questions || 0;
         totC += st.sessions[d].correct || 0;
     });
     const overall = totQ ? Math.round((totC / totQ) * 100) : 0;
-    const fileRef = useRef(null);
+    const up = st.userProfile || {};
+    const field = "w-full px-4 py-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900";
+    const isAdmin = up.role === "admin";
     return (
         <Shell>
-            <div className="flex justify-between mb-6">
-                <h1 className="text-3xl font-black">Ben</h1>
+            <div className="flex justify-between items-start mb-6">
+                <div>
+                    <h1 className="text-2xl font-semibold tracking-tight">Profil</h1>
+                    <p className="text-sm text-zinc-500 mt-1">{up.email || "Hesap bağlı"}</p>
+                </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
-            <div className="grid grid-cols-2 gap-3 mb-6">
-                <div className="p-4 rounded-2xl bg-white dark:bg-slate-800 border"><div className="text-2xl font-black">{totQ}</div><div className="text-xs text-slate-400 font-bold">Toplam soru</div></div>
-                <div className="p-4 rounded-2xl bg-white dark:bg-slate-800 border"><div className="text-2xl font-black">%{overall}</div><div className="text-xs text-slate-400 font-bold">Genel net</div></div>
+            <div className="grid grid-cols-2 gap-2 mb-6">
+                <div className="p-4 rounded-2xl panel"><div className="text-xl font-semibold">{totQ}</div><div className="text-xs text-zinc-400 mt-1">Soru</div></div>
+                <div className="p-4 rounded-2xl panel"><div className="text-xl font-semibold">%{overall}</div><div className="text-xs text-zinc-400 mt-1">Net</div></div>
             </div>
-            <h2 className="text-sm font-black text-slate-500 mb-2">Son 14 gün</h2>
-            <div className="flex items-end gap-1 h-24 mb-6 bg-white dark:bg-slate-800 rounded-2xl p-3 border">
-                {days.length === 0 ? <p className="text-xs text-slate-400">Henüz oturum yok</p> : days.map(function (d) {
-                    const h = Math.min(100, (st.sessions[d].questions || 0) * 4);
-                    return <div key={d} title={d + " · " + st.sessions[d].questions} className="flex-1 bg-indigo-500 rounded-t" style={{ height: Math.max(4, h) + "%" }} />;
-                })}
-            </div>
-            <h2 className="text-sm font-black text-slate-500 mb-2">En zayıf 5</h2>
-            <div className="space-y-2 mb-8">
-                {plan.weak.slice(0, 5).map(function (r) {
-                    return (
-                        <button key={r.ders + r.konu} onClick={function () { props.openKonu(r.ders, r.konu); }}
-                            className="w-full flex justify-between p-3 rounded-xl bg-white dark:bg-slate-800 border text-sm font-semibold">
-                            <span>{r.konu}</span>
-                            <span>{r.lastPct == null ? "—" : "%" + r.lastPct}</span>
-                        </button>
-                    );
-                })}
-            </div>
-            <div className="space-y-3 mb-4">
-                <label className="text-xs font-bold text-slate-500">Eğitim düzeyi</label>
-                <select value={(st.userProfile && st.userProfile.educationLevel) || "lisans"} onChange={function (e) { StudentStore.updateUserProfile({ educationLevel: e.target.value }); }}
-                    className="w-full px-4 py-3 rounded-xl border bg-white dark:bg-slate-800">
+            <div className="panel rounded-2xl p-4 mb-4 space-y-3">
+                <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider">Ayarlar</p>
+                <label className="text-sm text-zinc-500">Ad</label>
+                <input value={st.profile.name || ""} onChange={function (e) { StudentStore.updateProfile({ name: e.target.value }); StudentStore.updateUserProfile({ nickname: e.target.value }); }} className={field} />
+                <label className="text-sm text-zinc-500">Eğitim</label>
+                <select value={up.educationLevel || "lisans"} onChange={function (e) { StudentStore.updateUserProfile({ educationLevel: e.target.value }); }} className={field}>
                     <option value="lisans">Lisans</option>
                     <option value="onlisans">Ön lisans</option>
                     <option value="ortaogretim">Ortaöğretim</option>
                 </select>
-                <label className="text-xs font-bold text-slate-500">Hedef türü</label>
-                <select value={(st.userProfile && st.userProfile.targetType) || "B"} onChange={function (e) { StudentStore.updateUserProfile({ targetType: e.target.value }); }}
-                    className="w-full px-4 py-3 rounded-xl border bg-white dark:bg-slate-800">
-                    <option value="B">B Grubu GY-GK</option>
-                    <option value="A">A Grubu (alan yakında)</option>
-                    <option value="ogretmen">Öğretmenlik (yakında)</option>
-                    <option value="dhbt">DHBT (yakında)</option>
-                </select>
-                <label className="text-xs font-bold text-slate-500">Takma ad</label>
-                <input value={(st.userProfile && st.userProfile.nickname) || ""} onChange={function (e) { StudentStore.updateUserProfile({ nickname: e.target.value }); }}
-                    className="w-full px-4 py-3 rounded-xl border bg-white dark:bg-slate-800" />
-                <label className="text-xs font-bold text-slate-500">Sınav tarihi</label>
-                <input type="date" value={st.profile.examDate} onChange={function (e) { StudentStore.updateProfile({ examDate: e.target.value }); }}
-                    className="w-full px-4 py-3 rounded-xl border bg-white dark:bg-slate-800" />
-                <label className="text-xs font-bold text-slate-500">Günlük soru hedefi</label>
-                <input type="number" min="5" max="200" value={st.profile.dailyQuestions}
-                    onChange={function (e) { StudentStore.updateProfile({ dailyQuestions: Number(e.target.value) || 25 }); }}
-                    className="w-full px-4 py-3 rounded-xl border bg-white dark:bg-slate-800" />
-                <label className="text-xs font-bold text-slate-500">Günlük dakika hedefi</label>
-                <input type="number" min="10" max="300" value={st.profile.dailyMinutes}
-                    onChange={function (e) { StudentStore.updateProfile({ dailyMinutes: Number(e.target.value) || 45 }); }}
-                    className="w-full px-4 py-3 rounded-xl border bg-white dark:bg-slate-800" />
+                <label className="text-sm text-zinc-500">Sınav tarihi</label>
+                <input type="date" value={st.profile.examDate} onChange={function (e) { StudentStore.updateProfile({ examDate: e.target.value }); }} className={field} />
+                <div className="grid grid-cols-2 gap-3">
+                    <div>
+                        <label className="text-sm text-zinc-500">Günlük soru</label>
+                        <input type="number" min="5" max="200" value={st.profile.dailyQuestions}
+                            onChange={function (e) { StudentStore.updateProfile({ dailyQuestions: Number(e.target.value) || 25 }); }} className={field + " mt-1"} />
+                    </div>
+                    <div>
+                        <label className="text-sm text-zinc-500">Günlük dk</label>
+                        <input type="number" min="10" max="300" value={st.profile.dailyMinutes}
+                            onChange={function (e) { StudentStore.updateProfile({ dailyMinutes: Number(e.target.value) || 45 }); }} className={field + " mt-1"} />
+                    </div>
+                </div>
             </div>
-            <div className="flex flex-col gap-2 mt-6">
-                <button onClick={function () {
-                    const blob = new Blob([StudentStore.exportJson()], { type: "application/json" });
-                    const a = document.createElement("a");
-                    a.href = URL.createObjectURL(blob);
-                    a.download = "kpss-yedek.json";
-                    a.click();
-                }} className="p-4 rounded-2xl bg-white dark:bg-slate-800 border font-bold">Yedeği indir (JSON)</button>
-                <button onClick={function () { fileRef.current && fileRef.current.click(); }} className="p-4 rounded-2xl bg-white dark:bg-slate-800 border font-bold">Yedekten yükle</button>
-                <input ref={fileRef} type="file" accept="application/json" className="hidden" onChange={function (e) {
-                    const f = e.target.files && e.target.files[0];
-                    if (!f) return;
-                    const reader = new FileReader();
-                    reader.onload = function () {
-                        try { StudentStore.importJson(reader.result); alert("Yedek yüklendi."); }
-                        catch (err) { alert("Geçersiz dosya."); }
-                    };
-                    reader.readAsText(f);
-                }} />
-                <button onClick={function () {
-                    if (confirm("Tüm ilerleme silinsin mi? Bu cihazdaki kayıt gider.")) StudentStore.reset();
-                }} className="p-4 rounded-2xl bg-rose-50 text-rose-600 font-bold">Veriyi sıfırla</button>
-            </div>
-            <div className="mt-8 space-y-2">
-                <h2 className="text-sm font-black text-slate-500">Hesap ve büyüme</h2>
-                {(props.links || []).map(function (l) {
-                    return (
-                        <button key={l.id} onClick={l.onClick} className="w-full text-left p-4 rounded-2xl bg-white dark:bg-slate-800 border font-bold flex justify-between">
-                            <span>{l.label}</span>
-                            {l.badge ? <span className="text-[10px] text-amber-700">{l.badge}</span> : null}
-                        </button>
-                    );
-                })}
-                <p className="text-xs text-slate-400">Takma ad: {(st.userProfile && st.userProfile.nickname) || "—"} · Kulvar: {(st.userProfile && st.userProfile.targetType) || "B"} · {(st.userProfile && st.userProfile.educationLevel)}</p>
-                <p className="text-xs text-slate-400">Davet kodu: {window.PaymentClient ? window.PaymentClient.myCode() : "—"}</p>
-                <label className="flex items-center gap-2 text-sm">
-                    <input type="checkbox" checked={st.profile.tabLeaveWarn !== false} onChange={function (e) { StudentStore.updateProfile({ tabLeaveWarn: e.target.checked }); }} />
-                    Denemede sekme uyarısı
-                </label>
-                <button onClick={function () { StudentStore.requestDeletion(); alert("Silme talebi cihazda işaretlendi. Hesaplıysan Edge Function ile işlenir."); }} className="text-xs font-bold text-rose-500">KVKK veri silme talebi</button>
-            </div>
+            {isAdmin ? (
+                <button onClick={function () { props.onAdmin && props.onAdmin(); }} className="w-full mb-3 p-3.5 rounded-2xl panel text-left font-medium">Yönetim</button>
+            ) : null}
+            <button onClick={function () { props.onSignOut && props.onSignOut(); }} className="w-full p-3.5 rounded-2xl border border-zinc-200 dark:border-zinc-700 font-medium">Çıkış</button>
         </Shell>
     );
 }
@@ -788,6 +671,9 @@ function App() {
 
     const [extra, setExtra] = useState(null);
     const [LazyCmp, setLazyCmp] = useState(null);
+    const [authReady, setAuthReady] = useState(false);
+    const [authSession, setAuthSession] = useState(null);
+    const [GateAuth, setGateAuth] = useState(null);
 
     const LAZY = {
         onboarding: ["OnboardingScreen", "js/components/OnboardingScreen.jsx"],
@@ -803,7 +689,7 @@ function App() {
 
     useEffect(function () {
         if (!student.profile.onboarded && window.JsxLoader) {
-            window.JsxLoader.load("OnboardingScreen", "js/components/OnboardingScreen.jsx").then(function (C) { if (C) setLazyCmp(function () { return C; }); });
+            window.JsxLoader.load("OnboardingScreen", "js/components/OnboardingScreen.jsx");
         }
     }, [student.profile.onboarded]);
 
@@ -816,8 +702,51 @@ function App() {
     }, [extra]);
 
     useEffect(function () {
-        if (window.SyncEngine) window.SyncEngine.sync();
+        var sb = window.SupabaseClient && window.SupabaseClient.get && window.SupabaseClient.get();
+        if (!sb) { setAuthReady(true); return; }
+        sb.auth.getSession().then(function (r) {
+            var sess = r.data && r.data.session;
+            setAuthSession(sess || null);
+            setAuthReady(true);
+            if (sess) {
+                if (window.StudentStore && window.StudentStore.bindToUser) {
+                    window.StudentStore.bindToUser(sess.user.id, sess.user.email);
+                }
+                if (window.StudentStore && window.StudentStore.consumeSignupIfNeeded) {
+                    window.StudentStore.consumeSignupIfNeeded(sess.user);
+                }
+                if (window.SyncEngine) window.SyncEngine.sync();
+            }
+        }).catch(function () { setAuthReady(true); });
+        var sub = sb.auth.onAuthStateChange(function (event, sess) {
+            setAuthReady(true);
+            if (event === "SIGNED_OUT") {
+                setAuthSession(null);
+                if (window.StudentStore && window.StudentStore.bindToUser) window.StudentStore.bindToUser(null);
+                return;
+            }
+            if (!sess) return;
+            setAuthSession(sess);
+            if (window.StudentStore && window.StudentStore.bindToUser) {
+                window.StudentStore.bindToUser(sess.user.id, sess.user.email);
+            }
+            if (window.StudentStore && window.StudentStore.consumeSignupIfNeeded) {
+                window.StudentStore.consumeSignupIfNeeded(sess.user);
+            }
+            if (window.SyncEngine) window.SyncEngine.sync();
+        });
+        return function () {
+            if (sub && sub.data && sub.data.subscription) sub.data.subscription.unsubscribe();
+        };
     }, []);
+
+    useEffect(function () {
+        if (authReady && !authSession && window.JsxLoader) {
+            window.JsxLoader.load("AuthScreen", "js/components/AuthScreen.jsx").then(function (C) {
+                if (C) setGateAuth(function () { return C; });
+            });
+        }
+    }, [authReady, authSession]);
     const [nav, setNav] = useState("bugun");
     const [selectedDers, setSelectedDers] = useState(null);
     const [selectedKonu, setSelectedKonu] = useState(null);
@@ -996,16 +925,15 @@ function App() {
             onStart={function (items, seconds) { startSession(items, { mode: "mixed", seconds: seconds || null }); }}
             onFullExam={function () { setExtra("exam"); }} />;
     } else if (nav === "ben") {
-        body = <Ben student={student} plan={plan} isDark={isDark} toggleDark={toggleDark} openKonu={openKonu} links={[
-            { id: "auth", label: "Giriş / kayıt", onClick: function () { setExtra("auth"); } },
-            { id: "lb", label: "Türkiye liderliği", onClick: function () { setExtra("leaderboard"); } },
-            { id: "place", label: "Puan ve tercih robotu", badge: "Yakında", onClick: function () { setExtra("placement"); } },
-            { id: "live", label: "Canlı deneme saati", badge: "Yakında", onClick: function () { setExtra("live"); } },
-            { id: "ai", label: "Soru asistanı", badge: "Yakında", onClick: function () { setExtra("ai"); } },
-            { id: "prem", label: "Premium (sandbox)", onClick: function () { window.PaymentClient.checkout("premium").then(function (r) { alert(r.message); }); } },
-            { id: "push", label: "Bildirim izni", onClick: function () { window.NotificationEngine.requestPush().then(function (r) { alert(r.ok ? "Açık" : r.perm); }); } },
-            { id: "admin", label: "Yönetim paneli", onClick: function () { setExtra("admin"); } }
-        ]} />;
+        body = <Ben student={student} isDark={isDark} toggleDark={toggleDark}
+            onAdmin={function () { setExtra("admin"); }}
+            onSignOut={function () {
+                var sb = window.SupabaseClient && window.SupabaseClient.get && window.SupabaseClient.get();
+                if (sb) {
+                    if (window.StudentStore && window.StudentStore.bindToUser) window.StudentStore.bindToUser(null);
+                    sb.auth.signOut();
+                }
+            }} />;
     } else if (!selectedDers) {
         body = <DersHome kpssData={kpssData} plan={plan} isDark={isDark} toggleDark={toggleDark} onDers={function (d) { setSelectedDers(d); setSelectedKonu(null); }} />;
     } else if (!selectedKonu) {
@@ -1017,7 +945,7 @@ function App() {
             }} />;
     } else if (viewMode === "notlar") {
         body = (
-            <NotesView notlar={konuData.notlar || []} index={noteIndex} konu={selectedKonu} isDark={isDark} toggleDark={toggleDark}
+            <NotesView notlar={konuData.notlar || []} index={noteIndex} ders={selectedDers} konu={selectedKonu} isDark={isDark} toggleDark={toggleDark}
                 hasTest={(konuData.sorular || []).length > 0}
                 onBack={function () { setViewMode("hub"); }}
                 onIndex={function (i) {
@@ -1042,25 +970,36 @@ function App() {
         );
     }
 
+    if (!authReady) {
+        return <div className="min-h-screen flex items-center justify-center text-sm text-zinc-400">Yükleniyor</div>;
+    }
+    var AuthCmp = GateAuth || (window.KpssComponents && window.KpssComponents.AuthScreen);
+    if (!authSession) {
+        return AuthCmp
+            ? React.createElement(AuthCmp, { gate: true, onDone: function () { if (window.SyncEngine) window.SyncEngine.sync(); } })
+            : <div className="min-h-screen flex items-center justify-center text-sm text-zinc-400">Yükleniyor</div>;
+    }
+
     return (
         <div>
-            {!student.profile.onboarded ? (
-                (window.KpssComponents && window.KpssComponents.OnboardingScreen)
-                    ? React.createElement(window.KpssComponents.OnboardingScreen, { student: student })
-                    : (LazyCmp ? React.createElement(LazyCmp, { student: student }) : <Onboarding student={student} />)
-            ) : null}
-            {extra && extra !== "onboarding" ? (
-                <div className="fixed inset-0 z-50 bg-slate-100 dark:bg-slate-900 overflow-y-auto">
-                    {LazyCmp ? React.createElement(LazyCmp, {
-                        student: student, plan: plan, kpssData: kpssData,
-                        onBack: function () { setExtra(null); setLazyCmp(null); },
-                        onClose: function () { setExtra(null); setLazyCmp(null); },
-                        onDone: function () { setExtra(null); setLazyCmp(null); if (window.SyncEngine) window.SyncEngine.sync(); }
-                    }) : <div className="p-10 text-center text-slate-500">Yükleniyor…</div>}
+            {extra && extra !== "onboarding" && extra !== "auth" ? (
+                <div className="fixed inset-0 z-[70] overlay-scrim overflow-y-auto">
+                    <div className={"min-h-full mx-auto px-4 py-6 " + (extra === "admin" || extra === "exam" || extra === "leaderboard" ? "max-w-3xl" : "max-w-lg")} style={{ paddingBottom: "max(24px, env(safe-area-inset-bottom))" }}>
+                        <button type="button" onClick={function () { setExtra(null); setLazyCmp(null); }}
+                            className="mb-4 px-4 py-2 rounded-xl panel text-sm font-medium">Kapat</button>
+                        <div className="overlay-sheet">
+                            {LazyCmp ? React.createElement(LazyCmp, {
+                                student: student, plan: plan, kpssData: kpssData,
+                                onBack: function () { setExtra(null); setLazyCmp(null); },
+                                onClose: function () { setExtra(null); setLazyCmp(null); },
+                                onDone: function () { setExtra(null); setLazyCmp(null); if (window.SyncEngine) window.SyncEngine.sync(); }
+                            }) : <div className="p-10 text-center text-zinc-500">Yükleniyor…</div>}
+                        </div>
+                    </div>
                 </div>
             ) : null}
             {body}
-            {!inTest && student.profile.onboarded ? (
+            {!inTest ? (
                 <BottomNav nav={nav} onChange={function (id) {
                     setNav(id);
                     if (id !== "dersler") { setSelectedDers(null); setSelectedKonu(null); setViewMode("hub"); }

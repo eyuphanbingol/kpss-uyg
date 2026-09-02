@@ -1,5 +1,6 @@
 (function (global) {
     var KEY = "kpss-student-v1";
+    var ACTIVE_KEY = "kpss-student-active";
     var INTERVALS = [1, 3, 7, 14, 30];
     var listeners = [];
     var SCHEMA_VERSION = 2;
@@ -124,15 +125,55 @@
 
     var state = defaultState();
 
+    function storageKey(uid) {
+        return KEY + ":" + uid;
+    }
+
+    function isEmptyProgress(s) {
+        if (!s) return true;
+        var q = s.counters && s.counters.questions;
+        var topics = s.topics && Object.keys(s.topics).length;
+        var sessions = s.sessions && Object.keys(s.sessions).length;
+        var named = s.profile && s.profile.name;
+        var onboarded = s.profile && s.profile.onboarded;
+        return !q && !topics && !sessions && !named && !onboarded;
+    }
+
+    function readKey(key) {
+        try {
+            var raw = localStorage.getItem(key);
+            if (!raw) return null;
+            return migrate(JSON.parse(raw));
+        } catch (e) {
+            return null;
+        }
+    }
+
+    function adoptLegacy(uid, email) {
+        var parsed = readKey(KEY);
+        if (!parsed) return null;
+        var owner = parsed.userProfile && parsed.userProfile.authUserId;
+        var ownerEmail = (parsed.userProfile && parsed.userProfile.email) || "";
+        if (owner && owner !== uid) return null;
+        if (ownerEmail && email && ownerEmail.toLowerCase() !== String(email).toLowerCase()) return null;
+        if (!owner && !ownerEmail) return null;
+        if (owner === uid || (ownerEmail && email && ownerEmail.toLowerCase() === String(email).toLowerCase())) {
+            return parsed;
+        }
+        return null;
+    }
+
     function load() {
         try {
-            var raw = localStorage.getItem(KEY);
-            if (!raw) {
-                state = defaultState();
-                return state;
+            var active = localStorage.getItem(ACTIVE_KEY);
+            if (active) {
+                var scoped = readKey(storageKey(active));
+                if (scoped) {
+                    state = scoped;
+                    return state;
+                }
             }
-            state = migrate(JSON.parse(raw));
-            persistQuiet();
+            state = defaultState();
         } catch (e) {
             state = defaultState();
         }
@@ -141,7 +182,10 @@
 
     function persistQuiet() {
         state.updatedAt = nowIso();
-        localStorage.setItem(KEY, JSON.stringify(state));
+        var uid = state.userProfile && state.userProfile.authUserId;
+        if (!uid) return;
+        localStorage.setItem(storageKey(uid), JSON.stringify(state));
+        localStorage.setItem(ACTIVE_KEY, uid);
     }
 
     function persist() {
@@ -336,6 +380,76 @@
             if (opts && opts.quiet) persistQuiet();
             else emit();
         },
+        isEmptyProgress: isEmptyProgress,
+        topicComplete: function (t, kd) {
+            t = t || {};
+            kd = kd || {};
+            var qs = (kd.sorular || []).length;
+            var ns = (kd.notlar || []).length;
+            if (qs) return (t.attempts || 0) > 0;
+            if (ns) return !!t.notesDone;
+            return !!t.notesDone || (t.attempts || 0) > 0;
+        },
+        isKonuOpen: function (ders, konular, idx, kpssData) {
+            if (idx <= 0) return true;
+            var i;
+            for (i = 0; i < idx; i++) {
+                var k = konular[i];
+                var kd = ((kpssData[ders] || {})[k]) || {};
+                if (!global.StudentStore.topicComplete(getTopic(ders, k), kd)) return false;
+            }
+            return true;
+        },
+        consumeSignupIfNeeded: function (user) {
+            if (state.profile.onboarded) return;
+            var pending = null;
+            try {
+                pending = JSON.parse(sessionStorage.getItem("kpss-signup-profile") || "null");
+                sessionStorage.removeItem("kpss-signup-profile");
+            } catch (e) { pending = null; }
+            var m = (user && user.user_metadata) || {};
+            var name = (pending && pending.name) || m.full_name || m.name || "";
+            if (!name && user && user.email) name = String(user.email).split("@")[0];
+            var dates = (global.KpssConfig && global.KpssConfig.examDateByLevel) || {};
+            var level = (pending && pending.educationLevel) || m.education_level || "lisans";
+            global.StudentStore.completeOnboarding({
+                name: name,
+                nickname: name,
+                examDate: (pending && pending.examDate) || m.exam_date || dates[level] || state.profile.examDate,
+                dailyMinutes: 45,
+                dailyQuestions: 25,
+                educationLevel: level,
+                targetType: "B",
+                kvkkConsent: true,
+                weeklyHours: 7
+            });
+        },
+        bindToUser: function (uid, email) {
+            var prev = state.userProfile && state.userProfile.authUserId;
+            if (prev && prev === uid) {
+                state.userProfile.email = email || state.userProfile.email || "";
+                persistQuiet();
+                return state;
+            }
+            if (prev && prev !== uid) persistQuiet();
+            if (!uid) {
+                state = defaultState();
+                try { localStorage.removeItem(ACTIVE_KEY); } catch (e) {}
+                listeners.forEach(function (fn) { fn(clone(state)); });
+                return state;
+            }
+            var scoped = readKey(storageKey(uid));
+            if (!scoped) scoped = adoptLegacy(uid, email);
+            if (scoped && scoped.userProfile && scoped.userProfile.authUserId && scoped.userProfile.authUserId !== uid) {
+                scoped = null;
+            }
+            state = scoped ? scoped : defaultState();
+            state.userProfile.authUserId = uid;
+            state.userProfile.email = email || "";
+            persistQuiet();
+            listeners.forEach(function (fn) { fn(clone(state)); });
+            return state;
+        },
         notify: function () {
             listeners.forEach(function (fn) { fn(clone(state)); });
         },
@@ -412,14 +526,6 @@
         },
         bumpShare: function () {
             state.counters.shareCards += 1;
-            emit();
-        },
-        exportJson: function () {
-            return JSON.stringify(state, null, 2);
-        },
-        importJson: function (obj) {
-            if (typeof obj === "string") obj = JSON.parse(obj);
-            state = migrate(obj);
             emit();
         },
         reset: function () {
