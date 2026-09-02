@@ -1,5 +1,7 @@
 (function () {
     const { useState } = React;
+    const Ic = function (n, c) { return window.KpssIcon ? window.KpssIcon(n, c) : null; };
+
     function AuthScreen(props) {
         const dates = (window.KpssConfig && window.KpssConfig.examDateByLevel) || {};
         const [email, setEmail] = useState("");
@@ -10,16 +12,32 @@
         const [refCode, setRefCode] = useState("");
         const [examDate, setExamDate] = useState(dates.lisans || "2026-09-06");
         const [kvkk, setKvkk] = useState(false);
+        const [kvkkOpen, setKvkkOpen] = useState(false);
+        const [interest, setInterest] = useState({});
         const [mode, setMode] = useState("in");
+        const [step, setStep] = useState(1);
         const [msg, setMsg] = useState("");
         const [busy, setBusy] = useState(false);
         const sb = window.SupabaseClient && window.SupabaseClient.get();
-        const field = "w-full px-4 py-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-[15px]";
+        const field = "w-full px-4 py-3 rounded-xl border border-zinc-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-[15px]";
+
+        var levels = [
+            { id: "lisans", t: "Lisans", d: "Her yıl yapılan GY-GK" },
+            { id: "onlisans", t: "Ön lisans", d: "Çift yıllarda" },
+            { id: "ortaogretim", t: "Ortaöğretim", d: "Çift yıllarda" }
+        ];
+        var targets = [
+            { id: "B", t: "B Grubu", d: "Standart memurluk · yalnızca GY-GK", ready: true, icon: "book" },
+            { id: "A", t: "A Grubu", d: "GY-GK + hukuk, iktisat, maliye", ready: false, icon: "scale" },
+            { id: "ogretmen", t: "Öğretmenlik", d: "GY-GK + eğitim bilimleri + ÖABT", ready: false, icon: "cap" },
+            { id: "dhbt", t: "DHBT", d: "GY-GK + din hizmetleri", ready: false, icon: "book" }
+        ];
 
         function savePending() {
             try {
                 sessionStorage.setItem("kpss-signup-profile", JSON.stringify({
-                    name: name, educationLevel: level, examDate: examDate, targetType: target, referredBy: refCode
+                    name: name, educationLevel: level, examDate: examDate, targetType: target, referredBy: refCode,
+                    moduleInterest: Object.keys(interest).filter(function (k) { return interest[k]; })
                 }));
             } catch (e) {}
         }
@@ -50,9 +68,7 @@
                     ? await sb.auth.signUp({
                         email: email,
                         password: pass,
-                        options: {
-                            data: { full_name: name.trim(), education_level: level, exam_date: examDate, target_type: target }
-                        }
+                        options: { data: { full_name: name.trim(), education_level: level, exam_date: examDate, target_type: target } }
                     })
                     : await sb.auth.signInWithPassword({ email: email, password: pass });
                 if (res.error) setMsg(res.error.message);
@@ -69,6 +85,7 @@
             if (!sb) { setMsg("Sunucu bağlı değil."); return; }
             if (mode === "up") {
                 if (!name.trim()) { setMsg("Google ile kayıt için önce adını yaz."); return; }
+                if (step < 3) { setMsg("Önce adımları tamamla."); return; }
                 if (!kvkk) { setMsg("Devam için onay kutusu gerekli."); return; }
                 savePending();
             }
@@ -84,79 +101,149 @@
             setBusy(false);
         }
 
+        function cardCls(on, dim) {
+            return "w-full text-left p-4 rounded-2xl border transition-[border-color,background-color,transform] duration-200 " +
+                (on ? "border-brand-navy bg-brand-navy/5 dark:bg-brand-navy/40" : "border-zinc-200 dark:border-slate-700 bg-white dark:bg-slate-900") +
+                (dim ? " opacity-60" : "");
+        }
+
+        var signup = null;
+        if (mode === "up") {
+            signup = (
+                <div className="slide-step">
+                    <div className="h-1 bg-zinc-200 dark:bg-slate-800 rounded-full mb-6 overflow-hidden">
+                        <div className="h-full bg-brand-navy dark:bg-brand-goldsoft transition-all duration-200" style={{ width: (step / 3 * 100) + "%" }} />
+                    </div>
+                    {step === 1 ? (
+                        <div>
+                            <label className="text-sm text-zinc-500 block mb-1.5" htmlFor="au-name">Adın</label>
+                            <input id="au-name" value={name} onChange={function (e) { setName(e.target.value); }} className={field + " mb-5"} placeholder="Örn. Ayşe" />
+                            <p className="text-sm text-zinc-500 mb-3">Eğitim düzeyi</p>
+                            <div className="space-y-2 mb-6">
+                                {levels.map(function (x) {
+                                    return (
+                                        <button key={x.id} type="button" onClick={function () {
+                                            setLevel(x.id);
+                                            if (dates[x.id]) setExamDate(dates[x.id]);
+                                        }} className={cardCls(level === x.id, false)}>
+                                            <div className="font-display font-semibold">{x.t}</div>
+                                            <div className="text-sm text-zinc-500 mt-0.5">{x.d}</div>
+                                        </button>
+                                    );
+                                })}
+                            </div>
+                            <button type="button" disabled={!name.trim()} onClick={function () { setStep(2); setMsg(""); }}
+                                className="w-full py-3.5 rounded-xl bg-brand-navy text-white font-semibold disabled:opacity-40">Devam</button>
+                        </div>
+                    ) : null}
+                    {step === 2 ? (
+                        <div>
+                            <p className="text-sm text-zinc-500 mb-3">Hedef türü</p>
+                            <div className="space-y-2 mb-6">
+                                {targets.map(function (x) {
+                                    var on = target === x.id;
+                                    return (
+                                        <button key={x.id} type="button" onClick={function () {
+                                            setTarget(x.id);
+                                            if (!x.ready) {
+                                                var n = Object.assign({}, interest);
+                                                n[x.id] = true;
+                                                setInterest(n);
+                                            }
+                                        }} className={cardCls(on, !x.ready)}>
+                                            <div className="flex items-start justify-between gap-2">
+                                                <div>
+                                                    <div className="flex items-center gap-2 font-display font-semibold">
+                                                        {Ic(x.icon, "w-4 h-4 text-brand-navy dark:text-brand-goldsoft")}
+                                                        {x.t}
+                                                    </div>
+                                                    <div className="text-sm text-zinc-500 mt-0.5">{x.d}</div>
+                                                </div>
+                                                {!x.ready ? <span className="text-[10px] uppercase tracking-wide px-2 py-0.5 rounded-full bg-zinc-100 dark:bg-slate-800 text-zinc-500 shrink-0">Yakında</span> : null}
+                                            </div>
+                                        </button>
+                                    );
+                                })}
+                            </div>
+                            <div className="flex gap-2">
+                                <button type="button" onClick={function () { setStep(1); }} className="flex-1 py-3.5 rounded-xl border font-medium">Geri</button>
+                                <button type="button" onClick={function () { setStep(3); setMsg(""); }} className="flex-1 py-3.5 rounded-xl bg-brand-navy text-white font-semibold">Devam</button>
+                            </div>
+                        </div>
+                    ) : null}
+                    {step === 3 ? (
+                        <div>
+                            <p className="text-sm text-zinc-500 mb-3">GY-GK hazır. Seçtiğin diğer modüller açılınca haber veririz.</p>
+                            <label className="text-sm text-zinc-500 block mb-1.5" htmlFor="au-mail">E-posta</label>
+                            <input id="au-mail" type="email" autoComplete="email" value={email} onChange={function (e) { setEmail(e.target.value); }} className={field + " mb-4"} />
+                            <label className="text-sm text-zinc-500 block mb-1.5" htmlFor="au-pass">Şifre</label>
+                            <input id="au-pass" type="password" autoComplete="new-password" value={pass} onChange={function (e) { setPass(e.target.value); }} className={field + " mb-4"} />
+                            <label className="text-sm text-zinc-500 block mb-1.5" htmlFor="au-date">Sınav tarihi</label>
+                            <input id="au-date" type="date" value={examDate} onChange={function (e) { setExamDate(e.target.value); }} className={field + " mb-4"} />
+                            <label className="text-sm text-zinc-500 block mb-1.5" htmlFor="au-ref">Davet kodu (opsiyonel)</label>
+                            <input id="au-ref" value={refCode} onChange={function (e) { setRefCode(e.target.value); }} className={field + " mb-4"} />
+                            <label className="flex items-start gap-2 text-xs text-zinc-500 mb-4">
+                                <input type="checkbox" checked={kvkk} onChange={function (e) { setKvkk(e.target.checked); }} className="mt-0.5" />
+                                <span>İlerlememin hesabıma kaydedilmesine izin veriyorum.{" "}
+                                    <button type="button" className="underline text-brand-navy dark:text-brand-goldsoft" onClick={function () { setKvkkOpen(!kvkkOpen); }}>Detayları oku</button>
+                                </span>
+                            </label>
+                            {kvkkOpen ? (
+                                <p className="text-xs text-zinc-500 mb-4 leading-relaxed">Verin yalnızca kendi hesabında tutulur. Liderlikte takma ad görünür; e-posta paylaşılmaz. Silme talebini profilden iletebilirsin.</p>
+                            ) : null}
+                            <div className="flex gap-2 mb-3">
+                                <button type="button" onClick={function () { setStep(2); }} className="flex-1 py-3.5 rounded-xl border font-medium">Geri</button>
+                                <button type="button" disabled={busy || !kvkk} onClick={submit} className="flex-1 py-3.5 rounded-xl bg-brand-navy text-white font-semibold disabled:opacity-40">
+                                    {busy ? "…" : "Kayıt ol"}
+                                </button>
+                            </div>
+                        </div>
+                    ) : null}
+                </div>
+            );
+        }
+
         var form = (
             <div className={props.gate ? "" : "p-6 sm:p-8"}>
-                <div className="flex p-1 rounded-xl bg-zinc-100 dark:bg-zinc-800 mb-6">
-                    <button type="button" onClick={function () { setMode("in"); setMsg(""); }}
-                        className={"flex-1 py-2 rounded-lg text-sm font-semibold " + (mode === "in" ? "bg-white dark:bg-zinc-900 shadow-sm" : "text-zinc-500")}>Giriş</button>
-                    <button type="button" onClick={function () { setMode("up"); setMsg(""); }}
-                        className={"flex-1 py-2 rounded-lg text-sm font-semibold " + (mode === "up" ? "bg-white dark:bg-zinc-900 shadow-sm" : "text-zinc-500")}>Kayıt</button>
+                <div className="flex p-1 rounded-xl bg-zinc-100 dark:bg-slate-800 mb-6">
+                    <button type="button" onClick={function () { setMode("in"); setMsg(""); setStep(1); }}
+                        className={"flex-1 py-2 rounded-lg text-sm font-semibold " + (mode === "in" ? "bg-white dark:bg-slate-900 shadow-sm" : "text-zinc-500")}>Giriş</button>
+                    <button type="button" onClick={function () { setMode("up"); setMsg(""); setStep(1); }}
+                        className={"flex-1 py-2 rounded-lg text-sm font-semibold " + (mode === "up" ? "bg-white dark:bg-slate-900 shadow-sm" : "text-zinc-500")}>Kayıt</button>
                 </div>
-                {mode === "up" ? (
+                {signup}
+                {mode === "in" ? (
                     <div>
-                        <label className="text-sm text-zinc-500 block mb-1.5" htmlFor="au-name">Adın</label>
-                        <input id="au-name" value={name} onChange={function (e) { setName(e.target.value); }} className={field + " mb-4"} placeholder="Örn. Ayşe" />
-                        <p className="text-sm text-zinc-500 mb-2">Eğitim</p>
-                        <div className="grid grid-cols-3 gap-2 mb-4">
-                            {[{ id: "lisans", t: "Lisans" }, { id: "onlisans", t: "Ön lisans" }, { id: "ortaogretim", t: "Ortaöğretim" }].map(function (x) {
-                                return (
-                                    <button key={x.id} type="button" onClick={function () {
-                                        setLevel(x.id);
-                                        if (dates[x.id]) setExamDate(dates[x.id]);
-                                    }} className={"text-xs font-medium py-2.5 rounded-xl border " + (level === x.id ? "bg-zinc-900 text-white border-zinc-900" : "border-zinc-200")}>{x.t}</button>
-                                );
-                            })}
-                        </div>
-                        <label className="text-sm text-zinc-500 block mb-1.5" htmlFor="au-date">Sınav tarihi</label>
-                        <input id="au-date" type="date" value={examDate} onChange={function (e) { setExamDate(e.target.value); }} className={field + " mb-4"} />
-                        <p className="text-sm text-zinc-500 mb-2">Sınav hedefi</p>
-                        <div className="grid grid-cols-2 gap-2 mb-4">
-                            {((window.KpssConfig && window.KpssConfig.targetTypes) || [{ id: "B", t: "B Grubu" }]).map(function (x) {
-                                return (
-                                    <button key={x.id} type="button" onClick={function () { setTarget(x.id); }}
-                                        className={"text-xs font-medium py-2.5 rounded-xl border " + (target === x.id ? "bg-zinc-900 text-white border-zinc-900" : "border-zinc-200")}>{x.t}</button>
-                                );
-                            })}
-                        </div>
-                        <label className="text-sm text-zinc-500 block mb-1.5" htmlFor="au-ref">Davet kodu (opsiyonel)</label>
-                        <input id="au-ref" value={refCode} onChange={function (e) { setRefCode(e.target.value); }} className={field + " mb-4"} />
+                        <label className="text-sm text-zinc-500 block mb-1.5" htmlFor="au-mail">E-posta</label>
+                        <input id="au-mail" type="email" autoComplete="email" value={email} onChange={function (e) { setEmail(e.target.value); }} className={field + " mb-4"} />
+                        <label className="text-sm text-zinc-500 block mb-1.5" htmlFor="au-pass">Şifre</label>
+                        <input id="au-pass" type="password" autoComplete="current-password" value={pass} onChange={function (e) { setPass(e.target.value); }} className={field + " mb-4"} />
+                        <button disabled={busy} onClick={submit} className="w-full py-3.5 rounded-xl bg-brand-navy text-white font-semibold disabled:opacity-50">
+                            {busy ? "…" : "Giriş yap"}
+                        </button>
+                        <button type="button" disabled={busy} onClick={google}
+                            className="w-full mt-3 py-3.5 rounded-xl border border-zinc-200 dark:border-slate-700 font-semibold text-sm disabled:opacity-50">
+                            Google ile devam
+                        </button>
                     </div>
                 ) : null}
-                <label className="text-sm text-zinc-500 block mb-1.5" htmlFor="au-mail">E-posta</label>
-                <input id="au-mail" type="email" autoComplete="email" value={email} onChange={function (e) { setEmail(e.target.value); }} className={field + " mb-4"} />
-                <label className="text-sm text-zinc-500 block mb-1.5" htmlFor="au-pass">Şifre</label>
-                <input id="au-pass" type="password" autoComplete={mode === "up" ? "new-password" : "current-password"} value={pass} onChange={function (e) { setPass(e.target.value); }} className={field + " mb-4"} />
-                {mode === "up" ? (
-                    <label className="flex items-start gap-2 text-xs text-zinc-500 mb-4">
-                        <input type="checkbox" checked={kvkk} onChange={function (e) { setKvkk(e.target.checked); }} className="mt-0.5" />
-                        <span>İlerlememin hesabıma kaydedilmesine izin veriyorum.</span>
-                    </label>
+                {mode === "up" && step === 3 ? (
+                    <button type="button" disabled={busy} onClick={google}
+                        className="w-full mt-3 py-3.5 rounded-xl border border-zinc-200 dark:border-slate-700 font-semibold text-sm disabled:opacity-50">
+                        Google ile devam
+                    </button>
                 ) : null}
-                <button disabled={busy} onClick={submit} className="w-full py-3.5 rounded-xl bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-semibold disabled:opacity-50">
-                    {busy ? "…" : (mode === "up" ? "Kayıt ol ve başla" : "Giriş yap")}
-                </button>
-                <button type="button" disabled={busy} onClick={google}
-                    className="w-full mt-3 py-3.5 rounded-xl border border-zinc-200 dark:border-zinc-700 font-semibold text-sm flex items-center justify-center gap-2 disabled:opacity-50">
-                    <svg className="w-4 h-4" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z"/>
-                        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.99.66-2.26 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                    </svg>
-                    Google ile devam
-                </button>
-                {msg ? <p className="text-sm text-amber-700 mt-4">{msg}</p> : null}
+                {msg ? <p className="text-sm text-brand-amber mt-4">{msg}</p> : null}
             </div>
         );
 
         if (!props.gate) return form;
-
         return (
-            <div className="min-h-screen flex items-center justify-center px-6 py-12">
+            <div className="min-h-screen flex items-center justify-center px-6 py-12 bg-[#F7F6F3] dark:bg-slate-950">
                 <div className="w-full max-w-md">
-                    <p className="text-sm font-semibold tracking-wide text-zinc-400 mb-2">KPSS</p>
-                    <h1 className="text-2xl font-semibold tracking-tight mb-2">{mode === "up" ? "Hesap oluştur" : "Giriş yap"}</h1>
-                    <p className="text-sm text-zinc-500 mb-8">{mode === "up" ? "Bilgilerinle kaydol, derslere ondan sonra girersin." : "Kaldığın yerden devam et."}</p>
+                    <p className="text-xs font-semibold tracking-[0.2em] text-brand-navy/50 dark:text-brand-goldsoft mb-2">KPSS</p>
+                    <h1 className="text-2xl font-display font-bold tracking-tight mb-2">{mode === "up" ? "Hesap oluştur" : "Giriş yap"}</h1>
+                    <p className="text-sm text-zinc-500 mb-8">{mode === "up" ? "Üç kısa adım. Derslere ondan sonra girersin." : "Kaldığın yerden devam et."}</p>
                     {form}
                 </div>
             </div>

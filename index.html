@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>KPSS Eğitim Alanı</title>
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#18181b">
+    <meta name="theme-color" content="#0B1F3A">
     <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
@@ -21,7 +24,30 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = { darkMode: "class" };
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: "#0B1F3A",
+                            navy2: "#143056",
+                            ink: "#0A1628",
+                            amber: "#D97706",
+                            coral: "#E11D48",
+                            gold: "#B8860B",
+                            goldsoft: "#F3E6C4",
+                            emerald: "#059669"
+                        }
+                    },
+                    fontFamily: {
+                        display: ["Manrope", "Inter", "sans-serif"],
+                        sans: ["Inter", "sans-serif"],
+                        stat: ["Space Grotesk", "Inter", "sans-serif"]
+                    }
+                }
+            }
+        };
     </script>
 
     <script src="notlar/tarih-1-not.js"></script>
@@ -105,16 +131,17 @@
     <script src="js/paymentClient.js?v=14"></script>
     <script src="js/notificationEngine.js?v=8"></script>
     <script src="js/instructorDashboard.js?v=8"></script>
-    <script src="js/shareCard.js?v=8"></script>
+    <script src="js/shareCard.js?v=15"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.86.0/dist/umd/supabase.js"></script>
     <script src="js/supabaseClient.js?v=10"></script>
     <script src="js/syncEngine.js?v=14"></script>
-    <script src="js/jsxLoader.js?v=14"></script>
+    <script src="js/jsxLoader.js?v=15"></script>
+    <script src="js/icons.js?v=15"></script>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: Inter, sans-serif; }
+        h1, h2, .font-display { font-family: Manrope, Inter, sans-serif; }
+        .font-stat { font-family: "Space Grotesk", Inter, sans-serif; }
 
         .glass {
             background: rgba(255, 255, 255, 0.85);
@@ -161,72 +188,86 @@
             transform-origin: 50% 50%;
         }
 
-        .fade-in { animation: fadeIn 0.4s ease-out; }
+        .fade-in { animation: fadeIn 0.2s ease-out; }
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
+            from { opacity: 0; transform: translateY(8px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .slide-in { animation: slideIn 0.4s ease-out; }
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateX(-30px); }
+        .slide-step { animation: slideStep 0.2s ease-out; }
+        @keyframes slideStep {
+            from { opacity: 0; transform: translateX(12px); }
             to { opacity: 1; transform: translateX(0); }
+        }
+
+        .pop-in { animation: popIn 0.32s cubic-bezier(0.2, 0.9, 0.2, 1); }
+        @keyframes popIn {
+            from { opacity: 0; transform: scale(0.92); }
+            to { opacity: 1; transform: scale(1); }
         }
 
         .confetti {
             position: fixed;
-            width: 10px; height: 10px;
-            animation: confetti-fall 3s ease-out forwards;
+            width: 8px; height: 8px;
+            animation: confetti-fall 1.6s ease-out forwards;
         }
         @keyframes confetti-fall {
-            0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+            0% { transform: translateY(-20vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(80vh) rotate(280deg); opacity: 0; }
         }
 
-        .dark body { background-color: #0f172a; color: #e2e8f0; }
-        .dark .bg-slate-100 { background-color: #0f172a !important; }
-        .dark .bg-white { background-color: #1e293b !important; }
-        .dark .bg-slate-50 { background-color: #1e293b !important; }
-        .dark .bg-slate-200 { background-color: #334155 !important; }
-        .dark .text-slate-800 { color: #f1f5f9 !important; }
-        .dark .text-slate-700 { color: #e2e8f0 !important; }
-        .dark .text-slate-600 { color: #cbd5e1 !important; }
-        .dark .text-slate-500 { color: #94a3b8 !important; }
-        .dark .text-slate-400 { color: #64748b !important; }
-        .dark .text-slate-900 { color: #f8fafc !important; }
-        .dark .border-slate-200 { border-color: #334155 !important; }
-        .dark .border-slate-300 { border-color: #475569 !important; }
-        .dark .bg-amber-50 { background-color: #451a03 !important; }
-        .dark .bg-indigo-50 { background-color: #1e1b4b !important; }
-        .dark .bg-emerald-50 { background-color: #022c22 !important; }
-        .dark .bg-rose-50 { background-color: #4c0519 !important; }
-        .dark .bg-blue-50 { background-color: #172554 !important; }
-        .dark .text-amber-900 { color: #fde68a !important; }
-        .dark .text-amber-700 { color: #fcd34d !important; }
-        .dark .text-indigo-900 { color: #c7d2fe !important; }
-        .dark .text-indigo-700 { color: #a5b4fc !important; }
-        .dark .text-blue-800 { color: #93c5fd !important; }
-        .dark .text-blue-950 { color: #dbeafe !important; }
-        .dark .border-amber-200 { border-color: #78350f !important; }
-        .dark .border-indigo-200 { border-color: #312e81 !important; }
-        .dark .border-blue-200 { border-color: #1e3a8a !important; }
-        .dark .border-l-blue-500 { border-left-color: #3b82f6 !important; }
-
-        .heat-zayif { background: linear-gradient(90deg, rgba(244,63,94,0.18), transparent); }
-        .heat-orta { background: linear-gradient(90deg, rgba(245,158,11,0.18), transparent); }
-        .heat-iyi { background: linear-gradient(90deg, rgba(16,185,129,0.18), transparent); }
-
-        html { background: #f4f4f5; }
-        body.app-bg { background: #f4f4f5; color: #18181b; }
-        html.dark, .dark body.app-bg { background: #09090b; color: #fafafa; }
+        html { background: #F7F6F3; }
+        body.app-bg { background: #F7F6F3; color: #0B1F3A; }
+        html.dark, .dark body.app-bg { background: #020617; color: #f1f5f9; }
 
         .panel {
             background: #fff;
-            border: 1px solid #e4e4e7;
+            border: 1px solid #e8e6e1;
+            box-shadow: 0 1px 2px rgba(11,31,58,0.04);
         }
         .dark .panel {
-            background: #18181b;
-            border-color: #27272a;
+            background: #0f172a;
+            border-color: #1e293b;
+            box-shadow: none;
+        }
+
+        .badge-gold {
+            background: linear-gradient(180deg, #F8EFC8, #E8D48A);
+            color: #6B5208;
+            font-weight: 600;
+        }
+
+        .exam-banner {
+            position: sticky;
+            top: 0;
+            z-index: 30;
+            background: #0B1F3A;
+            color: #fff;
+            font-size: 12px;
+            text-align: center;
+            padding: 8px 12px;
+        }
+
+        .booklet {
+            background: #f3f1ec;
+            border: 1px solid #ddd8ce;
+        }
+        .dark .booklet {
+            background: #0f172a;
+            border-color: #334155;
+        }
+
+        .heat-zayif { background: linear-gradient(90deg, rgba(225,29,72,0.16), transparent); }
+        .heat-orta { background: linear-gradient(90deg, rgba(217,119,6,0.16), transparent); }
+        .heat-iyi { background: linear-gradient(90deg, rgba(5,150,105,0.16), transparent); }
+
+        input[type="range"] { accent-color: #0B1F3A; }
+        button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+            outline: 2px solid #0B1F3A;
+            outline-offset: 2px;
+        }
+        .dark button:focus-visible, .dark input:focus-visible, .dark select:focus-visible {
+            outline-color: #E8D48A;
         }
 
         .overlay-scrim {
@@ -240,21 +281,15 @@
             border: 1px solid #e4e4e7;
         }
         .dark .overlay-sheet {
-            background: #18181b;
-            border-color: #27272a;
-        }
-
-        input[type="range"] { accent-color: #4f46e5; }
-        button:focus-visible, input:focus-visible, select:focus-visible {
-            outline: 2px solid #4f46e5;
-            outline-offset: 2px;
+            background: #0f172a;
+            border-color: #1e293b;
         }
     </style>
 </head>
 
 <body class="app-bg min-h-screen text-slate-800 antialiased transition-colors duration-300">
     <div id="root"></div>
-    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=14"></script>
+    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=15"></script>
     <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.getRegistrations().then(function (regs) {

@@ -22,6 +22,7 @@
         const [filter, setFilter] = useState("all");
         const [msg, setMsg] = useState("");
         const [busy, setBusy] = useState(false);
+        const [log, setLog] = useState([]);
         const isAdmin = student.userProfile && student.userProfile.role === "admin";
 
         function load() {
@@ -64,6 +65,9 @@
             if (res.error) setMsg(res.error.message);
             else {
                 setMsg("İşlem uygulandı.");
+                setLog(function (L) {
+                    return [{ t: name, at: new Date().toLocaleTimeString("tr-TR") }].concat(L).slice(0, 10);
+                });
                 if (name === "inspect_user" && res.data) {
                     setDetail(res.data.data || res.data);
                 }
@@ -115,8 +119,8 @@
         var email = (student.userProfile && student.userProfile.email) || "";
 
         return (
-            <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 flex">
-                <aside className="hidden md:flex w-60 shrink-0 flex-col border-r border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
+            <div className="min-h-screen bg-slate-100 dark:bg-slate-950 text-slate-800 dark:text-slate-100 flex">
+                <aside className="hidden md:flex w-60 shrink-0 flex-col border-r border-slate-800 bg-slate-950 text-slate-200">
                     <div className="px-5 py-6">
                         <p className="text-xs font-semibold tracking-widest text-zinc-400">KPSS</p>
                         <p className="text-lg font-semibold mt-1">Yönetim</p>
@@ -126,14 +130,14 @@
                         {nav.map(function (n) {
                             return (
                                 <button key={n.id} onClick={function () { setTab(n.id); }}
-                                    className={"w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium " + (tab === n.id ? "bg-zinc-900 text-white dark:bg-white dark:text-zinc-900" : "text-zinc-600 hover:bg-zinc-100 dark:text-zinc-400 dark:hover:bg-zinc-800")}>
+                                    className={"w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium " + (tab === n.id ? "bg-slate-800 text-white" : "text-slate-400 hover:bg-slate-900")}>
                                     {n.t}
                                 </button>
                             );
                         })}
                     </nav>
                     <div className="p-4">
-                        <button onClick={props.onSignOut} className="w-full py-2.5 rounded-lg border border-zinc-200 dark:border-zinc-700 text-sm font-medium">Çıkış</button>
+                        <button onClick={props.onSignOut} className="w-full py-2.5 rounded-lg border border-slate-700 text-sm font-medium">Çıkış</button>
                     </div>
                 </aside>
                 <div className="flex-1 min-w-0">
@@ -180,7 +184,15 @@
                                         <p className="text-xs text-zinc-400 mt-1">149 ₺ / ay varsayımı · gerçek ödeme yok</p>
                                     </div>
                                 </div>
-                                <p className="text-sm text-zinc-500 mt-8">Öğrenci uygulaması bu hesapta açılmaz. Kullanıcılar sekmesinden hesapları yönetirsin.</p>
+                                <p className="text-sm text-zinc-500 mt-8">Öğrenci uygulaması bu hesapta açılmaz.</p>
+                                {log.length ? (
+                                    <div className="mt-6 text-xs text-zinc-400 space-y-1">
+                                        <p className="uppercase tracking-wider">İşlem geçmişi (oturum)</p>
+                                        {log.map(function (x, i) {
+                                            return <div key={i}>{x.at} · {x.t}</div>;
+                                        })}
+                                    </div>
+                                ) : null}
                             </div>
                         ) : null}
 
@@ -222,7 +234,10 @@
                                                 <tr><td colSpan={6} className="px-4 py-10 text-center text-zinc-400">Kayıt yok veya liste yetkisi eksik.</td></tr>
                                             ) : shown.map(function (u) {
                                                 return (
-                                                    <tr key={u.user_id || u.nickname} className="border-b border-zinc-100 dark:border-zinc-800 last:border-0">
+                                                    <tr key={u.user_id || u.nickname} className={"border-b border-zinc-200 last:border-0 " + (function () {
+                                                        if (!u.last_study_at) return "bg-brand-coral/5";
+                                                        return (Date.now() - new Date(u.last_study_at).getTime()) > 7 * 86400000 ? "bg-brand-coral/5" : "";
+                                                    }())}>
                                                         <td className="px-4 py-3">
                                                             <div className="font-medium">{u.nickname || "—"}</div>
                                                             <div className="text-xs text-zinc-400">{u.education_level || ""} · {(u.user_id || "").slice(0, 8)}</div>
@@ -233,7 +248,10 @@
                                                         <td className="px-4 py-3">{u.premium ? "Premium" : "Ücretsiz"}</td>
                                                         <td className="px-4 py-3">
                                                             <div className="flex flex-wrap gap-1 justify-end">
-                                                                <button disabled={busy} onClick={function () { act("grant_premium", { user_id: u.user_id, days: 30 }); }} className="text-xs font-medium px-2 py-1 rounded-lg bg-zinc-100 dark:bg-zinc-800">+30g Premium</button>
+                                                                <button disabled={busy} onClick={function () {
+                                                                    if (!confirm("Bu kullanıcıya 30 gün Premium verilsin mi?")) return;
+                                                                    act("grant_premium", { user_id: u.user_id, days: 30 });
+                                                                }} className="text-xs font-medium px-2 py-1 rounded-lg bg-zinc-100 dark:bg-zinc-800">+30g Premium</button>
                                                                 <button disabled={busy} onClick={function () { inspect(u.user_id); }} className="text-xs font-medium px-2 py-1 rounded-lg bg-zinc-100">Detay</button>
                                                                 <button disabled={busy} onClick={function () { act("block", { user_id: u.user_id }); }} className="text-xs font-medium px-2 py-1 rounded-lg text-rose-600">Engelle</button>
                                                             </div>

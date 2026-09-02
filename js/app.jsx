@@ -1,11 +1,11 @@
 const { useState, useEffect, useMemo, useRef } = React;
 
 const DERS_THEME = {
-    "Tarih": { grad: "from-violet-500 to-fuchsia-900", text: "text-violet-700", soft: "bg-violet-50", icon: "🏛️", darkText: "text-violet-400", darkSoft: "bg-violet-950" },
-    "Coğrafya": { grad: "from-emerald-400 to-cyan-900", text: "text-emerald-700", soft: "bg-emerald-50", icon: "🗺️", darkText: "text-emerald-400", darkSoft: "bg-emerald-950" },
-    "Türkçe": { grad: "from-rose-400 to-pink-900", text: "text-rose-700", soft: "bg-rose-50", icon: "✍️", darkText: "text-rose-400", darkSoft: "bg-rose-950" },
-    "Vatandaşlık": { grad: "from-sky-400 to-blue-900", text: "text-sky-700", soft: "bg-sky-50", icon: "⚖️", darkText: "text-sky-400", darkSoft: "bg-sky-950" },
-    "Güncel Bilgiler": { grad: "from-amber-400 to-orange-900", text: "text-amber-700", soft: "bg-amber-50", icon: "📰", darkText: "text-amber-400", darkSoft: "bg-amber-950" }
+    "Tarih": { grad: "from-brand-navy to-brand-navy2", text: "text-brand-navy", soft: "bg-brand-navy/5", icon: "🏛️", darkText: "text-brand-goldsoft", darkSoft: "bg-slate-900" },
+    "Coğrafya": { grad: "from-brand-navy to-brand-navy2", text: "text-brand-navy", soft: "bg-brand-navy/5", icon: "🗺️", darkText: "text-brand-goldsoft", darkSoft: "bg-slate-900" },
+    "Türkçe": { grad: "from-brand-navy to-brand-navy2", text: "text-brand-navy", soft: "bg-brand-navy/5", icon: "✍️", darkText: "text-brand-goldsoft", darkSoft: "bg-slate-900" },
+    "Vatandaşlık": { grad: "from-brand-navy to-brand-navy2", text: "text-brand-navy", soft: "bg-brand-navy/5", icon: "⚖️", darkText: "text-brand-goldsoft", darkSoft: "bg-slate-900" },
+    "Güncel Bilgiler": { grad: "from-brand-navy to-brand-navy2", text: "text-brand-navy", soft: "bg-brand-navy/5", icon: "📰", darkText: "text-brand-goldsoft", darkSoft: "bg-slate-900" }
 };
 
 function themeFor(ders, isDark) {
@@ -14,9 +14,9 @@ function themeFor(ders, isDark) {
 }
 
 function masteryLabel(m) {
-    if (m === "iyi") return { text: "İyi", cls: "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300" };
-    if (m === "orta") return { text: "Orta", cls: "bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300" };
-    if (m === "zayif") return { text: "Zayıf", cls: "bg-rose-100 text-rose-700 dark:bg-rose-900/40 dark:text-rose-300" };
+    if (m === "iyi") return { text: "İyi", cls: "bg-brand-emerald/10 text-brand-emerald" };
+    if (m === "orta") return { text: "Orta", cls: "bg-brand-amber/10 text-brand-amber" };
+    if (m === "zayif") return { text: "Zayıf", cls: "bg-brand-coral/10 text-brand-coral" };
     return { text: "Yeni", cls: "bg-slate-100 text-slate-500 dark:bg-slate-700 dark:text-slate-300" };
 }
 
@@ -53,8 +53,8 @@ function ThemeBtn(props) {
 function Confetti() {
     const [pieces, setPieces] = useState([]);
     useEffect(function () {
-        const colors = ["#6366f1", "#8b5cf6", "#d946ef", "#f59e0b", "#10b981", "#3b82f6", "#ef4444"];
-        setPieces(Array.from({ length: 50 }, function (_, i) {
+        const colors = ["#0B1F3A", "#B8860B", "#059669", "#D97706"];
+        setPieces(Array.from({ length: 18 }, function (_, i) {
             return {
                 id: i,
                 left: Math.random() * 100 + "%",
@@ -95,7 +95,7 @@ function BottomNav(props) {
                     const on = props.nav === tab.id;
                     return (
                         <button key={tab.id} onClick={function () { props.onChange(tab.id); }}
-                            className={"flex flex-col items-center gap-0.5 py-2 rounded-xl text-[11px] font-medium transition " + (on ? "text-zinc-900 dark:text-white" : "text-zinc-400")}>
+                            className={"flex flex-col items-center gap-0.5 py-2 rounded-xl text-[11px] font-medium duration-150 " + (on ? "text-brand-navy dark:text-brand-goldsoft" : "text-zinc-400")}>
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={on ? 2.2 : 1.7} d={tab.icon} /></svg>
                             {tab.label}
                         </button>
@@ -153,26 +153,26 @@ function Bugun(props) {
             <div className="flex justify-between items-start mb-8">
                 <div>
                     <p className="text-sm text-zinc-500">Merhaba{name ? ", " + name : ""}</p>
-                    <h1 className="text-2xl font-semibold tracking-tight mt-0.5">Bugün</h1>
+                    <h1 className="text-2xl font-display font-bold tracking-tight mt-0.5">Bugün</h1>
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
             <div className="grid grid-cols-3 gap-2 mb-5">
                 <div className="rounded-2xl panel p-3 text-center">
-                    <div className="text-lg font-semibold">{plan.daysLeft == null ? "—" : plan.daysLeft}</div>
+                    <div className="font-stat text-xl">{plan.daysLeft == null ? "—" : plan.daysLeft}</div>
                     <div className="text-[11px] text-zinc-400 mt-0.5">gün</div>
                 </div>
                 <div className="rounded-2xl panel p-3 text-center">
-                    <div className="text-lg font-semibold">{plan.streak}</div>
-                    <div className="text-[11px] text-zinc-400 mt-0.5">seri</div>
+                    <div className="font-stat text-xl text-brand-amber">{plan.streak}</div>
+                    <div className="text-[11px] text-brand-amber/80 mt-0.5">seri</div>
                 </div>
                 <div className="rounded-2xl panel p-3 text-center">
-                    <div className="text-lg font-semibold">{plan.session.questions || 0}/{plan.qGoal}</div>
+                    <div className="font-stat text-xl">{plan.session.questions || 0}/{plan.qGoal}</div>
                     <div className="text-[11px] text-zinc-400 mt-0.5">soru</div>
                 </div>
             </div>
-            <div className="w-full h-1.5 bg-zinc-200 dark:bg-zinc-800 rounded-full mb-6 overflow-hidden">
-                <div className="h-full bg-zinc-900 dark:bg-white" style={{ width: qPct + "%" }} />
+            <div className="w-full h-1.5 bg-zinc-200 dark:bg-slate-800 rounded-full mb-6 overflow-hidden">
+                <div className="h-full bg-brand-emerald" style={{ width: qPct + "%" }} />
             </div>
             {banner ? <div className="mb-5 px-4 py-3 rounded-2xl bg-zinc-900 text-white text-sm">{banner}</div> : null}
             {plan.coach ? <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed">{plan.coach}</p> : null}
@@ -180,16 +180,21 @@ function Bugun(props) {
             <div className="space-y-2">
                 {plan.tasks.length === 0 ? (
                     <div className="p-5 rounded-2xl panel text-sm text-zinc-500">Bugünlük bitti. Denemeden pratik açabilirsin.</div>
-                ) : plan.tasks.slice(0, 3).map(function (task) {
+                ) : plan.tasks.slice(0, 3).map(function (task, ti) {
+                    var weak = ti === 0 && (task.kind === "test" || task.kind === "wrong");
                     return (
                         <button key={task.id} onClick={function () { props.onTask(task); }}
-                            className="w-full text-left p-4 panel rounded-2xl">
+                            className={"w-full text-left p-4 panel rounded-2xl duration-150 " + (weak ? "p-5 shadow-sm" : "")}>
                             <div className="flex justify-between items-center gap-3">
                                 <div>
-                                    <div className="font-medium">{task.title}</div>
+                                    <div className="font-medium flex items-center gap-2">
+                                        {weak ? <span className="h-2 w-2 rounded-full bg-brand-coral shrink-0" /> : null}
+                                        {task.title}
+                                    </div>
                                     <div className="text-sm text-zinc-500 mt-0.5">{task.detail}</div>
+                                    {task.why ? <div className="text-xs text-zinc-400 mt-1">{task.why}</div> : null}
                                 </div>
-                                <span className="text-zinc-400 text-sm shrink-0">Başla</span>
+                                <span className="text-brand-navy dark:text-brand-goldsoft text-sm shrink-0">Başla</span>
                             </div>
                         </button>
                     );
@@ -198,12 +203,13 @@ function Bugun(props) {
             {plan.weekly && plan.weekly.length ? (
                 <div className="mt-8">
                     <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-3">Haftalık plan</p>
-                    <div className="grid grid-cols-7 gap-1">
-                        {plan.weekly.map(function (d) {
+                    <div className="flex gap-2 overflow-x-auto pb-1">
+                        {plan.weekly.map(function (d, di) {
                             return (
-                                <div key={d.day} className="rounded-xl panel p-1.5 text-center">
+                                <div key={d.day} className={"rounded-xl panel p-2 text-center min-w-[3.2rem] " + (di === 0 ? "ring-1 ring-brand-navy dark:ring-brand-goldsoft" : "")}>
                                     <div className="text-[10px] text-zinc-400">{d.day}</div>
-                                    <div className="text-[11px] font-semibold mt-0.5">{d.minutes}dk</div>
+                                    <div className="h-1.5 w-1.5 rounded-full mx-auto mt-1 bg-brand-navy/40" style={{ transform: "scale(" + Math.min(1.8, 0.6 + (d.weight || 40) / 80) + ")" }} />
+                                    <div className="text-[11px] font-stat mt-1">{d.minutes}</div>
                                 </div>
                             );
                         })}
@@ -421,13 +427,15 @@ function TestView(props) {
     const timed = props.session.secondsLeft != null;
     const mm = timed ? Math.floor(props.session.secondsLeft / 60) : 0;
     const ss = timed ? String(props.session.secondsLeft % 60).padStart(2, "0") : "";
+    const tLeft = props.session.secondsLeft;
+    const tCls = !timed ? "" : (tLeft <= 60 ? "text-brand-coral" : tLeft <= 300 ? "text-brand-amber" : "text-brand-navy");
     return (
         <Shell padBottom={false}>
             <div className="flex justify-between items-center text-sm font-bold text-slate-500 mb-4">
                 <button onClick={props.onQuit} className="hover:text-rose-500 bg-white dark:bg-slate-800 px-3 py-2 rounded-xl border border-slate-200">Bitir</button>
                 <span className="bg-white dark:bg-slate-800 px-4 py-2 rounded-xl border border-slate-200">
                     {qIndex + 1}/{items.length} · Doğru {props.score}
-                    {timed ? <span className={"ml-2 " + (props.session.secondsLeft < 30 ? "text-rose-500" : "text-indigo-500")}>{mm}:{ss}</span> : null}
+                    {timed ? <span className={"ml-2 font-stat " + tCls}>{mm}:{ss}</span> : null}
                 </span>
             </div>
             <div className="w-full bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full mb-4 overflow-hidden">
@@ -451,7 +459,7 @@ function TestView(props) {
                             icon = <svg className="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" /></svg>;
                         } else cls += "bg-slate-50 dark:bg-slate-800/50 border-slate-200 text-slate-400 opacity-60";
                     } else {
-                        cls += "bg-white dark:bg-slate-800 border-slate-200 hover:border-indigo-400";
+                        cls += "bg-white dark:bg-slate-800 border-slate-200 hover:border-brand-navy";
                         icon = <span className="flex-shrink-0 h-8 w-8 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-xs font-bold">{String.fromCharCode(65 + i)}</span>;
                     }
                     return (
@@ -463,11 +471,11 @@ function TestView(props) {
             </div>
             {props.answered ? (
                 <div className="mt-8 space-y-4 fade-in pb-10">
-                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/30 border border-blue-200 border-l-4 border-l-blue-500 p-6 rounded-2xl">
-                        <h4 className="font-bold text-blue-800 dark:text-blue-300 text-sm mb-2">Çözüm notu</h4>
+                    <div className="bg-brand-navy/5 dark:bg-slate-900 border border-brand-navy/10 border-l-4 border-l-brand-navy p-6 rounded-2xl">
+                        <h4 className="font-semibold text-brand-navy dark:text-brand-goldsoft text-sm mb-2">Çözüm notu</h4>
                         <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">{soru.explanation}</p>
                     </div>
-                    <button onClick={props.onNext} className="w-full bg-gradient-to-r from-slate-800 to-slate-900 dark:from-indigo-600 dark:to-purple-600 text-white p-5 rounded-2xl font-bold">
+                    <button onClick={props.onNext} className="w-full bg-brand-navy text-white p-5 rounded-2xl font-semibold">
                         {qIndex + 1 === items.length ? "Sonuçları gör" : "Sonraki soru"}
                     </button>
                 </div>
@@ -481,21 +489,20 @@ function ResultView(props) {
     const score = props.score;
     const oran = total ? Math.round((score / total) * 100) : 0;
     const yorum = oran >= 85 ? "Mükemmel. Bu konuyu kilitle, zayıf olana geç." : oran >= 60 ? "İyi gidiyorsun. Yanlışları deftere aldık." : oran >= 40 ? "Eşik altı. Notu aç, aynı gün 10 soru daha." : "Önce not. Soru yağmuru şimdi işe yaramaz.";
-    const renk = oran >= 85 ? "#10b981" : oran >= 60 ? "#6366f1" : oran >= 40 ? "#f59e0b" : "#ef4444";
+    const renk = oran >= 85 ? "#059669" : oran >= 60 ? "#0B1F3A" : oran >= 40 ? "#D97706" : "#E11D48";
     return (
         <Shell>
-            {oran >= 80 && <Confetti />}
-            <div className="bg-white dark:bg-slate-800 p-8 rounded-3xl border border-slate-200 shadow-2xl text-center fade-in">
-                <div className="text-5xl mb-3">{oran >= 85 ? "🎉" : oran >= 60 ? "👏" : "📚"}</div>
-                <h2 className="text-3xl font-black mb-2">Tur bitti</h2>
-                <p className="text-slate-500 mb-6">{yorum}</p>
+            {oran >= 85 && <Confetti />}
+            <div className="panel p-8 rounded-3xl text-center fade-in">
+                <h2 className="text-2xl font-display font-bold mb-2">Tur bitti</h2>
+                <p className="text-zinc-500 mb-6 text-sm">{yorum}</p>
                 <div className="relative mx-auto w-36 h-36 mb-6">
                     <svg viewBox="0 0 36 36" className="w-full h-full">
                         <path d="M18 2a16 16 0 1 1 0 32 16 16 0 0 1 0-32" fill="none" stroke="#e2e8f0" strokeWidth="3" />
                         <path d="M18 2a16 16 0 1 1 0 32 16 16 0 0 1 0-32" fill="none" stroke={renk} strokeWidth="3" strokeDasharray={oran + ", 100"} strokeLinecap="round" className="progress-ring" />
                     </svg>
                     <div className="absolute inset-0 flex flex-col items-center justify-center">
-                        <span className="text-3xl font-black">%{oran}</span>
+                        <span className="font-stat text-3xl">%{oran}</span>
                     </div>
                 </div>
                 <div className="grid grid-cols-3 gap-3 mb-6">
@@ -540,10 +547,10 @@ function ResultView(props) {
                             caption: "Net kartı · KPSS Eğitim Alanı"
                         });
                         window.ShareCard.download(url, "kpss-net-karti.png");
-                    }} className="w-full mb-3 p-4 rounded-2xl border font-bold">Hikâye kartını indir</button>
+                    }} className="w-full mb-3 p-4 rounded-2xl bg-brand-navy text-brand-goldsoft font-semibold">Net kartını indir</button>
                 <div className="flex gap-3">
-                    <button onClick={props.onRetry} className="flex-1 bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-4 rounded-2xl font-bold">Tekrar</button>
-                    <button onClick={props.onHome} className="flex-1 bg-slate-100 dark:bg-slate-700 p-4 rounded-2xl font-bold">Kapat</button>
+                    <button onClick={props.onRetry} className="flex-1 bg-brand-navy text-white p-4 rounded-2xl font-semibold">Tekrar</button>
+                    <button onClick={props.onHome} className="flex-1 panel p-4 rounded-2xl font-medium">Kapat</button>
                 </div>
             </div>
         </Shell>
@@ -561,16 +568,16 @@ function Eksikler(props) {
         <Shell>
             <div className="flex justify-between items-start mb-6">
                 <div>
-                    <h1 className="text-3xl font-black">Eksikler</h1>
+                    <h1 className="text-2xl font-display font-bold">Eksikler</h1>
                     <p className="text-slate-500 text-sm">Isı haritası, yanlış defteri, vadesi gelen tekrar</p>
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
             <div className="grid grid-cols-2 gap-3 mb-6">
                 <button onClick={function () { props.onReview(); }} disabled={!plan.due.length}
-                    className="p-4 rounded-2xl bg-indigo-600 text-white font-bold disabled:opacity-40">Tekrar · {plan.due.length}</button>
+                    className="p-4 rounded-2xl bg-brand-navy text-white font-semibold disabled:opacity-40">Tekrar · {plan.due.length}</button>
                 <button onClick={function () { props.onWrong(); }} disabled={!plan.wrong.length}
-                    className="p-4 rounded-2xl bg-rose-500 text-white font-bold disabled:opacity-40">Yanlış defteri · {plan.wrong.length}</button>
+                    className="p-4 rounded-2xl bg-brand-coral text-white font-semibold disabled:opacity-40">Yanlış defteri · {plan.wrong.length}</button>
             </div>
             {Object.keys(byDers).map(function (ders) {
                 const t = themeFor(ders, props.isDark);
@@ -641,7 +648,7 @@ function DenemeSetup(props) {
                 const items = StudyPlanner.mixedQuiz(props.kpssData, chosen, n);
                 if (!items.length) { alert("Seçilen derslerde soru yok."); return; }
                 props.onStart(items, mins * 60);
-            }} className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-5 rounded-2xl font-bold">Karışık testi başlat</button>
+            }} className="w-full bg-brand-navy text-white p-5 rounded-2xl font-semibold">Karışık testi başlat</button>
             {props.onFullExam ? (
                 <button onClick={props.onFullExam} className="mt-3 w-full p-4 rounded-2xl border font-bold">Tam deneme (kitapçık)</button>
             ) : null}
@@ -749,11 +756,12 @@ function Ben(props) {
             </div>
             <div className="panel rounded-2xl p-4 mb-4">
                 <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-2">Premium</p>
-                <p className="text-sm text-zinc-600 mb-3">{StudentStore.isPremium() ? "Premium açık" + (up.premiumUntil ? " · " + new Date(up.premiumUntil).toLocaleDateString("tr-TR") : "") : "Ücretsiz plan · sınırlı deneme"}</p>
+                <p className="text-sm text-zinc-600 mb-3">{StudentStore.isPremium() ? (
+                    <span><span className="badge-gold text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full mr-2">Premium</span>
+                    {up.premiumUntil ? new Date(up.premiumUntil).toLocaleDateString("tr-TR") : "açık"}</span>
+                ) : "Ücretsiz plan · sınırlı deneme"}</p>
                 {!StudentStore.isPremium() ? (
-                    <button onClick={function () {
-                        if (window.PaymentClient) window.PaymentClient.checkout("premium").then(function (r) { alert(r.message || "Tamam"); });
-                    }} className="w-full py-2.5 rounded-xl bg-zinc-900 text-white text-sm font-semibold">7 gün sandbox dene</button>
+                    <button onClick={function () { props.onOpen && props.onOpen("paywall"); }} className="w-full py-2.5 rounded-xl bg-brand-navy text-white text-sm font-semibold">Planı gör</button>
                 ) : null}
                 <p className="text-xs text-zinc-400 mt-3">Davet kodun: <b>{StudentStore.ensureReferralCode ? StudentStore.ensureReferralCode() : (up.referralCode || "—")}</b></p>
                 <label className="text-xs text-zinc-400 mt-2 block">Arkadaş kodu</label>
@@ -761,16 +769,25 @@ function Ben(props) {
                     if (window.PaymentClient) window.PaymentClient.applyReferral(e.target.value);
                 }} className={field + " mt-1"} />
             </div>
-            {st.achievements && Object.keys(st.achievements).length ? (
-                <div className="panel rounded-2xl p-4 mb-4">
-                    <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-2">Rozetler</p>
-                    <div className="flex flex-wrap gap-2">
-                        {Object.keys(st.achievements).map(function (id) {
-                            return <span key={id} className="text-xs font-medium px-2 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800">{st.achievements[id].title}</span>;
-                        })}
-                    </div>
+            <div className="panel rounded-2xl p-4 mb-4">
+                <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-2">Rozetler</p>
+                <div className="flex flex-wrap gap-2">
+                    {[
+                        { id: "firstDay", title: "İlk çalışma günü" },
+                        { id: "streak7", title: "7 gün kesintisiz" },
+                        { id: "q1000", title: "1000 soru" },
+                        { id: "firstExam", title: "İlk tam deneme" }
+                    ].map(function (b) {
+                        var on = st.achievements && st.achievements[b.id];
+                        return (
+                            <span key={b.id} className={"text-xs font-medium px-2 py-1 rounded-full inline-flex items-center gap-1 " + (on ? "bg-brand-emerald/10 text-brand-emerald pop-in" : "bg-zinc-100 dark:bg-slate-800 text-zinc-400")}>
+                                {on ? null : (window.KpssIcon ? window.KpssIcon("lock", "w-3 h-3") : null)}
+                                {b.title}
+                            </span>
+                        );
+                    })}
                 </div>
-            ) : null}
+            </div>
             <button onClick={function () {
                 if (window.NotificationEngine) window.NotificationEngine.requestPush().then(function (r) {
                     if (r.ok) {
@@ -824,7 +841,8 @@ function App() {
         ai: ["AiAssistant", "js/components/AiAssistant.jsx"],
         live: ["LiveExamScreen", "js/components/LiveExamScreen.jsx"],
         heat: ["Heatmap30", "js/components/Heatmap30.jsx"],
-        instructor: ["InstructorScreen", "js/components/InstructorScreen.jsx"]
+        instructor: ["InstructorScreen", "js/components/InstructorScreen.jsx"],
+        paywall: ["PaywallScreen", "js/components/PaywallScreen.jsx"]
     };
 
     useEffect(function () {

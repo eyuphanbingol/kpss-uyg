@@ -26,7 +26,7 @@
                 <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-2">Son 30 gün</p>
                 <div className="grid grid-cols-10 gap-1 mb-6">
                     {days.map(function (x) {
-                        var bg = x.q === 0 ? "bg-zinc-200 dark:bg-zinc-700" : x.q < 10 ? "bg-emerald-200" : x.q < 25 ? "bg-emerald-400" : "bg-emerald-600";
+                        var bg = x.q === 0 ? "bg-zinc-200 dark:bg-slate-800" : x.q < 10 ? "bg-amber-200" : x.q < 25 ? "bg-amber-400" : "bg-amber-600";
                         return <div key={x.iso} title={x.iso + " · " + x.q} className={"h-3 rounded-sm " + bg} />;
                     })}
                 </div>
@@ -44,7 +44,7 @@
                                         <div key={r.konu} className="flex items-center gap-2">
                                             <span className="text-xs text-zinc-500 w-32 truncate">{r.konu}</span>
                                             <div className="flex-1 h-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden">
-                                                <div className="h-full bg-zinc-900 dark:bg-white" style={{ width: sc + "%" }} />
+                                                <div className="h-full bg-brand-emerald" style={{ width: sc + "%" }} />
                                             </div>
                                             <span className="text-xs font-semibold w-8 text-right">{sc}</span>
                                         </div>
