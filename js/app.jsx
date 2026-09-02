@@ -141,10 +141,33 @@ function Onboarding(props) {
     );
 }
 
+function examTrackName(level) {
+    if (level === "onlisans") return "Ön lisans KPSS";
+    if (level === "ortaogretim") return "Ortaöğretim KPSS";
+    return "Lisans KPSS";
+}
+
 function Bugun(props) {
     const plan = props.plan;
     const name = props.student.profile.name;
-    const qPct = Math.min(100, Math.round(((plan.session.questions || 0) / (plan.qGoal || 1)) * 100));
+    const level = (props.student.userProfile && props.student.userProfile.educationLevel) || "lisans";
+    const track = examTrackName(level);
+    const todayQ = plan.session.questions || 0;
+    const goal = plan.qGoal || 25;
+    const qPct = Math.min(100, Math.round((todayQ / goal) * 100));
+    const rows = plan.rows || [];
+    var doneTopics = 0;
+    rows.forEach(function (r) {
+        if (StudentStore.topicComplete(r, {
+            sorular: new Array(r.soruSayisi || 0),
+            notlar: new Array(r.notSayisi || 0)
+        })) doneTopics += 1;
+    });
+    var examLine;
+    if (plan.daysLeft == null) examLine = track + " · sınav tarihi yok";
+    else if (plan.daysLeft < 0) examLine = track + " tarihi geçti";
+    else if (plan.daysLeft === 0) examLine = track + " bugün";
+    else examLine = track + "’ye " + plan.daysLeft + " gün kaldı";
     const [banner, setBanner] = useState("");
     useEffect(function () {
         var sb = window.SupabaseClient && window.SupabaseClient.get && window.SupabaseClient.get();
@@ -156,29 +179,30 @@ function Bugun(props) {
     }, []);
     return (
         <Shell>
-            <div className="flex justify-between items-start mb-8">
+            <div className="flex justify-between items-start mb-6">
                 <div>
                     <p className="text-sm text-zinc-500">Merhaba{name ? ", " + name : ""}</p>
                     <h1 className="text-2xl font-display font-bold tracking-tight mt-0.5">Bugün</h1>
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
-            <div className="grid grid-cols-3 gap-2 mb-5">
-                <div className="rounded-2xl bg-stone-100 dark:bg-stone-900 p-3 text-center">
-                    <div className="font-stat text-xl text-stone-900 dark:text-stone-50">{plan.daysLeft == null ? "—" : plan.daysLeft}</div>
-                    <div className="text-[11px] text-stone-500 mt-0.5">sınava</div>
-                </div>
-                <div className="rounded-2xl bg-amber-50 p-3 text-center">
-                    <div className="font-stat text-xl text-amber-500">{plan.streak}</div>
-                    <div className="text-[11px] text-amber-600 mt-0.5">üst üste</div>
-                </div>
-                <div className="rounded-2xl bg-stone-100 dark:bg-stone-900 p-3 text-center">
-                    <div className="font-stat text-xl text-stone-900 dark:text-stone-50">{plan.session.questions || 0}/{plan.qGoal}</div>
-                    <div className="text-[11px] text-stone-500 mt-0.5">hedef</div>
-                </div>
+            <div className="rounded-2xl bg-navy-600 text-white p-4 mb-4">
+                <p className="text-lg font-semibold leading-snug">{examLine}</p>
             </div>
-            <div className="w-full h-1.5 bg-zinc-200 dark:bg-slate-800 rounded-full mb-6 overflow-hidden">
-                <div className="h-full bg-emerald-500" style={{ width: qPct + "%" }} />
+            <div className="rounded-2xl bg-stone-100 dark:bg-stone-900 p-4 mb-6">
+                <div className="flex justify-between items-baseline gap-2 mb-2">
+                    <p className="text-sm font-medium">Bugün {todayQ} soru çözdün</p>
+                    <p className="text-xs text-stone-500">Hedef {goal}</p>
+                </div>
+                <div className="w-full h-1.5 bg-stone-200 dark:bg-stone-800 rounded-full overflow-hidden">
+                    <div className="h-full bg-emerald-500" style={{ width: qPct + "%" }} />
+                </div>
+                <p className="text-sm text-stone-600 dark:text-stone-400 mt-3">
+                    {plan.streak > 0 ? (plan.streak + " gündür ara vermeden çalışıyorsun") : "Bugün çalışırsan seri başlar"}
+                </p>
+                {rows.length ? (
+                    <p className="text-sm text-stone-600 dark:text-stone-400 mt-1">{doneTopics} / {rows.length} konu bitti</p>
+                ) : null}
             </div>
             {banner ? <div className="mb-5 px-4 py-3 rounded-2xl bg-zinc-900 text-white text-sm">{banner}</div> : null}
             {plan.coach ? <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed">{plan.coach}</p> : null}
