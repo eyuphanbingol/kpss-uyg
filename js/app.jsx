@@ -205,53 +205,41 @@ function Bugun(props) {
                 ) : null}
             </div>
             {banner ? <div className="mb-5 px-4 py-3 rounded-2xl bg-zinc-900 text-white text-sm">{banner}</div> : null}
-            {plan.coach ? <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed">{plan.coach}</p> : null}
-            <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-3">Bugün yapılacak</p>
+            <p className="text-sm text-stone-500 mb-3">Nasıl çalışacağın sende. Konuyu, testi, yanlışı sen seç.</p>
             <div className="space-y-2">
-                {plan.tasks.length === 0 ? (
-                    <div className="p-5 rounded-2xl panel text-sm text-zinc-500">Bugünlük bitti. Denemeden pratik açabilirsin.</div>
-                ) : plan.tasks.slice(0, 3).map(function (task, ti) {
-                    var weak = ti === 0 && (task.kind === "test" || task.kind === "wrong");
-                    return (
-                        <button key={task.id} onClick={function () { props.onTask(task); }}
-                            className={"w-full text-left p-4 panel rounded-2xl duration-150 " + (weak ? "p-5 shadow-sm" : "")}>
-                            <div className="flex justify-between items-center gap-3">
-                                <div>
-                                    <div className="font-medium flex items-center gap-2">
-                                        {weak ? <span className="h-2 w-2 rounded-full bg-coral-500 shrink-0" /> : null}
-                                        {task.title}
-                                    </div>
-                                    <div className="text-sm text-zinc-500 mt-0.5">{task.detail}</div>
-                                    {task.why ? <div className="text-xs text-zinc-400 mt-1">{task.why}</div> : null}
-                                </div>
-                                <span className="text-navy-600 dark:text-navy-400 text-sm shrink-0">Başla</span>
-                            </div>
-                        </button>
-                    );
-                })}
-            </div>
-            {plan.tasks[0] ? (
-                <button onClick={function () { props.onTask(plan.tasks[0]); }} className="mt-4 w-full py-3.5 rounded-2xl bg-navy-600 text-white font-semibold">Bugünkü denemeye başla</button>
-            ) : null}
-            {plan.weekly && plan.weekly.length ? (
-                <div className="mt-8">
-                    <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-3">Haftalık plan</p>
-                    <div className="flex gap-2 overflow-x-auto pb-1">
-                        {plan.weekly.map(function (d, di) {
-                            return (
-                                <div key={d.day} className={"rounded-xl bg-stone-100 dark:bg-stone-900 p-2 text-center min-w-[3.2rem] " + (di === 0 ? "ring-1 ring-navy-600" : "")}>
-                                    <div className="text-[10px] text-zinc-400">{d.day}</div>
-                                    <div className="h-1.5 w-1.5 rounded-full mx-auto mt-1 bg-navy-400" style={{ transform: "scale(" + Math.min(1.8, 0.6 + (d.weight || 40) / 80) + ")" }} />
-                                    <div className="text-[11px] font-stat mt-1">{d.minutes}</div>
-                                </div>
-                            );
-                        })}
+                <button onClick={props.onDersler} className="w-full text-left p-4 panel rounded-2xl flex justify-between items-center gap-3">
+                    <div>
+                        <div className="font-medium">Dersler</div>
+                        <div className="text-sm text-zinc-500 mt-0.5">Konu notu veya test — sırayı sen belirle</div>
                     </div>
-                    {plan.weekly[0] && plan.weekly[0].focus ? (
-                        <p className="text-xs text-zinc-500 mt-2">Odak: {plan.weekly[0].focus}</p>
-                    ) : null}
-                </div>
-            ) : null}
+                    <span className="text-navy-600 dark:text-navy-400 text-sm shrink-0">Aç</span>
+                </button>
+                <button onClick={props.onDeneme} className="w-full text-left p-4 panel rounded-2xl flex justify-between items-center gap-3">
+                    <div>
+                        <div className="font-medium">Karışık pratik</div>
+                        <div className="text-sm text-zinc-500 mt-0.5">Ders ve soru sayısını sen ayarla</div>
+                    </div>
+                    <span className="text-navy-600 dark:text-navy-400 text-sm shrink-0">Aç</span>
+                </button>
+                {(plan.wrong || []).length ? (
+                    <button onClick={props.onWrong} className="w-full text-left p-4 panel rounded-2xl flex justify-between items-center gap-3">
+                        <div>
+                            <div className="font-medium">Yanlış defteri</div>
+                            <div className="text-sm text-zinc-500 mt-0.5">{plan.wrong.length} soru — istersen şimdi bak</div>
+                        </div>
+                        <span className="text-navy-600 dark:text-navy-400 text-sm shrink-0">Aç</span>
+                    </button>
+                ) : null}
+                {(plan.due || []).length ? (
+                    <button onClick={props.onReview} className="w-full text-left p-4 panel rounded-2xl flex justify-between items-center gap-3">
+                        <div>
+                            <div className="font-medium">Bugün tekrar</div>
+                            <div className="text-sm text-zinc-500 mt-0.5">{plan.due.length} sorunun tekrar zamanı geldi</div>
+                        </div>
+                        <span className="text-navy-600 dark:text-navy-400 text-sm shrink-0">Aç</span>
+                    </button>
+                ) : null}
+            </div>
         </Shell>
     );
 }
@@ -1138,7 +1126,11 @@ function App() {
                 onQuit={function () { if (confirm("Testten çıkmak istediğinize emin misiniz? Cevapladıkların kayıtlı kalır.")) { closeStudy(); } }} />
         );
     } else if (nav === "bugun") {
-        body = <Bugun student={student} plan={plan} isDark={isDark} toggleDark={toggleDark} onTask={onTask} openKonu={openKonu} />;
+        body = <Bugun student={student} plan={plan} isDark={isDark} toggleDark={toggleDark}
+            onDersler={function () { setNav("dersler"); }}
+            onDeneme={function () { setNav("deneme"); }}
+            onReview={function () { startSession(plan.due.slice(0, 30), { mode: "review" }); }}
+            onWrong={function () { startSession(plan.wrong.slice(0, 30), { mode: "wrong" }); }} />;
     } else if (nav === "eksikler") {
         body = <Eksikler plan={plan} isDark={isDark} toggleDark={toggleDark}
             onReview={function () { startSession(plan.due.slice(0, 30), { mode: "review" }); }}
