@@ -159,6 +159,15 @@ function formatHours(n) {
     return x + " saat";
 }
 
+function formatSlotLine(slots, catalog) {
+    var parts = [];
+    (slots || []).forEach(function (s) {
+        if (catalog && !catalog[s.ders]) return;
+        parts.push(formatHours(s.hours) + " " + s.ders);
+    });
+    return parts.join(" · ");
+}
+
 function StudyProgram(props) {
     const kpssData = props.kpssData || {};
     const dersKeys = Object.keys(kpssData);
@@ -166,66 +175,34 @@ function StudyProgram(props) {
     const ready = !!(saved && saved.ready);
     const [open, setOpen] = useState(!ready);
     const [draft, setDraft] = useState(function () { return StudentStore.cloneStudyPlan(saved); });
-    const [openDers, setOpenDers] = useState("");
     const days = StudentStore.WEEK_DAYS;
     const todayId = StudentStore.planDayId();
     const live = ready ? StudentStore.cloneStudyPlan(saved) : null;
     const today = live && live.days[todayId];
 
-    function setDay(id, patch) {
+    function patchDay(id, fn) {
         setDraft(function (prev) {
             var next = StudentStore.cloneStudyPlan(prev);
-            next.days[id] = Object.assign({}, next.days[id], patch);
-            if (next.days[id].on && !(next.days[id].hours > 0)) next.days[id].hours = 1;
+            next.days[id] = Object.assign({ on: false, slots: [] }, next.days[id]);
+            fn(next.days[id]);
             return next;
         });
     }
 
-    function toggleDers(ders) {
-        setDraft(function (prev) {
-            var next = StudentStore.cloneStudyPlan(prev);
-            var i = next.dersler.indexOf(ders);
-            if (i >= 0) {
-                next.dersler.splice(i, 1);
-                delete next.konular[ders];
-            } else {
-                next.dersler.push(ders);
-                delete next.konular[ders];
-            }
-            return next;
+    function addSlot(dayId, ders) {
+        if (!ders) return;
+        patchDay(dayId, function (day) {
+            day.on = true;
+            var hit = null;
+            day.slots.forEach(function (s) { if (s.ders === ders) hit = s; });
+            if (!hit) day.slots.push({ ders: ders, hours: 1 });
         });
-    }
-
-    function toggleKonu(ders, konu) {
-        setDraft(function (prev) {
-            var next = StudentStore.cloneStudyPlan(prev);
-            if (next.dersler.indexOf(ders) < 0) next.dersler.push(ders);
-            var all = Object.keys(kpssData[ders] || {});
-            var cur = next.konular[ders];
-            var set = {};
-            (Array.isArray(cur) && cur.length ? cur : all).forEach(function (k) { set[k] = true; });
-            if (set[konu]) delete set[konu];
-            else set[konu] = true;
-            next.konular[ders] = all.filter(function (k) { return set[k]; });
-            if (!next.konular[ders].length) {
-                next.dersler = next.dersler.filter(function (d) { return d !== ders; });
-                delete next.konular[ders];
-            }
-            return next;
-        });
-    }
-
-    function konuOn(ders, konu) {
-        if (draft.dersler.indexOf(ders) < 0) return false;
-        var list = draft.konular[ders];
-        if (!list || !list.length) return true;
-        return list.indexOf(konu) >= 0;
     }
 
     var todayLine = null;
     if (ready && today && today.on) {
-        var names = (live.dersler || []).filter(function (d) { return kpssData[d]; });
-        todayLine = "Bugün " + formatHours(today.hours) + (names.length ? " · " + names.join(", ") : " · ders seçilmedi");
+        var line = formatSlotLine(today.slots, kpssData);
+        todayLine = line ? ("Bugün " + line) : "Bugün gün açık; ders ve saat ekle";
     } else if (ready) {
         todayLine = "Bugün programında çalışma günü değil";
     }
@@ -236,7 +213,7 @@ function StudyProgram(props) {
                 <div className="flex justify-between items-start gap-3">
                     <div>
                         <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider">Programın</p>
-                        <p className="text-sm font-medium mt-1">{todayLine || "Gün, saat ve dersi sen işaretle. Yeni konular otomatik listelenir."}</p>
+                        <p className="text-sm font-medium mt-1">{todayLine || "Her güne ayrı ders ve saat yaz. Örn. 2 saat Tarih, 1 saat Coğrafya."}</p>
                     </div>
                     <button type="button" onClick={function () {
                         setDraft(StudentStore.cloneStudyPlan(saved));
@@ -244,77 +221,72 @@ function StudyProgram(props) {
                     }} className="text-sm text-navy-600 shrink-0">{open ? "Kapat" : (ready ? "Düzenle" : "Oluştur")}</button>
                 </div>
                 {open ? (
-                    <div className="mt-4">
-                        <p className="text-sm text-stone-500 mb-2">Hangi günler, o gün kaç saat</p>
-                        <div className="space-y-2 mb-4">
-                            {days.map(function (w) {
-                                var d = draft.days[w.id];
-                                return (
-                                    <div key={w.id} className={"flex items-center gap-3 rounded-xl px-3 py-2 " + (d.on ? "bg-stone-100 dark:bg-stone-900" : "opacity-50")}>
-                                        <label className="flex items-center gap-2 min-w-[6.5rem] text-sm font-medium">
-                                            <input type="checkbox" checked={!!d.on} onChange={function (e) { setDay(w.id, { on: e.target.checked, hours: e.target.checked ? (d.hours || 1) : d.hours }); }} />
-                                            {w.full}
-                                        </label>
-                                        <select disabled={!d.on} value={String(d.hours || 1)} onChange={function (e) { setDay(w.id, { hours: Number(e.target.value) }); }}
-                                            className="flex-1 text-sm px-2 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900">
-                                            {hourOptions().map(function (h) {
-                                                return <option key={h} value={h}>{formatHours(h)}</option>;
-                                            })}
-                                        </select>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                        <p className="text-sm text-stone-500 mb-2">Ne çalışmak istiyorsun</p>
-                        <div className="space-y-2">
-                            {dersKeys.length === 0 ? (
-                                <p className="text-sm text-zinc-400">Ders listesi henüz yok.</p>
-                            ) : dersKeys.map(function (ders) {
-                                var konular = Object.keys(kpssData[ders] || {});
-                                var on = draft.dersler.indexOf(ders) >= 0;
-                                return (
-                                    <div key={ders} className="rounded-xl border border-stone-200 dark:border-stone-800 overflow-hidden">
-                                        <div className="flex items-center gap-2 px-3 py-2">
-                                            <label className="flex items-center gap-2 flex-1 text-sm font-medium">
-                                                <input type="checkbox" checked={on} onChange={function () { toggleDers(ders); }} />
-                                                {ders}
-                                            </label>
-                                            {konular.length ? (
-                                                <button type="button" className="text-xs text-zinc-400" onClick={function () { setOpenDers(openDers === ders ? "" : ders); }}>
-                                                    {openDers === ders ? "Konuları gizle" : konular.length + " konu"}
-                                                </button>
-                                            ) : null}
-                                        </div>
-                                        {openDers === ders ? (
-                                            <div className="px-3 pb-3 space-y-1.5">
-                                                {konular.map(function (konu) {
-                                                    return (
-                                                        <label key={konu} className="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-300">
-                                                            <input type="checkbox" checked={konuOn(ders, konu)} onChange={function () { toggleKonu(ders, konu); }} />
-                                                            {konu}
-                                                        </label>
-                                                    );
-                                                })}
-                                            </div>
+                    <div className="mt-4 space-y-3">
+                        {days.map(function (w) {
+                            var d = draft.days[w.id];
+                            var used = {};
+                            (d.slots || []).forEach(function (s) { used[s.ders] = true; });
+                            var leftover = dersKeys.filter(function (k) { return !used[k]; });
+                            return (
+                                <div key={w.id} className={"rounded-xl px-3 py-3 " + (d.on ? "bg-stone-100 dark:bg-stone-900" : "opacity-50")}>
+                                    <label className="flex items-center gap-2 text-sm font-medium">
+                                        <input type="checkbox" checked={!!d.on} onChange={function (e) { patchDay(w.id, function (day) { day.on = e.target.checked; }); }} />
+                                        {w.full}
+                                        {d.on && d.slots.length ? (
+                                            <span className="text-xs font-normal text-stone-500">toplam {formatHours(StudentStore.daySlotHours(d))}</span>
                                         ) : null}
-                                    </div>
-                                );
-                            })}
-                        </div>
+                                    </label>
+                                    {d.on ? (
+                                        <div className="mt-2 space-y-2">
+                                            {(d.slots || []).map(function (s, si) {
+                                                return (
+                                                    <div key={s.ders} className="flex items-center gap-2">
+                                                        <span className="flex-1 text-sm min-w-0 truncate">{s.ders}</span>
+                                                        <select value={String(s.hours)} onChange={function (e) {
+                                                            var h = Number(e.target.value);
+                                                            patchDay(w.id, function (day) { day.slots[si].hours = h; });
+                                                        }} className="text-sm px-2 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900">
+                                                            {hourOptions().map(function (h) {
+                                                                return <option key={h} value={h}>{formatHours(h)}</option>;
+                                                            })}
+                                                        </select>
+                                                        <button type="button" className="text-xs text-zinc-400 px-1" onClick={function () {
+                                                            patchDay(w.id, function (day) {
+                                                                day.slots = day.slots.filter(function (x) { return x.ders !== s.ders; });
+                                                            });
+                                                        }}>Kaldır</button>
+                                                    </div>
+                                                );
+                                            })}
+                                            {leftover.length ? (
+                                                <select key={leftover.join("|")} defaultValue="" onChange={function (e) {
+                                                    addSlot(w.id, e.target.value);
+                                                }} className="w-full text-sm px-2 py-1.5 rounded-lg border border-dashed border-zinc-300 dark:border-zinc-700 bg-transparent">
+                                                    <option value="" disabled>Ders ekle</option>
+                                                    {leftover.map(function (k) {
+                                                        return <option key={k} value={k}>{k}</option>;
+                                                    })}
+                                                </select>
+                                            ) : (dersKeys.length ? null : <p className="text-xs text-zinc-400">Ders listesi henüz yok.</p>)}
+                                        </div>
+                                    ) : null}
+                                </div>
+                            );
+                        })}
                         <button type="button" onClick={function () {
                             StudentStore.saveStudyPlan(draft);
                             setOpen(false);
-                        }} className="mt-4 w-full py-3 rounded-2xl bg-navy-600 text-white font-semibold">Programı kaydet</button>
+                        }} className="w-full py-3 rounded-2xl bg-navy-600 text-white font-semibold">Programı kaydet</button>
                     </div>
                 ) : null}
             </div>
-            {ready && today && today.on && live.dersler.length ? (
+            {ready && today && today.on && today.slots && today.slots.length ? (
                 <div className="flex flex-wrap gap-2 mt-3">
-                    {live.dersler.filter(function (d) { return kpssData[d]; }).map(function (ders) {
+                    {today.slots.filter(function (s) { return kpssData[s.ders]; }).map(function (s) {
                         return (
-                            <button key={ders} type="button" onClick={function () { props.onDers && props.onDers(ders); }}
+                            <button key={s.ders} type="button" onClick={function () { props.onDers && props.onDers(s.ders); }}
                                 className="px-3 py-1.5 rounded-full text-sm bg-stone-100 dark:bg-stone-900">
-                                {ders}
+                                {s.ders} · {formatHours(s.hours)}
                             </button>
                         );
                     })}

@@ -61,16 +61,14 @@
         return {
             ready: false,
             days: {
-                pzt: { on: true, hours: 1 },
-                sal: { on: true, hours: 1 },
-                car: { on: true, hours: 1 },
-                per: { on: true, hours: 1 },
-                cum: { on: true, hours: 1 },
-                cmt: { on: false, hours: 0 },
-                paz: { on: false, hours: 0 }
-            },
-            dersler: [],
-            konular: {}
+                pzt: { on: true, slots: [] },
+                sal: { on: true, slots: [] },
+                car: { on: true, slots: [] },
+                per: { on: true, slots: [] },
+                cum: { on: true, slots: [] },
+                cmt: { on: false, slots: [] },
+                paz: { on: false, slots: [] }
+            }
         };
     }
 
@@ -78,30 +76,51 @@
         return ["paz", "pzt", "sal", "car", "per", "cum", "cmt"][(d || new Date()).getDay()];
     }
 
+    function normalizeSlots(src, fallbackDersler) {
+        if (Array.isArray(src.slots)) {
+            return src.slots.map(function (s) {
+                return {
+                    ders: String((s && s.ders) || ""),
+                    hours: Number(s && s.hours) > 0 ? Number(s.hours) : 1
+                };
+            }).filter(function (s) { return s.ders; });
+        }
+        var hours = Number(src.hours);
+        var list = Array.isArray(fallbackDersler) ? fallbackDersler : [];
+        if (src.on && list.length && hours > 0) {
+            var each = Math.round((hours / list.length) * 2) / 2;
+            if (!(each > 0)) each = 0.5;
+            return list.map(function (ders) { return { ders: ders, hours: each }; });
+        }
+        return [];
+    }
+
+    function daySlotHours(day) {
+        var sum = 0;
+        ((day && day.slots) || []).forEach(function (s) { sum += Number(s.hours) || 0; });
+        return Math.round(sum * 10) / 10;
+    }
+
     function cloneStudyPlan(p) {
         var base = defaultStudyPlan();
         if (!p || typeof p !== "object") return base;
         var days = {};
+        var oldDers = Array.isArray(p.dersler) ? p.dersler : [];
         WEEK_DAYS.forEach(function (w) {
             var src = (p.days && p.days[w.id]) || base.days[w.id];
-            var hours = Number(src.hours);
-            if (!(hours > 0)) hours = src.on ? 1 : 0;
-            days[w.id] = { on: !!src.on, hours: hours };
+            days[w.id] = {
+                on: !!src.on,
+                slots: normalizeSlots(src, oldDers)
+            };
         });
-        return {
-            ready: !!p.ready,
-            days: days,
-            dersler: Array.isArray(p.dersler) ? p.dersler.slice() : [],
-            konular: (p.konular && typeof p.konular === "object" && !Array.isArray(p.konular))
-                ? JSON.parse(JSON.stringify(p.konular)) : {}
-        };
+        return { ready: !!p.ready, days: days };
     }
 
     function studyPlanWeekHours(plan) {
         var sum = 0;
         WEEK_DAYS.forEach(function (w) {
             var d = plan.days[w.id];
-            if (d && d.on) sum += Number(d.hours) || 0;
+            if (d && d.on) sum += daySlotHours(d);
         });
         return Math.round(sum * 10) / 10;
     }
@@ -602,13 +621,14 @@
         cloneStudyPlan: cloneStudyPlan,
         planDayId: planDayId,
         studyPlanWeekHours: studyPlanWeekHours,
+        daySlotHours: daySlotHours,
         saveStudyPlan: function (plan) {
             var next = cloneStudyPlan(plan);
             next.ready = true;
             state.userProfile.studyPlan = next;
             state.userProfile.weeklyHours = studyPlanWeekHours(next);
             var today = next.days[planDayId()];
-            if (today && today.on) state.userProfile.dailyHours = Number(today.hours) || 0;
+            if (today && today.on) state.userProfile.dailyHours = daySlotHours(today);
             emit();
         },
         setDark: function (isDark) {
