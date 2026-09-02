@@ -16,6 +16,7 @@ import NotesScreen from "./screens/NotesScreen";
 import TestScreen from "./screens/TestScreen";
 import { AiScreen, HeatScreen, LeaderboardScreen, LiveScreen, PaywallScreen, PlacementScreen } from "./screens/ExtraScreens";
 import SplashScreen from "./screens/SplashScreen";
+import { StatusBar } from "expo-status-bar";
 import { colors } from "./lib/theme";
 import { GhostButton, Screen } from "./ui";
 
@@ -24,13 +25,16 @@ var Tab = createBottomTabNavigator();
 
 function Tabs() {
     return (
-        <Tab.Navigator screenOptions={{ headerShown: false, tabBarActiveTintColor: colors.indigo, tabBarStyle: { backgroundColor: "#fff" } }}>
+        <>
+            <StatusBar style="dark" />
+            <Tab.Navigator screenOptions={{ headerShown: false, tabBarActiveTintColor: colors.indigo, tabBarStyle: { backgroundColor: "#fff" } }}>
             <Tab.Screen name="BugunTab" component={BugunScreen} options={{ title: "Bugün" }} />
             <Tab.Screen name="DerslerTab" component={DersHomeScreen} options={{ title: "Dersler" }} />
             <Tab.Screen name="EksiklerTab" component={EksiklerScreen} options={{ title: "Eksikler" }} />
             <Tab.Screen name="DenemeTab" component={DenemeScreen} options={{ title: "Deneme" }} />
             <Tab.Screen name="BenTab" component={BenScreen} options={{ title: "Ben" }} />
-        </Tab.Navigator>
+            </Tab.Navigator>
+        </>
     );
 }
 

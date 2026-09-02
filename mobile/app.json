@@ -11,26 +11,44 @@
     "icon": "./assets/atanom.png",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/atanom.png",
-      "resizeMode": "contain",
+      "image": "./assets/splash-full.png",
+      "resizeMode": "cover",
       "backgroundColor": "#041C24"
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "app.atanom.mobile"
+      "bundleIdentifier": "app.atanom.mobile",
+      "splash": {
+        "backgroundColor": "#041C24",
+        "image": "./assets/splash-full.png",
+        "resizeMode": "cover"
+      }
     },
     "android": {
       "package": "app.atanom.mobile",
       "adaptiveIcon": {
-        "backgroundColor": "#0D2C4D",
-        "foregroundImage": "./assets/atanom.png"
+        "backgroundColor": "#041C24",
+        "foregroundImage": "./assets/atanom-mark.png"
+      },
+      "splash": {
+        "backgroundColor": "#041C24",
+        "image": "./assets/splash-full.png",
+        "resizeMode": "cover"
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "expo-web-browser"
+      "expo-web-browser",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#041C24",
+          "image": "./assets/atanom-mark.png",
+          "resizeMode": "contain"
+        }
+      ]
     ],
     "extra": {
       "eas": {
