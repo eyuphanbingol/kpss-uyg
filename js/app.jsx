@@ -30,8 +30,11 @@ function useStudent() {
 
 function Shell(props) {
     return (
-        <div className={"mx-auto px-4 py-6 sm:py-8 " + (props.wide ? "max-w-3xl" : "max-w-2xl") + (props.padBottom === false ? "" : " pb-32")}>
+        <div className={"mx-auto px-4 pt-6 sm:pt-8 " + (props.wide ? "max-w-3xl" : "max-w-2xl")}>
             {props.children}
+            {props.padBottom === false ? null : (
+                <div aria-hidden="true" style={{ height: "calc(8.5rem + env(safe-area-inset-bottom, 0px))" }} />
+            )}
         </div>
     );
 }
