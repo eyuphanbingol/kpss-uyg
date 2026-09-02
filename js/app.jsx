@@ -1003,18 +1003,41 @@ function Ben(props) {
                 <label className="text-sm text-zinc-500">Ad</label>
                 <input value={st.profile.name || ""} onChange={function (e) { StudentStore.updateProfile({ name: e.target.value }); StudentStore.updateUserProfile({ nickname: e.target.value }); }} className={field} />
                 <label className="text-sm text-zinc-500">Eğitim</label>
-                <select value={up.educationLevel || "lisans"} onChange={function (e) {
-                    var lv = e.target.value;
-                    StudentStore.updateUserProfile({ educationLevel: lv });
-                    var dates = (window.KpssConfig && window.KpssConfig.examDateByLevel) || {};
-                    if (dates[lv]) StudentStore.updateProfile({ examDate: dates[lv] });
-                }} className={field}>
-                    <option value="lisans">Lisans</option>
-                    <option value="onlisans">Ön lisans</option>
-                    <option value="ortaogretim">Ortaöğretim</option>
-                </select>
+                <p className="px-4 py-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-stone-50 dark:bg-stone-900 text-sm font-medium">
+                    {up.educationLevel === "onlisans" ? "Ön lisans" : (up.educationLevel === "ortaogretim" ? "Ortaöğretim" : "Lisans")}
+                </p>
+                <p className="text-xs text-zinc-400">Kayıtta seçtin. Değişiklik admin onayı ister.</p>
+                {function () {
+                    var req = up.educationChangeRequest;
+                    if (req && req.status === "pending") {
+                        var want = req.to === "onlisans" ? "Ön lisans" : (req.to === "ortaogretim" ? "Ortaöğretim" : "Lisans");
+                        return <p className="text-sm text-amber-700 bg-amber-50 rounded-xl px-3 py-2">Onay bekleniyor: {want}</p>;
+                    }
+                    return (
+                        <div>
+                            {req && req.status === "rejected" ? <p className="text-sm text-coral-600 mb-2">Son talep reddedildi. Yeniden gönderebilirsin.</p> : null}
+                            <label className="text-sm text-zinc-500">Değişiklik talebi</label>
+                            <div className="flex gap-2 mt-1">
+                                <select id="edu-req" defaultValue="" className={field}>
+                                    <option value="" disabled>Yeni düzey seç</option>
+                                    {up.educationLevel !== "lisans" ? <option value="lisans">Lisans</option> : null}
+                                    {up.educationLevel !== "onlisans" ? <option value="onlisans">Ön lisans</option> : null}
+                                    {up.educationLevel !== "ortaogretim" ? <option value="ortaogretim">Ortaöğretim</option> : null}
+                                </select>
+                                <button type="button" className="shrink-0 px-3 py-2 rounded-xl bg-navy-600 text-white text-sm" onClick={function () {
+                                    var el = document.getElementById("edu-req");
+                                    var v = el && el.value;
+                                    if (!v) return;
+                                    StudentStore.requestEducationChange(v);
+                                    if (window.SyncEngine) window.SyncEngine.sync();
+                                }}>Gönder</button>
+                            </div>
+                        </div>
+                    );
+                }()}
                 <label className="text-sm text-zinc-500">Sınav tarihi</label>
-                <input type="date" value={st.profile.examDate} onChange={function (e) { StudentStore.updateProfile({ examDate: e.target.value }); }} className={field} />
+                <p className="px-4 py-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-stone-50 dark:bg-stone-900 text-sm">{st.profile.examDate || "—"}</p>
+                <p className="text-xs text-zinc-400">Eğitim düzeyi onaylanınca ÖSYM tarihine göre güncellenir.</p>
                 <label className="text-sm text-zinc-500">Kulvar</label>
                 <select value={up.targetType || "B"} onChange={function (e) { StudentStore.updateUserProfile({ targetType: e.target.value }); }} className={field}>
                     {((window.KpssConfig && window.KpssConfig.targetTypes) || [
@@ -1029,22 +1052,6 @@ function Ben(props) {
                         var w = Number(e.target.value) || 7;
                         StudentStore.updateUserProfile({ weeklyHours: w, dailyHours: w / 7 });
                     }} className={field} />
-                <div className="grid grid-cols-2 gap-3">
-                    <div>
-                        <label className="text-sm text-zinc-500">Günlük soru</label>
-                        <input type="number" min="5" max="200" value={st.profile.dailyQuestions}
-                            onChange={function (e) { StudentStore.updateProfile({ dailyQuestions: Number(e.target.value) || 25 }); }} className={field + " mt-1"} />
-                    </div>
-                    <div>
-                        <label className="text-sm text-zinc-500">Günlük dk</label>
-                        <input type="number" min="10" max="300" value={st.profile.dailyMinutes}
-                            onChange={function (e) {
-                                var m = Number(e.target.value) || 45;
-                                StudentStore.updateProfile({ dailyMinutes: m });
-                                StudentStore.updateUserProfile({ dailyHours: m / 60 });
-                            }} className={field + " mt-1"} />
-                    </div>
-                </div>
                 <label className="flex items-center gap-2 text-sm text-zinc-600 pt-2">
                     <input type="checkbox" checked={st.profile.tabLeaveWarn !== false} onChange={function (e) { StudentStore.updateProfile({ tabLeaveWarn: e.target.checked }); }} />
                     Denemede sekme uyarısı

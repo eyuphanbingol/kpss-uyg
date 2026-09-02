@@ -23,7 +23,15 @@
         const [msg, setMsg] = useState("");
         const [busy, setBusy] = useState(false);
         const [log, setLog] = useState([]);
+        const [eduReqs, setEduReqs] = useState([]);
         const isAdmin = student.userProfile && student.userProfile.role === "admin";
+
+        function eduLabel(id) {
+            if (id === "onlisans") return "Ön lisans";
+            if (id === "ortaogretim") return "Ortaöğretim";
+            if (id === "lisans") return "Lisans";
+            return id || "—";
+        }
 
         function load() {
             var sb = window.SupabaseClient && window.SupabaseClient.get();
@@ -49,6 +57,11 @@
             });
             sb.rpc("admin_hard_topics").then(function (r) {
                 if (!r.error && r.data) setHard(Array.isArray(r.data) ? r.data : []);
+            });
+            sb.functions.invoke("admin-action", { body: { action: "list_edu_requests" } }).then(function (r) {
+                if (r.error) return;
+                var list = (r.data && r.data.data) || [];
+                setEduReqs(Array.isArray(list) ? list : []);
             });
         }
 
@@ -111,6 +124,7 @@
 
         var nav = [
             { id: "ozet", t: "Özet" },
+            { id: "talepler", t: "Talepler" + (eduReqs.length ? " (" + eduReqs.length + ")" : "") },
             { id: "kullanicilar", t: "Kullanıcılar" },
             { id: "analiz", t: "Analiz" },
             { id: "icerik", t: "Duyuru" }
@@ -193,6 +207,53 @@
                                         })}
                                     </div>
                                 ) : null}
+                            </div>
+                        ) : null}
+
+                        {tab === "talepler" ? (
+                            <div>
+                                <h1 className="text-2xl font-semibold tracking-tight mb-2">Eğitim değişiklik talepleri</h1>
+                                <p className="text-sm text-zinc-500 mb-6">Öğrenci kayıtta seçtiği düzeyi kendi değiştiremez. Onaylarsan sınav tarihi de ÖSYM takvimine çekilir.</p>
+                                {eduReqs.length === 0 ? (
+                                    <div className="panel rounded-2xl p-8 text-sm text-zinc-400">Bekleyen talep yok.</div>
+                                ) : (
+                                    <div className="panel rounded-2xl overflow-x-auto">
+                                        <table className="w-full text-sm">
+                                            <thead>
+                                                <tr className="text-left text-xs text-zinc-400 border-b border-zinc-100 dark:border-zinc-800">
+                                                    <th className="font-medium px-4 py-3">Kullanıcı</th>
+                                                    <th className="font-medium px-4 py-3">Şu an</th>
+                                                    <th className="font-medium px-4 py-3">İstenen</th>
+                                                    <th className="font-medium px-4 py-3">Tarih</th>
+                                                    <th className="font-medium px-4 py-3"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {eduReqs.map(function (r) {
+                                                    return (
+                                                        <tr key={r.user_id} className="border-b border-zinc-200 last:border-0">
+                                                            <td className="px-4 py-3">
+                                                                <div className="font-medium">{r.nickname || "—"}</div>
+                                                                <div className="text-xs text-zinc-400">{(r.user_id || "").slice(0, 8)}</div>
+                                                            </td>
+                                                            <td className="px-4 py-3">{eduLabel(r.from)}</td>
+                                                            <td className="px-4 py-3 font-medium">{eduLabel(r.to)}</td>
+                                                            <td className="px-4 py-3 text-zinc-600">{fmtDate(r.at)}</td>
+                                                            <td className="px-4 py-3">
+                                                                <div className="flex gap-1 justify-end">
+                                                                    <button disabled={busy} onClick={function () { act("approve_edu", { user_id: r.user_id, to: r.to }); }}
+                                                                        className="text-xs font-medium px-3 py-1.5 rounded-lg bg-navy-600 text-white">Onayla</button>
+                                                                    <button disabled={busy} onClick={function () { act("reject_edu", { user_id: r.user_id }); }}
+                                                                        className="text-xs font-medium px-3 py-1.5 rounded-lg border border-zinc-200">Reddet</button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    );
+                                                })}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                )}
                             </div>
                         ) : null}
 

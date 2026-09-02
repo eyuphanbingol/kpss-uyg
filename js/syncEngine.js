@@ -151,6 +151,26 @@
                 merged.userProfile.role = "admin";
             }
             if (remoteRow.data && remoteRow.data.premium) merged.userProfile.premium = true;
+            var dbEdu = remoteRow.data && remoteRow.data.education_level;
+            if (dbEdu === "lisans" || dbEdu === "onlisans" || dbEdu === "ortaogretim") {
+                merged.userProfile.educationLevel = dbEdu;
+                var cfgDates = window.KpssConfig && window.KpssConfig.examDateByLevel;
+                var examDates = cfgDates || { lisans: "2026-09-06", onlisans: "2026-10-04", ortaogretim: "2026-10-25" };
+                if (examDates[dbEdu]) {
+                    merged.profile.examDate = examDates[dbEdu];
+                }
+            }
+            var rReq = remote && remote.userProfile && remote.userProfile.educationChangeRequest;
+            var lReq = merged.userProfile.educationChangeRequest;
+            if (rReq && lReq) {
+                if ((rReq.status === "approved" || rReq.status === "rejected") && lReq.status === "pending" && (rReq.at || "") >= (lReq.at || "")) {
+                    merged.userProfile.educationChangeRequest = rReq;
+                } else if ((lReq.at || "") < (rReq.at || "")) {
+                    merged.userProfile.educationChangeRequest = rReq;
+                }
+            } else if (rReq && !lReq) {
+                merged.userProfile.educationChangeRequest = rReq;
+            }
             merged.updatedAt = global.StudentStore.nowIso();
             global.StudentStore.replaceState(merged, { quiet: true });
             var nick = merged.userProfile.nickname || "ogrenci";

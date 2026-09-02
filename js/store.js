@@ -634,8 +634,24 @@
             emit();
         },
         updateUserProfile: function (patch) {
-            Object.assign(state.userProfile, patch);
+            var p = Object.assign({}, patch || {});
+            delete p.educationLevel;
+            Object.assign(state.userProfile, p);
             emit();
+        },
+        requestEducationChange: function (to) {
+            var allowed = { lisans: 1, onlisans: 1, ortaogretim: 1 };
+            if (!allowed[to]) return { ok: false };
+            var cur = state.userProfile.educationLevel || "lisans";
+            if (to === cur) return { ok: false, reason: "same" };
+            state.userProfile.educationChangeRequest = {
+                from: cur,
+                to: to,
+                at: nowIso(),
+                status: "pending"
+            };
+            emit();
+            return { ok: true };
         },
         WEEK_DAYS: WEEK_DAYS,
         defaultStudyPlan: defaultStudyPlan,
