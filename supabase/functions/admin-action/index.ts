@@ -29,6 +29,15 @@ function writeEduReq(payload: any, req: any) {
   return next;
 }
 
+function locLabel(loc: any) {
+  if (!loc) return "";
+  if (typeof loc === "string") return loc;
+  const city = loc.city || loc.region || "";
+  const country = loc.country || loc.countryCode || "";
+  if (city && country) return city + ", " + country;
+  return city || country || loc.tz || "";
+}
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: cors });
 
@@ -65,6 +74,31 @@ Deno.serve(async (req) => {
 
   const { data: me } = await admin.from("student_states").select("role").eq("user_id", user.id).maybeSingle();
   if (!me || me.role !== "admin") return json({ ok: false, error: "forbidden" }, 403);
+
+  if (action === "user_list") {
+    const { data } = await admin.from("student_states")
+      .select("user_id,nickname,education_level,target_type,platform,premium,last_study_at,questions_total,updated_at,role,payload")
+      .order("updated_at", { ascending: false })
+      .limit(400);
+    const list = (data || []).map((r: any) => {
+      const p = r.payload || {};
+      const up = p.userProfile || {};
+      return {
+        user_id: r.user_id,
+        nickname: r.nickname,
+        education_level: r.education_level,
+        target_type: r.target_type,
+        platform: r.platform,
+        premium: r.premium,
+        last_study_at: r.last_study_at,
+        questions_total: r.questions_total,
+        updated_at: r.updated_at,
+        role: r.role,
+        location: locLabel(up.location)
+      };
+    });
+    return json({ ok: true, data: list });
+  }
 
   if (action === "grant_premium") {
     const { data: row } = await admin.from("student_states").select("payload").eq("user_id", body.user_id).maybeSingle();
@@ -190,6 +224,7 @@ Deno.serve(async (req) => {
         last_study_at: data?.last_study_at,
         platform: data?.platform,
         role: data?.role,
+        location: locLabel(p.userProfile && p.userProfile.location),
         streak: p.streak || null,
         counters: p.counters || null,
         wrongCount: (p.wrongBook || []).length,

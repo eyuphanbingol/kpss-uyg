@@ -33,6 +33,15 @@
         } catch (e) { return "—"; }
     }
 
+    function locLabel(loc) {
+        if (!loc) return "—";
+        if (typeof loc === "string") return loc || "—";
+        var city = loc.city || loc.region || "";
+        var country = loc.country || loc.countryCode || "";
+        if (city && country) return city + ", " + country;
+        return city || country || loc.tz || "—";
+    }
+
     function eduLabel(id) {
         if (id === "onlisans") return "Ön lisans";
         if (id === "ortaogretim") return "Ortaöğretim";
@@ -109,14 +118,33 @@
                 if (r.error) setMsg("Özet: " + r.error.message);
                 else setKpi(r.data);
 
-                // Kullanıcı listesi
-                var r2 = await sb.rpc("admin_user_list");
-                if (!r2.error && r2.data) {
-                    setRows(Array.isArray(r2.data) ? r2.data : []);
-                } else {
-                    var r3 = await sb.from("admin_user_directory").select("*").limit(500);
-                    if (r3.error) setMsg("Kullanıcı listesi: " + (r2.error && r2.error.message ? r2.error.message + " · " : "") + r3.error.message);
-                    else setRows(r3.data || []);
+                // Kullanıcı listesi (konum payload'dan)
+                var listed = false;
+                var rUsers = await sb.functions.invoke("admin-action", { body: { action: "user_list" } });
+                if (!rUsers.error) {
+                    var ud = rUsers.data;
+                    if (typeof ud === "string") {
+                        try { ud = JSON.parse(ud); } catch (e) { ud = null; }
+                    }
+                    var ulist = [];
+                    if (ud && ud.ok === false) ulist = [];
+                    else if (Array.isArray(ud)) ulist = ud;
+                    else if (ud && Array.isArray(ud.data)) ulist = ud.data;
+                    else if (ud && ud.data && Array.isArray(ud.data.data)) ulist = ud.data.data;
+                    if (ulist.length) {
+                        setRows(ulist);
+                        listed = true;
+                    }
+                }
+                if (!listed) {
+                    var r2 = await sb.rpc("admin_user_list");
+                    if (!r2.error && r2.data) {
+                        setRows(Array.isArray(r2.data) ? r2.data : []);
+                    } else {
+                        var r3 = await sb.from("admin_user_directory").select("*").limit(500);
+                        if (r3.error) setMsg("Kullanıcı listesi: " + (r2.error && r2.error.message ? r2.error.message + " · " : "") + r3.error.message);
+                        else setRows(r3.data || []);
+                    }
                 }
 
                 // Zor konular
@@ -209,7 +237,7 @@
         // ---------- Filtre ----------
         const filteredRows = useMemo(function () {
             return sortedRows.filter(function (u) {
-                var hay = ((u.nickname || "") + (u.email || "") + (u.target_type || "") + (u.education_level || "") + (u.user_id || "")).toLowerCase();
+                var hay = ((u.nickname || "") + (u.email || "") + (u.target_type || "") + (u.education_level || "") + (u.user_id || "") + (u.location || "")).toLowerCase();
                 if (q && hay.indexOf(q.toLowerCase()) < 0) return false;
                 if (filter === "premium" && !u.premium) return false;
                 if (filter === "lisans" && u.education_level !== "lisans") return false;
@@ -559,7 +587,7 @@
                                             ref={searchInputRef}
                                             value={q} 
                                             onChange={function (e) { setQ(e.target.value); setPage(1); }} 
-                                            placeholder="🔍 Ara: ad, kulvar, eğitim, email…"
+                                            placeholder="🔍 Ara: ad, konum, eğitim, email…"
                                             className="w-full px-4 py-3 pl-10 rounded-2xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all"
                                         />
                                         <span className="absolute left-3 top-1/2 -translate-y-1/2 text-stone-400">🔍</span>
@@ -600,6 +628,9 @@
                                                     <th className="font-medium px-4 py-3 cursor-pointer hover:text-stone-700" onClick={function () { setSortField("education_level"); setSortOrder(sortOrder === "asc" ? "desc" : "asc"); }}>
                                                         Eğitim {sortField === "education_level" && (sortOrder === "asc" ? "↑" : "↓")}
                                                     </th>
+                                                    <th className="font-medium px-4 py-3 cursor-pointer hover:text-stone-700" onClick={function () { setSortField("location"); setSortOrder(sortOrder === "asc" ? "desc" : "asc"); }}>
+                                                        Konum {sortField === "location" && (sortOrder === "asc" ? "↑" : "↓")}
+                                                    </th>
                                                     <th className="font-medium px-4 py-3 cursor-pointer hover:text-stone-700" onClick={function () { setSortField("target_type"); setSortOrder(sortOrder === "asc" ? "desc" : "asc"); }}>
                                                         Kulvar {sortField === "target_type" && (sortOrder === "asc" ? "↑" : "↓")}
                                                     </th>
@@ -615,7 +646,7 @@
                                             </thead>
                                             <tbody>
                                                 {paginatedRows.length === 0 ? (
-                                                    <tr><td colSpan={7} className="px-4 py-12 text-center text-stone-400">Kayıt yok veya liste yetkisi eksik.</td></tr>
+                                                    <tr><td colSpan={8} className="px-4 py-12 text-center text-stone-400">Kayıt yok veya liste yetkisi eksik.</td></tr>
                                                 ) : paginatedRows.map(function (u) {
                                                     var status = getStatusBadge(u.last_study_at);
                                                     return (
@@ -629,6 +660,7 @@
                                                                     {eduLabel(u.education_level)}
                                                                 </span>
                                                             </td>
+                                                            <td className="px-4 py-3 text-xs text-stone-600 dark:text-stone-400">{u.location || "—"}</td>
                                                             <td className="px-4 py-3 text-xs text-stone-600 dark:text-stone-400">{trackLabel(u.target_type)}</td>
                                                             <td className="px-4 py-3 font-semibold">{u.questions_total || 0}</td>
                                                             <td className="px-4 py-3">
@@ -725,6 +757,7 @@
                                                     <span className="text-xs bg-rose-50 dark:bg-rose-950/30 px-2 py-0.5 rounded-full">❌ {detail.wrongCount || 0} yanlış</span>
                                                     <span className="text-xs bg-emerald-50 dark:bg-emerald-950/30 px-2 py-0.5 rounded-full">🎯 {detail.target_type || "—"}</span>
                                                     <span className="text-xs bg-stone-50 dark:bg-stone-800 px-2 py-0.5 rounded-full">📱 {detail.platform || "web"}</span>
+                                                    <span className="text-xs bg-teal-50 dark:bg-teal-950/30 px-2 py-0.5 rounded-full">📍 {detail.location || locLabel(detail.userProfile && detail.userProfile.location)}</span>
                                                 </div>
                                             </div>
                                             <button onClick={function () { setDetail(null); }} className="text-stone-400 hover:text-stone-600">✕</button>

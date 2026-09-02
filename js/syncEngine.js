@@ -148,6 +148,22 @@
         return remote;
     }
 
+    async function detectLocation() {
+        var loc = { at: new Date().toISOString(), tz: "" };
+        try { loc.tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) {}
+        try {
+            var r = await fetch("https://ipwho.is/", { cache: "no-store" });
+            var j = await r.json();
+            if (j && j.success !== false) {
+                loc.city = j.city || "";
+                loc.region = j.region || "";
+                loc.country = j.country || "";
+                loc.countryCode = j.country_code || "";
+            }
+        } catch (e) {}
+        return loc;
+    }
+
     async function pullPush() {
         var sb = global.SupabaseClient && global.SupabaseClient.get();
         if (!sb) return { ok: false, reason: "offline-or-busy" };
@@ -241,6 +257,14 @@
                 merged.educationChangeRequest = keptReq;
             }
             merged.updatedAt = global.StudentStore.nowIso();
+            var prevLoc = merged.userProfile && merged.userProfile.location;
+            var locAge = prevLoc && prevLoc.at ? (Date.now() - new Date(prevLoc.at).getTime()) : Infinity;
+            if (!prevLoc || locAge > 7 * 86400000 || !(prevLoc.city || prevLoc.country)) {
+                try {
+                    var geo = await detectLocation();
+                    merged.userProfile.location = Object.assign({}, prevLoc || {}, geo);
+                } catch (e) {}
+            }
             global.StudentStore.replaceState(merged, { quiet: true });
             var nick = merged.userProfile.nickname || "ogrenci";
             var row = {

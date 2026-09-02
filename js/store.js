@@ -43,7 +43,8 @@
             blocked: false,
             authUserId: null,
             email: "",
-            deletionRequestedAt: null
+            deletionRequestedAt: null,
+            location: null
         };
     }
 
