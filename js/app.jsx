@@ -1330,6 +1330,21 @@ function App() {
     });
     const [OnboardCmp, setOnboardCmp] = useState(null);
     const [profileHydrated, setProfileHydrated] = useState(false);
+    const signingOutRef = useRef(false);
+
+    function doSignOut() {
+        signingOutRef.current = true;
+        setAuthSession(null);
+        setPwRecovery(false);
+        setProfileHydrated(false);
+        setRoleChecked(false);
+        var sb = window.SupabaseClient && window.SupabaseClient.get && window.SupabaseClient.get();
+        var finish = function () {
+            if (window.StudentStore && window.StudentStore.bindToUser) window.StudentStore.bindToUser(null);
+        };
+        if (sb && sb.auth && sb.auth.signOut) sb.auth.signOut().then(finish).catch(finish);
+        else finish();
+    }
 
     const LAZY = {
         onboarding: ["OnboardingScreen", "js/components/OnboardingScreen.jsx"],
@@ -1405,13 +1420,16 @@ function App() {
                 return;
             }
             if (event === "SIGNED_OUT") {
+                signingOutRef.current = true;
                 setAuthSession(null);
                 setPwRecovery(false);
                 setProfileHydrated(false);
+                setRoleChecked(false);
                 if (window.StudentStore && window.StudentStore.bindToUser) window.StudentStore.bindToUser(null);
                 return;
             }
             if (!sess) return;
+            signingOutRef.current = false;
             if (window.SupabaseClient && window.SupabaseClient.recoveryPending && window.SupabaseClient.recoveryPending()) {
                 if (window.SupabaseClient.markRecovery) window.SupabaseClient.markRecovery();
                 setPwRecovery(true);
@@ -1436,6 +1454,10 @@ function App() {
             if (sub && sub.data && sub.data.subscription) sub.data.subscription.unsubscribe();
         };
     }, []);
+
+    useEffect(function () {
+        if (!authSession) signingOutRef.current = false;
+    }, [authSession]);
 
     useEffect(function () {
         if (authReady && (!authSession || pwRecovery) && window.JsxLoader) {
@@ -1702,13 +1724,7 @@ function App() {
         body = <Ben student={student} isDark={isDark} toggleDark={toggleDark}
             onOpen={function (id) { setExtra(id); }}
             onAdmin={function () { setExtra("admin"); }}
-            onSignOut={function () {
-                var sb = window.SupabaseClient && window.SupabaseClient.get && window.SupabaseClient.get();
-                if (sb) {
-                    if (window.StudentStore && window.StudentStore.bindToUser) window.StudentStore.bindToUser(null);
-                    sb.auth.signOut();
-                }
-            }} />;
+            onSignOut={doSignOut} />;
     } else if (!selectedDers) {
         body = <DersHome kpssData={kpssData} student={student} plan={plan} isDark={isDark} toggleDark={toggleDark} onDers={function (d) { setSelectedDers(d); setSelectedKonu(null); }} />;
     } else if (!selectedKonu) {
@@ -1749,7 +1765,7 @@ function App() {
         return <div className="min-h-screen flex items-center justify-center text-sm text-zinc-400">Yükleniyor</div>;
     }
     var AuthCmp = GateAuth || (window.KpssComponents && window.KpssComponents.AuthScreen);
-    if (!authSession || pwRecovery) {
+    if (!authSession || pwRecovery || signingOutRef.current) {
         return AuthCmp
             ? React.createElement(AuthCmp, {
                 gate: true,
@@ -1777,36 +1793,35 @@ function App() {
                 <div className="text-center max-w-sm">
                     <h1 className="text-xl font-semibold mb-2">Hesap kısıtlı</h1>
                     <p className="text-sm text-zinc-500 mb-6">Bu hesap yönetici tarafından durduruldu.</p>
-                    <button onClick={function () {
-                        var sb = window.SupabaseClient && window.SupabaseClient.get && window.SupabaseClient.get();
-                        if (window.StudentStore && window.StudentStore.bindToUser) window.StudentStore.bindToUser(null);
-                        if (sb) sb.auth.signOut();
-                    }} className="px-4 py-2 rounded-xl border font-medium">Çıkış</button>
+                    <button onClick={doSignOut} className="px-4 py-2 rounded-xl border font-medium">Çıkış</button>
                 </div>
             </div>
         );
     }
     if (isAdminUser) {
         var Adm = AdminCmp || (window.KpssComponents && window.KpssComponents.AdminDashboard);
-        var signOut = function () {
-            var sb = window.SupabaseClient && window.SupabaseClient.get && window.SupabaseClient.get();
-            if (window.StudentStore && window.StudentStore.bindToUser) window.StudentStore.bindToUser(null);
-            if (sb) sb.auth.signOut();
-        };
         return Adm
-            ? React.createElement(Adm, { student: student, onSignOut: signOut })
+            ? React.createElement(Adm, { student: student, onSignOut: doSignOut })
             : (
                 <div className="min-h-screen flex items-center justify-center p-8">
                     <div className="text-center max-w-sm">
                         <p className="text-sm text-zinc-500 mb-4">Yönetim paneli yüklenemedi. Sayfayı yenile.</p>
                         <button onClick={function () { window.location.reload(); }} className="px-4 py-2 rounded-xl border font-medium">Yenile</button>
-                        <button onClick={signOut} className="mt-3 block w-full px-4 py-2 rounded-xl font-medium">Çıkış</button>
+                        <button onClick={doSignOut} className="mt-3 block w-full px-4 py-2 rounded-xl font-medium">Çıkış</button>
                     </div>
                 </div>
             );
     }
 
     if (!profileHydrated) {
+        return <div className="min-h-screen flex items-center justify-center text-sm text-zinc-400">Yükleniyor</div>;
+    }
+    var sessUid = authSession.user && authSession.user.id;
+    var boundUid = student.userProfile && student.userProfile.authUserId;
+    if (sessUid && boundUid && sessUid !== boundUid) {
+        return <div className="min-h-screen flex items-center justify-center text-sm text-zinc-400">Yükleniyor</div>;
+    }
+    if (!boundUid) {
         return <div className="min-h-screen flex items-center justify-center text-sm text-zinc-400">Yükleniyor</div>;
     }
     if (!student.profile || !student.profile.onboarded) {
