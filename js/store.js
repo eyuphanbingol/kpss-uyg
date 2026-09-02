@@ -39,11 +39,71 @@
             experiments: {},
             weeklyHours: 7,
             dailyHours: 0.75,
+            studyPlan: null,
             blocked: false,
             authUserId: null,
             email: "",
             deletionRequestedAt: null
         };
+    }
+
+    var WEEK_DAYS = [
+        { id: "pzt", short: "Pzt", full: "Pazartesi" },
+        { id: "sal", short: "Sal", full: "Salı" },
+        { id: "car", short: "Çar", full: "Çarşamba" },
+        { id: "per", short: "Per", full: "Perşembe" },
+        { id: "cum", short: "Cum", full: "Cuma" },
+        { id: "cmt", short: "Cmt", full: "Cumartesi" },
+        { id: "paz", short: "Paz", full: "Pazar" }
+    ];
+
+    function defaultStudyPlan() {
+        return {
+            ready: false,
+            days: {
+                pzt: { on: true, hours: 1 },
+                sal: { on: true, hours: 1 },
+                car: { on: true, hours: 1 },
+                per: { on: true, hours: 1 },
+                cum: { on: true, hours: 1 },
+                cmt: { on: false, hours: 0 },
+                paz: { on: false, hours: 0 }
+            },
+            dersler: [],
+            konular: {}
+        };
+    }
+
+    function planDayId(d) {
+        return ["paz", "pzt", "sal", "car", "per", "cum", "cmt"][(d || new Date()).getDay()];
+    }
+
+    function cloneStudyPlan(p) {
+        var base = defaultStudyPlan();
+        if (!p || typeof p !== "object") return base;
+        var days = {};
+        WEEK_DAYS.forEach(function (w) {
+            var src = (p.days && p.days[w.id]) || base.days[w.id];
+            var hours = Number(src.hours);
+            if (!(hours > 0)) hours = src.on ? 1 : 0;
+            days[w.id] = { on: !!src.on, hours: hours };
+        });
+        return {
+            ready: !!p.ready,
+            days: days,
+            dersler: Array.isArray(p.dersler) ? p.dersler.slice() : [],
+            konular: (p.konular && typeof p.konular === "object" && !Array.isArray(p.konular))
+                ? JSON.parse(JSON.stringify(p.konular)) : {}
+        };
+    }
+
+    function studyPlanWeekHours(plan) {
+        var sum = 0;
+        WEEK_DAYS.forEach(function (w) {
+            var d = plan.days[w.id];
+            if (d && d.on) sum += Number(d.hours) || 0;
+        });
+        return Math.round(sum * 10) / 10;
     }
 
     function defaultState() {
@@ -101,6 +161,7 @@
         if (!userProfile.targetType) userProfile.targetType = "B";
         if (!userProfile.experiments) userProfile.experiments = {};
         if (!userProfile.referralCode) userProfile.referralCode = "";
+        if (userProfile.studyPlan && typeof userProfile.studyPlan !== "object") userProfile.studyPlan = null;
         var counters = Object.assign({}, base.counters, parsed.counters || {});
         if (!counters.questions) {
             Object.keys(parsed.sessions || {}).forEach(function (d) {
@@ -534,6 +595,20 @@
         },
         updateUserProfile: function (patch) {
             Object.assign(state.userProfile, patch);
+            emit();
+        },
+        WEEK_DAYS: WEEK_DAYS,
+        defaultStudyPlan: defaultStudyPlan,
+        cloneStudyPlan: cloneStudyPlan,
+        planDayId: planDayId,
+        studyPlanWeekHours: studyPlanWeekHours,
+        saveStudyPlan: function (plan) {
+            var next = cloneStudyPlan(plan);
+            next.ready = true;
+            state.userProfile.studyPlan = next;
+            state.userProfile.weeklyHours = studyPlanWeekHours(next);
+            var today = next.days[planDayId()];
+            if (today && today.on) state.userProfile.dailyHours = Number(today.hours) || 0;
             emit();
         },
         setDark: function (isDark) {

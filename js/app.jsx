@@ -147,6 +147,183 @@ function examTrackName(level) {
     return "Lisans KPSS";
 }
 
+function hourOptions() {
+    return [0.5, 1, 1.5, 2, 2.5, 3, 4, 5, 6];
+}
+
+function formatHours(n) {
+    var x = Number(n) || 0;
+    if (x === 1) return "1 saat";
+    if (x === 0.5) return "30 dk";
+    if (x % 1 === 0.5) return Math.floor(x) + ",5 saat";
+    return x + " saat";
+}
+
+function StudyProgram(props) {
+    const kpssData = props.kpssData || {};
+    const dersKeys = Object.keys(kpssData);
+    const saved = (props.student.userProfile && props.student.userProfile.studyPlan) || null;
+    const ready = !!(saved && saved.ready);
+    const [open, setOpen] = useState(!ready);
+    const [draft, setDraft] = useState(function () { return StudentStore.cloneStudyPlan(saved); });
+    const [openDers, setOpenDers] = useState("");
+    const days = StudentStore.WEEK_DAYS;
+    const todayId = StudentStore.planDayId();
+    const live = ready ? StudentStore.cloneStudyPlan(saved) : null;
+    const today = live && live.days[todayId];
+
+    function setDay(id, patch) {
+        setDraft(function (prev) {
+            var next = StudentStore.cloneStudyPlan(prev);
+            next.days[id] = Object.assign({}, next.days[id], patch);
+            if (next.days[id].on && !(next.days[id].hours > 0)) next.days[id].hours = 1;
+            return next;
+        });
+    }
+
+    function toggleDers(ders) {
+        setDraft(function (prev) {
+            var next = StudentStore.cloneStudyPlan(prev);
+            var i = next.dersler.indexOf(ders);
+            if (i >= 0) {
+                next.dersler.splice(i, 1);
+                delete next.konular[ders];
+            } else {
+                next.dersler.push(ders);
+                delete next.konular[ders];
+            }
+            return next;
+        });
+    }
+
+    function toggleKonu(ders, konu) {
+        setDraft(function (prev) {
+            var next = StudentStore.cloneStudyPlan(prev);
+            if (next.dersler.indexOf(ders) < 0) next.dersler.push(ders);
+            var all = Object.keys(kpssData[ders] || {});
+            var cur = next.konular[ders];
+            var set = {};
+            (Array.isArray(cur) && cur.length ? cur : all).forEach(function (k) { set[k] = true; });
+            if (set[konu]) delete set[konu];
+            else set[konu] = true;
+            next.konular[ders] = all.filter(function (k) { return set[k]; });
+            if (!next.konular[ders].length) {
+                next.dersler = next.dersler.filter(function (d) { return d !== ders; });
+                delete next.konular[ders];
+            }
+            return next;
+        });
+    }
+
+    function konuOn(ders, konu) {
+        if (draft.dersler.indexOf(ders) < 0) return false;
+        var list = draft.konular[ders];
+        if (!list || !list.length) return true;
+        return list.indexOf(konu) >= 0;
+    }
+
+    var todayLine = null;
+    if (ready && today && today.on) {
+        var names = (live.dersler || []).filter(function (d) { return kpssData[d]; });
+        todayLine = "Bugün " + formatHours(today.hours) + (names.length ? " · " + names.join(", ") : " · ders seçilmedi");
+    } else if (ready) {
+        todayLine = "Bugün programında çalışma günü değil";
+    }
+
+    return (
+        <div className="mb-6">
+            <div className="rounded-2xl panel p-4">
+                <div className="flex justify-between items-start gap-3">
+                    <div>
+                        <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider">Programın</p>
+                        <p className="text-sm font-medium mt-1">{todayLine || "Gün, saat ve dersi sen işaretle. Yeni konular otomatik listelenir."}</p>
+                    </div>
+                    <button type="button" onClick={function () {
+                        setDraft(StudentStore.cloneStudyPlan(saved));
+                        setOpen(!open);
+                    }} className="text-sm text-navy-600 shrink-0">{open ? "Kapat" : (ready ? "Düzenle" : "Oluştur")}</button>
+                </div>
+                {open ? (
+                    <div className="mt-4">
+                        <p className="text-sm text-stone-500 mb-2">Hangi günler, o gün kaç saat</p>
+                        <div className="space-y-2 mb-4">
+                            {days.map(function (w) {
+                                var d = draft.days[w.id];
+                                return (
+                                    <div key={w.id} className={"flex items-center gap-3 rounded-xl px-3 py-2 " + (d.on ? "bg-stone-100 dark:bg-stone-900" : "opacity-50")}>
+                                        <label className="flex items-center gap-2 min-w-[6.5rem] text-sm font-medium">
+                                            <input type="checkbox" checked={!!d.on} onChange={function (e) { setDay(w.id, { on: e.target.checked, hours: e.target.checked ? (d.hours || 1) : d.hours }); }} />
+                                            {w.full}
+                                        </label>
+                                        <select disabled={!d.on} value={String(d.hours || 1)} onChange={function (e) { setDay(w.id, { hours: Number(e.target.value) }); }}
+                                            className="flex-1 text-sm px-2 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900">
+                                            {hourOptions().map(function (h) {
+                                                return <option key={h} value={h}>{formatHours(h)}</option>;
+                                            })}
+                                        </select>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                        <p className="text-sm text-stone-500 mb-2">Ne çalışmak istiyorsun</p>
+                        <div className="space-y-2">
+                            {dersKeys.length === 0 ? (
+                                <p className="text-sm text-zinc-400">Ders listesi henüz yok.</p>
+                            ) : dersKeys.map(function (ders) {
+                                var konular = Object.keys(kpssData[ders] || {});
+                                var on = draft.dersler.indexOf(ders) >= 0;
+                                return (
+                                    <div key={ders} className="rounded-xl border border-stone-200 dark:border-stone-800 overflow-hidden">
+                                        <div className="flex items-center gap-2 px-3 py-2">
+                                            <label className="flex items-center gap-2 flex-1 text-sm font-medium">
+                                                <input type="checkbox" checked={on} onChange={function () { toggleDers(ders); }} />
+                                                {ders}
+                                            </label>
+                                            {konular.length ? (
+                                                <button type="button" className="text-xs text-zinc-400" onClick={function () { setOpenDers(openDers === ders ? "" : ders); }}>
+                                                    {openDers === ders ? "Konuları gizle" : konular.length + " konu"}
+                                                </button>
+                                            ) : null}
+                                        </div>
+                                        {openDers === ders ? (
+                                            <div className="px-3 pb-3 space-y-1.5">
+                                                {konular.map(function (konu) {
+                                                    return (
+                                                        <label key={konu} className="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-300">
+                                                            <input type="checkbox" checked={konuOn(ders, konu)} onChange={function () { toggleKonu(ders, konu); }} />
+                                                            {konu}
+                                                        </label>
+                                                    );
+                                                })}
+                                            </div>
+                                        ) : null}
+                                    </div>
+                                );
+                            })}
+                        </div>
+                        <button type="button" onClick={function () {
+                            StudentStore.saveStudyPlan(draft);
+                            setOpen(false);
+                        }} className="mt-4 w-full py-3 rounded-2xl bg-navy-600 text-white font-semibold">Programı kaydet</button>
+                    </div>
+                ) : null}
+            </div>
+            {ready && today && today.on && live.dersler.length ? (
+                <div className="flex flex-wrap gap-2 mt-3">
+                    {live.dersler.filter(function (d) { return kpssData[d]; }).map(function (ders) {
+                        return (
+                            <button key={ders} type="button" onClick={function () { props.onDers && props.onDers(ders); }}
+                                className="px-3 py-1.5 rounded-full text-sm bg-stone-100 dark:bg-stone-900">
+                                {ders}
+                            </button>
+                        );
+                    })}
+                </div>
+            ) : null}
+        </div>
+    );
+}
+
 function Bugun(props) {
     const plan = props.plan;
     const name = props.student.profile.name;
@@ -204,8 +381,9 @@ function Bugun(props) {
                     <p className="text-sm text-stone-600 dark:text-stone-400 mt-1">{doneTopics} / {rows.length} konu bitti</p>
                 ) : null}
             </div>
+            <StudyProgram student={props.student} kpssData={props.kpssData} onDers={props.onDers} />
             {banner ? <div className="mb-5 px-4 py-3 rounded-2xl bg-zinc-900 text-white text-sm">{banner}</div> : null}
-            <p className="text-sm text-stone-500 mb-3">Nasıl çalışacağın sende. Konuyu, testi, yanlışı sen seç.</p>
+            <p className="text-sm text-stone-500 mb-3">İstersen hemen başla</p>
             <div className="space-y-2">
                 <button onClick={props.onDersler} className="w-full text-left p-4 panel rounded-2xl flex justify-between items-center gap-3">
                     <div>
@@ -1126,7 +1304,8 @@ function App() {
                 onQuit={function () { if (confirm("Testten çıkmak istediğinize emin misiniz? Cevapladıkların kayıtlı kalır.")) { closeStudy(); } }} />
         );
     } else if (nav === "bugun") {
-        body = <Bugun student={student} plan={plan} isDark={isDark} toggleDark={toggleDark}
+        body = <Bugun student={student} plan={plan} kpssData={kpssData} isDark={isDark} toggleDark={toggleDark}
+            onDers={function (d) { setNav("dersler"); setSelectedDers(d); setSelectedKonu(null); }}
             onDersler={function () { setNav("dersler"); }}
             onDeneme={function () { setNav("deneme"); }}
             onReview={function () { startSession(plan.due.slice(0, 30), { mode: "review" }); }}
