@@ -1,10 +1,13 @@
 {
   "expo": {
     "name": "Atanom",
-    "slug": "atanom",
+    "slug": "eyphn",
     "scheme": "atanom",
     "version": "1.0.0",
-    "platforms": ["ios", "android"],
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "icon": "./assets/atanom.png",
     "userInterfaceStyle": "automatic",
     "splash": {
@@ -26,6 +29,14 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": ["expo-web-browser"]
+    "plugins": [
+      "expo-web-browser"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "0548f69d-e960-4d00-aadb-4f2e90a3eb3a"
+      }
+    },
+    "owner": "eyphns-team"
   }
 }
