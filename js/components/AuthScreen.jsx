@@ -96,15 +96,22 @@
             if (!sc || !sc.establishRecoverySession) return;
             sc.establishRecoverySession().then(function (sess) {
                 if (sess) {
+                    if (sc.markRecovery) sc.markRecovery();
                     setRecReady(true);
                     setMsg("");
                 } else {
+                    if (sc.clearRecovery) sc.clearRecovery();
                     setRecReady(false);
-                    setMsg("Bağlantı oturum açamadı. Maildeki linki, şifremi unuttum dediğin aynı tarayıcıda bir kez aç. Olmazsa yeni mail iste.");
+                    setRecovery(false);
+                    setMsg("Bu link kullanılamadı. E-postanı yazıp Şifremi Unuttum ile yeni mail iste. Üst üste çok denediysen birkaç dakika bekle.");
+                    if (props.onRecoveryFailed) props.onRecoveryFailed();
                 }
             }).catch(function () {
+                if (sc.clearRecovery) sc.clearRecovery();
                 setRecReady(false);
-                setMsg("Bağlantı oturum açamadı. Yeni bir sıfırlama maili iste.");
+                setRecovery(false);
+                setMsg("Bu link kullanılamadı. Yeni bir sıfırlama maili iste.");
+                if (props.onRecoveryFailed) props.onRecoveryFailed();
             });
         }, [recovery]);
 
@@ -642,21 +649,29 @@
                     <button 
                         type="button" 
                         className="text-sm text-indigo-600 dark:text-indigo-400 hover:underline"
-                        onClick={function () {
+                        onClick={async function () {
                             if (!email || !validateEmail(email)) {
                                 setMsg("Şifre sıfırlama için e-posta adresinizi girin.");
                                 if (emailRef.current) emailRef.current.focus();
                                 return;
                             }
-                            if (sb) {
-                                sb.auth.resetPasswordForEmail(email, {
-                                    redirectTo: window.location.origin + "/?reset=1"
-                                }).then(function () {
-                                    setMsg("✅ Şifre sıfırlama bağlantısı e-posta adresinize gönderildi.");
-                                }).catch(function (e) {
-                                    setMsg("Hata: " + e.message);
+                            if (!sb) { setMsg("Sunucu bağlı değil."); return; }
+                            setBusy(true);
+                            setMsg("");
+                            try {
+                                var res = await sb.auth.resetPasswordForEmail(email.trim(), {
+                                    redirectTo: window.location.origin + "/"
                                 });
+                                if (res.error) throw res.error;
+                                setMsg("✅ Şifre sıfırlama bağlantısı gönderildi. Spam klasörüne de bak. Birkaç dakikada gelmezse biraz bekleyip tekrar dene.");
+                            } catch (e) {
+                                var m = (e && e.message) || "Mail gönderilemedi.";
+                                if (/rate|too many|429/i.test(m)) {
+                                    m = "Çok sık mail istendi. 10–15 dakika bekle, sonra bir kez daha dene. Spam klasörünü de kontrol et.";
+                                }
+                                setMsg(m);
                             }
+                            setBusy(false);
                         }}
                     >
                         Şifremi Unuttum
@@ -721,6 +736,12 @@
                         <button type="button" disabled={busy || !recReady} onClick={saveNewPassword} className="w-full py-3.5 rounded-2xl btn-primary text-white font-semibold disabled:opacity-40">
                             {busy ? "⏳" : (recReady ? "Şifreyi kaydet" : "Bağlantı doğrulanıyor…")}
                         </button>
+                        <button type="button" className="w-full text-sm text-stone-500" onClick={function () {
+                            if (window.SupabaseClient && window.SupabaseClient.clearRecovery) window.SupabaseClient.clearRecovery();
+                            setRecovery(false);
+                            setRecReady(false);
+                            if (props.onRecoveryFailed) props.onRecoveryFailed();
+                        }}>Girişe dön</button>
                     </div>
                 ) : (
                     <div>

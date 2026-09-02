@@ -1656,6 +1656,10 @@ function App() {
                     setPwRecovery(false);
                     if (window.SyncEngine) window.SyncEngine.sync();
                 },
+                onRecoveryFailed: function () {
+                    if (window.SupabaseClient && window.SupabaseClient.clearRecovery) window.SupabaseClient.clearRecovery();
+                    setPwRecovery(false);
+                },
                 onDone: function () { if (window.SyncEngine) window.SyncEngine.sync(); }
             })
             : <div className="min-h-screen flex items-center justify-center text-sm text-zinc-400">Yükleniyor</div>;

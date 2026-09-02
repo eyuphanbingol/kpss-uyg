@@ -12,7 +12,7 @@
         global.KpssComponents = global.KpssComponents || {};
         if (global.KpssComponents[name]) return Promise.resolve(global.KpssComponents[name]);
         if (cache[name]) return cache[name];
-        cache[name] = fetch(new URL(path, window.location.href).href.replace(/(\?.*)?$/, "") + "?v=23", { cache: "no-cache", credentials: "same-origin" }).then(function (r) {
+        cache[name] = fetch(new URL(path, window.location.href).href.replace(/(\?.*)?$/, "") + "?v=24", { cache: "no-cache", credentials: "same-origin" }).then(function (r) {
             if (!r.ok) throw new Error("Bileşen yüklenemedi: " + path);
             return r.text();
         }).then(function (src) {

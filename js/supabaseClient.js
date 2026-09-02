@@ -42,7 +42,6 @@
     async function establishRecoverySession() {
         var sb = getClient();
         if (!sb) return null;
-        markRecovery();
         var hp = hashParams();
         var at = hp.get("access_token");
         var rt = hp.get("refresh_token");
