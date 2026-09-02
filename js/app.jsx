@@ -466,15 +466,6 @@ function Bugun(props) {
     else if (plan.daysLeft < 0) examLine = track + " tarihi geçti";
     else if (plan.daysLeft === 0) examLine = track + " bugün";
     else examLine = track + "’ye " + plan.daysLeft + " gün kaldı";
-    const [banner, setBanner] = useState("");
-    useEffect(function () {
-        var sb = window.SupabaseClient && window.SupabaseClient.get && window.SupabaseClient.get();
-        if (!sb) return;
-        sb.from("app_announcements").select("body").eq("published", true).order("created_at", { ascending: false }).limit(1)
-            .then(function (r) {
-                if (!r.error && r.data && r.data[0]) setBanner(r.data[0].body);
-            });
-    }, []);
     return (
         <Shell>
             <div className="flex justify-between items-start mb-8">
@@ -504,12 +495,6 @@ function Bugun(props) {
             </div>
 
             <StudyProgram student={props.student} kpssData={props.kpssData} onDers={props.onDers} />
-
-            {banner ? (
-                <div className="mb-6 px-5 py-4 rounded-2xl bg-gradient-to-r from-stone-900 to-stone-800 text-white text-sm shadow-lg slide-up">
-                    <span className="font-semibold">📢</span> {banner}
-                </div>
-            ) : null}
 
             <StudyDash student={props.student} />
         </Shell>
@@ -1282,6 +1267,7 @@ function App() {
     const [pwRecovery, setPwRecovery] = useState(function () {
         return !!(window.SupabaseClient && window.SupabaseClient.recoveryPending && window.SupabaseClient.recoveryPending());
     });
+    const [announce, setAnnounce] = useState("");
 
     const LAZY = {
         onboarding: ["OnboardingScreen", "js/components/OnboardingScreen.jsx"],
@@ -1414,6 +1400,16 @@ function App() {
         sb.from("student_states").select("role").eq("user_id", uid).maybeSingle().then(function (r) {
             finish(!!(r.data && r.data.role === "admin") || localAdmin);
         }).catch(function () { finish(localAdmin); });
+    }, [authSession]);
+
+    useEffect(function () {
+        if (!authSession) { setAnnounce(""); return; }
+        var sb = window.SupabaseClient && window.SupabaseClient.get && window.SupabaseClient.get();
+        if (!sb) return;
+        sb.from("app_announcements").select("body").eq("published", true).order("created_at", { ascending: false }).limit(1)
+            .then(function (r) {
+                if (!r.error && r.data && r.data[0] && r.data[0].body) setAnnounce(String(r.data[0].body));
+            });
     }, [authSession]);
 
     const [nav, setNav] = useState("bugun");
@@ -1751,6 +1747,14 @@ function App() {
 
     return (
         <div>
+            {announce && !inTest ? (
+                <div className="sticky top-0 z-50 duyuru-bar text-white shadow-lg" style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
+                    <div className="max-w-2xl mx-auto px-4 py-2.5 flex items-start gap-3">
+                        <span className="duyuru-badge shrink-0 mt-0.5 text-[10px] font-black uppercase tracking-widest bg-white text-indigo-700 px-2 py-1 rounded-md">Duyuru</span>
+                        <p className="text-sm font-semibold leading-snug flex-1">{announce}</p>
+                    </div>
+                </div>
+            ) : null}
             {body}
             {!inTest ? (
                 <BottomNav nav={nav} streak={plan.streak || 0} onChange={function (id) {
