@@ -181,6 +181,14 @@
         if (!userProfile.experiments) userProfile.experiments = {};
         if (!userProfile.referralCode) userProfile.referralCode = "";
         if (userProfile.studyPlan && typeof userProfile.studyPlan !== "object") userProfile.studyPlan = null;
+        var officialDates = (global.KpssConfig && global.KpssConfig.examDateByLevel) || {
+            lisans: "2026-09-06", onlisans: "2026-10-04", ortaogretim: "2026-10-25"
+        };
+        var lv = userProfile.educationLevel || "lisans";
+        var stale = { onlisans: "2026-09-20", ortaogretim: "2026-09-27" };
+        if (officialDates[lv] && (profile.examDate === stale.onlisans || profile.examDate === stale.ortaogretim || !profile.examDate)) {
+            profile.examDate = officialDates[lv];
+        }
         var counters = Object.assign({}, base.counters, parsed.counters || {});
         if (!counters.questions) {
             Object.keys(parsed.sessions || {}).forEach(function (d) {

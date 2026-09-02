@@ -17,8 +17,8 @@
         freeDailyMixed: 3,
         examDateByLevel: {
             lisans: "2026-09-06",
-            onlisans: "2026-09-20",
-            ortaogretim: "2026-09-27"
+            onlisans: "2026-10-04",
+            ortaogretim: "2026-10-25"
         },
         modules: [
             { id: "gygk", title: "GY-GK", ready: true, lessons: ["Tarih", "Coğrafya", "Türkçe", "Vatandaşlık", "Güncel Bilgiler"] },
