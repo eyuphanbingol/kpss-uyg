@@ -626,7 +626,7 @@
             Object.assign(state.userProfile, {
                 educationLevel: p.educationLevel || state.userProfile.educationLevel,
                 targetType: p.targetType || state.userProfile.targetType,
-                nickname: (p.nickname || state.userProfile.nickname || state.profile.name || "ogrenci").slice(0, 24),
+                nickname: String(p.nickname || state.userProfile.nickname || state.profile.name || "ogrenci").trim().slice(0, 40),
                 kvkkConsent: !!p.kvkkConsent,
                 kvkkAt: p.kvkkConsent ? nowIso() : state.userProfile.kvkkAt,
                 weeklyHours: Number(p.weeklyHours) || state.userProfile.weeklyHours,
@@ -645,6 +645,17 @@
             delete p.educationLevel;
             Object.assign(state.userProfile, p);
             emit();
+        },
+        setEducationLevel: function (level) {
+            var allowed = { lisans: 1, onlisans: 1, ortaogretim: 1 };
+            if (!allowed[level]) return { ok: false };
+            var dates = (global.KpssConfig && global.KpssConfig.examDateByLevel) || {
+                lisans: "2026-09-06", onlisans: "2026-10-04", ortaogretim: "2026-10-25"
+            };
+            state.userProfile.educationLevel = level;
+            if (dates[level]) state.profile.examDate = dates[level];
+            emit();
+            return { ok: true };
         },
         requestEducationChange: function (to) {
             var allowed = { lisans: 1, onlisans: 1, ortaogretim: 1 };

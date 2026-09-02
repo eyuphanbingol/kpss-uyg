@@ -1088,7 +1088,7 @@ function Ben(props) {
         setDraftTrack(up.targetType || "B");
         setDraftHours(up.weeklyHours || 7);
         setDraftTab(st.profile.tabLeaveWarn !== false);
-        setDraftEdu("");
+        setDraftEdu(totQ === 0 ? (up.educationLevel || "lisans") : "");
         setEditing(true);
     }
 
@@ -1100,8 +1100,15 @@ function Ben(props) {
             weeklyHours: Number(draftHours) || 7,
             dailyHours: (Number(draftHours) || 7) / 7
         });
-        var wantEdu = draftEdu && (!eduReq || eduReq.status !== "pending") ? draftEdu : "";
-        if (wantEdu) StudentStore.requestEducationChange(wantEdu);
+        var wantEdu = draftEdu && draftEdu !== up.educationLevel && (!eduReq || eduReq.status !== "pending") ? draftEdu : "";
+        if (wantEdu) {
+            if (totQ === 0 && StudentStore.setEducationLevel) {
+                StudentStore.setEducationLevel(wantEdu);
+                wantEdu = "";
+            } else {
+                StudentStore.requestEducationChange(wantEdu);
+            }
+        }
         setEditing(false);
         var sb = window.SupabaseClient && window.SupabaseClient.get();
         var done = function () { if (window.SyncEngine) window.SyncEngine.sync(); };
@@ -1161,19 +1168,32 @@ function Ben(props) {
                         <label className="text-sm text-stone-500">Ad</label>
                         <input value={draftName} onChange={function (e) { setDraftName(e.target.value); }} className={field} />
                         <label className="text-sm text-stone-500">Eğitim</label>
-                        <p className="text-sm font-medium">{eduLabel(up.educationLevel)}</p>
-                        <p className="text-xs text-stone-400">Düzey değişimi admin onayı ister. Sınav tarihi ÖSYM takvimine bağlanır.</p>
-                        {(!eduReq || eduReq.status !== "pending") ? (
+                        {totQ === 0 ? (
                             <div>
-                                <label className="text-sm text-stone-500">Yeni eğitim düzeyi</label>
-                                <select value={draftEdu} onChange={function (e) { setDraftEdu(e.target.value); }} className={field + " mt-1"}>
-                                    <option value="">Değiştirme</option>
-                                    {up.educationLevel !== "lisans" ? <option value="lisans">Lisans</option> : null}
-                                    {up.educationLevel !== "onlisans" ? <option value="onlisans">Ön lisans</option> : null}
-                                    {up.educationLevel !== "ortaogretim" ? <option value="ortaogretim">Ortaöğretim</option> : null}
+                                <select value={draftEdu || up.educationLevel || "lisans"} onChange={function (e) { setDraftEdu(e.target.value); }} className={field + " mt-1"}>
+                                    <option value="lisans">Lisans</option>
+                                    <option value="onlisans">Ön lisans</option>
+                                    <option value="ortaogretim">Ortaöğretim</option>
                                 </select>
+                                <p className="text-xs text-stone-400 mt-1">Soru çözmeden önce düzeyi burada düzeltebilirsin. Sınav tarihi ÖSYM takvimine bağlanır.</p>
                             </div>
-                        ) : null}
+                        ) : (
+                            <div>
+                                <p className="text-sm font-medium">{eduLabel(up.educationLevel)}</p>
+                                <p className="text-xs text-stone-400">Düzey değişimi admin onayı ister. Sınav tarihi ÖSYM takvimine bağlanır.</p>
+                                {(!eduReq || eduReq.status !== "pending") ? (
+                                    <div>
+                                        <label className="text-sm text-stone-500">Yeni eğitim düzeyi</label>
+                                        <select value={draftEdu} onChange={function (e) { setDraftEdu(e.target.value); }} className={field + " mt-1"}>
+                                            <option value="">Değiştirme</option>
+                                            {up.educationLevel !== "lisans" ? <option value="lisans">Lisans</option> : null}
+                                            {up.educationLevel !== "onlisans" ? <option value="onlisans">Ön lisans</option> : null}
+                                            {up.educationLevel !== "ortaogretim" ? <option value="ortaogretim">Ortaöğretim</option> : null}
+                                        </select>
+                                    </div>
+                                ) : null}
+                            </div>
+                        )}
                         <label className="text-sm text-stone-500">Sınav tarihi</label>
                         <p className="text-sm font-medium">{fmtExam(st.profile.examDate)}</p>
                         <label className="text-sm text-stone-500">Kulvar</label>
