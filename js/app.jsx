@@ -30,10 +30,10 @@ function useStudent() {
 
 function Shell(props) {
     return (
-        <div className={"mx-auto px-4 pt-6 sm:pt-8 " + (props.wide ? "max-w-3xl" : "max-w-2xl")}>
+        <div className={"mx-auto px-5 pt-6 sm:pt-10 " + (props.wide ? "max-w-4xl" : "max-w-2xl")}>
             {props.children}
             {props.padBottom === false ? null : (
-                <div aria-hidden="true" style={{ height: "calc(8.5rem + env(safe-area-inset-bottom, 0px))" }} />
+                <div aria-hidden="true" style={{ height: "calc(8rem + env(safe-area-inset-bottom, 0px))" }} />
             )}
         </div>
     );
@@ -42,12 +42,16 @@ function Shell(props) {
 function ThemeBtn(props) {
     return (
         <button onClick={props.onClick}
-            className="p-2 rounded-lg border border-zinc-200 dark:border-zinc-700 text-zinc-500"
+            className="p-2.5 rounded-2xl glass transition-all duration-200 hover:scale-105"
             aria-label="Tema">
             {props.isDark ? (
-                <svg className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" /></svg>
+                <svg className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
+                </svg>
             ) : (
-                <svg className="w-5 h-5 text-slate-600" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" /></svg>
+                <svg className="w-5 h-5 text-stone-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                </svg>
             )}
         </button>
     );
@@ -56,8 +60,8 @@ function ThemeBtn(props) {
 function Confetti() {
     const [pieces, setPieces] = useState([]);
     useEffect(function () {
-        const colors = ["#1E1B4B", "#0F766E", "#D97706"];
-        setPieces(Array.from({ length: 18 }, function (_, i) {
+        const colors = ["#4f46e5", "#7c3aed", "#ec4899", "#f59e0b", "#10b981"];
+        setPieces(Array.from({ length: 24 }, function (_, i) {
             return {
                 id: i,
                 left: Math.random() * 100 + "%",
@@ -92,16 +96,24 @@ function BottomNav(props) {
         { id: "ben", label: "Ben", icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" }
     ];
     return (
-        <nav className="fixed bottom-0 inset-x-0 z-40 bg-white/95 dark:bg-stone-900/95 border-t border-stone-300 dark:border-stone-700" style={{ paddingBottom: "max(8px, env(safe-area-inset-bottom))" }}>
-            <div className="max-w-2xl mx-auto grid grid-cols-5 px-1 pt-1">
+        <nav className="fixed bottom-0 inset-x-0 z-40 nav-glass" style={{ paddingBottom: "max(8px, env(safe-area-inset-bottom))" }}>
+            <div className="max-w-2xl mx-auto grid grid-cols-5 px-2 pt-1">
                 {tabs.map(function (tab) {
                     const on = props.nav === tab.id;
                     return (
                         <button key={tab.id} onClick={function () { props.onChange(tab.id); }}
-                            className={"relative flex flex-col items-center gap-0.5 py-2 rounded-xl text-[11px] font-medium duration-150 " + (on ? "text-navy-600" : "text-stone-500")}>
+                            className={"relative flex flex-col items-center gap-0.5 py-2.5 rounded-2xl text-[11px] font-medium transition-all duration-200 " +
+                                (on ? "text-indigo-600 bg-indigo-50/60 dark:bg-indigo-900/20" : "text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200")}>
                             <span className="relative">
-                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={on ? 2.2 : 1.7} d={tab.icon} /></svg>
-                                {tab.id === "bugun" && props.streak > 0 ? <span className="absolute -top-0.5 -right-1 h-1.5 w-1.5 rounded-full bg-amber-500" /> : null}
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={on ? 2.2 : 1.7}>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d={tab.icon} />
+                                </svg>
+                                {tab.id === "bugun" && props.streak > 0 ? (
+                                    <span className="absolute -top-0.5 -right-0.5 flex h-2.5 w-2.5">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-500"></span>
+                                    </span>
+                                ) : null}
                             </span>
                             {tab.label}
                         </button>
@@ -119,7 +131,7 @@ function Onboarding(props) {
     return (
         <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-end sm:items-center justify-center p-4">
             <div className="w-full max-w-md bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl fade-in">
-                <p className="text-xs font-bold uppercase tracking-widest text-navy-400 mb-2">Kişisel eğitim alanı</p>
+                <p className="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2">Kişisel eğitim alanı</p>
                 <h2 className="text-2xl font-black text-slate-900 dark:text-white mb-2">Dershanedeki yerin hazır</h2>
                 <p className="text-sm text-slate-500 mb-6">Hedefini söyle, her gün ne çalışacağını biz sıraya koyalım. Veriler bu cihazda kalır.</p>
                 <label className="block text-xs font-bold text-slate-500 mb-1">Adın (isteğe bağlı)</label>
@@ -133,7 +145,7 @@ function Onboarding(props) {
                 <button onClick={function () {
                     const q = Math.max(10, Math.round(mins / 1.8));
                     StudentStore.completeOnboarding({ name: name, examDate: examDate, dailyMinutes: mins, dailyQuestions: q });
-                }} className="w-full bg-navy-600 text-white font-bold py-4 rounded-2xl">
+                }} className="w-full btn-primary text-white font-bold py-4 rounded-2xl">
                     Koçluğu başlat
                 </button>
             </div>
@@ -208,66 +220,72 @@ function StudyProgram(props) {
     }
 
     return (
-        <div className="mb-6">
-            <div className="rounded-2xl panel p-4">
+        <div className="mb-6 slide-up">
+            <div className="rounded-3xl glass p-5 card-hover">
                 <div className="flex justify-between items-start gap-3">
                     <div>
-                        <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider">Programın</p>
-                        <p className="text-sm font-medium mt-1">{todayLine || "Her güne ayrı ders ve saat yaz. Örn. 2 saat Tarih, 1 saat Coğrafya."}</p>
+                        <p className="text-xs font-bold uppercase tracking-wider text-stone-400 flex items-center gap-2">
+                            <span>📋</span> Programın
+                        </p>
+                        <p className="text-sm font-medium mt-1 text-stone-600 dark:text-stone-300">{todayLine || "Her güne ayrı ders ve saat yaz."}</p>
                     </div>
                     <button type="button" onClick={function () {
                         setDraft(StudentStore.cloneStudyPlan(saved));
                         setOpen(!open);
-                    }} className="text-sm text-navy-600 shrink-0">{open ? "Kapat" : (ready ? "Düzenle" : "Oluştur")}</button>
+                    }} className="text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline shrink-0">
+                        {open ? "Kapat" : (ready ? "Düzenle" : "Oluştur")}
+                    </button>
                 </div>
                 {open ? (
-                    <div className="mt-4 space-y-3">
+                    <div className="mt-5 space-y-3">
                         {days.map(function (w) {
                             var d = draft.days[w.id];
                             var used = {};
                             (d.slots || []).forEach(function (s) { used[s.ders] = true; });
                             var leftover = dersKeys.filter(function (k) { return !used[k]; });
                             return (
-                                <div key={w.id} className={"rounded-xl px-3 py-3 " + (d.on ? "bg-stone-100 dark:bg-stone-900" : "opacity-50")}>
-                                    <label className="flex items-center gap-2 text-sm font-medium">
-                                        <input type="checkbox" checked={!!d.on} onChange={function (e) { patchDay(w.id, function (day) { day.on = e.target.checked; }); }} />
-                                        {w.full}
+                                <div key={w.id} className={"rounded-2xl px-4 py-3 transition-all " +
+                                    (d.on ? "bg-indigo-50/40 dark:bg-indigo-950/20 border border-indigo-100 dark:border-indigo-800/30" : "opacity-50 bg-stone-50 dark:bg-stone-800/30")}>
+                                    <label className="flex items-center gap-3 text-sm font-semibold cursor-pointer">
+                                        <input type="checkbox" checked={!!d.on} onChange={function (e) { patchDay(w.id, function (day) { day.on = e.target.checked; }); }}
+                                            className="w-4 h-4 rounded border-stone-300 text-indigo-600 focus:ring-indigo-500" />
+                                        <span>{w.full}</span>
                                         {d.on && d.slots.length ? (
-                                            <span className="text-xs font-normal text-stone-500">toplam {formatHours(StudentStore.daySlotHours(d))}</span>
+                                            <span className="text-xs font-normal text-stone-400">toplam {formatHours(StudentStore.daySlotHours(d))}</span>
                                         ) : null}
                                     </label>
                                     {d.on ? (
-                                        <div className="mt-2 space-y-2">
+                                        <div className="mt-3 space-y-2.5 pl-6">
                                             {(d.slots || []).map(function (s, si) {
                                                 return (
-                                                    <div key={s.ders} className="flex items-center gap-2">
-                                                        <span className="flex-1 text-sm min-w-0 truncate">{s.ders}</span>
+                                                    <div key={s.ders} className="flex items-center gap-2 bg-white dark:bg-stone-800/50 rounded-xl px-3 py-2 shadow-sm">
+                                                        <span className="flex-1 text-sm font-medium min-w-0 truncate">{s.ders}</span>
                                                         <select value={String(s.hours)} onChange={function (e) {
                                                             var h = Number(e.target.value);
                                                             patchDay(w.id, function (day) { day.slots[si].hours = h; });
-                                                        }} className="text-sm px-2 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900">
+                                                        }} className="text-sm px-2 py-1 rounded-lg border border-stone-200 dark:border-stone-700 bg-transparent font-medium">
                                                             {hourOptions().map(function (h) {
                                                                 return <option key={h} value={h}>{formatHours(h)}</option>;
                                                             })}
                                                         </select>
-                                                        <button type="button" className="text-xs text-zinc-400 px-1" onClick={function () {
+                                                        <button type="button" className="text-xs text-stone-400 hover:text-rose-500 px-1 transition-colors" onClick={function () {
                                                             patchDay(w.id, function (day) {
                                                                 day.slots = day.slots.filter(function (x) { return x.ders !== s.ders; });
                                                             });
-                                                        }}>Kaldır</button>
+                                                        }}>✕</button>
                                                     </div>
                                                 );
                                             })}
                                             {leftover.length ? (
                                                 <select key={leftover.join("|")} defaultValue="" onChange={function (e) {
                                                     addSlot(w.id, e.target.value);
-                                                }} className="w-full text-sm px-2 py-1.5 rounded-lg border border-dashed border-zinc-300 dark:border-zinc-700 bg-transparent">
-                                                    <option value="" disabled>Ders ekle</option>
+                                                }} className="w-full text-sm px-3 py-2.5 rounded-xl border border-dashed border-stone-300 dark:border-stone-600 bg-transparent focus:border-indigo-400">
+                                                    <option value="" disabled>+ Ders ekle</option>
                                                     {leftover.map(function (k) {
                                                         return <option key={k} value={k}>{k}</option>;
                                                     })}
                                                 </select>
-                                            ) : (dersKeys.length ? null : <p className="text-xs text-zinc-400">Ders listesi henüz yok.</p>)}
+                                            ) : (dersKeys.length ? null : <p className="text-xs text-stone-400">Ders listesi henüz yok.</p>)}
                                         </div>
                                     ) : null}
                                 </div>
@@ -276,7 +294,9 @@ function StudyProgram(props) {
                         <button type="button" onClick={function () {
                             StudentStore.saveStudyPlan(draft);
                             setOpen(false);
-                        }} className="w-full py-3 rounded-2xl bg-navy-600 text-white font-semibold">Programı kaydet</button>
+                        }} className="w-full py-3.5 rounded-2xl btn-primary text-white font-bold text-sm">
+                            Programı kaydet
+                        </button>
                     </div>
                 ) : null}
             </div>
@@ -285,7 +305,7 @@ function StudyProgram(props) {
                     {today.slots.filter(function (s) { return kpssData[s.ders]; }).map(function (s) {
                         return (
                             <button key={s.ders} type="button" onClick={function () { props.onDers && props.onDers(s.ders); }}
-                                className="px-3 py-1.5 rounded-full text-sm bg-stone-100 dark:bg-stone-900">
+                                className="px-4 py-1.5 rounded-full text-sm font-medium bg-indigo-50 text-indigo-700 dark:bg-indigo-950/30 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/30 hover:bg-indigo-100 transition-colors">
                                 {s.ders} · {formatHours(s.hours)}
                             </button>
                         );
@@ -296,11 +316,16 @@ function StudyProgram(props) {
     );
 }
 
-var DASH_COLORS = ["#1E1B4B", "#0f766e", "#d97706", "#e11d48", "#57534e", "#4338ca"];
+var DASH_COLORS = ["#4f46e5", "#7c3aed", "#ec4899", "#f59e0b", "#10b981", "#6366f1"];
 
 function StudyDash(props) {
     const d = StudyPlanner.studyDashboard ? StudyPlanner.studyDashboard(props.student) : null;
-    if (!d) return null;
+    if (!d) return (
+        <div className="rounded-2xl glass p-6 text-center text-stone-400 text-sm slide-up">
+            Çalışmaya başlayınca istatistikler burada görünecek.
+        </div>
+    );
+
     var weekMax = 1;
     d.weekMin.forEach(function (v) { if (v > weekMax) weekMax = v; });
     var trendMax = 1;
@@ -327,105 +352,104 @@ function StudyDash(props) {
     });
 
     return (
-        <div className="mb-2">
-            <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-1">Çalışma istatistikleri</p>
-            <p className="text-xs text-zinc-400 mb-3">Saat, seri ve ders dağılımı. Test bitince dolar.</p>
-            <div className="grid grid-cols-3 gap-2 mb-4">
-                <div className="rounded-2xl bg-amber-50 p-3 text-center">
-                    <div className="font-stat text-xl text-amber-600">{d.streak}</div>
-                    <div className="text-[11px] text-amber-700 mt-0.5">gün seri</div>
+        <div className="space-y-4 slide-up">
+            <div className="flex items-center gap-2 mb-1">
+                <span className="text-xs font-bold uppercase tracking-wider text-stone-400">📊 İstatistikler</span>
+                <span className="h-px flex-1 bg-stone-200 dark:bg-stone-700"></span>
+            </div>
+
+            <div className="grid grid-cols-3 gap-3">
+                <div className="rounded-2xl glass p-4 text-center card-hover">
+                    <div className="font-stat text-2xl font-bold text-indigo-600">{d.streak}</div>
+                    <div className="text-[11px] text-stone-500 mt-0.5">🔥 seri gün</div>
                 </div>
-                <div className="rounded-2xl bg-stone-100 dark:bg-stone-900 p-3 text-center">
-                    <div className="font-stat text-xl">{d.avgSeansMin || "—"}</div>
-                    <div className="text-[11px] text-stone-500 mt-0.5">dk / oturum</div>
+                <div className="rounded-2xl glass p-4 text-center card-hover">
+                    <div className="font-stat text-2xl font-bold text-amber-600">{d.avgSeansMin || "—"}</div>
+                    <div className="text-[11px] text-stone-500 mt-0.5">⏱ dk / oturum</div>
                 </div>
-                <div className="rounded-2xl bg-stone-100 dark:bg-stone-900 p-3 text-center">
-                    <div className="font-stat text-lg leading-tight">{rec}</div>
-                    <div className="text-[11px] text-stone-500 mt-0.5">rekor gün</div>
+                <div className="rounded-2xl glass p-4 text-center card-hover">
+                    <div className="font-stat text-2xl font-bold text-emerald-600">{rec}</div>
+                    <div className="text-[11px] text-stone-500 mt-0.5">🏆 rekor gün</div>
                 </div>
             </div>
-            <div className="rounded-2xl panel p-4 mb-3">
-                <p className="text-sm font-medium mb-1">Toplam {d.totalHours} saat</p>
-                <p className="text-xs text-stone-500 mb-3">Bu hafta hedef {d.plannedWeek || 0} saat · gerçekleşen {d.actualWeekH} saat</p>
-                <div className="h-2 rounded-full bg-stone-200 dark:bg-stone-800 overflow-hidden mb-1">
-                    <div className="h-full bg-emerald-500" style={{ width: weekGoalPct + "%" }} />
+
+            <div className="rounded-2xl glass p-5 card-hover">
+                <div className="flex justify-between items-center mb-1">
+                    <span className="text-sm font-semibold">Toplam {d.totalHours} saat</span>
+                    <span className="text-xs text-stone-400">Bu hafta {d.actualWeekH}/{d.plannedWeek || 0} sa</span>
                 </div>
-                <p className="text-xs text-stone-500 mb-2">Bugün {todayH} / {todayGoal || 0} saat</p>
-                <div className="h-2 rounded-full bg-stone-200 dark:bg-stone-800 overflow-hidden">
-                    <div className="h-full bg-navy-600" style={{ width: todayPct + "%" }} />
+                <div className="h-2.5 rounded-full bg-stone-200 dark:bg-stone-700 overflow-hidden">
+                    <div className="h-full rounded-full bg-gradient-to-r from-indigo-500 to-purple-500" style={{ width: weekGoalPct + "%" }} />
+                </div>
+                <div className="flex justify-between items-center mt-3">
+                    <span className="text-sm font-medium">Bugün {todayH} / {todayGoal || 0} saat</span>
+                    <span className="text-xs font-bold text-indigo-600">{todayPct}%</span>
+                </div>
+                <div className="h-2 rounded-full bg-stone-200 dark:bg-stone-700 overflow-hidden">
+                    <div className="h-full rounded-full bg-gradient-to-r from-amber-400 to-amber-500" style={{ width: todayPct + "%" }} />
                 </div>
             </div>
-            <div className="rounded-2xl panel p-4 mb-3">
-                <p className="text-sm font-medium mb-2">Haftalık trend</p>
+
+            <div className="rounded-2xl glass p-5 card-hover">
+                <p className="text-sm font-semibold mb-3">📈 Haftalık trend</p>
                 <svg viewBox="0 0 236 86" className="w-full h-24">
-                    <polyline fill="rgba(30,27,75,0.12)" points={area} />
-                    <polyline fill="none" stroke="#1E1B4B" strokeWidth="2" points={pts} />
+                    <polyline fill="rgba(79,70,229,0.12)" points={area} />
+                    <polyline fill="none" stroke="#4f46e5" strokeWidth="2.5" points={pts} strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-                <div className="flex justify-between text-[10px] text-zinc-400 -mt-1">
+                <div className="flex justify-between text-[10px] text-stone-400 -mt-1">
                     <span>8 hafta önce</span>
                     <span>bu hafta</span>
                 </div>
             </div>
-            <div className="rounded-2xl panel p-4 mb-3">
-                <p className="text-sm font-medium mb-3">Bu hafta gün gün</p>
-                <div className="flex items-end gap-1.5 h-24">
+
+            <div className="rounded-2xl glass p-5 card-hover">
+                <p className="text-sm font-semibold mb-3">📅 Bu hafta</p>
+                <div className="flex items-end gap-1.5 h-28">
                     {d.weekMin.map(function (m, i) {
-                        var h = Math.max(4, Math.round((m / weekMax) * 88));
+                        var h = Math.max(6, Math.round((m / weekMax) * 92));
+                        var colors = ["#4f46e5", "#7c3aed", "#6366f1", "#8b5cf6", "#a78bfa", "#c084fc", "#ddd6fe"];
                         return (
                             <div key={i} className="flex-1 flex flex-col items-center justify-end h-full">
-                                <div className="w-full rounded-t-md bg-navy-600" style={{ height: h + "%" }} />
-                                <span className="text-[10px] text-zinc-400 mt-1">{dayNames[i]}</span>
+                                <div className="w-full rounded-t-lg transition-all duration-300" style={{ height: h + "%", background: colors[i % colors.length] }} />
+                                <span className="text-[10px] text-stone-400 mt-1.5 font-medium">{dayNames[i]}</span>
                             </div>
                         );
                     })}
                 </div>
             </div>
-            <div className="rounded-2xl panel p-4 mb-3">
-                <p className="text-sm font-medium mb-2">Gün içi odak</p>
-                <p className="text-xs text-stone-500 mb-2">Test bitince saatler dolmaya başlar.</p>
-                <div className="grid gap-1" style={{ gridTemplateColumns: "2.4rem repeat(7, 1fr)" }}>
-                    <span />
-                    {dayNames.map(function (n) { return <span key={n} className="text-[9px] text-zinc-400 text-center">{n}</span>; })}
-                    {d.bands.map(function (b, bi) {
-                        return [
-                            <span key={b.t} className="text-[9px] text-zinc-400 leading-4">{b.t}</span>
-                        ].concat(d.heat[bi].map(function (v, di) {
-                            var a = v / d.heatMax;
-                            return (
-                                <div key={b.t + di} className="h-4 rounded-sm" style={{ background: a ? "rgba(30,27,75," + (0.15 + a * 0.85) + ")" : "#e7e5e4" }} />
-                            );
-                        }));
-                    })}
-                </div>
-            </div>
-            <div className="rounded-2xl panel p-4 mb-3">
-                <p className="text-sm font-medium mb-3">Ders dağılımı</p>
+
+            <div className="rounded-2xl glass p-5 card-hover">
+                <p className="text-sm font-semibold mb-3">📚 Ders dağılımı</p>
                 {d.dersSum ? (
-                    <div className="flex items-center gap-4">
-                        <svg width="88" height="88" viewBox="0 0 88 88" className="shrink-0">
-                            <circle cx="44" cy="44" r="28" fill="none" stroke="#e7e5e4" strokeWidth="12" />
+                    <div className="flex items-center gap-6 flex-wrap">
+                        <svg width="100" height="100" viewBox="0 0 88 88" className="shrink-0">
+                            <circle cx="44" cy="44" r="28" fill="none" stroke="#e2e8f0" strokeWidth="12" />
                             {donutEls.map(function (x) {
                                 return (
                                     <circle key={x.ders} cx="44" cy="44" r="28" fill="none" stroke={x.color} strokeWidth="12"
-                                        strokeDasharray={x.dash + " " + (circ - x.dash)} strokeDashoffset={-x.off} transform="rotate(-90 44 44)" />
+                                        strokeDasharray={x.dash + " " + (circ - x.dash)} strokeDashoffset={-x.off} transform="rotate(-90 44 44)"
+                                        className="transition-all duration-500" />
                                 );
                             })}
                         </svg>
-                        <div className="min-w-0 space-y-1">
+                        <div className="min-w-0 space-y-1.5 flex-1">
                             {d.dersList.slice(0, 5).map(function (x, i) {
                                 var pct = Math.round((x.v / d.dersSum) * 100);
                                 return (
-                                    <p key={x.ders} className="text-xs flex items-center gap-2">
-                                        <span className="h-2 w-2 rounded-full shrink-0" style={{ background: DASH_COLORS[i % DASH_COLORS.length] }} />
-                                        <span className="truncate">{x.ders}</span>
-                                        <span className="text-zinc-400">%{pct}</span>
-                                    </p>
+                                    <div key={x.ders} className="flex items-center gap-2">
+                                        <span className="h-2.5 w-2.5 rounded-full shrink-0" style={{ background: DASH_COLORS[i % DASH_COLORS.length] }} />
+                                        <span className="text-xs truncate flex-1">{x.ders}</span>
+                                        <span className="text-xs font-bold text-stone-400">{pct}%</span>
+                                        <div className="w-12 h-1.5 rounded-full bg-stone-200 dark:bg-stone-700 overflow-hidden">
+                                            <div className="h-full rounded-full" style={{ width: pct + "%", background: DASH_COLORS[i % DASH_COLORS.length] }} />
+                                        </div>
+                                    </div>
                                 );
                             })}
                         </div>
                     </div>
                 ) : (
-                    <p className="text-sm text-stone-500">Ders saati birikince pasta dolacak.</p>
+                    <p className="text-sm text-stone-400">Ders saati birikince pasta dolacak.</p>
                 )}
             </div>
         </div>
@@ -453,19 +477,40 @@ function Bugun(props) {
     }, []);
     return (
         <Shell>
-            <div className="flex justify-between items-start mb-6">
-                <div>
-                    <p className="text-sm text-zinc-500">Merhaba{name ? ", " + name : ""}</p>
-                    <h1 className="text-2xl font-display font-bold tracking-tight mt-0.5">Bugün</h1>
-                    <p className="text-sm text-zinc-500 mt-1">Programını kur, ne kadar çalıştığını gör.</p>
+            <div className="flex justify-between items-start mb-8">
+                <div className="slide-up">
+                    <p className="text-sm font-medium text-stone-400 flex items-center gap-2">
+                        <span className="h-2 w-2 rounded-full bg-emerald-400 inline-block"></span>
+                        Hoş geldin{name ? ", " + name : ""}
+                    </p>
+                    <h1 className="text-3xl sm:text-4xl font-display font-black tracking-tight mt-1 gradient-text">Bugün</h1>
+                    <p className="text-sm text-stone-400 mt-1 max-w-sm">Hedefine doğru her gün bir adım.</p>
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
-            <div className="rounded-2xl bg-navy-600 text-white p-4 mb-4">
-                <p className="text-lg font-semibold leading-snug">{examLine}</p>
+
+            <div className="rounded-3xl bg-gradient-to-br from-indigo-600 to-purple-600 text-white p-5 mb-6 shadow-xl shadow-indigo-500/20 slide-up">
+                <div className="flex items-center justify-between flex-wrap gap-2">
+                    <div>
+                        <p className="text-xs font-semibold uppercase tracking-wider opacity-80">Sınav takvimi</p>
+                        <p className="text-xl font-bold mt-0.5">{examLine}</p>
+                    </div>
+                    {plan.daysLeft != null && plan.daysLeft > 0 && plan.daysLeft < 30 ? (
+                        <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-2xl text-sm font-bold animate-pulse">
+                            {plan.daysLeft} gün
+                        </span>
+                    ) : null}
+                </div>
             </div>
+
             <StudyProgram student={props.student} kpssData={props.kpssData} onDers={props.onDers} />
-            {banner ? <div className="mb-5 px-4 py-3 rounded-2xl bg-zinc-900 text-white text-sm">{banner}</div> : null}
+
+            {banner ? (
+                <div className="mb-6 px-5 py-4 rounded-2xl bg-gradient-to-r from-stone-900 to-stone-800 text-white text-sm shadow-lg slide-up">
+                    <span className="font-semibold">📢</span> {banner}
+                </div>
+            ) : null}
+
             <StudyDash student={props.student} />
         </Shell>
     );
@@ -476,26 +521,28 @@ function DersHome(props) {
     const stats = StudyPlanner.catalogStats(kpssData);
     return (
         <Shell>
-            <div className="flex justify-between items-start mb-6">
-                <div>
-                    <h1 className="text-2xl font-semibold tracking-tight">Dersler</h1>
-                    <p className="text-sm text-zinc-500 mt-1">Not oku, test çöz. Konular sırayla açılır.</p>
+            <div className="flex justify-between items-start mb-8">
+                <div className="slide-up">
+                    <h1 className="text-3xl sm:text-4xl font-display font-black tracking-tight gradient-text">Dersler</h1>
+                    <p className="text-sm text-stone-400 mt-1">Not oku, test çöz. Konular sırayla açılır.</p>
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
-            <div className="space-y-2">
+            <div className="space-y-3">
                 {Object.keys(kpssData).map(function (ders) {
                     const t = themeFor(ders, props.isDark);
                     const s = stats[ders] || { konuSayisi: 0, soruSayisi: 0 };
                     return (
                         <button key={ders} onClick={function () { props.onDers(ders); }}
-                            className="w-full text-left p-4 rounded-2xl bg-stone-100 dark:bg-stone-900 flex items-center gap-4">
-                            <div className="h-11 w-11 rounded-xl bg-white dark:bg-stone-800 flex items-center justify-center text-lg shrink-0 text-stone-700">{t.icon}</div>
-                            <div className="min-w-0 flex-1">
-                                <h2 className="font-medium text-stone-700 dark:text-stone-100">{ders}</h2>
-                                <p className="text-sm text-stone-500">{s.konuSayisi} konu · {s.soruSayisi} soru</p>
+                            className="w-full text-left p-5 rounded-3xl glass card-hover flex items-center gap-5 group">
+                            <div className="h-14 w-14 rounded-2xl ders-icon flex items-center justify-center text-2xl shrink-0">
+                                {t.icon}
                             </div>
-                            <span className="text-stone-300">›</span>
+                            <div className="min-w-0 flex-1">
+                                <h2 className="font-bold text-stone-800 dark:text-stone-100 text-lg">{ders}</h2>
+                                <p className="text-sm text-stone-400">{s.konuSayisi} konu · {s.soruSayisi} soru</p>
+                            </div>
+                            <span className="text-stone-300 group-hover:text-indigo-500 transition-colors text-xl">→</span>
                         </button>
                     );
                 })}
@@ -507,17 +554,19 @@ function DersHome(props) {
                 var mods = (cfg.modules || []).filter(function (m) { return ids.indexOf(m.id) >= 0 && m.id !== "gygk"; });
                 if (!mods.length) return null;
                 return (
-                    <div className="mt-8">
-                        <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-3">Kulvarın diğer modülleri</p>
-                        <div className="space-y-2">
+                    <div className="mt-10">
+                        <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-4 flex items-center gap-2">
+                            <span>🚀</span> Kulvarın diğer modülleri
+                        </p>
+                        <div className="space-y-3">
                             {mods.map(function (m) {
                                 return (
-                                    <div key={m.id} className="p-4 rounded-2xl panel flex items-center justify-between">
+                                    <div key={m.id} className="p-5 rounded-3xl glass card-hover flex items-center justify-between">
                                         <div>
-                                            <p className="font-medium">{m.title}</p>
-                                            <p className="text-xs text-zinc-500 mt-0.5">{(m.lessons || []).slice(0, 3).join(" · ") || "İçerik bekleniyor"}</p>
+                                            <p className="font-bold">{m.title}</p>
+                                            <p className="text-xs text-stone-400 mt-0.5">{(m.lessons || []).slice(0, 3).join(" · ") || "İçerik bekleniyor"}</p>
                                         </div>
-                                        <span className="text-[10px] font-semibold px-2 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-500">Yakında</span>
+                                        <span className="text-[10px] font-bold px-3 py-1.5 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300">Yakında</span>
                                     </div>
                                 );
                             })}
@@ -541,10 +590,10 @@ function KonuList(props) {
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
             <div className="flex items-center gap-4 mb-6">
-                <div className="h-14 w-14 rounded-2xl bg-stone-100 dark:bg-stone-800 flex items-center justify-center text-2xl">{t.icon}</div>
+                <div className="h-14 w-14 rounded-2xl ders-icon flex items-center justify-center text-2xl">{t.icon}</div>
                 <div>
                     <h1 className="text-3xl font-black">{ders}</h1>
-            <p className="text-zinc-500 text-sm">Sırayla ilerle. Konu bitince sonraki açılır.</p>
+                    <p className="text-zinc-500 text-sm">Sırayla ilerle. Konu bitince sonraki açılır.</p>
                 </div>
             </div>
             <div className="space-y-3">
@@ -560,7 +609,7 @@ function KonuList(props) {
                     const done = StudentStore.topicComplete(tp, kd);
                     return (
                         <button key={konu} disabled={!open} onClick={function () { if (open) props.onKonu(konu); }}
-                            className={"w-full text-left p-5 panel rounded-2xl " + (open ? heat : "opacity-45")}>
+                            className={"w-full text-left p-5 panel rounded-3xl " + (open ? heat : "opacity-45")}>
                             <div className="flex justify-between items-start gap-3">
                                 <div className="flex gap-3 min-w-0">
                                     <div className={"h-10 w-10 rounded-xl flex items-center justify-center font-stat text-sm shrink-0 " + (done ? "bg-emerald-50 text-emerald-600" : (open ? "bg-stone-100 text-stone-700" : "bg-stone-100 text-stone-400"))}>{done ? "✓" : (open ? idx + 1 : "🔒")}</div>
@@ -612,8 +661,8 @@ function KonuHub(props) {
                 <button onClick={function () {
                     if (!sorular.length) { alert("Bu konuya ait henüz soru yüklenmedi!"); return; }
                     props.onTest();
-                }} className="group text-left p-7 bg-stone-50 dark:bg-stone-900 border border-stone-300 rounded-3xl">
-                    <div className="h-14 w-14 rounded-2xl bg-navy-600 flex items-center justify-center text-white text-2xl mb-4">📝</div>
+                }} className="group text-left p-7 bg-stone-50 dark:bg-stone-900 border border-stone-300 rounded-3xl card-hover">
+                    <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center text-white text-2xl mb-4">📝</div>
                     <h3 className="text-xl font-bold text-stone-900 dark:text-stone-50 mb-2">Testi çöz</h3>
                     <p className="text-sm text-stone-500">{sorular.length} soru · sonuç hakimiyeti günceller</p>
                 </button>
@@ -659,7 +708,7 @@ function NotesView(props) {
                 <div className="text-center py-16 bg-white dark:bg-slate-800 rounded-3xl border border-dashed">Bu konu için henüz not yok.</div>
             )}
             {props.hasTest ? (
-                <button onClick={props.onTest} className="mt-8 mb-8 w-full bg-navy-600 text-white p-5 rounded-2xl font-bold">
+                <button onClick={props.onTest} className="mt-8 mb-8 w-full btn-primary text-white p-5 rounded-2xl font-bold">
                     Notları bitirdim, teste geç
                 </button>
             ) : null}
@@ -688,11 +737,11 @@ function TestView(props) {
                 </span>
             </div>
             <div className="w-full bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full mb-4 overflow-hidden">
-                <div className="bg-navy-600 h-2.5 rounded-full" style={{ width: progress + "%" }} />
+                <div className="bg-gradient-to-r from-indigo-500 to-purple-500 h-2.5 rounded-full" style={{ width: progress + "%" }} />
             </div>
             {item.ders ? <p className="text-xs font-bold text-slate-400 mb-3">{item.ders} · {item.konu}</p> : null}
             <div className="bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-lg mb-6 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-1.5 h-full bg-navy-600"></div>
+                <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-indigo-500 to-purple-500"></div>
                 <h3 className="text-lg font-bold leading-relaxed whitespace-pre-line">{soru.question}</h3>
             </div>
             <div className="space-y-3">
@@ -708,7 +757,7 @@ function TestView(props) {
                             icon = <svg className="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" /></svg>;
                         } else cls += "bg-slate-50 dark:bg-slate-800/50 border-slate-200 text-slate-400 opacity-60";
                     } else {
-                        cls += "bg-white dark:bg-slate-800 border-slate-200 hover:border-navy-600";
+                        cls += "bg-white dark:bg-slate-800 border-slate-200 hover:border-indigo-500";
                         icon = <span className="flex-shrink-0 h-8 w-8 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-xs font-bold">{String.fromCharCode(65 + i)}</span>;
                     }
                     return (
@@ -720,11 +769,11 @@ function TestView(props) {
             </div>
             {props.answered ? (
                 <div className="mt-8 space-y-4 fade-in pb-10">
-                    <div className="bg-navy-50 dark:bg-slate-900 border border-navy-100 border-l-4 border-l-navy-600 p-6 rounded-2xl">
-                        <h4 className="font-semibold text-navy-600 dark:text-navy-400 text-sm mb-2">Çözüm notu</h4>
+                    <div className="bg-indigo-50 dark:bg-slate-900 border border-indigo-100 border-l-4 border-l-indigo-600 p-6 rounded-2xl">
+                        <h4 className="font-semibold text-indigo-600 dark:text-indigo-400 text-sm mb-2">Çözüm notu</h4>
                         <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">{soru.explanation}</p>
                     </div>
-                    <button onClick={props.onNext} className="w-full bg-navy-600 text-white p-5 rounded-2xl font-semibold">
+                    <button onClick={props.onNext} className="w-full btn-primary text-white p-5 rounded-2xl font-semibold">
                         {qIndex + 1 === items.length ? "Sonuçları gör" : "Sonraki soru"}
                     </button>
                 </div>
@@ -738,7 +787,7 @@ function ResultView(props) {
     const score = props.score;
     const oran = total ? Math.round((score / total) * 100) : 0;
     const yorum = oran >= 85 ? "Mükemmel. Bu konuyu kilitle, zayıf olana geç." : oran >= 60 ? "İyi gidiyorsun. Yanlışları deftere aldık." : oran >= 40 ? "Eşik altı. Notu aç, aynı gün 10 soru daha." : "Önce not. Soru yağmuru şimdi işe yaramaz.";
-    const renk = oran >= 85 ? "#059669" : oran >= 60 ? "#0B1F3A" : oran >= 40 ? "#D97706" : "#E11D48";
+    const renk = oran >= 85 ? "#10b981" : oran >= 60 ? "#4f46e5" : oran >= 40 ? "#f59e0b" : "#ef4444";
     return (
         <Shell>
             {oran >= 85 && <Confetti />}
@@ -751,7 +800,7 @@ function ResultView(props) {
                         <path d="M18 2a16 16 0 1 1 0 32 16 16 0 0 1 0-32" fill="none" stroke={renk} strokeWidth="3" strokeDasharray={oran + ", 100"} strokeLinecap="round" className="progress-ring" />
                     </svg>
                     <div className="absolute inset-0 flex flex-col items-center justify-center">
-                        <span className="font-stat text-3xl text-navy-600">%{oran}</span>
+                        <span className="font-stat text-3xl text-indigo-600">%{oran}</span>
                     </div>
                 </div>
                 <div className="grid grid-cols-3 gap-3 mb-6">
@@ -787,18 +836,18 @@ function ResultView(props) {
                         </div>
                     </details>
                 ) : null}
-                    <button onClick={function () {
-                        if (!window.ShareCard) return;
-                        const nick = (props.student && props.student.userProfile && props.student.userProfile.nickname) || "öğrenci";
-                        const url = window.ShareCard.draw({
-                            nickname: nick, pct: oran, correct: score, total: total,
-                            streak: (props.student && props.student.streak && props.student.streak.count) || 0,
-                            caption: "Net kartı · KPSS Eğitim Alanı"
-                        });
-                        window.ShareCard.download(url, "kpss-net-karti.png");
-                    }} className="w-full mb-3 p-4 rounded-2xl bg-navy-600 text-white font-semibold">Net kartını indir</button>
+                <button onClick={function () {
+                    if (!window.ShareCard) return;
+                    const nick = (props.student && props.student.userProfile && props.student.userProfile.nickname) || "öğrenci";
+                    const url = window.ShareCard.draw({
+                        nickname: nick, pct: oran, correct: score, total: total,
+                        streak: (props.student && props.student.streak && props.student.streak.count) || 0,
+                        caption: "Net kartı · KPSS Eğitim Alanı"
+                    });
+                    window.ShareCard.download(url, "kpss-net-karti.png");
+                }} className="w-full mb-3 p-4 rounded-2xl btn-primary text-white font-semibold">Net kartını indir</button>
                 <div className="flex gap-3">
-                    <button onClick={props.onRetry} className="flex-1 bg-navy-600 text-white p-4 rounded-2xl font-semibold">Tekrar</button>
+                    <button onClick={props.onRetry} className="flex-1 btn-primary text-white p-4 rounded-2xl font-semibold">Tekrar</button>
                     <button onClick={props.onHome} className="flex-1 panel p-4 rounded-2xl font-medium">Kapat</button>
                 </div>
             </div>
@@ -815,21 +864,21 @@ function Eksikler(props) {
     });
     return (
         <Shell>
-            <div className="flex justify-between items-start mb-6">
-                <div>
-                    <h1 className="text-2xl font-display font-bold">Eksikler</h1>
-                    <p className="text-slate-500 text-sm">Konu durumu. Not ve soru yalnızca Dersler’den.</p>
+            <div className="flex justify-between items-start mb-8">
+                <div className="slide-up">
+                    <h1 className="text-3xl sm:text-4xl font-display font-black tracking-tight gradient-text">Eksikler</h1>
+                    <p className="text-sm text-stone-400 mt-1">Konu durumu. Not ve soru yalnızca Dersler’den.</p>
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
             <div className="grid grid-cols-2 gap-3 mb-6">
                 <button onClick={function () { props.onReview(); }} disabled={!plan.due.length}
-                    className="p-4 rounded-2xl bg-navy-600 text-white text-left disabled:opacity-40">
+                    className="p-4 rounded-2xl btn-primary text-white text-left disabled:opacity-40">
                     <span className="font-semibold block">Bugün tekrar · {plan.due.length}</span>
                     <span className="text-xs font-normal opacity-80 mt-1 block">Daha önce çözdüğün, bugün hatırlaman gereken sorular.</span>
                 </button>
                 <button onClick={function () { props.onWrong(); }} disabled={!plan.wrong.length}
-                    className="p-4 rounded-2xl border border-coral-500 text-coral-600 text-left disabled:opacity-40">
+                    className="p-4 rounded-2xl border-2 border-rose-500 text-rose-600 text-left disabled:opacity-40">
                     <span className="font-semibold block">Yanlış defteri · {plan.wrong.length}</span>
                     <span className="text-xs font-normal opacity-80 mt-1 block">Hâlâ yanlışta duran sorular. Konu kilidini açmaz.</span>
                 </button>
@@ -892,18 +941,18 @@ function DenemeSetup(props) {
     ];
     return (
         <Shell>
-            <div className="flex justify-between items-start mb-6">
-                <div>
-                    <h1 className="text-2xl font-semibold tracking-tight">Deneme</h1>
-                    <p className="text-sm text-zinc-500 mt-1">Karışık pratik veya tam kitapçık. Konu kilidini atlatmaz; rastgele soru çeker.</p>
+            <div className="flex justify-between items-start mb-8">
+                <div className="slide-up">
+                    <h1 className="text-3xl sm:text-4xl font-display font-black tracking-tight gradient-text">Deneme</h1>
+                    <p className="text-sm text-stone-400 mt-1">Karışık pratik veya tam kitapçık. Konu kilidini atlatmaz; rastgele soru çeker.</p>
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
 
-            <div className="rounded-2xl panel p-4 mb-4">
+            <div className="rounded-3xl glass p-5 mb-4 card-hover">
                 <div className="flex justify-between items-baseline mb-3">
-                    <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider">Dersler</p>
-                    <p className="text-xs text-zinc-400">{chosen.length}/{dersler.length} seçili · {pool} soru</p>
+                    <p className="text-xs font-bold uppercase tracking-wider text-stone-400">Dersler</p>
+                    <p className="text-xs text-stone-400">{chosen.length}/{dersler.length} seçili · {pool} soru</p>
                 </div>
                 <div className="grid grid-cols-1 gap-2">
                     {dersler.map(function (d) {
@@ -912,41 +961,41 @@ function DenemeSetup(props) {
                         var sc = stats[d] || { soruSayisi: 0, konuSayisi: 0 };
                         return (
                             <button type="button" key={d} onClick={function () { toggle(d); }}
-                                className={"w-full flex items-center gap-3 p-3 rounded-xl text-left border transition-colors " + (on ? "bg-navy-600 text-white border-navy-600" : "bg-stone-50 dark:bg-stone-900 border-stone-200 dark:border-stone-800")}>
+                                className={"w-full flex items-center gap-3 p-3 rounded-xl text-left border-2 transition-all " + (on ? "bg-indigo-600 text-white border-indigo-600 shadow-lg shadow-indigo-500/20" : "bg-stone-50 dark:bg-stone-900 border-stone-200 dark:border-stone-800")}>
                                 <span className={"h-10 w-10 rounded-xl flex items-center justify-center text-lg shrink-0 " + (on ? "bg-white/15" : "bg-white dark:bg-stone-800")}>{t.icon}</span>
                                 <span className="min-w-0 flex-1">
                                     <span className="font-medium block">{d}</span>
                                     <span className={"text-xs block mt-0.5 " + (on ? "text-white/70" : "text-zinc-400")}>{sc.konuSayisi} konu · {sc.soruSayisi} soru</span>
                                 </span>
-                                <span className={"h-5 w-5 rounded-full border flex items-center justify-center text-[10px] shrink-0 " + (on ? "border-white bg-white text-navy-600" : "border-stone-300 text-transparent")}>✓</span>
+                                <span className={"h-5 w-5 rounded-full border flex items-center justify-center text-[10px] shrink-0 " + (on ? "border-white bg-white text-indigo-600" : "border-stone-300 text-transparent")}>✓</span>
                             </button>
                         );
                     })}
                 </div>
             </div>
 
-            <div className="rounded-2xl panel p-4 mb-4">
-                <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-1">Soru sayısı</p>
+            <div className="rounded-3xl glass p-5 mb-4 card-hover">
+                <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-1">Soru sayısı</p>
                 <p className="text-sm font-semibold mb-3">{n} soru</p>
                 <div className="flex gap-2 mb-2">
                     {nOpts.map(function (x) {
                         return (
                             <button type="button" key={x} onClick={function () { setN(x); }}
-                                className={"flex-1 py-2 rounded-xl text-sm font-medium border " + (n === x ? "bg-navy-600 text-white border-navy-600" : "border-stone-200 dark:border-stone-700")}>{x}</button>
+                                className={"flex-1 py-2 rounded-xl text-sm font-medium border-2 " + (n === x ? "bg-indigo-600 text-white border-indigo-600" : "border-stone-200 dark:border-stone-700")}>{x}</button>
                         );
                     })}
                 </div>
-                <input type="range" min="5" max="50" step="5" value={n} onChange={function (e) { setN(Number(e.target.value)); }} className="w-full accent-navy-600" />
+                <input type="range" min="5" max="50" step="5" value={n} onChange={function (e) { setN(Number(e.target.value)); }} className="w-full accent-indigo-600" />
             </div>
 
-            <div className="rounded-2xl panel p-4 mb-5">
-                <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-1">Süre</p>
+            <div className="rounded-3xl glass p-5 mb-5 card-hover">
+                <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-1">Süre</p>
                 <p className="text-sm font-semibold mb-3">{mins === 0 ? "Sınır yok — kendi hızında" : mins + " dakikada bitir"}</p>
                 <div className="grid grid-cols-4 gap-2">
                     {tOpts.map(function (x) {
                         return (
                             <button type="button" key={x.v} onClick={function () { setMins(x.v); }}
-                                className={"py-2 rounded-xl text-xs font-medium border " + (mins === x.v ? "bg-navy-600 text-white border-navy-600" : "border-stone-200 dark:border-stone-700")}>{x.t}</button>
+                                className={"py-2 rounded-xl text-xs font-medium border-2 " + (mins === x.v ? "bg-indigo-600 text-white border-indigo-600" : "border-stone-200 dark:border-stone-700")}>{x.t}</button>
                         );
                     })}
                 </div>
@@ -956,12 +1005,12 @@ function DenemeSetup(props) {
                 const items = StudyPlanner.mixedQuiz(props.kpssData, chosen, n);
                 if (!items.length) { alert("Seçilen derslerde soru yok."); return; }
                 props.onStart(items, mins * 60);
-            }} className="w-full bg-navy-600 text-white p-4 rounded-2xl text-left">
+            }} className="w-full btn-primary text-white p-4 rounded-2xl text-left">
                 <span className="font-semibold block">Karışık testi başlat</span>
                 <span className="text-xs font-normal text-white/75 mt-0.5 block">{chosen.length} ders · {n} soru · {mins ? mins + " dk" : "süre yok"}</span>
             </button>
             {props.onFullExam ? (
-                <button type="button" onClick={props.onFullExam} className="mt-3 w-full p-4 rounded-2xl panel text-left">
+                <button type="button" onClick={props.onFullExam} className="mt-3 w-full p-4 rounded-2xl glass text-left card-hover">
                     <span className="font-semibold block">Tam deneme</span>
                     <span className="text-xs text-zinc-400 font-normal mt-0.5 block">40 soru, 40 dakika, optik kâğıt. Sınav temposu.</span>
                 </button>
@@ -1001,7 +1050,7 @@ function Ben(props) {
     });
     const overall = totQ ? Math.round((totC / totQ) * 100) : 0;
     const up = st.userProfile || {};
-    const field = "w-full px-4 py-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900";
+    const field = "w-full px-4 py-3 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900";
     const isAdmin = up.role === "admin";
     const [editing, setEditing] = useState(false);
     const [draftName, setDraftName] = useState("");
@@ -1041,23 +1090,23 @@ function Ben(props) {
     }
     return (
         <Shell>
-            <div className="flex justify-between items-start mb-6">
-                <div>
-                    <h1 className="text-2xl font-semibold tracking-tight">Profil</h1>
-                    <p className="text-sm text-zinc-500 mt-1">{up.email || "Hesap bağlı"}</p>
-                    <p className="text-xs text-zinc-400 mt-1">Ayarlar, araçlar ve plan burada.</p>
+            <div className="flex justify-between items-start mb-8">
+                <div className="slide-up">
+                    <h1 className="text-3xl sm:text-4xl font-display font-black tracking-tight gradient-text">Profil</h1>
+                    <p className="text-sm text-stone-400 mt-1">{up.email || "Hesap bağlı"}</p>
+                    <p className="text-xs text-stone-400 mt-1">Ayarlar, araçlar ve plan burada.</p>
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
             <div className="grid grid-cols-2 gap-2 mb-6">
-                <div className="p-4 rounded-2xl panel"><div className="text-xl font-semibold">{totQ}</div><div className="text-xs text-zinc-400 mt-1">Soru</div></div>
-                <div className="p-4 rounded-2xl panel"><div className="text-xl font-semibold">%{overall}</div><div className="text-xs text-zinc-400 mt-1">Net</div></div>
+                <div className="p-4 rounded-2xl glass card-hover"><div className="text-xl font-semibold gradient-text">{totQ}</div><div className="text-xs text-stone-400 mt-1">Soru</div></div>
+                <div className="p-4 rounded-2xl glass card-hover"><div className="text-xl font-semibold gradient-text">%{overall}</div><div className="text-xs text-stone-400 mt-1">Net</div></div>
             </div>
-            <div className="panel rounded-2xl p-4 mb-4">
+            <div className="rounded-3xl glass p-5 mb-4 card-hover">
                 <div className="flex items-center justify-between mb-1">
-                    <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider">Ayarlar</p>
+                    <p className="text-xs font-bold uppercase tracking-wider text-stone-400">Ayarlar</p>
                     {!editing ? (
-                        <button type="button" onClick={startSettingsEdit} className="text-sm font-medium text-navy-600">Düzenle</button>
+                        <button type="button" onClick={startSettingsEdit} className="text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline">Düzenle</button>
                     ) : null}
                 </div>
                 {eduReq && eduReq.status === "pending" ? (
@@ -1067,7 +1116,7 @@ function Ben(props) {
                     <p className="text-sm text-coral-600 mt-3">Son eğitim talebi reddedildi. Yeniden seçebilirsin.</p>
                 ) : null}
                 {!editing ? (
-                    <dl className="mt-3 divide-y divide-zinc-100 dark:divide-zinc-800">
+                    <dl className="mt-3 divide-y divide-stone-100 dark:divide-stone-800">
                         {[
                             { k: "Ad", v: st.profile.name || "—" },
                             { k: "Eğitim", v: eduLabel(up.educationLevel) },
@@ -1078,7 +1127,7 @@ function Ben(props) {
                         ].map(function (row) {
                             return (
                                 <div key={row.k} className="py-3 flex justify-between gap-4">
-                                    <dt className="text-sm text-zinc-400">{row.k}</dt>
+                                    <dt className="text-sm text-stone-400">{row.k}</dt>
                                     <dd className="text-sm font-medium text-right">{row.v}</dd>
                                 </div>
                             );
@@ -1086,14 +1135,14 @@ function Ben(props) {
                     </dl>
                 ) : (
                     <div className="mt-3 space-y-3">
-                        <label className="text-sm text-zinc-500">Ad</label>
+                        <label className="text-sm text-stone-500">Ad</label>
                         <input value={draftName} onChange={function (e) { setDraftName(e.target.value); }} className={field} />
-                        <label className="text-sm text-zinc-500">Eğitim</label>
+                        <label className="text-sm text-stone-500">Eğitim</label>
                         <p className="text-sm font-medium">{eduLabel(up.educationLevel)}</p>
-                        <p className="text-xs text-zinc-400">Düzey değişimi admin onayı ister. Sınav tarihi ÖSYM takvimine bağlanır.</p>
+                        <p className="text-xs text-stone-400">Düzey değişimi admin onayı ister. Sınav tarihi ÖSYM takvimine bağlanır.</p>
                         {(!eduReq || eduReq.status !== "pending") ? (
                             <div>
-                                <label className="text-sm text-zinc-500">Yeni eğitim düzeyi</label>
+                                <label className="text-sm text-stone-500">Yeni eğitim düzeyi</label>
                                 <select value={draftEdu} onChange={function (e) { setDraftEdu(e.target.value); }} className={field + " mt-1"}>
                                     <option value="">Değiştirme</option>
                                     {up.educationLevel !== "lisans" ? <option value="lisans">Lisans</option> : null}
@@ -1102,9 +1151,9 @@ function Ben(props) {
                                 </select>
                             </div>
                         ) : null}
-                        <label className="text-sm text-zinc-500">Sınav tarihi</label>
+                        <label className="text-sm text-stone-500">Sınav tarihi</label>
                         <p className="text-sm font-medium">{fmtExam(st.profile.examDate)}</p>
-                        <label className="text-sm text-zinc-500">Kulvar</label>
+                        <label className="text-sm text-stone-500">Kulvar</label>
                         <select value={draftTrack} onChange={function (e) { setDraftTrack(e.target.value); }} className={field}>
                             {((window.KpssConfig && window.KpssConfig.targetTypes) || [
                                 { id: "B", t: "B Grubu" }, { id: "A", t: "A Grubu" }, { id: "ogretmen", t: "Öğretmenlik" }, { id: "dhbt", t: "DHBT" }
@@ -1112,22 +1161,22 @@ function Ben(props) {
                                 return <option key={x.id} value={x.id}>{x.t}</option>;
                             })}
                         </select>
-                        <label className="text-sm text-zinc-500">Haftalık çalışma saati</label>
+                        <label className="text-sm text-stone-500">Haftalık çalışma saati</label>
                         <input type="number" min="1" max="40" value={draftHours} onChange={function (e) { setDraftHours(e.target.value); }} className={field} />
-                        <label className="flex items-center gap-2 text-sm text-zinc-600 pt-1">
+                        <label className="flex items-center gap-2 text-sm text-stone-600 pt-1">
                             <input type="checkbox" checked={draftTab} onChange={function (e) { setDraftTab(e.target.checked); }} />
                             Denemede sekme uyarısı
                         </label>
                         <div className="flex gap-2 pt-1">
-                            <button type="button" onClick={sendSettings} className="flex-1 py-3 rounded-xl bg-navy-600 text-white text-sm font-semibold">Gönder</button>
-                            <button type="button" onClick={function () { setEditing(false); }} className="px-4 py-3 rounded-xl border border-zinc-200 text-sm font-medium">Vazgeç</button>
+                            <button type="button" onClick={sendSettings} className="flex-1 py-3 rounded-xl btn-primary text-white text-sm font-semibold">Gönder</button>
+                            <button type="button" onClick={function () { setEditing(false); }} className="px-4 py-3 rounded-xl border-2 border-stone-200 text-sm font-medium">Vazgeç</button>
                         </div>
                     </div>
                 )}
             </div>
-            <div className="panel rounded-2xl p-4 mb-4">
-                <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-1">Araçlar</p>
-                <p className="text-xs text-zinc-400 mb-3">Sıralama, deneme, puan ve asistan. Ders kilidini atlatmaz.</p>
+            <div className="rounded-3xl glass p-5 mb-4 card-hover">
+                <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-1">Araçlar</p>
+                <p className="text-xs text-stone-400 mb-3">Sıralama, deneme, puan ve asistan. Ders kilidini atlatmaz.</p>
                 <div className="grid grid-cols-2 gap-2">
                     {[
                         { id: "placement", t: "Puan / tercih", d: "Tahmini puanın hangi kurumlara yeter" },
@@ -1140,33 +1189,33 @@ function Ben(props) {
                     ].map(function (x) {
                         return (
                             <button key={x.id} onClick={function () { props.onOpen && props.onOpen(x.id); }}
-                                className="text-left px-3 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-800">
+                                className="text-left px-3 py-3 rounded-xl bg-stone-50 dark:bg-stone-800 card-hover">
                                 <span className="text-sm font-medium block">{x.t}</span>
-                                <span className="text-[11px] text-zinc-400 font-normal leading-snug mt-0.5 block">{x.d}</span>
+                                <span className="text-[11px] text-stone-400 font-normal leading-snug mt-0.5 block">{x.d}</span>
                             </button>
                         );
                     })}
                 </div>
             </div>
-            <div className="panel rounded-2xl p-4 mb-4">
-                <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-1">Premium</p>
-                <p className="text-xs text-zinc-400 mb-2">Daha fazla deneme ve tam tercih listesi.</p>
-                <p className="text-sm text-zinc-600 mb-3">{StudentStore.isPremium() ? (
+            <div className="rounded-3xl glass p-5 mb-4 card-hover">
+                <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-1">Premium</p>
+                <p className="text-xs text-stone-400 mb-2">Daha fazla deneme ve tam tercih listesi.</p>
+                <p className="text-sm text-stone-600 mb-3">{StudentStore.isPremium() ? (
                     <span><span className="badge-gold text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full mr-2">Premium</span>
                     {up.premiumUntil ? new Date(up.premiumUntil).toLocaleDateString("tr-TR") : "açık"}</span>
                 ) : "Ücretsiz plan · sınırlı deneme"}</p>
                 {!StudentStore.isPremium() ? (
-                    <button onClick={function () { props.onOpen && props.onOpen("paywall"); }} className="w-full py-2.5 rounded-xl bg-navy-600 text-white text-sm font-semibold">Planı gör</button>
+                    <button onClick={function () { props.onOpen && props.onOpen("paywall"); }} className="w-full py-2.5 rounded-xl btn-primary text-white text-sm font-semibold">Planı gör</button>
                 ) : null}
-                <p className="text-xs text-zinc-400 mt-3">Davet kodun: <b>{StudentStore.ensureReferralCode ? StudentStore.ensureReferralCode() : (up.referralCode || "—")}</b></p>
-                <label className="text-xs text-zinc-400 mt-2 block">Arkadaş kodu</label>
+                <p className="text-xs text-stone-400 mt-3">Davet kodun: <b>{StudentStore.ensureReferralCode ? StudentStore.ensureReferralCode() : (up.referralCode || "—")}</b></p>
+                <label className="text-xs text-stone-400 mt-2 block">Arkadaş kodu</label>
                 <input defaultValue={up.referredBy || ""} onBlur={function (e) {
                     if (window.PaymentClient) window.PaymentClient.applyReferral(e.target.value);
                 }} className={field + " mt-1"} />
             </div>
-            <div className="panel rounded-2xl p-4 mb-4">
-                <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-1">Rozetler</p>
-                <p className="text-xs text-zinc-400 mb-2">Seri, soru ve ilk deneme hedefleri.</p>
+            <div className="rounded-3xl glass p-5 mb-4 card-hover">
+                <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-1">Rozetler</p>
+                <p className="text-xs text-stone-400 mb-2">Seri, soru ve ilk deneme hedefleri.</p>
                 <div className="flex flex-wrap gap-2">
                     {[
                         { id: "firstDay", title: "İlk çalışma günü" },
@@ -1176,7 +1225,7 @@ function Ben(props) {
                     ].map(function (b) {
                         var on = st.achievements && st.achievements[b.id];
                         return (
-                            <span key={b.id} className={"text-xs font-medium px-2 py-1 rounded-full inline-flex items-center gap-1 " + (on ? "bg-emerald-50 text-emerald-600 pop-in" : "bg-zinc-100 dark:bg-slate-800 text-zinc-400")}>
+                            <span key={b.id} className={"text-xs font-medium px-2 py-1 rounded-full inline-flex items-center gap-1 " + (on ? "bg-emerald-50 text-emerald-600 pop-in" : "bg-stone-100 dark:bg-slate-800 text-stone-400")}>
                                 {on ? null : (window.KpssIcon ? window.KpssIcon("lock", "w-3 h-3") : null)}
                                 {b.title}
                             </span>
@@ -1191,17 +1240,17 @@ function Ben(props) {
                         if (n) window.NotificationEngine.showLocal("KPSS", n);
                     }
                 });
-            }} className="w-full mb-3 p-3.5 rounded-2xl panel text-left">
+            }} className="w-full mb-3 p-3.5 rounded-2xl glass text-left card-hover">
                 <span className="font-medium block">Hatırlatma izni</span>
-                <span className="text-xs text-zinc-400 font-normal mt-0.5 block">Tarayıcı bildirimi: seri bozulmasın diye “bugün çalış” uyarısı. İstersen kapatırsın.</span>
+                <span className="text-xs text-stone-400 font-normal mt-0.5 block">Tarayıcı bildirimi: seri bozulmasın diye "bugün çalış" uyarısı. İstersen kapatırsın.</span>
             </button>
             {isAdmin ? (
-                <button onClick={function () { props.onAdmin && props.onAdmin(); }} className="w-full mb-3 p-3.5 rounded-2xl panel text-left font-medium">Yönetim</button>
+                <button onClick={function () { props.onAdmin && props.onAdmin(); }} className="w-full mb-3 p-3.5 rounded-2xl glass text-left card-hover font-medium">Yönetim</button>
             ) : null}
             <button onClick={function () {
                 if (confirm("Hesap silme talebi kaydedilir. Destek onayından sonra veri silinir.")) StudentStore.requestDeletion();
-            }} className="w-full mb-3 p-3.5 rounded-2xl text-sm text-zinc-400">Veri silme talebi</button>
-            <button onClick={function () { props.onSignOut && props.onSignOut(); }} className="w-full p-3.5 rounded-2xl border border-zinc-200 dark:border-zinc-700 font-medium">Çıkış</button>
+            }} className="w-full mb-3 p-3.5 rounded-2xl text-sm text-stone-400">Veri silme talebi</button>
+            <button onClick={function () { props.onSignOut && props.onSignOut(); }} className="w-full p-3.5 rounded-2xl border-2 border-stone-200 dark:border-stone-700 font-medium">Çıkış</button>
         </Shell>
     );
 }
@@ -1341,6 +1390,7 @@ function App() {
             finish(!!(r.data && r.data.role === "admin") || localAdmin);
         }).catch(function () { finish(localAdmin); });
     }, [authSession]);
+
     const [nav, setNav] = useState("bugun");
     const [selectedDers, setSelectedDers] = useState(null);
     const [selectedKonu, setSelectedKonu] = useState(null);
@@ -1643,7 +1693,7 @@ function App() {
                                         if (C) setLazyCmp(function () { return C; });
                                     }).catch(function (e) { setLazyErr((e && e.message) || "Yüklenemedi"); });
                                 }
-                            }} className="px-4 py-2 rounded-xl bg-navy-600 text-white text-sm">Tekrar dene</button>
+                            }} className="px-4 py-2 rounded-xl btn-primary text-white text-sm">Tekrar dene</button>
                         </div>
                     ) : (LazyCmp ? React.createElement(LazyCmp, toolProps) : (
                         <div className="p-10 text-center text-zinc-500 text-sm">Yükleniyor…</div>
