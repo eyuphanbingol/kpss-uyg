@@ -18,6 +18,7 @@
                     <h1 className="text-2xl font-semibold tracking-tight">Kurum</h1>
                     <button type="button" onClick={props.onBack} className="text-sm font-medium">Kapat</button>
                 </div>
+                <p className="text-sm text-zinc-500 mb-4">Arkadaşını davet kodunla çağır; kendi çalışma özetin burada durur.</p>
                 <div className="p-4 rounded-2xl bg-navy-600 text-white mb-4">
                     <p className="text-sm opacity-80">{up.nickname || (st.profile && st.profile.name) || "Öğrenci"}</p>
                     <p className="font-stat text-3xl mt-1">{totQ} soru</p>

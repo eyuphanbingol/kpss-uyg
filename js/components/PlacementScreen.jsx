@@ -27,6 +27,7 @@
                     <h1 className="text-2xl font-semibold tracking-tight">Puan / tercih</h1>
                     <button onClick={props.onBack} className="text-sm font-medium">Kapat</button>
                 </div>
+                <p className="text-sm text-zinc-500 mb-4">Çözdüğün sorulardan kaba bir puan tahmini; örnek tabanlarla karşılaştırır. ÖSYM sonucu değildir.</p>
                 <div className="p-5 rounded-2xl bg-navy-600 text-white mb-4">
                     <div className="text-xs uppercase tracking-widest opacity-70">Tahmini {est.level}</div>
                     <div className="font-stat text-4xl mt-1">{est.score}</div>

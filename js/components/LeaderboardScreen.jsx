@@ -42,7 +42,7 @@
                     <h1 className="text-2xl font-display font-bold">Türkiye</h1>
                     <button onClick={props.onBack} className="text-sm font-medium">Kapat</button>
                 </div>
-                <p className="text-sm text-zinc-500 mb-4">Takma ad. E-posta listelenmez.</p>
+                <p className="text-sm text-zinc-500 mb-4">Bu hafta kim daha çok soru çözdü, denemede kim önde. Takma ad görünür, e-posta görünmez.</p>
                 <div className="flex p-1 rounded-xl bg-zinc-100 dark:bg-slate-800 mb-6">
                     <button type="button" onClick={function () { setTab("week"); }} className={"flex-1 py-2 rounded-lg text-sm font-semibold " + (tab === "week" ? "bg-white dark:bg-slate-900 shadow-sm" : "text-zinc-500")}>Haftalık</button>
                     <button type="button" onClick={function () { setTab("exam"); }} className={"flex-1 py-2 rounded-lg text-sm font-semibold " + (tab === "exam" ? "bg-white dark:bg-slate-900 shadow-sm" : "text-zinc-500")}>Deneme</button>

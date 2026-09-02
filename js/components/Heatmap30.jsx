@@ -29,11 +29,12 @@
         return (
             <div className="p-4">
                 {props.onBack ? (
-                    <div className="flex justify-between mb-4">
-                        <h1 className="text-xl font-display font-semibold">Haritalar</h1>
-                        <button onClick={props.onBack} className="text-sm font-medium">Kapat</button>
+                    <div className="flex justify-between mb-2">
+                        <h1 className="text-xl font-display font-semibold">Isı haritası</h1>
+                        <button type="button" onClick={props.onBack} className="text-sm font-medium">Kapat</button>
                     </div>
                 ) : null}
+                <p className="text-sm text-zinc-500 mb-4">Kaç gün çalıştın, hangi konularda zayıfsın. Ders açmaz, sadece gösterir.</p>
                 <p className="text-xs font-medium text-stone-500 uppercase tracking-wider mb-1">Çalışma serisi</p>
                 <p className="text-xs text-stone-500 mb-2">Amber = yoğunluk (kaç soru). Hakimiyet değil.</p>
                 <div className="grid grid-cols-10 gap-1 mb-8">

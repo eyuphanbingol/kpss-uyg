@@ -35,6 +35,7 @@
                     <h1 className="text-2xl font-semibold tracking-tight">Soru asistanı</h1>
                     <button type="button" onClick={props.onBack} className="text-sm font-medium">Kapat</button>
                 </div>
+                <p className="text-sm text-zinc-500 mb-4">Yanlış defterindeki (veya örnek) sorunun doğru şıkkını ve kayıtlı çözümünü gösterir. ChatGPT değil.</p>
                 {!item ? (
                     <p className="text-zinc-500 text-sm">Soru yok. Derslerden test çözünce asistan da dolar.</p>
                 ) : (

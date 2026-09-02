@@ -18,6 +18,7 @@
                     <h1 className="text-2xl font-semibold tracking-tight">Canlı deneme</h1>
                     <button onClick={props.onBack} className="text-sm font-medium">Kapat</button>
                 </div>
+                <p className="text-sm text-zinc-500 mb-4">Aynı saatte herkesle deneme fikri. Şimdilik tam denemeyi tek başına başlatırsın; canlı sıra sonra gelecek.</p>
                 <div className="p-5 rounded-2xl bg-stone-50 dark:bg-stone-900 border border-stone-300">
                     <p className="text-sm text-stone-500 flex items-center gap-2">
                         <span className="h-2 w-2 rounded-full bg-emerald-500" /> Canlı

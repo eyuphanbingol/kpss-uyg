@@ -328,7 +328,8 @@ function StudyDash(props) {
 
     return (
         <div className="mb-2">
-            <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-3">Çalışma istatistikleri</p>
+            <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-1">Çalışma istatistikleri</p>
+            <p className="text-xs text-zinc-400 mb-3">Saat, seri ve ders dağılımı. Test bitince dolar.</p>
             <div className="grid grid-cols-3 gap-2 mb-4">
                 <div className="rounded-2xl bg-amber-50 p-3 text-center">
                     <div className="font-stat text-xl text-amber-600">{d.streak}</div>
@@ -456,6 +457,7 @@ function Bugun(props) {
                 <div>
                     <p className="text-sm text-zinc-500">Merhaba{name ? ", " + name : ""}</p>
                     <h1 className="text-2xl font-display font-bold tracking-tight mt-0.5">Bugün</h1>
+                    <p className="text-sm text-zinc-500 mt-1">Programını kur, ne kadar çalıştığını gör.</p>
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
@@ -474,8 +476,11 @@ function DersHome(props) {
     const stats = StudyPlanner.catalogStats(kpssData);
     return (
         <Shell>
-            <div className="flex justify-between items-center mb-6">
-                <h1 className="text-2xl font-semibold tracking-tight">Dersler</h1>
+            <div className="flex justify-between items-start mb-6">
+                <div>
+                    <h1 className="text-2xl font-semibold tracking-tight">Dersler</h1>
+                    <p className="text-sm text-zinc-500 mt-1">Not oku, test çöz. Konular sırayla açılır.</p>
+                </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
             <div className="space-y-2">
@@ -819,9 +824,15 @@ function Eksikler(props) {
             </div>
             <div className="grid grid-cols-2 gap-3 mb-6">
                 <button onClick={function () { props.onReview(); }} disabled={!plan.due.length}
-                    className="p-4 rounded-2xl bg-navy-600 text-white font-semibold disabled:opacity-40">Bugün tekrar · {plan.due.length}</button>
+                    className="p-4 rounded-2xl bg-navy-600 text-white text-left disabled:opacity-40">
+                    <span className="font-semibold block">Bugün tekrar · {plan.due.length}</span>
+                    <span className="text-xs font-normal opacity-80 mt-1 block">Daha önce çözdüğün, bugün hatırlaman gereken sorular.</span>
+                </button>
                 <button onClick={function () { props.onWrong(); }} disabled={!plan.wrong.length}
-                    className="p-4 rounded-2xl border border-coral-500 text-coral-600 font-semibold disabled:opacity-40">Yanlış defteri · {plan.wrong.length}</button>
+                    className="p-4 rounded-2xl border border-coral-500 text-coral-600 text-left disabled:opacity-40">
+                    <span className="font-semibold block">Yanlış defteri · {plan.wrong.length}</span>
+                    <span className="text-xs font-normal opacity-80 mt-1 block">Hâlâ yanlışta duran sorular. Konu kilidini açmaz.</span>
+                </button>
             </div>
             {Object.keys(byDers).map(function (ders) {
                 const t = themeFor(ders, props.isDark);
@@ -874,7 +885,7 @@ function DenemeSetup(props) {
             <div className="flex justify-between mb-6">
                 <div>
                     <h1 className="text-2xl font-semibold tracking-tight">Deneme</h1>
-                    <p className="text-sm text-zinc-500">Karışık pratik.</p>
+                    <p className="text-sm text-zinc-500 mt-1">İstediğin derslerden karışık soru. Süre isteğe bağlı.</p>
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
@@ -923,6 +934,7 @@ function Ben(props) {
                 <div>
                     <h1 className="text-2xl font-semibold tracking-tight">Profil</h1>
                     <p className="text-sm text-zinc-500 mt-1">{up.email || "Hesap bağlı"}</p>
+                    <p className="text-xs text-zinc-400 mt-1">Ayarlar, araçlar ve plan burada.</p>
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
@@ -983,26 +995,31 @@ function Ben(props) {
                 </label>
             </div>
             <div className="panel rounded-2xl p-4 mb-4">
-                <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-3">Araçlar</p>
+                <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-1">Araçlar</p>
+                <p className="text-xs text-zinc-400 mb-3">Sıralama, deneme, puan ve asistan. Ders kilidini atlatmaz.</p>
                 <div className="grid grid-cols-2 gap-2">
                     {[
-                        { id: "placement", t: "Puan / tercih" },
-                        { id: "leaderboard", t: "Türkiye" },
-                        { id: "heat", t: "Isı haritası" },
-                        { id: "exam", t: "Tam deneme" },
-                        { id: "ai", t: "Soru asistanı" },
-                        { id: "live", t: "Canlı deneme" },
-                        { id: "instructor", t: "Kurum" }
+                        { id: "placement", t: "Puan / tercih", d: "Tahmini puanın hangi kurumlara yeter" },
+                        { id: "leaderboard", t: "Türkiye", d: "Haftalık soru ve deneme sıralaması" },
+                        { id: "heat", t: "Isı haritası", d: "30 günlük tempo ve konu hakimiyeti" },
+                        { id: "exam", t: "Tam deneme", d: "40 soru, 40 dakika kitapçık" },
+                        { id: "ai", t: "Soru asistanı", d: "Yanlışın nedenini kısaca açıklar" },
+                        { id: "live", t: "Canlı deneme", d: "Cumartesi ortak saat; şimdi de çözülür" },
+                        { id: "instructor", t: "Kurum", d: "Davet kodu ve çalışma grubu" }
                     ].map(function (x) {
                         return (
                             <button key={x.id} onClick={function () { props.onOpen && props.onOpen(x.id); }}
-                                className="text-left px-3 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-800 text-sm font-medium">{x.t}</button>
+                                className="text-left px-3 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-800">
+                                <span className="text-sm font-medium block">{x.t}</span>
+                                <span className="text-[11px] text-zinc-400 font-normal leading-snug mt-0.5 block">{x.d}</span>
+                            </button>
                         );
                     })}
                 </div>
             </div>
             <div className="panel rounded-2xl p-4 mb-4">
-                <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-2">Premium</p>
+                <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-1">Premium</p>
+                <p className="text-xs text-zinc-400 mb-2">Daha fazla deneme ve tam tercih listesi.</p>
                 <p className="text-sm text-zinc-600 mb-3">{StudentStore.isPremium() ? (
                     <span><span className="badge-gold text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full mr-2">Premium</span>
                     {up.premiumUntil ? new Date(up.premiumUntil).toLocaleDateString("tr-TR") : "açık"}</span>
@@ -1017,7 +1034,8 @@ function Ben(props) {
                 }} className={field + " mt-1"} />
             </div>
             <div className="panel rounded-2xl p-4 mb-4">
-                <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-2">Rozetler</p>
+                <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-1">Rozetler</p>
+                <p className="text-xs text-zinc-400 mb-2">Seri, soru ve ilk deneme hedefleri.</p>
                 <div className="flex flex-wrap gap-2">
                     {[
                         { id: "firstDay", title: "İlk çalışma günü" },

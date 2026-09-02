@@ -80,7 +80,7 @@
                 <div className="max-w-2xl mx-auto px-4 py-8 pb-10">
                     <button onClick={props.onBack} className="text-sm font-medium mb-4">← Geri</button>
                     <h1 className="text-2xl font-display font-bold mb-2">Tam deneme</h1>
-                    <p className="text-zinc-500 mb-4 text-sm">40 soru · 40 dk kitapçık. Optik kâğıt masaüstünde yanında, telefonda altta.</p>
+                    <p className="text-zinc-500 mb-4 text-sm">Sınav temposu: 40 soru, 40 dakika. Optik kâğıt soru atlamana yarar.</p>
                     {capped ? <p className="p-3 rounded-xl bg-amber-50 text-amber-600 text-sm mb-4">Ücretsiz haftalık deneme doldu.</p> : null}
                     <label className="flex gap-2 text-sm mb-4"><input type="checkbox" checked={optic} onChange={function (e) { setOptic(e.target.checked); }} /> Optik kâğıt</label>
                     <button disabled={capped} onClick={function () { setStarted(true); }} className="w-full p-4 rounded-2xl bg-navy-600 text-white font-semibold">Başlat</button>
