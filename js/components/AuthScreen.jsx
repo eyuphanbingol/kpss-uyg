@@ -139,7 +139,7 @@
                     name: name,
                     educationLevel: level,
                     examDate: examDate,
-                    targetType: target,
+                    targetType: level === "lisans" ? target : "B",
                     referredBy: refCode,
                     moduleInterest: Object.keys(interest).filter(function (k) { return interest[k]; })
                 }));
@@ -260,13 +260,23 @@
         }
 
         // ---------- Enter Key ----------
+        function goAfterEducation() {
+            if (level === "lisans") {
+                setStep(2);
+            } else {
+                setTarget("B");
+                setStep(3);
+            }
+            setMsg("");
+        }
+
         function handleKeyDown(e) {
             if (e.key === "Enter") {
                 e.preventDefault();
                 if (mode === "in") {
                     submit();
                 } else if (step === 1 && name.trim()) {
-                    setStep(2);
+                    goAfterEducation();
                 } else if (step === 2) {
                     setStep(3);
                 } else if (step === 3) {
@@ -371,7 +381,7 @@
                             <button 
                                 type="button" 
                                 disabled={!name.trim()} 
-                                onClick={function () { setStep(2); setMsg(""); }}
+                                onClick={function () { goAfterEducation(); }}
                                 className="w-full py-3.5 rounded-2xl btn-primary text-white font-semibold disabled:opacity-40 transition-all"
                             >
                                 Devam →
@@ -563,7 +573,7 @@
                             <div className="flex gap-2">
                                 <button 
                                     type="button" 
-                                    onClick={function () { setStep(2); }} 
+                                    onClick={function () { setStep(level === "lisans" ? 2 : 1); }} 
                                     className="flex-1 py-3.5 rounded-2xl border-2 border-stone-200 dark:border-stone-700 font-medium hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors"
                                 >
                                     ← Geri

@@ -137,7 +137,7 @@ function Onboarding(props) {
         <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-end sm:items-center justify-center p-4">
             <div className="w-full max-w-md bg-white dark:bg-stone-900 rounded-3xl p-6 sm:p-8 shadow-2xl fade-in">
                 <h2 className="text-2xl font-black text-stone-900 dark:text-white mb-1">Profilini tamamla</h2>
-                <p className="text-sm text-stone-500 mb-5">Google ile giriş yaptın. Adın, eğitim düzeyin ve kulvarın uygulamayı açmak için gerekli.</p>
+                <p className="text-sm text-stone-500 mb-5">Google ile giriş yaptın. Adın ve eğitim düzeyin uygulamayı açmak için gerekli.</p>
                 <label className="block text-xs font-bold text-stone-500 mb-1">Adın</label>
                 <input value={name} onChange={function (e) { setName(e.target.value); }} placeholder="Örn. Ayşe"
                     className="w-full mb-4 px-4 py-3 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-800 font-medium" />
@@ -153,16 +153,20 @@ function Onboarding(props) {
                         );
                     })}
                 </div>
-                <p className="text-xs font-bold text-stone-500 mb-2">Kulvar</p>
-                <div className="grid grid-cols-2 gap-2 mb-4">
-                    {[{ id: "B", t: "B Grubu" }, { id: "A", t: "A Grubu" }, { id: "ogretmen", t: "Öğretmenlik" }, { id: "dhbt", t: "DHBT" }].map(function (x) {
-                        var on = target === x.id;
-                        return (
-                            <button key={x.id} type="button" onClick={function () { setTarget(x.id); }}
-                                className={"px-3 py-2 rounded-xl border-2 text-xs font-semibold " + (on ? "border-indigo-500 bg-indigo-50 text-indigo-700" : "border-stone-200")}>{x.t}</button>
-                        );
-                    })}
-                </div>
+                {level === "lisans" ? (
+                    <div>
+                        <p className="text-xs font-bold text-stone-500 mb-2">Kulvar</p>
+                        <div className="grid grid-cols-2 gap-2 mb-4">
+                            {[{ id: "B", t: "B Grubu" }, { id: "A", t: "A Grubu" }, { id: "ogretmen", t: "Öğretmenlik" }, { id: "dhbt", t: "DHBT" }].map(function (x) {
+                                var on = target === x.id;
+                                return (
+                                    <button key={x.id} type="button" onClick={function () { setTarget(x.id); }}
+                                        className={"px-3 py-2 rounded-xl border-2 text-xs font-semibold " + (on ? "border-indigo-500 bg-indigo-50 text-indigo-700" : "border-stone-200")}>{x.t}</button>
+                                );
+                            })}
+                        </div>
+                    </div>
+                ) : null}
                 <label className="block text-xs font-bold text-stone-500 mb-1">Sınav tarihi</label>
                 <input type="date" value={examDate} onChange={function (e) { setExamDate(e.target.value); }}
                     className="w-full mb-4 px-4 py-3 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-800 font-medium" />
@@ -178,7 +182,7 @@ function Onboarding(props) {
                         dailyMinutes: 45,
                         dailyQuestions: 25,
                         educationLevel: level,
-                        targetType: target,
+                        targetType: level === "lisans" ? target : "B",
                         kvkkConsent: true,
                         weeklyHours: 7
                     });
@@ -571,6 +575,8 @@ function DersHome(props) {
                 })}
             </div>
             {function () {
+                var edu = props.student && props.student.userProfile && props.student.userProfile.educationLevel;
+                if (edu && edu !== "lisans") return null;
                 var cfg = window.KpssConfig || {};
                 var tt = (props.student && props.student.userProfile && props.student.userProfile.targetType) || "B";
                 var ids = (cfg.targetModules && cfg.targetModules[tt]) || ["gygk"];
@@ -1051,6 +1057,10 @@ function eduLabel(id) {
     return "Lisans";
 }
 
+function needsKulvar(level) {
+    return !level || level === "lisans";
+}
+
 function trackLabel(id) {
     var list = (window.KpssConfig && window.KpssConfig.targetTypes) || [];
     var hit = list.filter(function (x) { return x.id === id; })[0];
@@ -1078,28 +1088,24 @@ function Ben(props) {
     const [editing, setEditing] = useState(false);
     const [draftName, setDraftName] = useState("");
     const [draftTrack, setDraftTrack] = useState("B");
-    const [draftHours, setDraftHours] = useState(7);
-    const [draftTab, setDraftTab] = useState(true);
     const [draftEdu, setDraftEdu] = useState("");
     const eduReq = up.educationChangeRequest;
+    const showKulvar = needsKulvar(totQ === 0 && editing && draftEdu ? draftEdu : up.educationLevel);
 
     function startSettingsEdit() {
         setDraftName(st.profile.name || "");
         setDraftTrack(up.targetType || "B");
-        setDraftHours(up.weeklyHours || 7);
-        setDraftTab(st.profile.tabLeaveWarn !== false);
         setDraftEdu(totQ === 0 ? (up.educationLevel || "lisans") : "");
         setEditing(true);
     }
 
     function sendSettings() {
-        StudentStore.updateProfile({ name: draftName, tabLeaveWarn: draftTab });
-        StudentStore.updateUserProfile({
-            nickname: draftName,
-            targetType: draftTrack,
-            weeklyHours: Number(draftHours) || 7,
-            dailyHours: (Number(draftHours) || 7) / 7
-        });
+        var nextEdu = (totQ === 0 && draftEdu) ? draftEdu : up.educationLevel;
+        StudentStore.updateProfile({ name: draftName });
+        var patch = { nickname: draftName };
+        if (needsKulvar(nextEdu)) patch.targetType = draftTrack;
+        else patch.targetType = "B";
+        StudentStore.updateUserProfile(patch);
         var wantEdu = draftEdu && draftEdu !== up.educationLevel && (!eduReq || eduReq.status !== "pending") ? draftEdu : "";
         if (wantEdu) {
             if (totQ === 0 && StudentStore.setEducationLevel) {
@@ -1150,11 +1156,8 @@ function Ben(props) {
                         {[
                             { k: "Ad", v: st.profile.name || "—" },
                             { k: "Eğitim", v: eduLabel(up.educationLevel) },
-                            { k: "Sınav tarihi", v: fmtExam(st.profile.examDate) },
-                            { k: "Kulvar", v: trackLabel(up.targetType || "B") },
-                            { k: "Haftalık çalışma", v: (up.weeklyHours || 7) + " saat" },
-                            { k: "Denemede sekme uyarısı", v: st.profile.tabLeaveWarn !== false ? "Açık" : "Kapalı" }
-                        ].map(function (row) {
+                            { k: "Sınav tarihi", v: fmtExam(st.profile.examDate) }
+                        ].concat(needsKulvar(up.educationLevel) ? [{ k: "Kulvar", v: trackLabel(up.targetType || "B") }] : []).map(function (row) {
                             return (
                                 <div key={row.k} className="py-3 flex justify-between gap-4">
                                     <dt className="text-sm text-stone-400">{row.k}</dt>
@@ -1196,20 +1199,18 @@ function Ben(props) {
                         )}
                         <label className="text-sm text-stone-500">Sınav tarihi</label>
                         <p className="text-sm font-medium">{fmtExam(st.profile.examDate)}</p>
-                        <label className="text-sm text-stone-500">Kulvar</label>
-                        <select value={draftTrack} onChange={function (e) { setDraftTrack(e.target.value); }} className={field}>
-                            {((window.KpssConfig && window.KpssConfig.targetTypes) || [
-                                { id: "B", t: "B Grubu" }, { id: "A", t: "A Grubu" }, { id: "ogretmen", t: "Öğretmenlik" }, { id: "dhbt", t: "DHBT" }
-                            ]).map(function (x) {
-                                return <option key={x.id} value={x.id}>{x.t}</option>;
-                            })}
-                        </select>
-                        <label className="text-sm text-stone-500">Haftalık çalışma saati</label>
-                        <input type="number" min="1" max="40" value={draftHours} onChange={function (e) { setDraftHours(e.target.value); }} className={field} />
-                        <label className="flex items-center gap-2 text-sm text-stone-600 pt-1">
-                            <input type="checkbox" checked={draftTab} onChange={function (e) { setDraftTab(e.target.checked); }} />
-                            Denemede sekme uyarısı
-                        </label>
+                        {showKulvar ? (
+                            <div>
+                                <label className="text-sm text-stone-500">Kulvar</label>
+                                <select value={draftTrack} onChange={function (e) { setDraftTrack(e.target.value); }} className={field}>
+                                    {((window.KpssConfig && window.KpssConfig.targetTypes) || [
+                                        { id: "B", t: "B Grubu" }, { id: "A", t: "A Grubu" }, { id: "ogretmen", t: "Öğretmenlik" }, { id: "dhbt", t: "DHBT" }
+                                    ]).map(function (x) {
+                                        return <option key={x.id} value={x.id}>{x.t}</option>;
+                                    })}
+                                </select>
+                            </div>
+                        ) : null}
                         <div className="flex gap-2 pt-1">
                             <button type="button" onClick={sendSettings} className="flex-1 py-3 rounded-xl btn-primary text-white text-sm font-semibold">Gönder</button>
                             <button type="button" onClick={function () { setEditing(false); }} className="px-4 py-3 rounded-xl border-2 border-stone-200 text-sm font-medium">Vazgeç</button>

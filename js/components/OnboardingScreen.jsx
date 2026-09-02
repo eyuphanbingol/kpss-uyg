@@ -109,7 +109,7 @@
                 dailyMinutes: 45,
                 dailyQuestions: 25,
                 educationLevel: level,
-                targetType: target,
+                targetType: level === "lisans" ? target : "B",
                 kvkkConsent: true,
                 weeklyHours: 7
             });
@@ -238,6 +238,7 @@
                     {/* ===== STEP 2 ===== */}
                     {step === 2 && (
                         <div className="space-y-4 slide-up">
+                            {level === "lisans" ? (
                             <div>
                                 <p className="text-sm font-medium text-stone-600 dark:text-stone-300 mb-2">🎯 Kulvar</p>
                                 <div className="grid grid-cols-2 gap-2">
@@ -258,6 +259,7 @@
                                     })}
                                 </div>
                             </div>
+                            ) : null}
                             <div>
                                 <label className="block text-sm font-medium text-stone-600 dark:text-stone-300 mb-1.5" htmlFor="ob-date">
                                     📅 Sınav Tarihi
