@@ -12,18 +12,20 @@
         global.KpssComponents = global.KpssComponents || {};
         if (global.KpssComponents[name]) return Promise.resolve(global.KpssComponents[name]);
         if (cache[name]) return cache[name];
-        cache[name] = fetch(new URL(path, window.location.href).href.replace(/(\?.*)?$/, "") + "?v=16", { cache: "no-cache", credentials: "same-origin" }).then(function (r) {
+        cache[name] = fetch(new URL(path, window.location.href).href.replace(/(\?.*)?$/, "") + "?v=17", { cache: "no-cache", credentials: "same-origin" }).then(function (r) {
             if (!r.ok) throw new Error("Bileşen yüklenemedi: " + path);
             return r.text();
         }).then(function (src) {
             var code = transform(src);
             var runner = new Function("React", "ReactDOM", code);
             runner(global.React, global.ReactDOM);
-            return global.KpssComponents[name];
+            var C = global.KpssComponents[name];
+            if (!C) throw new Error("Bileşen kayıtlı değil: " + name);
+            return C;
         }).catch(function (err) {
             delete cache[name];
             console.warn(err);
-            return null;
+            throw err;
         });
         return cache[name];
     }

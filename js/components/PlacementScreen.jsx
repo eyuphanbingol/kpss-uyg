@@ -4,7 +4,9 @@
         const [rows, setRows] = useState([]);
         const [ready, setReady] = useState(false);
         const [note, setNote] = useState("");
-        const est = window.ScoreEngine.estimate(props.student);
+        const est = (window.ScoreEngine && window.ScoreEngine.estimate)
+            ? window.ScoreEngine.estimate(props.student)
+            : { score: 0, level: "lisans", gyNet: 0, gkNet: 0, note: "Puan motoru yok." };
         const premium = window.StudentStore && window.StudentStore.isPremium();
         useEffect(function () {
             fetch("data/tabanPuanlar.json").then(function (r) { return r.json(); }).then(function (j) {
@@ -13,7 +15,11 @@
                 setNote((j && j.note) || "");
             }).catch(function () { setReady(false); });
         }, []);
-        var hits = ready ? window.ScoreEngine.matchPlacement(est.score, rows) : [];
+        var hits = (ready && window.ScoreEngine && window.ScoreEngine.matchPlacement)
+            ? window.ScoreEngine.matchPlacement(est.score, rows.filter(function (r) {
+                return !r.level || r.level === est.level;
+            }))
+            : [];
         if (!premium && hits.length > 3) hits = hits.slice(0, 3);
         return (
             <div className="max-w-2xl mx-auto px-4 py-6 pb-10">

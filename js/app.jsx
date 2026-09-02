@@ -1076,6 +1076,7 @@ function App() {
     const [authSession, setAuthSession] = useState(null);
     const [GateAuth, setGateAuth] = useState(null);
     const [AdminCmp, setAdminCmp] = useState(null);
+    const [lazyErr, setLazyErr] = useState("");
     const [roleChecked, setRoleChecked] = useState(false);
 
     const LAZY = {
@@ -1101,9 +1102,18 @@ function App() {
     useEffect(function () {
         if (!extra || extra === "onboarding") return;
         var spec = LAZY[extra];
-        if (!spec || !window.JsxLoader) return;
+        if (!spec || !window.JsxLoader) {
+            setLazyErr("Bu araç bulunamadı.");
+            return;
+        }
         setLazyCmp(null);
-        window.JsxLoader.load(spec[0], spec[1]).then(function (C) { if (C) setLazyCmp(function () { return C; }); });
+        setLazyErr("");
+        window.JsxLoader.load(spec[0], spec[1]).then(function (C) {
+            if (C) setLazyCmp(function () { return C; });
+            else setLazyErr("Araç yüklenemedi.");
+        }).catch(function (e) {
+            setLazyErr((e && e.message) || "Araç yüklenemedi.");
+        });
     }, [extra]);
 
     useEffect(function () {
@@ -1448,24 +1458,51 @@ function App() {
             : <div className="min-h-screen flex items-center justify-center text-sm text-zinc-400">Yükleniyor</div>;
     }
 
+    function closeTool() {
+        setExtra(null);
+        setLazyCmp(null);
+        setLazyErr("");
+    }
+
+    var toolProps = {
+        student: student,
+        plan: plan,
+        kpssData: kpssData,
+        onBack: closeTool,
+        onClose: closeTool,
+        onDone: function () { closeTool(); if (window.SyncEngine) window.SyncEngine.sync(); },
+        onOpen: function (id) { setLazyCmp(null); setLazyErr(""); setExtra(id); },
+        onStartExam: function () { setLazyCmp(null); setLazyErr(""); setExtra("exam"); }
+    };
+
+    if (extra && extra !== "onboarding" && extra !== "auth") {
+        return (
+            <div className="min-h-screen app-bg">
+                <div className="mx-auto max-w-3xl px-4 pt-5" style={{ paddingBottom: "2rem" }}>
+                    <button type="button" onClick={closeTool} className="mb-3 text-sm font-medium text-stone-600">← Geri</button>
+                    {lazyErr ? (
+                        <div className="p-4 rounded-2xl panel text-sm">
+                            <p className="text-coral-600 mb-3">{lazyErr}</p>
+                            <button type="button" onClick={function () {
+                                var spec = LAZY[extra];
+                                setLazyErr("");
+                                if (spec && window.JsxLoader) {
+                                    window.JsxLoader.load(spec[0], spec[1]).then(function (C) {
+                                        if (C) setLazyCmp(function () { return C; });
+                                    }).catch(function (e) { setLazyErr((e && e.message) || "Yüklenemedi"); });
+                                }
+                            }} className="px-4 py-2 rounded-xl bg-navy-600 text-white text-sm">Tekrar dene</button>
+                        </div>
+                    ) : (LazyCmp ? React.createElement(LazyCmp, toolProps) : (
+                        <div className="p-10 text-center text-zinc-500 text-sm">Yükleniyor…</div>
+                    ))}
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div>
-            {extra && extra !== "onboarding" && extra !== "auth" ? (
-                <div className="fixed inset-0 z-[70] overlay-scrim overflow-y-auto">
-                    <div className={"min-h-full mx-auto px-4 py-6 " + (extra === "admin" || extra === "exam" || extra === "leaderboard" ? "max-w-3xl" : "max-w-lg")} style={{ paddingBottom: "max(24px, env(safe-area-inset-bottom))" }}>
-                        <button type="button" onClick={function () { setExtra(null); setLazyCmp(null); }}
-                            className="mb-4 px-4 py-2 rounded-xl panel text-sm font-medium">Kapat</button>
-                        <div className="overlay-sheet">
-                            {LazyCmp ? React.createElement(LazyCmp, {
-                                student: student, plan: plan, kpssData: kpssData,
-                                onBack: function () { setExtra(null); setLazyCmp(null); },
-                                onClose: function () { setExtra(null); setLazyCmp(null); },
-                                onDone: function () { setExtra(null); setLazyCmp(null); if (window.SyncEngine) window.SyncEngine.sync(); }
-                            }) : <div className="p-10 text-center text-zinc-500">Yükleniyor…</div>}
-                        </div>
-                    </div>
-                </div>
-            ) : null}
             {body}
             {!inTest ? (
                 <BottomNav nav={nav} streak={plan.streak || 0} onChange={function (id) {

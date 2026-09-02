@@ -27,7 +27,7 @@
                     <p className="text-xs text-stone-500 mt-2">{when.toLocaleString("tr-TR")}</p>
                     <span className="inline-block mt-3 text-xs px-2 py-0.5 rounded-full bg-stone-100 text-stone-700">katılımcı · yakında</span>
                     <p className="text-sm text-stone-500 mt-4">Anlık sıra bağlanınca açılır. GY-GK durmaz.</p>
-                    <button onClick={function () { if (props.onClose) props.onClose(); }} className="mt-4 w-full py-2.5 rounded-xl bg-navy-600 text-white text-sm font-medium">Tam denemeye geç</button>
+                    <button onClick={function () { if (props.onStartExam) props.onStartExam(); else if (props.onClose) props.onClose(); }} className="mt-4 w-full py-2.5 rounded-xl bg-navy-600 text-white text-sm font-medium">Tam denemeyi şimdi çöz</button>
                 </div>
             </div>
         );

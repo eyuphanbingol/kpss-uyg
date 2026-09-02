@@ -6,7 +6,7 @@
         for (var i = 29; i >= 0; i--) {
             var d = new Date(today);
             d.setDate(d.getDate() - i);
-            var iso = StudentStore.todayStr(d);
+            var iso = (window.StudentStore && window.StudentStore.todayStr) ? window.StudentStore.todayStr(d) : d.toISOString().slice(0, 10);
             days.push({ iso: iso, q: (sessions[iso] && sessions[iso].questions) || 0 });
         }
         const rows = (props.plan && props.plan.rows) || [];
