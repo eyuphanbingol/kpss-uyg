@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>KPSS Eğitim Alanı</title>
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#0B1F3A">
+    <meta name="theme-color" content="#1E1B4B">
     <link rel="apple-touch-icon" href="icons/icon-192.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,15 +29,45 @@
             theme: {
                 extend: {
                     colors: {
-                        brand: {
-                            navy: "#0B1F3A",
-                            navy2: "#143056",
-                            ink: "#0A1628",
-                            amber: "#D97706",
-                            coral: "#E11D48",
-                            gold: "#B8860B",
-                            goldsoft: "#F3E6C4",
-                            emerald: "#059669"
+                        navy: {
+                            50:  "#EEEDF7",
+                            100: "#D6D3EC",
+                            400: "#5F599F",
+                            600: "#1E1B4B",
+                            700: "#141232",
+                            900: "#0A0919"
+                        },
+                        emerald: {
+                            50:  "#E7F5F3",
+                            100: "#C3E6E1",
+                            500: "#0F766E",
+                            600: "#0B5850"
+                        },
+                        amber: {
+                            50:  "#FEF3E2",
+                            100: "#FBE0B8",
+                            500: "#D97706",
+                            600: "#B45F04"
+                        },
+                        coral: {
+                            50:  "#FCE8ED",
+                            100: "#F8C4D1",
+                            500: "#E11D48",
+                            600: "#B0123A"
+                        },
+                        gold: {
+                            100: "#F5EBC7",
+                            400: "#DBC060",
+                            500: "#C9A227",
+                            700: "#8A6F1A"
+                        },
+                        stone: {
+                            50:  "#FAFAF9",
+                            100: "#F1F0EE",
+                            300: "#D3D0CB",
+                            500: "#78716C",
+                            700: "#4A4642",
+                            900: "#211F1D"
                         }
                     },
                     fontFamily: {
@@ -131,11 +161,11 @@
     <script src="js/paymentClient.js?v=14"></script>
     <script src="js/notificationEngine.js?v=8"></script>
     <script src="js/instructorDashboard.js?v=8"></script>
-    <script src="js/shareCard.js?v=15"></script>
+    <script src="js/shareCard.js?v=16"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.86.0/dist/umd/supabase.js"></script>
     <script src="js/supabaseClient.js?v=10"></script>
     <script src="js/syncEngine.js?v=14"></script>
-    <script src="js/jsxLoader.js?v=15"></script>
+    <script src="js/jsxLoader.js?v=16"></script>
     <script src="js/icons.js?v=15"></script>
 
     <style>
@@ -216,24 +246,24 @@
             100% { transform: translateY(80vh) rotate(280deg); opacity: 0; }
         }
 
-        html { background: #F7F6F3; }
-        body.app-bg { background: #F7F6F3; color: #0B1F3A; }
-        html.dark, .dark body.app-bg { background: #020617; color: #f1f5f9; }
+        html { background: #FAFAF9; }
+        body.app-bg { background: #FAFAF9; color: #211F1D; }
+        html.dark, .dark body.app-bg { background: #211F1D; color: #FAFAF9; }
 
         .panel {
             background: #fff;
-            border: 1px solid #e8e6e1;
-            box-shadow: 0 1px 2px rgba(11,31,58,0.04);
+            border: 1px solid #D3D0CB;
+            box-shadow: 0 1px 2px rgba(33,31,29,0.04);
         }
         .dark .panel {
-            background: #0f172a;
-            border-color: #1e293b;
+            background: #2A2724;
+            border-color: #4A4642;
             box-shadow: none;
         }
 
         .badge-gold {
-            background: linear-gradient(180deg, #F8EFC8, #E8D48A);
-            color: #6B5208;
+            background: #F5EBC7;
+            color: #8A6F1A;
             font-weight: 600;
         }
 
@@ -241,7 +271,7 @@
             position: sticky;
             top: 0;
             z-index: 30;
-            background: #0B1F3A;
+            background: #1E1B4B;
             color: #fff;
             font-size: 12px;
             text-align: center;
@@ -249,25 +279,25 @@
         }
 
         .booklet {
-            background: #f3f1ec;
-            border: 1px solid #ddd8ce;
+            background: #FAFAF9;
+            border: 1px solid #D3D0CB;
         }
         .dark .booklet {
-            background: #0f172a;
-            border-color: #334155;
+            background: #2A2724;
+            border-color: #4A4642;
         }
 
-        .heat-zayif { background: linear-gradient(90deg, rgba(225,29,72,0.16), transparent); }
-        .heat-orta { background: linear-gradient(90deg, rgba(217,119,6,0.16), transparent); }
-        .heat-iyi { background: linear-gradient(90deg, rgba(5,150,105,0.16), transparent); }
+        .heat-zayif { background: linear-gradient(90deg, rgba(225,29,72,0.12), transparent); }
+        .heat-orta { background: linear-gradient(90deg, rgba(217,119,6,0.12), transparent); }
+        .heat-iyi { background: linear-gradient(90deg, rgba(15,118,110,0.12), transparent); }
 
-        input[type="range"] { accent-color: #0B1F3A; }
+        input[type="range"] { accent-color: #1E1B4B; }
         button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
-            outline: 2px solid #0B1F3A;
+            outline: 2px solid #1E1B4B;
             outline-offset: 2px;
         }
         .dark button:focus-visible, .dark input:focus-visible, .dark select:focus-visible {
-            outline-color: #E8D48A;
+            outline-color: #5F599F;
         }
 
         .overlay-scrim {
@@ -289,7 +319,7 @@
 
 <body class="app-bg min-h-screen text-slate-800 antialiased transition-colors duration-300">
     <div id="root"></div>
-    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=15"></script>
+    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=16"></script>
     <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.getRegistrations().then(function (regs) {

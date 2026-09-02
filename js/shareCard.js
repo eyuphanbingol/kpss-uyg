@@ -5,15 +5,15 @@
         c.width = 1080;
         c.height = 1920;
         var ctx = c.getContext("2d");
-        ctx.fillStyle = "#0B1F3A";
+        ctx.fillStyle = "#1E1B4B";
         ctx.fillRect(0, 0, 1080, 1920);
-        ctx.fillStyle = "#F3E6C4";
+        ctx.fillStyle = "#C9A227";
         ctx.font = "600 36px Manrope, sans-serif";
         ctx.fillText("KPSS EĞİTİM ALANI", 80, 160);
         ctx.fillStyle = "rgba(243,230,196,0.7)";
         ctx.font = "400 28px Inter, sans-serif";
         ctx.fillText(opts.nickname || "öğrenci", 80, 220);
-        ctx.fillStyle = "#E8D48A";
+        ctx.fillStyle = "#C9A227";
         ctx.font = "700 200px 'Space Grotesk', sans-serif";
         ctx.fillText("%" + (opts.pct != null ? opts.pct : 0), 80, 620);
         ctx.fillStyle = "#fff";

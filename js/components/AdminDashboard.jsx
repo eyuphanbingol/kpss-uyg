@@ -119,8 +119,8 @@
         var email = (student.userProfile && student.userProfile.email) || "";
 
         return (
-            <div className="min-h-screen bg-slate-100 dark:bg-slate-950 text-slate-800 dark:text-slate-100 flex">
-                <aside className="hidden md:flex w-60 shrink-0 flex-col border-r border-slate-800 bg-slate-950 text-slate-200">
+            <div className="min-h-screen bg-stone-50 dark:bg-stone-900 text-stone-900 dark:text-stone-50 flex">
+                <aside className="hidden md:flex w-60 shrink-0 flex-col border-r border-stone-800 bg-stone-900 text-stone-100">
                     <div className="px-5 py-6">
                         <p className="text-xs font-semibold tracking-widest text-zinc-400">KPSS</p>
                         <p className="text-lg font-semibold mt-1">Yönetim</p>
@@ -235,8 +235,8 @@
                                             ) : shown.map(function (u) {
                                                 return (
                                                     <tr key={u.user_id || u.nickname} className={"border-b border-zinc-200 last:border-0 " + (function () {
-                                                        if (!u.last_study_at) return "bg-brand-coral/5";
-                                                        return (Date.now() - new Date(u.last_study_at).getTime()) > 7 * 86400000 ? "bg-brand-coral/5" : "";
+                                                        if (!u.last_study_at) return "bg-coral-50";
+                                                        return (Date.now() - new Date(u.last_study_at).getTime()) > 7 * 86400000 ? "bg-coral-50" : "";
                                                     }())}>
                                                         <td className="px-4 py-3">
                                                             <div className="font-medium">{u.nickname || "—"}</div>

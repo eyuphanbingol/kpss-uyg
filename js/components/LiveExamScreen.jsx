@@ -18,12 +18,16 @@
                     <h1 className="text-2xl font-semibold tracking-tight">Canlı deneme</h1>
                     <button onClick={props.onBack} className="text-sm font-medium">Kapat</button>
                 </div>
-                <div className="p-5 rounded-2xl panel">
-                    <p className="text-sm text-zinc-500">Haftalık sabit saat: cumartesi 21:00 (yerel).</p>
-                    <p className="text-2xl font-semibold mt-3">{hrs} saat sonra</p>
-                    <p className="text-xs text-zinc-400 mt-2">{when.toLocaleString("tr-TR")}</p>
-                    <p className="text-sm text-zinc-500 mt-4">Anlık sıra, canlı event tablosu bağlanınca açılır. Şimdilik tam deneme modunu kullan; GY-GK durmaz.</p>
-                    <button onClick={function () { if (props.onClose) props.onClose(); }} className="mt-4 w-full py-2.5 rounded-xl border text-sm font-medium">Tam denemeye geç (Profil → Tam deneme)</button>
+                <div className="p-5 rounded-2xl bg-stone-50 dark:bg-stone-900 border border-stone-300">
+                    <p className="text-sm text-stone-500 flex items-center gap-2">
+                        <span className="h-2 w-2 rounded-full bg-emerald-500" /> Canlı
+                    </p>
+                    <p className="text-sm text-stone-500 mt-3">Haftalık sabit saat: cumartesi 21:00 (yerel).</p>
+                    <p className="font-stat text-2xl mt-3">{hrs} saat sonra</p>
+                    <p className="text-xs text-stone-500 mt-2">{when.toLocaleString("tr-TR")}</p>
+                    <span className="inline-block mt-3 text-xs px-2 py-0.5 rounded-full bg-stone-100 text-stone-700">katılımcı · yakında</span>
+                    <p className="text-sm text-stone-500 mt-4">Anlık sıra bağlanınca açılır. GY-GK durmaz.</p>
+                    <button onClick={function () { if (props.onClose) props.onClose(); }} className="mt-4 w-full py-2.5 rounded-xl bg-navy-600 text-white text-sm font-medium">Tam denemeye geç</button>
                 </div>
             </div>
         );

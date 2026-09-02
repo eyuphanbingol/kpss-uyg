@@ -15,7 +15,7 @@
 
         return (
             <div className="fixed inset-0 z-50 overlay-scrim flex items-end sm:items-center justify-center p-4 overflow-y-auto">
-                <div className="w-full max-w-md overlay-sheet p-6 sm:p-8 fade-in my-6">
+                <div className="w-full max-w-md bg-stone-50 dark:bg-stone-900 overlay-sheet p-6 sm:p-8 fade-in my-6">
                     <h2 className="text-xl font-semibold tracking-tight mb-1">Kısa kurulum</h2>
                     <p className="text-sm text-zinc-500 mb-6">GY-GK ile başlıyorsun. Diğer kulvarlar sonra açılır.</p>
 
@@ -28,7 +28,7 @@
                         {[{ id: "lisans", t: "Lisans" }, { id: "onlisans", t: "Ön lisans" }, { id: "ortaogretim", t: "Ortaöğretim" }].map(function (x) {
                             return (
                                 <button key={x.id} type="button" onClick={function () { pickLevel(x.id); }}
-                                    className={"text-sm font-medium py-2.5 rounded-xl border " + (level === x.id ? "bg-zinc-900 text-white border-zinc-900" : "border-zinc-200 dark:border-zinc-700")}>{x.t}</button>
+                                    className={"text-sm font-medium py-2.5 rounded-xl border " + (level === x.id ? "border-navy-600 bg-navy-50 text-navy-600" : "border-stone-300 text-stone-700")}>{x.t}</button>
                             );
                         })}
                     </div>
@@ -47,7 +47,7 @@
                             name: name, nickname: name, examDate: examDate, dailyMinutes: 45, dailyQuestions: 25,
                             educationLevel: level, targetType: "B", kvkkConsent: true, weeklyHours: 7
                         });
-                    }} className={"w-full font-semibold py-3.5 rounded-xl " + (kvkk ? "bg-zinc-900 text-white" : "bg-zinc-200 text-zinc-400")}>
+                    }} className={"w-full font-semibold py-3.5 rounded-xl " + (kvkk ? "bg-navy-600 text-white" : "bg-stone-100 text-stone-400")}>
                         Başla
                     </button>
                 </div>

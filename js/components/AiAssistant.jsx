@@ -24,10 +24,10 @@
                 {!item ? <p className="text-zinc-500 text-sm">Yanlış defteri boş. Asistan defterden beslenir; model API’si yokken çözüm notu kullanılır.</p> : (
                     <div>
                         <p className="text-sm font-medium mb-2">{item.q.question}</p>
-                        <p className="text-xs text-emerald-700 mb-4">{item.q.explanation}</p>
-                        <textarea value={q} onChange={function (e) { setQ(e.target.value); }} className="w-full border rounded-xl p-3 text-sm" placeholder="Neden yanlış yaptım?" />
-                        <button onClick={explain} className="mt-3 w-full py-2.5 rounded-xl bg-zinc-900 text-white text-sm font-semibold">Açıkla</button>
-                        {out ? <p className="text-sm text-zinc-600 mt-4 leading-relaxed">{out}</p> : null}
+                        <p className="text-xs text-stone-500 mb-4 p-3 rounded-2xl bg-stone-100">{item.q.explanation}</p>
+                        <textarea value={q} onChange={function (e) { setQ(e.target.value); }} className="w-full border border-stone-300 rounded-xl p-3 text-sm bg-navy-600 text-white placeholder:text-navy-100" placeholder="Neden yanlış yaptım?" />
+                        <button onClick={explain} className="mt-3 w-full py-2.5 rounded-xl bg-navy-600 text-white text-sm font-semibold">Açıkla</button>
+                        {out ? <p className="text-sm text-stone-700 mt-4 leading-relaxed p-3 rounded-2xl bg-stone-100">{out}</p> : null}
                     </div>
                 )}
             </div>

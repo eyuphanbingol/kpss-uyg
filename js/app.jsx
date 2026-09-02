@@ -1,23 +1,23 @@
 const { useState, useEffect, useMemo, useRef } = React;
 
 const DERS_THEME = {
-    "Tarih": { grad: "from-brand-navy to-brand-navy2", text: "text-brand-navy", soft: "bg-brand-navy/5", icon: "🏛️", darkText: "text-brand-goldsoft", darkSoft: "bg-slate-900" },
-    "Coğrafya": { grad: "from-brand-navy to-brand-navy2", text: "text-brand-navy", soft: "bg-brand-navy/5", icon: "🗺️", darkText: "text-brand-goldsoft", darkSoft: "bg-slate-900" },
-    "Türkçe": { grad: "from-brand-navy to-brand-navy2", text: "text-brand-navy", soft: "bg-brand-navy/5", icon: "✍️", darkText: "text-brand-goldsoft", darkSoft: "bg-slate-900" },
-    "Vatandaşlık": { grad: "from-brand-navy to-brand-navy2", text: "text-brand-navy", soft: "bg-brand-navy/5", icon: "⚖️", darkText: "text-brand-goldsoft", darkSoft: "bg-slate-900" },
-    "Güncel Bilgiler": { grad: "from-brand-navy to-brand-navy2", text: "text-brand-navy", soft: "bg-brand-navy/5", icon: "📰", darkText: "text-brand-goldsoft", darkSoft: "bg-slate-900" }
+    "Tarih": { text: "text-stone-700", icon: "🏛️", darkText: "text-stone-300" },
+    "Coğrafya": { text: "text-stone-700", icon: "🗺️", darkText: "text-stone-300" },
+    "Türkçe": { text: "text-stone-700", icon: "✍️", darkText: "text-stone-300" },
+    "Vatandaşlık": { text: "text-stone-700", icon: "⚖️", darkText: "text-stone-300" },
+    "Güncel Bilgiler": { text: "text-stone-700", icon: "📰", darkText: "text-stone-300" }
 };
 
 function themeFor(ders, isDark) {
-    const t = DERS_THEME[ders] || { grad: "from-slate-500 to-slate-700", text: "text-slate-700", soft: "bg-slate-50", icon: "📚", darkText: "text-slate-400", darkSoft: "bg-slate-950" };
-    return isDark ? Object.assign({}, t, { text: t.darkText, soft: t.darkSoft }) : t;
+    const t = DERS_THEME[ders] || { text: "text-stone-700", icon: "📚", darkText: "text-stone-300" };
+    return isDark ? Object.assign({}, t, { text: t.darkText }) : t;
 }
 
 function masteryLabel(m) {
-    if (m === "iyi") return { text: "İyi", cls: "bg-brand-emerald/10 text-brand-emerald" };
-    if (m === "orta") return { text: "Orta", cls: "bg-brand-amber/10 text-brand-amber" };
-    if (m === "zayif") return { text: "Zayıf", cls: "bg-brand-coral/10 text-brand-coral" };
-    return { text: "Yeni", cls: "bg-slate-100 text-slate-500 dark:bg-slate-700 dark:text-slate-300" };
+    if (m === "iyi") return { text: "İyi", cls: "bg-emerald-50 text-emerald-600" };
+    if (m === "orta") return { text: "Orta", cls: "bg-amber-50 text-amber-600" };
+    if (m === "zayif") return { text: "Zayıf", cls: "bg-coral-50 text-coral-600" };
+    return { text: "Yeni", cls: "bg-stone-100 text-stone-500" };
 }
 
 function useStudent() {
@@ -53,7 +53,7 @@ function ThemeBtn(props) {
 function Confetti() {
     const [pieces, setPieces] = useState([]);
     useEffect(function () {
-        const colors = ["#0B1F3A", "#B8860B", "#059669", "#D97706"];
+        const colors = ["#1E1B4B", "#0F766E", "#D97706"];
         setPieces(Array.from({ length: 18 }, function (_, i) {
             return {
                 id: i,
@@ -89,14 +89,17 @@ function BottomNav(props) {
         { id: "ben", label: "Ben", icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" }
     ];
     return (
-        <nav className="fixed bottom-0 inset-x-0 z-40 bg-white/95 dark:bg-zinc-950/95 border-t border-zinc-200 dark:border-zinc-800" style={{ paddingBottom: "max(8px, env(safe-area-inset-bottom))" }}>
+        <nav className="fixed bottom-0 inset-x-0 z-40 bg-white/95 dark:bg-stone-900/95 border-t border-stone-300 dark:border-stone-700" style={{ paddingBottom: "max(8px, env(safe-area-inset-bottom))" }}>
             <div className="max-w-2xl mx-auto grid grid-cols-5 px-1 pt-1">
                 {tabs.map(function (tab) {
                     const on = props.nav === tab.id;
                     return (
                         <button key={tab.id} onClick={function () { props.onChange(tab.id); }}
-                            className={"flex flex-col items-center gap-0.5 py-2 rounded-xl text-[11px] font-medium duration-150 " + (on ? "text-brand-navy dark:text-brand-goldsoft" : "text-zinc-400")}>
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={on ? 2.2 : 1.7} d={tab.icon} /></svg>
+                            className={"relative flex flex-col items-center gap-0.5 py-2 rounded-xl text-[11px] font-medium duration-150 " + (on ? "text-navy-600" : "text-stone-500")}>
+                            <span className="relative">
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={on ? 2.2 : 1.7} d={tab.icon} /></svg>
+                                {tab.id === "bugun" && props.streak > 0 ? <span className="absolute -top-0.5 -right-1 h-1.5 w-1.5 rounded-full bg-amber-500" /> : null}
+                            </span>
                             {tab.label}
                         </button>
                     );
@@ -113,7 +116,7 @@ function Onboarding(props) {
     return (
         <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-end sm:items-center justify-center p-4">
             <div className="w-full max-w-md bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl fade-in">
-                <p className="text-xs font-bold uppercase tracking-widest text-indigo-500 mb-2">Kişisel eğitim alanı</p>
+                <p className="text-xs font-bold uppercase tracking-widest text-navy-400 mb-2">Kişisel eğitim alanı</p>
                 <h2 className="text-2xl font-black text-slate-900 dark:text-white mb-2">Dershanedeki yerin hazır</h2>
                 <p className="text-sm text-slate-500 mb-6">Hedefini söyle, her gün ne çalışacağını biz sıraya koyalım. Veriler bu cihazda kalır.</p>
                 <label className="block text-xs font-bold text-slate-500 mb-1">Adın (isteğe bağlı)</label>
@@ -127,7 +130,7 @@ function Onboarding(props) {
                 <button onClick={function () {
                     const q = Math.max(10, Math.round(mins / 1.8));
                     StudentStore.completeOnboarding({ name: name, examDate: examDate, dailyMinutes: mins, dailyQuestions: q });
-                }} className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold py-4 rounded-2xl shadow-lg">
+                }} className="w-full bg-navy-600 text-white font-bold py-4 rounded-2xl">
                     Koçluğu başlat
                 </button>
             </div>
@@ -158,21 +161,21 @@ function Bugun(props) {
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
             <div className="grid grid-cols-3 gap-2 mb-5">
-                <div className="rounded-2xl panel p-3 text-center">
-                    <div className="font-stat text-xl">{plan.daysLeft == null ? "—" : plan.daysLeft}</div>
-                    <div className="text-[11px] text-zinc-400 mt-0.5">gün</div>
+                <div className="rounded-2xl bg-stone-100 dark:bg-stone-900 p-3 text-center">
+                    <div className="font-stat text-xl text-stone-900 dark:text-stone-50">{plan.daysLeft == null ? "—" : plan.daysLeft}</div>
+                    <div className="text-[11px] text-stone-500 mt-0.5">gün</div>
                 </div>
-                <div className="rounded-2xl panel p-3 text-center">
-                    <div className="font-stat text-xl text-brand-amber">{plan.streak}</div>
-                    <div className="text-[11px] text-brand-amber/80 mt-0.5">seri</div>
+                <div className="rounded-2xl bg-amber-50 p-3 text-center">
+                    <div className="font-stat text-xl text-amber-500">{plan.streak}</div>
+                    <div className="text-[11px] text-amber-600 mt-0.5">seri</div>
                 </div>
-                <div className="rounded-2xl panel p-3 text-center">
-                    <div className="font-stat text-xl">{plan.session.questions || 0}/{plan.qGoal}</div>
-                    <div className="text-[11px] text-zinc-400 mt-0.5">soru</div>
+                <div className="rounded-2xl bg-stone-100 dark:bg-stone-900 p-3 text-center">
+                    <div className="font-stat text-xl text-stone-900 dark:text-stone-50">{plan.session.questions || 0}/{plan.qGoal}</div>
+                    <div className="text-[11px] text-stone-500 mt-0.5">soru</div>
                 </div>
             </div>
             <div className="w-full h-1.5 bg-zinc-200 dark:bg-slate-800 rounded-full mb-6 overflow-hidden">
-                <div className="h-full bg-brand-emerald" style={{ width: qPct + "%" }} />
+                <div className="h-full bg-emerald-500" style={{ width: qPct + "%" }} />
             </div>
             {banner ? <div className="mb-5 px-4 py-3 rounded-2xl bg-zinc-900 text-white text-sm">{banner}</div> : null}
             {plan.coach ? <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed">{plan.coach}</p> : null}
@@ -188,27 +191,30 @@ function Bugun(props) {
                             <div className="flex justify-between items-center gap-3">
                                 <div>
                                     <div className="font-medium flex items-center gap-2">
-                                        {weak ? <span className="h-2 w-2 rounded-full bg-brand-coral shrink-0" /> : null}
+                                        {weak ? <span className="h-2 w-2 rounded-full bg-coral-500 shrink-0" /> : null}
                                         {task.title}
                                     </div>
                                     <div className="text-sm text-zinc-500 mt-0.5">{task.detail}</div>
                                     {task.why ? <div className="text-xs text-zinc-400 mt-1">{task.why}</div> : null}
                                 </div>
-                                <span className="text-brand-navy dark:text-brand-goldsoft text-sm shrink-0">Başla</span>
+                                <span className="text-navy-600 dark:text-navy-400 text-sm shrink-0">Başla</span>
                             </div>
                         </button>
                     );
                 })}
             </div>
+            {plan.tasks[0] ? (
+                <button onClick={function () { props.onTask(plan.tasks[0]); }} className="mt-4 w-full py-3.5 rounded-2xl bg-navy-600 text-white font-semibold">Bugünkü denemeye başla</button>
+            ) : null}
             {plan.weekly && plan.weekly.length ? (
                 <div className="mt-8">
                     <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-3">Haftalık plan</p>
                     <div className="flex gap-2 overflow-x-auto pb-1">
                         {plan.weekly.map(function (d, di) {
                             return (
-                                <div key={d.day} className={"rounded-xl panel p-2 text-center min-w-[3.2rem] " + (di === 0 ? "ring-1 ring-brand-navy dark:ring-brand-goldsoft" : "")}>
+                                <div key={d.day} className={"rounded-xl bg-stone-100 dark:bg-stone-900 p-2 text-center min-w-[3.2rem] " + (di === 0 ? "ring-1 ring-navy-600" : "")}>
                                     <div className="text-[10px] text-zinc-400">{d.day}</div>
-                                    <div className="h-1.5 w-1.5 rounded-full mx-auto mt-1 bg-brand-navy/40" style={{ transform: "scale(" + Math.min(1.8, 0.6 + (d.weight || 40) / 80) + ")" }} />
+                                    <div className="h-1.5 w-1.5 rounded-full mx-auto mt-1 bg-navy-400" style={{ transform: "scale(" + Math.min(1.8, 0.6 + (d.weight || 40) / 80) + ")" }} />
                                     <div className="text-[11px] font-stat mt-1">{d.minutes}</div>
                                 </div>
                             );
@@ -236,17 +242,15 @@ function DersHome(props) {
                 {Object.keys(kpssData).map(function (ders) {
                     const t = themeFor(ders, props.isDark);
                     const s = stats[ders] || { konuSayisi: 0, soruSayisi: 0 };
-                    const rows = props.plan.rows.filter(function (r) { return r.ders === ders; });
-                    const done = rows.filter(function (r) { return r.mastery === "iyi"; }).length;
                     return (
                         <button key={ders} onClick={function () { props.onDers(ders); }}
-                            className="w-full text-left p-4 panel rounded-2xl flex items-center gap-4">
-                            <div className={"h-11 w-11 rounded-xl bg-gradient-to-br " + t.grad + " flex items-center justify-center text-lg shrink-0"}>{t.icon}</div>
+                            className="w-full text-left p-4 rounded-2xl bg-stone-100 dark:bg-stone-900 flex items-center gap-4">
+                            <div className="h-11 w-11 rounded-xl bg-white dark:bg-stone-800 flex items-center justify-center text-lg shrink-0 text-stone-700">{t.icon}</div>
                             <div className="min-w-0 flex-1">
-                                <h2 className="font-medium">{ders}</h2>
-                                <p className="text-sm text-zinc-500">{s.konuSayisi} konu · {s.soruSayisi} soru{rows.length ? " · " + done + " iyi" : ""}</p>
+                                <h2 className="font-medium text-stone-700 dark:text-stone-100">{ders}</h2>
+                                <p className="text-sm text-stone-500">{s.konuSayisi} konu · {s.soruSayisi} soru</p>
                             </div>
-                            <span className="text-zinc-300">›</span>
+                            <span className="text-stone-300">›</span>
                         </button>
                     );
                 })}
@@ -292,7 +296,7 @@ function KonuList(props) {
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
             <div className="flex items-center gap-4 mb-6">
-                <div className={"h-14 w-14 rounded-2xl bg-gradient-to-br " + t.grad + " flex items-center justify-center text-white text-2xl shadow-lg"}>{t.icon}</div>
+                <div className="h-14 w-14 rounded-2xl bg-stone-100 dark:bg-stone-800 flex items-center justify-center text-2xl">{t.icon}</div>
                 <div>
                     <h1 className="text-3xl font-black">{ders}</h1>
             <p className="text-zinc-500 text-sm">Sırayla ilerle. Konu bitince sonraki açılır.</p>
@@ -314,7 +318,7 @@ function KonuList(props) {
                             className={"w-full text-left p-5 panel rounded-2xl " + (open ? heat : "opacity-45")}>
                             <div className="flex justify-between items-start gap-3">
                                 <div className="flex gap-3 min-w-0">
-                                    <div className={"h-10 w-10 rounded-xl bg-gradient-to-br " + t.grad + " flex items-center justify-center text-white font-bold text-sm shrink-0"}>{done ? "✓" : (open ? idx + 1 : "🔒")}</div>
+                                    <div className={"h-10 w-10 rounded-xl flex items-center justify-center font-stat text-sm shrink-0 " + (done ? "bg-emerald-50 text-emerald-600" : (open ? "bg-stone-100 text-stone-700" : "bg-stone-100 text-stone-400"))}>{done ? "✓" : (open ? idx + 1 : "🔒")}</div>
                                     <div className="min-w-0">
                                         <div className="font-bold text-slate-800 dark:text-slate-100">{konu}</div>
                                         <p className="text-xs text-slate-400 mt-1">{open ? ((kd.notlar || []).length + " not · " + (kd.sorular || []).length + " soru") : "Önce önceki konuyu bitir"}</p>
@@ -363,10 +367,10 @@ function KonuHub(props) {
                 <button onClick={function () {
                     if (!sorular.length) { alert("Bu konuya ait henüz soru yüklenmedi!"); return; }
                     props.onTest();
-                }} className="group text-left p-7 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/50 border border-indigo-200 rounded-3xl shadow-lg card-hover">
-                    <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-2xl mb-4">📝</div>
-                    <h3 className="text-xl font-bold text-indigo-900 dark:text-indigo-100 mb-2">Testi çöz</h3>
-                    <p className="text-sm text-indigo-700">{sorular.length} soru · sonuç hakimiyeti günceller</p>
+                }} className="group text-left p-7 bg-stone-50 dark:bg-stone-900 border border-stone-300 rounded-3xl">
+                    <div className="h-14 w-14 rounded-2xl bg-navy-600 flex items-center justify-center text-white text-2xl mb-4">📝</div>
+                    <h3 className="text-xl font-bold text-stone-900 dark:text-stone-50 mb-2">Testi çöz</h3>
+                    <p className="text-sm text-stone-500">{sorular.length} soru · sonuç hakimiyeti günceller</p>
                 </button>
             </div>
         </Shell>
@@ -386,14 +390,14 @@ function NotesView(props) {
             {notlar.length ? (
                 <div className="relative bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 shadow-xl flex flex-col p-6 sm:p-10 min-h-[400px]">
                     <div className="flex justify-center mb-6">
-                        <div className="h-12 w-12 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 rounded-2xl flex items-center justify-center font-black text-xl">{idx + 1}/{notlar.length}</div>
+                        <div className="h-12 w-12 bg-stone-100 text-navy-600 rounded-2xl flex items-center justify-center font-stat text-xl">{idx + 1}/{notlar.length}</div>
                     </div>
                     <div key={idx} className="flex-1 fade-in text-center mb-20">
                         <div className="text-slate-700 dark:text-slate-300 text-[17px] leading-relaxed max-w-2xl w-full mx-auto" dangerouslySetInnerHTML={{ __html: notlar[idx] }} />
                     </div>
                     <div className="absolute bottom-6 left-0 right-0 px-6 flex justify-between items-center">
                         <button disabled={idx === 0} onClick={function () { props.onIndex(idx - 1); }}
-                            className={"p-3 rounded-xl font-bold " + (idx === 0 ? "opacity-30" : "bg-indigo-50 text-indigo-600")}>Önceki</button>
+                            className={"p-3 rounded-xl font-bold " + (idx === 0 ? "opacity-30" : "bg-stone-100 text-navy-600")}>Önceki</button>
                         {idx === notlar.length - 1 ? (
                             <button onClick={function () {
                                 if (props.ders && props.konu) StudentStore.markNotesComplete(props.ders, props.konu);
@@ -402,7 +406,7 @@ function NotesView(props) {
                             }} className="p-3 rounded-xl font-bold bg-zinc-900 text-white">{props.hasTest ? "Teste geç" : "Konuyu bitir"}</button>
                         ) : (
                             <button onClick={function () { props.onIndex(idx + 1); }}
-                                className="p-3 rounded-xl font-bold bg-indigo-50 text-indigo-600">Sonraki</button>
+                                className="p-3 rounded-xl font-bold bg-stone-100 text-navy-600">Sonraki</button>
                         )}
                     </div>
                 </div>
@@ -410,7 +414,7 @@ function NotesView(props) {
                 <div className="text-center py-16 bg-white dark:bg-slate-800 rounded-3xl border border-dashed">Bu konu için henüz not yok.</div>
             )}
             {props.hasTest ? (
-                <button onClick={props.onTest} className="mt-8 mb-8 w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-5 rounded-2xl font-bold shadow-xl">
+                <button onClick={props.onTest} className="mt-8 mb-8 w-full bg-navy-600 text-white p-5 rounded-2xl font-bold">
                     Notları bitirdim, teste geç
                 </button>
             ) : null}
@@ -428,7 +432,7 @@ function TestView(props) {
     const mm = timed ? Math.floor(props.session.secondsLeft / 60) : 0;
     const ss = timed ? String(props.session.secondsLeft % 60).padStart(2, "0") : "";
     const tLeft = props.session.secondsLeft;
-    const tCls = !timed ? "" : (tLeft <= 60 ? "text-brand-coral" : tLeft <= 300 ? "text-brand-amber" : "text-brand-navy");
+    const tCls = !timed ? "" : (tLeft <= 60 ? "text-coral-500" : tLeft <= 300 ? "text-amber-500" : "text-navy-600");
     return (
         <Shell padBottom={false}>
             <div className="flex justify-between items-center text-sm font-bold text-slate-500 mb-4">
@@ -439,11 +443,11 @@ function TestView(props) {
                 </span>
             </div>
             <div className="w-full bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full mb-4 overflow-hidden">
-                <div className="bg-gradient-to-r from-indigo-500 to-purple-500 h-2.5 rounded-full" style={{ width: progress + "%" }} />
+                <div className="bg-navy-600 h-2.5 rounded-full" style={{ width: progress + "%" }} />
             </div>
             {item.ders ? <p className="text-xs font-bold text-slate-400 mb-3">{item.ders} · {item.konu}</p> : null}
             <div className="bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-lg mb-6 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-indigo-500 to-purple-500"></div>
+                <div className="absolute top-0 left-0 w-1.5 h-full bg-navy-600"></div>
                 <h3 className="text-lg font-bold leading-relaxed whitespace-pre-line">{soru.question}</h3>
             </div>
             <div className="space-y-3">
@@ -459,7 +463,7 @@ function TestView(props) {
                             icon = <svg className="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" /></svg>;
                         } else cls += "bg-slate-50 dark:bg-slate-800/50 border-slate-200 text-slate-400 opacity-60";
                     } else {
-                        cls += "bg-white dark:bg-slate-800 border-slate-200 hover:border-brand-navy";
+                        cls += "bg-white dark:bg-slate-800 border-slate-200 hover:border-navy-600";
                         icon = <span className="flex-shrink-0 h-8 w-8 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-xs font-bold">{String.fromCharCode(65 + i)}</span>;
                     }
                     return (
@@ -471,11 +475,11 @@ function TestView(props) {
             </div>
             {props.answered ? (
                 <div className="mt-8 space-y-4 fade-in pb-10">
-                    <div className="bg-brand-navy/5 dark:bg-slate-900 border border-brand-navy/10 border-l-4 border-l-brand-navy p-6 rounded-2xl">
-                        <h4 className="font-semibold text-brand-navy dark:text-brand-goldsoft text-sm mb-2">Çözüm notu</h4>
+                    <div className="bg-navy-50 dark:bg-slate-900 border border-navy-100 border-l-4 border-l-navy-600 p-6 rounded-2xl">
+                        <h4 className="font-semibold text-navy-600 dark:text-navy-400 text-sm mb-2">Çözüm notu</h4>
                         <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">{soru.explanation}</p>
                     </div>
-                    <button onClick={props.onNext} className="w-full bg-brand-navy text-white p-5 rounded-2xl font-semibold">
+                    <button onClick={props.onNext} className="w-full bg-navy-600 text-white p-5 rounded-2xl font-semibold">
                         {qIndex + 1 === items.length ? "Sonuçları gör" : "Sonraki soru"}
                     </button>
                 </div>
@@ -502,7 +506,7 @@ function ResultView(props) {
                         <path d="M18 2a16 16 0 1 1 0 32 16 16 0 0 1 0-32" fill="none" stroke={renk} strokeWidth="3" strokeDasharray={oran + ", 100"} strokeLinecap="round" className="progress-ring" />
                     </svg>
                     <div className="absolute inset-0 flex flex-col items-center justify-center">
-                        <span className="font-stat text-3xl">%{oran}</span>
+                        <span className="font-stat text-3xl text-navy-600">%{oran}</span>
                     </div>
                 </div>
                 <div className="grid grid-cols-3 gap-3 mb-6">
@@ -547,9 +551,9 @@ function ResultView(props) {
                             caption: "Net kartı · KPSS Eğitim Alanı"
                         });
                         window.ShareCard.download(url, "kpss-net-karti.png");
-                    }} className="w-full mb-3 p-4 rounded-2xl bg-brand-navy text-brand-goldsoft font-semibold">Net kartını indir</button>
+                    }} className="w-full mb-3 p-4 rounded-2xl bg-navy-600 text-white font-semibold">Net kartını indir</button>
                 <div className="flex gap-3">
-                    <button onClick={props.onRetry} className="flex-1 bg-brand-navy text-white p-4 rounded-2xl font-semibold">Tekrar</button>
+                    <button onClick={props.onRetry} className="flex-1 bg-navy-600 text-white p-4 rounded-2xl font-semibold">Tekrar</button>
                     <button onClick={props.onHome} className="flex-1 panel p-4 rounded-2xl font-medium">Kapat</button>
                 </div>
             </div>
@@ -575,9 +579,9 @@ function Eksikler(props) {
             </div>
             <div className="grid grid-cols-2 gap-3 mb-6">
                 <button onClick={function () { props.onReview(); }} disabled={!plan.due.length}
-                    className="p-4 rounded-2xl bg-brand-navy text-white font-semibold disabled:opacity-40">Tekrar · {plan.due.length}</button>
+                    className="p-4 rounded-2xl bg-navy-600 text-white font-semibold disabled:opacity-40">Tekrar · {plan.due.length}</button>
                 <button onClick={function () { props.onWrong(); }} disabled={!plan.wrong.length}
-                    className="p-4 rounded-2xl bg-brand-coral text-white font-semibold disabled:opacity-40">Yanlış defteri · {plan.wrong.length}</button>
+                    className="p-4 rounded-2xl border border-coral-500 text-coral-600 font-semibold disabled:opacity-40">Yanlış defteri · {plan.wrong.length}</button>
             </div>
             {Object.keys(byDers).map(function (ders) {
                 const t = themeFor(ders, props.isDark);
@@ -590,7 +594,7 @@ function Eksikler(props) {
                                 const m = masteryLabel(r.mastery);
                                 return (
                                     <button key={r.konu} onClick={function () { props.openKonu(r.ders, r.konu); }}
-                                        className={"w-full flex justify-between items-center p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 " + heat}>
+                                        className={"w-full flex justify-between items-center p-3 rounded-xl bg-stone-50 dark:bg-stone-900 border " + (r.mastery === "zayif" ? "border-coral-500" : "border-stone-300")}>
                                         <span className="text-sm font-semibold text-left pr-2">{r.konu}</span>
                                         <span className="flex items-center gap-2 shrink-0">
                                             <span className="text-sm font-black">{r.lastPct == null ? "—" : "%" + r.lastPct}</span>
@@ -636,7 +640,7 @@ function DenemeSetup(props) {
                 {dersler.map(function (d) {
                     return (
                         <button key={d} onClick={function () { toggle(d); }}
-                            className={"px-3 py-2 rounded-xl text-sm font-bold border " + (sel[d] ? "bg-indigo-600 text-white border-indigo-600" : "bg-white dark:bg-slate-800 border-slate-200")}>{d}</button>
+                            className={"px-3 py-2 rounded-xl text-sm font-bold border " + (sel[d] ? "bg-navy-600 text-white border-navy-600" : "bg-white dark:bg-stone-900 border-stone-300")}>{d}</button>
                     );
                 })}
             </div>
@@ -648,7 +652,7 @@ function DenemeSetup(props) {
                 const items = StudyPlanner.mixedQuiz(props.kpssData, chosen, n);
                 if (!items.length) { alert("Seçilen derslerde soru yok."); return; }
                 props.onStart(items, mins * 60);
-            }} className="w-full bg-brand-navy text-white p-5 rounded-2xl font-semibold">Karışık testi başlat</button>
+            }} className="w-full bg-navy-600 text-white p-5 rounded-2xl font-semibold">Karışık testi başlat</button>
             {props.onFullExam ? (
                 <button onClick={props.onFullExam} className="mt-3 w-full p-4 rounded-2xl border font-bold">Tam deneme (kitapçık)</button>
             ) : null}
@@ -761,7 +765,7 @@ function Ben(props) {
                     {up.premiumUntil ? new Date(up.premiumUntil).toLocaleDateString("tr-TR") : "açık"}</span>
                 ) : "Ücretsiz plan · sınırlı deneme"}</p>
                 {!StudentStore.isPremium() ? (
-                    <button onClick={function () { props.onOpen && props.onOpen("paywall"); }} className="w-full py-2.5 rounded-xl bg-brand-navy text-white text-sm font-semibold">Planı gör</button>
+                    <button onClick={function () { props.onOpen && props.onOpen("paywall"); }} className="w-full py-2.5 rounded-xl bg-navy-600 text-white text-sm font-semibold">Planı gör</button>
                 ) : null}
                 <p className="text-xs text-zinc-400 mt-3">Davet kodun: <b>{StudentStore.ensureReferralCode ? StudentStore.ensureReferralCode() : (up.referralCode || "—")}</b></p>
                 <label className="text-xs text-zinc-400 mt-2 block">Arkadaş kodu</label>
@@ -780,7 +784,7 @@ function Ben(props) {
                     ].map(function (b) {
                         var on = st.achievements && st.achievements[b.id];
                         return (
-                            <span key={b.id} className={"text-xs font-medium px-2 py-1 rounded-full inline-flex items-center gap-1 " + (on ? "bg-brand-emerald/10 text-brand-emerald pop-in" : "bg-zinc-100 dark:bg-slate-800 text-zinc-400")}>
+                            <span key={b.id} className={"text-xs font-medium px-2 py-1 rounded-full inline-flex items-center gap-1 " + (on ? "bg-emerald-50 text-emerald-600 pop-in" : "bg-zinc-100 dark:bg-slate-800 text-zinc-400")}>
                                 {on ? null : (window.KpssIcon ? window.KpssIcon("lock", "w-3 h-3") : null)}
                                 {b.title}
                             </span>
@@ -1220,7 +1224,7 @@ function App() {
             ) : null}
             {body}
             {!inTest ? (
-                <BottomNav nav={nav} onChange={function (id) {
+                <BottomNav nav={nav} streak={plan.streak || 0} onChange={function (id) {
                     setNav(id);
                     if (id !== "dersler") { setSelectedDers(null); setSelectedKonu(null); setViewMode("hub"); }
                     if (id === "dersler") { setSelectedDers(null); setSelectedKonu(null); }

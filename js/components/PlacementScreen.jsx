@@ -21,9 +21,9 @@
                     <h1 className="text-2xl font-semibold tracking-tight">Puan / tercih</h1>
                     <button onClick={props.onBack} className="text-sm font-medium">Kapat</button>
                 </div>
-                <div className="p-5 rounded-2xl bg-zinc-900 text-white mb-4">
+                <div className="p-5 rounded-2xl bg-navy-600 text-white mb-4">
                     <div className="text-xs uppercase tracking-widest opacity-70">Tahmini {est.level}</div>
-                    <div className="text-4xl font-semibold mt-1">{est.score}</div>
+                    <div className="font-stat text-4xl mt-1">{est.score}</div>
                     <p className="text-sm opacity-80 mt-2">{est.note}</p>
                     <p className="text-xs mt-1">GY net ~{est.gyNet} · GK net ~{est.gkNet}</p>
                 </div>
@@ -35,7 +35,8 @@
                         {!premium ? <p className="text-xs text-zinc-500 mb-3">Ücretsiz planda ilk 3 eşleşme. Tam liste Premium.</p> : null}
                         <div className="space-y-2">
                             {hits.map(function (h, i) {
-                                return <div key={i} className="p-3 rounded-xl panel text-sm"><b>{h.kurum}</b> · {h.unvan} · {h.il} · taban {h.taban}</div>;
+                                var high = Number(est.score) - Number(h.taban) >= 4;
+                                return <div key={i} className={"p-3 rounded-xl bg-stone-50 border-l-4 text-sm " + (high ? "border-emerald-500" : "border-coral-500")}><b>{h.kurum}</b> · {h.unvan} · {h.il} · taban {h.taban}</div>;
                             })}
                             {hits.length === 0 ? <p className="text-sm text-zinc-500">Bu skorun altında taban yok (örnek veri).</p> : null}
                         </div>

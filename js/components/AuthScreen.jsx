@@ -103,7 +103,7 @@
 
         function cardCls(on, dim) {
             return "w-full text-left p-4 rounded-2xl border transition-[border-color,background-color,transform] duration-200 " +
-                (on ? "border-brand-navy bg-brand-navy/5 dark:bg-brand-navy/40" : "border-zinc-200 dark:border-slate-700 bg-white dark:bg-slate-900") +
+                (on ? "border-navy-600 bg-navy-50 dark:bg-navy-700" : "border-zinc-200 dark:border-slate-700 bg-white dark:bg-slate-900") +
                 (dim ? " opacity-60" : "");
         }
 
@@ -112,7 +112,7 @@
             signup = (
                 <div className="slide-step">
                     <div className="h-1 bg-zinc-200 dark:bg-slate-800 rounded-full mb-6 overflow-hidden">
-                        <div className="h-full bg-brand-navy dark:bg-brand-goldsoft transition-all duration-200" style={{ width: (step / 3 * 100) + "%" }} />
+                        <div className="h-full bg-navy-600 transition-all duration-200" style={{ width: (step / 3 * 100) + "%" }} />
                     </div>
                     {step === 1 ? (
                         <div>
@@ -133,7 +133,7 @@
                                 })}
                             </div>
                             <button type="button" disabled={!name.trim()} onClick={function () { setStep(2); setMsg(""); }}
-                                className="w-full py-3.5 rounded-xl bg-brand-navy text-white font-semibold disabled:opacity-40">Devam</button>
+                                className="w-full py-3.5 rounded-xl bg-navy-600 text-white font-semibold disabled:opacity-40">Devam</button>
                         </div>
                     ) : null}
                     {step === 2 ? (
@@ -154,7 +154,7 @@
                                             <div className="flex items-start justify-between gap-2">
                                                 <div>
                                                     <div className="flex items-center gap-2 font-display font-semibold">
-                                                        {Ic(x.icon, "w-4 h-4 text-brand-navy dark:text-brand-goldsoft")}
+                                                        {Ic(x.icon, "w-4 h-4 text-navy-600 dark:text-navy-400")}
                                                         {x.t}
                                                     </div>
                                                     <div className="text-sm text-zinc-500 mt-0.5">{x.d}</div>
@@ -167,7 +167,7 @@
                             </div>
                             <div className="flex gap-2">
                                 <button type="button" onClick={function () { setStep(1); }} className="flex-1 py-3.5 rounded-xl border font-medium">Geri</button>
-                                <button type="button" onClick={function () { setStep(3); setMsg(""); }} className="flex-1 py-3.5 rounded-xl bg-brand-navy text-white font-semibold">Devam</button>
+                                <button type="button" onClick={function () { setStep(3); setMsg(""); }} className="flex-1 py-3.5 rounded-xl bg-navy-600 text-white font-semibold">Devam</button>
                             </div>
                         </div>
                     ) : null}
@@ -185,7 +185,7 @@
                             <label className="flex items-start gap-2 text-xs text-zinc-500 mb-4">
                                 <input type="checkbox" checked={kvkk} onChange={function (e) { setKvkk(e.target.checked); }} className="mt-0.5" />
                                 <span>İlerlememin hesabıma kaydedilmesine izin veriyorum.{" "}
-                                    <button type="button" className="underline text-brand-navy dark:text-brand-goldsoft" onClick={function () { setKvkkOpen(!kvkkOpen); }}>Detayları oku</button>
+                                    <button type="button" className="underline text-navy-600 dark:text-navy-400" onClick={function () { setKvkkOpen(!kvkkOpen); }}>Detayları oku</button>
                                 </span>
                             </label>
                             {kvkkOpen ? (
@@ -193,7 +193,7 @@
                             ) : null}
                             <div className="flex gap-2 mb-3">
                                 <button type="button" onClick={function () { setStep(2); }} className="flex-1 py-3.5 rounded-xl border font-medium">Geri</button>
-                                <button type="button" disabled={busy || !kvkk} onClick={submit} className="flex-1 py-3.5 rounded-xl bg-brand-navy text-white font-semibold disabled:opacity-40">
+                                <button type="button" disabled={busy || !kvkk} onClick={submit} className="flex-1 py-3.5 rounded-xl bg-navy-600 text-white font-semibold disabled:opacity-40">
                                     {busy ? "…" : "Kayıt ol"}
                                 </button>
                             </div>
@@ -218,7 +218,7 @@
                         <input id="au-mail" type="email" autoComplete="email" value={email} onChange={function (e) { setEmail(e.target.value); }} className={field + " mb-4"} />
                         <label className="text-sm text-zinc-500 block mb-1.5" htmlFor="au-pass">Şifre</label>
                         <input id="au-pass" type="password" autoComplete="current-password" value={pass} onChange={function (e) { setPass(e.target.value); }} className={field + " mb-4"} />
-                        <button disabled={busy} onClick={submit} className="w-full py-3.5 rounded-xl bg-brand-navy text-white font-semibold disabled:opacity-50">
+                        <button disabled={busy} onClick={submit} className="w-full py-3.5 rounded-xl bg-navy-600 text-white font-semibold disabled:opacity-50">
                             {busy ? "…" : "Giriş yap"}
                         </button>
                         <button type="button" disabled={busy} onClick={google}
@@ -233,15 +233,15 @@
                         Google ile devam
                     </button>
                 ) : null}
-                {msg ? <p className="text-sm text-brand-amber mt-4">{msg}</p> : null}
+                {msg ? <p className="text-sm text-coral-500 mt-4">{msg}</p> : null}
             </div>
         );
 
         if (!props.gate) return form;
         return (
-            <div className="min-h-screen flex items-center justify-center px-6 py-12 bg-[#F7F6F3] dark:bg-slate-950">
+            <div className="min-h-screen flex items-center justify-center px-6 py-12 bg-stone-50 dark:bg-stone-900">
                 <div className="w-full max-w-md">
-                    <p className="text-xs font-semibold tracking-[0.2em] text-brand-navy/50 dark:text-brand-goldsoft mb-2">KPSS</p>
+                    <p className="text-xs font-semibold tracking-[0.2em] text-navy-600/50 dark:text-navy-400 mb-2">KPSS</p>
                     <h1 className="text-2xl font-display font-bold tracking-tight mb-2">{mode === "up" ? "Hesap oluştur" : "Giriş yap"}</h1>
                     <p className="text-sm text-zinc-500 mb-8">{mode === "up" ? "Üç kısa adım. Derslere ondan sonra girersin." : "Kaldığın yerden devam et."}</p>
                     {form}

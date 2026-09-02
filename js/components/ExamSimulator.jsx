@@ -81,9 +81,9 @@
                     <button onClick={props.onBack} className="text-sm font-medium mb-4">← Geri</button>
                     <h1 className="text-2xl font-display font-bold mb-2">Tam deneme</h1>
                     <p className="text-zinc-500 mb-4 text-sm">40 soru · 40 dk kitapçık. Optik kâğıt masaüstünde yanında, telefonda altta.</p>
-                    {capped ? <p className="p-3 rounded-xl bg-brand-amber/10 text-brand-amber text-sm mb-4">Ücretsiz haftalık deneme doldu.</p> : null}
+                    {capped ? <p className="p-3 rounded-xl bg-amber-50 text-amber-600 text-sm mb-4">Ücretsiz haftalık deneme doldu.</p> : null}
                     <label className="flex gap-2 text-sm mb-4"><input type="checkbox" checked={optic} onChange={function (e) { setOptic(e.target.checked); }} /> Optik kâğıt</label>
-                    <button disabled={capped} onClick={function () { setStarted(true); }} className="w-full p-4 rounded-2xl bg-brand-navy text-white font-semibold">Başlat</button>
+                    <button disabled={capped} onClick={function () { setStarted(true); }} className="w-full p-4 rounded-2xl bg-navy-600 text-white font-semibold">Başlat</button>
                 </div>
             );
         }
@@ -103,7 +103,7 @@
             return (
                 <div className="max-w-2xl mx-auto px-4 py-8 pb-10">
                     <h1 className="text-2xl font-display font-bold mb-1">Deneme bitti</h1>
-                    <p className="font-stat text-4xl text-brand-navy dark:text-brand-goldsoft mb-4">{correct}/{items.length}</p>
+                    <p className="font-stat text-4xl text-navy-600 dark:text-navy-400 mb-4">{correct}/{items.length}</p>
                     <div className="grid grid-cols-2 gap-2 mb-6">
                         <div className="panel rounded-xl p-3"><p className="text-xs text-zinc-400">Soru başı</p><p className="font-stat text-lg">{avg} sn</p></div>
                         <div className="panel rounded-xl p-3"><p className="text-xs text-zinc-400">Cevap değişimi</p><p className="font-stat text-lg">{changes}</p></div>
@@ -114,12 +114,12 @@
                             <div key={d} className="mb-2">
                                 <div className="flex justify-between text-sm mb-1"><span>{d}</span><span className="font-stat">{by[d].c}/{by[d].t}</span></div>
                                 <div className="h-1.5 bg-zinc-200 dark:bg-slate-800 rounded-full overflow-hidden">
-                                    <div className="h-full bg-brand-emerald" style={{ width: pct + "%" }} />
+                                    <div className="h-full bg-emerald-500" style={{ width: pct + "%" }} />
                                 </div>
                             </div>
                         );
                     })}
-                    <button onClick={props.onBack} className="mt-6 w-full p-4 rounded-2xl bg-brand-navy text-white font-semibold">Kapat</button>
+                    <button onClick={props.onBack} className="mt-6 w-full p-4 rounded-2xl bg-navy-600 text-white font-semibold">Kapat</button>
                 </div>
             );
         }
@@ -127,13 +127,13 @@
         var it = items[i];
         var mm = Math.floor(left / 60);
         var ss = String(left % 60).padStart(2, "0");
-        var tCls = left <= 60 ? "text-brand-coral" : left <= 300 ? "text-brand-amber" : "text-brand-navy dark:text-brand-goldsoft";
+        var tCls = left <= 60 ? "text-coral-500" : left <= 300 ? "text-amber-500" : "text-stone-900 dark:text-stone-50";
         var opticGrid = optic ? (
             <div className="flex flex-wrap gap-1 p-3 panel rounded-xl">
                 {items.map(function (_, idx) {
                     return (
                         <button key={idx} onClick={function () { setI(idx); }}
-                            className={"h-8 w-8 text-xs rounded-sm font-stat " + (i === idx ? "bg-brand-navy text-white" : (picks[idx] != null ? "bg-brand-navy/15" : "bg-zinc-100 dark:bg-slate-800"))}>{idx + 1}</button>
+                            className={"h-8 w-8 text-xs rounded-sm font-stat " + (i === idx ? "bg-navy-600 text-white" : (picks[idx] != null ? "bg-navy-600/15" : "bg-zinc-100 dark:bg-slate-800"))}>{idx + 1}</button>
                     );
                 })}
             </div>
@@ -145,7 +145,7 @@
                 <div className="flex justify-between items-center text-sm mb-3">
                     <span>Soru {i + 1}/{items.length}</span>
                     <span className={"font-stat text-lg " + tCls}>{mm}:{ss}</span>
-                    <button onClick={finish} className="text-brand-coral text-sm font-medium">Bitir</button>
+                    <button onClick={finish} className="text-coral-500 text-sm font-medium">Bitir</button>
                 </div>
                 <div className="md:grid md:grid-cols-[1fr_220px] md:gap-4">
                     <div className="booklet p-5 mb-4 md:mb-0 rounded-sm">
@@ -155,7 +155,7 @@
                             var on = picks[i] === idx;
                             return (
                                 <button key={idx} onClick={function () { pick(idx); }}
-                                    className={"w-full text-left p-3 mb-2 rounded-lg border " + (on ? "border-brand-navy bg-brand-navy/5" : "border-zinc-200 dark:border-slate-700")}>{opt}</button>
+                                    className={"w-full text-left p-3 mb-2 rounded-lg border " + (on ? "border-navy-600 bg-navy-600 text-white" : "border-stone-300 dark:border-stone-700")}>{opt}</button>
                             );
                         })}
                     </div>
@@ -164,7 +164,7 @@
                 <div className="md:hidden mt-3">{opticGrid}</div>
                 <div className="flex gap-2 mt-4">
                     <button disabled={i === 0} onClick={function () { setI(i - 1); }} className="flex-1 p-3 rounded-xl border font-medium">Önceki</button>
-                    <button disabled={i === items.length - 1} onClick={function () { setI(i + 1); }} className="flex-1 p-3 rounded-xl bg-brand-navy text-white font-medium">Sonraki</button>
+                    <button disabled={i === items.length - 1} onClick={function () { setI(i + 1); }} className="flex-1 p-3 rounded-xl bg-navy-600 text-white font-medium">Sonraki</button>
                 </div>
             </div>
         );

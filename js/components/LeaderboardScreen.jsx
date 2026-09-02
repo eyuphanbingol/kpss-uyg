@@ -35,7 +35,7 @@
         });
         var top = list.slice(0, 3);
         var rest = list.slice(3);
-        var medal = ["#B8860B", "#94A3B8", "#B45309"];
+        var medal = ["#C9A227", "#D3D0CB", "#B45F04"];
         return (
             <div className="max-w-2xl mx-auto px-4 py-6 pb-24 relative">
                 <div className="flex justify-between mb-4">
@@ -47,7 +47,7 @@
                     <button type="button" onClick={function () { setTab("week"); }} className={"flex-1 py-2 rounded-lg text-sm font-semibold " + (tab === "week" ? "bg-white dark:bg-slate-900 shadow-sm" : "text-zinc-500")}>Haftalık</button>
                     <button type="button" onClick={function () { setTab("exam"); }} className={"flex-1 py-2 rounded-lg text-sm font-semibold " + (tab === "exam" ? "bg-white dark:bg-slate-900 shadow-sm" : "text-zinc-500")}>Deneme</button>
                 </div>
-                {err ? <div className="p-3 rounded-xl text-sm text-brand-amber mb-4">{err}</div> : null}
+                {err ? <div className="p-3 rounded-xl text-sm text-coral-500 mb-4">{err}</div> : null}
                 {top.length >= 1 ? (
                     <div className="flex items-end justify-center gap-3 mb-6">
                         {top[1] ? (
@@ -82,7 +82,7 @@
                         );
                     })}
                 </div>
-                <div className="sticky bottom-0 -mx-4 px-4 py-3 bg-white/95 dark:bg-slate-950/95 border-t border-zinc-200 dark:border-slate-800 flex justify-between text-sm">
+                <div className="sticky bottom-0 -mx-4 px-4 py-3 bg-navy-600 text-white flex justify-between text-sm">
                     <span>Senin sıran</span>
                     <span className="font-stat">{myIdx >= 0 ? (myIdx + 1) + ". · " + (list[myIdx].questions || 0) : "listede değil"}</span>
                 </div>

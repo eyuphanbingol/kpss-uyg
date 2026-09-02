@@ -15,38 +15,50 @@
             if (!byDers[r.ders]) byDers[r.ders] = [];
             byDers[r.ders].push(r);
         });
+        function masteryBar(sc) {
+            if (sc < 50) return "bg-coral-500";
+            if (sc < 75) return "bg-amber-500";
+            return "bg-emerald-500";
+        }
+        function heat(q) {
+            if (q === 0) return "bg-amber-50";
+            if (q < 10) return "bg-amber-100";
+            if (q < 25) return "bg-amber-500";
+            return "bg-amber-600";
+        }
         return (
             <div className="p-4">
                 {props.onBack ? (
                     <div className="flex justify-between mb-4">
-                        <h1 className="text-xl font-semibold">Hakimiyet</h1>
+                        <h1 className="text-xl font-display font-semibold">Haritalar</h1>
                         <button onClick={props.onBack} className="text-sm font-medium">Kapat</button>
                     </div>
                 ) : null}
-                <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-2">Son 30 gün</p>
-                <div className="grid grid-cols-10 gap-1 mb-6">
+                <p className="text-xs font-medium text-stone-500 uppercase tracking-wider mb-1">Çalışma serisi</p>
+                <p className="text-xs text-stone-500 mb-2">Amber = yoğunluk (kaç soru). Hakimiyet değil.</p>
+                <div className="grid grid-cols-10 gap-1 mb-8">
                     {days.map(function (x) {
-                        var bg = x.q === 0 ? "bg-zinc-200 dark:bg-slate-800" : x.q < 10 ? "bg-amber-200" : x.q < 25 ? "bg-amber-400" : "bg-amber-600";
-                        return <div key={x.iso} title={x.iso + " · " + x.q} className={"h-3 rounded-sm " + bg} />;
+                        return <div key={x.iso} title={x.iso + " · " + x.q + " soru"} className={"h-3 rounded-sm " + heat(x.q)} />;
                     })}
                 </div>
-                <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-2">Konu bazlı 0–100</p>
+                <p className="text-xs font-medium text-stone-500 uppercase tracking-wider mb-1">Konu hakimiyeti</p>
+                <p className="text-xs text-stone-500 mb-3">Mercan düşük · amber orta · zümrüt yüksek (durum, yoğunluk değil).</p>
                 {Object.keys(byDers).length === 0 ? (
-                    <p className="text-sm text-zinc-500">Henüz konu verisi yok.</p>
+                    <p className="text-sm text-stone-500">Henüz konu verisi yok.</p>
                 ) : Object.keys(byDers).map(function (ders) {
                     return (
                         <div key={ders} className="mb-4">
-                            <p className="text-sm font-medium mb-1">{ders}</p>
+                            <p className="text-sm font-medium mb-1 text-stone-700">{ders}</p>
                             <div className="space-y-1">
                                 {byDers[ders].map(function (r) {
                                     var sc = r.masteryScore != null ? r.masteryScore : 0;
                                     return (
                                         <div key={r.konu} className="flex items-center gap-2">
-                                            <span className="text-xs text-zinc-500 w-32 truncate">{r.konu}</span>
-                                            <div className="flex-1 h-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden">
-                                                <div className="h-full bg-brand-emerald" style={{ width: sc + "%" }} />
+                                            <span className="text-xs text-stone-500 w-32 truncate">{r.konu}</span>
+                                            <div className="flex-1 h-1.5 bg-stone-100 rounded-full overflow-hidden">
+                                                <div className={"h-full " + masteryBar(sc)} style={{ width: sc + "%" }} />
                                             </div>
-                                            <span className="text-xs font-semibold w-8 text-right">{sc}</span>
+                                            <span className="text-xs font-stat w-8 text-right">{sc}</span>
                                         </div>
                                     );
                                 })}
