@@ -34,6 +34,45 @@
         } catch (e) {}
     }
 
+    function hashParams() {
+        var raw = String(window.location.hash || "").replace(/^#/, "");
+        try { return new URLSearchParams(raw); } catch (e) { return new URLSearchParams(); }
+    }
+
+    async function establishRecoverySession() {
+        var sb = getClient();
+        if (!sb) return null;
+        markRecovery();
+        var hp = hashParams();
+        var at = hp.get("access_token");
+        var rt = hp.get("refresh_token");
+        if (at) {
+            var setRes = await sb.auth.setSession({ access_token: at, refresh_token: rt || "" });
+            if (!setRes.error && setRes.data && setRes.data.session) return setRes.data.session;
+        }
+        var q = new URLSearchParams(window.location.search || "");
+        if (!at && q.get("access_token")) {
+            at = q.get("access_token");
+            rt = q.get("refresh_token") || rt;
+            var setQ = await sb.auth.setSession({ access_token: at, refresh_token: rt || "" });
+            if (!setQ.error && setQ.data && setQ.data.session) return setQ.data.session;
+        }
+        var tokenHash = q.get("token_hash") || q.get("token");
+        var type = q.get("type") || "recovery";
+        if (tokenHash) {
+            var otp = await sb.auth.verifyOtp({ token_hash: tokenHash, type: type });
+            if (!otp.error && otp.data && otp.data.session) return otp.data.session;
+        }
+        if (q.get("code") && typeof sb.auth.exchangeCodeForSession === "function") {
+            try {
+                var ex = await sb.auth.exchangeCodeForSession(window.location.href);
+                if (!ex.error && ex.data && ex.data.session) return ex.data.session;
+            } catch (e) {}
+        }
+        var cur = await sb.auth.getSession();
+        return (cur.data && cur.data.session) || null;
+    }
+
     function creds() {
         var app = global.APP_CONFIG || {};
         var kpss = global.KpssConfig || {};
@@ -80,6 +119,7 @@
         ready: function () { return !!getClient(); },
         recoveryPending: recoveryPending,
         markRecovery: markRecovery,
-        clearRecovery: clearRecovery
+        clearRecovery: clearRecovery,
+        establishRecoverySession: establishRecoverySession
     };
 })(window);

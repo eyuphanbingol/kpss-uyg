@@ -59,6 +59,7 @@
         });
         const [newPass, setNewPass] = useState("");
         const [newPass2, setNewPass2] = useState("");
+        const [recReady, setRecReady] = useState(false);
 
         const sb = window.SupabaseClient && window.SupabaseClient.get();
         const field = "w-full px-4 py-3 rounded-2xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 text-[15px] focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all";
@@ -86,8 +87,22 @@
         }, []);
 
         useEffect(function () {
-            if (mode === "in" && !recovery && emailRef.current) emailRef.current.focus();
-        }, [mode, recovery]);
+            if (!recovery) return;
+            var sc = window.SupabaseClient;
+            if (!sc || !sc.establishRecoverySession) return;
+            sc.establishRecoverySession().then(function (sess) {
+                if (sess) {
+                    setRecReady(true);
+                    setMsg("");
+                } else {
+                    setRecReady(false);
+                    setMsg("Bağlantı oturum açamadı. Maildeki linki, şifremi unuttum dediğin aynı tarayıcıda bir kez aç. Olmazsa yeni mail iste.");
+                }
+            }).catch(function () {
+                setRecReady(false);
+                setMsg("Bağlantı oturum açamadı. Yeni bir sıfırlama maili iste.");
+            });
+        }, [recovery]);
 
         // ---------- Levels ----------
         var levels = [
@@ -140,6 +155,11 @@
             setBusy(true);
             setMsg("");
             try {
+                var sess = null;
+                if (window.SupabaseClient && window.SupabaseClient.establishRecoverySession) {
+                    sess = await window.SupabaseClient.establishRecoverySession();
+                }
+                if (!sess) throw new Error("Oturum yok. Aynı tarayıcıda yeni sıfırlama maili iste, linke bir kez tıkla.");
                 var res = await sb.auth.updateUser({ password: newPass });
                 if (res.error) throw res.error;
                 if (window.SupabaseClient && window.SupabaseClient.clearRecovery) window.SupabaseClient.clearRecovery();
@@ -150,7 +170,9 @@
                 if (props.onPasswordUpdated) props.onPasswordUpdated();
                 else if (props.onDone) props.onDone();
             } catch (e) {
-                setMsg((e && e.message) || "Şifre güncellenemedi.");
+                var m = (e && e.message) || "Şifre güncellenemedi.";
+                if (/session missing/i.test(m)) m = "Oturum yok. Aynı tarayıcıda yeni sıfırlama maili iste, linke bir kez tıkla.";
+                setMsg(m);
             }
             setBusy(false);
         }
@@ -692,8 +714,8 @@
                             <input type="checkbox" checked={showPassword} onChange={function (e) { setShowPassword(e.target.checked); }} className="w-4 h-4 rounded border-stone-300 text-indigo-600" />
                             Şifreyi göster
                         </label>
-                        <button type="button" disabled={busy} onClick={saveNewPassword} className="w-full py-3.5 rounded-2xl btn-primary text-white font-semibold disabled:opacity-40">
-                            {busy ? "⏳" : "Şifreyi kaydet"}
+                        <button type="button" disabled={busy || !recReady} onClick={saveNewPassword} className="w-full py-3.5 rounded-2xl btn-primary text-white font-semibold disabled:opacity-40">
+                            {busy ? "⏳" : (recReady ? "Şifreyi kaydet" : "Bağlantı doğrulanıyor…")}
                         </button>
                     </div>
                 ) : (
