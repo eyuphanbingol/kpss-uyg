@@ -29,6 +29,10 @@ window.cografya_5_notlari = [
         <p>Batı Toroslar kuşağında (Akdeniz ve Güney Ege), kalker, jips ve dolomit gibi kolay eriyebilen kayaçların bulunduğu alanlarda oluşan ovalardır.</p>
         <p class="mt-2">Bu ovaların tabanı verimsiz karstik malzemeyle kaplıdır.</p>
     </div>
+    <!-- 🗺️ HARİTA / RESİM ALANI -->
+            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
+                <img src="./src/img/tr_ovalar.jpg" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+            </div>
     `,
 
     `
@@ -64,6 +68,10 @@ window.cografya_5_notlari = [
             </div>
         </div>
     </div>
+    <!-- 🗺️ HARİTA / RESİM ALANI -->
+            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
+                <img src="./src/img/tr_ovalar.jpg" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+            </div>
     `,
 
     `
@@ -75,6 +83,10 @@ window.cografya_5_notlari = [
     <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
         <p>Akarsuların iç kesimlerden taşıdığı alüvyonları, gelgit akıntısının az ve kıta sahanlığının geniş olduğu deniz kıyılarında biriktirmesiyle oluşan toprağı son derece <b class="text-rose-600 dark:text-rose-400">verimli</b> ovalardır.</p>
     </div>
+    <!-- 🗺️ HARİTA / RESİM ALANI -->
+            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
+                <img src="./src/img/tr_ovalar.jpg" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+            </div>
     `,
 
     `
@@ -113,6 +125,10 @@ window.cografya_5_notlari = [
             </div>
         </div>
     </div>
+    <!-- 🗺️ HARİTA / RESİM ALANI -->
+            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
+                <img src="./src/img/tr_ovalar.jpg" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+            </div>
     `,
 
     `
@@ -127,6 +143,10 @@ window.cografya_5_notlari = [
             <p class="mt-2">Türkiye genç oluşumlu olduğu ve kırık hatları çok fazla bulunduğu için <b class="text-rose-600 dark:text-rose-400">en yaygın ova türüdür.</b></p>
         </div>
     </div>
+    <!-- 🗺️ HARİTA / RESİM ALANI -->
+            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
+                <img src="./src/img/tr_ovalar.jpg" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+            </div>
     `,
 
     `
@@ -172,6 +192,10 @@ window.cografya_5_notlari = [
             </div>
         </div>
     </div>
+    <!-- 🗺️ HARİTA / RESİM ALANI -->
+            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
+                <img src="./src/img/tr_ovalar.jpg" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+            </div>
     `,
 
     `
@@ -189,6 +213,10 @@ window.cografya_5_notlari = [
             </ul>
         </div>
     </div>
+    <!-- 🗺️ HARİTA / RESİM ALANI -->
+            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
+                <img src="./src/img/tr_ovalar.jpg" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+            </div>
     `,
 
     `
@@ -210,5 +238,9 @@ window.cografya_5_notlari = [
             <p class="text-lg font-bold text-indigo-700 dark:text-indigo-400 mt-1">Konya Ovası</p>
         </div>
     </div>
+    <!-- 🗺️ HARİTA / RESİM ALANI -->
+            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
+                <img src="./src/img/tr_ovalar.jpg" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+            </div>
     `
 ];

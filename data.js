@@ -55,10 +55,14 @@ window.getKpssData = function () {
                 notlar:window.tarih_13_notlari || [],
                 sorular:window.tarih_13_sorulari || [] 
             },
-            "I. TBMM DÖNEMİ VE GELİŞMELERİ":{
+            "I. TBMM Dönemi ve Gelişmeleri":{
                 notlar:window.tarih_14_notlari || [],
                 sorular:window.tarih_14_sorulari || [] 
-            }
+            },
+            "Milli Mücadeele Muharabeler Dönemi:":{
+                notlar:window.tarih_15_notlari || [],
+                sorular:window.tarih_15_sorulari || [] 
+            },
         },
         "Coğrafya": {
             "Türkiye'nin Coğrafi Konumu": {
