@@ -13,7 +13,7 @@
     "splash": {
       "image": "./assets/atanom.png",
       "resizeMode": "contain",
-      "backgroundColor": "#0D2C4D"
+      "backgroundColor": "#041C24"
     },
     "ios": {
       "supportsTablet": true,

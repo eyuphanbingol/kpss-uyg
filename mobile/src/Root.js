@@ -1,5 +1,5 @@
 import React from "react";
-import { ActivityIndicator, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -15,6 +15,7 @@ import BenScreen from "./screens/BenScreen";
 import NotesScreen from "./screens/NotesScreen";
 import TestScreen from "./screens/TestScreen";
 import { AiScreen, HeatScreen, LeaderboardScreen, LiveScreen, PaywallScreen, PlacementScreen } from "./screens/ExtraScreens";
+import SplashScreen from "./screens/SplashScreen";
 import { colors } from "./lib/theme";
 import { GhostButton, Screen } from "./ui";
 
@@ -36,14 +37,7 @@ function Tabs() {
 function Gate() {
     var app = useApp();
     if (!app.bootReady) {
-        return (
-            <Screen>
-                <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-                    <ActivityIndicator color={colors.teal} />
-                    <Text style={{ marginTop: 12, color: colors.muted }}>Yükleniyor</Text>
-                </View>
-            </Screen>
-        );
+        return <SplashScreen />;
     }
     if (!app.session) return <AuthScreen />;
     if (app.student.userProfile && app.student.userProfile.blocked) {
@@ -69,14 +63,7 @@ function Gate() {
         );
     }
     if (!app.profileHydrated) {
-        return (
-            <Screen>
-                <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-                    <ActivityIndicator color={colors.teal} />
-                    <Text style={{ marginTop: 12, color: colors.muted }}>Yükleniyor</Text>
-                </View>
-            </Screen>
-        );
+        return <SplashScreen />;
     }
     if (!app.student.profile || !app.student.profile.onboarded) return <OnboardingScreen />;
     return (

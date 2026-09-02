@@ -1,13 +1,15 @@
 import React, { useState } from "react";
-import { Alert, Image, Pressable, Text, View } from "react-native";
+import { Alert, Image, Pressable, ScrollView, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import * as WebBrowser from "expo-web-browser";
 import * as AuthSession from "expo-auth-session";
 import { supabase } from "../lib/supabase";
 import { StudentStore } from "../lib/store";
 import { KpssConfig } from "../lib/config";
 import { sessionStorageShim } from "../lib/storage";
-import { Chip, Field, PrimaryButton, ScrollScreen } from "../ui";
+import { Chip, Field, PrimaryButton } from "../ui";
 import { colors, needsKulvar } from "../lib/theme";
+import { BrandBackdrop } from "./SplashScreen";
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -162,7 +164,10 @@ export default function AuthScreen() {
     }
 
     return (
-        <ScrollScreen>
+        <BrandBackdrop>
+            <SafeAreaView style={{ flex: 1 }} edges={["top"]}>
+            <ScrollView contentContainerStyle={{ padding: 20, paddingBottom: 40 }} keyboardShouldPersistTaps="handled">
+            <View style={{ backgroundColor: "rgba(255,255,255,0.96)", borderRadius: 28, padding: 22, marginTop: 12 }}>
             <Image source={require("../../assets/atanom.png")} style={{ width: 88, height: 88, alignSelf: "center", marginBottom: 8 }} />
             <Text style={{ fontSize: 28, fontWeight: "800", color: colors.teal, textAlign: "center" }}>Atanom</Text>
             <Text style={{ textAlign: "center", color: colors.muted, marginBottom: 20 }}>Kaldığın yerden devam et</Text>
@@ -229,6 +234,9 @@ export default function AuthScreen() {
             )}
             {msg ? <Text style={{ color: colors.rose, marginTop: 12, textAlign: "center" }}>{msg}</Text> : null}
             <Text style={{ fontSize: 11, color: colors.muted, textAlign: "center", marginTop: 24 }}>İlk kez Google ile gelince ad, eğitim ve kulvar sorulur.</Text>
-        </ScrollScreen>
+            </View>
+            </ScrollView>
+            </SafeAreaView>
+        </BrandBackdrop>
     );
 }
