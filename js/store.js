@@ -358,9 +358,22 @@
         var t = todayStr();
         if (!state.sessions[t]) state.sessions[t] = { questions: 0, correct: 0, minutes: 0 };
         var s = state.sessions[t];
+        if (!s.byHour) s.byHour = {};
+        if (!s.byDers) s.byDers = {};
         s.questions += patch.questions || 0;
         s.correct += patch.correct || 0;
         s.minutes += patch.minutes || 0;
+        var mins = patch.minutes || 0;
+        if (mins > 0) {
+            var hour = patch.hour;
+            if (hour == null || hour < 0 || hour > 23) hour = new Date().getHours();
+            s.byHour[String(hour)] = (s.byHour[String(hour)] || 0) + mins;
+            if (patch.ders) s.byDers[patch.ders] = (s.byDers[patch.ders] || 0) + mins;
+        }
+        if (patch.seans) {
+            s.seansCount = (s.seansCount || 0) + 1;
+            s.seansMinutes = (s.seansMinutes || 0) + mins;
+        }
         state.counters.questions += patch.questions || 0;
         state.counters.correct += patch.correct || 0;
         bumpStreak();
@@ -414,7 +427,7 @@
         t.mastery = masteryFromPct(pct);
         t.masteryScore = topicMasteryScore(t);
         t.updatedAt = nowIso();
-        if (result.minutes) addSessionStats({ minutes: result.minutes });
+        if (result.minutes) addSessionStats({ minutes: result.minutes, ders: ders, seans: true });
         emit();
         return t;
     }

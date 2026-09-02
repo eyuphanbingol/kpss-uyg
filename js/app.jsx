@@ -296,22 +296,148 @@ function StudyProgram(props) {
     );
 }
 
+}
+
+var DASH_COLORS = ["#1E1B4B", "#0f766e", "#d97706", "#e11d48", "#57534e", "#4338ca"];
+
+function StudyDash(props) {
+    const d = StudyPlanner.studyDashboard ? StudyPlanner.studyDashboard(props.student) : null;
+    if (!d) return null;
+    var weekMax = 1;
+    d.weekMin.forEach(function (v) { if (v > weekMax) weekMax = v; });
+    var trendMax = 1;
+    d.weeks.forEach(function (w) { if (w.minutes > trendMax) trendMax = w.minutes; });
+    var pts = d.weeks.map(function (w, i) {
+        var x = 8 + (i / Math.max(1, d.weeks.length - 1)) * 220;
+        var y = 78 - (w.minutes / trendMax) * 64;
+        return x + "," + y;
+    }).join(" ");
+    var area = "8,78 " + pts + " 228,78";
+    var weekGoalPct = d.plannedWeek ? Math.min(100, Math.round((d.actualWeekH / d.plannedWeek) * 100)) : (d.actualWeekH ? 100 : 0);
+    var todayGoal = d.todayPlanH;
+    var todayH = Math.round((d.todayMin / 60) * 10) / 10;
+    var todayPct = todayGoal ? Math.min(100, Math.round((todayH / todayGoal) * 100)) : (todayH ? 100 : 0);
+    var rec = d.longest.minutes ? (Math.round((d.longest.minutes / 60) * 10) / 10 + " saat") : "—";
+    var dayNames = ["Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz"];
+    var circ = 2 * Math.PI * 28;
+    var donutEls = [];
+    var donutOff = 0;
+    d.dersList.forEach(function (x, i) {
+        var dash = circ * (x.v / d.dersSum);
+        donutEls.push({ ders: x.ders, dash: dash, off: donutOff, color: DASH_COLORS[i % DASH_COLORS.length] });
+        donutOff += dash;
+    });
+
+    return (
+        <div className="mb-2">
+            <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-3">Çalışma istatistikleri</p>
+            <div className="grid grid-cols-3 gap-2 mb-4">
+                <div className="rounded-2xl bg-amber-50 p-3 text-center">
+                    <div className="font-stat text-xl text-amber-600">{d.streak}</div>
+                    <div className="text-[11px] text-amber-700 mt-0.5">gün seri</div>
+                </div>
+                <div className="rounded-2xl bg-stone-100 dark:bg-stone-900 p-3 text-center">
+                    <div className="font-stat text-xl">{d.avgSeansMin || "—"}</div>
+                    <div className="text-[11px] text-stone-500 mt-0.5">dk / oturum</div>
+                </div>
+                <div className="rounded-2xl bg-stone-100 dark:bg-stone-900 p-3 text-center">
+                    <div className="font-stat text-lg leading-tight">{rec}</div>
+                    <div className="text-[11px] text-stone-500 mt-0.5">rekor gün</div>
+                </div>
+            </div>
+            <div className="rounded-2xl panel p-4 mb-3">
+                <p className="text-sm font-medium mb-1">Toplam {d.totalHours} saat</p>
+                <p className="text-xs text-stone-500 mb-3">Bu hafta hedef {d.plannedWeek || 0} saat · gerçekleşen {d.actualWeekH} saat</p>
+                <div className="h-2 rounded-full bg-stone-200 dark:bg-stone-800 overflow-hidden mb-1">
+                    <div className="h-full bg-emerald-500" style={{ width: weekGoalPct + "%" }} />
+                </div>
+                <p className="text-xs text-stone-500 mb-2">Bugün {todayH} / {todayGoal || 0} saat</p>
+                <div className="h-2 rounded-full bg-stone-200 dark:bg-stone-800 overflow-hidden">
+                    <div className="h-full bg-navy-600" style={{ width: todayPct + "%" }} />
+                </div>
+            </div>
+            <div className="rounded-2xl panel p-4 mb-3">
+                <p className="text-sm font-medium mb-2">Haftalık trend</p>
+                <svg viewBox="0 0 236 86" className="w-full h-24">
+                    <polyline fill="rgba(30,27,75,0.12)" points={area} />
+                    <polyline fill="none" stroke="#1E1B4B" strokeWidth="2" points={pts} />
+                </svg>
+                <div className="flex justify-between text-[10px] text-zinc-400 -mt-1">
+                    <span>8 hafta önce</span>
+                    <span>bu hafta</span>
+                </div>
+            </div>
+            <div className="rounded-2xl panel p-4 mb-3">
+                <p className="text-sm font-medium mb-3">Bu hafta gün gün</p>
+                <div className="flex items-end gap-1.5 h-24">
+                    {d.weekMin.map(function (m, i) {
+                        var h = Math.max(4, Math.round((m / weekMax) * 88));
+                        return (
+                            <div key={i} className="flex-1 flex flex-col items-center justify-end h-full">
+                                <div className="w-full rounded-t-md bg-navy-600" style={{ height: h + "%" }} />
+                                <span className="text-[10px] text-zinc-400 mt-1">{dayNames[i]}</span>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+            <div className="rounded-2xl panel p-4 mb-3">
+                <p className="text-sm font-medium mb-2">Gün içi odak</p>
+                <p className="text-xs text-stone-500 mb-2">Test bitince saatler dolmaya başlar.</p>
+                <div className="grid gap-1" style={{ gridTemplateColumns: "2.4rem repeat(7, 1fr)" }}>
+                    <span />
+                    {dayNames.map(function (n) { return <span key={n} className="text-[9px] text-zinc-400 text-center">{n}</span>; })}
+                    {d.bands.map(function (b, bi) {
+                        return [
+                            <span key={b.t} className="text-[9px] text-zinc-400 leading-4">{b.t}</span>
+                        ].concat(d.heat[bi].map(function (v, di) {
+                            var a = v / d.heatMax;
+                            return (
+                                <div key={b.t + di} className="h-4 rounded-sm" style={{ background: a ? "rgba(30,27,75," + (0.15 + a * 0.85) + ")" : "#e7e5e4" }} />
+                            );
+                        }));
+                    })}
+                </div>
+            </div>
+            <div className="rounded-2xl panel p-4 mb-3">
+                <p className="text-sm font-medium mb-3">Ders dağılımı</p>
+                {d.dersSum ? (
+                    <div className="flex items-center gap-4">
+                        <svg width="88" height="88" viewBox="0 0 88 88" className="shrink-0">
+                            <circle cx="44" cy="44" r="28" fill="none" stroke="#e7e5e4" strokeWidth="12" />
+                            {donutEls.map(function (x) {
+                                return (
+                                    <circle key={x.ders} cx="44" cy="44" r="28" fill="none" stroke={x.color} strokeWidth="12"
+                                        strokeDasharray={x.dash + " " + (circ - x.dash)} strokeDashoffset={-x.off} transform="rotate(-90 44 44)" />
+                                );
+                            })}
+                        </svg>
+                        <div className="min-w-0 space-y-1">
+                            {d.dersList.slice(0, 5).map(function (x, i) {
+                                var pct = Math.round((x.v / d.dersSum) * 100);
+                                return (
+                                    <p key={x.ders} className="text-xs flex items-center gap-2">
+                                        <span className="h-2 w-2 rounded-full shrink-0" style={{ background: DASH_COLORS[i % DASH_COLORS.length] }} />
+                                        <span className="truncate">{x.ders}</span>
+                                        <span className="text-zinc-400">%{pct}</span>
+                                    </p>
+                                );
+                            })}
+                        </div>
+                    </div>
+                ) : (
+                    <p className="text-sm text-stone-500">Ders saati birikince pasta dolacak.</p>
+                )}
+            </div>
+        </div>
+    );
+}
+
 function Bugun(props) {
     const plan = props.plan;
     const name = props.student.profile.name;
     const level = (props.student.userProfile && props.student.userProfile.educationLevel) || "lisans";
     const track = examTrackName(level);
-    const todayQ = plan.session.questions || 0;
-    const goal = plan.qGoal || 25;
-    const qPct = Math.min(100, Math.round((todayQ / goal) * 100));
-    const rows = plan.rows || [];
-    var doneTopics = 0;
-    rows.forEach(function (r) {
-        if (StudentStore.topicComplete(r, {
-            sorular: new Array(r.soruSayisi || 0),
-            notlar: new Array(r.notSayisi || 0)
-        })) doneTopics += 1;
-    });
     var examLine;
     if (plan.daysLeft == null) examLine = track + " · sınav tarihi yok";
     else if (plan.daysLeft < 0) examLine = track + " tarihi geçti";
@@ -338,58 +464,9 @@ function Bugun(props) {
             <div className="rounded-2xl bg-navy-600 text-white p-4 mb-4">
                 <p className="text-lg font-semibold leading-snug">{examLine}</p>
             </div>
-            <div className="rounded-2xl bg-stone-100 dark:bg-stone-900 p-4 mb-6">
-                <div className="flex justify-between items-baseline gap-2 mb-2">
-                    <p className="text-sm font-medium">Bugün {todayQ} soru çözdün</p>
-                    <p className="text-xs text-stone-500">Hedef {goal}</p>
-                </div>
-                <div className="w-full h-1.5 bg-stone-200 dark:bg-stone-800 rounded-full overflow-hidden">
-                    <div className="h-full bg-emerald-500" style={{ width: qPct + "%" }} />
-                </div>
-                <p className="text-sm text-stone-600 dark:text-stone-400 mt-3">
-                    {plan.streak > 0 ? (plan.streak + " gündür ara vermeden çalışıyorsun") : "Bugün çalışırsan seri başlar"}
-                </p>
-                {rows.length ? (
-                    <p className="text-sm text-stone-600 dark:text-stone-400 mt-1">{doneTopics} / {rows.length} konu bitti</p>
-                ) : null}
-            </div>
             <StudyProgram student={props.student} kpssData={props.kpssData} onDers={props.onDers} />
             {banner ? <div className="mb-5 px-4 py-3 rounded-2xl bg-zinc-900 text-white text-sm">{banner}</div> : null}
-            <p className="text-sm text-stone-500 mb-3">İstersen hemen başla</p>
-            <div className="space-y-2">
-                <button onClick={props.onDersler} className="w-full text-left p-4 panel rounded-2xl flex justify-between items-center gap-3">
-                    <div>
-                        <div className="font-medium">Dersler</div>
-                        <div className="text-sm text-zinc-500 mt-0.5">Konu notu veya test — sırayı sen belirle</div>
-                    </div>
-                    <span className="text-navy-600 dark:text-navy-400 text-sm shrink-0">Aç</span>
-                </button>
-                <button onClick={props.onDeneme} className="w-full text-left p-4 panel rounded-2xl flex justify-between items-center gap-3">
-                    <div>
-                        <div className="font-medium">Karışık pratik</div>
-                        <div className="text-sm text-zinc-500 mt-0.5">Ders ve soru sayısını sen ayarla</div>
-                    </div>
-                    <span className="text-navy-600 dark:text-navy-400 text-sm shrink-0">Aç</span>
-                </button>
-                {(plan.wrong || []).length ? (
-                    <button onClick={props.onWrong} className="w-full text-left p-4 panel rounded-2xl flex justify-between items-center gap-3">
-                        <div>
-                            <div className="font-medium">Yanlış defteri</div>
-                            <div className="text-sm text-zinc-500 mt-0.5">{plan.wrong.length} soru — istersen şimdi bak</div>
-                        </div>
-                        <span className="text-navy-600 dark:text-navy-400 text-sm shrink-0">Aç</span>
-                    </button>
-                ) : null}
-                {(plan.due || []).length ? (
-                    <button onClick={props.onReview} className="w-full text-left p-4 panel rounded-2xl flex justify-between items-center gap-3">
-                        <div>
-                            <div className="font-medium">Bugün tekrar</div>
-                            <div className="text-sm text-zinc-500 mt-0.5">{plan.due.length} sorunun tekrar zamanı geldi</div>
-                        </div>
-                        <span className="text-navy-600 dark:text-navy-400 text-sm shrink-0">Aç</span>
-                    </button>
-                ) : null}
-            </div>
+            <StudyDash student={props.student} />
         </Shell>
     );
 }
@@ -1186,7 +1263,7 @@ function App() {
         if (sess.mode === "topic" && sess.ders && sess.konu) {
             StudentStore.recordTestResult(sess.ders, sess.konu, { correct: scoreRef.current, total: sess.items.length, minutes: elapsedMin });
         } else if (elapsedMin) {
-            StudentStore.addSessionStats({ minutes: elapsedMin });
+            StudentStore.addSessionStats({ minutes: elapsedMin, seans: true, ders: sess.ders || null });
         }
         setFinished(true);
     }
@@ -1277,11 +1354,7 @@ function App() {
         );
     } else if (nav === "bugun") {
         body = <Bugun student={student} plan={plan} kpssData={kpssData} isDark={isDark} toggleDark={toggleDark}
-            onDers={function (d) { setNav("dersler"); setSelectedDers(d); setSelectedKonu(null); }}
-            onDersler={function () { setNav("dersler"); }}
-            onDeneme={function () { setNav("deneme"); }}
-            onReview={function () { startSession(plan.due.slice(0, 30), { mode: "review" }); }}
-            onWrong={function () { startSession(plan.wrong.slice(0, 30), { mode: "wrong" }); }} />;
+            onDers={function (d) { setNav("dersler"); setSelectedDers(d); setSelectedKonu(null); }} />;
     } else if (nav === "eksikler") {
         body = <Eksikler plan={plan} isDark={isDark} toggleDark={toggleDark}
             onReview={function () { startSession(plan.due.slice(0, 30), { mode: "review" }); }}

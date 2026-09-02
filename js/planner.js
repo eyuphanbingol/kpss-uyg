@@ -252,6 +252,123 @@
         }).sort(function (a, b) { return a.pct - b.pct; });
     }
 
+    function studyDashboard(student) {
+        var sessions = (student && student.sessions) || {};
+        var todayFn = global.StudentStore.todayStr;
+        var addDays = global.StudentStore.addDays;
+        var today = todayFn();
+        var dates = Object.keys(sessions).sort();
+        var totalMin = 0;
+        var longest = { iso: null, minutes: 0 };
+        var seansN = 0;
+        var seansMin = 0;
+        var byDers = {};
+        var weekMin = [0, 0, 0, 0, 0, 0, 0];
+        var weekDates = [];
+        var d0 = new Date(today + "T12:00:00");
+        var mondayOff = (d0.getDay() + 6) % 7;
+        var mon = addDays(today, -mondayOff);
+        var i;
+        for (i = 0; i < 7; i++) weekDates.push(addDays(mon, i));
+
+        var weeks = [];
+        for (i = 7; i >= 0; i--) {
+            var ws = addDays(mon, -i * 7);
+            weeks.push({ label: ws.slice(5), minutes: 0, start: ws });
+        }
+
+        dates.forEach(function (iso) {
+            var s = sessions[iso] || {};
+            var m = s.minutes || 0;
+            totalMin += m;
+            if (m > longest.minutes) longest = { iso: iso, minutes: m };
+            seansN += s.seansCount || 0;
+            seansMin += s.seansMinutes || 0;
+            Object.keys(s.byDers || {}).forEach(function (ders) {
+                byDers[ders] = (byDers[ders] || 0) + (s.byDers[ders] || 0);
+            });
+            var wi = weekDates.indexOf(iso);
+            if (wi >= 0) weekMin[wi] += m;
+            weeks.forEach(function (w) {
+                if (iso >= w.start && iso < addDays(w.start, 7)) w.minutes += m;
+            });
+        });
+
+        if (!Object.keys(byDers).length && student.topics) {
+            Object.keys(student.topics).forEach(function (ders) {
+                var n = 0;
+                Object.keys(student.topics[ders] || {}).forEach(function (k) {
+                    n += (student.topics[ders][k].attempts || 0);
+                });
+                if (n) byDers[ders] = n;
+            });
+        }
+
+        var dersList = Object.keys(byDers).map(function (k) { return { ders: k, v: byDers[k] }; });
+        dersList.sort(function (a, b) { return b.v - a.v; });
+        var dersSum = dersList.reduce(function (a, x) { return a + x.v; }, 0);
+
+        var bands = [
+            { t: "06–09", hours: [6, 7, 8] },
+            { t: "09–12", hours: [9, 10, 11] },
+            { t: "12–15", hours: [12, 13, 14] },
+            { t: "15–18", hours: [15, 16, 17] },
+            { t: "18–21", hours: [18, 19, 20] },
+            { t: "21–24", hours: [21, 22, 23] }
+        ];
+        var heat = bands.map(function (b) {
+            return weekDates.map(function (iso) {
+                var hmap = (sessions[iso] && sessions[iso].byHour) || {};
+                var v = 0;
+                b.hours.forEach(function (h) { v += hmap[String(h)] || 0; });
+                return v;
+            });
+        });
+        var heatMax = 1;
+        heat.forEach(function (row) {
+            row.forEach(function (v) { if (v > heatMax) heatMax = v; });
+        });
+
+        var plan = (student.userProfile && student.userProfile.studyPlan) || null;
+        var plannedWeek = 0;
+        if (plan && plan.ready && plan.days && global.StudentStore.WEEK_DAYS) {
+            global.StudentStore.WEEK_DAYS.forEach(function (w) {
+                var day = plan.days[w.id];
+                if (day && day.on && global.StudentStore.daySlotHours) plannedWeek += global.StudentStore.daySlotHours(day);
+            });
+        }
+        var actualWeekH = weekMin.reduce(function (a, x) { return a + x; }, 0) / 60;
+        var todayPlanH = 0;
+        if (plan && plan.ready && global.StudentStore.planDayId) {
+            var td = plan.days[global.StudentStore.planDayId()];
+            if (td && td.on && global.StudentStore.daySlotHours) todayPlanH = global.StudentStore.daySlotHours(td);
+        }
+
+        if (!seansN && totalMin > 0) {
+            seansN = dates.filter(function (iso) { return (sessions[iso].minutes || 0) > 0; }).length || 1;
+            seansMin = totalMin;
+        }
+
+        return {
+            totalHours: Math.round((totalMin / 60) * 10) / 10,
+            longest: longest,
+            streak: (student.streak && student.streak.count) || 0,
+            avgSeansMin: seansN ? Math.round(seansMin / seansN) : 0,
+            weekMin: weekMin,
+            weekDates: weekDates,
+            weeks: weeks,
+            dersList: dersList,
+            dersSum: dersSum,
+            heat: heat,
+            heatMax: heatMax,
+            bands: bands,
+            plannedWeek: plannedWeek,
+            actualWeekH: Math.round(actualWeekH * 10) / 10,
+            todayMin: (sessions[today] && sessions[today].minutes) || 0,
+            todayPlanH: todayPlanH
+        };
+    }
+
     global.StudyPlanner = {
         flattenQuestions: flattenQuestions,
         catalogStats: catalogStats,
@@ -265,6 +382,7 @@
         shuffle: shuffle,
         breakdownByTopic: breakdownByTopic,
         daysUntilExam: daysUntilExam,
-        buildWeeklyCalendar: buildWeeklyCalendar
+        buildWeeklyCalendar: buildWeeklyCalendar,
+        studyDashboard: studyDashboard
     };
 })(window);

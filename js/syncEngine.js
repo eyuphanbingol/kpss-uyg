@@ -19,6 +19,14 @@
         };
     }
 
+    function mergeNumMap(a, b) {
+        var out = Object.assign({}, b || {});
+        Object.keys(a || {}).forEach(function (k) {
+            out[k] = Math.max(out[k] || 0, a[k] || 0);
+        });
+        return out;
+    }
+
     function mergeSessions(a, b) {
         var out = Object.assign({}, b || {}, a || {});
         Object.keys(out).forEach(function (day) {
@@ -27,7 +35,11 @@
             out[day] = {
                 questions: Math.max(L.questions || 0, R.questions || 0),
                 correct: Math.max(L.correct || 0, R.correct || 0),
-                minutes: Math.max(L.minutes || 0, R.minutes || 0)
+                minutes: Math.max(L.minutes || 0, R.minutes || 0),
+                seansCount: Math.max(L.seansCount || 0, R.seansCount || 0),
+                seansMinutes: Math.max(L.seansMinutes || 0, R.seansMinutes || 0),
+                byHour: mergeNumMap(L.byHour, R.byHour),
+                byDers: mergeNumMap(L.byDers, R.byDers)
             };
         });
         return out;
