@@ -92,11 +92,29 @@ Deno.serve(async (req) => {
     });
     await admin.from("student_states").update({ payload }).eq("user_id", body.user_id);
   } else if (action === "announce") {
-    await admin.from("app_announcements").insert({
-      body: String(body.text || "").slice(0, 500),
+    const text = String(body.text || "").trim().slice(0, 500);
+    if (!text) return json({ ok: false, error: "empty" }, 400);
+    const hours = Number(body.hours);
+    const expiresAt = (hours > 0 && isFinite(hours))
+      ? new Date(Date.now() + hours * 3600 * 1000).toISOString()
+      : null;
+    const stored = (expiresAt ? ("<!--kpss-exp:" + expiresAt + "-->") : "") + text;
+    const row: Record<string, unknown> = {
+      body: stored,
       published: true,
       created_by: user.id
-    });
+    };
+    if (expiresAt) row.expires_at = expiresAt;
+    const ins = await admin.from("app_announcements").insert(row);
+    if (ins.error && /expires_at/i.test(ins.error.message || "")) {
+      await admin.from("app_announcements").insert({
+        body: stored,
+        published: true,
+        created_by: user.id
+      });
+    } else if (ins.error) {
+      return json({ ok: false, error: ins.error.message }, 500);
+    }
   } else if (action === "list_edu_requests") {
     const pending: any[] = [];
     const seen: Record<string, boolean> = {};

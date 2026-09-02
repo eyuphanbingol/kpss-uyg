@@ -74,6 +74,7 @@
         const [kpi, setKpi] = useState(null);
         const [hard, setHard] = useState([]);
         const [announce, setAnnounce] = useState("");
+        const [announceHours, setAnnounceHours] = useState("24");
         const [detail, setDetail] = useState(null);
         const [q, setQ] = useState("");
         const [filter, setFilter] = useState("all");
@@ -831,12 +832,27 @@
                                         className="w-full px-4 py-3 rounded-2xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 text-sm focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all resize-none"
                                         placeholder="📝 Duyuru metnini yaz... Örn: 'Yarın 14:00'de canlı deneme var!'"
                                     />
-                                    <div className="flex items-center justify-between mt-4">
-                                        <span className="text-xs text-stone-400">{announce.length} karakter</span>
+                                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mt-4">
+                                        <div className="flex items-center gap-2">
+                                            <label className="text-xs text-stone-500 shrink-0">Süre</label>
+                                            <select value={announceHours} onChange={function (e) { setAnnounceHours(e.target.value); }}
+                                                className="px-3 py-2 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 text-sm">
+                                                <option value="1">1 saat</option>
+                                                <option value="3">3 saat</option>
+                                                <option value="6">6 saat</option>
+                                                <option value="12">12 saat</option>
+                                                <option value="24">24 saat</option>
+                                                <option value="48">2 gün</option>
+                                                <option value="72">3 gün</option>
+                                                <option value="168">7 gün</option>
+                                                <option value="0">Süresiz</option>
+                                            </select>
+                                            <span className="text-xs text-stone-400">{announce.length}/500</span>
+                                        </div>
                                         <button 
                                             disabled={busy || !announce.trim()} 
                                             onClick={function () { 
-                                                act("announce", { text: announce }); 
+                                                act("announce", { text: announce, hours: Number(announceHours) }); 
                                                 setAnnounce(""); 
                                                 if (announceRef.current) announceRef.current.focus();
                                             }}
@@ -851,8 +867,8 @@
                                     <ul className="text-xs text-stone-600 dark:text-stone-400 space-y-1">
                                         <li>• Duyuru tüm kullanıcılara gönderilir</li>
                                         <li>• "Bugün" ekranının üst kısmında görünür</li>
-                                        <li>• HTML etiketleri desteklenir (bold, link, vs.)</li>
-                                        <li>• Önceki duyurular otomatik olarak güncellenir</li>
+                                        <li>• Süreyi sen seçersin; bitince bant kendiliğinden kalkar</li>
+                                        <li>• Yeni duyuru eskisinin yerini alır</li>
                                     </ul>
                                 </div>
                             </div>

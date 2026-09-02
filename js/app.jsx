@@ -1404,12 +1404,34 @@ function App() {
 
     useEffect(function () {
         if (!authSession) { setAnnounce(""); return; }
-        var sb = window.SupabaseClient && window.SupabaseClient.get && window.SupabaseClient.get();
-        if (!sb) return;
-        sb.from("app_announcements").select("body").eq("published", true).order("created_at", { ascending: false }).limit(1)
-            .then(function (r) {
-                if (!r.error && r.data && r.data[0] && r.data[0].body) setAnnounce(String(r.data[0].body));
-            });
+        function pickBanner(rows) {
+            var now = Date.now();
+            var i;
+            for (i = 0; i < (rows || []).length; i++) {
+                var raw = String((rows[i] && rows[i].body) || "");
+                var exp = rows[i] && rows[i].expires_at;
+                var m = raw.match(/^<!--kpss-exp:([^>]+)-->/);
+                if (m) {
+                    exp = m[1];
+                    raw = raw.slice(m[0].length);
+                }
+                if (exp && new Date(exp).getTime() <= now) continue;
+                if (raw.trim()) return raw.trim();
+            }
+            return "";
+        }
+        function loadBanner() {
+            var sb = window.SupabaseClient && window.SupabaseClient.get && window.SupabaseClient.get();
+            if (!sb) return;
+            sb.from("app_announcements").select("body,created_at").eq("published", true).order("created_at", { ascending: false }).limit(10)
+                .then(function (r) {
+                    if (r.error) return;
+                    setAnnounce(pickBanner(r.data));
+                });
+        }
+        loadBanner();
+        var t = setInterval(loadBanner, 60000);
+        return function () { clearInterval(t); };
     }, [authSession]);
 
     const [nav, setNav] = useState("bugun");
