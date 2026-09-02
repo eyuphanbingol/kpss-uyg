@@ -296,8 +296,6 @@ function StudyProgram(props) {
     );
 }
 
-}
-
 var DASH_COLORS = ["#1E1B4B", "#0f766e", "#d97706", "#e11d48", "#57534e", "#4338ca"];
 
 function StudyDash(props) {
