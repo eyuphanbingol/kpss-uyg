@@ -125,28 +125,66 @@ function BottomNav(props) {
 }
 
 function Onboarding(props) {
-    const [name, setName] = useState(props.student.profile.name || "");
-    const [examDate, setExamDate] = useState(props.student.profile.examDate || "2026-09-06");
-    const [mins, setMins] = useState(props.student.profile.dailyMinutes || 45);
+    var profile = (props.student && props.student.profile) || {};
+    var up = (props.student && props.student.userProfile) || {};
+    var dates = (window.KpssConfig && window.KpssConfig.examDateByLevel) || {};
+    const [name, setName] = useState(profile.name || "");
+    const [level, setLevel] = useState(up.educationLevel || "lisans");
+    const [target, setTarget] = useState(up.targetType || "B");
+    const [examDate, setExamDate] = useState(profile.examDate || dates[up.educationLevel || "lisans"] || "2026-09-06");
+    const [kvkk, setKvkk] = useState(false);
     return (
-        <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-end sm:items-center justify-center p-4">
-            <div className="w-full max-w-md bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl fade-in">
-                <p className="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2">Kişisel eğitim alanı</p>
-                <h2 className="text-2xl font-black text-slate-900 dark:text-white mb-2">Dershanedeki yerin hazır</h2>
-                <p className="text-sm text-slate-500 mb-6">Hedefini söyle, her gün ne çalışacağını biz sıraya koyalım. Veriler bu cihazda kalır.</p>
-                <label className="block text-xs font-bold text-slate-500 mb-1">Adın (isteğe bağlı)</label>
-                <input value={name} onChange={function (e) { setName(e.target.value); }} placeholder="Örn. Eyüp"
-                    className="w-full mb-4 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-900 font-medium" />
-                <label className="block text-xs font-bold text-slate-500 mb-1">Sınav tarihi</label>
+        <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-end sm:items-center justify-center p-4">
+            <div className="w-full max-w-md bg-white dark:bg-stone-900 rounded-3xl p-6 sm:p-8 shadow-2xl fade-in">
+                <h2 className="text-2xl font-black text-stone-900 dark:text-white mb-1">Profilini tamamla</h2>
+                <p className="text-sm text-stone-500 mb-5">Google ile giriş yaptın. Adın, eğitim düzeyin ve kulvarın uygulamayı açmak için gerekli.</p>
+                <label className="block text-xs font-bold text-stone-500 mb-1">Adın</label>
+                <input value={name} onChange={function (e) { setName(e.target.value); }} placeholder="Örn. Ayşe"
+                    className="w-full mb-4 px-4 py-3 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-800 font-medium" />
+                <p className="text-xs font-bold text-stone-500 mb-2">Eğitim düzeyi</p>
+                <div className="grid grid-cols-3 gap-2 mb-4">
+                    {[{ id: "lisans", t: "Lisans" }, { id: "onlisans", t: "Ön lisans" }, { id: "ortaogretim", t: "Ortaöğretim" }].map(function (x) {
+                        var on = level === x.id;
+                        return (
+                            <button key={x.id} type="button" onClick={function () {
+                                setLevel(x.id);
+                                if (dates[x.id]) setExamDate(dates[x.id]);
+                            }} className={"px-2 py-2 rounded-xl border-2 text-xs font-semibold " + (on ? "border-indigo-500 bg-indigo-50 text-indigo-700" : "border-stone-200")}>{x.t}</button>
+                        );
+                    })}
+                </div>
+                <p className="text-xs font-bold text-stone-500 mb-2">Kulvar</p>
+                <div className="grid grid-cols-2 gap-2 mb-4">
+                    {[{ id: "B", t: "B Grubu" }, { id: "A", t: "A Grubu" }, { id: "ogretmen", t: "Öğretmenlik" }, { id: "dhbt", t: "DHBT" }].map(function (x) {
+                        var on = target === x.id;
+                        return (
+                            <button key={x.id} type="button" onClick={function () { setTarget(x.id); }}
+                                className={"px-3 py-2 rounded-xl border-2 text-xs font-semibold " + (on ? "border-indigo-500 bg-indigo-50 text-indigo-700" : "border-stone-200")}>{x.t}</button>
+                        );
+                    })}
+                </div>
+                <label className="block text-xs font-bold text-stone-500 mb-1">Sınav tarihi</label>
                 <input type="date" value={examDate} onChange={function (e) { setExamDate(e.target.value); }}
-                    className="w-full mb-4 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-900 font-medium" />
-                <label className="block text-xs font-bold text-slate-500 mb-1">Günlük çalışma · {mins} dk</label>
-                <input type="range" min="20" max="180" step="5" value={mins} onChange={function (e) { setMins(Number(e.target.value)); }} className="w-full mb-6" />
-                <button onClick={function () {
-                    const q = Math.max(10, Math.round(mins / 1.8));
-                    StudentStore.completeOnboarding({ name: name, examDate: examDate, dailyMinutes: mins, dailyQuestions: q });
-                }} className="w-full btn-primary text-white font-bold py-4 rounded-2xl">
-                    Koçluğu başlat
+                    className="w-full mb-4 px-4 py-3 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-800 font-medium" />
+                <label className="flex items-start gap-2 mb-5 text-xs text-stone-600">
+                    <input type="checkbox" checked={kvkk} onChange={function (e) { setKvkk(e.target.checked); }} className="mt-0.5" />
+                    İlerleme verilerimin hesabımda saklanmasına izin veriyorum.
+                </label>
+                <button disabled={!name.trim() || !kvkk} onClick={function () {
+                    StudentStore.completeOnboarding({
+                        name: name.trim(),
+                        nickname: name.trim(),
+                        examDate: examDate,
+                        dailyMinutes: 45,
+                        dailyQuestions: 25,
+                        educationLevel: level,
+                        targetType: target,
+                        kvkkConsent: true,
+                        weeklyHours: 7
+                    });
+                    if (window.SyncEngine) window.SyncEngine.sync();
+                }} className="w-full btn-primary text-white font-bold py-4 rounded-2xl disabled:opacity-40">
+                    Başla
                 </button>
             </div>
         </div>
@@ -1250,7 +1288,7 @@ function toItemsFromKonu(kpssData, ders, konu) {
 
 function App() {
     const student = useStudent();
-    const isDark = !!student.profile.dark;
+    const isDark = !!(student.profile && student.profile.dark);
     const kpssData = (typeof window !== "undefined" && window.kpssData) ? window.kpssData : {};
     const plan = useMemo(function () {
         return StudyPlanner.buildPlan(kpssData, student);
@@ -1264,6 +1302,7 @@ function App() {
     const [AdminCmp, setAdminCmp] = useState(null);
     const [lazyErr, setLazyErr] = useState("");
     const [roleChecked, setRoleChecked] = useState(false);
+    const [announce, setAnnounce] = useState("");
     const [pwRecovery, setPwRecovery] = useState(function () {
         return !!(window.SupabaseClient && window.SupabaseClient.recoveryPending && window.SupabaseClient.recoveryPending());
     });
@@ -1284,11 +1323,11 @@ function App() {
     };
 
     useEffect(function () {
-        if (student.profile.onboarded || !window.JsxLoader) return;
+        if ((student.profile && student.profile.onboarded) || !window.JsxLoader) return;
         window.JsxLoader.load("OnboardingScreen", "js/components/OnboardingScreen.jsx").then(function (C) {
             if (C) setOnboardCmp(function () { return C; });
-        });
-    }, [student.profile.onboarded]);
+        }).catch(function () {});
+    }, [student.profile && student.profile.onboarded]);
 
     useEffect(function () {
         if (!extra || extra === "onboarding") return;
@@ -1383,7 +1422,10 @@ function App() {
         var uid = authSession.user.id;
         var sb = window.SupabaseClient && window.SupabaseClient.get && window.SupabaseClient.get();
         var localAdmin = !!(StudentStore.getState().userProfile && StudentStore.getState().userProfile.role === "admin");
+        var settled = false;
         function finish(isAdm) {
+            if (settled) return;
+            settled = true;
             if (isAdm) StudentStore.updateUserProfile({ role: "admin" });
             if (isAdm && window.JsxLoader) {
                 window.JsxLoader.load("AdminDashboard", "js/components/AdminDashboard.jsx").then(function (C) {
@@ -1398,9 +1440,15 @@ function App() {
             }
         }
         if (!sb) { finish(localAdmin); return; }
+        var timed = setTimeout(function () { finish(localAdmin); }, 8000);
         sb.from("student_states").select("role").eq("user_id", uid).maybeSingle().then(function (r) {
+            clearTimeout(timed);
             finish(!!(r.data && r.data.role === "admin") || localAdmin);
-        }).catch(function () { finish(localAdmin); });
+        }).catch(function () {
+            clearTimeout(timed);
+            finish(localAdmin);
+        });
+        return function () { clearTimeout(timed); };
     }, [authSession]);
 
     useEffect(function () {
@@ -1725,11 +1773,9 @@ function App() {
             );
     }
 
-    if (!student.profile.onboarded) {
-        var Ob = OnboardCmp || (window.KpssComponents && window.KpssComponents.OnboardingScreen);
-        return Ob
-            ? React.createElement(Ob, { student: student, isDark: isDark, toggleDark: function () { StudentStore.setDark(!isDark); } })
-            : <div className="min-h-screen flex items-center justify-center text-sm text-zinc-400">Yükleniyor</div>;
+    if (!student.profile || !student.profile.onboarded) {
+        var Ob = OnboardCmp || (window.KpssComponents && window.KpssComponents.OnboardingScreen) || Onboarding;
+        return React.createElement(Ob, { student: student, isDark: isDark, toggleDark: function () { StudentStore.setDark(!isDark); } });
     }
 
     function closeTool() {

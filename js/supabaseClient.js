@@ -5,10 +5,18 @@
     function recoveryFromUrl() {
         var s = String(window.location.search || "");
         var h = String(window.location.hash || "");
+        if (/(?:[?&]code=)/.test(s) && !/(?:[?&]reset=)/.test(s) && !/type=recovery/.test(s) && !/type=recovery/.test(h)) {
+            return false;
+        }
         return /(?:[?&]reset=)/.test(s) || /type=recovery/.test(s) || /type=recovery/.test(h);
     }
 
     function recoveryPending() {
+        var s = String(window.location.search || "");
+        if (/(?:[?&]code=)/.test(s) && !/(?:[?&]reset=)/.test(s) && !/type=recovery/.test(s)) {
+            try { sessionStorage.removeItem(RECOVERY_KEY); } catch (e) {}
+            return false;
+        }
         try {
             if (sessionStorage.getItem(RECOVERY_KEY) === "1") return true;
         } catch (e) {}

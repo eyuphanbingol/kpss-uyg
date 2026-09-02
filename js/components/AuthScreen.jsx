@@ -249,11 +249,7 @@
                 var res = await sb.auth.signInWithOAuth({
                     provider: "google",
                     options: {
-                        redirectTo: window.location.origin + window.location.pathname,
-                        queryParams: {
-                            access_type: 'offline',
-                            prompt: 'consent'
-                        }
+                        redirectTo: window.location.origin + (window.location.pathname || "/")
                     }
                 });
                 if (res.error) setMsg(res.error.message);

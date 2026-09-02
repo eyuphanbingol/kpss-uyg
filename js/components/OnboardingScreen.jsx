@@ -55,14 +55,15 @@
     // ============================================================
 
     function OnboardingScreen(props) {
-        const student = props.student;
+        const student = props.student || {};
         const dates = (window.KpssConfig && window.KpssConfig.examDateByLevel) || {};
+        var profile = student.profile || {};
         
         // ---------- State ----------
-        const [name, setName] = useState(student.profile.name || "");
+        const [name, setName] = useState(profile.name || "");
         const [level, setLevel] = useState((student.userProfile && student.userProfile.educationLevel) || "lisans");
         const [target, setTarget] = useState((student.userProfile && student.userProfile.targetType) || "B");
-        const [examDate, setExamDate] = useState(student.profile.examDate || dates[level] || "2026-09-06");
+        const [examDate, setExamDate] = useState(profile.examDate || dates[level] || "2026-09-06");
         const [kvkk, setKvkk] = useState(false);
         const [step, setStep] = useState(1);
         const [animating, setAnimating] = useState(false);

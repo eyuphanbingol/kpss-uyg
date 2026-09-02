@@ -165,7 +165,7 @@
             });
         }
 
-        var qGoal = student.profile.dailyQuestions || 25;
+        var qGoal = (student.profile && student.profile.dailyQuestions) || 25;
         var remaining = Math.max(0, qGoal - (sess.questions || 0));
         var coach;
         if (weak[0] && weak[0].lastPct != null && weak[0].lastPct < 60) {
@@ -180,7 +180,7 @@
             coach = "Günlük soru hedefi doldu. Kısa tekrar yeter; yarın zayıf konuya dön.";
         }
 
-        var daysLeft = daysUntilExam(student.profile.examDate);
+        var daysLeft = daysUntilExam(student.profile && student.profile.examDate);
         var weekly = buildWeeklyCalendar(student, weak, daysLeft);
         return {
             rows: rows,
