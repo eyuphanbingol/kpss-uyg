@@ -1060,7 +1060,10 @@ function Ben(props) {
                         if (n) window.NotificationEngine.showLocal("KPSS", n);
                     }
                 });
-            }} className="w-full mb-3 p-3.5 rounded-2xl panel text-left font-medium">Hatırlatma izni</button>
+            }} className="w-full mb-3 p-3.5 rounded-2xl panel text-left">
+                <span className="font-medium block">Hatırlatma izni</span>
+                <span className="text-xs text-zinc-400 font-normal mt-0.5 block">Tarayıcı bildirimi: seri bozulmasın diye “bugün çalış” uyarısı. İstersen kapatırsın.</span>
+            </button>
             {isAdmin ? (
                 <button onClick={function () { props.onAdmin && props.onAdmin(); }} className="w-full mb-3 p-3.5 rounded-2xl panel text-left font-medium">Yönetim</button>
             ) : null}
