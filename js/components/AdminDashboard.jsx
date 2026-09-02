@@ -59,9 +59,21 @@
                 if (!r.error && r.data) setHard(Array.isArray(r.data) ? r.data : []);
             });
             sb.functions.invoke("admin-action", { body: { action: "list_edu_requests" } }).then(function (r) {
-                if (r.error) return;
-                var list = (r.data && r.data.data) || [];
-                setEduReqs(Array.isArray(list) ? list : []);
+                if (r.error) {
+                    setMsg("Talepler: " + r.error.message);
+                    return;
+                }
+                var d = r.data;
+                if (typeof d === "string") {
+                    try { d = JSON.parse(d); } catch (e) { d = null; }
+                }
+                var list = [];
+                if (Array.isArray(d)) list = d;
+                else if (d && Array.isArray(d.data)) list = d.data;
+                else if (d && d.data && Array.isArray(d.data.data)) list = d.data.data;
+                setEduReqs(list);
+            }).catch(function (e) {
+                setMsg("Talepler alınamadı: " + (e && e.message ? e.message : e));
             });
         }
 
@@ -212,7 +224,10 @@
 
                         {tab === "talepler" ? (
                             <div>
-                                <h1 className="text-2xl font-semibold tracking-tight mb-2">Eğitim değişiklik talepleri</h1>
+                                <div className="flex items-start justify-between gap-3 mb-2">
+                                    <h1 className="text-2xl font-semibold tracking-tight">Eğitim değişiklik talepleri</h1>
+                                    <button type="button" disabled={busy} onClick={load} className="text-sm font-medium text-navy-600 shrink-0">Yenile</button>
+                                </div>
                                 <p className="text-sm text-zinc-500 mb-6">Öğrenci kayıtta seçtiği düzeyi kendi değiştiremez. Onaylarsan sınav tarihi de ÖSYM takvimine çekilir.</p>
                                 {eduReqs.length === 0 ? (
                                     <div className="panel rounded-2xl p-8 text-sm text-zinc-400">Bekleyen talep yok.</div>

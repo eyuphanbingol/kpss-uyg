@@ -111,9 +111,40 @@
         });
     }
 
+    function pickEduReq(a, b) {
+        function reqOf(s) {
+            if (!s) return null;
+            return (s.userProfile && s.userProfile.educationChangeRequest) || s.educationChangeRequest || null;
+        }
+        var A = reqOf(a);
+        var B = reqOf(b);
+        if (!A) return B;
+        if (!B) return A;
+        var aAdmin = A.status === "approved" || A.status === "rejected";
+        var bAdmin = B.status === "approved" || B.status === "rejected";
+        if (bAdmin && A.status === "pending" && (B.at || "") >= (A.at || "")) return B;
+        if (aAdmin && B.status === "pending" && (A.at || "") >= (B.at || "")) return A;
+        return (A.at || "") >= (B.at || "") ? A : B;
+    }
+
     async function pullPush() {
         var sb = global.SupabaseClient && global.SupabaseClient.get();
-        if (!sb || syncing) return { ok: false, reason: "offline-or-busy" };
+        if (!sb) return { ok: false, reason: "offline-or-busy" };
+        if (syncing) {
+            return await new Promise(function (resolve) {
+                var n = 0;
+                var id = setInterval(function () {
+                    n += 1;
+                    if (!syncing) {
+                        clearInterval(id);
+                        pullPush().then(resolve);
+                    } else if (n > 40) {
+                        clearInterval(id);
+                        resolve({ ok: false, reason: "offline-or-busy" });
+                    }
+                }, 150);
+            });
+        }
         var sessionRes = await sb.auth.getSession();
         var session = sessionRes && sessionRes.data && sessionRes.data.session;
         if (!session) return { ok: false, reason: "anon" };
@@ -156,20 +187,17 @@
                 merged.userProfile.educationLevel = dbEdu;
                 var cfgDates = window.KpssConfig && window.KpssConfig.examDateByLevel;
                 var examDates = cfgDates || { lisans: "2026-09-06", onlisans: "2026-10-04", ortaogretim: "2026-10-25" };
-                if (examDates[dbEdu]) {
-                    merged.profile.examDate = examDates[dbEdu];
+                var pendingReq = pickEduReq(local, merged);
+                var latestSnap = global.StudentStore.getState();
+                pendingReq = pickEduReq({ userProfile: { educationChangeRequest: pendingReq } }, latestSnap);
+                if (!pendingReq || pendingReq.status !== "pending") {
+                    if (examDates[dbEdu]) merged.profile.examDate = examDates[dbEdu];
                 }
             }
-            var rReq = remote && remote.userProfile && remote.userProfile.educationChangeRequest;
-            var lReq = merged.userProfile.educationChangeRequest;
-            if (rReq && lReq) {
-                if ((rReq.status === "approved" || rReq.status === "rejected") && lReq.status === "pending" && (rReq.at || "") >= (lReq.at || "")) {
-                    merged.userProfile.educationChangeRequest = rReq;
-                } else if ((lReq.at || "") < (rReq.at || "")) {
-                    merged.userProfile.educationChangeRequest = rReq;
-                }
-            } else if (rReq && !lReq) {
-                merged.userProfile.educationChangeRequest = rReq;
+            var keptReq = pickEduReq(pickEduReq(local, remote), global.StudentStore.getState());
+            if (keptReq) {
+                merged.userProfile.educationChangeRequest = keptReq;
+                merged.educationChangeRequest = keptReq;
             }
             merged.updatedAt = global.StudentStore.nowIso();
             global.StudentStore.replaceState(merged, { quiet: true });

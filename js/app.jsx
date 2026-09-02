@@ -1028,11 +1028,16 @@ function Ben(props) {
             weeklyHours: Number(draftHours) || 7,
             dailyHours: (Number(draftHours) || 7) / 7
         });
-        if (draftEdu && (!eduReq || eduReq.status !== "pending")) {
-            StudentStore.requestEducationChange(draftEdu);
-        }
-        if (window.SyncEngine) window.SyncEngine.sync();
+        var wantEdu = draftEdu && (!eduReq || eduReq.status !== "pending") ? draftEdu : "";
+        if (wantEdu) StudentStore.requestEducationChange(wantEdu);
         setEditing(false);
+        var sb = window.SupabaseClient && window.SupabaseClient.get();
+        var done = function () { if (window.SyncEngine) window.SyncEngine.sync(); };
+        if (wantEdu && sb && sb.functions) {
+            sb.functions.invoke("admin-action", { body: { action: "submit_edu", to: wantEdu } }).then(function () { done(); }).catch(done);
+        } else {
+            done();
+        }
     }
     return (
         <Shell>
