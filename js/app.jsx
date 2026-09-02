@@ -973,6 +973,25 @@ function DenemeSetup(props) {
     );
 }
 
+function eduLabel(id) {
+    if (id === "onlisans") return "Ön lisans";
+    if (id === "ortaogretim") return "Ortaöğretim";
+    return "Lisans";
+}
+
+function trackLabel(id) {
+    var list = (window.KpssConfig && window.KpssConfig.targetTypes) || [];
+    var hit = list.filter(function (x) { return x.id === id; })[0];
+    return (hit && hit.t) || id || "—";
+}
+
+function fmtExam(iso) {
+    if (!iso) return "—";
+    var p = String(iso).split("-");
+    if (p.length === 3) return p[2] + "." + p[1] + "." + p[0];
+    return iso;
+}
+
 function Ben(props) {
     const st = props.student;
     let totQ = 0, totC = 0;
@@ -984,6 +1003,37 @@ function Ben(props) {
     const up = st.userProfile || {};
     const field = "w-full px-4 py-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900";
     const isAdmin = up.role === "admin";
+    const [editing, setEditing] = useState(false);
+    const [draftName, setDraftName] = useState("");
+    const [draftTrack, setDraftTrack] = useState("B");
+    const [draftHours, setDraftHours] = useState(7);
+    const [draftTab, setDraftTab] = useState(true);
+    const [draftEdu, setDraftEdu] = useState("");
+    const eduReq = up.educationChangeRequest;
+
+    function startSettingsEdit() {
+        setDraftName(st.profile.name || "");
+        setDraftTrack(up.targetType || "B");
+        setDraftHours(up.weeklyHours || 7);
+        setDraftTab(st.profile.tabLeaveWarn !== false);
+        setDraftEdu("");
+        setEditing(true);
+    }
+
+    function sendSettings() {
+        StudentStore.updateProfile({ name: draftName, tabLeaveWarn: draftTab });
+        StudentStore.updateUserProfile({
+            nickname: draftName,
+            targetType: draftTrack,
+            weeklyHours: Number(draftHours) || 7,
+            dailyHours: (Number(draftHours) || 7) / 7
+        });
+        if (draftEdu && (!eduReq || eduReq.status !== "pending")) {
+            StudentStore.requestEducationChange(draftEdu);
+        }
+        if (window.SyncEngine) window.SyncEngine.sync();
+        setEditing(false);
+    }
     return (
         <Shell>
             <div className="flex justify-between items-start mb-6">
@@ -998,64 +1048,77 @@ function Ben(props) {
                 <div className="p-4 rounded-2xl panel"><div className="text-xl font-semibold">{totQ}</div><div className="text-xs text-zinc-400 mt-1">Soru</div></div>
                 <div className="p-4 rounded-2xl panel"><div className="text-xl font-semibold">%{overall}</div><div className="text-xs text-zinc-400 mt-1">Net</div></div>
             </div>
-            <div className="panel rounded-2xl p-4 mb-4 space-y-3">
-                <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider">Ayarlar</p>
-                <label className="text-sm text-zinc-500">Ad</label>
-                <input value={st.profile.name || ""} onChange={function (e) { StudentStore.updateProfile({ name: e.target.value }); StudentStore.updateUserProfile({ nickname: e.target.value }); }} className={field} />
-                <label className="text-sm text-zinc-500">Eğitim</label>
-                <p className="px-4 py-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-stone-50 dark:bg-stone-900 text-sm font-medium">
-                    {up.educationLevel === "onlisans" ? "Ön lisans" : (up.educationLevel === "ortaogretim" ? "Ortaöğretim" : "Lisans")}
-                </p>
-                <p className="text-xs text-zinc-400">Kayıtta seçtin. Değişiklik admin onayı ister.</p>
-                {function () {
-                    var req = up.educationChangeRequest;
-                    if (req && req.status === "pending") {
-                        var want = req.to === "onlisans" ? "Ön lisans" : (req.to === "ortaogretim" ? "Ortaöğretim" : "Lisans");
-                        return <p className="text-sm text-amber-700 bg-amber-50 rounded-xl px-3 py-2">Onay bekleniyor: {want}</p>;
-                    }
-                    return (
-                        <div>
-                            {req && req.status === "rejected" ? <p className="text-sm text-coral-600 mb-2">Son talep reddedildi. Yeniden gönderebilirsin.</p> : null}
-                            <label className="text-sm text-zinc-500">Değişiklik talebi</label>
-                            <div className="flex gap-2 mt-1">
-                                <select id="edu-req" defaultValue="" className={field}>
-                                    <option value="" disabled>Yeni düzey seç</option>
+            <div className="panel rounded-2xl p-4 mb-4">
+                <div className="flex items-center justify-between mb-1">
+                    <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider">Ayarlar</p>
+                    {!editing ? (
+                        <button type="button" onClick={startSettingsEdit} className="text-sm font-medium text-navy-600">Düzenle</button>
+                    ) : null}
+                </div>
+                {eduReq && eduReq.status === "pending" ? (
+                    <p className="text-sm text-amber-800 bg-amber-50 rounded-xl px-3 py-2 mt-3">Eğitim değişikliği onay bekliyor: {eduLabel(eduReq.to)}</p>
+                ) : null}
+                {eduReq && eduReq.status === "rejected" && editing ? (
+                    <p className="text-sm text-coral-600 mt-3">Son eğitim talebi reddedildi. Yeniden seçebilirsin.</p>
+                ) : null}
+                {!editing ? (
+                    <dl className="mt-3 divide-y divide-zinc-100 dark:divide-zinc-800">
+                        {[
+                            { k: "Ad", v: st.profile.name || "—" },
+                            { k: "Eğitim", v: eduLabel(up.educationLevel) },
+                            { k: "Sınav tarihi", v: fmtExam(st.profile.examDate) },
+                            { k: "Kulvar", v: trackLabel(up.targetType || "B") },
+                            { k: "Haftalık çalışma", v: (up.weeklyHours || 7) + " saat" },
+                            { k: "Denemede sekme uyarısı", v: st.profile.tabLeaveWarn !== false ? "Açık" : "Kapalı" }
+                        ].map(function (row) {
+                            return (
+                                <div key={row.k} className="py-3 flex justify-between gap-4">
+                                    <dt className="text-sm text-zinc-400">{row.k}</dt>
+                                    <dd className="text-sm font-medium text-right">{row.v}</dd>
+                                </div>
+                            );
+                        })}
+                    </dl>
+                ) : (
+                    <div className="mt-3 space-y-3">
+                        <label className="text-sm text-zinc-500">Ad</label>
+                        <input value={draftName} onChange={function (e) { setDraftName(e.target.value); }} className={field} />
+                        <label className="text-sm text-zinc-500">Eğitim</label>
+                        <p className="text-sm font-medium">{eduLabel(up.educationLevel)}</p>
+                        <p className="text-xs text-zinc-400">Düzey değişimi admin onayı ister. Sınav tarihi ÖSYM takvimine bağlanır.</p>
+                        {(!eduReq || eduReq.status !== "pending") ? (
+                            <div>
+                                <label className="text-sm text-zinc-500">Yeni eğitim düzeyi</label>
+                                <select value={draftEdu} onChange={function (e) { setDraftEdu(e.target.value); }} className={field + " mt-1"}>
+                                    <option value="">Değiştirme</option>
                                     {up.educationLevel !== "lisans" ? <option value="lisans">Lisans</option> : null}
                                     {up.educationLevel !== "onlisans" ? <option value="onlisans">Ön lisans</option> : null}
                                     {up.educationLevel !== "ortaogretim" ? <option value="ortaogretim">Ortaöğretim</option> : null}
                                 </select>
-                                <button type="button" className="shrink-0 px-3 py-2 rounded-xl bg-navy-600 text-white text-sm" onClick={function () {
-                                    var el = document.getElementById("edu-req");
-                                    var v = el && el.value;
-                                    if (!v) return;
-                                    StudentStore.requestEducationChange(v);
-                                    if (window.SyncEngine) window.SyncEngine.sync();
-                                }}>Gönder</button>
                             </div>
+                        ) : null}
+                        <label className="text-sm text-zinc-500">Sınav tarihi</label>
+                        <p className="text-sm font-medium">{fmtExam(st.profile.examDate)}</p>
+                        <label className="text-sm text-zinc-500">Kulvar</label>
+                        <select value={draftTrack} onChange={function (e) { setDraftTrack(e.target.value); }} className={field}>
+                            {((window.KpssConfig && window.KpssConfig.targetTypes) || [
+                                { id: "B", t: "B Grubu" }, { id: "A", t: "A Grubu" }, { id: "ogretmen", t: "Öğretmenlik" }, { id: "dhbt", t: "DHBT" }
+                            ]).map(function (x) {
+                                return <option key={x.id} value={x.id}>{x.t}</option>;
+                            })}
+                        </select>
+                        <label className="text-sm text-zinc-500">Haftalık çalışma saati</label>
+                        <input type="number" min="1" max="40" value={draftHours} onChange={function (e) { setDraftHours(e.target.value); }} className={field} />
+                        <label className="flex items-center gap-2 text-sm text-zinc-600 pt-1">
+                            <input type="checkbox" checked={draftTab} onChange={function (e) { setDraftTab(e.target.checked); }} />
+                            Denemede sekme uyarısı
+                        </label>
+                        <div className="flex gap-2 pt-1">
+                            <button type="button" onClick={sendSettings} className="flex-1 py-3 rounded-xl bg-navy-600 text-white text-sm font-semibold">Gönder</button>
+                            <button type="button" onClick={function () { setEditing(false); }} className="px-4 py-3 rounded-xl border border-zinc-200 text-sm font-medium">Vazgeç</button>
                         </div>
-                    );
-                }()}
-                <label className="text-sm text-zinc-500">Sınav tarihi</label>
-                <p className="px-4 py-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-stone-50 dark:bg-stone-900 text-sm">{st.profile.examDate || "—"}</p>
-                <p className="text-xs text-zinc-400">Eğitim düzeyi onaylanınca ÖSYM tarihine göre güncellenir.</p>
-                <label className="text-sm text-zinc-500">Kulvar</label>
-                <select value={up.targetType || "B"} onChange={function (e) { StudentStore.updateUserProfile({ targetType: e.target.value }); }} className={field}>
-                    {((window.KpssConfig && window.KpssConfig.targetTypes) || [
-                        { id: "B", t: "B Grubu" }, { id: "A", t: "A Grubu" }, { id: "ogretmen", t: "Öğretmenlik" }, { id: "dhbt", t: "DHBT" }
-                    ]).map(function (x) {
-                        return <option key={x.id} value={x.id}>{x.t}</option>;
-                    })}
-                </select>
-                <label className="text-sm text-zinc-500">Haftalık çalışma saati</label>
-                <input type="number" min="1" max="40" value={up.weeklyHours || 7}
-                    onChange={function (e) {
-                        var w = Number(e.target.value) || 7;
-                        StudentStore.updateUserProfile({ weeklyHours: w, dailyHours: w / 7 });
-                    }} className={field} />
-                <label className="flex items-center gap-2 text-sm text-zinc-600 pt-2">
-                    <input type="checkbox" checked={st.profile.tabLeaveWarn !== false} onChange={function (e) { StudentStore.updateProfile({ tabLeaveWarn: e.target.checked }); }} />
-                    Denemede sekme uyarısı
-                </label>
+                    </div>
+                )}
             </div>
             <div className="panel rounded-2xl p-4 mb-4">
                 <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-1">Araçlar</p>
