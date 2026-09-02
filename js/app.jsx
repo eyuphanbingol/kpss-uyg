@@ -582,7 +582,7 @@ function Eksikler(props) {
             </div>
             <div className="grid grid-cols-2 gap-3 mb-6">
                 <button onClick={function () { props.onReview(); }} disabled={!plan.due.length}
-                    className="p-4 rounded-2xl bg-navy-600 text-white font-semibold disabled:opacity-40">Tekrar · {plan.due.length}</button>
+                    className="p-4 rounded-2xl bg-navy-600 text-white font-semibold disabled:opacity-40">Bugün tekrar · {plan.due.length}</button>
                 <button onClick={function () { props.onWrong(); }} disabled={!plan.wrong.length}
                     className="p-4 rounded-2xl border border-coral-500 text-coral-600 font-semibold disabled:opacity-40">Yanlış defteri · {plan.wrong.length}</button>
             </div>

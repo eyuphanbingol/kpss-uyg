@@ -147,8 +147,8 @@
             tasks.push({
                 id: "review",
                 kind: "review",
-                title: "Aralıklı tekrar",
-                detail: due.length + " sorunun vadesi geldi",
+                title: "Bugün tekrar",
+                detail: due.length + " sorunun tekrar zamanı geldi",
                 count: due.length,
                 why: "Unutma eğrisine karşı bugün hatırlamak, yarın yeniden öğrenmekten ucuz."
             });
