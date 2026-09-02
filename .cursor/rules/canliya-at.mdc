@@ -1,0 +1,12 @@
+---
+description: Her kod değişikliğini sormadan GitHub main ve Vercel canlıya at.
+alwaysApply: true
+---
+
+# Canlıya at
+
+Uygulama değişikliği bitince sormadan `main`'e commit + `git push origin HEAD`. Kullanıcı "atayım mı" diye sorulmasını istemiyor.
+
+- `supabase/.temp/` ve sırları commit etme.
+- Cache kırıcı `?v=` numaralarını `index.html` / ilgili script'te artır.
+- Destructive git (force push, hard reset) yapma.
