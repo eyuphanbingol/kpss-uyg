@@ -87,6 +87,10 @@
         }, []);
 
         useEffect(function () {
+            if (mode === "in" && !recovery && emailRef.current) emailRef.current.focus();
+        }, [mode, recovery]);
+
+        useEffect(function () {
             if (!recovery) return;
             var sc = window.SupabaseClient;
             if (!sc || !sc.establishRecoverySession) return;
