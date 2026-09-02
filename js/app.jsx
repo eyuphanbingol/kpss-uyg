@@ -166,15 +166,15 @@ function Bugun(props) {
             <div className="grid grid-cols-3 gap-2 mb-5">
                 <div className="rounded-2xl bg-stone-100 dark:bg-stone-900 p-3 text-center">
                     <div className="font-stat text-xl text-stone-900 dark:text-stone-50">{plan.daysLeft == null ? "—" : plan.daysLeft}</div>
-                    <div className="text-[11px] text-stone-500 mt-0.5">gün</div>
+                    <div className="text-[11px] text-stone-500 mt-0.5">sınava</div>
                 </div>
                 <div className="rounded-2xl bg-amber-50 p-3 text-center">
                     <div className="font-stat text-xl text-amber-500">{plan.streak}</div>
-                    <div className="text-[11px] text-amber-600 mt-0.5">seri</div>
+                    <div className="text-[11px] text-amber-600 mt-0.5">üst üste</div>
                 </div>
                 <div className="rounded-2xl bg-stone-100 dark:bg-stone-900 p-3 text-center">
                     <div className="font-stat text-xl text-stone-900 dark:text-stone-50">{plan.session.questions || 0}/{plan.qGoal}</div>
-                    <div className="text-[11px] text-stone-500 mt-0.5">soru</div>
+                    <div className="text-[11px] text-stone-500 mt-0.5">hedef</div>
                 </div>
             </div>
             <div className="w-full h-1.5 bg-zinc-200 dark:bg-slate-800 rounded-full mb-6 overflow-hidden">
@@ -182,7 +182,7 @@ function Bugun(props) {
             </div>
             {banner ? <div className="mb-5 px-4 py-3 rounded-2xl bg-zinc-900 text-white text-sm">{banner}</div> : null}
             {plan.coach ? <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed">{plan.coach}</p> : null}
-            <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-3">Sırada</p>
+            <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-3">Bugün yapılacak</p>
             <div className="space-y-2">
                 {plan.tasks.length === 0 ? (
                     <div className="p-5 rounded-2xl panel text-sm text-zinc-500">Bugünlük bitti. Denemeden pratik açabilirsin.</div>
