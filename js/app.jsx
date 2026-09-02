@@ -674,6 +674,8 @@ function App() {
     const [authReady, setAuthReady] = useState(false);
     const [authSession, setAuthSession] = useState(null);
     const [GateAuth, setGateAuth] = useState(null);
+    const [AdminCmp, setAdminCmp] = useState(null);
+    const [roleChecked, setRoleChecked] = useState(false);
 
     const LAZY = {
         onboarding: ["OnboardingScreen", "js/components/OnboardingScreen.jsx"],
@@ -747,6 +749,33 @@ function App() {
             });
         }
     }, [authReady, authSession]);
+
+    useEffect(function () {
+        if (!authSession) {
+            setRoleChecked(false);
+            setAdminCmp(null);
+            return;
+        }
+        setRoleChecked(false);
+        var uid = authSession.user.id;
+        var sb = window.SupabaseClient && window.SupabaseClient.get && window.SupabaseClient.get();
+        var localAdmin = !!(StudentStore.getState().userProfile && StudentStore.getState().userProfile.role === "admin");
+        function finish(isAdm) {
+            if (isAdm) StudentStore.updateUserProfile({ role: "admin" });
+            if (isAdm && window.JsxLoader) {
+                window.JsxLoader.load("AdminDashboard", "js/components/AdminDashboard.jsx").then(function (C) {
+                    if (C) setAdminCmp(function () { return C; });
+                    setRoleChecked(true);
+                });
+            } else {
+                setRoleChecked(true);
+            }
+        }
+        if (!sb) { finish(localAdmin); return; }
+        sb.from("student_states").select("role").eq("user_id", uid).maybeSingle().then(function (r) {
+            finish(!!(r.data && r.data.role === "admin") || localAdmin);
+        }).catch(function () { finish(localAdmin); });
+    }, [authSession]);
     const [nav, setNav] = useState("bugun");
     const [selectedDers, setSelectedDers] = useState(null);
     const [selectedKonu, setSelectedKonu] = useState(null);
@@ -977,6 +1006,21 @@ function App() {
     if (!authSession) {
         return AuthCmp
             ? React.createElement(AuthCmp, { gate: true, onDone: function () { if (window.SyncEngine) window.SyncEngine.sync(); } })
+            : <div className="min-h-screen flex items-center justify-center text-sm text-zinc-400">Yükleniyor</div>;
+    }
+    if (!roleChecked) {
+        return <div className="min-h-screen flex items-center justify-center text-sm text-zinc-400">Yükleniyor</div>;
+    }
+    var isAdminUser = student.userProfile && student.userProfile.role === "admin";
+    if (isAdminUser) {
+        var Adm = AdminCmp || (window.KpssComponents && window.KpssComponents.AdminDashboard);
+        var signOut = function () {
+            var sb = window.SupabaseClient && window.SupabaseClient.get && window.SupabaseClient.get();
+            if (window.StudentStore && window.StudentStore.bindToUser) window.StudentStore.bindToUser(null);
+            if (sb) sb.auth.signOut();
+        };
+        return Adm
+            ? React.createElement(Adm, { student: student, onSignOut: signOut })
             : <div className="min-h-screen flex items-center justify-center text-sm text-zinc-400">Yükleniyor</div>;
     }
 
