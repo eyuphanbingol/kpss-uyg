@@ -55,6 +55,15 @@
             });
             StudentStore.addSessionStats({ questions: items.length, correct: correct });
             StudentStore.recordExamAttempt({ total: items.length, correct: correct, changes: changes, secondsUsed: 40 * 60 - left });
+            var sb = window.SupabaseClient && window.SupabaseClient.get && window.SupabaseClient.get();
+            var nick = (student.userProfile && student.userProfile.nickname) || "ogrenci";
+            if (sb) {
+                sb.from("exam_ranks").insert({
+                    user_id: student.userProfile && student.userProfile.authUserId,
+                    nickname: nick,
+                    score: correct
+                }).then(function () {});
+            }
         }
 
         if (!items.length) {

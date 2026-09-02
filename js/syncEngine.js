@@ -88,7 +88,14 @@
             examAttempts: (local.examAttempts || []).concat(remote.examAttempts || []).slice(-40),
             counters: mergeCounters(local.counters, remote.counters),
             billing: settingsSrc.billing || local.billing,
-            consent: Object.assign({}, remote.consent || {}, local.consent || {})
+            consent: Object.assign({}, remote.consent || {}, local.consent || {}),
+            usage: (function () {
+                var L = local.usage || {};
+                var R = remote.usage || {};
+                if (L.day && L.day === R.day) return { day: L.day, mixed: Math.max(L.mixed || 0, R.mixed || 0) };
+                var newer = (local.updatedAt || "") >= (remote.updatedAt || "") ? L : R;
+                return newer.day ? newer : (L.day ? L : R);
+            })()
         });
     }
 
@@ -131,6 +138,7 @@
             if (dbRole === "admin" || merged.userProfile.role === "admin") {
                 merged.userProfile.role = "admin";
             }
+            if (remoteRow.data && remoteRow.data.premium) merged.userProfile.premium = true;
             merged.updatedAt = global.StudentStore.nowIso();
             global.StudentStore.replaceState(merged, { quiet: true });
             var nick = merged.userProfile.nickname || "ogrenci";
@@ -147,7 +155,16 @@
                 questions_total: merged.counters.questions || 0
             };
             if (merged.userProfile.role === "admin") row.role = "admin";
+            if (global.StudentStore.ensureReferralCode) {
+                row.payload.userProfile.referralCode = global.StudentStore.ensureReferralCode();
+            }
             await sb.from("student_states").upsert(row);
+            if (merged.userProfile.referralCode) {
+                await sb.from("referrals").upsert({
+                    code: merged.userProfile.referralCode,
+                    owner: uid
+                }, { onConflict: "code" });
+            }
             if (global.StudentStore.notify) global.StudentStore.notify();
             var today = global.StudentStore.todayStr();
             var sess = merged.sessions[today] || { questions: 0 };

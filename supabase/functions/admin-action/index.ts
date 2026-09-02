@@ -18,12 +18,58 @@ Deno.serve(async (req) => {
 
   const body = await req.json();
   const action = body.action;
+
   if (action === "grant_premium") {
-    await admin.from("student_states").update({ premium: true }).eq("user_id", body.user_id);
+    const { data: row } = await admin.from("student_states").select("payload").eq("user_id", body.user_id).maybeSingle();
+    const until = new Date();
+    until.setDate(until.getDate() + (Number(body.days) || 30));
+    const payload = Object.assign({}, row?.payload || {}, {
+      userProfile: Object.assign({}, row?.payload?.userProfile || {}, {
+        premium: true,
+        premiumUntil: until.toISOString()
+      }),
+      billing: Object.assign({}, row?.payload?.billing || {}, { plan: "premium" })
+    });
+    await admin.from("student_states").update({ premium: true, payload }).eq("user_id", body.user_id);
+  } else if (action === "revoke_premium") {
+    const { data: row } = await admin.from("student_states").select("payload").eq("user_id", body.user_id).maybeSingle();
+    const payload = Object.assign({}, row?.payload || {}, {
+      userProfile: Object.assign({}, row?.payload?.userProfile || {}, { premium: false, premiumUntil: null }),
+      billing: Object.assign({}, row?.payload?.billing || {}, { plan: "free" })
+    });
+    await admin.from("student_states").update({ premium: false, payload }).eq("user_id", body.user_id);
   } else if (action === "block") {
     const { data: row } = await admin.from("student_states").select("payload").eq("user_id", body.user_id).maybeSingle();
-    const payload = Object.assign({}, row?.payload || {}, { userProfile: Object.assign({}, row?.payload?.userProfile || {}, { blocked: true }) });
+    const payload = Object.assign({}, row?.payload || {}, {
+      userProfile: Object.assign({}, row?.payload?.userProfile || {}, { blocked: true })
+    });
     await admin.from("student_states").update({ payload }).eq("user_id", body.user_id);
+  } else if (action === "announce") {
+    await admin.from("app_announcements").insert({
+      body: String(body.text || "").slice(0, 500),
+      published: true,
+      created_by: user.id
+    });
+  } else if (action === "inspect_user") {
+    const { data } = await admin.from("student_states").select("nickname,education_level,target_type,premium,questions_total,last_study_at,payload,platform,role").eq("user_id", body.user_id).maybeSingle();
+    const p = data?.payload || {};
+    return new Response(JSON.stringify({
+      ok: true,
+      data: {
+        nickname: data?.nickname,
+        education_level: data?.education_level,
+        target_type: data?.target_type,
+        premium: data?.premium,
+        questions_total: data?.questions_total,
+        last_study_at: data?.last_study_at,
+        platform: data?.platform,
+        role: data?.role,
+        streak: p.streak || null,
+        counters: p.counters || null,
+        wrongCount: (p.wrongBook || []).length
+      }
+    }), { headers: { "Content-Type": "application/json" } });
   }
+
   return new Response(JSON.stringify({ ok: true }), { headers: { "Content-Type": "application/json" } });
 });

@@ -1,6 +1,16 @@
 {
   "year": 2024,
-  "source": "placeholder",
-  "ready": false,
-  "rows": []
+  "source": "ornek-demo",
+  "ready": true,
+  "note": "Örnek taban puanlar. Gerçek ÖSYM kontenjanı değildir; güncellenince bu dosya değişir.",
+  "rows": [
+    { "kurum": "İçişleri Bakanlığı", "unvan": "Memur", "il": "Ankara", "taban": 78.4, "level": "lisans" },
+    { "kurum": "Maliye", "unvan": "Gelir uzman yardımcısı", "il": "İstanbul", "taban": 82.1, "level": "lisans" },
+    { "kurum": "Sağlık Bakanlığı", "unvan": "Memur", "il": "İzmir", "taban": 74.2, "level": "lisans" },
+    { "kurum": "Adalet Bakanlığı", "unvan": "Zabıt kâtibi", "il": "Bursa", "taban": 76.8, "level": "lisans" },
+    { "kurum": "MEB", "unvan": "Memur", "il": "Konya", "taban": 71.5, "level": "onlisans" },
+    { "kurum": "SGK", "unvan": "Memur", "il": "Antalya", "taban": 80.0, "level": "lisans" },
+    { "kurum": "Belediye", "unvan": "Zabıta memuru", "il": "Gaziantep", "taban": 68.9, "level": "ortaogretim" },
+    { "kurum": "Emniyet", "unvan": "Memur", "il": "Adana", "taban": 75.3, "level": "lisans" }
+  ]
 }

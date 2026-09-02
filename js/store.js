@@ -41,7 +41,8 @@
             dailyHours: 0.75,
             blocked: false,
             authUserId: null,
-            email: ""
+            email: "",
+            deletionRequestedAt: null
         };
     }
 
@@ -73,7 +74,8 @@
                 shareCards: 0
             },
             billing: { plan: "free", mockCustomerId: null },
-            consent: { analytics: false, marketing: false }
+            consent: { analytics: false, marketing: false },
+            usage: { day: null, mixed: 0 }
         };
     }
 
@@ -98,6 +100,7 @@
         if (!userProfile.educationLevel) userProfile.educationLevel = "lisans";
         if (!userProfile.targetType) userProfile.targetType = "B";
         if (!userProfile.experiments) userProfile.experiments = {};
+        if (!userProfile.referralCode) userProfile.referralCode = "";
         var counters = Object.assign({}, base.counters, parsed.counters || {});
         if (!counters.questions) {
             Object.keys(parsed.sessions || {}).forEach(function (d) {
@@ -119,7 +122,8 @@
             examAttempts: Array.isArray(parsed.examAttempts) ? parsed.examAttempts : [],
             counters: counters,
             billing: Object.assign({}, base.billing, parsed.billing || {}),
-            consent: Object.assign({}, base.consent, parsed.consent || {})
+            consent: Object.assign({}, base.consent, parsed.consent || {}),
+            usage: Object.assign({}, base.usage, parsed.usage || {})
         };
     }
 
@@ -353,6 +357,43 @@
         return new Date(state.userProfile.premiumUntil) > new Date();
     }
 
+    function flagOn(key) {
+        return !!(state.userProfile.experiments && state.userProfile.experiments[key]);
+    }
+
+    function ensureReferralCode() {
+        if (state.userProfile.referralCode) return state.userProfile.referralCode;
+        var uid = state.userProfile.authUserId || "";
+        var nick = (state.userProfile.nickname || state.profile.name || "KPSS").replace(/[^a-zA-Z0-9]/g, "").slice(0, 6).toUpperCase() || "KPSS";
+        var code = ("K" + nick + uid.replace(/-/g, "").slice(0, 4)).toUpperCase();
+        state.userProfile.referralCode = code.slice(0, 16);
+        return state.userProfile.referralCode;
+    }
+
+    function todayUsage() {
+        var t = todayStr();
+        if (!state.usage || state.usage.day !== t) state.usage = { day: t, mixed: 0 };
+        return state.usage;
+    }
+
+    function canStartMixed() {
+        if (isPremium()) return { ok: true };
+        var cap = (global.KpssConfig && global.KpssConfig.freeDailyMixed) || 3;
+        var u = todayUsage();
+        if (u.mixed >= cap) return { ok: false, reason: "Ücretsiz günlük karışık deneme doldu (" + cap + "). Premium ile sınırsız." };
+        return { ok: true };
+    }
+
+    function consumeMixed() {
+        var gate = canStartMixed();
+        if (!gate.ok) return gate;
+        if (!isPremium()) {
+            todayUsage().mixed += 1;
+            persistQuiet();
+        }
+        return { ok: true };
+    }
+
     load();
 
     global.StudentStore = {
@@ -368,6 +409,18 @@
         topicMasteryScore: topicMasteryScore,
         migrate: migrate,
         isPremium: isPremium,
+        flagOn: flagOn,
+        ensureReferralCode: ensureReferralCode,
+        canStartMixed: canStartMixed,
+        consumeMixed: consumeMixed,
+        grantMockPremium: function (days) {
+            var d = new Date();
+            d.setDate(d.getDate() + (days || 7));
+            state.userProfile.premium = true;
+            state.userProfile.premiumUntil = d.toISOString();
+            state.billing.plan = "premium_mock";
+            emit();
+        },
         getState: function () { return clone(state); },
         subscribe: function (fn) {
             listeners.push(fn);
@@ -419,15 +472,17 @@
                 dailyMinutes: 45,
                 dailyQuestions: 25,
                 educationLevel: level,
-                targetType: "B",
+                targetType: (pending && pending.targetType) || m.target_type || "B",
                 kvkkConsent: true,
-                weeklyHours: 7
+                weeklyHours: 7,
+                referredBy: (pending && pending.referredBy) || ""
             });
         },
         bindToUser: function (uid, email) {
             var prev = state.userProfile && state.userProfile.authUserId;
             if (prev && prev === uid) {
                 state.userProfile.email = email || state.userProfile.email || "";
+                ensureReferralCode();
                 persistQuiet();
                 return state;
             }
@@ -446,6 +501,7 @@
             state = scoped ? scoped : defaultState();
             state.userProfile.authUserId = uid;
             state.userProfile.email = email || "";
+            ensureReferralCode();
             persistQuiet();
             listeners.forEach(function (fn) { fn(clone(state)); });
             return state;
@@ -466,8 +522,10 @@
                 kvkkConsent: !!p.kvkkConsent,
                 kvkkAt: p.kvkkConsent ? nowIso() : state.userProfile.kvkkAt,
                 weeklyHours: Number(p.weeklyHours) || state.userProfile.weeklyHours,
-                dailyHours: (Number(p.dailyMinutes) || state.profile.dailyMinutes) / 60
+                dailyHours: (Number(p.dailyMinutes) || state.profile.dailyMinutes) / 60,
+                referredBy: p.referredBy || state.userProfile.referredBy || ""
             });
+            ensureReferralCode();
             emit();
         },
         updateProfile: function (patch) {

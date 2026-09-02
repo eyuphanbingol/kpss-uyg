@@ -139,6 +139,15 @@ function Bugun(props) {
     const plan = props.plan;
     const name = props.student.profile.name;
     const qPct = Math.min(100, Math.round(((plan.session.questions || 0) / (plan.qGoal || 1)) * 100));
+    const [banner, setBanner] = useState("");
+    useEffect(function () {
+        var sb = window.SupabaseClient && window.SupabaseClient.get && window.SupabaseClient.get();
+        if (!sb) return;
+        sb.from("app_announcements").select("body").eq("published", true).order("created_at", { ascending: false }).limit(1)
+            .then(function (r) {
+                if (!r.error && r.data && r.data[0]) setBanner(r.data[0].body);
+            });
+    }, []);
     return (
         <Shell>
             <div className="flex justify-between items-start mb-8">
@@ -165,6 +174,7 @@ function Bugun(props) {
             <div className="w-full h-1.5 bg-zinc-200 dark:bg-zinc-800 rounded-full mb-6 overflow-hidden">
                 <div className="h-full bg-zinc-900 dark:bg-white" style={{ width: qPct + "%" }} />
             </div>
+            {banner ? <div className="mb-5 px-4 py-3 rounded-2xl bg-zinc-900 text-white text-sm">{banner}</div> : null}
             {plan.coach ? <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed">{plan.coach}</p> : null}
             <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-3">Sırada</p>
             <div className="space-y-2">
@@ -185,6 +195,24 @@ function Bugun(props) {
                     );
                 })}
             </div>
+            {plan.weekly && plan.weekly.length ? (
+                <div className="mt-8">
+                    <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-3">Haftalık plan</p>
+                    <div className="grid grid-cols-7 gap-1">
+                        {plan.weekly.map(function (d) {
+                            return (
+                                <div key={d.day} className="rounded-xl panel p-1.5 text-center">
+                                    <div className="text-[10px] text-zinc-400">{d.day}</div>
+                                    <div className="text-[11px] font-semibold mt-0.5">{d.minutes}dk</div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                    {plan.weekly[0] && plan.weekly[0].focus ? (
+                        <p className="text-xs text-zinc-500 mt-2">Odak: {plan.weekly[0].focus}</p>
+                    ) : null}
+                </div>
+            ) : null}
         </Shell>
     );
 }
@@ -217,6 +245,31 @@ function DersHome(props) {
                     );
                 })}
             </div>
+            {function () {
+                var cfg = window.KpssConfig || {};
+                var tt = (props.student && props.student.userProfile && props.student.userProfile.targetType) || "B";
+                var ids = (cfg.targetModules && cfg.targetModules[tt]) || ["gygk"];
+                var mods = (cfg.modules || []).filter(function (m) { return ids.indexOf(m.id) >= 0 && m.id !== "gygk"; });
+                if (!mods.length) return null;
+                return (
+                    <div className="mt-8">
+                        <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-3">Kulvarın diğer modülleri</p>
+                        <div className="space-y-2">
+                            {mods.map(function (m) {
+                                return (
+                                    <div key={m.id} className="p-4 rounded-2xl panel flex items-center justify-between">
+                                        <div>
+                                            <p className="font-medium">{m.title}</p>
+                                            <p className="text-xs text-zinc-500 mt-0.5">{(m.lessons || []).slice(0, 3).join(" · ") || "İçerik bekleniyor"}</p>
+                                        </div>
+                                        <span className="text-[10px] font-semibold px-2 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-500">Yakında</span>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                );
+            }()}
         </Shell>
     );
 }
@@ -592,6 +645,9 @@ function DenemeSetup(props) {
             {props.onFullExam ? (
                 <button onClick={props.onFullExam} className="mt-3 w-full p-4 rounded-2xl border font-bold">Tam deneme (kitapçık)</button>
             ) : null}
+            {!StudentStore.isPremium() ? (
+                <p className="text-xs text-zinc-400 mt-3 text-center">Ücretsiz: günde {(window.KpssConfig && window.KpssConfig.freeDailyMixed) || 3} karışık test · haftada {(window.KpssConfig && window.KpssConfig.freeWeeklyExams) || 2} tam deneme</p>
+            ) : null}
         </Shell>
     );
 }
@@ -625,13 +681,32 @@ function Ben(props) {
                 <label className="text-sm text-zinc-500">Ad</label>
                 <input value={st.profile.name || ""} onChange={function (e) { StudentStore.updateProfile({ name: e.target.value }); StudentStore.updateUserProfile({ nickname: e.target.value }); }} className={field} />
                 <label className="text-sm text-zinc-500">Eğitim</label>
-                <select value={up.educationLevel || "lisans"} onChange={function (e) { StudentStore.updateUserProfile({ educationLevel: e.target.value }); }} className={field}>
+                <select value={up.educationLevel || "lisans"} onChange={function (e) {
+                    var lv = e.target.value;
+                    StudentStore.updateUserProfile({ educationLevel: lv });
+                    var dates = (window.KpssConfig && window.KpssConfig.examDateByLevel) || {};
+                    if (dates[lv]) StudentStore.updateProfile({ examDate: dates[lv] });
+                }} className={field}>
                     <option value="lisans">Lisans</option>
                     <option value="onlisans">Ön lisans</option>
                     <option value="ortaogretim">Ortaöğretim</option>
                 </select>
                 <label className="text-sm text-zinc-500">Sınav tarihi</label>
                 <input type="date" value={st.profile.examDate} onChange={function (e) { StudentStore.updateProfile({ examDate: e.target.value }); }} className={field} />
+                <label className="text-sm text-zinc-500">Kulvar</label>
+                <select value={up.targetType || "B"} onChange={function (e) { StudentStore.updateUserProfile({ targetType: e.target.value }); }} className={field}>
+                    {((window.KpssConfig && window.KpssConfig.targetTypes) || [
+                        { id: "B", t: "B Grubu" }, { id: "A", t: "A Grubu" }, { id: "ogretmen", t: "Öğretmenlik" }, { id: "dhbt", t: "DHBT" }
+                    ]).map(function (x) {
+                        return <option key={x.id} value={x.id}>{x.t}</option>;
+                    })}
+                </select>
+                <label className="text-sm text-zinc-500">Haftalık çalışma saati</label>
+                <input type="number" min="1" max="40" value={up.weeklyHours || 7}
+                    onChange={function (e) {
+                        var w = Number(e.target.value) || 7;
+                        StudentStore.updateUserProfile({ weeklyHours: w, dailyHours: w / 7 });
+                    }} className={field} />
                 <div className="grid grid-cols-2 gap-3">
                     <div>
                         <label className="text-sm text-zinc-500">Günlük soru</label>
@@ -641,13 +716,75 @@ function Ben(props) {
                     <div>
                         <label className="text-sm text-zinc-500">Günlük dk</label>
                         <input type="number" min="10" max="300" value={st.profile.dailyMinutes}
-                            onChange={function (e) { StudentStore.updateProfile({ dailyMinutes: Number(e.target.value) || 45 }); }} className={field + " mt-1"} />
+                            onChange={function (e) {
+                                var m = Number(e.target.value) || 45;
+                                StudentStore.updateProfile({ dailyMinutes: m });
+                                StudentStore.updateUserProfile({ dailyHours: m / 60 });
+                            }} className={field + " mt-1"} />
                     </div>
                 </div>
+                <label className="flex items-center gap-2 text-sm text-zinc-600 pt-2">
+                    <input type="checkbox" checked={st.profile.tabLeaveWarn !== false} onChange={function (e) { StudentStore.updateProfile({ tabLeaveWarn: e.target.checked }); }} />
+                    Denemede sekme uyarısı
+                </label>
             </div>
+            <div className="panel rounded-2xl p-4 mb-4">
+                <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-3">Araçlar</p>
+                <div className="grid grid-cols-2 gap-2">
+                    {[
+                        { id: "placement", t: "Puan / tercih" },
+                        { id: "leaderboard", t: "Türkiye" },
+                        { id: "heat", t: "Isı haritası" },
+                        { id: "exam", t: "Tam deneme" },
+                        { id: "ai", t: "Soru asistanı" },
+                        { id: "live", t: "Canlı deneme" },
+                        { id: "instructor", t: "Kurum" }
+                    ].map(function (x) {
+                        return (
+                            <button key={x.id} onClick={function () { props.onOpen && props.onOpen(x.id); }}
+                                className="text-left px-3 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-800 text-sm font-medium">{x.t}</button>
+                        );
+                    })}
+                </div>
+            </div>
+            <div className="panel rounded-2xl p-4 mb-4">
+                <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-2">Premium</p>
+                <p className="text-sm text-zinc-600 mb-3">{StudentStore.isPremium() ? "Premium açık" + (up.premiumUntil ? " · " + new Date(up.premiumUntil).toLocaleDateString("tr-TR") : "") : "Ücretsiz plan · sınırlı deneme"}</p>
+                {!StudentStore.isPremium() ? (
+                    <button onClick={function () {
+                        if (window.PaymentClient) window.PaymentClient.checkout("premium").then(function (r) { alert(r.message || "Tamam"); });
+                    }} className="w-full py-2.5 rounded-xl bg-zinc-900 text-white text-sm font-semibold">7 gün sandbox dene</button>
+                ) : null}
+                <p className="text-xs text-zinc-400 mt-3">Davet kodun: <b>{StudentStore.ensureReferralCode ? StudentStore.ensureReferralCode() : (up.referralCode || "—")}</b></p>
+                <label className="text-xs text-zinc-400 mt-2 block">Arkadaş kodu</label>
+                <input defaultValue={up.referredBy || ""} onBlur={function (e) {
+                    if (window.PaymentClient) window.PaymentClient.applyReferral(e.target.value);
+                }} className={field + " mt-1"} />
+            </div>
+            {st.achievements && Object.keys(st.achievements).length ? (
+                <div className="panel rounded-2xl p-4 mb-4">
+                    <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-2">Rozetler</p>
+                    <div className="flex flex-wrap gap-2">
+                        {Object.keys(st.achievements).map(function (id) {
+                            return <span key={id} className="text-xs font-medium px-2 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800">{st.achievements[id].title}</span>;
+                        })}
+                    </div>
+                </div>
+            ) : null}
+            <button onClick={function () {
+                if (window.NotificationEngine) window.NotificationEngine.requestPush().then(function (r) {
+                    if (r.ok) {
+                        var n = window.NotificationEngine.streakNudge(st);
+                        if (n) window.NotificationEngine.showLocal("KPSS", n);
+                    }
+                });
+            }} className="w-full mb-3 p-3.5 rounded-2xl panel text-left font-medium">Hatırlatma izni</button>
             {isAdmin ? (
                 <button onClick={function () { props.onAdmin && props.onAdmin(); }} className="w-full mb-3 p-3.5 rounded-2xl panel text-left font-medium">Yönetim</button>
             ) : null}
+            <button onClick={function () {
+                if (confirm("Hesap silme talebi kaydedilir. Destek onayından sonra veri silinir.")) StudentStore.requestDeletion();
+            }} className="w-full mb-3 p-3.5 rounded-2xl text-sm text-zinc-400">Veri silme talebi</button>
             <button onClick={function () { props.onSignOut && props.onSignOut(); }} className="w-full p-3.5 rounded-2xl border border-zinc-200 dark:border-zinc-700 font-medium">Çıkış</button>
         </Shell>
     );
@@ -686,7 +823,8 @@ function App() {
         placement: ["PlacementScreen", "js/components/PlacementScreen.jsx"],
         ai: ["AiAssistant", "js/components/AiAssistant.jsx"],
         live: ["LiveExamScreen", "js/components/LiveExamScreen.jsx"],
-        heat: ["Heatmap30", "js/components/Heatmap30.jsx"]
+        heat: ["Heatmap30", "js/components/Heatmap30.jsx"],
+        instructor: ["InstructorScreen", "js/components/InstructorScreen.jsx"]
     };
 
     useEffect(function () {
@@ -829,6 +967,10 @@ function App() {
     function startSession(items, opts) {
         opts = opts || {};
         if (!items.length) { alert("Soru yok."); return; }
+        if (opts.mode === "mixed") {
+            var gate = StudentStore.consumeMixed ? StudentStore.consumeMixed() : { ok: true };
+            if (!gate.ok) { alert(gate.reason); return; }
+        }
         resetTestUi();
         startedAt.current = Date.now();
         const next = {
@@ -955,6 +1097,7 @@ function App() {
             onFullExam={function () { setExtra("exam"); }} />;
     } else if (nav === "ben") {
         body = <Ben student={student} isDark={isDark} toggleDark={toggleDark}
+            onOpen={function (id) { setExtra(id); }}
             onAdmin={function () { setExtra("admin"); }}
             onSignOut={function () {
                 var sb = window.SupabaseClient && window.SupabaseClient.get && window.SupabaseClient.get();
@@ -964,7 +1107,7 @@ function App() {
                 }
             }} />;
     } else if (!selectedDers) {
-        body = <DersHome kpssData={kpssData} plan={plan} isDark={isDark} toggleDark={toggleDark} onDers={function (d) { setSelectedDers(d); setSelectedKonu(null); }} />;
+        body = <DersHome kpssData={kpssData} student={student} plan={plan} isDark={isDark} toggleDark={toggleDark} onDers={function (d) { setSelectedDers(d); setSelectedKonu(null); }} />;
     } else if (!selectedKonu) {
         body = <KonuList kpssData={kpssData} student={student} ders={selectedDers} isDark={isDark} toggleDark={toggleDark}
             onBack={function () { setSelectedDers(null); }} onKonu={function (k) {
@@ -1012,6 +1155,21 @@ function App() {
         return <div className="min-h-screen flex items-center justify-center text-sm text-zinc-400">Yükleniyor</div>;
     }
     var isAdminUser = student.userProfile && student.userProfile.role === "admin";
+    if (student.userProfile && student.userProfile.blocked) {
+        return (
+            <div className="min-h-screen flex items-center justify-center p-8">
+                <div className="text-center max-w-sm">
+                    <h1 className="text-xl font-semibold mb-2">Hesap kısıtlı</h1>
+                    <p className="text-sm text-zinc-500 mb-6">Bu hesap yönetici tarafından durduruldu.</p>
+                    <button onClick={function () {
+                        var sb = window.SupabaseClient && window.SupabaseClient.get && window.SupabaseClient.get();
+                        if (window.StudentStore && window.StudentStore.bindToUser) window.StudentStore.bindToUser(null);
+                        if (sb) sb.auth.signOut();
+                    }} className="px-4 py-2 rounded-xl border font-medium">Çıkış</button>
+                </div>
+            </div>
+        );
+    }
     if (isAdminUser) {
         var Adm = AdminCmp || (window.KpssComponents && window.KpssComponents.AdminDashboard);
         var signOut = function () {

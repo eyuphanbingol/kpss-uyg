@@ -32,6 +32,12 @@
             A: ["gygk", "alan"],
             ogretmen: ["gygk", "egitim", "oabt"],
             dhbt: ["gygk", "dhbt"]
-        }
+        },
+        targetTypes: [
+            { id: "B", t: "B Grubu · GY-GK" },
+            { id: "A", t: "A Grubu · Alan" },
+            { id: "ogretmen", t: "Öğretmenlik · ÖABT" },
+            { id: "dhbt", t: "DHBT" }
+        ]
     };
 })(window);

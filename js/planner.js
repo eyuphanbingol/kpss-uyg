@@ -200,7 +200,8 @@
     }
 
     function buildWeeklyCalendar(student, weak, daysLeft) {
-        var hours = (student.userProfile && student.userProfile.dailyHours) || ((student.profile.dailyMinutes || 45) / 60);
+        var weeklyH = (student.userProfile && student.userProfile.weeklyHours) || 7;
+        var hours = (student.userProfile && student.userProfile.dailyHours) || (weeklyH / 7) || ((student.profile.dailyMinutes || 45) / 60);
         var days = ["Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz"];
         var urgency = daysLeft != null && daysLeft < 30 ? 1.4 : daysLeft != null && daysLeft < 90 ? 1.15 : 1;
         return days.map(function (d, i) {

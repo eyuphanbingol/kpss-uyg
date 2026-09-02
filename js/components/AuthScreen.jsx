@@ -6,6 +6,8 @@
         const [pass, setPass] = useState("");
         const [name, setName] = useState("");
         const [level, setLevel] = useState("lisans");
+        const [target, setTarget] = useState("B");
+        const [refCode, setRefCode] = useState("");
         const [examDate, setExamDate] = useState(dates.lisans || "2026-09-06");
         const [kvkk, setKvkk] = useState(false);
         const [mode, setMode] = useState("in");
@@ -17,7 +19,7 @@
         function savePending() {
             try {
                 sessionStorage.setItem("kpss-signup-profile", JSON.stringify({
-                    name: name, educationLevel: level, examDate: examDate
+                    name: name, educationLevel: level, examDate: examDate, targetType: target, referredBy: refCode
                 }));
             } catch (e) {}
         }
@@ -49,7 +51,7 @@
                         email: email,
                         password: pass,
                         options: {
-                            data: { full_name: name.trim(), education_level: level, exam_date: examDate }
+                            data: { full_name: name.trim(), education_level: level, exam_date: examDate, target_type: target }
                         }
                     })
                     : await sb.auth.signInWithPassword({ email: email, password: pass });
@@ -107,6 +109,17 @@
                         </div>
                         <label className="text-sm text-zinc-500 block mb-1.5" htmlFor="au-date">Sınav tarihi</label>
                         <input id="au-date" type="date" value={examDate} onChange={function (e) { setExamDate(e.target.value); }} className={field + " mb-4"} />
+                        <p className="text-sm text-zinc-500 mb-2">Sınav hedefi</p>
+                        <div className="grid grid-cols-2 gap-2 mb-4">
+                            {((window.KpssConfig && window.KpssConfig.targetTypes) || [{ id: "B", t: "B Grubu" }]).map(function (x) {
+                                return (
+                                    <button key={x.id} type="button" onClick={function () { setTarget(x.id); }}
+                                        className={"text-xs font-medium py-2.5 rounded-xl border " + (target === x.id ? "bg-zinc-900 text-white border-zinc-900" : "border-zinc-200")}>{x.t}</button>
+                                );
+                            })}
+                        </div>
+                        <label className="text-sm text-zinc-500 block mb-1.5" htmlFor="au-ref">Davet kodu (opsiyonel)</label>
+                        <input id="au-ref" value={refCode} onChange={function (e) { setRefCode(e.target.value); }} className={field + " mb-4"} />
                     </div>
                 ) : null}
                 <label className="text-sm text-zinc-500 block mb-1.5" htmlFor="au-mail">E-posta</label>

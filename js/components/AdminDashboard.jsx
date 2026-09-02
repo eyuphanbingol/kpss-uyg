@@ -15,6 +15,9 @@
         const [tab, setTab] = useState("ozet");
         const [rows, setRows] = useState([]);
         const [kpi, setKpi] = useState(null);
+        const [hard, setHard] = useState([]);
+        const [announce, setAnnounce] = useState("");
+        const [detail, setDetail] = useState(null);
         const [q, setQ] = useState("");
         const [filter, setFilter] = useState("all");
         const [msg, setMsg] = useState("");
@@ -43,6 +46,9 @@
                     else setRows(r2.data || []);
                 });
             });
+            sb.rpc("admin_hard_topics").then(function (r) {
+                if (!r.error && r.data) setHard(Array.isArray(r.data) ? r.data : []);
+            });
         }
 
         useEffect(function () {
@@ -58,8 +64,21 @@
             if (res.error) setMsg(res.error.message);
             else {
                 setMsg("İşlem uygulandı.");
+                if (name === "inspect_user" && res.data) {
+                    setDetail(res.data.data || res.data);
+                }
                 load();
             }
+        }
+
+        async function inspect(uid) {
+            var sb = window.SupabaseClient && window.SupabaseClient.get();
+            if (!sb) return;
+            setBusy(true);
+            var res = await sb.functions.invoke("admin-action", { body: { action: "inspect_user", user_id: uid } });
+            setBusy(false);
+            if (res.error) setMsg(res.error.message);
+            else setDetail((res.data && res.data.data) || res.data);
         }
 
         if (!isAdmin) {
@@ -88,7 +107,9 @@
 
         var nav = [
             { id: "ozet", t: "Özet" },
-            { id: "kullanicilar", t: "Kullanıcılar" }
+            { id: "kullanicilar", t: "Kullanıcılar" },
+            { id: "analiz", t: "Analiz" },
+            { id: "icerik", t: "Duyuru" }
         ];
 
         var email = (student.userProfile && student.userProfile.email) || "";
@@ -148,6 +169,17 @@
                                         <p className="text-3xl font-semibold mt-2">{kpi ? kpi.mau : "—"}</p>
                                     </div>
                                 </div>
+                                <div className="grid sm:grid-cols-2 gap-3 mt-3">
+                                    <div className="panel rounded-2xl p-5">
+                                        <p className="text-xs text-zinc-400 font-medium uppercase tracking-wider">Premium</p>
+                                        <p className="text-3xl font-semibold mt-2">{rows.filter(function (u) { return u.premium; }).length}</p>
+                                    </div>
+                                    <div className="panel rounded-2xl p-5">
+                                        <p className="text-xs text-zinc-400 font-medium uppercase tracking-wider">Tahmini ciro (mock)</p>
+                                        <p className="text-3xl font-semibold mt-2">{rows.filter(function (u) { return u.premium; }).length * 149} ₺</p>
+                                        <p className="text-xs text-zinc-400 mt-1">149 ₺ / ay varsayımı · gerçek ödeme yok</p>
+                                    </div>
+                                </div>
                                 <p className="text-sm text-zinc-500 mt-8">Öğrenci uygulaması bu hesapta açılmaz. Kullanıcılar sekmesinden hesapları yönetirsin.</p>
                             </div>
                         ) : null}
@@ -202,6 +234,7 @@
                                                         <td className="px-4 py-3">
                                                             <div className="flex flex-wrap gap-1 justify-end">
                                                                 <button disabled={busy} onClick={function () { act("grant_premium", { user_id: u.user_id, days: 30 }); }} className="text-xs font-medium px-2 py-1 rounded-lg bg-zinc-100 dark:bg-zinc-800">+30g Premium</button>
+                                                                <button disabled={busy} onClick={function () { inspect(u.user_id); }} className="text-xs font-medium px-2 py-1 rounded-lg bg-zinc-100">Detay</button>
                                                                 <button disabled={busy} onClick={function () { act("block", { user_id: u.user_id }); }} className="text-xs font-medium px-2 py-1 rounded-lg text-rose-600">Engelle</button>
                                                             </div>
                                                         </td>
@@ -211,6 +244,42 @@
                                         </tbody>
                                     </table>
                                 </div>
+                                {detail ? (
+                                    <div className="mt-4 panel rounded-2xl p-4 text-sm">
+                                        <p className="font-medium mb-2">Kullanıcı özeti · {detail.nickname || "—"}</p>
+                                        <p className="text-zinc-500">Soru {detail.questions_total || (detail.counters && detail.counters.questions) || 0} · yanlış defteri {detail.wrongCount || 0} · kulvar {detail.target_type} · platform {detail.platform || "web"}</p>
+                                        <button onClick={function () { setDetail(null); }} className="mt-3 text-xs font-medium">Kapat</button>
+                                    </div>
+                                ) : null}
+                            </div>
+                        ) : null}
+
+                        {tab === "analiz" ? (
+                            <div>
+                                <h1 className="text-2xl font-semibold tracking-tight mb-6">Zor konular</h1>
+                                <p className="text-sm text-zinc-500 mb-4">Türkiye genelinde yanlış ağırlığı en yüksek 10 konu.</p>
+                                {hard.length === 0 ? <p className="text-sm text-zinc-400">Henüz yeterli veri yok veya admin_hard_topics SQL’i çalıştırılmadı.</p> : (
+                                    <div className="panel rounded-2xl divide-y divide-zinc-100 dark:divide-zinc-800">
+                                        {hard.map(function (h, i) {
+                                            return (
+                                                <div key={i} className="px-4 py-3 flex justify-between text-sm">
+                                                    <span>{h.ders} · {h.konu}</span>
+                                                    <span className="text-zinc-400">{h.wrong_weight} yanlış · {h.users} hesap</span>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                )}
+                            </div>
+                        ) : null}
+
+                        {tab === "icerik" ? (
+                            <div>
+                                <h1 className="text-2xl font-semibold tracking-tight mb-6">Duyuru</h1>
+                                <textarea value={announce} onChange={function (e) { setAnnounce(e.target.value); }} rows={4}
+                                    className="w-full mb-3 px-4 py-3 rounded-xl border border-zinc-200 bg-white dark:bg-zinc-900 text-sm" placeholder="Öğrencilerin Bugün ekranında görünür." />
+                                <button disabled={busy || !announce.trim()} onClick={function () { act("announce", { text: announce }); setAnnounce(""); }}
+                                    className="px-4 py-2.5 rounded-xl bg-zinc-900 text-white text-sm font-semibold disabled:opacity-40">Yayınla</button>
                             </div>
                         ) : null}
                     </main>

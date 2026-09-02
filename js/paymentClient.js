@@ -3,11 +3,14 @@
 
     function checkout(planId) {
         if (mock) {
+            if (global.StudentStore && global.StudentStore.grantMockPremium) {
+                global.StudentStore.grantMockPremium(7);
+            }
             return Promise.resolve({
                 ok: true,
                 mock: true,
                 checkoutUrl: null,
-                message: "Sandbox: iyzico/Paddle anahtarı yok. Admin panelinden Premium verilebilir."
+                message: "Sandbox: 7 günlük Premium açıldı. Gerçek iyzico anahtarı yok; canlı ödemede bu satır Edge Function’a gider."
             });
         }
         return Promise.resolve({ ok: false });
