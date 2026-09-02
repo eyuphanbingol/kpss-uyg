@@ -112,8 +112,6 @@
                 if (event === "SIGNED_IN" && recoveryPending()) markRecovery();
                 if (event === "SIGNED_IN" || event === "TOKEN_REFRESHED" || event === "INITIAL_SESSION") {
                     if (recoveryPending()) return;
-                    var st = global.StudentStore && global.StudentStore.getState && global.StudentStore.getState();
-                    if (st && st.profile && !st.profile.onboarded && !(st.userProfile && st.userProfile.role === "admin")) return;
                     if (global.SyncEngine && global.SyncEngine.sync) global.SyncEngine.sync();
                 }
             });

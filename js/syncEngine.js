@@ -127,6 +127,27 @@
         return (A.at || "") >= (B.at || "") ? A : B;
     }
 
+    function looksOnboarded(payload, row) {
+        if (payload && payload.profile && payload.profile.onboarded) return true;
+        if (payload && payload.userProfile && payload.userProfile.kvkkConsent && payload.profile && String(payload.profile.name || "").trim()) return true;
+        return false;
+    }
+
+    function hydrateRemote(payload, row) {
+        var remote = global.StudentStore.migrate(payload || {});
+        if (row && row.nickname && !(remote.profile && remote.profile.name)) {
+            remote.profile.name = String(row.nickname).trim();
+        }
+        if (row && row.education_level && remote.userProfile) {
+            if (!remote.userProfile.educationLevel) remote.userProfile.educationLevel = row.education_level;
+        }
+        if (row && row.target_type && remote.userProfile && !remote.userProfile.targetType) {
+            remote.userProfile.targetType = row.target_type;
+        }
+        if (looksOnboarded(remote, row)) remote.profile.onboarded = true;
+        return remote;
+    }
+
     async function pullPush() {
         var sb = global.SupabaseClient && global.SupabaseClient.get();
         if (!sb) return { ok: false, reason: "offline-or-busy" };
@@ -157,24 +178,23 @@
             if (local.userProfile && local.userProfile.authUserId && local.userProfile.authUserId !== uid) {
                 local = global.StudentStore.migrate(null);
             }
-            if (!(local.profile && local.profile.onboarded) && !(local.userProfile && local.userProfile.role === "admin")) {
-                return { ok: true, reason: "wait-onboarding" };
-            }
             var remoteRow = await sb.from("student_states").select("*").eq("user_id", uid).maybeSingle();
             local = global.StudentStore.getState();
-            var remote = remoteRow.data && remoteRow.data.payload;
+            var remote = remoteRow.data ? hydrateRemote(remoteRow.data.payload, remoteRow.data) : null;
             var dbRole = remoteRow.data && remoteRow.data.role;
             var remoteOwner = remote && remote.userProfile && remote.userProfile.authUserId;
             if (remoteOwner && remoteOwner !== uid) remote = null;
-            var createdAt = session.user.created_at ? new Date(session.user.created_at).getTime() : 0;
-            var newAccount = createdAt && (Date.now() - createdAt) < 15 * 60 * 1000;
             var emptyLocal = global.StudentStore.isEmptyProgress(local);
-            if (newAccount && emptyLocal && remote && !global.StudentStore.isEmptyProgress(remote)) {
-                remote = null;
+            var localOn = !!(local.profile && local.profile.onboarded);
+            var remoteOn = !!(remote && remote.profile && remote.profile.onboarded);
+            if (!localOn && !remoteOn && !(local.userProfile && local.userProfile.role === "admin") && dbRole !== "admin") {
+                return { ok: true, reason: "wait-onboarding" };
             }
             var merged;
-            if (emptyLocal && remote) {
-                merged = global.StudentStore.migrate(remote);
+            if (!localOn && remoteOn) {
+                merged = remote;
+            } else if (emptyLocal && remote) {
+                merged = remote;
             } else if (!remote) {
                 merged = local;
             } else {
@@ -188,15 +208,17 @@
             if (remoteRow.data && remoteRow.data.premium) merged.userProfile.premium = true;
             var latestSnap = global.StudentStore.getState();
             if ((latestSnap.updatedAt || "") >= (local.updatedAt || "")) local = latestSnap;
+            localOn = !!(local.profile && local.profile.onboarded);
+            remoteOn = !!(remote && remote.profile && remote.profile.onboarded);
             var cfgDates = window.KpssConfig && window.KpssConfig.examDateByLevel;
             var examDates = cfgDates || { lisans: "2026-09-06", onlisans: "2026-10-04", ortaogretim: "2026-10-25" };
             var dbEdu = remoteRow.data && remoteRow.data.education_level;
-            var localOn = !!(local.profile && local.profile.onboarded);
-            var remoteOn = !!(remote && remote.profile && remote.profile.onboarded);
             var localEdu = local.userProfile && local.userProfile.educationLevel;
             var qTotal = (merged.counters && merged.counters.questions) || 0;
             var setupOpen = localOn && (!remoteOn || qTotal === 0);
-            if (setupOpen && localEdu) {
+            if (!localOn && remoteOn) {
+                merged.profile.onboarded = true;
+            } else if (setupOpen && localEdu) {
                 merged.userProfile.educationLevel = localEdu;
                 if (examDates[localEdu]) merged.profile.examDate = examDates[localEdu];
                 if (local.profile && local.profile.name) merged.profile.name = local.profile.name;
@@ -204,11 +226,13 @@
                 if (local.userProfile && local.userProfile.targetType) merged.userProfile.targetType = local.userProfile.targetType;
                 merged.profile.onboarded = true;
             } else if (dbEdu === "lisans" || dbEdu === "onlisans" || dbEdu === "ortaogretim") {
-                merged.userProfile.educationLevel = dbEdu;
-                var pendingReq = pickEduReq(local, merged);
-                pendingReq = pickEduReq({ userProfile: { educationChangeRequest: pendingReq } }, latestSnap);
-                if (!pendingReq || pendingReq.status !== "pending") {
-                    if (examDates[dbEdu]) merged.profile.examDate = examDates[dbEdu];
+                if (!(remote && remote.userProfile && remote.userProfile.educationLevel && remote.userProfile.educationLevel !== dbEdu && qTotal === 0)) {
+                    merged.userProfile.educationLevel = dbEdu;
+                    var pendingReq = pickEduReq(local, merged);
+                    pendingReq = pickEduReq({ userProfile: { educationChangeRequest: pendingReq } }, latestSnap);
+                    if (!pendingReq || pendingReq.status !== "pending") {
+                        if (examDates[dbEdu]) merged.profile.examDate = examDates[dbEdu];
+                    }
                 }
             }
             var keptReq = pickEduReq(pickEduReq(local, remote), global.StudentStore.getState());

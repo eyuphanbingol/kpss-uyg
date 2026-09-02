@@ -1329,6 +1329,7 @@ function App() {
         return !!(window.SupabaseClient && window.SupabaseClient.recoveryPending && window.SupabaseClient.recoveryPending());
     });
     const [OnboardCmp, setOnboardCmp] = useState(null);
+    const [profileHydrated, setProfileHydrated] = useState(false);
 
     const LAZY = {
         onboarding: ["OnboardingScreen", "js/components/OnboardingScreen.jsx"],
@@ -1387,7 +1388,11 @@ function App() {
                 if (window.StudentStore && window.StudentStore.consumeSignupIfNeeded) {
                     window.StudentStore.consumeSignupIfNeeded(sess.user);
                 }
-                if (window.SyncEngine) window.SyncEngine.sync();
+                var st0 = window.StudentStore && window.StudentStore.getState && window.StudentStore.getState();
+                if (st0 && st0.profile && st0.profile.onboarded) setProfileHydrated(true);
+                var done0 = function () { setProfileHydrated(true); };
+                if (window.SyncEngine && window.SyncEngine.sync) window.SyncEngine.sync().then(done0).catch(done0);
+                else done0();
             }
         }).catch(function () { setAuthReady(true); });
         var sub = sb.auth.onAuthStateChange(function (event, sess) {
@@ -1401,6 +1406,7 @@ function App() {
             if (event === "SIGNED_OUT") {
                 setAuthSession(null);
                 setPwRecovery(false);
+                setProfileHydrated(false);
                 if (window.StudentStore && window.StudentStore.bindToUser) window.StudentStore.bindToUser(null);
                 return;
             }
@@ -1419,7 +1425,11 @@ function App() {
             if (window.StudentStore && window.StudentStore.consumeSignupIfNeeded) {
                 window.StudentStore.consumeSignupIfNeeded(sess.user);
             }
-            if (window.SyncEngine) window.SyncEngine.sync();
+            var st1 = window.StudentStore && window.StudentStore.getState && window.StudentStore.getState();
+            if (st1 && st1.profile && st1.profile.onboarded) setProfileHydrated(true);
+            var done1 = function () { setProfileHydrated(true); };
+            if (window.SyncEngine && window.SyncEngine.sync) window.SyncEngine.sync().then(done1).catch(done1);
+            else done1();
         });
         return function () {
             if (sub && sub.data && sub.data.subscription) sub.data.subscription.unsubscribe();
@@ -1795,6 +1805,9 @@ function App() {
             );
     }
 
+    if (!profileHydrated) {
+        return <div className="min-h-screen flex items-center justify-center text-sm text-zinc-400">Yükleniyor</div>;
+    }
     if (!student.profile || !student.profile.onboarded) {
         var Ob = OnboardCmp || (window.KpssComponents && window.KpssComponents.OnboardingScreen) || Onboarding;
         return React.createElement(Ob, { student: student, isDark: isDark, toggleDark: function () { StudentStore.setDark(!isDark); } });
