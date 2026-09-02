@@ -867,6 +867,7 @@ function Eksikler(props) {
 
 function DenemeSetup(props) {
     const dersler = Object.keys(props.kpssData);
+    const stats = StudyPlanner.catalogStats(props.kpssData);
     const [sel, setSel] = useState(function () {
         const o = {};
         dersler.forEach(function (d) { o[d] = true; });
@@ -880,38 +881,93 @@ function DenemeSetup(props) {
         setSel(next);
     }
     const chosen = dersler.filter(function (d) { return sel[d]; });
+    var pool = 0;
+    chosen.forEach(function (d) { pool += (stats[d] && stats[d].soruSayisi) || 0; });
+    const nOpts = [10, 20, 30, 40];
+    const tOpts = [
+        { v: 0, t: "Süre yok" },
+        { v: 15, t: "15 dk" },
+        { v: 20, t: "20 dk" },
+        { v: 40, t: "40 dk" }
+    ];
     return (
         <Shell>
-            <div className="flex justify-between mb-6">
+            <div className="flex justify-between items-start mb-6">
                 <div>
                     <h1 className="text-2xl font-semibold tracking-tight">Deneme</h1>
-                    <p className="text-sm text-zinc-500 mt-1">İstediğin derslerden karışık soru. Süre isteğe bağlı.</p>
+                    <p className="text-sm text-zinc-500 mt-1">Karışık pratik veya tam kitapçık. Konu kilidini atlatmaz; rastgele soru çeker.</p>
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
-            <h2 className="text-sm font-black text-slate-500 mb-2">Dersler</h2>
-            <div className="flex flex-wrap gap-2 mb-6">
-                {dersler.map(function (d) {
-                    return (
-                        <button key={d} onClick={function () { toggle(d); }}
-                            className={"px-3 py-2 rounded-xl text-sm font-bold border " + (sel[d] ? "bg-navy-600 text-white border-navy-600" : "bg-white dark:bg-stone-900 border-stone-300")}>{d}</button>
-                    );
-                })}
+
+            <div className="rounded-2xl panel p-4 mb-4">
+                <div className="flex justify-between items-baseline mb-3">
+                    <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider">Dersler</p>
+                    <p className="text-xs text-zinc-400">{chosen.length}/{dersler.length} seçili · {pool} soru</p>
+                </div>
+                <div className="grid grid-cols-1 gap-2">
+                    {dersler.map(function (d) {
+                        var t = themeFor(d, props.isDark);
+                        var on = !!sel[d];
+                        var sc = stats[d] || { soruSayisi: 0, konuSayisi: 0 };
+                        return (
+                            <button type="button" key={d} onClick={function () { toggle(d); }}
+                                className={"w-full flex items-center gap-3 p-3 rounded-xl text-left border transition-colors " + (on ? "bg-navy-600 text-white border-navy-600" : "bg-stone-50 dark:bg-stone-900 border-stone-200 dark:border-stone-800")}>
+                                <span className={"h-10 w-10 rounded-xl flex items-center justify-center text-lg shrink-0 " + (on ? "bg-white/15" : "bg-white dark:bg-stone-800")}>{t.icon}</span>
+                                <span className="min-w-0 flex-1">
+                                    <span className="font-medium block">{d}</span>
+                                    <span className={"text-xs block mt-0.5 " + (on ? "text-white/70" : "text-zinc-400")}>{sc.konuSayisi} konu · {sc.soruSayisi} soru</span>
+                                </span>
+                                <span className={"h-5 w-5 rounded-full border flex items-center justify-center text-[10px] shrink-0 " + (on ? "border-white bg-white text-navy-600" : "border-stone-300 text-transparent")}>✓</span>
+                            </button>
+                        );
+                    })}
+                </div>
             </div>
-            <label className="text-sm font-bold">Soru sayısı · {n}</label>
-            <input type="range" min="5" max="50" step="5" value={n} onChange={function (e) { setN(Number(e.target.value)); }} className="w-full mb-4" />
-            <label className="text-sm font-bold">Süre · {mins === 0 ? "kapalı" : mins + " dk"}</label>
-            <input type="range" min="0" max="60" step="5" value={mins} onChange={function (e) { setMins(Number(e.target.value)); }} className="w-full mb-6" />
-            <button onClick={function () {
+
+            <div className="rounded-2xl panel p-4 mb-4">
+                <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-1">Soru sayısı</p>
+                <p className="text-sm font-semibold mb-3">{n} soru</p>
+                <div className="flex gap-2 mb-2">
+                    {nOpts.map(function (x) {
+                        return (
+                            <button type="button" key={x} onClick={function () { setN(x); }}
+                                className={"flex-1 py-2 rounded-xl text-sm font-medium border " + (n === x ? "bg-navy-600 text-white border-navy-600" : "border-stone-200 dark:border-stone-700")}>{x}</button>
+                        );
+                    })}
+                </div>
+                <input type="range" min="5" max="50" step="5" value={n} onChange={function (e) { setN(Number(e.target.value)); }} className="w-full accent-navy-600" />
+            </div>
+
+            <div className="rounded-2xl panel p-4 mb-5">
+                <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider mb-1">Süre</p>
+                <p className="text-sm font-semibold mb-3">{mins === 0 ? "Sınır yok — kendi hızında" : mins + " dakikada bitir"}</p>
+                <div className="grid grid-cols-4 gap-2">
+                    {tOpts.map(function (x) {
+                        return (
+                            <button type="button" key={x.v} onClick={function () { setMins(x.v); }}
+                                className={"py-2 rounded-xl text-xs font-medium border " + (mins === x.v ? "bg-navy-600 text-white border-navy-600" : "border-stone-200 dark:border-stone-700")}>{x.t}</button>
+                        );
+                    })}
+                </div>
+            </div>
+
+            <button type="button" onClick={function () {
                 const items = StudyPlanner.mixedQuiz(props.kpssData, chosen, n);
                 if (!items.length) { alert("Seçilen derslerde soru yok."); return; }
                 props.onStart(items, mins * 60);
-            }} className="w-full bg-navy-600 text-white p-5 rounded-2xl font-semibold">Karışık testi başlat</button>
+            }} className="w-full bg-navy-600 text-white p-4 rounded-2xl text-left">
+                <span className="font-semibold block">Karışık testi başlat</span>
+                <span className="text-xs font-normal text-white/75 mt-0.5 block">{chosen.length} ders · {n} soru · {mins ? mins + " dk" : "süre yok"}</span>
+            </button>
             {props.onFullExam ? (
-                <button onClick={props.onFullExam} className="mt-3 w-full p-4 rounded-2xl border font-bold">Tam deneme (kitapçık)</button>
+                <button type="button" onClick={props.onFullExam} className="mt-3 w-full p-4 rounded-2xl panel text-left">
+                    <span className="font-semibold block">Tam deneme</span>
+                    <span className="text-xs text-zinc-400 font-normal mt-0.5 block">40 soru, 40 dakika, optik kâğıt. Sınav temposu.</span>
+                </button>
             ) : null}
             {!StudentStore.isPremium() ? (
-                <p className="text-xs text-zinc-400 mt-3 text-center">Ücretsiz: günde {(window.KpssConfig && window.KpssConfig.freeDailyMixed) || 3} karışık test · haftada {(window.KpssConfig && window.KpssConfig.freeWeeklyExams) || 2} tam deneme</p>
+                <p className="text-xs text-zinc-400 mt-3 text-center">Ücretsiz: günde {(window.KpssConfig && window.KpssConfig.freeDailyMixed) || 3} karışık · haftada {(window.KpssConfig && window.KpssConfig.freeWeeklyExams) || 2} tam deneme</p>
             ) : null}
         </Shell>
     );
