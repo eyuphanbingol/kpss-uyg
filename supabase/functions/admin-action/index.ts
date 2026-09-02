@@ -94,7 +94,7 @@ Deno.serve(async (req) => {
         questions_total: r.questions_total,
         updated_at: r.updated_at,
         role: r.role,
-        location: locLabel(up.location)
+        location: locLabel(up.location) || locLabel(up.timezone) || ""
       };
     });
     return json({ ok: true, data: list });

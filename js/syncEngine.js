@@ -148,20 +148,70 @@
         return remote;
     }
 
-    async function detectLocation() {
+    function tzHint(tz) {
+        if (tz === "Europe/Istanbul") return { city: "", country: "Türkiye", countryCode: "TR" };
+        if (tz && tz.indexOf("Istanbul") >= 0) return { city: "", country: "Türkiye", countryCode: "TR" };
+        return {};
+    }
+
+    function fetchWithTimeout(url, ms) {
+        var ctrl = typeof AbortController !== "undefined" ? new AbortController() : null;
+        var t = setTimeout(function () { if (ctrl) ctrl.abort(); }, ms || 2500);
+        var opts = { cache: "no-store" };
+        if (ctrl) opts.signal = ctrl.signal;
+        return fetch(url, opts).then(function (r) {
+            clearTimeout(t);
+            return r.json();
+        }).catch(function () {
+            clearTimeout(t);
+            return null;
+        });
+    }
+
+    async function fetchGeo() {
+        var a = await fetchWithTimeout("https://get.geojs.io/v1/ip/geo.json", 2500);
+        if (a && (a.city || a.country)) {
+            return {
+                city: a.city || "",
+                region: a.region || "",
+                country: a.country || "",
+                countryCode: a.country_code || a.countryCode || ""
+            };
+        }
+        var b = await fetchWithTimeout("https://ipwho.is/", 2500);
+        if (b && b.success !== false && (b.city || b.country)) {
+            return {
+                city: b.city || "",
+                region: b.region || "",
+                country: b.country || "",
+                countryCode: b.country_code || ""
+            };
+        }
+        return {};
+    }
+
+    function seedLocation() {
         var loc = { at: new Date().toISOString(), tz: "" };
         try { loc.tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) {}
-        try {
-            var r = await fetch("https://ipwho.is/", { cache: "no-store" });
-            var j = await r.json();
-            if (j && j.success !== false) {
-                loc.city = j.city || "";
-                loc.region = j.region || "";
-                loc.country = j.country || "";
-                loc.countryCode = j.country_code || "";
-            }
-        } catch (e) {}
-        return loc;
+        return Object.assign(loc, tzHint(loc.tz));
+    }
+
+    async function ensureLocation() {
+        if (!global.StudentStore) return;
+        var st = global.StudentStore.getState();
+        if (!st || !st.userProfile) return;
+        var cur = st.userProfile.location;
+        if (!cur || !cur.tz) {
+            st.userProfile.location = Object.assign({}, cur || {}, seedLocation());
+            global.StudentStore.replaceState(st, { quiet: true });
+        }
+        var geo = await fetchGeo();
+        if (geo && (geo.city || geo.country)) {
+            st = global.StudentStore.getState();
+            st.userProfile.location = Object.assign({}, st.userProfile.location || {}, geo, { at: new Date().toISOString() });
+            global.StudentStore.replaceState(st, { quiet: true });
+        }
+        if (global.SyncEngine && global.SyncEngine.sync) await global.SyncEngine.sync();
     }
 
     async function pullPush() {
@@ -257,13 +307,10 @@
                 merged.educationChangeRequest = keptReq;
             }
             merged.updatedAt = global.StudentStore.nowIso();
-            var prevLoc = merged.userProfile && merged.userProfile.location;
-            var locAge = prevLoc && prevLoc.at ? (Date.now() - new Date(prevLoc.at).getTime()) : Infinity;
-            if (!prevLoc || locAge > 7 * 86400000 || !(prevLoc.city || prevLoc.country)) {
-                try {
-                    var geo = await detectLocation();
-                    merged.userProfile.location = Object.assign({}, prevLoc || {}, geo);
-                } catch (e) {}
+            var prevLoc = (merged.userProfile && merged.userProfile.location) || {};
+            merged.userProfile.location = Object.assign({}, seedLocation(), prevLoc);
+            if (!merged.userProfile.location.country && !merged.userProfile.location.city) {
+                merged.userProfile.location = Object.assign({}, merged.userProfile.location, tzHint(merged.userProfile.location.tz));
             }
             global.StudentStore.replaceState(merged, { quiet: true });
             var nick = merged.userProfile.nickname || "ogrenci";
@@ -286,6 +333,17 @@
                 row.payload.userProfile.referralCode = global.StudentStore.ensureReferralCode();
             }
             await sb.from("student_states").upsert(row);
+            if (!(merged.userProfile.location && merged.userProfile.location.city)) {
+                fetchGeo().then(function (geo) {
+                    if (!geo || !(geo.city || geo.country)) return;
+                    var st = global.StudentStore.getState();
+                    if (!st.userProfile) return;
+                    st.userProfile.location = Object.assign({}, st.userProfile.location || {}, geo, { at: new Date().toISOString() });
+                    global.StudentStore.replaceState(st, { quiet: true });
+                    var latest = global.StudentStore.getState();
+                    sb.from("student_states").update({ payload: latest }).eq("user_id", uid);
+                });
+            }
             if (merged.userProfile.referralCode) {
                 await sb.from("referrals").upsert({
                     code: merged.userProfile.referralCode,
@@ -331,6 +389,7 @@
         mergePayload: mergePayload,
         sync: pullPush,
         schedule: schedule,
-        weekStart: weekStart
+        weekStart: weekStart,
+        ensureLocation: ensureLocation
     };
 })(window);
