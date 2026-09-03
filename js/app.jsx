@@ -876,6 +876,7 @@ function MapPlay(props) {
                 svg.removeAttribute("width");
                 svg.removeAttribute("height");
                 svg.setAttribute("viewBox", svg.getAttribute("viewBox") || svg.getAttribute("viewbox") || "0 0 1000 422");
+                svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
                 svg.setAttribute("class", "tr-map");
                 svg.setAttribute("aria-label", "Türkiye illeri");
                 setSvgHtml(svg.outerHTML);
@@ -1081,7 +1082,7 @@ function MapPlay(props) {
     return (
         <div className="map-play-root">
             <header className="map-play-top">
-                <div className="flex items-center justify-between gap-3">
+                <div className="map-play-bar">
                     <BackBtn onClick={props.onBack} label="Konular" />
                     <div className="note-progress shrink-0">{idx + 1}/{items.length}</div>
                     <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
