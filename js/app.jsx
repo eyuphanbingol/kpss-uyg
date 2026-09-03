@@ -590,7 +590,7 @@ function AlistirmalarHome(props) {
                     className="text-left p-6 rounded-3xl glass card-hover">
                     <div className="h-14 w-14 rounded-2xl bg-amber-50 text-2xl flex items-center justify-center mb-3">🗺️</div>
                     <h2 className="font-bold text-lg">Harita oyunu</h2>
-                    <p className="text-sm text-stone-400 mt-1">Coğrafya notlarından: ne nerede? Türkiye haritasına tıkla.</p>
+                    <p className="text-sm text-stone-400 mt-1">Coğrafya konularına göre haritada bul.</p>
                 </button>
             </div>
         </Shell>
@@ -803,11 +803,50 @@ function ClozePlay(props) {
     );
 }
 
+function MapTopics(props) {
+    const quiz = window.MapQuiz;
+    const tree = (quiz && quiz.TREE) || [];
+    return (
+        <Shell wide>
+            <div className="flex justify-between mb-4">
+                <BackBtn onClick={props.onBack} label="Alıştırmalar" />
+                <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
+            </div>
+            <h1 className="text-3xl font-black tracking-tight gradient-text">Harita oyunu</h1>
+            <p className="text-sm text-stone-400 mt-1 mb-6">Konu seç, ilgili iller parlasın, yerini haritada bul. Sonra zincir bilgi sorusu gelebilir.</p>
+            {tree.map(function (g) {
+                return (
+                    <div key={g.id} className="mb-6">
+                        <h2 className="text-sm font-black uppercase tracking-widest text-stone-400 mb-2">{g.icon} {g.title}</h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            {g.kids.map(function (k) {
+                                var n = quiz ? quiz.countFor(k.id) : 0;
+                                return (
+                                    <button key={k.id} type="button" onClick={function () { props.onTopic(k.id); }}
+                                        className="text-left p-4 rounded-2xl glass card-hover">
+                                        <div className="font-bold">{k.icon} {k.title}</div>
+                                        <div className="text-xs text-stone-400 mt-1">{n} hedef</div>
+                                    </button>
+                                );
+                            })}
+                        </div>
+                    </div>
+                );
+            })}
+            <p className="text-[10px] text-stone-400 pb-4">{quiz && quiz.PARK_SOURCE}</p>
+        </Shell>
+    );
+}
+
 function MapPlay(props) {
     const quiz = window.MapQuiz;
+    const meta = quiz ? quiz.topicMeta(props.topicId) : null;
     const items = useMemo(function () {
-        return quiz ? quiz.pickRound(10) : [];
-    }, [props.seed]);
+        return quiz ? quiz.pickRound(props.topicId, 8) : [];
+    }, [props.seed, props.topicId]);
+    const focus = useMemo(function () {
+        return quiz ? quiz.focusCodes(props.topicId) : [];
+    }, [props.topicId]);
     const [idx, setIdx] = useState(0);
     const [picked, setPicked] = useState(null);
     const [okHit, setOkHit] = useState(false);
@@ -822,11 +861,11 @@ function MapPlay(props) {
     useEffect(function () {
         setIdx(0); setPicked(null); setOkHit(false); setScore(0); setDone(false);
         pickedRef.current = null;
-    }, [props.seed]);
+    }, [props.seed, props.topicId]);
 
     useEffect(function () {
         var gone = false;
-        fetch("svg/tr.svg?v=1").then(function (r) { return r.ok ? r.text() : Promise.reject(); })
+        fetch("svg/tr.svg?v=2").then(function (r) { return r.ok ? r.text() : Promise.reject(); })
             .then(function (txt) {
                 if (gone) return;
                 var doc = new DOMParser().parseFromString(txt, "image/svg+xml");
@@ -858,40 +897,67 @@ function MapPlay(props) {
         });
     }
 
-    function choose(codeOrChoice, fromMap) {
+    function chooseMap(code) {
         if (pickedRef.current || !quiz) return;
-        var item = items[idx];
-        var code = fromMap ? String(codeOrChoice).toUpperCase() : null;
-        var hit = fromMap ? quiz.isCorrect(item, code) : quiz.isTapCorrect(item, codeOrChoice);
-        var token = fromMap ? code : codeOrChoice.label;
-        pickedRef.current = token;
-        setPicked(token);
+        var step = items[idx];
+        if (!step || step.type !== "map") return;
+        var c = String(code).toUpperCase();
+        var hit = quiz.isCorrect(step.item, c);
+        pickedRef.current = c;
+        setPicked(c);
         setOkHit(hit);
         if (hit) setScore(function (s) { return s + 1; });
-        timerRef.current = setTimeout(goNext, hit ? 700 : 1100);
+        timerRef.current = setTimeout(goNext, hit ? 800 : 1300);
+    }
+
+    function chooseMcq(label) {
+        if (pickedRef.current || !quiz) return;
+        var step = items[idx];
+        if (!step || step.type !== "mcq") return;
+        var hit = String(label) === String(step.answer);
+        pickedRef.current = label;
+        setPicked(label);
+        setOkHit(hit);
+        if (hit) setScore(function (s) { return s + 1; });
+        timerRef.current = setTimeout(goNext, hit ? 700 : 1200);
+    }
+
+    function chooseTap(choice) {
+        if (pickedRef.current || !quiz) return;
+        var step = items[idx];
+        if (!step || step.type !== "map") return;
+        var hit = quiz.isTapCorrect(step.item, choice);
+        pickedRef.current = choice.label;
+        setPicked(choice.label);
+        setOkHit(hit);
+        if (hit) setScore(function (s) { return s + 1; });
+        timerRef.current = setTimeout(goNext, hit ? 800 : 1300);
     }
 
     useEffect(function () {
         var el = hostRef.current;
         if (!el || !svgHtml || done) return;
-        var item = items[idx];
+        var step = items[idx];
         var paths = el.querySelectorAll("path[id]");
         Array.prototype.forEach.call(paths, function (p) {
-            p.removeAttribute("class");
-            if (picked && quiz) {
-                var id = String(p.getAttribute("id") || "").toUpperCase();
-                if (quiz.isCorrect(item, id)) p.setAttribute("class", "hit-ok");
-                else if (picked === id) p.setAttribute("class", "hit-bad");
+            var id = String(p.getAttribute("id") || "").toUpperCase();
+            var cls = focus.indexOf(id) >= 0 ? "map-focus" : "map-dim";
+            if (picked && quiz && step && step.type === "map") {
+                if (quiz.isCorrect(step.item, id)) cls = "hit-ok";
+                else if (picked === id) cls = "hit-bad";
             }
+            p.setAttribute("class", cls);
         });
         function onClick(ev) {
             var p = ev.target.closest ? ev.target.closest("path[id]") : null;
             if (!p || pickedRef.current) return;
-            choose(p.getAttribute("id"), true);
+            var stepNow = items[idx];
+            if (!stepNow || stepNow.type !== "map") return;
+            chooseMap(p.getAttribute("id"));
         }
         el.addEventListener("click", onClick);
         return function () { el.removeEventListener("click", onClick); };
-    }, [svgHtml, idx, picked, items, done]);
+    }, [svgHtml, idx, picked, items, done, focus]);
 
     useEffect(function () {
         return function () { if (timerRef.current) clearTimeout(timerRef.current); };
@@ -899,25 +965,25 @@ function MapPlay(props) {
 
     if (!quiz || !items.length) {
         return (
-            <Shell>
-                <BackBtn onClick={props.onBack} label="Alıştırmalar" />
-                <p className="mt-8 text-center text-stone-400">Harita soruları yüklenemedi.</p>
+            <Shell wide>
+                <BackBtn onClick={props.onBack} label="Konular" />
+                <p className="mt-8 text-center text-stone-400">Bu konuda hedef yok.</p>
             </Shell>
         );
     }
 
     if (done) {
         return (
-            <Shell>
+            <Shell wide>
                 <div className="flex justify-between mb-4">
-                    <p className="text-zinc-500 text-sm">Konu seç, boşlukları doldur.</p>
+                    <BackBtn onClick={props.onBack} label="Konular" />
                     <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
                 </div>
                 <article className="study-card fade-in">
                     <header className="study-card-head">
                         <div>
-                            <p className="study-card-kicker">Coğrafya</p>
-                            <h2 className="study-card-title">Harita · Bitti</h2>
+                            <p className="study-card-kicker">Konu tamamlandı</p>
+                            <h2 className="study-card-title">{meta ? meta.title : "Harita"}</h2>
                         </div>
                         <div className="note-progress">{score}/{items.length}</div>
                     </header>
@@ -926,7 +992,7 @@ function MapPlay(props) {
                         <p className="text-stone-500">{score} doğru · {items.length - score} yanlış</p>
                     </div>
                     <footer className="study-card-foot">
-                        <button onClick={props.onBack} className="back-btn"><span>Alıştırmalar</span></button>
+                        <button onClick={props.onBack} className="back-btn"><span>Konular</span></button>
                         <button onClick={props.onAgain} className="btn-primary text-white px-5 py-2.5 rounded-full font-semibold">Tekrar oyna</button>
                     </footer>
                 </article>
@@ -934,49 +1000,70 @@ function MapPlay(props) {
         );
     }
 
-    const it = items[idx];
-    const taps = mapFail ? quiz.tapChoices(it) : [];
+    const step = items[idx];
+    const taps = mapFail && step.type === "map" ? quiz.tapChoices(step.item) : [];
     return (
-        <Shell>
+        <Shell wide>
             <div className="flex justify-between mb-4">
-                <BackBtn onClick={props.onBack} label="Alıştırmalar" />
+                <BackBtn onClick={props.onBack} label="Konular" />
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
             <article className="study-card fade-in">
                 <header className="study-card-head">
                     <div>
-                        <p className="study-card-kicker">Harita oyunu</p>
-                        <h2 className="study-card-title">Ne nerede?</h2>
+                        <p className="study-card-kicker">{meta ? meta.icon + " " + meta.title : "Harita"}</p>
+                        <h2 className="study-card-title">{step.type === "map" ? "Haritada bul" : "Bilgi bağı"}</h2>
                     </div>
                     <div className="note-progress">{idx + 1}/{items.length}</div>
                 </header>
                 <div className="study-card-body">
-                    <p className="text-[17px] leading-relaxed mb-4 font-semibold">{it.prompt}</p>
-                    <p className="text-xs text-stone-400 mb-3">Doğru ili veya bölgedeki bir ili haritada tıkla.</p>
-                    {!mapFail ? (
-                        <div className="tr-map-wrap" ref={hostRef} dangerouslySetInnerHTML={{ __html: svgHtml }} />
+                    <p className="text-[17px] leading-relaxed mb-3 font-semibold">{step.prompt}</p>
+                    {step.type === "map" ? (
+                        <p className="text-xs text-stone-400 mb-3">Parlak iller bu konunun hedef alanı. Ada yazılmaz — sen tıkla.</p>
+                    ) : (
+                        <p className="text-xs text-stone-400 mb-3">{step.name} ile bağlantı.</p>
+                    )}
+                    {step.type === "mcq" ? (
+                        <div className="grid gap-2">
+                            {(step.choices || []).map(function (c, ci) {
+                                var isP = picked === c;
+                                var isA = String(c) === String(step.answer);
+                                var cls = "w-full text-left px-4 py-3 rounded-2xl border font-medium ";
+                                if (!picked) cls += "bg-white dark:bg-stone-800 border-stone-200";
+                                else if (isA) cls += "bg-emerald-50 border-emerald-400";
+                                else if (isP) cls += "bg-rose-50 border-rose-400";
+                                else cls += "opacity-50";
+                                return (
+                                    <button key={ci} disabled={!!picked} className={cls} onClick={function () { chooseMcq(c); }}>{c}</button>
+                                );
+                            })}
+                        </div>
+                    ) : !mapFail ? (
+                        <div className="tr-map-scroll">
+                            <div className="tr-map-wrap tr-map-lg" ref={hostRef} dangerouslySetInnerHTML={{ __html: svgHtml }} />
+                        </div>
                     ) : (
                         <div className="grid grid-cols-2 gap-2">
                             {taps.map(function (c) {
                                 var isP = picked === c.label;
-                                var isA = quiz.isTapCorrect(it, c);
+                                var isA = quiz.isTapCorrect(step.item, c);
                                 var cls = "px-3 py-3 rounded-2xl border text-sm font-semibold ";
                                 if (!picked) cls += "bg-white dark:bg-stone-800 border-stone-200";
                                 else if (isA) cls += "bg-emerald-50 border-emerald-400";
                                 else if (isP) cls += "bg-rose-50 border-rose-400";
                                 else cls += "opacity-50";
                                 return (
-                                    <button key={c.id} disabled={!!picked} className={cls} onClick={function () { choose(c, false); }}>{c.label}</button>
+                                    <button key={c.kind + c.id} disabled={!!picked} className={cls} onClick={function () { chooseTap(c); }}>{c.label}</button>
                                 );
                             })}
                         </div>
                     )}
                     {picked ? (
                         <p className={"mt-3 text-sm font-semibold " + (okHit ? "text-emerald-600" : "text-rose-600")}>
-                            {okHit ? "Doğru" : "Doğrusu: " + quiz.answerLabel(it)}
+                            {okHit ? "Doğru" : (step.type === "mcq" ? ("Doğrusu: " + step.answer) : ("Doğrusu: " + quiz.answerLabel(step.item)))}
                         </p>
                     ) : null}
-                    <p className="mt-2 text-[10px] text-stone-400">Harita: Simplemaps</p>
+                    <p className="mt-2 text-[10px] text-stone-400">Harita: Simplemaps · {quiz.PARK_SOURCE}</p>
                 </div>
                 <footer className="study-card-foot">
                     <span className="text-xs text-stone-400">{score} doğru</span>
@@ -1991,6 +2078,7 @@ function App() {
     const [selectedDers, setSelectedDers] = useState(null);
     const [selectedKonu, setSelectedKonu] = useState(null);
     const [drillKind, setDrillKind] = useState(null);
+    const [drillMapTopic, setDrillMapTopic] = useState(null);
     const [drillDers, setDrillDers] = useState(null);
     const [drillKonu, setDrillKonu] = useState(null);
     const [drillSeed, setDrillSeed] = useState(0);
@@ -2184,9 +2272,15 @@ function App() {
             body = <AlistirmalarHome isDark={isDark} toggleDark={toggleDark}
                 onKind={function (k) { setDrillKind(k); setDrillDers(null); setDrillKonu(null); setDrillSeed(Date.now()); }} />;
         } else if (drillKind === "map") {
-            body = <MapPlay seed={drillSeed} isDark={isDark} toggleDark={toggleDark}
-                onBack={function () { setDrillKind(null); }}
-                onAgain={function () { setDrillSeed(Date.now()); }} />;
+            if (!drillMapTopic) {
+                body = <MapTopics isDark={isDark} toggleDark={toggleDark}
+                    onBack={function () { setDrillKind(null); }}
+                    onTopic={function (id) { setDrillMapTopic(id); setDrillSeed(Date.now()); }} />;
+            } else {
+                body = <MapPlay topicId={drillMapTopic} seed={drillSeed} isDark={isDark} toggleDark={toggleDark}
+                    onBack={function () { setDrillMapTopic(null); }}
+                    onAgain={function () { setDrillSeed(Date.now()); }} />;
+            }
         } else if (!drillDers) {
             body = <AlistirmaDersList kpssData={kpssData} isDark={isDark} toggleDark={toggleDark}
                 onBack={function () { setDrillKind(null); }}
@@ -2364,8 +2458,8 @@ function App() {
                     setNav(id);
                     if (id !== "dersler") { setSelectedDers(null); setSelectedKonu(null); setViewMode("hub"); }
                     if (id === "dersler") { setSelectedDers(null); setSelectedKonu(null); }
-                    if (id !== "alistirmalar") { setDrillKind(null); setDrillDers(null); setDrillKonu(null); }
-                    if (id === "alistirmalar") { setDrillKind(null); setDrillDers(null); setDrillKonu(null); }
+                    if (id !== "alistirmalar") { setDrillKind(null); setDrillMapTopic(null); setDrillDers(null); setDrillKonu(null); }
+                    if (id === "alistirmalar") { setDrillKind(null); setDrillMapTopic(null); setDrillDers(null); setDrillKonu(null); }
                 }} />
             ) : null}
         </div>

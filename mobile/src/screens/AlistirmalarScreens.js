@@ -26,11 +26,11 @@ export function AlistirmalarHomeScreen({ navigation }) {
                     <Text style={[styles.meta, isDark && styles.textMuted]}>Her ders ve konu. Şıklardan doğruyu seç.</Text>
                 </Card>
             </Pressable>
-            <Pressable onPress={function () { go(navigation, "MapPlay"); }}>
+            <Pressable onPress={function () { go(navigation, "MapTopics"); }}>
                 <Card style={[styles.dersCard, isDark && styles.cardDark]}>
                     <Text style={styles.icon}>🗺️</Text>
                     <Text style={[styles.dersName, isDark && styles.textLight]}>Harita oyunu</Text>
-                    <Text style={[styles.meta, isDark && styles.textMuted]}>Coğrafya notlarından: ne nerede? İl veya bölge seç.</Text>
+                    <Text style={[styles.meta, isDark && styles.textMuted]}>Coğrafya konularına göre haritada bul.</Text>
                 </Card>
             </Pressable>
         </ScrollScreen>
@@ -212,15 +212,51 @@ export function ClozePlayScreen({ route, navigation }) {
     );
 }
 
-export function MapPlayScreen({ navigation }) {
+export function MapTopicsScreen({ navigation }) {
     var app = useApp();
     var isDark = app.dark;
+    var tree = MapQuiz.TREE || [];
+    return (
+        <ScrollScreen dark={isDark}>
+            <Pressable onPress={function () { navigation.goBack(); }}>
+                <Text style={[styles.back, isDark && styles.textMuted]}>← Alıştırmalar</Text>
+            </Pressable>
+            <Text style={[styles.konuTitle, isDark && styles.textLight]}>Harita oyunu</Text>
+            <Text style={[styles.subtitle, isDark && styles.textMuted]}>Konu seç, hedef ili bul, sonra bilgi bağı.</Text>
+            {tree.map(function (g) {
+                return (
+                    <View key={g.id} style={{ marginBottom: 14 }}>
+                        <Text style={[styles.kicker, isDark && styles.textMuted]}>{g.icon} {g.title}</Text>
+                        {g.kids.map(function (k) {
+                            var n = MapQuiz.countFor(k.id);
+                            return (
+                                <Pressable key={k.id} onPress={function () { go(navigation, "MapPlay", { topicId: k.id }); }}>
+                                    <Card style={[styles.dersCard, isDark && styles.cardDark]}>
+                                        <Text style={[styles.dersName, isDark && styles.textLight]}>{k.icon} {k.title}</Text>
+                                        <Text style={[styles.meta, isDark && styles.textMuted]}>{n} hedef</Text>
+                                    </Card>
+                                </Pressable>
+                            );
+                        })}
+                    </View>
+                );
+            })}
+            <Text style={[styles.meta, isDark && styles.textMuted]}>{MapQuiz.PARK_SOURCE}</Text>
+        </ScrollScreen>
+    );
+}
+
+export function MapPlayScreen({ route, navigation }) {
+    var topicId = route.params.topicId;
+    var app = useApp();
+    var isDark = app.dark;
+    var meta = MapQuiz.topicMeta(topicId);
     var _seed = useState(0);
     var seed = _seed[0];
     var setSeed = _seed[1];
     var list = useMemo(function () {
-        return MapQuiz.pickRound(10);
-    }, [seed]);
+        return MapQuiz.pickRound(topicId, 8);
+    }, [seed, topicId]);
     var _i = useState(0);
     var idx = _i[0];
     var setIdx = _i[1];
@@ -236,13 +272,18 @@ export function MapPlayScreen({ navigation }) {
 
     useEffect(function () {
         setIdx(0); setPicked(null); setScore(0); setDone(false);
-    }, [seed]);
+    }, [seed, topicId]);
+
+    function advance() {
+        if (idx + 1 >= list.length) setDone(true);
+        else { setIdx(idx + 1); setPicked(null); }
+    }
 
     if (done) {
         return (
             <ScrollScreen dark={isDark}>
                 <Pressable onPress={function () { navigation.goBack(); }}>
-                    <Text style={[styles.back, isDark && styles.textMuted]}>← Alıştırmalar</Text>
+                    <Text style={[styles.back, isDark && styles.textMuted]}>← Konular</Text>
                 </Pressable>
                 <Card style={[styles.result, isDark && styles.cardDark]}>
                     <Text style={[styles.pct, isDark && styles.textLight]}>{Math.round((score / list.length) * 100)}%</Text>
@@ -253,45 +294,68 @@ export function MapPlayScreen({ navigation }) {
         );
     }
 
-    var it = list[idx];
-    var taps = MapQuiz.tapChoices(it);
-    var ok = picked && MapQuiz.isTapCorrect(it, picked);
+    var step = list[idx];
+    var isMap = step && step.type === "map";
+    var taps = isMap ? MapQuiz.tapChoices(step.item) : [];
+    var ok = false;
+    if (picked) {
+        if (isMap) ok = MapQuiz.isTapCorrect(step.item, picked);
+        else ok = String(picked) === String(step.answer);
+    }
 
     return (
         <ScrollScreen dark={isDark}>
             <Pressable onPress={function () { navigation.goBack(); }}>
-                <Text style={[styles.back, isDark && styles.textMuted]}>← Alıştırmalar</Text>
+                <Text style={[styles.back, isDark && styles.textMuted]}>← Konular</Text>
             </Pressable>
-            <Text style={[styles.kicker, isDark && styles.textMuted]}>Harita · {idx + 1}/{list.length}</Text>
-            <Text style={[styles.konuTitle, isDark && styles.textLight]}>Ne nerede?</Text>
+            <Text style={[styles.kicker, isDark && styles.textMuted]}>{meta ? meta.title : "Harita"} · {idx + 1}/{list.length}</Text>
+            <Text style={[styles.konuTitle, isDark && styles.textLight]}>{isMap ? "Haritada bul" : "Bilgi bağı"}</Text>
             <Card style={[isDark && styles.cardDark]}>
-                <Text style={[styles.prompt, isDark && styles.textLight]}>{it.prompt}</Text>
-                <View style={styles.mapGrid}>
-                    {taps.map(function (c) {
-                        var isP = picked && picked.id === c.id && picked.kind === c.kind;
-                        var isA = MapQuiz.isTapCorrect(it, c);
+                <Text style={[styles.prompt, isDark && styles.textLight]}>{step.prompt}</Text>
+                {isMap ? (
+                    <View style={styles.mapGrid}>
+                        {taps.map(function (c) {
+                            var isP = picked && picked.id === c.id && picked.kind === c.kind;
+                            var isA = MapQuiz.isTapCorrect(step.item, c);
+                            var bg = "#fff";
+                            var border = colors.border;
+                            if (picked && isA) { bg = "#ECFDF5"; border = "#34D399"; }
+                            else if (picked && isP) { bg = "#FEF2F2"; border = "#F87171"; }
+                            return (
+                                <Pressable key={c.kind + c.id} disabled={!!picked} onPress={function () {
+                                    if (picked) return;
+                                    setPicked(c);
+                                    if (MapQuiz.isTapCorrect(step.item, c)) setScore(score + 1);
+                                    setTimeout(advance, MapQuiz.isTapCorrect(step.item, c) ? 700 : 1100);
+                                }} style={[styles.mapChip, { backgroundColor: isDark && !picked ? colors.navyDeep : bg, borderColor: border }]}>
+                                    <Text style={[styles.choiceText, isDark && !picked && styles.textLight]}>{c.label}</Text>
+                                </Pressable>
+                            );
+                        })}
+                    </View>
+                ) : (
+                    (step.choices || []).map(function (c, ci) {
+                        var isP = picked === c;
+                        var isA = String(c) === String(step.answer);
                         var bg = "#fff";
                         var border = colors.border;
                         if (picked && isA) { bg = "#ECFDF5"; border = "#34D399"; }
                         else if (picked && isP) { bg = "#FEF2F2"; border = "#F87171"; }
                         return (
-                            <Pressable key={c.kind + c.id} disabled={!!picked} onPress={function () {
+                            <Pressable key={ci} disabled={!!picked} onPress={function () {
                                 if (picked) return;
                                 setPicked(c);
-                                if (MapQuiz.isTapCorrect(it, c)) setScore(score + 1);
-                                setTimeout(function () {
-                                    if (idx + 1 >= list.length) setDone(true);
-                                    else { setIdx(idx + 1); setPicked(null); }
-                                }, MapQuiz.isTapCorrect(it, c) ? 700 : 1100);
-                            }} style={[styles.mapChip, { backgroundColor: isDark && !picked ? colors.navyDeep : bg, borderColor: border }]}>
-                                <Text style={[styles.choiceText, isDark && !picked && styles.textLight]}>{c.label}</Text>
+                                if (String(c) === String(step.answer)) setScore(score + 1);
+                                setTimeout(advance, 800);
+                            }} style={[styles.choice, { backgroundColor: isDark && !picked ? colors.navyDeep : bg, borderColor: border }]}>
+                                <Text style={[styles.choiceText, isDark && !picked && styles.textLight]}>{c}</Text>
                             </Pressable>
                         );
-                    })}
-                </View>
+                    })
+                )}
                 {picked ? (
                     <Text style={{ marginTop: 10, fontWeight: "700", color: ok ? "#059669" : "#E11D48" }}>
-                        {ok ? "Doğru" : "Doğrusu: " + MapQuiz.answerLabel(it)}
+                        {ok ? "Doğru" : ("Doğrusu: " + (isMap ? MapQuiz.answerLabel(step.item) : step.answer))}
                     </Text>
                 ) : null}
             </Card>

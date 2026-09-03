@@ -163,7 +163,7 @@
     <script src="js/store.js?v=23"></script>
     <script src="js/planner.js?v=17"></script>
     <script src="js/clozeEngine.js?v=1"></script>
-    <script src="js/mapQuiz.js?v=1"></script>
+    <script src="js/mapQuiz.js?v=2"></script>
     <script src="js/scoreEngine.js?v=8"></script>
     <script src="js/paymentClient.js?v=14"></script>
     <script src="js/notificationEngine.js?v=9"></script>
@@ -629,12 +629,24 @@
         .study-card-body .flex-wrap {
             flex-wrap: wrap !important;
         }
+        .tr-map-scroll {
+            margin: 0 -8px;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            max-height: min(68vh, 560px);
+            border-radius: 16px;
+        }
         .tr-map-wrap {
             width: 100%;
-            overflow: hidden;
+            overflow: visible;
             border-radius: 16px;
             background: #eef4ef;
             touch-action: manipulation;
+        }
+        .tr-map-wrap.tr-map-lg svg {
+            min-width: 720px;
+            width: 100%;
+            height: auto;
         }
         .tr-map-wrap svg.tr-map,
         .tr-map-wrap svg {
@@ -646,10 +658,15 @@
             stroke-width: 0.6;
         }
         .tr-map-wrap path { cursor: pointer; fill: #7BAE8A !important; }
+        .tr-map-wrap path.map-dim { fill: #c5d4c8 !important; }
+        .tr-map-wrap path.map-focus { fill: #3d8f62 !important; }
+        .tr-map-wrap path.map-focus:hover,
         .tr-map-wrap path:hover { fill: #1D8A99 !important; }
         .tr-map-wrap path.hit-ok { fill: #059669 !important; }
         .tr-map-wrap path.hit-bad { fill: #E11D48 !important; }
         html.dark .tr-map-wrap { background: #1a2420; }
+        html.dark .tr-map-wrap path.map-dim { fill: #2a3a30 !important; }
+        html.dark .tr-map-wrap path.map-focus { fill: #3d8f62 !important; }
         .cloze-blank {
             display: inline-block;
             min-width: 4.2rem;
@@ -791,7 +808,7 @@
 
 <body class="app-bg min-h-screen text-slate-800 antialiased transition-colors duration-300">
     <div id="root"></div>
-    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=57"></script>
+    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=58"></script>
     <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.getRegistrations().then(function (regs) {
