@@ -834,10 +834,12 @@
         if (!props.gate) return form;
 
         return (
-            <div className="min-h-screen flex items-center justify-center px-6 py-12 bg-gradient-to-br from-stone-50 via-white to-stone-100 dark:from-stone-950 dark:via-stone-900 dark:to-stone-950">
-                <div className="w-full max-w-md">
-                    {/* Logo / Brand */}
-                    <div className="text-center mb-8">
+            <div className="brand-backdrop min-h-screen flex items-center justify-center px-6 py-12 relative overflow-hidden">
+                <div className="brand-glow" aria-hidden="true"></div>
+                <div className="brand-ring brand-ring-outer" aria-hidden="true"></div>
+                <div className="brand-ring brand-ring-inner" aria-hidden="true"></div>
+                <div className="relative z-10 w-full max-w-md bg-white/95 dark:bg-stone-900/95 rounded-[28px] shadow-2xl p-6 sm:p-8">
+                    <div className="text-center mb-6">
                         {window.AtanomLogo
                             ? window.AtanomLogo("h-24 w-24 mx-auto mb-3 object-contain drop-shadow-sm")
                             : <img src="icons/atanom.png" alt="Atanly" className="h-24 w-24 mx-auto mb-3 object-contain" />}

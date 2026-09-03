@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Atanly</title>
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#0D2C4D">
+    <meta name="theme-color" content="#041C24">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png?v=19">
     <link rel="icon" type="image/png" sizes="48x48" href="icons/favicon-48.png?v=19">
     <link rel="icon" type="image/png" href="icons/favicon.png?v=19">
@@ -170,7 +170,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.86.0/dist/umd/supabase.js"></script>
     <script src="js/supabaseClient.js?v=17"></script>
     <script src="js/syncEngine.js?v=21"></script>
-    <script src="js/jsxLoader.js?v=36"></script>
+    <script src="js/jsxLoader.js?v=37"></script>
     <script src="js/icons.js?v=18"></script>
 
     <style>
@@ -178,21 +178,61 @@
         * { box-sizing: border-box; }
         body {
             font-family: 'Inter', sans-serif;
-            background: #f8fafc;
+            background: #041C24;
             color: #0f172a;
             min-height: 100vh;
         }
 
         /* ===== KARMAŞIK ARKA PLAN ===== */
         .app-bg {
-            background: radial-gradient(ellipse at 10% 20%, rgba(29, 138, 153, 0.10) 0%, transparent 50%),
-                        radial-gradient(ellipse at 90% 80%, rgba(197, 160, 89, 0.08) 0%, transparent 50%),
-                        #f8fafc;
+            background: linear-gradient(135deg, #041C24 0%, #0A3842 48%, #127880 100%);
         }
         .dark .app-bg {
-            background: radial-gradient(ellipse at 10% 20%, rgba(29, 138, 153, 0.16) 0%, transparent 50%),
-                        radial-gradient(ellipse at 90% 80%, rgba(13, 44, 77, 0.35) 0%, transparent 50%),
-                        #0f172a;
+            background: linear-gradient(135deg, #03151b 0%, #082f38 50%, #0d5c66 100%);
+        }
+
+        .brand-backdrop {
+            background: linear-gradient(135deg, #041C24 0%, #0A3842 48%, #127880 100%);
+        }
+        .brand-glow {
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border-radius: 140px;
+            background: rgba(197, 160, 89, 0.12);
+            top: 28%;
+            left: 50%;
+            margin-left: -140px;
+            pointer-events: none;
+        }
+        .brand-ring {
+            position: absolute;
+            border-radius: 9999px;
+            pointer-events: none;
+            left: 50%;
+        }
+        .brand-ring-outer {
+            width: 340px;
+            height: 340px;
+            margin-left: -170px;
+            top: 24%;
+            border: 1px solid rgba(197, 160, 89, 0.28);
+        }
+        .brand-ring-inner {
+            width: 220px;
+            height: 220px;
+            margin-left: -110px;
+            top: 32%;
+            border: 1px solid rgba(29, 138, 153, 0.45);
+        }
+        .app-shell {
+            background: #FAFAF9;
+            color: #211F1D;
+            min-height: 100vh;
+        }
+        html.dark .app-shell {
+            background: #211F1D;
+            color: #FAFAF9;
         }
 
         /* ===== CAM KART (GLASSMORPHISM) ===== */
@@ -434,9 +474,9 @@
             100% { transform: translateY(80vh) rotate(280deg); opacity: 0; }
         }
 
-        html { background: #FAFAF9; }
-        body.app-bg { background: #FAFAF9; color: #211F1D; }
-        html.dark, .dark body.app-bg { background: #211F1D; color: #FAFAF9; }
+        html { background: #041C24; }
+        body.app-bg { background: linear-gradient(135deg, #041C24 0%, #0A3842 48%, #127880 100%); color: #F5EBC7; }
+        html.dark, .dark body.app-bg { background: linear-gradient(135deg, #03151b 0%, #082f38 50%, #0d5c66 100%); color: #FAFAF9; }
 
         .panel {
             background: #fff;
@@ -507,7 +547,7 @@
 
 <body class="app-bg min-h-screen text-slate-800 antialiased transition-colors duration-300">
     <div id="root"></div>
-    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=49"></script>
+    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=50"></script>
     <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.getRegistrations().then(function (regs) {

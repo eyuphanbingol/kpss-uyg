@@ -20,6 +20,17 @@ function masteryLabel(m) {
     return { text: "Yeni", cls: "bg-stone-100 text-stone-500" };
 }
 
+function BrandLoad(props) {
+    return (
+        <div className="brand-backdrop min-h-screen flex items-center justify-center relative overflow-hidden">
+            <div className="brand-glow" aria-hidden="true"></div>
+            <div className="brand-ring brand-ring-outer" aria-hidden="true"></div>
+            <div className="brand-ring brand-ring-inner" aria-hidden="true"></div>
+            <p className="relative z-10 text-sm font-medium" style={{ color: "rgba(245,235,199,0.85)" }}>{props.children || "Yükleniyor"}</p>
+        </div>
+    );
+}
+
 function useStudent() {
     const [st, setSt] = useState(function () { return StudentStore.getState(); });
     useEffect(function () {
@@ -1686,8 +1697,8 @@ function App() {
 
     if (!kpssData || !Object.keys(kpssData).length) {
         return (
-            <div className="flex flex-col items-center justify-center min-h-screen text-slate-500 gap-4">
-                <p className="font-medium text-lg">Veriler yüklenemedi. Sayfayı yenileyin.</p>
+            <div className="brand-backdrop flex flex-col items-center justify-center min-h-screen gap-4">
+                <p className="font-medium text-lg" style={{ color: "rgba(245,235,199,0.9)" }}>Veriler yüklenemedi. Sayfayı yenileyin.</p>
             </div>
         );
     }
@@ -1764,7 +1775,7 @@ function App() {
     }
 
     if (!authReady) {
-        return <div className="min-h-screen flex items-center justify-center text-sm text-zinc-400">Yükleniyor</div>;
+        return <BrandLoad />;
     }
     var AuthCmp = GateAuth || (window.KpssComponents && window.KpssComponents.AuthScreen);
     if (!authSession || pwRecovery || signingOutRef.current) {
@@ -1783,17 +1794,17 @@ function App() {
                 },
                 onDone: function () { if (window.SyncEngine) window.SyncEngine.sync(); }
             })
-            : <div className="min-h-screen flex items-center justify-center text-sm text-zinc-400">Yükleniyor</div>;
+            : <BrandLoad />;
     }
     if (!roleChecked) {
-        return <div className="min-h-screen flex items-center justify-center text-sm text-zinc-400">Yükleniyor</div>;
+        return <BrandLoad />;
     }
     var isAdminUser = student.userProfile && student.userProfile.role === "admin";
     if (student.userProfile && student.userProfile.blocked) {
         return (
-            <div className="min-h-screen flex items-center justify-center p-8">
-                <div className="text-center max-w-sm">
-                    <h1 className="text-xl font-semibold mb-2">Hesap kısıtlı</h1>
+            <div className="brand-backdrop min-h-screen flex items-center justify-center p-8 relative overflow-hidden">
+                <div className="relative z-10 text-center max-w-sm bg-white/95 rounded-[28px] p-6 shadow-xl">
+                    <h1 className="text-xl font-semibold mb-2 text-stone-900">Hesap kısıtlı</h1>
                     <p className="text-sm text-zinc-500 mb-6">Bu hesap yönetici tarafından durduruldu.</p>
                     <button onClick={doSignOut} className="px-4 py-2 rounded-xl border font-medium">Çıkış</button>
                 </div>
@@ -1805,8 +1816,8 @@ function App() {
         return Adm
             ? React.createElement(Adm, { student: student, onSignOut: doSignOut })
             : (
-                <div className="min-h-screen flex items-center justify-center p-8">
-                    <div className="text-center max-w-sm">
+                <div className="brand-backdrop min-h-screen flex items-center justify-center p-8">
+                    <div className="text-center max-w-sm bg-white/95 rounded-[28px] p-6 shadow-xl">
                         <p className="text-sm text-zinc-500 mb-4">Yönetim paneli yüklenemedi. Sayfayı yenile.</p>
                         <button onClick={function () { window.location.reload(); }} className="px-4 py-2 rounded-xl border font-medium">Yenile</button>
                         <button onClick={doSignOut} className="mt-3 block w-full px-4 py-2 rounded-xl font-medium">Çıkış</button>
@@ -1816,15 +1827,15 @@ function App() {
     }
 
     if (!profileHydrated) {
-        return <div className="min-h-screen flex items-center justify-center text-sm text-zinc-400">Yükleniyor</div>;
+        return <BrandLoad />;
     }
     var sessUid = authSession.user && authSession.user.id;
     var boundUid = student.userProfile && student.userProfile.authUserId;
     if (sessUid && boundUid && sessUid !== boundUid) {
-        return <div className="min-h-screen flex items-center justify-center text-sm text-zinc-400">Yükleniyor</div>;
+        return <BrandLoad />;
     }
     if (!boundUid) {
-        return <div className="min-h-screen flex items-center justify-center text-sm text-zinc-400">Yükleniyor</div>;
+        return <BrandLoad />;
     }
     if (!student.profile || !student.profile.onboarded) {
         var Ob = OnboardCmp || (window.KpssComponents && window.KpssComponents.OnboardingScreen) || Onboarding;
@@ -1850,7 +1861,7 @@ function App() {
 
     if (extra && extra !== "onboarding" && extra !== "auth") {
         return (
-            <div className="min-h-screen app-bg">
+            <div className="min-h-screen app-shell">
                 <div className="mx-auto max-w-3xl px-4 pt-5" style={{ paddingBottom: "2rem" }}>
                     <button type="button" onClick={closeTool} className="mb-3 text-sm font-medium text-stone-600">← Geri</button>
                     {lazyErr ? (
@@ -1875,7 +1886,7 @@ function App() {
     }
 
     return (
-        <div>
+        <div className="app-shell">
             {announce && !inTest ? (
                 <div className="sticky top-0 z-50 duyuru-bar text-white shadow-lg" style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
                     <div className="max-w-2xl mx-auto px-4 py-2.5 flex items-start gap-3">

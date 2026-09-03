@@ -3,7 +3,7 @@
   "short_name": "Atanly",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#000000",
+  "background_color": "#041C24",
   "theme_color": "#0D2C4D",
   "lang": "tr",
   "icons": [
