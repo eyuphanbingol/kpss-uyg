@@ -6,7 +6,7 @@ window.cografya_10_notlari = [
             🌊 KIYI ŞEKİLLENMESİ
         </span>
     </div>
-    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm w-full">
         <p>Kıyılarımızın şekillenmesinde en temel dış kuvvet <b class="text-rose-600 dark:text-rose-400">dalgalar ve akıntılardır</b>.</p>
         <p class="mt-2">Dalgalar dağların kıyıya paralel ve dik olduğu yamaçlarda <u>aşındırma</u>, deniz derinliğinin az olduğu sığ kıyılarda ise <u>biriktirme</u> yapar.</p>
         <div class="mt-3 flex flex-wrap gap-1">
@@ -24,7 +24,7 @@ window.cografya_10_notlari = [
             📐 DALGA AŞINDIRMA ŞEKİLLERİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <div class="bg-white dark:bg-slate-800/50 p-3 rounded-lg border-l-4 border-blue-500 mb-2">
                 <b class="text-rose-600 dark:text-rose-400">Falez (Yalıyar)</b>
@@ -50,7 +50,7 @@ window.cografya_10_notlari = [
             ⚠️ HAYATİ SINAV NOTU
         </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto text-center">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full text-center">
         <p class="text-lg font-black text-red-600 dark:text-red-400 mb-2">Falez ↔ Delta İlişkisi</p>
         <p>Bir kıyıda <b class="text-rose-600 dark:text-rose-400">Delta Ovası varsa</b> orada kesinlikle <b class="text-rose-600 dark:text-rose-400">falez OLMAZ</b>!</p>
         <p class="mt-1 text-xs text-slate-600 dark:text-slate-400">Aynı şekilde falez olan dik kıyılarda da delta ovası oluşamaz.</p>
@@ -66,7 +66,7 @@ window.cografya_10_notlari = [
             🏖️ DALGA BİRİKTİRME ŞEKİLLERİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <p class="mb-2 text-xs text-slate-500 dark:text-slate-400">Deniz derinliğinin az (sığ), kıta sahanlığının geniş olduğu yerlerde oluşur.</p>
             <div class="space-y-2">
@@ -93,7 +93,7 @@ window.cografya_10_notlari = [
             🏝️ LAGÜN VE TOMBOLO
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30">
                 <b class="text-rose-600 dark:text-rose-400 block mb-2">Lagün (Deniz Kulağı)</b>
@@ -123,7 +123,7 @@ window.cografya_10_notlari = [
             🗺️ DALMAÇYA KIYI TİPİ
         </span>
     </div>
-    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm w-full">
         <p>Dağların kıyıya paralel uzandığı yerlerde, deniz seviyesinin yükselmesiyle dağlar arasındaki vadilerin sular altında kalması ve dağların zirvelerinin kıyıda irili ufaklı adacıklar şeklinde görünmesidir.</p>
         <div class="mt-3 bg-white dark:bg-slate-800/50 p-3 rounded-lg border border-indigo-200 dark:border-indigo-800/30 text-center">
             <span class="text-xs text-slate-500 dark:text-slate-400">📌 Türkiye'deki tek ve en net yeri:</span>
@@ -138,7 +138,7 @@ window.cografya_10_notlari = [
             🗺️ RIA VE KALANLI KIYI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-violet-50 dark:bg-violet-900/20 p-4 rounded-xl border border-violet-100 dark:border-violet-800/30">
             <div class="bg-white dark:bg-slate-800/50 p-3 rounded-lg border-l-4 border-violet-500 mb-2">
                 <b class="text-rose-600 dark:text-rose-400">Ria Kıyı Tipi</b>

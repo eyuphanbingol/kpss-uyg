@@ -6,7 +6,7 @@ window.cografya_6_notlari = [
             💧 TÜRKİYE'DE AKARSULARIN OLUŞTURDUĞU YER ŞEKİLLERİ
         </span>
     </div>
-    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm w-full">
         <p>Akarsular topoğrafyayı şekillendirirken güçlerine ve arazinin yapısına göre <b class="text-rose-600 dark:text-rose-400">Aşındırma</b>, <b class="text-rose-600 dark:text-rose-400">Biriktirme</b> ya da <b class="text-rose-600 dark:text-rose-400">Hem Aşındırma Hem Biriktirme</b> şekilleri oluştururlar.</p>
         <div class="flex flex-wrap gap-2 mt-3">
             <span class="bg-red-100 dark:bg-red-900/30 px-3 py-1 rounded-full text-xs text-red-700 dark:text-red-300 border border-red-200 dark:border-red-800/30">Aşındırma</span>
@@ -22,7 +22,7 @@ window.cografya_6_notlari = [
             ⛰️ AŞINDIRMA ŞEKİLLERİ (Genel Liste)
         </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full">
         <div class="flex flex-wrap gap-2">
             <span class="bg-white dark:bg-slate-800 px-3 py-1 rounded-full text-xs border border-red-200 dark:border-red-800/30">Kırık Bayır (Badlands)</span>
             <span class="bg-white dark:bg-slate-800 px-3 py-1 rounded-full text-xs border border-red-200 dark:border-red-800/30">Peri Bacası</span>
@@ -41,7 +41,7 @@ window.cografya_6_notlari = [
             🌵 1. KIRIK BAYIR (Badlands)
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <p>Bitki örtüsünden yoksun, kurak ve yarı kurak yamaçlarda sel sularının toprağı ve ana kayayı derince yararak oluşturduğu pürüzlü yamaçlardır.</p>
         <p class="mt-2">Türkiye'de en net örnekleri <b class="text-rose-600 dark:text-rose-400">İç Anadolu</b> ve <b class="text-rose-600 dark:text-rose-400">Güneydoğu Anadolu</b> bölgelerinde görülür.</p>
     </div>
@@ -53,7 +53,7 @@ window.cografya_6_notlari = [
             🌋 2. PERİ BACALARI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30">
             <h4 class="font-bold text-purple-700 dark:text-purple-400">Nevşehir (Kapadokya) Peri Bacaları</h4>
             <ul class="list-disc list-inside space-y-1 text-xs mt-2">
@@ -78,7 +78,7 @@ window.cografya_6_notlari = [
             🌊 3. ŞELALE (Çağlayan) VE DEV KAZANI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30">
             <p>Akarsu yatağındaki eğim kırıklığının olduğu dikliklerde şelaleler oluşur. Şelalelerin yüksekten döküldüğü (döküldüğü yerlerdeki) çukurlara ise <b class="text-rose-600 dark:text-rose-400">dev kazanı</b> denir.</p>
             <div class="mt-3 bg-white dark:bg-slate-800/50 p-3 rounded-lg">
@@ -102,7 +102,7 @@ window.cografya_6_notlari = [
             🌍 4. AŞINIM DÜZLÜĞÜ (Peneplen)
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full">
         <p>Akarsu aşındırmasının en son halidir. Bir arazinin deniz seviyesine yakın, çok hafif engebeye sahip olması durumudur.</p>
         <p class="mt-2 text-rose-600 dark:text-rose-400 font-semibold">Türkiye yakın bir jeolojik zamanda toptan yükseldiği için ülkemizde tam anlamıyla <b>yoktur</b>.</p>
     </div>
@@ -114,7 +114,7 @@ window.cografya_6_notlari = [
             📐 5. VADİ - GENEL
         </span>
     </div>
-    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm w-full">
         <p>Bir akarsuyun kaynak noktası ile denize döküldüğü ağız kısmı arasındaki yapısına <b>vadi</b> denir.</p>
     </div>
     `,
@@ -125,7 +125,7 @@ window.cografya_6_notlari = [
             📐 5. VADİ TÜRLERİ (Çentik Vadi)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <h4 class="font-bold text-amber-700 dark:text-amber-400">Çentik Vadi (V Şekilli Vadi)</h4>
             <ul class="list-disc list-inside space-y-1 text-xs mt-2">
@@ -146,7 +146,7 @@ window.cografya_6_notlari = [
             🛣️ 5. VADİ TÜRLERİ (Boğaz Vadi)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30">
             <h4 class="font-bold text-purple-700 dark:text-purple-400">Boğaz Vadi</h4>
             <p>Dağları enine yarıp geçen vadilerdir. Kızılırmak, Sakarya, Fırat ve Dicle yataklarında görülür.</p>
@@ -167,7 +167,7 @@ window.cografya_6_notlari = [
             🏜️ 5. VADİ TÜRLERİ (Kanyon ve Geniş Tabanlı Vadi)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30">
             <h4 class="font-bold text-cyan-700 dark:text-cyan-400">Kanyon Vadi</h4>
             <ul class="list-disc list-inside space-y-1 text-xs mt-2">
@@ -195,7 +195,7 @@ window.cografya_6_notlari = [
             🌾 BİRİKTİRME ŞEKİLLERİ (Genel Liste)
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full">
         <p>Akarsuyun taşıma gücünün azaldığı yerlerde taşıdığı malzemeleri biriktirmesiyle oluşur.</p>
         <div class="flex flex-wrap gap-2 mt-3">
             <span class="bg-white dark:bg-slate-800 px-3 py-1 rounded-full text-xs border border-blue-200 dark:border-blue-800/30">Irmak Adası</span>
@@ -214,7 +214,7 @@ window.cografya_6_notlari = [
             📐 BİRİKTİRME ŞEKİLLERİ (Detaylar)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Birikinti Konisi ve Yelpazesi:</b> Dağların içinden kum, çakıl gelip bütün malzemeyi aşağı sarmarsa birikinti konisi; bu malzeme genişlerse birikinti yelpazesi olur. 📌 <i>Aydın şehri belirgin bir birikinti üzerine kurulmuştur.</i></li>
@@ -231,7 +231,7 @@ window.cografya_6_notlari = [
             📐 DELTA OVASI OLUŞUM ŞARTLARI
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <p>Akarsuların denize döküldüğü yerlerde yapmış olduğu biçimindeki ovalardır.</p>
         <p class="mt-2">Bir yerde delta oluşabilmesi için <b class="text-rose-600 dark:text-rose-400">kıta sahanlığı geniş olmalı</b> (deniz sığ olmalı).</p>
         <div class="mt-3 bg-white dark:bg-slate-800/50 p-3 rounded-lg text-xs">
@@ -250,7 +250,7 @@ window.cografya_6_notlari = [
             🔄 HEM AŞINDIRMA HEM BİRİKTİRME ŞEKİLLERİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Menderes:</b> Büklüm. Eğim az, yana aşındırma fazladır, taşıma ise azdır. Akarsu yatağında 'S' harfi çizer.</li>

@@ -5,7 +5,7 @@ window.tarih_2_notlari = [
             ⚔️ TALAS SAVAŞI (751)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-lg mx-auto text-sm sm:text-base">
+    <div class="space-y-3 text-left w-full text-sm sm:text-base">
         <div class="bg-rose-50 dark:bg-rose-900/20 p-3 rounded-xl border border-rose-100 dark:border-rose-800/30">
             Diğer adı <b class="text-rose-600 dark:text-rose-400">Atlık Savaşı</b>'dır. Karlukların yardımıyla Abbasiler Çinlileri mağlup etmiştir. Emeviler'in Arap olmayan Müslümanları ikinci sınıf görme politikasına <b>Mevali</b> denir.
         </div>
@@ -31,20 +31,20 @@ window.tarih_2_notlari = [
             🌍 İSLAMİYETİ KABULÜN ETKİLERİ
         </span>
     </div>
-    <ul class="space-y-3 text-left w-full max-w-md mx-auto">
-        <li class="flex items-start gap-3 bg-emerald-50 dark:bg-emerald-900/20 p-3 rounded-xl border border-emerald-100 dark:border-emerald-800/30">
+    <ul class="space-y-3 text-left w-full w-full">
+        <li class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3 bg-emerald-50 dark:bg-emerald-900/20 p-3 rounded-xl border border-emerald-100 dark:border-emerald-800/30">
             <span class="text-xl">🛡️</span> 
             <span>Müslümanları <b>Bizans baskısına</b> karşı korumuşlardır.</span>
         </li>
-        <li class="flex items-start gap-3 bg-emerald-50 dark:bg-emerald-900/20 p-3 rounded-xl border border-emerald-100 dark:border-emerald-800/30">
+        <li class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3 bg-emerald-50 dark:bg-emerald-900/20 p-3 rounded-xl border border-emerald-100 dark:border-emerald-800/30">
             <span class="text-xl">🌐</span> 
             <span>İslamiyeti <b>dünyanın dört bir yanına</b> yaymışlardır.</span>
         </li>
-        <li class="flex items-start gap-3 bg-emerald-50 dark:bg-emerald-900/20 p-3 rounded-xl border border-emerald-100 dark:border-emerald-800/30">
+        <li class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3 bg-emerald-50 dark:bg-emerald-900/20 p-3 rounded-xl border border-emerald-100 dark:border-emerald-800/30">
             <span class="text-xl">⚔️</span> 
             <span><b>Haçlı Seferlerine</b> karşı kahramanca savaşmışlardır.</span>
         </li>
-        <li class="flex items-start gap-3 bg-emerald-50 dark:bg-emerald-900/20 p-3 rounded-xl border border-emerald-100 dark:border-emerald-800/30">
+        <li class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3 bg-emerald-50 dark:bg-emerald-900/20 p-3 rounded-xl border border-emerald-100 dark:border-emerald-800/30">
             <span class="text-xl">🧠</span> 
             <span>Önemli bilim insanları yetiştirmişler; fethedilen bölgelere Türkçe/Arapça isimler vererek <b>din ve dilin yayılmasını</b> sağlamışlardır.</span>
         </li>
@@ -57,7 +57,7 @@ window.tarih_2_notlari = [
             🏛️ ORTA ASYA TÜRK-İSLAM DEVLETLERİ
         </span>
     </div>
-    <div class="flex flex-col gap-4 text-left max-w-xl mx-auto">
+    <div class="flex flex-col gap-4 text-left w-full">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-2xl border-l-4 border-indigo-500">
             <h4 class="font-black text-indigo-700 dark:text-indigo-400 mb-1">Karahanlılar (Afrasiyaboğulları)</h4>
             <p class="text-sm mb-1">Orta Asya'da kurulan <b class="text-rose-500">ilk</b> Müslüman Türk devleti. Kurucu: Bilge Kül Kadir Han (Merkez: Balasagun). Yönetici ve halkı tamamen Türk'tür. Satuk Buğra Han döneminde İslam kabul edildi.</p>
@@ -76,12 +76,12 @@ window.tarih_2_notlari = [
             🦅 BÜYÜK SELÇUKLU DEVLETİ (BSD)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-slate-50 dark:bg-slate-700/30 p-3 rounded-xl border border-slate-200 dark:border-slate-600 flex justify-between items-center">
             <span>1040 Dandanakan ile İran'da kuruldu (Kınık boyu).</span>
             <span class="font-bold">Kurucu: Tuğrul Bey</span>
         </div>
-        <div class="grid grid-cols-2 gap-2">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <div class="bg-blue-50 dark:bg-blue-900/20 p-2 rounded-lg text-xs"><b>Tuğrul Bey (1058 Bağdat):</b><br>Doğu'nun ve Batı'nın Hükümdarı</div>
             <div class="bg-blue-50 dark:bg-blue-900/20 p-2 rounded-lg text-xs"><b>Alparslan (1064 Ani):</b><br>Ebu'l-Feth (Fetihlerin Babası)</div>
         </div>
@@ -100,7 +100,7 @@ window.tarih_2_notlari = [
             🐪 MISIR'DA KURULAN TÜRK-İSLAM DEVLETLERİ
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full">
         <div class="bg-white dark:bg-slate-700/50 p-3 rounded-xl shadow-sm border border-amber-100 dark:border-slate-600">
             <h4 class="font-bold text-amber-600 dark:text-amber-400">Tolunoğulları</h4>
             <p class="text-xs">Mısır'da kurulan <b class="text-rose-500">ilk</b> Türk-İslam devleti. <b>Maristan</b> (hastane) kurdular. Tevâif-i Mülk'tür.</p>
@@ -126,7 +126,7 @@ window.tarih_2_notlari = [
             ⛰️ ANADOLU'DA KURULAN İLK TÜRK BEYLİKLERİ
         </span>
     </div>
-    <ul class="space-y-3 text-left max-w-xl mx-auto text-sm">
+    <ul class="space-y-3 text-left w-full text-sm">
         <li class="bg-teal-50 dark:bg-teal-900/20 p-3 rounded-xl border-l-4 border-teal-500">
             <b>Danişmentliler (Sivas, Tokat, Malatya):</b> Tokat Niksar'daki <b>Yağıbasan Medresesi</b> Anadolu'da kurulan <b class="text-rose-500">ilk</b> medresedir.
         </li>
@@ -151,7 +151,7 @@ window.tarih_2_notlari = [
             🛡️ DİĞER TÜRK DEVLETLERİ
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full">
         <div class="bg-slate-50 dark:bg-slate-700/50 p-3 rounded-xl border border-slate-200 dark:border-slate-600">
             <h4 class="font-bold text-fuchsia-600 dark:text-fuchsia-400 mb-1">Akkoyunlular & Karakoyunlular</h4>
             <p class="text-xs"><b>Akkoyunlular:</b> Kur'an'ı çevirdi, Dede Korkut'u yazdı. (Uzun Hasan). Otlukbeli'nde Fatih'e yenildi.<br><b>Karakoyunlular:</b> Azerbaycan'ın Türkleşmesi.</p>
@@ -177,14 +177,14 @@ window.tarih_2_notlari = [
             👑 DEVLET YÖNETİMİ & SARAY
         </span>
     </div>
-    <div class="space-y-4 text-left max-w-xl mx-auto text-sm">
+    <div class="space-y-4 text-left w-full text-sm">
         <div class="bg-purple-50 dark:bg-purple-900/20 p-3 rounded-xl">
             <b class="text-purple-700 dark:text-purple-400">Semboller:</b> Hutbe, Hilat (Giysi), Çetr (Şemsiye), Tiraz, Otağ, Nevbet, Örgün (Taht), Kılıç, Yay.
             <div class="mt-2 text-xs italic text-slate-600 dark:text-slate-400 border-t pt-2">
                 <b>Kritik:</b> Kut ➡️ 'Allah'ın takdirine', Cihan Hakimiyeti ➡️ 'Cihat ve İlay-ı Kelimetullah'a dönüştü.
             </div>
         </div>
-        <div class="grid grid-cols-2 gap-2 text-xs">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
             <div class="bg-white dark:bg-slate-800 p-2 rounded border border-slate-200 dark:border-slate-700"><b>Haris Emri:</b> Cellat / Candar</div>
             <div class="bg-white dark:bg-slate-800 p-2 rounded border border-slate-200 dark:border-slate-700"><b>Alemdar / Silahdar</b></div>
             <div class="bg-white dark:bg-slate-800 p-2 rounded border border-slate-200 dark:border-slate-700"><b>Camedar / Serhenk:</b> Yol/Tören</div>
@@ -201,7 +201,7 @@ window.tarih_2_notlari = [
             ⚖️ DİVAN-I SALTANAT (BAKANLAR KURULU)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <p class="text-xs bg-slate-100 dark:bg-slate-800 p-2 rounded">Karahanlılar bu meclise <b>Meclis-i Ali</b> derdi.</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div class="bg-sky-50 dark:bg-sky-900/20 p-3 rounded-xl border border-sky-100 dark:border-sky-800/30">
@@ -234,7 +234,7 @@ window.tarih_2_notlari = [
             📜 HUKUK SİSTEMİ
         </span>
     </div>
-    <div class="flex flex-col sm:flex-row gap-3 text-left w-full max-w-lg mx-auto">
+    <div class="flex flex-col sm:flex-row gap-3 text-left w-full">
         <div class="flex-1 bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-600 shadow-sm">
             <h4 class="font-bold text-slate-700 dark:text-slate-300 mb-2 border-b pb-1">Örfi Hukuk</h4>
             <p class="text-sm">Gelenek ve töre. İdari, askeri ve mali işlere bakar.<br><br>👉 Başkanı: <b class="text-indigo-600 dark:text-indigo-400">Emir-i Dad</b></p>
@@ -244,7 +244,7 @@ window.tarih_2_notlari = [
             <p class="text-sm">Kur'an, Sünnet. Evlenme, boşanma, miras işlerine bakar.<br><br>👉 Başkanı: <b class="text-indigo-600 dark:text-indigo-400">Kadı'l-Kudat</b></p>
         </div>
     </div>
-    <div class="mt-3 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 p-3 rounded-lg text-sm max-w-lg mx-auto">
+    <div class="mt-3 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 p-3 rounded-lg text-sm w-full">
         ⚔️ Askeri davalara ise <b>Kadıleşker (Kazasker)</b> bakar.
     </div>
     `,
@@ -255,8 +255,8 @@ window.tarih_2_notlari = [
             🌱 TOPRAK YÖNETİMİ & İKTA SİSTEMİ
         </span>
     </div>
-    <div class="space-y-4 text-left max-w-xl mx-auto text-sm">
-        <div class="grid grid-cols-2 gap-3">
+    <div class="space-y-4 text-left w-full text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div class="bg-lime-50 dark:bg-lime-900/20 p-3 rounded-xl border border-lime-200 dark:border-lime-800">
                 <b class="text-lime-700 dark:text-lime-400">Miri Toprak (Devlet)</b><br>
                 <span class="text-xs">Has, Vakıf (Satılamaz), İkta.</span>
@@ -281,7 +281,7 @@ window.tarih_2_notlari = [
             🏘️ SOSYAL HAYAT TERİMLERİ (ÖSYM)
         </span>
     </div>
-    <div class="grid grid-cols-2 gap-2 text-left text-sm max-w-xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-left text-sm w-full">
         <div class="bg-white dark:bg-slate-800 p-2 rounded-lg shadow-sm border border-orange-100 dark:border-slate-700"><b>İmarethane:</b> Aşevi</div>
         <div class="bg-white dark:bg-slate-800 p-2 rounded-lg shadow-sm border border-orange-100 dark:border-slate-700"><b>Kapan:</b> Tek cins mal, toptancı</div>
         <div class="bg-white dark:bg-slate-800 p-2 rounded-lg shadow-sm border border-orange-100 dark:border-slate-700"><b>Bedesten:</b> Lüks kapalı çarşı</div>
@@ -301,7 +301,7 @@ window.tarih_2_notlari = [
             ⚔️ ORDU YAPISI & GULAM SİSTEMİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <p class="bg-slate-100 dark:bg-slate-800 p-3 rounded-lg"><b>BSD Ordusu:</b> İkta askerleri, Gulamlar, Bağlı devlet askerleri ve Türkmenler.</p>
         <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-200 dark:border-red-800/30">
             <h4 class="font-black text-lg text-red-700 dark:text-red-400 mb-2">Gulam Sistemi</h4>
@@ -320,12 +320,12 @@ window.tarih_2_notlari = [
             📚 MEDRESE VE EĞİTİM
         </span>
     </div>
-    <div class="space-y-4 text-left max-w-xl mx-auto text-sm">
+    <div class="space-y-4 text-left w-full text-sm">
         <ul class="space-y-2">
-            <li class="bg-cyan-50 dark:bg-cyan-900/20 p-2 rounded-lg flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-cyan-500"></span> <b>Semerkand:</b> <span class="ml-auto text-xs text-rose-500">İlk Türk-İslam (Karahanlı)</span></li>
-            <li class="bg-cyan-50 dark:bg-cyan-900/20 p-2 rounded-lg flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-cyan-500"></span> <b>Yağıbasan:</b> <span class="ml-auto text-xs text-rose-500">Anadolu'daki İlk (Danişment)</span></li>
-            <li class="bg-cyan-50 dark:bg-cyan-900/20 p-2 rounded-lg flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-cyan-500"></span> <b>Nişabur:</b> <span class="ml-auto text-xs text-slate-500">BSD İlk (Tuğrul Bey)</span></li>
-            <li class="bg-indigo-50 dark:bg-indigo-900/20 p-2 rounded-lg flex items-center gap-2 border-l-4 border-indigo-500"> <b>Nizamiye:</b> <span class="ml-auto text-xs text-indigo-600 dark:text-indigo-400 font-bold">BSD En Ünlü (Alparslan/Melikşah)</span></li>
+            <li class="bg-cyan-50 dark:bg-cyan-900/20 p-2 rounded-lg flex flex-wrap items-center gap-2"><span class="w-2 h-2 rounded-full bg-cyan-500 shrink-0"></span> <b>Semerkand:</b> <span class="text-xs text-rose-500 font-semibold">İlk Türk-İslam (Karahanlı)</span></li>
+            <li class="bg-cyan-50 dark:bg-cyan-900/20 p-2 rounded-lg flex flex-wrap items-center gap-2"><span class="w-2 h-2 rounded-full bg-cyan-500 shrink-0"></span> <b>Yağıbasan:</b> <span class="text-xs text-rose-500 font-semibold">Anadolu'daki İlk (Danişment)</span></li>
+            <li class="bg-cyan-50 dark:bg-cyan-900/20 p-2 rounded-lg flex flex-wrap items-center gap-2"><span class="w-2 h-2 rounded-full bg-cyan-500 shrink-0"></span> <b>Nişabur:</b> <span class="text-xs text-slate-500 font-semibold">BSD İlk (Tuğrul Bey)</span></li>
+            <li class="bg-indigo-50 dark:bg-indigo-900/20 p-2 rounded-lg flex flex-wrap items-center gap-2 border-l-4 border-indigo-500"> <b>Nizamiye:</b> <span class="text-xs text-indigo-600 dark:text-indigo-400 font-bold">BSD En Ünlü (Alparslan/Melikşah)</span></li>
         </ul>
         <div class="bg-slate-50 dark:bg-slate-700/50 p-3 rounded-xl border border-slate-200 dark:border-slate-600">
             <p class="text-xs mb-2"><b>Açılma Nedenleri:</b> Batınilik ile savaşmak, memur yetiştirmek, yoksulu okutmak.</p>
@@ -347,7 +347,7 @@ window.tarih_2_notlari = [
             🎨 MİMARİ VE SANAT
         </span>
     </div>
-    <div class="flex flex-col sm:flex-row gap-4 text-left w-full max-w-2xl mx-auto text-sm">
+    <div class="flex flex-col sm:flex-row gap-4 text-left w-full w-full text-sm">
         <div class="flex-1 space-y-2">
             <div class="bg-slate-50 dark:bg-slate-700/50 p-2 rounded-lg border-l-4 border-pink-500"><b>Dini:</b> Medrese, kümbet, türbe, cami, tekke, zaviye.</div>
             <div class="bg-slate-50 dark:bg-slate-700/50 p-2 rounded-lg border-l-4 border-pink-500"><b>Sivil:</b> Ribat (Savunma da olur), han, hamam, sebil.</div>
@@ -371,7 +371,7 @@ window.tarih_2_notlari = [
             🔬 TÜRK-İSLAM BİLİM İNSANLARI - I
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full">
         <div class="bg-white dark:bg-slate-800 p-3 rounded-xl shadow-sm border border-emerald-100 dark:border-slate-700">
             <div class="font-bold text-emerald-600 dark:text-emerald-400">Farabi (Muallim-i Sani)</div>
             <p class="text-xs mt-1">Pozitif bilimleri başlattı. <i>Kitabü'l-Musiki</i>, <i>El-Medinetü'l-Fazıla</i>. Logaritmayı buldu, BM fikrini attı.</p>
@@ -400,7 +400,7 @@ window.tarih_2_notlari = [
             🔭 TÜRK-İSLAM BİLİM İNSANLARI - II
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full">
         <div class="bg-white dark:bg-slate-800 p-3 rounded-xl shadow-sm border border-teal-100 dark:border-slate-700">
             <div class="font-bold text-teal-600 dark:text-teal-400">Cabir bin Hayyam (Geber)</div>
             <p class="text-xs mt-1">Modern kimyanın kurucusu. Hassas terazi, atomun parçalanması. Eser: <i>Kitabü'l-Kimya</i>.</p>
@@ -430,7 +430,7 @@ window.tarih_2_notlari = [
             📖 İLK TÜRK-İSLAM YAZILI ESERLERİ
         </span>
     </div>
-    <ul class="space-y-3 text-left w-full max-w-2xl mx-auto text-sm">
+    <ul class="space-y-3 text-left w-full w-full text-sm">
         <li class="bg-indigo-50 dark:bg-indigo-900/20 p-3 rounded-xl border-l-4 border-indigo-500">
             <b>Yusuf Has Hacip - Kutadgu Bilig:</b> <span class="text-rose-500 font-bold">İlk Türk-İslam yazılı eseri.</span> Siyasetname, Alegorik. <b>Tamgaç Buğra Han</b>'a sunuldu.
         </li>

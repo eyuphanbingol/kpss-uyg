@@ -7,7 +7,7 @@ window.tarih_13_notlari = [
             🇹🇷 MUSTAFA KEMAL'İN İSTANBUL'A GELİŞİ VE SAMSUN'A ÇIKIŞI
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Mondros imzalandığında 1 gün sonra Yıldırım Orduları Grup Komutanı olmuştur.</li>
             <li>15 Kasım 1918'de İstanbul'a gelmiştir. ("Gelmemeliydim, hata yaptım İstanbul'a")</li>
@@ -32,7 +32,7 @@ window.tarih_13_notlari = [
             📜 HAVZA GENELGESİ
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Tek başına yayımladı. Amacı milli bilinci uyandırmak.</li>
             <li>İngilizler: "İsyan bayrağı ilk açtığı yer" demiştir.</li>
@@ -57,7 +57,7 @@ window.tarih_13_notlari = [
             📜 AMASYA GENELGESİ (TAMİMİ)
         </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Mustafa Kemal silah arkadaşlarıyla birlikte yayımladı. Milli mücadeleyi kişiselleştirmekten çıkarmak için.</li>
             <li>Ali Fuat Cebesoy, Rauf Orbay, Kazım Karabekir, Refet Bele Mustafa Kemal'in yanındalar.</li>
@@ -96,7 +96,7 @@ window.tarih_13_notlari = [
             🏛️ ERZURUM KONGRESİ
         </span>
     </div>
-    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm w-full">
         <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">Kongreyi Toplayan Cemiyetler:</p>
         <ul class="list-disc list-inside space-y-1 text-xs mt-1">
             <li>Vilayet-i Şarkiye Müdafaa-i Hukuk Cemiyeti</li>
@@ -143,7 +143,7 @@ window.tarih_13_notlari = [
             🏛️ BALIKESİR KONGRELERİ
         </span>
     </div>
-    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Hacım Muhittin Bey tarafından toplanmıştır.</li>
             <li>Batı Cephesi kurulmuştur.</li>
@@ -166,7 +166,7 @@ window.tarih_13_notlari = [
             🏛️ ALAŞEHİR KONGRESİ
         </span>
     </div>
-    <div class="bg-pink-50 dark:bg-pink-900/20 p-4 rounded-xl border border-pink-100 dark:border-pink-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-pink-50 dark:bg-pink-900/20 p-4 rounded-xl border border-pink-100 dark:border-pink-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Hacı Muhittin Bey toplamıştır.</li>
             <li>Batı Anadolu'da devam eden direniş gözden geçirilmiştir.</li>
@@ -182,7 +182,7 @@ window.tarih_13_notlari = [
             🏛️ SİVAS KONGRESİ
         </span>
     </div>
-    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Toplanış amacı ve aldığı kararlar açısından tüm yurdu ilgilendirir.</li>
         </ul>
@@ -218,7 +218,7 @@ window.tarih_13_notlari = [
             📰 MİLLİ MÜCADELE BASIN VE YAYIN HAREKETLERİ
         </span>
     </div>
-    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>İrade-i Milliye:</b> Sivas'ta çıkarılan Milli Mücadelenin ilk gazetesidir.</li>
             <li><b>Hakimiyet-i Milliye:</b> Ankara'da çıkarılan TBMM'nin yarı resmî yayın organıdır.</li>
@@ -253,7 +253,7 @@ window.tarih_13_notlari = [
             🤝 AMASYA GÖRÜŞMELERİ
         </span>
     </div>
-    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Damat Ferit Paşa Hükümeti yerine milli mücadele yanlısı Ali Rıza Paşa Hükümeti kurulmuştur.</li>
             <li>Yeni kabinede milli mücadeleyi destekleyen kişiler yer almıştır.</li>
@@ -281,7 +281,7 @@ window.tarih_13_notlari = [
             🏛️ MUSTAFA KEMAL ANKARA'YI NEDEN MİLLİ MÜCADELE MERKEZİ YAPTI
         </span>
     </div>
-    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Ulaşım ve haberleşme imkânının olması</li>
             <li>Batı Cephesine yakın olması</li>
@@ -303,7 +303,7 @@ window.tarih_13_notlari = [
             🏛️ MUSTAFA KEMAL'İN MECLİS'TEN BEKLENTİLERİ
         </span>
     </div>
-    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Kendisinin Meclis Başkanı seçilmesini</li>
             <li>Mecliste Müdafaa-i Hukuk Grubu kurulmasını istemiştir.</li>
@@ -322,7 +322,7 @@ window.tarih_13_notlari = [
             📜 MİSAK-I MİLLİ
         </span>
     </div>
-    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Mustafa Kemal, Osmanlı Mebusan üyeleri (Felah-ı Vatan) tarafından hazırlandı.</li>
             <li>Misak-ı Milli Osmanlı Mebusan Meclisi'nde kabul edilen son kanundur.</li>
@@ -361,7 +361,7 @@ window.tarih_13_notlari = [
             ⚔️ MUSTAFA KEMAL'İN İSTANBUL'UN İŞGALİNE KARŞI ALDIĞI ÖNLEMLER
         </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>İstanbul Hükümeti ile tüm haberleşme kesildi.</li>
             <li>Vergi toplamak için Anadolu'ya gönderilen memurlar İstanbul'a geri gönderildi.</li>

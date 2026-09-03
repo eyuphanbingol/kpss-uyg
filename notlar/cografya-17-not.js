@@ -7,7 +7,7 @@ window.cografya_17_notlari = [
             💰 TÜRKİYE'NİN EKONOMİK COĞRAFYASI - EKONOMİ POLİTİKALARI
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Türkiye ekonomisi 3 büyük sektöre bağlıdır:</b></li>
             <ul class="list-disc list-inside ml-4 space-y-1 text-xs">
@@ -29,7 +29,7 @@ window.cografya_17_notlari = [
             📜 1923-1929 DÖNEMİ - İZMİR İKTİSAT KONGRESİ
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">17 ŞUBAT 1923 - İZMİR İKTİSAT KONGRESİ:</p>
         <ul class="list-disc list-inside space-y-1 text-xs mt-1">
             <li>Yeni kurulacak devletin <b>liberal</b> (serbest piyasa ekonomisi) ve <b>milliyetçi</b> olması gerektiği vurgulanmıştır.</li>
@@ -50,7 +50,7 @@ window.cografya_17_notlari = [
             🏛️ 1930-1950 DÖNEMİ - DEVLETÇİLİK
         </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Dünya ekonomik krizinden sonra <b>devletçilik</b> politikasına geçilmiştir.</li>
             <li>Yatırımlar <b>devlet eliyle</b> yapılmıştır.</li>
@@ -78,7 +78,7 @@ window.cografya_17_notlari = [
             📈 1950-1960 DÖNEMİ - LİBERAL EKONOMİ
         </span>
     </div>
-    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>İkinci liberal ekonomi</b> dönemi başlamıştır.</li>
             <li>Büyük yatırımlar yapılmıştır.</li>
@@ -94,7 +94,7 @@ window.cografya_17_notlari = [
             📋 1960-1980 DÖNEMİ - PLANLI EKONOMİ
         </span>
     </div>
-    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Devlet Planlama Teşkilatı</b>'nın kurulması</li>
             <li><b>I. Beş Yıllık Kalkınma Planı</b>'nın uygulanması</li>
@@ -111,7 +111,7 @@ window.cografya_17_notlari = [
             🔄 1980 SONRASI DÖNEM - 24 OCAK KARARLARI
         </span>
     </div>
-    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm w-full">
         <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">24 OCAK 1980 KARARLARI:</p>
         <ul class="list-disc list-inside space-y-1 text-xs mt-1">
             <li>1980 sonrasındaki ekonomi politikalarına yön veren kararlardır.</li>
@@ -135,7 +135,7 @@ window.cografya_17_notlari = [
             📊 TÜRKİYE'NİN GÜNCEL EKONOMİK YAPISI
         </span>
     </div>
-    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm w-full">
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left">
             <div class="bg-teal-100 dark:bg-teal-800/30 p-3 rounded-lg text-center">
                 <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">HİZMETLER</p>
@@ -166,7 +166,7 @@ window.cografya_17_notlari = [
             ⏳ EKONOMİK DÖNEMLER - ZAMAN ÇİZELGESİ
         </span>
     </div>
-    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm w-full">
         <div class="space-y-2 text-xs">
             <div class="flex items-center gap-2 bg-indigo-100 dark:bg-indigo-800/30 p-2 rounded-lg">
                 <span class="font-bold text-amber-600 dark:text-amber-400">1923-1929</span>

@@ -7,7 +7,7 @@ window.cografya_18_notlari = [
             🌾 TARIM TİPLERİ - EKSTANSİF TARIM
         </span>
     </div>
-    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Görüldüğü yerler:</b> Karadeniz ve Doğu Anadolu</li>
             <li><b>Yapıldığı alanlar:</b> Engebeli alanlar</li>
@@ -25,7 +25,7 @@ window.cografya_18_notlari = [
             🚜 İNTANSİF TARIM (Modern Tarım)
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Yöntem:</b> Modern tarım yapılır</li>
             <li><b>Özellikler:</b> Sulama, gübreleme ve makineleşme vardır</li>
@@ -43,7 +43,7 @@ window.cografya_18_notlari = [
             🌵 NADAS TARIMI
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Tanım:</b> Toprağın 1 yıl boş bırakılması yöntemi</li>
             <li><b>Sonuç:</b> Erozyona neden olur</li>
@@ -63,7 +63,7 @@ window.cografya_18_notlari = [
             🔄 NÖBETLEŞE TARIM
         </span>
     </div>
-    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Tanım:</b> Her yıl farklı ürün ekilmesidir</li>
             <li><b>Örnek dönüşüm:</b> Baklagiller (fasulye) → Tahıllar (pirinç) → Yumru kökler (soğan)</li>
@@ -84,7 +84,7 @@ window.cografya_18_notlari = [
             💧 SULAMA (Tarımı Geliştirme Önlemleri)
         </span>
     </div>
-    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Verim artar</li>
             <li>Gelir artar</li>
@@ -102,7 +102,7 @@ window.cografya_18_notlari = [
             🚜 MAKİNELEŞME
         </span>
     </div>
-    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Olumsuz etkisi:</b> Kırsalda işsizlik yaratır</li>
             <li><b>Olumlu etkileri:</b></li>
@@ -126,7 +126,7 @@ window.cografya_18_notlari = [
             🗺️ ARAZİ DAĞITIMI VE TOPLULAŞTIRILMASI
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-red-50 dark:bg-red-900/20 p-3 rounded-xl border border-red-100 dark:border-red-800/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">ARAZİ DAĞITIMI</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -150,7 +150,7 @@ window.cografya_18_notlari = [
             🏦 TARIMI DESTEKLEYEN KURULUŞLAR
         </span>
     </div>
-    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Ziraat Bankası</b></li>
             <li><b>Toprak Mahsulleri Ofisi (TMO)</b></li>
@@ -167,7 +167,7 @@ window.cografya_18_notlari = [
             🌿 BAŞLICA TARIM ÜRÜNLERİ - GENEL
         </span>
     </div>
-    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm w-full">
         <p class="text-xs">Türkiye, gerek bulunduğu enlem değerleri (orta kuşakta bulunması) gerekse göreceli konumunun (yükselti, yer şekilleri çeşitliliği, denizellik-karasallık) avantajları sayesinde <b>çok çeşitli</b> tarım ürünlerinin yetiştiği bir ülkedir.</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-3">
             <div class="bg-indigo-100 dark:bg-indigo-800/30 p-2 rounded-lg text-xs">
@@ -205,7 +205,7 @@ window.cografya_18_notlari = [
             🌰 FINDIK - Karadeniz Bölgesi
         </span>
     </div>
-    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>İklim:</b> Nemli Karadeniz iklimi (yıl boyunca nem ve yağış isteği fazla)</li>
             <li><b>Yetişme alanı:</b> Karadeniz kıyı kuşağı boyunca kendiliğinden yetişir</li>
@@ -235,7 +235,7 @@ window.cografya_18_notlari = [
             🍵 ÇAY - Karadeniz Bölgesi
         </span>
     </div>
-    <div class="bg-emerald-50 dark:bg-emerald-900/20 p-4 rounded-xl border border-emerald-100 dark:border-emerald-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-emerald-50 dark:bg-emerald-900/20 p-4 rounded-xl border border-emerald-100 dark:border-emerald-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>İklim:</b> Nemli Karadeniz iklimi (yıl boyunca nem ve yağış isteği fazla)</li>
             <li><b>Tarihçe:</b> Ziraatçi <b>Zihni Derin</b> tarafından Batum'dan getirilerek üretimi yapılmıştır</li>
@@ -263,7 +263,7 @@ window.cografya_18_notlari = [
             🌿 KENEVİR (Kendir) - Karadeniz Bölgesi
         </span>
     </div>
-    <div class="bg-lime-50 dark:bg-lime-900/20 p-4 rounded-xl border border-lime-100 dark:border-lime-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-lime-50 dark:bg-lime-900/20 p-4 rounded-xl border border-lime-100 dark:border-lime-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Özellik:</b> Uyuşturucu madde olabildiği için üretim alanları <b>devlet kontrolünde</b> belirlenir</li>
             <li><b>Tohumu:</b> "Çedene" denir</li>
@@ -289,7 +289,7 @@ window.cografya_18_notlari = [
             🍚 ÇELTİK (Pirinç) - Marmara Bölgesi
         </span>
     </div>
-    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Özellik:</b> Sulama ile yetiştirilen bir tarım ürünüdür</li>
             <li><b>Dağılım:</b> Üretim alanları akarsularla paralellik gösterir</li>
@@ -317,7 +317,7 @@ window.cografya_18_notlari = [
             🌻 AYÇİÇEĞİ - Marmara Bölgesi
         </span>
     </div>
-    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Toprak:</b> <b>Vertisol</b> topraklarında en iyi yetişir</li>
             <li><b>Üretim merkezi:</b> <b>Ergene Havzası</b> (Trakya)</li>
@@ -343,7 +343,7 @@ window.cografya_18_notlari = [
             🥝 KİVİ - KETEN - KANOLA (Marmara Bölgesi)
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left w-full text-sm">
         <div class="bg-rose-50 dark:bg-rose-900/20 p-3 rounded-xl border border-rose-100 dark:border-rose-800/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">KİVİ</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">

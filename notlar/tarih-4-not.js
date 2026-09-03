@@ -6,7 +6,7 @@ window.tarih_4_notlari = [
             🗺️ OSMANLI DEVLETİ'NİN DİĞER ADLARI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <p class="mb-2"><b>Diğer Adları:</b> Baz-i Devlet, Devlet-i Aliyye, Osmanoğulları, Osmaniyye, Ottoman, Atman.</p>
             <div class="bg-white dark:bg-slate-800/50 p-3 rounded-lg">
@@ -22,7 +22,7 @@ window.tarih_4_notlari = [
             🏛️ KLASİK DÖNEM KÜLTÜR VE MEDENİYET OLUŞMASINDA ETKİLİ OLANLAR
         </span>
     </div>
-    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-2">
             <li>Orta Asya Türk gelenekleri</li>
             <li>İslam'ın getirdiği esaslar</li>
@@ -37,7 +37,7 @@ window.tarih_4_notlari = [
             👑 HÜKÜMDAR VE VERASET
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30">
             <p><b>Sembolleri:</b> Ok hariç tüm semboller var.</p>
             <p class="mt-2"><b>Ünvanlar:</b> Bey, Gazi, Han, Padişah, Sultan, Rum, Emir, Hüdavendigar.</p>
@@ -68,7 +68,7 @@ window.tarih_4_notlari = [
             📜 HÜKÜMDARLARIN GÖREVLERİ VE YETKİLERİ
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <b>Ferman:</b> Herhangi bir konuda verdiği yazılı emirdir.
         </div>
@@ -105,7 +105,7 @@ window.tarih_4_notlari = [
             🎓 ŞEHZADE EĞİTİMİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-emerald-50 dark:bg-emerald-900/20 p-4 rounded-xl border border-emerald-100 dark:border-emerald-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>7 yaşında eğitime başlarlar.</li>
@@ -139,7 +139,7 @@ window.tarih_4_notlari = [
             🏙️ BAŞKENTLER VE İSTANBUL
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30">
             <p><b>Kuruluş Bölgesi:</b> Osmanlı Bithynia bölgesinde kurulmuştur (Kocaeli, Sakarya, Düzce, Bolu, Bilecik, Bursa, Yalova, Bartın ve Zonguldak).</p>
             <div class="grid grid-cols-3 sm:grid-cols-6 gap-1 mt-3 text-xs">
@@ -181,7 +181,7 @@ window.tarih_4_notlari = [
             🏰 SARAYLAR
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-fuchsia-50 dark:bg-fuchsia-900/20 p-3 rounded-xl border border-fuchsia-100 dark:border-fuchsia-800/30">
             <b>Bey Sarayı:</b> Orhan Bey döneminde açılan ilk saraydır.
         </div>
@@ -209,7 +209,7 @@ window.tarih_4_notlari = [
             🏛️ TOPKAPI SARAYI YAPISI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-violet-50 dark:bg-violet-900/20 p-4 rounded-xl border border-violet-100 dark:border-violet-800/30">
             <h4 class="font-bold text-violet-700 dark:text-violet-400">Birun (Sarayın Dış Kısmı)</h4>
             <p>Dışarıdan gelen elçiler kabul edilmiştir. Divan toplantıları burada Babüssaade Kapısı'nda yapılmıştır.</p>
@@ -237,7 +237,7 @@ window.tarih_4_notlari = [
             ⚖️ DİVAN-I HÜMAYUN
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-slate-50 dark:bg-slate-700/50 p-4 rounded-xl border border-slate-200 dark:border-slate-600">
             <p><b>Kuran:</b> Orhan Bey, <b>Kaldıran:</b> II. Mahmut. Son söz padişahındır. Alınan kararlara hüküm, kaydedildiği deftere <b class="text-rose-600 dark:text-rose-400">'mühimme'</b> denir.</p>
             <ul class="list-disc list-inside space-y-1 mt-2">
@@ -247,7 +247,7 @@ window.tarih_4_notlari = [
                 <li>Divan kaldırılınca nazırlıklar kurulmuştur.</li>
             </ul>
         </div>
-        <div class="grid grid-cols-2 gap-2">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <div class="bg-white dark:bg-slate-800 p-3 rounded-xl border border-slate-200 dark:border-slate-600">
                 <b>Ayak Divanı:</b> Sadece hükümdar oturur, olağanüstüdür.
             </div>
@@ -270,7 +270,7 @@ window.tarih_4_notlari = [
             👥 DİVAN ÜYELERİ VE GÖREVLİLERİ
         </span>
     </div>
-    <div class="space-y-2 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-2 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-3 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <b>Padişah:</b> Fatih'e kadar başkanlık etti.
         </div>
@@ -313,7 +313,7 @@ window.tarih_4_notlari = [
             🗺️ TAŞRA TEŞKİLATI (1840'A KADAR)
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-teal-50 dark:bg-teal-900/20 p-3 rounded-xl border border-teal-100 dark:border-teal-800/30">
             <b>Köy</b>
             <ul class="list-disc list-inside text-xs mt-1">
@@ -355,7 +355,7 @@ window.tarih_4_notlari = [
             📋 TAŞRA TEŞKİLATI DEĞİŞİKLİKLERİ (1840 VE 1871)
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <h4 class="font-bold text-blue-700 dark:text-blue-400 mb-2">1840 Vilayet Nizamnamesi</h4>
             <ul class="list-disc list-inside space-y-1 text-xs">
@@ -384,7 +384,7 @@ window.tarih_4_notlari = [
             🌾 OSMANLI DEVLETİ'NDE EYALET SİSTEMİ - 1
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-lime-50 dark:bg-lime-900/20 p-4 rounded-xl border border-lime-100 dark:border-lime-800/30">
             <h4 class="font-bold text-lime-700 dark:text-lime-400">Salyaneli (Yıllıklı) Eyaletler</h4>
             <ul class="list-disc list-inside space-y-1 text-xs mt-2">
@@ -418,7 +418,7 @@ window.tarih_4_notlari = [
             👑 OSMANLI DEVLETİ'NDE EYALET SİSTEMİ - 2
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30">
             <h4 class="font-bold text-orange-700 dark:text-orange-400">Yurtluk-Ocaklık Eyaletler</h4>
             <p class="text-xs mt-2">Aşiretlerin yoğun olduğu yerlerdir. Aşiret liderlerine yönetsel haklar verilmiştir, kendi içlerinde serbestlerdir.</p>
@@ -448,7 +448,7 @@ window.tarih_4_notlari = [
             ⚖️ HUKUK SİSTEMİ VE MAHKEMELER
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30">
             <p><b>Hukukun oluşmasında etkililer:</b> Fethedilen bölgelerdeki uygulamalar, İslam'ın getirdiği esaslar ve Orta Asya Türk gelenekleri.</p>
         </div>
@@ -483,7 +483,7 @@ window.tarih_4_notlari = [
             📜 KADILARIN GÖREVLERİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Bir bölgenin noteridir.</li>
@@ -496,7 +496,7 @@ window.tarih_4_notlari = [
                 <p class="mt-1">Mahkeme karar vermeden önce bölgenin ileri gelenlerinden <b class="text-rose-600 dark:text-rose-400">'şuhudül hale'</b>ye başvurur.</p>
             </div>
         </div>
-        <div class="grid grid-cols-2 gap-3">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div class="bg-white dark:bg-slate-800 p-3 rounded-xl border border-slate-200 dark:border-slate-600 text-center">
                 <b>Taht Kadısı</b>
                 <p class="text-xs text-slate-600 dark:text-slate-400">Bursa, Edirne, İstanbul</p>
@@ -514,7 +514,7 @@ window.tarih_4_notlari = [
             👥 SOSYAL HAYAT VE VAKIFLAR
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-pink-50 dark:bg-pink-900/20 p-4 rounded-xl border border-pink-100 dark:border-pink-800/30">
             <h4 class="font-bold text-pink-700 dark:text-pink-400">Millet Sistemi</h4>
             <p>Toplumu din veya mezhepsel şekilde örgütleyerek yönetme biçimidir.</p>
@@ -543,7 +543,7 @@ window.tarih_4_notlari = [
             🎓 EĞİTİM SİSTEMİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
             <h4 class="font-bold text-indigo-700 dark:text-indigo-400">Enderun</h4>
             <p>Çocuklar eğitim alır, devlet memuru yetiştirilir.</p>
@@ -556,7 +556,7 @@ window.tarih_4_notlari = [
             <h4 class="font-bold text-indigo-700 dark:text-indigo-400">Şehzadegan Mektebi</h4>
             <p>7-12 yaş arası şehzadeler, ilk derse <b class="text-rose-600 dark:text-rose-400">'bed-i besmele'</b> veya <b class="text-rose-600 dark:text-rose-400">'amin alayı'</b> denir.</p>
         </div>
-        <div class="grid grid-cols-2 gap-3">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div class="bg-indigo-50 dark:bg-indigo-900/20 p-3 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
                 <b>Askeri Eğitim:</b> Acemiler Ocağı, Donanma, Yeniçeri Ocağı.
             </div>
@@ -573,7 +573,7 @@ window.tarih_4_notlari = [
             🔬 BİLİM İNSANLARI - 1
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-emerald-50 dark:bg-emerald-900/20 p-3 rounded-xl border border-emerald-100 dark:border-emerald-800/30">
             <b>Yahşi Fakih</b>
             <p class="text-xs mt-1">Kuruluş dönemi. İlk tarihi bilgileri içeren 'Yahşi Fakih Menakıbnamesi'ni yazdı.</p>
@@ -615,7 +615,7 @@ window.tarih_4_notlari = [
             🔭 BİLİM İNSANLARI - 2
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <b>Ali Kuşçu</b>
             <p class="text-xs mt-1">Semerkant'ta yetişti, astronom ve matematikçidir. Ay'ın haritasını çıkardı, Ayasofya müderrisi oldu. Fatih'e 'El Risalettün Fethiye'yi sundu.</p>
@@ -653,7 +653,7 @@ window.tarih_4_notlari = [
             🖋️ BİLİM İNSANLARI - 3
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-teal-50 dark:bg-teal-900/20 p-3 rounded-xl border border-teal-100 dark:border-teal-800/30">
             <b>Yanyalı Esat Efendi</b>
             <p class="text-xs mt-1">Lale Devri fikir adamı. Alimler kendisine 'Muallim-i Sani' demiştir.</p>
@@ -695,7 +695,7 @@ window.tarih_4_notlari = [
             💰 EKONOMİK KAVRAMLAR VE SİSTEMLER
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div class="bg-lime-50 dark:bg-lime-900/20 p-3 rounded-xl border border-lime-100 dark:border-lime-800/30">
                 <b>İaşecilik (Provizyonizm)</b>
@@ -731,7 +731,7 @@ window.tarih_4_notlari = [
             📦 EKONOMİK TEŞKİLATLAR VE KURUMLAR
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-orange-50 dark:bg-orange-900/20 p-3 rounded-xl border border-orange-100 dark:border-orange-800/30">
             <b>Derbent Teşkilatı</b>
             <p class="text-xs mt-1">Geçitlerin bakım-onarımını yapar, vergilerini toplar.</p>
@@ -773,7 +773,7 @@ window.tarih_4_notlari = [
             📊 VERGİLER (ŞER'İ VE ÖRFİ)
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30">
             <h4 class="font-bold text-red-700 dark:text-red-400">Şer'i Vergiler</h4>
             <ul class="list-disc list-inside space-y-1 text-xs mt-2">
@@ -808,7 +808,7 @@ window.tarih_4_notlari = [
             📈 EKONOMİK TEDBİRLER, PARALAR VE BANKALAR
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30">
             <h4 class="font-bold text-purple-700 dark:text-purple-400">Tüketiciyi Koruma</h4>
             <ul class="list-disc list-inside space-y-1 text-xs mt-2">
@@ -859,7 +859,7 @@ window.tarih_4_notlari = [
             🕌 MİMARİ ESERLER VE YERLER
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>İlk cami: <b class="text-rose-600 dark:text-rose-400">İznik Hacı Özbek Camii</b></li>
@@ -886,7 +886,7 @@ window.tarih_4_notlari = [
             🎨 SANAT DALLARI - 1 (HAT, MİNYATÜR, TEZHİP, RESİM)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-violet-50 dark:bg-violet-900/20 p-4 rounded-xl border border-violet-100 dark:border-violet-800/30">
             <h4 class="font-bold text-violet-700 dark:text-violet-400">Hat</h4>
             <p>En büyük hattat <b class="text-rose-600 dark:text-rose-400">'Kıbletü'l Hattatin' Şeyh Hamdullah</b>'tır. Ahmet Karahisari, Kazasker Mustafa Ahmet, Yeserizade Mustafa İzzet, Hafız Osman, II. Mustafa ünlü hattatlardır.</p>
@@ -918,7 +918,7 @@ window.tarih_4_notlari = [
             🎵 SANAT DALLARI - 2 (MÜZİK VE DİĞERLERİ)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-fuchsia-50 dark:bg-fuchsia-900/20 p-4 rounded-xl border border-fuchsia-100 dark:border-fuchsia-800/30">
             <h4 class="font-bold text-fuchsia-700 dark:text-fuchsia-400">Müzik</h4>
             <ul class="list-disc list-inside space-y-1 text-xs mt-2">
@@ -953,7 +953,7 @@ window.tarih_4_notlari = [
             📚 YAZI, DİL VE EDEBİYAT
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <h4 class="font-bold text-blue-700 dark:text-blue-400">Divan Edebiyatı</h4>
             <ul class="list-disc list-inside space-y-1 text-xs mt-2">
@@ -996,7 +996,7 @@ window.tarih_4_notlari = [
             🤼 OSMANLI DEVLETİ'NDE SPOR
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-lime-50 dark:bg-lime-900/20 p-4 rounded-xl border border-lime-100 dark:border-lime-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Orhan Bey döneminde ilk defa <b>güreş tekkeleri</b> açıldı.</li>

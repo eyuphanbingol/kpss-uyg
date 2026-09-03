@@ -6,9 +6,9 @@ window.cografya_11_notlari = [
             🗺️ ARAZİ RENKLENDİRME YÖNTEMİ
         </span>
     </div>
-    <div class="bg-stone-50 dark:bg-stone-900/20 p-4 rounded-xl border border-stone-200 dark:border-stone-700 text-sm max-w-2xl mx-auto">
+    <div class="bg-stone-50 dark:bg-stone-900/20 p-4 rounded-xl border border-stone-200 dark:border-stone-700 text-sm w-full">
         <p>Fiziki haritalarda yer şekillerinin daha net anlaşılması için kullanılan renklendirme yönteminde, renkler kesinlikle bitki örtüsünü veya idari sınırları değil; sadece <b class="text-rose-600 dark:text-rose-400">aynı yükseltiye sahip alanları</b> gösterir.</p>
-        <div class="grid grid-cols-2 gap-2 mt-3">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-3">
             <div class="bg-green-100 dark:bg-green-900/30 p-2 rounded-lg text-center">
                 <span class="text-green-700 dark:text-green-300 font-bold text-xs">🟢 Yeşil</span>
                 <p class="text-xs text-slate-600 dark:text-slate-400">Alçak yerler<br>(deniz seviyesine yakın)</p>
@@ -27,7 +27,7 @@ window.cografya_11_notlari = [
             📈 EĞİM VE İZOHİPS İLİŞKİSİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <div class="bg-white dark:bg-slate-800/50 p-3 rounded-lg border-l-4 border-red-500 mb-2">
                 <p class="text-amber-800 dark:text-amber-200">📌 <b>NOT:</b> Haritada izohips (eş yükselti) eğrileri <u>çok sıklaşıyorsa</u> orada <b class="text-rose-600 dark:text-rose-400">eğim fazla</b> demektir. Eğimin fazla olduğu bu yerlerde akarsuların akış hızı yüksek, falez oluşumu yaygındır.</p>
@@ -45,7 +45,7 @@ window.cografya_11_notlari = [
             🏔️ ENGEBE VE DÜZLÜK DURUMU
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-center">
             <p class="text-xs text-slate-500 dark:text-slate-400 mb-1">En Engebeli Bölge</p>
             <b class="text-rose-600 dark:text-rose-400 text-lg block mb-1">Karadeniz Bölgesi</b>
@@ -65,7 +65,7 @@ window.cografya_11_notlari = [
             📍 EN DÜZ BÖLÜMLER VE ALANLAR
         </span>
     </div>
-    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm w-full">
         <p class="text-xs text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-wide font-bold">Türkiye'nin En Düz Yerleri</p>
         <div class="space-y-2">
             <div class="bg-white dark:bg-slate-800/50 p-2 rounded-lg border border-green-200 dark:border-green-800/30 flex items-center gap-2">
@@ -94,7 +94,7 @@ window.cografya_11_notlari = [
             📊 YÜKSELTİ BASAMAKLARINA GÖRE UÇ BÖLGELER
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-center">
             <p class="text-xs text-slate-500 dark:text-slate-400 mb-1">En Alçak Bölge</p>
             <b class="text-rose-600 dark:text-rose-400 text-lg block mb-1">Marmara Bölgesi</b>

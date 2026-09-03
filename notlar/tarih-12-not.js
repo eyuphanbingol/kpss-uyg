@@ -7,7 +7,7 @@ window.tarih_12_notlari = [
             📜 MONDROS ATEŞKES ANTLAŞMASI (30 Ekim 1918)
         </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full">
         <div class="flex items-center justify-center gap-4 text-xs">
             <span class="bg-red-200 dark:bg-red-800/40 px-3 py-1 rounded">🇬🇧 Amiral Calthorpe</span>
             <span class="text-gray-500 dark:text-gray-400">↔</span>
@@ -26,7 +26,7 @@ window.tarih_12_notlari = [
             ⚠️ MONDROS - ÖNEMLİ MADDELER
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>7. Madde:</b> İtilaf devletleri güvenliklerini tehdit eden herhangi bir bölgeyi karışıklık çıkması halinde işgal edecek.</li>
             <li><b>24. Madde:</b> Vilayet-i Sitte (6 il) bir karışıklık çıkarsa işgal edilecek → <b>Büyük Ermenistan</b> hedefi</li>
@@ -48,7 +48,7 @@ window.tarih_12_notlari = [
             🗺️ MONDROS SONRASI İŞGALLER
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
             <div class="bg-blue-100 dark:bg-blue-800/30 p-2 rounded-lg">
                 <p class="font-bold text-rose-600 dark:text-rose-400">🇬🇷 YUNANİSTAN</p>
@@ -82,7 +82,7 @@ window.tarih_12_notlari = [
             🏛️ PARİS BARIŞ KONFERANSI (1919)
         </span>
     </div>
-    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Amaç:</b> Yenen devletler ile yenilen devletler arasındaki barış antlaşmalarını belirlemek</li>
             <li>İtilaf devletleri arasında <b>ilk kez görüş ayrılığı</b> yaşandı</li>
@@ -102,7 +102,7 @@ window.tarih_12_notlari = [
             📜 BARIŞ ANTLAŞMALARI
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-green-50 dark:bg-green-900/20 p-3 rounded-xl border border-green-100 dark:border-green-800/30">
             <ul class="list-disc list-inside space-y-1 text-xs">
                 <li><b>Almanya</b> → Versay</li>
@@ -125,7 +125,7 @@ window.tarih_12_notlari = [
             🇬🇷 İZMİR'İN İŞGALİ (15 Mayıs 1919)
         </span>
     </div>
-    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>İlk kurşun:</b> <b>Hasan Tahsin</b> (Hukuk-u Beşer gazetesi başyazarı)</li>
             <li><b>İlk uluslararası rapor:</b> <b>Amiral Bristol Raporu</b> (işgalin haksız olduğunu belirtti)</li>
@@ -142,7 +142,7 @@ window.tarih_12_notlari = [
             🛡️ YARARLI CEMİYETLER - GENEL ÖZELLİKLER
         </span>
     </div>
-    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Bölgelerin <b>Türklüğünü kanıtlama</b> çabası</li>
             <li><b>Wilson'un 12. maddesi</b>'nden yararlanılmaya çalışıldı</li>
@@ -159,7 +159,7 @@ window.tarih_12_notlari = [
             🏛️ YARARLI CEMİYETLER - BATI ANADOLU
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-cyan-50 dark:bg-cyan-900/20 p-3 rounded-xl border border-cyan-100 dark:border-cyan-800/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">İZMİR MÜDAFAA-İ HUKUK</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -189,7 +189,7 @@ window.tarih_12_notlari = [
             🏛️ YARARLI CEMİYETLER - DOĞU VE GÜNEY
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-3 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">VİLAYET-İ ŞARKİYYE (Doğu Anadolu)</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -218,7 +218,7 @@ window.tarih_12_notlari = [
             🏛️ YARARLI CEMİYETLER - TRAKYA VE DİĞERLERİ
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-yellow-50 dark:bg-yellow-900/20 p-3 rounded-xl border border-yellow-100 dark:border-yellow-800/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">TRAKYA PAŞAELİ</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -246,7 +246,7 @@ window.tarih_12_notlari = [
             ⚠️ MİLLİ VARLIĞA ZARARLI CEMİYETLER (Azınlıklar)
         </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
             <div class="bg-red-100 dark:bg-red-800/30 p-2 rounded-lg">
                 <p class="font-bold text-rose-600 dark:text-rose-400">🇬🇷 RUMLAR</p>
@@ -287,7 +287,7 @@ window.tarih_12_notlari = [
             ⚠️ MİLLİ VARLIĞA ZARARLI CEMİYETLER (Türkler)
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-orange-50 dark:bg-orange-900/20 p-3 rounded-xl border border-orange-100 dark:border-orange-800/30">
             <ul class="list-disc list-inside space-y-1 text-xs">
                 <li><b>Wilson Prensipleri:</b> ABD himayesi istedi (Halide Edip, Refik Halit)</li>

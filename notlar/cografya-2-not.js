@@ -6,7 +6,7 @@ window.cografya_2_notlari = [
             🌍 İÇ KUVVETLER
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
             <p>Yer şekillerinin oluşumunda enerjisini yerin derinliklerinden (magmadan) alan kuvvetlerdir.</p>
             <div class="flex flex-wrap gap-2 mt-3">
@@ -25,7 +25,7 @@ window.cografya_2_notlari = [
             🏔️ a. OROJENEZ
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full">
         <p>Dağ oluşumu anlamına gelir. Türkiye'deki kırık dağlar ve kıvrım dağların oluşmasında orojenez etkili olmuştur.</p>
     </div>
     `,
@@ -36,7 +36,7 @@ window.cografya_2_notlari = [
             💥 KIRIK SİSTEM (OROJENEZ)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Kırılma sonucunda yüksekte kalan yerlere <b class="text-rose-600 dark:text-rose-400">horst</b>, çöküntü alanlara <b class="text-rose-600 dark:text-rose-400">graben (depresyon)</b> adı verilir.</li>
@@ -56,7 +56,7 @@ window.cografya_2_notlari = [
             〰️ KIVRIM SİSTEM (OROJENEZ)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Kıvrılma sonucunda oluşan kubbe yapılara <b class="text-rose-600 dark:text-rose-400">antiklinal</b>, çöküntü alanlarına ise <b class="text-rose-600 dark:text-rose-400">senklinal</b> denir.</li>
@@ -79,7 +79,7 @@ window.cografya_2_notlari = [
             ⚖️ b. EPİROJENEZ
         </span>
     </div>
-    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm w-full">
         <p>Kıta oluşumu demektir. Karasal yer kabuğu ile okyanusal yer kabuğu arasında <b class="text-rose-600 dark:text-rose-400">izostatik</b> denilen bir ağırlık dengesi vardır. Karalarda tortulanma veya buzullaşma sonucu yük artışı yaşandığında karalar çöker.</p>
     </div>
     `,
@@ -90,7 +90,7 @@ window.cografya_2_notlari = [
             📉 TÜRKİYE'DE EPİROJENEZİN SONUÇLARI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Anadolu Yarımadası genel olarak <b class="text-rose-600 dark:text-rose-400">yükselir</b>.</li>
@@ -109,7 +109,7 @@ window.cografya_2_notlari = [
             🌋 c. VOLKANİZMA
         </span>
     </div>
-    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm w-full">
         <p>Magmanın yer kabuğunun zayıf noktalarından yeryüzüne doğru hareket etmesidir. Yüzey ve derinlik volkanizması olarak ikiye ayrılır.</p>
     </div>
                 <!-- 🗺️ HARİTA / RESİM ALANI -->
@@ -128,7 +128,7 @@ window.cografya_2_notlari = [
             💎 DERİNLİK VOLKANİZMASI
         </span>
     </div>
-    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm w-full">
         <p>Magmanın yüzeye çıkamadan yer altında soğumasıdır.</p>
         <p class="mt-2">Bursa Uludağ <b class="text-rose-600 dark:text-rose-400">batolit</b> (iç püskürük granit kaya) yapısına en güzel örnektir.</p>
     </div>
@@ -148,7 +148,7 @@ window.cografya_2_notlari = [
             🔥 YÜZEY VOLKANİZMASI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Magmanın yeryüzünde katılaşmasıyla volkanik koniler oluşur.</li>
@@ -176,7 +176,7 @@ window.cografya_2_notlari = [
             🗺️ TÜRKİYE'NİN VOLKANİK ARAZİLERİ (1. BATI ANADOLU - MARMARA & EGE)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Biga Yarımadası Çevresi (Çanakkale):</b> BİGA = BIG (Büyük): Çanakkale Boğazı'nın yanındaki o devasa çıkıntıyı 'Büyük (Big) Volkanik Arazi' olarak kodlayın.</li>
@@ -202,7 +202,7 @@ window.cografya_2_notlari = [
             🗺️ TÜRKİYE'NİN VOLKANİK ARAZİLERİ (2. İÇ ANADOLU VE GEÇİŞ KUŞAKLARI)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Köroğlu Dağları Çevresi (Bolu/Çankırı):</b> Köroğlu'nun Öfkesi: Bolu Beyi'ne isyan eden Köroğlu'nun içindeki intikam ateşi, bu dağların volkanik geçmişinden gelir! Karadeniz'in arkasındaki o geniş kahverengi alan Köroğlu'nun tüfeğinin patladığı yerdir.</li>
@@ -229,7 +229,7 @@ window.cografya_2_notlari = [
             🗺️ TÜRKİYE'NİN VOLKANİK ARAZİLERİ (3. GÜNEY VE DOĞU ANADOLU)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Hatay – Hassa Çevresi:</b> HASSA = HASSAS / LAV TÜPÜ: Türkiye'nin ilk lav tüpü mağaralarının bulunduğu bazaltik arazi.</li>
@@ -255,7 +255,7 @@ window.cografya_2_notlari = [
             🍇🥔 VOLKANİK ARAZİLERDE TARIM
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <p>Bu alanlarda oluşan volkanik topraklar mineral yönünden çok zengin olduğundan özellikle <b class="text-rose-600 dark:text-rose-400">üzüm yetiştiriciliği (bağcılık)</b> ve <b class="text-rose-600 dark:text-rose-400">patates</b> üretimi için oldukça uygundur.</p>
     </div>
     `,
@@ -266,7 +266,7 @@ window.cografya_2_notlari = [
             🚨 DEPREMLER (SİEZMA)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30">
             <p>Anadolu'nun komşu levhalar ve kıtalar tarafından sıkıştırılması sonucunda üç büyük fay zonu oluşmuştur:</p>
             <ul class="list-disc list-inside space-y-2 mt-3">

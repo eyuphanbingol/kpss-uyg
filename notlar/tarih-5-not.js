@@ -6,7 +6,7 @@ window.tarih_5_notlari = [
             🌍 XIV. YÜZYIL BAŞINDA YAKIN DOĞU - İLHANLILAR
         </span>
     </div>
-    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm w-full">
         <p>İran'da kuruldu. <b class="text-rose-600 dark:text-rose-400">1231'de Harzemşahlara</b> son verdiler. <b class="text-rose-600 dark:text-rose-400">1243 Köse Dağ Savaşı</b> ile Anadolu Selçuklu Devleti'ni (ASD) mağlup ettiler. <b class="text-rose-600 dark:text-rose-400">1258'de</b> Bağdat'ı alarak <b class="text-rose-600 dark:text-rose-400">Abbasi Halifeliği'ne</b> son verdiler.</p>
     </div>
     `,
@@ -17,7 +17,7 @@ window.tarih_5_notlari = [
             🌍 ALTIN ORDA DEVLETİ
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <p>Karadeniz'in kuzeyinde <b class="text-amber-700 dark:text-amber-400">Batu Han</b> tarafından kuruldu. Yıllarca <b class="text-rose-600 dark:text-rose-400">Rusların güneye inmesini engellediler</b>. Timur'un saldırıları sonucunda hanlıklara ayrıldılar.</p>
     </div>
     `,
@@ -28,7 +28,7 @@ window.tarih_5_notlari = [
             🌍 MEMLÜKLER
         </span>
     </div>
-    <div class="bg-emerald-50 dark:bg-emerald-900/20 p-4 rounded-xl border border-emerald-100 dark:border-emerald-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-emerald-50 dark:bg-emerald-900/20 p-4 rounded-xl border border-emerald-100 dark:border-emerald-800/30 text-sm w-full">
         <p><b class="text-rose-600 dark:text-rose-400">1250'de Aybek</b> tarafından kuruldu. Abbasi Halifeliği'ni <b class="text-rose-600 dark:text-rose-400">1517'ye kadar</b> himayelerinde muhafaza ettiler. Bu tarihte Osmanlı'ya, <b class="text-rose-600 dark:text-rose-400">Yavuz Sultan Selim</b> döneminde <b class="text-rose-600 dark:text-rose-400">Ridaniye Savaşı</b>'nda yıkılmıştır.</p>
     </div>
     `,
@@ -39,7 +39,7 @@ window.tarih_5_notlari = [
             🌍 DİĞER ÇAĞDAŞ DEVLETLER
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Türkiye Selçuklu Devleti:</b> 1075'te İznik'te kuruldu, 1243 Köse Dağ Savaşı'nda İlhanlılara tabi oldu.</li>
@@ -57,7 +57,7 @@ window.tarih_5_notlari = [
             📈 OSMANLI'NIN KISA SÜREDE BÜYÜMESİNİN NEDENLERİ
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-2">
             <li>Bizans'taki taht kavgaları ve tekfurların merkezi dinlememesi</li>
             <li>Avrupa'da İngiltere-Fransa arasında Yüzyıl Savaşları yaşanması</li>
@@ -76,7 +76,7 @@ window.tarih_5_notlari = [
             ☮️ OSMANLI BARIŞI VE MÜDARA POLİTİKASI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30">
             <p>Osmanlı, hüküm sürdüğü süre boyunca farklı toplumları barış içinde yaşattığı için Batı'da klasik döneme <b class="text-green-700 dark:text-green-400">'Osmanlı Barışı'</b> denmiştir.</p>
             <p class="mt-2">Kuruluş yıllarında özellikle Bizans tekfurlarıyla görünüşte dostça geçinme siyasetine ise <b class="text-rose-600 dark:text-rose-400">'müdara politikası'</b> denir.</p>
@@ -90,7 +90,7 @@ window.tarih_5_notlari = [
             ⚙️ TEMEL KAVRAMLAR
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30">
             <h4 class="font-bold text-purple-700 dark:text-purple-400">İskan</h4>
             <p class="text-xs mt-1">Fethedilen topraklara Anadolu'dan Türk aileleri yerleştirerek bölgenin Türkleşmesini, İslamlaşmasını ve elde tutulmasını sağlama politikası.</p>
@@ -108,7 +108,7 @@ window.tarih_5_notlari = [
             🤝 OSMANLI'NIN KURULUŞUNDA DESTEK VEREN ZÜMRELER
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-rose-50 dark:bg-rose-900/20 p-3 rounded-xl border border-rose-100 dark:border-rose-800/30">
             <b class="text-rose-700 dark:text-rose-400">Gaziyan-ı Rum</b>
             <p class="text-xs mt-1">Anadolu gazileri</p>
@@ -142,7 +142,7 @@ window.tarih_5_notlari = [
             📜 İLK KAYNAKLAR
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-slate-50 dark:bg-slate-700/50 p-4 rounded-xl border border-slate-200 dark:border-slate-600">
             <p><b class="text-rose-600 dark:text-rose-400">Yahşi Fakih</b>, Osmanlı hakkında ilk tarihi bilgiyi veren <i class="text-indigo-600 dark:text-indigo-400">'Yahşi Fakih Menakıbnamesi'</i>ni yazmıştır.</p>
             <p class="mt-2">Osmanlı hakkında günümüze ulaşan en eski eser ise <b class="text-rose-600 dark:text-rose-400">Ahmedi'nin İskendername</b>'sidir.</p>
@@ -156,7 +156,7 @@ window.tarih_5_notlari = [
             👑 OSMAN BEY DÖNEMİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <p><b>Lakabı:</b> <b class="text-amber-700 dark:text-amber-400">Fahreddin</b>'dir.</p>
             <ul class="list-disc list-inside space-y-1 mt-2">
@@ -176,7 +176,7 @@ window.tarih_5_notlari = [
             👑 ORHAN BEY DÖNEMİ - FETİHLER
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b class="text-rose-600 dark:text-rose-400">Bursa</b> fethedildi, İznik'ten sonra başkent yapıldı (sonra İznik yeniden başkent oldu).</li>
@@ -196,7 +196,7 @@ window.tarih_5_notlari = [
             👑 ORHAN BEY DÖNEMİ - İLKLER
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-green-50 dark:bg-green-900/20 p-3 rounded-xl border border-green-100 dark:border-green-800/30">
             <b>İlk tersane:</b> <b class="text-rose-600 dark:text-rose-400">Karamürsel Tersanesi</b>
         </div>
@@ -236,7 +236,7 @@ window.tarih_5_notlari = [
             🏘️ İSKAN POLİTİKASININ ESASLARI VE AMAÇLARI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30">
             <p>Genellikle <b class="text-teal-700 dark:text-teal-400">gönüllülük esasına</b> göre yapılmıştır; ihtiyaçlar devletçe karşılanmış, toprak verilmiş, vergi alınmamış, belli süre eski yurda dönüş yasaklanmıştır.</p>
             <h4 class="font-bold mt-3 text-teal-700 dark:text-teal-400">Amaçlar:</h4>
@@ -258,7 +258,7 @@ window.tarih_5_notlari = [
             👑 I. MURAT DÖNEMİ - FETİHLER
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Germiyanoğullarından <b class="text-rose-600 dark:text-rose-400">çeyizle</b>, Hamidoğullarından <b class="text-rose-600 dark:text-rose-400">parayla</b> toprak alındı.</li>
@@ -278,7 +278,7 @@ window.tarih_5_notlari = [
             👑 I. MURAT DÖNEMİ - DİĞER GELİŞMELER
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>İlk maliye teşkilatı kuruldu.</li>
@@ -298,7 +298,7 @@ window.tarih_5_notlari = [
             👑 YILDIRIM BEYAZIT (I. BEYAZIT)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>'Yıldırım' unvanını <b class="text-rose-600 dark:text-rose-400">Karamanoğulları</b> ile yapılan <b class="text-rose-600 dark:text-rose-400">Frenk Yazısı Savaşı</b>'nda aldı.</li>
@@ -316,7 +316,7 @@ window.tarih_5_notlari = [
             ⚔️ YILDIRIM DÖNEMİ İSTANBUL KUŞATMALARININ BAŞARISIZ OLMA NEDENLERİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Karamanoğulları'nın iki kez isyanı</li>
@@ -341,7 +341,7 @@ window.tarih_5_notlari = [
             ⚔️ NİĞBOLU SAVAŞI (1396)
         </span>
     </div>
-    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm w-full">
         <p>Macar Kralı <b class="text-rose-600 dark:text-rose-400">Sigismund</b> önderliğinde kurulan Haçlı ordusuna karşı, Tuna üzerindeki Niğbolu Kalesi'ni <b class="text-cyan-700 dark:text-cyan-400">Doğan Bey</b> kahramanca savundu.</p>
         <p class="mt-2">Yıldırım Beyazıt Haçlıları yendi; halife kendisine <b class="text-rose-600 dark:text-rose-400">'Sultan-ı İklim-i Rum'</b> (Anadolu memleketlerinin sultanı) unvanını verdi.</p>
     </div>
@@ -353,7 +353,7 @@ window.tarih_5_notlari = [
             ⚔️ 1402 ANKARA SAVAŞI - NEDENLERİ
         </span>
     </div>
-    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-2">
             <li>Anadolu beylikleri ve Akkoyunluların Timur'u kışkırtması</li>
             <li>Timur'dan kaçan beylerin Osmanlı'ya sığınması</li>
@@ -370,7 +370,7 @@ window.tarih_5_notlari = [
             ⚔️ 1402 ANKARA SAVAŞI - SONUÇLARI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Anadolu Türk siyasi birliği bozuldu; Aydın, Karaman, Menteşe, Saruhan, Hamit beylikleri yeniden kuruldu.</li>
@@ -392,7 +392,7 @@ window.tarih_5_notlari = [
             ⚔️ FETRET DEVRİ (1402-1413)
         </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full">
         <p>Ankara Savaşı sonrası Anadolu beylikleri yeniden kuruldu; <b class="text-rose-600 dark:text-rose-400">Karesi Beyliği hariç</b>, Musa, İsa, Süleyman ve Mehmet çelebiler kendi aralarında taht kavgasına girişti.</p>
         <p class="mt-2">Bu kardeş kavgalarını en sonunda <b class="text-rose-600 dark:text-rose-400">I. Mehmet</b> kazandı.</p>
     </div>
@@ -404,7 +404,7 @@ window.tarih_5_notlari = [
             👑 I. MEHMET (ÇELEBİ)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Fetret Devri'ni sona erdirdiği için <b class="text-rose-600 dark:text-rose-400">Osmanlı'nın ikinci kurucusu</b> sayılır.</li>
@@ -423,7 +423,7 @@ window.tarih_5_notlari = [
             👑 II. MURAT DÖNEMİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-emerald-50 dark:bg-emerald-900/20 p-4 rounded-xl border border-emerald-100 dark:border-emerald-800/30">
             <p><b>Lakabı:</b> <b class="text-emerald-700 dark:text-emerald-400">Ebul Hayrat</b> (Hayır Babası)'tır.</p>
             <ul class="list-disc list-inside space-y-1 mt-2">
@@ -440,7 +440,7 @@ window.tarih_5_notlari = [
             👑 II. MURAT - TAHTTAN ÇEKİLME VE VARNA-2. KOSOVA
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Antlaşma sonrası II. Murat tahtı 12 yaşındaki oğlu <b class="text-rose-600 dark:text-rose-400">II. Mehmet'e</b> bıraktı.</li>
@@ -459,7 +459,7 @@ window.tarih_5_notlari = [
             🏆 2. KOSOVA SAVAŞI'NIN SONUÇLARI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Balkanlar <b class="text-rose-600 dark:text-rose-400">kesin Türk yurdu</b> haline geldi.</li>
@@ -478,7 +478,7 @@ window.tarih_5_notlari = [
             🎓 ENDERUN MEKTEBİ
         </span>
     </div>
-    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm w-full">
         <p>İlk kez <b class="text-rose-600 dark:text-rose-400">II. Murat</b> döneminde <b class="text-rose-600 dark:text-rose-400">Edirne</b>'de açılmıştır; ancak bu kurumu <b class="text-rose-600 dark:text-rose-400">Topkapı Sarayı</b> içine taşıyıp sistemleştiren <b class="text-rose-600 dark:text-rose-400">Fatih Sultan Mehmet</b>'tir.</p>
     </div>
     `,
@@ -489,7 +489,7 @@ window.tarih_5_notlari = [
             🔑 ALTIN NOT - HAÇLI SAVAŞLARI KODU 'SINAV II'
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 <div class="bg-white dark:bg-slate-800/50 p-3 rounded-lg border border-slate-200 dark:border-slate-600">

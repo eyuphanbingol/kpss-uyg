@@ -6,7 +6,7 @@ window.cografya_5_notlari = [
             🌾 TÜRKİYE'NİN OVALARI
         </span>
     </div>
-    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm w-full">
         <p>Çevresine göre alçakta kalan, akarsular tarafından taşınan alüvyonlarla kaplı ya da tektonik/karstik süreçlerle oluşmuş düzlüklere <b>ova</b> denir.</p>
         <div class="flex flex-wrap gap-2 mt-3">
             <span class="bg-white dark:bg-slate-800 px-3 py-1 rounded-full text-xs border border-indigo-200 dark:border-indigo-800/30">Karstik</span>
@@ -25,7 +25,7 @@ window.cografya_5_notlari = [
             🧪 1. KARSTİK OVALAR (GÖLOVALAR)
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full">
         <p>Batı Toroslar kuşağında (Akdeniz ve Güney Ege), kalker, jips ve dolomit gibi kolay eriyebilen kayaçların bulunduğu alanlarda oluşan ovalardır.</p>
         <p class="mt-2">Bu ovaların tabanı verimsiz karstik malzemeyle kaplıdır.</p>
     </div>
@@ -41,7 +41,7 @@ window.cografya_5_notlari = [
             💡 KARSTİK OVALAR KODLAMASI (TAKKEM)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 <div class="bg-white dark:bg-slate-800/50 p-2 rounded-lg text-center">
@@ -80,7 +80,7 @@ window.cografya_5_notlari = [
             🌊 2. DELTA OVALARI
         </span>
     </div>
-    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm w-full">
         <p>Akarsuların iç kesimlerden taşıdığı alüvyonları, gelgit akıntısının az ve kıta sahanlığının geniş olduğu deniz kıyılarında biriktirmesiyle oluşan toprağı son derece <b class="text-rose-600 dark:text-rose-400">verimli</b> ovalardır.</p>
     </div>
     <!-- 🗺️ HARİTA / RESİM ALANI -->
@@ -95,7 +95,7 @@ window.cografya_5_notlari = [
             🗺️ TÜRKİYE'DEKİ BAŞLICA AKARSU VE DELTA OVALARI EŞLEŞTİRMESİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 <div class="bg-white dark:bg-slate-800/50 p-2 rounded-lg text-xs border border-slate-200 dark:border-slate-600">
@@ -137,7 +137,7 @@ window.cografya_5_notlari = [
             💥 3. TEKTONİK OVALAR
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30">
             <p>Yer kabuğu hareketleri (faylanmalar) sonucu çöken alanların akarsu alüvyonlarıyla dolması sonucu oluşur.</p>
             <p class="mt-2">Türkiye genç oluşumlu olduğu ve kırık hatları çok fazla bulunduğu için <b class="text-rose-600 dark:text-rose-400">en yaygın ova türüdür.</b></p>
@@ -155,7 +155,7 @@ window.cografya_5_notlari = [
             🗺️ FAY HATLARI ÜZERİNDEKİ TEKTONİK OVALAR
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30">
             <div class="grid grid-cols-1 gap-3">
                 <div class="bg-white dark:bg-slate-800/50 p-3 rounded-lg border-l-4 border-red-500">
@@ -204,7 +204,7 @@ window.cografya_5_notlari = [
             🏗️ DİĞER ÖZEL OLUŞUMLU OVALAR
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Dağ Eteği Ovası:</b> Dağlık kütlelerin yamaçlarından inen malzemelerin etekte birleşmesiyle oluşur; en güzel örneği <b class="text-rose-600 dark:text-rose-400">Bursa Ovası</b>'dır.</li>
@@ -225,7 +225,7 @@ window.cografya_5_notlari = [
             👑 NOTLAR - EN BÜYÜKLER
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-center">
             <p class="text-xs text-slate-600 dark:text-slate-400">Türkiye'nin kıyıda yer alan</p>
             <b class="text-rose-600 dark:text-rose-400 text-base">En büyük delta ovası</b>

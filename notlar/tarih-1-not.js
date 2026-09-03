@@ -17,21 +17,21 @@ window.tarih_1_notlari = [
             🗣️ TÜRK ADININ ANLAMLARI
         </span>
     </div>
-    <ul class="space-y-3 text-left inline-block w-full max-w-md mx-auto">
-        <li class="flex items-start gap-3 bg-slate-50 dark:bg-slate-700/30 p-3 rounded-xl border border-slate-100 dark:border-slate-700">
-            <span class="font-bold text-slate-800 dark:text-slate-200 min-w-[140px]">Wambery’e göre:</span> 
+    <ul class="space-y-3 text-left w-full">
+        <li class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3 bg-slate-50 dark:bg-slate-700/30 p-3 rounded-xl border border-slate-100 dark:border-slate-700">
+            <span class="font-bold text-slate-800 dark:text-slate-200 ">Wambery’e göre:</span> 
             <span class="text-indigo-600 dark:text-indigo-400 font-medium">Türemek</span>
         </li>
-        <li class="flex items-start gap-3 bg-slate-50 dark:bg-slate-700/30 p-3 rounded-xl border border-slate-100 dark:border-slate-700">
-            <span class="font-bold text-slate-800 dark:text-slate-200 min-w-[140px]">Kaşgarlı Mahmut:</span> 
+        <li class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3 bg-slate-50 dark:bg-slate-700/30 p-3 rounded-xl border border-slate-100 dark:border-slate-700">
+            <span class="font-bold text-slate-800 dark:text-slate-200 ">Kaşgarlı Mahmut:</span> 
             <span class="text-indigo-600 dark:text-indigo-400 font-medium">Olgunluk çağı</span>
         </li>
-        <li class="flex items-start gap-3 bg-slate-50 dark:bg-slate-700/30 p-3 rounded-xl border border-slate-100 dark:border-slate-700">
-            <span class="font-bold text-slate-800 dark:text-slate-200 min-w-[140px]">Çin kaynaklarına göre:</span> 
+        <li class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3 bg-slate-50 dark:bg-slate-700/30 p-3 rounded-xl border border-slate-100 dark:border-slate-700">
+            <span class="font-bold text-slate-800 dark:text-slate-200 ">Çin kaynaklarına göre:</span> 
             <span class="text-indigo-600 dark:text-indigo-400 font-medium">Miğfer</span>
         </li>
-        <li class="flex items-start gap-3 bg-slate-50 dark:bg-slate-700/30 p-3 rounded-xl border border-slate-100 dark:border-slate-700">
-            <span class="font-bold text-slate-800 dark:text-slate-200 min-w-[140px]">Ziya Gökalp’e göre:</span> 
+        <li class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3 bg-slate-50 dark:bg-slate-700/30 p-3 rounded-xl border border-slate-100 dark:border-slate-700">
+            <span class="font-bold text-slate-800 dark:text-slate-200 ">Ziya Gökalp’e göre:</span> 
             <span class="text-indigo-600 dark:text-indigo-400 font-medium">Kanun, nizam sahibi, töreli</span>
         </li>
     </ul>
@@ -43,12 +43,12 @@ window.tarih_1_notlari = [
             🏛️ ORTA ASYA KÜLTÜR MERKEZLERİ
         </span>
     </div>
-    <ul class="space-y-2 text-left inline-block w-full max-w-md mx-auto">
-        <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-500"></span> <b>Anav:</b> <span class="text-rose-500 dark:text-rose-400 font-bold ml-auto">En eski</span> kültür merkezi</li>
-        <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-500"></span> <b>Afanesyevo:</b> <span class="text-rose-500 dark:text-rose-400 font-bold ml-auto">En eski Türk</span> kültür merkezi</li>
-        <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-500"></span> <b>Tagar:</b> <span class="text-rose-500 dark:text-rose-400 font-bold ml-auto">En gelişmiş</span> kültür merkezi</li>
-        <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-500"></span> <b>Karasuk:</b> Demirin işlendiği <span class="text-emerald-600 dark:text-emerald-400 font-bold ml-auto">ilk yer</span></li>
-        <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-500"></span> <b>Kelteminar:</b> Yerleşik yaşamın görüldüğü <span class="text-emerald-600 dark:text-emerald-400 font-bold ml-auto">ilk yer</span></li>
+    <ul class="space-y-2 text-left w-full">
+        <li class="flex flex-wrap items-center gap-x-2 gap-y-1 bg-amber-50 dark:bg-amber-900/20 p-3 rounded-xl border border-amber-100 dark:border-amber-800/30"><span class="w-2 h-2 rounded-full bg-amber-500 shrink-0"></span> <span><b>Anav:</b> <span class="text-rose-500 dark:text-rose-400 font-bold">En eski</span> kültür merkezi</span></li>
+        <li class="flex flex-wrap items-center gap-x-2 gap-y-1 bg-amber-50 dark:bg-amber-900/20 p-3 rounded-xl border border-amber-100 dark:border-amber-800/30"><span class="w-2 h-2 rounded-full bg-amber-500 shrink-0"></span> <span><b>Afanesyevo:</b> <span class="text-rose-500 dark:text-rose-400 font-bold">En eski Türk</span> kültür merkezi</span></li>
+        <li class="flex flex-wrap items-center gap-x-2 gap-y-1 bg-amber-50 dark:bg-amber-900/20 p-3 rounded-xl border border-amber-100 dark:border-amber-800/30"><span class="w-2 h-2 rounded-full bg-amber-500 shrink-0"></span> <span><b>Tagar:</b> <span class="text-rose-500 dark:text-rose-400 font-bold">En gelişmiş</span> kültür merkezi</span></li>
+        <li class="flex flex-wrap items-center gap-x-2 gap-y-1 bg-amber-50 dark:bg-amber-900/20 p-3 rounded-xl border border-amber-100 dark:border-amber-800/30"><span class="w-2 h-2 rounded-full bg-amber-500 shrink-0"></span> <span><b>Karasuk:</b> Demirin işlendiği <span class="text-emerald-600 dark:text-emerald-400 font-bold">ilk yer</span></span></li>
+        <li class="flex flex-wrap items-center gap-x-2 gap-y-1 bg-amber-50 dark:bg-amber-900/20 p-3 rounded-xl border border-amber-100 dark:border-amber-800/30"><span class="w-2 h-2 rounded-full bg-amber-500 shrink-0"></span> <span><b>Kelteminar:</b> Yerleşik yaşamın görüldüğü <span class="text-emerald-600 dark:text-emerald-400 font-bold">ilk yer</span></span></li>
     </ul>
     `,
 
@@ -58,7 +58,7 @@ window.tarih_1_notlari = [
             📜 İLK KAYITLAR
         </span>
     </div>
-    <div class="space-y-4 text-left inline-block w-full max-w-md mx-auto">
+    <div class="space-y-4 text-left w-full">
         <p class="bg-rose-50 dark:bg-rose-900/20 p-3 rounded-lg border-l-4 border-rose-500">Türk adı ilk olarak <b>Çin kaynaklarında</b> geçer.</p>
         <p class="bg-rose-50 dark:bg-rose-900/20 p-3 rounded-lg border-l-4 border-rose-500">İlk defa devlet ismi olarak <b>Göktürk Devleti</b> kullanmıştır.</p>
         <p class="bg-rose-50 dark:bg-rose-900/20 p-3 rounded-lg border-l-4 border-rose-500">Türkiye adı ilk defa <b>Bizans kaynaklarında</b> geçmiştir.</p>
@@ -100,7 +100,7 @@ window.tarih_1_notlari = [
             🛡️ İSKİTLER (SAKALAR)
         </span>
     </div>
-    <ul class="space-y-2 text-left w-full max-w-lg mx-auto text-sm sm:text-base">
+    <ul class="space-y-2 text-left w-full text-sm sm:text-base">
         <li class="flex gap-2">🔹 Türk adını İranlılar vermiştir. Bilinen <b class="text-blue-600 dark:text-blue-400">ilk Türk boyudur.</b></li>
         <li class="flex gap-2">🔹 En önemli destanları <b>Alp Er Tunga Destanı</b>'dır.</li>
         <li class="flex gap-2">🔹 Perslerle yaptığı mücadele <b>Şehname’ye (Afrasiyab)</b> konu olmuştur.</li>
@@ -116,8 +116,8 @@ window.tarih_1_notlari = [
             🐎 ASYA HUN DEVLETİ (BÜYÜK HUN)
         </span>
     </div>
-    <div class="flex flex-col gap-3 text-left max-w-md mx-auto">
-        <div class="bg-purple-50 dark:bg-purple-900/20 p-3 rounded-lg flex items-center justify-between">
+    <div class="flex flex-col gap-3 text-left w-full">
+        <div class="bg-purple-50 dark:bg-purple-900/20 p-3 rounded-lg flex flex-wrap items-center justify-between gap-2">
             <span>Bilinen <b>ilk Türk devletidir.</b></span>
             <span class="text-2xl">🥇</span>
         </div>
@@ -142,7 +142,7 @@ window.tarih_1_notlari = [
             👑 METE HAN DÖNEMİ
         </span>
     </div>
-    <ul class="space-y-3 text-left w-full max-w-lg mx-auto">
+    <ul class="space-y-3 text-left w-full">
         <li class="bg-orange-50 dark:bg-orange-900/20 p-3 rounded-xl border-l-4 border-orange-400">
             Vatan sevgisinden bahseden <b class="text-orange-600 dark:text-orange-400">ilk hükümdardır.</b>
         </li>
@@ -166,7 +166,7 @@ window.tarih_1_notlari = [
             🌪️ KAVİMLER GÖÇÜ & AVRUPA HUN DEVLETİ
         </span>
     </div>
-    <div class="text-left space-y-4 max-w-xl mx-auto">
+    <div class="text-left space-y-4 w-full">
         <div class="p-4 bg-sky-50 dark:bg-sky-900/20 rounded-2xl border border-sky-100 dark:border-sky-800/30">
             <h4 class="font-bold text-sky-800 dark:text-sky-300 mb-2 border-b border-sky-200 dark:border-sky-800 pb-2">Kavimler Göçü Sonuçları</h4>
             <p class="text-sm">Roma ikiye ayrıldı. Avrupa'da <b>feodalite</b> ve <b>skolastik düşünce</b> doğdu. İlk Çağ kapandı, Orta Çağ açıldı.</p>
@@ -213,7 +213,7 @@ window.tarih_1_notlari = [
             ⚔️ AVRUPA'YA GÖÇ EDEN BOYLAR (2/2)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-lg mx-auto">
+    <div class="space-y-3 text-left w-full">
         <div class="bg-slate-50 dark:bg-slate-700/30 p-4 rounded-xl border-l-4 border-fuchsia-500">
             <div class="font-black text-lg mb-1">Hazarlar</div>
             <p class="text-sm">Museviliği kabul eden <b>ilk ve tek</b> Türk devletidir. Ordusuna <b>ücretli asker alan ilk ve tek</b> devlettir. (Pax Hazaria) <br>
@@ -223,7 +223,7 @@ window.tarih_1_notlari = [
             <div class="font-black text-lg mb-1">Kıpçaklar (Kumanlar)</div>
             <p class="text-sm">Yaşadıkları yere Deşt-i Kıpçak denir. Dede Korkut ve İgor Destanı'na konu olmuşlardır.</p>
         </div>
-        <div class="grid grid-cols-2 gap-3 mt-2">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-2">
             <div class="bg-slate-100 dark:bg-slate-800 p-3 rounded-lg text-sm"><b>Sibirler:</b> Yoldan sapan.</div>
             <div class="bg-slate-100 dark:bg-slate-800 p-3 rounded-lg text-sm"><b>Peçenekler:</b> Devlet kuramadılar.</div>
         </div>
@@ -236,7 +236,7 @@ window.tarih_1_notlari = [
             📐 GÖKTÜRK DEVLETLERİ
         </span>
     </div>
-    <div class="flex flex-col gap-4 text-left max-w-xl mx-auto">
+    <div class="flex flex-col gap-4 text-left w-full">
         <div class="bg-teal-50 dark:bg-teal-900/20 p-5 rounded-2xl border border-teal-100 dark:border-teal-800/30">
             <h4 class="font-black text-teal-700 dark:text-teal-400 text-lg mb-2">I. Göktürk Devleti</h4>
             <p class="text-sm mb-2"><b>Türk adıyla kurulan ilk devlettir.</b> (Aşina boyu). Kurucusu <b>Bumin Kağan</b>'dır.</p>
@@ -256,7 +256,7 @@ window.tarih_1_notlari = [
             🌾 UYGURLAR
         </span>
     </div>
-    <ul class="space-y-3 text-left max-w-lg mx-auto text-sm sm:text-base">
+    <ul class="space-y-3 text-left w-full text-sm sm:text-base">
         <li class="flex items-center gap-3 bg-white dark:bg-slate-700 p-3 rounded-xl shadow-sm">
             <span class="text-2xl">🏙️</span> 
             <span><b>Yerleşik yaşama geçen ilk</b> Türk devletidir.</span>
@@ -303,7 +303,7 @@ window.tarih_1_notlari = [
             ⚖️ DEVLET VE TOPLUM YAPISI (KAVRAMLAR)
         </span>
     </div>
-    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-left text-sm max-w-2xl mx-auto">
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-left text-sm w-full">
         <div class="bg-white dark:bg-slate-800 p-2 rounded border border-slate-200 dark:border-slate-600"><b>Kün:</b> Halk</div>
         <div class="bg-white dark:bg-slate-800 p-2 rounded border border-slate-200 dark:border-slate-600"><b>Oksızlık:</b> Bağımsızlık</div>
         <div class="bg-white dark:bg-slate-800 p-2 rounded border border-slate-200 dark:border-slate-600"><b>Ayuki:</b> Hükümet</div>
@@ -325,11 +325,11 @@ window.tarih_1_notlari = [
             📋 KURULTAY VE MECLİSLER
         </span>
     </div>
-    <div class="text-left space-y-3 max-w-lg mx-auto">
+    <div class="text-left space-y-3 w-full">
         <p class="text-sm bg-violet-50 dark:bg-violet-900/20 p-3 rounded-xl border border-violet-100 dark:border-violet-800/30">
             Kurultay danışma meclisidir, üyelerine <b class="text-violet-600 dark:text-violet-400">Toygun</b> denir. <b>Hatun</b> kurultaya katılır, elçi kabul eder.
         </p>
-        <div class="grid grid-cols-2 gap-2 text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
             <div class="bg-slate-50 dark:bg-slate-700/50 p-2 rounded-lg"><b>Tabgaçlar:</b> Nazırlar</div>
             <div class="bg-slate-50 dark:bg-slate-700/50 p-2 rounded-lg"><b>Hazarlar:</b> İhtiyarlar</div>
             <div class="bg-slate-50 dark:bg-slate-700/50 p-2 rounded-lg"><b>Peçenekler:</b> Komenton</div>
@@ -345,7 +345,7 @@ window.tarih_1_notlari = [
             📆 KÜLTÜR, İNANÇ VE SANAT
         </span>
     </div>
-    <div class="space-y-4 text-left max-w-xl mx-auto text-sm">
+    <div class="space-y-4 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-3 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <div class="font-bold text-amber-700 dark:text-amber-400 mb-2">Törenin 4 Değişmez Kuralı</div>
             <div class="flex flex-wrap gap-2">
@@ -367,7 +367,7 @@ window.tarih_1_notlari = [
             </div>
         </div>
 
-        <div class="grid grid-cols-2 gap-3">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div class="bg-slate-50 dark:bg-slate-700/50 p-3 rounded-xl">
                 <div class="font-bold mb-1 border-b pb-1">İnanç Terimleri</div>
                 <ul class="space-y-1 text-xs">

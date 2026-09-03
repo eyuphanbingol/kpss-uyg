@@ -6,7 +6,7 @@ window.cografya_7_notlari = [
             💨 TÜRKİYE'DE RÜZGAR ŞEKİLLERİ
         </span>
     </div>
-    <div class="bg-slate-50 dark:bg-slate-900/20 p-4 rounded-xl border border-slate-200 dark:border-slate-700 text-sm max-w-2xl mx-auto">
+    <div class="bg-slate-50 dark:bg-slate-900/20 p-4 rounded-xl border border-slate-200 dark:border-slate-700 text-sm w-full">
         <p>Rüzgarlar yer şekillerini oluştururken düz, kurak, yarı kurak ve bitki örtüsünden yoksun (bitkisiz) yerlerde etkilidir.</p>
         <p class="mt-2">Türkiye'de nem oranının düşük olduğu <b class="text-rose-600 dark:text-rose-400">karasal bölgelerde</b> rüzgarın şekillendirici etkisi çok daha fazladır.</p>
     </div>
@@ -18,7 +18,7 @@ window.cografya_7_notlari = [
             📍 EN ETKİLİ OLDUĞU BÖLGELER
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30">
             <p class="mb-3">Türkiye'de rüzgar şekillendirmesinin en çok etkili olduğu bölgeler <b class="text-rose-600 dark:text-rose-400">İç Anadolu</b> ve <b class="text-rose-600 dark:text-rose-400">Güneydoğu Anadolu</b> bölgeleridir.</p>
             <div class="bg-white dark:bg-slate-800/50 p-3 rounded-lg border border-red-200 dark:border-red-800/30">
@@ -49,7 +49,7 @@ window.cografya_7_notlari = [
             ⛰️ RÜZGAR AŞINDIRMA ŞEKİLLERİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-stone-50 dark:bg-stone-900/20 p-4 rounded-xl border border-stone-200 dark:border-stone-700">
             <p class="mb-3">Rüzgarın taşıdığı küçük tanecikleri (kum, toz) kayalara çarptırarak yaptığı aşındırma faaliyetleridir.</p>
             <div class="space-y-2">
@@ -76,7 +76,7 @@ window.cografya_7_notlari = [
             🏜️ RÜZGAR BİRİKTİRME ŞEKİLLERİ (LÖS)
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <p>Rüzgarın hızının azaldığı yerlerde taşıdığı malzemeleri yığmasıyla oluşur.</p>
         <div class="mt-3 bg-white dark:bg-slate-800/50 p-3 rounded-lg border border-amber-200 dark:border-amber-800/30">
             <b class="text-rose-600 dark:text-rose-400">Lös (Çöl Tozları):</b>
@@ -95,7 +95,7 @@ window.cografya_7_notlari = [
             🏖️ RÜZGAR BİRİKTİRME ŞEKİLLERİ (KUMUL)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30">
             <p class="mb-3">Rüzgarın taşıdığı kum tanelerini biriktirmesiyle oluşan kum tepeleridir. Türkiye'de iki tip kumul görülür:</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">

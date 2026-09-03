@@ -9,7 +9,7 @@ window.guncel_2_notlari = [
         </span>
     </div>
     <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-2xl border border-blue-200 dark:border-blue-800/50 space-y-2">
-        <div class="grid grid-cols-2 gap-2 text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Kuruluş:</b> 1945</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Merkez:</b> New York</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg col-span-2"><b>Genel Sekreter:</b> António Guterres (2026 itibarıyla görevde)</span>
@@ -38,7 +38,7 @@ window.guncel_2_notlari = [
         </span>
     </div>
     <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-2xl border border-indigo-200 dark:border-indigo-800/50 space-y-2">
-        <div class="grid grid-cols-2 gap-2 text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Kuruluş:</b> 1949</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Merkez:</b> Brüksel / Belçika</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Üye Sayısı:</b> 32</span>
@@ -62,7 +62,7 @@ window.guncel_2_notlari = [
         </span>
     </div>
     <div class="bg-emerald-50 dark:bg-emerald-900/20 p-4 rounded-2xl border border-emerald-200 dark:border-emerald-800/50">
-        <div class="grid grid-cols-2 gap-2 text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Kuruluş:</b> 1945</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Merkez:</b> Paris / Fransa</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg col-span-2"><b>Amaç:</b> Eğitim, Bilim ve Kültür</span>
@@ -85,7 +85,7 @@ window.guncel_2_notlari = [
         </span>
     </div>
     <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-2xl border border-cyan-200 dark:border-cyan-800/50">
-        <div class="grid grid-cols-2 gap-2 text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Kuruluş:</b> 1946</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Merkez:</b> New York</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg col-span-2"><b>Amaç:</b> Çocuk hakları, sağlık, eğitim ve korunma</span>
@@ -103,7 +103,7 @@ window.guncel_2_notlari = [
         </span>
     </div>
     <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-2xl border border-rose-200 dark:border-rose-800/50">
-        <div class="grid grid-cols-2 gap-2 text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Kuruluş:</b> 1948</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Merkez:</b> Cenevre / İsviçre</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg col-span-2"><b>Genel Direktör:</b> Tedros Adhanom Ghebreyesus (2. dönem: 2022-2027)</span>
@@ -122,7 +122,7 @@ window.guncel_2_notlari = [
         </span>
     </div>
     <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-2xl border border-purple-200 dark:border-purple-800/50">
-        <div class="grid grid-cols-2 gap-2 text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Kuruluş:</b> 1944</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Merkez:</b> Washington D.C. / ABD</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg col-span-2"><b>Amaç:</b> Uluslararası parasal ve finansal istikrar</span>
@@ -140,7 +140,7 @@ window.guncel_2_notlari = [
         </span>
     </div>
     <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-2xl border border-green-200 dark:border-green-800/50">
-        <div class="grid grid-cols-2 gap-2 text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Kuruluş:</b> 1944</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Merkez:</b> Washington D.C. / ABD</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg col-span-2"><b>Amaç:</b> Kalkınma ve finansman</span>
@@ -158,7 +158,7 @@ window.guncel_2_notlari = [
         </span>
     </div>
     <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-2xl border border-orange-200 dark:border-orange-800/50">
-        <div class="grid grid-cols-2 gap-2 text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Kuruluş:</b> 1995</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Merkez:</b> Cenevre / İsviçre</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg col-span-2"><b>Genel Direktör:</b> Ngozi Okonjo-Iweala</span>
@@ -176,7 +176,7 @@ window.guncel_2_notlari = [
         </span>
     </div>
     <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-2xl border border-blue-200 dark:border-blue-800/50 space-y-2">
-        <div class="grid grid-cols-2 gap-2 text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Kuruluş:</b> 1993 (Maastricht)</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Üye Sayısı:</b> 27</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg col-span-2"><b>Euro bölgesi:</b> <span class="text-amber-500 font-bold">21 ülke</span> (2026 itibarıyla)</span>
@@ -196,7 +196,7 @@ window.guncel_2_notlari = [
         </span>
     </div>
     <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-2xl border border-red-200 dark:border-red-800/50">
-        <div class="grid grid-cols-2 gap-2 text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Kuruluş:</b> 1949</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Merkez:</b> Strazburg / Fransa</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg col-span-2"><b>Amaç:</b> İnsan hakları, hukukun üstünlüğü, demokrasi</span>
@@ -215,7 +215,7 @@ window.guncel_2_notlari = [
         </span>
     </div>
     <div class="bg-slate-50 dark:bg-slate-700/30 p-4 rounded-2xl border border-slate-200 dark:border-slate-700">
-        <div class="grid grid-cols-2 gap-2 text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Kuruluş:</b> 1961</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Merkez:</b> Paris / Fransa</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg col-span-2"><b>Türkiye:</b> <span class="text-amber-500 font-bold">Kurucu üye</span></span>
@@ -233,7 +233,7 @@ window.guncel_2_notlari = [
         </span>
     </div>
     <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-2xl border border-amber-200 dark:border-amber-800/50">
-        <div class="grid grid-cols-2 gap-2 text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Kuruluş:</b> 1960</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Merkez:</b> Viyana / Avusturya</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg col-span-2"><b>Amaç:</b> Petrol üreticisi ülkeler arası iş birliği</span>
@@ -251,7 +251,7 @@ window.guncel_2_notlari = [
         </span>
     </div>
     <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-2xl border border-green-200 dark:border-green-800/50">
-        <div class="grid grid-cols-2 gap-2 text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Kuruluş:</b> 1969</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Merkez:</b> Cidde / Suudi Arabistan</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg col-span-2"><b>Türkiye:</b> Üye</span>
@@ -269,7 +269,7 @@ window.guncel_2_notlari = [
         </span>
     </div>
     <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-2xl border border-red-200 dark:border-red-800/50 space-y-2">
-        <div class="grid grid-cols-2 gap-2 text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Kuruluş:</b> 2009 (Nahçıvan)</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Merkez:</b> <span class="text-amber-500 font-bold">İstanbul</span></span>
         </div>
@@ -304,7 +304,7 @@ window.guncel_2_notlari = [
         </span>
     </div>
     <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-2xl border border-cyan-200 dark:border-cyan-800/50">
-        <div class="grid grid-cols-2 gap-2 text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Kuruluş:</b> 2001</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Merkez:</b> Pekin / Çin</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg col-span-2"><b>Alanlar:</b> Güvenlik, ekonomik ve bölgesel iş birliği</span>
@@ -330,7 +330,7 @@ window.guncel_2_notlari = [
         </span>
     </div>
     <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-2xl border border-amber-200 dark:border-amber-800/50">
-        <div class="grid grid-cols-2 gap-2 text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Kuruluş:</b> 1999</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Yapı:</b> 19 ülke + AB + Afrika Birliği</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg col-span-2"><b>Amaç:</b> Ekonomik iş birliği platformu</span>
@@ -374,7 +374,7 @@ window.guncel_2_notlari = [
         </span>
     </div>
     <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-2xl border border-blue-200 dark:border-blue-800/50">
-        <div class="grid grid-cols-2 gap-2 text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Kuruluş:</b> 1971</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Merkez:</b> Cenevre / İsviçre</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg col-span-2"><b>Ünlü Toplantı:</b> <span class="text-amber-500 font-bold">Davos / İsviçre</span></span>
@@ -392,7 +392,7 @@ window.guncel_2_notlari = [
         </span>
     </div>
     <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-2xl border border-rose-200 dark:border-rose-800/50">
-        <div class="grid grid-cols-2 gap-2 text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Kuruluş:</b> 1923</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Merkez:</b> Lyon / Fransa</span>
             <span class="bg-white dark:bg-slate-800 p-2 rounded-lg col-span-2"><b>Amaç:</b> Uluslararası polis iş birliği</span>
@@ -410,7 +410,7 @@ window.guncel_2_notlari = [
         </span>
     </div>
     <div class="bg-slate-50 dark:bg-slate-700/30 p-4 rounded-2xl border border-slate-200 dark:border-slate-700">
-        <div class="grid grid-cols-2 gap-1 text-xs">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 text-xs">
             <div class="bg-white dark:bg-slate-800 p-1.5 rounded"><b>NATO</b> → Brüksel</div>
             <div class="bg-white dark:bg-slate-800 p-1.5 rounded"><b>BM</b> → New York</div>
             <div class="bg-white dark:bg-slate-800 p-1.5 rounded"><b>UNESCO</b> → Paris</div>

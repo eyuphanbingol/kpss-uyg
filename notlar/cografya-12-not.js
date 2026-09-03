@@ -6,7 +6,7 @@ window.cografya_12_notlari = [
             🌡️ İKLİM ELEMANLARI ZİNCİRİ
         </span>
     </div>
-    <div class="bg-slate-50 dark:bg-slate-900/20 p-4 rounded-xl border border-slate-200 dark:border-slate-700 text-sm max-w-2xl mx-auto">
+    <div class="bg-slate-50 dark:bg-slate-900/20 p-4 rounded-xl border border-slate-200 dark:border-slate-700 text-sm w-full">
         <div class="flex flex-wrap items-center gap-2 justify-center mb-3">
             <span class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-1.5 rounded-lg shadow-sm">Sıcaklık farkı</span>
             <span class="text-slate-400 dark:text-slate-500 font-bold">→</span>
@@ -27,7 +27,7 @@ window.cografya_12_notlari = [
             🌡️ GERÇEK / İNDİRGENMİŞ SICAKLIK
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-center">
             <b class="text-rose-600 dark:text-rose-400 text-lg block mb-1">Gerçek Sıcaklık</b>
             <p class="text-xs text-slate-600 dark:text-slate-400">Merkezin bulunduğu yükseltideki sıcaklıktır. Yerden yükseldikçe her <b class="text-slate-800 dark:text-slate-200">200 metrede 1°C</b> azalır.</p>
@@ -45,7 +45,7 @@ window.cografya_12_notlari = [
             ❄️ OCAK AYI SICAKLIK DAĞILIMI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <div class="bg-white dark:bg-slate-800/50 p-3 rounded-lg border border-red-200 dark:border-red-900/30 mb-2">
                 <span class="text-red-600 dark:text-red-400 font-bold block mb-1">🔥 En Sıcak: Akdeniz Bölgesi</span>
@@ -65,7 +65,7 @@ window.cografya_12_notlari = [
             ☀️ TEMMUZ AYI SICAKLIK DAĞILIMI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30">
             <div class="bg-white dark:bg-slate-800/50 p-3 rounded-lg border border-red-200 dark:border-red-900/30 mb-2">
                 <span class="text-red-600 dark:text-red-400 font-bold block mb-1">🔥 En Sıcak: Güneydoğu Anadolu</span>
@@ -85,7 +85,7 @@ window.cografya_12_notlari = [
             🗺️ İZOTERM (EŞ SICAKLIK) HARİTALARI
         </span>
     </div>
-    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-200 dark:border-indigo-700 text-sm max-w-2xl mx-auto">
+    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-200 dark:border-indigo-700 text-sm w-full">
         <p class="mb-3">Aynı sıcaklığa sahip noktalar birleştirilerek çizilir.</p>
         <div class="bg-white dark:bg-slate-800/50 p-3 rounded-lg border-l-4 border-rose-500">
             <p class="text-indigo-800 dark:text-indigo-200">📌 <b>DİKKAT:</b> İzoterm haritası <b class="text-rose-600 dark:text-rose-400">indirgenmiş</b> sıcaklık haritasıdır. Bu nedenle sıcaklık dağılışında <u>yükseltinin etkisi yoktur.</u></p>
@@ -99,7 +99,7 @@ window.cografya_12_notlari = [
             🌬️ BASINÇ VE MERKEZLERİ
         </span>
     </div>
-    <div class="bg-fuchsia-50 dark:bg-fuchsia-900/20 p-4 rounded-xl border border-fuchsia-100 dark:border-fuchsia-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-fuchsia-50 dark:bg-fuchsia-900/20 p-4 rounded-xl border border-fuchsia-100 dark:border-fuchsia-800/30 text-sm w-full">
         <p class="text-xs text-slate-500 dark:text-slate-400 mb-3 text-center">Basınç, havanın zemine uyguladığı güçtür.</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <div class="bg-white dark:bg-slate-800/50 p-3 rounded-lg border border-orange-200 dark:border-orange-900/30">
@@ -128,7 +128,7 @@ window.cografya_12_notlari = [
             🌬️ TERMİK BASINÇ ÖZELLİKLERİ
         </span>
     </div>
-    <div class="grid grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-center">
             <span class="text-cyan-700 dark:text-cyan-300 font-bold text-xs">⬇️ Yüksek Basınç (YB)</span>
             <p class="text-xs text-slate-600 dark:text-slate-400 mt-2">Hava <b>alçalır</b>, hava genel olarak <b>soğuktur</b>.</p>
@@ -146,14 +146,14 @@ window.cografya_12_notlari = [
             💨 RÜZGARLAR (KayıpSaKaL)
         </span>
     </div>
-    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm max-w-2xl mx-auto text-center">
+    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm w-full text-center">
         <p class="mb-4">Basınç farkından dolayı oluşan yatay hava akımıdır.</p>
         <div class="bg-white dark:bg-slate-800/50 p-3 rounded-lg inline-block text-lg tracking-widest font-mono">
             <b class="text-cyan-600 dark:text-cyan-400">Ka</b><span class="text-slate-400">yı</span><b class="text-cyan-600 dark:text-cyan-400">p</b>
             <span class="mx-2 text-slate-300 dark:text-slate-600">|</span>
             <b class="text-rose-600 dark:text-rose-400">Sa</b><b class="text-rose-600 dark:text-rose-400">K</b><span class="text-slate-400">a</span><b class="text-rose-600 dark:text-rose-400">L</b>
         </div>
-        <div class="grid grid-cols-2 gap-2 mt-4 text-left">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-4 text-left">
             <div class="bg-cyan-100/50 dark:bg-cyan-900/20 p-2 rounded text-xs border border-cyan-200 dark:border-cyan-800/30">
                 <span class="text-cyan-600 font-bold uppercase block mb-1">Kuzeyden Esenler (Soğuk)</span>
                 • <b>Ka</b>rayel (KB)<br>• <b>Yı</b>ldız (K)<br>• <b>P</b>oyraz (KD)
@@ -172,7 +172,7 @@ window.cografya_12_notlari = [
             💨 ÖZEL RÜZGARLAR
         </span>
     </div>
-    <div class="bg-sky-50 dark:bg-sky-900/20 p-4 rounded-xl border border-sky-100 dark:border-sky-800/30 text-sm max-w-2xl mx-auto space-y-2">
+    <div class="bg-sky-50 dark:bg-sky-900/20 p-4 rounded-xl border border-sky-100 dark:border-sky-800/30 text-sm w-full space-y-2">
         <div class="bg-white dark:bg-slate-800/50 p-3 rounded-lg border border-sky-200 dark:border-sky-800/30">
             <b class="text-sky-600 dark:text-sky-400">Etezyen:</b> Ege Denizi'nde kuzeyden güneye doğru esen serin rüzgardır.
         </div>
@@ -188,7 +188,7 @@ window.cografya_12_notlari = [
             🔥 FÖN RÜZGARI
         </span>
     </div>
-    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-200 dark:border-rose-700 text-sm max-w-2xl mx-auto">
+    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-200 dark:border-rose-700 text-sm w-full">
         <p class="mb-3">Bir dağı aşıp alçalan havanın sürtünmeyle sıcaklığını her <b class="text-rose-600 dark:text-rose-400">100 metrede 1°C</b> artırmasıdır.</p>
         
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
@@ -218,7 +218,7 @@ window.cografya_12_notlari = [
             💨 RÜZGAR FREKANSI (RÜZGAR GÜLÜ)
         </span>
     </div>
-    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm max-w-2xl mx-auto space-y-2">
+    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm w-full space-y-2">
         <div class="bg-white dark:bg-slate-800/50 p-2 rounded-lg border border-cyan-200 dark:border-cyan-800/30 flex items-start gap-2">
             <span class="mt-0.5">🌊</span>
             <p><b class="text-cyan-700 dark:text-cyan-400">İstanbul ve Çanakkale:</b> Boğazların uzanışından dolayı en sık <b>Güneybatı ↔ Kuzeydoğu</b> yönünde eser.</p>
@@ -244,7 +244,7 @@ window.cografya_12_notlari = [
             💧 NEM ÇEŞİTLERİ
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto space-y-3">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full space-y-3">
         <div class="flex items-center gap-3">
             <div class="bg-blue-200 dark:bg-blue-800 text-blue-800 dark:text-blue-200 px-2 py-1 rounded text-xs font-bold w-24 text-center shrink-0">Mutlak Nem</div>
             <p class="text-xs text-slate-700 dark:text-slate-300">Havadaki gerçek nem miktarıdır. En çok <b>deniz kıyılarında (Akdeniz)</b> fazladır.</p>
@@ -266,7 +266,7 @@ window.cografya_12_notlari = [
             🌧️ YAĞIŞ ÇEŞİTLERİ
         </span>
     </div>
-    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm w-full">
         <div class="bg-white dark:bg-slate-800/50 p-2 rounded-lg text-center mb-3 text-indigo-800 dark:text-indigo-200 font-bold text-xs border border-indigo-200 dark:border-indigo-800">
             Kural: Yağış oluşması için havanın mutlaka YÜKSELMESİ gerekir.
         </div>
@@ -293,7 +293,7 @@ window.cografya_12_notlari = [
             ❄️ KIRAĞI & KIRÇ NOTU
         </span>
     </div>
-    <div class="bg-slate-50 dark:bg-slate-900/20 p-4 rounded-xl border border-slate-200 dark:border-slate-700 text-sm max-w-2xl mx-auto">
+    <div class="bg-slate-50 dark:bg-slate-900/20 p-4 rounded-xl border border-slate-200 dark:border-slate-700 text-sm w-full">
         <p class="text-slate-700 dark:text-slate-300">Bir yerde kırağı ya da kırç görülüyorsa, o bölgede sıcaklığın <b class="text-blue-600 dark:text-blue-400">0°C altına düştüğü gün sayısı fazladır.</b> Soğuk ve karasal bir iklim hakimdir.</p>
     </div>
     `,
@@ -304,7 +304,7 @@ window.cografya_12_notlari = [
             🏜️ EN AZ YAĞIŞ ALAN YERLER
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <div class="flex flex-wrap gap-2">
             <span class="bg-white dark:bg-slate-800 px-3 py-1 rounded-full text-xs font-bold border border-amber-200 dark:border-amber-700">Tuz Gölü çevresi</span>
             <span class="bg-white dark:bg-slate-800 px-3 py-1 rounded-full text-xs font-bold border border-amber-200 dark:border-amber-700">Iğdır</span>
@@ -323,7 +323,7 @@ window.cografya_12_notlari = [
             📅 YAĞIŞIN MEVSİMSEL DAĞILIMI
         </span>
     </div>
-    <div class="bg-emerald-50 dark:bg-emerald-900/20 p-4 rounded-xl border border-emerald-100 dark:border-emerald-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-emerald-50 dark:bg-emerald-900/20 p-4 rounded-xl border border-emerald-100 dark:border-emerald-800/30 text-sm w-full">
         <p class="text-xs text-slate-500 dark:text-slate-400 mb-3 text-center uppercase font-bold tracking-widest">Türkiye Haritasında Hat Boyunca</p>
         <div class="space-y-2">
             <div class="flex justify-between items-center bg-white dark:bg-slate-800/50 p-2 rounded-lg border border-emerald-100 dark:border-emerald-800/30">
@@ -352,7 +352,7 @@ window.cografya_12_notlari = [
             📅 İKLİM TİPLERİ VE EN YAĞIŞLI MEVSİM
         </span>
     </div>
-    <div class="grid grid-cols-2 gap-2 text-center max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-center w-full text-sm">
         <div class="bg-orange-50 dark:bg-orange-900/20 p-3 rounded-xl border border-orange-200 dark:border-orange-800/30">
             <span class="block text-xs text-slate-500 mb-1">Akdeniz İklimi</span>
             <b class="text-orange-700 dark:text-orange-400 text-lg">KIŞ</b>
@@ -378,7 +378,7 @@ window.cografya_12_notlari = [
             🫒 1) AKDENİZ İKLİMİ
         </span>
     </div>
-    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-200 dark:border-orange-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-200 dark:border-orange-800/30 text-sm w-full">
         <p class="mb-2">Yazlar sıcak-kurak, kışlar ılık-yağışlıdır (Orta kuşakta olmamızın sonucudur).</p>
         <ul class="list-none space-y-1 text-xs text-slate-600 dark:text-slate-400 mb-3">
             <li>• Yağış rejimi <b class="text-rose-600 dark:text-rose-400">düzensizdir</b>.</li>
@@ -397,7 +397,7 @@ window.cografya_12_notlari = [
             🌰 2) KARADENİZ İKLİMİ
         </span>
     </div>
-    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-200 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-200 dark:border-green-800/30 text-sm w-full">
         <p class="mb-2">Yazlar serin-yağışlı, kışlar ılık-yağışlıdır. <b class="text-rose-600 dark:text-rose-400">Yaz kuraklığı yoktur.</b></p>
         <ul class="list-none space-y-1 text-xs text-slate-600 dark:text-slate-400 mb-3">
             <li>• Yağış rejimi <b class="text-green-700 dark:text-green-400">düzenlidir</b>.</li>
@@ -419,7 +419,7 @@ window.cografya_12_notlari = [
             🌾 3) KARASAL İKLİM
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-200 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-200 dark:border-amber-800/30 text-sm w-full">
         <p class="mb-2">Denizden uzaklık ve dağların denize paralel uzanması (denizelliği engellemesi) sonucu oluşur.</p>
         <ul class="list-none space-y-1 text-xs text-slate-600 dark:text-slate-400 mb-3">
             <li>• Yazlar sıcak-kurak, kışlar soğuk ve kar yağışlıdır.</li>
@@ -437,7 +437,7 @@ window.cografya_12_notlari = [
             🥶 4) SERT KARASAL İKLİM
         </span>
     </div>
-    <div class="bg-slate-50 dark:bg-slate-900/20 p-4 rounded-xl border border-slate-300 dark:border-slate-700 text-sm max-w-2xl mx-auto">
+    <div class="bg-slate-50 dark:bg-slate-900/20 p-4 rounded-xl border border-slate-300 dark:border-slate-700 text-sm w-full">
         <p class="mb-2">Yazlar serin-yağışlı; kışlar çok uzun, çok soğuk ve çok karlıdır. Türkiye'de <b class="text-rose-600 dark:text-rose-400">sıcaklık farkının en fazla</b> olduğu iklim tipidir.</p>
         <ul class="list-none space-y-1 text-xs text-slate-600 dark:text-slate-400 mb-3">
             <li>• Kanıt bitki örtüsü: <b class="text-slate-700 dark:text-slate-300">Çayır (Alpin Çayırlar)</b></li>
@@ -455,24 +455,24 @@ window.cografya_12_notlari = [
             🍊 MİKROKLİMA ÖRNEKLERİ
         </span>
     </div>
-    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-200 dark:border-rose-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-200 dark:border-rose-800/30 text-sm w-full">
         <p class="text-xs text-slate-500 dark:text-slate-400 mb-3 text-center uppercase tracking-wide">Dar alanda görülen özel iklim şartları (Yer - Sebep)</p>
         <div class="space-y-2">
-            <div class="bg-white dark:bg-slate-800/50 p-2.5 rounded-lg border border-rose-100 dark:border-rose-900/30 flex justify-between items-center">
+            <div class="bg-white dark:bg-slate-800/50 p-2.5 rounded-lg border border-rose-100 dark:border-rose-900/30 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                 <span class="font-bold text-slate-700 dark:text-slate-200">Rize'de Turunçgil</span>
-                <span class="text-xs bg-rose-100 dark:bg-rose-900/50 text-rose-700 dark:text-rose-300 px-2 py-1 rounded">Fön rüzgarı etkisi</span>
+                <span class="text-xs bg-rose-100 dark:bg-rose-900/50 text-rose-700 dark:text-rose-300 px-2 py-1 rounded w-fit">Fön rüzgarı etkisi</span>
             </div>
-            <div class="bg-white dark:bg-slate-800/50 p-2.5 rounded-lg border border-rose-100 dark:border-rose-900/30 flex justify-between items-center">
+            <div class="bg-white dark:bg-slate-800/50 p-2.5 rounded-lg border border-rose-100 dark:border-rose-900/30 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                 <span class="font-bold text-slate-700 dark:text-slate-200">Artvin'de (Çoruh) Zeytin</span>
-                <span class="text-xs bg-rose-100 dark:bg-rose-900/50 text-rose-700 dark:text-rose-300 px-2 py-1 rounded text-right max-w-[150px]">Kış ılıklığı (Vadi koruması)</span>
+                <span class="text-xs bg-rose-100 dark:bg-rose-900/50 text-rose-700 dark:text-rose-300 px-2 py-1 rounded w-fit">Kış ılıklığı (Vadi koruması)</span>
             </div>
-            <div class="bg-white dark:bg-slate-800/50 p-2.5 rounded-lg border border-rose-100 dark:border-rose-900/30 flex justify-between items-center">
+            <div class="bg-white dark:bg-slate-800/50 p-2.5 rounded-lg border border-rose-100 dark:border-rose-900/30 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                 <span class="font-bold text-slate-700 dark:text-slate-200">Akdeniz'de Muz</span>
-                <span class="text-xs bg-rose-100 dark:bg-rose-900/50 text-rose-700 dark:text-rose-300 px-2 py-1 rounded">Kış ılıklığı</span>
+                <span class="text-xs bg-rose-100 dark:bg-rose-900/50 text-rose-700 dark:text-rose-300 px-2 py-1 rounded w-fit">Kış ılıklığı</span>
             </div>
-            <div class="bg-white dark:bg-slate-800/50 p-2.5 rounded-lg border border-rose-100 dark:border-rose-900/30 flex justify-between items-center">
+            <div class="bg-white dark:bg-slate-800/50 p-2.5 rounded-lg border border-rose-100 dark:border-rose-900/30 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                 <span class="font-bold text-slate-700 dark:text-slate-200">Karadeniz'de Çay</span>
-                <span class="text-xs bg-rose-100 dark:bg-rose-900/50 text-rose-700 dark:text-rose-300 px-2 py-1 rounded text-right max-w-[150px]">Düzenli yağış & asitli toprak</span>
+                <span class="text-xs bg-rose-100 dark:bg-rose-900/50 text-rose-700 dark:text-rose-300 px-2 py-1 rounded w-fit">Düzenli yağış & asitli toprak</span>
             </div>
         </div>
     </div>

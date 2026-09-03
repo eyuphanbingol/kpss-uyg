@@ -6,7 +6,7 @@ window.tarih_9_notlari = [
             📖 XIX. YÜZYIL OSMANLI DEVLETİ DAĞILMA DÖNEMİ - GENEL BAKIŞ
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <p>18. yüzyılın sonunda başlayan reformlar, 19. yüzyılda Batı baskısı ve iç çöküntü karşısında yetersiz kalmıştır. Bu dönem, Osmanlı'nın toprak kaybı, uluslararası sorunların ortaya çıkışı ve modern Avrupa devlet sistemine dahil olma çabalarının dönemidir. Napolyon ile başlayan dönem, Balkan isyanları, azınlık meselelerinin uluslararası boyut kazanması ve nihayet Rusya'nın açık hedefleriyle sonlanır.</p>
     </div>
     `,
@@ -17,7 +17,7 @@ window.tarih_9_notlari = [
             🎭 NAPOLYON DÖNEMİNDEN TANZİMAT'A KADAR (1798-1839)
         </span>
     </div>
-    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm w-full">
         <p>Bu dönem Osmanlı'nın baskı altında olduğu, her hamlesinin başka devletlerin müdahalesi ile karşı karşıya kaldığı, yeni bir dengeleme politikası aradığı dönemdir. Kısaca: <b class="text-rose-600 dark:text-rose-400">Osmanlı'nın tehlikeli yalnızlığı ve Avrupa'nın dikkatli gözlerinin dönemi.</b></p>
     </div>
     `,
@@ -28,7 +28,7 @@ window.tarih_9_notlari = [
             ⚡ 1798: NAPOLYON MISIR'I İŞGAL ETTİ - TÜRKİYE'NİN BAĞIMSIZLIĞINI YİTİRME BAŞLANGICI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Olay:</b> Napolyon Mısır'ı işgal etti. Osmanlı topraklarında Avrupa askerinin ilk büyük tehdidi.</li>
@@ -45,7 +45,7 @@ window.tarih_9_notlari = [
             📜 1801: EL ARİŞ ANTLAŞMASI - MÜTTEFİK ARAMA ÇABASI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Antlaşma:</b> Fransızlar Mısır'dan geri çekildi.</li>
@@ -61,7 +61,7 @@ window.tarih_9_notlari = [
             ✅ 1802: PARİS PAKTI - ULUSLARARASI TANINIŞ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Karar:</b> Mısır'ın Osmanlı Devleti'ne ait olduğu resmen kabul edildi.</li>
@@ -77,7 +77,7 @@ window.tarih_9_notlari = [
             🔥 1804: KARA YÖRGİ İSYANI - BALKAN SORUNLARININ BAŞLANGICI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>İsyancı:</b> Kara Yorgi (Karageorge) önderliğinde Sırplar isyan etti.</li>
@@ -94,7 +94,7 @@ window.tarih_9_notlari = [
             ⚔️ 1806: OSMANLI-RUS SAVAŞI - FRANSA'NIN KIŞKIRTMASI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Başlangıç:</b> Osmanlı-Rus savaşı Fransızların gazı ve teşviki ile başladı.</li>
@@ -111,7 +111,7 @@ window.tarih_9_notlari = [
             🤝 1807: TİLSİT ANTLAŞMASI - OSMANLI'YA HİN KESİLMESİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Antlaşmanın Tarafları:</b> Rusya ile Fransa arasında imzalandı. <b class="text-rose-600 dark:text-rose-400">Osmanlı'nın bilgisi dışında!</b></li>
@@ -129,7 +129,7 @@ window.tarih_9_notlari = [
             🇬🇧 1809: İNGİLTERE VE 'KALE-İ SULTANİYE' ANTLAŞMASI - BATI'YA SIRAÇ OLMA
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Antlaşma:</b> İngiltere ile Osmanlı Devleti arasında 'Çanakkale (Kale-i Sultaniye)' Antlaşması imzalandı.</li>
@@ -146,7 +146,7 @@ window.tarih_9_notlari = [
             🇷🇺 1812: BÜKREŞ ANTLAŞMASI - BALKAN HALKLARINA İLK İMTİYAZ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Antlaşmayı İmzalayanlar:</b> Osmanlı Devleti ve Rusya</li>
@@ -164,7 +164,7 @@ window.tarih_9_notlari = [
             🎭 1815: VİYANA KONGRESİ - AVRUPA'NIN YENİDEN ŞEKİLLENMESİ VE 'ŞARK SORUNU'NUN DOĞUŞU
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Kimin Başkanlığında:</b> Avusturya Başbakanı Metternich</li>
@@ -189,7 +189,7 @@ window.tarih_9_notlari = [
             ⏳ 1815-1827: RESTORASYON DÖNEMİ (Viyana Kongresi'nden Navarin Olayı'na)
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-2">
             <li><b>Nedir:</b> Fransa'nın çıkardığı kaostan sonra Avrupa'nın 'eski düzene dönmeye' çalıştığı dönemdir.</li>
             <li><b>Osmanlı İçin Anlam:</b> Bir ara nefes alma dönemidir. Ancak bu nefes çok kısa sürecek...</li>
@@ -203,7 +203,7 @@ window.tarih_9_notlari = [
             🔗 1820: FİLİKİ ETERİA CEMİYETİ'NİN KURULMASI - YUNAN İSYANININ HAZIRLANMASI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Kurucu:</b> Rus Generali Aleksandr İpsilanti</li>
@@ -221,7 +221,7 @@ window.tarih_9_notlari = [
             🔴 1821: MORA YUNAN İSYANI - 19. YÜZYIL BALKAN KARGAŞASININ BAŞLANGICI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Olay:</b> Mora (Peloponnesos) bölgesinde Yunan isyanı başladı.</li>
@@ -249,7 +249,7 @@ window.tarih_9_notlari = [
             🛢️ 1827: NAVARİN OLAYI - AVRUPA'NIN AÇIK MÜDAHALESİ VE RESTORASYONUN SONU
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Olay:</b> İngiltere, Fransa ve Rusya Yunanlılara bağımsızlık verilmesini talep etti. Osmanlı Devleti bunu reddettiği için, bu üç gücün Osmanlı donanması (Mısır donanması) Navarin Limanı'nda yakıldı.</li>
@@ -266,7 +266,7 @@ window.tarih_9_notlari = [
             ⚔️ 1827-1828: OSMANLI-RUS SAVAŞI - AVRUPA'NIN SONUCU DEĞİŞTİRMESİ
         </span>
     </div>
-    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-2">
             <li><b>Savaş Sonucu:</b> Rusya kazandı, Osmanlı kaybetti.</li>
             <li><b>Stratejik Anlam:</b> Osmanlı kendi savaşında kaybetti, ancak savaşta Rusya'ya karşı İngiltere ve Fransa tarafından desteklenmedi. Bu, uluslararası dengelerin Osmanlı aleyhine döndüğünü gösterir.</li>
@@ -280,7 +280,7 @@ window.tarih_9_notlari = [
             📋 1829: EDİRNE ANTLAŞMASI - BALKAN'DA BİRBİRİNE FARKLI STATÜLER
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Antlaşmanın Maddeleri:</b>
@@ -301,7 +301,7 @@ window.tarih_9_notlari = [
             🇫🇷 1830: FRANSA CEZAYİR'İ İŞGAL ETTİ - KUZEY AFRİKA'DAKİ İLK KAYIP
         </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-2">
             <li><b>Olay:</b> Fransa Osmanlı topraklarından Cezayir'i işgal etti ve ilhak etti.</li>
             <li><b>Tarihi Önem:</b> ⭐ <b class="text-rose-600 dark:text-rose-400">Bu, Osmanlı Devleti'nin Kuzey Afrika'da ilk büyük toprak kaybıdır.</b> Bundan sonraki 50 yılda Tunus, Mısır, Libya hep kaybedilecektir.</li>
@@ -315,7 +315,7 @@ window.tarih_9_notlari = [
             🐪 1833: MEHMET ALİ PAŞA KRİZİ VE KÜTAHYA ANTLAŞMASI - OSMANLI'NIN EN TEHLİKELİ İÇ SORUNU
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Nedeni:</b> Mora İsyanı'nı bastırdığı için Mora valiliğini istedi Mehmet Ali Paşa, ancak II. Mahmut bunu vermedi. Bunun yerine sadece Mısır valiliğini sundu.</li>
@@ -339,7 +339,7 @@ window.tarih_9_notlari = [
             🤲 1833: 'DENİZE DÜŞEN YILAN SARILIR' - HÜNKÂR İSKELESİ ANTLAŞMASI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Dramı:</b> İngiltere ve Fransa, Osmanlı'yı Mehmet Ali Paşa krizi'nde desteklemediler. Osmanlı yalnız kaldı.</li>
@@ -358,7 +358,7 @@ window.tarih_9_notlari = [
             🤝 1838: BALTALİMANI ANTLAŞMASI - TİCARİ AÇILIM VE EKONOMİK BAĞIMLILIĞA BAŞLANGIÇ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Taraflar:</b> İngiltere ve Osmanlı Devleti</li>
@@ -381,7 +381,7 @@ window.tarih_9_notlari = [
             ⚔️ 1839: NİZİP SAVAŞI - OSMANLI'NIN BAŞARISIZLIĞININ DAMGASI
         </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-2">
             <li><b>Savaşan Taraflar:</b> Osmanlı Devleti ve Mehmet Ali Paşa (Mısır Valisi)</li>
             <li><b>Sonuç:</b> Osmanlı Devleti Nizip Savaşı'nda Mehmet Ali Paşa'ya karşı <b class="text-rose-600 dark:text-rose-400">KAYBETTİ</b>.</li>
@@ -396,7 +396,7 @@ window.tarih_9_notlari = [
             📢 1840: LONDRA KONFERANSI - MEHMET ALİ SORUNU ULUSLARARASILAŞTIRILMASI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Amaç:</b> Mehmet Ali Paşa sorununun çözümlenmesi.</li>
@@ -415,7 +415,7 @@ window.tarih_9_notlari = [
             📜 1840: TANZİMAT FERMANI'NIN İLANI - OSMANLI'NIN MODERN OLUŞ ÇABASI
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-2">
             <li><b>Nedir:</b> Osmanlı Devleti'nde modern devletleşme reformlarının başlangıcıdır.</li>
             <li><b>Amaç:</b> Londra Konferansı'ndaki Avrupa devletlerini ikna etmek ve Osmanlı'nın çağdaş bir devlet olduğunu göstermek.</li>
@@ -430,7 +430,7 @@ window.tarih_9_notlari = [
             🚢 1841: LONDRA BOĞAZLAR SÖZLEŞMESİ - BOĞAZLAR SORUNUN ULUSLARARASALAŞMASI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Antlaşmayı İmzalayanlar:</b> Osmanlı, İngiltere, Fransa, Rusya, Avusturya, Prusya</li>
@@ -448,7 +448,7 @@ window.tarih_9_notlari = [
             ⚔️ KIRIM SAVAŞI ÖNCESİ (1853) - OSMANLI'NIN TEHLİKELİ YALNIZLIĞI
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-2">
             <li><b>Durum:</b> Osmanlı Devleti kendini Rusya ile doğrudan çatışmaya yakın bulmuştur.</li>
             <li><b>Osmanlı'nın Çare Arayışı:</b> İngiltere ve Fransa'nın desteğini almak zorundadır. Aksi halde Rusya Osmanlı'yı istediği gibi parçalayacaktır.</li>
@@ -462,7 +462,7 @@ window.tarih_9_notlari = [
             🔫 1853-1856: KIRIM SAVAŞI - OSMANLI'NIN SON ZAFER SAVAŞI VE BORÇLANMASI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Savaşan Taraflar:</b>
@@ -498,7 +498,7 @@ window.tarih_9_notlari = [
             ✌️ 1856: PARİS BARIŞ KONFERANSI VE ANTLAŞMASI - OSMANLI'NIN AVRUPA'YA SORULACAK DEĞİŞMESİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Konferansın Tarafları:</b> Osmanlı, İngiltere, Fransa, Rusya, Avusturya, Prusya vb.</li>
@@ -523,7 +523,7 @@ window.tarih_9_notlari = [
             💪 ISLAHAT FERMANI'NIN İLANI (1856) - BATI'YA UYUM ÇABASI
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-2">
             <li><b>Nedir:</b> Tanzimat'ı derinleştiren, Osmanlı yönetim sistemini daha da Batılılaştıran bir ferman.</li>
             <li><b>Tarihsel Anlam:</b> Osmanlı artık kendi uygunluğu için değil, Batı'nın baskısı altında reform yapıyor.</li>
@@ -537,7 +537,7 @@ window.tarih_9_notlari = [
             🔥 1875: BALKAN BUNALIMI - 19. YÜZYIL OSMANLI'NIN EN KRİTİK İÇ KRIZİ
         </span>
     </div>
-    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-2">
             <li><b>Nedir:</b> Balkan'daki isyanlar Osmanlı'nın kontrol alanı dışına çıktı.</li>
             <li><b>İsyanlar Yayıldı:</b> Bulgaristan, Sırbistan, Karadağ ve Arnavutluk aynı anda isyan etti.</li>
@@ -552,7 +552,7 @@ window.tarih_9_notlari = [
             🏛️ 1876: TERSANE KONFERANSI - OSMANLI'NIN SON REFORMU VE İLK ANAYASASI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Amaç:</b> Balkan sorununu uluslararası konferansa götürerek çözmek. Aynı zamanda Balkan halklarının isyanını bastırmamak, hukuki çerçevede çözmek.</li>
@@ -574,7 +574,7 @@ window.tarih_9_notlari = [
             ⚔️ 1877-1878: 93 HARBİ (OSMANLI-RUS SAVAŞI) - OSMANLI'NIN TOPRAK KAYBININ BAŞLANGICI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Harp Komutanları:</b>
@@ -597,7 +597,7 @@ window.tarih_9_notlari = [
             📋 1878: AYASTEFANOS ANTLAŞMASI - OSMANLI'NIN EN KÖTÜ ANTLAŞMASI (İMZALANDI AMA YÜRÜRLÜĞE GİRMEDİ)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Maddeleri:</b>
@@ -620,7 +620,7 @@ window.tarih_9_notlari = [
             🎯 1878: BERLİN ANTLAŞMASI - OSMANLI'NIN TOPRAKLARININ BÖLÜŞTÜRÜLDÜĞÜ ANTLAŞMA
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Başkan:</b> Alman Başbakanı Bismarck</li>
@@ -653,7 +653,7 @@ window.tarih_9_notlari = [
             🎟️ 1878: KIBRIS'IN İDARESİ VE HALEP FERMANI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Kıbrıs:</b> Berlin Antlaşması öncesi, İngiltere ile yapılan gizli anlaşmada Kıbrıs'ın idaresi İngiltere'ye bırakılmıştır. (Osmanlı egemenliği kalır, yönetim İngiltere'de)</li>
@@ -669,7 +669,7 @@ window.tarih_9_notlari = [
             🌍 1881-1882: TUNUS VE MISIR'IN KAYBEDİLMESİ - KUZEY AFRİKA'NIN TAMAMEN GİTMESİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>1881: Fransa Tunus'u İşgal Etti</b></li>
@@ -687,7 +687,7 @@ window.tarih_9_notlari = [
             🇬🇷 1897: DOMOKE MEYDAN SAVAŞI - OSMANLI'NIN SON BAŞARILI SAVAŞI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Karşı Taraf:</b> Yunanistan</li>
@@ -705,7 +705,7 @@ window.tarih_9_notlari = [
             🎓 XIX. YÜZYIL OSMANLI'NIN GENEL KARAKTERİZASYONU (ÖZET)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Siyasal Davranış:</b> Osmanlı Devleti 19. yüzyılda başında hareketli, dinamik ama de facto kontrolü azalan bir devlettir.</li>
@@ -725,7 +725,7 @@ window.tarih_9_notlari = [
             ⚠️ XIX. YÜZYIL SONUNDA OSMANLI'NIN HARİTASI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Anadolu:</b> Hâlâ Osmanlı kontrolünde, AMA batı vilayetleri gücü azalmıştır.</li>
@@ -744,7 +744,7 @@ window.tarih_9_notlari = [
             🎪 NİHAYET: 'AVRUPA'NIN HASTASI' - OSMANLI'NIN İFADESİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-slate-50 dark:bg-slate-700/50 p-4 rounded-xl border border-slate-200 dark:border-slate-600">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Terim:</b> 19. yüzyılda Avrupa devletleri Osmanlı Devleti'ni <b class="text-rose-600 dark:text-rose-400">'Avrupa'nın Hastası'</b> olarak adlandırmaya başladılar.</li>

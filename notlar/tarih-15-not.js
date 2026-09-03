@@ -7,7 +7,7 @@ window.tarih_15_notlari = [
             🏔️ A. DOĞU CEPHESİ
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Ermeniler ile mücadele edilmiştir.</li>
             <li>Bu cephede TBMM'ye bağlı düzenli ordu savaşmıştır.</li>
@@ -25,7 +25,7 @@ window.tarih_15_notlari = [
             📜 GÜMRÜ ANTLAŞMASI
         </span>
     </div>
-    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Sarıkamış, Kars, Kağızman ve Iğdır Türk Hükûmeti'ne bırakılacaktır.</li>
             <li>Çıldır Gölü ve Aras Nehri sınır olacaktır.</li>
@@ -60,7 +60,7 @@ window.tarih_15_notlari = [
             🏜️ B. GÜNEY CEPHESİ
         </span>
     </div>
-    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Düzenli ordu yoktu; yalnızca Kuva-yı Milliye savaşmıştır.</li>
             <li>Bu cephede birlik sağlamak amacıyla Pozantı Kongresi düzenlenmiştir.</li>
@@ -81,7 +81,7 @@ window.tarih_15_notlari = [
             🦸 GÜNEY CEPHESİ - ŞEHİRLER VE KAHRAMANLAR
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Adana:</b> Tufan Bey</li>
             <li><b>Maraş:</b> Sütçü İmam, Rıdvan Hoca</li>
@@ -102,7 +102,7 @@ window.tarih_15_notlari = [
             🏅 GÜNEY CEPHESİ - ŞEHİRLERE VERİLEN UNVANLAR
         </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full">
         <p class="text-xs">Başarılarından dolayı:</p>
         <ul class="list-disc list-inside space-y-1 text-xs mt-1">
             <li><b>Antep → Gazi</b></li>
@@ -122,7 +122,7 @@ window.tarih_15_notlari = [
             🎖️ İSTİKLAL MADALYASI ALAN YÖRE VE ŞEHİRLERİMİZ
         </span>
     </div>
-    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>İnebolu (Kastamonu)</li>
             <li>Maraş</li>
@@ -139,7 +139,7 @@ window.tarih_15_notlari = [
             👩 MİLLÎ MÜCADELE KADIN KAHRAMANLARI
         </span>
     </div>
-    <div class="bg-pink-50 dark:bg-pink-900/20 p-4 rounded-xl border border-pink-100 dark:border-pink-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-pink-50 dark:bg-pink-900/20 p-4 rounded-xl border border-pink-100 dark:border-pink-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Kara Fatma</li>
             <li>Kılavuz Hatice</li>
@@ -162,7 +162,7 @@ window.tarih_15_notlari = [
             📌 GÜNEY CEPHESİ - ÖNEMLİ NOTLAR
         </span>
     </div>
-    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm w-full">
         <div class="mt-3 bg-orange-100 dark:bg-orange-800/30 p-3 rounded-lg text-orange-700 dark:text-orange-400 border border-orange-200 dark:border-orange-800/30 text-xs">
             ⭐ <b>Not:</b> Adana'da 10 Temmuz 1920'de Fransızların Adana merkezini ateş altına alması sebebiyle binlerce Adanalının Toroslar'a doğru çekilmesine tarihte <b>"Kaç Kaç Olayı"</b> adı verilmiştir.
         </div>
@@ -185,7 +185,7 @@ window.tarih_15_notlari = [
             ⚔️ C. BATI CEPHESİ - KUVA-YI MİLLİYE'NİN KALDIRILMA NEDENLERİ
         </span>
     </div>
-    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Düzensiz ve disiplinsiz olması ve ihtiyaçlarını halktan karşılaması</li>
             <li>Halkı kendi usullerince yargılaması</li>
@@ -202,7 +202,7 @@ window.tarih_15_notlari = [
             📋 DÜZENLİ ORDUYA GEÇİŞ AŞAMALARI
         </span>
     </div>
-    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>16 Mayıs 1920'de Kuva-yı Milliye'nin giderleri Millî Savunma Bakanlığına bağlandı.</li>
             <li>1 Temmuz 1920'de subay yetiştirme merkezleri açıldı.</li>
@@ -219,7 +219,7 @@ window.tarih_15_notlari = [
             ⚔️ GEDİZ TAARRUZU
         </span>
     </div>
-    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Yunanlılara karşı yapılmış ve kaybedilmiştir.</li>
             <li>Taarruzun komutanı <b>Ali Fuat Cebesoy</b>'dur.</li>
@@ -235,7 +235,7 @@ window.tarih_15_notlari = [
             🛤️ İSTİKLAL YOLU
         </span>
     </div>
-    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm w-full">
         <p class="text-xs font-bold text-center"><b>İnebolu → Kastamonu → Ilgaz → Çankırı → Kalecik → Ankara</b></p>
         <div class="mt-3 bg-indigo-100 dark:bg-indigo-800/30 p-3 rounded-lg text-indigo-700 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800/30 text-xs">
             ⭐ <b>Not:</b> Millî Mücadele boyunca Doğu Cephesi'nden ve İstanbul'dan kaçırılan silahların Anadolu'ya sevkiyatında İstiklal Yolu kullanılmıştır.
@@ -250,7 +250,7 @@ window.tarih_15_notlari = [
             ⚔️ I. İNÖNÜ SAVAŞI - 6-10 OCAK 1921
         </span>
     </div>
-    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm w-full">
         <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">I. YUNAN TAARRUZU</p>
         <p class="font-bold text-rose-600 dark:text-rose-400 text-xs mt-3">SAVAŞIN NEDENLERİ</p>
         <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -276,7 +276,7 @@ window.tarih_15_notlari = [
             📋 I. İNÖNÜ SAVAŞI - SONUÇLARI
         </span>
     </div>
-    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>I. İnönü, <b>düzenli ordunun ilk zaferidir</b>.</li>
             <li>TBMM'ye olan güven artmıştır.</li>
@@ -300,7 +300,7 @@ window.tarih_15_notlari = [
             📜 A. TEŞKİLAT-I ESASİYE KANUNU (1921 ANAYASASI)
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Millî Mücadele döneminde TBMM'nin yeni bir devlet kurması nedeniyle yeni bir anayasaya ihtiyaç duyulmuş ve Teşkilat-ı Esasiye Kanunu kabul edilmiştir.</li>
             <li>23 maddeden oluşan anayasa, <b>kuvvetler birliği</b> ilkesini ve <b>meclis hükûmeti sistemini</b> kabul etmiştir.</li>
@@ -329,7 +329,7 @@ window.tarih_15_notlari = [
             📜 B. İSTİKLAL MARŞI'NIN KABULÜ - 12 MART 1921
         </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>I. İnönü Zaferi'nden sonra bir bağımsızlık marşı yazılmasına karar verilmiştir.</li>
             <li>Maarif Vekâletinin açtığı yarışmaya <b>724 şiir</b> gönderilmiş ancak bunlardan hiçbiri uygun bulunmamıştır.</li>
@@ -388,7 +388,7 @@ window.tarih_15_notlari = [
             📋 C. LONDRA KONFERANSI
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">TOPLANMA NEDENLERİ</p>
         <ul class="list-disc list-inside space-y-1 text-xs mt-1">
             <li>Sevr Antlaşması'nı Türk tarafına kabul ettirmek ve Yunan ordusuna zaman kazandırmak</li>
@@ -414,7 +414,7 @@ window.tarih_15_notlari = [
             📜 D. TÜRK-AFGAN DOSTLUK ANTLAŞMASI
         </span>
     </div>
-    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>TBMM ile Afganistan arasında imzalanan Dostluk Antlaşması'nda:</li>
             <ul class="list-disc list-inside ml-4 space-y-1 text-xs">
@@ -434,7 +434,7 @@ window.tarih_15_notlari = [
             📜 E. MOSKOVA ANTLAŞMASI
         </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>TBMM ile Sovyet Rusya arasında imzalanmıştır.</li>
         </ul>
@@ -468,7 +468,7 @@ window.tarih_15_notlari = [
             ⚔️ II. İNÖNÜ SAVAŞI - II. YUNAN TAARRUZU
         </span>
     </div>
-    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm w-full">
         <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">II. İNÖNÜ SAVAŞI'NIN NEDENLERİ</p>
         <ul class="list-disc list-inside space-y-1 text-xs mt-1">
             <li>Yunanlıların İngiliz desteğini kaybetmek istememeleri</li>
@@ -492,7 +492,7 @@ window.tarih_15_notlari = [
             📋 II. İNÖNÜ SAVAŞI - SONUÇLARI
         </span>
     </div>
-    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Fransa TBMM'ye ateşkes teklifi etti.</li>
             <li>İngiltere, Malta'da bulunan 40 Türk esiri serbest bıraktı.</li>
@@ -513,7 +513,7 @@ window.tarih_15_notlari = [
             ⚔️ KÜTAHYA-ESKİŞEHİR MUHAREBELERİ - III. YUNAN TAARRUZU
         </span>
     </div>
-    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm w-full">
         <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">NEDENLERİ</p>
         <ul class="list-disc list-inside space-y-1 text-xs mt-1">
             <li>Yunanlıların İngilizlerin desteğini kaybetmek istememeleri</li>
@@ -546,7 +546,7 @@ window.tarih_15_notlari = [
             📜 TEKÂLİF-İ MİLLİYE EMİRLERİ - 7-8 AĞUSTOS 1921
         </span>
     </div>
-    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm w-full">
         <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">Komisyonların Kurulması</p>
         <ul class="list-disc list-inside space-y-1 text-xs mt-1">
             <li>Her ilçede Tekâlif-i Milliye Komisyonu oluşturulacaktır.</li>
@@ -601,7 +601,7 @@ window.tarih_15_notlari = [
             ⚔️ 4. SAKARYA MEYDAN MUHAREBESİ - SUBAYLAR SAVAŞI – MELHAME-İ KÜBRA
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Son savunma savaşıdır.</li>
             <li>IV. Yunan Taarruzu'dur.</li>
@@ -633,7 +633,7 @@ window.tarih_15_notlari = [
             📋 SAKARYA MEYDAN MUHAREBESİ - SONUÇLARI
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Bu savaşta 350 subay şehit olmuş, 800 subay yaralanmış ve 18.000 er şehit olmuştur.</li>
             <li>1683'ten beri Türklerin geri çekilişi sona ermiştir.</li>
@@ -660,7 +660,7 @@ window.tarih_15_notlari = [
             📜 KARS ANTLAŞMASI
         </span>
     </div>
-    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Bu antlaşmayı TBMM adına <b>Kâzım Karabekir</b> imzalamıştır.</li>
             <li>Ardahan Türkiye'ye bırakılacaktır.</li>
@@ -681,7 +681,7 @@ window.tarih_15_notlari = [
             📜 ANKARA ANTLAŞMASI - 20 EKİM 1921
         </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Yusuf Kemal Tengirşenk</b> ile <b>Franklin Bouillon</b> tarafından imzalanmıştır.</li>
             <li>Fransa, Çukurova ve Güneydoğu Anadolu'da işgal ettiği yerlerden çekilecektir.</li>
@@ -700,7 +700,7 @@ window.tarih_15_notlari = [
             ⚔️ 5. BÜYÜK TAARRUZ - BAŞKOMUTANLIK MEYDAN MUHAREBESİ - RUM SINDIĞI SAVAŞI - YURT KURTARAN SAVAŞI - DUMLUPINAR MEYDAN MUHAREBESİ
         </span>
     </div>
-    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm w-full">
         <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">SAVAŞ ÖNCESİ YAPILAN HAZIRLIKLAR</p>
         <ul class="list-disc list-inside space-y-1 text-xs mt-1">
             <li>Savaş yapılmaması için Dışişleri Bakanı <b>Yusuf Kemal Tengirşenk</b> Avrupa'ya gönderildi.</li>
@@ -729,7 +729,7 @@ window.tarih_15_notlari = [
             📋 BÜYÜK TAARRUZ - SONUÇLARI
         </span>
     </div>
-    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Batı Anadolu Yunanlılardan temizlenmiştir.</li>
             <li>Türk-Yunan Savaşı sona ermiştir.</li>

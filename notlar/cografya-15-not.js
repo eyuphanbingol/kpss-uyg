@@ -9,7 +9,7 @@ window.cografya_15_notlari = [
         👥 TÜRKİYE NÜFUSU - GENEL
       </span>
     </div>
-    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm w-full">
       <p class="font-semibold text-indigo-700 dark:text-indigo-300">Nüfus Sayımı Sonucunda Elde Edilenler:</p>
       <ul class="list-disc list-inside space-y-1 mt-2 text-xs">
         <li>Nüfusun toplam miktarı</li>
@@ -37,7 +37,7 @@ window.cografya_15_notlari = [
         📅 NÜFUS SAYIMLARI TARİHÇESİ
       </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
       <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
         <ul class="list-disc list-inside space-y-2 text-xs">
           <li><b class="text-rose-600 dark:text-rose-400">1831</b> → Osmanlı'da ilk nüfus sayımı (II. Mahmut)</li>
@@ -68,7 +68,7 @@ window.cografya_15_notlari = [
         ⚖️ NÜFUS ARTIŞININ SONUÇLARI
       </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
       <div class="bg-rose-50 dark:bg-rose-900/20 p-3 rounded-xl border border-rose-100 dark:border-rose-800/30">
         <p class="font-semibold text-rose-600 dark:text-rose-400 text-xs">❌ Olumsuz Sonuçlar</p>
         <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -103,7 +103,7 @@ window.cografya_15_notlari = [
         📈 1923-1965: NÜFUS ARTIRICI POLİTİKALAR
       </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
       <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30">
         <p class="font-semibold text-blue-700 dark:text-blue-300 text-xs">Dayanaklar:</p>
         <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -138,7 +138,7 @@ window.cografya_15_notlari = [
         📉 1965-1980: NÜFUS AZALTICI POLİTİKALAR
       </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
       <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30">
         <p class="font-semibold text-red-700 dark:text-red-300 text-xs">Gerekçeler:</p>
         <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -172,7 +172,7 @@ window.cografya_15_notlari = [
         🔧 1980-2005: İYİLEŞTİRİCİ POLİTİKALAR
       </span>
     </div>
-    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm w-full">
       <ul class="list-disc list-inside space-y-2 text-xs">
         <li>Nüfus <b>niteliğinin</b> iyileştirilmesi hedeflendi</li>
         <li>Eğitim, beslenme, barınma, sağlık koşullarına odaklanıldı</li>
@@ -191,7 +191,7 @@ window.cografya_15_notlari = [
         📈 2005 SONRASI: TEKRAR ARTIRICI POLİTİKALAR
       </span>
     </div>
-    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm w-full">
       <ul class="list-disc list-inside space-y-2 text-xs">
         <li>Nüfus artış hızı düşüşünün ileride yaratacağı sorunlara karşı tedbir</li>
         <li><b class="text-rose-600 dark:text-rose-400">2014</b> sonrası: Doğum yapan annelere çocuk sayısına göre maddi destek</li>
@@ -210,7 +210,7 @@ window.cografya_15_notlari = [
         🟢 SIK NÜFUSLU YERLER
       </span>
     </div>
-    <div class="bg-emerald-50 dark:bg-emerald-900/20 p-4 rounded-xl border border-emerald-100 dark:border-emerald-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-emerald-50 dark:bg-emerald-900/20 p-4 rounded-xl border border-emerald-100 dark:border-emerald-800/30 text-sm w-full">
       <ul class="list-disc list-inside space-y-1 text-xs">
         <li><b>İstanbul - Bursa</b> arası</li>
         <li><b>İzmir, Aydın, Manisa</b></li>
@@ -233,7 +233,7 @@ window.cografya_15_notlari = [
         🔴 SEYREK NÜFUSLU YERLER
       </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full">
       <ul class="list-disc list-inside space-y-1 text-xs">
         <li><b>Sinop, Menteşe, Yıldız, Teke, Gelibolu-Biga, Taşeli</b> <span class="text-red-600 dark:text-red-400 text-[10px]">→ engebeli arazi</span></li>
         <li><b>Tuz Gölü</b> ve çevresi, <b>Iğdır Ovası</b> <span class="text-red-600 dark:text-red-400 text-[10px]">→ kuraklık</span></li>
@@ -253,7 +253,7 @@ window.cografya_15_notlari = [
         📊 FİZYOLOJİK NÜFUS YOĞUNLUĞU
       </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
       <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30">
         <ul class="list-disc list-inside space-y-2 text-xs">
           <li>Engebeli veya sık nüfuslu yerde <b class="text-rose-600 dark:text-rose-400">fazladır</b></li>
@@ -273,7 +273,7 @@ window.cografya_15_notlari = [
         🌾 TARIMSAL NÜFUS YOĞUNLUĞU
       </span>
     </div>
-    <div class="bg-lime-50 dark:bg-lime-900/20 p-4 rounded-xl border border-lime-100 dark:border-lime-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-lime-50 dark:bg-lime-900/20 p-4 rounded-xl border border-lime-100 dark:border-lime-800/30 text-sm w-full">
       <ul class="list-disc list-inside space-y-2 text-xs">
         <li>Engebeli ve geri kalmış yerde <b class="text-rose-600 dark:text-rose-400">fazladır</b></li>
         <li><b>Karadeniz ve Doğu Anadolu</b>'da fazla → <span class="text-lime-600 dark:text-lime-400">engebe</span></li>
@@ -291,7 +291,7 @@ window.cografya_15_notlari = [
         👶 DOĞURGANLIK
       </span>
     </div>
-    <div class="bg-pink-50 dark:bg-pink-900/20 p-4 rounded-xl border border-pink-100 dark:border-pink-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-pink-50 dark:bg-pink-900/20 p-4 rounded-xl border border-pink-100 dark:border-pink-800/30 text-sm w-full">
       <ul class="list-disc list-inside space-y-2 text-xs">
         <li>Doğurganlık <b class="text-rose-600 dark:text-rose-400">azalmaktadır</b> <span class="text-pink-600 dark:text-pink-400 text-[10px]">(kadının iş hayatı, eğitim, evlilik yaşı yükselmesi)</span></li>
         <li>Kırsal kesimde kentlere göre <b>daha yüksek</b></li>
@@ -310,7 +310,7 @@ window.cografya_15_notlari = [
         🧑‍🤝‍🧑 YAŞ GRUPLARI
       </span>
     </div>
-    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm w-full">
       <ul class="list-disc list-inside space-y-2 text-xs">
         <li><b class="text-rose-600 dark:text-rose-400">0-14 yaş</b> → Çocuk nüfus</li>
         <li><b class="text-rose-600 dark:text-rose-400">15-24 yaş</b> → Genç nüfus</li>
@@ -329,7 +329,7 @@ window.cografya_15_notlari = [
         📊 ORTANCA YAŞ
       </span>
     </div>
-    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm w-full">
       <ul class="list-disc list-inside space-y-2 text-xs">
         <li>Ortanca yaş <b class="text-rose-600 dark:text-rose-400">yükselmektedir</b> <span class="text-teal-600 dark:text-teal-400 text-[10px]">(doğumlar azalıyor, yaşam süresi uzuyor)</span></li>
         <li>Ortanca yaş en yüksek il: <b class="text-rose-600 dark:text-rose-400">Sinop</b> 🏆</li>
@@ -347,7 +347,7 @@ window.cografya_15_notlari = [
         ⚖️ YAŞ BAĞIMLILIK ORANI
       </span>
     </div>
-    <div class="bg-violet-50 dark:bg-violet-900/20 p-4 rounded-xl border border-violet-100 dark:border-violet-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-violet-50 dark:bg-violet-900/20 p-4 rounded-xl border border-violet-100 dark:border-violet-800/30 text-sm w-full">
       <ul class="list-disc list-inside space-y-2 text-xs">
         <li>Çalışan nüfusun baktığı <b>0-14 + 65+</b> yaş grubu toplamı</li>
         <li>Yaş bağımlılık oranı <b class="text-rose-600 dark:text-rose-400">yükselmektedir</b></li>
@@ -365,7 +365,7 @@ window.cografya_15_notlari = [
         👫 CİNSİYET DAĞILIMI
       </span>
     </div>
-    <div class="bg-fuchsia-50 dark:bg-fuchsia-900/20 p-4 rounded-xl border border-fuchsia-100 dark:border-fuchsia-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-fuchsia-50 dark:bg-fuchsia-900/20 p-4 rounded-xl border border-fuchsia-100 dark:border-fuchsia-800/30 text-sm w-full">
       <ul class="list-disc list-inside space-y-2 text-xs">
         <li>Türkiye nüfusu: <b class="text-rose-600 dark:text-rose-400">%50,1 erkek</b> - <b class="text-rose-600 dark:text-rose-400">%49,9 kadın</b></li>
         <li><b class="text-rose-600 dark:text-rose-400">1940</b>'a kadar kadın oranı daha fazlaydı <span class="text-fuchsia-600 dark:text-fuchsia-400 text-[10px]">(savaşlar)</span></li>
@@ -384,7 +384,7 @@ window.cografya_15_notlari = [
         📚 OKURYAZARLIK DURUMU
       </span>
     </div>
-    <div class="bg-sky-50 dark:bg-sky-900/20 p-4 rounded-xl border border-sky-100 dark:border-sky-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-sky-50 dark:bg-sky-900/20 p-4 rounded-xl border border-sky-100 dark:border-sky-800/30 text-sm w-full">
       <ul class="list-disc list-inside space-y-2 text-xs">
         <li>6 yaş üzeri okuryazar oranı: <b class="text-rose-600 dark:text-rose-400">%97,4</b></li>
         <li>Cumhuriyet'in ilk yıllarına göre <b>çok yüksek</b></li>
@@ -404,7 +404,7 @@ window.cografya_15_notlari = [
         🏭 EKONOMİK SEKTÖRLER (1.-2.-3.)
       </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left w-full text-sm">
       <div class="bg-green-50 dark:bg-green-900/20 p-3 rounded-xl border border-green-100 dark:border-green-800/30">
         <p class="font-semibold text-green-600 dark:text-green-400 text-xs">🌱 1. SEKTÖR</p>
         <ul class="list-disc list-inside space-y-0.5 text-[10px] mt-1">
@@ -449,7 +449,7 @@ window.cografya_15_notlari = [
         💻 EKONOMİK SEKTÖRLER (4.-5.)
       </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
       <div class="bg-purple-50 dark:bg-purple-900/20 p-3 rounded-xl border border-purple-100 dark:border-purple-800/30">
         <p class="font-semibold text-purple-600 dark:text-purple-400 text-xs">📱 4. SEKTÖR</p>
         <ul class="list-disc list-inside space-y-0.5 text-[10px] mt-1">
@@ -476,7 +476,7 @@ window.cografya_15_notlari = [
         ⭐ ÖZET - KRİTİK BİLGİLER
       </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border-2 border-amber-200 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border-2 border-amber-200 dark:border-amber-800/30 text-sm w-full">
       <ul class="list-disc list-inside space-y-1.5 text-xs font-medium">
         <li>📅 <b>1927</b> → Cumhuriyet'in ilk nüfus sayımı</li>
         <li>📅 <b>2007</b> → Adrese Dayalı Nüfus Kayıt Sistemi</li>

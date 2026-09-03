@@ -6,7 +6,7 @@ window.tarih_8_notlari = [
             🌍 AVRUPA'NIN GENEL DURUMU
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Makyavelizm:</b> Avrupa devletlerinin amaca ulaşmak için her türlü tedbire başvurması.</li>
@@ -24,7 +24,7 @@ window.tarih_8_notlari = [
             📋 AVRUPALILARIN HAZIRLADIĞI PROJE PLANLAR
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <h4 class="font-bold text-amber-700 dark:text-amber-400">Dakya Planı</h4>
             <p class="text-xs mt-1">Rusya ve Avusturya'nın planıdır. Eflak ve Boğdan'da Dakya adında bir devlet kurulacak.</p>
@@ -42,7 +42,7 @@ window.tarih_8_notlari = [
             ⚔️ KRİTİK SAVAŞ VE ANTLAŞMALAR (1711-1774)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b class="text-rose-600 dark:text-rose-400">1711 - Prut Antlaşması (Rusya ile):</b> Osmanlı kaybettiği toprakları geri alma umudu. Azak Kalesi Osmanlı'ya geri verildi.</li>
@@ -62,7 +62,7 @@ window.tarih_8_notlari = [
             🏛️ OSMANLI-VENEDİK İLİŞKİLERİ
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full">
         <p><b class="text-rose-600 dark:text-rose-400">Mora Yarımadası'nın fethi tamamlandı.</b></p>
     </div>
     `,
@@ -73,7 +73,7 @@ window.tarih_8_notlari = [
             🏛️ OSMANLI-İRAN İLİŞKİLERİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b class="text-rose-600 dark:text-rose-400">1724 İstanbul Antlaşması:</b> Rusya ile İran paylaşılmıştır.</li>
@@ -89,7 +89,7 @@ window.tarih_8_notlari = [
             🔥 KÜÇÜK KAYNARCA ANTLAŞMASI (1774) - DÖNÜM NOKTASI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b class="text-rose-600 dark:text-rose-400">Kırım bağımsız oldu.</b> ⭐ İlk defa tamamı Müslüman olan bir bölge Osmanlı'nın elinden çıktı.</li>
@@ -107,7 +107,7 @@ window.tarih_8_notlari = [
             📍 KIRIM BÖLGESİ SONRASI OLAYLAR
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>1779 - Aynalıkavak Tenkihnamesi:</b> Şahin Giray'ın Kırım hanlığı olması kararlaştırıldı.</li>
@@ -128,7 +128,7 @@ window.tarih_8_notlari = [
             🇫🇷 1798 - FRANSA'YA KARŞI İLK DENGE POLİTİKASI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Mısır'a saldıran Fransa'ya karşı Osmanlı <b class="text-rose-600 dark:text-rose-400">ilk defa denge politikası</b> uyguladı.</li>
@@ -144,7 +144,7 @@ window.tarih_8_notlari = [
             💫 GENEL NOTLAR
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-slate-50 dark:bg-slate-700/50 p-4 rounded-xl border border-slate-200 dark:border-slate-600">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Düvelerin Tarihçe Sırası:</b> 17. yy = Duraklama, 18. yy = Gerileme, 19. yy = Dağılma.</li>
@@ -160,7 +160,7 @@ window.tarih_8_notlari = [
             🛠️ XVIII. YY ISLAHATLARININ GENEL ÖZELLİKLERİ
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-3 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
             <ul class="list-disc list-inside space-y-1 text-xs">
                 <li><b class="text-rose-600 dark:text-rose-400">Batı örnek alındı.</b> Baskı ve şiddet yoluyla benimsetilmek istenmiştir.</li>
@@ -182,7 +182,7 @@ window.tarih_8_notlari = [
             👑 XVIII. YY ISLAHATÇILARI (KOD: 3-1-3-1-3)
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <div class="flex flex-wrap justify-center gap-3">
             <span class="bg-white dark:bg-slate-800 px-4 py-2 rounded-xl border border-amber-200 dark:border-amber-800/30 font-bold text-amber-700 dark:text-amber-400">III. Ahmet</span>
             <span class="text-2xl text-amber-500">→</span>
@@ -203,7 +203,7 @@ window.tarih_8_notlari = [
             🎨 1) III. AHMET DÖNEMİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <h4 class="font-bold text-blue-700 dark:text-blue-400">Edirne Olayı</h4>
             <p class="text-xs">Şeyhülislam Feyzullah Efendi'nin İstanbul'u idare altına alması üzerine II. Mustafa Edirne'de yaşamaya başladı. Yeniçeriler (kapıkulları) ayaklanarak II. Mustafa'yı tahttan indirdi.</p>
@@ -230,7 +230,7 @@ window.tarih_8_notlari = [
             📚 LALE DEVRİ ISLAHATLAR (Kültür-Sanat-Teknoloji)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b class="text-rose-600 dark:text-rose-400">İbrahim Müteferrika ve Sait Efendi:</b> Macaristan'dan matbaa getirildi. <b class="text-rose-600 dark:text-rose-400">Batı'dan getirilen ilk yenilik!</b> (Dini eserler basması yasak)</li>
@@ -257,7 +257,7 @@ window.tarih_8_notlari = [
             ⚔️ 2) I. MAHMUT DÖNEMİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b class="text-rose-600 dark:text-rose-400">İlk defa batı tarzında askeri ıslahatlar yapıldı!</b> ⭐</li>
@@ -278,7 +278,7 @@ window.tarih_8_notlari = [
             🎓 3) III. MUSTAFA DÖNEMİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Dönem İsimli Devlet Adamları:</b> Koca Ragıp Paşa, Baron de Tott, Cezayirli Gazi Hasan Paşa</li>
@@ -296,7 +296,7 @@ window.tarih_8_notlari = [
             🎖️ 4) I. ABDÜLHAMİT DÖNEMİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Dönem İsimli Devlet Adamları:</b> Cezayirli Gazi Hasan, Halil Hamit Paşa</li>
@@ -320,7 +320,7 @@ window.tarih_8_notlari = [
             🔴 5) III. SELİM DÖNEMİ - NİZAM-I CEDİD (YENİ DÜZEN) ÇAĞI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b class="text-rose-600 dark:text-rose-400">Tüm ıslahatlar "Nizam-ı Cedid" adıyla anılmıştır.</b> ⭐</li>
@@ -338,7 +338,7 @@ window.tarih_8_notlari = [
             📜 NİZAM-I CEDİD DÖNEMİNDE YAPILAN ISLAHATLAR
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b class="text-rose-600 dark:text-rose-400">İlk kalıcı elçilik Londra'ya açıldı.</b> (Yusuf Agah Efendi) ⭐</li>

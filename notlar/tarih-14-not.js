@@ -7,7 +7,7 @@ window.tarih_14_notlari = [
             🏛️ I. TBMM - AÇILDIĞINDA DÜŞÜNÜLEN İSİMLER
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Kurultay</li>
             <li>Millet Meclisi</li>
@@ -27,7 +27,7 @@ window.tarih_14_notlari = [
             ⭐ I. TBMM'NİN GENEL ÖZELLİKLERİ
         </span>
     </div>
-    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Kurucu:</b> Yeni bir devlet, ordu ve anayasa oluşturması.</li>
             <li><b>Demokratik:</b> Üyelerini seçimle belirlemesi ve her türlü fikrin tartışılması.</li>
@@ -58,7 +58,7 @@ window.tarih_14_notlari = [
             📜 24 NİSAN KARARLARI (1 NUMARALI KARAR)
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Hükümet kurmak zorunludur.</li>
             <li>Geçici olarak bir hükümet başkanı tanımak ya da bir padişah vekili ortaya çıkarması uygun değildir.</li>
@@ -78,7 +78,7 @@ window.tarih_14_notlari = [
             🏛️ İLK HÜKÜMET (İCRA VEKİLLERİ HEYETİ)
         </span>
     </div>
-    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm w-full">
         <table class="w-full text-xs border-collapse">
             <thead>
                 <tr class="bg-green-200 dark:bg-green-800/40">
@@ -123,7 +123,7 @@ window.tarih_14_notlari = [
             🏛️ TBMM İÇİNDE YER ALAN GRUPLAR
         </span>
     </div>
-    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Müdafaa-i Hukuk</li>
             <li>Yeşil Ordu</li>
@@ -145,7 +145,7 @@ window.tarih_14_notlari = [
             📜 I. TBMM DÖNEMİNDE ÇIKARILAN ÖNEMLİ KANUNLAR
         </span>
     </div>
-    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm w-full">
         <table class="w-full text-xs border-collapse">
             <thead>
                 <tr class="bg-cyan-200 dark:bg-cyan-800/40">
@@ -210,7 +210,7 @@ window.tarih_14_notlari = [
             📜 SEVR BARIŞ ANTLAŞMASI (10 Ağustos 1920)
         </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>18-26 Nisan 1920'de İtalya'nın <b>San Remo</b> kentinde yapılan konferansta antlaşmanın maddeleri belirlendi.</li>
             <li>Konferansa giden <b>Tevfik Paşa</b> 433 maddeden oluşan Sevr Antlaşması'nı kabul etmedi.</li>
@@ -238,7 +238,7 @@ window.tarih_14_notlari = [
             📜 SEVR BARIŞ ANTLAŞMASI - MADDELERİ
         </span>
     </div>
-    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>İzmir ve çevresi ile Doğu Trakya <b>Yunanlılara</b> bırakılacak.</li>
             <li>Antalya, Konya ve 12 Ada <b>İtalyanlara</b> bırakıldı.</li>
@@ -263,7 +263,7 @@ window.tarih_14_notlari = [
             ⚔️ İSTANBUL HÜKÜMETİ TARAFINDAN ÇIKARILAN AYAKLANMALAR
         </span>
     </div>
-    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Ahmet Anzavur</b> (Kuvayı Muhammediye)</li>
             <li><b>Kuvayı İnzibatiye</b> (Hilafet Ordusu)</li>
@@ -284,7 +284,7 @@ window.tarih_14_notlari = [
             ⚔️ İSTANBUL HÜKÜMETİ VE İTİLAF DEVLETLERİ'NİN ORTAYA ÇIKARDIĞI İSYANLAR
         </span>
     </div>
-    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Bolu, Düzce, Hendek, Adapazarı, Yozgat, Bozkır, Delibaş Mehmet, Ali Batı, Çopur Musa, Milli Aşireti, Cemil Çeto, Postacı Nazım, Zile (Tokat), Şeyh Recep, Koçgiri</li>
         </ul>
@@ -304,7 +304,7 @@ window.tarih_14_notlari = [
             ⚔️ ESKİDEN KUVAYIMİLLİYECİ OLUP SONRADAN AYAKLANANLAR
         </span>
     </div>
-    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Çerkez Ethem</b> (I. İnönü Savaşı sırasında)</li>
             <li><b>Demirci Mehmet Efe</b></li>
@@ -324,7 +324,7 @@ window.tarih_14_notlari = [
             ⚔️ AZINLIKLAR TARAFINDAN ÇIKARILAN AYAKLANMALAR
         </span>
     </div>
-    <div class="bg-pink-50 dark:bg-pink-900/20 p-4 rounded-xl border border-pink-100 dark:border-pink-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-pink-50 dark:bg-pink-900/20 p-4 rounded-xl border border-pink-100 dark:border-pink-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Rum İsyanı</li>
             <li>Ermeni İsyanları (Haçin Olayı, Zeytun Olayı)</li>
@@ -344,7 +344,7 @@ window.tarih_14_notlari = [
             📋 AYAKLANMALARIN SONUÇLARI
         </span>
     </div>
-    <div class="bg-slate-50 dark:bg-slate-800/20 p-4 rounded-xl border border-slate-100 dark:border-slate-700/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-slate-50 dark:bg-slate-800/20 p-4 rounded-xl border border-slate-100 dark:border-slate-700/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>TBMM'nin isyanları bastırmasıyla <b>gücü ve otoritesi artmıştır</b>.</li>
             <li>Anadolu'ya egemen olmasını sağlamıştır.</li>
@@ -364,7 +364,7 @@ window.tarih_14_notlari = [
             🛡️ AYAKLANMALARA KARŞI ALINAN ÖNLEMLER
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Hakimiyet-i Milliye</b> gazetesi yayınlandı.</li>
             <li><b>Anadolu Ajansı</b> kuruldu.</li>
@@ -385,7 +385,7 @@ window.tarih_14_notlari = [
             ⚖️ İSTİKLAL MAHKEMELERİNİN ÖZELLİKLERİ
         </span>
     </div>
-    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Düzenli ordunun kurulması ve devamının sağlanması için kuruldu.</li>
             <li>Meclis içinden seçilen <b>3 kişi</b> tarafından oluşturulan <b>seyyar mahkemelerdir</b>.</li>

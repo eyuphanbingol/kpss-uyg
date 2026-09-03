@@ -6,7 +6,7 @@ window.tarih_6_notlari = [
             👑 OSMANLI DEVLETİ YÜKSELME DÖNEMİ
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <p>İstanbul'un fethiyle (1453) başlayıp Sokullu Mehmet Paşa'nın ölümüne (1579) kadar süren; Osmanlı'nın en geniş sınırlara ulaştığı, kurumların oturduğu ve merkezi otoritenin en güçlü olduğu dönemdir.</p>
     </div>
     `,
@@ -17,7 +17,7 @@ window.tarih_6_notlari = [
             🏆 1. FATİH SULTAN MEHMET
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>7 dil bilmektedir. <b class="text-rose-600 dark:text-rose-400">'Avni'</b> mahlasıyla şiirler yazmıştır.</li>
@@ -34,7 +34,7 @@ window.tarih_6_notlari = [
             🕌 A. İSTANBUL'UN FETHİ NEDENLERİ
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-2">
             <li>Anadolu ve Rumeli arasında toprak bütünlüğünü sağlamak</li>
             <li>Boğazlara ve İpek Yolu'na hakim olmak</li>
@@ -52,7 +52,7 @@ window.tarih_6_notlari = [
             ⚙️ B. FETİH İÇİN OSMANLI'NIN HAZIRLIKLARI
         </span>
     </div>
-    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-2">
             <li>Venedik ve Eflak prensiyle saldırmazlık antlaşması imzalandı</li>
             <li><b class="text-rose-600 dark:text-rose-400">'Şahi'</b> adı verilen büyük toplar döküldü</li>
@@ -69,7 +69,7 @@ window.tarih_6_notlari = [
             🛡️ C. BİZANS'IN ALDIĞI ÖNLEMLER
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Grejova (Rum ateşi) çoğaltıldı</li>
@@ -92,7 +92,7 @@ window.tarih_6_notlari = [
             📜 D. İSTANBUL'UN FETHİNİN SONUÇLARI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-emerald-50 dark:bg-emerald-900/20 p-4 rounded-xl border border-emerald-100 dark:border-emerald-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Gennadios Rum Patriği, Ovakim Ermeni Patriği oldu</li>
@@ -115,7 +115,7 @@ window.tarih_6_notlari = [
             🗺️ FATİH DÖNEMİ FETİH HAREKETLERİ – ANADOLU
         </span>
     </div>
-    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-2">
             <li>Candaroğulları'ndan <b class="text-rose-600 dark:text-rose-400">Sinop ve Samsun</b></li>
             <li>Karamanoğulları'ndan <b class="text-rose-600 dark:text-rose-400">Konya ve Karaman</b></li>
@@ -132,7 +132,7 @@ window.tarih_6_notlari = [
             🗺️ FATİH DÖNEMİ FETİH HAREKETLERİ – BALKANLAR VE DENİZLER
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30">
             <h4 class="font-bold text-teal-700 dark:text-teal-400">Balkanlar</h4>
             <p>Sırbistan (Belgrad hariç), Bosna-Hersek, Arnavutluk, Mora, Eflak (Romanya), Boğdan (Moldova)</p>
@@ -158,7 +158,7 @@ window.tarih_6_notlari = [
             ⚔️ FATİH DÖNEMİ GERGİNLİKLER VE OTLUKBELİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Hicaz su yolları sorunu yüzünden Karamanoğulları, Dulkadiroğulları ve Memlüklerle ilişkiler gerildi (Osmanlı-Memlük savaşına yol açmadı).</li>
@@ -174,7 +174,7 @@ window.tarih_6_notlari = [
             🏛️ F. FATİH DÖNEMİ DİĞER GELİŞMELER
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Topkapı Sarayı (yeni saray) yapıldı; Ayasofya camiye çevrildi</li>
@@ -197,7 +197,7 @@ window.tarih_6_notlari = [
             👑 2. II. BEYAZIT
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b class="text-rose-600 dark:text-rose-400">Cem Sultan olayı</b> bu döneme damga vurmuş; Osmanlı'da ilk kez bir iç sorun uluslararası sorun hâline gelmiştir.</li>
@@ -218,7 +218,7 @@ window.tarih_6_notlari = [
             ⚔️ 3. YAVUZ SULTAN SELİM
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b class="text-rose-600 dark:text-rose-400">'8 yıla 80 yıllık iş sığdırmış padişah'</b> olarak nitelendirilir.</li>
@@ -235,7 +235,7 @@ window.tarih_6_notlari = [
             🗡️ YAVUZ'UN SAVAŞLARI
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30">
             <b class="text-rose-600 dark:text-rose-400">1514 Çaldıran Savaşı</b>
             <p class="text-xs mt-1">İran'a karşı kazanıldı</p>
@@ -261,7 +261,7 @@ window.tarih_6_notlari = [
             🏺 RİDANİYE SAVAŞI'NIN SONUÇLARI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-emerald-50 dark:bg-emerald-900/20 p-4 rounded-xl border border-emerald-100 dark:border-emerald-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b class="text-rose-600 dark:text-rose-400">Memlük Devleti yıkıldı</b> (Suriye-Filistin-Irak-Hicaz-Mısır alındı)</li>
@@ -283,7 +283,7 @@ window.tarih_6_notlari = [
             👑 4. KANUNİ SULTAN SÜLEYMAN
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Osmanlı tarihinin <b class="text-rose-600 dark:text-rose-400">en uzun tahtta kalan padişahı</b>dır.</li>
@@ -300,7 +300,7 @@ window.tarih_6_notlari = [
             ⚔️ KANUNİ'NİN FETİH VE SEFERLERİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Belgrad, Rodos fethedildi</li>
@@ -319,7 +319,7 @@ window.tarih_6_notlari = [
             🌊 KANUNİ DÖNEMİ DENİZ SEFERLERİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b class="text-rose-600 dark:text-rose-400">Preveze Deniz Savaşı</b> (Barbaros Hayrettin Paşa – Andrea Doria) → Akdeniz Türk gölü oldu</li>
@@ -342,7 +342,7 @@ window.tarih_6_notlari = [
             🤝 KAPİTÜLASYONLAR (KANUNİ – FRANSA)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <p>Venedik'e verilenden daha geniş şartlarla Fransa'ya kapitülasyon verilmiştir.</p>
             <h4 class="font-bold text-amber-700 dark:text-amber-400 mt-3 mb-2 border-b border-amber-200 dark:border-amber-800/30 pb-1">Amaçlar:</h4>
@@ -363,7 +363,7 @@ window.tarih_6_notlari = [
             🧭 5. SOKULLU MEHMET PAŞA
         </span>
     </div>
-    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm w-full">
         <p>Kanuni, II. Selim ve III. Murat dönemlerinde sadrazamlık yapmış, devlet işlerindeki etkinliğinden dolayı bu döneme adını vermiştir.</p>
     </div>
     `,
@@ -374,7 +374,7 @@ window.tarih_6_notlari = [
             ⚓ II. SELİM DÖNEMİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>1571'de <b class="text-rose-600 dark:text-rose-400">Kıbrıs</b>, Venedik'ten alındı.</li>
@@ -396,7 +396,7 @@ window.tarih_6_notlari = [
             🗺️ III. MURAT DÖNEMİ
         </span>
     </div>
-    <div class="bg-emerald-50 dark:bg-emerald-900/20 p-4 rounded-xl border border-emerald-100 dark:border-emerald-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-emerald-50 dark:bg-emerald-900/20 p-4 rounded-xl border border-emerald-100 dark:border-emerald-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-2">
             <li>1576'da <b class="text-rose-600 dark:text-rose-400">Fas</b> Osmanlı egemenliğine girdi.</li>
             <li>İran ile <b class="text-rose-600 dark:text-rose-400">Meşaleler Savaşı</b> yapıldı; sonucunda <b class="text-rose-600 dark:text-rose-400">1590 Ferhat Paşa Antlaşması</b> imzalandı ve Osmanlı Devleti Doğu'da en geniş sınırlarına ulaştı.</li>
@@ -410,7 +410,7 @@ window.tarih_6_notlari = [
             🛠️ SOKULLU MEHMET PAŞA'NIN PROJELERİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30">
             <h4 class="font-bold text-purple-700 dark:text-purple-400">1) Don-Volga Irmakları Birleştirme Projesi</h4>
             <p class="text-xs mt-1"><b>Amaçlar:</b> Kırım'ı Ruslara karşı korumak, Orta Asya Türkleriyle bağlantı kurmak, İran'ı kuzeyden kontrol etmek, İpek Yolu'nu canlandırmak.</p>

@@ -7,7 +7,7 @@ window.cografya_16_notlari = [
             🏛️ TÜRKİYE'DE YERLEŞME TARİHİ VE YERLEŞMEYİ ETKİLEYEN FAKTÖRLER
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">ANADOLU'NUN YERLEŞİME UYGUN OLMASININ NEDENLERİ:</p>
         <ul class="list-disc list-inside space-y-1 text-xs mt-1">
             <li>Orta kuşak ülkesi olması → Ilıman iklim kuşakları</li>
@@ -29,7 +29,7 @@ window.cografya_16_notlari = [
             🏺 ANADOLU'DAKİ İLK YERLEŞİM YERLERİ
         </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>İlk mağaralar:</b> Karain (Antalya), Yarımburgaz (İstanbul)</li>
             <li><b>Anadolu'daki ilk köy:</b> Çayönü (Diyarbakır)</li>
@@ -50,7 +50,7 @@ window.cografya_16_notlari = [
             🏘️ TÜRKİYE'DE YERLEŞMELER - SINIFLANDIRMA
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">KIR YERLEŞMELERİ</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -79,7 +79,7 @@ window.cografya_16_notlari = [
             📊 KIR VE KENT AYRIMINDA KULLANILAN KRİTERLER
         </span>
     </div>
-    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Nüfus miktarı</li>
             <li>İdari yönetim biçimi</li>
@@ -97,7 +97,7 @@ window.cografya_16_notlari = [
             🌾 TÜRKİYE'DE KIRSAL YERLEŞMELER
         </span>
     </div>
-    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm w-full">
         <p class="text-xs"><b>Tanım:</b> Nüfusu 20.000 altında olan yerleşmelere "kırsal yerleşme" denir.</p>
         <p class="font-bold text-rose-600 dark:text-rose-400 text-xs mt-3">KIRSAL YERLEŞME NÜFUSUNA GÖRE SINIFLANDIRMA:</p>
         <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -118,7 +118,7 @@ window.cografya_16_notlari = [
             🏡 KÖY ALTI YERLEŞMELERİ
         </span>
     </div>
-    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm w-full">
         <p class="text-xs"><b>Tanım:</b> İdari bakımdan köy yerleşmelerine bağlı olan geçici ya da kalıcı olarak ikamet edilen yerleşmeler.</p>
         <div class="mt-3 bg-yellow-100 dark:bg-yellow-800/30 p-3 rounded-lg text-yellow-700 dark:text-yellow-400 border border-yellow-200 dark:border-yellow-800/30 text-xs">
             ⭐ <b>NOT:</b> Köy altı yerleşmelerinde → Otlakların sınırlı olması, tarım arazilerinin uzak olması
@@ -133,7 +133,7 @@ window.cografya_16_notlari = [
             🏚️ KALICI KÖY ALTI YERLEŞMELERİ
         </span>
     </div>
-    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Mezra:</b> Doğu Anadolu'da tarım amacıyla kurulan yerleşmeler</li>
             <li><b>Divan:</b> Batı Karadeniz'e özgü mahallelerin bir araya gelmesiyle oluşan yerleşmeler</li>
@@ -150,7 +150,7 @@ window.cografya_16_notlari = [
             ⛺ GEÇİCİ KÖY ALTI YERLEŞMELERİ
         </span>
     </div>
-    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Oba</b></li>
             <li><b>Yayla</b></li>
@@ -170,7 +170,7 @@ window.cografya_16_notlari = [
             🐪 OBA (Konargöçer Hayvancılık)
         </span>
     </div>
-    <div class="bg-lime-50 dark:bg-lime-900/20 p-4 rounded-xl border border-lime-100 dark:border-lime-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-lime-50 dark:bg-lime-900/20 p-4 rounded-xl border border-lime-100 dark:border-lime-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Tanım:</b> Konargöçer hayvancılıkla uğraşan kişilerin kurduğu çadır topluluğu</li>
             <li><b>Bulunduğu yerler:</b> Orta Karadeniz ve Toroslar</li>
@@ -185,7 +185,7 @@ window.cografya_16_notlari = [
             🏔️ YAYLA
         </span>
     </div>
-    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Tanım:</b> Yazı geçirecek yer anlamına gelir</li>
             <li><b>Yaygın olduğu yerler:</b> Doğu Karadeniz, Akdeniz, Menteşe yöresi, İç ve Doğu Anadolu</li>
@@ -208,7 +208,7 @@ window.cografya_16_notlari = [
             🐑 DİĞER GEÇİCİ YERLEŞMELER
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-3 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
             <ul class="list-disc list-inside space-y-1 text-xs">
                 <li><b>Güzle:</b> Yaylaya gidişte/dönüşte kullanılır (sonbahar)</li>
@@ -232,7 +232,7 @@ window.cografya_16_notlari = [
             🏙️ TÜRKİYE'DE KENTSEL YERLEŞMELER
         </span>
     </div>
-    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Büyükşehir Belediyesi:</b> Nüfus 750 bini geçerse</li>
             <li><b>Metropol:</b> Nüfus 1 milyonu geçerse</li>
@@ -254,7 +254,7 @@ window.cografya_16_notlari = [
             🎯 FONKSİYONA GÖRE KENTLER
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-emerald-50 dark:bg-emerald-900/20 p-3 rounded-xl border border-emerald-100 dark:border-emerald-800/30">
             <ul class="list-disc list-inside space-y-1 text-xs">
                 <li><b>Tarım Kentleri:</b> Yozgat, Rize, Söke, Tarsus</li>
@@ -282,7 +282,7 @@ window.cografya_16_notlari = [
             📐 YERLEŞME DOKUSU
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-violet-50 dark:bg-violet-900/20 p-3 rounded-xl border border-violet-100 dark:border-violet-800/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">DAĞINIK DOKU</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -311,7 +311,7 @@ window.cografya_16_notlari = [
             🗺️ YERLEŞME ŞEKİLLERİ
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-pink-50 dark:bg-pink-900/20 p-3 rounded-xl border border-pink-100 dark:border-pink-800/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">ÇİZGİSEL ŞEKİLLİ</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -340,7 +340,7 @@ window.cografya_16_notlari = [
             🏠 MESKEN TİPLERİ
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-slate-50 dark:bg-slate-800/20 p-3 rounded-xl border border-slate-100 dark:border-slate-700/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">AHŞAP</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">

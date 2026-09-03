@@ -6,7 +6,7 @@ window.cografya_3_notlari = [
             🌪️ 2. DIŞ KUVVETLER
         </span>
     </div>
-    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm w-full">
         <p>Kaynağını atmosferdeki hava olaylarından ve enerjisini Güneş'ten alan kuvvetlere dış kuvvetler denir. Yeryüzünü aşındırma, taşıma ve biriktirme faaliyetleriyle şekillendirirler.</p>
     </div>
     `,
@@ -17,7 +17,7 @@ window.cografya_3_notlari = [
             💧 DIŞ KUVVETLERİN TÜRKİYE'DEKİ ETKİLERİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Türkiye'nin bugünkü yeryüzü görünümüne gelmesinde <b class="text-rose-600 dark:text-rose-400">en etkili dış kuvvet akarsulardır.</b></li>
@@ -36,7 +36,7 @@ window.cografya_3_notlari = [
             ⏳ B. TÜRKİYE'DE JEOLOJİK ZAMANLAR (1. JEOLOJİK ZAMAN - PALEOZOİK)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <p>Bu dönemde oluşan <b class="text-rose-600 dark:text-rose-400">masif araziler</b>; milyonlarca yıl önce katılaşmış, sıkışmış, sert ve yaşlı temel bloklardır.</p>
             <p class="mt-2">Jeolojik olarak oturmuş yapılara sahip olduklarından, kural olarak iç kısımlarında <b class="text-rose-600 dark:text-rose-400">deprem riski azdır</b> ve Türkiye'nin temel iskeletini oluştururlar.</p>
@@ -54,7 +54,7 @@ window.cografya_3_notlari = [
             🗺️ TÜRKİYE'DEKİ EN BİLİNEN MASİF ALANLARI
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-green-50 dark:bg-green-900/20 p-3 rounded-xl border border-green-100 dark:border-green-800/30">
             <ul class="list-disc list-inside space-y-1 text-xs">
                 <li><b>Yıldız Dağları Masifi:</b> Trakya (Haritanın kuzeybatısı)</li>
@@ -83,7 +83,7 @@ window.cografya_3_notlari = [
             🦕 2. JEOLOJİK ZAMAN (MEZOZOİK)
         </span>
     </div>
-    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm w-full">
         <p>Büyük oranda denizel tortulanma ve birikme dönemidir.</p>
         <p class="mt-2">Bu dönemde <b class="text-rose-600 dark:text-rose-400">Tetis Okyanusu</b> oluşmuştur ve gelecekte gerçekleşecek olan Alp-Himalaya orojenezinin hazırlık aşaması yaşanmıştır.</p>
     </div>
@@ -95,7 +95,7 @@ window.cografya_3_notlari = [
             ⛰️ 3. JEOLOJİK ZAMAN (TERSİYER)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30">
             <p>Türkiye'nin ana hatlarının oluştuğu çok hareketli bir dönemdir.</p>
             <ul class="list-disc list-inside space-y-2 mt-3">
@@ -116,7 +116,7 @@ window.cografya_3_notlari = [
             🧊 4. JEOLOJİK ZAMAN (KUVATERNER)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30">
             <p>Yakın dönemi ve bugünkü görünümü kapsar.</p>
             <ul class="list-disc list-inside space-y-2 mt-3">
@@ -136,7 +136,7 @@ window.cografya_3_notlari = [
             🌱 NOT - TÜRKİYE'NİN GENÇ OLUŞUMU
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <p>Türkiye jeolojik olarak <b class="text-rose-600 dark:text-rose-400">genç oluşumlu</b> (çoğunlukla 3. ve 4. zamanda şekillenmiş) bir ülkedir.</p>
             <p class="mt-2"><b>Bu nedenle;</b></p>
@@ -157,7 +157,7 @@ window.cografya_3_notlari = [
             🪵 KÖMÜR REZERVİ İPUCU
         </span>
     </div>
-    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm w-full">
         <p>Ülkemizde <b class="text-rose-600 dark:text-rose-400">Linyit kömürünün</b> çok yaygın olması Türkiye arazisinin <b class="text-rose-600 dark:text-rose-400">genç oluşumlu</b> olduğunu kanıtlar.</p>
         <p class="mt-2">Eğer ülkemizde <b class="text-rose-600 dark:text-rose-400">Taş kömürü</b> (Zonguldak çevresi) çok fazla olsaydı, bu arazinin 1. Jeolojik Zaman'dan kalan <b class="text-rose-600 dark:text-rose-400">yaşlı/eski bir arazi</b> olduğunu kanıtlayacaktı.</p>
     </div>
@@ -169,7 +169,7 @@ window.cografya_3_notlari = [
             🏔️ C. DAĞLAR (Oluşumuna Göre Kıvrım Dağlar)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <p>Esnek tabakaların sıkışarak kıvrılmasıyla oluşan dağlarımızdır.</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-3">
@@ -225,7 +225,7 @@ window.cografya_3_notlari = [
             🪓 C. DAĞLAR (Oluşumuna Göre Kırık Dağlar)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <p>Sert tabakaların kırılmasıyla (Horst-Graben) oluşan dağlardır. En yaygın olduğu yer <b class="text-rose-600 dark:text-rose-400">Ege Bölgesi</b>'dir (Batı Anadolu).</p>
             <div class="mt-3 bg-white dark:bg-slate-800/50 p-3 rounded-lg">
@@ -263,7 +263,7 @@ window.cografya_3_notlari = [
             🌋 C. DAĞLAR (Oluşumuna Göre Volkanik Dağlar)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30">
             <p>Magmanın yüzeye çıkıp soğumasıyla oluşan konilerdir.</p>
             <ul class="list-disc list-inside space-y-2 mt-3">
@@ -313,7 +313,7 @@ window.cografya_3_notlari = [
             🌊 DAĞLARIN KIYIYA PARALEL UZANDIĞI YERLERİN ÖZELLİKLERİ (Karadeniz ve Akdeniz)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Kıyı ile iç kesimler arasında iklim, nem ve bitki örtüsü farkı fazladır.</li>
@@ -335,7 +335,7 @@ window.cografya_3_notlari = [
             🗂️ GENEL DAĞ SINIFLANDIRMASI (ÖZET KUŞAKLAR)
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-purple-50 dark:bg-purple-900/20 p-3 rounded-xl border border-purple-100 dark:border-purple-800/30">
             <b class="text-purple-700 dark:text-purple-400">Toroslar Kuşağı</b>
             <p class="text-xs mt-1">Batıda Muğla'dan başlayıp Van Gölü'nün güneyine kadar uzanan güneydeki kıvrım dağların genel adıdır.</p>

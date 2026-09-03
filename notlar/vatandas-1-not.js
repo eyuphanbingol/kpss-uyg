@@ -7,7 +7,7 @@ window.vatandas_1_notlari = [
             👥 TOPLUMSAL YAŞAM VE SOSYAL DÜZEN KURALLARI
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full">
         <p class="text-xs">İnsan, toplum içinde yaşayan sosyal bir varlıktır. Toplum içinde yaşamak bir düzeni gerektirir. Bu düzen ise kurallar ile sağlanır. İşte bu kurallara <b>sosyal düzen kuralları</b> denir.</p>
         <p class="font-bold text-rose-600 dark:text-rose-400 text-xs mt-3">SOSYAL DÜZEN KURALLARI (4 Ana Başlık):</p>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-2">
@@ -34,7 +34,7 @@ window.vatandas_1_notlari = [
             📖 DİN KURALLARI
         </span>
     </div>
-    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Tanım:</b> Tanrı tarafından konulan ve peygamberler aracılığıyla kutsal kitaplarla insanlara ulaştırılan emir ve yasaklardır.</li>
             <li><b>Örnekler:</b> Namaz kılmak, oruç tutmak, zekât vermek, kurban kesmek.</li>
@@ -50,7 +50,7 @@ window.vatandas_1_notlari = [
             ❤️ AHLAK KURALLARI
         </span>
     </div>
-    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm w-full">
         <p class="text-xs"><b>Tanım:</b> İnsanların kendilerine ve başkalarına karşı davranışları hakkında toplumda yerleşmiş "iyi – kötü", "doğru – yanlış" şeklindeki değer yargılarıdır.</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
             <div class="bg-green-100 dark:bg-green-800/30 p-3 rounded-lg">
@@ -81,7 +81,7 @@ window.vatandas_1_notlari = [
             🤝 GÖRGÜ (NEZAKET) KURALLARI
         </span>
     </div>
-    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Tanım:</b> İnsanların günlük yaşantılarında veya belirli olay ve günlerde nasıl davranmaları gerektiğini gösteren kurallardır.</li>
             <li><b>Örnekler:</b> Yeme – içme adabı, oturup – kalkma kuralları, hasta ziyareti.</li>
@@ -97,7 +97,7 @@ window.vatandas_1_notlari = [
             ⚖️ HUKUK KURALLARI
         </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Tanım:</b> İnsanların birbirleriyle ve toplumla ilişkilerini düzenleyen, uyulması zorunlu olan emir ve yasaklardır.</li>
             <li><b>Örnek:</b> Bir insanı öldüren kişi, müebbet hapis cezası ile cezalandırılır (TCK Madde 81).</li>
@@ -116,7 +116,7 @@ window.vatandas_1_notlari = [
             📜 HUKUK KURALLARININ ÖZELLİKLERİ
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-3 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">I. GENELLİK</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -149,7 +149,7 @@ window.vatandas_1_notlari = [
             🎯 HUKUK KURALLARININ AMAÇLARI
         </span>
     </div>
-    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm w-full">
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
             <div class="bg-teal-100 dark:bg-teal-800/30 p-2 rounded-lg text-center text-xs">
                 🕊️ Toplumsal Düzen ve Barış
@@ -183,7 +183,7 @@ window.vatandas_1_notlari = [
             ⚖️ ADALET TÜRLERİ
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-3 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">DENKLEŞTİRİCİ (Düzeltici) ADALET</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -210,7 +210,7 @@ window.vatandas_1_notlari = [
             📋 HUKUK KURALLARININ NİTELİKLERİ (TÜRLERİ)
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left w-full text-sm">
         <div class="bg-cyan-50 dark:bg-cyan-900/20 p-3 rounded-xl border border-cyan-100 dark:border-cyan-800/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">A) EMREDİCİ</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -246,7 +246,7 @@ window.vatandas_1_notlari = [
             📚 HUKUK ÇEŞİTLERİ
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-pink-50 dark:bg-pink-900/20 p-3 rounded-xl border border-pink-100 dark:border-pink-800/30">
             <ul class="list-disc list-inside space-y-1 text-xs">
                 <li><b>Pozitif Hukuk:</b> Bir ülkede belirli bir dönemde yürürlükte bulunan tüm hukuk kuralları</li>
@@ -271,7 +271,7 @@ window.vatandas_1_notlari = [
             📖 HUKUKUN KAYNAKLARI - ASLI KAYNAKLAR (Bağlayıcı)
         </span>
     </div>
-    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm w-full">
         <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">A) YAZILI KAYNAKLAR (Mevzuat) - Normlar Hiyerarşisi:</p>
         <ol class="list-decimal list-inside space-y-1 text-xs mt-1">
             <li><b>Anayasa</b> (En üst norm)</li>
@@ -298,7 +298,7 @@ window.vatandas_1_notlari = [
             📚 HUKUKUN YARDIMCI KAYNAKLARI (Bağlayıcı Değil)
         </span>
     </div>
-    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Doktrin:</b> Hukuk profesörleri, akademisyenler tarafından yazılan eserler ve görüşler</li>
             <li><b>İçtihat:</b> Mahkeme kararları (özellikle Yargıtay ve Danıştay kararları)</li>
@@ -317,7 +317,7 @@ window.vatandas_1_notlari = [
             🔍 HUKUKTA BOŞLUK TÜRLERİ
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-slate-50 dark:bg-slate-800/20 p-3 rounded-xl border border-slate-100 dark:border-slate-700/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">I. KANUN BOŞLUĞU</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -333,7 +333,7 @@ window.vatandas_1_notlari = [
             </ul>
         </div>
     </div>
-    <div class="mt-3 bg-slate-100 dark:bg-slate-800/30 p-3 rounded-lg text-slate-700 dark:text-slate-400 border border-slate-200 dark:border-slate-700/30 text-xs max-w-2xl mx-auto">
+    <div class="mt-3 bg-slate-100 dark:bg-slate-800/30 p-3 rounded-lg text-slate-700 dark:text-slate-400 border border-slate-200 dark:border-slate-700/30 text-xs w-full">
         ⭐ <b>TMK m. 1'e göre HÂKİMİN SIRASI:</b><br>
         1. Yazılı kural varsa → uygular<br>
         2. Örf ve âdet varsa → uygular<br>
@@ -348,7 +348,7 @@ window.vatandas_1_notlari = [
             🏛️ HUKUKUN DALLARI
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">KAMU HUKUKU</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -387,7 +387,7 @@ window.vatandas_1_notlari = [
             ⚖️ CEZA KAVRAMI - ADLİ CEZALAR
         </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full">
         <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">A) HAPİS CEZALARI</p>
         <ul class="list-disc list-inside space-y-1 text-xs mt-1">
             <li><b>Ağırlaştırılmış Müebbet:</b> En az 30 yıl sonra şartlı salıverilme</li>
@@ -409,7 +409,7 @@ window.vatandas_1_notlari = [
             🏛️ İDARİ CEZALAR (657, Kabahatler Kanunu vb.)
         </span>
     </div>
-    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Disiplin Cezaları:</b> Uyarma, kınama, aylıktan kesme, memurluktan çıkarma</li>
             <li><b>Diğer İdari Cezalar:</b> Trafik para cezaları, sigara içme cezaları, yıkım kararı</li>
@@ -427,7 +427,7 @@ window.vatandas_1_notlari = [
             🚨 SUÇUN UNSURLARI
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left w-full text-sm">
         <div class="bg-purple-50 dark:bg-purple-900/20 p-3 rounded-xl border border-purple-100 dark:border-purple-800/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">1. KANUNİLİK</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -464,7 +464,7 @@ window.vatandas_1_notlari = [
             🧠 KUSURLULUĞU ETKİLEYEN HALLER
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left w-full text-sm">
         <div class="bg-teal-50 dark:bg-teal-900/20 p-3 rounded-xl border border-teal-100 dark:border-teal-800/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">AKIL HASTALIĞI</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -498,7 +498,7 @@ window.vatandas_1_notlari = [
             🛡️ SUÇ VE CEZALARA İLİŞKİN ANAYASAL ESASLAR
         </span>
     </div>
-    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm w-full">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
             <div class="bg-indigo-100 dark:bg-indigo-800/30 p-2 rounded-lg">
                 ⚖️ Kanunsuz suç ve ceza olmaz
@@ -535,7 +535,7 @@ window.vatandas_1_notlari = [
             💰 TAZMİNAT
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-green-50 dark:bg-green-900/20 p-3 rounded-xl border border-green-100 dark:border-green-800/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">MADDİ TAZMİNAT</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -562,7 +562,7 @@ window.vatandas_1_notlari = [
             ⚡ CEBRİ İCRA (Zorla Tahsil)
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Borç ilişkisi kapsamında yükümlülüğünü yerine getirmeyen kişiye karşı <b>devlet gücüyle</b> uygulanan zorlayıcı tedbirler</li>
             <li>İcra dairesi ve icra mahkemesi aracılığıyla uygulanır</li>
@@ -578,7 +578,7 @@ window.vatandas_1_notlari = [
             🚫 HÜKÜMSÜZLÜK TÜRLERİ
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-rose-50 dark:bg-rose-900/20 p-3 rounded-xl border border-rose-100 dark:border-rose-800/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">a) YOKLUK</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -617,7 +617,7 @@ window.vatandas_1_notlari = [
             ⚖️ CEZA YARGILAMASI SÜRECİ
         </span>
     </div>
-    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm w-full">
         <div class="space-y-2 text-xs">
             <div class="flex items-center gap-2 bg-cyan-100 dark:bg-cyan-800/30 p-2 rounded-lg">
                 <span class="font-bold text-amber-600 dark:text-amber-400">1. SORUŞTURMA</span>

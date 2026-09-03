@@ -6,7 +6,7 @@ window.cografya_1_notlari = [
             🗺️ BÖLGELERİN GENEL KARAKTERİ
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-3 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
             <ul class="list-disc list-inside space-y-1 text-xs">
                 <li>Ters bir olay varsa (Bakı tersliği vb.) <b class="text-rose-600 dark:text-rose-400">Karadeniz Bölgesi</b>'ndedir.</li>
@@ -31,7 +31,7 @@ window.cografya_1_notlari = [
             📐 TÜRKİYE'NİN MUTLAK KONUMU
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full">
         <p>Türkiye, <b class="text-rose-600 dark:text-rose-400">36° - 42° Kuzey enlemleri</b> ile <b class="text-rose-600 dark:text-rose-400">26° - 45° Doğu boylamları</b> arasındadır.</p>
         <p class="mt-2">Kuzey Yarım Küre'de ve <b>Yengeç Dönencesi</b>'nin kuzeyinde yer alır.</p>
     </div>
@@ -43,7 +43,7 @@ window.cografya_1_notlari = [
             🌍 ORTA ILIMAN KUŞAK ÖZELLİKLERİ (A-B-C-D)
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-green-50 dark:bg-green-900/20 p-3 rounded-xl border border-green-100 dark:border-green-800/30">
             <ul class="list-disc list-inside space-y-1 text-xs">
                 <li><b class="text-rose-600 dark:text-rose-400">A</b>kdeniz iklimi görülür.</li>
@@ -65,7 +65,7 @@ window.cografya_1_notlari = [
             ☀️ YENGEÇ DÖNENCESİ'NİN KUZEYİNDE OLMANIN SONUÇLARI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Güneş ışınları hiçbir zaman <b class="text-rose-600 dark:text-rose-400">90° açıyla gelmez</b>.</li>
@@ -85,7 +85,7 @@ window.cografya_1_notlari = [
             ❗ BAKI TERSLİĞİ İSTİSNASI
         </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full">
         <p>Karadeniz Dağları'nın kış aylarında <u class="text-rose-600 dark:text-rose-400 font-semibold">kuzey yamaçlarının</u> güney yamaçlarından daha sıcak/ılık olması bakı ile çelişir.</p>
         <p class="mt-2">Bu durum <b class="text-rose-600 dark:text-rose-400">denizellik ve nemlilik</b> ile açıklanır.</p>
     </div>
@@ -97,7 +97,7 @@ window.cografya_1_notlari = [
             🥶 KUZEY YARIM KÜRE'DE OLMANIN SONUÇLARI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Güneyden kuzeye gidildikçe güneş ışınlarının geliş açısı, sıcaklık, buharlaşma ve denizlerin tuzluluk oranı <b class="text-rose-600 dark:text-rose-400">azalır</b>.</li>
@@ -115,7 +115,7 @@ window.cografya_1_notlari = [
             📍 AYNI ENLEM ÜZERİNDEKİ MERKEZLER
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Yıl boyunca güneş ışınlarının geliş açısı, çizgisel hız, gece-gündüz süre farkı ve öğle vakti gölge boyları <b class="text-rose-600 dark:text-rose-400">kesinlikle aynıdır</b>.</li>
@@ -132,7 +132,7 @@ window.cografya_1_notlari = [
             ⏳ AYNI BOYLAM ÜZERİNDEKİ MERKEZLER
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><i>Örn: İzmit - Bilecik - Afyon - Finike</i></li>
@@ -153,7 +153,7 @@ window.cografya_1_notlari = [
             💡 ALTIN NOT (SÜRE KAVRAMI)
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <p>Bir soruda süre varsa; <b>Gündüz süresi</b> veya <b>Alacakaranlık (tan/grup) süresi</b> geçiyorsa bu durum doğrudan <b class="text-rose-600 dark:text-rose-400">ENLEM (Matematik Konum)</b> ile ilgilidir.</p>
         <p class="mt-2">Kuzey-güney kıyaslamaları <b class="text-rose-600 dark:text-rose-400">enlemdir</b>.</p>
     </div>
@@ -165,7 +165,7 @@ window.cografya_1_notlari = [
             ⏰ YEREL SAAT HESAPLAMA MANTIĞI
         </span>
     </div>
-    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-2">
             <li>Ardışık iki boylam arası zaman farkı <b class="text-rose-600 dark:text-rose-400">4 dakikadır</b>.</li>
             <li>Doğuda yerel saat her zaman <b class="text-rose-600 dark:text-rose-400">daha ileri</b>, batıda ise <b class="text-rose-600 dark:text-rose-400">geridir</b>.</li>
@@ -180,7 +180,7 @@ window.cografya_1_notlari = [
             ⛰️ ÖZEL (GÖRECELİ) KONUM ELEMANLARI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Yer Şekilleri:</b> Kısa mesafede değişir. Buna bağlı iklim, bitki örtüsü ve tarım da kısa mesafede çeşitlenir.</li>
@@ -198,7 +198,7 @@ window.cografya_1_notlari = [
             🚨 ENLEM İLE AÇIKLANAMAYAN (ÇELİŞEN) ÖZEL KONUM ÖRNEKLERİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Toroslar'da kısa mesafede iklimin değişmesi → <i class="text-rose-600 dark:text-rose-400">Yer şekilleri</i></li>
@@ -220,7 +220,7 @@ window.cografya_1_notlari = [
             📅 DÖRT KRİTİK TARİH VE TÜRKİYE
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b class="text-rose-600 dark:text-rose-400">21 Mart / 23 Eylül (Ekinoks):</b> Gece-gündüz eşittir (12 saat). 21 Mart'tan sonra gündüzler geceleri geçerek uzamaya başlar.</li>
@@ -246,7 +246,7 @@ window.cografya_1_notlari = [
             ☀️ MEVSİMSEL GÜNDÜZ DEĞİŞİMLERİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b class="text-rose-600 dark:text-rose-400">Yaz Döneminde (21 Mart - 23 Eylül):</b> Güneyden kuzeye doğru gidildikçe gündüz süresi <b>uzar</b>.</li>

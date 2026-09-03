@@ -6,7 +6,7 @@ window.cografya_4_notlari = [
             ⛰️ TÜRKİYE'NİN PLATOLARI
         </span>
     </div>
-    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm w-full">
         <p>Çevresine göre yüksekte kalan, akarsular tarafından derince yarılmış geniş düzlüklere <b>plato</b> adı verilir.</p>
         <p class="mt-2">Ülkemizde platoların geniş yer kaplaması, Anadolu'nun 4. Jeolojik Zaman'da (Kuvaterner) epirojenez ile <b class="text-rose-600 dark:text-rose-400">toptan yükseldiğinin</b> en büyük kanıtıdır.</p>
     </div>
@@ -19,7 +19,7 @@ window.cografya_4_notlari = [
         </span>
     </div>
      
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <p>Akdeniz Bölgesi'nde yer alan, kireç taşlarının (kalker) erimesiyle oluşmuş engebeli platolardır.</p>
             <ul class="list-disc list-inside space-y-2 mt-3">
@@ -42,7 +42,7 @@ window.cografya_4_notlari = [
             🌋 2. VOLKANİK (LAV ÖRTÜSÜ) PLATOLAR
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <p>Magmadan çıkan lavların çöküntü alanlarını doldurması ve ardından akarsularca yarılmasıyla oluşan platolardır.</p>
         <p class="mt-2">Doğu Anadolu ve İç Anadolu'da görülür.</p>
     </div>
@@ -58,7 +58,7 @@ window.cografya_4_notlari = [
             ❄️ ERZURUM-KARS VE ARDAHAN PLATOLARI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30">
             <p>Türkiye'nin en karakteristik volkanik platolarıdır.</p>
             <ul class="list-disc list-inside space-y-2 mt-3">
@@ -82,7 +82,7 @@ window.cografya_4_notlari = [
             🎈 KAPADOKYA VE KİRŞEHİR PLATOLARI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Kapadokya Platosu:</b> Nevşehir çevresindeki volkanik tüflerin aşınmasıyla oluşmuştur. Peri bacaları sayesinde <b class="text-rose-600 dark:text-rose-400">turizme büyük fayda</b> sağlar.</li>
@@ -102,7 +102,7 @@ window.cografya_4_notlari = [
             🏭 3. AŞINIM DÜZLÜĞÜ PLATOLARI (Çatalca-Kocaeli ve Perşembe)
         </span>
     </div>
-    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm w-full">
         <p>Dağlık ve engebeli alanların dış kuvvetler tarafından milyonlarca yıl boyunca aşındırılarak deniz seviyesine yakın bir düzlük haline getirilmesiyle oluşurlar.</p>
     </div>
     <!-- 🗺️ HARİTA / RESİM ALANI -->
@@ -117,7 +117,7 @@ window.cografya_4_notlari = [
             🌉 ÇATALCA-KOCAELİ PLATOSU (Marmara)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30">
             <p>İstanbul ve Kocaeli'yi içine alan, Türkiye'nin ekonomik kalbidir.</p>
             <ul class="list-disc list-inside space-y-2 mt-3">
@@ -139,7 +139,7 @@ window.cografya_4_notlari = [
             🥝 PERŞEMBE PLATOSU (Ordu - Karadeniz)
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <p>Karadeniz Bölgesi'nde yer alan bir aşınım platosudur.</p>
         <p class="mt-2">Çatalca-Kocaeli'nin aksine yeşil doğası korunmuş olup, üzerinde aktif olarak <b class="text-rose-600 dark:text-rose-400">tarım faaliyetleri</b> yapılmaktadır.</p>
     </div>
@@ -155,7 +155,7 @@ window.cografya_4_notlari = [
             🌾 4. TABAKA DÜZLÜĞÜ (YATAY DURUŞLU) PLATOLARI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
     
         <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30">
             <p>Sert tabakaların yatay duruşlu olduğu, karasal iklimin hüküm sürdüğü iç bölgelerdeki geniş düzlüklerdir.</p>

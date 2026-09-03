@@ -7,7 +7,7 @@ window.cografya_14_notlari = [
             🌋 TÜRKİYE'DE GÖRÜLEN DOĞAL AFETLER - DEPREMLER
         </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full">
         <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">TEKTONİK DEPREMLER (En yaygın):</p>
         <ul class="list-disc list-inside space-y-1 text-xs mt-1">
             <li><b>Doğu Anadolu Fayı (DAF)</b></li>
@@ -31,7 +31,7 @@ window.cografya_14_notlari = [
             🕳️ GÖÇÜK-ÇÖKME DEPREMLERİ
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Oluşum yeri:</b> Karstik araziler</li>
             <li><b>Etkisi:</b> Etkisizdir</li>
@@ -50,7 +50,7 @@ window.cografya_14_notlari = [
             🌊 TSUNAMİ
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Riskin yüksek olduğu yer:</b> Marmara Denizi</li>
             <li><b>Nedenleri:</b> Su altı heyelanları ve deniz altı depremleridir</li>
@@ -65,7 +65,7 @@ window.cografya_14_notlari = [
             ⛰️ HEYELAN (Önlenemez)
         </span>
     </div>
-    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Tanım:</b> Toprak ve kaya kütlelerinin yer çekiminin etkisiyle eğim boyunca kaymasıdır.</li>
             <li><b>En çok görüldüğü bölge:</b> Karadeniz</li>
@@ -81,7 +81,7 @@ window.cografya_14_notlari = [
             🏜️ EROZYON (Önlenebilir)
         </span>
     </div>
-    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm w-full">
         <p class="text-xs"><b>Tanım:</b> Toprağın su, rüzgâr, buzullar veya akarsular tarafından aşındırılıp taşınmasıdır.</p>
         <p class="font-bold text-rose-600 dark:text-rose-400 text-xs mt-3">ÖNLEME YÖNTEMLERİ:</p>
         <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -102,7 +102,7 @@ window.cografya_14_notlari = [
             🌧️ SEL VE TAŞKIN (Önlenebilir)
         </span>
     </div>
-    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Sel:</b> Ani sağanak yağış sonucu oluşur</li>
             <li><b>Taşkın:</b> Eğimin az olduğu yerlerde görülür</li>
@@ -119,7 +119,7 @@ window.cografya_14_notlari = [
             ❄️ ÇIĞ (Önlenebilir)
         </span>
     </div>
-    <div class="bg-slate-50 dark:bg-slate-800/20 p-4 rounded-xl border border-slate-100 dark:border-slate-700/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-slate-50 dark:bg-slate-800/20 p-4 rounded-xl border border-slate-100 dark:border-slate-700/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Tanım:</b> Üst üste yağan karların eğim boyunca hareketidir</li>
             <li><b>En çok riskli iller:</b> Tunceli, Hakkari, Van, Muş, Bitlis</li>
@@ -134,7 +134,7 @@ window.cografya_14_notlari = [
             🔥 ORMAN YANGINI
         </span>
     </div>
-    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Riskin yüksek olduğu bölgeler:</b> Akdeniz ve Ege</li>
             <li><b>Nedenleri:</b></li>
@@ -155,7 +155,7 @@ window.cografya_14_notlari = [
             🏭 ÇEVRE SORUNLARI - HAVA KİRLİLİĞİ
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-purple-50 dark:bg-purple-900/20 p-3 rounded-xl border border-purple-100 dark:border-purple-800/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">LONDRA TİPİ</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -178,7 +178,7 @@ window.cografya_14_notlari = [
             💧 SU KİRLİLİĞİ
         </span>
     </div>
-    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Kirli göller:</b> Beyşehir, Manyas, Sapanca, İznik, Van</li>
             <li><b>En kirli akarsu:</b> Ergene</li>
@@ -198,7 +198,7 @@ window.cografya_14_notlari = [
             🌱 TOPRAK KİRLİLİĞİ
         </span>
     </div>
-    <div class="bg-lime-50 dark:bg-lime-900/20 p-4 rounded-xl border border-lime-100 dark:border-lime-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-lime-50 dark:bg-lime-900/20 p-4 rounded-xl border border-lime-100 dark:border-lime-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Aşırı zirai ilaç ve gübre kullanımı</li>
             <li>Aşırı ve vahşi sulama</li>
@@ -215,7 +215,7 @@ window.cografya_14_notlari = [
             🏛️ TÜRKİYE'NİN TABİAT ANITLARI
         </span>
     </div>
-    <div class="bg-emerald-50 dark:bg-emerald-900/20 p-4 rounded-xl border border-emerald-100 dark:border-emerald-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-emerald-50 dark:bg-emerald-900/20 p-4 rounded-xl border border-emerald-100 dark:border-emerald-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Türkiye'nin İlk Tabiat Anıtı:</b> Düzce'deki Samandere Şelalesi</li>
         </ul>
@@ -229,7 +229,7 @@ window.cografya_14_notlari = [
             🌳 TABİATI KORUMA ALANI & TABİAT PARKLARI
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-violet-50 dark:bg-violet-900/20 p-3 rounded-xl border border-violet-100 dark:border-violet-800/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">TABİATI KORUMA ALANI</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -252,7 +252,7 @@ window.cografya_14_notlari = [
             🏞️ TÜRKİYE'NİN MİLLİ PARKLARI
         </span>
     </div>
-    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>En büyük milli park:</b> Ağrı Dağı</li>
             <li><b>En küçük ve ilk milli park:</b> Yozgat Çamlık Millî Parkı</li>
@@ -276,7 +276,7 @@ window.cografya_14_notlari = [
             🦆 RAMSAR ALANLARI (Koruma Altındaki Sulak Alanlar)
         </span>
     </div>
-    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm w-full">
         <p class="text-xs">Göl ve akarsuların çoğu Ramsar kapsamında koruma altındadır:</p>
         <ul class="list-disc list-inside space-y-1 text-xs mt-2">
             <li>Manyas Gölü</li>
@@ -300,7 +300,7 @@ window.cografya_14_notlari = [
             🌿 YEŞİL KUŞAK PROJESİ
         </span>
     </div>
-    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Amaç:</b> Erozyonu önlemek, çölleşmeyi azaltmak ve orman varlığını artırmak</li>
             <li><b>Yöntem:</b> Ağaçlandırma yapılarak yeşil alanlar oluşturulması</li>
@@ -315,7 +315,7 @@ window.cografya_14_notlari = [
             🌍 UNESCO BİYOSFER REZERVİ - CAMİLİ
         </span>
     </div>
-    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Adı:</b> Camili Biyosfer Havzası</li>
             <li><b>Yeri:</b> Artvin'in Borçka ilçesi</li>

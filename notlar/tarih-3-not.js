@@ -6,7 +6,7 @@ window.tarih_3_notlari = [
             👑 BÜYÜK SELÇUKLU DEVLETİ (BSD) HATIRLATMA
         </span>
     </div>
-    <div class="bg-slate-50 dark:bg-slate-700/50 p-4 rounded-xl border border-slate-200 dark:border-slate-600 text-sm max-w-2xl mx-auto">
+    <div class="bg-slate-50 dark:bg-slate-700/50 p-4 rounded-xl border border-slate-200 dark:border-slate-600 text-sm w-full">
         1040 <b>Dandanakan Savaşı</b> ile resmen kurulmuş, en zayıf dönemi olan <b>Katvan Savaşı</b>'ndan sonra son büyük hükümdarı <b class="text-rose-600 dark:text-rose-400">Sultan Sencer</b>'in ölümü ile yıkılarak tarih sahnesinden çekilmiştir.
     </div>
     `,
@@ -17,7 +17,7 @@ window.tarih_3_notlari = [
             🛡️ ANADOLU SELÇUKLU DEVLETİ (1075-1308) - KURULUŞ DÖNEMİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30">
             <b class="text-cyan-700 dark:text-cyan-400">Kutalmışoğlu Süleyman Şah:</b> Devletin kurucusudur. Başkenti <b>İznik</b> yaparak devleti kurmuş ve Bizans'taki taht kavgalarından en üst düzeyde yararlanmıştır.
         </div>
@@ -33,7 +33,7 @@ window.tarih_3_notlari = [
             🏹 I. KILIÇARSLAN VE I. MESUT DÖNEMLERİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-emerald-50 dark:bg-emerald-900/20 p-4 rounded-xl border-l-4 border-emerald-500">
             <b class="text-emerald-700 dark:text-emerald-400">I. Kılıçarslan:</b> I. Haçlı Seferi karşısında tutunamayarak kurucu başkent olan <b>İznik</b>'i kaybetmiştir. <b>Dorylaion (Eskişehir) Savaşı</b>'nın ardından devletin merkezini daha güvenli olan <b class="text-rose-600 dark:text-rose-400">Konya</b>'ya taşımıştır.
         </div>
@@ -49,7 +49,7 @@ window.tarih_3_notlari = [
             ⚔️ II. KILIÇARSLAN DÖNEMİ (Yurttutan Savaşı)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Ankara Meliki Şahinşah'ın çıkardığı taht isyanını bastırmıştır.</li>
@@ -67,7 +67,7 @@ window.tarih_3_notlari = [
             ⛵ I. GIYASEDDİN KEYHÜSREV VE I. İZZETTİN KEYKAVUS DÖNEMLERİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <b class="text-blue-700 dark:text-blue-400">I. Gıyaseddin Keyhüsrev:</b> Farklı tarihlerde iki defa tahta çıkmıştır. Hristiyanların elindeki <b>Antalya</b>'yı alarak devlete ilk kez bir liman şehri kazandırmış, Kırım'a giden Karadeniz ticaret yolunu güvenlik altına almıştır.
         </div>
@@ -83,7 +83,7 @@ window.tarih_3_notlari = [
             💎 I. ALAEDDİN KEYKUBAT DÖNEMİ (En Parlak Dönem)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Anadolu Selçuklu Devleti'nin <b class="text-indigo-600 dark:text-indigo-400">en parlak, en güçlü</b> dönemidir.</li>
@@ -102,7 +102,7 @@ window.tarih_3_notlari = [
             💰 ASD'DE TİCARETİ GELİŞTİRMEK İÇİN YAPILANLAR
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-lime-50 dark:bg-lime-900/20 p-4 rounded-xl border border-lime-100 dark:border-lime-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li>Sudak, Sinop, Samsun, Antalya ve Alanya gibi kritik liman şehirleri fethedilmiştir.</li>
@@ -121,7 +121,7 @@ window.tarih_3_notlari = [
             🐾 II. GIYASEDDİN KEYHÜSREV VE ÇÖKÜŞ SÜRECİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b class="text-purple-600 dark:text-purple-400">Sadettin Köpek:</b> Devletin veziri ve baş mimarıdır. Zavardin Han ve meşhur Kubadabad Sarayı'nın mimarlığını yapmıştır. Güç sarhoşluğuna kapılıp taht iddiasında bulununca II. Gıyaseddin Keyhüsrev tarafından idam ettirilmiştir.</li>
@@ -137,7 +137,7 @@ window.tarih_3_notlari = [
             🔥 1243 KÖSE DAĞ SAVAŞI VE SONUÇLARI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30">
             <p class="mb-3">Selçuklu'nun zayıflığını gören Moğollar (İlhanlılar) Anadolu'ya saldırmış, Sivas yakınlarındaki savaşı kaybeden II. Gıyaseddin Keyhüsrev Tokat'a çekilmiştir.</p>
             <h4 class="font-bold text-orange-700 dark:text-orange-400 mb-2 border-b border-orange-200 dark:border-orange-800/30 pb-1">Sonuçları:</h4>
@@ -158,7 +158,7 @@ window.tarih_3_notlari = [
             🧠 ANADOLU SELÇUKLULARI'NDA BİLİNMESİ GEREKEN ÜÇ ÖNEMLİ KİŞİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30">
             <b class="text-teal-700 dark:text-teal-400">Celaleddin Karatay:</b> Moğol baskısı altındaki fetret döneminde 3 şehzadeyi (II. İzzeddin Keykavus, IV. Rükneddin Kılıçarslan, II. Alaaddin Keykubat) aynı anda tahta çıkarıp ortak hükümdar ilan etmiştir. Karatay Medresesi ve Karatay Kervansarayı'nı inşa ettirmiştir.
         </div>
@@ -177,7 +177,7 @@ window.tarih_3_notlari = [
             ⚔️ KÖSE DAĞ SAVAŞI'NDAN SONRA KURULAN II. DÖNEM ANADOLU BEYLİKLERİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-pink-50 dark:bg-pink-900/20 p-4 rounded-xl border border-pink-100 dark:border-pink-800/30">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Osmanoğulları:</b> Söğüt ve Domaniç çevresinde kuruldu. İlk kurulduğunda <u class="text-rose-600 dark:text-rose-400">denizci değildir</u>. Jeopolitik konumu ve adaletli siyaseti sayesinde merkezi otoritesi en güçlü olan beyliktir.</li>
@@ -195,7 +195,7 @@ window.tarih_3_notlari = [
             💰 II. DÖNEM BEYLİKLERİ (DEVAMI)
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-fuchsia-50 dark:bg-fuchsia-900/20 p-3 rounded-xl border border-fuchsia-100 dark:border-fuchsia-800/30">
             <b>Hamidoğulları:</b> Isparta ve Eğirdir çevresinde kurulmuş olup <u class="text-blue-600 dark:text-blue-400">denizcilik vardır</u>. Kurucusu Dündar Bey'dir. Moğol baskısından dolayı topraklarının bir kısmını Osmanlı'ya <b class="text-amber-600 dark:text-amber-400">80 bin altın karşılığında satmıştır.</b>
         </div>
@@ -217,7 +217,7 @@ window.tarih_3_notlari = [
             🏹 II. DÖNEM BEYLİKLERİ (SON BÖLÜM)
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-rose-50 dark:bg-rose-900/20 p-3 rounded-xl border border-rose-100 dark:border-rose-800/30">
             <b>Candaroğulları (İsfendiyaroğulları):</b> Kastamonu, Sinop ve Samsun çevresinde kurulmuş <u class="text-blue-600 dark:text-blue-400">denizci</u> beyliktir. Ceneviz ve Venedik ile yoğun ticari ilişkiler kurmuşlardır.
         </div>
@@ -248,7 +248,7 @@ window.tarih_3_notlari = [
             🏛️ ANADOLU SELÇUKLU DEVLETİ'NDE KÜLTÜR VE MEDENİYET
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-slate-50 dark:bg-slate-700/50 p-4 rounded-xl border border-slate-200 dark:border-slate-600">
             <ul class="list-disc list-inside space-y-2">
                 <li><b>Hükümdar Unvanları:</b> BSD unvanlarına ek olarak yoğun Fars (İran) kültürünün etkisiyle ilk kez <b class="text-indigo-600 dark:text-indigo-400">Keyhüsrev, Keykavus ve Keykubat</b> unvanları kullanılmıştır.</li>
@@ -266,7 +266,7 @@ window.tarih_3_notlari = [
             ✍️ ANADOLU'NUN YETİŞTİRDİĞİ BÜYÜK İLİM VE GÖNÜL İNSANLARI
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-violet-50 dark:bg-violet-900/20 p-3 rounded-xl border border-violet-100 dark:border-violet-800/30">
             <b>Hz. Mevlâna:</b> En ünlü eserleri <i>Divan-ı Kebir</i> ve <i>Mesnevi</i>'dir.
         </div>
@@ -303,7 +303,7 @@ window.tarih_3_notlari = [
             🤝 AHİLİK TEŞKİLATI VE EKONOMİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <p><b>Kurucusu:</b> <b class="text-amber-700 dark:text-amber-400">Ahi Evran</b> (Muhammed bin Ahmed el-Hoyi)'dır. Teşkilatın temelleri I. Gıyaseddin Keyhüsrev döneminde atılmış, Letaif-i Hikmet kitabında felsefesi anlatılmıştır.</p>
             <h4 class="font-bold mt-3 mb-2 border-b border-amber-200 dark:border-amber-800/30 pb-1">Özellikleri:</h4>
@@ -326,7 +326,7 @@ window.tarih_3_notlari = [
             🕌 ANADOLU SELÇUKLU DÖNEMİ İLKLERİ
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <b>İlk Kervansaray / Han:</b> Alay Han (Aksaray-Konya yolu)
         </div>
@@ -348,7 +348,7 @@ window.tarih_3_notlari = [
             🗺️ MİMARİ ESERLERİ VE ŞEHİRLERİ
         </span>
     </div>
-    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-left w-full text-sm">
         <div class="bg-white dark:bg-slate-800 p-2 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 text-center">
             <b>Tokat</b><br><span class="text-xs text-slate-600 dark:text-slate-400">Pervane Hamamı</span>
         </div>
@@ -382,7 +382,7 @@ window.tarih_3_notlari = [
             🎯 MİMARİDE SORU KAÇIRTMAYAN HAYAT KURTARAN NOTLAR
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30">
             <ul class="list-disc list-inside space-y-3">
                 <li class="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg border border-blue-100 dark:border-blue-800/30">

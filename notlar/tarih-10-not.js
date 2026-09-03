@@ -9,7 +9,7 @@ window.tarih_10_notlari = [
             ⚡ XIV. YY ISLAHATLARI - GENEL ÖZELLİKLER
         </span>
     </div>
-    <ul class="space-y-3 text-left max-w-lg mx-auto">
+    <ul class="space-y-3 text-left w-full">
         <li class="flex items-center gap-3 bg-slate-50 dark:bg-slate-700/30 p-3 rounded-xl border-l-4 border-indigo-500">
             <span class="text-lg">🌍</span>
             <span>Tamamen <b>Avrupa</b> örnek alınmıştır.</span>
@@ -43,7 +43,7 @@ window.tarih_10_notlari = [
         </span>
     </div>
     
-    <div class="text-left max-w-lg mx-auto space-y-4">
+    <div class="text-left w-full space-y-4">
         <div class="bg-slate-50 dark:bg-slate-700/30 p-4 rounded-xl">
             <h4 class="font-bold text-rose-700 dark:text-rose-400 mb-2">📜 Tahta Çıkan Padişah Sıralaması</h4>
             <div class="flex flex-wrap gap-2 justify-center text-sm">
@@ -107,7 +107,7 @@ window.tarih_10_notlari = [
         </span>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-xl border border-blue-200 dark:border-blue-800/30">
             <span class="font-bold text-blue-700 dark:text-blue-400">📌 Kaldırılanlar</span>
             <ul class="text-sm list-disc list-inside mt-1">
@@ -128,7 +128,7 @@ window.tarih_10_notlari = [
         </div>
         <div class="bg-purple-50 dark:bg-purple-900/20 p-3 rounded-xl border border-purple-200 dark:border-purple-800/30 col-span-1 sm:col-span-2">
             <span class="font-bold text-purple-700 dark:text-purple-400">📌 Diğer Önemli Değişiklikler</span>
-            <div class="grid grid-cols-2 gap-1 text-xs mt-1">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 text-xs mt-1">
                 <span>• Devlet dairelerine <b>resim</b> astırdı.</span>
                 <span>• <b>Pasaport</b> uygulaması başladı.</span>
                 <span>• <b>Mürur tezkeresi</b> (İstanbul giriş)</span>
@@ -141,7 +141,7 @@ window.tarih_10_notlari = [
         </div>
     </div>
 
-    <div class="mt-4 p-4 bg-amber-50 dark:bg-amber-900/20 rounded-xl border-2 border-amber-300 dark:border-amber-700 text-center max-w-2xl mx-auto">
+    <div class="mt-4 p-4 bg-amber-50 dark:bg-amber-900/20 rounded-xl border-2 border-amber-300 dark:border-amber-700 text-center w-full">
         <p class="text-sm font-bold text-amber-700 dark:text-amber-400">🔄 Unvan Değişiklikleri</p>
         <div class="flex flex-wrap justify-center gap-2 text-xs mt-2">
             <span class="bg-white dark:bg-slate-800 px-2 py-1 rounded shadow">Sadrazam → Başvekalet</span>
@@ -169,7 +169,7 @@ window.tarih_10_notlari = [
         </span>
     </div>
 
-    <div class="space-y-4 text-left max-w-lg mx-auto">
+    <div class="space-y-4 text-left w-full">
         <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border-l-4 border-rose-500">
             <h4 class="font-bold text-rose-700 dark:text-rose-400">📌 Yeni Ocaklar</h4>
             <ul class="text-sm list-disc list-inside">
@@ -217,7 +217,7 @@ window.tarih_10_notlari = [
         </span>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full">
         <div class="bg-emerald-50 dark:bg-emerald-900/20 p-3 rounded-xl border border-emerald-200">
             <h4 class="font-bold text-emerald-700 dark:text-emerald-400 text-sm">📖 Eğitim & Kültür</h4>
             <ul class="text-xs list-disc list-inside mt-1">
@@ -251,7 +251,7 @@ window.tarih_10_notlari = [
         </div>
     </div>
 
-    <div class="mt-4 p-4 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl border-2 border-indigo-300 dark:border-indigo-700 text-center max-w-2xl mx-auto">
+    <div class="mt-4 p-4 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl border-2 border-indigo-300 dark:border-indigo-700 text-center w-full">
         <p class="text-sm italic text-indigo-700 dark:text-indigo-300">
             "Ben tebamdan Müslüman'ı camide, Hristiyan'ı kilisede, Musevi'yi havrada fark ederim, aralarında başka bir fark yoktur. Cümle-i hakkında adalet ve muhabbetim tamdır, hepsi evladımdır."<br>
             <span class="font-bold text-indigo-900 dark:text-indigo-200">— II. Mahmut</span>
@@ -269,7 +269,7 @@ window.tarih_10_notlari = [
         </span>
     </div>
 
-    <div class="space-y-4 text-left max-w-xl mx-auto">
+    <div class="space-y-4 text-left w-full">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border-2 border-amber-300 dark:border-amber-700">
             <h4 class="font-bold text-amber-700 dark:text-amber-400">📌 Diğer Adı</h4>
             <p class="text-sm"><b>Gülhane-i Hatt-ı Hümayun</b></p>
@@ -322,7 +322,7 @@ window.tarih_10_notlari = [
         </span>
     </div>
 
-    <div class="space-y-4 text-left max-w-xl mx-auto">
+    <div class="space-y-4 text-left w-full">
         <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border-2 border-purple-300 dark:border-purple-700">
             <h4 class="font-bold text-purple-700 dark:text-purple-400">📌 İlan Nedenleri</h4>
             <ul class="text-sm list-disc list-inside">
@@ -365,7 +365,7 @@ window.tarih_10_notlari = [
         </span>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full">
         <div class="bg-cyan-50 dark:bg-cyan-900/20 p-3 rounded-xl border border-cyan-200">
             <h4 class="font-bold text-cyan-700 dark:text-cyan-400 text-sm">📌 Kurumlar</h4>
             <ul class="text-xs list-disc list-inside mt-1">
@@ -415,7 +415,7 @@ window.tarih_10_notlari = [
         </span>
     </div>
 
-    <div class="space-y-4 text-left max-w-xl mx-auto">
+    <div class="space-y-4 text-left w-full">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div class="bg-rose-50 dark:bg-rose-900/20 p-3 rounded-xl border border-rose-200">
                 <h4 class="font-bold text-rose-700 dark:text-rose-400 text-sm">📌 Kurumlar</h4>
@@ -465,7 +465,7 @@ window.tarih_10_notlari = [
         </span>
     </div>
 
-    <div class="space-y-4 text-left max-w-xl mx-auto">
+    <div class="space-y-4 text-left w-full">
         <div class="bg-slate-50 dark:bg-slate-700/30 p-4 rounded-xl">
             <h4 class="font-bold text-slate-700 dark:text-slate-300 text-sm">📌 Tahta Çıkış Süreci</h4>
             <ul class="text-xs list-disc list-inside">
@@ -526,7 +526,7 @@ window.tarih_10_notlari = [
         </span>
     </div>
 
-    <div class="space-y-4 text-left max-w-xl mx-auto">
+    <div class="space-y-4 text-left w-full">
         <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border-2 border-teal-300 dark:border-teal-700">
             <h4 class="font-bold text-teal-700 dark:text-teal-400">📌 "Maarif-i Perver" Ünvanı</h4>
             <p class="text-sm">Eğitime verdiği önem nedeniyle bu ünvan verildi.</p>
@@ -588,7 +588,7 @@ window.tarih_10_notlari = [
         </span>
     </div>
 
-    <div class="space-y-4 text-left max-w-xl mx-auto">
+    <div class="space-y-4 text-left w-full">
         <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border-2 border-rose-300 dark:border-rose-700">
             <h4 class="font-bold text-rose-700 dark:text-rose-400">📌 Gelişmeler</h4>
             <ul class="text-sm list-disc list-inside">
@@ -635,7 +635,7 @@ window.tarih_10_notlari = [
         </span>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-xl border border-blue-200">
             <h4 class="font-bold text-blue-700 dark:text-blue-400 text-sm">📌 Değişiklikler</h4>
             <ul class="text-xs list-disc list-inside">
@@ -672,7 +672,7 @@ window.tarih_10_notlari = [
         </span>
     </div>
 
-    <div class="space-y-4 text-left max-w-xl mx-auto">
+    <div class="space-y-4 text-left w-full">
         <div class="bg-violet-50 dark:bg-violet-900/20 p-4 rounded-xl border-2 border-violet-300 dark:border-violet-700">
             <h4 class="font-bold text-violet-700 dark:text-violet-400">📌 A. OSMANLICILIK (İttihad-ı Anasır)</h4>
             <ul class="text-sm list-disc list-inside">

@@ -8,7 +8,7 @@ window.guncel_1_notlari = [
             📅 CUMHURBAŞKANLIĞI YIL TEMALARI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-xl mx-auto">
+    <div class="space-y-3 text-left w-full">
         <div class="bg-slate-50 dark:bg-slate-700/30 p-4 rounded-2xl border border-slate-200 dark:border-slate-700">
             <div class="flex items-center justify-between">
                 <span class="font-bold text-lg">2024</span>
@@ -62,11 +62,11 @@ window.guncel_1_notlari = [
             👥 TÜRKİYE NÜFUSU (TÜİK)
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-xl mx-auto">
+    <div class="space-y-3 text-left w-full">
         <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-2xl border border-purple-200 dark:border-purple-800/50 text-center">
             <span class="text-sm text-slate-500">31 Aralık 2025 itibarıyla</span>
             <div class="text-3xl font-black text-purple-700 dark:text-purple-400">86.092.168</div>
-            <div class="grid grid-cols-2 gap-2 mt-2 text-sm">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 text-sm">
                 <span class="bg-white dark:bg-slate-800 p-1.5 rounded-lg">👨 Erkek: <b>43.059.434</b> (%50,02)</span>
                 <span class="bg-white dark:bg-slate-800 p-1.5 rounded-lg">👩 Kadın: <b>43.032.734</b> (%49,98)</span>
             </div>
@@ -84,7 +84,7 @@ window.guncel_1_notlari = [
                 <li>🔹 Dünya 2025 doğurganlık ortalaması: <b>2,24</b> (Türkiye: 1,42)</li>
             </ul>
         </div>
-        <div class="grid grid-cols-2 gap-2 text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
             <div class="bg-slate-50 dark:bg-slate-700/30 p-2 rounded-lg">
                 <b>En Kalabalık İller</b>
                 <ul class="text-xs mt-1">
@@ -114,10 +114,10 @@ window.guncel_1_notlari = [
             💰 TÜRKİYE EKONOMİSİ 2026
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-xl mx-auto">
+    <div class="space-y-3 text-left w-full">
         <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-2xl border border-green-200 dark:border-green-800/50">
             <div class="font-black text-center text-lg text-green-700 dark:text-green-400">ASGARİ ÜCRET 2026</div>
-            <div class="grid grid-cols-2 gap-2 mt-2 text-sm">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 text-sm">
                 <div class="bg-white dark:bg-slate-800 p-2 rounded-lg text-center">
                     <span class="text-xs text-slate-500">Brüt</span>
                     <div class="font-bold text-lg">33.030 ₺</div>
@@ -296,7 +296,7 @@ window.guncel_1_notlari = [
     </div>
     <div class="mt-3 bg-slate-50 dark:bg-slate-700/30 p-3 rounded-xl border border-slate-200 dark:border-slate-700">
         <div class="font-bold text-slate-700 dark:text-slate-300 text-center text-sm">📜 NOBEL 2024 (Hatırlatma)</div>
-        <div class="grid grid-cols-2 gap-2 mt-2 text-xs">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 text-xs">
             <div class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Fizik:</b> John Hopfield, Geoffrey Hinton</div>
             <div class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Kimya:</b> David Baker, Demis Hassabis, John Jumper</div>
             <div class="bg-white dark:bg-slate-800 p-2 rounded-lg"><b>Tıp:</b> Victor Ambros, Gary Ruvkun</div>
@@ -355,7 +355,7 @@ window.guncel_1_notlari = [
         </div>
         <div class="bg-slate-50 dark:bg-slate-700/30 p-4 rounded-2xl border border-slate-200 dark:border-slate-700">
             <div class="font-bold">📌 2023'te Eklenenler</div>
-            <div class="grid grid-cols-2 gap-2 mt-2 text-sm">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 text-sm">
                 <div class="bg-white dark:bg-slate-800 p-2 rounded-lg">
                     <b>Gordion Antik Kenti</b>
                     <span class="block text-xs text-slate-500">Ankara/Polatlı · Kral Midas</span>
@@ -474,7 +474,7 @@ window.guncel_1_notlari = [
         <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-2xl border border-blue-200 dark:border-blue-800/50">
             <div class="font-black text-blue-700 dark:text-blue-400 text-center">🥇 2024 PARİS OLİMPİYATLARI</div>
             <div class="text-center text-2xl font-bold text-amber-500">8 Madalya</div>
-            <div class="grid grid-cols-2 gap-1 text-xs mt-2">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 text-xs mt-2">
                 <span class="bg-slate-200 dark:bg-slate-700 p-1 rounded text-center">🥈 3 Gümüş</span>
                 <span class="bg-slate-200 dark:bg-slate-700 p-1 rounded text-center">🥉 5 Bronz</span>
             </div>
@@ -571,7 +571,7 @@ window.guncel_1_notlari = [
             🚀 TEKNOFEST & TÜRKİYE UZAY PROGRAMI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-xl mx-auto">
+    <div class="space-y-3 text-left w-full">
         <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-2xl border border-orange-200 dark:border-orange-800/50">
             <div class="font-black text-orange-700 dark:text-orange-400 text-lg">TEKNOFEST</div>
             <ul class="text-sm mt-1 space-y-1">
@@ -581,7 +581,7 @@ window.guncel_1_notlari = [
                 <li class="text-xs text-slate-500">⚠️ Sınav öncesi 2025/2026 güncel ev sahibi teyit edilmeli</li>
             </ul>
         </div>
-        <div class="grid grid-cols-2 gap-3">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div class="bg-slate-50 dark:bg-slate-700/30 p-4 rounded-2xl border border-slate-200 dark:border-slate-700">
                 <div class="font-bold text-lg">👨‍🚀 Alper Gezeravcı</div>
                 <p class="text-xs mt-1">Türkiye'nin <b>ilk astronotu</b></p>
@@ -701,7 +701,7 @@ window.guncel_1_notlari = [
         </span>
     </div>
     <div class="space-y-3 text-left">
-        <div class="grid grid-cols-2 gap-2 text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
             <div class="bg-slate-50 dark:bg-slate-700/30 p-2 rounded-lg"><b>NATO</b> → Brüksel, Belçika</div>
             <div class="bg-slate-50 dark:bg-slate-700/30 p-2 rounded-lg"><b>BM</b> → New York, ABD</div>
             <div class="bg-slate-50 dark:bg-slate-700/30 p-2 rounded-lg"><b>UNESCO</b> → Paris, Fransa</div>
@@ -710,7 +710,7 @@ window.guncel_1_notlari = [
             <div class="bg-slate-50 dark:bg-slate-700/30 p-2 rounded-lg"><b>IMF</b> → Washington D.C., ABD</div>
             <div class="bg-slate-50 dark:bg-slate-700/30 p-2 rounded-lg col-span-2"><b>Avrupa Konseyi</b> → Strazburg, Fransa</div>
         </div>
-        <div class="grid grid-cols-2 gap-3">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div class="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-xl border border-blue-200 dark:border-blue-800/50">
                 <div class="font-bold text-blue-700 dark:text-blue-400">🇪🇺 AVRUPA BİRLİĞİ</div>
                 <ul class="text-xs mt-1 space-y-0.5">
@@ -742,7 +742,7 @@ window.guncel_1_notlari = [
         </span>
     </div>
     <div class="space-y-3 text-left">
-        <div class="grid grid-cols-2 gap-2 text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
             <div class="bg-cyan-50 dark:bg-cyan-900/20 p-3 rounded-xl border border-cyan-200 dark:border-cyan-800/50">
                 <div class="font-bold text-cyan-700 dark:text-cyan-400">EN BÜYÜKLER</div>
                 <ul class="text-xs mt-1 space-y-0.5">
@@ -761,7 +761,7 @@ window.guncel_1_notlari = [
                 </ul>
             </div>
         </div>
-        <div class="grid grid-cols-2 gap-2 text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
             <div class="bg-slate-50 dark:bg-slate-700/30 p-3 rounded-xl border border-slate-200 dark:border-slate-700">
                 <div class="font-bold">🌾 TARIM</div>
                 <ul class="text-xs mt-1">
@@ -794,7 +794,7 @@ window.guncel_1_notlari = [
             🌲 MİLLİ PARKLAR & BİYOSFER ALANLARI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-xl mx-auto">
+    <div class="space-y-3 text-left w-full">
         <div class="bg-lime-50 dark:bg-lime-900/20 p-4 rounded-2xl border border-lime-200 dark:border-lime-800/50">
             <div class="font-bold text-lime-700 dark:text-lime-400">🏞️ İLK MİLLİ PARK</div>
             <p><b>Yozgat Çamlığı</b> — Türkiye'nin ilk milli parkı</p>
@@ -826,10 +826,10 @@ window.guncel_1_notlari = [
             📌 ÖNEMLİ VEFATLAR & SINAV İPUÇLARI
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-xl mx-auto">
+    <div class="space-y-3 text-left w-full">
         <div class="bg-stone-50 dark:bg-stone-700/30 p-4 rounded-2xl border border-stone-200 dark:border-stone-700">
             <div class="font-bold">🕊️ ÖNEMLİ VEFATLAR</div>
-            <div class="grid grid-cols-2 gap-1 text-xs mt-2">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 text-xs mt-2">
                 <span class="bg-white dark:bg-slate-800 p-1 rounded">📚 Alev Alatlı (Yazar, 2024)</span>
                 <span class="bg-white dark:bg-slate-800 p-1 rounded">🎸 Erkin Koray (2023)</span>
                 <span class="bg-white dark:bg-slate-800 p-1 rounded">🎤 İlhan İrem (2022)</span>

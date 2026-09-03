@@ -7,7 +7,7 @@ window.tarih_11_notlari = [
             ⚔️ TRABLUSGARP SAVAŞI - NEDENLERİ (1911-1912)
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Bölgenin İtalya'ya yakın olması</li>
             <li>Osmanlı'nın bölgeyi savunamayacak durumda olması</li>
@@ -27,7 +27,7 @@ window.tarih_11_notlari = [
             ⚔️ TRABLUSGARP SAVAŞI - GELİŞİMİ
         </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>İtalya Trablusgarp'a saldırdı (Askerî bir gezinti)</li>
             <li>İtalya <b>Çanakkale Boğazı</b>'nı abluka altına aldı, İngiltere <b>Mısır</b>'ı işgal etti</li>
@@ -53,7 +53,7 @@ window.tarih_11_notlari = [
             📜 UŞİ ANTLAŞMASI (1912 - İsviçre)
         </span>
     </div>
-    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Trablusgarp ve Bingazi</b> İtalya'ya bırakılacak</li>
             <li>Osmanlı Devleti'nin <b>Afrika kıtasında toprağı kalmadı</b></li>
@@ -75,7 +75,7 @@ window.tarih_11_notlari = [
             ⚔️ I. BALKAN SAVAŞI (1912-1913)
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">NEDENLERİ</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -106,7 +106,7 @@ window.tarih_11_notlari = [
             📋 I. BALKAN SAVAŞI - SONUÇLARI
         </span>
     </div>
-    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Batı Trakya'da azınlık sorunu ortaya çıktı</li>
             <li>Osmanlı'nın Balkanlar'da <b>toprağı kalmadı</b></li>
@@ -129,7 +129,7 @@ window.tarih_11_notlari = [
             ⚔️ II. BALKAN SAVAŞI (1913)
         </span>
     </div>
-    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm w-full">
         <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">NEDENİ:</p>
         <ul class="list-disc list-inside space-y-1 text-xs mt-1">
             <li>Bulgaristan'ın I. Balkan Savaşı'ndan daha fazla toprak alması</li>
@@ -152,7 +152,7 @@ window.tarih_11_notlari = [
             📜 BALKAN SAVAŞLARI SONRASI ANTLAŞMALAR
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left w-full text-sm">
         <div class="bg-cyan-50 dark:bg-cyan-900/20 p-3 rounded-xl border border-cyan-100 dark:border-cyan-800/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">İSTANBUL ANTLAŞMASI</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -186,7 +186,7 @@ window.tarih_11_notlari = [
             🌍 I. DÜNYA SAVAŞI - NEDENLERİ (1914-1918)
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-slate-50 dark:bg-slate-800/20 p-3 rounded-xl border border-slate-100 dark:border-slate-700/30">
             <ul class="list-disc list-inside space-y-1 text-xs">
                 <li>Almanya ve İtalya'nın geç siyasi birlik kurması</li>
@@ -214,7 +214,7 @@ window.tarih_11_notlari = [
             ⚔️ BLOKLAR VE ÖNEMLİ DEVLETLER
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-3 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">İTİLAF BLOĞU</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -249,7 +249,7 @@ window.tarih_11_notlari = [
             🇹🇷 OSMANLI'NIN SAVAŞA GİRME NEDENLERİ
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-3 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">ALMANYA'NIN İSTEME NEDENLERİ</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -279,7 +279,7 @@ window.tarih_11_notlari = [
             ⚓ OSMANLI'NIN SAVAŞA GİRMESİ (1914)
         </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Goeben</b> ve <b>Breslau</b> → <b>Yavuz</b> ve <b>Midilli</b> (Amiral Souchon)</li>
             <li>Rusya limanlarını bombaladı → Osmanlı savaşa girdi</li>
@@ -302,7 +302,7 @@ window.tarih_11_notlari = [
             🏔️ KAFKASYA CEPHESİ (Taarruz Cephesi)
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full">
         <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">AÇILMA NEDENLERİ:</p>
         <ul class="list-disc list-inside space-y-1 text-xs mt-1">
             <li>Kars, Ardahan, Batum'u geri almak</li>
@@ -331,7 +331,7 @@ window.tarih_11_notlari = [
             🏜️ KANAL CEPHESİ (Taarruz - Alman isteği)
         </span>
     </div>
-    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm w-full">
         <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">AÇILMA NEDENLERİ:</p>
         <ul class="list-disc list-inside space-y-1 text-xs mt-1">
             <li>Mısır'ı geri almak</li>
@@ -353,7 +353,7 @@ window.tarih_11_notlari = [
             🕌 SURIYE-FİLİSTİN CEPHESİ (Savunma)
         </span>
     </div>
-    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>I. ve II. Gazze Muharebeleri</b> (Osmanlı kazandı)</li>
             <li>Kanal Cephesi'nin devamıdır</li>
@@ -373,7 +373,7 @@ window.tarih_11_notlari = [
             ⚓ ÇANAKKALE CEPHESİ (Savunma - Dardanelles)
         </span>
     </div>
-    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm w-full">
         <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">AÇILMA NEDENLERİ:</p>
         <ul class="list-disc list-inside space-y-1 text-xs mt-1">
             <li>Osmanlı'nın Hindistan saldırısını engellemek</li>
@@ -404,7 +404,7 @@ window.tarih_11_notlari = [
             ✅ ÇANAKKALE CEPHESİ - SONUÇLARI
         </span>
     </div>
-    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Savaşın süresi en az <b>2 yıl uzadı</b></li>
             <li><b>Bulgaristan</b> Osmanlı'nın yanında savaşa girdi</li>
@@ -422,7 +422,7 @@ window.tarih_11_notlari = [
             🛢️ IRAK CEPHESİ (Savunma)
         </span>
     </div>
-    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm w-full">
         <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">AÇILMA NEDENLERİ:</p>
         <ul class="list-disc list-inside space-y-1 text-xs mt-1">
             <li>Rusya'ya karadan yardım göndermek</li>
@@ -449,7 +449,7 @@ window.tarih_11_notlari = [
             🕋 HİCAZ-YEMEN CEPHESİ (Savunma)
         </span>
     </div>
-    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>İngilizler kutsal bölgeleri ve petrolü ele geçirmek istedi</li>
             <li><b>İngiliz ajanı Lawrence</b> bölge Arapları üzerinde etkili</li>
@@ -470,7 +470,7 @@ window.tarih_11_notlari = [
             🤝 YARDIM CEPHELERİ
         </span>
     </div>
-    <div class="bg-pink-50 dark:bg-pink-900/20 p-4 rounded-xl border border-pink-100 dark:border-pink-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-pink-50 dark:bg-pink-900/20 p-4 rounded-xl border border-pink-100 dark:border-pink-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Galiçya</b> → Ruslarla savaşıldı</li>
             <li><b>Romanya</b> → Romanlarla savaşıldı</li>
@@ -486,7 +486,7 @@ window.tarih_11_notlari = [
             🤫 GİZLİ ANTLAŞMALAR (I. Dünya Savaşı)
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-stone-50 dark:bg-stone-800/20 p-3 rounded-xl border border-stone-100 dark:border-stone-700/30">
             <ul class="list-disc list-inside space-y-1 text-xs">
                 <li><b>İstanbul (Boğazlar) Ant.</b> → İngiltere, Fransa, Rusya (Boğazlar ve İstanbul Rusya'ya)</li>
@@ -502,7 +502,7 @@ window.tarih_11_notlari = [
             </ul>
         </div>
     </div>
-    <div class="mt-3 bg-stone-100 dark:bg-stone-800/30 p-3 rounded-lg text-stone-700 dark:text-stone-400 border border-stone-200 dark:border-stone-700/30 text-xs max-w-2xl mx-auto">
+    <div class="mt-3 bg-stone-100 dark:bg-stone-800/30 p-3 rounded-lg text-stone-700 dark:text-stone-400 border border-stone-200 dark:border-stone-700/30 text-xs w-full">
         ⭐ <b>NOT:</b> Sovyet Rusya bu gizli antlaşmaları "<b>Sarı Kitap</b>" adıyla dünya kamuoyuna açıkladı.
     </div>
     `,
@@ -514,7 +514,7 @@ window.tarih_11_notlari = [
             📜 WİLSON İLKELERİ - 14 NOKTA (8 Ocak 1918)
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li>Galip devletler toprak ve tazminat almayacak</li>
             <li><b>Gizli antlaşmalar</b> yapılmayacak</li>
@@ -536,7 +536,7 @@ window.tarih_11_notlari = [
             🌍 I. DÜNYA SAVAŞI - SONUÇLARI
         </span>
     </div>
-    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm w-full">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <div>
                 <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">🏆 KAZANANLAR:</p>
@@ -574,7 +574,7 @@ window.tarih_11_notlari = [
             ☮️ ATEŞKES ANTLAŞMALARI
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-red-50 dark:bg-red-900/20 p-3 rounded-xl border border-red-100 dark:border-red-800/30">
             <ul class="list-disc list-inside space-y-1 text-xs">
                 <li><b>Almanya</b> → Rethondes</li>
@@ -588,7 +588,7 @@ window.tarih_11_notlari = [
             </ul>
         </div>
     </div>
-    <div class="mt-3 bg-red-100 dark:bg-red-800/30 p-3 rounded-lg text-red-700 dark:text-red-400 border border-red-200 dark:border-red-800/30 text-xs max-w-2xl mx-auto">
+    <div class="mt-3 bg-red-100 dark:bg-red-800/30 p-3 rounded-lg text-red-700 dark:text-red-400 border border-red-200 dark:border-red-800/30 text-xs w-full">
         ⭐ <b>NOT:</b> Mondros Ateşkes Antlaşması (30 Ekim 1918) - Osmanlı Devleti'nin fiilen sonu
     </div>
     `

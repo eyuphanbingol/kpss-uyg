@@ -6,7 +6,7 @@ window.cografya_8_notlari = [
             ❄️ TÜRKİYE'DE BUZUL ŞEKİLLERİ
         </span>
     </div>
-    <div class="bg-sky-50 dark:bg-sky-900/20 p-4 rounded-xl border border-sky-100 dark:border-sky-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-sky-50 dark:bg-sky-900/20 p-4 rounded-xl border border-sky-100 dark:border-sky-800/30 text-sm w-full">
         <p>Türkiye, <b class="text-rose-600 dark:text-rose-400">Orta Kuşak'ta</b> (Matematik konum) yer aldığı için deniz seviyesinde buzul şekillerine rastlanmaz.</p>
         <p class="mt-2">Ancak ortalama yükseltisi fazla olduğu için (<b class="text-rose-600 dark:text-rose-400">Özel konum</b>) yüksek dağların zirvelerinde buzullaşma ve buzul şekilleri görülür.</p>
     </div>
@@ -18,7 +18,7 @@ window.cografya_8_notlari = [
             🏔️ BUZULLAŞAN DAĞLAR
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
             <p class="text-xs text-slate-500 dark:text-slate-400 mb-3 uppercase tracking-wide font-bold">Bölgelere Göre Dağılımı</p>
             <div class="space-y-2">
@@ -67,7 +67,7 @@ window.cografya_8_notlari = [
             ❌ KRİTİK NOT
         </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full">
         <p>Türkiye'de yükseltisi az olan veya enlemin etkisinden dolayı sıcak olan bölgelerdeki dağlarda <b class="text-rose-600 dark:text-rose-400">buzul şekillerine rastlanmaz.</b></p>
         <div class="flex flex-wrap gap-2 mt-3">
             <span class="bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full text-xs border border-red-200 dark:border-red-800/30 font-bold">Trakya</span>
@@ -84,7 +84,7 @@ window.cografya_8_notlari = [
             📐 BUZUL AŞINDIRMA VE BİRİKTİRME ŞEKİLLERİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30">
                 <div class="flex items-center gap-2 mb-2">

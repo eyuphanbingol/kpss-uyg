@@ -7,7 +7,7 @@ window.cografya_13_notlari = [
             💧 TÜRKİYE'NİN AKARSULARI - GENEL ÖZELLİKLERİ
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Kaynakları:</b> Yüksek dağlık sahalardır.</li>
             <li><b>Akış hızı, aşındırma gücü, hidroelektrik potansiyeli:</b> Fazladır (Sebebi: yükselti)</li>
@@ -27,7 +27,7 @@ window.cografya_13_notlari = [
             🌊 KAPALI HAVZALAR (Denize ulaşamayan akarsuların havzası)
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Hazer Denizi'ne dökülen akarsuları:</b> Aras ve Kura nehirleri</li>
             <li><b>Van Gölü Havzası</b></li>
@@ -49,7 +49,7 @@ window.cografya_13_notlari = [
             🔵 AÇIK HAVZALAR (Denize kavuşan akarsuların havzası)
         </span>
     </div>
-    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm w-full">
         <p class="text-xs">Türkiye akarsuları <b>5 açık havzaya</b> dökülmektedir:</p>
         <ol class="list-decimal list-inside space-y-1 text-xs mt-2">
             <li><b>Karadeniz Havzası</b> (En büyük açık havza)</li>
@@ -68,7 +68,7 @@ window.cografya_13_notlari = [
             🏔️ KARADENİZ HAVZASINA DÖKÜLEN AKARSULAR
         </span>
     </div>
-    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Çoruh:</b> Akış hızı çok fazladır. Yusufeli Barajı (En yüksek setli baraj) üzerinde bulunur.</li>
             <li><b>Yeşilırmak:</b> Gümüşhane yakınlarından kaynağını alır. Kelkit Çayı ana kolu. Batıya hareket eder. Samsun'da Çarşamba Deltası oluşturur.</li>
@@ -87,7 +87,7 @@ window.cografya_13_notlari = [
             ⚪ MARMARA HAVZASINA DÖKÜLEN AKARSULAR
         </span>
     </div>
-    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Susurluk:</b> Kütahya yakınlarından kaynağını alır.</li>
         </ul>
@@ -101,7 +101,7 @@ window.cografya_13_notlari = [
             🟡 EGE HAVZASINA DÖKÜLEN AKARSULAR
         </span>
     </div>
-    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Meriç:</b> Bulgaristan'dan kaynağını alır.</li>
             <li><b>Bakırçay</b></li>
@@ -119,7 +119,7 @@ window.cografya_13_notlari = [
             🔴 AKDENİZ HAVZASINA DÖKÜLEN AKARSULAR
         </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Dalaman Çayı:</b> Muğla'da, Menteşe Dağları'ndan kaynağını alır.</li>
             <li><b>Aksu:</b> Göller Yöresi'nden kaynağını alır. Antalya'dan denize dökülür.</li>
@@ -140,7 +140,7 @@ window.cografya_13_notlari = [
             🛢️ BASRA KÖRFEZİ HAVZASINA DÖKÜLEN AKARSULAR
         </span>
     </div>
-    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Fırat Nehri:</b> Türkiye'nin en büyük hidroelektrik barajları bu nehir üzerinde kurulmuştur (Atatürk, Karakaya, Keban, Birecik). Karasu ve Murat kolları birleşerek Fırat Nehri'ni oluşturur. Irak'ta Dicle ile birleşir, Şattülarap'a dönüşür.</li>
             <li><b>Dicle Nehri:</b> Çıkışı Elazığ'daki Hazar Gölü'dür. Irak'ta Fırat ile birleşir.</li>
@@ -161,7 +161,7 @@ window.cografya_13_notlari = [
             ⚠️ YURT DIŞINDA DOĞUP TÜRKİYE'DE DENİZE DÖKÜLEN AKARSULAR
         </span>
     </div>
-    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Meriç:</b> Bulgaristan'dan kaynağını alır → Taşkın yapar</li>
             <li><b>Asi:</b> Lübnan'dan kaynağını alır, Suriye'den gelir → Taşkın yapar</li>
@@ -179,7 +179,7 @@ window.cografya_13_notlari = [
             🌳 TÜRKİYE'DEKİ GÖLLER - SINIFLANDIRILMASI
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-emerald-50 dark:bg-emerald-900/20 p-3 rounded-xl border border-emerald-100 dark:border-emerald-800/30">
             <ul class="list-disc list-inside space-y-1 text-xs">
                 <li><b>Karstik Göller:</b> Avlan, Kestel, Suğla, Elmalı, Salda <span class="text-rose-600 dark:text-rose-400">(Kod: AKSES)</span></li>
@@ -210,7 +210,7 @@ window.cografya_13_notlari = [
             📊 GÖLLER - GENEL ÖZELLİKLERİ
         </span>
     </div>
-    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Yıl içinde en çok alan değişen göl:</b> Tuz Gölü (Sebebi: sığ olması, buharlaşma)</li>
             <li><b>Üzerinde ulaşım yapılan, demir yolu olan tek göl:</b> Van Gölü (Maliyeti azdır)</li>
@@ -240,7 +240,7 @@ window.cografya_13_notlari = [
             🏛️ TÜRKİYE'NİN YER ALTI SULARI VE KAYNAKLARI
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-teal-50 dark:bg-teal-900/20 p-3 rounded-xl border border-teal-100 dark:border-teal-800/30">
             <ul class="list-disc list-inside space-y-1 text-xs">
                 <li><b>Karstik (Voküz) Kaynak:</b> Sifonlu kaynak denir. Yağıştan beslenir, rejim düzensiz, sular soğuk ve kireçlidir.</li>
@@ -263,7 +263,7 @@ window.cografya_13_notlari = [
             💧 TÜRKİYE'NİN TATLI SU PROJELERİ
         </span>
     </div>
-    <div class="bg-sky-50 dark:bg-sky-900/20 p-4 rounded-xl border border-sky-100 dark:border-sky-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-sky-50 dark:bg-sky-900/20 p-4 rounded-xl border border-sky-100 dark:border-sky-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Barış Suyu (Can Suyu) Projesi (Kıbrıs):</b> 'Asrın Projesi' denmiştir. Geçitköy Barajı ile içme ve sulama suyu sağlanıyor.</li>
             <li><b>Avşa Adası Deniz Suyu Projesi:</b> Balıkesir, Marmara Denizi sularını arıtıp içiyor.</li>
@@ -280,7 +280,7 @@ window.cografya_13_notlari = [
             🌊 TÜRKİYE'NİN DENİZLERİ
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-xl border border-blue-100 dark:border-blue-800/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">A. KARADENİZ</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">
@@ -331,7 +331,7 @@ window.cografya_13_notlari = [
             🌍 TOPRAK VARLIĞI - ZONAL (YERLİ) TOPRAKLAR
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-lime-50 dark:bg-lime-900/20 p-3 rounded-xl border border-lime-100 dark:border-lime-800/30">
             <ul class="list-disc list-inside space-y-1 text-xs">
                 <li><b>Oluşum Süreci:</b> Bulunduğu yörenin iklim ve ana kaya yapısı hakkında bilgi verir.</li>
@@ -353,7 +353,7 @@ window.cografya_13_notlari = [
             🟤 KAHVERENGİ ORMAN TOPRAĞI
         </span>
     </div>
-    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Bulunma alanı:</b> Karadeniz'de yaygındır</li>
             <li><b>Humus:</b> Zengindir</li>
@@ -375,7 +375,7 @@ window.cografya_13_notlari = [
             ⚫ PODZOL TOPRAKLAR
         </span>
     </div>
-    <div class="bg-slate-50 dark:bg-slate-800/20 p-4 rounded-xl border border-slate-100 dark:border-slate-700/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-slate-50 dark:bg-slate-800/20 p-4 rounded-xl border border-slate-100 dark:border-slate-700/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Bulunma alanı:</b> Karadeniz kestane yapraklı ormanları altında</li>
             <li><b>Coğrafi dağılış:</b> Dağlık sahalarda, Doğu Karadeniz ve Zonguldak</li>
@@ -392,7 +392,7 @@ window.cografya_13_notlari = [
             ⬛ ÇERNOZEM TOPRAKLARI (Siyah Toprak)
         </span>
     </div>
-    <div class="bg-neutral-50 dark:bg-neutral-800/20 p-4 rounded-xl border border-neutral-100 dark:border-neutral-700/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-neutral-50 dark:bg-neutral-800/20 p-4 rounded-xl border border-neutral-100 dark:border-neutral-700/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Bulunma alanı:</b> Erzurum-Kars platolarında</li>
             <li><b>Özellik:</b> Dünyanın en humuslu topraklarıdır</li>
@@ -409,7 +409,7 @@ window.cografya_13_notlari = [
             🔴 TERRA ROSSA (Kırmızı Akdeniz Toprağı)
         </span>
     </div>
-    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Bulunma alanı:</b> Akdeniz'de yaygın</li>
             <li><b>Rengi ve yapısı:</b> Kırmızı, demir oksitçe zengindir</li>
@@ -426,7 +426,7 @@ window.cografya_13_notlari = [
             🟡 BOZKIR (STEP) TOPRAKLARI
         </span>
     </div>
-    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Oluşum nedeni:</b> Yağış azlığı</li>
             <li><b>Verimlilik:</b> Sulama ile verimli olur</li>
@@ -446,7 +446,7 @@ window.cografya_13_notlari = [
             💨 INTRAZONAL TOPRAKLAR
         </span>
     </div>
-    <div class="bg-violet-50 dark:bg-violet-900/20 p-4 rounded-xl border border-violet-100 dark:border-violet-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-violet-50 dark:bg-violet-900/20 p-4 rounded-xl border border-violet-100 dark:border-violet-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Hidromorfik:</b> Sulu toprak, göl/akarsu kenarında, drenaj gelişmemiştir</li>
             <li><b>Halomorfik (Solonçak):</b> Tuzlu toprak, Tuz Gölü çevresi</li>
@@ -462,7 +462,7 @@ window.cografya_13_notlari = [
             🪨 AZONAL TOPRAKLAR
         </span>
     </div>
-    <div class="bg-stone-50 dark:bg-stone-800/20 p-4 rounded-xl border border-stone-100 dark:border-stone-700/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-stone-50 dark:bg-stone-800/20 p-4 rounded-xl border border-stone-100 dark:border-stone-700/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Özellik:</b> Bulunduğu yörenin iklimi/ana kaya yapısı hakkında bilgi vermez. Belirgin katmanlaşma yoktur.</li>
             <li><b>Alüvyal Topraklar:</b> Akarsu biriktirmesi, deltalar, oldukça verimli, kolay işlenir, yoğun tarım</li>
@@ -480,7 +480,7 @@ window.cografya_13_notlari = [
             🌳 TÜRKİYE'NİN BİTKİ VARLIĞI - GENEL BİLGİLER
         </span>
     </div>
-    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Bitki çeşidi:</b> Yaklaşık 12 bin çeşit bitki (Sebebi: iklim çeşitliliği)</li>
             <li><b>En çok endemik tür bulunduğu yer:</b> Toroslar</li>
@@ -496,7 +496,7 @@ window.cografya_13_notlari = [
             🌿 ENDEMİK TÜR (Sadece bir yerdeki bitki)
         </span>
     </div>
-    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>İspir Meşesi:</b> Yozgat</li>
             <li><b>Kazdağı Köknarı</b></li>
@@ -517,7 +517,7 @@ window.cografya_13_notlari = [
             👑 KLİMAKS TÜR (Bir iklimin baskın bitkisi)
         </span>
     </div>
-    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Karadeniz:</b> Ladin</li>
             <li><b>Akdeniz:</b> Kızılçam</li>
@@ -533,7 +533,7 @@ window.cografya_13_notlari = [
             💀 RELİKT TÜR (Kalıntı Tür)
         </span>
     </div>
-    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30 text-sm w-full">
         <p class="text-xs">Geçmiş jeolojik dönemlerden kalma bitkilerdir.</p>
     </div>
     `,
@@ -545,7 +545,7 @@ window.cografya_13_notlari = [
             🌲 AĞAÇ TOPLULUĞU - GENEL BİLGİLER
         </span>
     </div>
-    <div class="bg-emerald-50 dark:bg-emerald-900/20 p-4 rounded-xl border border-emerald-100 dark:border-emerald-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-emerald-50 dark:bg-emerald-900/20 p-4 rounded-xl border border-emerald-100 dark:border-emerald-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Türkiye'nin yüz ölçümünün %28'i:</b> Ormanlıktır</li>
             <li><b>Türkiye'deki en çok arazi:</b> Ormanlıktır</li>
@@ -564,7 +564,7 @@ window.cografya_13_notlari = [
             📏 YÜKSELTİ SIRASIYLA ORMAN AĞAÇLARI (Yüksekten Aza)
         </span>
     </div>
-    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30 text-sm w-full">
         <p class="text-xs text-center font-bold">Meşe → Kızılçam → Kayın → Ardıç → Sarıçam → Sedir → Ladin</p>
     </div>
     `,
@@ -576,7 +576,7 @@ window.cografya_13_notlari = [
             🌳 ORMAN AĞAÇLARININ COĞRAFİ DAĞILIŞI
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left w-full text-sm">
         <div class="bg-lime-50 dark:bg-lime-900/20 p-3 rounded-xl border border-lime-100 dark:border-lime-800/30">
             <ul class="list-disc list-inside space-y-1 text-xs">
                 <li><b>Meşe:</b> Türkiye'nin hemen her bölgesi, en yaygın ağaçlardan biri</li>
@@ -602,7 +602,7 @@ window.cografya_13_notlari = [
             🍂 KARADENİZ ORMANLARI
         </span>
     </div>
-    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Özelliği:</b> Türkiye'nin en yoğun orman alanını oluşturur</li>
             <li><b>0-1000 metre:</b> Geniş yapraklı ormanlar (kayın, kestane, gürgen, ıhlamur)</li>
@@ -619,7 +619,7 @@ window.cografya_13_notlari = [
             ☀️ AKDENİZ ORMANLARI
         </span>
     </div>
-    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>0-500 metre:</b> Yaz kuraklığına dayanıklı meşe türleri ve kızılçamlar</li>
             <li><b>500-1000 metre:</b> Meşe türleri ve kızılçamlar</li>
@@ -635,7 +635,7 @@ window.cografya_13_notlari = [
             ❄️ KARASAL ORMANLAR (İç ve Doğu Anadolu)
         </span>
     </div>
-    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>En yüksek sınır:</b> 2800 metre (Doğu Anadolu)</li>
             <li><b>Ormanlık kuşaklar:</b> Meşe, karaçam, sarıçam, ardıçtan oluşan orman kuşakları</li>
@@ -650,7 +650,7 @@ window.cografya_13_notlari = [
             🌾 ÇALI TOPLULUĞU
         </span>
     </div>
-    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Maki:</b> Kızılçam ormanlarının tahrip edilmesiyle ortaya çıkar (Zeytin, keçiboynuzu, zakkum, lavanta, kocayemiş, defne)</li>
             <li><b>Tahrip sonrası:</b> 'Garig' oluşur</li>
@@ -666,7 +666,7 @@ window.cografya_13_notlari = [
             🌾 OT TOPLULUĞU
         </span>
     </div>
-    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm max-w-2xl mx-auto">
+    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30 text-sm w-full">
         <ul class="list-disc list-inside space-y-1 text-xs">
             <li><b>Bozkır:</b> İlkbaharda yeşerip, yaz sararıp, sonbahar kuruyan, kış ortadan kalkan otlar (Sığır kuyruğu, çoban yastığı, geven otu, üzerlik otu)</li>
             <li><b>Antropojen Bozkır (Ağaçlı Bozkır):</b> İnsan eliyle orman tahribi sonucunda (Yozgat, Ankara)</li>
@@ -682,7 +682,7 @@ window.cografya_13_notlari = [
             🗺️ TÜRKİYE'NİN FLORA - 3 ANA FLORA BÖLGESİ
         </span>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-3 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
             <p class="font-bold text-rose-600 dark:text-rose-400 text-xs">1. AVRUPA-SİBİRYA</p>
             <ul class="list-disc list-inside space-y-1 text-xs mt-1">

@@ -6,7 +6,7 @@ window.cografya_9_notlari = [
             💎 KARSTİK ŞEKİLLER
         </span>
     </div>
-    <div class="bg-slate-50 dark:bg-slate-900/20 p-4 rounded-xl border border-slate-200 dark:border-slate-700 text-sm max-w-2xl mx-auto">
+    <div class="bg-slate-50 dark:bg-slate-900/20 p-4 rounded-xl border border-slate-200 dark:border-slate-700 text-sm w-full">
         <p>Suyun etkisiyle kolayca eriyebilen (çözünebilen) kimyasal tortul kayaçların bulunduğu arazilere <b class="text-rose-600 dark:text-rose-400">karstik araziler</b>, bu araziler üzerinde suyun aşındırma ve biriktirmesiyle oluşan şekillere de <b class="text-rose-600 dark:text-rose-400">karstik şekiller</b> denir.</p>
     </div>
     `,
@@ -17,7 +17,7 @@ window.cografya_9_notlari = [
             🪨 KARSTİK KAYAÇ TÜRLERİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-stone-50 dark:bg-stone-900/20 p-4 rounded-xl border border-stone-200 dark:border-stone-700">
             <div class="space-y-3">
                 <div class="bg-white dark:bg-slate-800/50 p-3 rounded-lg border-l-4 border-stone-500">
@@ -54,11 +54,11 @@ window.cografya_9_notlari = [
             🕳️ AŞINDIRMA ŞEKİLLERİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-violet-50 dark:bg-violet-900/20 p-4 rounded-xl border border-violet-100 dark:border-violet-800/30">
             <p class="text-xs text-slate-500 dark:text-slate-400 mb-3 uppercase tracking-wide font-bold">Küçükten Büyüğe Gelişim</p>
             <div class="space-y-2">
-                <div class="flex items-start gap-3 bg-white dark:bg-slate-800/50 p-3 rounded-lg border border-violet-200 dark:border-violet-800/30">
+                <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3 bg-white dark:bg-slate-800/50 p-3 rounded-lg border border-violet-200 dark:border-violet-800/30">
                     <span class="bg-violet-200 dark:bg-violet-800 text-violet-800 dark:text-violet-200 w-6 h-6 flex items-center justify-center rounded-full text-xs font-black shrink-0">1</span>
                     <div>
                         <b class="text-rose-600 dark:text-rose-400">Lapya</b>
@@ -66,7 +66,7 @@ window.cografya_9_notlari = [
                     </div>
                 </div>
                 <div class="flex justify-center"><span class="text-violet-400 text-lg">↓</span></div>
-                <div class="flex items-start gap-3 bg-white dark:bg-slate-800/50 p-3 rounded-lg border border-violet-200 dark:border-violet-800/30">
+                <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3 bg-white dark:bg-slate-800/50 p-3 rounded-lg border border-violet-200 dark:border-violet-800/30">
                     <span class="bg-violet-200 dark:bg-violet-800 text-violet-800 dark:text-violet-200 w-6 h-6 flex items-center justify-center rounded-full text-xs font-black shrink-0">2</span>
                     <div>
                         <b class="text-rose-600 dark:text-rose-400">Dolin</b>
@@ -74,7 +74,7 @@ window.cografya_9_notlari = [
                     </div>
                 </div>
                 <div class="flex justify-center"><span class="text-violet-400 text-lg">↓</span></div>
-                <div class="flex items-start gap-3 bg-white dark:bg-slate-800/50 p-3 rounded-lg border border-violet-200 dark:border-violet-800/30">
+                <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3 bg-white dark:bg-slate-800/50 p-3 rounded-lg border border-violet-200 dark:border-violet-800/30">
                     <span class="bg-violet-200 dark:bg-violet-800 text-violet-800 dark:text-violet-200 w-6 h-6 flex items-center justify-center rounded-full text-xs font-black shrink-0">3</span>
                     <div>
                         <b class="text-rose-600 dark:text-rose-400">Uvala</b>
@@ -82,7 +82,7 @@ window.cografya_9_notlari = [
                     </div>
                 </div>
                 <div class="flex justify-center"><span class="text-violet-400 text-lg">↓</span></div>
-                <div class="flex items-start gap-3 bg-white dark:bg-slate-800/50 p-3 rounded-lg border-2 border-violet-400 dark:border-violet-600">
+                <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3 bg-white dark:bg-slate-800/50 p-3 rounded-lg border-2 border-violet-400 dark:border-violet-600">
                     <span class="bg-violet-600 dark:bg-violet-500 text-white w-6 h-6 flex items-center justify-center rounded-full text-xs font-black shrink-0">4</span>
                     <div>
                         <b class="text-rose-600 dark:text-rose-400">Polye (Karstik Ova)</b>
@@ -117,7 +117,7 @@ window.cografya_9_notlari = [
             ✨ BİRİKTİRME (ÇÖKELTME) ŞEKİLLERİ
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-emerald-50 dark:bg-emerald-900/20 p-4 rounded-xl border border-emerald-100 dark:border-emerald-800/30">
             <p class="mb-3">Yer altı sularının içindeki kalsiyum karbonatın suyun buharlaşması veya basıncın azalmasıyla çökelmesi sonucu oluşur.</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -151,7 +151,7 @@ window.cografya_9_notlari = [
             📝 SINAV İÇİN KRİTİK NOTLAR
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
             <div class="bg-white dark:bg-slate-800/50 p-3 rounded-lg border-l-4 border-amber-500 mb-2">
                 <p class="text-amber-800 dark:text-amber-200">💡 <b>Antalya</b> şehri coğrafi olarak devasa bir <b class="text-rose-600 dark:text-rose-400">traverten platosu</b> üzerinde yer almaktadır.</p>
@@ -169,7 +169,7 @@ window.cografya_9_notlari = [
             🦇 MEŞHUR KARSTİK MAĞARALAR
         </span>
     </div>
-    <div class="space-y-3 text-left max-w-2xl mx-auto text-sm">
+    <div class="space-y-3 text-left w-full text-sm">
         <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 <div class="bg-white dark:bg-slate-800/50 p-3 rounded-lg border border-indigo-200 dark:border-indigo-800/30">
