@@ -1080,9 +1080,6 @@ function DenemeSetup(props) {
                     <span className="text-xs text-zinc-400 font-normal mt-0.5 block">40 soru, 40 dakika, optik kâğıt. Sınav temposu.</span>
                 </button>
             ) : null}
-            {!StudentStore.isPremium() ? (
-                <p className="text-xs text-zinc-400 mt-3 text-center">Ücretsiz: günde {(window.KpssConfig && window.KpssConfig.freeDailyMixed) || 3} karışık · haftada {(window.KpssConfig && window.KpssConfig.freeWeeklyExams) || 2} tam deneme</p>
-            ) : null}
         </Shell>
     );
 }
@@ -1278,16 +1275,8 @@ function Ben(props) {
                 </div>
             </div>
             <div className="rounded-3xl glass p-5 mb-4 card-hover">
-                <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-1">Premium</p>
-                <p className="text-xs text-stone-400 mb-2">Daha fazla deneme ve tam tercih listesi.</p>
-                <p className="text-sm text-stone-600 mb-3">{StudentStore.isPremium() ? (
-                    <span><span className="badge-gold text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full mr-2">Premium</span>
-                    {up.premiumUntil ? new Date(up.premiumUntil).toLocaleDateString("tr-TR") : "açık"}</span>
-                ) : "Ücretsiz plan · sınırlı deneme"}</p>
-                {!StudentStore.isPremium() ? (
-                    <button onClick={function () { props.onOpen && props.onOpen("paywall"); }} className="w-full py-2.5 rounded-xl btn-primary text-white text-sm font-semibold">Planı gör</button>
-                ) : null}
-                <p className="text-xs text-stone-400 mt-3">Davet kodun: <b>{StudentStore.ensureReferralCode ? StudentStore.ensureReferralCode() : (up.referralCode || "—")}</b></p>
+                <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-1">Davet</p>
+                <p className="text-xs text-stone-400 mt-1">Davet kodun: <b>{StudentStore.ensureReferralCode ? StudentStore.ensureReferralCode() : (up.referralCode || "—")}</b></p>
                 <label className="text-xs text-stone-400 mt-2 block">Arkadaş kodu</label>
                 <input defaultValue={up.referredBy || ""} onBlur={function (e) {
                     if (window.PaymentClient) window.PaymentClient.applyReferral(e.target.value);
@@ -1404,6 +1393,10 @@ function App() {
 
     useEffect(function () {
         if (!extra || extra === "onboarding") return;
+        if (extra === "paywall" && !(window.KpssConfig && window.KpssConfig.premiumEnabled)) {
+            setExtra(null);
+            return;
+        }
         var spec = LAZY[extra];
         if (!spec || !window.JsxLoader) {
             setLazyErr("Bu araç bulunamadı.");

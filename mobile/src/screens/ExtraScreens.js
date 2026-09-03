@@ -475,6 +475,22 @@ export function PaywallScreen({ navigation }) {
     var isDark = app.dark;
     var isPremium = StudentStore.isPremium();
 
+    if (!StudentStore.premiumOfferEnabled()) {
+        return (
+            <ScrollScreen dark={isDark}>
+                <Pressable onPress={function () { navigation.goBack(); }}>
+                    <Text style={[styles.backText, isDark && styles.textMuted]}>← Geri</Text>
+                </Pressable>
+                <View style={styles.header}>
+                    <Text style={[styles.title, isDark && styles.textLight]}>Tüm özellikler açık</Text>
+                    <Text style={[styles.subtitle, isDark && styles.textMuted]}>
+                        Abonelik şimdilik yok; deneme ve tercih listesi sınırlı değil.
+                    </Text>
+                </View>
+            </ScrollScreen>
+        );
+    }
+
     return (
         <ScrollScreen dark={isDark}>
             {/* Back */}

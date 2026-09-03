@@ -3,6 +3,7 @@ export const KpssConfig = {
     supabaseAnonKey: "sb_publishable_3TaCTFJJiJtEdQtF_ZbCCw_Pxf-pzRE",
     appName: "Atanly",
     productionUrl: "https://kpss-uyg.vercel.app",
+    premiumEnabled: false,
     freeWeeklyExams: 2,
     freeDailyMixed: 3,
     examDateByLevel: {

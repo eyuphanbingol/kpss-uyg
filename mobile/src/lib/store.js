@@ -456,7 +456,12 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
         if ((state.streak.count || 0) >= 1) unlock("firstDay", "İlk çalışma günü");
     }
 
+    function premiumOfferEnabled() {
+        return !!(KpssConfig && KpssConfig.premiumEnabled);
+    }
+
     function isPremium() {
+        if (!premiumOfferEnabled()) return true;
         if (state.userProfile.role === "admin") return true;
         if (!state.userProfile.premium) return false;
         if (!state.userProfile.premiumUntil) return true;
@@ -513,6 +518,7 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
         topicMasteryScore: topicMasteryScore,
         migrate: migrate,
         isPremium: isPremium,
+        premiumOfferEnabled: premiumOfferEnabled,
         flagOn: flagOn,
         ensureReferralCode: ensureReferralCode,
         canStartMixed: canStartMixed,

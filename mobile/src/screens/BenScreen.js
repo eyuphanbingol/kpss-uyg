@@ -17,8 +17,7 @@ var TOOLS = [
     { id: "Leaderboard", t: "Türkiye Sıralaması", d: "Haftalık liderlik tablosu" },
     { id: "Heat", t: "Isı Haritası", d: "30 günlük çalışma tempon" },
     { id: "Ai", t: "Soru Asistanı", d: "Yanlışlarını analiz et" },
-    { id: "Live", t: "Canlı Deneme", d: "Haftalık ortak sınav" },
-    { id: "Paywall", t: "Premium", d: "Plan ve davet kodu" }
+    { id: "Live", t: "Canlı Deneme", d: "Haftalık ortak sınav" }
 ];
 
 // ============================================================
@@ -227,21 +226,10 @@ export default function BenScreen({ navigation }) {
                 </View>
             </Card>
 
-            {/* Premium Card */}
-            <Card style={[isDark && styles.cardDark, StudentStore.isPremium() && styles.premiumCard]}>
+            <Card style={[isDark && styles.cardDark]}>
                 <View style={styles.premiumHeader}>
-                    <Text style={[styles.premiumTitle, StudentStore.isPremium() && { color: colors.gold }]}>
-                        {StudentStore.isPremium() ? "Premium" : "Ücretsiz Plan"}
-                    </Text>
-                    {StudentStore.isPremium() && (
-                        <Badge type="gold" title="Aktif" />
-                    )}
+                    <Text style={styles.premiumTitle}>Davet</Text>
                 </View>
-                <Text style={[styles.premiumDesc, isDark && styles.textMuted]}>
-                    {StudentStore.isPremium() 
-                        ? "Sınırsız deneme ve tüm özellikler" 
-                        : "Sınırlı deneme, Premium'a yükselt"}
-                </Text>
                 <View style={styles.referralBox}>
                     <Text style={[styles.referralLabel, isDark && styles.textMuted]}>
                         Davet Kodun

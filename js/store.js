@@ -452,7 +452,12 @@
         if ((state.streak.count || 0) >= 1) unlock("firstDay", "İlk çalışma günü");
     }
 
+    function premiumOfferEnabled() {
+        return !!(global.KpssConfig && global.KpssConfig.premiumEnabled);
+    }
+
     function isPremium() {
+        if (!premiumOfferEnabled()) return true;
         if (state.userProfile.role === "admin") return true;
         if (!state.userProfile.premium) return false;
         if (!state.userProfile.premiumUntil) return true;
@@ -511,6 +516,7 @@
         topicMasteryScore: topicMasteryScore,
         migrate: migrate,
         isPremium: isPremium,
+        premiumOfferEnabled: premiumOfferEnabled,
         flagOn: flagOn,
         ensureReferralCode: ensureReferralCode,
         canStartMixed: canStartMixed,

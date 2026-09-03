@@ -153,6 +153,16 @@
             }
         ];
 
+        if (!(window.KpssConfig && window.KpssConfig.premiumEnabled)) {
+            return (
+                <div className="max-w-lg mx-auto px-4 py-12 text-center">
+                    <h1 className="text-xl font-black mb-2">Tüm özellikler açık</h1>
+                    <p className="text-sm text-stone-400 mb-6">Abonelik şimdilik yok; deneme ve tercih listesi sınırlı değil.</p>
+                    <button onClick={props.onBack} className="px-5 py-2.5 rounded-xl btn-primary text-white text-sm font-semibold">Geri</button>
+                </div>
+            );
+        }
+
         // ============================================================
         // RENDER
         // ============================================================

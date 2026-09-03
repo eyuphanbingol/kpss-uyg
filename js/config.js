@@ -14,6 +14,7 @@
         logoUrl: "icons/atanom.png?v=18",
         platform: "web",
         productionUrl: "https://kpss-uyg.vercel.app",
+        premiumEnabled: false,
         freeWeeklyExams: 2,
         freeDailyMixed: 3,
         examDateByLevel: {
