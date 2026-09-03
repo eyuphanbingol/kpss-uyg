@@ -736,25 +736,35 @@ function NotesView(props) {
             </div>
             <h2 className="text-2xl font-black mb-4">{props.konu} · Özet</h2>
             {notlar.length ? (
-                <div className="relative bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 shadow-xl flex flex-col p-6 sm:p-10 min-h-[400px]">
-                    <div className="flex justify-center mb-6">
-                        <div className="h-12 w-12 bg-stone-100 text-navy-600 rounded-2xl flex items-center justify-center font-stat text-xl">{idx + 1}/{notlar.length}</div>
+                <div className="note-stage flex flex-col p-5 sm:p-8 min-h-[420px]">
+                    <div className="flex justify-center mb-5">
+                        <div className="note-progress">{idx + 1}/{notlar.length}</div>
                     </div>
-                    <div key={idx} className="flex-1 fade-in text-center mb-20">
-                        <div className="text-slate-700 dark:text-slate-300 text-[17px] leading-relaxed max-w-2xl w-full mx-auto" dangerouslySetInnerHTML={{ __html: notlar[idx] }} />
+                    <div key={idx} className="flex-1 fade-in mb-4">
+                        <div className="note-body text-[16px] leading-relaxed max-w-2xl w-full mx-auto" dangerouslySetInnerHTML={{ __html: notlar[idx] }} />
                     </div>
-                    <div className="absolute bottom-6 left-0 right-0 px-6 flex justify-between items-center">
+                    <div className="flex justify-between items-center gap-3 pt-2">
                         <button disabled={idx === 0} onClick={function () { props.onIndex(idx - 1); }}
-                            className={"p-3 rounded-xl font-bold " + (idx === 0 ? "opacity-30" : "bg-stone-100 text-navy-600")}>Önceki</button>
+                            className={"back-btn " + (idx === 0 ? "opacity-30 pointer-events-none" : "")}>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.25} d="M15 19l-7-7 7-7" />
+                            </svg>
+                            <span>Önceki</span>
+                        </button>
                         {idx === notlar.length - 1 ? (
                             <button onClick={function () {
                                 if (props.ders && props.konu) StudentStore.markNotesComplete(props.ders, props.konu);
                                 if (props.hasTest) props.onTest();
                                 else props.onBack();
-                            }} className="p-3 rounded-xl font-bold bg-zinc-900 text-white">{props.hasTest ? "Teste geç" : "Konuyu bitir"}</button>
+                            }} className="btn-primary text-white px-5 py-2.5 rounded-full font-semibold">{props.hasTest ? "Teste geç" : "Konuyu bitir"}</button>
                         ) : (
                             <button onClick={function () { props.onIndex(idx + 1); }}
-                                className="p-3 rounded-xl font-bold bg-stone-100 text-navy-600">Sonraki</button>
+                                className="btn-primary text-white px-5 py-2.5 rounded-full font-semibold inline-flex items-center gap-1">
+                                <span>Sonraki</span>
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.25} d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
                         )}
                     </div>
                 </div>
