@@ -9,6 +9,7 @@ import OnboardingScreen from "./screens/OnboardingScreen";
 import BugunScreen from "./screens/BugunScreen";
 import ProgramScreen from "./screens/ProgramScreen";
 import { DersHomeScreen, KonuHubScreen, KonuListScreen } from "./screens/DerslerScreens";
+import { AlistirmalarHomeScreen, AlistirmaKonuListScreen, ClozePlayScreen } from "./screens/AlistirmalarScreens";
 import EksiklerScreen from "./screens/EksiklerScreen";
 import DenemeScreen from "./screens/DenemeScreen";
 import BenScreen from "./screens/BenScreen";
@@ -87,6 +88,7 @@ function Tabs() {
     var screens = [
         { name: "BugunTab", component: BugunScreen, icon: "🏠", label: "Bugün" },
         { name: "DerslerTab", component: DersHomeScreen, icon: "📚", label: "Dersler" },
+        { name: "AlistirmalarTab", component: AlistirmalarHomeScreen, icon: "✏️", label: "Alıştırmalar" },
         { name: "EksiklerTab", component: EksiklerScreen, icon: "📋", label: "Eksikler" },
         { name: "DenemeTab", component: DenemeScreen, icon: "📝", label: "Deneme" },
         { name: "BenTab", component: BenScreen, icon: "👤", label: "Ben" },
@@ -239,6 +241,8 @@ function Gate() {
                 <Stack.Screen name="Program" component={ProgramScreen} options={modalOptions} />
                 <Stack.Screen name="KonuList" component={KonuListScreen} options={modalOptions} />
                 <Stack.Screen name="KonuHub" component={KonuHubScreen} options={modalOptions} />
+                <Stack.Screen name="AlistirmaKonuList" component={AlistirmaKonuListScreen} options={modalOptions} />
+                <Stack.Screen name="ClozePlay" component={ClozePlayScreen} options={modalOptions} />
                 <Stack.Screen name="Notes" component={NotesScreen} options={modalOptions} />
                 <Stack.Screen name="Test" component={TestScreen} options={modalOptions} />
 

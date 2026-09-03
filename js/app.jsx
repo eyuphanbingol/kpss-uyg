@@ -113,18 +113,19 @@ function BottomNav(props) {
     const tabs = [
         { id: "bugun", label: "Bugün", icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" },
         { id: "dersler", label: "Dersler", icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" },
+        { id: "alistirmalar", label: "Alıştırmalar", icon: "M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" },
         { id: "eksikler", label: "Eksikler", icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" },
         { id: "deneme", label: "Deneme", icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" },
         { id: "ben", label: "Ben", icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" }
     ];
     return (
         <nav className="fixed bottom-0 inset-x-0 z-40 nav-glass" style={{ paddingBottom: "max(8px, env(safe-area-inset-bottom))" }}>
-            <div className="max-w-2xl mx-auto grid grid-cols-5 px-2 pt-1">
+            <div className="max-w-2xl mx-auto grid grid-cols-6 px-1 pt-1">
                 {tabs.map(function (tab) {
                     const on = props.nav === tab.id;
                     return (
                         <button key={tab.id} onClick={function () { props.onChange(tab.id); }}
-                            className={"relative flex flex-col items-center gap-0.5 py-2.5 rounded-2xl text-[11px] font-medium transition-all duration-200 " +
+                            className={"relative flex flex-col items-center gap-0.5 py-2 rounded-2xl text-[10px] leading-tight font-medium transition-all duration-200 " +
                                 (on ? "text-indigo-600 bg-indigo-50/60 dark:bg-indigo-900/20" : "text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200")}>
                             <span className="relative">
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={on ? 2.2 : 1.7}>
@@ -564,6 +565,213 @@ function Bugun(props) {
             <StudyProgram student={props.student} kpssData={props.kpssData} onDers={props.onDers} />
 
             <StudyDash student={props.student} />
+        </Shell>
+    );
+}
+
+function AlistirmalarHome(props) {
+    const kpssData = props.kpssData;
+    const engine = window.ClozeEngine;
+    return (
+        <Shell>
+            <div className="flex justify-between items-start mb-8">
+                <div className="slide-up">
+                    <h1 className="text-3xl sm:text-4xl font-display font-black tracking-tight gradient-text">Alıştırmalar</h1>
+                    <p className="text-sm text-stone-400 mt-1">Her konu için boşluk doldurma. Şıklardan doğruyu seç.</p>
+                </div>
+                <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
+            </div>
+            <div className="space-y-3">
+                {Object.keys(kpssData).map(function (ders) {
+                    const t = themeFor(ders, props.isDark);
+                    const konular = Object.keys(kpssData[ders] || {});
+                    var n = 0;
+                    konular.forEach(function (k) {
+                        n += engine ? engine.countForKonu(kpssData[ders][k] || {}) : 0;
+                    });
+                    return (
+                        <button key={ders} onClick={function () { props.onDers(ders); }}
+                            className="w-full text-left p-5 rounded-3xl glass card-hover flex items-center gap-5 group">
+                            <div className="h-14 w-14 rounded-2xl ders-icon flex items-center justify-center text-2xl shrink-0">
+                                {t.icon}
+                            </div>
+                            <div className="min-w-0 flex-1">
+                                <h2 className="font-bold text-stone-800 dark:text-stone-100 text-lg">{ders}</h2>
+                                <p className="text-sm text-stone-400">{konular.length} konu · {n} boşluk</p>
+                            </div>
+                            <span className="text-stone-300 group-hover:text-indigo-500 transition-colors text-xl">→</span>
+                        </button>
+                    );
+                })}
+            </div>
+        </Shell>
+    );
+}
+
+function AlistirmaKonuList(props) {
+    const ders = props.ders;
+    const t = themeFor(ders, props.isDark);
+    const konular = Object.keys(props.kpssData[ders] || {});
+    const engine = window.ClozeEngine;
+    return (
+        <Shell>
+            <div className="flex justify-between mb-4">
+                <BackBtn onClick={props.onBack} label="Alıştırmalar" />
+                <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
+            </div>
+            <div className="flex items-center gap-4 mb-6">
+                <div className="h-14 w-14 rounded-2xl ders-icon flex items-center justify-center text-2xl">{t.icon}</div>
+                <div>
+                    <h1 className="text-3xl font-black">{ders}</h1>
+                    <p className="text-zinc-500 text-sm">Konu seç, boşlukları doldur.</p>
+                </div>
+            </div>
+            <div className="space-y-3">
+                {konular.map(function (konu, idx) {
+                    const kd = props.kpssData[ders][konu] || {};
+                    const n = engine ? engine.countForKonu(kd) : 0;
+                    return (
+                        <button key={konu} onClick={function () { props.onKonu(konu); }}
+                            className="w-full text-left p-5 panel rounded-3xl">
+                            <div className="flex justify-between items-start gap-3">
+                                <div className="flex gap-3 min-w-0">
+                                    <div className="h-10 w-10 rounded-xl flex items-center justify-center font-stat text-sm shrink-0 bg-teal-50 text-teal-800">{idx + 1}</div>
+                                    <div className="min-w-0">
+                                        <div className="font-bold text-slate-800 dark:text-slate-100">{konu}</div>
+                                        <p className="text-xs text-slate-400 mt-1">{n ? n + " boşluk" : "Henüz alıştırma yok"}</p>
+                                    </div>
+                                </div>
+                                <span className="text-stone-300 text-lg shrink-0">→</span>
+                            </div>
+                        </button>
+                    );
+                })}
+            </div>
+        </Shell>
+    );
+}
+
+function clozePromptNodes(text) {
+    var parts = String(text || "").split("______");
+    return parts.map(function (p, i) {
+        return (
+            <span key={i}>
+                {p}
+                {i < parts.length - 1 ? <span className="cloze-blank">____</span> : null}
+            </span>
+        );
+    });
+}
+
+function ClozePlay(props) {
+    const items = useMemo(function () {
+        if (!window.ClozeEngine) return [];
+        return window.ClozeEngine.buildForKonu(props.konuData, 12);
+    }, [props.ders, props.konu, props.seed]);
+    const [idx, setIdx] = useState(0);
+    const [picked, setPicked] = useState(null);
+    const [score, setScore] = useState(0);
+    const [done, setDone] = useState(false);
+
+    useEffect(function () {
+        setIdx(0); setPicked(null); setScore(0); setDone(false);
+    }, [props.seed, props.konu]);
+
+    if (!items.length) {
+        return (
+            <Shell>
+                <div className="flex justify-between mb-4">
+                    <BackBtn onClick={props.onBack} label="Konular" />
+                    <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
+                </div>
+                <div className="text-center py-16 rounded-3xl glass">
+                    <p className="font-bold">Bu konuda henüz boşluk yok.</p>
+                    <p className="text-sm text-stone-400 mt-2">Not veya soru eklenince alıştırmalar burada açılır.</p>
+                </div>
+            </Shell>
+        );
+    }
+
+    if (done) {
+        return (
+            <Shell>
+                <div className="flex justify-between mb-4">
+                    <BackBtn onClick={props.onBack} label="Konular" />
+                    <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
+                </div>
+                <article className="study-card fade-in">
+                    <header className="study-card-head">
+                        <div>
+                            <p className="study-card-kicker">{props.ders}</p>
+                            <h2 className="study-card-title">{props.konu} · Bitti</h2>
+                        </div>
+                        <div className="note-progress">{score}/{items.length}</div>
+                    </header>
+                    <div className="study-card-body text-center py-8">
+                        <p className="text-4xl font-black mb-2">{Math.round((score / items.length) * 100)}%</p>
+                        <p className="text-stone-500">{score} doğru · {items.length - score} yanlış</p>
+                    </div>
+                    <footer className="study-card-foot">
+                        <button onClick={props.onBack} className="back-btn"><span>Konular</span></button>
+                        <button onClick={props.onAgain} className="btn-primary text-white px-5 py-2.5 rounded-full font-semibold">Tekrar oyna</button>
+                    </footer>
+                </article>
+            </Shell>
+        );
+    }
+
+    const it = items[idx];
+    const ok = picked && picked.toLocaleLowerCase("tr-TR") === String(it.answer).toLocaleLowerCase("tr-TR");
+    return (
+        <Shell>
+            <div className="flex justify-between mb-4">
+                <BackBtn onClick={props.onBack} label="Konular" />
+                <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
+            </div>
+            <article className="study-card fade-in">
+                <header className="study-card-head">
+                    <div>
+                        <p className="study-card-kicker">{props.ders}</p>
+                        <h2 className="study-card-title">{props.konu} · Boşluk</h2>
+                    </div>
+                    <div className="note-progress">{idx + 1}/{items.length}</div>
+                </header>
+                <div className="study-card-body">
+                    <p className="text-[17px] leading-relaxed mb-6">{clozePromptNodes(it.prompt)}</p>
+                    <div className="grid gap-2">
+                        {(it.choices || []).map(function (c, ci) {
+                            var isP = picked === c;
+                            var isA = String(c).toLocaleLowerCase("tr-TR") === String(it.answer).toLocaleLowerCase("tr-TR");
+                            var cls = "w-full text-left px-4 py-3 rounded-2xl border font-medium transition-colors ";
+                            if (!picked) cls += "bg-white dark:bg-stone-800 border-stone-200 dark:border-stone-600 hover:border-teal-500";
+                            else if (isA) cls += "bg-emerald-50 border-emerald-400 text-emerald-800";
+                            else if (isP) cls += "bg-rose-50 border-rose-400 text-rose-800";
+                            else cls += "bg-stone-50 border-stone-200 opacity-60";
+                            return (
+                                <button key={ci + "-" + c} disabled={!!picked} onClick={function () {
+                                    if (picked) return;
+                                    setPicked(c);
+                                    if (String(c).toLocaleLowerCase("tr-TR") === String(it.answer).toLocaleLowerCase("tr-TR")) setScore(score + 1);
+                                }} className={cls}>{c}</button>
+                            );
+                        })}
+                    </div>
+                    {picked ? (
+                        <p className={"mt-4 text-sm font-semibold " + (ok ? "text-emerald-600" : "text-rose-600")}>
+                            {ok ? "Doğru" : "Doğrusu: " + it.answer}
+                        </p>
+                    ) : null}
+                </div>
+                <footer className="study-card-foot">
+                    <span className="text-xs text-stone-400">{score} doğru</span>
+                    <button disabled={!picked} onClick={function () {
+                        if (idx + 1 >= items.length) setDone(true);
+                        else { setIdx(idx + 1); setPicked(null); }
+                    }} className={"btn-primary text-white px-5 py-2.5 rounded-full font-semibold " + (!picked ? "opacity-40 pointer-events-none" : "")}>
+                        {idx + 1 >= items.length ? "Bitir" : "Sonraki"}
+                    </button>
+                </footer>
+            </article>
         </Shell>
     );
 }
@@ -1569,6 +1777,9 @@ function App() {
     const [nav, setNav] = useState("bugun");
     const [selectedDers, setSelectedDers] = useState(null);
     const [selectedKonu, setSelectedKonu] = useState(null);
+    const [drillDers, setDrillDers] = useState(null);
+    const [drillKonu, setDrillKonu] = useState(null);
+    const [drillSeed, setDrillSeed] = useState(0);
     const [viewMode, setViewMode] = useState("hub");
     const [noteIndex, setNoteIndex] = useState(0);
     const [session, setSession] = useState(null);
@@ -1753,6 +1964,21 @@ function App() {
             onOpen={function (id) { setExtra(id); }}
             onAdmin={function () { setExtra("admin"); }}
             onSignOut={doSignOut} />;
+    } else if (nav === "alistirmalar") {
+        var drillData = (drillDers && drillKonu && kpssData[drillDers]) ? (kpssData[drillDers][drillKonu] || {}) : {};
+        if (!drillDers) {
+            body = <AlistirmalarHome kpssData={kpssData} isDark={isDark} toggleDark={toggleDark}
+                onDers={function (d) { setDrillDers(d); setDrillKonu(null); }} />;
+        } else if (!drillKonu) {
+            body = <AlistirmaKonuList kpssData={kpssData} ders={drillDers} isDark={isDark} toggleDark={toggleDark}
+                onBack={function () { setDrillDers(null); }}
+                onKonu={function (k) { setDrillKonu(k); setDrillSeed(Date.now()); }} />;
+        } else {
+            body = <ClozePlay ders={drillDers} konu={drillKonu} konuData={drillData} seed={drillSeed}
+                isDark={isDark} toggleDark={toggleDark}
+                onBack={function () { setDrillKonu(null); }}
+                onAgain={function () { setDrillSeed(Date.now()); }} />;
+        }
     } else if (!selectedDers) {
         body = <DersHome kpssData={kpssData} student={student} plan={plan} isDark={isDark} toggleDark={toggleDark} onDers={function (d) { setSelectedDers(d); setSelectedKonu(null); }} />;
     } else if (!selectedKonu) {
@@ -1916,6 +2142,8 @@ function App() {
                     setNav(id);
                     if (id !== "dersler") { setSelectedDers(null); setSelectedKonu(null); setViewMode("hub"); }
                     if (id === "dersler") { setSelectedDers(null); setSelectedKonu(null); }
+                    if (id !== "alistirmalar") { setDrillDers(null); setDrillKonu(null); }
+                    if (id === "alistirmalar") { setDrillDers(null); setDrillKonu(null); }
                 }} />
             ) : null}
         </div>

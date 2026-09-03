@@ -162,6 +162,7 @@
     <script src="js/config.js?v=19"></script>
     <script src="js/store.js?v=23"></script>
     <script src="js/planner.js?v=17"></script>
+    <script src="js/clozeEngine.js?v=1"></script>
     <script src="js/scoreEngine.js?v=8"></script>
     <script src="js/paymentClient.js?v=14"></script>
     <script src="js/notificationEngine.js?v=9"></script>
@@ -627,6 +628,16 @@
         .study-card-body .flex-wrap {
             flex-wrap: wrap !important;
         }
+        .cloze-blank {
+            display: inline-block;
+            min-width: 4.2rem;
+            margin: 0 3px;
+            border-bottom: 3px solid #1D8A99;
+            color: #1D8A99;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            line-height: 1.15;
+        }
         .study-card-foot {
             display: flex;
             justify-content: space-between;
@@ -758,7 +769,7 @@
 
 <body class="app-bg min-h-screen text-slate-800 antialiased transition-colors duration-300">
     <div id="root"></div>
-    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=55"></script>
+    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=56"></script>
     <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.getRegistrations().then(function (regs) {
