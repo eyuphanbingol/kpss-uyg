@@ -11,7 +11,7 @@
         supabaseUrl: URL,
         supabaseAnonKey: ANON,
         appName: "Atanom",
-        logoUrl: "icons/atanom.png",
+        logoUrl: "icons/atanom.png?v=18",
         platform: "web",
         productionUrl: "https://kpss-uyg.vercel.app",
         freeWeeklyExams: 2,

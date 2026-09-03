@@ -136,7 +136,9 @@ function Onboarding(props) {
     return (
         <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-end sm:items-center justify-center p-4">
             <div className="w-full max-w-md bg-white dark:bg-stone-900 rounded-3xl p-6 sm:p-8 shadow-2xl fade-in">
-                <img src="icons/atanom.png" alt="Atanom" className="h-16 w-16 mx-auto mb-3 object-contain" />
+                {window.AtanomLogo
+                    ? window.AtanomLogo("h-16 w-16 mx-auto mb-3 object-contain")
+                    : <img src="icons/atanom.png?v=18" alt="Atanom" className="h-16 w-16 mx-auto mb-3 object-contain" />}
                 <h2 className="text-2xl font-black text-stone-900 dark:text-white mb-1 text-center">Atanom</h2>
                 <p className="text-sm text-stone-500 mb-5 text-center">Google ile giriş yaptın. Adın ve eğitim düzeyin uygulamayı açmak için gerekli.</p>
                 <label className="block text-xs font-bold text-stone-500 mb-1">Adın</label>

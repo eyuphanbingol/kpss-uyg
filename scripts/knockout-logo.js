@@ -11,7 +11,10 @@ function knockoutBuffer(png) {
         var minc = Math.min(r, g, b);
         var maxc = Math.max(r, g, b);
         var avg = (r + g + b) / 3;
-        if (avg > 242 && maxc - minc < 18) png.data[i + 3] = 0;
+        if (maxc <= 12) png.data[i + 3] = 0;
+        else if (maxc <= 28 && maxc - minc <= 14) {
+            png.data[i + 3] = Math.max(0, Math.min(255, Math.round(255 * (maxc - 12) / 16)));
+        } else if (avg > 242 && maxc - minc < 18) png.data[i + 3] = 0;
         else if (avg > 210 && maxc - minc < 22) {
             png.data[i + 3] = Math.max(0, Math.round(255 * (1 - (avg - 210) / 45)));
         }

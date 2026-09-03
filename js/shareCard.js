@@ -1,18 +1,24 @@
 (function (global) {
+    var logoImg = new Image();
+    logoImg.src = (global.KpssConfig && global.KpssConfig.logoUrl) || "icons/atanom.png?v=18";
+
     function draw(opts) {
         opts = opts || {};
         var c = document.createElement("canvas");
         c.width = 1080;
         c.height = 1920;
         var ctx = c.getContext("2d");
-        ctx.fillStyle = "#0D2C4D";
+        ctx.fillStyle = "#041C24";
         ctx.fillRect(0, 0, 1080, 1920);
+        if (logoImg.complete && logoImg.naturalWidth) {
+            ctx.drawImage(logoImg, 80, 70, 160, 130);
+        }
         ctx.fillStyle = "#C5A059";
         ctx.font = "700 42px Manrope, sans-serif";
-        ctx.fillText("ATANOM", 80, 160);
+        ctx.fillText("ATANOM", 270, 160);
         ctx.fillStyle = "rgba(243,230,196,0.7)";
         ctx.font = "400 28px Inter, sans-serif";
-        ctx.fillText(opts.nickname || "öğrenci", 80, 220);
+        ctx.fillText(opts.nickname || "öğrenci", 270, 220);
         ctx.fillStyle = "#C9A227";
         ctx.font = "700 200px 'Space Grotesk', sans-serif";
         ctx.fillText("%" + (opts.pct != null ? opts.pct : 0), 80, 620);

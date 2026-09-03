@@ -3,7 +3,7 @@
   "short_name": "Atanom",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#f8fafc",
+  "background_color": "#000000",
   "theme_color": "#0D2C4D",
   "lang": "tr",
   "icons": [
