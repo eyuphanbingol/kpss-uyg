@@ -340,7 +340,7 @@ export function MapPlayScreen({ route, navigation }) {
                                     if (p.id === step.item.id) setScore(score + 1);
                                     setTimeout(advance, 5500);
                                 }} style={[styles.mapMark, { left: left + "%", top: top + "%", opacity: donePin ? 0.42 : 1, backgroundColor: tint || "transparent" }]}>
-                                    <Text style={styles.mapIco}>{glyph}</Text>
+                                    <Text style={styles.mapIco}>{p.glyph || glyph}</Text>
                                 </Pressable>
                             );
                         })}

@@ -998,7 +998,7 @@ function MapPlay(props) {
             ico.setAttribute("text-anchor", "middle");
             ico.setAttribute("dominant-baseline", "central");
             ico.setAttribute("font-size", "22");
-            ico.textContent = glyph;
+            ico.textContent = pin.glyph || glyph;
             if (doneIds[pin.id]) wrap.setAttribute("class", "topic-mark topic-mark-done");
             if (picked && step && step.type === "map") {
                 if (pin.id === step.item.id) wrap.setAttribute("class", "topic-mark topic-mark-ok");

@@ -114,8 +114,8 @@
             kids: [
                 { id: "volkanik", title: "Volkanik dağlar", icon: "🌋" },
                 { id: "volkanik-arazi", title: "Volkanik araziler", icon: "🌋" },
-                { id: "kirik", title: "Kırık dağlar (horst–graben)", icon: "↗️" },
-                { id: "kivrim", title: "Kıvrım dağları", icon: "🌊" },
+                { id: "kirik", title: "Kırık dağlar (horst–graben)", icon: "⛰️" },
+                { id: "kivrim", title: "Kıvrım dağları", icon: "🏔️" },
                 { id: "masif", title: "Masif araziler", icon: "🪨" },
                 { id: "fay", title: "Fay hatları (KAF·DAF·BAF)", icon: "⚡" },
                 { id: "deprem-az", title: "Deprem riski az alanlar", icon: "🟢" }
@@ -124,9 +124,9 @@
         {
             id: "plato", title: "Platolar", icon: "🏜️",
             kids: [
-                { id: "plato-karst", title: "Karstik platolar", icon: "🏜️" },
+                { id: "plato-karst", title: "Karstik platolar", icon: "🪨" },
                 { id: "plato-volkan", title: "Volkanik / lav platoları", icon: "🌋" },
-                { id: "plato-asinim", title: "Aşınım düzlüğü platoları", icon: "🏜️" },
+                { id: "plato-asinim", title: "Aşınım düzlüğü platoları", icon: "🟩" },
                 { id: "plato-tabaka", title: "Tabaka düzlüğü platoları", icon: "🏜️" }
             ]
         },
@@ -170,9 +170,9 @@
         {
             id: "beseri", title: "Nüfus · ulaşım · ekonomi", icon: "🏙️",
             kids: [
-                { id: "nufus-seyrek", title: "Seyrek nüfuslu alanlar", icon: "👤" },
+                { id: "nufus-seyrek", title: "Seyrek nüfuslu alanlar", icon: "🏕️" },
                 { id: "nufus-yogun", title: "Yoğun nüfuslu alanlar", icon: "🏙️" },
-                { id: "demiryolu", title: "Demiryolu olmayan yerler", icon: "🚂" },
+                { id: "demiryolu", title: "Demiryolu olmayan yerler", icon: "🚫" },
                 { id: "liman", title: "Limanlar ve hinterland", icon: "⚓" },
                 { id: "maden", title: "Madenler", icon: "⛏️" },
                 { id: "sanayi", title: "Sanayi tesisleri", icon: "🏭" },
@@ -771,36 +771,121 @@
 
     function topicGlyph(topicId) {
         var t = String(topicId || "");
-        if (t === "volkanik" || t === "volkanik-arazi" || t === "plato-volkan" || t === "ova-volkan") return "🌋";
-        if (t === "kirik" || t === "kivrim") return "⛰️";
-        if (t === "masif" || t === "karst" || t === "ova-karst") return "🪨";
-        if (t === "fay") return "⚡";
-        if (t === "deprem-az") return "🟢";
-        if (t.indexOf("plato") === 0) return "🏜️";
-        if (t === "delta") return "🌊";
-        if (t.indexOf("ova") === 0) return "🌾";
-        if (t === "akarsu") return "💧";
-        if (t === "goller") return "🏞️";
-        if (t === "havza") return "🌊";
-        if (t === "gecit") return "🏔️";
-        if (t === "kiyi") return "🏖️";
-        if (t === "yagis") return "🌧️";
-        if (t === "mikro") return "🌡️";
-        if (t === "bitki") return "🌿";
-        if (t === "tarim") return "🌾";
-        if (t === "hayvan") return "🐄";
-        if (t === "toprak") return "🟤";
-        if (t === "nufus-seyrek") return "👤";
-        if (t === "nufus-yogun") return "🏙️";
-        if (t === "demiryolu") return "🚂";
-        if (t === "liman") return "⚓";
-        if (t === "maden") return "⛏️";
-        if (t === "sanayi") return "🏭";
-        if (t === "boru") return "🛢️";
+        var meta = topicMeta(topicId);
+        if (meta && meta.icon) return meta.icon;
         if (t.indexOf("milli") === 0) return "🏞️";
-        if (t === "tuzak") return "🧠";
         return "📍";
     }
+
+    function itemGlyph(it) {
+        if (!it) return "📍";
+        var t = String(it.topic || "");
+        var n = fold(it.name);
+        if (t === "tarim") {
+            if (n.indexOf("cay") >= 0) return "🍵";
+            if (n.indexOf("findik") >= 0) return "🥜";
+            if (n.indexOf("zeytin") >= 0) return "🫒";
+            if (n.indexOf("turunc") >= 0) return "🍊";
+            if (n.indexOf("muz") >= 0) return "🍌";
+            if (n.indexOf("incir") >= 0) return "🍇";
+            if (n.indexOf("kayisi") >= 0) return "🍑";
+            if (n.indexOf("pamuk") >= 0) return "🤍";
+            if (n.indexOf("misir") >= 0) return "🌽";
+            if (n.indexOf("seker") >= 0) return "🍬";
+            if (n.indexOf("celtik") >= 0) return "🍚";
+            if (n.indexOf("hashas") >= 0) return "🌺";
+            if (n.indexOf("tutun") >= 0) return "🍂";
+            if (n.indexOf("uzum") >= 0) return "🍇";
+            if (n.indexOf("elma") >= 0) return "🍎";
+            if (n.indexOf("aycicegi") >= 0) return "🌻";
+            if (n.indexOf("bugday") >= 0) return "🌾";
+            if (n.indexOf("fisti") >= 0) return "🥜";
+            return "🌾";
+        }
+        if (t === "hayvan") {
+            if (n.indexOf("kec") >= 0) return "🐐";
+            if (n.indexOf("ipek") >= 0) return "🦋";
+            if (n.indexOf("bal") >= 0) return "🐝";
+            if (n.indexOf("kumes") >= 0) return "🐔";
+            return "🐄";
+        }
+        if (t === "maden") {
+            if (n.indexOf("demir") >= 0) return "⚙️";
+            if (n.indexOf("bakir") >= 0) return "🔶";
+            if (n.indexOf("boksit") >= 0) return "🧱";
+            if (n.indexOf("krom") >= 0) return "🪨";
+            if (n.indexOf("bor") >= 0) return "💎";
+            return "⛏️";
+        }
+        if (t === "sanayi") {
+            if (n.indexOf("aluminyum") >= 0 || n.indexOf("seydisehir") >= 0) return "🧱";
+            return "🏭";
+        }
+        if (t === "yagis") return n.indexOf("en az") >= 0 ? "☀️" : "🌧️";
+        if (t === "mikro") {
+            if (n.indexOf("turunc") >= 0) return "🍊";
+            if (n.indexOf("pamuk") >= 0) return "🤍";
+            if (n.indexOf("zeytin") >= 0) return "🫒";
+            if (n.indexOf("muz") >= 0) return "🍌";
+            return "🌡️";
+        }
+        if (t === "kiyi") {
+            if (n.indexOf("boyuna") >= 0) return "📏";
+            if (n.indexOf("enine") >= 0) return "〰️";
+            if (n.indexOf("ria") >= 0) return "🌊";
+            if (n.indexOf("dalmac") >= 0) return "🏝️";
+            if (n.indexOf("limani") >= 0) return "🛶";
+            if (n.indexOf("kalank") >= 0 || n.indexOf("karst") >= 0) return "🪨";
+            return "🏖️";
+        }
+        if (t === "goller") {
+            if (n.indexOf("cekmece") >= 0 || n.indexOf("terkos") >= 0 || n.indexOf("akyatan") >= 0) return "🌅";
+            if (n.indexOf("krater") >= 0 || n.indexOf("meke") >= 0 || n.indexOf("golcuk") >= 0 || n.indexOf("nemrut") >= 0) return "🌋";
+            return "🏞️";
+        }
+        if (t === "bitki") {
+            if (n.indexOf("sigla") >= 0 || n.indexOf("goknar") >= 0 || n.indexOf("mese") >= 0 || n.indexOf("hurma") >= 0) return "🌳";
+            if (n.indexOf("maki") >= 0) return "🌿";
+            if (n.indexOf("bozkir") >= 0) return "🌾";
+            if (n.indexOf("cayir") >= 0) return "☘️";
+            if (n.indexOf("orman") >= 0) return "🌲";
+            return "🌿";
+        }
+        if (t === "toprak") {
+            if (n.indexOf("terra") >= 0) return "🟥";
+            if (n.indexOf("cernozyom") >= 0 || n.indexOf("cernezyom") >= 0) return "⬛";
+            if (n.indexOf("tuz") >= 0 || n.indexOf("halo") >= 0) return "🧂";
+            if (n.indexOf("aluvyal") >= 0) return "🟡";
+            if (n.indexOf("podzol") >= 0) return "🌫️";
+            return "🟤";
+        }
+        if (t === "akarsu") return "💧";
+        if (t === "delta") return "🌊";
+        if (t === "gecit") return "🏔️";
+        if (t === "fay") return "⚡";
+        if (t === "deprem-az") return "🟢";
+        if (t === "volkanik" || t === "volkanik-arazi") return "🌋";
+        if (t === "kirik") return "⛰️";
+        if (t === "kivrim") return "🏔️";
+        if (t === "liman") return n.indexOf("kruvaz") >= 0 ? "🚢" : "⚓";
+        if (t === "boru") return "🛢️";
+        if (t === "demiryolu") return "🚫";
+        if (t === "nufus-seyrek") return "🏕️";
+        if (t === "nufus-yogun") return "🏙️";
+        if (t.indexOf("milli") === 0) return "🏞️";
+        if (t === "tuzak") {
+            if (n.indexOf("nemrut") >= 0) return "🗿";
+            if (n.indexOf("bafra") >= 0 || n.indexOf("carsamba") >= 0) return "🌊";
+            if (n.indexOf("agri") >= 0 || n.indexOf("karadag") >= 0 || n.indexOf("karacadag") >= 0) return "🌋";
+            if (n.indexOf("gol") >= 0 || n.indexOf("van") >= 0) return "🏞️";
+            if (n.indexOf("ovit") >= 0) return "🏔️";
+            if (n.indexOf("fiyort") >= 0) return "🏖️";
+            return "🧠";
+        }
+        return topicGlyph(t);
+    }
+
+    ITEMS.forEach(function (it) { it.glyph = itemGlyph(it); });
 
     function countFor(topicId) { return itemsForTopic(topicId).length; }
 
@@ -850,7 +935,7 @@
 
     function topicLayer(topicId) {
         var pins = itemsForTopic(topicId).map(function (it) {
-            return { id: it.id, name: it.name, x: it.x, y: it.y };
+            return { id: it.id, name: it.name, x: it.x, y: it.y, glyph: it.glyph || itemGlyph(it) };
         });
         jitterPins(pins);
         var pad = 70;
@@ -966,7 +1051,7 @@
                     x = box.x + Math.cos(a) * r;
                     y = box.y + Math.sin(a) * r;
                 }
-                pins.push({ id: it.id, name: it.name, x: x, y: y });
+                pins.push({ id: it.id, name: it.name, x: x, y: y, glyph: it.glyph || itemGlyph(it) });
             });
         });
         separatePins(pins, 52);
@@ -994,6 +1079,7 @@
         topicLayer: topicLayer,
         topicLayerFromSvg: topicLayerFromSvg,
         topicGlyph: topicGlyph,
+        itemGlyph: itemGlyph,
         PARK_SOURCE: "Tarım ve Orman Bakanlığı DKMP — 54 milli park (2026)"
     };
 export const MapQuiz = api;
