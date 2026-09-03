@@ -662,8 +662,23 @@
         .tr-map-wrap path.map-focus { fill: #3d8f62 !important; }
         .tr-map-wrap path.map-focus:hover,
         .tr-map-wrap path:hover { fill: #1D8A99 !important; }
+        .tr-map-wrap path.map-done { fill: #a8c4b0 !important; pointer-events: none; }
         .tr-map-wrap path.hit-ok { fill: #059669 !important; }
         .tr-map-wrap path.hit-bad { fill: #E11D48 !important; }
+        .tr-map-wrap .map-float-labels { pointer-events: none; }
+        .tr-map-wrap .map-pin {
+            font-family: Manrope, Inter, sans-serif;
+            font-weight: 800;
+            text-anchor: middle;
+            dominant-baseline: middle;
+            paint-order: stroke fill;
+            stroke: #fff;
+            stroke-width: 4px;
+            stroke-linejoin: round;
+        }
+        .tr-map-wrap .map-pin-ok { fill: #064e3b; }
+        .tr-map-wrap .map-pin-bad { fill: #9f1239; }
+        .tr-map-wrap .map-pin-done { fill: #44403c; }
         html.dark .tr-map-wrap { background: #1a2420; }
         html.dark .tr-map-wrap path.map-dim { fill: #2a3a30 !important; }
         html.dark .tr-map-wrap path.map-focus { fill: #3d8f62 !important; }
@@ -808,7 +823,7 @@
 
 <body class="app-bg min-h-screen text-slate-800 antialiased transition-colors duration-300">
     <div id="root"></div>
-    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=58"></script>
+    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=59"></script>
     <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.getRegistrations().then(function (regs) {

@@ -326,7 +326,7 @@ export function MapPlayScreen({ route, navigation }) {
                                     if (picked) return;
                                     setPicked(c);
                                     if (MapQuiz.isTapCorrect(step.item, c)) setScore(score + 1);
-                                    setTimeout(advance, MapQuiz.isTapCorrect(step.item, c) ? 700 : 1100);
+                                    setTimeout(advance, 5500);
                                 }} style={[styles.mapChip, { backgroundColor: isDark && !picked ? colors.navyDeep : bg, borderColor: border }]}>
                                     <Text style={[styles.choiceText, isDark && !picked && styles.textLight]}>{c.label}</Text>
                                 </Pressable>
@@ -346,7 +346,7 @@ export function MapPlayScreen({ route, navigation }) {
                                 if (picked) return;
                                 setPicked(c);
                                 if (String(c) === String(step.answer)) setScore(score + 1);
-                                setTimeout(advance, 800);
+                                setTimeout(advance, 5500);
                             }} style={[styles.choice, { backgroundColor: isDark && !picked ? colors.navyDeep : bg, borderColor: border }]}>
                                 <Text style={[styles.choiceText, isDark && !picked && styles.textLight]}>{c}</Text>
                             </Pressable>

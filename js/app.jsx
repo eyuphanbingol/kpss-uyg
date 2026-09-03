@@ -852,14 +852,18 @@ function MapPlay(props) {
     const [okHit, setOkHit] = useState(false);
     const [score, setScore] = useState(0);
     const [done, setDone] = useState(false);
+    const [cleared, setCleared] = useState([]);
+    const [pins, setPins] = useState([]);
     const [svgHtml, setSvgHtml] = useState("");
     const [mapFail, setMapFail] = useState(false);
     const hostRef = useRef(null);
     const pickedRef = useRef(null);
     const timerRef = useRef(null);
+    const HOLD_MS = 5500;
 
     useEffect(function () {
         setIdx(0); setPicked(null); setOkHit(false); setScore(0); setDone(false);
+        setCleared([]); setPins([]);
         pickedRef.current = null;
     }, [props.seed, props.topicId]);
 
@@ -885,9 +889,17 @@ function MapPlay(props) {
     function goNext() {
         if (timerRef.current) { clearTimeout(timerRef.current); timerRef.current = null; }
         if (!pickedRef.current) return;
+        var stepNow = items[idx];
+        if (stepNow && stepNow.type === "map" && quiz) {
+            var codes = quiz.resolveCodes(stepNow.item);
+            setCleared(function (prev) {
+                return prev.concat([{ codes: codes, label: stepNow.item.name }]);
+            });
+        }
         pickedRef.current = null;
         setPicked(null);
         setOkHit(false);
+        setPins([]);
         setIdx(function (i) {
             if (i + 1 >= items.length) {
                 setDone(true);
@@ -903,11 +915,21 @@ function MapPlay(props) {
         if (!step || step.type !== "map") return;
         var c = String(code).toUpperCase();
         var hit = quiz.isCorrect(step.item, c);
+        var nextPins = [];
+        if (hit) {
+            nextPins.push({ code: c, text: step.item.name, kind: "ok" });
+        } else {
+            nextPins.push({ code: c, text: quiz.nameOf(c), kind: "bad" });
+            quiz.resolveCodes(step.item).forEach(function (okc) {
+                nextPins.push({ code: okc, text: step.item.name, kind: "ok" });
+            });
+        }
         pickedRef.current = c;
         setPicked(c);
         setOkHit(hit);
+        setPins(nextPins);
         if (hit) setScore(function (s) { return s + 1; });
-        timerRef.current = setTimeout(goNext, hit ? 800 : 1300);
+        timerRef.current = setTimeout(goNext, HOLD_MS);
     }
 
     function chooseMcq(label) {
@@ -919,7 +941,7 @@ function MapPlay(props) {
         setPicked(label);
         setOkHit(hit);
         if (hit) setScore(function (s) { return s + 1; });
-        timerRef.current = setTimeout(goNext, hit ? 700 : 1200);
+        timerRef.current = setTimeout(goNext, HOLD_MS);
     }
 
     function chooseTap(choice) {
@@ -931,23 +953,55 @@ function MapPlay(props) {
         setPicked(choice.label);
         setOkHit(hit);
         if (hit) setScore(function (s) { return s + 1; });
-        timerRef.current = setTimeout(goNext, hit ? 800 : 1300);
+        timerRef.current = setTimeout(goNext, HOLD_MS);
     }
 
     useEffect(function () {
         var el = hostRef.current;
         if (!el || !svgHtml || done) return;
         var step = items[idx];
+        var svg = el.querySelector("svg");
+        var need = (quiz && step && step.type === "map") ? quiz.resolveCodes(step.item) : [];
+        var doneCodes = {};
+        cleared.forEach(function (row) {
+            (row.codes || []).forEach(function (c) { doneCodes[c] = row.label; });
+        });
         var paths = el.querySelectorAll("path[id]");
         Array.prototype.forEach.call(paths, function (p) {
             var id = String(p.getAttribute("id") || "").toUpperCase();
-            var cls = focus.indexOf(id) >= 0 ? "map-focus" : "map-dim";
+            var cls = "map-dim";
+            if (need.indexOf(id) >= 0) cls = "map-focus";
+            else if (doneCodes[id]) cls = "map-done";
+            else if (focus.indexOf(id) >= 0) cls = "map-focus";
             if (picked && quiz && step && step.type === "map") {
                 if (quiz.isCorrect(step.item, id)) cls = "hit-ok";
                 else if (picked === id) cls = "hit-bad";
             }
             p.setAttribute("class", cls);
         });
+        if (svg) {
+            var old = svg.querySelector("g.map-float-labels");
+            if (old) old.remove();
+            var g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+            g.setAttribute("class", "map-float-labels");
+            function addPin(code, text, kind) {
+                var path = svg.querySelector('path[id="' + code + '"]');
+                if (!path || !text) return;
+                var b = path.getBBox();
+                var t = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                t.setAttribute("x", String(b.x + b.width / 2));
+                t.setAttribute("y", String(b.y + b.height / 2));
+                t.setAttribute("class", "map-pin map-pin-" + kind);
+                t.setAttribute("font-size", String(Math.max(12, Math.min(22, b.width * 0.42))));
+                t.textContent = text;
+                g.appendChild(t);
+            }
+            cleared.forEach(function (row) {
+                if (row.codes && row.codes[0]) addPin(row.codes[0], row.label, "done");
+            });
+            pins.forEach(function (pin) { addPin(pin.code, pin.text, pin.kind); });
+            svg.appendChild(g);
+        }
         function onClick(ev) {
             var p = ev.target.closest ? ev.target.closest("path[id]") : null;
             if (!p || pickedRef.current) return;
@@ -957,7 +1011,7 @@ function MapPlay(props) {
         }
         el.addEventListener("click", onClick);
         return function () { el.removeEventListener("click", onClick); };
-    }, [svgHtml, idx, picked, items, done, focus]);
+    }, [svgHtml, idx, picked, items, done, focus, cleared, pins]);
 
     useEffect(function () {
         return function () { if (timerRef.current) clearTimeout(timerRef.current); };
@@ -1019,7 +1073,7 @@ function MapPlay(props) {
                 <div className="study-card-body">
                     <p className="text-[17px] leading-relaxed mb-3 font-semibold">{step.prompt}</p>
                     {step.type === "map" ? (
-                        <p className="text-xs text-stone-400 mb-3">Parlak iller bu konunun hedef alanı. Ada yazılmaz — sen tıkla.</p>
+                        <p className="text-xs text-stone-400 mb-3">Parlak iller henüz aranan hedefler. Bulduğun yer solar ve adı kalır. Tıklayınca 5–6 sn bilgi durur.</p>
                     ) : (
                         <p className="text-xs text-stone-400 mb-3">{step.name} ile bağlantı.</p>
                     )}
@@ -1060,13 +1114,15 @@ function MapPlay(props) {
                     )}
                     {picked ? (
                         <p className={"mt-3 text-sm font-semibold " + (okHit ? "text-emerald-600" : "text-rose-600")}>
-                            {okHit ? "Doğru" : (step.type === "mcq" ? ("Doğrusu: " + step.answer) : ("Doğrusu: " + quiz.answerLabel(step.item)))}
+                            {okHit
+                                ? ("Doğru — " + (step.type === "mcq" ? step.answer : (step.item.name + " · " + quiz.answerLabel(step.item))))
+                                : (step.type === "mcq" ? ("Doğrusu: " + step.answer) : ("Burası " + quiz.nameOf(picked) + " · doğrusu: " + step.item.name + " (" + quiz.answerLabel(step.item) + ")"))}
                         </p>
                     ) : null}
                     <p className="mt-2 text-[10px] text-stone-400">Harita: Simplemaps · {quiz.PARK_SOURCE}</p>
                 </div>
                 <footer className="study-card-foot">
-                    <span className="text-xs text-stone-400">{score} doğru</span>
+                    <span className="text-xs text-stone-400">{score} doğru{picked ? " · 5–6 sn" : ""}</span>
                     <button disabled={!picked} onClick={goNext} className={"btn-primary text-white px-5 py-2.5 rounded-full font-semibold " + (!picked ? "opacity-40 pointer-events-none" : "")}>
                         {idx + 1 >= items.length ? "Bitir" : "Sonraki"}
                     </button>
