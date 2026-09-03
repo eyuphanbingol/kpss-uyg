@@ -844,9 +844,7 @@ function MapPlay(props) {
     const items = useMemo(function () {
         return quiz ? quiz.pickRound(props.topicId, 8) : [];
     }, [props.seed, props.topicId]);
-    const layer = useMemo(function () {
-        return quiz && quiz.topicLayer ? quiz.topicLayer(props.topicId) : { pins: [], viewBox: "0 0 1000 422" };
-    }, [props.topicId]);
+    const layerRef = useRef({ pins: [] });
     const [idx, setIdx] = useState(0);
     const [picked, setPicked] = useState(null);
     const [okHit, setOkHit] = useState(false);
@@ -891,7 +889,7 @@ function MapPlay(props) {
         if (!pickedRef.current) return;
         var stepNow = items[idx];
         if (stepNow && stepNow.type === "map" && quiz) {
-            var loc = (layer.pins || []).filter(function (p) { return p.id === stepNow.item.id; })[0];
+            var loc = (layerRef.current.pins || []).filter(function (p) { return p.id === stepNow.item.id; })[0];
             setCleared(function (prev) {
                 return prev.concat([{
                     id: stepNow.item.id,
@@ -919,8 +917,8 @@ function MapPlay(props) {
         var step = items[idx];
         if (!step || step.type !== "map") return;
         var hit = pinId === step.item.id;
-        var clicked = (layer.pins || []).filter(function (p) { return p.id === pinId; })[0];
-        var right = (layer.pins || []).filter(function (p) { return p.id === step.item.id; })[0];
+        var clicked = (layerRef.current.pins || []).filter(function (p) { return p.id === pinId; })[0];
+        var right = (layerRef.current.pins || []).filter(function (p) { return p.id === step.item.id; })[0];
         var nextPins = [];
         if (hit && clicked) {
             nextPins.push({ x: clicked.x, y: clicked.y, text: step.item.name, kind: "ok" });
@@ -966,11 +964,14 @@ function MapPlay(props) {
         var step = items[idx];
         var svg = el.querySelector("svg");
         if (!svg) return;
-        svg.setAttribute("viewBox", layer.viewBox || "0 0 1000 422");
+        svg.setAttribute("viewBox", "0 0 1000 422");
+        svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
         var paths = el.querySelectorAll("path[id]");
         Array.prototype.forEach.call(paths, function (p) {
             p.setAttribute("class", "map-stage");
         });
+        var built = (quiz && quiz.topicLayerFromSvg) ? quiz.topicLayerFromSvg(svg, props.topicId) : { pins: [] };
+        layerRef.current = built;
         var oldDots = svg.querySelector("g.topic-dots");
         if (oldDots) oldDots.remove();
         var oldLabs = svg.querySelector("g.map-float-labels");
@@ -979,11 +980,11 @@ function MapPlay(props) {
         cleared.forEach(function (row) { doneIds[row.id] = true; });
         var dots = document.createElementNS("http://www.w3.org/2000/svg", "g");
         dots.setAttribute("class", "topic-dots");
-        (layer.pins || []).forEach(function (pin) {
+        (built.pins || []).forEach(function (pin) {
             var c = document.createElementNS("http://www.w3.org/2000/svg", "circle");
             c.setAttribute("cx", String(pin.x));
             c.setAttribute("cy", String(pin.y));
-            c.setAttribute("r", "12");
+            c.setAttribute("r", "10");
             c.setAttribute("data-pin", pin.id);
             var cls = "topic-dot";
             if (doneIds[pin.id]) cls += " topic-dot-done";
@@ -1003,7 +1004,7 @@ function MapPlay(props) {
             t.setAttribute("x", String(x));
             t.setAttribute("y", String(y - 16));
             t.setAttribute("class", "map-pin map-pin-" + kind);
-            t.setAttribute("font-size", "15");
+            t.setAttribute("font-size", "13");
             t.textContent = text;
             g.appendChild(t);
         }
@@ -1020,7 +1021,7 @@ function MapPlay(props) {
         }
         el.addEventListener("click", onClick);
         return function () { el.removeEventListener("click", onClick); };
-    }, [svgHtml, idx, picked, items, done, layer, cleared, pins]);
+    }, [svgHtml, idx, picked, items, done, cleared, pins, props.topicId]);
 
     useEffect(function () {
         return function () { if (timerRef.current) clearTimeout(timerRef.current); };
@@ -1066,78 +1067,68 @@ function MapPlay(props) {
     const step = items[idx];
     const taps = mapFail && step.type === "map" ? quiz.tapChoices(step.item) : [];
     return (
-        <Shell wide>
-            <div className="flex justify-between mb-4">
-                <BackBtn onClick={props.onBack} label="Konular" />
-                <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
-            </div>
-            <article className="study-card fade-in">
-                <header className="study-card-head">
-                    <div>
-                        <p className="study-card-kicker">{meta ? meta.icon + " " + meta.title : "Harita"}</p>
-                        <h2 className="study-card-title">{step.type === "map" ? "Haritada bul" : "Bilgi bağı"}</h2>
-                    </div>
-                    <div className="note-progress">{idx + 1}/{items.length}</div>
-                </header>
-                <div className="study-card-body">
-                    <p className="text-[17px] leading-relaxed mb-3 font-semibold">{step.prompt}</p>
-                    {step.type === "map" ? (
-                        <p className="text-xs text-stone-400 mb-3">Bu konunun kendi haritası: altın noktalar hedefler. İller sadece zemin. Doğru noktayı seç; bulunan solar.</p>
-                    ) : (
-                        <p className="text-xs text-stone-400 mb-3">{step.name} ile bağlantı.</p>
-                    )}
-                    {step.type === "mcq" ? (
-                        <div className="grid gap-2">
-                            {(step.choices || []).map(function (c, ci) {
-                                var isP = picked === c;
-                                var isA = String(c) === String(step.answer);
-                                var cls = "w-full text-left px-4 py-3 rounded-2xl border font-medium ";
-                                if (!picked) cls += "bg-white dark:bg-stone-800 border-stone-200";
-                                else if (isA) cls += "bg-emerald-50 border-emerald-400";
-                                else if (isP) cls += "bg-rose-50 border-rose-400";
-                                else cls += "opacity-50";
-                                return (
-                                    <button key={ci} disabled={!!picked} className={cls} onClick={function () { chooseMcq(c); }}>{c}</button>
-                                );
-                            })}
-                        </div>
-                    ) : !mapFail ? (
-                        <div className="tr-map-scroll">
-                            <div className="tr-map-wrap tr-map-lg" ref={hostRef} dangerouslySetInnerHTML={{ __html: svgHtml }} />
-                        </div>
-                    ) : (
-                        <div className="grid grid-cols-2 gap-2">
-                            {taps.map(function (c) {
-                                var isP = picked === c.label;
-                                var isA = quiz.isTapCorrect(step.item, c);
-                                var cls = "px-3 py-3 rounded-2xl border text-sm font-semibold ";
-                                if (!picked) cls += "bg-white dark:bg-stone-800 border-stone-200";
-                                else if (isA) cls += "bg-emerald-50 border-emerald-400";
-                                else if (isP) cls += "bg-rose-50 border-rose-400";
-                                else cls += "opacity-50";
-                                return (
-                                    <button key={c.kind + c.id} disabled={!!picked} className={cls} onClick={function () { chooseTap(c); }}>{c.label}</button>
-                                );
-                            })}
-                        </div>
-                    )}
-                    {picked ? (
-                        <p className={"mt-3 text-sm font-semibold " + (okHit ? "text-emerald-600" : "text-rose-600")}>
-                            {okHit
-                                ? ("Doğru — " + (step.type === "mcq" ? step.answer : (step.item.name + " · " + quiz.answerLabel(step.item))))
-                                : (step.type === "mcq" ? ("Doğrusu: " + step.answer) : ("Yanlış nokta · doğrusu: " + step.item.name))}
-                        </p>
-                    ) : null}
-                    <p className="mt-2 text-[10px] text-stone-400">Harita: Simplemaps · {quiz.PARK_SOURCE}</p>
+        <div className="map-play-root">
+            <header className="map-play-top">
+                <div className="flex items-center justify-between gap-3">
+                    <BackBtn onClick={props.onBack} label="Konular" />
+                    <div className="note-progress shrink-0">{idx + 1}/{items.length}</div>
+                    <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
                 </div>
-                <footer className="study-card-foot">
-                    <span className="text-xs text-stone-400">{score} doğru{picked ? " · 5–6 sn" : ""}</span>
+                <p className="map-play-kicker">{meta ? (meta.icon + " " + meta.title) : "Harita"}</p>
+                <p className="map-play-prompt">{step.prompt}</p>
+            </header>
+            {!mapFail ? (
+                <div className="map-play-stage tr-map-wrap" ref={hostRef} dangerouslySetInnerHTML={{ __html: svgHtml }} />
+            ) : (
+                <div className="map-play-stage p-4 overflow-auto">
+                    <div className="grid grid-cols-2 gap-2 max-w-lg mx-auto">
+                        {taps.map(function (c) {
+                            var isP = picked === c.label;
+                            var isA = quiz.isTapCorrect(step.item, c);
+                            var cls = "px-3 py-3 rounded-2xl border text-sm font-semibold ";
+                            if (!picked) cls += "bg-white border-stone-200";
+                            else if (isA) cls += "bg-emerald-50 border-emerald-400";
+                            else if (isP) cls += "bg-rose-50 border-rose-400";
+                            else cls += "opacity-50";
+                            return (
+                                <button key={c.kind + c.id} disabled={!!picked} className={cls} onClick={function () { chooseTap(c); }}>{c.label}</button>
+                            );
+                        })}
+                    </div>
+                </div>
+            )}
+            <footer className="map-play-foot">
+                {step.type === "mcq" ? (
+                    <div className="grid gap-2 mb-3">
+                        {(step.choices || []).map(function (c, ci) {
+                            var isP = picked === c;
+                            var isA = String(c) === String(step.answer);
+                            var cls = "w-full text-left px-4 py-3 rounded-2xl border font-medium ";
+                            if (!picked) cls += "bg-white dark:bg-stone-800 border-stone-200";
+                            else if (isA) cls += "bg-emerald-50 border-emerald-400";
+                            else if (isP) cls += "bg-rose-50 border-rose-400";
+                            else cls += "opacity-50";
+                            return (
+                                <button key={ci} disabled={!!picked} className={cls} onClick={function () { chooseMcq(c); }}>{c}</button>
+                            );
+                        })}
+                    </div>
+                ) : null}
+                {picked ? (
+                    <p className={"mb-2 text-sm font-semibold " + (okHit ? "text-emerald-700" : "text-rose-600")}>
+                        {okHit
+                            ? ("Doğru — " + (step.type === "mcq" ? step.answer : (step.item.name + " · " + quiz.answerLabel(step.item))))
+                            : (step.type === "mcq" ? ("Doğrusu: " + step.answer) : ("Yanlış nokta · doğrusu: " + step.item.name))}
+                    </p>
+                ) : null}
+                <div className="flex items-center justify-between gap-3">
+                    <span className="text-xs text-stone-500">{score} doğru{picked ? " · 5–6 sn" : ""}</span>
                     <button disabled={!picked} onClick={goNext} className={"btn-primary text-white px-5 py-2.5 rounded-full font-semibold " + (!picked ? "opacity-40 pointer-events-none" : "")}>
                         {idx + 1 >= items.length ? "Bitir" : "Sonraki"}
                     </button>
-                </footer>
-            </article>
-        </Shell>
+                </div>
+            </footer>
+        </div>
     );
 }
 
@@ -2297,6 +2288,7 @@ function App() {
     }
 
     const inTest = !!session;
+    const inMapPlay = nav === "alistirmalar" && drillKind === "map" && !!drillMapTopic;
     const konuData = (selectedDers && selectedKonu && kpssData[selectedDers]) ? (kpssData[selectedDers][selectedKonu] || {}) : {};
 
     let body = null;
@@ -2509,7 +2501,7 @@ function App() {
 
     return (
         <div className="app-shell">
-            {announce && !inTest ? (
+            {announce && !inTest && !inMapPlay ? (
                 <div className="sticky top-0 z-50 duyuru-bar text-white shadow-lg" style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
                     <div className="max-w-2xl mx-auto px-4 py-2.5 flex items-start gap-3">
                         <span className="duyuru-badge shrink-0 mt-0.5 text-[10px] font-black uppercase tracking-widest bg-white text-indigo-700 px-2 py-1 rounded-md">Duyuru</span>
@@ -2518,7 +2510,7 @@ function App() {
                 </div>
             ) : null}
             {body}
-            {!inTest ? (
+            {!inTest && !inMapPlay ? (
                 <BottomNav nav={nav} streak={plan.streak || 0} onChange={function (id) {
                     setNav(id);
                     if (id !== "dersler") { setSelectedDers(null); setSelectedKonu(null); setViewMode("hub"); }

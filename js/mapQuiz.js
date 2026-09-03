@@ -603,6 +603,109 @@
         };
     }
 
+    function topicLayerFromSvg(svg, topicId) {
+        var boxes = {};
+        var paths = svg.querySelectorAll("path[id]");
+        Array.prototype.forEach.call(paths, function (p) {
+            try {
+                var b = p.getBBox();
+                boxes[String(p.getAttribute("id") || "").toUpperCase()] = {
+                    x: b.x + b.width / 2,
+                    y: b.y + b.height / 2,
+                    w: b.width,
+                    h: b.height
+                };
+            } catch (e) { }
+        });
+        var PIN_OFF = {
+            "Bafra Deltası": ["TR55", -0.38, -0.42],
+            "Çarşamba Deltası": ["TR55", 0.42, -0.12],
+            "Bafra Ovası": ["TR55", -0.32, -0.22],
+            "Çarşamba Ovası": ["TR55", 0.36, 0.05],
+            "Kızılırmak": ["TR55", -0.40, -0.40],
+            "Yeşilırmak": ["TR55", 0.40, -0.08],
+            "Kızılırmak → Bafra": ["TR55", -0.38, -0.42],
+            "Yeşilırmak → Çarşamba": ["TR55", 0.42, -0.12],
+            "Alüvyal (Bafra)": ["TR55", -0.28, -0.30],
+            "Menemen Deltası": ["TR35", -0.25, -0.35],
+            "Selçuk Deltası": ["TR35", 0.28, 0.40],
+            "Gediz": ["TR35", -0.20, -0.30],
+            "Küçük Menderes": ["TR35", 0.30, 0.38],
+            "Söke / Balat Deltası": ["TR09", -0.25, 0.35],
+            "Büyük Menderes": ["TR09", -0.10, 0.30],
+            "Çukurova": ["TR01", 0.10, 0.35],
+            "Çukurova Deltası": ["TR01", 0.05, 0.42],
+            "Seyhan": ["TR01", -0.15, 0.28],
+            "Ceyhan": ["TR01", 0.35, 0.22],
+            "Silifke Deltası": ["TR33", -0.05, 0.45],
+            "Göksu": ["TR33", -0.08, 0.42],
+            "Erciyes Dağı": ["TR38", 0.05, 0.25],
+            "Sultan Sazlığı": ["TR38", -0.15, 0.40],
+            "Hasan Dağı": ["TR68", 0.20, 0.35],
+            "Melendiz Dağı": ["TR51", -0.15, -0.20],
+            "Göllüdağ": ["TR51", 0.25, -0.35],
+            "Kapadokya": ["TR50", 0, 0],
+            "Karadağ": ["TR70", 0.1, -0.15],
+            "Karacadağ": ["TR21", -0.35, 0.20],
+            "Nemrut Dağı (volkan)": ["TR13", -0.20, 0.25],
+            "Süphan Dağı": ["TR13", 0.45, -0.35],
+            "Ağrı Dağı": ["TR04", 0.35, -0.15],
+            "Tendürek Dağı": ["TR04", 0.15, 0.40]
+        };
+        var list = itemsForTopic(topicId);
+        var groups = {};
+        list.forEach(function (it) {
+            var spec = PIN_OFF[it.name];
+            var code = (spec && spec[0]) || (it.codes && it.codes[0]);
+            if (!code && it.region) {
+                var regs = codesOfRegion(it.region);
+                code = regs[Math.floor(regs.length / 2)] || "TR06";
+            }
+            code = String(code || "TR06").toUpperCase();
+            (groups[code] = groups[code] || []).push(it);
+        });
+        var pins = [];
+        Object.keys(groups).forEach(function (code) {
+            var g = groups[code];
+            var box = boxes[code] || { x: 500, y: 210, w: 48, h: 48 };
+            g.forEach(function (it, i) {
+                var spec = PIN_OFF[it.name];
+                var x = box.x;
+                var y = box.y;
+                if (spec) {
+                    x = box.x + spec[1] * box.w;
+                    y = box.y + spec[2] * box.h;
+                } else if (g.length > 1) {
+                    var a = (i / g.length) * Math.PI * 2 - Math.PI / 2;
+                    var r = Math.max(16, Math.min(box.w, box.h) * 0.34);
+                    x = box.x + Math.cos(a) * r;
+                    y = box.y + Math.sin(a) * r;
+                }
+                pins.push({ id: it.id, name: it.name, x: x, y: y });
+            });
+        });
+        var minD = 26;
+        var n;
+        for (n = 0; n < 14; n++) {
+            var i, j;
+            for (i = 0; i < pins.length; i++) {
+                for (j = i + 1; j < pins.length; j++) {
+                    var dx = pins[j].x - pins[i].x;
+                    var dy = pins[j].y - pins[i].y;
+                    var d = Math.sqrt(dx * dx + dy * dy) || 0.01;
+                    if (d < minD) {
+                        var push = (minD - d) / 2 + 0.6;
+                        pins[i].x -= (dx / d) * push;
+                        pins[i].y -= (dy / d) * push;
+                        pins[j].x += (dx / d) * push;
+                        pins[j].y += (dy / d) * push;
+                    }
+                }
+            }
+        }
+        return { pins: pins, viewBox: "0 0 1000 422" };
+    }
+
     var api = {
         REGION_LABEL: REGION_LABEL,
         PROVINCE_REGION: PROVINCE_REGION,
@@ -622,6 +725,7 @@
         isTapCorrect: isTapCorrect,
         countFor: countFor,
         topicLayer: topicLayer,
+        topicLayerFromSvg: topicLayerFromSvg,
         PARK_SOURCE: "Tarım ve Orman Bakanlığı DKMP — 54 milli park (2026)"
     };
     global.MapQuiz = api;

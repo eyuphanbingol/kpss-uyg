@@ -163,7 +163,7 @@
     <script src="js/store.js?v=23"></script>
     <script src="js/planner.js?v=17"></script>
     <script src="js/clozeEngine.js?v=1"></script>
-    <script src="js/mapQuiz.js?v=3"></script>
+    <script src="js/mapQuiz.js?v=4"></script>
     <script src="js/scoreEngine.js?v=8"></script>
     <script src="js/paymentClient.js?v=14"></script>
     <script src="js/notificationEngine.js?v=9"></script>
@@ -629,6 +629,58 @@
         .study-card-body .flex-wrap {
             flex-wrap: wrap !important;
         }
+        .map-play-root {
+            position: fixed;
+            inset: 0;
+            z-index: 45;
+            display: flex;
+            flex-direction: column;
+            background: #e8f0ea;
+        }
+        html.dark .map-play-root { background: #15201b; }
+        .map-play-top {
+            flex: 0 0 auto;
+            padding: 10px 14px 8px;
+            padding-top: max(10px, env(safe-area-inset-top));
+            background: rgba(255,255,255,.94);
+            border-bottom: 1px solid rgba(13,44,77,.08);
+        }
+        html.dark .map-play-top { background: rgba(26,28,27,.94); }
+        .map-play-kicker {
+            margin: 8px 0 0;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            color: #78716c;
+        }
+        .map-play-prompt {
+            margin: 4px 0 0;
+            font-size: 17px;
+            font-weight: 800;
+            line-height: 1.35;
+        }
+        .map-play-stage {
+            flex: 1 1 auto;
+            min-height: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .map-play-stage svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        .map-play-foot {
+            flex: 0 0 auto;
+            padding: 10px 14px;
+            padding-bottom: max(12px, env(safe-area-inset-bottom));
+            background: rgba(255,255,255,.96);
+            border-top: 1px solid rgba(13,44,77,.08);
+        }
+        html.dark .map-play-foot { background: rgba(26,28,27,.96); }
         .tr-map-scroll {
             margin: 0 -8px;
             overflow: auto;
@@ -644,9 +696,13 @@
             touch-action: manipulation;
         }
         .tr-map-wrap.tr-map-lg svg {
-            min-width: 720px;
             width: 100%;
             height: auto;
+        }
+        .map-play-stage.tr-map-wrap svg {
+            min-width: 0;
+            width: 100%;
+            height: 100%;
         }
         .tr-map-wrap svg.tr-map,
         .tr-map-wrap svg {
@@ -833,7 +889,7 @@
 
 <body class="app-bg min-h-screen text-slate-800 antialiased transition-colors duration-300">
     <div id="root"></div>
-    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=60"></script>
+    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=61"></script>
     <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.getRegistrations().then(function (regs) {
