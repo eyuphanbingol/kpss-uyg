@@ -68,6 +68,17 @@ function ThemeBtn(props) {
     );
 }
 
+function BackBtn(props) {
+    return (
+        <button type="button" onClick={props.onClick} className="back-btn" aria-label={props.label || "Geri"}>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.25} d="M15 19l-7-7 7-7" />
+            </svg>
+            <span>{props.label || "Geri"}</span>
+        </button>
+    );
+}
+
 function Confetti() {
     const [pieces, setPieces] = useState([]);
     useEffect(function () {
@@ -629,7 +640,7 @@ function KonuList(props) {
     return (
         <Shell>
             <div className="flex justify-between mb-4">
-                <button onClick={props.onBack} className="text-sm font-bold text-slate-500">← Dersler</button>
+                <BackBtn onClick={props.onBack} label="Dersler" />
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
             <div className="flex items-center gap-4 mb-6">
@@ -685,7 +696,7 @@ function KonuHub(props) {
     return (
         <Shell>
             <div className="flex justify-between mb-4">
-                <button onClick={props.onBack} className="text-sm font-bold text-slate-500">← Konular</button>
+                <BackBtn onClick={props.onBack} label="Konular" />
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
             <h2 className="text-3xl font-black mb-2">{props.konu}</h2>
@@ -720,7 +731,7 @@ function NotesView(props) {
     return (
         <Shell wide={true} padBottom={false}>
             <div className="flex justify-between items-center mb-4 gap-3">
-                <button onClick={props.onBack} className="text-sm font-bold text-slate-500 bg-white dark:bg-slate-800 px-4 py-2 rounded-xl border border-slate-200">← Geri</button>
+                <BackBtn onClick={props.onBack} label="Geri" />
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
             <h2 className="text-2xl font-black mb-4">{props.konu} · Özet</h2>
@@ -1863,7 +1874,7 @@ function App() {
         return (
             <div className="min-h-screen app-shell">
                 <div className="mx-auto max-w-3xl px-4 pt-5" style={{ paddingBottom: "2rem" }}>
-                    <button type="button" onClick={closeTool} className="mb-3 text-sm font-medium text-stone-600">← Geri</button>
+                    <div className="mb-3"><BackBtn onClick={closeTool} label="Geri" /></div>
                     {lazyErr ? (
                         <div className="p-4 rounded-2xl panel text-sm">
                             <p className="text-coral-600 mb-3">{lazyErr}</p>
