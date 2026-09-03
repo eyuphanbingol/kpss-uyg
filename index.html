@@ -163,7 +163,7 @@
     <script src="js/store.js?v=23"></script>
     <script src="js/planner.js?v=17"></script>
     <script src="js/clozeEngine.js?v=1"></script>
-    <script src="js/mapQuiz.js?v=4"></script>
+    <script src="js/mapQuiz.js?v=5"></script>
     <script src="js/scoreEngine.js?v=8"></script>
     <script src="js/paymentClient.js?v=14"></script>
     <script src="js/notificationEngine.js?v=9"></script>
@@ -720,6 +720,21 @@
         .tr-map-wrap path.map-done { fill: #a8c4b0 !important; pointer-events: none; }
         .tr-map-wrap path.hit-ok { fill: #059669 !important; }
         .tr-map-wrap path.hit-bad { fill: #E11D48 !important; }
+        .tr-map-wrap .topic-hit {
+            fill: transparent;
+            stroke: none;
+            cursor: pointer;
+            pointer-events: auto;
+        }
+        .tr-map-wrap .topic-ico {
+            font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+            pointer-events: none;
+            user-select: none;
+        }
+        .tr-map-wrap .topic-mark { cursor: pointer; }
+        .tr-map-wrap .topic-mark-done { opacity: 0.42; cursor: default; }
+        .tr-map-wrap .topic-mark-ok .topic-hit { fill: rgba(5,150,105,.22); }
+        .tr-map-wrap .topic-mark-bad .topic-hit { fill: rgba(225,29,72,.22); }
         .tr-map-wrap .topic-dot {
             fill: #C9A227;
             stroke: #fff;
@@ -889,7 +904,7 @@
 
 <body class="app-bg min-h-screen text-slate-800 antialiased transition-colors duration-300">
     <div id="root"></div>
-    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=61"></script>
+    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=62"></script>
     <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.getRegistrations().then(function (regs) {

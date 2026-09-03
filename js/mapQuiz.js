@@ -552,7 +552,54 @@
         return choice.id === item.region || (item.parkRegion && choice.id === item.parkRegion);
     }
 
+    function topicGlyph(topicId) {
+        var t = String(topicId || "");
+        if (t === "volkanik" || t === "volkanik-arazi") return "🌋";
+        if (t === "kirik" || t === "kivrim") return "⛰️";
+        if (t === "masif" || t === "karst") return "🪨";
+        if (t.indexOf("plato") === 0) return "🏜️";
+        if (t === "ovalar") return "🌾";
+        if (t === "delta") return "🌊";
+        if (t === "akarsu") return "💧";
+        if (t === "goller") return "🏞️";
+        if (t === "havza") return "🌊";
+        if (t === "gecit") return "🏔️";
+        if (t === "kiyi") return "🏖️";
+        if (t === "bitki") return "🌿";
+        if (t === "tarim") return "🌾";
+        if (t === "toprak") return "🟤";
+        if (t.indexOf("milli") === 0) return "🏞️";
+        if (t === "tuzak") return "🧠";
+        return "📍";
+    }
+
     function countFor(topicId) { return itemsForTopic(topicId).length; }
+
+    function separatePins(pins, minD) {
+        minD = minD || 44;
+        var n, i, j;
+        for (n = 0; n < 28; n++) {
+            for (i = 0; i < pins.length; i++) {
+                for (j = i + 1; j < pins.length; j++) {
+                    var dx = pins[j].x - pins[i].x;
+                    var dy = pins[j].y - pins[i].y;
+                    var d = Math.sqrt(dx * dx + dy * dy) || 0.01;
+                    if (d < minD) {
+                        var push = (minD - d) / 2 + 1.2;
+                        pins[i].x -= (dx / d) * push;
+                        pins[i].y -= (dy / d) * push;
+                        pins[j].x += (dx / d) * push;
+                        pins[j].y += (dy / d) * push;
+                    }
+                }
+            }
+        }
+        pins.forEach(function (p) {
+            p.x = Math.max(18, Math.min(982, p.x));
+            p.y = Math.max(18, Math.min(404, p.y));
+        });
+        return pins;
+    }
 
     function jitterPins(pins) {
         var buckets = {};
@@ -639,13 +686,13 @@
             "Ceyhan": ["TR01", 0.35, 0.22],
             "Silifke Deltası": ["TR33", -0.05, 0.45],
             "Göksu": ["TR33", -0.08, 0.42],
-            "Erciyes Dağı": ["TR38", 0.05, 0.25],
-            "Sultan Sazlığı": ["TR38", -0.15, 0.40],
-            "Hasan Dağı": ["TR68", 0.20, 0.35],
-            "Melendiz Dağı": ["TR51", -0.15, -0.20],
-            "Göllüdağ": ["TR51", 0.25, -0.35],
-            "Kapadokya": ["TR50", 0, 0],
-            "Karadağ": ["TR70", 0.1, -0.15],
+            "Erciyes Dağı": ["TR38", 0.12, 0.08],
+            "Sultan Sazlığı": ["TR38", -0.20, 0.42],
+            "Hasan Dağı": ["TR68", -0.05, 0.42],
+            "Melendiz Dağı": ["TR51", -0.28, -0.28],
+            "Göllüdağ": ["TR51", 0.38, 0.32],
+            "Kapadokya": ["TR50", 0, -0.1],
+            "Karadağ": ["TR70", 0.05, 0.35],
             "Karacadağ": ["TR21", -0.35, 0.20],
             "Nemrut Dağı (volkan)": ["TR13", -0.20, 0.25],
             "Süphan Dağı": ["TR13", 0.45, -0.35],
@@ -677,33 +724,15 @@
                     y = box.y + spec[2] * box.h;
                 } else if (g.length > 1) {
                     var a = (i / g.length) * Math.PI * 2 - Math.PI / 2;
-                    var r = Math.max(16, Math.min(box.w, box.h) * 0.34);
+                    var r = Math.max(28, Math.min(box.w, box.h) * 0.42);
                     x = box.x + Math.cos(a) * r;
                     y = box.y + Math.sin(a) * r;
                 }
                 pins.push({ id: it.id, name: it.name, x: x, y: y });
             });
         });
-        var minD = 26;
-        var n;
-        for (n = 0; n < 14; n++) {
-            var i, j;
-            for (i = 0; i < pins.length; i++) {
-                for (j = i + 1; j < pins.length; j++) {
-                    var dx = pins[j].x - pins[i].x;
-                    var dy = pins[j].y - pins[i].y;
-                    var d = Math.sqrt(dx * dx + dy * dy) || 0.01;
-                    if (d < minD) {
-                        var push = (minD - d) / 2 + 0.6;
-                        pins[i].x -= (dx / d) * push;
-                        pins[i].y -= (dy / d) * push;
-                        pins[j].x += (dx / d) * push;
-                        pins[j].y += (dy / d) * push;
-                    }
-                }
-            }
-        }
-        return { pins: pins, viewBox: "0 0 1000 422" };
+        separatePins(pins, 52);
+        return { pins: pins, viewBox: "0 0 1000 422", glyph: topicGlyph(topicId) };
     }
 
     var api = {
@@ -726,6 +755,7 @@
         countFor: countFor,
         topicLayer: topicLayer,
         topicLayerFromSvg: topicLayerFromSvg,
+        topicGlyph: topicGlyph,
         PARK_SOURCE: "Tarım ve Orman Bakanlığı DKMP — 54 milli park (2026)"
     };
     global.MapQuiz = api;

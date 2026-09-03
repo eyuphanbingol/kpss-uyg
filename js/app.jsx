@@ -978,22 +978,34 @@ function MapPlay(props) {
         if (oldLabs) oldLabs.remove();
         var doneIds = {};
         cleared.forEach(function (row) { doneIds[row.id] = true; });
+        var glyph = (quiz && quiz.topicGlyph) ? quiz.topicGlyph(props.topicId) : "📍";
         var dots = document.createElementNS("http://www.w3.org/2000/svg", "g");
         dots.setAttribute("class", "topic-dots");
         (built.pins || []).forEach(function (pin) {
-            var c = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-            c.setAttribute("cx", String(pin.x));
-            c.setAttribute("cy", String(pin.y));
-            c.setAttribute("r", "10");
-            c.setAttribute("data-pin", pin.id);
-            var cls = "topic-dot";
-            if (doneIds[pin.id]) cls += " topic-dot-done";
+            var wrap = document.createElementNS("http://www.w3.org/2000/svg", "g");
+            wrap.setAttribute("data-pin", pin.id);
+            wrap.setAttribute("class", "topic-mark");
+            var hit = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            hit.setAttribute("cx", String(pin.x));
+            hit.setAttribute("cy", String(pin.y));
+            hit.setAttribute("r", "16");
+            hit.setAttribute("class", "topic-hit");
+            var ico = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            ico.setAttribute("x", String(pin.x));
+            ico.setAttribute("y", String(pin.y));
+            ico.setAttribute("class", "topic-ico");
+            ico.setAttribute("text-anchor", "middle");
+            ico.setAttribute("dominant-baseline", "central");
+            ico.setAttribute("font-size", "22");
+            ico.textContent = glyph;
+            if (doneIds[pin.id]) wrap.setAttribute("class", "topic-mark topic-mark-done");
             if (picked && step && step.type === "map") {
-                if (pin.id === step.item.id) cls += " topic-dot-ok";
-                else if (pin.id === picked) cls += " topic-dot-bad";
+                if (pin.id === step.item.id) wrap.setAttribute("class", "topic-mark topic-mark-ok");
+                else if (pin.id === picked) wrap.setAttribute("class", "topic-mark topic-mark-bad");
             }
-            c.setAttribute("class", cls);
-            dots.appendChild(c);
+            wrap.appendChild(hit);
+            wrap.appendChild(ico);
+            dots.appendChild(wrap);
         });
         svg.appendChild(dots);
         var g = document.createElementNS("http://www.w3.org/2000/svg", "g");
@@ -1002,7 +1014,7 @@ function MapPlay(props) {
             if (!text) return;
             var t = document.createElementNS("http://www.w3.org/2000/svg", "text");
             t.setAttribute("x", String(x));
-            t.setAttribute("y", String(y - 16));
+            t.setAttribute("y", String(y - 22));
             t.setAttribute("class", "map-pin map-pin-" + kind);
             t.setAttribute("font-size", "13");
             t.textContent = text;
@@ -1016,7 +1028,7 @@ function MapPlay(props) {
             if (!n || pickedRef.current) return;
             var stepNow = items[idx];
             if (!stepNow || stepNow.type !== "map") return;
-            if (n.classList && n.classList.contains("topic-dot-done")) return;
+            if (n.classList && (n.classList.contains("topic-mark-done") || (n.closest && n.closest(".topic-mark-done")))) return;
             choosePin(n.getAttribute("data-pin"));
         }
         el.addEventListener("click", onClick);

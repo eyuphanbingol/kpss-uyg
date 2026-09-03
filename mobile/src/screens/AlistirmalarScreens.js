@@ -260,6 +260,7 @@ export function MapPlayScreen({ route, navigation }) {
     var layer = useMemo(function () {
         return MapQuiz.topicLayer ? MapQuiz.topicLayer(topicId) : { pins: [], viewBox: "0 0 1000 422" };
     }, [topicId]);
+    var glyph = MapQuiz.topicGlyph ? MapQuiz.topicGlyph(topicId) : "📍";
     var _i = useState(0);
     var idx = _i[0];
     var setIdx = _i[1];
@@ -329,17 +330,18 @@ export function MapPlayScreen({ route, navigation }) {
                             var left = ((p.x - vb[0]) / vb[2]) * 100;
                             var top = ((p.y - vb[1]) / vb[3]) * 100;
                             var donePin = cleared.indexOf(p.id) >= 0;
-                            var bg = "#C9A227";
-                            if (donePin) bg = "#94a3b8";
-                            if (picked && p.id === step.item.id) bg = "#059669";
-                            else if (picked && p.id === picked) bg = "#E11D48";
+                            var tint = null;
+                            if (picked && p.id === step.item.id) tint = "rgba(5,150,105,0.22)";
+                            else if (picked && p.id === picked) tint = "rgba(225,29,72,0.22)";
                             return (
                                 <Pressable key={p.id} disabled={!!picked || donePin} onPress={function () {
                                     if (picked) return;
                                     setPicked(p.id);
                                     if (p.id === step.item.id) setScore(score + 1);
                                     setTimeout(advance, 5500);
-                                }} style={[styles.mapDot, { left: left + "%", top: top + "%", backgroundColor: bg }]} />
+                                }} style={[styles.mapMark, { left: left + "%", top: top + "%", opacity: donePin ? 0.42 : 1, backgroundColor: tint || "transparent" }]}>
+                                    <Text style={styles.mapIco}>{glyph}</Text>
+                                </Pressable>
                             );
                         })}
                     </View>
@@ -399,5 +401,6 @@ var styles = StyleSheet.create({
     mapGrid: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
     mapChip: { borderWidth: 1, borderRadius: 14, paddingVertical: 12, paddingHorizontal: 12, minWidth: "47%", flexGrow: 1 },
     mapBoard: { height: 240, backgroundColor: "#d7e5db", borderRadius: 16, overflow: "hidden", marginTop: 4, position: "relative" },
-    mapDot: { position: "absolute", width: 18, height: 18, marginLeft: -9, marginTop: -9, borderRadius: 9, borderWidth: 2, borderColor: "#fff" }
+    mapMark: { position: "absolute", width: 28, height: 28, marginLeft: -14, marginTop: -14, borderRadius: 14, alignItems: "center", justifyContent: "center" },
+    mapIco: { fontSize: 18, lineHeight: 22 }
 });
