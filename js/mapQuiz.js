@@ -69,68 +69,115 @@
         "Nemrut Dağı (volkan)": [42.02, 38.62], "Erciyes Dağı": [35.45, 38.53], "Hasan Dağı": [34.17, 38.13],
         "Melendiz Dağı": [34.63, 38.37], "Karadağ": [33.18, 37.40], "Karacadağ": [39.83, 37.75],
         "Göllüdağ": [34.55, 38.26], "Kula volkanları": [28.65, 38.55],
-        "Bozdağlar": [28.05, 38.32], "Aydın Dağları": [27.95, 37.95], "Madra Dağları": [27.20, 39.35],
-        "Yunt Dağları": [27.20, 38.90], "Honaz Dağı": [29.27, 37.68], "Menteşe Dağları": [28.20, 37.15],
+        "Kaz Dağı": [26.85, 39.70], "Bozdağlar": [28.05, 38.32], "Aydın Dağları": [27.95, 37.95],
+        "Madra Dağları": [27.20, 39.35], "Yunt Dağları": [27.20, 38.90], "Menteşe Dağları": [28.20, 37.15],
+        "Nur (Amanos) Dağları": [36.25, 36.75],
         "Yıldız Dağları": [27.50, 41.75], "Küre Dağları": [33.20, 41.55], "Ilgaz Dağları": [33.65, 41.05],
         "Köroğlu Dağları": [31.80, 40.55], "Canik Dağları": [36.80, 40.85], "Giresun Dağları": [38.40, 40.55],
-        "Kaçkar Dağları": [41.20, 40.85], "Beydağları": [30.12, 36.70], "Bolkar Dağları": [34.35, 37.40],
-        "Aladağlar": [35.20, 37.80], "Amanoslar": [36.25, 36.75],
+        "Kaçkar Dağları": [41.20, 40.85], "Beydağları": [30.12, 36.70], "Geyik Dağları": [32.20, 36.85],
+        "Bolkar Dağları": [34.35, 37.40], "Aladağlar (Demirkazık)": [35.20, 37.80],
+        "Tahtalı Dağları": [36.30, 38.20], "Binboğa Dağları": [36.70, 38.15], "Cilo / Buzul Dağları": [44.00, 37.50],
         "Haymana Platosu": [32.50, 39.43], "Cihanbeyli Platosu": [32.80, 38.65], "Obruk Platosu": [33.20, 38.20],
-        "Bozok Platosu": [35.20, 39.70], "Uzunyayla": [37.00, 38.80],
+        "Bozok Platosu": [35.20, 39.70], "Uzunyayla": [37.00, 38.80], "Yazılıkaya Platosu": [30.70, 39.20],
         "Erzurum-Kars Platosu": [41.80, 40.40], "Ardahan Platosu": [42.70, 41.11],
-        "Gaziantep Platosu": [37.38, 37.20], "Şanlıurfa Platosu": [38.79, 37.30], "Mardin-Midyat Eşiği": [41.05, 37.45],
-        "Taşeli Platosu": [33.20, 36.55],
+        "Gaziantep Platosu": [37.38, 37.20], "Şanlıurfa Platosu": [38.79, 37.30], "Adıyaman Platosu": [38.28, 37.76],
+        "Mardin-Midyat Eşiği": [41.05, 37.45], "Teke Platosu": [29.90, 36.85], "Taşeli Platosu": [33.20, 36.55],
+        "Çatalca-Kocaeli Platosu": [29.20, 41.00],
         "Bafra Deltası": [35.90, 41.57], "Çarşamba Deltası": [36.72, 41.20], "Çukurova Deltası": [35.40, 36.78],
         "Silifke Deltası": [33.93, 36.38], "Menemen Deltası": [27.07, 38.58], "Söke / Balat Deltası": [27.40, 37.48],
-        "Selçuk Deltası": [27.37, 37.95],
+        "Selçuk Deltası": [27.37, 37.95], "Dikili Deltası": [26.90, 39.08], "Meriç Deltası": [26.35, 40.75],
         "Kızılırmak": [36.10, 41.55], "Yeşilırmak": [36.65, 41.22], "Sakarya": [30.40, 41.12],
         "Gediz": [27.10, 38.60], "Büyük Menderes": [27.30, 37.55], "Küçük Menderes": [27.35, 37.95],
-        "Seyhan": [35.33, 36.78], "Ceyhan": [35.82, 36.85], "Göksu": [33.93, 36.38], "Asi": [36.20, 36.25],
-        "Fırat": [38.25, 37.00], "Dicle": [40.55, 37.90], "Aras": [44.10, 39.95],
+        "Bakırçay": [27.05, 39.05], "Seyhan": [35.33, 36.78], "Ceyhan": [35.82, 36.85], "Göksu": [33.93, 36.38],
+        "Asi": [36.20, 36.25], "Fırat": [38.25, 37.00], "Dicle": [40.55, 37.90], "Aras": [44.10, 39.95],
+        "Kura": [43.00, 41.20], "Çoruh": [41.50, 41.45], "Meriç": [26.50, 41.00],
         "Van Gölü": [43.00, 38.63], "Tuz Gölü": [33.40, 38.75], "Beyşehir Gölü": [31.50, 37.70],
         "Eğirdir Gölü": [30.85, 37.85], "İznik Gölü": [29.52, 40.43], "Sapanca Gölü": [30.26, 40.72],
-        "Manyas (Kuş) Gölü": [28.00, 40.18], "Burdur Gölü": [30.20, 37.73],
+        "Manyas (Kuş) Gölü": [28.00, 40.18], "Burdur Gölü": [30.20, 37.73], "Akşehir Gölü": [31.40, 38.48],
+        "Eber Gölü": [31.15, 38.65], "Hazar Gölü": [39.42, 38.48], "Salda Gölü": [29.68, 37.55],
+        "Meke Gölü": [33.64, 37.68], "Nemrut Krater Gölü": [42.02, 38.62], "Gölcük (Isparta)": [30.48, 37.72],
+        "Tortum Gölü": [41.55, 40.65], "Bafa Gölü": [27.45, 37.50], "Köyceğiz Gölü": [28.65, 36.90],
+        "Erçek Gölü": [43.55, 38.67], "Çıldır Gölü": [43.23, 41.05], "Abant Gölü": [31.28, 40.60],
+        "Büyükçekmece": [28.55, 41.02], "Küçükçekmece": [28.75, 41.00], "Terkos (Durusu)": [28.55, 41.32],
         "Bafra Ovası": [35.90, 41.50], "Çarşamba Ovası": [36.72, 41.15], "Çukurova": [35.40, 36.85],
-        "Harran Ovası": [39.05, 36.86], "Ergene Ovası": [26.90, 41.15],
-        "Kapadokya": [34.83, 38.67], "Zigana Geçidi": [39.40, 40.65], "Kop Geçidi": [40.20, 40.05],
+        "Harran Ovası": [39.05, 36.86], "Ergene Ovası": [26.90, 41.15], "Amik Ovası": [36.35, 36.35],
+        "Kapadokya": [34.83, 38.67],
+        "Zigana Geçidi": [39.40, 40.65], "Kop Geçidi": [40.20, 40.05], "Ovit Geçidi": [40.80, 40.62],
+        "Cankurtaran Geçidi": [41.45, 41.25], "Ecevit Geçidi": [33.78, 41.70], "Ilgaz Geçidi": [33.65, 41.00],
         "Gülek Boğazı": [34.80, 37.28], "Sertavul Geçidi": [33.30, 36.90], "Belen Geçidi": [36.22, 36.48],
+        "Çubuk Geçidi": [30.55, 37.15],
         "Kızılırmak → Bafra": [35.90, 41.57], "Yeşilırmak → Çarşamba": [36.72, 41.20]
     };
 
     var TREE = [
         {
-            id: "yer", title: "Yer şekilleri", icon: "🗻",
+            id: "yer", title: "Yer şekilleri · jeoloji", icon: "🗻",
             kids: [
                 { id: "volkanik", title: "Volkanik dağlar", icon: "🌋" },
-                { id: "kirik", title: "Kırık dağlar", icon: "↗️" },
-                { id: "kivrim", title: "Kıvrım dağlar", icon: "🌊" },
+                { id: "volkanik-arazi", title: "Volkanik araziler", icon: "🌋" },
+                { id: "kirik", title: "Kırık dağlar (horst–graben)", icon: "↗️" },
+                { id: "kivrim", title: "Kıvrım dağları", icon: "🌊" },
                 { id: "masif", title: "Masif araziler", icon: "🪨" },
-                { id: "plato-ic", title: "İç Anadolu platoları", icon: "🏜️" },
-                { id: "plato-dogu", title: "Doğu Anadolu platoları", icon: "🏜️" },
-                { id: "plato-gd", title: "Güneydoğu platoları", icon: "🏜️" },
-                { id: "plato-akdeniz", title: "Akdeniz platoları", icon: "🏜️" },
-                { id: "ovalar", title: "Ovalar", icon: "🌾" },
-                { id: "delta", title: "Delta ovaları", icon: "🌊" },
-                { id: "karst", title: "Karstik alanlar", icon: "🪨" },
-                { id: "volkanik-arazi", title: "Volkanik araziler", icon: "🌋" }
+                { id: "fay", title: "Fay hatları (KAF·DAF·BAF)", icon: "⚡" },
+                { id: "deprem-az", title: "Deprem riski az alanlar", icon: "🟢" }
             ]
         },
         {
-            id: "su", title: "Sular", icon: "💧",
+            id: "plato", title: "Platolar", icon: "🏜️",
+            kids: [
+                { id: "plato-karst", title: "Karstik platolar", icon: "🏜️" },
+                { id: "plato-volkan", title: "Volkanik / lav platoları", icon: "🌋" },
+                { id: "plato-asinim", title: "Aşınım düzlüğü platoları", icon: "🏜️" },
+                { id: "plato-tabaka", title: "Tabaka düzlüğü platoları", icon: "🏜️" }
+            ]
+        },
+        {
+            id: "ova", title: "Ovalar", icon: "🌾",
+            kids: [
+                { id: "delta", title: "Delta ovaları", icon: "🌊" },
+                { id: "ova-karst", title: "Karstik ovalar (TAKKEM)", icon: "🪨" },
+                { id: "ova-tektonik", title: "Tektonik ovalar", icon: "🌾" },
+                { id: "ova-volkan", title: "Volkanik ovalar", icon: "🌋" },
+                { id: "ova-asinim", title: "Aşınım / dağ eteği ovaları", icon: "🌾" }
+            ]
+        },
+        {
+            id: "karst-g", title: "Karstik arazi", icon: "🪨",
+            kids: [
+                { id: "karst", title: "Karstik topografya", icon: "🪨" }
+            ]
+        },
+        {
+            id: "su", title: "Sular · kıyılar · geçitler", icon: "💧",
             kids: [
                 { id: "akarsu", title: "Akarsular", icon: "💧" },
                 { id: "goller", title: "Göller", icon: "🏞️" },
-                { id: "havza", title: "Havzalar", icon: "🌊" },
-                { id: "gecit", title: "Geçitler", icon: "🏔️" },
-                { id: "kiyi", title: "Kıyı tipleri", icon: "🏖️" }
+                { id: "havza", title: "Kapalı havzalar", icon: "🌊" },
+                { id: "kiyi", title: "Kıyı tipleri", icon: "🏖️" },
+                { id: "gecit", title: "Geçitler ve boğazlar", icon: "🏔️" }
             ]
         },
         {
-            id: "canli", title: "Bitki · tarım · toprak", icon: "🌱",
+            id: "iklim", title: "İklim · bitki · toprak", icon: "🌱",
             kids: [
-                { id: "bitki", title: "Bitki örtüsü", icon: "🌱" },
+                { id: "yagis", title: "Yağış dağılımı", icon: "🌧️" },
+                { id: "mikro", title: "Mikroklima alanları", icon: "🌡️" },
+                { id: "bitki", title: "Bitki örtüsü · relikt", icon: "🌿" },
+                { id: "toprak", title: "Toprak tipleri", icon: "🟤" },
                 { id: "tarim", title: "Tarım ürünleri", icon: "🌾" },
-                { id: "toprak", title: "Toprak tipleri", icon: "🟤" }
+                { id: "hayvan", title: "Hayvancılık", icon: "🐄" }
+            ]
+        },
+        {
+            id: "beseri", title: "Nüfus · ulaşım · ekonomi", icon: "🏙️",
+            kids: [
+                { id: "nufus-seyrek", title: "Seyrek nüfuslu alanlar", icon: "👤" },
+                { id: "nufus-yogun", title: "Yoğun nüfuslu alanlar", icon: "🏙️" },
+                { id: "demiryolu", title: "Demiryolu olmayan yerler", icon: "🚂" },
+                { id: "liman", title: "Limanlar ve hinterland", icon: "⚓" },
+                { id: "maden", title: "Madenler", icon: "⛏️" },
+                { id: "sanayi", title: "Sanayi tesisleri", icon: "🏭" },
+                { id: "boru", title: "Enerji boru hatları", icon: "🛢️" }
             ]
         },
         {
@@ -222,156 +269,323 @@
     var ITEMS = [];
 
     [
-        ["Ağrı Dağı", "Ağrı-Iğdır", { follow: { q: "Türkiye'nin en yüksek dağı hangisidir?", choices: ["Erciyes", "Süphan", "Ağrı Dağı", "Kaçkar"], answer: "Ağrı Dağı" } }],
+        ["Ağrı Dağı", "Ağrı-Iğdır", { follow: { q: "Türkiye'nin en yüksek dağı hangisidir?", choices: ["Erciyes", "Süphan", "Ağrı Dağı", "Demirkazık"], answer: "Ağrı Dağı" } }],
         ["Tendürek Dağı", "Ağrı-Van", null],
-        ["Süphan Dağı", "Bitlis-Van", { follow: { q: "Süphan ve Nemrut hangi bölgededir?", choices: ["Ege", "İç Anadolu", "Doğu Anadolu", "Akdeniz"], answer: "Doğu Anadolu" } }],
-        ["Nemrut Dağı (volkan)", "Bitlis", { prompt: "Bitlis'teki volkanik Nemrut Dağı'nı bul. (Adıyaman'daki Nemrut ile karıştırma.)" }],
+        ["Süphan Dağı", "Bitlis-Van", { follow: { q: "Süphan hangi bölgededir?", choices: ["Ege", "İç Anadolu", "Doğu Anadolu", "Akdeniz"], answer: "Doğu Anadolu" } }],
+        ["Nemrut Dağı (volkan)", "Bitlis", { prompt: "Bitlis Nemrut'u bul (volkan + krater gölü). Adıyaman Nemrut volkan değildir.", follow: { q: "Van Gölü'nün oluşumunda etkili volkan hangisidir?", choices: ["Erciyes", "Nemrut (Bitlis)", "Adıyaman Nemrut", "Hasan Dağı"], answer: "Nemrut (Bitlis)" } }],
         ["Erciyes Dağı", "Kayseri", { follow: { q: "Erciyes'in oluşum tipi nedir?", choices: ["Kıvrım", "Kırık", "Volkanik", "Karstik"], answer: "Volkanik" } }],
         ["Hasan Dağı", "Aksaray-Niğde", null],
         ["Melendiz Dağı", "Niğde", null],
-        ["Karadağ", "Karaman", null],
-        ["Karacadağ", "Diyarbakır-Şanlıurfa", null],
+        ["Karadağ", "Karaman", { prompt: "Karaman'daki volkanik Karadağ'ı bul. (Karacadağ Urfa–Diyarbakır'dadır.)" }],
+        ["Karacadağ", "Diyarbakır-Şanlıurfa", { follow: { q: "Türkiye'nin tek kalkan tipi volkanı hangisidir?", choices: ["Erciyes", "Ağrı", "Karacadağ", "Kula"], answer: "Karacadağ" } }],
         ["Göllüdağ", "Niğde", null],
-        ["Kula volkanları", "Manisa", { follow: { q: "Volkanik dağ ile volkanik arazi aynı şey midir?", choices: ["Evet, aynıdır", "Hayır; Erciyes dağ, Kapadokya aşınım alanıdır"], answer: "Hayır; Erciyes dağ, Kapadokya aşınım alanıdır" } }]
+        ["Kula volkanları", "Manisa", { follow: { q: "Türkiye'nin en genç volkanik arazisi / ilk jeopark hangisidir?", choices: ["Kapadokya", "Kula", "Erciyes", "Nemrut"], answer: "Kula" } }]
     ].forEach(function (r) { ITEMS.push(F("volkanik", r[0], r[1], r[2] || {})); });
 
+    ITEMS.push(F("volkanik-arazi", "Kapadokya", "Nevşehir", { prompt: "Volkanik tüf aşınım alanı Kapadokya'yı bul. (Erciyes dağdır, burası arazi.)", follow: { q: "Kapadokya neyin örneğidir?", choices: ["Volkanik dağ", "Volkanik tüf aşınım alanı", "Kırık dağ", "Delta"], answer: "Volkanik tüf aşınım alanı" } }));
+
     [
-        ["Bozdağlar", "İzmir-Manisa", { follow: { q: "Ege'de dağ ve ovaların uzanış yönü?", choices: ["Kuzey-güney", "Doğu-batı", "Rastgele", "Sadece kıyıya paralel"], answer: "Doğu-batı" } }],
-        ["Aydın Dağları", "Aydın", null],
+        ["Kaz Dağı", "Balıkesir-Çanakkale", null],
         ["Madra Dağları", "Balıkesir-İzmir", null],
         ["Yunt Dağları", "Manisa", null],
-        ["Honaz Dağı", "Denizli", null],
-        ["Menteşe Dağları", "Muğla", null]
+        ["Bozdağlar", "İzmir-Manisa", { follow: { q: "Ege horst-graben uzanışı nasıldır?", choices: ["Kuzey-güney", "Doğu-batı", "Rastgele", "Sadece kıyıya paralel"], answer: "Doğu-batı" } }],
+        ["Aydın Dağları", "Aydın", null],
+        ["Menteşe Dağları", "Muğla", null],
+        ["Nur (Amanos) Dağları", "Hatay-Osmaniye", { follow: { q: "Ege dışındaki tek kırık dağ hangisidir?", choices: ["Kaçkar", "Nur (Amanos)", "Ilgaz", "Aladağlar"], answer: "Nur (Amanos)" } }]
     ].forEach(function (r) { ITEMS.push(F("kirik", r[0], r[1], r[2] || {})); });
 
     [
-        ["Yıldız Dağları", "Kırklareli", "kivrim"],
-        ["Küre Dağları", "Kastamonu-Bartın", "kivrim"],
-        ["Ilgaz Dağları", "Kastamonu-Çankırı", "kivrim"],
-        ["Köroğlu Dağları", "Bolu", "kivrim"],
-        ["Canik Dağları", "Samsun-Ordu", "kivrim"],
-        ["Giresun Dağları", "Giresun", "kivrim"],
-        ["Kaçkar Dağları", "Rize-Artvin", "kivrim"],
-        ["Beydağları", "Antalya", "kivrim"],
-        ["Bolkar Dağları", "Niğde-Mersin", "kivrim"],
-        ["Aladağlar", "Niğde-Adana-Kayseri", "kivrim"],
-        ["Amanoslar", "Hatay-Osmaniye", "kivrim"]
-    ].forEach(function (r) { ITEMS.push(F(r[2], r[0], r[1])); });
+        ["Yıldız Dağları", "Kırklareli"],
+        ["Küre Dağları", "Kastamonu-Bartın"],
+        ["Ilgaz Dağları", "Kastamonu-Çankırı"],
+        ["Köroğlu Dağları", "Bolu"],
+        ["Canik Dağları", "Samsun-Ordu"],
+        ["Giresun Dağları", "Giresun"],
+        ["Kaçkar Dağları", "Rize-Artvin"]
+    ].forEach(function (r) { ITEMS.push(F("kivrim", r[0], r[1], { follow: r[0] === "Kaçkar Dağları" ? { q: "Kıvrım dağlarının en yüksek kesimi hangisidir?", choices: ["Yıldız", "Küre", "Kaçkar", "Beydağları"], answer: "Kaçkar" } : null })); });
+
+    [
+        ["Beydağları", "Antalya", { prompt: "Batı Toroslar'daki Beydağları'nı bul." }],
+        ["Geyik Dağları", "Antalya-Konya", { prompt: "Batı Toroslar'daki Geyik Dağları'nı bul." }],
+        ["Bolkar Dağları", "Niğde-Mersin", null],
+        ["Aladağlar (Demirkazık)", "Niğde-Adana-Kayseri", { follow: { q: "Kıvrım dağlarının en yüksek noktası hangisidir?", choices: ["Ağrı Dağı", "Demirkazık / Aladağlar", "Kaçkar", "Cilo"], answer: "Demirkazık / Aladağlar" } }],
+        ["Tahtalı Dağları", "Kayseri-Kahramanmaraş", { prompt: "Doğu Toroslar'daki Tahtalı Dağları'nı bul." }],
+        ["Binboğa Dağları", "Kahramanmaraş-Kayseri", null],
+        ["Cilo / Buzul Dağları", "Hakkâri", { follow: { q: "Doğu Toroslar'ın buzullaşma görülen yüksek kesimi?", choices: ["Beydağları", "Cilo / Buzul Dağları", "Küre", "Madra"], answer: "Cilo / Buzul Dağları" } }]
+    ].forEach(function (r) { ITEMS.push(F("kivrim", r[0], r[1], r[2] || {})); });
 
     [
         ["Istranca / Yıldız masifi", "Kırklareli"],
-        ["Menderes Masifi", "Aydın-Denizli"],
-        ["Kazdağı Masifi", "Balıkesir-Çanakkale"],
-        ["Uludağ çevresi", "Bursa"],
+        ["Zonguldak masifi", "Zonguldak"],
+        ["Kastamonu-Daday masifi", "Kastamonu"],
+        ["Saruhan-Menteşe masifi", "Manisa-Muğla"],
         ["Kırşehir Masifi", "Kırşehir"],
-        ["Bitlis Masifi", "Bitlis"]
-    ].forEach(function (r) { ITEMS.push(F("masif", r[0], r[1])); });
+        ["Anamur-Alanya masifi", "Mersin-Antalya"],
+        ["Bitlis Masifi", "Bitlis"],
+        ["Mardin Eşik Masifi", "Mardin"]
+    ].forEach(function (r) { ITEMS.push(F("masif", r[0], r[1], r[0] === "Kırşehir Masifi" ? { follow: { q: "Masif arazilerde deprem riski nasıldır?", choices: ["Çok yüksek", "Az", "Sadece tsunami", "Sadece heyelan"], answer: "Az" } } : {})); });
+
+    ITEMS.push(F("fay", "KAF (Kuzey Anadolu Fayı)", "Düzce-Bolu-Erzincan-Erzurum", { prompt: "Kuzey Anadolu Fayı'nın geçtiği bir ili bul (Düzce, Bolu, Erzincan, Erzurum…)." }));
+    ITEMS.push(F("fay", "DAF (Doğu Anadolu Fayı)", "Hatay-Kahramanmaraş-Malatya-Elazığ-Bingöl", { prompt: "Doğu Anadolu Fayı'nın geçtiği bir ili bul." }));
+    ITEMS.push(F("fay", "BAF (Batı Anadolu / Ege grabenleri)", "İzmir-Manisa-Aydın", { prompt: "Batı Anadolu fay/graben sisteminin geçtiği Ege ilini bul." }));
 
     [
-        ["Haymana Platosu", "Ankara"],
-        ["Cihanbeyli Platosu", "Konya"],
-        ["Obruk Platosu", "Konya"],
-        ["Bozok Platosu", "Yozgat"],
-        ["Uzunyayla", "Sivas-Kayseri"]
-    ].forEach(function (r) { ITEMS.push(F("plato-ic", r[0], r[1])); });
+        ["Tuz Gölü güneyi (Konya-Karaman)", "Konya-Karaman", { prompt: "Deprem riski az: Tuz Gölü güneyi / Konya–Karaman'ı bul." }],
+        ["Taşeli Platosu", "Mersin-Antalya", { prompt: "Deprem riski az karstik Taşeli'yi bul." }],
+        ["Ergene Havzası", "Edirne-Tekirdağ", { prompt: "Deprem riski az Ergene Havzası'nı bul." }],
+        ["Mardin Eşik Masifi", "Mardin", { prompt: "Güneydoğu'nun güneyi / Mardin eşiği (risk az) alanını bul." }],
+        ["Sinop çevresi", "Sinop", { prompt: "Deprem riski az Sinop çevresini bul." }],
+        ["Doğu Karadeniz kıyısı", "Rize-Trabzon", { prompt: "Deprem riski görece az Doğu Karadeniz kıyı ilini bul." }]
+    ].forEach(function (r) { ITEMS.push(F("deprem-az", r[0], r[1], r[2])); });
+
+    ITEMS.push(F("plato-karst", "Teke Platosu", "Antalya", { follow: { q: "Teke–Taşeli'nin tarım/nüfus özelliği?", choices: ["Çok yoğun nüfus", "Seyrek nüfus, kıl keçisi", "Çeltik ambarı", "Çay monokültürü"], answer: "Seyrek nüfus, kıl keçisi" } }));
+    ITEMS.push(F("plato-karst", "Taşeli Platosu", "Mersin-Antalya", { prompt: "Karstik Taşeli Platosu'nu bul." }));
+
+    ITEMS.push(F("plato-volkan", "Erzurum-Kars Platosu", "Erzurum-Kars", { follow: { q: "Bu platonun hayvancılık tipi?", choices: ["Küçükbaş ağırlıklı", "Büyükbaş / mera", "Sadece kümes", "Sera"], answer: "Büyükbaş / mera" } }));
+    ITEMS.push(F("plato-volkan", "Ardahan Platosu", "Ardahan", { prompt: "Lav platosu Ardahan'ı bul (çernozyum, soğuk, yüksek)." }));
+
+    ITEMS.push(F("plato-asinim", "Çatalca-Kocaeli Platosu", "İstanbul-Kocaeli", { follow: { q: "En alçak ve en gelişmiş plato hangisidir?", choices: ["Teke", "Erzurum-Kars", "Çatalca-Kocaeli", "Taşeli"], answer: "Çatalca-Kocaeli" } }));
 
     [
-        ["Erzurum-Kars Platosu", "Erzurum-Kars", { follow: { q: "Bu platonun hayvancılık tipi?", choices: ["Küçükbaş ağırlıklı", "Büyükbaş / mera", "Sadece kümes", "Sera"], answer: "Büyükbaş / mera" } }],
-        ["Ardahan Platosu", "Ardahan", null]
-    ].forEach(function (r) { ITEMS.push(F("plato-dogu", r[0], r[1], r[2] || {})); });
+        ["Haymana Platosu", "Ankara"], ["Cihanbeyli Platosu", "Konya"], ["Obruk Platosu", "Konya"],
+        ["Bozok Platosu", "Yozgat"], ["Uzunyayla", "Sivas-Kayseri"], ["Yazılıkaya Platosu", "Eskişehir"],
+        ["Gaziantep Platosu", "Gaziantep"], ["Şanlıurfa Platosu", "Şanlıurfa"], ["Adıyaman Platosu", "Adıyaman"]
+    ].forEach(function (r) { ITEMS.push(F("plato-tabaka", r[0], r[1])); });
 
     [
-        ["Gaziantep Platosu", "Gaziantep"],
-        ["Şanlıurfa Platosu", "Şanlıurfa"],
-        ["Mardin-Midyat Eşiği", "Mardin"]
-    ].forEach(function (r) { ITEMS.push(F("plato-gd", r[0], r[1])); });
-
-    ITEMS.push(F("plato-akdeniz", "Taşeli Platosu", "Mersin-Antalya", { prompt: "Mersin–Antalya arasında, Toroslara yakın Taşeli Platosu'nu bul." }));
-
-    [
-        ["Bursa Ovası", "Bursa"], ["Ergene Ovası", "Tekirdağ-Edirne"], ["Adapazarı Ovası", "Sakarya"],
-        ["Bakırçay Ovası", "İzmir"], ["Gediz Ovası", "Manisa-İzmir"], ["Büyük Menderes Ovası", "Aydın"],
-        ["Konya Ovası", "Konya"], ["Ankara Ovası", "Ankara"],
-        ["Çarşamba Ovası", "Samsun"], ["Bafra Ovası", "Samsun"],
-        ["Çukurova", "Adana-Mersin"], ["Amik Ovası", "Hatay"], ["Antalya Ovası", "Antalya"],
-        ["Erzurum Ovası", "Erzurum"], ["Iğdır Ovası", "Iğdır"], ["Malatya Ovası", "Malatya"],
-        ["Harran Ovası", "Şanlıurfa"], ["Suruç Ovası", "Şanlıurfa"]
-    ].forEach(function (r) { ITEMS.push(F("ovalar", r[0], r[1])); });
-
-    [
-        ["Bafra Deltası", "Samsun", { prompt: "Kızılırmak'ın oluşturduğu deltayı bul.", follow: { q: "Bafra'yı hangi akarsu oluşturur?", choices: ["Yeşilırmak", "Kızılırmak", "Sakarya", "Gediz"], answer: "Kızılırmak" } }],
-        ["Çarşamba Deltası", "Samsun", { prompt: "Yeşilırmak'ın oluşturduğu deltayı bul.", follow: { q: "Çarşamba'yı hangi akarsu oluşturur?", choices: ["Kızılırmak", "Yeşilırmak", "Göksu", "Seyhan"], answer: "Yeşilırmak" } }],
-        ["Çukurova Deltası", "Adana-Mersin", { prompt: "Seyhan ve Ceyhan'ın oluşturduğu deltayı bul.", follow: { q: "Çukurova'yı oluşturan akarsular?", choices: ["Kızılırmak", "Seyhan + Ceyhan", "Göksu", "Gediz"], answer: "Seyhan + Ceyhan" } }],
-        ["Silifke Deltası", "Mersin", { prompt: "Göksu'nun oluşturduğu deltayı bul." }],
-        ["Menemen Deltası", "İzmir", { prompt: "Gediz'in oluşturduğu deltayı (Menemen) bul." }],
-        ["Söke / Balat Deltası", "Aydın", { prompt: "Büyük Menderes deltasını (Söke–Balat) bul." }],
-        ["Selçuk Deltası", "İzmir", { prompt: "Küçük Menderes deltasını (Selçuk) bul." }]
+        ["Bafra Deltası", "Samsun", { prompt: "Kızılırmak deltasını (Bafra) bul.", follow: { q: "Bafra'yı hangi akarsu oluşturur?", choices: ["Yeşilırmak", "Kızılırmak", "Sakarya", "Gediz"], answer: "Kızılırmak" } }],
+        ["Çarşamba Deltası", "Samsun", { prompt: "Yeşilırmak deltasını (Çarşamba) bul.", follow: { q: "Çarşamba'yı hangi akarsu oluşturur?", choices: ["Kızılırmak", "Yeşilırmak", "Göksu", "Seyhan"], answer: "Yeşilırmak" } }],
+        ["Çukurova Deltası", "Adana-Mersin", { prompt: "Seyhan–Ceyhan deltasını (en büyük) bul.", follow: { q: "Türkiye'nin en büyük deltası?", choices: ["Bafra", "Çukurova", "Silifke", "Meriç"], answer: "Çukurova" } }],
+        ["Silifke Deltası", "Mersin", { prompt: "Göksu deltasını (Silifke) bul." }],
+        ["Dikili Deltası", "İzmir", { prompt: "Bakırçay deltasını (Dikili) bul." }],
+        ["Menemen Deltası", "İzmir", { prompt: "Gediz deltasını (Menemen) bul." }],
+        ["Selçuk Deltası", "İzmir", { prompt: "Küçük Menderes deltasını (Selçuk) bul." }],
+        ["Söke / Balat Deltası", "Aydın", { prompt: "Büyük Menderes deltasını (Balat/Söke) bul." }],
+        ["Meriç Deltası", "Edirne", { prompt: "Marmara'daki Meriç Deltası'nı bul." }]
     ].forEach(function (r) { ITEMS.push(F("delta", r[0], r[1], r[2])); });
 
-    ITEMS.push(F("karst", "Taşeli karstik alanları", "Mersin-Antalya", { prompt: "Karstik yapının yaygın olduğu Taşeli–Akdeniz kuşağını bul." }));
-    ITEMS.push(F("karst", "Teke Yarımadası", "Antalya", { prompt: "Teke Yarımadası karstik alanını bul." }));
-    ITEMS.push(F("volkanik-arazi", "Kapadokya", "Nevşehir", { prompt: "Volkanik tüflerin aşındığı Kapadokya'yı bul. (Erciyes dağdır, burası arazi.)", follow: { q: "Kapadokya neyin örneğidir?", choices: ["Volkanik dağ", "Volkanik tüf aşınım alanı", "Kırık dağ", "Delta"], answer: "Volkanik tüf aşınım alanı" } }));
+    [
+        ["Tefenni Ovası", "Burdur", { follow: { q: "TAKKEM karstik ovaların toprağı?", choices: ["Çernozyum", "Terra-Rossa", "Podzol", "Alüvyal"], answer: "Terra-Rossa" } }],
+        ["Acıpayam Ovası", "Denizli"], ["Korkuteli Ovası", "Antalya"],
+        ["Kestel Ovası", "Burdur"], ["Elmalı Ovası", "Antalya"], ["Muğla Ovaları", "Muğla"]
+    ].forEach(function (r) { ITEMS.push(F("ova-karst", r[0], r[1], r[2] || {})); });
 
     [
-        ["Kızılırmak", "Samsun", { prompt: "Karadeniz'e dökülen Kızılırmak'ın ağzını (Bafra / Samsun) bul." }],
-        ["Yeşilırmak", "Samsun", { prompt: "Yeşilırmak'ın Karadeniz'e döküldüğü alanı (Çarşamba) bul." }],
-        ["Sakarya", "Sakarya", { prompt: "Sakarya Nehri'nin döküldüğü ili bul." }],
-        ["Gediz", "İzmir"], ["Büyük Menderes", "Aydın"], ["Küçük Menderes", "İzmir"],
-        ["Seyhan", "Adana"], ["Ceyhan", "Adana"], ["Göksu", "Mersin"], ["Asi", "Hatay"],
-        ["Fırat", "Şanlıurfa"], ["Dicle", "Diyarbakır"], ["Aras", "Iğdır"]
+        ["Pasinler Ovası", "Erzurum"], ["Erzincan Ovası", "Erzincan"], ["Niksar Ovası", "Tokat"],
+        ["Erbaa Ovası", "Tokat"], ["Düzce Ovası", "Düzce"], ["Bolu Ovası", "Bolu"],
+        ["Amik Ovası", "Hatay", { follow: { q: "Nur Dağları'nın grabeni hangisidir?", choices: ["Konya Ovası", "Amik Ovası", "Harran", "Bafra"], answer: "Amik Ovası" } }],
+        ["Malatya Ovası", "Malatya"], ["Muş Ovası", "Muş"], ["Yüksekova", "Hakkâri"],
+        ["Gediz Ovası", "Manisa"], ["Büyük Menderes Ovası", "Aydın"], ["Bakırçay Ovası", "İzmir"],
+        ["Konya Ovası", "Konya"], ["Harran Ovası", "Şanlıurfa"], ["Suruç Ovası", "Şanlıurfa"],
+        ["Ceylanpınar Ovası", "Şanlıurfa"]
+    ].forEach(function (r) { ITEMS.push(F("ova-tektonik", r[0], r[1], r[2] || {})); });
+
+    ITEMS.push(F("ova-volkan", "Develi Ovası", "Kayseri", { prompt: "Erciyes çevresi volkanik Develi Ovası'nı bul." }));
+    ITEMS.push(F("ova-volkan", "Kayseri Ovası", "Kayseri", null));
+    ITEMS.push(F("ova-volkan", "Çaldıran Ovası", "Van", null));
+
+    ITEMS.push(F("ova-asinim", "Çatalca Ovası", "İstanbul", { prompt: "Aşınım ovası Çatalca'yı bul." }));
+    ITEMS.push(F("ova-asinim", "Safranbolu Ovası", "Karabük", { prompt: "Aşınım ovası Safranbolu'yu bul." }));
+    ITEMS.push(F("ova-asinim", "Bursa Ovası", "Bursa", { prompt: "Dağ eteği / birikim ovası Bursa'yı bul." }));
+    ITEMS.push(F("ova-asinim", "Dörtyol Ovası", "Hatay", { prompt: "Dağ eteği ovası Dörtyol'u bul." }));
+
+    [
+        ["Teke Yarımadası", "Antalya", { prompt: "Karstik Teke Yarımadası'nı bul." }],
+        ["Taşeli karstik alanları", "Mersin-Antalya", { prompt: "Taşeli karstik kuşağını bul." }],
+        ["Göller Yöresi", "Isparta-Burdur", { prompt: "Karstın yaygın olduğu Göller Yöresi'ni bul." }],
+        ["Batı Toroslar karstı", "Antalya", { prompt: "Batı Toroslar karstik topografyasını bul." }],
+        ["Silifke karstik kıyı", "Mersin", { prompt: "Kalanklı/karstik kıyı (Silifke) alanını bul." }]
+    ].forEach(function (r) { ITEMS.push(F("karst", r[0], r[1], r[2])); });
+
+    [
+        ["Kızılırmak", "Samsun", { prompt: "Sınırlarımız içindeki en uzun akarsu Kızılırmak'ın ağzını (Bafra) bul.", follow: { q: "Türkiye sınırları içindeki en uzun akarsu?", choices: ["Fırat", "Kızılırmak", "Dicle", "Sakarya"], answer: "Kızılırmak" } }],
+        ["Yeşilırmak", "Samsun", { prompt: "Yeşilırmak'ın döküldüğü Çarşamba'yı bul." }],
+        ["Sakarya", "Sakarya", null],
+        ["Gediz", "İzmir"], ["Büyük Menderes", "Aydın"], ["Küçük Menderes", "İzmir"], ["Bakırçay", "İzmir"],
+        ["Seyhan", "Adana"], ["Ceyhan", "Adana"], ["Göksu", "Mersin"],
+        ["Asi", "Hatay", { prompt: "Dışarıdan doğup bize dökülen Asi'yi (Hatay) bul.", follow: { q: "Asi nereden doğar?", choices: ["Bulgaristan", "Suriye / Lübnan", "Gürcistan", "İran"], answer: "Suriye / Lübnan" } }],
+        ["Meriç", "Edirne", { prompt: "Bulgaristan'dan doğup bize dökülen Meriç'i bul." }],
+        ["Fırat", "Şanlıurfa", { follow: { q: "Sınır aşan ve debisi en yüksek akarsu?", choices: ["Kızılırmak", "Fırat", "Sakarya", "Gediz"], answer: "Fırat" } }],
+        ["Dicle", "Diyarbakır", { prompt: "Bizden doğup Basra'ya giden Dicle'yi bul." }],
+        ["Aras", "Iğdır", { prompt: "Hazar'a giden (kapalı havza) Aras'ı bul." }],
+        ["Kura", "Ardahan-Kars", { prompt: "Hazar'a giden Kura'yı bul." }],
+        ["Çoruh", "Artvin", { prompt: "Gürcistan/Karadeniz'e dökülen Çoruh'u bul.", follow: { q: "Rejimi en düzenli akarsulardan biri?", choices: ["Gediz", "Çoruh", "Küçük Menderes", "Asi"], answer: "Çoruh" } }]
     ].forEach(function (r) { ITEMS.push(F("akarsu", r[0], r[1], r[2] || {})); });
 
     [
-        ["Van Gölü", "Van"], ["Tuz Gölü", "Aksaray-Konya"], ["Beyşehir Gölü", "Konya"],
-        ["Eğirdir Gölü", "Isparta"], ["İznik Gölü", "Bursa"], ["Sapanca Gölü", "Sakarya"],
-        ["Manyas (Kuş) Gölü", "Balıkesir"], ["Burdur Gölü", "Burdur"]
-    ].forEach(function (r) { ITEMS.push(F("goller", r[0], r[1])); });
+        ["Van Gölü", "Van", { follow: { q: "Türkiye'nin en büyük gölü?", choices: ["Tuz Gölü", "Van Gölü", "Beyşehir", "Eğirdir"], answer: "Van Gölü" } }],
+        ["Tuz Gölü", "Aksaray-Konya", { follow: { q: "En büyük 2. göl hangisidir?", choices: ["Beyşehir", "Tuz Gölü", "Eğirdir", "İznik"], answer: "Tuz Gölü" } }],
+        ["Beyşehir Gölü", "Konya", { follow: { q: "En büyük tatlı su gölü?", choices: ["Van", "Tuz", "Beyşehir", "İznik"], answer: "Beyşehir" } }],
+        ["Eğirdir Gölü", "Isparta", { follow: { q: "Beyşehir ve Eğirdir'in oluşumu?", choices: ["Sadece karstik", "Tektonik + karstik", "Sadece volkanik", "Lagün"], answer: "Tektonik + karstik" } }],
+        ["İznik Gölü", "Bursa"], ["Sapanca Gölü", "Sakarya"], ["Manyas (Kuş) Gölü", "Balıkesir"],
+        ["Burdur Gölü", "Burdur"], ["Akşehir Gölü", "Konya-Afyonkarahisar"], ["Eber Gölü", "Afyonkarahisar"],
+        ["Hazar Gölü", "Elazığ"], ["Salda Gölü", "Burdur"],
+        ["Nemrut Krater Gölü", "Bitlis"], ["Meke Gölü", "Konya"], ["Gölcük (Isparta)", "Isparta"],
+        ["Tortum Gölü", "Erzurum", { prompt: "Heyelan set gölü Tortum'u bul." }],
+        ["Abant Gölü", "Bolu"], ["Çıldır Gölü", "Ardahan-Kars"], ["Erçek Gölü", "Van"],
+        ["Bafa Gölü", "Aydın-Muğla", { prompt: "Alüvyal set gölü Bafa'yı (Çamiçi) bul." }],
+        ["Köyceğiz Gölü", "Muğla"],
+        ["Büyükçekmece", "İstanbul", { prompt: "Lagün / limani kıyı: Büyükçekmece'yi bul." }],
+        ["Küçükçekmece", "İstanbul"], ["Terkos (Durusu)", "İstanbul"]
+    ].forEach(function (r) { ITEMS.push(F("goller", r[0], r[1], r[2] || {})); });
+
+    ITEMS.push(F("havza", "Tuz Gölü kapalı havzası", "Aksaray-Konya", { prompt: "İç Anadolu kapalı havzasını (Tuz Gölü) bul." }));
+    ITEMS.push(F("havza", "Van Gölü havzası", "Van", { prompt: "Doğu Anadolu kapalı göl havzasını bul.", follow: { q: "Van Gölü'nün oluşumu?", choices: ["Sadece karstik", "Tektonik + volkanik set", "Sadece heyelan", "Lagün"], answer: "Tektonik + volkanik set" } }));
+    ITEMS.push(F("havza", "Iğdır Havzası", "Iğdır", { prompt: "Kurak Iğdır Havzası'nı bul (en az yağış / pamuk mikrokliması)." }));
 
     [
-        ["Tuz Gölü kapalı havzası", "Aksaray", { prompt: "İç Anadolu'daki önemli kapalı havzayı (Tuz Gölü) bul." }],
-        ["Van Gölü havzası", "Van", { prompt: "Doğu Anadolu'daki kapalı göl havzasını bul." }]
-    ].forEach(function (r) { ITEMS.push(F("havza", r[0], r[1], r[2])); });
+        ["Boyuna kıyı (Karadeniz)", "Trabzon-Rize", { prompt: "Dağların kıyıya paralel olduğu boyuna Karadeniz kıyısını bul.", follow: { q: "Boyuna kıyıda hinterland nasıldır?", choices: ["Geniş", "Dar", "Yok", "Okyanus kadar"], answer: "Dar" } }],
+        ["Boyuna kıyı (Akdeniz)", "Antalya", { prompt: "Akdeniz boyuna kıyı örneğini bul." }],
+        ["Enine kıyı (Ege)", "İzmir-Aydın", { prompt: "Dağların kıyıya dik uzandığı enine Ege kıyısını bul.", follow: { q: "Enine kıyının özelliği?", choices: ["Koy-körfez az, hinterland dar", "Girinti-çıkıntı çok, hinterland geniş", "Sadece falez", "Buzul fiyort"], answer: "Girinti-çıkıntı çok, hinterland geniş" } }],
+        ["Ria kıyı (Boğazlar)", "İstanbul-Çanakkale", { prompt: "Ria kıyı: İstanbul/Çanakkale boğazlarını bul." }],
+        ["Ria kıyı (Gökova / Menteşe)", "Muğla", { prompt: "Ria kıyı: Gökova–Menteşe'yi bul." }],
+        ["Dalmaçya kıyı (Kaş–Finike)", "Antalya", { prompt: "Dalmaçya kıyı: Kaş–Finike arasını (Antalya) bul." }],
+        ["Limani kıyı (Çekmece)", "İstanbul", { prompt: "Limani kıyı: Büyük/Küçükçekmece'yi bul." }],
+        ["Kalanklı (karstik) kıyı", "Mersin", { prompt: "Kalanklı kıyı: Silifke–Mersin'i bul." }]
+    ].forEach(function (r) { ITEMS.push(F("kiyi", r[0], r[1], r[2])); });
 
     [
-        ["Zigana Geçidi", "Trabzon-Gümüşhane"],
-        ["Kop Geçidi", "Bayburt-Erzurum"],
-        ["Gülek Boğazı", "Mersin"],
-        ["Sertavul Geçidi", "Karaman"],
-        ["Belen Geçidi", "Hatay"]
-    ].forEach(function (r) { ITEMS.push(F("gecit", r[0], r[1])); });
-
-    ITEMS.push(F("kiyi", "Ria (dalmaçya) kıyı", "Muğla-İzmir", { prompt: "Ege'de enine kıyı / ria karakterinin görüldüğü ili bul.", region: "ege" }));
-    ITEMS.push(F("kiyi", "Boyuna kıyı", "Antalya", { prompt: "Akdeniz'de kıyıya paralel (boyuna) kıyı örneğini bul." }));
-
-    ITEMS.push(F("bitki", "Doğu Karadeniz ormanı", "Rize", { prompt: "Gür ormanın tipik olduğu Doğu Karadeniz ilini bul.", follow: { q: "Karadeniz'in doğal bitki örtüsü?", choices: ["Maki", "Bozkır", "Orman", "Çöl"], answer: "Orman" } }));
-    ITEMS.push(F("bitki", "Maki alanı", "Antalya", { prompt: "Maki bitki örtüsünün tipik olduğu ili bul.", region: "akdeniz", follow: { q: "Hangisi maki elemanıdır?", choices: ["Ladin", "Zakkum", "Kayın", "Sarıçam"], answer: "Zakkum" } }));
-    ITEMS.push(F("bitki", "İç Anadolu bozkırı", "Konya", { prompt: "Bozkırın tipik olduğu İç Anadolu ilini bul.", follow: { q: "İç Anadolu'nun doğal bitkisi?", choices: ["Maki", "Bozkır", "Mangrov", "Yağmur ormanı"], answer: "Bozkır" } }));
-    ITEMS.push(F("bitki", "Erzurum-Kars çayırı", "Erzurum-Kars", { prompt: "Çayır örtüsünün güçlü olduğu yüksek alanı bul." }));
+        ["Ecevit Geçidi", "Kastamonu", { prompt: "İnebolu–Kastamonu Ecevit Geçidi'ni bul." }],
+        ["Ilgaz Geçidi", "Kastamonu-Çankırı", null],
+        ["Zigana Geçidi", "Trabzon-Gümüşhane", { follow: { q: "Trabzon'u iç kesime bağlayan klasik geçit?", choices: ["Gülek", "Zigana", "Belen", "Sertavul"], answer: "Zigana" } }],
+        ["Kop Geçidi", "Bayburt-Erzurum", null],
+        ["Ovit Geçidi", "Rize-Erzurum", { prompt: "Rize–Erzurum Ovit Geçidi'ni bul. (Cankurtaran Artvin'dedir.)" }],
+        ["Cankurtaran Geçidi", "Artvin", { prompt: "Artvin'deki Cankurtaran Geçidi'ni bul." }],
+        ["Çubuk Geçidi", "Antalya-Isparta", { prompt: "Antalya'yı Göller Yöresi'ne bağlayan Çubuk Geçidi'ni bul." }],
+        ["Sertavul Geçidi", "Karaman-Mersin", { prompt: "Silifke'yi Konya'ya bağlayan Sertavul'u bul." }],
+        ["Gülek Boğazı", "Adana-Mersin", { prompt: "Çukurova'yı İç Anadolu'ya bağlayan Gülek'i bul." }],
+        ["Belen Geçidi", "Hatay", { prompt: "Amanoslar üzerindeki Belen Geçidi'ni bul." }]
+    ].forEach(function (r) { ITEMS.push(F("gecit", r[0], r[1], r[2] || {})); });
 
     [
-        ["Çay", "Rize", { prompt: "Çayın temel üretim alanını bul." }],
-        ["Fındık", "Ordu-Giresun-Trabzon", { prompt: "Fındığın ana üretim kuşağını bul." }],
-        ["Zeytin", "İzmir-Aydın-Balıkesir", { prompt: "Zeytinin önemli olduğu Ege/Güney Marmara ilini bul." }],
-        ["Turunçgil", "Antalya-Mersin-Adana-Hatay", { prompt: "Turunçgilin yoğun olduğu Akdeniz ilini bul." }],
-        ["Muz", "Mersin", { prompt: "Muzun (Anamur) yetiştiği ili bul." }],
-        ["Üzüm", "Manisa", { prompt: "Üzüm üretiminde öne çıkan ili bul." }],
-        ["Elma", "Isparta-Niğde-Karaman", { prompt: "Elma üretiminde öne çıkan ili bul." }],
-        ["Ayçiçeği", "Tekirdağ-Edirne", { prompt: "Ayçiçeğinin (Trakya) alanını bul." }],
-        ["Buğday", "Konya", { prompt: "Buğday ambarı olarak anılan ova ilini bul." }],
-        ["Mısır / pamuk (Çukurova)", "Adana", { prompt: "Çukurova tarım alanını bul." }],
-        ["Patates", "Niğde-Nevşehir", { prompt: "Patatesin öne çıktığı ili bul." }],
-        ["Şeker pancarı", "Konya-Eskişehir", { prompt: "Şeker pancarının önemli olduğu ili bul." }],
-        ["Pamuk (GAP)", "Şanlıurfa", { prompt: "GAP pamuğunun merkezi ova ilini bul." }],
-        ["Antep fıstığı", "Gaziantep-Şanlıurfa-Siirt", { prompt: "Antep fıstığının önemli olduğu ili bul." }],
-        ["Mercimek", "Şanlıurfa-Diyarbakır", { prompt: "Mercimeğin yoğun olduğu Güneydoğu ilini bul." }]
-    ].forEach(function (r) { ITEMS.push(F("tarim", r[0], r[1], r[2])); });
+        ["En çok yağış: Rize–Hopa", "Rize", { follow: { q: "Türkiye'de en çok yağış alan yerlerden biri?", choices: ["Tuz Gölü çevresi", "Rize–Hopa", "Iğdır", "Konya"], answer: "Rize–Hopa" } }],
+        ["En çok yağış: Hakkâri", "Hakkâri", null],
+        ["En çok yağış: Menteşe", "Muğla", null],
+        ["En çok yağış: Yıldız Dağları", "Kırklareli", null],
+        ["En az yağış: Tuz Gölü çevresi", "Aksaray-Konya", { follow: { q: "En az yağış alan yerlerden biri?", choices: ["Rize", "Muğla", "Tuz Gölü çevresi", "Hakkâri"], answer: "Tuz Gölü çevresi" } }],
+        ["En az yağış: Iğdır Havzası", "Iğdır", null],
+        ["En az yağış: GD'nin güneyi", "Şanlıurfa-Mardin", null]
+    ].forEach(function (r) { ITEMS.push(F("yagis", r[0], r[1], r[2] || {})); });
 
-    ITEMS.push(F("toprak", "Terra Rossa", "Antalya-Mersin-Adana", { prompt: "Terra rossanın yaygın olduğu Akdeniz ilini bul.", follow: { q: "Terra rossa hangi ana kaya üzerinde oluşur?", choices: ["Granit", "Kalker", "Bazalt", "Tuz"], answer: "Kalker" } }));
-    ITEMS.push(F("toprak", "Kahverengi orman toprağı", "Zonguldak-Kastamonu", { prompt: "Orman altı kahverengi toprakların tipik olduğu Karadeniz ilini bul." }));
-    ITEMS.push(F("toprak", "Bozkır toprakları", "Konya-Ankara", { prompt: "Kestane/kahverengi bozkır topraklarının alanını bul." }));
-    ITEMS.push(F("toprak", "Çernezyom", "Erzurum-Kars", { prompt: "Çernezyomun özdeşleştiği alanı bul." }));
-    ITEMS.push(F("toprak", "Tuzlu toprak", "Aksaray", { prompt: "Tuz Gölü çevresi tuzlu toprakları bul." }));
-    ITEMS.push(F("toprak", "Alüvyal (Bafra)", "Samsun", { prompt: "Alüvyal toprağın tipik olduğu delta ilini (Bafra/Çarşamba) bul." }));
+    [
+        ["Rize mikroklima (turunçgil)", "Rize", { follow: { q: "Rize mikroklimasında yetişen?", choices: ["Pamuk", "Turunçgil", "Muz", "Haşhaş"], answer: "Turunçgil" } }],
+        ["Iğdır mikroklima (pamuk)", "Iğdır", { follow: { q: "Iğdır mikroklimasında yetişen?", choices: ["Çay", "Pamuk", "Fındık", "Muz"], answer: "Pamuk" } }],
+        ["Çoruh Vadisi (zeytin)", "Artvin", { prompt: "Yusufeli / Çoruh Vadisi zeytin mikroklimasını bul.", follow: { q: "Çoruh Vadisi'nde yetişen?", choices: ["Zeytin", "Çay", "Muz", "Fındık"], answer: "Zeytin" } }],
+        ["Anamur–Gazipaşa (muz)", "Mersin-Antalya", { follow: { q: "Muz mikrokliması nerede?", choices: ["Rize", "Iğdır", "Anamur–Gazipaşa", "Kars"], answer: "Anamur–Gazipaşa" } }]
+    ].forEach(function (r) { ITEMS.push(F("mikro", r[0], r[1], r[2])); });
+
+    [
+        ["Doğu Karadeniz ormanı", "Rize", { follow: { q: "Karadeniz'in doğal bitki örtüsü?", choices: ["Maki", "Bozkır", "Orman", "Çöl"], answer: "Orman" } }],
+        ["Maki alanı", "Antalya", { follow: { q: "Hangisi maki elemanıdır?", choices: ["Ladin", "Zakkum", "Kayın", "Sarıçam"], answer: "Zakkum" } }],
+        ["İç Anadolu bozkırı", "Konya", { follow: { q: "İç Anadolu'nun doğal bitkisi?", choices: ["Maki", "Bozkır", "Mangrov", "Yağmur ormanı"], answer: "Bozkır" } }],
+        ["Erzurum-Kars çayırı", "Erzurum-Kars", { prompt: "Çayır örtüsü / çernozyum alanını bul." }],
+        ["Sığla (günlük) ağacı", "Muğla", { prompt: "Relikt sığla ağacı: Fethiye–Köyceğiz (Muğla) alanını bul." }],
+        ["Kazdağı göknarı", "Balıkesir-Çanakkale", { prompt: "Endemik/relikt Kazdağı göknarını bul." }],
+        ["Datça hurması", "Muğla", { prompt: "Datça hurmasının alanını bul." }],
+        ["Kasnak meşesi", "Isparta", { prompt: "Eğirdir çevresi kasnak meşesini bul." }],
+        ["Endemik yoğunluğu (Teke–Taşeli)", "Antalya-Mersin", { prompt: "Endemik türlerin yoğun olduğu Teke–Taşeli'yi bul." }]
+    ].forEach(function (r) { ITEMS.push(F("bitki", r[0], r[1], r[2] || {})); });
+
+    [
+        ["Terra Rossa", "Antalya-Mersin", { follow: { q: "Terra rossa hangi ana kaya üzerinde oluşur?", choices: ["Granit", "Kalker", "Bazalt", "Tuz"], answer: "Kalker" } }],
+        ["Kahverengi orman toprağı", "Zonguldak-Kastamonu", { prompt: "Karadeniz orman toprağını bul." }],
+        ["Kestane / bozkır toprağı", "Konya-Ankara", { prompt: "İç Anadolu bozkır topraklarını bul." }],
+        ["Çernozyum", "Erzurum-Kars", { follow: { q: "En verimli zonal toprak?", choices: ["Podzol", "Çernozyum", "Terra rossa", "Halomorfik"], answer: "Çernozyum" } }],
+        ["Podzol", "Zonguldak-Bartın", { prompt: "Batı Karadeniz yüksekleri podzolunu bul." }],
+        ["Alüvyal (delta)", "Samsun-Adana", { prompt: "Alüvyal toprağın tipik olduğu delta ilini bul." }],
+        ["Halomorfik (tuzlu)", "Aksaray", { prompt: "Tuz Gölü çevresi tuzlu toprağı bul." }],
+        ["Vertisol (Ergene)", "Edirne-Tekirdağ", { prompt: "Dönen toprak / vertisol: Ergene'yi bul." }],
+        ["Regosol (Kapadokya)", "Nevşehir", { prompt: "Volkanik tüf üzerinde regosol alanını bul." }]
+    ].forEach(function (r) { ITEMS.push(F("toprak", r[0], r[1], r[2])); });
+
+    [
+        ["Çay", "Rize", { prompt: "Çay monokültürünü (Rize) bul." }],
+        ["Fındık", "Ordu-Giresun", { prompt: "Fındık kuşağını bul." }],
+        ["Zeytin", "Aydın-İzmir-Balıkesir", null],
+        ["Turunçgil", "Antalya-Mersin-Adana-Hatay", null],
+        ["Muz", "Mersin", { prompt: "Anamur muzunu bul." }],
+        ["İncir", "Aydın", { prompt: "Aydın incirini bul." }],
+        ["Kayısı", "Malatya", { prompt: "Malatya kayısısını bul." }],
+        ["Pamuk (GAP)", "Şanlıurfa", { prompt: "GAP pamuğunun öne çıktığı ili bul." }],
+        ["Mısır (Konya / sulama)", "Konya", { prompt: "Sulama ile mısırın genişlediği Konya'yı bul." }],
+        ["Şeker pancarı", "Konya-Eskişehir", { prompt: "Şeker pancarı (fabrika/kota) alanını bul." }],
+        ["Çeltik", "Edirne-Samsun", { prompt: "Devlet kontrollü çeltik alanını (Ergene / Bafra) bul." }],
+        ["Haşhaş", "Afyonkarahisar-Denizli", { prompt: "Kontrollü haşhaş ekim alanını bul." }],
+        ["Tütün", "Manisa-Samsun", null],
+        ["Üzüm", "Manisa", null],
+        ["Elma", "Isparta-Niğde-Karaman", null],
+        ["Ayçiçeği", "Tekirdağ-Edirne", null],
+        ["Buğday", "Konya", null],
+        ["Antep fıstığı", "Gaziantep-Şanlıurfa", null]
+    ].forEach(function (r) { ITEMS.push(F("tarim", r[0], r[1], r[2] || {})); });
+
+    [
+        ["Büyükbaş mera (Erzurum-Kars)", "Erzurum-Kars-Ardahan", { follow: { q: "Büyükbaş mera hayvancılığının merkezi?", choices: ["Teke Platosu", "Erzurum-Kars", "Konya Ovası", "Çukurova"], answer: "Erzurum-Kars" } }],
+        ["Kıl keçisi (Teke–Taşeli)", "Antalya-Mersin", { follow: { q: "Karstik engebeye uyumlu hayvan?", choices: ["Tiftik keçisi", "Kıl keçisi", "Manda", "İpek böceği"], answer: "Kıl keçisi" } }],
+        ["Tiftik keçisi", "Ankara-Eskişehir", { prompt: "Ankara keçisi / tiftik alanını bul." }],
+        ["İpek böcekçiliği", "Diyarbakır", { prompt: "İpek böcekçiliğinde öne çıkan ili bul." }],
+        ["Çam balı (Muğla)", "Muğla", { prompt: "Muğla çam balı alanını bul." }],
+        ["Kümes (Bolu / Marmara-Ege)", "Bolu-Manisa-Balıkesir", { prompt: "Pazara yakın kümes hayvancılığı ilini bul." }]
+    ].forEach(function (r) { ITEMS.push(F("hayvan", r[0], r[1], r[2])); });
+
+    [
+        ["Yıldız Dağları (seyrek)", "Kırklareli", { follow: { q: "Yıldız Dağları'nda nüfusun seyrek olmasının nedeni?", choices: ["Sanayi yokluğu değil; engebe", "Sadece turizm", "Okyanus iklimi", "Petrol yok"], answer: "Sanayi yokluğu değil; engebe" } }],
+        ["Biga–Gelibolu", "Çanakkale", { prompt: "Ulaşıma sapa Biga–Gelibolu'yu bul." }],
+        ["Menteşe Yöresi", "Muğla", { prompt: "Engebeli seyrek nüfus: Menteşe'yi bul." }],
+        ["Teke–Taşeli", "Antalya-Mersin", { prompt: "Karst + engebe nedeniyle seyrek nüfusu bul." }],
+        ["Hakkâri Bölümü", "Hakkâri", { prompt: "Yükselti/engebe nedeniyle seyrek nüfusu bul." }],
+        ["Sivas ve çevresi", "Sivas", { prompt: "İç kesimde seyrek nüfus: Sivas çevresini bul." }],
+        ["Tuz Gölü çevresi (kuraklık)", "Aksaray", { prompt: "Kuraklık nedeniyle seyrek nüfus: Tuz Gölü çevresini bul." }]
+    ].forEach(function (r) { ITEMS.push(F("nufus-seyrek", r[0], r[1], r[2])); });
+
+    [
+        ["Çatalca–Kocaeli", "İstanbul-Kocaeli", { follow: { q: "Çatalca–Kocaeli'nin yoğun nüfus nedeni?", choices: ["Karstik arazi", "Sanayi / ticaret / ulaşım", "Yüksek plato soğuğu", "Sadece hayvancılık"], answer: "Sanayi / ticaret / ulaşım" } }],
+        ["Doğu Karadeniz kıyısı", "Trabzon-Rize-Ordu", { prompt: "Dar kıyıda toplanan yoğun nüfusu bul." }],
+        ["Kıyı Ege", "İzmir-Aydın", null],
+        ["Çukurova", "Adana-Mersin", null],
+        ["Gaziantep ve çevresi", "Gaziantep", null]
+    ].forEach(function (r) { ITEMS.push(F("nufus-yogun", r[0], r[1], r[2] || {})); });
+
+    ["Antalya", "Muğla", "Sinop", "Trabzon", "Giresun", "Rize", "Ordu", "Çanakkale", "Hakkâri", "Şırnak", "Kastamonu", "Nevşehir"].forEach(function (il) {
+        var extra = { prompt: il + " ilini bul. ÖSYM: buraya demiryolu ile ulaşılamaz." };
+        if (il === "Antalya") extra.follow = { q: "Hangisi demiryolu bağlantısı olmayan kıyı kentlerindendir?", choices: ["İzmir", "Samsun", "Antalya", "Mersin"], answer: "Antalya" };
+        ITEMS.push(F("demiryolu", il + " (demiryolu yok)", il, extra));
+    });
+
+    [
+        ["İstanbul Limanı (geniş hinterland)", "İstanbul"],
+        ["İzmir Limanı (geniş hinterland)", "İzmir"],
+        ["Mersin Limanı (geniş hinterland)", "Mersin"],
+        ["İskenderun Limanı", "Hatay"],
+        ["Samsun Limanı (geniş hinterland)", "Samsun", { follow: { q: "Canik Dağları alçak olduğu için hinterlandı geniş liman?", choices: ["Sinop", "Samsun", "Rize", "Giresun"], answer: "Samsun" } }],
+        ["Sinop Limanı (dar hinterland)", "Sinop", { follow: { q: "Doğal liman olduğu halde Küre Dağları yüzünden gelişemeyen?", choices: ["İzmir", "Sinop", "Mersin", "İstanbul"], answer: "Sinop" } }],
+        ["Trabzon Limanı (transit)", "Trabzon", { prompt: "Zigana/Kop sayesinde transit Trabzon limanını bul." }],
+        ["Kuşadası (kruvaziyer)", "Aydın"]
+    ].forEach(function (r) { ITEMS.push(F("liman", r[0], r[1], r[2] || {})); });
+
+    [
+        ["Demir: Divriği", "Sivas", { follow: { q: "Divriği demiri başlıca nerede işlenir?", choices: ["Rize", "Ereğli / Karabük / İskenderun", "Van", "Muğla"], answer: "Ereğli / Karabük / İskenderun" } }],
+        ["Demir: Hekimhan", "Malatya", { prompt: "Hekimhan–Hasançelebi demirini bul." }],
+        ["Bakır: Murgul", "Artvin"], ["Bakır: Küre", "Kastamonu"], ["Bakır: Maden", "Elazığ"],
+        ["Bakır işleme: Samsun", "Samsun", { follow: { q: "Bakırın işlendiği liman kenti?", choices: ["Antalya", "Samsun", "Van", "Konya"], answer: "Samsun" } }],
+        ["Boksit: Akseki", "Antalya"], ["Boksit işleme: Seydişehir", "Konya"],
+        ["Krom: Guleman", "Elazığ"], ["Krom: Fethiye–Dalaman", "Muğla"],
+        ["Bor: Balıkesir–Eskişehir–Kütahya–Bursa", "Balıkesir-Eskişehir-Kütahya-Bursa", { prompt: "Bor kuşağının bir ilini bul (Marmara güneyi / İçbatı Anadolu)." }]
+    ].forEach(function (r) { ITEMS.push(F("maden", r[0], r[1], r[2] || {})); });
+
+    [
+        ["Demir-çelik: Ereğli", "Zonguldak", { follow: { q: "Ereğli–Karabük tesisinin temel kuruluş nedeni?", choices: ["Turizm", "Enerji / taşkömürü yakınlığı", "Pamuk tarımı", "Kruvaziyer"], answer: "Enerji / taşkömürü yakınlığı" } }],
+        ["Demir-çelik: Karabük", "Karabük"],
+        ["Demir-çelik: İskenderun", "Hatay", { follow: { q: "İskenderun demir-çeliğinin avantajı?", choices: ["Buzul vadisi", "Liman / ulaşım", "Podzol toprak", "Fiyort"], answer: "Liman / ulaşım" } }],
+        ["Alüminyum: Seydişehir", "Konya", { prompt: "Boksitin işlendiği Seydişehir'i bul." }]
+    ].forEach(function (r) { ITEMS.push(F("sanayi", r[0], r[1], r[2] || {})); });
+
+    [
+        ["BTC (Bakü–Tiflis–Ceyhan)", "Adana-Hatay", { prompt: "BTC'nin deniz terminali Ceyhan/İskenderun yöresini bul." }],
+        ["TANAP güzergâhı", "Ardahan-Kars-Erzincan-Ankara-Eskişehir-Çanakkale", { prompt: "TANAP'ın geçtiği bir ili bul." }],
+        ["Mavi Akım (Samsun)", "Samsun", { prompt: "Mavi Akım'ın karaya çıktığı Samsun'u bul." }],
+        ["TürkAkım (Kıyıköy / Trakya)", "Kırklareli-Tekirdağ", { prompt: "TürkAkım'ın Trakya girişini bul." }]
+    ].forEach(function (r) { ITEMS.push(F("boru", r[0], r[1], r[2])); });
 
     var PARKS = [
         ["Nemrut Dağı", "Adıyaman-Malatya", "guneydogu"],
@@ -435,11 +649,15 @@
         ITEMS.push(it);
     });
 
-    ITEMS.push(F("tuzak", "Kızılırmak → Bafra", "Samsun", { prompt: "Kızılırmak deltasını bul. (Yeşilırmak ile karıştırma: o Çarşamba.)" }));
+    ITEMS.push(F("tuzak", "Kızılırmak → Bafra", "Samsun", { prompt: "Kızılırmak deltasını bul. (Yeşilırmak Çarşamba'dır.)" }));
     ITEMS.push(F("tuzak", "Yeşilırmak → Çarşamba", "Samsun", { prompt: "Yeşilırmak deltasını bul. (Kızılırmak Bafra'dır.)" }));
-    ITEMS.push(F("tuzak", "Nemrut (Adıyaman) vs volkan", "Adıyaman", { prompt: "Adıyaman-Malatya Nemrut Dağı Milli Parkı'nı bul. (Bitlis volkanı değil.)" }));
-    ITEMS.push(F("tuzak", "Karadağ ≠ Karacadağ", "Karaman", { prompt: "Karaman'daki volkanik Karadağ'ı bul. (Karacadağ Diyarbakır-Urfa'dadır.)" }));
-    ITEMS.push(F("tuzak", "Karacadağ", "Diyarbakır", { prompt: "Karacadağ'ı bul. (Karaman Karadağ değil.)" }));
+    ITEMS.push(F("tuzak", "Nemrut (Adıyaman) vs volkan", "Adıyaman", { prompt: "Adıyaman Nemrut'u bul — Kommagene heykelleri; volkan değildir.", follow: { q: "Volkanik Nemrut nerededir?", choices: ["Adıyaman", "Bitlis", "Ankara", "Muğla"], answer: "Bitlis" } }));
+    ITEMS.push(F("tuzak", "Karadağ ≠ Karacadağ", "Karaman", { prompt: "Karaman Karadağ'ı bul. (Karacadağ Urfa–Diyarbakır'dadır.)" }));
+    ITEMS.push(F("tuzak", "Karacadağ (kalkan volkan)", "Diyarbakır", { prompt: "Karacadağ'ı bul. (Karaman Karadağ değil.)" }));
+    ITEMS.push(F("tuzak", "En yüksek dağ vs kıvrım zirvesi", "Ağrı", { prompt: "Ağrı Dağı'nı bul.", follow: { q: "Türkiye'nin en yüksek noktası Ağrı'dır. Kıvrım dağlarının en yükseği?", choices: ["Ağrı", "Demirkazık / Aladağlar", "Kaz Dağı", "Madra"], answer: "Demirkazık / Aladağlar" } }));
+    ITEMS.push(F("tuzak", "En büyük göl vs tatlı su", "Van", { prompt: "Van Gölü'nü bul.", follow: { q: "En büyük tatlı su gölü?", choices: ["Van", "Tuz", "Beyşehir", "İznik"], answer: "Beyşehir" } }));
+    ITEMS.push(F("tuzak", "Ovit ≠ Cankurtaran", "Rize", { prompt: "Ovit (Rize–Erzurum) geçidini bul. Cankurtaran Artvin'dedir." }));
+    ITEMS.push(F("tuzak", "Fiyort / skyer yok", "Trabzon", { prompt: "Karadeniz boyuna kıyıyı bul.", follow: { q: "Türkiye'de hangisi görülmez?", choices: ["Ria", "Dalmaçya", "Fiyort ve skyer", "Boyuna kıyı"], answer: "Fiyort ve skyer" } }));
 
     ITEMS.forEach(function (it, i) { it.id = "m" + i; });
 
@@ -554,20 +772,32 @@
 
     function topicGlyph(topicId) {
         var t = String(topicId || "");
-        if (t === "volkanik" || t === "volkanik-arazi") return "🌋";
+        if (t === "volkanik" || t === "volkanik-arazi" || t === "plato-volkan" || t === "ova-volkan") return "🌋";
         if (t === "kirik" || t === "kivrim") return "⛰️";
-        if (t === "masif" || t === "karst") return "🪨";
+        if (t === "masif" || t === "karst" || t === "ova-karst") return "🪨";
+        if (t === "fay") return "⚡";
+        if (t === "deprem-az") return "🟢";
         if (t.indexOf("plato") === 0) return "🏜️";
-        if (t === "ovalar") return "🌾";
         if (t === "delta") return "🌊";
+        if (t.indexOf("ova") === 0) return "🌾";
         if (t === "akarsu") return "💧";
         if (t === "goller") return "🏞️";
         if (t === "havza") return "🌊";
         if (t === "gecit") return "🏔️";
         if (t === "kiyi") return "🏖️";
+        if (t === "yagis") return "🌧️";
+        if (t === "mikro") return "🌡️";
         if (t === "bitki") return "🌿";
         if (t === "tarim") return "🌾";
+        if (t === "hayvan") return "🐄";
         if (t === "toprak") return "🟤";
+        if (t === "nufus-seyrek") return "👤";
+        if (t === "nufus-yogun") return "🏙️";
+        if (t === "demiryolu") return "🚂";
+        if (t === "liman") return "⚓";
+        if (t === "maden") return "⛏️";
+        if (t === "sanayi") return "🏭";
+        if (t === "boru") return "🛢️";
         if (t.indexOf("milli") === 0) return "🏞️";
         if (t === "tuzak") return "🧠";
         return "📍";
@@ -697,7 +927,16 @@
             "Nemrut Dağı (volkan)": ["TR13", -0.20, 0.25],
             "Süphan Dağı": ["TR13", 0.45, -0.35],
             "Ağrı Dağı": ["TR04", 0.35, -0.15],
-            "Tendürek Dağı": ["TR04", 0.15, 0.40]
+            "Tendürek Dağı": ["TR04", 0.15, 0.40],
+            "Teke Platosu": ["TR07", -0.35, 0.05],
+            "Taşeli Platosu": ["TR33", -0.35, 0.20],
+            "Tefenni Ovası": ["TR15", -0.25, 0.20],
+            "Kestel Ovası": ["TR15", 0.30, -0.15],
+            "Korkuteli Ovası": ["TR07", -0.28, -0.05],
+            "Elmalı Ovası": ["TR07", -0.18, 0.22],
+            "Acıpayam Ovası": ["TR20", 0.10, 0.35],
+            "Zigana Geçidi": ["TR61", 0.10, 0.35],
+            "Ovit Geçidi": ["TR53", 0.05, 0.35]
         };
         var list = itemsForTopic(topicId);
         var groups = {};

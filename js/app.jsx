@@ -813,7 +813,7 @@ function MapTopics(props) {
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
             <h1 className="text-3xl font-black tracking-tight gradient-text">Harita oyunu</h1>
-            <p className="text-sm text-stone-400 mt-1 mb-6">Her konunun kendi nokta haritası var. Çakışan iller yok; doğru noktayı seç.</p>
+            <p className="text-sm text-stone-400 mt-1 mb-6">KPSS fiziki · iklim · nüfus · maden · ulaşım haritaları. Konuyu seç, noktayı bul.</p>
             {tree.map(function (g) {
                 return (
                     <div key={g.id} className="mb-6">
