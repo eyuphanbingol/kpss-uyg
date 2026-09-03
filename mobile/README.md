@@ -1,4 +1,4 @@
-# Atanom mobil (React Native / Expo)
+# Atanly mobil (React Native / Expo)
 
 Web ile **aynı Supabase hesap ve ilerleme**. Klasör: `mobile/` (statik PWA kökünü bozmaz).
 
@@ -22,7 +22,7 @@ node scripts/export-catalog.js
 
 Supabase Auth URL listesine ekle:
 
-- `atanom://auth/callback`
-- `atanom://reset`
+- `atanly://auth/callback`
+- `atanly://reset`
 
 Google Cloud OAuth iOS/Android client ID’leri Expo’da ayrıca gerekir; e-posta girişi anahtarsız çalışır.

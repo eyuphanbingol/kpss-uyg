@@ -15,7 +15,7 @@
         }
         ctx.fillStyle = "#C5A059";
         ctx.font = "700 42px Manrope, sans-serif";
-        ctx.fillText("ATANOM", 270, 160);
+        ctx.fillText("ATANLY", 270, 160);
         ctx.fillStyle = "rgba(243,230,196,0.7)";
         ctx.font = "400 28px Inter, sans-serif";
         ctx.fillText(opts.nickname || "öğrenci", 270, 220);

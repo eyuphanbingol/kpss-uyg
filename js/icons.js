@@ -31,7 +31,7 @@
         var src = (g.KpssConfig && g.KpssConfig.logoUrl) || "icons/atanom.png";
         return React.createElement("img", {
             src: src,
-            alt: (g.KpssConfig && g.KpssConfig.appName) || "Atanom",
+            alt: (g.KpssConfig && g.KpssConfig.appName) || "Atanly",
             className: cls || "h-16 w-16 object-contain"
         });
     };

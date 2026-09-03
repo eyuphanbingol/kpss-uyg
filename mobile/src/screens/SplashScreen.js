@@ -28,7 +28,7 @@ export default function SplashScreen() {
             <StatusBar style="light" />
             <View style={styles.center}>
                 <Image source={LOGO} style={styles.logo} resizeMode="contain" />
-                <Text style={styles.title}>Atanom</Text>
+                <Text style={styles.title}>Atanly</Text>
                 <Text style={styles.tag}>Hedefine doğru ilk adım</Text>
                 <ActivityIndicator color="#C5A059" style={{ marginTop: 28 }} />
             </View>

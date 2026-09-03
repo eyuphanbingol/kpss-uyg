@@ -1,7 +1,7 @@
 export const KpssConfig = {
     supabaseUrl: "https://feblrqillsrfsbmrkjyc.supabase.co",
     supabaseAnonKey: "sb_publishable_3TaCTFJJiJtEdQtF_ZbCCw_Pxf-pzRE",
-    appName: "Atanom",
+    appName: "Atanly",
     productionUrl: "https://kpss-uyg.vercel.app",
     freeWeeklyExams: 2,
     freeDailyMixed: 3,

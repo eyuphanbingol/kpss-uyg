@@ -120,7 +120,7 @@ export default function OnboardingScreen() {
         <ScrollScreen dark={isDark}>
             {/* Logo */}
             <Image source={require("../../assets/atanom.png")} style={styles.logo} />
-            <Text style={[styles.title, isDark && { color: colors.teal }]}>Atanom</Text>
+            <Text style={[styles.title, isDark && { color: colors.teal }]}>Atanly</Text>
             <Text style={[styles.subtitle, isDark && styles.textMuted]}>
                 Hedefine doğru ilk adımı atalım
             </Text>

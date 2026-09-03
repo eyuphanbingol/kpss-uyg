@@ -315,7 +315,7 @@
                         <div className="flex items-center gap-3">
                             {window.AtanomLogo
                                 ? window.AtanomLogo("h-10 w-10 object-contain")
-                                : <img src="icons/atanom.png" alt="Atanom" className="h-10 w-10 object-contain" />}
+                                : <img src="icons/atanom.png" alt="Atanly" className="h-10 w-10 object-contain" />}
                             <div>
                                 <p className="text-sm font-bold gradient-text">Yönetim Paneli</p>
                                 <p className="text-[10px] text-stone-400 truncate max-w-[140px]">{email}</p>

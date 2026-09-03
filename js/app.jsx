@@ -138,8 +138,8 @@ function Onboarding(props) {
             <div className="w-full max-w-md bg-white dark:bg-stone-900 rounded-3xl p-6 sm:p-8 shadow-2xl fade-in">
                 {window.AtanomLogo
                     ? window.AtanomLogo("h-16 w-16 mx-auto mb-3 object-contain")
-                    : <img src="icons/atanom.png?v=18" alt="Atanom" className="h-16 w-16 mx-auto mb-3 object-contain" />}
-                <h2 className="text-2xl font-black text-stone-900 dark:text-white mb-1 text-center">Atanom</h2>
+                    : <img src="icons/atanom.png?v=18" alt="Atanly" className="h-16 w-16 mx-auto mb-3 object-contain" />}
+                <h2 className="text-2xl font-black text-stone-900 dark:text-white mb-1 text-center">Atanly</h2>
                 <p className="text-sm text-stone-500 mb-5 text-center">Google ile giriş yaptın. Adın ve eğitim düzeyin uygulamayı açmak için gerekli.</p>
                 <label className="block text-xs font-bold text-stone-500 mb-1">Adın</label>
                 <input value={name} onChange={function (e) { setName(e.target.value); }} placeholder="Örn. Ayşe"
@@ -874,9 +874,9 @@ function ResultView(props) {
                     const url = window.ShareCard.draw({
                         nickname: nick, pct: oran, correct: score, total: total,
                         streak: (props.student && props.student.streak && props.student.streak.count) || 0,
-                        caption: "Net kartı · Atanom"
+                        caption: "Net kartı · Atanly"
                     });
-                    window.ShareCard.download(url, "atanom-net-karti.png");
+                    window.ShareCard.download(url, "atanly-net-karti.png");
                 }} className="w-full mb-3 p-4 rounded-2xl btn-primary text-white font-semibold">Net kartını indir</button>
                 <div className="flex gap-3">
                     <button onClick={props.onRetry} className="flex-1 btn-primary text-white p-4 rounded-2xl font-semibold">Tekrar</button>
@@ -1284,7 +1284,7 @@ function Ben(props) {
                 if (window.NotificationEngine) window.NotificationEngine.requestPush().then(function (r) {
                     if (r.ok) {
                         var n = window.NotificationEngine.streakNudge(st);
-                        if (n) window.NotificationEngine.showLocal("Atanom", n);
+                        if (n) window.NotificationEngine.showLocal("Atanly", n);
                     }
                 });
             }} className="w-full mb-3 p-3.5 rounded-2xl glass text-left card-hover">

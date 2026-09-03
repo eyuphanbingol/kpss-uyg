@@ -148,9 +148,9 @@
                         <div className="inline-flex items-center justify-center mb-3">
                             {window.AtanomLogo
                                 ? window.AtanomLogo("h-20 w-20 object-contain")
-                                : <img src="icons/atanom.png" alt="Atanom" className="h-20 w-20 object-contain" />}
+                                : <img src="icons/atanom.png" alt="Atanly" className="h-20 w-20 object-contain" />}
                         </div>
-                        <h2 className="text-2xl font-black gradient-text">Atanom</h2>
+                        <h2 className="text-2xl font-black gradient-text">Atanly</h2>
                         <p className="text-sm text-stone-400 mt-1 max-w-xs mx-auto">
                             Hedefine doğru ilk adımı atalım
                         </p>

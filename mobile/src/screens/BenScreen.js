@@ -309,7 +309,7 @@ export default function BenScreen({ navigation }) {
 
             {/* Footer */}
             <Text style={[styles.footer, isDark && styles.textMuted]}>
-                Atanom v1.0 · {app.platform || "Web"}
+                Atanly v1.0 · {app.platform || "Web"}
             </Text>
         </ScrollScreen>
     );

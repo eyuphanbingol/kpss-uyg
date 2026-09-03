@@ -840,8 +840,8 @@
                     <div className="text-center mb-8">
                         {window.AtanomLogo
                             ? window.AtanomLogo("h-24 w-24 mx-auto mb-3 object-contain drop-shadow-sm")
-                            : <img src="icons/atanom.png" alt="Atanom" className="h-24 w-24 mx-auto mb-3 object-contain" />}
-                        <h1 className="text-2xl md:text-3xl font-black gradient-text">Atanom</h1>
+                            : <img src="icons/atanom.png" alt="Atanly" className="h-24 w-24 mx-auto mb-3 object-contain" />}
+                        <h1 className="text-2xl md:text-3xl font-black gradient-text">Atanly</h1>
                         <p className="text-sm text-stone-400 dark:text-stone-500 mt-1">
                             {recovery
                                 ? "Maildeki bağlantı seni buraya getirdi"

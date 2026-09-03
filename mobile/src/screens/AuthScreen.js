@@ -150,7 +150,7 @@ export default function AuthScreen() {
         }
         if (forgot) {
             setBusy(true);
-            var resetRedirect = AuthSession.makeRedirectUri({ scheme: "atanom", path: "reset" });
+            var resetRedirect = AuthSession.makeRedirectUri({ scheme: "atanly", path: "reset" });
             var fr = await supabase.auth.resetPasswordForEmail(email, { redirectTo: resetRedirect });
             setBusy(false);
             setMsg(fr.error ? fr.error.message : "✅ Sıfırlama maili gönderildi.");
@@ -211,7 +211,7 @@ export default function AuthScreen() {
         setGoogleBusy(true);
         setMsg("");
         try {
-            var redirectTo = AuthSession.makeRedirectUri({ scheme: "atanom", path: "auth/callback" });
+            var redirectTo = AuthSession.makeRedirectUri({ scheme: "atanly", path: "auth/callback" });
             var res = await supabase.auth.signInWithOAuth({
                 provider: "google",
                 options: { redirectTo: redirectTo, skipBrowserRedirect: true }
@@ -227,7 +227,7 @@ export default function AuthScreen() {
                 }
             }
         } catch (e) {
-            setMsg((e && e.message) || "Google girişi açılamadı. Supabase redirect listesine atanom:// ekle.");
+            setMsg((e && e.message) || "Google girişi açılamadı. Supabase redirect listesine atanly:// ekle.");
         }
         setGoogleBusy(false);
     }
@@ -314,7 +314,7 @@ export default function AuthScreen() {
                         <View style={styles.card}>
                             {/* Logo */}
                             <Image source={require("../../assets/atanom.png")} style={styles.logo} />
-                            <Text style={styles.title}>Atanom</Text>
+                            <Text style={styles.title}>Atanly</Text>
                             <Text style={styles.subtitle}>
                                 {mode === "in" ? "Kaldığın yerden devam et" : "Hedefine doğru ilk adım"}
                             </Text>

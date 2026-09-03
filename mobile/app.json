@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "Atanom",
+    "name": "Atanly",
     "slug": "eyphn",
-    "scheme": "atanom",
+    "scheme": "atanly",
     "version": "1.0.0",
     "platforms": [
       "ios",
@@ -17,7 +17,7 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "app.atanom.mobile",
+      "bundleIdentifier": "app.atanly.mobile",
       "splash": {
         "backgroundColor": "#041C24",
         "image": "./assets/splash-full.png",
@@ -25,7 +25,7 @@
       }
     },
     "android": {
-      "package": "app.atanom.mobile",
+      "package": "app.atanly.mobile",
       "adaptiveIcon": {
         "backgroundColor": "#041C24",
         "foregroundImage": "./assets/atanom-mark.png"
