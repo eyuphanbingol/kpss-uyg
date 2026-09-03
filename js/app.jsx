@@ -734,16 +734,17 @@ function NotesView(props) {
                 <BackBtn onClick={props.onBack} label="Geri" />
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
-            <h2 className="text-2xl font-black mb-4">{props.konu} · Özet</h2>
             {notlar.length ? (
-                <div className="note-stage flex flex-col p-5 sm:p-8 min-h-[420px]">
-                    <div className="flex justify-center mb-5">
+                <article className="study-card fade-in">
+                    <header className="study-card-head">
+                        <div>
+                            {props.ders ? <p className="study-card-kicker">{props.ders}</p> : null}
+                            <h2 className="study-card-title">{props.konu} · Özet</h2>
+                        </div>
                         <div className="note-progress">{idx + 1}/{notlar.length}</div>
-                    </div>
-                    <div key={idx} className="flex-1 fade-in mb-4">
-                        <div className="note-body text-[16px] leading-relaxed max-w-2xl w-full mx-auto" dangerouslySetInnerHTML={{ __html: notlar[idx] }} />
-                    </div>
-                    <div className="flex justify-between items-center gap-3 pt-2">
+                    </header>
+                    <div key={idx} className="study-card-body text-[16px] leading-relaxed" dangerouslySetInnerHTML={{ __html: notlar[idx] }} />
+                    <footer className="study-card-foot">
                         <button disabled={idx === 0} onClick={function () { props.onIndex(idx - 1); }}
                             className={"back-btn " + (idx === 0 ? "opacity-30 pointer-events-none" : "")}>
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -766,8 +767,8 @@ function NotesView(props) {
                                 </svg>
                             </button>
                         )}
-                    </div>
-                </div>
+                    </footer>
+                </article>
             ) : (
                 <div className="text-center py-16 bg-white dark:bg-slate-800 rounded-3xl border border-dashed">Bu konu için henüz not yok.</div>
             )}

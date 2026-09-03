@@ -523,88 +523,90 @@
             background: linear-gradient(180deg, #1D8A99, #C5A059);
         }
 
-        .note-stage {
-            position: relative;
-            background: linear-gradient(180deg, #ffffff 0%, #f6f4f1 100%);
-            border: 1px solid rgba(13, 44, 77, 0.08);
-            border-radius: 1.75rem;
-            box-shadow: 0 22px 50px -28px rgba(4, 28, 36, 0.4);
+        .study-card {
+            border-radius: 1.5rem;
             overflow: hidden;
+            background: #fff;
+            border: 1px solid rgba(13, 44, 77, 0.1);
+            box-shadow: 0 24px 60px -22px rgba(4, 28, 36, 0.48);
         }
-        .note-stage::before {
-            content: "";
-            position: absolute;
-            left: 0; top: 0; bottom: 0;
-            width: 4px;
-            background: linear-gradient(180deg, #1D8A99, #C5A059);
+        .study-card-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 18px 22px;
+            background: linear-gradient(135deg, #041C24 0%, #0A3842 48%, #127880 100%);
         }
-        html.dark .note-stage {
-            background: linear-gradient(180deg, #2A2724 0%, #211F1D 100%);
-            border-color: rgba(255,255,255,0.08);
+        .study-card-kicker {
+            margin: 0 0 4px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(245, 235, 199, 0.72);
+        }
+        .study-card-title {
+            margin: 0;
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.3;
         }
         .note-progress {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            min-width: 3.5rem;
-            height: 2.25rem;
-            padding: 0 0.85rem;
+            min-width: 3.4rem;
+            height: 2.15rem;
+            padding: 0 0.8rem;
             border-radius: 9999px;
-            background: #0D2C4D;
+            background: rgba(245, 235, 199, 0.14);
+            border: 1px solid rgba(245, 235, 199, 0.28);
             color: #F5EBC7;
             font-family: "Space Grotesk", Inter, sans-serif;
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             letter-spacing: 0.04em;
+            flex-shrink: 0;
         }
-        .note-body {
+        .study-card-body {
+            padding: 22px 20px 12px;
+            overflow-x: auto;
             color: #1c1917;
-            text-align: left;
         }
-        .note-body > .mb-4 {
-            text-align: center;
+        .study-card-body,
+        .study-card-body * {
+            box-sizing: border-box;
         }
-        .note-body .bg-amber-50,
-        .note-body .bg-slate-50,
-        .note-body .bg-rose-50,
-        .note-body .bg-emerald-50,
-        .note-body .bg-indigo-50,
-        .note-body .bg-sky-50,
-        .note-body .bg-teal-50,
-        .note-body .bg-violet-50,
-        .note-body .bg-stone-50,
-        .note-body .bg-orange-50 {
-            box-shadow: 0 10px 28px -18px rgba(13, 44, 77, 0.45);
-            border-radius: 1rem !important;
+        .study-card-body .grid {
+            width: 100%;
         }
-        .note-body .flex-wrap > span.bg-white,
-        .note-body .flex.flex-wrap.gap-2 > span {
-            display: inline-flex;
+        .study-card-body .grid-cols-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .study-card-foot {
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            padding: 0.4rem 0.75rem !important;
-            border-radius: 0.7rem !important;
-            font-weight: 650;
-            font-size: 13px;
-            color: #0D2C4D;
-            border: 1px solid rgba(13, 44, 77, 0.08);
-            box-shadow: 0 1px 2px rgba(13, 44, 77, 0.05);
+            gap: 12px;
+            padding: 14px 18px 18px;
+            background: #f6f4f1;
+            border-top: 1px solid rgba(13, 44, 77, 0.07);
         }
-        .note-body b,
-        .note-body strong {
-            color: #0D2C4D;
+        html.dark .study-card {
+            background: #2A2724;
+            border-color: rgba(255,255,255,0.08);
         }
-        html.dark .note-body {
-            color: #e7e5e4;
-        }
-        html.dark .note-body b,
-        html.dark .note-body strong {
-            color: #F5EBC7;
-        }
-        html.dark .note-body .flex-wrap > span.bg-white,
-        html.dark .note-body .flex.flex-wrap.gap-2 > span {
-            color: #F5EBC7;
+        html.dark .study-card-body { color: #e7e5e4; }
+        html.dark .study-card-foot {
             background: #211F1D;
-            border-color: rgba(255,255,255,0.1);
+            border-top-color: rgba(255,255,255,0.06);
+        }
+        @media (max-width: 560px) {
+            .study-card-body .grid-cols-2 {
+                grid-template-columns: 1fr;
+            }
         }
 
         .progress-ring {
@@ -714,7 +716,7 @@
 
 <body class="app-bg min-h-screen text-slate-800 antialiased transition-colors duration-300">
     <div id="root"></div>
-    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=53"></script>
+    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=54"></script>
     <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.getRegistrations().then(function (regs) {
