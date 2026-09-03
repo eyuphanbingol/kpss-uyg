@@ -62,7 +62,7 @@
         const [recReady, setRecReady] = useState(false);
 
         const sb = window.SupabaseClient && window.SupabaseClient.get();
-        const field = "w-full px-4 py-3 rounded-2xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 text-[15px] focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all";
+        const field = "w-full px-4 py-3 rounded-2xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-100 text-[15px] focus:border-teal-600 focus:ring-4 focus:ring-teal-600/10 transition-all";
 
         // ---------- Refs ----------
         const emailRef = useRef(null);
@@ -289,7 +289,7 @@
 
         // ---------- Card Class ----------
         function cardCls(on, dim) {
-            return "w-full text-left p-4 rounded-2xl border-2 transition-all duration-200 " +
+            return "w-full text-left p-4 rounded-2xl border-2 transition-all duration-200 text-stone-800 " +
                 (on 
                     ? "border-indigo-500 bg-indigo-50/80 dark:bg-indigo-950/30 shadow-lg shadow-indigo-500/10" 
                     : "border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 hover:border-indigo-300 dark:hover:border-indigo-700") +
@@ -367,7 +367,7 @@
                                             >
                                                 <div className="flex items-center justify-between">
                                                     <div>
-                                                        <div className="font-display font-semibold text-base">{x.t}</div>
+                                                        <div className="font-display font-semibold text-base text-stone-800 dark:text-stone-100">{x.t}</div>
                                                         <div className="text-sm text-stone-500 mt-0.5">{x.d}</div>
                                                     </div>
                                                     {isActive && (
@@ -415,7 +415,7 @@
                                             >
                                                 <div className="flex items-start justify-between gap-3">
                                                     <div className="flex-1">
-                                                        <div className="flex items-center gap-2 font-display font-semibold">
+                                                        <div className="flex items-center gap-2 font-display font-semibold text-stone-800 dark:text-stone-100">
                                                             <span className="text-lg">{x.icon === "book" ? "📖" : x.icon === "scale" ? "⚖️" : x.icon === "cap" ? "🎓" : "📚"}</span>
                                                             {x.t}
                                                         </div>
@@ -711,7 +711,7 @@
                     type="button" 
                     disabled={busy} 
                     onClick={google}
-                    className="w-full py-3.5 rounded-2xl border-2 border-stone-200 dark:border-stone-700 font-semibold text-sm hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors flex items-center justify-center gap-3 disabled:opacity-50"
+                    className="w-full py-3.5 rounded-2xl btn-google font-semibold text-sm flex items-center justify-center gap-3 disabled:opacity-50"
                 >
                     <svg className="w-5 h-5" viewBox="0 0 24 24">
                         <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
@@ -721,7 +721,7 @@
                     </svg>
                     Google ile Devam
                 </button>
-                <p className="text-[11px] text-stone-400 text-center">İlk kez Google ile gelince ad, eğitim ve kulvar sorulur.</p>
+                <p className="text-[11px] text-stone-500 text-center">İlk kez Google ile gelince ad, eğitim ve kulvar sorulur.</p>
             </div>
         ) : null;
 
@@ -799,7 +799,7 @@
                             type="button" 
                             disabled={busy} 
                             onClick={google}
-                            className="w-full py-3.5 rounded-2xl border-2 border-stone-200 dark:border-stone-700 font-semibold text-sm hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors flex items-center justify-center gap-3 disabled:opacity-50"
+                            className="w-full py-3.5 rounded-2xl btn-google font-semibold text-sm flex items-center justify-center gap-3 disabled:opacity-50"
                         >
                             <svg className="w-5 h-5" viewBox="0 0 24 24">
                                 <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
@@ -838,13 +838,13 @@
                 <div className="brand-glow" aria-hidden="true"></div>
                 <div className="brand-ring brand-ring-outer" aria-hidden="true"></div>
                 <div className="brand-ring brand-ring-inner" aria-hidden="true"></div>
-                <div className="relative z-10 w-full max-w-md bg-white/95 dark:bg-stone-900/95 rounded-[28px] shadow-2xl p-6 sm:p-8">
+                <div className="relative z-10 w-full max-w-md bg-white dark:bg-stone-900 rounded-[28px] shadow-2xl p-6 sm:p-8 text-stone-800 fade-in">
                     <div className="text-center mb-6">
                         {window.AtanomLogo
                             ? window.AtanomLogo("h-24 w-24 mx-auto mb-3 object-contain drop-shadow-sm")
                             : <img src="icons/atanom.png" alt="Atanly" className="h-24 w-24 mx-auto mb-3 object-contain" />}
                         <h1 className="text-2xl md:text-3xl font-black gradient-text">Atanly</h1>
-                        <p className="text-sm text-stone-400 dark:text-stone-500 mt-1">
+                        <p className="text-sm text-stone-500 mt-1">
                             {recovery
                                 ? "Maildeki bağlantı seni buraya getirdi"
                                 : (mode === "up"

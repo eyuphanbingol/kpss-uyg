@@ -779,13 +779,13 @@ function TestView(props) {
                     {timed ? <span className={"ml-2 font-stat " + tCls}>{mm}:{ss}</span> : null}
                 </span>
             </div>
-            <div className="w-full bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full mb-4 overflow-hidden">
-                <div className="bg-gradient-to-r from-indigo-500 to-purple-500 h-2.5 rounded-full" style={{ width: progress + "%" }} />
+                <div className="w-full bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full mb-4 overflow-hidden">
+                <div className="h-2.5 rounded-full" style={{ width: progress + "%", background: "linear-gradient(90deg, #0D2C4D, #1D8A99, #C5A059)" }} />
             </div>
             {item.ders ? <p className="text-xs font-bold text-slate-400 mb-3">{item.ders} · {item.konu}</p> : null}
-            <div className="bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-lg mb-6 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-indigo-500 to-purple-500"></div>
-                <h3 className="text-lg font-bold leading-relaxed whitespace-pre-line">{soru.question}</h3>
+            <div className="q-stem p-6 sm:p-8 rounded-3xl mb-6 relative overflow-hidden fade-in">
+                <div className="q-stem-bar absolute top-0 left-0 w-1.5 h-full"></div>
+                <h3 className="text-lg font-bold leading-relaxed whitespace-pre-line text-stone-900 pl-2">{soru.question}</h3>
             </div>
             <div className="space-y-3">
                 {(soru.options || []).map(function (opt, i) {
@@ -800,8 +800,8 @@ function TestView(props) {
                             icon = <svg className="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" /></svg>;
                         } else cls += "bg-slate-50 dark:bg-slate-800/50 border-slate-200 text-slate-400 opacity-60";
                     } else {
-                        cls += "bg-white dark:bg-slate-800 border-slate-200 hover:border-indigo-500";
-                        icon = <span className="flex-shrink-0 h-8 w-8 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-xs font-bold">{String.fromCharCode(65 + i)}</span>;
+                        cls += "bg-white dark:bg-slate-800 border-slate-200 text-stone-800";
+                        icon = <span className="choice-letter flex-shrink-0 h-8 w-8 rounded-full flex items-center justify-center text-xs font-bold">{String.fromCharCode(65 + i)}</span>;
                     }
                     return (
                         <button key={i} onClick={function () { props.onAnswer(i); }} disabled={props.answered} className={cls}>
