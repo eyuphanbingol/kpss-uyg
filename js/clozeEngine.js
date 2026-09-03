@@ -28,7 +28,7 @@
         var re = /<(b|strong)(?:\s[^>]*)?>([\s\S]*?)<\/\1>/gi;
         var m;
         while ((m = re.exec(html))) {
-            var t = stripHtml(m[2]);
+            var t = stripHtml(m[2]).replace(/[:：]\s*$/, "").trim();
             if (okTerm(t)) tags.push(t);
         }
         return tags;
@@ -42,18 +42,74 @@
         return hay.slice(0, i) + "______" + hay.slice(i + needle.length);
     }
 
+    function tidyPlain(s) {
+        return String(s || "").replace(/\s+/g, " ").trim();
+    }
+
+    function clipAround(prompt, maxLen) {
+        maxLen = maxLen || 180;
+        var p = tidyPlain(prompt);
+        var mark = "______";
+        var i = p.indexOf(mark);
+        if (i < 0) return p.length > maxLen ? p.slice(0, maxLen) + "…" : p;
+        if (p.length <= maxLen) return p;
+        var pad = Math.floor((maxLen - mark.length) / 2);
+        var start = Math.max(0, i - pad);
+        var end = Math.min(p.length, i + mark.length + pad);
+        if (start > 0) {
+            var sp = p.indexOf(" ", start);
+            if (sp > start && sp < i) start = sp + 1;
+        }
+        if (end < p.length) {
+            var ep = p.lastIndexOf(" ", end);
+            if (ep > i + mark.length) end = ep;
+        }
+        var out = p.slice(start, end).trim();
+        if (start > 0) out = "…" + out;
+        if (end < p.length) out += "…";
+        return out;
+    }
+
+    function sectionHint(html) {
+        var m = String(html || "").match(/tracking-wider[^>]*>([\s\S]*?)<\/span>/i);
+        if (!m) return "";
+        return tidyPlain(stripHtml(m[1])).slice(0, 72);
+    }
+
+    function splitChunks(html) {
+        var h = String(html || "");
+        var lis = h.match(/<li\b[\s\S]*?<\/li>/gi);
+        if (lis && lis.length) return lis;
+        var ps = h.match(/<p\b[\s\S]*?<\/p>/gi);
+        if (ps && ps.length) return ps;
+        return [h];
+    }
+
     function fromNotes(notlar) {
         var items = [];
         (notlar || []).forEach(function (html, ni) {
-            var terms = extractBolds(html);
-            var plain = stripHtml(html);
-            var seen = {};
-            terms.forEach(function (term, ti) {
-                var k = norm(term);
-                if (seen[k]) return;
-                seen[k] = 1;
-                if (plain.length < 16) return;
-                items.push({ id: "n-" + ni + "-" + ti, prompt: blankIn(plain, term), answer: term });
+            var hint = sectionHint(html);
+            splitChunks(html).forEach(function (chunk, ci) {
+                var terms = extractBolds(chunk);
+                var plain = tidyPlain(stripHtml(chunk));
+                if (plain.length < 12) return;
+                var seen = {};
+                terms.forEach(function (term, ti) {
+                    var k = norm(term);
+                    if (seen[k]) return;
+                    seen[k] = 1;
+                    var prompt = clipAround(blankIn(plain, term), 180);
+                    if (tidyPlain(prompt.replace(/_/g, "")).length < 10) {
+                        if (!hint) return;
+                        prompt = hint + " · doğru ifade: ______";
+                    }
+                    items.push({
+                        id: "n-" + ni + "-" + ci + "-" + ti,
+                        prompt: prompt,
+                        answer: term,
+                        hint: hint
+                    });
+                });
             });
         });
         return items;
@@ -74,12 +130,12 @@
             var expl = stripHtml(q.explanation || "");
             var prompt;
             if (expl && expl.toLocaleLowerCase("tr-TR").indexOf(ans.toLocaleLowerCase("tr-TR")) >= 0) {
-                prompt = blankIn(expl, ans);
+                prompt = clipAround(blankIn(expl, ans), 180);
             } else if (expl) {
-                prompt = expl.replace(/[.!?]?$/, "") + " Boşluk: ______";
+                prompt = clipAround(expl.replace(/[.!?]?$/, "") + " Boşluk: ______", 180);
             } else {
                 var stem = stripHtml(q.question || "");
-                prompt = (stem.length > 200 ? stem.slice(0, 200) + "…" : stem) + " → ______";
+                prompt = clipAround((stem.length > 160 ? stem.slice(0, 160) + "…" : stem) + " → ______", 180);
             }
             items.push({ id: "q-" + qi, prompt: prompt, answer: ans });
         });

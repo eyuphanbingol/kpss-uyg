@@ -175,6 +175,7 @@ export function ClozePlayScreen({ route, navigation }) {
             <Text style={[styles.kicker, isDark && styles.textMuted]}>{ders} · {idx + 1}/{list.length}</Text>
             <Text style={[styles.konuTitle, isDark && styles.textLight]}>{konu}</Text>
             <Card style={[isDark && styles.cardDark]}>
+                {it.hint ? <Text style={[styles.kicker, isDark && styles.textMuted]}>{it.hint}</Text> : null}
                 <Text style={[styles.prompt, isDark && styles.textLight]}>{it.prompt}</Text>
                 {(it.choices || []).map(function (c, ci) {
                     var isP = picked === c;

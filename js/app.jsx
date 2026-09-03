@@ -764,6 +764,7 @@ function ClozePlay(props) {
                     <div className="note-progress">{idx + 1}/{items.length}</div>
                 </header>
                 <div className="study-card-body">
+                    {it.hint ? <p className="text-[11px] font-black uppercase tracking-widest text-stone-400 mb-2">{it.hint}</p> : null}
                     <p className="text-[17px] leading-relaxed mb-6">{clozePromptNodes(it.prompt)}</p>
                     <div className="grid gap-2">
                         {(it.choices || []).map(function (c, ci) {
