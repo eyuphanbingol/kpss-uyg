@@ -257,6 +257,9 @@ export function MapPlayScreen({ route, navigation }) {
     var list = useMemo(function () {
         return MapQuiz.pickRound(topicId, 8);
     }, [seed, topicId]);
+    var layer = useMemo(function () {
+        return MapQuiz.topicLayer ? MapQuiz.topicLayer(topicId) : { pins: [], viewBox: "0 0 1000 422" };
+    }, [topicId]);
     var _i = useState(0);
     var idx = _i[0];
     var setIdx = _i[1];
@@ -270,11 +273,19 @@ export function MapPlayScreen({ route, navigation }) {
     var done = _d[0];
     var setDone = _d[1];
 
+    var _c = useState([]);
+    var cleared = _c[0];
+    var setCleared = _c[1];
+
     useEffect(function () {
-        setIdx(0); setPicked(null); setScore(0); setDone(false);
+        setIdx(0); setPicked(null); setScore(0); setDone(false); setCleared([]);
     }, [seed, topicId]);
 
     function advance() {
+        var stepNow = list[idx];
+        if (stepNow && stepNow.type === "map") {
+            setCleared(cleared.concat([stepNow.item.id]));
+        }
         if (idx + 1 >= list.length) setDone(true);
         else { setIdx(idx + 1); setPicked(null); }
     }
@@ -296,10 +307,10 @@ export function MapPlayScreen({ route, navigation }) {
 
     var step = list[idx];
     var isMap = step && step.type === "map";
-    var taps = isMap ? MapQuiz.tapChoices(step.item) : [];
+    var vb = String(layer.viewBox || "0 0 1000 422").split(" ").map(Number);
     var ok = false;
     if (picked) {
-        if (isMap) ok = MapQuiz.isTapCorrect(step.item, picked);
+        if (isMap) ok = picked === step.item.id;
         else ok = String(picked) === String(step.answer);
     }
 
@@ -313,23 +324,22 @@ export function MapPlayScreen({ route, navigation }) {
             <Card style={[isDark && styles.cardDark]}>
                 <Text style={[styles.prompt, isDark && styles.textLight]}>{step.prompt}</Text>
                 {isMap ? (
-                    <View style={styles.mapGrid}>
-                        {taps.map(function (c) {
-                            var isP = picked && picked.id === c.id && picked.kind === c.kind;
-                            var isA = MapQuiz.isTapCorrect(step.item, c);
-                            var bg = "#fff";
-                            var border = colors.border;
-                            if (picked && isA) { bg = "#ECFDF5"; border = "#34D399"; }
-                            else if (picked && isP) { bg = "#FEF2F2"; border = "#F87171"; }
+                    <View style={styles.mapBoard}>
+                        {layer.pins.map(function (p) {
+                            var left = ((p.x - vb[0]) / vb[2]) * 100;
+                            var top = ((p.y - vb[1]) / vb[3]) * 100;
+                            var donePin = cleared.indexOf(p.id) >= 0;
+                            var bg = "#C9A227";
+                            if (donePin) bg = "#94a3b8";
+                            if (picked && p.id === step.item.id) bg = "#059669";
+                            else if (picked && p.id === picked) bg = "#E11D48";
                             return (
-                                <Pressable key={c.kind + c.id} disabled={!!picked} onPress={function () {
+                                <Pressable key={p.id} disabled={!!picked || donePin} onPress={function () {
                                     if (picked) return;
-                                    setPicked(c);
-                                    if (MapQuiz.isTapCorrect(step.item, c)) setScore(score + 1);
+                                    setPicked(p.id);
+                                    if (p.id === step.item.id) setScore(score + 1);
                                     setTimeout(advance, 5500);
-                                }} style={[styles.mapChip, { backgroundColor: isDark && !picked ? colors.navyDeep : bg, borderColor: border }]}>
-                                    <Text style={[styles.choiceText, isDark && !picked && styles.textLight]}>{c.label}</Text>
-                                </Pressable>
+                                }} style={[styles.mapDot, { left: left + "%", top: top + "%", backgroundColor: bg }]} />
                             );
                         })}
                     </View>
@@ -355,7 +365,7 @@ export function MapPlayScreen({ route, navigation }) {
                 )}
                 {picked ? (
                     <Text style={{ marginTop: 10, fontWeight: "700", color: ok ? "#059669" : "#E11D48" }}>
-                        {ok ? "Doğru" : ("Doğrusu: " + (isMap ? MapQuiz.answerLabel(step.item) : step.answer))}
+                        {ok ? "Doğru — " + (isMap ? step.item.name : step.answer) : ("Doğrusu: " + (isMap ? step.item.name : step.answer))}
                     </Text>
                 ) : null}
             </Card>
@@ -387,5 +397,7 @@ var styles = StyleSheet.create({
     result: { alignItems: "center", paddingVertical: 28 },
     pct: { fontSize: 40, fontWeight: "800", color: colors.navy },
     mapGrid: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
-    mapChip: { borderWidth: 1, borderRadius: 14, paddingVertical: 12, paddingHorizontal: 12, minWidth: "47%", flexGrow: 1 }
+    mapChip: { borderWidth: 1, borderRadius: 14, paddingVertical: 12, paddingHorizontal: 12, minWidth: "47%", flexGrow: 1 },
+    mapBoard: { height: 240, backgroundColor: "#d7e5db", borderRadius: 16, overflow: "hidden", marginTop: 4, position: "relative" },
+    mapDot: { position: "absolute", width: 18, height: 18, marginLeft: -9, marginTop: -9, borderRadius: 9, borderWidth: 2, borderColor: "#fff" }
 });

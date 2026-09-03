@@ -44,6 +44,59 @@
         TR81: "Düzce"
     };
 
+    var PROVINCE_LL = {
+        TR01: [35.32, 37.00], TR02: [38.28, 37.76], TR03: [30.53, 38.76], TR04: [43.05, 39.72], TR05: [35.83, 40.65],
+        TR06: [32.85, 39.93], TR07: [30.71, 36.90], TR08: [41.82, 41.18], TR09: [27.84, 37.84], TR10: [27.88, 39.65],
+        TR11: [29.98, 40.14], TR12: [40.50, 38.89], TR13: [42.11, 38.40], TR14: [31.61, 40.73], TR15: [30.29, 37.72],
+        TR16: [29.06, 40.19], TR17: [26.41, 40.16], TR18: [33.61, 40.60], TR19: [34.95, 40.55], TR20: [29.09, 37.78],
+        TR21: [40.23, 37.91], TR22: [26.56, 41.68], TR23: [39.22, 38.67], TR24: [39.49, 39.75], TR25: [41.27, 39.91],
+        TR26: [30.52, 39.78], TR27: [37.38, 37.07], TR28: [38.39, 40.91], TR29: [39.47, 40.46], TR30: [43.74, 37.57],
+        TR31: [36.16, 36.20], TR32: [30.55, 37.76], TR33: [34.63, 36.81], TR34: [28.98, 41.01], TR35: [27.14, 38.42],
+        TR36: [43.10, 40.60], TR37: [33.78, 41.38], TR38: [35.49, 38.73], TR39: [27.23, 41.73], TR40: [34.16, 39.15],
+        TR41: [29.92, 40.77], TR42: [32.49, 37.87], TR43: [29.98, 39.42], TR44: [38.31, 38.35], TR45: [27.43, 38.61],
+        TR46: [36.92, 37.59], TR47: [40.73, 37.31], TR48: [28.37, 37.22], TR49: [41.49, 38.74], TR50: [34.71, 38.62],
+        TR51: [34.68, 37.97], TR52: [37.88, 40.98], TR53: [40.52, 41.02], TR54: [30.40, 40.76], TR55: [36.33, 41.29],
+        TR56: [41.94, 37.93], TR57: [35.15, 42.03], TR58: [37.02, 39.75], TR59: [27.51, 40.98], TR60: [36.55, 40.32],
+        TR61: [39.72, 41.00], TR62: [39.54, 39.11], TR63: [38.79, 37.17], TR64: [29.41, 38.67], TR65: [43.41, 38.50],
+        TR66: [34.81, 39.82], TR67: [31.79, 41.46], TR68: [34.03, 38.37], TR69: [40.23, 40.26], TR70: [33.22, 37.18],
+        TR71: [33.51, 39.85], TR72: [41.14, 37.88], TR73: [42.45, 37.52], TR74: [32.34, 41.64], TR75: [42.70, 41.11],
+        TR76: [44.04, 39.92], TR77: [29.27, 40.65], TR78: [32.63, 41.20], TR79: [37.12, 36.72], TR80: [36.25, 37.07],
+        TR81: [31.16, 40.84]
+    };
+
+    var ITEM_LL = {
+        "Ağrı Dağı": [44.30, 39.70], "Tendürek Dağı": [43.87, 39.35], "Süphan Dağı": [42.83, 38.93],
+        "Nemrut Dağı (volkan)": [42.02, 38.62], "Erciyes Dağı": [35.45, 38.53], "Hasan Dağı": [34.17, 38.13],
+        "Melendiz Dağı": [34.63, 38.37], "Karadağ": [33.18, 37.40], "Karacadağ": [39.83, 37.75],
+        "Göllüdağ": [34.55, 38.26], "Kula volkanları": [28.65, 38.55],
+        "Bozdağlar": [28.05, 38.32], "Aydın Dağları": [27.95, 37.95], "Madra Dağları": [27.20, 39.35],
+        "Yunt Dağları": [27.20, 38.90], "Honaz Dağı": [29.27, 37.68], "Menteşe Dağları": [28.20, 37.15],
+        "Yıldız Dağları": [27.50, 41.75], "Küre Dağları": [33.20, 41.55], "Ilgaz Dağları": [33.65, 41.05],
+        "Köroğlu Dağları": [31.80, 40.55], "Canik Dağları": [36.80, 40.85], "Giresun Dağları": [38.40, 40.55],
+        "Kaçkar Dağları": [41.20, 40.85], "Beydağları": [30.12, 36.70], "Bolkar Dağları": [34.35, 37.40],
+        "Aladağlar": [35.20, 37.80], "Amanoslar": [36.25, 36.75],
+        "Haymana Platosu": [32.50, 39.43], "Cihanbeyli Platosu": [32.80, 38.65], "Obruk Platosu": [33.20, 38.20],
+        "Bozok Platosu": [35.20, 39.70], "Uzunyayla": [37.00, 38.80],
+        "Erzurum-Kars Platosu": [41.80, 40.40], "Ardahan Platosu": [42.70, 41.11],
+        "Gaziantep Platosu": [37.38, 37.20], "Şanlıurfa Platosu": [38.79, 37.30], "Mardin-Midyat Eşiği": [41.05, 37.45],
+        "Taşeli Platosu": [33.20, 36.55],
+        "Bafra Deltası": [35.90, 41.57], "Çarşamba Deltası": [36.72, 41.20], "Çukurova Deltası": [35.40, 36.78],
+        "Silifke Deltası": [33.93, 36.38], "Menemen Deltası": [27.07, 38.58], "Söke / Balat Deltası": [27.40, 37.48],
+        "Selçuk Deltası": [27.37, 37.95],
+        "Kızılırmak": [36.10, 41.55], "Yeşilırmak": [36.65, 41.22], "Sakarya": [30.40, 41.12],
+        "Gediz": [27.10, 38.60], "Büyük Menderes": [27.30, 37.55], "Küçük Menderes": [27.35, 37.95],
+        "Seyhan": [35.33, 36.78], "Ceyhan": [35.82, 36.85], "Göksu": [33.93, 36.38], "Asi": [36.20, 36.25],
+        "Fırat": [38.25, 37.00], "Dicle": [40.55, 37.90], "Aras": [44.10, 39.95],
+        "Van Gölü": [43.00, 38.63], "Tuz Gölü": [33.40, 38.75], "Beyşehir Gölü": [31.50, 37.70],
+        "Eğirdir Gölü": [30.85, 37.85], "İznik Gölü": [29.52, 40.43], "Sapanca Gölü": [30.26, 40.72],
+        "Manyas (Kuş) Gölü": [28.00, 40.18], "Burdur Gölü": [30.20, 37.73],
+        "Bafra Ovası": [35.90, 41.50], "Çarşamba Ovası": [36.72, 41.15], "Çukurova": [35.40, 36.85],
+        "Harran Ovası": [39.05, 36.86], "Ergene Ovası": [26.90, 41.15],
+        "Kapadokya": [34.83, 38.67], "Zigana Geçidi": [39.40, 40.65], "Kop Geçidi": [40.20, 40.05],
+        "Gülek Boğazı": [34.80, 37.28], "Sertavul Geçidi": [33.30, 36.90], "Belen Geçidi": [36.22, 36.48],
+        "Kızılırmak → Bafra": [35.90, 41.57], "Yeşilırmak → Çarşamba": [36.72, 41.20]
+    };
+
     var TREE = [
         {
             id: "yer", title: "Yer şekilleri", icon: "🗻",
@@ -390,6 +443,22 @@
 
     ITEMS.forEach(function (it, i) { it.id = "m" + i; });
 
+    function project(lon, lat) {
+        return {
+            x: ((lon - 25.6) / (44.9 - 25.6)) * 1000,
+            y: ((42.15 - lat) / (42.15 - 35.85)) * 422
+        };
+    }
+
+    ITEMS.forEach(function (it) {
+        var ll = ITEM_LL[it.name];
+        if (!ll && it.codes && it.codes[0]) ll = PROVINCE_LL[it.codes[0]];
+        if (!ll) ll = [35.2, 39.0];
+        var p = project(ll[0], ll[1]);
+        it.x = p.x;
+        it.y = p.y;
+    });
+
     function topicIdOf(it) { return it.topic; }
 
     function itemsForTopic(topicId) {
@@ -485,6 +554,55 @@
 
     function countFor(topicId) { return itemsForTopic(topicId).length; }
 
+    function jitterPins(pins) {
+        var buckets = {};
+        pins.forEach(function (p) {
+            var key = Math.round(p.x / 14) + "," + Math.round(p.y / 14);
+            (buckets[key] = buckets[key] || []).push(p);
+        });
+        Object.keys(buckets).forEach(function (k) {
+            var g = buckets[k];
+            if (g.length < 2) return;
+            g.forEach(function (p, i) {
+                var a = (i / g.length) * Math.PI * 2;
+                p.x += Math.cos(a) * (12 + g.length * 2);
+                p.y += Math.sin(a) * (10 + g.length * 2);
+            });
+        });
+        return pins;
+    }
+
+    function topicLayer(topicId) {
+        var pins = itemsForTopic(topicId).map(function (it) {
+            return { id: it.id, name: it.name, x: it.x, y: it.y };
+        });
+        jitterPins(pins);
+        var pad = 70;
+        var xs = pins.map(function (p) { return p.x; });
+        var ys = pins.map(function (p) { return p.y; });
+        var minX = Math.max(0, Math.min.apply(null, xs) - pad);
+        var minY = Math.max(0, Math.min.apply(null, ys) - pad);
+        var maxX = Math.min(1000, Math.max.apply(null, xs) + pad);
+        var maxY = Math.min(422, Math.max.apply(null, ys) + pad);
+        if (maxX - minX < 280) {
+            var cx = (minX + maxX) / 2;
+            minX = Math.max(0, cx - 140);
+            maxX = Math.min(1000, cx + 140);
+        }
+        if (maxY - minY < 180) {
+            var cy = (minY + maxY) / 2;
+            minY = Math.max(0, cy - 90);
+            maxY = Math.min(422, cy + 90);
+        }
+        if (pins.length > 20) {
+            minX = 0; minY = 0; maxX = 1000; maxY = 422;
+        }
+        return {
+            pins: pins,
+            viewBox: minX + " " + minY + " " + (maxX - minX) + " " + (maxY - minY)
+        };
+    }
+
     var api = {
         REGION_LABEL: REGION_LABEL,
         PROVINCE_REGION: PROVINCE_REGION,
@@ -503,6 +621,7 @@
         tapChoices: tapChoices,
         isTapCorrect: isTapCorrect,
         countFor: countFor,
+        topicLayer: topicLayer,
         PARK_SOURCE: "Tarım ve Orman Bakanlığı DKMP — 54 milli park (2026)"
     };
 export const MapQuiz = api;

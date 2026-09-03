@@ -813,7 +813,7 @@ function MapTopics(props) {
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
             <h1 className="text-3xl font-black tracking-tight gradient-text">Harita oyunu</h1>
-            <p className="text-sm text-stone-400 mt-1 mb-6">Konu seç, ilgili iller parlasın, yerini haritada bul. Sonra zincir bilgi sorusu gelebilir.</p>
+            <p className="text-sm text-stone-400 mt-1 mb-6">Her konunun kendi nokta haritası var. Çakışan iller yok; doğru noktayı seç.</p>
             {tree.map(function (g) {
                 return (
                     <div key={g.id} className="mb-6">
@@ -844,8 +844,8 @@ function MapPlay(props) {
     const items = useMemo(function () {
         return quiz ? quiz.pickRound(props.topicId, 8) : [];
     }, [props.seed, props.topicId]);
-    const focus = useMemo(function () {
-        return quiz ? quiz.focusCodes(props.topicId) : [];
+    const layer = useMemo(function () {
+        return quiz && quiz.topicLayer ? quiz.topicLayer(props.topicId) : { pins: [], viewBox: "0 0 1000 422" };
     }, [props.topicId]);
     const [idx, setIdx] = useState(0);
     const [picked, setPicked] = useState(null);
@@ -891,9 +891,14 @@ function MapPlay(props) {
         if (!pickedRef.current) return;
         var stepNow = items[idx];
         if (stepNow && stepNow.type === "map" && quiz) {
-            var codes = quiz.resolveCodes(stepNow.item);
+            var loc = (layer.pins || []).filter(function (p) { return p.id === stepNow.item.id; })[0];
             setCleared(function (prev) {
-                return prev.concat([{ codes: codes, label: stepNow.item.name }]);
+                return prev.concat([{
+                    id: stepNow.item.id,
+                    label: stepNow.item.name,
+                    x: loc ? loc.x : stepNow.item.x,
+                    y: loc ? loc.y : stepNow.item.y
+                }]);
             });
         }
         pickedRef.current = null;
@@ -909,23 +914,22 @@ function MapPlay(props) {
         });
     }
 
-    function chooseMap(code) {
+    function choosePin(pinId) {
         if (pickedRef.current || !quiz) return;
         var step = items[idx];
         if (!step || step.type !== "map") return;
-        var c = String(code).toUpperCase();
-        var hit = quiz.isCorrect(step.item, c);
+        var hit = pinId === step.item.id;
+        var clicked = (layer.pins || []).filter(function (p) { return p.id === pinId; })[0];
+        var right = (layer.pins || []).filter(function (p) { return p.id === step.item.id; })[0];
         var nextPins = [];
-        if (hit) {
-            nextPins.push({ code: c, text: step.item.name, kind: "ok" });
+        if (hit && clicked) {
+            nextPins.push({ x: clicked.x, y: clicked.y, text: step.item.name, kind: "ok" });
         } else {
-            nextPins.push({ code: c, text: quiz.nameOf(c), kind: "bad" });
-            quiz.resolveCodes(step.item).forEach(function (okc) {
-                nextPins.push({ code: okc, text: step.item.name, kind: "ok" });
-            });
+            if (clicked) nextPins.push({ x: clicked.x, y: clicked.y, text: clicked.name, kind: "bad" });
+            if (right) nextPins.push({ x: right.x, y: right.y, text: step.item.name, kind: "ok" });
         }
-        pickedRef.current = c;
-        setPicked(c);
+        pickedRef.current = pinId;
+        setPicked(pinId);
         setOkHit(hit);
         setPins(nextPins);
         if (hit) setScore(function (s) { return s + 1; });
@@ -961,57 +965,62 @@ function MapPlay(props) {
         if (!el || !svgHtml || done) return;
         var step = items[idx];
         var svg = el.querySelector("svg");
-        var need = (quiz && step && step.type === "map") ? quiz.resolveCodes(step.item) : [];
-        var doneCodes = {};
-        cleared.forEach(function (row) {
-            (row.codes || []).forEach(function (c) { doneCodes[c] = row.label; });
-        });
+        if (!svg) return;
+        svg.setAttribute("viewBox", layer.viewBox || "0 0 1000 422");
         var paths = el.querySelectorAll("path[id]");
         Array.prototype.forEach.call(paths, function (p) {
-            var id = String(p.getAttribute("id") || "").toUpperCase();
-            var cls = "map-dim";
-            if (need.indexOf(id) >= 0) cls = "map-focus";
-            else if (doneCodes[id]) cls = "map-done";
-            else if (focus.indexOf(id) >= 0) cls = "map-focus";
-            if (picked && quiz && step && step.type === "map") {
-                if (quiz.isCorrect(step.item, id)) cls = "hit-ok";
-                else if (picked === id) cls = "hit-bad";
-            }
-            p.setAttribute("class", cls);
+            p.setAttribute("class", "map-stage");
         });
-        if (svg) {
-            var old = svg.querySelector("g.map-float-labels");
-            if (old) old.remove();
-            var g = document.createElementNS("http://www.w3.org/2000/svg", "g");
-            g.setAttribute("class", "map-float-labels");
-            function addPin(code, text, kind) {
-                var path = svg.querySelector('path[id="' + code + '"]');
-                if (!path || !text) return;
-                var b = path.getBBox();
-                var t = document.createElementNS("http://www.w3.org/2000/svg", "text");
-                t.setAttribute("x", String(b.x + b.width / 2));
-                t.setAttribute("y", String(b.y + b.height / 2));
-                t.setAttribute("class", "map-pin map-pin-" + kind);
-                t.setAttribute("font-size", String(Math.max(12, Math.min(22, b.width * 0.42))));
-                t.textContent = text;
-                g.appendChild(t);
+        var oldDots = svg.querySelector("g.topic-dots");
+        if (oldDots) oldDots.remove();
+        var oldLabs = svg.querySelector("g.map-float-labels");
+        if (oldLabs) oldLabs.remove();
+        var doneIds = {};
+        cleared.forEach(function (row) { doneIds[row.id] = true; });
+        var dots = document.createElementNS("http://www.w3.org/2000/svg", "g");
+        dots.setAttribute("class", "topic-dots");
+        (layer.pins || []).forEach(function (pin) {
+            var c = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            c.setAttribute("cx", String(pin.x));
+            c.setAttribute("cy", String(pin.y));
+            c.setAttribute("r", "12");
+            c.setAttribute("data-pin", pin.id);
+            var cls = "topic-dot";
+            if (doneIds[pin.id]) cls += " topic-dot-done";
+            if (picked && step && step.type === "map") {
+                if (pin.id === step.item.id) cls += " topic-dot-ok";
+                else if (pin.id === picked) cls += " topic-dot-bad";
             }
-            cleared.forEach(function (row) {
-                if (row.codes && row.codes[0]) addPin(row.codes[0], row.label, "done");
-            });
-            pins.forEach(function (pin) { addPin(pin.code, pin.text, pin.kind); });
-            svg.appendChild(g);
+            c.setAttribute("class", cls);
+            dots.appendChild(c);
+        });
+        svg.appendChild(dots);
+        var g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+        g.setAttribute("class", "map-float-labels");
+        function addLab(x, y, text, kind) {
+            if (!text) return;
+            var t = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            t.setAttribute("x", String(x));
+            t.setAttribute("y", String(y - 16));
+            t.setAttribute("class", "map-pin map-pin-" + kind);
+            t.setAttribute("font-size", "15");
+            t.textContent = text;
+            g.appendChild(t);
         }
+        cleared.forEach(function (row) { addLab(row.x, row.y, row.label, "done"); });
+        pins.forEach(function (pin) { addLab(pin.x, pin.y, pin.text, pin.kind); });
+        svg.appendChild(g);
         function onClick(ev) {
-            var p = ev.target.closest ? ev.target.closest("path[id]") : null;
-            if (!p || pickedRef.current) return;
+            var n = ev.target.closest ? ev.target.closest("[data-pin]") : null;
+            if (!n || pickedRef.current) return;
             var stepNow = items[idx];
             if (!stepNow || stepNow.type !== "map") return;
-            chooseMap(p.getAttribute("id"));
+            if (n.classList && n.classList.contains("topic-dot-done")) return;
+            choosePin(n.getAttribute("data-pin"));
         }
         el.addEventListener("click", onClick);
         return function () { el.removeEventListener("click", onClick); };
-    }, [svgHtml, idx, picked, items, done, focus, cleared, pins]);
+    }, [svgHtml, idx, picked, items, done, layer, cleared, pins]);
 
     useEffect(function () {
         return function () { if (timerRef.current) clearTimeout(timerRef.current); };
@@ -1073,7 +1082,7 @@ function MapPlay(props) {
                 <div className="study-card-body">
                     <p className="text-[17px] leading-relaxed mb-3 font-semibold">{step.prompt}</p>
                     {step.type === "map" ? (
-                        <p className="text-xs text-stone-400 mb-3">Parlak iller henüz aranan hedefler. Bulduğun yer solar ve adı kalır. Tıklayınca 5–6 sn bilgi durur.</p>
+                        <p className="text-xs text-stone-400 mb-3">Bu konunun kendi haritası: altın noktalar hedefler. İller sadece zemin. Doğru noktayı seç; bulunan solar.</p>
                     ) : (
                         <p className="text-xs text-stone-400 mb-3">{step.name} ile bağlantı.</p>
                     )}
@@ -1116,7 +1125,7 @@ function MapPlay(props) {
                         <p className={"mt-3 text-sm font-semibold " + (okHit ? "text-emerald-600" : "text-rose-600")}>
                             {okHit
                                 ? ("Doğru — " + (step.type === "mcq" ? step.answer : (step.item.name + " · " + quiz.answerLabel(step.item))))
-                                : (step.type === "mcq" ? ("Doğrusu: " + step.answer) : ("Burası " + quiz.nameOf(picked) + " · doğrusu: " + step.item.name + " (" + quiz.answerLabel(step.item) + ")"))}
+                                : (step.type === "mcq" ? ("Doğrusu: " + step.answer) : ("Yanlış nokta · doğrusu: " + step.item.name))}
                         </p>
                     ) : null}
                     <p className="mt-2 text-[10px] text-stone-400">Harita: Simplemaps · {quiz.PARK_SOURCE}</p>
