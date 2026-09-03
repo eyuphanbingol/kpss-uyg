@@ -163,6 +163,7 @@
     <script src="js/store.js?v=23"></script>
     <script src="js/planner.js?v=17"></script>
     <script src="js/clozeEngine.js?v=1"></script>
+    <script src="js/mapQuiz.js?v=1"></script>
     <script src="js/scoreEngine.js?v=8"></script>
     <script src="js/paymentClient.js?v=14"></script>
     <script src="js/notificationEngine.js?v=9"></script>
@@ -628,6 +629,27 @@
         .study-card-body .flex-wrap {
             flex-wrap: wrap !important;
         }
+        .tr-map-wrap {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 16px;
+            background: #eef4ef;
+            touch-action: manipulation;
+        }
+        .tr-map-wrap svg.tr-map,
+        .tr-map-wrap svg {
+            width: 100%;
+            height: auto;
+            display: block;
+            fill: #7BAE8A;
+            stroke: #fff;
+            stroke-width: 0.6;
+        }
+        .tr-map-wrap path { cursor: pointer; fill: #7BAE8A !important; }
+        .tr-map-wrap path:hover { fill: #1D8A99 !important; }
+        .tr-map-wrap path.hit-ok { fill: #059669 !important; }
+        .tr-map-wrap path.hit-bad { fill: #E11D48 !important; }
+        html.dark .tr-map-wrap { background: #1a2420; }
         .cloze-blank {
             display: inline-block;
             min-width: 4.2rem;
@@ -769,7 +791,7 @@
 
 <body class="app-bg min-h-screen text-slate-800 antialiased transition-colors duration-300">
     <div id="root"></div>
-    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=56"></script>
+    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=57"></script>
     <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.getRegistrations().then(function (regs) {

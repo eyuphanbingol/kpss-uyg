@@ -9,7 +9,7 @@ import OnboardingScreen from "./screens/OnboardingScreen";
 import BugunScreen from "./screens/BugunScreen";
 import ProgramScreen from "./screens/ProgramScreen";
 import { DersHomeScreen, KonuHubScreen, KonuListScreen } from "./screens/DerslerScreens";
-import { AlistirmalarHomeScreen, AlistirmaKonuListScreen, ClozePlayScreen } from "./screens/AlistirmalarScreens";
+import { AlistirmalarHomeScreen, AlistirmaDersListScreen, AlistirmaKonuListScreen, ClozePlayScreen, MapPlayScreen } from "./screens/AlistirmalarScreens";
 import EksiklerScreen from "./screens/EksiklerScreen";
 import DenemeScreen from "./screens/DenemeScreen";
 import BenScreen from "./screens/BenScreen";
@@ -241,8 +241,10 @@ function Gate() {
                 <Stack.Screen name="Program" component={ProgramScreen} options={modalOptions} />
                 <Stack.Screen name="KonuList" component={KonuListScreen} options={modalOptions} />
                 <Stack.Screen name="KonuHub" component={KonuHubScreen} options={modalOptions} />
+                <Stack.Screen name="AlistirmaDersList" component={AlistirmaDersListScreen} options={modalOptions} />
                 <Stack.Screen name="AlistirmaKonuList" component={AlistirmaKonuListScreen} options={modalOptions} />
                 <Stack.Screen name="ClozePlay" component={ClozePlayScreen} options={modalOptions} />
+                <Stack.Screen name="MapPlay" component={MapPlayScreen} options={modalOptions} />
                 <Stack.Screen name="Notes" component={NotesScreen} options={modalOptions} />
                 <Stack.Screen name="Test" component={TestScreen} options={modalOptions} />
 
