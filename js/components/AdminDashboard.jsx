@@ -63,6 +63,26 @@
         return map[level] || "bg-stone-100 text-stone-700 dark:bg-stone-800 dark:text-stone-300";
     }
 
+    function parseAnnounceRow(row) {
+        var raw = String((row && row.body) || "");
+        var exp = row && row.expires_at;
+        var m = raw.match(/^<!--kpss-exp:([^>]+)-->/);
+        if (m) {
+            exp = exp || m[1];
+            raw = raw.slice(m[0].length);
+        }
+        var ts = exp ? new Date(exp).getTime() : NaN;
+        var live = !exp || (isFinite(ts) && ts > Date.now());
+        return {
+            id: row && row.id,
+            text: raw.trim(),
+            expiresAt: exp || null,
+            createdAt: row && row.created_at,
+            published: row && row.published !== false,
+            live: live && (row && row.published !== false)
+        };
+    }
+
     function getStatusBadge(lastStudyAt) {
         if (!lastStudyAt) return { label: "Hiç çalışmamış", color: "bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300" };
         var diff = (Date.now() - new Date(lastStudyAt).getTime()) / (1000 * 60 * 60 * 24);
@@ -84,6 +104,7 @@
         const [hard, setHard] = useState([]);
         const [announce, setAnnounce] = useState("");
         const [announceHours, setAnnounceHours] = useState("24");
+        const [announceList, setAnnounceList] = useState([]);
         const [detail, setDetail] = useState(null);
         const [q, setQ] = useState("");
         const [filter, setFilter] = useState("all");
@@ -165,7 +186,26 @@
                     setEduReqs(list);
                 }
 
-                // İstatistikler
+                var r7 = await sb.functions.invoke("admin-action", { body: { action: "list_announcements" } });
+                var alist = [];
+                if (!r7.error) {
+                    var ad = r7.data;
+                    if (typeof ad === "string") {
+                        try { ad = JSON.parse(ad); } catch (e) { ad = null; }
+                    }
+                    if (Array.isArray(ad)) alist = ad;
+                    else if (ad && Array.isArray(ad.data)) alist = ad.data;
+                    else if (ad && ad.data && Array.isArray(ad.data.data)) alist = ad.data.data;
+                }
+                if (!alist.length) {
+                    var rA = await sb.from("app_announcements").select("id,body,published,created_at,expires_at").order("created_at", { ascending: false }).limit(80);
+                    if (rA.error) {
+                        rA = await sb.from("app_announcements").select("id,body,published,created_at").order("created_at", { ascending: false }).limit(80);
+                    }
+                    if (!rA.error) alist = rA.data || [];
+                }
+                setAnnounceList(alist.map(parseAnnounceRow));
+
                 var r6 = await sb.rpc("admin_stats");
                 if (!r6.error && r6.data) setStats(r6.data);
 
@@ -895,13 +935,53 @@
                                     </div>
                                 </div>
 
+                                <div className="mt-6">
+                                    <h2 className="text-sm font-black uppercase tracking-widest text-stone-400 mb-3">Yayınlanan duyurular</h2>
+                                    {!announceList.length ? (
+                                        <p className="text-sm text-stone-400">Henüz kayıt yok.</p>
+                                    ) : (
+                                        <ul className="space-y-3">
+                                            {announceList.map(function (a) {
+                                                return (
+                                                    <li key={a.id || a.createdAt} className="rounded-2xl glass p-4">
+                                                        <div className="flex flex-wrap items-start justify-between gap-3">
+                                                            <div className="min-w-0 flex-1">
+                                                                <p className="text-sm font-semibold leading-snug">{a.text || "—"}</p>
+                                                                <p className="text-xs text-stone-400 mt-2">
+                                                                    {fmtDateTime(a.createdAt)}
+                                                                    {a.expiresAt ? " · bitiş " + fmtDateTime(a.expiresAt) : " · süresiz"}
+                                                                </p>
+                                                            </div>
+                                                            <div className="flex items-center gap-2 shrink-0">
+                                                                <span className={"text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded-md " + (a.live ? "bg-emerald-100 text-emerald-700" : "bg-stone-200 text-stone-600")}>
+                                                                    {a.live ? "Yayında" : "Süresi doldu"}
+                                                                </span>
+                                                                <button type="button" disabled={busy || !a.id}
+                                                                    onClick={function () {
+                                                                        if (!a.id) return;
+                                                                        if (window.confirm("Bu duyuru silinsin mi? Bant da kalkar.")) {
+                                                                            act("delete_announce", { id: a.id });
+                                                                        }
+                                                                    }}
+                                                                    className="px-3 py-1.5 rounded-xl border border-rose-200 text-rose-700 text-xs font-semibold hover:bg-rose-50 disabled:opacity-40">
+                                                                    Sil
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                );
+                                            })}
+                                        </ul>
+                                    )}
+                                </div>
+
                                 <div className="mt-6 rounded-2xl glass p-5 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/20 dark:to-purple-950/20 border border-indigo-200 dark:border-indigo-800/30">
                                     <p className="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 mb-2">💡 İpucu</p>
                                     <ul className="text-xs text-stone-600 dark:text-stone-400 space-y-1">
                                         <li>• Duyuru tüm kullanıcılara gönderilir</li>
                                         <li>• "Bugün" ekranının üst kısmında görünür</li>
-                                        <li>• Süreyi sen seçersin; bitince bant kendiliğinden kalkar</li>
-                                        <li>• Yeni duyuru eskisinin yerini alır</li>
+                                        <li>• Tüm yayınlar aşağıda durur; vakti gelince sen silersin</li>
+                                        <li>• Süre dolunca öğrenci bandı kalkar, kayıt panelde kalır</li>
                                     </ul>
                                 </div>
                             </div>

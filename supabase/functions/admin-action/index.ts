@@ -208,6 +208,24 @@ Deno.serve(async (req) => {
     const del = await admin.auth.admin.deleteUser(uid);
     if (del.error) return json({ ok: false, error: del.error.message }, 500);
     return json({ ok: true });
+  } else if (action === "list_announcements") {
+    let listed = await admin.from("app_announcements")
+      .select("id,body,published,created_at,expires_at,created_by")
+      .order("created_at", { ascending: false })
+      .limit(80);
+    if (listed.error && /expires_at/i.test(listed.error.message || "")) {
+      listed = await admin.from("app_announcements")
+        .select("id,body,published,created_at,created_by")
+        .order("created_at", { ascending: false })
+        .limit(80);
+    }
+    if (listed.error) return json({ ok: false, error: listed.error.message }, 500);
+    return json({ ok: true, data: listed.data || [] });
+  } else if (action === "delete_announce") {
+    const id = String(body.id || "").trim();
+    if (!id) return json({ ok: false, error: "missing id" }, 400);
+    const delA = await admin.from("app_announcements").delete().eq("id", id);
+    if (delA.error) return json({ ok: false, error: delA.error.message }, 500);
   } else if (action === "inspect_user") {
     const { data } = await admin.from("student_states").select("nickname,education_level,target_type,premium,questions_total,last_study_at,payload,platform,role").eq("user_id", body.user_id).maybeSingle();
     const p = data?.payload || {};

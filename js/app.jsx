@@ -2125,7 +2125,10 @@ function App() {
                     exp = m[1];
                     raw = raw.slice(m[0].length);
                 }
-                if (exp && new Date(exp).getTime() <= now) continue;
+                if (exp) {
+                    var ts = new Date(exp).getTime();
+                    if (!isFinite(ts) || ts <= now) continue;
+                }
                 if (raw.trim()) return raw.trim();
             }
             return "";
@@ -2133,10 +2136,16 @@ function App() {
         function loadBanner() {
             var sb = window.SupabaseClient && window.SupabaseClient.get && window.SupabaseClient.get();
             if (!sb) return;
-            sb.from("app_announcements").select("body,created_at").eq("published", true).order("created_at", { ascending: false }).limit(10)
+            function apply(r) {
+                if (r.error) return;
+                setAnnounce(pickBanner(r.data));
+            }
+            sb.from("app_announcements").select("body,created_at,expires_at").eq("published", true).order("created_at", { ascending: false }).limit(20)
                 .then(function (r) {
-                    if (r.error) return;
-                    setAnnounce(pickBanner(r.data));
+                    if (r.error && /expires_at/i.test(r.error.message || "")) {
+                        return sb.from("app_announcements").select("body,created_at").eq("published", true).order("created_at", { ascending: false }).limit(20).then(apply);
+                    }
+                    apply(r);
                 });
         }
         loadBanner();
