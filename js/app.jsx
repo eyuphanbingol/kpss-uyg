@@ -644,6 +644,7 @@ function AlistirmaKonuList(props) {
     const t = themeFor(ders, props.isDark);
     const konular = Object.keys(props.kpssData[ders] || {});
     const engine = window.ClozeEngine;
+    const topics = (props.student && props.student.topics && props.student.topics[ders]) || {};
     return (
         <Shell>
             <div className="flex justify-between mb-4">
@@ -654,25 +655,28 @@ function AlistirmaKonuList(props) {
                 <div className="h-14 w-14 rounded-2xl ders-icon flex items-center justify-center text-2xl">{t.icon}</div>
                 <div>
                     <h1 className="text-3xl font-black">{ders}</h1>
-                    <p className="text-zinc-500 text-sm">Konu seç, boşlukları doldur.</p>
+                    <p className="text-zinc-500 text-sm">Derslerle aynı sıra. Konu bitince burası da açılır.</p>
                 </div>
             </div>
             <div className="space-y-3">
                 {konular.map(function (konu, idx) {
                     const kd = props.kpssData[ders][konu] || {};
                     const n = engine ? engine.countForKonu(kd) : 0;
+                    const tp = topics[konu] || {};
+                    const open = StudentStore.isKonuOpen(ders, konular, idx, props.kpssData);
+                    const done = StudentStore.topicComplete(tp, kd);
                     return (
-                        <button key={konu} onClick={function () { props.onKonu(konu); }}
-                            className="w-full text-left p-5 panel rounded-3xl">
+                        <button key={konu} disabled={!open} onClick={function () { if (open) props.onKonu(konu); }}
+                            className={"w-full text-left p-5 panel rounded-3xl " + (open ? "" : "opacity-45")}>
                             <div className="flex justify-between items-start gap-3">
                                 <div className="flex gap-3 min-w-0">
-                                    <div className="h-10 w-10 rounded-xl flex items-center justify-center font-stat text-sm shrink-0 bg-teal-50 text-teal-800">{idx + 1}</div>
+                                    <div className={"h-10 w-10 rounded-xl flex items-center justify-center font-stat text-sm shrink-0 " + (done ? "bg-emerald-50 text-emerald-600" : (open ? "bg-teal-50 text-teal-800" : "bg-stone-100 text-stone-400"))}>{done ? "✓" : (open ? idx + 1 : "🔒")}</div>
                                     <div className="min-w-0">
                                         <div className="font-bold text-slate-800 dark:text-slate-100">{konu}</div>
-                                        <p className="text-xs text-slate-400 mt-1">{n ? n + " boşluk" : "Henüz alıştırma yok"}</p>
+                                        <p className="text-xs text-slate-400 mt-1">{open ? (n ? n + " boşluk" : "Henüz alıştırma yok") : "Önce önceki konuyu bitir"}</p>
                                     </div>
                                 </div>
-                                <span className="text-stone-300 text-lg shrink-0">→</span>
+                                {open ? <span className="text-stone-300 text-lg shrink-0">→</span> : null}
                             </div>
                         </button>
                     );
@@ -2369,15 +2373,22 @@ function App() {
             body = <AlistirmaDersList kpssData={kpssData} isDark={isDark} toggleDark={toggleDark}
                 onBack={function () { setDrillKind(null); }}
                 onDers={function (d) { setDrillDers(d); setDrillKonu(null); }} />;
-        } else if (!drillKonu) {
-            body = <AlistirmaKonuList kpssData={kpssData} ders={drillDers} isDark={isDark} toggleDark={toggleDark}
-                onBack={function () { setDrillDers(null); }}
-                onKonu={function (k) { setDrillKonu(k); setDrillSeed(Date.now()); }} />;
         } else {
-            body = <ClozePlay ders={drillDers} konu={drillKonu} konuData={drillData} seed={drillSeed}
-                isDark={isDark} toggleDark={toggleDark}
-                onBack={function () { setDrillKonu(null); }}
-                onAgain={function () { setDrillSeed(Date.now()); }} />;
+            var clozeKeys = Object.keys(kpssData[drillDers] || {});
+            var canPlayCloze = drillKonu && StudentStore.isKonuOpen(drillDers, clozeKeys, clozeKeys.indexOf(drillKonu), kpssData);
+            if (!canPlayCloze) {
+                body = <AlistirmaKonuList kpssData={kpssData} student={student} ders={drillDers} isDark={isDark} toggleDark={toggleDark}
+                    onBack={function () { setDrillDers(null); }}
+                    onKonu={function (k) {
+                        if (!StudentStore.isKonuOpen(drillDers, clozeKeys, clozeKeys.indexOf(k), kpssData)) return;
+                        setDrillKonu(k); setDrillSeed(Date.now());
+                    }} />;
+            } else {
+                body = <ClozePlay ders={drillDers} konu={drillKonu} konuData={drillData} seed={drillSeed}
+                    isDark={isDark} toggleDark={toggleDark}
+                    onBack={function () { setDrillKonu(null); }}
+                    onAgain={function () { setDrillSeed(Date.now()); }} />;
+            }
         }
     } else if (!selectedDers) {
         body = <DersHome kpssData={kpssData} student={student} plan={plan} isDark={isDark} toggleDark={toggleDark} onDers={function (d) { setSelectedDers(d); setSelectedKonu(null); }} />;

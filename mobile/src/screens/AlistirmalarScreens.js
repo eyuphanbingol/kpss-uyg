@@ -3,6 +3,7 @@ import { Pressable, Text, View, StyleSheet } from "react-native";
 import { useApp } from "../AppProvider";
 import { ClozeEngine } from "../lib/clozeEngine";
 import { MapQuiz } from "../lib/mapQuiz";
+import { StudentStore } from "../lib/store";
 import { go } from "../nav";
 import { Card, PrimaryButton, ScrollScreen } from "../ui";
 import { colors, DERS_ICON } from "../lib/theme";
@@ -86,20 +87,27 @@ export function AlistirmaKonuListScreen({ route, navigation }) {
                 <Text style={[styles.back, isDark && styles.textMuted]}>← Dersler</Text>
             </Pressable>
             <Text style={[styles.konuTitle, isDark && styles.textLight]}>{ders}</Text>
-            <Text style={[styles.subtitle, isDark && styles.textMuted]}>Konu seç, boşlukları doldur.</Text>
+            <Text style={[styles.subtitle, isDark && styles.textMuted]}>Derslerle aynı sıra. Konu bitince burası da açılır.</Text>
             {konular.map(function (konu, idx) {
                 var kd = app.kpssData[ders][konu] || {};
                 var n = ClozeEngine.countForKonu(kd);
+                var tp = ((app.student.topics && app.student.topics[ders]) || {})[konu] || {};
+                var open = StudentStore.isKonuOpen(ders, konular, idx, app.kpssData);
+                var done = StudentStore.topicComplete(tp, kd);
                 return (
-                    <Pressable key={konu} onPress={function () { go(navigation, "ClozePlay", { ders: ders, konu: konu }); }}>
-                        <Card style={[styles.dersCard, isDark && styles.cardDark]}>
+                    <Pressable key={konu} disabled={!open} onPress={function () {
+                        if (open) go(navigation, "ClozePlay", { ders: ders, konu: konu });
+                    }}>
+                        <Card style={[styles.dersCard, isDark && styles.cardDark, !open && { opacity: 0.45 }]}>
                             <View style={styles.row}>
-                                <View style={styles.num}><Text style={styles.numText}>{idx + 1}</Text></View>
+                                <View style={[styles.num, done && { backgroundColor: "#ECFDF5" }, !open && { backgroundColor: "#F5F5F4" }]}>
+                                    <Text style={[styles.numText, done && { color: "#059669" }, !open && { color: "#A8A29E" }]}>{done ? "✓" : open ? (idx + 1) : "🔒"}</Text>
+                                </View>
                                 <View style={{ flex: 1 }}>
                                     <Text style={[styles.dersName, isDark && styles.textLight]}>{konu}</Text>
-                                    <Text style={[styles.meta, isDark && styles.textMuted]}>{n ? n + " boşluk" : "Henüz yok"}</Text>
+                                    <Text style={[styles.meta, isDark && styles.textMuted]}>{open ? (n ? n + " boşluk" : "Henüz yok") : "Önce önceki konuyu bitir"}</Text>
                                 </View>
-                                <Text style={[styles.arrow, isDark && styles.textMuted]}>→</Text>
+                                {open ? <Text style={[styles.arrow, isDark && styles.textMuted]}>→</Text> : null}
                             </View>
                         </Card>
                     </Pressable>
@@ -114,6 +122,9 @@ export function ClozePlayScreen({ route, navigation }) {
     var konu = route.params.konu;
     var app = useApp();
     var isDark = app.dark;
+    var konular = Object.keys(app.kpssData[ders] || {});
+    var konuIdx = konular.indexOf(konu);
+    var open = StudentStore.isKonuOpen(ders, konular, konuIdx, app.kpssData);
     var kd = ((app.kpssData[ders] || {})[konu]) || {};
     var _seed = useState(0);
     var seed = _seed[0];
@@ -137,6 +148,12 @@ export function ClozePlayScreen({ route, navigation }) {
     useEffect(function () {
         setIdx(0); setPicked(null); setScore(0); setDone(false);
     }, [seed]);
+
+    useEffect(function () {
+        if (!open) navigation.goBack();
+    }, [open]);
+
+    if (!open) return null;
 
     if (!list.length) {
         return (
