@@ -18,6 +18,7 @@ export default function TestScreen({ route, navigation }) {
     var seconds = route.params.seconds || null;
     var ders = route.params.ders;
     var konu = route.params.konu;
+    var testNo = route.params.testNo;
 
     // ---------- State ----------
     var _i = useState(0);
@@ -152,7 +153,7 @@ export default function TestScreen({ route, navigation }) {
             <ScrollScreen>
                 {/* Header */}
                 <View style={styles.resultHeader}>
-                    <Text style={styles.resultTitle}>📊 Tur Bitti</Text>
+                    <Text style={styles.resultTitle}>{testNo ? ("Test " + testNo + " bitti") : "Tur Bitti"}</Text>
                     <Badge 
                         type={oran >= 85 ? "success" : oran >= 60 ? "primary" : oran >= 40 ? "warning" : "danger"}
                         title={oran >= 85 ? "Mükemmel" : oran >= 60 ? "İyi" : oran >= 40 ? "Orta" : "Gelişmeli"}
@@ -244,7 +245,7 @@ export default function TestScreen({ route, navigation }) {
                     </Pressable>
                     <View style={styles.testInfo}>
                         <Text style={styles.testCounter}>
-                            {qIndex + 1}/{items.length}
+                            {testNo ? ("Test " + testNo + " · ") : ""}{qIndex + 1}/{items.length}
                         </Text>
                         <Text style={styles.testScore}>
                             ✓ {score}

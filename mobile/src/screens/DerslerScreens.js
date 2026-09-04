@@ -8,6 +8,26 @@ import { go } from "../nav";
 import { Card, ScrollScreen, Badge } from "../ui";
 import { colors, DERS_ICON, masteryLabel } from "../lib/theme";
 
+function itemsFromSorular(ders, konu, sorular) {
+    return (sorular || []).map(function (q, idx) {
+        var id = q.id != null ? q.id : idx;
+        return { ders: ders, konu: konu, q: q, id: id, qid: StudentStore.qid(ders, konu, id) };
+    });
+}
+
+function openTopicPack(navigation, ders, konu, sorular, packIdx) {
+    var packs = StudentStore.topicTestPacks(itemsFromSorular(ders, konu, sorular));
+    var pack = packs[packIdx == null ? 0 : packIdx];
+    if (!pack) return;
+    go(navigation, "Test", {
+        mode: "topic",
+        ders: ders,
+        konu: konu,
+        testNo: pack.no,
+        items: pack.items
+    });
+}
+
 // ============================================================
 // DERS HOME SCREEN
 // ============================================================
@@ -194,6 +214,7 @@ export function KonuHubScreen({ route, navigation }) {
     var m = masteryLabel(tp.mastery);
     var notlar = kd.notlar || [];
     var sorular = kd.sorular || [];
+    var packs = StudentStore.topicTestPacks(sorular);
 
     return (
         <ScrollScreen dark={isDark}>
@@ -241,29 +262,33 @@ export function KonuHubScreen({ route, navigation }) {
                 </Card>
             </Pressable>
 
-            {/* Test Button */}
-            <Pressable onPress={function () {
-                if (!sorular.length) return;
-                go(navigation, "Test", {
-                    mode: "topic",
-                    ders: ders,
-                    konu: konu,
-                    items: sorular.map(function (q, idx) {
-                        var id = q.id != null ? q.id : idx;
-                        return { ders: ders, konu: konu, q: q, id: id, qid: StudentStore.qid(ders, konu, id) };
-                    })
-                });
-            }}>
-                <Card style={[styles.hubTestCard, isDark && styles.cardDark]}>
-                    <Text style={styles.hubTestIcon}>📝</Text>
-                    <Text style={[styles.hubTestTitle, isDark && styles.textLight]}>
-                        Testi Çöz
+            {/* Test packs */}
+            {packs.length ? (
+                <View>
+                    <Text style={[styles.hubStat, isDark && styles.textMuted, { marginBottom: 8 }]}>
+                        {sorular.length} soru · 25’lik testler
                     </Text>
-                    <Text style={[styles.hubTestDesc, isDark && styles.textMuted]}>
-                        {sorular.length} soru · sonuç hakimiyeti günceller
-                    </Text>
-                </Card>
-            </Pressable>
+                    {packs.map(function (p, pi) {
+                        return (
+                            <Pressable key={p.no} onPress={function () {
+                                openTopicPack(navigation, ders, konu, sorular, pi);
+                            }}>
+                                <Card style={[styles.hubTestCard, isDark && styles.cardDark]}>
+                                    <Text style={styles.hubTestIcon}>{p.no}</Text>
+                                    <Text style={[styles.hubTestTitle, isDark && styles.textLight]}>
+                                        Test {p.no}
+                                    </Text>
+                                    <Text style={[styles.hubTestDesc, isDark && styles.textMuted]}>
+                                        {p.items.length} soru
+                                    </Text>
+                                </Card>
+                            </Pressable>
+                        );
+                    })}
+                </View>
+            ) : (
+                <Text style={[styles.hubTestDesc, isDark && styles.textMuted]}>Bu konuya ait henüz soru yok.</Text>
+            )}
         </ScrollScreen>
     );
 }

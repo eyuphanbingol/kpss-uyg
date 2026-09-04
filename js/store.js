@@ -542,6 +542,16 @@
             else emit();
         },
         isEmptyProgress: isEmptyProgress,
+        topicTestPacks: function (items) {
+            var size = 25;
+            var list = items || [];
+            var out = [];
+            var i;
+            for (i = 0; i < list.length; i += size) {
+                out.push({ no: out.length + 1, items: list.slice(i, i + size) });
+            }
+            return out;
+        },
         topicComplete: function (t, kd) {
             t = t || {};
             kd = kd || {};

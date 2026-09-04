@@ -36,20 +36,27 @@ export default function NotesScreen({ route, navigation }) {
     // ---------- Go to Test ----------
     function goToTest() {
         StudentStore.markNotesComplete(ders, konu);
+        var packs = StudentStore.topicTestPacks(sorular.map(function (q, i) {
+            var id = q.id != null ? q.id : i;
+            return {
+                ders: ders,
+                konu: konu,
+                q: q,
+                id: id,
+                qid: StudentStore.qid(ders, konu, id)
+            };
+        }));
+        var pack = packs[0];
+        if (!pack) {
+            navigation.goBack();
+            return;
+        }
         navigation.replace("Test", {
             mode: "topic",
             ders: ders,
             konu: konu,
-            items: sorular.map(function (q, i) {
-                var id = q.id != null ? q.id : i;
-                return {
-                    ders: ders,
-                    konu: konu,
-                    q: q,
-                    id: id,
-                    qid: StudentStore.qid(ders, konu, id)
-                };
-            })
+            testNo: pack.no,
+            items: pack.items
         });
     }
 
