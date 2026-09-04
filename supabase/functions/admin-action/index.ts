@@ -181,11 +181,13 @@ Deno.serve(async (req) => {
     const existing = eduReqFromPayload(payload);
     const to = String(body.to || (existing && existing.to) || "").trim();
     if (!levels[to]) return json({ ok: false, error: "invalid level" }, 400);
-    const reqObj = { status: "approved", to: to, at: new Date().toISOString() };
-    const next = writeEduReq(payload, reqObj);
+    const next = Object.assign({}, payload || {});
     next.userProfile = Object.assign({}, next.userProfile || {}, { educationLevel: to });
+    delete next.userProfile.educationChangeRequest;
+    delete next.educationChangeRequest;
     next.profile = Object.assign({}, next.profile || {}, { examDate: levels[to] });
-    await admin.from("student_states").update({ payload: next, education_level: to }).eq("user_id", body.user_id);
+    const upd = await admin.from("student_states").update({ payload: next, education_level: to }).eq("user_id", body.user_id);
+    if (upd.error) return json({ ok: false, error: upd.error.message }, 500);
   } else if (action === "reject_edu") {
     const { data: row } = await admin.from("student_states").select("payload").eq("user_id", body.user_id).maybeSingle();
     const payload = Object.assign({}, row?.payload || {});

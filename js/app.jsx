@@ -1774,7 +1774,7 @@ function Ben(props) {
                         <button type="button" onClick={startSettingsEdit} className="text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline">Düzenle</button>
                     ) : null}
                 </div>
-                {eduReq && eduReq.status === "pending" ? (
+                {eduReq && eduReq.status === "pending" && eduReq.to !== up.educationLevel ? (
                     <p className="text-sm text-amber-800 bg-amber-50 rounded-xl px-3 py-2 mt-3">Eğitim değişikliği onay bekliyor: {eduLabel(eduReq.to)}</p>
                 ) : null}
                 {eduReq && eduReq.status === "rejected" && editing ? (

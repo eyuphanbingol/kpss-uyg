@@ -194,6 +194,14 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
         if (officialDates[lv] && (profile.examDate === stale.onlisans || profile.examDate === stale.ortaogretim || !profile.examDate)) {
             profile.examDate = officialDates[lv];
         }
+        var eduReq = userProfile.educationChangeRequest || parsed.educationChangeRequest;
+        if (eduReq && typeof eduReq === "object") {
+            if (eduReq.status === "approved" || (eduReq.status === "pending" && eduReq.to && eduReq.to === userProfile.educationLevel)) {
+                delete userProfile.educationChangeRequest;
+            } else {
+                userProfile.educationChangeRequest = eduReq;
+            }
+        }
         var counters = Object.assign({}, base.counters, parsed.counters || {});
         if (!counters.questions) {
             Object.keys(parsed.sessions || {}).forEach(function (d) {

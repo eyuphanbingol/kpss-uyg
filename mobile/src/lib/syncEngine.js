@@ -129,8 +129,8 @@ import { StudentStore } from "./store";
         if (!B) return A;
         var aAdmin = A.status === "approved" || A.status === "rejected";
         var bAdmin = B.status === "approved" || B.status === "rejected";
-        if (bAdmin && A.status === "pending" && (B.at || "") >= (A.at || "")) return B;
-        if (aAdmin && B.status === "pending" && (A.at || "") >= (B.at || "")) return A;
+        if (aAdmin && !bAdmin) return A;
+        if (bAdmin && !aAdmin) return B;
         return (A.at || "") >= (B.at || "") ? A : B;
     }
 
@@ -309,9 +309,16 @@ import { StudentStore } from "./store";
                 }
             }
             var keptReq = pickEduReq(pickEduReq(local, remote), global.StudentStore.getState());
+            if (keptReq && keptReq.status === "pending" && keptReq.to && (keptReq.to === merged.userProfile.educationLevel || keptReq.to === dbEdu)) {
+                keptReq = null;
+            }
+            if (keptReq && keptReq.status === "approved") keptReq = null;
             if (keptReq) {
                 merged.userProfile.educationChangeRequest = keptReq;
                 merged.educationChangeRequest = keptReq;
+            } else {
+                delete merged.userProfile.educationChangeRequest;
+                delete merged.educationChangeRequest;
             }
             merged.updatedAt = global.StudentStore.nowIso();
             var prevLoc = (merged.userProfile && merged.userProfile.location) || {};

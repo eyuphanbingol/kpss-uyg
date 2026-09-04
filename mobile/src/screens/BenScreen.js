@@ -139,7 +139,7 @@ export default function BenScreen({ navigation }) {
                     )}
                 </View>
 
-                {eduReq && eduReq.status === "pending" && (
+                {eduReq && eduReq.status === "pending" && eduReq.to !== up.educationLevel && (
                     <View style={styles.pendingBox}>
                         <Text style={styles.pendingText}>
                             Eğitim değişikliği onay bekliyor: {eduLabel(eduReq.to)}
