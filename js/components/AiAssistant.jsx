@@ -16,6 +16,10 @@
         return shuffled;
     }
 
+    function stripChoicePrefix(opt) {
+        return String(opt || "").replace(/^[A-Ea-e][\s\)\.:\-]+\s*/, "").trim();
+    }
+
     function getOptionLetter(index) {
         return String.fromCharCode(65 + index); // A, B, C, D, E
     }
@@ -377,7 +381,7 @@
                                                     {getOptionLetter(i)}
                                                 </span>
                                                 <span className={"text-sm " + (isCorrect ? "text-emerald-800 dark:text-emerald-300 font-medium" : "text-stone-600 dark:text-stone-400")}>
-                                                    {opt}
+                                                    {stripChoicePrefix(opt)}
                                                 </span>
                                                 {isCorrect && (
                                                     <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 ml-auto">

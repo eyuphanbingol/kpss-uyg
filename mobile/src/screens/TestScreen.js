@@ -8,6 +8,10 @@ import { colors } from "../lib/theme";
 // TEST SCREEN
 // ============================================================
 
+function stripChoicePrefix(opt) {
+    return String(opt || "").replace(/^[A-Ea-e][\s\)\.:\-]+\s*/, "").trim();
+}
+
 export default function TestScreen({ route, navigation }) {
     var items = route.params.items || [];
     var mode = route.params.mode || "topic";
@@ -325,7 +329,7 @@ export default function TestScreen({ route, navigation }) {
                                     </Text>
                                 </View>
                                 <Text style={[styles.testOptionText, { color: textColor }]}>
-                                    {opt}
+                                    {stripChoicePrefix(opt)}
                                 </Text>
                                 {isAnswered && isCorrect && (
                                     <Text style={styles.testOptionCheck}>✓</Text>

@@ -8,6 +8,10 @@ const DERS_THEME = {
     "Güncel Bilgiler": { text: "text-stone-700", icon: "📰", darkText: "text-stone-300" }
 };
 
+function stripChoicePrefix(opt) {
+    return String(opt || "").replace(/^[A-Ea-e][\s\)\.:\-]+\s*/, "").trim();
+}
+
 function themeFor(ders, isDark) {
     const t = DERS_THEME[ders] || { text: "text-stone-700", icon: "📚", darkText: "text-stone-300" };
     return isDark ? Object.assign({}, t, { text: t.darkText }) : t;
@@ -1405,7 +1409,7 @@ function TestView(props) {
                     }
                     return (
                         <button key={i} onClick={function () { props.onAnswer(i); }} disabled={props.answered} className={cls}>
-                            {icon}<span className="text-[15px]">{opt}</span>
+                            {icon}<span className="text-[15px]">{stripChoicePrefix(opt)}</span>
                         </button>
                     );
                 })}
@@ -2258,7 +2262,7 @@ function App() {
             setScore(scoreRef.current);
         }
         else setWrongList(function (w) {
-            return w.concat([{ question: item.q.question, dogru: item.q.options[item.q.correctAnswerIndex] }]);
+            return w.concat([{ question: item.q.question, dogru: stripChoicePrefix(item.q.options[item.q.correctAnswerIndex]) }]);
         });
     }
 

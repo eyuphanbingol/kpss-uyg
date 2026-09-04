@@ -5,6 +5,10 @@
     // YARDIMCI FONKSİYONLAR
     // ============================================================
 
+    function stripChoicePrefix(opt) {
+        return String(opt || "").replace(/^[A-Ea-e][\s\)\.:\-]+\s*/, "").trim();
+    }
+
     function getOptionLetter(index) {
         return String.fromCharCode(65 + index);
     }
@@ -591,7 +595,7 @@
                                             {letter}
                                         </span>
                                         <span className={"text-sm " + (on ? "text-indigo-800 dark:text-indigo-200 font-medium" : "text-stone-700 dark:text-stone-300")}>
-                                            {opt}
+                                            {stripChoicePrefix(opt)}
                                         </span>
                                         {on && (
                                             <span className="ml-auto text-indigo-600">✓</span>

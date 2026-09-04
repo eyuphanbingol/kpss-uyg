@@ -10,6 +10,10 @@ import taban from "../content/tabanPuanlar.json";
 import { Card, PrimaryButton, ScrollScreen, Badge } from "../ui";
 import { colors } from "../lib/theme";
 
+function stripChoicePrefix(opt) {
+    return String(opt || "").replace(/^[A-Ea-e][\s\)\.:\-]+\s*/, "").trim();
+}
+
 // ============================================================
 // PLACEMENT SCREEN
 // ============================================================
@@ -387,7 +391,7 @@ export function AiScreen({ navigation }) {
                     <View style={styles.aiCorrect}>
                         <Text style={styles.aiCorrectLabel}>✅ Doğru Cevap</Text>
                         <Text style={[styles.aiCorrectValue, isDark && styles.textLight]}>
-                            {item.q.options[item.q.correctAnswerIndex]}
+                            {stripChoicePrefix(item.q.options[item.q.correctAnswerIndex])}
                         </Text>
                     </View>
                     {item.q.explanation && (
