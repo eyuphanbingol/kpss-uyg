@@ -63,6 +63,10 @@ window.getKpssData = function () {
                 notlar:window.tarih_15_notlari || [],
                 sorular:window.tarih_15_sorulari || [] 
             },
+            "Milli Mücadele Diplomatik Dönem":{
+                notlar: window.tarih_16_notlari || [],
+                sorular: window.tarih_16_sorulari || []
+            },
         },
         "Coğrafya": {
             "Türkiye'nin Coğrafi Konumu": {
