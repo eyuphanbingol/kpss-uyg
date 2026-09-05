@@ -138,6 +138,10 @@ window.getKpssData = function () {
             "Türkiyenini Ekonomik Coğrafyası (TARIM-1)":{
                 notlar:window.cografya_18_notlari || [],
                 sorular:window.cografya_18_sorulari || []
+            },
+            "Türkiyenini Ekonomik Coğrafyası (TARIM-2)":{
+                notlar:window.cografya_19_notlari || [],
+                sorular:window.cografya_19_sorulari || []
             }
         },
         // YENİ EKLENEN TÜRKÇE BÖLÜMÜ
