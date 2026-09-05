@@ -201,7 +201,21 @@
         { answer: "Fırat", clues: ["Doğu Anadolu kaynak", "GAP", "Suriye'ye çıkar"], choices: ["Fırat", "Kızılırmak", "Sakarya", "Gediz"] },
         { answer: "Kızılırmak", clues: ["En uzun ırmak", "Bafra", "İç Anadolu yayı"], choices: ["Kızılırmak", "Fırat", "Dicle", "Yeşilırmak"] },
         { answer: "Toroslar", clues: ["Kıvrım dağları", "Akdeniz", "Gülek Boğazı"], choices: ["Toroslar", "Karadeniz Dağları", "Yıldız Dağları", "Kaz Dağı"] },
-        { answer: "GAP", clues: ["Fırat-Dicle", "Sulama + enerji", "Güneydoğu"], choices: ["GAP", "DAP", "DOKAP", "KOP"] }
+        { answer: "GAP", clues: ["Fırat-Dicle", "Sulama + enerji", "Güneydoğu"], choices: ["GAP", "DAP", "DOKAP", "KOP"] },
+        { answer: "Bor", clues: ["Dünya rezervinin ~%72'si", "Kırka ve Bandırma", "Balıkesir–Eskişehir–Kütahya–Bursa"], choices: ["Bor", "Krom", "Fosfat", "Trona"] },
+        { answer: "Krom", clues: ["Paslanmazlık", "Guleman / Köyceğiz", "İhraç edilir"], choices: ["Krom", "Bor", "Boksit", "Manganez"] },
+        { answer: "Boksit", clues: ["Alüminyum cevheri", "Akseki", "Seydişehir'de işlenir"], choices: ["Boksit", "Barit", "Fosfat", "Trona"] },
+        { answer: "Trona", clues: ["Soda külü", "Cam sanayisi", "Beypazarı–Kazan"], choices: ["Trona", "Bor", "Tuz", "Feldspat"] },
+        { answer: "Lüle taşı", clues: ["Eskişehir", "Pipo", "Süs eşyası"], choices: ["Lüle taşı", "Oltu taşı", "Zımpara", "Pomza"] },
+        { answer: "Oltu taşı", clues: ["Erzurum", "Takı", "Süs eşyası"], choices: ["Oltu taşı", "Lüle taşı", "Mermer", "Perlit"] },
+        { answer: "Yukarı Fırat", clues: ["Maden çeşitliliği en fazla", "Elazığ çevresi", "Volkanizma"], choices: ["Yukarı Fırat", "Yukarı Kızılırmak", "Çukurova", "Ergene"] },
+        { answer: "Divriği", clues: ["Sivas", "Demir çıkarımı", "Hekimhan ile anılır"], choices: ["Divriği", "Küre", "Guleman", "Mazıdağı"] },
+        { answer: "Ankara keçisi", clues: ["Tiftik", "İç Anadolu", "Ankara çevresi"], choices: ["Ankara keçisi", "Kıl keçisi", "Tiftik dışı koyun", "Manda"] },
+        { answer: "Kıl keçisi", clues: ["Akdeniz / Toros", "Maki", "Engebeli yamaç"], choices: ["Kıl keçisi", "Ankara keçisi", "Merinos", "Kıvırcık"] },
+        { answer: "Mera hayvancılığı", clues: ["Doğu Anadolu", "Yaz yayla", "İklim etkisi fazla"], choices: ["Mera hayvancılığı", "Ahır-besi", "Kümes", "Arıcılık"] },
+        { answer: "Çay", clues: ["Doğu Karadeniz", "Rize", "Yağış + eğim"], choices: ["Çay", "Fındık", "Zeytin", "Pamuk"] },
+        { answer: "Fındık", clues: ["Ordu–Giresun", "Karadeniz", "Kıyı kuşağı"], choices: ["Fındık", "Çay", "Antepfıstığı", "İncir"] },
+        { answer: "Pamuk", clues: ["Çukurova", "Ege grabenleri", "Sulama"], choices: ["Pamuk", "Çay", "Fındık", "Keten"] }
     ];
 
     var PANIC = [
@@ -253,7 +267,19 @@
         { q: "NATO'ya giriş yılı?", a: "1952", choices: ["1952", "1945", "1949", "1960"] },
         { q: "AB adaylık Helsinki yılı (Türkiye)?", a: "1999", choices: ["1999", "2005", "1987", "2004"] },
         { q: "Anayasa Mahkemesi başkanını kim seçer?", a: "kendi üyeleri", choices: ["kendi üyeleri", "TBMM", "Cumhurbaşkanı tek başına", "HSK"] },
-        { q: "Milletvekili dokunulmazlığı hangi organda görüşülür?", a: "TBMM", choices: ["TBMM", "AYM", "Yargıtay", "Cumhurbaşkanı"] }
+        { q: "Milletvekili dokunulmazlığı hangi organda görüşülür?", a: "TBMM", choices: ["TBMM", "AYM", "Yargıtay", "Cumhurbaşkanı"] },
+        { q: "Türkiye'de maden çeşidi / miktar ilişkisi?", a: "çeşit fazla, miktar az", choices: ["çeşit fazla, miktar az", "çeşit az, miktar fazla", "ikisi de dünya lideri", "yalnızca kıyılarda"] },
+        { q: "Maden çeşitliliği en fazla hangi saha?", a: "Yukarı Fırat", choices: ["Yukarı Fırat", "Yukarı Sakarya", "Ergene", "Çukurova"] },
+        { q: "Dünya bor rezervinin yaklaşık payı (TR)?", a: "%72", choices: ["%72", "%25", "%40", "%12"] },
+        { q: "Demir çıkarımı: Divriği hangi il?", a: "Sivas", choices: ["Sivas", "Kastamonu", "Mardin", "Antalya"] },
+        { q: "Bakır en çok hangi bölgede çıkarılır?", a: "Karadeniz", choices: ["Karadeniz", "Ege", "Akdeniz", "İç Anadolu"] },
+        { q: "Boksit nerede işlenir?", a: "Seydişehir", choices: ["Seydişehir", "Samsun", "Karabük", "Bandırma"] },
+        { q: "Fosfat hem çıkarılıp hem işlendiği yer?", a: "Mazıdağı", choices: ["Mazıdağı", "Kırka", "Küre", "Keçiborlu"] },
+        { q: "Lüle taşı ili?", a: "Eskişehir", choices: ["Eskişehir", "Erzurum", "Bursa", "Mardin"] },
+        { q: "Oltu taşı ili?", a: "Erzurum", choices: ["Erzurum", "Eskişehir", "Yozgat", "Isparta"] },
+        { q: "Karabük–Ereğli demir-çelik nedeni?", a: "taşkömürüne yakınlık", choices: ["taşkömürüne yakınlık", "turizm", "pamuk tarımı", "buzul"] },
+        { q: "Ankara keçisinin ürünü?", a: "tiftik", choices: ["tiftik", "ipek", "pamuk", "keten"] },
+        { q: "Doğu Karadeniz'in simge tarımı?", a: "çay", choices: ["çay", "pamuk", "zeytin", "muz"] }
     ];
 
     global.GamesBank = {

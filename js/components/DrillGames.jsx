@@ -300,7 +300,7 @@
     function TabuPlay(props) {
         var engine = ge();
         var games = (props.student && props.student.games) || {};
-        var deck = useMemo(function () { return engine ? engine.tabuDeck(12) : []; }, [props.seed]);
+        var deck = useMemo(function () { return engine ? engine.tabuDeck(12, props.kpssData) : []; }, [props.seed]);
         var [i, setI] = useState(0);
         var [open, setOpen] = useState(1);
         var [picked, setPicked] = useState(null);
@@ -406,17 +406,18 @@
     function PanicPlay(props) {
         var engine = ge();
         var games = (props.student && props.student.games) || {};
-        var deck = useMemo(function () { return engine ? engine.panicDeck() : []; }, [props.seed]);
+        var deck = useMemo(function () { return engine ? engine.panicDeck(props.kpssData) : []; }, [props.seed]);
         var [i, setI] = useState(0);
         var [ms, setMs] = useState(10000);
         var [score, setScore] = useState(0);
         var [flash, setFlash] = useState("");
         var [over, setOver] = useState(false);
+        var [missed, setMissed] = useState([]);
         var live = useRef({ ms: 10000, over: false, i: 0, score: 0 });
 
         useEffect(function () {
             live.current = { ms: 10000, over: false, i: 0, score: 0 };
-            setMs(10000); setI(0); setScore(0); setOver(false); setFlash("");
+            setMs(10000); setI(0); setScore(0); setOver(false); setFlash(""); setMissed([]);
         }, [props.seed]);
 
         useEffect(function () {
@@ -458,6 +459,9 @@
                 setFlash("ok");
                 bump(2000);
             } else {
+                setMissed(function (prev) {
+                    return prev.concat([{ q: cur.q, picked: opt, a: cur.a }]);
+                });
                 setFlash("bad");
                 bump(-3000);
             }
@@ -479,6 +483,24 @@
                         <p className="text-sm text-stone-500">Süre bitti</p>
                         <p className="text-5xl font-black mt-2">{score}</p>
                         <p className="text-sm text-stone-400 mt-2">Rekor: {Math.max(score, games.panicBest || 0)}</p>
+                        {missed.length ? (
+                            <div className="mt-6 text-left max-w-xl mx-auto">
+                                <p className="text-sm font-bold mb-3">Yanlış {missed.length} soru</p>
+                                <ul className="space-y-3">
+                                    {missed.map(function (w, wi) {
+                                        return (
+                                            <li key={wi} className="rounded-2xl border border-rose-200 dark:border-rose-900/50 bg-rose-50/80 dark:bg-rose-950/30 p-3 text-sm">
+                                                <p className="font-semibold text-stone-800 dark:text-stone-100">{w.q}</p>
+                                                <p className="text-rose-600 dark:text-rose-400 mt-1">Senin: {w.picked}</p>
+                                                <p className="text-emerald-700 dark:text-emerald-400">Doğru: {w.a}</p>
+                                            </li>
+                                        );
+                                    })}
+                                </ul>
+                            </div>
+                        ) : (
+                            <p className="text-sm text-emerald-600 mt-4">Bu turda yanlışın yok.</p>
+                        )}
                         <button type="button" className="btn-primary text-white px-5 py-2.5 rounded-full mt-6" onClick={props.onAgain}>Tekrar oyna</button>
                     </div>
                 </div>

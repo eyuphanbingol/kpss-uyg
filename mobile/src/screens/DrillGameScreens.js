@@ -109,7 +109,7 @@ export function TabuPlayScreen({ navigation }) {
     var seedState = useState(0);
     var seed = seedState[0];
     var setSeed = seedState[1];
-    var deck = useMemo(function () { return GamesEngine.tabuDeck(12); }, [seed]);
+    var deck = useMemo(function () { return GamesEngine.tabuDeck(12, app.kpssData); }, [seed]);
     var iState = useState(0);
     var i = iState[0];
     var setI = iState[1];
@@ -206,7 +206,7 @@ export function PanicPlayScreen({ navigation }) {
     var seedState = useState(0);
     var seed = seedState[0];
     var setSeed = seedState[1];
-    var deck = useMemo(function () { return GamesEngine.panicDeck(); }, [seed]);
+    var deck = useMemo(function () { return GamesEngine.panicDeck(app.kpssData); }, [seed]);
     var iState = useState(0);
     var i = iState[0];
     var setI = iState[1];
@@ -219,12 +219,15 @@ export function PanicPlayScreen({ navigation }) {
     var overState = useState(false);
     var over = overState[0];
     var setOver = overState[1];
+    var missedState = useState([]);
+    var missed = missedState[0];
+    var setMissed = missedState[1];
     var live = useRef({ ms: 10000, score: 0, i: 0 });
     var best = ((app.student && app.student.games) || {}).panicBest || 0;
 
     useEffect(function () {
         live.current = { ms: 10000, score: 0, i: 0 };
-        setMs(10000); setI(0); setScore(0); setOver(false);
+        setMs(10000); setI(0); setScore(0); setOver(false); setMissed([]);
     }, [seed]);
 
     useEffect(function () {
@@ -253,6 +256,7 @@ export function PanicPlayScreen({ navigation }) {
             setScore(live.current.score);
             live.current.ms = Math.max(0, live.current.ms + 2000);
         } else {
+            setMissed(function (prev) { return prev.concat([{ q: q.q, picked: opt, a: q.a }]); });
             live.current.ms = Math.max(0, live.current.ms - 3000);
         }
         setMs(live.current.ms);
@@ -276,6 +280,22 @@ export function PanicPlayScreen({ navigation }) {
                 <Card style={[styles.result, isDark && styles.cardDark]}>
                     <Text style={[styles.pct, isDark && styles.light]}>{score}</Text>
                     <Text style={[styles.meta, isDark && styles.muted]}>Rekor: {Math.max(score, best)}</Text>
+                    {missed.length ? (
+                        <View style={{ width: "100%", marginTop: 16 }}>
+                            <Text style={[styles.bad, { marginBottom: 8 }]}>Yanlış {missed.length} soru</Text>
+                            {missed.map(function (w, wi) {
+                                return (
+                                    <View key={wi} style={[styles.choice, styles.no, { marginTop: 8 }]}>
+                                        <Text style={[styles.choiceText, isDark && styles.light]}>{w.q}</Text>
+                                        <Text style={styles.bad}>Senin: {w.picked}</Text>
+                                        <Text style={{ color: "#059669", fontWeight: "700", marginTop: 4 }}>Doğru: {w.a}</Text>
+                                    </View>
+                                );
+                            })}
+                        </View>
+                    ) : (
+                        <Text style={[styles.meta, { marginTop: 12, color: "#059669" }]}>Bu turda yanlışın yok.</Text>
+                    )}
                     <PrimaryButton title="Tekrar oyna" onPress={function () { setSeed(seed + 1); }} style={{ marginTop: 16 }} />
                 </Card>
             </ScrollScreen>

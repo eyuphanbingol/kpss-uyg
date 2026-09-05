@@ -95,25 +95,131 @@ globalThis.GamesBank = GamesBank;
         );
     }
 
-    function catalogHits(code, kpssData) {
-        var name = names()[code] || "";
-        if (!name || !kpssData) return [];
-        var needle = name.toLocaleLowerCase("tr-TR");
-        var out = [];
-        Object.keys(kpssData).forEach(function (ders) {
+    function fold(s) {
+        return String(s || "").toLocaleLowerCase("tr-TR")
+            .replace(/â/g, "a").replace(/î/g, "i").replace(/û/g, "u")
+            .replace(/ı/g, "i").replace(/ğ/g, "g").replace(/ü/g, "u")
+            .replace(/ş/g, "s").replace(/ö/g, "o").replace(/ç/g, "c");
+    }
+
+    function stripChoice(s) {
+        return stripHtml(s).replace(/^\s*[A-Ea-e][\.\)\-]\s*/, "").trim();
+    }
+
+    function isRecentKonu(konu) {
+        var k = fold(konu);
+        return k.indexOf("tarim") >= 0 || k.indexOf("hayvancilik") >= 0 || k.indexOf("maden") >= 0;
+    }
+
+    function qToMcq(q) {
+        if (!q) return null;
+        var opts = (q.options || []).map(stripChoice).filter(Boolean);
+        var idx = typeof q.correctAnswerIndex === "number" ? q.correctAnswerIndex : -1;
+        var correct = stripChoice(q.answer || q.correct || (idx >= 0 ? opts[idx] : "") || "");
+        if (opts.length < 2 || !correct) return null;
+        var stem = stripHtml(q.question).replace(/^Soru\s*\d+\s*:\s*/i, "");
+        if (!stem) return null;
+        return mcq(stem, opts, correct);
+    }
+
+    function walkQs(kpssData, fn) {
+        Object.keys(kpssData || {}).forEach(function (ders) {
             Object.keys(kpssData[ders] || {}).forEach(function (konu) {
                 ((kpssData[ders][konu] && kpssData[ders][konu].sorular) || []).forEach(function (q) {
-                    var blob = stripHtml((q.question || "") + " " + (q.explanation || "") + " " + ((q.options || []).join(" ")));
-                    if (blob.toLocaleLowerCase("tr-TR").indexOf(needle) < 0) return;
-                    var opts = (q.options || []).map(stripHtml).filter(Boolean);
-                    var idx = typeof q.correctAnswerIndex === "number" ? q.correctAnswerIndex : -1;
-                    var correct = stripHtml(q.answer || q.correct || (idx >= 0 ? opts[idx] : "") || "");
-                    if (opts.length < 2 || !correct) return;
-                    out.push(mcq(stripHtml(q.question), opts, correct));
+                    fn(ders, konu, q);
                 });
             });
         });
+    }
+
+    function needlesFor(code) {
+        var name = names()[code] || "";
+        var raw = [name, code];
+        if (name === "Afyonkarahisar") raw.push("Afyon");
+        if (name === "Kahramanmaraş") raw.push("Maraş", "K.Maraş");
+        if (name === "Şanlıurfa") raw.push("Urfa");
+        (mq().ITEMS || []).forEach(function (it) {
+            if ((it.codes || []).indexOf(code) < 0) return;
+            raw.push(it.name, it.places);
+        });
+        var out = [];
+        raw.forEach(function (s) {
+            String(s || "").split(/[-–,\/]| ve /i).forEach(function (part) {
+                var t = String(part || "").replace(/^[^:]+:\s*/, "").trim();
+                var f = fold(t);
+                if (f.length < 5) return;
+                if (out.indexOf(f) < 0) out.push(f);
+            });
+        });
+        return out;
+    }
+
+    function blobHits(blobFold, needles) {
+        for (var i = 0; i < needles.length; i++) {
+            if (blobFold.indexOf(needles[i]) >= 0) return true;
+        }
+        return false;
+    }
+
+    function catalogHits(code, kpssData) {
+        var needles = needlesFor(code);
+        if (!needles.length || !kpssData) return [];
+        var recent = [];
+        var rest = [];
+        walkQs(kpssData, function (ders, konu, q) {
+            var blob = fold(stripHtml((q.question || "") + " " + (q.explanation || "") + " " + ((q.options || []).join(" "))));
+            if (!blobHits(blob, needles)) return;
+            var item = qToMcq(q);
+            if (!item) return;
+            if (isRecentKonu(konu)) recent.push(item);
+            else rest.push(item);
+        });
+        return shuffle(recent).concat(shuffle(rest));
+    }
+
+    function mapTopicHits(code) {
+        var name = names()[code];
+        if (!name) return [];
+        var out = [];
+        (mq().ITEMS || []).forEach(function (it) {
+            if ((it.codes || []).indexOf(code) < 0) return;
+            var t = String(it.topic || "");
+            if (t !== "tarim" && t !== "hayvan" && t !== "maden" && t !== "sanayi") return;
+            var others = shuffle(allCodes().filter(function (c) { return c !== code; })).slice(0, 3)
+                .map(function (c) { return names()[c]; });
+            uniquePush(out, mcq((it.name || "Bu üretim") + " hangi ilde / hangi il kuşağındadır?", [name].concat(others), name));
+            if (it.follow && it.follow.q && it.follow.answer) {
+                uniquePush(out, mcq(it.follow.q, it.follow.choices || [it.follow.answer], it.follow.answer));
+            }
+        });
         return shuffle(out);
+    }
+
+    function tabuFromItem(item, konu) {
+        var ans = stripChoice(item.correct || item.answer || "");
+        if (ans.length < 3 || ans.length > 28) return null;
+        if (/[—–→]/.test(ans)) return null;
+        var f = fold(ans);
+        if (/^(i ve |ii ve |i, |ii, |iii|yalniz|hepsi)/.test(f)) return null;
+        if (/^[ivx\s,ve]+$/.test(f)) return null;
+        var label = String(konu || "").replace(/^.*\(/, "").replace(/\)\s*$/, "") || "KPSS";
+        var stem = String(item.question || "");
+        var clues = [label, stem.length > 48 ? stem.slice(0, 46) + "…" : stem];
+        var distract = (item.options || item.choices || []).filter(function (o) { return stripChoice(o) !== ans; });
+        if (distract[0]) clues.push(stripChoice(distract[0]).slice(0, 40));
+        var choices = [ans].concat(distract.map(stripChoice)).filter(Boolean);
+        while (choices.length < 4) choices.push("—");
+        return { answer: ans, clues: clues.slice(0, 3), choices: choices.slice(0, 4) };
+    }
+
+    function panicFromItem(item) {
+        if (!item) return null;
+        var a = stripChoice(item.correct || item.a || "");
+        var choices = (item.options || item.choices || []).map(stripChoice).filter(Boolean);
+        if (!a || choices.length < 2) return null;
+        var q = String(item.question || item.q || "");
+        if (q.length > 160) q = q.slice(0, 157) + "…";
+        return { q: q, a: a, choices: choices.slice(0, 4) };
     }
 
     function uniquePush(list, item) {
@@ -129,12 +235,13 @@ globalThis.GamesBank = GamesBank;
         code = String(code || "").toUpperCase();
         var b = bank();
         var list = [];
-        uniquePush(list, regionQ(code));
-        uniquePush(list, sameRegionQ(code));
+        catalogHits(code, kpssData).slice(0, 4).forEach(function (q) { uniquePush(list, q); });
+        mapTopicHits(code).slice(0, 3).forEach(function (q) { uniquePush(list, q); });
         ((b.SPECIAL && b.SPECIAL[code]) || []).forEach(function (row) {
             uniquePush(list, fromTriple(row));
         });
-        catalogHits(code, kpssData).slice(0, 4).forEach(function (q) { uniquePush(list, q); });
+        uniquePush(list, regionQ(code));
+        uniquePush(list, sameRegionQ(code));
         var facts = (b.REGION_FACTS && b.REGION_FACTS[regionIdOf(code)]) || [];
         shuffle(facts).forEach(function (row) { uniquePush(list, fromTriple(row)); });
         var picked = list.slice(0, 3);
@@ -178,8 +285,18 @@ globalThis.GamesBank = GamesBank;
         return fresh;
     }
 
-    function tabuDeck(n) {
-        return shuffle(bank().TABU || []).slice(0, n || 12).map(function (card, i) {
+    function tabuDeck(n, kpssData) {
+        n = n || 12;
+        var extra = [];
+        walkQs(kpssData, function (ders, konu, q) {
+            if (!isRecentKonu(konu)) return;
+            var item = qToMcq(q);
+            var card = item && tabuFromItem(item, konu);
+            if (card) extra.push(card);
+        });
+        var fromCat = shuffle(extra).slice(0, Math.ceil(n / 2));
+        var fromBank = shuffle(bank().TABU || []).slice(0, Math.max(0, n - fromCat.length));
+        return shuffle(fromCat.concat(fromBank)).slice(0, n).map(function (card, i) {
             return {
                 id: i,
                 answer: card.answer,
@@ -195,13 +312,19 @@ globalThis.GamesBank = GamesBank;
         return table[i] || 1;
     }
 
-    function panicDeck() {
-        return shuffle(bank().PANIC || []).map(function (item) {
-            return {
-                q: item.q,
-                a: item.a,
-                choices: shuffle(item.choices || [item.a])
-            };
+    function panicDeck(kpssData) {
+        var out = [];
+        (bank().PANIC || []).forEach(function (item) {
+            var row = panicFromItem({ question: item.q, correct: item.a, options: item.choices, q: item.q, a: item.a, choices: item.choices });
+            if (row) out.push(row);
+        });
+        walkQs(kpssData, function (ders, konu, q) {
+            if (!isRecentKonu(konu)) return;
+            var row = panicFromItem(qToMcq(q));
+            if (row) out.push(row);
+        });
+        return shuffle(out).map(function (item) {
+            return { q: item.q, a: item.a, choices: shuffle(item.choices || [item.a]) };
         });
     }
 
