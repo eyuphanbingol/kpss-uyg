@@ -223,7 +223,7 @@ window.cografya_18_notlari = [
         </div>
         <!-- 🗺️ HARİTA / RESİM ALANI -->
             <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/findik.jpg?v=6" alt="FINDIK Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+                <img src="./src/img/findik.jpg?v=7" alt="FINDIK Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
             </div>
     </div>
     `,
@@ -251,7 +251,7 @@ window.cografya_18_notlari = [
         </div>
         <!-- 🗺️ HARİTA / RESİM ALANI -->
             <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/cay.jpg?v=6" alt="FINDIK Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+                <img src="./src/img/cay.jpg?v=7" alt="FINDIK Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
             </div>
     </div>
     `,
@@ -277,7 +277,7 @@ window.cografya_18_notlari = [
         </div>
         <!-- 🗺️ HARİTA / RESİM ALANI -->
             <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/kenevir.jpg?v=6" alt="FINDIK Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+                <img src="./src/img/kenevir.jpg?v=7" alt="FINDIK Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
             </div>
     </div>
     `,
@@ -305,7 +305,7 @@ window.cografya_18_notlari = [
         </div>
         <!-- 🗺️ HARİTA / RESİM ALANI -->
             <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/pirinc.jpg?v=6" alt="FINDIK Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+                <img src="./src/img/pirinc.jpg?v=7" alt="FINDIK Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
             </div>
     </div>
     `,
@@ -331,7 +331,7 @@ window.cografya_18_notlari = [
         </div>
         <!-- 🗺️ HARİTA / RESİM ALANI -->
             <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/ay_cicek.jpg?v=6" alt="FINDIK Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+                <img src="./src/img/ay_cicek.jpg?v=7" alt="FINDIK Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
             </div>
     </div>
     `,
@@ -376,7 +376,7 @@ window.cografya_18_notlari = [
     </div>
      <!-- 🗺️ HARİTA / RESİM ALANI -->
             <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/kanola.jpg?v=6" alt="FINDIK Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+                <img src="./src/img/kanola.jpg?v=7" alt="FINDIK Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
             </div>
     `
 ];

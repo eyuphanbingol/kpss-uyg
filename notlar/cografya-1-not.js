@@ -230,11 +230,11 @@ window.cografya_1_notlari = [
 
             <!-- 🗺️ HARİTA / RESİM ALANI -->
             <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/21 aralık.png?v=6" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+                <img src="./src/img/21 aralık.png?v=7" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
             </div>
             <!-- 🗺️ HARİTA / RESİM ALANI -->
             <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/21 haziran.png?v=6" alt="21 Haziran Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+                <img src="./src/img/21 haziran.png?v=7" alt="21 Haziran Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
             </div>
         </div>
     </div>

@@ -181,47 +181,96 @@ function writePng(file, svg, w) {
     fs.renameSync(tmp, file);
 }
 
-function twoColList(items, startY) {
-    var long = items.some(function (s) { return String(s).length > 24; });
-    var rowH = 22;
-    if (long) {
-        return items.map(function (label, i) {
-            return '<text x="18" y="' + (startY + i * rowH) + '" font-family="Segoe UI, Calibri, sans-serif" font-size="13" fill="' + C.ink + '"><tspan fill="' + C.gold + '" font-weight="800">' + (i + 1) + "  </tspan>" + esc(label) + "</text>";
-        }).join("");
+function mapCaption(s) {
+    s = String(s || "").replace(/^\d+\s+/, "").trim();
+    var em = s.indexOf(" — ");
+    if (em > 0) s = s.slice(0, em);
+    if (s.length > 32) {
+        var cut = s.indexOf(" · ");
+        if (cut > 6 && cut < 28) s = s.slice(0, cut);
     }
-    var x0 = 18;
-    var x1 = 272;
-    return items.map(function (label, i) {
-        var x = (i % 2) ? x1 : x0;
-        var y = startY + Math.floor(i / 2) * rowH;
-        return '<text x="' + x + '" y="' + y + '" font-family="Segoe UI, Calibri, sans-serif" font-size="14" fill="' + C.ink + '"><tspan fill="' + C.gold + '" font-weight="800">' + (i + 1) + "  </tspan>" + esc(label) + "</text>";
+    return s;
+}
+
+function wrapOnMap(text, maxChars) {
+    text = String(text || "").trim();
+    maxChars = maxChars || 16;
+    if (text.length <= maxChars) return [text];
+    var parts = text.split(/\s*·\s*/);
+    if (parts.length > 1) {
+        var lines = [];
+        var cur = parts[0];
+        for (var i = 1; i < parts.length; i++) {
+            var next = cur + " · " + parts[i];
+            if (next.length <= maxChars) cur = next;
+            else {
+                lines.push(cur);
+                cur = parts[i];
+            }
+        }
+        lines.push(cur);
+        return lines.slice(0, 3);
+    }
+    var cut = text.lastIndexOf(" ", maxChars);
+    if (cut < 5) cut = maxChars;
+    return [text.slice(0, cut).trim(), text.slice(cut).trim()].filter(Boolean).slice(0, 2);
+}
+
+function onMapText(x, y, text, fs) {
+    fs = fs || 22;
+    var lines = wrapOnMap(text, text.length > 22 ? 14 : 18);
+    var startY = y - (lines.length - 1) * (fs * 0.52);
+    return lines.map(function (ln, i) {
+        var ty = startY + i * (fs + 2);
+        var common = 'x="' + Number(x).toFixed(1) + '" y="' + Number(ty).toFixed(1) + '" text-anchor="middle" font-family="Segoe UI, Calibri, sans-serif" font-size="' + fs + '" font-weight="800"';
+        return '<text ' + common + ' fill="#FFFDF6" stroke="#FFFDF6" stroke-width="8" stroke-linejoin="round">' + esc(ln) + "</text>" +
+            '<text ' + common + ' fill="' + C.navy + '">' + esc(ln) + "</text>";
     }).join("");
 }
 
-function listRows(items) {
-    var long = items.some(function (s) { return String(s).length > 24; });
-    return long ? items.length : Math.ceil(items.length / 2);
+function nudgeLabels(pts) {
+    var k, i, j;
+    for (k = 0; k < 10; k++) {
+        for (i = 0; i < pts.length; i++) {
+            for (j = i + 1; j < pts.length; j++) {
+                var dx = pts[j].x - pts[i].x;
+                var dy = pts[j].y - pts[i].y;
+                var d = Math.sqrt(dx * dx + dy * dy) || 1;
+                var min = 26 + Math.min(String(pts[i].text).length, String(pts[j].text).length) * 0.9;
+                if (d < min) {
+                    var push = (min - d) / 2;
+                    var nx = dx / d;
+                    var ny = dy / d;
+                    pts[i].x -= nx * push * 0.35;
+                    pts[i].y -= ny * push * 0.75;
+                    pts[j].x += nx * push * 0.35;
+                    pts[j].y += ny * push * 0.75;
+                }
+            }
+        }
+    }
+    return pts;
+}
+
+function labelsOnMap(pts, fs) {
+    nudgeLabels(pts);
+    return pts.map(function (p) { return onMapText(p.x, p.y, p.text, fs); }).join("");
 }
 
 function cropMap(provs, opts) {
-    var pins = "";
-    opts.iller.forEach(function (name, i) {
+    var pts = [];
+    (opts.iller || []).forEach(function (name, i) {
         var fp = findProv(provs, name);
         if (!fp) {
             console.warn("il yok:", name);
             return;
         }
-        pins += pin(fp.cx, fp.cy, i + 1);
+        pts.push({ x: fp.cx, y: fp.cy, text: (opts.yazilar && opts.yazilar[i]) || name });
     });
-    var listY = 78 + MAP_BLOCK_H + 22;
-    var rows = listRows(opts.iller);
-    var factsY = listY + 14 + rows * 22 + 10;
+    var factsY = 78 + MAP_BLOCK_H + 16;
     var facts = wrapFacts(opts.facts, 16, factsY, CANVAS_W - 32, 14);
     var H = factsY + facts.h + 28;
-    var body = mapBlock(provs, landPaths(provs, opts.iller, C.landHi) + pins) +
-        '<text x="18" y="' + listY + '" font-family="Segoe UI, Calibri, sans-serif" font-size="12" font-weight="800" fill="' + C.teal + '">' + esc(opts.listTitle || "YETİŞTİĞİ İLLER") + "</text>" +
-        twoColList(opts.iller, listY + 20) +
-        facts.svg;
+    var body = mapBlock(provs, landPaths(provs, opts.iller, C.landHi) + labelsOnMap(pts, 24)) + facts.svg;
     return frame(H, opts.title, opts.kicker || "Tarım dağılımı", body);
 }
 
@@ -311,22 +360,20 @@ function main() {
     console.log("ok solstice");
 
     function labeled(title, kicker, items, facts) {
-        var extra = landPaths(provs, items.map(function (it) { return it.il; }), C.landHi);
-        var pins = "";
-        items.forEach(function (it, i) {
+        var pts = [];
+        items.forEach(function (it) {
             var fp = findProv(provs, it.il);
             if (!fp) {
                 console.warn("il yok:", it.il);
                 return;
             }
-            extra += pin(fp.cx, fp.cy, i + 1);
+            pts.push({ x: fp.cx, y: fp.cy, text: mapCaption(it.label) });
         });
-        var labels = items.map(function (it) { return it.label; });
-        var rows = listRows(labels);
-        var listY = 78 + MAP_BLOCK_H + 20;
-        var factsBox = wrapFacts(facts, 16, listY + rows * 22 + 8, CANVAS_W - 32, 14);
-        var H = listY + rows * 22 + 8 + factsBox.h + 28;
-        var body = mapBlock(provs, extra) + twoColList(labels, listY) + factsBox.svg;
+        var extra = landPaths(provs, items.map(function (it) { return it.il; }), C.landHi) + labelsOnMap(pts, 20);
+        var factsY = 78 + MAP_BLOCK_H + 16;
+        var factsBox = wrapFacts(facts, 16, factsY, CANVAS_W - 32, 14);
+        var H = factsY + factsBox.h + 28;
+        var body = mapBlock(provs, extra) + factsBox.svg;
         writePng(path.join(IMG, title.file), frame(H, title.head, kicker, body));
     }
 
@@ -474,66 +521,86 @@ function main() {
     );
 
     var minerals = [
-        { file: "maden_genel.png", title: "TÜRKİYE MADEN HARİTASI", listTitle: "BAŞLICA YATAKLAR", kicker: "Maden dağılımı",
+        { file: "maden_genel.png", title: "TÜRKİYE MADEN HARİTASI",             listTitle: "BAŞLICA YATAKLAR", kicker: "Maden dağılımı",
             iller: ["Balıkesir", "Bursa", "Eskişehir", "İzmir", "Aydın", "Muğla", "Isparta", "Antalya", "Zonguldak", "Ankara", "Aksaray", "Çankırı", "Yozgat", "Artvin", "Sivas", "Elazığ", "Erzurum", "Mardin", "Afyon", "Konya"],
+            yazilar: ["Bor · Mermer", "Bor · Volfram", "Lüle · Toryum", "Altın · Cıva", "Zımpara", "Krom · Mermer", "Kükürt", "Boksit · Barit", "Manganez", "Trona", "Tuz Gölü", "Kaya tuzu", "Uranyum", "Bakır · Altın", "Demir", "Krom", "Oltu taşı", "Fosfat", "Mermer", "Boksit"],
             facts: ["Çeşit fazla, miktar azdır", "En fazla çeşit: Yukarı Fırat (Elazığ) — volkanizma", "Bor dünya rezervinin ~%72’si Türkiye’dedir"] },
         { file: "maden_demir.png", title: "DEMİR", iller: ["Sivas", "Malatya", "Karabük", "Zonguldak", "Hatay"],
+            yazilar: ["Divriği", "Hekimhan", "Karabük", "Ereğli", "İskenderun"],
             facts: ["Çıkarım: Divriği, Hekimhan, Hasançelebi", "Karabük–Ereğli: taşkömürüne yakınlık", "İskenderun: ulaşım + ithal kömür, su kenarı"] },
         { file: "maden_bakir.png", title: "BAKIR", iller: ["Kastamonu", "Artvin", "Rize", "Samsun"],
+            yazilar: ["Küre", "Murgul", "Çayeli", "Samsun (işleme)"],
             facts: ["En çok Karadeniz’de çıkarılır: Küre, Murgul, Çayeli", "İşleme: Samsun (ulaşım)"] },
         { file: "maden_boksit.png", title: "BOKSİT (ALÜMİNYUM)", iller: ["Antalya", "Konya"],
+            yazilar: ["Akseki", "Seydişehir"],
             facts: ["Çıkarım: Akseki ve Seydişehir", "İşleme: Seydişehir"] },
         { file: "maden_krom.png", title: "KROM", iller: ["Elazığ", "Muğla", "Antalya"],
+            yazilar: ["Guleman", "Köyceğiz", "Antalya (işleme)"],
             facts: ["Paslanmazlık–aşınmazlık · rezerv fazla · ihraç", "Çıkarım: Guleman, Köyceğiz", "İşleme: Elazığ (ham madde), Antalya (ulaşım)"] },
         { file: "maden_barit.png", title: "BARİT", iller: ["Antalya"],
+            yazilar: ["Alanya"],
             facts: ["Petrol kuyularında basıncı artırır", "Alanya · rezerv fazla · ihraç"] },
         { file: "maden_bor.png", title: "BOR", iller: ["Balıkesir", "Eskişehir", "Kütahya", "Bursa"],
+            yazilar: ["Bandırma", "Kırka", "Kütahya", "Bursa"],
             facts: ["Dünya rezervinin yaklaşık %72’si Türkiye’dedir", "İşleme: Kırka ve Bandırma", "İhraç edilir"] },
         { file: "maden_mermer.png", title: "MERMER", iller: ["Afyon", "Balıkesir", "Muğla", "Bursa"],
+            yazilar: ["Afyon", "Marmara Adası", "Muğla", "Bursa"],
             facts: ["Kireç taşının başkalaşımıyla oluşur", "En çok Afyon ve Marmara Adası"] },
         { file: "maden_fosfat.png", title: "FOSFAT", iller: ["Mardin"],
+            yazilar: ["Mazıdağı"],
             facts: ["Gübre hammaddesi", "Rezerv azdır", "Mazıdağı’nda hem çıkarılır hem işlenir"] },
         { file: "maden_asbest.png", title: "ASBEST (AMYANT)", iller: ["Eskişehir", "Sivas"],
             facts: ["Yanmazlık özelliği vardır", "Kanser yapıcı olduğu için yasaklıdır"] },
         { file: "maden_trona.png", title: "TRONA (SODA KÜLÜ)", iller: ["Ankara"],
+            yazilar: ["Beypazarı · Kazan"],
             facts: ["Cam sanayisi (Şişecam)", "Sincan, Kazan, Beypazarı", "İşleme: Kazan"] },
         { file: "maden_altin.png", title: "ALTIN", iller: ["İzmir", "Çanakkale", "Gümüşhane", "Artvin"],
+            yazilar: ["Ovacık", "Kaz Dağları", "Mostra Dağı", "Cerattepe"],
             facts: ["İlk yatak: Bergama–Ovacık", "Kaz Dağları, Mostra Dağı, Cerattepe"] },
         { file: "maden_uranyum.png", title: "URANYUM", iller: ["Yozgat"],
+            yazilar: ["Sorgun"],
             facts: ["Nükleer enerji hammaddesi", "Yozgat–Sorgun"] },
         { file: "maden_toryum.png", title: "TORYUM", iller: ["Eskişehir"],
+            yazilar: ["Sivrihisar"],
             facts: ["Nükleer enerji potansiyeli", "Sivrihisar’da bulunur, henüz işletilmez"] },
         { file: "maden_civa.png", title: "CIVA", iller: ["İzmir", "Konya"],
+            yazilar: ["Karaburun", "Sarayönü"],
             facts: ["Oda sıcaklığında sıvı olan tek maden", "Karaburun ve Sarayönü", "Hassas alet (termometre, barometre)"] },
         { file: "maden_tuz.png", title: "TUZ", iller: ["Çankırı", "Iğdır", "Kars", "Aksaray", "Konya", "Ankara", "İzmir"],
+            yazilar: ["Çankırı", "Iğdır", "Kars", "Tuz Gölü", "Tuz Gölü", "Tuz Gölü", "Çamaltı"],
             facts: ["Kaya tuzu: Çankırı, Iğdır, Kars", "Göl tuzu: Tuz Gölü (Aksaray–Konya–Ankara)", "Deniz tuzu: Çamaltı"] },
         { file: "maden_perlit.png", title: "PERLİT (İNCİ TAŞI)", iller: ["İzmir", "Ankara", "Bayburt", "Erzurum"],
             facts: ["Volkanik, camsı yapı", "Gıda, inşaat, boya, deterjan"] },
         { file: "maden_pomza.png", title: "POMZA TAŞI", iller: ["Nevşehir", "Kayseri"],
             facts: ["Tarım ve inşaat", "Kapadokya volkanizması"] },
         { file: "maden_kukurt.png", title: "KÜKÜRT", iller: ["Isparta"],
+            yazilar: ["Keçiborlu"],
             facts: ["Bağcılık ve kayısıcılıkta hastalık önler", "Keçiborlu başlıca yataktır"] },
         { file: "maden_manganez.png", title: "MANGANEZ", iller: ["Zonguldak"],
+            yazilar: ["Ereğli"],
             facts: ["Çeliğe sertlik verir", "Ereğli"] },
         { file: "maden_kursun.png", title: "KURŞUN VE ÇİNKO", iller: ["Yozgat", "Elazığ"],
             facts: ["Birlikte çıkarılır"] },
         { file: "maden_oltu.png", title: "OLTU TAŞI", iller: ["Erzurum"],
+            yazilar: ["Oltu"],
             facts: ["Süs eşyası ve takı", "Erzurum–Oltu"] },
         { file: "maden_lule.png", title: "LÜLE TAŞI", iller: ["Eskişehir"],
             facts: ["Pipo ve süs eşyası"] },
         { file: "maden_volfram.png", title: "VOLFRAM (TUNGSTEN)", iller: ["Bursa"],
+            yazilar: ["Uludağ"],
             facts: ["Sert metal alaşımı", "Uludağ"] },
         { file: "maden_feldspat.png", title: "FELDSPAT", iller: ["Aydın", "Kütahya", "Yozgat"],
             facts: ["Cam, seramik, boya, plastik"] },
         { file: "maden_zimpara.png", title: "ZIMPARA TAŞI", iller: ["Aydın", "Antalya"],
+            yazilar: ["Aydın", "Alanya"],
             facts: ["Zımparalama ve parlatma", "Aydın ve Alanya · ihraç edilir"] }
     ];
     minerals.forEach(function (m) {
         writePng(path.join(IMG, m.file), cropMap(provs, {
             title: m.title,
             iller: m.iller,
+            yazilar: m.yazilar,
             facts: m.facts,
-            listTitle: m.listTitle || "ÇIKARILDIĞI / İŞLENDİĞİ İLLER",
             kicker: m.kicker || "Maden dağılımı"
         }));
         console.log("ok", m.file);
