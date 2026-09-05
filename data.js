@@ -146,6 +146,10 @@ window.getKpssData = function () {
             "Türkiyenini Ekonomik Coğrafyası (HAYVANCILIK)":{
                 notlar:window.cografya_20_notlari || [],
                 sorular:window.cografya_20_sorulari || []
+            },
+            "Türkiyenini Ekonomik Coğrafyası (MADENLER)":{
+                notlar:window.cografya_21_notlari || [],
+                sorular:window.cografya_21_sorulari || []
             }
         },
         // YENİ EKLENEN TÜRKÇE BÖLÜMÜ

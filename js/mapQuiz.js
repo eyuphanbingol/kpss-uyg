@@ -564,7 +564,22 @@
         ["Bakır işleme: Samsun", "Samsun", { follow: { q: "Bakırın işlendiği liman kenti?", choices: ["Antalya", "Samsun", "Van", "Konya"], answer: "Samsun" } }],
         ["Boksit: Akseki", "Antalya"], ["Boksit işleme: Seydişehir", "Konya"],
         ["Krom: Guleman", "Elazığ"], ["Krom: Fethiye–Dalaman", "Muğla"],
-        ["Bor: Balıkesir–Eskişehir–Kütahya–Bursa", "Balıkesir-Eskişehir-Kütahya-Bursa", { prompt: "Bor kuşağının bir ilini bul (Marmara güneyi / İçbatı Anadolu)." }]
+        ["Bor: Balıkesir–Eskişehir–Kütahya–Bursa", "Balıkesir-Eskişehir-Kütahya-Bursa", { prompt: "Bor kuşağının bir ilini bul (Marmara güneyi / İçbatı Anadolu)." }],
+        ["Barit: Alanya", "Antalya"],
+        ["Fosfat: Mazıdağı", "Mardin"],
+        ["Asbest: Eskişehir", "Eskişehir"],
+        ["Trona: Beypazarı–Kazan", "Ankara"],
+        ["Altın: Ovacık", "İzmir"],
+        ["Altın: Cerattepe", "Artvin"],
+        ["Uranyum: Sorgun", "Yozgat"],
+        ["Toryum: Sivrihisar", "Eskişehir"],
+        ["Cıva: Karaburun", "İzmir"],
+        ["Kükürt: Keçiborlu", "Isparta"],
+        ["Manganez: Ereğli", "Zonguldak"],
+        ["Oltu taşı", "Erzurum"],
+        ["Lüle taşı", "Eskişehir"],
+        ["Volfram: Uludağ", "Bursa"],
+        ["Zımpara: Aydın–Alanya", "Aydın-Antalya"]
     ].forEach(function (r) { ITEMS.push(F("maden", r[0], r[1], r[2] || {})); });
 
     [

@@ -219,10 +219,10 @@ function cropMap(provs, opts) {
     var facts = wrapFacts(opts.facts, 16, factsY, CANVAS_W - 32, 14);
     var H = factsY + facts.h + 28;
     var body = mapBlock(provs, landPaths(provs, opts.iller, C.landHi) + pins) +
-        '<text x="18" y="' + listY + '" font-family="Segoe UI, Calibri, sans-serif" font-size="12" font-weight="800" fill="' + C.teal + '">YETİŞTİĞİ İLLER</text>' +
+        '<text x="18" y="' + listY + '" font-family="Segoe UI, Calibri, sans-serif" font-size="12" font-weight="800" fill="' + C.teal + '">' + esc(opts.listTitle || "YETİŞTİĞİ İLLER") + "</text>" +
         twoColList(opts.iller, listY + 20) +
         facts.svg;
-    return frame(H, opts.title, "Tarım dağılımı", body);
+    return frame(H, opts.title, opts.kicker || "Tarım dağılımı", body);
 }
 
 function pin(x, y, n) {
@@ -471,6 +471,102 @@ function main() {
             { il: "Kırklareli", label: "15 İğneada longoz ormanları" }
         ],
         ["İlk millî park: Yozgat Çamlığı", "UNESCO: Göreme ve Nemrut", "Longoz: İğneada · Sümela: Altındere"]
+    );
+
+    var minerals = [
+        { file: "maden_genel.png", title: "TÜRKİYE MADEN HARİTASI", listTitle: "BAŞLICA YATAKLAR", kicker: "Maden dağılımı",
+            iller: ["Balıkesir", "Bursa", "Eskişehir", "İzmir", "Aydın", "Muğla", "Isparta", "Antalya", "Zonguldak", "Ankara", "Aksaray", "Çankırı", "Yozgat", "Artvin", "Sivas", "Elazığ", "Erzurum", "Mardin", "Afyon", "Konya"],
+            facts: ["Çeşit fazla, miktar azdır", "En fazla çeşit: Yukarı Fırat (Elazığ) — volkanizma", "Bor dünya rezervinin ~%72’si Türkiye’dedir"] },
+        { file: "maden_demir.png", title: "DEMİR", iller: ["Sivas", "Malatya", "Karabük", "Zonguldak", "Hatay"],
+            facts: ["Çıkarım: Divriği, Hekimhan, Hasançelebi", "Karabük–Ereğli: taşkömürüne yakınlık", "İskenderun: ulaşım + ithal kömür, su kenarı"] },
+        { file: "maden_bakir.png", title: "BAKIR", iller: ["Kastamonu", "Artvin", "Rize", "Samsun"],
+            facts: ["En çok Karadeniz’de çıkarılır: Küre, Murgul, Çayeli", "İşleme: Samsun (ulaşım)"] },
+        { file: "maden_boksit.png", title: "BOKSİT (ALÜMİNYUM)", iller: ["Antalya", "Konya"],
+            facts: ["Çıkarım: Akseki ve Seydişehir", "İşleme: Seydişehir"] },
+        { file: "maden_krom.png", title: "KROM", iller: ["Elazığ", "Muğla", "Antalya"],
+            facts: ["Paslanmazlık–aşınmazlık · rezerv fazla · ihraç", "Çıkarım: Guleman, Köyceğiz", "İşleme: Elazığ (ham madde), Antalya (ulaşım)"] },
+        { file: "maden_barit.png", title: "BARİT", iller: ["Antalya"],
+            facts: ["Petrol kuyularında basıncı artırır", "Alanya · rezerv fazla · ihraç"] },
+        { file: "maden_bor.png", title: "BOR", iller: ["Balıkesir", "Eskişehir", "Kütahya", "Bursa"],
+            facts: ["Dünya rezervinin yaklaşık %72’si Türkiye’dedir", "İşleme: Kırka ve Bandırma", "İhraç edilir"] },
+        { file: "maden_mermer.png", title: "MERMER", iller: ["Afyon", "Balıkesir", "Muğla", "Bursa"],
+            facts: ["Kireç taşının başkalaşımıyla oluşur", "En çok Afyon ve Marmara Adası"] },
+        { file: "maden_fosfat.png", title: "FOSFAT", iller: ["Mardin"],
+            facts: ["Gübre hammaddesi", "Rezerv azdır", "Mazıdağı’nda hem çıkarılır hem işlenir"] },
+        { file: "maden_asbest.png", title: "ASBEST (AMYANT)", iller: ["Eskişehir", "Sivas"],
+            facts: ["Yanmazlık özelliği vardır", "Kanser yapıcı olduğu için yasaklıdır"] },
+        { file: "maden_trona.png", title: "TRONA (SODA KÜLÜ)", iller: ["Ankara"],
+            facts: ["Cam sanayisi (Şişecam)", "Sincan, Kazan, Beypazarı", "İşleme: Kazan"] },
+        { file: "maden_altin.png", title: "ALTIN", iller: ["İzmir", "Çanakkale", "Gümüşhane", "Artvin"],
+            facts: ["İlk yatak: Bergama–Ovacık", "Kaz Dağları, Mostra Dağı, Cerattepe"] },
+        { file: "maden_uranyum.png", title: "URANYUM", iller: ["Yozgat"],
+            facts: ["Nükleer enerji hammaddesi", "Yozgat–Sorgun"] },
+        { file: "maden_toryum.png", title: "TORYUM", iller: ["Eskişehir"],
+            facts: ["Nükleer enerji potansiyeli", "Sivrihisar’da bulunur, henüz işletilmez"] },
+        { file: "maden_civa.png", title: "CIVA", iller: ["İzmir", "Konya"],
+            facts: ["Oda sıcaklığında sıvı olan tek maden", "Karaburun ve Sarayönü", "Hassas alet (termometre, barometre)"] },
+        { file: "maden_tuz.png", title: "TUZ", iller: ["Çankırı", "Iğdır", "Kars", "Aksaray", "Konya", "Ankara", "İzmir"],
+            facts: ["Kaya tuzu: Çankırı, Iğdır, Kars", "Göl tuzu: Tuz Gölü (Aksaray–Konya–Ankara)", "Deniz tuzu: Çamaltı"] },
+        { file: "maden_perlit.png", title: "PERLİT (İNCİ TAŞI)", iller: ["İzmir", "Ankara", "Bayburt", "Erzurum"],
+            facts: ["Volkanik, camsı yapı", "Gıda, inşaat, boya, deterjan"] },
+        { file: "maden_pomza.png", title: "POMZA TAŞI", iller: ["Nevşehir", "Kayseri"],
+            facts: ["Tarım ve inşaat", "Kapadokya volkanizması"] },
+        { file: "maden_kukurt.png", title: "KÜKÜRT", iller: ["Isparta"],
+            facts: ["Bağcılık ve kayısıcılıkta hastalık önler", "Keçiborlu başlıca yataktır"] },
+        { file: "maden_manganez.png", title: "MANGANEZ", iller: ["Zonguldak"],
+            facts: ["Çeliğe sertlik verir", "Ereğli"] },
+        { file: "maden_kursun.png", title: "KURŞUN VE ÇİNKO", iller: ["Yozgat", "Elazığ"],
+            facts: ["Birlikte çıkarılır"] },
+        { file: "maden_oltu.png", title: "OLTU TAŞI", iller: ["Erzurum"],
+            facts: ["Süs eşyası ve takı", "Erzurum–Oltu"] },
+        { file: "maden_lule.png", title: "LÜLE TAŞI", iller: ["Eskişehir"],
+            facts: ["Pipo ve süs eşyası"] },
+        { file: "maden_volfram.png", title: "VOLFRAM (TUNGSTEN)", iller: ["Bursa"],
+            facts: ["Sert metal alaşımı", "Uludağ"] },
+        { file: "maden_feldspat.png", title: "FELDSPAT", iller: ["Aydın", "Kütahya", "Yozgat"],
+            facts: ["Cam, seramik, boya, plastik"] },
+        { file: "maden_zimpara.png", title: "ZIMPARA TAŞI", iller: ["Aydın", "Antalya"],
+            facts: ["Zımparalama ve parlatma", "Aydın ve Alanya · ihraç edilir"] }
+    ];
+    minerals.forEach(function (m) {
+        writePng(path.join(IMG, m.file), cropMap(provs, {
+            title: m.title,
+            iller: m.iller,
+            facts: m.facts,
+            listTitle: m.listTitle || "ÇIKARILDIĞI / İŞLENDİĞİ İLLER",
+            kicker: m.kicker || "Maden dağılımı"
+        }));
+        console.log("ok", m.file);
+    });
+
+    labeled({ file: "maden_etiket.png", head: "MADEN YATAKLARI" }, "Etiketli harita",
+        [
+            { il: "Balıkesir", label: "Mermer · Bor kuşağı" },
+            { il: "Bursa", label: "Bor · Volfram (Uludağ)" },
+            { il: "Eskişehir", label: "Lüle taşı · Toryum · Asbest · Bor" },
+            { il: "İzmir", label: "Altın · Cıva · Perlit · Çamaltı tuzu" },
+            { il: "Aydın", label: "Zımpara · Feldspat" },
+            { il: "Muğla", label: "Mermer · Krom (Köyceğiz)" },
+            { il: "Isparta", label: "Kükürt (Keçiborlu)" },
+            { il: "Antalya", label: "Boksit · Barit · Zımpara" },
+            { il: "Zonguldak", label: "Manganez · Demir-çelik (Ereğli)" },
+            { il: "Ankara", label: "Trona · Tuz Gölü kıyısı" },
+            { il: "Çankırı", label: "Kaya tuzu" },
+            { il: "Yozgat", label: "Uranyum · Kurşun-çinko" },
+            { il: "Kastamonu", label: "Bakır (Küre)" },
+            { il: "Samsun", label: "Bakır işleme" },
+            { il: "Hatay", label: "Demir-çelik (İskenderun)" },
+            { il: "Aksaray", label: "Tuz Gölü" },
+            { il: "Artvin", label: "Bakır (Murgul) · Altın" },
+            { il: "Sivas", label: "Demir (Divriği) · Asbest" },
+            { il: "Elazığ", label: "Krom (Guleman) · Yukarı Fırat" },
+            { il: "Erzurum", label: "Oltu taşı · Perlit" },
+            { il: "Mardin", label: "Fosfat (Mazıdağı)" },
+            { il: "Afyon", label: "Mermer" },
+            { il: "Konya", label: "Boksit (Seydişehir) · Cıva" },
+            { il: "Malatya", label: "Demir (Hekimhan)" }
+        ],
+        ["Çeşit fazla, miktar az", "Yukarı Fırat (Elazığ) çeşitlilikte birinci", "Bor ~%72 dünya rezervi"]
     );
 
     // nüfus piramidi
