@@ -50,6 +50,8 @@
                     notesDone: !!t.notesDone,
                     lastPct: t.lastPct == null ? null : t.lastPct,
                     attempts: t.attempts || 0,
+                    completedPacks: Array.isArray(t.completedPacks) ? t.completedPacks.slice() : [],
+                    legacyAllPacks: !!t.legacyAllPacks,
                     mastery: t.mastery || "yok",
                     masteryScore: t.masteryScore != null ? t.masteryScore : (global.StudentStore.topicMasteryScore ? global.StudentStore.topicMasteryScore(t) : 0),
                     wrongWeight: t.wrongWeight || 0

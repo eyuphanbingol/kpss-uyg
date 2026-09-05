@@ -1559,10 +1559,12 @@ function Eksikler(props) {
                         <h2 className={"font-black mb-2 " + t.text}>{t.icon} {ders}</h2>
                         <div className="space-y-1.5">
                             {byDers[ders].map(function (r) {
-                                const done = StudentStore.topicComplete(r, {
+                                const tp = StudentStore.getTopic(r.ders, r.konu);
+                                const kd = {
                                     sorular: new Array(r.soruSayisi || 0),
                                     notlar: new Array(r.notSayisi || 0)
-                                });
+                                };
+                                const done = StudentStore.topicComplete(tp, kd);
                                 return (
                                     <div key={r.konu}
                                         className={"w-full flex justify-between items-center p-3 rounded-xl border pointer-events-none " + (done

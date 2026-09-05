@@ -32,7 +32,7 @@ export default function EksiklerScreen({ navigation }) {
     // ---------- Stats ----------
     var totalTopics = plan.rows.length;
     var completedTopics = plan.rows.filter(function (r) {
-        return StudentStore.topicComplete(r, {
+        return StudentStore.topicComplete(StudentStore.getTopic(r.ders, r.konu), {
             sorular: new Array(r.soruSayisi || 0),
             notlar: new Array(r.notSayisi || 0)
         });
@@ -130,7 +130,7 @@ export default function EksiklerScreen({ navigation }) {
             {Object.keys(byDers).map(function (ders) {
                 var dersTopics = byDers[ders] || [];
                 var doneCount = dersTopics.filter(function (r) {
-                    return StudentStore.topicComplete(r, {
+                    return StudentStore.topicComplete(StudentStore.getTopic(r.ders, r.konu), {
                         sorular: new Array(r.soruSayisi || 0),
                         notlar: new Array(r.notSayisi || 0)
                     });
@@ -149,7 +149,7 @@ export default function EksiklerScreen({ navigation }) {
                         </View>
 
                         {dersTopics.map(function (r) {
-                            var done = StudentStore.topicComplete(r, {
+                            var done = StudentStore.topicComplete(StudentStore.getTopic(r.ders, r.konu), {
                                 sorular: new Array(r.soruSayisi || 0),
                                 notlar: new Array(r.notSayisi || 0)
                             });
