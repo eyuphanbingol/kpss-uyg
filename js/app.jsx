@@ -1332,15 +1332,7 @@ function KonuHub(props) {
 function NotesView(props) {
     const notlar = props.notlar || [];
     const idx = props.index;
-    const [zoomSrc, setZoomSrc] = useState(null);
-    useEffect(function () {
-        if (!zoomSrc) return;
-        var prev = document.body.style.overflow;
-        document.body.style.overflow = "hidden";
-        return function () { document.body.style.overflow = prev; };
-    }, [zoomSrc]);
     return (
-        <React.Fragment>
         <Shell wide={true} padBottom={false}>
             <div className="flex justify-between items-center mb-4 gap-3">
                 <BackBtn onClick={props.onBack} label="Geri" />
@@ -1355,12 +1347,7 @@ function NotesView(props) {
                         </div>
                         <div className="note-progress">{idx + 1}/{notlar.length}</div>
                     </header>
-                    <div key={idx} className="study-card-body text-[16px] leading-relaxed" onClick={function (e) {
-                        var t = e.target;
-                        if (t && t.tagName === "IMG" && t.getAttribute("src")) {
-                            setZoomSrc(t.getAttribute("src"));
-                        }
-                    }} dangerouslySetInnerHTML={{ __html: notlar[idx] }} />
+                    <div key={idx} className="study-card-body text-[16px] leading-relaxed" dangerouslySetInnerHTML={{ __html: notlar[idx] }} />
                     <footer className="study-card-foot">
                         <button disabled={idx === 0} onClick={function () { props.onIndex(idx - 1); }}
                             className={"back-btn " + (idx === 0 ? "opacity-30 pointer-events-none" : "")}>
@@ -1395,18 +1382,6 @@ function NotesView(props) {
                 </button>
             ) : null}
         </Shell>
-            {zoomSrc ? (
-                <div className="note-zoom" role="dialog" aria-modal="true">
-                    <div className="note-zoom-bar">
-                        <span>Haritayı kaydır · iki parmakla yakınlaştır</span>
-                        <button type="button" className="note-zoom-close" onClick={function () { setZoomSrc(null); }}>Kapat</button>
-                    </div>
-                    <div className="note-zoom-scroll">
-                        <img src={zoomSrc} alt="Harita" />
-                    </div>
-                </div>
-            ) : null}
-        </React.Fragment>
     );
 }
 

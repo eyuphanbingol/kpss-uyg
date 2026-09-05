@@ -44,7 +44,7 @@ window.cografya_3_notlari = [
     </div>
     <!-- 🗺️ HARİTA / RESİM ALANI -->
             <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/masif_arazi.png?v=5" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+                <img src="./src/img/masif_arazi.png?v=6" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
             </div>
     `,
 
@@ -72,7 +72,7 @@ window.cografya_3_notlari = [
         </div>
     <!-- 🗺️ HARİTA / RESİM ALANI -->
             <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/masif_arazi.png?v=5" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+                <img src="./src/img/masif_arazi.png?v=6" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
             </div>
     </div>
     `,
@@ -214,7 +214,7 @@ window.cografya_3_notlari = [
         </div>
     <!-- 🗺️ HARİTA / RESİM ALANI -->
             <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/kıvrım_dağlar.png?v=5" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+                <img src="./src/img/kıvrım_dağlar.png?v=6" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
             </div>
     </div>
     `,
@@ -252,7 +252,7 @@ window.cografya_3_notlari = [
         </div>
     <!-- 🗺️ HARİTA / RESİM ALANI -->
             <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/kırık_dağlar.png?v=5" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+                <img src="./src/img/kırık_dağlar.png?v=6" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
             </div>
     </div>
     `,
@@ -302,7 +302,7 @@ window.cografya_3_notlari = [
         </div>
     <!-- 🗺️ HARİTA / RESİM ALANI -->
             <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/volkanik_dağlar.png?v=5" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+                <img src="./src/img/volkanik_dağlar.png?v=6" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
             </div>
     </div>
     `,

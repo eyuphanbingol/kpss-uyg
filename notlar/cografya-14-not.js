@@ -264,7 +264,7 @@ window.cografya_14_notlari = [
         </ul>
          <!-- 🗺️ HARİTA / RESİM ALANI -->
             <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/milli_parklar.png?v=5" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+                <img src="./src/img/milli_parklar.png?v=6" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
             </div>
     </div>
     `,

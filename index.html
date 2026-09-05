@@ -99,11 +99,11 @@
     <script src="notlar/tarih-14-not.js?v=3"></script>
     <script src="notlar/tarih-15-not.js?v=3"></script>
     <script src="notlar/tarih-16-not.js?v=1"></script>
-    <script src="notlar/cografya-1-not.js?v=5"></script>
-    <script src="notlar/cografya-2-not.js?v=5"></script>
-    <script src="notlar/cografya-3-not.js?v=5"></script>
-    <script src="notlar/cografya-4-not.js?v=5"></script>
-    <script src="notlar/cografya-5-not.js?v=5"></script>
+    <script src="notlar/cografya-1-not.js?v=6"></script>
+    <script src="notlar/cografya-2-not.js?v=6"></script>
+    <script src="notlar/cografya-3-not.js?v=6"></script>
+    <script src="notlar/cografya-4-not.js?v=6"></script>
+    <script src="notlar/cografya-5-not.js?v=6"></script>
     <script src="notlar/cografya-6-not.js?v=3"></script>
     <script src="notlar/cografya-7-not.js?v=3"></script>
     <script src="notlar/cografya-8-not.js?v=3"></script>
@@ -112,12 +112,12 @@
     <script src="notlar/cografya-11-not.js?v=3"></script>
     <script src="notlar/cografya-12-not.js?v=3"></script>
     <script src="notlar/cografya-13-not.js?v=3"></script>
-    <script src="notlar/cografya-14-not.js?v=5"></script>
-    <script src="notlar/cografya-15-not.js?v=5"></script>
+    <script src="notlar/cografya-14-not.js?v=6"></script>
+    <script src="notlar/cografya-15-not.js?v=6"></script>
     <script src="notlar/cografya-16-not.js?v=3"></script>
     <script src="notlar/cografya-17-not.js?v=3"></script>
-    <script src="notlar/cografya-18-not.js?v=5"></script>
-    <script src="notlar/cografya-19-not.js?v=1"></script>
+    <script src="notlar/cografya-18-not.js?v=6"></script>
+    <script src="notlar/cografya-19-not.js?v=2"></script>
     <script src="notlar/vatandas-1-not.js?v=3"></script>
     <script src="notlar/guncel-1-not.js?v=3"></script>
     <script src="notlar/guncel-2-not.js?v=3"></script>
@@ -877,24 +877,13 @@
                 line-height: 1.35;
             }
             .study-card-body [class*="overflow-hidden"] {
-                overflow-x: auto !important;
-                overflow-y: hidden !important;
-                -webkit-overflow-scrolling: touch;
-                overscroll-behavior-x: contain;
-                margin-left: -12px;
-                margin-right: -12px;
-                width: calc(100% + 24px);
-                max-width: none;
-                border-radius: 0;
-                border-left: none;
-                border-right: none;
+                overflow: visible !important;
             }
             .study-card-body img {
-                width: 720px;
-                max-width: none;
-                min-width: 100%;
+                width: 100%;
+                max-width: 100%;
                 height: auto;
-                cursor: zoom-in;
+                object-fit: contain;
             }
             .option-btn {
                 word-break: break-word;
@@ -908,57 +897,6 @@
         @media (max-width: 560px) {
             .study-card-body .grid-cols-2 {
                 grid-template-columns: 1fr;
-            }
-        }
-        .note-zoom {
-            position: fixed;
-            inset: 0;
-            z-index: 80;
-            background: rgba(4, 28, 36, 0.96);
-            display: flex;
-            flex-direction: column;
-            padding-top: env(safe-area-inset-top);
-            padding-bottom: env(safe-area-inset-bottom);
-        }
-        .note-zoom-bar {
-            flex: 0 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-            padding: 12px 14px;
-            color: #F5EBC7;
-            font-size: 13px;
-            font-weight: 700;
-        }
-        .note-zoom-close {
-            border: 1px solid rgba(245, 235, 199, 0.28);
-            background: rgba(245, 235, 199, 0.12);
-            color: #fff;
-            border-radius: 999px;
-            padding: 8px 14px;
-            font-weight: 700;
-        }
-        .note-zoom-scroll {
-            flex: 1 1 auto;
-            min-height: 0;
-            overflow: auto;
-            -webkit-overflow-scrolling: touch;
-            touch-action: pan-x pan-y pinch-zoom;
-            overscroll-behavior: contain;
-            padding: 0 0 24px;
-        }
-        .note-zoom-scroll img {
-            display: block;
-            width: 1400px;
-            max-width: none;
-            height: auto;
-            margin: 0 auto;
-        }
-        @media (max-width: 640px) {
-            .note-zoom-scroll img {
-                width: 220vw;
-                min-width: 720px;
             }
         }
 
@@ -1069,7 +1007,7 @@
 
 <body class="app-bg min-h-screen text-slate-800 antialiased transition-colors duration-300">
     <div id="root"></div>
-    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=76"></script>
+    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=77"></script>
     <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.getRegistrations().then(function (regs) {

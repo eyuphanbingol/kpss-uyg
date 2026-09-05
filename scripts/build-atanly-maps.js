@@ -127,43 +127,80 @@ function landPaths(provs, hiKeys, hiFill) {
     }).join("");
 }
 
-function wrapFacts(lines, x, y, w) {
-    var h = 22 + lines.length * 22;
-    var t = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="14" fill="' + C.white + '" stroke="' + C.gold + '" stroke-width="1.5"/>';
-    lines.forEach(function (ln, i) {
-        t += '<text x="' + (x + 16) + '" y="' + (y + 28 + i * 22) + '" font-family="Segoe UI, Calibri, sans-serif" font-size="13" fill="' + C.ink + '">' + esc(ln) + "</text>";
+function wrapFacts(lines, x, y, w, fontSize) {
+    fontSize = fontSize || 15;
+    var lineH = fontSize + 8;
+    var maxChars = Math.max(28, Math.floor((w - 28) / (fontSize * 0.52)));
+    var rows = [];
+    (lines || []).forEach(function (ln) {
+        var s = String(ln);
+        while (s.length > maxChars) {
+            var cut = s.lastIndexOf(" ", maxChars);
+            if (cut < 12) cut = maxChars;
+            rows.push(s.slice(0, cut).trim());
+            s = s.slice(cut).trim();
+        }
+        if (s) rows.push(s);
     });
-    return t;
+    var h = 20 + rows.length * lineH;
+    var t = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="14" fill="' + C.white + '" stroke="' + C.gold + '" stroke-width="1.5"/>';
+    rows.forEach(function (ln, i) {
+        t += '<text x="' + (x + 14) + '" y="' + (y + 22 + i * lineH) + '" font-family="Segoe UI, Calibri, sans-serif" font-size="' + fontSize + '" fill="' + C.ink + '">' + esc(ln) + "</text>";
+    });
+    return { svg: t, h: h };
 }
 
-function frame(innerW, innerH, title, kicker, body) {
-    var W = 1400, H = 920;
+var CANVAS_W = 540;
+
+function frame(H, title, kicker, body) {
+    var W = CANVAS_W;
     return '<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns="http://www.w3.org/2000/svg" width="' + W + '" height="' + H + '" viewBox="0 0 ' + W + " " + H + '">\n' +
         '<rect width="' + W + '" height="' + H + '" fill="' + C.paper + '"/>' +
-        '<rect x="0" y="0" width="' + W + '" height="72" fill="' + C.navy + '"/>' +
-        '<text x="36" y="32" font-family="Segoe UI, Calibri, sans-serif" font-size="13" font-weight="700" fill="' + C.gold + '" letter-spacing="3">ATANLY</text>' +
-        '<text x="36" y="56" font-family="Segoe UI, Calibri, sans-serif" font-size="22" font-weight="800" fill="#F6F1E4">' + esc(title) + "</text>" +
-        '<text x="1364" y="44" text-anchor="end" font-family="Segoe UI, Calibri, sans-serif" font-size="12" fill="#9BB8B4">' + esc(kicker) + "</text>" +
+        '<rect x="0" y="0" width="' + W + '" height="64" fill="' + C.navy + '"/>' +
+        '<text x="18" y="26" font-family="Segoe UI, Calibri, sans-serif" font-size="12" font-weight="700" fill="' + C.gold + '" letter-spacing="3">ATANLY</text>' +
+        '<text x="18" y="50" font-family="Segoe UI, Calibri, sans-serif" font-size="18" font-weight="800" fill="#F6F1E4">' + esc(title) + "</text>" +
+        '<text x="' + (W - 16) + '" y="38" text-anchor="end" font-family="Segoe UI, Calibri, sans-serif" font-size="11" fill="#9BB8B4">' + esc(kicker) + "</text>" +
         body +
-        '<text x="36" y="898" font-family="Segoe UI, Calibri, sans-serif" font-size="11" fill="' + C.muted + '">Atanly özgün görsel · KPSS coğrafya · Ticari serbest il sınırları (Simplemaps)</text>' +
+        '<text x="18" y="' + (H - 12) + '" font-family="Segoe UI, Calibri, sans-serif" font-size="10" fill="' + C.muted + '">Atanly özgün görsel · KPSS coğrafya</text>' +
         "</svg>";
 }
 
-function mapGroup(provs, extra, ox, oy, scale) {
-    ox = ox == null ? 40 : ox;
-    oy = oy == null ? 100 : oy;
-    scale = scale || 1.28;
-    return '<g transform="translate(' + ox + "," + oy + ") scale(" + scale + ')">' +
-        '<rect x="-20" y="-16" width="1040" height="454" rx="18" fill="' + C.sea + '"/>' +
-        landPaths(provs) + extra + "</g>";
+function mapBlock(provs, extra) {
+    return '<g transform="translate(14,78) scale(0.51)">' +
+        '<rect x="-16" y="-12" width="1040" height="446" rx="18" fill="' + C.sea + '"/>' +
+        extra + "</g>";
 }
 
+var MAP_BLOCK_H = 250;
+
 function writePng(file, svg, w) {
-    var png = new Resvg(svg, { fitTo: { mode: "width", value: w || 1400 } }).render().asPng();
+    var png = new Resvg(svg, { fitTo: { mode: "width", value: w || 1080 } }).render().asPng();
     var tmp = file + ".tmp";
     fs.writeFileSync(tmp, png);
     try { fs.unlinkSync(file); } catch (e) {}
     fs.renameSync(tmp, file);
+}
+
+function twoColList(items, startY) {
+    var long = items.some(function (s) { return String(s).length > 24; });
+    var rowH = 22;
+    if (long) {
+        return items.map(function (label, i) {
+            return '<text x="18" y="' + (startY + i * rowH) + '" font-family="Segoe UI, Calibri, sans-serif" font-size="13" fill="' + C.ink + '"><tspan fill="' + C.gold + '" font-weight="800">' + (i + 1) + "  </tspan>" + esc(label) + "</text>";
+        }).join("");
+    }
+    var x0 = 18;
+    var x1 = 272;
+    return items.map(function (label, i) {
+        var x = (i % 2) ? x1 : x0;
+        var y = startY + Math.floor(i / 2) * rowH;
+        return '<text x="' + x + '" y="' + y + '" font-family="Segoe UI, Calibri, sans-serif" font-size="14" fill="' + C.ink + '"><tspan fill="' + C.gold + '" font-weight="800">' + (i + 1) + "  </tspan>" + esc(label) + "</text>";
+    }).join("");
+}
+
+function listRows(items) {
+    var long = items.some(function (s) { return String(s).length > 24; });
+    return long ? items.length : Math.ceil(items.length / 2);
 }
 
 function cropMap(provs, opts) {
@@ -176,23 +213,21 @@ function cropMap(provs, opts) {
         }
         pins += pin(fp.cx, fp.cy, i + 1);
     });
-    var col = opts.iller.map(function (x, i) {
-        return '<text x="1108" y="' + (158 + i * 22) + '" font-family="Segoe UI, Calibri, sans-serif" font-size="14" fill="' + C.ink + '"><tspan fill="' + C.gold + '" font-weight="800">' + (i + 1) + "  </tspan>" + esc(x) + "</text>";
-    }).join("");
-    var body = '<g transform="translate(24,96) scale(1.05)">' +
-        '<rect x="-20" y="-16" width="1040" height="454" rx="18" fill="' + C.sea + '"/>' +
-        landPaths(provs, opts.iller, C.landHi) + pins +
-        "</g>" +
-        '<rect x="1088" y="96" width="280" height="560" rx="18" fill="' + C.white + '" stroke="' + C.navy + '" stroke-width="1.2"/>' +
-        '<text x="1108" y="128" font-family="Segoe UI, Calibri, sans-serif" font-size="13" font-weight="800" fill="' + C.teal + '">YETİŞTİĞİ İLLER</text>' +
-        col +
-        wrapFacts(opts.facts, 40, 700, 1020);
-    return frame(1400, 920, opts.title, "Tarım dağılımı", body);
+    var listY = 78 + MAP_BLOCK_H + 22;
+    var rows = listRows(opts.iller);
+    var factsY = listY + 14 + rows * 22 + 10;
+    var facts = wrapFacts(opts.facts, 16, factsY, CANVAS_W - 32, 14);
+    var H = factsY + facts.h + 28;
+    var body = mapBlock(provs, landPaths(provs, opts.iller, C.landHi) + pins) +
+        '<text x="18" y="' + listY + '" font-family="Segoe UI, Calibri, sans-serif" font-size="12" font-weight="800" fill="' + C.teal + '">YETİŞTİĞİ İLLER</text>' +
+        twoColList(opts.iller, listY + 20) +
+        facts.svg;
+    return frame(H, opts.title, "Tarım dağılımı", body);
 }
 
 function pin(x, y, n) {
-    return '<circle cx="' + Number(x).toFixed(1) + '" cy="' + Number(y).toFixed(1) + '" r="11" fill="' + C.navy + '" stroke="' + C.gold + '" stroke-width="1.5"/>' +
-        '<text x="' + Number(x).toFixed(1) + '" y="' + (Number(y) + 4).toFixed(1) + '" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#F6F1E4">' + n + "</text>";
+    return '<circle cx="' + Number(x).toFixed(1) + '" cy="' + Number(y).toFixed(1) + '" r="14" fill="' + C.navy + '" stroke="' + C.gold + '" stroke-width="1.8"/>' +
+        '<text x="' + Number(x).toFixed(1) + '" y="' + (Number(y) + 5).toFixed(1) + '" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#F6F1E4">' + n + "</text>";
 }
 
 function main() {
@@ -241,24 +276,22 @@ function main() {
         '<clipPath id="nightJ"><polygon points="0,0 480,0 220,422 0,422"/></clipPath>' +
         '<g clip-path="url(#nightJ)">' + landPaths(provs).replace(/fill="#E4EAD6"/g, 'fill="' + C.night + '"') + "</g>" +
         term +
-        '<text x="210" y="210" font-size="22" font-weight="800" fill="#F6F1E4" font-family="Segoe UI, sans-serif">GECE</text>' +
-        '<text x="620" y="230" font-size="22" font-weight="800" fill="' + C.navy + '" font-family="Segoe UI, sans-serif">GÜNDÜZ</text>';
-    var juneBody = '<g transform="translate(30,100) scale(1.02)">' +
-        '<rect x="-16" y="-12" width="1032" height="446" rx="16" fill="' + C.sea + '"/>' + juneExtra + "</g>" +
-        wrapFacts([
-            "21 HAZİRAN — Yaz mevsimi başlar",
-            "Güneş ışınları en büyük açıyla düşer",
-            "Gölge boyu en kısadır · en uzun gündüz, en kısa gece",
-            "Bu tarihten sonra gündüzler kısalmaya başlar"
-        ], 40, 680, 1320);
-    writePng(path.join(IMG, "21 haziran.png"), frame(1400, 920, "21 HAZİRAN", "Yaz gündönümü", juneBody));
+        '<text x="210" y="210" font-size="28" font-weight="800" fill="#F6F1E4" font-family="Segoe UI, sans-serif">GECE</text>' +
+        '<text x="620" y="230" font-size="28" font-weight="800" fill="' + C.navy + '" font-family="Segoe UI, sans-serif">GÜNDÜZ</text>';
+    var juneFacts = wrapFacts([
+        "21 HAZİRAN — Yaz mevsimi başlar",
+        "Güneş ışınları en büyük açıyla düşer",
+        "Gölge boyu en kısadır · en uzun gündüz, en kısa gece",
+        "Bu tarihten sonra gündüzler kısalmaya başlar"
+    ], 16, 78 + MAP_BLOCK_H + 16, CANVAS_W - 32, 14);
+    writePng(path.join(IMG, "21 haziran.png"), frame(78 + MAP_BLOCK_H + 16 + juneFacts.h + 28, "21 HAZİRAN", "Yaz gündönümü", mapBlock(provs, juneExtra) + juneFacts.svg));
 
     var decExtra = landPaths(provs) +
         '<clipPath id="nightD"><polygon points="0,0 500,0 240,422 0,422"/></clipPath>' +
         '<g clip-path="url(#nightD)">' + landPaths(provs).replace(/fill="#E4EAD6"/g, 'fill="' + C.night + '"') + "</g>" +
         '<line x1="450" y1="8" x2="260" y2="410" stroke="' + C.ink + '" stroke-width="5"/>' +
-        '<text x="200" y="210" font-size="22" font-weight="800" fill="#F6F1E4" font-family="Segoe UI, sans-serif">GECE</text>' +
-        '<text x="640" y="230" font-size="22" font-weight="800" fill="' + C.navy + '" font-family="Segoe UI, sans-serif">GÜNDÜZ</text>' +
+        '<text x="200" y="210" font-size="28" font-weight="800" fill="#F6F1E4" font-family="Segoe UI, sans-serif">GECE</text>' +
+        '<text x="640" y="230" font-size="28" font-weight="800" fill="' + C.navy + '" font-family="Segoe UI, sans-serif">GÜNDÜZ</text>' +
         (function () {
             var s = findProv(provs, "Sinop");
             var h = findProv(provs, "Hatay");
@@ -267,16 +300,14 @@ function main() {
             if (h) t += pin(h.cx, h.cy, "H") + '<text x="' + (h.cx + 16) + '" y="' + (h.cy + 4) + '" font-size="13" font-weight="800" fill="' + C.navy + '" font-family="Segoe UI, sans-serif">Hatay</text>';
             return t;
         })();
-    var decBody = '<g transform="translate(30,100) scale(1.02)">' +
-        '<rect x="-16" y="-12" width="1032" height="446" rx="16" fill="' + C.sea + '"/>' + decExtra + "</g>" +
-        wrapFacts([
-            "21 ARALIK — Kış başlangıcıdır",
-            "Cisimlerin gölge boyu en uzun olur",
-            "En uzun gece, en kısa gündüz yaşanır",
-            "Bu tarihten sonra güneş ışınlarının geliş açısı büyür; gündüzler uzar, geceler kısalır",
-            "En uzun gece Sinop’ta · en uzun gündüz Hatay’da yaşanır"
-        ], 40, 660, 1320);
-    writePng(path.join(IMG, "21 aralık.png"), frame(1400, 920, "21 ARALIK", "Kış gündönümü", decBody));
+    var decFacts = wrapFacts([
+        "21 ARALIK — Kış başlangıcıdır",
+        "Cisimlerin gölge boyu en uzun olur",
+        "En uzun gece, en kısa gündüz yaşanır",
+        "Bu tarihten sonra güneş ışınlarının geliş açısı büyür; gündüzler uzar, geceler kısalır",
+        "En uzun gece Sinop’ta · en uzun gündüz Hatay’da yaşanır"
+    ], 16, 78 + MAP_BLOCK_H + 16, CANVAS_W - 32, 14);
+    writePng(path.join(IMG, "21 aralık.png"), frame(78 + MAP_BLOCK_H + 16 + decFacts.h + 28, "21 ARALIK", "Kış gündönümü", mapBlock(provs, decExtra) + decFacts.svg));
     console.log("ok solstice");
 
     function labeled(title, kicker, items, facts) {
@@ -290,14 +321,13 @@ function main() {
             }
             extra += pin(fp.cx, fp.cy, i + 1);
         });
-        var list = items.map(function (it, i) {
-            return '<text x="1108" y="' + (130 + i * 28) + '" font-family="Segoe UI, sans-serif" font-size="13" fill="' + C.ink + '"><tspan fill="' + C.gold + '" font-weight="800">' + (i + 1) + "  </tspan>" + esc(it.label) + "</text>";
-        }).join("");
-        var body = '<g transform="translate(24,96) scale(1.05)">' +
-            '<rect x="-20" y="-16" width="1040" height="454" rx="18" fill="' + C.sea + '"/>' + extra + "</g>" +
-            '<rect x="1088" y="90" width="288" height="580" rx="16" fill="' + C.white + '" stroke="' + C.navy + '"/>' + list +
-            wrapFacts(facts, 40, 700, 1020);
-        writePng(path.join(IMG, title.file), frame(1400, 920, title.head, kicker, body));
+        var labels = items.map(function (it) { return it.label; });
+        var rows = listRows(labels);
+        var listY = 78 + MAP_BLOCK_H + 20;
+        var factsBox = wrapFacts(facts, 16, listY + rows * 22 + 8, CANVAS_W - 32, 14);
+        var H = listY + rows * 22 + 8 + factsBox.h + 28;
+        var body = mapBlock(provs, extra) + twoColList(labels, listY) + factsBox.svg;
+        writePng(path.join(IMG, title.file), frame(H, title.head, kicker, body));
     }
 
     labeled({ file: "kıvrım_dağlar.png", head: "KIVRIM DAĞLARI" }, "Yer şekilleri",
@@ -445,21 +475,19 @@ function main() {
 
     // nüfus piramidi
     function pyr(cx, cy, color, label, pts) {
-        var poly = pts.map(function (p) { return (cx + p[0]) + "," + (cy + p[1]); }).join(" ");
+        var poly = pts.map(function (p) { return (cx + p[0] * 0.72) + "," + (cy + p[1] * 0.72); }).join(" ");
         return '<polygon points="' + poly + '" fill="' + color + '" opacity="0.9"/>' +
-            '<line x1="' + (cx - 70) + '" y1="' + cy + '" x2="' + (cx + 70) + '" y2="' + cy + '" stroke="' + C.muted + '" stroke-width="0.6"/>' +
-            '<text x="' + cx + '" y="' + (cy + 118) + '" text-anchor="middle" font-size="13" font-weight="700" fill="' + C.ink + '" font-family="Segoe UI, sans-serif">' + esc(label) + "</text>" +
-            '<text x="' + (cx - 78) + '" y="' + (cy - 70) + '" font-size="9" fill="' + C.muted + '">Yaş</text>' +
-            '<text x="' + (cx + 8) + '" y="' + (cy + 98) + '" font-size="9" fill="' + C.muted + '">Milyon kişi</text>';
+            '<line x1="' + (cx - 52) + '" y1="' + cy + '" x2="' + (cx + 52) + '" y2="' + cy + '" stroke="' + C.muted + '" stroke-width="0.6"/>' +
+            '<text x="' + cx + '" y="' + (cy + 86) + '" text-anchor="middle" font-size="13" font-weight="700" fill="' + C.ink + '" font-family="Segoe UI, sans-serif">' + esc(label) + "</text>";
     }
-    var pyBody = '<text x="700" y="110" text-anchor="middle" font-size="14" fill="' + C.muted + '" font-family="Segoe UI, sans-serif">15 ve 60 yaş çizgileri çalışma çağını ayırır</text>' +
-        pyr(250, 280, "#C45C5C", "Gelişmemiş", [[0, -90], [70, 80], [-70, 80]]) +
-        pyr(700, 280, "#3D6EA8", "Gelişmemiş", [[0, -90], [55, 80], [-55, 80]]) +
-        pyr(1150, 280, "#2A9B8F", "Gelişmekte", [[0, -90], [30, -20], [62, 20], [40, 80], [-40, 80], [-62, 20], [-30, -20]]) +
-        pyr(250, 620, "#C5A059", "Gelişmiş", [[0, -90], [48, -10], [52, 40], [28, 80], [-28, 80], [-52, 40], [-48, -10]]) +
-        pyr(700, 620, "#3F8F5A", "Gelişmiş", [[0, -95], [28, 0], [22, 80], [-22, 80], [-28, 0]]) +
-        pyr(1150, 620, "#6B4C9A", "Gelişmiş", [[0, -88], [38, -5], [58, 30], [20, 80], [-20, 80], [-58, 30], [-38, -5]]);
-    writePng(path.join(IMG, "nüfus_prmt.png"), frame(1400, 920, "NÜFUS PİRAMİTLERİ", "Gelişmişlik tipleri", pyBody));
+    var pyBody = '<text x="270" y="88" text-anchor="middle" font-size="13" fill="' + C.muted + '" font-family="Segoe UI, sans-serif">15 ve 60 yaş çizgileri çalışma çağını ayırır</text>' +
+        pyr(140, 210, "#C45C5C", "Gelişmemiş", [[0, -90], [70, 80], [-70, 80]]) +
+        pyr(400, 210, "#3D6EA8", "Gelişmemiş", [[0, -90], [55, 80], [-55, 80]]) +
+        pyr(140, 430, "#2A9B8F", "Gelişmekte", [[0, -90], [30, -20], [62, 20], [40, 80], [-40, 80], [-62, 20], [-30, -20]]) +
+        pyr(400, 430, "#C5A059", "Gelişmiş", [[0, -90], [48, -10], [52, 40], [28, 80], [-28, 80], [-52, 40], [-48, -10]]) +
+        pyr(140, 650, "#3F8F5A", "Gelişmiş", [[0, -95], [28, 0], [22, 80], [-22, 80], [-28, 0]]) +
+        pyr(400, 650, "#6B4C9A", "Gelişmiş", [[0, -88], [38, -5], [58, 30], [20, 80], [-20, 80], [-58, 30], [-38, -5]]);
+    writePng(path.join(IMG, "nüfus_prmt.png"), frame(780, "NÜFUS PİRAMİTLERİ", "Gelişmişlik tipleri", pyBody));
     console.log("ok pyramids");
 }
 
