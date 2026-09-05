@@ -192,12 +192,6 @@
                 { id: "milli-dogu", title: "Doğu Anadolu", icon: "🏞️" },
                 { id: "milli-guneydogu", title: "Güneydoğu", icon: "🏞️" }
             ]
-        },
-        {
-            id: "kpss", title: "KPSS tuzakları", icon: "🧠",
-            kids: [
-                { id: "tuzak", title: "İstisnalar ve karışanlar", icon: "🧠" }
-            ]
         }
     ];
 
@@ -649,16 +643,6 @@
         ITEMS.push(it);
     });
 
-    ITEMS.push(F("tuzak", "Kızılırmak → Bafra", "Samsun", { prompt: "Kızılırmak deltasını bul. (Yeşilırmak Çarşamba'dır.)" }));
-    ITEMS.push(F("tuzak", "Yeşilırmak → Çarşamba", "Samsun", { prompt: "Yeşilırmak deltasını bul. (Kızılırmak Bafra'dır.)" }));
-    ITEMS.push(F("tuzak", "Nemrut (Adıyaman) vs volkan", "Adıyaman", { prompt: "Adıyaman Nemrut'u bul — Kommagene heykelleri; volkan değildir.", follow: { q: "Volkanik Nemrut nerededir?", choices: ["Adıyaman", "Bitlis", "Ankara", "Muğla"], answer: "Bitlis" } }));
-    ITEMS.push(F("tuzak", "Karadağ ≠ Karacadağ", "Karaman", { prompt: "Karaman Karadağ'ı bul. (Karacadağ Urfa–Diyarbakır'dadır.)" }));
-    ITEMS.push(F("tuzak", "Karacadağ (kalkan volkan)", "Diyarbakır", { prompt: "Karacadağ'ı bul. (Karaman Karadağ değil.)" }));
-    ITEMS.push(F("tuzak", "En yüksek dağ vs kıvrım zirvesi", "Ağrı", { prompt: "Ağrı Dağı'nı bul.", follow: { q: "Türkiye'nin en yüksek noktası Ağrı'dır. Kıvrım dağlarının en yükseği?", choices: ["Ağrı", "Demirkazık / Aladağlar", "Kaz Dağı", "Madra"], answer: "Demirkazık / Aladağlar" } }));
-    ITEMS.push(F("tuzak", "En büyük göl vs tatlı su", "Van", { prompt: "Van Gölü'nü bul.", follow: { q: "En büyük tatlı su gölü?", choices: ["Van", "Tuz", "Beyşehir", "İznik"], answer: "Beyşehir" } }));
-    ITEMS.push(F("tuzak", "Ovit ≠ Cankurtaran", "Rize", { prompt: "Ovit (Rize–Erzurum) geçidini bul. Cankurtaran Artvin'dedir." }));
-    ITEMS.push(F("tuzak", "Fiyort / skyer yok", "Trabzon", { prompt: "Karadeniz boyuna kıyıyı bul.", follow: { q: "Türkiye'de hangisi görülmez?", choices: ["Ria", "Dalmaçya", "Fiyort ve skyer", "Boyuna kıyı"], answer: "Fiyort ve skyer" } }));
-
     ITEMS.forEach(function (it, i) { it.id = "m" + i; });
 
     function project(lon, lat) {
@@ -874,15 +858,6 @@
         if (t === "nufus-seyrek") return "🏕️";
         if (t === "nufus-yogun") return "🏙️";
         if (t.indexOf("milli") === 0) return "🏞️";
-        if (t === "tuzak") {
-            if (n.indexOf("nemrut") >= 0) return "🗿";
-            if (n.indexOf("bafra") >= 0 || n.indexOf("carsamba") >= 0) return "🌊";
-            if (n.indexOf("agri") >= 0 || n.indexOf("karadag") >= 0 || n.indexOf("karacadag") >= 0) return "🌋";
-            if (n.indexOf("gol") >= 0 || n.indexOf("van") >= 0) return "🏞️";
-            if (n.indexOf("ovit") >= 0) return "🏔️";
-            if (n.indexOf("fiyort") >= 0) return "🏖️";
-            return "🧠";
-        }
         return topicGlyph(t);
     }
 
