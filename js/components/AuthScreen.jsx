@@ -94,25 +94,23 @@
             if (!recovery) return;
             var sc = window.SupabaseClient;
             if (!sc || !sc.establishRecoverySession) return;
+            var cancelled = false;
             sc.establishRecoverySession().then(function (sess) {
+                if (cancelled) return;
                 if (sess) {
                     if (sc.markRecovery) sc.markRecovery();
                     setRecReady(true);
                     setMsg("");
                 } else {
-                    if (sc.clearRecovery) sc.clearRecovery();
                     setRecReady(false);
-                    setRecovery(false);
-                    setMsg("Bu link kullanılamadı. E-postanı yazıp Şifremi Unuttum ile yeni mail iste. Üst üste çok denediysen birkaç dakika bekle.");
-                    if (props.onRecoveryFailed) props.onRecoveryFailed();
+                    setMsg("Bağlantı henüz doğrulanamadı. Aynı tarayıcıda maildeki linke bir kez tıkla.");
                 }
             }).catch(function () {
-                if (sc.clearRecovery) sc.clearRecovery();
+                if (cancelled) return;
                 setRecReady(false);
-                setRecovery(false);
-                setMsg("Bu link kullanılamadı. Yeni bir sıfırlama maili iste.");
-                if (props.onRecoveryFailed) props.onRecoveryFailed();
+                setMsg("Bağlantı henüz doğrulanamadı. Aynı tarayıcıda maildeki linke bir kez tıkla.");
             });
+            return function () { cancelled = true; };
         }, [recovery]);
 
         // ---------- Levels ----------
@@ -665,8 +663,8 @@
                             setBusy(true);
                             setMsg("");
                             try {
-                                if (window.SupabaseClient && window.SupabaseClient.markRecovery) {
-                                    window.SupabaseClient.markRecovery();
+                                if (window.SupabaseClient && window.SupabaseClient.clearRecoveryFlag) {
+                                    window.SupabaseClient.clearRecoveryFlag();
                                 }
                                 var resetTo = window.location.origin + (window.location.pathname || "/") + "?reset=1";
                                 var res = await sb.auth.resetPasswordForEmail(email.trim(), {

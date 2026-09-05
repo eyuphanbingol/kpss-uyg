@@ -1,11 +1,30 @@
 (function (global) {
     var client = null;
     var RECOVERY_KEY = "kpss-password-recovery";
+    var capturedHref = String(window.location.href || "");
+    var capturedSearch = String(window.location.search || "");
+    var capturedHash = String(window.location.hash || "");
+    var recoverInflight = null;
+
+    function sleep(ms) {
+        return new Promise(function (resolve) { setTimeout(resolve, ms); });
+    }
+
+    function looksRecovery(search, hash) {
+        var s = String(search || "");
+        var h = String(hash || "");
+        return /(?:[?&]reset=)/.test(s)
+            || /(?:[?&]type=recovery)/.test(s)
+            || /type=recovery/.test(h)
+            || /access_token=/.test(h)
+            || /(?:[?&]access_token=)/.test(s)
+            || /(?:[?&]code=)/.test(s)
+            || /(?:[?&]token_hash=)/.test(s)
+            || /(?:[?&]token=)/.test(s);
+    }
 
     function recoveryFromUrl() {
-        var s = String(window.location.search || "");
-        var h = String(window.location.hash || "");
-        return /(?:[?&]reset=)/.test(s) || /type=recovery/.test(s) || /type=recovery/.test(h);
+        return looksRecovery(capturedSearch, capturedHash) || looksRecovery(window.location.search, window.location.hash);
     }
 
     function recoveryPending() {
@@ -19,57 +38,109 @@
         try { sessionStorage.setItem(RECOVERY_KEY, "1"); } catch (e) {}
     }
 
-    function clearRecovery() {
+    function clearRecoveryFlag() {
         try { sessionStorage.removeItem(RECOVERY_KEY); } catch (e) {}
+    }
+
+    function stripRecoveryUrl() {
         try {
             var u = new URL(window.location.href);
-            u.searchParams.delete("reset");
-            u.searchParams.delete("type");
+            ["reset", "type", "code", "token", "token_hash", "access_token", "refresh_token", "error", "error_description", "error_code"].forEach(function (k) {
+                u.searchParams.delete(k);
+            });
             var next = u.pathname + (u.search || "");
-            if (/access_token|type=recovery|refresh_token/.test(u.hash || "")) {
-                history.replaceState({}, "", next);
-            } else {
-                history.replaceState({}, "", next + (u.hash || ""));
-            }
+            history.replaceState({}, "", next);
         } catch (e) {}
     }
 
-    function hashParams() {
-        var raw = String(window.location.hash || "").replace(/^#/, "");
-        try { return new URLSearchParams(raw); } catch (e) { return new URLSearchParams(); }
+    function clearRecovery() {
+        clearRecoveryFlag();
+        stripRecoveryUrl();
+        capturedSearch = "";
+        capturedHash = "";
+        capturedHref = window.location.href;
     }
 
-    async function establishRecoverySession() {
+    function paramsFrom(search, hash) {
+        var q = new URLSearchParams(String(search || "").replace(/^\?/, ""));
+        var hp = new URLSearchParams(String(hash || "").replace(/^#/, ""));
+        hp.forEach(function (v, k) {
+            if (!q.get(k)) q.set(k, v);
+        });
+        return q;
+    }
+
+    async function waitForSession(sb, tries) {
+        for (var i = 0; i < tries; i++) {
+            try {
+                var cur = await sb.auth.getSession();
+                if (cur.data && cur.data.session) return cur.data.session;
+            } catch (e) {}
+            await sleep(200);
+        }
+        return null;
+    }
+
+    async function doEstablishRecoverySession() {
         var sb = getClient();
         if (!sb) return null;
-        var hp = hashParams();
-        var at = hp.get("access_token");
-        var rt = hp.get("refresh_token");
+
+        var q = paramsFrom(capturedSearch || window.location.search, capturedHash || window.location.hash);
+        var at = q.get("access_token");
+        var rt = q.get("refresh_token") || "";
         if (at) {
-            var setRes = await sb.auth.setSession({ access_token: at, refresh_token: rt || "" });
-            if (!setRes.error && setRes.data && setRes.data.session) return setRes.data.session;
-        }
-        var q = new URLSearchParams(window.location.search || "");
-        if (!at && q.get("access_token")) {
-            at = q.get("access_token");
-            rt = q.get("refresh_token") || rt;
-            var setQ = await sb.auth.setSession({ access_token: at, refresh_token: rt || "" });
-            if (!setQ.error && setQ.data && setQ.data.session) return setQ.data.session;
-        }
-        var tokenHash = q.get("token_hash") || q.get("token");
-        var type = q.get("type") || "recovery";
-        if (tokenHash) {
-            var otp = await sb.auth.verifyOtp({ token_hash: tokenHash, type: type });
-            if (!otp.error && otp.data && otp.data.session) return otp.data.session;
-        }
-        if (q.get("code") && typeof sb.auth.exchangeCodeForSession === "function") {
             try {
-                var ex = await sb.auth.exchangeCodeForSession(window.location.href);
-                if (!ex.error && ex.data && ex.data.session) return ex.data.session;
+                var setRes = await sb.auth.setSession({ access_token: at, refresh_token: rt });
+                if (!setRes.error && setRes.data && setRes.data.session) {
+                    markRecovery();
+                    return setRes.data.session;
+                }
             } catch (e) {}
         }
-        var cur = await sb.auth.getSession();
-        return (cur.data && cur.data.session) || null;
+
+        var tokenHash = q.get("token_hash") || q.get("token");
+        var type = q.get("type") || "recovery";
+        if (tokenHash && tokenHash.length > 20 && !q.get("code")) {
+            try {
+                var otp = await sb.auth.verifyOtp({ token_hash: tokenHash, type: type });
+                if (!otp.error && otp.data && otp.data.session) {
+                    markRecovery();
+                    return otp.data.session;
+                }
+            } catch (e) {}
+        }
+
+        var existing = await waitForSession(sb, 12);
+        if (existing) {
+            markRecovery();
+            return existing;
+        }
+
+        if (q.get("code") && typeof sb.auth.exchangeCodeForSession === "function") {
+            try {
+                var ex = await sb.auth.exchangeCodeForSession(capturedHref || window.location.href);
+                if (!ex.error && ex.data && ex.data.session) {
+                    markRecovery();
+                    return ex.data.session;
+                }
+            } catch (e) {}
+        }
+
+        existing = await waitForSession(sb, 8);
+        if (existing) markRecovery();
+        return existing;
+    }
+
+    function establishRecoverySession() {
+        if (recoverInflight) return recoverInflight;
+        recoverInflight = doEstablishRecoverySession().then(function (sess) {
+            recoverInflight = null;
+            return sess;
+        }, function (err) {
+            recoverInflight = null;
+            throw err;
+        });
+        return recoverInflight;
     }
 
     function creds() {
@@ -107,6 +178,7 @@
                     if (global.SyncEngine && global.SyncEngine.sync) global.SyncEngine.sync();
                 }
             });
+            if (recoveryFromUrl()) establishRecoverySession();
         } catch (e) {
             client = null;
         }
@@ -119,6 +191,7 @@
         recoveryPending: recoveryPending,
         markRecovery: markRecovery,
         clearRecovery: clearRecovery,
+        clearRecoveryFlag: clearRecoveryFlag,
         establishRecoverySession: establishRecoverySession
     };
 })(window);
