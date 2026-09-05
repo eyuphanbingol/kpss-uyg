@@ -181,9 +181,7 @@
                 if (props.onPasswordUpdated) props.onPasswordUpdated();
                 else if (props.onDone) props.onDone();
             } catch (e) {
-                var m = (e && e.message) || "Şifre güncellenemedi.";
-                if (/session missing/i.test(m)) m = "Oturum yok. Aynı tarayıcıda yeni sıfırlama maili iste, linke bir kez tıkla.";
-                setMsg(m);
+                setMsg(window.trError ? window.trError(e, "Şifre güncellenemedi.") : "Şifre güncellenemedi.");
             }
             setBusy(false);
         }
@@ -219,7 +217,7 @@
                     : await sb.auth.signInWithPassword({ email: email, password: pass });
 
                 if (res.error) {
-                    setMsg(res.error.message);
+                    setMsg(window.trError ? window.trError(res.error, "Giriş yapılamadı.") : "Giriş yapılamadı.");
                 } else if (mode === "up" && !(res.data && res.data.session)) {
                     setMsg("✅ Kayıt tamam! E-postanıza gelen linke tıklayarak hesabınızı doğrulayın.");
                 } else {
@@ -227,7 +225,7 @@
                     finishLocal(res.data && res.data.user);
                 }
             } catch (e) {
-                setMsg(String(e.message || e));
+                setMsg(window.trError ? window.trError(e, "İşlem tamamlanamadı.") : "İşlem tamamlanamadı.");
             }
             setBusy(false);
         }
@@ -254,9 +252,9 @@
                         redirectTo: window.location.origin + (window.location.pathname || "/")
                     }
                 });
-                if (res.error) setMsg(res.error.message);
+                if (res.error) setMsg(window.trError ? window.trError(res.error, "Google ile giriş açılamadı.") : "Google ile giriş açılamadı.");
             } catch (e) {
-                setMsg(String(e.message || e));
+                setMsg(window.trError ? window.trError(e, "Google ile giriş açılamadı.") : "Google ile giriş açılamadı.");
             }
             setBusy(false);
         }
@@ -677,11 +675,7 @@
                                 if (res.error) throw res.error;
                                 setMsg("✅ Şifre sıfırlama bağlantısı gönderildi. Spam klasörüne de bak. Birkaç dakikada gelmezse biraz bekleyip tekrar dene.");
                             } catch (e) {
-                                var m = (e && e.message) || "Mail gönderilemedi.";
-                                if (/rate|too many|429/i.test(m)) {
-                                    m = "Çok sık mail istendi. 10–15 dakika bekle, sonra bir kez daha dene. Spam klasörünü de kontrol et.";
-                                }
-                                setMsg(m);
+                                setMsg(window.trError ? window.trError(e, "Mail gönderilemedi.") : "Mail gönderilemedi.");
                             }
                             setBusy(false);
                         }}

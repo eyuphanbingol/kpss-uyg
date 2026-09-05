@@ -2022,7 +2022,7 @@ function App() {
             if (C) setLazyCmp(function () { return C; });
             else setLazyErr("Araç yüklenemedi.");
         }).catch(function (e) {
-            setLazyErr((e && e.message) || "Araç yüklenemedi.");
+            setLazyErr((window.trError && window.trError(e, "Araç yüklenemedi.")) || "Araç yüklenemedi.");
         });
     }, [extra]);
 
@@ -2568,7 +2568,7 @@ function App() {
                                 if (spec && window.JsxLoader) {
                                     window.JsxLoader.load(spec[0], spec[1]).then(function (C) {
                                         if (C) setLazyCmp(function () { return C; });
-                                    }).catch(function (e) { setLazyErr((e && e.message) || "Yüklenemedi"); });
+                                    }).catch(function (e) { setLazyErr((window.trError && window.trError(e, "Yüklenemedi")) || "Yüklenemedi"); });
                                 }
                             }} className="px-4 py-2 rounded-xl btn-primary text-white text-sm">Tekrar dene</button>
                         </div>

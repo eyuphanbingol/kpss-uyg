@@ -4,6 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import * as WebBrowser from "expo-web-browser";
 import * as AuthSession from "expo-auth-session";
 import { supabase } from "../lib/supabase";
+import { trError } from "../lib/trError";
 import { StudentStore } from "../lib/store";
 import { KpssConfig } from "../lib/config";
 import { sessionStorageShim } from "../lib/storage";
@@ -153,7 +154,7 @@ export default function AuthScreen() {
             var resetRedirect = AuthSession.makeRedirectUri({ scheme: "atanly", path: "reset" });
             var fr = await supabase.auth.resetPasswordForEmail(email, { redirectTo: resetRedirect });
             setBusy(false);
-            setMsg(fr.error ? fr.error.message : "✅ Sıfırlama maili gönderildi.");
+            setMsg(fr.error ? trError(fr.error, "Mail gönderilemedi.") : "✅ Sıfırlama maili gönderildi.");
             return;
         }
         if (!pass || pass.length < 6) {
@@ -194,7 +195,7 @@ export default function AuthScreen() {
                 if (inn.error) throw inn.error;
             }
         } catch (e) {
-            setMsg((e && e.message) || "İşlem başarısız.");
+            setMsg(trError(e, "İşlem başarısız."));
         }
         setBusy(false);
     }
@@ -227,7 +228,7 @@ export default function AuthScreen() {
                 }
             }
         } catch (e) {
-            setMsg((e && e.message) || "Google girişi açılamadı. Supabase redirect listesine atanly:// ekle.");
+            setMsg(trError(e, "Google girişi açılamadı."));
         }
         setGoogleBusy(false);
     }

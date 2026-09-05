@@ -136,7 +136,7 @@
             try {
                 // KPI'lar
                 var r = await sb.rpc("admin_kpis");
-                if (r.error) setMsg("Özet: " + r.error.message);
+                if (r.error) setMsg("Özet: " + (window.trError ? window.trError(r.error) : "yüklenemedi"));
                 else setKpi(r.data);
 
                 // Kullanıcı listesi (konum payload'dan)
@@ -163,7 +163,7 @@
                         setRows(Array.isArray(r2.data) ? r2.data : []);
                     } else {
                         var r3 = await sb.from("admin_user_directory").select("*").limit(500);
-                        if (r3.error) setMsg("Kullanıcı listesi: " + (r2.error && r2.error.message ? r2.error.message + " · " : "") + r3.error.message);
+                        if (r3.error) setMsg("Kullanıcı listesi yüklenemedi.");
                         else setRows(r3.data || []);
                     }
                 }
@@ -210,7 +210,7 @@
                 if (!r6.error && r6.data) setStats(r6.data);
 
             } catch (e) {
-                setMsg("Ağ hatası: " + (e && e.message));
+                setMsg("Ağ hatası. Bağlantını kontrol edip tekrar dene.");
             } finally {
                 setBusy(false);
             }
@@ -224,14 +224,14 @@
         // ---------- Action ----------
         const act = useCallback(async function (name, payload) {
             var sb = window.SupabaseClient && window.SupabaseClient.get();
-            if (!sb) { setMsg("Supabase yok"); return; }
+            if (!sb) { setMsg("Sunucu bağlı değil."); return; }
             setBusy(true);
             try {
                 var res = await sb.functions.invoke("admin-action", { body: Object.assign({ action: name }, payload) });
                 if (res.error) {
-                    setMsg(res.error.message);
+                    setMsg(window.trError ? window.trError(res.error, "İşlem başarısız.") : "İşlem başarısız.");
                 } else if (res.data && res.data.ok === false) {
-                    setMsg(res.data.error || "İşlem başarısız.");
+                    setMsg(window.trError ? window.trError(res.data.error, "İşlem başarısız.") : "İşlem başarısız.");
                 } else {
                     setMsg("✅ İşlem başarıyla uygulandı.");
                     setLog(function (L) {
@@ -244,7 +244,7 @@
                     load();
                 }
             } catch (e) {
-                setMsg("Hata: " + (e && e.message));
+                setMsg(window.trError ? window.trError(e, "İşlem başarısız.") : "İşlem başarısız.");
             } finally {
                 setBusy(false);
             }

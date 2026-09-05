@@ -103,12 +103,12 @@
                 });
 
                 if (r.error) {
-                    setError(r.message || "Ödeme sırasında bir hata oluştu.");
+                    setError(window.trError ? window.trError(r, "Ödeme sırasında bir hata oluştu.") : "Ödeme sırasında bir hata oluştu.");
                 } else {
                     if (props.onDone) props.onDone();
                 }
             } catch (e) {
-                setError(e.message || "Beklenmeyen bir hata oluştu.");
+                setError(window.trError ? window.trError(e, "Beklenmeyen bir hata oluştu.") : "Beklenmeyen bir hata oluştu.");
             } finally {
                 setBusy(false);
             }

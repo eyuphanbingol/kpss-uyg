@@ -47,7 +47,7 @@ Deno.serve(async (req) => {
   const service = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
   const userClient = createClient(url, anon, { global: { headers: { Authorization: auth } } });
   const { data: { user } } = await userClient.auth.getUser();
-  if (!user) return json({ ok: false, error: "unauthorized" }, 401);
+  if (!user) return json({ ok: false, error: "Giriş gerekli." }, 401);
 
   const admin = createClient(url, service);
   const body = await req.json();
@@ -60,11 +60,11 @@ Deno.serve(async (req) => {
 
   if (action === "submit_edu") {
     const to = String(body.to || "").trim();
-    if (!levels[to]) return json({ ok: false, error: "invalid level" }, 400);
+    if (!levels[to]) return json({ ok: false, error: "Geçersiz eğitim düzeyi." }, 400);
     const { data: row } = await admin.from("student_states").select("payload,education_level").eq("user_id", user.id).maybeSingle();
     const payload = Object.assign({}, row?.payload || {});
     const from = (payload.userProfile && payload.userProfile.educationLevel) || row?.education_level || "lisans";
-    if (to === from) return json({ ok: false, error: "same" }, 400);
+    if (to === from) return json({ ok: false, error: "Zaten bu düzeydesin." }, 400);
     const reqObj = { from, to, at: new Date().toISOString(), status: "pending" };
     const next = writeEduReq(payload, reqObj);
     next.userProfile = Object.assign({}, next.userProfile || {}, { educationLevel: from });
@@ -73,7 +73,7 @@ Deno.serve(async (req) => {
   }
 
   const { data: me } = await admin.from("student_states").select("role").eq("user_id", user.id).maybeSingle();
-  if (!me || me.role !== "admin") return json({ ok: false, error: "forbidden" }, 403);
+  if (!me || me.role !== "admin") return json({ ok: false, error: "Bu işlem için yetkin yok." }, 403);
 
   if (action === "user_list") {
     const { data } = await admin.from("student_states")
@@ -127,7 +127,7 @@ Deno.serve(async (req) => {
     await admin.from("student_states").update({ payload }).eq("user_id", body.user_id);
   } else if (action === "announce") {
     const text = String(body.text || "").trim().slice(0, 500);
-    if (!text) return json({ ok: false, error: "empty" }, 400);
+    if (!text) return json({ ok: false, error: "Metin boş olamaz." }, 400);
     const hours = Number(body.hours);
     const expiresAt = (hours > 0 && isFinite(hours))
       ? new Date(Date.now() + hours * 3600 * 1000).toISOString()
@@ -147,7 +147,7 @@ Deno.serve(async (req) => {
         created_by: user.id
       });
     } else if (ins.error) {
-      return json({ ok: false, error: ins.error.message }, 500);
+      return json({ ok: false, error: "Duyuru kaydedilemedi." }, 500);
     }
   } else if (action === "list_edu_requests") {
     const pending: any[] = [];
@@ -157,7 +157,7 @@ Deno.serve(async (req) => {
       const { data, error } = await admin.from("student_states")
         .select("user_id,nickname,education_level,payload")
         .range(from, from + 199);
-      if (error) return json({ ok: false, error: error.message }, 500);
+      if (error) return json({ ok: false, error: "Liste alınamadı." }, 500);
       const rows = data || [];
       rows.forEach(function (row: any) {
         const req = eduReqFromPayload(row.payload);
@@ -180,14 +180,14 @@ Deno.serve(async (req) => {
     const payload = Object.assign({}, row?.payload || {});
     const existing = eduReqFromPayload(payload);
     const to = String(body.to || (existing && existing.to) || "").trim();
-    if (!levels[to]) return json({ ok: false, error: "invalid level" }, 400);
+    if (!levels[to]) return json({ ok: false, error: "Geçersiz eğitim düzeyi." }, 400);
     const next = Object.assign({}, payload || {});
     next.userProfile = Object.assign({}, next.userProfile || {}, { educationLevel: to });
     delete next.userProfile.educationChangeRequest;
     delete next.educationChangeRequest;
     next.profile = Object.assign({}, next.profile || {}, { examDate: levels[to] });
     const upd = await admin.from("student_states").update({ payload: next, education_level: to }).eq("user_id", body.user_id);
-    if (upd.error) return json({ ok: false, error: upd.error.message }, 500);
+    if (upd.error) return json({ ok: false, error: "Kayıt güncellenemedi." }, 500);
   } else if (action === "reject_edu") {
     const { data: row } = await admin.from("student_states").select("payload").eq("user_id", body.user_id).maybeSingle();
     const payload = Object.assign({}, row?.payload || {});
@@ -197,7 +197,7 @@ Deno.serve(async (req) => {
     await admin.from("student_states").update({ payload: next }).eq("user_id", body.user_id);
   } else if (action === "delete_user") {
     const uid = String(body.user_id || "").trim();
-    if (!uid) return json({ ok: false, error: "missing user" }, 400);
+    if (!uid) return json({ ok: false, error: "Kullanıcı seçilmedi." }, 400);
     if (uid === user.id) return json({ ok: false, error: "Kendini silemezsin" }, 400);
     const { data: target } = await admin.from("student_states").select("role").eq("user_id", uid).maybeSingle();
     if (target && target.role === "admin") return json({ ok: false, error: "Admin silinemez" }, 400);
@@ -208,7 +208,7 @@ Deno.serve(async (req) => {
     await admin.from("leaderboard_weekly").delete().eq("user_id", uid);
     await admin.from("student_states").delete().eq("user_id", uid);
     const del = await admin.auth.admin.deleteUser(uid);
-    if (del.error) return json({ ok: false, error: del.error.message }, 500);
+    if (del.error) return json({ ok: false, error: "Kullanıcı silinemedi." }, 500);
     return json({ ok: true });
   } else if (action === "list_announcements") {
     let listed = await admin.from("app_announcements")
@@ -221,13 +221,13 @@ Deno.serve(async (req) => {
         .order("created_at", { ascending: false })
         .limit(80);
     }
-    if (listed.error) return json({ ok: false, error: listed.error.message }, 500);
+    if (listed.error) return json({ ok: false, error: "Duyurular yüklenemedi." }, 500);
     return json({ ok: true, data: listed.data || [] });
   } else if (action === "delete_announce") {
     const id = String(body.id || "").trim();
-    if (!id) return json({ ok: false, error: "missing id" }, 400);
+    if (!id) return json({ ok: false, error: "Kayıt kimliği eksik." }, 400);
     const delA = await admin.from("app_announcements").delete().eq("id", id);
-    if (delA.error) return json({ ok: false, error: delA.error.message }, 500);
+    if (delA.error) return json({ ok: false, error: "Duyuru silinemedi." }, 500);
   } else if (action === "inspect_user") {
     const { data } = await admin.from("student_states").select("nickname,education_level,target_type,premium,questions_total,last_study_at,payload,platform,role").eq("user_id", body.user_id).maybeSingle();
     const p = data?.payload || {};

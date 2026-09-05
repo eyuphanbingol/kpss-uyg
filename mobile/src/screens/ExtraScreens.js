@@ -6,6 +6,7 @@ import { StudentStore } from "../lib/store";
 import { StudyPlanner } from "../lib/planner";
 import { kpssData } from "../lib/catalog";
 import { supabase } from "../lib/supabase";
+import { trError } from "../lib/trError";
 import taban from "../content/tabanPuanlar.json";
 import { Card, PrimaryButton, ScrollScreen, Badge } from "../ui";
 import { colors } from "../lib/theme";
@@ -140,7 +141,7 @@ export function LeaderboardScreen({ navigation }) {
             .order("questions", { ascending: false })
             .limit(50)
             .then(function (r) {
-                if (r.error) setErr(r.error.message);
+                if (r.error) setErr(trError(r.error, "Sıralama yüklenemedi."));
                 else setRows(r.data || []);
                 setLoading(false);
             });
