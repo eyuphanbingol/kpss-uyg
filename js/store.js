@@ -155,7 +155,36 @@
             },
             billing: { plan: "free", mockCustomerId: null },
             consent: { analytics: false, marketing: false },
-            usage: { day: null, mixed: 0 }
+            usage: { day: null, mixed: 0 },
+            games: defaultGames()
+        };
+    }
+
+    function defaultGames() {
+        return {
+            conquer: {},
+            conquerColor: "#127880",
+            badges: {},
+            panicBest: 0,
+            tabuBest: 0
+        };
+    }
+
+    function migrateGames(g) {
+        var base = defaultGames();
+        if (!isObj(g)) return base;
+        var conquer = {};
+        if (isObj(g.conquer)) {
+            Object.keys(g.conquer).forEach(function (k) {
+                if (g.conquer[k]) conquer[String(k).toUpperCase()] = true;
+            });
+        }
+        return {
+            conquer: conquer,
+            conquerColor: typeof g.conquerColor === "string" && g.conquerColor ? g.conquerColor : base.conquerColor,
+            badges: isObj(g.badges) ? g.badges : {},
+            panicBest: Math.max(0, Number(g.panicBest) || 0),
+            tabuBest: Math.max(0, Number(g.tabuBest) || 0)
         };
     }
 
@@ -225,7 +254,8 @@
             counters: counters,
             billing: Object.assign({}, base.billing, parsed.billing || {}),
             consent: Object.assign({}, base.consent, parsed.consent || {}),
-            usage: Object.assign({}, base.usage, parsed.usage || {})
+            usage: Object.assign({}, base.usage, parsed.usage || {}),
+            games: migrateGames(parsed.games)
         };
     }
 
@@ -820,6 +850,45 @@
         grantAchievement: function (id, title) {
             if (!state.achievements[id]) {
                 state.achievements[id] = { title: title, at: nowIso() };
+                emit();
+            }
+        },
+        setConquerColor: function (color) {
+            if (!state.games) state.games = defaultGames();
+            state.games.conquerColor = String(color || "#127880");
+            emit();
+        },
+        conquerProvince: function (code) {
+            if (!state.games) state.games = defaultGames();
+            code = String(code || "").toUpperCase();
+            if (!code) return [];
+            state.games.conquer[code] = true;
+            var fresh = [];
+            if (global.GamesEngine && global.GamesEngine.freshBadges) {
+                fresh = global.GamesEngine.freshBadges(state.games.conquer, state.games.badges);
+                fresh.forEach(function (b) {
+                    state.games.badges[b.id] = nowIso();
+                    if (!state.achievements["fetih-" + b.id]) {
+                        state.achievements["fetih-" + b.id] = { title: b.title, at: nowIso() };
+                    }
+                });
+            }
+            emit();
+            return fresh;
+        },
+        noteTabuBest: function (n) {
+            if (!state.games) state.games = defaultGames();
+            n = Math.max(0, Number(n) || 0);
+            if (n > state.games.tabuBest) {
+                state.games.tabuBest = n;
+                emit();
+            }
+        },
+        notePanicBest: function (n) {
+            if (!state.games) state.games = defaultGames();
+            n = Math.max(0, Number(n) || 0);
+            if (n > state.games.panicBest) {
+                state.games.panicBest = n;
                 emit();
             }
         },

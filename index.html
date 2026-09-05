@@ -167,10 +167,12 @@
     <script src="data.js?v=3"></script>
     <script src="js/config.js?v=19"></script>
     <script src="js/trError.js?v=1"></script>
-    <script src="js/store.js?v=28"></script>
+    <script src="js/store.js?v=29"></script>
     <script src="js/planner.js?v=18"></script>
     <script src="js/clozeEngine.js?v=4"></script>
     <script src="js/mapQuiz.js?v=8"></script>
+    <script src="js/gamesBank.js?v=1"></script>
+    <script src="js/gamesEngine.js?v=1"></script>
     <script src="js/scoreEngine.js?v=8"></script>
     <script src="js/paymentClient.js?v=14"></script>
     <script src="js/notificationEngine.js?v=9"></script>
@@ -178,8 +180,8 @@
     <script src="js/shareCard.js?v=19"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.86.0/dist/umd/supabase.js"></script>
     <script src="js/supabaseClient.js?v=18"></script>
-    <script src="js/syncEngine.js?v=24"></script>
-    <script src="js/jsxLoader.js?v=44"></script>
+    <script src="js/syncEngine.js?v=25"></script>
+    <script src="js/jsxLoader.js?v=45"></script>
     <script src="js/icons.js?v=18"></script>
 
     <style>
@@ -878,6 +880,74 @@
         html.dark .tr-map-wrap { background: #1a2420; }
         html.dark .tr-map-wrap path.map-dim { fill: #2a3a30 !important; }
         html.dark .tr-map-wrap path.map-focus { fill: #3d8f62 !important; }
+        .conquer-root.tr-map-wrap path,
+        .conquer-stage.tr-map-wrap path,
+        .conquer-root .tr-map-wrap path {
+            fill: #c5d0c8 !important;
+            pointer-events: auto !important;
+            cursor: pointer;
+            stroke: #fff;
+        }
+        .conquer-root .tr-map-wrap path.conquer-owned,
+        .conquer-stage.tr-map-wrap path.conquer-owned {
+            fill: var(--conquer-color, #127880) !important;
+        }
+        .conquer-root .tr-map-wrap path.conquer-pick,
+        .conquer-stage.tr-map-wrap path.conquer-pick {
+            fill: #d97706 !important;
+        }
+        .conquer-colors { display: flex; gap: 8px; align-items: center; }
+        .conquer-swatch {
+            width: 22px; height: 22px; border-radius: 999px; border: 2px solid #fff;
+            box-shadow: 0 0 0 1px rgba(0,0,0,.15);
+        }
+        .conquer-swatch.on { box-shadow: 0 0 0 2px #111; }
+        .conquer-regions {
+            display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px;
+        }
+        .conquer-chip {
+            font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 999px;
+            background: #eef2ef; color: #57534e;
+        }
+        .conquer-chip.on { background: #d1fae5; color: #047857; }
+        .conquer-sheet {
+            position: absolute; left: 0; right: 0; bottom: 0;
+            max-height: 52vh; overflow: auto;
+            background: #fff; border-radius: 20px 20px 0 0;
+            padding: 16px 16px calc(16px + env(safe-area-inset-bottom));
+            box-shadow: 0 -8px 30px rgba(0,0,0,.12);
+            z-index: 5;
+        }
+        html.dark .conquer-sheet { background: #1c2420; }
+        .conquer-il { font-weight: 800; margin-bottom: 8px; }
+        .conquer-toast {
+            position: absolute; left: 50%; top: 28%; transform: translateX(-50%);
+            background: #064e3b; color: #fff; font-weight: 700; font-size: 13px;
+            padding: 10px 16px; border-radius: 999px; z-index: 8; white-space: nowrap;
+        }
+        .tabu-root, .panic-root, .conquer-root { position: relative; }
+        .tabu-body { padding: 16px 16px 24px; overflow: auto; }
+        .tabu-mystery {
+            height: 88px; border-radius: 24px; display: flex; align-items: center; justify-content: center;
+            font-size: 28px; font-weight: 900; background: #111; color: #f5e9c0; margin-bottom: 14px;
+        }
+        .tabu-clues { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 12px; }
+        .tabu-card {
+            min-height: 88px; border-radius: 16px; border: 1px dashed #d6d3d1; padding: 10px;
+            font-size: 13px; font-weight: 700; text-align: left; background: #fafaf9;
+        }
+        .tabu-card.open { border-style: solid; background: #ecfdf5; border-color: #34d399; }
+        .tabu-card.next { border-color: #127880; background: #fff; }
+        .tabu-n { display: block; font-size: 10px; color: #78716c; font-weight: 800; margin-bottom: 4px; }
+        .game-end { padding: 48px 24px; text-align: center; }
+        .panic-timer {
+            font-size: 56px; font-weight: 900; letter-spacing: -0.04em; line-height: 1;
+            font-variant-numeric: tabular-nums; margin: 8px 0 4px;
+        }
+        .panic-q { font-size: 22px; font-weight: 800; margin: 8px 0 18px; }
+        .panic-root.panic-ok { box-shadow: inset 0 0 0 8px rgba(16,185,129,.55); }
+        .panic-root.panic-bad { box-shadow: inset 0 0 0 8px rgba(244,63,94,.5); }
+        html.dark .tabu-card { background: #1c2420; border-color: #3f3f46; }
         .cloze-stem {
             position: relative;
             background: linear-gradient(180deg, #FBF8F1 0%, #F6F1E4 100%);
@@ -1183,7 +1253,7 @@
 
 <body class="app-bg min-h-screen text-slate-800 antialiased transition-colors duration-300">
     <div id="root"></div>
-    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=81"></script>
+    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=82"></script>
     <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.getRegistrations().then(function (regs) {

@@ -94,6 +94,18 @@ import { StudentStore } from "./store";
         return out;
     }
 
+    function mergeGames(L, R) {
+        L = L || {};
+        R = R || {};
+        return {
+            conquer: Object.assign({}, R.conquer || {}, L.conquer || {}),
+            conquerColor: L.conquerColor || R.conquerColor || "#127880",
+            badges: Object.assign({}, R.badges || {}, L.badges || {}),
+            panicBest: Math.max(Number(L.panicBest) || 0, Number(R.panicBest) || 0),
+            tabuBest: Math.max(Number(L.tabuBest) || 0, Number(R.tabuBest) || 0)
+        };
+    }
+
     function mergePayload(local, remote) {
         if (!remote) return local;
         var localNewer = (local.updatedAt || "") >= (remote.updatedAt || "");
@@ -121,7 +133,8 @@ import { StudentStore } from "./store";
                 if (L.day && L.day === R.day) return { day: L.day, mixed: Math.max(L.mixed || 0, R.mixed || 0) };
                 var newer = (local.updatedAt || "") >= (remote.updatedAt || "") ? L : R;
                 return newer.day ? newer : (L.day ? L : R);
-            })()
+            })(),
+            games: mergeGames(local.games, remote.games)
         });
     }
 

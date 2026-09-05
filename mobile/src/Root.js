@@ -10,6 +10,7 @@ import BugunScreen from "./screens/BugunScreen";
 import ProgramScreen from "./screens/ProgramScreen";
 import { DersHomeScreen, KonuHubScreen, KonuListScreen } from "./screens/DerslerScreens";
 import { AlistirmalarHomeScreen, AlistirmaDersListScreen, AlistirmaKonuListScreen, ClozePlayScreen, MapTopicsScreen, MapPlayScreen } from "./screens/AlistirmalarScreens";
+import { ConquerPlayScreen, TabuPlayScreen, PanicPlayScreen } from "./screens/DrillGameScreens";
 import EksiklerScreen from "./screens/EksiklerScreen";
 import DenemeScreen from "./screens/DenemeScreen";
 import BenScreen from "./screens/BenScreen";
@@ -246,6 +247,9 @@ function Gate() {
                 <Stack.Screen name="ClozePlay" component={ClozePlayScreen} options={modalOptions} />
                 <Stack.Screen name="MapTopics" component={MapTopicsScreen} options={modalOptions} />
                 <Stack.Screen name="MapPlay" component={MapPlayScreen} options={modalOptions} />
+                <Stack.Screen name="ConquerPlay" component={ConquerPlayScreen} options={modalOptions} />
+                <Stack.Screen name="TabuPlay" component={TabuPlayScreen} options={modalOptions} />
+                <Stack.Screen name="PanicPlay" component={PanicPlayScreen} options={modalOptions} />
                 <Stack.Screen name="Notes" component={NotesScreen} options={modalOptions} />
                 <Stack.Screen name="Test" component={TestScreen} options={modalOptions} />
 

@@ -17,7 +17,7 @@ export function AlistirmalarHomeScreen({ navigation }) {
             <View style={styles.header}>
                 <Text style={[styles.title, isDark && styles.textLight]}>Alıştırmalar</Text>
                 <Text style={[styles.subtitle, isDark && styles.textMuted]}>
-                    İki oyun: boşluk doldurma ve harita
+                    Boşluk, harita ve üç yeni oyun
                 </Text>
             </View>
             <Pressable onPress={function () { go(navigation, "AlistirmaDersList"); }}>
@@ -32,6 +32,27 @@ export function AlistirmalarHomeScreen({ navigation }) {
                     <Text style={styles.icon}>🗺️</Text>
                     <Text style={[styles.dersName, isDark && styles.textLight]}>Harita oyunu</Text>
                     <Text style={[styles.meta, isDark && styles.textMuted]}>Coğrafya konularına göre haritada bul.</Text>
+                </Card>
+            </Pressable>
+            <Pressable onPress={function () { go(navigation, "ConquerPlay"); }}>
+                <Card style={[styles.dersCard, isDark && styles.cardDark]}>
+                    <Text style={styles.icon}>🛡️</Text>
+                    <Text style={[styles.dersName, isDark && styles.textLight]}>Türkiye'yi Fethet</Text>
+                    <Text style={[styles.meta, isDark && styles.textMuted]}>81 il. 3'te 3 doğru ile boya, bölge rozeti kap.</Text>
+                </Card>
+            </Pressable>
+            <Pressable onPress={function () { go(navigation, "TabuPlay"); }}>
+                <Card style={[styles.dersCard, isDark && styles.cardDark]}>
+                    <Text style={styles.icon}>🃏</Text>
+                    <Text style={[styles.dersName, isDark && styles.textLight]}>Tabu</Text>
+                    <Text style={[styles.meta, isDark && styles.textMuted]}>İpuçlarından kavrama ulaş. Az ipucu, çok puan.</Text>
+                </Card>
+            </Pressable>
+            <Pressable onPress={function () { go(navigation, "PanicPlay"); }}>
+                <Card style={[styles.dersCard, isDark && styles.cardDark]}>
+                    <Text style={styles.icon}>⏱️</Text>
+                    <Text style={[styles.dersName, isDark && styles.textLight]}>Son 10 saniye</Text>
+                    <Text style={[styles.meta, isDark && styles.textMuted]}>Rakam ve net bilgi. Doğru +2 sn, yanlış −3 sn.</Text>
                 </Card>
             </Pressable>
         </ScrollScreen>

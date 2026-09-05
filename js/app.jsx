@@ -579,7 +579,7 @@ function AlistirmalarHome(props) {
             <div className="flex justify-between items-start mb-8">
                 <div className="slide-up">
                     <h1 className="text-3xl sm:text-4xl font-display font-black tracking-tight gradient-text">Alıştırmalar</h1>
-                    <p className="text-sm text-stone-400 mt-1">İki oyun: boşluk doldurma ve harita.</p>
+                    <p className="text-sm text-stone-400 mt-1">Boşluk, harita ve üç yeni oyun.</p>
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
@@ -595,6 +595,24 @@ function AlistirmalarHome(props) {
                     <div className="h-14 w-14 rounded-2xl bg-amber-50 text-2xl flex items-center justify-center mb-3">🗺️</div>
                     <h2 className="font-bold text-lg">Harita oyunu</h2>
                     <p className="text-sm text-stone-400 mt-1">Coğrafya konularına göre haritada bul.</p>
+                </button>
+                <button type="button" onClick={function () { props.onKind("conquer"); }}
+                    className="text-left p-6 rounded-3xl glass card-hover">
+                    <div className="h-14 w-14 rounded-2xl bg-emerald-50 text-2xl flex items-center justify-center mb-3">🛡️</div>
+                    <h2 className="font-bold text-lg">Türkiye'yi Fethet</h2>
+                    <p className="text-sm text-stone-400 mt-1">81 il gri başlar. 3'te 3 doğru ile ili boya, bölge rozeti kap.</p>
+                </button>
+                <button type="button" onClick={function () { props.onKind("tabu"); }}
+                    className="text-left p-6 rounded-3xl glass card-hover">
+                    <div className="h-14 w-14 rounded-2xl bg-violet-50 text-2xl flex items-center justify-center mb-3">🃏</div>
+                    <h2 className="font-bold text-lg">Tabu</h2>
+                    <p className="text-sm text-stone-400 mt-1">İpuçlarından kavrama ulaş. Az ipucu, çok puan.</p>
+                </button>
+                <button type="button" onClick={function () { props.onKind("panic"); }}
+                    className="text-left p-6 rounded-3xl glass card-hover">
+                    <div className="h-14 w-14 rounded-2xl bg-rose-50 text-2xl flex items-center justify-center mb-3">⏱️</div>
+                    <h2 className="font-bold text-lg">Son 10 saniye</h2>
+                    <p className="text-sm text-stone-400 mt-1">Rakam ve net bilgi. Doğru +2 sn, yanlış −3 sn.</p>
                 </button>
             </div>
         </Shell>
@@ -2323,6 +2341,8 @@ function App() {
     const [drillDers, setDrillDers] = useState(null);
     const [drillKonu, setDrillKonu] = useState(null);
     const [drillSeed, setDrillSeed] = useState(0);
+    const [drillGameCmp, setDrillGameCmp] = useState(null);
+    const [drillGameErr, setDrillGameErr] = useState("");
     const [viewMode, setViewMode] = useState("hub");
     const [noteIndex, setNoteIndex] = useState(0);
     const [session, setSession] = useState(null);
@@ -2346,6 +2366,23 @@ function App() {
     useEffect(function () {
         sessionRef.current = session;
     }, [session]);
+
+    useEffect(function () {
+        var names = { conquer: "ConquerPlay", tabu: "TabuPlay", panic: "PanicPlay" };
+        var name = names[drillKind];
+        if (!name || !window.JsxLoader) {
+            setDrillGameCmp(null);
+            setDrillGameErr("");
+            return;
+        }
+        setDrillGameErr("");
+        window.JsxLoader.load(name, "js/components/DrillGames.jsx").then(function (C) {
+            if (C) setDrillGameCmp(function () { return C; });
+            else setDrillGameErr("Oyun yüklenemedi.");
+        }).catch(function (e) {
+            setDrillGameErr((window.trError && window.trError(e, "Oyun yüklenemedi.")) || "Oyun yüklenemedi.");
+        });
+    }, [drillKind]);
 
     useEffect(function () {
         if (!session || finished || session.secondsLeft == null) return;
@@ -2477,6 +2514,7 @@ function App() {
 
     const inTest = !!session;
     const inMapPlay = nav === "alistirmalar" && drillKind === "map" && !!drillMapTopic;
+    const inDrillGame = nav === "alistirmalar" && (drillKind === "conquer" || drillKind === "tabu" || drillKind === "panic");
     const konuData = (selectedDers && selectedKonu && kpssData[selectedDers]) ? (kpssData[selectedDers][selectedKonu] || {}) : {};
 
     let body = null;
@@ -2528,6 +2566,28 @@ function App() {
                 body = <MapPlay topicId={drillMapTopic} seed={drillSeed} isDark={isDark} toggleDark={toggleDark}
                     onBack={function () { setDrillMapTopic(null); }}
                     onAgain={function () { setDrillSeed(Date.now()); }} />;
+            }
+        } else if (drillKind === "conquer" || drillKind === "tabu" || drillKind === "panic") {
+            if (drillGameErr) {
+                body = (
+                    <Shell>
+                        <BackBtn onClick={function () { setDrillKind(null); }} label="Alıştırmalar" />
+                        <p className="text-coral-600 mt-6">{drillGameErr}</p>
+                    </Shell>
+                );
+            } else if (!drillGameCmp) {
+                body = <div className="p-10 text-center text-zinc-500 text-sm">Oyun yükleniyor…</div>;
+            } else {
+                body = React.createElement(drillGameCmp, {
+                    key: drillSeed,
+                    student: student,
+                    kpssData: kpssData,
+                    seed: drillSeed,
+                    isDark: isDark,
+                    toggleDark: toggleDark,
+                    onBack: function () { setDrillKind(null); },
+                    onAgain: function () { setDrillSeed(Date.now()); }
+                });
             }
         } else if (!drillDers) {
             body = <AlistirmaDersList kpssData={kpssData} isDark={isDark} toggleDark={toggleDark}
@@ -2708,7 +2768,7 @@ function App() {
 
     return (
         <div className="app-shell">
-            {announce && !inTest && !inMapPlay ? (
+            {announce && !inTest && !inMapPlay && !inDrillGame ? (
                 <div className="sticky top-0 z-50 duyuru-bar text-white shadow-lg" style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
                     <div className="max-w-2xl mx-auto px-4 py-2.5 flex items-start gap-3">
                         <span className="duyuru-badge shrink-0 mt-0.5 text-[10px] font-black uppercase tracking-widest bg-white text-indigo-700 px-2 py-1 rounded-md">Duyuru</span>
@@ -2717,7 +2777,7 @@ function App() {
                 </div>
             ) : null}
             {body}
-            {!inTest && !inMapPlay ? (
+            {!inTest && !inMapPlay && !inDrillGame ? (
                 <BottomNav nav={nav} streak={plan.streak || 0} onChange={function (id) {
                     setNav(id);
                     if (id !== "dersler") { setSelectedDers(null); setSelectedKonu(null); setViewMode("hub"); }
