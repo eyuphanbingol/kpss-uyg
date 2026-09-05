@@ -864,14 +864,18 @@ function MapPlay(props) {
     const [svgHtml, setSvgHtml] = useState("");
     const [mapFail, setMapFail] = useState(false);
     const hostRef = useRef(null);
+    const stageRef = useRef(null);
     const pickedRef = useRef(null);
     const timerRef = useRef(null);
+    const zoomRef = useRef({ s: 1, x: 0, y: 0 });
     const HOLD_MS = 5500;
 
     useEffect(function () {
         setIdx(0); setPicked(null); setOkHit(false); setScore(0); setDone(false);
         setCleared([]); setPins([]);
         pickedRef.current = null;
+        zoomRef.current = { s: 1, x: 0, y: 0 };
+        if (hostRef.current) hostRef.current.style.transform = "translate(0px, 0px) scale(1)";
     }, [props.seed, props.topicId]);
 
     useEffect(function () {
@@ -893,6 +897,97 @@ function MapPlay(props) {
             .catch(function () { if (!gone) setMapFail(true); });
         return function () { gone = true; };
     }, []);
+
+    useEffect(function () {
+        var stage = stageRef.current;
+        var canvas = hostRef.current;
+        if (!stage || !canvas || mapFail || done) return;
+        var gest = { mode: "", x: 0, y: 0, dist: 0, s0: 1, x0: 0, y0: 0, moved: false };
+
+        function apply(s, x, y) {
+            s = Math.max(1, Math.min(4.5, s));
+            if (s <= 1.02) { s = 1; x = 0; y = 0; }
+            zoomRef.current = { s: s, x: x, y: y };
+            canvas.style.transform = "translate(" + x + "px, " + y + "px) scale(" + s + ")";
+        }
+
+        function pinchDist(touches) {
+            var a = touches[0], b = touches[1];
+            var dx = a.clientX - b.clientX, dy = a.clientY - b.clientY;
+            return Math.sqrt(dx * dx + dy * dy) || 1;
+        }
+
+        function onTouchStart(e) {
+            if (e.touches.length === 2) {
+                gest.mode = "pinch";
+                gest.dist = pinchDist(e.touches);
+                gest.s0 = zoomRef.current.s;
+                gest.x0 = zoomRef.current.x;
+                gest.y0 = zoomRef.current.y;
+                gest.moved = true;
+            } else if (e.touches.length === 1 && zoomRef.current.s > 1) {
+                gest.mode = "pan";
+                gest.x = e.touches[0].clientX;
+                gest.y = e.touches[0].clientY;
+                gest.x0 = zoomRef.current.x;
+                gest.y0 = zoomRef.current.y;
+                gest.moved = false;
+            } else {
+                gest.mode = "";
+            }
+        }
+
+        function onTouchMove(e) {
+            if (gest.mode === "pinch" && e.touches.length === 2) {
+                e.preventDefault();
+                var d = pinchDist(e.touches);
+                apply(gest.s0 * (d / gest.dist), gest.x0, gest.y0);
+            } else if (gest.mode === "pan" && e.touches.length === 1) {
+                var dx = e.touches[0].clientX - gest.x;
+                var dy = e.touches[0].clientY - gest.y;
+                if (Math.abs(dx) + Math.abs(dy) > 8) gest.moved = true;
+                if (gest.moved) {
+                    e.preventDefault();
+                    apply(zoomRef.current.s, gest.x0 + dx, gest.y0 + dy);
+                }
+            }
+        }
+
+        function onTouchEnd() {
+            if (gest.moved) stage.setAttribute("data-skip-click", "1");
+            gest.mode = "";
+        }
+
+        function onWheel(e) {
+            e.preventDefault();
+            var z = zoomRef.current;
+            var next = z.s * (e.deltaY > 0 ? 0.88 : 1.14);
+            apply(next, z.x, z.y);
+        }
+
+        stage.addEventListener("touchstart", onTouchStart, { passive: true });
+        stage.addEventListener("touchmove", onTouchMove, { passive: false });
+        stage.addEventListener("touchend", onTouchEnd);
+        stage.addEventListener("wheel", onWheel, { passive: false });
+        apply(zoomRef.current.s, zoomRef.current.x, zoomRef.current.y);
+        return function () {
+            stage.removeEventListener("touchstart", onTouchStart);
+            stage.removeEventListener("touchmove", onTouchMove);
+            stage.removeEventListener("touchend", onTouchEnd);
+            stage.removeEventListener("wheel", onWheel);
+        };
+    }, [svgHtml, mapFail, done]);
+
+    function bumpZoom(dir) {
+        var z = zoomRef.current;
+        var s = dir === 0 ? 1 : z.s * (dir > 0 ? 1.35 : 0.74);
+        var x = dir === 0 ? 0 : z.x;
+        var y = dir === 0 ? 0 : z.y;
+        if (s <= 1.02) { s = 1; x = 0; y = 0; }
+        s = Math.max(1, Math.min(4.5, s));
+        zoomRef.current = { s: s, x: x, y: y };
+        if (hostRef.current) hostRef.current.style.transform = "translate(" + x + "px, " + y + "px) scale(" + s + ")";
+    }
 
     function goNext() {
         if (timerRef.current) { clearTimeout(timerRef.current); timerRef.current = null; }
@@ -998,7 +1093,7 @@ function MapPlay(props) {
             var hit = document.createElementNS("http://www.w3.org/2000/svg", "circle");
             hit.setAttribute("cx", String(pin.x));
             hit.setAttribute("cy", String(pin.y));
-            hit.setAttribute("r", "16");
+            hit.setAttribute("r", "26");
             hit.setAttribute("class", "topic-hit");
             var ico = document.createElementNS("http://www.w3.org/2000/svg", "text");
             ico.setAttribute("x", String(pin.x));
@@ -1006,7 +1101,7 @@ function MapPlay(props) {
             ico.setAttribute("class", "topic-ico");
             ico.setAttribute("text-anchor", "middle");
             ico.setAttribute("dominant-baseline", "central");
-            ico.setAttribute("font-size", "22");
+            ico.setAttribute("font-size", "26");
             ico.textContent = pin.glyph || glyph;
             if (doneIds[pin.id]) wrap.setAttribute("class", "topic-mark topic-mark-done");
             if (picked && step && step.type === "map") {
@@ -1026,7 +1121,7 @@ function MapPlay(props) {
             t.setAttribute("x", String(x));
             t.setAttribute("y", String(y - 22));
             t.setAttribute("class", "map-pin map-pin-" + kind);
-            t.setAttribute("font-size", "13");
+            t.setAttribute("font-size", "16");
             t.textContent = text;
             g.appendChild(t);
         }
@@ -1034,6 +1129,10 @@ function MapPlay(props) {
         pins.forEach(function (pin) { addLab(pin.x, pin.y, pin.text, pin.kind); });
         svg.appendChild(g);
         function onClick(ev) {
+            if (stageRef.current && stageRef.current.getAttribute("data-skip-click") === "1") {
+                stageRef.current.removeAttribute("data-skip-click");
+                return;
+            }
             var n = ev.target.closest ? ev.target.closest("[data-pin]") : null;
             if (!n || pickedRef.current) return;
             var stepNow = items[idx];
@@ -1100,7 +1199,15 @@ function MapPlay(props) {
                 <p className="map-play-prompt">{step.prompt}</p>
             </header>
             {!mapFail ? (
-                <div className="map-play-stage tr-map-wrap" ref={hostRef} dangerouslySetInnerHTML={{ __html: svgHtml }} />
+                <div className="map-play-stage tr-map-wrap" ref={stageRef}>
+                    <div className="map-play-canvas" ref={hostRef} dangerouslySetInnerHTML={{ __html: svgHtml }} />
+                    <div className="map-zoom-tools" aria-label="Harita yakınlaştır">
+                        <button type="button" onClick={function () { bumpZoom(1); }}>+</button>
+                        <button type="button" onClick={function () { bumpZoom(-1); }}>−</button>
+                        <button type="button" className="map-zoom-reset" onClick={function () { bumpZoom(0); }}>Tam</button>
+                    </div>
+                    <p className="map-zoom-hint">Harita tam görünür · iki parmakla büyüt, kaydırarak gez</p>
+                </div>
             ) : (
                 <div className="map-play-stage p-4 overflow-auto">
                     <div className="grid grid-cols-2 gap-2 max-w-lg mx-auto">

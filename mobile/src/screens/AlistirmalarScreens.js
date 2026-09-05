@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { Pressable, Text, View, StyleSheet } from "react-native";
+import { Pressable, Text, View, StyleSheet, Dimensions } from "react-native";
 import { useApp } from "../AppProvider";
 import { ClozeEngine } from "../lib/clozeEngine";
 import { MapQuiz } from "../lib/mapQuiz";
@@ -343,8 +343,9 @@ export function MapPlayScreen({ route, navigation }) {
             <Card style={[isDark && styles.cardDark]}>
                 <Text style={[styles.prompt, isDark && styles.textLight]}>{step.prompt}</Text>
                 {isMap ? (
-                    <View style={styles.mapBoard}>
-                        {layer.pins.map(function (p) {
+                    <View>
+                        <View style={[styles.mapBoard, { height: Math.min(Math.round((Dimensions.get("window").width - 48) * 0.422), Math.round(Dimensions.get("window").height * 0.42)) }]}>
+                            {layer.pins.map(function (p) {
                             var left = ((p.x - vb[0]) / vb[2]) * 100;
                             var top = ((p.y - vb[1]) / vb[3]) * 100;
                             var donePin = cleared.indexOf(p.id) >= 0;
@@ -362,6 +363,8 @@ export function MapPlayScreen({ route, navigation }) {
                                 </Pressable>
                             );
                         })}
+                    </View>
+                        <Text style={[styles.mapHint, isDark && styles.textMuted]}>Harita tam görünür; işarete bas.</Text>
                     </View>
                 ) : (
                     (step.choices || []).map(function (c, ci) {
@@ -418,7 +421,8 @@ var styles = StyleSheet.create({
     pct: { fontSize: 40, fontWeight: "800", color: colors.navy },
     mapGrid: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
     mapChip: { borderWidth: 1, borderRadius: 14, paddingVertical: 12, paddingHorizontal: 12, minWidth: "47%", flexGrow: 1 },
-    mapBoard: { height: 240, backgroundColor: "#d7e5db", borderRadius: 16, overflow: "hidden", marginTop: 4, position: "relative" },
-    mapMark: { position: "absolute", width: 28, height: 28, marginLeft: -14, marginTop: -14, borderRadius: 14, alignItems: "center", justifyContent: "center" },
-    mapIco: { fontSize: 18, lineHeight: 22 }
+    mapBoard: { width: "100%", backgroundColor: "#d7e5db", borderRadius: 16, overflow: "visible", marginTop: 4, position: "relative" },
+    mapMark: { position: "absolute", width: 40, height: 40, marginLeft: -20, marginTop: -20, borderRadius: 20, alignItems: "center", justifyContent: "center" },
+    mapIco: { fontSize: 22, lineHeight: 26 },
+    mapHint: { marginTop: 8, fontSize: 12, color: colors.muted, fontWeight: "600" }
 });
