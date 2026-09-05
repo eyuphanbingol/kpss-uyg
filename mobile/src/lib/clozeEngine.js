@@ -84,10 +84,40 @@ function splitChunks(html) {
     return [h];
 }
 
+var ILLER = "adana adiyaman afyonkarahisar agri amasya ankara antalya artvin aydin balikesir bilecik bingol bitlis bolu burdur bursa canakkale cankiri corum denizli diyarbakir edirne elazig erzincan erzurum eskisehir gaziantep giresun gumushane hakkari hatay isparta mersin istanbul izmir kars kastamonu kayseri kirklareli kirsehir kocaeli konya kutahya malatya manisa kahramanmaras mardin mugla mus nevsehir nigde ordu rize sakarya samsun siirt sinop sivas tekirdag tokat trabzon tunceli sanliurfa usak van yozgat zonguldak aksaray bayburt karaman kirikkale batman sirnak bartin ardahan igdir yalova karabuk kilis osmaniye duzce".split(" ");
+var IL_SET = {};
+ILLER.forEach(function (x) { IL_SET[x] = 1; });
+
+function asciiTr(s) {
+    return String(s || "").toLocaleLowerCase("tr-TR")
+        .replace(/ı/g, "i").replace(/ğ/g, "g").replace(/ü/g, "u")
+        .replace(/ş/g, "s").replace(/ö/g, "o").replace(/ç/g, "c")
+        .replace(/â/g, "a").replace(/î/g, "i").replace(/û/g, "u");
+}
+
+function kindOf(term) {
+    var t = String(term || "").trim();
+    var n = norm(t);
+    var a = asciiTr(t).replace(/[^a-z0-9]+/g, " ").trim();
+    if (/\d/.test(t) && (/(%|\d{3,4}|yuzyil|yüzyıl)/i.test(t + n))) return "num";
+    if (/(dağı|dağları|gölü|ovası|platosu|nehri|ırmağı|körfezi|boğazı|yarımadası|masifi)/i.test(t)) return "landform";
+    if (/(bölgesi|marmara|karadeniz|akdeniz|iç anadolu|doğu anadolu|güneydoğu)/i.test(n)) return "region";
+    var ilHit = 0;
+    a.split(/\s+/).forEach(function (p) { if (IL_SET[p]) ilHit++; });
+    String(t).split(/[,;\/·–—]| ve /).forEach(function (p) {
+        var k = asciiTr(p).replace(/[^a-z]/g, "");
+        if (IL_SET[k]) ilHit++;
+    });
+    if (ilHit) return "il";
+    if (t.length <= 32 && /^[A-ZÇĞİÖŞÜÂÎÛ]/.test(t) && t.split(/\s+/).length <= 4) return "proper";
+    return "phrase";
+}
+
 function fromNotes(notlar) {
     var items = [];
     (notlar || []).forEach(function (html, ni) {
         var hint = sectionHint(html);
+        var cardTerms = extractBolds(html);
         splitChunks(html).forEach(function (chunk, ci) {
             var terms = extractBolds(chunk);
             var plain = tidyPlain(stripHtml(chunk));
@@ -106,7 +136,11 @@ function fromNotes(notlar) {
                     id: "n-" + ni + "-" + ci + "-" + ti,
                     prompt: prompt,
                     answer: term,
-                    hint: hint
+                    hint: hint,
+                    family: hint || ("note-" + ni),
+                    noteIndex: ni,
+                    kind: kindOf(term),
+                    related: cardTerms.filter(function (x) { return norm(x) !== k; })
                 });
             });
         });
@@ -136,7 +170,14 @@ function fromQuestions(sorular) {
             var stem = stripHtml(q.question || "");
             prompt = clipAround((stem.length > 160 ? stem.slice(0, 160) + "…" : stem) + " → ______", 180);
         }
-        items.push({ id: "q-" + qi, prompt: prompt, answer: ans });
+        items.push({
+            id: "q-" + qi,
+            prompt: prompt,
+            answer: ans,
+            family: "q-" + qi,
+            kind: kindOf(ans),
+            related: opts.map(optionText).filter(function (t) { return okTerm(t) && norm(t) !== norm(ans); })
+        });
     });
     return items;
 }
@@ -165,27 +206,56 @@ function collect(kd) {
     return uniq;
 }
 
-function withChoices(items, nChoices) {
+function relatedScore(a, b) {
+    var s = 0;
+    if (a.family && a.family === b.family) s += 70;
+    if (a.noteIndex != null && a.noteIndex === b.noteIndex) s += 50;
+    if (a.kind && a.kind === b.kind) s += 40;
+    var wa = String(a.answer).split(/\s+/).length;
+    var wb = String(b.answer).split(/\s+/).length;
+    if (wa === wb) s += 12;
+    var la = String(a.answer).length, lb = String(b.answer).length;
+    if (Math.abs(la - lb) <= 8) s += 8;
+    if (Math.abs(la - lb) > 28) s -= 20;
+    return s;
+}
+
+function withChoices(items, nChoices, allItems) {
     nChoices = nChoices || 4;
-    var pool = [];
-    var seen = {};
-    items.forEach(function (it) {
-        var k = norm(it.answer);
-        if (!seen[k]) {
-            seen[k] = 1;
-            pool.push(it.answer);
-        }
-    });
+    var bank = allItems && allItems.length ? allItems : items;
     return items.map(function (it) {
-        var others = shuffle(pool.filter(function (x) { return norm(x) !== norm(it.answer); }));
-        var choices = [it.answer].concat(others.slice(0, Math.max(0, nChoices - 1)));
-        return Object.assign({}, it, { choices: shuffle(choices) });
+        var used = {};
+        used[norm(it.answer)] = 1;
+        var distractors = [];
+        function add(term) {
+            var t = String(term || "").trim();
+            var k = norm(t);
+            if (!k || used[k] || !okTerm(t)) return;
+            used[k] = 1;
+            distractors.push(t);
+        }
+        shuffle(it.related || []).forEach(add);
+        var ranked = bank
+            .filter(function (o) { return o && norm(o.answer) !== norm(it.answer); })
+            .map(function (o) { return { term: o.answer, s: relatedScore(it, o) }; })
+            .sort(function (a, b) { return (b.s - a.s) || (Math.random() - 0.5); });
+        ranked.forEach(function (row) {
+            if (distractors.length >= nChoices - 1) return;
+            if (row.s < 12 && distractors.length >= 1 && it.kind !== "phrase") return;
+            add(row.term);
+        });
+        if (distractors.length < nChoices - 1) {
+            ranked.forEach(function (row) { if (distractors.length < nChoices - 1) add(row.term); });
+        }
+        var choices = shuffle([it.answer].concat(distractors.slice(0, Math.max(0, nChoices - 1))));
+        return Object.assign({}, it, { choices: choices });
     });
 }
 
 export const ClozeEngine = {
     buildForKonu: function (kd, limit) {
-        return withChoices(shuffle(collect(kd)).slice(0, limit || 12));
+        var uniq = collect(kd);
+        return withChoices(shuffle(uniq).slice(0, limit || 12), 4, uniq);
     },
     countForKonu: function (kd) {
         return collect(kd).length;
