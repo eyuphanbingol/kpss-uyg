@@ -209,6 +209,11 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
                 counters.correct += (parsed.sessions[d].correct || 0);
             });
         }
+        var answers = isObj(parsed.answers) ? parsed.answers : {};
+        var wrongBook = Array.isArray(parsed.wrongBook) ? parsed.wrongBook.filter(function (id) {
+            var rec = answers[id];
+            return !(rec && rec.lastCorrect);
+        }) : [];
         return {
             version: SCHEMA_VERSION,
             updatedAt: parsed.updatedAt || nowIso(),
@@ -216,8 +221,8 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             userProfile: userProfile,
             streak: Object.assign({}, base.streak, parsed.streak || {}),
             topics: migrateTopicPacks(isObj(parsed.topics) ? parsed.topics : {}),
-            answers: isObj(parsed.answers) ? parsed.answers : {},
-            wrongBook: Array.isArray(parsed.wrongBook) ? parsed.wrongBook : [],
+            answers: answers,
+            wrongBook: wrongBook,
             sessions: isObj(parsed.sessions) ? parsed.sessions : {},
             achievements: isObj(parsed.achievements) ? parsed.achievements : {},
             examAttempts: Array.isArray(parsed.examAttempts) ? parsed.examAttempts : [],
@@ -470,8 +475,13 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             rec.lastCorrect = false;
             rec.intervalIndex = 0;
             rec.dueAt = addDays(todayStr(), INTERVALS[0]);
-            if (state.wrongBook.indexOf(id) === -1) state.wrongBook.push(id);
-            topic.wrongWeight = (topic.wrongWeight || 0) + 1;
+            if (meta.fromWrongBook) {
+                state.wrongBook = state.wrongBook.filter(function (x) { return x !== id; });
+                topic.wrongWeight = Math.max(0, (topic.wrongWeight || 0) - 1);
+            } else {
+                if (state.wrongBook.indexOf(id) === -1) state.wrongBook.push(id);
+                topic.wrongWeight = (topic.wrongWeight || 0) + 1;
+            }
         }
         rec.updatedAt = nowIso();
         topic.masteryScore = topicMasteryScore(topic);

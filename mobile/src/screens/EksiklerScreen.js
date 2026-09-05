@@ -121,7 +121,7 @@ export default function EksiklerScreen({ navigation }) {
                         {plan.wrong.length} soru
                     </Text>
                     <Text style={styles.actionBtnDesc}>
-                        Yanlış yaptığın sorular
+                        Yanlış yaptığın sorular. Çözdüğün düşer.
                     </Text>
                 </Pressable>
             </View>

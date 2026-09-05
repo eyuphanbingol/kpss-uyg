@@ -108,11 +108,7 @@ import { StudentStore } from "./store";
                 : (local.streak || remote.streak),
             topics: mergeTopics(local.topics, remote.topics),
             answers: mergeAnswers(local.answers, remote.answers),
-            wrongBook: (function () {
-                var set = {};
-                (local.wrongBook || []).concat(remote.wrongBook || []).forEach(function (id) { set[id] = true; });
-                return Object.keys(set);
-            })(),
+            wrongBook: localNewer ? (local.wrongBook || []) : (remote.wrongBook || []),
             sessions: mergeSessions(local.sessions, remote.sessions),
             achievements: Object.assign({}, remote.achievements || {}, local.achievements || {}),
             examAttempts: (local.examAttempts || []).concat(remote.examAttempts || []).slice(-40),

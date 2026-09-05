@@ -1549,7 +1549,7 @@ function Eksikler(props) {
                 <button onClick={function () { props.onWrong(); }} disabled={!plan.wrong.length}
                     className="p-4 rounded-2xl border-2 border-rose-500 text-rose-600 text-left disabled:opacity-40">
                     <span className="font-semibold block">Yanlış defteri · {plan.wrong.length}</span>
-                    <span className="text-xs font-normal opacity-80 mt-1 block">Hâlâ yanlışta duran sorular. Konu kilidini açmaz.</span>
+                    <span className="text-xs font-normal opacity-80 mt-1 block">Çözdüğün soru defterden düşer. Konu kilidini açmaz.</span>
                 </button>
             </div>
             {Object.keys(byDers).map(function (ders) {
@@ -2287,7 +2287,7 @@ function App() {
         const item = session.items[qIndex];
         const ok = i === item.q.correctAnswerIndex;
         setPicked(i); setAnswered(true);
-        StudentStore.recordAnswer({ ders: item.ders, konu: item.konu, id: item.id, correct: ok });
+        StudentStore.recordAnswer({ ders: item.ders, konu: item.konu, id: item.id, correct: ok, fromWrongBook: session.mode === "wrong" });
         StudentStore.addSessionStats({ questions: 1, correct: ok ? 1 : 0 });
         setAnswerLog(function (l) { return l.concat([{ ders: item.ders, konu: item.konu, ok: ok }]); });
         if (ok) {
@@ -2359,7 +2359,10 @@ function App() {
             <ResultView
                 session={session} score={score} wrongList={wrongList} student={student}
                 breakdown={StudyPlanner.breakdownByTopic(answerLog)}
-                onRetry={function () { startSession(session.items, { mode: session.mode, ders: session.ders, konu: session.konu, seconds: null, testNo: session.testNo }); }}
+                onRetry={function () {
+                    if (session.mode === "wrong") startSession(plan.wrong.slice(0, 30), { mode: "wrong" });
+                    else startSession(session.items, { mode: session.mode, ders: session.ders, konu: session.konu, seconds: null, testNo: session.testNo });
+                }}
                 onHome={closeStudy}
             />
         );

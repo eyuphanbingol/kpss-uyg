@@ -99,7 +99,8 @@ export default function TestScreen({ route, navigation }) {
             ders: item.ders, 
             konu: item.konu, 
             id: item.id, 
-            correct: ok 
+            correct: ok,
+            fromWrongBook: mode === "wrong"
         });
         StudentStore.addSessionStats({ 
             questions: 1, 
