@@ -211,7 +211,7 @@
             profile: profile,
             userProfile: userProfile,
             streak: Object.assign({}, base.streak, parsed.streak || {}),
-            topics: isObj(parsed.topics) ? parsed.topics : {},
+            topics: migrateTopicPacks(isObj(parsed.topics) ? parsed.topics : {}),
             answers: isObj(parsed.answers) ? parsed.answers : {},
             wrongBook: Array.isArray(parsed.wrongBook) ? parsed.wrongBook : [],
             sessions: isObj(parsed.sessions) ? parsed.sessions : {},
@@ -336,6 +336,8 @@
                 lastCorrect: 0,
                 lastTotal: 0,
                 attempts: 0,
+                completedPacks: [],
+                legacyAllPacks: false,
                 mastery: "yok",
                 masteryScore: 0,
                 wrongWeight: 0,
@@ -353,10 +355,51 @@
             lastCorrect: 0,
             lastTotal: 0,
             attempts: 0,
+            completedPacks: [],
+            legacyAllPacks: false,
             mastery: "yok",
             masteryScore: 0,
             wrongWeight: 0
         };
+    }
+
+    function completedPacksOf(t) {
+        var p = (t && t.completedPacks) || [];
+        if (!Array.isArray(p)) return [];
+        return p.map(Number).filter(function (n) { return n > 0; });
+    }
+
+    function isPackComplete(t, no) {
+        if (t && t.legacyAllPacks) return true;
+        return completedPacksOf(t).indexOf(Number(no)) >= 0;
+    }
+
+    function isPackOpen(t, no) {
+        no = Number(no) || 1;
+        if (no <= 1) return true;
+        return isPackComplete(t, no - 1);
+    }
+
+    function firstOpenPackIndex(t, packCount) {
+        var i;
+        var n = packCount || 0;
+        for (i = 1; i <= n; i++) {
+            if (!isPackComplete(t, i)) return i - 1;
+        }
+        return 0;
+    }
+
+    function migrateTopicPacks(topics) {
+        Object.keys(topics || {}).forEach(function (ders) {
+            Object.keys(topics[ders] || {}).forEach(function (konu) {
+                var t = topics[ders][konu];
+                if (!t || typeof t !== "object") return;
+                if (!Array.isArray(t.completedPacks)) t.completedPacks = [];
+                else t.completedPacks = completedPacksOf(t);
+                if ((t.attempts || 0) > 0 && !t.completedPacks.length) t.legacyAllPacks = true;
+            });
+        });
+        return topics;
     }
 
     function bumpStreak() {
@@ -441,6 +484,12 @@
         t.lastCorrect = correct;
         t.lastTotal = total;
         t.attempts = (t.attempts || 0) + 1;
+        if (result.testNo) {
+            var no = Number(result.testNo);
+            t.completedPacks = completedPacksOf(t);
+            if (no > 0 && t.completedPacks.indexOf(no) < 0) t.completedPacks.push(no);
+            t.completedPacks.sort(function (a, b) { return a - b; });
+        }
         t.mastery = masteryFromPct(pct);
         t.masteryScore = topicMasteryScore(t);
         t.updatedAt = nowIso();
@@ -560,12 +609,20 @@
             }
             return out;
         },
+        isPackComplete: isPackComplete,
+        isPackOpen: isPackOpen,
+        firstOpenPackIndex: firstOpenPackIndex,
         topicComplete: function (t, kd) {
             t = t || {};
             kd = kd || {};
             var qs = (kd.sorular || []).length;
             var ns = (kd.notlar || []).length;
-            if (qs) return (t.attempts || 0) > 0;
+            if (qs) {
+                var packs = global.StudentStore.topicTestPacks(kd.sorular);
+                if (!packs.length) return (t.attempts || 0) > 0;
+                if (t.legacyAllPacks) return true;
+                return packs.every(function (p) { return isPackComplete(t, p.no); });
+            }
             if (ns) return !!t.notesDone;
             return !!t.notesDone || (t.attempts || 0) > 0;
         },

@@ -19,6 +19,8 @@ function openTopicPack(navigation, ders, konu, sorular, packIdx) {
     var packs = StudentStore.topicTestPacks(itemsFromSorular(ders, konu, sorular));
     var pack = packs[packIdx == null ? 0 : packIdx];
     if (!pack) return;
+    var tp = StudentStore.getTopic(ders, konu);
+    if (!StudentStore.isPackOpen(tp, pack.no)) return;
     go(navigation, "Test", {
         mode: "topic",
         ders: ders,
@@ -173,12 +175,18 @@ export function KonuListScreen({ route, navigation }) {
                                         <Text style={[styles.konuName, isDark && styles.textLight]}>
                                             {konu}
                                         </Text>
-                                        <Text style={[styles.konuMeta, isDark && styles.textMuted]}>
-                                            {open 
-                                                ? ((kd.notlar || []).length + " not · " + (kd.sorular || []).length + " soru")
-                                                : "Önce önceki konuyu bitir"
-                                            }
-                                        </Text>
+                        <Text style={[styles.konuMeta, isDark && styles.textMuted]}>
+                            {open
+                                ? (function () {
+                                    var packs = StudentStore.topicTestPacks(kd.sorular || []);
+                                    var nLen = (kd.notlar || []).length;
+                                    if (!packs.length) return nLen + " not · " + (kd.sorular || []).length + " soru";
+                                    var doneN = packs.filter(function (p) { return StudentStore.isPackComplete(tp, p.no); }).length;
+                                    return nLen + " not · " + doneN + "/" + packs.length + " test";
+                                })()
+                                : "Önce önceki konunun testlerini bitir"
+                            }
+                        </Text>
                                     </View>
                                 </View>
                                 {open && (
@@ -266,20 +274,27 @@ export function KonuHubScreen({ route, navigation }) {
             {packs.length ? (
                 <View>
                     <Text style={[styles.hubStat, isDark && styles.textMuted, { marginBottom: 8 }]}>
-                        {sorular.length} soru · 25’lik testler
+                        {sorular.length} soru · 25’lik testler · sırayla bitir
                     </Text>
                     {packs.map(function (p, pi) {
+                        var packDone = StudentStore.isPackComplete(tp, p.no);
+                        var packOpen = StudentStore.isPackOpen(tp, p.no);
                         return (
-                            <Pressable key={p.no} onPress={function () {
+                            <Pressable key={p.no} disabled={!packOpen} onPress={function () {
                                 openTopicPack(navigation, ders, konu, sorular, pi);
                             }}>
-                                <Card style={[styles.hubTestCard, isDark && styles.cardDark]}>
-                                    <Text style={styles.hubTestIcon}>{p.no}</Text>
+                                <Card style={[
+                                    styles.hubTestCard,
+                                    isDark && styles.cardDark,
+                                    packDone && styles.hubTestCardDone,
+                                    !packOpen && styles.hubTestCardLocked
+                                ]}>
+                                    <Text style={styles.hubTestIcon}>{packDone ? "✓" : p.no}</Text>
                                     <Text style={[styles.hubTestTitle, isDark && styles.textLight]}>
                                         Test {p.no}
                                     </Text>
                                     <Text style={[styles.hubTestDesc, isDark && styles.textMuted]}>
-                                        {p.items.length} soru
+                                        {packDone ? "Çözüldü" : (packOpen ? (p.items.length + " soru") : ("Önce Test " + (p.no - 1) + "’i bitir"))}
                                     </Text>
                                 </Card>
                             </Pressable>
@@ -527,6 +542,13 @@ var styles = StyleSheet.create({
         marginBottom: 10,
         alignItems: "center",
         paddingVertical: 18,
+    },
+    hubTestCardDone: {
+        borderColor: "#34d399",
+        backgroundColor: "#ecfdf5",
+    },
+    hubTestCardLocked: {
+        opacity: 0.45,
     },
     hubTestIcon: {
         fontSize: 28,

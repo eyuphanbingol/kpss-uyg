@@ -67,7 +67,8 @@ export default function TestScreen({ route, navigation }) {
             StudentStore.recordTestResult(ders, konu, { 
                 correct: scoreRef.current, 
                 total: items.length, 
-                minutes: elapsedMin 
+                minutes: elapsedMin,
+                testNo: testNo
             });
         } else if (elapsedMin) {
             StudentStore.addSessionStats({ 

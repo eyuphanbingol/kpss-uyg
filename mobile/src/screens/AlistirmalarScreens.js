@@ -105,7 +105,7 @@ export function AlistirmaKonuListScreen({ route, navigation }) {
                                 </View>
                                 <View style={{ flex: 1 }}>
                                     <Text style={[styles.dersName, isDark && styles.textLight]}>{konu}</Text>
-                                    <Text style={[styles.meta, isDark && styles.textMuted]}>{open ? (n ? n + " boşluk" : "Henüz yok") : "Önce önceki konuyu bitir"}</Text>
+                                    <Text style={[styles.meta, isDark && styles.textMuted]}>{open ? (n ? n + " boşluk" : "Henüz yok") : "Önce önceki konunun testlerini bitir"}</Text>
                                 </View>
                                 {open ? <Text style={[styles.arrow, isDark && styles.textMuted]}>→</Text> : null}
                             </View>

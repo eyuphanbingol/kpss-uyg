@@ -46,7 +46,8 @@ export default function NotesScreen({ route, navigation }) {
                 qid: StudentStore.qid(ders, konu, id)
             };
         }));
-        var pack = packs[0];
+        var pi = StudentStore.firstOpenPackIndex(StudentStore.getTopic(ders, konu), packs.length);
+        var pack = packs[pi];
         if (!pack) {
             navigation.goBack();
             return;

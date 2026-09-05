@@ -673,7 +673,7 @@ function AlistirmaKonuList(props) {
                                     <div className={"h-10 w-10 rounded-xl flex items-center justify-center font-stat text-sm shrink-0 " + (done ? "bg-emerald-50 text-emerald-600" : (open ? "bg-teal-50 text-teal-800" : "bg-stone-100 text-stone-400"))}>{done ? "✓" : (open ? idx + 1 : "🔒")}</div>
                                     <div className="min-w-0">
                                         <div className="font-bold text-slate-800 dark:text-slate-100">{konu}</div>
-                                        <p className="text-xs text-slate-400 mt-1">{open ? (n ? n + " boşluk" : "Henüz alıştırma yok") : "Önce önceki konuyu bitir"}</p>
+                                        <p className="text-xs text-slate-400 mt-1">{open ? (n ? n + " boşluk" : "Henüz alıştırma yok") : "Önce önceki konunun testlerini bitir"}</p>
                                     </div>
                                 </div>
                                 {open ? <span className="text-stone-300 text-lg shrink-0">→</span> : null}
@@ -1233,7 +1233,7 @@ function KonuList(props) {
                 <div className="h-14 w-14 rounded-2xl ders-icon flex items-center justify-center text-2xl">{t.icon}</div>
                 <div>
                     <h1 className="text-3xl font-black">{ders}</h1>
-                    <p className="text-zinc-500 text-sm">Sırayla ilerle. Konu bitince sonraki açılır.</p>
+                    <p className="text-zinc-500 text-sm">Sırayla ilerle. Konunun tüm testleri bitince sonraki açılır.</p>
                 </div>
             </div>
             <div className="space-y-3">
@@ -1255,7 +1255,13 @@ function KonuList(props) {
                                     <div className={"h-10 w-10 rounded-xl flex items-center justify-center font-stat text-sm shrink-0 " + (done ? "bg-emerald-50 text-emerald-600" : (open ? "bg-stone-100 text-stone-700" : "bg-stone-100 text-stone-400"))}>{done ? "✓" : (open ? idx + 1 : "🔒")}</div>
                                     <div className="min-w-0">
                                         <div className="font-bold text-slate-800 dark:text-slate-100">{konu}</div>
-                                        <p className="text-xs text-slate-400 mt-1">{open ? ((kd.notlar || []).length + " not · " + (kd.sorular || []).length + " soru") : "Önce önceki konuyu bitir"}</p>
+                                        <p className="text-xs text-slate-400 mt-1">{open ? (function () {
+                                            var packs = StudentStore.topicTestPacks(kd.sorular || []);
+                                            var nLen = (kd.notlar || []).length;
+                                            if (!packs.length) return nLen + " not · " + (kd.sorular || []).length + " soru";
+                                            var doneN = packs.filter(function (p) { return StudentStore.isPackComplete(tp, p.no); }).length;
+                                            return nLen + " not · " + doneN + "/" + packs.length + " test";
+                                        })() : "Önce önceki konunun testlerini bitir"}</p>
                                     </div>
                                 </div>
                                 {open ? (
@@ -1300,15 +1306,17 @@ function KonuHub(props) {
             </button>
             {packs.length ? (
                 <div>
-                    <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-3">{sorular.length} soru · 25’lik testler</p>
+                    <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-3">{sorular.length} soru · 25’lik testler · sırayla bitir</p>
                     <div className="grid sm:grid-cols-2 gap-4">
                         {packs.map(function (p, pi) {
+                            var packDone = StudentStore.isPackComplete(tp, p.no);
+                            var packOpen = StudentStore.isPackOpen(tp, p.no);
                             return (
-                                <button key={p.no} onClick={function () { props.onTest(pi); }}
-                                    className="group text-left p-6 bg-stone-50 dark:bg-stone-900 border border-stone-300 rounded-3xl card-hover">
-                                    <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center text-white font-black mb-3">{p.no}</div>
+                                <button key={p.no} disabled={!packOpen} onClick={function () { if (packOpen) props.onTest(pi); }}
+                                    className={"group text-left p-6 border rounded-3xl " + (packDone ? "bg-emerald-50 dark:bg-emerald-950/40 border-emerald-200" : (packOpen ? "bg-stone-50 dark:bg-stone-900 border-stone-300 card-hover" : "bg-stone-50 dark:bg-stone-900 border-stone-200 opacity-45"))}>
+                                    <div className={"h-12 w-12 rounded-2xl flex items-center justify-center text-white font-black mb-3 " + (packDone ? "bg-emerald-500" : "bg-gradient-to-br from-indigo-600 to-purple-600")}>{packDone ? "✓" : p.no}</div>
                                     <h3 className="text-lg font-bold text-stone-900 dark:text-stone-50 mb-1">Test {p.no}</h3>
-                                    <p className="text-sm text-stone-500">{p.items.length} soru</p>
+                                    <p className="text-sm text-stone-500">{packDone ? "Çözüldü" : (packOpen ? (p.items.length + " soru") : ("Önce Test " + (p.no - 1) + "’i bitir"))}</p>
                                 </button>
                             );
                         })}
@@ -2265,7 +2273,7 @@ function App() {
         }
         const elapsedMin = Math.max(0, Math.round((Date.now() - (startedAt.current || Date.now())) / 60000));
         if (sess.mode === "topic" && sess.ders && sess.konu) {
-            StudentStore.recordTestResult(sess.ders, sess.konu, { correct: scoreRef.current, total: sess.items.length, minutes: elapsedMin });
+            StudentStore.recordTestResult(sess.ders, sess.konu, { correct: scoreRef.current, total: sess.items.length, minutes: elapsedMin, testNo: sess.testNo });
         } else if (elapsedMin) {
             StudentStore.addSessionStats({ minutes: elapsedMin, seans: true, ders: sess.ders || null });
         }
@@ -2319,7 +2327,9 @@ function App() {
             StudentStore.setNoteIndex(task.ders, task.konu, tp.noteIndex || 0, nLen);
             setViewMode("notlar");
         } else if (task.kind === "test") {
-            var pack = packFromKonu(kpssData, task.ders, task.konu, 0);
+            var packs = StudentStore.topicTestPacks(toItemsFromKonu(kpssData, task.ders, task.konu));
+            var pi = StudentStore.firstOpenPackIndex(StudentStore.getTopic(task.ders, task.konu), packs.length);
+            var pack = packs[pi];
             setNav("dersler"); setSelectedDers(task.ders); setSelectedKonu(task.konu); setViewMode("hub");
             if (pack) startSession(pack.items, { mode: "topic", ders: task.ders, konu: task.konu, testNo: pack.no });
         } else if (task.kind === "review") {
@@ -2429,7 +2439,9 @@ function App() {
                 }}
                 onTest={function () {
                     StudentStore.markNotesComplete(selectedDers, selectedKonu);
-                    var pack = packFromKonu(kpssData, selectedDers, selectedKonu, 0);
+                    var packs = StudentStore.topicTestPacks(toItemsFromKonu(kpssData, selectedDers, selectedKonu));
+                    var pi = StudentStore.firstOpenPackIndex(StudentStore.getTopic(selectedDers, selectedKonu), packs.length);
+                    var pack = packs[pi];
                     if (pack) startSession(pack.items, { mode: "topic", ders: selectedDers, konu: selectedKonu, testNo: pack.no });
                 }} />
         );
@@ -2445,6 +2457,8 @@ function App() {
                 onTest={function (packIdx) {
                     var pack = packFromKonu(kpssData, selectedDers, selectedKonu, packIdx);
                     if (!pack) { alert("Bu konuya ait henüz soru yüklenmedi!"); return; }
+                    var tp = StudentStore.getTopic(selectedDers, selectedKonu);
+                    if (!StudentStore.isPackOpen(tp, pack.no)) return;
                     startSession(pack.items, { mode: "topic", ders: selectedDers, konu: selectedKonu, testNo: pack.no });
                 }} />
         );

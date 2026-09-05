@@ -70,6 +70,17 @@
                 if (!R) { out[ders][konu] = L; return; }
                 var pick = (L.updatedAt || "") >= (R.updatedAt || "") ? L : R;
                 pick.attempts = Math.max(L.attempts || 0, R.attempts || 0);
+                pick.legacyAllPacks = !!(L.legacyAllPacks || R.legacyAllPacks);
+                var packSet = {};
+                function addPacks(src) {
+                    ((src && src.completedPacks) || []).forEach(function (n) {
+                        n = Number(n);
+                        if (n > 0) packSet[n] = true;
+                    });
+                }
+                addPacks(L);
+                addPacks(R);
+                pick.completedPacks = Object.keys(packSet).map(Number).sort(function (a, b) { return a - b; });
                 out[ders][konu] = pick;
             });
         });
