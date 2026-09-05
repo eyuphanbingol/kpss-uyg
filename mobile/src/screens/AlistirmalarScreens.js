@@ -192,8 +192,24 @@ export function ClozePlayScreen({ route, navigation }) {
             <Text style={[styles.kicker, isDark && styles.textMuted]}>{ders} · {idx + 1}/{list.length}</Text>
             <Text style={[styles.konuTitle, isDark && styles.textLight]}>{konu}</Text>
             <Card style={[isDark && styles.cardDark]}>
-                {it.hint ? <Text style={[styles.kicker, isDark && styles.textMuted]}>{it.hint}</Text> : null}
-                <Text style={[styles.prompt, isDark && styles.textLight]}>{it.prompt}</Text>
+                {it.hint ? <Text style={[styles.clozeHint, isDark && styles.textMuted]}>{it.hint}</Text> : null}
+                <View style={[styles.clozeStem, isDark && styles.clozeStemDark]}>
+                    <View style={styles.clozeBar} />
+                    <Text style={[styles.clozeText, isDark && styles.textLight]}>
+                        {String(it.prompt || "").replace(/\s*Boşluk:\s*/g, " ").replace(/\s*→\s*/g, " ").split("______").map(function (p, i, arr) {
+                            return (
+                                <Text key={i}>
+                                    {p}
+                                    {i < arr.length - 1 ? (
+                                        <Text style={[styles.clozeBlank, picked ? styles.clozeBlankFilled : null]}>
+                                            {picked ? " " + it.answer + " " : "          "}
+                                        </Text>
+                                    ) : null}
+                                </Text>
+                            );
+                        })}
+                    </Text>
+                </View>
                 {(it.choices || []).map(function (c, ci) {
                     var isP = picked === c;
                     var isA = String(c).toLocaleLowerCase("tr-TR") === String(it.answer).toLocaleLowerCase("tr-TR");
@@ -415,6 +431,13 @@ var styles = StyleSheet.create({
     numText: { fontWeight: "800", color: "#115E59" },
     kicker: { fontSize: 12, fontWeight: "700", letterSpacing: 0.4, color: colors.muted, textTransform: "uppercase" },
     prompt: { fontSize: 16, lineHeight: 24, color: colors.text, marginBottom: 12 },
+    clozeHint: { fontSize: 11, fontWeight: "800", letterSpacing: 0.8, color: "#8A7A4A", textTransform: "uppercase", marginBottom: 8 },
+    clozeStem: { backgroundColor: "#F6F1E4", borderRadius: 16, paddingVertical: 16, paddingHorizontal: 16, paddingLeft: 18, marginBottom: 4, borderWidth: 1, borderColor: "rgba(13,44,77,0.08)", position: "relative" },
+    clozeStemDark: { backgroundColor: colors.navyDeep, borderColor: "rgba(255,255,255,0.08)" },
+    clozeBar: { position: "absolute", left: 0, top: 12, bottom: 12, width: 4, borderRadius: 4, backgroundColor: "#C5A059" },
+    clozeText: { fontSize: 17, lineHeight: 28, color: colors.text, fontWeight: "600", paddingLeft: 8 },
+    clozeBlank: { textDecorationLine: "underline", color: "#127880", fontWeight: "800" },
+    clozeBlankFilled: { color: "#047857", textDecorationLine: "none" },
     choice: { borderWidth: 1, borderRadius: 14, padding: 12, marginTop: 8 },
     choiceText: { fontWeight: "600", color: colors.text },
     result: { alignItems: "center", paddingVertical: 28 },

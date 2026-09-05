@@ -686,16 +686,32 @@ function AlistirmaKonuList(props) {
     );
 }
 
-function clozePromptNodes(text) {
-    var parts = String(text || "").split("______");
-    return parts.map(function (p, i) {
-        return (
-            <span key={i}>
-                {p}
-                {i < parts.length - 1 ? <span className="cloze-blank">____</span> : null}
-            </span>
-        );
+function tidyClozePrompt(text) {
+    return String(text || "")
+        .replace(/\s*Boşluk:\s*/g, " ")
+        .replace(/\s*→\s*/g, " ")
+        .replace(/\s{2,}/g, " ")
+        .trim();
+}
+
+function clozePromptNodes(text, fill, fillOk) {
+    var raw = tidyClozePrompt(text);
+    var parts = raw.split("______");
+    if (parts.length === 1 && !fill) {
+        return <span>{raw}</span>;
+    }
+    var nodes = [];
+    parts.forEach(function (p, i) {
+        if (p) nodes.push(<span key={"t" + i}>{p}</span>);
+        if (i < parts.length - 1 || (parts.length === 1 && fill)) {
+            nodes.push(
+                <span key={"b" + i} className={"cloze-blank" + (fill ? (fillOk ? " is-ok" : " is-bad") : "")}>
+                    {fill || "\u00a0"}
+                </span>
+            );
+        }
     });
+    return nodes;
 }
 
 function ClozePlay(props) {
@@ -772,29 +788,36 @@ function ClozePlay(props) {
                     <div className="note-progress">{idx + 1}/{items.length}</div>
                 </header>
                 <div className="study-card-body">
-                    {it.hint ? <p className="text-[11px] font-black uppercase tracking-widest text-stone-400 mb-2">{it.hint}</p> : null}
-                    <p className="text-[17px] leading-relaxed mb-6">{clozePromptNodes(it.prompt)}</p>
-                    <div className="grid gap-2">
+                    <div className="cloze-stem">
+                        <div className="cloze-stem-bar" aria-hidden="true"></div>
+                        {it.hint ? <p className="cloze-hint">{it.hint}</p> : null}
+                        <p className="cloze-stem-text">{clozePromptNodes(it.prompt, picked ? it.answer : "", ok)}</p>
+                    </div>
+                    <div className="grid gap-2.5 mt-5">
                         {(it.choices || []).map(function (c, ci) {
                             var isP = picked === c;
                             var isA = String(c).toLocaleLowerCase("tr-TR") === String(it.answer).toLocaleLowerCase("tr-TR");
-                            var cls = "w-full text-left px-4 py-3 rounded-2xl border font-medium transition-colors ";
-                            if (!picked) cls += "bg-white dark:bg-stone-800 border-stone-200 dark:border-stone-600 hover:border-teal-500";
-                            else if (isA) cls += "bg-emerald-50 border-emerald-400 text-emerald-800";
-                            else if (isP) cls += "bg-rose-50 border-rose-400 text-rose-800";
-                            else cls += "bg-stone-50 border-stone-200 opacity-60";
+                            var letter = String.fromCharCode(65 + ci);
+                            var cls = "option-btn w-full text-left px-3.5 py-3 rounded-2xl border font-medium flex items-start gap-3 ";
+                            if (!picked) cls += "bg-white dark:bg-stone-800 border-stone-200 dark:border-stone-600";
+                            else if (isA) cls += "bg-emerald-50 border-emerald-400 text-emerald-900";
+                            else if (isP) cls += "bg-rose-50 border-rose-400 text-rose-900";
+                            else cls += "bg-stone-50 border-stone-200 opacity-55";
                             return (
                                 <button key={ci + "-" + c} disabled={!!picked} onClick={function () {
                                     if (picked) return;
                                     setPicked(c);
                                     if (String(c).toLocaleLowerCase("tr-TR") === String(it.answer).toLocaleLowerCase("tr-TR")) setScore(score + 1);
-                                }} className={cls}>{c}</button>
+                                }} className={cls}>
+                                    <span className={"choice-letter cloze-letter shrink-0 " + (picked && isA ? "is-ok" : "") + (picked && isP && !isA ? " is-bad" : "")}>{letter}</span>
+                                    <span className="min-w-0 leading-snug">{c}</span>
+                                </button>
                             );
                         })}
                     </div>
                     {picked ? (
-                        <p className={"mt-4 text-sm font-semibold " + (ok ? "text-emerald-600" : "text-rose-600")}>
-                            {ok ? "Doğru" : "Doğrusu: " + it.answer}
+                        <p className={"cloze-verdict " + (ok ? "is-ok" : "is-bad")}>
+                            {ok ? "Doğru." : "Doğrusu: " + it.answer}
                         </p>
                     ) : null}
                 </div>

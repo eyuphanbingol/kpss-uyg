@@ -165,7 +165,7 @@ function fromQuestions(sorular) {
         if (expl && expl.toLocaleLowerCase("tr-TR").indexOf(ans.toLocaleLowerCase("tr-TR")) >= 0) {
             prompt = clipAround(blankIn(expl, ans), 180);
         } else if (expl) {
-            prompt = clipAround(expl.replace(/[.!?]?$/, "") + " Boşluk: ______", 180);
+            prompt = clipAround(expl.replace(/[.!?]?$/, "") + " ______", 180);
         } else {
             var stem = stripHtml(q.question || "");
             prompt = clipAround((stem.length > 160 ? stem.slice(0, 160) + "…" : stem) + " → ______", 180);
