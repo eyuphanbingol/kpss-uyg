@@ -182,11 +182,21 @@
     <style>
         /* ===== GENEL ===== */
         * { box-sizing: border-box; }
+        html, body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
         body {
             font-family: 'Inter', sans-serif;
             background: #041C24;
             color: #0f172a;
             min-height: 100vh;
+            overscroll-behavior-x: none;
+        }
+        #root {
+            overflow-x: hidden;
+            max-width: 100%;
         }
 
         /* ===== KARMAŞIK ARKA PLAN ===== */
@@ -578,7 +588,7 @@
         }
         .study-card-body {
             padding: 22px 20px 12px;
-            overflow-x: auto;
+            overflow-x: hidden;
             color: #1c1917;
         }
         .study-card-body,
@@ -617,8 +627,33 @@
         }
         .study-card-body p,
         .study-card-body li,
-        .study-card-body span {
+        .study-card-body span,
+        .study-card-body h1,
+        .study-card-body h2,
+        .study-card-body h3 {
             overflow-wrap: break-word;
+            word-break: break-word;
+        }
+        .study-card-body img {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+        .study-card-body table {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior-x: contain;
+        }
+        .study-card-body pre,
+        .study-card-body code {
+            max-width: 100%;
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
         }
         .study-card-body li.flex,
         .study-card-body .flex.justify-between,
@@ -820,9 +855,110 @@
             background: #211F1D;
             border-top-color: rgba(255,255,255,0.06);
         }
+        @media (max-width: 640px) {
+            .study-card-head {
+                padding: 14px 14px;
+                align-items: flex-start;
+            }
+            .study-card-title {
+                font-size: 1rem;
+            }
+            .study-card-body {
+                padding: 14px 12px 10px;
+            }
+            .study-card-foot {
+                padding: 12px 12px 16px;
+                flex-wrap: wrap;
+            }
+            .study-card-body .inline-flex {
+                max-width: 100%;
+                flex-wrap: wrap;
+                white-space: normal;
+                line-height: 1.35;
+            }
+            .study-card-body [class*="overflow-hidden"] {
+                overflow-x: auto !important;
+                overflow-y: hidden !important;
+                -webkit-overflow-scrolling: touch;
+                overscroll-behavior-x: contain;
+                margin-left: -12px;
+                margin-right: -12px;
+                width: calc(100% + 24px);
+                max-width: none;
+                border-radius: 0;
+                border-left: none;
+                border-right: none;
+            }
+            .study-card-body img {
+                width: 720px;
+                max-width: none;
+                min-width: 100%;
+                height: auto;
+                cursor: zoom-in;
+            }
+            .option-btn {
+                word-break: break-word;
+                overflow-wrap: anywhere;
+            }
+            .q-stem h3 {
+                overflow-wrap: anywhere;
+                word-break: break-word;
+            }
+        }
         @media (max-width: 560px) {
             .study-card-body .grid-cols-2 {
                 grid-template-columns: 1fr;
+            }
+        }
+        .note-zoom {
+            position: fixed;
+            inset: 0;
+            z-index: 80;
+            background: rgba(4, 28, 36, 0.96);
+            display: flex;
+            flex-direction: column;
+            padding-top: env(safe-area-inset-top);
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+        .note-zoom-bar {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 12px 14px;
+            color: #F5EBC7;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .note-zoom-close {
+            border: 1px solid rgba(245, 235, 199, 0.28);
+            background: rgba(245, 235, 199, 0.12);
+            color: #fff;
+            border-radius: 999px;
+            padding: 8px 14px;
+            font-weight: 700;
+        }
+        .note-zoom-scroll {
+            flex: 1 1 auto;
+            min-height: 0;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            touch-action: pan-x pan-y pinch-zoom;
+            overscroll-behavior: contain;
+            padding: 0 0 24px;
+        }
+        .note-zoom-scroll img {
+            display: block;
+            width: 1400px;
+            max-width: none;
+            height: auto;
+            margin: 0 auto;
+        }
+        @media (max-width: 640px) {
+            .note-zoom-scroll img {
+                width: 220vw;
+                min-width: 720px;
             }
         }
 
@@ -933,7 +1069,7 @@
 
 <body class="app-bg min-h-screen text-slate-800 antialiased transition-colors duration-300">
     <div id="root"></div>
-    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=75"></script>
+    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=76"></script>
     <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.getRegistrations().then(function (regs) {

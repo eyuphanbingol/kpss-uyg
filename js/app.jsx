@@ -45,7 +45,7 @@ function useStudent() {
 
 function Shell(props) {
     return (
-        <div className={"mx-auto px-5 pt-6 sm:pt-10 " + (props.wide ? "max-w-4xl" : "max-w-2xl")}>
+        <div className={"mx-auto px-3 sm:px-5 pt-6 sm:pt-10 overflow-x-hidden " + (props.wide ? "max-w-4xl" : "max-w-2xl")}>
             {props.children}
             {props.padBottom === false ? null : (
                 <div aria-hidden="true" style={{ height: "calc(8rem + env(safe-area-inset-bottom, 0px))" }} />
@@ -124,7 +124,7 @@ function BottomNav(props) {
     ];
     return (
         <nav className="fixed bottom-0 inset-x-0 z-40 nav-glass" style={{ paddingBottom: "max(8px, env(safe-area-inset-bottom))" }}>
-            <div className="max-w-2xl mx-auto grid grid-cols-6 px-1 pt-1">
+            <div className="max-w-2xl mx-auto grid grid-cols-6 px-0.5 pt-1 min-w-0">
                 {tabs.map(function (tab) {
                     const on = props.nav === tab.id;
                     return (
@@ -1332,7 +1332,15 @@ function KonuHub(props) {
 function NotesView(props) {
     const notlar = props.notlar || [];
     const idx = props.index;
+    const [zoomSrc, setZoomSrc] = useState(null);
+    useEffect(function () {
+        if (!zoomSrc) return;
+        var prev = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+        return function () { document.body.style.overflow = prev; };
+    }, [zoomSrc]);
     return (
+        <React.Fragment>
         <Shell wide={true} padBottom={false}>
             <div className="flex justify-between items-center mb-4 gap-3">
                 <BackBtn onClick={props.onBack} label="Geri" />
@@ -1341,13 +1349,18 @@ function NotesView(props) {
             {notlar.length ? (
                 <article className="study-card fade-in">
                     <header className="study-card-head">
-                        <div>
+                        <div className="min-w-0">
                             {props.ders ? <p className="study-card-kicker">{props.ders}</p> : null}
                             <h2 className="study-card-title">{props.konu} · Özet</h2>
                         </div>
                         <div className="note-progress">{idx + 1}/{notlar.length}</div>
                     </header>
-                    <div key={idx} className="study-card-body text-[16px] leading-relaxed" dangerouslySetInnerHTML={{ __html: notlar[idx] }} />
+                    <div key={idx} className="study-card-body text-[16px] leading-relaxed" onClick={function (e) {
+                        var t = e.target;
+                        if (t && t.tagName === "IMG" && t.getAttribute("src")) {
+                            setZoomSrc(t.getAttribute("src"));
+                        }
+                    }} dangerouslySetInnerHTML={{ __html: notlar[idx] }} />
                     <footer className="study-card-foot">
                         <button disabled={idx === 0} onClick={function () { props.onIndex(idx - 1); }}
                             className={"back-btn " + (idx === 0 ? "opacity-30 pointer-events-none" : "")}>
@@ -1382,6 +1395,18 @@ function NotesView(props) {
                 </button>
             ) : null}
         </Shell>
+            {zoomSrc ? (
+                <div className="note-zoom" role="dialog" aria-modal="true">
+                    <div className="note-zoom-bar">
+                        <span>Haritayı kaydır · iki parmakla yakınlaştır</span>
+                        <button type="button" className="note-zoom-close" onClick={function () { setZoomSrc(null); }}>Kapat</button>
+                    </div>
+                    <div className="note-zoom-scroll">
+                        <img src={zoomSrc} alt="Harita" />
+                    </div>
+                </div>
+            ) : null}
+        </React.Fragment>
     );
 }
 
@@ -1398,9 +1423,9 @@ function TestView(props) {
     const tCls = !timed ? "" : (tLeft <= 60 ? "text-coral-500" : tLeft <= 300 ? "text-amber-500" : "text-navy-600");
     return (
         <Shell padBottom={false}>
-            <div className="flex justify-between items-center text-sm font-bold text-slate-500 mb-4">
-                <button onClick={props.onQuit} className="hover:text-rose-500 bg-white dark:bg-slate-800 px-3 py-2 rounded-xl border border-slate-200">Bitir</button>
-                <span className="bg-white dark:bg-slate-800 px-4 py-2 rounded-xl border border-slate-200">
+            <div className="flex justify-between items-center text-sm font-bold text-slate-500 mb-4 gap-2">
+                <button onClick={props.onQuit} className="hover:text-rose-500 bg-white dark:bg-slate-800 px-3 py-2 rounded-xl border border-slate-200 shrink-0">Bitir</button>
+                <span className="bg-white dark:bg-slate-800 px-3 py-2 rounded-xl border border-slate-200 min-w-0 text-right">
                     {props.session.testNo ? ("Test " + props.session.testNo + " · ") : ""}{qIndex + 1}/{items.length} · Doğru {props.score}
                     {timed ? <span className={"ml-2 font-stat " + tCls}>{mm}:{ss}</span> : null}
                 </span>
@@ -1409,13 +1434,13 @@ function TestView(props) {
                 <div className="h-2.5 rounded-full" style={{ width: progress + "%", background: "linear-gradient(90deg, #0D2C4D, #1D8A99, #C5A059)" }} />
             </div>
             {item.ders ? <p className="text-xs font-bold text-slate-400 mb-3">{item.ders} · {item.konu}</p> : null}
-            <div className="q-stem p-6 sm:p-8 rounded-3xl mb-6 relative overflow-hidden fade-in">
+            <div className="q-stem p-4 sm:p-8 rounded-3xl mb-6 relative overflow-hidden fade-in">
                 <div className="q-stem-bar absolute top-0 left-0 w-1.5 h-full"></div>
                 <h3 className="text-lg font-bold leading-relaxed whitespace-pre-line text-stone-900 pl-2">{soru.question}</h3>
             </div>
             <div className="space-y-3">
                 {(soru.options || []).map(function (opt, i) {
-                    let cls = "w-full text-left p-5 rounded-2xl border-2 font-semibold transition-all flex items-center gap-4 option-btn ";
+                    let cls = "w-full text-left p-4 sm:p-5 rounded-2xl border-2 font-semibold transition-all flex items-center gap-3 sm:gap-4 option-btn ";
                     let icon = null;
                     if (props.answered) {
                         if (i === soru.correctAnswerIndex) {
@@ -1431,7 +1456,7 @@ function TestView(props) {
                     }
                     return (
                         <button key={i} onClick={function () { props.onAnswer(i); }} disabled={props.answered} className={cls}>
-                            {icon}<span className="text-[15px]">{stripChoicePrefix(opt)}</span>
+                            {icon}<span className="text-[15px] min-w-0">{stripChoicePrefix(opt)}</span>
                         </button>
                     );
                 })}
