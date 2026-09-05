@@ -797,8 +797,7 @@ function ClozePlay(props) {
                         {(it.choices || []).map(function (c, ci) {
                             var isP = picked === c;
                             var isA = String(c).toLocaleLowerCase("tr-TR") === String(it.answer).toLocaleLowerCase("tr-TR");
-                            var letter = String.fromCharCode(65 + ci);
-                            var cls = "option-btn w-full text-left px-3.5 py-3 rounded-2xl border font-medium flex items-start gap-3 ";
+                            var cls = "option-btn w-full text-left px-4 py-3 rounded-2xl border font-medium ";
                             if (!picked) cls += "bg-white dark:bg-stone-800 border-stone-200 dark:border-stone-600";
                             else if (isA) cls += "bg-emerald-50 border-emerald-400 text-emerald-900";
                             else if (isP) cls += "bg-rose-50 border-rose-400 text-rose-900";
@@ -808,10 +807,7 @@ function ClozePlay(props) {
                                     if (picked) return;
                                     setPicked(c);
                                     if (String(c).toLocaleLowerCase("tr-TR") === String(it.answer).toLocaleLowerCase("tr-TR")) setScore(score + 1);
-                                }} className={cls}>
-                                    <span className={"choice-letter cloze-letter shrink-0 " + (picked && isA ? "is-ok" : "") + (picked && isP && !isA ? " is-bad" : "")}>{letter}</span>
-                                    <span className="min-w-0 leading-snug">{c}</span>
-                                </button>
+                                }} className={cls}>{c}</button>
                             );
                         })}
                     </div>
