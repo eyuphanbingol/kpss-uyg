@@ -404,7 +404,7 @@ export default function AuthScreen() {
                                                 ref={nameRef}
                                                 value={name} 
                                                 onChangeText={setName} 
-                                                placeholder="Örn. Ayşe Yılmaz" 
+                                                placeholder="Adını yaz" 
                                                 autoCapitalize="words"
                                                 hint="Bu isim liderlik tablosunda görünecek"
                                                 onSubmitEditing={goAfterEdu}

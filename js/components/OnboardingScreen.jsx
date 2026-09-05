@@ -60,7 +60,7 @@
         var profile = student.profile || {};
         
         // ---------- State ----------
-        const [name, setName] = useState(profile.name || "");
+        const [name, setName] = useState("");
         const [level, setLevel] = useState((student.userProfile && student.userProfile.educationLevel) || "lisans");
         const [target, setTarget] = useState((student.userProfile && student.userProfile.targetType) || "B");
         const [examDate, setExamDate] = useState(profile.examDate || dates[level] || "2026-09-06");
@@ -191,7 +191,7 @@
                                     value={name} 
                                     onChange={function (e) { setName(e.target.value); }} 
                                     onKeyDown={handleKeyDown}
-                                    placeholder="Örn. Ayşe Yılmaz" 
+                                    placeholder="Adını yaz" 
                                     className="w-full px-4 py-3 rounded-2xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 text-[15px] focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all"
                                     autoComplete="given-name"
                                 />

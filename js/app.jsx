@@ -155,7 +155,7 @@ function Onboarding(props) {
     var profile = (props.student && props.student.profile) || {};
     var up = (props.student && props.student.userProfile) || {};
     var dates = (window.KpssConfig && window.KpssConfig.examDateByLevel) || {};
-    const [name, setName] = useState(profile.name || "");
+    const [name, setName] = useState("");
     const [level, setLevel] = useState(up.educationLevel || "lisans");
     const [target, setTarget] = useState(up.targetType || "B");
     const [examDate, setExamDate] = useState(profile.examDate || dates[up.educationLevel || "lisans"] || "2026-09-06");
@@ -169,7 +169,7 @@ function Onboarding(props) {
                 <h2 className="text-2xl font-black text-stone-900 dark:text-white mb-1 text-center">Atanly</h2>
                 <p className="text-sm text-stone-500 mb-5 text-center">Google ile giriş yaptın. Adın ve eğitim düzeyin uygulamayı açmak için gerekli.</p>
                 <label className="block text-xs font-bold text-stone-500 mb-1">Adın</label>
-                <input value={name} onChange={function (e) { setName(e.target.value); }} placeholder="Örn. Ayşe"
+                <input value={name} onChange={function (e) { setName(e.target.value); }} placeholder="Adını yaz"
                     className="w-full mb-4 px-4 py-3 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-800 font-medium" />
                 <p className="text-xs font-bold text-stone-500 mb-2">Eğitim düzeyi</p>
                 <div className="grid grid-cols-3 gap-2 mb-4">

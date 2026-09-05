@@ -345,7 +345,7 @@
                                     onChange={function (e) { setName(e.target.value); }} 
                                     onKeyDown={handleKeyDown}
                                     className={field} 
-                                    placeholder="Örn. Ayşe Yılmaz"
+                                    placeholder="Adını yaz"
                                     autoComplete="given-name"
                                 />
                             </div>

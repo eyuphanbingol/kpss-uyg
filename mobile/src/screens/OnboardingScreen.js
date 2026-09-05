@@ -20,7 +20,7 @@ export default function OnboardingScreen() {
     var up = student.userProfile || {};
 
     // ---------- State ----------
-    var _name = useState(profile.name || "");
+    var _name = useState("");
     var name = _name[0];
     var setName = _name[1];
 
@@ -135,7 +135,7 @@ export default function OnboardingScreen() {
                         label="Adın"
                         value={name}
                         onChangeText={setName}
-                        placeholder="Örn. Ayşe Yılmaz"
+                        placeholder="Adını yaz"
                         autoCapitalize="words"
                         hint="Bu isim liderlik tablosunda görünecek"
                     />

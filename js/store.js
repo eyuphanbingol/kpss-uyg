@@ -587,8 +587,7 @@
                 sessionStorage.removeItem("kpss-signup-profile");
             } catch (e) { pending = null; }
             var m = (user && user.user_metadata) || {};
-            var name = (pending && pending.name) || m.full_name || m.name || "";
-            if (!name && user && user.email) name = String(user.email).split("@")[0];
+            var name = (pending && pending.name) ? String(pending.name).trim() : "";
             if (pending) {
                 var dates = (global.KpssConfig && global.KpssConfig.examDateByLevel) || {};
                 var level = pending.educationLevel || m.education_level || "lisans";
