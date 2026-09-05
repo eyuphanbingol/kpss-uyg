@@ -213,6 +213,16 @@
                                             onClick={function () { if (store()) store().setConquerColor(c); }} />
                                     );
                                 })}
+                                {nOwn > 0 ? (
+                                    <button type="button" className="conquer-reset"
+                                        onClick={function () {
+                                            if (!window.confirm("Fetih haritası sıfırlansın mı? Boyanan iller ve bölge rozetleri silinir.")) return;
+                                            if (store()) store().resetConquer();
+                                            setPick(null);
+                                            setToast("Harita sıfırlandı");
+                                            setTimeout(function () { setToast(""); }, 1600);
+                                        }}>Sıfırla</button>
+                                ) : null}
                             </div>
                         ) : (
                             <span className="text-sm font-bold">{quiz.i + 1}/3</span>

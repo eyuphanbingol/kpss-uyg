@@ -168,6 +168,7 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
         return {
             conquer: {},
             conquerColor: "#127880",
+            conquerAt: "",
             badges: {},
             panicBest: 0,
             tabuBest: 0
@@ -186,6 +187,7 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
         return {
             conquer: conquer,
             conquerColor: typeof g.conquerColor === "string" && g.conquerColor ? g.conquerColor : base.conquerColor,
+            conquerAt: typeof g.conquerAt === "string" ? g.conquerAt : "",
             badges: isObj(g.badges) ? g.badges : {},
             panicBest: Math.max(0, Number(g.panicBest) || 0),
             tabuBest: Math.max(0, Number(g.tabuBest) || 0)
@@ -860,11 +862,19 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             state.games.conquerColor = String(color || "#127880");
             emit();
         },
+        resetConquer: function () {
+            if (!state.games) state.games = defaultGames();
+            state.games.conquer = {};
+            state.games.badges = {};
+            state.games.conquerAt = nowIso();
+            emit();
+        },
         conquerProvince: function (code) {
             if (!state.games) state.games = defaultGames();
             code = String(code || "").toUpperCase();
             if (!code) return [];
             state.games.conquer[code] = true;
+            state.games.conquerAt = nowIso();
             var fresh = [];
             if (global.GamesEngine && global.GamesEngine.freshBadges) {
                 fresh = global.GamesEngine.freshBadges(state.games.conquer, state.games.badges);

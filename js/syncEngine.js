@@ -90,10 +90,16 @@
     function mergeGames(L, R) {
         L = L || {};
         R = R || {};
+        var lAt = L.conquerAt || "";
+        var rAt = R.conquerAt || "";
+        var src = (lAt || rAt) ? (lAt >= rAt ? L : R) : null;
+        var conquer = src ? (src.conquer || {}) : Object.assign({}, R.conquer || {}, L.conquer || {});
+        var badges = src ? (src.badges || {}) : Object.assign({}, R.badges || {}, L.badges || {});
         return {
-            conquer: Object.assign({}, R.conquer || {}, L.conquer || {}),
+            conquer: conquer,
             conquerColor: L.conquerColor || R.conquerColor || "#127880",
-            badges: Object.assign({}, R.badges || {}, L.badges || {}),
+            conquerAt: lAt >= rAt ? lAt : rAt,
+            badges: badges,
             panicBest: Math.max(Number(L.panicBest) || 0, Number(R.panicBest) || 0),
             tabuBest: Math.max(Number(L.tabuBest) || 0, Number(R.tabuBest) || 0)
         };

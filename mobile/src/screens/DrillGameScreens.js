@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Pressable, Text, View, StyleSheet } from "react-native";
+import { Alert, Pressable, Text, View, StyleSheet } from "react-native";
 import { useApp } from "../AppProvider";
 import { GamesEngine } from "../lib/gamesEngine";
 import { MapQuiz } from "../lib/mapQuiz";
@@ -82,6 +82,19 @@ export function ConquerPlayScreen({ navigation }) {
             </Pressable>
             <Text style={[styles.title, isDark && styles.light]}>Türkiye'yi Fethet</Text>
             <Text style={[styles.meta, isDark && styles.muted]}>{nOwn}/{codes.length} il · bölge bitince rozet</Text>
+            {nOwn > 0 ? (
+                <Pressable
+                    onPress={function () {
+                        Alert.alert("Haritayı sıfırla", "Boyanan iller ve bölge rozetleri silinsin mi?", [
+                            { text: "Vazgeç", style: "cancel" },
+                            { text: "Sıfırla", style: "destructive", onPress: function () { StudentStore.resetConquer(); } }
+                        ]);
+                    }}
+                    style={{ alignSelf: "flex-start", marginTop: 10, backgroundColor: "#FFF1F2", borderRadius: 999, paddingVertical: 8, paddingHorizontal: 14 }}
+                >
+                    <Text style={{ color: "#9F1239", fontWeight: "800" }}>Sıfırla</Text>
+                </Pressable>
+            ) : null}
             {regions.map(function (r) {
                 return (
                     <View key={r.id} style={{ marginTop: 12 }}>
