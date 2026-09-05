@@ -161,7 +161,7 @@
         var recent = [];
         var rest = [];
         walkQs(kpssData, function (ders, konu, q) {
-            var blob = fold(stripHtml((q.question || "") + " " + (q.explanation || "") + " " + ((q.options || []).join(" "))));
+            var blob = fold(stripHtml((q.question || "") + " " + (q.explanation || "")));
             if (!blobHits(blob, needles)) return;
             var item = qToMcq(q);
             if (!item) return;
