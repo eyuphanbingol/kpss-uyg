@@ -893,7 +893,7 @@ window.guncel_1_sorulari = [
       "E) Kuantum Bilgisayar Enstitüsü"
     ],
     correctAnswerIndex: 1,
-    explanation: "Güncel notlarda Ulusal Yapay Zekâ Stratejisi öne çıkarılmaktadır."
+    explanation: "Türkiye'nin bu alandaki temel belgesi Ulusal Yapay Zekâ Stratejisi'dir."
   },
   {
     id: "70",
@@ -906,7 +906,7 @@ window.guncel_1_sorulari = [
       "E) Pakistan"
     ],
     correctAnswerIndex: 4,
-    explanation: "Pakistan, verilen güncel notlarda BRICS'in yeni üyeleri arasında yer almamaktadır."
+    explanation: "Pakistan, BRICS'in yeni üyeleri arasında yer almamaktadır."
   },
   {
     id: "71",
@@ -1035,7 +1035,7 @@ window.guncel_1_sorulari = [
       "E) Finlandiya en son AB'ye katılan ülkedir."
     ],
     correctAnswerIndex: 4,
-    explanation: "Finlandiya son katılan ülke değildir. Kaynak notlarda böyle bir bilgi yer almamaktadır."
+    explanation: "Finlandiya AB'ye en son katılan ülke değildir; en son katılan ülke Hırvatistan'dır (2013)."
   },
   {
     id: "81",

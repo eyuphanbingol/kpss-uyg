@@ -427,7 +427,7 @@ window.cografya_13_sorulari = [
             "E) Boylarının kısa olması"
         ],
         correctAnswerIndex: 1,
-        explanation: "Notlara göre Meriç ve Asi zaman zaman taşkınlara neden olmaktadır."
+        explanation: "Yurt dışında doğup Türkiye'de denize dökülen Meriç ve Asi, zaman zaman taşkınlara yol açar."
     },
     {
         id: 34,
@@ -613,7 +613,7 @@ window.cografya_13_sorulari = [
     },
     {
         id: 48,
-        question: "Notlara göre Türkiye'nin ikinci büyük tatlı su gölü aşağıdakilerden hangisidir?",
+        question: "Türkiye'nin ikinci büyük tatlı su gölü aşağıdakilerden hangisidir?",
         options: [
             "A) Eğirdir",
             "B) Kovada",
@@ -622,7 +622,7 @@ window.cografya_13_sorulari = [
             "E) Çıldır"
         ],
         correctAnswerIndex: 1,
-        explanation: "Notlarda ikinci büyük tatlı su gölü olarak Kovada Gölü verilmiştir."
+        explanation: "Türkiye'nin en büyük tatlı su gölü Beyşehir, ikinci büyüğü Kovada Gölü'dür."
     },
     {
         id: 49,
@@ -1662,7 +1662,7 @@ window.cografya_13_sorulari = [
             "E) Ters Lale"
         ],
         correctAnswerIndex: 3,
-        explanation: "Kızılçam yaygın bir orman ağacıdır. Diğerleri notlarda endemik türler arasında verilmiştir."
+        explanation: "Kızılçam Türkiye'de yaygın bir orman ağacıdır. Kazdağı köknarı, Datça hurması, sığla ve ters lale ise endemik türlerdir."
     },
     {
         id: 129,
@@ -1701,7 +1701,7 @@ window.cografya_13_sorulari = [
             "E) Ardıç"
         ],
         correctAnswerIndex: 2,
-        explanation: "Notlara göre Karadeniz'in klimaks türü ladindir."
+        explanation: "Karadeniz ormanlarının klimaks (doruk) türü ladindir."
     },
     {
         id: 132,
@@ -2000,7 +2000,7 @@ window.cografya_13_sorulari = [
             "E) Trabzon - Giresun"
         ],
         correctAnswerIndex: 2,
-        explanation: "Notlara göre antropojen bozkırlar Yozgat ve Ankara çevresinde görülür."
+        explanation: "Antropojen (insan eliyle oluşan) bozkırlar özellikle Yozgat ve Ankara çevresinde görülür."
     },
     {
         id: 155,

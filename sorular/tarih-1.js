@@ -5,7 +5,7 @@ window.tarih_1_sorulari = [
         question: "Türklerin ana yurdu olan Orta Asya'nın coğrafi sınırları dikkate alındığında, aşağıdakilerden hangisi bu sınırların belirlenmesinde rol oynayan doğal unsurlardan biri değildir?",
         options: ["A) Sibirya", "B) Kingan Dağları", "C) Hazar Denizi", "D) Himalayalar", "E) Ural Dağları"],
         correctAnswerIndex: 4,
-        explanation: "Notlara göre Türklerin ana yurdu Orta Asya'nın üstü Sibirya, sağı Kingan Dağları, solu Hazar Denizi, alt tarafı ise Himalayalar olarak belirlenmiştir. Ural Dağları bu sınırlandırmada doğrudan yer almaz."
+        explanation: "Türklerin ana yurdu Orta Asya; kuzeyde Sibirya, doğuda Kingan Dağları, batıda Hazar Denizi, güneyde Himalayalar ile sınırlanır. Ural Dağları bu çerçevede yer almaz."
     },
     {
         id: 2,
@@ -306,7 +306,7 @@ window.tarih_1_sorulari = [
                 question: "Attila, Batı Roma üzerine sefere çıkıp Roma kapılarına dayandığı halde, dönemin Papası ile görüştükten sonra şehri almaktan vazgeçmiştir. Aşağıdakilerden hangisi bu kararın nedenleri arasında gösterilemez?",
                 options: ["A) Papanın Attila'dan bizzat ricada bulunması", "B) Hristiyan dünyası için Roma'nın kutsal bir merkez sayılması", "C) Batı Roma'nın askeri gücünün zaten tamamen kırıldığına inanılması", "D) Attila'nın Doğu'daki Sasani Devleti üzerine büyük bir sefere çıkmak istemesi", "E) Hun ordusunda ani bir salgın hastalığın baş göstermesi"],
                 correctAnswerIndex: 4,
-                explanation: "Notlarda belirtilen 4 neden: Papanın ricası, Roma'nın kutsal sayılması, Batı Roma'nın gücünün kırıldığına inanılması ve Sasani seferine çıkılmak istenmesidir. Salgın hastalık bir gerekçe olarak yer almaz."
+                explanation: "Attila'nın Roma'yı almaktan vazgeçmesinde papanın ricası, Roma'nın kutsal görülmesi, Batı Roma'nın gücünün kırıldığına inanılması ve Sasani seferine yönelme isteği öne sürülür. Salgın hastalık bu gerekçeler arasında yoktur."
             },
             {
                 id: 45,
@@ -394,10 +394,10 @@ window.tarih_1_sorulari = [
             },
             {
                 id: 57,
-                question: "İlteber Almış Han döneminde İslamiyet'i kabul eden, tarihi kayıtlara ve notlara göre 'İlk Müslüman Türk Devleti' olma özelliğine sahip siyasi teşekkül hangisidir?",
+                question: "İlteber Almış Han döneminde İslamiyet'i kabul eden ve 'ilk Müslüman Türk devleti' olarak anılan siyasi teşekkül hangisidir?",
                 options: ["A) Karahanlılar", "B) Gazneliler", "C) İtil Bulgarları", "D) Tuna Bulgarları", "E) Hazarlar"],
                 correctAnswerIndex: 2,
-                explanation: "Notlardaki bilgi uyarınca, İslamiyet'i kabul eden ilk Türk devleti İtil Bulgarları'dır."
+                explanation: "İlteber Almış Han döneminde İslamiyet'i kabul eden İtil Bulgarları, ilk Müslüman Türk devleti olarak kabul edilir."
             },
             {
                 id: 58,

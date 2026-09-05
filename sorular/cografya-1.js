@@ -157,7 +157,7 @@ window.cografya_1_sorulari = [
         explanation: "Yaklaşık aynı enlem üzerinde bulunan merkezlerin güneş ışınlarını alma açısı yıl boyunca aynıdır. Sıcaklık farkının nedeni enlem değil; yükselti, denizellik and karasallıktır."
     },
     {
-        question: "Soru 27: Notlarınızda yer alan 'karstik yapı yaygındır' and 'sık sık deprem riski barındıran kırıklı yapı mevcuttur' ifadeleri sırasıyla hangi coğrafi bölgelerimizle eşleşmektedir?",
+        question: "Soru 27: 'Karstik yapı yaygındır' ve 'sık sık deprem riski barındıran kırıklı yapı mevcuttur' ifadeleri sırasıyla hangi coğrafi bölgelerimizle eşleşmektedir?",
         options: ["A) Akdeniz - Ege", "B) İç Anadolu - Doğu Anadolu", "C) Ege - Karadeniz", "D) Akdeniz - Marmara", "E) Güneydoğu Anadolu – Ege"],
         correctAnswerIndex: 0,
         explanation: "Karstik eriyebilen kayaç yapısı denilince akla ilk Akdeniz Bölgesi gelir. Horst-graben sistemine bağlı kırıklı yapı and deprem riski ise en çok Ege Bölgesi'ndedir."
@@ -169,7 +169,7 @@ window.cografya_1_sorulari = [
         explanation: "23 Eylül'den sonra sonbahar and kış dönemine girildiği için gündüzler gecelerden kısa olur (I doğru). Kış döneminde güneye gidildikçe gündüz uzar (II yanlış). Aralık ayına gidildiği için güneş açısı küçülür (III yanlış)."
     },
     {
-        question: "Soru 29: Türkiye'de maden çeşitliliğinin fazla olması yer yapısının çeşitliliği ile açıklanır.\n\nNotlarınızda yer alan maden kaynakları ile ilgili önemli vurgu aşağıdakilerden hangisinde doğru olarak verilmiştir?",
+        question: "Soru 29: Türkiye'de maden çeşitliliğinin fazla olması yer yapısının çeşitliliği ile açıklanır.\n\nMaden kaynakları ile ilgili aşağıdaki vurgulardan hangisi doğrudur?",
         options: ["A) Maden çeşitliliği azdır ancak rezervleri çok fazladır.", "B) Maden çeşitliliği fazladır ancak genel olarak rezervleri azdır.", "C) Maden çeşitliliği and rezerv miktarı sadece Doğu Anadolu'da fazladır.", "D) Tüm madenlerin rezervleri enlem etkisine göre dağılmıştır.", "E) Maden çeşitliliği sadece kırıklı fay hatlarının olduğu yerde bulunur."],
         correctAnswerIndex: 1,
         explanation: "Türkiye, jeolojik geçmişinden ötürü maden çeşitliliği bakımından çok zengindir ancak bu yatakların büyük bir kısmı küçük and parçalı yapıdadır, yani rezervleri genel olarak azdır."
@@ -223,7 +223,7 @@ window.cografya_1_sorulari = [
         explanation: "21 Aralık en uzun gecedir and bu andan itibaren gündüzler uzamaya başlar. Ancak eşitliğin sağlanacağı 21 Mart tarihine kadar gündüzler hala gecelerden daha kısadır."
     },
     {
-        question: "Soru 38: Notlarınızda yer alan 'kırıklı fay hatları yaygındır, geniş ovalar vardır' ifadesi doğrudan hangi coğrafi bölgemizin karakteristik özelliğidir?",
+        question: "Soru 38: 'Kırıklı fay hatları yaygındır, geniş ovalar vardır' ifadesi doğrudan hangi coğrafi bölgemizin karakteristik özelliğidir?",
         options: ["A) Doğu Anadolu Bölgesi", "B) Akdeniz Bölgesi", "C) Karadeniz Bölgesi", "D) Ege Bölgesi", "E) İç Anadolu Bölgesi"],
         correctAnswerIndex: 3,
         explanation: "Horst-graben (çöküntü-yükselti) sistemine bağlı kırıklı fay hatları and bu kırıklar arasında yer alan geniş çöküntü ovaları (graben ovaları) Ege Bölgesi'nin temel ayırt edici özelliğidir."
@@ -235,7 +235,7 @@ window.cografya_1_sorulari = [
         explanation: "40 dakika / 4 dakika = 10 boylam fark olmalı. Saati 'geri' dendiği için batıya gidilmelidir. 33° Doğu - 10° = 23° Doğu boylamı olur (Türkiye'nin en batı uçları)."
     },
     {
-        question: "Soru 40: Türkiye'nin yeraltı kaynakları ile ilgili notlarınızda kritik bir tespit yer almaktadır. Aşağıdakilerden hangisi Türkiye'nin madenleri ile ilgili bu tespiti tam olarak yansıtmaktadır?",
+        question: "Soru 40: Aşağıdakilerden hangisi Türkiye'nin madenleri ile ilgili doğru tespittir?",
         options: ["A) Rezervleri çok fazladır ancak çeşitlilik azdır.", "B) Maden çeşitliliği fazladır ancak genel olarak rezervleri azdır.", "C) Hem maden çeşitliliği hem de rezerv miktarı dünyada ilktir.", "D) Madenlerin tamamı Akdeniz bölgesinde toplanmıştır.", "E) Maden çeşitliliği sadece volkanik arazilerde görülür."],
         correctAnswerIndex: 1,
         explanation: "Türkiye jeolojik geçmişinin çeşitliliğinden ötürü maden çeşitliliği bakımından çok zengindir ancak bu yatakların büyük bir kısmı küçük and parçalı yapıda olduğundan rezervleri genel olarak azdır."
@@ -253,10 +253,10 @@ window.cografya_1_sorulari = [
         explanation: "Karadeniz Dağları'nın kuzey yamaçları doğrudan denize baktığı için yüksek neme sahiptir. Nem, havanın kışın aşırı soğumasını engeller and burayı bakı yönü olan güney yamaçlardan daha ılık yapar (Denizellik-nemlilik)."
     },
     {
-        question: "Soru 43: X Bölgesi: Alçaktır and nüfusu kalabalıktır.\nY Bölgesi: Yüksek and volkaniktir.\n\nNotlarınızda yer alan bu özelliklere göre, sırasıyla X and Y bölgeleri aşağıdakilerden hangisinde doğru verilmiştir?",
+        question: "Soru 43: X Bölgesi: Alçaktır and nüfusu kalabalıktır.\nY Bölgesi: Yüksek and volkaniktir.\n\nBu özelliklere göre sırasıyla X and Y bölgeleri aşağıdakilerden hangisinde doğru verilmiştir?",
         options: ["A) Ege Bölgesi - İç Anadolu Bölgesi", "B) Marmara Bölgesi - Doğu Anadolu Bölgesi", "C) Akdeniz Bölgesi - Güneydoğu Anadolu Bölgesi", "D) Karadeniz Bölgesi - Marmara Bölgesi", "E) İç Anadolu Bölgesi - Ege Bölgesi"],
         correctAnswerIndex: 1,
-        explanation: "Notlarda ortalama yükseltisi en az (alçak) and nüfusu en kalabalık yer olarak Marmara Bölgesi; en yüksek and volkanik faaliyetlerin/arazilerin yaygın olduğu yer olarak Doğu Anadolu Bölgesi verilmiştir."
+        explanation: "Ortalama yükseltisi en az ve nüfusu en kalabalık bölge Marmara'dır. En yüksek ve volkanik arazilerin yaygın olduğu bölge Doğu Anadolu'dur."
     },
     {
         question: "Soru 44: Türkiye’den kış döneminde (23 Eylül - 21 Mart arası) kuzeyden güneye doğru gidildikçe gündüz süreleri uzamaktadır.\n\nBuna göre, 21 Aralık tarihinde aşağıdaki şehirlerin hangisinde yaşanan gündüz süresi diğerlerine göre daha uzundur?",
@@ -286,7 +286,7 @@ window.cografya_1_sorulari = [
         question: "Soru 48: Türkiye'de karstik arazilerin (kolay eriyebilen kalker, jips gibi kayaçlar) en yaygın olduğu bölge aşağıdakilerden hangisidir?",
         options: ["A) Ege Bölgesi", "B) Akdeniz Bölgesi", "C) Marmara Bölgesi", "D) Karadeniz Bölgesi", "E) Doğu Anadolu Bölgesi"],
         correctAnswerIndex: 1,
-        explanation: "Notlarda da 'Akdeniz Bölgesi -> karstik yapı yaygındır' şeklinde vurgulanan bu durum, bölgenin litolojik (taş/yer yapısı) yapısından kaynaklanan göreceli bir konum özelliğidir."
+        explanation: "Karstik yapı en yaygın Akdeniz Bölgesi'ndedir; bu, bölgenin kalkerli kayaç yapısından kaynaklanır."
     },
     {
         question: "Soru 49: Türkiye coğrafyasında 'Karasallık (Nem Azlığı)' durumu bir merkezin iklim karakterini tamamen değiştirir.\n\nBuna göre, aşağıdakilerden hangisi karasal bir merkezin genel özellikleri arasında yer almaz?",

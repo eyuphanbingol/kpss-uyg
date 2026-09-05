@@ -208,7 +208,7 @@ window.cografya_14_sorulari = [
             "E) Meriç Nehri"
         ],
         correctAnswerIndex: 3,
-        explanation: "Notlarda taşkınlarıyla bilinen akarsular Meriç, Asi ve Gediz olarak verilmiştir."
+        explanation: "Taşkınlarıyla öne çıkan akarsular Meriç, Asi ve Gediz'dir. Zap Suyu bu grupta yer almaz."
     },    {
         id: 16,
         question: "Aşağıdakilerden hangisi Türkiye'de çığ riskinin en yüksek olduğu illerden biri değildir?",
@@ -304,7 +304,7 @@ window.cografya_14_sorulari = [
             "E) Salda"
         ],
         correctAnswerIndex: 4,
-        explanation: "Verilen notlarda kirli göller arasında Beyşehir, Manyas, Sapanca, İznik ve Van Gölü yer almaktadır."
+        explanation: "Kirli göller arasında Beyşehir, Manyas, Sapanca, İznik ve Van Gölü sayılır. Salda Gölü bu listede yoktur."
     },
 
     {
@@ -332,7 +332,7 @@ window.cografya_14_sorulari = [
             "E) Ceyhan"
         ],
         correctAnswerIndex: 2,
-        explanation: "Notlara göre Türkiye'nin en temiz akarsuyu Zap Suyu'dur."
+        explanation: "Türkiye'nin en temiz akarsuyu Zap Suyu'dur."
     },
 
     {
@@ -428,7 +428,7 @@ window.cografya_14_sorulari = [
             "E) Küre Dağları"
         ],
         correctAnswerIndex: 1,
-        explanation: "Verilen notlara göre Türkiye'nin tabiatı koruma alanı Hacıosman Ormanı'dır."
+        explanation: "Türkiye'nin tabiatı koruma alanı olarak öne çıkan yer Hacıosman Ormanı'dır."
     },
 
     {
@@ -512,7 +512,7 @@ window.cografya_14_sorulari = [
             "E) Abant Gölü"
         ],
         correctAnswerIndex: 4,
-        explanation: "Verilen notlara göre Abant Gölü Ramsar alanları arasında yer almamaktadır."
+        explanation: "Manyas, Sultan Sazlığı, Göksu Deltası ve Uluabat Ramsar alanıdır. Abant Gölü bu kapsamda değildir."
     },
 
     {

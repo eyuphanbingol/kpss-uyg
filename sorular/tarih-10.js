@@ -921,7 +921,7 @@ window.tarih_10_sorulari = [
         "E) Berlin Antlaşması'nın sonucudur."
     ],
     correctAnswerIndex: 2,
-    explanation: "Notlarda belirtildiği gibi Tanzimat Fermanı'nın ilanında Avrupalı devletlerin doğrudan baskısı etkili olmamıştır."
+    explanation: "Tanzimat Fermanı, Avrupalı devletlerin doğrudan baskısı olmadan ilan edilmiştir."
 },
 {
     question: "Soru 78: Tanzimat Fermanı aşağıdaki padişahlardan hangisinin döneminde ilan edilmiştir?",
@@ -1125,7 +1125,7 @@ window.tarih_10_sorulari = [
         "E) Redif"
     ],
     correctAnswerIndex: 1,
-    explanation: "Notlarına göre Islahat Fermanı'nda iltizam usulünün kaldırılması öngörülmüştür."
+    explanation: "Islahat Fermanı'nda iltizam usulünün kaldırılması öngörülmüştür."
 },
 {
     question: "Soru 95: Islahat Fermanı'na göre vergi konusunda aşağıdakilerden hangisi amaçlanmıştır?",
@@ -1641,7 +1641,7 @@ window.tarih_10_sorulari = [
         "E) Halifeliği kaldırdığı için"
     ],
     correctAnswerIndex: 1,
-    explanation: "Notlarında belirtildiği gibi Sultan Abdülaziz meşrutiyeti ilan etmediği için tahttan indirilmiştir."
+    explanation: "Sultan Abdülaziz, meşrutiyeti ilan etmediği gerekçesiyle tahttan indirilmiştir."
 },
 {
     question: "Soru 138: Osmanlı tarihinde yenilik yapmadığı gerekçesiyle tahttan indirilen ilk padişah aşağıdakilerden hangisidir?",
@@ -2205,7 +2205,7 @@ window.tarih_10_sorulari = [
         "E) Darüşşafaka"
     ],
     correctAnswerIndex: 1,
-    explanation: "Notlarınıza göre Osmanlı Devleti'nde ilk müze Asar-ı Atika adıyla açılmıştır."
+    explanation: "Osmanlı Devleti'nde ilk müze Asar-ı Atika adıyla açılmıştır."
 },
 {
     question: "Soru 185: Osmanlı Devleti'nde ilk müzenin kurulmasında önemli rol oynayan kişi aşağıdakilerden hangisidir?",
@@ -2265,7 +2265,7 @@ window.tarih_10_sorulari = [
         "E) Kaiser Friedrich"
     ],
     correctAnswerIndex: 1,
-    explanation: "Notlarınıza göre 3B Projesi II. Wilhelm tarafından başlatılmıştır."
+    explanation: "3B Projesi, Alman İmparatoru II. Wilhelm tarafından başlatılmıştır."
 },
 {
     question: "Soru 190: Aşağıdaki yapılardan hangisi II. Abdülhamit döneminde inşa edilmiştir?",
@@ -2565,7 +2565,7 @@ window.tarih_10_sorulari = [
         "E) Ali Fethi Bey"
     ],
     correctAnswerIndex: 2,
-    explanation: "Notlarınıza göre Hareket Ordusu'nun adını ve beyannamesini Mustafa Kemal hazırlamıştır."
+    explanation: "Hareket Ordusu'nun adını ve beyannamesini Mustafa Kemal hazırlamıştır."
 },
 {
     question: "Soru 215: Osmanlı tarihinde rejimi değiştirmeye yönelik ilk ve tek isyan aşağıdakilerden hangisidir?",
@@ -2856,7 +2856,7 @@ window.tarih_10_sorulari = [
     explanation: "Osmanlıcılık doğrultusunda Tanzimat, Islahat ve I. Meşrutiyet ilan edilmiştir."
 },
 {
-    question: "Soru 239: Notlara göre Osmanlıcılık fikri ilk olarak hangi padişah döneminde başlamıştır?",
+    question: "Soru 239: Osmanlıcılık fikri ilk olarak hangi padişah döneminde başlamıştır?",
     options: [
         "A) III. Selim",
         "B) II. Mahmut",
@@ -2865,7 +2865,7 @@ window.tarih_10_sorulari = [
         "E) II. Abdülhamit"
     ],
     correctAnswerIndex: 1,
-    explanation: "Notlarınıza göre Osmanlıcılık fikri II. Mahmut döneminde başlamıştır."
+    explanation: "Osmanlıcılık fikri II. Mahmut döneminde başlamıştır."
 },
 {
     question: "Soru 240: Osmanlıcılık düşüncesinin uygulanamayacağı ilk kez hangi savaş sonrasında anlaşılmıştır?",
@@ -2928,7 +2928,7 @@ window.tarih_10_sorulari = [
     explanation: "Ali Suavi, Osmanlıcılık düşüncesinin önemli temsilcilerindendir."
 },
 {
-    question: "Soru 245: Notlarınıza göre Osmanlıcılık düşüncesinin önemini tamamen yitirdiği süreçte öne çıkan devlet aşağıdakilerden hangisidir?",
+    question: "Soru 245: Osmanlıcılık düşüncesinin önemini yitirdiği süreçte öne çıkan devlet aşağıdakilerden hangisidir?",
     options: [
         "A) Sırbistan",
         "B) Bulgaristan",
@@ -2961,7 +2961,7 @@ window.tarih_10_sorulari = [
         "E) İngiltere"
     ],
     correctAnswerIndex: 2,
-    explanation: "Notlarınıza göre Türkçülük ilk olarak Rusya'da ortaya çıkmıştır."
+    explanation: "Türkçülük düşüncesi ilk olarak Rusya'da ortaya çıkmıştır."
 },
 {
     question: "Soru 248: Türkçülük düşüncesinin temel amacı aşağıdakilerden hangisidir?",
@@ -3012,7 +3012,7 @@ window.tarih_10_sorulari = [
     explanation: "Batıcılar devletin kurtuluşunun Batılılaşmada olduğunu savunmuşlardır."
 },
 {
-    question: "Soru 252: Notlarınıza göre Batıcılık düşüncesi hangi dönemden itibaren görülmeye başlanmıştır?",
+    question: "Soru 252: Batıcılık düşüncesi hangi dönemden itibaren görülmeye başlanmıştır?",
     options: [
         "A) Kuruluş",
         "B) Yükselme",
@@ -3093,7 +3093,7 @@ window.tarih_10_sorulari = [
         "E) Kırım Savaşı"
     ],
     correctAnswerIndex: 1,
-    explanation: "Notlarınıza göre İslamcılık ilk darbeyi Arnavutluk'un kaybıyla almıştır."
+    explanation: "İslamcılık düşüncesi ilk ciddi darbeyi Arnavutluk'un elden çıkmasıyla almıştır."
 },
 {
     question: "Soru 259: İslamcılık düşüncesinin önemini tamamen yitirmesinde aşağıdaki gelişmelerden hangisi etkili olmuştur?",

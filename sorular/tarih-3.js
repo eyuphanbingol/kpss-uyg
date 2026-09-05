@@ -635,7 +635,7 @@ window.tarih_3_sorulari = [
       "E) İlk kervansaray – Sultan Han (Aksaray)"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Ders notlarında açıklandığı üzere, ASD döneminde inşa edilen 'ilk han ve kervansaray' yapısı, Aksaray-Konya yolu üzerindeki ünlü Alay Han'dır. Sultan Han seçeneği listedeki ilkler arasında değildir."
+    "explanation": "Anadolu Selçuklu döneminde ilk han ve kervansaray, Aksaray–Konya yolu üzerindeki Alay Han'dır. Sultan Han bu 'ilkler' listesinde yer almaz."
   },
   {
     "id": "50",

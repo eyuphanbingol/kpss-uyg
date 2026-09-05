@@ -388,7 +388,7 @@ window.tarih_8_sorulari = [
             "E) Şinasi"
         ],
         correctAnswerIndex: 2,
-        explanation: "Notlara göre 'Lale Devri' ifadesini ilk kullanan Yahya Kemal Beyatlı'dır."
+        explanation: "'Lale Devri' adını ilk kez Yahya Kemal Beyatlı kullanmıştır."
     },
     {
         id: 31,
