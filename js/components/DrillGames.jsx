@@ -198,21 +198,31 @@
         var qNow = quiz && quiz.items[quiz.i];
 
         return (
-            <div className="map-play-root conquer-root">
+            <div className={"map-play-root conquer-root" + (quiz ? " conquer-quiz" : "")}>
                 <header className="map-play-top">
                     <div className="map-play-bar">
-                        <button type="button" className="back-btn" onClick={props.onBack}><span>←</span> Alıştırmalar</button>
-                        <div className="conquer-colors">
-                            {COLORS.map(function (c) {
-                                return (
-                                    <button key={c} type="button" className={"conquer-swatch" + (color === c ? " on" : "")}
-                                        style={{ background: c }} aria-label="renk"
-                                        onClick={function () { if (store()) store().setConquerColor(c); }} />
-                                );
-                            })}
-                        </div>
+                        <button type="button" className="back-btn" onClick={quiz ? function () { setQuiz(null); setPick(null); } : props.onBack}>
+                            <span>←</span> {quiz ? "Harita" : "Alıştırmalar"}
+                        </button>
+                        {!quiz ? (
+                            <div className="conquer-colors">
+                                {COLORS.map(function (c) {
+                                    return (
+                                        <button key={c} type="button" className={"conquer-swatch" + (color === c ? " on" : "")}
+                                            style={{ background: c }} aria-label="renk"
+                                            onClick={function () { if (store()) store().setConquerColor(c); }} />
+                                    );
+                                })}
+                            </div>
+                        ) : (
+                            <span className="text-sm font-bold">{quiz.i + 1}/3</span>
+                        )}
                     </div>
-                    <p className="map-play-kicker">Türkiye'yi Fethet · {nOwn}/{nAll} il</p>
+                    {quiz ? (
+                        <p className="map-play-kicker">3 doğru üst üste · ili fethet</p>
+                    ) : (
+                        <p className="map-play-kicker">Türkiye'yi Fethet · {nOwn}/{nAll} il · bir ile dokun</p>
+                    )}
                     <div className="conquer-regions">
                         {progress.map(function (r) {
                             return (
@@ -238,24 +248,33 @@
                 {toast ? <div className="conquer-toast">{toast}</div> : null}
                 {quiz ? (
                     <div className="conquer-sheet">
-                        <p className="conquer-il">{engine ? engine.nameOf(quiz.code) : quiz.code} · 3'te 3 şart</p>
+                        <p className="conquer-il">{engine ? engine.nameOf(quiz.code) : quiz.code}</p>
+                        <p className="conquer-sub">{engine ? engine.regionTitle(quiz.code) : ""} · 3'te 3 şart</p>
+                        <div className="conquer-steps" aria-hidden="true">
+                            {[0, 1, 2].map(function (s) {
+                                var cls = "conquer-step";
+                                if (quiz.fail && s === quiz.i) cls += " bad";
+                                else if (s < quiz.i || (s === quiz.i && quiz.ok)) cls += " on";
+                                else if (s === quiz.i) cls += " on";
+                                return <span key={s} className={cls} />;
+                            })}
+                        </div>
                         {quiz.fail ? (
                             <div>
-                                <p className="text-rose-600 font-bold mb-3">İl fethedilemedi. Üç soruyu da art arda doğru bilmelisin.</p>
-                                <div className="flex gap-2">
-                                    <button type="button" className="btn-primary text-white px-4 py-2 rounded-full" onClick={retry}>Tekrar dene</button>
-                                    <button type="button" className="px-4 py-2 rounded-full border" onClick={function () { setQuiz(null); setPick(null); }}>Kapat</button>
+                                <p className="text-rose-600 font-bold mb-3">Bu il alınamadı. Üç soruyu art arda bilmen gerek.</p>
+                                <div className="flex gap-2 flex-wrap">
+                                    <button type="button" className="btn-primary text-white px-4 py-2.5 rounded-full" onClick={retry}>Tekrar dene</button>
+                                    <button type="button" className="px-4 py-2.5 rounded-full border" onClick={function () { setQuiz(null); setPick(null); }}>Haritaya dön</button>
                                 </div>
                             </div>
                         ) : qNow ? (
                             <div>
-                                <p className="text-xs text-stone-500 mb-1">Soru {quiz.i + 1}/3</p>
-                                <p className="font-bold mb-3">{qNow.question}</p>
+                                <p className="font-bold text-base mb-3 leading-snug">{qNow.question}</p>
                                 <div className="grid gap-2">
                                     {(qNow.options || []).map(function (opt, i) {
                                         var isP = quiz.picked === opt;
                                         var isA = String(opt) === String(qNow.correct);
-                                        var cls = "w-full text-left px-4 py-3 rounded-2xl border font-medium ";
+                                        var cls = "w-full text-left px-4 py-3.5 rounded-2xl border font-medium ";
                                         if (!quiz.picked) cls += "bg-white dark:bg-stone-800 border-stone-200";
                                         else if (isA) cls += "bg-emerald-50 border-emerald-400";
                                         else if (isP) cls += "bg-rose-50 border-rose-400";
@@ -267,8 +286,8 @@
                                     })}
                                 </div>
                                 {quiz.picked ? (
-                                    <button type="button" className="btn-primary text-white px-5 py-2.5 rounded-full font-semibold mt-3"
-                                        onClick={nextQuiz}>{quiz.ok ? (quiz.i + 1 >= quiz.items.length ? "Fethettin" : "Sonraki") : "Sonuç"}</button>
+                                    <button type="button" className="btn-primary text-white w-full px-5 py-3 rounded-2xl font-semibold mt-4"
+                                        onClick={nextQuiz}>{quiz.ok ? (quiz.i + 1 >= quiz.items.length ? "İli fethet" : "Sonraki soru") : "Devam"}</button>
                                 ) : null}
                             </div>
                         ) : null}
@@ -283,7 +302,7 @@
         var games = (props.student && props.student.games) || {};
         var deck = useMemo(function () { return engine ? engine.tabuDeck(12) : []; }, [props.seed]);
         var [i, setI] = useState(0);
-        var [open, setOpen] = useState(0);
+        var [open, setOpen] = useState(1);
         var [picked, setPicked] = useState(null);
         var [score, setScore] = useState(0);
         var [done, setDone] = useState(false);
@@ -309,7 +328,7 @@
                 return;
             }
             setI(i + 1);
-            setOpen(0);
+            setOpen(1);
             setPicked(null);
         }
 
@@ -337,7 +356,7 @@
                         <button type="button" className="back-btn" onClick={props.onBack}><span>←</span> Alıştırmalar</button>
                         <span className="text-sm font-bold">{score} puan · {i + 1}/{deck.length}</span>
                     </div>
-                    <p className="map-play-kicker">Tabu · Yasaklı kelime</p>
+                    <p className="map-play-kicker">Tabu · ilk ipucu açık · az ek ipucu = çok puan</p>
                     <h2 className="map-play-prompt">Bu hangi kavram?</h2>
                 </header>
                 <div className="tabu-body">
@@ -347,22 +366,23 @@
                             var shown = ci < open;
                             return (
                                 <button key={ci} type="button" disabled={!!picked || shown || (ci !== open)}
-                                    className={"tabu-card" + (shown ? " open" : "") + (ci === open && !picked ? " next" : "")}
+                                    className={"tabu-card" + (ci === 0 ? " lead" : "") + (shown ? " open" : "") + (ci === open && !picked ? " next" : "")}
                                     onClick={reveal}>
-                                    <span className="tabu-n">İpucu {ci + 1}</span>
-                                    <span>{shown ? cl : (ci === open ? "Aç" : "Kilitli")}</span>
+                                    <span className="tabu-n">İpucu {ci + 1}{ci === 0 ? " · açık" : ""}</span>
+                                    <span>{shown ? cl : (ci === open ? "Ek ipucu aç" : "Kilitli")}</span>
                                 </button>
                             );
                         })}
                     </div>
-                    <p className="text-xs text-stone-500 mb-2">
-                        {open === 0 ? "Hiç ipucu açmadan 5 puan" : open === 1 ? "1 ipucu · 3 puan" : open === 2 ? "2 ipucu · 2 puan" : "3 ipucu · 1 puan"}
-                    </p>
+                    <div className="tabu-hint">
+                        <span>{open <= 1 ? "Şu an 5 puan" : open === 2 ? "2 ipucu · 3 puan" : "3 ipucu · 1 puan"}</span>
+                        <span className="tabu-pts">{engine ? engine.tabuPoints(open) : 5} puan</span>
+                    </div>
                     <div className="grid gap-2">
                         {(card && card.choices || []).map(function (opt, oi) {
                             var isP = picked === opt;
                             var isA = card && String(opt) === String(card.answer);
-                            var cls = "w-full text-left px-4 py-3 rounded-2xl border font-medium ";
+                            var cls = "w-full text-left px-4 py-3.5 rounded-2xl border font-medium ";
                             if (!picked) cls += "bg-white dark:bg-stone-800 border-stone-200";
                             else if (isA) cls += "bg-emerald-50 border-emerald-400";
                             else if (isP) cls += "bg-rose-50 border-rose-400";
@@ -374,7 +394,7 @@
                         })}
                     </div>
                     {picked ? (
-                        <button type="button" className="btn-primary text-white px-5 py-2.5 rounded-full font-semibold mt-4" onClick={next}>
+                        <button type="button" className="btn-primary text-white w-full px-5 py-3 rounded-2xl font-semibold mt-4" onClick={next}>
                             {i + 1 >= deck.length ? "Bitir" : "Sonraki kavram"}
                         </button>
                     ) : null}
@@ -429,8 +449,9 @@
         }
 
         function choose(opt) {
-            if (over || !deck[i]) return;
-            var ok = String(opt) === String(deck[i].a);
+            if (over || !deck.length) return;
+            var cur = deck[i % deck.length];
+            var ok = String(opt) === String(cur.a);
             if (ok) {
                 live.current.score += 1;
                 setScore(live.current.score);
@@ -473,18 +494,19 @@
                     </div>
                     <p className="map-play-kicker">Son 10 saniye · doğru +2 · yanlış −3</p>
                     <div className="panic-timer">{sec.toFixed(1)}</div>
+                    <div className="panic-bar"><span style={{ width: Math.min(100, (ms / 20000) * 100) + "%" }} /></div>
                 </header>
-                <div className="tabu-body">
+                <div className="panic-body">
                     <h2 className="panic-q">{q ? q.q : ""}</h2>
-                    <div className="grid gap-2">
+                    <div className="panic-choices">
                         {(q && q.choices || []).map(function (opt, oi) {
                             return (
-                                <button key={oi} type="button" className="w-full text-left px-4 py-4 rounded-2xl border font-bold bg-white dark:bg-stone-800"
+                                <button key={oi} type="button" className="text-left px-3 py-3 rounded-2xl border font-bold bg-white dark:bg-stone-800"
                                     onClick={function () { choose(opt); }}>{opt}</button>
                             );
                         })}
                     </div>
-                    <p className="text-xs text-stone-400 mt-4">Rekor: {games.panicBest || 0}</p>
+                    <p className="text-xs text-stone-400 mt-4">Bu tur {score} doğru · rekor {games.panicBest || 0}</p>
                 </div>
             </div>
         );

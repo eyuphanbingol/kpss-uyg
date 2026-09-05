@@ -184,7 +184,7 @@
     }
 
     function tabuPoints(cluesUsed) {
-        var table = bank().TABU_SCORE || [5, 3, 2, 1];
+        var table = bank().TABU_SCORE || [5, 5, 3, 1];
         var i = Math.max(0, Math.min(3, cluesUsed | 0));
         return table[i] || 1;
     }

@@ -261,6 +261,6 @@
         SPECIAL: SPECIAL,
         TABU: TABU,
         PANIC: PANIC,
-        TABU_SCORE: [5, 3, 2, 1]
+        TABU_SCORE: [5, 5, 3, 1]
     };
 })(typeof window !== "undefined" ? window : globalThis);

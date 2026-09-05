@@ -113,7 +113,7 @@ export function TabuPlayScreen({ navigation }) {
     var iState = useState(0);
     var i = iState[0];
     var setI = iState[1];
-    var openState = useState(0);
+    var openState = useState(1);
     var open = openState[0];
     var setOpen = openState[1];
     var pickedState = useState(null);
@@ -129,7 +129,7 @@ export function TabuPlayScreen({ navigation }) {
     var best = ((app.student && app.student.games) || {}).tabuBest || 0;
 
     useEffect(function () {
-        setI(0); setOpen(0); setPicked(null); setScore(0); setDone(false);
+        setI(0); setOpen(1); setPicked(null); setScore(0); setDone(false);
     }, [seed]);
 
     function choose(opt) {
@@ -145,7 +145,7 @@ export function TabuPlayScreen({ navigation }) {
             setDone(true);
             return;
         }
-        setI(i + 1); setOpen(0); setPicked(null);
+        setI(i + 1); setOpen(1); setPicked(null);
     }
 
     if (done) {
@@ -168,23 +168,24 @@ export function TabuPlayScreen({ navigation }) {
             <Pressable onPress={function () { navigation.goBack(); }}>
                 <Text style={[styles.back, isDark && styles.muted]}>← Alıştırmalar</Text>
             </Pressable>
-            <Text style={[styles.kicker, isDark && styles.muted]}>Tabu · {score} puan · {i + 1}/{deck.length}</Text>
+            <Text style={[styles.kicker, isDark && styles.muted]}>Tabu · {score} puan · {i + 1}/{deck.length} · ilk ipucu açık</Text>
             <Text style={[styles.title, isDark && styles.light]}>Bu hangi kavram?</Text>
             <Card style={[styles.mystery, isDark && styles.cardDark]}>
                 <Text style={styles.mysteryText}>{picked ? card.answer : "?"}</Text>
             </Card>
-            <View style={styles.clueRow}>
+            <View style={styles.clueWrap}>
                 {(card && card.clues || []).map(function (cl, ci) {
                     var shown = ci < open;
                     return (
                         <Pressable key={ci} disabled={!!picked || shown || ci !== open} onPress={function () { setOpen(open + 1); }}
-                            style={[styles.clue, shown && styles.clueOpen]}>
-                            <Text style={styles.meta}>İpucu {ci + 1}</Text>
-                            <Text style={[styles.choiceText, isDark && styles.light]}>{shown ? cl : (ci === open ? "Aç" : "Kilit")}</Text>
+                            style={[styles.clue, ci === 0 && styles.clueLead, shown && styles.clueOpen]}>
+                            <Text style={styles.meta}>İpucu {ci + 1}{ci === 0 ? " · açık" : ""}</Text>
+                            <Text style={[styles.choiceText, isDark && styles.light]}>{shown ? cl : (ci === open ? "Ek ipucu aç" : "Kilit")}</Text>
                         </Pressable>
                     );
                 })}
             </View>
+            <Text style={[styles.meta, { marginBottom: 8 }]}>{GamesEngine.tabuPoints(open)} puan</Text>
             {(card && card.choices || []).map(function (opt, oi) {
                 var marked = picked && (String(opt) === String(card.answer) ? styles.ok : (picked === opt ? styles.no : null));
                 return (
@@ -318,10 +319,11 @@ var styles = StyleSheet.create({
     rowCard: { marginTop: 6, paddingVertical: 12 },
     result: { alignItems: "center", paddingVertical: 28 },
     pct: { fontSize: 48, fontWeight: "800", color: colors.navy },
-    mystery: { alignItems: "center", paddingVertical: 28, backgroundColor: "#111", marginVertical: 10 },
-    mysteryText: { color: "#F5E9C0", fontSize: 28, fontWeight: "900" },
-    clueRow: { flexDirection: "row", gap: 8, marginBottom: 8 },
-    clue: { flex: 1, borderWidth: 1, borderStyle: "dashed", borderColor: "#D6D3D1", borderRadius: 12, padding: 10, minHeight: 72 },
+    mystery: { alignItems: "center", paddingVertical: 20, backgroundColor: "#111", marginVertical: 10 },
+    mysteryText: { color: "#F5E9C0", fontSize: 24, fontWeight: "900" },
+    clueWrap: { flexDirection: "row", flexWrap: "wrap", gap: 8, marginBottom: 8 },
+    clue: { width: "47%", flexGrow: 1, borderWidth: 1, borderStyle: "dashed", borderColor: "#D6D3D1", borderRadius: 12, padding: 10, minHeight: 72 },
+    clueLead: { width: "100%" },
     clueOpen: { backgroundColor: "#ECFDF5", borderStyle: "solid", borderColor: "#34D399" },
     timer: { fontSize: 52, fontWeight: "900", color: colors.navy, marginVertical: 6 }
 });
