@@ -988,8 +988,13 @@ function main() {
         { file: "maden_demir.png", title: "DEMİR", iller: ["Sivas", "Malatya", "Karabük", "Zonguldak", "Hatay"],
             yazilar: ["Divriği", "Hekimhan", "Karabük", "Ereğli", "İskenderun"],
             facts: ["Çıkarım: Divriği, Hekimhan, Hasançelebi", "Karabük–Ereğli: taşkömürüne yakınlık", "İskenderun: ulaşım + ithal kömür, su kenarı"] },
-        { file: "maden_bakir.png", title: "BAKIR", iller: ["Kastamonu", "Artvin", "Rize", "Samsun"],
-            yazilar: ["Küre", "Murgul", "Çayeli", "Samsun (işleme)"],
+        { file: "maden_bakir.png", title: "BAKIR", urun: "Bakır",
+            noktalar: [
+                { il: "Kastamonu", ilce: "Küre", ldx: -34, ldy: 8 },
+                { il: "Samsun", ilce: "İşleme", ldx: 8, ldy: 30 },
+                { il: "Rize", ilce: "Çayeli", ldx: -34, ldy: 8 },
+                { il: "Artvin", ilce: "Murgul", ldx: 32, ldy: 8 }
+            ],
             facts: ["En çok Karadeniz’de çıkarılır: Küre, Murgul, Çayeli", "İşleme: Samsun (ulaşım)"] },
         { file: "maden_boksit.png", title: "BOKSİT (ALÜMİNYUM)", iller: ["Antalya", "Konya"],
             yazilar: ["Akseki", "Seydişehir"],
