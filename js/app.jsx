@@ -13,9 +13,17 @@ function stripChoicePrefix(opt) {
 }
 
 function SoruGorsel(soru) {
-    if (!soru || !soru.img) return null;
+    if (!soru) return null;
+    var list = soru.imgs || (soru.img ? (Array.isArray(soru.img) ? soru.img : [soru.img]) : []);
+    if (!list.length) return null;
     return (
-        <img src={soru.img} alt={soru.imgAlt || "Soru görseli"} className="mt-4 w-full h-auto rounded-2xl object-contain bg-[#F6F1E4] border border-stone-200 dark:border-stone-700" />
+        <div>
+            {list.map(function (src, i) {
+                return (
+                    <img key={src + i} src={src} alt={soru.imgAlt || "Soru görseli"} className="mt-4 w-full h-auto rounded-2xl object-contain bg-[#F6F1E4] border border-stone-200 dark:border-stone-700" />
+                );
+            })}
+        </div>
     );
 }
 

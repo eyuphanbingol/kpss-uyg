@@ -1326,6 +1326,120 @@ function main() {
         console.log("ok", opts.file);
     }
 
+    function faultMap(opts) {
+        if (!wantFile(opts.file)) return;
+        var extra = landPaths(provs, opts.hi || []);
+        (opts.lines || []).forEach(function (ln) {
+            var pts = (ln.iller || []).map(xyOf).filter(Boolean);
+            if (pts.length < 2) return;
+            extra += '<polyline points="' + pts.map(function (p) { return p.x.toFixed(1) + "," + p.y.toFixed(1); }).join(" ") +
+                '" fill="none" stroke="' + (ln.color || C.rose) + '" stroke-width="' + (ln.width || 8) + '" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>';
+            var mid = pts[Math.floor(pts.length / 2)];
+            extra += '<text x="' + (mid.x + (ln.ldx || 12)).toFixed(1) + '" y="' + (mid.y + (ln.ldy || -10)).toFixed(1) +
+                '" font-size="22" font-weight="800" fill="' + (ln.color || C.rose) + '" stroke="#F6F1E4" stroke-width="4" paint-order="stroke" font-family="Segoe UI, sans-serif">' +
+                esc(ln.label) + "</text>";
+        });
+        (opts.iller || []).forEach(function (row, i) {
+            var p = xyOf(row);
+            if (!p) return;
+            extra += pin(p.x, p.y, row.n || String(i + 1));
+            extra += '<text x="' + (p.x + (row.ldx != null ? row.ldx : 18)).toFixed(1) + '" y="' + (p.y + (row.ldy != null ? row.ldy : 5)).toFixed(1) +
+                '" font-size="15" font-weight="800" fill="' + C.navy + '" font-family="Segoe UI, sans-serif">' + esc(p.label) + "</text>";
+        });
+        var factsY = 78 + MAP_BLOCK_H + 16;
+        var factsBox = wrapFacts(opts.facts || [], 16, factsY, CANVAS_W - 32, 14);
+        writePng(path.join(IMG, opts.file), frame(factsY + factsBox.h + 28, opts.head, opts.kicker, mapBlock(provs, extra) + factsBox.svg));
+        console.log("ok", opts.file);
+    }
+
+    var KAF = ["Bingöl", "Erzincan", "Tokat", "Amasya", "Çorum", "Bolu", "Düzce", "Sakarya", "Kocaeli", "Yalova", "Tekirdağ", "Çanakkale"];
+    var DAF = ["Bingöl", "Elazığ", "Malatya", "Kahramanmaraş", "Osmaniye", "Hatay"];
+    var BAF_A = ["Uşak", "Manisa", "İzmir"];
+    var BAF_B = ["Denizli", "Aydın", "İzmir"];
+
+    faultMap({
+        file: "fay_hatlari.png",
+        head: "AKTİF FAY SİSTEMLERİ",
+        kicker: "KAF · DAF · BAF",
+        hi: ["Bingöl"],
+        lines: [
+            { iller: KAF, label: "KAF", color: C.rose, ldx: 8, ldy: -16 },
+            { iller: DAF, label: "DAF", color: C.teal, ldx: 18, ldy: 22 },
+            { iller: BAF_A, label: "BAF", color: C.gold, width: 7, ldx: -40, ldy: -14 },
+            { iller: BAF_B, label: "", color: C.gold, width: 7 }
+        ],
+        iller: [{ il: "Bingöl", label: "Karlıova", n: "K", ldx: 16, ldy: 20 }],
+        facts: ["KAF: Karlıova → Marmara → Saros", "DAF: Karlıova → Hatay", "BAF: Ege horst–graben kırıkları"]
+    });
+
+    faultMap({
+        file: "fay_kaf.png",
+        head: "KUZEY ANADOLU FAYI",
+        kicker: "KAF",
+        hi: ["Bingöl", "Çanakkale"],
+        lines: [{ iller: KAF, label: "KAF", color: C.rose, ldx: 10, ldy: -18 }],
+        iller: [
+            { il: "Bingöl", label: "Karlıova", n: "1", ldx: 16, ldy: 18 },
+            { il: "Çanakkale", label: "Saros", n: "2", ldx: -8, ldy: 22 }
+        ],
+        facts: ["Karlıova’dan batıya uzanır", "Marmara üzerinden Saros Körfezi çevresine ulaşır"]
+    });
+
+    faultMap({
+        file: "fay_daf.png",
+        head: "DOĞU ANADOLU FAYI",
+        kicker: "DAF",
+        hi: ["Bingöl", "Hatay"],
+        lines: [{ iller: DAF, label: "DAF", color: C.teal, ldx: 20, ldy: 20 }],
+        iller: [
+            { il: "Bingöl", label: "Karlıova", n: "1", ldx: 16, ldy: -8 },
+            { il: "Hatay", label: "Hatay", n: "2", ldx: 16, ldy: 18 }
+        ],
+        facts: ["Karlıova’dan güneybatıya uzanır", "Elazığ–Malatya–Kahramanmaraş–Hatay güzergâhı"]
+    });
+
+    faultMap({
+        file: "fay_karliova.png",
+        head: "KARLIOVA TEKTONİK DÜĞÜMÜ",
+        kicker: "KAF ∩ DAF",
+        hi: ["Bingöl"],
+        lines: [
+            { iller: KAF, label: "KAF", color: C.rose, ldx: 8, ldy: -16 },
+            { iller: DAF, label: "DAF", color: C.teal, ldx: 18, ldy: 22 }
+        ],
+        iller: [{ il: "Bingöl", label: "Karlıova", n: "K", ldx: 18, ldy: 20 }],
+        facts: ["KAF ile DAF Bingöl–Karlıova çevresinde kesişir"]
+    });
+
+    cityPinMap({
+        file: "volkan_karacadag.png",
+        head: "İKİ KARACADAĞ",
+        kicker: "İç Anadolu ve GDA",
+        hi: ["Konya", "Karaman", "Şanlıurfa", "Diyarbakır"],
+        iller: [
+            { il: "Konya", label: "Karacadağ (İç Anadolu)", n: "1", ldx: -70, ldy: 22 },
+            { il: "Şanlıurfa", label: "Karacadağ (GDA)", n: "2", ldx: 16, ldy: 18 }
+        ],
+        facts: ["Aynı ad, iki bölge: Konya–Karaman ve Diyarbakır–Şanlıurfa"]
+    });
+
+    labeled({ file: "volkanik_alanlar.png", head: "VOLKANİK ALANLAR" }, "Dağılış",
+        [
+            { il: "Manisa", label: "Kula" },
+            { il: "Isparta", label: "Gölcük" },
+            { il: "Konya", label: "Karadağ · Karacadağ" },
+            { il: "Aksaray", label: "Hasan" },
+            { il: "Kayseri", label: "Erciyes" },
+            { il: "Hatay", label: "Hassa" },
+            { il: "Şanlıurfa", label: "Karacadağ", boya: ["Diyarbakır"] },
+            { il: "Bitlis", label: "Nemrut" },
+            { il: "Van", label: "Süphan · Tendürek" },
+            { il: "Ağrı", label: "Ağrı" },
+            { il: "Erzurum", label: "Erzurum–Kars", boya: ["Kars"] }
+        ],
+        ["Doğu Anadolu, İç Anadolu ve bazı GDA–Hatay alanları öne çıkar"]
+    );
+
     cityPinMap({
         file: "konum_boylam_izmit.png",
         head: "AYNI BOYLAM ÜZERİNDEKİ MERKEZLER",
