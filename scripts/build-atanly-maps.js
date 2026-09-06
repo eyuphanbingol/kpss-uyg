@@ -811,7 +811,12 @@ function main() {
         if (!usePins) spreadSameCell(pts);
         var overlay = iconsOnMap(pts, topicIcon(title.file), title.iconSize);
         var labels = labelsOnMap(pts);
-        var extra = landPaths(provs, items.map(function (it) { return it.il; }), C.landHi) + overlay + labels;
+        var hi = [];
+        items.forEach(function (it) {
+            if (it.hi === false) return;
+            hi.push(it.il);
+        });
+        var extra = landPaths(provs, hi, C.landHi) + overlay + labels;
         var factsY = 78 + MAP_BLOCK_H + 16;
         var factsBox = wrapFacts(facts, 16, factsY, CANVAS_W - 32, 14);
         var H = factsY + factsBox.h + 28;
@@ -832,8 +837,8 @@ function main() {
             { il: "Erzurum", label: "Mescit", ldx: 38, ldy: -12, pdx: 6, pdy: -58 },
             { il: "Ardahan", label: "Yalnızçam", ldx: 44, ldy: 8 },
             { il: "Antalya", label: "Beydağları", ldx: -48, ldy: 8, pdx: -16, pdy: -12 },
-            { il: "Afyon", label: "Sultan", ldx: 10, ldy: -26, pdx: 42, pdy: 58 },
-            { il: "Antalya", label: "Geyik", ldx: 48, ldy: 4, pdx: 62, pdy: -52 },
+            { il: "Afyon", label: "Sultan", ldx: 36, ldy: 10, pdx: 40, pdy: 42, hi: false },
+            { il: "Antalya", label: "Geyik", ldx: 8, ldy: -26, pdx: 108, pdy: -14 },
             { il: "Karaman", label: "Bolkar", ldx: 8, ldy: -28, pdx: 22, pdy: -8 },
             { il: "Niğde", label: "Aladağlar", ldx: 8, ldy: -28 },
             { il: "Hakkari", label: "Hakkari", ldx: -8, ldy: -28 }
