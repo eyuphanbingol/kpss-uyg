@@ -486,7 +486,7 @@ function topicIcon(file) {
         madenkrom: "chrome", madenbarit: "barite", madenbor: "boron", madenmermer: "marble",
         madenfosfat: "phosphate", madenasbest: "asbestos", madentrona: "salt", madenaltin: "gold",
         madenuranyum: "uranium", madentoryum: "uranium", madenciva: "mercury", madentuz: "salt",
-        madenperlit: "rock", madenpomza: "rock", madenkukurt: "sulfur", madenmanganez: "iron",
+        madenperlit: "rock", madenpomza: "rock", madenkukurt: "sulfur", madenmanganez: "manganese",
         madenkursun: "lead", madenoltu: "jet", madenlule: "lule", madenvolfram: "tungsten",
         madenfeldspat: "feldspar", madenzimpara: "emery", madenetiket: "ore"
     };
@@ -1079,8 +1079,10 @@ function main() {
                 { il: "Isparta", ilce: "Keçiborlu", ldx: 32, ldy: 8 }
             ],
             facts: ["Bağcılık ve kayısıcılıkta hastalık önler", "Keçiborlu başlıca yataktır"] },
-        { file: "maden_manganez.png", title: "MANGANEZ", iller: ["Zonguldak"],
-            yazilar: ["Ereğli"],
+        { file: "maden_manganez.png", title: "MANGANEZ", urun: "Manganez",
+            noktalar: [
+                { il: "Zonguldak", ilce: "Ereğli", ldx: 32, ldy: 8 }
+            ],
             facts: ["Çeliğe sertlik verir", "Ereğli"] },
         { file: "maden_kursun.png", title: "KURŞUN VE ÇİNKO", urun: "Kurşun",
             noktalar: [
