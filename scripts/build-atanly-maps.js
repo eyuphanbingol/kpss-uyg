@@ -624,7 +624,14 @@ function main() {
                 { il: "Gaziantep", ilce: "Nizip", ldx: -32, ldy: 6 }
             ],
             facts: ["Aydın birinci sıradadır", "Ege’nin kurutmalık inciri meşhurdur"] },
-        { file: "kayısı.png", title: "KAYISI ÜRETİMİ", iller: ["Malatya", "Elazığ", "Kahramanmaraş", "Iğdır"], facts: ["Malatya dünya ölçeğinde öne çıkar", "Kurutmalık kayısı ihracatı önemlidir"] },
+        { file: "kayısı.png", title: "KAYISI ÜRETİMİ", urun: "Kayısı",
+            noktalar: [
+                { il: "Malatya", ilce: "Yeşilyurt", ldx: 8, ldy: 30 },
+                { il: "Elazığ", ilce: "Baskil", ldx: 32, ldy: -8 },
+                { il: "Kahramanmaraş", ilce: "Elbistan", ldx: -34, ldy: 6 },
+                { il: "Iğdır", ilce: "Tuzluca", ldx: -36, ldy: 6 }
+            ],
+            facts: ["Malatya dünya ölçeğinde öne çıkar", "Kurutmalık kayısı ihracatı önemlidir"] },
         { file: "muz.png", title: "MUZ ÜRETİMİ", iller: ["Mersin", "Antalya", "Hatay"], facts: ["Don olayının az olduğu kıyı kuşağı", "Anamur–Alanya çevresi yoğundur"] },
         { file: "anason.png", title: "ANASON ÜRETİMİ", urun: "Anason",
             noktalar: [
