@@ -404,13 +404,31 @@ function spreadSameCell(pts) {
     }
 }
 
+function spreadPhotoLabels(pts) {
+    var i, j, a, b, dx, dy;
+    for (i = 0; i < pts.length; i++) {
+        for (j = i + 1; j < pts.length; j++) {
+            if (pts[i].locked || pts[j].locked) continue;
+            dx = pts[j].pinX - pts[i].pinX;
+            dy = pts[j].pinY - pts[i].pinY;
+            if (Math.hypot(dx, dy) > 120) continue;
+            a = pts[i].pinX <= pts[j].pinX ? pts[i] : pts[j];
+            b = a === pts[i] ? pts[j] : pts[i];
+            a.ldx = -56;
+            b.ldx = 56;
+            a.ldy = -24;
+            b.ldy = 26;
+        }
+    }
+}
+
 var ICON_DIR = path.join(IMG, "map-icons");
 var iconCache = {};
 
 function topicIcon(file) {
     var k = norm(String(file || "").replace(/\.(png|jpg)$/i, ""));
     var T = {
-        gul: "rose", elma: "apple", bugday: "wheat", pamuk: "cotton", zeytin: "olive",
+        gul: "rose", elma: "apple", bugday: "bugday", pamuk: "cotton", zeytin: "olive",
         uzum: "grapes", misir: "corn", patates: "potato", arpa: "arpa", sekerpancar: "beet",
         hashas: "poppy", incir: "fig", kayisi: "apricot", muz: "banana", anason: "anason",
         aspir: "aspir", susam: "seed", tutun: "leaf", yerfistik: "peanut", antepfistik: "antepfistik",
@@ -478,19 +496,21 @@ function cropMap(provs, opts) {
         }
         hi.push(row.il);
         var pos = districtXY(fp);
-        var ldy = (fp.maxY - pos.y) < 55 ? -20 : 22;
+        var ldy = row.ldy != null ? row.ldy : ((fp.maxY - pos.y) < 55 ? -20 : 22);
         pts.push({
             x: pos.x, y: pos.y, ox: pos.x, oy: pos.y,
             pinX: pos.x, pinY: pos.y,
-            ldx: 0,
+            ldx: row.ldx != null ? row.ldx : 0,
             ldy: ldy,
             text: row.yazi || row.il,
             urun: opts.urun || "",
             il: row.il,
-            ilce: row.ilce || ""
+            ilce: row.ilce || "",
+            locked: row.ldx != null
         });
     });
     if (!opts.urun) spreadSameCell(pts);
+    else spreadPhotoLabels(pts);
     var factsY = 78 + MAP_BLOCK_H + 16;
     var facts = wrapFacts(opts.facts, 16, factsY, CANVAS_W - 32, 14);
     var H = factsY + facts.h + 28;
@@ -511,7 +531,19 @@ function main() {
 
     var crops = [
         { file: "elma.png", title: "ELMA ÜRETİMİ", iller: ["Isparta", "Karaman", "Niğde", "Nevşehir", "Konya", "Denizli", "Antalya"], facts: ["Yoğunluk: Göller Yöresi ve Niğde–Nevşehir çevresi", "İç Anadolu’nun yüksek ovalarında da yetişir"] },
-        { file: "bugday.png", title: "BUĞDAY ÜRETİMİ", iller: ["Konya", "Ankara", "Şanlıurfa", "Diyarbakır", "Tekirdağ", "Edirne", "Yozgat", "Kayseri", "Adana"], facts: ["İç Anadolu ve Güneydoğu başta gelir", "Trakya’da da önemli ekim alanı vardır"] },
+        { file: "bugday.png", title: "BUĞDAY ÜRETİMİ", urun: "Buğday",
+            noktalar: [
+                { il: "Konya", ilce: "Cihanbeyli" },
+                { il: "Ankara", ilce: "Polatlı" },
+                { il: "Şanlıurfa", ilce: "Harran" },
+                { il: "Diyarbakır", ilce: "Bismil" },
+                { il: "Tekirdağ", ilce: "Malkara" },
+                { il: "Edirne", ilce: "Uzunköprü" },
+                { il: "Yozgat", ilce: "Sorgun" },
+                { il: "Kayseri", ilce: "Develi" },
+                { il: "Adana", ilce: "Ceyhan" }
+            ],
+            facts: ["İç Anadolu ve Güneydoğu başta gelir", "Trakya’da da önemli ekim alanı vardır"] },
         { file: "pamuk.png", title: "PAMUK ÜRETİMİ", iller: ["Şanlıurfa", "Diyarbakır", "Adana", "Aydın", "İzmir", "Hatay", "Mardin"], facts: ["Sıcaklık ve sulama ister", "Çukurova ve Güneydoğu öne çıkar"] },
         { file: "zeytin.png", title: "ZEYTİN ÜRETİMİ", iller: ["Aydın", "İzmir", "Balıkesir", "Manisa", "Muğla", "Bursa", "Hatay", "Mersin", "Gaziantep"], facts: ["Akdeniz iklimi kıyı kuşağı", "Ege birinci sıradadır"] },
         { file: "üzüm.png", title: "ÜZÜM ÜRETİMİ", iller: ["Manisa", "Denizli", "İzmir", "Nevşehir", "Elazığ", "Gaziantep", "Tekirdağ"], facts: ["Ege bağcılığın merkezidir", "Kapadokya ve Güneydoğu’da da yetişir"] },
@@ -558,8 +590,8 @@ function main() {
         { file: "pirinc.jpg", title: "ÇELTİK / PİRİNÇ", iller: ["Edirne", "Samsun", "Balıkesir"], facts: ["Meriç boyları başta gelir", "Diğer ekim alanları Osmancık ve Tosya", "Üretim devlet kontrolündedir"] },
         { file: "ay_cicek.jpg", title: "AYÇİÇEĞİ ÜRETİMİ", urun: "Ayçiçeği",
             noktalar: [
-                { il: "Tekirdağ", ilce: "Malkara" },
-                { il: "Edirne", ilce: "Uzunköprü" },
+                { il: "Tekirdağ", ilce: "Malkara", ldx: 38, ldy: 30 },
+                { il: "Edirne", ilce: "Uzunköprü", ldx: -34, ldy: -26 },
                 { il: "Konya", ilce: "Cihanbeyli" },
                 { il: "Adana", ilce: "Ceyhan" }
             ],
