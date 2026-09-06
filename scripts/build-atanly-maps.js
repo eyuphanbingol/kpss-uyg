@@ -332,7 +332,7 @@ function topicIcon(file) {
     var k = norm(String(file || "").replace(/\.(png|jpg)$/i, ""));
     var T = {
         gul: "rose", elma: "apple", bugday: "wheat", pamuk: "cotton", zeytin: "olive",
-        uzum: "grapes", misir: "corn", patates: "potato", arpa: "wheat", sekerpancar: "beet",
+        uzum: "grapes", misir: "corn", patates: "potato", arpa: "arpa", sekerpancar: "beet",
         hashas: "poppy", incir: "fig", kayisi: "apricot", muz: "banana", anason: "anason",
         aspir: "flower", susam: "seed", tutun: "leaf", yerfistik: "peanut", antepfistik: "antepfistik",
         kirmizimercimek: "lentil", turunc: "citrus", kanola: "canola", pirinc: "rice",
@@ -437,7 +437,7 @@ function main() {
         { file: "üzüm.png", title: "ÜZÜM ÜRETİMİ", iller: ["Manisa", "Denizli", "İzmir", "Nevşehir", "Elazığ", "Gaziantep", "Tekirdağ"], facts: ["Ege bağcılığın merkezidir", "Kapadokya ve Güneydoğu’da da yetişir"] },
         { file: "mısır.png", title: "MISIR ÜRETİMİ", iller: ["Adana", "Şanlıurfa", "Mardin", "Sakarya", "Mersin", "Konya"], facts: ["Hem tahıl hem yağ bitkisi grubunda sayılır", "Çukurova ve GAP sulama alanları yoğundur"] },
         { file: "patates.png", title: "PATATES ÜRETİMİ", iller: ["Niğde", "Nevşehir", "Afyon", "Bolu", "Erzurum", "İzmir"], facts: ["Serin ve yüksek yerlerde verim artar", "Niğde–Nevşehir öne çıkar"] },
-        { file: "arpa.png", title: "ARPA ÜRETİMİ", iller: ["Konya", "Ankara", "Şanlıurfa", "Kayseri", "Yozgat", "Kırşehir"], facts: ["Buğdaya göre daha kurak koşullara dayanır", "Hayvancılık yemi olarak da önemlidir"] },
+        { file: "arpa.png", title: "ARPA ÜRETİMİ", urun: "Arpa", iller: ["Konya", "Ankara", "Şanlıurfa", "Kayseri", "Yozgat", "Kırşehir"], facts: ["Buğdaya göre daha kurak koşullara dayanır", "Hayvancılık yemi olarak da önemlidir"] },
         { file: "seker_pancar.png", title: "ŞEKER PANCARI", iller: ["Konya", "Eskişehir", "Aksaray", "Yozgat", "Tokat", "Erzurum", "Kayseri"], facts: ["Ilıman-karasal iklim ve sulama", "Şeker fabrikaları çevresinde yoğunlaşır"] },
         { file: "hashas.png", title: "HAŞHAŞ ÜRETİMİ", iller: ["Afyon", "Denizli", "Kütahya", "Burdur", "Isparta", "Uşak"], facts: ["Devlet kontrolünde üretilir", "Afyonkarahisar adıyla özdeşleşir"] },
         { file: "incir.png", title: "İNCİR ÜRETİMİ", iller: ["Aydın", "İzmir", "Muğla", "Bursa", "Gaziantep"], facts: ["Aydın birinci sıradadır", "Ege’nin kurutmalık inciri meşhurdur"] },
