@@ -202,6 +202,14 @@ function districtXY(fp) {
     return { x: fp.vx != null ? fp.vx : fp.cx, y: fp.vy != null ? fp.vy : fp.cy };
 }
 
+function clampInProv(fp, x, y, pad) {
+    pad = pad == null ? 14 : pad;
+    return {
+        x: Math.max(fp.minX + pad, Math.min(fp.maxX - pad, x)),
+        y: Math.max(fp.minY + pad, Math.min(fp.maxY - pad, y))
+    };
+}
+
 function findProv(provs, name) {
     var k = keyOf(name);
     for (var i = 0; i < provs.length; i++) {
@@ -797,7 +805,7 @@ function main() {
                 return;
             }
             var pos = districtXY(fp);
-            pos = { x: pos.x + (it.pdx || 0), y: pos.y + (it.pdy || 0) };
+            pos = clampInProv(fp, pos.x + (it.pdx || 0), pos.y + (it.pdy || 0));
             var p = { x: pos.x, y: pos.y, ox: pos.x, oy: pos.y, text: mapCaption(it.label) };
             if (usePins) {
                 p.pinX = pos.x;
@@ -815,6 +823,7 @@ function main() {
         items.forEach(function (it) {
             if (it.hi === false) return;
             hi.push(it.il);
+            (it.boya || []).forEach(function (b) { hi.push(b); });
         });
         var extra = landPaths(provs, hi, C.landHi) + overlay + labels;
         var factsY = 78 + MAP_BLOCK_H + 16;
@@ -828,20 +837,20 @@ function main() {
     labeled({ file: "kıvrım_dağlar.png", head: "KIVRIM DAĞLARI", iconSize: 15 }, "Yer şekilleri",
         [
             { il: "Kırklareli", label: "Yıldız", ldx: 8, ldy: 28 },
+            { il: "Kastamonu", label: "Küre", ldx: -36, ldy: -20, boya: ["Bartın"] },
+            { il: "Çankırı", label: "Ilgaz", ldx: 8, ldy: 28, boya: ["Kastamonu"] },
             { il: "Bolu", label: "Köroğlu", ldx: -8, ldy: 28 },
-            { il: "Kastamonu", label: "Küre", ldx: -40, ldy: -22 },
-            { il: "Çankırı", label: "Ilgaz", ldx: 8, ldy: 28 },
-            { il: "Samsun", label: "Canik", ldx: 40, ldy: -22 },
-            { il: "Rize", label: "Kaçkar", ldx: 8, ldy: -32 },
-            { il: "Bayburt", label: "Kop", ldx: -42, ldy: 8 },
-            { il: "Erzurum", label: "Mescit", ldx: 38, ldy: -12, pdx: 6, pdy: -58 },
-            { il: "Ardahan", label: "Yalnızçam", ldx: 44, ldy: 8 },
-            { il: "Antalya", label: "Beydağları", ldx: -48, ldy: 8, pdx: -16, pdy: -12 },
-            { il: "Afyon", label: "Sultan", ldx: 36, ldy: 10, pdx: 40, pdy: 42, hi: false },
-            { il: "Antalya", label: "Geyik", ldx: 8, ldy: -26, pdx: 108, pdy: -14 },
-            { il: "Karaman", label: "Bolkar", ldx: 8, ldy: -28, pdx: 22, pdy: -8 },
-            { il: "Niğde", label: "Aladağlar", ldx: 8, ldy: -28 },
-            { il: "Hakkari", label: "Hakkari", ldx: -8, ldy: -28 }
+            { il: "Samsun", label: "Canik", ldx: 36, ldy: -20, boya: ["Ordu"] },
+            { il: "Rize", label: "Kaçkar", ldx: 8, ldy: -28, boya: ["Artvin"] },
+            { il: "Erzurum", label: "Mescit", ldx: 36, ldy: -12, pdy: -48 },
+            { il: "Ardahan", label: "Yalnızçam", ldx: 40, ldy: 8, boya: ["Artvin"] },
+            { il: "Bayburt", label: "Kop", ldx: -40, ldy: 8, boya: ["Erzurum"] },
+            { il: "Antalya", label: "Beydağları", ldx: -44, ldy: 8, pdx: -28, pdy: -8 },
+            { il: "Afyon", label: "Sultan", ldx: 32, ldy: 12, pdx: 36, pdy: 36 },
+            { il: "Antalya", label: "Geyik", ldx: 8, ldy: -24, pdx: 96, pdy: -10, boya: ["Karaman"] },
+            { il: "Karaman", label: "Bolkar", ldx: 8, ldy: -26, boya: ["Mersin", "Niğde"] },
+            { il: "Niğde", label: "Aladağlar", ldx: 8, ldy: -26, boya: ["Kayseri", "Adana"] },
+            { il: "Hakkari", label: "Hakkari", ldx: -8, ldy: -26 }
         ],
         [
             "Karadeniz ve Akdeniz’de dağlar kıyıya paralel uzanır",
