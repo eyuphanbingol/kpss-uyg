@@ -1074,8 +1074,10 @@ function main() {
             facts: ["Volkanik, camsı yapı", "Gıda, inşaat, boya, deterjan"] },
         { file: "maden_pomza.png", title: "POMZA TAŞI", iller: ["Nevşehir", "Kayseri"],
             facts: ["Tarım ve inşaat", "Kapadokya volkanizması"] },
-        { file: "maden_kukurt.png", title: "KÜKÜRT", iller: ["Isparta"],
-            yazilar: ["Keçiborlu"],
+        { file: "maden_kukurt.png", title: "KÜKÜRT", urun: "Kükürt",
+            noktalar: [
+                { il: "Isparta", ilce: "Keçiborlu", ldx: 32, ldy: 8 }
+            ],
             facts: ["Bağcılık ve kayısıcılıkta hastalık önler", "Keçiborlu başlıca yataktır"] },
         { file: "maden_manganez.png", title: "MANGANEZ", iller: ["Zonguldak"],
             yazilar: ["Ereğli"],
