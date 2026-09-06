@@ -612,7 +612,17 @@ function main() {
                 { il: "Adana", ilce: "Ceyhan" }
             ],
             facts: ["İç Anadolu ve Güneydoğu başta gelir", "Trakya’da da önemli ekim alanı vardır"] },
-        { file: "pamuk.png", title: "PAMUK ÜRETİMİ", iller: ["Şanlıurfa", "Diyarbakır", "Adana", "Aydın", "İzmir", "Hatay", "Mardin"], facts: ["Sıcaklık ve sulama ister", "Çukurova ve Güneydoğu öne çıkar"] },
+        { file: "pamuk.png", title: "PAMUK ÜRETİMİ", urun: "Pamuk",
+            noktalar: [
+                { il: "Şanlıurfa", ldx: -32, ldy: 8 },
+                { il: "Diyarbakır", ldx: 8, ldy: -28 },
+                { il: "Adana", ldx: -34, ldy: 8 },
+                { il: "Aydın", ldx: 8, ldy: 28 },
+                { il: "İzmir", ldx: -34, ldy: 8 },
+                { il: "Hatay", ldx: 32, ldy: 8 },
+                { il: "Mardin", ldx: 32, ldy: 8 }
+            ],
+            facts: ["Sıcaklık ve sulama ister", "Çukurova ve Güneydoğu öne çıkar"] },
         { file: "zeytin.png", title: "ZEYTİN ÜRETİMİ", iller: ["Aydın", "İzmir", "Balıkesir", "Manisa", "Muğla", "Bursa", "Hatay", "Mersin", "Gaziantep"], facts: ["Akdeniz iklimi kıyı kuşağı", "Ege birinci sıradadır"] },
         { file: "üzüm.png", title: "ÜZÜM ÜRETİMİ", iller: ["Manisa", "Denizli", "İzmir", "Nevşehir", "Elazığ", "Gaziantep", "Tekirdağ"], facts: ["Ege bağcılığın merkezidir", "Kapadokya ve Güneydoğu’da da yetişir"] },
         { file: "mısır.png", title: "MISIR ÜRETİMİ", urun: "Mısır",
