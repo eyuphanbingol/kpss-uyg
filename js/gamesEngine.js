@@ -76,19 +76,6 @@
         return mcq(names()[code] + " hangi coğrafi bölgededir?", [title].concat(distract), title);
     }
 
-    function sameRegionQ(code) {
-        var rid = regionIdOf(code);
-        var mates = codesOfRegion(rid).filter(function (c) { return c !== code; });
-        var mate = mates[Math.floor(Math.random() * mates.length)];
-        var others = shuffle(allCodes().filter(function (c) { return regionIdOf(c) !== rid; })).slice(0, 3);
-        if (!mate) return regionQ(code);
-        return mcq(
-            names()[code] + " aşağıdaki illerden hangisiyle aynı coğrafi bölgededir?",
-            [names()[mate]].concat(others.map(function (c) { return names()[c]; })),
-            names()[mate]
-        );
-    }
-
     function fold(s) {
         return String(s || "").toLocaleLowerCase("tr-TR")
             .replace(/â/g, "a").replace(/î/g, "i").replace(/û/g, "u")
@@ -126,26 +113,17 @@
         });
     }
 
-    function needlesFor(code) {
+    function nameNeedles(code) {
         var name = names()[code] || "";
-        var raw = [name, code];
-        if (name === "Afyonkarahisar") raw.push("Afyon");
+        var raw = [name];
+        if (name === "Afyonkarahisar") raw.push("Afyon", "Afyonkarahisar");
         if (name === "Kahramanmaraş") raw.push("Maraş", "K.Maraş");
         if (name === "Şanlıurfa") raw.push("Urfa");
-        (mq().ITEMS || []).forEach(function (it) {
-            if ((it.codes || []).indexOf(code) < 0) return;
-            raw.push(it.name, it.places);
-        });
+        if (name === "Hatay") raw.push("Antakya");
         var out = [];
-        var nameFold = fold(name);
-        if (nameFold.length >= 3) out.push(nameFold);
         raw.forEach(function (s) {
-            String(s || "").split(/[-–,\/]| ve /i).forEach(function (part) {
-                var t = String(part || "").replace(/^[^:]+:\s*/, "").trim();
-                var f = fold(t);
-                if (f.length < 4) return;
-                if (out.indexOf(f) < 0) out.push(f);
-            });
+            var f = fold(s);
+            if (f.length >= 3 && out.indexOf(f) < 0) out.push(f);
         });
         return out;
     }
@@ -157,38 +135,58 @@
         return false;
     }
 
+    function answersOtherProvince(correct, code) {
+        var cf = fold(correct);
+        var mine = fold(names()[code] || "");
+        if (mine && cf.indexOf(mine) >= 0) return false;
+        var codes = allCodes();
+        var i, n;
+        for (i = 0; i < codes.length; i++) {
+            if (codes[i] === code) continue;
+            n = fold(names()[codes[i]] || "");
+            if (n.length >= 4 && (cf === n || cf.indexOf(n) >= 0)) return true;
+        }
+        return false;
+    }
+
     function catalogHits(code, kpssData) {
-        var needles = needlesFor(code);
+        var needles = nameNeedles(code);
         if (!needles.length || !kpssData) return [];
         var recent = [];
         var rest = [];
         walkQs(kpssData, function (ders, konu, q) {
-            var blob = fold(stripHtml((q.question || "") + " " + (q.explanation || "")));
-            if (!blobHits(blob, needles)) return;
+            var stem = fold(stripHtml(q.question || ""));
+            if (!blobHits(stem, needles)) return;
             var item = qToMcq(q);
             if (!item) return;
+            if (answersOtherProvince(item.correct, code)) return;
             if (isRecentKonu(konu)) recent.push(item);
             else rest.push(item);
         });
         return shuffle(recent).concat(shuffle(rest));
     }
 
-    function mapTopicHits(code) {
+    function localFeatureQs(code) {
         var name = names()[code];
         if (!name) return [];
-        var out = [];
+        var mine = [];
+        var pool = [];
         (mq().ITEMS || []).forEach(function (it) {
-            if ((it.codes || []).indexOf(code) < 0) return;
             var t = String(it.topic || "");
             if (t !== "tarim" && t !== "hayvan" && t !== "maden" && t !== "sanayi") return;
-            var others = shuffle(allCodes().filter(function (c) { return c !== code; })).slice(0, 3)
-                .map(function (c) { return names()[c]; });
-            uniquePush(out, mcq((it.name || "Bu üretim") + " hangi ilde / hangi il kuşağındadır?", [name].concat(others), name));
-            if (it.follow && it.follow.q && it.follow.answer) {
-                uniquePush(out, mcq(it.follow.q, it.follow.choices || [it.follow.answer], it.follow.answer));
+            var label = String(it.name || "").replace(/:.*/, "").trim();
+            if (!label) return;
+            if ((it.codes || []).indexOf(code) >= 0) {
+                if (mine.indexOf(label) < 0) mine.push(label);
+            } else if (pool.indexOf(label) < 0) {
+                pool.push(label);
             }
         });
-        return shuffle(out);
+        return shuffle(mine).map(function (prod) {
+            var dist = shuffle(pool.filter(function (p) { return p !== prod; })).slice(0, 3);
+            while (dist.length < 3) dist.push("—");
+            return mcq(name + " ilinin öne çıkan özelliği / üretimi hangisidir?", [prod].concat(dist), prod);
+        });
     }
 
     function tabuFromItem(item, konu) {
@@ -231,16 +229,13 @@
         code = String(code || "").toUpperCase();
         var b = bank();
         var list = [];
-        catalogHits(code, kpssData).slice(0, 4).forEach(function (q) { uniquePush(list, q); });
-        mapTopicHits(code).slice(0, 3).forEach(function (q) { uniquePush(list, q); });
         ((b.SPECIAL && b.SPECIAL[code]) || []).forEach(function (row) {
             uniquePush(list, fromTriple(row));
         });
+        localFeatureQs(code).forEach(function (q) { uniquePush(list, q); });
+        catalogHits(code, kpssData).forEach(function (q) { uniquePush(list, q); });
         uniquePush(list, regionQ(code));
-        uniquePush(list, sameRegionQ(code));
-        var facts = (b.REGION_FACTS && b.REGION_FACTS[regionIdOf(code)]) || [];
-        shuffle(facts).forEach(function (row) { uniquePush(list, fromTriple(row)); });
-        var picked = list.slice(0, 3);
+        var picked = shuffle(list).slice(0, 3);
         while (picked.length < 3) uniquePush(picked, regionQ(code));
         return picked.slice(0, 3);
     }
