@@ -615,7 +615,15 @@ function main() {
                 { il: "Isparta", ilce: "Yalvaç", ldx: 34, ldy: 12 }
             ],
             facts: ["Devlet kontrolünde üretilir", "Afyonkarahisar adıyla özdeşleşir"] },
-        { file: "incir.png", title: "İNCİR ÜRETİMİ", iller: ["Aydın", "İzmir", "Muğla", "Bursa", "Gaziantep"], facts: ["Aydın birinci sıradadır", "Ege’nin kurutmalık inciri meşhurdur"] },
+        { file: "incir.png", title: "İNCİR ÜRETİMİ", urun: "İncir",
+            noktalar: [
+                { il: "Aydın", ilce: "İncirliova", ldx: 8, ldy: 30 },
+                { il: "İzmir", ilce: "Tire", ldx: -32, ldy: 6 },
+                { il: "Muğla", ilce: "Yatağan", ldx: 10, ldy: 32 },
+                { il: "Bursa", ilce: "İznik", ldx: 8, ldy: -28 },
+                { il: "Gaziantep", ilce: "Nizip", ldx: -32, ldy: 6 }
+            ],
+            facts: ["Aydın birinci sıradadır", "Ege’nin kurutmalık inciri meşhurdur"] },
         { file: "kayısı.png", title: "KAYISI ÜRETİMİ", iller: ["Malatya", "Elazığ", "Kahramanmaraş", "Iğdır"], facts: ["Malatya dünya ölçeğinde öne çıkar", "Kurutmalık kayısı ihracatı önemlidir"] },
         { file: "muz.png", title: "MUZ ÜRETİMİ", iller: ["Mersin", "Antalya", "Hatay"], facts: ["Don olayının az olduğu kıyı kuşağı", "Anamur–Alanya çevresi yoğundur"] },
         { file: "anason.png", title: "ANASON ÜRETİMİ", urun: "Anason",
