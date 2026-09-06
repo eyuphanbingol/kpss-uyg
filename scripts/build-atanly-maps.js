@@ -909,7 +909,8 @@ function main() {
                 return;
             }
             var pos = districtXY(fp);
-            pos = clampInProv(fp, pos.x + (it.pdx || 0), pos.y + (it.pdy || 0));
+            if (it.noclamp) pos = { x: pos.x + (it.pdx || 0), y: pos.y + (it.pdy || 0) };
+            else pos = clampInProv(fp, pos.x + (it.pdx || 0), pos.y + (it.pdy || 0));
             var p = { x: pos.x, y: pos.y, ox: pos.x, oy: pos.y, text: mapCaption(it.label) };
             if (usePins) {
                 p.pinX = pos.x;
@@ -992,10 +993,10 @@ function main() {
             { il: "Niğde", label: "Melendiz (Niğde)", ldx: 28, ldy: 22 },
             { il: "Kayseri", label: "Erciyes (Kayseri)", ldx: 8, ldy: 28 },
             { il: "Şanlıurfa", label: "Karacadağ (Şanlıurfa)", ldx: 8, ldy: 28, boya: ["Diyarbakır"], pdy: -36 },
-            { il: "Bitlis", label: "Nemrut (Bitlis)", ldx: -48, ldy: 10, pdx: -36, pdy: 8 },
-            { il: "Van", label: "Tendürek (Ağrı)", ldx: -10, ldy: -22, pdx: -28, pdy: -18 },
-            { il: "Ağrı", label: "Süphan (Bitlis)", ldx: -8, ldy: 26, pdx: -52, pdy: 12 },
-            { il: "Iğdır", label: "Ağrı Dağı (Ağrı-Iğdır)", ldx: 8, ldy: 24, pdx: -24, pdy: 16, boya: ["Ağrı"] }
+            { il: "Bitlis", label: "Nemrut", ldx: -36, ldy: 20, pdx: -36, pdy: 10, noclamp: true },
+            { il: "Van", label: "Süphan", ldx: -12, ldy: -26, pdx: -48, pdy: -38, noclamp: true, boya: ["Bitlis"] },
+            { il: "Van", label: "Tendürek", ldx: 18, ldy: 26, pdx: 58, pdy: -66, noclamp: true, boya: ["Ağrı"] },
+            { il: "Iğdır", label: "Ağrı Dağı", ldx: 20, ldy: -18, pdx: -16, pdy: 10, boya: ["Ağrı"] }
         ],
         [
             "Volkan konileri, kül konileri ve kalderalar",
