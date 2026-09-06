@@ -1010,8 +1010,12 @@ function main() {
                 { il: "Konya", ilce: "Seydişehir", ldx: 40, ldy: -10 }
             ],
             facts: ["Çıkarım: Akseki ve Seydişehir", "İşleme: Seydişehir"] },
-        { file: "maden_krom.png", title: "KROM", iller: ["Elazığ", "Muğla", "Antalya"],
-            yazilar: ["Guleman", "Köyceğiz", "Antalya (işleme)"],
+        { file: "maden_krom.png", title: "KROM", urun: "Krom",
+            noktalar: [
+                { il: "Elazığ", ilce: "Guleman", ldx: 32, ldy: 8 },
+                { il: "Muğla", ilce: "Köyceğiz", ldx: -34, ldy: 8 },
+                { il: "Antalya", ilce: "İşleme", ldx: 8, ldy: 28 }
+            ],
             facts: ["Paslanmazlık–aşınmazlık · rezerv fazla · ihraç", "Çıkarım: Guleman, Köyceğiz", "İşleme: Elazığ (ham madde), Antalya (ulaşım)"] },
         { file: "maden_barit.png", title: "BARİT", urun: "Barit",
             noktalar: [
