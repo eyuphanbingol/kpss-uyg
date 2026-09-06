@@ -863,7 +863,6 @@ function main() {
         '<clipPath id="nightJ"><polygon points="-20,-20 270,-20 270,8 560,418 -20,430"/></clipPath>' +
         '<g clip-path="url(#nightJ)">' + landPaths(provs).replace(/fill="#E4EAD6"/g, 'fill="' + C.night + '"') + "</g>" +
         '<line x1="270" y1="8" x2="560" y2="418" stroke="' + C.ink + '" stroke-width="6" stroke-linecap="round"/>' +
-        '<polygon points="430,72 452,132 408,132" fill="#FFFDF6" stroke="' + C.ink + '" stroke-width="3" stroke-linejoin="round"/>' +
         '<text x="175" y="225" font-size="30" font-weight="800" fill="#F6F1E4" stroke="#1A2E2B" stroke-width="3" paint-order="stroke" font-family="Segoe UI, sans-serif">GECE</text>' +
         '<text x="690" y="235" font-size="28" font-weight="800" fill="' + C.navy + '" font-family="Segoe UI, sans-serif">GÜNDÜZ</text>';
     var juneFacts = wrapFacts([
