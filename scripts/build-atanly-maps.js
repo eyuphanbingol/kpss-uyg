@@ -544,7 +544,7 @@ function cropMap(provs, opts) {
         hi.push(row.il);
         var pos = districtXY(fp);
         if (row.pin === "cap" && fp.capX != null) pos = { x: fp.capX, y: fp.capY };
-        pos = { x: pos.x + (row.pdx || 0), y: pos.y + (row.pdy || 0) };
+        pos = clampInProv(fp, pos.x + (row.pdx || 0), pos.y + (row.pdy || 0));
         var ldy = row.ldy != null ? row.ldy : ((fp.maxY - pos.y) < 55 ? -16 : 18);
         pts.push({
             x: pos.x, y: pos.y, ox: pos.x, oy: pos.y,
@@ -996,8 +996,11 @@ function main() {
                 { il: "Artvin", ilce: "Murgul", ldx: 32, ldy: 8 }
             ],
             facts: ["En çok Karadeniz’de çıkarılır: Küre, Murgul, Çayeli", "İşleme: Samsun (ulaşım)"] },
-        { file: "maden_boksit.png", title: "BOKSİT (ALÜMİNYUM)", iller: ["Antalya", "Konya"],
-            yazilar: ["Akseki", "Seydişehir"],
+        { file: "maden_boksit.png", title: "BOKSİT (ALÜMİNYUM)", urun: "Boksit",
+            noktalar: [
+                { il: "Antalya", ilce: "Akseki", ldx: -44, ldy: 12, pdx: 36, pdy: -8 },
+                { il: "Konya", ilce: "Seydişehir", ldx: 48, ldy: -10, pdx: -6, pdy: 50 }
+            ],
             facts: ["Çıkarım: Akseki ve Seydişehir", "İşleme: Seydişehir"] },
         { file: "maden_krom.png", title: "KROM", iller: ["Elazığ", "Muğla", "Antalya"],
             yazilar: ["Guleman", "Köyceğiz", "Antalya (işleme)"],
