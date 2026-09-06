@@ -480,7 +480,7 @@ function topicIcon(file) {
         kirmizimercimek: "lentil", turunc: "citrus", kanola: "canola", pirinc: "rice",
         aycicek: "aycicek", findik: "findik", cay: "cay", kenevir: "hemp",
         kivrimdaglar: "fold-mtn", kirikdaglar: "fault-mtn", volkanikdaglar: "volcano",
-        volkanikaraziler: "volcano", masifarazi: "rock", trplato: "plateau", trovlar: "plain",
+        masifarazi: "rock", trplato: "plateau", trovlar: "plain",
         milliparklar: "park",
         madengenel: "ore", madendemir: "iron", madenbakir: "copper", madenboksit: "bauxite",
         madenkrom: "chrome", madenbarit: "barite", madenbor: "boron", madenmermer: "marble",
@@ -996,24 +996,6 @@ function main() {
             { il: "Şanlıurfa", label: "Karacadağ (GD)" }
         ],
         ["Volkan konileri ve kül konileri gösterilir", "Doğu’da Nemrut–Süphan–Tendürek–Ağrı (NESTA) hattı"]
-    );
-
-    labeled({ file: "volkanik_araziler.png", head: "VOLKANİK ARAZİLER" }, "Hat ve masifler",
-        [
-            { il: "Çanakkale", label: "Biga Yarımadası" },
-            { il: "Bursa", label: "Uludağ (batolit)" },
-            { il: "Balıkesir", label: "Kaz Dağları" },
-            { il: "Afyon", label: "Afyon geçiş kuşağı" },
-            { il: "Isparta", label: "Gölcük krater gölü" },
-            { il: "Bolu", label: "Köroğlu Dağları" },
-            { il: "Nevşehir", label: "Hasan (Kapadokya tüfleri)" },
-            { il: "Kayseri", label: "Erciyes" },
-            { il: "Erzurum", label: "Erzurum–Kars çernezyom" },
-            { il: "Van", label: "NESTA hattı (Van G. batısı)" },
-            { il: "Diyarbakır", label: "Karacadağ kalkan volkan" },
-            { il: "Hatay", label: "Hassa lav tüpü mağaraları" }
-        ],
-        ["NESTA: Nemrut, Süphan, Tendürek, Ağrı", "Kapadokya tüfleri Hasan Dağı çevresiyle ilişkilidir"]
     );
 
     labeled({ file: "masif_arazi.png", head: "MASİF ARAZİLER" }, "Eski kütleler",

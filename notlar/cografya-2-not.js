@@ -112,13 +112,8 @@ window.cografya_2_notlari = [
     <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30 text-sm w-full">
         <p>Magmanın yer kabuğunun zayıf noktalarından yeryüzüne doğru hareket etmesidir. Yüzey ve derinlik volkanizması olarak ikiye ayrılır.</p>
     </div>
-                <!-- 🗺️ HARİTA / RESİM ALANI -->
             <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/volkanik_dağlar.png?v=9" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
-            </div>
-            <!-- 🗺️ HARİTA / RESİM ALANI -->
-            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/volkanik_araziler.png?v=9" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+                <img src="./src/img/volkanik_dağlar.png?v=9" alt="Volkanik dağlar haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
             </div>
     `,
 
@@ -132,14 +127,6 @@ window.cografya_2_notlari = [
         <p>Magmanın yüzeye çıkamadan yer altında soğumasıdır.</p>
         <p class="mt-2">Bursa Uludağ <b class="text-rose-600 dark:text-rose-400">batolit</b> (iç püskürük granit kaya) yapısına en güzel örnektir.</p>
     </div>
-                <!-- 🗺️ HARİTA / RESİM ALANI -->
-            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/volkanik_dağlar.png?v=9" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
-            </div>
-            <!-- 🗺️ HARİTA / RESİM ALANI -->
-            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/volkanik_araziler.png?v=9" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
-            </div>
     `,
 
     `
@@ -157,93 +144,6 @@ window.cografya_2_notlari = [
             </ul>
             <div class="mt-3 bg-amber-50 dark:bg-amber-900/20 p-3 rounded-lg text-amber-700 dark:text-amber-400 border border-amber-200 dark:border-amber-800/30 text-xs">
                 📌 <b>Maar:</b> Gaz sıkışması sonucu yaşanan patlama çukurlarıdır; Konya Meke Maar'ı en önemli örnektir.
-            </div>
-        </div>
-    </div>
-                <!-- 🗺️ HARİTA / RESİM ALANI -->
-            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/volkanik_dağlar.png?v=9" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
-            </div>
-            <!-- 🗺️ HARİTA / RESİM ALANI -->
-            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/volkanik_araziler.png?v=9" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
-            </div>
-    `,
-
-    `
-    <div class="mb-4">
-        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 font-black text-sm uppercase tracking-wider">
-            🗺️ TÜRKİYE'NİN VOLKANİK ARAZİLERİ (1. BATI ANADOLU - MARMARA & EGE)
-        </span>
-    </div>
-    <div class="space-y-3 text-left w-full text-sm">
-        <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30">
-            <ul class="list-disc list-inside space-y-2">
-                <li><b>Biga Yarımadası Çevresi (Çanakkale):</b> BİGA = BIG (Büyük): Çanakkale Boğazı'nın yanındaki o devasa çıkıntıyı 'Büyük (Big) Volkanik Arazi' olarak kodlayın.</li>
-                <li><b>Kaz Dağı Çevresi (Balıkesir/Çanakkale sınırları):</b> KAZ → KÖZ: 'Kaz Dağları'nın altı aslında bir KÖZ (volkan)' diye düşünün. Kazlar yeşilliği sever ama altı volkanik arazidir.</li>
-                <li><b>Uludağ Çevresi (Bursa):</b> İçte kalan volkan (Batolit): Uludağ dışarı püskürememiş, içeride katılaşmış bir derinlik volkanizmasıdır. ULU dağ, volkanik ateşini dışarı fırlatmak yerine ULUCA kendi içinde saklamış!</li>
-                <li><b>Afyon Çevresi:</b> Bölgedeki geçiş kuşağı volkanik arazilerindendir.</li>
-            </ul>
-                        <!-- 🗺️ HARİTA / RESİM ALANI -->
-            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/volkanik_dağlar.png?v=9" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
-            </div>
-            <!-- 🗺️ HARİTA / RESİM ALANI -->
-            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/volkanik_araziler.png?v=9" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
-            </div>
-        </div>
-    </div>
-    `,
-
-    `
-    <div class="mb-4">
-        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300 font-black text-sm uppercase tracking-wider">
-            🗺️ TÜRKİYE'NİN VOLKANİK ARAZİLERİ (2. İÇ ANADOLU VE GEÇİŞ KUŞAKLARI)
-        </span>
-    </div>
-    <div class="space-y-3 text-left w-full text-sm">
-        <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800/30">
-            <ul class="list-disc list-inside space-y-2">
-                <li><b>Köroğlu Dağları Çevresi (Bolu/Çankırı):</b> Köroğlu'nun Öfkesi: Bolu Beyi'ne isyan eden Köroğlu'nun içindeki intikam ateşi, bu dağların volkanik geçmişinden gelir! Karadeniz'in arkasındaki o geniş kahverengi alan Köroğlu'nun tüfeğinin patladığı yerdir.</li>
-                <li><b>Göller Yöresi Doğusu (Isparta/Burdur):</b> Gölün Dibindeki Volkan: Isparta'daki meşhur Gölcük Krater Gölü buradadır. 'Güller diyarı Isparta'da güller, mineral zengini volkanik toprakta açar' diye kodlayabilirsiniz.</li>
-                <li><b>Karacadağ – Karadağ Çevresi (Konya/Karaman):</b> İki Kara Yan Yana: İç Anadolu'nun güneyinde yan yana duran iki siyah leke düşünün.</li>
-                <li><b>Hasan Dağı Çevresi (Aksaray/Niğde):</b> Kapadokya tüflerini de oluşturan volkanik hat.</li>
-                <li><b>Erciyes Dağı (Kayseri):</b> Bölgenin en yüksek ve meşhur stratovolkan konisidir.</li>
-            </ul>
-                        <!-- 🗺️ HARİTA / RESİM ALANI -->
-            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/volkanik_dağlar.png?v=9" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
-            </div>
-            <!-- 🗺️ HARİTA / RESİM ALANI -->
-            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/volkanik_araziler.png?v=9" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
-            </div>
-        </div>
-    </div>
-    `,
-
-    `
-    <div class="mb-4">
-        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-red-100 dark:bg-red-900/50 text-red-700 dark:text-red-300 font-black text-sm uppercase tracking-wider">
-            🗺️ TÜRKİYE'NİN VOLKANİK ARAZİLERİ (3. GÜNEY VE DOĞU ANADOLU)
-        </span>
-    </div>
-    <div class="space-y-3 text-left w-full text-sm">
-        <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-100 dark:border-red-800/30">
-            <ul class="list-disc list-inside space-y-2">
-                <li><b>Hatay – Hassa Çevresi:</b> HASSA = HASSAS / LAV TÜPÜ: Türkiye'nin ilk lav tüpü mağaralarının bulunduğu bazaltik arazi.</li>
-                <li><b>Mardin – Karacadağ (Şanlıurfa/Diyarbakır sınırı):</b> Çok akıcı lavlar yaydığı için kalkan biçimli bir volkandır.</li>
-                <li><b>Van Gölü Batısı (Nemrut, Süphan, Tendürek, Ağrı):</b> NE-S-T-A Hattı: Van Gölü'nün batısından Ermenistan sınırına doğru bir çizgi gibi dizilirler: Nemrut, Süphan, Tendürek, Ağrı dağları.</li>
-                <li><b>Erzurum – Kars Çevresi:</b> Kara Toprak (Çernezyom): Bölgedeki dünyanın en verimli kara toprakları, buradaki devasa volkanik lav platolarının zamanla çözünmesiyle oluşmuştur.</li>
-            </ul>
-                        <!-- 🗺️ HARİTA / RESİM ALANI -->
-            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/volkanik_dağlar.png?v=9" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
-            </div>
-            <!-- 🗺️ HARİTA / RESİM ALANI -->
-            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/volkanik_araziler.png?v=9" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
             </div>
         </div>
     </div>
