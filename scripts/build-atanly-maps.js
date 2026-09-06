@@ -257,6 +257,53 @@ function labelsOnMap(pts, fs) {
     return pts.map(function (p) { return onMapText(p.x, p.y, p.text, fs); }).join("");
 }
 
+var ICON_DIR = path.join(IMG, "map-icons");
+var iconCache = {};
+
+function topicIcon(file) {
+    var k = norm(String(file || "").replace(/\.(png|jpg)$/i, ""));
+    var T = {
+        gul: "rose", elma: "apple", bugday: "wheat", pamuk: "cotton", zeytin: "olive",
+        uzum: "grapes", misir: "corn", patates: "potato", arpa: "wheat", sekerpancar: "beet",
+        hashas: "poppy", incir: "fig", kayisi: "apricot", muz: "banana", anason: "seed",
+        aspir: "flower", susam: "seed", tutun: "leaf", yerfistik: "peanut", antepfistik: "pistachio",
+        kirmizimercimek: "lentil", turunc: "citrus", kanola: "canola", pirinc: "rice",
+        aycicek: "sunflower", findik: "hazelnut", cay: "tea", kenevir: "hemp",
+        kivrimdaglar: "fold-mtn", kirikdaglar: "fault-mtn", volkanikdaglar: "volcano",
+        volkanikaraziler: "volcano", masifarazi: "rock", trplato: "plateau", trovlar: "plain",
+        milliparklar: "park",
+        madengenel: "ore", madendemir: "iron", madenbakir: "copper", madenboksit: "bauxite",
+        madenkrom: "chrome", madenbarit: "barite", madenbor: "boron", madenmermer: "marble",
+        madenfosfat: "phosphate", madenasbest: "ore", madentrona: "salt", madenaltin: "gold",
+        madenuranyum: "uranium", madentoryum: "uranium", madenciva: "mercury", madentuz: "salt",
+        madenperlit: "rock", madenpomza: "rock", madenkukurt: "sulfur", madenmanganez: "iron",
+        madenkursun: "lead", madenoltu: "jet", madenlule: "rock", madenvolfram: "tungsten",
+        madenfeldspat: "rock", madenzimpara: "emery", madenetiket: "ore"
+    };
+    return T[k] || null;
+}
+
+function iconDataUri(name) {
+    if (!name) return "";
+    if (iconCache[name]) return iconCache[name];
+    var p = path.join(ICON_DIR, name + ".png");
+    if (!fs.existsSync(p)) return "";
+    var uri = "data:image/png;base64," + fs.readFileSync(p).toString("base64");
+    iconCache[name] = uri;
+    return uri;
+}
+
+function iconsOnMap(pts, iconName) {
+    var href = iconDataUri(iconName);
+    if (!href || !pts.length) return "";
+    var size = pts.length > 10 ? 34 : (pts.length > 6 ? 40 : 46);
+    return pts.map(function (p) {
+        var x = (p.x - size / 2).toFixed(1);
+        var y = (p.y - size - 10).toFixed(1);
+        return '<image href="' + href + '" x="' + x + '" y="' + y + '" width="' + size + '" height="' + size + '" preserveAspectRatio="xMidYMid meet"/>';
+    }).join("");
+}
+
 function cropMap(provs, opts) {
     var pts = [];
     (opts.iller || []).forEach(function (name, i) {
@@ -270,7 +317,8 @@ function cropMap(provs, opts) {
     var factsY = 78 + MAP_BLOCK_H + 16;
     var facts = wrapFacts(opts.facts, 16, factsY, CANVAS_W - 32, 14);
     var H = factsY + facts.h + 28;
-    var body = mapBlock(provs, landPaths(provs, opts.iller, C.landHi) + labelsOnMap(pts, 24)) + facts.svg;
+    var overlay = iconsOnMap(pts, topicIcon(opts.file));
+    var body = mapBlock(provs, landPaths(provs, opts.iller, C.landHi) + labelsOnMap(pts, 24) + overlay) + facts.svg;
     return frame(H, opts.title, opts.kicker || "Tarım dağılımı", body);
 }
 
@@ -369,7 +417,7 @@ function main() {
             }
             pts.push({ x: fp.cx, y: fp.cy, text: mapCaption(it.label) });
         });
-        var extra = landPaths(provs, items.map(function (it) { return it.il; }), C.landHi) + labelsOnMap(pts, 20);
+        var extra = landPaths(provs, items.map(function (it) { return it.il; }), C.landHi) + labelsOnMap(pts, 20) + iconsOnMap(pts, topicIcon(title.file));
         var factsY = 78 + MAP_BLOCK_H + 16;
         var factsBox = wrapFacts(facts, 16, factsY, CANVAS_W - 32, 14);
         var H = factsY + factsBox.h + 28;
@@ -597,6 +645,7 @@ function main() {
     ];
     minerals.forEach(function (m) {
         writePng(path.join(IMG, m.file), cropMap(provs, {
+            file: m.file,
             title: m.title,
             iller: m.iller,
             yazilar: m.yazilar,
