@@ -428,7 +428,7 @@ var iconCache = {};
 function topicIcon(file) {
     var k = norm(String(file || "").replace(/\.(png|jpg)$/i, ""));
     var T = {
-        gul: "rose", elma: "apple", bugday: "bugday", pamuk: "cotton", zeytin: "olive",
+        gul: "rose", elma: "elma", bugday: "bugday", pamuk: "cotton", zeytin: "olive",
         uzum: "grapes", misir: "corn", patates: "potato", arpa: "arpa", sekerpancar: "beet",
         hashas: "poppy", incir: "fig", kayisi: "apricot", muz: "banana", anason: "anason",
         aspir: "aspir", susam: "seed", tutun: "leaf", yerfistik: "peanut", antepfistik: "antepfistik",
@@ -530,7 +530,17 @@ function main() {
     if (provs.length < 70) throw new Error("il parse hatası " + provs.length);
 
     var crops = [
-        { file: "elma.png", title: "ELMA ÜRETİMİ", iller: ["Isparta", "Karaman", "Niğde", "Nevşehir", "Konya", "Denizli", "Antalya"], facts: ["Yoğunluk: Göller Yöresi ve Niğde–Nevşehir çevresi", "İç Anadolu’nun yüksek ovalarında da yetişir"] },
+        { file: "elma.png", title: "ELMA ÜRETİMİ", urun: "Elma",
+            noktalar: [
+                { il: "Isparta", ilce: "Eğirdir", ldx: 30, ldy: -18 },
+                { il: "Karaman", ilce: "Merkez" },
+                { il: "Niğde", ilce: "Merkez", ldx: -28, ldy: 22 },
+                { il: "Nevşehir", ilce: "Derinkuyu", ldx: 24, ldy: -20 },
+                { il: "Konya", ilce: "Ereğli" },
+                { il: "Denizli", ilce: "Çal", ldx: -36, ldy: -16 },
+                { il: "Antalya", ilce: "Elmalı", ldx: 22, ldy: -22 }
+            ],
+            facts: ["Yoğunluk: Göller Yöresi ve Niğde–Nevşehir çevresi", "İç Anadolu’nun yüksek ovalarında da yetişir"] },
         { file: "bugday.png", title: "BUĞDAY ÜRETİMİ", urun: "Buğday",
             noktalar: [
                 { il: "Konya", ilce: "Cihanbeyli" },
