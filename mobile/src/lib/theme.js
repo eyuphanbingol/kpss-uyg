@@ -48,7 +48,7 @@ export var colors = {
 // ============================================================
 
 export var DERS_ICON = {
-    "Tarih": "🏛️",
+    "Tarih": "📜",
     "Coğrafya": "🗺️",
     "Türkçe": "✍️",
     "Vatandaşlık": "⚖️",

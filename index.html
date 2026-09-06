@@ -169,7 +169,7 @@
     <script src="data.js?v=4"></script>
     <script src="js/config.js?v=19"></script>
     <script src="js/trError.js?v=1"></script>
-    <script src="js/store.js?v=30"></script>
+    <script src="js/store.js?v=31"></script>
     <script src="js/planner.js?v=18"></script>
     <script src="js/clozeEngine.js?v=4"></script>
     <script src="js/mapQuiz.js?v=10"></script>
@@ -545,6 +545,103 @@
         .q-stem-bar {
             background: linear-gradient(180deg, #1D8A99, #C5A059);
         }
+
+        .plan-card {
+            border-radius: 1.5rem; padding: 18px 18px 16px;
+            background: #fff; border: 1px solid rgba(13, 44, 77, 0.08);
+            box-shadow: 0 20px 44px -24px rgba(4, 28, 36, 0.45);
+        }
+        .plan-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+        .plan-kicker {
+            margin: 0; font-size: 11px; font-weight: 800; letter-spacing: 0.12em;
+            text-transform: uppercase; color: #8A7A4A;
+        }
+        .plan-lead { margin: 6px 0 0; font-size: 15px; font-weight: 800; color: #0d2c4d; }
+        .plan-edit { font-size: 13px; font-weight: 800; color: #127880; flex-shrink: 0; }
+        .plan-meter { display: flex; align-items: center; gap: 10px; margin: 14px 0 6px; }
+        .plan-bar { flex: 1; height: 10px; border-radius: 99px; background: #e7e5e4; overflow: hidden; }
+        .plan-bar > span { display: block; height: 100%; background: linear-gradient(90deg, #127880, #C5A059); border-radius: 99px; }
+        .plan-pct { font-size: 13px; font-weight: 900; color: #127880; min-width: 2.4rem; text-align: right; }
+        .plan-sub { margin: 0 0 12px; font-size: 12px; color: #78716c; font-weight: 600; line-height: 1.4; }
+        .plan-tasks { display: grid; gap: 8px; }
+        .plan-task {
+            display: flex; align-items: center; gap: 8px;
+            border-radius: 16px; border: 1px solid #e7e5e4; border-left: 4px solid #127880;
+            background: #fafaf9; padding: 8px 8px 8px 6px;
+        }
+        .plan-task.is-done { opacity: 0.92; }
+        .plan-task.is-next { box-shadow: 0 0 0 2px rgba(18, 120, 128, 0.18); }
+        .plan-check {
+            width: 28px; height: 28px; border-radius: 999px; border: 2px solid #d6d3d1;
+            background: #fff; font-weight: 900; color: #fff; flex-shrink: 0;
+        }
+        .plan-check.on { background: #059669; border-color: #059669; }
+        .plan-task-main {
+            flex: 1; min-width: 0; display: flex; align-items: center; gap: 8px;
+            text-align: left; background: transparent; padding: 4px 4px;
+        }
+        .plan-ico { font-size: 16px; }
+        .plan-ders { font-weight: 800; font-size: 14px; color: #1c1917; }
+        .plan-hrs { margin-left: auto; font-size: 12px; font-weight: 800; color: #57534e; white-space: nowrap; }
+        .plan-st { font-size: 10px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: #a8a29e; }
+        .plan-task.is-done .plan-st { color: #059669; }
+        .plan-task.is-next .plan-st { color: #127880; }
+        .plan-rest {
+            margin-top: 14px; padding: 14px; border-radius: 16px;
+            background: linear-gradient(135deg, #fff7ed, #ecfeff);
+            border: 1px solid #fed7aa;
+        }
+        .plan-rest-t { margin: 0; font-size: 14px; font-weight: 700; line-height: 1.45; color: #44403c; }
+        .plan-editor { margin-top: 14px; display: grid; gap: 12px; }
+        .plan-presets { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 2px; }
+        .plan-preset {
+            flex: 0 0 auto; font-size: 12px; font-weight: 800; padding: 8px 12px;
+            border-radius: 999px; border: 1px solid #e7e5e4; background: #f5f5f4; color: #44403c;
+        }
+        .plan-strip { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; -webkit-overflow-scrolling: touch; }
+        .plan-chip {
+            flex: 0 0 auto; min-width: 52px; border-radius: 14px; padding: 8px 8px 6px;
+            border: 1px solid #e7e5e4; background: #fafaf9; text-align: center;
+        }
+        .plan-chip span { display: block; font-size: 12px; font-weight: 800; color: #44403c; }
+        .plan-chip em { display: block; font-style: normal; font-size: 10px; font-weight: 700; color: #a8a29e; margin-top: 2px; }
+        .plan-chip.on { background: #ecfdf5; border-color: #a7f3d0; }
+        .plan-chip.sel { border-color: #127880; box-shadow: 0 0 0 2px rgba(18,120,128,.18); background: #fff; }
+        .plan-chip.today span { color: #127880; }
+        .plan-day-sheet {
+            border-radius: 18px; padding: 14px; background: #f6f1e4; border: 1px solid rgba(13,44,77,.08);
+        }
+        .plan-day-toggle { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 15px; }
+        .plan-day-toggle small { margin-left: auto; font-weight: 700; color: #78716c; font-size: 12px; }
+        .plan-slots { display: grid; gap: 8px; margin-top: 12px; }
+        .plan-slot {
+            display: flex; align-items: center; gap: 8px; padding: 8px 10px;
+            border-radius: 14px; border: 1px solid rgba(13,44,77,.08); border-left: 4px solid #127880;
+        }
+        .plan-grip { cursor: grab; color: #a8a29e; font-weight: 900; letter-spacing: -2px; user-select: none; }
+        .plan-slot-name { flex: 1; min-width: 0; font-weight: 800; font-size: 14px; }
+        .plan-slot select {
+            font-size: 12px; font-weight: 700; padding: 4px 6px; border-radius: 8px;
+            border: 1px solid #e7e5e4; background: #fff;
+        }
+        .plan-x { color: #a8a29e; font-weight: 800; padding: 0 4px; }
+        .plan-x:hover { color: #e11d48; }
+        .plan-add {
+            width: 100%; font-size: 13px; font-weight: 700; padding: 10px 12px;
+            border-radius: 14px; border: 1px dashed #a8a29e; background: transparent;
+        }
+        .plan-rest-mini { margin: 12px 0 0; font-size: 13px; color: #78716c; }
+        html.dark .plan-card { background: #1c1917; border-color: #44403c; }
+        html.dark .plan-lead { color: #F6F1E4; }
+        html.dark .plan-ders, html.dark .plan-slot-name { color: #fafaf9; }
+        html.dark .plan-bar { background: #44403c; }
+        html.dark .plan-chip, html.dark .plan-preset { background: #292524; border-color: #44403c; }
+        html.dark .plan-chip span, html.dark .plan-preset { color: #e7e5e4; }
+        html.dark .plan-day-sheet { background: #141a18; }
+        html.dark .plan-rest { background: #1c1917; border-color: #44403c; }
+        html.dark .plan-rest-t { color: #e7e5e4; }
+        html.dark .plan-task { background: #292524; border-color: #44403c; }
+        html.dark .plan-hrs { color: #d6d3d1; }
 
         .study-card {
             border-radius: 1.5rem;
@@ -1411,7 +1508,7 @@
 
 <body class="app-bg min-h-screen text-slate-800 antialiased transition-colors duration-300">
     <div id="root"></div>
-    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=84"></script>
+    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=85"></script>
     <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.getRegistrations().then(function (regs) {

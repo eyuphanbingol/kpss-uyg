@@ -5,7 +5,7 @@ import { StudyPlanner } from "../lib/planner";
 import { StudentStore } from "../lib/store";
 import { go } from "../nav";
 import { Card, ScrollScreen, Badge } from "../ui";
-import { colors, examTrackName } from "../lib/theme";
+import { colors, examTrackName, DERS_ICON } from "../lib/theme";
 
 // ============================================================
 // BUGUN SCREEN
@@ -52,7 +52,29 @@ export default function BugunScreen({ navigation }) {
             .join("  ·  ");
     }
 
-    var isPlanReady = saved && saved.ready;
+    var isPlanReady = !!(saved && saved.ready);
+    var DERS_ACCENT = { "Tarih": "#ea580c", "Coğrafya": "#059669", "Türkçe": "#2563eb", "Vatandaşlık": "#7c3aed", "Güncel Bilgiler": "#db2777" };
+    var todaySlots = (today && today.on ? (today.slots || []) : []).filter(Boolean);
+    var checks = (StudentStore.planChecksToday && StudentStore.planChecksToday()) || {};
+    var goalH = StudentStore.daySlotHours ? StudentStore.daySlotHours({ slots: todaySlots }) : 0;
+    var doneH = 0;
+    todaySlots.forEach(function (s) { if (checks[s.ders]) doneH += Number(s.hours) || 0; });
+    var pct = goalH > 0 ? Math.round((doneH / goalH) * 100) : 0;
+    var workToday = !!(isPlanReady && today && today.on && todaySlots.length);
+    var restMsgs = [
+        "Bugün dinlenme günü ☕ Zihnini şarj et, yarın maratona devam!",
+        "Mola da programın parçası. Bugün toparlan, yarın daha keskin olursun.",
+        "Serbest gün. Kısa yürüyüş, su, erken uyku — yarın bloklara tam güç."
+    ];
+    var restText = restMsgs[new Date().getDate() % restMsgs.length];
+
+    function fmtH(n) {
+        var x = Number(n) || 0;
+        if (x === 1) return "1 saat";
+        if (x === 0.5) return "30 dk";
+        if (x % 1 === 0.5) return Math.floor(x) + ",5 saat";
+        return x + " saat";
+    }
 
     // ============================================================
     // RENDER
@@ -91,25 +113,41 @@ export default function BugunScreen({ navigation }) {
             {/* Study Plan Card */}
             <Card style={[isDark && styles.cardDark]}>
                 <View style={styles.cardHeader}>
-                    <Text style={[styles.cardTitle, isDark && styles.textMuted]}>
-                        Günlük Program
-                    </Text>
+                    <Text style={[styles.cardTitle, isDark && styles.textMuted]}>📅 Bugünün hedefi</Text>
                     <Pressable onPress={function () { go(navigation, "Program"); }}>
-                        <Text style={styles.cardAction}>
-                            {isPlanReady ? "Düzenle" : "Oluştur"}
-                        </Text>
+                        <Text style={styles.cardAction}>{isPlanReady ? "Düzenle" : "Oluştur"}</Text>
                     </Pressable>
                 </View>
-                <Text style={[styles.planText, isDark && styles.textLight]}>
-                    {planText}
-                </Text>
-                {isPlanReady && (
-                    <View style={styles.planStatus}>
-                        <View style={styles.statusDot} />
-                        <Text style={[styles.statusText, isDark && styles.textMuted]}>
-                            Program aktif
-                        </Text>
+                {workToday ? (
+                    <View>
+                        <Text style={[styles.planText, isDark && styles.textLight]}>{fmtH(doneH)} / {fmtH(goalH)} tamamlandı</Text>
+                        <View style={[styles.progressBar, { marginBottom: 10 }]}>
+                            <View style={[styles.progressFill, { width: Math.min(100, pct) + "%", backgroundColor: colors.indigo }]} />
+                        </View>
+                        {todaySlots.map(function (s, i) {
+                            var done = !!checks[s.ders];
+                            var next = !done && todaySlots.slice(0, i).every(function (x) { return checks[x.ders]; });
+                            return (
+                                <View key={s.ders} style={[styles.taskRow, { borderLeftColor: DERS_ACCENT[s.ders] || colors.indigo }]}>
+                                    <Pressable onPress={function () { StudentStore.togglePlanSlot(s.ders); }} style={[styles.taskCheck, done && styles.taskCheckOn]}>
+                                        <Text style={styles.taskCheckText}>{done ? "✓" : ""}</Text>
+                                    </Pressable>
+                                    <Pressable onPress={function () { go(navigation, "KonuList", { ders: s.ders }); }} style={{ flex: 1 }}>
+                                        <Text style={[styles.taskName, isDark && styles.textLight]}>
+                                            {(DERS_ICON[s.ders] || "📚") + "  " + s.ders}
+                                        </Text>
+                                        <Text style={[styles.statusText, isDark && styles.textMuted]}>
+                                            {fmtH(s.hours)} · {done ? "Tamamlandı" : (next ? "Sıradaki" : "Bekliyor")}
+                                        </Text>
+                                    </Pressable>
+                                </View>
+                            );
+                        })}
                     </View>
+                ) : (
+                    <Text style={[styles.planText, isDark && styles.textLight]}>
+                        {isPlanReady ? restText : "Her güne ders ve saat yaz."}
+                    </Text>
                 )}
             </Card>
 
@@ -313,6 +351,40 @@ var styles = StyleSheet.create({
     statusText: {
         fontSize: 11,
         color: colors.muted,
+    },
+    taskRow: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 10,
+        borderLeftWidth: 4,
+        paddingVertical: 8,
+        paddingHorizontal: 8,
+        borderRadius: 12,
+        backgroundColor: "#FAFAF9",
+        marginBottom: 8
+    },
+    taskCheck: {
+        width: 28,
+        height: 28,
+        borderRadius: 14,
+        borderWidth: 2,
+        borderColor: "#D6D3D1",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#fff"
+    },
+    taskCheckOn: {
+        backgroundColor: "#059669",
+        borderColor: "#059669"
+    },
+    taskCheckText: {
+        color: "#fff",
+        fontWeight: "800"
+    },
+    taskName: {
+        fontSize: 14,
+        fontWeight: "800",
+        color: colors.text
     },
 
     // ---------- Stats ----------

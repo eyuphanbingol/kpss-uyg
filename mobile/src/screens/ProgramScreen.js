@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Pressable, Text, View, StyleSheet } from "react-native";
+import { Pressable, Text, View, StyleSheet, ScrollView } from "react-native";
 import { useApp } from "../AppProvider";
 import { StudentStore } from "../lib/store";
 import { PrimaryButton, ScrollScreen, Card } from "../ui";
-import { colors } from "../lib/theme";
+import { colors, DERS_ICON } from "../lib/theme";
 
 // ============================================================
 // PROGRAM SCREEN
@@ -20,7 +20,11 @@ export default function ProgramScreen({ navigation }) {
     var draft = _draft[0];
     var setDraft = _draft[1];
     
+    var _edit = useState(StudentStore.planDayId());
+    var editDay = _edit[0];
+    var setEditDay = _edit[1];
     var days = StudentStore.WEEK_DAYS;
+    var DERS_ACCENT = { "Tarih": "#ea580c", "Coğrafya": "#059669", "Türkçe": "#2563eb", "Vatandaşlık": "#7c3aed", "Güncel Bilgiler": "#db2777" };
 
     // ---------- Helpers ----------
     function patchDay(id, fn) {
@@ -48,6 +52,17 @@ export default function ProgramScreen({ navigation }) {
         patchDay(dayId, function (day) {
             day.on = true;
             day.slots.push({ ders: ders, hours: 1 });
+        });
+    }
+
+    function moveSlot(dayId, from, dir) {
+        patchDay(dayId, function (day) {
+            var slots = (day.slots || []).slice();
+            var to = from + dir;
+            if (to < 0 || to >= slots.length) return;
+            var item = slots.splice(from, 1)[0];
+            slots.splice(to, 0, item);
+            day.slots = slots;
         });
     }
 
@@ -80,101 +95,84 @@ export default function ProgramScreen({ navigation }) {
                 </Text>
             </View>
 
-            {/* Days */}
-            {days.map(function (w) {
+            <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ marginBottom: 10 }} contentContainerStyle={{ gap: 8 }}>
+                {[
+                    { id: "yogun", t: "Yoğun" },
+                    { id: "hafif", t: "Hafif" },
+                    { id: "haftasonu", t: "Hafta sonu" }
+                ].map(function (p) {
+                    return (
+                        <Pressable key={p.id} onPress={function () { setDraft(StudentStore.applyPlanPreset(p.id, dersKeys)); }}
+                            style={[styles.addBtn, { marginRight: 6 }]}>
+                            <Text style={styles.addBtnText}>{p.t}</Text>
+                        </Pressable>
+                    );
+                })}
+            </ScrollView>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ marginBottom: 12 }} contentContainerStyle={{ gap: 8 }}>
+                {days.map(function (w) {
+                    var d = draft.days[w.id];
+                    var sel = editDay === w.id;
+                    return (
+                        <Pressable key={w.id} onPress={function () { setEditDay(w.id); }}
+                            style={[styles.dayChip, sel && styles.dayChipOn, d.on && styles.dayChipActive]}>
+                            <Text style={[styles.dayName, { fontSize: 13 }, isDark && styles.textLight]}>{w.short}</Text>
+                            <Text style={[styles.dayTotal, { fontSize: 10 }]}>{d.on && getDayTotal(d) ? getDayTotal(d) + " sa" : "—"}</Text>
+                        </Pressable>
+                    );
+                })}
+            </ScrollView>
+            {function () {
+                var w = days.filter(function (x) { return x.id === editDay; })[0] || days[0];
                 var d = draft.days[w.id];
                 var isActive = !!d.on;
-                var totalHours = getDayTotal(d);
                 var availableDers = dersKeys.filter(function (k) {
                     return !(d.slots || []).some(function (s) { return s.ders === k; });
                 });
-
                 return (
-                    <Card 
-                        key={w.id} 
-                        style={[
-                            styles.dayCard,
-                            isActive && styles.dayCardActive,
-                            isDark && styles.cardDark,
-                            !isActive && isDark && { opacity: 0.5 }
-                        ]}
-                    >
-                        {/* Day Header */}
-                        <Pressable 
-                            onPress={function () { toggleDay(w.id); }} 
-                            style={styles.dayHeader}
-                        >
+                    <Card style={[styles.dayCard, isActive && styles.dayCardActive, isDark && styles.cardDark]}>
+                        <Pressable onPress={function () { toggleDay(w.id); }} style={styles.dayHeader}>
                             <View style={styles.dayLeft}>
-                                <Text style={[styles.dayCheck, isActive && styles.dayCheckActive]}>
-                                    {isActive ? "✓" : "○"}
-                                </Text>
-                                <Text style={[styles.dayName, isDark && styles.textLight]}>
-                                    {w.full}
-                                </Text>
+                                <Text style={[styles.dayCheck, isActive && styles.dayCheckActive]}>{isActive ? "✓" : "○"}</Text>
+                                <Text style={[styles.dayName, isDark && styles.textLight]}>{w.full}</Text>
                             </View>
-                            {isActive && totalHours > 0 && (
-                                <Text style={[styles.dayTotal, isDark && styles.textMuted]}>
-                                    {totalHours} sa
-                                </Text>
+                            {isActive && getDayTotal(d) > 0 ? (
+                                <Text style={[styles.dayTotal, isDark && styles.textMuted]}>{getDayTotal(d)} sa</Text>
+                            ) : (
+                                <Text style={[styles.dayTotal, isDark && styles.textMuted]}>dinlenme</Text>
                             )}
                         </Pressable>
-
-                        {/* Slots */}
-                        {isActive && (d.slots || []).map(function (s) {
+                        {isActive && (d.slots || []).map(function (s, si) {
                             var hourText = s.hours === 0.5 ? "30 dk" : s.hours + " sa";
                             return (
-                                <View key={s.ders} style={styles.slotRow}>
+                                <View key={s.ders} style={[styles.slotRow, { borderLeftWidth: 4, borderLeftColor: DERS_ACCENT[s.ders] || colors.indigo }]}>
+                                    <Pressable onPress={function () { moveSlot(w.id, si, -1); }}><Text style={styles.slotHour}>↑</Text></Pressable>
+                                    <Pressable onPress={function () { moveSlot(w.id, si, 1); }}><Text style={styles.slotHour}>↓</Text></Pressable>
                                     <View style={styles.slotLeft}>
-                                        <View style={styles.slotDot} />
-                                        <Text style={[styles.slotText, isDark && styles.textLight]}>
-                                            {s.ders}
-                                        </Text>
-                                        <Text style={[styles.slotHour, isDark && styles.textMuted]}>
-                                            {hourText}
-                                        </Text>
+                                        <Text style={[styles.slotText, isDark && styles.textLight]}>{(DERS_ICON[s.ders] || "📚") + " " + s.ders}</Text>
+                                        <Text style={[styles.slotHour, isDark && styles.textMuted]}>{hourText}</Text>
                                     </View>
-                                    <Pressable 
-                                        onPress={function () { removeSlot(w.id, s.ders); }}
-                                        style={styles.slotRemove}
-                                    >
+                                    <Pressable onPress={function () { removeSlot(w.id, s.ders); }} style={styles.slotRemove}>
                                         <Text style={styles.slotRemoveText}>✕</Text>
                                     </Pressable>
                                 </View>
                             );
                         })}
-
-                        {/* Add Buttons */}
-                        {isActive && availableDers.length > 0 && (
+                        {isActive && availableDers.length > 0 ? (
                             <View style={styles.addRow}>
                                 {availableDers.slice(0, 5).map(function (k) {
                                     return (
-                                        <Pressable 
-                                            key={k} 
-                                            onPress={function () { addSlot(w.id, k); }}
-                                            style={[styles.addBtn, isDark && styles.addBtnDark]}
-                                        >
-                                            <Text style={[styles.addBtnText, isDark && { color: colors.indigo }]}>
-                                                + {k}
-                                            </Text>
+                                        <Pressable key={k} onPress={function () { addSlot(w.id, k); }}
+                                            style={[styles.addBtn, isDark && styles.addBtnDark]}>
+                                            <Text style={[styles.addBtnText, isDark && { color: colors.indigo }]}>+ {k}</Text>
                                         </Pressable>
                                     );
                                 })}
-                                {availableDers.length > 5 && (
-                                    <Text style={[styles.addMore, isDark && styles.textMuted]}>
-                                        +{availableDers.length - 5} ders
-                                    </Text>
-                                )}
                             </View>
-                        )}
-
-                        {isActive && availableDers.length === 0 && (d.slots || []).length > 0 && (
-                            <Text style={[styles.allAdded, isDark && styles.textMuted]}>
-                                Tüm dersler eklendi ✓
-                            </Text>
-                        )}
+                        ) : null}
                     </Card>
                 );
-            })}
+            }()}
 
             {/* Save Button */}
             <PrimaryButton 
@@ -274,6 +272,24 @@ var styles = StyleSheet.create({
         fontSize: 12,
         fontWeight: "500",
     },
+    dayChip: {
+        minWidth: 52,
+        paddingVertical: 8,
+        paddingHorizontal: 10,
+        borderRadius: 14,
+        borderWidth: 1,
+        borderColor: "#E7E5E4",
+        backgroundColor: "#FAFAF9",
+        alignItems: "center",
+        marginRight: 6
+    },
+    dayChipOn: {
+        borderColor: colors.indigo,
+        backgroundColor: "#fff"
+    },
+    dayChipActive: {
+        backgroundColor: "#ECFDF5"
+    },
 
     // ---------- Slot ----------
     slotRow: {
@@ -281,7 +297,7 @@ var styles = StyleSheet.create({
         justifyContent: "space-between",
         alignItems: "center",
         marginTop: 8,
-        marginLeft: 26,
+        marginLeft: 0,
         paddingVertical: 4,
         paddingHorizontal: 8,
         backgroundColor: "#F5F5F4",

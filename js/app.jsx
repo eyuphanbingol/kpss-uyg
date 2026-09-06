@@ -1,11 +1,11 @@
 const { useState, useEffect, useMemo, useRef } = React;
 
 const DERS_THEME = {
-    "Tarih": { text: "text-stone-700", icon: "🏛️", darkText: "text-stone-300" },
-    "Coğrafya": { text: "text-stone-700", icon: "🗺️", darkText: "text-stone-300" },
-    "Türkçe": { text: "text-stone-700", icon: "✍️", darkText: "text-stone-300" },
-    "Vatandaşlık": { text: "text-stone-700", icon: "⚖️", darkText: "text-stone-300" },
-    "Güncel Bilgiler": { text: "text-stone-700", icon: "📰", darkText: "text-stone-300" }
+    "Tarih": { text: "text-stone-700", icon: "📜", darkText: "text-stone-300", accent: "#ea580c", pastel: "#ffedd5" },
+    "Coğrafya": { text: "text-stone-700", icon: "🗺️", darkText: "text-stone-300", accent: "#059669", pastel: "#d1fae5" },
+    "Türkçe": { text: "text-stone-700", icon: "✍️", darkText: "text-stone-300", accent: "#2563eb", pastel: "#dbeafe" },
+    "Vatandaşlık": { text: "text-stone-700", icon: "⚖️", darkText: "text-stone-300", accent: "#7c3aed", pastel: "#ede9fe" },
+    "Güncel Bilgiler": { text: "text-stone-700", icon: "📰", darkText: "text-stone-300", accent: "#db2777", pastel: "#fce7f3" }
 };
 
 function stripChoicePrefix(opt) {
@@ -252,6 +252,21 @@ function formatSlotLine(slots, catalog) {
     return parts.join(" · ");
 }
 
+function dersAccent(ders) {
+    var t = DERS_THEME[ders];
+    return t || { icon: "📚", accent: "#127880", pastel: "#e7f6f4" };
+}
+
+function restDayCopy() {
+    var msgs = [
+        "Bugün dinlenme günü ☕ Zihnini şarj et, yarın maratona devam!",
+        "Mola da programın parçası. Bugün toparlan, yarın daha keskin olursun.",
+        "Serbest gün. Kısa yürüyüş, su, erken uyku — yarın bloklara tam güç."
+    ];
+    var i = new Date().getDate() % msgs.length;
+    return msgs[i];
+}
+
 function StudyProgram(props) {
     const kpssData = props.kpssData || {};
     const dersKeys = Object.keys(kpssData);
@@ -259,10 +274,19 @@ function StudyProgram(props) {
     const ready = !!(saved && saved.ready);
     const [open, setOpen] = useState(!ready);
     const [draft, setDraft] = useState(function () { return StudentStore.cloneStudyPlan(saved); });
+    const [editDay, setEditDay] = useState(function () { return StudentStore.planDayId(); });
+    const [burst, setBurst] = useState(0);
+    const dragIdx = useRef(null);
     const days = StudentStore.WEEK_DAYS;
     const todayId = StudentStore.planDayId();
     const live = ready ? StudentStore.cloneStudyPlan(saved) : null;
     const today = live && live.days[todayId];
+    const checks = (StudentStore.planChecksToday && StudentStore.planChecksToday()) || {};
+    const todaySlots = (today && today.on ? (today.slots || []) : []).filter(function (s) { return kpssData[s.ders]; });
+    const goalH = StudentStore.daySlotHours({ slots: todaySlots });
+    const doneH = todaySlots.reduce(function (sum, s) { return sum + (checks[s.ders] ? Number(s.hours) || 0 : 0); }, 0);
+    const pct = goalH > 0 ? Math.round((doneH / goalH) * 100) : 0;
+    const workToday = ready && today && today.on && todaySlots.length;
 
     function patchDay(id, fn) {
         setDraft(function (prev) {
@@ -283,86 +307,173 @@ function StudyProgram(props) {
         });
     }
 
-    var todayLine = null;
-    if (ready && today && today.on) {
-        var line = formatSlotLine(today.slots, kpssData);
-        todayLine = line ? ("Bugün " + line) : "Bugün gün açık; ders ve saat ekle";
-    } else if (ready) {
-        todayLine = "Bugün programında çalışma günü değil";
+    function moveSlot(dayId, from, to) {
+        if (from == null || to == null || from === to) return;
+        patchDay(dayId, function (day) {
+            var slots = (day.slots || []).slice();
+            if (from < 0 || from >= slots.length || to < 0 || to >= slots.length) return;
+            var item = slots.splice(from, 1)[0];
+            slots.splice(to, 0, item);
+            day.slots = slots;
+        });
     }
+
+    function toggleDone(ders) {
+        var was = !!checks[ders];
+        StudentStore.togglePlanSlot(ders);
+        if (!was) setBurst(function (n) { return n + 1; });
+    }
+
+    var ed = draft.days[editDay] || { on: false, slots: [] };
+    var used = {};
+    (ed.slots || []).forEach(function (s) { used[s.ders] = true; });
+    var leftover = dersKeys.filter(function (k) { return !used[k]; });
 
     return (
         <div className="mb-6 slide-up">
-            <div className="rounded-3xl glass p-5 card-hover">
-                <div className="flex justify-between items-start gap-3">
+            {burst ? <Confetti key={burst} /> : null}
+            <div className="plan-card">
+                <div className="plan-head">
                     <div>
-                        <p className="text-xs font-bold uppercase tracking-wider text-stone-400 flex items-center gap-2">
-                            <span>📋</span> Programın
-                        </p>
-                        <p className="text-sm font-medium mt-1 text-stone-600 dark:text-stone-300">{todayLine || "Her güne ayrı ders ve saat yaz."}</p>
+                        <p className="plan-kicker">📅 Bugünün hedefi</p>
+                        {!open ? (
+                            workToday ? (
+                                <p className="plan-lead">{formatHours(doneH)} / {formatHours(goalH)} tamamlandı</p>
+                            ) : ready ? (
+                                <p className="plan-lead">Dinlenme günü</p>
+                            ) : (
+                                <p className="plan-lead">Her güne ders ve saat yaz.</p>
+                            )
+                        ) : (
+                            <p className="plan-lead">Günü seç, dersleri sırala, kaydet.</p>
+                        )}
                     </div>
                     <button type="button" onClick={function () {
                         setDraft(StudentStore.cloneStudyPlan(saved));
+                        setEditDay(todayId);
                         setOpen(!open);
-                    }} className="text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline shrink-0">
+                    }} className="plan-edit">
                         {open ? "Kapat" : (ready ? "Düzenle" : "Oluştur")}
                     </button>
                 </div>
+
+                {!open && workToday ? (
+                    <div>
+                        <div className="plan-meter">
+                            <div className="plan-bar"><span style={{ width: Math.min(100, pct) + "%" }} /></div>
+                            <span className="plan-pct">%{pct}</span>
+                        </div>
+                        <p className="plan-sub">Bugünkü hedef · {todaySlots.map(function (s) { return formatHours(s.hours) + " " + s.ders; }).join(" · ")}</p>
+                        <div className="plan-tasks">
+                            {todaySlots.map(function (s, i) {
+                                var th = dersAccent(s.ders);
+                                var done = !!checks[s.ders];
+                                var next = !done && todaySlots.slice(0, i).every(function (x) { return checks[x.ders]; });
+                                var st = done ? "Tamamlandı" : (next ? "Sıradaki" : "Bekliyor");
+                                return (
+                                    <div key={s.ders} className={"plan-task" + (done ? " is-done" : "") + (next ? " is-next" : "")} style={{ borderLeftColor: th.accent, background: done ? th.pastel : undefined }}>
+                                        <button type="button" className={"plan-check" + (done ? " on" : "")} aria-label={s.ders + " tamamla"}
+                                            onClick={function () { toggleDone(s.ders); }}>
+                                            {done ? "✓" : ""}
+                                        </button>
+                                        <button type="button" className="plan-task-main" onClick={function () { props.onDers && props.onDers(s.ders); }}>
+                                            <span className="plan-ico">{th.icon}</span>
+                                            <span className="plan-ders">{s.ders}</span>
+                                            <span className="plan-hrs">{formatHours(s.hours)}</span>
+                                            <span className="plan-st">{st}</span>
+                                        </button>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                ) : null}
+
+                {!open && ready && !workToday ? (
+                    <div className="plan-rest">
+                        <p className="plan-rest-t">{restDayCopy()}</p>
+                    </div>
+                ) : null}
+
                 {open ? (
-                    <div className="mt-5 space-y-3">
-                        {days.map(function (w) {
-                            var d = draft.days[w.id];
-                            var used = {};
-                            (d.slots || []).forEach(function (s) { used[s.ders] = true; });
-                            var leftover = dersKeys.filter(function (k) { return !used[k]; });
-                            return (
-                                <div key={w.id} className={"rounded-2xl px-4 py-3 transition-all " +
-                                    (d.on ? "bg-indigo-50/40 dark:bg-indigo-950/20 border border-indigo-100 dark:border-indigo-800/30" : "opacity-50 bg-stone-50 dark:bg-stone-800/30")}>
-                                    <label className="flex items-center gap-3 text-sm font-semibold cursor-pointer">
-                                        <input type="checkbox" checked={!!d.on} onChange={function (e) { patchDay(w.id, function (day) { day.on = e.target.checked; }); }}
-                                            className="w-4 h-4 rounded border-stone-300 text-indigo-600 focus:ring-indigo-500" />
-                                        <span>{w.full}</span>
-                                        {d.on && d.slots.length ? (
-                                            <span className="text-xs font-normal text-stone-400">toplam {formatHours(StudentStore.daySlotHours(d))}</span>
-                                        ) : null}
-                                    </label>
-                                    {d.on ? (
-                                        <div className="mt-3 space-y-2.5 pl-6">
-                                            {(d.slots || []).map(function (s, si) {
-                                                return (
-                                                    <div key={s.ders} className="flex items-center gap-2 bg-white dark:bg-stone-800/50 rounded-xl px-3 py-2 shadow-sm">
-                                                        <span className="flex-1 text-sm font-medium min-w-0 truncate">{s.ders}</span>
-                                                        <select value={String(s.hours)} onChange={function (e) {
-                                                            var h = Number(e.target.value);
-                                                            patchDay(w.id, function (day) { day.slots[si].hours = h; });
-                                                        }} className="text-sm px-2 py-1 rounded-lg border border-stone-200 dark:border-stone-700 bg-transparent font-medium">
-                                                            {hourOptions().map(function (h) {
-                                                                return <option key={h} value={h}>{formatHours(h)}</option>;
-                                                            })}
-                                                        </select>
-                                                        <button type="button" className="text-xs text-stone-400 hover:text-rose-500 px-1 transition-colors" onClick={function () {
-                                                            patchDay(w.id, function (day) {
-                                                                day.slots = day.slots.filter(function (x) { return x.ders !== s.ders; });
-                                                            });
-                                                        }}>✕</button>
-                                                    </div>
-                                                );
-                                            })}
-                                            {leftover.length ? (
-                                                <select key={leftover.join("|")} defaultValue="" onChange={function (e) {
-                                                    addSlot(w.id, e.target.value);
-                                                }} className="w-full text-sm px-3 py-2.5 rounded-xl border border-dashed border-stone-300 dark:border-stone-600 bg-transparent focus:border-indigo-400">
-                                                    <option value="" disabled>+ Ders ekle</option>
-                                                    {leftover.map(function (k) {
-                                                        return <option key={k} value={k}>{k}</option>;
+                    <div className="plan-editor">
+                        <div className="plan-presets">
+                            {[
+                                { id: "yogun", t: "Yoğun program" },
+                                { id: "hafif", t: "Hafif program" },
+                                { id: "haftasonu", t: "Sadece hafta sonu" }
+                            ].map(function (p) {
+                                return (
+                                    <button key={p.id} type="button" className="plan-preset" onClick={function () {
+                                        setDraft(StudentStore.applyPlanPreset(p.id, dersKeys));
+                                    }}>{p.t}</button>
+                                );
+                            })}
+                        </div>
+                        <div className="plan-strip">
+                            {days.map(function (w) {
+                                var d = draft.days[w.id];
+                                var on = d && d.on;
+                                var sel = editDay === w.id;
+                                return (
+                                    <button key={w.id} type="button" className={"plan-chip" + (sel ? " sel" : "") + (on ? " on" : "") + (w.id === todayId ? " today" : "")}
+                                        onClick={function () { setEditDay(w.id); }}>
+                                        <span>{w.short}</span>
+                                        <em>{on && d.slots.length ? formatHours(StudentStore.daySlotHours(d)) : "—"}</em>
+                                    </button>
+                                );
+                            })}
+                        </div>
+                        <div className="plan-day-sheet">
+                            <label className="plan-day-toggle">
+                                <input type="checkbox" checked={!!ed.on} onChange={function (e) { patchDay(editDay, function (day) { day.on = e.target.checked; }); }} />
+                                <span>{(days.filter(function (w) { return w.id === editDay; })[0] || {}).full || editDay}</span>
+                                {ed.on && ed.slots.length ? <small>toplam {formatHours(StudentStore.daySlotHours(ed))}</small> : <small>dinlenme</small>}
+                            </label>
+                            {ed.on ? (
+                                <div className="plan-slots">
+                                    {(ed.slots || []).map(function (s, si) {
+                                        var th = dersAccent(s.ders);
+                                        return (
+                                            <div key={s.ders} className="plan-slot" style={{ borderLeftColor: th.accent, background: th.pastel }}
+                                                draggable="true"
+                                                onDragStart={function () { dragIdx.current = si; }}
+                                                onDragOver={function (e) { e.preventDefault(); }}
+                                                onDrop={function (e) { e.preventDefault(); moveSlot(editDay, dragIdx.current, si); dragIdx.current = null; }}>
+                                                <span className="plan-grip" title="Sürükle" aria-hidden="true">⋮⋮</span>
+                                                <span className="plan-ico">{th.icon}</span>
+                                                <span className="plan-slot-name">{s.ders}</span>
+                                                <select value={String(s.hours)} onChange={function (e) {
+                                                    var h = Number(e.target.value);
+                                                    patchDay(editDay, function (day) { day.slots[si].hours = h; });
+                                                }}>
+                                                    {hourOptions().map(function (h) {
+                                                        return <option key={h} value={h}>{formatHours(h)}</option>;
                                                     })}
                                                 </select>
-                                            ) : (dersKeys.length ? null : <p className="text-xs text-stone-400">Ders listesi henüz yok.</p>)}
-                                        </div>
-                                    ) : null}
+                                                <button type="button" className="plan-x" onClick={function () {
+                                                    patchDay(editDay, function (day) {
+                                                        day.slots = day.slots.filter(function (x) { return x.ders !== s.ders; });
+                                                    });
+                                                }}>✕</button>
+                                            </div>
+                                        );
+                                    })}
+                                    {leftover.length ? (
+                                        <select key={leftover.join("|")} defaultValue="" onChange={function (e) {
+                                            addSlot(editDay, e.target.value);
+                                        }} className="plan-add">
+                                            <option value="" disabled>+ Ders ekle</option>
+                                            {leftover.map(function (k) {
+                                                return <option key={k} value={k}>{dersAccent(k).icon} {k}</option>;
+                                            })}
+                                        </select>
+                                    ) : (dersKeys.length ? null : <p className="text-xs text-stone-400">Ders listesi henüz yok.</p>)}
                                 </div>
-                            );
-                        })}
+                            ) : (
+                                <p className="plan-rest-mini">Bu gün kapalı. Açınca ders ekleyebilirsin.</p>
+                            )}
+                        </div>
                         <button type="button" onClick={function () {
                             StudentStore.saveStudyPlan(draft);
                             setOpen(false);
@@ -372,18 +483,6 @@ function StudyProgram(props) {
                     </div>
                 ) : null}
             </div>
-            {ready && today && today.on && today.slots && today.slots.length ? (
-                <div className="flex flex-wrap gap-2 mt-3">
-                    {today.slots.filter(function (s) { return kpssData[s.ders]; }).map(function (s) {
-                        return (
-                            <button key={s.ders} type="button" onClick={function () { props.onDers && props.onDers(s.ders); }}
-                                className="px-4 py-1.5 rounded-full text-sm font-medium bg-indigo-50 text-indigo-700 dark:bg-indigo-950/30 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/30 hover:bg-indigo-100 transition-colors">
-                                {s.ders} · {formatHours(s.hours)}
-                            </button>
-                        );
-                    })}
-                </div>
-            ) : null}
         </div>
     );
 }

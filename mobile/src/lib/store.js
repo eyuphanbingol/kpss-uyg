@@ -44,6 +44,7 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             weeklyHours: 7,
             dailyHours: 0.75,
             studyPlan: null,
+            planChecks: null,
             blocked: false,
             authUserId: null,
             email: "",
@@ -128,6 +129,77 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             if (d && d.on) sum += daySlotHours(d);
         });
         return Math.round(sum * 10) / 10;
+    }
+
+    function preferredDers(keys) {
+        var prefer = ["Tarih", "Coğrafya", "Vatandaşlık", "Türkçe", "Güncel Bilgiler"];
+        var out = [];
+        prefer.forEach(function (n) { if ((keys || []).indexOf(n) >= 0) out.push(n); });
+        (keys || []).forEach(function (k) { if (out.indexOf(k) < 0) out.push(k); });
+        return out;
+    }
+
+    function slot(ders, hours) {
+        return { ders: ders, hours: hours };
+    }
+
+    function applyPlanPreset(kind, dersKeys) {
+        var d = preferredDers(dersKeys);
+        var t = d[0] || "Tarih";
+        var c = d[1] || d[0] || "Coğrafya";
+        var v = d[2] || d[0] || "Vatandaşlık";
+        var tr = d[3] || d[0] || "Türkçe";
+        var g = d[4] || d[2] || d[0] || "Güncel Bilgiler";
+        var plan = defaultStudyPlan();
+        if (kind === "hafif") {
+            plan.days = {
+                pzt: { on: true, slots: [slot(t, 1.5)] },
+                sal: { on: true, slots: [slot(c, 1.5)] },
+                car: { on: true, slots: [slot(tr, 1)] },
+                per: { on: true, slots: [slot(t, 1)] },
+                cum: { on: true, slots: [slot(c, 1)] },
+                cmt: { on: false, slots: [] },
+                paz: { on: false, slots: [] }
+            };
+        } else if (kind === "haftasonu") {
+            plan.days = {
+                pzt: { on: false, slots: [] },
+                sal: { on: false, slots: [] },
+                car: { on: false, slots: [] },
+                per: { on: false, slots: [] },
+                cum: { on: false, slots: [] },
+                cmt: { on: true, slots: [slot(t, 2), slot(c, 2)] },
+                paz: { on: true, slots: [slot(v, 1), slot(tr, 1), slot(g, 1)] }
+            };
+        } else {
+            plan.days = {
+                pzt: { on: true, slots: [slot(t, 2), slot(c, 2)] },
+                sal: { on: true, slots: [slot(v, 0.5), slot(g, 0.5), slot(t, 1.5), slot(c, 1.5)] },
+                car: { on: true, slots: [slot(tr, 1), slot(v, 1), slot(g, 1)] },
+                per: { on: true, slots: [slot(t, 1), slot(c, 1)] },
+                cum: { on: true, slots: [slot(v, 0.5), slot(c, 1), slot(t, 1), slot(tr, 1), slot(g, 0.5)] },
+                cmt: { on: true, slots: [slot(t, 2), slot(c, 1)] },
+                paz: { on: false, slots: [] }
+            };
+        }
+        return cloneStudyPlan(plan);
+    }
+
+    function planChecksToday() {
+        var pc = state.userProfile && state.userProfile.planChecks;
+        var d = todayStr();
+        if (!pc || pc.date !== d || !isObj(pc.done)) return {};
+        return pc.done;
+    }
+
+    function togglePlanSlot(ders) {
+        if (!ders) return;
+        var d = todayStr();
+        var prev = planChecksToday();
+        var next = Object.assign({}, prev);
+        next[ders] = !next[ders];
+        state.userProfile.planChecks = { date: d, done: next };
+        emit();
     }
 
     function defaultState() {
@@ -802,6 +874,9 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
         planDayId: planDayId,
         studyPlanWeekHours: studyPlanWeekHours,
         daySlotHours: daySlotHours,
+        applyPlanPreset: applyPlanPreset,
+        planChecksToday: planChecksToday,
+        togglePlanSlot: togglePlanSlot,
         saveStudyPlan: function (plan) {
             var next = cloneStudyPlan(plan);
             next.ready = true;
