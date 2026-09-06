@@ -235,21 +235,59 @@
         });
     }
 
-    function tabuFromItem(item, konu) {
-        var ans = stripChoice(item.correct || item.answer || "");
-        if (ans.length < 3 || ans.length > 28) return null;
-        if (/[—–→]/.test(ans)) return null;
-        var f = fold(ans);
-        if (/^(i ve |ii ve |i, |ii, |iii|yalniz|hepsi)/.test(f)) return null;
-        if (/^[ivx\s,ve]+$/.test(f)) return null;
-        var label = String(konu || "").replace(/^.*\(/, "").replace(/\)\s*$/, "") || "KPSS";
-        var stem = String(item.question || "");
-        var clues = [label, stem.length > 48 ? stem.slice(0, 46) + "…" : stem];
-        var distract = (item.options || item.choices || []).filter(function (o) { return stripChoice(o) !== ans; });
-        if (distract[0]) clues.push(stripChoice(distract[0]).slice(0, 40));
-        var choices = [ans].concat(distract.map(stripChoice)).filter(Boolean);
-        while (choices.length < 4) choices.push("—");
-        return { answer: ans, clues: clues.slice(0, 3), choices: choices.slice(0, 4) };
+    function parseNoteTitle(html) {
+        var m = String(html || "").match(/tracking-wider">([\s\S]*?)<\/span>/i);
+        var raw = stripHtml(m && m[1] || "").replace(/^\s*[^\sA-Za-zÇĞİÖŞÜçğıöşü0-9]+\s*/, "").replace(/\s+/g, " ").trim();
+        if (!raw) return "";
+        var bits = raw.split(/\s*[-–—]\s*/).map(function (s) { return s.trim(); }).filter(Boolean);
+        if (bits.length >= 2) {
+            var last = bits[bits.length - 1];
+            var first = bits[0];
+            if (/bolge|yore|donem|genel bilgi/i.test(fold(last))) return first;
+            return last;
+        }
+        return raw;
+    }
+
+    function maskAnswer(text, answer) {
+        var t = String(text || "");
+        String(answer || "").split(/[\s\/,]+/).forEach(function (w) {
+            w = w.trim();
+            if (fold(w).length < 4) return;
+            var esc = w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+            t = t.replace(new RegExp(esc, "gi"), "…");
+        });
+        return t.replace(/\s+/g, " ").trim();
+    }
+
+    function tabuFromNotes(kpssData) {
+        var parsed = [];
+        var seen = {};
+        walkNotes(kpssData, function (ders, konu, html) {
+            var title = parseNoteTitle(html);
+            var f = fold(title);
+            if (!title || title.length < 3 || title.length > 42) return;
+            if (/genel bilgi|gelistirme yol|geride kalma|alinmasi gereken|baslica tarim urunleri/i.test(f)) return;
+            if (seen[f]) return;
+            var clues = noteSnippets(html).map(function (s) { return maskAnswer(s, title); }).filter(function (s) {
+                return s.length >= 20 && s.length <= 140 && fold(s).indexOf(f) < 0;
+            });
+            if (clues.length < 2) return;
+            seen[f] = true;
+            parsed.push({
+                answer: title,
+                clues: clues.slice(0, 3),
+                topic: ders || "KPSS"
+            });
+        });
+        var titles = parsed.map(function (p) { return p.answer; });
+        parsed.forEach(function (p) {
+            var dist = shuffle(titles.filter(function (t) { return fold(t) !== fold(p.answer); })).slice(0, 3);
+            while (dist.length < 3) dist.push("—");
+            p.choices = [p.answer].concat(dist);
+            while (p.clues.length < 3) p.clues.push(p.topic + " notlarından ezber kavram");
+        });
+        return parsed;
     }
 
     function panicFromItem(item) {
@@ -325,20 +363,24 @@
 
     function tabuDeck(n, kpssData) {
         n = n || 12;
-        var extra = [];
-        walkQs(kpssData, function (ders, konu, q) {
-            if (!isRecentKonu(konu)) return;
-            var item = qToMcq(q);
-            var card = item && tabuFromItem(item, konu);
-            if (card) extra.push(card);
+        var fromNotes = tabuFromNotes(kpssData);
+        var extra = (bank().TABU || []).map(function (card) {
+            return {
+                answer: card.answer,
+                clues: (card.clues || []).slice(0, 3),
+                choices: card.choices || [card.answer],
+                topic: "KPSS"
+            };
         });
-        var fromCat = shuffle(extra).slice(0, Math.ceil(n / 2));
-        var fromBank = shuffle(bank().TABU || []).slice(0, Math.max(0, n - fromCat.length));
-        return shuffle(fromCat.concat(fromBank)).slice(0, n).map(function (card, i) {
+        var pool = fromNotes.length >= 8 ? fromNotes : fromNotes.concat(extra);
+        return shuffle(pool).slice(0, n).map(function (card, i) {
+            var clues = (card.clues || []).slice(0, 3);
+            while (clues.length < 3) clues.push("Notlardaki tanımına göre tahmin et");
             return {
                 id: i,
                 answer: card.answer,
-                clues: (card.clues || []).slice(0, 3),
+                clues: clues,
+                topic: card.topic || "KPSS",
                 choices: shuffle(card.choices || [card.answer])
             };
         });

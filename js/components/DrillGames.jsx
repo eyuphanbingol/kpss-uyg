@@ -349,54 +349,61 @@
                         <button type="button" className="back-btn" onClick={props.onBack}><span>←</span> Alıştırmalar</button>
                     </header>
                     <div className="game-end">
-                        <p className="text-sm text-stone-500">Tur bitti</p>
-                        <p className="text-5xl font-black mt-2">{score}</p>
-                        <p className="text-sm text-stone-400 mt-2">En iyi: {Math.max(score, games.tabuBest || 0)}</p>
-                        <p className="text-sm mt-4">Az ipucu = yüksek puan. Kavramlar birbirine bağlanınca tabu çözülür.</p>
+                        <p className="tabu-end-kicker">Tur bitti</p>
+                        <p className="tabu-end-score">{score}</p>
+                        <p className="text-sm text-stone-500 mt-2">En iyi: {Math.max(score, games.tabuBest || 0)}</p>
+                        <p className="tabu-end-note">İpucu açmadan bilmek 5, ikinci ipucu 3, üçüncü 1 puan.</p>
                         <button type="button" className="btn-primary text-white px-5 py-2.5 rounded-full mt-6" onClick={props.onAgain}>Yeniden</button>
                     </div>
                 </div>
             );
         }
 
+        var pts = engine ? engine.tabuPoints(open) : 5;
+        var ptsLabel = open <= 1 ? "Tek ipucu · 5 puan" : open === 2 ? "İki ipucu · 3 puan" : "Üç ipucu · 1 puan";
+
         return (
             <div className="map-play-root tabu-root">
                 <header className="map-play-top">
                     <div className="map-play-bar">
                         <button type="button" className="back-btn" onClick={props.onBack}><span>←</span> Alıştırmalar</button>
-                        <span className="text-sm font-bold">{score} puan · {i + 1}/{deck.length}</span>
+                        <span className="tabu-scorepill">{score} puan · {i + 1}/{deck.length}</span>
                     </div>
-                    <p className="map-play-kicker">Tabu · ilk ipucu açık · az ek ipucu = çok puan</p>
-                    <h2 className="map-play-prompt">Bu hangi kavram?</h2>
+                    <p className="map-play-kicker">Notlardan kavram · az ipucu = yüksek puan</p>
                 </header>
                 <div className="tabu-body">
-                    <div className="tabu-mystery">{picked ? card.answer : "?"}</div>
+                    <div className="tabu-hero">
+                        <span className="tabu-topic">{card && card.topic ? card.topic : "Notlar"}</span>
+                        <p className="tabu-ask">Bu hangi kavram?</p>
+                        <div className={"tabu-mystery" + (picked ? " shown" : "")}>{picked ? card.answer : "?"}</div>
+                    </div>
                     <div className="tabu-clues">
                         {(card && card.clues || ["", "", ""]).map(function (cl, ci) {
                             var shown = ci < open;
+                            var canOpen = !picked && ci === open;
                             return (
-                                <button key={ci} type="button" disabled={!!picked || shown || (ci !== open)}
-                                    className={"tabu-card" + (ci === 0 ? " lead" : "") + (shown ? " open" : "") + (ci === open && !picked ? " next" : "")}
+                                <button key={ci} type="button" disabled={!!picked || shown || !canOpen}
+                                    className={"tabu-card" + (shown ? " open" : "") + (canOpen ? " next" : "") + (!shown && !canOpen ? " locked" : "")}
                                     onClick={reveal}>
-                                    <span className="tabu-n">İpucu {ci + 1}{ci === 0 ? " · açık" : ""}</span>
-                                    <span>{shown ? cl : (ci === open ? "Ek ipucu aç" : "Kilitli")}</span>
+                                    <span className="tabu-n">{ci + 1}. ipucu{ci === 0 ? " · açık" : shown ? " · açıldı" : canOpen ? " · dokun" : " · kilitli"}</span>
+                                    <span className="tabu-cl">{shown ? cl : (canOpen ? "Bir ipucu daha aç" : "Kilitli")}</span>
                                 </button>
                             );
                         })}
                     </div>
-                    <div className="tabu-hint">
-                        <span>{open <= 1 ? "Şu an 5 puan" : open === 2 ? "2 ipucu · 3 puan" : "3 ipucu · 1 puan"}</span>
-                        <span className="tabu-pts">{engine ? engine.tabuPoints(open) : 5} puan</span>
+                    <div className="tabu-meter" aria-hidden="true">
+                        <span className={open === 1 ? "on" : ""}>1 ipucu 5p</span>
+                        <span className={open === 2 ? "on" : ""}>2 ipucu 3p</span>
+                        <span className={open === 3 ? "on" : ""}>3 ipucu 1p</span>
                     </div>
-                    <div className="grid gap-2">
+                    <p className="tabu-hint"><span>{ptsLabel}</span><span className="tabu-pts">Şu an {pts} puan</span></p>
+                    <div className="tabu-opts">
                         {(card && card.choices || []).map(function (opt, oi) {
                             var isP = picked === opt;
                             var isA = card && String(opt) === String(card.answer);
-                            var cls = "w-full text-left px-4 py-3.5 rounded-2xl border font-medium ";
-                            if (!picked) cls += "bg-white dark:bg-stone-800 border-stone-200";
-                            else if (isA) cls += "bg-emerald-50 border-emerald-400";
-                            else if (isP) cls += "bg-rose-50 border-rose-400";
-                            else cls += "opacity-50";
+                            var cls = "tabu-opt";
+                            if (picked && isA) cls += " yes";
+                            else if (picked && isP) cls += " no";
                             return (
                                 <button key={oi} type="button" disabled={!!picked} className={cls}
                                     onClick={function () { choose(opt); }}>{opt}</button>
