@@ -100,22 +100,55 @@ function pointInPoly(pts, x, y) {
     return inside;
 }
 
-function visualCenter(bb) {
+function distToSeg(x, y, x1, y1, x2, y2) {
+    var dx = x2 - x1, dy = y2 - y1;
+    var len2 = dx * dx + dy * dy;
+    var t = len2 ? Math.max(0, Math.min(1, ((x - x1) * dx + (y - y1) * dy) / len2)) : 0;
+    return Math.hypot(x - (x1 + t * dx), y - (y1 + t * dy));
+}
+
+function minEdgeDist(pts, x, y) {
+    var d = 1e9, i, j;
+    for (i = 0, j = pts.length - 1; i < pts.length; j = i++) {
+        d = Math.min(d, distToSeg(x, y, pts[j][0], pts[j][1], pts[i][0], pts[i][1]));
+    }
+    return d;
+}
+
+function visualCenter(bb, capX, capY) {
     var pts = bb.pts || [];
     if (pts.length < 3) return { x: bb.cx, y: bb.cy };
-    var sx = 0, sy = 0, n = 0;
-    var step = Math.max(3, Math.min(bb.w, bb.h) / 22);
-    var x, y;
-    for (y = bb.minY + step / 2; y < bb.maxY; y += step) {
-        for (x = bb.minX + step / 2; x < bb.maxX; x += step) {
+    var capOk = capX != null && pointInPoly(pts, capX, capY);
+    if (!pointInPoly(pts, bb.cx, bb.cy) && capOk) {
+        var dirs = [[0, -12], [0, -18], [10, -12], [-10, -12], [0, 12], [14, 0], [-14, 0]];
+        var i, nx, ny;
+        for (i = 0; i < dirs.length; i++) {
+            nx = capX + dirs[i][0];
+            ny = capY + dirs[i][1];
+            if (pointInPoly(pts, nx, ny) && minEdgeDist(pts, nx, ny) >= 14) return { x: nx, y: ny };
+        }
+        return { x: capX, y: capY };
+    }
+    var best = { x: capOk ? capX : bb.cx, y: capOk ? capY : bb.cy, s: capOk ? minEdgeDist(pts, capX, capY) : -1 };
+    var step = Math.max(2.5, Math.min(bb.w, bb.h) / 28);
+    var x, y, s, r;
+    for (y = bb.minY + 8; y < bb.maxY - 8; y += step) {
+        for (x = bb.minX + 8; x < bb.maxX - 8; x += step) {
             if (!pointInPoly(pts, x, y)) continue;
-            sx += x;
-            sy += y;
-            n++;
+            s = minEdgeDist(pts, x, y);
+            if (s > best.s) best = { x: x, y: y, s: s };
         }
     }
-    if (!n) return { x: bb.cx, y: bb.cy };
-    return { x: sx / n, y: sy / n };
+    r = step;
+    for (y = best.y - r; y <= best.y + r; y += 1.2) {
+        for (x = best.x - r; x <= best.x + r; x += 1.2) {
+            if (!pointInPoly(pts, x, y)) continue;
+            s = minEdgeDist(pts, x, y);
+            if (s > best.s) best = { x: x, y: y, s: s };
+        }
+    }
+    if (capOk && best.y > capY + 6) return { x: capX, y: capY };
+    return { x: best.x, y: best.y };
 }
 
 function parseProvinces(svg) {
@@ -125,10 +158,9 @@ function parseProvinces(svg) {
     while ((m = re.exec(svg))) {
         var d = m[1];
         var bb = bboxFromPath(d);
-        var vc = visualCenter(bb);
         out.push({
             d: d, id: m[2], name: m[3], key: norm(m[3]),
-            cx: bb.cx, cy: bb.cy, vx: vc.x, vy: vc.y,
+            cx: bb.cx, cy: bb.cy, vx: bb.cx, vy: bb.cy, pts: bb.pts,
             minX: bb.minX, minY: bb.minY, maxX: bb.maxX, maxY: bb.maxY, w: bb.w, h: bb.h
         });
     }
@@ -142,6 +174,15 @@ function parseProvinces(svg) {
             }
         }
     }
+    out.forEach(function (p) {
+        var vc = visualCenter({
+            pts: p.pts, cx: p.cx, cy: p.cy,
+            minX: p.minX, minY: p.minY, maxX: p.maxX, maxY: p.maxY, w: p.w, h: p.h
+        }, p.capX, p.capY);
+        p.vx = vc.x;
+        p.vy = vc.y;
+        delete p.pts;
+    });
     return out;
 }
 
@@ -437,11 +478,12 @@ function cropMap(provs, opts) {
         }
         hi.push(row.il);
         var pos = districtXY(fp);
+        var ldy = (fp.maxY - pos.y) < 55 ? -20 : 22;
         pts.push({
             x: pos.x, y: pos.y, ox: pos.x, oy: pos.y,
             pinX: pos.x, pinY: pos.y,
             ldx: 0,
-            ldy: 26,
+            ldy: ldy,
             text: row.yazi || row.il,
             urun: opts.urun || "",
             il: row.il,
