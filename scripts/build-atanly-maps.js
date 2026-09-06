@@ -874,11 +874,11 @@ function main() {
     writePng(path.join(IMG, "21 haziran.png"), frame(78 + MAP_BLOCK_H + 16 + juneFacts.h + 28, "21 HAZİRAN", "Yaz gündönümü", mapBlock(provs, juneExtra) + juneFacts.svg));
 
     var decExtra = landPaths(provs) +
-        '<clipPath id="nightD"><polygon points="0,0 500,0 240,422 0,422"/></clipPath>' +
+        '<clipPath id="nightD"><polygon points="-20,-20 560,-20 560,8 270,418 -20,430"/></clipPath>' +
         '<g clip-path="url(#nightD)">' + landPaths(provs).replace(/fill="#E4EAD6"/g, 'fill="' + C.night + '"') + "</g>" +
-        '<line x1="450" y1="8" x2="260" y2="410" stroke="' + C.ink + '" stroke-width="5"/>' +
-        '<text x="200" y="210" font-size="28" font-weight="800" fill="#F6F1E4" font-family="Segoe UI, sans-serif">GECE</text>' +
-        '<text x="640" y="230" font-size="28" font-weight="800" fill="' + C.navy + '" font-family="Segoe UI, sans-serif">GÜNDÜZ</text>' +
+        '<line x1="560" y1="8" x2="270" y2="418" stroke="' + C.ink + '" stroke-width="6" stroke-linecap="round"/>' +
+        '<text x="175" y="225" font-size="30" font-weight="800" fill="#F6F1E4" stroke="#1A2E2B" stroke-width="3" paint-order="stroke" font-family="Segoe UI, sans-serif">GECE</text>' +
+        '<text x="690" y="235" font-size="28" font-weight="800" fill="' + C.navy + '" font-family="Segoe UI, sans-serif">GÜNDÜZ</text>' +
         (function () {
             var s = findProv(provs, "Sinop");
             var h = findProv(provs, "Hatay");
