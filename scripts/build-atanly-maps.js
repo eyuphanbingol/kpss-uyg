@@ -1129,8 +1129,10 @@ function main() {
                 { il: "Eskişehir", ldx: 32, ldy: 8 }
             ],
             facts: ["Pipo ve süs eşyası"] },
-        { file: "maden_volfram.png", title: "VOLFRAM (TUNGSTEN)", iller: ["Bursa"],
-            yazilar: ["Uludağ"],
+        { file: "maden_volfram.png", title: "VOLFRAM (TUNGSTEN)", urun: "Volfram",
+            noktalar: [
+                { il: "Bursa", ilce: "Uludağ", ldx: 32, ldy: 8 }
+            ],
             facts: ["Sert metal alaşımı", "Uludağ"] },
         { file: "maden_feldspat.png", title: "FELDSPAT", urun: "Feldspat",
             noktalar: [
