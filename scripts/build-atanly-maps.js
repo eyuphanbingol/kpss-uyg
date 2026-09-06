@@ -119,42 +119,8 @@ function keyOf(name) {
     return ALIAS[k] || k;
 }
 
-/** İl poligonuna göre ilçe: gerçek lon/lat, kuzey y-eksi. */
-var PROV_GEO = {
-    mugla: { minLon: 27.22, maxLon: 29.38, minLat: 36.27, maxLat: 37.38 },
-    denizli: { minLon: 28.63, maxLon: 29.78, minLat: 37.28, maxLat: 38.17 },
-    burdur: { minLon: 29.55, maxLon: 30.85, minLat: 36.95, maxLat: 37.88 },
-    antalya: { minLon: 29.20, maxLon: 32.55, minLat: 36.07, maxLat: 37.40 },
-    gaziantep: { minLon: 36.83, maxLon: 37.90, minLat: 36.82, maxLat: 37.38 },
-    sanliurfa: { minLon: 37.82, maxLon: 40.23, minLat: 36.66, maxLat: 37.96 },
-    adiyaman: { minLon: 37.41, maxLon: 38.99, minLat: 37.41, maxLat: 38.22 },
-    siirt: { minLon: 41.54, maxLon: 42.65, minLat: 37.68, maxLat: 38.20 }
-};
-
-function clampPin(fp, x, y) {
-    var pad = 12;
-    if (x < fp.minX + pad) x = fp.minX + pad;
-    if (x > fp.maxX - pad) x = fp.maxX - pad;
-    if (y < fp.minY + pad) y = fp.minY + pad;
-    if (y > fp.maxY - pad) y = fp.maxY - pad;
-    return { x: x, y: y };
-}
-
-function districtXY(fp, row) {
-    if (row && row.lon != null && row.lat != null) {
-        var g = PROV_GEO[keyOf(fp.name)];
-        if (g) {
-            var fx = (Number(row.lon) - g.minLon) / (g.maxLon - g.minLon);
-            var fy = (g.maxLat - Number(row.lat)) / (g.maxLat - g.minLat);
-            return clampPin(fp, fp.minX + fx * fp.w, fp.minY + fy * fp.h);
-        }
-    }
-    if (row && row.x != null && row.y != null) return { x: +row.x, y: +row.y };
-    var ox = fp.capX != null ? fp.capX : fp.cx;
-    var oy = fp.capY != null ? fp.capY : fp.cy;
-    var x = ox + (Number(row && row.dx) || 0);
-    var y = oy + (Number(row && row.dy) || 0);
-    return clampPin(fp, x, y);
+function districtXY(fp) {
+    return { x: fp.cx, y: fp.cy };
 }
 
 function findProv(provs, name) {
@@ -407,7 +373,7 @@ function iconsOnMap(pts, iconName) {
             return '<image href="' + href + '" x="' + x + '" y="' + y + '" width="' + size0 + '" height="' + size0 + '" preserveAspectRatio="xMidYMid meet"/>';
         }).join("");
     }
-    var size = 18;
+    var size = 20;
     return pts.map(function (p, i) {
         var cid = "ic" + i + Math.round(p.pinX || p.x) + Math.round(p.pinY || p.y);
         var r = size / 2;
@@ -432,15 +398,12 @@ function cropMap(provs, opts) {
             return;
         }
         hi.push(row.il);
-        var pos = districtXY(fp, row);
-        if (row.lon != null) {
-            console.log("  pin", row.il, row.ilce, pos.x.toFixed(1), pos.y.toFixed(1));
-        }
+        var pos = districtXY(fp);
         pts.push({
             x: pos.x, y: pos.y, ox: pos.x, oy: pos.y,
             pinX: pos.x, pinY: pos.y,
-            ldx: row.ldx || 0,
-            ldy: row.ldy != null ? row.ldy : 26,
+            ldx: 0,
+            ldy: 26,
             text: row.yazi || row.il,
             urun: opts.urun || "",
             il: row.il,
@@ -482,10 +445,10 @@ function main() {
         { file: "muz.png", title: "MUZ ÜRETİMİ", iller: ["Mersin", "Antalya", "Hatay"], facts: ["Don olayının az olduğu kıyı kuşağı", "Anamur–Alanya çevresi yoğundur"] },
         { file: "anason.png", title: "ANASON ÜRETİMİ", urun: "Anason",
             noktalar: [
-                { il: "Burdur", ilce: "Tefenni", lon: 29.775, lat: 37.310, ldx: 36, ldy: -4 },
-                { il: "Denizli", ilce: "Acıpayam", lon: 29.350, lat: 37.424, ldx: -48, ldy: -16 },
-                { il: "Antalya", ilce: "Elmalı", lon: 29.918, lat: 36.736, ldx: 34, ldy: 16 },
-                { il: "Muğla", ilce: "Fethiye", lon: 29.116, lat: 36.643, ldx: -38, ldy: 16 }
+                { il: "Burdur", ilce: "Tefenni" },
+                { il: "Denizli", ilce: "Acıpayam" },
+                { il: "Antalya", ilce: "Elmalı" },
+                { il: "Muğla", ilce: "Fethiye" }
             ],
             facts: ["Göller Yöresi ve Teke çevresi", "Burdur–Tefenni öne çıkar", "Uçucu yağ bitkisidir"] },
         { file: "aspir.png", title: "ASPİR ÜRETİMİ", iller: ["Eskişehir", "Konya", "Ankara", "Aksaray"], facts: ["Kuraklığa dayanıklı yağ bitkisi", "İç Anadolu’da ekimi artmaktadır"] },
@@ -494,10 +457,10 @@ function main() {
         { file: "yer_fıstık.png", title: "YER FISTIĞI", iller: ["Osmaniye", "Adana", "Aydın", "Kahramanmaraş"], facts: ["Çukurova ve Osmaniye öne çıkar", "Sıcaklık ve kumlu-tınlı toprak ister"] },
         { file: "antep_fıstık.png", title: "ANTEP FISTIĞI", urun: "Antep fıstığı",
             noktalar: [
-                { il: "Gaziantep", ilce: "Nizip", lon: 37.794, lat: 37.010, ldx: -44, ldy: 18 },
-                { il: "Şanlıurfa", ilce: "Birecik", lon: 37.977, lat: 37.025, ldx: 46, ldy: -20 },
-                { il: "Siirt", ilce: "Pervari", lon: 42.549, lat: 37.936, ldx: 0, ldy: 22 },
-                { il: "Adıyaman", ilce: "Kâhta", lon: 38.624, lat: 37.786, ldx: 8, ldy: -24 }
+                { il: "Gaziantep", ilce: "Nizip" },
+                { il: "Şanlıurfa", ilce: "Birecik" },
+                { il: "Siirt", ilce: "Pervari" },
+                { il: "Adıyaman", ilce: "Kâhta" }
             ],
             facts: ["Güneydoğu Anadolu’nun karakteristik ürünü", "En çok Şanlıurfa–Birecik çevresi", "Gaziantep–Nizip adıyla anılır"] },
         { file: "kırmızı_mercimek.png", title: "KIRMIZI MERCİMEK", iller: ["Şanlıurfa", "Diyarbakır", "Mardin", "Batman"], facts: ["Güneydoğu Anadolu birinci sıradadır", "Kuraklığa dayanıklı baklagildir"] },
