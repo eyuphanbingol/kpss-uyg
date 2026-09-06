@@ -646,7 +646,17 @@ function main() {
             ],
             facts: ["Serin ve yüksek yerlerde verim artar", "Niğde–Nevşehir öne çıkar"] },
         { file: "arpa.png", title: "ARPA ÜRETİMİ", urun: "Arpa", iller: ["Konya", "Ankara", "Şanlıurfa", "Kayseri", "Yozgat", "Kırşehir"], facts: ["Buğdaya göre daha kurak koşullara dayanır", "Hayvancılık yemi olarak da önemlidir"] },
-        { file: "seker_pancar.png", title: "ŞEKER PANCARI", iller: ["Konya", "Eskişehir", "Aksaray", "Yozgat", "Tokat", "Erzurum", "Kayseri"], facts: ["Ilıman-karasal iklim ve sulama", "Şeker fabrikaları çevresinde yoğunlaşır"] },
+        { file: "seker_pancar.png", title: "ŞEKER PANCARI", urun: "Pancar",
+            noktalar: [
+                { il: "Konya", ldx: -40, ldy: -10 },
+                { il: "Eskişehir", ldx: -34, ldy: 8 },
+                { il: "Aksaray", ldx: 32, ldy: 8 },
+                { il: "Yozgat", ldx: -32, ldy: 8 },
+                { il: "Tokat", ldx: 8, ldy: -28 },
+                { il: "Erzurum", ldx: 32, ldy: 8 },
+                { il: "Kayseri", ldx: 32, ldy: 8 }
+            ],
+            facts: ["Ilıman-karasal iklim ve sulama", "Şeker fabrikaları çevresinde yoğunlaşır"] },
         { file: "hashas.png", title: "HAŞHAŞ ÜRETİMİ", urun: "Haşhaş",
             noktalar: [
                 { il: "Kütahya", ilce: "Gediz", ldx: 8, ldy: -30 },
