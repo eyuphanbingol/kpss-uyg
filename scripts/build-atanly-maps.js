@@ -623,7 +623,19 @@ function main() {
                 { il: "Mardin", ldx: 32, ldy: 8 }
             ],
             facts: ["Sıcaklık ve sulama ister", "Çukurova ve Güneydoğu öne çıkar"] },
-        { file: "zeytin.png", title: "ZEYTİN ÜRETİMİ", iller: ["Aydın", "İzmir", "Balıkesir", "Manisa", "Muğla", "Bursa", "Hatay", "Mersin", "Gaziantep"], facts: ["Akdeniz iklimi kıyı kuşağı", "Ege birinci sıradadır"] },
+        { file: "zeytin.png", title: "ZEYTİN ÜRETİMİ", urun: "Zeytin",
+            noktalar: [
+                { il: "Aydın", ldx: 8, ldy: 30 },
+                { il: "İzmir", ldx: -40, ldy: 8 },
+                { il: "Balıkesir", ldx: -40, ldy: -8 },
+                { il: "Manisa", ldx: 36, ldy: 8 },
+                { il: "Muğla", ldx: 8, ldy: 28 },
+                { il: "Bursa", ldx: 36, ldy: 8 },
+                { il: "Hatay", ldx: 32, ldy: 8 },
+                { il: "Mersin", ldx: -34, ldy: 8 },
+                { il: "Gaziantep", ldx: 8, ldy: 30 }
+            ],
+            facts: ["Akdeniz iklimi kıyı kuşağı", "Ege birinci sıradadır"] },
         { file: "üzüm.png", title: "ÜZÜM ÜRETİMİ", urun: "Üzüm",
             noktalar: [
                 { il: "Manisa", ldx: 32, ldy: 8 },
