@@ -291,11 +291,11 @@ function mapCaption(s) {
     s = String(s || "").replace(/^\d+\s+/, "").trim();
     var em = s.indexOf(" — ");
     if (em > 0) s = s.slice(0, em);
-    if (s.length > 22) {
+    if (s.length > 28) {
         var cut = s.indexOf(" · ");
-        if (cut > 4 && cut < 20) s = s.slice(0, cut);
+        if (cut > 4 && cut < 26) s = s.slice(0, cut);
     }
-    if (s.length > 22) s = s.slice(0, 20).trim();
+    if (s.length > 28) s = s.slice(0, 26).trim();
     return s;
 }
 
@@ -336,7 +336,7 @@ function onMapText(x, y, text, fs, p) {
         if (p.il && p.ilce) lines.push(p.il + " / " + p.ilce);
         else if (p.il) lines.push(p.il);
     } else {
-        lines = [wrapOnMap(text, 16)[0]];
+        lines = [wrapOnMap(text, 22)[0]];
     }
     var startY = y;
     return lines.map(function (ln, i) {
@@ -984,18 +984,23 @@ function main() {
         ]
     );
 
-    labeled({ file: "volkanik_dağlar.png", head: "VOLKANİK DAĞLAR" }, "Koniler",
+    labeled({ file: "volkanik_dağlar.png", head: "VOLKANİK DAĞLAR", iconSize: 16 }, "Koniler",
         [
-            { il: "Manisa", label: "Kula (kül konileri)" },
-            { il: "Konya", label: "Karadağ · Karacadağ" },
-            { il: "Aksaray", label: "Hasan · Melendiz" },
-            { il: "Kayseri", label: "Erciyes" },
-            { il: "Bitlis", label: "Nemrut" },
-            { il: "Van", label: "Süphan · Tendürek" },
-            { il: "Ağrı", label: "B. Ağrı · K. Ağrı" },
-            { il: "Şanlıurfa", label: "Karacadağ (GD)" }
+            { il: "Manisa", label: "Kula Volkanları (Manisa)", ldx: -8, ldy: 28 },
+            { il: "Karaman", label: "Karadağ (Konya-Karaman)", ldx: -8, ldy: 28, boya: ["Konya"] },
+            { il: "Aksaray", label: "Hasan (Aksaray)", ldx: -36, ldy: -16, boya: ["Niğde"] },
+            { il: "Niğde", label: "Melendiz (Niğde)", ldx: 28, ldy: 22 },
+            { il: "Kayseri", label: "Erciyes (Kayseri)", ldx: 8, ldy: 28 },
+            { il: "Şanlıurfa", label: "Karacadağ (Şanlıurfa)", ldx: 8, ldy: 28, boya: ["Diyarbakır"], pdy: -36 },
+            { il: "Bitlis", label: "Nemrut (Bitlis)", ldx: -48, ldy: 10, pdx: -36, pdy: 8 },
+            { il: "Van", label: "Tendürek (Ağrı)", ldx: -10, ldy: -22, pdx: -28, pdy: -18 },
+            { il: "Ağrı", label: "Süphan (Bitlis)", ldx: -8, ldy: 26, pdx: -52, pdy: 12 },
+            { il: "Iğdır", label: "Ağrı Dağı (Ağrı-Iğdır)", ldx: 8, ldy: 24, pdx: -24, pdy: 16, boya: ["Ağrı"] }
         ],
-        ["Volkan konileri ve kül konileri gösterilir", "Doğu’da Nemrut–Süphan–Tendürek–Ağrı (NESTA) hattı"]
+        [
+            "Volkan konileri, kül konileri ve kalderalar",
+            "Doğu’da Nemrut–Süphan–Tendürek–Ağrı (NESTA) hattı"
+        ]
     );
 
     labeled({ file: "masif_arazi.png", head: "MASİF ARAZİLER" }, "Eski kütleler",
