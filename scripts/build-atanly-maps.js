@@ -624,7 +624,17 @@ function main() {
             ],
             facts: ["Sıcaklık ve sulama ister", "Çukurova ve Güneydoğu öne çıkar"] },
         { file: "zeytin.png", title: "ZEYTİN ÜRETİMİ", iller: ["Aydın", "İzmir", "Balıkesir", "Manisa", "Muğla", "Bursa", "Hatay", "Mersin", "Gaziantep"], facts: ["Akdeniz iklimi kıyı kuşağı", "Ege birinci sıradadır"] },
-        { file: "üzüm.png", title: "ÜZÜM ÜRETİMİ", iller: ["Manisa", "Denizli", "İzmir", "Nevşehir", "Elazığ", "Gaziantep", "Tekirdağ"], facts: ["Ege bağcılığın merkezidir", "Kapadokya ve Güneydoğu’da da yetişir"] },
+        { file: "üzüm.png", title: "ÜZÜM ÜRETİMİ", urun: "Üzüm",
+            noktalar: [
+                { il: "Manisa", ldx: 32, ldy: 8 },
+                { il: "Denizli", ldx: 8, ldy: 28 },
+                { il: "İzmir", ldx: -34, ldy: 8 },
+                { il: "Nevşehir", ldx: 8, ldy: 30 },
+                { il: "Elazığ", ldx: -32, ldy: 8 },
+                { il: "Gaziantep", ldx: 32, ldy: 8 },
+                { il: "Tekirdağ", ldx: 8, ldy: 28 }
+            ],
+            facts: ["Ege bağcılığın merkezidir", "Kapadokya ve Güneydoğu’da da yetişir"] },
         { file: "mısır.png", title: "MISIR ÜRETİMİ", urun: "Mısır",
             noktalar: [
                 { il: "Adana", ldx: -34, ldy: 8 },
