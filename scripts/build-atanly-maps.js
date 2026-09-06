@@ -484,7 +484,7 @@ function topicIcon(file) {
         milliparklar: "park",
         madengenel: "ore", madendemir: "iron", madenbakir: "copper", madenboksit: "bauxite",
         madenkrom: "chrome", madenbarit: "barite", madenbor: "boron", madenmermer: "marble",
-        madenfosfat: "phosphate", madenasbest: "asbestos", madentrona: "salt", madenaltin: "gold",
+        madenfosfat: "phosphate", madenasbest: "asbestos", madentrona: "trona", madenaltin: "gold",
         madenuranyum: "uranium", madentoryum: "thorium", madenciva: "mercury", madentuz: "salt",
         madenperlit: "perlite", madenpomza: "pumice", madenkukurt: "sulfur", madenmanganez: "manganese",
         madenkursun: "lead", madenoltu: "jet", madenlule: "lule", madenvolfram: "tungsten",
@@ -1049,8 +1049,10 @@ function main() {
                 { il: "Sivas", ilce: "Yıldızeli", ldx: 8, ldy: -28 }
             ],
             facts: ["Yanmazlık özelliği vardır", "Kanser yapıcı olduğu için yasaklıdır"] },
-        { file: "maden_trona.png", title: "TRONA (SODA KÜLÜ)", iller: ["Ankara"],
-            yazilar: ["Beypazarı · Kazan"],
+        { file: "maden_trona.png", title: "TRONA (SODA KÜLÜ)", urun: "Trona",
+            noktalar: [
+                { il: "Ankara", ilce: "Beypazarı · Kazan", ldx: 8, ldy: 30 }
+            ],
             facts: ["Cam sanayisi (Şişecam)", "Sincan, Kazan, Beypazarı", "İşleme: Kazan"] },
         { file: "maden_altin.png", title: "ALTIN", urun: "Altın",
             noktalar: [
