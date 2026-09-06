@@ -411,13 +411,31 @@ function spreadSameCell(pts) {
 
 function clampPhotoLabel(p) {
     if (p.minX == null) return;
-    var padX = 22, padY = 14;
-    var lx = p.pinX + (p.ldx || 0);
-    var ly = p.pinY + (p.ldy != null ? p.ldy : 0);
-    if (lx < p.minX + padX) p.ldx = p.minX + padX - p.pinX;
-    if (lx > p.maxX - padX) p.ldx = p.maxX - padX - p.pinX;
-    if (ly < p.minY + padY) p.ldy = p.minY + padY - p.pinY;
-    if (ly > p.maxY - padY) p.ldy = p.maxY - padY - p.pinY;
+    var minOff = 28;
+    function inside(x, y) {
+        return x >= p.minX + 12 && x <= p.maxX - 12 && y >= p.minY + 12 && y <= p.maxY - 12;
+    }
+    var tries = [
+        [p.ldx || 0, p.ldy != null ? p.ldy : 24],
+        [0, 30], [0, -26],
+        [42, 8], [-42, 8], [42, 20], [-42, 20],
+        [50, 0], [-50, 0], [36, -16], [-36, -16]
+    ];
+    var i, dx, dy, x, y;
+    for (i = 0; i < tries.length; i++) {
+        dx = tries[i][0];
+        dy = tries[i][1];
+        if (Math.hypot(dx, dy) < minOff) continue;
+        x = p.pinX + dx;
+        y = p.pinY + dy;
+        if (inside(x, y)) {
+            p.ldx = dx;
+            p.ldy = dy;
+            return;
+        }
+    }
+    p.ldx = (p.pinX - p.minX) <= (p.maxX - p.pinX) ? 38 : -38;
+    p.ldy = 6;
 }
 
 function spreadPhotoLabels(pts) {
@@ -537,7 +555,7 @@ function cropMap(provs, opts) {
     var H = factsY + facts.h + 28;
     var labels = labelsOnMap(pts);
     var overlay = iconsOnMap(pts, topicIcon(opts.file));
-    var body = mapBlock(provs, landPaths(provs, hi, C.landHi) + labels + overlay) + facts.svg;
+    var body = mapBlock(provs, landPaths(provs, hi, C.landHi) + overlay + labels) + facts.svg;
     return frame(H, opts.title, opts.kicker || "Tarım dağılımı", body);
 }
 
@@ -629,13 +647,13 @@ function main() {
             facts: ["Trakya klasik üretim bölgesidir", "İntansif tarım ürünlerindendir"] },
         { file: "findik.jpg", title: "FINDIK ÜRETİMİ", urun: "Fındık",
             noktalar: [
-                { il: "Sakarya", ilce: "Karasu", ldx: -22, ldy: 24 },
-                { il: "Düzce", ilce: "Akçakoca", ldx: 26, ldy: 22 },
-                { il: "Samsun", ilce: "Terme", ldx: -24, ldy: 24 },
-                { il: "Ordu", ilce: "Ünye", ldx: 10, ldy: 26 },
-                { il: "Giresun", ilce: "Bulancak", ldx: -22, ldy: 26 },
-                { il: "Trabzon", ilce: "Akçaabat", ldx: 12, ldy: 26 },
-                { il: "Rize", ilce: "Pazar", ldx: 34, ldy: 20 }
+                { il: "Sakarya", ilce: "Karasu", ldx: -52, ldy: 8 },
+                { il: "Düzce", ilce: "Akçakoca", ldx: 52, ldy: 8 },
+                { il: "Samsun", ilce: "Terme", ldx: 44, ldy: 10 },
+                { il: "Ordu", ilce: "Ünye", ldx: -46, ldy: 8 },
+                { il: "Giresun", ilce: "Bulancak", ldx: 46, ldy: 10 },
+                { il: "Trabzon", ilce: "Akçaabat", ldx: -44, ldy: 10 },
+                { il: "Rize", ilce: "Pazar", ldx: 50, ldy: 8 }
             ],
             facts: ["Karadeniz birinci, Marmara ikinci sıradadır", "Türkiye dünya üretiminde 1. sıradadır", "Devirli tarım ürünüdür"] },
         { file: "cay.jpg", title: "ÇAY ÜRETİMİ", urun: "Çay",
