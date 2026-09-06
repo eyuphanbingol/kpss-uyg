@@ -2,7 +2,8 @@
     var REGION_FACTS = {
         marmara: [
             ["Marmara Bölgesi'nin en kalabalık ili hangisidir?", ["İstanbul", "Bursa", "Kocaeli", "Tekirdağ"], "İstanbul"],
-            ["Marmara'da sanayi yoğunluğu en fazla hangi ilde görülür?", ["Kocaeli", "Edirne", "Kırklareli", "Yalova"], "Kocaeli"]
+            ["Marmara'da sanayi yoğunluğu en fazla hangi ilde görülür?", ["Kocaeli", "Edirne", "Kırklareli", "Yalova"], "Kocaeli"],
+            ["Türkiye'de sanayinin en gelişmiş bölgesi hangisidir?", ["Marmara", "Doğu Anadolu", "Doğu Karadeniz", "Güneydoğu"], "Marmara"]
         ],
         ege: [
             ["Ege Bölgesi'nin karakteristik tarım ürünü hangisidir?", ["Zeytin", "Çay", "Fındık", "Pamuk (Güneydoğu)"], "Zeytin"],
@@ -15,7 +16,8 @@
         ],
         ic: [
             ["İç Anadolu'da tarımda öne çıkan ürün hangisidir?", ["Buğday", "Çay", "Muz", "Fındık"], "Buğday"],
-            ["İç Anadolu'nun iklim tipi hangisine yakındır?", ["Karasal", "Ekvatoral", "Muson", "Okyanusal"], "Karasal"]
+            ["İç Anadolu'nun iklim tipi hangisine yakındır?", ["Karasal", "Ekvatoral", "Muson", "Okyanusal"], "Karasal"],
+            ["Şeker fabrikaları en fazla hangi bölgededir?", ["Orta Anadolu", "Doğu Karadeniz", "Güneydoğu", "Marmara kıyısı"], "Orta Anadolu"]
         ],
         karadeniz: [
             ["Doğu Karadeniz'de en çok yetiştirilen tarım ürünü hangisidir?", ["Çay", "Antep fıstığı", "Pamuk", "Zeytin"], "Çay"],
@@ -24,7 +26,8 @@
         ],
         dogu: [
             ["Doğu Anadolu'da kışların sert geçmesinin başlıca nedeni nedir?", ["Yükselti", "Denizellik", "Muson", "Sera etkisi"], "Yükselti"],
-            ["Doğu Anadolu'da otluk-mera büyükbaşın başlıca illeri hangileridir?", ["Erzurum, Kars, Ağrı", "Manisa, Balıkesir", "Mersin, Antalya", "Samsun, Ordu"], "Erzurum, Kars, Ağrı"]
+            ["Doğu Anadolu'da otluk-mera büyükbaşın başlıca illeri hangileridir?", ["Erzurum, Kars, Ağrı", "Manisa, Balıkesir", "Mersin, Antalya", "Samsun, Ordu"], "Erzurum, Kars, Ağrı"],
+            ["Doğu Anadolu'da sanayiyi destekleyen faktörlerden biri hangisidir?", ["Maden çeşitliliği", "En yüksek Ar-Ge", "En büyük pazar", "Sermaye fazlalığı"], "Maden çeşitliliği"]
         ],
         guneydogu: [
             ["Güneydoğu Anadolu Projesi (GAP) hangi iki ırmağa dayanır?", ["Fırat ve Dicle", "Kızılırmak ve Yeşilırmak", "Sakarya ve Gediz", "Çoruh ve Aras"], "Fırat ve Dicle"],
@@ -36,11 +39,13 @@
     var SPECIAL = {
         TR01: [
             ["Adana ve çevresinin verimli ovası hangisidir?", ["Çukurova", "Harran", "Ergene", "Çarşamba"], "Çukurova"],
-            ["Çukurova'da öne çıkan sanayi bitkisi hangisidir?", ["Pamuk", "Çay", "Fındık", "Keten"], "Pamuk"]
+            ["Çukurova'da öne çıkan sanayi bitkisi hangisidir?", ["Pamuk", "Çay", "Fındık", "Keten"], "Pamuk"],
+            ["Mısırözü yağı sanayisi hangi ildedir?", ["Adana", "Edirne", "Rize", "Kars"], "Adana"]
         ],
         TR06: [
             ["Türkiye Cumhuriyeti'nin başkenti hangi ildir?", ["Ankara", "İstanbul", "İzmir", "Bursa"], "Ankara"],
-            ["Ankara keçisi hangi ürünüyle ünlüdür?", ["Tiftik", "İpek", "Pamuk", "Keten"], "Tiftik"]
+            ["Ankara keçisi hangi ürünüyle ünlüdür?", ["Tiftik", "İpek", "Pamuk", "Keten"], "Tiftik"],
+            ["Uçak ve savunma sanayisinin merkezlerinden biri hangisidir?", ["Ankara", "Rize", "Batman", "Artvin"], "Ankara"]
         ],
         TR07: [
             ["Antalya ekonomisinde öne çıkan sektör hangisidir?", ["Turizm", "Taşkömürü", "Çay", "Demir-çelik"], "Turizm"],
@@ -61,11 +66,13 @@
         ],
         TR22: [
             ["Edirne'de Meriç Nehri hangi ülkeye doğru sınır oluşturur?", ["Yunanistan / Bulgaristan hattı", "Gürcistan", "Suriye", "Irak"], "Yunanistan / Bulgaristan hattı"],
-            ["Edirne hangi bölgededir?", ["Marmara", "Ege", "Akdeniz", "İç Anadolu"], "Marmara"]
+            ["Edirne hangi bölgededir?", ["Marmara", "Ege", "Akdeniz", "İç Anadolu"], "Marmara"],
+            ["Kapıkule sınır kapısı hangi ildedir?", ["Edirne", "Şırnak", "Ağrı", "Artvin"], "Edirne"]
         ],
         TR25: [
             ["Erzurum Kongresi hangi yılda toplanmıştır?", ["1919", "1920", "1921", "1923"], "1919"],
-            ["Erzurum-Kars Platosu hangi ekonomik faaliyet için elverişlidir?", ["Hayvancılık", "Muz", "Çay", "Zeytin"], "Hayvancılık"]
+            ["Erzurum-Kars Platosu hangi ekonomik faaliyet için elverişlidir?", ["Hayvancılık", "Muz", "Çay", "Zeytin"], "Hayvancılık"],
+            ["Et kombinalarının bulunduğu illerden biri hangisidir?", ["Erzurum", "Rize", "Tekirdağ", "Giresun"], "Erzurum"]
         ],
         TR27: [
             ["Milli Mücadele'de Antep'e verilen unvan hangisidir?", ["Kahraman", "Gazi", "Ulu", "Büyük"], "Kahraman"]
@@ -85,7 +92,8 @@
         ],
         TR34: [
             ["Türkiye'de nüfusu en fazla olan il hangisidir?", ["İstanbul", "Ankara", "İzmir", "Bursa"], "İstanbul"],
-            ["İstanbul Boğazı hangi iki denizi birleştirir?", ["Karadeniz-Marmara", "Ege-Akdeniz", "Marmara-Ege", "Van-Tuz"], "Karadeniz-Marmara"]
+            ["İstanbul Boğazı hangi iki denizi birleştirir?", ["Karadeniz-Marmara", "Ege-Akdeniz", "Marmara-Ege", "Van-Tuz"], "Karadeniz-Marmara"],
+            ["Tuzla–Haliç–Pendik hangi sanayi koluyla anılır?", ["Gemi yapımı", "Çay", "Şeker", "Seramik"], "Gemi yapımı"]
         ],
         TR35: [
             ["İzmir Limanı hangi denize açılır?", ["Ege Denizi", "Karadeniz", "Marmara", "Akdeniz"], "Ege Denizi"],
@@ -98,11 +106,13 @@
         ],
         TR38: [
             ["Erciyes Dağı hangi ildedir?", ["Kayseri", "Niğde", "Nevşehir", "Aksaray"], "Kayseri"],
-            ["Kayseri sanayisinde öne çıkan dallardan biri hangisidir?", ["Mobilya / pastırma", "Çay", "Taşkömürü", "Fındık"], "Mobilya / pastırma"]
+            ["Kayseri sanayisinde öne çıkan dallardan biri hangisidir?", ["Mobilya / pastırma", "Çay", "Taşkömürü", "Fındık"], "Mobilya / pastırma"],
+            ["Mobilya sanayisinin merkezlerinden biri hangisidir?", ["Kayseri", "Rize", "Batman", "Artvin"], "Kayseri"]
         ],
         TR41: [
             ["Türkiye'nin ağır sanayi koridorunda öne çıkan il hangisidir?", ["Kocaeli", "Rize", "Iğdır", "Burdur"], "Kocaeli"],
-            ["Kocaeli hangi bölgededir?", ["Marmara", "Karadeniz", "Ege", "Akdeniz"], "Marmara"]
+            ["Kocaeli hangi bölgededir?", ["Marmara", "Karadeniz", "Ege", "Akdeniz"], "Marmara"],
+            ["Hereke halı-kilim sanayisi hangi ile bağlıdır?", ["Kocaeli", "Rize", "Kars", "Şırnak"], "Kocaeli"]
         ],
         TR42: [
             ["Konya Ovası hangi ürünle anılır?", ["Buğday", "Çay", "Muz", "Fındık"], "Buğday"],
@@ -139,7 +149,8 @@
         ],
         TR61: [
             ["Trabzon'da Sümela Manastırı hangi dağlık alanda yer alır?", ["Doğu Karadeniz dağları", "Toroslar", "Kaz Dağı", "Amanos"], "Doğu Karadeniz dağları"],
-            ["Trabzon hangi bölgededir?", ["Karadeniz", "Marmara", "Ege", "Akdeniz"], "Karadeniz"]
+            ["Trabzon hangi bölgededir?", ["Karadeniz", "Marmara", "Ege", "Akdeniz"], "Karadeniz"],
+            ["İran transit yükü hangi limandan Karadeniz'e çıkar?", ["Trabzon", "İzmir", "Mersin", "İskenderun"], "Trabzon"]
         ],
         TR63: [
             ["Harran Ovası hangi ildedir?", ["Şanlıurfa", "Gaziantep", "Mardin", "Diyarbakır"], "Şanlıurfa"],
@@ -170,19 +181,26 @@
             ["Osmaniye hangi bölgededir?", ["Akdeniz", "Güneydoğu", "Ege", "Marmara"], "Akdeniz"]
         ],
         TR72: [
-            ["Türkiye'de petrol ilk kez hangi ilde bulunmuştur?", ["Batman", "Zonguldak", "İzmir", "Konya"], "Batman"]
+            ["Türkiye'de petrol ilk kez hangi ilde bulunmuştur?", ["Batman", "Zonguldak", "İzmir", "Konya"], "Batman"],
+            ["Hammaddeye bağlı tek petro-kimya tesisi nerededir?", ["Batman", "İstanbul", "Rize", "Kayseri"], "Batman"]
         ],
         TR46: [
             ["Türkiye'nin en büyük linyit santrali nerededir?", ["Afşin-Elbistan", "Alaçatı", "Akkuyu", "Silopi"], "Afşin-Elbistan"]
         ],
         TR73: [
-            ["Asfaltit (katı petrol) Türkiye'de nerede bulunur?", ["Şırnak-Silopi", "Zonguldak", "Bartın", "Konya"], "Şırnak-Silopi"]
+            ["Asfaltit (katı petrol) Türkiye'de nerede bulunur?", ["Şırnak-Silopi", "Zonguldak", "Bartın", "Konya"], "Şırnak-Silopi"],
+            ["Habur sınır kapısı hangi ildedir?", ["Şırnak", "Edirne", "Ağrı", "Artvin"], "Şırnak"]
         ],
         TR20: [
-            ["Denizli-Sarayköy hangi enerji kaynağıyla ilişkilidir?", ["Jeotermal", "Nükleer", "Taşkömürü", "Petrol"], "Jeotermal"]
+            ["Denizli-Sarayköy hangi enerji kaynağıyla ilişkilidir?", ["Jeotermal", "Nükleer", "Taşkömürü", "Petrol"], "Jeotermal"],
+            ["Pamuklu dokuma merkezlerinden biri hangisidir?", ["Denizli", "Rize", "Kars", "Kastamonu"], "Denizli"]
         ],
         TR08: [
-            ["Deriner ve Yusufeli HES hangi ildedir?", ["Artvin", "Samsun", "Elazığ", "Mardin"], "Artvin"]
+            ["Deriner ve Yusufeli HES hangi ildedir?", ["Artvin", "Samsun", "Elazığ", "Mardin"], "Artvin"],
+            ["Çay fabrikalarının bulunduğu illerden biri hangisidir?", ["Artvin", "Konya", "Batman", "Kütahya"], "Artvin"]
+        ],
+        TR04: [
+            ["Gürbulak sınır kapısı hangi ildedir?", ["Ağrı", "Edirne", "Şırnak", "Hatay"], "Ağrı"]
         ]
     };
 
@@ -249,7 +267,11 @@
         { answer: "Bakü-Tiflis-Ceyhan", clues: ["Azerbaycan petrolü", "Akdeniz", "Ceyhan"], choices: ["Bakü-Tiflis-Ceyhan", "TANAP", "Mavi Akım", "BTE"] },
         { answer: "Mavi Akım", clues: ["Rusya gazı", "Karadeniz altı", "Samsun"], choices: ["Mavi Akım", "Türk Akımı", "TANAP", "Doğu Hattı"] },
         { answer: "Linyit", clues: ["Alt kalorili", "III. jeolojik zaman", "Türkiye'de yaygın"], choices: ["Linyit", "Taş kömürü", "Asfaltit", "Uranyum"] },
-        { answer: "Taş kömürü", clues: ["Karbonifer", "Zonguldak-Bartın", "Rezervi az"], choices: ["Taş kömürü", "Linyit", "Asfaltit", "Jeotermal"] }
+        { answer: "Taş kömürü", clues: ["Karbonifer", "Zonguldak-Bartın", "Rezervi az"], choices: ["Taş kömürü", "Linyit", "Asfaltit", "Jeotermal"] },
+        { answer: "Otomotiv", clues: ["Sanayinin lokomotifi", "En büyük kol", "İhracatta sanayi"], choices: ["Otomotiv", "Çay", "Şeker", "Seramik"] },
+        { answer: "Batman Rafinerisi", clues: ["Petro-kimya", "Hammaddeye bağlı", "Petrol"], choices: ["Batman Rafinerisi", "Tuzla tersanesi", "Aksu kâğıt", "Hereke halı"] },
+        { answer: "Habur–Kapıkule", clues: ["En uzun transit", "Irak–Avrupa", "Şırnak–Edirne"], choices: ["Habur–Kapıkule", "Gürbulak–Trabzon", "Sarp–Samsun", "Cilvegözü–Mersin"] },
+        { answer: "Gürbulak–Trabzon", clues: ["İran", "Karadeniz", "En kısa lojistik"], choices: ["Gürbulak–Trabzon", "Habur–Kapıkule", "Kapıkule–Sarp", "Habur–İzmir"] }
     ];
 
     var PANIC = [
@@ -336,7 +358,16 @@
         { q: "İlk rüzgâr santrali?", a: "Çeşme-Alaçatı", choices: ["Çeşme-Alaçatı", "Karapınar", "Akkuyu", "Germencik"] },
         { q: "En büyük GES?", a: "Karapınar", choices: ["Karapınar", "Birecik", "Mersin", "Aydın"] },
         { q: "İlk NGS?", a: "Akkuyu", choices: ["Akkuyu", "Sinop", "İğneada", "Ovaakça"] },
-        { q: "Elektrik üretiminde 1. kaynak?", a: "kömür", choices: ["kömür", "hidrolik", "doğal gaz", "güneş"] }
+        { q: "Elektrik üretiminde 1. kaynak?", a: "kömür", choices: ["kömür", "hidrolik", "doğal gaz", "güneş"] },
+        { q: "En gelişmiş sanayi bölgesi?", a: "Marmara", choices: ["Marmara", "Doğu Anadolu", "Doğu Karadeniz", "Güneydoğu"] },
+        { q: "Sanayinin lokomotifi sektör?", a: "otomotiv", choices: ["otomotiv", "çay", "şeker", "tuğla"] },
+        { q: "İhracatta sanayi payı yaklaşık?", a: "%94", choices: ["%94", "%4", "%2", "%50"] },
+        { q: "İhracatta 1. ülke?", a: "Almanya", choices: ["Almanya", "Çin", "Rusya", "İtalya"] },
+        { q: "İthalatta 1. ülke?", a: "Çin", choices: ["Çin", "Almanya", "İngiltere", "İtalya"] },
+        { q: "Hammaddeye bağlı petro-kimya?", a: "Batman", choices: ["Batman", "Rize", "Kayseri", "Uşak"] },
+        { q: "Şeker fabrikası neden tarıma yakın?", a: "pancar çabuk bozulur", choices: ["pancar çabuk bozulur", "liman zorunlu", "yalnızca kıyı", "çay hammaddesi"] },
+        { q: "İran'ın Karadeniz transit hattı?", a: "Gürbulak–Trabzon", choices: ["Gürbulak–Trabzon", "Habur–Kapıkule", "Sarp–İzmir", "Cilvegözü–Samsun"] },
+        { q: "En uzun transit koridor?", a: "Habur–Kapıkule", choices: ["Habur–Kapıkule", "Gürbulak–Trabzon", "Sarp–Trabzon", "Kapıkule–Mersin"] }
     ];
 
     global.GamesBank = {

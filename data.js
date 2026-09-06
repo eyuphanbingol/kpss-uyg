@@ -154,6 +154,10 @@ window.getKpssData = function () {
             "Türkiyenini Ekonomik Coğrafyası (ENERJİ KAYNAKLARI)":{
                 notlar:window.cografya_22_notlari || [],
                 sorular:window.cografya_22_sorulari || []
+            },
+            "Türkiyenini Ekonomik Coğrafyası (SANAYİ)":{
+                notlar:window.cografya_23_notlari || [],
+                sorular:window.cografya_23_sorulari || []
             }
         },
         // YENİ EKLENEN TÜRKÇE BÖLÜMÜ

@@ -177,7 +177,8 @@
                 { id: "maden", title: "Madenler", icon: "⛏️" },
                 { id: "sanayi", title: "Sanayi tesisleri", icon: "🏭" },
                 { id: "boru", title: "Enerji boru hatları", icon: "🛢️" },
-                { id: "hes", title: "HES, santral ve enerji", icon: "⚡" }
+                { id: "hes", title: "HES, santral ve enerji", icon: "⚡" },
+                { id: "transit", title: "Transit ticaret yolları", icon: "🚛" }
             ]
         },
         {
@@ -587,7 +588,24 @@
         ["GES: Karapınar", "Konya"],
         ["Rüzgâr: Alaçatı", "İzmir"],
         ["Jeotermal: Germencik", "Aydın"],
-        ["NGS: Akkuyu", "Mersin"]
+        ["NGS: Akkuyu", "Mersin"],
+        ["Çay fabrikası", "Rize", { follow: { q: "Çay fabrikaları neden Doğu Karadeniz'dedir?", choices: ["Çay tarımı burada", "Ar-Ge en yüksek", "Maden çeşidi", "Şeker pancarı"], answer: "Çay tarımı burada" } }],
+        ["Ayçiçek yağı", "Tekirdağ-Edirne", { prompt: "Trakya ayçiçek yağı sanayisinin bir ilini bul." }],
+        ["Zeytinyağı", "Aydın-İzmir-Balıkesir-Bursa"],
+        ["Mısırözü yağı", "Adana"],
+        ["Kâğıt: Aksu", "Giresun"],
+        ["Kâğıt: Taşköprü", "Kastamonu"],
+        ["Seramik", "Kütahya"],
+        ["Pamuklu dokuma", "Adana-İzmir-Denizli"],
+        ["Petro-kimya (hammadde)", "Batman", { follow: { q: "Hammaddeye bağlı tek petro-kimya tesisi nerededir?", choices: ["İstanbul", "Batman", "Rize", "Kayseri"], answer: "Batman" } }],
+        ["Şeker (pancar)", "Konya", { prompt: "Şeker fabrikalarının yoğun olduğu Orta Anadolu ilini bul." }],
+        ["Mobilya", "Kayseri"],
+        ["İlaç", "İstanbul-Tekirdağ"],
+        ["Uçak", "Ankara-Eskişehir"],
+        ["Halı-kilim: Hereke", "Kocaeli"],
+        ["Lastik: Adapazarı", "Sakarya"],
+        ["Savunma", "Kırıkkale"],
+        ["Gemi: Tuzla / Pendik", "İstanbul"]
     ].forEach(function (r) { ITEMS.push(F("sanayi", r[0], r[1], r[2] || {})); });
 
     [
@@ -620,6 +638,13 @@
         ["Kozlu (taşkömürü)", "Zonguldak"],
         ["Ovaakça DGKÇS", "Bursa"]
     ].forEach(function (r) { ITEMS.push(F("hes", r[0], r[1], r[2] || {})); });
+
+    [
+        ["Gürbulak Sınır Kapısı", "Ağrı", { follow: { q: "Gürbulak–Trabzon kimin Karadeniz çıkışıdır?", choices: ["İran", "Irak", "Bulgaristan", "Yunanistan"], answer: "İran" } }],
+        ["Trabzon Limanı (İran transiti)", "Trabzon", { prompt: "İran yükünün Karadeniz'e çıktığı Trabzon limanını bul." }],
+        ["Habur Sınır Kapısı", "Şırnak", { follow: { q: "Habur–Kapıkule hangi ticaretin ana damarıdır?", choices: ["Irak/Orta Doğu–Avrupa", "İran–Karadeniz", "Gürcistan–Ege", "Rusya–Akdeniz"], answer: "Irak/Orta Doğu–Avrupa" } }],
+        ["Kapıkule Sınır Kapısı", "Edirne", { prompt: "Avrupa çıkışlı Kapıkule'yi (Edirne) bul." }]
+    ].forEach(function (r) { ITEMS.push(F("transit", r[0], r[1], r[2] || {})); });
 
     var PARKS = [
         ["Nemrut Dağı", "Adıyaman-Malatya", "guneydogu"],
@@ -895,6 +920,7 @@
         if (t === "liman") return n.indexOf("kruvaz") >= 0 ? "🚢" : "⚓";
         if (t === "boru") return "🛢️";
         if (t === "hes") return "⚡";
+        if (t === "transit") return "🚛";
         if (t === "demiryolu") return "🚫";
         if (t === "nufus-seyrek") return "🏕️";
         if (t === "nufus-yogun") return "🏙️";
