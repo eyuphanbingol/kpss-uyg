@@ -664,7 +664,14 @@ function main() {
                 { il: "Adıyaman", ilce: "Kâhta" }
             ],
             facts: ["Güneydoğu Anadolu’nun karakteristik ürünü", "En çok Şanlıurfa–Birecik çevresi", "Gaziantep–Nizip adıyla anılır"] },
-        { file: "kırmızı_mercimek.png", title: "KIRMIZI MERCİMEK", iller: ["Şanlıurfa", "Diyarbakır", "Mardin", "Batman"], facts: ["Güneydoğu Anadolu birinci sıradadır", "Kuraklığa dayanıklı baklagildir"] },
+        { file: "kırmızı_mercimek.png", title: "KIRMIZI MERCİMEK", urun: "Kırmızı mercimek",
+            noktalar: [
+                { il: "Şanlıurfa", ilce: "Viranşehir", ldx: -34, ldy: 8 },
+                { il: "Diyarbakır", ilce: "Bismil", ldx: 8, ldy: -28 },
+                { il: "Mardin", ilce: "Kızıltepe", ldx: 8, ldy: 30 },
+                { il: "Batman", ilce: "Kozluk", ldx: 32, ldy: 6 }
+            ],
+            facts: ["Güneydoğu Anadolu birinci sıradadır", "Kuraklığa dayanıklı baklagildir"] },
         { file: "gül.png", title: "GÜL ÜRETİMİ", urun: "Gül",
             noktalar: [
                 { il: "Afyon", ilce: "Dinar", ldx: 8, ldy: -30 },
