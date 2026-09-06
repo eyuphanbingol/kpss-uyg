@@ -1082,7 +1082,11 @@ function main() {
         { file: "maden_manganez.png", title: "MANGANEZ", iller: ["Zonguldak"],
             yazilar: ["Ereğli"],
             facts: ["Çeliğe sertlik verir", "Ereğli"] },
-        { file: "maden_kursun.png", title: "KURŞUN VE ÇİNKO", iller: ["Yozgat", "Elazığ"],
+        { file: "maden_kursun.png", title: "KURŞUN VE ÇİNKO", urun: "Kurşun",
+            noktalar: [
+                { il: "Yozgat", ldx: -32, ldy: 8 },
+                { il: "Elazığ", ldx: 32, ldy: 8 }
+            ],
             facts: ["Birlikte çıkarılır"] },
         { file: "maden_oltu.png", title: "OLTU TAŞI", iller: ["Erzurum"],
             yazilar: ["Oltu"],
