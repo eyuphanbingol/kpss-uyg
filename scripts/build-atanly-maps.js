@@ -1047,8 +1047,11 @@ function main() {
         { file: "maden_toryum.png", title: "TORYUM", iller: ["Eskişehir"],
             yazilar: ["Sivrihisar"],
             facts: ["Nükleer enerji potansiyeli", "Sivrihisar’da bulunur, henüz işletilmez"] },
-        { file: "maden_civa.png", title: "CIVA", iller: ["İzmir", "Konya"],
-            yazilar: ["Karaburun", "Sarayönü"],
+        { file: "maden_civa.png", title: "CIVA", urun: "Cıva",
+            noktalar: [
+                { il: "İzmir", ilce: "Karaburun", ldx: -38, ldy: 8, pdx: -36, pdy: -6 },
+                { il: "Konya", ilce: "Sarayönü", ldx: 40, ldy: -10, pdx: -28, pdy: -36 }
+            ],
             facts: ["Oda sıcaklığında sıvı olan tek maden", "Karaburun ve Sarayönü", "Hassas alet (termometre, barometre)"] },
         { file: "maden_tuz.png", title: "TUZ", iller: ["Çankırı", "Iğdır", "Kars", "Aksaray", "Konya", "Ankara", "İzmir"],
             yazilar: ["Çankırı", "Iğdır", "Kars", "Tuz Gölü", "Tuz Gölü", "Tuz Gölü", "Çamaltı"],
