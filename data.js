@@ -150,6 +150,10 @@ window.getKpssData = function () {
             "Türkiyenini Ekonomik Coğrafyası (MADENLER)":{
                 notlar:window.cografya_21_notlari || [],
                 sorular:window.cografya_21_sorulari || []
+            },
+            "Türkiyenini Ekonomik Coğrafyası (ENERJİ KAYNAKLARI)":{
+                notlar:window.cografya_22_notlari || [],
+                sorular:window.cografya_22_sorulari || []
             }
         },
         // YENİ EKLENEN TÜRKÇE BÖLÜMÜ

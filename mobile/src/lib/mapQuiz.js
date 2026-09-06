@@ -176,7 +176,8 @@
                 { id: "liman", title: "Limanlar ve hinterland", icon: "⚓" },
                 { id: "maden", title: "Madenler", icon: "⛏️" },
                 { id: "sanayi", title: "Sanayi tesisleri", icon: "🏭" },
-                { id: "boru", title: "Enerji boru hatları", icon: "🛢️" }
+                { id: "boru", title: "Enerji boru hatları", icon: "🛢️" },
+                { id: "hes", title: "HES, santral ve enerji", icon: "⚡" }
             ]
         },
         {
@@ -578,15 +579,47 @@
         ["Demir-çelik: Ereğli", "Zonguldak", { follow: { q: "Ereğli–Karabük tesisinin temel kuruluş nedeni?", choices: ["Turizm", "Enerji / taşkömürü yakınlığı", "Pamuk tarımı", "Kruvaziyer"], answer: "Enerji / taşkömürü yakınlığı" } }],
         ["Demir-çelik: Karabük", "Karabük"],
         ["Demir-çelik: İskenderun", "Hatay", { follow: { q: "İskenderun demir-çeliğinin avantajı?", choices: ["Buzul vadisi", "Liman / ulaşım", "Podzol toprak", "Fiyort"], answer: "Liman / ulaşım" } }],
-        ["Alüminyum: Seydişehir", "Konya", { prompt: "Boksitin işlendiği Seydişehir'i bul." }]
+        ["Alüminyum: Seydişehir", "Konya", { prompt: "Boksitin işlendiği Seydişehir'i bul." }],
+        ["Linyit: Afşin-Elbistan", "Kahramanmaraş", { follow: { q: "Türkiye'nin en büyük linyit santrali nerededir?", choices: ["Zonguldak", "Afşin-Elbistan", "Alaçatı", "Akkuyu"], answer: "Afşin-Elbistan" } }],
+        ["Taşkömürü: Kozlu", "Zonguldak"],
+        ["Petrol: Batman", "Batman"],
+        ["Asfaltit: Silopi", "Şırnak"],
+        ["GES: Karapınar", "Konya"],
+        ["Rüzgâr: Alaçatı", "İzmir"],
+        ["Jeotermal: Germencik", "Aydın"],
+        ["NGS: Akkuyu", "Mersin"]
     ].forEach(function (r) { ITEMS.push(F("sanayi", r[0], r[1], r[2] || {})); });
 
     [
         ["BTC (Bakü–Tiflis–Ceyhan)", "Adana-Hatay", { prompt: "BTC'nin deniz terminali Ceyhan/İskenderun yöresini bul." }],
         ["TANAP güzergâhı", "Ardahan-Kars-Erzincan-Ankara-Eskişehir-Çanakkale", { prompt: "TANAP'ın geçtiği bir ili bul." }],
         ["Mavi Akım (Samsun)", "Samsun", { prompt: "Mavi Akım'ın karaya çıktığı Samsun'u bul." }],
-        ["TürkAkım (Kıyıköy / Trakya)", "Kırklareli-Tekirdağ", { prompt: "TürkAkım'ın Trakya girişini bul." }]
+        ["TürkAkım (Kıyıköy / Trakya)", "Kırklareli-Tekirdağ", { prompt: "TürkAkım'ın Trakya girişini bul." }],
+        ["Kerkük–Yumurtalık (Adana)", "Adana", { prompt: "Irak petrolünün Akdeniz çıkışını (Yumurtalık/Ceyhan yöresi) bul." }],
+        ["BTE (Bakü–Tiflis–Erzurum)", "Erzurum", { prompt: "Azerbaycan gazının Erzurum hattını bul." }]
     ].forEach(function (r) { ITEMS.push(F("boru", r[0], r[1], r[2])); });
+
+    [
+        ["Keban HES", "Elazığ", { follow: { q: "Keban hangi nehir üzerindedir?", choices: ["Dicle", "Fırat", "Kızılırmak", "Çoruh"], answer: "Fırat" } }],
+        ["Karakaya HES", "Diyarbakır-Malatya", { prompt: "Fırat üzerindeki Karakaya HES yöresini bul." }],
+        ["Atatürk HES", "Adıyaman-Şanlıurfa", { follow: { q: "Atatürk Barajı hangi nehir üzerindedir?", choices: ["Dicle", "Fırat", "Yeşilırmak", "Çoruh"], answer: "Fırat" } }],
+        ["Birecik HES", "Şanlıurfa"],
+        ["Ilısu HES", "Mardin", { follow: { q: "Ilısu hangi nehir üzerindedir?", choices: ["Fırat", "Dicle", "Kızılırmak", "Çoruh"], answer: "Dicle" } }],
+        ["Kralkızı HES", "Diyarbakır"],
+        ["Deriner HES", "Artvin", { follow: { q: "Deriner hangi nehir üzerindedir?", choices: ["Fırat", "Dicle", "Çoruh", "Yeşilırmak"], answer: "Çoruh" } }],
+        ["Yusufeli HES", "Artvin"],
+        ["Altınkaya HES", "Samsun", { follow: { q: "Altınkaya hangi nehir üzerindedir?", choices: ["Yeşilırmak", "Kızılırmak", "Fırat", "Çoruh"], answer: "Kızılırmak" } }],
+        ["Hasan Uğurlu HES", "Samsun", { follow: { q: "Hasan Uğurlu hangi nehir üzerindedir?", choices: ["Kızılırmak", "Yeşilırmak", "Fırat", "Dicle"], answer: "Yeşilırmak" } }],
+        ["Afşin-Elbistan (linyit)", "Kahramanmaraş"],
+        ["Akkuyu NGS", "Mersin"],
+        ["Karapınar GES", "Konya"],
+        ["Alaçatı RES", "İzmir"],
+        ["Germencik JES", "Aydın"],
+        ["Sarayköy JES", "Denizli"],
+        ["Silopi (asfaltit)", "Şırnak"],
+        ["Kozlu (taşkömürü)", "Zonguldak"],
+        ["Ovaakça DGKÇS", "Bursa"]
+    ].forEach(function (r) { ITEMS.push(F("hes", r[0], r[1], r[2] || {})); });
 
     var PARKS = [
         ["Nemrut Dağı", "Adıyaman-Malatya", "guneydogu"],
@@ -861,6 +894,7 @@
         if (t === "kivrim") return "🏔️";
         if (t === "liman") return n.indexOf("kruvaz") >= 0 ? "🚢" : "⚓";
         if (t === "boru") return "🛢️";
+        if (t === "hes") return "⚡";
         if (t === "demiryolu") return "🚫";
         if (t === "nufus-seyrek") return "🏕️";
         if (t === "nufus-yogun") return "🏙️";

@@ -6,7 +6,8 @@
         ],
         ege: [
             ["Ege Bölgesi'nin karakteristik tarım ürünü hangisidir?", ["Zeytin", "Çay", "Fındık", "Pamuk (Güneydoğu)"], "Zeytin"],
-            ["Ege'de horst-graben sistemiyle oluşan ovalar hangi denize açılır?", ["Ege Denizi", "Karadeniz", "Marmara", "Akdeniz"], "Ege Denizi"]
+            ["Ege'de horst-graben sistemiyle oluşan ovalar hangi denize açılır?", ["Ege Denizi", "Karadeniz", "Marmara", "Akdeniz"], "Ege Denizi"],
+            ["Jeotermal potansiyelin en yüksek olduğu bölge hangisidir?", ["Ege", "Doğu Karadeniz", "Marmara", "Güneydoğu"], "Ege"]
         ],
         akdeniz: [
             ["Akdeniz ikliminde yazlar nasıl geçer?", ["Sıcak ve kurak", "Serin ve yağışlı", "Soğuk ve kurak", "Ilıman ve sisli"], "Sıcak ve kurak"],
@@ -18,7 +19,8 @@
         ],
         karadeniz: [
             ["Doğu Karadeniz'de en çok yetiştirilen tarım ürünü hangisidir?", ["Çay", "Antep fıstığı", "Pamuk", "Zeytin"], "Çay"],
-            ["Karadeniz kıyısında yağışın fazla olmasının temel nedeni nedir?", ["Dağların kıyıya paralel uzanması", "Çöl etkisi", "Muson rüzgârları", "Gulf Stream"], "Dağların kıyıya paralel uzanması"]
+            ["Karadeniz kıyısında yağışın fazla olmasının temel nedeni nedir?", ["Dağların kıyıya paralel uzanması", "Çöl etkisi", "Muson rüzgârları", "Gulf Stream"], "Dağların kıyıya paralel uzanması"],
+            ["Taş kömürü rezervinin neredeyse tamamı hangi bölgededir?", ["Batı Karadeniz", "Ege", "Güneydoğu", "Marmara"], "Batı Karadeniz"]
         ],
         dogu: [
             ["Doğu Anadolu'da kışların sert geçmesinin başlıca nedeni nedir?", ["Yükselti", "Denizellik", "Muson", "Sera etkisi"], "Yükselti"],
@@ -26,7 +28,8 @@
         ],
         guneydogu: [
             ["Güneydoğu Anadolu Projesi (GAP) hangi iki ırmağa dayanır?", ["Fırat ve Dicle", "Kızılırmak ve Yeşilırmak", "Sakarya ve Gediz", "Çoruh ve Aras"], "Fırat ve Dicle"],
-            ["Güneydoğu'da yaz kuraklığına rağmen tarımı büyüten etken hangisidir?", ["Sulama", "Muson yağışı", "Buzul", "Tundra"], "Sulama"]
+            ["Güneydoğu'da yaz kuraklığına rağmen tarımı büyüten etken hangisidir?", ["Sulama", "Muson yağışı", "Buzul", "Tundra"], "Sulama"],
+            ["Atatürk HES hangi nehir üzerindedir?", ["Fırat", "Dicle", "Kızılırmak", "Çoruh"], "Fırat"]
         ]
     };
 
@@ -45,7 +48,8 @@
         ],
         TR16: [
             ["Bursa tarihsel olarak hangi üretimle anılır?", ["İpek / otomotiv", "Çay", "Taşkömürü", "Antep fıstığı"], "İpek / otomotiv"],
-            ["Bursa hangi bölgededir?", ["Marmara", "Ege", "Karadeniz", "Akdeniz"], "Marmara"]
+            ["Bursa hangi bölgededir?", ["Marmara", "Ege", "Karadeniz", "Akdeniz"], "Marmara"],
+            ["Ovaakça kombine çevrim santrali hangi ildedir?", ["Bursa", "İzmir", "Zonguldak", "Mersin"], "Bursa"]
         ],
         TR17: [
             ["Çanakkale Savaşları hangi boğaz çevresinde yaşanmıştır?", ["Çanakkale Boğazı", "İstanbul Boğazı", "Hürmüz", "Cebelitarık"], "Çanakkale Boğazı"],
@@ -76,7 +80,8 @@
         ],
         TR33: [
             ["Mersin'de öne çıkan hayvancılık türü hangisidir?", ["Kıl keçisi", "Ankara keçisi", "Manda", "İpek böceği"], "Kıl keçisi"],
-            ["Taşeli Platosu hangi ile yakındır?", ["Mersin", "Rize", "Kars", "Edirne"], "Mersin"]
+            ["Taşeli Platosu hangi ile yakındır?", ["Mersin", "Rize", "Kars", "Edirne"], "Mersin"],
+            ["Akkuyu nükleer santrali hangi ildedir?", ["Mersin", "Sinop", "Kırklareli", "İzmir"], "Mersin"]
         ],
         TR34: [
             ["Türkiye'de nüfusu en fazla olan il hangisidir?", ["İstanbul", "Ankara", "İzmir", "Bursa"], "İstanbul"],
@@ -84,7 +89,8 @@
         ],
         TR35: [
             ["İzmir Limanı hangi denize açılır?", ["Ege Denizi", "Karadeniz", "Marmara", "Akdeniz"], "Ege Denizi"],
-            ["Gediz Nehri hangi ile yaklaşır?", ["İzmir", "Trabzon", "Van", "Şanlıurfa"], "İzmir"]
+            ["Gediz Nehri hangi ile yaklaşır?", ["İzmir", "Trabzon", "Van", "Şanlıurfa"], "İzmir"],
+            ["Türkiye'nin ilk rüzgâr santrali nerededir?", ["Çeşme-Alaçatı", "Karapınar", "Akkuyu", "Silopi"], "Çeşme-Alaçatı"]
         ],
         TR36: [
             ["Kars Antlaşması hangi yıl imzalanmıştır?", ["1921", "1918", "1923", "1939"], "1921"],
@@ -100,7 +106,8 @@
         ],
         TR42: [
             ["Konya Ovası hangi ürünle anılır?", ["Buğday", "Çay", "Muz", "Fındık"], "Buğday"],
-            ["Tuz Gölü'ne komşu illerden biri hangisidir?", ["Konya", "Rize", "Hakkâri", "Edirne"], "Konya"]
+            ["Tuz Gölü'ne komşu illerden biri hangisidir?", ["Konya", "Rize", "Hakkâri", "Edirne"], "Konya"],
+            ["Türkiye'nin en büyük GES'i nerededir?", ["Karapınar", "Birecik", "Alaçatı", "Germencik"], "Karapınar"]
         ],
         TR44: [
             ["Kayısı üretiminde öne çıkan iller hangileridir?", ["Malatya ve Mersin", "Rize ve Trabzon", "Kars ve Ağrı", "Edirne ve Tekirdağ"], "Malatya ve Mersin"],
@@ -137,7 +144,8 @@
         TR63: [
             ["Harran Ovası hangi ildedir?", ["Şanlıurfa", "Gaziantep", "Mardin", "Diyarbakır"], "Şanlıurfa"],
             ["Antep fıstığı üretiminde notlara göre öne çıkan il hangisidir?", ["Şanlıurfa", "Rize", "Konya", "Trabzon"], "Şanlıurfa"],
-            ["Milli Mücadele'de Urfa'ya verilen unvan hangisidir?", ["Şanlı", "Kahraman", "Gazi", "Ulu"], "Şanlı"]
+            ["Milli Mücadele'de Urfa'ya verilen unvan hangisidir?", ["Şanlı", "Kahraman", "Gazi", "Ulu"], "Şanlı"],
+            ["Türkiye'nin ilk güneş tarlası nerededir?", ["Şanlıurfa-Birecik", "Konya-Karapınar", "Mersin", "Aydın"], "Şanlıurfa-Birecik"]
         ],
         TR65: [
             ["Türkiye'nin en büyük gölü hangisidir?", ["Van Gölü", "Tuz Gölü", "Beyşehir", "İznik"], "Van Gölü"],
@@ -145,11 +153,13 @@
         ],
         TR67: [
             ["Zonguldak hangi yeraltı kaynağıyla ünlüdür?", ["Taşkömürü", "Petrol", "Bor", "Tuz"], "Taşkömürü"],
-            ["Zonguldak hangi bölgededir?", ["Karadeniz", "Marmara", "Ege", "Akdeniz"], "Karadeniz"]
+            ["Zonguldak hangi bölgededir?", ["Karadeniz", "Marmara", "Ege", "Akdeniz"], "Karadeniz"],
+            ["Kozlu ve Karadon hangi enerji kaynağıyla anılır?", ["Taşkömürü", "Jeotermal", "Nükleer", "Güneş"], "Taşkömürü"]
         ],
         TR09: [
             ["Aydın ve çevresinde öne çıkan tarım ürünü hangisidir?", ["İncir", "Çay", "Fındık", "Keten"], "İncir"],
-            ["Büyük Menderes Grabeni hangi bölgededir?", ["Ege", "Karadeniz", "Doğu Anadolu", "Marmara"], "Ege"]
+            ["Büyük Menderes Grabeni hangi bölgededir?", ["Ege", "Karadeniz", "Doğu Anadolu", "Marmara"], "Ege"],
+            ["Germencik hangi enerji kaynağıyla anılır?", ["Jeotermal", "Nükleer", "Taşkömürü", "Asfaltit"], "Jeotermal"]
         ],
         TR48: [
             ["Muğla ekonomisinde öne çıkan sektör hangisidir?", ["Turizm", "Taşkömürü", "Çay", "Petrol"], "Turizm"],
@@ -158,6 +168,21 @@
         TR80: [
             ["Osmaniye hangi ovalık alanın doğu ucuna yakındır?", ["Çukurova", "Ergene", "Çarşamba", "Harran"], "Çukurova"],
             ["Osmaniye hangi bölgededir?", ["Akdeniz", "Güneydoğu", "Ege", "Marmara"], "Akdeniz"]
+        ],
+        TR72: [
+            ["Türkiye'de petrol ilk kez hangi ilde bulunmuştur?", ["Batman", "Zonguldak", "İzmir", "Konya"], "Batman"]
+        ],
+        TR46: [
+            ["Türkiye'nin en büyük linyit santrali nerededir?", ["Afşin-Elbistan", "Alaçatı", "Akkuyu", "Silopi"], "Afşin-Elbistan"]
+        ],
+        TR73: [
+            ["Asfaltit (katı petrol) Türkiye'de nerede bulunur?", ["Şırnak-Silopi", "Zonguldak", "Bartın", "Konya"], "Şırnak-Silopi"]
+        ],
+        TR20: [
+            ["Denizli-Sarayköy hangi enerji kaynağıyla ilişkilidir?", ["Jeotermal", "Nükleer", "Taşkömürü", "Petrol"], "Jeotermal"]
+        ],
+        TR08: [
+            ["Deriner ve Yusufeli HES hangi ildedir?", ["Artvin", "Samsun", "Elazığ", "Mardin"], "Artvin"]
         ]
     };
 
@@ -217,7 +242,14 @@
         { answer: "Fındık", clues: ["1. Karadeniz, 2. Marmara", "Dünya 1.", "Devirli ürün"], choices: ["Fındık", "Çay", "Antepfıstığı", "İncir"] },
         { answer: "Pamuk", clues: ["Şanlıurfa 1.", "Adana ve Aydın", "Sulama + yaz kuraklığı"], choices: ["Pamuk", "Çay", "Fındık", "Keten"] },
         { answer: "Antep fıstığı", clues: ["Şanlıurfa çevresi", "Devirli ürün", "Dünya 3. (İran'dan sonra)"], choices: ["Antep fıstığı", "Fındık", "İncir", "Çay"] },
-        { answer: "İncir", clues: ["Aydın monokültür", "Dünya 1.", "Kış ılıklığı"], choices: ["İncir", "Çay", "Fındık", "Pamuk"] }
+        { answer: "İncir", clues: ["Aydın monokültür", "Dünya 1.", "Kış ılıklığı"], choices: ["İncir", "Çay", "Fındık", "Pamuk"] },
+        { answer: "Afşin-Elbistan", clues: ["En büyük linyit santrali", "Kahramanmaraş", "Termik"], choices: ["Afşin-Elbistan", "Alaçatı", "Akkuyu", "Silopi"] },
+        { answer: "Akkuyu", clues: ["İlk nükleer santral", "Mersin", "İnşaatı devam"], choices: ["Akkuyu", "Sinop", "İğneada", "Karapınar"] },
+        { answer: "TANAP", clues: ["Azerbaycan gazı", "Trans Anadolu", "Avrupa'ya gider"], choices: ["TANAP", "Mavi Akım", "BTC", "Kerkük-Yumurtalık"] },
+        { answer: "Bakü-Tiflis-Ceyhan", clues: ["Azerbaycan petrolü", "Akdeniz", "Ceyhan"], choices: ["Bakü-Tiflis-Ceyhan", "TANAP", "Mavi Akım", "BTE"] },
+        { answer: "Mavi Akım", clues: ["Rusya gazı", "Karadeniz altı", "Samsun"], choices: ["Mavi Akım", "Türk Akımı", "TANAP", "Doğu Hattı"] },
+        { answer: "Linyit", clues: ["Alt kalorili", "III. jeolojik zaman", "Türkiye'de yaygın"], choices: ["Linyit", "Taş kömürü", "Asfaltit", "Uranyum"] },
+        { answer: "Taş kömürü", clues: ["Karbonifer", "Zonguldak-Bartın", "Rezervi az"], choices: ["Taş kömürü", "Linyit", "Asfaltit", "Jeotermal"] }
     ];
 
     var PANIC = [
@@ -290,7 +322,21 @@
         { q: "Koyun sayısında birinci il?", a: "Van", choices: ["Van", "Rize", "Yalova", "Mersin"] },
         { q: "Kümes hayvancılığı en çok hangi illerde?", a: "Manisa ve Balıkesir", choices: ["Manisa ve Balıkesir", "Rize ve Artvin", "Hakkâri ve Şırnak", "Sinop ve Bartın"] },
         { q: "Bakır çıkarımı notlara göre nerede yoğun?", a: "Karadeniz (Küre, Murgul, Çayeli)", choices: ["Karadeniz (Küre, Murgul, Çayeli)", "Tuz Gölü", "Ergene", "Taşeli"] },
-        { q: "Krom çıkarım yerleri?", a: "Guleman ve Köyceğiz", choices: ["Guleman ve Köyceğiz", "Divriği ve Hekimhan", "Mazıdağı", "Keçiborlu"] }
+        { q: "Krom çıkarım yerleri?", a: "Guleman ve Köyceğiz", choices: ["Guleman ve Köyceğiz", "Divriği ve Hekimhan", "Mazıdağı", "Keçiborlu"] },
+        { q: "Taş kömürü rezervi nerededir?", a: "Batı Karadeniz", choices: ["Batı Karadeniz", "Ege", "Güneydoğu", "Marmara"] },
+        { q: "En büyük linyit santrali?", a: "Afşin-Elbistan", choices: ["Afşin-Elbistan", "Soma", "Yatağan", "Alaçatı"] },
+        { q: "Petrol ihtiyacının yaklaşık ithalat payı?", a: "%90", choices: ["%90", "%10", "%50", "%0"] },
+        { q: "İlk petrol nerede bulundu?", a: "Batman", choices: ["Batman", "İzmit", "Zonguldak", "Konya"] },
+        { q: "Doğal gaz ithalat payı yaklaşık?", a: "%99,98", choices: ["%99,98", "%50", "%10", "%0"] },
+        { q: "İlk doğal gaz sahası?", a: "Tuna-1", choices: ["Tuna-1", "Germencik", "Silopi", "Karapınar"] },
+        { q: "Mavi Akım karaya nerede çıkar?", a: "Samsun", choices: ["Samsun", "İzmir", "Mersin", "Hatay"] },
+        { q: "Asfaltit nerede bulunur?", a: "Silopi", choices: ["Silopi", "Kozlu", "Alaçatı", "Karapınar"] },
+        { q: "HES potansiyeli en fazla bölge?", a: "Doğu Anadolu", choices: ["Doğu Anadolu", "Güneydoğu", "Marmara", "Ege"] },
+        { q: "HES üretimi en fazla bölge?", a: "Güneydoğu Anadolu", choices: ["Güneydoğu Anadolu", "Doğu Anadolu", "Marmara", "Ege"] },
+        { q: "İlk rüzgâr santrali?", a: "Çeşme-Alaçatı", choices: ["Çeşme-Alaçatı", "Karapınar", "Akkuyu", "Germencik"] },
+        { q: "En büyük GES?", a: "Karapınar", choices: ["Karapınar", "Birecik", "Mersin", "Aydın"] },
+        { q: "İlk NGS?", a: "Akkuyu", choices: ["Akkuyu", "Sinop", "İğneada", "Ovaakça"] },
+        { q: "Elektrik üretiminde 1. kaynak?", a: "kömür", choices: ["kömür", "hidrolik", "doğal gaz", "güneş"] }
     ];
 
     global.GamesBank = {
@@ -301,4 +347,3 @@
         TABU_SCORE: [5, 5, 3, 1]
     };
 })(typeof window !== "undefined" ? window : globalThis);
-export const GamesBank = globalThis.GamesBank;
