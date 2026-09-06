@@ -670,7 +670,13 @@ function main() {
             ],
             facts: ["Isparta ‘gül bahçesi’ olarak anılır", "Yağ gülü üretimi yoğundur"] },
         { file: "turunc.png", title: "TURUNÇGİL ÜRETİMİ", iller: ["Antalya", "Mersin", "Adana", "Hatay", "Muğla"], facts: ["Akdeniz kıyı kuşağı", "Don riski düşük yerlerde yetişir"] },
-        { file: "kenevir.jpg", title: "KENEVİR ÜRETİMİ", iller: ["Kastamonu", "Amasya", "Samsun"], facts: ["Devlet kontrolündedir", "Tohumuna çedene denir", "Ekime en çok izin Karadeniz’dedir"] },
+        { file: "kenevir.jpg", title: "KENEVİR ÜRETİMİ", urun: "Kenevir",
+            noktalar: [
+                { il: "Kastamonu", ilce: "Taşköprü", ldx: -34, ldy: 8 },
+                { il: "Samsun", ilce: "Vezirköprü", ldx: 32, ldy: 8 },
+                { il: "Amasya", ilce: "Suluova", ldx: 8, ldy: 30 }
+            ],
+            facts: ["Devlet kontrolündedir", "Tohumuna çedene denir", "Ekime en çok izin Karadeniz’dedir"] },
         { file: "kanola.jpg", title: "KANOLA ÜRETİMİ", urun: "Kanola",
             noktalar: [
                 { il: "Edirne", ilce: "Uzunköprü", ldx: -36, ldy: -8 },
