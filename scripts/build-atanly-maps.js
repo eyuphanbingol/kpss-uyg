@@ -994,8 +994,8 @@ function main() {
             { il: "Kayseri", label: "Erciyes (Kayseri)", ldx: 8, ldy: 28 },
             { il: "Şanlıurfa", label: "Karacadağ (Şanlıurfa)", ldx: 8, ldy: 28, boya: ["Diyarbakır"], pdy: -36 },
             { il: "Bitlis", label: "Nemrut", ldx: -36, ldy: 20, pdx: -36, pdy: 10, noclamp: true },
-            { il: "Van", label: "Süphan", ldx: -12, ldy: -26, pdx: -48, pdy: -38, noclamp: true, boya: ["Bitlis"] },
-            { il: "Van", label: "Tendürek", ldx: 18, ldy: 26, pdx: 58, pdy: -66, noclamp: true, boya: ["Ağrı"] },
+            { il: "Van", label: "Süphan", ldx: 8, ldy: -22, pdx: -48, pdy: -38, noclamp: true, boya: ["Bitlis"] },
+            { il: "Ağrı", label: "Tendürek", ldx: 8, ldy: 22, pdx: 32, pdy: 38 },
             { il: "Iğdır", label: "Ağrı Dağı", ldx: 20, ldy: -18, pdx: -16, pdy: 10, boya: ["Ağrı"] }
         ],
         [

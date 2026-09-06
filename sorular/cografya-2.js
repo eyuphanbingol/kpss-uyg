@@ -241,7 +241,7 @@ window.cografya_2_sorulari = [
     ],
     "correctAnswerIndex": 4,
     "explanation": "Ağrı, Tendürek, Süphan ve Nemrut Doğu Anadolu Bölgesi'ndeki önemli volkanik dağlardır. Erciyes ise İç Anadolu Bölgesi'nde, Kayseri çevresinde bulunur.",
-    "img": "./src/img/volkanik_dağlar.png?v=11",
+    "img": "./src/img/volkanik_dağlar.png?v=12",
     "imgAlt": "Türkiye volkanik dağları"
   },
 
@@ -257,7 +257,7 @@ window.cografya_2_sorulari = [
     ],
     "correctAnswerIndex": 4,
     "explanation": "Nemrut Dağı, Doğu Anadolu'da Bitlis çevresinde bulunan volkanik bir dağdır. İzmir'de değildir.",
-    "img": "./src/img/volkanik_dağlar.png?v=11",
+    "img": "./src/img/volkanik_dağlar.png?v=12",
     "imgAlt": "Volkanik dağlar ve iller"
   },
 
@@ -349,7 +349,7 @@ window.cografya_2_sorulari = [
     ],
     "correctAnswerIndex": 4,
     "explanation": "Ağrı, Süphan, Tendürek ve Nemrut Doğu Anadolu Bölgesi'nde; Erciyes ise İç Anadolu Bölgesi'nde yer alır.",
-    "img": "./src/img/volkanik_dağlar.png?v=11",
+    "img": "./src/img/volkanik_dağlar.png?v=12",
     "imgAlt": "Doğu Anadolu volkanları ve Erciyes"
   },
 

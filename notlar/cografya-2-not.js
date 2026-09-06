@@ -113,7 +113,7 @@ window.cografya_2_notlari = [
         <p>Magmanın yer kabuğunun zayıf noktalarından yeryüzüne doğru hareket etmesidir. Yüzey ve derinlik volkanizması olarak ikiye ayrılır.</p>
     </div>
             <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/volkanik_dağlar.png?v=11" alt="Volkanik dağlar haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+                <img src="./src/img/volkanik_dağlar.png?v=12" alt="Volkanik dağlar haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
             </div>
     `,
 
