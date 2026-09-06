@@ -740,7 +740,13 @@ function main() {
                 { il: "Konya", ilce: "Cihanbeyli", ldx: 8, ldy: -28 }
             ],
             facts: ["Trakya’nın Sarı Kızı olarak anılır", "Yağ oranı yüksektir"] },
-        { file: "pirinc.jpg", title: "ÇELTİK / PİRİNÇ", iller: ["Edirne", "Samsun", "Balıkesir"], facts: ["Meriç boyları başta gelir", "Diğer ekim alanları Osmancık ve Tosya", "Üretim devlet kontrolündedir"] },
+        { file: "pirinc.jpg", title: "ÇELTİK / PİRİNÇ", urun: "Pirinç",
+            noktalar: [
+                { il: "Edirne", ilce: "Meriç", ldx: -34, ldy: 8 },
+                { il: "Samsun", ldx: 8, ldy: 30 },
+                { il: "Balıkesir", ldx: -34, ldy: 8 }
+            ],
+            facts: ["Meriç boyları başta gelir", "Diğer ekim alanları Osmancık ve Tosya", "Üretim devlet kontrolündedir"] },
         { file: "ay_cicek.jpg", title: "AYÇİÇEĞİ ÜRETİMİ", urun: "Ayçiçeği",
             noktalar: [
                 { il: "Tekirdağ", ilce: "Malkara", ldx: 38, ldy: 30 },
