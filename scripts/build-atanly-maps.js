@@ -42,12 +42,14 @@ function norm(s) {
 }
 
 function bboxFromPath(d) {
-    var i = 0, cmd = "M", x = 0, y = 0, minX = 1e9, minY = 1e9, maxX = -1e9, maxY = -1e9;
+    var cmd = "M", x = 0, y = 0, minX = 1e9, minY = 1e9, maxX = -1e9, maxY = -1e9;
+    var pts = [];
     function add(px, py) {
         if (px < minX) minX = px;
         if (py < minY) minY = py;
         if (px > maxX) maxX = px;
         if (py > maxY) maxY = py;
+        pts.push([px, py]);
         x = px; y = py;
     }
     var re = /([MmLlHhVvCcSsQqTtAaZz])|(-?\d+\.?\d*)/g;
@@ -82,7 +84,38 @@ function bboxFromPath(d) {
         }
     }
     if (nums.length) flush();
-    return { cx: (minX + maxX) / 2, cy: (minY + maxY) / 2, minX: minX, minY: minY, maxX: maxX, maxY: maxY, w: maxX - minX, h: maxY - minY };
+    return {
+        cx: (minX + maxX) / 2, cy: (minY + maxY) / 2,
+        minX: minX, minY: minY, maxX: maxX, maxY: maxY,
+        w: maxX - minX, h: maxY - minY, pts: pts
+    };
+}
+
+function pointInPoly(pts, x, y) {
+    var inside = false;
+    for (var i = 0, j = pts.length - 1; i < pts.length; j = i++) {
+        var xi = pts[i][0], yi = pts[i][1], xj = pts[j][0], yj = pts[j][1];
+        if (((yi > y) !== (yj > y)) && (x < (xj - xi) * (y - yi) / ((yj - yi) || 1e-9) + xi)) inside = !inside;
+    }
+    return inside;
+}
+
+function visualCenter(bb) {
+    var pts = bb.pts || [];
+    if (pts.length < 3) return { x: bb.cx, y: bb.cy };
+    var sx = 0, sy = 0, n = 0;
+    var step = Math.max(3, Math.min(bb.w, bb.h) / 22);
+    var x, y;
+    for (y = bb.minY + step / 2; y < bb.maxY; y += step) {
+        for (x = bb.minX + step / 2; x < bb.maxX; x += step) {
+            if (!pointInPoly(pts, x, y)) continue;
+            sx += x;
+            sy += y;
+            n++;
+        }
+    }
+    if (!n) return { x: bb.cx, y: bb.cy };
+    return { x: sx / n, y: sy / n };
 }
 
 function parseProvinces(svg) {
@@ -92,7 +125,12 @@ function parseProvinces(svg) {
     while ((m = re.exec(svg))) {
         var d = m[1];
         var bb = bboxFromPath(d);
-        out.push({ d: d, id: m[2], name: m[3], key: norm(m[3]), cx: bb.cx, cy: bb.cy, minX: bb.minX, minY: bb.minY, maxX: bb.maxX, maxY: bb.maxY, w: bb.w, h: bb.h });
+        var vc = visualCenter(bb);
+        out.push({
+            d: d, id: m[2], name: m[3], key: norm(m[3]),
+            cx: bb.cx, cy: bb.cy, vx: vc.x, vy: vc.y,
+            minX: bb.minX, minY: bb.minY, maxX: bb.maxX, maxY: bb.maxY, w: bb.w, h: bb.h
+        });
     }
     var cre = /<circle class="[^"]*" cx="([\d.]+)" cy="([\d.]+)" id="([^"]+)"/g;
     while ((m = cre.exec(svg))) {
@@ -120,7 +158,7 @@ function keyOf(name) {
 }
 
 function districtXY(fp) {
-    return { x: fp.cx, y: fp.cy };
+    return { x: fp.vx != null ? fp.vx : fp.cx, y: fp.vy != null ? fp.vy : fp.cy };
 }
 
 function findProv(provs, name) {
@@ -443,26 +481,12 @@ function main() {
         { file: "incir.png", title: "İNCİR ÜRETİMİ", iller: ["Aydın", "İzmir", "Muğla", "Bursa", "Gaziantep"], facts: ["Aydın birinci sıradadır", "Ege’nin kurutmalık inciri meşhurdur"] },
         { file: "kayısı.png", title: "KAYISI ÜRETİMİ", iller: ["Malatya", "Elazığ", "Kahramanmaraş", "Iğdır"], facts: ["Malatya dünya ölçeğinde öne çıkar", "Kurutmalık kayısı ihracatı önemlidir"] },
         { file: "muz.png", title: "MUZ ÜRETİMİ", iller: ["Mersin", "Antalya", "Hatay"], facts: ["Don olayının az olduğu kıyı kuşağı", "Anamur–Alanya çevresi yoğundur"] },
-        { file: "anason.png", title: "ANASON ÜRETİMİ", urun: "Anason",
-            noktalar: [
-                { il: "Burdur", ilce: "Tefenni" },
-                { il: "Denizli", ilce: "Acıpayam" },
-                { il: "Antalya", ilce: "Elmalı" },
-                { il: "Muğla", ilce: "Fethiye" }
-            ],
-            facts: ["Göller Yöresi ve Teke çevresi", "Burdur–Tefenni öne çıkar", "Uçucu yağ bitkisidir"] },
+        { file: "anason.png", title: "ANASON ÜRETİMİ", urun: "Anason", iller: ["Burdur", "Denizli", "Antalya", "Muğla"], facts: ["Göller Yöresi ve Teke çevresi", "Burdur–Tefenni öne çıkar", "Uçucu yağ bitkisidir"] },
         { file: "aspir.png", title: "ASPİR ÜRETİMİ", iller: ["Eskişehir", "Konya", "Ankara", "Aksaray"], facts: ["Kuraklığa dayanıklı yağ bitkisi", "İç Anadolu’da ekimi artmaktadır"] },
         { file: "susam.png", title: "SUSAM ÜRETİMİ", iller: ["Antalya", "Muğla", "Manisa", "Adana"], facts: ["Sıcak iklim ister", "Akdeniz ve Ege kıyılarında yetişir"] },
         { file: "tütün.png", title: "TÜTÜN ÜRETİMİ", iller: ["Manisa", "Denizli", "Samsun", "Adıyaman", "Bitlis", "Muş"], facts: ["Ege ve Karadeniz’de klasik üretim alanları", "Doğu Anadolu’da da ekilir"] },
         { file: "yer_fıstık.png", title: "YER FISTIĞI", iller: ["Osmaniye", "Adana", "Aydın", "Kahramanmaraş"], facts: ["Çukurova ve Osmaniye öne çıkar", "Sıcaklık ve kumlu-tınlı toprak ister"] },
-        { file: "antep_fıstık.png", title: "ANTEP FISTIĞI", urun: "Antep fıstığı",
-            noktalar: [
-                { il: "Gaziantep", ilce: "Nizip" },
-                { il: "Şanlıurfa", ilce: "Birecik" },
-                { il: "Siirt", ilce: "Pervari" },
-                { il: "Adıyaman", ilce: "Kâhta" }
-            ],
-            facts: ["Güneydoğu Anadolu’nun karakteristik ürünü", "En çok Şanlıurfa–Birecik çevresi", "Gaziantep–Nizip adıyla anılır"] },
+        { file: "antep_fıstık.png", title: "ANTEP FISTIĞI", urun: "Antep fıstığı", iller: ["Gaziantep", "Şanlıurfa", "Siirt", "Adıyaman"], facts: ["Güneydoğu Anadolu’nun karakteristik ürünü", "En çok Şanlıurfa–Birecik çevresi", "Gaziantep–Nizip adıyla anılır"] },
         { file: "kırmızı_mercimek.png", title: "KIRMIZI MERCİMEK", iller: ["Şanlıurfa", "Diyarbakır", "Mardin", "Batman"], facts: ["Güneydoğu Anadolu birinci sıradadır", "Kuraklığa dayanıklı baklagildir"] },
         { file: "gül.png", title: "GÜL ÜRETİMİ", iller: ["Isparta", "Burdur", "Afyon", "Denizli"], facts: ["Isparta ‘gül bahçesi’ olarak anılır", "Yağ gülü üretimi yoğundur"] },
         { file: "turunc.png", title: "TURUNÇGİL ÜRETİMİ", iller: ["Antalya", "Mersin", "Adana", "Hatay", "Muğla"], facts: ["Akdeniz kıyı kuşağı", "Don riski düşük yerlerde yetişir"] },
