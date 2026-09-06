@@ -22,7 +22,7 @@
         ],
         dogu: [
             ["Doğu Anadolu'da kışların sert geçmesinin başlıca nedeni nedir?", ["Yükselti", "Denizellik", "Muson", "Sera etkisi"], "Yükselti"],
-            ["Doğu Anadolu'da hayvancılıkta öne çıkan faaliyet hangisidir?", ["Küçükbaş / büyükbaş mera", "Seracılık", "Çay", "Turunçgil"], "Küçükbaş / büyükbaş mera"]
+            ["Doğu Anadolu'da otluk-mera büyükbaşın başlıca illeri hangileridir?", ["Erzurum, Kars, Ağrı", "Manisa, Balıkesir", "Mersin, Antalya", "Samsun, Ordu"], "Erzurum, Kars, Ağrı"]
         ],
         guneydogu: [
             ["Güneydoğu Anadolu Projesi (GAP) hangi iki ırmağa dayanır?", ["Fırat ve Dicle", "Kızılırmak ve Yeşilırmak", "Sakarya ve Gediz", "Çoruh ve Aras"], "Fırat ve Dicle"],
@@ -64,7 +64,6 @@
             ["Erzurum-Kars Platosu hangi ekonomik faaliyet için elverişlidir?", ["Hayvancılık", "Muz", "Çay", "Zeytin"], "Hayvancılık"]
         ],
         TR27: [
-            ["Gaziantep hangi tarım ürünüyle öne çıkar?", ["Antep fıstığı", "Çay", "Fındık", "Muz"], "Antep fıstığı"],
             ["Milli Mücadele'de Antep'e verilen unvan hangisidir?", ["Kahraman", "Gazi", "Ulu", "Büyük"], "Kahraman"]
         ],
         TR31: [
@@ -104,7 +103,7 @@
             ["Tuz Gölü'ne komşu illerden biri hangisidir?", ["Konya", "Rize", "Hakkâri", "Edirne"], "Konya"]
         ],
         TR44: [
-            ["Malatya hangi meyveyle ünlüdür?", ["Kayısı", "Fındık", "Çay", "Muz"], "Kayısı"],
+            ["Kayısı üretiminde öne çıkan iller hangileridir?", ["Malatya ve Mersin", "Rize ve Trabzon", "Kars ve Ağrı", "Edirne ve Tekirdağ"], "Malatya ve Mersin"],
             ["Malatya hangi bölgededir?", ["Doğu Anadolu", "Marmara", "Ege", "Karadeniz"], "Doğu Anadolu"]
         ],
         TR45: [
@@ -137,6 +136,7 @@
         ],
         TR63: [
             ["Harran Ovası hangi ildedir?", ["Şanlıurfa", "Gaziantep", "Mardin", "Diyarbakır"], "Şanlıurfa"],
+            ["Antep fıstığı üretiminde notlara göre öne çıkan il hangisidir?", ["Şanlıurfa", "Rize", "Konya", "Trabzon"], "Şanlıurfa"],
             ["Milli Mücadele'de Urfa'ya verilen unvan hangisidir?", ["Şanlı", "Kahraman", "Gazi", "Ulu"], "Şanlı"]
         ],
         TR65: [
@@ -162,7 +162,7 @@
     };
 
     var TABU = [
-        { answer: "Moskova Antlaşması", clues: ["1921", "Gürcistan / Sovyetler", "Doğu sınırı"], choices: ["Moskova Antlaşması", "Kars Antlaşması", "Gümrü Antlaşması", "Lozan Antlaşması"] },
+        { answer: "Moskova Antlaşması", clues: ["1921", "TBMM – Sovyet Rusya", "Doğu sınırı"], choices: ["Moskova Antlaşması", "Kars Antlaşması", "Gümrü Antlaşması", "Lozan Antlaşması"] },
         { answer: "Kars Antlaşması", clues: ["1921", "Ermenistan / Gürcistan / Azerbaycan", "Doğu sınırını pekiştirir"], choices: ["Kars Antlaşması", "Moskova Antlaşması", "Sevr", "Mondros"] },
         { answer: "Gümrü Antlaşması", clues: ["1920", "TBMM'nin ilk siyasi antlaşması", "Ermenistan"], choices: ["Gümrü Antlaşması", "Lozan", "Mudanya", "Ankara Antlaşması"] },
         { answer: "Lozan Antlaşması", clues: ["24 Temmuz 1923", "Kapitülasyonlar kalkar", "Yeni Türk devletinin tapusu"], choices: ["Lozan Antlaşması", "Sevr", "Mondros", "Mudanya"] },
@@ -195,11 +195,11 @@
         { answer: "Takrir-i Sükûn", clues: ["1925", "Şeyh Sait sonrası", "Olağanüstü yetki"], choices: ["Takrir-i Sükûn", "Tesanüt", "Teşvik-i Sanayi", "Umumî Müfettişlik"] },
         { answer: "Harf Devrimi", clues: ["1 Kasım 1928", "Latin alfabesi", "Okuma yazma seferberliği"], choices: ["Harf Devrimi", "Kılık kıyafet", "Soyadı", "Takvim"] },
         { answer: "Medeni Kanun", clues: ["1926", "İsviçre örneği", "Kadın-erkek eşitliği adımı"], choices: ["Medeni Kanun", "Ceza Kanunu", "Borçlar", "İcra İflas"] },
-        { answer: "Boğazlar", clues: ["Montrö 1936", "Egemenlik", "Karadeniz'e kıyıdaş"], choices: ["Montrö Boğazlar Sözleşmesi", "Lozan Boğazlar", "Sevr", "Londra"] },
+        { answer: "Montrö Boğazlar Sözleşmesi", clues: ["1936", "Boğazlarda egemenlik", "Karadeniz'e kıyıdaş"], choices: ["Montrö Boğazlar Sözleşmesi", "Lozan Boğazlar", "Sevr", "Londra"] },
         { answer: "Hatay'ın katılışı", clues: ["1939", "Sancak", "Fransa / Suriye"], choices: ["Hatay'ın katılışı", "Kars", "Boğazlar", "Musul"] },
         { answer: "Musul sorunu", clues: ["Lozan'da çözülemedi", "1926 Ankara", "Petrol / Irak"], choices: ["Musul sorunu", "Hatay", "Boğazlar", "Ege adaları"] },
         { answer: "Fırat", clues: ["Doğu Anadolu kaynak", "GAP", "Suriye'ye çıkar"], choices: ["Fırat", "Kızılırmak", "Sakarya", "Gediz"] },
-        { answer: "Kızılırmak", clues: ["En uzun ırmak", "Bafra", "İç Anadolu yayı"], choices: ["Kızılırmak", "Fırat", "Dicle", "Yeşilırmak"] },
+        { answer: "Kızılırmak", clues: ["Sınırlar içi en uzun", "Bafra deltası", "İç Anadolu yayı"], choices: ["Kızılırmak", "Fırat", "Dicle", "Yeşilırmak"] },
         { answer: "Toroslar", clues: ["Kıvrım dağları", "Akdeniz", "Gülek Boğazı"], choices: ["Toroslar", "Karadeniz Dağları", "Yıldız Dağları", "Kaz Dağı"] },
         { answer: "GAP", clues: ["Fırat-Dicle", "Sulama + enerji", "Güneydoğu"], choices: ["GAP", "DAP", "DOKAP", "KOP"] },
         { answer: "Bor", clues: ["Dünya rezervinin ~%72'si", "Kırka ve Bandırma", "Balıkesir–Eskişehir–Kütahya–Bursa"], choices: ["Bor", "Krom", "Fosfat", "Trona"] },
@@ -214,8 +214,10 @@
         { answer: "Kıl keçisi", clues: ["Akdeniz / Toros", "Maki", "Engebeli yamaç"], choices: ["Kıl keçisi", "Ankara keçisi", "Merinos", "Kıvırcık"] },
         { answer: "Mera hayvancılığı", clues: ["Doğu Anadolu", "Yaz yayla", "İklim etkisi fazla"], choices: ["Mera hayvancılığı", "Ahır-besi", "Kümes", "Arıcılık"] },
         { answer: "Çay", clues: ["Doğu Karadeniz", "Rize", "Yağış + eğim"], choices: ["Çay", "Fındık", "Zeytin", "Pamuk"] },
-        { answer: "Fındık", clues: ["Ordu–Giresun", "Karadeniz", "Kıyı kuşağı"], choices: ["Fındık", "Çay", "Antepfıstığı", "İncir"] },
-        { answer: "Pamuk", clues: ["Çukurova", "Ege grabenleri", "Sulama"], choices: ["Pamuk", "Çay", "Fındık", "Keten"] }
+        { answer: "Fındık", clues: ["1. Karadeniz, 2. Marmara", "Dünya 1.", "Devirli ürün"], choices: ["Fındık", "Çay", "Antepfıstığı", "İncir"] },
+        { answer: "Pamuk", clues: ["Şanlıurfa 1.", "Adana ve Aydın", "Sulama + yaz kuraklığı"], choices: ["Pamuk", "Çay", "Fındık", "Keten"] },
+        { answer: "Antep fıstığı", clues: ["Şanlıurfa çevresi", "Devirli ürün", "Dünya 3. (İran'dan sonra)"], choices: ["Antep fıstığı", "Fındık", "İncir", "Çay"] },
+        { answer: "İncir", clues: ["Aydın monokültür", "Dünya 1.", "Kış ılıklığı"], choices: ["İncir", "Çay", "Fındık", "Pamuk"] }
     ];
 
     var PANIC = [
@@ -279,7 +281,16 @@
         { q: "Oltu taşı ili?", a: "Erzurum", choices: ["Erzurum", "Eskişehir", "Yozgat", "Isparta"] },
         { q: "Karabük–Ereğli demir-çelik nedeni?", a: "taşkömürüne yakınlık", choices: ["taşkömürüne yakınlık", "turizm", "pamuk tarımı", "buzul"] },
         { q: "Ankara keçisinin ürünü?", a: "tiftik", choices: ["tiftik", "ipek", "pamuk", "keten"] },
-        { q: "Doğu Karadeniz'in simge tarımı?", a: "çay", choices: ["çay", "pamuk", "zeytin", "muz"] }
+        { q: "Doğu Karadeniz'in simge tarımı?", a: "çay", choices: ["çay", "pamuk", "zeytin", "muz"] },
+        { q: "Zeytin üretiminde en fazla öne çıkan iller?", a: "Manisa ve İzmir", choices: ["Manisa ve İzmir", "Rize ve Artvin", "Kars ve Ağrı", "Van ve Muş"] },
+        { q: "Pamuk üretiminde birinci il?", a: "Şanlıurfa", choices: ["Şanlıurfa", "Rize", "Kars", "Zonguldak"] },
+        { q: "Antep fıstığı en çok nerede yetişir?", a: "Şanlıurfa", choices: ["Şanlıurfa", "Rize", "Konya", "Trabzon"] },
+        { q: "Kıl keçisinde il birincisi?", a: "Mersin", choices: ["Mersin", "Ankara", "Van", "Samsun"] },
+        { q: "Tiftik keçisinde il birincisi?", a: "Ankara", choices: ["Ankara", "Mersin", "Van", "Ordu"] },
+        { q: "Koyun sayısında birinci il?", a: "Van", choices: ["Van", "Rize", "Yalova", "Mersin"] },
+        { q: "Kümes hayvancılığı en çok hangi illerde?", a: "Manisa ve Balıkesir", choices: ["Manisa ve Balıkesir", "Rize ve Artvin", "Hakkâri ve Şırnak", "Sinop ve Bartın"] },
+        { q: "Bakır çıkarımı notlara göre nerede yoğun?", a: "Karadeniz (Küre, Murgul, Çayeli)", choices: ["Karadeniz (Küre, Murgul, Çayeli)", "Tuz Gölü", "Ergene", "Taşeli"] },
+        { q: "Krom çıkarım yerleri?", a: "Guleman ve Köyceğiz", choices: ["Guleman ve Köyceğiz", "Divriği ve Hekimhan", "Mazıdağı", "Keçiborlu"] }
     ];
 
     global.GamesBank = {
@@ -290,5 +301,4 @@
         TABU_SCORE: [5, 5, 3, 1]
     };
 })(typeof window !== "undefined" ? window : globalThis);
-
-export var GamesBank = globalThis.GamesBank;
+export const GamesBank = globalThis.GamesBank;

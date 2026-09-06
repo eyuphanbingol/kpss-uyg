@@ -143,11 +143,13 @@ globalThis.GamesBank = GamesBank;
             raw.push(it.name, it.places);
         });
         var out = [];
+        var nameFold = fold(name);
+        if (nameFold.length >= 3) out.push(nameFold);
         raw.forEach(function (s) {
             String(s || "").split(/[-–,\/]| ve /i).forEach(function (part) {
                 var t = String(part || "").replace(/^[^:]+:\s*/, "").trim();
                 var f = fold(t);
-                if (f.length < 5) return;
+                if (f.length < 4) return;
                 if (out.indexOf(f) < 0) out.push(f);
             });
         });

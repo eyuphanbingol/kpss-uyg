@@ -493,33 +493,41 @@
     ].forEach(function (r) { ITEMS.push(F("toprak", r[0], r[1], r[2])); });
 
     [
-        ["Çay", "Rize", { prompt: "Çay monokültürünü (Rize) bul." }],
-        ["Fındık", "Ordu-Giresun", { prompt: "Fındık kuşağını bul." }],
-        ["Zeytin", "Aydın-İzmir-Balıkesir", null],
+        ["Çay", "Rize-Trabzon-Artvin-Giresun", { prompt: "Çayın tamamı Doğu Karadeniz'dedir; Rize kuşağını bul." }],
+        ["Fındık", "Ordu-Samsun-Düzce-Giresun-Sakarya", { prompt: "Fındıkta 1. Karadeniz, 2. Marmara. Kuşağı bul." }],
+        ["Zeytin", "Manisa-İzmir", { follow: { q: "Zeytin üretiminde en fazla öne çıkan iller?", choices: ["Manisa ve İzmir", "Rize ve Trabzon", "Kars ve Ağrı", "Van ve Hakkâri"], answer: "Manisa ve İzmir" } }],
         ["Turunçgil", "Antalya-Mersin-Adana-Hatay", null],
-        ["Muz", "Mersin", { prompt: "Anamur muzunu bul." }],
-        ["İncir", "Aydın", { prompt: "Aydın incirini bul." }],
-        ["Kayısı", "Malatya", { prompt: "Malatya kayısısını bul." }],
-        ["Pamuk (GAP)", "Şanlıurfa", { prompt: "GAP pamuğunun öne çıktığı ili bul." }],
-        ["Mısır (Konya / sulama)", "Konya", { prompt: "Sulama ile mısırın genişlediği Konya'yı bul." }],
-        ["Şeker pancarı", "Konya-Eskişehir", { prompt: "Şeker pancarı (fabrika/kota) alanını bul." }],
-        ["Çeltik", "Edirne-Samsun", { prompt: "Devlet kontrollü çeltik alanını (Ergene / Bafra) bul." }],
-        ["Haşhaş", "Afyonkarahisar-Denizli", { prompt: "Kontrollü haşhaş ekim alanını bul." }],
-        ["Tütün", "Manisa-Samsun", null],
-        ["Üzüm", "Manisa", null],
-        ["Elma", "Isparta-Niğde-Karaman", null],
-        ["Ayçiçeği", "Tekirdağ-Edirne", null],
+        ["Muz", "Mersin-Antalya-Adana-Hatay", { prompt: "Muz mikrokliması: Antalya, Mersin, Adana, Hatay." }],
+        ["İncir", "Aydın", { prompt: "Aydın incirini bul (monokültür; dünya 1.)." }],
+        ["Kayısı", "Malatya-Mersin", { prompt: "Kayısıda Malatya ve Mersin öne çıkar." }],
+        ["Pamuk", "Şanlıurfa-Adana-Aydın", { follow: { q: "Pamuk üretiminde birinci il?", choices: ["Rize", "Şanlıurfa", "Kars", "Zonguldak"], answer: "Şanlıurfa" } }],
+        ["Mısır", "Adana-Konya-Şanlıurfa", { prompt: "Yağlık mısır: Çukurova, Konya Ovası, Şanlıurfa." }],
+        ["Şeker pancarı", "Konya-Eskişehir-Kayseri", { prompt: "Şeker pancarı (fabrika yanı): Konya, Eskişehir, Kayseri." }],
+        ["Çeltik", "Edirne-Samsun-Balıkesir", { follow: { q: "Çeltikte en fazla üretim nerededir?", choices: ["Meriç (Edirne) boyları", "Rize yaylaları", "Van Gölü", "Tuz Gölü"], answer: "Meriç (Edirne) boyları" } }],
+        ["Haşhaş", "Afyonkarahisar-Denizli", { prompt: "Kontrollü haşhaş; fabrika Bolvadin (Afyon)." }],
+        ["Tütün", "Manisa-Samsun", { prompt: "Tütün üretimi en fazla Ege'dedir." }],
+        ["Üzüm", "Manisa", { prompt: "Üzümde en fazla üretim Ege'de Manisa." }],
+        ["Elma", "Isparta-Antalya-Karaman-Niğde", { prompt: "Elma: başta Isparta; Antalya, Karaman, Niğde." }],
+        ["Ayçiçeği", "Tekirdağ-Konya-Adana", { prompt: "Ayçiçeği merkezi Ergene (Trakya); Konya ve Adana da ekilir." }],
         ["Buğday", "Konya", null],
-        ["Antep fıstığı", "Gaziantep-Şanlıurfa", null]
+        ["Antep fıstığı", "Şanlıurfa", { follow: { q: "Antep fıstığı üretiminde notlara göre öne çıkan yer?", choices: ["Şanlıurfa çevresi", "Rize", "Konya Ovası", "Ergene"], answer: "Şanlıurfa çevresi" } }],
+        ["Yer fıstığı", "Osmaniye-Adana", { prompt: "Yer fıstığı: Çukurova ve Osmaniye." }],
+        ["Gül", "Isparta", { prompt: "Gül: Göller Yöresi / Isparta." }],
+        ["Patates", "Niğde-Kayseri", { prompt: "Patates: Niğde, ardından Kayseri." }],
+        ["Kırmızı mercimek", "Şanlıurfa-Diyarbakır-Mardin", { prompt: "Kırmızı mercimekte Güneydoğu birinci sıradadır." }],
+        ["Kenevir", "Kastamonu-Amasya-Samsun", { prompt: "Kenevir devlet kontrollüdür; izin en çok Karadeniz." }],
+        ["Kanola", "Tekirdağ-Konya", { prompt: "Kanola: Trakya'nın Sarı Kızı." }]
     ].forEach(function (r) { ITEMS.push(F("tarim", r[0], r[1], r[2] || {})); });
 
     [
-        ["Büyükbaş mera (Erzurum-Kars)", "Erzurum-Kars-Ardahan", { follow: { q: "Büyükbaş mera hayvancılığının merkezi?", choices: ["Teke Platosu", "Erzurum-Kars", "Konya Ovası", "Çukurova"], answer: "Erzurum-Kars" } }],
-        ["Kıl keçisi (Teke–Taşeli)", "Antalya-Mersin", { follow: { q: "Karstik engebeye uyumlu hayvan?", choices: ["Tiftik keçisi", "Kıl keçisi", "Manda", "İpek böceği"], answer: "Kıl keçisi" } }],
-        ["Tiftik keçisi", "Ankara-Eskişehir", { prompt: "Ankara keçisi / tiftik alanını bul." }],
-        ["İpek böcekçiliği", "Diyarbakır", { prompt: "İpek böcekçiliğinde öne çıkan ili bul." }],
-        ["Çam balı (Muğla)", "Muğla", { prompt: "Muğla çam balı alanını bul." }],
-        ["Kümes (Bolu / Marmara-Ege)", "Bolu-Manisa-Balıkesir", { prompt: "Pazara yakın kümes hayvancılığı ilini bul." }]
+        ["Otluk-mera (büyükbaş)", "Erzurum-Kars-Ağrı", { follow: { q: "Otluk-mera büyükbaşın başlıca illeri?", choices: ["Erzurum, Kars, Ağrı", "Manisa, Balıkesir", "Mersin, Antalya", "Samsun, Ordu"], answer: "Erzurum, Kars, Ağrı" } }],
+        ["Kıl keçisi", "Mersin-Antalya", { follow: { q: "Kıl keçisinde il birincisi?", choices: ["Mersin", "Ankara", "Van", "Samsun"], answer: "Mersin" } }],
+        ["Tiftik keçisi (Ankara keçisi)", "Ankara", { prompt: "Tiftik keçisinde il birincisi Ankara." }],
+        ["Koyun", "Van", { follow: { q: "Koyun sayısında birinci il?", choices: ["Van", "Rize", "Yalova", "Mersin"], answer: "Van" } }],
+        ["Manda", "Samsun", { prompt: "En çok manda Samsun çevresindedir (sulak/bataklık)." }],
+        ["İpek böcekçiliği", "Diyarbakır", { prompt: "İpek böcekçiliğinin başlıca merkezi Diyarbakır." }],
+        ["Arıcılık", "Ordu-Adana", { prompt: "Arıcılıkta il birincisi Ordu (Doğu Karadeniz); Adana da önemli." }],
+        ["Kümes hayvancılığı", "Manisa-Balıkesir", { prompt: "Kümes en çok Manisa ve Balıkesir'dedir." }]
     ].forEach(function (r) { ITEMS.push(F("hayvan", r[0], r[1], r[2])); });
 
     [
@@ -560,10 +568,10 @@
     [
         ["Demir: Divriği", "Sivas", { follow: { q: "Divriği demiri başlıca nerede işlenir?", choices: ["Rize", "Ereğli / Karabük / İskenderun", "Van", "Muğla"], answer: "Ereğli / Karabük / İskenderun" } }],
         ["Demir: Hekimhan", "Malatya", { prompt: "Hekimhan–Hasançelebi demirini bul." }],
-        ["Bakır: Murgul", "Artvin"], ["Bakır: Küre", "Kastamonu"], ["Bakır: Maden", "Elazığ"],
+        ["Bakır: Murgul", "Artvin"], ["Bakır: Küre", "Kastamonu"], ["Bakır: Çayeli", "Rize"],
         ["Bakır işleme: Samsun", "Samsun", { follow: { q: "Bakırın işlendiği liman kenti?", choices: ["Antalya", "Samsun", "Van", "Konya"], answer: "Samsun" } }],
         ["Boksit: Akseki", "Antalya"], ["Boksit işleme: Seydişehir", "Konya"],
-        ["Krom: Guleman", "Elazığ"], ["Krom: Fethiye–Dalaman", "Muğla"],
+        ["Krom: Guleman", "Elazığ"], ["Krom: Köyceğiz", "Muğla"],
         ["Bor: Balıkesir–Eskişehir–Kütahya–Bursa", "Balıkesir-Eskişehir-Kütahya-Bursa", { prompt: "Bor kuşağının bir ilini bul (Marmara güneyi / İçbatı Anadolu)." }],
         ["Barit: Alanya", "Antalya"],
         ["Fosfat: Mazıdağı", "Mardin"],
