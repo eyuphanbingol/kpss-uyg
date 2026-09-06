@@ -22,7 +22,8 @@
         karadeniz: [
             ["Doğu Karadeniz'de en çok yetiştirilen tarım ürünü hangisidir?", ["Çay", "Antep fıstığı", "Pamuk", "Zeytin"], "Çay"],
             ["Karadeniz kıyısında yağışın fazla olmasının temel nedeni nedir?", ["Dağların kıyıya paralel uzanması", "Çöl etkisi", "Muson rüzgârları", "Gulf Stream"], "Dağların kıyıya paralel uzanması"],
-            ["Taş kömürü rezervinin neredeyse tamamı hangi bölgededir?", ["Batı Karadeniz", "Ege", "Güneydoğu", "Marmara"], "Batı Karadeniz"]
+            ["Taş kömürü rezervinin neredeyse tamamı hangi bölgededir?", ["Batı Karadeniz", "Ege", "Güneydoğu", "Marmara"], "Batı Karadeniz"],
+            ["Doğu Karadeniz'e demir yolu neden gitmez?", ["Engebeli / dağlık yapı", "Sermaye fazlalığı", "Düz ova", "Liman yokluğu"], "Engebeli / dağlık yapı"]
         ],
         dogu: [
             ["Doğu Anadolu'da kışların sert geçmesinin başlıca nedeni nedir?", ["Yükselti", "Denizellik", "Muson", "Sera etkisi"], "Yükselti"],
@@ -67,7 +68,8 @@
         TR22: [
             ["Edirne'de Meriç Nehri hangi ülkeye doğru sınır oluşturur?", ["Yunanistan / Bulgaristan hattı", "Gürcistan", "Suriye", "Irak"], "Yunanistan / Bulgaristan hattı"],
             ["Edirne hangi bölgededir?", ["Marmara", "Ege", "Akdeniz", "İç Anadolu"], "Marmara"],
-            ["Kapıkule sınır kapısı hangi ildedir?", ["Edirne", "Şırnak", "Ağrı", "Artvin"], "Edirne"]
+            ["Kapıkule sınır kapısı hangi ildedir?", ["Edirne", "Şırnak", "Ağrı", "Artvin"], "Edirne"],
+            ["Yunanistan demiryolu kapısı hangisidir?", ["Uzunköprü", "Kapıköy", "Akyaka", "Canbaz"], "Uzunköprü"]
         ],
         TR25: [
             ["Erzurum Kongresi hangi yılda toplanmıştır?", ["1919", "1920", "1921", "1923"], "1919"],
@@ -93,16 +95,19 @@
         TR34: [
             ["Türkiye'de nüfusu en fazla olan il hangisidir?", ["İstanbul", "Ankara", "İzmir", "Bursa"], "İstanbul"],
             ["İstanbul Boğazı hangi iki denizi birleştirir?", ["Karadeniz-Marmara", "Ege-Akdeniz", "Marmara-Ege", "Van-Tuz"], "Karadeniz-Marmara"],
-            ["Tuzla–Haliç–Pendik hangi sanayi koluyla anılır?", ["Gemi yapımı", "Çay", "Şeker", "Seramik"], "Gemi yapımı"]
+            ["Tuzla–Haliç–Pendik hangi sanayi koluyla anılır?", ["Gemi yapımı", "Çay", "Şeker", "Seramik"], "Gemi yapımı"],
+            ["Türkiye'nin en büyük havalimanı hangisidir?", ["İstanbul Havalimanı", "GAP Havalimanı", "Esenboğa", "Adnan Menderes"], "İstanbul Havalimanı"]
         ],
         TR35: [
             ["İzmir Limanı hangi denize açılır?", ["Ege Denizi", "Karadeniz", "Marmara", "Akdeniz"], "Ege Denizi"],
             ["Gediz Nehri hangi ile yaklaşır?", ["İzmir", "Trabzon", "Van", "Şanlıurfa"], "İzmir"],
-            ["Türkiye'nin ilk rüzgâr santrali nerededir?", ["Çeşme-Alaçatı", "Karapınar", "Akkuyu", "Silopi"], "Çeşme-Alaçatı"]
+            ["Türkiye'nin ilk rüzgâr santrali nerededir?", ["Çeşme-Alaçatı", "Karapınar", "Akkuyu", "Silopi"], "Çeşme-Alaçatı"],
+            ["Hinterlandı geniş limanlardan biri hangisidir?", ["İzmir", "Sinop", "Hopa", "Cide"], "İzmir"]
         ],
         TR36: [
             ["Kars Antlaşması hangi yıl imzalanmıştır?", ["1921", "1918", "1923", "1939"], "1921"],
-            ["Kars-Erzurum yöresinde öne çıkan faaliyet hangisidir?", ["Mera hayvancılığı", "Çay", "Turunçgil", "Zeytin"], "Mera hayvancılığı"]
+            ["Kars-Erzurum yöresinde öne çıkan faaliyet hangisidir?", ["Mera hayvancılığı", "Çay", "Turunçgil", "Zeytin"], "Mera hayvancılığı"],
+            ["Ermenistan demiryolu kapısı (siyasi nedenle kapalı) hangisidir?", ["Akyaka", "Kapıkule", "Kapıköy", "Canbaz"], "Akyaka"]
         ],
         TR38: [
             ["Erciyes Dağı hangi ildedir?", ["Kayseri", "Niğde", "Nevşehir", "Aksaray"], "Kayseri"],
@@ -156,11 +161,13 @@
             ["Harran Ovası hangi ildedir?", ["Şanlıurfa", "Gaziantep", "Mardin", "Diyarbakır"], "Şanlıurfa"],
             ["Antep fıstığı üretiminde notlara göre öne çıkan il hangisidir?", ["Şanlıurfa", "Rize", "Konya", "Trabzon"], "Şanlıurfa"],
             ["Milli Mücadele'de Urfa'ya verilen unvan hangisidir?", ["Şanlı", "Kahraman", "Gazi", "Ulu"], "Şanlı"],
-            ["Türkiye'nin ilk güneş tarlası nerededir?", ["Şanlıurfa-Birecik", "Konya-Karapınar", "Mersin", "Aydın"], "Şanlıurfa-Birecik"]
+            ["Türkiye'nin ilk güneş tarlası nerededir?", ["Şanlıurfa-Birecik", "Konya-Karapınar", "Mersin", "Aydın"], "Şanlıurfa-Birecik"],
+            ["En büyük kargo havalimanı hangisidir?", ["Şanlıurfa (GAP)", "Sinop", "Hopa", "Cide"], "Şanlıurfa (GAP)"]
         ],
         TR65: [
             ["Türkiye'nin en büyük gölü hangisidir?", ["Van Gölü", "Tuz Gölü", "Beyşehir", "İznik"], "Van Gölü"],
-            ["İnci kefali hangi gölle anılır?", ["Van Gölü", "Tuz Gölü", "Eğirdir", "Sapanca"], "Van Gölü"]
+            ["İnci kefali hangi gölle anılır?", ["Van Gölü", "Tuz Gölü", "Eğirdir", "Sapanca"], "Van Gölü"],
+            ["İran demiryolu kapısı hangisidir?", ["Kapıköy", "Kapıkule", "Akyaka", "Uzunköprü"], "Kapıköy"]
         ],
         TR67: [
             ["Zonguldak hangi yeraltı kaynağıyla ünlüdür?", ["Taşkömürü", "Petrol", "Bor", "Tuz"], "Taşkömürü"],
@@ -201,6 +208,12 @@
         ],
         TR04: [
             ["Gürbulak sınır kapısı hangi ildedir?", ["Ağrı", "Edirne", "Şırnak", "Hatay"], "Ağrı"]
+        ],
+        TR57: [
+            ["Doğal liman olduğu halde hinterlandı dar olduğu için gelişemeyen liman hangisidir?", ["Sinop", "İzmir", "Mersin", "İstanbul"], "Sinop"]
+        ],
+        TR26: [
+            ["Türkiye'nin ilk YHT hattı hangi ili Ankara'ya bağlar?", ["Eskişehir", "Erzurum", "Antalya", "Rize"], "Eskişehir"]
         ]
     };
 
@@ -271,7 +284,11 @@
         { answer: "Otomotiv", clues: ["Sanayinin lokomotifi", "En büyük kol", "İhracatta sanayi"], choices: ["Otomotiv", "Çay", "Şeker", "Seramik"] },
         { answer: "Batman Rafinerisi", clues: ["Petro-kimya", "Hammaddeye bağlı", "Petrol"], choices: ["Batman Rafinerisi", "Tuzla tersanesi", "Aksu kâğıt", "Hereke halı"] },
         { answer: "Habur–Kapıkule", clues: ["En uzun transit", "Irak–Avrupa", "Şırnak–Edirne"], choices: ["Habur–Kapıkule", "Gürbulak–Trabzon", "Sarp–Samsun", "Cilvegözü–Mersin"] },
-        { answer: "Gürbulak–Trabzon", clues: ["İran", "Karadeniz", "En kısa lojistik"], choices: ["Gürbulak–Trabzon", "Habur–Kapıkule", "Kapıkule–Sarp", "Habur–İzmir"] }
+        { answer: "Gürbulak–Trabzon", clues: ["İran", "Karadeniz", "En kısa lojistik"], choices: ["Gürbulak–Trabzon", "Habur–Kapıkule", "Kapıkule–Sarp", "Habur–İzmir"] },
+        { answer: "İzmir–Aydın", clues: ["İlk demir yolu", "Osmanlı dönemi", "Ege"], choices: ["İzmir–Aydın", "Ankara–Yerköy", "Ankara–Eskişehir", "Sivas–Erzurum"] },
+        { answer: "Ankara–Eskişehir", clues: ["İlk YHT", "2009", "Yüksek hızlı tren"], choices: ["Ankara–Eskişehir", "Ankara–Erzurum", "İzmir–Aydın", "Konya–Karaman"] },
+        { answer: "Ro-Ro", clues: ["TIR gemiye biner", "Tekerlekli araç", "Deniz"], choices: ["Ro-Ro", "Boru hattı", "YHT", "Kontrplak"] },
+        { answer: "Hinterland", clues: ["Ard bölge", "Liman gelişmesi", "Etki alanı"], choices: ["Hinterland", "Rıhtım", "Falez", "Delta"] }
     ];
 
     var PANIC = [
@@ -367,7 +384,15 @@
         { q: "Hammaddeye bağlı petro-kimya?", a: "Batman", choices: ["Batman", "Rize", "Kayseri", "Uşak"] },
         { q: "Şeker fabrikası neden tarıma yakın?", a: "pancar çabuk bozulur", choices: ["pancar çabuk bozulur", "liman zorunlu", "yalnızca kıyı", "çay hammaddesi"] },
         { q: "İran'ın Karadeniz transit hattı?", a: "Gürbulak–Trabzon", choices: ["Gürbulak–Trabzon", "Habur–Kapıkule", "Sarp–İzmir", "Cilvegözü–Samsun"] },
-        { q: "En uzun transit koridor?", a: "Habur–Kapıkule", choices: ["Habur–Kapıkule", "Gürbulak–Trabzon", "Sarp–Trabzon", "Kapıkule–Mersin"] }
+        { q: "En uzun transit koridor?", a: "Habur–Kapıkule", choices: ["Habur–Kapıkule", "Gürbulak–Trabzon", "Sarp–Trabzon", "Kapıkule–Mersin"] },
+        { q: "İlk demir yolu hattı?", a: "İzmir–Aydın", choices: ["İzmir–Aydın", "Ankara–Yerköy", "Ankara–Eskişehir", "Sivas–Kars"] },
+        { q: "Cumhuriyet'in ilk demir yolu?", a: "Ankara–Yerköy", choices: ["Ankara–Yerköy", "İzmir–Aydın", "Ankara–Eskişehir", "Haydarpaşa"] },
+        { q: "İlk YHT hattı ve yılı?", a: "Ankara–Eskişehir / 2009", choices: ["Ankara–Eskişehir / 2009", "Ankara–Konya / 2003", "İstanbul–Sivas / 1999", "Konya–Karaman / 2011"] },
+        { q: "İç ticarette en çok kullanılan?", a: "kara yolu", choices: ["kara yolu", "deniz yolu", "hava yolu", "boru hattı"] },
+        { q: "Dış ticarette en çok kullanılan?", a: "deniz yolu", choices: ["deniz yolu", "kara yolu", "hava yolu", "demir yolu"] },
+        { q: "En pahalı ulaşım türü?", a: "hava yolu", choices: ["hava yolu", "deniz yolu", "demir yolu", "kara yolu"] },
+        { q: "En büyük kargo havalimanı?", a: "Şanlıurfa GAP", choices: ["Şanlıurfa GAP", "Sinop", "Hopa", "Cide"] },
+        { q: "Tekerlekli aracın gemiyle taşınması?", a: "Ro-Ro", choices: ["Ro-Ro", "YHT", "boru hattı", "fayton"] }
     ];
 
     global.GamesBank = {

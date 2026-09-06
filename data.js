@@ -158,6 +158,10 @@ window.getKpssData = function () {
             "Türkiyenini Ekonomik Coğrafyası (SANAYİ)":{
                 notlar:window.cografya_23_notlari || [],
                 sorular:window.cografya_23_sorulari || []
+            },
+            "Türkiyenini Ekonomik Coğrafyası (ULAŞIM)":{
+                notlar:window.cografya_24_notlari || [],
+                sorular:window.cografya_24_sorulari || []
             }
         },
         // YENİ EKLENEN TÜRKÇE BÖLÜMÜ

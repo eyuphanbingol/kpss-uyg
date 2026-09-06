@@ -179,7 +179,8 @@
                 { id: "sanayi", title: "Sanayi tesisleri", icon: "🏭" },
                 { id: "boru", title: "Enerji boru hatları", icon: "🛢️" },
                 { id: "hes", title: "HES, santral ve enerji", icon: "⚡" },
-                { id: "transit", title: "Transit ticaret yolları", icon: "🚛" }
+                { id: "transit", title: "Transit ticaret yolları", icon: "🚛" },
+                { id: "yht", title: "YHT ve demiryolu kapıları", icon: "🚄" }
             ]
         },
         {
@@ -450,7 +451,10 @@
         ["Çubuk Geçidi", "Antalya-Isparta", { prompt: "Antalya'yı Göller Yöresi'ne bağlayan Çubuk Geçidi'ni bul." }],
         ["Sertavul Geçidi", "Karaman-Mersin", { prompt: "Silifke'yi Konya'ya bağlayan Sertavul'u bul." }],
         ["Gülek Boğazı", "Adana-Mersin", { prompt: "Çukurova'yı İç Anadolu'ya bağlayan Gülek'i bul." }],
-        ["Belen Geçidi", "Hatay", { prompt: "Amanoslar üzerindeki Belen Geçidi'ni bul." }]
+        ["Belen Geçidi", "Hatay", { prompt: "Amanoslar üzerindeki Belen Geçidi'ni bul." }],
+        ["Gürlek Geçidi", "Kahramanmaraş", { prompt: "Akdeniz geçitlerinden Gürlek'i (ÇSGB) bul." }],
+        ["Geyve Boğazı", "Sakarya", { prompt: "Marmara'daki Geyve Boğazı'nı bul." }],
+        ["Bolu Dağı Geçidi", "Bolu", { prompt: "Marmara–Batı Karadeniz Bolu Dağı Geçidi'ni bul." }]
     ].forEach(function (r) { ITEMS.push(F("gecit", r[0], r[1], r[2] || {})); });
 
     [
@@ -564,7 +568,10 @@
         ["Samsun Limanı (geniş hinterland)", "Samsun", { follow: { q: "Canik Dağları alçak olduğu için hinterlandı geniş liman?", choices: ["Sinop", "Samsun", "Rize", "Giresun"], answer: "Samsun" } }],
         ["Sinop Limanı (dar hinterland)", "Sinop", { follow: { q: "Doğal liman olduğu halde Küre Dağları yüzünden gelişemeyen?", choices: ["İzmir", "Sinop", "Mersin", "İstanbul"], answer: "Sinop" } }],
         ["Trabzon Limanı (transit)", "Trabzon", { prompt: "Zigana/Kop sayesinde transit Trabzon limanını bul." }],
-        ["Kuşadası (kruvaziyer)", "Aydın"]
+        ["Kuşadası (kruvaziyer)", "Aydın"],
+        ["Kocaeli Limanı (geniş hinterland)", "Kocaeli"],
+        ["Hopa Limanı (dar hinterland)", "Artvin", { prompt: "Dar hinterlandlı Hopa limanını bul." }],
+        ["Cide Limanı (dar hinterland)", "Kastamonu"]
     ].forEach(function (r) { ITEMS.push(F("liman", r[0], r[1], r[2] || {})); });
 
     [
@@ -661,6 +668,20 @@
         ["Habur Sınır Kapısı", "Şırnak", { follow: { q: "Habur–Kapıkule hangi ticaretin ana damarıdır?", choices: ["Irak/Orta Doğu–Avrupa", "İran–Karadeniz", "Gürcistan–Ege", "Rusya–Akdeniz"], answer: "Irak/Orta Doğu–Avrupa" } }],
         ["Kapıkule Sınır Kapısı", "Edirne", { prompt: "Avrupa çıkışlı Kapıkule'yi (Edirne) bul." }]
     ].forEach(function (r) { ITEMS.push(F("transit", r[0], r[1], r[2] || {})); });
+
+    [
+        ["İlk YHT: Ankara–Eskişehir", "Ankara-Eskişehir", { follow: { q: "İlk YHT hattı hangisidir?", choices: ["Ankara–Erzurum", "Ankara–Eskişehir", "İzmir–Aydın", "Konya–Karaman"], answer: "Ankara–Eskişehir" } }],
+        ["YHT: Konya", "Konya"],
+        ["YHT: Sivas", "Sivas"],
+        ["YHT: Karaman", "Karaman"],
+        ["Kapıkule (demiryolu / BG)", "Edirne", { follow: { q: "Bulgaristan demiryolu kapısı?", choices: ["Kapıköy", "Kapıkule", "Akyaka", "Canbaz"], answer: "Kapıkule" } }],
+        ["Uzunköprü (demiryolu / GR)", "Edirne"],
+        ["Canbaz (BTK / Gürcistan)", "Ardahan-Kars"],
+        ["Kapıköy (İran)", "Van"],
+        ["Akyaka (Ermenistan, kapalı)", "Kars"],
+        ["Nusaybin (Suriye demiryolu)", "Mardin"],
+        ["GAP kargo havalimanı", "Şanlıurfa"]
+    ].forEach(function (r) { ITEMS.push(F("yht", r[0], r[1], r[2] || {})); });
 
     var PARKS = [
         ["Nemrut Dağı", "Adıyaman-Malatya", "guneydogu"],
@@ -937,6 +958,7 @@
         if (t === "boru") return "🛢️";
         if (t === "hes") return "⚡";
         if (t === "transit") return "🚛";
+        if (t === "yht") return "🚄";
         if (t === "demiryolu") return "🚫";
         if (t === "nufus-seyrek") return "🏕️";
         if (t === "nufus-yogun") return "🏙️";
