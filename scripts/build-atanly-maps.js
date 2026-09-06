@@ -831,10 +831,10 @@ function main() {
             { il: "Erzurum", label: "Kop", ldx: -48, ldy: 8, pdx: -80, pdy: 20 },
             { il: "Erzurum", label: "Mescit", ldx: 8, ldy: 30, pdx: 18, pdy: 28 },
             { il: "Artvin", label: "Yalnızçam", ldx: 52, ldy: -6 },
-            { il: "Antalya", label: "Beydağları", ldx: -52, ldy: 10, pdx: -18 },
+            { il: "Antalya", label: "Beydağları", ldx: -46, ldy: 8, pdx: -12, pdy: -18 },
             { il: "Isparta", label: "Sultan", ldx: 8, ldy: -28 },
+            { il: "Karaman", label: "Geyik", ldx: -40, ldy: 8 },
             { il: "Mersin", label: "Bolkar", ldx: 8, ldy: -28 },
-            { il: "Antalya", label: "Geyik", ldx: 8, ldy: 30, pdx: 72, pdy: 4 },
             { il: "Niğde", label: "Aladağlar", ldx: 8, ldy: -28 },
             { il: "Hakkari", label: "Hakkari", ldx: -8, ldy: -28 }
         ],
