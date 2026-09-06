@@ -415,7 +415,7 @@ function topicIcon(file) {
         hashas: "poppy", incir: "fig", kayisi: "apricot", muz: "banana", anason: "anason",
         aspir: "aspir", susam: "seed", tutun: "leaf", yerfistik: "peanut", antepfistik: "antepfistik",
         kirmizimercimek: "lentil", turunc: "citrus", kanola: "canola", pirinc: "rice",
-        aycicek: "sunflower", findik: "hazelnut", cay: "tea", kenevir: "hemp",
+        aycicek: "aycicek", findik: "hazelnut", cay: "tea", kenevir: "hemp",
         kivrimdaglar: "fold-mtn", kirikdaglar: "fault-mtn", volkanikdaglar: "volcano",
         volkanikaraziler: "volcano", masifarazi: "rock", trplato: "plateau", trovlar: "plain",
         milliparklar: "park",
@@ -556,7 +556,14 @@ function main() {
         { file: "kenevir.jpg", title: "KENEVİR ÜRETİMİ", iller: ["Kastamonu", "Amasya", "Samsun"], facts: ["Devlet kontrolündedir", "Tohumuna çedene denir", "Ekime en çok izin Karadeniz’dedir"] },
         { file: "kanola.jpg", title: "KANOLA ÜRETİMİ", iller: ["Tekirdağ", "Edirne", "Kırklareli", "Konya"], facts: ["Trakya’nın Sarı Kızı olarak anılır", "Yağ oranı yüksektir"] },
         { file: "pirinc.jpg", title: "ÇELTİK / PİRİNÇ", iller: ["Edirne", "Samsun", "Balıkesir"], facts: ["Meriç boyları başta gelir", "Diğer ekim alanları Osmancık ve Tosya", "Üretim devlet kontrolündedir"] },
-        { file: "ay_cicek.jpg", title: "AYÇİÇEĞİ ÜRETİMİ", iller: ["Tekirdağ", "Konya", "Adana", "Edirne"], facts: ["Trakya klasik üretim bölgesidir", "İntansif tarım ürünlerindendir"] },
+        { file: "ay_cicek.jpg", title: "AYÇİÇEĞİ ÜRETİMİ", urun: "Ayçiçeği",
+            noktalar: [
+                { il: "Tekirdağ", ilce: "Malkara" },
+                { il: "Edirne", ilce: "Uzunköprü" },
+                { il: "Konya", ilce: "Cihanbeyli" },
+                { il: "Adana", ilce: "Ceyhan" }
+            ],
+            facts: ["Trakya klasik üretim bölgesidir", "İntansif tarım ürünlerindendir"] },
         { file: "findik.jpg", title: "FINDIK ÜRETİMİ", iller: ["Ordu", "Samsun", "Düzce", "Giresun", "Sakarya", "Trabzon", "Rize"], facts: ["Karadeniz birinci, Marmara ikinci sıradadır", "Türkiye dünya üretiminde 1. sıradadır", "Devirli tarım ürünüdür"] },
         { file: "cay.jpg", title: "ÇAY ÜRETİMİ", iller: ["Rize", "Trabzon", "Artvin", "Giresun"], facts: ["Tamamı Doğu Karadeniz’dedir", "Zihni Derin tarafından Batum’dan getirilmiştir", "Dünya üretiminde Türkiye 5. sıradadır"] }
     ];
