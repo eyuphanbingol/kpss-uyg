@@ -1010,8 +1010,13 @@ function main() {
                 { il: "Antalya", ilce: "Alanya", ldx: -36, ldy: 8, pdx: 92, pdy: 8 }
             ],
             facts: ["Petrol kuyularında basıncı artırır", "Alanya · rezerv fazla · ihraç"] },
-        { file: "maden_bor.png", title: "BOR", iller: ["Balıkesir", "Eskişehir", "Kütahya", "Bursa"],
-            yazilar: ["Bandırma", "Kırka", "Kütahya", "Bursa"],
+        { file: "maden_bor.png", title: "BOR", urun: "Bor",
+            noktalar: [
+                { il: "Balıkesir", ilce: "Bandırma", ldx: -38, ldy: -8, pdx: 6, pdy: -22 },
+                { il: "Bursa", ilce: "Kestelek", ldx: 38, ldy: 10, pdx: -16, pdy: 6 },
+                { il: "Kütahya", ilce: "Emet", ldx: 8, ldy: 30, pdx: -14, pdy: 4 },
+                { il: "Eskişehir", ilce: "Kırka", ldx: 40, ldy: -10, pdx: -8, pdy: 16 }
+            ],
             facts: ["Dünya rezervinin yaklaşık %72’si Türkiye’dedir", "İşleme: Kırka ve Bandırma", "İhraç edilir"] },
         { file: "maden_mermer.png", title: "MERMER", iller: ["Afyon", "Balıkesir", "Muğla", "Bursa"],
             yazilar: ["Afyon", "Marmara Adası", "Muğla", "Bursa"],
