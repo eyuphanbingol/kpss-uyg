@@ -222,12 +222,25 @@ function textW(p, fs) {
     return Math.max(22, max * fs * 0.82);
 }
 
-function onMapText(x, y, text, fs) {
+function onMapText(x, y, text, fs, p) {
     fs = fs || 11;
-    var ln = wrapOnMap(text, 16)[0];
-    var common = 'x="' + Number(x).toFixed(1) + '" y="' + Number(y).toFixed(1) + '" text-anchor="middle" font-family="Segoe UI, Calibri, sans-serif" font-size="' + fs + '" font-weight="700"';
-    return '<text ' + common + ' fill="#FFFDF6" stroke="#FFFDF6" stroke-width="2.2" stroke-linejoin="round">' + esc(ln) + "</text>" +
-        '<text ' + common + ' fill="' + C.navy + '">' + esc(ln) + "</text>";
+    var lines;
+    if (p && p.urun) {
+        lines = [p.urun];
+        if (p.il && p.ilce) lines.push(p.il + " / " + p.ilce);
+        else if (p.il) lines.push(p.il);
+    } else {
+        lines = [wrapOnMap(text, 16)[0]];
+    }
+    var startY = y;
+    return lines.map(function (ln, i) {
+        var size = i === 0 && p && p.urun ? fs : Math.max(8, fs - 1);
+        var ty = startY + i * (size + 2);
+        var wt = i === 0 ? "800" : "700";
+        var common = 'x="' + Number(x).toFixed(1) + '" y="' + Number(ty).toFixed(1) + '" text-anchor="middle" font-family="Segoe UI, Calibri, sans-serif" font-size="' + size + '" font-weight="' + wt + '"';
+        return '<text ' + common + ' fill="#FFFDF6" stroke="#FFFDF6" stroke-width="2.2" stroke-linejoin="round">' + esc(ln) + "</text>" +
+            '<text ' + common + ' fill="' + C.navy + '">' + esc(ln) + "</text>";
+    }).join("");
 }
 
 function nudgeLabels(pts, fs) {
@@ -239,7 +252,7 @@ function nudgeLabels(pts, fs) {
                 var dx = pts[j].x - pts[i].x;
                 var dy = pts[j].y - pts[i].y;
                 var gapX = (textW(pts[i], fs) + textW(pts[j], fs)) / 2 + 10;
-                var gapY = fs * 2.4 + 12;
+                var gapY = (pts[i].urun || pts[j].urun) ? fs * 4.6 + 28 : fs * 2.4 + 12;
                 var ox = gapX - Math.abs(dx);
                 var oy = gapY - Math.abs(dy);
                 if (ox > 0 && oy > 0) {
@@ -265,7 +278,7 @@ function nudgeLabels(pts, fs) {
 function labelsOnMap(pts, fs) {
     fs = fs || labelFs(pts.length);
     nudgeLabels(pts, fs);
-    return pts.map(function (p) { return onMapText(p.x, p.y, p.text, fs); }).join("");
+    return pts.map(function (p) { return onMapText(p.x, p.y, p.text, fs, p); }).join("");
 }
 
 function spreadSameCell(pts) {
@@ -292,7 +305,7 @@ function topicIcon(file) {
     var T = {
         gul: "rose", elma: "apple", bugday: "wheat", pamuk: "cotton", zeytin: "olive",
         uzum: "grapes", misir: "corn", patates: "potato", arpa: "wheat", sekerpancar: "beet",
-        hashas: "poppy", incir: "fig", kayisi: "apricot", muz: "banana", anason: "seed",
+        hashas: "poppy", incir: "fig", kayisi: "apricot", muz: "banana", anason: "anason",
         aspir: "flower", susam: "seed", tutun: "leaf", yerfistik: "peanut", antepfistik: "pistachio",
         kirmizimercimek: "lentil", turunc: "citrus", kanola: "canola", pirinc: "rice",
         aycicek: "sunflower", findik: "hazelnut", cay: "tea", kenevir: "hemp",
@@ -320,26 +333,50 @@ function iconDataUri(name) {
     return uri;
 }
 
-function iconsOnMap(pts, iconName, fs) {
+function iconsOnMap(pts, iconName) {
     var href = iconDataUri(iconName);
     if (!href || !pts.length) return "";
-    var size = iconPx(pts.length);
-    return pts.map(function (p) {
-        var x = (p.x - size / 2).toFixed(1);
-        var y = (p.y - size - 1).toFixed(1);
-        return '<image href="' + href + '" x="' + x + '" y="' + y + '" width="' + size + '" height="' + size + '" preserveAspectRatio="xMidYMid meet"/>';
+    var photo = pts.some(function (p) { return p.urun; });
+    if (!photo) {
+        var size0 = iconPx(pts.length);
+        return pts.map(function (p) {
+            var x = (p.x - size0 / 2).toFixed(1);
+            var y = (p.y - size0 - 1).toFixed(1);
+            return '<image href="' + href + '" x="' + x + '" y="' + y + '" width="' + size0 + '" height="' + size0 + '" preserveAspectRatio="xMidYMid meet"/>';
+        }).join("");
+    }
+    var size = pts.length > 6 ? 28 : 36;
+    return pts.map(function (p, i) {
+        var cid = "ic" + i + Math.round(p.x) + Math.round(p.y);
+        var r = size / 2;
+        var cx = p.x;
+        var cy = p.y - r - 16;
+        return '<defs><clipPath id="' + cid + '"><circle cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="' + r + '"/></clipPath></defs>' +
+            '<circle cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="' + (r + 2).toFixed(1) + '" fill="#FFFDF6" stroke="' + C.navy + '" stroke-width="1.3"/>' +
+            '<image href="' + href + '" x="' + (cx - r).toFixed(1) + '" y="' + (cy - r).toFixed(1) + '" width="' + size + '" height="' + size + '" clip-path="url(#' + cid + ')" preserveAspectRatio="xMidYMid slice"/>';
     }).join("");
 }
 
 function cropMap(provs, opts) {
     var pts = [];
-    (opts.iller || []).forEach(function (name, i) {
-        var fp = findProv(provs, name);
+    var rows = opts.noktalar || (opts.iller || []).map(function (name, i) {
+        return { il: name, ilce: (opts.ilceler && opts.ilceler[i]) || "", yazi: opts.yazilar && opts.yazilar[i] };
+    });
+    var hi = [];
+    rows.forEach(function (row) {
+        var fp = findProv(provs, row.il);
         if (!fp) {
-            console.warn("il yok:", name);
+            console.warn("il yok:", row.il);
             return;
         }
-        pts.push({ x: fp.cx, y: fp.cy, ox: fp.cx, oy: fp.cy, text: (opts.yazilar && opts.yazilar[i]) || name });
+        hi.push(row.il);
+        pts.push({
+            x: fp.cx, y: fp.cy, ox: fp.cx, oy: fp.cy,
+            text: row.yazi || row.il,
+            urun: opts.urun || "",
+            il: row.il,
+            ilce: row.ilce || ""
+        });
     });
     spreadSameCell(pts);
     var factsY = 78 + MAP_BLOCK_H + 16;
@@ -347,7 +384,7 @@ function cropMap(provs, opts) {
     var H = factsY + facts.h + 28;
     var labels = labelsOnMap(pts);
     var overlay = iconsOnMap(pts, topicIcon(opts.file));
-    var body = mapBlock(provs, landPaths(provs, opts.iller, C.landHi) + labels + overlay) + facts.svg;
+    var body = mapBlock(provs, landPaths(provs, hi, C.landHi) + labels + overlay) + facts.svg;
     return frame(H, opts.title, opts.kicker || "Tarım dağılımı", body);
 }
 
@@ -374,7 +411,14 @@ function main() {
         { file: "incir.png", title: "İNCİR ÜRETİMİ", iller: ["Aydın", "İzmir", "Muğla", "Bursa", "Gaziantep"], facts: ["Aydın birinci sıradadır", "Ege’nin kurutmalık inciri meşhurdur"] },
         { file: "kayısı.png", title: "KAYISI ÜRETİMİ", iller: ["Malatya", "Elazığ", "Kahramanmaraş", "Iğdır"], facts: ["Malatya dünya ölçeğinde öne çıkar", "Kurutmalık kayısı ihracatı önemlidir"] },
         { file: "muz.png", title: "MUZ ÜRETİMİ", iller: ["Mersin", "Antalya", "Hatay"], facts: ["Don olayının az olduğu kıyı kuşağı", "Anamur–Alanya çevresi yoğundur"] },
-        { file: "anason.png", title: "ANASON ÜRETİMİ", iller: ["Burdur", "Denizli", "Antalya", "Muğla"], facts: ["Göller Yöresi ve Teke çevresi", "Uçucu yağ bitkisidir"] },
+        { file: "anason.png", title: "ANASON ÜRETİMİ", urun: "Anason",
+            noktalar: [
+                { il: "Burdur", ilce: "Tefenni" },
+                { il: "Denizli", ilce: "Acıpayam" },
+                { il: "Antalya", ilce: "Elmalı" },
+                { il: "Muğla", ilce: "Fethiye" }
+            ],
+            facts: ["Göller Yöresi ve Teke çevresi", "Burdur–Tefenni öne çıkar", "Uçucu yağ bitkisidir"] },
         { file: "aspir.png", title: "ASPİR ÜRETİMİ", iller: ["Eskişehir", "Konya", "Ankara", "Aksaray"], facts: ["Kuraklığa dayanıklı yağ bitkisi", "İç Anadolu’da ekimi artmaktadır"] },
         { file: "susam.png", title: "SUSAM ÜRETİMİ", iller: ["Antalya", "Muğla", "Manisa", "Adana"], facts: ["Sıcak iklim ister", "Akdeniz ve Ege kıyılarında yetişir"] },
         { file: "tütün.png", title: "TÜTÜN ÜRETİMİ", iller: ["Manisa", "Denizli", "Samsun", "Adıyaman", "Bitlis", "Muş"], facts: ["Ege ve Karadeniz’de klasik üretim alanları", "Doğu Anadolu’da da ekilir"] },
