@@ -1029,8 +1029,10 @@ function main() {
         { file: "maden_mermer.png", title: "MERMER", iller: ["Afyon", "Balıkesir", "Muğla", "Bursa"],
             yazilar: ["Afyon", "Marmara Adası", "Muğla", "Bursa"],
             facts: ["Kireç taşının başkalaşımıyla oluşur", "En çok Afyon ve Marmara Adası"] },
-        { file: "maden_fosfat.png", title: "FOSFAT", iller: ["Mardin"],
-            yazilar: ["Mazıdağı"],
+        { file: "maden_fosfat.png", title: "FOSFAT", urun: "Fosfat",
+            noktalar: [
+                { il: "Mardin", ilce: "Mazıdağı", ldx: -34, ldy: 8 }
+            ],
             facts: ["Gübre hammaddesi", "Rezerv azdır", "Mazıdağı’nda hem çıkarılır hem işlenir"] },
         { file: "maden_asbest.png", title: "ASBEST (AMYANT)", urun: "Asbest",
             noktalar: [
