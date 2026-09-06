@@ -361,6 +361,9 @@
                                 <p className="text-base md:text-lg font-semibold leading-relaxed">
                                     {item.q.question}
                                 </p>
+                                {item.q.img ? (
+                                    <img src={item.q.img} alt={item.q.imgAlt || "Soru görseli"} className="mt-4 w-full h-auto rounded-2xl object-contain bg-[#F6F1E4] border border-stone-200 dark:border-stone-700" />
+                                ) : null}
                             </div>
 
                             {/* Seçenekler */}

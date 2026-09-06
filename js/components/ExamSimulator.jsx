@@ -569,6 +569,9 @@
 
                         <div className="text-base md:text-lg font-medium leading-relaxed mb-5">
                             {it.q.question}
+                            {it.q.img ? (
+                                <img src={it.q.img} alt={it.q.imgAlt || "Soru görseli"} className="mt-4 w-full h-auto rounded-2xl object-contain bg-[#F6F1E4] border border-stone-200 dark:border-stone-700" />
+                            ) : null}
                         </div>
 
                         <div className="space-y-2.5">

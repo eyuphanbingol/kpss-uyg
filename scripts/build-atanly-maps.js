@@ -1297,6 +1297,163 @@ function main() {
         ["Çeşit fazla, miktar az", "Yukarı Fırat (Elazığ) çeşitlilikte birinci", "Bor ~%72 dünya rezervi"]
     );
 
+    function mixColor(a, b, t) {
+        function ch(h, i) { return parseInt(h.slice(1 + i * 2, 3 + i * 2), 16); }
+        function hx(n) { var s = Math.max(0, Math.min(255, n)).toString(16); return s.length < 2 ? "0" + s : s; }
+        var r = Math.round(ch(a, 0) + (ch(b, 0) - ch(a, 0)) * t);
+        var g = Math.round(ch(a, 1) + (ch(b, 1) - ch(a, 1)) * t);
+        var bl = Math.round(ch(a, 2) + (ch(b, 2) - ch(a, 2)) * t);
+        return "#" + hx(r) + hx(g) + hx(bl);
+    }
+
+    function xyOf(row) {
+        var name = typeof row === "string" ? row : row.il;
+        var fp = findProv(provs, name);
+        if (!fp) {
+            console.warn("il yok:", name);
+            return null;
+        }
+        var pos = districtXY(fp);
+        if (row && (row.pdx || row.pdy)) pos = clampInProv(fp, pos.x + (row.pdx || 0), pos.y + (row.pdy || 0));
+        return { fp: fp, x: pos.x, y: pos.y, name: name, label: (row && row.label) || name, n: row && row.n };
+    }
+
+    function cityPinMap(opts) {
+        if (!wantFile(opts.file)) return;
+        var hi = opts.hi || [];
+        var extra = landPaths(provs, hi);
+        var pts = (opts.iller || []).map(xyOf).filter(Boolean);
+        if (opts.line && opts.line.length >= 2) {
+            var a = xyOf(opts.line[0]);
+            var b = xyOf(opts.line[1]);
+            if (a && b) {
+                extra += '<line x1="' + a.x.toFixed(1) + '" y1="' + a.y.toFixed(1) + '" x2="' + b.x.toFixed(1) + '" y2="' + b.y.toFixed(1) + '" stroke="' + C.navy + '" stroke-width="3.2" stroke-dasharray="10 7" stroke-linecap="round"/>';
+            }
+        }
+        if (opts.polyline && opts.polyline.length >= 2) {
+            var d = opts.polyline.map(xyOf).filter(Boolean).map(function (p) { return p.x.toFixed(1) + "," + p.y.toFixed(1); }).join(" ");
+            extra += '<polyline points="' + d + '" fill="none" stroke="' + C.navy + '" stroke-width="3" stroke-dasharray="8 6" stroke-linecap="round" stroke-linejoin="round"/>';
+        }
+        pts.forEach(function (p, i) {
+            extra += pin(p.x, p.y, p.n || String(i + 1));
+            extra += '<text x="' + (p.x + (opts.iller[i].ldx != null ? opts.iller[i].ldx : 18)).toFixed(1) + '" y="' + (p.y + (opts.iller[i].ldy != null ? opts.iller[i].ldy : 5)).toFixed(1) + '" font-size="15" font-weight="800" fill="' + C.navy + '" font-family="Segoe UI, sans-serif">' + esc(p.label) + "</text>";
+        });
+        var factsY = 78 + MAP_BLOCK_H + 16;
+        var factsBox = wrapFacts(opts.facts || [], 16, factsY, CANVAS_W - 32, 14);
+        writePng(path.join(IMG, opts.file), frame(factsY + factsBox.h + 28, opts.head, opts.kicker, mapBlock(provs, extra) + factsBox.svg));
+        console.log("ok", opts.file);
+    }
+
+    cityPinMap({
+        file: "konum_boylam_izmit.png",
+        head: "AYNI BOYLAM ÜZERİNDEKİ MERKEZLER",
+        kicker: "Yerel saat",
+        hi: ["Kocaeli", "Bilecik", "Afyon", "Antalya"],
+        polyline: [
+            { il: "Kocaeli" },
+            { il: "Bilecik" },
+            { il: "Afyon" },
+            { il: "Antalya", pdx: -70, pdy: 36 }
+        ],
+        iller: [
+            { il: "Kocaeli", label: "İzmit", n: "1", ldx: 16, ldy: -8 },
+            { il: "Bilecik", label: "Bilecik", n: "2", ldx: 18, ldy: 6 },
+            { il: "Afyon", label: "Afyonkarahisar", n: "3", ldx: 18, ldy: 6 },
+            { il: "Antalya", label: "Finike", n: "4", pdx: -70, pdy: 36, ldx: -70, ldy: 8 }
+        ],
+        facts: ["Kesik çizgi yaklaşık aynı boylamı gösterir", "Yerel saat boylama, gündüz süresi enleme bağlıdır"]
+    });
+
+    cityPinMap({
+        file: "konum_kuzey_guney.png",
+        head: "KUZEY–GÜNEY KARŞILAŞTIRMASI",
+        kicker: "Enlem",
+        hi: ["Sinop", "Hatay", "Ankara", "Antalya", "İzmir", "Muğla", "Samsun", "Şanlıurfa", "Kocaeli", "Bilecik"],
+        line: ["Hatay", "Sinop"],
+        iller: [
+            { il: "Sinop", n: "S", ldx: 16, ldy: -6 },
+            { il: "Samsun", n: "M", ldx: 16, ldy: 8 },
+            { il: "Kocaeli", label: "İzmit", n: "İ", ldx: -52, ldy: -8 },
+            { il: "Bilecik", n: "B", ldx: 16, ldy: 18 },
+            { il: "Ankara", n: "A", ldx: 16, ldy: 8 },
+            { il: "İzmir", n: "Z", ldx: -46, ldy: 8 },
+            { il: "Muğla", n: "U", ldx: -8, ldy: 22 },
+            { il: "Antalya", n: "T", ldx: 16, ldy: 18 },
+            { il: "Şanlıurfa", n: "Ş", ldx: 16, ldy: 8 },
+            { il: "Hatay", n: "H", ldx: 16, ldy: 18 }
+        ],
+        facts: ["Kesik çizgi Hatay–Sinop doğrultusudur", "Kuzey–güney doğrultusunda enlem özellikleri değişir"]
+    });
+
+    cityPinMap({
+        file: "konum_boylam_ankara.png",
+        head: "ANKARA BOYLAMI VE SEÇİLMİŞ MERKEZLER",
+        kicker: "Yerel saat farkı",
+        hi: ["Ankara", "İzmir", "Kocaeli", "Amasya", "Van", "Iğdır"],
+        iller: [
+            { il: "İzmir", n: "A", ldx: -40, ldy: 8 },
+            { il: "Kocaeli", label: "İzmit", n: "B", ldx: 16, ldy: -8 },
+            { il: "Ankara", n: "C", ldx: 16, ldy: 8 },
+            { il: "Amasya", n: "D", ldx: 16, ldy: -8 },
+            { il: "Van", n: "E", ldx: -8, ldy: 22 },
+            { il: "Iğdır", n: "F", ldx: -28, ldy: -10 }
+        ],
+        facts: ["Ankara yerel saati 33° Doğu’ya göredir", "1 meridyen = 4 dakika yerel saat farkı · doğu ileridedir"]
+    });
+
+    cityPinMap({
+        file: "konum_hatay_sinop.png",
+        head: "HATAY → SİNOP GÜZERGÂHI",
+        kicker: "Güneyden kuzeye",
+        hi: ["Hatay", "Sinop"],
+        line: ["Hatay", "Sinop"],
+        iller: [
+            { il: "Hatay", n: "H", ldx: 16, ldy: 18 },
+            { il: "Sinop", n: "S", ldx: 16, ldy: -6 }
+        ],
+        facts: ["Hareket güneyden kuzeye doğrudur", "Enlem değişince çizgisel hız, gündüz ve alacakaranlık süresi değişir"]
+    });
+
+    cityPinMap({
+        file: "konum_xy.png",
+        head: "X VE Y MERKEZLERİ",
+        kicker: "Enlem ve boylam",
+        hi: ["Edirne", "Şanlıurfa"],
+        line: ["Edirne", "Şanlıurfa"],
+        iller: [
+            { il: "Edirne", label: "X", n: "X", ldx: 16, ldy: -6 },
+            { il: "Şanlıurfa", label: "Y", n: "Y", ldx: 16, ldy: 18 }
+        ],
+        facts: ["X ve Y farklı enlem ve boylamdadır", "Gündüz süresi enleme, yerel saat boylama bağlıdır"]
+    });
+
+    if (wantFile("konum_yukselti")) {
+        var minX = 1e9, maxX = -1e9;
+        provs.forEach(function (p) {
+            minX = Math.min(minX, p.cx);
+            maxX = Math.max(maxX, p.cx);
+        });
+        var elevFills = provs.map(function (p) {
+            var t = (p.cx - minX) / (maxX - minX);
+            return '<path d="' + p.d + '" fill="' + mixColor("#D7E4B4", "#7A4A24", t) + '" stroke="none"/>';
+        }).join("");
+        var elevStrokes = provs.map(function (p) {
+            return '<path d="' + p.d + '" fill="none" stroke="' + C.line + '" stroke-width="0.55" stroke-linejoin="round"/>';
+        }).join("");
+        var arrow = '<line x1="70" y1="210" x2="930" y2="210" stroke="' + C.navy + '" stroke-width="4" marker-end="url(#arrE)"/>' +
+            '<defs><marker id="arrE" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="' + C.navy + '"/></marker></defs>' +
+            '<text x="90" y="198" font-size="22" font-weight="800" fill="' + C.navy + '" font-family="Segoe UI, sans-serif">BATI</text>' +
+            '<text x="820" y="198" font-size="22" font-weight="800" fill="' + C.navy + '" font-family="Segoe UI, sans-serif">DOĞU</text>';
+        var elevExtra = elevFills + elevStrokes + arrow;
+        var ey = 78 + MAP_BLOCK_H + 16;
+        var ef = wrapFacts([
+            "Renk koyulaşması batıdan doğuya ortalama yükseltinin artmasını şematize eder",
+            "Yükselti sıcaklığı düşürür; yerel saat boylamla değişir"
+        ], 16, ey, CANVAS_W - 32, 14);
+        writePng(path.join(IMG, "konum_yukselti.png"), frame(ey + ef.h + 28, "BATI–DOĞU YÜKSELTİ EĞİLİMİ", "Özel konum", mapBlock(provs, elevExtra) + ef.svg));
+        console.log("ok konum_yukselti.png");
+    }
+
     if (wantFile("nufusprmt") || wantFile("nufus")) {
     // nüfus piramidi
     function pyr(cx, cy, color, label, pts) {

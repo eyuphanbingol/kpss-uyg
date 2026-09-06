@@ -12,6 +12,13 @@ function stripChoicePrefix(opt) {
     return String(opt || "").replace(/^[A-Ea-e][\s\)\.:\-]+\s*/, "").trim();
 }
 
+function SoruGorsel(soru) {
+    if (!soru || !soru.img) return null;
+    return (
+        <img src={soru.img} alt={soru.imgAlt || "Soru görseli"} className="mt-4 w-full h-auto rounded-2xl object-contain bg-[#F6F1E4] border border-stone-200 dark:border-stone-700" />
+    );
+}
+
 function themeFor(ders, isDark) {
     const t = DERS_THEME[ders] || { text: "text-stone-700", icon: "📚", darkText: "text-stone-300" };
     return isDark ? Object.assign({}, t, { text: t.darkText }) : t;
@@ -1655,6 +1662,7 @@ function TestView(props) {
             <div className="q-stem p-4 sm:p-8 rounded-3xl mb-6 relative overflow-hidden fade-in">
                 <div className="q-stem-bar absolute top-0 left-0 w-1.5 h-full"></div>
                 <h3 className="text-lg font-bold leading-relaxed whitespace-pre-line text-stone-900 pl-2">{soru.question}</h3>
+                {SoruGorsel(soru)}
             </div>
             <div className="space-y-3">
                 {(soru.options || []).map(function (opt, i) {
