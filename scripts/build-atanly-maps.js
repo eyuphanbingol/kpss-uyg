@@ -185,76 +185,103 @@ function mapCaption(s) {
     s = String(s || "").replace(/^\d+\s+/, "").trim();
     var em = s.indexOf(" — ");
     if (em > 0) s = s.slice(0, em);
-    if (s.length > 32) {
+    if (s.length > 22) {
         var cut = s.indexOf(" · ");
-        if (cut > 6 && cut < 28) s = s.slice(0, cut);
+        if (cut > 4 && cut < 20) s = s.slice(0, cut);
     }
+    if (s.length > 22) s = s.slice(0, 20).trim();
     return s;
 }
 
 function wrapOnMap(text, maxChars) {
     text = String(text || "").trim();
-    maxChars = maxChars || 16;
+    maxChars = maxChars || 18;
     if (text.length <= maxChars) return [text];
-    var parts = text.split(/\s*·\s*/);
-    if (parts.length > 1) {
-        var lines = [];
-        var cur = parts[0];
-        for (var i = 1; i < parts.length; i++) {
-            var next = cur + " · " + parts[i];
-            if (next.length <= maxChars) cur = next;
-            else {
-                lines.push(cur);
-                cur = parts[i];
-            }
-        }
-        lines.push(cur);
-        return lines.slice(0, 3);
-    }
     var cut = text.lastIndexOf(" ", maxChars);
-    if (cut < 5) cut = maxChars;
-    return [text.slice(0, cut).trim(), text.slice(cut).trim()].filter(Boolean).slice(0, 2);
+    if (cut < 4) cut = text.indexOf(" · ");
+    if (cut < 4) cut = maxChars;
+    return [text.slice(0, cut).trim()].filter(Boolean);
+}
+
+function labelFs(n) {
+    if (n > 12) return 9;
+    if (n > 8) return 10;
+    return 11;
+}
+
+function iconPx(n) {
+    if (n > 10) return 16;
+    if (n > 6) return 18;
+    return 20;
+}
+
+function textW(p, fs) {
+    var lines = wrapOnMap(String(p.text || ""), fs <= 11 ? 11 : 13);
+    var max = 0;
+    lines.forEach(function (ln) { if (ln.length > max) max = ln.length; });
+    return Math.max(22, max * fs * 0.82);
 }
 
 function onMapText(x, y, text, fs) {
-    fs = fs || 22;
-    var lines = wrapOnMap(text, text.length > 22 ? 14 : 18);
-    var startY = y - (lines.length - 1) * (fs * 0.52);
-    return lines.map(function (ln, i) {
-        var ty = startY + i * (fs + 2);
-        var common = 'x="' + Number(x).toFixed(1) + '" y="' + Number(ty).toFixed(1) + '" text-anchor="middle" font-family="Segoe UI, Calibri, sans-serif" font-size="' + fs + '" font-weight="800"';
-        return '<text ' + common + ' fill="#FFFDF6" stroke="#FFFDF6" stroke-width="8" stroke-linejoin="round">' + esc(ln) + "</text>" +
-            '<text ' + common + ' fill="' + C.navy + '">' + esc(ln) + "</text>";
-    }).join("");
+    fs = fs || 11;
+    var ln = wrapOnMap(text, 16)[0];
+    var common = 'x="' + Number(x).toFixed(1) + '" y="' + Number(y).toFixed(1) + '" text-anchor="middle" font-family="Segoe UI, Calibri, sans-serif" font-size="' + fs + '" font-weight="700"';
+    return '<text ' + common + ' fill="#FFFDF6" stroke="#FFFDF6" stroke-width="2.2" stroke-linejoin="round">' + esc(ln) + "</text>" +
+        '<text ' + common + ' fill="' + C.navy + '">' + esc(ln) + "</text>";
 }
 
-function nudgeLabels(pts) {
+function nudgeLabels(pts, fs) {
+    fs = fs || 12;
     var k, i, j;
-    for (k = 0; k < 10; k++) {
+    for (k = 0; k < 22; k++) {
         for (i = 0; i < pts.length; i++) {
             for (j = i + 1; j < pts.length; j++) {
                 var dx = pts[j].x - pts[i].x;
                 var dy = pts[j].y - pts[i].y;
-                var d = Math.sqrt(dx * dx + dy * dy) || 1;
-                var min = 26 + Math.min(String(pts[i].text).length, String(pts[j].text).length) * 0.9;
-                if (d < min) {
-                    var push = (min - d) / 2;
-                    var nx = dx / d;
-                    var ny = dy / d;
-                    pts[i].x -= nx * push * 0.35;
-                    pts[i].y -= ny * push * 0.75;
-                    pts[j].x += nx * push * 0.35;
-                    pts[j].y += ny * push * 0.75;
+                var gapX = (textW(pts[i], fs) + textW(pts[j], fs)) / 2 + 10;
+                var gapY = fs * 2.4 + 12;
+                var ox = gapX - Math.abs(dx);
+                var oy = gapY - Math.abs(dy);
+                if (ox > 0 && oy > 0) {
+                    var pushX = ox * 0.5 * (dx === 0 ? (i % 2 ? 1 : -1) : (dx > 0 ? 1 : -1));
+                    var pushY = oy * 0.62 * (dy === 0 ? (i % 2 ? 1 : -1) : (dy > 0 ? 1 : -1));
+                    pts[i].x -= pushX;
+                    pts[i].y -= pushY;
+                    pts[j].x += pushX;
+                    pts[j].y += pushY;
                 }
             }
         }
     }
+    pts.forEach(function (p) {
+        if (p.x < 40) p.x = 40;
+        if (p.x > 960) p.x = 960;
+        if (p.y < 28) p.y = 28;
+        if (p.y > 390) p.y = 390;
+    });
     return pts;
 }
 
 function labelsOnMap(pts, fs) {
-    nudgeLabels(pts);
+    fs = fs || labelFs(pts.length);
+    nudgeLabels(pts, fs);
     return pts.map(function (p) { return onMapText(p.x, p.y, p.text, fs); }).join("");
+}
+
+function spreadSameCell(pts) {
+    var i, j, n;
+    for (i = 0; i < pts.length; i++) {
+        n = 0;
+        for (j = 0; j < i; j++) {
+            if (Math.abs(pts[i].x - pts[j].ox) < 2 && Math.abs(pts[i].y - pts[j].oy) < 2) n++;
+            else if (Math.abs(pts[i].x - pts[j].x) < 8 && Math.abs(pts[i].y - pts[j].y) < 8) n++;
+        }
+        if (!pts[i].ox) { pts[i].ox = pts[i].x; pts[i].oy = pts[i].y; }
+        if (n) {
+            pts[i].x = pts[i].ox + (n % 2 ? 1 : -1) * (18 + n * 16);
+            pts[i].y = pts[i].oy + (n > 1 ? 22 : -18);
+        }
+    }
 }
 
 var ICON_DIR = path.join(IMG, "map-icons");
@@ -293,13 +320,13 @@ function iconDataUri(name) {
     return uri;
 }
 
-function iconsOnMap(pts, iconName) {
+function iconsOnMap(pts, iconName, fs) {
     var href = iconDataUri(iconName);
     if (!href || !pts.length) return "";
-    var size = pts.length > 10 ? 34 : (pts.length > 6 ? 40 : 46);
+    var size = iconPx(pts.length);
     return pts.map(function (p) {
         var x = (p.x - size / 2).toFixed(1);
-        var y = (p.y - size - 10).toFixed(1);
+        var y = (p.y - size - 1).toFixed(1);
         return '<image href="' + href + '" x="' + x + '" y="' + y + '" width="' + size + '" height="' + size + '" preserveAspectRatio="xMidYMid meet"/>';
     }).join("");
 }
@@ -312,13 +339,15 @@ function cropMap(provs, opts) {
             console.warn("il yok:", name);
             return;
         }
-        pts.push({ x: fp.cx, y: fp.cy, text: (opts.yazilar && opts.yazilar[i]) || name });
+        pts.push({ x: fp.cx, y: fp.cy, ox: fp.cx, oy: fp.cy, text: (opts.yazilar && opts.yazilar[i]) || name });
     });
+    spreadSameCell(pts);
     var factsY = 78 + MAP_BLOCK_H + 16;
     var facts = wrapFacts(opts.facts, 16, factsY, CANVAS_W - 32, 14);
     var H = factsY + facts.h + 28;
+    var labels = labelsOnMap(pts);
     var overlay = iconsOnMap(pts, topicIcon(opts.file));
-    var body = mapBlock(provs, landPaths(provs, opts.iller, C.landHi) + labelsOnMap(pts, 24) + overlay) + facts.svg;
+    var body = mapBlock(provs, landPaths(provs, opts.iller, C.landHi) + labels + overlay) + facts.svg;
     return frame(H, opts.title, opts.kicker || "Tarım dağılımı", body);
 }
 
@@ -415,9 +444,11 @@ function main() {
                 console.warn("il yok:", it.il);
                 return;
             }
-            pts.push({ x: fp.cx, y: fp.cy, text: mapCaption(it.label) });
+            pts.push({ x: fp.cx, y: fp.cy, ox: fp.cx, oy: fp.cy, text: mapCaption(it.label) });
         });
-        var extra = landPaths(provs, items.map(function (it) { return it.il; }), C.landHi) + labelsOnMap(pts, 20) + iconsOnMap(pts, topicIcon(title.file));
+        spreadSameCell(pts);
+        var labels = labelsOnMap(pts);
+        var extra = landPaths(provs, items.map(function (it) { return it.il; }), C.landHi) + labels + iconsOnMap(pts, topicIcon(title.file));
         var factsY = 78 + MAP_BLOCK_H + 16;
         var factsBox = wrapFacts(facts, 16, factsY, CANVAS_W - 32, 14);
         var H = factsY + factsBox.h + 28;
