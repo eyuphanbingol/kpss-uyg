@@ -1014,8 +1014,13 @@ function main() {
         { file: "maden_trona.png", title: "TRONA (SODA KÜLÜ)", iller: ["Ankara"],
             yazilar: ["Beypazarı · Kazan"],
             facts: ["Cam sanayisi (Şişecam)", "Sincan, Kazan, Beypazarı", "İşleme: Kazan"] },
-        { file: "maden_altin.png", title: "ALTIN", iller: ["İzmir", "Çanakkale", "Gümüşhane", "Artvin"],
-            yazilar: ["Ovacık", "Kaz Dağları", "Mostra Dağı", "Cerattepe"],
+        { file: "maden_altin.png", title: "ALTIN", urun: "Altın",
+            noktalar: [
+                { il: "İzmir", ilce: "Ovacık", ldx: -34, ldy: 8 },
+                { il: "Çanakkale", ilce: "Kaz Dağları", ldx: 8, ldy: -28 },
+                { il: "Gümüşhane", ilce: "Mostra Dağı", ldx: -34, ldy: 8 },
+                { il: "Artvin", ilce: "Cerattepe", ldx: 32, ldy: 8 }
+            ],
             facts: ["İlk yatak: Bergama–Ovacık", "Kaz Dağları, Mostra Dağı, Cerattepe"] },
         { file: "maden_uranyum.png", title: "URANYUM", iller: ["Yozgat"],
             yazilar: ["Sorgun"],
@@ -1062,6 +1067,8 @@ function main() {
         writePng(path.join(IMG, m.file), cropMap(provs, {
             file: m.file,
             title: m.title,
+            urun: m.urun,
+            noktalar: m.noktalar,
             iller: m.iller,
             yazilar: m.yazilar,
             facts: m.facts,
