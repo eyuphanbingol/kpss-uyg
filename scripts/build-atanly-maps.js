@@ -488,7 +488,7 @@ function topicIcon(file) {
         madenuranyum: "uranium", madentoryum: "uranium", madenciva: "mercury", madentuz: "salt",
         madenperlit: "rock", madenpomza: "rock", madenkukurt: "sulfur", madenmanganez: "iron",
         madenkursun: "lead", madenoltu: "jet", madenlule: "rock", madenvolfram: "tungsten",
-        madenfeldspat: "rock", madenzimpara: "emery", madenetiket: "ore"
+        madenfeldspat: "feldspar", madenzimpara: "emery", madenetiket: "ore"
     };
     return T[k] || null;
 }
@@ -1084,7 +1084,12 @@ function main() {
         { file: "maden_volfram.png", title: "VOLFRAM (TUNGSTEN)", iller: ["Bursa"],
             yazilar: ["Uludağ"],
             facts: ["Sert metal alaşımı", "Uludağ"] },
-        { file: "maden_feldspat.png", title: "FELDSPAT", iller: ["Aydın", "Kütahya", "Yozgat"],
+        { file: "maden_feldspat.png", title: "FELDSPAT", urun: "Feldspat",
+            noktalar: [
+                { il: "Aydın", ldx: -34, ldy: 8 },
+                { il: "Kütahya", ldx: 8, ldy: -28 },
+                { il: "Yozgat", ldx: 32, ldy: 8 }
+            ],
             facts: ["Cam, seramik, boya, plastik"] },
         { file: "maden_zimpara.png", title: "ZIMPARA TAŞI", iller: ["Aydın", "Antalya"],
             yazilar: ["Aydın", "Alanya"],
