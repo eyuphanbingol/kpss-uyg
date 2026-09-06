@@ -735,7 +735,14 @@ function main() {
                 { il: "Muş", ldx: 32, ldy: 8 }
             ],
             facts: ["Ege ve Karadeniz’de klasik üretim alanları", "Doğu Anadolu’da da ekilir"] },
-        { file: "yer_fıstık.png", title: "YER FISTIĞI", iller: ["Osmaniye", "Adana", "Aydın", "Kahramanmaraş"], facts: ["Çukurova ve Osmaniye öne çıkar", "Sıcaklık ve kumlu-tınlı toprak ister"] },
+        { file: "yer_fıstık.png", title: "YER FISTIĞI", urun: "Yer fıstığı",
+            noktalar: [
+                { il: "Osmaniye", ldx: 32, ldy: 8 },
+                { il: "Adana", ldx: -34, ldy: 8 },
+                { il: "Aydın", ldx: -34, ldy: 8 },
+                { il: "Kahramanmaraş", ldx: 8, ldy: -28 }
+            ],
+            facts: ["Çukurova ve Osmaniye öne çıkar", "Sıcaklık ve kumlu-tınlı toprak ister"] },
         { file: "antep_fıstık.png", title: "ANTEP FISTIĞI", urun: "Antep fıstığı",
             noktalar: [
                 { il: "Gaziantep", ilce: "Nizip" },
