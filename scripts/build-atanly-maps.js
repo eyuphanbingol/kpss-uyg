@@ -532,12 +532,12 @@ function main() {
     var crops = [
         { file: "elma.png", title: "ELMA ÜRETİMİ", urun: "Elma",
             noktalar: [
-                { il: "Isparta", ilce: "Eğirdir", ldx: 30, ldy: -18 },
-                { il: "Karaman", ilce: "Merkez" },
+                { il: "Isparta", ilce: "Eğirdir", ldx: -42, ldy: -22 },
+                { il: "Karaman", ilce: "Merkez", ldx: 8, ldy: 24 },
                 { il: "Niğde", ilce: "Merkez", ldx: -28, ldy: 22 },
                 { il: "Nevşehir", ilce: "Derinkuyu", ldx: 24, ldy: -20 },
-                { il: "Konya", ilce: "Ereğli" },
-                { il: "Denizli", ilce: "Çal", ldx: -36, ldy: -16 },
+                { il: "Konya", ilce: "Ereğli", ldx: 52, ldy: 20 },
+                { il: "Denizli", ilce: "Çal", ldx: -40, ldy: 22 },
                 { il: "Antalya", ilce: "Elmalı", ldx: 22, ldy: -22 }
             ],
             facts: ["Yoğunluk: Göller Yöresi ve Niğde–Nevşehir çevresi", "İç Anadolu’nun yüksek ovalarında da yetişir"] },
