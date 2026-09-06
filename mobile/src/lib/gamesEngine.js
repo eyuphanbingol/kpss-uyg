@@ -296,13 +296,28 @@ globalThis.GamesBank = GamesBank;
         return parsed;
     }
 
+    function formatPanicStem(s) {
+        s = String(s || "")
+            .replace(/<br\s*\/?>/gi, "\n")
+            .replace(/<\/p>/gi, "\n")
+            .replace(/<[^>]+>/g, " ")
+            .replace(/&nbsp;/gi, " ")
+            .replace(/[ \t]+/g, " ")
+            .replace(/^Soru\s*\d+\s*:\s*/i, "")
+            .trim();
+        s = s.replace(/\s+((?:I|II|III|IV|V|VI)[\.\)])\s+/g, "\n$1 ");
+        s = s.replace(/\s+(Aşağıdakilerden|Buna göre)/g, "\n\n$1");
+        s = s.replace(/\n{3,}/g, "\n\n");
+        return s;
+    }
+
     function panicFromItem(item) {
         if (!item) return null;
         var a = stripChoice(item.correct || item.a || "");
         var choices = (item.options || item.choices || []).map(stripChoice).filter(Boolean);
         if (!a || choices.length < 2) return null;
-        var q = String(item.question || item.q || "");
-        if (q.length > 160) q = q.slice(0, 157) + "…";
+        var q = formatPanicStem(item.question || item.q || "");
+        if (!q) return null;
         return { q: q, a: a, choices: choices.slice(0, 4) };
     }
 

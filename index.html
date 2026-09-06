@@ -174,7 +174,7 @@
     <script src="js/clozeEngine.js?v=4"></script>
     <script src="js/mapQuiz.js?v=10"></script>
     <script src="js/gamesBank.js?v=4"></script>
-    <script src="js/gamesEngine.js?v=7"></script>
+    <script src="js/gamesEngine.js?v=8"></script>
     <script src="js/scoreEngine.js?v=8"></script>
     <script src="js/paymentClient.js?v=14"></script>
     <script src="js/notificationEngine.js?v=9"></script>
@@ -183,7 +183,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.86.0/dist/umd/supabase.js"></script>
     <script src="js/supabaseClient.js?v=18"></script>
     <script src="js/syncEngine.js?v=26"></script>
-    <script src="js/jsxLoader.js?v=52"></script>
+    <script src="js/jsxLoader.js?v=53"></script>
     <script src="js/icons.js?v=18"></script>
 
     <style>
@@ -1052,32 +1052,59 @@
         .game-end { padding: 48px 24px; text-align: center; flex: 1; }
         .panic-hero {
             background: linear-gradient(165deg, #0d2c4d 0%, #127880 100%);
-            border-radius: 22px; padding: 18px 16px 16px; margin-bottom: 16px;
+            border-radius: 22px; padding: 14px 16px 12px; margin-bottom: 14px;
             box-shadow: 0 18px 40px -24px rgba(13, 44, 77, 0.7);
         }
         .panic-root.panic-low .panic-hero { background: linear-gradient(165deg, #7f1d1d 0%, #c2410c 100%); }
-        .panic-ask { margin: 10px 0 6px; color: #F6F1E4; font-weight: 800; font-size: 18px; }
+        .panic-hero-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
+        .panic-ask { margin: 8px 0 0; color: #F6F1E4; font-weight: 800; font-size: 16px; }
         .panic-timer {
-            font-size: 52px; font-weight: 900; letter-spacing: -0.04em; line-height: 1;
-            font-variant-numeric: tabular-nums; margin: 4px 0 10px; color: #F6F1E4;
+            font-size: 40px; font-weight: 900; letter-spacing: -0.04em; line-height: 1;
+            font-variant-numeric: tabular-nums; margin: 0; color: #F6F1E4;
         }
-        .panic-bar { height: 10px; border-radius: 99px; background: rgba(246,241,228,.22); overflow: hidden; margin-bottom: 8px; }
+        .panic-bar { height: 10px; border-radius: 99px; background: rgba(246,241,228,.22); overflow: hidden; margin: 10px 0 6px; }
         .panic-bar > span { display: block; height: 100%; background: #C5A059; border-radius: 99px; }
         .panic-root.panic-low .panic-bar > span { background: #fecaca; }
         .panic-hero-sub { margin: 0; font-size: 12px; font-weight: 700; color: rgba(246,241,228,.75); }
-        .panic-q { font-size: 18px; font-weight: 800; margin: 0 0 14px; line-height: 1.4; color: #1c1917; }
-        .panic-choices { display: grid; gap: 8px; }
-        .panic-opt {
-            min-height: 56px; text-align: left; padding: 14px 16px; border-radius: 16px;
-            border: 1px solid #e7e5e4; background: #fff; font-weight: 800; font-size: 15px;
+        .panic-stem {
+            position: relative;
+            background: linear-gradient(180deg, #FBF8F1 0%, #F6F1E4 100%);
+            border: 1px solid rgba(13, 44, 77, 0.08);
+            border-radius: 1.15rem;
+            padding: 16px 16px 16px 22px;
+            margin-bottom: 14px;
+            box-shadow: 0 16px 36px -22px rgba(4, 28, 36, 0.4);
         }
+        .panic-stem-bar {
+            position: absolute; left: 0; top: 12px; bottom: 12px; width: 4px;
+            border-radius: 999px; background: linear-gradient(180deg, #C5A059, #127880);
+        }
+        .panic-q {
+            font-size: 16px; font-weight: 800; margin: 0; line-height: 1.55;
+            color: #1c1917; white-space: pre-line;
+        }
+        .panic-choices { display: grid; gap: 8px; }
+        .panic-choices.cols-2 { grid-template-columns: 1fr 1fr; }
+        .panic-opt {
+            min-height: 56px; text-align: left; padding: 12px 14px; border-radius: 16px;
+            border: 1px solid #e7e5e4; background: #fff; font-weight: 700; font-size: 15px;
+            display: flex; align-items: flex-start; gap: 10px;
+        }
+        .panic-letter {
+            flex: 0 0 auto; width: 28px; height: 28px; border-radius: 999px;
+            background: #f5f5f4; color: #0d2c4d; font-size: 12px; font-weight: 900;
+            display: inline-flex; align-items: center; justify-content: center;
+        }
+        .panic-opt-text { min-width: 0; flex: 1; line-height: 1.4; white-space: pre-line; }
         .panic-root.panic-ok { box-shadow: inset 0 0 0 6px rgba(16,185,129,.45); }
         .panic-root.panic-bad { box-shadow: inset 0 0 0 6px rgba(244,63,94,.45); }
         .panic-miss { text-align: left; max-width: 36rem; margin: 24px auto 0; }
         .panic-miss-title { font-size: 14px; font-weight: 800; margin-bottom: 10px; }
         .panic-miss-item { border-radius: 16px; border: 1px solid #fecdd3; background: #fff1f2; padding: 12px; font-size: 14px; }
+        html.dark .panic-stem { background: linear-gradient(180deg, #1c2420 0%, #141a18 100%); border-color: #3f3f46; }
         html.dark .panic-q { color: #f5f5f4; }
         html.dark .panic-opt { background: #1c1917; border-color: #44403c; color: #fafaf9; }
+        html.dark .panic-letter { background: #292524; color: #F6F1E4; }
         html.dark .panic-miss-item { background: #1c1917; border-color: #9f1239; }
         .cloze-stem {
             position: relative;

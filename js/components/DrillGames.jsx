@@ -529,6 +529,8 @@
         }
 
         var low = sec <= 8;
+        var opts = (q && q.choices) || [];
+        var twoCol = opts.length >= 2 && opts.every(function (c) { return String(c).length <= 28; });
         return (
             <div className={"map-play-root panic-root" + (flash === "ok" ? " panic-ok" : "") + (flash === "bad" ? " panic-bad" : "") + (low ? " panic-low" : "")}>
                 <header className="map-play-top">
@@ -539,18 +541,28 @@
                 </header>
                 <div className="panic-body">
                     <div className="panic-hero">
-                        <span className="conquer-topic">Doğru +2 sn · yanlış −3 sn</span>
-                        <p className="panic-ask">Son 30 saniye</p>
-                        <div className="panic-timer">{sec.toFixed(1)}</div>
+                        <div className="panic-hero-row">
+                            <div>
+                                <span className="conquer-topic">+2 / −3 sn</span>
+                                <p className="panic-ask">Son 30 saniye</p>
+                            </div>
+                            <div className="panic-timer">{sec.toFixed(1)}</div>
+                        </div>
                         <div className="panic-bar"><span style={{ width: Math.min(100, (ms / PANIC_MS) * 100) + "%" }} /></div>
                         <p className="panic-hero-sub">Rekor {games.panicBest || 0}</p>
                     </div>
-                    <p className="panic-q">{q ? q.q : ""}</p>
-                    <div className="panic-choices">
-                        {(q && q.choices || []).map(function (opt, oi) {
+                    <div className="panic-stem">
+                        <div className="panic-stem-bar" aria-hidden="true"></div>
+                        <p className="panic-q">{q ? q.q : ""}</p>
+                    </div>
+                    <div className={"panic-choices" + (twoCol ? " cols-2" : "")}>
+                        {opts.map(function (opt, oi) {
                             return (
                                 <button key={oi} type="button" className="panic-opt"
-                                    onClick={function () { choose(opt); }}>{opt}</button>
+                                    onClick={function () { choose(opt); }}>
+                                    <span className="panic-letter">{String.fromCharCode(65 + oi)}</span>
+                                    <span className="panic-opt-text">{opt}</span>
+                                </button>
                             );
                         })}
                     </div>

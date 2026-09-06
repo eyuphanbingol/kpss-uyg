@@ -332,11 +332,14 @@ export function PanicPlayScreen({ navigation }) {
             </Pressable>
             <Text style={[styles.kicker, isDark && styles.muted]}>Son 30 saniye · doğru +2 · yanlış −3</Text>
             <Text style={[styles.timer, isDark && styles.light]}>{Math.max(0, ms / 1000).toFixed(1)}</Text>
-            <Text style={[styles.title, isDark && styles.light]}>{q ? q.q : ""}</Text>
+            <View style={[styles.stem, isDark && styles.stemDark]}>
+                <Text style={[styles.stemText, isDark && styles.light]}>{q ? q.q : ""}</Text>
+            </View>
             {(q && q.choices || []).map(function (opt, oi) {
                 return (
-                    <Pressable key={oi} onPress={function () { choose(opt); }} style={[styles.choice, isDark && styles.cardDark]}>
-                        <Text style={[styles.choiceText, isDark && styles.light]}>{opt}</Text>
+                    <Pressable key={oi} onPress={function () { choose(opt); }} style={[styles.choice, styles.choiceRow, isDark && styles.cardDark]}>
+                        <Text style={[styles.letter, isDark && styles.letterDark]}>{String.fromCharCode(65 + oi)}</Text>
+                        <Text style={[styles.choiceText, isDark && styles.light, { flex: 1 }]}>{opt}</Text>
                     </Pressable>
                 );
             })}
@@ -355,7 +358,19 @@ var styles = StyleSheet.create({
     cardDark: { backgroundColor: colors.navyDeep },
     prompt: { fontSize: 16, lineHeight: 24, fontWeight: "700", color: colors.text, marginBottom: 10 },
     choice: { borderWidth: 1, borderColor: "#E7E5E4", borderRadius: 14, padding: 14, marginTop: 8 },
-    choiceText: { fontWeight: "700", color: colors.text },
+    choiceRow: { flexDirection: "row", alignItems: "flex-start", gap: 10 },
+    choiceText: { fontWeight: "700", color: colors.text, lineHeight: 21 },
+    letter: {
+        width: 28, height: 28, borderRadius: 14, backgroundColor: "#F5F5F4", color: "#0D2C4D",
+        fontSize: 12, fontWeight: "900", textAlign: "center", lineHeight: 28, overflow: "hidden"
+    },
+    letterDark: { backgroundColor: "#292524", color: "#F6F1E4" },
+    stem: {
+        backgroundColor: "#F6F1E4", borderRadius: 18, paddingVertical: 14, paddingHorizontal: 16,
+        marginTop: 8, marginBottom: 6, borderLeftWidth: 4, borderLeftColor: "#C5A059"
+    },
+    stemDark: { backgroundColor: "#1C2420" },
+    stemText: { fontSize: 16, fontWeight: "800", color: colors.text, lineHeight: 24 },
     ok: { backgroundColor: "#ECFDF5", borderColor: "#34D399" },
     no: { backgroundColor: "#FFF1F2", borderColor: "#FB7185" },
     bad: { color: "#E11D48", fontWeight: "800" },
