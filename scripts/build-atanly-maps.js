@@ -1062,8 +1062,10 @@ function main() {
                 { il: "Artvin", ilce: "Cerattepe", ldx: 32, ldy: 8 }
             ],
             facts: ["İlk yatak: Bergama–Ovacık", "Kaz Dağları, Mostra Dağı, Cerattepe"] },
-        { file: "maden_uranyum.png", title: "URANYUM", iller: ["Yozgat"],
-            yazilar: ["Sorgun"],
+        { file: "maden_uranyum.png", title: "URANYUM", urun: "Uranyum",
+            noktalar: [
+                { il: "Yozgat", ilce: "Sorgun", ldx: 32, ldy: 8 }
+            ],
             facts: ["Nükleer enerji hammaddesi", "Yozgat–Sorgun"] },
         { file: "maden_toryum.png", title: "TORYUM", urun: "Toryum",
             noktalar: [
