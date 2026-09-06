@@ -1095,8 +1095,10 @@ function main() {
                 { il: "Elazığ", ldx: 32, ldy: 8 }
             ],
             facts: ["Birlikte çıkarılır"] },
-        { file: "maden_oltu.png", title: "OLTU TAŞI", iller: ["Erzurum"],
-            yazilar: ["Oltu"],
+        { file: "maden_oltu.png", title: "OLTU TAŞI", urun: "Oltu taşı",
+            noktalar: [
+                { il: "Erzurum", ilce: "Oltu", ldx: 32, ldy: 8 }
+            ],
             facts: ["Süs eşyası ve takı", "Erzurum–Oltu"] },
         { file: "maden_lule.png", title: "LÜLE TAŞI", urun: "Lüle taşı",
             noktalar: [
