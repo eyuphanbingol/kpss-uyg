@@ -48,7 +48,7 @@ function Shell(props) {
         <div className={"mx-auto px-3 sm:px-5 pt-6 sm:pt-10 overflow-x-hidden " + (props.wide ? "max-w-4xl" : "max-w-2xl")}>
             {props.children}
             {props.padBottom === false ? null : (
-                <div aria-hidden="true" style={{ height: "calc(8rem + env(safe-area-inset-bottom, 0px))" }} />
+                <div aria-hidden="true" style={{ height: "calc(var(--app-tabbar-h) + 1.5rem)" }} />
             )}
         </div>
     );
@@ -123,7 +123,7 @@ function BottomNav(props) {
         { id: "ben", label: "Ben", icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" }
     ];
     return (
-        <nav className="fixed bottom-0 inset-x-0 z-40 nav-glass" style={{ paddingBottom: "max(8px, env(safe-area-inset-bottom))" }}>
+        <nav className="app-tabbar fixed bottom-0 inset-x-0 z-40 nav-glass" style={{ paddingBottom: "max(8px, env(safe-area-inset-bottom))" }}>
             <div className="max-w-2xl mx-auto grid grid-cols-6 px-0.5 pt-1 min-w-0">
                 {tabs.map(function (tab) {
                     const on = props.nav === tab.id;
@@ -142,7 +142,7 @@ function BottomNav(props) {
                                     </span>
                                 ) : null}
                             </span>
-                            {tab.label}
+                            <span className="label">{tab.label}</span>
                         </button>
                     );
                 })}
@@ -2876,7 +2876,7 @@ function App() {
                 </div>
             ) : null}
             {body}
-            {!inTest && !inMapPlay && !inDrillGame ? (
+            {!inTest ? (
                 <BottomNav nav={nav} streak={plan.streak || 0} onChange={function (id) {
                     setNav(id);
                     if (id !== "dersler") { setSelectedDers(null); setSelectedKonu(null); setViewMode("hub"); }

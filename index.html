@@ -185,7 +185,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.86.0/dist/umd/supabase.js"></script>
     <script src="js/supabaseClient.js?v=18"></script>
     <script src="js/syncEngine.js?v=26"></script>
-    <script src="js/jsxLoader.js?v=53"></script>
+    <script src="js/jsxLoader.js?v=54"></script>
     <script src="js/icons.js?v=18"></script>
 
     <style>
@@ -250,10 +250,14 @@
             top: 32%;
             border: 1px solid rgba(29, 138, 153, 0.45);
         }
+        :root {
+            --app-tabbar-h: calc(4.75rem + env(safe-area-inset-bottom, 0px));
+        }
         .app-shell {
             background: #FAFAF9;
             color: #211F1D;
             min-height: 100vh;
+            min-height: 100dvh;
         }
         html.dark .app-shell {
             background: #211F1D;
@@ -403,6 +407,20 @@
             -webkit-backdrop-filter: blur(20px) saturate(1.4);
             border-top: 1px solid rgba(255, 255, 255, 0.3);
             box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.05);
+        }
+        .app-tabbar {
+            box-sizing: border-box;
+        }
+        .app-tabbar button {
+            min-width: 0;
+            overflow: hidden;
+        }
+        .app-tabbar button span.label {
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding: 0 2px;
         }
         .dark .nav-glass {
             background: rgba(15, 23, 42, 0.85);
@@ -776,11 +794,16 @@
         }
         .map-play-root {
             position: fixed;
-            inset: 0;
-            z-index: 45;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: var(--app-tabbar-h);
+            z-index: 30;
             display: flex;
             flex-direction: column;
             background: #e8f0ea;
+            overflow: hidden;
+            max-width: 100%;
         }
         html.dark .map-play-root { background: #15201b; }
         .map-play-top {
@@ -1034,7 +1057,8 @@
         .conquer-chip.on { background: #d1fae5; color: #047857; }
         .conquer-sheet {
             position: relative; flex: 1 1 auto; min-height: 0; overflow: auto;
-            background: #f6f1e4; padding: 14px 16px calc(18px + env(safe-area-inset-bottom)); z-index: 2;
+            background: #f6f1e4; padding: 14px 16px 18px; z-index: 2;
+            -webkit-overflow-scrolling: touch;
         }
         .conquer-quiz .map-play-stage { display: none; }
         .conquer-quiz .conquer-regions { display: none; }
@@ -1086,7 +1110,12 @@
         }
         .tabu-root, .panic-root, .conquer-root { position: relative; }
         .tabu-body, .panic-body {
-            flex: 1 1 auto; min-height: 0; padding: 12px 16px 24px; overflow: auto;
+            flex: 1 1 auto; min-height: 0; padding: 12px 16px 20px; overflow: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        .game-end {
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
         }
         .tabu-scorepill {
             font-size: 12px; font-weight: 800; background: #0d2c4d; color: #F6F1E4;
@@ -1505,12 +1534,40 @@
             background: #0f172a;
             border-color: #1e293b;
         }
+
+        @media (max-width: 640px) {
+            .map-play-top { padding: 8px 10px 6px; padding-top: max(8px, env(safe-area-inset-top)); }
+            .map-play-bar { flex-wrap: wrap; gap: 8px; align-items: center; }
+            .map-play-kicker { font-size: 10px; margin-top: 6px; }
+            .conquer-mapstat-title { font-size: 15px; }
+            .conquer-il { font-size: 20px; }
+            .conquer-q { font-size: 15px; }
+            .conquer-opt, .tabu-opt, .panic-opt { padding: 12px 12px; font-size: 14px; min-height: 48px; }
+            .conquer-colors { flex-wrap: wrap; }
+            .conquer-hero, .tabu-hero, .panic-hero { padding: 14px 12px 12px; border-radius: 18px; }
+            .tabu-ask, .panic-ask { font-size: 15px; }
+            .tabu-mystery { font-size: 20px; min-height: 52px; padding: 10px; }
+            .tabu-end-score { font-size: 44px; }
+            .tabu-body, .panic-body, .conquer-sheet { padding: 10px 12px 16px; }
+            .panic-timer { font-size: 32px; }
+            .panic-choices.cols-2 { grid-template-columns: 1fr; }
+            .panic-q { font-size: 15px; }
+            .map-zoom-tools { right: 8px; bottom: 8px; }
+            .game-end { padding: 28px 16px 20px; }
+        }
+        @media (min-width: 768px) {
+            .map-play-root {
+                left: max(0px, calc((100% - 42rem) / 2));
+                width: min(100%, 42rem);
+                max-width: 42rem;
+            }
+        }
     </style>
 </head>
 
 <body class="app-bg min-h-screen text-slate-800 antialiased transition-colors duration-300">
     <div id="root"></div>
-    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=85"></script>
+    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=86"></script>
     <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.getRegistrations().then(function (regs) {
