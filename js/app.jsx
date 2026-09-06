@@ -1783,7 +1783,7 @@ function Eksikler(props) {
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
-            <div className="grid grid-cols-2 gap-3 mb-6">
+            <div className="grid grid-cols-2 gap-3 mb-3">
                 <button onClick={function () { props.onReview(); }} disabled={!plan.due.length}
                     className="p-4 rounded-2xl btn-primary text-white text-left disabled:opacity-40">
                     <span className="font-semibold block">Bugün tekrar · {plan.due.length}</span>
@@ -1795,6 +1795,11 @@ function Eksikler(props) {
                     <span className="text-xs font-normal opacity-80 mt-1 block">Çözdüğün soru defterden düşer. Konu kilidini açmaz.</span>
                 </button>
             </div>
+            <button onClick={function () { props.onNotebook && props.onNotebook(); }}
+                className="w-full mb-6 p-4 rounded-2xl glass text-left card-hover">
+                <span className="font-semibold block">Tekrar defteri</span>
+                <span className="text-xs text-stone-400 font-normal mt-1 block">Tekrar etmek istediğin notları kendine yaz. Yalnızca sen görürsün.</span>
+            </button>
             {Object.keys(byDers).map(function (ders) {
                 const t = themeFor(ders, props.isDark);
                 return (
@@ -2105,6 +2110,7 @@ function Ben(props) {
                 <p className="text-xs text-stone-400 mb-3">Sıralama, deneme, puan ve asistan. Ders kilidini atlatmaz.</p>
                 <div className="grid grid-cols-2 gap-2">
                     {[
+                        { id: "notebook", t: "Tekrar defteri", d: "Kendine not yaz, yalnızca sen görürsün" },
                         { id: "placement", t: "Puan / tercih", d: "Tahmini puanın hangi kurumlara yeter" },
                         { id: "leaderboard", t: "Türkiye", d: "Haftalık soru ve deneme sıralaması" },
                         { id: "heat", t: "Isı haritası", d: "30 günlük tempo ve konu hakimiyeti" },
@@ -2238,7 +2244,8 @@ function App() {
         live: ["LiveExamScreen", "js/components/LiveExamScreen.jsx"],
         heat: ["Heatmap30", "js/components/Heatmap30.jsx"],
         instructor: ["InstructorScreen", "js/components/InstructorScreen.jsx"],
-        paywall: ["PaywallScreen", "js/components/PaywallScreen.jsx"]
+        paywall: ["PaywallScreen", "js/components/PaywallScreen.jsx"],
+        notebook: ["ReviewNotebook", "js/components/ReviewNotebook.jsx"]
     };
 
     useEffect(function () {
@@ -2641,7 +2648,8 @@ function App() {
     } else if (nav === "eksikler") {
         body = <Eksikler plan={plan} isDark={isDark} toggleDark={toggleDark}
             onReview={function () { startSession(plan.due.slice(0, 30), { mode: "review" }); }}
-            onWrong={function () { startSession(plan.wrong.slice(0, 30), { mode: "wrong" }); }} />;
+            onWrong={function () { startSession(plan.wrong.slice(0, 30), { mode: "wrong" }); }}
+            onNotebook={function () { setExtra("notebook"); }} />;
     } else if (nav === "deneme") {
         body = <DenemeSetup kpssData={kpssData} isDark={isDark} toggleDark={toggleDark}
             onStart={function (items, seconds) { startSession(items, { mode: "mixed", seconds: seconds || null }); }}

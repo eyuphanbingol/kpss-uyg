@@ -216,6 +216,7 @@
             topics: {},
             answers: {},
             wrongBook: [],
+            reviewNotebook: [],
             sessions: {},
             achievements: {},
             examAttempts: [],
@@ -260,6 +261,36 @@
             panicBest: Math.max(0, Number(g.panicBest) || 0),
             tabuBest: Math.max(0, Number(g.tabuBest) || 0)
         };
+    }
+
+    function notebookId() {
+        return Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+    }
+
+    function migrateNotebook(list) {
+        if (!Array.isArray(list)) return [];
+        var out = [];
+        list.forEach(function (n) {
+            if (!n || typeof n !== "object") return;
+            var id = String(n.id || "").trim();
+            if (!id) return;
+            var title = String(n.title || "").trim().slice(0, 80);
+            var body = String(n.body || "").trim().slice(0, 4000);
+            if (!n.deleted && !body && !title) return;
+            out.push({
+                id: id,
+                title: title,
+                body: body,
+                deleted: !!n.deleted,
+                createdAt: n.createdAt || n.updatedAt || nowIso(),
+                updatedAt: n.updatedAt || n.createdAt || nowIso()
+            });
+        });
+        if (out.length > 80) {
+            out.sort(function (a, b) { return String(b.updatedAt).localeCompare(String(a.updatedAt)); });
+            out = out.slice(0, 80);
+        }
+        return out;
     }
 
     function clone(obj) {
@@ -322,6 +353,7 @@
             topics: migrateTopicPacks(isObj(parsed.topics) ? parsed.topics : {}),
             answers: answers,
             wrongBook: wrongBook,
+            reviewNotebook: migrateNotebook(parsed.reviewNotebook),
             sessions: isObj(parsed.sessions) ? parsed.sessions : {},
             achievements: isObj(parsed.achievements) ? parsed.achievements : {},
             examAttempts: Array.isArray(parsed.examAttempts) ? parsed.examAttempts : [],
@@ -346,7 +378,8 @@
         var sessions = s.sessions && Object.keys(s.sessions).length;
         var named = s.profile && s.profile.name;
         var onboarded = s.profile && s.profile.onboarded;
-        return !q && !topics && !sessions && !named && !onboarded;
+        var notes = s.reviewNotebook && s.reviewNotebook.length;
+        return !q && !topics && !sessions && !named && !onboarded && !notes;
     }
 
     function readKey(key) {
@@ -699,6 +732,58 @@
             state.userProfile.premiumUntil = d.toISOString();
             state.billing.plan = "premium_mock";
             emit();
+        },
+        listReviewNotes: function () {
+            return (state.reviewNotebook || []).filter(function (n) { return n && !n.deleted; })
+                .sort(function (a, b) { return String(b.updatedAt || "").localeCompare(String(a.updatedAt || "")); })
+                .map(function (n) { return clone(n); });
+        },
+        upsertReviewNote: function (payload) {
+            payload = payload || {};
+            var title = String(payload.title || "").trim().slice(0, 80);
+            var body = String(payload.body || "").trim().slice(0, 4000);
+            if (!title && !body) return null;
+            var id = String(payload.id || "").trim() || notebookId();
+            var list = state.reviewNotebook || [];
+            var found = false;
+            var stamp = nowIso();
+            list = list.map(function (n) {
+                if (!n || n.id !== id) return n;
+                found = true;
+                return {
+                    id: id,
+                    title: title,
+                    body: body,
+                    deleted: false,
+                    createdAt: n.createdAt || stamp,
+                    updatedAt: stamp
+                };
+            });
+            if (!found) {
+                list.unshift({
+                    id: id,
+                    title: title,
+                    body: body,
+                    deleted: false,
+                    createdAt: stamp,
+                    updatedAt: stamp
+                });
+            }
+            state.reviewNotebook = migrateNotebook(list);
+            emit();
+            return id;
+        },
+        deleteReviewNote: function (id) {
+            id = String(id || "").trim();
+            if (!id) return;
+            var stamp = nowIso();
+            var hit = false;
+            state.reviewNotebook = (state.reviewNotebook || []).map(function (n) {
+                if (!n || n.id !== id) return n;
+                hit = true;
+                return Object.assign({}, n, { deleted: true, updatedAt: stamp });
+            });
+            if (hit) emit();
         },
         getState: function () { return clone(state); },
         subscribe: function (fn) {
