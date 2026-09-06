@@ -309,6 +309,51 @@ window.tarih_4_notlari = [
 
     `
     <div class="mb-4">
+        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-stone-200 dark:bg-stone-700 text-stone-800 dark:text-stone-200 font-black text-sm uppercase tracking-wider">
+            ⚔️ YÖNETİCİ SINIF: SEYFİYE · KALEMİYE · İLMİYE
+        </span>
+    </div>
+    <div class="space-y-3 text-left w-full text-sm">
+        <div class="bg-stone-50 dark:bg-stone-800/40 p-3 rounded-xl border border-stone-200 dark:border-stone-600 text-xs">
+            Yönetici sınıf dört gruba ayrılır; sınavda asıl sorulan üçlü <b>Seyfiye – Kalemiye – İlmiye</b>’dir. Dördüncü grup padişah / saray teşkilatı görevlileridir.
+        </div>
+        <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30">
+            <h4 class="font-bold text-rose-700 dark:text-rose-400">⚔️ Seyfiye</h4>
+            <p class="text-xs mt-1">Askerî ve idarî işler: yönetim, güvenlik, askerlik.</p>
+            <ul class="list-disc list-inside text-xs mt-2 space-y-1">
+                <li><b>Sadrazam:</b> Padişahın vekili, Divan-ı Hümayun’un başkanı.</li>
+                <li><b>Vezir:</b> İdarî ve askerî görevler; Divan üyesidir.</li>
+                <li><b>Beylerbeyi:</b> Eyaletin başındaki yönetici.</li>
+                <li><b>Sancakbeyi:</b> Sancağın başındaki yönetici; beylerbeyine bağlıdır.</li>
+            </ul>
+        </div>
+        <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
+            <h4 class="font-bold text-amber-700 dark:text-amber-400">✒️ Kalemiye</h4>
+            <p class="text-xs mt-1">🧠 Kod: <b>Kalem → yazışma + maliye + diplomasi</b></p>
+            <ul class="list-disc list-inside text-xs mt-2 space-y-1">
+                <li><b>Nişancı:</b> Ferman ve beratlara tuğra çeker; tahrir / arazi kayıtları; örfî hukuk.</li>
+                <li><b>Defterdar:</b> Maliye; gelir–gider.</li>
+                <li><b>Reisülküttap:</b> Dış yazışma ve diplomasi; Hariciye Nazırlığı’nın temelidir.</li>
+            </ul>
+        </div>
+        <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
+            <h4 class="font-bold text-indigo-700 dark:text-indigo-400">📖 İlmiye</h4>
+            <p class="text-xs mt-1">Eğitim, hukuk, din ve adalet. Medrese çıkışlı ulema.</p>
+            <ul class="list-disc list-inside text-xs mt-2 space-y-1">
+                <li><b>Şeyhülislam:</b> İlmiyenin zirvesi; fetva verir. Fetva padişah için doğrudan kanun değildir.</li>
+                <li><b>Kazasker:</b> Yargı; kadı ve müderris ataması; Divan üyesidir.</li>
+                <li><b>Kadı:</b> Yerel yargı; şer’î işler; belediye ve noterlik benzeri görevler.</li>
+                <li><b>Müderris:</b> Medrese öğretmeni.</li>
+            </ul>
+        </div>
+        <div class="bg-rose-50 dark:bg-rose-900/20 p-3 rounded-xl border border-rose-100 dark:border-rose-800/30 text-xs text-rose-700 dark:text-rose-400">
+            ⚠️ Kazasker Seyfiye değil İlmiye’dir. Kadı askerî komutan değildir.
+        </div>
+    </div>
+    `,
+
+    `
+    <div class="mb-4">
         <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-teal-100 dark:bg-teal-900/50 text-teal-700 dark:text-teal-300 font-black text-sm uppercase tracking-wider">
             🗺️ TAŞRA TEŞKİLATI (1840'A KADAR)
         </span>
@@ -510,6 +555,107 @@ window.tarih_4_notlari = [
 
     `
     <div class="mb-4">
+        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-red-100 dark:bg-red-900/50 text-red-700 dark:text-red-300 font-black text-sm uppercase tracking-wider">
+            🏰 ORDU: KAPIKULU ASKERLERİ
+        </span>
+    </div>
+    <div class="space-y-3 text-left w-full text-sm">
+        <div class="bg-red-50 dark:bg-red-900/20 p-3 rounded-xl border border-red-100 dark:border-red-800/30 text-xs">
+            Ordu üçlüdür: <b>Kapıkulu</b> (merkez, padişaha bağlı, ulufe) · <b>Eyalet askerleri</b> · <b>Yardımcı kuvvetler</b>. Kapıkulu ocakları II. Murat’ta başlar, Fatih’te düzenlenir. İlk dönemlerde insan kaynağı devşirmedir.
+        </div>
+        <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-600">
+            <h4 class="font-bold text-red-700 dark:text-red-400">Kapıkulu piyadeleri</h4>
+            <ul class="list-disc list-inside text-xs mt-2 space-y-1">
+                <li><b>Yeniçeri:</b> Merkezde savaşan yaya; padişahın yanındadır.</li>
+                <li><b>Acemi Oğlan:</b> Yeniçeri ve diğer Kapıkulu ocaklarına asker yetiştirir.</li>
+                <li><b>Cebeci:</b> Silah yapımı, bakımı, onarımı, korunması.</li>
+                <li><b>Topçu:</b> Top kullanır ve döker.</li>
+                <li><b>Top Arabacıları:</b> Topları savaş alanına taşır.</li>
+                <li><b>Humbaracı:</b> Havan topu ve humbara (el bombası benzeri).</li>
+                <li><b>Lağımcı:</b> Tünel kazar; kale surlarını patlayıcıyla yıkar.</li>
+            </ul>
+        </div>
+        <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-600">
+            <h4 class="font-bold text-red-700 dark:text-red-400">Kapıkulu süvarileri (Altı Bölük)</h4>
+            <ul class="list-disc list-inside text-xs mt-2 space-y-1">
+                <li><b>Sipahiler:</b> Padişahın yanında.</li>
+                <li><b>Silahtarlar:</b> Padişahın silahlarını taşır ve korur.</li>
+                <li><b>Sağ / Sol Ulufeciler:</b> Merkezin sağını ve solunu korur (saltanat sancakları).</li>
+                <li><b>Sağ / Sol Garipler:</b> Ordunun sağ ve sol kanadı.</li>
+            </ul>
+        </div>
+    </div>
+    `,
+
+    `
+    <div class="mb-4">
+        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300 font-black text-sm uppercase tracking-wider">
+            🐎 ORDU: EYALET ASKERLERİ VE TİMARLI SİPAHİ
+        </span>
+    </div>
+    <div class="space-y-3 text-left w-full text-sm">
+        <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl border border-orange-100 dark:border-orange-800/30">
+            <p class="text-xs">Taşra gücü. En önemlisi <b>tımarlı sipahi</b>dir: tımar / dirlik geliri karşılığı asker besler, devletten maaş almaz. Savaşta <b>cebelü</b>leriyle katılır; barışta bölge güvenliğine yardım eder.</p>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="w-full text-xs border-collapse">
+                <thead>
+                    <tr class="bg-orange-100 dark:bg-orange-900/40">
+                        <th class="p-2 text-left border border-orange-200 dark:border-orange-800">Tımarlı Sipahi</th>
+                        <th class="p-2 text-left border border-orange-200 dark:border-orange-800">Kapıkulu Sipahisi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="p-2 border border-orange-200 dark:border-orange-800">Eyalet askeri</td><td class="p-2 border border-orange-200 dark:border-orange-800">Merkez askeri</td></tr>
+                    <tr><td class="p-2 border border-orange-200 dark:border-orange-800">Tımar sistemi</td><td class="p-2 border border-orange-200 dark:border-orange-800">Kapıkulu sistemi</td></tr>
+                    <tr><td class="p-2 border border-orange-200 dark:border-orange-800">Dirlik geliri</td><td class="p-2 border border-orange-200 dark:border-orange-800">Ulufe alır</td></tr>
+                    <tr><td class="p-2 border border-orange-200 dark:border-orange-800">Cebelü besler</td><td class="p-2 border border-orange-200 dark:border-orange-800">Merkezde görev yapar</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="bg-rose-50 dark:bg-rose-900/20 p-3 rounded-xl border border-rose-100 dark:border-rose-800/30 text-xs text-rose-700 dark:text-rose-400">
+            ⚠️ <b>Tımarlı Sipahi ≠ Kapıkulu Sipahisi.</b> İkisi karıştırılmasın.
+        </div>
+    </div>
+    `,
+
+    `
+    <div class="mb-4">
+        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-teal-100 dark:bg-teal-900/50 text-teal-700 dark:text-teal-300 font-black text-sm uppercase tracking-wider">
+            🗡️ ORDU: YARDIMCI KUVVETLER VE DONANMA
+        </span>
+    </div>
+    <div class="space-y-3 text-left w-full text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="bg-teal-50 dark:bg-teal-900/20 p-3 rounded-xl border border-teal-100 dark:border-teal-800/30">
+                <b>Akıncı</b>
+                <p class="text-xs mt-1">Sınır, keşif, baskın, öncü süvari. Kod: sınır + keşif + baskın.</p>
+            </div>
+            <div class="bg-teal-50 dark:bg-teal-900/20 p-3 rounded-xl border border-teal-100 dark:border-teal-800/30">
+                <b>Azap</b>
+                <p class="text-xs mt-1">Genelde bekâr Müslüman gönüllü; kale savunması, yardımcı yaya.</p>
+            </div>
+            <div class="bg-teal-50 dark:bg-teal-900/20 p-3 rounded-xl border border-teal-100 dark:border-teal-800/30">
+                <b>Deli</b>
+                <p class="text-xs mt-1">Sınırda gözü kara süvari; düşmana korku, öncü saldırı.</p>
+            </div>
+            <div class="bg-teal-50 dark:bg-teal-900/20 p-3 rounded-xl border border-teal-100 dark:border-teal-800/30">
+                <b>Gönüllü / Beşli</b>
+                <p class="text-xs mt-1">Gönüllüler savaşa katılır. Beşliler sınırda; belirli haneden asker.</p>
+            </div>
+        </div>
+        <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-xl border border-cyan-100 dark:border-cyan-800/30">
+            <h4 class="font-bold text-cyan-700 dark:text-cyan-400">Donanma</h4>
+            <ul class="list-disc list-inside text-xs mt-2 space-y-1">
+                <li><b>Kaptan-ı Derya:</b> Donanmanın en yüksek komutanı; Divan’da da yer alabilmiştir.</li>
+                <li><b>Kalyoncu:</b> Kalyonlarda görev yapan deniz askeri.</li>
+            </ul>
+        </div>
+    </div>
+    `,
+
+    `
+    <div class="mb-4">
         <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-pink-100 dark:bg-pink-900/50 text-pink-700 dark:text-pink-300 font-black text-sm uppercase tracking-wider">
             👥 SOSYAL HAYAT VE VAKIFLAR
         </span>
@@ -539,6 +685,45 @@ window.tarih_4_notlari = [
 
     `
     <div class="mb-4">
+        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-rose-100 dark:bg-rose-900/50 text-rose-700 dark:text-rose-300 font-black text-sm uppercase tracking-wider">
+            🏥 DÂRÜŞŞİFA VE DÂR KURUMLARI
+        </span>
+    </div>
+    <div class="space-y-3 text-left w-full text-sm">
+        <div class="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-xl border border-rose-100 dark:border-rose-800/30">
+            <h4 class="font-bold text-rose-700 dark:text-rose-400">🏥 Dârüşşifa</h4>
+            <p class="text-xs mt-1">Sağlık. Hastane / tedavi. Dârüssıhha, bimarhane, bimaristan, şifahane de denir.</p>
+            <p class="text-xs mt-2 font-medium">Kod: Dârüşşifa → Şifa → Hastane</p>
+        </div>
+        <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-100 dark:border-amber-800/30">
+            <h4 class="font-bold text-amber-700 dark:text-amber-400">👴 Dârülaceze</h4>
+            <p class="text-xs mt-1">Sosyal yardım. II. Abdülhamid, İstanbul ~1890. Kimsesiz çocuk, yaşlı, sakat, muhtaç; dilenciliği önleme.</p>
+            <p class="text-xs mt-2 font-medium">Kod: Aceze → Aciz → yaşlı, sakat, kimsesiz, muhtaç</p>
+            <p class="text-xs mt-2 text-rose-600 dark:text-rose-400">⚠️ Hastane değildir. Sosyal yardım kurumudur.</p>
+        </div>
+        <div class="bg-emerald-50 dark:bg-emerald-900/20 p-4 rounded-xl border border-emerald-100 dark:border-emerald-800/30">
+            <h4 class="font-bold text-emerald-700 dark:text-emerald-400">👶 Dârülhayr-ı Âli</h4>
+            <p class="text-xs mt-1">II. Abdülhamid. Yetim ve kimsesiz Müslüman çocukların korunması ve eğitimi.</p>
+            <p class="text-xs mt-2 font-medium">Kod: Hayr → Hayır → yetim çocuğa yardım / eğitim</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="bg-indigo-50 dark:bg-indigo-900/20 p-3 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
+                <b>👨‍🏫 Dârülmuallimîn</b>
+                <p class="text-xs mt-1">Erkek öğretmen yetiştirme. 1848 İstanbul. Tanzimat’ta eğitim yeniliği.</p>
+            </div>
+            <div class="bg-fuchsia-50 dark:bg-fuchsia-900/20 p-3 rounded-xl border border-fuchsia-100 dark:border-fuchsia-800/30">
+                <b>👩‍🏫 Dârülmuallimât</b>
+                <p class="text-xs mt-1">Kadın öğretmen yetiştirme. 1870 İstanbul. Kız sıbyan ve rüştiyeye öğretmen.</p>
+            </div>
+        </div>
+        <div class="bg-stone-50 dark:bg-stone-800/40 p-3 rounded-xl border border-stone-200 dark:border-stone-600 text-xs">
+            Kod: <b>Muallimîn = erkek</b> · <b>Muallimât = kadın</b> öğretmen.
+        </div>
+    </div>
+    `,
+
+    `
+    <div class="mb-4">
         <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 font-black text-sm uppercase tracking-wider">
             🎓 EĞİTİM SİSTEMİ
         </span>
@@ -562,6 +747,12 @@ window.tarih_4_notlari = [
             </div>
             <div class="bg-indigo-50 dark:bg-indigo-900/20 p-3 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
                 <b>Meslek Eğitimi:</b> Lonca teşkilatı.
+            </div>
+            <div class="bg-indigo-50 dark:bg-indigo-900/20 p-3 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
+                <b>Dârülmuallimîn (1848):</b> Erkek öğretmen okulu.
+            </div>
+            <div class="bg-indigo-50 dark:bg-indigo-900/20 p-3 rounded-xl border border-indigo-100 dark:border-indigo-800/30">
+                <b>Dârülmuallimât (1870):</b> Kadın öğretmen okulu.
             </div>
         </div>
     </div>

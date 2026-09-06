@@ -2001,5 +2001,83 @@ window.tarih_4_sorulari = [
   ],
   "correctAnswerIndex": 1,
   "explanation": "Osmanlı Milli Olimpiyat Komitesi'nin kurucusu Selim Sırrı Tarcan'dır."
+},
+{
+  "id": "155",
+  "question": "Dârüşşifa ile Dârülaceze için aşağıdaki yargılardan hangisi doğrudur?",
+  "options": [
+    "A) İkisi de II. Abdülhamid döneminde açılan hastanelerdir.",
+    "B) Dârüşşifa hastane/tedavi kurumudur; Dârülaceze sosyal yardım kurumudur.",
+    "C) Dârülaceze yalnızca yetim Müslüman çocukların eğitiminden sorumludur.",
+    "D) Dârüşşifa kadın öğretmen yetiştirir.",
+    "E) Dârülaceze bimarhane ve şifahanenin diğer adıdır."
+  ],
+  "correctAnswerIndex": 1,
+  "explanation": "Dârüşşifa (şifahane, bimarhane) sağlık kurumudur. Dârülaceze II. Abdülhamid döneminde açılan sosyal yardım kurumudur; hastane değildir."
+},
+{
+  "id": "156",
+  "question": "1848'de İstanbul'da açılan Dârülmuallimîn ile 1870'te açılan Dârülmuallimât'ın görevleri aşağıdakilerin hangisinde doğru verilmiştir?",
+  "options": [
+    "A) Dârülmuallimîn kadın, Dârülmuallimât erkek öğretmen yetiştirir.",
+    "B) İkisi de yetimhane olarak hizmet verir.",
+    "C) Dârülmuallimîn erkek, Dârülmuallimât kadın öğretmen yetiştirir.",
+    "D) Dârülmuallimîn tıbbiye, Dârülmuallimât rüştiyedir.",
+    "E) İkisi de II. Abdülhamid'in sosyal yardım kurumudur."
+  ],
+  "correctAnswerIndex": 2,
+  "explanation": "Muallimîn erkek, muallimât kadın öğretmen okulu demektir. İlki 1848, ikincisi 1870 İstanbul'dadır."
+},
+{
+  "id": "157",
+  "question": "II. Abdülhamid döneminde yetim ve kimsesiz Müslüman çocukların korunması ve eğitimi amacıyla kurulan kurum aşağıdakilerden hangisidir?",
+  "options": [
+    "A) Dârüşşifa",
+    "B) Dârülaceze",
+    "C) Dârülhayr-ı Âli",
+    "D) Dârülmuallimîn",
+    "E) Dârülelhan"
+  ],
+  "correctAnswerIndex": 2,
+  "explanation": "Dârülhayr-ı Âli, hayır vurgusuyla yetim/kimsesiz Müslüman çocukların korunması ve eğitimine yöneliktir. Dârülaceze ise yaşlı, sakat ve muhtaçları da kapsayan genel sosyal yardımdır."
+},
+{
+  "id": "158",
+  "question": "Tımarlı sipahi ile Kapıkulu sipahisi arasındaki temel fark aşağıdakilerden hangisidir?",
+  "options": [
+    "A) İkisi de ulufe alır; fark yalnızca rütbededir.",
+    "B) Tımarlı sipahi merkez askeridir, Kapıkulu sipahisi eyalet askeridir.",
+    "C) Tımarlı sipahi dirlik geliriyle cebelü besler; Kapıkulu sipahisi merkezde ulufe alır.",
+    "D) Kapıkulu sipahisi tımar sistemiyle bağlıdır.",
+    "E) Tımarlı sipahi yeniçeri ocağına bağlıdır."
+  ],
+  "correctAnswerIndex": 2,
+  "explanation": "Tımarlı sipahi eyalet askeridir, maaş yerine dirlik alır ve cebelü besler. Kapıkulu sipahisi merkez atlısıdır ve ulufe alır."
+},
+{
+  "id": "159",
+  "question": "Kale surlarının altına tünel kazarak patlayıcıyla yıkım yapan Kapıkulu ocağı aşağıdakilerden hangisidir?",
+  "options": [
+    "A) Cebeci",
+    "B) Humbaracı",
+    "C) Top Arabacıları",
+    "D) Lağımcı",
+    "E) Acemi Oğlan"
+  ],
+  "correctAnswerIndex": 3,
+  "explanation": "Lağımcılar tünel kazarak kale surlarını yıkmakla görevlidir. Humbaracı humbara/havan, cebeci silah bakımıyla ilgilenir."
+},
+{
+  "id": "160",
+  "question": "Kalemiye sınıfının görev–görevli eşleştirmelerinden hangisi YANLIŞTIR?",
+  "options": [
+    "A) Nişancı – tuğra ve tahrir/arazi kayıtları",
+    "B) Defterdar – maliye",
+    "C) Reisülküttap – diplomasi / dış yazışma",
+    "D) Kazasker – örfî hukuk ve tuğra",
+    "E) Kalemiye – yazışma, maliye, diplomasi"
+  ],
+  "correctAnswerIndex": 3,
+  "explanation": "Kazasker İlmiye'dendir; yargı ve kadı/müderris atamasıyla ilgilidir. Tuğra ve tahrir Nişancı'nın işidir."
 }
 ];
