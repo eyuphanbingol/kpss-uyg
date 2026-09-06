@@ -664,7 +664,14 @@ function main() {
             facts: ["Isparta ‘gül bahçesi’ olarak anılır", "Yağ gülü üretimi yoğundur"] },
         { file: "turunc.png", title: "TURUNÇGİL ÜRETİMİ", iller: ["Antalya", "Mersin", "Adana", "Hatay", "Muğla"], facts: ["Akdeniz kıyı kuşağı", "Don riski düşük yerlerde yetişir"] },
         { file: "kenevir.jpg", title: "KENEVİR ÜRETİMİ", iller: ["Kastamonu", "Amasya", "Samsun"], facts: ["Devlet kontrolündedir", "Tohumuna çedene denir", "Ekime en çok izin Karadeniz’dedir"] },
-        { file: "kanola.jpg", title: "KANOLA ÜRETİMİ", iller: ["Tekirdağ", "Edirne", "Kırklareli", "Konya"], facts: ["Trakya’nın Sarı Kızı olarak anılır", "Yağ oranı yüksektir"] },
+        { file: "kanola.jpg", title: "KANOLA ÜRETİMİ", urun: "Kanola",
+            noktalar: [
+                { il: "Edirne", ilce: "Uzunköprü", ldx: -36, ldy: -8 },
+                { il: "Kırklareli", ilce: "Lüleburgaz", ldx: 10, ldy: -30 },
+                { il: "Tekirdağ", ilce: "Malkara", ldx: 28, ldy: 28 },
+                { il: "Konya", ilce: "Cihanbeyli", ldx: 8, ldy: -28 }
+            ],
+            facts: ["Trakya’nın Sarı Kızı olarak anılır", "Yağ oranı yüksektir"] },
         { file: "pirinc.jpg", title: "ÇELTİK / PİRİNÇ", iller: ["Edirne", "Samsun", "Balıkesir"], facts: ["Meriç boyları başta gelir", "Diğer ekim alanları Osmancık ve Tosya", "Üretim devlet kontrolündedir"] },
         { file: "ay_cicek.jpg", title: "AYÇİÇEĞİ ÜRETİMİ", urun: "Ayçiçeği",
             noktalar: [
