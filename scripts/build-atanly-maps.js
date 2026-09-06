@@ -1141,8 +1141,11 @@ function main() {
                 { il: "Yozgat", ldx: 32, ldy: 8 }
             ],
             facts: ["Cam, seramik, boya, plastik"] },
-        { file: "maden_zimpara.png", title: "ZIMPARA TAŞI", iller: ["Aydın", "Antalya"],
-            yazilar: ["Aydın", "Alanya"],
+        { file: "maden_zimpara.png", title: "ZIMPARA TAŞI", urun: "Zımpara",
+            noktalar: [
+                { il: "Aydın", ldx: -34, ldy: 8 },
+                { il: "Antalya", ilce: "Alanya", ldx: 8, ldy: 28 }
+            ],
             facts: ["Zımparalama ve parlatma", "Aydın ve Alanya · ihraç edilir"] }
     ];
     if (onlyMore.length) {
