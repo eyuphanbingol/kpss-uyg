@@ -543,8 +543,10 @@ function cropMap(provs, opts) {
         }
         hi.push(row.il);
         var pos = districtXY(fp);
-        if (row.pin === "cap" && fp.capX != null) pos = { x: fp.capX, y: fp.capY };
-        pos = clampInProv(fp, pos.x + (row.pdx || 0), pos.y + (row.pdy || 0));
+        if (!opts.urun) {
+            if (row.pin === "cap" && fp.capX != null) pos = { x: fp.capX, y: fp.capY };
+            pos = clampInProv(fp, pos.x + (row.pdx || 0), pos.y + (row.pdy || 0));
+        }
         var ldy = row.ldy != null ? row.ldy : ((fp.maxY - pos.y) < 55 ? -16 : 18);
         pts.push({
             x: pos.x, y: pos.y, ox: pos.x, oy: pos.y,
@@ -987,11 +989,11 @@ function main() {
             facts: ["Çeşit fazla, miktar azdır", "En fazla çeşit: Yukarı Fırat (Elazığ) — volkanizma", "Bor dünya rezervinin ~%72’si Türkiye’dedir"] },
         { file: "maden_demir.png", title: "DEMİR", urun: "Demir",
             noktalar: [
-                { il: "Sivas", ilce: "Divriği", ldx: 36, ldy: -8, pdx: 28, pdy: 8 },
-                { il: "Malatya", ilce: "Hekimhan", ldx: -36, ldy: 8, pdx: -8, pdy: -18 },
+                { il: "Sivas", ilce: "Divriği", ldx: 36, ldy: -8 },
+                { il: "Malatya", ilce: "Hekimhan", ldx: -36, ldy: 8 },
                 { il: "Karabük", ilce: "Karabük", ldx: 8, ldy: 28 },
-                { il: "Zonguldak", ilce: "Ereğli", ldx: -36, ldy: 6, pdx: -10, pdy: 8 },
-                { il: "Hatay", ilce: "İskenderun", ldx: -36, ldy: 8, pdx: 6, pdy: -12 }
+                { il: "Zonguldak", ilce: "Ereğli", ldx: -36, ldy: 6 },
+                { il: "Hatay", ilce: "İskenderun", ldx: -36, ldy: 8 }
             ],
             facts: ["Çıkarım: Divriği, Hekimhan, Hasançelebi", "Karabük–Ereğli: taşkömürüne yakınlık", "İskenderun: ulaşım + ithal kömür, su kenarı"] },
         { file: "maden_bakir.png", title: "BAKIR", urun: "Bakır",
@@ -1004,8 +1006,8 @@ function main() {
             facts: ["En çok Karadeniz’de çıkarılır: Küre, Murgul, Çayeli", "İşleme: Samsun (ulaşım)"] },
         { file: "maden_boksit.png", title: "BOKSİT (ALÜMİNYUM)", urun: "Boksit",
             noktalar: [
-                { il: "Antalya", ilce: "Akseki", ldx: -44, ldy: 12, pdx: 36, pdy: -8 },
-                { il: "Konya", ilce: "Seydişehir", ldx: 48, ldy: -10, pdx: -6, pdy: 50 }
+                { il: "Antalya", ilce: "Akseki", ldx: -40, ldy: 10 },
+                { il: "Konya", ilce: "Seydişehir", ldx: 40, ldy: -10 }
             ],
             facts: ["Çıkarım: Akseki ve Seydişehir", "İşleme: Seydişehir"] },
         { file: "maden_krom.png", title: "KROM", iller: ["Elazığ", "Muğla", "Antalya"],
@@ -1013,15 +1015,15 @@ function main() {
             facts: ["Paslanmazlık–aşınmazlık · rezerv fazla · ihraç", "Çıkarım: Guleman, Köyceğiz", "İşleme: Elazığ (ham madde), Antalya (ulaşım)"] },
         { file: "maden_barit.png", title: "BARİT", urun: "Barit",
             noktalar: [
-                { il: "Antalya", ilce: "Alanya", ldx: -36, ldy: 8, pdx: 92, pdy: 8 }
+                { il: "Antalya", ilce: "Alanya", ldx: -36, ldy: 8 }
             ],
             facts: ["Petrol kuyularında basıncı artırır", "Alanya · rezerv fazla · ihraç"] },
         { file: "maden_bor.png", title: "BOR", urun: "Bor",
             noktalar: [
-                { il: "Balıkesir", ilce: "Bandırma", ldx: -38, ldy: -8, pdx: 6, pdy: -22 },
-                { il: "Bursa", ilce: "Kestelek", ldx: 38, ldy: 10, pdx: -16, pdy: 6 },
-                { il: "Kütahya", ilce: "Emet", ldx: 8, ldy: 30, pdx: -14, pdy: 4 },
-                { il: "Eskişehir", ilce: "Kırka", ldx: 40, ldy: -10, pdx: -8, pdy: 16 }
+                { il: "Balıkesir", ilce: "Bandırma", ldx: -38, ldy: -8 },
+                { il: "Bursa", ilce: "Kestelek", ldx: 38, ldy: 10 },
+                { il: "Kütahya", ilce: "Emet", ldx: 8, ldy: 30 },
+                { il: "Eskişehir", ilce: "Kırka", ldx: 40, ldy: -10 }
             ],
             facts: ["Dünya rezervinin yaklaşık %72’si Türkiye’dedir", "İşleme: Kırka ve Bandırma", "İhraç edilir"] },
         { file: "maden_mermer.png", title: "MERMER", iller: ["Afyon", "Balıkesir", "Muğla", "Bursa"],
@@ -1055,8 +1057,8 @@ function main() {
             facts: ["Nükleer enerji potansiyeli", "Sivrihisar’da bulunur, henüz işletilmez"] },
         { file: "maden_civa.png", title: "CIVA", urun: "Cıva",
             noktalar: [
-                { il: "İzmir", ilce: "Karaburun", ldx: -38, ldy: 8, pdx: -36, pdy: -6 },
-                { il: "Konya", ilce: "Sarayönü", ldx: 40, ldy: -10, pdx: -28, pdy: -36 }
+                { il: "İzmir", ilce: "Karaburun", ldx: -38, ldy: 8 },
+                { il: "Konya", ilce: "Sarayönü", ldx: 40, ldy: -10 }
             ],
             facts: ["Oda sıcaklığında sıvı olan tek maden", "Karaburun ve Sarayönü", "Hassas alet (termometre, barometre)"] },
         { file: "maden_tuz.png", title: "TUZ", iller: ["Çankırı", "Iğdır", "Kars", "Aksaray", "Konya", "Ankara", "İzmir"],
