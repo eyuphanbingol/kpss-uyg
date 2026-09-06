@@ -486,7 +486,7 @@ function topicIcon(file) {
         madenkrom: "chrome", madenbarit: "barite", madenbor: "boron", madenmermer: "marble",
         madenfosfat: "phosphate", madenasbest: "asbestos", madentrona: "salt", madenaltin: "gold",
         madenuranyum: "uranium", madentoryum: "uranium", madenciva: "mercury", madentuz: "salt",
-        madenperlit: "perlite", madenpomza: "rock", madenkukurt: "sulfur", madenmanganez: "manganese",
+        madenperlit: "perlite", madenpomza: "pumice", madenkukurt: "sulfur", madenmanganez: "manganese",
         madenkursun: "lead", madenoltu: "jet", madenlule: "lule", madenvolfram: "tungsten",
         madenfeldspat: "feldspar", madenzimpara: "emery", madenetiket: "ore"
     };
@@ -1083,7 +1083,11 @@ function main() {
                 { il: "Erzurum", ldx: 32, ldy: 8 }
             ],
             facts: ["Volkanik, camsı yapı", "Gıda, inşaat, boya, deterjan"] },
-        { file: "maden_pomza.png", title: "POMZA TAŞI", iller: ["Nevşehir", "Kayseri"],
+        { file: "maden_pomza.png", title: "POMZA TAŞI", urun: "Pomza",
+            noktalar: [
+                { il: "Nevşehir", ldx: -32, ldy: 8 },
+                { il: "Kayseri", ldx: 32, ldy: 8 }
+            ],
             facts: ["Tarım ve inşaat", "Kapadokya volkanizması"] },
         { file: "maden_kukurt.png", title: "KÜKÜRT", urun: "Kükürt",
             noktalar: [
