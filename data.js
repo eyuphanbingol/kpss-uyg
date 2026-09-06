@@ -188,6 +188,10 @@ window.getKpssData = function () {
             "Hukukun Temel Kavramları - 1": {
                 notlar: window.vatandas_1_notlari || [],
                 sorular: window.vatandas_1_sorulari || []
+            },
+            "Hukukun Temel Kavramları - 2": {
+                notlar: window.vatandas_2_notlari || [],
+                sorular: window.vatandas_2_sorulari || []
             }
         },
          "Güncel Bilgiler": {
