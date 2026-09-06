@@ -605,7 +605,16 @@ function main() {
         { file: "patates.png", title: "PATATES ÜRETİMİ", iller: ["Niğde", "Nevşehir", "Afyon", "Bolu", "Erzurum", "İzmir"], facts: ["Serin ve yüksek yerlerde verim artar", "Niğde–Nevşehir öne çıkar"] },
         { file: "arpa.png", title: "ARPA ÜRETİMİ", urun: "Arpa", iller: ["Konya", "Ankara", "Şanlıurfa", "Kayseri", "Yozgat", "Kırşehir"], facts: ["Buğdaya göre daha kurak koşullara dayanır", "Hayvancılık yemi olarak da önemlidir"] },
         { file: "seker_pancar.png", title: "ŞEKER PANCARI", iller: ["Konya", "Eskişehir", "Aksaray", "Yozgat", "Tokat", "Erzurum", "Kayseri"], facts: ["Ilıman-karasal iklim ve sulama", "Şeker fabrikaları çevresinde yoğunlaşır"] },
-        { file: "hashas.png", title: "HAŞHAŞ ÜRETİMİ", iller: ["Afyon", "Denizli", "Kütahya", "Burdur", "Isparta", "Uşak"], facts: ["Devlet kontrolünde üretilir", "Afyonkarahisar adıyla özdeşleşir"] },
+        { file: "hashas.png", title: "HAŞHAŞ ÜRETİMİ", urun: "Haşhaş",
+            noktalar: [
+                { il: "Kütahya", ilce: "Gediz", ldx: 8, ldy: -30 },
+                { il: "Afyon", ilce: "Bolvadin", ldx: 28, ldy: -8 },
+                { il: "Uşak", ilce: "Banaz", ldx: -34, ldy: 4 },
+                { il: "Denizli", ilce: "Çal", ldx: -32, ldy: 18 },
+                { il: "Burdur", ilce: "Yeşilova", ldx: 8, ldy: 32 },
+                { il: "Isparta", ilce: "Yalvaç", ldx: 34, ldy: 12 }
+            ],
+            facts: ["Devlet kontrolünde üretilir", "Afyonkarahisar adıyla özdeşleşir"] },
         { file: "incir.png", title: "İNCİR ÜRETİMİ", iller: ["Aydın", "İzmir", "Muğla", "Bursa", "Gaziantep"], facts: ["Aydın birinci sıradadır", "Ege’nin kurutmalık inciri meşhurdur"] },
         { file: "kayısı.png", title: "KAYISI ÜRETİMİ", iller: ["Malatya", "Elazığ", "Kahramanmaraş", "Iğdır"], facts: ["Malatya dünya ölçeğinde öne çıkar", "Kurutmalık kayısı ihracatı önemlidir"] },
         { file: "muz.png", title: "MUZ ÜRETİMİ", iller: ["Mersin", "Antalya", "Hatay"], facts: ["Don olayının az olduğu kıyı kuşağı", "Anamur–Alanya çevresi yoğundur"] },
