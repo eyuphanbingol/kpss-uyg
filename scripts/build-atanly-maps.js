@@ -476,7 +476,7 @@ function topicIcon(file) {
         gul: "rose", elma: "elma", bugday: "bugday", pamuk: "cotton", zeytin: "olive",
         uzum: "grapes", misir: "corn", patates: "potato", arpa: "arpa", sekerpancar: "beet",
         hashas: "poppy", incir: "fig", kayisi: "apricot", muz: "banana", anason: "anason",
-        aspir: "aspir", susam: "sesame", tutun: "leaf", yerfistik: "peanut", antepfistik: "antepfistik",
+        aspir: "aspir", susam: "sesame", tutun: "tobacco", yerfistik: "peanut", antepfistik: "antepfistik",
         kirmizimercimek: "lentil", turunc: "citrus", kanola: "canola", pirinc: "rice",
         aycicek: "aycicek", findik: "findik", cay: "cay", kenevir: "hemp",
         kivrimdaglar: "fold-mtn", kirikdaglar: "fault-mtn", volkanikdaglar: "volcano",
@@ -715,7 +715,16 @@ function main() {
                 { il: "Adana", ldx: 8, ldy: 28 }
             ],
             facts: ["Sıcak iklim ister", "Akdeniz ve Ege kıyılarında yetişir"] },
-        { file: "tütün.png", title: "TÜTÜN ÜRETİMİ", iller: ["Manisa", "Denizli", "Samsun", "Adıyaman", "Bitlis", "Muş"], facts: ["Ege ve Karadeniz’de klasik üretim alanları", "Doğu Anadolu’da da ekilir"] },
+        { file: "tütün.png", title: "TÜTÜN ÜRETİMİ", urun: "Tütün",
+            noktalar: [
+                { il: "Manisa", ldx: -34, ldy: 8 },
+                { il: "Denizli", ldx: 8, ldy: 28 },
+                { il: "Samsun", ldx: 8, ldy: 30 },
+                { il: "Adıyaman", ldx: -32, ldy: 8 },
+                { il: "Bitlis", ldx: -32, ldy: 8 },
+                { il: "Muş", ldx: 32, ldy: 8 }
+            ],
+            facts: ["Ege ve Karadeniz’de klasik üretim alanları", "Doğu Anadolu’da da ekilir"] },
         { file: "yer_fıstık.png", title: "YER FISTIĞI", iller: ["Osmaniye", "Adana", "Aydın", "Kahramanmaraş"], facts: ["Çukurova ve Osmaniye öne çıkar", "Sıcaklık ve kumlu-tınlı toprak ister"] },
         { file: "antep_fıstık.png", title: "ANTEP FISTIĞI", urun: "Antep fıstığı",
             noktalar: [
