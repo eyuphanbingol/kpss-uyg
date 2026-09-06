@@ -487,7 +487,7 @@ function topicIcon(file) {
         madenfosfat: "phosphate", madenasbest: "asbestos", madentrona: "salt", madenaltin: "gold",
         madenuranyum: "uranium", madentoryum: "uranium", madenciva: "mercury", madentuz: "salt",
         madenperlit: "rock", madenpomza: "rock", madenkukurt: "sulfur", madenmanganez: "iron",
-        madenkursun: "lead", madenoltu: "jet", madenlule: "rock", madenvolfram: "tungsten",
+        madenkursun: "lead", madenoltu: "jet", madenlule: "lule", madenvolfram: "tungsten",
         madenfeldspat: "feldspar", madenzimpara: "emery", madenetiket: "ore"
     };
     return T[k] || null;
@@ -1091,7 +1091,10 @@ function main() {
         { file: "maden_oltu.png", title: "OLTU TAŞI", iller: ["Erzurum"],
             yazilar: ["Oltu"],
             facts: ["Süs eşyası ve takı", "Erzurum–Oltu"] },
-        { file: "maden_lule.png", title: "LÜLE TAŞI", iller: ["Eskişehir"],
+        { file: "maden_lule.png", title: "LÜLE TAŞI", urun: "Lüle taşı",
+            noktalar: [
+                { il: "Eskişehir", ldx: 32, ldy: 8 }
+            ],
             facts: ["Pipo ve süs eşyası"] },
         { file: "maden_volfram.png", title: "VOLFRAM (TUNGSTEN)", iller: ["Bursa"],
             yazilar: ["Uludağ"],
