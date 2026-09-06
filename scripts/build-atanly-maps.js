@@ -484,7 +484,7 @@ function topicIcon(file) {
         milliparklar: "park",
         madengenel: "ore", madendemir: "iron", madenbakir: "copper", madenboksit: "bauxite",
         madenkrom: "chrome", madenbarit: "barite", madenbor: "boron", madenmermer: "marble",
-        madenfosfat: "phosphate", madenasbest: "ore", madentrona: "salt", madenaltin: "gold",
+        madenfosfat: "phosphate", madenasbest: "asbestos", madentrona: "salt", madenaltin: "gold",
         madenuranyum: "uranium", madentoryum: "uranium", madenciva: "mercury", madentuz: "salt",
         madenperlit: "rock", madenpomza: "rock", madenkukurt: "sulfur", madenmanganez: "iron",
         madenkursun: "lead", madenoltu: "jet", madenlule: "rock", madenvolfram: "tungsten",
@@ -1009,7 +1009,11 @@ function main() {
         { file: "maden_fosfat.png", title: "FOSFAT", iller: ["Mardin"],
             yazilar: ["Mazıdağı"],
             facts: ["Gübre hammaddesi", "Rezerv azdır", "Mazıdağı’nda hem çıkarılır hem işlenir"] },
-        { file: "maden_asbest.png", title: "ASBEST (AMYANT)", iller: ["Eskişehir", "Sivas"],
+        { file: "maden_asbest.png", title: "ASBEST (AMYANT)", urun: "Asbest",
+            noktalar: [
+                { il: "Eskişehir", ilce: "Mihalıççık", ldx: -32, ldy: 8 },
+                { il: "Sivas", ilce: "Yıldızeli", ldx: 8, ldy: -28 }
+            ],
             facts: ["Yanmazlık özelliği vardır", "Kanser yapıcı olduğu için yasaklıdır"] },
         { file: "maden_trona.png", title: "TRONA (SODA KÜLÜ)", iller: ["Ankara"],
             yazilar: ["Beypazarı · Kazan"],
