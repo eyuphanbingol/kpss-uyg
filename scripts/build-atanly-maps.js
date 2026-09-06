@@ -632,7 +632,14 @@ function main() {
             ],
             facts: ["Güneydoğu Anadolu’nun karakteristik ürünü", "En çok Şanlıurfa–Birecik çevresi", "Gaziantep–Nizip adıyla anılır"] },
         { file: "kırmızı_mercimek.png", title: "KIRMIZI MERCİMEK", iller: ["Şanlıurfa", "Diyarbakır", "Mardin", "Batman"], facts: ["Güneydoğu Anadolu birinci sıradadır", "Kuraklığa dayanıklı baklagildir"] },
-        { file: "gül.png", title: "GÜL ÜRETİMİ", iller: ["Isparta", "Burdur", "Afyon", "Denizli"], facts: ["Isparta ‘gül bahçesi’ olarak anılır", "Yağ gülü üretimi yoğundur"] },
+        { file: "gül.png", title: "GÜL ÜRETİMİ", urun: "Gül",
+            noktalar: [
+                { il: "Isparta", ilce: "Keçiborlu", ldx: -40, ldy: -22 },
+                { il: "Burdur", ilce: "Bucak", ldx: -28, ldy: 30 },
+                { il: "Afyon", ilce: "Dinar", ldx: 42, ldy: -16 },
+                { il: "Denizli", ilce: "Çal", ldx: -44, ldy: 8 }
+            ],
+            facts: ["Isparta ‘gül bahçesi’ olarak anılır", "Yağ gülü üretimi yoğundur"] },
         { file: "turunc.png", title: "TURUNÇGİL ÜRETİMİ", iller: ["Antalya", "Mersin", "Adana", "Hatay", "Muğla"], facts: ["Akdeniz kıyı kuşağı", "Don riski düşük yerlerde yetişir"] },
         { file: "kenevir.jpg", title: "KENEVİR ÜRETİMİ", iller: ["Kastamonu", "Amasya", "Samsun"], facts: ["Devlet kontrolündedir", "Tohumuna çedene denir", "Ekime en çok izin Karadeniz’dedir"] },
         { file: "kanola.jpg", title: "KANOLA ÜRETİMİ", iller: ["Tekirdağ", "Edirne", "Kırklareli", "Konya"], facts: ["Trakya’nın Sarı Kızı olarak anılır", "Yağ oranı yüksektir"] },
