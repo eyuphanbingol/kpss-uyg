@@ -655,7 +655,13 @@ function main() {
                 { il: "Iğdır", ilce: "Tuzluca", ldx: -36, ldy: 6 }
             ],
             facts: ["Malatya dünya ölçeğinde öne çıkar", "Kurutmalık kayısı ihracatı önemlidir"] },
-        { file: "muz.png", title: "MUZ ÜRETİMİ", iller: ["Mersin", "Antalya", "Hatay"], facts: ["Don olayının az olduğu kıyı kuşağı", "Anamur–Alanya çevresi yoğundur"] },
+        { file: "muz.png", title: "MUZ ÜRETİMİ", urun: "Muz",
+            noktalar: [
+                { il: "Mersin", ilce: "Anamur", ldx: -34, ldy: 8 },
+                { il: "Antalya", ilce: "Alanya", ldx: 8, ldy: 28 },
+                { il: "Hatay", ldx: -34, ldy: 8 }
+            ],
+            facts: ["Don olayının az olduğu kıyı kuşağı", "Anamur–Alanya çevresi yoğundur"] },
         { file: "anason.png", title: "ANASON ÜRETİMİ", urun: "Anason",
             noktalar: [
                 { il: "Burdur", ilce: "Tefenni" },
