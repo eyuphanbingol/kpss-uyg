@@ -615,7 +615,16 @@ function main() {
         { file: "pamuk.png", title: "PAMUK ÜRETİMİ", iller: ["Şanlıurfa", "Diyarbakır", "Adana", "Aydın", "İzmir", "Hatay", "Mardin"], facts: ["Sıcaklık ve sulama ister", "Çukurova ve Güneydoğu öne çıkar"] },
         { file: "zeytin.png", title: "ZEYTİN ÜRETİMİ", iller: ["Aydın", "İzmir", "Balıkesir", "Manisa", "Muğla", "Bursa", "Hatay", "Mersin", "Gaziantep"], facts: ["Akdeniz iklimi kıyı kuşağı", "Ege birinci sıradadır"] },
         { file: "üzüm.png", title: "ÜZÜM ÜRETİMİ", iller: ["Manisa", "Denizli", "İzmir", "Nevşehir", "Elazığ", "Gaziantep", "Tekirdağ"], facts: ["Ege bağcılığın merkezidir", "Kapadokya ve Güneydoğu’da da yetişir"] },
-        { file: "mısır.png", title: "MISIR ÜRETİMİ", iller: ["Adana", "Şanlıurfa", "Mardin", "Sakarya", "Mersin", "Konya"], facts: ["Hem tahıl hem yağ bitkisi grubunda sayılır", "Çukurova ve GAP sulama alanları yoğundur"] },
+        { file: "mısır.png", title: "MISIR ÜRETİMİ", urun: "Mısır",
+            noktalar: [
+                { il: "Adana", ldx: -34, ldy: 8 },
+                { il: "Şanlıurfa", ldx: -32, ldy: 8 },
+                { il: "Mardin", ldx: 32, ldy: 8 },
+                { il: "Sakarya", ldx: 8, ldy: 28 },
+                { il: "Mersin", ldx: 8, ldy: 28 },
+                { il: "Konya", ldx: -40, ldy: -10 }
+            ],
+            facts: ["Hem tahıl hem yağ bitkisi grubunda sayılır", "Çukurova ve GAP sulama alanları yoğundur"] },
         { file: "patates.png", title: "PATATES ÜRETİMİ", iller: ["Niğde", "Nevşehir", "Afyon", "Bolu", "Erzurum", "İzmir"], facts: ["Serin ve yüksek yerlerde verim artar", "Niğde–Nevşehir öne çıkar"] },
         { file: "arpa.png", title: "ARPA ÜRETİMİ", urun: "Arpa", iller: ["Konya", "Ankara", "Şanlıurfa", "Kayseri", "Yozgat", "Kırşehir"], facts: ["Buğdaya göre daha kurak koşullara dayanır", "Hayvancılık yemi olarak da önemlidir"] },
         { file: "seker_pancar.png", title: "ŞEKER PANCARI", iller: ["Konya", "Eskişehir", "Aksaray", "Yozgat", "Tokat", "Erzurum", "Kayseri"], facts: ["Ilıman-karasal iklim ve sulama", "Şeker fabrikaları çevresinde yoğunlaşır"] },
