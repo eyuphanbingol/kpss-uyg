@@ -1030,8 +1030,13 @@ function main() {
                 { il: "Eskişehir", ilce: "Kırka", ldx: 40, ldy: -10 }
             ],
             facts: ["Dünya rezervinin yaklaşık %72’si Türkiye’dedir", "İşleme: Kırka ve Bandırma", "İhraç edilir"] },
-        { file: "maden_mermer.png", title: "MERMER", iller: ["Afyon", "Balıkesir", "Muğla", "Bursa"],
-            yazilar: ["Afyon", "Marmara Adası", "Muğla", "Bursa"],
+        { file: "maden_mermer.png", title: "MERMER", urun: "Mermer",
+            noktalar: [
+                { il: "Afyon", ldx: 8, ldy: 30 },
+                { il: "Balıkesir", ilce: "Marmara Adası", ldx: -42, ldy: 8 },
+                { il: "Muğla", ldx: -34, ldy: 8 },
+                { il: "Bursa", ldx: 36, ldy: 8 }
+            ],
             facts: ["Kireç taşının başkalaşımıyla oluşur", "En çok Afyon ve Marmara Adası"] },
         { file: "maden_fosfat.png", title: "FOSFAT", urun: "Fosfat",
             noktalar: [
