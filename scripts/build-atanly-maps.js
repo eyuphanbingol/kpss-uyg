@@ -985,8 +985,14 @@ function main() {
             iller: ["Balıkesir", "Bursa", "Eskişehir", "İzmir", "Aydın", "Muğla", "Isparta", "Antalya", "Zonguldak", "Ankara", "Aksaray", "Çankırı", "Yozgat", "Artvin", "Sivas", "Elazığ", "Erzurum", "Mardin", "Afyon", "Konya"],
             yazilar: ["Bor · Mermer", "Bor · Volfram", "Lüle · Toryum", "Altın · Cıva", "Zımpara", "Krom · Mermer", "Kükürt", "Boksit · Barit", "Manganez", "Trona", "Tuz Gölü", "Kaya tuzu", "Uranyum", "Bakır · Altın", "Demir", "Krom", "Oltu taşı", "Fosfat", "Mermer", "Boksit"],
             facts: ["Çeşit fazla, miktar azdır", "En fazla çeşit: Yukarı Fırat (Elazığ) — volkanizma", "Bor dünya rezervinin ~%72’si Türkiye’dedir"] },
-        { file: "maden_demir.png", title: "DEMİR", iller: ["Sivas", "Malatya", "Karabük", "Zonguldak", "Hatay"],
-            yazilar: ["Divriği", "Hekimhan", "Karabük", "Ereğli", "İskenderun"],
+        { file: "maden_demir.png", title: "DEMİR", urun: "Demir",
+            noktalar: [
+                { il: "Sivas", ilce: "Divriği", ldx: 36, ldy: -8, pdx: 28, pdy: 8 },
+                { il: "Malatya", ilce: "Hekimhan", ldx: -36, ldy: 8, pdx: -8, pdy: -18 },
+                { il: "Karabük", ilce: "Karabük", ldx: 8, ldy: 28 },
+                { il: "Zonguldak", ilce: "Ereğli", ldx: -36, ldy: 6, pdx: -10, pdy: 8 },
+                { il: "Hatay", ilce: "İskenderun", ldx: -36, ldy: 8, pdx: 6, pdy: -12 }
+            ],
             facts: ["Çıkarım: Divriği, Hekimhan, Hasançelebi", "Karabük–Ereğli: taşkömürüne yakınlık", "İskenderun: ulaşım + ithal kömür, su kenarı"] },
         { file: "maden_bakir.png", title: "BAKIR", urun: "Bakır",
             noktalar: [
