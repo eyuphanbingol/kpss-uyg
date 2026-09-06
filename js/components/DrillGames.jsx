@@ -196,6 +196,9 @@
         }
 
         var qNow = quiz && quiz.items[quiz.i];
+        var qTotal = quiz && quiz.items ? quiz.items.length : 0;
+        var qPct = qTotal ? Math.round(((quiz.i + (quiz.ok ? 1 : 0)) / qTotal) * 100) : 0;
+        var mapPct = nAll ? Math.round((nOwn / nAll) * 100) : 0;
 
         return (
             <div className={"map-play-root conquer-root" + (quiz ? " conquer-quiz" : "")}>
@@ -225,14 +228,19 @@
                                 ) : null}
                             </div>
                         ) : (
-                            <span className="text-sm font-bold">{quiz.i + 1}/{quiz.items.length}</span>
+                            <span className="conquer-scorepill">{quiz.i + 1} / {qTotal}</span>
                         )}
                     </div>
-                    {quiz ? (
-                        <p className="map-play-kicker">{engine ? engine.nameOf(quiz.code) : ""} · {quiz.items.length} soru · hepsini bil, ili fethet</p>
-                    ) : (
-                        <p className="map-play-kicker">Türkiye'yi Fethet · {nOwn}/{nAll} il · bir ile dokun</p>
-                    )}
+                    {!quiz ? (
+                        <div className="conquer-mapstat">
+                            <div className="conquer-mapstat-row">
+                                <p className="conquer-mapstat-title">Türkiye'yi Fethet</p>
+                                <p className="conquer-mapstat-num">{nOwn}/{nAll} il</p>
+                            </div>
+                            <div className="conquer-bar" aria-hidden="true"><span style={{ width: mapPct + "%" }} /></div>
+                            <p className="map-play-kicker">Boyamak için bir ile dokun · bölge bitince rozet</p>
+                        </div>
+                    ) : null}
                     <div className="conquer-regions">
                         {progress.map(function (r) {
                             return (
@@ -258,37 +266,32 @@
                 {toast ? <div className="conquer-toast">{toast}</div> : null}
                 {quiz ? (
                     <div className="conquer-sheet">
-                        <p className="conquer-il">{engine ? engine.nameOf(quiz.code) : quiz.code}</p>
-                        <p className="conquer-sub">{engine ? engine.regionTitle(quiz.code) : ""} · {quiz.items.length} sorunun hepsi</p>
-                        <div className="conquer-steps" aria-hidden="true">
-                            {quiz.items.map(function (_, s) {
-                                var cls = "conquer-step";
-                                if (quiz.fail && s === quiz.i) cls += " bad";
-                                else if (s < quiz.i || (s === quiz.i && quiz.ok)) cls += " on";
-                                else if (s === quiz.i) cls += " on";
-                                return <span key={s} className={cls} />;
-                            })}
+                        <div className="conquer-hero">
+                            <span className="conquer-topic">{engine ? engine.regionTitle(quiz.code) : ""}</span>
+                            <p className="conquer-il">{engine ? engine.nameOf(quiz.code) : quiz.code}</p>
+                            <p className="conquer-sub">Bu ile ait {qTotal} soru · hepsini art arda bil</p>
+                            <div className="conquer-bar light" aria-hidden="true"><span style={{ width: qPct + "%" }} /></div>
                         </div>
                         {quiz.fail ? (
-                            <div>
-                                <p className="text-rose-600 font-bold mb-3">Bu il alınamadı. Bu ile ait soruların hepsini art arda bilmen gerek.</p>
-                                <div className="flex gap-2 flex-wrap">
-                                    <button type="button" className="btn-primary text-white px-4 py-2.5 rounded-full" onClick={retry}>Tekrar dene</button>
-                                    <button type="button" className="px-4 py-2.5 rounded-full border" onClick={function () { setQuiz(null); setPick(null); }}>Haritaya dön</button>
+                            <div className="conquer-fail">
+                                <p className="conquer-fail-title">İl alınamadı</p>
+                                <p className="conquer-fail-text">Yanlış cevapta fetih sıfırlanır. {engine ? engine.nameOf(quiz.code) : ""} sorularını baştan bilmen gerekir.</p>
+                                <div className="conquer-fail-actions">
+                                    <button type="button" className="btn-primary text-white px-5 py-3 rounded-2xl font-semibold" onClick={retry}>Tekrar dene</button>
+                                    <button type="button" className="conquer-ghost" onClick={function () { setQuiz(null); setPick(null); }}>Haritaya dön</button>
                                 </div>
                             </div>
                         ) : qNow ? (
                             <div>
-                                <p className="font-bold text-base mb-3 leading-snug">{qNow.question}</p>
-                                <div className="grid gap-2">
+                                <p className="conquer-qcount">Soru {quiz.i + 1} / {qTotal}</p>
+                                <p className="conquer-q">{qNow.question}</p>
+                                <div className="conquer-opts">
                                     {(qNow.options || []).map(function (opt, i) {
                                         var isP = quiz.picked === opt;
                                         var isA = String(opt) === String(qNow.correct);
-                                        var cls = "w-full text-left px-4 py-3.5 rounded-2xl border font-medium ";
-                                        if (!quiz.picked) cls += "bg-white dark:bg-stone-800 border-stone-200";
-                                        else if (isA) cls += "bg-emerald-50 border-emerald-400";
-                                        else if (isP) cls += "bg-rose-50 border-rose-400";
-                                        else cls += "opacity-50";
+                                        var cls = "conquer-opt";
+                                        if (quiz.picked && isA) cls += " yes";
+                                        else if (quiz.picked && isP) cls += " no";
                                         return (
                                             <button key={i} type="button" disabled={!!quiz.picked} className={cls}
                                                 onClick={function () { answer(opt); }}>{opt}</button>
@@ -297,7 +300,7 @@
                                 </div>
                                 {quiz.picked ? (
                                     <button type="button" className="btn-primary text-white w-full px-5 py-3 rounded-2xl font-semibold mt-4"
-                                        onClick={nextQuiz}>{quiz.ok ? (quiz.i + 1 >= quiz.items.length ? "İli fethet" : "Sonraki soru") : "Devam"}</button>
+                                        onClick={nextQuiz}>{quiz.ok ? (quiz.i + 1 >= qTotal ? "İli fethet" : "Sonraki soru") : "Sonucu gör"}</button>
                                 ) : null}
                             </div>
                         ) : null}

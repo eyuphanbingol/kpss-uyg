@@ -183,7 +183,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.86.0/dist/umd/supabase.js"></script>
     <script src="js/supabaseClient.js?v=18"></script>
     <script src="js/syncEngine.js?v=26"></script>
-    <script src="js/jsxLoader.js?v=50"></script>
+    <script src="js/jsxLoader.js?v=51"></script>
     <script src="js/icons.js?v=18"></script>
 
     <style>
@@ -903,47 +903,83 @@
             width: 22px; height: 22px; border-radius: 999px; border: 2px solid #fff;
             box-shadow: 0 0 0 1px rgba(0,0,0,.15);
         }
-        .conquer-swatch.on { box-shadow: 0 0 0 2px #111; }
+        .conquer-swatch.on { box-shadow: 0 0 0 2px #0d2c4d; }
         .conquer-reset {
-            margin-left: 4px;
-            font-size: 12px;
-            font-weight: 800;
-            color: #9f1239;
-            background: #fff1f2;
-            border: 1px solid #fecdd3;
-            border-radius: 999px;
-            padding: 4px 10px;
+            margin-left: 4px; font-size: 12px; font-weight: 800; color: #9f1239;
+            background: #fff1f2; border: 1px solid #fecdd3; border-radius: 999px; padding: 4px 10px;
         }
         .dark .conquer-reset { background: #4c0519; color: #fda4af; border-color: #9f1239; }
+        .conquer-scorepill {
+            font-size: 12px; font-weight: 800; background: #0d2c4d; color: #F6F1E4;
+            padding: 6px 12px; border-radius: 999px;
+        }
+        .conquer-mapstat { margin-top: 8px; }
+        .conquer-mapstat-row { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+        .conquer-mapstat-title { margin: 0; font-weight: 800; font-size: 16px; color: #0d2c4d; }
+        .conquer-mapstat-num { margin: 0; font-weight: 800; font-size: 13px; color: #127880; }
+        html.dark .conquer-mapstat-title { color: #F6F1E4; }
+        .conquer-bar {
+            height: 8px; border-radius: 99px; background: #e7e5e4; overflow: hidden; margin: 8px 0 6px;
+        }
+        .conquer-bar > span { display: block; height: 100%; background: #127880; border-radius: 99px; }
+        .conquer-bar.light { background: rgba(246,241,228,.22); margin: 12px 0 0; }
+        .conquer-bar.light > span { background: #C5A059; }
         .conquer-regions {
             display: flex; flex-wrap: nowrap; gap: 6px; margin-top: 8px;
             overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 2px;
         }
         .conquer-chip {
-            font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 999px;
+            font-size: 10px; font-weight: 700; padding: 5px 10px; border-radius: 999px;
             background: #eef2ef; color: #57534e; white-space: nowrap; flex: 0 0 auto;
         }
         .conquer-chip.on { background: #d1fae5; color: #047857; }
         .conquer-sheet {
-            position: relative;
-            flex: 1 1 auto;
-            min-height: 0;
-            overflow: auto;
-            background: #fff;
-            padding: 14px 16px calc(18px + env(safe-area-inset-bottom));
-            z-index: 2;
+            position: relative; flex: 1 1 auto; min-height: 0; overflow: auto;
+            background: #f6f1e4; padding: 14px 16px calc(18px + env(safe-area-inset-bottom)); z-index: 2;
         }
         .conquer-quiz .map-play-stage { display: none; }
         .conquer-quiz .conquer-regions { display: none; }
-        .conquer-steps { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 12px; }
-        .conquer-step {
-            height: 6px; flex: 1; border-radius: 99px; background: #e7e5e4;
+        .conquer-hero {
+            background: linear-gradient(165deg, #0d2c4d 0%, #127880 100%);
+            border-radius: 22px; padding: 18px 16px 16px; margin-bottom: 16px;
+            box-shadow: 0 18px 40px -24px rgba(13, 44, 77, 0.7);
         }
-        .conquer-step.on { background: #127880; }
-        .conquer-step.bad { background: #e11d48; }
-        html.dark .conquer-sheet { background: #1c2420; }
-        .conquer-il { font-weight: 800; font-size: 18px; margin: 0; }
-        .conquer-sub { font-size: 12px; color: #78716c; margin: 2px 0 0; }
+        .conquer-topic {
+            display: inline-flex; font-size: 10px; font-weight: 800; letter-spacing: 0.14em;
+            text-transform: uppercase; color: #C5A059; background: rgba(246,241,228,.12);
+            padding: 4px 8px; border-radius: 999px;
+        }
+        .conquer-il { font-weight: 900; font-size: 26px; margin: 10px 0 4px; color: #F6F1E4; line-height: 1.15; }
+        .conquer-sub { font-size: 13px; color: rgba(246,241,228,.78); margin: 0; }
+        .conquer-qcount {
+            font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+            color: #8A7A4A; margin: 0 0 8px;
+        }
+        .conquer-q { font-weight: 800; font-size: 17px; line-height: 1.45; margin: 0 0 14px; color: #1c1917; }
+        .conquer-opts { display: grid; gap: 8px; }
+        .conquer-opt {
+            width: 100%; text-align: left; padding: 14px 16px; border-radius: 16px;
+            border: 1px solid #e7e5e4; background: #fff; font-weight: 700; font-size: 15px;
+        }
+        .conquer-opt.yes { background: #ecfdf5; border-color: #34d399; }
+        .conquer-opt.no { background: #fff1f2; border-color: #fb7185; }
+        .conquer-fail {
+            background: #fff; border-radius: 20px; padding: 20px 16px; border: 1px solid #fecdd3;
+        }
+        .conquer-fail-title { margin: 0; font-weight: 900; font-size: 20px; color: #e11d48; }
+        .conquer-fail-text { margin: 8px 0 16px; font-size: 14px; color: #57534e; line-height: 1.45; }
+        .conquer-fail-actions { display: grid; gap: 8px; }
+        .conquer-ghost {
+            padding: 12px 16px; border-radius: 16px; border: 1px solid #e7e5e4;
+            background: #fff; font-weight: 700;
+        }
+        html.dark .conquer-sheet { background: #141a18; }
+        html.dark .conquer-q { color: #f5f5f4; }
+        html.dark .conquer-opt { background: #1c1917; border-color: #44403c; color: #fafaf9; }
+        html.dark .conquer-fail { background: #1c1917; border-color: #9f1239; }
+        html.dark .conquer-fail-text { color: #d6d3d1; }
+        html.dark .conquer-ghost { background: #292524; border-color: #44403c; color: #fafaf9; }
+        html.dark .conquer-chip { background: #292524; color: #a8a29e; }
         .conquer-toast {
             position: absolute; left: 50%; top: 18%; transform: translateX(-50%);
             background: #064e3b; color: #fff; font-weight: 700; font-size: 13px;

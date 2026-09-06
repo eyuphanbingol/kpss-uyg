@@ -49,11 +49,16 @@ export function ConquerPlayScreen({ navigation }) {
                 <Pressable onPress={function () { setQuiz(null); }}>
                     <Text style={[styles.back, isDark && styles.muted]}>← Harita</Text>
                 </Pressable>
+                <Text style={[styles.kicker, isDark && styles.muted]}>{GamesEngine.regionTitle(quiz.code)}</Text>
                 <Text style={[styles.title, isDark && styles.light]}>{GamesEngine.nameOf(quiz.code)}</Text>
-                <Text style={[styles.meta, isDark && styles.muted]}>{quiz.items.length} soru · hepsini bil · {quiz.i + 1}/{quiz.items.length}</Text>
+                <Text style={[styles.meta, isDark && styles.muted]}>Soru {quiz.i + 1} / {quiz.items.length} · hepsini art arda bil</Text>
+                <View style={{ height: 8, borderRadius: 99, backgroundColor: isDark ? "#292524" : "#E7E5E4", overflow: "hidden", marginTop: 10, marginBottom: 16 }}>
+                    <View style={{ height: 8, width: (quiz.items.length ? Math.round(((quiz.i + (quiz.ok ? 1 : 0)) / quiz.items.length) * 100) : 0) + "%", backgroundColor: "#127880", borderRadius: 99 }} />
+                </View>
                 {quiz.fail ? (
                     <Card style={isDark && styles.cardDark}>
-                        <Text style={styles.bad}>İl fethedilemedi.</Text>
+                        <Text style={styles.bad}>İl alınamadı</Text>
+                        <Text style={[styles.meta, { marginTop: 8 }]}>Yanlışta fetih sıfırlanır. Baştan dene.</Text>
                         <PrimaryButton title="Tekrar dene" onPress={function () { start(quiz.code); }} style={{ marginTop: 12 }} />
                     </Card>
                 ) : qNow ? (
@@ -81,7 +86,10 @@ export function ConquerPlayScreen({ navigation }) {
                 <Text style={[styles.back, isDark && styles.muted]}>← Alıştırmalar</Text>
             </Pressable>
             <Text style={[styles.title, isDark && styles.light]}>Türkiye'yi Fethet</Text>
-            <Text style={[styles.meta, isDark && styles.muted]}>{nOwn}/{codes.length} il · bölge bitince rozet</Text>
+            <Text style={[styles.meta, isDark && styles.muted]}>{nOwn}/{codes.length} il boyandı · bölge bitince rozet</Text>
+            <View style={{ height: 8, borderRadius: 99, backgroundColor: isDark ? "#292524" : "#E7E5E4", overflow: "hidden", marginTop: 10 }}>
+                <View style={{ height: 8, width: (codes.length ? Math.round((nOwn / codes.length) * 100) : 0) + "%", backgroundColor: "#127880", borderRadius: 99 }} />
+            </View>
             {nOwn > 0 ? (
                 <Pressable
                     onPress={function () {
