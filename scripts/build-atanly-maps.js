@@ -1076,8 +1076,16 @@ function main() {
                 { il: "Konya", ilce: "Sarayönü", ldx: 40, ldy: -10 }
             ],
             facts: ["Oda sıcaklığında sıvı olan tek maden", "Karaburun ve Sarayönü", "Hassas alet (termometre, barometre)"] },
-        { file: "maden_tuz.png", title: "TUZ", iller: ["Çankırı", "Iğdır", "Kars", "Aksaray", "Konya", "Ankara", "İzmir"],
-            yazilar: ["Çankırı", "Iğdır", "Kars", "Tuz Gölü", "Tuz Gölü", "Tuz Gölü", "Çamaltı"],
+        { file: "maden_tuz.png", title: "TUZ", urun: "Tuz",
+            noktalar: [
+                { il: "Çankırı", ldx: 8, ldy: 28 },
+                { il: "Iğdır", ldx: 36, ldy: 8 },
+                { il: "Kars", ldx: -36, ldy: 8 },
+                { il: "Aksaray", ilce: "Tuz Gölü", ldx: 36, ldy: 8 },
+                { il: "Konya", ilce: "Tuz Gölü", ldx: -40, ldy: -10 },
+                { il: "Ankara", ilce: "Tuz Gölü", ldx: 8, ldy: -28 },
+                { il: "İzmir", ilce: "Çamaltı", ldx: -34, ldy: 8 }
+            ],
             facts: ["Kaya tuzu: Çankırı, Iğdır, Kars", "Göl tuzu: Tuz Gölü (Aksaray–Konya–Ankara)", "Deniz tuzu: Çamaltı"] },
         { file: "maden_perlit.png", title: "PERLİT (İNCİ TAŞI)", urun: "Perlit",
             noktalar: [
