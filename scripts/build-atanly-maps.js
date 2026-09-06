@@ -639,10 +639,10 @@ function main() {
         { file: "kırmızı_mercimek.png", title: "KIRMIZI MERCİMEK", iller: ["Şanlıurfa", "Diyarbakır", "Mardin", "Batman"], facts: ["Güneydoğu Anadolu birinci sıradadır", "Kuraklığa dayanıklı baklagildir"] },
         { file: "gül.png", title: "GÜL ÜRETİMİ", urun: "Gül",
             noktalar: [
-                { il: "Afyon", ilce: "Dinar", pin: "cap", pdy: -28, ldx: -34, ldy: 4 },
-                { il: "Isparta", ilce: "Keçiborlu", pin: "cap", pdx: 20, pdy: 16, ldx: -10, ldy: 20 },
-                { il: "Burdur", ilce: "Bucak", pin: "cap", pdy: 24, ldx: 28, ldy: 8 },
-                { il: "Denizli", ilce: "Çal", pin: "cap", pdx: -26, ldx: 8, ldy: -26 }
+                { il: "Afyon", ilce: "Dinar", ldx: 8, ldy: -30 },
+                { il: "Isparta", ilce: "Keçiborlu", ldx: 32, ldy: 8 },
+                { il: "Burdur", ilce: "Bucak", ldx: 6, ldy: 32 },
+                { il: "Denizli", ilce: "Çal", ldx: -36, ldy: 4 }
             ],
             facts: ["Isparta ‘gül bahçesi’ olarak anılır", "Yağ gülü üretimi yoğundur"] },
         { file: "turunc.png", title: "TURUNÇGİL ÜRETİMİ", iller: ["Antalya", "Mersin", "Adana", "Hatay", "Muğla"], facts: ["Akdeniz kıyı kuşağı", "Don riski düşük yerlerde yetişir"] },
