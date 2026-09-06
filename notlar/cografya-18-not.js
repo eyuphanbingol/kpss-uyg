@@ -251,7 +251,7 @@ window.cografya_18_notlari = [
         </div>
         <!-- 🗺️ HARİTA / RESİM ALANI -->
             <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/cay.jpg?v=12" alt="ÇAY Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+                <img src="./src/img/cay.jpg?v=13" alt="ÇAY Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
             </div>
     </div>
     `,
@@ -331,7 +331,7 @@ window.cografya_18_notlari = [
         </div>
         <!-- 🗺️ HARİTA / RESİM ALANI -->
             <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/ay_cicek.jpg?v=11" alt="AYÇİÇEĞİ Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+                <img src="./src/img/ay_cicek.jpg?v=13" alt="AYÇİÇEĞİ Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
             </div>
     </div>
     `,

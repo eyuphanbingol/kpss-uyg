@@ -213,11 +213,16 @@ function findProv(provs, name) {
 function landPaths(provs, hiKeys, hiFill) {
     var set = {};
     (hiKeys || []).forEach(function (k) { set[keyOf(k)] = true; });
-    return provs.map(function (p) {
+    var fills = provs.map(function (p) {
         var on = set[keyOf(p.name)];
         var fill = on ? (hiFill || C.landHi) : C.land;
-        return '<path d="' + p.d + '" fill="' + fill + '" stroke="' + C.line + '" stroke-width="0.6" stroke-linejoin="round"/>';
+        return '<path d="' + p.d + '" fill="' + fill + '" stroke="none"/>';
     }).join("");
+    var strokes = provs.map(function (p) {
+        var on = set[keyOf(p.name)];
+        return '<path d="' + p.d + '" fill="none" stroke="' + (on ? "#E8D7A0" : C.line) + '" stroke-width="' + (on ? "1.7" : "0.7") + '" stroke-linejoin="round"/>';
+    }).join("");
+    return fills + strokes;
 }
 
 function wrapFacts(lines, x, y, w, fontSize) {
@@ -404,6 +409,17 @@ function spreadSameCell(pts) {
     }
 }
 
+function clampPhotoLabel(p) {
+    if (p.minX == null) return;
+    var padX = 22, padY = 14;
+    var lx = p.pinX + (p.ldx || 0);
+    var ly = p.pinY + (p.ldy != null ? p.ldy : 0);
+    if (lx < p.minX + padX) p.ldx = p.minX + padX - p.pinX;
+    if (lx > p.maxX - padX) p.ldx = p.maxX - padX - p.pinX;
+    if (ly < p.minY + padY) p.ldy = p.minY + padY - p.pinY;
+    if (ly > p.maxY - padY) p.ldy = p.maxY - padY - p.pinY;
+}
+
 function spreadPhotoLabels(pts) {
     var i, j, a, b, dx, dy;
     for (i = 0; i < pts.length; i++) {
@@ -414,12 +430,13 @@ function spreadPhotoLabels(pts) {
             if (Math.hypot(dx, dy) > 120) continue;
             a = pts[i].pinX <= pts[j].pinX ? pts[i] : pts[j];
             b = a === pts[i] ? pts[j] : pts[i];
-            a.ldx = -56;
-            b.ldx = 56;
-            a.ldy = -24;
-            b.ldy = 26;
+            a.ldx = -28;
+            b.ldx = 28;
+            a.ldy = -18;
+            b.ldy = 20;
         }
     }
+    pts.forEach(clampPhotoLabel);
 }
 
 var ICON_DIR = path.join(IMG, "map-icons");
@@ -496,7 +513,7 @@ function cropMap(provs, opts) {
         }
         hi.push(row.il);
         var pos = districtXY(fp);
-        var ldy = row.ldy != null ? row.ldy : ((fp.maxY - pos.y) < 55 ? -20 : 22);
+        var ldy = row.ldy != null ? row.ldy : ((fp.maxY - pos.y) < 55 ? -16 : 18);
         pts.push({
             x: pos.x, y: pos.y, ox: pos.x, oy: pos.y,
             pinX: pos.x, pinY: pos.y,
@@ -506,11 +523,15 @@ function cropMap(provs, opts) {
             urun: opts.urun || "",
             il: row.il,
             ilce: row.ilce || "",
-            locked: row.ldx != null
+            locked: row.ldx != null,
+            minX: fp.minX, maxX: fp.maxX, minY: fp.minY, maxY: fp.maxY
         });
     });
     if (!opts.urun) spreadSameCell(pts);
-    else spreadPhotoLabels(pts);
+    else {
+        spreadPhotoLabels(pts);
+        pts.forEach(clampPhotoLabel);
+    }
     var factsY = 78 + MAP_BLOCK_H + 16;
     var facts = wrapFacts(opts.facts, 16, factsY, CANVAS_W - 32, 14);
     var H = factsY + facts.h + 28;
@@ -532,13 +553,13 @@ function main() {
     var crops = [
         { file: "elma.png", title: "ELMA ÜRETİMİ", urun: "Elma",
             noktalar: [
-                { il: "Isparta", ilce: "Eğirdir", ldx: -42, ldy: -22 },
-                { il: "Karaman", ilce: "Merkez", ldx: 8, ldy: 24 },
-                { il: "Niğde", ilce: "Merkez", ldx: -28, ldy: 22 },
-                { il: "Nevşehir", ilce: "Derinkuyu", ldx: 24, ldy: -20 },
-                { il: "Konya", ilce: "Ereğli", ldx: 52, ldy: 20 },
-                { il: "Denizli", ilce: "Çal", ldx: -40, ldy: 22 },
-                { il: "Antalya", ilce: "Elmalı", ldx: 22, ldy: -22 }
+                { il: "Isparta", ilce: "Eğirdir" },
+                { il: "Karaman", ilce: "Merkez" },
+                { il: "Niğde", ilce: "Merkez" },
+                { il: "Nevşehir", ilce: "Derinkuyu" },
+                { il: "Konya", ilce: "Ereğli" },
+                { il: "Denizli", ilce: "Çal" },
+                { il: "Antalya", ilce: "Elmalı" }
             ],
             facts: ["Yoğunluk: Göller Yöresi ve Niğde–Nevşehir çevresi", "İç Anadolu’nun yüksek ovalarında da yetişir"] },
         { file: "bugday.png", title: "BUĞDAY ÜRETİMİ", urun: "Buğday",
