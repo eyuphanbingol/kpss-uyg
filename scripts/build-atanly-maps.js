@@ -1002,8 +1002,10 @@ function main() {
         { file: "maden_krom.png", title: "KROM", iller: ["Elazığ", "Muğla", "Antalya"],
             yazilar: ["Guleman", "Köyceğiz", "Antalya (işleme)"],
             facts: ["Paslanmazlık–aşınmazlık · rezerv fazla · ihraç", "Çıkarım: Guleman, Köyceğiz", "İşleme: Elazığ (ham madde), Antalya (ulaşım)"] },
-        { file: "maden_barit.png", title: "BARİT", iller: ["Antalya"],
-            yazilar: ["Alanya"],
+        { file: "maden_barit.png", title: "BARİT", urun: "Barit",
+            noktalar: [
+                { il: "Antalya", ilce: "Alanya", ldx: -36, ldy: 8, pdx: 92, pdy: 8 }
+            ],
             facts: ["Petrol kuyularında basıncı artırır", "Alanya · rezerv fazla · ihraç"] },
         { file: "maden_bor.png", title: "BOR", iller: ["Balıkesir", "Eskişehir", "Kütahya", "Bursa"],
             yazilar: ["Bandırma", "Kırka", "Kütahya", "Bursa"],
