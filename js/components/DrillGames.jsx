@@ -225,11 +225,11 @@
                                 ) : null}
                             </div>
                         ) : (
-                            <span className="text-sm font-bold">{quiz.i + 1}/3</span>
+                            <span className="text-sm font-bold">{quiz.i + 1}/{quiz.items.length}</span>
                         )}
                     </div>
                     {quiz ? (
-                        <p className="map-play-kicker">3 doğru üst üste · ili fethet</p>
+                        <p className="map-play-kicker">{engine ? engine.nameOf(quiz.code) : ""} · {quiz.items.length} soru · hepsini bil, ili fethet</p>
                     ) : (
                         <p className="map-play-kicker">Türkiye'yi Fethet · {nOwn}/{nAll} il · bir ile dokun</p>
                     )}
@@ -259,9 +259,9 @@
                 {quiz ? (
                     <div className="conquer-sheet">
                         <p className="conquer-il">{engine ? engine.nameOf(quiz.code) : quiz.code}</p>
-                        <p className="conquer-sub">{engine ? engine.regionTitle(quiz.code) : ""} · 3'te 3 şart</p>
+                        <p className="conquer-sub">{engine ? engine.regionTitle(quiz.code) : ""} · {quiz.items.length} sorunun hepsi</p>
                         <div className="conquer-steps" aria-hidden="true">
-                            {[0, 1, 2].map(function (s) {
+                            {quiz.items.map(function (_, s) {
                                 var cls = "conquer-step";
                                 if (quiz.fail && s === quiz.i) cls += " bad";
                                 else if (s < quiz.i || (s === quiz.i && quiz.ok)) cls += " on";
@@ -271,7 +271,7 @@
                         </div>
                         {quiz.fail ? (
                             <div>
-                                <p className="text-rose-600 font-bold mb-3">Bu il alınamadı. Üç soruyu art arda bilmen gerek.</p>
+                                <p className="text-rose-600 font-bold mb-3">Bu il alınamadı. Bu ile ait soruların hepsini art arda bilmen gerek.</p>
                                 <div className="flex gap-2 flex-wrap">
                                     <button type="button" className="btn-primary text-white px-4 py-2.5 rounded-full" onClick={retry}>Tekrar dene</button>
                                     <button type="button" className="px-4 py-2.5 rounded-full border" onClick={function () { setQuiz(null); setPick(null); }}>Haritaya dön</button>

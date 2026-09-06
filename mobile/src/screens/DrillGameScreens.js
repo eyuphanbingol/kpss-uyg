@@ -50,7 +50,7 @@ export function ConquerPlayScreen({ navigation }) {
                     <Text style={[styles.back, isDark && styles.muted]}>← Harita</Text>
                 </Pressable>
                 <Text style={[styles.title, isDark && styles.light]}>{GamesEngine.nameOf(quiz.code)}</Text>
-                <Text style={[styles.meta, isDark && styles.muted]}>3'te 3 doğru ile fethet · {quiz.i + 1}/3</Text>
+                <Text style={[styles.meta, isDark && styles.muted]}>{quiz.items.length} soru · hepsini bil · {quiz.i + 1}/{quiz.items.length}</Text>
                 {quiz.fail ? (
                     <Card style={isDark && styles.cardDark}>
                         <Text style={styles.bad}>İl fethedilemedi.</Text>

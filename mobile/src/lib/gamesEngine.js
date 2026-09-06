@@ -136,7 +136,11 @@ globalThis.GamesBank = GamesBank;
 
     function blobHits(blobFold, needles) {
         for (var i = 0; i < needles.length; i++) {
-            if (blobFold.indexOf(needles[i]) >= 0) return true;
+            var n = needles[i];
+            if (!n) continue;
+            if (n.length <= 4) {
+                if (new RegExp("(^|[^a-z0-9])" + n + "([^a-z0-9]|$)", "i").test(blobFold)) return true;
+            } else if (blobFold.indexOf(n) >= 0) return true;
         }
         return false;
     }
@@ -158,18 +162,62 @@ globalThis.GamesBank = GamesBank;
     function catalogHits(code, kpssData) {
         var needles = nameNeedles(code);
         if (!needles.length || !kpssData) return [];
-        var recent = [];
-        var rest = [];
+        var out = [];
         walkQs(kpssData, function (ders, konu, q) {
             var stem = fold(stripHtml(q.question || ""));
-            if (!blobHits(stem, needles)) return;
+            var extra = fold(stripHtml(q.explanation || ""));
+            if (!blobHits(stem, needles) && !blobHits(extra, needles)) return;
             var item = qToMcq(q);
             if (!item) return;
             if (answersOtherProvince(item.correct, code)) return;
-            if (isRecentKonu(konu)) recent.push(item);
-            else rest.push(item);
+            out.push(item);
         });
-        return shuffle(recent).concat(shuffle(rest));
+        return shuffle(out);
+    }
+
+    function walkNotes(kpssData, fn) {
+        Object.keys(kpssData || {}).forEach(function (ders) {
+            Object.keys(kpssData[ders] || {}).forEach(function (konu) {
+                ((kpssData[ders][konu] && kpssData[ders][konu].notlar) || []).forEach(function (html) {
+                    fn(ders, konu, html);
+                });
+            });
+        });
+    }
+
+    function noteSnippets(html) {
+        return stripHtml(String(html || "").replace(/<\/(li|p|div|h[1-6]|tr)>/gi, "\n").replace(/<br\s*\/?>/gi, "\n"))
+            .split(/\n+/)
+            .map(function (s) {
+                return s.replace(/^[\s•\-\d\.]+/, "").replace(/\s+/g, " ").trim();
+            })
+            .filter(function (s) {
+                if (s.length < 28 || s.length > 180) return false;
+                if (/haritas[ıi]|loading=lazy|atanly/i.test(s)) return false;
+                return true;
+            });
+    }
+
+    function noteHits(code, kpssData) {
+        var needles = nameNeedles(code);
+        var name = names()[code];
+        if (!needles.length || !name || !kpssData) return [];
+        var mine = [];
+        var other = [];
+        walkNotes(kpssData, function (ders, konu, html) {
+            noteSnippets(html).forEach(function (s) {
+                if (blobHits(fold(s), needles)) {
+                    if (mine.indexOf(s) < 0) mine.push(s);
+                } else if (other.indexOf(s) < 0) {
+                    other.push(s);
+                }
+            });
+        });
+        return mine.map(function (fact) {
+            var dist = shuffle(other.filter(function (x) { return x !== fact; })).slice(0, 3);
+            while (dist.length < 3) dist.push("—");
+            return mcq(name + " notlarından hangisi bu il ile ilgilidir?", [fact].concat(dist), fact);
+        });
     }
 
     function localFeatureQs(code) {
@@ -178,20 +226,18 @@ globalThis.GamesBank = GamesBank;
         var mine = [];
         var pool = [];
         (mq().ITEMS || []).forEach(function (it) {
-            var t = String(it.topic || "");
-            if (t !== "tarim" && t !== "hayvan" && t !== "maden" && t !== "sanayi") return;
-            var label = String(it.name || "").replace(/:.*/, "").trim();
-            if (!label) return;
+            var label = String(it.name || "").replace(/\s*\(.*\)\s*$/, "").trim();
+            if (!label || label.length < 3) return;
             if ((it.codes || []).indexOf(code) >= 0) {
                 if (mine.indexOf(label) < 0) mine.push(label);
             } else if (pool.indexOf(label) < 0) {
                 pool.push(label);
             }
         });
-        return shuffle(mine).map(function (prod) {
+        return mine.map(function (prod) {
             var dist = shuffle(pool.filter(function (p) { return p !== prod; })).slice(0, 3);
             while (dist.length < 3) dist.push("—");
-            return mcq(name + " ilinin öne çıkan özelliği / üretimi hangisidir?", [prod].concat(dist), prod);
+            return mcq(name + " ilinde / çevresinde hangisi yer alır?", [prod].concat(dist), prod);
         });
     }
 
@@ -224,9 +270,9 @@ globalThis.GamesBank = GamesBank;
 
     function uniquePush(list, item) {
         if (!item || !item.question) return;
-        var key = item.question;
+        var key = item.question + "\n" + String(item.correct || "");
         for (var i = 0; i < list.length; i++) {
-            if (list[i].question === key) return;
+            if ((list[i].question + "\n" + String(list[i].correct || "")) === key) return;
         }
         list.push(item);
     }
@@ -235,15 +281,16 @@ globalThis.GamesBank = GamesBank;
         code = String(code || "").toUpperCase();
         var b = bank();
         var list = [];
+        catalogHits(code, kpssData).forEach(function (q) { uniquePush(list, q); });
+        noteHits(code, kpssData).forEach(function (q) { uniquePush(list, q); });
         ((b.SPECIAL && b.SPECIAL[code]) || []).forEach(function (row) {
             uniquePush(list, fromTriple(row));
         });
         localFeatureQs(code).forEach(function (q) { uniquePush(list, q); });
-        catalogHits(code, kpssData).forEach(function (q) { uniquePush(list, q); });
         uniquePush(list, regionQ(code));
-        var picked = shuffle(list).slice(0, 3);
-        while (picked.length < 3) uniquePush(picked, regionQ(code));
-        return picked.slice(0, 3);
+        var picked = shuffle(list);
+        if (!picked.length) uniquePush(picked, regionQ(code));
+        return picked;
     }
 
     function regionProgress(conquered) {
