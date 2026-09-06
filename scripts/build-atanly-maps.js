@@ -485,7 +485,7 @@ function topicIcon(file) {
         madengenel: "ore", madendemir: "iron", madenbakir: "copper", madenboksit: "bauxite",
         madenkrom: "chrome", madenbarit: "barite", madenbor: "boron", madenmermer: "marble",
         madenfosfat: "phosphate", madenasbest: "asbestos", madentrona: "salt", madenaltin: "gold",
-        madenuranyum: "uranium", madentoryum: "uranium", madenciva: "mercury", madentuz: "salt",
+        madenuranyum: "uranium", madentoryum: "thorium", madenciva: "mercury", madentuz: "salt",
         madenperlit: "perlite", madenpomza: "pumice", madenkukurt: "sulfur", madenmanganez: "manganese",
         madenkursun: "lead", madenoltu: "jet", madenlule: "lule", madenvolfram: "tungsten",
         madenfeldspat: "feldspar", madenzimpara: "emery", madenetiket: "ore"
@@ -1063,8 +1063,10 @@ function main() {
         { file: "maden_uranyum.png", title: "URANYUM", iller: ["Yozgat"],
             yazilar: ["Sorgun"],
             facts: ["Nükleer enerji hammaddesi", "Yozgat–Sorgun"] },
-        { file: "maden_toryum.png", title: "TORYUM", iller: ["Eskişehir"],
-            yazilar: ["Sivrihisar"],
+        { file: "maden_toryum.png", title: "TORYUM", urun: "Toryum",
+            noktalar: [
+                { il: "Eskişehir", ilce: "Sivrihisar", ldx: 32, ldy: 8 }
+            ],
             facts: ["Nükleer enerji potansiyeli", "Sivrihisar’da bulunur, henüz işletilmez"] },
         { file: "maden_civa.png", title: "CIVA", urun: "Cıva",
             noktalar: [
