@@ -44,7 +44,7 @@ window.cografya_2_notlari = [
             </ul>
             <!-- 🗺️ HARİTA / RESİM ALANI -->
             <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/kırık_dağlar.png?v=9" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+                <img src="./src/img/kırık_dağlar.png?v=10" alt="Kırık Dağlar Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
             </div>
         </div>
     </div>

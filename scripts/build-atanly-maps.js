@@ -376,7 +376,9 @@ function nudgeLabels(pts, fs) {
 function labelsOnMap(pts, fs) {
     fs = fs || labelFs(pts.length);
     var photo = pts.some(function (p) { return p.urun; });
-    if (photo) {
+    var offsetLabels = photo || pts.some(function (p) { return p.locked; });
+    if (offsetLabels) {
+        var lfs = photo ? 9 : fs;
         return pts.map(function (p) {
             var lx = (p.pinX != null ? p.pinX : p.x) + (p.ldx || 0);
             var ly = (p.pinY != null ? p.pinY : p.y) + (p.ldy != null ? p.ldy : 22);
@@ -386,7 +388,7 @@ function labelsOnMap(pts, fs) {
             if (Math.abs(lx - pinX) + Math.abs(ly - pinY) > 16) {
                 lead = '<line x1="' + pinX.toFixed(1) + '" y1="' + pinY.toFixed(1) + '" x2="' + lx.toFixed(1) + '" y2="' + (ly - 8).toFixed(1) + '" stroke="' + C.navy + '" stroke-width="0.7" opacity="0.55"/>';
             }
-            return lead + onMapText(lx, ly, p.text, 9, p);
+            return lead + onMapText(lx, ly, p.text, lfs, p);
         }).join("");
     }
     nudgeLabels(pts, fs);
@@ -493,15 +495,17 @@ function iconDataUri(name) {
     return uri;
 }
 
-function iconsOnMap(pts, iconName) {
+function iconsOnMap(pts, iconName, sizeOverride) {
     var href = iconDataUri(iconName);
     if (!href || !pts.length) return "";
     var photo = pts.some(function (p) { return p.urun; });
     if (!photo) {
-        var size0 = iconPx(pts.length);
+        var size0 = sizeOverride || iconPx(pts.length);
         return pts.map(function (p) {
-            var x = (p.x - size0 / 2).toFixed(1);
-            var y = (p.y - size0 - 1).toFixed(1);
+            var cx = p.pinX != null ? p.pinX : p.x;
+            var cy = p.pinY != null ? p.pinY : p.y;
+            var x = (cx - size0 / 2).toFixed(1);
+            var y = (p.pinX != null ? cy - size0 / 2 : cy - size0 - 1).toFixed(1);
             return '<image href="' + href + '" x="' + x + '" y="' + y + '" width="' + size0 + '" height="' + size0 + '" preserveAspectRatio="xMidYMid meet"/>';
         }).join("");
     }
@@ -725,7 +729,14 @@ function main() {
         writePng(path.join(IMG, c.file), cropMap(provs, c));
         console.log("ok", c.file);
     });
-    if (process.argv[2]) return;
+    var onlyMore = process.argv.slice(2);
+    function wantFile(file) {
+        if (!onlyMore.length) return true;
+        var f = norm(file);
+        return onlyMore.some(function (n) { return f.indexOf(norm(n)) >= 0; });
+    }
+
+    if (!(wantFile("21haziran") || wantFile("21aralik"))) { /* skip solstice */ } else {
 
     // 21 Haziran
     var term = '<line x1="430" y1="8" x2="250" y2="410" stroke="' + C.ink + '" stroke-width="5"/>';
@@ -766,25 +777,40 @@ function main() {
     ], 16, 78 + MAP_BLOCK_H + 16, CANVAS_W - 32, 14);
     writePng(path.join(IMG, "21 aralık.png"), frame(78 + MAP_BLOCK_H + 16 + decFacts.h + 28, "21 ARALIK", "Kış gündönümü", mapBlock(provs, decExtra) + decFacts.svg));
     console.log("ok solstice");
+    }
 
     function labeled(title, kicker, items, facts) {
+        if (!wantFile(title.file)) return;
         var pts = [];
+        var usePins = items.some(function (it) { return it.ldx != null || it.ldy != null || it.pdx || it.pdy; });
         items.forEach(function (it) {
             var fp = findProv(provs, it.il);
             if (!fp) {
                 console.warn("il yok:", it.il);
                 return;
             }
-            pts.push({ x: fp.cx, y: fp.cy, ox: fp.cx, oy: fp.cy, text: mapCaption(it.label) });
+            var pos = districtXY(fp);
+            pos = { x: pos.x + (it.pdx || 0), y: pos.y + (it.pdy || 0) };
+            var p = { x: pos.x, y: pos.y, ox: pos.x, oy: pos.y, text: mapCaption(it.label) };
+            if (usePins) {
+                p.pinX = pos.x;
+                p.pinY = pos.y;
+                p.ldx = it.ldx != null ? it.ldx : 0;
+                p.ldy = it.ldy != null ? it.ldy : 26;
+                p.locked = true;
+            }
+            pts.push(p);
         });
-        spreadSameCell(pts);
+        if (!usePins) spreadSameCell(pts);
+        var overlay = iconsOnMap(pts, topicIcon(title.file), title.iconSize);
         var labels = labelsOnMap(pts);
-        var extra = landPaths(provs, items.map(function (it) { return it.il; }), C.landHi) + labels + iconsOnMap(pts, topicIcon(title.file));
+        var extra = landPaths(provs, items.map(function (it) { return it.il; }), C.landHi) + overlay + labels;
         var factsY = 78 + MAP_BLOCK_H + 16;
         var factsBox = wrapFacts(facts, 16, factsY, CANVAS_W - 32, 14);
         var H = factsY + factsBox.h + 28;
         var body = mapBlock(provs, extra) + factsBox.svg;
         writePng(path.join(IMG, title.file), frame(H, title.head, kicker, body));
+        console.log("ok", title.file);
     }
 
     labeled({ file: "kıvrım_dağlar.png", head: "KIVRIM DAĞLARI" }, "Yer şekilleri",
@@ -811,15 +837,15 @@ function main() {
         ]
     );
 
-    labeled({ file: "kırık_dağlar.png", head: "KIRIK DAĞLAR" }, "Horst dağları",
+    labeled({ file: "kırık_dağlar.png", head: "KIRIK DAĞLAR", iconSize: 15 }, "Horst dağları",
         [
-            { il: "Çanakkale", label: "Kaz" },
-            { il: "Balıkesir", label: "Madra" },
-            { il: "Manisa", label: "Yunt" },
-            { il: "İzmir", label: "Boz" },
-            { il: "Aydın", label: "Aydın" },
-            { il: "Muğla", label: "Menteşe (istisna)" },
-            { il: "Hatay", label: "Amanos (Nur)" }
+            { il: "Çanakkale", label: "Kaz", ldx: -66, ldy: -53 },
+            { il: "Balıkesir", label: "Madra", ldx: -103, ldy: -29 },
+            { il: "Manisa", label: "Yunt", ldx: -127, ldy: -46 },
+            { il: "İzmir", label: "Bozdağlar", ldx: -116, ldy: -37, pdx: 36, pdy: 8 },
+            { il: "Aydın", label: "Aydın", ldx: -109, ldy: -14 },
+            { il: "Muğla", label: "Menteşe", ldx: -138, ldy: -10 },
+            { il: "Hatay", label: "Amanos (Nur)", ldx: 6, ldy: -28 }
         ],
         [
             "Şifre: Kazma Yuntmuş Boz Ayı Meledi → Kaz-Madra, Yunt, Boz, Aydın, Menteşe",
@@ -1005,6 +1031,9 @@ function main() {
             yazilar: ["Aydın", "Alanya"],
             facts: ["Zımparalama ve parlatma", "Aydın ve Alanya · ihraç edilir"] }
     ];
+    if (onlyMore.length) {
+        minerals = minerals.filter(function (m) { return wantFile(m.file); });
+    }
     minerals.forEach(function (m) {
         writePng(path.join(IMG, m.file), cropMap(provs, {
             file: m.file,
@@ -1047,6 +1076,7 @@ function main() {
         ["Çeşit fazla, miktar az", "Yukarı Fırat (Elazığ) çeşitlilikte birinci", "Bor ~%72 dünya rezervi"]
     );
 
+    if (wantFile("nufusprmt") || wantFile("nufus")) {
     // nüfus piramidi
     function pyr(cx, cy, color, label, pts) {
         var poly = pts.map(function (p) { return (cx + p[0] * 0.72) + "," + (cy + p[1] * 0.72); }).join(" ");
@@ -1063,6 +1093,7 @@ function main() {
         pyr(400, 650, "#6B4C9A", "Gelişmiş", [[0, -88], [38, -5], [58, 30], [20, 80], [-20, 80], [-58, 30], [-38, -5]]);
     writePng(path.join(IMG, "nüfus_prmt.png"), frame(780, "NÜFUS PİRAMİTLERİ", "Gelişmişlik tipleri", pyBody));
     console.log("ok pyramids");
+    }
 }
 
 main();
