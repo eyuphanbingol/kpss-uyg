@@ -426,18 +426,19 @@
     function PanicPlay(props) {
         var engine = ge();
         var games = (props.student && props.student.games) || {};
+        var PANIC_MS = 30000;
         var deck = useMemo(function () { return engine ? engine.panicDeck(props.kpssData) : []; }, [props.seed]);
         var [i, setI] = useState(0);
-        var [ms, setMs] = useState(10000);
+        var [ms, setMs] = useState(PANIC_MS);
         var [score, setScore] = useState(0);
         var [flash, setFlash] = useState("");
         var [over, setOver] = useState(false);
         var [missed, setMissed] = useState([]);
-        var live = useRef({ ms: 10000, over: false, i: 0, score: 0 });
+        var live = useRef({ ms: PANIC_MS, over: false, i: 0, score: 0 });
 
         useEffect(function () {
-            live.current = { ms: 10000, over: false, i: 0, score: 0 };
-            setMs(10000); setI(0); setScore(0); setOver(false); setFlash(""); setMissed([]);
+            live.current = { ms: PANIC_MS, over: false, i: 0, score: 0 };
+            setMs(PANIC_MS); setI(0); setScore(0); setOver(false); setFlash(""); setMissed([]);
         }, [props.seed]);
 
         useEffect(function () {
@@ -500,17 +501,17 @@
                         <button type="button" className="back-btn" onClick={props.onBack}><span>←</span> Alıştırmalar</button>
                     </header>
                     <div className="game-end">
-                        <p className="text-sm text-stone-500">Süre bitti</p>
-                        <p className="text-5xl font-black mt-2">{score}</p>
-                        <p className="text-sm text-stone-400 mt-2">Rekor: {Math.max(score, games.panicBest || 0)}</p>
+                        <p className="tabu-end-kicker">Süre bitti</p>
+                        <p className="tabu-end-score">{score}</p>
+                        <p className="text-sm text-stone-500 mt-2">Doğru sayısı · rekor {Math.max(score, games.panicBest || 0)}</p>
                         {missed.length ? (
-                            <div className="mt-6 text-left max-w-xl mx-auto">
-                                <p className="text-sm font-bold mb-3">Yanlış {missed.length} soru</p>
+                            <div className="panic-miss">
+                                <p className="panic-miss-title">Yanlış {missed.length} soru</p>
                                 <ul className="space-y-3">
                                     {missed.map(function (w, wi) {
                                         return (
-                                            <li key={wi} className="rounded-2xl border border-rose-200 dark:border-rose-900/50 bg-rose-50/80 dark:bg-rose-950/30 p-3 text-sm">
-                                                <p className="font-semibold text-stone-800 dark:text-stone-100">{w.q}</p>
+                                            <li key={wi} className="panic-miss-item">
+                                                <p className="font-semibold">{w.q}</p>
                                                 <p className="text-rose-600 dark:text-rose-400 mt-1">Senin: {w.picked}</p>
                                                 <p className="text-emerald-700 dark:text-emerald-400">Doğru: {w.a}</p>
                                             </li>
@@ -519,7 +520,7 @@
                                 </ul>
                             </div>
                         ) : (
-                            <p className="text-sm text-emerald-600 mt-4">Bu turda yanlışın yok.</p>
+                            <p className="tabu-end-note">Bu turda yanlışın yok.</p>
                         )}
                         <button type="button" className="btn-primary text-white px-5 py-2.5 rounded-full mt-6" onClick={props.onAgain}>Tekrar oyna</button>
                     </div>
@@ -527,28 +528,32 @@
             );
         }
 
+        var low = sec <= 8;
         return (
-            <div className={"map-play-root panic-root" + (flash === "ok" ? " panic-ok" : "") + (flash === "bad" ? " panic-bad" : "")}>
+            <div className={"map-play-root panic-root" + (flash === "ok" ? " panic-ok" : "") + (flash === "bad" ? " panic-bad" : "") + (low ? " panic-low" : "")}>
                 <header className="map-play-top">
                     <div className="map-play-bar">
                         <button type="button" className="back-btn" onClick={props.onBack}><span>←</span> Alıştırmalar</button>
-                        <span className="text-sm font-bold">{score} doğru</span>
+                        <span className="conquer-scorepill">{score} doğru</span>
                     </div>
-                    <p className="map-play-kicker">Son 10 saniye · doğru +2 · yanlış −3</p>
-                    <div className="panic-timer">{sec.toFixed(1)}</div>
-                    <div className="panic-bar"><span style={{ width: Math.min(100, (ms / 20000) * 100) + "%" }} /></div>
                 </header>
                 <div className="panic-body">
-                    <h2 className="panic-q">{q ? q.q : ""}</h2>
+                    <div className="panic-hero">
+                        <span className="conquer-topic">Doğru +2 sn · yanlış −3 sn</span>
+                        <p className="panic-ask">Son 30 saniye</p>
+                        <div className="panic-timer">{sec.toFixed(1)}</div>
+                        <div className="panic-bar"><span style={{ width: Math.min(100, (ms / PANIC_MS) * 100) + "%" }} /></div>
+                        <p className="panic-hero-sub">Rekor {games.panicBest || 0}</p>
+                    </div>
+                    <p className="panic-q">{q ? q.q : ""}</p>
                     <div className="panic-choices">
                         {(q && q.choices || []).map(function (opt, oi) {
                             return (
-                                <button key={oi} type="button" className="text-left px-3 py-3 rounded-2xl border font-bold bg-white dark:bg-stone-800"
+                                <button key={oi} type="button" className="panic-opt"
                                     onClick={function () { choose(opt); }}>{opt}</button>
                             );
                         })}
                     </div>
-                    <p className="text-xs text-stone-400 mt-4">Bu tur {score} doğru · rekor {games.panicBest || 0}</p>
                 </div>
             </div>
         );

@@ -51,7 +51,7 @@ export function AlistirmalarHomeScreen({ navigation }) {
             <Pressable onPress={function () { go(navigation, "PanicPlay"); }}>
                 <Card style={[styles.dersCard, isDark && styles.cardDark]}>
                     <Text style={styles.icon}>⏱️</Text>
-                    <Text style={[styles.dersName, isDark && styles.textLight]}>Son 10 saniye</Text>
+                    <Text style={[styles.dersName, isDark && styles.textLight]}>Son 30 saniye</Text>
                     <Text style={[styles.meta, isDark && styles.textMuted]}>Rakam ve net bilgi. Doğru +2 sn, yanlış −3 sn.</Text>
                 </Card>
             </Pressable>

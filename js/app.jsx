@@ -611,8 +611,8 @@ function AlistirmalarHome(props) {
                 <button type="button" onClick={function () { props.onKind("panic"); }}
                     className="text-left p-6 rounded-3xl glass card-hover">
                     <div className="h-14 w-14 rounded-2xl bg-rose-50 text-2xl flex items-center justify-center mb-3">⏱️</div>
-                    <h2 className="font-bold text-lg">Son 10 saniye</h2>
-                    <p className="text-sm text-stone-400 mt-1">Rakam ve net bilgi. Doğru +2 sn, yanlış −3 sn.</p>
+                    <h2 className="font-bold text-lg">Son 30 saniye</h2>
+                    <p className="text-sm text-stone-400 mt-1">Süre 30 sn. Doğru +2, yanlış −3. Net bilgi, hızlı cevap.</p>
                 </button>
             </div>
         </Shell>

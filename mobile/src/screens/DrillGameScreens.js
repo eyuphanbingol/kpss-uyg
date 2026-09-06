@@ -232,7 +232,8 @@ export function PanicPlayScreen({ navigation }) {
     var iState = useState(0);
     var i = iState[0];
     var setI = iState[1];
-    var msState = useState(10000);
+    var PANIC_MS = 30000;
+    var msState = useState(PANIC_MS);
     var ms = msState[0];
     var setMs = msState[1];
     var scoreState = useState(0);
@@ -244,12 +245,12 @@ export function PanicPlayScreen({ navigation }) {
     var missedState = useState([]);
     var missed = missedState[0];
     var setMissed = missedState[1];
-    var live = useRef({ ms: 10000, score: 0, i: 0 });
+    var live = useRef({ ms: PANIC_MS, score: 0, i: 0 });
     var best = ((app.student && app.student.games) || {}).panicBest || 0;
 
     useEffect(function () {
-        live.current = { ms: 10000, score: 0, i: 0 };
-        setMs(10000); setI(0); setScore(0); setOver(false); setMissed([]);
+        live.current = { ms: PANIC_MS, score: 0, i: 0 };
+        setMs(PANIC_MS); setI(0); setScore(0); setOver(false); setMissed([]);
     }, [seed]);
 
     useEffect(function () {
@@ -329,7 +330,7 @@ export function PanicPlayScreen({ navigation }) {
             <Pressable onPress={function () { navigation.goBack(); }}>
                 <Text style={[styles.back, isDark && styles.muted]}>← Alıştırmalar</Text>
             </Pressable>
-            <Text style={[styles.kicker, isDark && styles.muted]}>Son 10 saniye · doğru +2 · yanlış −3</Text>
+            <Text style={[styles.kicker, isDark && styles.muted]}>Son 30 saniye · doğru +2 · yanlış −3</Text>
             <Text style={[styles.timer, isDark && styles.light]}>{Math.max(0, ms / 1000).toFixed(1)}</Text>
             <Text style={[styles.title, isDark && styles.light]}>{q ? q.q : ""}</Text>
             {(q && q.choices || []).map(function (opt, oi) {
