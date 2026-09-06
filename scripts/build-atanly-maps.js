@@ -635,7 +635,16 @@ function main() {
                 { il: "Konya", ldx: -40, ldy: -10 }
             ],
             facts: ["Hem tahıl hem yağ bitkisi grubunda sayılır", "Çukurova ve GAP sulama alanları yoğundur"] },
-        { file: "patates.png", title: "PATATES ÜRETİMİ", iller: ["Niğde", "Nevşehir", "Afyon", "Bolu", "Erzurum", "İzmir"], facts: ["Serin ve yüksek yerlerde verim artar", "Niğde–Nevşehir öne çıkar"] },
+        { file: "patates.png", title: "PATATES ÜRETİMİ", urun: "Patates",
+            noktalar: [
+                { il: "Niğde", ldx: -32, ldy: 8 },
+                { il: "Nevşehir", ldx: 32, ldy: 8 },
+                { il: "Afyon", ldx: 8, ldy: 30 },
+                { il: "Bolu", ldx: 8, ldy: 28 },
+                { il: "Erzurum", ldx: 32, ldy: 8 },
+                { il: "İzmir", ldx: -34, ldy: 8 }
+            ],
+            facts: ["Serin ve yüksek yerlerde verim artar", "Niğde–Nevşehir öne çıkar"] },
         { file: "arpa.png", title: "ARPA ÜRETİMİ", urun: "Arpa", iller: ["Konya", "Ankara", "Şanlıurfa", "Kayseri", "Yozgat", "Kırşehir"], facts: ["Buğdaya göre daha kurak koşullara dayanır", "Hayvancılık yemi olarak da önemlidir"] },
         { file: "seker_pancar.png", title: "ŞEKER PANCARI", iller: ["Konya", "Eskişehir", "Aksaray", "Yozgat", "Tokat", "Erzurum", "Kayseri"], facts: ["Ilıman-karasal iklim ve sulama", "Şeker fabrikaları çevresinde yoğunlaşır"] },
         { file: "hashas.png", title: "HAŞHAŞ ÜRETİMİ", urun: "Haşhaş",
