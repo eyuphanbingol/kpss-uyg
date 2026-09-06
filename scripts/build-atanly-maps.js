@@ -486,7 +486,7 @@ function topicIcon(file) {
         madenkrom: "chrome", madenbarit: "barite", madenbor: "boron", madenmermer: "marble",
         madenfosfat: "phosphate", madenasbest: "asbestos", madentrona: "salt", madenaltin: "gold",
         madenuranyum: "uranium", madentoryum: "uranium", madenciva: "mercury", madentuz: "salt",
-        madenperlit: "rock", madenpomza: "rock", madenkukurt: "sulfur", madenmanganez: "manganese",
+        madenperlit: "perlite", madenpomza: "rock", madenkukurt: "sulfur", madenmanganez: "manganese",
         madenkursun: "lead", madenoltu: "jet", madenlule: "lule", madenvolfram: "tungsten",
         madenfeldspat: "feldspar", madenzimpara: "emery", madenetiket: "ore"
     };
@@ -1075,7 +1075,13 @@ function main() {
         { file: "maden_tuz.png", title: "TUZ", iller: ["Çankırı", "Iğdır", "Kars", "Aksaray", "Konya", "Ankara", "İzmir"],
             yazilar: ["Çankırı", "Iğdır", "Kars", "Tuz Gölü", "Tuz Gölü", "Tuz Gölü", "Çamaltı"],
             facts: ["Kaya tuzu: Çankırı, Iğdır, Kars", "Göl tuzu: Tuz Gölü (Aksaray–Konya–Ankara)", "Deniz tuzu: Çamaltı"] },
-        { file: "maden_perlit.png", title: "PERLİT (İNCİ TAŞI)", iller: ["İzmir", "Ankara", "Bayburt", "Erzurum"],
+        { file: "maden_perlit.png", title: "PERLİT (İNCİ TAŞI)", urun: "Perlit",
+            noktalar: [
+                { il: "İzmir", ldx: -34, ldy: 8 },
+                { il: "Ankara", ldx: 8, ldy: 30 },
+                { il: "Bayburt", ldx: -32, ldy: 8 },
+                { il: "Erzurum", ldx: 32, ldy: 8 }
+            ],
             facts: ["Volkanik, camsı yapı", "Gıda, inşaat, boya, deterjan"] },
         { file: "maden_pomza.png", title: "POMZA TAŞI", iller: ["Nevşehir", "Kayseri"],
             facts: ["Tarım ve inşaat", "Kapadokya volkanizması"] },
