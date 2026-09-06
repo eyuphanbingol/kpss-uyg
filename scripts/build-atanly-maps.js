@@ -410,7 +410,7 @@ function spreadSameCell(pts) {
 }
 
 function clampPhotoLabel(p) {
-    if (p.minX == null) return;
+    if (p.locked || p.minX == null) return;
     var minOff = 28;
     function inside(x, y) {
         return x >= p.minX + 12 && x <= p.maxX - 12 && y >= p.minY + 12 && y <= p.maxY - 12;
@@ -531,6 +531,8 @@ function cropMap(provs, opts) {
         }
         hi.push(row.il);
         var pos = districtXY(fp);
+        if (row.pin === "cap" && fp.capX != null) pos = { x: fp.capX, y: fp.capY };
+        pos = { x: pos.x + (row.pdx || 0), y: pos.y + (row.pdy || 0) };
         var ldy = row.ldy != null ? row.ldy : ((fp.maxY - pos.y) < 55 ? -16 : 18);
         pts.push({
             x: pos.x, y: pos.y, ox: pos.x, oy: pos.y,
@@ -548,7 +550,10 @@ function cropMap(provs, opts) {
     if (!opts.urun) spreadSameCell(pts);
     else {
         spreadPhotoLabels(pts);
-        pts.forEach(clampPhotoLabel);
+        pts.forEach(function (p) {
+            if (p.locked) return;
+            clampPhotoLabel(p);
+        });
     }
     var factsY = 78 + MAP_BLOCK_H + 16;
     var facts = wrapFacts(opts.facts, 16, factsY, CANVAS_W - 32, 14);
@@ -634,10 +639,10 @@ function main() {
         { file: "kırmızı_mercimek.png", title: "KIRMIZI MERCİMEK", iller: ["Şanlıurfa", "Diyarbakır", "Mardin", "Batman"], facts: ["Güneydoğu Anadolu birinci sıradadır", "Kuraklığa dayanıklı baklagildir"] },
         { file: "gül.png", title: "GÜL ÜRETİMİ", urun: "Gül",
             noktalar: [
-                { il: "Isparta", ilce: "Keçiborlu", ldx: -40, ldy: -22 },
-                { il: "Burdur", ilce: "Bucak", ldx: -28, ldy: 30 },
-                { il: "Afyon", ilce: "Dinar", ldx: 42, ldy: -16 },
-                { il: "Denizli", ilce: "Çal", ldx: -44, ldy: 8 }
+                { il: "Afyon", ilce: "Dinar", pin: "cap", pdy: -28, ldx: -34, ldy: 4 },
+                { il: "Isparta", ilce: "Keçiborlu", pin: "cap", pdx: 20, pdy: 16, ldx: -10, ldy: 20 },
+                { il: "Burdur", ilce: "Bucak", pin: "cap", pdy: 24, ldx: 28, ldy: 8 },
+                { il: "Denizli", ilce: "Çal", pin: "cap", pdx: -26, ldx: 8, ldy: -26 }
             ],
             facts: ["Isparta ‘gül bahçesi’ olarak anılır", "Yağ gülü üretimi yoğundur"] },
         { file: "turunc.png", title: "TURUNÇGİL ÜRETİMİ", iller: ["Antalya", "Mersin", "Adana", "Hatay", "Muğla"], facts: ["Akdeniz kıyı kuşağı", "Don riski düşük yerlerde yetişir"] },
