@@ -450,7 +450,7 @@ function topicIcon(file) {
         hashas: "poppy", incir: "fig", kayisi: "apricot", muz: "banana", anason: "anason",
         aspir: "aspir", susam: "seed", tutun: "leaf", yerfistik: "peanut", antepfistik: "antepfistik",
         kirmizimercimek: "lentil", turunc: "citrus", kanola: "canola", pirinc: "rice",
-        aycicek: "aycicek", findik: "hazelnut", cay: "cay", kenevir: "hemp",
+        aycicek: "aycicek", findik: "findik", cay: "cay", kenevir: "hemp",
         kivrimdaglar: "fold-mtn", kirikdaglar: "fault-mtn", volkanikdaglar: "volcano",
         volkanikaraziler: "volcano", masifarazi: "rock", trplato: "plateau", trovlar: "plain",
         milliparklar: "park",
@@ -627,7 +627,17 @@ function main() {
                 { il: "Adana", ilce: "Ceyhan" }
             ],
             facts: ["Trakya klasik üretim bölgesidir", "İntansif tarım ürünlerindendir"] },
-        { file: "findik.jpg", title: "FINDIK ÜRETİMİ", iller: ["Ordu", "Samsun", "Düzce", "Giresun", "Sakarya", "Trabzon", "Rize"], facts: ["Karadeniz birinci, Marmara ikinci sıradadır", "Türkiye dünya üretiminde 1. sıradadır", "Devirli tarım ürünüdür"] },
+        { file: "findik.jpg", title: "FINDIK ÜRETİMİ", urun: "Fındık",
+            noktalar: [
+                { il: "Sakarya", ilce: "Karasu", ldx: -22, ldy: 24 },
+                { il: "Düzce", ilce: "Akçakoca", ldx: 26, ldy: 22 },
+                { il: "Samsun", ilce: "Terme", ldx: -24, ldy: 24 },
+                { il: "Ordu", ilce: "Ünye", ldx: 10, ldy: 26 },
+                { il: "Giresun", ilce: "Bulancak", ldx: -22, ldy: 26 },
+                { il: "Trabzon", ilce: "Akçaabat", ldx: 12, ldy: 26 },
+                { il: "Rize", ilce: "Pazar", ldx: 34, ldy: 20 }
+            ],
+            facts: ["Karadeniz birinci, Marmara ikinci sıradadır", "Türkiye dünya üretiminde 1. sıradadır", "Devirli tarım ürünüdür"] },
         { file: "cay.jpg", title: "ÇAY ÜRETİMİ", urun: "Çay",
             noktalar: [
                 { il: "Giresun", ilce: "Tirebolu", ldx: -40, ldy: 26 },
