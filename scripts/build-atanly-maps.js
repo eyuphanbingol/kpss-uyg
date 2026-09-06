@@ -82,7 +82,7 @@ function bboxFromPath(d) {
         }
     }
     if (nums.length) flush();
-    return { cx: (minX + maxX) / 2, cy: (minY + maxY) / 2 };
+    return { cx: (minX + maxX) / 2, cy: (minY + maxY) / 2, minX: minX, minY: minY, maxX: maxX, maxY: maxY, w: maxX - minX, h: maxY - minY };
 }
 
 function parseProvinces(svg) {
@@ -92,7 +92,17 @@ function parseProvinces(svg) {
     while ((m = re.exec(svg))) {
         var d = m[1];
         var bb = bboxFromPath(d);
-        out.push({ d: d, id: m[2], name: m[3], key: norm(m[3]), cx: bb.cx, cy: bb.cy });
+        out.push({ d: d, id: m[2], name: m[3], key: norm(m[3]), cx: bb.cx, cy: bb.cy, minX: bb.minX, minY: bb.minY, maxX: bb.maxX, maxY: bb.maxY, w: bb.w, h: bb.h });
+    }
+    var cre = /<circle class="[^"]*" cx="([\d.]+)" cy="([\d.]+)" id="([^"]+)"/g;
+    while ((m = cre.exec(svg))) {
+        for (var i = 0; i < out.length; i++) {
+            if (out[i].id === m[3]) {
+                out[i].capX = +m[1];
+                out[i].capY = +m[2];
+                break;
+            }
+        }
     }
     return out;
 }
@@ -107,6 +117,44 @@ var ALIAS = {
 function keyOf(name) {
     var k = norm(name);
     return ALIAS[k] || k;
+}
+
+/** İl poligonuna göre ilçe: gerçek lon/lat, kuzey y-eksi. */
+var PROV_GEO = {
+    mugla: { minLon: 27.22, maxLon: 29.38, minLat: 36.27, maxLat: 37.38 },
+    denizli: { minLon: 28.63, maxLon: 29.78, minLat: 37.28, maxLat: 38.17 },
+    burdur: { minLon: 29.55, maxLon: 30.85, minLat: 36.95, maxLat: 37.88 },
+    antalya: { minLon: 29.20, maxLon: 32.55, minLat: 36.07, maxLat: 37.40 },
+    gaziantep: { minLon: 36.83, maxLon: 37.90, minLat: 36.82, maxLat: 37.38 },
+    sanliurfa: { minLon: 37.82, maxLon: 40.23, minLat: 36.66, maxLat: 37.96 },
+    adiyaman: { minLon: 37.41, maxLon: 38.99, minLat: 37.41, maxLat: 38.22 },
+    siirt: { minLon: 41.54, maxLon: 42.65, minLat: 37.68, maxLat: 38.20 }
+};
+
+function clampPin(fp, x, y) {
+    var pad = 12;
+    if (x < fp.minX + pad) x = fp.minX + pad;
+    if (x > fp.maxX - pad) x = fp.maxX - pad;
+    if (y < fp.minY + pad) y = fp.minY + pad;
+    if (y > fp.maxY - pad) y = fp.maxY - pad;
+    return { x: x, y: y };
+}
+
+function districtXY(fp, row) {
+    if (row && row.lon != null && row.lat != null) {
+        var g = PROV_GEO[keyOf(fp.name)];
+        if (g) {
+            var fx = (Number(row.lon) - g.minLon) / (g.maxLon - g.minLon);
+            var fy = (g.maxLat - Number(row.lat)) / (g.maxLat - g.minLat);
+            return clampPin(fp, fp.minX + fx * fp.w, fp.minY + fy * fp.h);
+        }
+    }
+    if (row && row.x != null && row.y != null) return { x: +row.x, y: +row.y };
+    var ox = fp.capX != null ? fp.capX : fp.cx;
+    var oy = fp.capY != null ? fp.capY : fp.cy;
+    var x = ox + (Number(row && row.dx) || 0);
+    var y = oy + (Number(row && row.dy) || 0);
+    return clampPin(fp, x, y);
 }
 
 function findProv(provs, name) {
@@ -277,6 +325,20 @@ function nudgeLabels(pts, fs) {
 
 function labelsOnMap(pts, fs) {
     fs = fs || labelFs(pts.length);
+    var photo = pts.some(function (p) { return p.urun; });
+    if (photo) {
+        return pts.map(function (p) {
+            var lx = (p.pinX != null ? p.pinX : p.x) + (p.ldx || 0);
+            var ly = (p.pinY != null ? p.pinY : p.y) + (p.ldy != null ? p.ldy : 22);
+            var pinX = p.pinX != null ? p.pinX : p.x;
+            var pinY = p.pinY != null ? p.pinY : p.y;
+            var lead = "";
+            if (Math.abs(lx - pinX) + Math.abs(ly - pinY) > 16) {
+                lead = '<line x1="' + pinX.toFixed(1) + '" y1="' + pinY.toFixed(1) + '" x2="' + lx.toFixed(1) + '" y2="' + (ly - 8).toFixed(1) + '" stroke="' + C.navy + '" stroke-width="0.7" opacity="0.55"/>';
+            }
+            return lead + onMapText(lx, ly, p.text, 9, p);
+        }).join("");
+    }
     nudgeLabels(pts, fs);
     return pts.map(function (p) { return onMapText(p.x, p.y, p.text, fs, p); }).join("");
 }
@@ -345,14 +407,14 @@ function iconsOnMap(pts, iconName) {
             return '<image href="' + href + '" x="' + x + '" y="' + y + '" width="' + size0 + '" height="' + size0 + '" preserveAspectRatio="xMidYMid meet"/>';
         }).join("");
     }
-    var size = pts.length > 6 ? 28 : 36;
+    var size = 18;
     return pts.map(function (p, i) {
-        var cid = "ic" + i + Math.round(p.x) + Math.round(p.y);
+        var cid = "ic" + i + Math.round(p.pinX || p.x) + Math.round(p.pinY || p.y);
         var r = size / 2;
-        var cx = p.x;
-        var cy = p.y - r - 16;
+        var cx = p.pinX != null ? p.pinX : p.x;
+        var cy = p.pinY != null ? p.pinY : p.y;
         return '<defs><clipPath id="' + cid + '"><circle cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="' + r + '"/></clipPath></defs>' +
-            '<circle cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="' + (r + 2).toFixed(1) + '" fill="#FFFDF6" stroke="' + C.navy + '" stroke-width="1.3"/>' +
+            '<circle cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="' + (r + 1.6).toFixed(1) + '" fill="#FFFDF6" stroke="' + C.navy + '" stroke-width="1.2"/>' +
             '<image href="' + href + '" x="' + (cx - r).toFixed(1) + '" y="' + (cy - r).toFixed(1) + '" width="' + size + '" height="' + size + '" clip-path="url(#' + cid + ')" preserveAspectRatio="xMidYMid slice"/>';
     }).join("");
 }
@@ -370,15 +432,22 @@ function cropMap(provs, opts) {
             return;
         }
         hi.push(row.il);
+        var pos = districtXY(fp, row);
+        if (row.lon != null) {
+            console.log("  pin", row.il, row.ilce, pos.x.toFixed(1), pos.y.toFixed(1));
+        }
         pts.push({
-            x: fp.cx, y: fp.cy, ox: fp.cx, oy: fp.cy,
+            x: pos.x, y: pos.y, ox: pos.x, oy: pos.y,
+            pinX: pos.x, pinY: pos.y,
+            ldx: row.ldx || 0,
+            ldy: row.ldy != null ? row.ldy : 26,
             text: row.yazi || row.il,
             urun: opts.urun || "",
             il: row.il,
             ilce: row.ilce || ""
         });
     });
-    spreadSameCell(pts);
+    if (!opts.urun) spreadSameCell(pts);
     var factsY = 78 + MAP_BLOCK_H + 16;
     var facts = wrapFacts(opts.facts, 16, factsY, CANVAS_W - 32, 14);
     var H = factsY + facts.h + 28;
@@ -413,10 +482,10 @@ function main() {
         { file: "muz.png", title: "MUZ ÜRETİMİ", iller: ["Mersin", "Antalya", "Hatay"], facts: ["Don olayının az olduğu kıyı kuşağı", "Anamur–Alanya çevresi yoğundur"] },
         { file: "anason.png", title: "ANASON ÜRETİMİ", urun: "Anason",
             noktalar: [
-                { il: "Burdur", ilce: "Tefenni" },
-                { il: "Denizli", ilce: "Acıpayam" },
-                { il: "Antalya", ilce: "Elmalı" },
-                { il: "Muğla", ilce: "Fethiye" }
+                { il: "Burdur", ilce: "Tefenni", lon: 29.775, lat: 37.310, ldx: 36, ldy: -4 },
+                { il: "Denizli", ilce: "Acıpayam", lon: 29.350, lat: 37.424, ldx: -48, ldy: -16 },
+                { il: "Antalya", ilce: "Elmalı", lon: 29.918, lat: 36.736, ldx: 34, ldy: 16 },
+                { il: "Muğla", ilce: "Fethiye", lon: 29.116, lat: 36.643, ldx: -38, ldy: 16 }
             ],
             facts: ["Göller Yöresi ve Teke çevresi", "Burdur–Tefenni öne çıkar", "Uçucu yağ bitkisidir"] },
         { file: "aspir.png", title: "ASPİR ÜRETİMİ", iller: ["Eskişehir", "Konya", "Ankara", "Aksaray"], facts: ["Kuraklığa dayanıklı yağ bitkisi", "İç Anadolu’da ekimi artmaktadır"] },
@@ -425,10 +494,10 @@ function main() {
         { file: "yer_fıstık.png", title: "YER FISTIĞI", iller: ["Osmaniye", "Adana", "Aydın", "Kahramanmaraş"], facts: ["Çukurova ve Osmaniye öne çıkar", "Sıcaklık ve kumlu-tınlı toprak ister"] },
         { file: "antep_fıstık.png", title: "ANTEP FISTIĞI", urun: "Antep fıstığı",
             noktalar: [
-                { il: "Gaziantep", ilce: "Nizip" },
-                { il: "Şanlıurfa", ilce: "Birecik" },
-                { il: "Siirt", ilce: "Pervari" },
-                { il: "Adıyaman", ilce: "Kâhta" }
+                { il: "Gaziantep", ilce: "Nizip", lon: 37.794, lat: 37.010, ldx: -44, ldy: 18 },
+                { il: "Şanlıurfa", ilce: "Birecik", lon: 37.977, lat: 37.025, ldx: 46, ldy: -20 },
+                { il: "Siirt", ilce: "Pervari", lon: 42.549, lat: 37.936, ldx: 0, ldy: 22 },
+                { il: "Adıyaman", ilce: "Kâhta", lon: 38.624, lat: 37.786, ldx: 8, ldy: -24 }
             ],
             facts: ["Güneydoğu Anadolu’nun karakteristik ürünü", "En çok Şanlıurfa–Birecik çevresi", "Gaziantep–Nizip adıyla anılır"] },
         { file: "kırmızı_mercimek.png", title: "KIRMIZI MERCİMEK", iller: ["Şanlıurfa", "Diyarbakır", "Mardin", "Batman"], facts: ["Güneydoğu Anadolu birinci sıradadır", "Kuraklığa dayanıklı baklagildir"] },
@@ -442,10 +511,17 @@ function main() {
         { file: "cay.jpg", title: "ÇAY ÜRETİMİ", iller: ["Rize", "Trabzon", "Artvin", "Giresun"], facts: ["Tamamı Doğu Karadeniz’dedir", "Zihni Derin tarafından Batum’dan getirilmiştir", "Dünya üretiminde Türkiye 5. sıradadır"] }
     ];
 
+    var only = process.argv.slice(2);
+    if (only.length) {
+        crops = crops.filter(function (c) {
+            return only.some(function (n) { return c.file.indexOf(n) >= 0; });
+        });
+    }
     crops.forEach(function (c) {
         writePng(path.join(IMG, c.file), cropMap(provs, c));
         console.log("ok", c.file);
     });
+    if (process.argv[2]) return;
 
     // 21 Haziran
     var term = '<line x1="430" y1="8" x2="250" y2="410" stroke="' + C.ink + '" stroke-width="5"/>';
