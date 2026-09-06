@@ -24,21 +24,21 @@ export function AlistirmalarHomeScreen({ navigation }) {
                 <Card style={[styles.dersCard, isDark && styles.cardDark]}>
                     <Text style={styles.icon}>✏️</Text>
                     <Text style={[styles.dersName, isDark && styles.textLight]}>Boşluk doldurma</Text>
-                    <Text style={[styles.meta, isDark && styles.textMuted]}>Her ders ve konu. Şıklardan doğruyu seç.</Text>
+                    <Text style={[styles.meta, isDark && styles.textMuted]}>Nottaki boşluğu şıklardan tamamla.</Text>
                 </Card>
             </Pressable>
             <Pressable onPress={function () { go(navigation, "MapTopics"); }}>
                 <Card style={[styles.dersCard, isDark && styles.cardDark]}>
                     <Text style={styles.icon}>🗺️</Text>
                     <Text style={[styles.dersName, isDark && styles.textLight]}>Harita oyunu</Text>
-                    <Text style={[styles.meta, isDark && styles.textMuted]}>Coğrafya konularına göre haritada bul.</Text>
+                    <Text style={[styles.meta, isDark && styles.textMuted]}>Konuyu seç, yeri haritada işaretle.</Text>
                 </Card>
             </Pressable>
             <Pressable onPress={function () { go(navigation, "ConquerPlay"); }}>
                 <Card style={[styles.dersCard, isDark && styles.cardDark]}>
                     <Text style={styles.icon}>🛡️</Text>
                     <Text style={[styles.dersName, isDark && styles.textLight]}>Türkiye'yi Fethet</Text>
-                    <Text style={[styles.meta, isDark && styles.textMuted]}>81 il. 3'te 3 doğru ile boya, bölge rozeti kap.</Text>
+                    <Text style={[styles.meta, isDark && styles.textMuted]}>İli seç, soruları bitir; ili boya, bölge rozeti kap.</Text>
                 </Card>
             </Pressable>
             <Pressable onPress={function () { go(navigation, "TabuPlay"); }}>
@@ -52,7 +52,7 @@ export function AlistirmalarHomeScreen({ navigation }) {
                 <Card style={[styles.dersCard, isDark && styles.cardDark]}>
                     <Text style={styles.icon}>⏱️</Text>
                     <Text style={[styles.dersName, isDark && styles.textLight]}>Son 30 saniye</Text>
-                    <Text style={[styles.meta, isDark && styles.textMuted]}>Rakam ve net bilgi. Doğru +2 sn, yanlış −3 sn.</Text>
+                    <Text style={[styles.meta, isDark && styles.textMuted]}>Doğru +2 sn, yanlış −3 sn. Hızlı net bilgi.</Text>
                 </Card>
             </Pressable>
         </ScrollScreen>

@@ -305,6 +305,16 @@
         return s;
     }
 
+    function yearInStemLeak(q, a) {
+        var ansYears = String(a || "").match(/\b(1[89]\d{2}|20[0-2]\d)\b/g) || [];
+        if (!ansYears.length) return false;
+        var stem = String(q || "");
+        for (var i = 0; i < ansYears.length; i++) {
+            if (stem.indexOf(ansYears[i]) >= 0) return true;
+        }
+        return false;
+    }
+
     function panicFromItem(item) {
         if (!item) return null;
         var a = stripChoice(item.correct || item.a || "");
@@ -312,6 +322,7 @@
         if (!a || choices.length < 2) return null;
         var q = formatPanicStem(item.question || item.q || "");
         if (!q) return null;
+        if (yearInStemLeak(q, a)) return null;
         return { q: q, a: a, choices: choices.slice(0, 4) };
     }
 

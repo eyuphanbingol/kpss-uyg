@@ -588,19 +588,19 @@ function AlistirmalarHome(props) {
                     className="text-left p-6 rounded-3xl glass card-hover">
                     <div className="h-14 w-14 rounded-2xl bg-teal-50 text-2xl flex items-center justify-center mb-3">✏️</div>
                     <h2 className="font-bold text-lg">Boşluk doldurma</h2>
-                    <p className="text-sm text-stone-400 mt-1">Her ders ve konu. Şıklardan doğruyu seç.</p>
+                    <p className="text-sm text-stone-400 mt-1">Nottaki boşluğu şıklardan tamamla.</p>
                 </button>
                 <button type="button" onClick={function () { props.onKind("map"); }}
                     className="text-left p-6 rounded-3xl glass card-hover">
                     <div className="h-14 w-14 rounded-2xl bg-amber-50 text-2xl flex items-center justify-center mb-3">🗺️</div>
                     <h2 className="font-bold text-lg">Harita oyunu</h2>
-                    <p className="text-sm text-stone-400 mt-1">Coğrafya konularına göre haritada bul.</p>
+                    <p className="text-sm text-stone-400 mt-1">Konuyu seç, yeri haritada işaretle.</p>
                 </button>
                 <button type="button" onClick={function () { props.onKind("conquer"); }}
                     className="text-left p-6 rounded-3xl glass card-hover">
                     <div className="h-14 w-14 rounded-2xl bg-emerald-50 text-2xl flex items-center justify-center mb-3">🛡️</div>
                     <h2 className="font-bold text-lg">Türkiye'yi Fethet</h2>
-                    <p className="text-sm text-stone-400 mt-1">81 il gri başlar. 3'te 3 doğru ile ili boya, bölge rozeti kap.</p>
+                    <p className="text-sm text-stone-400 mt-1">İli seç, soruları bitir; ili boya, bölge rozeti kap.</p>
                 </button>
                 <button type="button" onClick={function () { props.onKind("tabu"); }}
                     className="text-left p-6 rounded-3xl glass card-hover">
@@ -612,7 +612,7 @@ function AlistirmalarHome(props) {
                     className="text-left p-6 rounded-3xl glass card-hover">
                     <div className="h-14 w-14 rounded-2xl bg-rose-50 text-2xl flex items-center justify-center mb-3">⏱️</div>
                     <h2 className="font-bold text-lg">Son 30 saniye</h2>
-                    <p className="text-sm text-stone-400 mt-1">Süre 30 sn. Doğru +2, yanlış −3. Net bilgi, hızlı cevap.</p>
+                    <p className="text-sm text-stone-400 mt-1">Doğru +2 sn, yanlış −3 sn. Hızlı net bilgi.</p>
                 </button>
             </div>
         </Shell>
