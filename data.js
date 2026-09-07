@@ -166,6 +166,10 @@ window.getKpssData = function () {
             "Türkiye'de Turizm":{
                 notlar:window.cografya_25_notlari || [],
                 sorular:window.cografya_25_sorulari || []
+            },
+            "Türkiye'nin Jeopolitik Konumu ve Bölgesel Projeler":{
+                notlar:window.cografya_26_notlari || [],
+                sorular:window.cografya_26_sorulari || []
             }
         },
         // YENİ EKLENEN TÜRKÇE BÖLÜMÜ
