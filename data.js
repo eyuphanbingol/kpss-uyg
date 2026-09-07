@@ -162,6 +162,10 @@ window.getKpssData = function () {
             "Türkiyenini Ekonomik Coğrafyası (ULAŞIM)":{
                 notlar:window.cografya_24_notlari || [],
                 sorular:window.cografya_24_sorulari || []
+            },
+            "Türkiye'de Turizm":{
+                notlar:window.cografya_25_notlari || [],
+                sorular:window.cografya_25_sorulari || []
             }
         },
         // YENİ EKLENEN TÜRKÇE BÖLÜMÜ
