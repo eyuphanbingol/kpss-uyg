@@ -1,4 +1,4 @@
-const CACHE = "kpss-shell-v5";
+const CACHE = "kpss-shell-v6";
 
 self.addEventListener("install", function () {
     self.skipWaiting();
