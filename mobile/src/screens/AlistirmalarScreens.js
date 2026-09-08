@@ -313,7 +313,7 @@ export function MapTopicsScreen({ navigation }) {
                             var n = MapQuiz.countFor(k.id);
                             var inner = (
                                 <>
-                                    <Text style={[styles.dersName, isDark && styles.textLight, k.hoverImg && styles.volkanName]}>{k.icon} {k.title}</Text>
+                                    <Text style={[styles.dersName, isDark && styles.textLight, k.hoverImg && styles.volkanName]}>{k.hoverImg ? k.title : (k.icon + " " + k.title)}</Text>
                                     <Text style={[styles.meta, isDark && styles.textMuted, k.hoverImg && styles.volkanMeta]}>{n} hedef</Text>
                                 </>
                             );
