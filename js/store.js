@@ -123,7 +123,7 @@
                 slots: normalizeSlots(src, oldDers)
             };
         });
-        return { ready: !!p.ready, days: days };
+        return { ready: !!p.ready, days: days, savedAt: p.savedAt || null };
     }
 
     function studyPlanWeekHours(plan) {
@@ -1002,6 +1002,7 @@
         saveStudyPlan: function (plan) {
             var next = cloneStudyPlan(plan);
             next.ready = true;
+            next.savedAt = nowIso();
             state.userProfile.studyPlan = next;
             state.userProfile.weeklyHours = studyPlanWeekHours(next);
             var today = next.days[planDayId()];

@@ -119,7 +119,7 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
                 slots: normalizeSlots(src, oldDers)
             };
         });
-        return { ready: !!p.ready, days: days };
+        return { ready: !!p.ready, days: days, savedAt: p.savedAt || null };
     }
 
     function studyPlanWeekHours(plan) {
@@ -890,6 +890,7 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
         saveStudyPlan: function (plan) {
             var next = cloneStudyPlan(plan);
             next.ready = true;
+            next.savedAt = nowIso();
             state.userProfile.studyPlan = next;
             state.userProfile.weeklyHours = studyPlanWeekHours(next);
             var today = next.days[planDayId()];

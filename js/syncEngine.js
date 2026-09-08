@@ -105,6 +105,43 @@
         };
     }
 
+    function planReady(p) {
+        return !!(p && typeof p === "object" && p.ready);
+    }
+
+    function pickStudyPlan(local, remote) {
+        var A = local && local.userProfile ? local.userProfile.studyPlan : null;
+        var B = remote && remote.userProfile ? remote.userProfile.studyPlan : null;
+        if (planReady(A) && !planReady(B)) return A;
+        if (planReady(B) && !planReady(A)) return B;
+        if (planReady(A) && planReady(B)) {
+            var at = String(A.savedAt || "");
+            var bt = String(B.savedAt || "");
+            if (at && bt) return at >= bt ? A : B;
+            if (at) return A;
+            if (bt) return B;
+            var hours = global.StudentStore && global.StudentStore.studyPlanWeekHours;
+            var clone = global.StudentStore && global.StudentStore.cloneStudyPlan;
+            if (hours && clone) {
+                var ah = hours(clone(A));
+                var bh = hours(clone(B));
+                if (ah !== bh) return ah > bh ? A : B;
+            }
+            return A;
+        }
+        return A || B || null;
+    }
+
+    function mergeUserProfile(local, remote, settingsSrc) {
+        var up = Object.assign({}, (remote && remote.userProfile) || {}, (settingsSrc && settingsSrc.userProfile) || {});
+        var plan = pickStudyPlan(local, remote);
+        up.studyPlan = plan;
+        if (plan && plan.ready && global.StudentStore && global.StudentStore.studyPlanWeekHours) {
+            up.weeklyHours = global.StudentStore.studyPlanWeekHours(global.StudentStore.cloneStudyPlan(plan));
+        }
+        return up;
+    }
+
     function mergePayload(local, remote) {
         if (!remote) return local;
         var localNewer = (local.updatedAt || "") >= (remote.updatedAt || "");
@@ -113,7 +150,7 @@
             version: Math.max(local.version || 1, remote.version || 1),
             updatedAt: maxIso(local.updatedAt, remote.updatedAt),
             profile: Object.assign({}, remote.profile || {}, localNewer ? (local.profile || {}) : {}, localNewer ? local.profile : remote.profile),
-            userProfile: Object.assign({}, remote.userProfile || {}, settingsSrc.userProfile || {}),
+            userProfile: mergeUserProfile(local, remote, settingsSrc),
             streak: (local.streak && remote.streak)
                 ? ((local.streak.count || 0) >= (remote.streak.count || 0) ? local.streak : remote.streak)
                 : (local.streak || remote.streak),
