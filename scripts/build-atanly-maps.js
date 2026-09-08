@@ -487,6 +487,10 @@ function topicIcon(file) {
         aycicek: "aycicek", findik: "findik", cay: "cay", kenevir: "hemp",
         kivrimdaglar: "fold-mtn", kirikdaglar: "fault-mtn", volkanikdaglar: "volcano",
         masifarazi: "rock", trplato: "plateau", trovlar: "plain",
+        c3masif: "rock", c3kivrim: "fold-mtn", c3sultan: "fold-mtn",
+        c3volkan19: "volcano", c3icanadoluvulkan: "volcano", c3nesta: "volcano",
+        c3bolgevolkan: "volcano", c3egeenine: "fault-mtn", c3paralelkiy: "fold-mtn",
+        c3paralelsonuc: "fold-mtn",
         milliparklar: "park",
         madengenel: "ore", madendemir: "iron", madenbakir: "copper", madenboksit: "bauxite",
         madenkrom: "chrome", madenbarit: "barite", madenbor: "boron", madenmermer: "marble",
@@ -1455,6 +1459,204 @@ function main() {
         ],
         ["Doğu Anadolu, İç Anadolu ve bazı GDA–Hatay alanları öne çıkar"]
     );
+
+    labeled({ file: "c3_masif.png", head: "MASİF ARAZİLER", iconSize: 16 }, "Soru 5",
+        [
+            { il: "Kırklareli", label: "Yıldız", ldx: -8, ldy: 54 },
+            { il: "Muğla", label: "Menteşe", ldx: -22, ldy: 54 },
+            { il: "Mersin", label: "Taşeli", ldx: 0, ldy: 54 },
+            { il: "Bitlis", label: "Bitlis", ldx: 12, ldy: 54 },
+            { il: "Mardin", label: "Mardin", ldx: 10, ldy: 54 }
+        ],
+        ["Yıldız, Menteşe, Taşeli, Bitlis, Mardin", "Mardin Güneydoğu’dadır; Batı Karadeniz değildir"]
+    );
+
+    labeled({ file: "c3_kivrim.png", head: "KIVRIM DAĞLARI", iconSize: 15 }, "Soru 12",
+        [
+            { il: "Kastamonu", label: "Küre", ldx: -28, ldy: -20, boya: ["Bartın"] },
+            { il: "Çankırı", label: "Ilgaz", ldx: 12, ldy: 54, boya: ["Kastamonu"] },
+            { il: "Rize", label: "Kaçkar", ldx: 8, ldy: -28, boya: ["Artvin"] },
+            { il: "Tunceli", label: "Mercan", ldx: -8, ldy: 54, boya: ["Erzincan"] },
+            { il: "Hakkari", label: "Cilo", ldx: -8, ldy: -26 }
+        ],
+        ["Küre, Ilgaz, Kaçkar, Mercan, Cilo", "Cilo (Buzul) Dağları Hakkari’dedir, Antalya’da değil"]
+    );
+
+    labeled({ file: "c3_sultan.png", head: "SULTAN DAĞLARI", iconSize: 15 }, "Soru 13",
+        [
+            { il: "Afyon", label: "Sultan Dağları", ldx: 36, ldy: 18, pdx: 36, pdy: 36, boya: ["Konya", "Isparta"] }
+        ],
+        ["Afyon – Konya – Isparta geçiş kuşağı", "İç Anadolu ile Göller Yöresi arasında kıvrım sırası"]
+    );
+
+    cityPinMap({
+        file: "c3_ege_horst.png",
+        head: "EGE KIRIK DAĞLARI",
+        kicker: "Kuzeyden güneye",
+        hi: ["Çanakkale", "Balıkesir", "Manisa", "İzmir", "Aydın", "Muğla"],
+        iller: [
+            { il: "Çanakkale", label: "Kaz", n: "1", ldx: -58, ldy: -8 },
+            { il: "Balıkesir", label: "Madra", n: "2", ldx: -72, ldy: 6 },
+            { il: "Manisa", label: "Yunt", n: "3", ldx: -78, ldy: 6 },
+            { il: "İzmir", label: "Bozdağlar", n: "4", pdx: 36, pdy: 8, ldx: -88, ldy: 8 },
+            { il: "Aydın", label: "Aydın", n: "5", ldx: -72, ldy: 8 },
+            { il: "Muğla", label: "Menteşe", n: "6", ldx: -86, ldy: 10 }
+        ],
+        facts: ["Şifre: Kaz–Ma–Yunt–Boz–Ayı–Me", "Kuzeyden güneye horst sırası"]
+    });
+
+    cityPinMap({
+        file: "c3_amanos.png",
+        head: "AMANOS VE AMİK",
+        kicker: "Horst / graben",
+        hi: ["Hatay"],
+        iller: [
+            { il: "Hatay", label: "Amanos (horst)", n: "H", pdx: -22, pdy: -18, ldx: -92, ldy: -6 },
+            { il: "Hatay", label: "Amik (graben)", n: "G", pdx: 18, pdy: 22, ldx: 18, ldy: 16 }
+        ],
+        facts: ["Amanos (Nur) Dağları yüksekte kalan bloktur (horst)", "Amik Ovası çöküntü alanıdır (graben)"]
+    });
+
+    labeled({ file: "c3_volkan19.png", head: "VOLKANİK DAĞLAR", iconSize: 16 }, "Soru 19",
+        [
+            { il: "Manisa", label: "Kula", ldx: -8, ldy: 54 },
+            { il: "Aksaray", label: "Hasan", ldx: -36, ldy: -16, boya: ["Niğde"] },
+            { il: "Niğde", label: "Melendiz", ldx: 28, ldy: 22 },
+            { il: "Kayseri", label: "Erciyes", ldx: 8, ldy: 54 },
+            { il: "Bitlis", label: "Nemrut", ldx: -36, ldy: 20, pdx: -36, pdy: 10, noclamp: true }
+        ],
+        ["Nemrut, Erciyes, Hasan, Melendiz, Kula", "Kula Ege’dedir (Manisa), Doğu Anadolu’da değildir"]
+    );
+
+    labeled({ file: "c3_icanadolu_volkan.png", head: "İÇ ANADOLU VOLKANLARI", iconSize: 16 }, "Soru 23",
+        [
+            { il: "Konya", label: "Karacadağ", ldx: -16, ldy: 54 },
+            { il: "Karaman", label: "Karadağ", ldx: -8, ldy: 54, boya: ["Konya"] },
+            { il: "Niğde", label: "Melendiz", ldx: 28, ldy: 22 },
+            { il: "Kayseri", label: "Erciyes", ldx: 8, ldy: 54 },
+            { il: "Aksaray", label: "Hasan", ldx: -36, ldy: -16, boya: ["Niğde"] }
+        ],
+        ["Ke–Ke–M–E–Hasan", "Karacadağ, Karadağ, Melendiz, Erciyes, Hasan"]
+    );
+
+    cityPinMap({
+        file: "c3_nesta.png",
+        head: "DOĞU ANADOLU VOLKANLARI",
+        kicker: "NESTA",
+        hi: ["Bitlis", "Van", "Ağrı", "Iğdır"],
+        polyline: [
+            { il: "Bitlis", pdx: -36, pdy: 10 },
+            { il: "Van", pdx: -48, pdy: -38 },
+            { il: "Ağrı", pdx: 32, pdy: 38 },
+            { il: "Iğdır", pdx: -16, pdy: 10 }
+        ],
+        iller: [
+            { il: "Bitlis", label: "Nemrut", n: "N", pdx: -36, pdy: 10, ldx: -70, ldy: 18 },
+            { il: "Van", label: "Süphan", n: "S", pdx: -48, pdy: -38, ldx: 16, ldy: -12 },
+            { il: "Ağrı", label: "Tendürek", n: "T", pdx: 32, pdy: 38, ldx: 16, ldy: 20 },
+            { il: "Iğdır", label: "Ağrı", n: "A", pdx: -16, pdy: 10, ldx: 18, ldy: -10 }
+        ],
+        facts: ["Güneybatıdan kuzeydoğuya: Nemrut–Süphan–Tendürek–Ağrı", "Kod: NESTA"]
+    });
+
+    labeled({ file: "c3_bolge_volkan.png", head: "BÖLGE AYIRT ETME", iconSize: 16 }, "Soru 25",
+        [
+            { il: "Bitlis", label: "Nemrut (DA)", ldx: -36, ldy: 20, pdx: -36, pdy: 10, noclamp: true },
+            { il: "Van", label: "Süphan (DA)", ldx: 8, ldy: -22, pdx: -48, pdy: -38, noclamp: true, boya: ["Bitlis"] },
+            { il: "Ağrı", label: "Tendürek (DA)", ldx: 8, ldy: 22, pdx: 32, pdy: 38 },
+            { il: "Iğdır", label: "Ağrı (DA)", ldx: 20, ldy: -18, pdx: -16, pdy: 10, boya: ["Ağrı"] },
+            { il: "Niğde", label: "Melendiz (İA)", ldx: 28, ldy: 22 }
+        ],
+        ["Nemrut–Süphan–Tendürek–Ağrı Doğu Anadolu’dadır", "Melendiz İç Anadolu’dadır (Niğde)"]
+    );
+
+    cityPinMap({
+        file: "c3_toros.png",
+        head: "TOROSLARIN UZANIŞI",
+        kicker: "Batıdan doğuya",
+        hi: ["Muğla", "Antalya", "Mersin", "Adana", "Kahramanmaraş", "Malatya", "Bitlis", "Hakkari"],
+        polyline: [
+            { il: "Muğla" },
+            { il: "Antalya" },
+            { il: "Mersin" },
+            { il: "Adana" },
+            { il: "Kahramanmaraş" },
+            { il: "Malatya" },
+            { il: "Bitlis" },
+            { il: "Hakkari" }
+        ],
+        iller: [
+            { il: "Muğla", label: "Batı (Muğla)", n: "B", ldx: -86, ldy: 10 },
+            { il: "Adana", label: "Orta Toroslar", n: "O", ldx: 16, ldy: 18 },
+            { il: "Hakkari", label: "Van Gölü güneyi", n: "D", ldx: -100, ldy: 8 }
+        ],
+        facts: ["Muğla’dan başlar, Akdeniz’e paralel uzanır", "Van Gölü’nün güneyine kadar devam eder"]
+    });
+
+    labeled({ file: "c3_ege_enine.png", head: "EGE: KIYIYA DİK DAĞLAR", iconSize: 15 }, "Enine kıyı",
+        [
+            { il: "Çanakkale", label: "Kaz", ldx: -66, ldy: -40 },
+            { il: "Manisa", label: "Yunt", ldx: -110, ldy: -20 },
+            { il: "İzmir", label: "graben / vadi", ldx: -100, ldy: 8, pdx: 36, pdy: 8 },
+            { il: "Aydın", label: "Aydın", ldx: -90, ldy: -8 },
+            { il: "Muğla", label: "Menteşe", ldx: -120, ldy: 8 }
+        ],
+        ["Dağlar kıyıya dik · koy-körfez fazla", "Denizel etki vadiler boyunca iç kesimlere sokulur"]
+    );
+
+    labeled({ file: "c3_paralel_kiy.png", head: "KIYIYA PARALEL DAĞLAR", iconSize: 15 }, "Boyuna kıyı",
+        [
+            { il: "Rize", label: "Doğu Karadeniz", ldx: 8, ldy: -28, boya: ["Trabzon", "Artvin"] },
+            { il: "Antalya", label: "Batı Toroslar", ldx: -40, ldy: 8, pdx: -28, pdy: -8 }
+        ],
+        ["Kıyı sade · koy-körfez-ada azdır", "Kıyı ile iç kesim arasında iklim farkı belirgindir"]
+    );
+
+    labeled({ file: "c3_paralel_sonuc.png", head: "PARALEL DAĞLARIN SONUCU", iconSize: 15 }, "Ulaşım ve kıyı",
+        [
+            { il: "Rize", label: "Kaçkar", ldx: 8, ldy: -28, boya: ["Artvin", "Trabzon"] },
+            { il: "Ordu", label: "Canik", ldx: 36, ldy: -20, boya: ["Samsun"] },
+            { il: "Antalya", label: "Toroslar", ldx: -40, ldy: 8 }
+        ],
+        ["Ulaşım geçitlerle, maliyet yüksek", "Doğal liman az · falez yaygın · boyuna kıyı"]
+    );
+
+    (function () {
+        if (!wantFile("c3_sahanlik") && !wantFile("c3_kusucumu")) return;
+        function writeSchema(file, head, kicker, innerH, inner, facts) {
+            if (!wantFile(file)) return;
+            var factsY = 78 + innerH + 16;
+            var factsBox = wrapFacts(facts, 16, factsY, CANVAS_W - 32, 14);
+            var body = '<rect x="14" y="78" width="512" height="' + innerH + '" rx="18" fill="' + C.sea + '"/>' + inner;
+            writePng(path.join(IMG, file), frame(factsY + factsBox.h + 28, head, kicker, body + factsBox.svg));
+            console.log("ok", file);
+        }
+        if (wantFile("c3_sahanlik")) {
+            var shelf = '<polygon points="40,250 40,120 210,120 248,250" fill="' + C.landHi + '"/>' +
+                '<polygon points="248,250 210,120 268,188 300,250" fill="#E4EAD6"/>' +
+                '<polygon points="300,250 268,188 520,188 520,250" fill="#7BA7B2"/>' +
+                '<text x="120" y="108" text-anchor="middle" font-size="14" font-weight="800" fill="' + C.navy + '" font-family="Segoe UI, sans-serif">Dağlar (kıyıya paralel)</text>' +
+                '<text x="268" y="176" text-anchor="middle" font-size="13" font-weight="800" fill="' + C.navy + '" font-family="Segoe UI, sans-serif">Dar şelf</text>' +
+                '<text x="410" y="176" text-anchor="middle" font-size="13" font-weight="800" fill="' + C.navy + '" font-family="Segoe UI, sans-serif">Derin deniz</text>' +
+                '<text x="270" y="272" text-anchor="middle" font-size="12" fill="' + C.ink + '" font-family="Segoe UI, sans-serif">Kıyı aniden derinleşir · kıta sahanlığı dardır</text>';
+            writeSchema("c3_sahanlik.png", "KITA SAHANLIĞI", "Boyuna kıyı kesiti", 220, shelf, [
+                "Dağlar kıyıya paralel ise deniz çabuk derinleşir",
+                "Kıta sahanlığı dar, kıyılar derindir"
+            ]);
+        }
+        if (wantFile("c3_kusucumu")) {
+            var coast = '<text x="270" y="108" text-anchor="middle" font-size="13" font-weight="800" fill="' + C.navy + '" font-family="Segoe UI, sans-serif">Boyuna kıyı (Karadeniz tipi)</text>' +
+                '<line x1="70" y1="150" x2="470" y2="150" stroke="' + C.navy + '" stroke-width="4" stroke-linecap="round"/>' +
+                '<text x="270" y="142" text-anchor="middle" font-size="12" fill="' + C.ink + '" font-family="Segoe UI, sans-serif">kuş uçumu</text>' +
+                '<path d="M70 200 C 140 196, 200 208, 270 200 S 400 196, 470 204" fill="none" stroke="' + C.teal + '" stroke-width="4" stroke-linecap="round"/>' +
+                '<text x="270" y="232" text-anchor="middle" font-size="12" fill="' + C.ink + '" font-family="Segoe UI, sans-serif">gerçek kıyı · fark azdır</text>' +
+                '<text x="270" y="268" text-anchor="middle" font-size="13" font-weight="800" fill="' + C.navy + '" font-family="Segoe UI, sans-serif">Enine kıyıda (Ege) bu fark büyüktür</text>';
+            writeSchema("c3_kusucumu.png", "KIYI UZUNLUĞU", "Kuş uçumu / gerçek", 220, coast, [
+                "Sade kıyıda gerçek uzunluk ile kuş uçumu birbirine yakındır",
+                "Girintili kıyıda fark artar"
+            ]);
+        }
+    })();
 
     cityPinMap({
         file: "konum_boylam_izmit.png",

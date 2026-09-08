@@ -63,7 +63,9 @@ window.cografya_3_sorulari = [
       "E) Mardin Masifi – Batı Karadeniz"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Mardin Masifi Güneydoğu Anadolu sınırlarımızdadır. Batı Karadeniz'deki ünlü yaşlı kütlemiz ise Kastamonu Masifi'dir."
+    "explanation": "Mardin Masifi Güneydoğu Anadolu sınırlarımızdadır. Batı Karadeniz'deki ünlü yaşlı kütlemiz ise Kastamonu Masifi'dir.",
+    "img": "./src/img/c3_masif.png?v=1",
+    "imgAlt": "Yıldız, Menteşe, Taşeli, Bitlis ve Mardin masifleri"
   },
   {
     "id": "6",
@@ -154,7 +156,9 @@ window.cografya_3_sorulari = [
       "E) Cilo Dağları – Antalya"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Cilo (Buzul) Dağları ülkemizin en yüksek kıvrım alanlarından biri olarak Hakkari ilimizde yer alır, Akdeniz/Antalya ile bir ilgisi yoktur."
+    "explanation": "Cilo (Buzul) Dağları ülkemizin en yüksek kıvrım alanlarından biri olarak Hakkari ilimizde yer alır, Akdeniz/Antalya ile bir ilgisi yoktur.",
+    "img": "./src/img/c3_kivrim.png?v=1",
+    "imgAlt": "Küre, Ilgaz, Kaçkar, Mercan ve Cilo dağları"
   },
   {
     "id": "13",
@@ -167,7 +171,9 @@ window.cografya_3_sorulari = [
       "E) Hakkari – Van"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Sultan Dağları, İç Anadolu ile Göller Yöresi geçiş kuşağında, Afyon-Konya-Isparta sınırlarında uzanan kıvrım kökenli bir dağ sırasıdır."
+    "explanation": "Sultan Dağları, İç Anadolu ile Göller Yöresi geçiş kuşağında, Afyon-Konya-Isparta sınırlarında uzanan kıvrım kökenli bir dağ sırasıdır.",
+    "img": "./src/img/c3_sultan.png?v=1",
+    "imgAlt": "Sultan Dağları'nın konumu"
   },
   {
     "id": "14",
@@ -206,7 +212,9 @@ window.cografya_3_sorulari = [
       "E) Kaz – Bozdağlar – Madra – Menteşe – Aydın – Yunt"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Ege'deki kırık dağların kuzeyden güneye net sıralaması KAZ-MA-YUNT-BOZ-AYI-ME kodlamasıyla uyumlu olan Kaz, Madra, Yunt, Bozdağlar, Aydın ve Menteşe şeklindedir."
+    "explanation": "Ege'deki kırık dağların kuzeyden güneye net sıralaması KAZ-MA-YUNT-BOZ-AYI-ME kodlamasıyla uyumlu olan Kaz, Madra, Yunt, Bozdağlar, Aydın ve Menteşe şeklindedir.",
+    "img": "./src/img/c3_ege_horst.png?v=1",
+    "imgAlt": "Ege kırık dağlarının kuzey-güney sıralaması"
   },
   {
     "id": "17",
@@ -219,7 +227,9 @@ window.cografya_3_sorulari = [
       "E) Amanos Dağları kıvrım dağdır"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Hatay'daki Amanos (Nur) Dağları kırılma sonucu yüksekte kalan bir blok (horst), önünde uzanan tarım ambarı Amik Ovası ise çöküntü alanıdır (graben)."
+    "explanation": "Hatay'daki Amanos (Nur) Dağları kırılma sonucu yüksekte kalan bir blok (horst), önünde uzanan tarım ambarı Amik Ovası ise çöküntü alanıdır (graben).",
+    "img": "./src/img/c3_amanos.png?v=1",
+    "imgAlt": "Amanos horst ve Amik graben"
   },
   {
     "id": "18",
@@ -232,7 +242,9 @@ window.cografya_3_sorulari = [
       "E) Falez oluşumunun kolaylaşması"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "Ege'de dağlar kıyıya dik uzandığı için denizden gelen nemli hava akımları vadiler ve graben ovaları boyunca iç kesimlere kadar rahatça sokulabilir."
+    "explanation": "Ege'de dağlar kıyıya dik uzandığı için denizden gelen nemli hava akımları vadiler ve graben ovaları boyunca iç kesimlere kadar rahatça sokulabilir.",
+    "img": "./src/img/c3_ege_enine.png?v=1",
+    "imgAlt": "Ege'de kıyıya dik dağlar ve vadiler"
   },
   {
     "id": "19",
@@ -245,7 +257,9 @@ window.cografya_3_sorulari = [
       "E) Kula – Doğu Anadolu (Van)"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Kula Volkanları Doğu Anadolu'da değil, Ege Bölgesi'nde Manisa il sınırları içinde yer alan Türkiye'nin en genç volkanik konileridir."
+    "explanation": "Kula Volkanları Doğu Anadolu'da değil, Ege Bölgesi'nde Manisa il sınırları içinde yer alan Türkiye'nin en genç volkanik konileridir.",
+    "img": "./src/img/c3_volkan19.png?v=1",
+    "imgAlt": "Nemrut, Erciyes, Hasan, Melendiz ve Kula"
   },
   {
     "id": "20",
@@ -284,7 +298,9 @@ window.cografya_3_sorulari = [
       "E) Karaman ve Aksaray"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Türkiye'de iki farklı coğrafi bölgede Karacadağ adında volkan vardır: Biri İç Anadolu'da (Konya), diğeri Güneydoğu Anadolu'da (Diyarbakır-Şanlıurfa arası) yer alır."
+    "explanation": "Türkiye'de iki farklı coğrafi bölgede Karacadağ adında volkan vardır: Biri İç Anadolu'da (Konya), diğeri Güneydoğu Anadolu'da (Diyarbakır-Şanlıurfa arası) yer alır.",
+    "img": "./src/img/volkan_karacadag.png?v=1",
+    "imgAlt": "Konya ve Diyarbakır-Şanlıurfa Karacadağları"
   },
   {
     "id": "23",
@@ -297,7 +313,9 @@ window.cografya_3_sorulari = [
       "E) Kula – Karacadağ – Süphan – Ağrı"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "İç Anadolu'da tektonik hat boyunca dizilen dağlar Karacadağ, Karadağ, Melendiz, Erciyes ve Hasan Dağı'dır (Ke-Ke-M-E-Hasan)."
+    "explanation": "İç Anadolu'da tektonik hat boyunca dizilen dağlar Karacadağ, Karadağ, Melendiz, Erciyes ve Hasan Dağı'dır (Ke-Ke-M-E-Hasan).",
+    "img": "./src/img/c3_icanadolu_volkan.png?v=1",
+    "imgAlt": "İç Anadolu volkanik dağları"
   },
   {
     "id": "24",
@@ -310,7 +328,9 @@ window.cografya_3_sorulari = [
       "E) T – A – N – S"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Van Gölü'nün batısından kuzeydoğuya Ermenistan sınırına doğru dizilen hat güneyden kuzeye baş harfleriyle NESTA (Nemrut, Süphan, Tendürek, Ağrı) olarak kodlanır."
+    "explanation": "Van Gölü'nün batısından kuzeydoğuya Ermenistan sınırına doğru dizilen hat güneyden kuzeye baş harfleriyle NESTA (Nemrut, Süphan, Tendürek, Ağrı) olarak kodlanır.",
+    "img": "./src/img/c3_nesta.png?v=1",
+    "imgAlt": "Nemrut, Süphan, Tendürek ve Ağrı sıralaması"
   },
   {
     "id": "25",
@@ -323,7 +343,9 @@ window.cografya_3_sorulari = [
       "E) Melendiz"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Nemrut, Süphan, Tendürek ve Ağrı Doğu Anadolu Bölgesi'ndeyken; Melendiz Dağı İç Anadolu Bölgesi'nde Niğde sınırları içerisindedir."
+    "explanation": "Nemrut, Süphan, Tendürek ve Ağrı Doğu Anadolu Bölgesi'ndeyken; Melendiz Dağı İç Anadolu Bölgesi'nde Niğde sınırları içerisindedir.",
+    "img": "./src/img/c3_bolge_volkan.png?v=1",
+    "imgAlt": "Doğu Anadolu ve İç Anadolu volkanları"
   },
   {
     "id": "26",
@@ -336,7 +358,9 @@ window.cografya_3_sorulari = [
       "E) I, II ve III"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Dağların kıyıya paralel uzandığı yerlerde deniz aniden derinleştiği için Delta oluşumu ZOR, falez (yalıyar) oluşumu KOLAYDIR. Bu yüzden III. öncül yanlıştır, I ve II doğrudur."
+    "explanation": "Dağların kıyıya paralel uzandığı yerlerde deniz aniden derinleştiği için Delta oluşumu ZOR, falez (yalıyar) oluşumu KOLAYDIR. Bu yüzden III. öncül yanlıştır, I ve II doğrudur.",
+    "img": "./src/img/c3_paralel_kiy.png?v=1",
+    "imgAlt": "Karadeniz ve Akdeniz'de kıyıya paralel dağlar"
   },
   {
     "id": "27",
@@ -349,7 +373,9 @@ window.cografya_3_sorulari = [
       "E) Kıyı tamamen falezsizdir"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Dağların kıyı çizgisine paralel yükseldiği yerlerde deniz aniden derinleşir. Bu durum kıta sahanlığının (şelf alanı) dar, kıyıların derin olmasına neden olur."
+    "explanation": "Dağların kıyı çizgisine paralel yükseldiği yerlerde deniz aniden derinleşir. Bu durum kıta sahanlığının (şelf alanı) dar, kıyıların derin olmasına neden olur.",
+    "img": "./src/img/c3_sahanlik.png?v=1",
+    "imgAlt": "Boyuna kıyıda dar kıta sahanlığı kesiti"
   },
   {
     "id": "28",
@@ -362,7 +388,9 @@ window.cografya_3_sorulari = [
       "E) Gerçek uzunluk daima daha kısadır"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Dağların kıyıya paralel uzandığı yerlerde koy ve körfez az, kıyı çizgisi düz ve sade olduğundan gerçek uzunluk ile kuş uçumu uzunluk arasındaki fark oldukça azdır."
+    "explanation": "Dağların kıyıya paralel uzandığı yerlerde koy ve körfez az, kıyı çizgisi düz ve sade olduğundan gerçek uzunluk ile kuş uçumu uzunluk arasındaki fark oldukça azdır.",
+    "img": "./src/img/c3_kusucumu.png?v=1",
+    "imgAlt": "Kuş uçumu ve gerçek kıyı uzunluğu"
   },
   {
     "id": "29",
@@ -375,7 +403,9 @@ window.cografya_3_sorulari = [
       "E) Sinop'tan başlar, İzmir'e uzanır"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Güney kıvrım silsilemiz olan Toroslar, batıda Muğla ilinden başlayarak Akdeniz'e paralel uzanır ve Doğu Anadolu'da Van Gölü'nün güneyine kadar devasa bir yay çizer."
+    "explanation": "Güney kıvrım silsilemiz olan Toroslar, batıda Muğla ilinden başlayarak Akdeniz'e paralel uzanır ve Doğu Anadolu'da Van Gölü'nün güneyine kadar devasa bir yay çizer.",
+    "img": "./src/img/c3_toros.png?v=1",
+    "imgAlt": "Toroslar'ın batı-doğu uzanışı"
   },
   {
     "id": "30",
@@ -414,6 +444,8 @@ window.cografya_3_sorulari = [
       "E) Falezlerin yaygın olması"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "Kıyıya paralel uzanan dağlarda kıyı sade ve girintisiz-çıkıntılı olduğu için koy, körfez ve doğal liman sayısı oldukça azdır, çok sayıda olması beklenemez."
+    "explanation": "Kıyıya paralel uzanan dağlarda kıyı sade ve girintisiz-çıkıntılı olduğu için koy, körfez ve doğal liman sayısı oldukça azdır, çok sayıda olması beklenemez.",
+    "img": "./src/img/c3_paralel_sonuc.png?v=1",
+    "imgAlt": "Paralel dağlarda ulaşım ve kıyı"
   }
 ];
