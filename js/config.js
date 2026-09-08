@@ -23,15 +23,6 @@
             operator: "Atanly işletmecisi",
             email: ""
         },
-        adsense: {
-            enabled: true,
-            client: "",
-            slots: {
-                feed: "",
-                article: "",
-                display: ""
-            }
-        },
         premiumEnabled: false,
         freeWeeklyExams: 2,
         freeDailyMixed: 3,

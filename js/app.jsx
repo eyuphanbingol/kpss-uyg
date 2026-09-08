@@ -65,53 +65,14 @@ function CookieBar() {
     return (
         <div className="fixed left-3 right-3 z-[60] rounded-2xl bg-stone-900 text-stone-100 p-4 shadow-2xl text-sm" style={{ bottom: "calc(var(--app-tabbar-h) + 12px)" }}>
             <p className="text-xs leading-relaxed mb-3">
-                Zorunlu çerezler giriş ve ilerleme için kullanılır. Reklam çerezleri (AdSense) ancak onayınızla yüklenir.{" "}
+                Giriş ve ilerleme için zorunlu çerez / yerel depolama kullanılır. Reklam ağı yok.{" "}
                 <a className="underline text-teal-300" href="yasal/cerez.html">Çerez politikası</a>
                 {" · "}
                 <a className="underline text-teal-300" href="yasal/aydinlatma.html">KVKK</a>
             </p>
-            <div className="flex gap-2">
-                <button type="button" className="flex-1 py-2 rounded-xl bg-white text-stone-900 text-xs font-bold" onClick={function () {
-                    StudentStore.setConsent({ bannerSeen: true, marketing: true, analytics: false });
-                }}>Reklam çerezlerine izin ver</button>
-                <button type="button" className="flex-1 py-2 rounded-xl border border-stone-500 text-xs font-bold" onClick={function () {
-                    StudentStore.setConsent({ bannerSeen: true, marketing: false, analytics: false });
-                }}>Yalnızca zorunlu</button>
-            </div>
-        </div>
-    );
-}
-
-function AdSlot(props) {
-    var kind = props.kind || "display";
-    var boxRef = useRef(null);
-    useEffect(function () {
-        var ads = window.AtanlyAds;
-        if (!ads || !ads.showAds()) return;
-        ads.init();
-        var node = boxRef.current;
-        if (!node || node.getAttribute("data-ads-pushed") === "1") return;
-        node.setAttribute("data-ads-pushed", "1");
-        try {
-            (window.adsbygoogle = window.adsbygoogle || []).push({});
-        } catch (e) {}
-    }, [kind, props.refreshKey]);
-    if (!(window.AtanlyAds && window.AtanlyAds.showAds())) return null;
-    var client = window.AtanlyAds.client();
-    var slotId = window.AtanlyAds.slot(kind);
-    var insProps = {
-        className: "adsbygoogle",
-        style: { display: "block", minHeight: kind === "article" ? 120 : 90 },
-        "data-ad-client": client,
-        "data-ad-format": kind === "article" ? "fluid" : "auto",
-        "data-full-width-responsive": "true"
-    };
-    if (kind === "article") insProps["data-ad-layout"] = "in-article";
-    if (slotId) insProps["data-ad-slot"] = slotId;
-    return (
-        <div className={"ad-slot my-5 overflow-hidden rounded-2xl bg-stone-50/80 dark:bg-stone-900/40 " + (props.className || "")} aria-label="Reklam">
-            <p className="text-[9px] font-bold uppercase tracking-widest text-stone-400 px-3 pt-2">Reklam</p>
-            <ins ref={boxRef} {...insProps} />
+            <button type="button" className="w-full py-2 rounded-xl bg-white text-stone-900 text-xs font-bold" onClick={function () {
+                StudentStore.setConsent({ bannerSeen: true, marketing: false, analytics: false });
+            }}>Tamam</button>
         </div>
     );
 }
@@ -739,7 +700,6 @@ function Bugun(props) {
             <StudyProgram student={props.student} kpssData={props.kpssData} onDers={props.onDers} />
 
             <StudyDash student={props.student} />
-            <AdSlot kind="feed" refreshKey="bugun" />
         </Shell>
     );
 }
@@ -786,7 +746,6 @@ function AlistirmalarHome(props) {
                     <p className="text-sm text-stone-400 mt-1">Doğru +2 sn, yanlış −3 sn. Hızlı net bilgi.</p>
                 </button>
             </div>
-            <AdSlot kind="feed" refreshKey="alistirmalar" />
         </Shell>
     );
 }
@@ -1501,7 +1460,6 @@ function DersHome(props) {
                     );
                 })}
             </div>
-            <AdSlot kind="feed" refreshKey="dersler" />
             {function () {
                 var edu = props.student && props.student.userProfile && props.student.userProfile.educationLevel;
                 if (edu && edu !== "lisans") return null;
@@ -1592,7 +1550,6 @@ function KonuList(props) {
                     );
                 })}
             </div>
-            <AdSlot kind="feed" refreshKey={ders + "-list"} />
         </Shell>
     );
 }
@@ -1622,7 +1579,6 @@ function KonuHub(props) {
                 <h3 className="text-xl font-bold text-amber-900 dark:text-amber-100 mb-2">Konu özeti</h3>
                 <p className="text-sm text-amber-700">{notlar.length} hap not · {tp.notesDone ? "tamamlandı" : "kaldığın yerden"}</p>
             </button>
-            <AdSlot kind="display" refreshKey={props.ders + props.konu} />
             {packs.length ? (
                 <div>
                     <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-3">{sorular.length} soru · 25’lik testler · sırayla bitir</p>
@@ -1695,7 +1651,6 @@ function NotesView(props) {
             ) : (
                 <div className="text-center py-16 bg-white dark:bg-slate-800 rounded-3xl border border-dashed">Bu konu için henüz not yok.</div>
             )}
-            {idx % 3 === 2 ? <AdSlot kind="article" refreshKey={String(idx)} /> : null}
             {props.hasTest ? (
                 <button onClick={props.onTest} className="mt-8 mb-8 w-full btn-primary text-white p-5 rounded-2xl font-bold">
                     Notları bitirdim, teste geç
@@ -1836,7 +1791,6 @@ function ResultView(props) {
                     });
                     window.ShareCard.download(url, "atanly-net-karti.png");
                 }} className="w-full mb-3 p-4 rounded-2xl btn-primary text-white font-semibold">Net kartını indir</button>
-                <AdSlot kind="display" refreshKey="sonuc" />
                 <div className="flex gap-3">
                     <button onClick={props.onRetry} className="flex-1 btn-primary text-white p-4 rounded-2xl font-semibold">Tekrar</button>
                     <button onClick={props.onHome} className="flex-1 panel p-4 rounded-2xl font-medium">Kapat</button>
