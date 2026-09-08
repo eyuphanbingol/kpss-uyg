@@ -756,14 +756,8 @@
                                 </div>
                             </div>
 
-                            <div className="flex gap-2">
-                                <button 
-                                    type="button" 
-                                    onClick={function () { setStep(1); }} 
-                                    className="flex-1 py-3.5 rounded-2xl border-2 border-stone-200 dark:border-stone-700 font-medium hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors"
-                                >
-                                    ← Geri
-                                </button>
+                            <div className="flex items-center gap-2">
+                                {React.createElement(window.KpssBackBtn, { onClick: function () { setStep(1); }, label: "Geri" })}
                                 <button 
                                     type="button" 
                                     onClick={function () { setStep(3); setMsg(""); }} 
@@ -875,14 +869,8 @@
                                 <a className="underline" href="yasal/cerez.html" target="_blank" rel="noopener">Çerezler</a>
                             </p>
 
-                            <div className="flex gap-2">
-                                <button 
-                                    type="button" 
-                                    onClick={function () { setStep(level === "lisans" ? 2 : 1); }} 
-                                    className="flex-1 py-3.5 rounded-2xl border-2 border-stone-200 dark:border-stone-700 font-medium hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors"
-                                >
-                                    ← Geri
-                                </button>
+                            <div className="flex items-center gap-2">
+                                {React.createElement(window.KpssBackBtn, { onClick: function () { setStep(level === "lisans" ? 2 : 1); }, label: "Geri" })}
                                 <button 
                                     type="button" 
                                     disabled={busy || !validateEmail(email) || !validatePassword(pass)} 
@@ -1063,11 +1051,6 @@
                     </div>
                 ) : (
                     <div>
-                {props.gate ? (
-                    <button type="button" onClick={goLand} className="mb-4 text-sm font-medium text-stone-500 hover:text-stone-800">
-                        ← Tanıtıma dön
-                    </button>
-                ) : null}
                 {/* Mode Toggle */}
                 <div className="flex p-1.5 rounded-2xl bg-stone-100 dark:bg-stone-800 mb-6">
                     <button 

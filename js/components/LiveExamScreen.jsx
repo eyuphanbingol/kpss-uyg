@@ -1,5 +1,6 @@
 (function () {
     const { useState, useEffect, useMemo } = React;
+    var BackBtn = window.KpssBackBtn;
 
     // ============================================================
     // YARDIMCI FONKSİYONLAR
@@ -132,12 +133,7 @@
                         <h1 className="text-2xl md:text-3xl font-black gradient-text">🚀 Canlı Deneme</h1>
                         <p className="text-sm text-stone-400 mt-0.5">Her hafta aynı saatte, herkesle birlikte</p>
                     </div>
-                    <button 
-                        onClick={props.onBack} 
-                        className="px-4 py-2 rounded-xl border border-stone-200 dark:border-stone-700 text-sm font-medium hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors"
-                    >
-                        ✕ Kapat
-                    </button>
+                    <BackBtn onClick={props.onBack} label="Geri" />
                 </div>
 
                 {/* Info */}

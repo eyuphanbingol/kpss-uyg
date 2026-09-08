@@ -107,14 +107,9 @@ function ThemeBtn(props) {
 }
 
 function BackBtn(props) {
-    return (
-        <button type="button" onClick={props.onClick} className="back-btn" aria-label={props.label || "Geri"}>
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.25} d="M15 19l-7-7 7-7" />
-            </svg>
-            <span>{props.label || "Geri"}</span>
-        </button>
-    );
+    var C = window.KpssBackBtn;
+    if (!C) return null;
+    return <C onClick={props.onClick} label={props.label} />;
 }
 
 function Confetti() {
@@ -922,7 +917,7 @@ function ClozePlay(props) {
                         <p className="text-sm text-stone-400 mt-3">{leftCloze ? (leftCloze + " boşluk kaldı") : "Doğru çözülenler bir daha gelmez. Konuyu sıfırlarsan tekrar gelir."}</p>
                     </div>
                     <footer className="study-card-foot">
-                        <button onClick={props.onBack} className="back-btn"><span>Konular</span></button>
+                        <BackBtn onClick={props.onBack} label="Konular" />
                         {leftCloze ? (
                             <button onClick={props.onAgain} className="btn-primary text-white px-5 py-2.5 rounded-full font-semibold">Devam et</button>
                         ) : (
@@ -1367,7 +1362,7 @@ function MapPlay(props) {
                         <p className="text-stone-500">{score} doğru · {items.length - score} yanlış</p>
                     </div>
                     <footer className="study-card-foot">
-                        <button onClick={props.onBack} className="back-btn"><span>Konular</span></button>
+                        <BackBtn onClick={props.onBack} label="Konular" />
                         <button onClick={props.onAgain} className="btn-primary text-white px-5 py-2.5 rounded-full font-semibold">Tekrar oyna</button>
                     </footer>
                 </article>

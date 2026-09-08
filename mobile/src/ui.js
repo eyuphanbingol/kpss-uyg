@@ -358,6 +358,16 @@ export function ChipGroup(props) {
     );
 }
 
+export function BackChip(props) {
+    var dark = props.dark === true;
+    return (
+        <Pressable onPress={props.onPress} hitSlop={8} style={[styles.backChip, dark && styles.backChipDark, props.style]}>
+            <Text style={[styles.backChipMark, dark && styles.backChipTextDark]}>‹</Text>
+            <Text style={[styles.backChipLabel, dark && styles.backChipTextDark]}>{props.label || "Geri"}</Text>
+        </Pressable>
+    );
+}
+
 // ============================================================
 // CARD
 // ============================================================
@@ -945,6 +955,38 @@ var styles = StyleSheet.create({
         paddingLeft: 8,
         opacity: 0.7,
     },
+    backChip: {
+        alignSelf: "flex-start",
+        flexDirection: "row",
+        alignItems: "center",
+        paddingVertical: 8,
+        paddingLeft: 10,
+        paddingRight: 14,
+        borderRadius: 999,
+        backgroundColor: "#fff",
+        borderWidth: 1,
+        borderColor: "rgba(13, 44, 77, 0.12)",
+        marginBottom: 10,
+        gap: 4,
+    },
+    backChipDark: {
+        backgroundColor: "#2A2724",
+        borderColor: "rgba(255,255,255,0.12)",
+    },
+    backChipMark: {
+        color: "#0D2C4D",
+        fontSize: 18,
+        fontWeight: "600",
+        marginTop: -1,
+    },
+    backChipLabel: {
+        color: "#0D2C4D",
+        fontSize: 13,
+        fontWeight: "600",
+    },
+    backChipTextDark: {
+        color: "#F5EBC7",
+    },
 });
 
 // ============================================================
@@ -963,6 +1005,7 @@ export default {
     Chip,
     ChipGroup,
     Card,
+    BackChip,
     Section,
     Badge,
     Divider,

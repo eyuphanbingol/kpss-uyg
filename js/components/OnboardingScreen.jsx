@@ -1,5 +1,6 @@
 (function () {
     const { useState, useEffect, useRef } = React;
+    var BackBtn = window.KpssBackBtn;
 
     // ============================================================
     // YARDIMCI FONKSİYONLAR
@@ -302,14 +303,8 @@
                                 <a className="underline" href="yasal/aydinlatma.html" target="_blank" rel="noopener">KVKK Aydınlatma Metni</a>
                             </p>
 
-                            <div className="flex gap-2 pt-2">
-                                <button 
-                                    type="button" 
-                                    onClick={function () { setStep(1); }} 
-                                    className="flex-1 py-3.5 rounded-2xl border-2 border-stone-200 dark:border-stone-700 font-medium hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors"
-                                >
-                                    ← Geri
-                                </button>
+                            <div className="flex items-center gap-2 pt-2">
+                                <BackBtn onClick={function () { setStep(1); }} label="Geri" />
                                 <button 
                                     type="button"
                                     onClick={complete} 

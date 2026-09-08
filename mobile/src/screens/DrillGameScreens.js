@@ -4,7 +4,7 @@ import { useApp } from "../AppProvider";
 import { GamesEngine } from "../lib/gamesEngine";
 import { MapQuiz } from "../lib/mapQuiz";
 import { StudentStore } from "../lib/store";
-import { Card, PrimaryButton, ScrollScreen } from "../ui";
+import { Card, PrimaryButton, ScrollScreen, BackChip } from "../ui";
 import { colors } from "../lib/theme";
 
 export function ConquerPlayScreen({ navigation }) {
@@ -46,9 +46,7 @@ export function ConquerPlayScreen({ navigation }) {
         var qNow = quiz.items[quiz.i];
         return (
             <ScrollScreen dark={isDark}>
-                <Pressable onPress={function () { setQuiz(null); }}>
-                    <Text style={[styles.back, isDark && styles.muted]}>← Harita</Text>
-                </Pressable>
+                <BackChip dark={isDark} label="Harita" onPress={function () { setQuiz(null); }} />
                 <Text style={[styles.kicker, isDark && styles.muted]}>{GamesEngine.regionTitle(quiz.code)}</Text>
                 <Text style={[styles.title, isDark && styles.light]}>{GamesEngine.nameOf(quiz.code)}</Text>
                 <Text style={[styles.meta, isDark && styles.muted]}>Soru {quiz.i + 1} / {quiz.items.length} · hepsini art arda bil</Text>
@@ -82,9 +80,7 @@ export function ConquerPlayScreen({ navigation }) {
 
     return (
         <ScrollScreen dark={isDark}>
-            <Pressable onPress={function () { navigation.goBack(); }}>
-                <Text style={[styles.back, isDark && styles.muted]}>← Alıştırmalar</Text>
-            </Pressable>
+            <BackChip dark={isDark} label="Alıştırmalar" onPress={function () { navigation.goBack(); }} />
             <Text style={[styles.title, isDark && styles.light]}>Türkiye'yi Fethet</Text>
             <Text style={[styles.meta, isDark && styles.muted]}>{nOwn}/{codes.length} il boyandı · bölge bitince rozet</Text>
             <View style={{ height: 8, borderRadius: 99, backgroundColor: isDark ? "#292524" : "#E7E5E4", overflow: "hidden", marginTop: 10 }}>
@@ -172,9 +168,7 @@ export function TabuPlayScreen({ navigation }) {
     if (done) {
         return (
             <ScrollScreen dark={isDark}>
-                <Pressable onPress={function () { navigation.goBack(); }}>
-                    <Text style={[styles.back, isDark && styles.muted]}>← Alıştırmalar</Text>
-                </Pressable>
+                <BackChip dark={isDark} label="Alıştırmalar" onPress={function () { navigation.goBack(); }} />
                 <Card style={[styles.result, isDark && styles.cardDark]}>
                     <Text style={[styles.pct, isDark && styles.light]}>{score}</Text>
                     <Text style={[styles.meta, isDark && styles.muted]}>Rekor: {Math.max(score, best)}</Text>
@@ -186,9 +180,7 @@ export function TabuPlayScreen({ navigation }) {
 
     return (
         <ScrollScreen dark={isDark}>
-            <Pressable onPress={function () { navigation.goBack(); }}>
-                <Text style={[styles.back, isDark && styles.muted]}>← Alıştırmalar</Text>
-            </Pressable>
+            <BackChip dark={isDark} label="Alıştırmalar" onPress={function () { navigation.goBack(); }} />
             <Text style={[styles.kicker, isDark && styles.muted]}>{score} puan · {i + 1}/{deck.length} · notlardan kavram</Text>
             <Text style={[styles.meta, { marginBottom: 6 }]}>{card && card.topic ? card.topic : "Notlar"}</Text>
             <Text style={[styles.title, isDark && styles.light]}>Bu hangi kavram?</Text>
@@ -297,9 +289,7 @@ export function PanicPlayScreen({ navigation }) {
     if (over) {
         return (
             <ScrollScreen dark={isDark}>
-                <Pressable onPress={function () { navigation.goBack(); }}>
-                    <Text style={[styles.back, isDark && styles.muted]}>← Alıştırmalar</Text>
-                </Pressable>
+                <BackChip dark={isDark} label="Alıştırmalar" onPress={function () { navigation.goBack(); }} />
                 <Card style={[styles.result, isDark && styles.cardDark]}>
                     <Text style={[styles.pct, isDark && styles.light]}>{score}</Text>
                     <Text style={[styles.meta, isDark && styles.muted]}>Rekor: {Math.max(score, best)}</Text>
@@ -327,9 +317,7 @@ export function PanicPlayScreen({ navigation }) {
 
     return (
         <ScrollScreen dark={isDark}>
-            <Pressable onPress={function () { navigation.goBack(); }}>
-                <Text style={[styles.back, isDark && styles.muted]}>← Alıştırmalar</Text>
-            </Pressable>
+            <BackChip dark={isDark} label="Alıştırmalar" onPress={function () { navigation.goBack(); }} />
             <Text style={[styles.kicker, isDark && styles.muted]}>Son 30 saniye · doğru +2 · yanlış −3</Text>
             <Text style={[styles.timer, isDark && styles.light]}>{Math.max(0, ms / 1000).toFixed(1)}</Text>
             <View style={[styles.stem, isDark && styles.stemDark]}>

@@ -5,7 +5,7 @@ import { StudyPlanner } from "../lib/planner";
 import { StudentStore } from "../lib/store";
 import { KpssConfig } from "../lib/config";
 import { go } from "../nav";
-import { Card, ScrollScreen, Badge } from "../ui";
+import { Card, ScrollScreen, Badge, BackChip } from "../ui";
 import { colors, DERS_ICON, masteryLabel } from "../lib/theme";
 
 function itemsFromSorular(ders, konu, sorular) {
@@ -125,9 +125,7 @@ export function KonuListScreen({ route, navigation }) {
     return (
         <ScrollScreen dark={isDark}>
             {/* Back */}
-            <Pressable onPress={function () { navigation.goBack(); }}>
-                <Text style={[styles.backText, isDark && styles.textMuted]}>← Dersler</Text>
-            </Pressable>
+            <BackChip dark={isDark} label="Dersler" onPress={function () { navigation.goBack(); }} />
 
             {/* Header */}
             <View style={styles.konuHeader}>
@@ -227,9 +225,7 @@ export function KonuHubScreen({ route, navigation }) {
     return (
         <ScrollScreen dark={isDark}>
             {/* Back */}
-            <Pressable onPress={function () { navigation.goBack(); }}>
-                <Text style={[styles.backText, isDark && styles.textMuted]}>← Konular</Text>
-            </Pressable>
+            <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} />
 
             {/* Header */}
             <View style={styles.hubHeader}>

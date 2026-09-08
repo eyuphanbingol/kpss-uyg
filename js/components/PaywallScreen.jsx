@@ -1,5 +1,6 @@
 (function () {
     const { useState, useEffect, useRef } = React;
+    var BackBtn = window.KpssBackBtn;
 
     // ============================================================
     // YARDIMCI FONKSİYONLAR
@@ -158,7 +159,7 @@
                 <div className="max-w-lg mx-auto px-4 py-12 text-center">
                     <h1 className="text-xl font-black mb-2">Tüm özellikler açık</h1>
                     <p className="text-sm text-stone-400 mb-6">Abonelik şimdilik yok; deneme ve tercih listesi sınırlı değil.</p>
-                    <button onClick={props.onBack} className="px-5 py-2.5 rounded-xl btn-primary text-white text-sm font-semibold">Geri</button>
+                    <BackBtn onClick={props.onBack} label="Geri" />
                 </div>
             );
         }
@@ -175,12 +176,7 @@
                         <h1 className="text-2xl md:text-3xl font-black gradient-text">⭐ Premium</h1>
                         <p className="text-sm text-stone-400 mt-0.5">Hedefine daha hızlı ulaşmak için</p>
                     </div>
-                    <button 
-                        onClick={props.onBack} 
-                        className="px-4 py-2 rounded-xl border border-stone-200 dark:border-stone-700 text-sm font-medium hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors"
-                    >
-                        ✕ Kapat
-                    </button>
+                    <BackBtn onClick={props.onBack} label="Geri" />
                 </div>
 
                 {/* Info */}

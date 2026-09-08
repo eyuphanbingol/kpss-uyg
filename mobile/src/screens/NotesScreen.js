@@ -3,7 +3,7 @@ import { Pressable, Text, useWindowDimensions, View, StyleSheet } from "react-na
 import RenderHTML from "react-native-render-html";
 import { useApp } from "../AppProvider";
 import { StudentStore } from "../lib/store";
-import { PrimaryButton, ScrollScreen, Card } from "../ui";
+import { PrimaryButton, ScrollScreen, Card, BackChip } from "../ui";
 import { colors, DERS_ICON } from "../lib/theme";
 
 var NOTE_SKIN = "<style>"
@@ -82,9 +82,7 @@ export default function NotesScreen({ route, navigation }) {
     if (!notlar.length) {
         return (
             <ScrollScreen dark={isDark}>
-                <Pressable onPress={goBack}>
-                    <Text style={[styles.backText, isDark && styles.textMuted]}>← Geri</Text>
-                </Pressable>
+                <BackChip dark={isDark} label="Geri" onPress={goBack} />
                 <View style={styles.emptyContainer}>
                     <Text style={styles.emptyIcon}>📝</Text>
                     <Text style={[styles.emptyTitle, isDark && styles.textLight]}>
@@ -104,9 +102,7 @@ export default function NotesScreen({ route, navigation }) {
     return (
         <ScrollScreen dark={isDark}>
             {/* Back */}
-            <Pressable onPress={goBack}>
-                <Text style={[styles.backText, isDark && styles.textMuted]}>← Geri</Text>
-            </Pressable>
+            <BackChip dark={isDark} label="Geri" onPress={goBack} />
 
             {/* Header */}
             <View style={styles.header}>

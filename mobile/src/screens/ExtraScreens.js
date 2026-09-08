@@ -8,7 +8,7 @@ import { kpssData } from "../lib/catalog";
 import { supabase } from "../lib/supabase";
 import { trError } from "../lib/trError";
 import taban from "../content/tabanPuanlar.json";
-import { Card, PrimaryButton, ScrollScreen, Badge } from "../ui";
+import { Card, PrimaryButton, ScrollScreen, Badge, BackChip } from "../ui";
 import { colors } from "../lib/theme";
 
 function stripChoicePrefix(opt) {
@@ -33,9 +33,7 @@ export function PlacementScreen({ navigation }) {
     return (
         <ScrollScreen dark={isDark}>
             {/* Back */}
-            <Pressable onPress={function () { navigation.goBack(); }}>
-                <Text style={[styles.backText, isDark && styles.textMuted]}>← Geri</Text>
-            </Pressable>
+            <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
 
             {/* Header */}
             <View style={styles.header}>
@@ -158,9 +156,7 @@ export function LeaderboardScreen({ navigation }) {
     return (
         <ScrollScreen dark={isDark}>
             {/* Back */}
-            <Pressable onPress={function () { navigation.goBack(); }}>
-                <Text style={[styles.backText, isDark && styles.textMuted]}>← Geri</Text>
-            </Pressable>
+            <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
 
             {/* Header */}
             <View style={styles.header}>
@@ -278,9 +274,7 @@ export function HeatScreen({ navigation }) {
     return (
         <ScrollScreen dark={isDark}>
             {/* Back */}
-            <Pressable onPress={function () { navigation.goBack(); }}>
-                <Text style={[styles.backText, isDark && styles.textMuted]}>← Geri</Text>
-            </Pressable>
+            <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
 
             {/* Header */}
             <View style={styles.header}>
@@ -364,9 +358,7 @@ export function AiScreen({ navigation }) {
     return (
         <ScrollScreen dark={isDark}>
             {/* Back */}
-            <Pressable onPress={function () { navigation.goBack(); }}>
-                <Text style={[styles.backText, isDark && styles.textMuted]}>← Geri</Text>
-            </Pressable>
+            <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
 
             {/* Header */}
             <View style={styles.header}>
@@ -433,9 +425,7 @@ export function LiveScreen({ navigation }) {
     return (
         <ScrollScreen dark={isDark}>
             {/* Back */}
-            <Pressable onPress={function () { navigation.goBack(); }}>
-                <Text style={[styles.backText, isDark && styles.textMuted]}>← Geri</Text>
-            </Pressable>
+            <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
 
             {/* Header */}
             <View style={styles.header}>
@@ -488,9 +478,7 @@ export function PaywallScreen({ navigation }) {
     if (!StudentStore.premiumOfferEnabled()) {
         return (
             <ScrollScreen dark={isDark}>
-                <Pressable onPress={function () { navigation.goBack(); }}>
-                    <Text style={[styles.backText, isDark && styles.textMuted]}>← Geri</Text>
-                </Pressable>
+                <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
                 <View style={styles.header}>
                     <Text style={[styles.title, isDark && styles.textLight]}>Tüm özellikler açık</Text>
                     <Text style={[styles.subtitle, isDark && styles.textMuted]}>
@@ -504,9 +492,7 @@ export function PaywallScreen({ navigation }) {
     return (
         <ScrollScreen dark={isDark}>
             {/* Back */}
-            <Pressable onPress={function () { navigation.goBack(); }}>
-                <Text style={[styles.backText, isDark && styles.textMuted]}>← Geri</Text>
-            </Pressable>
+            <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
 
             {/* Header */}
             <View style={styles.header}>

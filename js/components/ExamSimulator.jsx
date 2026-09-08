@@ -1,5 +1,6 @@
 (function () {
     const { useEffect, useMemo, useRef, useState } = React;
+    var BackBtn = window.KpssBackBtn;
 
     // ============================================================
     // YARDIMCI FONKSİYONLAR
@@ -255,9 +256,7 @@
                 <div className="max-w-2xl mx-auto px-4 py-8 pb-10">
                     {/* Header */}
                     <div className="flex justify-between items-center mb-6">
-                        <button onClick={props.onBack} className="text-sm font-medium text-stone-500 hover:text-stone-700 transition-colors">
-                            ← Geri
-                        </button>
+                        <BackBtn onClick={props.onBack} label="Geri" />
                         <span className="text-xs text-stone-400">📋 Deneme</span>
                     </div>
 
@@ -349,9 +348,7 @@
                     {/* Header */}
                     <div className="flex justify-between items-center mb-6">
                         <h1 className="text-2xl font-black gradient-text">📊 Deneme Sonucu</h1>
-                        <button onClick={props.onBack} className="text-sm font-medium text-stone-500 hover:text-stone-700 transition-colors">
-                            ✕ Kapat
-                        </button>
+                        <BackBtn onClick={props.onBack} label="Geri" />
                     </div>
 
                     {/* Score */}

@@ -1,5 +1,6 @@
 (function () {
     const { useState, useMemo } = React;
+    var BackBtn = window.KpssBackBtn;
 
     function fmtWhen(iso) {
         if (!iso) return "";
@@ -60,10 +61,7 @@
                         <p className="text-sm text-stone-400 mt-1">Tekrar etmek istediğin kural, tarih, formül… buraya yaz. Yalnızca sen görürsün.</p>
                     </div>
                     {props.onBack ? (
-                        <button type="button" onClick={props.onBack}
-                            className="px-4 py-2 rounded-xl border border-stone-200 dark:border-stone-700 text-sm font-medium shrink-0">
-                            Kapat
-                        </button>
+                        <BackBtn onClick={props.onBack} label="Geri" />
                     ) : null}
                 </div>
 

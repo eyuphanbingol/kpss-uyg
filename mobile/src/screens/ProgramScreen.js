@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Pressable, Text, View, StyleSheet, ScrollView } from "react-native";
 import { useApp } from "../AppProvider";
 import { StudentStore } from "../lib/store";
-import { PrimaryButton, ScrollScreen, Card } from "../ui";
+import { PrimaryButton, ScrollScreen, Card, BackChip } from "../ui";
 import { colors, DERS_ICON } from "../lib/theme";
 
 // ============================================================
@@ -81,9 +81,7 @@ export default function ProgramScreen({ navigation }) {
     return (
         <ScrollScreen dark={isDark}>
             {/* Back */}
-            <Pressable onPress={function () { navigation.goBack(); }}>
-                <Text style={[styles.backText, isDark && styles.textMuted]}>← Geri</Text>
-            </Pressable>
+            <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
 
             {/* Header */}
             <View style={styles.header}>

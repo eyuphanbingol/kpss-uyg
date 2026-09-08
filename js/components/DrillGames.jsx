@@ -1,5 +1,6 @@
 (function () {
     const { useState, useEffect, useRef, useMemo } = React;
+    var BackBtn = window.KpssBackBtn;
 
     var COLORS = ["#127880", "#059669", "#4f46e5", "#c2410c"];
 
@@ -204,9 +205,7 @@
             <div className={"map-play-root conquer-root" + (quiz ? " conquer-quiz" : "")}>
                 <header className="map-play-top">
                     <div className="map-play-bar">
-                        <button type="button" className="back-btn" onClick={quiz ? function () { setQuiz(null); setPick(null); } : props.onBack}>
-                            <span>←</span> {quiz ? "Harita" : "Alıştırmalar"}
-                        </button>
+                        <BackBtn onClick={quiz ? function () { setQuiz(null); setPick(null); } : props.onBack} label={quiz ? "Harita" : "Alıştırmalar"} />
                         {!quiz ? (
                             <div className="conquer-colors">
                                 {COLORS.map(function (c) {
@@ -349,7 +348,7 @@
             return (
                 <div className="map-play-root tabu-root">
                     <header className="map-play-top">
-                        <button type="button" className="back-btn" onClick={props.onBack}><span>←</span> Alıştırmalar</button>
+                        <BackBtn onClick={props.onBack} label="Alıştırmalar" />
                     </header>
                     <div className="game-end">
                         <p className="tabu-end-kicker">Tur bitti</p>
@@ -369,7 +368,7 @@
             <div className="map-play-root tabu-root">
                 <header className="map-play-top">
                     <div className="map-play-bar">
-                        <button type="button" className="back-btn" onClick={props.onBack}><span>←</span> Alıştırmalar</button>
+                        <BackBtn onClick={props.onBack} label="Alıştırmalar" />
                         <span className="tabu-scorepill">{score} puan · {i + 1}/{deck.length}</span>
                     </div>
                     <p className="map-play-kicker">Notlardan kavram · az ipucu = yüksek puan</p>
@@ -498,7 +497,7 @@
             return (
                 <div className="map-play-root panic-root">
                     <header className="map-play-top">
-                        <button type="button" className="back-btn" onClick={props.onBack}><span>←</span> Alıştırmalar</button>
+                        <BackBtn onClick={props.onBack} label="Alıştırmalar" />
                     </header>
                     <div className="game-end">
                         <p className="tabu-end-kicker">Süre bitti</p>
@@ -535,7 +534,7 @@
             <div className={"map-play-root panic-root" + (flash === "ok" ? " panic-ok" : "") + (flash === "bad" ? " panic-bad" : "") + (low ? " panic-low" : "")}>
                 <header className="map-play-top">
                     <div className="map-play-bar">
-                        <button type="button" className="back-btn" onClick={props.onBack}><span>←</span> Alıştırmalar</button>
+                        <BackBtn onClick={props.onBack} label="Alıştırmalar" />
                         <span className="conquer-scorepill">{score} doğru</span>
                     </div>
                 </header>

@@ -5,7 +5,7 @@ import { ClozeEngine } from "../lib/clozeEngine";
 import { MapQuiz } from "../lib/mapQuiz";
 import { StudentStore } from "../lib/store";
 import { go } from "../nav";
-import { Card, PrimaryButton, ScrollScreen } from "../ui";
+import { Card, PrimaryButton, ScrollScreen, BackChip } from "../ui";
 import { colors, DERS_ICON } from "../lib/theme";
 
 var MAP_CARD_IMG = {
@@ -77,9 +77,7 @@ export function AlistirmaDersListScreen({ navigation }) {
 
     return (
         <ScrollScreen dark={isDark}>
-            <Pressable onPress={function () { navigation.goBack(); }}>
-                <Text style={[styles.back, isDark && styles.textMuted]}>← Alıştırmalar</Text>
-            </Pressable>
+            <BackChip dark={isDark} label="Alıştırmalar" onPress={function () { navigation.goBack(); }} />
             <Text style={[styles.konuTitle, isDark && styles.textLight]}>Boşluk doldurma</Text>
             <Text style={[styles.subtitle, isDark && styles.textMuted]}>Ders seç, sonra konu.</Text>
             {Object.keys(kpssData).map(function (ders) {
@@ -115,9 +113,7 @@ export function AlistirmaKonuListScreen({ route, navigation }) {
 
     return (
         <ScrollScreen dark={isDark}>
-            <Pressable onPress={function () { navigation.goBack(); }}>
-                <Text style={[styles.back, isDark && styles.textMuted]}>← Dersler</Text>
-            </Pressable>
+            <BackChip dark={isDark} label="Dersler" onPress={function () { navigation.goBack(); }} />
             <Text style={[styles.konuTitle, isDark && styles.textLight]}>{ders}</Text>
             <Text style={[styles.subtitle, isDark && styles.textMuted]}>Derslerle aynı sıra. Konu bitince burası da açılır.</Text>
             {konular.map(function (konu, idx) {
@@ -193,9 +189,7 @@ export function ClozePlayScreen({ route, navigation }) {
         var allSolved = totalCloze > 0 && leftCloze === 0;
         return (
             <ScrollScreen dark={isDark}>
-                <Pressable onPress={function () { navigation.goBack(); }}>
-                    <Text style={[styles.back, isDark && styles.textMuted]}>← Konular</Text>
-                </Pressable>
+                <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} />
                 <Text style={[styles.konuTitle, isDark && styles.textLight]}>{allSolved ? "Bu konudaki boşlukları çözdün." : "Bu konuda henüz boşluk yok."}</Text>
                 {allSolved ? (
                     <PrimaryButton title="Sıfırla" onPress={function () {
@@ -211,9 +205,7 @@ export function ClozePlayScreen({ route, navigation }) {
         var leftAfter = ClozeEngine.remainingCount(kd, StudentStore.solvedClozeIds(ders, konu));
         return (
             <ScrollScreen dark={isDark}>
-                <Pressable onPress={function () { navigation.goBack(); }}>
-                    <Text style={[styles.back, isDark && styles.textMuted]}>← Konular</Text>
-                </Pressable>
+                <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} />
                 <Card style={[styles.result, isDark && styles.cardDark]}>
                     <Text style={[styles.pct, isDark && styles.textLight]}>{Math.round((score / list.length) * 100)}%</Text>
                     <Text style={[styles.meta, isDark && styles.textMuted]}>{score} doğru · {list.length - score} yanlış</Text>
@@ -234,9 +226,7 @@ export function ClozePlayScreen({ route, navigation }) {
 
     return (
         <ScrollScreen dark={isDark}>
-            <Pressable onPress={function () { navigation.goBack(); }}>
-                <Text style={[styles.back, isDark && styles.textMuted]}>← Konular</Text>
-            </Pressable>
+            <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} />
             <Text style={[styles.kicker, isDark && styles.textMuted]}>{ders} · {idx + 1}/{list.length}</Text>
             <Text style={[styles.konuTitle, isDark && styles.textLight]}>{konu}</Text>
             <Card style={[isDark && styles.cardDark]}>
@@ -303,9 +293,7 @@ export function MapTopicsScreen({ navigation }) {
     var tree = MapQuiz.TREE || [];
     return (
         <ScrollScreen dark={isDark}>
-            <Pressable onPress={function () { navigation.goBack(); }}>
-                <Text style={[styles.back, isDark && styles.textMuted]}>← Alıştırmalar</Text>
-            </Pressable>
+            <BackChip dark={isDark} label="Alıştırmalar" onPress={function () { navigation.goBack(); }} />
             <Text style={[styles.konuTitle, isDark && styles.textLight]}>Harita oyunu</Text>
             <Text style={[styles.subtitle, isDark && styles.textMuted]}>Konu seç, hedef ili bul, sonra bilgi bağı.</Text>
             {tree.map(function (g) {
@@ -390,9 +378,7 @@ export function MapPlayScreen({ route, navigation }) {
     if (done) {
         return (
             <ScrollScreen dark={isDark}>
-                <Pressable onPress={function () { navigation.goBack(); }}>
-                    <Text style={[styles.back, isDark && styles.textMuted]}>← Konular</Text>
-                </Pressable>
+                <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} />
                 <Card style={[styles.result, isDark && styles.cardDark]}>
                     <Text style={[styles.pct, isDark && styles.textLight]}>{Math.round((score / list.length) * 100)}%</Text>
                     <Text style={[styles.meta, isDark && styles.textMuted]}>{score} doğru · {list.length - score} yanlış</Text>
@@ -413,9 +399,7 @@ export function MapPlayScreen({ route, navigation }) {
 
     return (
         <ScrollScreen dark={isDark}>
-            <Pressable onPress={function () { navigation.goBack(); }}>
-                <Text style={[styles.back, isDark && styles.textMuted]}>← Konular</Text>
-            </Pressable>
+            <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} />
             <Text style={[styles.kicker, isDark && styles.textMuted]}>{meta ? meta.title : "Harita"} · {idx + 1}/{list.length}</Text>
             <Text style={[styles.konuTitle, isDark && styles.textLight]}>{isMap ? "Haritada bul" : "Bilgi bağı"}</Text>
             <Card style={[isDark && styles.cardDark]}>

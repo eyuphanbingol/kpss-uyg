@@ -6,6 +6,7 @@
     // ============================================================
 
     var COL = ["#4f46e5", "#7c3aed", "#ec4899", "#f59e0b", "#10b981", "#6366f1", "#8b5cf6", "#d946ef"];
+    var BackBtn = window.KpssBackBtn;
 
     function getIntensityColor(value, max) {
         if (value === 0) return "rgba(241, 245, 249, 0.4)";
@@ -182,13 +183,7 @@
                             <h1 className="text-2xl md:text-3xl font-black gradient-text">📊 Isı Haritası</h1>
                             <p className="text-sm text-stone-400 mt-0.5">30 günlük çalışma tempon ve ders analizlerin</p>
                         </div>
-                        <button 
-                            type="button" 
-                            onClick={props.onBack} 
-                            className="px-4 py-2 rounded-xl border border-stone-200 dark:border-stone-700 text-sm font-medium hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors"
-                        >
-                            ✕ Kapat
-                        </button>
+                        <BackBtn onClick={props.onBack} label="Geri" />
                     </div>
                 ) : null}
 
