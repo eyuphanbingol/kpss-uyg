@@ -1,5 +1,5 @@
 import React from "react";
-import { Pressable, Text, View, StyleSheet, Alert } from "react-native";
+import { Text, View, StyleSheet, Alert } from "react-native";
 import { useApp } from "../AppProvider";
 import { StudyPlanner } from "../lib/planner";
 import { StudentStore } from "../lib/store";
@@ -62,12 +62,12 @@ export function DersHomeScreen({ navigation }) {
             {Object.keys(kpssData).map(function (ders) {
                 var s = stats[ders] || { konuSayisi: 0, soruSayisi: 0 };
                 return (
-                    <Pressable 
-                        key={ders} 
-                        unstable_pressDelay={0}
+                    <Card
+                        key={ders}
+                        dark={isDark}
                         onPress={function () { go(navigation, "KonuList", { ders: ders }); }}
+                        style={styles.dersCard}
                     >
-                        <Card style={[styles.dersCard, isDark && styles.cardDark]}>
                             <View style={styles.dersRow}>
                                 <Text style={styles.dersIcon}>{DERS_ICON[ders] || "📚"}</Text>
                                 <View style={styles.dersInfo}>
@@ -78,8 +78,7 @@ export function DersHomeScreen({ navigation }) {
                                 </View>
                                 <Text style={[styles.dersArrow, isDark && styles.textMuted]}>→</Text>
                             </View>
-                        </Card>
-                    </Pressable>
+                    </Card>
                 );
             })}
 
@@ -146,20 +145,19 @@ export function KonuListScreen({ route, navigation }) {
                 var m = masteryLabel(tp.mastery);
 
                 return (
-                    <Pressable 
-                        key={konu} 
-                        disabled={!open} 
-                        unstable_pressDelay={0}
+                    <Card
+                        key={konu}
+                        dark={isDark}
+                        disabled={!open}
                         onPress={function () { 
                             if (open) go(navigation, "KonuHub", { ders: ders, konu: konu }); 
                         }}
-                    >
-                        <Card style={[
+                        style={[
                             styles.konuCard,
                             !open && styles.konuCardLocked,
-                            isDark && styles.cardDark,
                             done && styles.konuCardDone,
-                        ]}>
+                        ]}
+                    >
                             <View style={styles.konuRow}>
                                 <View style={styles.konuLeft}>
                                     <View style={[
@@ -201,7 +199,6 @@ export function KonuListScreen({ route, navigation }) {
                                 )}
                             </View>
                         </Card>
-                    </Pressable>
                 );
             })}
         </ScrollScreen>
@@ -256,8 +253,7 @@ export function KonuHubScreen({ route, navigation }) {
             </View>
 
             {/* Notes Button */}
-            <Pressable onPress={function () { go(navigation, "Notes", { ders: ders, konu: konu }); }}>
-                <Card style={[styles.hubNoteCard, isDark && styles.cardDark]}>
+            <Card dark={isDark} onPress={function () { go(navigation, "Notes", { ders: ders, konu: konu }); }} style={styles.hubNoteCard}>
                     <Text style={styles.hubNoteIcon}>📖</Text>
                     <Text style={[styles.hubNoteTitle, isDark && styles.textLight]}>
                         Konu Özeti
@@ -265,21 +261,18 @@ export function KonuHubScreen({ route, navigation }) {
                     <Text style={[styles.hubNoteDesc, isDark && styles.textMuted]}>
                         {notlar.length} hap not · {tp.notesDone ? "tamamlandı" : "kaldığın yerden"}
                     </Text>
-                </Card>
-            </Pressable>
+            </Card>
 
             {(tp.solvedCloze && tp.solvedCloze.length) ? (
-                <Pressable onPress={function () {
+                <Card dark={isDark} onPress={function () {
                     Alert.alert("Boşlukları sıfırla", "Bu konudaki çözülen boşluklar baştan gelsin mi?", [
                         { text: "Vazgeç", style: "cancel" },
                         { text: "Sıfırla", style: "destructive", onPress: function () { StudentStore.resetCloze(ders, konu); } }
                     ]);
-                }}>
-                    <Card style={[styles.hubTestCard, isDark && styles.cardDark]}>
+                }} style={styles.hubTestCard}>
                         <Text style={[styles.hubTestTitle, isDark && styles.textLight]}>Boşlukları sıfırla</Text>
                         <Text style={[styles.hubTestDesc, isDark && styles.textMuted]}>Doğru çözülen boşluklar tekrar gelir.</Text>
-                    </Card>
-                </Pressable>
+                </Card>
             ) : null}
 
             {/* Test packs */}
@@ -292,15 +285,19 @@ export function KonuHubScreen({ route, navigation }) {
                         var packDone = StudentStore.isPackComplete(tp, p.no);
                         var packOpen = StudentStore.isPackOpen(tp, p.no);
                         return (
-                            <Pressable key={p.no} disabled={!packOpen} onPress={function () {
-                                openTopicPack(navigation, ders, konu, sorular, pi);
-                            }}>
-                                <Card style={[
+                            <Card
+                                key={p.no}
+                                dark={isDark}
+                                disabled={!packOpen}
+                                onPress={function () {
+                                    openTopicPack(navigation, ders, konu, sorular, pi);
+                                }}
+                                style={[
                                     styles.hubTestCard,
-                                    isDark && styles.cardDark,
                                     packDone && styles.hubTestCardDone,
                                     !packOpen && styles.hubTestCardLocked
-                                ]}>
+                                ]}
+                            >
                                     <Text style={styles.hubTestIcon}>{packDone ? "✓" : p.no}</Text>
                                     <Text style={[styles.hubTestTitle, isDark && styles.textLight]}>
                                         Test {p.no}
@@ -308,8 +305,7 @@ export function KonuHubScreen({ route, navigation }) {
                                     <Text style={[styles.hubTestDesc, isDark && styles.textMuted]}>
                                         {packDone ? "Çözüldü" : (packOpen ? (p.items.length + " soru") : ("Önce Test " + (p.no - 1) + "’i bitir"))}
                                     </Text>
-                                </Card>
-                            </Pressable>
+                            </Card>
                         );
                     })}
                 </View>

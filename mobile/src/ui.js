@@ -3,18 +3,18 @@ import {
     ActivityIndicator,
     Alert,
     Pressable,
-    ScrollView,
     StyleSheet,
     Text,
     TextInput,
     View,
-    TouchableOpacity,
     KeyboardAvoidingView,
     Platform,
     Dimensions,
     Modal,
 } from "react-native";
+import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
+import * as Haptics from "expo-haptics";
 import { colors } from "./lib/theme";
 
 // ============================================================
@@ -29,6 +29,32 @@ export function isDarkMode(dark) {
 
 export function getColor(dark, lightColor, darkColor) {
     return dark ? darkColor : lightColor;
+}
+
+export function hapticTap() {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light).catch(function () {});
+}
+
+export function Tap(props) {
+    return (
+        <TouchableOpacity
+            accessible={true}
+            accessibilityRole="button"
+            activeOpacity={props.activeOpacity != null ? props.activeOpacity : 0.65}
+            delayPressIn={0}
+            delayPressOut={0}
+            disabled={props.disabled}
+            hitSlop={props.hitSlop}
+            onPressIn={function () {
+                if (!props.disabled && !props.noHaptic) hapticTap();
+                if (props.onPressIn) props.onPressIn();
+            }}
+            onPress={props.onPress}
+            style={props.style}
+        >
+            {props.children}
+        </TouchableOpacity>
+    );
 }
 
 // ============================================================
@@ -77,7 +103,7 @@ export function ScrollScreen(props) {
                 ]}
                 keyboardShouldPersistTaps="always"
                 delaysContentTouches={false}
-                canCancelContentTouches={true}
+                canCancelContentTouches={false}
                 nestedScrollEnabled={false}
                 overScrollMode="never"
                 bounces={false}
@@ -131,16 +157,15 @@ export function PrimaryButton(props) {
     var isDisabled = props.disabled || props.busy;
 
     return (
-        <Pressable
+        <Tap
             onPress={props.onPress}
             disabled={isDisabled}
-            unstable_pressDelay={0}
+            activeOpacity={0.82}
             style={[
                 styles.primary,
                 isDisabled && styles.primaryDisabled,
                 props.style,
             ]}
-            android_ripple={{ color: "rgba(255,255,255,0.2)" }}
         >
             {props.busy ? (
                 <ActivityIndicator color="#fff" size="small" />
@@ -149,7 +174,7 @@ export function PrimaryButton(props) {
                     {props.title || props.children}
                 </Text>
             )}
-        </Pressable>
+        </Tap>
     );
 }
 
@@ -373,10 +398,10 @@ export function ChipGroup(props) {
 export function BackChip(props) {
     var dark = props.dark === true;
     return (
-        <Pressable onPress={props.onPress} hitSlop={8} unstable_pressDelay={0} style={[styles.backChip, dark && styles.backChipDark, props.style]}>
+        <Tap hitSlop={8} onPress={props.onPress} style={[styles.backChip, dark && styles.backChipDark, props.style]}>
             <Text style={[styles.backChipMark, dark && styles.backChipTextDark]}>‹</Text>
             <Text style={[styles.backChipLabel, dark && styles.backChipTextDark]}>{props.label || "Geri"}</Text>
-        </Pressable>
+        </Tap>
     );
 }
 
@@ -386,25 +411,26 @@ export function BackChip(props) {
 
 export function Card(props) {
     var isDark = props.dark === true;
-    var isPressable = props.onPress !== undefined;
+    var cardStyle = [
+        styles.card,
+        isDark && styles.cardDark,
+        props.elevated && styles.cardElevated,
+        props.glass && styles.cardGlass,
+        props.style,
+    ];
 
-    var CardComponent = isPressable ? TouchableOpacity : View;
+    if (props.onPress) {
+        return (
+            <Tap disabled={props.disabled} onPress={props.onPress} style={cardStyle} activeOpacity={0.7}>
+                {props.children}
+            </Tap>
+        );
+    }
 
     return (
-        <CardComponent
-            onPress={props.onPress}
-            activeOpacity={0.8}
-            delayPressIn={0}
-            style={[
-                styles.card,
-                isDark && styles.cardDark,
-                props.elevated && styles.cardElevated,
-                props.glass && styles.cardGlass,
-                props.style,
-            ]}
-        >
+        <View style={cardStyle}>
             {props.children}
-        </CardComponent>
+        </View>
     );
 }
 

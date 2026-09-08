@@ -20,7 +20,7 @@ import { AiScreen, HeatScreen, LeaderboardScreen, LiveScreen, PaywallScreen, Pla
 import SplashScreen from "./screens/SplashScreen";
 import { StatusBar } from "expo-status-bar";
 import { colors } from "./lib/theme";
-import { GhostButton, Screen, Card } from "./ui";
+import { GhostButton, Screen, Card, hapticTap } from "./ui";
 
 // ============================================================
 // NAVIGATORLAR
@@ -105,6 +105,9 @@ function Tabs() {
                             key={screen.name}
                             name={screen.name}
                             component={screen.component}
+                            listeners={{
+                                tabPress: function () { hapticTap(); }
+                            }}
                             options={{
                                 title: screen.label,
                                 tabBarIcon: function ({ focused }) {
