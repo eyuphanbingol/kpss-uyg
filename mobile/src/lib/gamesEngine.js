@@ -440,26 +440,33 @@ globalThis.GamesBank = GamesBank;
 
     function tabuDeck(n, kpssData) {
         n = n || 12;
-        var fromNotes = tabuFromNotes(kpssData);
         var extra = (bank().TABU || []).map(function (card) {
             var clues = collectTabuClues(card.clues || [], card.answer, 6);
+            if (clues.length < 2) clues = (card.clues || []).slice(0, 3);
             return {
                 answer: card.answer,
                 clues: clues,
                 choices: card.choices || [card.answer],
                 topic: "KPSS"
             };
-        }).filter(function (card) { return card.clues.length >= 2; });
-        var pool = fromNotes.length >= 8 ? fromNotes : fromNotes.concat(extra);
+        }).filter(function (card) { return (card.clues || []).length >= 2 && card.answer; });
+        var fromNotes = [];
+        try {
+            if (extra.length < n) fromNotes = tabuFromNotes(kpssData);
+        } catch (e) { fromNotes = []; }
+        var pool = extra.concat(fromNotes);
+        if (!pool.length) return [];
         return shuffle(pool).slice(0, n).map(function (card, i) {
             var clues = (card.clues || []).slice(0, 3);
             while (clues.length < 3) clues.push("Notlardaki tanımına göre tahmin et");
+            var choices = (card.choices || [card.answer]).slice();
+            if (choices.indexOf(card.answer) < 0) choices.unshift(card.answer);
             return {
                 id: i,
                 answer: card.answer,
                 clues: clues,
                 topic: card.topic || "KPSS",
-                choices: shuffle(card.choices || [card.answer])
+                choices: shuffle(choices).slice(0, 4)
             };
         });
     }
