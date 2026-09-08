@@ -236,7 +236,7 @@
                     <h2 id="sss-title" className="font-display font-bold text-xl mb-4">Sık sorulanlar</h2>
                     <details>
                         <summary>Atanly nedir?</summary>
-                        <p>KPSS GY-GK çalışma odası: günlük hedef, kilitli Tarih konuları, eksikler, istatistik, Türkiye{"'"}yi Fethet, harita ve kavram oyunları. Lisans, ön lisans, ortaöğretim.</p>
+                        <p>{"KPSS GY-GK çalışma odası: günlük hedef, kilitli Tarih konuları, eksikler, istatistik, Türkiye'yi Fethet, harita ve kavram oyunları. Lisans, ön lisans, ortaöğretim."}</p>
                     </details>
                     <details>
                         <summary>Ücretsiz mi?</summary>
@@ -259,7 +259,7 @@
                 <section className="land-wide">
                     <div className="land-cta">
                         <p className="land-kicker mb-3">Mobil</p>
-                        <p className="font-display font-extrabold text-2xl mb-2">Yakında App Store ve Play Store{"'"}da.</p>
+                        <p className="font-display font-extrabold text-2xl mb-2">{"Yakında App Store ve Play Store'da."}</p>
                         <p className="text-sm text-white/65 mb-5 leading-relaxed">
                             Şimdilik tarayıcıdan tam Atanly. iPhone ve Android uygulamaları yolda — aynı hesap, aynı ilerleme.
                         </p>
@@ -274,7 +274,7 @@
                             </div>
                         </div>
                         <button type="button" onClick={props.onSignup} className="w-full sm:w-auto px-8 py-3.5 rounded-2xl font-bold bg-gold-500 text-stone-900">
-                            Web{"'"}de şimdi başla
+                            {"Web'de şimdi başla"}
                         </button>
                     </div>
                     <p className="text-[10px] text-center text-white/35 mt-8 leading-relaxed">
