@@ -6,9 +6,17 @@ import { StudentStore } from "../lib/store";
 import { PrimaryButton, ScrollScreen, Card } from "../ui";
 import { colors, DERS_ICON } from "../lib/theme";
 
-// ============================================================
-// NOTES SCREEN
-// ============================================================
+var NOTE_SKIN = "<style>"
+    + ".note-html{font-size:16px;line-height:1.65;color:#1c1917}"
+    + ".note-html .text-xs,.note-html .text-sm,.note-html .text-lg,.note-html .text-xl{font-size:16px!important;line-height:1.65!important}"
+    + ".note-html b,.note-html strong{color:#041C24;font-weight:800}"
+    + ".note-html span.inline-flex{display:inline-flex!important;max-width:100%;padding:6px 12px!important;border-radius:999px!important;background:linear-gradient(135deg,#041C24,#127880)!important;color:#F5EBC7!important;border:0!important;font-size:11px!important;font-weight:800!important;letter-spacing:.06em}"
+    + ".note-html [class*='rounded-xl'],.note-html [class*='rounded-lg'],.note-html [class*='rounded-2xl']{background:#f6f3ed!important;border:1px solid rgba(18,120,128,.14)!important}"
+    + ".note-html span.inline-flex[class*='rounded']{background:linear-gradient(135deg,#041C24,#127880)!important;color:#F5EBC7!important;border:0!important}"
+    + ".note-html table{width:100%;border-collapse:collapse;font-size:15px}"
+    + ".note-html th,.note-html td{padding:10px 12px;border-bottom:1px solid rgba(13,44,77,.08);text-align:left}"
+    + ".note-html thead tr{background:#eef6f6}"
+    + "</style>";
 
 export default function NotesScreen({ route, navigation }) {
     var ders = route.params.ders;

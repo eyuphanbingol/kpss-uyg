@@ -1650,7 +1650,7 @@ function NotesView(props) {
                         </div>
                         <div className="note-progress">{idx + 1}/{notlar.length}</div>
                     </header>
-                    <div key={idx} className="study-card-body text-[16px] leading-relaxed" dangerouslySetInnerHTML={{ __html: notlar[idx] }} />
+                    <div key={idx} className="study-card-body note-html text-[16px] leading-relaxed" dangerouslySetInnerHTML={{ __html: notlar[idx] }} />
                     <footer className="study-card-foot">
                         <button disabled={idx === 0} onClick={function () { props.onIndex(idx - 1); }}
                             className={"back-btn " + (idx === 0 ? "opacity-30 pointer-events-none" : "")}>
