@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <title>Atanly</title>
+    <title>Atanly — KPSS çalışma alanı</title>
+    <meta name="description" content="KPSS GY-GK için not, soru, tekrar ve deneme. Konu konu ilerle, hesabınla kaldığın yerden devam et.">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#041C24">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png?v=19">
@@ -197,7 +198,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.86.0/dist/umd/supabase.js"></script>
     <script src="js/supabaseClient.js?v=18"></script>
     <script src="js/syncEngine.js?v=28"></script>
-    <script src="js/jsxLoader.js?v=62"></script>
+    <script src="js/jsxLoader.js?v=63"></script>
     <script src="js/icons.js?v=18"></script>
 
     <style>
@@ -257,6 +258,82 @@
         }
         .brand-ring-inner {
             width: 220px;
+            height: 220px;
+            margin-left: -110px;
+            top: 30%;
+            border: 1px solid rgba(197, 160, 89, 0.18);
+        }
+
+        .land-page {
+            min-height: 100vh;
+            min-height: 100dvh;
+            background: linear-gradient(165deg, #03151b 0%, #041C24 28%, #0A3842 62%, #0e5a62 100%);
+            overflow-x: hidden;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            --app-tabbar-h: 8px;
+        }
+        .land-nav {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            backdrop-filter: blur(14px);
+            background: rgba(4, 28, 36, 0.72);
+            border-bottom: 1px solid rgba(245, 235, 199, 0.08);
+        }
+        .land-nav-inner {
+            max-width: 56rem;
+            margin: 0 auto;
+            padding: 10px 16px;
+            padding-top: max(10px, env(safe-area-inset-top));
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        .land-hero {
+            max-width: 56rem;
+            margin: 0 auto;
+            padding: 2.25rem 1.25rem 2rem;
+        }
+        @media (min-width: 640px) {
+            .land-hero { padding: 4rem 2rem 3rem; }
+        }
+        .land-grid {
+            max-width: 56rem;
+            margin: 0 auto;
+            padding: 0 1.25rem 2.5rem;
+            display: grid;
+            gap: 12px;
+        }
+        @media (min-width: 768px) {
+            .land-grid { grid-template-columns: repeat(3, 1fr); padding-left: 2rem; padding-right: 2rem; }
+        }
+        .land-card {
+            border-radius: 1.25rem;
+            padding: 1.15rem 1.2rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(245, 235, 199, 0.12);
+        }
+        .land-stepnum {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 9999px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: #041C24;
+            background: #C9A227;
+        }
+        .land-cta {
+            border-radius: 1.75rem;
+            padding: 1.5rem 1.35rem;
+            background: rgba(4, 28, 36, 0.45);
+            border: 1px solid rgba(201, 162, 39, 0.28);
+        }
             height: 220px;
             margin-left: -110px;
             top: 32%;

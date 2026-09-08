@@ -22,6 +22,119 @@
         return "Çok fazla deneme. " + left + " saniye bekle, sonra tekrar dene.";
     }
 
+    function wantAuthFromUrl() {
+        try {
+            var q = new URLSearchParams(window.location.search || "");
+            if (q.get("reset") === "1" || q.get("giris") === "1" || q.get("kayit") === "1") return true;
+            if (q.get("code") || q.get("type") === "recovery") return true;
+            var h = String(window.location.hash || "");
+            if (/access_token|refresh_token|type=recovery/.test(h)) return true;
+        } catch (e) {}
+        return false;
+    }
+
+    function LandingPage(props) {
+        var logo = window.AtanomLogo
+            ? window.AtanomLogo("h-14 w-14 object-contain")
+            : <img src="icons/atanom.png?v=18" alt="" className="h-14 w-14 object-contain" />;
+        var feats = [
+            { t: "Konu konu not", d: "Tarih, coğrafya, Türkçe, vatandaşlık ve güncel. Dağınık PDF yok; sıra sıra açılır." },
+            { t: "Test ve tekrar", d: "Konu testleri kilitlenir, yanlışın kalır. Aralıklı tekrar ile unutmayı kesersin." },
+            { t: "Deneme ve oyun", d: "Tam deneme, harita, tempo. Sınav gününe kadar aynı yerde çalışırsın." }
+        ];
+        var steps = [
+            { n: "1", t: "Hesap aç", d: "E-posta veya Google. Lisans, ön lisans, ortaöğretim — kulvarını seç." },
+            { n: "2", t: "Konuya gir", d: "Notu oku, testi çöz. İlerleme cihazında ve hesabında durur." },
+            { n: "3", t: "Seriyi bozma", d: "Günlük soru, yanlış defteri, deneme. Atama hedefine göre tempo." }
+        ];
+        return (
+            <div className="land-page text-stone-100">
+                <header className="land-nav">
+                    <div className="land-nav-inner">
+                        <div className="flex items-center gap-2.5 min-w-0">
+                            {logo}
+                            <span className="font-display font-extrabold text-lg tracking-tight truncate">Atanly</span>
+                        </div>
+                        <div className="flex items-center gap-2 shrink-0">
+                            <button type="button" onClick={props.onLogin} className="px-3.5 py-2 rounded-xl text-sm font-semibold text-gold-100/90 hover:bg-white/10">
+                                Giriş yap
+                            </button>
+                            <button type="button" onClick={props.onSignup} className="px-3.5 py-2 rounded-xl text-sm font-bold bg-gold-500 text-stone-900 hover:bg-gold-400">
+                                Ücretsiz başla
+                            </button>
+                        </div>
+                    </div>
+                </header>
+
+                <section className="land-hero">
+                    <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-gold-400 mb-4">KPSS GY-GK çalışma alanı</p>
+                    <h1 className="font-display font-extrabold text-[2rem] sm:text-5xl leading-[1.12] max-w-3xl">
+                        Soru bankası değil.<br />Atamaya giden düzen.
+                    </h1>
+                    <p className="mt-5 text-base sm:text-lg text-white/75 max-w-xl leading-relaxed">
+                        Not, soru, tekrar ve deneme tek yerde. Konular sırayla açılır; ilerlemen hesabına yazılır. Telefonda da, masada da aynı Atanly.
+                    </p>
+                    <div className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md">
+                        <button type="button" onClick={props.onSignup} className="flex-1 py-3.5 rounded-2xl font-bold bg-gold-500 text-stone-900 text-[15px] hover:bg-gold-400">
+                            Ücretsiz hesap aç
+                        </button>
+                        <button type="button" onClick={props.onLogin} className="flex-1 py-3.5 rounded-2xl font-semibold border border-white/25 bg-white/5 hover:bg-white/10 text-[15px]">
+                            Giriş yap
+                        </button>
+                    </div>
+                    <p className="mt-4 text-xs text-white/45">Google ile de girebilirsin. Kart istemiyoruz.</p>
+                </section>
+
+                <section className="land-grid">
+                    {feats.map(function (f) {
+                        return (
+                            <article key={f.t} className="land-card">
+                                <h2 className="font-display font-bold text-lg text-white mb-2">{f.t}</h2>
+                                <p className="text-sm text-white/65 leading-relaxed">{f.d}</p>
+                            </article>
+                        );
+                    })}
+                </section>
+
+                <section className="px-5 sm:px-8 max-w-3xl mx-auto pb-8">
+                    <h2 className="font-display font-bold text-xl mb-5">Nasıl işler</h2>
+                    <ol className="space-y-4">
+                        {steps.map(function (s) {
+                            return (
+                                <li key={s.n} className="flex gap-4">
+                                    <span className="land-stepnum">{s.n}</span>
+                                    <div>
+                                        <p className="font-semibold">{s.t}</p>
+                                        <p className="text-sm text-white/60 mt-0.5 leading-relaxed">{s.d}</p>
+                                    </div>
+                                </li>
+                            );
+                        })}
+                    </ol>
+                </section>
+
+                <section className="px-5 sm:px-8 max-w-3xl mx-auto pb-16">
+                    <div className="land-cta">
+                        <p className="font-display font-extrabold text-2xl mb-2">Bugün bir konu bitir.</p>
+                        <p className="text-sm text-white/65 mb-6">GY-GK hazır. A grubu, eğitim, ÖABT sonra gelir — şimdi asıl işe bak.</p>
+                        <button type="button" onClick={props.onSignup} className="w-full sm:w-auto px-8 py-3.5 rounded-2xl font-bold bg-gold-500 text-stone-900">
+                            Atanly ile başla
+                        </button>
+                    </div>
+                    <p className="text-[10px] text-center text-white/35 mt-8 leading-relaxed">
+                        <a className="underline" href="yasal/aydinlatma.html">KVKK</a>
+                        {" · "}
+                        <a className="underline" href="yasal/kullanim.html">Kullanım</a>
+                        {" · "}
+                        <a className="underline" href="yasal/gizlilik.html">Gizlilik</a>
+                        {" · "}
+                        <a className="underline" href="yasal/cerez.html">Çerez</a>
+                    </p>
+                </section>
+            </div>
+        );
+    }
+
     function getStrengthLabel(pass) {
         if (!pass) return { label: "Şifre gir", color: "text-stone-400", bg: "bg-stone-200" };
         if (pass.length < 6) return { label: "Zayıf (6+ karakter)", color: "text-rose-500", bg: "bg-rose-500" };
@@ -60,6 +173,10 @@
         const [busy, setBusy] = useState(false);
         const [showPassword, setShowPassword] = useState(false);
         const [rememberMe, setRememberMe] = useState(false);
+        const [showLand, setShowLand] = useState(function () {
+            if (props.recovery) return false;
+            return !wantAuthFromUrl();
+        });
         const [recovery, setRecovery] = useState(function () {
             return !!(props.recovery || (window.SupabaseClient && window.SupabaseClient.recoveryPending && window.SupabaseClient.recoveryPending()));
         });
@@ -80,6 +197,17 @@
         }, [props.recovery]);
 
         useEffect(function () {
+            if (recovery || props.recovery) setShowLand(false);
+        }, [recovery, props.recovery]);
+
+        useEffect(function () {
+            try {
+                var q = new URLSearchParams(window.location.search || "");
+                if (q.get("kayit") === "1") setMode("up");
+            } catch (e) {}
+        }, []);
+
+        useEffect(function () {
             if (!sb) return;
             var sub = sb.auth.onAuthStateChange(function (event) {
                 if (event === "PASSWORD_RECOVERY") {
@@ -93,8 +221,8 @@
         }, []);
 
         useEffect(function () {
-            if (mode === "in" && !recovery && emailRef.current) emailRef.current.focus();
-        }, [mode, recovery]);
+            if (mode === "in" && !recovery && !showLand && emailRef.current) emailRef.current.focus();
+        }, [mode, recovery, showLand]);
 
         useEffect(function () {
             if (!recovery) return;
@@ -754,6 +882,11 @@
                     </div>
                 ) : (
                     <div>
+                {props.gate ? (
+                    <button type="button" onClick={function () { setShowLand(true); setMsg(""); }} className="mb-4 text-sm font-medium text-stone-500 hover:text-stone-800">
+                        ← Tanıtıma dön
+                    </button>
+                ) : null}
                 {/* Mode Toggle */}
                 <div className="flex p-1.5 rounded-2xl bg-stone-100 dark:bg-stone-800 mb-6">
                     <button 
@@ -828,6 +961,15 @@
         // ============================================================
 
         if (!props.gate) return form;
+
+        if (showLand && !recovery) {
+            return (
+                <LandingPage
+                    onLogin={function () { setShowLand(false); setMode("in"); setMsg(""); }}
+                    onSignup={function () { setShowLand(false); setMode("up"); setStep(1); setMsg(""); }}
+                />
+            );
+        }
 
         return (
             <div className="brand-backdrop min-h-screen flex items-center justify-center px-6 py-12 relative overflow-hidden">
