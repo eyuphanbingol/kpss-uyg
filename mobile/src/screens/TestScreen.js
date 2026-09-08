@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Pressable, Text, View, StyleSheet } from "react-native";
+import { Pressable, Text, View, StyleSheet, Image } from "react-native";
 import { StudentStore } from "../lib/store";
 import { confirmQuit, PrimaryButton, Screen, ScrollScreen, Card, Badge } from "../ui";
 import { colors } from "../lib/theme";
+import { questionImages } from "../lib/media";
 
 // ============================================================
 // TEST SCREEN
@@ -275,6 +276,16 @@ export default function TestScreen({ route, navigation }) {
 
                 {/* Question */}
                 <Text style={styles.testQuestion}>{soru.question}</Text>
+                {questionImages(soru).map(function (uri, gi) {
+                    return (
+                        <Image
+                            key={uri + gi}
+                            source={{ uri: uri }}
+                            resizeMode="contain"
+                            style={styles.testImg}
+                        />
+                    );
+                })}
 
                 {/* Options */}
                 <View style={styles.testOptions}>
@@ -534,6 +545,13 @@ var styles = StyleSheet.create({
         lineHeight: 26,
         marginBottom: 16,
         color: colors.text,
+    },
+    testImg: {
+        width: "100%",
+        height: 220,
+        backgroundColor: "#F6F1E4",
+        borderRadius: 16,
+        marginBottom: 16
     },
     testOptions: {
         flex: 1,

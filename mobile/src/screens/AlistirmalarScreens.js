@@ -5,8 +5,9 @@ import { ClozeEngine } from "../lib/clozeEngine";
 import { MapQuiz } from "../lib/mapQuiz";
 import { StudentStore } from "../lib/store";
 import { go } from "../nav";
-import { Card, PrimaryButton, ScrollScreen, BackChip } from "../ui";
+import { Card, PrimaryButton, ScrollScreen, BackChip, Screen } from "../ui";
 import { colors, DERS_ICON } from "../lib/theme";
+import { TrMapView } from "../components/TrMapView";
 
 var MAP_CARD_IMG = {
     volkan: require("../../assets/volkan-hover.png"),
@@ -390,46 +391,66 @@ export function MapPlayScreen({ route, navigation }) {
 
     var step = list[idx];
     var isMap = step && step.type === "map";
-    var vb = String(layer.viewBox || "0 0 1000 422").split(" ").map(Number);
     var ok = false;
     if (picked) {
         if (isMap) ok = picked === step.item.id;
         else ok = String(picked) === String(step.answer);
     }
+    var clearedMap = {};
+    cleared.forEach(function (id) { clearedMap[id] = true; });
+    var mapH = Math.max(220, Math.round(Dimensions.get("window").height * 0.38));
+    var labels = [];
+    if (isMap && picked && step.item) {
+        var hitPin = (layer.pins || []).filter(function (p) { return p.id === picked; })[0];
+        var rightPin = (layer.pins || []).filter(function (p) { return p.id === step.item.id; })[0];
+        if (picked === step.item.id && rightPin) labels.push({ x: rightPin.x, y: rightPin.y, text: step.item.name, kind: "ok" });
+        else {
+            if (hitPin) labels.push({ x: hitPin.x, y: hitPin.y, text: hitPin.name, kind: "bad" });
+            if (rightPin) labels.push({ x: rightPin.x, y: rightPin.y, text: step.item.name, kind: "ok" });
+        }
+    }
 
     return (
+        isMap ? (
+        <Screen dark={isDark}>
+            <View style={{ paddingHorizontal: 20, paddingTop: 8, flex: 1 }}>
+            <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} />
+            <Text style={[styles.kicker, isDark && styles.textMuted]}>{meta ? meta.title : "Harita"} · {idx + 1}/{list.length}</Text>
+            <Text style={[styles.konuTitle, isDark && styles.textLight]}>Haritada bul</Text>
+            <Text style={[styles.prompt, isDark && styles.textLight]}>{step.prompt}</Text>
+            <TrMapView
+                mode="play"
+                height={mapH}
+                pins={layer.pins || []}
+                glyph={glyph}
+                picked={picked}
+                targetId={step.item && step.item.id}
+                cleared={clearedMap}
+                labels={labels}
+                locked={!!picked}
+                onPin={function (id) {
+                    if (picked || clearedMap[id]) return;
+                    setPicked(id);
+                    if (id === step.item.id) setScore(score + 1);
+                    setTimeout(advance, 5500);
+                }}
+            />
+            <Text style={[styles.mapHint, isDark && styles.textMuted]}>Türkiye haritası · işarete bas</Text>
+            {picked ? (
+                <Text style={{ marginTop: 10, fontWeight: "700", color: ok ? "#059669" : "#E11D48" }}>
+                    {ok ? "Doğru — " + step.item.name : ("Doğrusu: " + step.item.name)}
+                </Text>
+            ) : null}
+            </View>
+        </Screen>
+        ) : (
         <ScrollScreen dark={isDark}>
             <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} />
             <Text style={[styles.kicker, isDark && styles.textMuted]}>{meta ? meta.title : "Harita"} · {idx + 1}/{list.length}</Text>
-            <Text style={[styles.konuTitle, isDark && styles.textLight]}>{isMap ? "Haritada bul" : "Bilgi bağı"}</Text>
+            <Text style={[styles.konuTitle, isDark && styles.textLight]}>Bilgi bağı</Text>
             <Card style={[isDark && styles.cardDark]}>
                 <Text style={[styles.prompt, isDark && styles.textLight]}>{step.prompt}</Text>
-                {isMap ? (
-                    <View>
-                        <View style={[styles.mapBoard, { height: Math.min(Math.round((Dimensions.get("window").width - 48) * 0.422), Math.round(Dimensions.get("window").height * 0.42)) }]}>
-                            {layer.pins.map(function (p) {
-                            var left = ((p.x - vb[0]) / vb[2]) * 100;
-                            var top = ((p.y - vb[1]) / vb[3]) * 100;
-                            var donePin = cleared.indexOf(p.id) >= 0;
-                            var tint = null;
-                            if (picked && p.id === step.item.id) tint = "rgba(5,150,105,0.22)";
-                            else if (picked && p.id === picked) tint = "rgba(225,29,72,0.22)";
-                            return (
-                                <Pressable key={p.id} disabled={!!picked || donePin} onPress={function () {
-                                    if (picked) return;
-                                    setPicked(p.id);
-                                    if (p.id === step.item.id) setScore(score + 1);
-                                    setTimeout(advance, 5500);
-                                }} style={[styles.mapMark, { left: left + "%", top: top + "%", opacity: donePin ? 0.42 : 1, backgroundColor: tint || "transparent" }]}>
-                                    <Text style={styles.mapIco}>{p.glyph || glyph}</Text>
-                                </Pressable>
-                            );
-                        })}
-                    </View>
-                        <Text style={[styles.mapHint, isDark && styles.textMuted]}>Harita tam görünür; işarete bas.</Text>
-                    </View>
-                ) : (
-                    (step.choices || []).map(function (c, ci) {
+                    {(step.choices || []).map(function (c, ci) {
                         var isP = picked === c;
                         var isA = String(c) === String(step.answer);
                         var bg = "#fff";
@@ -446,15 +467,15 @@ export function MapPlayScreen({ route, navigation }) {
                                 <Text style={[styles.choiceText, isDark && !picked && styles.textLight]}>{c}</Text>
                             </Pressable>
                         );
-                    })
-                )}
+                    })}
                 {picked ? (
                     <Text style={{ marginTop: 10, fontWeight: "700", color: ok ? "#059669" : "#E11D48" }}>
-                        {ok ? "Doğru — " + (isMap ? step.item.name : step.answer) : ("Doğrusu: " + (isMap ? step.item.name : step.answer))}
+                        {ok ? "Doğru — " + step.answer : ("Doğrusu: " + step.answer)}
                     </Text>
                 ) : null}
             </Card>
         </ScrollScreen>
+        )
     );
 }
 

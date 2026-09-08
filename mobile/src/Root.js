@@ -38,8 +38,7 @@ function TabIcon({ focused, icon, label }) {
 
     return (
         <View style={styles.tabIcon}>
-            <Text style={{ fontSize: 22, color: color }}>{icon}</Text>
-            {isActive && <View style={styles.tabActiveIndicator} />}
+            <Text style={{ fontSize: 20 }}>{icon}</Text>
         </View>
     );
 }
@@ -59,9 +58,9 @@ function Tabs() {
             backgroundColor: isDark ? colors.bgDark : "#fff",
             borderTopWidth: 1,
             borderTopColor: isDark ? colors.muted : colors.border,
-            height: 64,
+            height: 72,
             paddingBottom: 8,
-            paddingTop: 4,
+            paddingTop: 6,
             elevation: 8,
             shadowColor: "#000",
             shadowOffset: { width: 0, height: -2 },
@@ -70,7 +69,7 @@ function Tabs() {
         },
         tabBarLabelStyle: {
             fontSize: 10,
-            fontWeight: "600",
+            fontWeight: "700",
         },
         tabBarIconStyle: {
             marginTop: 0,
@@ -114,7 +113,7 @@ function Tabs() {
                                         />
                                     );
                                 },
-                                tabBarLabel: function () { return null; },
+                                tabBarLabel: screen.label,
                             }}
                         />
                     );

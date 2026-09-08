@@ -1,10 +1,31 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Pressable, Text, useWindowDimensions, View, StyleSheet } from "react-native";
+import { Image, Pressable, Text, useWindowDimensions, View, StyleSheet } from "react-native";
 import RenderHTML from "react-native-render-html";
 import { useApp } from "../AppProvider";
 import { StudentStore } from "../lib/store";
 import { PrimaryButton, ScrollScreen, Card, BackChip } from "../ui";
 import { colors, DERS_ICON } from "../lib/theme";
+import { mediaUrl, rewriteHtmlMedia } from "../lib/media";
+
+function NoteImage({ tnode, contentWidth }) {
+    var src = mediaUrl(tnode && tnode.attributes && tnode.attributes.src);
+    var _h = useState(200);
+    var h = _h[0];
+    var setH = _h[1];
+    if (!src) return null;
+    return (
+        <Image
+            source={{ uri: src }}
+            resizeMode="contain"
+            onLoad={function (e) {
+                var w = e.nativeEvent.source && e.nativeEvent.source.width;
+                var hh = e.nativeEvent.source && e.nativeEvent.source.height;
+                if (w && hh) setH(Math.min(440, Math.max(140, Math.round(contentWidth * hh / w))));
+            }}
+            style={{ width: contentWidth, height: h, backgroundColor: "#F6F1E4", borderRadius: 12, marginVertical: 8 }}
+        />
+    );
+}
 
 var NOTE_SKIN = "<style>"
     + ".note-html{display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:1.55;color:#1c1917}"
@@ -16,6 +37,8 @@ var NOTE_SKIN = "<style>"
     + ".note-html p{background:#fff!important;border:1px solid #e7e5e4!important;border-radius:12px!important;padding:12px 14px!important}"
     + ".note-html .grid>div{background:#fff!important;border:1px solid #e7e5e4!important;border-radius:14px!important;padding:12px!important}"
     + ".note-html b,.note-html strong{color:#041C24;font-weight:800}"
+    + ".note-html img{max-width:100%!important;width:100%!important;height:auto!important;display:block!important;border-radius:12px!important;margin:10px 0!important;background:#F6F1E4}"
+    + ".note-html table{width:100%!important;display:table!important}"
     + "</style>";
 
 export default function NotesScreen({ route, navigation }) {
@@ -96,7 +119,7 @@ export default function NotesScreen({ route, navigation }) {
         );
     }
 
-    var html = String(notlar[idx] || "");
+    var html = rewriteHtmlMedia(String(notlar[idx] || ""));
     var isLast = idx === notlar.length - 1;
 
     return (
@@ -125,9 +148,14 @@ export default function NotesScreen({ route, navigation }) {
             <Card style={[styles.noteCard, isDark && styles.cardDark]}>
                 <RenderHTML 
                     contentWidth={width} 
-                    source={{ html: NOTE_SKIN + "<div class=\"note-html\">" + html + "</div>" }}
+                    source={{ html: NOTE_SKIN + "<div class=\"note-html\">" + html + "</div>", baseUrl: "https://www.atanly.com/" }}
                     baseStyle={styles.noteContent}
                     tagsStyles={styles.tags}
+                    renderers={{
+                        img: function (p) {
+                            return <NoteImage tnode={p.tnode} contentWidth={width} />;
+                        }
+                    }}
                 />
             </Card>
 
@@ -301,6 +329,11 @@ var styles = StyleSheet.create({
             lineHeight: 24,
             color: colors.text,
             marginVertical: 2,
+        },
+        img: {
+            width: "100%",
+            marginVertical: 8,
+            borderRadius: 12
         },
         blockquote: {
             borderLeftWidth: 4,

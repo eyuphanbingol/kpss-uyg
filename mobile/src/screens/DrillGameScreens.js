@@ -1,11 +1,12 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Alert, Pressable, Text, View, StyleSheet } from "react-native";
+import { Alert, Dimensions, Pressable, Text, View, StyleSheet } from "react-native";
 import { useApp } from "../AppProvider";
 import { GamesEngine } from "../lib/gamesEngine";
 import { MapQuiz } from "../lib/mapQuiz";
 import { StudentStore } from "../lib/store";
 import { Card, PrimaryButton, ScrollScreen, BackChip } from "../ui";
 import { colors } from "../lib/theme";
+import { TrMapView } from "../components/TrMapView";
 
 export function ConquerPlayScreen({ navigation }) {
     var app = useApp();
@@ -44,11 +45,20 @@ export function ConquerPlayScreen({ navigation }) {
 
     if (quiz) {
         var qNow = quiz.items[quiz.i];
+        var mapH = Math.max(180, Math.round(Dimensions.get("window").height * 0.28));
         return (
             <ScrollScreen dark={isDark}>
                 <BackChip dark={isDark} label="Harita" onPress={function () { setQuiz(null); }} />
                 <Text style={[styles.kicker, isDark && styles.muted]}>{GamesEngine.regionTitle(quiz.code)}</Text>
                 <Text style={[styles.title, isDark && styles.light]}>{GamesEngine.nameOf(quiz.code)}</Text>
+                <TrMapView
+                    mode="conquer"
+                    height={mapH}
+                    owned={owned}
+                    pick={quiz.code}
+                    locked={true}
+                    color="#127880"
+                />
                 <Text style={[styles.meta, isDark && styles.muted]}>Soru {quiz.i + 1} / {quiz.items.length} · hepsini art arda bil</Text>
                 <View style={{ height: 8, borderRadius: 99, backgroundColor: isDark ? "#292524" : "#E7E5E4", overflow: "hidden", marginTop: 10, marginBottom: 16 }}>
                     <View style={{ height: 8, width: (quiz.items.length ? Math.round(((quiz.i + (quiz.ok ? 1 : 0)) / quiz.items.length) * 100) : 0) + "%", backgroundColor: "#127880", borderRadius: 99 }} />
@@ -83,6 +93,15 @@ export function ConquerPlayScreen({ navigation }) {
             <BackChip dark={isDark} label="Alıştırmalar" onPress={function () { navigation.goBack(); }} />
             <Text style={[styles.title, isDark && styles.light]}>Türkiye'yi Fethet</Text>
             <Text style={[styles.meta, isDark && styles.muted]}>{nOwn}/{codes.length} il boyandı · bölge bitince rozet</Text>
+            <TrMapView
+                mode="conquer"
+                height={Math.max(220, Math.round(Dimensions.get("window").height * 0.34))}
+                owned={owned}
+                pick={null}
+                color="#127880"
+                onProvince={function (code) { start(code); }}
+            />
+            <Text style={[styles.meta, isDark && styles.muted, { marginTop: 8 }]}>Haritada ile bas. Fethedilen iller teal boyanır.</Text>
             <View style={{ height: 8, borderRadius: 99, backgroundColor: isDark ? "#292524" : "#E7E5E4", overflow: "hidden", marginTop: 10 }}>
                 <View style={{ height: 8, width: (codes.length ? Math.round((nOwn / codes.length) * 100) : 0) + "%", backgroundColor: "#127880", borderRadius: 99 }} />
             </View>
