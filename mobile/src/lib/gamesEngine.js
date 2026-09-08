@@ -266,6 +266,53 @@ globalThis.GamesBank = GamesBank;
         return t.replace(/\s+/g, " ").trim();
     }
 
+    function stripClueDates(s) {
+        s = String(s || "");
+        s = s.replace(/\b\d{1,2}[./-]\d{1,2}[./-]\d{2,4}\b/g, " ");
+        s = s.replace(/\b\d{1,2}\s*[-–]\s*\d{1,2}\s+(Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık)(\s+\d{4})?\b/gi, " ");
+        s = s.replace(/\b\d{1,2}\s+(Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık)(\s+\d{4})?\b/gi, " ");
+        s = s.replace(/\b(Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık)\s+\d{4}\b/gi, " ");
+        s = s.replace(/\b(MÖ|MS)\s*\d{1,4}\b/gi, " ");
+        s = s.replace(/\b(1[0-9]{3}|20[0-2]\d)\b/g, " ");
+        s = s.replace(/\(\s*\)/g, " ");
+        s = s.replace(/\b(yılında|yılı|senesinde|tarihinde)\b/gi, " ");
+        s = s.replace(/\s+/g, " ").trim();
+        s = s.replace(/^[-–—,;:.\s]+/, "").replace(/[-–—,;:\s]+$/, "");
+        return s;
+    }
+
+    function shapeTabuClue(s, answer) {
+        s = maskAnswer(stripHtml(s), answer);
+        s = stripClueDates(s);
+        s = s.replace(/\s*[-–—]\s*$/, "").replace(/^[-–—]\s*/, "");
+        if (s.length > 92) s = s.slice(0, 89).replace(/\s+\S*$/, "").replace(/[,;:]$/, "") + "…";
+        return s;
+    }
+
+    function isGoodTabuClue(s, answerFold, minLen) {
+        minLen = minLen == null ? 8 : minLen;
+        if (!s || s.length < minLen || s.length > 120) return false;
+        if (/\b(1[0-9]{3}|20[0-2]\d)\b/.test(s)) return false;
+        if (/^\d[\d\s./-]*$/.test(s)) return false;
+        if (answerFold && fold(s).indexOf(answerFold) >= 0) return false;
+        return true;
+    }
+
+    function collectTabuClues(rawList, answer, minLen) {
+        var f = fold(answer);
+        var seen = {};
+        var out = [];
+        (rawList || []).forEach(function (raw) {
+            var s = shapeTabuClue(raw, answer);
+            var k = fold(s);
+            if (!isGoodTabuClue(s, f, minLen) || seen[k]) return;
+            seen[k] = true;
+            out.push(s);
+        });
+        out.sort(function (a, b) { return a.length - b.length; });
+        return out.slice(0, 3);
+    }
+
     function tabuFromNotes(kpssData) {
         var parsed = [];
         var seen = {};
@@ -275,14 +322,12 @@ globalThis.GamesBank = GamesBank;
             if (!title || title.length < 3 || title.length > 42) return;
             if (/genel bilgi|gelistirme yol|geride kalma|alinmasi gereken|baslica tarim urunleri/i.test(f)) return;
             if (seen[f]) return;
-            var clues = noteSnippets(html).map(function (s) { return maskAnswer(s, title); }).filter(function (s) {
-                return s.length >= 20 && s.length <= 140 && fold(s).indexOf(f) < 0;
-            });
+            var clues = collectTabuClues(noteSnippets(html), title, 14);
             if (clues.length < 2) return;
             seen[f] = true;
             parsed.push({
                 answer: title,
-                clues: clues.slice(0, 3),
+                clues: clues,
                 topic: ders || "KPSS"
             });
         });
@@ -291,7 +336,7 @@ globalThis.GamesBank = GamesBank;
             var dist = shuffle(titles.filter(function (t) { return fold(t) !== fold(p.answer); })).slice(0, 3);
             while (dist.length < 3) dist.push("—");
             p.choices = [p.answer].concat(dist);
-            while (p.clues.length < 3) p.clues.push(p.topic + " notlarından ezber kavram");
+            while (p.clues.length < 3) p.clues.push("Notlardaki tanıma göre kavramı bul");
         });
         return parsed;
     }
@@ -397,13 +442,14 @@ globalThis.GamesBank = GamesBank;
         n = n || 12;
         var fromNotes = tabuFromNotes(kpssData);
         var extra = (bank().TABU || []).map(function (card) {
+            var clues = collectTabuClues(card.clues || [], card.answer, 6);
             return {
                 answer: card.answer,
-                clues: (card.clues || []).slice(0, 3),
+                clues: clues,
                 choices: card.choices || [card.answer],
                 topic: "KPSS"
             };
-        });
+        }).filter(function (card) { return card.clues.length >= 2; });
         var pool = fromNotes.length >= 8 ? fromNotes : fromNotes.concat(extra);
         return shuffle(pool).slice(0, n).map(function (card, i) {
             var clues = (card.clues || []).slice(0, 3);
