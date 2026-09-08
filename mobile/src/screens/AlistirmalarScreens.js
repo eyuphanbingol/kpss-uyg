@@ -13,7 +13,8 @@ var MAP_CARD_IMG = {
     kirik: require("../../assets/kirik-kivrim.png"),
     masif: require("../../assets/masif.png"),
     fay: require("../../assets/fay.png"),
-    "deprem-az": require("../../assets/deprem-az.png")
+    "deprem-az": require("../../assets/deprem-az.png"),
+    "plato-karst": require("../../assets/plato-karst.png")
 };
 
 export function AlistirmalarHomeScreen({ navigation }) {
