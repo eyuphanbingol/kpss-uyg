@@ -2231,7 +2231,6 @@ function Ben(props) {
             <button onClick={function () {
                 if (confirm("Hesap silme talebi kaydedilir. Destek onayından sonra veri silinir.")) StudentStore.requestDeletion();
             }} className="w-full mb-3 p-3.5 rounded-2xl text-sm text-stone-400">Veri silme talebi</button>
-            <a href="gizlilik.html" className="block w-full mb-3 p-3.5 rounded-2xl text-sm text-stone-400 text-center">Gizlilik ve reklamlar</a>
             <button onClick={function () { props.onSignOut && props.onSignOut(); }} className="w-full p-3.5 rounded-2xl border-2 border-stone-200 dark:border-stone-700 font-medium">Çıkış</button>
         </Shell>
     );
