@@ -1,0 +1,2 @@
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+# AdSense onayından sonra yukarıdaki yorumu sil; pub- numarasını ca-pub ile aynı yap (ca- öneki olmadan).

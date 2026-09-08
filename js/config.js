@@ -14,6 +14,15 @@
         logoUrl: "icons/atanom.png?v=18",
         platform: "web",
         productionUrl: "https://kpss-uyg.vercel.app",
+        adsense: {
+            enabled: true,
+            client: "",
+            slots: {
+                feed: "",
+                article: "",
+                display: ""
+            }
+        },
         premiumEnabled: false,
         freeWeeklyExams: 2,
         freeDailyMixed: 3,
