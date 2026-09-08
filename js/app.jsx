@@ -2180,27 +2180,11 @@ function Ben(props) {
                     </div>
                 )}
             </div>
-            <div className="rounded-3xl glass p-5 mb-4 card-hover">
-                <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-1">Araçlar</p>
-                <p className="text-xs text-stone-400 mb-3">Sıralama, puan ve asistan. Ders kilidini atlatmaz.</p>
-                <div className="grid grid-cols-2 gap-2">
-                    {[
-                        { id: "notebook", t: "Tekrar defteri", d: "Kendine not yaz, yalnızca sen görürsün" },
-                        { id: "placement", t: "Puan / tercih", d: "Tahmini puanın hangi kurumlara yeter" },
-                        { id: "leaderboard", t: "Türkiye", d: "Haftalık soru ve deneme sıralaması" },
-                        { id: "heat", t: "Isı haritası", d: "30 günlük tempo ve konu hakimiyeti" },
-                        { id: "ai", t: "Soru asistanı", d: "Yanlışın nedenini kısaca açıklar" }
-                    ].map(function (x) {
-                        return (
-                            <button key={x.id} onClick={function () { props.onOpen && props.onOpen(x.id); }}
-                                className="text-left px-3 py-3 rounded-xl bg-stone-50 dark:bg-stone-800 card-hover">
-                                <span className="text-sm font-medium block">{x.t}</span>
-                                <span className="text-[11px] text-stone-400 font-normal leading-snug mt-0.5 block">{x.d}</span>
-                            </button>
-                        );
-                    })}
-                </div>
-            </div>
+            <button type="button" onClick={function () { props.onOpen && props.onOpen("leaderboard"); }}
+                className="w-full mb-4 p-3.5 rounded-2xl glass text-left card-hover">
+                <span className="font-medium block">Türkiye sıralaması</span>
+                <span className="text-xs text-stone-400 font-normal mt-0.5 block">Haftalık soru sıralaması</span>
+            </button>
             <div className="rounded-3xl glass p-5 mb-4 card-hover">
                 <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-1">Davet</p>
                 <p className="text-xs text-stone-400 mt-1">Davet kodun: <b>{StudentStore.ensureReferralCode ? StudentStore.ensureReferralCode() : (up.referralCode || "—")}</b></p>
