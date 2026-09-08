@@ -826,7 +826,7 @@
         if (!props.gate) return form;
 
         return (
-            <div className="brand-backdrop min-h-screen flex items-center justify-center px-6 py-12 relative overflow-hidden">
+            <div className="brand-backdrop min-h-screen flex flex-col items-center justify-start px-6 py-12 relative overflow-x-hidden overflow-y-auto">
                 <div className="brand-glow" aria-hidden="true"></div>
                 <div className="brand-ring brand-ring-outer" aria-hidden="true"></div>
                 <div className="brand-ring brand-ring-inner" aria-hidden="true"></div>
@@ -846,7 +846,18 @@
                     </div>
 
                     {form}
+                    <p className="text-center text-xs text-stone-500 mt-5 leading-relaxed">
+                        Hesap olmadan örnek not: <a className="text-teal-700 font-semibold underline" href="ornek.html">KPSS notları</a>
+                        {" · "}
+                        <a className="text-teal-700 font-semibold underline" href="gizlilik.html">Gizlilik</a>
+                    </p>
                 </div>
+                <article className="relative z-10 w-full max-w-md mt-8 mb-10 bg-white/95 dark:bg-stone-900/95 rounded-[24px] p-5 text-stone-800 text-sm leading-relaxed shadow-xl">
+                    <h2 className="font-black text-base mb-2">Ücretsiz örnek: sınırlar</h2>
+                    <p className="mb-2">En uzun kara sınırı Suriye, en kısa Nahçıvan, en yeni sınır Hatay’ın 1939’da katılmasıdır. İran sınırı Kasr-ı Şirin ile çizilmiştir. Kapıkule Avrupa’ya en kısa yol üzerindeki en işlek kapıdır.</p>
+                    <p className="mb-2">Kuzey uç Sinop–İnceburun, güney Hatay–Beysun, doğu Iğdır–Dilucu, batı Çanakkale–Gökçeada’dır. GAP tarım-enerji-sanayi, DAP hayvancılık ve kış turizmi, ZBK madene dayalı tek projedir.</p>
+                    <p><a className="text-teal-700 font-bold" href="ornek.html">Turizm, bitki örtüsü ve projelerin tamamını oku →</a></p>
+                </article>
             </div>
         );
     }
