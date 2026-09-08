@@ -838,13 +838,6 @@
             return !!t.notesDone || (t.attempts || 0) > 0;
         },
         isKonuOpen: function (ders, konular, idx, kpssData) {
-            if (idx <= 0) return true;
-            var i;
-            for (i = 0; i < idx; i++) {
-                var k = konular[i];
-                var kd = ((kpssData[ders] || {})[k]) || {};
-                if (!global.StudentStore.topicComplete(getTopic(ders, k), kd)) return false;
-            }
             return true;
         },
         consumeSignupIfNeeded: function (user) {

@@ -199,7 +199,7 @@
                     </details>
                     <details>
                         <summary>Hangi dersler açık?</summary>
-                        <p>Tarih, coğrafya, Türkçe, vatandaşlık, güncel. Konular sırayla açılır. A grubu, eğitim, ÖABT sonra.</p>
+                        <p>Tarih, coğrafya, Türkçe, vatandaşlık, güncel. Tüm konular açık. A grubu, eğitim, ÖABT sonra.</p>
                     </details>
                     <details>
                         <summary>App Store ve Play Store?</summary>

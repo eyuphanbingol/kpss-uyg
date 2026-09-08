@@ -1437,7 +1437,7 @@ function DersHome(props) {
             <div className="flex justify-between items-start mb-8">
                 <div className="slide-up">
                     <h1 className="text-3xl sm:text-4xl font-display font-black tracking-tight gradient-text">Dersler</h1>
-                    <p className="text-sm text-stone-400 mt-1">Not oku, test çöz. Konular sırayla açılır.</p>
+                    <p className="text-sm text-stone-400 mt-1">Not oku, test çöz. Tüm konular açık.</p>
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>

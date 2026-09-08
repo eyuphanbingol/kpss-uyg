@@ -53,7 +53,7 @@ export function DersHomeScreen({ navigation }) {
                         Dersler
                     </Text>
                     <Text style={[styles.subtitle, isDark && styles.textMuted]}>
-                        Not oku, test çöz. Konular sırayla açılır.
+                        Not oku, test çöz. Tüm konular açık.
                     </Text>
                 </View>
             </View>
