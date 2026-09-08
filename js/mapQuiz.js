@@ -113,8 +113,8 @@
         {
             id: "yer", title: "Yer şekilleri · jeoloji", icon: "🗻",
             kids: [
-                { id: "volkanik", title: "Volkanik dağlar", icon: "🌋" },
-                { id: "volkanik-arazi", title: "Volkanik araziler", icon: "🌋" },
+                { id: "volkanik", title: "Volkanik dağlar", icon: "🌋", hoverImg: "img/map/volkan-hover.png" },
+                { id: "volkanik-arazi", title: "Volkanik araziler", icon: "🌋", hoverImg: "img/map/volkan-hover.png" },
                 { id: "kirik", title: "Kırık dağlar (horst–graben)", icon: "⛰️" },
                 { id: "kivrim", title: "Kıvrım dağları", icon: "🏔️" },
                 { id: "masif", title: "Masif araziler", icon: "🪨" },
@@ -126,7 +126,7 @@
             id: "plato", title: "Platolar", icon: "🏜️",
             kids: [
                 { id: "plato-karst", title: "Karstik platolar", icon: "🪨" },
-                { id: "plato-volkan", title: "Volkanik / lav platoları", icon: "🌋" },
+                { id: "plato-volkan", title: "Volkanik / lav platoları", icon: "🌋", hoverImg: "img/map/volkan-hover.png" },
                 { id: "plato-asinim", title: "Aşınım düzlüğü platoları", icon: "🟩" },
                 { id: "plato-tabaka", title: "Tabaka düzlüğü platoları", icon: "🏜️" }
             ]
@@ -137,7 +137,7 @@
                 { id: "delta", title: "Delta ovaları", icon: "🌊" },
                 { id: "ova-karst", title: "Karstik ovalar (TAKKEM)", icon: "🪨" },
                 { id: "ova-tektonik", title: "Tektonik ovalar", icon: "🌾" },
-                { id: "ova-volkan", title: "Volkanik ovalar", icon: "🌋" },
+                { id: "ova-volkan", title: "Volkanik ovalar", icon: "🌋", hoverImg: "img/map/volkan-hover.png" },
                 { id: "ova-asinim", title: "Aşınım / dağ eteği ovaları", icon: "🌾" }
             ]
         },

@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { Pressable, Text, View, StyleSheet, Dimensions } from "react-native";
+import { ImageBackground, Pressable, Text, View, StyleSheet, Dimensions } from "react-native";
 import { useApp } from "../AppProvider";
 import { ClozeEngine } from "../lib/clozeEngine";
 import { MapQuiz } from "../lib/mapQuiz";
@@ -303,12 +303,23 @@ export function MapTopicsScreen({ navigation }) {
                         <Text style={[styles.kicker, isDark && styles.textMuted]}>{g.icon} {g.title}</Text>
                         {g.kids.map(function (k) {
                             var n = MapQuiz.countFor(k.id);
+                            var inner = (
+                                <>
+                                    <Text style={[styles.dersName, isDark && styles.textLight, k.hoverImg && styles.volkanName]}>{k.icon} {k.title}</Text>
+                                    <Text style={[styles.meta, isDark && styles.textMuted, k.hoverImg && styles.volkanMeta]}>{n} hedef</Text>
+                                </>
+                            );
                             return (
                                 <Pressable key={k.id} onPress={function () { go(navigation, "MapPlay", { topicId: k.id }); }}>
-                                    <Card style={[styles.dersCard, isDark && styles.cardDark]}>
-                                        <Text style={[styles.dersName, isDark && styles.textLight]}>{k.icon} {k.title}</Text>
-                                        <Text style={[styles.meta, isDark && styles.textMuted]}>{n} hedef</Text>
-                                    </Card>
+                                    {k.hoverImg ? (
+                                        <ImageBackground source={require("../../assets/volkan-hover.png")} style={styles.volkanCard} imageStyle={styles.volkanCardImg} resizeMode="cover">
+                                            <View style={styles.volkanScrim}>{inner}</View>
+                                        </ImageBackground>
+                                    ) : (
+                                        <Card style={[styles.dersCard, isDark && styles.cardDark]}>
+                                            {inner}
+                                        </Card>
+                                    )}
                                 </Pressable>
                             );
                         })}
@@ -460,6 +471,15 @@ var styles = StyleSheet.create({
     textMuted: { color: colors.muted },
     cardDark: { backgroundColor: colors.navyDeep },
     dersCard: { marginBottom: 10 },
+    volkanCard: {
+        marginBottom: 10,
+        overflow: "hidden",
+        borderRadius: 16
+    },
+    volkanCardImg: { borderRadius: 16 },
+    volkanScrim: { backgroundColor: "rgba(8,6,4,0.42)", padding: 16, minHeight: 72, justifyContent: "center" },
+    volkanName: { color: "#fff", textShadowColor: "rgba(0,0,0,0.7)", textShadowOffset: { width: 0, height: 1 }, textShadowRadius: 8 },
+    volkanMeta: { color: "rgba(255,255,255,0.88)" },
     row: { flexDirection: "row", alignItems: "center", gap: 12 },
     icon: { fontSize: 26 },
     dersName: { fontWeight: "700", fontSize: 16, color: colors.text },

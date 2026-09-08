@@ -286,7 +286,7 @@
     <script src="js/store.js?v=38"></script>
     <script src="js/planner.js?v=19"></script>
     <script src="js/clozeEngine.js?v=5"></script>
-    <script src="js/mapQuiz.js?v=13"></script>
+    <script src="js/mapQuiz.js?v=14"></script>
     <script src="js/gamesBank.js?v=8"></script>
     <script src="js/gamesEngine.js?v=9"></script>
     <script src="js/scoreEngine.js?v=8"></script>
@@ -582,6 +582,52 @@
         .dark .card-hover:hover {
             box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.5);
             border-color: rgba(99, 102, 241, 0.2);
+        }
+        .map-topic-card--volkan {
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+        }
+        .map-topic-card--volkan .map-topic-card-photo {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background: #1a120c url("img/map/volkan-hover.png") center / cover no-repeat;
+            opacity: 0;
+            transform: scale(1.08);
+            transition: opacity 0.28s ease, transform 0.4s ease;
+            pointer-events: none;
+        }
+        .map-topic-card--volkan .map-topic-card-photo::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(8, 6, 4, 0.22) 0%, rgba(8, 6, 4, 0.72) 100%);
+        }
+        .map-topic-card--volkan:hover,
+        .map-topic-card--volkan:focus-visible,
+        .map-topic-card--volkan:active {
+            background: rgba(15, 10, 8, 0.15);
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            border-color: rgba(251, 146, 60, 0.45);
+        }
+        .map-topic-card--volkan:hover .map-topic-card-photo,
+        .map-topic-card--volkan:focus-visible .map-topic-card-photo,
+        .map-topic-card--volkan:active .map-topic-card-photo {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .map-topic-card--volkan:hover .map-topic-card-fg,
+        .map-topic-card--volkan:focus-visible .map-topic-card-fg,
+        .map-topic-card--volkan:active .map-topic-card-fg {
+            color: #fff;
+            text-shadow: 0 1px 10px rgba(0, 0, 0, 0.65);
+        }
+        .map-topic-card--volkan:hover .map-topic-card-meta,
+        .map-topic-card--volkan:focus-visible .map-topic-card-meta,
+        .map-topic-card--volkan:active .map-topic-card-meta {
+            color: rgba(255, 255, 255, 0.88);
         }
 
         /* ===== BUTON GRADIENT ===== */
@@ -2029,7 +2075,7 @@
         </main>
     </noscript>
     <div id="root"></div>
-    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=103"></script>
+    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=104"></script>
     <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.getRegistrations().then(function (regs) {

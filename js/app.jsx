@@ -1018,11 +1018,13 @@ function MapTopics(props) {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                             {g.kids.map(function (k) {
                                 var n = quiz ? quiz.countFor(k.id) : 0;
+                                var hoverImg = k.hoverImg;
                                 return (
                                     <button key={k.id} type="button" onClick={function () { props.onTopic(k.id); }}
-                                        className="text-left p-4 rounded-2xl glass card-hover">
-                                        <div className="font-bold">{k.icon} {k.title}</div>
-                                        <div className="text-xs text-stone-400 mt-1">{n} hedef</div>
+                                        className={"text-left p-4 rounded-2xl glass card-hover" + (hoverImg ? " map-topic-card--volkan" : "")}>
+                                        {hoverImg ? <span className="map-topic-card-photo" aria-hidden="true" /> : null}
+                                        <div className="map-topic-card-fg relative z-10 font-bold">{k.icon} {k.title}</div>
+                                        <div className="map-topic-card-meta relative z-10 text-xs text-stone-400 mt-1">{n} hedef</div>
                                     </button>
                                 );
                             })}
