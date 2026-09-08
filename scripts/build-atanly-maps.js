@@ -302,11 +302,17 @@ function mapCaption(s) {
 function wrapOnMap(text, maxChars) {
     text = String(text || "").trim();
     maxChars = maxChars || 18;
-    if (text.length <= maxChars) return [text];
-    var cut = text.lastIndexOf(" ", maxChars);
-    if (cut < 4) cut = text.indexOf(" · ");
-    if (cut < 4) cut = maxChars;
-    return [text.slice(0, cut).trim()].filter(Boolean);
+    var out = [];
+    while (text.length > maxChars) {
+        var cut = text.lastIndexOf(" ", maxChars);
+        if (cut < 4) cut = text.lastIndexOf(",", maxChars);
+        if (cut < 4) cut = text.indexOf(" · ");
+        if (cut < 4) cut = maxChars;
+        out.push(text.slice(0, cut).replace(/[,\s]+$/, "").trim());
+        text = text.slice(cut).replace(/^[,\s]+/, "").trim();
+    }
+    if (text) out.push(text);
+    return out;
 }
 
 function labelFs(n) {
@@ -336,11 +342,11 @@ function onMapText(x, y, text, fs, p) {
         if (p.il && p.ilce) lines.push(p.il + " / " + p.ilce);
         else if (p.il) lines.push(p.il);
     } else {
-        lines = [wrapOnMap(text, 22)[0]];
+        lines = wrapOnMap(text, 18);
     }
     var startY = y;
     return lines.map(function (ln, i) {
-        var size = i === 0 && p && p.urun ? fs : Math.max(8, fs - 1);
+        var size = (p && p.urun && i > 0) ? Math.max(8, fs - 1) : fs;
         var ty = startY + i * (size + 2);
         var wt = i === 0 ? "800" : "700";
         var common = 'x="' + Number(x).toFixed(1) + '" y="' + Number(ty).toFixed(1) + '" text-anchor="middle" font-family="Segoe UI, Calibri, sans-serif" font-size="' + size + '" font-weight="' + wt + '"';
@@ -1022,17 +1028,17 @@ function main() {
         ["Masifler yaşlı, dirençli kara parçalarıdır", "Maden çeşitliliği bu kütlelerle ilişkilendirilir"]
     );
 
-    labeled({ file: "tr_plato.png", head: "ÜLKEMİZİN PLATOLARI" }, "Oluşum tipleri",
+    labeled({ file: "tr_plato.png", head: "ÜLKEMİZİN PLATOLARI", iconSize: 16 }, "Oluşum tipleri",
         [
-            { il: "Antalya", label: "Karstik: Teke, Taşeli" },
-            { il: "Kars", label: "Volkanik: Erzurum–Kars, Ardahan" },
-            { il: "Nevşehir", label: "Volkanik: Kapadokya, Kırşehir, Kula" },
-            { il: "Kocaeli", label: "Aşınım: Çatalca–Kocaeli" },
-            { il: "Karabük", label: "Aşınım: Safranbolu" },
-            { il: "Ordu", label: "Aşınım: Perşembe" },
-            { il: "Konya", label: "Tabaka: Obruk, Cihanbeyli, Haymana" },
-            { il: "Yozgat", label: "Tabaka: Bozok, Uzunyayla" },
-            { il: "Gaziantep", label: "Tabaka: Gaziantep, Şanlıurfa" }
+            { il: "Antalya", label: "Karstik: Teke, Taşeli", ldx: -10, ldy: 54 },
+            { il: "Kars", label: "Volkanik: Erzurum–Kars, Ardahan", ldx: -24, ldy: 54 },
+            { il: "Nevşehir", label: "Volkanik: Kapadokya, Kırşehir, Kula", ldx: 12, ldy: 54 },
+            { il: "Kocaeli", label: "Aşınım: Çatalca–Kocaeli", ldx: -36, ldy: 52 },
+            { il: "Karabük", label: "Aşınım: Safranbolu", ldx: 40, ldy: 52 },
+            { il: "Ordu", label: "Aşınım: Perşembe", ldx: 32, ldy: 52 },
+            { il: "Konya", label: "Tabaka: Obruk, Cihanbeyli, Haymana", ldx: -16, ldy: 54 },
+            { il: "Yozgat", label: "Tabaka: Bozok, Uzunyayla", ldx: 24, ldy: 54 },
+            { il: "Gaziantep", label: "Tabaka: Gaziantep, Şanlıurfa", ldx: 10, ldy: 54 }
         ],
         ["Karstik · volkanik · aşınım düzlüğü · tabaka düzlüğü", "Güneydoğu’da Gaziantep–Şanlıurfa platoları tabaka düzlüğüdür"]
     );
