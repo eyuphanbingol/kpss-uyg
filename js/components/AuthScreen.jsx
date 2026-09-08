@@ -51,42 +51,15 @@
         var logo = window.AtanomLogo
             ? window.AtanomLogo("h-14 w-14 object-contain")
             : <img src="icons/atanom.png?v=18" alt="Atanly" className="h-14 w-14 object-contain" />;
-        var feats = [
-            { t: "Bugünün hedefi", d: "Düzenle’ye bas: 30 dk vatandaşlık, 30 dk güncel, 1,5 saat tarih, 1,5 saat coğrafya — senin günün. Sıradaki ders yeşil yanar, yüzde dolar. Ne çalışacağını aramazsın; ekran söyler." },
-            { t: "Konu kilidi", d: "Tarih sırayla: İslamiyet öncesi, ilk Türk-İslam, Selçuklu, Osmanlı kültür, kuruluş, yükselme. Notu ve testleri bitirmeden kilit açılmaz. Atlayarak boşluk bırakmazsın." },
-            { t: "Eksikler masası", d: "Bugün tekrar, yanlış defteri, yalnızca senin gördüğün tekrar defteri. Zayıfın görünür; kilit hileyle atlanmaz." }
-        ];
-        var stats = [
-            { t: "Seri gün", d: "Ateş yanınca bırakmak zorlaşır. Kaç gündür masadasın, oturum kaç dakika, rekor gün kaç saat — İstatistikler’de durur." },
-            { t: "Haftalık trend", d: "Sekiz haftalık çizgi, Pzt’den Paz’a çubuklar, bu hafta kaç / 20 saat. Düzleşince uyarı; yükselince gurur." },
-            { t: "Ders dağılımı", d: "Zamanın yüzde kaçı Tarih, kaçı Coğrafya. Bir derse gömülüp diğerini unutma; dilim yalan söylemez." }
-        ];
-        var games = [
-            { t: "Türkiye'yi Fethet", d: "81 ile dokun, boya, bölge bitince rozet. Marmara, Ege, Akdeniz, İç Anadolu, Karadeniz, Doğu, Güneydoğu — harita ezberi değil; fetih. KPSS Türkiye haritası böyle kalır." },
-            { t: "Harita oyunu", d: "Yer şekilleri ve jeoloji: volkan, horst–graben, kıvrım, masif, KAF–DAF–BAF, deprem riski. Konuyu seç, noktayı haritada vur. Fiziki coğrafya parmak ucunda." },
-            { t: "Kavram · az ipucu", d: "Nottaki kavram gizli. Az ipucu = yüksek puan. Şanlıurfa çevresi deyince Antep fıstığı mı, çay mı — bileceksin. Risk al, puanı koru." },
-            { t: "Tabu", d: "Yasaklı kelimeye takılma, tanımı yakala. Vatandaşlık ve güncel bilgi için tempo; dilin sürçmesin, kavram gelsin." },
-            { t: "Panik", d: "Süre daralır, şıklar döner. Sınav günü paniği burada biter; elin alışır, zihin soğuk kalır." },
-            { t: "Boşluk doldur", d: "Cümlenin eksiğini tamamla. Aynı konunun notundan üretilir; oyun ayrı dünya değil, notun devamı." }
-        ];
-        var maps = [
-            { t: "Volkanik dağlar", d: "Ağrı’dan Nemrut’a zirveyi haritada yakala. 11 hedef; KPSS fiziki coğrafyanın ateşi." },
-            { t: "Volkanik araziler", d: "Lavın bıraktığı arazi. Konuyu seç, noktayı bul — ezber değil, yer." },
-            { t: "Kırık dağlar", d: "Horst–graben. Anadolu’nun kırık omurgasını haritada gör." },
-            { t: "Kıvrım dağları", d: "Kıvrılan sıra dağlar. 14 hedef; yükseltinin hikâyesi parmak ucunda." },
-            { t: "Masif araziler", d: "Eski, sert, sakin masifler. Haritada dokun, isim otursun." },
-            { t: "Fay hatları", d: "KAF · DAF · BAF. Türkiye’nin sismik anatomisi; üç hat, üç isim, unutulmaz." },
-            { t: "Deprem riski az", d: "Sakin kuşakları da bil. Sınav hem riski hem sükûneti sorar." }
-        ];
-        var eksik = [
-            { t: "Bugün tekrar", d: "Daha önce çözdüğün, bugün hatırlaman gereken sorular. Unutma eğrisi Atanly’de çalışır; masaya oturunca liste hazır." },
-            { t: "Yanlış defteri", d: "Kaçırdığın soru burada bekler. Çözünce defterden düşer; konu kilidini açmaz — dürüst tekrar." },
-            { t: "Tekrar defteri", d: "Kendine not yaz. Yalnız sen görürsün. Başkasının defterine karışılmaz; bu çekmece senin." }
-        ];
-        var steps = [
-            { n: "1", t: "Kulvarını seç", d: "Lisans, ön lisans veya ortaöğretim. Google veya e-posta. İlerleme hesabına yazılır, başka göze gitmez." },
-            { n: "2", t: "Hedefi işaretle", d: "Bugünün saatleri, sıradaki ders. Not, test, kilit, tekrar — tek akış." },
-            { n: "3", t: "Haritada pekiştir", d: "Fetih, jeoloji, kavram, tabu, panik. Mola da GY-GK sayılır." }
+        var shots = [
+            { src: "img/landing/hedef.png?v=1", t: "Bugünün hedefi" },
+            { src: "img/landing/istatistik.png?v=1", t: "İstatistikler" },
+            { src: "img/landing/hafta.png?v=1", t: "Bu hafta · ders dağılımı" },
+            { src: "img/landing/tarih.png?v=1", t: "Tarih konuları" },
+            { src: "img/landing/eksikler.png?v=1", t: "Eksikler" },
+            { src: "img/landing/harita.png?v=1", t: "Harita oyunu" },
+            { src: "img/landing/fethet.png?v=1", t: "Türkiye'yi Fethet" },
+            { src: "img/landing/kavram.png?v=1", t: "Kavram · az ipucu" }
         ];
         return (
             <div className="land-page text-stone-100">
@@ -113,7 +86,7 @@
                         Atamaya giden<br />çalışma odası.
                     </h1>
                     <p className="mt-5 text-[15px] sm:text-lg text-white/75 max-w-2xl leading-relaxed">
-                        Bugünün hedefi, kilitli Tarih konuları, eksikler, seri ve trend, 81 ili fethet, volkan–fay haritası, az ipucu yüksek puan. Hepsi aynı Atanly. Lisans, ön lisans, ortaöğretim GY-GK.
+                        KPSS GY-GK. Aşağıdaki ekranlar uygulamanın kendisi.
                     </p>
                     <div className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md">
                         <button type="button" onClick={props.onSignup} className="flex-1 py-3.5 rounded-2xl font-bold bg-gold-500 text-stone-900 text-[15px] hover:bg-gold-400">
@@ -136,97 +109,14 @@
                     </div>
                 </section>
 
-                <section className="land-grid">
-                    {feats.map(function (f) {
-                        return (
-                            <article key={f.t} className="land-card">
-                                <h2 className="font-display font-bold text-lg text-white mb-2">{f.t}</h2>
-                                <p className="text-sm text-white/65 leading-relaxed">{f.d}</p>
-                            </article>
-                        );
-                    })}
-                </section>
-
                 <section className="land-wide">
-                    <h2 className="font-display font-bold text-xl mb-2">İstatistik, seri, dağılım</h2>
-                    <p className="text-sm text-white/60 mb-5 max-w-2xl leading-relaxed">
-                        Kaç gün seri, oturum kaç dakika, rekor gün, bu hafta kaç saat. Çizgi yükselince gurur; düzleşince uyarı. Çalışma saati kaybolmaz.
-                    </p>
-                    <div className="land-game">
-                        {stats.map(function (s) {
+                    <div className="land-shots">
+                        {shots.map(function (s) {
                             return (
-                                <article key={s.t} className="land-card">
-                                    <h3 className="font-display font-bold text-white mb-1.5">{s.t}</h3>
-                                    <p className="text-sm text-white/65 leading-relaxed">{s.d}</p>
-                                </article>
-                            );
-                        })}
-                    </div>
-                </section>
-
-                <section className="land-wide">
-                    <h2 className="font-display font-bold text-xl mb-2">Eksikler: tekrar, yanlış, defter</h2>
-                    <p className="text-sm text-white/60 mb-5 max-w-2xl leading-relaxed">
-                        Konu durumu Dersler’den gelir. Bugün tekrar hatırlatır; yanlış defteri ısrar eder; tekrar defterin kilitli çekmecen.
-                    </p>
-                    <div className="land-game">
-                        {eksik.map(function (s) {
-                            return (
-                                <article key={s.t} className="land-card">
-                                    <h3 className="font-display font-bold text-white mb-1.5">{s.t}</h3>
-                                    <p className="text-sm text-white/65 leading-relaxed">{s.d}</p>
-                                </article>
-                            );
-                        })}
-                    </div>
-                </section>
-
-                <section className="land-wide">
-                    <h2 className="font-display font-bold text-xl mb-2">Sistem, program gibi çalışır</h2>
-                    <p className="text-sm text-white/60 mb-5 max-w-2xl leading-relaxed">
-                        Rastgele PDF değil. Sıra, kilit, günlük saat, yanlış ve ısı. Atanly bugünü dizer.
-                    </p>
-                    <ol className="space-y-4">
-                        {steps.map(function (s) {
-                            return (
-                                <li key={s.n} className="flex gap-4">
-                                    <span className="land-stepnum">{s.n}</span>
-                                    <div>
-                                        <p className="font-semibold">{s.t}</p>
-                                        <p className="text-sm text-white/60 mt-0.5 leading-relaxed">{s.d}</p>
-                                    </div>
-                                </li>
-                            );
-                        })}
-                    </ol>
-                </section>
-
-                <section className="land-wide">
-                    <h2 className="font-display font-bold text-xl mb-2">Oyunlar: fetih, harita, kavram</h2>
-                    <p className="text-sm text-white/60 mb-5 max-w-2xl leading-relaxed">
-                        Alıştırmalar. 81 il, yer şekilleri, kavram avı. Hepsi GY-GK notundan; mola da çalışmaya sayılır.
-                    </p>
-                    <div className="land-game">
-                        {games.map(function (g) {
-                            return (
-                                <article key={g.t} className="land-card">
-                                    <h3 className="font-display font-bold text-white mb-1.5">{g.t}</h3>
-                                    <p className="text-sm text-white/65 leading-relaxed">{g.d}</p>
-                                </article>
-                            );
-                        })}
-                    </div>
-                    <p className="font-display font-bold text-white mt-8 mb-2">Harita oyunu · yer şekilleri</p>
-                    <p className="text-sm text-white/60 mb-5 max-w-2xl leading-relaxed">
-                        Konuyu seç, noktayı bul. Volkan, kırık, kıvrım, masif, fay, sakin kuşak — KPSS fiziki coğrafya haritada.
-                    </p>
-                    <div className="land-game">
-                        {maps.map(function (g) {
-                            return (
-                                <article key={g.t} className="land-card">
-                                    <h3 className="font-display font-bold text-white mb-1.5">{g.t}</h3>
-                                    <p className="text-sm text-white/65 leading-relaxed">{g.d}</p>
-                                </article>
+                                <figure key={s.src} className="land-shot">
+                                    <img src={s.src} alt={s.t} width="900" height="700" loading="lazy" />
+                                    <figcaption>{s.t}</figcaption>
+                                </figure>
                             );
                         })}
                     </div>
@@ -236,7 +126,7 @@
                     <h2 id="sss-title" className="font-display font-bold text-xl mb-4">Sık sorulanlar</h2>
                     <details>
                         <summary>Atanly nedir?</summary>
-                        <p>{"KPSS GY-GK çalışma odası: günlük hedef, kilitli Tarih konuları, eksikler, istatistik, Türkiye'yi Fethet, harita ve kavram oyunları. Lisans, ön lisans, ortaöğretim."}</p>
+                        <p>KPSS GY-GK not, test, tekrar ve oyun. Lisans, ön lisans, ortaöğretim.</p>
                     </details>
                     <details>
                         <summary>Ücretsiz mi?</summary>

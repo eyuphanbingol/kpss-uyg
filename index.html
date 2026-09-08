@@ -292,7 +292,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.86.0/dist/umd/supabase.js"></script>
     <script src="js/supabaseClient.js?v=18"></script>
     <script src="js/syncEngine.js?v=29"></script>
-    <script src="js/jsxLoader.js?v=68"></script>
+    <script src="js/jsxLoader.js?v=69"></script>
     <script src="js/icons.js?v=18"></script>
 
     <style>
@@ -448,12 +448,32 @@
         @media (min-width: 640px) {
             .land-wide { padding-left: 2rem; padding-right: 2rem; }
         }
-        .land-game {
+        .land-shots {
             display: grid;
-            gap: 10px;
+            gap: 16px;
         }
-        @media (min-width: 640px) {
-            .land-game { grid-template-columns: 1fr 1fr; }
+        @media (min-width: 768px) {
+            .land-shots { grid-template-columns: 1fr 1fr; }
+        }
+        .land-shot {
+            margin: 0;
+            border-radius: 1.25rem;
+            overflow: hidden;
+            background: #fff;
+            border: 1px solid rgba(245, 235, 199, 0.16);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+        }
+        .land-shot img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .land-shot figcaption {
+            padding: 8px 12px 10px;
+            font-size: 12px;
+            font-weight: 800;
+            color: #F5EBC7;
+            background: #041C24;
         }
         .land-store {
             display: flex;
