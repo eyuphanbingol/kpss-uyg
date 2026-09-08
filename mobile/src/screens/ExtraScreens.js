@@ -136,13 +136,18 @@ export function LeaderboardScreen({ navigation }) {
     var setLoading = _loading[1];
 
     useEffect(function () {
-        supabase.from("leaderboard_weekly")
-            .select("nickname,questions")
-            .order("questions", { ascending: false })
-            .limit(50)
+        supabase.from("leaderboard_public")
+            .select("nickname,questions,kind")
+            .limit(200)
             .then(function (r) {
                 if (r.error) setErr(trError(r.error, "Sıralama yüklenemedi."));
-                else setRows(r.data || []);
+                else {
+                    var list = (r.data || []).filter(function (x) { return x.kind !== "exam"; });
+                    list.sort(function (a, b) {
+                        return (Number(b.questions) || 0) - (Number(a.questions) || 0);
+                    });
+                    setRows(list.slice(0, 50));
+                }
                 setLoading(false);
             });
     }, []);
@@ -161,7 +166,7 @@ export function LeaderboardScreen({ navigation }) {
             <View style={styles.header}>
                 <Text style={[styles.title, isDark && styles.textLight]}>Türkiye Sıralaması</Text>
                 <Text style={[styles.subtitle, isDark && styles.textMuted]}>
-                    Bu haftanın en çalışkanları
+                    Bu hafta en çok doğru çözenler
                 </Text>
             </View>
 

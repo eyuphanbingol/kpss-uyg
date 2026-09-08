@@ -60,8 +60,6 @@
 
     function LeaderboardScreen(props) {
         const [week, setWeek] = useState([]);
-        const [exams, setExams] = useState([]);
-        const [tab, setTab] = useState("week");
         const [err, setErr] = useState("");
         const [loading, setLoading] = useState(true);
         const [myRank, setMyRank] = useState(null);
@@ -79,26 +77,34 @@
                 return; 
             }
 
-            sb.from("leaderboard_public").select("nickname,questions,kind").limit(100).then(function (res) {
+            sb.from("leaderboard_public").select("nickname,questions,kind").limit(200).then(function (res) {
                 if (res.error) {
                     setErr("📊 Sıralama şu an yok.");
                     setLoading(false);
                 } else {
-                    var rows = res.data || [];
-                    setWeek(rows.filter(function (x) { return x.kind !== "exam"; }));
-                    setExams(rows.filter(function (x) { return x.kind === "exam"; }));
+                    var rows = (res.data || []).filter(function (x) { return x.kind !== "exam"; });
+                    rows.sort(function (a, b) {
+                        return (Number(b.questions) || 0) - (Number(a.questions) || 0);
+                    });
+                    setWeek(rows);
                     setLoading(false);
                 }
             });
         }, []);
 
         // ---------- List ----------
-        var list = tab === "week" ? week : exams;
+        var list = week;
         
-        // ---------- Me Index ----------
+        var myScore = 0;
+        var start = window.SyncEngine && window.SyncEngine.weekStart ? window.SyncEngine.weekStart() : "";
+        Object.keys((props.student && props.student.sessions) || {}).forEach(function (d) {
+            if (!start || String(d) >= start) myScore += Number(props.student.sessions[d].correct) || 0;
+        });
         var myIdx = -1;
         list.forEach(function (r, i) {
-            if (me && r.nickname === me) myIdx = i;
+            if (!me || r.nickname !== me) return;
+            if (myIdx < 0) myIdx = i;
+            if (Number(r.questions) === myScore) myIdx = i;
         });
 
         // ---------- Top 3 ----------
@@ -132,7 +138,7 @@
                 <div className="flex justify-between items-center mb-4 slide-up">
                     <div>
                         <h1 className="text-2xl md:text-3xl font-black gradient-text">🏆 Türkiye</h1>
-                        <p className="text-sm text-stone-400 mt-0.5">Bu haftanın en çalışkanları</p>
+                        <p className="text-sm text-stone-400 mt-0.5">Bu hafta en çok doğru çözenler</p>
                     </div>
                     <button 
                         onClick={props.onBack} 
@@ -144,34 +150,8 @@
 
                 {/* Info */}
                 <p className="text-xs text-stone-400 dark:text-stone-500 mb-5">
-                    📊 Takma ad görünür, e-posta gizlidir · Her hafta sıfırlanır
+                    📊 Sıra: bu haftanın doğru sayısı · Takma ad görünür · Pazartesi sıfırlanır
                 </p>
-
-                {/* Tab Toggle */}
-                <div className="flex p-1.5 rounded-2xl bg-stone-100 dark:bg-stone-800 mb-6">
-                    <button 
-                        type="button" 
-                        onClick={function () { setTab("week"); }}
-                        className={"flex-1 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 " +
-                            (tab === "week" 
-                                ? "bg-white dark:bg-stone-900 shadow-md text-indigo-600 dark:text-indigo-400" 
-                                : "text-stone-500 hover:text-stone-700 dark:hover:text-stone-300")
-                        }
-                    >
-                        📝 Haftalık Soru
-                    </button>
-                    <button 
-                        type="button" 
-                        onClick={function () { setTab("exam"); }}
-                        className={"flex-1 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 " +
-                            (tab === "exam" 
-                                ? "bg-white dark:bg-stone-900 shadow-md text-indigo-600 dark:text-indigo-400" 
-                                : "text-stone-500 hover:text-stone-700 dark:hover:text-stone-300")
-                        }
-                    >
-                        📋 Deneme
-                    </button>
-                </div>
 
                 {/* Loading */}
                 {loading && (
@@ -267,7 +247,7 @@
                     <div className="rounded-3xl glass overflow-hidden">
                         <div className="px-4 py-3 bg-stone-50 dark:bg-stone-800/50 border-b border-stone-200 dark:border-stone-700 flex justify-between text-xs font-medium text-stone-400 uppercase tracking-wider">
                             <span>Sıralama</span>
-                            <span>{tab === "week" ? "Soru" : "Puan"}</span>
+                            <span>Doğru</span>
                         </div>
                         <div className="divide-y divide-stone-100 dark:divide-stone-800 max-h-96 overflow-y-auto">
                             {(rest.length ? rest : []).map(function (r, i) {
@@ -329,7 +309,7 @@
                                 </div>
                             </div>
                             <div className="text-right">
-                                <p className="text-xs text-stone-400">Puan</p>
+                                <p className="text-xs text-stone-400">Doğru</p>
                                 <p className="font-stat text-xl font-bold text-indigo-600">{myRankData.score}</p>
                             </div>
                         </div>
@@ -351,7 +331,7 @@
                             </div>
                             <div className="text-right">
                                 <p className="text-xs text-stone-400">Bu hafta</p>
-                                <p className="font-stat text-sm text-stone-400">0 soru</p>
+                                <p className="font-stat text-sm text-stone-400">0 doğru</p>
                             </div>
                         </div>
                     </div>

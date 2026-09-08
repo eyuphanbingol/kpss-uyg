@@ -54,9 +54,9 @@ create table if not exists public.instructor_group_members (
 );
 
 create or replace view public.leaderboard_public as
-  select nickname, questions, 'week'::text as kind from public.leaderboard_weekly
-  union all
-  select nickname, coalesce(score,0)::int as questions, 'exam'::text as kind from public.exam_ranks;
+  select nickname, questions, 'week'::text as kind
+  from public.leaderboard_weekly
+  where week_start = ((date_trunc('week', timezone('Europe/Istanbul', now())))::date);
 
 alter table public.student_states enable row level security;
 alter table public.leaderboard_weekly enable row level security;

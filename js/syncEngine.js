@@ -340,14 +340,13 @@
                 }, { onConflict: "code" });
             }
             if (global.StudentStore.notify) global.StudentStore.notify();
-            var today = global.StudentStore.todayStr();
-            var sess = merged.sessions[today] || { questions: 0 };
-            if (sess.questions) {
+            var weekPts = weekCorrect(merged);
+            if (weekPts > 0) {
                 await sb.from("leaderboard_weekly").upsert({
                     user_id: uid,
                     week_start: weekStart(),
                     nickname: nick,
-                    questions: sess.questions,
+                    questions: weekPts,
                     updated_at: merged.updatedAt
                 }, { onConflict: "user_id,week_start" });
             }
@@ -365,6 +364,15 @@
         var diff = d.getDate() - day + (day === 0 ? -6 : 1);
         var x = new Date(d.setDate(diff));
         return global.StudentStore.todayStr(x);
+    }
+
+    function weekCorrect(merged) {
+        var start = weekStart();
+        var n = 0;
+        Object.keys((merged && merged.sessions) || {}).forEach(function (d) {
+            if (String(d) >= start) n += Number(merged.sessions[d].correct) || 0;
+        });
+        return n;
     }
 
     function schedule() {
