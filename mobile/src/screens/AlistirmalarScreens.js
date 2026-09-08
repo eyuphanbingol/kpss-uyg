@@ -11,7 +11,8 @@ import { colors, DERS_ICON } from "../lib/theme";
 var MAP_CARD_IMG = {
     volkan: require("../../assets/volkan-hover.png"),
     kirik: require("../../assets/kirik-kivrim.png"),
-    masif: require("../../assets/masif.png")
+    masif: require("../../assets/masif.png"),
+    fay: require("../../assets/fay.png")
 };
 
 export function AlistirmalarHomeScreen({ navigation }) {

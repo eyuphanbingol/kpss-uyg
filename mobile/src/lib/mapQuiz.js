@@ -117,7 +117,7 @@
                 { id: "kirik", title: "Kırık dağlar (horst–graben)", icon: "⛰️", hoverImg: "kirik" },
                 { id: "kivrim", title: "Kıvrım dağları", icon: "🏔️", hoverImg: "kirik" },
                 { id: "masif", title: "Masif araziler", icon: "🪨", hoverImg: "masif" },
-                { id: "fay", title: "Fay hatları (KAF·DAF·BAF)", icon: "⚡" },
+                { id: "fay", title: "Fay hatları (KAF·DAF·BAF)", icon: "⚡", hoverImg: "fay" },
                 { id: "deprem-az", title: "Deprem riski az alanlar", icon: "🟢" }
             ]
         },
