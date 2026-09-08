@@ -126,7 +126,7 @@
             kids: [
                 { id: "plato-karst", title: "Karstik platolar", icon: "🪨", hoverImg: "plato-karst" },
                 { id: "plato-volkan", title: "Volkanik / lav platoları", icon: "🌋", hoverImg: "volkan" },
-                { id: "plato-asinim", title: "Aşınım düzlüğü platoları", icon: "🟩" },
+                { id: "plato-asinim", title: "Aşınım düzlüğü platoları", icon: "🟩", hoverImg: "plato-asinim" },
                 { id: "plato-tabaka", title: "Tabaka düzlüğü platoları", icon: "🏜️" }
             ]
         },
