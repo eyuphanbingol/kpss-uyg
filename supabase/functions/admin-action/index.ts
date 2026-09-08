@@ -25,6 +25,38 @@ function json(req: Request, body: unknown, status = 200) {
   return new Response(JSON.stringify(body), { status, headers: corsHeaders(req) });
 }
 
+const ADMIN_ACTIONS: Record<string, 1> = {
+  submit_edu: 1,
+  user_list: 1,
+  grant_premium: 1,
+  revoke_premium: 1,
+  block: 1,
+  announce: 1,
+  list_edu_requests: 1,
+  approve_edu: 1,
+  reject_edu: 1,
+  delete_user: 1,
+  list_announcements: 1,
+  delete_announce: 1,
+  inspect_user: 1
+};
+
+function isUuid(v: unknown) {
+  return typeof v === "string" && /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(v);
+}
+
+async function audit(admin: any, actor: string, action: string, target: string | null, ok: boolean, detail?: string) {
+  try {
+    await admin.from("security_audit").insert({
+      actor: actor,
+      action: action,
+      target: target,
+      ok: ok,
+      detail: (detail || "").slice(0, 200)
+    });
+  } catch (_e) {}
+}
+
 function eduReqFromPayload(payload: any) {
   if (!payload || typeof payload !== "object") return null;
   const nested = payload.userProfile && payload.userProfile.educationChangeRequest;
@@ -52,6 +84,7 @@ function locLabel(loc: any) {
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders(req) });
+  if (req.method !== "POST") return json(req, { ok: false, error: "Method not allowed." }, 405);
 
   const auth = req.headers.get("Authorization") || "";
   const url = Deno.env.get("SUPABASE_URL")!;
@@ -62,8 +95,17 @@ Deno.serve(async (req) => {
   if (!user) return json(req, { ok: false, error: "Giriş gerekli." }, 401);
 
   const admin = createClient(url, service);
-  const body = await req.json();
-  const action = body.action;
+  let body: any;
+  try {
+    const raw = await req.text();
+    if (raw.length > 80000) return json(req, { ok: false, error: "İstek çok büyük." }, 413);
+    body = raw ? JSON.parse(raw) : {};
+  } catch (_e) {
+    return json(req, { ok: false, error: "Geçersiz istek." }, 400);
+  }
+  const action = String(body.action || "");
+  if (!ADMIN_ACTIONS[action]) return json(req, { ok: false, error: "Geçersiz işlem." }, 400);
+  if (body.user_id && !isUuid(body.user_id)) return json(req, { ok: false, error: "Geçersiz kullanıcı." }, 400);
   const levels: Record<string, string> = {
     lisans: "2026-09-06",
     onlisans: "2026-10-04",
@@ -81,11 +123,19 @@ Deno.serve(async (req) => {
     const next = writeEduReq(payload, reqObj);
     next.userProfile = Object.assign({}, next.userProfile || {}, { educationLevel: from });
     await admin.from("student_states").update({ payload: next }).eq("user_id", user.id);
+    await audit(admin, user.id, "submit_edu", user.id, true, to);
     return json(req, { ok: true, data: reqObj });
   }
 
   const { data: me } = await admin.from("student_states").select("role").eq("user_id", user.id).maybeSingle();
-  if (!me || me.role !== "admin") return json(req, { ok: false, error: "Bu işlem için yetkin yok." }, 403);
+  if (!me || me.role !== "admin") {
+    await audit(admin, user.id, action, body.user_id || null, false, "forbidden");
+    return json(req, { ok: false, error: "Bu işlem için yetkin yok." }, 403);
+  }
+
+  if ((action === "grant_premium" || action === "revoke_premium" || action === "block" || action === "approve_edu" || action === "reject_edu" || action === "delete_user" || action === "inspect_user") && !isUuid(body.user_id)) {
+    return json(req, { ok: false, error: "Geçersiz kullanıcı." }, 400);
+  }
 
   if (action === "user_list") {
     const { data } = await admin.from("student_states")
@@ -268,5 +318,6 @@ Deno.serve(async (req) => {
     });
   }
 
+  await audit(admin, user.id, action, body.user_id || body.id || null, true);
   return json(req, { ok: true });
 });

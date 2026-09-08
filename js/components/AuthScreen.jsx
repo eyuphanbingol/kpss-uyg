@@ -484,11 +484,9 @@
                 savePending();
             }
 
-            if (mode !== "up") {
-                if (Date.now() < loginLockUntil) {
-                    setMsg(loginLockedMsg());
-                    return;
-                }
+            if (Date.now() < loginLockUntil) {
+                setMsg(loginLockedMsg());
+                return;
             }
 
             setBusy(true);
@@ -511,15 +509,13 @@
                     : await sb.auth.signInWithPassword({ email: email, password: pass });
 
                 if (res.error) {
-                    if (mode !== "up") {
-                        loginFails += 1;
-                        if (loginFails >= 5) {
-                            var wait = Math.min(180000, 30000 * Math.pow(2, loginFails - 5));
-                            loginLockUntil = Date.now() + wait;
-                        }
+                    loginFails += 1;
+                    if (loginFails >= 5) {
+                        var wait = Math.min(180000, 30000 * Math.pow(2, loginFails - 5));
+                        loginLockUntil = Date.now() + wait;
                     }
                     setMsg(window.trError ? window.trError(res.error, "Giriş yapılamadı.") : "Giriş yapılamadı.");
-                    if (mode !== "up" && Date.now() < loginLockUntil) setMsg(loginLockedMsg());
+                    if (Date.now() < loginLockUntil) setMsg(loginLockedMsg());
                 } else if (mode === "up" && !(res.data && res.data.session)) {
                     setMsg("✅ Kayıt tamam! E-postanıza gelen linke tıklayarak hesabınızı doğrulayın.");
                 } else {
@@ -947,6 +943,7 @@
                                 return;
                             }
                             if (!sb) { setMsg("Sunucu bağlı değil."); return; }
+                            if (Date.now() < loginLockUntil) { setMsg(loginLockedMsg()); return; }
                             setBusy(true);
                             setMsg("");
                             try {
@@ -954,9 +951,13 @@
                                     window.SupabaseClient.clearRecoveryFlag();
                                 }
                                 var resetTo = window.location.origin + (window.location.pathname || "/") + "?reset=1";
-                                var res = await sb.auth.resetPasswordForEmail(email.trim(), {
+                                await sb.auth.resetPasswordForEmail(email.trim(), {
                                     redirectTo: resetTo
                                 });
+                                loginFails += 1;
+                                if (loginFails >= 5) {
+                                    loginLockUntil = Date.now() + 60000;
+                                }
                                 setMsg("Hesap varsa şifre sıfırlama bağlantısı gönderildi. Spam klasörüne de bak.");
                             } catch (e) {
                                 var em = window.trError ? window.trError(e, "") : "";

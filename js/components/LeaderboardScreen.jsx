@@ -79,24 +79,10 @@
                 return; 
             }
 
-            var ws = window.SyncEngine && window.SyncEngine.weekStart();
-            
-            // Leaderboard_public den dene
             sb.from("leaderboard_public").select("nickname,questions,kind").limit(100).then(function (res) {
                 if (res.error) {
-                    // Fallback: leaderboard_weekly
-                    sb.from("leaderboard_weekly").select("nickname,questions").eq("week_start", ws).order("questions", { ascending: false }).limit(50)
-                        .then(function (r2) {
-                            if (r2.error) {
-                                setErr("📊 Liderlik tablosu henüz oluşturulmamış.");
-                                setLoading(false);
-                            } else {
-                                var data = r2.data || [];
-                                setWeek(data.filter(function (x) { return x.kind !== "exam"; }));
-                                setExams(data.filter(function (x) { return x.kind === "exam"; }));
-                                setLoading(false);
-                            }
-                        });
+                    setErr("📊 Sıralama şu an yok.");
+                    setLoading(false);
                 } else {
                     var rows = res.data || [];
                     setWeek(rows.filter(function (x) { return x.kind !== "exam"; }));
