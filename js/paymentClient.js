@@ -2,18 +2,12 @@
     var mock = true;
 
     function checkout(planId) {
-        if (mock) {
-            if (global.StudentStore && global.StudentStore.grantMockPremium) {
-                global.StudentStore.grantMockPremium(7);
-            }
-            return Promise.resolve({
-                ok: true,
-                mock: true,
-                checkoutUrl: null,
-                message: "Sandbox: 7 günlük Premium açıldı. Gerçek iyzico anahtarı yok; canlı ödemede bu satır Edge Function’a gider."
-            });
-        }
-        return Promise.resolve({ ok: false });
+        return Promise.resolve({
+            ok: false,
+            mock: true,
+            checkoutUrl: null,
+            message: "Ödeme henüz açık değil."
+        });
     }
 
     function applyReferral(code) {

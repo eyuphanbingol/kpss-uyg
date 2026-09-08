@@ -729,13 +729,8 @@
             state.consent = Object.assign({}, state.consent || {}, patch || {});
             persist();
         },
-        grantMockPremium: function (days) {
-            var d = new Date();
-            d.setDate(d.getDate() + (days || 7));
-            state.userProfile.premium = true;
-            state.userProfile.premiumUntil = d.toISOString();
-            state.billing.plan = "premium_mock";
-            emit();
+        grantMockPremium: function () {
+            return false;
         },
         listReviewNotes: function () {
             return (state.reviewNotebook || []).filter(function (n) { return n && !n.deleted; })
@@ -927,7 +922,20 @@
         updateUserProfile: function (patch) {
             var p = Object.assign({}, patch || {});
             delete p.educationLevel;
+            delete p.role;
+            delete p.premium;
+            delete p.premiumUntil;
+            delete p.blocked;
+            delete p.authUserId;
+            delete p.billing;
             Object.assign(state.userProfile, p);
+            emit();
+        },
+        applyServerFlags: function (flags) {
+            flags = flags || {};
+            state.userProfile.role = flags.role === "admin" ? "admin" : "student";
+            if (typeof flags.premium === "boolean") state.userProfile.premium = flags.premium;
+            if (typeof flags.blocked === "boolean") state.userProfile.blocked = flags.blocked;
             emit();
         },
         setEducationLevel: function (level) {

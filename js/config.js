@@ -13,7 +13,12 @@
         appName: "Atanly",
         logoUrl: "icons/atanom.png?v=18",
         platform: "web",
-        productionUrl: "https://kpss-uyg.vercel.app",
+        productionUrl: "https://www.atanly.com",
+        allowedOrigins: [
+            "https://www.atanly.com",
+            "https://atanly.com",
+            "https://kpss-uyg.vercel.app"
+        ],
         legal: {
             operator: "Atanly işletmecisi",
             email: ""

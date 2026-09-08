@@ -2,8 +2,8 @@
     var RULES = [
         [/invalid login|invalid credentials|invalid email or password/i, "E-posta veya şifre hatalı."],
         [/email not confirmed|email_not_confirmed/i, "E-postanı henüz doğrulamadın. Gelen kutundaki linke tıkla."],
-        [/already registered|user already|already been registered|user_already_exists/i, "Bu e-posta ile kayıtlı bir hesap var. Giriş yap veya şifreni sıfırla."],
-        [/user not found|user_not_found/i, "Bu e-posta ile hesap bulunamadı."],
+        [/already registered|user already|already been registered|user_already_exists/i, "Kayıt tamamlanamadı. Giriş yapmayı veya şifre sıfırlamayı dene."],
+        [/user not found|user_not_found/i, "E-posta veya şifre hatalı."],
         [/password should be at least|password is known to be weak|weak_password|weak password/i, "Şifre en az 6 karakter olmalı."],
         [/new password should be different|same_password|same password/i, "Yeni şifre eskisiyle aynı olamaz."],
         [/unable to validate email|invalid email|email address is invalid/i, "Geçerli bir e-posta adresi gir."],

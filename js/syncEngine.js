@@ -162,6 +162,18 @@
         return (A.at || "") >= (B.at || "") ? A : B;
     }
 
+    function sanitizeOutgoingPayload(merged) {
+        var copy = JSON.parse(JSON.stringify(merged || {}));
+        if (copy.userProfile) {
+            copy.userProfile.role = "student";
+            delete copy.userProfile.premium;
+            delete copy.userProfile.premiumUntil;
+            delete copy.userProfile.blocked;
+        }
+        delete copy.billing;
+        return copy;
+    }
+
     function looksOnboarded(payload, row) {
         if (payload && payload.profile && payload.profile.onboarded) return true;
         if (payload && payload.userProfile && payload.userProfile.kvkkConsent && payload.profile && String(payload.profile.name || "").trim()) return true;
@@ -288,7 +300,7 @@
             var emptyLocal = global.StudentStore.isEmptyProgress(local);
             var localOn = !!(local.profile && local.profile.onboarded);
             var remoteOn = !!(remote && remote.profile && remote.profile.onboarded);
-            if (!localOn && !remoteOn && !(local.userProfile && local.userProfile.role === "admin") && dbRole !== "admin") {
+            if (!localOn && !remoteOn && dbRole !== "admin") {
                 return { ok: true, reason: "wait-onboarding" };
             }
             var merged;
@@ -303,10 +315,10 @@
             }
             merged.userProfile.authUserId = uid;
             merged.userProfile.email = session.user.email || merged.userProfile.email;
-            if (dbRole === "admin" || merged.userProfile.role === "admin") {
-                merged.userProfile.role = "admin";
-            }
-            if (remoteRow.data && remoteRow.data.premium) merged.userProfile.premium = true;
+            merged.userProfile.role = dbRole === "admin" ? "admin" : "student";
+            merged.userProfile.premium = !!(remoteRow.data && remoteRow.data.premium);
+            merged.userProfile.blocked = !!(remoteRow.data && (remoteRow.data.blocked
+                || (remoteRow.data.payload && remoteRow.data.payload.userProfile && remoteRow.data.payload.userProfile.blocked)));
             var latestSnap = global.StudentStore.getState();
             if ((latestSnap.updatedAt || "") >= (local.updatedAt || "")) local = latestSnap;
             localOn = !!(local.profile && local.profile.onboarded);
@@ -358,7 +370,7 @@
             var nick = merged.userProfile.nickname || "ogrenci";
             var row = {
                 user_id: uid,
-                payload: merged,
+                payload: sanitizeOutgoingPayload(merged),
                 updated_at: merged.updatedAt,
                 nickname: nick,
                 education_level: (merged.profile && merged.profile.onboarded)
@@ -366,11 +378,9 @@
                     : (dbEdu || null),
                 target_type: merged.userProfile.targetType,
                 platform: merged.userProfile.platform || "web",
-                premium: !!merged.userProfile.premium,
                 last_study_at: merged.streak.lastDay,
                 questions_total: merged.counters.questions || 0
             };
-            if (merged.userProfile.role === "admin") row.role = "admin";
             if (global.StudentStore.ensureReferralCode) {
                 row.payload.userProfile.referralCode = global.StudentStore.ensureReferralCode();
             }
@@ -383,7 +393,7 @@
                     st.userProfile.location = Object.assign({}, st.userProfile.location || {}, geo, { at: new Date().toISOString() });
                     global.StudentStore.replaceState(st, { quiet: true });
                     var latest = global.StudentStore.getState();
-                    sb.from("student_states").update({ payload: latest }).eq("user_id", uid);
+                    sb.from("student_states").update({ payload: sanitizeOutgoingPayload(latest) }).eq("user_id", uid);
                 });
             }
             if (merged.userProfile.referralCode) {

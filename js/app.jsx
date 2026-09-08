@@ -2195,8 +2195,7 @@ function Ben(props) {
                         { id: "heat", t: "Isı haritası", d: "30 günlük tempo ve konu hakimiyeti" },
                         { id: "exam", t: "Tam deneme", d: "40 soru, 40 dakika kitapçık" },
                         { id: "ai", t: "Soru asistanı", d: "Yanlışın nedenini kısaca açıklar" },
-                        { id: "live", t: "Canlı deneme", d: "Cumartesi ortak saat; şimdi de çözülür" },
-                        { id: "instructor", t: "Kurum", d: "Davet kodu ve çalışma grubu" }
+                        { id: "live", t: "Canlı deneme", d: "Cumartesi ortak saat; şimdi de çözülür" }
                     ].map(function (x) {
                         return (
                             <button key={x.id} onClick={function () { props.onOpen && props.onOpen(x.id); }}
@@ -2349,6 +2348,10 @@ function App() {
 
     useEffect(function () {
         if (!extra || extra === "onboarding") return;
+        if (extra === "instructor" || extra === "admin") {
+            setExtra(null);
+            return;
+        }
         if (extra === "paywall" && !(window.KpssConfig && window.KpssConfig.premiumEnabled)) {
             setExtra(null);
             return;
@@ -2460,12 +2463,15 @@ function App() {
         setRoleChecked(false);
         var uid = authSession.user.id;
         var sb = window.SupabaseClient && window.SupabaseClient.get && window.SupabaseClient.get();
-        var localAdmin = !!(StudentStore.getState().userProfile && StudentStore.getState().userProfile.role === "admin");
         var settled = false;
-        function finish(isAdm) {
+        function finish(isAdm, flags) {
             if (settled) return;
             settled = true;
-            if (isAdm) StudentStore.updateUserProfile({ role: "admin" });
+            if (StudentStore.applyServerFlags) {
+                StudentStore.applyServerFlags(Object.assign({
+                    role: isAdm ? "admin" : "student"
+                }, flags || {}));
+            }
             if (isAdm && window.JsxLoader) {
                 window.JsxLoader.load("AdminDashboard", "js/components/AdminDashboard.jsx").then(function (C) {
                     if (C) setAdminCmp(function () { return C; });
@@ -2478,14 +2484,22 @@ function App() {
                 setRoleChecked(true);
             }
         }
-        if (!sb) { finish(localAdmin); return; }
-        var timed = setTimeout(function () { finish(localAdmin); }, 8000);
-        sb.from("student_states").select("role").eq("user_id", uid).maybeSingle().then(function (r) {
+        if (!sb) { finish(false); return; }
+        var timed = setTimeout(function () { finish(false); }, 8000);
+        function fromRow(r) {
             clearTimeout(timed);
-            finish(!!(r.data && r.data.role === "admin") || localAdmin);
-        }).catch(function () {
+            var row = (r && r.data) || {};
+            var blocked = !!(row.blocked || (row.payload && row.payload.userProfile && row.payload.userProfile.blocked));
+            finish(row.role === "admin", { premium: !!row.premium, blocked: blocked });
+        }
+        sb.from("student_states").select("role,premium,blocked,payload").eq("user_id", uid).maybeSingle().then(function (r) {
+            if (r && r.error) {
+                return sb.from("student_states").select("role,premium,payload").eq("user_id", uid).maybeSingle();
+            }
+            return r;
+        }).then(fromRow).catch(function () {
             clearTimeout(timed);
-            finish(localAdmin);
+            finish(false);
         });
         return function () { clearTimeout(timed); };
     }, [authSession]);
