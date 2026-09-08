@@ -169,6 +169,8 @@
             delete copy.userProfile.premium;
             delete copy.userProfile.premiumUntil;
             delete copy.userProfile.blocked;
+            var tz = copy.userProfile.location && copy.userProfile.location.tz;
+            copy.userProfile.location = tz ? { tz: String(tz).slice(0, 64) } : null;
         }
         delete copy.billing;
         return copy;
@@ -195,52 +197,10 @@
         return remote;
     }
 
-    function tzHint(tz) {
-        if (tz === "Europe/Istanbul") return { city: "", country: "Türkiye", countryCode: "TR" };
-        if (tz && tz.indexOf("Istanbul") >= 0) return { city: "", country: "Türkiye", countryCode: "TR" };
-        return {};
-    }
-
-    function fetchWithTimeout(url, ms) {
-        var ctrl = typeof AbortController !== "undefined" ? new AbortController() : null;
-        var t = setTimeout(function () { if (ctrl) ctrl.abort(); }, ms || 2500);
-        var opts = { cache: "no-store" };
-        if (ctrl) opts.signal = ctrl.signal;
-        return fetch(url, opts).then(function (r) {
-            clearTimeout(t);
-            return r.json();
-        }).catch(function () {
-            clearTimeout(t);
-            return null;
-        });
-    }
-
-    async function fetchGeo() {
-        var a = await fetchWithTimeout("https://get.geojs.io/v1/ip/geo.json", 2500);
-        if (a && (a.city || a.country)) {
-            return {
-                city: a.city || "",
-                region: a.region || "",
-                country: a.country || "",
-                countryCode: a.country_code || a.countryCode || ""
-            };
-        }
-        var b = await fetchWithTimeout("https://ipwho.is/", 2500);
-        if (b && b.success !== false && (b.city || b.country)) {
-            return {
-                city: b.city || "",
-                region: b.region || "",
-                country: b.country || "",
-                countryCode: b.country_code || ""
-            };
-        }
-        return {};
-    }
-
     function seedLocation() {
-        var loc = { at: new Date().toISOString(), tz: "" };
+        var loc = { tz: "" };
         try { loc.tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) {}
-        return Object.assign(loc, tzHint(loc.tz));
+        return loc;
     }
 
     async function ensureLocation() {
@@ -248,17 +208,9 @@
         var st = global.StudentStore.getState();
         if (!st || !st.userProfile) return;
         var cur = st.userProfile.location;
-        if (!cur || !cur.tz) {
-            st.userProfile.location = Object.assign({}, cur || {}, seedLocation());
-            global.StudentStore.replaceState(st, { quiet: true });
-        }
-        var geo = await fetchGeo();
-        if (geo && (geo.city || geo.country)) {
-            st = global.StudentStore.getState();
-            st.userProfile.location = Object.assign({}, st.userProfile.location || {}, geo, { at: new Date().toISOString() });
-            global.StudentStore.replaceState(st, { quiet: true });
-        }
-        if (global.SyncEngine && global.SyncEngine.sync) await global.SyncEngine.sync();
+        if (cur && cur.tz) return;
+        st.userProfile.location = Object.assign({}, cur || {}, seedLocation());
+        global.StudentStore.replaceState(st, { quiet: true });
     }
 
     async function pullPush() {
@@ -361,11 +313,6 @@
                 delete merged.educationChangeRequest;
             }
             merged.updatedAt = global.StudentStore.nowIso();
-            var prevLoc = (merged.userProfile && merged.userProfile.location) || {};
-            merged.userProfile.location = Object.assign({}, seedLocation(), prevLoc);
-            if (!merged.userProfile.location.country && !merged.userProfile.location.city) {
-                merged.userProfile.location = Object.assign({}, merged.userProfile.location, tzHint(merged.userProfile.location.tz));
-            }
             global.StudentStore.replaceState(merged, { quiet: true });
             var nick = merged.userProfile.nickname || "ogrenci";
             var row = {
@@ -385,17 +332,6 @@
                 row.payload.userProfile.referralCode = global.StudentStore.ensureReferralCode();
             }
             await sb.from("student_states").upsert(row);
-            if (!(merged.userProfile.location && merged.userProfile.location.city)) {
-                fetchGeo().then(function (geo) {
-                    if (!geo || !(geo.city || geo.country)) return;
-                    var st = global.StudentStore.getState();
-                    if (!st.userProfile) return;
-                    st.userProfile.location = Object.assign({}, st.userProfile.location || {}, geo, { at: new Date().toISOString() });
-                    global.StudentStore.replaceState(st, { quiet: true });
-                    var latest = global.StudentStore.getState();
-                    sb.from("student_states").update({ payload: sanitizeOutgoingPayload(latest) }).eq("user_id", uid);
-                });
-            }
             if (merged.userProfile.referralCode) {
                 await sb.from("referrals").upsert({
                     code: merged.userProfile.referralCode,
