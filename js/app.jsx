@@ -1718,6 +1718,14 @@ function TestView(props) {
                         <h4 className="font-semibold text-indigo-600 dark:text-indigo-400 text-sm mb-2">Çözüm notu</h4>
                         <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">{soru.explanation}</p>
                     </div>
+                    {item.ders ? (
+                        <button type="button" onClick={function () { StudentStore.toggleReviewBook(item.ders, item.konu, item.id); }}
+                            className={"w-full p-4 rounded-2xl font-semibold border-2 " + (StudentStore.inReviewBook(item.ders, item.konu, item.id)
+                                ? "border-teal-600 bg-teal-50 text-teal-800 dark:bg-teal-950/40 dark:text-teal-200"
+                                : "border-stone-200 bg-white dark:bg-slate-800 text-stone-800")}>
+                            {StudentStore.inReviewBook(item.ders, item.konu, item.id) ? "Tekrardan çıkar" : "Tekrara at"}
+                        </button>
+                    ) : null}
                     <button onClick={props.onNext} className="w-full btn-primary text-white p-5 rounded-2xl font-semibold">
                         {qIndex + 1 === items.length ? "Sonuçları gör" : "Sonraki soru"}
                     </button>
@@ -1775,6 +1783,12 @@ function ResultView(props) {
                                     <div key={i} className="p-4 rounded-xl bg-slate-50 dark:bg-slate-700/30 border text-left">
                                         <p className="text-sm font-semibold whitespace-pre-line">{w.question}</p>
                                         <p className="text-xs mt-2 text-emerald-600 font-bold">Doğru: {w.dogru}</p>
+                                        {w.ders ? (
+                                            <button type="button" onClick={function () { StudentStore.toggleReviewBook(w.ders, w.konu, w.id); }}
+                                                className="mt-3 text-xs font-bold px-3 py-1.5 rounded-lg border border-teal-600 text-teal-700">
+                                                {StudentStore.inReviewBook(w.ders, w.konu, w.id) ? "Tekrardan çıkar" : "Tekrara at"}
+                                            </button>
+                                        ) : null}
                                     </div>
                                 );
                             })}
@@ -1820,7 +1834,7 @@ function Eksikler(props) {
                 <button onClick={function () { props.onReview(); }} disabled={!plan.due.length}
                     className="p-4 rounded-2xl btn-primary text-white text-left disabled:opacity-40">
                     <span className="font-semibold block">Bugün tekrar · {plan.due.length}</span>
-                    <span className="text-xs font-normal opacity-80 mt-1 block">Daha önce çözdüğün, bugün hatırlaman gereken sorular.</span>
+                    <span className="text-xs font-normal opacity-80 mt-1 block">Soru yanında Tekrara at dediklerin. Çözünce listeden düşer.</span>
                 </button>
                 <button onClick={function () { props.onWrong(); }} disabled={!plan.wrong.length}
                     className="p-4 rounded-2xl border-2 border-rose-500 text-rose-600 text-left disabled:opacity-40">
@@ -2616,15 +2630,15 @@ function App() {
         const item = session.items[qIndex];
         const ok = i === item.q.correctAnswerIndex;
         setPicked(i); setAnswered(true);
-        StudentStore.recordAnswer({ ders: item.ders, konu: item.konu, id: item.id, correct: ok, fromWrongBook: session.mode === "wrong" });
+        StudentStore.recordAnswer({ ders: item.ders, konu: item.konu, id: item.id, correct: ok, fromWrongBook: session.mode === "wrong", fromReview: session.mode === "review" });
         StudentStore.addSessionStats({ questions: 1, correct: ok ? 1 : 0 });
         setAnswerLog(function (l) { return l.concat([{ ders: item.ders, konu: item.konu, ok: ok }]); });
         if (ok) {
             scoreRef.current += 1;
             setScore(scoreRef.current);
         }
-        else setWrongList(function (w) {
-            return w.concat([{ question: item.q.question, dogru: stripChoicePrefix(item.q.options[item.q.correctAnswerIndex]) }]);
+            else setWrongList(function (w) {
+            return w.concat([{ question: item.q.question, dogru: stripChoicePrefix(item.q.options[item.q.correctAnswerIndex]), ders: item.ders, konu: item.konu, id: item.id }]);
         });
     }
 

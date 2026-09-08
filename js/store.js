@@ -224,6 +224,7 @@
             topics: {},
             answers: {},
             wrongBook: [],
+            reviewBook: [],
             reviewNotebook: [],
             sessions: {},
             achievements: {},
@@ -361,6 +362,7 @@
             topics: migrateTopicPacks(isObj(parsed.topics) ? parsed.topics : {}),
             answers: answers,
             wrongBook: wrongBook,
+            reviewBook: Array.isArray(parsed.reviewBook) ? parsed.reviewBook.filter(Boolean) : [],
             reviewNotebook: migrateNotebook(parsed.reviewNotebook),
             sessions: isObj(parsed.sessions) ? parsed.sessions : {},
             achievements: isObj(parsed.achievements) ? parsed.achievements : {},
@@ -623,6 +625,9 @@
                 if (state.wrongBook.indexOf(id) === -1) state.wrongBook.push(id);
                 topic.wrongWeight = (topic.wrongWeight || 0) + 1;
             }
+        }
+        if (meta.fromReview && meta.correct) {
+            state.reviewBook = (state.reviewBook || []).filter(function (x) { return x !== id; });
         }
         rec.updatedAt = nowIso();
         topic.masteryScore = topicMasteryScore(topic);
@@ -1017,6 +1022,18 @@
             var rec = recordAnswer(meta);
             emit();
             return rec;
+        },
+        inReviewBook: function (ders, konu, id) {
+            return (state.reviewBook || []).indexOf(qid(ders, konu, id)) >= 0;
+        },
+        toggleReviewBook: function (ders, konu, id) {
+            var key = qid(ders, konu, id);
+            if (!state.reviewBook) state.reviewBook = [];
+            var i = state.reviewBook.indexOf(key);
+            if (i >= 0) state.reviewBook.splice(i, 1);
+            else state.reviewBook.push(key);
+            emit();
+            return i < 0;
         },
         recordTestResult: recordTestResult,
         recordExamAttempt: function (attempt) {

@@ -86,13 +86,7 @@
     function dueItems(kpssData, student) {
         var map = {};
         flattenQuestions(kpssData).forEach(function (item) { map[item.qid] = item; });
-        var today = global.StudentStore.todayStr();
-        var due = [];
-        Object.keys(student.answers || {}).forEach(function (id) {
-            var rec = student.answers[id];
-            if (rec.dueAt && rec.dueAt <= today && map[id]) due.push(map[id]);
-        });
-        return due;
+        return (student.reviewBook || []).map(function (id) { return map[id]; }).filter(Boolean);
     }
 
     function wrongItems(kpssData, student) {
@@ -150,9 +144,9 @@
                 id: "review",
                 kind: "review",
                 title: "Bugün tekrar",
-                detail: due.length + " sorunun tekrar zamanı geldi",
+                detail: due.length + " soru tekrara alındı",
                 count: due.length,
-                why: "Unutma eğrisine karşı bugün hatırlamak, yarın yeniden öğrenmekten ucuz."
+                why: "Sen attın; bugün onları bir kez daha çöz."
             });
         }
 

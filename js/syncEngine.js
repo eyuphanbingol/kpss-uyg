@@ -120,6 +120,7 @@
             topics: mergeTopics(local.topics, remote.topics),
             answers: mergeAnswers(local.answers, remote.answers),
             wrongBook: localNewer ? (local.wrongBook || []) : (remote.wrongBook || []),
+            reviewBook: localNewer ? (local.reviewBook || []) : (remote.reviewBook || []),
             reviewNotebook: (function () {
                 var map = {};
                 [].concat(remote.reviewNotebook || [], local.reviewNotebook || []).forEach(function (n) {
