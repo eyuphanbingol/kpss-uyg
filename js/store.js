@@ -227,7 +227,7 @@
                 shareCards: 0
             },
             billing: { plan: "free", mockCustomerId: null },
-            consent: { analytics: false, marketing: false },
+            consent: { analytics: false, marketing: false, bannerSeen: false },
             usage: { day: null, mixed: 0 },
             games: defaultGames()
         };
@@ -725,6 +725,10 @@
         ensureReferralCode: ensureReferralCode,
         canStartMixed: canStartMixed,
         consumeMixed: consumeMixed,
+        setConsent: function (patch) {
+            state.consent = Object.assign({}, state.consent || {}, patch || {});
+            persist();
+        },
         grantMockPremium: function (days) {
             var d = new Date();
             d.setDate(d.getDate() + (days || 7));

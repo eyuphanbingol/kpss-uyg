@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KVKK Başvuru — Atanly</title>
+    <link rel="stylesheet" href="yasal.css">
+</head>
+<body>
+    <header>
+        <p style="margin:0;opacity:.85;font-size:.8rem">Atanly</p>
+        <h1>KVKK hak başvurusu</h1>
+    </header>
+    <nav class="links">
+        <a href="../">Uygulama</a>
+        <a href="aydinlatma.html">Aydınlatma</a>
+        <a href="kullanim.html">Kullanım</a>
+        <a href="uyelik.html">Üyelik</a>
+        <a href="gizlilik.html">Gizlilik</a>
+        <a href="cerez.html">Çerez</a>
+        <a href="basvuru.html">KVKK başvuru</a>
+    </nav>
+    <main>
+        <p>6698 sayılı Kanun m.11 kapsamındaki talepleriniz için bu formu doldurun veya uygulamada <strong>Ben → Veri silme talebi</strong> kullanın.</p>
+        <div class="note">Kimlik teyidi için başvuruda kullandığınız e-posta, hesap e-postanızla aynı olmalıdır.</div>
+        <form id="kvkk-form">
+            <label>Ad soyad
+                <input name="ad" required autocomplete="name">
+            </label>
+            <label>Hesap e-postası
+                <input name="email" type="email" required autocomplete="email">
+            </label>
+            <label>Talep
+                <select name="talep" required>
+                    <option value="bilgi">Verilerimin işlenip işlenmediğini öğrenmek</option>
+                    <option value="kopya">Verilerimin kopyasını istemek</option>
+                    <option value="duzeltme">Düzeltme</option>
+                    <option value="silme">Silme / yok etme</option>
+                    <option value="itiraz">İtiraz</option>
+                    <option value="diger">Diğer</option>
+                </select>
+            </label>
+            <label>Açıklama
+                <textarea name="aciklama" rows="5" required></textarea>
+            </label>
+            <button type="submit">Başvuruyu e-posta olarak hazırla</button>
+        </form>
+        <p class="muted" id="kvkk-out"></p>
+        <p class="muted">Veri sorumlusu resmi e-postası henüz duyurulmadıysa başvuru metni cihazınızda hazırlanır; kopyalayıp işletmeciye iletebilir veya uygulama içi silme talebini kullanabilirsiniz. Kanuni cevap süresi kural olarak 30 gündür.</p>
+    </main>
+    <footer>Atanly</footer>
+    <script>
+        document.getElementById("kvkk-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            var f = e.target;
+            var body = "KVKK başvurusu%0AAd: " + encodeURIComponent(f.ad.value) +
+                "%0AE-posta: " + encodeURIComponent(f.email.value) +
+                "%0ATalep: " + encodeURIComponent(f.talep.value) +
+                "%0A%0A" + encodeURIComponent(f.aciklama.value);
+            var mail = "mailto:?subject=" + encodeURIComponent("Atanly KVKK başvurusu") + "&body=" + body;
+            document.getElementById("kvkk-out").textContent = "E-posta penceresi açılmazsa metni kopyalayıp saklayın.";
+            window.location.href = mail;
+        });
+    </script>
+</body>
+</html>

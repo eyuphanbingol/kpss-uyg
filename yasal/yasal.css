@@ -1,0 +1,16 @@
+:root { --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --teal: #0f766e; }
+body { font-family: Inter, system-ui, sans-serif; margin: 0; color: var(--ink); line-height: 1.65; background: #fafaf9; }
+header { background: #0b3d4a; color: #f5ebc7; padding: 1.2rem 1.25rem; }
+header a { color: #f5ebc7; }
+main { max-width: 44rem; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+h1 { font-size: 1.45rem; margin: 0 0 .35rem; }
+h2 { font-size: 1.12rem; margin: 1.6rem 0 .5rem; }
+p, li { font-size: .95rem; }
+.muted { color: var(--muted); font-size: .85rem; }
+nav.links { display: flex; flex-wrap: wrap; gap: .5rem .9rem; font-size: .8rem; padding: .85rem 1.25rem; background: #fff; border-bottom: 1px solid var(--line); }
+nav.links a { color: var(--teal); }
+footer { max-width: 44rem; margin: 0 auto; padding: 0 1.25rem 2.5rem; font-size: .8rem; color: var(--muted); }
+.note { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 1rem; margin: 1rem 0; }
+label { display: block; font-size: .85rem; font-weight: 600; margin-top: .8rem; }
+input, select, textarea { width: 100%; box-sizing: border-box; margin-top: .25rem; padding: .65rem .75rem; border: 1px solid var(--line); border-radius: 10px; font: inherit; }
+button, .btn { display: inline-block; margin-top: 1rem; background: var(--teal); color: #fff; border: 0; border-radius: 999px; padding: .65rem 1.1rem; font-weight: 700; cursor: pointer; text-decoration: none; }

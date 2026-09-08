@@ -45,8 +45,6 @@
         const [target, setTarget] = useState("B");
         const [refCode, setRefCode] = useState("");
         const [examDate, setExamDate] = useState(dates.lisans || "2026-09-06");
-        const [kvkk, setKvkk] = useState(false);
-        const [kvkkOpen, setKvkkOpen] = useState(false);
         const [interest, setInterest] = useState({});
         const [mode, setMode] = useState("in");
         const [step, setStep] = useState(1);
@@ -191,7 +189,6 @@
 
             if (mode === "up") {
                 if (!name.trim()) { setMsg("Adınızı yazın."); return; }
-                if (!kvkk) { setMsg("Devam etmek için onay kutusunu işaretleyin."); return; }
                 savePending();
             }
 
@@ -235,7 +232,6 @@
             if (mode === "up") {
                 if (!name.trim()) { setMsg("Google ile kayıt için adınızı yazın."); return; }
                 if (step < 3) { setMsg("Önce tüm adımları tamamlayın."); return; }
-                if (!kvkk) { setMsg("Devam etmek için onay kutusunu işaretleyin."); return; }
                 savePending();
             }
 
@@ -537,36 +533,18 @@
                                 />
                             </div>
 
-                            <label className="flex items-start gap-3 text-xs text-stone-500 cursor-pointer">
-                                <input 
-                                    type="checkbox" 
-                                    checked={kvkk} 
-                                    onChange={function (e) { setKvkk(e.target.checked); }} 
-                                    className="mt-0.5 w-4 h-4 rounded border-stone-300 text-indigo-600 focus:ring-indigo-500"
-                                />
-                                <span>
-                                    İlerlememin hesabıma kaydedilmesine izin veriyorum.{""}
-                                    <button 
-                                        type="button" 
-                                        className="text-indigo-600 dark:text-indigo-400 hover:underline font-medium"
-                                        onClick={function (e) { e.preventDefault(); setKvkkOpen(!kvkkOpen); }}
-                                    >
-                                        {kvkkOpen ? "Gizle" : "Detayları oku"}
-                                    </button>
-                                </span>
-                            </label>
-
-                            {kvkkOpen && (
-                                <div className="rounded-2xl bg-stone-50 dark:bg-stone-800/50 p-4 text-xs text-stone-500 leading-relaxed border border-stone-200 dark:border-stone-700 slide-up">
-                                    <p className="font-medium text-stone-700 dark:text-stone-300 mb-1">🔒 Veri Güvenliği</p>
-                                    <ul className="list-disc list-inside space-y-1">
-                                        <li>Verileriniz yalnızca kendi hesabınızda saklanır</li>
-                                        <li>Liderlik tablosunda takma adınız görünür, e-posta paylaşılmaz</li>
-                                        <li>İstediğiniz zaman profilden veri silme talebi gönderebilirsiniz</li>
-                                        <li>Hesabınızı tamamen silebilirsiniz</li>
-                                    </ul>
-                                </div>
-                            )}
+                            <p className="text-[11px] text-stone-500 leading-relaxed">
+                                Hesap oluşturarak{" "}
+                                <a className="text-teal-700 font-semibold underline" href="yasal/kullanim.html" target="_blank" rel="noopener">Kullanım Koşulları</a>
+                                {" "}ile{" "}
+                                <a className="text-teal-700 font-semibold underline" href="yasal/uyelik.html" target="_blank" rel="noopener">Üyelik Sözleşmesi</a>
+                                'ni kabul etmiş olursunuz. Kişisel verileriniz hakkında{" "}
+                                <a className="text-teal-700 font-semibold underline" href="yasal/aydinlatma.html" target="_blank" rel="noopener">KVKK Aydınlatma Metni</a>
+                                'ni inceleyebilirsiniz.{" "}
+                                <a className="underline" href="yasal/gizlilik.html" target="_blank" rel="noopener">Gizlilik</a>
+                                {" · "}
+                                <a className="underline" href="yasal/cerez.html" target="_blank" rel="noopener">Çerezler</a>
+                            </p>
 
                             <div className="flex gap-2">
                                 <button 
@@ -578,7 +556,7 @@
                                 </button>
                                 <button 
                                     type="button" 
-                                    disabled={busy || !kvkk || !validateEmail(email) || !validatePassword(pass)} 
+                                    disabled={busy || !validateEmail(email) || !validatePassword(pass)} 
                                     onClick={submit} 
                                     className="flex-1 py-3.5 rounded-2xl btn-primary text-white font-semibold disabled:opacity-40 transition-all"
                                 >
@@ -846,6 +824,19 @@
                     </div>
 
                     {form}
+                    <p className="text-[10px] text-center text-stone-400 mt-4 leading-relaxed">
+                        <a className="underline" href="yasal/aydinlatma.html">KVKK Aydınlatma</a>
+                        {" · "}
+                        <a className="underline" href="yasal/kullanim.html">Kullanım</a>
+                        {" · "}
+                        <a className="underline" href="yasal/uyelik.html">Üyelik</a>
+                        {" · "}
+                        <a className="underline" href="yasal/gizlilik.html">Gizlilik</a>
+                        {" · "}
+                        <a className="underline" href="yasal/cerez.html">Çerez</a>
+                        {" · "}
+                        <a className="underline" href="yasal/basvuru.html">KVKK başvuru</a>
+                    </p>
                 </div>
             </div>
         );

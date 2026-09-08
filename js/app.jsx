@@ -58,7 +58,29 @@ function useStudent() {
     return st;
 }
 
-function AdSlot(props) {
+function CookieBar() {
+    var student = useStudent();
+    var seen = student.consent && student.consent.bannerSeen;
+    if (seen) return null;
+    return (
+        <div className="fixed left-3 right-3 z-[60] rounded-2xl bg-stone-900 text-stone-100 p-4 shadow-2xl text-sm" style={{ bottom: "calc(var(--app-tabbar-h) + 12px)" }}>
+            <p className="text-xs leading-relaxed mb-3">
+                Zorunlu çerezler giriş ve ilerleme için kullanılır. Reklam çerezleri (AdSense) ancak onayınızla yüklenir.{" "}
+                <a className="underline text-teal-300" href="yasal/cerez.html">Çerez politikası</a>
+                {" · "}
+                <a className="underline text-teal-300" href="yasal/aydinlatma.html">KVKK</a>
+            </p>
+            <div className="flex gap-2">
+                <button type="button" className="flex-1 py-2 rounded-xl bg-white text-stone-900 text-xs font-bold" onClick={function () {
+                    StudentStore.setConsent({ bannerSeen: true, marketing: true, analytics: false });
+                }}>Reklam çerezlerine izin ver</button>
+                <button type="button" className="flex-1 py-2 rounded-xl border border-stone-500 text-xs font-bold" onClick={function () {
+                    StudentStore.setConsent({ bannerSeen: true, marketing: false, analytics: false });
+                }}>Yalnızca zorunlu</button>
+            </div>
+        </div>
+    );
+}
     var kind = props.kind || "display";
     var boxRef = useRef(null);
     useEffect(function () {
@@ -208,7 +230,6 @@ function Onboarding(props) {
     const [level, setLevel] = useState(up.educationLevel || "lisans");
     const [target, setTarget] = useState(up.targetType || "B");
     const [examDate, setExamDate] = useState(profile.examDate || dates[up.educationLevel || "lisans"] || "2026-09-06");
-    const [kvkk, setKvkk] = useState(false);
     return (
         <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-end sm:items-center justify-center p-4">
             <div className="w-full max-w-md bg-white dark:bg-stone-900 rounded-3xl p-6 sm:p-8 shadow-2xl fade-in">
@@ -249,11 +270,10 @@ function Onboarding(props) {
                 <label className="block text-xs font-bold text-stone-500 mb-1">Sınav tarihi</label>
                 <input type="date" value={examDate} onChange={function (e) { setExamDate(e.target.value); }}
                     className="w-full mb-4 px-4 py-3 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-800 font-medium" />
-                <label className="flex items-start gap-2 mb-5 text-xs text-stone-600">
-                    <input type="checkbox" checked={kvkk} onChange={function (e) { setKvkk(e.target.checked); }} className="mt-0.5" />
-                    İlerleme verilerimin hesabımda saklanmasına izin veriyorum.
-                </label>
-                <button disabled={!name.trim() || !kvkk} onClick={function () {
+                <p className="text-[11px] text-stone-500 leading-relaxed mb-5">
+                    Başla diyerek <a className="underline font-semibold" href="yasal/kullanim.html" target="_blank" rel="noopener">Kullanım Koşulları</a> ve <a className="underline font-semibold" href="yasal/uyelik.html" target="_blank" rel="noopener">Üyelik Sözleşmesi</a>'ni kabul etmiş olursunuz. <a className="underline" href="yasal/aydinlatma.html" target="_blank" rel="noopener">KVKK Aydınlatma</a>
+                </p>
+                <button disabled={!name.trim()} onClick={function () {
                     StudentStore.completeOnboarding({
                         name: name.trim(),
                         nickname: name.trim(),
@@ -2231,6 +2251,19 @@ function Ben(props) {
             <button onClick={function () {
                 if (confirm("Hesap silme talebi kaydedilir. Destek onayından sonra veri silinir.")) StudentStore.requestDeletion();
             }} className="w-full mb-3 p-3.5 rounded-2xl text-sm text-stone-400">Veri silme talebi</button>
+            <div className="text-[11px] text-stone-400 text-center leading-relaxed mb-3 space-x-1">
+                <a className="underline" href="yasal/aydinlatma.html">KVKK Aydınlatma</a>
+                <span>·</span>
+                <a className="underline" href="yasal/kullanim.html">Kullanım</a>
+                <span>·</span>
+                <a className="underline" href="yasal/uyelik.html">Üyelik</a>
+                <span>·</span>
+                <a className="underline" href="yasal/gizlilik.html">Gizlilik</a>
+                <span>·</span>
+                <a className="underline" href="yasal/cerez.html">Çerez</a>
+                <span>·</span>
+                <a className="underline" href="yasal/basvuru.html">KVKK başvuru</a>
+            </div>
             <button onClick={function () { props.onSignOut && props.onSignOut(); }} className="w-full p-3.5 rounded-2xl border-2 border-stone-200 dark:border-stone-700 font-medium">Çıkış</button>
         </Shell>
     );
@@ -2941,6 +2974,7 @@ function App() {
                 </div>
             ) : null}
             {body}
+            {!inTest ? <CookieBar /> : null}
             {!inTest ? (
                 <BottomNav nav={nav} streak={plan.streak || 0} onChange={function (id) {
                     setNav(id);

@@ -30,6 +30,8 @@
             var p = st.getState && st.getState().userProfile;
             if (p && p.premium) return false;
         }
+        var consent = st && st.getState && st.getState().consent;
+        if (!consent || !consent.marketing) return false;
         return true;
     }
 

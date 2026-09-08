@@ -64,7 +64,6 @@
         const [level, setLevel] = useState((student.userProfile && student.userProfile.educationLevel) || "lisans");
         const [target, setTarget] = useState((student.userProfile && student.userProfile.targetType) || "B");
         const [examDate, setExamDate] = useState(profile.examDate || dates[level] || "2026-09-06");
-        const [kvkk, setKvkk] = useState(false);
         const [step, setStep] = useState(1);
         const [animating, setAnimating] = useState(false);
 
@@ -93,15 +92,13 @@
                 setTimeout(function () {
                     if (dateInputRef.current) dateInputRef.current.focus();
                 }, 100);
-            } else if (step === 2 && kvkk) {
+            } else if (step === 2) {
                 complete();
             }
         }
 
         // ---------- Complete ----------
         function complete() {
-            if (!kvkk) return;
-            
             StudentStore.completeOnboarding({
                 name: name,
                 nickname: name,
@@ -296,26 +293,14 @@
                                 </div>
                             </div>
 
-                            <label className="flex items-start gap-3 p-3 rounded-2xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200 dark:border-stone-700 cursor-pointer hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
-                                <input 
-                                    type="checkbox" 
-                                    checked={kvkk} 
-                                    onChange={function (e) { setKvkk(e.target.checked); }} 
-                                    className="mt-0.5 w-4 h-4 rounded border-stone-300 text-indigo-600 focus:ring-indigo-500"
-                                />
-                                <div>
-                                    <p className="text-xs font-medium text-stone-700 dark:text-stone-300">
-                                        Veri Onayı
-                                    </p>
-                                    <p className="text-[10px] text-stone-400">
-                                        İlerleme verilerimin hesabımda saklanmasına izin veriyorum.
-                                        <br />
-                                        <span className="text-indigo-600 dark:text-indigo-400">
-                                            Verilerin güvenle saklanır, asla paylaşılmaz.
-                                        </span>
-                                    </p>
-                                </div>
-                            </label>
+                            <p className="text-[11px] text-stone-500 leading-relaxed">
+                                Devam ederek{" "}
+                                <a className="text-teal-700 font-semibold underline" href="yasal/kullanim.html" target="_blank" rel="noopener">Kullanım Koşulları</a>
+                                {" "}ve{" "}
+                                <a className="text-teal-700 font-semibold underline" href="yasal/uyelik.html" target="_blank" rel="noopener">Üyelik Sözleşmesi</a>
+                                'ni kabul etmiş olursunuz.{" "}
+                                <a className="underline" href="yasal/aydinlatma.html" target="_blank" rel="noopener">KVKK Aydınlatma Metni</a>
+                            </p>
 
                             <div className="flex gap-2 pt-2">
                                 <button 
@@ -326,7 +311,7 @@
                                     ← Geri
                                 </button>
                                 <button 
-                                    disabled={!kvkk} 
+                                    type="button"
                                     onClick={complete} 
                                     className="flex-1 py-3.5 rounded-2xl btn-primary text-white font-semibold disabled:opacity-40 transition-all hover:scale-[1.02] active:scale-[0.98]"
                                 >
