@@ -50,7 +50,7 @@
     function LandingPage(props) {
         var logo = window.AtanomLogo
             ? window.AtanomLogo("h-14 w-14 object-contain")
-            : <img src="icons/atanom.png?v=18" alt="" className="h-14 w-14 object-contain" />;
+            : <img src="icons/atanom.png?v=18" alt="Atanly" className="h-14 w-14 object-contain" />;
         var feats = [
             { t: "Konu konu not", d: "Tarih, coğrafya, Türkçe, vatandaşlık, güncel. PDF yığını yok: her konu kendi notuyla açılır, sırayı atlayamazsın." },
             { t: "Test ve aralıklı tekrar", d: "Paketler kilitli ilerler. Yanlışın deftere düşer; sistem zayıf konuyu öne çeker, unutma eğrisine göre geri getirir." },
@@ -161,6 +161,30 @@
                             );
                         })}
                     </div>
+                </section>
+
+                <section className="land-wide land-faq" aria-labelledby="sss-title">
+                    <h2 id="sss-title" className="font-display font-bold text-xl mb-4">Sık sorulanlar</h2>
+                    <details>
+                        <summary>Atanly nedir?</summary>
+                        <p>KPSS GY-GK için not, kilitli test, aralıklı tekrar ve oyunları tek programda toplayan çalışma alanı. Lisans, ön lisans, ortaöğretim.</p>
+                    </details>
+                    <details>
+                        <summary>Ücretsiz mi?</summary>
+                        <p>Evet. Hesap ücretsiz. Kart yok. Google veya e-posta ile girersin.</p>
+                    </details>
+                    <details>
+                        <summary>Hangi dersler açık?</summary>
+                        <p>Tarih, coğrafya, Türkçe, vatandaşlık, güncel. Konular sırayla açılır. A grubu, eğitim, ÖABT sonra.</p>
+                    </details>
+                    <details>
+                        <summary>App Store ve Play Store?</summary>
+                        <p>Yakında. Şimdi tarayıcıdan tam Atanly. Aynı hesap uygulamaya taşınacak.</p>
+                    </details>
+                    <details>
+                        <summary>Her Pazar Türkiye geneli nedir?</summary>
+                        <p>Yakında: Pazar günü Türkiye çapında ortak tempo ve sıralama. Şimdilik not, test ve oyunla ısın.</p>
+                    </details>
                 </section>
 
                 <section className="land-wide">
