@@ -12,7 +12,8 @@ var MAP_CARD_IMG = {
     volkan: require("../../assets/volkan-hover.png"),
     kirik: require("../../assets/kirik-kivrim.png"),
     masif: require("../../assets/masif.png"),
-    fay: require("../../assets/fay.png")
+    fay: require("../../assets/fay.png"),
+    "deprem-az": require("../../assets/deprem-az.png")
 };
 
 export function AlistirmalarHomeScreen({ navigation }) {

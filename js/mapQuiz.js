@@ -119,7 +119,7 @@
                 { id: "kivrim", title: "Kıvrım dağları", icon: "🏔️", hoverImg: "img/map/kirik-kivrim.png" },
                 { id: "masif", title: "Masif araziler", icon: "🪨", hoverImg: "img/map/masif.png" },
                 { id: "fay", title: "Fay hatları (KAF·DAF·BAF)", icon: "⚡", hoverImg: "img/map/fay.png" },
-                { id: "deprem-az", title: "Deprem riski az alanlar", icon: "🟢" }
+                { id: "deprem-az", title: "Deprem riski az alanlar", icon: "🟢", hoverImg: "img/map/deprem-az.png" }
             ]
         },
         {
