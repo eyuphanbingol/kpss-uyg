@@ -71,6 +71,10 @@ window.getKpssData = function () {
                 notlar: window.tarih_17_notlari || [],
                 sorular: window.tarih_17_sorulari || []
             },
+            "Atatürk Dönemi İç Politikalar ve Gelişmeler":{
+                notlar: window.tarih_18_notlari || [],
+                sorular: window.tarih_18_sorulari || []
+            },
         },
         "Coğrafya": {
             "Türkiye'nin Coğrafi Konumu": {
