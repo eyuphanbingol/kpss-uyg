@@ -491,6 +491,9 @@ function topicIcon(file) {
         c3volkan19: "volcano", c3icanadoluvulkan: "volcano", c3nesta: "volcano",
         c3bolgevolkan: "volcano", c3egeenine: "fault-mtn", c3paralelkiy: "fold-mtn",
         c3paralelsonuc: "fold-mtn",
+        c4teketaseli: "plateau", c4volkandagilis: "plateau", c4erzurumkars: "plateau",
+        c4konyaplato: "plateau", c4tabakadagilis: "plateau", c4yuksekalcak: "plateau",
+        c4bolgeeslesme: "plateau", c4doguplato: "plateau",
         milliparklar: "park",
         madengenel: "ore", madendemir: "iron", madenbakir: "copper", madenboksit: "bauxite",
         madenkrom: "chrome", madenbarit: "barite", madenbor: "boron", madenmermer: "marble",
@@ -1045,6 +1048,82 @@ function main() {
             { il: "Gaziantep", label: "Tabaka: Gaziantep, Şanlıurfa", ldx: 10, ldy: 54 }
         ],
         ["Karstik · volkanik · aşınım düzlüğü · tabaka düzlüğü", "Güneydoğu’da Gaziantep–Şanlıurfa platoları tabaka düzlüğüdür"]
+    );
+
+    labeled({ file: "c4_teke_taseli.png", head: "TEKE VE TAŞELİ", iconSize: 16 }, "Karstik platolar",
+        [
+            { il: "Antalya", label: "Teke", ldx: -44, ldy: 8, pdx: -28, pdy: -8 },
+            { il: "Mersin", label: "Taşeli", ldx: 8, ldy: 54 }
+        ],
+        ["İkisi de Akdeniz Bölgesi’ndedir", "Karstik plato · nüfus seyrek · kıl keçisi"]
+    );
+
+    labeled({ file: "c4_volkan_dagilis.png", head: "VOLKANİK PLATOLAR", iconSize: 16 }, "Lav örtüsü",
+        [
+            { il: "Erzurum", label: "Erzurum–Kars", ldx: -16, ldy: 54, boya: ["Kars"] },
+            { il: "Ardahan", label: "Ardahan", ldx: 40, ldy: 8 },
+            { il: "Nevşehir", label: "Kapadokya / Nevşehir", ldx: 12, ldy: 54 }
+        ],
+        ["Doğu Anadolu: Erzurum–Kars, Ardahan", "İç Anadolu: Kapadokya–Nevşehir · Teke volkanik değildir"]
+    );
+
+    labeled({ file: "c4_erzurum_kars.png", head: "ERZURUM–KARS–ARDAHAN", iconSize: 16 }, "En yüksek plato",
+        [
+            { il: "Erzurum", label: "Erzurum", ldx: -20, ldy: 54 },
+            { il: "Kars", label: "Kars", ldx: 16, ldy: 54 },
+            { il: "Ardahan", label: "Ardahan", ldx: 36, ldy: 8 }
+        ],
+        ["Türkiye’nin en yüksek platosu", "Soğuk · yaz yağışı · çayır · büyükbaş / et-süt"]
+    );
+
+    labeled({ file: "c4_konya_plato.png", head: "KONYA ÇEVRESİ PLATOLAR", iconSize: 16 }, "Tabaka düzlüğü",
+        [
+            { il: "Konya", label: "Cihanbeyli", ldx: -28, ldy: -16, pdy: -36 },
+            { il: "Konya", label: "Obruk", ldx: 20, ldy: 54, pdy: 28 }
+        ],
+        ["Cihanbeyli ve Obruk Konya çevresindedir", "Tabaka düzlüğü · tahıl ambarı"]
+    );
+
+    labeled({ file: "c4_tabaka_dagilis.png", head: "TABAKA DÜZLÜĞÜ DAĞILIŞI", iconSize: 16 }, "Soru 14",
+        [
+            { il: "Ankara", label: "Haymana", ldx: -28, ldy: 54 },
+            { il: "Yozgat", label: "Bozok", ldx: 20, ldy: 54 },
+            { il: "Gaziantep", label: "Gaziantep", ldx: -12, ldy: 54, boya: ["Şanlıurfa"] },
+            { il: "Şanlıurfa", label: "Şanlıurfa", ldx: 16, ldy: 54 },
+            { il: "Mersin", label: "Taşeli (karstik)", ldx: 0, ldy: 54 }
+        ],
+        ["Haymana, Bozok, Gaziantep, Şanlıurfa tabaka düzlüğüdür", "Taşeli Akdeniz’de karstik platodur"]
+    );
+
+    cityPinMap({
+        file: "c4_yuksek_alcak.png",
+        head: "EN YÜKSEK / EN ALÇAK",
+        kicker: "Plato karşılaştırması",
+        hi: ["Erzurum", "Kars", "Ardahan", "Kocaeli", "İstanbul"],
+        iller: [
+            { il: "Kars", label: "Erzurum–Kars–Ardahan (en yüksek)", n: "1", ldx: -120, ldy: 22 },
+            { il: "Kocaeli", label: "Çatalca–Kocaeli (en alçak)", n: "2", ldx: 16, ldy: 18 }
+        ],
+        facts: ["1 En yüksek ve en soğuk: Kuzeydoğu Anadolu", "2 En alçak ve en gelişmiş: Marmara aşınım düzlüğü"]
+    });
+
+    labeled({ file: "c4_bolge_eslesme.png", head: "PLATO–BÖLGE DAĞILIŞI", iconSize: 16 }, "Soru 17",
+        [
+            { il: "Antalya", label: "Teke · Akdeniz", ldx: -40, ldy: 8, pdx: -28, pdy: -8 },
+            { il: "Kars", label: "Erzurum–Kars · DA", ldx: -24, ldy: 54, boya: ["Erzurum"] },
+            { il: "Kocaeli", label: "Çatalca–Kocaeli · Marmara", ldx: -40, ldy: 52 },
+            { il: "Ordu", label: "Perşembe · Karadeniz", ldx: 32, ldy: 52 },
+            { il: "Nevşehir", label: "Kapadokya · İç Anadolu", ldx: 12, ldy: 54 }
+        ],
+        ["Kapadokya Akdeniz’de değil, İç Anadolu’dadır", "Perşembe Ordu / Karadeniz aşınım düzlüğüdür"]
+    );
+
+    labeled({ file: "c4_dogu_plato.png", head: "DOĞU ANADOLU PLATOSU", iconSize: 16 }, "Lav örtüsü",
+        [
+            { il: "Erzurum", label: "Erzurum–Kars", ldx: -16, ldy: 54, boya: ["Kars", "Ardahan"] },
+            { il: "Ardahan", label: "Ardahan", ldx: 40, ldy: 8 }
+        ],
+        ["Çok soğuk · çayır · büyükbaş hayvancılık", "Doğu Anadolu’da volkanik (lav örtüsü) plato"]
     );
 
     labeled({ file: "tr_ovalar.jpg", head: "TÜRKİYE’NİN OVALARI" }, "Oluşum tipleri",

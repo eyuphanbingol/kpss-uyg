@@ -24,7 +24,9 @@ window.cografya_4_sorulari = [
       "E) I, II ve III"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Teke ve Taşeli karstik platoları Akdeniz Bölgesi'ndedir. Geçirimli ve engebeli arazi yapısından dolayı su yüzeyde durmaz, bu yüzden tarım gelişmemiştir ve nüfus azdır. Bölgedeki maki bitki örtüsüne bağlı olarak kıl keçisi yetiştiriciliği yaygındır. Üç öncül de doğrudur."
+    "explanation": "Teke ve Taşeli karstik platoları Akdeniz Bölgesi'ndedir. Geçirimli ve engebeli arazi yapısından dolayı su yüzeyde durmaz, bu yüzden tarım gelişmemiştir ve nüfus azdır. Bölgedeki maki bitki örtüsüne bağlı olarak kıl keçisi yetiştiriciliği yaygındır. Üç öncül de doğrudur.",
+    "img": "./src/img/c4_teke_taseli.png?v=1",
+    "imgAlt": "Teke ve Taşeli platolarının Akdeniz'deki konumu"
   },
   {
     "id": "3",
@@ -63,7 +65,9 @@ window.cografya_4_sorulari = [
       "E) Teke platosu – İç Anadolu volkanik platosu"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Teke Platosu İç Anadolu'da değil, Akdeniz Bölgesi'nde yer alan karstik kökenli bir platodur. Volkanik yapıyla ilgisi yoktur."
+    "explanation": "Teke Platosu İç Anadolu'da değil, Akdeniz Bölgesi'nde yer alan karstik kökenli bir platodur. Volkanik yapıyla ilgisi yoktur.",
+    "img": "./src/img/c4_volkan_dagilis.png?v=1",
+    "imgAlt": "Erzurum-Kars, Ardahan ve Kapadokya volkanik platoları"
   },
   {
     "id": "6",
@@ -76,7 +80,9 @@ window.cografya_4_sorulari = [
       "E) I, II ve III"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Erzurum-Kars-Ardahan platosu en yüksek, sert karasal ve kışları çok soğuk bir alandır. Konumu gereği en fazla yağışı yazın alır, bu da gür çayırları oluşturur. Çayırlara bağlı olarak da büyükbaş mera hayvancılığı ve et-süt sanayisi gelişmiştir. Üç yargı da doğrudur."
+    "explanation": "Erzurum-Kars-Ardahan platosu en yüksek, sert karasal ve kışları çok soğuk bir alandır. Konumu gereği en fazla yağışı yazın alır, bu da gür çayırları oluşturur. Çayırlara bağlı olarak da büyükbaş mera hayvancılığı ve et-süt sanayisi gelişmiştir. Üç yargı da doğrudur.",
+    "img": "./src/img/c4_erzurum_kars.png?v=1",
+    "imgAlt": "Erzurum-Kars-Ardahan platosunun konumu"
   },
   {
     "id": "7",
@@ -154,7 +160,9 @@ window.cografya_4_sorulari = [
       "E) Kapadokya – Nevşehir"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Konya sınırlarında veya yakın çevresinde geniş yer tutan, tahıl ambarı olarak bilinen tabaka düzlüğü platolarımız Cihanbeyli ve Obruk'tur."
+    "explanation": "Konya sınırlarında veya yakın çevresinde geniş yer tutan, tahıl ambarı olarak bilinen tabaka düzlüğü platolarımız Cihanbeyli ve Obruk'tur.",
+    "img": "./src/img/c4_konya_plato.png?v=1",
+    "imgAlt": "Cihanbeyli ve Obruk platolarının Konya çevresindeki konumu"
   },
   {
     "id": "13",
@@ -180,7 +188,9 @@ window.cografya_4_sorulari = [
       "E) Taşeli"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Taşeli Platosu, Akdeniz Bölgesi'nde karstik erimelerle şekillenmiş bir karstik platodur. Diğer seçenekler yatay duruşlu tabaka düzlüğü platolarıdır."
+    "explanation": "Taşeli Platosu, Akdeniz Bölgesi'nde karstik erimelerle şekillenmiş bir karstik platodur. Diğer seçenekler yatay duruşlu tabaka düzlüğü platolarıdır.",
+    "img": "./src/img/c4_tabaka_dagilis.png?v=1",
+    "imgAlt": "Haymana, Bozok, Gaziantep, Şanlıurfa ve Taşeli"
   },
   {
     "id": "15",
@@ -206,7 +216,9 @@ window.cografya_4_sorulari = [
       "E) Haymana – Erzurum-Kars"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Türkiye'nin en yüksek ve en soğuk plato grubu Kuzeydoğu Anadolu'daki Erzurum-Kars-Ardahan'dır; en alçak (deniz seviyesine en yakın) ve en sanayileşmiş gelişmiş plato ise Çatalca-Kocaeli platosudur."
+    "explanation": "Türkiye'nin en yüksek ve en soğuk plato grubu Kuzeydoğu Anadolu'daki Erzurum-Kars-Ardahan'dır; en alçak (deniz seviyesine en yakın) ve en sanayileşmiş gelişmiş plato ise Çatalca-Kocaeli platosudur.",
+    "img": "./src/img/c4_yuksek_alcak.png?v=1",
+    "imgAlt": "En yüksek ve en alçak platolar"
   },
   {
     "id": "17",
@@ -219,7 +231,9 @@ window.cografya_4_sorulari = [
       "E) Kapadokya – Akdeniz"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Kapadokya Platosu Akdeniz Bölgesi'nde değil, İç Anadolu Bölgesi'nde (Nevşehir çevresi) yer alan volkanik tüflü bir platodur."
+    "explanation": "Kapadokya Platosu Akdeniz Bölgesi'nde değil, İç Anadolu Bölgesi'nde (Nevşehir çevresi) yer alan volkanik tüflü bir platodur.",
+    "img": "./src/img/c4_bolge_eslesme.png?v=1",
+    "imgAlt": "Teke, Erzurum-Kars, Çatalca-Kocaeli, Perşembe ve Kapadokya"
   },
   {
     "id": "18",
@@ -232,7 +246,9 @@ window.cografya_4_sorulari = [
       "E) Ege'de yer alan bir kırık dağ platosudur"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Düşük sıcaklıklar, yaz yağışıyla yeşeren çayırlar ve büyükbaş hayvancılık kombinasyonu sadece Kuzeydoğu Anadolu'daki (Doğu Anadolu) lav örtüsü (volkanik) platolarına aittir."
+    "explanation": "Düşük sıcaklıklar, yaz yağışıyla yeşeren çayırlar ve büyükbaş hayvancılık kombinasyonu sadece Kuzeydoğu Anadolu'daki (Doğu Anadolu) lav örtüsü (volkanik) platolarına aittir.",
+    "img": "./src/img/c4_dogu_plato.png?v=1",
+    "imgAlt": "Doğu Anadolu lav örtüsü platosu"
   },
   {
     "id": "19",
