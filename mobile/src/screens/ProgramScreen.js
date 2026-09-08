@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Pressable, Text, View, StyleSheet, ScrollView } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
 import { useApp } from "../AppProvider";
 import { StudentStore } from "../lib/store";
-import { PrimaryButton, ScrollScreen, Card, BackChip } from "../ui";
+import { PrimaryButton, ScrollScreen, Card, BackChip, Tap } from "../ui";
 import { colors, DERS_ICON } from "../lib/theme";
 
 // ============================================================
@@ -93,30 +94,30 @@ export default function ProgramScreen({ navigation }) {
                 </Text>
             </View>
 
-            <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ marginBottom: 10 }} contentContainerStyle={{ gap: 8 }}>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false} delaysContentTouches={false} keyboardShouldPersistTaps="always" style={{ marginBottom: 10 }} contentContainerStyle={{ gap: 8 }}>
                 {[
                     { id: "yogun", t: "Yoğun" },
                     { id: "hafif", t: "Hafif" },
                     { id: "haftasonu", t: "Hafta sonu" }
                 ].map(function (p) {
                     return (
-                        <Pressable key={p.id} onPress={function () { setDraft(StudentStore.applyPlanPreset(p.id, dersKeys)); }}
+                        <Tap key={p.id} onPress={function () { setDraft(StudentStore.applyPlanPreset(p.id, dersKeys)); }}
                             style={[styles.addBtn, { marginRight: 6 }]}>
                             <Text style={styles.addBtnText}>{p.t}</Text>
-                        </Pressable>
+                        </Tap>
                     );
                 })}
             </ScrollView>
-            <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ marginBottom: 12 }} contentContainerStyle={{ gap: 8 }}>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false} delaysContentTouches={false} keyboardShouldPersistTaps="always" style={{ marginBottom: 12 }} contentContainerStyle={{ gap: 8 }}>
                 {days.map(function (w) {
                     var d = draft.days[w.id];
                     var sel = editDay === w.id;
                     return (
-                        <Pressable key={w.id} onPress={function () { setEditDay(w.id); }}
+                        <Tap key={w.id} onPress={function () { setEditDay(w.id); }}
                             style={[styles.dayChip, sel && styles.dayChipOn, d.on && styles.dayChipActive]}>
                             <Text style={[styles.dayName, { fontSize: 13 }, isDark && styles.textLight]}>{w.short}</Text>
                             <Text style={[styles.dayTotal, { fontSize: 10 }]}>{d.on && getDayTotal(d) ? getDayTotal(d) + " sa" : "—"}</Text>
-                        </Pressable>
+                        </Tap>
                     );
                 })}
             </ScrollView>
@@ -129,7 +130,7 @@ export default function ProgramScreen({ navigation }) {
                 });
                 return (
                     <Card style={[styles.dayCard, isActive && styles.dayCardActive, isDark && styles.cardDark]}>
-                        <Pressable onPress={function () { toggleDay(w.id); }} style={styles.dayHeader}>
+                        <Tap onPress={function () { toggleDay(w.id); }} style={styles.dayHeader}>
                             <View style={styles.dayLeft}>
                                 <Text style={[styles.dayCheck, isActive && styles.dayCheckActive]}>{isActive ? "✓" : "○"}</Text>
                                 <Text style={[styles.dayName, isDark && styles.textLight]}>{w.full}</Text>
@@ -139,20 +140,20 @@ export default function ProgramScreen({ navigation }) {
                             ) : (
                                 <Text style={[styles.dayTotal, isDark && styles.textMuted]}>dinlenme</Text>
                             )}
-                        </Pressable>
+                        </Tap>
                         {isActive && (d.slots || []).map(function (s, si) {
                             var hourText = s.hours === 0.5 ? "30 dk" : s.hours + " sa";
                             return (
                                 <View key={s.ders} style={[styles.slotRow, { borderLeftWidth: 4, borderLeftColor: DERS_ACCENT[s.ders] || colors.indigo }]}>
-                                    <Pressable onPress={function () { moveSlot(w.id, si, -1); }}><Text style={styles.slotHour}>↑</Text></Pressable>
-                                    <Pressable onPress={function () { moveSlot(w.id, si, 1); }}><Text style={styles.slotHour}>↓</Text></Pressable>
+                                    <Tap onPress={function () { moveSlot(w.id, si, -1); }}><Text style={styles.slotHour}>↑</Text></Tap>
+                                    <Tap onPress={function () { moveSlot(w.id, si, 1); }}><Text style={styles.slotHour}>↓</Text></Tap>
                                     <View style={styles.slotLeft}>
                                         <Text style={[styles.slotText, isDark && styles.textLight]}>{(DERS_ICON[s.ders] || "📚") + " " + s.ders}</Text>
                                         <Text style={[styles.slotHour, isDark && styles.textMuted]}>{hourText}</Text>
                                     </View>
-                                    <Pressable onPress={function () { removeSlot(w.id, s.ders); }} style={styles.slotRemove}>
+                                    <Tap onPress={function () { removeSlot(w.id, s.ders); }} style={styles.slotRemove}>
                                         <Text style={styles.slotRemoveText}>✕</Text>
-                                    </Pressable>
+                                    </Tap>
                                 </View>
                             );
                         })}
@@ -160,10 +161,10 @@ export default function ProgramScreen({ navigation }) {
                             <View style={styles.addRow}>
                                 {availableDers.slice(0, 5).map(function (k) {
                                     return (
-                                        <Pressable key={k} onPress={function () { addSlot(w.id, k); }}
+                                        <Tap key={k} onPress={function () { addSlot(w.id, k); }}
                                             style={[styles.addBtn, isDark && styles.addBtnDark]}>
                                             <Text style={[styles.addBtnText, isDark && { color: colors.indigo }]}>+ {k}</Text>
-                                        </Pressable>
+                                        </Tap>
                                     );
                                 })}
                             </View>

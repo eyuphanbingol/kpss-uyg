@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Alert, Image, Pressable, ScrollView, Text, View, StyleSheet, KeyboardAvoidingView, Platform, ActivityIndicator, TouchableOpacity } from "react-native";
+import { Alert, Image, Text, View, StyleSheet, KeyboardAvoidingView, Platform, ActivityIndicator } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
 import * as WebBrowser from "expo-web-browser";
 import * as AuthSession from "expo-auth-session";
@@ -8,7 +9,7 @@ import { trError } from "../lib/trError";
 import { StudentStore } from "../lib/store";
 import { KpssConfig } from "../lib/config";
 import { sessionStorageShim } from "../lib/storage";
-import { Chip, Field, PrimaryButton, GhostButton, Card } from "../ui";
+import { Chip, Field, PrimaryButton, GhostButton, Card, Tap } from "../ui";
 import { colors, needsKulvar } from "../lib/theme";
 import { BrandBackdrop } from "./SplashScreen";
 
@@ -20,7 +21,7 @@ WebBrowser.maybeCompleteAuthSession();
 
 function GoogleButton({ onPress, busy, disabled }) {
     return (
-        <TouchableOpacity
+        <Tap
             onPress={onPress}
             disabled={disabled || busy}
             activeOpacity={0.7}
@@ -37,7 +38,7 @@ function GoogleButton({ onPress, busy, disabled }) {
                     <Text style={styles.googleBtnText}>Google ile Devam</Text>
                 </View>
             )}
-        </TouchableOpacity>
+        </Tap>
     );
 }
 
@@ -309,7 +310,8 @@ export default function AuthScreen() {
                 >
                     <ScrollView 
                         contentContainerStyle={styles.scrollContent} 
-                        keyboardShouldPersistTaps="handled"
+                        keyboardShouldPersistTaps="always"
+                        delaysContentTouches={false}
                         showsVerticalScrollIndicator={false}
                     >
                         <View style={styles.card}>
@@ -322,22 +324,22 @@ export default function AuthScreen() {
 
                             {/* Mode Toggle */}
                             <View style={styles.toggleContainer}>
-                                <Pressable 
+                                <Tap 
                                     onPress={function () { setMode("in"); setForgot(false); setMsg(""); }} 
                                     style={[styles.toggleBtn, mode === "in" && styles.toggleBtnActive]}
                                 >
                                     <Text style={[styles.toggleText, mode === "in" && styles.toggleTextActive]}>
                                         🔐 Giriş
                                     </Text>
-                                </Pressable>
-                                <Pressable 
+                                </Tap>
+                                <Tap 
                                     onPress={function () { setMode("up"); setStep(1); setMsg(""); }} 
                                     style={[styles.toggleBtn, mode === "up" && styles.toggleBtnActive]}
                                 >
                                     <Text style={[styles.toggleText, mode === "up" && styles.toggleTextActive]}>
                                         📝 Kayıt
                                     </Text>
-                                </Pressable>
+                                </Tap>
                             </View>
 
                             {/* ===== LOGIN ===== */}
@@ -364,14 +366,14 @@ export default function AuthScreen() {
                                             onSubmitEditing={submit}
                                         />
                                     )}
-                                    <Pressable 
+                                    <Tap 
                                         onPress={function () { setForgot(!forgot); setMsg(""); }} 
                                         style={styles.forgotBtn}
                                     >
                                         <Text style={styles.forgotText}>
                                             {forgot ? "← Girişe dön" : "Şifremi Unuttum"}
                                         </Text>
-                                    </Pressable>
+                                    </Tap>
 
                                     <PrimaryButton 
                                         title={forgot ? "📩 Mail Gönder" : "🚀 Giriş Yap"} 
@@ -459,7 +461,7 @@ export default function AuthScreen() {
                                     {/* Step 3: Account */}
                                     {step === 3 && (
                                         <View>
-                                            <Pressable 
+                                            <Tap 
                                                 onPress={function () { setKvkk(!kvkk); }} 
                                                 style={styles.kvkkContainer}
                                             >
@@ -472,7 +474,7 @@ export default function AuthScreen() {
                                                 <Text style={styles.kvkkText}>
                                                     İlerleme verilerimin hesabımda saklanmasına izin veriyorum.
                                                 </Text>
-                                            </Pressable>
+                                            </Tap>
 
                                             <Field 
                                                 label="🔑 Davet kodu (isteğe bağlı)"

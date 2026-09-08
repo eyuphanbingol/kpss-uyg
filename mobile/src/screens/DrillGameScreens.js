@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Alert, Pressable, Text, View, StyleSheet, useWindowDimensions } from "react-native";
+import { Alert, Text, View, StyleSheet, useWindowDimensions } from "react-native";
 import { useApp } from "../AppProvider";
 import { GamesEngine } from "../lib/gamesEngine";
 import { MapQuiz } from "../lib/mapQuiz";
@@ -78,10 +78,10 @@ export function ConquerPlayScreen({ navigation }) {
                         {(qNow.options || []).map(function (opt, i) {
                             var marked = quiz.picked && (String(opt) === String(qNow.correct) ? styles.ok : (quiz.picked === opt ? styles.no : null));
                             return (
-                                <Pressable key={i} disabled={!!quiz.picked} onPress={function () { answer(opt); }}
+                                <Tap key={i} disabled={!!quiz.picked} onPress={function () { answer(opt); }}
                                     style={[styles.choice, isDark && styles.cardDark, marked]}>
                                     <Text style={[styles.choiceText, isDark && styles.light]}>{opt}</Text>
-                                </Pressable>
+                                </Tap>
                             );
                         })}
                         {quiz.picked ? <PrimaryButton title={quiz.ok ? "Devam" : "Sonuç"} onPress={next} style={{ marginTop: 14 }} /> : null}
@@ -109,7 +109,7 @@ export function ConquerPlayScreen({ navigation }) {
                 <View style={{ height: 8, width: (codes.length ? Math.round((nOwn / codes.length) * 100) : 0) + "%", backgroundColor: "#127880", borderRadius: 99 }} />
             </View>
             {nOwn > 0 ? (
-                <Pressable
+                <Tap
                     onPress={function () {
                         Alert.alert("Haritayı sıfırla", "Boyanan iller ve bölge rozetleri silinsin mi?", [
                             { text: "Vazgeç", style: "cancel" },
@@ -119,7 +119,7 @@ export function ConquerPlayScreen({ navigation }) {
                     style={{ alignSelf: "flex-start", marginTop: 10, backgroundColor: "#FFF1F2", borderRadius: 999, paddingVertical: 8, paddingHorizontal: 14 }}
                 >
                     <Text style={{ color: "#9F1239", fontWeight: "800" }}>Sıfırla</Text>
-                </Pressable>
+                </Tap>
             ) : null}
             {regions.map(function (r) {
                 return (
@@ -128,11 +128,9 @@ export function ConquerPlayScreen({ navigation }) {
                         {codes.filter(function (c) { return MapQuiz.PROVINCE_REGION[c] === r.id; }).map(function (code) {
                             var mine = !!owned[code];
                             return (
-                                <Pressable key={code} onPress={function () { start(code); }}>
-                                    <Card style={[styles.rowCard, isDark && styles.cardDark, mine && { backgroundColor: "#ECFDF5" }]}>
-                                        <Text style={[styles.choiceText, isDark && styles.light]}>{mine ? "✓ " : ""}{GamesEngine.nameOf(code)}</Text>
-                                    </Card>
-                                </Pressable>
+                                <Card key={code} dark={isDark} onPress={function () { start(code); }} style={[styles.rowCard, mine && { backgroundColor: "#ECFDF5" }]}>
+                                    <Text style={[styles.choiceText, isDark && styles.light]}>{mine ? "✓ " : ""}{GamesEngine.nameOf(code)}</Text>
+                                </Card>
                             );
                         })}
                     </View>
@@ -365,10 +363,10 @@ export function PanicPlayScreen({ navigation }) {
             </View>
             {(q && q.choices || []).map(function (opt, oi) {
                 return (
-                    <Pressable key={oi} onPress={function () { choose(opt); }} style={[styles.choice, styles.choiceRow, isDark && styles.cardDark]}>
+                    <Tap key={oi} onPress={function () { choose(opt); }} style={[styles.choice, styles.choiceRow, isDark && styles.cardDark]}>
                         <Text style={[styles.letter, isDark && styles.letterDark]}>{String.fromCharCode(65 + oi)}</Text>
                         <Text style={[styles.choiceText, isDark && styles.light, { flex: 1 }]}>{opt}</Text>
-                    </Pressable>
+                    </Tap>
                 );
             })}
             <Text style={[styles.meta, isDark && styles.muted, { marginTop: 12 }]}>{score} doğru · rekor {best}</Text>

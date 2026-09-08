@@ -1,10 +1,10 @@
 import React from "react";
-import { Pressable, Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
 import { useApp } from "../AppProvider";
 import { StudyPlanner } from "../lib/planner";
 import { StudentStore } from "../lib/store";
 import { go } from "../nav";
-import { Card, ScrollScreen, Badge } from "../ui";
+import { Card, ScrollScreen, Badge, Tap } from "../ui";
 import { colors, examTrackName, DERS_ICON } from "../lib/theme";
 
 // ============================================================
@@ -114,9 +114,9 @@ export default function BugunScreen({ navigation }) {
             <Card style={[isDark && styles.cardDark]}>
                 <View style={styles.cardHeader}>
                     <Text style={[styles.cardTitle, isDark && styles.textMuted]}>📅 Bugünün hedefi</Text>
-                    <Pressable onPress={function () { go(navigation, "Program"); }}>
+                    <Tap onPress={function () { go(navigation, "Program"); }}>
                         <Text style={styles.cardAction}>{isPlanReady ? "Düzenle" : "Oluştur"}</Text>
-                    </Pressable>
+                    </Tap>
                 </View>
                 {workToday ? (
                     <View>
@@ -129,17 +129,17 @@ export default function BugunScreen({ navigation }) {
                             var next = !done && todaySlots.slice(0, i).every(function (x) { return checks[x.ders]; });
                             return (
                                 <View key={s.ders} style={[styles.taskRow, { borderLeftColor: DERS_ACCENT[s.ders] || colors.indigo }]}>
-                                    <Pressable onPress={function () { StudentStore.togglePlanSlot(s.ders); }} style={[styles.taskCheck, done && styles.taskCheckOn]}>
+                                    <Tap onPress={function () { StudentStore.togglePlanSlot(s.ders); }} style={[styles.taskCheck, done && styles.taskCheckOn]}>
                                         <Text style={styles.taskCheckText}>{done ? "✓" : ""}</Text>
-                                    </Pressable>
-                                    <Pressable onPress={function () { go(navigation, "KonuList", { ders: s.ders }); }} style={{ flex: 1 }}>
+                                    </Tap>
+                                    <Tap onPress={function () { go(navigation, "KonuList", { ders: s.ders }); }} style={{ flex: 1 }}>
                                         <Text style={[styles.taskName, isDark && styles.textLight]}>
                                             {(DERS_ICON[s.ders] || "📚") + "  " + s.ders}
                                         </Text>
                                         <Text style={[styles.statusText, isDark && styles.textMuted]}>
                                             {fmtH(s.hours)} · {done ? "Tamamlandı" : (next ? "Sıradaki" : "Bekliyor")}
                                         </Text>
-                                    </Pressable>
+                                    </Tap>
                                 </View>
                             );
                         })}

@@ -1,9 +1,9 @@
 import React from "react";
-import { Alert, Pressable, Text, View, StyleSheet } from "react-native";
+import { Alert, Text, View, StyleSheet } from "react-native";
 import { useApp } from "../AppProvider";
 import { StudentStore } from "../lib/store";
 import { go } from "../nav";
-import { Card, ScrollScreen, Badge } from "../ui";
+import { Card, ScrollScreen, Badge, Tap } from "../ui";
 import { colors, DERS_ICON } from "../lib/theme";
 
 // ============================================================
@@ -83,7 +83,7 @@ export default function EksiklerScreen({ navigation }) {
 
             {/* Action Buttons */}
             <View style={styles.actionRow}>
-                <Pressable 
+                <Tap 
                     disabled={!plan.due.length} 
                     onPress={function () { start("review"); }} 
                     style={[
@@ -102,9 +102,9 @@ export default function EksiklerScreen({ navigation }) {
                     <Text style={styles.actionBtnDesc}>
                         Daha önce çözdüğün sorular
                     </Text>
-                </Pressable>
+                </Tap>
 
-                <Pressable 
+                <Tap 
                     disabled={!plan.wrong.length} 
                     onPress={function () { start("wrong"); }} 
                     style={[
@@ -123,7 +123,7 @@ export default function EksiklerScreen({ navigation }) {
                     <Text style={styles.actionBtnDesc}>
                         Yanlış yaptığın sorular. Çözdüğün düşer.
                     </Text>
-                </Pressable>
+                </Tap>
             </View>
 
             {/* Ders Listesi */}

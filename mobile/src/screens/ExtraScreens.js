@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Pressable, Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
 import { useApp } from "../AppProvider";
 import { ScoreEngine } from "../lib/scoreEngine";
 import { StudentStore } from "../lib/store";

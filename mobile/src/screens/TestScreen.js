@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Pressable, Text, View, StyleSheet, Image } from "react-native";
+import { Text, View, StyleSheet, Image } from "react-native";
 import { StudentStore } from "../lib/store";
-import { confirmQuit, PrimaryButton, Screen, ScrollScreen, Card, Badge } from "../ui";
+import { confirmQuit, PrimaryButton, Screen, ScrollScreen, Card, Badge, Tap } from "../ui";
 import { colors } from "../lib/theme";
 import { questionImages } from "../lib/media";
 
@@ -238,14 +238,14 @@ export default function TestScreen({ route, navigation }) {
             <View style={styles.testContainer}>
                 {/* Header */}
                 <View style={styles.testHeader}>
-                    <Pressable 
+                    <Tap 
                         onPress={function () { 
                             confirmQuit(function () { navigation.goBack(); }); 
                         }}
                         style={styles.testQuit}
                     >
                         <Text style={styles.testQuitText}>✕ Bitir</Text>
-                    </Pressable>
+                    </Tap>
                     <View style={styles.testInfo}>
                         <Text style={styles.testCounter}>
                             {testNo ? ("Test " + testNo + " · ") : ""}{qIndex + 1}/{items.length}
@@ -317,7 +317,7 @@ export default function TestScreen({ route, navigation }) {
                         var letter = String.fromCharCode(65 + i);
 
                         return (
-                            <Pressable 
+                            <Tap 
                                 key={i} 
                                 disabled={answered} 
                                 onPress={function () { onAnswer(i); }}
@@ -351,7 +351,7 @@ export default function TestScreen({ route, navigation }) {
                                 {isAnswered && isPicked && !isCorrect && (
                                     <Text style={styles.testOptionCheck}>✕</Text>
                                 )}
-                            </Pressable>
+                            </Tap>
                         );
                     })}
                 </View>

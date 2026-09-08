@@ -138,6 +138,7 @@ export function KeyboardScreen(props) {
                     ]}
                     keyboardShouldPersistTaps="always"
                     delaysContentTouches={false}
+                    canCancelContentTouches={false}
                     overScrollMode="never"
                     bounces={false}
                     showsVerticalScrollIndicator={false}
@@ -186,7 +187,7 @@ export function SecondaryButton(props) {
     var isDisabled = props.disabled || props.busy;
 
     return (
-        <Pressable
+        <Tap
             onPress={props.onPress}
             disabled={isDisabled}
             style={[
@@ -194,7 +195,6 @@ export function SecondaryButton(props) {
                 isDisabled && styles.secondaryDisabled,
                 props.style,
             ]}
-            android_ripple={{ color: "rgba(0,0,0,0.05)" }}
         >
             {props.busy ? (
                 <ActivityIndicator color={colors.text} size="small" />
@@ -203,7 +203,7 @@ export function SecondaryButton(props) {
                     {props.title || props.children}
                 </Text>
             )}
-        </Pressable>
+        </Tap>
     );
 }
 
@@ -215,7 +215,7 @@ export function GhostButton(props) {
     var isDisabled = props.disabled || props.busy;
 
     return (
-        <Pressable
+        <Tap
             onPress={props.onPress}
             disabled={isDisabled}
             style={[
@@ -231,7 +231,7 @@ export function GhostButton(props) {
                     {props.title || props.children}
                 </Text>
             )}
-        </Pressable>
+        </Tap>
     );
 }
 
@@ -243,7 +243,7 @@ export function DangerButton(props) {
     var isDisabled = props.disabled || props.busy;
 
     return (
-        <Pressable
+        <Tap
             onPress={props.onPress}
             disabled={isDisabled}
             style={[
@@ -251,7 +251,6 @@ export function DangerButton(props) {
                 isDisabled && styles.dangerDisabled,
                 props.style,
             ]}
-            android_ripple={{ color: "rgba(255,255,255,0.2)" }}
         >
             {props.busy ? (
                 <ActivityIndicator color="#fff" size="small" />
@@ -260,7 +259,7 @@ export function DangerButton(props) {
                     {props.title || props.children}
                 </Text>
             )}
-        </Pressable>
+        </Tap>
     );
 }
 
@@ -308,6 +307,8 @@ export function Field(props) {
                             top: "50%",
                             transform: [{ translateY: -10 }],
                         }}
+                        delayPressIn={0}
+                        delayPressOut={0}
                         onPress={function () { setSecure(!secure); }}
                     >
                         <Text style={{ fontSize: 18 }}>
@@ -346,7 +347,7 @@ export function Chip(props) {
     var isOn = props.on === true;
 
     return (
-        <Pressable
+        <Tap
             onPress={props.onPress}
             disabled={props.disabled}
             style={[
@@ -372,7 +373,7 @@ export function Chip(props) {
                     {props.sub}
                 </Text>
             ) : null}
-        </Pressable>
+        </Tap>
     );
 }
 

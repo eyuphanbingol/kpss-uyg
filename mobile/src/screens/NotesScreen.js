@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Image, Pressable, Text, useWindowDimensions, View, StyleSheet } from "react-native";
+import { Image, Text, useWindowDimensions, View, StyleSheet } from "react-native";
 import RenderHTML from "react-native-render-html";
 import { useApp } from "../AppProvider";
 import { StudentStore } from "../lib/store";
-import { PrimaryButton, ScrollScreen, Card, BackChip } from "../ui";
+import { PrimaryButton, ScrollScreen, Card, BackChip, Tap } from "../ui";
 import { colors, DERS_ICON } from "../lib/theme";
 import { mediaUrl, rewriteHtmlMedia } from "../lib/media";
 
@@ -161,7 +161,7 @@ export default function NotesScreen({ route, navigation }) {
 
             {/* Navigation */}
             <View style={styles.navRow}>
-                <Pressable 
+                <Tap 
                     disabled={idx === 0} 
                     onPress={function () { setIdx(idx - 1); }}
                     unstable_pressDelay={0}
@@ -170,26 +170,26 @@ export default function NotesScreen({ route, navigation }) {
                     <Text style={[styles.navBtnText, isDark && styles.textMuted]}>
                         ← Önceki
                     </Text>
-                </Pressable>
+                </Tap>
 
                 {isLast ? (
-                    <Pressable 
+                    <Tap 
                         onPress={sorular.length ? goToTest : goBack}
                         style={[styles.navBtn, styles.navBtnPrimary]}
                     >
                         <Text style={[styles.navBtnText, { color: "#fff" }]}>
                             {sorular.length ? "Teste Geç →" : "Konuyu Bitir"}
                         </Text>
-                    </Pressable>
+                    </Tap>
                 ) : (
-                    <Pressable 
+                    <Tap 
                         onPress={function () { setIdx(idx + 1); }}
                         style={styles.navBtn}
                     >
                         <Text style={[styles.navBtnText, isDark && styles.textLight]}>
                             Sonraki →
                         </Text>
-                    </Pressable>
+                    </Tap>
                 )}
             </View>
 

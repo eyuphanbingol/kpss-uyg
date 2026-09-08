@@ -2012,6 +2012,10 @@
         .heat-iyi { background: linear-gradient(90deg, rgba(15,118,110,0.12), transparent); }
 
         input[type="range"] { accent-color: #1E1B4B; }
+        button, a, [role="button"], .glass, .card-hover {
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
         button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
             outline: 2px solid #1E1B4B;
             outline-offset: 2px;

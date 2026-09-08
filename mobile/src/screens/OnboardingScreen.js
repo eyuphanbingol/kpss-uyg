@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Image, Pressable, Text, View, StyleSheet } from "react-native";
+import { Image, Text, View, StyleSheet } from "react-native";
 import { useApp } from "../AppProvider";
 import { StudentStore } from "../lib/store";
 import { SyncEngine } from "../lib/syncEngine";
 import { KpssConfig } from "../lib/config";
-import { Chip, Field, PrimaryButton, ScrollScreen } from "../ui";
+import { Chip, Field, PrimaryButton, ScrollScreen, Tap } from "../ui";
 import { colors, needsKulvar } from "../lib/theme";
 
 // ============================================================
@@ -200,7 +200,7 @@ export default function OnboardingScreen() {
             {/* ===== STEP 3: KVKK & Account ===== */}
             {step === 3 && (
                 <View>
-                    <Pressable 
+                    <Tap 
                         onPress={function () { setKvkk(!kvkk); }} 
                         style={styles.kvkkContainer}
                     >
@@ -213,7 +213,7 @@ export default function OnboardingScreen() {
                         <Text style={[styles.kvkkText, isDark && styles.textLight]}>
                             İlerleme verilerimin hesabımda saklanmasına izin veriyorum.
                         </Text>
-                    </Pressable>
+                    </Tap>
 
                     <PrimaryButton 
                         title="🚀 Başla" 

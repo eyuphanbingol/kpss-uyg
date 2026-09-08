@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Alert, Pressable, Text, TextInput, View, StyleSheet } from "react-native";
+import { Alert, Text, TextInput, View, StyleSheet } from "react-native";
 import { useApp } from "../AppProvider";
 import { StudentStore } from "../lib/store";
 import { SyncEngine } from "../lib/syncEngine";
 import { supabase } from "../lib/supabase";
 import { go } from "../nav";
-import { Card, GhostButton, PrimaryButton, ScrollScreen, Badge } from "../ui";
+import { Card, GhostButton, PrimaryButton, ScrollScreen, Badge, Tap } from "../ui";
 import { colors, eduLabel, fmtExam, needsKulvar, getScoreLabel } from "../lib/theme";
 
 // ============================================================
@@ -116,14 +116,14 @@ export default function BenScreen({ navigation }) {
                         Ayarlar
                     </Text>
                     {!editing && (
-                        <Pressable onPress={function () {
+                        <Tap onPress={function () {
                             setDraftName(st.profile.name || "");
                             setDraftTrack(up.targetType || "B");
                             setDraftEdu(totQ === 0 ? (up.educationLevel || "lisans") : "");
                             setEditing(true);
                         }}>
                             <Text style={styles.editBtn}>Düzenle</Text>
-                        </Pressable>
+                        </Tap>
                     )}
                 </View>
 
@@ -164,7 +164,7 @@ export default function BenScreen({ navigation }) {
                                 {["lisans", "onlisans", "ortaogretim"].map(function (x) {
                                     var isActive = (draftEdu || up.educationLevel) === x;
                                     return (
-                                        <Pressable 
+                                        <Tap 
                                             key={x} 
                                             onPress={function () { setDraftEdu(x); }} 
                                             style={[styles.eduBtn, isActive && styles.eduBtnActive]}
@@ -172,7 +172,7 @@ export default function BenScreen({ navigation }) {
                                             <Text style={[styles.eduBtnText, isActive && styles.eduBtnTextActive]}>
                                                 {eduLabel(x)}
                                             </Text>
-                                        </Pressable>
+                                        </Tap>
                                     );
                                 })}
                             </View>
@@ -193,12 +193,12 @@ export default function BenScreen({ navigation }) {
                 )}
             </Card>
 
-            <Pressable onPress={function () { go(navigation, "Leaderboard"); }}>
+            <Tap onPress={function () { go(navigation, "Leaderboard"); }}>
                 <Card style={[isDark && styles.cardDark]}>
                     <Text style={[styles.toolName, isDark && styles.textLight]}>Türkiye sıralaması</Text>
                     <Text style={[styles.toolDesc, isDark && styles.textMuted]}>Haftalık soru sıralaması</Text>
                 </Card>
-            </Pressable>
+            </Tap>
 
             <Card style={[isDark && styles.cardDark]}>
                 <View style={styles.premiumHeader}>

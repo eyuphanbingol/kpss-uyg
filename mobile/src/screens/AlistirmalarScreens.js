@@ -1,11 +1,11 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { ImageBackground, Pressable, Text, View, StyleSheet, useWindowDimensions } from "react-native";
+import { ImageBackground, Text, View, StyleSheet, useWindowDimensions } from "react-native";
 import { useApp } from "../AppProvider";
 import { ClozeEngine } from "../lib/clozeEngine";
 import { MapQuiz } from "../lib/mapQuiz";
 import { StudentStore } from "../lib/store";
 import { go } from "../nav";
-import { Card, PrimaryButton, ScrollScreen, BackChip, Screen } from "../ui";
+import { Card, PrimaryButton, ScrollScreen, BackChip, Screen, Tap } from "../ui";
 import { colors, DERS_ICON } from "../lib/theme";
 import { TrMapView } from "../components/TrMapView";
 import { useLandscapeLock } from "../lib/useLandscapeLock";
@@ -79,18 +79,16 @@ export function AlistirmaDersListScreen({ navigation }) {
                     n += ClozeEngine.countForKonu(kpssData[ders][k] || {});
                 });
                 return (
-                    <Pressable key={ders} onPress={function () { go(navigation, "AlistirmaKonuList", { ders: ders }); }}>
-                        <Card style={[styles.dersCard, isDark && styles.cardDark]}>
-                            <View style={styles.row}>
-                                <Text style={styles.icon}>{DERS_ICON[ders] || "✏️"}</Text>
-                                <View style={{ flex: 1 }}>
-                                    <Text style={[styles.dersName, isDark && styles.textLight]}>{ders}</Text>
-                                    <Text style={[styles.meta, isDark && styles.textMuted]}>{konular.length} konu · {n} boşluk</Text>
-                                </View>
-                                <Text style={[styles.arrow, isDark && styles.textMuted]}>→</Text>
+                    <Card key={ders} dark={isDark} onPress={function () { go(navigation, "AlistirmaKonuList", { ders: ders }); }} style={styles.dersCard}>
+                        <View style={styles.row}>
+                            <Text style={styles.icon}>{DERS_ICON[ders] || "✏️"}</Text>
+                            <View style={{ flex: 1 }}>
+                                <Text style={[styles.dersName, isDark && styles.textLight]}>{ders}</Text>
+                                <Text style={[styles.meta, isDark && styles.textMuted]}>{konular.length} konu · {n} boşluk</Text>
                             </View>
-                        </Card>
-                    </Pressable>
+                            <Text style={[styles.arrow, isDark && styles.textMuted]}>→</Text>
+                        </View>
+                    </Card>
                 );
             })}
         </ScrollScreen>
@@ -115,22 +113,20 @@ export function AlistirmaKonuListScreen({ route, navigation }) {
                 var open = StudentStore.isKonuOpen(ders, konular, idx, app.kpssData);
                 var done = StudentStore.topicComplete(tp, kd);
                 return (
-                    <Pressable key={konu} disabled={!open} onPress={function () {
+                    <Card key={konu} dark={isDark} disabled={!open} onPress={function () {
                         if (open) go(navigation, "ClozePlay", { ders: ders, konu: konu });
-                    }}>
-                        <Card style={[styles.dersCard, isDark && styles.cardDark, !open && { opacity: 0.45 }]}>
-                            <View style={styles.row}>
-                                <View style={[styles.num, done && { backgroundColor: "#ECFDF5" }, !open && { backgroundColor: "#F5F5F4" }]}>
-                                    <Text style={[styles.numText, done && { color: "#059669" }, !open && { color: "#A8A29E" }]}>{done ? "✓" : open ? (idx + 1) : "🔒"}</Text>
-                                </View>
-                                <View style={{ flex: 1 }}>
-                                    <Text style={[styles.dersName, isDark && styles.textLight]}>{konu}</Text>
-                                    <Text style={[styles.meta, isDark && styles.textMuted]}>{open ? (n ? (ClozeEngine.remainingCount(kd, tp.solvedCloze) + " / " + n + " boşluk") : "Henüz yok") : "Önce önceki konunun testlerini bitir"}</Text>
-                                </View>
-                                {open ? <Text style={[styles.arrow, isDark && styles.textMuted]}>→</Text> : null}
+                    }} style={[styles.dersCard, !open && { opacity: 0.45 }]}>
+                        <View style={styles.row}>
+                            <View style={[styles.num, done && { backgroundColor: "#ECFDF5" }, !open && { backgroundColor: "#F5F5F4" }]}>
+                                <Text style={[styles.numText, done && { color: "#059669" }, !open && { color: "#A8A29E" }]}>{done ? "✓" : open ? (idx + 1) : "🔒"}</Text>
                             </View>
-                        </Card>
-                    </Pressable>
+                            <View style={{ flex: 1 }}>
+                                <Text style={[styles.dersName, isDark && styles.textLight]}>{konu}</Text>
+                                <Text style={[styles.meta, isDark && styles.textMuted]}>{open ? (n ? (ClozeEngine.remainingCount(kd, tp.solvedCloze) + " / " + n + " boşluk") : "Henüz yok") : "Önce önceki konunun testlerini bitir"}</Text>
+                            </View>
+                            {open ? <Text style={[styles.arrow, isDark && styles.textMuted]}>→</Text> : null}
+                        </View>
+                    </Card>
                 );
             })}
         </ScrollScreen>
@@ -248,7 +244,7 @@ export function ClozePlayScreen({ route, navigation }) {
                     if (picked && isA) { bg = "#ECFDF5"; border = "#34D399"; }
                     else if (picked && isP) { bg = "#FEF2F2"; border = "#F87171"; }
                     return (
-                        <Pressable key={ci} disabled={!!picked} onPress={function () {
+                        <Tap key={ci} disabled={!!picked} onPress={function () {
                             if (picked) return;
                             setPicked(c);
                             if (String(c).toLocaleLowerCase("tr-TR") === String(it.answer).toLocaleLowerCase("tr-TR")) {
@@ -257,7 +253,7 @@ export function ClozePlayScreen({ route, navigation }) {
                             }
                         }} style={[styles.choice, { backgroundColor: isDark && !picked ? colors.navyDeep : bg, borderColor: border }]}>
                             <Text style={[styles.choiceText, isDark && !picked && styles.textLight]}>{c}</Text>
-                        </Pressable>
+                        </Tap>
                     );
                 })}
                 {picked ? (
@@ -301,17 +297,17 @@ export function MapTopicsScreen({ navigation }) {
                                 </>
                             );
                             return (
-                                <Pressable key={k.id} onPress={function () { go(navigation, "MapPlay", { topicId: k.id }); }}>
+                                <Tap key={k.id} onPress={function () { go(navigation, "MapPlay", { topicId: k.id }); }} activeOpacity={0.82} style={k.hoverImg ? styles.volkanCard : undefined}>
                                     {k.hoverImg ? (
-                                        <ImageBackground source={MAP_CARD_IMG[k.hoverImg] || MAP_CARD_IMG.volkan} style={styles.volkanCard} imageStyle={styles.volkanCardImg} resizeMode="cover">
+                                        <ImageBackground source={MAP_CARD_IMG[k.hoverImg] || MAP_CARD_IMG.volkan} style={styles.volkanCardInner} imageStyle={styles.volkanCardImg} resizeMode="cover">
                                             <View style={styles.volkanScrim}>{inner}</View>
                                         </ImageBackground>
                                     ) : (
-                                        <Card style={[styles.dersCard, isDark && styles.cardDark]}>
+                                        <Card dark={isDark} style={styles.dersCard}>
                                             {inner}
                                         </Card>
                                     )}
-                                </Pressable>
+                                </Tap>
                             );
                         })}
                     </View>
@@ -458,14 +454,14 @@ export function MapPlayScreen({ route, navigation }) {
                         if (picked && isA) { bg = "#ECFDF5"; border = "#34D399"; }
                         else if (picked && isP) { bg = "#FEF2F2"; border = "#F87171"; }
                         return (
-                            <Pressable key={ci} disabled={!!picked} onPress={function () {
+                            <Tap key={ci} disabled={!!picked} onPress={function () {
                                 if (picked) return;
                                 setPicked(c);
                                 if (String(c) === String(step.answer)) setScore(score + 1);
                                 setTimeout(advance, 5500);
                             }} style={[styles.choice, { backgroundColor: isDark && !picked ? colors.navyDeep : bg, borderColor: border }]}>
                                 <Text style={[styles.choiceText, isDark && !picked && styles.textLight]}>{c}</Text>
-                            </Pressable>
+                            </Tap>
                         );
                     })}
                 {picked ? (
@@ -492,6 +488,7 @@ var styles = StyleSheet.create({
         overflow: "hidden",
         borderRadius: 16
     },
+    volkanCardInner: { minHeight: 72 },
     volkanCardImg: { borderRadius: 16 },
     volkanScrim: { backgroundColor: "rgba(8,6,4,0.42)", padding: 16, minHeight: 72, justifyContent: "center" },
     volkanName: { color: "#fff", textShadowColor: "rgba(0,0,0,0.7)", textShadowOffset: { width: 0, height: 1 }, textShadowRadius: 8 },

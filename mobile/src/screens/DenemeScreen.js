@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Alert, Pressable, Text, View, StyleSheet } from "react-native";
+import { Alert, Text, View, StyleSheet } from "react-native";
 import { useApp } from "../AppProvider";
 import { StudyPlanner } from "../lib/planner";
 import { StudentStore } from "../lib/store";
 import { SyncEngine } from "../lib/syncEngine";
 import { KpssConfig } from "../lib/config";
 import { go } from "../nav";
-import { Card, PrimaryButton, ScrollScreen, Badge } from "../ui";
+import { Card, PrimaryButton, ScrollScreen, Badge, Tap } from "../ui";
 import { colors, DERS_ICON } from "../lib/theme";
 
 // ============================================================
@@ -119,7 +119,7 @@ export default function DenemeScreen({ navigation }) {
                     var on = !!sel[d];
                     var sc = stats[d] || {};
                     return (
-                        <Pressable 
+                        <Tap 
                             key={d} 
                             onPress={function () {
                                 var next = Object.assign({}, sel);
@@ -142,7 +142,7 @@ export default function DenemeScreen({ navigation }) {
                                     {on ? "✓" : ""}
                                 </Text>
                             </View>
-                        </Pressable>
+                        </Tap>
                     );
                 })}
             </Card>
@@ -159,7 +159,7 @@ export default function DenemeScreen({ navigation }) {
                     {[10, 20, 30, 40].map(function (x) {
                         var isActive = n === x;
                         return (
-                            <Pressable 
+                            <Tap 
                                 key={x} 
                                 onPress={function () { setN(x); }} 
                                 style={[styles.optionBtn, isActive && styles.optionBtnActive]}
@@ -167,7 +167,7 @@ export default function DenemeScreen({ navigation }) {
                                 <Text style={[styles.optionText, isActive && styles.optionTextActive]}>
                                     {x}
                                 </Text>
-                            </Pressable>
+                            </Tap>
                         );
                     })}
                 </View>
@@ -185,7 +185,7 @@ export default function DenemeScreen({ navigation }) {
                     {[{ v: 0, t: "Süresiz" }, { v: 15, t: "15" }, { v: 20, t: "20" }, { v: 40, t: "40" }].map(function (x) {
                         var isActive = mins === x.v;
                         return (
-                            <Pressable 
+                            <Tap 
                                 key={x.v} 
                                 onPress={function () { setMins(x.v); }} 
                                 style={[styles.optionBtn, isActive && styles.optionBtnActive]}
@@ -193,7 +193,7 @@ export default function DenemeScreen({ navigation }) {
                                 <Text style={[styles.optionText, isActive && styles.optionTextActive]}>
                                     {x.t}
                                 </Text>
-                            </Pressable>
+                            </Tap>
                         );
                     })}
                 </View>
@@ -206,7 +206,7 @@ export default function DenemeScreen({ navigation }) {
                 style={styles.startBtn}
             />
 
-            <Pressable 
+            <Tap 
                 onPress={startFull} 
                 style={[styles.fullBtn, isDark && styles.fullBtnDark]}
             >
@@ -216,7 +216,7 @@ export default function DenemeScreen({ navigation }) {
                 <Text style={[styles.fullBtnDesc, isDark && styles.textMuted]}>
                     40 soru · 40 dakika · Sınav temposu
                 </Text>
-            </Pressable>
+            </Tap>
 
             {/* Footer */}
             {!isPremium && (
