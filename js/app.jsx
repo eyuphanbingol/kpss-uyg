@@ -81,6 +81,8 @@ function CookieBar() {
         </div>
     );
 }
+
+function AdSlot(props) {
     var kind = props.kind || "display";
     var boxRef = useRef(null);
     useEffect(function () {
@@ -271,7 +273,7 @@ function Onboarding(props) {
                 <input type="date" value={examDate} onChange={function (e) { setExamDate(e.target.value); }}
                     className="w-full mb-4 px-4 py-3 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-800 font-medium" />
                 <p className="text-[11px] text-stone-500 leading-relaxed mb-5">
-                    Başla diyerek <a className="underline font-semibold" href="yasal/kullanim.html" target="_blank" rel="noopener">Kullanım Koşulları</a> ve <a className="underline font-semibold" href="yasal/uyelik.html" target="_blank" rel="noopener">Üyelik Sözleşmesi</a>'ni kabul etmiş olursunuz. <a className="underline" href="yasal/aydinlatma.html" target="_blank" rel="noopener">KVKK Aydınlatma</a>
+                    Başla diyerek <a className="underline font-semibold" href="yasal/kullanim.html" target="_blank" rel="noopener">Kullanım Koşulları</a> ve <a className="underline font-semibold" href="yasal/uyelik.html" target="_blank" rel="noopener">Üyelik Sözleşmesi</a>{"'ni kabul etmiş olursunuz. "}<a className="underline" href="yasal/aydinlatma.html" target="_blank" rel="noopener">KVKK Aydınlatma</a>
                 </p>
                 <button disabled={!name.trim()} onClick={function () {
                     StudentStore.completeOnboarding({

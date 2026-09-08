@@ -298,7 +298,7 @@
                                 <a className="text-teal-700 font-semibold underline" href="yasal/kullanim.html" target="_blank" rel="noopener">Kullanım Koşulları</a>
                                 {" "}ve{" "}
                                 <a className="text-teal-700 font-semibold underline" href="yasal/uyelik.html" target="_blank" rel="noopener">Üyelik Sözleşmesi</a>
-                                'ni kabul etmiş olursunuz.{" "}
+                                {"'ni kabul etmiş olursunuz. "}
                                 <a className="underline" href="yasal/aydinlatma.html" target="_blank" rel="noopener">KVKK Aydınlatma Metni</a>
                             </p>
 

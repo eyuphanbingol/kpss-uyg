@@ -538,9 +538,9 @@
                                 <a className="text-teal-700 font-semibold underline" href="yasal/kullanim.html" target="_blank" rel="noopener">Kullanım Koşulları</a>
                                 {" "}ile{" "}
                                 <a className="text-teal-700 font-semibold underline" href="yasal/uyelik.html" target="_blank" rel="noopener">Üyelik Sözleşmesi</a>
-                                'ni kabul etmiş olursunuz. Kişisel verileriniz hakkında{" "}
+                                {"'ni kabul etmiş olursunuz. Kişisel verileriniz hakkında "}
                                 <a className="text-teal-700 font-semibold underline" href="yasal/aydinlatma.html" target="_blank" rel="noopener">KVKK Aydınlatma Metni</a>
-                                'ni inceleyebilirsiniz.{" "}
+                                {"'ni inceleyebilirsiniz. "}
                                 <a className="underline" href="yasal/gizlilik.html" target="_blank" rel="noopener">Gizlilik</a>
                                 {" · "}
                                 <a className="underline" href="yasal/cerez.html" target="_blank" rel="noopener">Çerezler</a>
