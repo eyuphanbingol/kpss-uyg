@@ -74,17 +74,13 @@ export function AlistirmaDersListScreen({ navigation }) {
             <Text style={[styles.subtitle, isDark && styles.textMuted]}>Ders seç, sonra konu.</Text>
             {Object.keys(kpssData).map(function (ders) {
                 var konular = Object.keys(kpssData[ders] || {});
-                var n = 0;
-                konular.forEach(function (k) {
-                    n += ClozeEngine.countForKonu(kpssData[ders][k] || {});
-                });
                 return (
                     <Card key={ders} dark={isDark} onPress={function () { go(navigation, "AlistirmaKonuList", { ders: ders }); }} style={styles.dersCard}>
                         <View style={styles.row}>
                             <Text style={styles.icon}>{DERS_ICON[ders] || "✏️"}</Text>
                             <View style={{ flex: 1 }}>
                                 <Text style={[styles.dersName, isDark && styles.textLight]}>{ders}</Text>
-                                <Text style={[styles.meta, isDark && styles.textMuted]}>{konular.length} konu · {n} boşluk</Text>
+                                <Text style={[styles.meta, isDark && styles.textMuted]}>{konular.length} konu</Text>
                             </View>
                             <Text style={[styles.arrow, isDark && styles.textMuted]}>→</Text>
                         </View>
@@ -100,6 +96,28 @@ export function AlistirmaKonuListScreen({ route, navigation }) {
     var app = useApp();
     var isDark = app.dark;
     var konular = Object.keys(app.kpssData[ders] || {});
+    var statsState = useState(null);
+    var stats = statsState[0];
+    var setStats = statsState[1];
+
+    useEffect(function () {
+        var id = requestAnimationFrame(function () {
+            var next = {};
+            konular.forEach(function (konu, idx) {
+                var kd = app.kpssData[ders][konu] || {};
+                var tp = ((app.student.topics && app.student.topics[ders]) || {})[konu] || {};
+                var n = ClozeEngine.countForKonu(kd);
+                next[konu] = {
+                    n: n,
+                    left: n ? ClozeEngine.remainingCount(kd, tp.solvedCloze) : 0,
+                    open: StudentStore.isKonuOpen(ders, konular, idx, app.kpssData),
+                    done: StudentStore.topicComplete(tp, kd)
+                };
+            });
+            setStats(next);
+        });
+        return function () { cancelAnimationFrame(id); };
+    }, [ders, app.student]);
 
     return (
         <ScrollScreen dark={isDark}>
@@ -107,22 +125,19 @@ export function AlistirmaKonuListScreen({ route, navigation }) {
             <Text style={[styles.konuTitle, isDark && styles.textLight]}>{ders}</Text>
             <Text style={[styles.subtitle, isDark && styles.textMuted]}>Derslerle aynı sıra. Konu bitince burası da açılır.</Text>
             {konular.map(function (konu, idx) {
-                var kd = app.kpssData[ders][konu] || {};
-                var n = ClozeEngine.countForKonu(kd);
-                var tp = ((app.student.topics && app.student.topics[ders]) || {})[konu] || {};
-                var open = StudentStore.isKonuOpen(ders, konular, idx, app.kpssData);
-                var done = StudentStore.topicComplete(tp, kd);
+                var st = (stats && stats[konu]) || { n: 0, left: 0, open: true, done: false };
+                var open = st.open !== false;
                 return (
                     <Card key={konu} dark={isDark} disabled={!open} onPress={function () {
                         if (open) go(navigation, "ClozePlay", { ders: ders, konu: konu });
                     }} style={[styles.dersCard, !open && { opacity: 0.45 }]}>
                         <View style={styles.row}>
-                            <View style={[styles.num, done && { backgroundColor: "#ECFDF5" }, !open && { backgroundColor: "#F5F5F4" }]}>
-                                <Text style={[styles.numText, done && { color: "#059669" }, !open && { color: "#A8A29E" }]}>{done ? "✓" : open ? (idx + 1) : "🔒"}</Text>
+                            <View style={[styles.num, st.done && { backgroundColor: "#ECFDF5" }, !open && { backgroundColor: "#F5F5F4" }]}>
+                                <Text style={[styles.numText, st.done && { color: "#059669" }, !open && { color: "#A8A29E" }]}>{st.done ? "✓" : open ? (idx + 1) : "🔒"}</Text>
                             </View>
                             <View style={{ flex: 1 }}>
                                 <Text style={[styles.dersName, isDark && styles.textLight]}>{konu}</Text>
-                                <Text style={[styles.meta, isDark && styles.textMuted]}>{open ? (n ? (ClozeEngine.remainingCount(kd, tp.solvedCloze) + " / " + n + " boşluk") : "Henüz yok") : "Önce önceki konunun testlerini bitir"}</Text>
+                                <Text style={[styles.meta, isDark && styles.textMuted]}>{open ? (st.n ? (st.left + " / " + st.n + " boşluk") : (stats ? "Henüz yok" : " ")) : "Önce önceki konunun testlerini bitir"}</Text>
                             </View>
                             {open ? <Text style={[styles.arrow, isDark && styles.textMuted]}>→</Text> : null}
                         </View>
@@ -145,9 +160,9 @@ export function ClozePlayScreen({ route, navigation }) {
     var _seed = useState(0);
     var seed = _seed[0];
     var setSeed = _seed[1];
-    var list = useMemo(function () {
-        return ClozeEngine.buildForKonu(kd, 12, StudentStore.solvedClozeIds(ders, konu));
-    }, [ders, konu, seed]);
+    var listState = useState(null);
+    var list = listState[0];
+    var setList = listState[1];
     var _i = useState(0);
     var idx = _i[0];
     var setIdx = _i[1];
@@ -162,14 +177,28 @@ export function ClozePlayScreen({ route, navigation }) {
     var setDone = _d[1];
 
     useEffect(function () {
-        setIdx(0); setPicked(null); setScore(0); setDone(false);
-    }, [seed]);
+        setIdx(0); setPicked(null); setScore(0); setDone(false); setList(null);
+        var id = requestAnimationFrame(function () {
+            setList(ClozeEngine.buildForKonu(kd, 12, StudentStore.solvedClozeIds(ders, konu)) || []);
+        });
+        return function () { cancelAnimationFrame(id); };
+    }, [seed, ders, konu]);
 
     useEffect(function () {
         if (!open) navigation.goBack();
     }, [open]);
 
     if (!open) return null;
+
+    if (list == null) {
+        return (
+            <ScrollScreen dark={isDark}>
+                <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} />
+                <Text style={[styles.kicker, isDark && styles.textMuted]}>{ders}</Text>
+                <Text style={[styles.konuTitle, isDark && styles.textLight]}>{konu}</Text>
+            </ScrollScreen>
+        );
+    }
 
     if (!list.length) {
         var totalCloze = ClozeEngine.countForKonu(kd);

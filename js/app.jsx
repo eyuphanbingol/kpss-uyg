@@ -746,7 +746,6 @@ function AlistirmalarHome(props) {
 
 function AlistirmaDersList(props) {
     const kpssData = props.kpssData;
-    const engine = window.ClozeEngine;
     return (
         <Shell>
             <div className="flex justify-between mb-4">
@@ -759,10 +758,6 @@ function AlistirmaDersList(props) {
                 {Object.keys(kpssData).map(function (ders) {
                     const t = themeFor(ders, props.isDark);
                     const konular = Object.keys(kpssData[ders] || {});
-                    var n = 0;
-                    konular.forEach(function (k) {
-                        n += engine ? engine.countForKonu(kpssData[ders][k] || {}) : 0;
-                    });
                     return (
                         <button key={ders} onClick={function () { props.onDers(ders); }}
                             className="w-full text-left p-5 rounded-3xl glass card-hover flex items-center gap-5 group">
@@ -771,7 +766,7 @@ function AlistirmaDersList(props) {
                             </div>
                             <div className="min-w-0 flex-1">
                                 <h2 className="font-bold text-stone-800 dark:text-stone-100 text-lg">{ders}</h2>
-                                <p className="text-sm text-stone-400">{konular.length} konu · {n} boşluk</p>
+                                <p className="text-sm text-stone-400">{konular.length} konu</p>
                             </div>
                             <span className="text-stone-300 group-hover:text-indigo-500 transition-colors text-xl">→</span>
                         </button>
@@ -788,6 +783,25 @@ function AlistirmaKonuList(props) {
     const konular = Object.keys(props.kpssData[ders] || {});
     const engine = window.ClozeEngine;
     const topics = (props.student && props.student.topics && props.student.topics[ders]) || {};
+    const [stats, setStats] = useState(null);
+    useEffect(function () {
+        var id = requestAnimationFrame(function () {
+            var next = {};
+            konular.forEach(function (konu, idx) {
+                var kd = props.kpssData[ders][konu] || {};
+                var tp = topics[konu] || {};
+                var n = engine ? engine.countForKonu(kd) : 0;
+                next[konu] = {
+                    n: n,
+                    left: n && engine ? engine.remainingCount(kd, tp.solvedCloze) : 0,
+                    open: StudentStore.isKonuOpen(ders, konular, idx, props.kpssData),
+                    done: StudentStore.topicComplete(tp, kd)
+                };
+            });
+            setStats(next);
+        });
+        return function () { cancelAnimationFrame(id); };
+    }, [ders, props.student]);
     return (
         <Shell>
             <div className="flex justify-between mb-4">
@@ -803,20 +817,17 @@ function AlistirmaKonuList(props) {
             </div>
             <div className="space-y-3">
                 {konular.map(function (konu, idx) {
-                    const kd = props.kpssData[ders][konu] || {};
-                    const n = engine ? engine.countForKonu(kd) : 0;
-                    const tp = topics[konu] || {};
-                    const open = StudentStore.isKonuOpen(ders, konular, idx, props.kpssData);
-                    const done = StudentStore.topicComplete(tp, kd);
+                    const st = (stats && stats[konu]) || { n: 0, left: 0, open: true, done: false };
+                    const open = st.open !== false;
                     return (
                         <button key={konu} disabled={!open} onClick={function () { if (open) props.onKonu(konu); }}
                             className={"w-full text-left p-5 panel rounded-3xl " + (open ? "" : "opacity-45")}>
                             <div className="flex justify-between items-start gap-3">
                                 <div className="flex gap-3 min-w-0">
-                                    <div className={"h-10 w-10 rounded-xl flex items-center justify-center font-stat text-sm shrink-0 " + (done ? "bg-emerald-50 text-emerald-600" : (open ? "bg-teal-50 text-teal-800" : "bg-stone-100 text-stone-400"))}>{done ? "✓" : (open ? idx + 1 : "🔒")}</div>
+                                    <div className={"h-10 w-10 rounded-xl flex items-center justify-center font-stat text-sm shrink-0 " + (st.done ? "bg-emerald-50 text-emerald-600" : (open ? "bg-teal-50 text-teal-800" : "bg-stone-100 text-stone-400"))}>{st.done ? "✓" : (open ? idx + 1 : "🔒")}</div>
                                     <div className="min-w-0">
                                         <div className="font-bold text-slate-800 dark:text-slate-100">{konu}</div>
-                                        <p className="text-xs text-slate-400 mt-1">{open ? (n ? ((engine && engine.remainingCount(kd, tp.solvedCloze)) + " / " + n + " boşluk") : "Henüz alıştırma yok") : "Önce önceki konunun testlerini bitir"}</p>
+                                        <p className="text-xs text-slate-400 mt-1">{open ? (st.n ? (st.left + " / " + st.n + " boşluk") : (stats ? "Henüz alıştırma yok" : "\u00a0")) : "Önce önceki konunun testlerini bitir"}</p>
                                     </div>
                                 </div>
                                 {open ? <span className="text-stone-300 text-lg shrink-0">→</span> : null}
@@ -858,21 +869,36 @@ function clozePromptNodes(text, fill, fillOk) {
 }
 
 function ClozePlay(props) {
-    const items = useMemo(function () {
-        if (!window.ClozeEngine) return [];
-        return window.ClozeEngine.buildForKonu(props.konuData, 12, StudentStore.solvedClozeIds(props.ders, props.konu));
-    }, [props.ders, props.konu, props.seed]);
+    const [items, setItems] = useState(null);
     const [idx, setIdx] = useState(0);
     const [picked, setPicked] = useState(null);
     const [score, setScore] = useState(0);
     const [done, setDone] = useState(false);
 
     useEffect(function () {
-        setIdx(0); setPicked(null); setScore(0); setDone(false);
-    }, [props.seed, props.konu]);
+        setIdx(0); setPicked(null); setScore(0); setDone(false); setItems(null);
+        var id = requestAnimationFrame(function () {
+            if (!window.ClozeEngine) { setItems([]); return; }
+            setItems(window.ClozeEngine.buildForKonu(props.konuData, 12, StudentStore.solvedClozeIds(props.ders, props.konu)) || []);
+        });
+        return function () { cancelAnimationFrame(id); };
+    }, [props.ders, props.konu, props.seed]);
 
     var totalCloze = window.ClozeEngine ? window.ClozeEngine.countForKonu(props.konuData) : 0;
     var leftCloze = window.ClozeEngine ? window.ClozeEngine.remainingCount(props.konuData, StudentStore.solvedClozeIds(props.ders, props.konu)) : 0;
+
+    if (items == null) {
+        return (
+            <Shell>
+                <div className="flex justify-between mb-4">
+                    <BackBtn onClick={props.onBack} label="Konular" />
+                    <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
+                </div>
+                <p className="text-xs font-semibold text-stone-400 uppercase tracking-wider">{props.ders}</p>
+                <h1 className="text-2xl font-black mb-4">{props.konu}</h1>
+            </Shell>
+        );
+    }
 
     if (!items.length) {
         var allSolved = totalCloze > 0 && leftCloze === 0;

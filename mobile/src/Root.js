@@ -207,7 +207,7 @@ function Gate() {
     var stackOptions = {
         headerShown: false,
         animation: "slide_from_right",
-        animationDuration: 220,
+        animationDuration: 140,
         presentation: "card",
         gestureEnabled: true,
         fullScreenGestureEnabled: false,

@@ -194,6 +194,8 @@ function shuffle(arr) {
 }
 
 function collect(kd) {
+    if (!kd) return [];
+    if (kd.__clozeItems) return kd.__clozeItems;
     var all = fromNotes(kd && kd.notlar).concat(fromQuestions(kd && kd.sorular));
     var uniq = [];
     var seen = {};
@@ -203,6 +205,7 @@ function collect(kd) {
         seen[k] = 1;
         uniq.push(Object.assign({}, it, { id: k }));
     });
+    try { kd.__clozeItems = uniq; } catch (e) {}
     return uniq;
 }
 
@@ -214,23 +217,13 @@ function skipSet(ids) {
     return s;
 }
 
-function remaining(kd, skipIds) {
+function remainingFrom(uniq, skipIds) {
     var skip = skipSet(skipIds);
-    return collect(kd).filter(function (it) { return !skip[it.id]; });
+    return (uniq || []).filter(function (it) { return !skip[it.id]; });
 }
 
-function relatedScore(a, b) {
-    var s = 0;
-    if (a.family && a.family === b.family) s += 70;
-    if (a.noteIndex != null && a.noteIndex === b.noteIndex) s += 50;
-    if (a.kind && a.kind === b.kind) s += 40;
-    var wa = String(a.answer).split(/\s+/).length;
-    var wb = String(b.answer).split(/\s+/).length;
-    if (wa === wb) s += 12;
-    var la = String(a.answer).length, lb = String(b.answer).length;
-    if (Math.abs(la - lb) <= 8) s += 8;
-    if (Math.abs(la - lb) > 28) s -= 20;
-    return s;
+function remaining(kd, skipIds) {
+    return remainingFrom(collect(kd), skipIds);
 }
 
 function withChoices(items, nChoices, allItems) {
@@ -248,17 +241,14 @@ function withChoices(items, nChoices, allItems) {
             distractors.push(t);
         }
         shuffle(it.related || []).forEach(add);
-        var ranked = bank
-            .filter(function (o) { return o && norm(o.answer) !== norm(it.answer); })
-            .map(function (o) { return { term: o.answer, s: relatedScore(it, o) }; })
-            .sort(function (a, b) { return (b.s - a.s) || (Math.random() - 0.5); });
-        ranked.forEach(function (row) {
-            if (distractors.length >= nChoices - 1) return;
-            if (row.s < 12 && distractors.length >= 1 && it.kind !== "phrase") return;
-            add(row.term);
-        });
+        var i, o;
+        for (i = 0; i < bank.length && distractors.length < nChoices - 1; i++) {
+            o = bank[i];
+            if (o && (o.family === it.family || o.kind === it.kind)) add(o.answer);
+        }
         if (distractors.length < nChoices - 1) {
-            ranked.forEach(function (row) { if (distractors.length < nChoices - 1) add(row.term); });
+            var rest = shuffle(bank.slice());
+            for (i = 0; i < rest.length && distractors.length < nChoices - 1; i++) add(rest[i].answer);
         }
         var choices = shuffle([it.answer].concat(distractors.slice(0, Math.max(0, nChoices - 1))));
         return Object.assign({}, it, { choices: choices });
@@ -268,7 +258,7 @@ function withChoices(items, nChoices, allItems) {
 export const ClozeEngine = {
     buildForKonu: function (kd, limit, skipIds) {
         var uniq = collect(kd);
-        return withChoices(shuffle(remaining(kd, skipIds)).slice(0, limit || 12), 4, uniq);
+        return withChoices(shuffle(remainingFrom(uniq, skipIds)).slice(0, limit || 12), 4, uniq);
     },
     countForKonu: function (kd) {
         return collect(kd).length;
