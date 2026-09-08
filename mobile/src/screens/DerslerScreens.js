@@ -1,5 +1,5 @@
 import React from "react";
-import { Pressable, Text, View, StyleSheet } from "react-native";
+import { Pressable, Text, View, StyleSheet, Alert } from "react-native";
 import { useApp } from "../AppProvider";
 import { StudyPlanner } from "../lib/planner";
 import { StudentStore } from "../lib/store";
@@ -269,6 +269,20 @@ export function KonuHubScreen({ route, navigation }) {
                     </Text>
                 </Card>
             </Pressable>
+
+            {(tp.solvedCloze && tp.solvedCloze.length) ? (
+                <Pressable onPress={function () {
+                    Alert.alert("Boşlukları sıfırla", "Bu konudaki çözülen boşluklar baştan gelsin mi?", [
+                        { text: "Vazgeç", style: "cancel" },
+                        { text: "Sıfırla", style: "destructive", onPress: function () { StudentStore.resetCloze(ders, konu); } }
+                    ]);
+                }}>
+                    <Card style={[styles.hubTestCard, isDark && styles.cardDark]}>
+                        <Text style={[styles.hubTestTitle, isDark && styles.textLight]}>Boşlukları sıfırla</Text>
+                        <Text style={[styles.hubTestDesc, isDark && styles.textMuted]}>Doğru çözülen boşluklar tekrar gelir.</Text>
+                    </Card>
+                </Pressable>
+            ) : null}
 
             {/* Test packs */}
             {packs.length ? (

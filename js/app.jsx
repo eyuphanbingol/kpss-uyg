@@ -822,7 +822,7 @@ function AlistirmaKonuList(props) {
                                     <div className={"h-10 w-10 rounded-xl flex items-center justify-center font-stat text-sm shrink-0 " + (done ? "bg-emerald-50 text-emerald-600" : (open ? "bg-teal-50 text-teal-800" : "bg-stone-100 text-stone-400"))}>{done ? "✓" : (open ? idx + 1 : "🔒")}</div>
                                     <div className="min-w-0">
                                         <div className="font-bold text-slate-800 dark:text-slate-100">{konu}</div>
-                                        <p className="text-xs text-slate-400 mt-1">{open ? (n ? n + " boşluk" : "Henüz alıştırma yok") : "Önce önceki konunun testlerini bitir"}</p>
+                                        <p className="text-xs text-slate-400 mt-1">{open ? (n ? ((engine && engine.remainingCount(kd, tp.solvedCloze)) + " / " + n + " boşluk") : "Henüz alıştırma yok") : "Önce önceki konunun testlerini bitir"}</p>
                                     </div>
                                 </div>
                                 {open ? <span className="text-stone-300 text-lg shrink-0">→</span> : null}
@@ -866,7 +866,7 @@ function clozePromptNodes(text, fill, fillOk) {
 function ClozePlay(props) {
     const items = useMemo(function () {
         if (!window.ClozeEngine) return [];
-        return window.ClozeEngine.buildForKonu(props.konuData, 12);
+        return window.ClozeEngine.buildForKonu(props.konuData, 12, StudentStore.solvedClozeIds(props.ders, props.konu));
     }, [props.ders, props.konu, props.seed]);
     const [idx, setIdx] = useState(0);
     const [picked, setPicked] = useState(null);
@@ -877,7 +877,11 @@ function ClozePlay(props) {
         setIdx(0); setPicked(null); setScore(0); setDone(false);
     }, [props.seed, props.konu]);
 
+    var totalCloze = window.ClozeEngine ? window.ClozeEngine.countForKonu(props.konuData) : 0;
+    var leftCloze = window.ClozeEngine ? window.ClozeEngine.remainingCount(props.konuData, StudentStore.solvedClozeIds(props.ders, props.konu)) : 0;
+
     if (!items.length) {
+        var allSolved = totalCloze > 0 && leftCloze === 0;
         return (
             <Shell>
                 <div className="flex justify-between mb-4">
@@ -885,8 +889,14 @@ function ClozePlay(props) {
                     <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
                 </div>
                 <div className="text-center py-16 rounded-3xl glass">
-                    <p className="font-bold">Bu konuda henüz boşluk yok.</p>
-                    <p className="text-sm text-stone-400 mt-2">Not veya soru eklenince alıştırmalar burada açılır.</p>
+                    <p className="font-bold">{allSolved ? "Bu konudaki boşlukları çözdün." : "Bu konuda henüz boşluk yok."}</p>
+                    <p className="text-sm text-stone-400 mt-2">{allSolved ? "Konuyu sıfırlarsan tekrar gelir." : "Not veya soru eklenince alıştırmalar burada açılır."}</p>
+                    {allSolved ? (
+                        <button type="button" onClick={function () {
+                            StudentStore.resetCloze(props.ders, props.konu);
+                            if (props.onAgain) props.onAgain();
+                        }} className="btn-primary text-white px-5 py-2.5 rounded-full font-semibold mt-6">Sıfırla</button>
+                    ) : null}
                 </div>
             </Shell>
         );
@@ -910,10 +920,18 @@ function ClozePlay(props) {
                     <div className="study-card-body text-center py-8">
                         <p className="text-4xl font-black mb-2">{Math.round((score / items.length) * 100)}%</p>
                         <p className="text-stone-500">{score} doğru · {items.length - score} yanlış</p>
+                        <p className="text-sm text-stone-400 mt-3">{leftCloze ? (leftCloze + " boşluk kaldı") : "Doğru çözülenler bir daha gelmez. Konuyu sıfırlarsan tekrar gelir."}</p>
                     </div>
                     <footer className="study-card-foot">
                         <button onClick={props.onBack} className="back-btn"><span>Konular</span></button>
-                        <button onClick={props.onAgain} className="btn-primary text-white px-5 py-2.5 rounded-full font-semibold">Tekrar oyna</button>
+                        {leftCloze ? (
+                            <button onClick={props.onAgain} className="btn-primary text-white px-5 py-2.5 rounded-full font-semibold">Devam et</button>
+                        ) : (
+                            <button type="button" onClick={function () {
+                                StudentStore.resetCloze(props.ders, props.konu);
+                                if (props.onAgain) props.onAgain();
+                            }} className="btn-primary text-white px-5 py-2.5 rounded-full font-semibold">Sıfırla</button>
+                        )}
                     </footer>
                 </article>
             </Shell>
@@ -955,7 +973,10 @@ function ClozePlay(props) {
                                 <button key={ci + "-" + c} disabled={!!picked} onClick={function () {
                                     if (picked) return;
                                     setPicked(c);
-                                    if (String(c).toLocaleLowerCase("tr-TR") === String(it.answer).toLocaleLowerCase("tr-TR")) setScore(score + 1);
+                                    if (String(c).toLocaleLowerCase("tr-TR") === String(it.answer).toLocaleLowerCase("tr-TR")) {
+                                        setScore(score + 1);
+                                        StudentStore.markClozeSolved(props.ders, props.konu, it.id);
+                                    }
                                 }} className={cls}>{c}</button>
                             );
                         })}
@@ -1579,6 +1600,14 @@ function KonuHub(props) {
                 <h3 className="text-xl font-bold text-amber-900 dark:text-amber-100 mb-2">Konu özeti</h3>
                 <p className="text-sm text-amber-700">{notlar.length} hap not · {tp.notesDone ? "tamamlandı" : "kaldığın yerden"}</p>
             </button>
+            {(tp.solvedCloze && tp.solvedCloze.length) ? (
+                <button type="button" onClick={function () {
+                    if (!window.confirm("Bu konudaki çözülen boşluklar baştan gelsin mi?")) return;
+                    StudentStore.resetCloze(props.ders, props.konu);
+                }} className="w-full mb-5 p-4 rounded-2xl border border-stone-200 dark:border-stone-700 text-sm font-semibold text-stone-600 dark:text-stone-300">
+                    Boşlukları sıfırla
+                </button>
+            ) : null}
             {packs.length ? (
                 <div>
                     <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-3">{sorular.length} soru · 25’lik testler · sırayla bitir</p>

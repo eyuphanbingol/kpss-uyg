@@ -201,9 +201,22 @@ function collect(kd) {
         var k = norm(it.answer) + "|" + norm(it.prompt).slice(0, 90);
         if (seen[k]) return;
         seen[k] = 1;
-        uniq.push(it);
+        uniq.push(Object.assign({}, it, { id: k }));
     });
     return uniq;
+}
+
+function skipSet(ids) {
+    var s = {};
+    (ids || []).forEach(function (id) {
+        if (id) s[String(id)] = 1;
+    });
+    return s;
+}
+
+function remaining(kd, skipIds) {
+    var skip = skipSet(skipIds);
+    return collect(kd).filter(function (it) { return !skip[it.id]; });
 }
 
 function relatedScore(a, b) {
@@ -253,11 +266,14 @@ function withChoices(items, nChoices, allItems) {
 }
 
 export const ClozeEngine = {
-    buildForKonu: function (kd, limit) {
+    buildForKonu: function (kd, limit, skipIds) {
         var uniq = collect(kd);
-        return withChoices(shuffle(uniq).slice(0, limit || 12), 4, uniq);
+        return withChoices(shuffle(remaining(kd, skipIds)).slice(0, limit || 12), 4, uniq);
     },
     countForKonu: function (kd) {
         return collect(kd).length;
+    },
+    remainingCount: function (kd, skipIds) {
+        return remaining(kd, skipIds).length;
     }
 };

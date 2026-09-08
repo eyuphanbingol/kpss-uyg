@@ -203,9 +203,22 @@
             var k = norm(it.answer) + "|" + norm(it.prompt).slice(0, 90);
             if (seen[k]) return;
             seen[k] = 1;
-            uniq.push(it);
+            uniq.push(Object.assign({}, it, { id: k }));
         });
         return uniq;
+    }
+
+    function skipSet(ids) {
+        var s = {};
+        (ids || []).forEach(function (id) {
+            if (id) s[String(id)] = 1;
+        });
+        return s;
+    }
+
+    function remaining(kd, skipIds) {
+        var skip = skipSet(skipIds);
+        return collect(kd).filter(function (it) { return !skip[it.id]; });
     }
 
     function relatedScore(a, b) {
@@ -254,9 +267,10 @@
         });
     }
 
-    function buildForKonu(kd, limit) {
+    function buildForKonu(kd, limit, skipIds) {
         var uniq = collect(kd);
-        var picked = shuffle(uniq).slice(0, limit || 12);
+        var pool = remaining(kd, skipIds);
+        var picked = shuffle(pool).slice(0, limit || 12);
         return withChoices(picked, 4, uniq);
     }
 
@@ -264,7 +278,11 @@
         return collect(kd).length;
     }
 
-    var api = { buildForKonu: buildForKonu, countForKonu: countForKonu, stripHtml: stripHtml };
+    function remainingCount(kd, skipIds) {
+        return remaining(kd, skipIds).length;
+    }
+
+    var api = { buildForKonu: buildForKonu, countForKonu: countForKonu, remainingCount: remainingCount, stripHtml: stripHtml };
     global.ClozeEngine = api;
     if (typeof module !== "undefined" && module.exports) module.exports = api;
 })(typeof window !== "undefined" ? window : globalThis);

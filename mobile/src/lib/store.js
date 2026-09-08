@@ -454,6 +454,7 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
                 mastery: "yok",
                 masteryScore: 0,
                 wrongWeight: 0,
+                solvedCloze: [],
                 updatedAt: nowIso()
             };
         }
@@ -472,8 +473,23 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             legacyAllPacks: false,
             mastery: "yok",
             masteryScore: 0,
-            wrongWeight: 0
+            wrongWeight: 0,
+            solvedCloze: []
         };
+    }
+
+    function solvedClozeOf(t) {
+        var p = (t && t.solvedCloze) || [];
+        if (!Array.isArray(p)) return [];
+        var out = [];
+        var seen = {};
+        p.forEach(function (id) {
+            id = String(id || "").slice(0, 160);
+            if (!id || seen[id]) return;
+            seen[id] = 1;
+            out.push(id);
+        });
+        return out;
     }
 
     function completedPacksOf(t) {
@@ -510,6 +526,7 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
                 if (!Array.isArray(t.completedPacks)) t.completedPacks = [];
                 else t.completedPacks = completedPacksOf(t);
                 if ((t.attempts || 0) > 0 && !t.completedPacks.length) t.legacyAllPacks = true;
+                t.solvedCloze = solvedClozeOf(t);
             });
         });
         return topics;
@@ -884,6 +901,26 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             emit();
         },
         getTopic: getTopic,
+        solvedClozeIds: function (ders, konu) {
+            return solvedClozeOf(getTopic(ders, konu));
+        },
+        markClozeSolved: function (ders, konu, id) {
+            id = String(id || "").slice(0, 160);
+            if (!ders || !konu || !id) return;
+            var t = ensureTopic(ders, konu);
+            t.solvedCloze = solvedClozeOf(t);
+            if (t.solvedCloze.indexOf(id) >= 0) return;
+            t.solvedCloze.push(id);
+            t.updatedAt = nowIso();
+            emit();
+        },
+        resetCloze: function (ders, konu) {
+            if (!ders || !konu) return;
+            var t = ensureTopic(ders, konu);
+            t.solvedCloze = [];
+            t.updatedAt = nowIso();
+            emit();
+        },
         setNoteIndex: function (ders, konu, index, total) {
             var t = ensureTopic(ders, konu);
             t.noteIndex = index;

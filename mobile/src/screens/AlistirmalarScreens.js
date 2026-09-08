@@ -126,7 +126,7 @@ export function AlistirmaKonuListScreen({ route, navigation }) {
                                 </View>
                                 <View style={{ flex: 1 }}>
                                     <Text style={[styles.dersName, isDark && styles.textLight]}>{konu}</Text>
-                                    <Text style={[styles.meta, isDark && styles.textMuted]}>{open ? (n ? n + " boşluk" : "Henüz yok") : "Önce önceki konunun testlerini bitir"}</Text>
+                                    <Text style={[styles.meta, isDark && styles.textMuted]}>{open ? (n ? (ClozeEngine.remainingCount(kd, tp.solvedCloze) + " / " + n + " boşluk") : "Henüz yok") : "Önce önceki konunun testlerini bitir"}</Text>
                                 </View>
                                 {open ? <Text style={[styles.arrow, isDark && styles.textMuted]}>→</Text> : null}
                             </View>
@@ -151,7 +151,7 @@ export function ClozePlayScreen({ route, navigation }) {
     var seed = _seed[0];
     var setSeed = _seed[1];
     var list = useMemo(function () {
-        return ClozeEngine.buildForKonu(kd, 12);
+        return ClozeEngine.buildForKonu(kd, 12, StudentStore.solvedClozeIds(ders, konu));
     }, [ders, konu, seed]);
     var _i = useState(0);
     var idx = _i[0];
@@ -177,17 +177,27 @@ export function ClozePlayScreen({ route, navigation }) {
     if (!open) return null;
 
     if (!list.length) {
+        var totalCloze = ClozeEngine.countForKonu(kd);
+        var leftCloze = ClozeEngine.remainingCount(kd, StudentStore.solvedClozeIds(ders, konu));
+        var allSolved = totalCloze > 0 && leftCloze === 0;
         return (
             <ScrollScreen dark={isDark}>
                 <Pressable onPress={function () { navigation.goBack(); }}>
                     <Text style={[styles.back, isDark && styles.textMuted]}>← Konular</Text>
                 </Pressable>
-                <Text style={[styles.konuTitle, isDark && styles.textLight]}>Bu konuda henüz boşluk yok.</Text>
+                <Text style={[styles.konuTitle, isDark && styles.textLight]}>{allSolved ? "Bu konudaki boşlukları çözdün." : "Bu konuda henüz boşluk yok."}</Text>
+                {allSolved ? (
+                    <PrimaryButton title="Sıfırla" onPress={function () {
+                        StudentStore.resetCloze(ders, konu);
+                        setSeed(seed + 1);
+                    }} style={{ marginTop: 16 }} />
+                ) : null}
             </ScrollScreen>
         );
     }
 
     if (done) {
+        var leftAfter = ClozeEngine.remainingCount(kd, StudentStore.solvedClozeIds(ders, konu));
         return (
             <ScrollScreen dark={isDark}>
                 <Pressable onPress={function () { navigation.goBack(); }}>
@@ -196,7 +206,13 @@ export function ClozePlayScreen({ route, navigation }) {
                 <Card style={[styles.result, isDark && styles.cardDark]}>
                     <Text style={[styles.pct, isDark && styles.textLight]}>{Math.round((score / list.length) * 100)}%</Text>
                     <Text style={[styles.meta, isDark && styles.textMuted]}>{score} doğru · {list.length - score} yanlış</Text>
-                    <PrimaryButton title="Tekrar oyna" onPress={function () { setSeed(seed + 1); }} style={{ marginTop: 16 }} />
+                    <Text style={[styles.meta, isDark && styles.textMuted, { marginTop: 8 }]}>
+                        {leftAfter ? (leftAfter + " boşluk kaldı") : "Doğru çözülenler bir daha gelmez. Konuyu sıfırlarsan tekrar gelir."}
+                    </Text>
+                    <PrimaryButton title={leftAfter ? "Devam et" : "Sıfırla"} onPress={function () {
+                        if (!leftAfter) StudentStore.resetCloze(ders, konu);
+                        setSeed(seed + 1);
+                    }} style={{ marginTop: 16 }} />
                 </Card>
             </ScrollScreen>
         );
@@ -242,7 +258,10 @@ export function ClozePlayScreen({ route, navigation }) {
                         <Pressable key={ci} disabled={!!picked} onPress={function () {
                             if (picked) return;
                             setPicked(c);
-                            if (String(c).toLocaleLowerCase("tr-TR") === String(it.answer).toLocaleLowerCase("tr-TR")) setScore(score + 1);
+                            if (String(c).toLocaleLowerCase("tr-TR") === String(it.answer).toLocaleLowerCase("tr-TR")) {
+                                setScore(score + 1);
+                                StudentStore.markClozeSolved(ders, konu, it.id);
+                            }
                         }} style={[styles.choice, { backgroundColor: isDark && !picked ? colors.navyDeep : bg, borderColor: border }]}>
                             <Text style={[styles.choiceText, isDark && !picked && styles.textLight]}>{c}</Text>
                         </Pressable>
