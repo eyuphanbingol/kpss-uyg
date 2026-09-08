@@ -1632,6 +1632,28 @@ function KonuHub(props) {
     );
 }
 
+function shapeNoteHtml(html) {
+    if (typeof document === "undefined") return html;
+    var root = document.createElement("div");
+    root.innerHTML = String(html || "");
+    Array.prototype.slice.call(root.children).forEach(function (el, i) {
+        if (i === 0 && el.querySelector && el.querySelector("span.inline-flex")) return;
+        var tag = el.tagName;
+        if (tag === "UL" || tag === "OL" || tag === "P" || tag === "TABLE") {
+            var pack = document.createElement("div");
+            pack.className = "note-pack";
+            el.parentNode.insertBefore(pack, el);
+            pack.appendChild(el);
+        }
+    });
+    root.querySelectorAll("li").forEach(function (li) { li.classList.add("note-chip"); });
+    root.querySelectorAll(".flex-wrap > span, [class*='flex-wrap'] > span").forEach(function (sp) {
+        if (sp.classList.contains("inline-flex")) return;
+        sp.classList.add("note-chip");
+    });
+    return root.innerHTML;
+}
+
 function NotesView(props) {
     const notlar = props.notlar || [];
     const idx = props.index;
@@ -1650,7 +1672,7 @@ function NotesView(props) {
                         </div>
                         <div className="note-progress">{idx + 1}/{notlar.length}</div>
                     </header>
-                    <div key={idx} className="study-card-body note-html text-[16px] leading-relaxed" dangerouslySetInnerHTML={{ __html: notlar[idx] }} />
+                    <div key={idx} className="study-card-body note-html text-[16px] leading-relaxed" dangerouslySetInnerHTML={{ __html: shapeNoteHtml(notlar[idx]) }} />
                     <footer className="study-card-foot">
                         <button disabled={idx === 0} onClick={function () { props.onIndex(idx - 1); }}
                             className={"back-btn " + (idx === 0 ? "opacity-30 pointer-events-none" : "")}>

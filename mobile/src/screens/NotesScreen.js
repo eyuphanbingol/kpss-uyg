@@ -7,15 +7,15 @@ import { PrimaryButton, ScrollScreen, Card } from "../ui";
 import { colors, DERS_ICON } from "../lib/theme";
 
 var NOTE_SKIN = "<style>"
-    + ".note-html{font-size:16px;line-height:1.65;color:#1c1917}"
-    + ".note-html .text-xs,.note-html .text-sm,.note-html .text-lg,.note-html .text-xl{font-size:16px!important;line-height:1.65!important}"
+    + ".note-html{display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:1.55;color:#1c1917}"
+    + ".note-html>div:first-child{background:none!important;border:0!important;padding:0!important}"
+    + ".note-html span.inline-flex{display:inline-flex!important;padding:6px 12px!important;border-radius:999px!important;background:linear-gradient(135deg,#041C24,#127880)!important;color:#F5EBC7!important;border:0!important;font-size:11px!important;font-weight:800!important}"
+    + ".note-pack,.note-html>div:not(:first-child){background:#f6f3ed!important;border:1px solid rgba(18,120,128,.16)!important;border-radius:16px!important;padding:14px!important}"
+    + ".note-html ul,.note-html ol{list-style:none!important;padding:0!important;display:flex;flex-wrap:wrap;gap:8px}"
+    + ".note-html li,.note-html .note-chip,.note-html .flex-wrap>span{background:#fff!important;border:1px solid #e7e5e4!important;border-radius:10px!important;padding:8px 12px!important}"
+    + ".note-html p{background:#fff!important;border:1px solid #e7e5e4!important;border-radius:12px!important;padding:12px 14px!important}"
+    + ".note-html .grid>div{background:#fff!important;border:1px solid #e7e5e4!important;border-radius:14px!important;padding:12px!important}"
     + ".note-html b,.note-html strong{color:#041C24;font-weight:800}"
-    + ".note-html span.inline-flex{display:inline-flex!important;max-width:100%;padding:6px 12px!important;border-radius:999px!important;background:linear-gradient(135deg,#041C24,#127880)!important;color:#F5EBC7!important;border:0!important;font-size:11px!important;font-weight:800!important;letter-spacing:.06em}"
-    + ".note-html [class*='rounded-xl'],.note-html [class*='rounded-lg'],.note-html [class*='rounded-2xl']{background:#f6f3ed!important;border:1px solid rgba(18,120,128,.14)!important}"
-    + ".note-html span.inline-flex[class*='rounded']{background:linear-gradient(135deg,#041C24,#127880)!important;color:#F5EBC7!important;border:0!important}"
-    + ".note-html table{width:100%;border-collapse:collapse;font-size:15px}"
-    + ".note-html th,.note-html td{padding:10px 12px;border-bottom:1px solid rgba(13,44,77,.08);text-align:left}"
-    + ".note-html thead tr{background:#eef6f6}"
     + "</style>";
 
 export default function NotesScreen({ route, navigation }) {
@@ -129,7 +129,7 @@ export default function NotesScreen({ route, navigation }) {
             <Card style={[styles.noteCard, isDark && styles.cardDark]}>
                 <RenderHTML 
                     contentWidth={width} 
-                    source={{ html: html }}
+                    source={{ html: NOTE_SKIN + "<div class=\"note-html\">" + html + "</div>" }}
                     baseStyle={styles.noteContent}
                     tagsStyles={styles.tags}
                 />
