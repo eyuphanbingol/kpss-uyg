@@ -361,6 +361,20 @@
             );
         }
 
+        if (!deck.length) {
+            return (
+                <div className="map-play-root tabu-root">
+                    <header className="map-play-top">
+                        <BackBtn onClick={props.onBack} label="Alıştırmalar" />
+                    </header>
+                    <div className="tabu-body">
+                        <p className="tabu-ask">Kartlar yüklenemedi.</p>
+                        <button type="button" className="btn-primary text-white px-5 py-2.5 rounded-full mt-6" onClick={props.onAgain}>Yeniden dene</button>
+                    </div>
+                </div>
+            );
+        }
+
         var pts = engine ? engine.tabuPoints(open) : 5;
         var ptsLabel = open <= 1 ? "Tek ipucu · 5 puan" : open === 2 ? "İki ipucu · 3 puan" : "Üç ipucu · 1 puan";
 

@@ -402,4 +402,5 @@
         PANIC: PANIC,
         TABU_SCORE: [5, 5, 3, 1]
     };
-})(typeof window !== "undefined" ? window : globalThis);
+})(typeof globalThis !== "undefined" ? globalThis : this);
+export var GamesBank = globalThis.GamesBank;

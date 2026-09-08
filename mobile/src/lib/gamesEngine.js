@@ -2,7 +2,7 @@ import { MapQuiz } from "./mapQuiz";
 import { GamesBank } from "./gamesBank";
 
 globalThis.MapQuiz = MapQuiz;
-globalThis.GamesBank = GamesBank;
+if (GamesBank) globalThis.GamesBank = GamesBank;
 
 (function (global) {
     function bank() {
@@ -452,7 +452,7 @@ globalThis.GamesBank = GamesBank;
         }).filter(function (card) { return (card.clues || []).length >= 2 && card.answer; });
         var fromNotes = [];
         try {
-            if (extra.length < n) fromNotes = tabuFromNotes(kpssData);
+            if (!extra.length) fromNotes = tabuFromNotes(kpssData);
         } catch (e) { fromNotes = []; }
         var pool = extra.concat(fromNotes);
         if (!pool.length) return [];
