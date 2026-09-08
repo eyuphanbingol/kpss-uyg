@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { ImageBackground, Pressable, Text, View, StyleSheet, Dimensions } from "react-native";
+import { ImageBackground, Pressable, Text, View, StyleSheet, useWindowDimensions } from "react-native";
 import { useApp } from "../AppProvider";
 import { ClozeEngine } from "../lib/clozeEngine";
 import { MapQuiz } from "../lib/mapQuiz";
@@ -8,6 +8,7 @@ import { go } from "../nav";
 import { Card, PrimaryButton, ScrollScreen, BackChip, Screen } from "../ui";
 import { colors, DERS_ICON } from "../lib/theme";
 import { TrMapView } from "../components/TrMapView";
+import { useLandscapeLock } from "../lib/useLandscapeLock";
 
 var MAP_CARD_IMG = {
     volkan: require("../../assets/volkan-hover.png"),
@@ -335,6 +336,8 @@ export function MapPlayScreen({ route, navigation }) {
     var topicId = route.params.topicId;
     var app = useApp();
     var isDark = app.dark;
+    var win = useWindowDimensions();
+    useLandscapeLock();
     var meta = MapQuiz.topicMeta(topicId);
     var _seed = useState(0);
     var seed = _seed[0];
@@ -398,7 +401,8 @@ export function MapPlayScreen({ route, navigation }) {
     }
     var clearedMap = {};
     cleared.forEach(function (id) { clearedMap[id] = true; });
-    var mapH = Math.max(220, Math.round(Dimensions.get("window").height * 0.38));
+    var landscape = win.width > win.height;
+    var mapH = Math.max(180, Math.round(win.height - (landscape ? 108 : 210)));
     var labels = [];
     if (isMap && picked && step.item) {
         var hitPin = (layer.pins || []).filter(function (p) { return p.id === picked; })[0];
@@ -413,11 +417,16 @@ export function MapPlayScreen({ route, navigation }) {
     return (
         isMap ? (
         <Screen dark={isDark}>
-            <View style={{ paddingHorizontal: 20, paddingTop: 8, flex: 1 }}>
-            <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} />
-            <Text style={[styles.kicker, isDark && styles.textMuted]}>{meta ? meta.title : "Harita"} · {idx + 1}/{list.length}</Text>
-            <Text style={[styles.konuTitle, isDark && styles.textLight]}>Haritada bul</Text>
-            <Text style={[styles.prompt, isDark && styles.textLight]}>{step.prompt}</Text>
+            <View style={{ paddingHorizontal: 12, paddingTop: 4, flex: 1 }}>
+            <View style={{ flexDirection: "row", alignItems: "center", gap: 8, marginBottom: 4 }}>
+                <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} />
+                <Text style={[styles.kicker, { flex: 1, marginBottom: 0 }, isDark && styles.textMuted]} numberOfLines={1}>
+                    {meta ? meta.title : "Harita"} · {idx + 1}/{list.length}
+                </Text>
+            </View>
+            <Text style={[styles.prompt, { marginBottom: 6, fontSize: landscape ? 14 : 16, lineHeight: landscape ? 20 : 24 }, isDark && styles.textLight]} numberOfLines={landscape ? 2 : 4}>
+                {step.prompt}
+            </Text>
             <TrMapView
                 mode="play"
                 height={mapH}
@@ -435,12 +444,13 @@ export function MapPlayScreen({ route, navigation }) {
                     setTimeout(advance, 5500);
                 }}
             />
-            <Text style={[styles.mapHint, isDark && styles.textMuted]}>Türkiye haritası · işarete bas</Text>
             {picked ? (
-                <Text style={{ marginTop: 10, fontWeight: "700", color: ok ? "#059669" : "#E11D48" }}>
+                <Text style={{ marginTop: 6, fontWeight: "700", color: ok ? "#059669" : "#E11D48" }} numberOfLines={1}>
                     {ok ? "Doğru — " + step.item.name : ("Doğrusu: " + step.item.name)}
                 </Text>
-            ) : null}
+            ) : (
+                <Text style={[styles.mapHint, isDark && styles.textMuted]}>İşarete bas</Text>
+            )}
             </View>
         </Screen>
         ) : (

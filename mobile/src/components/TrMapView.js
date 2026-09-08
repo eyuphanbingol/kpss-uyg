@@ -62,7 +62,7 @@ export function TrMapView(props) {
         if (data.type === "province" && props.onProvince && !props.locked) props.onProvince(data.id);
     }
 
-    var boxStyle = [styles.box, { height: props.height || 220 }, props.style];
+    var boxStyle = [styles.box, props.height ? { height: props.height } : { flex: 1 }, props.style];
 
     if (fail) {
         return (
@@ -101,14 +101,14 @@ export function TrMapView(props) {
 var styles = StyleSheet.create({
     box: {
         width: "100%",
-        backgroundColor: "#d7e5db",
+        backgroundColor: "#8fa89a",
         borderRadius: 16,
         overflow: "hidden",
         marginTop: 4
     },
     web: {
         flex: 1,
-        backgroundColor: "#d7e5db"
+        backgroundColor: "#8fa89a"
     },
     fail: {
         alignItems: "center",

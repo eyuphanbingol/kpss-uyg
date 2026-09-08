@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Alert, Dimensions, Pressable, Text, View, StyleSheet } from "react-native";
+import { Alert, Pressable, Text, View, StyleSheet, useWindowDimensions } from "react-native";
 import { useApp } from "../AppProvider";
 import { GamesEngine } from "../lib/gamesEngine";
 import { MapQuiz } from "../lib/mapQuiz";
@@ -7,10 +7,13 @@ import { StudentStore } from "../lib/store";
 import { Card, PrimaryButton, ScrollScreen, BackChip } from "../ui";
 import { colors } from "../lib/theme";
 import { TrMapView } from "../components/TrMapView";
+import { useLandscapeLock } from "../lib/useLandscapeLock";
 
 export function ConquerPlayScreen({ navigation }) {
     var app = useApp();
     var isDark = app.dark;
+    var win = useWindowDimensions();
+    useLandscapeLock();
     var games = (app.student && app.student.games) || {};
     var owned = games.conquer || {};
     var [quiz, setQuiz] = useState(null);
@@ -45,7 +48,7 @@ export function ConquerPlayScreen({ navigation }) {
 
     if (quiz) {
         var qNow = quiz.items[quiz.i];
-        var mapH = Math.max(180, Math.round(Dimensions.get("window").height * 0.28));
+        var mapH = Math.max(160, Math.round(win.height * 0.42));
         return (
             <ScrollScreen dark={isDark}>
                 <BackChip dark={isDark} label="Harita" onPress={function () { setQuiz(null); }} />
@@ -95,7 +98,7 @@ export function ConquerPlayScreen({ navigation }) {
             <Text style={[styles.meta, isDark && styles.muted]}>{nOwn}/{codes.length} il boyandı · bölge bitince rozet</Text>
             <TrMapView
                 mode="conquer"
-                height={Math.max(220, Math.round(Dimensions.get("window").height * 0.34))}
+                height={Math.max(200, Math.round(win.height - 150))}
                 owned={owned}
                 pick={null}
                 color="#127880"
