@@ -8,6 +8,7 @@ export function TrMapView(props) {
     var mode = props.mode || "play";
     var [html, setHtml] = useState("");
     var [fail, setFail] = useState(false);
+    var [box, setBox] = useState({ w: 0, h: 0 });
     var ready = useRef(false);
     var webRef = useRef(null);
 
@@ -62,7 +63,11 @@ export function TrMapView(props) {
         if (data.type === "province" && props.onProvince && !props.locked) props.onProvince(data.id);
     }
 
-    var boxStyle = [styles.box, props.height ? { height: props.height } : { flex: 1 }, props.style];
+    var boxStyle = [
+        styles.box,
+        props.height ? { height: props.height } : { flex: 1 },
+        props.style
+    ];
 
     if (fail) {
         return (
@@ -79,25 +84,38 @@ export function TrMapView(props) {
         );
     }
 
+    var sized = box.w > 8 && box.h > 8;
+
     return (
-        <View style={boxStyle}>
-            <WebView
-                ref={webRef}
-                originWhitelist={["*"]}
-                source={{ html: html, baseUrl: "https://www.atanly.com/" }}
-                onMessage={onMessage}
-                style={styles.web}
-                scrollEnabled={false}
-                nestedScrollEnabled={false}
-                scalesPageToFit={false}
-                bounces={false}
-                overScrollMode="never"
-                showsHorizontalScrollIndicator={false}
-                showsVerticalScrollIndicator={false}
-                javaScriptEnabled={true}
-                setSupportMultipleWindows={false}
-                androidLayerType="hardware"
-            />
+        <View
+            style={boxStyle}
+            onLayout={function (e) {
+                var n = e.nativeEvent.layout;
+                if (Math.abs(n.width - box.w) < 1 && Math.abs(n.height - box.h) < 1) return;
+                setBox({ w: Math.round(n.width), h: Math.round(n.height) });
+            }}
+        >
+            {sized ? (
+                <WebView
+                    ref={webRef}
+                    originWhitelist={["*"]}
+                    source={{ html: html, baseUrl: "https://www.atanly.com/" }}
+                    onMessage={onMessage}
+                    style={{ width: box.w, height: box.h, backgroundColor: "#8fa89a" }}
+                    scrollEnabled={false}
+                    nestedScrollEnabled={false}
+                    automaticallyAdjustContentInsets={false}
+                    contentInsetAdjustmentBehavior="never"
+                    scalesPageToFit={false}
+                    bounces={false}
+                    overScrollMode="never"
+                    showsHorizontalScrollIndicator={false}
+                    showsVerticalScrollIndicator={false}
+                    javaScriptEnabled={true}
+                    setSupportMultipleWindows={false}
+                    androidLayerType="hardware"
+                />
+            ) : null}
         </View>
     );
 }
@@ -105,14 +123,13 @@ export function TrMapView(props) {
 var styles = StyleSheet.create({
     box: {
         width: "100%",
+        maxWidth: "100%",
+        minWidth: 0,
+        minHeight: 0,
         backgroundColor: "#8fa89a",
         borderRadius: 16,
         overflow: "hidden",
         marginTop: 4
-    },
-    web: {
-        flex: 1,
-        backgroundColor: "#8fa89a"
     },
     fail: {
         alignItems: "center",

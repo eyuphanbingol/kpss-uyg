@@ -1,10 +1,11 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Alert, Text, View, StyleSheet, useWindowDimensions } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
 import { useApp } from "../AppProvider";
 import { GamesEngine } from "../lib/gamesEngine";
 import { MapQuiz } from "../lib/mapQuiz";
 import { StudentStore } from "../lib/store";
-import { Card, PrimaryButton, ScrollScreen, BackChip, Tap } from "../ui";
+import { Card, PrimaryButton, ScrollScreen, BackChip, Tap, Screen } from "../ui";
 import { colors } from "../lib/theme";
 import { TrMapView } from "../components/TrMapView";
 import { useLandscapeLock } from "../lib/useLandscapeLock";
@@ -48,95 +49,98 @@ export function ConquerPlayScreen({ navigation }) {
 
     if (quiz) {
         var qNow = quiz.items[quiz.i];
-        var mapH = Math.max(160, Math.round(win.height * 0.42));
+        var landscape = win.width > win.height;
         return (
-            <ScrollScreen dark={isDark}>
-                <BackChip dark={isDark} label="Harita" onPress={function () { setQuiz(null); }} />
-                <Text style={[styles.kicker, isDark && styles.muted]}>{GamesEngine.regionTitle(quiz.code)}</Text>
-                <Text style={[styles.title, isDark && styles.light]}>{GamesEngine.nameOf(quiz.code)}</Text>
-                <TrMapView
-                    mode="conquer"
-                    height={mapH}
-                    owned={owned}
-                    pick={quiz.code}
-                    locked={true}
-                    color="#127880"
-                />
-                <Text style={[styles.meta, isDark && styles.muted]}>Soru {quiz.i + 1} / {quiz.items.length} · hepsini art arda bil</Text>
-                <View style={{ height: 8, borderRadius: 99, backgroundColor: isDark ? "#292524" : "#E7E5E4", overflow: "hidden", marginTop: 10, marginBottom: 16 }}>
-                    <View style={{ height: 8, width: (quiz.items.length ? Math.round(((quiz.i + (quiz.ok ? 1 : 0)) / quiz.items.length) * 100) : 0) + "%", backgroundColor: "#127880", borderRadius: 99 }} />
+            <Screen dark={isDark} style={{ overflow: "hidden" }} edges={["top", "right", "bottom", "left"]}>
+                <View style={{ flex: 1, minHeight: 0, minWidth: 0, paddingHorizontal: 12, paddingTop: 4, overflow: "hidden", flexDirection: landscape ? "row" : "column", gap: 10 }}>
+                    <View style={{ flex: landscape ? 0.46 : 0.36, minHeight: 0, minWidth: 0, overflow: "hidden" }}>
+                        <BackChip dark={isDark} label="Harita" onPress={function () { setQuiz(null); }} />
+                        <Text style={[styles.kicker, isDark && styles.muted]} numberOfLines={1}>{GamesEngine.regionTitle(quiz.code)}</Text>
+                        <Text style={[styles.title, { fontSize: landscape ? 18 : 24, marginBottom: 4 }, isDark && styles.light]} numberOfLines={1}>{GamesEngine.nameOf(quiz.code)}</Text>
+                        <View style={{ flex: 1, minHeight: 0, minWidth: 0, overflow: "hidden" }}>
+                            <TrMapView mode="conquer" owned={owned} pick={quiz.code} locked={true} color="#127880" />
+                        </View>
+                    </View>
+                    <ScrollView style={{ flex: 1, minHeight: 0, minWidth: 0 }} contentContainerStyle={{ paddingBottom: 16 }} keyboardShouldPersistTaps="always" delaysContentTouches={false}>
+                        <Text style={[styles.meta, isDark && styles.muted]}>Soru {quiz.i + 1} / {quiz.items.length} · hepsini art arda bil</Text>
+                        <View style={{ height: 8, borderRadius: 99, backgroundColor: isDark ? "#292524" : "#E7E5E4", overflow: "hidden", marginTop: 10, marginBottom: 16 }}>
+                            <View style={{ height: 8, width: (quiz.items.length ? Math.round(((quiz.i + (quiz.ok ? 1 : 0)) / quiz.items.length) * 100) : 0) + "%", backgroundColor: "#127880", borderRadius: 99 }} />
+                        </View>
+                        {quiz.fail ? (
+                            <Card style={isDark && styles.cardDark}>
+                                <Text style={styles.bad}>İl alınamadı</Text>
+                                <Text style={[styles.meta, { marginTop: 8 }]}>Yanlışta fetih sıfırlanır. Baştan dene.</Text>
+                                <PrimaryButton title="Tekrar dene" onPress={function () { start(quiz.code); }} style={{ marginTop: 12 }} />
+                            </Card>
+                        ) : qNow ? (
+                            <Card style={isDark && styles.cardDark}>
+                                <Text style={[styles.prompt, isDark && styles.light]}>{qNow.question}</Text>
+                                {(qNow.options || []).map(function (opt, i) {
+                                    var marked = quiz.picked && (String(opt) === String(qNow.correct) ? styles.ok : (quiz.picked === opt ? styles.no : null));
+                                    return (
+                                        <Tap key={i} disabled={!!quiz.picked} onPress={function () { answer(opt); }}
+                                            style={[styles.choice, isDark && styles.cardDark, marked]}>
+                                            <Text style={[styles.choiceText, isDark && styles.light]}>{opt}</Text>
+                                        </Tap>
+                                    );
+                                })}
+                                {quiz.picked ? <PrimaryButton title={quiz.ok ? "Devam" : "Sonuç"} onPress={next} style={{ marginTop: 14 }} /> : null}
+                            </Card>
+                        ) : null}
+                    </ScrollView>
                 </View>
-                {quiz.fail ? (
-                    <Card style={isDark && styles.cardDark}>
-                        <Text style={styles.bad}>İl alınamadı</Text>
-                        <Text style={[styles.meta, { marginTop: 8 }]}>Yanlışta fetih sıfırlanır. Baştan dene.</Text>
-                        <PrimaryButton title="Tekrar dene" onPress={function () { start(quiz.code); }} style={{ marginTop: 12 }} />
-                    </Card>
-                ) : qNow ? (
-                    <Card style={isDark && styles.cardDark}>
-                        <Text style={[styles.prompt, isDark && styles.light]}>{qNow.question}</Text>
-                        {(qNow.options || []).map(function (opt, i) {
-                            var marked = quiz.picked && (String(opt) === String(qNow.correct) ? styles.ok : (quiz.picked === opt ? styles.no : null));
-                            return (
-                                <Tap key={i} disabled={!!quiz.picked} onPress={function () { answer(opt); }}
-                                    style={[styles.choice, isDark && styles.cardDark, marked]}>
-                                    <Text style={[styles.choiceText, isDark && styles.light]}>{opt}</Text>
-                                </Tap>
-                            );
-                        })}
-                        {quiz.picked ? <PrimaryButton title={quiz.ok ? "Devam" : "Sonuç"} onPress={next} style={{ marginTop: 14 }} /> : null}
-                    </Card>
-                ) : null}
-            </ScrollScreen>
+            </Screen>
         );
     }
 
+    var landscapeHome = win.width > win.height;
     return (
-        <ScrollScreen dark={isDark}>
-            <BackChip dark={isDark} label="Alıştırmalar" onPress={function () { navigation.goBack(); }} />
-            <Text style={[styles.title, isDark && styles.light]}>Türkiye'yi Fethet</Text>
-            <Text style={[styles.meta, isDark && styles.muted]}>{nOwn}/{codes.length} il boyandı · bölge bitince rozet</Text>
-            <TrMapView
-                mode="conquer"
-                height={Math.max(200, Math.round(win.height - 150))}
-                owned={owned}
-                pick={null}
-                color="#127880"
-                onProvince={function (code) { start(code); }}
-            />
-            <Text style={[styles.meta, isDark && styles.muted, { marginTop: 8 }]}>Haritada ile bas. Fethedilen iller teal boyanır.</Text>
-            <View style={{ height: 8, borderRadius: 99, backgroundColor: isDark ? "#292524" : "#E7E5E4", overflow: "hidden", marginTop: 10 }}>
-                <View style={{ height: 8, width: (codes.length ? Math.round((nOwn / codes.length) * 100) : 0) + "%", backgroundColor: "#127880", borderRadius: 99 }} />
-            </View>
-            {nOwn > 0 ? (
-                <Tap
-                    onPress={function () {
-                        Alert.alert("Haritayı sıfırla", "Boyanan iller ve bölge rozetleri silinsin mi?", [
-                            { text: "Vazgeç", style: "cancel" },
-                            { text: "Sıfırla", style: "destructive", onPress: function () { StudentStore.resetConquer(); } }
-                        ]);
-                    }}
-                    style={{ alignSelf: "flex-start", marginTop: 10, backgroundColor: "#FFF1F2", borderRadius: 999, paddingVertical: 8, paddingHorizontal: 14 }}
-                >
-                    <Text style={{ color: "#9F1239", fontWeight: "800" }}>Sıfırla</Text>
-                </Tap>
-            ) : null}
-            {regions.map(function (r) {
-                return (
-                    <View key={r.id} style={{ marginTop: 12 }}>
-                        <Text style={[styles.kicker, isDark && styles.muted]}>{r.done ? "🏅 " : ""}{r.title} {r.have}/{r.total}</Text>
-                        {codes.filter(function (c) { return MapQuiz.PROVINCE_REGION[c] === r.id; }).map(function (code) {
-                            var mine = !!owned[code];
+        <Screen dark={isDark} style={{ overflow: "hidden" }} edges={["top", "right", "bottom", "left"]}>
+            <View style={{ flex: 1, minHeight: 0, minWidth: 0, paddingHorizontal: 12, paddingTop: 4, overflow: "hidden" }}>
+                <View style={{ flexDirection: "row", alignItems: "center", gap: 8, flexShrink: 0 }}>
+                    <BackChip dark={isDark} label="Alıştırmalar" onPress={function () { navigation.goBack(); }} />
+                    <Text style={[styles.title, { flex: 1, fontSize: landscapeHome ? 18 : 24, marginBottom: 0 }, isDark && styles.light]} numberOfLines={1}>Türkiye'yi Fethet</Text>
+                </View>
+                <Text style={[styles.meta, isDark && styles.muted]} numberOfLines={1}>{nOwn}/{codes.length} il boyandı · bölge bitince rozet</Text>
+                <View style={{ flex: 1, minHeight: 0, minWidth: 0, overflow: "hidden", marginTop: 4 }}>
+                    <TrMapView
+                        mode="conquer"
+                        owned={owned}
+                        pick={null}
+                        color="#127880"
+                        onProvince={function (code) { start(code); }}
+                    />
+                </View>
+                <Text style={[styles.meta, isDark && styles.muted, { marginTop: 6 }]} numberOfLines={1}>Haritada ile bas. Fethedilen iller teal boyanır.</Text>
+                <View style={{ height: 8, borderRadius: 99, backgroundColor: isDark ? "#292524" : "#E7E5E4", overflow: "hidden", marginTop: 8, flexShrink: 0 }}>
+                    <View style={{ height: 8, width: (codes.length ? Math.round((nOwn / codes.length) * 100) : 0) + "%", backgroundColor: "#127880", borderRadius: 99 }} />
+                </View>
+                <View style={{ flexDirection: "row", alignItems: "center", marginTop: 8, flexShrink: 0 }}>
+                    <ScrollView horizontal showsHorizontalScrollIndicator={false} delaysContentTouches={false} contentContainerStyle={{ gap: 6, paddingRight: 8 }} style={{ flex: 1 }}>
+                        {regions.map(function (r) {
                             return (
-                                <Card key={code} dark={isDark} onPress={function () { start(code); }} style={[styles.rowCard, mine && { backgroundColor: "#ECFDF5" }]}>
-                                    <Text style={[styles.choiceText, isDark && styles.light]}>{mine ? "✓ " : ""}{GamesEngine.nameOf(code)}</Text>
-                                </Card>
+                                <View key={r.id} style={{ backgroundColor: r.done ? "#D1FAE5" : (isDark ? "#292524" : "#EEF2EF"), borderRadius: 999, paddingVertical: 5, paddingHorizontal: 10 }}>
+                                    <Text style={{ fontSize: 10, fontWeight: "700", color: r.done ? "#047857" : colors.muted }}>{r.done ? "🏅 " : ""}{r.title} {r.have}/{r.total}</Text>
+                                </View>
                             );
                         })}
-                    </View>
-                );
-            })}
-        </ScrollScreen>
+                    </ScrollView>
+                    {nOwn > 0 ? (
+                        <Tap
+                            onPress={function () {
+                                Alert.alert("Haritayı sıfırla", "Boyanan iller ve bölge rozetleri silinsin mi?", [
+                                    { text: "Vazgeç", style: "cancel" },
+                                    { text: "Sıfırla", style: "destructive", onPress: function () { StudentStore.resetConquer(); } }
+                                ]);
+                            }}
+                            style={{ marginLeft: 8, backgroundColor: "#FFF1F2", borderRadius: 999, paddingVertical: 8, paddingHorizontal: 14 }}
+                        >
+                            <Text style={{ color: "#9F1239", fontWeight: "800" }}>Sıfırla</Text>
+                        </Tap>
+                    ) : null}
+                </View>
+            </View>
+        </Screen>
     );
 }
 

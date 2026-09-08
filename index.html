@@ -1305,6 +1305,12 @@
             background: #e8f0ea;
             overflow: hidden;
             max-width: 100%;
+            max-height: 100%;
+            width: 100%;
+            min-height: 0;
+            contain: layout paint;
+            padding-left: env(safe-area-inset-left);
+            padding-right: env(safe-area-inset-right);
         }
         html.dark .map-play-root { background: #15201b; }
         .map-play-top {
@@ -1353,6 +1359,11 @@
         .map-play-canvas {
             width: 100%;
             height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            min-width: 0;
+            min-height: 0;
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1419,15 +1430,16 @@
         }
         html.dark .map-play-foot { background: rgba(26,28,27,.96); }
         .tr-map-scroll {
-            margin: 0 -8px;
-            overflow: auto;
-            -webkit-overflow-scrolling: touch;
+            margin: 0;
+            overflow: hidden;
             max-height: min(68vh, 560px);
             border-radius: 16px;
+            max-width: 100%;
         }
         .tr-map-wrap {
             width: 100%;
-            overflow: visible;
+            max-width: 100%;
+            overflow: hidden;
             border-radius: 16px;
             background: #eef4ef;
             touch-action: manipulation;
@@ -1441,8 +1453,8 @@
         .map-play-canvas svg {
             min-width: 0;
             min-height: 0;
-            width: 100%;
-            height: 100%;
+            width: 100% !important;
+            height: 100% !important;
             max-width: 100%;
             max-height: 100%;
         }
@@ -2058,6 +2070,18 @@
             .panic-q { font-size: 15px; }
             .map-zoom-tools { right: 8px; bottom: 8px; }
             .game-end { padding: 28px 16px 20px; }
+        }
+        @media (orientation: landscape) and (max-height: 560px) {
+            .map-play-root {
+                bottom: 0;
+                padding-left: max(10px, env(safe-area-inset-left));
+                padding-right: max(10px, env(safe-area-inset-right));
+            }
+            .map-play-kicker, .conquer-regions { display: none; }
+            .map-play-prompt { font-size: 14px; max-height: 2.4em; }
+            .map-play-top { padding: 6px 10px; padding-top: max(6px, env(safe-area-inset-top)); }
+            .map-play-foot { max-height: 34vh; padding: 6px 10px; padding-bottom: max(8px, env(safe-area-inset-bottom)); }
+            .conquer-mapstat-title { font-size: 14px; }
         }
         @media (min-width: 768px) {
             .map-play-root {

@@ -39,9 +39,9 @@ function prepSvg(raw) {
 }
 
 var CSS = [
-    "html,body{margin:0;padding:0;background:#8fa89a;height:100%;overflow:hidden;touch-action:manipulation;-webkit-user-select:none;user-select:none;}",
-    ".wrap{width:100%;height:100%;background:#8fa89a;}",
-    "svg{width:100%;height:100%;display:block;}",
+    "html,body{margin:0;padding:0;background:#8fa89a;width:100%;height:100%;max-width:100%;max-height:100%;overflow:hidden;touch-action:none;-webkit-user-select:none;user-select:none;}",
+    ".wrap{width:100%;height:100%;max-width:100%;max-height:100%;overflow:hidden;background:#8fa89a;}",
+    "svg{width:100%;height:100%;max-width:100%;max-height:100%;display:block;}",
     "path{fill:#eef6f1!important;stroke:#1f3d32!important;stroke-width:1.35!important;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none;}",
     ".mode-conquer path{fill:#dce8e1!important;pointer-events:auto;cursor:pointer;}",
     ".mode-conquer path.conquer-owned{fill:var(--c,#127880)!important;stroke:#0b3d42!important;}",
@@ -60,7 +60,7 @@ var CSS = [
 export function mapDocument(svgText, mode) {
     var svg = prepSvg(svgText);
     return "<!DOCTYPE html><html><head><meta charset=\"utf-8\"/>"
-        + "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1,user-scalable=yes\"/>"
+        + "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no\"/>"
         + "<style>" + CSS + "</style></head>"
         + "<body><div class=\"wrap mode-" + (mode === "conquer" ? "conquer" : "play") + "\" id=\"wrap\">"
         + svg + "</div><script>"

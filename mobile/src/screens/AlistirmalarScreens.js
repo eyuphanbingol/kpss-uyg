@@ -401,18 +401,18 @@ export function MapPlayScreen({ route, navigation }) {
 
     return (
         isMap ? (
-        <Screen dark={isDark}>
-            <View style={{ paddingHorizontal: 12, paddingTop: 4, flex: 1, minHeight: 0 }}>
-            <View style={{ flexDirection: "row", alignItems: "center", gap: 8, marginBottom: 4 }}>
+        <Screen dark={isDark} style={{ overflow: "hidden" }} edges={["top", "right", "bottom", "left"]}>
+            <View style={{ paddingHorizontal: 12, paddingTop: 4, flex: 1, minHeight: 0, minWidth: 0, overflow: "hidden" }}>
+            <View style={{ flexDirection: "row", alignItems: "center", gap: 8, marginBottom: 4, flexShrink: 0 }}>
                 <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} />
                 <Text style={[styles.kicker, { flex: 1, marginBottom: 0, minWidth: 0 }, isDark && styles.textMuted]} numberOfLines={1}>
                     {meta ? meta.title : "Harita"} · {idx + 1}/{list.length}
                 </Text>
             </View>
-            <Text style={[styles.prompt, { marginBottom: 6, fontSize: landscape ? 14 : 16, lineHeight: landscape ? 20 : 24 }, isDark && styles.textLight]} numberOfLines={landscape ? 2 : 4}>
+            <Text style={[styles.prompt, { marginBottom: 6, fontSize: landscape ? 13 : 16, lineHeight: landscape ? 18 : 24, flexShrink: 0 }, isDark && styles.textLight]} numberOfLines={landscape ? 2 : 4}>
                 {step.prompt}
             </Text>
-            <View style={{ flex: 1, minHeight: 0 }}>
+            <View style={{ flex: 1, minHeight: 0, minWidth: 0, overflow: "hidden" }}>
             <TrMapView
                 mode="play"
                 pins={layer.pins || []}
