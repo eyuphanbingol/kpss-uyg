@@ -67,6 +67,10 @@ window.getKpssData = function () {
                 notlar: window.tarih_16_notlari || [],
                 sorular: window.tarih_16_sorulari || []
             },
+            "Atatürk'ün Hayatı":{
+                notlar: window.tarih_17_notlari || [],
+                sorular: window.tarih_17_sorulari || []
+            },
         },
         "Coğrafya": {
             "Türkiye'nin Coğrafi Konumu": {
