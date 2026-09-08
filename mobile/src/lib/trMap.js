@@ -39,7 +39,7 @@ function prepSvg(raw) {
 }
 
 var CSS = [
-    "html,body{margin:0;padding:0;background:#8fa89a;height:100%;overflow:hidden;}",
+    "html,body{margin:0;padding:0;background:#8fa89a;height:100%;overflow:hidden;touch-action:manipulation;-webkit-user-select:none;user-select:none;}",
     ".wrap{width:100%;height:100%;background:#8fa89a;}",
     "svg{width:100%;height:100%;display:block;}",
     "path{fill:#eef6f1!important;stroke:#1f3d32!important;stroke-width:1.35!important;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none;}",

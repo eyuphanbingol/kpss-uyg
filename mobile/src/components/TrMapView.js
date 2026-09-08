@@ -87,9 +87,13 @@ export function TrMapView(props) {
                 source={{ html: html, baseUrl: "https://www.atanly.com/" }}
                 onMessage={onMessage}
                 style={styles.web}
-                scrollEnabled={true}
-                nestedScrollEnabled={true}
-                scalesPageToFit={true}
+                scrollEnabled={false}
+                nestedScrollEnabled={false}
+                scalesPageToFit={false}
+                bounces={false}
+                overScrollMode="never"
+                showsHorizontalScrollIndicator={false}
+                showsVerticalScrollIndicator={false}
                 javaScriptEnabled={true}
                 setSupportMultipleWindows={false}
                 androidLayerType="hardware"

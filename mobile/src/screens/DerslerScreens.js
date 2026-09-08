@@ -45,7 +45,7 @@ export function DersHomeScreen({ navigation }) {
     var mods = (KpssConfig.modules || []).filter(function (m) { return ids.indexOf(m.id) >= 0 && m.id !== "gygk"; });
 
     return (
-        <ScrollScreen dark={isDark}>
+        <ScrollScreen dark={isDark} noBottom>
             {/* Header */}
             <View style={styles.header}>
                 <View>
@@ -64,6 +64,7 @@ export function DersHomeScreen({ navigation }) {
                 return (
                     <Pressable 
                         key={ders} 
+                        unstable_pressDelay={0}
                         onPress={function () { go(navigation, "KonuList", { ders: ders }); }}
                     >
                         <Card style={[styles.dersCard, isDark && styles.cardDark]}>
@@ -148,6 +149,7 @@ export function KonuListScreen({ route, navigation }) {
                     <Pressable 
                         key={konu} 
                         disabled={!open} 
+                        unstable_pressDelay={0}
                         onPress={function () { 
                             if (open) go(navigation, "KonuHub", { ders: ders, konu: konu }); 
                         }}
@@ -366,6 +368,7 @@ var styles = StyleSheet.create({
     },
     dersInfo: {
         flex: 1,
+        minWidth: 0,
     },
     dersName: {
         fontWeight: "700",
@@ -458,6 +461,7 @@ var styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         flex: 1,
+        minWidth: 0,
         paddingRight: 8,
     },
     konuStatus: {
@@ -484,6 +488,8 @@ var styles = StyleSheet.create({
         fontWeight: "600",
         fontSize: 14,
         color: colors.text,
+        flexShrink: 1,
+    },
     },
     konuMeta: {
         color: colors.muted,

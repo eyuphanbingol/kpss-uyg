@@ -28,7 +28,7 @@ function NoteImage({ tnode, contentWidth }) {
 }
 
 var NOTE_SKIN = "<style>"
-    + ".note-html{display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:1.55;color:#1c1917}"
+    + ".note-html{display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:1.55;color:#1c1917;overflow:hidden;max-width:100%}"
     + ".note-html>div:first-child{background:none!important;border:0!important;padding:0!important}"
     + ".note-html span.inline-flex{display:inline-flex!important;padding:6px 12px!important;border-radius:999px!important;background:linear-gradient(135deg,#041C24,#127880)!important;color:#F5EBC7!important;border:0!important;font-size:11px!important;font-weight:800!important}"
     + ".note-pack,.note-html>div:not(:first-child){background:#f6f3ed!important;border:1px solid rgba(18,120,128,.16)!important;border-radius:16px!important;padding:14px!important}"
@@ -164,6 +164,7 @@ export default function NotesScreen({ route, navigation }) {
                 <Pressable 
                     disabled={idx === 0} 
                     onPress={function () { setIdx(idx - 1); }}
+                    unstable_pressDelay={0}
                     style={[styles.navBtn, idx === 0 && styles.navBtnDisabled]}
                 >
                     <Text style={[styles.navBtnText, isDark && styles.textMuted]}>
@@ -285,6 +286,7 @@ var styles = StyleSheet.create({
         padding: 16,
         minHeight: 200,
         marginBottom: 12,
+        overflow: "hidden",
     },
     noteContent: {
         fontSize: 16,

@@ -4,6 +4,7 @@ import { StatusBar } from "expo-status-bar";
 import { SafeAreaProvider, initialWindowMetrics } from "react-native-safe-area-context";
 import * as NativeSplash from "expo-splash-screen";
 import { Platform, View, StyleSheet, LogBox } from "react-native";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import * as NavigationBar from "expo-navigation-bar";
 import * as SystemUI from "expo-system-ui";
 import { AppProvider } from "./src/AppProvider";
@@ -77,6 +78,7 @@ export default function App() {
     // ============================================================
 
     return (
+        <GestureHandlerRootView style={{ flex: 1 }}>
         <SafeAreaProvider initialMetrics={initialWindowMetrics}>
             <AppProvider>
                 {/* Ana Uygulama */}
@@ -92,6 +94,7 @@ export default function App() {
                 />
             </AppProvider>
         </SafeAreaProvider>
+        </GestureHandlerRootView>
     );
 }
 

@@ -36,21 +36,23 @@ export function getColor(dark, lightColor, darkColor) {
 // ============================================================
 
 export function Screen(props) {
-    var insets = useSafeAreaInsets();
     var isDark = props.dark === true;
+    var edges = props.edges;
+    if (!edges) {
+        if (props.noTop && props.noBottom) edges = [];
+        else if (props.noTop) edges = ["bottom"];
+        else if (props.noBottom) edges = ["top"];
+        else edges = ["top", "bottom"];
+    }
 
     return (
         <SafeAreaView
             style={[
                 styles.safe,
                 isDark && styles.safeDark,
-                {
-                    paddingTop: props.noTop ? 0 : insets.top,
-                    paddingBottom: props.noBottom ? 0 : insets.bottom,
-                },
                 props.style,
             ]}
-            edges={props.edges || ["top"]}
+            edges={edges}
         >
             {props.children}
         </SafeAreaView>
@@ -65,16 +67,21 @@ export function ScrollScreen(props) {
     var isDark = props.dark === true;
 
     return (
-        <Screen dark={isDark} noTop={props.noTop}>
+        <Screen dark={isDark} noTop={props.noTop} noBottom={props.noBottom}>
             <ScrollView
+                style={{ flex: 1 }}
                 contentContainerStyle={[
                     styles.pad,
                     isDark && styles.padDark,
                     props.contentStyle,
                 ]}
-                keyboardShouldPersistTaps="handled"
+                keyboardShouldPersistTaps="always"
+                delaysContentTouches={false}
+                canCancelContentTouches={true}
+                nestedScrollEnabled={false}
+                overScrollMode="never"
+                bounces={false}
                 showsVerticalScrollIndicator={false}
-                bounces={true}
             >
                 {props.children}
             </ScrollView>
@@ -97,12 +104,16 @@ export function KeyboardScreen(props) {
                 keyboardVerticalOffset={Platform.OS === "ios" ? 64 : 0}
             >
                 <ScrollView
+                    style={{ flex: 1 }}
                     contentContainerStyle={[
                         styles.pad,
                         isDark && styles.padDark,
                         props.contentStyle,
                     ]}
-                    keyboardShouldPersistTaps="handled"
+                    keyboardShouldPersistTaps="always"
+                    delaysContentTouches={false}
+                    overScrollMode="never"
+                    bounces={false}
                     showsVerticalScrollIndicator={false}
                 >
                     {props.children}
@@ -123,6 +134,7 @@ export function PrimaryButton(props) {
         <Pressable
             onPress={props.onPress}
             disabled={isDisabled}
+            unstable_pressDelay={0}
             style={[
                 styles.primary,
                 isDisabled && styles.primaryDisabled,
@@ -361,7 +373,7 @@ export function ChipGroup(props) {
 export function BackChip(props) {
     var dark = props.dark === true;
     return (
-        <Pressable onPress={props.onPress} hitSlop={8} style={[styles.backChip, dark && styles.backChipDark, props.style]}>
+        <Pressable onPress={props.onPress} hitSlop={8} unstable_pressDelay={0} style={[styles.backChip, dark && styles.backChipDark, props.style]}>
             <Text style={[styles.backChipMark, dark && styles.backChipTextDark]}>‹</Text>
             <Text style={[styles.backChipLabel, dark && styles.backChipTextDark]}>{props.label || "Geri"}</Text>
         </Pressable>
@@ -382,6 +394,7 @@ export function Card(props) {
         <CardComponent
             onPress={props.onPress}
             activeOpacity={0.8}
+            delayPressIn={0}
             style={[
                 styles.card,
                 isDark && styles.cardDark,
@@ -630,9 +643,9 @@ var styles = StyleSheet.create({
         backgroundColor: colors.bgDark,
     },
     pad: {
-        paddingHorizontal: 20,
-        paddingTop: 16,
-        paddingBottom: 40,
+        paddingHorizontal: 16,
+        paddingTop: 12,
+        paddingBottom: 24,
     },
     padDark: {},
 
@@ -805,6 +818,7 @@ var styles = StyleSheet.create({
         borderColor: colors.border,
         padding: 16,
         marginBottom: 12,
+        overflow: "hidden",
     },
     cardDark: {
         backgroundColor: colors.navyDeep,

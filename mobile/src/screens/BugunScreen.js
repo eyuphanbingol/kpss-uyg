@@ -81,7 +81,7 @@ export default function BugunScreen({ navigation }) {
     // ============================================================
 
     return (
-        <ScrollScreen dark={isDark}>
+        <ScrollScreen dark={isDark} noBottom>
             {/* Header */}
             <View style={styles.header}>
                 <View>

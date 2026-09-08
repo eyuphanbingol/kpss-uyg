@@ -26,7 +26,7 @@ export function AlistirmalarHomeScreen({ navigation }) {
     var isDark = app.dark;
 
     return (
-        <ScrollScreen dark={isDark}>
+        <ScrollScreen dark={isDark} noBottom>
             <View style={styles.header}>
                 <Text style={[styles.title, isDark && styles.textLight]}>Alıştırmalar</Text>
                 <Text style={[styles.subtitle, isDark && styles.textMuted]}>
@@ -402,7 +402,6 @@ export function MapPlayScreen({ route, navigation }) {
     var clearedMap = {};
     cleared.forEach(function (id) { clearedMap[id] = true; });
     var landscape = win.width > win.height;
-    var mapH = Math.max(180, Math.round(win.height - (landscape ? 108 : 210)));
     var labels = [];
     if (isMap && picked && step.item) {
         var hitPin = (layer.pins || []).filter(function (p) { return p.id === picked; })[0];
@@ -417,19 +416,19 @@ export function MapPlayScreen({ route, navigation }) {
     return (
         isMap ? (
         <Screen dark={isDark}>
-            <View style={{ paddingHorizontal: 12, paddingTop: 4, flex: 1 }}>
+            <View style={{ paddingHorizontal: 12, paddingTop: 4, flex: 1, minHeight: 0 }}>
             <View style={{ flexDirection: "row", alignItems: "center", gap: 8, marginBottom: 4 }}>
                 <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} />
-                <Text style={[styles.kicker, { flex: 1, marginBottom: 0 }, isDark && styles.textMuted]} numberOfLines={1}>
+                <Text style={[styles.kicker, { flex: 1, marginBottom: 0, minWidth: 0 }, isDark && styles.textMuted]} numberOfLines={1}>
                     {meta ? meta.title : "Harita"} · {idx + 1}/{list.length}
                 </Text>
             </View>
             <Text style={[styles.prompt, { marginBottom: 6, fontSize: landscape ? 14 : 16, lineHeight: landscape ? 20 : 24 }, isDark && styles.textLight]} numberOfLines={landscape ? 2 : 4}>
                 {step.prompt}
             </Text>
+            <View style={{ flex: 1, minHeight: 0 }}>
             <TrMapView
                 mode="play"
-                height={mapH}
                 pins={layer.pins || []}
                 glyph={glyph}
                 picked={picked}
@@ -444,6 +443,7 @@ export function MapPlayScreen({ route, navigation }) {
                     setTimeout(advance, 5500);
                 }}
             />
+            </View>
             {picked ? (
                 <Text style={{ marginTop: 6, fontWeight: "700", color: ok ? "#059669" : "#E11D48" }} numberOfLines={1}>
                     {ok ? "Doğru — " + step.item.name : ("Doğrusu: " + step.item.name)}

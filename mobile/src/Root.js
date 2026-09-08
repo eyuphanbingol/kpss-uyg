@@ -3,6 +3,7 @@ import { Text, View, StyleSheet } from "react-native";
 import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useApp } from "./AppProvider";
 import AuthScreen from "./screens/AuthScreen";
 import OnboardingScreen from "./screens/OnboardingScreen";
@@ -49,18 +50,20 @@ function TabIcon({ focused, icon, label }) {
 
 function Tabs() {
     var { isDark } = useApp();
+    var insets = useSafeAreaInsets();
 
     var tabOptions = {
         headerShown: false,
         tabBarActiveTintColor: colors.indigo,
         tabBarInactiveTintColor: colors.muted,
+        tabBarHideOnKeyboard: true,
         tabBarStyle: {
             backgroundColor: isDark ? colors.bgDark : "#fff",
             borderTopWidth: 1,
             borderTopColor: isDark ? colors.muted : colors.border,
-            height: 72,
-            paddingBottom: 8,
-            paddingTop: 6,
+            height: 52 + Math.max(insets.bottom, 8),
+            paddingBottom: Math.max(insets.bottom, 8),
+            paddingTop: 4,
             elevation: 8,
             shadowColor: "#000",
             shadowOffset: { width: 0, height: -2 },
@@ -201,7 +204,10 @@ function Gate() {
     var stackOptions = {
         headerShown: false,
         animation: "slide_from_right",
+        animationDuration: 220,
         presentation: "card",
+        gestureEnabled: true,
+        fullScreenGestureEnabled: false,
         contentStyle: {
             backgroundColor: isDark ? colors.bgDark : colors.bg,
         },
