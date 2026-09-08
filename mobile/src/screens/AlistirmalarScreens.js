@@ -15,7 +15,8 @@ var MAP_CARD_IMG = {
     fay: require("../../assets/fay.png"),
     "deprem-az": require("../../assets/deprem-az.png"),
     "plato-karst": require("../../assets/plato-karst.png"),
-    "plato-asinim": require("../../assets/plato-asinim.png")
+    "plato-asinim": require("../../assets/plato-asinim.png"),
+    "plato-tabaka": require("../../assets/plato-tabaka.png")
 };
 
 export function AlistirmalarHomeScreen({ navigation }) {
