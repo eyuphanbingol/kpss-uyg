@@ -52,20 +52,41 @@
             ? window.AtanomLogo("h-14 w-14 object-contain")
             : <img src="icons/atanom.png?v=18" alt="Atanly" className="h-14 w-14 object-contain" />;
         var feats = [
-            { t: "Konu konu not", d: "Tarih, coğrafya, Türkçe, vatandaşlık, güncel. PDF yığını yok: her konu kendi notuyla açılır, sırayı atlayamazsın." },
-            { t: "Test ve aralıklı tekrar", d: "Paketler kilitli ilerler. Yanlışın deftere düşer; sistem zayıf konuyu öne çeker, unutma eğrisine göre geri getirir." },
-            { t: "Günlük program", d: "Sınav tarihine göre tempo, günlük soru hedefi, 30 günlük ısı haritası. Bugün ne çalışacağını uygulama söyler." }
+            { t: "Bugünün hedefi", d: "Düzenle’ye bas: 30 dk vatandaşlık, 30 dk güncel, 1,5 saat tarih, 1,5 saat coğrafya — senin günün. Sıradaki ders yeşil yanar, yüzde dolar. Ne çalışacağını aramazsın; ekran söyler." },
+            { t: "Konu kilidi", d: "Tarih sırayla: İslamiyet öncesi, ilk Türk-İslam, Selçuklu, Osmanlı kültür, kuruluş, yükselme. Notu ve testleri bitirmeden kilit açılmaz. Atlayarak boşluk bırakmazsın." },
+            { t: "Eksikler masası", d: "Bugün tekrar, yanlış defteri, yalnızca senin gördüğün tekrar defteri. Zayıfın görünür; kilit hileyle atlanmaz." }
+        ];
+        var stats = [
+            { t: "Seri gün", d: "Ateş yanınca bırakmak zorlaşır. Kaç gündür masadasın, oturum kaç dakika, rekor gün kaç saat — İstatistikler’de durur." },
+            { t: "Haftalık trend", d: "Sekiz haftalık çizgi, Pzt’den Paz’a çubuklar, bu hafta kaç / 20 saat. Düzleşince uyarı; yükselince gurur." },
+            { t: "Ders dağılımı", d: "Zamanın yüzde kaçı Tarih, kaçı Coğrafya. Bir derse gömülüp diğerini unutma; dilim yalan söylemez." }
         ];
         var games = [
-            { t: "Fetih haritası", d: "Türkiye illerini soruyla boya. Bölge bölge ilerle, coğrafyayı ezber değil yer olarak öğren." },
-            { t: "KPSS haritaları", d: "Fiziki, iklim, nüfus, maden, ulaşım. Konuyu seç, noktayı haritada işaretle." },
-            { t: "Tabu", d: "Yasaklı kelimelere takılmadan tanımı yakala. Vatandaşlık ve güncel için tempo." },
-            { t: "Panik ve boşluk", d: "Süre daralır, şıklar döner. Boşluk doldurma ile cümleyi tamamla — sınav stiline yakın." }
+            { t: "Türkiye'yi Fethet", d: "81 ile dokun, boya, bölge bitince rozet. Marmara, Ege, Akdeniz, İç Anadolu, Karadeniz, Doğu, Güneydoğu — harita ezberi değil; fetih. KPSS Türkiye haritası böyle kalır." },
+            { t: "Harita oyunu", d: "Yer şekilleri ve jeoloji: volkan, horst–graben, kıvrım, masif, KAF–DAF–BAF, deprem riski. Konuyu seç, noktayı haritada vur. Fiziki coğrafya parmak ucunda." },
+            { t: "Kavram · az ipucu", d: "Nottaki kavram gizli. Az ipucu = yüksek puan. Şanlıurfa çevresi deyince Antep fıstığı mı, çay mı — bileceksin. Risk al, puanı koru." },
+            { t: "Tabu", d: "Yasaklı kelimeye takılma, tanımı yakala. Vatandaşlık ve güncel bilgi için tempo; dilin sürçmesin, kavram gelsin." },
+            { t: "Panik", d: "Süre daralır, şıklar döner. Sınav günü paniği burada biter; elin alışır, zihin soğuk kalır." },
+            { t: "Boşluk doldur", d: "Cümlenin eksiğini tamamla. Aynı konunun notundan üretilir; oyun ayrı dünya değil, notun devamı." }
+        ];
+        var maps = [
+            { t: "Volkanik dağlar", d: "Ağrı’dan Nemrut’a zirveyi haritada yakala. 11 hedef; KPSS fiziki coğrafyanın ateşi." },
+            { t: "Volkanik araziler", d: "Lavın bıraktığı arazi. Konuyu seç, noktayı bul — ezber değil, yer." },
+            { t: "Kırık dağlar", d: "Horst–graben. Anadolu’nun kırık omurgasını haritada gör." },
+            { t: "Kıvrım dağları", d: "Kıvrılan sıra dağlar. 14 hedef; yükseltinin hikâyesi parmak ucunda." },
+            { t: "Masif araziler", d: "Eski, sert, sakin masifler. Haritada dokun, isim otursun." },
+            { t: "Fay hatları", d: "KAF · DAF · BAF. Türkiye’nin sismik anatomisi; üç hat, üç isim, unutulmaz." },
+            { t: "Deprem riski az", d: "Sakin kuşakları da bil. Sınav hem riski hem sükûneti sorar." }
+        ];
+        var eksik = [
+            { t: "Bugün tekrar", d: "Daha önce çözdüğün, bugün hatırlaman gereken sorular. Unutma eğrisi Atanly’de çalışır; masaya oturunca liste hazır." },
+            { t: "Yanlış defteri", d: "Kaçırdığın soru burada bekler. Çözünce defterden düşer; konu kilidini açmaz — dürüst tekrar." },
+            { t: "Tekrar defteri", d: "Kendine not yaz. Yalnız sen görürsün. Başkasının defterine karışılmaz; bu çekmece senin." }
         ];
         var steps = [
-            { n: "1", t: "Kulvarını seç", d: "Lisans, ön lisans veya ortaöğretim. Google veya e-posta. İlerleme hesabına yazılır." },
-            { n: "2", t: "Programı takip et", d: "Notu bitir, testi aç. Zayıf konu ve yanlışlar ertesi günün planına girer." },
-            { n: "3", t: "Oyunla pekiştir", d: "Harita ve tempo oyunları aynı bankadan beslenir. Eğlence ayrı uygulama değil; aynı Atanly." }
+            { n: "1", t: "Kulvarını seç", d: "Lisans, ön lisans veya ortaöğretim. Google veya e-posta. İlerleme hesabına yazılır, başka göze gitmez." },
+            { n: "2", t: "Hedefi işaretle", d: "Bugünün saatleri, sıradaki ders. Not, test, kilit, tekrar — tek akış." },
+            { n: "3", t: "Haritada pekiştir", d: "Fetih, jeoloji, kavram, tabu, panik. Mola da GY-GK sayılır." }
         ];
         return (
             <div className="land-page text-stone-100">
@@ -92,7 +113,7 @@
                         Atamaya giden<br />çalışma odası.
                     </h1>
                     <p className="mt-5 text-[15px] sm:text-lg text-white/75 max-w-2xl leading-relaxed">
-                        Atanly, dağınık kaynakları tek programa bağlar. Notu oku, kilidi aç, testi çöz, yanlışını tekrar et, haritada pekiştir. Lisans / ön lisans / ortaöğretim — aynı sistem, senin sınav takvimine göre.
+                        Bugünün hedefi, kilitli Tarih konuları, eksikler, seri ve trend, 81 ili fethet, volkan–fay haritası, az ipucu yüksek puan. Hepsi aynı Atanly. Lisans, ön lisans, ortaöğretim GY-GK.
                     </p>
                     <div className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md">
                         <button type="button" onClick={props.onSignup} className="flex-1 py-3.5 rounded-2xl font-bold bg-gold-500 text-stone-900 text-[15px] hover:bg-gold-400">
@@ -102,7 +123,7 @@
                             Giriş yap
                         </button>
                     </div>
-                    <p className="mt-4 text-xs text-white/45">Google ile de girebilirsin. Kart yok, reklam için çalışma kesilmez.</p>
+                    <p className="mt-4 text-xs text-white/45">Google ile de girebilirsin. Kart yok. İlerlemen yalnız senin.</p>
                 </section>
 
                 <section className="land-wide">
@@ -110,7 +131,7 @@
                         <p className="land-kicker mb-2">Yakında</p>
                         <p className="font-display font-extrabold text-xl sm:text-2xl leading-snug">Her Pazar, Türkiye geneli.</p>
                         <p className="text-sm text-white/70 mt-2 leading-relaxed">
-                            Haftanın kilidi Pazar: aynı anda Türkiye çapında tempo. Sıralama ve ortak saat yakında açılır — şimdilik not, test ve oyunlarla ısın, Pazar geldiğinde hazır ol.
+                            Ortak tempo ve sıralama yolda. Şimdilik hedef, test ve oyunla ısın; Pazar geldiğinde hazır ol.
                         </p>
                     </div>
                 </section>
@@ -127,9 +148,43 @@
                 </section>
 
                 <section className="land-wide">
+                    <h2 className="font-display font-bold text-xl mb-2">İstatistik, seri, dağılım</h2>
+                    <p className="text-sm text-white/60 mb-5 max-w-2xl leading-relaxed">
+                        Kaç gün seri, oturum kaç dakika, rekor gün, bu hafta kaç saat. Çizgi yükselince gurur; düzleşince uyarı. Çalışma saati kaybolmaz.
+                    </p>
+                    <div className="land-game">
+                        {stats.map(function (s) {
+                            return (
+                                <article key={s.t} className="land-card">
+                                    <h3 className="font-display font-bold text-white mb-1.5">{s.t}</h3>
+                                    <p className="text-sm text-white/65 leading-relaxed">{s.d}</p>
+                                </article>
+                            );
+                        })}
+                    </div>
+                </section>
+
+                <section className="land-wide">
+                    <h2 className="font-display font-bold text-xl mb-2">Eksikler: tekrar, yanlış, defter</h2>
+                    <p className="text-sm text-white/60 mb-5 max-w-2xl leading-relaxed">
+                        Konu durumu Dersler’den gelir. Bugün tekrar hatırlatır; yanlış defteri ısrar eder; tekrar defterin kilitli çekmecen.
+                    </p>
+                    <div className="land-game">
+                        {eksik.map(function (s) {
+                            return (
+                                <article key={s.t} className="land-card">
+                                    <h3 className="font-display font-bold text-white mb-1.5">{s.t}</h3>
+                                    <p className="text-sm text-white/65 leading-relaxed">{s.d}</p>
+                                </article>
+                            );
+                        })}
+                    </div>
+                </section>
+
+                <section className="land-wide">
                     <h2 className="font-display font-bold text-xl mb-2">Sistem, program gibi çalışır</h2>
                     <p className="text-sm text-white/60 mb-5 max-w-2xl leading-relaxed">
-                        Rastgele soru çözmek değil. Konu kilitleri, günlük hedef, zayıf konu öne çekme, yanlış defteri, 30 günlük ısı. Bugün ne yapacağını sen aramazsın; Atanly sıraya koyar.
+                        Rastgele PDF değil. Sıra, kilit, günlük saat, yanlış ve ısı. Atanly bugünü dizer.
                     </p>
                     <ol className="space-y-4">
                         {steps.map(function (s) {
@@ -147,12 +202,26 @@
                 </section>
 
                 <section className="land-wide">
-                    <h2 className="font-display font-bold text-xl mb-2">Oyunlar da bankanın içinde</h2>
+                    <h2 className="font-display font-bold text-xl mb-2">Oyunlar: fetih, harita, kavram</h2>
                     <p className="text-sm text-white/60 mb-5 max-w-2xl leading-relaxed">
-                        Ayrı bir eğlence uygulaması yok. Fetih, harita, tabu, panik — hepsi GY-GK konularından üretilir. Mola verdiğin an da çalışmaya sayılır.
+                        Alıştırmalar. 81 il, yer şekilleri, kavram avı. Hepsi GY-GK notundan; mola da çalışmaya sayılır.
                     </p>
                     <div className="land-game">
                         {games.map(function (g) {
+                            return (
+                                <article key={g.t} className="land-card">
+                                    <h3 className="font-display font-bold text-white mb-1.5">{g.t}</h3>
+                                    <p className="text-sm text-white/65 leading-relaxed">{g.d}</p>
+                                </article>
+                            );
+                        })}
+                    </div>
+                    <p className="font-display font-bold text-white mt-8 mb-2">Harita oyunu · yer şekilleri</p>
+                    <p className="text-sm text-white/60 mb-5 max-w-2xl leading-relaxed">
+                        Konuyu seç, noktayı bul. Volkan, kırık, kıvrım, masif, fay, sakin kuşak — KPSS fiziki coğrafya haritada.
+                    </p>
+                    <div className="land-game">
+                        {maps.map(function (g) {
                             return (
                                 <article key={g.t} className="land-card">
                                     <h3 className="font-display font-bold text-white mb-1.5">{g.t}</h3>
@@ -167,7 +236,7 @@
                     <h2 id="sss-title" className="font-display font-bold text-xl mb-4">Sık sorulanlar</h2>
                     <details>
                         <summary>Atanly nedir?</summary>
-                        <p>KPSS GY-GK için not, kilitli test, aralıklı tekrar ve oyunları tek programda toplayan çalışma alanı. Lisans, ön lisans, ortaöğretim.</p>
+                        <p>KPSS GY-GK çalışma odası: günlük hedef, kilitli Tarih konuları, eksikler, istatistik, Türkiye{"'"}yi Fethet, harita ve kavram oyunları. Lisans, ön lisans, ortaöğretim.</p>
                     </details>
                     <details>
                         <summary>Ücretsiz mi?</summary>
