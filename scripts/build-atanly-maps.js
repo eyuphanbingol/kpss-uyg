@@ -389,11 +389,11 @@ function labelsOnMap(pts, fs) {
         var lfs = photo ? 9 : fs;
         return pts.map(function (p) {
             var lx = (p.pinX != null ? p.pinX : p.x) + (p.ldx || 0);
-            var ly = (p.pinY != null ? p.pinY : p.y) + (p.ldy != null ? p.ldy : 22);
+            var ly = (p.pinY != null ? p.pinY : p.y) + (p.ldy != null ? p.ldy : 52);
             var pinX = p.pinX != null ? p.pinX : p.x;
             var pinY = p.pinY != null ? p.pinY : p.y;
             var lead = "";
-            if (Math.abs(lx - pinX) + Math.abs(ly - pinY) > 16) {
+            if (Math.abs(lx - pinX) > 20 || Math.abs(ly - pinY) > 70) {
                 lead = '<line x1="' + pinX.toFixed(1) + '" y1="' + pinY.toFixed(1) + '" x2="' + lx.toFixed(1) + '" y2="' + (ly - 8).toFixed(1) + '" stroke="' + C.navy + '" stroke-width="0.7" opacity="0.55"/>';
             }
             return lead + onMapText(lx, ly, p.text, lfs, p);
@@ -911,17 +911,21 @@ function main() {
             var pos = districtXY(fp);
             if (it.noclamp) pos = { x: pos.x + (it.pdx || 0), y: pos.y + (it.pdy || 0) };
             else pos = clampInProv(fp, pos.x + (it.pdx || 0), pos.y + (it.pdy || 0));
-            var p = { x: pos.x, y: pos.y, ox: pos.x, oy: pos.y, text: mapCaption(it.label) };
-            if (usePins) {
-                p.pinX = pos.x;
-                p.pinY = pos.y;
-                p.ldx = it.ldx != null ? it.ldx : 0;
-                p.ldy = it.ldy != null ? it.ldy : 26;
-                p.locked = true;
-            }
-            pts.push(p);
+            pts.push({
+                x: pos.x, y: pos.y, ox: pos.x, oy: pos.y, text: mapCaption(it.label),
+                pinX: pos.x, pinY: pos.y,
+                ldx: it.ldx != null ? it.ldx : 0,
+                ldy: it.ldy != null ? it.ldy : 52,
+                locked: true
+            });
         });
-        if (!usePins) spreadSameCell(pts);
+        if (!usePins) {
+            spreadSameCell(pts);
+            pts.forEach(function (p) {
+                p.pinX = p.x;
+                p.pinY = p.y;
+            });
+        }
         var overlay = iconsOnMap(pts, topicIcon(title.file), title.iconSize);
         var labels = labelsOnMap(pts);
         var hi = [];
@@ -1004,16 +1008,16 @@ function main() {
         ]
     );
 
-    labeled({ file: "masif_arazi.png", head: "MASİF ARAZİLER" }, "Eski kütleler",
+    labeled({ file: "masif_arazi.png", head: "MASİF ARAZİLER", iconSize: 16 }, "Eski kütleler",
         [
-            { il: "Kırklareli", label: "Yıldız Dağı" },
-            { il: "Zonguldak", label: "Zonguldak" },
-            { il: "Kastamonu", label: "Daday–Devrekani" },
-            { il: "Kırşehir", label: "Kırşehir" },
-            { il: "Bitlis", label: "Bitlis" },
-            { il: "Mardin", label: "Mardin" },
-            { il: "Mersin", label: "Anamur" },
-            { il: "Muğla", label: "Menderes–Menteşe" }
+            { il: "Kırklareli", label: "Yıldız Dağı", ldx: -8, ldy: 54 },
+            { il: "Zonguldak", label: "Zonguldak", ldx: -42, ldy: 52 },
+            { il: "Kastamonu", label: "Daday–Devrekani", ldx: 48, ldy: 52 },
+            { il: "Kırşehir", label: "Kırşehir", ldx: 0, ldy: 54 },
+            { il: "Bitlis", label: "Bitlis", ldx: 12, ldy: 54 },
+            { il: "Mardin", label: "Mardin", ldx: 10, ldy: 54 },
+            { il: "Mersin", label: "Anamur", ldx: 0, ldy: 54 },
+            { il: "Muğla", label: "Menderes–Menteşe", ldx: -22, ldy: 54 }
         ],
         ["Masifler yaşlı, dirençli kara parçalarıdır", "Maden çeşitliliği bu kütlelerle ilişkilendirilir"]
     );
