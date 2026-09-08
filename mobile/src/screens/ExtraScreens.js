@@ -166,7 +166,7 @@ export function LeaderboardScreen({ navigation }) {
             <View style={styles.header}>
                 <Text style={[styles.title, isDark && styles.textLight]}>Türkiye Sıralaması</Text>
                 <Text style={[styles.subtitle, isDark && styles.textMuted]}>
-                    Bu hafta en çok doğru çözenler
+                    En çok doğru çözenler
                 </Text>
             </View>
 

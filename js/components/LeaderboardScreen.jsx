@@ -77,29 +77,38 @@
                 return; 
             }
 
-            sb.from("leaderboard_public").select("nickname,questions,kind").limit(200).then(function (res) {
-                if (res.error) {
-                    setErr("📊 Sıralama şu an yok.");
+            function loadRows() {
+                return sb.from("leaderboard_public").select("nickname,questions,kind").limit(200).then(function (res) {
+                    if (res.error) {
+                        setErr("📊 Sıralama şu an yok.");
+                    } else {
+                        var rows = (res.data || []).filter(function (x) { return x.kind !== "exam"; });
+                        rows.sort(function (a, b) {
+                            return (Number(b.questions) || 0) - (Number(a.questions) || 0);
+                        });
+                        setWeek(rows);
+                        setErr("");
+                    }
                     setLoading(false);
-                } else {
-                    var rows = (res.data || []).filter(function (x) { return x.kind !== "exam"; });
-                    rows.sort(function (a, b) {
-                        return (Number(b.questions) || 0) - (Number(a.questions) || 0);
-                    });
-                    setWeek(rows);
-                    setLoading(false);
-                }
-            });
+                });
+            }
+
+            var ready = window.SyncEngine && window.SyncEngine.sync
+                ? window.SyncEngine.sync().catch(function () { return null; })
+                : Promise.resolve();
+            Promise.resolve(ready).then(loadRows);
         }, []);
 
         // ---------- List ----------
         var list = week;
         
         var myScore = 0;
-        var start = window.SyncEngine && window.SyncEngine.weekStart ? window.SyncEngine.weekStart() : "";
         Object.keys((props.student && props.student.sessions) || {}).forEach(function (d) {
-            if (!start || String(d) >= start) myScore += Number(props.student.sessions[d].correct) || 0;
+            myScore += Number(props.student.sessions[d].correct) || 0;
         });
+        if (props.student && props.student.counters) {
+            myScore = Math.max(myScore, Number(props.student.counters.correct) || 0);
+        }
         var myIdx = -1;
         list.forEach(function (r, i) {
             if (!me || r.nickname !== me) return;
@@ -138,7 +147,7 @@
                 <div className="flex justify-between items-center mb-4 slide-up">
                     <div>
                         <h1 className="text-2xl md:text-3xl font-black gradient-text">🏆 Türkiye</h1>
-                        <p className="text-sm text-stone-400 mt-0.5">Bu hafta en çok doğru çözenler</p>
+                        <p className="text-sm text-stone-400 mt-0.5">En çok doğru çözenler</p>
                     </div>
                     <button 
                         onClick={props.onBack} 
@@ -150,7 +159,7 @@
 
                 {/* Info */}
                 <p className="text-xs text-stone-400 dark:text-stone-500 mb-5">
-                    📊 Sıra: bu haftanın doğru sayısı · Takma ad görünür · Pazartesi sıfırlanır
+                    📊 Sıra: profildeki net ile aynı toplam doğru · Takma ad görünür
                 </p>
 
                 {/* Loading */}

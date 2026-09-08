@@ -2097,7 +2097,7 @@ function Ben(props) {
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
             <div className="grid grid-cols-2 gap-2 mb-6">
-                <div className="p-4 rounded-2xl glass card-hover"><div className="text-xl font-semibold gradient-text">{totQ}</div><div className="text-xs text-stone-400 mt-1">Soru</div></div>
+                <div className="p-4 rounded-2xl glass card-hover"><div className="text-xl font-semibold gradient-text">{totQ}</div><div className="text-xs text-stone-400 mt-1">Toplam soru</div></div>
                 <div className="p-4 rounded-2xl glass card-hover"><div className="text-xl font-semibold gradient-text">%{overall}</div><div className="text-xs text-stone-400 mt-1">Net</div></div>
             </div>
             <div className="rounded-3xl glass p-5 mb-4 card-hover">
