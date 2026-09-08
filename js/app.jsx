@@ -153,12 +153,11 @@ function BottomNav(props) {
         { id: "dersler", label: "Dersler", icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" },
         { id: "alistirmalar", label: "Alıştırmalar", icon: "M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" },
         { id: "eksikler", label: "Eksikler", icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" },
-        { id: "deneme", label: "Deneme", icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" },
         { id: "ben", label: "Ben", icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" }
     ];
     return (
         <nav className="app-tabbar fixed bottom-0 inset-x-0 z-40 nav-glass" style={{ paddingBottom: "max(8px, env(safe-area-inset-bottom))" }}>
-            <div className="max-w-2xl mx-auto grid grid-cols-6 px-0.5 pt-1 min-w-0">
+            <div className="max-w-2xl mx-auto grid grid-cols-5 px-0.5 pt-1 min-w-0">
                 {tabs.map(function (tab) {
                     const on = props.nav === tab.id;
                     return (
@@ -2183,16 +2182,14 @@ function Ben(props) {
             </div>
             <div className="rounded-3xl glass p-5 mb-4 card-hover">
                 <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-1">Araçlar</p>
-                <p className="text-xs text-stone-400 mb-3">Sıralama, deneme, puan ve asistan. Ders kilidini atlatmaz.</p>
+                <p className="text-xs text-stone-400 mb-3">Sıralama, puan ve asistan. Ders kilidini atlatmaz.</p>
                 <div className="grid grid-cols-2 gap-2">
                     {[
                         { id: "notebook", t: "Tekrar defteri", d: "Kendine not yaz, yalnızca sen görürsün" },
                         { id: "placement", t: "Puan / tercih", d: "Tahmini puanın hangi kurumlara yeter" },
                         { id: "leaderboard", t: "Türkiye", d: "Haftalık soru ve deneme sıralaması" },
                         { id: "heat", t: "Isı haritası", d: "30 günlük tempo ve konu hakimiyeti" },
-                        { id: "exam", t: "Tam deneme", d: "40 soru, 40 dakika kitapçık" },
-                        { id: "ai", t: "Soru asistanı", d: "Yanlışın nedenini kısaca açıklar" },
-                        { id: "live", t: "Canlı deneme", d: "Cumartesi ortak saat; şimdi de çözülür" }
+                        { id: "ai", t: "Soru asistanı", d: "Yanlışın nedenini kısaca açıklar" }
                     ].map(function (x) {
                         return (
                             <button key={x.id} onClick={function () { props.onOpen && props.onOpen(x.id); }}
@@ -2345,7 +2342,7 @@ function App() {
 
     useEffect(function () {
         if (!extra || extra === "onboarding") return;
-        if (extra === "instructor" || extra === "admin") {
+        if (extra === "instructor" || extra === "admin" || extra === "exam" || extra === "live") {
             setExtra(null);
             return;
         }
@@ -2753,10 +2750,6 @@ function App() {
             onReview={function () { startSession(plan.due.slice(0, 30), { mode: "review" }); }}
             onWrong={function () { startSession(plan.wrong.slice(0, 30), { mode: "wrong" }); }}
             onNotebook={function () { setExtra("notebook"); }} />;
-    } else if (nav === "deneme") {
-        body = <DenemeSetup kpssData={kpssData} isDark={isDark} toggleDark={toggleDark}
-            onStart={function (items, seconds) { startSession(items, { mode: "mixed", seconds: seconds || null }); }}
-            onFullExam={function () { setExtra("exam"); }} />;
     } else if (nav === "ben") {
         body = <Ben student={student} isDark={isDark} toggleDark={toggleDark}
             onOpen={function (id) { setExtra(id); }}

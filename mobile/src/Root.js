@@ -12,7 +12,6 @@ import { DersHomeScreen, KonuHubScreen, KonuListScreen } from "./screens/Dersler
 import { AlistirmalarHomeScreen, AlistirmaDersListScreen, AlistirmaKonuListScreen, ClozePlayScreen, MapTopicsScreen, MapPlayScreen } from "./screens/AlistirmalarScreens";
 import { ConquerPlayScreen, TabuPlayScreen, PanicPlayScreen } from "./screens/DrillGameScreens";
 import EksiklerScreen from "./screens/EksiklerScreen";
-import DenemeScreen from "./screens/DenemeScreen";
 import BenScreen from "./screens/BenScreen";
 import NotesScreen from "./screens/NotesScreen";
 import TestScreen from "./screens/TestScreen";
@@ -91,7 +90,6 @@ function Tabs() {
         { name: "DerslerTab", component: DersHomeScreen, icon: "📚", label: "Dersler" },
         { name: "AlistirmalarTab", component: AlistirmalarHomeScreen, icon: "✏️", label: "Alıştırmalar" },
         { name: "EksiklerTab", component: EksiklerScreen, icon: "📋", label: "Eksikler" },
-        { name: "DenemeTab", component: DenemeScreen, icon: "📝", label: "Deneme" },
         { name: "BenTab", component: BenScreen, icon: "👤", label: "Ben" },
     ];
 

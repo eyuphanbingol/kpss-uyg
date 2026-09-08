@@ -16,8 +16,7 @@ var TOOLS = [
     { id: "Placement", t: "Puan / Tercih", d: "Tahmini puan ve kurum eşleşmesi" },
     { id: "Leaderboard", t: "Türkiye Sıralaması", d: "Haftalık liderlik tablosu" },
     { id: "Heat", t: "Isı Haritası", d: "30 günlük çalışma tempon" },
-    { id: "Ai", t: "Soru Asistanı", d: "Yanlışlarını analiz et" },
-    { id: "Live", t: "Canlı Deneme", d: "Haftalık ortak sınav" }
+    { id: "Ai", t: "Soru Asistanı", d: "Yanlışlarını analiz et" }
 ];
 
 // ============================================================
