@@ -201,15 +201,7 @@ function Gate() {
     var stackOptions = {
         headerShown: false,
         animation: "slide_from_right",
-        contentStyle: {
-            backgroundColor: isDark ? colors.bgDark : colors.bg,
-        },
-    };
-
-    var modalOptions = {
-        headerShown: false,
-        presentation: "modal",
-        animation: "slide_from_bottom",
+        presentation: "card",
         contentStyle: {
             backgroundColor: isDark ? colors.bgDark : colors.bg,
         },
@@ -235,28 +227,28 @@ function Gate() {
                 {/* Ana Tablar */}
                 <Stack.Screen name="Tabs" component={Tabs} />
 
-                {/* Modal Ekranlar */}
-                <Stack.Screen name="Program" component={ProgramScreen} options={modalOptions} />
-                <Stack.Screen name="KonuList" component={KonuListScreen} options={modalOptions} />
-                <Stack.Screen name="KonuHub" component={KonuHubScreen} options={modalOptions} />
-                <Stack.Screen name="AlistirmaDersList" component={AlistirmaDersListScreen} options={modalOptions} />
-                <Stack.Screen name="AlistirmaKonuList" component={AlistirmaKonuListScreen} options={modalOptions} />
-                <Stack.Screen name="ClozePlay" component={ClozePlayScreen} options={modalOptions} />
-                <Stack.Screen name="MapTopics" component={MapTopicsScreen} options={modalOptions} />
-                <Stack.Screen name="MapPlay" component={MapPlayScreen} options={modalOptions} />
-                <Stack.Screen name="ConquerPlay" component={ConquerPlayScreen} options={modalOptions} />
-                <Stack.Screen name="TabuPlay" component={TabuPlayScreen} options={modalOptions} />
-                <Stack.Screen name="PanicPlay" component={PanicPlayScreen} options={modalOptions} />
-                <Stack.Screen name="Notes" component={NotesScreen} options={modalOptions} />
-                <Stack.Screen name="Test" component={TestScreen} options={modalOptions} />
+                {/* İç sayfalar */}
+                <Stack.Screen name="Program" component={ProgramScreen} />
+                <Stack.Screen name="KonuList" component={KonuListScreen} />
+                <Stack.Screen name="KonuHub" component={KonuHubScreen} />
+                <Stack.Screen name="AlistirmaDersList" component={AlistirmaDersListScreen} />
+                <Stack.Screen name="AlistirmaKonuList" component={AlistirmaKonuListScreen} />
+                <Stack.Screen name="ClozePlay" component={ClozePlayScreen} />
+                <Stack.Screen name="MapTopics" component={MapTopicsScreen} />
+                <Stack.Screen name="MapPlay" component={MapPlayScreen} />
+                <Stack.Screen name="ConquerPlay" component={ConquerPlayScreen} />
+                <Stack.Screen name="TabuPlay" component={TabuPlayScreen} />
+                <Stack.Screen name="PanicPlay" component={PanicPlayScreen} />
+                <Stack.Screen name="Notes" component={NotesScreen} />
+                <Stack.Screen name="Test" component={TestScreen} />
 
                 {/* Extra Ekranlar */}
-                <Stack.Screen name="Placement" component={PlacementScreen} options={modalOptions} />
-                <Stack.Screen name="Leaderboard" component={LeaderboardScreen} options={modalOptions} />
-                <Stack.Screen name="Heat" component={HeatScreen} options={modalOptions} />
-                <Stack.Screen name="Ai" component={AiScreen} options={modalOptions} />
-                <Stack.Screen name="Live" component={LiveScreen} options={modalOptions} />
-                <Stack.Screen name="Paywall" component={PaywallScreen} options={modalOptions} />
+                <Stack.Screen name="Placement" component={PlacementScreen} />
+                <Stack.Screen name="Leaderboard" component={LeaderboardScreen} />
+                <Stack.Screen name="Heat" component={HeatScreen} />
+                <Stack.Screen name="Ai" component={AiScreen} />
+                <Stack.Screen name="Live" component={LiveScreen} />
+                <Stack.Screen name="Paywall" component={PaywallScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     );
