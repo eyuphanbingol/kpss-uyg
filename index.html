@@ -286,7 +286,7 @@
     <script src="js/store.js?v=38"></script>
     <script src="js/planner.js?v=19"></script>
     <script src="js/clozeEngine.js?v=5"></script>
-    <script src="js/mapQuiz.js?v=14"></script>
+    <script src="js/mapQuiz.js?v=15"></script>
     <script src="js/gamesBank.js?v=8"></script>
     <script src="js/gamesEngine.js?v=9"></script>
     <script src="js/scoreEngine.js?v=8"></script>
@@ -583,8 +583,8 @@
             box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.5);
             border-color: rgba(99, 102, 241, 0.2);
         }
-        .map-topic-card--volkan,
-        .dark .map-topic-card--volkan {
+        .map-topic-card--photo,
+        .dark .map-topic-card--photo {
             position: relative;
             overflow: hidden;
             isolation: isolate;
@@ -593,40 +593,43 @@
             -webkit-backdrop-filter: none;
             border-color: rgba(251, 146, 60, 0.28);
         }
-        .map-topic-card--volkan .map-topic-card-photo {
+        .map-topic-card--photo .map-topic-card-photo {
             position: absolute;
             inset: 0;
             z-index: 0;
-            background: #1a120c url("img/map/volkan-hover.png") center / cover no-repeat;
+            background-color: #1a120c;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
             opacity: 1;
             transform: scale(1.02);
             transition: transform 0.35s ease, filter 0.35s ease;
             pointer-events: none;
         }
-        .map-topic-card--volkan .map-topic-card-photo::after {
+        .map-topic-card--photo .map-topic-card-photo::after {
             content: "";
             position: absolute;
             inset: 0;
             background: linear-gradient(180deg, rgba(8, 6, 4, 0.22) 0%, rgba(8, 6, 4, 0.72) 100%);
         }
-        .map-topic-card--volkan .map-topic-card-fg {
+        .map-topic-card--photo .map-topic-card-fg {
             color: #fff;
             text-shadow: 0 1px 10px rgba(0, 0, 0, 0.65);
         }
-        .map-topic-card--volkan .map-topic-card-meta {
+        .map-topic-card--photo .map-topic-card-meta {
             color: rgba(255, 255, 255, 0.88);
         }
-        .map-topic-card--volkan:hover,
-        .map-topic-card--volkan:focus-visible,
-        .map-topic-card--volkan:active {
+        .map-topic-card--photo:hover,
+        .map-topic-card--photo:focus-visible,
+        .map-topic-card--photo:active {
             background: rgba(15, 10, 8, 0.12);
             backdrop-filter: none;
             -webkit-backdrop-filter: none;
             border-color: rgba(251, 146, 60, 0.55);
         }
-        .map-topic-card--volkan:hover .map-topic-card-photo,
-        .map-topic-card--volkan:focus-visible .map-topic-card-photo,
-        .map-topic-card--volkan:active .map-topic-card-photo {
+        .map-topic-card--photo:hover .map-topic-card-photo,
+        .map-topic-card--photo:focus-visible .map-topic-card-photo,
+        .map-topic-card--photo:active .map-topic-card-photo {
             transform: scale(1.08);
             filter: brightness(1.12);
         }
@@ -2076,7 +2079,7 @@
         </main>
     </noscript>
     <div id="root"></div>
-    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=105"></script>
+    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=106"></script>
     <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.getRegistrations().then(function (regs) {

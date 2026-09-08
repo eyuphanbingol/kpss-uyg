@@ -112,10 +112,10 @@
         {
             id: "yer", title: "Yer şekilleri · jeoloji", icon: "🗻",
             kids: [
-                { id: "volkanik", title: "Volkanik dağlar", icon: "🌋", hoverImg: true },
-                { id: "volkanik-arazi", title: "Volkanik araziler", icon: "🌋", hoverImg: true },
-                { id: "kirik", title: "Kırık dağlar (horst–graben)", icon: "⛰️" },
-                { id: "kivrim", title: "Kıvrım dağları", icon: "🏔️" },
+                { id: "volkanik", title: "Volkanik dağlar", icon: "🌋", hoverImg: "volkan" },
+                { id: "volkanik-arazi", title: "Volkanik araziler", icon: "🌋", hoverImg: "volkan" },
+                { id: "kirik", title: "Kırık dağlar (horst–graben)", icon: "⛰️", hoverImg: "kirik" },
+                { id: "kivrim", title: "Kıvrım dağları", icon: "🏔️", hoverImg: "kirik" },
                 { id: "masif", title: "Masif araziler", icon: "🪨" },
                 { id: "fay", title: "Fay hatları (KAF·DAF·BAF)", icon: "⚡" },
                 { id: "deprem-az", title: "Deprem riski az alanlar", icon: "🟢" }
@@ -125,7 +125,7 @@
             id: "plato", title: "Platolar", icon: "🏜️",
             kids: [
                 { id: "plato-karst", title: "Karstik platolar", icon: "🪨" },
-                { id: "plato-volkan", title: "Volkanik / lav platoları", icon: "🌋", hoverImg: true },
+                { id: "plato-volkan", title: "Volkanik / lav platoları", icon: "🌋", hoverImg: "volkan" },
                 { id: "plato-asinim", title: "Aşınım düzlüğü platoları", icon: "🟩" },
                 { id: "plato-tabaka", title: "Tabaka düzlüğü platoları", icon: "🏜️" }
             ]
@@ -136,7 +136,7 @@
                 { id: "delta", title: "Delta ovaları", icon: "🌊" },
                 { id: "ova-karst", title: "Karstik ovalar (TAKKEM)", icon: "🪨" },
                 { id: "ova-tektonik", title: "Tektonik ovalar", icon: "🌾" },
-                { id: "ova-volkan", title: "Volkanik ovalar", icon: "🌋", hoverImg: true },
+                { id: "ova-volkan", title: "Volkanik ovalar", icon: "🌋", hoverImg: "volkan" },
                 { id: "ova-asinim", title: "Aşınım / dağ eteği ovaları", icon: "🌾" }
             ]
         },

@@ -115,8 +115,8 @@
             kids: [
                 { id: "volkanik", title: "Volkanik dağlar", icon: "🌋", hoverImg: "img/map/volkan-hover.png" },
                 { id: "volkanik-arazi", title: "Volkanik araziler", icon: "🌋", hoverImg: "img/map/volkan-hover.png" },
-                { id: "kirik", title: "Kırık dağlar (horst–graben)", icon: "⛰️" },
-                { id: "kivrim", title: "Kıvrım dağları", icon: "🏔️" },
+                { id: "kirik", title: "Kırık dağlar (horst–graben)", icon: "⛰️", hoverImg: "img/map/kirik-kivrim.png" },
+                { id: "kivrim", title: "Kıvrım dağları", icon: "🏔️", hoverImg: "img/map/kirik-kivrim.png" },
                 { id: "masif", title: "Masif araziler", icon: "🪨" },
                 { id: "fay", title: "Fay hatları (KAF·DAF·BAF)", icon: "⚡" },
                 { id: "deprem-az", title: "Deprem riski az alanlar", icon: "🟢" }

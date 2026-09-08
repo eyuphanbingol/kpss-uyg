@@ -8,6 +8,11 @@ import { go } from "../nav";
 import { Card, PrimaryButton, ScrollScreen } from "../ui";
 import { colors, DERS_ICON } from "../lib/theme";
 
+var MAP_CARD_IMG = {
+    volkan: require("../../assets/volkan-hover.png"),
+    kirik: require("../../assets/kirik-kivrim.png")
+};
+
 export function AlistirmalarHomeScreen({ navigation }) {
     var app = useApp();
     var isDark = app.dark;
@@ -312,7 +317,7 @@ export function MapTopicsScreen({ navigation }) {
                             return (
                                 <Pressable key={k.id} onPress={function () { go(navigation, "MapPlay", { topicId: k.id }); }}>
                                     {k.hoverImg ? (
-                                        <ImageBackground source={require("../../assets/volkan-hover.png")} style={styles.volkanCard} imageStyle={styles.volkanCardImg} resizeMode="cover">
+                                        <ImageBackground source={MAP_CARD_IMG[k.hoverImg] || MAP_CARD_IMG.volkan} style={styles.volkanCard} imageStyle={styles.volkanCardImg} resizeMode="cover">
                                             <View style={styles.volkanScrim}>{inner}</View>
                                         </ImageBackground>
                                     ) : (

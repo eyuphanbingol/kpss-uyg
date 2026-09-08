@@ -1021,8 +1021,8 @@ function MapTopics(props) {
                                 var hoverImg = k.hoverImg;
                                 return (
                                     <button key={k.id} type="button" onClick={function () { props.onTopic(k.id); }}
-                                        className={"text-left p-4 rounded-2xl glass card-hover" + (hoverImg ? " map-topic-card--volkan" : "")}>
-                                        {hoverImg ? <span className="map-topic-card-photo" aria-hidden="true" /> : null}
+                                        className={"text-left p-4 rounded-2xl glass card-hover" + (hoverImg ? " map-topic-card--photo" : "")}>
+                                        {hoverImg ? <span className="map-topic-card-photo" aria-hidden="true" style={{ backgroundImage: "url(" + hoverImg + ")" }} /> : null}
                                         <div className="map-topic-card-fg relative z-10 font-bold">{k.icon} {k.title}</div>
                                         <div className="map-topic-card-meta relative z-10 text-xs text-stone-400 mt-1">{n} hedef</div>
                                     </button>
