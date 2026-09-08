@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Atanly — KPSS çalışma alanı</title>
-    <meta name="description" content="KPSS GY-GK için not, soru, tekrar ve deneme. Konu konu ilerle, hesabınla kaldığın yerden devam et.">
+    <meta name="description" content="Atanly: KPSS GY-GK not, test, aralıklı tekrar ve oyunlar. Programlı çalış. Yakında App Store ve Play Store.">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#041C24">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png?v=19">
@@ -198,7 +198,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.86.0/dist/umd/supabase.js"></script>
     <script src="js/supabaseClient.js?v=18"></script>
     <script src="js/syncEngine.js?v=28"></script>
-    <script src="js/jsxLoader.js?v=63"></script>
+    <script src="js/jsxLoader.js?v=64"></script>
     <script src="js/icons.js?v=18"></script>
 
     <style>
@@ -330,14 +330,72 @@
         }
         .land-cta {
             border-radius: 1.75rem;
-            padding: 1.5rem 1.35rem;
-            background: rgba(4, 28, 36, 0.45);
-            border: 1px solid rgba(201, 162, 39, 0.28);
+            padding: 1.6rem 1.4rem;
+            background:
+                radial-gradient(1200px 80px at 20% 0%, rgba(201, 162, 39, 0.18), transparent 55%),
+                rgba(4, 28, 36, 0.55);
+            border: 1px solid rgba(201, 162, 39, 0.32);
         }
-            height: 220px;
-            margin-left: -110px;
-            top: 32%;
-            border: 1px solid rgba(29, 138, 153, 0.45);
+        .land-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #C9A227;
+        }
+        .land-wide {
+            max-width: 56rem;
+            margin: 0 auto;
+            padding: 0 1.25rem 2.75rem;
+        }
+        @media (min-width: 640px) {
+            .land-wide { padding-left: 2rem; padding-right: 2rem; }
+        }
+        .land-game {
+            display: grid;
+            gap: 10px;
+        }
+        @media (min-width: 640px) {
+            .land-game { grid-template-columns: 1fr 1fr; }
+        }
+        .land-store {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .land-store-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            border-radius: 14px;
+            border: 1px solid rgba(245, 235, 199, 0.16);
+            background: rgba(0, 0, 0, 0.28);
+            color: #F5EBC7;
+            font-size: 12px;
+            line-height: 1.2;
+            cursor: default;
+        }
+        .land-store-btn small {
+            display: block;
+            font-size: 9px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            opacity: 0.55;
+            font-weight: 700;
+        }
+        .land-store-btn b {
+            font-size: 13px;
+            font-weight: 800;
+        }
+        .land-sun {
+            border-radius: 1.5rem;
+            padding: 1.2rem 1.25rem;
+            background: linear-gradient(120deg, rgba(201, 162, 39, 0.16), rgba(18, 120, 128, 0.2));
+            border: 1px solid rgba(201, 162, 39, 0.28);
         }
         :root {
             --app-tabbar-h: calc(4.75rem + env(safe-area-inset-bottom, 0px));

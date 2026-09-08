@@ -33,19 +33,39 @@
         return false;
     }
 
+    function authUrlFlags() {
+        try {
+            var q = new URLSearchParams(window.location.search || "");
+            return {
+                reset: q.get("reset") === "1",
+                code: !!q.get("code"),
+                giris: q.get("giris") === "1",
+                kayit: q.get("kayit") === "1"
+            };
+        } catch (e) {
+            return { reset: false, code: false, giris: false, kayit: false };
+        }
+    }
+
     function LandingPage(props) {
         var logo = window.AtanomLogo
             ? window.AtanomLogo("h-14 w-14 object-contain")
             : <img src="icons/atanom.png?v=18" alt="" className="h-14 w-14 object-contain" />;
         var feats = [
-            { t: "Konu konu not", d: "Tarih, coğrafya, Türkçe, vatandaşlık ve güncel. Dağınık PDF yok; sıra sıra açılır." },
-            { t: "Test ve tekrar", d: "Konu testleri kilitlenir, yanlışın kalır. Aralıklı tekrar ile unutmayı kesersin." },
-            { t: "Deneme ve oyun", d: "Tam deneme, harita, tempo. Sınav gününe kadar aynı yerde çalışırsın." }
+            { t: "Konu konu not", d: "Tarih, coğrafya, Türkçe, vatandaşlık, güncel. PDF yığını yok: her konu kendi notuyla açılır, sırayı atlayamazsın." },
+            { t: "Test ve aralıklı tekrar", d: "Paketler kilitli ilerler. Yanlışın deftere düşer; sistem zayıf konuyu öne çeker, unutma eğrisine göre geri getirir." },
+            { t: "Günlük program", d: "Sınav tarihine göre tempo, günlük soru hedefi, 30 günlük ısı haritası. Bugün ne çalışacağını uygulama söyler." }
+        ];
+        var games = [
+            { t: "Fetih haritası", d: "Türkiye illerini soruyla boya. Bölge bölge ilerle, coğrafyayı ezber değil yer olarak öğren." },
+            { t: "KPSS haritaları", d: "Fiziki, iklim, nüfus, maden, ulaşım. Konuyu seç, noktayı haritada işaretle." },
+            { t: "Tabu", d: "Yasaklı kelimelere takılmadan tanımı yakala. Vatandaşlık ve güncel için tempo." },
+            { t: "Panik ve boşluk", d: "Süre daralır, şıklar döner. Boşluk doldurma ile cümleyi tamamla — sınav stiline yakın." }
         ];
         var steps = [
-            { n: "1", t: "Hesap aç", d: "E-posta veya Google. Lisans, ön lisans, ortaöğretim — kulvarını seç." },
-            { n: "2", t: "Konuya gir", d: "Notu oku, testi çöz. İlerleme cihazında ve hesabında durur." },
-            { n: "3", t: "Seriyi bozma", d: "Günlük soru, yanlış defteri, deneme. Atama hedefine göre tempo." }
+            { n: "1", t: "Kulvarını seç", d: "Lisans, ön lisans veya ortaöğretim. Google veya e-posta. İlerleme hesabına yazılır." },
+            { n: "2", t: "Programı takip et", d: "Notu bitir, testi aç. Zayıf konu ve yanlışlar ertesi günün planına girer." },
+            { n: "3", t: "Oyunla pekiştir", d: "Harita ve tempo oyunları aynı bankadan beslenir. Eğlence ayrı uygulama değil; aynı Atanly." }
         ];
         return (
             <div className="land-page text-stone-100">
@@ -67,12 +87,12 @@
                 </header>
 
                 <section className="land-hero">
-                    <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-gold-400 mb-4">KPSS GY-GK çalışma alanı</p>
-                    <h1 className="font-display font-extrabold text-[2rem] sm:text-5xl leading-[1.12] max-w-3xl">
-                        Soru bankası değil.<br />Atamaya giden düzen.
+                    <p className="land-kicker mb-4">KPSS GY-GK · Türkiye geneli</p>
+                    <h1 className="font-display font-extrabold text-[2.05rem] sm:text-[3.15rem] leading-[1.08] max-w-3xl">
+                        Atamaya giden<br />çalışma odası.
                     </h1>
-                    <p className="mt-5 text-base sm:text-lg text-white/75 max-w-xl leading-relaxed">
-                        Not, soru, tekrar ve deneme tek yerde. Konular sırayla açılır; ilerlemen hesabına yazılır. Telefonda da, masada da aynı Atanly.
+                    <p className="mt-5 text-[15px] sm:text-lg text-white/75 max-w-2xl leading-relaxed">
+                        Atanly, dağınık kaynakları tek programa bağlar. Notu oku, kilidi aç, testi çöz, yanlışını tekrar et, haritada pekiştir. Lisans / ön lisans / ortaöğretim — aynı sistem, senin sınav takvimine göre.
                     </p>
                     <div className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md">
                         <button type="button" onClick={props.onSignup} className="flex-1 py-3.5 rounded-2xl font-bold bg-gold-500 text-stone-900 text-[15px] hover:bg-gold-400">
@@ -82,7 +102,17 @@
                             Giriş yap
                         </button>
                     </div>
-                    <p className="mt-4 text-xs text-white/45">Google ile de girebilirsin. Kart istemiyoruz.</p>
+                    <p className="mt-4 text-xs text-white/45">Google ile de girebilirsin. Kart yok, reklam için çalışma kesilmez.</p>
+                </section>
+
+                <section className="land-wide">
+                    <div className="land-sun">
+                        <p className="land-kicker mb-2">Yakında</p>
+                        <p className="font-display font-extrabold text-xl sm:text-2xl leading-snug">Her Pazar, Türkiye geneli.</p>
+                        <p className="text-sm text-white/70 mt-2 leading-relaxed">
+                            Haftanın kilidi Pazar: aynı anda Türkiye çapında tempo. Sıralama ve ortak saat yakında açılır — şimdilik not, test ve oyunlarla ısın, Pazar geldiğinde hazır ol.
+                        </p>
+                    </div>
                 </section>
 
                 <section className="land-grid">
@@ -96,8 +126,11 @@
                     })}
                 </section>
 
-                <section className="px-5 sm:px-8 max-w-3xl mx-auto pb-8">
-                    <h2 className="font-display font-bold text-xl mb-5">Nasıl işler</h2>
+                <section className="land-wide">
+                    <h2 className="font-display font-bold text-xl mb-2">Sistem, program gibi çalışır</h2>
+                    <p className="text-sm text-white/60 mb-5 max-w-2xl leading-relaxed">
+                        Rastgele soru çözmek değil. Konu kilitleri, günlük hedef, zayıf konu öne çekme, yanlış defteri, 30 günlük ısı. Bugün ne yapacağını sen aramazsın; Atanly sıraya koyar.
+                    </p>
                     <ol className="space-y-4">
                         {steps.map(function (s) {
                             return (
@@ -113,12 +146,42 @@
                     </ol>
                 </section>
 
-                <section className="px-5 sm:px-8 max-w-3xl mx-auto pb-16">
+                <section className="land-wide">
+                    <h2 className="font-display font-bold text-xl mb-2">Oyunlar da bankanın içinde</h2>
+                    <p className="text-sm text-white/60 mb-5 max-w-2xl leading-relaxed">
+                        Ayrı bir eğlence uygulaması yok. Fetih, harita, tabu, panik — hepsi GY-GK konularından üretilir. Mola verdiğin an da çalışmaya sayılır.
+                    </p>
+                    <div className="land-game">
+                        {games.map(function (g) {
+                            return (
+                                <article key={g.t} className="land-card">
+                                    <h3 className="font-display font-bold text-white mb-1.5">{g.t}</h3>
+                                    <p className="text-sm text-white/65 leading-relaxed">{g.d}</p>
+                                </article>
+                            );
+                        })}
+                    </div>
+                </section>
+
+                <section className="land-wide">
                     <div className="land-cta">
-                        <p className="font-display font-extrabold text-2xl mb-2">Bugün bir konu bitir.</p>
-                        <p className="text-sm text-white/65 mb-6">GY-GK hazır. A grubu, eğitim, ÖABT sonra gelir — şimdi asıl işe bak.</p>
+                        <p className="land-kicker mb-3">Mobil</p>
+                        <p className="font-display font-extrabold text-2xl mb-2">Yakında App Store ve Play Store{"'"}da.</p>
+                        <p className="text-sm text-white/65 mb-5 leading-relaxed">
+                            Şimdilik tarayıcıdan tam Atanly. iPhone ve Android uygulamaları yolda — aynı hesap, aynı ilerleme.
+                        </p>
+                        <div className="land-store mb-6">
+                            <div className="land-store-btn" aria-label="App Store yakında">
+                                <svg width="22" height="26" viewBox="0 0 22 26" fill="currentColor" aria-hidden="true"><path d="M18.1 13.6c0-3.2 2.6-4.7 2.7-4.8-1.5-2.2-3.8-2.5-4.6-2.5-1.9-.2-3.8 1.2-4.8 1.2-1 0-2.6-1.1-4.3-1.1-2.2 0-4.3 1.3-5.4 3.3-2.3 4-0.6 9.9 1.7 13.1 1.1 1.6 2.4 3.3 4.1 3.3 1.6-.1 2.2-1.1 4.2-1.1s2.5 1.1 4.3 1c1.8 0 2.9-1.6 4-3.2 1.2-1.8 1.7-3.5 1.7-3.6-.1 0-3.4-1.3-3.4-5.1zM15.2 4.3c.9-1.1 1.5-2.6 1.3-4.1-1.3.1-2.9.9-3.8 2-.8.9-1.6 2.4-1.4 3.8 1.5.1 3-.8 3.9-1.7z"/></svg>
+                                <span><small>Yakında</small><b>App Store</b></span>
+                            </div>
+                            <div className="land-store-btn" aria-label="Google Play yakında">
+                                <svg width="20" height="22" viewBox="0 0 20 22" aria-hidden="true"><path fill="#F5EBC7" d="M1.2 1.1c-.5.3-.8.8-.8 1.4v17c0 .6.3 1.1.8 1.4l14.6-9.9L1.2 1.1z"/><path fill="#C9A227" d="M16.8 12.3L3.8 21.1 18.6 13c.8-.5.8-1.6 0-2.1l-1.8 1.4z"/></svg>
+                                <span><small>Yakında</small><b>Google Play</b></span>
+                            </div>
+                        </div>
                         <button type="button" onClick={props.onSignup} className="w-full sm:w-auto px-8 py-3.5 rounded-2xl font-bold bg-gold-500 text-stone-900">
-                            Atanly ile başla
+                            Web{"'"}de şimdi başla
                         </button>
                     </div>
                     <p className="text-[10px] text-center text-white/35 mt-8 leading-relaxed">
@@ -192,6 +255,38 @@
         const passRef = useRef(null);
         const nameRef = useRef(null);
 
+        function goAuth(which) {
+            var modeNext = which === "up" ? "up" : "in";
+            setShowLand(false);
+            setMode(modeNext);
+            if (modeNext === "up") setStep(1);
+            setMsg("");
+            try {
+                var flags = authUrlFlags();
+                if (flags.reset || flags.code) return;
+                var u = new URL(window.location.href);
+                u.searchParams.delete("giris");
+                u.searchParams.delete("kayit");
+                u.searchParams.set(modeNext === "up" ? "kayit" : "giris", "1");
+                window.history.pushState(
+                    { atanlyView: "auth", atanlyMode: modeNext },
+                    "",
+                    u.pathname + u.search + u.hash
+                );
+            } catch (e) {}
+        }
+
+        function goLand() {
+            try {
+                if (window.history.state && window.history.state.atanlyView === "auth") {
+                    window.history.back();
+                    return;
+                }
+            } catch (e) {}
+            setShowLand(true);
+            setMsg("");
+        }
+
         useEffect(function () {
             if (props.recovery) setRecovery(true);
         }, [props.recovery]);
@@ -202,10 +297,47 @@
 
         useEffect(function () {
             try {
-                var q = new URLSearchParams(window.location.search || "");
-                if (q.get("kayit") === "1") setMode("up");
+                var flags = authUrlFlags();
+                if (flags.kayit) setMode("up");
             } catch (e) {}
         }, []);
+
+        useEffect(function () {
+            if (recovery || props.recovery) return;
+            try {
+                var flags = authUrlFlags();
+                if (flags.reset || flags.code) return;
+                var u = new URL(window.location.href);
+                var isAuth = flags.giris || flags.kayit;
+                var authHref = u.pathname + u.search + u.hash;
+                var modeNow = flags.kayit ? "up" : "in";
+                u.searchParams.delete("giris");
+                u.searchParams.delete("kayit");
+                var landHref = u.pathname + u.search + u.hash;
+                if (isAuth) {
+                    window.history.replaceState({ atanlyView: "land" }, "", landHref);
+                    window.history.pushState({ atanlyView: "auth", atanlyMode: modeNow }, "", authHref);
+                } else if (!(window.history.state && window.history.state.atanlyView)) {
+                    window.history.replaceState({ atanlyView: "land" }, "", landHref);
+                }
+            } catch (e) {}
+        }, []);
+
+        useEffect(function () {
+            function onPop(e) {
+                if (recovery || props.recovery) return;
+                var st = e.state;
+                if (st && st.atanlyView === "auth") {
+                    setShowLand(false);
+                    if (st.atanlyMode === "up" || st.atanlyMode === "in") setMode(st.atanlyMode);
+                } else {
+                    setShowLand(true);
+                    setMsg("");
+                }
+            }
+            window.addEventListener("popstate", onPop);
+            return function () { window.removeEventListener("popstate", onPop); };
+        }, [recovery, props.recovery]);
 
         useEffect(function () {
             if (!sb) return;
@@ -883,7 +1015,7 @@
                 ) : (
                     <div>
                 {props.gate ? (
-                    <button type="button" onClick={function () { setShowLand(true); setMsg(""); }} className="mb-4 text-sm font-medium text-stone-500 hover:text-stone-800">
+                    <button type="button" onClick={goLand} className="mb-4 text-sm font-medium text-stone-500 hover:text-stone-800">
                         ← Tanıtıma dön
                     </button>
                 ) : null}
@@ -965,8 +1097,8 @@
         if (showLand && !recovery) {
             return (
                 <LandingPage
-                    onLogin={function () { setShowLand(false); setMode("in"); setMsg(""); }}
-                    onSignup={function () { setShowLand(false); setMode("up"); setStep(1); setMsg(""); }}
+                    onLogin={function () { goAuth("in"); }}
+                    onSignup={function () { goAuth("up"); }}
                 />
             );
         }
