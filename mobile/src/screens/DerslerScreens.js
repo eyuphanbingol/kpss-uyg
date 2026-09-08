@@ -490,7 +490,6 @@ var styles = StyleSheet.create({
         color: colors.text,
         flexShrink: 1,
     },
-    },
     konuMeta: {
         color: colors.muted,
         fontSize: 11,
