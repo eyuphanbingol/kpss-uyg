@@ -222,6 +222,8 @@ window.cografya_3_sorulari = [
     "explanation": "Hatay'daki Amanos (Nur) Dağları kırılma sonucu yüksekte kalan bir blok (horst), önünde uzanan tarım ambarı Amik Ovası ise çöküntü alanıdır (graben)."
   },
   {
+    "id": "18",
+    "question": "Ege Bölgesi'nde dağların kıyıya dik uzanmasının sonuçlarından hangisi doğrudur?",
     "options": [
       "A) Kıyıların oldukça sade olması",
       "B) Koy, körfez ve adaların az olması",
