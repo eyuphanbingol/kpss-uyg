@@ -61,6 +61,22 @@
             { src: "img/landing/fethet.png?v=1", t: "Türkiye'yi Fethet" },
             { src: "img/landing/kavram.png?v=1", t: "Kavram · az ipucu" }
         ];
+        var feats = [
+            { t: "Konu konu not", d: "Tarih, coğrafya, Türkçe, vatandaşlık, güncel. PDF yığını yok: her konu kendi notuyla açılır, sırayı atlayamazsın." },
+            { t: "Test ve aralıklı tekrar", d: "Paketler kilitli ilerler. Yanlışın deftere düşer; sistem zayıf konuyu öne çeker, unutma eğrisine göre geri getirir." },
+            { t: "Günlük program", d: "Sınav tarihine göre tempo, günlük soru hedefi, 30 günlük ısı haritası. Bugün ne çalışacağını uygulama söyler." }
+        ];
+        var games = [
+            { t: "Fetih haritası", d: "Türkiye illerini soruyla boya. Bölge bölge ilerle, coğrafyayı ezber değil yer olarak öğren." },
+            { t: "KPSS haritaları", d: "Fiziki, iklim, nüfus, maden, ulaşım. Konuyu seç, noktayı haritada işaretle." },
+            { t: "Tabu", d: "Yasaklı kelimelere takılmadan tanımı yakala. Vatandaşlık ve güncel için tempo." },
+            { t: "Panik ve boşluk", d: "Süre daralır, şıklar döner. Boşluk doldurma ile cümleyi tamamla — sınav stiline yakın." }
+        ];
+        var steps = [
+            { n: "1", t: "Kulvarını seç", d: "Lisans, ön lisans veya ortaöğretim. Google veya e-posta. İlerleme hesabına yazılır." },
+            { n: "2", t: "Programı takip et", d: "Notu bitir, testi aç. Zayıf konu ve yanlışlar ertesi günün planına girer." },
+            { n: "3", t: "Oyunla pekiştir", d: "Harita ve tempo oyunları aynı bankadan beslenir. Eğlence ayrı uygulama değil; aynı Atanly." }
+        ];
         return (
             <div className="land-page text-stone-100">
                 <header className="land-nav">
@@ -86,7 +102,7 @@
                         Atamaya giden<br />çalışma odası.
                     </h1>
                     <p className="mt-5 text-[15px] sm:text-lg text-white/75 max-w-2xl leading-relaxed">
-                        KPSS GY-GK. Aşağıdaki ekranlar uygulamanın kendisi.
+                        Atanly, dağınık kaynakları tek programa bağlar. Notu oku, kilidi aç, testi çöz, yanlışını tekrar et, haritada pekiştir. Lisans / ön lisans / ortaöğretim — aynı sistem, senin sınav takvimine göre.
                     </p>
                     <div className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md">
                         <button type="button" onClick={props.onSignup} className="flex-1 py-3.5 rounded-2xl font-bold bg-gold-500 text-stone-900 text-[15px] hover:bg-gold-400">
@@ -104,12 +120,61 @@
                         <p className="land-kicker mb-2">Yakında</p>
                         <p className="font-display font-extrabold text-xl sm:text-2xl leading-snug">Her Pazar, Türkiye geneli.</p>
                         <p className="text-sm text-white/70 mt-2 leading-relaxed">
-                            Ortak tempo ve sıralama yolda. Şimdilik hedef, test ve oyunla ısın; Pazar geldiğinde hazır ol.
+                            Haftanın kilidi Pazar: aynı anda Türkiye çapında tempo. Sıralama ve ortak saat yakında açılır — şimdilik not, test ve oyunlarla ısın, Pazar geldiğinde hazır ol.
                         </p>
                     </div>
                 </section>
 
+                <section className="land-grid">
+                    {feats.map(function (f) {
+                        return (
+                            <article key={f.t} className="land-card">
+                                <h2 className="font-display font-bold text-lg text-white mb-2">{f.t}</h2>
+                                <p className="text-sm text-white/65 leading-relaxed">{f.d}</p>
+                            </article>
+                        );
+                    })}
+                </section>
+
                 <section className="land-wide">
+                    <h2 className="font-display font-bold text-xl mb-2">Sistem, program gibi çalışır</h2>
+                    <p className="text-sm text-white/60 mb-5 max-w-2xl leading-relaxed">
+                        Rastgele soru çözmek değil. Konu kilitleri, günlük hedef, zayıf konu öne çekme, yanlış defteri, 30 günlük ısı. Bugün ne yapacağını sen aramazsın; Atanly sıraya koyar.
+                    </p>
+                    <ol className="space-y-4">
+                        {steps.map(function (s) {
+                            return (
+                                <li key={s.n} className="flex gap-4">
+                                    <span className="land-stepnum">{s.n}</span>
+                                    <div>
+                                        <p className="font-semibold">{s.t}</p>
+                                        <p className="text-sm text-white/60 mt-0.5 leading-relaxed">{s.d}</p>
+                                    </div>
+                                </li>
+                            );
+                        })}
+                    </ol>
+                </section>
+
+                <section className="land-wide">
+                    <h2 className="font-display font-bold text-xl mb-2">Oyunlar da bankanın içinde</h2>
+                    <p className="text-sm text-white/60 mb-5 max-w-2xl leading-relaxed">
+                        Ayrı bir eğlence uygulaması yok. Fetih, harita, tabu, panik — hepsi GY-GK konularından üretilir. Mola verdiğin an da çalışmaya sayılır.
+                    </p>
+                    <div className="land-game">
+                        {games.map(function (g) {
+                            return (
+                                <article key={g.t} className="land-card">
+                                    <h3 className="font-display font-bold text-white mb-1.5">{g.t}</h3>
+                                    <p className="text-sm text-white/65 leading-relaxed">{g.d}</p>
+                                </article>
+                            );
+                        })}
+                    </div>
+                </section>
+
+                <section className="land-wide">
+                    <h2 className="font-display font-bold text-xl mb-4">Uygulamadan</h2>
                     <div className="land-shots">
                         {shots.map(function (s) {
                             return (

@@ -292,7 +292,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.86.0/dist/umd/supabase.js"></script>
     <script src="js/supabaseClient.js?v=18"></script>
     <script src="js/syncEngine.js?v=29"></script>
-    <script src="js/jsxLoader.js?v=69"></script>
+    <script src="js/jsxLoader.js?v=70"></script>
     <script src="js/icons.js?v=18"></script>
 
     <style>
@@ -474,6 +474,13 @@
             font-weight: 800;
             color: #F5EBC7;
             background: #041C24;
+        }
+        .land-game {
+            display: grid;
+            gap: 10px;
+        }
+        @media (min-width: 640px) {
+            .land-game { grid-template-columns: 1fr 1fr; }
         }
         .land-store {
             display: flex;
