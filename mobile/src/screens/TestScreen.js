@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, ScrollView } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { useApp } from "../AppProvider";
 import { StudentStore } from "../lib/store";
-import { confirmQuit, PrimaryButton, Screen, ScrollScreen, Card, Badge, Tap } from "../ui";
+import { confirmQuit, PrimaryButton, Screen, ScrollScreen, Badge, Tap, ThemeToggle } from "../ui";
 import { colors } from "../lib/theme";
 import { questionImages } from "../lib/media";
 import { ZoomableImage } from "../components/ZoomableImage";
@@ -15,6 +17,9 @@ function stripChoicePrefix(opt) {
 }
 
 export default function TestScreen({ route, navigation }) {
+    var app = useApp();
+    var isDark = app.dark;
+    var insets = useSafeAreaInsets();
     var items = route.params.items || [];
     var mode = route.params.mode || "topic";
     var seconds = route.params.seconds || null;
@@ -129,12 +134,11 @@ export default function TestScreen({ route, navigation }) {
 
     if (!items.length) {
         return (
-            <ScrollScreen>
+            <ScrollScreen dark={isDark}>
                 <View style={styles.emptyContainer}>
-                    <Text style={styles.emptyIcon}>📝</Text>
-                    <Text style={styles.emptyTitle}>Soru Bulunamadı</Text>
-                    <Text style={styles.emptyDesc}>Bu test için soru yüklenmemiş.</Text>
-                    <PrimaryButton title="Geri Dön" onPress={function () { navigation.goBack(); }} />
+                    <Text style={styles.emptyTitle}>Soru bulunamadı</Text>
+                    <Text style={[styles.emptyDesc, isDark && { color: "#94A3B8" }]}>Bu test için soru yüklenmemiş.</Text>
+                    <PrimaryButton title="Geri dön" onPress={function () { navigation.goBack(); }} />
                 </View>
             </ScrollScreen>
         );
@@ -154,7 +158,7 @@ export default function TestScreen({ route, navigation }) {
         var levelColor = oran >= 85 ? colors.emerald : oran >= 60 ? colors.indigo : oran >= 40 ? colors.amber : colors.rose;
 
         return (
-            <ScrollScreen>
+            <ScrollScreen dark={isDark}>
                 {/* Header */}
                 <View style={styles.resultHeader}>
                     <Text style={styles.resultTitle}>{testNo ? ("Test " + testNo + " bitti") : "Tur Bitti"}</Text>
@@ -228,144 +232,150 @@ export default function TestScreen({ route, navigation }) {
     var ss = left != null ? String(left % 60).padStart(2, "0") : "";
     var progress = ((qIndex + 1) / items.length) * 100;
     var isLast = qIndex + 1 === items.length;
-
-    // Timer color
-    var timerColor = left != null 
-        ? (left <= 60 ? colors.rose : left <= 300 ? colors.amber : colors.indigo)
-        : colors.indigo;
+    var timerColor = left != null
+        ? (left <= 60 ? colors.rose : left <= 300 ? colors.amber : "#D97706")
+        : "#D97706";
 
     return (
-        <Screen>
-            <View style={styles.testContainer}>
-                {/* Header */}
+        <Screen dark={isDark} noBottom>
+            <View style={[styles.testContainer, isDark && styles.testContainerDark]}>
                 <View style={styles.testHeader}>
-                    <Tap 
-                        onPress={function () { 
-                            confirmQuit(function () { navigation.goBack(); }); 
+                    <Tap
+                        onPress={function () {
+                            confirmQuit(function () { navigation.goBack(); });
                         }}
                         style={styles.testQuit}
                     >
-                        <Text style={styles.testQuitText}>✕ Bitir</Text>
+                        <Text style={[styles.testQuitText, isDark && { color: "#94A3B8" }]}>Bitir</Text>
                     </Tap>
                     <View style={styles.testInfo}>
-                        <Text style={styles.testCounter}>
+                        <Text style={[styles.testCounter, isDark && { color: "#E2E8F0" }]}>
                             {testNo ? ("Test " + testNo + " · ") : ""}{qIndex + 1}/{items.length}
                         </Text>
                         <Text style={styles.testScore}>
-                            ✓ {score}
+                            {score} doğru
                         </Text>
-                        {left != null && (
+                        {left != null ? (
                             <Text style={[styles.testTimer, { color: timerColor }]}>
-                                ⏱ {mm}:{ss}
+                                {mm}:{ss}
                             </Text>
-                        )}
+                        ) : null}
+                        <ThemeToggle dark={isDark} />
                     </View>
                 </View>
 
-                {/* Progress Bar */}
-                <View style={styles.testProgress}>
+                <View style={[styles.testProgress, isDark && { backgroundColor: "#334155" }]}>
                     <View style={[styles.testProgressFill, { width: progress + "%" }]} />
                 </View>
 
-                {/* Question Meta */}
-                {item.ders && (
-                    <View style={styles.testMeta}>
-                        <Badge type="primary" title={item.ders} />
-                        <Text style={styles.testKonu}>{item.konu}</Text>
-                    </View>
-                )}
-
-                {/* Question */}
-                <Text style={styles.testQuestion}>{soru.question}</Text>
-                {questionImages(soru).map(function (uri, gi) {
-                    return (
-                        <View key={uri + gi} style={styles.testImgWrap}>
-                            <ZoomableImage uri={uri} />
+                <ScrollView
+                    style={styles.testScroll}
+                    contentContainerStyle={styles.testScrollInner}
+                    showsVerticalScrollIndicator={false}
+                    keyboardShouldPersistTaps="handled"
+                >
+                    {item.ders ? (
+                        <View style={styles.testMeta}>
+                            <Badge type="warning" title={item.ders} />
+                            <Text style={[styles.testKonu, isDark && { color: "#94A3B8" }]}>{item.konu}</Text>
                         </View>
-                    );
-                })}
+                    ) : null}
 
-                {/* Options */}
-                <View style={styles.testOptions}>
-                    {(soru.options || []).map(function (opt, i) {
-                        var isCorrect = i === soru.correctAnswerIndex;
-                        var isPicked = i === picked;
-                        var isAnswered = answered;
-
-                        var bgColor = "#fff";
-                        var textColor = colors.text;
-                        var borderColor = colors.border;
-
-                        if (isAnswered) {
-                            if (isCorrect) {
-                                bgColor = colors.emerald + "15";
-                                borderColor = colors.emerald;
-                                textColor = colors.emerald;
-                            } else if (isPicked) {
-                                bgColor = colors.rose + "15";
-                                borderColor = colors.rose;
-                                textColor = colors.rose;
-                            } else {
-                                bgColor = "#F5F5F4";
-                                borderColor = "#E7E5E4";
-                                textColor = colors.muted;
-                            }
-                        }
-
-                        var letter = String.fromCharCode(65 + i);
-
+                    <Text style={[styles.testQuestion, isDark && { color: "#F8FAFC" }]}>{soru.question}</Text>
+                    {questionImages(soru).map(function (uri, gi) {
                         return (
-                            <Tap 
-                                key={i} 
-                                disabled={answered} 
-                                onPress={function () { onAnswer(i); }}
-                                style={[
-                                    styles.testOption,
-                                    { 
-                                        backgroundColor: bgColor, 
-                                        borderColor: borderColor,
-                                        opacity: isAnswered && !isCorrect && !isPicked ? 0.5 : 1,
-                                    }
-                                ]}
-                            >
-                                <View style={[
-                                    styles.testOptionLetter,
-                                    isAnswered && isCorrect && styles.testOptionLetterCorrect,
-                                    isAnswered && isPicked && !isCorrect && styles.testOptionLetterWrong,
-                                ]}>
-                                    <Text style={[
-                                        styles.testOptionLetterText,
-                                        isAnswered && (isCorrect || (isPicked && !isCorrect)) && { color: "#fff" }
-                                    ]}>
-                                        {letter}
-                                    </Text>
-                                </View>
-                                <Text style={[styles.testOptionText, { color: textColor }]}>
-                                    {stripChoicePrefix(opt)}
-                                </Text>
-                                {isAnswered && isCorrect && (
-                                    <Text style={styles.testOptionCheck}>✓</Text>
-                                )}
-                                {isAnswered && isPicked && !isCorrect && (
-                                    <Text style={styles.testOptionCheck}>✕</Text>
-                                )}
-                            </Tap>
+                            <View key={uri + gi} style={styles.testImgWrap}>
+                                <ZoomableImage uri={uri} dark={isDark} />
+                            </View>
                         );
                     })}
-                </View>
 
-                {/* Explanation */}
-                {answered && (
-                    <View style={styles.testExplanation}>
-                        <Text style={styles.testExplanationLabel}>💡 Çözüm Notu</Text>
-                        <Text style={styles.testExplanationText}>{soru.explanation || "Çözüm notu bulunmuyor."}</Text>
-                        <PrimaryButton 
-                            title={isLast ? "📊 Sonuçları Gör" : "➡️ Sonraki Soru"} 
-                            onPress={next} 
-                            style={styles.testNextBtn}
+                    <View style={styles.testOptions}>
+                        {(soru.options || []).map(function (opt, i) {
+                            var isCorrect = i === soru.correctAnswerIndex;
+                            var isPicked = i === picked;
+                            var isAnswered = answered;
+                            var bgColor = isDark ? "#1E293B" : "#fff";
+                            var textColor = isDark ? "#E2E8F0" : colors.text;
+                            var borderColor = isDark ? "#334155" : colors.border;
+
+                            if (isAnswered) {
+                                if (isCorrect) {
+                                    bgColor = "#ECFDF5";
+                                    borderColor = "#059669";
+                                    textColor = "#065F46";
+                                } else if (isPicked) {
+                                    bgColor = "#FFF1F2";
+                                    borderColor = "#E11D48";
+                                    textColor = "#9F1239";
+                                } else {
+                                    bgColor = isDark ? "#0F172A" : "#F8FAFC";
+                                    borderColor = isDark ? "#334155" : "#E2E8F0";
+                                    textColor = "#94A3B8";
+                                }
+                            }
+
+                            var letter = String.fromCharCode(65 + i);
+
+                            return (
+                                <Tap
+                                    key={i}
+                                    disabled={answered}
+                                    onPress={function () { onAnswer(i); }}
+                                    style={[
+                                        styles.testOption,
+                                        {
+                                            backgroundColor: bgColor,
+                                            borderColor: borderColor,
+                                        }
+                                    ]}
+                                >
+                                    <View style={[
+                                        styles.testOptionLetter,
+                                        isAnswered && isCorrect && styles.testOptionLetterCorrect,
+                                        isAnswered && isPicked && !isCorrect && styles.testOptionLetterWrong,
+                                    ]}>
+                                        <Text style={[
+                                            styles.testOptionLetterText,
+                                            isAnswered && (isCorrect || (isPicked && !isCorrect)) && { color: "#fff" }
+                                        ]}>
+                                            {letter}
+                                        </Text>
+                                    </View>
+                                    <Text style={[styles.testOptionText, { color: textColor }]}>
+                                        {stripChoicePrefix(opt)}
+                                    </Text>
+                                    {isAnswered && isCorrect ? (
+                                        <Text style={[styles.testOptionCheck, { color: "#059669" }]}>✓</Text>
+                                    ) : null}
+                                    {isAnswered && isPicked && !isCorrect ? (
+                                        <Text style={[styles.testOptionCheck, { color: "#E11D48" }]}>×</Text>
+                                    ) : null}
+                                </Tap>
+                            );
+                        })}
+                    </View>
+
+                    {answered ? (
+                        <View style={[styles.testExplanation, isDark && styles.testExplanationDark]}>
+                            <Text style={styles.testExplanationLabel}>Çözüm notu</Text>
+                            <Text style={[styles.testExplanationText, isDark && { color: "#E2E8F0" }]}>
+                                {soru.explanation || "Bu soru için kayıtlı çözüm yok."}
+                            </Text>
+                        </View>
+                    ) : (
+                        <View style={{ height: 16 }} />
+                    )}
+                </ScrollView>
+
+                {answered ? (
+                    <View style={[styles.testFooter, isDark && styles.testFooterDark, { paddingBottom: Math.max(insets.bottom, 12) }]}>
+                        <PrimaryButton
+                            title={isLast ? "Sonuçları gör" : "Sonraki soru"}
+                            onPress={next}
                         />
                     </View>
-                )}
+                ) : null}
             </View>
         </Screen>
     );
@@ -382,10 +392,6 @@ var styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         padding: 20,
-    },
-    emptyIcon: {
-        fontSize: 48,
-        marginBottom: 12,
     },
     emptyTitle: {
         fontSize: 18,
@@ -480,7 +486,18 @@ var styles = StyleSheet.create({
     // ---------- Test ----------
     testContainer: {
         flex: 1,
-        padding: 16,
+        paddingHorizontal: 16,
+        paddingTop: 12,
+    },
+    testContainerDark: {
+        backgroundColor: "#0F172A",
+    },
+    testScroll: {
+        flex: 1,
+    },
+    testScrollInner: {
+        paddingBottom: 24,
+        flexGrow: 1,
     },
     testHeader: {
         flexDirection: "row",
@@ -550,12 +567,11 @@ var styles = StyleSheet.create({
         alignItems: "center",
     },
     testOptions: {
-        flex: 1,
         gap: 8,
     },
     testOption: {
         flexDirection: "row",
-        alignItems: "center",
+        alignItems: "flex-start",
         borderWidth: 2,
         borderRadius: 14,
         padding: 14,
@@ -593,12 +609,16 @@ var styles = StyleSheet.create({
         color: colors.emerald,
     },
     testExplanation: {
-        marginTop: 12,
+        marginTop: 16,
         padding: 14,
         backgroundColor: colors.indigo + "08",
         borderRadius: 14,
         borderWidth: 1,
         borderColor: colors.indigo + "20",
+    },
+    testExplanationDark: {
+        backgroundColor: "#1E293B",
+        borderColor: "#334155",
     },
     testExplanationLabel: {
         fontSize: 12,
@@ -610,9 +630,16 @@ var styles = StyleSheet.create({
         fontSize: 14,
         color: colors.text,
         lineHeight: 20,
-        marginBottom: 12,
     },
-    testNextBtn: {
-        marginTop: 0,
+    testFooter: {
+        paddingTop: 10,
+        paddingHorizontal: 0,
+        borderTopWidth: 1,
+        borderTopColor: "#E2E8F0",
+        backgroundColor: "#fff",
+    },
+    testFooterDark: {
+        borderTopColor: "#334155",
+        backgroundColor: "#0F172A",
     },
 });
