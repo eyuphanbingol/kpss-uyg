@@ -1075,7 +1075,14 @@
             "Elmalı Ovası": ["TR07", -0.18, 0.22],
             "Acıpayam Ovası": ["TR20", 0.10, 0.35],
             "Zigana Geçidi": ["TR61", 0.10, 0.35],
-            "Ovit Geçidi": ["TR53", 0.05, 0.35]
+            "Ovit Geçidi": ["TR53", 0.05, 0.35],
+            "Kaz Dağı": ["TR10", -0.42, -0.12],
+            "Madra Dağları": ["TR10", 0.28, 0.42],
+            "Yunt Dağları": ["TR45", -0.42, -0.32],
+            "Bozdağlar": ["TR35", 0.58, 0.22],
+            "Aydın Dağları": ["TR09", 0.08, -0.08],
+            "Menteşe Dağları": ["TR48", 0.05, 0.12],
+            "Nur (Amanos) Dağları": ["TR31", 0.18, -0.22]
     };
 
     function pinHomeCode(it) {

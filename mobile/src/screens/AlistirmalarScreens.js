@@ -488,7 +488,7 @@ export function MapPlayScreen({ route, navigation }) {
                 mode="play"
                 pins={layer.pins || []}
                 glyph={glyph}
-                separate={topicId === "volkanik" ? 20 : 36}
+                separate={topicId === "volkanik" ? 20 : (topicId === "kirik" ? 50 : 36)}
                 picked={picked}
                 targetId={step.item && step.item.id}
                 cleared={clearedMap}
