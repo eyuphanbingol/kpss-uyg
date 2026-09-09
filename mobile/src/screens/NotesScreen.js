@@ -1,7 +1,6 @@
 import React, { memo, useCallback, useEffect, useMemo, useState } from "react";
-import { Dimensions, Image, Pressable, Text, View, StyleSheet } from "react-native";
+import { Dimensions, FlatList, Image, Pressable, Text, View, StyleSheet } from "react-native";
 import RenderHTML from "react-native-render-html";
-import { FlashList } from "@shopify/flash-list";
 import { ChevronLeft, ChevronRight, Settings } from "lucide-react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useApp } from "../AppProvider";
@@ -222,14 +221,17 @@ export default function NotesScreen({ route, navigation }) {
                 </Pressable>
             </View>
 
-            <FlashList
+            <FlatList
                 data={blocks}
                 renderItem={renderItem}
                 keyExtractor={keyExtractor}
-                estimatedItemSize={92}
                 extraData={isDark}
                 style={{ flex: 1 }}
                 contentContainerStyle={styles.listContent}
+                showsVerticalScrollIndicator={false}
+                initialNumToRender={8}
+                windowSize={7}
+                removeClippedSubviews
             />
 
             <View style={[styles.bar, isDark && styles.barDark, { paddingBottom: Math.max(insets.bottom, 10) }]}>
