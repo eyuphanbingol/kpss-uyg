@@ -9,7 +9,7 @@ import { Card, ScrollScreen, PageHeader, Tap } from "../ui";
 import { colors, examTrackName, DERS_ICON } from "../lib/theme";
 
 var DASH_COLORS = ["#4f46e5", "#7c3aed", "#ec4899", "#f59e0b", "#10b981", "#6366f1"];
-var WEEK_BAR = ["#4f46e5", "#7c3aed", "#6366f1", "#8b5cf6", "#a78bfa", "#c084fc", "#ddd6fe"];
+var WEEK_BAR = ["#CBD5E1", "#94A3B8", "#64748B", "#D97706", "#F59E0B", "#FCD34D", "#E2E8F0"];
 var DAY_NAMES = ["Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz"];
 var DERS_ACCENT = { "Tarih": "#ea580c", "Coğrafya": "#059669", "Türkçe": "#2563eb", "Vatandaşlık": "#7c3aed", "Güncel Bilgiler": "#db2777" };
 
@@ -103,7 +103,7 @@ export default function BugunScreen({ navigation }) {
                 }
             />
 
-            <LinearGradient colors={["#4f46e5", "#7c3aed"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.banner}>
+            <LinearGradient colors={["#0F172A", "#1E293B"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.banner}>
                 <View style={styles.bannerRow}>
                     <View style={{ flex: 1, minWidth: 0 }}>
                         <Text style={styles.bannerLabel}>Sınav takvimi</Text>
@@ -133,7 +133,7 @@ export default function BugunScreen({ navigation }) {
                             <Text style={styles.pctLabel}>{pct}%</Text>
                         </View>
                         <View style={[styles.progressBar, { marginTop: 8, marginBottom: 10 }]}>
-                            <View style={[styles.progressFill, { width: Math.min(100, pct) + "%", backgroundColor: "#4f46e5" }]} />
+                            <View style={[styles.progressFill, { width: Math.min(100, pct) + "%", backgroundColor: "#D97706" }]} />
                         </View>
                         <Text style={[styles.goalLine, isDark && styles.textMuted]}>Bugünkü hedef · {goalLine}</Text>
                         {todaySlots.map(function (s, i) {

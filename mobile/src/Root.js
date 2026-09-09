@@ -4,7 +4,7 @@ import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import Svg, { Path } from "react-native-svg";
+import { House, BookOpen, Zap, BarChart3, User } from "lucide-react-native";
 import { useApp } from "./AppProvider";
 import AuthScreen from "./screens/AuthScreen";
 import OnboardingScreen from "./screens/OnboardingScreen";
@@ -35,52 +35,12 @@ var Tab = createBottomTabNavigator();
 // ============================================================
 
 var TAB_SCREENS = [
-    {
-        name: "BugunTab",
-        component: BugunScreen,
-        label: "Bugün",
-        icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
-        streak: true,
-    },
-    {
-        name: "DerslerTab",
-        component: DersHomeScreen,
-        label: "Dersler",
-        icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253",
-    },
-    {
-        name: "AlistirmalarTab",
-        component: AlistirmalarHomeScreen,
-        label: "Alıştırmalar",
-        icon: "M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z",
-    },
-    {
-        name: "EksiklerTab",
-        component: EksiklerScreen,
-        label: "Eksikler",
-        icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
-    },
-    {
-        name: "BenTab",
-        component: BenScreen,
-        label: "Ben",
-        icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z",
-    },
+    { name: "BugunTab", component: BugunScreen, label: "Bugün", Icon: House, streak: true },
+    { name: "DerslerTab", component: DersHomeScreen, label: "Dersler", Icon: BookOpen },
+    { name: "AlistirmalarTab", component: AlistirmalarHomeScreen, label: "Alıştırmalar", Icon: Zap, featured: true },
+    { name: "EksiklerTab", component: EksiklerScreen, label: "Eksikler", Icon: BarChart3 },
+    { name: "BenTab", component: BenScreen, label: "Ben", Icon: User },
 ];
-
-function TabGlyph(props) {
-    return (
-        <Svg width={20} height={20} viewBox="0 0 24 24" fill="none">
-            <Path
-                d={props.d}
-                stroke={props.color}
-                strokeWidth={props.focused ? 2.2 : 1.7}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            />
-        </Svg>
-    );
-}
 
 function AppTabBar(props) {
     var { isDark, student } = useApp();
@@ -94,8 +54,8 @@ function AppTabBar(props) {
             style={[
                 styles.tabBar,
                 {
-                    backgroundColor: isDark ? "rgba(33, 31, 29, 0.96)" : "rgba(255,255,255,0.94)",
-                    borderTopColor: isDark ? "rgba(255,255,255,0.08)" : "rgba(226, 232, 240, 0.9)",
+                    backgroundColor: isDark ? "#0F172A" : "#FFFFFF",
+                    borderTopColor: isDark ? "#334155" : "#E2E8F0",
                     paddingBottom: Math.max(insets.bottom, 8),
                 },
             ]}
@@ -104,13 +64,15 @@ function AppTabBar(props) {
                 {state.routes.map(function (route, index) {
                     var focused = state.index === index;
                     var meta = TAB_SCREENS[index];
-                    var color = focused ? colors.indigo : (isDark ? "#A8A29E" : "#78716C");
+                    var color = focused ? "#D97706" : (isDark ? "#94A3B8" : "#64748B");
+                    var Icon = meta.Icon;
                     return (
                         <Pressable
                             key={route.key}
                             accessibilityRole="button"
                             accessibilityState={{ selected: focused }}
                             accessibilityLabel={meta.label}
+                            android_ripple={{ color: "rgba(0,0,0,0.05)" }}
                             onPress={function () {
                                 hapticTap();
                                 var event = navigation.emit({
@@ -122,10 +84,10 @@ function AppTabBar(props) {
                                     navigation.navigate(route.name);
                                 }
                             }}
-                            style={[styles.tabItem, focused && (isDark ? styles.tabItemOnDark : styles.tabItemOn)]}
+                            style={[styles.tabItem, meta.featured && styles.tabFeatured]}
                         >
-                            <View style={styles.tabIconWrap}>
-                                <TabGlyph d={meta.icon} color={color} focused={focused} />
+                            <View style={[styles.tabIconWrap, meta.featured && styles.tabFeaturedIcon, focused && meta.featured && styles.tabFeaturedIconOn]}>
+                                <Icon size={meta.featured ? 22 : 20} color={meta.featured && focused ? "#fff" : color} strokeWidth={focused ? 2.4 : 1.8} />
                                 {meta.streak && streak > 0 ? <View style={styles.streakDot} /> : null}
                             </View>
                             <Text style={[styles.tabLabel, { color: color }]} numberOfLines={1}>
@@ -319,11 +281,7 @@ export default function Root() {
 var styles = StyleSheet.create({
     tabBar: {
         borderTopWidth: 1,
-        elevation: 12,
-        shadowColor: "#000",
-        shadowOffset: { width: 0, height: -4 },
-        shadowOpacity: 0.06,
-        shadowRadius: 16,
+        elevation: 0,
     },
     tabRow: {
         flexDirection: "row",
@@ -339,11 +297,21 @@ var styles = StyleSheet.create({
         paddingVertical: 8,
         borderRadius: 16,
     },
-    tabItemOn: {
-        backgroundColor: "rgba(238, 242, 255, 0.85)",
+    tabItemOn: {},
+    tabItemOnDark: {},
+    tabFeatured: {
+        marginTop: -6,
     },
-    tabItemOnDark: {
-        backgroundColor: "rgba(49, 46, 129, 0.28)",
+    tabFeaturedIcon: {
+        width: 44,
+        height: 44,
+        borderRadius: 22,
+        backgroundColor: "#FEF3C7",
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    tabFeaturedIconOn: {
+        backgroundColor: "#0F172A",
     },
     tabIconWrap: {
         width: 22,

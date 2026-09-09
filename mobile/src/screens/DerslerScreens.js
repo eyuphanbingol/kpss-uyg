@@ -5,8 +5,9 @@ import { StudyPlanner } from "../lib/planner";
 import { StudentStore } from "../lib/store";
 import { KpssConfig } from "../lib/config";
 import { go } from "../nav";
-import { Card, ScrollScreen, Badge, BackChip, PageHeader, DersIconBox } from "../ui";
-import { colors, DERS_ICON, masteryLabel } from "../lib/theme";
+import { Card, ScrollScreen, Badge, BackChip, PageHeader } from "../ui";
+import { colors, masteryLabel } from "../lib/theme";
+import { AccentCard, PctBadge } from "../kit";
 
 function itemsFromSorular(ders, konu, sorular) {
     return (sorular || []).map(function (q, idx) {
@@ -52,23 +53,17 @@ export function DersHomeScreen({ navigation }) {
             {Object.keys(kpssData).map(function (ders) {
                 var s = stats[ders] || { konuSayisi: 0, soruSayisi: 0 };
                 return (
-                    <Card
+                    <AccentCard
                         key={ders}
                         dark={isDark}
+                        chevron
                         onPress={function () { go(navigation, "KonuList", { ders: ders }); }}
-                        style={styles.dersCard}
                     >
-                            <View style={styles.dersRow}>
-                                <DersIconBox icon={DERS_ICON[ders] || "📚"} />
-                                <View style={styles.dersInfo}>
-                                    <Text style={[styles.dersName, isDark && styles.textLight]}>{ders}</Text>
-                                    <Text style={[styles.dersMeta, isDark && styles.textMuted]}>
-                                        {s.konuSayisi} konu · {s.soruSayisi} soru
-                                    </Text>
-                                </View>
-                                <Text style={[styles.dersArrow, isDark && styles.textMuted]}>→</Text>
-                            </View>
-                    </Card>
+                        <Text style={[styles.dersName, isDark && styles.textLight]}>{ders}</Text>
+                        <Text style={styles.dersMeta}>
+                            {s.konuSayisi} konu · {s.soruSayisi} soru
+                        </Text>
+                    </AccentCard>
                 );
             })}
 
@@ -116,79 +111,44 @@ export function KonuListScreen({ route, navigation }) {
         <ScrollScreen dark={isDark}>
             {/* Back */}
             <BackChip dark={isDark} label="Dersler" onPress={function () { navigation.goBack(); }} />
+            <Text style={[styles.konuTitle, isDark && styles.textLight]}>{ders}</Text>
+            <Text style={styles.konuSubtitle}>{konular.length} konu</Text>
 
-            {/* Header */}
-            <View style={styles.konuHeader}>
-                <DersIconBox icon={DERS_ICON[ders] || "📚"} style={{ marginRight: 0, marginBottom: 8 }} />
-                <Text style={[styles.konuTitle, isDark && styles.textLight]}>{ders}</Text>
-                <Text style={[styles.konuSubtitle, isDark && styles.textMuted]}>
-                    {konular.length} konu
-                </Text>
-            </View>
-
-            {/* Konu Listesi */}
             {konular.map(function (konu, idx) {
                 var kd = app.kpssData[ders][konu] || {};
                 var tp = topics[konu] || { mastery: "yok", lastPct: null, attempts: 0 };
                 var open = StudentStore.isKonuOpen(ders, konular, idx, app.kpssData);
-                var done = StudentStore.topicComplete(tp, kd);
-                var m = masteryLabel(tp.mastery);
+
+                var meta = open
+                    ? (function () {
+                        var packs = StudentStore.topicTestPacks(kd.sorular || []);
+                        var nLen = (kd.notlar || []).length;
+                        if (!packs.length) return nLen + " not · " + (kd.sorular || []).length + " soru";
+                        var doneN = packs.filter(function (p) { return StudentStore.isPackComplete(tp, p.no); }).length;
+                        return nLen + " not · " + doneN + "/" + packs.length + " test";
+                    })()
+                    : "Önce önceki konunun testlerini bitir";
 
                 return (
-                    <Card
+                    <AccentCard
                         key={konu}
                         dark={isDark}
                         disabled={!open}
-                        onPress={function () { 
-                            if (open) go(navigation, "KonuHub", { ders: ders, konu: konu }); 
+                        chevron={open}
+                        onPress={function () {
+                            if (open) go(navigation, "KonuHub", { ders: ders, konu: konu });
                         }}
-                        style={[
-                            styles.konuCard,
-                            !open && styles.konuCardLocked,
-                            done && styles.konuCardDone,
-                        ]}
                     >
-                            <View style={styles.konuRow}>
-                                <View style={styles.konuLeft}>
-                                    <View style={[
-                                        styles.konuStatus,
-                                        done && styles.konuStatusDone,
-                                        !open && styles.konuStatusLocked,
-                                    ]}>
-                                        <Text style={styles.konuStatusText}>
-                                            {done ? "✓" : open ? (idx + 1) : "🔒"}
-                                        </Text>
-                                    </View>
-                                    <View>
-                                        <Text style={[styles.konuName, isDark && styles.textLight]}>
-                                            {konu}
-                                        </Text>
-                        <Text style={[styles.konuMeta, isDark && styles.textMuted]}>
-                            {open
-                                ? (function () {
-                                    var packs = StudentStore.topicTestPacks(kd.sorular || []);
-                                    var nLen = (kd.notlar || []).length;
-                                    if (!packs.length) return nLen + " not · " + (kd.sorular || []).length + " soru";
-                                    var doneN = packs.filter(function (p) { return StudentStore.isPackComplete(tp, p.no); }).length;
-                                    return nLen + " not · " + doneN + "/" + packs.length + " test";
-                                })()
-                                : "Önce önceki konunun testlerini bitir"
-                            }
-                        </Text>
-                                    </View>
-                                </View>
-                                {open && (
-                                    <View style={styles.konuRight}>
-                                        <Text style={[styles.konuScore, isDark && styles.textLight]}>
-                                            {tp.lastPct == null ? "—" : "%" + tp.lastPct}
-                                        </Text>
-                                        <Text style={[styles.konuLevel, { color: m.color }]}>
-                                            {m.text}
-                                        </Text>
-                                    </View>
-                                )}
+                        <View style={styles.konuRow}>
+                            <View style={{ flex: 1, minWidth: 0, paddingRight: 8 }}>
+                                <Text style={[styles.konuName, isDark && styles.textLight]} numberOfLines={2}>{konu}</Text>
+                                <Text style={styles.konuMeta}>{meta}</Text>
                             </View>
-                        </Card>
+                            {open ? (
+                                <PctBadge label={tp.lastPct == null ? "—" : "%" + tp.lastPct} />
+                            ) : null}
+                        </View>
+                    </AccentCard>
                 );
             })}
         </ScrollScreen>
@@ -367,7 +327,7 @@ var styles = StyleSheet.create({
         color: colors.text,
     },
     dersMeta: {
-        color: colors.muted,
+        color: "#64748B",
         fontSize: 12,
         marginTop: 1,
     },
@@ -419,9 +379,8 @@ var styles = StyleSheet.create({
     },
     konuTitle: {
         fontSize: 28,
-        fontWeight: "900",
-        letterSpacing: -0.5,
-        color: colors.navy,
+        fontWeight: "700",
+        color: "#0F172A",
     },
     konuSubtitle: {
         color: colors.muted,
@@ -476,7 +435,7 @@ var styles = StyleSheet.create({
         flexShrink: 1,
     },
     konuMeta: {
-        color: colors.muted,
+        color: "#64748B",
         fontSize: 11,
         marginTop: 1,
     },

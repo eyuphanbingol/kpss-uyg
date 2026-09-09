@@ -22,7 +22,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 // ============================================================
 
 export var colors = {
-    bg: "#FAFAF9",
+    bg: "#F8FAFC",
     bgDark: "#211F1D",
     navy: "#0D2C4D",
     navyDeep: "#041C24",
@@ -64,10 +64,10 @@ export var DERS_ICON = {
 // ============================================================
 
 export function masteryLabel(m) {
-    if (m === "iyi") return { text: "İyi", color: "#0F766E", emoji: "🌟" };
-    if (m === "orta") return { text: "Orta", color: "#D97706", emoji: "📈" };
-    if (m === "zayif") return { text: "Zayıf", color: "#E11D48", emoji: "📉" };
-    return { text: "Yeni", color: "#78716C", emoji: "🆕" };
+    if (m === "iyi") return { text: "İyi", color: "#065F46", emoji: "" };
+    if (m === "orta") return { text: "Orta", color: "#92400E", emoji: "" };
+    if (m === "zayif") return { text: "Zayıf", color: "#9F1239", emoji: "" };
+    return { text: "Yeni", color: "#64748B", emoji: "" };
 }
 
 export function eduLabel(id) {

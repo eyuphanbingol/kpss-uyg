@@ -7,6 +7,8 @@ import { StudentStore } from "../lib/store";
 import { go } from "../nav";
 import { Card, PrimaryButton, ScrollScreen, BackChip, Screen, Tap, PageHeader, DersIconBox } from "../ui";
 import { colors, DERS_ICON } from "../lib/theme";
+import { PencilLine, Map, Shield, Layers, Timer } from "lucide-react-native";
+import { AccentCard } from "../kit";
 import { TrMapView } from "../components/TrMapView";
 import { useLandscapeLock } from "../lib/useLandscapeLock";
 
@@ -28,56 +30,51 @@ export function AlistirmalarHomeScreen({ navigation }) {
     return (
         <ScrollScreen dark={isDark} noBottom>
             <PageHeader dark={isDark} title="Alıştırmalar" subtitle="Boşluk, harita ve üç yeni oyun" />
-            <Card dark={isDark} onPress={function () { go(navigation, "AlistirmaDersList"); }} style={styles.dersCard}>
-                <View style={styles.row}>
-                    <DersIconBox icon="✏️" />
+            <AccentCard dark={isDark} chevron onPress={function () { go(navigation, "AlistirmaDersList"); }} style={styles.playCard}>
+                <View style={styles.playRow}>
+                    <View style={styles.playIco}><PencilLine size={20} color="#0F172A" /></View>
                     <View style={{ flex: 1, minWidth: 0 }}>
                         <Text style={[styles.dersName, isDark && styles.textLight]}>Boşluk doldurma</Text>
-                        <Text style={[styles.meta, isDark && styles.textMuted]}>Nottaki boşluğu şıklardan tamamla.</Text>
+                        <Text style={styles.meta}>Nottaki boşluğu şıklardan tamamla.</Text>
                     </View>
-                    <Text style={styles.arrow}>→</Text>
                 </View>
-            </Card>
-            <Card dark={isDark} onPress={function () { go(navigation, "MapTopics"); }} style={styles.dersCard}>
-                <View style={styles.row}>
-                    <DersIconBox icon="🗺️" />
+            </AccentCard>
+            <AccentCard dark={isDark} chevron onPress={function () { go(navigation, "MapTopics"); }} style={styles.playCard}>
+                <View style={styles.playRow}>
+                    <View style={styles.playIco}><Map size={20} color="#0F172A" /></View>
                     <View style={{ flex: 1, minWidth: 0 }}>
                         <Text style={[styles.dersName, isDark && styles.textLight]}>Harita oyunu</Text>
-                        <Text style={[styles.meta, isDark && styles.textMuted]}>Konuyu seç, yeri haritada işaretle.</Text>
+                        <Text style={styles.meta}>Konuyu seç, yeri haritada işaretle.</Text>
                     </View>
-                    <Text style={styles.arrow}>→</Text>
                 </View>
-            </Card>
-            <Card dark={isDark} onPress={function () { go(navigation, "ConquerPlay"); }} style={styles.dersCard}>
-                <View style={styles.row}>
-                    <DersIconBox icon="🛡️" />
+            </AccentCard>
+            <AccentCard dark={isDark} chevron onPress={function () { go(navigation, "ConquerPlay"); }} style={styles.playCard}>
+                <View style={styles.playRow}>
+                    <View style={styles.playIco}><Shield size={20} color="#0F172A" /></View>
                     <View style={{ flex: 1, minWidth: 0 }}>
                         <Text style={[styles.dersName, isDark && styles.textLight]}>Türkiye'yi Fethet</Text>
-                        <Text style={[styles.meta, isDark && styles.textMuted]}>İli seç, soruları bitir; ili boya, bölge rozeti kap.</Text>
+                        <Text style={styles.meta}>İli seç, soruları bitir; ili boya, bölge rozeti kap.</Text>
                     </View>
-                    <Text style={styles.arrow}>→</Text>
                 </View>
-            </Card>
-            <Card dark={isDark} onPress={function () { go(navigation, "TabuPlay"); }} style={styles.dersCard}>
-                <View style={styles.row}>
-                    <DersIconBox icon="🃏" />
+            </AccentCard>
+            <AccentCard dark={isDark} chevron onPress={function () { go(navigation, "TabuPlay"); }} style={styles.playCard}>
+                <View style={styles.playRow}>
+                    <View style={styles.playIco}><Layers size={20} color="#0F172A" /></View>
                     <View style={{ flex: 1, minWidth: 0 }}>
                         <Text style={[styles.dersName, isDark && styles.textLight]}>Tabu</Text>
-                        <Text style={[styles.meta, isDark && styles.textMuted]}>İpuçlarından kavrama ulaş. Az ipucu, çok puan.</Text>
+                        <Text style={styles.meta}>İpuçlarından kavrama ulaş. Az ipucu, çok puan.</Text>
                     </View>
-                    <Text style={styles.arrow}>→</Text>
                 </View>
-            </Card>
-            <Card dark={isDark} onPress={function () { go(navigation, "PanicPlay"); }} style={styles.dersCard}>
-                <View style={styles.row}>
-                    <DersIconBox icon="⏱️" />
+            </AccentCard>
+            <AccentCard dark={isDark} chevron onPress={function () { go(navigation, "PanicPlay"); }} style={styles.playCard}>
+                <View style={styles.playRow}>
+                    <View style={styles.playIco}><Timer size={20} color="#0F172A" /></View>
                     <View style={{ flex: 1, minWidth: 0 }}>
                         <Text style={[styles.dersName, isDark && styles.textLight]}>Son 30 saniye</Text>
-                        <Text style={[styles.meta, isDark && styles.textMuted]}>Doğru +2 sn, yanlış −3 sn. Hızlı net bilgi.</Text>
+                        <Text style={styles.meta}>Doğru +2 sn, yanlış −3 sn. Hızlı net bilgi.</Text>
                     </View>
-                    <Text style={styles.arrow}>→</Text>
                 </View>
-            </Card>
+            </AccentCard>
         </ScrollScreen>
     );
 }
@@ -544,8 +541,19 @@ var styles = StyleSheet.create({
     volkanMeta: { color: "rgba(255,255,255,0.88)" },
     row: { flexDirection: "row", alignItems: "center", gap: 12 },
     icon: { fontSize: 26 },
-    dersName: { fontWeight: "700", fontSize: 16, color: colors.text },
-    meta: { color: colors.muted, fontSize: 12, marginTop: 2 },
+    dersName: { fontWeight: "700", fontSize: 16, color: "#0F172A" },
+    meta: { color: "#64748B", fontSize: 12, marginTop: 2 },
+    playCard: { borderRadius: 20, minHeight: 76 },
+    playRow: { flexDirection: "row", alignItems: "center" },
+    playIco: {
+        width: 40,
+        height: 40,
+        borderRadius: 12,
+        backgroundColor: "#FEF3C7",
+        alignItems: "center",
+        justifyContent: "center",
+        marginRight: 10,
+    },
     arrow: { color: colors.muted, fontSize: 18 },
     back: { color: colors.muted, marginBottom: 8, fontWeight: "600" },
     konuTitle: { fontSize: 22, fontWeight: "800", color: colors.navy, marginBottom: 4 },

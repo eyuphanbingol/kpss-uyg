@@ -16,6 +16,7 @@ import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 import * as Haptics from "expo-haptics";
 import { LinearGradient } from "expo-linear-gradient";
+import { ChevronLeft, Settings } from "lucide-react-native";
 import { colors } from "./lib/theme";
 import { StudentStore } from "./lib/store";
 
@@ -370,12 +371,13 @@ export function Field(props) {
 export function ThemeToggle(props) {
     var isDark = props.dark === true;
     return (
-        <Tap
+        <Pressable
+            android_ripple={{ color: "rgba(0,0,0,0.05)" }}
             onPress={function () { StudentStore.setDark(!isDark); }}
             style={[styles.themeBtn, isDark && styles.themeBtnDark]}
         >
-            <Text style={{ fontSize: 18 }}>{isDark ? "☀️" : "🌙"}</Text>
-        </Tap>
+            <Settings size={18} color={isDark ? "#E2E8F0" : "#0F172A"} />
+        </Pressable>
     );
 }
 
@@ -459,10 +461,15 @@ export function ChipGroup(props) {
 export function BackChip(props) {
     var dark = props.dark === true;
     return (
-        <Tap hitSlop={8} onPress={props.onPress} style={[styles.backChip, dark && styles.backChipDark, props.style]}>
-            <Text style={[styles.backChipMark, dark && styles.backChipTextDark]}>‹</Text>
+        <Pressable
+            hitSlop={8}
+            android_ripple={{ color: "rgba(0,0,0,0.05)" }}
+            onPress={props.onPress}
+            style={[styles.backChip, dark && styles.backChipDark, props.style]}
+        >
+            <ChevronLeft size={18} color={dark ? "#E2E8F0" : "#0F172A"} />
             <Text style={[styles.backChipLabel, dark && styles.backChipTextDark]}>{props.label || "Geri"}</Text>
-        </Tap>
+        </Pressable>
     );
 }
 
@@ -744,8 +751,9 @@ var styles = StyleSheet.create({
         gap: 12,
     },
     pageTitle: {
-        fontSize: 30,
-        fontWeight: "900",
+        fontSize: 28,
+        fontWeight: "700",
+        color: "#0F172A",
         letterSpacing: -0.6,
         color: colors.navy,
     },
@@ -950,30 +958,19 @@ var styles = StyleSheet.create({
 
     // ---------- Card ----------
     card: {
-        backgroundColor: "rgba(255,255,255,0.78)",
-        borderRadius: 24,
+        backgroundColor: "#FFFFFF",
+        borderRadius: 16,
         borderWidth: 1,
-        borderColor: "rgba(255,255,255,0.35)",
+        borderColor: "#E2E8F0",
         padding: 16,
         marginBottom: 12,
         overflow: "hidden",
-        shadowColor: "#000",
-        shadowOffset: { width: 0, height: 8 },
-        shadowOpacity: 0.06,
-        shadowRadius: 16,
-        elevation: 3,
     },
     cardDark: {
-        backgroundColor: "rgba(15, 23, 42, 0.78)",
-        borderColor: "rgba(255,255,255,0.06)",
+        backgroundColor: "#1E293B",
+        borderColor: "#334155",
     },
-    cardElevated: {
-        shadowColor: "#000",
-        shadowOffset: { width: 0, height: 8 },
-        shadowOpacity: 0.12,
-        shadowRadius: 20,
-        elevation: 4,
-    },
+    cardElevated: {},
     cardGlass: {
         backgroundColor: "rgba(255,255,255,0.7)",
         borderColor: "rgba(255,255,255,0.3)",

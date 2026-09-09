@@ -95,15 +95,15 @@ export default function BenScreen({ navigation }) {
             {/* Stats Cards */}
             <View style={styles.statsRow}>
                 <View style={[styles.statCard, isDark && styles.cardDark]}>
-                    <Text style={[styles.statNumber, { color: colors.teal }]}>{totQ}</Text>
+                    <Text style={[styles.statNumber, { color: "#0F172A" }]}>{totQ}</Text>
                     <Text style={[styles.statLabel, isDark && styles.textMuted]}>Soru</Text>
                 </View>
                 <View style={[styles.statCard, isDark && styles.cardDark]}>
-                    <Text style={[styles.statNumber, { color: colors.teal }]}>{overall}%</Text>
+                    <Text style={[styles.statNumber, { color: "#0F172A" }]}>{overall}%</Text>
                     <Text style={[styles.statLabel, isDark && styles.textMuted]}>Net</Text>
                 </View>
                 <View style={[styles.statCard, isDark && styles.cardDark]}>
-                    <Text style={[styles.statNumber, { color: colors.amber }]}>{streak}</Text>
+                    <Text style={[styles.statNumber, { color: "#D97706" }]}>{streak}</Text>
                     <Text style={[styles.statLabel, isDark && styles.textMuted]}>Seri</Text>
                 </View>
             </View>
@@ -557,21 +557,24 @@ var styles = StyleSheet.create({
     },
     badgeItem: {
         paddingHorizontal: 12,
-        paddingVertical: 5,
-        borderRadius: 14,
-        backgroundColor: "#F5F5F4",
+        paddingVertical: 6,
+        borderRadius: 999,
+        backgroundColor: "#F1F5F9",
+        borderWidth: 1,
+        borderColor: "#E2E8F0",
     },
     badgeItemActive: {
-        backgroundColor: "#ECFDF5",
+        backgroundColor: "#FEF3C7",
+        borderColor: "#FDE68A",
     },
     badgeText: {
         fontSize: 12,
-        color: colors.muted,
-        fontWeight: "500",
+        color: "#64748B",
+        fontWeight: "600",
     },
     badgeTextActive: {
-        color: colors.emerald,
-        fontWeight: "600",
+        color: "#92400E",
+        fontWeight: "700",
     },
 
     // ---------- Danger ----------
