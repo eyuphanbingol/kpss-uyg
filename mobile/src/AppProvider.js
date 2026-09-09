@@ -4,7 +4,7 @@ import { hydrateLocalStorage } from "./lib/storage";
 import { supabase } from "./lib/supabase";
 import { SyncEngine } from "./lib/syncEngine";
 import { StudyPlanner } from "./lib/planner";
-import { fetchRemoteCatalog, loadBundledCatalog, readCachedCatalog } from "./lib/catalog";
+import { fetchRemoteCatalog, readCachedCatalog } from "./lib/catalog";
 import { AppState, Platform } from "react-native";
 
 // ============================================================
@@ -146,26 +146,11 @@ export function AppProvider(props) {
 
                 setSession(sess || null);
                 setBootReady(true);
-
-                setTimeout(function () {
-                    try {
-                        var bundled = loadBundledCatalog();
-                        if (bundled && bundled.Tarih && Object.keys(bundled.Tarih)[0] !== "_") {
-                            setKpssData(readCachedCatalog() || bundled);
-                        }
-                    } catch (e) {}
-                    pullCatalog();
-                }, 50);
+                pullCatalog();
             } catch (e) {
                 console.warn("Boot hatası:", e);
                 setBootReady(true);
-                setTimeout(function () {
-                    try {
-                        var bundled = loadBundledCatalog();
-                        if (bundled && bundled.Tarih && Object.keys(bundled.Tarih)[0] !== "_") setKpssData(bundled);
-                    } catch (err) {}
-                    pullCatalog();
-                }, 50);
+                pullCatalog();
             }
         })();
 
