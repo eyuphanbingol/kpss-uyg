@@ -40,8 +40,12 @@ function prepSvg(raw) {
 
 var CSS = [
     "html,body{margin:0;padding:0;background:#8fa89a;width:100%;height:100%;max-width:100%;max-height:100%;overflow:hidden;touch-action:none;-webkit-user-select:none;user-select:none;}",
-    ".wrap{width:100%;height:100%;max-width:100%;max-height:100%;overflow:hidden;background:#8fa89a;}",
+    ".wrap{position:relative;width:100%;height:100%;max-width:100%;max-height:100%;overflow:hidden;background:#8fa89a;touch-action:none;}",
+    ".canvas{width:100%;height:100%;transform-origin:center center;will-change:transform;}",
     "svg{width:100%;height:100%;max-width:100%;max-height:100%;display:block;}",
+    ".zoom-tools{position:absolute;right:8px;bottom:8px;z-index:6;display:flex;flex-direction:column;gap:6px;}",
+    ".zoom-tools button{width:40px;height:40px;border-radius:12px;border:1px solid rgba(13,44,77,.12);background:rgba(255,255,255,.94);font-size:20px;font-weight:800;line-height:1;color:#0f172a;box-shadow:0 6px 16px rgba(4,28,36,.12);}",
+    ".zoom-tools .zreset{width:auto;padding:0 10px;font-size:12px;letter-spacing:.04em;text-transform:uppercase;}",
     "path{fill:#eef6f1!important;stroke:#1f3d32!important;stroke-width:1.35!important;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none;}",
     ".mode-conquer path{fill:#dce8e1!important;pointer-events:auto;cursor:pointer;}",
     ".mode-conquer path.conquer-owned{fill:var(--c,#127880)!important;stroke:#0b3d42!important;}",
@@ -63,7 +67,12 @@ export function mapDocument(svgText, mode) {
         + "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no\"/>"
         + "<style>" + CSS + "</style></head>"
         + "<body><div class=\"wrap mode-" + (mode === "conquer" ? "conquer" : "play") + "\" id=\"wrap\">"
-        + svg + "</div><script>"
+        + "<div class=\"canvas\" id=\"canvas\">" + svg + "</div>"
+        + "<div class=\"zoom-tools\" id=\"ztools\">"
+        + "<button type=\"button\" id=\"zplus\">+</button>"
+        + "<button type=\"button\" id=\"zminus\">−</button>"
+        + "<button type=\"button\" id=\"zreset\" class=\"zreset\">Tam</button>"
+        + "</div></div><script>"
         + "function post(o){if(window.ReactNativeWebView)window.ReactNativeWebView.postMessage(JSON.stringify(o));}"
         + "var svg=document.querySelector('svg');"
         + "if(svg){svg.removeAttribute('width');svg.removeAttribute('height');"
@@ -130,7 +139,34 @@ export function mapDocument(svgText, mode) {
         + "p.classList.toggle('conquer-pick',st.pick===id);"
         + "}"
         + "};"
+        + "var wrap=document.getElementById('wrap');"
+        + "var canvas=document.getElementById('canvas');"
+        + "var z={s:1,x:0,y:0};"
+        + "var gest={mode:'',x:0,y:0,dist:0,s0:1,x0:0,y0:0,moved:false};"
+        + "function applyZ(s,x,y){s=Math.max(1,Math.min(4.5,s));if(s<=1.02){s=1;x=0;y=0;}z={s:s,x:x,y:y};"
+        + "if(canvas)canvas.style.transform='translate('+x+'px,'+y+'px) scale('+s+')';}"
+        + "function pinchDist(t){var a=t[0],b=t[1],dx=a.clientX-b.clientX,dy=a.clientY-b.clientY;return Math.sqrt(dx*dx+dy*dy)||1;}"
+        + "function bumpZ(dir){applyZ(dir===0?1:z.s*(dir>0?1.35:0.74),dir===0?0:z.x,dir===0?0:z.y);}"
+        + "if(wrap&&canvas){"
+        + "wrap.addEventListener('touchstart',function(e){"
+        + "if(e.touches.length===2){gest.mode='pinch';gest.dist=pinchDist(e.touches);gest.s0=z.s;gest.x0=z.x;gest.y0=z.y;gest.moved=true;}"
+        + "else if(e.touches.length===1&&z.s>1){gest.mode='pan';gest.x=e.touches[0].clientX;gest.y=e.touches[0].clientY;gest.x0=z.x;gest.y0=z.y;gest.moved=false;}"
+        + "else gest.mode='';"
+        + "},{passive:true});"
+        + "wrap.addEventListener('touchmove',function(e){"
+        + "if(gest.mode==='pinch'&&e.touches.length===2){e.preventDefault();applyZ(gest.s0*(pinchDist(e.touches)/gest.dist),gest.x0,gest.y0);}"
+        + "else if(gest.mode==='pan'&&e.touches.length===1){var dx=e.touches[0].clientX-gest.x,dy=e.touches[0].clientY-gest.y;"
+        + "if(Math.abs(dx)+Math.abs(dy)>8)gest.moved=true;if(gest.moved){e.preventDefault();applyZ(z.s,gest.x0+dx,gest.y0+dy);}}"
+        + "},{passive:false});"
+        + "wrap.addEventListener('touchend',function(){if(gest.moved)wrap.setAttribute('data-skip-click','1');gest.mode='';});"
+        + "}"
+        + "var zp=document.getElementById('zplus'),zm=document.getElementById('zminus'),zr=document.getElementById('zreset');"
+        + "if(zp)zp.onclick=function(e){e.stopPropagation();bumpZ(1);};"
+        + "if(zm)zm.onclick=function(e){e.stopPropagation();bumpZ(-1);};"
+        + "if(zr)zr.onclick=function(e){e.stopPropagation();bumpZ(0);};"
         + "document.addEventListener('click',function(ev){"
+        + "if(wrap&&wrap.getAttribute('data-skip-click')){wrap.removeAttribute('data-skip-click');return;}"
+        + "if(ev.target&&ev.target.closest&&ev.target.closest('.zoom-tools'))return;"
         + "var mark=ev.target.closest?ev.target.closest('[data-pin]'):null;"
         + "if(mark){post({type:'pin',id:mark.getAttribute('data-pin')});return;}"
         + "var path=ev.target.closest?ev.target.closest('path'):null;"
