@@ -1,5 +1,5 @@
 import React, { memo, useCallback, useEffect, useMemo, useState } from "react";
-import { Dimensions, FlatList, Image, Pressable, Text, View, StyleSheet } from "react-native";
+import { Dimensions, FlatList, Pressable, Text, View, StyleSheet } from "react-native";
 import RenderHTML from "react-native-render-html";
 import { ChevronLeft, ChevronRight, Moon, Sun } from "lucide-react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -8,6 +8,7 @@ import { StudentStore } from "../lib/store";
 import { Screen, hapticTap } from "../ui";
 import { mediaUrl, rewriteHtmlMedia } from "../lib/media";
 import { parseNoteBlocks } from "../lib/noteHtml";
+import { ZoomableImage } from "../components/ZoomableImage";
 
 var SCREEN_W = Dimensions.get("window").width;
 var PAGE_PAD = 16;
@@ -123,22 +124,13 @@ var TableCard = memo(function TableCard(props) {
 
 var ImgCard = memo(function ImgCard(props) {
     var src = mediaUrl(props.src);
-    var _h = useState(160);
-    var h = _h[0];
-    var setH = _h[1];
     if (!src) return null;
     return (
-        <View style={[styles.itemCard, props.dark && styles.itemCardDark, { padding: 8 }]}>
-            <Image
-                source={{ uri: src }}
-                resizeMode="contain"
-                onLoad={function (e) {
-                    var iw = e.nativeEvent.source && e.nativeEvent.source.width;
-                    var ih = e.nativeEvent.source && e.nativeEvent.source.height;
-                    if (iw && ih) setH(Math.min(280, Math.max(100, Math.round(CONTENT_W * ih / iw))));
-                }}
-                style={{ width: CONTENT_W, height: h, borderRadius: 12, backgroundColor: "#F1F5F9", alignSelf: "center" }}
-            />
+        <View style={[styles.itemCard, props.dark && styles.itemCardDark, styles.imgCard]}>
+            <View style={styles.accent} />
+            <View style={styles.imgBody}>
+                <ZoomableImage uri={src} dark={props.dark} />
+            </View>
         </View>
     );
 });
@@ -357,6 +349,15 @@ var styles = StyleSheet.create({
         flex: 1,
         padding: CARD_PAD,
         minWidth: 0,
+    },
+    imgCard: {
+        alignItems: "stretch",
+    },
+    imgBody: {
+        flex: 1,
+        minWidth: 0,
+        padding: 10,
+        alignItems: "center",
     },
     bar: {
         flexDirection: "row",

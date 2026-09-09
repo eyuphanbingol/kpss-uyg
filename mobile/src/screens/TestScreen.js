@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Text, View, StyleSheet, Image } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
 import { StudentStore } from "../lib/store";
 import { confirmQuit, PrimaryButton, Screen, ScrollScreen, Card, Badge, Tap } from "../ui";
 import { colors } from "../lib/theme";
 import { questionImages } from "../lib/media";
+import { ZoomableImage } from "../components/ZoomableImage";
 
 // ============================================================
 // TEST SCREEN
@@ -278,12 +279,9 @@ export default function TestScreen({ route, navigation }) {
                 <Text style={styles.testQuestion}>{soru.question}</Text>
                 {questionImages(soru).map(function (uri, gi) {
                     return (
-                        <Image
-                            key={uri + gi}
-                            source={{ uri: uri }}
-                            resizeMode="contain"
-                            style={styles.testImg}
-                        />
+                        <View key={uri + gi} style={styles.testImgWrap}>
+                            <ZoomableImage uri={uri} />
+                        </View>
                     );
                 })}
 
@@ -546,12 +544,10 @@ var styles = StyleSheet.create({
         marginBottom: 16,
         color: colors.text,
     },
-    testImg: {
+    testImgWrap: {
         width: "100%",
-        height: 220,
-        backgroundColor: "#F6F1E4",
-        borderRadius: 16,
-        marginBottom: 16
+        marginBottom: 16,
+        alignItems: "center",
     },
     testOptions: {
         flex: 1,
