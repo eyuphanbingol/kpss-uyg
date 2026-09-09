@@ -1,13 +1,17 @@
+import bundled from "../content/catalog.json";
 import { localStorageShim } from "./storage";
 import { SITE } from "./media";
 
 var CACHE_KEY = "kpss-catalog-v1";
 export var CATALOG_URL = SITE + "/catalog.json";
-export var bundledCatalog = {};
-export var kpssData = {};
+export var bundledCatalog = bundled;
+export var kpssData = bundled;
 
 function looksCatalog(data) {
-    return !!(data && data.Tarih && data.Cografya && Object.keys(data.Tarih).length >= 10);
+    if (!data || typeof data !== "object") return false;
+    var tarih = data.Tarih;
+    var cografya = data.Cografya || data["Coğrafya"];
+    return !!(tarih && cografya && Object.keys(tarih).length >= 1);
 }
 
 export function getKpssData() {

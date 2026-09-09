@@ -109,21 +109,8 @@ export function AppProvider(props) {
                 // 1. Local storage'ı hydrate et
                 await hydrateLocalStorage();
                 StudentStore.hydrateFromDisk();
-                var cached = readCachedCatalog();
-                setKpssData(cached);
-                if (cached && cached.Tarih && Object.keys(cached.Tarih).length) {
-                    pullCatalog();
-                } else {
-                    try {
-                        await Promise.race([
-                            fetchRemoteCatalog().then(function (data) {
-                                if (data && !cancelled) setKpssData(data);
-                            }),
-                            new Promise(function (resolve) { setTimeout(resolve, 8000); })
-                        ]);
-                    } catch (e) {}
-                    if (!cancelled) pullCatalog();
-                }
+                setKpssData(readCachedCatalog());
+                pullCatalog();
 
                 // 2. Session kontrolü
                 var r = await supabase.auth.getSession();
