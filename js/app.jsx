@@ -1724,11 +1724,6 @@ function NotesView(props) {
             ) : (
                 <div className="text-center py-16 bg-white dark:bg-slate-800 rounded-3xl border border-dashed">Bu konu için henüz not yok.</div>
             )}
-            {props.hasTest ? (
-                <button onClick={props.onTest} className="mt-8 mb-8 w-full btn-primary text-white p-5 rounded-2xl font-bold">
-                    Notları bitirdim, teste geç
-                </button>
-            ) : null}
         </Shell>
     );
 }

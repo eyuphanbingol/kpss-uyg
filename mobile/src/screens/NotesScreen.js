@@ -4,7 +4,7 @@ import { WebView } from "react-native-webview";
 import { LinearGradient } from "expo-linear-gradient";
 import { useApp } from "../AppProvider";
 import { StudentStore } from "../lib/store";
-import { PrimaryButton, ScrollScreen, BackChip, Tap, ThemeToggle } from "../ui";
+import { ScrollScreen, BackChip, Tap, ThemeToggle } from "../ui";
 import { colors } from "../lib/theme";
 import { rewriteHtmlMedia } from "../lib/media";
 
@@ -12,13 +12,20 @@ var NOTE_CSS = ""
     + "*{box-sizing:border-box;-webkit-text-size-adjust:100%}"
     + "html,body{margin:0;padding:0;background:#fff;color:#1c1917;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}"
     + "html.dark,html.dark body{background:#2A2724;color:#e7e5e4}"
-    + ".note-html{display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:1.55;overflow:hidden;max-width:100%}"
+    + "body{padding:12px 12px 8px;overflow-x:hidden}"
+    + ".note-html,.note-html *{max-width:100%!important;box-sizing:border-box!important}"
+    + ".note-html{display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:1.55;overflow:hidden;width:100%}"
+    + ".note-html [class*='min-w-']{min-width:0!important}"
+    + ".note-html .grid,.note-html [class*='grid-cols']{display:flex!important;flex-direction:column!important;gap:10px!important;width:100%!important}"
+    + ".note-html .flex{flex-wrap:wrap!important;min-width:0}"
+    + ".note-html .flex-col{flex-wrap:nowrap!important}"
+    + ".note-html p,.note-html li,.note-html span,.note-html h1,.note-html h2,.note-html h3,.note-html h4{overflow-wrap:anywhere;word-break:break-word}"
     + ".note-html .text-xs{font-size:13px!important;line-height:1.5!important}"
     + ".note-html .text-sm,.note-html .text-base{font-size:15px!important;line-height:1.55!important}"
     + ".note-html .text-lg,.note-html .text-xl,.note-html .text-2xl{font-size:18px!important;line-height:1.3!important;font-weight:900!important;color:#DC2626!important}"
     + ".note-html b,.note-html strong{color:#041C24;font-weight:800}"
     + ".note-html>div:first-child{background:none!important;border:0!important;padding:0!important;margin:0!important;box-shadow:none!important}"
-    + ".note-html span.inline-flex{display:flex!important;width:100%!important;max-width:100%;box-sizing:border-box;align-items:center;gap:8px;padding:14px 16px!important;border-radius:16px!important;background:linear-gradient(135deg,#9F1239,#DC2626,#E11D48)!important;color:#fff!important;border:0!important;font-size:16px!important;font-weight:900!important;letter-spacing:.02em;line-height:1.3!important;box-shadow:0 8px 20px rgba(190,18,60,.28)}"
+    + ".note-html span.inline-flex{display:flex!important;width:100%!important;max-width:100%;box-sizing:border-box;align-items:center;flex-wrap:wrap!important;white-space:normal!important;gap:8px;padding:12px 14px!important;border-radius:16px!important;background:linear-gradient(135deg,#9F1239,#DC2626,#E11D48)!important;color:#fff!important;border:0!important;font-size:15px!important;font-weight:900!important;letter-spacing:.02em;line-height:1.35!important;box-shadow:0 8px 20px rgba(190,18,60,.28)}"
     + ".note-html .font-black:not(.inline-flex){color:#DC2626!important;font-size:16px!important;font-weight:900!important;letter-spacing:-.02em;line-height:1.3!important}"
     + ".note-pack,.note-html>div:not(:first-child),.note-html>ul,.note-html>ol,.note-html>p,.note-html>table{background:#eef6fb!important;border:1px solid rgba(18,120,128,.16)!important;border-radius:16px!important;padding:14px!important;box-shadow:none!important}"
     + ".note-html .grid{gap:10px!important;width:100%}"
@@ -45,7 +52,7 @@ var SHAPE_JS = "(function(){"
     + "el.parentNode.insertBefore(pack,el);pack.appendChild(el);"
     + "}});"
     + "root.querySelectorAll('li').forEach(function(li){li.classList.add('note-chip');});"
-    + "function post(){var h=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);"
+    + "function post(){var h=Math.ceil((root.getBoundingClientRect().height||0)+16);"
     + "if(window.ReactNativeWebView)window.ReactNativeWebView.postMessage(JSON.stringify({h:h}));}"
     + "post();setTimeout(post,80);setTimeout(post,400);"
     + "root.querySelectorAll('img').forEach(function(img){img.onload=post;img.onerror=post;});"
@@ -75,7 +82,7 @@ export default function NotesScreen({ route, navigation }) {
     var _h = useState(280);
     var webH = _h[0];
     var setWebH = _h[1];
-    var width = useWindowDimensions().width - 32;
+    var cardW = Math.max(280, useWindowDimensions().width - 24);
 
     useEffect(function () {
         StudentStore.setNoteIndex(ders, konu, idx, notlar.length);
@@ -129,7 +136,7 @@ export default function NotesScreen({ route, navigation }) {
                 <LinearGradient colors={["#041C24", "#0A3842", "#127880"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.head}>
                     <View style={{ flex: 1, minWidth: 0, paddingRight: 10 }}>
                         <Text style={styles.kicker}>{String(ders || "").toUpperCase()}</Text>
-                        <Text style={styles.title}>{konu} · Özet</Text>
+                        <Text style={styles.title} numberOfLines={2}>{konu} · Özet</Text>
                     </View>
                     <View style={styles.progressPill}>
                         <Text style={styles.progressTxt}>{idx + 1}/{notlar.length}</Text>
@@ -140,7 +147,7 @@ export default function NotesScreen({ route, navigation }) {
                     key={idx + (isDark ? "-d" : "-l")}
                     originWhitelist={["*"]}
                     source={{ html: htmlDoc, baseUrl: "https://www.atanly.com/" }}
-                    style={{ width: width, height: webH, backgroundColor: isDark ? "#2A2724" : "#fff" }}
+                    style={{ width: cardW, height: webH, backgroundColor: isDark ? "#2A2724" : "#fff" }}
                     scrollEnabled={false}
                     showsVerticalScrollIndicator={false}
                     javaScriptEnabled
@@ -149,7 +156,7 @@ export default function NotesScreen({ route, navigation }) {
                     onMessage={function (e) {
                         try {
                             var msg = JSON.parse(e.nativeEvent.data);
-                            if (msg && msg.h) setWebH(Math.max(220, Math.ceil(msg.h) + 8));
+                            if (msg && msg.h) setWebH(Math.min(4000, Math.max(180, Math.ceil(msg.h))));
                         } catch (err) {}
                     }}
                 />
@@ -177,10 +184,6 @@ export default function NotesScreen({ route, navigation }) {
                     )}
                 </View>
             </View>
-
-            {sorular.length ? (
-                <PrimaryButton title="Notları bitirdim, teste geç" onPress={goToTest} style={{ marginTop: 20, marginBottom: 8 }} />
-            ) : null}
         </ScrollScreen>
     );
 }
@@ -223,10 +226,10 @@ var styles = StyleSheet.create({
         color: "rgba(245, 235, 199, 0.72)",
     },
     title: {
-        fontSize: 17,
+        fontSize: 16,
         fontWeight: "800",
         color: "#fff",
-        lineHeight: 22,
+        lineHeight: 21,
     },
     progressPill: {
         minWidth: 54,
@@ -249,9 +252,9 @@ var styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        gap: 10,
-        paddingHorizontal: 12,
-        paddingVertical: 14,
+        flexWrap: "wrap",
+        paddingHorizontal: 10,
+        paddingVertical: 12,
         backgroundColor: "#f6f4f1",
         borderTopWidth: 1,
         borderTopColor: "rgba(13, 44, 77, 0.07)",
@@ -262,11 +265,14 @@ var styles = StyleSheet.create({
     },
     prevBtn: {
         paddingVertical: 10,
-        paddingHorizontal: 16,
+        paddingHorizontal: 14,
         borderRadius: 999,
         backgroundColor: "#fff",
         borderWidth: 1,
         borderColor: "rgba(13, 44, 77, 0.12)",
+        marginRight: 8,
+        marginVertical: 4,
+        flexShrink: 1,
     },
     prevTxt: {
         fontWeight: "600",
@@ -276,6 +282,9 @@ var styles = StyleSheet.create({
     nextWrap: {
         borderRadius: 999,
         overflow: "hidden",
+        marginVertical: 4,
+        flexShrink: 1,
+        maxWidth: "58%",
     },
     nextBtn: {
         paddingVertical: 10,
