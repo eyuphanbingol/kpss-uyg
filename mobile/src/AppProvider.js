@@ -4,7 +4,7 @@ import { hydrateLocalStorage } from "./lib/storage";
 import { supabase } from "./lib/supabase";
 import { SyncEngine } from "./lib/syncEngine";
 import { StudyPlanner } from "./lib/planner";
-import { kpssData } from "./lib/catalog";
+import { bundledCatalog, fetchRemoteCatalog, readCachedCatalog } from "./lib/catalog";
 import { AppState, Platform } from "react-native";
 
 // ============================================================
@@ -52,6 +52,15 @@ export function AppProvider(props) {
 
     var signingOutRef = useRef(false);
     var appStateRef = useRef(AppState.currentState);
+    var _kd = useState(bundledCatalog);
+    var kpssData = _kd[0];
+    var setKpssData = _kd[1];
+
+    function pullCatalog() {
+        fetchRemoteCatalog().then(function (data) {
+            if (data) setKpssData(data);
+        }).catch(function () {});
+    }
 
     // ---------- Network Kontrol ----------
     useEffect(function () {
@@ -77,7 +86,7 @@ export function AppProvider(props) {
     useEffect(function () {
         var subscription = AppState.addEventListener("change", function (nextAppState) {
             if (appStateRef.current.match(/inactive|background/) && nextAppState === "active") {
-                // Uygulama ön plana geldi, sync yap
+                pullCatalog();
                 if (session) {
                     SyncEngine.sync().catch(function () {});
                 }
@@ -100,6 +109,8 @@ export function AppProvider(props) {
                 // 1. Local storage'ı hydrate et
                 await hydrateLocalStorage();
                 StudentStore.hydrateFromDisk();
+                setKpssData(readCachedCatalog());
+                pullCatalog();
 
                 // 2. Session kontrolü
                 var r = await supabase.auth.getSession();
@@ -195,7 +206,7 @@ export function AppProvider(props) {
         } catch (e) {
             return { rows: [], due: [], wrong: [], streak: 0 };
         }
-    }, [student]);
+    }, [student, kpssData]);
 
     // ---------- Context Value ----------
     var value = {

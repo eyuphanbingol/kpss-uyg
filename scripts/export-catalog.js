@@ -27,7 +27,9 @@ runFile("data.js");
 var data = sandbox.getKpssData();
 var outDir = path.join(root, "mobile", "src", "content");
 fs.mkdirSync(outDir, { recursive: true });
-fs.writeFileSync(path.join(outDir, "catalog.json"), JSON.stringify(data));
+var json = JSON.stringify(data);
+fs.writeFileSync(path.join(outDir, "catalog.json"), json);
+fs.writeFileSync(path.join(root, "catalog.json"), json);
 var ders = Object.keys(data);
 var q = 0, n = 0;
 ders.forEach(function (d) {
