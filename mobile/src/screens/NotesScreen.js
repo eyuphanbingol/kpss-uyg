@@ -1,92 +1,173 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { Image, Text, View, StyleSheet } from "react-native";
+import React, { memo, useCallback, useEffect, useMemo, useState } from "react";
+import { Dimensions, Image, Pressable, Text, View, StyleSheet } from "react-native";
 import RenderHTML from "react-native-render-html";
+import { FlashList } from "@shopify/flash-list";
+import { ChevronLeft, ChevronRight, Settings } from "lucide-react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useApp } from "../AppProvider";
 import { StudentStore } from "../lib/store";
-import { ScrollScreen, Card, BackChip, Tap } from "../ui";
-import { colors, DERS_ICON } from "../lib/theme";
+import { Screen } from "../ui";
 import { mediaUrl, rewriteHtmlMedia } from "../lib/media";
-import { normalizeNoteHtml } from "../lib/noteHtml";
+import { parseNoteBlocks } from "../lib/noteHtml";
 
-function NoteImage({ tnode, contentWidth }) {
-    var src = mediaUrl(tnode && tnode.attributes && tnode.attributes.src);
+var SCREEN_W = Dimensions.get("window").width;
+var PAGE_PAD = 16;
+var CARD_PAD = 14;
+var ACCENT_W = 3;
+var CONTENT_W = Math.max(200, SCREEN_W - PAGE_PAD * 2 - CARD_PAD * 2 - ACCENT_W - 12);
+
+var C = {
+    bg: "#F8FAFC",
+    bgDark: "#0F172A",
+    card: "#FFFFFF",
+    cardDark: "#1E293B",
+    navy: "#0F172A",
+    gold: "#D97706",
+    goldSoft: "#FEF3C7",
+    goldInk: "#92400E",
+    body: "#334155",
+    muted: "#64748B",
+    line: "#E2E8F0",
+    lineDark: "#334155",
+};
+
+var htmlTags = {
+    p: { fontSize: 15, lineHeight: 22, color: C.body, margin: 0 },
+    span: { fontSize: 15, lineHeight: 22, color: C.body },
+    b: { fontWeight: "800", color: C.navy },
+    strong: { fontWeight: "800", color: C.navy },
+    h3: { fontSize: 14, fontWeight: "800", color: C.goldInk, margin: 0 },
+    h4: { fontSize: 15, fontWeight: "800", color: C.navy, margin: 0 },
+    h5: { fontSize: 14, fontWeight: "800", color: C.navy, margin: 0 },
+};
+
+var htmlTagsDark = {
+    p: { fontSize: 15, lineHeight: 22, color: "#CBD5E1", margin: 0 },
+    span: { fontSize: 15, lineHeight: 22, color: "#CBD5E1" },
+    b: { fontWeight: "800", color: "#F8FAFC" },
+    strong: { fontWeight: "800", color: "#F8FAFC" },
+    h3: { fontSize: 14, fontWeight: "800", color: "#FDE68A", margin: 0 },
+    h4: { fontSize: 15, fontWeight: "800", color: "#F8FAFC", margin: 0 },
+    h5: { fontSize: 14, fontWeight: "800", color: "#F8FAFC", margin: 0 },
+};
+
+var ignored = ["width", "minWidth", "maxWidth", "height", "flex", "flexDirection", "flexGrow", "flexShrink", "flexBasis", "position", "left", "right", "top", "bottom", "display"];
+
+function wrapHtml(html) {
+    return "<div>" + html + "</div>";
+}
+
+var NoteRich = memo(function NoteRich(props) {
+    return (
+        <RenderHTML
+            contentWidth={CONTENT_W}
+            source={{ html: wrapHtml(props.html), baseUrl: "https://www.atanly.com/" }}
+            tagsStyles={props.dark ? htmlTagsDark : htmlTags}
+            ignoredStyles={ignored}
+            defaultTextProps={{ selectable: false }}
+            computeEmbeddedMaxWidth={function () { return CONTENT_W; }}
+        />
+    );
+});
+
+var BadgeRow = memo(function BadgeRow(props) {
+    return (
+        <View style={styles.badge}>
+            <NoteRich html={props.html} dark={props.dark} />
+        </View>
+    );
+});
+
+var HeadingRow = memo(function HeadingRow(props) {
+    return (
+        <View style={styles.heading}>
+            <NoteRich html={props.html} dark={props.dark} />
+        </View>
+    );
+});
+
+var ItemCard = memo(function ItemCard(props) {
+    return (
+        <View style={[styles.itemCard, props.dark && styles.itemCardDark]}>
+            <View style={styles.accent} />
+            <View style={styles.itemBody}>
+                <NoteRich html={props.html} dark={props.dark} />
+            </View>
+        </View>
+    );
+});
+
+var TableCard = memo(function TableCard(props) {
+    return (
+        <View style={[styles.itemCard, props.dark && styles.itemCardDark]}>
+            <View style={styles.accent} />
+            <View style={styles.itemBody}>
+                <NoteRich html={props.html} dark={props.dark} />
+            </View>
+        </View>
+    );
+});
+
+var ImgCard = memo(function ImgCard(props) {
+    var src = mediaUrl(props.src);
     var _h = useState(160);
     var h = _h[0];
     var setH = _h[1];
     if (!src) return null;
-    var w = Math.max(80, contentWidth);
     return (
-        <Image
-            source={{ uri: src }}
-            resizeMode="contain"
-            onLoad={function (e) {
-                var iw = e.nativeEvent.source && e.nativeEvent.source.width;
-                var ih = e.nativeEvent.source && e.nativeEvent.source.height;
-                if (iw && ih) setH(Math.min(320, Math.max(100, Math.round(w * ih / iw))));
-            }}
-            style={{ width: w, height: h, alignSelf: "center", backgroundColor: "#F6F1E4", borderRadius: 10, marginVertical: 8 }}
-        />
+        <View style={[styles.itemCard, props.dark && styles.itemCardDark, { padding: 8 }]}>
+            <Image
+                source={{ uri: src }}
+                resizeMode="contain"
+                onLoad={function (e) {
+                    var iw = e.nativeEvent.source && e.nativeEvent.source.width;
+                    var ih = e.nativeEvent.source && e.nativeEvent.source.height;
+                    if (iw && ih) setH(Math.min(280, Math.max(100, Math.round(CONTENT_W * ih / iw))));
+                }}
+                style={{ width: CONTENT_W, height: h, borderRadius: 12, backgroundColor: "#F1F5F9", alignSelf: "center" }}
+            />
+        </View>
     );
-}
-
-function makeTags(dark) {
-    var ink = dark ? "#e7e5e4" : colors.text;
-    var strong = dark ? "#F5EBC7" : "#041C24";
-    return {
-        body: { margin: 0, padding: 0 },
-        div: { margin: 0, padding: 0, flexDirection: "column", maxWidth: "100%" },
-        p: { fontSize: 15, lineHeight: 22, color: ink, marginTop: 0, marginBottom: 10, marginLeft: 0, marginRight: 0 },
-        li: { fontSize: 14, lineHeight: 21, color: ink, marginBottom: 6, paddingLeft: 0 },
-        ul: { marginTop: 0, marginBottom: 8, paddingLeft: 16 },
-        ol: { marginTop: 0, marginBottom: 8, paddingLeft: 16 },
-        h3: {
-            color: "#DC2626",
-            fontWeight: "800",
-            fontSize: 15,
-            lineHeight: 21,
-            marginTop: 0,
-            marginBottom: 12,
-            paddingBottom: 8,
-            borderBottomWidth: 2,
-            borderBottomColor: "rgba(220,38,38,0.25)",
-        },
-        h4: { color: "#DC2626", fontWeight: "800", fontSize: 15, lineHeight: 21, marginTop: 8, marginBottom: 6 },
-        h5: { color: "#DC2626", fontWeight: "800", fontSize: 14, marginBottom: 6 },
-        strong: { fontWeight: "800", color: strong },
-        b: { fontWeight: "800", color: strong },
-        span: { color: ink, fontSize: 14, lineHeight: 21 },
-        table: { marginBottom: 10 },
-        td: { fontSize: 13, lineHeight: 20, color: ink, paddingVertical: 4 },
-        th: { fontSize: 12, fontWeight: "800", color: "#0D5C63", paddingVertical: 4 },
-    };
-}
+});
 
 export default function NotesScreen({ route, navigation }) {
     var ders = route.params.ders;
     var konu = route.params.konu;
     var app = useApp();
     var isDark = app.dark;
+    var insets = useSafeAreaInsets();
     var notlar = ((app.kpssData[ders] || {})[konu] || {}).notlar || [];
     var sorular = ((app.kpssData[ders] || {})[konu] || {}).sorular || [];
     var tp = StudentStore.getTopic(ders, konu);
     var _idx = useState(tp.noteIndex || 0);
     var idx = _idx[0];
     var setIdx = _idx[1];
-    var _w = useState(280);
-    var contentW = _w[0];
-    var setContentW = _w[1];
 
     useEffect(function () {
         StudentStore.setNoteIndex(ders, konu, idx, notlar.length);
     }, [idx]);
 
-    var html = useMemo(function () {
-        return normalizeNoteHtml(rewriteHtmlMedia(String(notlar[idx] || "")));
+    var blocks = useMemo(function () {
+        return parseNoteBlocks(rewriteHtmlMedia(String(notlar[idx] || "")));
     }, [notlar, idx]);
 
-    var tags = useMemo(function () { return makeTags(isDark); }, [isDark]);
+    var goBack = useCallback(function () {
+        navigation.goBack();
+    }, [navigation]);
 
-    function goToTest() {
+    var toggleDark = useCallback(function () {
+        StudentStore.setDark(!isDark);
+    }, [isDark]);
+
+    var goPrev = useCallback(function () {
+        setIdx(function (n) { return n > 0 ? n - 1 : n; });
+    }, []);
+
+    var goNext = useCallback(function () {
+        setIdx(function (n) { return n < notlar.length - 1 ? n + 1 : n; });
+    }, [notlar.length]);
+
+    var goToTest = useCallback(function () {
         StudentStore.markNotesComplete(ders, konu);
         var packs = StudentStore.topicTestPacks(sorular.map(function (q, i) {
             var id = q.id != null ? q.id : i;
@@ -98,77 +179,80 @@ export default function NotesScreen({ route, navigation }) {
             return;
         }
         navigation.replace("Test", { mode: "topic", ders: ders, konu: konu, testNo: pack.no, items: pack.items });
-    }
+    }, [ders, konu, sorular, navigation]);
+
+    var renderItem = useCallback(function ({ item }) {
+        if (item.type === "badge") return <BadgeRow html={item.html} dark={false} />;
+        if (item.type === "heading") return <HeadingRow html={item.html} dark={isDark} />;
+        if (item.type === "img") return <ImgCard src={item.src} dark={isDark} />;
+        if (item.type === "table") return <TableCard html={item.html} dark={isDark} />;
+        return <ItemCard html={item.html} dark={isDark} />;
+    }, [isDark]);
+
+    var keyExtractor = useCallback(function (item, i) {
+        return item.type + "-" + i;
+    }, []);
+
+    var isLast = idx === notlar.length - 1;
+    var iconColor = isDark ? "#E2E8F0" : C.navy;
 
     if (!notlar.length) {
         return (
-            <ScrollScreen dark={isDark}>
-                <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
-                <Text style={[styles.empty, isDark && { color: "#fff" }]}>Bu konu için henüz not yok.</Text>
-            </ScrollScreen>
+            <Screen dark={isDark} style={{ backgroundColor: isDark ? C.bgDark : C.bg }}>
+                <Pressable onPress={goBack} android_ripple={{ color: "rgba(0,0,0,0.05)" }} style={styles.iconBtn}>
+                    <ChevronLeft size={22} color={iconColor} />
+                </Pressable>
+                <Text style={[styles.empty, { color: isDark ? "#fff" : C.navy }]}>Bu konu için henüz not yok.</Text>
+            </Screen>
         );
     }
 
-    var isLast = idx === notlar.length - 1;
-
     return (
-        <ScrollScreen dark={isDark}>
-            <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
-
+        <Screen dark={isDark} noBottom style={{ backgroundColor: isDark ? C.bgDark : C.bg }}>
             <View style={styles.header}>
-                <View style={styles.headerText}>
-                    <Text style={styles.dersName} numberOfLines={1}>{DERS_ICON[ders] || "📚"} {ders}</Text>
-                    <Text style={[styles.konuName, isDark && { color: "#fff" }]} numberOfLines={2}>{konu}</Text>
+                <Pressable onPress={goBack} android_ripple={{ color: "rgba(0,0,0,0.05)" }} style={[styles.iconBtn, isDark && styles.iconBtnDark]} hitSlop={8}>
+                    <ChevronLeft size={22} color={iconColor} />
+                </Pressable>
+                <View style={styles.headerMid}>
+                    <Text style={[styles.kicker, isDark && { color: "#94A3B8" }]} numberOfLines={1}>{ders}</Text>
+                    <Text style={[styles.title, isDark && { color: "#F8FAFC" }]} numberOfLines={2}>{konu}</Text>
                 </View>
-                <View style={styles.counter}>
-                    <Text style={styles.counterText}>{idx + 1}/{notlar.length}</Text>
-                </View>
+                <Pressable onPress={toggleDark} android_ripple={{ color: "rgba(0,0,0,0.05)" }} style={[styles.iconBtn, isDark && styles.iconBtnDark]} hitSlop={8}>
+                    <Settings size={20} color={iconColor} />
+                </Pressable>
             </View>
 
-            <Card dark={isDark} style={styles.noteCard}>
-                <View
-                    style={styles.noteInner}
-                    onLayout={function (e) {
-                        var w = Math.floor(e.nativeEvent.layout.width);
-                        if (w > 60 && Math.abs(w - contentW) > 1) setContentW(w);
-                    }}
-                >
-                    <RenderHTML
-                        contentWidth={contentW}
-                        source={{ html: html || "<p></p>", baseUrl: "https://www.atanly.com/" }}
-                        baseStyle={isDark ? styles.baseDark : styles.base}
-                        tagsStyles={tags}
-                        ignoredStyles={["width", "minWidth", "maxWidth", "height", "flex", "flexDirection", "flexGrow", "flexShrink", "flexBasis", "position", "left", "right", "top", "bottom", "display"]}
-                        defaultTextProps={{ selectable: false }}
-                        computeEmbeddedMaxWidth={function () { return contentW; }}
-                        renderers={{
-                            img: function (p) {
-                                return <NoteImage tnode={p.tnode} contentWidth={contentW} />;
-                            }
-                        }}
-                    />
-                </View>
-            </Card>
+            <FlashList
+                data={blocks}
+                renderItem={renderItem}
+                keyExtractor={keyExtractor}
+                estimatedItemSize={92}
+                extraData={isDark}
+                style={{ flex: 1 }}
+                contentContainerStyle={styles.listContent}
+            />
 
-            <View style={styles.navRow}>
-                <Tap
+            <View style={[styles.bar, isDark && styles.barDark, { paddingBottom: Math.max(insets.bottom, 10) }]}>
+                <Pressable
+                    onPress={goPrev}
                     disabled={idx === 0}
-                    onPress={function () { if (idx > 0) setIdx(idx - 1); }}
-                    style={[styles.navBtn, isDark && styles.navBtnDark, idx === 0 && { opacity: 0.35 }]}
+                    android_ripple={{ color: "rgba(0,0,0,0.05)" }}
+                    style={[styles.navBtn, idx === 0 && { opacity: 0.35 }]}
                 >
-                    <Text style={[styles.navTxt, isDark && { color: "#e7e5e4" }]}>← Önceki</Text>
-                </Tap>
-                {isLast ? (
-                    <Tap onPress={sorular.length ? goToTest : function () { navigation.goBack(); }} style={[styles.navBtn, styles.navBtnOn]}>
-                        <Text style={[styles.navTxt, { color: "#fff" }]}>{sorular.length ? "Teste geç →" : "Bitir"}</Text>
-                    </Tap>
-                ) : (
-                    <Tap onPress={function () { setIdx(idx + 1); }} style={[styles.navBtn, styles.navBtnOn]}>
-                        <Text style={[styles.navTxt, { color: "#fff" }]}>Sonraki →</Text>
-                    </Tap>
-                )}
+                    <ChevronLeft size={18} color={isDark ? "#F8FAFC" : C.navy} />
+                    <Text style={[styles.navTxt, isDark && { color: "#F8FAFC" }]}>Önceki</Text>
+                </Pressable>
+                <Text style={[styles.counter, isDark && { color: "#FDE68A" }]}>{idx + 1} / {notlar.length}</Text>
+                <Pressable
+                    onPress={isLast ? (sorular.length ? goToTest : goBack) : goNext}
+                    android_ripple={{ color: "rgba(0,0,0,0.05)" }}
+                    style={[styles.navBtn, styles.navBtnOn]}
+                >
+                    <Text style={styles.navTxtOn}>{isLast ? (sorular.length ? "Teste geç" : "Bitir") : "Sonraki"}</Text>
+                    <ChevronRight size={18} color="#fff" />
+                </Pressable>
             </View>
-        </ScrollScreen>
+        </Screen>
     );
 }
 
@@ -176,85 +260,133 @@ var styles = StyleSheet.create({
     header: {
         flexDirection: "row",
         alignItems: "center",
-        marginTop: 8,
-        marginBottom: 12,
+        paddingHorizontal: 8,
+        paddingTop: 4,
+        paddingBottom: 8,
     },
-    headerText: {
+    headerMid: {
         flex: 1,
         minWidth: 0,
-        paddingRight: 8,
+        paddingHorizontal: 8,
     },
-    dersName: {
-        color: colors.muted,
-        fontSize: 13,
+    iconBtn: {
+        width: 40,
+        height: 40,
+        borderRadius: 12,
+        alignItems: "center",
+        justifyContent: "center",
+        borderWidth: 1,
+        borderColor: C.line,
+        backgroundColor: "#fff",
+    },
+    iconBtnDark: {
+        backgroundColor: "#1E293B",
+        borderColor: "#334155",
+    },
+    kicker: {
+        fontSize: 12,
+        fontWeight: "700",
+        color: C.muted,
+        letterSpacing: 0.3,
         marginBottom: 2,
     },
-    konuName: {
-        fontSize: 20,
+    title: {
+        fontSize: 18,
         fontWeight: "800",
-        color: colors.navy,
+        color: C.navy,
+        lineHeight: 23,
     },
-    counter: {
-        backgroundColor: "#EEF2FF",
-        paddingHorizontal: 10,
-        paddingVertical: 6,
-        borderRadius: 10,
-        flexShrink: 0,
+    listContent: {
+        paddingHorizontal: PAGE_PAD,
+        paddingBottom: 12,
     },
-    counterText: {
-        fontWeight: "700",
-        fontSize: 13,
-        color: colors.indigo,
-    },
-    noteCard: {
-        padding: 14,
-        overflow: "hidden",
+    badge: {
+        alignSelf: "flex-start",
+        maxWidth: "100%",
+        backgroundColor: C.goldSoft,
+        borderRadius: 999,
+        paddingVertical: 8,
+        paddingHorizontal: 14,
         marginBottom: 12,
+        borderWidth: 1,
+        borderColor: "#FDE68A",
     },
-    noteInner: {
-        width: "100%",
-        overflow: "hidden",
+    heading: {
+        marginBottom: 8,
+        marginTop: 4,
     },
-    base: {
-        fontSize: 15,
-        lineHeight: 22,
-        color: colors.text,
-    },
-    baseDark: {
-        fontSize: 15,
-        lineHeight: 22,
-        color: "#e7e5e4",
-    },
-    navRow: {
+    itemCard: {
         flexDirection: "row",
+        backgroundColor: C.card,
+        borderRadius: 16,
+        borderWidth: 1,
+        borderColor: C.line,
+        overflow: "hidden",
+        marginBottom: 10,
+    },
+    itemCardDark: {
+        backgroundColor: C.cardDark,
+        borderColor: C.lineDark,
+    },
+    accent: {
+        width: ACCENT_W,
+        backgroundColor: C.gold,
+    },
+    itemBody: {
+        flex: 1,
+        padding: CARD_PAD,
+        minWidth: 0,
+    },
+    bar: {
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
+        paddingHorizontal: 12,
+        paddingTop: 10,
+        backgroundColor: "#fff",
+        borderTopWidth: 1,
+        borderTopColor: C.line,
+    },
+    barDark: {
+        backgroundColor: "#1E293B",
+        borderTopColor: C.lineDark,
     },
     navBtn: {
-        flex: 1,
-        paddingVertical: 12,
+        flexDirection: "row",
+        alignItems: "center",
+        paddingVertical: 10,
+        paddingHorizontal: 12,
         borderRadius: 12,
         borderWidth: 1,
-        borderColor: colors.border,
-        alignItems: "center",
+        borderColor: C.line,
         backgroundColor: "#fff",
-        marginHorizontal: 4,
-    },
-    navBtnDark: {
-        backgroundColor: "#211F1D",
-        borderColor: "rgba(255,255,255,0.1)",
+        minWidth: 108,
     },
     navBtnOn: {
-        backgroundColor: "#0D2C4D",
-        borderColor: "#0D2C4D",
+        backgroundColor: C.navy,
+        borderColor: C.navy,
     },
     navTxt: {
-        fontWeight: "700",
         fontSize: 14,
-        color: colors.text,
+        fontWeight: "700",
+        color: C.navy,
+        marginLeft: 2,
+    },
+    navTxtOn: {
+        fontSize: 14,
+        fontWeight: "700",
+        color: "#fff",
+        marginRight: 2,
+    },
+    counter: {
+        fontSize: 13,
+        fontWeight: "700",
+        color: C.gold,
+        letterSpacing: 0.4,
     },
     empty: {
         marginTop: 40,
         textAlign: "center",
         fontSize: 16,
-        color: colors.text,
     },
 });
