@@ -1031,21 +1031,7 @@
         };
     }
 
-    function topicLayerFromSvg(svg, topicId) {
-        var boxes = {};
-        var paths = svg.querySelectorAll("path[id]");
-        Array.prototype.forEach.call(paths, function (p) {
-            try {
-                var b = p.getBBox();
-                boxes[String(p.getAttribute("id") || "").toUpperCase()] = {
-                    x: b.x + b.width / 2,
-                    y: b.y + b.height / 2,
-                    w: b.width,
-                    h: b.height
-                };
-            } catch (e) { }
-        });
-        var PIN_OFF = {
+    var PIN_OFF = {
             "Bafra Deltası": ["TR55", -0.38, -0.42],
             "Çarşamba Deltası": ["TR55", 0.42, -0.12],
             "Bafra Ovası": ["TR55", -0.32, -0.22],
@@ -1090,17 +1076,36 @@
             "Acıpayam Ovası": ["TR20", 0.10, 0.35],
             "Zigana Geçidi": ["TR61", 0.10, 0.35],
             "Ovit Geçidi": ["TR53", 0.05, 0.35]
-        };
+    };
+
+    function pinHomeCode(it) {
+        var spec = PIN_OFF[it.name];
+        var code = (spec && spec[0]) || (it.codes && it.codes[0]);
+        if (!code && it.region) {
+            var regs = codesOfRegion(it.region);
+            code = regs[Math.floor(regs.length / 2)] || "TR06";
+        }
+        return String(code || "TR06").toUpperCase();
+    }
+
+    function topicLayerFromSvg(svg, topicId) {
+        var boxes = {};
+        var paths = svg.querySelectorAll("path[id]");
+        Array.prototype.forEach.call(paths, function (p) {
+            try {
+                var b = p.getBBox();
+                boxes[String(p.getAttribute("id") || "").toUpperCase()] = {
+                    x: b.x + b.width / 2,
+                    y: b.y + b.height / 2,
+                    w: b.width,
+                    h: b.height
+                };
+            } catch (e) { }
+        });
         var list = itemsForTopic(topicId);
         var groups = {};
         list.forEach(function (it) {
-            var spec = PIN_OFF[it.name];
-            var code = (spec && spec[0]) || (it.codes && it.codes[0]);
-            if (!code && it.region) {
-                var regs = codesOfRegion(it.region);
-                code = regs[Math.floor(regs.length / 2)] || "TR06";
-            }
-            code = String(code || "TR06").toUpperCase();
+            var code = pinHomeCode(it);
             (groups[code] = groups[code] || []).push(it);
         });
         var pins = [];
@@ -1128,35 +1133,34 @@
         return { pins: pins, viewBox: "0 0 1000 422", glyph: topicGlyph(topicId) };
     }
 
-    var VOLC_PIN = {
-        "Kula volkanları": ["TR45", 0.48, 0.08],
-        "Karadağ": ["TR70", 0.02, -0.12],
-        "Karacadağ (Konya)": ["TR42", 0.42, 0.38],
-        "Hasan Dağı": ["TR68", 0.08, 0.38],
-        "Melendiz Dağı": ["TR51", -0.22, -0.18],
-        "Erciyes Dağı": ["TR38", 0.08, 0.32],
-        "Karacadağ": ["TR21", -0.42, 0.28],
-        "Nemrut Dağı (volkan)": ["TR13", -0.32, 0.18],
-        "Süphan Dağı": ["TR13", 0.38, -0.42],
-        "Tendürek Dağı": ["TR04", 0.22, 0.48],
-        "Ağrı Dağı": ["TR76", -0.42, 0.18],
-        "Göllüdağ": ["TR51", 0.32, 0.28]
-    };
-
     function topicPinsForPlay(topicId) {
-        return itemsForTopic(topicId).map(function (it) {
-            var spec = VOLC_PIN[it.name];
-            return {
-                id: it.id,
-                name: it.name,
-                glyph: it.glyph || itemGlyph(it),
-                x: it.x,
-                y: it.y,
-                code: spec ? spec[0] : null,
-                ox: spec ? spec[1] : 0,
-                oy: spec ? spec[2] : 0
-            };
+        var list = itemsForTopic(topicId);
+        var groups = {};
+        list.forEach(function (it) {
+            var code = pinHomeCode(it);
+            (groups[code] = groups[code] || []).push(it);
         });
+        var pins = [];
+        Object.keys(groups).forEach(function (code) {
+            var g = groups[code];
+            g.forEach(function (it, i) {
+                var spec = PIN_OFF[it.name];
+                pins.push({
+                    id: it.id,
+                    name: it.name,
+                    glyph: it.glyph || itemGlyph(it),
+                    x: it.x,
+                    y: it.y,
+                    code: code,
+                    ox: spec ? spec[1] : 0,
+                    oy: spec ? spec[2] : 0,
+                    hasOff: !!spec,
+                    fanI: i,
+                    fanN: g.length
+                });
+            });
+        });
+        return pins;
     }
 
     var api = {

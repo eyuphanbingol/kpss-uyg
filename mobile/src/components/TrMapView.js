@@ -41,7 +41,8 @@ export function TrMapView(props) {
                 picked: props.picked || null,
                 targetId: props.targetId || null,
                 cleared: props.cleared || {},
-                labels: props.labels || []
+                labels: props.labels || [],
+                separate: props.separate || 36
             }) + "); true;";
         }
         wv.injectJavaScript(js);
@@ -49,7 +50,7 @@ export function TrMapView(props) {
 
     useEffect(function () {
         inject();
-    }, [mode, props.pins, props.glyph, props.picked, props.targetId, props.cleared, props.labels, props.owned, props.pick, props.color, html]);
+    }, [mode, props.pins, props.glyph, props.picked, props.targetId, props.cleared, props.labels, props.separate, props.owned, props.pick, props.color, html]);
 
     function onMessage(ev) {
         var data = {};

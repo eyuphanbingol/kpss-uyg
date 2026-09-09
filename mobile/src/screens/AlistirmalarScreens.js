@@ -402,7 +402,7 @@ export function MapPlayScreen({ route, navigation }) {
         return MapQuiz.pickRound(topicId, 8);
     }, [seed, topicId]);
     var layer = useMemo(function () {
-        if (topicId === "volkanik" && MapQuiz.topicPinsForPlay) return { pins: MapQuiz.topicPinsForPlay(topicId) };
+        if (MapQuiz.topicPinsForPlay) return { pins: MapQuiz.topicPinsForPlay(topicId) };
         return MapQuiz.topicLayer ? MapQuiz.topicLayer(topicId) : { pins: [], viewBox: "0 0 1000 422" };
     }, [topicId]);
     var glyph = MapQuiz.topicGlyph ? MapQuiz.topicGlyph(topicId) : "📍";
@@ -488,6 +488,7 @@ export function MapPlayScreen({ route, navigation }) {
                 mode="play"
                 pins={layer.pins || []}
                 glyph={glyph}
+                separate={topicId === "volkanik" ? 20 : 36}
                 picked={picked}
                 targetId={step.item && step.item.id}
                 cleared={clearedMap}
