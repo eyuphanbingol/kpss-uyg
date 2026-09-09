@@ -192,12 +192,10 @@ export default function BenScreen({ navigation }) {
                 )}
             </Card>
 
-            <Tap onPress={function () { go(navigation, "Leaderboard"); }}>
-                <Card style={[isDark && styles.cardDark]}>
-                    <Text style={[styles.toolName, isDark && styles.textLight]}>Türkiye sıralaması</Text>
-                    <Text style={[styles.toolDesc, isDark && styles.textMuted]}>Haftalık soru sıralaması</Text>
-                </Card>
-            </Tap>
+            <Card dark={isDark} onPress={function () { go(navigation, "Leaderboard"); }}>
+                <Text style={[styles.toolName, isDark && styles.textLight]}>Türkiye sıralaması</Text>
+                <Text style={[styles.toolDesc, isDark && styles.textMuted]}>Haftalık soru sıralaması</Text>
+            </Card>
 
             <Card style={[isDark && styles.cardDark]}>
                 <View style={styles.premiumHeader}>

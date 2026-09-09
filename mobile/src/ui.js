@@ -39,8 +39,7 @@ export function hapticTap() {
 }
 
 export function Tap(props) {
-    var armed = React.useRef(false);
-    var instant = props.pressOnIn !== false;
+    var instant = props.pressOnIn === true;
     return (
         <Pressable
             accessible={true}
@@ -50,21 +49,16 @@ export function Tap(props) {
             hitSlop={props.hitSlop}
             onPressIn={function () {
                 if (props.disabled) return;
-                if (!props.noHaptic) hapticTap();
                 if (props.onPressIn) props.onPressIn();
                 if (instant && props.onPress) {
-                    armed.current = true;
+                    if (!props.noHaptic) hapticTap();
                     props.onPress();
                 }
             }}
             onPress={function () {
-                if (instant) {
-                    if (armed.current) {
-                        armed.current = false;
-                        return;
-                    }
-                }
-                if (!props.disabled && props.onPress) props.onPress();
+                if (props.disabled || instant) return;
+                if (!props.noHaptic) hapticTap();
+                if (props.onPress) props.onPress();
             }}
             style={props.style}
         >
