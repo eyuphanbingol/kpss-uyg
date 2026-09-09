@@ -1,17 +1,31 @@
-import bundled from "../content/catalog.json";
 import { localStorageShim } from "./storage";
 import { SITE } from "./media";
 
 var CACHE_KEY = "kpss-catalog-v1";
 export var CATALOG_URL = SITE + "/catalog.json";
-export var bundledCatalog = bundled;
-export var kpssData = bundled;
 
-function looksCatalog(data) {
+var EMPTY_CATALOG = { Tarih: { _: {} }, Cografya: { _: {} } };
+var bundledCatalog = EMPTY_CATALOG;
+export var kpssData = EMPTY_CATALOG;
+var bundledLoaded = false;
+
+export function looksCatalog(data) {
     if (!data || typeof data !== "object") return false;
     var tarih = data.Tarih;
     var cografya = data.Cografya || data["Coğrafya"];
-    return !!(tarih && cografya && Object.keys(tarih).length >= 1);
+    return !!(tarih && cografya && Object.keys(tarih).length >= 1 && Object.keys(tarih)[0] !== "_");
+}
+
+export function loadBundledCatalog() {
+    if (bundledLoaded) return bundledCatalog;
+    try {
+        bundledCatalog = require("../content/catalog.json");
+        bundledLoaded = true;
+        if (looksCatalog(bundledCatalog)) kpssData = bundledCatalog;
+    } catch (e) {
+        bundledCatalog = EMPTY_CATALOG;
+    }
+    return bundledCatalog;
 }
 
 export function getKpssData() {
@@ -26,11 +40,11 @@ export function setKpssData(data) {
 export function readCachedCatalog() {
     try {
         var raw = localStorageShim.getItem(CACHE_KEY);
-        if (!raw) return bundledCatalog;
+        if (!raw) return null;
         var parsed = JSON.parse(raw);
-        return looksCatalog(parsed) ? parsed : bundledCatalog;
+        return looksCatalog(parsed) ? parsed : null;
     } catch (e) {
-        return bundledCatalog;
+        return null;
     }
 }
 
@@ -44,3 +58,5 @@ export async function fetchRemoteCatalog() {
     } catch (e) {}
     return setKpssData(data);
 }
+
+export { bundledCatalog };

@@ -4,7 +4,7 @@ import { hydrateLocalStorage } from "./lib/storage";
 import { supabase } from "./lib/supabase";
 import { SyncEngine } from "./lib/syncEngine";
 import { StudyPlanner } from "./lib/planner";
-import { bundledCatalog, fetchRemoteCatalog, readCachedCatalog } from "./lib/catalog";
+import { fetchRemoteCatalog, loadBundledCatalog, readCachedCatalog } from "./lib/catalog";
 import { AppState, Platform } from "react-native";
 
 // ============================================================
@@ -23,6 +23,7 @@ try {
 // ============================================================
 
 var Ctx = createContext(null);
+var START_CATALOG = { Tarih: { _: {} }, Cografya: { _: {} } };
 
 // ============================================================
 // APP PROVIDER
@@ -52,7 +53,7 @@ export function AppProvider(props) {
 
     var signingOutRef = useRef(false);
     var appStateRef = useRef(AppState.currentState);
-    var _kd = useState(bundledCatalog);
+    var _kd = useState(START_CATALOG);
     var kpssData = _kd[0];
     var setKpssData = _kd[1];
 
@@ -85,7 +86,7 @@ export function AppProvider(props) {
     // ---------- App State Kontrol ----------
     useEffect(function () {
         var subscription = AppState.addEventListener("change", function (nextAppState) {
-            if (appStateRef.current.match(/inactive|background/) && nextAppState === "active") {
+            if (appStateRef.current && appStateRef.current.match && appStateRef.current.match(/inactive|background/) && nextAppState === "active") {
                 pullCatalog();
                 if (session) {
                     SyncEngine.sync().catch(function () {});
@@ -109,10 +110,9 @@ export function AppProvider(props) {
                 // 1. Local storage'ı hydrate et
                 await hydrateLocalStorage();
                 StudentStore.hydrateFromDisk();
-                setKpssData(readCachedCatalog());
-                pullCatalog();
+                var cached = readCachedCatalog();
+                if (cached) setKpssData(cached);
 
-                // 2. Session kontrolü
                 var r = await supabase.auth.getSession();
                 var sess = r.data && r.data.session;
 
@@ -146,9 +146,26 @@ export function AppProvider(props) {
 
                 setSession(sess || null);
                 setBootReady(true);
+
+                setTimeout(function () {
+                    try {
+                        var bundled = loadBundledCatalog();
+                        if (bundled && bundled.Tarih && Object.keys(bundled.Tarih)[0] !== "_") {
+                            setKpssData(readCachedCatalog() || bundled);
+                        }
+                    } catch (e) {}
+                    pullCatalog();
+                }, 50);
             } catch (e) {
                 console.warn("Boot hatası:", e);
                 setBootReady(true);
+                setTimeout(function () {
+                    try {
+                        var bundled = loadBundledCatalog();
+                        if (bundled && bundled.Tarih && Object.keys(bundled.Tarih)[0] !== "_") setKpssData(bundled);
+                    } catch (err) {}
+                    pullCatalog();
+                }, 50);
             }
         })();
 

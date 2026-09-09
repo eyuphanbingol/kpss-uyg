@@ -3,12 +3,13 @@
     "name": "Atanly",
     "slug": "eyphn",
     "scheme": "atanly",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "platforms": [
       "ios",
       "android"
     ],
     "icon": "./assets/atanom.png",
+    "newArchEnabled": false,
     "orientation": "default",
     "userInterfaceStyle": "automatic",
     "splash": {
@@ -28,6 +29,7 @@
     },
     "android": {
       "package": "app.atanly.mobile",
+      "versionCode": 2,
       "softwareKeyboardLayoutMode": "resize",
       "adaptiveIcon": {
         "backgroundColor": "#041C24",
