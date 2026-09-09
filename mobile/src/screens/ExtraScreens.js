@@ -4,7 +4,6 @@ import { useApp } from "../AppProvider";
 import { ScoreEngine } from "../lib/scoreEngine";
 import { StudentStore } from "../lib/store";
 import { StudyPlanner } from "../lib/planner";
-import { kpssData } from "../lib/catalog";
 import { supabase } from "../lib/supabase";
 import { trError } from "../lib/trError";
 import taban from "../content/tabanPuanlar.json";
@@ -425,7 +424,7 @@ export function LiveScreen({ navigation }) {
                 title="Şimdi Denemeyi Çöz" 
                 onPress={function () {
                     var items = StudyPlanner.mixedQuiz(
-                        kpssData, 
+                        app.kpssData, 
                         ["Tarih", "Coğrafya", "Türkçe", "Vatandaşlık", "Güncel Bilgiler"], 
                         40
                     );

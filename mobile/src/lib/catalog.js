@@ -1,11 +1,10 @@
-import bundled from "../content/catalog.json";
 import { localStorageShim } from "./storage";
 import { SITE } from "./media";
 
 var CACHE_KEY = "kpss-catalog-v1";
 export var CATALOG_URL = SITE + "/catalog.json";
-export var bundledCatalog = bundled;
-export var kpssData = bundled;
+export var bundledCatalog = {};
+export var kpssData = {};
 
 function looksCatalog(data) {
     return !!(data && data.Tarih && data.Cografya && Object.keys(data.Tarih).length >= 10);
@@ -23,11 +22,11 @@ export function setKpssData(data) {
 export function readCachedCatalog() {
     try {
         var raw = localStorageShim.getItem(CACHE_KEY);
-        if (!raw) return bundled;
+        if (!raw) return bundledCatalog;
         var parsed = JSON.parse(raw);
-        return looksCatalog(parsed) ? parsed : bundled;
+        return looksCatalog(parsed) ? parsed : bundledCatalog;
     } catch (e) {
-        return bundled;
+        return bundledCatalog;
     }
 }
 
