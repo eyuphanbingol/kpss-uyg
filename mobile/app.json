@@ -9,7 +9,7 @@
       "android"
     ],
     "icon": "./assets/atanom.png",
-    "orientation": "default",
+    "orientation": "portrait",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/splash-full.png",

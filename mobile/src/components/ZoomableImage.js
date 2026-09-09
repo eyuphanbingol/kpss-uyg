@@ -60,7 +60,7 @@ export function ZoomableImage(props) {
                 <Text style={[styles.hint, dark && styles.hintDark]}>Büyütmek için dokun</Text>
             </Pressable>
 
-            <Modal visible={open} animationType="fade" supportedOrientations={["landscape", "landscape-left", "landscape-right", "portrait"]} onRequestClose={close}>
+            <Modal visible={open} animationType="fade" supportedOrientations={["landscape", "landscape-left", "landscape-right"]} onRequestClose={close}>
                 <View style={styles.viewer}>
                     <Pressable
                         accessibilityRole="button"

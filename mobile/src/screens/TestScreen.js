@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Text, View, StyleSheet, ScrollView } from "react-native";
+import { Modal, Text, View, StyleSheet, ScrollView } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import * as ScreenOrientation from "expo-screen-orientation";
 import { useApp } from "../AppProvider";
 import { StudentStore } from "../lib/store";
-import { confirmQuit, PrimaryButton, Screen, ScrollScreen, Badge, Tap, ThemeToggle } from "../ui";
+import { GhostButton, PrimaryButton, Screen, ScrollScreen, Badge, Tap, ThemeToggle } from "../ui";
 import { colors } from "../lib/theme";
 import { questionImages } from "../lib/media";
 import { ZoomableImage } from "../components/ZoomableImage";
@@ -56,7 +57,18 @@ export default function TestScreen({ route, navigation }) {
     var left = _left[0];
     var setLeft = _left[1];
 
+    var _quit = useState(false);
+    var quitOpen = _quit[0];
+    var setQuitOpen = _quit[1];
+
     var scrollRef = useRef(null);
+
+    useEffect(function () {
+        ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP).catch(function () {});
+        return function () {
+            ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP).catch(function () {});
+        };
+    }, [quitOpen]);
 
     useEffect(function () {
         if (scrollRef.current) {
@@ -260,9 +272,7 @@ export default function TestScreen({ route, navigation }) {
             <View style={[styles.testContainer, isDark && styles.testContainerDark]}>
                 <View style={styles.testHeader}>
                     <Tap
-                        onPress={function () {
-                            confirmQuit(function () { navigation.goBack(); });
-                        }}
+                        onPress={function () { setQuitOpen(true); }}
                         style={styles.testQuit}
                     >
                         <Text style={[styles.testQuitText, isDark && { color: "#94A3B8" }]}>Bitir</Text>
@@ -412,6 +422,34 @@ export default function TestScreen({ route, navigation }) {
                     </View>
                 ) : null}
             </View>
+            <Modal
+                visible={quitOpen}
+                transparent
+                animationType="fade"
+                supportedOrientations={["portrait"]}
+                onRequestClose={function () { setQuitOpen(false); }}
+            >
+                <View style={styles.quitMask}>
+                    <View style={[styles.quitCard, isDark && styles.quitCardDark]}>
+                        <Text style={[styles.quitTitle, isDark && { color: "#F8FAFC" }]}>Çıkış</Text>
+                        <Text style={[styles.quitText, isDark && { color: "#94A3B8" }]}>
+                            Testten çıkmak istediğine emin misin? Cevapladıkların kayıtlı kalır.
+                        </Text>
+                        <PrimaryButton
+                            title="Devam et"
+                            onPress={function () { setQuitOpen(false); }}
+                            style={{ marginBottom: 8 }}
+                        />
+                        <GhostButton
+                            title="Çık"
+                            onPress={function () {
+                                setQuitOpen(false);
+                                navigation.goBack();
+                            }}
+                        />
+                    </View>
+                </View>
+            </Modal>
         </Screen>
     );
 }
@@ -697,5 +735,34 @@ var styles = StyleSheet.create({
     testFooterDark: {
         borderTopColor: "#334155",
         backgroundColor: "#0F172A",
+    },
+    quitMask: {
+        flex: 1,
+        backgroundColor: "rgba(15, 23, 42, 0.55)",
+        justifyContent: "center",
+        padding: 24,
+    },
+    quitCard: {
+        backgroundColor: "#fff",
+        borderRadius: 20,
+        padding: 20,
+        borderWidth: 1,
+        borderColor: "#E2E8F0",
+    },
+    quitCardDark: {
+        backgroundColor: "#0F172A",
+        borderColor: "#334155",
+    },
+    quitTitle: {
+        fontSize: 18,
+        fontWeight: "800",
+        color: colors.text,
+        marginBottom: 8,
+    },
+    quitText: {
+        fontSize: 14,
+        lineHeight: 20,
+        color: colors.muted,
+        marginBottom: 16,
     },
 });

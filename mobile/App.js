@@ -7,6 +7,7 @@ import { Platform, View, StyleSheet, LogBox } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import * as NavigationBar from "expo-navigation-bar";
 import * as SystemUI from "expo-system-ui";
+import * as ScreenOrientation from "expo-screen-orientation";
 import { AppProvider } from "./src/AppProvider";
 import Root from "./src/Root";
 
@@ -33,6 +34,10 @@ LogBox.ignoreLogs([
 // ============================================================
 
 export default function App() {
+    useEffect(function () {
+        ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP).catch(function () {});
+    }, []);
+
     // ---------- Android Navigation Bar ----------
     useEffect(function () {
         if (Platform.OS === "android") {
