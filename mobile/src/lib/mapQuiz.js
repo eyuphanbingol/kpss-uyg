@@ -67,6 +67,7 @@
         "Ağrı Dağı": [44.30, 39.70], "Tendürek Dağı": [43.87, 39.35], "Süphan Dağı": [42.83, 38.93],
         "Nemrut Dağı (volkan)": [42.02, 38.62], "Erciyes Dağı": [35.45, 38.53], "Hasan Dağı": [34.17, 38.13],
         "Melendiz Dağı": [34.63, 38.37], "Karadağ": [33.18, 37.40], "Karacadağ": [39.83, 37.75],
+        "Karacadağ (Konya)": [33.77, 37.73],
         "Göllüdağ": [34.55, 38.26], "Kula volkanları": [28.65, 38.55],
         "Kaz Dağı": [26.85, 39.70], "Bozdağlar": [28.05, 38.32], "Aydın Dağları": [27.95, 37.95],
         "Madra Dağları": [27.20, 39.35], "Yunt Dağları": [27.20, 38.90], "Menteşe Dağları": [28.20, 37.15],
@@ -266,14 +267,15 @@
 
     [
         ["Ağrı Dağı", "Ağrı-Iğdır", { follow: { q: "Türkiye'nin en yüksek dağı hangisidir?", choices: ["Erciyes", "Süphan", "Ağrı Dağı", "Demirkazık"], answer: "Ağrı Dağı" } }],
-        ["Tendürek Dağı", "Ağrı-Van", null],
-        ["Süphan Dağı", "Bitlis-Van", { follow: { q: "Süphan hangi bölgededir?", choices: ["Ege", "İç Anadolu", "Doğu Anadolu", "Akdeniz"], answer: "Doğu Anadolu" } }],
+        ["Tendürek Dağı", "Ağrı", null],
+        ["Süphan Dağı", "Bitlis-Ağrı", { follow: { q: "Süphan hangi bölgededir?", choices: ["Ege", "İç Anadolu", "Doğu Anadolu", "Akdeniz"], answer: "Doğu Anadolu" } }],
         ["Nemrut Dağı (volkan)", "Bitlis", { prompt: "Bitlis Nemrut'u bul (volkan + krater gölü). Adıyaman Nemrut volkan değildir.", follow: { q: "Van Gölü'nün oluşumunda etkili volkan hangisidir?", choices: ["Erciyes", "Nemrut (Bitlis)", "Adıyaman Nemrut", "Hasan Dağı"], answer: "Nemrut (Bitlis)" } }],
         ["Erciyes Dağı", "Kayseri", { follow: { q: "Erciyes'in oluşum tipi nedir?", choices: ["Kıvrım", "Kırık", "Volkanik", "Karstik"], answer: "Volkanik" } }],
         ["Hasan Dağı", "Aksaray-Niğde", null],
         ["Melendiz Dağı", "Niğde", null],
         ["Karadağ", "Karaman", { prompt: "Karaman'daki volkanik Karadağ'ı bul. (Karacadağ Urfa–Diyarbakır'dadır.)" }],
         ["Karacadağ", "Diyarbakır-Şanlıurfa", { follow: { q: "Türkiye'nin tek kalkan tipi volkanı hangisidir?", choices: ["Erciyes", "Ağrı", "Karacadağ", "Kula"], answer: "Karacadağ" } }],
+        ["Karacadağ (Konya)", "Konya", { prompt: "Konya Karacadağ'ı bul. (Şanlıurfa–Diyarbakır'daki Karacadağ başka dağdır.)" }],
         ["Göllüdağ", "Niğde", null],
         ["Kula volkanları", "Manisa", { follow: { q: "Türkiye'nin en genç volkanik arazisi / ilk jeopark hangisidir?", choices: ["Kapadokya", "Kula", "Erciyes", "Nemrut"], answer: "Kula" } }]
     ].forEach(function (r) { ITEMS.push(F("volkanik", r[0], r[1], r[2] || {})); });
@@ -1065,18 +1067,20 @@
             "Ceyhan": ["TR01", 0.35, 0.22],
             "Silifke Deltası": ["TR33", -0.05, 0.45],
             "Göksu": ["TR33", -0.08, 0.42],
-            "Erciyes Dağı": ["TR38", 0.12, 0.08],
+            "Erciyes Dağı": ["TR38", 0.08, 0.32],
             "Sultan Sazlığı": ["TR38", -0.20, 0.42],
-            "Hasan Dağı": ["TR68", -0.05, 0.42],
-            "Melendiz Dağı": ["TR51", -0.28, -0.28],
-            "Göllüdağ": ["TR51", 0.38, 0.32],
+            "Hasan Dağı": ["TR68", 0.08, 0.38],
+            "Melendiz Dağı": ["TR51", -0.22, -0.18],
+            "Göllüdağ": ["TR51", 0.32, 0.28],
             "Kapadokya": ["TR50", 0, -0.1],
-            "Karadağ": ["TR70", 0.05, 0.35],
-            "Karacadağ": ["TR21", -0.35, 0.20],
-            "Nemrut Dağı (volkan)": ["TR13", -0.20, 0.25],
-            "Süphan Dağı": ["TR13", 0.45, -0.35],
-            "Ağrı Dağı": ["TR04", 0.35, -0.15],
-            "Tendürek Dağı": ["TR04", 0.15, 0.40],
+            "Karadağ": ["TR70", 0.02, -0.12],
+            "Karacadağ": ["TR21", -0.42, 0.28],
+            "Karacadağ (Konya)": ["TR42", 0.42, 0.38],
+            "Kula volkanları": ["TR45", 0.48, 0.08],
+            "Nemrut Dağı (volkan)": ["TR13", -0.32, 0.18],
+            "Süphan Dağı": ["TR13", 0.38, -0.42],
+            "Ağrı Dağı": ["TR76", -0.42, 0.18],
+            "Tendürek Dağı": ["TR04", 0.22, 0.48],
             "Teke Platosu": ["TR07", -0.35, 0.05],
             "Taşeli Platosu": ["TR33", -0.35, 0.20],
             "Tefenni Ovası": ["TR15", -0.25, 0.20],
@@ -1119,8 +1123,40 @@
                 pins.push({ id: it.id, name: it.name, x: x, y: y, glyph: it.glyph || itemGlyph(it) });
             });
         });
-        separatePins(pins, 52);
+        if (topicId !== "volkanik") separatePins(pins, 52);
+        else separatePins(pins, 20);
         return { pins: pins, viewBox: "0 0 1000 422", glyph: topicGlyph(topicId) };
+    }
+
+    var VOLC_PIN = {
+        "Kula volkanları": ["TR45", 0.48, 0.08],
+        "Karadağ": ["TR70", 0.02, -0.12],
+        "Karacadağ (Konya)": ["TR42", 0.42, 0.38],
+        "Hasan Dağı": ["TR68", 0.08, 0.38],
+        "Melendiz Dağı": ["TR51", -0.22, -0.18],
+        "Erciyes Dağı": ["TR38", 0.08, 0.32],
+        "Karacadağ": ["TR21", -0.42, 0.28],
+        "Nemrut Dağı (volkan)": ["TR13", -0.32, 0.18],
+        "Süphan Dağı": ["TR13", 0.38, -0.42],
+        "Tendürek Dağı": ["TR04", 0.22, 0.48],
+        "Ağrı Dağı": ["TR76", -0.42, 0.18],
+        "Göllüdağ": ["TR51", 0.32, 0.28]
+    };
+
+    function topicPinsForPlay(topicId) {
+        return itemsForTopic(topicId).map(function (it) {
+            var spec = VOLC_PIN[it.name];
+            return {
+                id: it.id,
+                name: it.name,
+                glyph: it.glyph || itemGlyph(it),
+                x: it.x,
+                y: it.y,
+                code: spec ? spec[0] : null,
+                ox: spec ? spec[1] : 0,
+                oy: spec ? spec[2] : 0
+            };
+        });
     }
 
     var api = {
@@ -1143,6 +1179,7 @@
         countFor: countFor,
         topicLayer: topicLayer,
         topicLayerFromSvg: topicLayerFromSvg,
+        topicPinsForPlay: topicPinsForPlay,
         topicGlyph: topicGlyph,
         itemGlyph: itemGlyph,
         PARK_SOURCE: "Tarım ve Orman Bakanlığı DKMP — 54 milli park (2026)"

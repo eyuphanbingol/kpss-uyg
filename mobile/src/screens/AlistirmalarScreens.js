@@ -402,6 +402,7 @@ export function MapPlayScreen({ route, navigation }) {
         return MapQuiz.pickRound(topicId, 8);
     }, [seed, topicId]);
     var layer = useMemo(function () {
+        if (topicId === "volkanik" && MapQuiz.topicPinsForPlay) return { pins: MapQuiz.topicPinsForPlay(topicId) };
         return MapQuiz.topicLayer ? MapQuiz.topicLayer(topicId) : { pins: [], viewBox: "0 0 1000 422" };
     }, [topicId]);
     var glyph = MapQuiz.topicGlyph ? MapQuiz.topicGlyph(topicId) : "📍";
@@ -462,10 +463,10 @@ export function MapPlayScreen({ route, navigation }) {
     if (isMap && picked && step.item) {
         var hitPin = (layer.pins || []).filter(function (p) { return p.id === picked; })[0];
         var rightPin = (layer.pins || []).filter(function (p) { return p.id === step.item.id; })[0];
-        if (picked === step.item.id && rightPin) labels.push({ x: rightPin.x, y: rightPin.y, text: step.item.name, kind: "ok" });
+        if (picked === step.item.id && rightPin) labels.push({ id: rightPin.id, x: rightPin.x, y: rightPin.y, text: step.item.name, kind: "ok" });
         else {
-            if (hitPin) labels.push({ x: hitPin.x, y: hitPin.y, text: hitPin.name, kind: "bad" });
-            if (rightPin) labels.push({ x: rightPin.x, y: rightPin.y, text: step.item.name, kind: "ok" });
+            if (hitPin) labels.push({ id: hitPin.id, x: hitPin.x, y: hitPin.y, text: hitPin.name, kind: "bad" });
+            if (rightPin) labels.push({ id: rightPin.id, x: rightPin.x, y: rightPin.y, text: step.item.name, kind: "ok" });
         }
     }
 
