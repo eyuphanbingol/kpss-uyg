@@ -134,7 +134,7 @@
         {
             id: "ova", title: "Ovalar", icon: "🌾",
             kids: [
-                { id: "delta", title: "Delta ovaları", icon: "🌊" },
+                { id: "delta", title: "Delta ovaları", icon: "🌊", hoverImg: "delta" },
                 { id: "ova-karst", title: "Karstik ovalar (TAKKEM)", icon: "🪨" },
                 { id: "ova-tektonik", title: "Tektonik ovalar", icon: "🌾" },
                 { id: "ova-volkan", title: "Volkanik ovalar", icon: "🌋", hoverImg: "volkan" },

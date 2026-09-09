@@ -21,7 +21,8 @@ var MAP_CARD_IMG = {
     "deprem-az": require("../../assets/deprem-az.png"),
     "plato-karst": require("../../assets/plato-karst.png"),
     "plato-asinim": require("../../assets/plato-asinim.png"),
-    "plato-tabaka": require("../../assets/plato-tabaka.png")
+    "plato-tabaka": require("../../assets/plato-tabaka.png"),
+    delta: require("../../assets/delta.png")
 };
 
 export function AlistirmalarHomeScreen({ navigation }) {
