@@ -1,5 +1,6 @@
 import React, { memo, useEffect, useMemo, useState } from "react";
-import { Image, Text, View, StyleSheet, useWindowDimensions } from "react-native";
+import { Image, ScrollView, Text, View, StyleSheet, useWindowDimensions } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useApp } from "../AppProvider";
 import { ClozeEngine } from "../lib/clozeEngine";
 import { MapQuiz } from "../lib/mapQuiz";
@@ -393,6 +394,7 @@ export function MapPlayScreen({ route, navigation }) {
     var app = useApp();
     var isDark = app.dark;
     var win = useWindowDimensions();
+    var insets = useSafeAreaInsets();
     useLandscapeLock();
     var meta = MapQuiz.topicMeta(topicId);
     var _seed = useState(0);
@@ -436,16 +438,25 @@ export function MapPlayScreen({ route, navigation }) {
         else { setIdx(idx + 1); setPicked(null); }
     }
 
+    var playPad = {
+        paddingTop: Math.max(insets.top, 12),
+        paddingBottom: Math.max(insets.bottom, 10),
+        paddingLeft: Math.max(insets.left, 12),
+        paddingRight: Math.max(insets.right, 12)
+    };
+
     if (done) {
         return (
-            <ScrollScreen dark={isDark}>
-                <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} />
-                <Card style={[styles.result, isDark && styles.cardDark]}>
-                    <Text style={[styles.pct, isDark && styles.textLight]}>{Math.round((score / list.length) * 100)}%</Text>
-                    <Text style={[styles.meta, isDark && styles.textMuted]}>{score} doğru · {list.length - score} yanlış</Text>
-                    <PrimaryButton title="Tekrar oyna" onPress={function () { setSeed(seed + 1); }} style={{ marginTop: 16 }} />
-                </Card>
-            </ScrollScreen>
+            <Screen dark={isDark} edges={[]} style={{ overflow: "hidden" }}>
+                <ScrollView contentContainerStyle={[playPad, { paddingBottom: Math.max(insets.bottom, 28) }]} keyboardShouldPersistTaps="handled">
+                    <Card style={[styles.result, isDark && styles.cardDark]}>
+                        <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} style={{ marginBottom: 12 }} />
+                        <Text style={[styles.pct, isDark && styles.textLight]}>{Math.round((score / list.length) * 100)}%</Text>
+                        <Text style={[styles.meta, isDark && styles.textMuted]}>{score} doğru · {list.length - score} yanlış</Text>
+                        <PrimaryButton title="Tekrar oyna" onPress={function () { setSeed(seed + 1); }} style={{ marginTop: 16 }} />
+                    </Card>
+                </ScrollView>
+            </Screen>
         );
     }
 
@@ -472,18 +483,20 @@ export function MapPlayScreen({ route, navigation }) {
 
     return (
         isMap ? (
-        <Screen dark={isDark} style={{ overflow: "hidden" }} edges={["top", "right", "bottom", "left"]}>
-            <View style={{ paddingHorizontal: 12, paddingTop: 4, flex: 1, minHeight: 0, minWidth: 0, overflow: "hidden" }}>
-            <View style={{ flexDirection: "row", alignItems: "center", gap: 8, marginBottom: 4, flexShrink: 0 }}>
-                <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} />
-                <Text style={[styles.kicker, { flex: 1, marginBottom: 0, minWidth: 0 }, isDark && styles.textMuted]} numberOfLines={1}>
-                    {meta ? meta.title : "Harita"} · {idx + 1}/{list.length}
+        <Screen dark={isDark} style={{ overflow: "hidden" }} edges={[]}>
+            <View style={[{ flex: 1, minHeight: 0, minWidth: 0, overflow: "hidden" }, playPad]}>
+            <Card style={[styles.mapAskCard, isDark && styles.cardDark]}>
+                <View style={styles.mapAskRow}>
+                    <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} style={{ marginBottom: 0 }} />
+                    <Text style={[styles.kicker, { flex: 1, marginBottom: 0, minWidth: 0 }, isDark && styles.textMuted]} numberOfLines={1}>
+                        {meta ? meta.title : "Harita"} · {idx + 1}/{list.length}
+                    </Text>
+                </View>
+                <Text style={[styles.prompt, { marginBottom: 0, marginTop: 8, fontSize: landscape ? 13 : 16, lineHeight: landscape ? 18 : 24 }, isDark && styles.textLight]} numberOfLines={landscape ? 2 : 4}>
+                    {step.prompt}
                 </Text>
-            </View>
-            <Text style={[styles.prompt, { marginBottom: 6, fontSize: landscape ? 13 : 16, lineHeight: landscape ? 18 : 24, flexShrink: 0 }, isDark && styles.textLight]} numberOfLines={landscape ? 2 : 4}>
-                {step.prompt}
-            </Text>
-            <View style={{ flex: 1, minHeight: 0, minWidth: 0, overflow: "hidden" }}>
+            </Card>
+            <View style={{ flex: 1, minHeight: 0, minWidth: 0, overflow: "hidden", marginTop: 8 }}>
             <TrMapView
                 mode="play"
                 pins={layer.pins || []}
@@ -512,11 +525,21 @@ export function MapPlayScreen({ route, navigation }) {
             </View>
         </Screen>
         ) : (
-        <ScrollScreen dark={isDark}>
-            <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} />
-            <Text style={[styles.kicker, isDark && styles.textMuted]}>{meta ? meta.title : "Harita"} · {idx + 1}/{list.length}</Text>
-            <Text style={[styles.konuTitle, isDark && styles.textLight]}>Bilgi bağı</Text>
+        <Screen dark={isDark} edges={[]} style={{ overflow: "hidden" }}>
+            <ScrollView
+                style={{ flex: 1 }}
+                contentContainerStyle={[playPad, { paddingBottom: Math.max(insets.bottom, 28) }]}
+                keyboardShouldPersistTaps="handled"
+                showsVerticalScrollIndicator={false}
+            >
             <Card style={[isDark && styles.cardDark]}>
+                <View style={styles.mapAskRow}>
+                    <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} style={{ marginBottom: 0 }} />
+                    <Text style={[styles.kicker, { flex: 1, marginBottom: 0, minWidth: 0 }, isDark && styles.textMuted]} numberOfLines={1}>
+                        {meta ? meta.title : "Harita"} · {idx + 1}/{list.length}
+                    </Text>
+                </View>
+                <Text style={[styles.konuTitle, { fontSize: landscape ? 18 : 22, marginTop: 8 }, isDark && styles.textLight]}>Bilgi bağı</Text>
                 <Text style={[styles.prompt, isDark && styles.textLight]}>{step.prompt}</Text>
                     {(step.choices || []).map(function (c, ci) {
                         var isP = picked === c;
@@ -542,7 +565,8 @@ export function MapPlayScreen({ route, navigation }) {
                     </Text>
                 ) : null}
             </Card>
-        </ScrollScreen>
+            </ScrollView>
+        </Screen>
         )
     );
 }
@@ -654,6 +678,8 @@ var styles = StyleSheet.create({
         fontWeight: "700",
         fontSize: 11,
     },
+    mapAskCard: { paddingVertical: 10, paddingHorizontal: 12, marginBottom: 0, flexShrink: 0 },
+    mapAskRow: { flexDirection: "row", alignItems: "center", gap: 8 },
     prompt: { fontSize: 16, lineHeight: 24, color: colors.text, marginBottom: 12 },
     clozeHint: { fontSize: 11, fontWeight: "800", letterSpacing: 0.8, color: "#8A7A4A", textTransform: "uppercase", marginBottom: 8 },
     clozeStem: { backgroundColor: "#F6F1E4", borderRadius: 16, paddingVertical: 16, paddingHorizontal: 16, paddingLeft: 18, marginBottom: 4, borderWidth: 1, borderColor: "rgba(13,44,77,0.08)", position: "relative" },
