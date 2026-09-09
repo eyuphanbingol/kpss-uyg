@@ -395,7 +395,7 @@ export function MapPlayScreen({ route, navigation }) {
     var isDark = app.dark;
     var win = useWindowDimensions();
     var insets = useSafeAreaInsets();
-    useLandscapeLock();
+    var landReady = useLandscapeLock();
     var meta = MapQuiz.topicMeta(topicId);
     var _seed = useState(0);
     var seed = _seed[0];
@@ -439,10 +439,10 @@ export function MapPlayScreen({ route, navigation }) {
     }
 
     var playPad = {
-        paddingTop: Math.max(insets.top, 12),
-        paddingBottom: Math.max(insets.bottom, 10),
-        paddingLeft: Math.max(insets.left, 12),
-        paddingRight: Math.max(insets.right, 12)
+        paddingTop: Math.min(Math.max(insets.top, 12), Math.round(win.height * 0.12)),
+        paddingBottom: Math.min(Math.max(insets.bottom, 10), Math.round(win.height * 0.12)),
+        paddingLeft: Math.min(Math.max(insets.left, 12), Math.round(win.width * 0.12)),
+        paddingRight: Math.min(Math.max(insets.right, 12), Math.round(win.width * 0.12))
     };
 
     if (done) {
@@ -481,10 +481,18 @@ export function MapPlayScreen({ route, navigation }) {
         }
     }
 
+    if (!landReady) {
+        return (
+            <Screen dark={isDark} edges={[]} style={{ overflow: "hidden" }}>
+                <View style={{ flex: 1 }} />
+            </Screen>
+        );
+    }
+
     return (
         isMap ? (
         <Screen dark={isDark} style={{ overflow: "hidden" }} edges={[]}>
-            <View style={[{ flex: 1, minHeight: 0, minWidth: 0, overflow: "hidden" }, playPad]}>
+            <View key={win.width + "x" + win.height} style={[{ flex: 1, minHeight: 0, minWidth: 0, overflow: "hidden" }, playPad]}>
             <Card style={[styles.mapAskCard, isDark && styles.cardDark]}>
                 <View style={styles.mapAskRow}>
                     <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} style={{ marginBottom: 0 }} />

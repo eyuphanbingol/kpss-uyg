@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, AppState, Dimensions, StyleSheet, Text, View } from "react-native";
 import { WebView } from "react-native-webview";
 import { loadTrSvg, mapDocument } from "../lib/trMap";
 import { colors } from "../lib/theme";
@@ -8,9 +8,11 @@ export function TrMapView(props) {
     var mode = props.mode || "play";
     var [html, setHtml] = useState("");
     var [fail, setFail] = useState(false);
-    var [box, setBox] = useState({ w: 0, h: 0 });
+    var [box, setBox] = useState({ w: 0, h: 0, gen: 0 });
     var ready = useRef(false);
     var webRef = useRef(null);
+    var boxRef = useRef(box);
+    boxRef.current = box;
 
     useEffect(function () {
         var gone = false;
@@ -23,6 +25,26 @@ export function TrMapView(props) {
         });
         return function () { gone = true; ready.current = false; };
     }, [mode]);
+
+    useEffect(function () {
+        function resetSize() {
+            ready.current = false;
+            setBox(function (prev) {
+                return { w: 0, h: 0, gen: prev.gen + 1 };
+            });
+        }
+        var dimSub = Dimensions.addEventListener("change", resetSize);
+        var prevApp = AppState.currentState;
+        var appSub = AppState.addEventListener("change", function (next) {
+            var wasBg = String(prevApp) === "inactive" || String(prevApp) === "background";
+            prevApp = next;
+            if (wasBg && next === "active") resetSize();
+        });
+        return function () {
+            if (dimSub && dimSub.remove) dimSub.remove();
+            appSub.remove();
+        };
+    }, []);
 
     function inject() {
         var wv = webRef.current;
@@ -50,7 +72,7 @@ export function TrMapView(props) {
 
     useEffect(function () {
         inject();
-    }, [mode, props.pins, props.glyph, props.picked, props.targetId, props.cleared, props.labels, props.separate, props.owned, props.pick, props.color, html]);
+    }, [mode, props.pins, props.glyph, props.picked, props.targetId, props.cleared, props.labels, props.separate, props.owned, props.pick, props.color, html, box.gen, box.w, box.h]);
 
     function onMessage(ev) {
         var data = {};
@@ -92,17 +114,22 @@ export function TrMapView(props) {
             style={boxStyle}
             onLayout={function (e) {
                 var n = e.nativeEvent.layout;
-                if (Math.abs(n.width - box.w) < 1 && Math.abs(n.height - box.h) < 1) return;
-                setBox({ w: Math.round(n.width), h: Math.round(n.height) });
+                var w = Math.round(n.width);
+                var h = Math.round(n.height);
+                var cur = boxRef.current;
+                if (Math.abs(w - cur.w) < 2 && Math.abs(h - cur.h) < 2) return;
+                ready.current = false;
+                setBox({ w: w, h: h, gen: cur.gen + 1 });
             }}
         >
             {sized ? (
                 <WebView
+                    key={"map-" + box.gen + "-" + box.w + "x" + box.h}
                     ref={webRef}
                     originWhitelist={["*"]}
                     source={{ html: html, baseUrl: "https://www.atanly.com/" }}
                     onMessage={onMessage}
-                    style={{ width: box.w, height: box.h, backgroundColor: "#8fa89a" }}
+                    style={styles.web}
                     scrollEnabled={false}
                     nestedScrollEnabled={false}
                     automaticallyAdjustContentInsets={false}
@@ -131,6 +158,10 @@ var styles = StyleSheet.create({
         borderRadius: 16,
         overflow: "hidden",
         marginTop: 4
+    },
+    web: {
+        ...StyleSheet.absoluteFillObject,
+        backgroundColor: "#8fa89a"
     },
     fail: {
         alignItems: "center",

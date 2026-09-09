@@ -13,7 +13,7 @@ export function ConquerPlayScreen({ navigation }) {
     var app = useApp();
     var isDark = app.dark;
     var win = useWindowDimensions();
-    useLandscapeLock();
+    var landReady = useLandscapeLock();
     var games = (app.student && app.student.games) || {};
     var owned = games.conquer || {};
     var [quiz, setQuiz] = useState(null);
@@ -44,6 +44,14 @@ export function ConquerPlayScreen({ navigation }) {
             return;
         }
         setQuiz({ code: quiz.code, items: quiz.items, i: quiz.i + 1, picked: null, ok: null, fail: false });
+    }
+
+    if (!landReady) {
+        return (
+            <Screen dark={isDark} style={{ overflow: "hidden" }} edges={[]}>
+                <View style={{ flex: 1 }} />
+            </Screen>
+        );
     }
 
     if (quiz) {

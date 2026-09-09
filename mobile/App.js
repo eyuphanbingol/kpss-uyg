@@ -3,13 +3,13 @@ import React, { useEffect, useRef } from "react";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaProvider, initialWindowMetrics } from "react-native-safe-area-context";
 import * as NativeSplash from "expo-splash-screen";
-import { Platform, View, StyleSheet, LogBox } from "react-native";
+import { Platform, View, StyleSheet, LogBox, AppState } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import * as NavigationBar from "expo-navigation-bar";
 import * as SystemUI from "expo-system-ui";
-import * as ScreenOrientation from "expo-screen-orientation";
 import { AppProvider } from "./src/AppProvider";
 import Root from "./src/Root";
+import { resumeScreenOrientation } from "./src/lib/useLandscapeLock";
 
 // ============================================================
 // SPLASH SCREEN
@@ -35,7 +35,11 @@ LogBox.ignoreLogs([
 
 export default function App() {
     useEffect(function () {
-        ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP).catch(function () {});
+        resumeScreenOrientation();
+        var sub = AppState.addEventListener("change", function (next) {
+            if (next === "active") resumeScreenOrientation();
+        });
+        return function () { sub.remove(); };
     }, []);
 
     // ---------- Android Navigation Bar ----------
