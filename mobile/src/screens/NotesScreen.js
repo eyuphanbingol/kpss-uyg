@@ -1,437 +1,296 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Image, Text, useWindowDimensions, View, StyleSheet } from "react-native";
-import RenderHTML from "react-native-render-html";
+import React, { useEffect, useMemo, useState } from "react";
+import { Text, useWindowDimensions, View, StyleSheet } from "react-native";
+import { WebView } from "react-native-webview";
+import { LinearGradient } from "expo-linear-gradient";
 import { useApp } from "../AppProvider";
 import { StudentStore } from "../lib/store";
-import { PrimaryButton, ScrollScreen, Card, BackChip, Tap } from "../ui";
-import { colors, DERS_ICON } from "../lib/theme";
-import { mediaUrl, rewriteHtmlMedia } from "../lib/media";
+import { PrimaryButton, ScrollScreen, BackChip, Tap, ThemeToggle } from "../ui";
+import { colors } from "../lib/theme";
+import { rewriteHtmlMedia } from "../lib/media";
 
-function NoteImage({ tnode, contentWidth }) {
-    var src = mediaUrl(tnode && tnode.attributes && tnode.attributes.src);
-    var _h = useState(200);
-    var h = _h[0];
-    var setH = _h[1];
-    if (!src) return null;
-    return (
-        <Image
-            source={{ uri: src }}
-            resizeMode="contain"
-            onLoad={function (e) {
-                var w = e.nativeEvent.source && e.nativeEvent.source.width;
-                var hh = e.nativeEvent.source && e.nativeEvent.source.height;
-                if (w && hh) setH(Math.min(440, Math.max(140, Math.round(contentWidth * hh / w))));
-            }}
-            style={{ width: contentWidth, height: h, backgroundColor: "#F6F1E4", borderRadius: 12, marginVertical: 8 }}
-        />
-    );
-}
-
-var NOTE_SKIN = "<style>"
-    + ".note-html{display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:1.55;color:#1c1917;overflow:hidden;max-width:100%}"
-    + ".note-html>div:first-child{background:none!important;border:0!important;padding:0!important}"
-    + ".note-html span.inline-flex{display:flex!important;width:100%!important;max-width:100%;box-sizing:border-box;align-items:center;gap:8px;padding:14px 16px!important;border-radius:16px!important;background:linear-gradient(135deg,#9F1239,#DC2626,#E11D48)!important;color:#FFFFFF!important;border:0!important;font-size:16px!important;font-weight:900!important;letter-spacing:0.02em;line-height:1.3!important}"
-    + ".note-html .font-black:not(.inline-flex){color:#DC2626!important;font-size:16px!important;font-weight:900!important;line-height:1.3!important}"
-    + ".note-html h3,.note-html h4,.note-html h5,.note-html .font-bold.mb-2,.note-html .font-bold.mb-1,.note-html .font-bold.border-b{display:block;width:100%;color:#DC2626!important;font-weight:900!important;font-size:17px!important;border:0!important;border-bottom:2px solid rgba(220,38,38,0.22)!important;padding:0 0 8px!important;margin:0 0 10px!important;background:transparent!important}"
-    + ".note-html .text-lg,.note-html .text-xl,.note-html .text-2xl{font-size:18px!important;font-weight:900!important;color:#DC2626!important;line-height:1.3!important}"
-    + ".note-pack,.note-html>div:not(:first-child){background:#f6f3ed!important;border:1px solid rgba(18,120,128,.16)!important;border-radius:16px!important;padding:14px!important}"
-    + ".note-html ul,.note-html ol{list-style:none!important;padding:0!important;display:flex;flex-wrap:wrap;gap:8px}"
-    + ".note-html li,.note-html .note-chip,.note-html .flex-wrap>span:not(.inline-flex){background:#fff!important;border:1px solid #e7e5e4!important;border-radius:10px!important;padding:8px 12px!important}"
-    + ".note-html p{background:#fff!important;border:1px solid #e7e5e4!important;border-radius:12px!important;padding:12px 14px!important}"
-    + ".note-html .grid>div{background:#fff!important;border:1px solid #e7e5e4!important;border-radius:14px!important;padding:12px!important}"
+var NOTE_CSS = ""
+    + "*{box-sizing:border-box;-webkit-text-size-adjust:100%}"
+    + "html,body{margin:0;padding:0;background:#fff;color:#1c1917;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}"
+    + "html.dark,html.dark body{background:#2A2724;color:#e7e5e4}"
+    + ".note-html{display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:1.55;overflow:hidden;max-width:100%}"
+    + ".note-html .text-xs{font-size:13px!important;line-height:1.5!important}"
+    + ".note-html .text-sm,.note-html .text-base{font-size:15px!important;line-height:1.55!important}"
+    + ".note-html .text-lg,.note-html .text-xl,.note-html .text-2xl{font-size:18px!important;line-height:1.3!important;font-weight:900!important;color:#DC2626!important}"
     + ".note-html b,.note-html strong{color:#041C24;font-weight:800}"
+    + ".note-html>div:first-child{background:none!important;border:0!important;padding:0!important;margin:0!important;box-shadow:none!important}"
+    + ".note-html span.inline-flex{display:flex!important;width:100%!important;max-width:100%;box-sizing:border-box;align-items:center;gap:8px;padding:14px 16px!important;border-radius:16px!important;background:linear-gradient(135deg,#9F1239,#DC2626,#E11D48)!important;color:#fff!important;border:0!important;font-size:16px!important;font-weight:900!important;letter-spacing:.02em;line-height:1.3!important;box-shadow:0 8px 20px rgba(190,18,60,.28)}"
+    + ".note-html .font-black:not(.inline-flex){color:#DC2626!important;font-size:16px!important;font-weight:900!important;letter-spacing:-.02em;line-height:1.3!important}"
+    + ".note-pack,.note-html>div:not(:first-child),.note-html>ul,.note-html>ol,.note-html>p,.note-html>table{background:#eef6fb!important;border:1px solid rgba(18,120,128,.16)!important;border-radius:16px!important;padding:14px!important;box-shadow:none!important}"
+    + ".note-html .grid{gap:10px!important;width:100%}"
+    + ".note-html .grid>div{background:#fff!important;border:1px solid #e7e5e4!important;border-radius:14px!important;padding:12px 14px!important}"
+    + ".note-html ul,.note-html ol{list-style:none!important;padding:0!important;margin:0!important;display:flex;flex-direction:column;gap:8px}"
+    + ".note-html li,.note-html .note-chip,.note-html .flex-wrap>span:not(.inline-flex){background:#fff!important;border:1px solid #e7e5e4!important;border-radius:10px!important;padding:8px 12px!important;color:#1c1917!important;list-style:none!important;margin:0!important}"
+    + ".note-html p{background:#fff!important;border:1px solid #e7e5e4!important;border-radius:12px!important;padding:12px 14px!important;margin:0 0 8px!important}"
+    + ".note-html p:last-child{margin-bottom:0!important}"
+    + ".note-html h3,.note-html h4,.note-html h5,.note-html .font-bold.mb-2,.note-html .font-bold.mb-1,.note-html .font-bold.border-b{display:block;width:100%;background:transparent!important;border:0!important;border-bottom:2px solid rgba(220,38,38,.22)!important;border-radius:0!important;color:#DC2626!important;font-weight:900;font-size:17px!important;padding:0 0 8px!important;margin:0 0 10px!important}"
     + ".note-html img{max-width:100%!important;width:100%!important;height:auto!important;display:block!important;border-radius:12px!important;margin:10px 0!important;background:#F6F1E4}"
-    + ".note-html table{width:100%!important;display:table!important}"
-    + "</style>";
+    + ".note-html table{width:100%!important;display:table!important;border-collapse:separate;border-spacing:0 6px;background:transparent!important;border:0!important;padding:0!important}"
+    + "html.dark .note-html b,html.dark .note-html strong{color:#F5EBC7}"
+    + "html.dark .note-pack,html.dark .note-html>div:not(:first-child){background:#211F1D!important;border-color:rgba(255,255,255,.08)!important}"
+    + "html.dark .note-html p,html.dark .note-html li,html.dark .note-html .grid>div{background:#2A2724!important;border-color:rgba(255,255,255,.1)!important;color:#e7e5e4!important}"
+    + "html.dark .note-html h3,html.dark .note-html h4,html.dark .note-html .font-black:not(.inline-flex){color:#F87171!important}";
+
+var SHAPE_JS = "(function(){"
+    + "var root=document.getElementById('note');if(!root)return;"
+    + "Array.prototype.slice.call(root.children).forEach(function(el,i){"
+    + "if(i===0&&el.querySelector&&el.querySelector('span.inline-flex'))return;"
+    + "var tag=el.tagName;"
+    + "if(tag==='UL'||tag==='OL'||tag==='P'||tag==='TABLE'){"
+    + "var pack=document.createElement('div');pack.className='note-pack';"
+    + "el.parentNode.insertBefore(pack,el);pack.appendChild(el);"
+    + "}});"
+    + "root.querySelectorAll('li').forEach(function(li){li.classList.add('note-chip');});"
+    + "function post(){var h=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);"
+    + "if(window.ReactNativeWebView)window.ReactNativeWebView.postMessage(JSON.stringify({h:h}));}"
+    + "post();setTimeout(post,80);setTimeout(post,400);"
+    + "root.querySelectorAll('img').forEach(function(img){img.onload=post;img.onerror=post;});"
+    + "})();true;";
+
+function noteDocument(html, dark) {
+    var safe = String(html || "").replace(/<\/script/gi, "<\\/script");
+    return "<!DOCTYPE html><html class=\"" + (dark ? "dark" : "") + "\"><head>"
+        + "<meta charset=\"utf-8\"/>"
+        + "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1,maximum-scale=1\"/>"
+        + "<style>" + NOTE_CSS + "</style></head><body>"
+        + "<div class=\"note-html\" id=\"note\">" + safe + "</div>"
+        + "<script>" + SHAPE_JS + "</script></body></html>";
+}
 
 export default function NotesScreen({ route, navigation }) {
     var ders = route.params.ders;
     var konu = route.params.konu;
     var app = useApp();
     var isDark = app.dark;
-
-    // ---------- Data ----------
     var notlar = ((app.kpssData[ders] || {})[konu] || {}).notlar || [];
     var sorular = ((app.kpssData[ders] || {})[konu] || {}).sorular || [];
     var tp = StudentStore.getTopic(ders, konu);
-    
-    // ---------- State ----------
     var _idx = useState(tp.noteIndex || 0);
     var idx = _idx[0];
     var setIdx = _idx[1];
-    
-    var width = useWindowDimensions().width - 40;
+    var _h = useState(280);
+    var webH = _h[0];
+    var setWebH = _h[1];
+    var width = useWindowDimensions().width - 32;
 
-    // ---------- Save Index ----------
     useEffect(function () {
         StudentStore.setNoteIndex(ders, konu, idx, notlar.length);
     }, [idx]);
 
-    // ---------- Go to Test ----------
+    useEffect(function () {
+        setWebH(280);
+    }, [idx, isDark]);
+
+    var htmlDoc = useMemo(function () {
+        return noteDocument(rewriteHtmlMedia(String(notlar[idx] || "")), isDark);
+    }, [notlar, idx, isDark]);
+
     function goToTest() {
         StudentStore.markNotesComplete(ders, konu);
         var packs = StudentStore.topicTestPacks(sorular.map(function (q, i) {
             var id = q.id != null ? q.id : i;
-            return {
-                ders: ders,
-                konu: konu,
-                q: q,
-                id: id,
-                qid: StudentStore.qid(ders, konu, id)
-            };
+            return { ders: ders, konu: konu, q: q, id: id, qid: StudentStore.qid(ders, konu, id) };
         }));
-        var pi = StudentStore.firstOpenPackIndex(StudentStore.getTopic(ders, konu), packs.length);
-        var pack = packs[pi];
+        var pack = packs[StudentStore.firstOpenPackIndex(StudentStore.getTopic(ders, konu), packs.length)];
         if (!pack) {
             navigation.goBack();
             return;
         }
-        navigation.replace("Test", {
-            mode: "topic",
-            ders: ders,
-            konu: konu,
-            testNo: pack.no,
-            items: pack.items
-        });
+        navigation.replace("Test", { mode: "topic", ders: ders, konu: konu, testNo: pack.no, items: pack.items });
     }
 
-    // ---------- Go Back ----------
     function goBack() {
         navigation.goBack();
     }
 
-    // ============================================================
-    // RENDER
-    // ============================================================
-
-    // Empty State
     if (!notlar.length) {
         return (
             <ScrollScreen dark={isDark}>
                 <BackChip dark={isDark} label="Geri" onPress={goBack} />
-                <View style={styles.emptyContainer}>
-                    <Text style={styles.emptyIcon}>📝</Text>
-                    <Text style={[styles.emptyTitle, isDark && styles.textLight]}>
-                        Not Bulunamadı
-                    </Text>
-                    <Text style={[styles.emptyDesc, isDark && styles.textMuted]}>
-                        Bu konu için henüz not eklenmemiş.
-                    </Text>
-                </View>
+                <Text style={[styles.emptyTitle, isDark && { color: "#fff" }]}>Bu konu için henüz not yok.</Text>
             </ScrollScreen>
         );
     }
 
-    var html = rewriteHtmlMedia(String(notlar[idx] || ""));
     var isLast = idx === notlar.length - 1;
 
     return (
         <ScrollScreen dark={isDark}>
-            {/* Back */}
-            <BackChip dark={isDark} label="Geri" onPress={goBack} />
-
-            {/* Header */}
-            <View style={styles.header}>
-                <View>
-                    <Text style={[styles.dersName, isDark && styles.textMuted]}>
-                        {DERS_ICON[ders] || "📚"} {ders}
-                    </Text>
-                    <Text style={[styles.konuName, isDark && styles.textLight]}>
-                        {konu}
-                    </Text>
-                </View>
-                <View style={styles.counter}>
-                    <Text style={[styles.counterText, isDark && styles.textLight]}>
-                        {idx + 1}/{notlar.length}
-                    </Text>
-                </View>
+            <View style={styles.topRow}>
+                <BackChip dark={isDark} label="Geri" onPress={goBack} />
+                <ThemeToggle dark={isDark} />
             </View>
 
-            {/* Note Content */}
-            <Card style={[styles.noteCard, isDark && styles.cardDark]}>
-                <RenderHTML 
-                    contentWidth={width} 
-                    source={{ html: NOTE_SKIN + "<div class=\"note-html\">" + html + "</div>", baseUrl: "https://www.atanly.com/" }}
-                    baseStyle={styles.noteContent}
-                    tagsStyles={styles.tags}
-                    renderers={{
-                        img: function (p) {
-                            return <NoteImage tnode={p.tnode} contentWidth={width} />;
-                        }
+            <View style={[styles.studyCard, isDark && styles.studyCardDark]}>
+                <LinearGradient colors={["#041C24", "#0A3842", "#127880"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.head}>
+                    <View style={{ flex: 1, minWidth: 0, paddingRight: 10 }}>
+                        <Text style={styles.kicker}>{String(ders || "").toUpperCase()}</Text>
+                        <Text style={styles.title}>{konu} · Özet</Text>
+                    </View>
+                    <View style={styles.progressPill}>
+                        <Text style={styles.progressTxt}>{idx + 1}/{notlar.length}</Text>
+                    </View>
+                </LinearGradient>
+
+                <WebView
+                    key={idx + (isDark ? "-d" : "-l")}
+                    originWhitelist={["*"]}
+                    source={{ html: htmlDoc, baseUrl: "https://www.atanly.com/" }}
+                    style={{ width: width, height: webH, backgroundColor: isDark ? "#2A2724" : "#fff" }}
+                    scrollEnabled={false}
+                    showsVerticalScrollIndicator={false}
+                    javaScriptEnabled
+                    mixedContentMode="always"
+                    setSupportMultipleWindows={false}
+                    onMessage={function (e) {
+                        try {
+                            var msg = JSON.parse(e.nativeEvent.data);
+                            if (msg && msg.h) setWebH(Math.max(220, Math.ceil(msg.h) + 8));
+                        } catch (err) {}
                     }}
                 />
-            </Card>
 
-            {/* Navigation */}
-            <View style={styles.navRow}>
-                <Tap 
-                    disabled={idx === 0} 
-                    onPress={function () { setIdx(idx - 1); }}
-                    unstable_pressDelay={0}
-                    style={[styles.navBtn, idx === 0 && styles.navBtnDisabled]}
-                >
-                    <Text style={[styles.navBtnText, isDark && styles.textMuted]}>
-                        ← Önceki
-                    </Text>
-                </Tap>
-
-                {isLast ? (
-                    <Tap 
-                        onPress={sorular.length ? goToTest : goBack}
-                        style={[styles.navBtn, styles.navBtnPrimary]}
+                <View style={[styles.foot, isDark && styles.footDark]}>
+                    <Tap
+                        disabled={idx === 0}
+                        onPress={function () { setIdx(idx - 1); }}
+                        style={[styles.prevBtn, idx === 0 && { opacity: 0.35 }]}
                     >
-                        <Text style={[styles.navBtnText, { color: "#fff" }]}>
-                            {sorular.length ? "Teste Geç →" : "Konuyu Bitir"}
-                        </Text>
+                        <Text style={[styles.prevTxt, isDark && { color: "#e7e5e4" }]}>‹  Önceki</Text>
                     </Tap>
-                ) : (
-                    <Tap 
-                        onPress={function () { setIdx(idx + 1); }}
-                        style={styles.navBtn}
-                    >
-                        <Text style={[styles.navBtnText, isDark && styles.textLight]}>
-                            Sonraki →
-                        </Text>
-                    </Tap>
-                )}
-            </View>
-
-            {/* Progress */}
-            <View style={styles.progressContainer}>
-                <View style={[styles.progressBar, isDark && { backgroundColor: colors.navyDeep }]}>
-                    <View 
-                        style={[
-                            styles.progressFill,
-                            { 
-                                width: ((idx + 1) / notlar.length) * 100 + "%",
-                                backgroundColor: isLast ? colors.emerald : colors.indigo
-                            }
-                        ]} 
-                    />
+                    {isLast ? (
+                        <Tap onPress={sorular.length ? goToTest : goBack} style={styles.nextWrap}>
+                            <LinearGradient colors={["#0D2C4D", "#14607a", "#1D8A99"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.nextBtn}>
+                                <Text style={styles.nextTxt}>{sorular.length ? "Teste geç  ›" : "Konuyu bitir"}</Text>
+                            </LinearGradient>
+                        </Tap>
+                    ) : (
+                        <Tap onPress={function () { setIdx(idx + 1); }} style={styles.nextWrap}>
+                            <LinearGradient colors={["#0D2C4D", "#14607a", "#1D8A99"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.nextBtn}>
+                                <Text style={styles.nextTxt}>Sonraki  ›</Text>
+                            </LinearGradient>
+                        </Tap>
+                    )}
                 </View>
-                <Text style={[styles.progressText, isDark && styles.textMuted]}>
-                    %{Math.round(((idx + 1) / notlar.length) * 100)} tamamlandı
-                </Text>
             </View>
 
-            {/* Quick Test Button */}
-            {!isLast && sorular.length > 0 && (
-                <PrimaryButton 
-                    title="Notları Bitirdim, Teste Geç" 
-                    onPress={goToTest}
-                    style={styles.testBtn}
-                />
-            )}
+            {sorular.length ? (
+                <PrimaryButton title="Notları bitirdim, teste geç" onPress={goToTest} style={{ marginTop: 20, marginBottom: 8 }} />
+            ) : null}
         </ScrollScreen>
     );
 }
 
-// ============================================================
-// STILLER
-// ============================================================
-
 var styles = StyleSheet.create({
-    // ---------- Text Helpers ----------
-    textLight: {
-        color: "#fff",
-    },
-    textMuted: {
-        color: colors.muted,
-    },
-
-    // ---------- Card ----------
-    cardDark: {
-        backgroundColor: colors.navyDeep,
-        borderColor: colors.muted,
-    },
-
-    // ---------- Back ----------
-    backText: {
-        color: colors.muted,
-        fontWeight: "600",
-        fontSize: 13,
-        marginBottom: 4,
-    },
-
-    // ---------- Header ----------
-    header: {
+    topRow: {
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        marginVertical: 8,
-    },
-    dersName: {
-        color: colors.muted,
-        fontSize: 13,
-        marginBottom: 2,
-    },
-    konuName: {
-        fontSize: 20,
-        fontWeight: "700",
-        color: colors.navy,
-    },
-    counter: {
-        backgroundColor: colors.indigo + "10",
-        paddingHorizontal: 14,
-        paddingVertical: 6,
-        borderRadius: 12,
-        borderWidth: 1,
-        borderColor: colors.indigo + "20",
-    },
-    counterText: {
-        fontWeight: "700",
-        fontSize: 14,
-        color: colors.indigo,
-    },
-
-    // ---------- Note Card ----------
-    noteCard: {
-        padding: 16,
-        minHeight: 200,
         marginBottom: 12,
+    },
+    studyCard: {
+        borderRadius: 24,
         overflow: "hidden",
-    },
-    noteContent: {
-        fontSize: 16,
-        lineHeight: 26,
-        color: colors.text,
-    },
-    tags: {
-        p: {
-            fontSize: 16,
-            lineHeight: 26,
-            color: colors.text,
-            marginBottom: 8,
-        },
-        strong: {
-            fontWeight: "700",
-            color: colors.indigo,
-        },
-        h1: {
-            fontSize: 22,
-            fontWeight: "900",
-            color: "#DC2626",
-            marginVertical: 8,
-        },
-        h2: {
-            fontSize: 20,
-            fontWeight: "900",
-            color: "#DC2626",
-            marginVertical: 6,
-        },
-        h3: {
-            fontSize: 18,
-            fontWeight: "900",
-            color: "#DC2626",
-            marginVertical: 4,
-        },
-        h4: {
-            fontSize: 17,
-            fontWeight: "900",
-            color: "#DC2626",
-            marginVertical: 4,
-        },
-        ul: {
-            paddingLeft: 20,
-            marginVertical: 4,
-        },
-        li: {
-            fontSize: 15,
-            lineHeight: 24,
-            color: colors.text,
-            marginVertical: 2,
-        },
-        img: {
-            width: "100%",
-            marginVertical: 8,
-            borderRadius: 12
-        },
-        blockquote: {
-            borderLeftWidth: 4,
-            borderLeftColor: colors.indigo,
-            paddingLeft: 12,
-            marginVertical: 8,
-            fontStyle: "italic",
-            color: colors.muted,
-        },
-    },
-
-    // ---------- Navigation ----------
-    navRow: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        gap: 12,
-        marginBottom: 12,
-    },
-    navBtn: {
-        flex: 1,
-        paddingVertical: 12,
-        borderRadius: 12,
-        borderWidth: 1,
-        borderColor: colors.border,
-        alignItems: "center",
         backgroundColor: "#fff",
+        borderWidth: 1,
+        borderColor: "rgba(13, 44, 77, 0.1)",
+        shadowColor: "#041C24",
+        shadowOffset: { width: 0, height: 18 },
+        shadowOpacity: 0.18,
+        shadowRadius: 24,
+        elevation: 8,
     },
-    navBtnDisabled: {
-        opacity: 0.3,
+    studyCardDark: {
+        backgroundColor: "#2A2724",
+        borderColor: "rgba(255,255,255,0.08)",
     },
-    navBtnPrimary: {
-        backgroundColor: colors.indigo,
-        borderColor: colors.indigo,
+    head: {
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
+        paddingVertical: 16,
+        paddingHorizontal: 16,
     },
-    navBtnText: {
+    kicker: {
+        marginBottom: 4,
+        fontSize: 11,
+        fontWeight: "700",
+        letterSpacing: 1.6,
+        color: "rgba(245, 235, 199, 0.72)",
+    },
+    title: {
+        fontSize: 17,
+        fontWeight: "800",
+        color: "#fff",
+        lineHeight: 22,
+    },
+    progressPill: {
+        minWidth: 54,
+        height: 34,
+        paddingHorizontal: 12,
+        borderRadius: 999,
+        backgroundColor: "rgba(245, 235, 199, 0.14)",
+        borderWidth: 1,
+        borderColor: "rgba(245, 235, 199, 0.28)",
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    progressTxt: {
+        color: "#F5EBC7",
+        fontWeight: "700",
+        fontSize: 14,
+        letterSpacing: 0.4,
+    },
+    foot: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        gap: 10,
+        paddingHorizontal: 12,
+        paddingVertical: 14,
+        backgroundColor: "#f6f4f1",
+        borderTopWidth: 1,
+        borderTopColor: "rgba(13, 44, 77, 0.07)",
+    },
+    footDark: {
+        backgroundColor: "#211F1D",
+        borderTopColor: "rgba(255,255,255,0.06)",
+    },
+    prevBtn: {
+        paddingVertical: 10,
+        paddingHorizontal: 16,
+        borderRadius: 999,
+        backgroundColor: "#fff",
+        borderWidth: 1,
+        borderColor: "rgba(13, 44, 77, 0.12)",
+    },
+    prevTxt: {
         fontWeight: "600",
         fontSize: 14,
-        color: colors.text,
+        color: "#211F1D",
     },
-
-    // ---------- Progress ----------
-    progressContainer: {
-        marginTop: 4,
-        marginBottom: 8,
-    },
-    progressBar: {
-        height: 4,
-        borderRadius: 2,
-        backgroundColor: "#F5F5F4",
+    nextWrap: {
+        borderRadius: 999,
         overflow: "hidden",
     },
-    progressFill: {
-        height: "100%",
-        borderRadius: 2,
+    nextBtn: {
+        paddingVertical: 10,
+        paddingHorizontal: 18,
+        borderRadius: 999,
     },
-    progressText: {
-        color: colors.muted,
-        fontSize: 11,
-        textAlign: "center",
-        marginTop: 4,
-    },
-
-    // ---------- Test Button ----------
-    testBtn: {
-        marginTop: 4,
-    },
-
-    // ---------- Empty ----------
-    emptyContainer: {
-        alignItems: "center",
-        paddingVertical: 60,
-        paddingHorizontal: 20,
-    },
-    emptyIcon: {
-        fontSize: 48,
-        marginBottom: 12,
+    nextTxt: {
+        color: "#fff",
+        fontWeight: "700",
+        fontSize: 14,
     },
     emptyTitle: {
-        fontSize: 18,
-        fontWeight: "700",
+        marginTop: 40,
+        textAlign: "center",
+        fontSize: 16,
         color: colors.text,
-        textAlign: "center",
-    },
-    emptyDesc: {
-        fontSize: 14,
-        color: colors.muted,
-        textAlign: "center",
-        marginTop: 4,
     },
 });
