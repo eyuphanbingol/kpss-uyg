@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Text, View, StyleSheet } from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
+import { Text, View, StyleSheet, ScrollView } from "react-native";
 import { useApp } from "../AppProvider";
 import { StudentStore } from "../lib/store";
 import { PrimaryButton, ScrollScreen, Card, Tap, PageHeader } from "../ui";
@@ -83,7 +82,7 @@ export default function ProgramScreen({ navigation }) {
         <ScrollScreen dark={isDark}>
             <PageHeader dark={isDark} title="Çalışma Programı" subtitle="Her güne ders ve saat ekle" onBack={function () { navigation.goBack(); }} right={null} />
 
-            <ScrollView horizontal showsHorizontalScrollIndicator={false} delaysContentTouches={false} keyboardShouldPersistTaps="always" style={{ marginBottom: 10 }} contentContainerStyle={{ gap: 8 }}>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false} keyboardShouldPersistTaps="handled" style={{ marginBottom: 10 }} contentContainerStyle={{ gap: 8 }}>
                 {[
                     { id: "yogun", t: "Yoğun" },
                     { id: "hafif", t: "Hafif" },
@@ -97,7 +96,7 @@ export default function ProgramScreen({ navigation }) {
                     );
                 })}
             </ScrollView>
-            <ScrollView horizontal showsHorizontalScrollIndicator={false} delaysContentTouches={false} keyboardShouldPersistTaps="always" style={{ marginBottom: 12 }} contentContainerStyle={{ gap: 8 }}>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false} keyboardShouldPersistTaps="handled" style={{ marginBottom: 12 }} contentContainerStyle={{ gap: 8 }}>
                 {days.map(function (w) {
                     var d = draft.days[w.id];
                     var sel = editDay === w.id;

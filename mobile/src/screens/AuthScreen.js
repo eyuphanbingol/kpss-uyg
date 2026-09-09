@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Image, Text, View, StyleSheet, ActivityIndicator } from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
+import { Image, Text, View, StyleSheet, ActivityIndicator, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Svg, { Path } from "react-native-svg";
 import * as WebBrowser from "expo-web-browser";

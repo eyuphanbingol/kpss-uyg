@@ -1,6 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Alert, Text, View, StyleSheet, useWindowDimensions } from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
+import { Alert, Text, View, StyleSheet, useWindowDimensions, ScrollView } from "react-native";
 import { useApp } from "../AppProvider";
 import { GamesEngine } from "../lib/gamesEngine";
 import { MapQuiz } from "../lib/mapQuiz";
@@ -61,7 +60,7 @@ export function ConquerPlayScreen({ navigation }) {
                             <TrMapView mode="conquer" owned={owned} pick={quiz.code} locked={true} color="#127880" />
                         </View>
                     </View>
-                    <ScrollView style={{ flex: 1, minHeight: 0, minWidth: 0 }} contentContainerStyle={{ paddingBottom: 16 }} keyboardShouldPersistTaps="always" delaysContentTouches={false}>
+                    <ScrollView style={{ flex: 1, minHeight: 0, minWidth: 0 }} contentContainerStyle={{ paddingBottom: 16 }} keyboardShouldPersistTaps="handled">
                         <Text style={[styles.meta, isDark && styles.muted]}>Soru {quiz.i + 1} / {quiz.items.length} · hepsini art arda bil</Text>
                         <View style={{ height: 8, borderRadius: 99, backgroundColor: isDark ? "#292524" : "#E7E5E4", overflow: "hidden", marginTop: 10, marginBottom: 16 }}>
                             <View style={{ height: 8, width: (quiz.items.length ? Math.round(((quiz.i + (quiz.ok ? 1 : 0)) / quiz.items.length) * 100) : 0) + "%", backgroundColor: "#127880", borderRadius: 99 }} />
@@ -116,7 +115,7 @@ export function ConquerPlayScreen({ navigation }) {
                     <View style={{ height: 8, width: (codes.length ? Math.round((nOwn / codes.length) * 100) : 0) + "%", backgroundColor: "#127880", borderRadius: 99 }} />
                 </View>
                 <View style={{ flexDirection: "row", alignItems: "center", marginTop: 8, flexShrink: 0 }}>
-                    <ScrollView horizontal showsHorizontalScrollIndicator={false} delaysContentTouches={false} contentContainerStyle={{ gap: 6, paddingRight: 8 }} style={{ flex: 1 }}>
+                    <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 6, paddingRight: 8 }} style={{ flex: 1 }}>
                         {regions.map(function (r) {
                             return (
                                 <View key={r.id} style={{ backgroundColor: r.done ? "#D1FAE5" : (isDark ? "#292524" : "#EEF2EF"), borderRadius: 999, paddingVertical: 5, paddingHorizontal: 10 }}>

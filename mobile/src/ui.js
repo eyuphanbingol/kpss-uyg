@@ -3,16 +3,17 @@ import {
     ActivityIndicator,
     Alert,
     Pressable,
+    ScrollView,
     StyleSheet,
     Text,
     TextInput,
+    TouchableOpacity,
     View,
     KeyboardAvoidingView,
     Platform,
     Dimensions,
     Modal,
 } from "react-native";
-import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 import * as Haptics from "expo-haptics";
 import { LinearGradient } from "expo-linear-gradient";
@@ -112,9 +113,7 @@ export function ScrollScreen(props) {
                     props.contentStyle,
                 ]}
                 keyboardShouldPersistTaps="handled"
-                delaysContentTouches={true}
-                canCancelContentTouches={true}
-                nestedScrollEnabled={false}
+                nestedScrollEnabled
                 showsVerticalScrollIndicator={false}
             >
                 {props.children}
@@ -144,11 +143,8 @@ export function KeyboardScreen(props) {
                         isDark && styles.padDark,
                         props.contentStyle,
                     ]}
-                    keyboardShouldPersistTaps="always"
-                    delaysContentTouches={false}
-                    canCancelContentTouches={false}
-                    overScrollMode="never"
-                    bounces={false}
+                    keyboardShouldPersistTaps="handled"
+                    nestedScrollEnabled
                     showsVerticalScrollIndicator={false}
                 >
                     {props.children}
