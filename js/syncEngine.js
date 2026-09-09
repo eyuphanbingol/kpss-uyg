@@ -132,6 +132,18 @@
         return A || B || null;
     }
 
+    function mergeIdList(a, b) {
+        var seen = {};
+        var out = [];
+        [].concat(a || [], b || []).forEach(function (id) {
+            id = String(id || "").trim();
+            if (!id || seen[id]) return;
+            seen[id] = true;
+            out.push(id);
+        });
+        return out;
+    }
+
     function mergeUserProfile(local, remote, settingsSrc) {
         var up = Object.assign({}, (remote && remote.userProfile) || {}, (settingsSrc && settingsSrc.userProfile) || {});
         var plan = pickStudyPlan(local, remote);
@@ -156,8 +168,8 @@
                 : (local.streak || remote.streak),
             topics: mergeTopics(local.topics, remote.topics),
             answers: mergeAnswers(local.answers, remote.answers),
-            wrongBook: localNewer ? (local.wrongBook || []) : (remote.wrongBook || []),
-            reviewBook: localNewer ? (local.reviewBook || []) : (remote.reviewBook || []),
+            wrongBook: mergeIdList(local.wrongBook, remote.wrongBook),
+            reviewBook: mergeIdList(local.reviewBook, remote.reviewBook),
             reviewNotebook: (function () {
                 var map = {};
                 [].concat(remote.reviewNotebook || [], local.reviewNotebook || []).forEach(function (n) {

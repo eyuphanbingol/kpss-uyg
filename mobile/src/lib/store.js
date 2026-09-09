@@ -385,7 +385,8 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
         var named = s.profile && s.profile.name;
         var onboarded = s.profile && s.profile.onboarded;
         var notes = s.reviewNotebook && s.reviewNotebook.length;
-        return !q && !topics && !sessions && !named && !onboarded && !notes;
+        var books = (s.wrongBook && s.wrongBook.length) || (s.reviewBook && s.reviewBook.length);
+        return !q && !topics && !sessions && !named && !onboarded && !notes && !books;
     }
 
     function readKey(key) {
