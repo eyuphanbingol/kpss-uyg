@@ -1,5 +1,5 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { ImageBackground, Text, View, StyleSheet, useWindowDimensions } from "react-native";
+import React, { memo, useEffect, useMemo, useState } from "react";
+import { Image, Text, View, StyleSheet, useWindowDimensions } from "react-native";
 import { useApp } from "../AppProvider";
 import { ClozeEngine } from "../lib/clozeEngine";
 import { MapQuiz } from "../lib/mapQuiz";
@@ -7,8 +7,8 @@ import { StudentStore } from "../lib/store";
 import { go } from "../nav";
 import { Card, PrimaryButton, ScrollScreen, Screen, Tap, PageHeader, BackChip } from "../ui";
 import { colors } from "../lib/theme";
-import { PencilLine, Map, Shield, Layers, Timer } from "lucide-react-native";
-import { AccentCard, PctBadge } from "../kit";
+import { PencilLine, Map, Shield, Layers, Timer, ChevronRight } from "lucide-react-native";
+import { AccentCard, PctBadge, Hit } from "../kit";
 import { TrMapView } from "../components/TrMapView";
 import { useLandscapeLock } from "../lib/useLandscapeLock";
 
@@ -327,6 +327,30 @@ export function ClozePlayScreen({ route, navigation }) {
     );
 }
 
+var MapTopicRow = memo(function MapTopicRow(props) {
+    var src = props.imgKey ? MAP_CARD_IMG[props.imgKey] : null;
+    return (
+        <View style={[styles.mapRow, props.dark && styles.mapRowDark]}>
+            <Hit onPress={props.onPress} style={styles.mapRowHit}>
+                {src ? (
+                    <Image source={src} style={styles.thumb} />
+                ) : (
+                    <View style={styles.thumbFallback}>
+                        <Map size={22} color="#0F172A" />
+                    </View>
+                )}
+                <View style={styles.mapRowBody}>
+                    <Text style={[styles.dersName, props.dark && styles.textLight]} numberOfLines={2}>{props.title}</Text>
+                    <View style={styles.targetBadge}>
+                        <Text style={styles.targetBadgeTxt}>{props.count} hedef</Text>
+                    </View>
+                </View>
+                <ChevronRight size={18} color="#94A3B8" />
+            </Hit>
+        </View>
+    );
+});
+
 export function MapTopicsScreen({ navigation }) {
     var app = useApp();
     var isDark = app.dark;
@@ -342,26 +366,18 @@ export function MapTopicsScreen({ navigation }) {
             />
             {tree.map(function (g) {
                 return (
-                    <View key={g.id} style={{ marginBottom: 14 }}>
-                        <Text style={[styles.kicker, isDark && styles.textMuted]}>{g.title}</Text>
+                    <View key={g.id} style={styles.sectionBlock}>
+                        <Text style={[styles.sectionHead, isDark && styles.textMuted]}>{g.title}</Text>
                         {g.kids.map(function (k) {
-                            var n = MapQuiz.countFor(k.id);
-                            var inner = (
-                                <>
-                                    <Text style={[styles.dersName, isDark && styles.textLight, k.hoverImg && styles.volkanName]}>{k.title}</Text>
-                                    <Text style={[styles.meta, isDark && styles.textMuted, k.hoverImg && styles.volkanMeta]}>{n} hedef</Text>
-                                </>
-                            );
-                            return k.hoverImg ? (
-                                <Tap key={k.id} onPress={function () { go(navigation, "MapPlay", { topicId: k.id }); }} style={styles.volkanCard}>
-                                    <ImageBackground source={MAP_CARD_IMG[k.hoverImg] || MAP_CARD_IMG.volkan} style={styles.volkanCardInner} imageStyle={styles.volkanCardImg} resizeMode="cover">
-                                        <View style={styles.volkanScrim}>{inner}</View>
-                                    </ImageBackground>
-                                </Tap>
-                            ) : (
-                                <AccentCard key={k.id} dark={isDark} chevron onPress={function () { go(navigation, "MapPlay", { topicId: k.id }); }} style={styles.playCard}>
-                                    {inner}
-                                </AccentCard>
+                            return (
+                                <MapTopicRow
+                                    key={k.id}
+                                    dark={isDark}
+                                    title={k.title}
+                                    count={MapQuiz.countFor(k.id)}
+                                    imgKey={k.hoverImg}
+                                    onPress={function () { go(navigation, "MapPlay", { topicId: k.id }); }}
+                                />
                             );
                         })}
                     </View>
@@ -568,7 +584,74 @@ var styles = StyleSheet.create({
     konuTitle: { fontSize: 22, fontWeight: "800", color: colors.navy, marginBottom: 4 },
     num: { width: 36, height: 36, borderRadius: 10, backgroundColor: "#CCFBF1", alignItems: "center", justifyContent: "center" },
     numText: { fontWeight: "800", color: "#115E59" },
-    kicker: { fontSize: 12, fontWeight: "700", letterSpacing: 0.4, color: colors.muted, textTransform: "uppercase" },
+    kicker: { fontSize: 11, fontWeight: "700", letterSpacing: 1.2, color: "#94A3B8", textTransform: "uppercase" },
+    sectionBlock: { marginBottom: 18 },
+    sectionHead: {
+        fontSize: 11,
+        fontWeight: "700",
+        letterSpacing: 1.4,
+        color: "#94A3B8",
+        textTransform: "uppercase",
+        marginBottom: 8,
+        marginTop: 2,
+    },
+    mapRow: {
+        backgroundColor: "#FFFFFF",
+        borderRadius: 16,
+        borderWidth: 1,
+        borderColor: "#E2E8F0",
+        marginBottom: 10,
+        shadowColor: "#0F172A",
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.04,
+        shadowRadius: 4,
+        elevation: 1,
+    },
+    mapRowDark: {
+        backgroundColor: "#1E293B",
+        borderColor: "#334155",
+    },
+    mapRowHit: {
+        flexDirection: "row",
+        alignItems: "center",
+        paddingVertical: 10,
+        paddingHorizontal: 10,
+        minHeight: 76,
+        borderRadius: 16,
+    },
+    thumb: {
+        width: 56,
+        height: 56,
+        borderRadius: 12,
+        backgroundColor: "#F1F5F9",
+    },
+    thumbFallback: {
+        width: 56,
+        height: 56,
+        borderRadius: 12,
+        backgroundColor: "#FEF3C7",
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    mapRowBody: {
+        flex: 1,
+        minWidth: 0,
+        marginLeft: 12,
+        marginRight: 8,
+    },
+    targetBadge: {
+        alignSelf: "flex-start",
+        marginTop: 6,
+        backgroundColor: "#FEF3C7",
+        borderRadius: 999,
+        paddingHorizontal: 10,
+        paddingVertical: 3,
+    },
+    targetBadgeTxt: {
+        color: "#92400E",
+        fontWeight: "700",
+        fontSize: 11,
+    },
     prompt: { fontSize: 16, lineHeight: 24, color: colors.text, marginBottom: 12 },
     clozeHint: { fontSize: 11, fontWeight: "800", letterSpacing: 0.8, color: "#8A7A4A", textTransform: "uppercase", marginBottom: 8 },
     clozeStem: { backgroundColor: "#F6F1E4", borderRadius: 16, paddingVertical: 16, paddingHorizontal: 16, paddingLeft: 18, marginBottom: 4, borderWidth: 1, borderColor: "rgba(13,44,77,0.08)", position: "relative" },

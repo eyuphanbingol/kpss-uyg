@@ -117,12 +117,10 @@ export function ScrollScreen(props) {
                     isDark && styles.padDark,
                     props.contentStyle,
                 ]}
-                keyboardShouldPersistTaps="always"
-                delaysContentTouches={false}
-                canCancelContentTouches={false}
+                keyboardShouldPersistTaps="handled"
+                delaysContentTouches={true}
+                canCancelContentTouches={true}
                 nestedScrollEnabled={false}
-                overScrollMode="never"
-                bounces={false}
                 showsVerticalScrollIndicator={false}
             >
                 {props.children}
