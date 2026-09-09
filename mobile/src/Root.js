@@ -1,10 +1,10 @@
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { Text, View, StyleSheet, Pressable } from "react-native";
 import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import Svg, { Path } from "react-native-svg";
 import { useApp } from "./AppProvider";
 import AuthScreen from "./screens/AuthScreen";
 import OnboardingScreen from "./screens/OnboardingScreen";
@@ -31,122 +31,137 @@ var Stack = createNativeStackNavigator();
 var Tab = createBottomTabNavigator();
 
 // ============================================================
-// TAB ICON
+// TAB BAR (web BottomNav ile aynı)
 // ============================================================
 
-function TabIcon({ focused, icon }) {
+var TAB_SCREENS = [
+    {
+        name: "BugunTab",
+        component: BugunScreen,
+        label: "Bugün",
+        icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+        streak: true,
+    },
+    {
+        name: "DerslerTab",
+        component: DersHomeScreen,
+        label: "Dersler",
+        icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253",
+    },
+    {
+        name: "AlistirmalarTab",
+        component: AlistirmalarHomeScreen,
+        label: "Alıştırmalar",
+        icon: "M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z",
+    },
+    {
+        name: "EksiklerTab",
+        component: EksiklerScreen,
+        label: "Eksikler",
+        icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
+    },
+    {
+        name: "BenTab",
+        component: BenScreen,
+        label: "Ben",
+        icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z",
+    },
+];
+
+function TabGlyph(props) {
     return (
-        <View style={styles.tabIcon}>
-            <Text style={{ fontSize: 18, opacity: focused ? 1 : 0.72 }}>{icon}</Text>
+        <Svg width={20} height={20} viewBox="0 0 24 24" fill="none">
+            <Path
+                d={props.d}
+                stroke={props.color}
+                strokeWidth={props.focused ? 2.2 : 1.7}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </Svg>
+    );
+}
+
+function AppTabBar(props) {
+    var { isDark, student } = useApp();
+    var insets = useSafeAreaInsets();
+    var streak = (student && student.streak && student.streak.count) || 0;
+    var state = props.state;
+    var navigation = props.navigation;
+
+    return (
+        <View
+            style={[
+                styles.tabBar,
+                {
+                    backgroundColor: isDark ? "rgba(33, 31, 29, 0.96)" : "rgba(255,255,255,0.94)",
+                    borderTopColor: isDark ? "rgba(255,255,255,0.08)" : "rgba(226, 232, 240, 0.9)",
+                    paddingBottom: Math.max(insets.bottom, 8),
+                },
+            ]}
+        >
+            <View style={styles.tabRow}>
+                {state.routes.map(function (route, index) {
+                    var focused = state.index === index;
+                    var meta = TAB_SCREENS[index];
+                    var color = focused ? colors.indigo : (isDark ? "#A8A29E" : "#78716C");
+                    return (
+                        <Pressable
+                            key={route.key}
+                            accessibilityRole="button"
+                            accessibilityState={{ selected: focused }}
+                            accessibilityLabel={meta.label}
+                            onPress={function () {
+                                hapticTap();
+                                var event = navigation.emit({
+                                    type: "tabPress",
+                                    target: route.key,
+                                    canPreventDefault: true,
+                                });
+                                if (!focused && !event.defaultPrevented) {
+                                    navigation.navigate(route.name);
+                                }
+                            }}
+                            style={[styles.tabItem, focused && (isDark ? styles.tabItemOnDark : styles.tabItemOn)]}
+                        >
+                            <View style={styles.tabIconWrap}>
+                                <TabGlyph d={meta.icon} color={color} focused={focused} />
+                                {meta.streak && streak > 0 ? <View style={styles.streakDot} /> : null}
+                            </View>
+                            <Text style={[styles.tabLabel, { color: color }]} numberOfLines={1}>
+                                {meta.label}
+                            </Text>
+                        </Pressable>
+                    );
+                })}
+            </View>
         </View>
     );
 }
 
-function TabBarButton(props) {
-    var focused = !!(props.accessibilityState && props.accessibilityState.selected);
-    return (
-        <TouchableOpacity
-            accessibilityRole="button"
-            accessibilityState={props.accessibilityState}
-            accessibilityLabel={props.accessibilityLabel}
-            testID={props.testID}
-            onPress={props.onPress}
-            onLongPress={props.onLongPress}
-            delayPressIn={0}
-            delayPressOut={0}
-            activeOpacity={0.75}
-            style={[
-                props.style,
-                styles.tabBtn,
-                focused && styles.tabBtnOn,
-            ]}
-        >
-            {props.children}
-        </TouchableOpacity>
-    );
-}
-
-// ============================================================
-// TABS
-// ============================================================
-
 function Tabs() {
     var { isDark } = useApp();
-    var insets = useSafeAreaInsets();
-
-    var tabOptions = {
-        headerShown: false,
-        tabBarActiveTintColor: colors.indigo,
-        tabBarInactiveTintColor: colors.muted,
-        tabBarHideOnKeyboard: true,
-        tabBarStyle: {
-            backgroundColor: isDark ? "rgba(15, 23, 42, 0.92)" : "rgba(255,255,255,0.88)",
-            borderTopWidth: 1,
-            borderTopColor: isDark ? "rgba(255,255,255,0.05)" : "rgba(255,255,255,0.35)",
-            height: 58 + Math.max(insets.bottom, 8),
-            paddingBottom: Math.max(insets.bottom, 8),
-            paddingTop: 4,
-            paddingHorizontal: 2,
-            elevation: 12,
-            shadowColor: "#000",
-            shadowOffset: { width: 0, height: -4 },
-            shadowOpacity: isDark ? 0.3 : 0.05,
-            shadowRadius: 16,
-        },
-        tabBarLabelStyle: {
-            fontSize: 10,
-            fontWeight: "600",
-            marginBottom: 2,
-        },
-        tabBarIconStyle: {
-            marginTop: 0,
-        },
-        tabBarItemStyle: {
-            paddingVertical: 0,
-        },
-        tabBarButton: function (p) {
-            return <TabBarButton {...p} />;
-        },
-        lazy: true,
-        sceneContainerStyle: {
-            backgroundColor: isDark ? colors.bgDark : colors.bg,
-        },
-    };
-
-    var screens = [
-        { name: "BugunTab", component: BugunScreen, icon: "🏠", label: "Bugün" },
-        { name: "DerslerTab", component: DersHomeScreen, icon: "📚", label: "Dersler" },
-        { name: "AlistirmalarTab", component: AlistirmalarHomeScreen, icon: "✏️", label: "Alıştırmalar" },
-        { name: "EksiklerTab", component: EksiklerScreen, icon: "📋", label: "Eksikler" },
-        { name: "BenTab", component: BenScreen, icon: "👤", label: "Ben" },
-    ];
 
     return (
         <>
             <StatusBar style={isDark ? "light" : "dark"} />
-            <Tab.Navigator screenOptions={tabOptions}>
-                {screens.map(function (screen) {
+            <Tab.Navigator
+                tabBar={function (p) { return <AppTabBar {...p} />; }}
+                screenOptions={{
+                    headerShown: false,
+                    lazy: true,
+                    sceneContainerStyle: {
+                        backgroundColor: isDark ? colors.bgDark : colors.bg,
+                    },
+                }}
+            >
+                {TAB_SCREENS.map(function (screen) {
                     return (
                         <Tab.Screen
                             key={screen.name}
                             name={screen.name}
                             component={screen.component}
-                            listeners={{
-                                tabPress: function () { hapticTap(); }
-                            }}
-                            options={{
-                                title: screen.label,
-                                tabBarIcon: function ({ focused }) {
-                                    return (
-                                        <TabIcon
-                                            focused={focused}
-                                            icon={screen.icon}
-                                            label={screen.label}
-                                        />
-                                    );
-                                },
-                                tabBarLabel: screen.label,
-                            }}
+                            options={{ title: screen.label }}
                         />
                     );
                 })}
@@ -302,31 +317,55 @@ export default function Root() {
 // ============================================================
 
 var styles = StyleSheet.create({
-    // ---------- Tab Icon ----------
-    tabIcon: {
-        alignItems: "center",
-        justifyContent: "center",
-        paddingVertical: 2,
+    tabBar: {
+        borderTopWidth: 1,
+        elevation: 12,
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: -4 },
+        shadowOpacity: 0.06,
+        shadowRadius: 16,
     },
-    tabBtn: {
+    tabRow: {
+        flexDirection: "row",
+        alignItems: "stretch",
+        paddingHorizontal: 2,
+        paddingTop: 4,
+        minHeight: 56,
+    },
+    tabItem: {
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
+        paddingVertical: 8,
         borderRadius: 16,
-        marginHorizontal: 2,
-        marginVertical: 4,
-        overflow: "hidden",
     },
-    tabBtnOn: {
-        backgroundColor: "rgba(79, 70, 229, 0.12)",
+    tabItemOn: {
+        backgroundColor: "rgba(238, 242, 255, 0.85)",
     },
-    tabActiveIndicator: {
+    tabItemOnDark: {
+        backgroundColor: "rgba(49, 46, 129, 0.28)",
+    },
+    tabIconWrap: {
+        width: 22,
+        height: 22,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    tabLabel: {
+        marginTop: 2,
+        fontSize: 10,
+        lineHeight: 13,
+        fontWeight: "600",
+        textAlign: "center",
+    },
+    streakDot: {
         position: "absolute",
-        bottom: -4,
-        width: 16,
-        height: 3,
-        borderRadius: 2,
-        backgroundColor: colors.indigo,
+        top: -1,
+        right: -2,
+        width: 8,
+        height: 8,
+        borderRadius: 4,
+        backgroundColor: "#F59E0B",
     },
 
     // ---------- Center ----------
