@@ -164,6 +164,16 @@ import { StudentStore } from "./store";
             topics: mergeTopics(local.topics, remote.topics),
             answers: mergeAnswers(local.answers, remote.answers),
             wrongBook: localNewer ? (local.wrongBook || []) : (remote.wrongBook || []),
+            reviewBook: localNewer ? (local.reviewBook || []) : (remote.reviewBook || []),
+            reviewNotebook: (function () {
+                var map = {};
+                [].concat(remote.reviewNotebook || [], local.reviewNotebook || []).forEach(function (n) {
+                    if (!n || !n.id) return;
+                    var prev = map[n.id];
+                    if (!prev || String(n.updatedAt || "") >= String(prev.updatedAt || "")) map[n.id] = n;
+                });
+                return Object.keys(map).map(function (k) { return map[k]; });
+            })(),
             sessions: mergeSessions(local.sessions, remote.sessions),
             achievements: Object.assign({}, remote.achievements || {}, local.achievements || {}),
             examAttempts: (local.examAttempts || []).concat(remote.examAttempts || []).slice(-40),

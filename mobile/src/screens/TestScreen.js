@@ -125,7 +125,8 @@ export default function TestScreen({ route, navigation }) {
             konu: item.konu, 
             id: item.id, 
             correct: ok,
-            fromWrongBook: mode === "wrong"
+            fromWrongBook: mode === "wrong",
+            fromReview: mode === "review"
         });
         StudentStore.addSessionStats({ 
             questions: 1, 
@@ -381,6 +382,21 @@ export default function TestScreen({ route, navigation }) {
                             <Text style={[styles.testExplanationText, isDark && { color: "#E2E8F0" }]}>
                                 {soru.explanation || "Bu soru için kayıtlı çözüm yok."}
                             </Text>
+                            {item.ders ? (
+                                <Tap
+                                    onPress={function () {
+                                        StudentStore.toggleReviewBook(item.ders, item.konu, item.id);
+                                    }}
+                                    style={[styles.reviewToggle, StudentStore.inReviewBook(item.ders, item.konu, item.id) && styles.reviewToggleOn]}
+                                >
+                                    <Text style={[
+                                        styles.reviewToggleText,
+                                        StudentStore.inReviewBook(item.ders, item.konu, item.id) && styles.reviewToggleTextOn
+                                    ]}>
+                                        {StudentStore.inReviewBook(item.ders, item.konu, item.id) ? "Tekrardan çıkar" : "Tekrara at"}
+                                    </Text>
+                                </Tap>
+                            ) : null}
                         </View>
                     ) : (
                         <View style={{ height: 16 }} />
@@ -649,6 +665,27 @@ var styles = StyleSheet.create({
         fontSize: 14,
         color: colors.text,
         lineHeight: 20,
+    },
+    reviewToggle: {
+        marginTop: 12,
+        paddingVertical: 12,
+        borderRadius: 12,
+        borderWidth: 2,
+        borderColor: "#E2E8F0",
+        alignItems: "center",
+        backgroundColor: "#fff",
+    },
+    reviewToggleOn: {
+        borderColor: "#0F766E",
+        backgroundColor: "#F0FDFA",
+    },
+    reviewToggleText: {
+        fontWeight: "700",
+        fontSize: 14,
+        color: colors.text,
+    },
+    reviewToggleTextOn: {
+        color: "#0F766E",
     },
     testFooter: {
         paddingTop: 10,

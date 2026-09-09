@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import { Alert, Text, TextInput, View, StyleSheet } from "react-native";
+import { Alert, Linking, Text, TextInput, View, StyleSheet } from "react-native";
 import { useApp } from "../AppProvider";
 import { StudentStore } from "../lib/store";
 import { SyncEngine } from "../lib/syncEngine";
 import { supabase } from "../lib/supabase";
 import { go } from "../nav";
 import { Card, GhostButton, PrimaryButton, ScrollScreen, Badge, Tap, PageHeader, ThemeToggle } from "../ui";
-import { colors, eduLabel, fmtExam, needsKulvar, getScoreLabel } from "../lib/theme";
+import { colors, eduLabel, fmtExam, needsKulvar, getScoreLabel, trackLabel } from "../lib/theme";
+import { KpssConfig } from "../lib/config";
 
 // ============================================================
 // BEN SCREEN
@@ -43,8 +44,13 @@ export default function BenScreen({ navigation }) {
     var _edu = useState("");
     var draftEdu = _edu[0];
     var setDraftEdu = _edu[1];
+
+    var _ref = useState(up.referredBy || "");
+    var refCode = _ref[0];
+    var setRefCode = _ref[1];
     
     var eduReq = up.educationChangeRequest;
+    var showKulvar = needsKulvar(totQ === 0 && editing && draftEdu ? draftEdu : up.educationLevel);
 
     // ---------- Streak ----------
     var streak = (st.streak && st.streak.count) || 0;
@@ -79,7 +85,7 @@ export default function BenScreen({ navigation }) {
             <PageHeader
                 dark={isDark}
                 title="Profil"
-                subtitle={up.email || "Hesap bağlı"}
+                subtitle={(up.email || "Hesap bağlı") + " · Ayarlar, araçlar ve plan burada."}
                 right={
                     <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
                         <View style={styles.levelBadge}>
@@ -139,10 +145,9 @@ export default function BenScreen({ navigation }) {
                         <InfoRow label="Ad" value={st.profile.name || "—"} isDark={isDark} />
                         <InfoRow label="Eğitim" value={eduLabel(up.educationLevel)} isDark={isDark} />
                         <InfoRow label="Sınav Tarihi" value={fmtExam(st.profile.examDate)} isDark={isDark} />
-                        {needsKulvar(up.educationLevel) && (
-                            <InfoRow label="Kulvar" value={up.targetType || "B"} isDark={isDark} />
-                        )}
-                        <InfoRow label="Platform" value={app.platform || "Web"} isDark={isDark} />
+                        {needsKulvar(up.educationLevel) ? (
+                            <InfoRow label="Kulvar" value={trackLabel(up.targetType || "B")} isDark={isDark} />
+                        ) : null}
                     </View>
                 ) : (
                     <View style={styles.editForm}>
@@ -181,10 +186,52 @@ export default function BenScreen({ navigation }) {
                                     {eduLabel(up.educationLevel)}
                                 </Text>
                                 <Text style={[styles.eduHint, isDark && styles.textMuted]}>
-                                    Düzey değişimi yönetici onayı gerektirir
+                                    Düzey değişimi yönetici onayı gerektirir. Sınav tarihi ÖSYM takvimine bağlanır.
                                 </Text>
+                                {(!eduReq || eduReq.status !== "pending") ? (
+                                    <View style={[styles.eduRow, { marginTop: 8, flexWrap: "wrap" }]}>
+                                        {["lisans", "onlisans", "ortaogretim"].filter(function (x) {
+                                            return x !== up.educationLevel;
+                                        }).map(function (x) {
+                                            var isActive = draftEdu === x;
+                                            return (
+                                                <Tap
+                                                    key={x}
+                                                    onPress={function () { setDraftEdu(draftEdu === x ? "" : x); }}
+                                                    style={[styles.eduBtn, isActive && styles.eduBtnActive]}
+                                                >
+                                                    <Text style={[styles.eduBtnText, isActive && styles.eduBtnTextActive]}>
+                                                        {eduLabel(x)}
+                                                    </Text>
+                                                </Tap>
+                                            );
+                                        })}
+                                    </View>
+                                ) : null}
                             </View>
                         )}
+
+                        {showKulvar ? (
+                            <View>
+                                <Text style={[styles.editLabel, isDark && styles.textMuted, { marginTop: 12 }]}>Kulvar</Text>
+                                <View style={styles.eduRow}>
+                                    {(KpssConfig.targetTypes || []).map(function (x) {
+                                        var isActive = draftTrack === x.id;
+                                        return (
+                                            <Tap
+                                                key={x.id}
+                                                onPress={function () { setDraftTrack(x.id); }}
+                                                style={[styles.eduBtn, isActive && styles.eduBtnActive]}
+                                            >
+                                                <Text style={[styles.eduBtnText, isActive && styles.eduBtnTextActive]} numberOfLines={1}>
+                                                    {x.t.split(" · ")[0]}
+                                                </Text>
+                                            </Tap>
+                                        );
+                                    })}
+                                </View>
+                            </View>
+                        ) : null}
 
                         <PrimaryButton title="Kaydet" onPress={save} style={styles.saveBtn} />
                         <GhostButton title="Vazgeç" onPress={function () { setEditing(false); }} style={styles.cancelBtn} />
@@ -199,17 +246,32 @@ export default function BenScreen({ navigation }) {
 
             <Card style={[isDark && styles.cardDark]}>
                 <View style={styles.premiumHeader}>
-                    <Text style={styles.premiumTitle}>Davet</Text>
+                    <Text style={[styles.premiumTitle, isDark && styles.textLight]}>Davet</Text>
                 </View>
                 <View style={styles.referralBox}>
                     <Text style={[styles.referralLabel, isDark && styles.textMuted]}>
-                        Davet Kodun
+                        Davet kodun
                     </Text>
                     <View style={[styles.referralCodeBox, isDark && { backgroundColor: colors.navyDeep }]}>
                         <Text style={[styles.referralCode, isDark && { color: colors.indigo }]}>
                             {StudentStore.ensureReferralCode() || "—"}
                         </Text>
                     </View>
+                    <Text style={[styles.referralLabel, isDark && styles.textMuted, { marginTop: 10 }]}>
+                        Arkadaş kodu
+                    </Text>
+                    <TextInput
+                        value={refCode}
+                        onChangeText={setRefCode}
+                        onEndEditing={function () {
+                            StudentStore.updateUserProfile({ referredBy: String(refCode || "").slice(0, 16) });
+                            SyncEngine.sync();
+                        }}
+                        placeholder="Kod"
+                        placeholderTextColor={colors.muted}
+                        autoCapitalize="characters"
+                        style={[styles.input, isDark && styles.inputDark]}
+                    />
                 </View>
             </Card>
 
@@ -270,8 +332,29 @@ export default function BenScreen({ navigation }) {
             />
 
             {/* Footer */}
+            <View style={styles.legalRow}>
+                {[
+                    ["KVKK Aydınlatma", "aydinlatma.html"],
+                    ["Kullanım", "kullanim.html"],
+                    ["Üyelik", "uyelik.html"],
+                    ["Gizlilik", "gizlilik.html"],
+                    ["Çerez", "cerez.html"],
+                    ["KVKK başvuru", "basvuru.html"]
+                ].map(function (row) {
+                    return (
+                        <Tap
+                            key={row[1]}
+                            onPress={function () {
+                                Linking.openURL("https://www.atanly.com/yasal/" + row[1]);
+                            }}
+                        >
+                            <Text style={[styles.legalLink, isDark && styles.textMuted]}>{row[0]}</Text>
+                        </Tap>
+                    );
+                })}
+            </View>
             <Text style={[styles.footer, isDark && styles.textMuted]}>
-                Atanly v1.0 · {app.platform || "Web"}
+                Atanly
             </Text>
         </ScrollScreen>
     );
@@ -596,6 +679,19 @@ var styles = StyleSheet.create({
     },
 
     // ---------- Footer ----------
+    legalRow: {
+        flexDirection: "row",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        gap: 8,
+        marginTop: 12,
+        marginBottom: 4,
+    },
+    legalLink: {
+        fontSize: 11,
+        color: colors.muted,
+        textDecorationLine: "underline",
+    },
     footer: {
         textAlign: "center",
         fontSize: 11,

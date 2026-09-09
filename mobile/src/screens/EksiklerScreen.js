@@ -49,7 +49,7 @@ export default function EksiklerScreen({ navigation }) {
             <PageHeader
                 dark={isDark}
                 title="Eksikler"
-                subtitle="Konu durumu ve tekrar ihtiyaçları"
+                subtitle="Konu durumu. Not ve soru yalnızca Dersler’den."
                 right={
                     <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
                         <Badge
@@ -76,22 +76,30 @@ export default function EksiklerScreen({ navigation }) {
                 <Tap
                     disabled={!plan.due.length}
                     onPress={function () { start("review"); }}
-                    style={[styles.actionBtn, !plan.due.length && styles.actionBtnDisabled, isDark && styles.actionBtnDark]}
+                    style={[styles.actionBtn, styles.reviewBtn, !plan.due.length && styles.actionBtnDisabled]}
                 >
-                    <Text style={[styles.actionBtnTitle, isDark && styles.textLight]}>Bugün Tekrar</Text>
-                    <Text style={styles.actionBtnCount}>{plan.due.length} soru</Text>
-                    <Text style={styles.actionBtnDesc}>Daha önce çözdüğün sorular</Text>
+                    <Text style={styles.reviewTitle}>Bugün tekrar · {plan.due.length}</Text>
+                    <Text style={styles.reviewDesc}>Soru yanında Tekrara at dediklerin. Çözünce listeden düşer.</Text>
                 </Tap>
                 <Tap
                     disabled={!plan.wrong.length}
                     onPress={function () { start("wrong"); }}
-                    style={[styles.actionBtn, !plan.wrong.length && styles.actionBtnDisabled, isDark && styles.actionBtnDark]}
+                    style={[styles.actionBtn, styles.wrongBtn, !plan.wrong.length && styles.actionBtnDisabled, isDark && styles.wrongBtnDark]}
                 >
-                    <Text style={[styles.actionBtnTitle, isDark && styles.textLight]}>Yanlış Defteri</Text>
-                    <Text style={styles.actionBtnCount}>{plan.wrong.length} soru</Text>
-                    <Text style={styles.actionBtnDesc}>Yanlış yaptığın sorular. Çözdüğün düşer.</Text>
+                    <Text style={[styles.wrongTitle, isDark && { color: "#FB7185" }]}>Yanlış defteri · {plan.wrong.length}</Text>
+                    <Text style={[styles.actionBtnDesc, isDark && styles.textMuted]}>Çözdüğün soru defterden düşer. Konu kilidini açmaz.</Text>
                 </Tap>
             </View>
+
+            <Tap
+                onPress={function () { go(navigation, "ReviewNotebook"); }}
+                style={[styles.notebookBtn, isDark && styles.actionBtnDark]}
+            >
+                <Text style={[styles.actionBtnTitle, isDark && styles.textLight]}>Tekrar defteri</Text>
+                <Text style={[styles.actionBtnDesc, isDark && styles.textMuted]}>
+                    Tekrar etmek istediğin notları kendine yaz. Yalnızca sen görürsün.
+                </Text>
+            </Tap>
 
             {/* Ders Listesi */}
             {Object.keys(byDers).map(function (ders) {
@@ -120,7 +128,7 @@ export default function EksiklerScreen({ navigation }) {
                                 <AccentCard key={r.konu} dark={isDark} accent={done ? "#D97706" : "#CBD5E1"}>
                                     <View style={styles.topicRowInner}>
                                         <Text style={[styles.topicName, isDark && styles.textLight]} numberOfLines={2}>{r.konu}</Text>
-                                        <Badge type={done ? "warning" : "muted"} title={done ? "Tamam" : "Bekliyor"} />
+                                        <Badge type={done ? "warning" : "muted"} title={done ? "Bitti" : "Bekliyor"} />
                                     </View>
                                 </AccentCard>
                             );
@@ -225,6 +233,41 @@ var styles = StyleSheet.create({
     },
     actionBtnDisabled: {
         opacity: 0.4,
+    },
+    reviewBtn: {
+        backgroundColor: "#0F766E",
+        borderColor: "#0F766E",
+    },
+    reviewTitle: {
+        color: "#fff",
+        fontWeight: "700",
+        fontSize: 14,
+    },
+    reviewDesc: {
+        color: "rgba(255,255,255,0.8)",
+        fontSize: 10,
+        marginTop: 6,
+    },
+    wrongBtn: {
+        borderWidth: 2,
+        borderColor: "#E11D48",
+    },
+    wrongBtnDark: {
+        backgroundColor: colors.navyDeep,
+        borderColor: "#E11D48",
+    },
+    wrongTitle: {
+        color: "#E11D48",
+        fontWeight: "700",
+        fontSize: 14,
+    },
+    notebookBtn: {
+        borderRadius: 16,
+        padding: 14,
+        borderWidth: 1,
+        borderColor: "#E2E8F0",
+        backgroundColor: "#fff",
+        marginBottom: 16,
     },
     actionBtnDark: {
         backgroundColor: colors.navyDeep,

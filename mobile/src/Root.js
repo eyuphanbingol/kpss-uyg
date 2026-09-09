@@ -17,6 +17,7 @@ import EksiklerScreen from "./screens/EksiklerScreen";
 import BenScreen from "./screens/BenScreen";
 import NotesScreen from "./screens/NotesScreen";
 import TestScreen from "./screens/TestScreen";
+import ReviewNotebookScreen from "./screens/ReviewNotebookScreen";
 import { AiScreen, HeatScreen, LeaderboardScreen, LiveScreen, PaywallScreen, PlacementScreen } from "./screens/ExtraScreens";
 import SplashScreen from "./screens/SplashScreen";
 import { StatusBar } from "expo-status-bar";
@@ -253,6 +254,7 @@ function Gate() {
                 <Stack.Screen name="PanicPlay" component={PanicPlayScreen} />
                 <Stack.Screen name="Notes" component={NotesScreen} />
                 <Stack.Screen name="Test" component={TestScreen} />
+                <Stack.Screen name="ReviewNotebook" component={ReviewNotebookScreen} />
 
                 {/* Extra Ekranlar */}
                 <Stack.Screen name="Placement" component={PlacementScreen} />

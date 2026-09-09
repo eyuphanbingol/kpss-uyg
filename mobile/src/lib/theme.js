@@ -16,6 +16,7 @@ import {
     KeyboardAvoidingView,
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { KpssConfig } from "./config";
 
 // ============================================================
 // RENKLER
@@ -84,6 +85,12 @@ export function examTrackName(level) {
 
 export function needsKulvar(level) {
     return !level || level === "lisans";
+}
+
+export function trackLabel(id) {
+    var list = (KpssConfig && KpssConfig.targetTypes) || [];
+    var hit = list.filter(function (x) { return x.id === id; })[0];
+    return (hit && hit.t) || id || "—";
 }
 
 export function fmtExam(iso) {
@@ -1168,6 +1175,7 @@ export default {
     eduLabel,
     examTrackName,
     needsKulvar,
+    trackLabel,
     fmtExam,
     stripHtml,
     formatDate,

@@ -220,6 +220,8 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             topics: {},
             answers: {},
             wrongBook: [],
+            reviewBook: [],
+            reviewNotebook: [],
             sessions: {},
             achievements: {},
             examAttempts: [],
@@ -245,6 +247,36 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             panicBest: 0,
             tabuBest: 0
         };
+    }
+
+    function notebookId() {
+        return Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+    }
+
+    function migrateNotebook(list) {
+        if (!Array.isArray(list)) return [];
+        var out = [];
+        list.forEach(function (n) {
+            if (!n || typeof n !== "object") return;
+            var id = String(n.id || "").trim();
+            if (!id) return;
+            var title = String(n.title || "").trim().slice(0, 80);
+            var body = String(n.body || "").trim().slice(0, 4000);
+            if (!n.deleted && !body && !title) return;
+            out.push({
+                id: id,
+                title: title,
+                body: body,
+                deleted: !!n.deleted,
+                createdAt: n.createdAt || n.updatedAt || nowIso(),
+                updatedAt: n.updatedAt || n.createdAt || nowIso()
+            });
+        });
+        if (out.length > 80) {
+            out.sort(function (a, b) { return String(b.updatedAt).localeCompare(String(a.updatedAt)); });
+            out = out.slice(0, 80);
+        }
+        return out;
     }
 
     function migrateGames(g) {
@@ -326,6 +358,8 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             topics: migrateTopicPacks(isObj(parsed.topics) ? parsed.topics : {}),
             answers: answers,
             wrongBook: wrongBook,
+            reviewBook: Array.isArray(parsed.reviewBook) ? parsed.reviewBook.filter(Boolean) : [],
+            reviewNotebook: migrateNotebook(parsed.reviewNotebook),
             sessions: isObj(parsed.sessions) ? parsed.sessions : {},
             achievements: isObj(parsed.achievements) ? parsed.achievements : {},
             examAttempts: Array.isArray(parsed.examAttempts) ? parsed.examAttempts : [],
@@ -350,7 +384,8 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
         var sessions = s.sessions && Object.keys(s.sessions).length;
         var named = s.profile && s.profile.name;
         var onboarded = s.profile && s.profile.onboarded;
-        return !q && !topics && !sessions && !named && !onboarded;
+        var notes = s.reviewNotebook && s.reviewNotebook.length;
+        return !q && !topics && !sessions && !named && !onboarded && !notes;
     }
 
     function readKey(key) {
@@ -604,6 +639,9 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
                 topic.wrongWeight = (topic.wrongWeight || 0) + 1;
             }
         }
+        if (meta.fromReview && meta.correct) {
+            state.reviewBook = (state.reviewBook || []).filter(function (x) { return x !== id; });
+        }
         rec.updatedAt = nowIso();
         topic.masteryScore = topicMasteryScore(topic);
         topic.updatedAt = nowIso();
@@ -711,6 +749,58 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
         ensureReferralCode: ensureReferralCode,
         canStartMixed: canStartMixed,
         consumeMixed: consumeMixed,
+        listReviewNotes: function () {
+            return (state.reviewNotebook || []).filter(function (n) { return n && !n.deleted; })
+                .sort(function (a, b) { return String(b.updatedAt || "").localeCompare(String(a.updatedAt || "")); })
+                .map(function (n) { return clone(n); });
+        },
+        upsertReviewNote: function (payload) {
+            payload = payload || {};
+            var title = String(payload.title || "").trim().slice(0, 80);
+            var body = String(payload.body || "").trim().slice(0, 4000);
+            if (!title && !body) return null;
+            var id = String(payload.id || "").trim() || notebookId();
+            var list = state.reviewNotebook || [];
+            var found = false;
+            var stamp = nowIso();
+            list = list.map(function (n) {
+                if (!n || n.id !== id) return n;
+                found = true;
+                return {
+                    id: id,
+                    title: title,
+                    body: body,
+                    deleted: false,
+                    createdAt: n.createdAt || stamp,
+                    updatedAt: stamp
+                };
+            });
+            if (!found) {
+                list.unshift({
+                    id: id,
+                    title: title,
+                    body: body,
+                    deleted: false,
+                    createdAt: stamp,
+                    updatedAt: stamp
+                });
+            }
+            state.reviewNotebook = migrateNotebook(list);
+            emit();
+            return id;
+        },
+        deleteReviewNote: function (id) {
+            id = String(id || "").trim();
+            if (!id) return;
+            var stamp = nowIso();
+            var hit = false;
+            state.reviewNotebook = (state.reviewNotebook || []).map(function (n) {
+                if (!n || n.id !== id) return n;
+                hit = true;
+                return Object.assign({}, n, { deleted: true, updatedAt: stamp });
+            });
+            if (hit) emit();
+        },
         grantMockPremium: function (days) {
             var d = new Date();
             d.setDate(d.getDate() + (days || 7));
@@ -941,6 +1031,18 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             var rec = recordAnswer(meta);
             emit();
             return rec;
+        },
+        inReviewBook: function (ders, konu, id) {
+            return (state.reviewBook || []).indexOf(qid(ders, konu, id)) >= 0;
+        },
+        toggleReviewBook: function (ders, konu, id) {
+            var key = qid(ders, konu, id);
+            if (!state.reviewBook) state.reviewBook = [];
+            var i = state.reviewBook.indexOf(key);
+            if (i >= 0) state.reviewBook.splice(i, 1);
+            else state.reviewBook.push(key);
+            emit();
+            return i < 0;
         },
         recordTestResult: recordTestResult,
         recordExamAttempt: function (attempt) {
