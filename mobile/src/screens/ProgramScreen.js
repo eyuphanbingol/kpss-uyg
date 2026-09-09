@@ -3,7 +3,7 @@ import { Text, View, StyleSheet } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import { useApp } from "../AppProvider";
 import { StudentStore } from "../lib/store";
-import { PrimaryButton, ScrollScreen, Card, BackChip, Tap } from "../ui";
+import { PrimaryButton, ScrollScreen, Card, BackChip, Tap, PageHeader } from "../ui";
 import { colors, DERS_ICON } from "../lib/theme";
 
 // ============================================================
@@ -84,15 +84,7 @@ export default function ProgramScreen({ navigation }) {
             {/* Back */}
             <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
 
-            {/* Header */}
-            <View style={styles.header}>
-                <Text style={[styles.title, isDark && styles.textLight]}>
-                    Çalışma Programı
-                </Text>
-                <Text style={[styles.subtitle, isDark && styles.textMuted]}>
-                    Her güne ders ve saat ekle
-                </Text>
-            </View>
+            <PageHeader dark={isDark} title="Çalışma Programı" subtitle="Her güne ders ve saat ekle" right={null} />
 
             <ScrollView horizontal showsHorizontalScrollIndicator={false} delaysContentTouches={false} keyboardShouldPersistTaps="always" style={{ marginBottom: 10 }} contentContainerStyle={{ gap: 8 }}>
                 {[

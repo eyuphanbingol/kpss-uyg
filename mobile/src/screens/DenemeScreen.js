@@ -6,7 +6,7 @@ import { StudentStore } from "../lib/store";
 import { SyncEngine } from "../lib/syncEngine";
 import { KpssConfig } from "../lib/config";
 import { go } from "../nav";
-import { Card, PrimaryButton, ScrollScreen, Badge, Tap } from "../ui";
+import { Card, PrimaryButton, ScrollScreen, Badge, Tap, PageHeader } from "../ui";
 import { colors, DERS_ICON } from "../lib/theme";
 
 // ============================================================
@@ -90,20 +90,12 @@ export default function DenemeScreen({ navigation }) {
 
     return (
         <ScrollScreen dark={isDark}>
-            {/* Header */}
-            <View style={styles.header}>
-                <View>
-                    <Text style={[styles.title, isDark && styles.textLight]}>
-                        Deneme
-                    </Text>
-                    <Text style={[styles.subtitle, isDark && styles.textMuted]}>
-                        Karışık pratik veya tam kitapçık
-                    </Text>
-                </View>
-                {!isPremium && (
-                    <Badge type="warning" title="Ücretsiz" />
-                )}
-            </View>
+            <PageHeader
+                dark={isDark}
+                title="Deneme"
+                subtitle="Karışık pratik veya tam kitapçık"
+                right={!isPremium ? <Badge type="warning" title="Ücretsiz" /> : null}
+            />
 
             {/* Dersler Card */}
             <Card style={[isDark && styles.cardDark]}>

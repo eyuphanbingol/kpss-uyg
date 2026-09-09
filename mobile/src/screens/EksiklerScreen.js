@@ -3,7 +3,7 @@ import { Alert, Text, View, StyleSheet } from "react-native";
 import { useApp } from "../AppProvider";
 import { StudentStore } from "../lib/store";
 import { go } from "../nav";
-import { Card, ScrollScreen, Badge, Tap } from "../ui";
+import { Card, ScrollScreen, Badge, Tap, PageHeader, ThemeToggle } from "../ui";
 import { colors, DERS_ICON } from "../lib/theme";
 
 // ============================================================
@@ -45,21 +45,20 @@ export default function EksiklerScreen({ navigation }) {
 
     return (
         <ScrollScreen dark={isDark} noBottom>
-            {/* Header */}
-            <View style={styles.header}>
-                <View>
-                    <Text style={[styles.title, isDark && styles.textLight]}>
-                        Eksikler
-                    </Text>
-                    <Text style={[styles.subtitle, isDark && styles.textMuted]}>
-                        Konu durumu ve tekrar ihtiyaçları
-                    </Text>
-                </View>
-                <Badge 
-                    type={progress >= 80 ? "success" : progress >= 50 ? "warning" : "muted"}
-                    title={progress + "%"}
-                />
-            </View>
+            <PageHeader
+                dark={isDark}
+                title="Eksikler"
+                subtitle="Konu durumu ve tekrar ihtiyaçları"
+                right={
+                    <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
+                        <Badge
+                            type={progress >= 80 ? "success" : progress >= 50 ? "warning" : "muted"}
+                            title={progress + "%"}
+                        />
+                        <ThemeToggle dark={isDark} />
+                    </View>
+                }
+            />
 
             {/* Progress */}
             <View style={[styles.progressContainer, isDark && { backgroundColor: colors.navyDeep }]}>

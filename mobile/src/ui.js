@@ -15,7 +15,9 @@ import {
 import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 import * as Haptics from "expo-haptics";
+import { LinearGradient } from "expo-linear-gradient";
 import { colors } from "./lib/theme";
+import { StudentStore } from "./lib/store";
 
 // ============================================================
 // YARDIMCILAR
@@ -178,18 +180,25 @@ export function PrimaryButton(props) {
             disabled={isDisabled}
             activeOpacity={0.82}
             style={[
-                styles.primary,
+                styles.primaryWrap,
                 isDisabled && styles.primaryDisabled,
                 props.style,
             ]}
         >
-            {props.busy ? (
-                <ActivityIndicator color="#fff" size="small" />
-            ) : (
-                <Text style={[styles.primaryTxt, props.textStyle]}>
-                    {props.title || props.children}
-                </Text>
-            )}
+            <LinearGradient
+                colors={["#0D2C4D", "#14607a", "#1D8A99"]}
+                start={{ x: 0, y: 0 }}
+                end={{ x: 1, y: 1 }}
+                style={styles.primary}
+            >
+                {props.busy ? (
+                    <ActivityIndicator color="#fff" size="small" />
+                ) : (
+                    <Text style={[styles.primaryTxt, props.textStyle]}>
+                        {props.title || props.children}
+                    </Text>
+                )}
+            </LinearGradient>
         </Tap>
     );
 }
@@ -358,6 +367,42 @@ export function Field(props) {
 // CHIP
 // ============================================================
 
+export function ThemeToggle(props) {
+    var isDark = props.dark === true;
+    return (
+        <Tap
+            onPress={function () { StudentStore.setDark(!isDark); }}
+            style={[styles.themeBtn, isDark && styles.themeBtnDark]}
+        >
+            <Text style={{ fontSize: 18 }}>{isDark ? "☀️" : "🌙"}</Text>
+        </Tap>
+    );
+}
+
+export function PageHeader(props) {
+    var isDark = props.dark === true;
+    return (
+        <View style={[styles.pageHeader, props.style]}>
+            <View style={{ flex: 1, minWidth: 0 }}>
+                {props.kicker || null}
+                <Text style={[styles.pageTitle, isDark && styles.pageTitleDark]}>{props.title}</Text>
+                {props.subtitle ? (
+                    <Text style={[styles.pageSub, isDark && { color: "#A8A29E" }]}>{props.subtitle}</Text>
+                ) : null}
+            </View>
+            {props.right != null ? props.right : <ThemeToggle dark={isDark} />}
+        </View>
+    );
+}
+
+export function DersIconBox(props) {
+    return (
+        <View style={[styles.dersIconBox, props.style]}>
+            <Text style={{ fontSize: props.size || 24 }}>{props.icon}</Text>
+        </View>
+    );
+}
+
 export function Chip(props) {
     var isOn = props.on === true;
 
@@ -430,7 +475,7 @@ export function Card(props) {
     var cardStyle = [
         styles.card,
         isDark && styles.cardDark,
-        props.elevated && styles.cardElevated,
+        styles.cardElevated,
         props.glass && styles.cardGlass,
         props.style,
     ];
@@ -685,24 +730,75 @@ var styles = StyleSheet.create({
         backgroundColor: colors.bgDark,
     },
     pad: {
-        paddingHorizontal: 16,
-        paddingTop: 12,
-        paddingBottom: 24,
+        paddingHorizontal: 12,
+        paddingTop: 20,
+        paddingBottom: 28,
     },
     padDark: {},
 
+    pageHeader: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "flex-start",
+        marginBottom: 16,
+        gap: 12,
+    },
+    pageTitle: {
+        fontSize: 30,
+        fontWeight: "900",
+        letterSpacing: -0.6,
+        color: colors.navy,
+    },
+    pageTitleDark: {
+        color: "#FAFAF9",
+    },
+    pageSub: {
+        color: colors.muted,
+        fontSize: 13,
+        marginTop: 4,
+        fontWeight: "500",
+    },
+    themeBtn: {
+        width: 42,
+        height: 42,
+        borderRadius: 16,
+        borderWidth: 1,
+        borderColor: "rgba(255,255,255,0.35)",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "rgba(255,255,255,0.72)",
+    },
+    themeBtnDark: {
+        backgroundColor: "rgba(15, 23, 42, 0.75)",
+        borderColor: "rgba(255,255,255,0.08)",
+    },
+    dersIconBox: {
+        width: 56,
+        height: 56,
+        borderRadius: 16,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "rgba(79, 70, 229, 0.08)",
+        borderWidth: 1,
+        borderColor: "rgba(79, 70, 229, 0.1)",
+        marginRight: 12,
+    },
+
     // ---------- Primary Button ----------
+    primaryWrap: {
+        borderRadius: 16,
+        overflow: "hidden",
+        shadowColor: "#0D2C4D",
+        shadowOffset: { width: 0, height: 8 },
+        shadowOpacity: 0.28,
+        shadowRadius: 12,
+        elevation: 4,
+    },
     primary: {
-        backgroundColor: colors.indigo,
         borderRadius: 16,
         paddingVertical: 16,
         alignItems: "center",
         justifyContent: "center",
-        shadowColor: colors.indigo,
-        shadowOffset: { width: 0, height: 4 },
-        shadowOpacity: 0.3,
-        shadowRadius: 12,
-        elevation: 4,
         minHeight: 56,
     },
     primaryDisabled: {
@@ -854,24 +950,29 @@ var styles = StyleSheet.create({
 
     // ---------- Card ----------
     card: {
-        backgroundColor: colors.white,
-        borderRadius: 20,
+        backgroundColor: "rgba(255,255,255,0.78)",
+        borderRadius: 24,
         borderWidth: 1,
-        borderColor: colors.border,
+        borderColor: "rgba(255,255,255,0.35)",
         padding: 16,
         marginBottom: 12,
         overflow: "hidden",
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 8 },
+        shadowOpacity: 0.06,
+        shadowRadius: 16,
+        elevation: 3,
     },
     cardDark: {
-        backgroundColor: colors.navyDeep,
-        borderColor: colors.muted,
+        backgroundColor: "rgba(15, 23, 42, 0.78)",
+        borderColor: "rgba(255,255,255,0.06)",
     },
     cardElevated: {
         shadowColor: "#000",
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.08,
-        shadowRadius: 4,
-        elevation: 2,
+        shadowOffset: { width: 0, height: 8 },
+        shadowOpacity: 0.12,
+        shadowRadius: 20,
+        elevation: 4,
     },
     cardGlass: {
         backgroundColor: "rgba(255,255,255,0.7)",
@@ -1060,6 +1161,9 @@ export default {
     Field,
     Chip,
     ChipGroup,
+    PageHeader,
+    ThemeToggle,
+    DersIconBox,
     Card,
     BackChip,
     Section,

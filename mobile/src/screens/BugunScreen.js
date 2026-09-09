@@ -5,7 +5,7 @@ import { useApp } from "../AppProvider";
 import { StudyPlanner } from "../lib/planner";
 import { StudentStore } from "../lib/store";
 import { go } from "../nav";
-import { Card, ScrollScreen, Tap } from "../ui";
+import { Card, ScrollScreen, PageHeader, Tap } from "../ui";
 import { colors, examTrackName, DERS_ICON } from "../lib/theme";
 
 var DASH_COLORS = ["#4f46e5", "#7c3aed", "#ec4899", "#f59e0b", "#10b981", "#6366f1"];
@@ -89,21 +89,19 @@ export default function BugunScreen({ navigation }) {
 
     return (
         <ScrollScreen dark={isDark} noBottom>
-            <View style={styles.header}>
-                <View style={{ flex: 1, minWidth: 0 }}>
+            <PageHeader
+                dark={isDark}
+                title="Bugün"
+                subtitle="Hedefine doğru her gün bir adım."
+                kicker={
                     <View style={styles.greetRow}>
                         <View style={styles.liveDot} />
                         <Text style={[styles.greeting, isDark && styles.textMuted]} numberOfLines={1}>
                             Hoş geldin{name ? ", " + name : ""}
                         </Text>
                     </View>
-                    <Text style={[styles.title, isDark && styles.textLight]}>Bugün</Text>
-                    <Text style={[styles.subtitle, isDark && styles.textMuted]}>Hedefine doğru her gün bir adım.</Text>
-                </View>
-                <Tap onPress={function () { StudentStore.setDark(!isDark); }} style={[styles.themeBtn, isDark && styles.themeBtnDark]} noHaptic={false}>
-                    <Text style={{ fontSize: 18 }}>{isDark ? "☀️" : "🌙"}</Text>
-                </Tap>
-            </View>
+                }
+            />
 
             <LinearGradient colors={["#4f46e5", "#7c3aed"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.banner}>
                 <View style={styles.bannerRow}>

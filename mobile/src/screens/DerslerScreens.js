@@ -5,7 +5,7 @@ import { StudyPlanner } from "../lib/planner";
 import { StudentStore } from "../lib/store";
 import { KpssConfig } from "../lib/config";
 import { go } from "../nav";
-import { Card, ScrollScreen, Badge, BackChip } from "../ui";
+import { Card, ScrollScreen, Badge, BackChip, PageHeader, DersIconBox } from "../ui";
 import { colors, DERS_ICON, masteryLabel } from "../lib/theme";
 
 function itemsFromSorular(ders, konu, sorular) {
@@ -46,17 +46,7 @@ export function DersHomeScreen({ navigation }) {
 
     return (
         <ScrollScreen dark={isDark} noBottom>
-            {/* Header */}
-            <View style={styles.header}>
-                <View>
-                    <Text style={[styles.title, isDark && styles.textLight]}>
-                        Dersler
-                    </Text>
-                    <Text style={[styles.subtitle, isDark && styles.textMuted]}>
-                        Not oku, test çöz. Tüm konular açık.
-                    </Text>
-                </View>
-            </View>
+            <PageHeader dark={isDark} title="Dersler" subtitle="Not oku, test çöz. Tüm konular açık." />
 
             {/* Ders Listesi */}
             {Object.keys(kpssData).map(function (ders) {
@@ -69,7 +59,7 @@ export function DersHomeScreen({ navigation }) {
                         style={styles.dersCard}
                     >
                             <View style={styles.dersRow}>
-                                <Text style={styles.dersIcon}>{DERS_ICON[ders] || "📚"}</Text>
+                                <DersIconBox icon={DERS_ICON[ders] || "📚"} />
                                 <View style={styles.dersInfo}>
                                     <Text style={[styles.dersName, isDark && styles.textLight]}>{ders}</Text>
                                     <Text style={[styles.dersMeta, isDark && styles.textMuted]}>
@@ -129,7 +119,7 @@ export function KonuListScreen({ route, navigation }) {
 
             {/* Header */}
             <View style={styles.konuHeader}>
-                <Text style={styles.konuIcon}>{DERS_ICON[ders] || "📚"}</Text>
+                <DersIconBox icon={DERS_ICON[ders] || "📚"} style={{ marginRight: 0, marginBottom: 8 }} />
                 <Text style={[styles.konuTitle, isDark && styles.textLight]}>{ders}</Text>
                 <Text style={[styles.konuSubtitle, isDark && styles.textMuted]}>
                     {konular.length} konu
@@ -254,13 +244,18 @@ export function KonuHubScreen({ route, navigation }) {
 
             {/* Notes Button */}
             <Card dark={isDark} onPress={function () { go(navigation, "Notes", { ders: ders, konu: konu }); }} style={styles.hubNoteCard}>
-                    <Text style={styles.hubNoteIcon}>📖</Text>
-                    <Text style={[styles.hubNoteTitle, isDark && styles.textLight]}>
-                        Konu Özeti
-                    </Text>
-                    <Text style={[styles.hubNoteDesc, isDark && styles.textMuted]}>
-                        {notlar.length} hap not · {tp.notesDone ? "tamamlandı" : "kaldığın yerden"}
-                    </Text>
+                    <View style={{ flexDirection: "row", alignItems: "center" }}>
+                        <DersIconBox icon="📖" />
+                        <View style={{ flex: 1, minWidth: 0 }}>
+                            <Text style={[styles.hubNoteTitle, isDark && styles.textLight]}>
+                                Konu Özeti
+                            </Text>
+                            <Text style={[styles.hubNoteDesc, isDark && styles.textMuted]}>
+                                {notlar.length} hap not · {tp.notesDone ? "tamamlandı" : "kaldığın yerden"}
+                            </Text>
+                        </View>
+                        <Text style={[styles.dersArrow, isDark && styles.textMuted]}>→</Text>
+                    </View>
             </Card>
 
             {(tp.solvedCloze && tp.solvedCloze.length) ? (
@@ -419,20 +414,14 @@ var styles = StyleSheet.create({
 
     // ---------- Konu List ----------
     konuHeader: {
-        flexDirection: "row",
-        alignItems: "center",
-        marginVertical: 8,
-        flexWrap: "wrap",
-    },
-    konuIcon: {
-        fontSize: 28,
-        marginRight: 10,
+        marginVertical: 4,
+        marginBottom: 12,
     },
     konuTitle: {
-        fontSize: 24,
-        fontWeight: "700",
+        fontSize: 28,
+        fontWeight: "900",
+        letterSpacing: -0.5,
         color: colors.navy,
-        flex: 1,
     },
     konuSubtitle: {
         color: colors.muted,
@@ -509,8 +498,9 @@ var styles = StyleSheet.create({
         marginVertical: 8,
     },
     hubTitle: {
-        fontSize: 24,
-        fontWeight: "700",
+        fontSize: 28,
+        fontWeight: "900",
+        letterSpacing: -0.5,
         color: colors.navy,
     },
     hubDers: {
@@ -530,19 +520,16 @@ var styles = StyleSheet.create({
         fontSize: 12,
     },
     hubNoteCard: {
-        backgroundColor: "#FFF7ED",
         marginBottom: 10,
-        alignItems: "center",
-        paddingVertical: 18,
+        paddingVertical: 14,
     },
     hubNoteIcon: {
         fontSize: 28,
     },
     hubNoteTitle: {
-        fontWeight: "700",
+        fontWeight: "800",
         fontSize: 17,
         color: colors.text,
-        marginTop: 4,
     },
     hubNoteDesc: {
         color: colors.muted,

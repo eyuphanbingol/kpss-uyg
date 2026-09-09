@@ -579,10 +579,11 @@ var styles = StyleSheet.create({
         marginBottom: 4,
     },
     title: {
-        fontSize: 28,
-        fontWeight: "800",
-        color: colors.teal,
+        fontSize: 32,
+        fontWeight: "900",
+        color: colors.navy,
         textAlign: "center",
+        letterSpacing: -0.5,
     },
     subtitle: {
         textAlign: "center",

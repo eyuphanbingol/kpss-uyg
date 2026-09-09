@@ -5,7 +5,7 @@ import { StudentStore } from "../lib/store";
 import { SyncEngine } from "../lib/syncEngine";
 import { supabase } from "../lib/supabase";
 import { go } from "../nav";
-import { Card, GhostButton, PrimaryButton, ScrollScreen, Badge, Tap } from "../ui";
+import { Card, GhostButton, PrimaryButton, ScrollScreen, Badge, Tap, PageHeader, ThemeToggle } from "../ui";
 import { colors, eduLabel, fmtExam, needsKulvar, getScoreLabel } from "../lib/theme";
 
 // ============================================================
@@ -76,22 +76,21 @@ export default function BenScreen({ navigation }) {
 
     return (
         <ScrollScreen dark={isDark} noBottom>
-            {/* Header */}
-            <View style={styles.header}>
-                <View>
-                    <Text style={[styles.headerTitle, isDark && styles.textLight]}>
-                        Profil
-                    </Text>
-                    <Text style={[styles.headerSub, isDark && styles.textMuted]}>
-                        {up.email || "Hesap bağlı"}
-                    </Text>
-                </View>
-                <View style={styles.levelBadge}>
-                    <Text style={[styles.levelText, { color: scoreLevel.color }]}>
-                        {scoreLevel.emoji} {scoreLevel.text}
-                    </Text>
-                </View>
-            </View>
+            <PageHeader
+                dark={isDark}
+                title="Profil"
+                subtitle={up.email || "Hesap bağlı"}
+                right={
+                    <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
+                        <View style={styles.levelBadge}>
+                            <Text style={[styles.levelText, { color: scoreLevel.color }]}>
+                                {scoreLevel.emoji} {scoreLevel.text}
+                            </Text>
+                        </View>
+                        <ThemeToggle dark={isDark} />
+                    </View>
+                }
+            />
 
             {/* Stats Cards */}
             <View style={styles.statsRow}>
@@ -339,16 +338,21 @@ var styles = StyleSheet.create({
     },
     statCard: {
         flex: 1,
-        backgroundColor: "#fff",
-        borderRadius: 14,
-        paddingVertical: 12,
+        backgroundColor: "rgba(255,255,255,0.78)",
+        borderRadius: 20,
+        paddingVertical: 14,
         alignItems: "center",
         borderWidth: 1,
-        borderColor: colors.border,
+        borderColor: "rgba(255,255,255,0.35)",
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 6 },
+        shadowOpacity: 0.05,
+        shadowRadius: 10,
+        elevation: 2,
     },
     cardDark: {
-        backgroundColor: colors.navyDeep,
-        borderColor: colors.muted,
+        backgroundColor: "rgba(15, 23, 42, 0.78)",
+        borderColor: "rgba(255,255,255,0.06)",
     },
     statNumber: {
         fontSize: 20,

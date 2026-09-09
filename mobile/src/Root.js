@@ -1,5 +1,6 @@
 import React from "react";
 import { Text, View, StyleSheet } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -33,14 +34,35 @@ var Tab = createBottomTabNavigator();
 // TAB ICON
 // ============================================================
 
-function TabIcon({ focused, icon, label }) {
-    var isActive = focused;
-    var color = isActive ? colors.indigo : colors.muted;
-
+function TabIcon({ focused, icon }) {
     return (
         <View style={styles.tabIcon}>
-            <Text style={{ fontSize: 20 }}>{icon}</Text>
+            <Text style={{ fontSize: 18, opacity: focused ? 1 : 0.72 }}>{icon}</Text>
         </View>
+    );
+}
+
+function TabBarButton(props) {
+    var focused = !!(props.accessibilityState && props.accessibilityState.selected);
+    return (
+        <TouchableOpacity
+            accessibilityRole="button"
+            accessibilityState={props.accessibilityState}
+            accessibilityLabel={props.accessibilityLabel}
+            testID={props.testID}
+            onPress={props.onPress}
+            onLongPress={props.onLongPress}
+            delayPressIn={0}
+            delayPressOut={0}
+            activeOpacity={0.75}
+            style={[
+                props.style,
+                styles.tabBtn,
+                focused && styles.tabBtnOn,
+            ]}
+        >
+            {props.children}
+        </TouchableOpacity>
     );
 }
 
@@ -58,28 +80,32 @@ function Tabs() {
         tabBarInactiveTintColor: colors.muted,
         tabBarHideOnKeyboard: true,
         tabBarStyle: {
-            backgroundColor: isDark ? colors.bgDark : "#fff",
+            backgroundColor: isDark ? "rgba(15, 23, 42, 0.92)" : "rgba(255,255,255,0.88)",
             borderTopWidth: 1,
-            borderTopColor: isDark ? colors.muted : colors.border,
-            height: 52 + Math.max(insets.bottom, 8),
+            borderTopColor: isDark ? "rgba(255,255,255,0.05)" : "rgba(255,255,255,0.35)",
+            height: 58 + Math.max(insets.bottom, 8),
             paddingBottom: Math.max(insets.bottom, 8),
             paddingTop: 4,
-            elevation: 8,
+            paddingHorizontal: 2,
+            elevation: 12,
             shadowColor: "#000",
-            shadowOffset: { width: 0, height: -2 },
-            shadowOpacity: 0.05,
-            shadowRadius: 4,
+            shadowOffset: { width: 0, height: -4 },
+            shadowOpacity: isDark ? 0.3 : 0.05,
+            shadowRadius: 16,
         },
         tabBarLabelStyle: {
             fontSize: 10,
-            fontWeight: "700",
+            fontWeight: "600",
+            marginBottom: 2,
         },
         tabBarIconStyle: {
             marginTop: 0,
         },
         tabBarItemStyle: {
-            paddingVertical: 4,
-            borderRadius: 12,
+            paddingVertical: 0,
+        },
+        tabBarButton: function (p) {
+            return <TabBarButton {...p} />;
         },
         lazy: true,
         sceneContainerStyle: {
@@ -97,7 +123,7 @@ function Tabs() {
 
     return (
         <>
-            <StatusBar style="dark" />
+            <StatusBar style={isDark ? "light" : "dark"} />
             <Tab.Navigator screenOptions={tabOptions}>
                 {screens.map(function (screen) {
                     return (
@@ -280,7 +306,19 @@ var styles = StyleSheet.create({
     tabIcon: {
         alignItems: "center",
         justifyContent: "center",
-        paddingVertical: 4,
+        paddingVertical: 2,
+    },
+    tabBtn: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius: 16,
+        marginHorizontal: 2,
+        marginVertical: 4,
+        overflow: "hidden",
+    },
+    tabBtnOn: {
+        backgroundColor: "rgba(79, 70, 229, 0.12)",
     },
     tabActiveIndicator: {
         position: "absolute",

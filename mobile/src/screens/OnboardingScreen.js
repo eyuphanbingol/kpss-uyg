@@ -251,11 +251,12 @@ var styles = StyleSheet.create({
         marginTop: 8,
     },
     title: {
-        fontSize: 26,
-        fontWeight: "800",
-        color: colors.teal,
+        fontSize: 32,
+        fontWeight: "900",
+        color: colors.navy,
         textAlign: "center",
         marginTop: 4,
+        letterSpacing: -0.5,
     },
     subtitle: {
         textAlign: "center",

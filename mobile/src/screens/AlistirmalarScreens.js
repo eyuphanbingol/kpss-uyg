@@ -5,7 +5,7 @@ import { ClozeEngine } from "../lib/clozeEngine";
 import { MapQuiz } from "../lib/mapQuiz";
 import { StudentStore } from "../lib/store";
 import { go } from "../nav";
-import { Card, PrimaryButton, ScrollScreen, BackChip, Screen, Tap } from "../ui";
+import { Card, PrimaryButton, ScrollScreen, BackChip, Screen, Tap, PageHeader, DersIconBox } from "../ui";
 import { colors, DERS_ICON } from "../lib/theme";
 import { TrMapView } from "../components/TrMapView";
 import { useLandscapeLock } from "../lib/useLandscapeLock";
@@ -27,36 +27,56 @@ export function AlistirmalarHomeScreen({ navigation }) {
 
     return (
         <ScrollScreen dark={isDark} noBottom>
-            <View style={styles.header}>
-                <Text style={[styles.title, isDark && styles.textLight]}>Alıştırmalar</Text>
-                <Text style={[styles.subtitle, isDark && styles.textMuted]}>
-                    Boşluk, harita ve üç yeni oyun
-                </Text>
-            </View>
+            <PageHeader dark={isDark} title="Alıştırmalar" subtitle="Boşluk, harita ve üç yeni oyun" />
             <Card dark={isDark} onPress={function () { go(navigation, "AlistirmaDersList"); }} style={styles.dersCard}>
-                <Text style={styles.icon}>✏️</Text>
-                <Text style={[styles.dersName, isDark && styles.textLight]}>Boşluk doldurma</Text>
-                <Text style={[styles.meta, isDark && styles.textMuted]}>Nottaki boşluğu şıklardan tamamla.</Text>
+                <View style={styles.row}>
+                    <DersIconBox icon="✏️" />
+                    <View style={{ flex: 1, minWidth: 0 }}>
+                        <Text style={[styles.dersName, isDark && styles.textLight]}>Boşluk doldurma</Text>
+                        <Text style={[styles.meta, isDark && styles.textMuted]}>Nottaki boşluğu şıklardan tamamla.</Text>
+                    </View>
+                    <Text style={styles.arrow}>→</Text>
+                </View>
             </Card>
             <Card dark={isDark} onPress={function () { go(navigation, "MapTopics"); }} style={styles.dersCard}>
-                <Text style={styles.icon}>🗺️</Text>
-                <Text style={[styles.dersName, isDark && styles.textLight]}>Harita oyunu</Text>
-                <Text style={[styles.meta, isDark && styles.textMuted]}>Konuyu seç, yeri haritada işaretle.</Text>
+                <View style={styles.row}>
+                    <DersIconBox icon="🗺️" />
+                    <View style={{ flex: 1, minWidth: 0 }}>
+                        <Text style={[styles.dersName, isDark && styles.textLight]}>Harita oyunu</Text>
+                        <Text style={[styles.meta, isDark && styles.textMuted]}>Konuyu seç, yeri haritada işaretle.</Text>
+                    </View>
+                    <Text style={styles.arrow}>→</Text>
+                </View>
             </Card>
             <Card dark={isDark} onPress={function () { go(navigation, "ConquerPlay"); }} style={styles.dersCard}>
-                <Text style={styles.icon}>🛡️</Text>
-                <Text style={[styles.dersName, isDark && styles.textLight]}>Türkiye'yi Fethet</Text>
-                <Text style={[styles.meta, isDark && styles.textMuted]}>İli seç, soruları bitir; ili boya, bölge rozeti kap.</Text>
+                <View style={styles.row}>
+                    <DersIconBox icon="🛡️" />
+                    <View style={{ flex: 1, minWidth: 0 }}>
+                        <Text style={[styles.dersName, isDark && styles.textLight]}>Türkiye'yi Fethet</Text>
+                        <Text style={[styles.meta, isDark && styles.textMuted]}>İli seç, soruları bitir; ili boya, bölge rozeti kap.</Text>
+                    </View>
+                    <Text style={styles.arrow}>→</Text>
+                </View>
             </Card>
             <Card dark={isDark} onPress={function () { go(navigation, "TabuPlay"); }} style={styles.dersCard}>
-                <Text style={styles.icon}>🃏</Text>
-                <Text style={[styles.dersName, isDark && styles.textLight]}>Tabu</Text>
-                <Text style={[styles.meta, isDark && styles.textMuted]}>İpuçlarından kavrama ulaş. Az ipucu, çok puan.</Text>
+                <View style={styles.row}>
+                    <DersIconBox icon="🃏" />
+                    <View style={{ flex: 1, minWidth: 0 }}>
+                        <Text style={[styles.dersName, isDark && styles.textLight]}>Tabu</Text>
+                        <Text style={[styles.meta, isDark && styles.textMuted]}>İpuçlarından kavrama ulaş. Az ipucu, çok puan.</Text>
+                    </View>
+                    <Text style={styles.arrow}>→</Text>
+                </View>
             </Card>
             <Card dark={isDark} onPress={function () { go(navigation, "PanicPlay"); }} style={styles.dersCard}>
-                <Text style={styles.icon}>⏱️</Text>
-                <Text style={[styles.dersName, isDark && styles.textLight]}>Son 30 saniye</Text>
-                <Text style={[styles.meta, isDark && styles.textMuted]}>Doğru +2 sn, yanlış −3 sn. Hızlı net bilgi.</Text>
+                <View style={styles.row}>
+                    <DersIconBox icon="⏱️" />
+                    <View style={{ flex: 1, minWidth: 0 }}>
+                        <Text style={[styles.dersName, isDark && styles.textLight]}>Son 30 saniye</Text>
+                        <Text style={[styles.meta, isDark && styles.textMuted]}>Doğru +2 sn, yanlış −3 sn. Hızlı net bilgi.</Text>
+                    </View>
+                    <Text style={styles.arrow}>→</Text>
+                </View>
             </Card>
         </ScrollScreen>
     );
@@ -77,7 +97,7 @@ export function AlistirmaDersListScreen({ navigation }) {
                 return (
                     <Card key={ders} dark={isDark} onPress={function () { go(navigation, "AlistirmaKonuList", { ders: ders }); }} style={styles.dersCard}>
                         <View style={styles.row}>
-                            <Text style={styles.icon}>{DERS_ICON[ders] || "✏️"}</Text>
+                            <DersIconBox icon={DERS_ICON[ders] || "✏️"} />
                             <View style={{ flex: 1 }}>
                                 <Text style={[styles.dersName, isDark && styles.textLight]}>{ders}</Text>
                                 <Text style={[styles.meta, isDark && styles.textMuted]}>{konular.length} konu</Text>

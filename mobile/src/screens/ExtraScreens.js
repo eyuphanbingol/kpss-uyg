@@ -8,7 +8,7 @@ import { kpssData } from "../lib/catalog";
 import { supabase } from "../lib/supabase";
 import { trError } from "../lib/trError";
 import taban from "../content/tabanPuanlar.json";
-import { Card, PrimaryButton, ScrollScreen, Badge, BackChip } from "../ui";
+import { Card, PrimaryButton, ScrollScreen, Badge, BackChip, PageHeader } from "../ui";
 import { colors } from "../lib/theme";
 
 function stripChoicePrefix(opt) {
@@ -35,13 +35,7 @@ export function PlacementScreen({ navigation }) {
             {/* Back */}
             <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
 
-            {/* Header */}
-            <View style={styles.header}>
-                <Text style={[styles.title, isDark && styles.textLight]}>Puan / Tercih</Text>
-                <Text style={[styles.subtitle, isDark && styles.textMuted]}>
-                    Tahmini puan ve kurum eşleşmesi
-                </Text>
-            </View>
+            <PageHeader dark={isDark} title="Puan / Tercih" subtitle="Tahmini puan ve kurum eşleşmesi" right={null} />
 
             {/* Score */}
             <View style={[styles.scoreContainer, isDark && styles.scoreContainerDark]}>
@@ -158,13 +152,7 @@ export function LeaderboardScreen({ navigation }) {
             {/* Back */}
             <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
 
-            {/* Header */}
-            <View style={styles.header}>
-                <Text style={[styles.title, isDark && styles.textLight]}>Türkiye Sıralaması</Text>
-                <Text style={[styles.subtitle, isDark && styles.textMuted]}>
-                    En çok doğru çözenler
-                </Text>
-            </View>
+            <PageHeader dark={isDark} title="Türkiye Sıralaması" subtitle="En çok doğru çözenler" right={null} />
 
             {/* Error */}
             {err ? (
@@ -276,13 +264,7 @@ export function HeatScreen({ navigation }) {
             {/* Back */}
             <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
 
-            {/* Header */}
-            <View style={styles.header}>
-                <Text style={[styles.title, isDark && styles.textLight]}>Isı Haritası</Text>
-                <Text style={[styles.subtitle, isDark && styles.textMuted]}>
-                    30 günlük çalışma tempon
-                </Text>
-            </View>
+            <PageHeader dark={isDark} title="Isı Haritası" subtitle="30 günlük çalışma tempon" right={null} />
 
             {/* Stats */}
             <View style={styles.heatStats}>
@@ -360,13 +342,7 @@ export function AiScreen({ navigation }) {
             {/* Back */}
             <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
 
-            {/* Header */}
-            <View style={styles.header}>
-                <Text style={[styles.title, isDark && styles.textLight]}>Soru Asistanı</Text>
-                <Text style={[styles.subtitle, isDark && styles.textMuted]}>
-                    Yanlışlarını analiz et
-                </Text>
-            </View>
+            <PageHeader dark={isDark} title="Soru Asistanı" subtitle="Yanlışlarını analiz et" right={null} />
 
             {!item ? (
                 <Card style={[styles.emptyCard, isDark && styles.cardDark]}>
@@ -427,13 +403,7 @@ export function LiveScreen({ navigation }) {
             {/* Back */}
             <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
 
-            {/* Header */}
-            <View style={styles.header}>
-                <Text style={[styles.title, isDark && styles.textLight]}>Canlı Deneme</Text>
-                <Text style={[styles.subtitle, isDark && styles.textMuted]}>
-                    Cumartesi 21:00 ortak saat
-                </Text>
-            </View>
+            <PageHeader dark={isDark} title="Canlı Deneme" subtitle="Cumartesi 21:00 ortak saat" right={null} />
 
             <Card style={[styles.liveCard, isDark && styles.cardDark]}>
                 <View style={styles.liveHeader}>
@@ -479,12 +449,7 @@ export function PaywallScreen({ navigation }) {
         return (
             <ScrollScreen dark={isDark}>
                 <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
-                <View style={styles.header}>
-                    <Text style={[styles.title, isDark && styles.textLight]}>Tüm özellikler açık</Text>
-                    <Text style={[styles.subtitle, isDark && styles.textMuted]}>
-                        Abonelik şimdilik yok; deneme ve tercih listesi sınırlı değil.
-                    </Text>
-                </View>
+                <PageHeader dark={isDark} title="Tüm özellikler açık" subtitle="Abonelik şimdilik yok; deneme ve tercih listesi sınırlı değil." right={null} />
             </ScrollScreen>
         );
     }
@@ -494,13 +459,7 @@ export function PaywallScreen({ navigation }) {
             {/* Back */}
             <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
 
-            {/* Header */}
-            <View style={styles.header}>
-                <Text style={[styles.title, isDark && styles.textLight]}>Premium</Text>
-                <Text style={[styles.subtitle, isDark && styles.textMuted]}>
-                    Tüm özelliklerin kilidini aç
-                </Text>
-            </View>
+            <PageHeader dark={isDark} title="Premium" subtitle="Tüm özelliklerin kilidini aç" right={null} />
 
             {isPremium ? (
                 <Card style={[styles.premiumActiveCard, isDark && styles.cardDark]}>
