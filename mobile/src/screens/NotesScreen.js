@@ -30,10 +30,10 @@ function NoteImage({ tnode, contentWidth }) {
 var NOTE_SKIN = "<style>"
     + ".note-html{display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:1.55;color:#1c1917;overflow:hidden;max-width:100%}"
     + ".note-html>div:first-child{background:none!important;border:0!important;padding:0!important}"
-    + ".note-html span.inline-flex{display:flex!important;width:100%!important;max-width:100%;box-sizing:border-box;align-items:center;gap:8px;padding:14px 16px!important;border-radius:16px!important;background:linear-gradient(135deg,#0D2C4D,#14607a,#1D8A99)!important;color:#FFFFFF!important;border:0!important;font-size:16px!important;font-weight:900!important;letter-spacing:0.02em;line-height:1.3!important}"
-    + ".note-html .font-black:not(.inline-flex){color:#0D2C4D!important;font-size:16px!important;font-weight:900!important;line-height:1.3!important}"
-    + ".note-html h3,.note-html h4,.note-html h5,.note-html .font-bold.mb-2,.note-html .font-bold.mb-1,.note-html .font-bold.border-b{display:block;width:100%;color:#0D2C4D!important;font-weight:900!important;font-size:17px!important;border:0!important;border-bottom:2px solid rgba(13,44,77,0.18)!important;padding:0 0 8px!important;margin:0 0 10px!important;background:transparent!important}"
-    + ".note-html .text-lg,.note-html .text-xl,.note-html .text-2xl{font-size:18px!important;font-weight:900!important;color:#0D2C4D!important;line-height:1.3!important}"
+    + ".note-html span.inline-flex{display:flex!important;width:100%!important;max-width:100%;box-sizing:border-box;align-items:center;gap:8px;padding:14px 16px!important;border-radius:16px!important;background:linear-gradient(135deg,#9F1239,#DC2626,#E11D48)!important;color:#FFFFFF!important;border:0!important;font-size:16px!important;font-weight:900!important;letter-spacing:0.02em;line-height:1.3!important}"
+    + ".note-html .font-black:not(.inline-flex){color:#DC2626!important;font-size:16px!important;font-weight:900!important;line-height:1.3!important}"
+    + ".note-html h3,.note-html h4,.note-html h5,.note-html .font-bold.mb-2,.note-html .font-bold.mb-1,.note-html .font-bold.border-b{display:block;width:100%;color:#DC2626!important;font-weight:900!important;font-size:17px!important;border:0!important;border-bottom:2px solid rgba(220,38,38,0.22)!important;padding:0 0 8px!important;margin:0 0 10px!important;background:transparent!important}"
+    + ".note-html .text-lg,.note-html .text-xl,.note-html .text-2xl{font-size:18px!important;font-weight:900!important;color:#DC2626!important;line-height:1.3!important}"
     + ".note-pack,.note-html>div:not(:first-child){background:#f6f3ed!important;border:1px solid rgba(18,120,128,.16)!important;border-radius:16px!important;padding:14px!important}"
     + ".note-html ul,.note-html ol{list-style:none!important;padding:0!important;display:flex;flex-wrap:wrap;gap:8px}"
     + ".note-html li,.note-html .note-chip,.note-html .flex-wrap>span:not(.inline-flex){background:#fff!important;border:1px solid #e7e5e4!important;border-radius:10px!important;padding:8px 12px!important}"
@@ -310,25 +310,25 @@ var styles = StyleSheet.create({
         h1: {
             fontSize: 22,
             fontWeight: "900",
-            color: colors.navy,
+            color: "#DC2626",
             marginVertical: 8,
         },
         h2: {
             fontSize: 20,
             fontWeight: "900",
-            color: colors.navy,
+            color: "#DC2626",
             marginVertical: 6,
         },
         h3: {
             fontSize: 18,
             fontWeight: "900",
-            color: colors.navy,
+            color: "#DC2626",
             marginVertical: 4,
         },
         h4: {
             fontSize: 17,
             fontWeight: "900",
-            color: colors.navy,
+            color: "#DC2626",
             marginVertical: 4,
         },
         ul: {
