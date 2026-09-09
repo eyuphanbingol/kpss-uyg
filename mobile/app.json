@@ -28,6 +28,7 @@
     },
     "android": {
       "package": "app.atanly.mobile",
+      "softwareKeyboardLayoutMode": "resize",
       "adaptiveIcon": {
         "backgroundColor": "#041C24",
         "foregroundImage": "./assets/atanom-mark.png"

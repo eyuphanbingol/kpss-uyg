@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from "react";
-import { Alert, Image, Text, View, StyleSheet, KeyboardAvoidingView, Platform, ActivityIndicator } from "react-native";
+import React, { useState, useRef } from "react";
+import { Image, Text, View, StyleSheet, ActivityIndicator } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
 import * as WebBrowser from "expo-web-browser";
@@ -9,9 +9,10 @@ import { trError } from "../lib/trError";
 import { StudentStore } from "../lib/store";
 import { KpssConfig } from "../lib/config";
 import { sessionStorageShim } from "../lib/storage";
-import { Chip, Field, PrimaryButton, GhostButton, Card, Tap } from "../ui";
-import { colors, needsKulvar } from "../lib/theme";
+import { Chip, Field, PrimaryButton, Tap, ThemeToggle } from "../ui";
+import { needsKulvar } from "../lib/theme";
 import { BrandBackdrop } from "./SplashScreen";
+import { StatusBar } from "expo-status-bar";
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -115,13 +116,6 @@ export default function AuthScreen() {
     var passRef = useRef(null);
     var nameRef = useRef(null);
 
-    // ---------- Focus ----------
-    useEffect(function () {
-        if (mode === "in" && emailRef.current) {
-            emailRef.current.focus();
-        }
-    }, [mode]);
-
     // ---------- Helpers ----------
     function savePending() {
         sessionStorageShim.setItem("kpss-signup-profile", JSON.stringify({
@@ -155,7 +149,7 @@ export default function AuthScreen() {
             var resetRedirect = AuthSession.makeRedirectUri({ scheme: "atanly", path: "reset" });
             var fr = await supabase.auth.resetPasswordForEmail(email, { redirectTo: resetRedirect });
             setBusy(false);
-            setMsg(fr.error ? trError(fr.error, "Mail gönderilemedi.") : "✅ Sıfırlama maili gönderildi.");
+            setMsg(fr.error ? trError(fr.error, "Mail gönderilemedi.") : "Sıfırlama maili gönderildi.");
             return;
         }
         if (!pass || pass.length < 6) {
@@ -189,7 +183,7 @@ export default function AuthScreen() {
                     StudentStore.consumeSignupIfNeeded(up.data.user);
                 }
                 if (!up.data.session) {
-                    setMsg("✅ E-postanı doğrula, sonra giriş yap.");
+                    setMsg("E-postanı doğrula, sonra giriş yap.");
                 }
             } else {
                 var inn = await supabase.auth.signInWithPassword({ email: email, password: pass });
@@ -302,167 +296,158 @@ export default function AuthScreen() {
 
     return (
         <BrandBackdrop>
-            <SafeAreaView style={styles.safeArea} edges={["top"]}>
-                <KeyboardAvoidingView 
-                    style={{ flex: 1 }}
-                    behavior={Platform.OS === "ios" ? "padding" : "height"}
-                    keyboardVerticalOffset={Platform.OS === "ios" ? 64 : 0}
-                >
-                    <ScrollView 
-                        contentContainerStyle={styles.scrollContent} 
-                        keyboardShouldPersistTaps="always"
-                        delaysContentTouches={false}
+            <StatusBar style="light" />
+            <SafeAreaView style={styles.safeArea} edges={["top", "bottom"]}>
+                <View style={styles.topBar}>
+                    <ThemeToggle />
+                </View>
+                <View style={styles.brand}>
+                    <Image source={require("../../assets/atanom.png")} style={styles.logo} />
+                    <Text style={styles.title}>Atanly</Text>
+                    <Text style={styles.subtitle}>
+                        {mode === "in" ? "Kaldığın yerden devam et" : "Hedefine doğru ilk adım"}
+                    </Text>
+                </View>
+                <View style={styles.sheet}>
+                    <ScrollView
+                        contentContainerStyle={styles.sheetInner}
+                        keyboardShouldPersistTaps="handled"
+                        keyboardDismissMode="on-drag"
+                        automaticallyAdjustKeyboardInsets
                         showsVerticalScrollIndicator={false}
                     >
-                        <View style={styles.card}>
-                            {/* Logo */}
-                            <Image source={require("../../assets/atanom.png")} style={styles.logo} />
-                            <Text style={styles.title}>Atanly</Text>
-                            <Text style={styles.subtitle}>
-                                {mode === "in" ? "Kaldığın yerden devam et" : "Hedefine doğru ilk adım"}
-                            </Text>
+                        <View style={styles.toggleContainer}>
+                            <Tap
+                                onPress={function () { setMode("in"); setForgot(false); setMsg(""); }}
+                                style={[styles.toggleBtn, mode === "in" && styles.toggleBtnActive]}
+                            >
+                                <Text style={[styles.toggleText, mode === "in" && styles.toggleTextActive]}>Giriş</Text>
+                            </Tap>
+                            <Tap
+                                onPress={function () { setMode("up"); setStep(1); setMsg(""); }}
+                                style={[styles.toggleBtn, mode === "up" && styles.toggleBtnActive]}
+                            >
+                                <Text style={[styles.toggleText, mode === "up" && styles.toggleTextActive]}>Kayıt</Text>
+                            </Tap>
+                        </View>
 
-                            {/* Mode Toggle */}
-                            <View style={styles.toggleContainer}>
-                                <Tap 
-                                    onPress={function () { setMode("in"); setForgot(false); setMsg(""); }} 
-                                    style={[styles.toggleBtn, mode === "in" && styles.toggleBtnActive]}
-                                >
-                                    <Text style={[styles.toggleText, mode === "in" && styles.toggleTextActive]}>
-                                        🔐 Giriş
-                                    </Text>
-                                </Tap>
-                                <Tap 
-                                    onPress={function () { setMode("up"); setStep(1); setMsg(""); }} 
-                                    style={[styles.toggleBtn, mode === "up" && styles.toggleBtnActive]}
-                                >
-                                    <Text style={[styles.toggleText, mode === "up" && styles.toggleTextActive]}>
-                                        📝 Kayıt
-                                    </Text>
-                                </Tap>
-                            </View>
-
-                            {/* ===== LOGIN ===== */}
                             {mode === "in" && (
                                 <View>
-                                    <Field 
-                                        label="📧 E-posta"
+                                    <Field
+                                        label="E-posta"
                                         ref={emailRef}
-                                        value={email} 
-                                        onChangeText={setEmail} 
-                                        placeholder="ornek@email.com" 
+                                        value={email}
+                                        onChangeText={setEmail}
+                                        placeholder="ornek@email.com"
                                         keyboardType="email-address"
                                         autoCapitalize="none"
-                                        onSubmitEditing={function () { if (forgot) submit(); else passRef.current?.focus(); }}
+                                        returnKeyType={forgot ? "send" : "next"}
+                                        onSubmitEditing={function () { if (forgot) submit(); else passRef.current && passRef.current.focus(); }}
                                     />
                                     {!forgot && (
-                                        <Field 
-                                            label="🔒 Şifre"
+                                        <Field
+                                            label="Şifre"
                                             ref={passRef}
-                                            value={pass} 
-                                            onChangeText={setPass} 
-                                            placeholder="••••••••" 
+                                            value={pass}
+                                            onChangeText={setPass}
+                                            placeholder="••••••••"
                                             secure
+                                            returnKeyType="done"
                                             onSubmitEditing={submit}
                                         />
                                     )}
-                                    <Tap 
-                                        onPress={function () { setForgot(!forgot); setMsg(""); }} 
+                                    <Tap
+                                        onPress={function () { setForgot(!forgot); setMsg(""); }}
                                         style={styles.forgotBtn}
                                     >
                                         <Text style={styles.forgotText}>
-                                            {forgot ? "← Girişe dön" : "Şifremi Unuttum"}
+                                            {forgot ? "Girişe dön" : "Şifremi unuttum"}
                                         </Text>
                                     </Tap>
 
-                                    <PrimaryButton 
-                                        title={forgot ? "📩 Mail Gönder" : "🚀 Giriş Yap"} 
-                                        onPress={submit} 
-                                        busy={busy} 
-                                        disabled={busy} 
+                                    <PrimaryButton
+                                        title={forgot ? "Mail gönder" : "Giriş yap"}
+                                        onPress={submit}
+                                        busy={busy}
+                                        disabled={busy}
                                     />
 
                                     <Text style={styles.orText}>veya</Text>
 
-                                    {/* Google Button with Logo */}
-                                    <GoogleButton 
-                                        onPress={google} 
-                                        busy={googleBusy} 
-                                        disabled={busy} 
+                                    <GoogleButton
+                                        onPress={google}
+                                        busy={googleBusy}
+                                        disabled={busy}
                                     />
                                 </View>
                             )}
 
-                            {/* ===== SIGNUP ===== */}
                             {mode === "up" && (
                                 <View>
-                                    {/* Step Indicator */}
                                     <StepIndicator />
 
-                                    {/* Step 1: Name & Education */}
                                     {step === 1 && (
                                         <View>
-                                            <Field 
-                                                label="👤 Adın"
+                                            <Field
+                                                label="Adın"
                                                 ref={nameRef}
-                                                value={name} 
-                                                onChangeText={setName} 
-                                                placeholder="Adını yaz" 
+                                                value={name}
+                                                onChangeText={setName}
+                                                placeholder="Adını yaz"
                                                 autoCapitalize="words"
                                                 hint="Bu isim liderlik tablosunda görünecek"
+                                                returnKeyType="next"
                                                 onSubmitEditing={goAfterEdu}
                                             />
-                                            <Text style={styles.sectionLabel}>🎯 Eğitim düzeyin</Text>
+                                            <Text style={styles.sectionLabel}>Eğitim düzeyin</Text>
                                             <View style={styles.chipRow}>
-                                                <Chip 
-                                                    title="Lisans" 
-                                                    sub="4 yıllık" 
-                                                    on={level === "lisans"} 
-                                                    onPress={function () { pickLevel("lisans"); }} 
+                                                <Chip
+                                                    title="Lisans"
+                                                    sub="4 yıllık"
+                                                    on={level === "lisans"}
+                                                    onPress={function () { pickLevel("lisans"); }}
                                                 />
-                                                <Chip 
-                                                    title="Ön lisans" 
-                                                    sub="2 yıllık" 
-                                                    on={level === "onlisans"} 
-                                                    onPress={function () { pickLevel("onlisans"); }} 
+                                                <Chip
+                                                    title="Ön lisans"
+                                                    sub="2 yıllık"
+                                                    on={level === "onlisans"}
+                                                    onPress={function () { pickLevel("onlisans"); }}
                                                 />
-                                                <Chip 
-                                                    title="Ortaöğretim" 
-                                                    sub="Lise" 
-                                                    on={level === "ortaogretim"} 
-                                                    onPress={function () { pickLevel("ortaogretim"); }} 
+                                                <Chip
+                                                    title="Ortaöğretim"
+                                                    sub="Lise"
+                                                    on={level === "ortaogretim"}
+                                                    onPress={function () { pickLevel("ortaogretim"); }}
                                                 />
                                             </View>
-                                            <PrimaryButton title="Devam →" onPress={goAfterEdu} />
+                                            <PrimaryButton title="Devam" onPress={goAfterEdu} />
                                         </View>
                                     )}
 
-                                    {/* Step 2: Target */}
                                     {step === 2 && (
                                         <View>
-                                            <Text style={styles.sectionLabel}>🎯 Kulvar</Text>
+                                            <Text style={styles.sectionLabel}>Kulvar</Text>
                                             <View style={styles.targetGrid}>
                                                 {KpssConfig.targetTypes.map(function (x) {
                                                     return (
                                                         <View key={x.id} style={styles.targetItem}>
-                                                            <Chip 
-                                                                title={x.t} 
-                                                                on={target === x.id} 
-                                                                onPress={function () { setTarget(x.id); setMsg(""); }} 
+                                                            <Chip
+                                                                title={x.t}
+                                                                on={target === x.id}
+                                                                onPress={function () { setTarget(x.id); setMsg(""); }}
                                                             />
                                                         </View>
                                                     );
                                                 })}
                                             </View>
-                                            <PrimaryButton title="Devam →" onPress={function () { setStep(3); setMsg(""); }} />
+                                            <PrimaryButton title="Devam" onPress={function () { setStep(3); setMsg(""); }} />
                                         </View>
                                     )}
 
-                                    {/* Step 3: Account */}
                                     {step === 3 && (
                                         <View>
-                                            <Tap 
-                                                onPress={function () { setKvkk(!kvkk); }} 
+                                            <Tap
+                                                onPress={function () { setKvkk(!kvkk); }}
                                                 style={styles.kvkkContainer}
                                             >
                                                 <View style={[
@@ -476,57 +461,55 @@ export default function AuthScreen() {
                                                 </Text>
                                             </Tap>
 
-                                            <Field 
-                                                label="🔑 Davet kodu (isteğe bağlı)"
-                                                value={refCode} 
-                                                onChangeText={setRefCode} 
+                                            <Field
+                                                label="Davet kodu (isteğe bağlı)"
+                                                value={refCode}
+                                                onChangeText={setRefCode}
                                                 autoCapitalize="characters"
                                                 placeholder="Örn: KPSS-ABCD12"
                                             />
-                                            <Field 
-                                                label="📧 E-posta"
-                                                value={email} 
-                                                onChangeText={setEmail} 
+                                            <Field
+                                                label="E-posta"
+                                                value={email}
+                                                onChangeText={setEmail}
                                                 keyboardType="email-address"
                                                 autoCapitalize="none"
                                             />
-                                            <Field 
-                                                label="🔒 Şifre"
-                                                value={pass} 
-                                                onChangeText={setPass} 
-                                                placeholder="En az 6 karakter" 
+                                            <Field
+                                                label="Şifre"
+                                                value={pass}
+                                                onChangeText={setPass}
+                                                placeholder="En az 6 karakter"
                                                 secure
                                             />
 
-                                            <PrimaryButton 
-                                                title="🚀 Kayıt Ol" 
-                                                onPress={submit} 
-                                                busy={busy} 
-                                                disabled={busy} 
+                                            <PrimaryButton
+                                                title="Kayıt ol"
+                                                onPress={submit}
+                                                busy={busy}
+                                                disabled={busy}
                                             />
 
                                             <Text style={styles.orText}>veya</Text>
 
-                                            {/* Google Button with Logo */}
-                                            <GoogleButton 
-                                                onPress={google} 
-                                                busy={googleBusy} 
-                                                disabled={busy} 
+                                            <GoogleButton
+                                                onPress={google}
+                                                busy={googleBusy}
+                                                disabled={busy}
                                             />
                                         </View>
                                     )}
                                 </View>
                             )}
 
-                            {/* Message */}
                             {msg ? (
                                 <View style={[
                                     styles.msgContainer,
-                                    msg.includes("✅") && styles.msgSuccess,
+                                    (msg.indexOf("gönderildi") >= 0 || msg.indexOf("doğrula") >= 0) && styles.msgSuccess,
                                 ]}>
                                     <Text style={[
                                         styles.msgText,
-                                        msg.includes("✅") && styles.msgTextSuccess,
+                                        (msg.indexOf("gönderildi") >= 0 || msg.indexOf("doğrula") >= 0) && styles.msgTextSuccess,
                                     ]}>
                                         {msg}
                                     </Text>
@@ -534,14 +517,13 @@ export default function AuthScreen() {
                             ) : null}
 
                             <Text style={styles.footerText}>
-                                {mode === "in" 
+                                {mode === "in"
                                     ? "İlk kez Google ile gelince ad, eğitim ve kulvar sorulur."
-                                    : "Hesabın var mı? Giriş yap butonuna tıkla."
+                                    : "Hesabın var mı? Giriş yap’a dokun."
                                 }
                             </Text>
-                        </View>
                     </ScrollView>
-                </KeyboardAvoidingView>
+                </View>
             </SafeAreaView>
         </BrandBackdrop>
     );
@@ -555,82 +537,85 @@ var styles = StyleSheet.create({
     safeArea: {
         flex: 1,
     },
-    scrollContent: {
-        padding: 20,
-        paddingBottom: 40,
-        flexGrow: 1,
-        justifyContent: "center",
+    topBar: {
+        alignItems: "flex-end",
+        paddingHorizontal: 16,
+        paddingBottom: 4,
     },
-    card: {
-        backgroundColor: "rgba(255,255,255,0.96)",
-        borderRadius: 28,
-        padding: 22,
-        marginTop: 12,
-        shadowColor: "#000",
-        shadowOffset: { width: 0, height: 4 },
-        shadowOpacity: 0.06,
-        shadowRadius: 12,
-        elevation: 4,
+    brand: {
+        alignItems: "center",
+        paddingHorizontal: 20,
+        paddingBottom: 16,
     },
     logo: {
-        width: 72,
-        height: 72,
-        alignSelf: "center",
-        marginBottom: 4,
+        width: 64,
+        height: 64,
     },
     title: {
-        fontSize: 32,
-        fontWeight: "900",
-        color: colors.navy,
-        textAlign: "center",
-        letterSpacing: -0.5,
+        marginTop: 6,
+        fontSize: 28,
+        fontWeight: "700",
+        color: "#F5EBC7",
+        letterSpacing: 0.4,
     },
     subtitle: {
+        marginTop: 4,
         textAlign: "center",
-        color: colors.muted,
-        marginBottom: 16,
+        color: "rgba(255,255,255,0.72)",
         fontSize: 14,
+        fontWeight: "500",
     },
-
-    // ---------- Toggle ----------
+    sheet: {
+        flex: 1,
+        backgroundColor: "#FFFFFF",
+        borderTopLeftRadius: 28,
+        borderTopRightRadius: 28,
+        borderWidth: 1,
+        borderColor: "rgba(226,232,240,0.4)",
+        overflow: "hidden",
+    },
+    sheetInner: {
+        paddingHorizontal: 20,
+        paddingTop: 18,
+        paddingBottom: 28,
+    },
     toggleContainer: {
         flexDirection: "row",
-        backgroundColor: "#E7E5E4",
-        borderRadius: 16,
+        backgroundColor: "#F1F5F9",
+        borderRadius: 14,
         padding: 4,
-        marginBottom: 16,
+        marginBottom: 18,
+        borderWidth: 1,
+        borderColor: "#E2E8F0",
     },
     toggleBtn: {
         flex: 1,
-        padding: 10,
-        borderRadius: 12,
+        paddingVertical: 10,
+        borderRadius: 11,
         alignItems: "center",
+        overflow: "hidden",
     },
     toggleBtnActive: {
         backgroundColor: "#fff",
-        shadowColor: "#000",
-        shadowOffset: { width: 0, height: 1 },
-        shadowOpacity: 0.06,
-        shadowRadius: 4,
-        elevation: 1,
+        borderWidth: 1,
+        borderColor: "#E2E8F0",
     },
     toggleText: {
         textAlign: "center",
         fontWeight: "600",
-        color: colors.muted,
+        color: "#64748B",
         fontSize: 14,
     },
     toggleTextActive: {
-        color: colors.text,
+        color: "#0F172A",
+        fontWeight: "700",
     },
-
-    // ---------- Step ----------
     stepContainer: {
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
         marginBottom: 16,
-        paddingHorizontal: 20,
+        paddingHorizontal: 12,
     },
     stepWrapper: {
         flexDirection: "row",
@@ -638,52 +623,51 @@ var styles = StyleSheet.create({
         flex: 1,
     },
     stepDot: {
-        width: 32,
-        height: 32,
-        borderRadius: 16,
-        borderWidth: 2,
-        borderColor: colors.border,
-        backgroundColor: "#fff",
+        width: 28,
+        height: 28,
+        borderRadius: 14,
+        borderWidth: 1,
+        borderColor: "#E2E8F0",
+        backgroundColor: "#F8FAFC",
         alignItems: "center",
         justifyContent: "center",
     },
     stepDotActive: {
-        borderColor: colors.indigo,
-        backgroundColor: colors.indigo,
+        borderColor: "#D97706",
+        backgroundColor: "#D97706",
     },
     stepDotPast: {
-        borderColor: colors.emerald,
-        backgroundColor: colors.emerald,
+        borderColor: "#FEF3C7",
+        backgroundColor: "#FEF3C7",
     },
     stepDotText: {
-        fontSize: 13,
+        fontSize: 12,
         fontWeight: "700",
-        color: colors.muted,
+        color: "#64748B",
     },
     stepDotTextActive: {
         color: "#fff",
     },
     stepDotCheck: {
-        fontSize: 13,
+        fontSize: 12,
         fontWeight: "700",
-        color: "#fff",
+        color: "#92400E",
     },
     stepLine: {
         flex: 1,
-        height: 2,
-        backgroundColor: colors.border,
+        height: 1,
+        backgroundColor: "#E2E8F0",
         marginHorizontal: 4,
     },
     stepLinePast: {
-        backgroundColor: colors.emerald,
+        backgroundColor: "#FDE68A",
     },
-
-    // ---------- Form ----------
     sectionLabel: {
         fontSize: 12,
         fontWeight: "700",
-        color: colors.muted,
+        color: "#64748B",
         marginBottom: 8,
+        letterSpacing: 0.3,
     },
     chipRow: {
         flexDirection: "row",
@@ -699,26 +683,26 @@ var styles = StyleSheet.create({
     targetItem: {
         width: "48%",
     },
-
-    // ---------- KVKK ----------
     kvkkContainer: {
         flexDirection: "row",
         gap: 10,
         marginBottom: 12,
         alignItems: "center",
+        overflow: "hidden",
+        borderRadius: 12,
     },
     kvkkCheck: {
         width: 22,
         height: 22,
         borderRadius: 6,
-        borderWidth: 2,
-        borderColor: colors.indigo,
+        borderWidth: 1,
+        borderColor: "#D97706",
         backgroundColor: "#fff",
         alignItems: "center",
         justifyContent: "center",
     },
     kvkkCheckActive: {
-        backgroundColor: colors.indigo,
+        backgroundColor: "#D97706",
     },
     kvkkCheckText: {
         color: "#fff",
@@ -727,32 +711,31 @@ var styles = StyleSheet.create({
     },
     kvkkText: {
         flex: 1,
-        color: colors.text,
+        color: "#334155",
         fontSize: 13,
+        lineHeight: 18,
     },
-
-    // ---------- Forgot ----------
     forgotBtn: {
         marginBottom: 12,
         alignSelf: "flex-end",
+        overflow: "hidden",
+        borderRadius: 8,
+        paddingVertical: 4,
+        paddingHorizontal: 2,
     },
     forgotText: {
-        color: colors.indigo,
+        color: "#D97706",
         fontWeight: "600",
         fontSize: 13,
     },
-
-    // ---------- Or ----------
     orText: {
         textAlign: "center",
-        color: colors.muted,
+        color: "#64748B",
         marginVertical: 12,
         fontSize: 13,
     },
-
-    // ---------- Google Button ----------
     googleBtn: {
-        backgroundColor: colors.navy,
+        backgroundColor: "#0F172A",
         borderRadius: 16,
         paddingVertical: 14,
         paddingHorizontal: 20,
@@ -760,11 +743,7 @@ var styles = StyleSheet.create({
         justifyContent: "center",
         flexDirection: "row",
         minHeight: 52,
-        shadowColor: colors.navy,
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.2,
-        shadowRadius: 6,
-        elevation: 3,
+        overflow: "hidden",
     },
     googleBtnContent: {
         flexDirection: "row",
@@ -779,11 +758,6 @@ var styles = StyleSheet.create({
         backgroundColor: "#fff",
         alignItems: "center",
         justifyContent: "center",
-        shadowColor: "#000",
-        shadowOffset: { width: 0, height: 1 },
-        shadowOpacity: 0.1,
-        shadowRadius: 2,
-        elevation: 1,
     },
     googleIconText: {
         fontSize: 16,
@@ -796,34 +770,31 @@ var styles = StyleSheet.create({
         fontSize: 15,
         letterSpacing: 0.3,
     },
-
-    // ---------- Message ----------
     msgContainer: {
         marginTop: 12,
         padding: 12,
         borderRadius: 12,
-        backgroundColor: colors.rose + "15",
+        backgroundColor: "#FFE4E6",
         borderWidth: 1,
-        borderColor: colors.rose + "30",
+        borderColor: "#FECDD3",
     },
     msgSuccess: {
-        backgroundColor: colors.emerald + "15",
-        borderColor: colors.emerald + "30",
+        backgroundColor: "#FEF3C7",
+        borderColor: "#FDE68A",
     },
     msgText: {
-        color: colors.rose,
+        color: "#9F1239",
         textAlign: "center",
         fontSize: 13,
     },
     msgTextSuccess: {
-        color: colors.emerald,
+        color: "#92400E",
     },
-
-    // ---------- Footer ----------
     footerText: {
         fontSize: 11,
-        color: colors.muted,
+        color: "#64748B",
         textAlign: "center",
         marginTop: 16,
+        lineHeight: 16,
     },
 });

@@ -16,7 +16,7 @@ import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 import * as Haptics from "expo-haptics";
 import { LinearGradient } from "expo-linear-gradient";
-import { ChevronLeft, Settings } from "lucide-react-native";
+import { ChevronLeft, Eye, EyeOff, Settings } from "lucide-react-native";
 import { colors } from "./lib/theme";
 import { StudentStore } from "./lib/store";
 
@@ -290,30 +290,35 @@ export function DangerButton(props) {
 // FIELD (Input)
 // ============================================================
 
-export function Field(props) {
+export var Field = React.forwardRef(function Field(props, ref) {
     var [focused, setFocused] = React.useState(false);
-    var [secure, setSecure] = React.useState(props.secure || false);
+    var [secure, setSecure] = React.useState(!!props.secure);
 
     return (
         <View style={[{ marginBottom: 16 }, props.containerStyle]}>
             {props.label ? (
                 <Text style={[styles.label, props.labelStyle]}>{props.label}</Text>
             ) : null}
-            <View style={{ position: "relative" }}>
+            <View style={styles.inputWrap}>
                 <TextInput
+                    ref={ref}
                     value={props.value}
                     onChangeText={props.onChangeText}
                     placeholder={props.placeholder}
                     placeholderTextColor={colors.muted}
-                    secureTextEntry={secure}
+                    secureTextEntry={!!props.secure && secure}
                     autoCapitalize={props.autoCapitalize || "none"}
                     keyboardType={props.keyboardType}
+                    autoCorrect={false}
                     multiline={props.multiline}
                     numberOfLines={props.numberOfLines || 1}
+                    onSubmitEditing={props.onSubmitEditing}
+                    returnKeyType={props.returnKeyType}
                     onFocus={function () { setFocused(true); props.onFocus && props.onFocus(); }}
                     onBlur={function () { setFocused(false); props.onBlur && props.onBlur(); }}
                     style={[
                         styles.input,
+                        props.secure && styles.inputWithEye,
                         focused && styles.inputFocused,
                         props.error && styles.inputError,
                         props.multiline && { minHeight: 80, textAlignVertical: "top" },
@@ -322,35 +327,18 @@ export function Field(props) {
                     editable={!props.disabled}
                     maxLength={props.maxLength}
                 />
-                {props.secure !== undefined && (
-                    <TouchableOpacity
-                        style={{
-                            position: "absolute",
-                            right: 14,
-                            top: "50%",
-                            transform: [{ translateY: -10 }],
-                        }}
-                        delayPressIn={0}
-                        delayPressOut={0}
+                {props.secure ? (
+                    <Pressable
+                        accessibilityRole="button"
+                        accessibilityLabel={secure ? "Şifreyi göster" : "Şifreyi gizle"}
+                        android_ripple={{ color: "rgba(0,0,0,0.05)" }}
                         onPress={function () { setSecure(!secure); }}
+                        style={styles.eyeBtn}
+                        hitSlop={6}
                     >
-                        <Text style={{ fontSize: 18 }}>
-                            {secure ? "👁️" : "👁️‍🗨️"}
-                        </Text>
-                    </TouchableOpacity>
-                )}
-                {props.rightIcon && (
-                    <View
-                        style={{
-                            position: "absolute",
-                            right: 14,
-                            top: "50%",
-                            transform: [{ translateY: -10 }],
-                        }}
-                    >
-                        {props.rightIcon}
-                    </View>
-                )}
+                        {secure ? <EyeOff size={18} color="#64748B" /> : <Eye size={18} color="#0F172A" />}
+                    </Pressable>
+                ) : null}
             </View>
             {props.error ? (
                 <Text style={[styles.errorText, props.errorStyle]}>{props.error}</Text>
@@ -360,7 +348,7 @@ export function Field(props) {
             ) : null}
         </View>
     );
-}
+});
 
 // ============================================================
 // CHIP
@@ -439,7 +427,7 @@ export function Chip(props) {
             {props.sub ? (
                 <Text style={[
                     styles.chipSub,
-                    isOn && { color: colors.indigo },
+                    isOn && { color: "#92400E" },
                     props.subStyle,
                 ]}>
                     {props.sub}
@@ -927,20 +915,38 @@ var styles = StyleSheet.create({
         color: colors.rose,
         marginTop: 4,
     },
+    inputWrap: {
+        position: "relative",
+        justifyContent: "center",
+    },
     input: {
         borderWidth: 1,
-        borderColor: colors.border,
-        borderRadius: 16,
+        borderColor: "#E2E8F0",
+        borderRadius: 14,
         paddingHorizontal: 16,
         paddingVertical: 14,
         fontSize: 16,
-        backgroundColor: colors.white,
-        color: colors.text,
+        backgroundColor: "#F8FAFC",
+        color: "#0F172A",
         minHeight: 52,
     },
+    inputWithEye: {
+        paddingRight: 48,
+    },
+    eyeBtn: {
+        position: "absolute",
+        right: 4,
+        top: 0,
+        bottom: 0,
+        width: 44,
+        alignItems: "center",
+        justifyContent: "center",
+        overflow: "hidden",
+        borderRadius: 12,
+    },
     inputFocused: {
-        borderColor: colors.indigo,
-        backgroundColor: colors.white,
+        borderColor: "#D97706",
+        backgroundColor: "#fff",
     },
     inputError: {
         borderColor: colors.rose,
@@ -958,8 +964,8 @@ var styles = StyleSheet.create({
         minHeight: 56,
     },
     chipOn: {
-        borderColor: colors.indigo,
-        backgroundColor: "#EEF2FF",
+        borderColor: "#D97706",
+        backgroundColor: "#FEF3C7",
     },
     chipTxt: {
         fontWeight: "700",
@@ -968,7 +974,7 @@ var styles = StyleSheet.create({
         textAlign: "center",
     },
     chipTxtOn: {
-        color: colors.indigo,
+        color: "#92400E",
     },
     chipSub: {
         fontSize: 10,
