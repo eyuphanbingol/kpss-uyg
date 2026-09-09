@@ -56,6 +56,24 @@ export default function TestScreen({ route, navigation }) {
     var left = _left[0];
     var setLeft = _left[1];
 
+    var scrollRef = useRef(null);
+
+    useEffect(function () {
+        if (scrollRef.current) {
+            scrollRef.current.scrollTo({ y: 0, animated: false });
+        }
+    }, [qIndex]);
+
+    useEffect(function () {
+        if (!answered) return;
+        var t = setTimeout(function () {
+            if (scrollRef.current) {
+                scrollRef.current.scrollToEnd({ animated: true });
+            }
+        }, 80);
+        return function () { clearTimeout(t); };
+    }, [answered]);
+
     // ---------- Timer ----------
     useEffect(function () {
         if (left == null || done) return;
@@ -269,6 +287,7 @@ export default function TestScreen({ route, navigation }) {
                 </View>
 
                 <ScrollView
+                    ref={scrollRef}
                     style={styles.testScroll}
                     contentContainerStyle={styles.testScrollInner}
                     showsVerticalScrollIndicator={false}
