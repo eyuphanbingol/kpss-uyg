@@ -6,83 +6,60 @@ import { StudentStore } from "../lib/store";
 import { ScrollScreen, Card, BackChip, Tap } from "../ui";
 import { colors, DERS_ICON } from "../lib/theme";
 import { mediaUrl, rewriteHtmlMedia } from "../lib/media";
+import { normalizeNoteHtml } from "../lib/noteHtml";
 
 function NoteImage({ tnode, contentWidth }) {
     var src = mediaUrl(tnode && tnode.attributes && tnode.attributes.src);
-    var _h = useState(180);
+    var _h = useState(160);
     var h = _h[0];
     var setH = _h[1];
     if (!src) return null;
+    var w = Math.max(80, contentWidth);
     return (
         <Image
             source={{ uri: src }}
             resizeMode="contain"
             onLoad={function (e) {
-                var w = e.nativeEvent.source && e.nativeEvent.source.width;
-                var hh = e.nativeEvent.source && e.nativeEvent.source.height;
-                if (w && hh) setH(Math.min(360, Math.max(120, Math.round(contentWidth * hh / w))));
+                var iw = e.nativeEvent.source && e.nativeEvent.source.width;
+                var ih = e.nativeEvent.source && e.nativeEvent.source.height;
+                if (iw && ih) setH(Math.min(320, Math.max(100, Math.round(w * ih / iw))));
             }}
-            style={{ width: contentWidth, height: h, backgroundColor: "#F6F1E4", borderRadius: 12, marginVertical: 8 }}
+            style={{ width: w, height: h, alignSelf: "center", backgroundColor: "#F6F1E4", borderRadius: 10, marginVertical: 8 }}
         />
     );
 }
 
-var htmlTags = {
-    p: {
-        fontSize: 15,
-        lineHeight: 23,
-        color: colors.text,
-        backgroundColor: "#fff",
-        borderWidth: 1,
-        borderColor: "#e7e5e4",
-        borderRadius: 12,
-        padding: 12,
-        marginBottom: 8,
-    },
-    li: {
-        fontSize: 14,
-        lineHeight: 22,
-        color: colors.text,
-        backgroundColor: "#fff",
-        borderWidth: 1,
-        borderColor: "#e7e5e4",
-        borderRadius: 10,
-        padding: 10,
-        marginBottom: 8,
-    },
-    ul: { paddingLeft: 0, marginVertical: 4 },
-    ol: { paddingLeft: 0, marginVertical: 4 },
-    h3: { color: "#DC2626", fontWeight: "800", fontSize: 16, marginBottom: 8, marginTop: 4 },
-    h4: { color: "#DC2626", fontWeight: "800", fontSize: 16, marginBottom: 8, marginTop: 4 },
-    h5: { color: "#DC2626", fontWeight: "800", fontSize: 15, marginBottom: 6 },
-    strong: { fontWeight: "800", color: "#041C24" },
-    b: { fontWeight: "800", color: "#041C24" },
-    img: { width: "100%", marginVertical: 8, borderRadius: 12 },
-};
-
-var htmlClasses = {
-    "inline-flex": {
-        backgroundColor: "#DC2626",
-        color: "#fff",
-        fontWeight: "800",
-        fontSize: 14,
-        lineHeight: 20,
-        paddingVertical: 10,
-        paddingHorizontal: 12,
-        borderRadius: 12,
-        marginBottom: 10,
-        alignSelf: "stretch",
-        flexWrap: "wrap",
-    },
-    "font-black": { fontWeight: "800" },
-    "text-lg": { fontSize: 16, lineHeight: 24, fontWeight: "700" },
-    "rounded-xl": { borderRadius: 12 },
-    "rounded-lg": { borderRadius: 10 },
-    "mb-4": { marginBottom: 12 },
-    "mb-2": { marginBottom: 8 },
-    "p-3": { padding: 12 },
-    "p-4": { padding: 14 },
-};
+function makeTags(dark) {
+    var ink = dark ? "#e7e5e4" : colors.text;
+    var strong = dark ? "#F5EBC7" : "#041C24";
+    return {
+        body: { margin: 0, padding: 0 },
+        div: { margin: 0, padding: 0, flexDirection: "column", maxWidth: "100%" },
+        p: { fontSize: 15, lineHeight: 22, color: ink, marginTop: 0, marginBottom: 10, marginLeft: 0, marginRight: 0 },
+        li: { fontSize: 14, lineHeight: 21, color: ink, marginBottom: 6, paddingLeft: 0 },
+        ul: { marginTop: 0, marginBottom: 8, paddingLeft: 16 },
+        ol: { marginTop: 0, marginBottom: 8, paddingLeft: 16 },
+        h3: {
+            color: "#DC2626",
+            fontWeight: "800",
+            fontSize: 15,
+            lineHeight: 21,
+            marginTop: 0,
+            marginBottom: 12,
+            paddingBottom: 8,
+            borderBottomWidth: 2,
+            borderBottomColor: "rgba(220,38,38,0.25)",
+        },
+        h4: { color: "#DC2626", fontWeight: "800", fontSize: 15, lineHeight: 21, marginTop: 8, marginBottom: 6 },
+        h5: { color: "#DC2626", fontWeight: "800", fontSize: 14, marginBottom: 6 },
+        strong: { fontWeight: "800", color: strong },
+        b: { fontWeight: "800", color: strong },
+        span: { color: ink, fontSize: 14, lineHeight: 21 },
+        table: { marginBottom: 10 },
+        td: { fontSize: 13, lineHeight: 20, color: ink, paddingVertical: 4 },
+        th: { fontSize: 12, fontWeight: "800", color: "#0D5C63", paddingVertical: 4 },
+    };
+}
 
 export default function NotesScreen({ route, navigation }) {
     var ders = route.params.ders;
@@ -95,7 +72,7 @@ export default function NotesScreen({ route, navigation }) {
     var _idx = useState(tp.noteIndex || 0);
     var idx = _idx[0];
     var setIdx = _idx[1];
-    var _w = useState(320);
+    var _w = useState(280);
     var contentW = _w[0];
     var setContentW = _w[1];
 
@@ -104,8 +81,10 @@ export default function NotesScreen({ route, navigation }) {
     }, [idx]);
 
     var html = useMemo(function () {
-        return rewriteHtmlMedia(String(notlar[idx] || ""));
+        return normalizeNoteHtml(rewriteHtmlMedia(String(notlar[idx] || "")));
     }, [notlar, idx]);
+
+    var tags = useMemo(function () { return makeTags(isDark); }, [isDark]);
 
     function goToTest() {
         StudentStore.markNotesComplete(ders, konu);
@@ -137,33 +116,31 @@ export default function NotesScreen({ route, navigation }) {
             <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
 
             <View style={styles.header}>
-                <View style={{ flex: 1, minWidth: 0, paddingRight: 8 }}>
-                    <Text style={[styles.dersName, isDark && { color: colors.muted }]} numberOfLines={1}>
-                        {DERS_ICON[ders] || "📚"} {ders}
-                    </Text>
+                <View style={styles.headerText}>
+                    <Text style={styles.dersName} numberOfLines={1}>{DERS_ICON[ders] || "📚"} {ders}</Text>
                     <Text style={[styles.konuName, isDark && { color: "#fff" }]} numberOfLines={2}>{konu}</Text>
                 </View>
-                <View style={[styles.counter, isDark && { backgroundColor: "#211F1D" }]}>
+                <View style={styles.counter}>
                     <Text style={styles.counterText}>{idx + 1}/{notlar.length}</Text>
                 </View>
             </View>
 
             <Card dark={isDark} style={styles.noteCard}>
                 <View
+                    style={styles.noteInner}
                     onLayout={function (e) {
                         var w = Math.floor(e.nativeEvent.layout.width);
-                        if (w > 40 && Math.abs(w - contentW) > 2) setContentW(w);
+                        if (w > 60 && Math.abs(w - contentW) > 1) setContentW(w);
                     }}
                 >
                     <RenderHTML
                         contentWidth={contentW}
-                        source={{ html: html, baseUrl: "https://www.atanly.com/" }}
+                        source={{ html: html || "<p></p>", baseUrl: "https://www.atanly.com/" }}
                         baseStyle={isDark ? styles.baseDark : styles.base}
-                        tagsStyles={htmlTags}
-                        classesStyles={htmlClasses}
-                        ignoredStyles={["width", "minWidth", "maxWidth", "flexBasis", "height"]}
+                        tagsStyles={tags}
+                        ignoredStyles={["width", "minWidth", "maxWidth", "height", "flex", "flexDirection", "flexGrow", "flexShrink", "flexBasis", "position", "left", "right", "top", "bottom", "display"]}
                         defaultTextProps={{ selectable: false }}
-                        defaultViewProps={{ style: { maxWidth: "100%" } }}
+                        computeEmbeddedMaxWidth={function () { return contentW; }}
                         renderers={{
                             img: function (p) {
                                 return <NoteImage tnode={p.tnode} contentWidth={contentW} />;
@@ -198,10 +175,14 @@ export default function NotesScreen({ route, navigation }) {
 var styles = StyleSheet.create({
     header: {
         flexDirection: "row",
-        justifyContent: "space-between",
         alignItems: "center",
         marginTop: 8,
         marginBottom: 12,
+    },
+    headerText: {
+        flex: 1,
+        minWidth: 0,
+        paddingRight: 8,
     },
     dersName: {
         color: colors.muted,
@@ -215,9 +196,9 @@ var styles = StyleSheet.create({
     },
     counter: {
         backgroundColor: "#EEF2FF",
-        paddingHorizontal: 12,
+        paddingHorizontal: 10,
         paddingVertical: 6,
-        borderRadius: 12,
+        borderRadius: 10,
         flexShrink: 0,
     },
     counterText: {
@@ -230,22 +211,22 @@ var styles = StyleSheet.create({
         overflow: "hidden",
         marginBottom: 12,
     },
+    noteInner: {
+        width: "100%",
+        overflow: "hidden",
+    },
     base: {
         fontSize: 15,
-        lineHeight: 23,
+        lineHeight: 22,
         color: colors.text,
-        maxWidth: "100%",
     },
     baseDark: {
         fontSize: 15,
-        lineHeight: 23,
+        lineHeight: 22,
         color: "#e7e5e4",
-        maxWidth: "100%",
     },
     navRow: {
         flexDirection: "row",
-        alignItems: "center",
-        marginBottom: 8,
     },
     navBtn: {
         flex: 1,
