@@ -320,7 +320,7 @@ export var Field = React.forwardRef(function Field(props, ref) {
                         accessibilityRole="button"
                         accessibilityLabel={secure ? "Şifreyi göster" : "Şifreyi gizle"}
                         android_ripple={{ color: "rgba(0,0,0,0.05)" }}
-                        onPress={function () { setSecure(!secure); }}
+                        onPress={function () { hapticTap(); setSecure(!secure); }}
                         style={styles.eyeBtn}
                         hitSlop={6}
                     >
@@ -349,7 +349,10 @@ export function ThemeToggle(props) {
             accessibilityRole="button"
             accessibilityLabel={isDark ? "Gündüz modu" : "Gece modu"}
             android_ripple={{ color: "rgba(0,0,0,0.05)" }}
-            onPress={function () { StudentStore.setDark(!isDark); }}
+            onPress={function () {
+                hapticTap();
+                StudentStore.setDark(!isDark);
+            }}
             style={[styles.themeBtn, isDark && styles.themeBtnDark]}
         >
             {isDark ? (
@@ -371,7 +374,10 @@ export function PageHeader(props) {
                     accessibilityLabel="Geri"
                     hitSlop={8}
                     android_ripple={{ color: "rgba(0,0,0,0.05)" }}
-                    onPress={props.onBack}
+                    onPress={function () {
+                        hapticTap();
+                        if (props.onBack) props.onBack();
+                    }}
                     style={[styles.headerBack, isDark && styles.headerBackDark]}
                 >
                     <ChevronLeft size={20} color={isDark ? "#E2E8F0" : "#0F172A"} />
@@ -456,7 +462,10 @@ export function BackChip(props) {
         <Pressable
             hitSlop={8}
             android_ripple={{ color: "rgba(0,0,0,0.05)" }}
-            onPress={props.onPress}
+            onPress={function () {
+                hapticTap();
+                if (props.onPress) props.onPress();
+            }}
             style={[styles.backChip, dark && styles.backChipDark, props.style]}
         >
             <ChevronLeft size={18} color={dark ? "#E2E8F0" : "#0F172A"} />

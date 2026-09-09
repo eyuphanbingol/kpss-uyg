@@ -1,6 +1,7 @@
 import React, { memo } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { ChevronRight } from "lucide-react-native";
+import { hapticTap } from "./ui";
 
 export var P = {
     bg: "#F8FAFC",
@@ -20,7 +21,11 @@ export function Hit(props) {
             accessibilityRole="button"
             android_ripple={{ color: "rgba(0,0,0,0.05)" }}
             disabled={props.disabled}
-            onPress={props.onPress}
+            onPress={function () {
+                if (props.disabled) return;
+                hapticTap();
+                if (props.onPress) props.onPress();
+            }}
             style={[{ overflow: "hidden" }, props.style]}
         >
             {props.children}

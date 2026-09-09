@@ -1,11 +1,11 @@
 import React, { memo, useCallback, useEffect, useMemo, useState } from "react";
 import { Dimensions, FlatList, Image, Pressable, Text, View, StyleSheet } from "react-native";
 import RenderHTML from "react-native-render-html";
-import { ChevronLeft, ChevronRight, Settings } from "lucide-react-native";
+import { ChevronLeft, ChevronRight, Moon, Sun } from "lucide-react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useApp } from "../AppProvider";
 import { StudentStore } from "../lib/store";
-import { Screen } from "../ui";
+import { Screen, hapticTap } from "../ui";
 import { mediaUrl, rewriteHtmlMedia } from "../lib/media";
 import { parseNoteBlocks } from "../lib/noteHtml";
 
@@ -31,8 +31,14 @@ var C = {
 };
 
 var htmlTags = {
+    div: { fontSize: 15, lineHeight: 22, color: C.body },
     p: { fontSize: 15, lineHeight: 22, color: C.body, margin: 0 },
     span: { fontSize: 15, lineHeight: 22, color: C.body },
+    li: { fontSize: 15, lineHeight: 22, color: C.body },
+    ul: { margin: 0, padding: 0 },
+    ol: { margin: 0, padding: 0 },
+    em: { fontStyle: "italic", color: C.body },
+    i: { fontStyle: "italic", color: C.body },
     b: { fontWeight: "800", color: C.navy },
     strong: { fontWeight: "800", color: C.navy },
     h3: { fontSize: 14, fontWeight: "800", color: C.goldInk, margin: 0 },
@@ -41,8 +47,14 @@ var htmlTags = {
 };
 
 var htmlTagsDark = {
-    p: { fontSize: 15, lineHeight: 22, color: "#CBD5E1", margin: 0 },
-    span: { fontSize: 15, lineHeight: 22, color: "#CBD5E1" },
+    div: { fontSize: 15, lineHeight: 22, color: "#E2E8F0" },
+    p: { fontSize: 15, lineHeight: 22, color: "#E2E8F0", margin: 0 },
+    span: { fontSize: 15, lineHeight: 22, color: "#E2E8F0" },
+    li: { fontSize: 15, lineHeight: 22, color: "#E2E8F0" },
+    ul: { margin: 0, padding: 0 },
+    ol: { margin: 0, padding: 0 },
+    em: { fontStyle: "italic", color: "#E2E8F0" },
+    i: { fontStyle: "italic", color: "#E2E8F0" },
     b: { fontWeight: "800", color: "#F8FAFC" },
     strong: { fontWeight: "800", color: "#F8FAFC" },
     h3: { fontSize: 14, fontWeight: "800", color: "#FDE68A", margin: 0 },
@@ -50,20 +62,22 @@ var htmlTagsDark = {
     h5: { fontSize: 14, fontWeight: "800", color: "#F8FAFC", margin: 0 },
 };
 
-var ignored = ["width", "minWidth", "maxWidth", "height", "flex", "flexDirection", "flexGrow", "flexShrink", "flexBasis", "position", "left", "right", "top", "bottom", "display"];
+var ignored = ["width", "minWidth", "maxWidth", "height", "flex", "flexDirection", "flexGrow", "flexShrink", "flexBasis", "position", "left", "right", "top", "bottom", "display", "color", "backgroundColor"];
 
 function wrapHtml(html) {
     return "<div>" + html + "</div>";
 }
 
 var NoteRich = memo(function NoteRich(props) {
+    var ink = props.dark ? "#E2E8F0" : C.body;
     return (
         <RenderHTML
             contentWidth={CONTENT_W}
             source={{ html: wrapHtml(props.html), baseUrl: "https://www.atanly.com/" }}
             tagsStyles={props.dark ? htmlTagsDark : htmlTags}
             ignoredStyles={ignored}
-            defaultTextProps={{ selectable: false }}
+            baseStyle={{ fontSize: 15, lineHeight: 22, color: ink }}
+            defaultTextProps={{ selectable: false, style: { color: ink } }}
             computeEmbeddedMaxWidth={function () { return CONTENT_W; }}
         />
     );
@@ -151,22 +165,27 @@ export default function NotesScreen({ route, navigation }) {
     }, [notlar, idx]);
 
     var goBack = useCallback(function () {
+        hapticTap();
         navigation.goBack();
     }, [navigation]);
 
     var toggleDark = useCallback(function () {
+        hapticTap();
         StudentStore.setDark(!isDark);
     }, [isDark]);
 
     var goPrev = useCallback(function () {
+        hapticTap();
         setIdx(function (n) { return n > 0 ? n - 1 : n; });
     }, []);
 
     var goNext = useCallback(function () {
+        hapticTap();
         setIdx(function (n) { return n < notlar.length - 1 ? n + 1 : n; });
     }, [notlar.length]);
 
     var goToTest = useCallback(function () {
+        hapticTap();
         StudentStore.markNotesComplete(ders, konu);
         var packs = StudentStore.topicTestPacks(sorular.map(function (q, i) {
             var id = q.id != null ? q.id : i;
@@ -217,7 +236,7 @@ export default function NotesScreen({ route, navigation }) {
                     <Text style={[styles.title, isDark && { color: "#F8FAFC" }]} numberOfLines={2}>{konu}</Text>
                 </View>
                 <Pressable onPress={toggleDark} android_ripple={{ color: "rgba(0,0,0,0.05)" }} style={[styles.iconBtn, isDark && styles.iconBtnDark]} hitSlop={8}>
-                    <Settings size={20} color={iconColor} />
+                    {isDark ? <Sun size={20} color="#FDE68A" /> : <Moon size={20} color={iconColor} />}
                 </Pressable>
             </View>
 
@@ -239,7 +258,7 @@ export default function NotesScreen({ route, navigation }) {
                     onPress={goPrev}
                     disabled={idx === 0}
                     android_ripple={{ color: "rgba(0,0,0,0.05)" }}
-                    style={[styles.navBtn, idx === 0 && { opacity: 0.35 }]}
+                    style={[styles.navBtn, isDark && styles.navBtnDark, idx === 0 && { opacity: 0.35 }]}
                 >
                     <ChevronLeft size={18} color={isDark ? "#F8FAFC" : C.navy} />
                     <Text style={[styles.navTxt, isDark && { color: "#F8FAFC" }]}>Önceki</Text>
@@ -363,6 +382,11 @@ var styles = StyleSheet.create({
         borderColor: C.line,
         backgroundColor: "#fff",
         minWidth: 108,
+        overflow: "hidden",
+    },
+    navBtnDark: {
+        backgroundColor: "#0F172A",
+        borderColor: "#334155",
     },
     navBtnOn: {
         backgroundColor: C.navy,
