@@ -17,7 +17,7 @@ import {
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 import * as Haptics from "expo-haptics";
 import { LinearGradient } from "expo-linear-gradient";
-import { ChevronLeft, Eye, EyeOff, Settings } from "lucide-react-native";
+import { ChevronLeft, Eye, EyeOff, Moon, Sun } from "lucide-react-native";
 import { colors } from "./lib/theme";
 import { StudentStore } from "./lib/store";
 
@@ -346,11 +346,17 @@ export function ThemeToggle(props) {
     var isDark = props.dark === true;
     return (
         <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={isDark ? "Gündüz modu" : "Gece modu"}
             android_ripple={{ color: "rgba(0,0,0,0.05)" }}
             onPress={function () { StudentStore.setDark(!isDark); }}
             style={[styles.themeBtn, isDark && styles.themeBtnDark]}
         >
-            <Settings size={18} color={isDark ? "#E2E8F0" : "#0F172A"} />
+            {isDark ? (
+                <Sun size={18} color="#FDE68A" />
+            ) : (
+                <Moon size={18} color="#0F172A" />
+            )}
         </Pressable>
     );
 }

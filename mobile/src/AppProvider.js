@@ -219,6 +219,7 @@ export function AppProvider(props) {
         kpssData: kpssData,
         signOut: signOut,
         dark: !!(student.profile && student.profile.dark),
+        isDark: !!(student.profile && student.profile.dark),
         isConnected: isConnected,
         platform: Platform.OS,
     };

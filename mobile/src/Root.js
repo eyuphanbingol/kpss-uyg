@@ -315,7 +315,7 @@ var styles = StyleSheet.create({
         justifyContent: "center",
     },
     tabFeaturedIconOn: {
-        backgroundColor: "#0F172A",
+        backgroundColor: "#D97706",
     },
     tabIconWrap: {
         width: 22,
