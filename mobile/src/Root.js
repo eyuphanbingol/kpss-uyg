@@ -281,7 +281,11 @@ export default function Root() {
 var styles = StyleSheet.create({
     tabBar: {
         borderTopWidth: 1,
-        elevation: 0,
+        elevation: 2,
+        shadowColor: "#0F172A",
+        shadowOffset: { width: 0, height: -2 },
+        shadowOpacity: 0.04,
+        shadowRadius: 8,
     },
     tabRow: {
         flexDirection: "row",

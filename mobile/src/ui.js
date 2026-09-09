@@ -42,12 +42,10 @@ export function Tap(props) {
     var armed = React.useRef(false);
     var instant = props.pressOnIn !== false;
     return (
-        <TouchableOpacity
+        <Pressable
             accessible={true}
             accessibilityRole="button"
-            activeOpacity={props.activeOpacity != null ? props.activeOpacity : 0.65}
-            delayPressIn={0}
-            delayPressOut={0}
+            android_ripple={{ color: "rgba(0,0,0,0.05)" }}
             disabled={props.disabled}
             hitSlop={props.hitSlop}
             onPressIn={function () {
@@ -71,7 +69,7 @@ export function Tap(props) {
             style={props.style}
         >
             {props.children}
-        </TouchableOpacity>
+        </Pressable>
     );
 }
 
@@ -385,14 +383,26 @@ export function PageHeader(props) {
     var isDark = props.dark === true;
     return (
         <View style={[styles.pageHeader, props.style]}>
+            {props.onBack ? (
+                <Pressable
+                    accessibilityRole="button"
+                    accessibilityLabel="Geri"
+                    hitSlop={8}
+                    android_ripple={{ color: "rgba(0,0,0,0.05)" }}
+                    onPress={props.onBack}
+                    style={[styles.headerBack, isDark && styles.headerBackDark]}
+                >
+                    <ChevronLeft size={20} color={isDark ? "#E2E8F0" : "#0F172A"} />
+                </Pressable>
+            ) : null}
             <View style={{ flex: 1, minWidth: 0 }}>
                 {props.kicker || null}
                 <Text style={[styles.pageTitle, isDark && styles.pageTitleDark]}>{props.title}</Text>
                 {props.subtitle ? (
-                    <Text style={[styles.pageSub, isDark && { color: "#A8A29E" }]}>{props.subtitle}</Text>
+                    <Text style={[styles.pageSub, isDark && { color: "#94A3B8" }]}>{props.subtitle}</Text>
                 ) : null}
             </View>
-            {props.right != null ? props.right : <ThemeToggle dark={isDark} />}
+            {props.right !== undefined ? props.right : <ThemeToggle dark={isDark} />}
         </View>
     );
 }
@@ -532,12 +542,12 @@ export function Section(props) {
 
 export function Badge(props) {
     var colors_map = {
-        primary: { bg: colors.indigo, text: "#fff" },
-        success: { bg: colors.emerald, text: "#fff" },
-        warning: { bg: colors.amber, text: "#fff" },
-        danger: { bg: colors.rose, text: "#fff" },
-        muted: { bg: colors.muted, text: "#fff" },
-        gold: { bg: colors.gold, text: "#fff" },
+        primary: { bg: "#FEF3C7", text: "#92400E" },
+        success: { bg: "#ECFDF5", text: "#065F46" },
+        warning: { bg: "#FEF3C7", text: "#92400E" },
+        danger: { bg: "#FFE4E6", text: "#9F1239" },
+        muted: { bg: "#F1F5F9", text: "#64748B" },
+        gold: { bg: "#FEF3C7", text: "#92400E" },
     };
 
     var style_map = colors_map[props.type] || colors_map.primary;
@@ -750,12 +760,27 @@ var styles = StyleSheet.create({
         marginBottom: 16,
         gap: 12,
     },
+    headerBack: {
+        width: 40,
+        height: 40,
+        borderRadius: 12,
+        borderWidth: 1,
+        borderColor: "#E2E8F0",
+        backgroundColor: "#fff",
+        alignItems: "center",
+        justifyContent: "center",
+        overflow: "hidden",
+        marginTop: 2,
+    },
+    headerBackDark: {
+        backgroundColor: "#1E293B",
+        borderColor: "#334155",
+    },
     pageTitle: {
         fontSize: 28,
         fontWeight: "700",
         color: "#0F172A",
-        letterSpacing: -0.6,
-        color: colors.navy,
+        letterSpacing: -0.4,
     },
     pageTitleDark: {
         color: "#FAFAF9",

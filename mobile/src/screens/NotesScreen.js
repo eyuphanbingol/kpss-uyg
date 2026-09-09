@@ -294,7 +294,7 @@ var styles = StyleSheet.create({
     },
     title: {
         fontSize: 18,
-        fontWeight: "800",
+        fontWeight: "700",
         color: C.navy,
         lineHeight: 23,
     },

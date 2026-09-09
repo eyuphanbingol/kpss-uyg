@@ -6,9 +6,9 @@ import { StudyPlanner } from "../lib/planner";
 import { StudentStore } from "../lib/store";
 import { go } from "../nav";
 import { Card, ScrollScreen, PageHeader, Tap } from "../ui";
-import { colors, examTrackName, DERS_ICON } from "../lib/theme";
+import { colors, examTrackName } from "../lib/theme";
 
-var DASH_COLORS = ["#4f46e5", "#7c3aed", "#ec4899", "#f59e0b", "#10b981", "#6366f1"];
+var DASH_COLORS = ["#0F172A", "#D97706", "#64748B", "#94A3B8", "#CBD5E1", "#1E293B"];
 var WEEK_BAR = ["#CBD5E1", "#94A3B8", "#64748B", "#D97706", "#F59E0B", "#FCD34D", "#E2E8F0"];
 var DAY_NAMES = ["Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz"];
 var DERS_ACCENT = { "Tarih": "#ea580c", "Coğrafya": "#059669", "Türkçe": "#2563eb", "Vatandaşlık": "#7c3aed", "Güncel Bilgiler": "#db2777" };
@@ -119,7 +119,7 @@ export default function BugunScreen({ navigation }) {
 
             <Card dark={isDark}>
                 <View style={styles.cardHeader}>
-                    <Text style={[styles.cardTitle, isDark && styles.textMuted]}>🗓️ Bugünün hedefi</Text>
+                    <Text style={[styles.cardTitle, isDark && styles.textMuted]}>Bugünün hedefi</Text>
                     <Tap onPress={function () { go(navigation, "Program"); }}>
                         <Text style={styles.cardAction}>{isPlanReady ? "Düzenle" : "Oluştur"}</Text>
                     </Tap>
@@ -141,12 +141,11 @@ export default function BugunScreen({ navigation }) {
                             var next = !done && todaySlots.slice(0, i).every(function (x) { return checks[x.ders]; });
                             var st = done ? "Tamamlandı" : (next ? "Sıradaki" : "Bekliyor");
                             return (
-                                <View key={s.ders} style={[styles.taskRow, isDark && styles.taskRowDark, { borderLeftColor: DERS_ACCENT[s.ders] || "#4f46e5" }, done && { backgroundColor: "rgba(5,150,105,0.08)" }]}>
+                                <View key={s.ders} style={[styles.taskRow, isDark && styles.taskRowDark, { borderLeftColor: DERS_ACCENT[s.ders] || "#D97706" }, done && { backgroundColor: "#FEF3C7" }]}>
                                     <Tap onPress={function () { StudentStore.togglePlanSlot(s.ders); }} style={[styles.taskCheck, done && styles.taskCheckOn]}>
                                         <Text style={styles.taskCheckText}>{done ? "✓" : ""}</Text>
                                     </Tap>
                                     <Tap onPress={function () { go(navigation, "KonuList", { ders: s.ders }); }} style={styles.taskMain}>
-                                        <Text style={styles.taskIco}>{DERS_ICON[s.ders] || "📚"}</Text>
                                         <Text style={[styles.taskName, isDark && styles.textLight]} numberOfLines={1}>{s.ders}</Text>
                                         <Text style={[styles.taskHrs, isDark && styles.textMuted]}>{s.hours === 0.5 ? "30 dk" : (s.hours + " sa")}</Text>
                                         <View style={[styles.stPill, done ? styles.stDone : (next ? styles.stNext : styles.stWait)]}>
@@ -165,7 +164,7 @@ export default function BugunScreen({ navigation }) {
             </Card>
 
             <View style={styles.secHead}>
-                <Text style={[styles.cardTitle, isDark && styles.textMuted]}>📊 İstatistikler</Text>
+                <Text style={[styles.cardTitle, isDark && styles.textMuted]}>İstatistikler</Text>
                 <View style={[styles.secLine, isDark && { backgroundColor: "#44403c" }]} />
             </View>
 
@@ -177,16 +176,16 @@ export default function BugunScreen({ navigation }) {
                 <View>
                     <View style={styles.kpiRow}>
                         <View style={[styles.kpi, isDark && styles.cardDark]}>
-                            <Text style={[styles.kpiNum, { color: "#4f46e5" }]}>{dash.streak}</Text>
-                            <Text style={[styles.kpiLab, isDark && styles.textMuted]}>🔥 seri gün</Text>
+                            <Text style={[styles.kpiNum, { color: "#0F172A" }]}>{dash.streak}</Text>
+                            <Text style={[styles.kpiLab, isDark && styles.textMuted]}>seri gün</Text>
                         </View>
                         <View style={[styles.kpi, isDark && styles.cardDark]}>
-                            <Text style={[styles.kpiNum, { color: "#d97706" }]}>{dash.avgSeansMin || "—"}</Text>
-                            <Text style={[styles.kpiLab, isDark && styles.textMuted]}>⏱ dk / oturum</Text>
+                            <Text style={[styles.kpiNum, { color: "#D97706" }]}>{dash.avgSeansMin || "—"}</Text>
+                            <Text style={[styles.kpiLab, isDark && styles.textMuted]}>dk / oturum</Text>
                         </View>
                         <View style={[styles.kpi, isDark && styles.cardDark]}>
-                            <Text style={[styles.kpiNum, { color: "#059669" }]}>{rec}</Text>
-                            <Text style={[styles.kpiLab, isDark && styles.textMuted]}>🏆 rekor gün</Text>
+                            <Text style={[styles.kpiNum, { color: "#0F172A" }]}>{rec}</Text>
+                            <Text style={[styles.kpiLab, isDark && styles.textMuted]}>rekor gün</Text>
                         </View>
                     </View>
 
@@ -196,11 +195,11 @@ export default function BugunScreen({ navigation }) {
                             <Text style={[styles.kpiLab, { marginTop: 0 }]}>Bu hafta {dash.actualWeekH}/{dash.plannedWeek || 0} sa</Text>
                         </View>
                         <View style={[styles.progressBar, { height: 10, marginTop: 8 }]}>
-                            <LinearGradient colors={["#6366f1", "#a855f7"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} style={[styles.progressFill, { width: weekGoalPct + "%" }]} />
+                            <LinearGradient colors={["#CBD5E1", "#D97706"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} style={[styles.progressFill, { width: weekGoalPct + "%" }]} />
                         </View>
                         <View style={[styles.meterRow, { marginTop: 12 }]}>
                             <Text style={[styles.statLine, isDark && styles.textLight]}>Bugün {todayH} / {todayGoal || 0} saat</Text>
-                            <Text style={{ color: "#4f46e5", fontWeight: "800", fontSize: 12 }}>{todayPct}%</Text>
+                            <Text style={{ color: "#D97706", fontWeight: "800", fontSize: 12 }}>{todayPct}%</Text>
                         </View>
                         <View style={[styles.progressBar, { height: 8, marginTop: 8 }]}>
                             <View style={[styles.progressFill, { width: todayPct + "%", backgroundColor: "#f59e0b" }]} />
@@ -208,8 +207,8 @@ export default function BugunScreen({ navigation }) {
                     </Card>
 
                     <Card dark={isDark} style={{ marginTop: 10 }}>
-                        <Text style={[styles.chartTitle, isDark && styles.textLight]}>📈 Haftalık trend</Text>
-                        <Spark values={trendVals} color="#4f46e5" />
+                        <Text style={[styles.chartTitle, isDark && styles.textLight]}>Haftalık trend</Text>
+                        <Spark values={trendVals} color="#CBD5E1" />
                         <View style={styles.sparkLabs}>
                             <Text style={[styles.kpiLab, { marginTop: 0 }]}>8 hafta önce</Text>
                             <Text style={[styles.kpiLab, { marginTop: 0 }]}>bu hafta</Text>
@@ -217,7 +216,7 @@ export default function BugunScreen({ navigation }) {
                     </Card>
 
                     <Card dark={isDark} style={{ marginTop: 10 }}>
-                        <Text style={[styles.chartTitle, isDark && styles.textLight]}>📅 Bu hafta</Text>
+                        <Text style={[styles.chartTitle, isDark && styles.textLight]}>Bu hafta</Text>
                         <View style={styles.weekBars}>
                             {weekMin.map(function (m, i) {
                                 var h = Math.max(8, Math.round((m / weekMax) * 96));
@@ -232,7 +231,7 @@ export default function BugunScreen({ navigation }) {
                     </Card>
 
                     <Card dark={isDark} style={{ marginTop: 10 }}>
-                        <Text style={[styles.chartTitle, isDark && styles.textLight]}>📚 Ders dağılımı</Text>
+                        <Text style={[styles.chartTitle, isDark && styles.textLight]}>Ders dağılımı</Text>
                         {dersSum ? (
                             <View>
                                 <View style={styles.stackBar}>
@@ -271,13 +270,13 @@ var styles = StyleSheet.create({
     textMuted: { color: colors.muted },
     header: { flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 16, gap: 12 },
     greetRow: { flexDirection: "row", alignItems: "center", gap: 8 },
-    liveDot: { width: 8, height: 8, borderRadius: 4, backgroundColor: "#34d399" },
+    liveDot: { width: 8, height: 8, borderRadius: 4, backgroundColor: "#D97706" },
     greeting: { color: colors.muted, fontSize: 13, fontWeight: "600", flex: 1 },
     title: { fontSize: 32, fontWeight: "900", color: colors.navy, marginTop: 4 },
     subtitle: { color: colors.muted, fontSize: 13, marginTop: 4 },
     themeBtn: { width: 40, height: 40, borderRadius: 12, borderWidth: 1, borderColor: colors.border, alignItems: "center", justifyContent: "center", backgroundColor: "#fff" },
     themeBtnDark: { backgroundColor: colors.navyDeep, borderColor: "#44403c" },
-    banner: { borderRadius: 24, padding: 18, marginBottom: 16 },
+    banner: { borderRadius: 24, padding: 18, marginBottom: 16, borderWidth: 1, borderColor: "#1E293B" },
     bannerRow: { flexDirection: "row", alignItems: "center", gap: 10 },
     bannerLabel: { color: "rgba(255,255,255,0.8)", fontSize: 11, fontWeight: "800", textTransform: "uppercase", letterSpacing: 0.8 },
     bannerText: { color: "#fff", fontSize: 18, fontWeight: "800", marginTop: 4 },
@@ -286,28 +285,28 @@ var styles = StyleSheet.create({
     cardDark: { backgroundColor: colors.navyDeep, borderColor: "#44403c" },
     cardHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 },
     cardTitle: { fontSize: 11, fontWeight: "800", color: colors.muted, textTransform: "uppercase", letterSpacing: 0.6 },
-    cardAction: { color: colors.indigo, fontWeight: "700", fontSize: 13 },
+    cardAction: { color: "#D97706", fontWeight: "700", fontSize: 13 },
     planText: { fontSize: 15, color: colors.text, lineHeight: 22, fontWeight: "700", marginBottom: 8 },
     meterRow: { flexDirection: "row", alignItems: "center", gap: 8 },
-    pctLabel: { fontSize: 13, fontWeight: "800", color: "#4f46e5" },
+    pctLabel: { fontSize: 13, fontWeight: "800", color: "#D97706" },
     goalLine: { fontSize: 12, color: colors.muted, lineHeight: 18, marginBottom: 10 },
     taskRow: { flexDirection: "row", alignItems: "center", gap: 8, borderLeftWidth: 4, paddingVertical: 10, paddingHorizontal: 8, borderRadius: 12, backgroundColor: "#FAFAF9", marginBottom: 8 },
     taskRowDark: { backgroundColor: "#1c1917" },
     taskCheck: { width: 28, height: 28, borderRadius: 14, borderWidth: 2, borderColor: "#D6D3D1", alignItems: "center", justifyContent: "center", backgroundColor: "#fff" },
-    taskCheckOn: { backgroundColor: "#059669", borderColor: "#059669" },
+    taskCheckOn: { backgroundColor: "#D97706", borderColor: "#D97706" },
     taskCheckText: { color: "#fff", fontWeight: "800" },
     taskMain: { flex: 1, minWidth: 0, flexDirection: "row", alignItems: "center", gap: 6 },
     taskIco: { fontSize: 16 },
     taskName: { flex: 1, minWidth: 0, fontSize: 14, fontWeight: "800", color: colors.text },
     taskHrs: { fontSize: 11, fontWeight: "700", color: colors.muted },
     stPill: { borderRadius: 999, paddingHorizontal: 8, paddingVertical: 3 },
-    stNext: { backgroundColor: "#ccfbf1" },
-    stWait: { backgroundColor: "#f5f5f4" },
-    stDone: { backgroundColor: "#d1fae5" },
+    stNext: { backgroundColor: "#FEF3C7" },
+    stWait: { backgroundColor: "#F1F5F9" },
+    stDone: { backgroundColor: "#FEF3C7" },
     stTxt: { fontSize: 10, fontWeight: "800", textTransform: "uppercase" },
-    stNextTxt: { color: "#0f766e" },
-    stWaitTxt: { color: "#78716c" },
-    stDoneTxt: { color: "#047857" },
+    stNextTxt: { color: "#92400E" },
+    stWaitTxt: { color: "#64748B" },
+    stDoneTxt: { color: "#92400E" },
     secHead: { flexDirection: "row", alignItems: "center", gap: 8, marginTop: 18, marginBottom: 10 },
     secLine: { flex: 1, height: 1, backgroundColor: "#e7e5e4" },
     kpiRow: { flexDirection: "row", gap: 8 },
@@ -318,7 +317,7 @@ var styles = StyleSheet.create({
     chartTitle: { fontSize: 14, fontWeight: "800", color: colors.text, marginBottom: 10 },
     spark: { height: 86, flexDirection: "row", alignItems: "flex-end", gap: 4 },
     sparkCol: { flex: 1, height: "100%", justifyContent: "flex-end", alignItems: "center" },
-    sparkFill: { width: "70%", borderTopLeftRadius: 6, borderTopRightRadius: 6, backgroundColor: "#4f46e5" },
+    sparkFill: { width: "70%", borderTopLeftRadius: 6, borderTopRightRadius: 6, backgroundColor: "#CBD5E1" },
     sparkLabs: { flexDirection: "row", justifyContent: "space-between", marginTop: 6 },
     weekBars: { height: 120, flexDirection: "row", alignItems: "flex-end", gap: 6 },
     weekCol: { flex: 1, height: "100%", justifyContent: "flex-end", alignItems: "center" },

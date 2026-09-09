@@ -84,7 +84,7 @@ export default function BenScreen({ navigation }) {
                     <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
                         <View style={styles.levelBadge}>
                             <Text style={[styles.levelText, { color: scoreLevel.color }]}>
-                                {scoreLevel.emoji} {scoreLevel.text}
+                                {scoreLevel.text}
                             </Text>
                         </View>
                         <ThemeToggle dark={isDark} />
@@ -229,17 +229,20 @@ export default function BenScreen({ navigation }) {
                     ].map(function (b) {
                         var on = st.achievements && st.achievements[b.id];
                         return (
-                            <View key={b.id} style={[
-                                styles.badgeItem,
-                                on && styles.badgeItemActive,
-                                isDark && !on && { backgroundColor: colors.navyDeep }
-                            ]}>
+                            <View key={b.id} style={styles.badgeCol}>
+                                <View style={[
+                                    styles.badgeCircle,
+                                    on && styles.badgeCircleOn,
+                                    isDark && !on && { backgroundColor: colors.navyDeep, borderColor: "#334155" }
+                                ]}>
+                                    <Text style={[styles.badgeMark, on && styles.badgeMarkOn]}>{on ? "●" : "○"}</Text>
+                                </View>
                                 <Text style={[
                                     styles.badgeText,
                                     on && styles.badgeTextActive,
                                     isDark && !on && { color: colors.muted }
                                 ]}>
-                                    {on ? "✓" : "○"} {b.title}
+                                    {b.title}
                                 </Text>
                             </View>
                         );
@@ -338,17 +341,12 @@ var styles = StyleSheet.create({
     },
     statCard: {
         flex: 1,
-        backgroundColor: "rgba(255,255,255,0.78)",
+        backgroundColor: "#FFFFFF",
         borderRadius: 20,
         paddingVertical: 14,
         alignItems: "center",
         borderWidth: 1,
-        borderColor: "rgba(255,255,255,0.35)",
-        shadowColor: "#000",
-        shadowOffset: { width: 0, height: 6 },
-        shadowOpacity: 0.05,
-        shadowRadius: 10,
-        elevation: 2,
+        borderColor: "#E2E8F0",
     },
     cardDark: {
         backgroundColor: "rgba(15, 23, 42, 0.78)",
@@ -379,7 +377,7 @@ var styles = StyleSheet.create({
         letterSpacing: 0.5,
     },
     editBtn: {
-        color: colors.indigo,
+        color: "#D97706",
         fontWeight: "600",
         fontSize: 13,
     },
@@ -552,25 +550,41 @@ var styles = StyleSheet.create({
     badgesRow: {
         flexDirection: "row",
         flexWrap: "wrap",
-        gap: 6,
-        marginTop: 4,
+        gap: 8,
+        marginTop: 8,
+        justifyContent: "space-between",
     },
-    badgeItem: {
-        paddingHorizontal: 12,
-        paddingVertical: 6,
-        borderRadius: 999,
-        backgroundColor: "#F1F5F9",
+    badgeCol: {
+        width: "23%",
+        alignItems: "center",
+        gap: 6,
+    },
+    badgeCircle: {
+        width: 56,
+        height: 56,
+        borderRadius: 28,
+        backgroundColor: "#F8FAFC",
         borderWidth: 1,
         borderColor: "#E2E8F0",
+        alignItems: "center",
+        justifyContent: "center",
     },
-    badgeItemActive: {
+    badgeCircleOn: {
         backgroundColor: "#FEF3C7",
         borderColor: "#FDE68A",
     },
+    badgeMark: {
+        fontSize: 16,
+        color: "#94A3B8",
+    },
+    badgeMarkOn: {
+        color: "#92400E",
+    },
     badgeText: {
-        fontSize: 12,
+        fontSize: 11,
         color: "#64748B",
         fontWeight: "600",
+        textAlign: "center",
     },
     badgeTextActive: {
         color: "#92400E",

@@ -5,10 +5,10 @@ import { ClozeEngine } from "../lib/clozeEngine";
 import { MapQuiz } from "../lib/mapQuiz";
 import { StudentStore } from "../lib/store";
 import { go } from "../nav";
-import { Card, PrimaryButton, ScrollScreen, BackChip, Screen, Tap, PageHeader, DersIconBox } from "../ui";
-import { colors, DERS_ICON } from "../lib/theme";
+import { Card, PrimaryButton, ScrollScreen, Screen, Tap, PageHeader, BackChip } from "../ui";
+import { colors } from "../lib/theme";
 import { PencilLine, Map, Shield, Layers, Timer } from "lucide-react-native";
-import { AccentCard } from "../kit";
+import { AccentCard, PctBadge } from "../kit";
 import { TrMapView } from "../components/TrMapView";
 import { useLandscapeLock } from "../lib/useLandscapeLock";
 
@@ -86,22 +86,20 @@ export function AlistirmaDersListScreen({ navigation }) {
 
     return (
         <ScrollScreen dark={isDark}>
-            <BackChip dark={isDark} label="Alıştırmalar" onPress={function () { navigation.goBack(); }} />
-            <Text style={[styles.konuTitle, isDark && styles.textLight]}>Boşluk doldurma</Text>
-            <Text style={[styles.subtitle, isDark && styles.textMuted]}>Ders seç, sonra konu.</Text>
+            <PageHeader
+                dark={isDark}
+                title="Boşluk doldurma"
+                subtitle="Ders seç, sonra konu."
+                onBack={function () { navigation.goBack(); }}
+                right={null}
+            />
             {Object.keys(kpssData).map(function (ders) {
                 var konular = Object.keys(kpssData[ders] || {});
                 return (
-                    <Card key={ders} dark={isDark} onPress={function () { go(navigation, "AlistirmaKonuList", { ders: ders }); }} style={styles.dersCard}>
-                        <View style={styles.row}>
-                            <DersIconBox icon={DERS_ICON[ders] || "✏️"} />
-                            <View style={{ flex: 1 }}>
-                                <Text style={[styles.dersName, isDark && styles.textLight]}>{ders}</Text>
-                                <Text style={[styles.meta, isDark && styles.textMuted]}>{konular.length} konu</Text>
-                            </View>
-                            <Text style={[styles.arrow, isDark && styles.textMuted]}>→</Text>
-                        </View>
-                    </Card>
+                    <AccentCard key={ders} dark={isDark} chevron onPress={function () { go(navigation, "AlistirmaKonuList", { ders: ders }); }} style={styles.playCard}>
+                        <Text style={[styles.dersName, isDark && styles.textLight]}>{ders}</Text>
+                        <Text style={styles.meta}>{konular.length} konu</Text>
+                    </AccentCard>
                 );
             })}
         </ScrollScreen>
@@ -138,27 +136,35 @@ export function AlistirmaKonuListScreen({ route, navigation }) {
 
     return (
         <ScrollScreen dark={isDark}>
-            <BackChip dark={isDark} label="Dersler" onPress={function () { navigation.goBack(); }} />
-            <Text style={[styles.konuTitle, isDark && styles.textLight]}>{ders}</Text>
-            <Text style={[styles.subtitle, isDark && styles.textMuted]}>Derslerle aynı sıra. Konu bitince burası da açılır.</Text>
-            {konular.map(function (konu, idx) {
+            <PageHeader
+                dark={isDark}
+                title={ders}
+                subtitle="Derslerle aynı sıra. Konu bitince burası da açılır."
+                onBack={function () { navigation.goBack(); }}
+                right={null}
+            />
+            {konular.map(function (konu) {
                 var st = (stats && stats[konu]) || { n: 0, left: 0, open: true, done: false };
                 var open = st.open !== false;
                 return (
-                    <Card key={konu} dark={isDark} disabled={!open} onPress={function () {
-                        if (open) go(navigation, "ClozePlay", { ders: ders, konu: konu });
-                    }} style={[styles.dersCard, !open && { opacity: 0.45 }]}>
-                        <View style={styles.row}>
-                            <View style={[styles.num, st.done && { backgroundColor: "#ECFDF5" }, !open && { backgroundColor: "#F5F5F4" }]}>
-                                <Text style={[styles.numText, st.done && { color: "#059669" }, !open && { color: "#A8A29E" }]}>{st.done ? "✓" : open ? (idx + 1) : "🔒"}</Text>
+                    <AccentCard
+                        key={konu}
+                        dark={isDark}
+                        disabled={!open}
+                        chevron={open}
+                        onPress={function () {
+                            if (open) go(navigation, "ClozePlay", { ders: ders, konu: konu });
+                        }}
+                        style={styles.playCard}
+                    >
+                        <View style={styles.konuRow}>
+                            <View style={{ flex: 1, minWidth: 0, paddingRight: 8 }}>
+                                <Text style={[styles.dersName, isDark && styles.textLight]} numberOfLines={2}>{konu}</Text>
+                                <Text style={styles.meta}>{open ? (st.n ? (st.left + " / " + st.n + " boşluk") : (stats ? "Henüz yok" : " ")) : "Önce önceki konunun testlerini bitir"}</Text>
                             </View>
-                            <View style={{ flex: 1 }}>
-                                <Text style={[styles.dersName, isDark && styles.textLight]}>{konu}</Text>
-                                <Text style={[styles.meta, isDark && styles.textMuted]}>{open ? (st.n ? (st.left + " / " + st.n + " boşluk") : (stats ? "Henüz yok" : " ")) : "Önce önceki konunun testlerini bitir"}</Text>
-                            </View>
-                            {open ? <Text style={[styles.arrow, isDark && styles.textMuted]}>→</Text> : null}
+                            {st.done ? <PctBadge label="Tamam" /> : null}
                         </View>
-                    </Card>
+                    </AccentCard>
                 );
             })}
         </ScrollScreen>
@@ -327,33 +333,35 @@ export function MapTopicsScreen({ navigation }) {
     var tree = MapQuiz.TREE || [];
     return (
         <ScrollScreen dark={isDark}>
-            <BackChip dark={isDark} label="Alıştırmalar" onPress={function () { navigation.goBack(); }} />
-            <Text style={[styles.konuTitle, isDark && styles.textLight]}>Harita oyunu</Text>
-            <Text style={[styles.subtitle, isDark && styles.textMuted]}>Konu seç, hedef ili bul, sonra bilgi bağı.</Text>
+            <PageHeader
+                dark={isDark}
+                title="Harita oyunu"
+                subtitle="Konu seç, hedef ili bul, sonra bilgi bağı."
+                onBack={function () { navigation.goBack(); }}
+                right={null}
+            />
             {tree.map(function (g) {
                 return (
                     <View key={g.id} style={{ marginBottom: 14 }}>
-                        <Text style={[styles.kicker, isDark && styles.textMuted]}>{g.icon} {g.title}</Text>
+                        <Text style={[styles.kicker, isDark && styles.textMuted]}>{g.title}</Text>
                         {g.kids.map(function (k) {
                             var n = MapQuiz.countFor(k.id);
                             var inner = (
                                 <>
-                                    <Text style={[styles.dersName, isDark && styles.textLight, k.hoverImg && styles.volkanName]}>{k.hoverImg ? k.title : (k.icon + " " + k.title)}</Text>
+                                    <Text style={[styles.dersName, isDark && styles.textLight, k.hoverImg && styles.volkanName]}>{k.title}</Text>
                                     <Text style={[styles.meta, isDark && styles.textMuted, k.hoverImg && styles.volkanMeta]}>{n} hedef</Text>
                                 </>
                             );
-                            return (
-                                <Tap key={k.id} onPress={function () { go(navigation, "MapPlay", { topicId: k.id }); }} activeOpacity={0.82} style={k.hoverImg ? styles.volkanCard : undefined}>
-                                    {k.hoverImg ? (
-                                        <ImageBackground source={MAP_CARD_IMG[k.hoverImg] || MAP_CARD_IMG.volkan} style={styles.volkanCardInner} imageStyle={styles.volkanCardImg} resizeMode="cover">
-                                            <View style={styles.volkanScrim}>{inner}</View>
-                                        </ImageBackground>
-                                    ) : (
-                                        <Card dark={isDark} style={styles.dersCard}>
-                                            {inner}
-                                        </Card>
-                                    )}
+                            return k.hoverImg ? (
+                                <Tap key={k.id} onPress={function () { go(navigation, "MapPlay", { topicId: k.id }); }} style={styles.volkanCard}>
+                                    <ImageBackground source={MAP_CARD_IMG[k.hoverImg] || MAP_CARD_IMG.volkan} style={styles.volkanCardInner} imageStyle={styles.volkanCardImg} resizeMode="cover">
+                                        <View style={styles.volkanScrim}>{inner}</View>
+                                    </ImageBackground>
                                 </Tap>
+                            ) : (
+                                <AccentCard key={k.id} dark={isDark} chevron onPress={function () { go(navigation, "MapPlay", { topicId: k.id }); }} style={styles.playCard}>
+                                    {inner}
+                                </AccentCard>
                             );
                         })}
                     </View>
@@ -544,6 +552,7 @@ var styles = StyleSheet.create({
     dersName: { fontWeight: "700", fontSize: 16, color: "#0F172A" },
     meta: { color: "#64748B", fontSize: 12, marginTop: 2 },
     playCard: { borderRadius: 20, minHeight: 76 },
+    konuRow: { flexDirection: "row", alignItems: "center" },
     playRow: { flexDirection: "row", alignItems: "center" },
     playIco: {
         width: 40,

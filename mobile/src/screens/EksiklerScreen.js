@@ -1,10 +1,11 @@
 import React from "react";
-import { Alert, Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
 import { useApp } from "../AppProvider";
 import { StudentStore } from "../lib/store";
 import { go } from "../nav";
-import { Card, ScrollScreen, Badge, Tap, PageHeader, ThemeToggle } from "../ui";
-import { colors, DERS_ICON } from "../lib/theme";
+import { ScrollScreen, Badge, Tap, PageHeader, ThemeToggle } from "../ui";
+import { colors } from "../lib/theme";
+import { AccentCard, PctBadge } from "../kit";
 
 // ============================================================
 // EKSIKLER SCREEN
@@ -63,17 +64,7 @@ export default function EksiklerScreen({ navigation }) {
             {/* Progress */}
             <View style={[styles.progressContainer, isDark && { backgroundColor: colors.navyDeep }]}>
                 <View style={styles.progressBar}>
-                    <View 
-                        style={[
-                            styles.progressFill, 
-                            { 
-                                width: progress + "%",
-                                backgroundColor: progress >= 80 ? colors.emerald : 
-                                               progress >= 50 ? colors.amber : 
-                                               colors.indigo
-                            }
-                        ]} 
-                    />
+                    <View style={[styles.progressFill, { width: progress + "%" }]} />
                 </View>
                 <Text style={[styles.progressText, isDark && styles.textMuted]}>
                     {completedTopics} / {totalTopics} konu tamamlandı
@@ -82,46 +73,23 @@ export default function EksiklerScreen({ navigation }) {
 
             {/* Action Buttons */}
             <View style={styles.actionRow}>
-                <Tap 
-                    disabled={!plan.due.length} 
-                    onPress={function () { start("review"); }} 
-                    style={[
-                        styles.actionBtn, 
-                        styles.reviewBtn,
-                        !plan.due.length && styles.actionBtnDisabled,
-                        isDark && styles.actionBtnDark
-                    ]}
+                <Tap
+                    disabled={!plan.due.length}
+                    onPress={function () { start("review"); }}
+                    style={[styles.actionBtn, !plan.due.length && styles.actionBtnDisabled, isDark && styles.actionBtnDark]}
                 >
-                    <Text style={styles.actionBtnTitle}>
-                        Bugün Tekrar
-                    </Text>
-                    <Text style={styles.actionBtnCount}>
-                        {plan.due.length} soru
-                    </Text>
-                    <Text style={styles.actionBtnDesc}>
-                        Daha önce çözdüğün sorular
-                    </Text>
+                    <Text style={[styles.actionBtnTitle, isDark && styles.textLight]}>Bugün Tekrar</Text>
+                    <Text style={styles.actionBtnCount}>{plan.due.length} soru</Text>
+                    <Text style={styles.actionBtnDesc}>Daha önce çözdüğün sorular</Text>
                 </Tap>
-
-                <Tap 
-                    disabled={!plan.wrong.length} 
-                    onPress={function () { start("wrong"); }} 
-                    style={[
-                        styles.actionBtn, 
-                        styles.wrongBtn,
-                        !plan.wrong.length && styles.actionBtnDisabled,
-                        isDark && styles.actionBtnDark
-                    ]}
+                <Tap
+                    disabled={!plan.wrong.length}
+                    onPress={function () { start("wrong"); }}
+                    style={[styles.actionBtn, !plan.wrong.length && styles.actionBtnDisabled, isDark && styles.actionBtnDark]}
                 >
-                    <Text style={styles.actionBtnTitle}>
-                        Yanlış Defteri
-                    </Text>
-                    <Text style={[styles.actionBtnCount, { color: colors.rose }]}>
-                        {plan.wrong.length} soru
-                    </Text>
-                    <Text style={styles.actionBtnDesc}>
-                        Yanlış yaptığın sorular. Çözdüğün düşer.
-                    </Text>
+                    <Text style={[styles.actionBtnTitle, isDark && styles.textLight]}>Yanlış Defteri</Text>
+                    <Text style={styles.actionBtnCount}>{plan.wrong.length} soru</Text>
+                    <Text style={styles.actionBtnDesc}>Yanlış yaptığın sorular. Çözdüğün düşer.</Text>
                 </Tap>
             </View>
 
@@ -138,13 +106,8 @@ export default function EksiklerScreen({ navigation }) {
                 return (
                     <View key={ders} style={styles.dersSection}>
                         <View style={styles.dersHeader}>
-                            <View style={styles.dersTitleRow}>
-                                <Text style={styles.dersIcon}>{DERS_ICON[ders] || "📚"}</Text>
-                                <Text style={[styles.dersName, isDark && styles.textLight]}>{ders}</Text>
-                            </View>
-                            <Text style={[styles.dersProgress, isDark && styles.textMuted]}>
-                                {doneCount}/{dersTopics.length}
-                            </Text>
+                            <Text style={[styles.dersName, isDark && styles.textLight]}>{ders}</Text>
+                            <PctBadge label={doneCount + "/" + dersTopics.length} />
                         </View>
 
                         {dersTopics.map(function (r) {
@@ -154,36 +117,12 @@ export default function EksiklerScreen({ navigation }) {
                             });
 
                             return (
-                                <View 
-                                    key={r.konu} 
-                                    style={[
-                                        styles.topicRow,
-                                        done && styles.topicRowDone,
-                                        isDark && styles.topicRowDark,
-                                        !done && isDark && { borderBottomColor: colors.muted }
-                                    ]}
-                                >
-                                    <Text style={[
-                                        styles.topicName, 
-                                        isDark && styles.textLight,
-                                        !done && { opacity: 0.45 }
-                                    ]}>
-                                        {r.konu}
-                                    </Text>
-                                    <View style={styles.topicStatus}>
-                                        <View style={[
-                                            styles.topicDot,
-                                            done ? styles.topicDotDone : styles.topicDotPending
-                                        ]} />
-                                        <Text style={[
-                                            styles.topicStatusText,
-                                            done ? styles.topicStatusDone : styles.topicStatusPending,
-                                            isDark && done && { color: colors.emerald }
-                                        ]}>
-                                            {done ? "Tamamlandı" : "Bekliyor"}
-                                        </Text>
+                                <AccentCard key={r.konu} dark={isDark} accent={done ? "#D97706" : "#CBD5E1"}>
+                                    <View style={styles.topicRowInner}>
+                                        <Text style={[styles.topicName, isDark && styles.textLight]} numberOfLines={2}>{r.konu}</Text>
+                                        <Badge type={done ? "warning" : "muted"} title={done ? "Tamam" : "Bekliyor"} />
                                     </View>
-                                </View>
+                                </AccentCard>
                             );
                         })}
                     </View>
@@ -193,7 +132,6 @@ export default function EksiklerScreen({ navigation }) {
             {/* Empty State */}
             {Object.keys(byDers).length === 0 && (
                 <View style={styles.emptyContainer}>
-                    <Text style={styles.emptyIcon}>🎯</Text>
                     <Text style={[styles.emptyTitle, isDark && styles.textLight]}>
                         Henüz Konu Yok
                     </Text>
@@ -245,20 +183,23 @@ var styles = StyleSheet.create({
 
     // ---------- Progress ----------
     progressContainer: {
-        backgroundColor: "#F5F5F4",
-        borderRadius: 12,
+        backgroundColor: "#FFFFFF",
+        borderRadius: 16,
+        borderWidth: 1,
+        borderColor: "#E2E8F0",
         padding: 12,
         marginBottom: 16,
     },
     progressBar: {
         height: 6,
         borderRadius: 3,
-        backgroundColor: "#E7E5E4",
+        backgroundColor: "#E2E8F0",
         overflow: "hidden",
     },
     progressFill: {
         height: "100%",
         borderRadius: 3,
+        backgroundColor: "#D97706",
     },
     progressText: {
         color: colors.muted,
@@ -275,9 +216,12 @@ var styles = StyleSheet.create({
     },
     actionBtn: {
         flex: 1,
-        borderRadius: 14,
+        borderRadius: 16,
         padding: 14,
         borderWidth: 1,
+        borderColor: "#E2E8F0",
+        backgroundColor: "#fff",
+        overflow: "hidden",
     },
     actionBtnDisabled: {
         opacity: 0.4,
@@ -286,28 +230,19 @@ var styles = StyleSheet.create({
         backgroundColor: colors.navyDeep,
         borderColor: colors.muted,
     },
-    reviewBtn: {
-        backgroundColor: colors.teal,
-        borderColor: colors.teal,
-    },
-    wrongBtn: {
-        backgroundColor: "transparent",
-        borderColor: colors.rose,
-        borderWidth: 2,
-    },
     actionBtnTitle: {
-        color: "#fff",
+        color: "#0F172A",
         fontWeight: "700",
         fontSize: 14,
     },
     actionBtnCount: {
-        color: "#fff",
+        color: "#D97706",
         fontWeight: "800",
         fontSize: 18,
         marginTop: 2,
     },
     actionBtnDesc: {
-        color: "rgba(255,255,255,0.75)",
+        color: "#64748B",
         fontSize: 10,
         marginTop: 4,
     },
@@ -333,7 +268,12 @@ var styles = StyleSheet.create({
     dersName: {
         fontWeight: "700",
         fontSize: 15,
-        color: colors.text,
+        color: "#0F172A",
+    },
+    topicRowInner: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 8,
     },
     dersProgress: {
         color: colors.muted,
@@ -395,10 +335,6 @@ var styles = StyleSheet.create({
         alignItems: "center",
         paddingVertical: 40,
         paddingHorizontal: 20,
-    },
-    emptyIcon: {
-        fontSize: 48,
-        marginBottom: 12,
     },
     emptyTitle: {
         fontSize: 18,

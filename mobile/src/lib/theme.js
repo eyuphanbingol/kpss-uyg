@@ -176,10 +176,10 @@ export function getScoreColor(score) {
 }
 
 export function getScoreLabel(score) {
-    if (score >= 80) return { text: "Mükemmel", emoji: "🌟", color: colors.emerald };
-    if (score >= 60) return { text: "İyi", emoji: "✅", color: colors.indigo };
-    if (score >= 40) return { text: "Orta", emoji: "📈", color: colors.amber };
-    return { text: "Gelişmeli", emoji: "📉", color: colors.rose };
+    if (score >= 80) return { text: "Mükemmel", emoji: "", color: "#065F46" };
+    if (score >= 60) return { text: "İyi", emoji: "", color: "#0F172A" };
+    if (score >= 40) return { text: "Orta", emoji: "", color: "#92400E" };
+    return { text: "Gelişmeli", emoji: "", color: "#9F1239" };
 }
 
 export function getStatusBadge(lastStudyAt) {

@@ -1,11 +1,12 @@
 import React from "react";
 import { Text, View, StyleSheet, Alert } from "react-native";
+import { BookOpen, FileText } from "lucide-react-native";
 import { useApp } from "../AppProvider";
 import { StudyPlanner } from "../lib/planner";
 import { StudentStore } from "../lib/store";
 import { KpssConfig } from "../lib/config";
 import { go } from "../nav";
-import { Card, ScrollScreen, Badge, BackChip, PageHeader } from "../ui";
+import { Card, ScrollScreen, Badge, PageHeader } from "../ui";
 import { colors, masteryLabel } from "../lib/theme";
 import { AccentCard, PctBadge } from "../kit";
 
@@ -109,10 +110,13 @@ export function KonuListScreen({ route, navigation }) {
 
     return (
         <ScrollScreen dark={isDark}>
-            {/* Back */}
-            <BackChip dark={isDark} label="Dersler" onPress={function () { navigation.goBack(); }} />
-            <Text style={[styles.konuTitle, isDark && styles.textLight]}>{ders}</Text>
-            <Text style={styles.konuSubtitle}>{konular.length} konu</Text>
+            <PageHeader
+                dark={isDark}
+                title={ders}
+                subtitle={konular.length + " konu"}
+                onBack={function () { navigation.goBack(); }}
+                right={null}
+            />
 
             {konular.map(function (konu, idx) {
                 var kd = app.kpssData[ders][konu] || {};
@@ -173,50 +177,41 @@ export function KonuHubScreen({ route, navigation }) {
 
     return (
         <ScrollScreen dark={isDark}>
-            {/* Back */}
-            <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} />
-
-            {/* Header */}
-            <View style={styles.hubHeader}>
-                <Text style={[styles.hubTitle, isDark && styles.textLight]}>
-                    {konu}
+            <PageHeader
+                dark={isDark}
+                title={konu}
+                subtitle={ders}
+                onBack={function () { navigation.goBack(); }}
+                right={null}
+            />
+            <View style={styles.hubStats}>
+                <Badge
+                    type={
+                        m.color === "#065F46" ? "success" :
+                        m.color === "#92400E" ? "warning" :
+                        m.color === "#9F1239" ? "danger" : "muted"
+                    }
+                    title={m.text}
+                />
+                <Text style={[styles.hubStat, isDark && styles.textMuted]}>
+                    Son net {tp.lastPct == null ? "yok" : "%" + tp.lastPct}
                 </Text>
-                <Text style={[styles.hubDers, isDark && styles.textMuted]}>
-                    {ders}
+                <Text style={[styles.hubStat, isDark && styles.textMuted]}>
+                    {tp.attempts} deneme
                 </Text>
-                <View style={styles.hubStats}>
-                    <Badge 
-                        type={
-                            m.color === colors.emerald ? "success" : 
-                            m.color === colors.amber ? "warning" : 
-                            m.color === colors.rose ? "danger" : "muted"
-                        }
-                        title={m.text}
-                    />
-                    <Text style={[styles.hubStat, isDark && styles.textMuted]}>
-                        Son net {tp.lastPct == null ? "yok" : "%" + tp.lastPct}
-                    </Text>
-                    <Text style={[styles.hubStat, isDark && styles.textMuted]}>
-                        {tp.attempts} deneme
-                    </Text>
-                </View>
             </View>
 
-            {/* Notes Button */}
-            <Card dark={isDark} onPress={function () { go(navigation, "Notes", { ders: ders, konu: konu }); }} style={styles.hubNoteCard}>
-                    <View style={{ flexDirection: "row", alignItems: "center" }}>
-                        <DersIconBox icon="📖" />
-                        <View style={{ flex: 1, minWidth: 0 }}>
-                            <Text style={[styles.hubNoteTitle, isDark && styles.textLight]}>
-                                Konu Özeti
-                            </Text>
-                            <Text style={[styles.hubNoteDesc, isDark && styles.textMuted]}>
-                                {notlar.length} hap not · {tp.notesDone ? "tamamlandı" : "kaldığın yerden"}
-                            </Text>
-                        </View>
-                        <Text style={[styles.dersArrow, isDark && styles.textMuted]}>→</Text>
+            <AccentCard dark={isDark} chevron onPress={function () { go(navigation, "Notes", { ders: ders, konu: konu }); }} style={styles.hubNoteCard}>
+                <View style={styles.hubNoteRow}>
+                    <View style={styles.hubIco}><BookOpen size={18} color="#0F172A" /></View>
+                    <View style={{ flex: 1, minWidth: 0 }}>
+                        <Text style={[styles.hubNoteTitle, isDark && styles.textLight]}>Konu Özeti</Text>
+                        <Text style={[styles.hubNoteDesc, isDark && styles.textMuted]}>
+                            {notlar.length} hap not · {tp.notesDone ? "tamamlandı" : "kaldığın yerden"}
+                        </Text>
                     </View>
-            </Card>
+                </View>
+            </AccentCard>
 
             {(tp.solvedCloze && tp.solvedCloze.length) ? (
                 <Card dark={isDark} onPress={function () {
@@ -240,27 +235,26 @@ export function KonuHubScreen({ route, navigation }) {
                         var packDone = StudentStore.isPackComplete(tp, p.no);
                         var packOpen = StudentStore.isPackOpen(tp, p.no);
                         return (
-                            <Card
+                            <AccentCard
                                 key={p.no}
                                 dark={isDark}
                                 disabled={!packOpen}
+                                chevron={packOpen}
                                 onPress={function () {
                                     openTopicPack(navigation, ders, konu, sorular, pi);
                                 }}
-                                style={[
-                                    styles.hubTestCard,
-                                    packDone && styles.hubTestCardDone,
-                                    !packOpen && styles.hubTestCardLocked
-                                ]}
                             >
-                                    <Text style={styles.hubTestIcon}>{packDone ? "✓" : p.no}</Text>
-                                    <Text style={[styles.hubTestTitle, isDark && styles.textLight]}>
-                                        Test {p.no}
-                                    </Text>
-                                    <Text style={[styles.hubTestDesc, isDark && styles.textMuted]}>
-                                        {packDone ? "Çözüldü" : (packOpen ? (p.items.length + " soru") : ("Önce Test " + (p.no - 1) + "’i bitir"))}
-                                    </Text>
-                            </Card>
+                                <View style={styles.hubNoteRow}>
+                                    <View style={styles.hubIco}><FileText size={18} color="#0F172A" /></View>
+                                    <View style={{ flex: 1, minWidth: 0 }}>
+                                        <Text style={[styles.hubTestTitle, isDark && styles.textLight]}>Test {p.no}</Text>
+                                        <Text style={[styles.hubTestDesc, isDark && styles.textMuted]}>
+                                            {packDone ? "Çözüldü" : (packOpen ? (p.items.length + " soru") : ("Önce Test " + (p.no - 1) + "’i bitir"))}
+                                        </Text>
+                                    </View>
+                                    {packDone ? <PctBadge label="Tamam" /> : null}
+                                </View>
+                            </AccentCard>
                         );
                     })}
                 </View>
@@ -453,25 +447,12 @@ var styles = StyleSheet.create({
     },
 
     // ---------- Konu Hub ----------
-    hubHeader: {
-        marginVertical: 8,
-    },
-    hubTitle: {
-        fontSize: 28,
-        fontWeight: "900",
-        letterSpacing: -0.5,
-        color: colors.navy,
-    },
-    hubDers: {
-        color: colors.muted,
-        fontSize: 13,
-        marginTop: 2,
-    },
     hubStats: {
         flexDirection: "row",
         alignItems: "center",
         gap: 10,
-        marginTop: 6,
+        marginTop: -8,
+        marginBottom: 12,
         flexWrap: "wrap",
     },
     hubStat: {
@@ -480,10 +461,22 @@ var styles = StyleSheet.create({
     },
     hubNoteCard: {
         marginBottom: 10,
-        paddingVertical: 14,
+        minHeight: 72,
     },
-    hubNoteIcon: {
-        fontSize: 28,
+    hubNoteRow: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 10,
+    },
+    hubIco: {
+        width: 36,
+        height: 36,
+        borderRadius: 12,
+        backgroundColor: "#F8FAFC",
+        borderWidth: 1,
+        borderColor: "#E2E8F0",
+        alignItems: "center",
+        justifyContent: "center",
     },
     hubNoteTitle: {
         fontWeight: "800",
@@ -495,26 +488,10 @@ var styles = StyleSheet.create({
         fontSize: 13,
         marginTop: 2,
     },
-    hubTestCard: {
-        marginBottom: 10,
-        alignItems: "center",
-        paddingVertical: 18,
-    },
-    hubTestCardDone: {
-        borderColor: "#34d399",
-        backgroundColor: "#ecfdf5",
-    },
-    hubTestCardLocked: {
-        opacity: 0.45,
-    },
-    hubTestIcon: {
-        fontSize: 28,
-    },
     hubTestTitle: {
         fontWeight: "700",
-        fontSize: 17,
+        fontSize: 16,
         color: colors.text,
-        marginTop: 4,
     },
     hubTestDesc: {
         color: colors.muted,

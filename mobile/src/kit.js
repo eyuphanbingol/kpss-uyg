@@ -21,7 +21,7 @@ export function Hit(props) {
             android_ripple={{ color: "rgba(0,0,0,0.05)" }}
             disabled={props.disabled}
             onPress={props.onPress}
-            style={props.style}
+            style={[{ overflow: "hidden" }, props.style]}
         >
             {props.children}
         </Pressable>
@@ -36,6 +36,7 @@ export var AccentCard = memo(function AccentCard(props) {
             style={[
                 styles.card,
                 props.dark && styles.cardDark,
+                props.radius && { borderRadius: props.radius },
                 props.disabled && { opacity: 0.42 },
                 props.style,
             ]}

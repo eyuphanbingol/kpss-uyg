@@ -7,7 +7,7 @@ import { StudyPlanner } from "../lib/planner";
 import { supabase } from "../lib/supabase";
 import { trError } from "../lib/trError";
 import taban from "../content/tabanPuanlar.json";
-import { Card, PrimaryButton, ScrollScreen, Badge, BackChip, PageHeader } from "../ui";
+import { Card, PrimaryButton, ScrollScreen, Badge, PageHeader } from "../ui";
 import { colors } from "../lib/theme";
 
 function stripChoicePrefix(opt) {
@@ -31,10 +31,7 @@ export function PlacementScreen({ navigation }) {
 
     return (
         <ScrollScreen dark={isDark}>
-            {/* Back */}
-            <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
-
-            <PageHeader dark={isDark} title="Puan / Tercih" subtitle="Tahmini puan ve kurum eşleşmesi" right={null} />
+            <PageHeader dark={isDark} title="Puan / Tercih" subtitle="Tahmini puan ve kurum eşleşmesi" onBack={function () { navigation.goBack(); }} right={null} />
 
             {/* Score */}
             <View style={[styles.scoreContainer, isDark && styles.scoreContainerDark]}>
@@ -149,9 +146,7 @@ export function LeaderboardScreen({ navigation }) {
     return (
         <ScrollScreen dark={isDark}>
             {/* Back */}
-            <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
-
-            <PageHeader dark={isDark} title="Türkiye Sıralaması" subtitle="En çok doğru çözenler" right={null} />
+            <PageHeader dark={isDark} title="Türkiye Sıralaması" subtitle="En çok doğru çözenler" onBack={function () { navigation.goBack(); }} right={null} />
 
             {/* Error */}
             {err ? (
@@ -261,9 +256,7 @@ export function HeatScreen({ navigation }) {
     return (
         <ScrollScreen dark={isDark}>
             {/* Back */}
-            <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
-
-            <PageHeader dark={isDark} title="Isı Haritası" subtitle="30 günlük çalışma tempon" right={null} />
+            <PageHeader dark={isDark} title="Isı Haritası" subtitle="30 günlük çalışma tempon" onBack={function () { navigation.goBack(); }} right={null} />
 
             {/* Stats */}
             <View style={styles.heatStats}>
@@ -339,9 +332,7 @@ export function AiScreen({ navigation }) {
     return (
         <ScrollScreen dark={isDark}>
             {/* Back */}
-            <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
-
-            <PageHeader dark={isDark} title="Soru Asistanı" subtitle="Yanlışlarını analiz et" right={null} />
+            <PageHeader dark={isDark} title="Soru Asistanı" subtitle="Yanlışlarını analiz et" onBack={function () { navigation.goBack(); }} right={null} />
 
             {!item ? (
                 <Card style={[styles.emptyCard, isDark && styles.cardDark]}>
@@ -400,9 +391,7 @@ export function LiveScreen({ navigation }) {
     return (
         <ScrollScreen dark={isDark}>
             {/* Back */}
-            <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
-
-            <PageHeader dark={isDark} title="Canlı Deneme" subtitle="Cumartesi 21:00 ortak saat" right={null} />
+            <PageHeader dark={isDark} title="Canlı Deneme" subtitle="Cumartesi 21:00 ortak saat" onBack={function () { navigation.goBack(); }} right={null} />
 
             <Card style={[styles.liveCard, isDark && styles.cardDark]}>
                 <View style={styles.liveHeader}>
@@ -447,18 +436,14 @@ export function PaywallScreen({ navigation }) {
     if (!StudentStore.premiumOfferEnabled()) {
         return (
             <ScrollScreen dark={isDark}>
-                <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
-                <PageHeader dark={isDark} title="Tüm özellikler açık" subtitle="Abonelik şimdilik yok; deneme ve tercih listesi sınırlı değil." right={null} />
+                <PageHeader dark={isDark} title="Tüm özellikler açık" subtitle="Abonelik şimdilik yok; deneme ve tercih listesi sınırlı değil." onBack={function () { navigation.goBack(); }} right={null} />
             </ScrollScreen>
         );
     }
 
     return (
         <ScrollScreen dark={isDark}>
-            {/* Back */}
-            <BackChip dark={isDark} label="Geri" onPress={function () { navigation.goBack(); }} />
-
-            <PageHeader dark={isDark} title="Premium" subtitle="Tüm özelliklerin kilidini aç" right={null} />
+            <PageHeader dark={isDark} title="Premium" subtitle="Tüm özelliklerin kilidini aç" onBack={function () { navigation.goBack(); }} right={null} />
 
             {isPremium ? (
                 <Card style={[styles.premiumActiveCard, isDark && styles.cardDark]}>
