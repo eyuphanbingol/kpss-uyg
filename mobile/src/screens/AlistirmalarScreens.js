@@ -95,8 +95,10 @@ export function AlistirmaDersListScreen({ navigation }) {
                 onBack={function () { navigation.goBack(); }}
                 right={null}
             />
-            {Object.keys(kpssData).map(function (ders) {
-                var konular = Object.keys(kpssData[ders] || {});
+            {Object.keys(kpssData).filter(function (ders) {
+                return Object.keys(kpssData[ders] || {}).filter(function (k) { return k !== "_"; }).length > 0;
+            }).map(function (ders) {
+                var konular = Object.keys(kpssData[ders] || {}).filter(function (k) { return k !== "_"; });
                 return (
                     <AccentCard key={ders} dark={isDark} chevron onPress={function () { go(navigation, "AlistirmaKonuList", { ders: ders }); }} style={styles.playCard}>
                         <Text style={[styles.dersName, isDark && styles.textLight]}>{ders}</Text>
@@ -104,6 +106,11 @@ export function AlistirmaDersListScreen({ navigation }) {
                     </AccentCard>
                 );
             })}
+            {!Object.keys(kpssData).some(function (ders) {
+                return Object.keys(kpssData[ders] || {}).some(function (k) { return k !== "_"; });
+            }) ? (
+                <Text style={[styles.meta, isDark && styles.textMuted]}>Konular henüz inmedi. İnterneti kontrol edip uygulamayı kapat-aç.</Text>
+            ) : null}
         </ScrollScreen>
     );
 }
@@ -112,7 +119,7 @@ export function AlistirmaKonuListScreen({ route, navigation }) {
     var ders = route.params.ders;
     var app = useApp();
     var isDark = app.dark;
-    var konular = Object.keys(app.kpssData[ders] || {});
+    var konular = Object.keys(app.kpssData[ders] || {}).filter(function (k) { return k !== "_"; });
     var statsState = useState(null);
     var stats = statsState[0];
     var setStats = statsState[1];
@@ -484,8 +491,11 @@ export function MapPlayScreen({ route, navigation }) {
 
     if (!landReady) {
         return (
-            <Screen dark={isDark} edges={[]} style={{ overflow: "hidden" }}>
-                <View style={{ flex: 1 }} />
+            <Screen dark={isDark} edges={["top"]} style={{ overflow: "hidden" }}>
+                <View style={{ flex: 1, justifyContent: "center", padding: 24 }}>
+                    <Text style={[styles.konuTitle, isDark && styles.textLight]}>Harita</Text>
+                    <Text style={[styles.meta, isDark && styles.textMuted]}>Yataya alınıyor…</Text>
+                </View>
             </Screen>
         );
     }

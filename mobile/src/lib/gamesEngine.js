@@ -1,16 +1,16 @@
 import { MapQuiz } from "./mapQuiz";
 import { GamesBank } from "./gamesBank";
 
-globalThis.MapQuiz = MapQuiz;
-if (GamesBank) globalThis.GamesBank = GamesBank;
-
 (function (global) {
+    global.MapQuiz = MapQuiz;
+    if (GamesBank) global.GamesBank = GamesBank;
+
     function bank() {
-        return global.GamesBank || { SPECIAL: {}, REGION_FACTS: {}, TABU: [], PANIC: [], TABU_SCORE: [5, 3, 2, 1] };
+        return GamesBank || global.GamesBank || { SPECIAL: {}, REGION_FACTS: {}, TABU: [], PANIC: [], TABU_SCORE: [5, 3, 2, 1] };
     }
 
     function mq() {
-        return global.MapQuiz || {};
+        return MapQuiz || global.MapQuiz || {};
     }
 
     function shuffle(arr) {
@@ -506,6 +506,6 @@ if (GamesBank) globalThis.GamesBank = GamesBank;
         regionTitle: regionTitle,
         nameOf: function (code) { return names()[code] || code; }
     };
-})(typeof window !== "undefined" ? window : globalThis);
+})(typeof globalThis !== "undefined" ? globalThis : this);
 
-export var GamesEngine = globalThis.GamesEngine;
+export var GamesEngine = (typeof globalThis !== "undefined" && globalThis.GamesEngine) ? globalThis.GamesEngine : (typeof global !== "undefined" ? global.GamesEngine : null);

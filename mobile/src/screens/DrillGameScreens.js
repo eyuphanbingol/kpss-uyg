@@ -23,7 +23,17 @@ export function ConquerPlayScreen({ navigation }) {
 
     function start(code) {
         if (owned[code]) return;
-        setQuiz({ code: code, items: GamesEngine.quizForProvince(code, app.kpssData), i: 0, picked: null, ok: null, fail: false });
+        var items = [];
+        try {
+            items = GamesEngine.quizForProvince(code, app.kpssData) || [];
+        } catch (e) {
+            items = [];
+        }
+        if (!items.length) {
+            Alert.alert("Soru yok", "Bu il için soru üretilemedi. Bir kez daha dene.");
+            return;
+        }
+        setQuiz({ code: code, items: items, i: 0, picked: null, ok: null, fail: false });
     }
 
     function answer(opt) {
@@ -48,8 +58,11 @@ export function ConquerPlayScreen({ navigation }) {
 
     if (!landReady) {
         return (
-            <Screen dark={isDark} style={{ overflow: "hidden" }} edges={[]}>
-                <View style={{ flex: 1 }} />
+            <Screen dark={isDark} style={{ overflow: "hidden" }} edges={["top"]}>
+                <View style={{ flex: 1, justifyContent: "center", padding: 24 }}>
+                    <Text style={[styles.title, isDark && styles.light]}>Türkiye'yi Fethet</Text>
+                    <Text style={[styles.meta, isDark && styles.muted]}>Harita yataya alınıyor…</Text>
+                </View>
             </Screen>
         );
     }
@@ -269,7 +282,13 @@ export function PanicPlayScreen({ navigation }) {
     var seedState = useState(0);
     var seed = seedState[0];
     var setSeed = seedState[1];
-    var deck = useMemo(function () { return GamesEngine.panicDeck(app.kpssData); }, [seed]);
+    var deck = useMemo(function () {
+        try {
+            return GamesEngine.panicDeck(app.kpssData) || [];
+        } catch (e) {
+            return [];
+        }
+    }, [seed, app.kpssData]);
     var iState = useState(0);
     var i = iState[0];
     var setI = iState[1];
