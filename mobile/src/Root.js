@@ -13,7 +13,7 @@ function Gate() {
     var isDark = app.isDark;
 
     if (!app.bootReady) return <SplashScreen />;
-    if (!app.session) return <AuthScreen />;
+    if (app.recovering || !app.session) return <AuthScreen />;
 
     if (app.student.userProfile && app.student.userProfile.blocked) {
         return (

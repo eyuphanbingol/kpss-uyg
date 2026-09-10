@@ -1,9 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Image, Text, View, StyleSheet, ActivityIndicator, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Svg, { Path } from "react-native-svg";
 import * as WebBrowser from "expo-web-browser";
-import * as AuthSession from "expo-auth-session";
 import * as Linking from "expo-linking";
 import { supabase } from "../lib/supabase";
 import { trError } from "../lib/trError";
@@ -11,6 +10,8 @@ import { StudentStore } from "../lib/store";
 import { KpssConfig } from "../lib/config";
 import { sessionStorageShim } from "../lib/storage";
 import { SITE } from "../lib/media";
+import { parseAuthUrl } from "../lib/authLinks";
+import { useApp } from "../AppProvider";
 import { Chip, Field, PrimaryButton, Tap, ThemeToggle } from "../ui";
 import { needsKulvar } from "../lib/theme";
 import { BrandBackdrop } from "./SplashScreen";
@@ -57,6 +58,8 @@ function GoogleButton({ onPress, busy, disabled }) {
 // ============================================================
 
 export default function AuthScreen() {
+    var app = useApp();
+    var recovering = !!app.recovering;
     var dates = KpssConfig.examDateByLevel;
     
     // ---------- State ----------
@@ -120,6 +123,13 @@ export default function AuthScreen() {
     var googleBusy = _googleBusy[0];
     var setGoogleBusy = _googleBusy[1];
 
+    var _newPass = useState("");
+    var newPass = _newPass[0];
+    var setNewPass = _newPass[1];
+    var _newPass2 = useState("");
+    var newPass2 = _newPass2[0];
+    var setNewPass2 = _newPass2[1];
+
     // ---------- Refs ----------
     var emailRef = useRef(null);
     var passRef = useRef(null);
@@ -155,10 +165,9 @@ export default function AuthScreen() {
         }
         if (forgot) {
             setBusy(true);
-            var resetRedirect = AuthSession.makeRedirectUri({ scheme: "atanly", path: "reset" });
-            var fr = await supabase.auth.resetPasswordForEmail(email, { redirectTo: resetRedirect });
+            var fr = await supabase.auth.resetPasswordForEmail(email, { redirectTo: SITE + "/auth/reset" });
             setBusy(false);
-            setMsg(fr.error ? trError(fr.error, "Mail gönderilemedi.") : "Sıfırlama maili gönderildi.");
+            setMsg(fr.error ? trError(fr.error, "Mail gönderilemedi.") : "Sıfırlama maili gönderildi. Linke basınca yeni şifreni yaz.");
             return;
         }
         if (!pass || pass.length < 6) {
@@ -204,31 +213,26 @@ export default function AuthScreen() {
         setBusy(false);
     }
 
-    function authUrlParams(url) {
-        var out = {};
-        function eat(chunk) {
-            String(chunk || "").replace(/^[?#]/, "").split("&").forEach(function (part) {
-                if (!part) return;
-                var i = part.indexOf("=");
-                var k = decodeURIComponent((i < 0 ? part : part.slice(0, i)).replace(/\+/g, " "));
-                var v = decodeURIComponent((i < 0 ? "" : part.slice(i + 1)).replace(/\+/g, " "));
-                if (k && v && !out[k]) out[k] = v;
-            });
-        }
-        var u = String(url || "");
-        var qi = u.indexOf("?");
-        var hi = u.indexOf("#");
-        if (qi >= 0) eat(u.slice(qi + 1, hi > qi ? hi : u.length));
-        if (hi >= 0) eat(u.slice(hi + 1));
-        return out;
-    }
-
     async function sessionFromAuthUrl(url) {
         if (!url) return false;
-        var p = authUrlParams(url);
+        var p = parseAuthUrl(url);
         if (p.error) throw new Error(p.error_description || p.error);
-        if (String(p.type || "").toLowerCase() === "recovery") {
-            throw new Error("Bu bağlantı şifre sıfırlama için. Google ile girişe tekrar bas.");
+        if (p.isRecovery) {
+            if (app.beginRecovery) app.beginRecovery();
+            if (p.access_token && p.refresh_token) {
+                var recSet = await supabase.auth.setSession({
+                    access_token: p.access_token,
+                    refresh_token: p.refresh_token
+                });
+                if (recSet.error) throw recSet.error;
+                return true;
+            }
+            if (p.code) {
+                var recEx = await supabase.auth.exchangeCodeForSession(url);
+                if (recEx.error) throw recEx.error;
+                return true;
+            }
+            return true;
         }
         if (p.access_token && p.refresh_token) {
             var set = await supabase.auth.setSession({
@@ -244,6 +248,37 @@ export default function AuthScreen() {
             return true;
         }
         return false;
+    }
+
+    useEffect(function () {
+        if (!recovering) return;
+        var cancelled = false;
+        Linking.getInitialURL().then(function (url) {
+            if (cancelled || !url || !parseAuthUrl(url).isRecovery) return;
+            sessionFromAuthUrl(url).catch(function () {});
+        }).catch(function () {});
+        return function () { cancelled = true; };
+    }, [recovering]);
+
+    async function saveNewPassword() {
+        if (!newPass || newPass.length < 6) {
+            setMsg("Yeni şifre en az 6 karakter olmalı.");
+            return;
+        }
+        if (newPass !== newPass2) {
+            setMsg("Şifreler eşleşmiyor.");
+            return;
+        }
+        setBusy(true);
+        setMsg("");
+        try {
+            var res = await supabase.auth.updateUser({ password: newPass });
+            if (res.error) throw res.error;
+            if (app.finishRecovery) app.finishRecovery();
+        } catch (e) {
+            setMsg(trError(e, "Şifre güncellenemedi. Maildeki linke tekrar bas."));
+        }
+        setBusy(false);
     }
 
     // ---------- Google ----------
@@ -358,7 +393,7 @@ export default function AuthScreen() {
                     <Image source={require("../../assets/atanom.png")} style={styles.logo} />
                     <Text style={styles.title}>Atanly</Text>
                     <Text style={styles.subtitle}>
-                        {mode === "in" ? "Kaldığın yerden devam et" : "Hedefine doğru ilk adım"}
+                        {recovering ? "Yeni şifreni belirle" : (mode === "in" ? "Kaldığın yerden devam et" : "Hedefine doğru ilk adım")}
                     </Text>
                 </View>
                 <View style={styles.sheet}>
@@ -369,6 +404,38 @@ export default function AuthScreen() {
                         automaticallyAdjustKeyboardInsets
                         showsVerticalScrollIndicator={false}
                     >
+                        {recovering ? (
+                            <View>
+                                <Field
+                                    label="Yeni şifre"
+                                    value={newPass}
+                                    onChangeText={setNewPass}
+                                    placeholder="En az 6 karakter"
+                                    secure
+                                />
+                                <Field
+                                    label="Yeni şifre (tekrar)"
+                                    value={newPass2}
+                                    onChangeText={setNewPass2}
+                                    placeholder="Aynısını yaz"
+                                    secure
+                                />
+                                <PrimaryButton
+                                    title="Şifreyi kaydet"
+                                    onPress={saveNewPassword}
+                                    busy={busy}
+                                    disabled={busy}
+                                />
+                                <Tap
+                                    onPress={function () { if (app.cancelRecovery) app.cancelRecovery(); }}
+                                    style={styles.forgotBtn}
+                                >
+                                    <Text style={styles.forgotText}>Girişe dön</Text>
+                                </Tap>
+                                {msg ? <Text style={styles.msgText}>{msg}</Text> : null}
+                            </View>
+                        ) : (
+                        <View>
                         <View style={styles.toggleContainer}>
                             <Tap
                                 onPress={function () { setMode("in"); setForgot(false); setMsg(""); }}
@@ -425,13 +492,16 @@ export default function AuthScreen() {
                                         disabled={busy}
                                     />
 
-                                    <Text style={styles.orText}>veya</Text>
-
-                                    <GoogleButton
-                                        onPress={google}
-                                        busy={googleBusy}
-                                        disabled={busy}
-                                    />
+                                    {!forgot ? (
+                                        <View>
+                                            <Text style={styles.orText}>veya</Text>
+                                            <GoogleButton
+                                                onPress={google}
+                                                busy={googleBusy}
+                                                disabled={busy}
+                                            />
+                                        </View>
+                                    ) : null}
                                 </View>
                             )}
 
@@ -575,16 +645,14 @@ export default function AuthScreen() {
                                     : "Hesabın var mı? Giriş yap’a dokun."
                                 }
                             </Text>
+                        </View>
+                        )}
                     </ScrollView>
                 </View>
             </SafeAreaView>
         </BrandBackdrop>
     );
 }
-
-// ============================================================
-// STILLER
-// ============================================================
 
 var styles = StyleSheet.create({
     safeArea: {

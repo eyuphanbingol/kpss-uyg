@@ -14,6 +14,14 @@
         (function () {
             var q = location.search || "";
             var h = location.hash || "";
+            var blob = q + h;
+            var recovery = /type=recovery/i.test(blob) || /[?&]reset=/.test(blob);
+            if (recovery) {
+                if (!/[?&]reset=/.test(q)) q = (q ? q + "&reset=1" : "?reset=1");
+                try { location.replace("atanly://reset" + q + h); } catch (e) {}
+                setTimeout(function () { location.replace("/" + q + h); }, 700);
+                return;
+            }
             try { location.replace("atanly://auth/callback" + q + h); } catch (e) {}
             setTimeout(function () {
                 document.body.innerHTML = "<p>Giriş tamam. Atanly uygulamasına dönebilirsin.</p>";

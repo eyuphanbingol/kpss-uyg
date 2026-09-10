@@ -23,6 +23,8 @@ node scripts/export-catalog.js
 Supabase Auth URL listesine ekle:
 
 - `https://www.atanly.com/auth/callback`
+- `https://www.atanly.com/auth/reset`
+- `https://www.atanly.com/**`
 - `atanly://auth/callback`
 - `atanly://reset`
 

@@ -26,7 +26,8 @@
         try {
             var q = new URLSearchParams(window.location.search || "");
             if (q.get("reset") === "1" || q.get("giris") === "1" || q.get("kayit") === "1") return true;
-            if (q.get("code") || q.get("type") === "recovery") return true;
+            if (q.get("type") === "recovery") return true;
+            if (q.get("code") && q.get("type") !== "signup") return true;
             var h = String(window.location.hash || "");
             if (/access_token|refresh_token|type=recovery/.test(h)) return true;
         } catch (e) {}
@@ -572,7 +573,7 @@
                 var res = await sb.auth.signInWithOAuth({
                     provider: "google",
                     options: {
-                        redirectTo: window.location.origin + (window.location.pathname || "/")
+                        redirectTo: window.location.origin + "/"
                     }
                 });
                 if (res.error) setMsg(window.trError ? window.trError(res.error, "Google ile giriş açılamadı.") : "Google ile giriş açılamadı.");
@@ -962,7 +963,7 @@
                                 if (window.SupabaseClient && window.SupabaseClient.clearRecoveryFlag) {
                                     window.SupabaseClient.clearRecoveryFlag();
                                 }
-                                var resetTo = window.location.origin + (window.location.pathname || "/") + "?reset=1";
+                                var resetTo = window.location.origin + "/auth/reset";
                                 await sb.auth.resetPasswordForEmail(email.trim(), {
                                     redirectTo: resetTo
                                 });

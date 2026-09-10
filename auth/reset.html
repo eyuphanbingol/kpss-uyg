@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Atanly</title>
+    <style>
+        body { font-family: system-ui, sans-serif; margin: 0; padding: 48px 24px; text-align: center; color: #334155; }
+    </style>
+</head>
+<body>
+    <p>Şifre sıfırlama açılıyor…</p>
+    <script>
+        (function () {
+            var q = location.search || "";
+            var h = location.hash || "";
+            if (!/[?&]reset=/.test(q)) q = (q ? q + "&reset=1" : "?reset=1");
+            try { location.replace("atanly://reset" + q + h); } catch (e) {}
+            setTimeout(function () {
+                location.replace("/" + q + h);
+            }, 700);
+        })();
+    </script>
+</body>
+</html>

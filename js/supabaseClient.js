@@ -11,13 +11,11 @@
     }
 
     function looksRecovery(search, hash) {
-        var s = String(search || "");
-        var h = String(hash || "");
-        var q = paramsFrom(s, h);
+        var q = paramsFrom(search, hash);
         var type = String(q.get("type") || "").toLowerCase();
         if (type === "recovery") return true;
-        if (/(?:[?&]reset=)/.test(s)) return true;
-        return false;
+        if (type && type !== "recovery") return false;
+        return q.get("reset") === "1";
     }
 
     function recoveryFromUrl() {
@@ -108,12 +106,12 @@
         }
 
         var existing = await waitForSession(sb, 12);
-        if (existing) {
+        if (existing && (String(q.get("type") || "").toLowerCase() === "recovery" || q.get("reset") === "1")) {
             markRecovery();
             return existing;
         }
 
-        if (q.get("code") && typeof sb.auth.exchangeCodeForSession === "function") {
+        if (q.get("code") && (String(q.get("type") || "").toLowerCase() === "recovery" || q.get("reset") === "1") && typeof sb.auth.exchangeCodeForSession === "function") {
             try {
                 var ex = await sb.auth.exchangeCodeForSession(capturedHref || window.location.href);
                 if (!ex.error && ex.data && ex.data.session) {
@@ -124,7 +122,7 @@
         }
 
         existing = await waitForSession(sb, 8);
-        if (existing) markRecovery();
+        if (existing && (String(q.get("type") || "").toLowerCase() === "recovery" || q.get("reset") === "1")) markRecovery();
         return existing;
     }
 

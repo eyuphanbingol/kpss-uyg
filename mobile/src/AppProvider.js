@@ -6,6 +6,8 @@ import { SyncEngine } from "./lib/syncEngine";
 import { StudyPlanner } from "./lib/planner";
 import { fetchRemoteCatalog, readCachedCatalog } from "./lib/catalog";
 import { AppState, Platform } from "react-native";
+import * as Linking from "expo-linking";
+import { isRecoveryUrl } from "./lib/authLinks";
 
 // ============================================================
 // PLATFORM KONTROLLÜ NETWORK IMPORT
@@ -54,6 +56,32 @@ export function AppProvider(props) {
     var signingOutRef = useRef(false);
     var hydrateTimerRef = useRef(null);
     var appStateRef = useRef(AppState.currentState);
+    var recoveringRef = useRef(false);
+    var _recovering = useState(false);
+    var recovering = _recovering[0];
+    var setRecovering = _recovering[1];
+
+    function beginRecovery() {
+        recoveringRef.current = true;
+        setRecovering(true);
+    }
+
+    function finishRecovery() {
+        recoveringRef.current = false;
+        setRecovering(false);
+        hydrateAfterAuth(true);
+    }
+
+    function cancelRecovery() {
+        recoveringRef.current = false;
+        setRecovering(false);
+        signingOutRef.current = true;
+        setSession(null);
+        setProfileHydrated(false);
+        supabase.auth.signOut().finally(function () {
+            StudentStore.bindToUser(null);
+        });
+    }
 
     function hydrateAfterAuth(allowWait) {
         var st = StudentStore.getState();
@@ -160,6 +188,12 @@ export function AppProvider(props) {
 
         // ---------- Auth State Change ----------
         var sub = supabase.auth.onAuthStateChange(function (event, sess) {
+            if (event === "PASSWORD_RECOVERY") {
+                beginRecovery();
+                if (sess) setSession(sess);
+                return;
+            }
+
             if (event === "SIGNED_OUT") {
                 signingOutRef.current = true;
                 if (hydrateTimerRef.current) {
@@ -182,6 +216,7 @@ export function AppProvider(props) {
             StudentStore.bindToUser(sess.user.id, sess.user.email);
             StudentStore.consumeSignupIfNeeded(sess.user);
             setSession(sess);
+            if (recoveringRef.current) return;
             hydrateAfterAuth(true);
         });
 
@@ -192,6 +227,20 @@ export function AppProvider(props) {
             if (sub && sub.data && sub.data.subscription) {
                 sub.data.subscription.unsubscribe();
             }
+        };
+    }, []);
+
+    useEffect(function () {
+        function handleUrl(url) {
+            if (!url) return;
+            if (isRecoveryUrl(url)) beginRecovery();
+        }
+        Linking.getInitialURL().then(handleUrl).catch(function () {});
+        var sub = Linking.addEventListener("url", function (ev) {
+            handleUrl(ev && ev.url);
+        });
+        return function () {
+            if (sub && sub.remove) sub.remove();
         };
     }, []);
 
@@ -224,6 +273,10 @@ export function AppProvider(props) {
         signingOut: signingOutRef.current,
         plan: plan,
         kpssData: kpssData,
+        recovering: recovering,
+        beginRecovery: beginRecovery,
+        finishRecovery: finishRecovery,
+        cancelRecovery: cancelRecovery,
         signOut: signOut,
         dark: !!(student.profile && student.profile.dark),
         isDark: !!(student.profile && student.profile.dark),

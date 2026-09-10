@@ -1,7 +1,8 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/auth/callback", "destination": "/auth/callback.html" }
+    { "source": "/auth/callback", "destination": "/auth/callback.html" },
+    { "source": "/auth/reset", "destination": "/auth/reset.html" }
   ],
   "headers": [
     {
