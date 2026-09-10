@@ -101,11 +101,11 @@ export default function BenScreen({ navigation }) {
             {/* Stats Cards */}
             <View style={styles.statsRow}>
                 <View style={[styles.statCard, isDark && styles.cardDark]}>
-                    <Text style={[styles.statNumber, { color: "#0F172A" }]}>{totQ}</Text>
+                    <Text style={[styles.statNumber, { color: isDark ? "#F8FAFC" : "#0F172A" }]}>{totQ}</Text>
                     <Text style={[styles.statLabel, isDark && styles.textMuted]}>Soru</Text>
                 </View>
                 <View style={[styles.statCard, isDark && styles.cardDark]}>
-                    <Text style={[styles.statNumber, { color: "#0F172A" }]}>{overall}%</Text>
+                    <Text style={[styles.statNumber, { color: isDark ? "#F8FAFC" : "#0F172A" }]}>{overall}%</Text>
                     <Text style={[styles.statLabel, isDark && styles.textMuted]}>Net</Text>
                 </View>
                 <View style={[styles.statCard, isDark && styles.cardDark]}>

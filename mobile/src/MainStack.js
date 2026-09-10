@@ -16,6 +16,7 @@ import NotesScreen from "./screens/NotesScreen";
 import TestScreen from "./screens/TestScreen";
 import ReviewNotebookScreen from "./screens/ReviewNotebookScreen";
 import { AiScreen, HeatScreen, LeaderboardScreen, LiveScreen, PaywallScreen, PlacementScreen } from "./screens/ExtraScreens";
+import { Clock, BookOpen, PencilLine, BarChart3, User } from "lucide-react-native";
 import { StatusBar } from "expo-status-bar";
 import { colors } from "./lib/theme";
 import { hapticTap } from "./ui";
@@ -24,11 +25,11 @@ var Stack = createNativeStackNavigator();
 var Tab = createBottomTabNavigator();
 
 var TAB_SCREENS = [
-    { name: "BugunTab", component: BugunScreen, label: "Bugün", emoji: "⌂", streak: true },
-    { name: "DerslerTab", component: DersHomeScreen, label: "Dersler", emoji: "☰" },
-    { name: "AlistirmalarTab", component: AlistirmalarHomeScreen, label: "Alıştırmalar", emoji: "⚡", featured: true },
-    { name: "EksiklerTab", component: EksiklerScreen, label: "Eksikler", emoji: "▦" },
-    { name: "BenTab", component: BenScreen, label: "Ben", emoji: "●" },
+    { name: "BugunTab", component: BugunScreen, label: "Bugün", Icon: Clock, streak: true },
+    { name: "DerslerTab", component: DersHomeScreen, label: "Dersler", Icon: BookOpen },
+    { name: "AlistirmalarTab", component: AlistirmalarHomeScreen, label: "Alıştırmalar", Icon: PencilLine, featured: true },
+    { name: "EksiklerTab", component: EksiklerScreen, label: "Eksikler", Icon: BarChart3 },
+    { name: "BenTab", component: BenScreen, label: "Ben", Icon: User },
 ];
 
 function AppTabBar(props) {
@@ -53,7 +54,7 @@ function AppTabBar(props) {
                 {state.routes.map(function (route, index) {
                     var focused = state.index === index;
                     var meta = TAB_SCREENS[index];
-                    var color = focused ? "#D97706" : (isDark ? "#94A3B8" : "#64748B");
+                    var color = focused ? "#4F46E5" : (isDark ? "#94A3B8" : "#64748B");
                     return (
                         <Pressable
                             key={route.key}
@@ -75,9 +76,11 @@ function AppTabBar(props) {
                             style={[styles.tabItem, meta.featured && styles.tabFeatured]}
                         >
                             <View style={[styles.tabIconWrap, meta.featured && styles.tabFeaturedIcon, focused && meta.featured && styles.tabFeaturedIconOn]}>
-                                <Text style={{ fontSize: meta.featured ? 18 : 16, color: meta.featured && focused ? "#fff" : color }}>
-                                    {meta.emoji}
-                                </Text>
+                                <meta.Icon
+                                    size={meta.featured ? 20 : 22}
+                                    color={meta.featured && focused ? "#fff" : color}
+                                    strokeWidth={focused ? 2.2 : 1.7}
+                                />
                                 {meta.streak && streak > 0 ? <View style={styles.streakDot} /> : null}
                             </View>
                             <Text style={[styles.tabLabel, { color: color }]} numberOfLines={1}>
@@ -205,14 +208,14 @@ var styles = StyleSheet.create({
         width: 44,
         height: 44,
         borderRadius: 22,
-        backgroundColor: "#FEF3C7",
+        backgroundColor: "#EEF2FF",
         alignItems: "center",
         justifyContent: "center",
     },
-    tabFeaturedIconOn: { backgroundColor: "#D97706" },
+    tabFeaturedIconOn: { backgroundColor: "#4F46E5" },
     tabIconWrap: {
-        width: 22,
-        height: 22,
+        width: 24,
+        height: 24,
         alignItems: "center",
         justifyContent: "center",
     },

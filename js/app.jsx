@@ -757,7 +757,8 @@ function AlistirmaDersList(props) {
             <div className="space-y-3">
                 {Object.keys(kpssData).map(function (ders) {
                     const t = themeFor(ders, props.isDark);
-                    const konular = Object.keys(kpssData[ders] || {});
+                    const konular = Object.keys(kpssData[ders] || {}).filter(function (k) { return k !== "_"; });
+                    if (!konular.length) return null;
                     return (
                         <button key={ders} onClick={function () { props.onDers(ders); }}
                             className="w-full text-left p-5 rounded-3xl glass card-hover flex items-center gap-5 group">
@@ -780,7 +781,7 @@ function AlistirmaDersList(props) {
 function AlistirmaKonuList(props) {
     const ders = props.ders;
     const t = themeFor(ders, props.isDark);
-    const konular = Object.keys(props.kpssData[ders] || {});
+    const konular = Object.keys(props.kpssData[ders] || {}).filter(function (k) { return k !== "_"; });
     const engine = window.ClozeEngine;
     const topics = (props.student && props.student.topics && props.student.topics[ders]) || {};
     const [stats, setStats] = useState(null);
@@ -1488,6 +1489,7 @@ function DersHome(props) {
                 {Object.keys(kpssData).map(function (ders) {
                     const t = themeFor(ders, props.isDark);
                     const s = stats[ders] || { konuSayisi: 0, soruSayisi: 0 };
+                    if (!s.konuSayisi && !s.soruSayisi) return null;
                     return (
                         <button key={ders} onClick={function () { props.onDers(ders); }}
                             className="w-full text-left p-5 rounded-3xl glass card-hover flex items-center gap-5 group">
@@ -1539,7 +1541,7 @@ function DersHome(props) {
 function KonuList(props) {
     const ders = props.ders;
     const t = themeFor(ders, props.isDark);
-    const konular = Object.keys(props.kpssData[ders] || {});
+    const konular = Object.keys(props.kpssData[ders] || {}).filter(function (k) { return k !== "_"; });
     const topics = (props.student && props.student.topics && props.student.topics[ders]) || {};
     return (
         <Shell>
@@ -2856,7 +2858,7 @@ function App() {
                 onBack={function () { setDrillKind(null); }}
                 onDers={function (d) { setDrillDers(d); setDrillKonu(null); }} />;
         } else {
-            var clozeKeys = Object.keys(kpssData[drillDers] || {});
+            var clozeKeys = Object.keys(kpssData[drillDers] || {}).filter(function (k) { return k !== "_"; });
             var canPlayCloze = drillKonu && StudentStore.isKonuOpen(drillDers, clozeKeys, clozeKeys.indexOf(drillKonu), kpssData);
             if (!canPlayCloze) {
                 body = <AlistirmaKonuList kpssData={kpssData} student={student} ders={drillDers} isDark={isDark} toggleDark={toggleDark}

@@ -81,6 +81,17 @@
                 addPacks(L);
                 addPacks(R);
                 pick.completedPacks = Object.keys(packSet).map(Number).sort(function (a, b) { return a - b; });
+                var clozeSet = {};
+                function addCloze(src) {
+                    ((src && src.solvedCloze) || []).forEach(function (id) {
+                        if (id) clozeSet[String(id)] = true;
+                    });
+                }
+                addCloze(L);
+                addCloze(R);
+                pick.solvedCloze = Object.keys(clozeSet);
+                pick.notesDone = !!(L.notesDone || R.notesDone);
+                pick.noteIndex = Math.max(Number(L.noteIndex) || 0, Number(R.noteIndex) || 0);
                 out[ders][konu] = pick;
             });
         });

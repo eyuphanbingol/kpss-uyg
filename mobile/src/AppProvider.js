@@ -23,7 +23,7 @@ try {
 // ============================================================
 
 var Ctx = createContext(null);
-var START_CATALOG = { Tarih: { _: {} }, Cografya: { _: {} } };
+var START_CATALOG = { Tarih: { _: {} }, "Coğrafya": { _: {} } };
 
 // ============================================================
 // APP PROVIDER

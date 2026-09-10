@@ -125,7 +125,8 @@ export default function EksiklerScreen({ navigation }) {
                             });
 
                             return (
-                                <AccentCard key={r.konu} dark={isDark} accent={done ? "#D97706" : "#CBD5E1"}>
+                                <AccentCard key={r.konu} dark={isDark} accent={done ? "#D97706" : "#CBD5E1"} chevron
+                                    onPress={function () { go(navigation, "KonuHub", { ders: r.ders, konu: r.konu }); }}>
                                     <View style={styles.topicRowInner}>
                                         <Text style={[styles.topicName, isDark && styles.textLight]} numberOfLines={2}>{r.konu}</Text>
                                         <Badge type={done ? "warning" : "muted"} title={done ? "Bitti" : "Bekliyor"} />

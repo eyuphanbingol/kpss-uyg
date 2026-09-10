@@ -51,7 +51,9 @@ export function DersHomeScreen({ navigation }) {
             <PageHeader dark={isDark} title="Dersler" subtitle="Not oku, test çöz. Tüm konular açık." />
 
             {/* Ders Listesi */}
-            {Object.keys(kpssData).map(function (ders) {
+            {Object.keys(kpssData).filter(function (ders) {
+                return Object.keys(kpssData[ders] || {}).filter(function (k) { return k !== "_"; }).length > 0;
+            }).map(function (ders) {
                 var s = stats[ders] || { konuSayisi: 0, soruSayisi: 0 };
                 return (
                     <AccentCard
@@ -105,7 +107,7 @@ export function KonuListScreen({ route, navigation }) {
     var ders = route.params.ders;
     var app = useApp();
     var isDark = app.dark;
-    var konular = Object.keys(app.kpssData[ders] || {});
+    var konular = Object.keys(app.kpssData[ders] || {}).filter(function (k) { return k !== "_"; });
     var topics = (app.student.topics && app.student.topics[ders]) || {};
 
     return (

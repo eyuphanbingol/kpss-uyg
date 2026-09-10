@@ -176,7 +176,7 @@ export default function BugunScreen({ navigation }) {
                 <View>
                     <View style={styles.kpiRow}>
                         <View style={[styles.kpi, isDark && styles.cardDark]}>
-                            <Text style={[styles.kpiNum, { color: "#0F172A" }]}>{dash.streak}</Text>
+                            <Text style={[styles.kpiNum, isDark && styles.textLight]}>{dash.streak}</Text>
                             <Text style={[styles.kpiLab, isDark && styles.textMuted]}>seri gün</Text>
                         </View>
                         <View style={[styles.kpi, isDark && styles.cardDark]}>
@@ -184,7 +184,7 @@ export default function BugunScreen({ navigation }) {
                             <Text style={[styles.kpiLab, isDark && styles.textMuted]}>dk / oturum</Text>
                         </View>
                         <View style={[styles.kpi, isDark && styles.cardDark]}>
-                            <Text style={[styles.kpiNum, { color: "#0F172A" }]}>{rec}</Text>
+                            <Text style={[styles.kpiNum, isDark && styles.textLight]}>{rec}</Text>
                             <Text style={[styles.kpiLab, isDark && styles.textMuted]}>rekor gün</Text>
                         </View>
                     </View>

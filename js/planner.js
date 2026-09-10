@@ -1,8 +1,12 @@
 (function (global) {
+    function realKeys(obj) {
+        return Object.keys(obj || {}).filter(function (k) { return k && k !== "_"; });
+    }
+
     function flattenQuestions(kpssData) {
         var out = [];
         Object.keys(kpssData || {}).forEach(function (ders) {
-            Object.keys(kpssData[ders] || {}).forEach(function (konu) {
+            realKeys(kpssData[ders]).forEach(function (konu) {
                 var sorular = ((kpssData[ders][konu] || {}).sorular) || [];
                 sorular.forEach(function (q, idx) {
                     var id = q.id != null ? q.id : idx;
@@ -22,7 +26,7 @@
     function catalogStats(kpssData) {
         var dersler = {};
         Object.keys(kpssData || {}).forEach(function (ders) {
-            var konular = Object.keys(kpssData[ders] || {});
+            var konular = realKeys(kpssData[ders]);
             var soru = 0;
             var not = 0;
             konular.forEach(function (k) {
@@ -38,7 +42,7 @@
     function topicRows(kpssData, student) {
         var rows = [];
         Object.keys(kpssData || {}).forEach(function (ders) {
-            Object.keys(kpssData[ders] || {}).forEach(function (konu) {
+            realKeys(kpssData[ders]).forEach(function (konu) {
                 var kd = kpssData[ders][konu] || {};
                 var t = (student.topics[ders] && student.topics[ders][konu]) || {};
                 rows.push({

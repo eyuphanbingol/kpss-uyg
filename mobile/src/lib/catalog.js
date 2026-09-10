@@ -4,16 +4,28 @@ import { SITE } from "./media";
 var CACHE_KEY = "kpss-catalog-v1";
 export var CATALOG_URL = SITE + "/catalog.json";
 
-var EMPTY_CATALOG = { Tarih: { _: {} }, Cografya: { _: {} } };
+var EMPTY_CATALOG = { Tarih: { _: {} }, "Coğrafya": { _: {} } };
 export var kpssData = EMPTY_CATALOG;
+
+function realKeys(obj) {
+    return Object.keys(obj || {}).filter(function (k) { return k && k !== "_"; });
+}
+
+function normalizeCatalog(data) {
+    if (!data || typeof data !== "object") return data;
+    var out = Object.assign({}, data);
+    if (out.Cografya && !out["Coğrafya"]) {
+        out["Coğrafya"] = out.Cografya;
+        delete out.Cografya;
+    }
+    return out;
+}
 
 export function looksCatalog(data) {
     if (!data || typeof data !== "object") return false;
-    var tarih = data.Tarih;
-    var cografya = data.Cografya || data["Coğrafya"];
-    function realKeys(obj) {
-        return Object.keys(obj || {}).filter(function (k) { return k !== "_"; });
-    }
+    var n = normalizeCatalog(data);
+    var tarih = n.Tarih;
+    var cografya = n["Coğrafya"] || n.Cografya;
     return !!(tarih && cografya && realKeys(tarih).length >= 1 && realKeys(cografya).length >= 1);
 }
 
@@ -22,7 +34,7 @@ export function getKpssData() {
 }
 
 export function setKpssData(data) {
-    if (looksCatalog(data)) kpssData = data;
+    if (looksCatalog(data)) kpssData = normalizeCatalog(data);
     return kpssData;
 }
 
@@ -31,7 +43,7 @@ export function readCachedCatalog() {
         var raw = localStorageShim.getItem(CACHE_KEY);
         if (!raw) return null;
         var parsed = JSON.parse(raw);
-        return looksCatalog(parsed) ? parsed : null;
+        return looksCatalog(parsed) ? normalizeCatalog(parsed) : null;
     } catch (e) {
         return null;
     }
