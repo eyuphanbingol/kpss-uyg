@@ -52,7 +52,30 @@ export function AppProvider(props) {
     var setIsConnected = _isConnected[1];
 
     var signingOutRef = useRef(false);
+    var hydrateTimerRef = useRef(null);
     var appStateRef = useRef(AppState.currentState);
+
+    function hydrateAfterAuth(allowWait) {
+        var st = StudentStore.getState();
+        if (st.profile && st.profile.onboarded) {
+            setProfileHydrated(true);
+            SyncEngine.sync().catch(function () {});
+            return;
+        }
+        if (hydrateTimerRef.current) clearTimeout(hydrateTimerRef.current);
+        var done = function () {
+            if (hydrateTimerRef.current) {
+                clearTimeout(hydrateTimerRef.current);
+                hydrateTimerRef.current = null;
+            }
+            setProfileHydrated(true);
+        };
+        if (allowWait) {
+            hydrateTimerRef.current = setTimeout(done, 2500);
+        }
+        SyncEngine.sync().then(done).catch(done);
+        if (!allowWait) done();
+    }
     var _kd = useState(START_CATALOG);
     var kpssData = _kd[0];
     var setKpssData = _kd[1];
@@ -119,29 +142,10 @@ export function AppProvider(props) {
                 if (cancelled) return;
 
                 if (sess) {
-                    // 3. Kullanıcıyı bağla
                     StudentStore.bindToUser(sess.user.id, sess.user.email);
                     StudentStore.consumeSignupIfNeeded(sess.user);
-
-                    var st0 = StudentStore.getState();
-                    if (st0.profile && st0.profile.onboarded) {
-                        setProfileHydrated(true);
-                    }
-
-                    // 4. Konum kontrolü
-                    if (SyncEngine.ensureLocation) {
-                        SyncEngine.ensureLocation();
-                    }
-
-                    // 5. Sync işlemi
-                    try {
-                        await SyncEngine.sync();
-                    } catch (e) {
-                        // Sync hatası - sessizce devam
-                        console.warn("Sync hatası:", e);
-                    }
-
-                    setProfileHydrated(true);
+                    hydrateAfterAuth(true);
+                    if (SyncEngine.ensureLocation) SyncEngine.ensureLocation();
                 }
 
                 setSession(sess || null);
@@ -158,6 +162,10 @@ export function AppProvider(props) {
         var sub = supabase.auth.onAuthStateChange(function (event, sess) {
             if (event === "SIGNED_OUT") {
                 signingOutRef.current = true;
+                if (hydrateTimerRef.current) {
+                    clearTimeout(hydrateTimerRef.current);
+                    hydrateTimerRef.current = null;
+                }
                 setSession(null);
                 setProfileHydrated(false);
                 StudentStore.bindToUser(null);
@@ -165,24 +173,21 @@ export function AppProvider(props) {
             }
 
             if (!sess) return;
+            if (event === "TOKEN_REFRESHED") {
+                setSession(sess);
+                return;
+            }
 
             signingOutRef.current = false;
             StudentStore.bindToUser(sess.user.id, sess.user.email);
             StudentStore.consumeSignupIfNeeded(sess.user);
             setSession(sess);
-
-            var st1 = StudentStore.getState();
-            if (st1.profile && st1.profile.onboarded) {
-                setProfileHydrated(true);
-            }
-
-            SyncEngine.sync()
-                .then(function () { setProfileHydrated(true); })
-                .catch(function () { setProfileHydrated(true); });
+            hydrateAfterAuth(true);
         });
 
         return function () {
             cancelled = true;
+            if (hydrateTimerRef.current) clearTimeout(hydrateTimerRef.current);
             unsub();
             if (sub && sub.data && sub.data.subscription) {
                 sub.data.subscription.unsubscribe();

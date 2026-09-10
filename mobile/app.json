@@ -3,7 +3,7 @@
     "name": "Atanly",
     "slug": "eyphn",
     "scheme": "atanly",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "platforms": [
       "ios",
       "android"
@@ -18,7 +18,7 @@
     },
     "android": {
       "package": "app.atanly.mobile",
-      "versionCode": 7,
+      "versionCode": 8,
       "softwareKeyboardLayoutMode": "resize",
       "adaptiveIcon": {
         "backgroundColor": "#041C24",
