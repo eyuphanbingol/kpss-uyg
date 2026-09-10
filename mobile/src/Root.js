@@ -1,20 +1,26 @@
 import React, { Suspense } from "react";
 import { Text, View, StyleSheet } from "react-native";
 import { useApp } from "./AppProvider";
-import AuthScreen from "./screens/AuthScreen";
 import OnboardingScreen from "./screens/OnboardingScreen";
 import SplashScreen from "./screens/SplashScreen";
 import { colors } from "./lib/theme";
 import { GhostButton, Screen } from "./ui";
 
 var MainStack = React.lazy(function () { return import("./MainStack"); });
+var AuthScreen = React.lazy(function () { return import("./screens/AuthScreen"); });
 
 function Gate() {
     var app = useApp();
     var isDark = app.isDark;
 
     if (!app.bootReady) return <SplashScreen />;
-    if (!app.session) return <AuthScreen />;
+    if (!app.session) {
+        return (
+            <Suspense fallback={<SplashScreen />}>
+                <AuthScreen />
+            </Suspense>
+        );
+    }
 
     if (app.student.userProfile && app.student.userProfile.blocked) {
         return (

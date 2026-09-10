@@ -1,25 +1,12 @@
 import "react-native-gesture-handler";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaProvider, initialWindowMetrics } from "react-native-safe-area-context";
 import * as NativeSplash from "expo-splash-screen";
-import { Platform, View, StyleSheet, LogBox, AppState, Text } from "react-native";
+import { Platform, View, StyleSheet, LogBox, Text } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import * as NavigationBar from "expo-navigation-bar";
-import * as SystemUI from "expo-system-ui";
 import { AppProvider } from "./src/AppProvider";
 import Root from "./src/Root";
-import { resumeScreenOrientation } from "./src/lib/useLandscapeLock";
-
-// ============================================================
-// SPLASH SCREEN
-// ============================================================
-
-NativeSplash.preventAutoHideAsync().catch(function () {});
-
-// ============================================================
-// IGNORE WARNINGS (Opsiyonel)
-// ============================================================
 
 // Gereksiz uyarıları gizle
 LogBox.ignoreLogs([
@@ -58,28 +45,7 @@ class CrashGate extends React.Component {
 }
 
 export default function App() {
-    useEffect(function () {
-        resumeScreenOrientation();
-        var sub = AppState.addEventListener("change", function (next) {
-            if (next === "active") resumeScreenOrientation();
-        });
-        return function () { sub.remove(); };
-    }, []);
-
-    // ---------- Android Navigation Bar ----------
-    useEffect(function () {
-        if (Platform.OS === "android") {
-            // Navigation bar rengi
-            NavigationBar.setBackgroundColorAsync("#0f172a")
-                .catch(function () {});
-            NavigationBar.setButtonStyleAsync("light")
-                .catch(function () {});
-            
-            // System UI rengi
-            SystemUI.setBackgroundColorAsync("#0f172a")
-                .catch(function () {});
-        }
-    }, []);
+    // Native chrome (nav bar / orientation) after first paint — crashes on some Androids if run immediately.
 
     // ---------- Splash Screen ----------
     useEffect(function () {
