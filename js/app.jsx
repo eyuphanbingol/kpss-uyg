@@ -1716,7 +1716,7 @@ function NotesView(props) {
     const notlar = props.notlar || [];
     const idx = props.index;
     return (
-        <Shell wide={true} padBottom={false}>
+        <Shell wide={true}>
             <div className="flex justify-between items-center mb-4 gap-3">
                 <BackBtn onClick={props.onBack} label="Geri" />
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
@@ -1775,7 +1775,7 @@ function TestView(props) {
     const tLeft = props.session.secondsLeft;
     const tCls = !timed ? "" : (tLeft <= 60 ? "text-coral-500" : tLeft <= 300 ? "text-amber-500" : "text-navy-600");
     return (
-        <Shell padBottom={false}>
+        <Shell>
             <div className="flex justify-between items-center text-sm font-bold text-slate-500 mb-4 gap-2">
                 <button onClick={props.onQuit} className="hover:text-rose-500 bg-white dark:bg-slate-800 px-3 py-2 rounded-xl border border-slate-200 shrink-0">Bitir</button>
                 <span className="bg-white dark:bg-slate-800 px-3 py-2 rounded-xl border border-slate-200 min-w-0 text-right">
