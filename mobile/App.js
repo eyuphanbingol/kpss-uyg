@@ -150,11 +150,9 @@ const styles = StyleSheet.create({
 // ============================================================
 
 // Prodüksiyonda hataları logla
-if (!__DEV__) {
-    var originalError = console.error;
-    console.error = function (error) {
-        // Hata tracking servisine gönderilebilir
-        // Örn: Sentry, Firebase Crashlytics
-        originalError(error);
-    };
+var EU = typeof global !== "undefined" ? global.ErrorUtils : null;
+if (EU && EU.setGlobalHandler) {
+    EU.setGlobalHandler(function (error) {
+        global.__ATANLY_ERR = String((error && (error.stack || error.message)) || error);
+    });
 }

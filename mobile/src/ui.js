@@ -17,9 +17,16 @@ import {
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 import * as Haptics from "expo-haptics";
 import { LinearGradient } from "expo-linear-gradient";
-import { ChevronLeft, Eye, EyeOff, Moon, Sun } from "lucide-react-native";
 import { colors } from "./lib/theme";
 import { StudentStore } from "./lib/store";
+
+function Glyph(props) {
+    return (
+        <Text style={{ fontSize: props.size || 16, color: props.color || "#0F172A", lineHeight: (props.size || 16) + 3 }}>
+            {props.ch}
+        </Text>
+    );
+}
 
 // ============================================================
 // YARDIMCILAR
@@ -324,7 +331,7 @@ export var Field = React.forwardRef(function Field(props, ref) {
                         style={styles.eyeBtn}
                         hitSlop={6}
                     >
-                        {secure ? <EyeOff size={18} color="#64748B" /> : <Eye size={18} color="#0F172A" />}
+                        {secure ? <Glyph ch="⊘" size={16} color="#64748B" /> : <Glyph ch="◉" size={16} color="#0F172A" />}
                     </Pressable>
                 ) : null}
             </View>
@@ -356,9 +363,9 @@ export function ThemeToggle(props) {
             style={[styles.themeBtn, isDark && styles.themeBtnDark]}
         >
             {isDark ? (
-                <Sun size={18} color="#FDE68A" />
+                <Glyph ch="☼" size={18} color="#FDE68A" />
             ) : (
-                <Moon size={18} color="#0F172A" />
+                <Glyph ch="☾" size={18} color="#0F172A" />
             )}
         </Pressable>
     );
@@ -380,7 +387,7 @@ export function PageHeader(props) {
                     }}
                     style={[styles.headerBack, isDark && styles.headerBackDark]}
                 >
-                    <ChevronLeft size={20} color={isDark ? "#E2E8F0" : "#0F172A"} />
+                    <Glyph ch="‹" size={22} color={isDark ? "#E2E8F0" : "#0F172A"} />
                 </Pressable>
             ) : null}
             <View style={{ flex: 1, minWidth: 0 }}>
@@ -468,7 +475,7 @@ export function BackChip(props) {
             }}
             style={[styles.backChip, dark && styles.backChipDark, props.style]}
         >
-            <ChevronLeft size={18} color={dark ? "#E2E8F0" : "#0F172A"} />
+            <Glyph ch="‹" size={20} color={dark ? "#E2E8F0" : "#0F172A"} />
             <Text style={[styles.backChipLabel, dark && styles.backChipTextDark]}>{props.label || "Geri"}</Text>
         </Pressable>
     );
