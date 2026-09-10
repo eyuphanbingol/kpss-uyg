@@ -79,6 +79,10 @@ window.getKpssData = function () {
                 notlar: window.tarih_19_notlari || [],
                 sorular: window.tarih_19_sorulari || []
             },
+            "Atatürk İnkılapları":{
+                notlar: window.tarih_20_notlari || [],
+                sorular: window.tarih_20_sorulari || []
+            },
         },
         "Coğrafya": {
             "Türkiye'nin Coğrafi Konumu": {
