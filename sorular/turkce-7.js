@@ -1,223 +1,388 @@
 // sorular/turkce-7.js - Zarf
 window.turkce_7_sorulari = [
 {
-    "question": "“İçeri girip herkese kızdı.” cümlesinde “içeri” nedir?",
+    "question": "Fiili, sıfatı veya başka bir zarfı etkileyerek zaman, yer, durum, miktar bildiren sözcüklere ne denir?",
     "options": [
-        "A) Yer-yön zarfı",
-        "B) Durum zarfı",
-        "C) Zaman zarfı",
-        "D) Miktar zarfı"
-    ],
-    "correctAnswerIndex": 0,
-    "explanation": "Nereye girdi? içeri."
-},
-{
-    "question": "Aşağıdakilerden hangisi yer-yön zarfıdır?",
-    "options": [
-        "A) Dün",
-        "B) Çok",
-        "C) Dışarı",
-        "D) Yavaşça"
-    ],
-    "correctAnswerIndex": 2,
-    "explanation": "dışarı yer-yön bildirir."
-},
-{
-    "question": "“Adam çekine çekine içeri girdi.” cümlesinde “çekine çekine” nedir?",
-    "options": [
-        "A) Zaman zarfı",
-        "B) Durum zarfı",
-        "C) Miktar zarfı",
-        "D) Yer-yön zarfı"
+        "A) Edat",
+        "B) Zarf (belirteç)",
+        "C) Bağlaç",
+        "D) Sıfat"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Nasıl girdi? → durum."
+    "explanation": "Zarf belirteç olarak adlandırılır."
 },
 {
-    "question": "“Program birazdan başlıyor.” cümlesinde “birazdan” nedir?",
+    "question": "“Güzel konuştu.” cümlesinde “güzel” hangi sözcük türüdür?",
     "options": [
-        "A) Durum zarfı",
-        "B) Zaman zarfı",
-        "C) Miktar zarfı",
-        "D) Soru zarfı"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Ne zaman? birazdan."
-},
-{
-    "question": "“Çok çalışarak sınavı kazandı.” cümlesinde “çok” nedir?",
-    "options": [
-        "A) Miktar zarfı",
-        "B) Zaman zarfı",
-        "C) Yer-yön zarfı",
-        "D) Durum zarfı"
-    ],
-    "correctAnswerIndex": 0,
-    "explanation": "Ne kadar çalışarak? çok."
-},
-{
-    "question": "“Oldukça büyük bir evde oturuyor.” cümlesinde “oldukça” nedir?",
-    "options": [
-        "A) Soru zarfı",
-        "B) Miktar zarfı",
-        "C) Durum zarfı",
-        "D) Yer-yön zarfı"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Sıfatı miktarca tamamlar."
-},
-{
-    "question": "“Köye ne zaman varırız?” cümlesinde “ne zaman” nedir?",
-    "options": [
-        "A) Soru sıfatı",
-        "B) Soru zamiri",
-        "C) Soru zarfı",
-        "D) Soru edatı"
-    ],
-    "correctAnswerIndex": 2,
-    "explanation": "Zaman soran zarftır."
-},
-{
-    "question": "“Dikkatli bir çocuktu.” cümlesinde “dikkatli” nedir?",
-    "options": [
-        "A) Durum zarfı",
-        "B) Niteleme sıfatı",
-        "C) Miktar zarfı",
-        "D) Zamir"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "çocuk adını niteler."
-},
-{
-    "question": "“Dikkatli davranıyordu.” cümlesinde “dikkatli” nedir?",
-    "options": [
-        "A) Niteleme sıfatı",
-        "B) Durum zarfı",
+        "A) Sıfat",
+        "B) Zarf",
         "C) Ad",
-        "D) Zamir"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Nasıl davranıyordu?"
-},
-{
-    "question": "“Akşam sinemaya gideceğiz.” cümlesinde “akşam” nedir?",
-    "options": [
-        "A) Ad",
-        "B) Zaman zarfı",
-        "C) Sıfat",
-        "D) Zamir"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Ne zaman gideceğiz?"
-},
-{
-    "question": "“Akşam, şairlerin ilham kaynağıdır.” cümlesinde “akşam” nedir?",
-    "options": [
-        "A) Zarf",
-        "B) Ad",
-        "C) Sıfat",
         "D) Edat"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Özne görevinde addır."
+    "explanation": "Konuşmak fiilini etkiliyor."
 },
 {
-    "question": "“Ne gün bize geleceksin?” cümlesinde “ne” nedir?",
+    "question": "“Çok güzel bir ev.” cümlesinde “çok” hangi sözcük türüdür?",
     "options": [
-        "A) Soru zamiri",
+        "A) Sıfat",
+        "B) Miktar zarfı",
+        "C) Edat",
+        "D) Belgisiz sıfat"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Güzel sıfatını etkiliyor."
+},
+{
+    "question": "Fiile “ne zaman?” sorusunun cevabı hangi zarf türüdür?",
+    "options": [
+        "A) Yer-yön",
+        "B) Zaman",
+        "C) Durum",
+        "D) Miktar"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Yarın, akşam, dün zaman zarfı örnekleridir."
+},
+{
+    "question": "“Yarın görüşürüz.” cümlesinde “yarın” hangi zarf türüdür?",
+    "options": [
+        "A) Yer-yön",
+        "B) Zaman",
+        "C) Durum",
+        "D) Soru"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Ne zaman? sorusuna cevap verir."
+},
+{
+    "question": "Fiile “nereye?” sorusunun cevabı hangi zarf türüdür?",
+    "options": [
+        "A) Zaman",
+        "B) Yer-yön",
+        "C) Durum",
+        "D) Miktar"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "İçeri, dışarı, ileri yer-yön zarfıdır."
+},
+{
+    "question": "“İçeri girdi.” cümlesinde “içeri” hangi zarf türüdür?",
+    "options": [
+        "A) Zaman",
+        "B) Yer-yön",
+        "C) Durum",
+        "D) Miktar"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Nereye? sorusuna cevap."
+},
+{
+    "question": "“İleri ülkeler” ifadesinde “ileri” hangi sözcük türüdür?",
+    "options": [
+        "A) Zarf",
+        "B) Sıfat",
+        "C) Ad",
+        "D) Edat"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Ülkeler adını niteliyor."
+},
+{
+    "question": "“İleride bekleyin.” cümlesinde “ileride” hangi sözcük türüdür?",
+    "options": [
+        "A) Sıfat",
+        "B) Zarf",
+        "C) Ad",
+        "D) Edat"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Beklemek fiilini etkiliyor."
+},
+{
+    "question": "Fiile “nasıl?” sorusunun cevabı hangi zarf türüdür?",
+    "options": [
+        "A) Miktar",
+        "B) Durum (hâl)",
+        "C) Zaman",
+        "D) Soru"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Dikkatli, hızlı, gülerek durum zarfıdır."
+},
+{
+    "question": "“Gülerek baktı.” cümlesinde “gülerek” hangi zarf türüdür?",
+    "options": [
+        "A) Zaman",
+        "B) Durum (zarf-fiil kaynaklı)",
+        "C) Miktar",
+        "D) Yer-yön"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "-erek ekiyle durum zarfı."
+},
+{
+    "question": "Fiile “ne kadar?” sorusunun cevabı hangi zarf türüdür?",
+    "options": [
+        "A) Zaman",
+        "B) Miktar (azlık-çokluk)",
+        "C) Durum",
+        "D) Soru"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Çok, az, en, daha miktar zarfıdır."
+},
+{
+    "question": "“En güzel” ifadesinde “en” hangi zarf türüdür?",
+    "options": [
+        "A) Durum",
+        "B) Miktar (üstünlük)",
+        "C) Zaman",
+        "D) Yer-yön"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "En, daha, pek üstünlük zarfıdır."
+},
+{
+    "question": "“Ne zaman geleceksin?” cümlesinde “ne zaman” hangi sözcük türüdür?",
+    "options": [
+        "A) Soru sıfatı",
+        "B) Soru zarfı",
+        "C) Edat",
+        "D) Bağlaç"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Fiili soru yoluyla belirtir."
+},
+{
+    "question": "“Ne gün gelecek?” cümlesinde “ne” hangi sözcük türüdür?",
+    "options": [
+        "A) Soru zarfı",
         "B) Soru sıfatı",
-        "C) Soru zarfı",
-        "D) Miktar zarfı"
+        "C) Belgisiz sıfat",
+        "D) Zamir"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "ne + gün."
+    "explanation": "Yanında gün adı vardır."
 },
 {
-    "question": "“Ne kızıyorsun yine?” cümlesinde “ne” hangi görevde kullanılmıştır?",
+    "question": "“Nasıl gitti?” cümlesinde “nasıl” hangi sözcük türüdür?",
     "options": [
         "A) Soru sıfatı",
-        "B) Soru zamiri",
-        "C) Soru zarfı",
-        "D) Miktar zarfı"
+        "B) Soru zarfı",
+        "C) Durum sıfatı",
+        "D) Edat"
     ],
-    "correctAnswerIndex": 2,
-    "explanation": "Fiili soruyla tamamlar."
+    "correctAnswerIndex": 1,
+    "explanation": "Fiili etkileyen soru zarfı."
 },
 {
-    "question": "“Ne akıllı bir çocuk bu!” cümlesinde “ne” nedir?",
+    "question": "“Nasıl bir ev?” sorusunda “nasıl” hangi sözcük türüdür?",
     "options": [
         "A) Soru zarfı",
-        "B) Miktar zarfı",
-        "C) Soru sıfatı",
-        "D) Zamir"
+        "B) Soru sıfatı",
+        "C) Durum zarfı",
+        "D) Niteleme sıfatı"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Şaşırma/miktar pekiştirmesidir."
+    "explanation": "Ev adının önünde soru sıfatı."
 },
 {
-    "question": "“En güzel çiçek papatyadır.” cümlesinde “en” nedir?",
-    "options": [
-        "A) Üstünlük belirteci",
-        "B) Sıfat",
-        "C) Zamir",
-        "D) Edat"
-    ],
-    "correctAnswerIndex": 0,
-    "explanation": "en üstünlük zarfıdır."
-},
-{
-    "question": "“Hepsinden daha çok çalıştı.” cümlesinde “daha” nedir?",
-    "options": [
-        "A) Bağlaç",
-        "B) Üstünlük belirteci",
-        "C) Sıfat",
-        "D) Edat"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "daha karşılaştırmalı üstünlüktür."
-},
-{
-    "question": "“İleri ülkeler daha demokratiktir.” cümlesinde “ileri” nedir?",
-    "options": [
-        "A) Zarf",
-        "B) Ad",
-        "C) Sıfat",
-        "D) Zamir"
-    ],
-    "correctAnswerIndex": 2,
-    "explanation": "ileri + ülkeler."
-},
-{
-    "question": "“Bizi ileride bekleyin.” cümlesinde “ileride” nedir?",
-    "options": [
-        "A) Ad",
-        "B) Sıfat",
-        "C) Zarf",
-        "D) Edat"
-    ],
-    "correctAnswerIndex": 2,
-    "explanation": "Nerede bekleyin? → yer-yön zarfı."
-},
-{
-    "question": "“Biraz ileri gider misiniz?” cümlesinde “ileri” nedir?",
+    "question": "“Dikkatli çocuk” ifadesinde “dikkatli” hangi sözcük türüdür?",
     "options": [
         "A) Zarf",
         "B) Sıfat",
         "C) Ad",
-        "D) Zamir"
+        "D) Edat"
     ],
-    "correctAnswerIndex": 0,
-    "explanation": "Nereye gidin?"
+    "correctAnswerIndex": 1,
+    "explanation": "Çocuk adını niteliyor."
 },
 {
-    "question": "Aşağıdakilerden hangisi zaman anlamı taşımasına rağmen zarf değildir?",
+    "question": "“Dikkatli davranıyordu.” cümlesinde “dikkatli” hangi sözcük türüdür?",
     "options": [
-        "A) Dün geldim.",
-        "B) Akşam gideceğiz.",
-        "C) Akşam şairlerin ilham kaynağıdır.",
-        "D) Birazdan başlayacak."
+        "A) Sıfat",
+        "B) Zarf",
+        "C) Ad",
+        "D) Fiil"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Davranmak fiilini etkiliyor."
+},
+{
+    "question": "“Akşam, şairlerin ilhamıdır.” cümlesinde “akşam” hangi sözcük türüdür?",
+    "options": [
+        "A) Zarf",
+        "B) Ad (özne)",
+        "C) Sıfat",
+        "D) Edat"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Tek başına varlığı karşılıyor; özne."
+},
+{
+    "question": "“Akşam gideceğiz.” cümlesinde “akşam” hangi sözcük türüdür?",
+    "options": [
+        "A) Ad",
+        "B) Zaman zarfı",
+        "C) Sıfat",
+        "D) Yüklem"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Gitmek fiilini etkiliyor."
+},
+{
+    "question": "“İçeri kapı” ifadesinde “içeri” hangi sözcük türüdür?",
+    "options": [
+        "A) Zarf",
+        "B) Sıfat",
+        "C) Ad",
+        "D) Edat"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Kapı adının önünde sıfat."
+},
+{
+    "question": "Zarfın cümledeki yeri hakkında aşağıdakilerden hangisi doğrudur?",
+    "options": [
+        "A) Yalnız cümle başında olur.",
+        "B) Cümlenin her yerine gelebilir.",
+        "C) Yalnız fiilden sonra gelir.",
+        "D) Asla taşınmaz."
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Yarın sinemaya gideceğiz / gideceğiz yarın ikisi de doğru."
+},
+{
+    "question": "Zarf bulma yönteminde fiile sorulacak soru hangisi değildir?",
+    "options": [
+        "A) Ne zaman?",
+        "B) Nereye?",
+        "C) Kim?",
+        "D) Nasıl?"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "Özne olduğu için addır."
+    "explanation": "Kim? özne sorusudur; zarf sorusu değil."
+},
+{
+    "question": "Fiile “eve” cevabı verilirse bu sözcük zarf mıdır?",
+    "options": [
+        "A) Evet, yer zarfı",
+        "B) Hayır, yer tamlayıcısı (ad)",
+        "C) Evet, durum zarfı",
+        "D) Evet, soru zarfı"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Cevap ad ise zarf değil yer tamlayıcısıdır."
+},
+{
+    "question": "“Çok hızlı koştu.” cümlesinde “çok” hangi sözcüğü etkiler?",
+    "options": [
+        "A) Fiili doğrudan",
+        "B) Hızlı zarfını",
+        "C) Özneyi",
+        "D) Nesneyi"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Miktar zarfı başka zarfı da etkileyebilir."
+},
+{
+    "question": "Aşağıdakilerden hangisi durum zarfıdır?",
+    "options": [
+        "A) Sabah",
+        "B) Yavaşça",
+        "C) İçeri",
+        "D) Yarın"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Yavaşça nasıl? sorusuna cevap."
+},
+{
+    "question": "Aşağıdakilerden hangisi zaman zarfıdır?",
+    "options": [
+        "A) Dışarı",
+        "B) Birazdan",
+        "C) Güzel",
+        "D) Çok"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Birazdan ne zaman? sorusuna cevap."
+},
+{
+    "question": "Aşağıdakilerden hangisi yanlıştır?",
+    "options": [
+        "A) Zarf fiili etkileyebilir.",
+        "B) Yer-yön sözcüğü addan önce gelirse sıfat olur.",
+        "C) Miktar zarfı yalnız fiili etkiler.",
+        "D) Zarf cümlede taşınabilir."
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Miktar zarfı fiili, sıfatı ve zarfı etkileyebilir."
+},
+{
+    "question": "Zarf–sıfat–ad ayrımında alt kural nedir?",
+    "options": [
+        "A) Yanında ad varsa zarf.",
+        "B) Yanında ad varsa sıfat; fiili etkiliyorsa zarf.",
+        "C) Her zaman fiildir.",
+        "D) Edat ise zarf sayılır."
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Notlardaki karışıklık çözümü."
+},
+{
+    "question": "“Dün yağmur yağdı.” cümlesinde “dün” hangi zarf türüdür?",
+    "options": [
+        "A) Durum",
+        "B) Zaman",
+        "C) Yer-yön",
+        "D) Soru"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Ne zaman? → dün."
+},
+{
+    "question": "“Pek güzel” ifadesinde “pek” hangi zarf türüdür?",
+    "options": [
+        "A) Durum",
+        "B) Miktar",
+        "C) Zaman",
+        "D) Soru"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Ne kadar? sorusuna cevap."
+},
+{
+    "question": "“Neden kızıyorsun?” cümlesinde “neden” hangi zarf türüdür?",
+    "options": [
+        "A) Soru sıfatı",
+        "B) Soru zarfı",
+        "C) Edat",
+        "D) Bağlaç"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Fiili soru yoluyla belirtir."
+},
+{
+    "question": "Aşağıdakilerden hangisi doğrudur?",
+    "options": [
+        "A) Zarf temel olarak fiili etkiler.",
+        "B) Zarf yalnız addan önce gelir.",
+        "C) Zarf kip eki alır.",
+        "D) Zarf varlığı doğrudan karşılar."
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Zarfın altın kuralı."
+},
+{
+    "question": "“Geri döndü.” cümlesinde “geri” hangi zarf türüdür?",
+    "options": [
+        "A) Zaman",
+        "B) Yer-yön",
+        "C) Durum",
+        "D) Miktar"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Nereye/nereye doğru? yer-yön zarfı."
 }
 ];
