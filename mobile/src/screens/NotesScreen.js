@@ -42,9 +42,9 @@ var htmlTags = {
     i: { fontStyle: "italic", color: C.body },
     b: { fontWeight: "800", color: C.navy },
     strong: { fontWeight: "800", color: C.navy },
-    h3: { fontSize: 14, fontWeight: "800", color: C.goldInk, margin: 0 },
-    h4: { fontSize: 15, fontWeight: "800", color: C.navy, margin: 0 },
-    h5: { fontSize: 14, fontWeight: "800", color: C.navy, margin: 0 },
+    h3: { fontSize: 15, fontWeight: "800", color: C.goldInk, margin: 0, letterSpacing: 0.2 },
+    h4: { fontSize: 13, fontWeight: "800", color: C.navy, margin: 0, letterSpacing: 0.6, textTransform: "uppercase" },
+    h5: { fontSize: 13, fontWeight: "700", color: C.muted, margin: 0 },
 };
 
 var htmlTagsDark = {
@@ -58,9 +58,9 @@ var htmlTagsDark = {
     i: { fontStyle: "italic", color: "#E2E8F0" },
     b: { fontWeight: "800", color: "#F8FAFC" },
     strong: { fontWeight: "800", color: "#F8FAFC" },
-    h3: { fontSize: 14, fontWeight: "800", color: "#FDE68A", margin: 0 },
-    h4: { fontSize: 15, fontWeight: "800", color: "#F8FAFC", margin: 0 },
-    h5: { fontSize: 14, fontWeight: "800", color: "#F8FAFC", margin: 0 },
+    h3: { fontSize: 15, fontWeight: "800", color: "#FDE68A", margin: 0, letterSpacing: 0.2 },
+    h4: { fontSize: 13, fontWeight: "800", color: "#F8FAFC", margin: 0, letterSpacing: 0.6, textTransform: "uppercase" },
+    h5: { fontSize: 13, fontWeight: "700", color: "#94A3B8", margin: 0 },
 };
 
 var ignored = ["width", "minWidth", "maxWidth", "height", "flex", "flexDirection", "flexGrow", "flexShrink", "flexBasis", "position", "left", "right", "top", "bottom", "display", "color", "backgroundColor"];
@@ -86,8 +86,8 @@ var NoteRich = memo(function NoteRich(props) {
 
 var BadgeRow = memo(function BadgeRow(props) {
     return (
-        <View style={styles.badge}>
-            <NoteRich html={props.html} dark={props.dark} />
+        <View style={[styles.badge, props.dark && styles.badgeDark]}>
+            <NoteRich html={"<h3>" + props.html + "</h3>"} dark={true} />
         </View>
     );
 });
@@ -95,7 +95,15 @@ var BadgeRow = memo(function BadgeRow(props) {
 var HeadingRow = memo(function HeadingRow(props) {
     return (
         <View style={styles.heading}>
-            <NoteRich html={props.html} dark={props.dark} />
+            <NoteRich html={"<h4>" + props.html + "</h4>"} dark={props.dark} />
+        </View>
+    );
+});
+
+var KickerRow = memo(function KickerRow(props) {
+    return (
+        <View style={styles.kickerRow}>
+            <NoteRich html={"<h5>" + props.html + "</h5>"} dark={props.dark} />
         </View>
     );
 });
@@ -192,8 +200,10 @@ export default function NotesScreen({ route, navigation }) {
     }, [ders, konu, sorular, navigation]);
 
     var renderItem = useCallback(function ({ item }) {
-        if (item.type === "badge") return <BadgeRow html={item.html} dark={false} />;
+        if (item.type === "title") return <BadgeRow html={item.html} dark={isDark} />;
         if (item.type === "heading") return <HeadingRow html={item.html} dark={isDark} />;
+        if (item.type === "kicker") return <KickerRow html={item.html} dark={isDark} />;
+        if (item.type === "badge") return <BadgeRow html={item.html} dark={isDark} />;
         if (item.type === "img") return <ImgCard src={item.src} dark={isDark} />;
         if (item.type === "table") return <TableCard html={item.html} dark={isDark} />;
         return <ItemCard html={item.html} dark={isDark} />;
@@ -316,17 +326,25 @@ var styles = StyleSheet.create({
     badge: {
         alignSelf: "flex-start",
         maxWidth: "100%",
-        backgroundColor: C.goldSoft,
-        borderRadius: 999,
-        paddingVertical: 8,
+        backgroundColor: C.navy,
+        borderRadius: 12,
+        paddingVertical: 10,
         paddingHorizontal: 14,
-        marginBottom: 12,
-        borderWidth: 1,
-        borderColor: "#FDE68A",
+        marginBottom: 14,
+    },
+    badgeDark: {
+        backgroundColor: "#020617",
     },
     heading: {
+        marginTop: 14,
         marginBottom: 8,
-        marginTop: 4,
+        paddingLeft: 10,
+        borderLeftWidth: 3,
+        borderLeftColor: C.gold,
+    },
+    kickerRow: {
+        marginTop: 8,
+        marginBottom: 6,
     },
     itemCard: {
         flexDirection: "row",

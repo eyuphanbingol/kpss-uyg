@@ -1655,13 +1655,47 @@ function KonuHub(props) {
     );
 }
 
+function looksHeadingText(text) {
+    var t = String(text || "").replace(/\s+/g, " ").trim();
+    if (!t || t.length > 80) return false;
+    if (/[:：]\s+\S{8,}/.test(t)) return false;
+    return true;
+}
+
+function hasBlockChild(html) {
+    return /<(ul|ol|table|img|p|h[1-6])\b/i.test(String(html || ""));
+}
+
+function promoteNoteHeadings(root) {
+    Array.prototype.slice.call(root.querySelectorAll("span.inline-flex")).forEach(function (sp) {
+        var h = document.createElement("h3");
+        h.className = "note-title";
+        h.innerHTML = sp.innerHTML;
+        sp.parentNode.replaceChild(h, sp);
+    });
+    Array.prototype.slice.call(root.querySelectorAll("p, div")).forEach(function (el) {
+        if (el.querySelector("ul,ol,table,img,p,h3,h4,h5")) return;
+        var cls = String(el.getAttribute("class") || "");
+        var text = (el.textContent || "").replace(/\s+/g, " ").trim();
+        var boldish = /font-bold|font-black|tracking-wider/.test(cls);
+        var onlyLabel = el.children.length <= 1 && el.querySelector("b,strong") && text.length <= 80 && !/[:：]\s+\S{8,}/.test(text);
+        if (!(boldish || onlyLabel) || !looksHeadingText(text)) return;
+        var h = document.createElement("h4");
+        h.className = "note-sub";
+        h.innerHTML = el.innerHTML;
+        el.parentNode.replaceChild(h, el);
+    });
+}
+
 function shapeNoteHtml(html) {
     if (typeof document === "undefined") return html;
     var root = document.createElement("div");
     root.innerHTML = String(html || "");
-    Array.prototype.slice.call(root.children).forEach(function (el, i) {
-        if (i === 0 && el.querySelector && el.querySelector("span.inline-flex")) return;
+    promoteNoteHeadings(root);
+    Array.prototype.slice.call(root.children).forEach(function (el) {
         var tag = el.tagName;
+        if (tag === "H3" || tag === "H4" || tag === "H5" || tag === "H6") return;
+        if (el.querySelector && el.querySelector("span.inline-flex, h3.note-title")) return;
         if (tag === "UL" || tag === "OL" || tag === "P" || tag === "TABLE") {
             var pack = document.createElement("div");
             pack.className = "note-pack";
@@ -1672,6 +1706,7 @@ function shapeNoteHtml(html) {
     root.querySelectorAll("li").forEach(function (li) { li.classList.add("note-chip"); });
     root.querySelectorAll(".flex-wrap > span, [class*='flex-wrap'] > span").forEach(function (sp) {
         if (sp.classList.contains("inline-flex")) return;
+        if (sp.closest && sp.closest("h3,h4,.note-title,.note-sub")) return;
         sp.classList.add("note-chip");
     });
     return root.innerHTML;

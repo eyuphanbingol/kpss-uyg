@@ -1,8 +1,49 @@
-function normalizeNoteHtml(raw) {
-    var s = String(raw || "");
-    s = s.replace(/<span([^>]*\binline-flex\b[^>]*)>([\s\S]*?)<\/span>/gi, function (_m, _attrs, inner) {
+function stripTags(html) {
+    return String(html || "")
+        .replace(/<br\s*\/?>/gi, " ")
+        .replace(/<[^>]+>/g, " ")
+        .replace(/&nbsp;/gi, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+function looksHeadingText(text) {
+    var t = String(text || "").trim();
+    if (!t || t.length > 72) return false;
+    if (/[:：]\s+\S{10,}/.test(t)) return false;
+    return true;
+}
+
+function hasBlockChild(html) {
+    return /<(ul|ol|table|img|p|h[1-6])\b/i.test(String(html || ""));
+}
+
+function promoteHeadings(s) {
+    s = String(s || "");
+    s = s.replace(/<span([^>]*\binline-flex\b[^>]*)>([\s\S]*?)<\/span>/gi, function (_m, _a, inner) {
         return "<h3>" + inner + "</h3>";
     });
+    s = s.replace(/<p([^>]*)>([\s\S]*?)<\/p>/gi, function (m, attrs, inner) {
+        if (hasBlockChild(inner)) return m;
+        var cls = String(attrs || "");
+        var text = stripTags(inner);
+        var boldish = /font-bold|font-black|tracking-wider/i.test(cls);
+        var onlyLabel = /^\s*<(b|strong)[^>]*>[\s\S]*?<\/\1>\s*$/i.test(String(inner).trim());
+        if ((boldish || onlyLabel) && looksHeadingText(text)) {
+            return "<h4>" + inner + "</h4>";
+        }
+        return m;
+    });
+    s = s.replace(/<div([^>]*font-(?:bold|black)[^>]*)>([\s\S]*?)<\/div>/gi, function (m, _a, inner) {
+        if (hasBlockChild(inner)) return m;
+        if (!looksHeadingText(stripTags(inner))) return m;
+        return "<h4>" + inner + "</h4>";
+    });
+    return s;
+}
+
+function normalizeNoteHtml(raw) {
+    var s = promoteHeadings(raw);
     s = s.replace(/<span[^>]*>\s*<\/span>/gi, "");
     s = s.replace(/\s(?:class|style)="[^"]*"/gi, "");
     s = s.replace(/\s(?:class|style)='[^']*'/gi, "");
@@ -26,7 +67,7 @@ function pullImgs(html, blocks) {
 }
 
 function hasText(html) {
-    return String(html || "").replace(/<[^>]+>/g, " ").replace(/&nbsp;/gi, " ").replace(/\s+/g, " ").trim().length > 0;
+    return stripTags(html).length > 0;
 }
 
 function cleanGap(html) {
@@ -64,10 +105,13 @@ function parseNoteBlocks(raw) {
         var inner = m[3] || "";
         if (tag === "h3" || tag === "h1" || tag === "h2") {
             inner = pullImgs(inner, blocks);
-            if (hasText(inner)) blocks.push({ type: "badge", html: inner });
-        } else if (tag === "h4" || tag === "h5" || tag === "h6") {
+            if (hasText(inner)) blocks.push({ type: "title", html: inner });
+        } else if (tag === "h4") {
             inner = pullImgs(inner, blocks);
             if (hasText(inner)) blocks.push({ type: "heading", html: inner });
+        } else if (tag === "h5" || tag === "h6") {
+            inner = pullImgs(inner, blocks);
+            if (hasText(inner)) blocks.push({ type: "kicker", html: inner });
         } else if (tag === "p" || tag === "blockquote") {
             inner = pullImgs(inner, blocks);
             if (hasText(inner)) blocks.push({ type: "item", html: inner });
