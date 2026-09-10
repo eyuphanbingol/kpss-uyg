@@ -3,7 +3,7 @@
     "name": "Atanly",
     "slug": "eyphn",
     "scheme": "atanly",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "platforms": [
       "ios",
       "android"
@@ -18,12 +18,22 @@
     },
     "android": {
       "package": "app.atanly.mobile",
-      "versionCode": 10,
+      "versionCode": 11,
       "softwareKeyboardLayoutMode": "resize",
       "adaptiveIcon": {
         "backgroundColor": "#041C24",
         "foregroundImage": "./assets/adaptive-icon.png"
-      }
+      },
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "category": ["BROWSABLE", "DEFAULT"],
+          "data": [
+            { "scheme": "atanly", "host": "auth", "pathPrefix": "/callback" },
+            { "scheme": "atanly", "host": "reset" }
+          ]
+        }
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"

@@ -13,14 +13,11 @@
     function looksRecovery(search, hash) {
         var s = String(search || "");
         var h = String(hash || "");
-        return /(?:[?&]reset=)/.test(s)
-            || /(?:[?&]type=recovery)/.test(s)
-            || /type=recovery/.test(h)
-            || /access_token=/.test(h)
-            || /(?:[?&]access_token=)/.test(s)
-            || /(?:[?&]code=)/.test(s)
-            || /(?:[?&]token_hash=)/.test(s)
-            || /(?:[?&]token=)/.test(s);
+        var q = paramsFrom(s, h);
+        var type = String(q.get("type") || "").toLowerCase();
+        if (type === "recovery") return true;
+        if (/(?:[?&]reset=)/.test(s)) return true;
+        return false;
     }
 
     function recoveryFromUrl() {

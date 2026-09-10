@@ -185,7 +185,7 @@ export function ClozePlayScreen({ route, navigation }) {
     var konu = route.params.konu;
     var app = useApp();
     var isDark = app.dark;
-    var konular = Object.keys(app.kpssData[ders] || {});
+    var konular = Object.keys(app.kpssData[ders] || {}).filter(function (k) { return k !== "_"; });
     var konuIdx = konular.indexOf(konu);
     var open = StudentStore.isKonuOpen(ders, konular, konuIdx, app.kpssData);
     var kd = ((app.kpssData[ders] || {})[konu]) || {};
@@ -211,7 +211,13 @@ export function ClozePlayScreen({ route, navigation }) {
     useEffect(function () {
         setIdx(0); setPicked(null); setScore(0); setDone(false); setList(null);
         var id = requestAnimationFrame(function () {
-            setList(ClozeEngine.buildForKonu(kd, 12, StudentStore.solvedClozeIds(ders, konu)) || []);
+            var built = [];
+            try {
+                built = ClozeEngine.buildForKonu(kd, 12, StudentStore.solvedClozeIds(ders, konu)) || [];
+            } catch (e) {
+                built = [];
+            }
+            setList(built);
         });
         return function () { cancelAnimationFrame(id); };
     }, [seed, ders, konu]);

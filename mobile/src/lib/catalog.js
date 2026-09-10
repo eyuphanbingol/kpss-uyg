@@ -11,7 +11,10 @@ export function looksCatalog(data) {
     if (!data || typeof data !== "object") return false;
     var tarih = data.Tarih;
     var cografya = data.Cografya || data["Coğrafya"];
-    return !!(tarih && cografya && Object.keys(tarih).length >= 1 && Object.keys(tarih)[0] !== "_");
+    function realKeys(obj) {
+        return Object.keys(obj || {}).filter(function (k) { return k !== "_"; });
+    }
+    return !!(tarih && cografya && realKeys(tarih).length >= 1 && realKeys(cografya).length >= 1);
 }
 
 export function getKpssData() {

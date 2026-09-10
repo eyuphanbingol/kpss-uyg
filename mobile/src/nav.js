@@ -1,11 +1,24 @@
 export function go(navigation, name, params) {
+    if (!navigation || typeof navigation.navigate !== "function") return;
     var n = navigation;
-    var root = navigation;
-    while (n && typeof n.getParent === "function") {
-        var p = n.getParent();
-        if (!p) break;
-        root = p;
-        n = p;
+    var found = null;
+    while (n) {
+        var names = [];
+        try {
+            var state = n.getState && n.getState();
+            names = (state && state.routeNames) || [];
+        } catch (e) {
+            names = [];
+        }
+        if (names.indexOf(name) >= 0) {
+            found = n;
+            break;
+        }
+        n = typeof n.getParent === "function" ? n.getParent() : null;
     }
-    root.navigate(name, params);
+    try {
+        (found || navigation).navigate(name, params);
+    } catch (e) {
+        try { navigation.navigate(name, params); } catch (e2) {}
+    }
 }

@@ -4,11 +4,13 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Svg, { Path } from "react-native-svg";
 import * as WebBrowser from "expo-web-browser";
 import * as AuthSession from "expo-auth-session";
+import * as Linking from "expo-linking";
 import { supabase } from "../lib/supabase";
 import { trError } from "../lib/trError";
 import { StudentStore } from "../lib/store";
 import { KpssConfig } from "../lib/config";
 import { sessionStorageShim } from "../lib/storage";
+import { SITE } from "../lib/media";
 import { Chip, Field, PrimaryButton, Tap, ThemeToggle } from "../ui";
 import { needsKulvar } from "../lib/theme";
 import { BrandBackdrop } from "./SplashScreen";
@@ -202,6 +204,48 @@ export default function AuthScreen() {
         setBusy(false);
     }
 
+    function authUrlParams(url) {
+        var out = {};
+        function eat(chunk) {
+            String(chunk || "").replace(/^[?#]/, "").split("&").forEach(function (part) {
+                if (!part) return;
+                var i = part.indexOf("=");
+                var k = decodeURIComponent((i < 0 ? part : part.slice(0, i)).replace(/\+/g, " "));
+                var v = decodeURIComponent((i < 0 ? "" : part.slice(i + 1)).replace(/\+/g, " "));
+                if (k && v && !out[k]) out[k] = v;
+            });
+        }
+        var u = String(url || "");
+        var qi = u.indexOf("?");
+        var hi = u.indexOf("#");
+        if (qi >= 0) eat(u.slice(qi + 1, hi > qi ? hi : u.length));
+        if (hi >= 0) eat(u.slice(hi + 1));
+        return out;
+    }
+
+    async function sessionFromAuthUrl(url) {
+        if (!url) return false;
+        var p = authUrlParams(url);
+        if (p.error) throw new Error(p.error_description || p.error);
+        if (String(p.type || "").toLowerCase() === "recovery") {
+            throw new Error("Bu bağlantı şifre sıfırlama için. Google ile girişe tekrar bas.");
+        }
+        if (p.access_token && p.refresh_token) {
+            var set = await supabase.auth.setSession({
+                access_token: p.access_token,
+                refresh_token: p.refresh_token
+            });
+            if (set.error) throw set.error;
+            return true;
+        }
+        if (p.code) {
+            var ex = await supabase.auth.exchangeCodeForSession(url);
+            if (ex.error) throw ex.error;
+            return true;
+        }
+        return false;
+    }
+
     // ---------- Google ----------
     async function google() {
         if (mode === "up") {
@@ -213,8 +257,12 @@ export default function AuthScreen() {
         }
         setGoogleBusy(true);
         setMsg("");
+        var linkSub = null;
         try {
-            var redirectTo = AuthSession.makeRedirectUri({ scheme: "atanly", path: "auth/callback" });
+            var redirectTo = SITE + "/auth/callback";
+            linkSub = Linking.addEventListener("url", function (ev) {
+                if (ev && ev.url) sessionFromAuthUrl(ev.url).catch(function () {});
+            });
             var res = await supabase.auth.signInWithOAuth({
                 provider: "google",
                 options: { redirectTo: redirectTo, skipBrowserRedirect: true }
@@ -222,16 +270,14 @@ export default function AuthScreen() {
             if (res.error) throw res.error;
             var opened = await WebBrowser.openAuthSessionAsync(res.data.url, redirectTo);
             if (opened.type === "success" && opened.url) {
-                var url = opened.url;
-                var codeMatch = url.match(/[?&#]code=([^&]+)/);
-                if (codeMatch) {
-                    var ex = await supabase.auth.exchangeCodeForSession(url);
-                    if (ex.error) throw ex.error;
-                }
+                await sessionFromAuthUrl(opened.url);
+            } else if (opened.type === "cancel" || opened.type === "dismiss") {
+                setMsg("Google girişi iptal edildi.");
             }
         } catch (e) {
             setMsg(trError(e, "Google girişi açılamadı."));
         }
+        if (linkSub && linkSub.remove) linkSub.remove();
         setGoogleBusy(false);
     }
 
