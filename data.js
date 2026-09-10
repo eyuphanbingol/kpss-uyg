@@ -83,6 +83,10 @@ window.getKpssData = function () {
                 notlar: window.tarih_20_notlari || [],
                 sorular: window.tarih_20_sorulari || []
             },
+            "Atatürk Dönemi Türk Dış Politikası":{
+                notlar: window.tarih_21_notlari || [],
+                sorular: window.tarih_21_sorulari || []
+            },
         },
         "Coğrafya": {
             "Türkiye'nin Coğrafi Konumu": {
