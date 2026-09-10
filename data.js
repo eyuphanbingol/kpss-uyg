@@ -192,7 +192,6 @@ window.getKpssData = function () {
                 sorular:window.cografya_26_sorulari || []
             }
         },
-        // YENİ EKLENEN TÜRKÇE BÖLÜMÜ
         "Türkçe": {
             "Sözcükte Anlam": {
                 notlar: window.turkce_1_notlari || [],
@@ -202,25 +201,77 @@ window.getKpssData = function () {
                 notlar: window.turkce_2_notlari || [],
                 sorular: window.turkce_2_sorulari || []
             },
-            "Paragrafta Anlam": {
+            "Paragraf": {
                 notlar: window.turkce_3_notlari || [],
                 sorular: window.turkce_3_sorulari || []
             },
-            "Ses Bilgisi": {
+            "İsim – Zamir": {
                 notlar: window.turkce_4_notlari || [],
                 sorular: window.turkce_4_sorulari || []
             },
-            "Yazım Kuralları ve Noktalama İşaretleri": {
+            "Sıfat": {
                 notlar: window.turkce_5_notlari || [],
                 sorular: window.turkce_5_sorulari || []
             },
-            "Dil Bilgisi (Sözcük Türleri ve Cümle Ögeleri)": {
+            "Tamlamalar": {
                 notlar: window.turkce_6_notlari || [],
                 sorular: window.turkce_6_sorulari || []
             },
-            "Sözel Mantık": {
+            "Zarf": {
                 notlar: window.turkce_7_notlari || [],
                 sorular: window.turkce_7_sorulari || []
+            },
+            "Edat – Bağlaç – Ünlem": {
+                notlar: window.turkce_8_notlari || [],
+                sorular: window.turkce_8_sorulari || []
+            },
+            "Fiil": {
+                notlar: window.turkce_9_notlari || [],
+                sorular: window.turkce_9_sorulari || []
+            },
+            "Eylemsi": {
+                notlar: window.turkce_10_notlari || [],
+                sorular: window.turkce_10_sorulari || []
+            },
+            "Ekler": {
+                notlar: window.turkce_11_notlari || [],
+                sorular: window.turkce_11_sorulari || []
+            },
+            "Sözcükte Yapı": {
+                notlar: window.turkce_12_notlari || [],
+                sorular: window.turkce_12_sorulari || []
+            },
+            "Cümlenin Ögeleri": {
+                notlar: window.turkce_13_notlari || [],
+                sorular: window.turkce_13_sorulari || []
+            },
+            "Fiilde Çatı": {
+                notlar: window.turkce_14_notlari || [],
+                sorular: window.turkce_14_sorulari || []
+            },
+            "Cümle Türleri": {
+                notlar: window.turkce_15_notlari || [],
+                sorular: window.turkce_15_sorulari || []
+            },
+            "Ses Bilgisi": {
+                notlar: window.turkce_16_notlari || [],
+                sorular: window.turkce_16_sorulari || []
+            },
+            "Yazım Kuralları": {
+                notlar: window.turkce_17_notlari || [],
+                sorular: window.turkce_17_sorulari || []
+            },
+            "Sıkça Yapılan Yazım Yanlışları": {
+                notlar: window.turkce_18_notlari || [],
+                sorular: window.turkce_18_sorulari || []
+            },
+            "Noktalama İşaretleri": {
+                notlar: window.turkce_19_notlari || [],
+                sorular: window.turkce_19_sorulari || []
+            },
+            "Anlatım Bozuklukları": {
+                notlar: window.turkce_20_notlari || [],
+                sorular: window.turkce_20_sorulari || []
             }
         },
         "Vatandaşlık": {
