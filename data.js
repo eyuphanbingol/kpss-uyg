@@ -329,17 +329,37 @@ window.getKpssData = function () {
             }
         },
          "Güncel Bilgiler": {
-            "Güncel Olaylar": {
+            "Türkiye Gündemi, Ekonomi ve Nüfus": {
                 notlar: window.guncel_1_notlari || [],
                 sorular: window.guncel_1_sorulari || []
             },
-            "Uluslararası Kuruluşlar": {
+            "Savunma, Bilim ve Uzay": {
                 notlar: window.guncel_2_notlari || [],
                 sorular: window.guncel_2_sorulari || []
             },
-            "Önemli Kişiler ve Eserler": {
+            "Nobel, Oscar ve UNESCO": {
                 notlar: window.guncel_3_notlari || [],
                 sorular: window.guncel_3_sorulari || []
+            },
+            "Spor, Kuruluşlar ve Zirveler": {
+                notlar: window.guncel_4_notlari || [],
+                sorular: window.guncel_4_sorulari || []
+            },
+            "Türk Edebiyatı": {
+                notlar: window.guncel_5_notlari || [],
+                sorular: window.guncel_5_sorulari || []
+            },
+            "İlkler, Düşünce, Resim ve Müzik": {
+                notlar: window.guncel_6_notlari || [],
+                sorular: window.guncel_6_sorulari || []
+            },
+            "Dünya Edebiyatı": {
+                notlar: window.guncel_7_notlari || [],
+                sorular: window.guncel_7_sorulari || []
+            },
+            "Coğrafya, Millî Parklar ve Vefatlar": {
+                notlar: window.guncel_8_notlari || [],
+                sorular: window.guncel_8_sorulari || []
             }
         }
         
