@@ -223,15 +223,58 @@ window.getKpssData = function () {
                 sorular: window.turkce_7_sorulari || []
             }
         },
-        // YENİ EKLENEN VATANDAŞLIK BÖLÜMÜ
         "Vatandaşlık": {
-            "Hukukun Temel Kavramları - 1": {
+            "Toplumsal Düzen ve Hukuk Kavramları": {
                 notlar: window.vatandas_1_notlari || [],
                 sorular: window.vatandas_1_sorulari || []
             },
-            "Hukukun Temel Kavramları - 2": {
+            "Borçlar, Ticaret ve Devletler Özel Hukuku": {
                 notlar: window.vatandas_2_notlari || [],
                 sorular: window.vatandas_2_sorulari || []
+            },
+            "Hak Kavramı": {
+                notlar: window.vatandas_3_notlari || [],
+                sorular: window.vatandas_3_sorulari || []
+            },
+            "Türk Anayasa Tarihi": {
+                notlar: window.vatandas_4_notlari || [],
+                sorular: window.vatandas_4_sorulari || []
+            },
+            "Siyasi Hak ve Ödevler": {
+                notlar: window.vatandas_5_notlari || [],
+                sorular: window.vatandas_5_sorulari || []
+            },
+            "1982 Anayasası - Yasama": {
+                notlar: window.vatandas_6_notlari || [],
+                sorular: window.vatandas_6_sorulari || []
+            },
+            "1982 Anayasası - Yürütme": {
+                notlar: window.vatandas_7_notlari || [],
+                sorular: window.vatandas_7_sorulari || []
+            },
+            "İdare Hukuku": {
+                notlar: window.vatandas_8_notlari || [],
+                sorular: window.vatandas_8_sorulari || []
+            },
+            "Devlet Memurları (657)": {
+                notlar: window.vatandas_9_notlari || [],
+                sorular: window.vatandas_9_sorulari || []
+            },
+            "Türkiye'nin İdari Yapısı": {
+                notlar: window.vatandas_10_notlari || [],
+                sorular: window.vatandas_10_sorulari || []
+            },
+            "İnsan Hakları": {
+                notlar: window.vatandas_11_notlari || [],
+                sorular: window.vatandas_11_sorulari || []
+            },
+            "Genel Kültür - Ulusal Gelişmeler": {
+                notlar: window.vatandas_12_notlari || [],
+                sorular: window.vatandas_12_sorulari || []
+            },
+            "Önemli Düşünür ve Bilim İnsanları": {
+                notlar: window.vatandas_13_notlari || [],
+                sorular: window.vatandas_13_sorulari || []
             }
         },
          "Güncel Bilgiler": {
