@@ -1,4 +1,4 @@
-// sorular/turkce-19.js - Noktalama İşaretleri
+// sorular/turkce-19.js - Noktalama
 window.turkce_19_sorulari = [
 {
     "question": "Tamamlanmış cümlelerin sonunda hangi noktalama işareti kullanılır?",
@@ -31,7 +31,7 @@ window.turkce_19_sorulari = [
         "D) Tarih bildirdiği için"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "TBMM noktasız."
+    "explanation": "TBMM, TDK, TRT noktasız."
 },
 {
     "question": "“19. yüzyıl” yazımında noktanın görevi nedir?",
@@ -64,7 +64,7 @@ window.turkce_19_sorulari = [
         "D) Kesme"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Ögeleri virgüllü sıralı cümleler."
+    "explanation": "Geldi; konuştu; gitti."
 },
 {
     "question": "Kendisiyle ilgili açıklama veya örnek verilecek ifadenin ardından hangi işaret kullanılır?",
@@ -86,7 +86,7 @@ window.turkce_19_sorulari = [
         "D) Virgül"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Dedi: “...”"
+    "explanation": "Ali dedi: “Geliyorum.”"
 },
 {
     "question": "Karşılıklı konuşmalarda cümle başında kullanılan işaret hangisidir?",
@@ -141,7 +141,7 @@ window.turkce_19_sorulari = [
         "D) Ara söz belirtmek"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "arasında ilişkisi."
+    "explanation": "1914-1918, Türk-Alman arasında."
 },
 {
     "question": "Eş görevli söz ve söz öbeklerini ayırmada hangi işaret kullanılır?",
@@ -152,7 +152,7 @@ window.turkce_19_sorulari = [
         "D) İki nokta"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Virgül eş görev ayırır."
+    "explanation": "elma, armut, çilek."
 },
 {
     "question": "Hitaplardan sonra hangi işaret kullanılır?",
@@ -163,7 +163,7 @@ window.turkce_19_sorulari = [
         "D) Kesme"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Sevgili annem,"
+    "explanation": "Sevgili anne,"
 },
 {
     "question": "Eksiltili cümlelerin sonunda hangi işaret kullanılır?",
@@ -174,7 +174,7 @@ window.turkce_19_sorulari = [
         "D) Ünlem"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Üç nokta."
+    "explanation": "Oğlan dayıya, kız halaya..."
 },
 {
     "question": "Bilinmeyen veya kesin olmayan tarihlerin ardından hangi işaret kullanılabilir?",
@@ -185,7 +185,7 @@ window.turkce_19_sorulari = [
         "D) Nokta"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Fatih 1481(?)"
+    "explanation": "1920? belirsiz tarih."
 },
 {
     "question": "Özel adlara getirilen çekim eklerini ayırmak için hangi işaret kullanılır?",
@@ -196,7 +196,7 @@ window.turkce_19_sorulari = [
         "D) Kısa çizgi"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Ankara’ya."
+    "explanation": "Ali’yi, Ankara’da."
 },
 {
     "question": "Kurum ve kuruluş adlarına gelen çekim eklerinde hangisi doğrudur?",
@@ -207,7 +207,7 @@ window.turkce_19_sorulari = [
         "D) Tırnak kullanılır."
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Türkiye Büyük Millet Meclisine."
+    "explanation": "Türk Dil Kurumuna (kesme yok)."
 },
 {
     "question": "“Zeki (!) olduğunu herkes bilir.” cümlesindeki ünlem işaretinin görevi nedir?",
@@ -218,6 +218,171 @@ window.turkce_19_sorulari = [
         "D) Seslenme"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Alay / inanmama."
+    "explanation": "Parantez içi ünlem: inanmama/ters anlam."
+},
+{
+    "question": "“23.04.1920” tarih yazımında nokta neden kullanılır?",
+    "options": [
+        "A) Ay yazıyla yazıldığı için",
+        "B) Tarih rakamla yazıldığı için",
+        "C) Özel ad olduğu için",
+        "D) Kısaltma olduğu için"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Sayıyla yazılan tarihlerde nokta vardır."
+},
+{
+    "question": "“Ali; Ayşe, Zeynep ve Can’ı çağırdı.” cümlesinde noktalı virgül neden kullanılmıştır?",
+    "options": [
+        "A) Cümle sonu",
+        "B) Virgülle çözülemeyen belirsizlik",
+        "C) Aktarma",
+        "D) Hitap"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Ali mi yoksa Ayşe mi çağrıldı belirsizliği."
+},
+{
+    "question": "Sıralı cümleleri ayırmak için hangi işaret kullanılır?",
+    "options": [
+        "A) Nokta",
+        "B) Virgül",
+        "C) Kesme",
+        "D) Tırnak"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Kalktı, yıkandı, giyindi."
+},
+{
+    "question": "“Genç, adama baktı.” cümlesinde virgül neden kullanılmıştır?",
+    "options": [
+        "A) Hitap",
+        "B) Anlam karışıklığını önlemek",
+        "C) Tarih",
+        "D) Kısaltma"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Genç adama / Genç, adama ayrımı."
+},
+{
+    "question": "“Üç renk vardır: kırmızı, mavi, yeşil.” cümlesinde iki noktanın görevi nedir?",
+    "options": [
+        "A) Cümle sonu",
+        "B) Açıklama/örnek getirmek",
+        "C) Soru",
+        "D) Kesme"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "İki nokta açıklama öncesi."
+},
+{
+    "question": "“Çalıkuşu” roman adı hangi işaretle yazılır?",
+    "options": [
+        "A) Parantez",
+        "B) Tırnak",
+        "C) Kesme",
+        "D) Kısa çizgi"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Yapıt adları tırnak içinde."
+},
+{
+    "question": "Sözün bitmediğini göstermek için hangi işaret kullanılır?",
+    "options": [
+        "A) Nokta",
+        "B) Üç nokta",
+        "C) Virgül",
+        "D) Kesme"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Bilmiyorum ki..."
+},
+{
+    "question": "“Geldi mi?” cümlesinde hangi işaret kullanılır?",
+    "options": [
+        "A) Nokta",
+        "B) Soru işareti",
+        "C) Ünlem",
+        "D) Virgül"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Soru cümlesi sonu ?"
+},
+{
+    "question": "“Ne güzel!” cümlesinde hangi işaret kullanılır?",
+    "options": [
+        "A) Soru",
+        "B) Ünlem",
+        "C) Nokta",
+        "D) Virgül"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Duygu/sevinç ünlem."
+},
+{
+    "question": "“Ey Türk gençliği!” cümlesinde ünlem işaretinin görevi nedir?",
+    "options": [
+        "A) Soru",
+        "B) Seslenme",
+        "C) Eksilti",
+        "D) Kısaltma"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Seslenme/hitapta ünlem."
+},
+{
+    "question": "“TDK’nin” yazımında kesme işaretinin görevi nedir?",
+    "options": [
+        "A) Özel ada ek",
+        "B) Kısaltmaya ek",
+        "C) Kurum adına ek",
+        "D) Sayıya ek"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Kısaltmaya gelen ek kesmeyle ayrılır."
+},
+{
+    "question": "“1965’te” yazımında kesme işaretinin görevi nedir?",
+    "options": [
+        "A) Özel ada ek",
+        "B) Sayıya ek",
+        "C) Kısaltmaya ek",
+        "D) Fiil eki"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Rakama gelen ek kesmeyle ayrılır."
+},
+{
+    "question": "“5. sınıf” ifadesinde noktanın görevi nedir?",
+    "options": [
+        "A) Cümle sonu",
+        "B) Sıra sayısı",
+        "C) Kısaltma",
+        "D) Tarih"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Sıra sayılarında nokta."
+},
+{
+    "question": "“Dr.” kısaltmasında nokta neden vardır?",
+    "options": [
+        "A) Cümle sonu",
+        "B) Kısaltma göstergesi",
+        "C) Sıra sayısı",
+        "D) Eksilti"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Prof., Dr., vb. noktalı kısaltma."
+},
+{
+    "question": "“M.Ö.” gibi kısaltmalarda nokta hangi amaçla kullanılır?",
+    "options": [
+        "A) Virgül yerine",
+        "B) Kısaltma harflerini ayırmak",
+        "C) Soru",
+        "D) Kesme"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Kısaltmalarda nokta kullanılır."
 }
 ];

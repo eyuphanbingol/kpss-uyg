@@ -20,7 +20,7 @@ window.turkce_17_sorulari = [
         "D) Noktalı"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "güneydoğu bitişik."
+    "explanation": "güneydoğu, kuzeybatı bitişik ve küçük harfle."
 },
 {
     "question": "“Onu ben de tanıyorum.” cümlesinde “de” nasıl yazılır?",
@@ -130,7 +130,7 @@ window.turkce_17_sorulari = [
         "D) Ekine"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Hece esası."
+    "explanation": "Hece esası; tek harf satırda kalmaz."
 },
 {
     "question": "“Hissetmek” neden bitişik yazılır?",
@@ -185,7 +185,7 @@ window.turkce_17_sorulari = [
         "D) Noktalı"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "ağır ağır ayrı."
+    "explanation": "baş başa, yan yana, art arda ayrı."
 },
 {
     "question": "“Üç yüz altmış beş kişi” yazımında sayı sözcükleri nasıl yazılır?",
@@ -219,5 +219,170 @@ window.turkce_17_sorulari = [
     ],
     "correctAnswerIndex": 1,
     "explanation": "Devlet adı büyük harfle yazılır."
+},
+{
+    "question": "Cümle başında hangi harf kullanılır?",
+    "options": [
+        "A) Küçük",
+        "B) Büyük",
+        "C) İtalik",
+        "D) Tırnak içinde"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Cümle başı büyük harfle başlar."
+},
+{
+    "question": "“Doğu Karadeniz” ifadesinde “Doğu” neden büyük yazılır?",
+    "options": [
+        "A) Cümle başı olduğu için",
+        "B) Özel adın başındaki yön adı olduğu için",
+        "C) Kurum adı olduğu için",
+        "D) Din adı olduğu için"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Özel adla birleşen yön adları büyük yazılır."
+},
+{
+    "question": "Aşağıdakilerden hangisi özel ad örneğidir?",
+    "options": [
+        "A) güzel",
+        "B) Ankara",
+        "C) hızlı",
+        "D) yeni"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Ankara özel addır, büyük harfle başlar."
+},
+{
+    "question": "“Sayın Başkan” ifadesinde büyük harf kullanımının nedeni nedir?",
+    "options": [
+        "A) Cümle başı",
+        "B) Unvan ve saygı sözcüğü",
+        "C) Yön adı",
+        "D) İkileme"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Unvan ve saygı sözcükleri büyük yazılır."
+},
+{
+    "question": "“Türkçe” sözcüğü neden büyük harfle başlar?",
+    "options": [
+        "A) Cümle başı",
+        "B) Dil adı",
+        "C) Yön adı",
+        "D) Sayı adı"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Dil adları büyük harfle yazılır."
+},
+{
+    "question": "“Kitapta okudum.” cümlesinde “-ta” neden kullanılmıştır?",
+    "options": [
+        "A) Bağlaç de sertleştiği için",
+        "B) Hâl eki sert ünsüzden sonra -ta/-te aldığı için",
+        "C) Ki eki olduğu için",
+        "D) Soru eki olduğu için"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "kitap + ta; sert ünsüzden sonra -ta/-te."
+},
+{
+    "question": "Bağlaç “de”yi ayırt etme testi hangisidir?",
+    "options": [
+        "A) de/da’yı çıkar; anlam bozulmuyorsa bağlaç",
+        "B) de/da’yı büyük yaz",
+        "C) de/da’yı kesme ile ayır",
+        "D) de/da’yı bitişik yaz"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Anlam bozulmuyorsa bağlaç → ayrı."
+},
+{
+    "question": "“Benimki daha güzel.” cümlesindeki “-ki” hangi türdedir?",
+    "options": [
+        "A) Bağlaç ki",
+        "B) Kalıplaşmış ki",
+        "C) Sıfat yapan -ki",
+        "D) İlgi zamiri -ki"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "benimki ilgi zamiridir, bitişik."
+},
+{
+    "question": "Aşağıdakilerden hangisi kalıplaşmış “ki”li sözcüktür?",
+    "options": [
+        "A) anladım ki",
+        "B) belki",
+        "C) akşam ki",
+        "D) senin ki"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "belki, mademki, halbuki bitişik kalıplaşmıştır."
+},
+{
+    "question": "“23.04.1920” tarih yazımında nokta neden vardır?",
+    "options": [
+        "A) Ay yazıyla yazıldığı için",
+        "B) Tarih tamamen rakamla yazıldığı için",
+        "C) Özel ad olduğu için",
+        "D) Kısaltma olduğu için"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Sayıyla yazılan tarihlerde nokta kullanılır."
+},
+{
+    "question": "“TBMM’de” yazımında ek neden kesmeyle ayrılmıştır?",
+    "options": [
+        "A) Kurum adı olduğu için",
+        "B) Kısaltmaya ek geldiği için",
+        "C) Özel ada ek geldiği için",
+        "D) Sayıya ek geldiği için"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Kısaltmaya gelen ek kesmeyle ayrılır."
+},
+{
+    "question": "“100’ün” yazımı hangi kurala uyar?",
+    "options": [
+        "A) İkileme ayrı yazılır",
+        "B) Sayıya gelen ek kesmeyle ayrılır",
+        "C) Bağlaç ki ayrıdır",
+        "D) Hâl eki bitişiktir"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Sayı + ek: 100’ün, 1965’te."
+},
+{
+    "question": "“Hasta olmak” neden ayrı yazılır?",
+    "options": [
+        "A) Ses olayı vardır",
+        "B) Kaynaşmamış birleşik fiildir",
+        "C) İkilemedir",
+        "D) Deyimdir"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "hasta olmak kaynaşmamış, ayrı yazılır."
+},
+{
+    "question": "Aşağıdakilerden hangisi ikileme olarak ayrı yazılır?",
+    "options": [
+        "A) paramparça",
+        "B) baş başa",
+        "C) hissetmek",
+        "D) bilinçaltı"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "baş başa, yan yana, art arda ayrı ikilemedir."
+},
+{
+    "question": "“Geldi mi?” cümlesinde “mi” nasıl yazılmıştır?",
+    "options": [
+        "A) Bitişik",
+        "B) Ayrı",
+        "C) Kesme ile",
+        "D) Tire ile"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "mi her zaman ayrı yazılır."
 }
 ];

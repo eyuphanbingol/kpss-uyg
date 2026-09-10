@@ -34,7 +34,7 @@ window.turkce_18_sorulari = [
     "explanation": "akşamüstü bitişik."
 },
 {
-    "question": "“Alçakgönüllü” kelimesinin doğru yazımı hangisidir?",
+    "question": "“Alçak gönüllü” ifadesinin TDK’ye göre doğru yazımı hangisidir?",
     "options": [
         "A) Alçak gönüllü",
         "B) Alçakgönüllü",
@@ -42,7 +42,7 @@ window.turkce_18_sorulari = [
         "D) Alçak gönül-lü"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "PDF/anahtara göre ayrı yazım hedeflenir; TDK’de bitişik biçim de görülür — soru bankası A’yı doğru sayar."
+    "explanation": "TDK: alçak gönüllü (ayrı)."
 },
 {
     "question": "“Ard arda” kelimesinin doğru yazımı hangisidir?",
@@ -53,7 +53,7 @@ window.turkce_18_sorulari = [
         "D) Ard-arda"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "art arda."
+    "explanation": "art arda ayrı."
 },
 {
     "question": "“Başbaşa” kelimesinin doğru yazımı hangisidir?",
@@ -61,7 +61,7 @@ window.turkce_18_sorulari = [
         "A) Baş başa",
         "B) Başbaşa",
         "C) Baş-başa",
-        "D) Başbaşa"
+        "D) Başbaşaa"
     ],
     "correctAnswerIndex": 0,
     "explanation": "baş başa ayrı."
@@ -192,7 +192,7 @@ window.turkce_18_sorulari = [
     "options": [
         "A) İnsiyatif",
         "B) İnisiyatif",
-        "C) İnsiyatif ",
+        "C) İnsiyatıf",
         "D) İnisiyatıf"
     ],
     "correctAnswerIndex": 1,
@@ -218,6 +218,171 @@ window.turkce_18_sorulari = [
         "D) Herhangi-bir"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "herhangi bir."
+    "explanation": "herhangi bir ayrı."
+},
+{
+    "question": "“Baş vurmak” ifadesinin doğru yazımı hangisidir?",
+    "options": [
+        "A) Baş vurmak",
+        "B) Başvurmak",
+        "C) Baş-vurmak",
+        "D) Başvur"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "başvurmak bitişik."
+},
+{
+    "question": "“His etmek” ifadesinin doğru yazımı hangisidir?",
+    "options": [
+        "A) His etmek",
+        "B) Hissetmek",
+        "C) His-etmek",
+        "D) Hiss etmek"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "hissetmek bitişik (ses olayı)."
+},
+{
+    "question": "“Af etmek” ifadesinin doğru yazımı hangisidir?",
+    "options": [
+        "A) Af etmek",
+        "B) Affetmek",
+        "C) Af-etmek",
+        "D) Affedetmek"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "affetmek bitişik."
+},
+{
+    "question": "“Red etmek” ifadesinin doğru yazımı hangisidir?",
+    "options": [
+        "A) Red etmek",
+        "B) Reddetmek",
+        "C) Red-etmek",
+        "D) Rededetmek"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "reddetmek bitişik."
+},
+{
+    "question": "“Köpekbalığı” ifadesinin doğru yazımı hangisidir?",
+    "options": [
+        "A) Köpekbalığı",
+        "B) Köpek balığı",
+        "C) Köpek-balığı",
+        "D) Köpekbalıgı"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "köpek balığı ayrı (hayvan adı)."
+},
+{
+    "question": "“Hastaolmak” ifadesinin doğru yazımı hangisidir?",
+    "options": [
+        "A) Hastaolmak",
+        "B) Hasta olmak",
+        "C) Hasta-olmak",
+        "D) Hastaolmek"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "hasta olmak ayrı (kaynaşmamış)."
+},
+{
+    "question": "Aşağıdakilerden hangisi bitişik yazılır?",
+    "options": [
+        "A) art arda",
+        "B) ön yargı",
+        "C) açıortay",
+        "D) baş başa"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "açıortay, akşamüstü, bilinçaltı bitişik."
+},
+{
+    "question": "Aşağıdakilerden hangisi ayrı yazılır?",
+    "options": [
+        "A) bilinçaltı",
+        "B) önsezi",
+        "C) art arda",
+        "D) akşamüstü"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "art arda, baş başa, peş peşe ayrı."
+},
+{
+    "question": "“Restorant” kelimesinin doğru yazımı hangisidir?",
+    "options": [
+        "A) Restorant",
+        "B) Restoran",
+        "C) Restorantt",
+        "D) Restorann"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "restoran."
+},
+{
+    "question": "“Stajer” yerine hangi biçim kullanılmalıdır?",
+    "options": [
+        "A) Stajer",
+        "B) Stajyer",
+        "C) Stajerh",
+        "D) Stajerer"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "stajyer."
+},
+{
+    "question": "“Süpriz” yerine hangi biçim kullanılmalıdır?",
+    "options": [
+        "A) Süpriz",
+        "B) Sürpriz",
+        "C) Süprizz",
+        "D) Sürpirz"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "sürpriz."
+},
+{
+    "question": "“Teneffüz” yerine TDK’ye göre hangi biçim doğrudur?",
+    "options": [
+        "A) Teneffüz",
+        "B) Teneffüs",
+        "C) Tenefüs",
+        "D) Teneffuz"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "teneffüs."
+},
+{
+    "question": "“Traş” yerine hangi biçim doğrudur?",
+    "options": [
+        "A) Traş",
+        "B) Tıraş",
+        "C) Tiraş",
+        "D) Traaş"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "tıraş."
+},
+{
+    "question": "“Ünvan” yerine hangi biçim doğrudur?",
+    "options": [
+        "A) Ünvan",
+        "B) Unvan",
+        "C) Unvann",
+        "D) Ünvann"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "unvan."
+},
+{
+    "question": "“Vaadetmek” yerine hangi biçim doğrudur?",
+    "options": [
+        "A) Vaadetmek",
+        "B) Vadetmek",
+        "C) Vaad etmek",
+        "D) Vadettmek"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "vadetmek."
 }
 ];
