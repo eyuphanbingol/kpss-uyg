@@ -1510,6 +1510,10 @@ function MapPlay(props) {
 function DersHome(props) {
     const kpssData = props.kpssData;
     const stats = StudyPlanner.catalogStats(kpssData);
+    var groups = (window.AlanCatalog && window.AlanCatalog.groupCatalogDersler)
+        ? window.AlanCatalog.groupCatalogDersler(kpssData)
+        : [{ id: "all", title: "", dersler: Object.keys(kpssData) }];
+    var labelOf = (window.AlanCatalog && window.AlanCatalog.dersLabel) ? window.AlanCatalog.dersLabel : function (d) { return d; };
     return (
         <Shell>
             <div className="flex justify-between items-start mb-8">
@@ -1519,23 +1523,34 @@ function DersHome(props) {
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
-            <div className="space-y-3">
-                {Object.keys(kpssData).map(function (ders) {
-                    const t = themeFor(ders, props.isDark);
-                    const s = stats[ders] || { konuSayisi: 0, soruSayisi: 0 };
-                    if (!s.konuSayisi && !s.soruSayisi) return null;
+            <div className="space-y-8">
+                {groups.map(function (g) {
+                    var cards = g.dersler.map(function (ders) {
+                        const t = themeFor(ders, props.isDark);
+                        const s = stats[ders] || { konuSayisi: 0, soruSayisi: 0 };
+                        if (!s.konuSayisi && !s.soruSayisi) return null;
+                        return (
+                            <button key={ders} onClick={function () { props.onDers(ders); }}
+                                className="w-full text-left p-5 rounded-3xl glass card-hover flex items-center gap-5 group">
+                                <div className="h-14 w-14 rounded-2xl ders-icon flex items-center justify-center text-2xl shrink-0">
+                                    {t.icon}
+                                </div>
+                                <div className="min-w-0 flex-1">
+                                    <h2 className="font-bold text-stone-800 dark:text-stone-100 text-lg">{labelOf(ders)}</h2>
+                                    <p className="text-sm text-stone-400">{s.konuSayisi} konu · {s.soruSayisi} soru</p>
+                                </div>
+                                <span className="text-stone-300 group-hover:text-indigo-500 transition-colors text-xl">→</span>
+                            </button>
+                        );
+                    }).filter(Boolean);
+                    if (!cards.length) return null;
                     return (
-                        <button key={ders} onClick={function () { props.onDers(ders); }}
-                            className="w-full text-left p-5 rounded-3xl glass card-hover flex items-center gap-5 group">
-                            <div className="h-14 w-14 rounded-2xl ders-icon flex items-center justify-center text-2xl shrink-0">
-                                {t.icon}
-                            </div>
-                            <div className="min-w-0 flex-1">
-                                <h2 className="font-bold text-stone-800 dark:text-stone-100 text-lg">{ders}</h2>
-                                <p className="text-sm text-stone-400">{s.konuSayisi} konu · {s.soruSayisi} soru</p>
-                            </div>
-                            <span className="text-stone-300 group-hover:text-indigo-500 transition-colors text-xl">→</span>
-                        </button>
+                        <section key={g.id}>
+                            {g.title ? (
+                                <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-3">{g.title}</p>
+                            ) : null}
+                            <div className="space-y-3">{cards}</div>
+                        </section>
                     );
                 })}
             </div>
@@ -1577,6 +1592,7 @@ function KonuList(props) {
     const t = themeFor(ders, props.isDark);
     const konular = Object.keys(props.kpssData[ders] || {}).filter(function (k) { return k !== "_"; });
     const topics = (props.student && props.student.topics && props.student.topics[ders]) || {};
+    var dersTitle = (window.AlanCatalog && window.AlanCatalog.dersLabel) ? window.AlanCatalog.dersLabel(ders) : ders;
     return (
         <Shell>
             <div className="flex justify-between mb-4">
@@ -1586,7 +1602,7 @@ function KonuList(props) {
             <div className="flex items-center gap-4 mb-6">
                 <div className="h-14 w-14 rounded-2xl ders-icon flex items-center justify-center text-2xl">{t.icon}</div>
                 <div>
-                    <h1 className="text-3xl font-black">{ders}</h1>
+                    <h1 className="text-3xl font-black">{dersTitle}</h1>
                     <p className="text-zinc-500 text-sm">Sırayla ilerle. Konunun tüm testleri bitince sonraki açılır.</p>
                 </div>
             </div>

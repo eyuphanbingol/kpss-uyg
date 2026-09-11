@@ -10,6 +10,7 @@ import { go } from "../nav";
 import { Card, ScrollScreen, Badge, PageHeader } from "../ui";
 import { colors, masteryLabel } from "../lib/theme";
 import { AccentCard, PctBadge } from "../kit";
+import { groupCatalogDersler, dersLabel } from "../lib/alan";
 
 function itemsFromSorular(ders, konu, sorular) {
     return (sorular || []).map(function (q, idx) {
@@ -52,22 +53,33 @@ export function DersHomeScreen({ navigation }) {
             <PageHeader dark={isDark} title="Dersler" subtitle="Not oku, test çöz. Tüm konular açık." />
 
             {/* Ders Listesi */}
-            {Object.keys(kpssData).filter(function (ders) {
-                return Object.keys(kpssData[ders] || {}).filter(function (k) { return k !== "_"; }).length > 0;
-            }).map(function (ders) {
-                var s = stats[ders] || { konuSayisi: 0, soruSayisi: 0 };
+            {groupCatalogDersler(kpssData).map(function (g) {
+                var cards = (g.dersler || []).filter(function (ders) {
+                    return Object.keys(kpssData[ders] || {}).filter(function (k) { return k !== "_"; }).length > 0;
+                });
+                if (!cards.length) return null;
                 return (
-                    <AccentCard
-                        key={ders}
-                        dark={isDark}
-                        chevron
-                        onPress={function () { go(navigation, "KonuList", { ders: ders }); }}
-                    >
-                        <Text style={[styles.dersName, isDark && styles.textLight]}>{ders}</Text>
-                        <Text style={styles.dersMeta}>
-                            {s.konuSayisi} konu · {s.soruSayisi} soru
-                        </Text>
-                    </AccentCard>
+                    <View key={g.id} style={{ marginBottom: 8 }}>
+                        {g.title ? (
+                            <Text style={[styles.modulesTitle, isDark && styles.textMuted, { marginTop: 12 }]}>{g.title}</Text>
+                        ) : null}
+                        {cards.map(function (ders) {
+                            var s = stats[ders] || { konuSayisi: 0, soruSayisi: 0 };
+                            return (
+                                <AccentCard
+                                    key={ders}
+                                    dark={isDark}
+                                    chevron
+                                    onPress={function () { go(navigation, "KonuList", { ders: ders }); }}
+                                >
+                                    <Text style={[styles.dersName, isDark && styles.textLight]}>{dersLabel(ders)}</Text>
+                                    <Text style={styles.dersMeta}>
+                                        {s.konuSayisi} konu · {s.soruSayisi} soru
+                                    </Text>
+                                </AccentCard>
+                            );
+                        })}
+                    </View>
                 );
             })}
 
@@ -115,7 +127,7 @@ export function KonuListScreen({ route, navigation }) {
         <ScrollScreen dark={isDark}>
             <PageHeader
                 dark={isDark}
-                title={ders}
+                title={dersLabel(ders)}
                 subtitle={konular.length + " konu"}
                 onBack={function () { navigation.goBack(); }}
                 right={null}
