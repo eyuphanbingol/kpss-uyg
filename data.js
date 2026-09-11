@@ -87,6 +87,10 @@ window.getKpssData = function () {
                 notlar: window.tarih_21_notlari || [],
                 sorular: window.tarih_21_sorulari || []
             },
+            "Cumhuriyet Dönemi Kültür ve Medeniyeti":{
+                notlar: window.tarih_22_notlari || [],
+                sorular: window.tarih_22_sorulari || []
+            },
         },
         "Coğrafya": {
             "Türkiye'nin Coğrafi Konumu": {
