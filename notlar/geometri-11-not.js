@@ -1,0 +1,21 @@
+// notlar/geometri-11-not.js - Çember ve Daire
+window.geometri_11_notlari = [
+
+    `
+    <div class="mb-4">
+        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 font-black text-sm uppercase tracking-wider">
+            ⭕ ÇEMBERDE AÇILAR
+        </span>
+    </div>
+    <ul class="list-disc list-inside space-y-1.5 text-xs mb-3"><li>Merkez açı = gördüğü yay; çevre açı = gördüğü yayın yarısı.</li><li>Çapı gören çevre açı <b>90°</b>dir.</li><li>İç açı: <b>α = (a+b)/2</b> · Dış açı: <b>α = |a−b|/2</b>.</li><li>Kirişler dörtgeninde karşı açılar bütünler: <b>α+θ=180°</b>.</li><li>Teğet yarıçapa dik; dış noktadan çizilen teğetler eşit.</li></ul><svg viewBox="0 0 260 170" class="w-full max-w-[300px] mx-auto my-3" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="100%" height="100%" fill="transparent"/><circle cx="130" cy="85" r="55" fill="none" stroke="#0f172a" stroke-width="1.7"/><line x1="130" y1="85" x2="185" y2="55" stroke="#0f172a" stroke-width="1.6" stroke-linecap="round"/><line x1="130" y1="85" x2="75" y2="55" stroke="#0f172a" stroke-width="1.6" stroke-linecap="round"/><line x1="75" y1="55" x2="185" y2="55" stroke="#0369a1" stroke-width="1.4" stroke-linecap="round"/><circle cx="75" cy="55" r="2.4" fill="#0f172a"/><circle cx="185" cy="55" r="2.4" fill="#0f172a"/><text x="130" y="78" text-anchor="middle" font-size="9" font-family="ui-sans-serif,system-ui" font-weight="700" fill="#0f172a">O</text><text x="130" y="50" text-anchor="middle" font-size="9" font-family="ui-sans-serif,system-ui" font-weight="700" fill="#dc2626">α= yay</text></svg><svg viewBox="0 0 260 170" class="w-full max-w-[300px] mx-auto my-3" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="100%" height="100%" fill="transparent"/><circle cx="130" cy="85" r="55" fill="none" stroke="#0f172a" stroke-width="1.7"/><line x1="75" y1="115" x2="185" y2="55" stroke="#0f172a" stroke-width="1.6" stroke-linecap="round"/><line x1="75" y1="115" x2="185" y2="115" stroke="#0f172a" stroke-width="1.6" stroke-linecap="round"/><circle cx="75" cy="115" r="2.4" fill="#0f172a"/><text x="55" y="120" text-anchor="end" font-size="9" font-family="ui-sans-serif,system-ui" font-weight="700" fill="#0f172a">A</text><text x="130" y="130" text-anchor="middle" font-size="9" font-family="ui-sans-serif,system-ui" font-weight="700" fill="#dc2626">α = yay/2</text></svg>
+    `,
+
+    `
+    <div class="mb-4">
+        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-violet-100 dark:bg-violet-900/50 text-violet-800 dark:text-violet-200 font-black text-sm uppercase tracking-wider">
+            📐 KUVVET VE ALAN
+        </span>
+    </div>
+    <ul class="list-disc list-inside space-y-1.5 text-xs mb-3"><li>Noktanın çembere gücü: <b>PA·PB = PC·PD</b>, <b>PT² = PA·PB</b>.</li><li>Daire alanı <b>A = πr²</b>, çevresi <b>C = 2πr</b>.</li><li>Daire dilimi: <b>(πr²·α)/360</b> · Halka: <b>π(R²−r²)</b>.</li></ul><svg viewBox="0 0 260 170" class="w-full max-w-[300px] mx-auto my-3" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="100%" height="100%" fill="transparent"/><circle cx="130" cy="85" r="50" fill="none" stroke="#0f172a" stroke-width="1.7"/><line x1="30" y1="85" x2="230" y2="85" stroke="#64748b" stroke-width="1.4" stroke-linecap="round"/><circle cx="30" cy="85" r="2.4" fill="#0f172a"/><circle cx="95" cy="85" r="2.4" fill="#0f172a"/><circle cx="165" cy="85" r="2.4" fill="#0f172a"/><circle cx="200" cy="85" r="2.4" fill="#0f172a"/><text x="22" y="78" text-anchor="end" font-size="9" font-family="ui-sans-serif,system-ui" font-weight="700" fill="#0f172a">P</text><text x="88" y="98" text-anchor="middle" font-size="9" font-family="ui-sans-serif,system-ui" font-weight="700" fill="#0f172a">A</text><text x="158" y="98" text-anchor="middle" font-size="9" font-family="ui-sans-serif,system-ui" font-weight="700" fill="#0f172a">C</text><text x="208" y="98" text-anchor="middle" font-size="9" font-family="ui-sans-serif,system-ui" font-weight="700" fill="#0f172a">D</text><text x="130" y="72" text-anchor="middle" font-size="9" font-family="ui-sans-serif,system-ui" font-weight="700" fill="#dc2626">PA·PB=PC·PD</text></svg>
+    `
+];

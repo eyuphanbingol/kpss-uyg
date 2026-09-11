@@ -55,7 +55,8 @@ export var DERS_ICON = {
     "Türkçe": "✍️",
     "Vatandaşlık": "⚖️",
     "Güncel Bilgiler": "📰",
-    "Matematik": "📐",
+    "Geometri": "📐",
+    "Matematik": "📏",
     "Fen": "🔬",
     "İngilizce": "🇬🇧",
 };

@@ -5,7 +5,8 @@ const DERS_THEME = {
     "Coğrafya": { text: "text-stone-700", icon: "🗺️", darkText: "text-stone-300", accent: "#059669", pastel: "#d1fae5" },
     "Türkçe": { text: "text-stone-700", icon: "✍️", darkText: "text-stone-300", accent: "#2563eb", pastel: "#dbeafe" },
     "Vatandaşlık": { text: "text-stone-700", icon: "⚖️", darkText: "text-stone-300", accent: "#7c3aed", pastel: "#ede9fe" },
-    "Güncel Bilgiler": { text: "text-stone-700", icon: "📰", darkText: "text-stone-300", accent: "#db2777", pastel: "#fce7f3" }
+    "Güncel Bilgiler": { text: "text-stone-700", icon: "📰", darkText: "text-stone-300", accent: "#db2777", pastel: "#fce7f3" },
+    "Geometri": { text: "text-stone-700", icon: "📐", darkText: "text-stone-300", accent: "#0d9488", pastel: "#ccfbf1" }
 };
 
 function stripChoicePrefix(opt) {

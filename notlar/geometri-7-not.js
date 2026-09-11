@@ -1,0 +1,30 @@
+// notlar/geometri-7-not.js - Analitik Doğru
+window.geometri_7_notlari = [
+
+    `
+    <div class="mb-4">
+        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 font-black text-sm uppercase tracking-wider">
+            📊 KOORDİNAT DÜZLEMİ
+        </span>
+    </div>
+    <ul class="list-disc list-inside space-y-1.5 text-xs mb-3"><li>I. bölge: <b>(+, +)</b> · II. bölge: <b>(−, +)</b></li><li>III. bölge: <b>(−, −)</b> · IV. bölge: <b>(+, −)</b></li><li>İki nokta arası uzaklık: <b>|AB| = √[(x₁−x₂)² + (y₁−y₂)²]</b></li><li>Orta nokta: <b>((x₁+x₂)/2 , (y₁+y₂)/2)</b></li></ul><svg viewBox="0 0 260 170" class="w-full max-w-[300px] mx-auto my-3" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="100%" height="100%" fill="transparent"/><line x1="20" y1="90" x2="240" y2="90" stroke="#64748b" stroke-width="1.2" stroke-linecap="round"/><line x1="130" y1="15" x2="130" y2="155" stroke="#64748b" stroke-width="1.2" stroke-linecap="round"/><line x1="235" y1="90" x2="228" y2="87" stroke="#0f172a" stroke-width="1.6" stroke-linecap="round"/><line x1="235" y1="90" x2="228" y2="93" stroke="#0f172a" stroke-width="1.6" stroke-linecap="round"/><line x1="130" y1="20" x2="127" y2="27" stroke="#0f172a" stroke-width="1.6" stroke-linecap="round"/><line x1="130" y1="20" x2="133" y2="27" stroke="#0f172a" stroke-width="1.6" stroke-linecap="round"/><text x="122" y="98" text-anchor="middle" font-size="10" font-family="ui-sans-serif,system-ui" font-weight="700" fill="#0f172a">O</text><text x="238" y="98" text-anchor="middle" font-size="10" font-family="ui-sans-serif,system-ui" font-weight="700" fill="#0f172a">x</text><text x="138" y="18" text-anchor="middle" font-size="10" font-family="ui-sans-serif,system-ui" font-weight="700" fill="#0f172a">y</text><text x="188" y="52" text-anchor="start" font-size="9" font-family="ui-sans-serif,system-ui" font-weight="700" fill="#0f172a">I (+,+)</text><text x="48" y="52" text-anchor="start" font-size="9" font-family="ui-sans-serif,system-ui" font-weight="700" fill="#0f172a">II (−,+)</text><text x="48" y="128" text-anchor="start" font-size="9" font-family="ui-sans-serif,system-ui" font-weight="700" fill="#0f172a">III (−,−)</text><text x="188" y="128" text-anchor="start" font-size="9" font-family="ui-sans-serif,system-ui" font-weight="700" fill="#0f172a">IV (+,−)</text></svg><svg viewBox="0 0 260 170" class="w-full max-w-[300px] mx-auto my-3" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="100%" height="100%" fill="transparent"/><circle cx="55" cy="125" r="2.4" fill="#0f172a"/><circle cx="205" cy="45" r="2.4" fill="#0f172a"/><line x1="55" y1="125" x2="205" y2="125" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 3"/><line x1="205" y1="125" x2="205" y2="45" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 3"/><line x1="55" y1="125" x2="205" y2="45" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round"/><text x="42" y="132" text-anchor="end" font-size="9" font-family="ui-sans-serif,system-ui" font-weight="700" fill="#0f172a">A(x₁,y₁)</text><text x="212" y="42" text-anchor="start" font-size="9" font-family="ui-sans-serif,system-ui" font-weight="700" fill="#0f172a">B(x₂,y₂)</text><text x="130" y="138" text-anchor="middle" font-size="9" font-family="ui-sans-serif,system-ui" font-weight="700" fill="#0f172a">|x₁−x₂|</text><text x="212" y="88" text-anchor="start" font-size="9" font-family="ui-sans-serif,system-ui" font-weight="700" fill="#0f172a">|y₁−y₂|</text></svg>
+    `,
+
+    `
+    <div class="mb-4">
+        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-violet-100 dark:bg-violet-900/50 text-violet-800 dark:text-violet-200 font-black text-sm uppercase tracking-wider">
+            📐 EĞİM VE DOĞRU DENKLEMLERİ
+        </span>
+    </div>
+    <ul class="list-disc list-inside space-y-1.5 text-xs mb-3"><li>Eğim: <b>m = (y₂−y₁)/(x₂−x₁) = tan α</b></li><li>Bir noktası ve eğimi bilinen doğru: <b>y − y₁ = m(x − x₁)</b></li><li>Eksenleri kesen form: <b>x/a + y/b = 1</b> (a: x-keseni, b: y-keseni)</li><li>Paralel doğrular: <b>m₁ = m₂</b> · Dik doğrular: <b>m₁·m₂ = −1</b></li></ul><svg viewBox="0 0 260 170" class="w-full max-w-[300px] mx-auto my-3" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="100%" height="100%" fill="transparent"/><line x1="40" y1="140" x2="220" y2="50" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round"/><line x1="40" y1="140" x2="220" y2="140" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 3"/><line x1="220" y1="50" x2="220" y2="140" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 3"/><text x="225" y="98" text-anchor="middle" font-size="10" font-family="ui-sans-serif,system-ui" font-weight="700" fill="#dc2626">α</text><text x="130" y="152" text-anchor="middle" font-size="9" font-family="ui-sans-serif,system-ui" font-weight="700" fill="#0f172a">a</text><text x="228" y="98" text-anchor="start" font-size="9" font-family="ui-sans-serif,system-ui" font-weight="700" fill="#0f172a">b</text><circle cx="40" cy="140" r="2.4" fill="#0f172a"/><circle cx="220" cy="50" r="2.4" fill="#0f172a"/><text x="28" y="148" text-anchor="end" font-size="9" font-family="ui-sans-serif,system-ui" font-weight="700" fill="#0f172a">P(a,b)</text></svg>
+    `,
+
+    `
+    <div class="mb-4">
+        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-200 font-black text-sm uppercase tracking-wider">
+            📏 UZAKLIK VE AÇI
+        </span>
+    </div>
+    <ul class="list-disc list-inside space-y-1.5 text-xs mb-3"><li>Noktanın doğruya uzaklığı (ax+by+c=0): <b>h = |ax₀+by₀+c| / √(a²+b²)</b></li><li>Paralel iki doğru arası uzaklık: <b>h = |c₁−c₂| / √(a²+b²)</b></li><li>İki doğru arasındaki açının tanjantı: <b>tan α = |(m₁−m₂)/(1+m₁m₂)|</b></li></ul>
+    `
+];

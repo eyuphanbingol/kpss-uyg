@@ -11,7 +11,7 @@ import { colors, examTrackName } from "../lib/theme";
 var DASH_COLORS = ["#0F172A", "#D97706", "#64748B", "#94A3B8", "#CBD5E1", "#1E293B"];
 var WEEK_BAR = ["#CBD5E1", "#94A3B8", "#64748B", "#D97706", "#F59E0B", "#FCD34D", "#E2E8F0"];
 var DAY_NAMES = ["Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz"];
-var DERS_ACCENT = { "Tarih": "#ea580c", "Coğrafya": "#059669", "Türkçe": "#2563eb", "Vatandaşlık": "#7c3aed", "Güncel Bilgiler": "#db2777" };
+var DERS_ACCENT = { "Tarih": "#ea580c", "Coğrafya": "#059669", "Türkçe": "#2563eb", "Vatandaşlık": "#7c3aed", "Güncel Bilgiler": "#db2777", "Geometri": "#0d9488" };
 
 function fmtH(n) {
     var x = Number(n) || 0;

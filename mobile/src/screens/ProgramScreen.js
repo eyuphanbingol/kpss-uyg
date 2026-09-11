@@ -24,7 +24,7 @@ export default function ProgramScreen({ navigation }) {
     var editDay = _edit[0];
     var setEditDay = _edit[1];
     var days = StudentStore.WEEK_DAYS;
-    var DERS_ACCENT = { "Tarih": "#ea580c", "Coğrafya": "#059669", "Türkçe": "#2563eb", "Vatandaşlık": "#7c3aed", "Güncel Bilgiler": "#db2777" };
+    var DERS_ACCENT = { "Tarih": "#ea580c", "Coğrafya": "#059669", "Türkçe": "#2563eb", "Vatandaşlık": "#7c3aed", "Güncel Bilgiler": "#db2777", "Geometri": "#0d9488" };
 
     // ---------- Helpers ----------
     function patchDay(id, fn) {

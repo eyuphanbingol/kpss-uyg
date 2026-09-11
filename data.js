@@ -365,8 +365,58 @@ window.getKpssData = function () {
                 notlar: window.guncel_8_notlari || [],
                 sorular: window.guncel_8_sorulari || []
             }
+        },
+        "Geometri": {
+            "Üçgende Açılar": {
+                notlar: window.geometri_1_notlari || [],
+                sorular: window.geometri_1_sorulari || []
+            },
+            "Açı-Kenar ve Dik Üçgen": {
+                notlar: window.geometri_2_notlari || [],
+                sorular: window.geometri_2_sorulari || []
+            },
+            "İkizkenar ve Eşkenar Üçgen": {
+                notlar: window.geometri_3_notlari || [],
+                sorular: window.geometri_3_sorulari || []
+            },
+            "Açıortay ve Kenarortay": {
+                notlar: window.geometri_4_notlari || [],
+                sorular: window.geometri_4_sorulari || []
+            },
+            "Üçgende Alan": {
+                notlar: window.geometri_5_notlari || [],
+                sorular: window.geometri_5_sorulari || []
+            },
+            "Üçgenlerde Benzerlik": {
+                notlar: window.geometri_6_notlari || [],
+                sorular: window.geometri_6_sorulari || []
+            },
+            "Analitik Geometri (Doğru)": {
+                notlar: window.geometri_7_notlari || [],
+                sorular: window.geometri_7_sorulari || []
+            },
+            "Dörtgenler ve Yamuk": {
+                notlar: window.geometri_8_notlari || [],
+                sorular: window.geometri_8_sorulari || []
+            },
+            "Paralelkenar ve Özel Dörtgenler": {
+                notlar: window.geometri_9_notlari || [],
+                sorular: window.geometri_9_sorulari || []
+            },
+            "Çokgenler": {
+                notlar: window.geometri_10_notlari || [],
+                sorular: window.geometri_10_sorulari || []
+            },
+            "Çember ve Daire": {
+                notlar: window.geometri_11_notlari || [],
+                sorular: window.geometri_11_sorulari || []
+            },
+            "Katı Cisimler": {
+                notlar: window.geometri_12_notlari || [],
+                sorular: window.geometri_12_sorulari || []
+            }
         }
-        
+
     };
 };
 
