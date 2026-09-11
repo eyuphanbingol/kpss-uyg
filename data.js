@@ -91,6 +91,10 @@ window.getKpssData = function () {
                 notlar: window.tarih_22_notlari || [],
                 sorular: window.tarih_22_sorulari || []
             },
+            "XX. Yüzyıl Başlarında Dünya":{
+                notlar: window.tarih_23_notlari || [],
+                sorular: window.tarih_23_sorulari || []
+            },
         },
         "Coğrafya": {
             "Türkiye'nin Coğrafi Konumu": {
