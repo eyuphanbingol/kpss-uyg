@@ -96,6 +96,7 @@ export function AlistirmaDersListScreen({ navigation }) {
                 right={null}
             />
             {Object.keys(kpssData).filter(function (ders) {
+                if (!ClozeEngine.dersEnabled(ders)) return false;
                 return Object.keys(kpssData[ders] || {}).filter(function (k) { return k !== "_"; }).length > 0;
             }).map(function (ders) {
                 var konular = Object.keys(kpssData[ders] || {}).filter(function (k) { return k !== "_"; });
@@ -119,6 +120,9 @@ export function AlistirmaKonuListScreen({ route, navigation }) {
     var ders = route.params.ders;
     var app = useApp();
     var isDark = app.dark;
+    useEffect(function () {
+        if (!ClozeEngine.dersEnabled(ders)) navigation.goBack();
+    }, [ders, navigation]);
     var konular = Object.keys(app.kpssData[ders] || {}).filter(function (k) { return k !== "_"; });
     var statsState = useState(null);
     var stats = statsState[0];
@@ -209,6 +213,10 @@ export function ClozePlayScreen({ route, navigation }) {
     var setDone = _d[1];
 
     useEffect(function () {
+        if (!ClozeEngine.dersEnabled(ders)) {
+            navigation.goBack();
+            return;
+        }
         setIdx(0); setPicked(null); setScore(0); setDone(false); setList(null);
         var id = requestAnimationFrame(function () {
             var built = [];

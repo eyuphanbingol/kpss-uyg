@@ -757,6 +757,7 @@ function AlistirmaDersList(props) {
             <p className="text-sm text-stone-400 mb-6">Ders seç, sonra konu.</p>
             <div className="space-y-3">
                 {Object.keys(kpssData).map(function (ders) {
+                    if (window.ClozeEngine && !window.ClozeEngine.dersEnabled(ders)) return null;
                     const t = themeFor(ders, props.isDark);
                     const konular = Object.keys(kpssData[ders] || {}).filter(function (k) { return k !== "_"; });
                     if (!konular.length) return null;
@@ -1625,7 +1626,7 @@ function KonuHub(props) {
                 <h3 className="text-xl font-bold text-amber-900 dark:text-amber-100 mb-2">Konu özeti</h3>
                 <p className="text-sm text-amber-700">{notlar.length} hap not · {tp.notesDone ? "tamamlandı" : "kaldığın yerden"}</p>
             </button>
-            {(tp.solvedCloze && tp.solvedCloze.length) ? (
+            {(window.ClozeEngine && window.ClozeEngine.dersEnabled(props.ders) && tp.solvedCloze && tp.solvedCloze.length) ? (
                 <button type="button" onClick={function () {
                     if (!window.confirm("Bu konudaki çözülen boşluklar baştan gelsin mi?")) return;
                     StudentStore.resetCloze(props.ders, props.konu);
@@ -2860,8 +2861,13 @@ function App() {
                 onDers={function (d) { setDrillDers(d); setDrillKonu(null); }} />;
         } else {
             var clozeKeys = Object.keys(kpssData[drillDers] || {}).filter(function (k) { return k !== "_"; });
-            var canPlayCloze = drillKonu && StudentStore.isKonuOpen(drillDers, clozeKeys, clozeKeys.indexOf(drillKonu), kpssData);
-            if (!canPlayCloze) {
+            var clozeOn = !window.ClozeEngine || window.ClozeEngine.dersEnabled(drillDers);
+            var canPlayCloze = clozeOn && drillKonu && StudentStore.isKonuOpen(drillDers, clozeKeys, clozeKeys.indexOf(drillKonu), kpssData);
+            if (!clozeOn) {
+                body = <AlistirmaDersList kpssData={kpssData} isDark={isDark} toggleDark={toggleDark}
+                    onBack={function () { setDrillKind(null); }}
+                    onDers={function (d) { setDrillDers(d); setDrillKonu(null); }} />;
+            } else if (!canPlayCloze) {
                 body = <AlistirmaKonuList kpssData={kpssData} student={student} ders={drillDers} isDark={isDark} toggleDark={toggleDark}
                     onBack={function () { setDrillDers(null); }}
                     onKonu={function (k) {

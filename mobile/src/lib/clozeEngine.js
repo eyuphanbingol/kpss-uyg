@@ -265,5 +265,8 @@ export const ClozeEngine = {
     },
     remainingCount: function (kd, skipIds) {
         return remaining(kd, skipIds).length;
+    },
+    dersEnabled: function (ders) {
+        return String(ders || "") !== "Geometri";
     }
 };

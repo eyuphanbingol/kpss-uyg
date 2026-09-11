@@ -4,6 +4,7 @@ import { BookOpen, FileText } from "lucide-react-native";
 import { useApp } from "../AppProvider";
 import { StudyPlanner } from "../lib/planner";
 import { StudentStore } from "../lib/store";
+import { ClozeEngine } from "../lib/clozeEngine";
 import { KpssConfig } from "../lib/config";
 import { go } from "../nav";
 import { Card, ScrollScreen, Badge, PageHeader } from "../ui";
@@ -215,7 +216,7 @@ export function KonuHubScreen({ route, navigation }) {
                 </View>
             </AccentCard>
 
-            {(tp.solvedCloze && tp.solvedCloze.length) ? (
+            {(ClozeEngine.dersEnabled(ders) && tp.solvedCloze && tp.solvedCloze.length) ? (
                 <Card dark={isDark} onPress={function () {
                     Alert.alert("Boşlukları sıfırla", "Bu konudaki çözülen boşluklar baştan gelsin mi?", [
                         { text: "Vazgeç", style: "cancel" },

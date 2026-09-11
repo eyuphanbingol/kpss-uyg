@@ -270,7 +270,11 @@
         return remaining(kd, skipIds).length;
     }
 
-    var api = { buildForKonu: buildForKonu, countForKonu: countForKonu, remainingCount: remainingCount, stripHtml: stripHtml };
+    function dersEnabled(ders) {
+        return String(ders || "") !== "Geometri";
+    }
+
+    var api = { buildForKonu: buildForKonu, countForKonu: countForKonu, remainingCount: remainingCount, dersEnabled: dersEnabled, stripHtml: stripHtml };
     global.ClozeEngine = api;
     if (typeof module !== "undefined" && module.exports) module.exports = api;
 })(typeof window !== "undefined" ? window : globalThis);
