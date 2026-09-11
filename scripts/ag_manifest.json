@@ -1,0 +1,122 @@
+{
+  "Hukuk": {
+    "prefix": "hukuk",
+    "konular": [
+      "Anayasa Kavramı",
+      "Türk Anayasa Tarihi",
+      "Devlet ve Hükümet Sistemleri",
+      "Temel Hak ve Hürriyetler",
+      "Yasama",
+      "Yürütme",
+      "Yargı",
+      "İdare Hukukunun Temelleri ve Teşkilat",
+      "İdari İşlemler ve Sözleşmeler",
+      "Kamu Hizmeti, Kolluk ve İdarenin Sorumluluğu",
+      "Kamu Personel Hukuku ve Kamu Malları",
+      "İdari Yargılama",
+      "Ceza Hukuku Genel Hükümler",
+      "Medeni Hukuk",
+      "Borçlar Hukuku",
+      "Ticaret Hukuku",
+      "İcra ve İflas Hukuku"
+    ]
+  },
+  "İktisat": {
+    "prefix": "iktisat",
+    "konular": [
+      "Mikro İktisat",
+      "Makro İktisat",
+      "Para Banka Kredi",
+      "Uluslararası İktisat",
+      "Büyüme ve Kalkınma",
+      "İktisadi Düşünceler Tarihi",
+      "Türkiye Ekonomisi"
+    ]
+  },
+  "Maliye": {
+    "prefix": "maliye",
+    "konular": [
+      "Maliye Teorisi",
+      "Kamu Harcamaları",
+      "Kamu Gelirleri",
+      "Kamu Borçları",
+      "Devlet Bütçesi",
+      "Vergi Hukuku ve Türk Vergi Sistemi",
+      "Maliye Politikası"
+    ]
+  },
+  "Muhasebe": {
+    "prefix": "muhasebe",
+    "konular": [
+      "Genel Muhasebe",
+      "Dönen Varlıklar",
+      "Duran Varlıklar",
+      "Yabancı Kaynaklar",
+      "Özkaynaklar",
+      "Gelir Tablosu",
+      "Mali Tablolar Analizi",
+      "Maliyet Muhasebesi",
+      "Şirketler Muhasebesi",
+      "Denetim"
+    ]
+  },
+  "İşletme": {
+    "prefix": "isletme",
+    "konular": [
+      "İşletmeye Giriş",
+      "Yönetim ve Organizasyon",
+      "Örgüt",
+      "İnsan Kaynakları",
+      "Pazarlama",
+      "Üretim Yönetimi",
+      "Finansal Yönetim",
+      "Ticari Aritmetik",
+      "Girişimcilik"
+    ]
+  },
+  "İstatistik": {
+    "prefix": "istatistik",
+    "konular": [
+      "Temel Kavramlar ve Veri Sunumu",
+      "Merkezi Eğilim ve Dağılım",
+      "Olasılık ve Dağılımlar",
+      "Örnekleme Tahmin ve Hipotez",
+      "Regresyon ve Zaman Serileri",
+      "Yöneylem ve Parametrik Olmayan Testler"
+    ]
+  },
+  "Kamu Yönetimi": {
+    "prefix": "kamu",
+    "konular": [
+      "Siyaset Bilimi",
+      "Anayasa (Kamu Yönetimi)",
+      "Yönetim Bilimleri",
+      "Kamu Politikası",
+      "Yönetim Hukuku",
+      "Kentleşme ve Çevre",
+      "Sosyoloji",
+      "Türk Siyasal Hayatı"
+    ]
+  },
+  "Uluslararası İlişkiler": {
+    "prefix": "ui",
+    "konular": [
+      "Uluslararası İlişkiler Teorisi",
+      "Uluslararası Hukuk",
+      "Siyasi Tarih",
+      "Uluslararası Örgütler",
+      "Güncel Uluslararası Sorunlar",
+      "Türk Dış Politikası"
+    ]
+  },
+  "ÇEKO": {
+    "prefix": "ceko",
+    "konular": [
+      "Çalışma Ekonomisi",
+      "İş Hukuku",
+      "Sosyal Güvenlik Hukuku",
+      "Çalışma Psikolojisi",
+      "Çalışma Sosyolojisi"
+    ]
+  }
+}

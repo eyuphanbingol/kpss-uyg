@@ -419,6 +419,324 @@ window.getKpssData = function () {
                 notlar: window.geometri_12_notlari || [],
                 sorular: window.geometri_12_sorulari || []
             }
+        },
+        "Hukuk": {
+            "Anayasa Kavramı": {
+                notlar: window.hukuk_1_notlari || [],
+                sorular: window.hukuk_1_sorulari || []
+            },
+            "Türk Anayasa Tarihi": {
+                notlar: window.hukuk_2_notlari || [],
+                sorular: window.hukuk_2_sorulari || []
+            },
+            "Devlet ve Hükümet Sistemleri": {
+                notlar: window.hukuk_3_notlari || [],
+                sorular: window.hukuk_3_sorulari || []
+            },
+            "Temel Hak ve Hürriyetler": {
+                notlar: window.hukuk_4_notlari || [],
+                sorular: window.hukuk_4_sorulari || []
+            },
+            "Yasama": {
+                notlar: window.hukuk_5_notlari || [],
+                sorular: window.hukuk_5_sorulari || []
+            },
+            "Yürütme": {
+                notlar: window.hukuk_6_notlari || [],
+                sorular: window.hukuk_6_sorulari || []
+            },
+            "Yargı": {
+                notlar: window.hukuk_7_notlari || [],
+                sorular: window.hukuk_7_sorulari || []
+            },
+            "İdare Hukukunun Temelleri ve Teşkilat": {
+                notlar: window.hukuk_8_notlari || [],
+                sorular: window.hukuk_8_sorulari || []
+            },
+            "İdari İşlemler ve Sözleşmeler": {
+                notlar: window.hukuk_9_notlari || [],
+                sorular: window.hukuk_9_sorulari || []
+            },
+            "Kamu Hizmeti, Kolluk ve İdarenin Sorumluluğu": {
+                notlar: window.hukuk_10_notlari || [],
+                sorular: window.hukuk_10_sorulari || []
+            },
+            "Kamu Personel Hukuku ve Kamu Malları": {
+                notlar: window.hukuk_11_notlari || [],
+                sorular: window.hukuk_11_sorulari || []
+            },
+            "İdari Yargılama": {
+                notlar: window.hukuk_12_notlari || [],
+                sorular: window.hukuk_12_sorulari || []
+            },
+            "Ceza Hukuku Genel Hükümler": {
+                notlar: window.hukuk_13_notlari || [],
+                sorular: window.hukuk_13_sorulari || []
+            },
+            "Medeni Hukuk": {
+                notlar: window.hukuk_14_notlari || [],
+                sorular: window.hukuk_14_sorulari || []
+            },
+            "Borçlar Hukuku": {
+                notlar: window.hukuk_15_notlari || [],
+                sorular: window.hukuk_15_sorulari || []
+            },
+            "Ticaret Hukuku": {
+                notlar: window.hukuk_16_notlari || [],
+                sorular: window.hukuk_16_sorulari || []
+            },
+            "İcra ve İflas Hukuku": {
+                notlar: window.hukuk_17_notlari || [],
+                sorular: window.hukuk_17_sorulari || []
+            }
+        },
+        "İktisat": {
+            "Mikro İktisat": {
+                notlar: window.iktisat_1_notlari || [],
+                sorular: window.iktisat_1_sorulari || []
+            },
+            "Makro İktisat": {
+                notlar: window.iktisat_2_notlari || [],
+                sorular: window.iktisat_2_sorulari || []
+            },
+            "Para Banka Kredi": {
+                notlar: window.iktisat_3_notlari || [],
+                sorular: window.iktisat_3_sorulari || []
+            },
+            "Uluslararası İktisat": {
+                notlar: window.iktisat_4_notlari || [],
+                sorular: window.iktisat_4_sorulari || []
+            },
+            "Büyüme ve Kalkınma": {
+                notlar: window.iktisat_5_notlari || [],
+                sorular: window.iktisat_5_sorulari || []
+            },
+            "İktisadi Düşünceler Tarihi": {
+                notlar: window.iktisat_6_notlari || [],
+                sorular: window.iktisat_6_sorulari || []
+            },
+            "Türkiye Ekonomisi": {
+                notlar: window.iktisat_7_notlari || [],
+                sorular: window.iktisat_7_sorulari || []
+            }
+        },
+        "Maliye": {
+            "Maliye Teorisi": {
+                notlar: window.maliye_1_notlari || [],
+                sorular: window.maliye_1_sorulari || []
+            },
+            "Kamu Harcamaları": {
+                notlar: window.maliye_2_notlari || [],
+                sorular: window.maliye_2_sorulari || []
+            },
+            "Kamu Gelirleri": {
+                notlar: window.maliye_3_notlari || [],
+                sorular: window.maliye_3_sorulari || []
+            },
+            "Kamu Borçları": {
+                notlar: window.maliye_4_notlari || [],
+                sorular: window.maliye_4_sorulari || []
+            },
+            "Devlet Bütçesi": {
+                notlar: window.maliye_5_notlari || [],
+                sorular: window.maliye_5_sorulari || []
+            },
+            "Vergi Hukuku ve Türk Vergi Sistemi": {
+                notlar: window.maliye_6_notlari || [],
+                sorular: window.maliye_6_sorulari || []
+            },
+            "Maliye Politikası": {
+                notlar: window.maliye_7_notlari || [],
+                sorular: window.maliye_7_sorulari || []
+            }
+        },
+        "Muhasebe": {
+            "Genel Muhasebe": {
+                notlar: window.muhasebe_1_notlari || [],
+                sorular: window.muhasebe_1_sorulari || []
+            },
+            "Dönen Varlıklar": {
+                notlar: window.muhasebe_2_notlari || [],
+                sorular: window.muhasebe_2_sorulari || []
+            },
+            "Duran Varlıklar": {
+                notlar: window.muhasebe_3_notlari || [],
+                sorular: window.muhasebe_3_sorulari || []
+            },
+            "Yabancı Kaynaklar": {
+                notlar: window.muhasebe_4_notlari || [],
+                sorular: window.muhasebe_4_sorulari || []
+            },
+            "Özkaynaklar": {
+                notlar: window.muhasebe_5_notlari || [],
+                sorular: window.muhasebe_5_sorulari || []
+            },
+            "Gelir Tablosu": {
+                notlar: window.muhasebe_6_notlari || [],
+                sorular: window.muhasebe_6_sorulari || []
+            },
+            "Mali Tablolar Analizi": {
+                notlar: window.muhasebe_7_notlari || [],
+                sorular: window.muhasebe_7_sorulari || []
+            },
+            "Maliyet Muhasebesi": {
+                notlar: window.muhasebe_8_notlari || [],
+                sorular: window.muhasebe_8_sorulari || []
+            },
+            "Şirketler Muhasebesi": {
+                notlar: window.muhasebe_9_notlari || [],
+                sorular: window.muhasebe_9_sorulari || []
+            },
+            "Denetim": {
+                notlar: window.muhasebe_10_notlari || [],
+                sorular: window.muhasebe_10_sorulari || []
+            }
+        },
+        "İşletme": {
+            "İşletmeye Giriş": {
+                notlar: window.isletme_1_notlari || [],
+                sorular: window.isletme_1_sorulari || []
+            },
+            "Yönetim ve Organizasyon": {
+                notlar: window.isletme_2_notlari || [],
+                sorular: window.isletme_2_sorulari || []
+            },
+            "Örgüt": {
+                notlar: window.isletme_3_notlari || [],
+                sorular: window.isletme_3_sorulari || []
+            },
+            "İnsan Kaynakları": {
+                notlar: window.isletme_4_notlari || [],
+                sorular: window.isletme_4_sorulari || []
+            },
+            "Pazarlama": {
+                notlar: window.isletme_5_notlari || [],
+                sorular: window.isletme_5_sorulari || []
+            },
+            "Üretim Yönetimi": {
+                notlar: window.isletme_6_notlari || [],
+                sorular: window.isletme_6_sorulari || []
+            },
+            "Finansal Yönetim": {
+                notlar: window.isletme_7_notlari || [],
+                sorular: window.isletme_7_sorulari || []
+            },
+            "Ticari Aritmetik": {
+                notlar: window.isletme_8_notlari || [],
+                sorular: window.isletme_8_sorulari || []
+            },
+            "Girişimcilik": {
+                notlar: window.isletme_9_notlari || [],
+                sorular: window.isletme_9_sorulari || []
+            }
+        },
+        "İstatistik": {
+            "Temel Kavramlar ve Veri Sunumu": {
+                notlar: window.istatistik_1_notlari || [],
+                sorular: window.istatistik_1_sorulari || []
+            },
+            "Merkezi Eğilim ve Dağılım": {
+                notlar: window.istatistik_2_notlari || [],
+                sorular: window.istatistik_2_sorulari || []
+            },
+            "Olasılık ve Dağılımlar": {
+                notlar: window.istatistik_3_notlari || [],
+                sorular: window.istatistik_3_sorulari || []
+            },
+            "Örnekleme Tahmin ve Hipotez": {
+                notlar: window.istatistik_4_notlari || [],
+                sorular: window.istatistik_4_sorulari || []
+            },
+            "Regresyon ve Zaman Serileri": {
+                notlar: window.istatistik_5_notlari || [],
+                sorular: window.istatistik_5_sorulari || []
+            },
+            "Yöneylem ve Parametrik Olmayan Testler": {
+                notlar: window.istatistik_6_notlari || [],
+                sorular: window.istatistik_6_sorulari || []
+            }
+        },
+        "Kamu Yönetimi": {
+            "Siyaset Bilimi": {
+                notlar: window.kamu_1_notlari || [],
+                sorular: window.kamu_1_sorulari || []
+            },
+            "Anayasa (Kamu Yönetimi)": {
+                notlar: window.kamu_2_notlari || [],
+                sorular: window.kamu_2_sorulari || []
+            },
+            "Yönetim Bilimleri": {
+                notlar: window.kamu_3_notlari || [],
+                sorular: window.kamu_3_sorulari || []
+            },
+            "Kamu Politikası": {
+                notlar: window.kamu_4_notlari || [],
+                sorular: window.kamu_4_sorulari || []
+            },
+            "Yönetim Hukuku": {
+                notlar: window.kamu_5_notlari || [],
+                sorular: window.kamu_5_sorulari || []
+            },
+            "Kentleşme ve Çevre": {
+                notlar: window.kamu_6_notlari || [],
+                sorular: window.kamu_6_sorulari || []
+            },
+            "Sosyoloji": {
+                notlar: window.kamu_7_notlari || [],
+                sorular: window.kamu_7_sorulari || []
+            },
+            "Türk Siyasal Hayatı": {
+                notlar: window.kamu_8_notlari || [],
+                sorular: window.kamu_8_sorulari || []
+            }
+        },
+        "Uluslararası İlişkiler": {
+            "Uluslararası İlişkiler Teorisi": {
+                notlar: window.ui_1_notlari || [],
+                sorular: window.ui_1_sorulari || []
+            },
+            "Uluslararası Hukuk": {
+                notlar: window.ui_2_notlari || [],
+                sorular: window.ui_2_sorulari || []
+            },
+            "Siyasi Tarih": {
+                notlar: window.ui_3_notlari || [],
+                sorular: window.ui_3_sorulari || []
+            },
+            "Uluslararası Örgütler": {
+                notlar: window.ui_4_notlari || [],
+                sorular: window.ui_4_sorulari || []
+            },
+            "Güncel Uluslararası Sorunlar": {
+                notlar: window.ui_5_notlari || [],
+                sorular: window.ui_5_sorulari || []
+            },
+            "Türk Dış Politikası": {
+                notlar: window.ui_6_notlari || [],
+                sorular: window.ui_6_sorulari || []
+            }
+        },
+        "ÇEKO": {
+            "Çalışma Ekonomisi": {
+                notlar: window.ceko_1_notlari || [],
+                sorular: window.ceko_1_sorulari || []
+            },
+            "İş Hukuku": {
+                notlar: window.ceko_2_notlari || [],
+                sorular: window.ceko_2_sorulari || []
+            },
+            "Sosyal Güvenlik Hukuku": {
+                notlar: window.ceko_3_notlari || [],
+                sorular: window.ceko_3_sorulari || []
+            },
+            "Çalışma Psikolojisi": {
+                notlar: window.ceko_4_notlari || [],
+                sorular: window.ceko_4_sorulari || []
+            },
+            "Çalışma Sosyolojisi": {
+                notlar: window.ceko_5_notlari || [],
+                sorular: window.ceko_5_sorulari || []
+            }
         }
 
     };

@@ -4,7 +4,7 @@ import { hydrateLocalStorage } from "./lib/storage";
 import { supabase } from "./lib/supabase";
 import { SyncEngine } from "./lib/syncEngine";
 import { StudyPlanner } from "./lib/planner";
-import { fetchRemoteCatalog, readCachedCatalog } from "./lib/catalog";
+import { filterCatalog } from "./lib/alan";
 import { AppState, Platform } from "react-native";
 import * as Linking from "expo-linking";
 import { isRecoveryUrl } from "./lib/authLinks";
@@ -256,13 +256,17 @@ export function AppProvider(props) {
     }
 
     // ---------- Plan ----------
+    var visibleData = useMemo(function () {
+        return filterCatalog(kpssData, student);
+    }, [kpssData, student]);
+
     var plan = useMemo(function () {
         try {
-            return StudyPlanner.buildPlan(kpssData, student);
+            return StudyPlanner.buildPlan(visibleData, student);
         } catch (e) {
             return { rows: [], due: [], wrong: [], streak: 0 };
         }
-    }, [student, kpssData]);
+    }, [student, visibleData]);
 
     // ---------- Context Value ----------
     var value = {
@@ -272,7 +276,7 @@ export function AppProvider(props) {
         profileHydrated: profileHydrated,
         signingOut: signingOutRef.current,
         plan: plan,
-        kpssData: kpssData,
+        kpssData: visibleData,
         recovering: recovering,
         beginRecovery: beginRecovery,
         finishRecovery: finishRecovery,

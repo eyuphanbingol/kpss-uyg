@@ -6,7 +6,16 @@ const DERS_THEME = {
     "Türkçe": { text: "text-stone-700", icon: "✍️", darkText: "text-stone-300", accent: "#2563eb", pastel: "#dbeafe" },
     "Vatandaşlık": { text: "text-stone-700", icon: "⚖️", darkText: "text-stone-300", accent: "#7c3aed", pastel: "#ede9fe" },
     "Güncel Bilgiler": { text: "text-stone-700", icon: "📰", darkText: "text-stone-300", accent: "#db2777", pastel: "#fce7f3" },
-    "Geometri": { text: "text-stone-700", icon: "📐", darkText: "text-stone-300", accent: "#0d9488", pastel: "#ccfbf1" }
+    "Geometri": { text: "text-stone-700", icon: "📐", darkText: "text-stone-300", accent: "#0d9488", pastel: "#ccfbf1" },
+    "Hukuk": { text: "text-stone-700", icon: "⚖️", darkText: "text-stone-300", accent: "#4f46e5", pastel: "#e0e7ff" },
+    "İktisat": { text: "text-stone-700", icon: "📈", darkText: "text-stone-300", accent: "#0f766e", pastel: "#ccfbf1" },
+    "Maliye": { text: "text-stone-700", icon: "🏦", darkText: "text-stone-300", accent: "#b45309", pastel: "#fef3c7" },
+    "Muhasebe": { text: "text-stone-700", icon: "📒", darkText: "text-stone-300", accent: "#0369a1", pastel: "#e0f2fe" },
+    "İşletme": { text: "text-stone-700", icon: "🏢", darkText: "text-stone-300", accent: "#be185d", pastel: "#fce7f3" },
+    "İstatistik": { text: "text-stone-700", icon: "📊", darkText: "text-stone-300", accent: "#4338ca", pastel: "#e0e7ff" },
+    "Kamu Yönetimi": { text: "text-stone-700", icon: "🏛️", darkText: "text-stone-300", accent: "#b91c1c", pastel: "#fee2e2" },
+    "Uluslararası İlişkiler": { text: "text-stone-700", icon: "🌐", darkText: "text-stone-300", accent: "#1d4ed8", pastel: "#dbeafe" },
+    "ÇEKO": { text: "text-stone-700", icon: "👷", darkText: "text-stone-300", accent: "#047857", pastel: "#d1fae5" }
 };
 
 function stripChoicePrefix(opt) {
@@ -1513,7 +1522,7 @@ function DersHome(props) {
                 var cfg = window.KpssConfig || {};
                 var tt = (props.student && props.student.userProfile && props.student.userProfile.targetType) || "B";
                 var ids = (cfg.targetModules && cfg.targetModules[tt]) || ["gygk"];
-                var mods = (cfg.modules || []).filter(function (m) { return ids.indexOf(m.id) >= 0 && m.id !== "gygk"; });
+                var mods = (cfg.modules || []).filter(function (m) { return ids.indexOf(m.id) >= 0 && m.id !== "gygk" && !m.ready; });
                 if (!mods.length) return null;
                 return (
                     <div className="mt-10">
@@ -2346,7 +2355,11 @@ function packFromKonu(kpssData, ders, konu, packIdx) {
 function App() {
     const student = useStudent();
     const isDark = !!(student.profile && student.profile.dark);
-    const kpssData = (typeof window !== "undefined" && window.kpssData) ? window.kpssData : {};
+    const rawData = (typeof window !== "undefined" && window.kpssData) ? window.kpssData : {};
+    const kpssData = useMemo(function () {
+        var ac = window.AlanCatalog;
+        return (ac && ac.filterCatalog) ? ac.filterCatalog(rawData, student) : rawData;
+    }, [rawData, student]);
     const plan = useMemo(function () {
         return StudyPlanner.buildPlan(kpssData, student);
     }, [kpssData, student]);

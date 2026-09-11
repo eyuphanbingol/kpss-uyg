@@ -45,7 +45,7 @@ export function DersHomeScreen({ navigation }) {
     var edu = app.student.userProfile && app.student.userProfile.educationLevel;
     var tt = (app.student.userProfile && app.student.userProfile.targetType) || "B";
     var ids = (KpssConfig.targetModules && KpssConfig.targetModules[tt]) || ["gygk"];
-    var mods = (KpssConfig.modules || []).filter(function (m) { return ids.indexOf(m.id) >= 0 && m.id !== "gygk"; });
+    var mods = (KpssConfig.modules || []).filter(function (m) { return ids.indexOf(m.id) >= 0 && m.id !== "gygk" && !m.ready; });
 
     return (
         <ScrollScreen dark={isDark} noBottom>

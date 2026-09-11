@@ -33,7 +33,7 @@
         },
         modules: [
             { id: "gygk", title: "GY-GK", ready: true, lessons: ["Tarih", "Coğrafya", "Türkçe", "Vatandaşlık", "Güncel Bilgiler"] },
-            { id: "alan", title: "A Grubu Alan", ready: false, lessons: ["Hukuk", "İktisat", "Maliye", "Muhasebe"] },
+            { id: "alan", title: "A Grubu Alan", ready: true, lessons: ["Hukuk", "İktisat", "Maliye", "Muhasebe", "İşletme", "İstatistik", "Kamu Yönetimi", "Uluslararası İlişkiler", "ÇEKO"] },
             { id: "egitim", title: "Eğitim Bilimleri", ready: false, lessons: ["Gelişim", "Öğrenme", "Program", "Ölçme"] },
             { id: "oabt", title: "ÖABT", ready: false, lessons: [] },
             { id: "dhbt", title: "Din Hizmetleri (DHBT)", ready: false, lessons: [] }

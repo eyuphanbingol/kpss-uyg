@@ -244,7 +244,7 @@
                                 <div className="grid grid-cols-2 gap-2">
                                     {[
                                         { id: "B", t: "B Grubu", d: "GY-GK" },
-                                        { id: "A", t: "A Grubu", d: "Yakında" },
+                                        { id: "A", t: "A Grubu", d: "GY-GK + 9 alan" },
                                         { id: "ogretmen", t: "Öğretmenlik", d: "Yakında" },
                                         { id: "dhbt", t: "DHBT", d: "Yakında" }
                                     ].map(function (x) {

@@ -1,3 +1,5 @@
+import { isAlanDers } from "./alan";
+
 function stripHtml(html) {
     return String(html || "")
         .replace(/<br\s*\/?>/gi, " ")
@@ -267,6 +269,9 @@ export const ClozeEngine = {
         return remaining(kd, skipIds).length;
     },
     dersEnabled: function (ders) {
-        return String(ders || "") !== "Geometri";
+        var d = String(ders || "");
+        if (d === "Geometri") return false;
+        if (isAlanDers(d)) return false;
+        return true;
     }
 };

@@ -271,7 +271,10 @@
     }
 
     function dersEnabled(ders) {
-        return String(ders || "") !== "Geometri";
+        var d = String(ders || "");
+        if (d === "Geometri") return false;
+        if (global.AlanCatalog && global.AlanCatalog.isAlanDers(d)) return false;
+        return true;
     }
 
     var api = { buildForKonu: buildForKonu, countForKonu: countForKonu, remainingCount: remainingCount, dersEnabled: dersEnabled, stripHtml: stripHtml };
