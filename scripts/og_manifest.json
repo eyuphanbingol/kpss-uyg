@@ -1,0 +1,332 @@
+{
+  "AGS Sözel Yetenek": {
+    "prefix": "ags_sozel",
+    "konular": [
+      "Sözcükte Anlam",
+      "Cümlede Anlam",
+      "Anlatımın Oluşması",
+      "Paragrafta Anlam",
+      "Sözel Mantık"
+    ]
+  },
+  "AGS Sayısal Yetenek": {
+    "prefix": "ags_sayisal",
+    "konular": [
+      "Temel Matematik",
+      "Grafik ve Tablo Yorumlama",
+      "Mantıksal Muhakeme Problemleri"
+    ]
+  },
+  "AGS Tarih": {
+    "prefix": "ags_tarih",
+    "konular": [
+      "Osmanlı Öncesi Türk Tarihi",
+      "Osmanlı Tarihi",
+      "Atatürk İlkeleri ve İnkılap Tarihi",
+      "Çağdaş Türk ve Dünya Tarihi"
+    ]
+  },
+  "AGS Türkiye Coğrafyası": {
+    "prefix": "ags_cografya",
+    "konular": [
+      "Fiziki Coğrafya",
+      "Beşerî ve Ekonomik Coğrafya"
+    ]
+  },
+  "AGS Eğitim Bilimleri": {
+    "prefix": "ags_egitim",
+    "konular": [
+      "Eğitim Tarihi",
+      "Eğitimin Felsefi Temelleri",
+      "Eğitimin Toplumsal Temelleri",
+      "Eğitimin Ekonomik Temelleri",
+      "Eğitimin Politik Temelleri",
+      "Öğretim Yöntem ve Teknikleri",
+      "Sınıf Yönetimi",
+      "Program Okuryazarlığı",
+      "Ölçme ve Değerlendirme",
+      "Öğrenme Psikolojisi",
+      "Gelişim Psikolojisi",
+      "Rehberlik",
+      "Eğitim ve Öğretim Teknolojileri",
+      "Türk Millî Eğitim Sisteminin Genel Yapısı",
+      "Türkiye Yüzyılı Maarif Modeli"
+    ]
+  },
+  "AGS Mevzuat": {
+    "prefix": "ags_mevzuat",
+    "konular": [
+      "T.C. Anayasası",
+      "İnsan Hakları Hukuku",
+      "1739 Sayılı Kanun",
+      "222 Sayılı Kanun",
+      "7528 Sayılı Kanun"
+    ]
+  },
+  "ÖABT Türkçe": {
+    "prefix": "oabt_turkce",
+    "konular": [
+      "Alan Bilgisi",
+      "Dil Bilgisi",
+      "Anlama ve Anlatma",
+      "Türk Dili",
+      "Edebiyat",
+      "Türkçe Öğretimi",
+      "Dil Becerilerinin Öğretimi",
+      "Türkçe Öğretim Yöntemleri",
+      "Ölçme ve Değerlendirme"
+    ]
+  },
+  "ÖABT İlköğretim Matematik": {
+    "prefix": "oabt_ilkomat",
+    "konular": [
+      "Analiz",
+      "Cebir",
+      "Geometri",
+      "Sayılar",
+      "Olasılık ve İstatistik",
+      "Matematiksel Yapıların Temelleri",
+      "Alan Eğitimi"
+    ]
+  },
+  "ÖABT Matematik": {
+    "prefix": "oabt_mat",
+    "konular": [
+      "Analiz",
+      "Cebir",
+      "Geometri",
+      "Lineer Cebir",
+      "Diferansiyel Denklemler",
+      "Olasılık",
+      "İstatistik",
+      "Alan Eğitimi"
+    ]
+  },
+  "ÖABT Fen Bilimleri": {
+    "prefix": "oabt_fen",
+    "konular": [
+      "Fizik",
+      "Kimya",
+      "Biyoloji",
+      "Yer Bilimi",
+      "Astronomi",
+      "Çevre Bilimi",
+      "Fen Bilimleri Eğitimi"
+    ]
+  },
+  "ÖABT Fizik": {
+    "prefix": "oabt_fizik",
+    "konular": [
+      "Mekanik",
+      "Elektrik ve Manyetizma",
+      "Modern Fizik",
+      "Optik",
+      "Termodinamik",
+      "Dalgalar",
+      "Atom ve Nükleer Fizik",
+      "Alan Eğitimi"
+    ]
+  },
+  "ÖABT Kimya": {
+    "prefix": "oabt_kimya",
+    "konular": [
+      "Analitik Kimya",
+      "Anorganik Kimya",
+      "Organik Kimya",
+      "Fizikokimya",
+      "Biyokimya",
+      "Kimya Teknolojisi",
+      "Alan Eğitimi"
+    ]
+  },
+  "ÖABT Biyoloji": {
+    "prefix": "oabt_bio",
+    "konular": [
+      "Hücre ve Moleküler Biyoloji",
+      "Canlıların Yapısı",
+      "Genetik",
+      "Ekoloji",
+      "Bitki Biyolojisi",
+      "Hayvan Biyolojisi",
+      "Evrim",
+      "Fizyoloji",
+      "Alan Eğitimi"
+    ]
+  },
+  "ÖABT Sosyal Bilgiler": {
+    "prefix": "oabt_sosyal",
+    "konular": [
+      "Tarih",
+      "Coğrafya",
+      "Siyaset Bilimi",
+      "Sosyal Bilgilerin Temelleri",
+      "Sosyoloji",
+      "Psikoloji",
+      "Felsefe",
+      "Ekonomi",
+      "Antropoloji",
+      "Arkeoloji",
+      "Bilim, Teknoloji ve Toplum",
+      "İnsan İlişkileri ve İletişim",
+      "Sanat ve Estetik",
+      "Günümüz Dünya Sorunları",
+      "Sosyal Proje Geliştirme",
+      "Alan Eğitimi"
+    ]
+  },
+  "ÖABT Türk Dili ve Edebiyatı": {
+    "prefix": "oabt_tde",
+    "konular": [
+      "Eski Türk Dili",
+      "Yeni Türk Dili",
+      "Türk Halk Edebiyatı",
+      "Eski Türk Edebiyatı",
+      "Yeni Türk Edebiyatı",
+      "Alan Eğitimi"
+    ]
+  },
+  "ÖABT Tarih": {
+    "prefix": "oabt_tarih",
+    "konular": [
+      "Tarih Metodolojisi",
+      "Osmanlı Türkçesi",
+      "Eski Çağ Tarihi",
+      "İlk Türk Devletleri Tarihi",
+      "Orta Çağ İslam Tarihi",
+      "Osmanlı Tarihi",
+      "Türkiye Cumhuriyeti Tarihi",
+      "Orta Çağ'dan XX. Yüzyıla Dünya Tarihi",
+      "XX. Yüzyıl Türk ve Dünya Tarihi",
+      "Alan Eğitimi"
+    ]
+  },
+  "ÖABT Coğrafya": {
+    "prefix": "oabt_cog",
+    "konular": [
+      "Fiziki Coğrafya",
+      "Beşerî Coğrafya",
+      "Ekonomik Coğrafya",
+      "Türkiye Coğrafyası",
+      "Bölgesel Coğrafya",
+      "Jeopolitik",
+      "Coğrafi Bilgi Sistemleri",
+      "Çevre ve Toplum",
+      "Alan Eğitimi"
+    ]
+  },
+  "ÖABT DKAB / İHL": {
+    "prefix": "oabt_dkab",
+    "konular": [
+      "Kur'an-ı Kerim",
+      "Tefsir",
+      "Hadis",
+      "Siyer",
+      "İslam Hukuku",
+      "Kelam",
+      "İslam Mezhepleri",
+      "İslam Felsefesi",
+      "Dinler Tarihi",
+      "İslam Tarihi",
+      "Din Eğitimi",
+      "Ahlak",
+      "Alan Eğitimi"
+    ]
+  },
+  "ÖABT Rehberlik": {
+    "prefix": "oabt_rehber",
+    "konular": [
+      "Psikolojik Danışma Kuramları",
+      "Gelişim Psikolojisi",
+      "Öğrenme Psikolojisi",
+      "Ölçme ve Değerlendirme",
+      "Bireyi Tanıma Teknikleri",
+      "Psikolojik Danışma İlke ve Teknikleri",
+      "Mesleki Rehberlik",
+      "Eğitsel Rehberlik",
+      "Grupla Psikolojik Danışma",
+      "Özel Eğitim",
+      "Alan Eğitimi"
+    ]
+  },
+  "ÖABT Beden Eğitimi": {
+    "prefix": "oabt_beden",
+    "konular": [
+      "İnsan Anatomisi ve Kinesiyoloji",
+      "Egzersiz Fizyolojisi",
+      "Spor Sağlığı",
+      "Antrenman Bilgisi",
+      "Spor Yönetimi",
+      "Spor Psikolojisi",
+      "Beden Eğitimi ve Spor",
+      "Spor Branşları",
+      "Alan Eğitimi"
+    ]
+  },
+  "ÖABT Sınıf Öğretmenliği": {
+    "prefix": "oabt_sinif",
+    "konular": [
+      "İlkokulda Temel Matematik",
+      "İlkokulda Temel Fen Bilimleri",
+      "Türk Dili",
+      "Türk Tarihi ve Kültürü",
+      "Türkiye Coğrafyası ve Jeopolitiği",
+      "Çocuk Edebiyatı",
+      "Hayat Bilgisi Öğretimi",
+      "Sosyal Bilgiler Öğretimi",
+      "Fen Bilimleri Öğretimi",
+      "Matematik Öğretimi",
+      "Türkçe Öğretimi",
+      "İlk Okuma ve Yazma Öğretimi",
+      "Drama",
+      "Görsel Sanatlar",
+      "Müzik",
+      "Beden Eğitimi",
+      "Din Kültürü ve Ahlak Bilgisi"
+    ]
+  },
+  "ÖABT Okul Öncesi": {
+    "prefix": "oabt_okul",
+    "konular": [
+      "Çocuk Gelişimi",
+      "Erken Çocukluk Eğitimi",
+      "Çocuk Sağlığı",
+      "Çocuk Ruh Sağlığı",
+      "Oyun",
+      "Çocuk Edebiyatı",
+      "Aile Eğitimi",
+      "Okul Öncesi Eğitim Programları",
+      "Türkçe Dil Etkinlikleri",
+      "Matematik Etkinlikleri",
+      "Fen Etkinlikleri",
+      "Sanat Etkinlikleri",
+      "Müzik",
+      "Drama",
+      "Hareket",
+      "Alan Eğitimi ve Değerlendirme"
+    ]
+  },
+  "ÖABT Özel Eğitim": {
+    "prefix": "oabt_ozel",
+    "konular": [
+      "Zihin Yetersizliği ve Otizm Spektrum Bozukluğu",
+      "Öğrenme Güçlüğü ve Özel Yetenek",
+      "İşitme ve Görme Yetersizliği",
+      "Erken Çocuklukta Özel Eğitim",
+      "Uygulamalı Davranış Analizi",
+      "Bireyselleştirilmiş Eğitim Programları",
+      "Özel Eğitimde Değerlendirme",
+      "Dil ve İletişim Becerilerinin Desteklenmesi",
+      "Özel Eğitim Politikaları ve Yasal Düzenlemeler",
+      "2024 Türkiye Yüzyılı Maarif Modeli Özel Eğitim Programları",
+      "Özel Eğitimde Okuma-Yazma Öğretimi",
+      "Özel Eğitimde Fen ve Sosyal Bilgiler Öğretimi",
+      "Özel Eğitimde Matematik Öğretimi",
+      "Özel Eğitimde Sanatsal Becerilerin Öğretimi",
+      "Özel Eğitimde Fiziksel Eğitim ve Spor",
+      "Özel Eğitimde Sosyal Uyum Becerilerinin Öğretimi",
+      "Özel Eğitimde Türkçe Öğretimi",
+      "Özel Eğitimde Oyun ve Müzik",
+      "Özel Eğitimde Aile Eğitimi"
+    ]
+  }
+}

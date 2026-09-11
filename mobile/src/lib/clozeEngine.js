@@ -1,4 +1,4 @@
-import { isAlanDers } from "./alan";
+import { isAlanDers, isOgretmenDers } from "./alan";
 
 function stripHtml(html) {
     return String(html || "")
@@ -272,6 +272,7 @@ export const ClozeEngine = {
         var d = String(ders || "");
         if (d === "Geometri") return false;
         if (isAlanDers(d)) return false;
+        if (isOgretmenDers(d)) return false;
         return true;
     }
 };

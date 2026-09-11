@@ -245,7 +245,7 @@
                                     {[
                                         { id: "B", t: "B Grubu", d: "GY-GK" },
                                         { id: "A", t: "A Grubu", d: "GY-GK + 9 alan" },
-                                        { id: "ogretmen", t: "Öğretmenlik", d: "Yakında" },
+                                        { id: "ogretmen", t: "Öğretmenlik", d: "GY-GK + AGS + ÖABT" },
                                         { id: "dhbt", t: "DHBT", d: "Yakında" }
                                     ].map(function (x) {
                                         var on = target === x.id;

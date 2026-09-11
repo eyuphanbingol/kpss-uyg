@@ -15,7 +15,30 @@ const DERS_THEME = {
     "İstatistik": { text: "text-stone-700", icon: "📊", darkText: "text-stone-300", accent: "#4338ca", pastel: "#e0e7ff" },
     "Kamu Yönetimi": { text: "text-stone-700", icon: "🏛️", darkText: "text-stone-300", accent: "#b91c1c", pastel: "#fee2e2" },
     "Uluslararası İlişkiler": { text: "text-stone-700", icon: "🌐", darkText: "text-stone-300", accent: "#1d4ed8", pastel: "#dbeafe" },
-    "ÇEKO": { text: "text-stone-700", icon: "👷", darkText: "text-stone-300", accent: "#047857", pastel: "#d1fae5" }
+    "ÇEKO": { text: "text-stone-700", icon: "👷", darkText: "text-stone-300", accent: "#047857", pastel: "#d1fae5" },
+    "AGS Sözel Yetenek": { text: "text-stone-700", icon: "🗣️", darkText: "text-stone-300", accent: "#1d4ed8", pastel: "#dbeafe" },
+    "AGS Sayısal Yetenek": { text: "text-stone-700", icon: "🔢", darkText: "text-stone-300", accent: "#0f766e", pastel: "#ccfbf1" },
+    "AGS Tarih": { text: "text-stone-700", icon: "📜", darkText: "text-stone-300", accent: "#b45309", pastel: "#fef3c7" },
+    "AGS Türkiye Coğrafyası": { text: "text-stone-700", icon: "🗺️", darkText: "text-stone-300", accent: "#047857", pastel: "#d1fae5" },
+    "AGS Eğitim Bilimleri": { text: "text-stone-700", icon: "🎓", darkText: "text-stone-300", accent: "#be185d", pastel: "#fce7f3" },
+    "AGS Mevzuat": { text: "text-stone-700", icon: "⚖️", darkText: "text-stone-300", accent: "#4f46e5", pastel: "#e0e7ff" },
+    "ÖABT Türkçe": { text: "text-stone-700", icon: "✍️", darkText: "text-stone-300", accent: "#2563eb", pastel: "#dbeafe" },
+    "ÖABT İlköğretim Matematik": { text: "text-stone-700", icon: "➗", darkText: "text-stone-300", accent: "#0d9488", pastel: "#ccfbf1" },
+    "ÖABT Matematik": { text: "text-stone-700", icon: "📐", darkText: "text-stone-300", accent: "#115e59", pastel: "#ccfbf1" },
+    "ÖABT Fen Bilimleri": { text: "text-stone-700", icon: "🔬", darkText: "text-stone-300", accent: "#0369a1", pastel: "#e0f2fe" },
+    "ÖABT Fizik": { text: "text-stone-700", icon: "⚛️", darkText: "text-stone-300", accent: "#4338ca", pastel: "#e0e7ff" },
+    "ÖABT Kimya": { text: "text-stone-700", icon: "🧪", darkText: "text-stone-300", accent: "#b91c1c", pastel: "#fee2e2" },
+    "ÖABT Biyoloji": { text: "text-stone-700", icon: "🧬", darkText: "text-stone-300", accent: "#15803d", pastel: "#dcfce7" },
+    "ÖABT Sosyal Bilgiler": { text: "text-stone-700", icon: "🌍", darkText: "text-stone-300", accent: "#c2410c", pastel: "#ffedd5" },
+    "ÖABT Türk Dili ve Edebiyatı": { text: "text-stone-700", icon: "📖", darkText: "text-stone-300", accent: "#7c3aed", pastel: "#ede9fe" },
+    "ÖABT Tarih": { text: "text-stone-700", icon: "🏛️", darkText: "text-stone-300", accent: "#a16207", pastel: "#fef3c7" },
+    "ÖABT Coğrafya": { text: "text-stone-700", icon: "🧭", darkText: "text-stone-300", accent: "#047857", pastel: "#d1fae5" },
+    "ÖABT DKAB / İHL": { text: "text-stone-700", icon: "🕌", darkText: "text-stone-300", accent: "#0f766e", pastel: "#ccfbf1" },
+    "ÖABT Rehberlik": { text: "text-stone-700", icon: "💚", darkText: "text-stone-300", accent: "#047857", pastel: "#d1fae5" },
+    "ÖABT Beden Eğitimi": { text: "text-stone-700", icon: "🏃", darkText: "text-stone-300", accent: "#ea580c", pastel: "#ffedd5" },
+    "ÖABT Sınıf Öğretmenliği": { text: "text-stone-700", icon: "🏫", darkText: "text-stone-300", accent: "#db2777", pastel: "#fce7f3" },
+    "ÖABT Okul Öncesi": { text: "text-stone-700", icon: "🧸", darkText: "text-stone-300", accent: "#d97706", pastel: "#fef3c7" },
+    "ÖABT Özel Eğitim": { text: "text-stone-700", icon: "🤝", darkText: "text-stone-300", accent: "#7c3aed", pastel: "#ede9fe" }
 };
 
 function stripChoicePrefix(opt) {

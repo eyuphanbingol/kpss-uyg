@@ -274,6 +274,7 @@
         var d = String(ders || "");
         if (d === "Geometri") return false;
         if (global.AlanCatalog && global.AlanCatalog.isAlanDers(d)) return false;
+        if (global.AlanCatalog && global.AlanCatalog.isOgretmenDers(d)) return false;
         return true;
     }
 

@@ -200,7 +200,7 @@
                     </details>
                     <details>
                         <summary>Hangi dersler açık?</summary>
-                        <p>Tarih, coğrafya, Türkçe, vatandaşlık, güncel, geometri. Lisans A Grubu’nda hukuk, iktisat, maliye, muhasebe, işletme, istatistik, kamu yönetimi, uluslararası ilişkiler ve ÇEKO. A grubu, eğitim, ÖABT sonra.</p>
+                        <p>Tarih, coğrafya, Türkçe, vatandaşlık, güncel, geometri. Lisans A Grubu’nda 9 alan testi. Öğretmenlikte MEB-AGS ve 17 ÖABT branşı. DHBT sonra.</p>
                     </details>
                     <details>
                         <summary>App Store ve Play Store?</summary>
@@ -438,7 +438,7 @@
         var targets = [
             { id: "B", t: "B Grubu", d: "Standart memurluk · yalnızca GY-GK", ready: true, icon: "book", color: "bg-indigo-100 text-indigo-700" },
             { id: "A", t: "A Grubu", d: "GY-GK + 9 alan testi", ready: true, icon: "scale", color: "bg-purple-100 text-purple-700" },
-            { id: "ogretmen", t: "Öğretmenlik", d: "GY-GK + eğitim bilimleri + ÖABT", ready: false, icon: "cap", color: "bg-rose-100 text-rose-700" },
+            { id: "ogretmen", t: "Öğretmenlik", d: "GY-GK + MEB-AGS + ÖABT", ready: true, icon: "cap", color: "bg-rose-100 text-rose-700" },
             { id: "dhbt", t: "DHBT", d: "GY-GK + din hizmetleri", ready: false, icon: "book", color: "bg-emerald-100 text-emerald-700" }
         ];
 
