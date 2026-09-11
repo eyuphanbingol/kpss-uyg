@@ -3,6 +3,22 @@ def _t(ders, prefix, title, slides, facts):
     return {"ders": ders, "prefix": prefix, "title": title, "slides": slides, "facts": facts}
 
 
+def F(q, a, w, e):
+    return (q, a, w, e)
+
+
+def expand(ders, prefix, title, trap, pts, qas):
+    pts = list(pts)
+    while len(pts) < 15:
+        pts.append(pts[len(pts) % max(1, len(pts))])
+    slides = [
+        (title.upper()[:28], "blue", pts[0:5], trap),
+        ("KAVRAM VE ILKE", "violet", pts[5:10], None),
+        ("UYGULAMA VE SINAV", "emerald", pts[10:15], None),
+    ]
+    return _t(ders, prefix, title, slides, qas)
+
+
 TOPICS = [
     _t("ÖABT Beden Eğitimi", "oabt_beden", "İnsan Anatomisi ve Kinesiyoloji", [
         ("İSKELET VE EKLEM", "blue", [
