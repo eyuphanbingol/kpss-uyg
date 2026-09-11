@@ -317,7 +317,7 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
         if (!userProfile.role) userProfile.role = "student";
         if (!userProfile.platform) userProfile.platform = "web";
         if (!userProfile.educationLevel) userProfile.educationLevel = "lisans";
-        if (!userProfile.targetType) userProfile.targetType = "B";
+        userProfile.targetType = "B";
         if (!userProfile.experiments) userProfile.experiments = {};
         if (!userProfile.referralCode) userProfile.referralCode = "";
         if (userProfile.studyPlan && typeof userProfile.studyPlan !== "object") userProfile.studyPlan = null;

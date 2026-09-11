@@ -141,7 +141,7 @@ export default function AuthScreen() {
             name: name,
             educationLevel: level,
             examDate: examDate,
-            targetType: level === "lisans" ? target : "B",
+            targetType: "B",
             referredBy: refCode
         }));
     }

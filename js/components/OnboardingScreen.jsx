@@ -107,7 +107,7 @@
                 dailyMinutes: 45,
                 dailyQuestions: 25,
                 educationLevel: level,
-                targetType: level === "lisans" ? target : "B",
+                targetType: "B",
                 kvkkConsent: true,
                 weeklyHours: 7
             });
@@ -238,28 +238,6 @@
                     {/* ===== STEP 2 ===== */}
                     {step === 2 && (
                         <div className="space-y-4 slide-up">
-                            {level === "lisans" ? (
-                            <div>
-                                <p className="text-sm font-medium text-stone-600 dark:text-stone-300 mb-2">🎯 Kulvar</p>
-                                <div className="grid grid-cols-2 gap-2">
-                                    {[
-                                        { id: "B", t: "B Grubu", d: "GY-GK" },
-                                        { id: "A", t: "A Grubu", d: "GY-GK + 9 alan" },
-                                        { id: "ogretmen", t: "Öğretmenlik", d: "GY-GK + AGS + ÖABT" },
-                                        { id: "dhbt", t: "DHBT", d: "Yakında" }
-                                    ].map(function (x) {
-                                        var on = target === x.id;
-                                        return (
-                                            <button key={x.id} type="button" onClick={function () { setTarget(x.id); }}
-                                                className={"text-left px-3 py-2.5 rounded-2xl border-2 text-sm font-medium transition-all " + (on ? "border-indigo-500 bg-indigo-50 dark:bg-indigo-950/30 text-indigo-700" : "border-stone-200 dark:border-stone-700")}>
-                                                <span className="block">{x.t}</span>
-                                                <span className="text-[10px] text-stone-400 font-normal">{x.d}</span>
-                                            </button>
-                                        );
-                                    })}
-                                </div>
-                            </div>
-                            ) : null}
                             <div>
                                 <label className="block text-sm font-medium text-stone-600 dark:text-stone-300 mb-1.5" htmlFor="ob-date">
                                     📅 Sınav Tarihi

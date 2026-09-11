@@ -117,7 +117,7 @@ export function examTrackName(level) {
 }
 
 export function needsKulvar(level) {
-    return !level || level === "lisans";
+    return false;
 }
 
 export function trackLabel(id) {

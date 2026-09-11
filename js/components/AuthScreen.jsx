@@ -200,7 +200,7 @@
                     </details>
                     <details>
                         <summary>Hangi dersler açık?</summary>
-                        <p>Tarih, coğrafya, Türkçe, vatandaşlık, güncel, geometri. Lisans A Grubu’nda 9 alan testi. Öğretmenlikte MEB-AGS ve 17 ÖABT branşı. DHBT sonra.</p>
+                        <p>Tarih, coğrafya, Türkçe, vatandaşlık, güncel, geometri.</p>
                     </details>
                     <details>
                         <summary>App Store ve Play Store?</summary>
@@ -452,7 +452,7 @@
                     name: name,
                     educationLevel: level,
                     examDate: examDate,
-                    targetType: level === "lisans" ? target : "B",
+                    targetType: "B",
                     referredBy: refCode,
                     moduleInterest: Object.keys(interest).filter(function (k) { return interest[k]; })
                 }));
@@ -585,12 +585,8 @@
 
         // ---------- Enter Key ----------
         function goAfterEducation() {
-            if (level === "lisans") {
-                setStep(2);
-            } else {
-                setTarget("B");
-                setStep(3);
-            }
+            setTarget("B");
+            setStep(3);
             setMsg("");
         }
 
@@ -651,7 +647,7 @@
         if (mode === "up") {
             signup = (
                 <div className="slide-step">
-                    <StepIndicator current={step} total={3} />
+                    <StepIndicator current={step === 1 ? 1 : 2} total={2} />
 
                     {/* Step 1: Name & Education */}
                     {step === 1 && (
@@ -775,7 +771,7 @@
                         <div className="space-y-4">
                             <div className="rounded-2xl bg-indigo-50/50 dark:bg-indigo-950/20 p-4 border border-indigo-100 dark:border-indigo-800/30">
                                 <p className="text-sm text-indigo-700 dark:text-indigo-300">
-                                    📌 <strong>GY-GK</strong> hazır. Diğer modüller açıldığında haberdar olacaksınız.
+                                    📌 <strong>GY-GK</strong> not, test ve oyun hazır.
                                 </p>
                             </div>
 
@@ -1015,7 +1011,7 @@
                     </svg>
                     Google ile Devam
                 </button>
-                <p className="text-[11px] text-stone-500 text-center">İlk kez Google ile gelince ad, eğitim ve kulvar sorulur.</p>
+                <p className="text-[11px] text-stone-500 text-center">İlk kez Google ile gelince ad ve eğitim sorulur.</p>
             </div>
         ) : null;
 

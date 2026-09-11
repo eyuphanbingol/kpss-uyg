@@ -2147,7 +2147,7 @@ function eduLabel(id) {
 }
 
 function needsKulvar(level) {
-    return !level || level === "lisans";
+    return false;
 }
 
 function trackLabel(id) {

@@ -105,7 +105,7 @@ export default function OnboardingScreen() {
             dailyMinutes: 45,
             dailyQuestions: 25,
             educationLevel: level,
-            targetType: level === "lisans" ? target : "B",
+            targetType: "B",
             kvkkConsent: true,
             weeklyHours: 7
         });

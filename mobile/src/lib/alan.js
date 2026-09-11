@@ -35,8 +35,7 @@ export function isOgretmenUser(student) {
 export function filterCatalog(data, student) {
     var src = data || {}, out = {};
     Object.keys(src).forEach(function (d) {
-        if (isAlanDers(d) && !isAlanUser(student)) return;
-        if (isOgretmenDers(d) && !isOgretmenUser(student)) return;
+        if (isAlanDers(d) || isOgretmenDers(d)) return;
         out[d] = src[d];
     });
     return out;
