@@ -73,51 +73,51 @@ window.ags_egitim_13_sorulari = [
     "explanation": "Redefinition."
 },
 {
-    "question": "Eğitim ve Öğretim Teknolojileri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Öğretim teknolojisi öğrenmeyi kolaylaştıran süreç, araç ve tasarımın bütünüdür; alet yığın", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Öğretim teknolojisi için doğru bir açıklamadır?",
+    "options": ["A) SAMR yerine koyma, artırma, değiştirme, yeniden tanımlama; üst basamak dönüştürücüdür.", "B) ADDIE analiz, tasarım, geliştirme, uygulama, değerlendirme döngüsüdür.", "C) Bilişsel yük ve çoklu ortam (Mayer) sözel-görsel kanal; gereksiz süsleme öğrenmeyi bozar.", "D) Öğretim teknolojisi öğrenmeyi kolaylaştıran süreç, araç ve tasarımın bütünüdür; alet yığını değildir.", "E) TPACK alan, pedagoji ve teknoloji bilgilerinin kesişimi; tek başına yazılım yetmez."],
+    "correctAnswerIndex": 3,
+    "explanation": "Eğitim ve Öğretim Teknolojileri notundaki temel bilgi."
 },
 {
-    "question": "Eğitim ve Öğretim Teknolojileri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) TPACK alan, pedagoji ve teknoloji bilgilerinin kesişimi; tek başına yazılım yetmez.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "TPACK hakkında hangisi doğrudur?",
+    "options": ["A) Öğretim teknolojisi öğrenmeyi kolaylaştıran süreç, araç ve tasarımın bütünüdür; alet yığını değildir.", "B) SAMR yerine koyma, artırma, değiştirme, yeniden tanımlama; üst basamak dönüştürücüdür.", "C) ADDIE analiz, tasarım, geliştirme, uygulama, değerlendirme döngüsüdür.", "D) Bilişsel yük ve çoklu ortam (Mayer) sözel-görsel kanal; gereksiz süsleme öğrenmeyi bozar.", "E) TPACK alan, pedagoji ve teknoloji bilgilerinin kesişimi; tek başına yazılım yetmez."],
+    "correctAnswerIndex": 4,
+    "explanation": "Eğitim ve Öğretim Teknolojileri notundaki temel bilgi."
+},
+{
+    "question": "SAMR hangisini ifade eder?",
+    "options": ["A) Öğretim teknolojisi öğrenmeyi kolaylaştıran süreç, araç ve tasarımın bütünüdür; alet yığını değildir.", "B) TPACK alan, pedagoji ve teknoloji bilgilerinin kesişimi; tek başına yazılım yetmez.", "C) ADDIE analiz, tasarım, geliştirme, uygulama, değerlendirme döngüsüdür.", "D) Bilişsel yük ve çoklu ortam (Mayer) sözel-görsel kanal; gereksiz süsleme öğrenmeyi bozar.", "E) SAMR yerine koyma, artırma, değiştirme, yeniden tanımlama; üst basamak dönüştürücüdür."],
+    "correctAnswerIndex": 4,
+    "explanation": "Eğitim ve Öğretim Teknolojileri notundaki temel bilgi."
+},
+{
+    "question": "ADDIE ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) SAMR yerine koyma, artırma, değiştirme, yeniden tanımlama; üst basamak dönüştürücüdür.", "B) Bilişsel yük ve çoklu ortam (Mayer) sözel-görsel kanal; gereksiz süsleme öğrenmeyi bozar.", "C) ADDIE analiz, tasarım, geliştirme, uygulama, değerlendirme döngüsüdür.", "D) Öğretim teknolojisi öğrenmeyi kolaylaştıran süreç, araç ve tasarımın bütünüdür; alet yığını değildir.", "E) TPACK alan, pedagoji ve teknoloji bilgilerinin kesişimi; tek başına yazılım yetmez."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Eğitim ve Öğretim Teknolojileri notundaki temel bilgi."
 },
 {
-    "question": "Eğitim ve Öğretim Teknolojileri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) SAMR yerine koyma, artırma, değiştirme, yeniden tanımlama; üst basamak dönüştürücüdür.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Bilişsel yük ve çoklu ortam için doğru bir açıklamadır?",
+    "options": ["A) Öğretim teknolojisi öğrenmeyi kolaylaştıran süreç, araç ve tasarımın bütünüdür; alet yığını değildir.", "B) TPACK alan, pedagoji ve teknoloji bilgilerinin kesişimi; tek başına yazılım yetmez.", "C) SAMR yerine koyma, artırma, değiştirme, yeniden tanımlama; üst basamak dönüştürücüdür.", "D) ADDIE analiz, tasarım, geliştirme, uygulama, değerlendirme döngüsüdür.", "E) Bilişsel yük ve çoklu ortam (Mayer) sözel-görsel kanal; gereksiz süsleme öğrenmeyi bozar."],
+    "correctAnswerIndex": 4,
+    "explanation": "Eğitim ve Öğretim Teknolojileri notundaki temel bilgi."
 },
 {
-    "question": "Eğitim ve Öğretim Teknolojileri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) ADDIE analiz, tasarım, geliştirme, uygulama, değerlendirme döngüsüdür.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Harmanlanmış (blended) hakkında hangisi doğrudur?",
+    "options": ["A) Harmanlanmış (blended) yüz yüze ve çevrim içi karışımı; tersyüz bunun özel halidir.", "B) Öğretim teknolojisi öğrenmeyi kolaylaştıran süreç, araç ve tasarımın bütünüdür; alet yığını değildir.", "C) TPACK alan, pedagoji ve teknoloji bilgilerinin kesişimi; tek başına yazılım yetmez.", "D) SAMR yerine koyma, artırma, değiştirme, yeniden tanımlama; üst basamak dönüştürücüdür.", "E) ADDIE analiz, tasarım, geliştirme, uygulama, değerlendirme döngüsüdür."],
+    "correctAnswerIndex": 0,
+    "explanation": "Eğitim ve Öğretim Teknolojileri notundaki temel bilgi."
 },
 {
-    "question": "Eğitim ve Öğretim Teknolojileri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Bilişsel yük ve çoklu ortam (Mayer) sözel-görsel kanal; gereksiz süsleme öğrenmeyi bozar.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "LMS hangisini ifade eder?",
+    "options": ["A) LMS içerik, etkileşim, izleme ve ölçmeyi tek çatıda toplar.", "B) Öğretim teknolojisi öğrenmeyi kolaylaştıran süreç, araç ve tasarımın bütünüdür; alet yığını değildir.", "C) TPACK alan, pedagoji ve teknoloji bilgilerinin kesişimi; tek başına yazılım yetmez.", "D) SAMR yerine koyma, artırma, değiştirme, yeniden tanımlama; üst basamak dönüştürücüdür.", "E) ADDIE analiz, tasarım, geliştirme, uygulama, değerlendirme döngüsüdür."],
+    "correctAnswerIndex": 0,
+    "explanation": "Eğitim ve Öğretim Teknolojileri notundaki temel bilgi."
 },
 {
-    "question": "Eğitim ve Öğretim Teknolojileri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Harmanlanmış (blended) yüz yüze ve çevrim içi karışımı; tersyüz bunun özel halidir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Eğitim ve Öğretim Teknolojileri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) LMS içerik, etkileşim, izleme ve ölçmeyi tek çatıda toplar.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Eğitim ve Öğretim Teknolojileri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) EBA ve benzeri ulusal platformlar içerik ve eşzamansız erişim sağlar.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "EBA ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) EBA ve benzeri ulusal platformlar içerik ve eşzamansız erişim sağlar.", "B) Öğretim teknolojisi öğrenmeyi kolaylaştıran süreç, araç ve tasarımın bütünüdür; alet yığını değildir.", "C) TPACK alan, pedagoji ve teknoloji bilgilerinin kesişimi; tek başına yazılım yetmez.", "D) SAMR yerine koyma, artırma, değiştirme, yeniden tanımlama; üst basamak dönüştürücüdür.", "E) ADDIE analiz, tasarım, geliştirme, uygulama, değerlendirme döngüsüdür."],
+    "correctAnswerIndex": 0,
+    "explanation": "Eğitim ve Öğretim Teknolojileri notundaki temel bilgi."
 }
 ];

@@ -55,69 +55,69 @@ window.oabt_turkce_7_sorulari = [
     "explanation": "Program çeşitliliği zenginlik sayar."
 },
 {
-    "question": "Dil Becerilerinin Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Dinleme pasif duyma değil; amaçlı, seçici ve eleştirel bir süreçtir."],
+    "question": "Aşağıdakilerden hangisi Dinleme için doğru bir açıklamadır?",
+    "options": ["A) Konuşma hazırlıklı/hazırlıksız; vurgu, tonlama, beden dili ve söz sırası yönetimi.", "B) Telaffuz ana dil öğretiminde anlaşılırlık odaklıdır; ağız damgalanmaz.", "C) Sınıf içi konuşma IRF (başlat-yanıtla-değerlendir) yerine gerçek soru ve bekleme süresi ister.", "D) Ses bilgisi (phonics) ile bütüncül dil dengelenir; Türkçe saydam ortografide ses-harf eşlemesi güçlüdür.", "E) Dinleme pasif duyma değil; amaçlı, seçici ve eleştirel bir süreçtir."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Dil Becerilerinin Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Dil Becerilerinin Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Not alarak dinleme, empatik dinleme, eleştirel dinleme amaçlara göre ayrılır.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Not alarak dinleme, empatik dinleme, eleştirel dinleme hakkında hangisi doğrudur?",
+    "options": ["A) Sınıf içi konuşma IRF (başlat-yanıtla-değerlendir) yerine gerçek soru ve bekleme süresi ister.", "B) Not alarak dinleme, empatik dinleme, eleştirel dinleme amaçlara göre ayrılır.", "C) Dinleme pasif duyma değil; amaçlı, seçici ve eleştirel bir süreçtir.", "D) Konuşma hazırlıklı/hazırlıksız; vurgu, tonlama, beden dili ve söz sırası yönetimi.", "E) Telaffuz ana dil öğretiminde anlaşılırlık odaklıdır; ağız damgalanmaz."],
+    "correctAnswerIndex": 1,
+    "explanation": "Dil Becerilerinin Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Konuşma hangisini ifade eder?",
+    "options": ["A) Ses bilgisi (phonics) ile bütüncül dil dengelenir; Türkçe saydam ortografide ses-harf eşlemesi güçlüdür.", "B) Konuşma hazırlıklı/hazırlıksız; vurgu, tonlama, beden dili ve söz sırası yönetimi.", "C) Dinleme pasif duyma değil; amaçlı, seçici ve eleştirel bir süreçtir.", "D) Not alarak dinleme, empatik dinleme, eleştirel dinleme amaçlara göre ayrılır.", "E) Telaffuz ana dil öğretiminde anlaşılırlık odaklıdır; ağız damgalanmaz."],
+    "correctAnswerIndex": 1,
+    "explanation": "Dil Becerilerinin Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Telaffuz ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Konuşma hazırlıklı/hazırlıksız; vurgu, tonlama, beden dili ve söz sırası yönetimi.", "B) Sınıf içi konuşma IRF (başlat-yanıtla-değerlendir) yerine gerçek soru ve bekleme süresi ister.", "C) Telaffuz ana dil öğretiminde anlaşılırlık odaklıdır; ağız damgalanmaz.", "D) Dinleme pasif duyma değil; amaçlı, seçici ve eleştirel bir süreçtir.", "E) Not alarak dinleme, empatik dinleme, eleştirel dinleme amaçlara göre ayrılır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Dil Becerilerinin Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Sınıf içi konuşma için doğru bir açıklamadır?",
+    "options": ["A) Dinleme pasif duyma değil; amaçlı, seçici ve eleştirel bir süreçtir.", "B) Not alarak dinleme, empatik dinleme, eleştirel dinleme amaçlara göre ayrılır.", "C) Konuşma hazırlıklı/hazırlıksız; vurgu, tonlama, beden dili ve söz sırası yönetimi.", "D) Telaffuz ana dil öğretiminde anlaşılırlık odaklıdır; ağız damgalanmaz.", "E) Sınıf içi konuşma IRF (başlat-yanıtla-değerlendir) yerine gerçek soru ve bekleme süresi ister."],
+    "correctAnswerIndex": 4,
+    "explanation": "Dil Becerilerinin Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Ses bilgisi hakkında hangisi doğrudur?",
+    "options": ["A) Ses bilgisi (phonics) ile bütüncül dil dengelenir; Türkçe saydam ortografide ses-harf eşlemesi güçlüdür.", "B) Dinleme pasif duyma değil; amaçlı, seçici ve eleştirel bir süreçtir.", "C) Not alarak dinleme, empatik dinleme, eleştirel dinleme amaçlara göre ayrılır.", "D) Konuşma hazırlıklı/hazırlıksız; vurgu, tonlama, beden dili ve söz sırası yönetimi.", "E) Telaffuz ana dil öğretiminde anlaşılırlık odaklıdır; ağız damgalanmaz."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Dil Becerilerinin Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Dil Becerilerinin Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Konuşma hazırlıklı/hazırlıksız; vurgu, tonlama, beden dili ve söz sırası yönetimi."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Dil Becerilerinin Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Telaffuz ana dil öğretiminde anlaşılırlık odaklıdır; ağız damgalanmaz.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Akıcılık hangisini ifade eder?",
+    "options": ["A) Akıcılık doğruluk, hız ve prozodi; anlama sözcük bilgisi, çıkarım, yapı bilgisi ister.", "B) Dinleme pasif duyma değil; amaçlı, seçici ve eleştirel bir süreçtir.", "C) Not alarak dinleme, empatik dinleme, eleştirel dinleme amaçlara göre ayrılır.", "D) Konuşma hazırlıklı/hazırlıksız; vurgu, tonlama, beden dili ve söz sırası yönetimi.", "E) Telaffuz ana dil öğretiminde anlaşılırlık odaklıdır; ağız damgalanmaz."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Dil Becerilerinin Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Dil Becerilerinin Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Sınıf içi konuşma IRF (başlat-yanıtla-değerlendir) yerine gerçek soru ve bekleme süresi is"],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Strateji ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Konuşma hazırlıklı/hazırlıksız; vurgu, tonlama, beden dili ve söz sırası yönetimi.", "B) Telaffuz ana dil öğretiminde anlaşılırlık odaklıdır; ağız damgalanmaz.", "C) Strateji özet, soru üretme, görselleştirme, izleme (metacognition).", "D) Dinleme pasif duyma değil; amaçlı, seçici ve eleştirel bir süreçtir.", "E) Not alarak dinleme, empatik dinleme, eleştirel dinleme amaçlara göre ayrılır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Dil Becerilerinin Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Dil Becerilerinin Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Ses bilgisi (phonics) ile bütüncül dil dengelenir; Türkçe saydam ortografide ses-harf eşle", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Sesli ve sessiz okuma için doğru bir açıklamadır?",
+    "options": ["A) Sesli ve sessiz okuma amaçları farklıdır; anlama ölçmede sessiz okuma tercih edilir.", "B) Dinleme pasif duyma değil; amaçlı, seçici ve eleştirel bir süreçtir.", "C) Not alarak dinleme, empatik dinleme, eleştirel dinleme amaçlara göre ayrılır.", "D) Konuşma hazırlıklı/hazırlıksız; vurgu, tonlama, beden dili ve söz sırası yönetimi.", "E) Telaffuz ana dil öğretiminde anlaşılırlık odaklıdır; ağız damgalanmaz."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Dil Becerilerinin Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Dil Becerilerinin Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Akıcılık doğruluk, hız ve prozodi; anlama sözcük bilgisi, çıkarım, yapı bilgisi ister."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Eleştirel-dijital okuma hakkında hangisi doğrudur?",
+    "options": ["A) Konuşma hazırlıklı/hazırlıksız; vurgu, tonlama, beden dili ve söz sırası yönetimi.", "B) Telaffuz ana dil öğretiminde anlaşılırlık odaklıdır; ağız damgalanmaz.", "C) Eleştirel-dijital okuma kaynak değerlendirme ve hiper-metin gezinmeyi kapsar.", "D) Dinleme pasif duyma değil; amaçlı, seçici ve eleştirel bir süreçtir.", "E) Not alarak dinleme, empatik dinleme, eleştirel dinleme amaçlara göre ayrılır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Dil Becerilerinin Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Dil Becerilerinin Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Strateji özet, soru üretme, görselleştirme, izleme (metacognition).", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Yazmaya hazırlık hangisini ifade eder?",
+    "options": ["A) Yazmaya hazırlık ince motor, yön, harf-ses; ilkokulda süreç ve ürün birlikte izlenir.", "B) Dinleme pasif duyma değil; amaçlı, seçici ve eleştirel bir süreçtir.", "C) Not alarak dinleme, empatik dinleme, eleştirel dinleme amaçlara göre ayrılır.", "D) Konuşma hazırlıklı/hazırlıksız; vurgu, tonlama, beden dili ve söz sırası yönetimi.", "E) Telaffuz ana dil öğretiminde anlaşılırlık odaklıdır; ağız damgalanmaz."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Dil Becerilerinin Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Sesli ve sessiz okuma amaçları farklıdır; anlama ölçmede sessiz okuma tercih edilir."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Dil Becerilerinin Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Eleştirel-dijital okuma kaynak değerlendirme ve hiper-metin gezinmeyi kapsar.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Dil Becerilerinin Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Yazmaya hazırlık ince motor, yön, harf-ses; ilkokulda süreç ve ürün birlikte izlenir."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Dil Becerilerinin Öğretimi notundaki temel bilgi."
 }
 ];

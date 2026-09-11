@@ -55,69 +55,69 @@ window.oabt_ilkomat_7_sorulari = [
     "explanation": "Süreç rubriği kavramsal izleme sağlar."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Matematik Dersi Öğretim Programı beceri (problem çözme, akıl yürütme, ilişkilendirme, ilet", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Matematik Dersi Öğretim Programı için doğru bir açıklamadır?",
+    "options": ["A) Kavram yanılgısı: 'çarpma büyütür', 'kesirlerde payda büyüyünce sayı büyür', 'eşitlik soldan sağa işlem'dir.", "B) Van Hiele geometri düzeyleri: görsel, analiz, informal çıkarım, formal, rigor.", "C) Temsil çeşitliliği somut-çizim-sembol (CRA) geçişi ilköğretimin omurgasıdır.", "D) Matematik Dersi Öğretim Programı beceri (problem çözme, akıl yürütme, ilişkilendirme, iletişim) ve yetkinlik temellidir.", "E) Sayı duyusu esnek temsil, tahmin, mutlak işlem ezberinin ötesidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Sayı duyusu esnek temsil, tahmin, mutlak işlem ezberinin ötesidir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Sayı duyusu hakkında hangisi doğrudur?",
+    "options": ["A) Sayı duyusu esnek temsil, tahmin, mutlak işlem ezberinin ötesidir.", "B) Matematik Dersi Öğretim Programı beceri (problem çözme, akıl yürütme, ilişkilendirme, iletişim) ve yetkinlik temellidir.", "C) Kavram yanılgısı: 'çarpma büyütür', 'kesirlerde payda büyüyünce sayı büyür', 'eşitlik soldan sağa işlem'dir.", "D) Van Hiele geometri düzeyleri: görsel, analiz, informal çıkarım, formal, rigor.", "E) Temsil çeşitliliği somut-çizim-sembol (CRA) geçişi ilköğretimin omurgasıdır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Kavram yanılgısı hangisini ifade eder?",
+    "options": ["A) Kavram yanılgısı: 'çarpma büyütür', 'kesirlerde payda büyüyünce sayı büyür', 'eşitlik soldan sağa işlem'dir.", "B) Matematik Dersi Öğretim Programı beceri (problem çözme, akıl yürütme, ilişkilendirme, iletişim) ve yetkinlik temellidir.", "C) Sayı duyusu esnek temsil, tahmin, mutlak işlem ezberinin ötesidir.", "D) Van Hiele geometri düzeyleri: görsel, analiz, informal çıkarım, formal, rigor.", "E) Temsil çeşitliliği somut-çizim-sembol (CRA) geçişi ilköğretimin omurgasıdır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Van Hiele ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Sayı duyusu esnek temsil, tahmin, mutlak işlem ezberinin ötesidir.", "B) Kavram yanılgısı: 'çarpma büyütür', 'kesirlerde payda büyüyünce sayı büyür', 'eşitlik soldan sağa işlem'dir.", "C) Temsil çeşitliliği somut-çizim-sembol (CRA) geçişi ilköğretimin omurgasıdır.", "D) Van Hiele geometri düzeyleri: görsel, analiz, informal çıkarım, formal, rigor.", "E) Matematik Dersi Öğretim Programı beceri (problem çözme, akıl yürütme, ilişkilendirme, iletişim) ve yetkinlik temellidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Temsil çeşitliliği için doğru bir açıklamadır?",
+    "options": ["A) Temsil çeşitliliği somut-çizim-sembol (CRA) geçişi ilköğretimin omurgasıdır.", "B) Matematik Dersi Öğretim Programı beceri (problem çözme, akıl yürütme, ilişkilendirme, iletişim) ve yetkinlik temellidir.", "C) Sayı duyusu esnek temsil, tahmin, mutlak işlem ezberinin ötesidir.", "D) Kavram yanılgısı: 'çarpma büyütür', 'kesirlerde payda büyüyünce sayı büyür', 'eşitlik soldan sağa işlem'dir.", "E) Van Hiele geometri düzeyleri: görsel, analiz, informal çıkarım, formal, rigor."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Polya hakkında hangisi doğrudur?",
+    "options": ["A) Sayı duyusu esnek temsil, tahmin, mutlak işlem ezberinin ötesidir.", "B) Kavram yanılgısı: 'çarpma büyütür', 'kesirlerde payda büyüyünce sayı büyür', 'eşitlik soldan sağa işlem'dir.", "C) Van Hiele geometri düzeyleri: görsel, analiz, informal çıkarım, formal, rigor.", "D) Polya anla-planla-uygula-değerlendir; problem çözme rutin alıştırmadan ayrıdır.", "E) Matematik Dersi Öğretim Programı beceri (problem çözme, akıl yürütme, ilişkilendirme, iletişim) ve yetkinlik temellidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Açık uçlu görev hangisini ifade eder?",
+    "options": ["A) Matematik Dersi Öğretim Programı beceri (problem çözme, akıl yürütme, ilişkilendirme, iletişim) ve yetkinlik temellidir.", "B) Sayı duyusu esnek temsil, tahmin, mutlak işlem ezberinin ötesidir.", "C) Kavram yanılgısı: 'çarpma büyütür', 'kesirlerde payda büyüyünce sayı büyür', 'eşitlik soldan sağa işlem'dir.", "D) Van Hiele geometri düzeyleri: görsel, analiz, informal çıkarım, formal, rigor.", "E) Açık uçlu görev çok strateji; tersine çevirme sonucu verip süreci sorgulatır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Matematik konuşması ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Van Hiele geometri düzeyleri: görsel, analiz, informal çıkarım, formal, rigor.", "B) Matematik konuşması gerekçe, karşı örnek, temsil değiştirme.", "C) Matematik Dersi Öğretim Programı beceri (problem çözme, akıl yürütme, ilişkilendirme, iletişim) ve yetkinlik temellidir.", "D) Sayı duyusu esnek temsil, tahmin, mutlak işlem ezberinin ötesidir.", "E) Kavram yanılgısı: 'çarpma büyütür', 'kesirlerde payda büyüyünce sayı büyür', 'eşitlik soldan sağa işlem'dir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Oyun ve somut materyal için doğru bir açıklamadır?",
+    "options": ["A) Sayı duyusu esnek temsil, tahmin, mutlak işlem ezberinin ötesidir.", "B) Kavram yanılgısı: 'çarpma büyütür', 'kesirlerde payda büyüyünce sayı büyür', 'eşitlik soldan sağa işlem'dir.", "C) Van Hiele geometri düzeyleri: görsel, analiz, informal çıkarım, formal, rigor.", "D) Oyun ve somut materyal (onluk taban blokları, kesir şeritleri) kavramı taşır, oyun amaç değildir.", "E) Matematik Dersi Öğretim Programı beceri (problem çözme, akıl yürütme, ilişkilendirme, iletişim) ve yetkinlik temellidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Hata analizi hakkında hangisi doğrudur?",
+    "options": ["A) Kavram yanılgısı: 'çarpma büyütür', 'kesirlerde payda büyüyünce sayı büyür', 'eşitlik soldan sağa işlem'dir.", "B) Van Hiele geometri düzeyleri: görsel, analiz, informal çıkarım, formal, rigor.", "C) Hata analizi rastgele hata ile sistematik yanılgıyı ayırır.", "D) Matematik Dersi Öğretim Programı beceri (problem çözme, akıl yürütme, ilişkilendirme, iletişim) ve yetkinlik temellidir.", "E) Sayı duyusu esnek temsil, tahmin, mutlak işlem ezberinin ötesidir."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kavram yanılgısı: 'çarpma büyütür', 'kesirlerde payda büyüyünce sayı büyür', 'eşitlik sold", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Van Hiele geometri düzeyleri: görsel, analiz, informal çıkarım, formal, rigor.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Temsil çeşitliliği somut-çizim-sembol (CRA) geçişi ilköğretimin omurgasıdır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Polya anla-planla-uygula-değerlendir; problem çözme rutin alıştırmadan ayrıdır.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Açık uçlu görev çok strateji; tersine çevirme sonucu verip süreci sorgulatır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Matematik konuşması gerekçe, karşı örnek, temsil değiştirme.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Oyun ve somut materyal (onluk taban blokları, kesir şeritleri) kavramı taşır, oyun amaç de", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Hata analizi rastgele hata ile sistematik yanılgıyı ayırır.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) İşlemsel ve kavramsal bilgi (Hiebert-Skemp ilişkisel/araçsal) birlikte örülür.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "İşlemsel ve kavramsal bilgi hangisini ifade eder?",
+    "options": ["A) Sayı duyusu esnek temsil, tahmin, mutlak işlem ezberinin ötesidir.", "B) Kavram yanılgısı: 'çarpma büyütür', 'kesirlerde payda büyüyünce sayı büyür', 'eşitlik soldan sağa işlem'dir.", "C) Van Hiele geometri düzeyleri: görsel, analiz, informal çıkarım, formal, rigor.", "D) İşlemsel ve kavramsal bilgi (Hiebert-Skemp ilişkisel/araçsal) birlikte örülür.", "E) Matematik Dersi Öğretim Programı beceri (problem çözme, akıl yürütme, ilişkilendirme, iletişim) ve yetkinlik temellidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 }
 ];

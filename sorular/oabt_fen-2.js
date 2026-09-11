@@ -55,69 +55,69 @@ window.oabt_fen_2_sorulari = [
     "explanation": "Mol/katsayı oranı en küçük olan."
 },
 {
-    "question": "Kimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Atom proton sayısı Z kimliği; izotop A kütle farkı, kimyasal benzer.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Atom için doğru bir açıklamadır?",
+    "options": ["A) Atom proton sayısı Z kimliği; izotop A kütle farkı, kimyasal benzer.", "B) Periyodik yarıçap, iyonlaşma, elektronegatiflik eğilimleri.", "C) Bağ iyonik, kovalent, metalik; polarlık ΔEN; Lewis ve VSEPR geometri.", "D) Mol 6,02·10^23; stokiyometri sınırlayıcı bileşen.", "E) Gaz PV=nRT ideal; gerçek gaz yüksek P düşük T sapar."],
+    "correctAnswerIndex": 0,
+    "explanation": "Kimya notundaki temel bilgi."
+},
+{
+    "question": "Periyodik hakkında hangisi doğrudur?",
+    "options": ["A) Gaz PV=nRT ideal; gerçek gaz yüksek P düşük T sapar.", "B) Periyodik yarıçap, iyonlaşma, elektronegatiflik eğilimleri.", "C) Atom proton sayısı Z kimliği; izotop A kütle farkı, kimyasal benzer.", "D) Bağ iyonik, kovalent, metalik; polarlık ΔEN; Lewis ve VSEPR geometri.", "E) Mol 6,02·10^23; stokiyometri sınırlayıcı bileşen."],
+    "correctAnswerIndex": 1,
+    "explanation": "Kimya notundaki temel bilgi."
+},
+{
+    "question": "Bağ hangisini ifade eder?",
+    "options": ["A) Gaz PV=nRT ideal; gerçek gaz yüksek P düşük T sapar.", "B) Bağ iyonik, kovalent, metalik; polarlık ΔEN; Lewis ve VSEPR geometri.", "C) Atom proton sayısı Z kimliği; izotop A kütle farkı, kimyasal benzer.", "D) Periyodik yarıçap, iyonlaşma, elektronegatiflik eğilimleri.", "E) Mol 6,02·10^23; stokiyometri sınırlayıcı bileşen."],
+    "correctAnswerIndex": 1,
+    "explanation": "Kimya notundaki temel bilgi."
+},
+{
+    "question": "Mol ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Atom proton sayısı Z kimliği; izotop A kütle farkı, kimyasal benzer.", "B) Periyodik yarıçap, iyonlaşma, elektronegatiflik eğilimleri.", "C) Bağ iyonik, kovalent, metalik; polarlık ΔEN; Lewis ve VSEPR geometri.", "D) Gaz PV=nRT ideal; gerçek gaz yüksek P düşük T sapar.", "E) Mol 6,02·10^23; stokiyometri sınırlayıcı bileşen."],
+    "correctAnswerIndex": 4,
+    "explanation": "Kimya notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Gaz için doğru bir açıklamadır?",
+    "options": ["A) Mol 6,02·10^23; stokiyometri sınırlayıcı bileşen.", "B) Gaz PV=nRT ideal; gerçek gaz yüksek P düşük T sapar.", "C) Atom proton sayısı Z kimliği; izotop A kütle farkı, kimyasal benzer.", "D) Periyodik yarıçap, iyonlaşma, elektronegatiflik eğilimleri.", "E) Bağ iyonik, kovalent, metalik; polarlık ΔEN; Lewis ve VSEPR geometri."],
+    "correctAnswerIndex": 1,
+    "explanation": "Kimya notundaki temel bilgi."
+},
+{
+    "question": "Denge hakkında hangisi doğrudur?",
+    "options": ["A) Bağ iyonik, kovalent, metalik; polarlık ΔEN; Lewis ve VSEPR geometri.", "B) Mol 6,02·10^23; stokiyometri sınırlayıcı bileşen.", "C) Denge K=ürün/giren (katsayılar üs); K yalnız T'ye bağlı.", "D) Atom proton sayısı Z kimliği; izotop A kütle farkı, kimyasal benzer.", "E) Periyodik yarıçap, iyonlaşma, elektronegatiflik eğilimleri."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Kimya notundaki temel bilgi."
 },
 {
-    "question": "Kimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Periyodik yarıçap, iyonlaşma, elektronegatiflik eğilimleri."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Le Chatelier hangisini ifade eder?",
+    "options": ["A) Atom proton sayısı Z kimliği; izotop A kütle farkı, kimyasal benzer.", "B) Periyodik yarıçap, iyonlaşma, elektronegatiflik eğilimleri.", "C) Bağ iyonik, kovalent, metalik; polarlık ΔEN; Lewis ve VSEPR geometri.", "D) Mol 6,02·10^23; stokiyometri sınırlayıcı bileşen.", "E) Le Chatelier gerilim dengeyi karşı yönde kaydırır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Kimya notundaki temel bilgi."
 },
 {
-    "question": "Kimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Bağ iyonik, kovalent, metalik; polarlık ΔEN; Lewis ve VSEPR geometri.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Asit-baz ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Bağ iyonik, kovalent, metalik; polarlık ΔEN; Lewis ve VSEPR geometri.", "B) Mol 6,02·10^23; stokiyometri sınırlayıcı bileşen.", "C) Asit-baz Bronsted proton; pH=-log[H+]; tampon zayıf asit+tuz.", "D) Atom proton sayısı Z kimliği; izotop A kütle farkı, kimyasal benzer.", "E) Periyodik yarıçap, iyonlaşma, elektronegatiflik eğilimleri."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Kimya notundaki temel bilgi."
 },
 {
-    "question": "Kimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mol 6,02·10^23; stokiyometri sınırlayıcı bileşen."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Redoks için doğru bir açıklamadır?",
+    "options": ["A) Redoks yükseltgenme kayıp elektron; galvanik kendiliğinden, elektroliz zorlanır.", "B) Atom proton sayısı Z kimliği; izotop A kütle farkı, kimyasal benzer.", "C) Periyodik yarıçap, iyonlaşma, elektronegatiflik eğilimleri.", "D) Bağ iyonik, kovalent, metalik; polarlık ΔEN; Lewis ve VSEPR geometri.", "E) Mol 6,02·10^23; stokiyometri sınırlayıcı bileşen."],
+    "correctAnswerIndex": 0,
+    "explanation": "Kimya notundaki temel bilgi."
 },
 {
-    "question": "Kimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gaz PV=nRT ideal; gerçek gaz yüksek P düşük T sapar.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Hız hakkında hangisi doğrudur?",
+    "options": ["A) Mol 6,02·10^23; stokiyometri sınırlayıcı bileşen.", "B) Hız hız yasası deneysel mertebe; kataliz E_a düşürür, K'yi değiştirmez (aynı T).", "C) Atom proton sayısı Z kimliği; izotop A kütle farkı, kimyasal benzer.", "D) Periyodik yarıçap, iyonlaşma, elektronegatiflik eğilimleri.", "E) Bağ iyonik, kovalent, metalik; polarlık ΔEN; Lewis ve VSEPR geometri."],
+    "correctAnswerIndex": 1,
+    "explanation": "Kimya notundaki temel bilgi."
 },
 {
-    "question": "Kimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Denge K=ürün/giren (katsayılar üs); K yalnız T'ye bağlı."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Kimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Le Chatelier gerilim dengeyi karşı yönde kaydırır.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Kimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Asit-baz Bronsted proton; pH=-log[H+]; tampon zayıf asit+tuz."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Kimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Redoks yükseltgenme kayıp elektron; galvanik kendiliğinden, elektroliz zorlanır.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Kimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Hız hız yasası deneysel mertebe; kataliz E_a düşürür, K'yi değiştirmez (aynı T)."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Kimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Çözünürlük doygun, Ksp; ortak iyon azaltır.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Çözünürlük hangisini ifade eder?",
+    "options": ["A) Atom proton sayısı Z kimliği; izotop A kütle farkı, kimyasal benzer.", "B) Periyodik yarıçap, iyonlaşma, elektronegatiflik eğilimleri.", "C) Bağ iyonik, kovalent, metalik; polarlık ΔEN; Lewis ve VSEPR geometri.", "D) Mol 6,02·10^23; stokiyometri sınırlayıcı bileşen.", "E) Çözünürlük doygun, Ksp; ortak iyon azaltır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Kimya notundaki temel bilgi."
 }
 ];

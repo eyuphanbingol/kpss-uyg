@@ -73,51 +73,51 @@ window.ags_cografya_2_sorulari = [
     "explanation": "Kalori değeri taş kömürden düşüktür."
 },
 {
-    "question": "Beşerî ve Ekonomik Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Nüfus batı ve kıyılarda yoğundur; Doğu ve İç Anadolu nun yüksek/kurak kesimleri seyrektir.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Nüfus için doğru bir açıklamadır?",
+    "options": ["A) Yerleşme: kıyı-ova yoğun; dağınık kırsal Karadeniz, toplu köy İç Anadolu.", "B) Şehirleşme Marmara (İstanbul) aşırı yığılma, çarpık yapı ve sanayi-hizmet istihdamı.", "C) Nüfus batı ve kıyılarda yoğundur; Doğu ve İç Anadolu nun yüksek/kurak kesimleri seyrektir.", "D) Kırdan kente göç 1950 sonrası sanayi, hizmet ve tarımda makineleşme ile hızlanır.", "E) Dış göç 1961 Türkiye-F. Almanya işgücü antlaşması klasik milattır; Avrupa da diaspora oluşur."],
+    "correctAnswerIndex": 2,
+    "explanation": "Beşerî ve Ekonomik Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Beşerî ve Ekonomik Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Kırdan kente göç 1950 sonrası sanayi, hizmet ve tarımda makineleşme ile hızlanır.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Kırdan kente göç hakkında hangisi doğrudur?",
+    "options": ["A) Kırdan kente göç 1950 sonrası sanayi, hizmet ve tarımda makineleşme ile hızlanır.", "B) Nüfus batı ve kıyılarda yoğundur; Doğu ve İç Anadolu nun yüksek/kurak kesimleri seyrektir.", "C) Dış göç 1961 Türkiye-F. Almanya işgücü antlaşması klasik milattır; Avrupa da diaspora oluşur.", "D) Yerleşme: kıyı-ova yoğun; dağınık kırsal Karadeniz, toplu köy İç Anadolu.", "E) Şehirleşme Marmara (İstanbul) aşırı yığılma, çarpık yapı ve sanayi-hizmet istihdamı."],
+    "correctAnswerIndex": 0,
+    "explanation": "Beşerî ve Ekonomik Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Dış göç hangisini ifade eder?",
+    "options": ["A) Dış göç 1961 Türkiye-F. Almanya işgücü antlaşması klasik milattır; Avrupa da diaspora oluşur.", "B) Nüfus batı ve kıyılarda yoğundur; Doğu ve İç Anadolu nun yüksek/kurak kesimleri seyrektir.", "C) Kırdan kente göç 1950 sonrası sanayi, hizmet ve tarımda makineleşme ile hızlanır.", "D) Yerleşme: kıyı-ova yoğun; dağınık kırsal Karadeniz, toplu köy İç Anadolu.", "E) Şehirleşme Marmara (İstanbul) aşırı yığılma, çarpık yapı ve sanayi-hizmet istihdamı."],
+    "correctAnswerIndex": 0,
+    "explanation": "Beşerî ve Ekonomik Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Turunçgil hangisini ifade eder?",
+    "options": ["A) Dış göç 1961 Türkiye-F. Almanya işgücü antlaşması klasik milattır; Avrupa da diaspora oluşur.", "B) Yerleşme: kıyı-ova yoğun; dağınık kırsal Karadeniz, toplu köy İç Anadolu.", "C) Turunçgil Akdeniz kıyısı; üzüm Ege-Güneydoğu; sulama GAP ile pamuk-mısır değişir.", "D) Nüfus batı ve kıyılarda yoğundur; Doğu ve İç Anadolu nun yüksek/kurak kesimleri seyrektir.", "E) Kırdan kente göç 1950 sonrası sanayi, hizmet ve tarımda makineleşme ile hızlanır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Beşerî ve Ekonomik Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Bor için doğru bir açıklamadır?",
+    "options": ["A) Bor Eskişehir-Kütahya-Balıkesir; linyit termik santral; demir Divriği; krom ve bakır metal sanayii.", "B) Nüfus batı ve kıyılarda yoğundur; Doğu ve İç Anadolu nun yüksek/kurak kesimleri seyrektir.", "C) Kırdan kente göç 1950 sonrası sanayi, hizmet ve tarımda makineleşme ile hızlanır.", "D) Dış göç 1961 Türkiye-F. Almanya işgücü antlaşması klasik milattır; Avrupa da diaspora oluşur.", "E) Yerleşme: kıyı-ova yoğun; dağınık kırsal Karadeniz, toplu köy İç Anadolu."],
+    "correctAnswerIndex": 0,
+    "explanation": "Beşerî ve Ekonomik Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Ulaşım ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Ulaşım kara yolu omurga; demiryolu lojistik; hava limanları; boru hatları (BTC, TANAP, doğal gaz).", "B) Nüfus batı ve kıyılarda yoğundur; Doğu ve İç Anadolu nun yüksek/kurak kesimleri seyrektir.", "C) Kırdan kente göç 1950 sonrası sanayi, hizmet ve tarımda makineleşme ile hızlanır.", "D) Dış göç 1961 Türkiye-F. Almanya işgücü antlaşması klasik milattır; Avrupa da diaspora oluşur.", "E) Yerleşme: kıyı-ova yoğun; dağınık kırsal Karadeniz, toplu köy İç Anadolu."],
+    "correctAnswerIndex": 0,
+    "explanation": "Beşerî ve Ekonomik Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Dış ticaret için doğru bir açıklamadır?",
+    "options": ["A) Dış göç 1961 Türkiye-F. Almanya işgücü antlaşması klasik milattır; Avrupa da diaspora oluşur.", "B) Yerleşme: kıyı-ova yoğun; dağınık kırsal Karadeniz, toplu köy İç Anadolu.", "C) Dış ticaret sanayi ürünü ihracatı; tarım ve turizm döviz; açık limanlar İzmir-Mersin-İstanbul-Kocaeli.", "D) Nüfus batı ve kıyılarda yoğundur; Doğu ve İç Anadolu nun yüksek/kurak kesimleri seyrektir.", "E) Kırdan kente göç 1950 sonrası sanayi, hizmet ve tarımda makineleşme ile hızlanır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Beşerî ve Ekonomik Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Turizm hakkında hangisi doğrudur?",
+    "options": ["A) Nüfus batı ve kıyılarda yoğundur; Doğu ve İç Anadolu nun yüksek/kurak kesimleri seyrektir.", "B) Kırdan kente göç 1950 sonrası sanayi, hizmet ve tarımda makineleşme ile hızlanır.", "C) Dış göç 1961 Türkiye-F. Almanya işgücü antlaşması klasik milattır; Avrupa da diaspora oluşur.", "D) Yerleşme: kıyı-ova yoğun; dağınık kırsal Karadeniz, toplu köy İç Anadolu.", "E) Turizm kıyı (Antalya-Muğla), kültür (İstanbul-Kapadokya), inanç ve kaplıca."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Beşerî ve Ekonomik Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Dış göç 1961 Türkiye-F. Almanya işgücü antlaşması klasik milattır; Avrupa da diaspora oluş", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Beşerî ve Ekonomik Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Yerleşme: kıyı-ova yoğun; dağınık kırsal Karadeniz, toplu köy İç Anadolu.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Beşerî ve Ekonomik Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Şehirleşme Marmara (İstanbul) aşırı yığılma, çarpık yapı ve sanayi-hizmet istihdamı.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Beşerî ve Ekonomik Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Tahıl İç Anadolu; pamuk Çukurova-Ege-Güneydoğu; fındık Doğu Karadeniz; çay Rize; zeytin Eg", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Beşerî ve Ekonomik Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Turunçgil Akdeniz kıyısı; üzüm Ege-Güneydoğu; sulama GAP ile pamuk-mısır değişir.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Beşerî ve Ekonomik Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Küçükbaş step ve yüksek yayla; büyükbaş nemli otlak (Karadeniz, Marmara, Doğu nun çayırlar", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Beşerî ve Ekonomik Coğrafya notundaki temel bilgi."
 }
 ];

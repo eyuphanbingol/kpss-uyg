@@ -61,63 +61,63 @@ window.oabt_tarih_7_sorulari = [
     "explanation": "Erzurum-Sivas-Meclis hattının siyasi programıdır."
 },
 {
-    "question": "Türkiye Cumhuriyeti Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Mondros (1918) ateşkes; işgaller ve Kuvay-ı Milliye.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Mondros (1918) için doğru bir açıklamadır?",
+    "options": ["A) Amasya, Erzurum, Sivas millî irade ve temsiliyet; Misak-ı Milli.", "B) 23 Nisan 1920 TBMM; meclis hükümeti ve düzenli ordu.", "C) Sakarya ve 30 Ağustos; Lozan (24 Temmuz 1923) siyasi bağımsızlık belgesi.", "D) 29 Ekim 1923 Cumhuriyet; halifeliğin kaldırılması (1924) laikleşmenin eşiği.", "E) Mondros (1918) ateşkes; işgaller ve Kuvay-ı Milliye."],
+    "correctAnswerIndex": 4,
+    "explanation": "Türkiye Cumhuriyeti Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Amasya, Erzurum, Sivas hakkında hangisi doğrudur?",
+    "options": ["A) Mondros (1918) ateşkes; işgaller ve Kuvay-ı Milliye.", "B) 23 Nisan 1920 TBMM; meclis hükümeti ve düzenli ordu.", "C) Sakarya ve 30 Ağustos; Lozan (24 Temmuz 1923) siyasi bağımsızlık belgesi.", "D) 29 Ekim 1923 Cumhuriyet; halifeliğin kaldırılması (1924) laikleşmenin eşiği.", "E) Amasya, Erzurum, Sivas millî irade ve temsiliyet; Misak-ı Milli."],
+    "correctAnswerIndex": 4,
+    "explanation": "Türkiye Cumhuriyeti Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Medeni Kanun 1926  hakkında hangisi doğrudur?",
+    "options": ["A) Sakarya ve 30 Ağustos; Lozan (24 Temmuz 1923) siyasi bağımsızlık belgesi.", "B) Medeni Kanun (1926), harf (1928), kadın hakları, Tevhid-i Tedrisat inkılap omurgasıdır.", "C) Mondros (1918) ateşkes; işgaller ve Kuvay-ı Milliye.", "D) Amasya, Erzurum, Sivas millî irade ve temsiliyet; Misak-ı Milli.", "E) 23 Nisan 1920 TBMM; meclis hükümeti ve düzenli ordu."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Türkiye Cumhuriyeti Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Türkiye Cumhuriyeti Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Amasya, Erzurum, Sivas millî irade ve temsiliyet; Misak-ı Milli.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Şeyh Sait, Menemen, kubilay hangisini ifade eder?",
+    "options": ["A) Amasya, Erzurum, Sivas millî irade ve temsiliyet; Misak-ı Milli.", "B) 23 Nisan 1920 TBMM; meclis hükümeti ve düzenli ordu.", "C) Sakarya ve 30 Ağustos; Lozan (24 Temmuz 1923) siyasi bağımsızlık belgesi.", "D) Şeyh Sait, Menemen, kubilay irtica ve isyan hatları; Takrir-i Sükûn iklimi.", "E) Mondros (1918) ateşkes; işgaller ve Kuvay-ı Milliye."],
+    "correctAnswerIndex": 3,
+    "explanation": "Türkiye Cumhuriyeti Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Devletçilik ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) 23 Nisan 1920 TBMM; meclis hükümeti ve düzenli ordu.", "B) Sakarya ve 30 Ağustos; Lozan (24 Temmuz 1923) siyasi bağımsızlık belgesi.", "C) Devletçilik 1930'lar; sanayi planları ve KİT.", "D) Mondros (1918) ateşkes; işgaller ve Kuvay-ı Milliye.", "E) Amasya, Erzurum, Sivas millî irade ve temsiliyet; Misak-ı Milli."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Türkiye Cumhuriyeti Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Türkiye Cumhuriyeti Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) 23 Nisan 1920 TBMM; meclis hükümeti ve düzenli ordu.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Millî Şef hakkında hangisi doğrudur?",
+    "options": ["A) Mondros (1918) ateşkes; işgaller ve Kuvay-ı Milliye.", "B) Amasya, Erzurum, Sivas millî irade ve temsiliyet; Misak-ı Milli.", "C) 23 Nisan 1920 TBMM; meclis hükümeti ve düzenli ordu.", "D) Sakarya ve 30 Ağustos; Lozan (24 Temmuz 1923) siyasi bağımsızlık belgesi.", "E) Millî Şef dönemi ve 1945 sonrası çok partiliye geçiş hazırlığı."],
+    "correctAnswerIndex": 4,
+    "explanation": "Türkiye Cumhuriyeti Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Türkiye Cumhuriyeti Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Sakarya ve 30 Ağustos; Lozan (24 Temmuz 1923) siyasi bağımsızlık belgesi.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "1946-1950 hangisini ifade eder?",
+    "options": ["A) 23 Nisan 1920 TBMM; meclis hükümeti ve düzenli ordu.", "B) Sakarya ve 30 Ağustos; Lozan (24 Temmuz 1923) siyasi bağımsızlık belgesi.", "C) 1946-1950 DP iktidarı; tarım, din-devlet gerilimi, 6-7 Eylül, 27 Mayıs 1960.", "D) Mondros (1918) ateşkes; işgaller ve Kuvay-ı Milliye.", "E) Amasya, Erzurum, Sivas millî irade ve temsiliyet; Misak-ı Milli."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Türkiye Cumhuriyeti Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Türkiye Cumhuriyeti Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) 29 Ekim 1923 Cumhuriyet; halifeliğin kaldırılması (1924) laikleşmenin eşiği.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Türkiye Cumhuriyeti Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Medeni Kanun (1926), harf (1928), kadın hakları, Tevhid-i Tedrisat inkılap omurgasıdır.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "1961 Anayasası ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) 23 Nisan 1920 TBMM; meclis hükümeti ve düzenli ordu.", "B) Sakarya ve 30 Ağustos; Lozan (24 Temmuz 1923) siyasi bağımsızlık belgesi.", "C) 1961 Anayasası AYM ve sosyal haklar; 12 Mart, 12 Eylül 1980.", "D) Mondros (1918) ateşkes; işgaller ve Kuvay-ı Milliye.", "E) Amasya, Erzurum, Sivas millî irade ve temsiliyet; Misak-ı Milli."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Türkiye Cumhuriyeti Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Türkiye Cumhuriyeti Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Şeyh Sait, Menemen, kubilay irtica ve isyan hatları; Takrir-i Sükûn iklimi.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Kıbrıs 1974 için doğru bir açıklamadır?",
+    "options": ["A) Mondros (1918) ateşkes; işgaller ve Kuvay-ı Milliye.", "B) Amasya, Erzurum, Sivas millî irade ve temsiliyet; Misak-ı Milli.", "C) 23 Nisan 1920 TBMM; meclis hükümeti ve düzenli ordu.", "D) Sakarya ve 30 Ağustos; Lozan (24 Temmuz 1923) siyasi bağımsızlık belgesi.", "E) Kıbrıs 1974; Avrupa ve ABD ile inişli çıkışlı ilişki."],
+    "correctAnswerIndex": 4,
+    "explanation": "Türkiye Cumhuriyeti Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Türkiye Cumhuriyeti Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Devletçilik 1930'lar; sanayi planları ve KİT.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Türkiye Cumhuriyeti Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Hatay (1939) diplomatik katılım; II. Dünya'da fiili savaş dışılık.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Türkiye Cumhuriyeti Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Millî Şef dönemi ve 1945 sonrası çok partiliye geçiş hazırlığı.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "2017 hangisini ifade eder?",
+    "options": ["A) Mondros (1918) ateşkes; işgaller ve Kuvay-ı Milliye.", "B) Amasya, Erzurum, Sivas millî irade ve temsiliyet; Misak-ı Milli.", "C) 23 Nisan 1920 TBMM; meclis hükümeti ve düzenli ordu.", "D) Sakarya ve 30 Ağustos; Lozan (24 Temmuz 1923) siyasi bağımsızlık belgesi.", "E) 2017 Cumhurbaşkanlığı hükümet sistemi tarihsel kırılma olarak okunur."],
+    "correctAnswerIndex": 4,
+    "explanation": "Türkiye Cumhuriyeti Tarihi notundaki temel bilgi."
 }
 ];

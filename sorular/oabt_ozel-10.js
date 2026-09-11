@@ -61,63 +61,63 @@ window.oabt_ozel_10_sorulari = [
     "explanation": "Alan eğitimi başlığı."
 },
 {
-    "question": "2024 Türkiye Yüzyılı Maarif Modeli Özel Eğitim Programları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Türkiye Yüzyılı Maarif Modeli (TYMM) yetkinlik temelli program anlayışıdır.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Türkiye Yüzyılı Maarif Modeli (TYMM) için doğru bir açıklamadır?",
+    "options": ["A) Türkiye Yüzyılı Maarif Modeli (TYMM) yetkinlik temelli program anlayışıdır.", "B) 2024 özel eğitim programları bu model çerçevesinde yenilenme iddiasındadır.", "C) Yetkinlik bilgi-beceri-değer-eğilim bütünüdür; ezber ünite listesi değildir.", "D) Öğrenci profili ve farklılaştırma programın omurgasıdır.", "E) Uydurma resmi madde/anı madde numarası yazılmaz; resmi metnin ruhu yetkinlik ve kapsayıcılıktır."],
+    "correctAnswerIndex": 0,
+    "explanation": "2024 Türkiye Yüzyılı Maarif Modeli Özel Eğitim Programları notundaki temel bilgi."
 },
 {
-    "question": "2024 Türkiye Yüzyılı Maarif Modeli Özel Eğitim Programları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) 2024 özel eğitim programları bu model çerçevesinde yenilenme iddiasındadır."],
+    "question": "2024 özel eğitim programları hakkında hangisi doğrudur?",
+    "options": ["A) 2024 özel eğitim programları bu model çerçevesinde yenilenme iddiasındadır.", "B) Türkiye Yüzyılı Maarif Modeli (TYMM) yetkinlik temelli program anlayışıdır.", "C) Yetkinlik bilgi-beceri-değer-eğilim bütünüdür; ezber ünite listesi değildir.", "D) Öğrenci profili ve farklılaştırma programın omurgasıdır.", "E) Uydurma resmi madde/anı madde numarası yazılmaz; resmi metnin ruhu yetkinlik ve kapsayıcılıktır."],
+    "correctAnswerIndex": 0,
+    "explanation": "2024 Türkiye Yüzyılı Maarif Modeli Özel Eğitim Programları notundaki temel bilgi."
+},
+{
+    "question": "Yetkinlik hangisini ifade eder?",
+    "options": ["A) Öğrenci profili ve farklılaştırma programın omurgasıdır.", "B) Disiplinlerarası tema.", "C) Ölçme süreç ve performans, tek sınav eleği değil.", "D) Yetkinlik bilgi-beceri-değer-eğilim bütünüdür; ezber ünite listesi değildir.", "E) 2024 özel eğitim programları bu model çerçevesinde yenilenme iddiasındadır."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "2024 Türkiye Yüzyılı Maarif Modeli Özel Eğitim Programları notundaki temel bilgi."
 },
 {
-    "question": "2024 Türkiye Yüzyılı Maarif Modeli Özel Eğitim Programları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Yetkinlik bilgi-beceri-değer-eğilim bütünüdür; ezber ünite listesi değildir.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "2024 Türkiye Yüzyılı Maarif Modeli Özel Eğitim Programları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Öğrenci profili ve farklılaştırma programın omurgasıdır."],
+    "question": "Öğrenci profili ve farklılaştırma ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) 2024 özel eğitim programları bu model çerçevesinde yenilenme iddiasındadır.", "B) Yetkinlik bilgi-beceri-değer-eğilim bütünüdür; ezber ünite listesi değildir.", "C) Uydurma resmi madde/anı madde numarası yazılmaz; resmi metnin ruhu yetkinlik ve kapsayıcılıktır.", "D) Öğrenci profili ve farklılaştırma programın omurgasıdır.", "E) Türkiye Yüzyılı Maarif Modeli (TYMM) yetkinlik temelli program anlayışıdır."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "2024 Türkiye Yüzyılı Maarif Modeli Özel Eğitim Programları notundaki temel bilgi."
 },
 {
-    "question": "2024 Türkiye Yüzyılı Maarif Modeli Özel Eğitim Programları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Uydurma resmi madde/anı madde numarası yazılmaz; resmi metnin ruhu yetkinlik ve kapsayıcıl", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Uydurma resmi madde/anı madde numarası yazılmaz için doğru bir açıklamadır?",
+    "options": ["A) Öğrenci profili ve farklılaştırma programın omurgasıdır.", "B) Uydurma resmi madde/anı madde numarası yazılmaz; resmi metnin ruhu yetkinlik ve kapsayıcılıktır.", "C) Türkiye Yüzyılı Maarif Modeli (TYMM) yetkinlik temelli program anlayışıdır.", "D) 2024 özel eğitim programları bu model çerçevesinde yenilenme iddiasındadır.", "E) Yetkinlik bilgi-beceri-değer-eğilim bütünüdür; ezber ünite listesi değildir."],
+    "correctAnswerIndex": 1,
+    "explanation": "2024 Türkiye Yüzyılı Maarif Modeli Özel Eğitim Programları notundaki temel bilgi."
+},
+{
+    "question": "İşlevsel akademik ve yaşam becerisi hakkında hangisi doğrudur?",
+    "options": ["A) Öğrenci profili ve farklılaştırma programın omurgasıdır.", "B) İşlevsel akademik ve yaşam becerisi yetkinlikle yazılır.", "C) Türkiye Yüzyılı Maarif Modeli (TYMM) yetkinlik temelli program anlayışıdır.", "D) 2024 özel eğitim programları bu model çerçevesinde yenilenme iddiasındadır.", "E) Yetkinlik bilgi-beceri-değer-eğilim bütünüdür; ezber ünite listesi değildir."],
+    "correctAnswerIndex": 1,
+    "explanation": "2024 Türkiye Yüzyılı Maarif Modeli Özel Eğitim Programları notundaki temel bilgi."
+},
+{
+    "question": "Disiplinlerarası hangisini ifade eder?",
+    "options": ["A) Yetkinlik bilgi-beceri-değer-eğilim bütünüdür; ezber ünite listesi değildir.", "B) Öğrenci profili ve farklılaştırma programın omurgasıdır.", "C) Disiplinlerarası tema.", "D) Türkiye Yüzyılı Maarif Modeli (TYMM) yetkinlik temelli program anlayışıdır.", "E) 2024 özel eğitim programları bu model çerçevesinde yenilenme iddiasındadır."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "2024 Türkiye Yüzyılı Maarif Modeli Özel Eğitim Programları notundaki temel bilgi."
 },
 {
-    "question": "2024 Türkiye Yüzyılı Maarif Modeli Özel Eğitim Programları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) İşlevsel akademik ve yaşam becerisi yetkinlikle yazılır."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "2024 Türkiye Yüzyılı Maarif Modeli Özel Eğitim Programları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Disiplinlerarası tema.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Ölçme ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Yetkinlik bilgi-beceri-değer-eğilim bütünüdür; ezber ünite listesi değildir.", "B) Öğrenci profili ve farklılaştırma programın omurgasıdır.", "C) Ölçme süreç ve performans, tek sınav eleği değil.", "D) Türkiye Yüzyılı Maarif Modeli (TYMM) yetkinlik temelli program anlayışıdır.", "E) 2024 özel eğitim programları bu model çerçevesinde yenilenme iddiasındadır."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "2024 Türkiye Yüzyılı Maarif Modeli Özel Eğitim Programları notundaki temel bilgi."
 },
 {
-    "question": "2024 Türkiye Yüzyılı Maarif Modeli Özel Eğitim Programları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Ölçme süreç ve performans, tek sınav eleği değil."],
+    "question": "Aşağıdakilerden hangisi Dijital ve çevre için doğru bir açıklamadır?",
+    "options": ["A) 2024 özel eğitim programları bu model çerçevesinde yenilenme iddiasındadır.", "B) Yetkinlik bilgi-beceri-değer-eğilim bütünüdür; ezber ünite listesi değildir.", "C) Öğrenci profili ve farklılaştırma programın omurgasıdır.", "D) Dijital ve çevre yetkinlikleri uyarlanır.", "E) Türkiye Yüzyılı Maarif Modeli (TYMM) yetkinlik temelli program anlayışıdır."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "2024 Türkiye Yüzyılı Maarif Modeli Özel Eğitim Programları notundaki temel bilgi."
 },
 {
-    "question": "2024 Türkiye Yüzyılı Maarif Modeli Özel Eğitim Programları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Dijital ve çevre yetkinlikleri uyarlanır.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "2024 Türkiye Yüzyılı Maarif Modeli Özel Eğitim Programları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Öğretmen tasarım özerkliği ve ekip."],
+    "question": "Öğretmen hakkında hangisi doğrudur?",
+    "options": ["A) 2024 özel eğitim programları bu model çerçevesinde yenilenme iddiasındadır.", "B) Yetkinlik bilgi-beceri-değer-eğilim bütünüdür; ezber ünite listesi değildir.", "C) Öğrenci profili ve farklılaştırma programın omurgasıdır.", "D) Öğretmen tasarım özerkliği ve ekip.", "E) Türkiye Yüzyılı Maarif Modeli (TYMM) yetkinlik temelli program anlayışıdır."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "2024 Türkiye Yüzyılı Maarif Modeli Özel Eğitim Programları notundaki temel bilgi."
 }
 ];

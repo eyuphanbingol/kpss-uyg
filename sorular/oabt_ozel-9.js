@@ -61,63 +61,63 @@ window.oabt_ozel_9_sorulari = [
     "explanation": "Dosya etiği."
 },
 {
-    "question": "Özel Eğitim Politikaları ve Yasal Düzenlemeler konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) 573 sayılı KHK (1997) özel eğitimin temel kanun hükmünde metnidir; BEP ve özel eğitim hizm", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi 573 sayılı KHK (1997) için doğru bir açıklamadır?",
+    "options": ["A) 5378 sayılı Kanun (2005) engelliler hakkında ayrımcılık yasağı, erişilebilirlik ve hak temelli dil.", "B) Özel Eğitim Hizmetleri Yönetmeliği (güncel metin 2018 ve sonraki değişiklikler) işleyişi ayrıntılandırır.", "C) RAM, BEP, kaynaştırma/bütünleştirme, destek eğitim odası, özel eğitim sınıfı ve okulu yerleştirme basamaklarıdır.", "D) En az kısıtlayıcı ortam ve ailenin katılımı ilke olarak korunur.", "E) 573 sayılı KHK (1997) özel eğitimin temel kanun hükmünde metnidir; BEP ve özel eğitim hizmetlerini çerçeveler."],
+    "correctAnswerIndex": 4,
+    "explanation": "Özel Eğitim Politikaları ve Yasal Düzenlemeler notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitim Politikaları ve Yasal Düzenlemeler konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) 5378 sayılı Kanun (2005) engelliler hakkında ayrımcılık yasağı, erişilebilirlik ve hak tem", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "5378 sayılı Kanun (2005) hakkında hangisi doğrudur?",
+    "options": ["A) 573 sayılı KHK (1997) özel eğitimin temel kanun hükmünde metnidir; BEP ve özel eğitim hizmetlerini çerçeveler.", "B) Özel Eğitim Hizmetleri Yönetmeliği (güncel metin 2018 ve sonraki değişiklikler) işleyişi ayrıntılandırır.", "C) RAM, BEP, kaynaştırma/bütünleştirme, destek eğitim odası, özel eğitim sınıfı ve okulu yerleştirme basamaklarıdır.", "D) En az kısıtlayıcı ortam ve ailenin katılımı ilke olarak korunur.", "E) 5378 sayılı Kanun (2005) engelliler hakkında ayrımcılık yasağı, erişilebilirlik ve hak temelli dil."],
+    "correctAnswerIndex": 4,
+    "explanation": "Özel Eğitim Politikaları ve Yasal Düzenlemeler notundaki temel bilgi."
+},
+{
+    "question": "Özel Eğitim Hizmetleri Yönetmeliği hangisini ifade eder?",
+    "options": ["A) 573 sayılı KHK (1997) özel eğitimin temel kanun hükmünde metnidir; BEP ve özel eğitim hizmetlerini çerçeveler.", "B) 5378 sayılı Kanun (2005) engelliler hakkında ayrımcılık yasağı, erişilebilirlik ve hak temelli dil.", "C) RAM, BEP, kaynaştırma/bütünleştirme, destek eğitim odası, özel eğitim sınıfı ve okulu yerleştirme basamaklarıdır.", "D) En az kısıtlayıcı ortam ve ailenin katılımı ilke olarak korunur.", "E) Özel Eğitim Hizmetleri Yönetmeliği (güncel metin 2018 ve sonraki değişiklikler) işleyişi ayrıntılandırır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Özel Eğitim Politikaları ve Yasal Düzenlemeler notundaki temel bilgi."
+},
+{
+    "question": "RAM, BEP, kaynaştırma/bütünleştirme, destek ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) 573 sayılı KHK (1997) özel eğitimin temel kanun hükmünde metnidir; BEP ve özel eğitim hizmetlerini çerçeveler.", "B) 5378 sayılı Kanun (2005) engelliler hakkında ayrımcılık yasağı, erişilebilirlik ve hak temelli dil.", "C) Özel Eğitim Hizmetleri Yönetmeliği (güncel metin 2018 ve sonraki değişiklikler) işleyişi ayrıntılandırır.", "D) En az kısıtlayıcı ortam ve ailenin katılımı ilke olarak korunur.", "E) RAM, BEP, kaynaştırma/bütünleştirme, destek eğitim odası, özel eğitim sınıfı ve okulu yerleştirme basamaklarıdır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Özel Eğitim Politikaları ve Yasal Düzenlemeler notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi En az kısıtlayıcı ortam için doğru bir açıklamadır?",
+    "options": ["A) Özel Eğitim Hizmetleri Yönetmeliği (güncel metin 2018 ve sonraki değişiklikler) işleyişi ayrıntılandırır.", "B) RAM, BEP, kaynaştırma/bütünleştirme, destek eğitim odası, özel eğitim sınıfı ve okulu yerleştirme basamaklarıdır.", "C) En az kısıtlayıcı ortam ve ailenin katılımı ilke olarak korunur.", "D) 573 sayılı KHK (1997) özel eğitimin temel kanun hükmünde metnidir; BEP ve özel eğitim hizmetlerini çerçeveler.", "E) 5378 sayılı Kanun (2005) engelliler hakkında ayrımcılık yasağı, erişilebilirlik ve hak temelli dil."],
+    "correctAnswerIndex": 2,
+    "explanation": "Özel Eğitim Politikaları ve Yasal Düzenlemeler notundaki temel bilgi."
+},
+{
+    "question": "Ayrımcılık yasağı ve makul uyarlama hangisini ifade eder?",
+    "options": ["A) RAM, BEP, kaynaştırma/bütünleştirme, destek eğitim odası, özel eğitim sınıfı ve okulu yerleştirme basamaklarıdır.", "B) Ayrımcılık yasağı ve makul uyarlama.", "C) 573 sayılı KHK (1997) özel eğitimin temel kanun hükmünde metnidir; BEP ve özel eğitim hizmetlerini çerçeveler.", "D) 5378 sayılı Kanun (2005) engelliler hakkında ayrımcılık yasağı, erişilebilirlik ve hak temelli dil.", "E) Özel Eğitim Hizmetleri Yönetmeliği (güncel metin 2018 ve sonraki değişiklikler) işleyişi ayrıntılandırır."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Özel Eğitim Politikaları ve Yasal Düzenlemeler notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitim Politikaları ve Yasal Düzenlemeler konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Özel Eğitim Hizmetleri Yönetmeliği (güncel metin 2018 ve sonraki değişiklikler) işleyişi a", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Erişilebilirlik ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) RAM, BEP, kaynaştırma/bütünleştirme, destek eğitim odası, özel eğitim sınıfı ve okulu yerleştirme basamaklarıdır.", "B) En az kısıtlayıcı ortam ve ailenin katılımı ilke olarak korunur.", "C) Erişilebilirlik fiziki, bilgi, iletişim.", "D) 573 sayılı KHK (1997) özel eğitimin temel kanun hükmünde metnidir; BEP ve özel eğitim hizmetlerini çerçeveler.", "E) Özel Eğitim Hizmetleri Yönetmeliği (güncel metin 2018 ve sonraki değişiklikler) işleyişi ayrıntılandırır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Özel Eğitim Politikaları ve Yasal Düzenlemeler notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitim Politikaları ve Yasal Düzenlemeler konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) RAM, BEP, kaynaştırma/bütünleştirme, destek eğitim odası, özel eğitim sınıfı ve okulu yerl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Çocuğun üstün yararı için doğru bir açıklamadır?",
+    "options": ["A) 573 sayılı KHK (1997) özel eğitimin temel kanun hükmünde metnidir; BEP ve özel eğitim hizmetlerini çerçeveler.", "B) 5378 sayılı Kanun (2005) engelliler hakkında ayrımcılık yasağı, erişilebilirlik ve hak temelli dil.", "C) Özel Eğitim Hizmetleri Yönetmeliği (güncel metin 2018 ve sonraki değişiklikler) işleyişi ayrıntılandırır.", "D) RAM, BEP, kaynaştırma/bütünleştirme, destek eğitim odası, özel eğitim sınıfı ve okulu yerleştirme basamaklarıdır.", "E) Çocuğun üstün yararı."],
+    "correctAnswerIndex": 4,
+    "explanation": "Özel Eğitim Politikaları ve Yasal Düzenlemeler notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitim Politikaları ve Yasal Düzenlemeler konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) En az kısıtlayıcı ortam ve ailenin katılımı ilke olarak korunur.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Veri koruma hakkında hangisi doğrudur?",
+    "options": ["A) Özel Eğitim Hizmetleri Yönetmeliği (güncel metin 2018 ve sonraki değişiklikler) işleyişi ayrıntılandırır.", "B) RAM, BEP, kaynaştırma/bütünleştirme, destek eğitim odası, özel eğitim sınıfı ve okulu yerleştirme basamaklarıdır.", "C) Veri koruma değerlendirme dosyası.", "D) 573 sayılı KHK (1997) özel eğitimin temel kanun hükmünde metnidir; BEP ve özel eğitim hizmetlerini çerçeveler.", "E) 5378 sayılı Kanun (2005) engelliler hakkında ayrımcılık yasağı, erişilebilirlik ve hak temelli dil."],
+    "correctAnswerIndex": 2,
+    "explanation": "Özel Eğitim Politikaları ve Yasal Düzenlemeler notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitim Politikaları ve Yasal Düzenlemeler konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) BM Engelli Hakları Sözleşmesi Türkiye tarafından onaylanmıştır (2009).", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitim Politikaları ve Yasal Düzenlemeler konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Ayrımcılık yasağı ve makul uyarlama.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitim Politikaları ve Yasal Düzenlemeler konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Erişilebilirlik fiziki, bilgi, iletişim.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitim Politikaları ve Yasal Düzenlemeler konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Çocuğun üstün yararı.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitim Politikaları ve Yasal Düzenlemeler konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Veri koruma değerlendirme dosyası.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "MEB hangisini ifade eder?",
+    "options": ["A) 573 sayılı KHK (1997) özel eğitimin temel kanun hükmünde metnidir; BEP ve özel eğitim hizmetlerini çerçeveler.", "B) 5378 sayılı Kanun (2005) engelliler hakkında ayrımcılık yasağı, erişilebilirlik ve hak temelli dil.", "C) Özel Eğitim Hizmetleri Yönetmeliği (güncel metin 2018 ve sonraki değişiklikler) işleyişi ayrıntılandırır.", "D) RAM, BEP, kaynaştırma/bütünleştirme, destek eğitim odası, özel eğitim sınıfı ve okulu yerleştirme basamaklarıdır.", "E) MEB özel eğitim genel müdürlük teşkilatı dönemsel adlarla."],
+    "correctAnswerIndex": 4,
+    "explanation": "Özel Eğitim Politikaları ve Yasal Düzenlemeler notundaki temel bilgi."
 }
 ];

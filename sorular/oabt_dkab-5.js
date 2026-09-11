@@ -61,63 +61,63 @@ window.oabt_dkab_5_sorulari = [
     "explanation": "İslam'ın beş şartındandır."
 },
 {
-    "question": "İslam Hukuku konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Kur'an, sünnet, icma, kıyas Ehl-i sünnet usulünün dört aslıdır.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Kur'an, sünnet, icma, kıyas için doğru bir açıklamadır?",
+    "options": ["A) Edille-i şer'iyye kat'i-zanni bilgi değerine göre ayrılır.", "B) Makasıd din, can, akıl, nesil, malın korunması.", "C) Kur'an, sünnet, icma, kıyas Ehl-i sünnet usulünün dört aslıdır.", "D) İstihsan, mesalih, örf, sedd-i zerai Hanefi-Maliki genişletmeleridir.", "E) İctihad müctehidin zanni hükümde çabası; taklit mezhep içi uymadır."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "İslam Hukuku notundaki temel bilgi."
 },
 {
-    "question": "İslam Hukuku konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) İstihsan, mesalih, örf, sedd-i zerai Hanefi-Maliki genişletmeleridir."],
+    "question": "İstihsan, mesalih, örf, sedd-i zerai hakkında hangisi doğrudur?",
+    "options": ["A) İctihad müctehidin zanni hükümde çabası; taklit mezhep içi uymadır.", "B) Edille-i şer'iyye kat'i-zanni bilgi değerine göre ayrılır.", "C) Makasıd din, can, akıl, nesil, malın korunması.", "D) İstihsan, mesalih, örf, sedd-i zerai Hanefi-Maliki genişletmeleridir.", "E) Kur'an, sünnet, icma, kıyas Ehl-i sünnet usulünün dört aslıdır."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İslam Hukuku notundaki temel bilgi."
 },
 {
-    "question": "İslam Hukuku konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) İctihad müctehidin zanni hükümde çabası; taklit mezhep içi uymadır.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "İctihad hangisini ifade eder?",
+    "options": ["A) Makasıd din, can, akıl, nesil, malın korunması.", "B) İctihad müctehidin zanni hükümde çabası; taklit mezhep içi uymadır.", "C) Kur'an, sünnet, icma, kıyas Ehl-i sünnet usulünün dört aslıdır.", "D) İstihsan, mesalih, örf, sedd-i zerai Hanefi-Maliki genişletmeleridir.", "E) Edille-i şer'iyye kat'i-zanni bilgi değerine göre ayrılır."],
+    "correctAnswerIndex": 1,
+    "explanation": "İslam Hukuku notundaki temel bilgi."
+},
+{
+    "question": "Edille-i şer'iyye ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Kur'an, sünnet, icma, kıyas Ehl-i sünnet usulünün dört aslıdır.", "B) İstihsan, mesalih, örf, sedd-i zerai Hanefi-Maliki genişletmeleridir.", "C) İctihad müctehidin zanni hükümde çabası; taklit mezhep içi uymadır.", "D) Makasıd din, can, akıl, nesil, malın korunması.", "E) Edille-i şer'iyye kat'i-zanni bilgi değerine göre ayrılır."],
+    "correctAnswerIndex": 4,
+    "explanation": "İslam Hukuku notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Makasıd için doğru bir açıklamadır?",
+    "options": ["A) İstihsan, mesalih, örf, sedd-i zerai Hanefi-Maliki genişletmeleridir.", "B) İctihad müctehidin zanni hükümde çabası; taklit mezhep içi uymadır.", "C) Edille-i şer'iyye kat'i-zanni bilgi değerine göre ayrılır.", "D) Makasıd din, can, akıl, nesil, malın korunması.", "E) Kur'an, sünnet, icma, kıyas Ehl-i sünnet usulünün dört aslıdır."],
+    "correctAnswerIndex": 3,
+    "explanation": "İslam Hukuku notundaki temel bilgi."
+},
+{
+    "question": "İbadet hakkında hangisi doğrudur?",
+    "options": ["A) Kur'an, sünnet, icma, kıyas Ehl-i sünnet usulünün dört aslıdır.", "B) İstihsan, mesalih, örf, sedd-i zerai Hanefi-Maliki genişletmeleridir.", "C) İctihad müctehidin zanni hükümde çabası; taklit mezhep içi uymadır.", "D) Edille-i şer'iyye kat'i-zanni bilgi değerine göre ayrılır.", "E) İbadet taharet, namaz, oruç, zekât, hac."],
+    "correctAnswerIndex": 4,
+    "explanation": "İslam Hukuku notundaki temel bilgi."
+},
+{
+    "question": "Muamelat hangisini ifade eder?",
+    "options": ["A) Kur'an, sünnet, icma, kıyas Ehl-i sünnet usulünün dört aslıdır.", "B) İstihsan, mesalih, örf, sedd-i zerai Hanefi-Maliki genişletmeleridir.", "C) İctihad müctehidin zanni hükümde çabası; taklit mezhep içi uymadır.", "D) Edille-i şer'iyye kat'i-zanni bilgi değerine göre ayrılır.", "E) Muamelat alışveriş, kira, şirket, riba yasağı."],
+    "correctAnswerIndex": 4,
+    "explanation": "İslam Hukuku notundaki temel bilgi."
+},
+{
+    "question": "Ahval-i şahsiyye ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Edille-i şer'iyye kat'i-zanni bilgi değerine göre ayrılır.", "B) Ahval-i şahsiyye evlilik, boşanma, nesep, miras.", "C) Kur'an, sünnet, icma, kıyas Ehl-i sünnet usulünün dört aslıdır.", "D) İstihsan, mesalih, örf, sedd-i zerai Hanefi-Maliki genişletmeleridir.", "E) İctihad müctehidin zanni hükümde çabası; taklit mezhep içi uymadır."],
+    "correctAnswerIndex": 1,
+    "explanation": "İslam Hukuku notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Ukubat için doğru bir açıklamadır?",
+    "options": ["A) Edille-i şer'iyye kat'i-zanni bilgi değerine göre ayrılır.", "B) Ukubat ceza; hadd, kısas, ta'zir ayrımı.", "C) Kur'an, sünnet, icma, kıyas Ehl-i sünnet usulünün dört aslıdır.", "D) İstihsan, mesalih, örf, sedd-i zerai Hanefi-Maliki genişletmeleridir.", "E) İctihad müctehidin zanni hükümde çabası; taklit mezhep içi uymadır."],
+    "correctAnswerIndex": 1,
+    "explanation": "İslam Hukuku notundaki temel bilgi."
+},
+{
+    "question": "Siyaset-i şer'iyye hakkında hangisi doğrudur?",
+    "options": ["A) İctihad müctehidin zanni hükümde çabası; taklit mezhep içi uymadır.", "B) Edille-i şer'iyye kat'i-zanni bilgi değerine göre ayrılır.", "C) Siyaset-i şer'iyye kamu maslahatı; klasik hilafet-yargı.", "D) Kur'an, sünnet, icma, kıyas Ehl-i sünnet usulünün dört aslıdır.", "E) İstihsan, mesalih, örf, sedd-i zerai Hanefi-Maliki genişletmeleridir."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İslam Hukuku konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Edille-i şer'iyye kat'i-zanni bilgi değerine göre ayrılır."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "İslam Hukuku konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Makasıd din, can, akıl, nesil, malın korunması.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İslam Hukuku konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) İbadet taharet, namaz, oruç, zekât, hac."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "İslam Hukuku konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Muamelat alışveriş, kira, şirket, riba yasağı.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İslam Hukuku konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Ahval-i şahsiyye evlilik, boşanma, nesep, miras."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "İslam Hukuku konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Ukubat ceza; hadd, kısas, ta'zir ayrımı.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İslam Hukuku konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Siyaset-i şer'iyye kamu maslahatı; klasik hilafet-yargı."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İslam Hukuku notundaki temel bilgi."
 }
 ];

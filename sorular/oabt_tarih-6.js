@@ -61,63 +61,63 @@ window.oabt_tarih_6_sorulari = [
     "explanation": "Yavuz, Arap coğrafyasına ve Hicaz'a yönelir."
 },
 {
-    "question": "Osmanlı Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) 1299 geleneksel kuruluş; uç beyliği, gaza ve Bizans sınırı.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi 1299 için doğru bir açıklamadır?",
+    "options": ["A) Yükselme Kanuni çağı; hukuk, imar ve Akdeniz-Karadeniz gerilimi.", "B) Tımar, devşirme, kapıkulu, millet klasik kurumların omurgasıdır.", "C) Divan-ı Hümayun veziriazam eliyle karar; kadı taşra hukuku.", "D) 1299 geleneksel kuruluş; uç beyliği, gaza ve Bizans sınırı.", "E) Bursa, Edirne, İstanbul (1453) başkent hattı; Fatih merkezi mutlakiyeti güçlendirir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Osmanlı Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Yükselme hangisini ifade eder?",
+    "options": ["A) 1299 geleneksel kuruluş; uç beyliği, gaza ve Bizans sınırı.", "B) Bursa, Edirne, İstanbul (1453) başkent hattı; Fatih merkezi mutlakiyeti güçlendirir.", "C) Tımar, devşirme, kapıkulu, millet klasik kurumların omurgasıdır.", "D) Divan-ı Hümayun veziriazam eliyle karar; kadı taşra hukuku.", "E) Yükselme Kanuni çağı; hukuk, imar ve Akdeniz-Karadeniz gerilimi."],
+    "correctAnswerIndex": 4,
+    "explanation": "Osmanlı Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Divan-ı Hümayun için doğru bir açıklamadır?",
+    "options": ["A) Bursa, Edirne, İstanbul (1453) başkent hattı; Fatih merkezi mutlakiyeti güçlendirir.", "B) Yükselme Kanuni çağı; hukuk, imar ve Akdeniz-Karadeniz gerilimi.", "C) Tımar, devşirme, kapıkulu, millet klasik kurumların omurgasıdır.", "D) Divan-ı Hümayun veziriazam eliyle karar; kadı taşra hukuku.", "E) 1299 geleneksel kuruluş; uç beyliği, gaza ve Bizans sınırı."],
+    "correctAnswerIndex": 3,
+    "explanation": "Osmanlı Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Celali, enflasyon, tımarın bozulması hakkında hangisi doğrudur?",
+    "options": ["A) Yükselme Kanuni çağı; hukuk, imar ve Akdeniz-Karadeniz gerilimi.", "B) Tımar, devşirme, kapıkulu, millet klasik kurumların omurgasıdır.", "C) Celali, enflasyon, tımarın bozulması 16. sonu-17. yüzyıl bunalımı.", "D) 1299 geleneksel kuruluş; uç beyliği, gaza ve Bizans sınırı.", "E) Bursa, Edirne, İstanbul (1453) başkent hattı; Fatih merkezi mutlakiyeti güçlendirir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Osmanlı Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Lale Devri ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Lale Devri ve 18. yüzyıl ıslahat denemeleri; matbaa (1727).", "B) 1299 geleneksel kuruluş; uç beyliği, gaza ve Bizans sınırı.", "C) Bursa, Edirne, İstanbul (1453) başkent hattı; Fatih merkezi mutlakiyeti güçlendirir.", "D) Yükselme Kanuni çağı; hukuk, imar ve Akdeniz-Karadeniz gerilimi.", "E) Tımar, devşirme, kapıkulu, millet klasik kurumların omurgasıdır."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Osmanlı Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Osmanlı Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Bursa, Edirne, İstanbul (1453) başkent hattı; Fatih merkezi mutlakiyeti güçlendirir.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Osmanlı Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Yükselme Kanuni çağı; hukuk, imar ve Akdeniz-Karadeniz gerilimi.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "I. ve II. Meşrutiyet hakkında hangisi doğrudur?",
+    "options": ["A) I. ve II. Meşrutiyet anayasal deney; 1876 Kanun-ı Esasi.", "B) 1299 geleneksel kuruluş; uç beyliği, gaza ve Bizans sınırı.", "C) Bursa, Edirne, İstanbul (1453) başkent hattı; Fatih merkezi mutlakiyeti güçlendirir.", "D) Yükselme Kanuni çağı; hukuk, imar ve Akdeniz-Karadeniz gerilimi.", "E) Tımar, devşirme, kapıkulu, millet klasik kurumların omurgasıdır."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Osmanlı Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Osmanlı Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Tımar, devşirme, kapıkulu, millet klasik kurumların omurgasıdır.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Kapitülasyonlar hangisini ifade eder?",
+    "options": ["A) Bursa, Edirne, İstanbul (1453) başkent hattı; Fatih merkezi mutlakiyeti güçlendirir.", "B) Yükselme Kanuni çağı; hukuk, imar ve Akdeniz-Karadeniz gerilimi.", "C) Tımar, devşirme, kapıkulu, millet klasik kurumların omurgasıdır.", "D) Kapitülasyonlar ticaret imtiyazı; 19. yüzyılda eşitsiz bağımlılık tartışması.", "E) 1299 geleneksel kuruluş; uç beyliği, gaza ve Bizans sınırı."],
+    "correctAnswerIndex": 3,
+    "explanation": "Osmanlı Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Osmanlı Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Divan-ı Hümayun veziriazam eliyle karar; kadı taşra hukuku.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Millet sistemi ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Yükselme Kanuni çağı; hukuk, imar ve Akdeniz-Karadeniz gerilimi.", "B) Tımar, devşirme, kapıkulu, millet klasik kurumların omurgasıdır.", "C) Millet sistemi dinî cemaat özerkliği; modern vatandaşlığa geçiş gerilimlidir.", "D) 1299 geleneksel kuruluş; uç beyliği, gaza ve Bizans sınırı.", "E) Bursa, Edirne, İstanbul (1453) başkent hattı; Fatih merkezi mutlakiyeti güçlendirir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Osmanlı Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Osmanlı Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Celali, enflasyon, tımarın bozulması 16. sonu-17. yüzyıl bunalımı.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Doğu Sorunu için doğru bir açıklamadır?",
+    "options": ["A) 1299 geleneksel kuruluş; uç beyliği, gaza ve Bizans sınırı.", "B) Bursa, Edirne, İstanbul (1453) başkent hattı; Fatih merkezi mutlakiyeti güçlendirir.", "C) Yükselme Kanuni çağı; hukuk, imar ve Akdeniz-Karadeniz gerilimi.", "D) Tımar, devşirme, kapıkulu, millet klasik kurumların omurgasıdır.", "E) Doğu Sorunu Avrupa'nın Osmanlı toprak paylaşımı siyasetidir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Osmanlı Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Osmanlı Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Köprülü restorasyonu; Karlofça (1699) büyük toprak kaybı eşiği.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Osmanlı Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Lale Devri ve 18. yüzyıl ıslahat denemeleri; matbaa (1727).", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Osmanlı Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Tanzimat (1839) ve Islahat (1856) hukuk-eşitlik vaadi ve merkezi modernleşme.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Osmanlı Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) I. ve II. Meşrutiyet anayasal deney; 1876 Kanun-ı Esasi.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "93 Harbi, Balkan, Trablus, I. Dünya hakkında hangisi doğrudur?",
+    "options": ["A) 1299 geleneksel kuruluş; uç beyliği, gaza ve Bizans sınırı.", "B) Bursa, Edirne, İstanbul (1453) başkent hattı; Fatih merkezi mutlakiyeti güçlendirir.", "C) Yükselme Kanuni çağı; hukuk, imar ve Akdeniz-Karadeniz gerilimi.", "D) Tımar, devşirme, kapıkulu, millet klasik kurumların omurgasıdır.", "E) 93 Harbi, Balkan, Trablus, I. Dünya dağılma savaşları."],
+    "correctAnswerIndex": 4,
+    "explanation": "Osmanlı Tarihi notundaki temel bilgi."
 }
 ];

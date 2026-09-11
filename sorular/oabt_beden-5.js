@@ -61,63 +61,63 @@ window.oabt_beden_5_sorulari = [
     "explanation": "Beden eğitimi felsefesi."
 },
 {
-    "question": "Spor Yönetimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) TMOK olimpiyat; federasyonlar branş.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi TMOK için doğru bir açıklamadır?",
+    "options": ["A) Uluslararası IOC, FIFA, World Athletics.", "B) TMOK olimpiyat; federasyonlar branş.", "C) Spor Toto, bakanlık teşkilatı kamu spor politikası (adlar dönemsel değişebilir).", "D) Kulüp, lig, hakem, lisans yarışma yapısı.", "E) Gönüllü ve profesyonel yönetim farkı."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Spor Yönetimi notundaki temel bilgi."
 },
 {
-    "question": "Spor Yönetimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Spor Toto, bakanlık teşkilatı kamu spor politikası (adlar dönemsel değişebilir).", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Spor Toto, bakanlık teşkilatı hakkında hangisi doğrudur?",
+    "options": ["A) Kulüp, lig, hakem, lisans yarışma yapısı.", "B) Gönüllü ve profesyonel yönetim farkı.", "C) Uluslararası IOC, FIFA, World Athletics.", "D) Spor Toto, bakanlık teşkilatı kamu spor politikası (adlar dönemsel değişebilir).", "E) TMOK olimpiyat; federasyonlar branş."],
+    "correctAnswerIndex": 3,
+    "explanation": "Spor Yönetimi notundaki temel bilgi."
 },
 {
-    "question": "Spor Yönetimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kulüp, lig, hakem, lisans yarışma yapısı.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Kulüp, lig, hakem, lisans hangisini ifade eder?",
+    "options": ["A) Kulüp, lig, hakem, lisans yarışma yapısı.", "B) TMOK olimpiyat; federasyonlar branş.", "C) Spor Toto, bakanlık teşkilatı kamu spor politikası (adlar dönemsel değişebilir).", "D) Gönüllü ve profesyonel yönetim farkı.", "E) Uluslararası IOC, FIFA, World Athletics."],
+    "correctAnswerIndex": 0,
+    "explanation": "Spor Yönetimi notundaki temel bilgi."
+},
+{
+    "question": "Gönüllü ve profesyonel ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) TMOK olimpiyat; federasyonlar branş.", "B) Spor Toto, bakanlık teşkilatı kamu spor politikası (adlar dönemsel değişebilir).", "C) Kulüp, lig, hakem, lisans yarışma yapısı.", "D) Uluslararası IOC, FIFA, World Athletics.", "E) Gönüllü ve profesyonel yönetim farkı."],
+    "correctAnswerIndex": 4,
+    "explanation": "Spor Yönetimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Uluslararası için doğru bir açıklamadır?",
+    "options": ["A) TMOK olimpiyat; federasyonlar branş.", "B) Spor Toto, bakanlık teşkilatı kamu spor politikası (adlar dönemsel değişebilir).", "C) Kulüp, lig, hakem, lisans yarışma yapısı.", "D) Gönüllü ve profesyonel yönetim farkı.", "E) Uluslararası IOC, FIFA, World Athletics."],
+    "correctAnswerIndex": 4,
+    "explanation": "Spor Yönetimi notundaki temel bilgi."
+},
+{
+    "question": "Planlama, örgütleme, yürütme, denetim hakkında hangisi doğrudur?",
+    "options": ["A) TMOK olimpiyat; federasyonlar branş.", "B) Spor Toto, bakanlık teşkilatı kamu spor politikası (adlar dönemsel değişebilir).", "C) Kulüp, lig, hakem, lisans yarışma yapısı.", "D) Gönüllü ve profesyonel yönetim farkı.", "E) Planlama, örgütleme, yürütme, denetim klasik yönetim."],
+    "correctAnswerIndex": 4,
+    "explanation": "Spor Yönetimi notundaki temel bilgi."
+},
+{
+    "question": "Tesis hangisini ifade eder?",
+    "options": ["A) Gönüllü ve profesyonel yönetim farkı.", "B) Tesis kullanım, güvenlik, erişilebilirlik.", "C) TMOK olimpiyat; federasyonlar branş.", "D) Spor Toto, bakanlık teşkilatı kamu spor politikası (adlar dönemsel değişebilir).", "E) Kulüp, lig, hakem, lisans yarışma yapısı."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Spor Yönetimi notundaki temel bilgi."
 },
 {
-    "question": "Spor Yönetimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Gönüllü ve profesyonel yönetim farkı.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Etkinlik ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Spor Toto, bakanlık teşkilatı kamu spor politikası (adlar dönemsel değişebilir).", "B) Kulüp, lig, hakem, lisans yarışma yapısı.", "C) Gönüllü ve profesyonel yönetim farkı.", "D) Etkinlik risk, acil plan, seyirci.", "E) TMOK olimpiyat; federasyonlar branş."],
+    "correctAnswerIndex": 3,
+    "explanation": "Spor Yönetimi notundaki temel bilgi."
 },
 {
-    "question": "Spor Yönetimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Uluslararası IOC, FIFA, World Athletics.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Finans için doğru bir açıklamadır?",
+    "options": ["A) TMOK olimpiyat; federasyonlar branş.", "B) Spor Toto, bakanlık teşkilatı kamu spor politikası (adlar dönemsel değişebilir).", "C) Kulüp, lig, hakem, lisans yarışma yapısı.", "D) Gönüllü ve profesyonel yönetim farkı.", "E) Finans bütçe, sponsor, kamu desteği, şeffaflık."],
+    "correctAnswerIndex": 4,
+    "explanation": "Spor Yönetimi notundaki temel bilgi."
+},
+{
+    "question": "İletişim hakkında hangisi doğrudur?",
+    "options": ["A) Gönüllü ve profesyonel yönetim farkı.", "B) İletişim medya ve kriz.", "C) TMOK olimpiyat; federasyonlar branş.", "D) Spor Toto, bakanlık teşkilatı kamu spor politikası (adlar dönemsel değişebilir).", "E) Kulüp, lig, hakem, lisans yarışma yapısı."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Spor Yönetimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Planlama, örgütleme, yürütme, denetim klasik yönetim.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Spor Yönetimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Tesis kullanım, güvenlik, erişilebilirlik.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Spor Yönetimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Etkinlik risk, acil plan, seyirci.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Spor Yönetimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Finans bütçe, sponsor, kamu desteği, şeffaflık.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Spor Yönetimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) İletişim medya ve kriz.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Spor Yönetimi notundaki temel bilgi."
 }
 ];

@@ -55,69 +55,69 @@ window.oabt_sosyal_4_sorulari = [
     "explanation": "Integrated curriculum."
 },
 {
-    "question": "Sosyal Bilgilerin Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Sosyal bilgiler tek disiplin değil; tarih, coğrafya, vatandaşlık, ekonomi, sosyoloji vb. b"],
+    "question": "Aşağıdakilerden hangisi Sosyal bilgiler için doğru bir açıklamadır?",
+    "options": ["A) Disiplinlerarası tema (kültür, zaman, insanlar-yerler, birey gelişimi, bireyler-gruplar, iktidar, üretim, bilim-teknoloji, küresel bağlar, vatandaşlık).", "B) Kanıt, mekân, zaman, kimlik, güç anahtar kavramlar.", "C) Sosyal bilgiler tek disiplin değil; tarih, coğrafya, vatandaşlık, ekonomi, sosyoloji vb. bütünleşik alandır.", "D) NCSS 'sosyal bilimlerin yurttaşlık amaçlı örgütlenmesi'; Türkiye'de 2005 sonrası yapılandırmacı program.", "E) Etkili vatandaş bilgi, beceri, değer, katılım."],
+    "correctAnswerIndex": 2,
+    "explanation": "Sosyal Bilgilerin Temelleri notundaki temel bilgi."
+},
+{
+    "question": "NCSS hakkında hangisi doğrudur?",
+    "options": ["A) Sosyal bilgiler tek disiplin değil; tarih, coğrafya, vatandaşlık, ekonomi, sosyoloji vb. bütünleşik alandır.", "B) Etkili vatandaş bilgi, beceri, değer, katılım.", "C) Disiplinlerarası tema (kültür, zaman, insanlar-yerler, birey gelişimi, bireyler-gruplar, iktidar, üretim, bilim-teknoloji, küresel bağlar, vatandaşlık).", "D) Kanıt, mekân, zaman, kimlik, güç anahtar kavramlar.", "E) NCSS 'sosyal bilimlerin yurttaşlık amaçlı örgütlenmesi'; Türkiye'de 2005 sonrası yapılandırmacı program."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Sosyal Bilgilerin Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Sosyal Bilgilerin Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) NCSS 'sosyal bilimlerin yurttaşlık amaçlı örgütlenmesi'; Türkiye'de 2005 sonrası yapılandı", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Etkili vatandaş hangisini ifade eder?",
+    "options": ["A) NCSS 'sosyal bilimlerin yurttaşlık amaçlı örgütlenmesi'; Türkiye'de 2005 sonrası yapılandırmacı program.", "B) Disiplinlerarası tema (kültür, zaman, insanlar-yerler, birey gelişimi, bireyler-gruplar, iktidar, üretim, bilim-teknoloji, küresel bağlar, vatandaşlık).", "C) Kanıt, mekân, zaman, kimlik, güç anahtar kavramlar.", "D) Etkili vatandaş bilgi, beceri, değer, katılım.", "E) Sosyal bilgiler tek disiplin değil; tarih, coğrafya, vatandaşlık, ekonomi, sosyoloji vb. bütünleşik alandır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Sosyal Bilgilerin Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Sosyal Bilgilerin Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Etkili vatandaş bilgi, beceri, değer, katılım."],
+    "question": "Disiplinlerarası ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Kanıt, mekân, zaman, kimlik, güç anahtar kavramlar.", "B) Disiplinlerarası tema (kültür, zaman, insanlar-yerler, birey gelişimi, bireyler-gruplar, iktidar, üretim, bilim-teknoloji, küresel bağlar, vatandaşlık).", "C) Sosyal bilgiler tek disiplin değil; tarih, coğrafya, vatandaşlık, ekonomi, sosyoloji vb. bütünleşik alandır.", "D) NCSS 'sosyal bilimlerin yurttaşlık amaçlı örgütlenmesi'; Türkiye'de 2005 sonrası yapılandırmacı program.", "E) Etkili vatandaş bilgi, beceri, değer, katılım."],
+    "correctAnswerIndex": 1,
+    "explanation": "Sosyal Bilgilerin Temelleri notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Kanıt, mekân, zaman, kimlik, güç için doğru bir açıklamadır?",
+    "options": ["A) Sosyal bilgiler tek disiplin değil; tarih, coğrafya, vatandaşlık, ekonomi, sosyoloji vb. bütünleşik alandır.", "B) NCSS 'sosyal bilimlerin yurttaşlık amaçlı örgütlenmesi'; Türkiye'de 2005 sonrası yapılandırmacı program.", "C) Etkili vatandaş bilgi, beceri, değer, katılım.", "D) Disiplinlerarası tema (kültür, zaman, insanlar-yerler, birey gelişimi, bireyler-gruplar, iktidar, üretim, bilim-teknoloji, küresel bağlar, vatandaşlık).", "E) Kanıt, mekân, zaman, kimlik, güç anahtar kavramlar."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Sosyal Bilgilerin Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Sosyal Bilgilerin Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Disiplinlerarası tema (kültür, zaman, insanlar-yerler, birey gelişimi, bireyler-gruplar, i", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Yapılandırmacılık hakkında hangisi doğrudur?",
+    "options": ["A) NCSS 'sosyal bilimlerin yurttaşlık amaçlı örgütlenmesi'; Türkiye'de 2005 sonrası yapılandırmacı program.", "B) Etkili vatandaş bilgi, beceri, değer, katılım.", "C) Disiplinlerarası tema (kültür, zaman, insanlar-yerler, birey gelişimi, bireyler-gruplar, iktidar, üretim, bilim-teknoloji, küresel bağlar, vatandaşlık).", "D) Yapılandırmacılık öğrenen anlamı kurar; öğretmen rehber, ön bilgi ve sosyal etkileşim.", "E) Sosyal bilgiler tek disiplin değil; tarih, coğrafya, vatandaşlık, ekonomi, sosyoloji vb. bütünleşik alandır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Sosyal Bilgilerin Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Sosyal Bilgilerin Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Kanıt, mekân, zaman, kimlik, güç anahtar kavramlar."],
+    "question": "Kanıt temelli tarih ve sorgulama hangisini ifade eder?",
+    "options": ["A) Disiplinlerarası tema (kültür, zaman, insanlar-yerler, birey gelişimi, bireyler-gruplar, iktidar, üretim, bilim-teknoloji, küresel bağlar, vatandaşlık).", "B) Kanıt temelli tarih ve sorgulama (inquiry) dersin yöntemidir.", "C) Sosyal bilgiler tek disiplin değil; tarih, coğrafya, vatandaşlık, ekonomi, sosyoloji vb. bütünleşik alandır.", "D) NCSS 'sosyal bilimlerin yurttaşlık amaçlı örgütlenmesi'; Türkiye'de 2005 sonrası yapılandırmacı program.", "E) Etkili vatandaş bilgi, beceri, değer, katılım."],
+    "correctAnswerIndex": 1,
+    "explanation": "Sosyal Bilgilerin Temelleri notundaki temel bilgi."
+},
+{
+    "question": "Mekân algısı ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Sosyal bilgiler tek disiplin değil; tarih, coğrafya, vatandaşlık, ekonomi, sosyoloji vb. bütünleşik alandır.", "B) NCSS 'sosyal bilimlerin yurttaşlık amaçlı örgütlenmesi'; Türkiye'de 2005 sonrası yapılandırmacı program.", "C) Etkili vatandaş bilgi, beceri, değer, katılım.", "D) Disiplinlerarası tema (kültür, zaman, insanlar-yerler, birey gelişimi, bireyler-gruplar, iktidar, üretim, bilim-teknoloji, küresel bağlar, vatandaşlık).", "E) Mekân algısı yer-bölge-ölçek; harita ve saha."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Sosyal Bilgilerin Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Sosyal Bilgilerin Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Yapılandırmacılık öğrenen anlamı kurar; öğretmen rehber, ön bilgi ve sosyal etkileşim.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Çokkültürlülük ve kapsayıcılık için doğru bir açıklamadır?",
+    "options": ["A) Etkili vatandaş bilgi, beceri, değer, katılım.", "B) Disiplinlerarası tema (kültür, zaman, insanlar-yerler, birey gelişimi, bireyler-gruplar, iktidar, üretim, bilim-teknoloji, küresel bağlar, vatandaşlık).", "C) Çokkültürlülük ve kapsayıcılık kimlik, öteki, ayrımcılık karşıtı pedagoji.", "D) Sosyal bilgiler tek disiplin değil; tarih, coğrafya, vatandaşlık, ekonomi, sosyoloji vb. bütünleşik alandır.", "E) NCSS 'sosyal bilimlerin yurttaşlık amaçlı örgütlenmesi'; Türkiye'de 2005 sonrası yapılandırmacı program."],
+    "correctAnswerIndex": 2,
+    "explanation": "Sosyal Bilgilerin Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Sosyal Bilgilerin Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Kanıt temelli tarih ve sorgulama (inquiry) dersin yöntemidir."],
+    "question": "Değer eğitimi hakkında hangisi doğrudur?",
+    "options": ["A) Sosyal bilgiler tek disiplin değil; tarih, coğrafya, vatandaşlık, ekonomi, sosyoloji vb. bütünleşik alandır.", "B) NCSS 'sosyal bilimlerin yurttaşlık amaçlı örgütlenmesi'; Türkiye'de 2005 sonrası yapılandırmacı program.", "C) Etkili vatandaş bilgi, beceri, değer, katılım.", "D) Disiplinlerarası tema (kültür, zaman, insanlar-yerler, birey gelişimi, bireyler-gruplar, iktidar, üretim, bilim-teknoloji, küresel bağlar, vatandaşlık).", "E) Değer eğitimi telkin, açıklama, ahlaki ikilem, karakter; eleştirel değer."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Sosyal Bilgilerin Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Sosyal Bilgilerin Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mekân algısı yer-bölge-ölçek; harita ve saha.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Sosyal Bilgilerin Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Çokkültürlülük ve kapsayıcılık kimlik, öteki, ayrımcılık karşıtı pedagoji."],
+    "question": "2005 Sosyal Bilgiler DÖP hangisini ifade eder?",
+    "options": ["A) Sosyal bilgiler tek disiplin değil; tarih, coğrafya, vatandaşlık, ekonomi, sosyoloji vb. bütünleşik alandır.", "B) NCSS 'sosyal bilimlerin yurttaşlık amaçlı örgütlenmesi'; Türkiye'de 2005 sonrası yapılandırmacı program.", "C) Etkili vatandaş bilgi, beceri, değer, katılım.", "D) Disiplinlerarası tema (kültür, zaman, insanlar-yerler, birey gelişimi, bireyler-gruplar, iktidar, üretim, bilim-teknoloji, küresel bağlar, vatandaşlık).", "E) 2005 Sosyal Bilgiler DÖP beceri (eleştirel düşünme, empati, harita, kanıt, girişimcilik) ve değerler."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Sosyal Bilgilerin Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Değer eğitimi telkin, açıklama, ahlaki ikilem, karakter; eleştirel değer.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Sosyal Bilgilerin Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) 2005 Sosyal Bilgiler DÖP beceri (eleştirel düşünme, empati, harita, kanıt, girişimcilik) v"],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Sosyal Bilgilerin Temelleri notundaki temel bilgi."
 }
 ];

@@ -61,63 +61,63 @@ window.oabt_sinif_4_sorulari = [
     "explanation": "Orhun bağlamı."
 },
 {
-    "question": "Türk Tarihi ve Kültürü konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Orhun ve Göktürk; Türk adı."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Türk Tarihi ve Kültürü konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) İslamlaşma Karahanlı-Selçuklu; Malazgirt 1071.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "İslamlaşma hakkında hangisi doğrudur?",
+    "options": ["A) İslamlaşma Karahanlı-Selçuklu; Malazgirt 1071.", "B) Orhun ve Göktürk; Türk adı.", "C) Osmanlı kuruluş-fetih 1453.", "D) Kültür hoşgörü, millet, vakıf sezgisel ilkokul.", "E) Coğrafya-tarih bağ Anadolu köprü."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Türk Tarihi ve Kültürü notundaki temel bilgi."
 },
 {
-    "question": "Türk Tarihi ve Kültürü konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Osmanlı kuruluş-fetih 1453."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Osmanlı kuruluş-fetih hangisini ifade eder?",
+    "options": ["A) Kültür hoşgörü, millet, vakıf sezgisel ilkokul.", "B) Coğrafya-tarih bağ Anadolu köprü.", "C) Osmanlı kuruluş-fetih 1453.", "D) Orhun ve Göktürk; Türk adı.", "E) İslamlaşma Karahanlı-Selçuklu; Malazgirt 1071."],
+    "correctAnswerIndex": 2,
+    "explanation": "Türk Tarihi ve Kültürü notundaki temel bilgi."
 },
 {
-    "question": "Türk Tarihi ve Kültürü konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Kültür hoşgörü, millet, vakıf sezgisel ilkokul.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Kültür ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İslamlaşma Karahanlı-Selçuklu; Malazgirt 1071.", "B) Osmanlı kuruluş-fetih 1453.", "C) Coğrafya-tarih bağ Anadolu köprü.", "D) Kültür hoşgörü, millet, vakıf sezgisel ilkokul.", "E) Orhun ve Göktürk; Türk adı."],
+    "correctAnswerIndex": 3,
+    "explanation": "Türk Tarihi ve Kültürü notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Coğrafya-tarih bağ için doğru bir açıklamadır?",
+    "options": ["A) Coğrafya-tarih bağ Anadolu köprü.", "B) Orhun ve Göktürk; Türk adı.", "C) İslamlaşma Karahanlı-Selçuklu; Malazgirt 1071.", "D) Osmanlı kuruluş-fetih 1453.", "E) Kültür hoşgörü, millet, vakıf sezgisel ilkokul."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Türk Tarihi ve Kültürü notundaki temel bilgi."
 },
 {
-    "question": "Türk Tarihi ve Kültürü konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Coğrafya-tarih bağ Anadolu köprü."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Türk Tarihi ve Kültürü konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Atatürk'ün hayatı 1881-1938; Samsun 19 Mayıs 1919.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Atatürk'ün hayatı hakkında hangisi doğrudur?",
+    "options": ["A) Atatürk'ün hayatı 1881-1938; Samsun 19 Mayıs 1919.", "B) Orhun ve Göktürk; Türk adı.", "C) İslamlaşma Karahanlı-Selçuklu; Malazgirt 1071.", "D) Osmanlı kuruluş-fetih 1453.", "E) Kültür hoşgörü, millet, vakıf sezgisel ilkokul."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Türk Tarihi ve Kültürü notundaki temel bilgi."
 },
 {
-    "question": "Türk Tarihi ve Kültürü konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) TBMM 23 Nisan; Cumhuriyet 29 Ekim."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "TBMM 23 Nisan hangisini ifade eder?",
+    "options": ["A) Osmanlı kuruluş-fetih 1453.", "B) Kültür hoşgörü, millet, vakıf sezgisel ilkokul.", "C) TBMM 23 Nisan; Cumhuriyet 29 Ekim.", "D) Orhun ve Göktürk; Türk adı.", "E) İslamlaşma Karahanlı-Selçuklu; Malazgirt 1071."],
+    "correctAnswerIndex": 2,
+    "explanation": "Türk Tarihi ve Kültürü notundaki temel bilgi."
 },
 {
-    "question": "Türk Tarihi ve Kültürü konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) İnkılaplar harf, kılık, medeni kanun, kadın hakları sezgisel.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "İnkılaplar ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İslamlaşma Karahanlı-Selçuklu; Malazgirt 1071.", "B) Osmanlı kuruluş-fetih 1453.", "C) Kültür hoşgörü, millet, vakıf sezgisel ilkokul.", "D) İnkılaplar harf, kılık, medeni kanun, kadın hakları sezgisel.", "E) Orhun ve Göktürk; Türk adı."],
+    "correctAnswerIndex": 3,
+    "explanation": "Türk Tarihi ve Kültürü notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Milli egemenlik ve bağımsızlık için doğru bir açıklamadır?",
+    "options": ["A) Milli egemenlik ve bağımsızlık değerleri.", "B) Orhun ve Göktürk; Türk adı.", "C) İslamlaşma Karahanlı-Selçuklu; Malazgirt 1071.", "D) Osmanlı kuruluş-fetih 1453.", "E) Kültür hoşgörü, millet, vakıf sezgisel ilkokul."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Türk Tarihi ve Kültürü notundaki temel bilgi."
 },
 {
-    "question": "Türk Tarihi ve Kültürü konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Milli egemenlik ve bağımsızlık değerleri."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Bayrak, İstiklal Marşı, Mehmet Akif hakkında hangisi doğrudur?",
+    "options": ["A) Kültür hoşgörü, millet, vakıf sezgisel ilkokul.", "B) Bayrak, İstiklal Marşı, Mehmet Akif.", "C) Orhun ve Göktürk; Türk adı.", "D) İslamlaşma Karahanlı-Selçuklu; Malazgirt 1071.", "E) Osmanlı kuruluş-fetih 1453."],
+    "correctAnswerIndex": 1,
+    "explanation": "Türk Tarihi ve Kültürü notundaki temel bilgi."
 },
 {
-    "question": "Türk Tarihi ve Kültürü konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Bayrak, İstiklal Marşı, Mehmet Akif.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Somut olmayan miras hangisini ifade eder?",
+    "options": ["A) İslamlaşma Karahanlı-Selçuklu; Malazgirt 1071.", "B) Osmanlı kuruluş-fetih 1453.", "C) Kültür hoşgörü, millet, vakıf sezgisel ilkokul.", "D) Somut olmayan miras âşıklık, nevruz, geleneksel spor.", "E) Orhun ve Göktürk; Türk adı."],
+    "correctAnswerIndex": 3,
+    "explanation": "Türk Tarihi ve Kültürü notundaki temel bilgi."
 }
 ];

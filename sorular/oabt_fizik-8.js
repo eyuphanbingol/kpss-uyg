@@ -55,69 +55,69 @@ window.oabt_fizik_8_sorulari = [
     "explanation": "Inquiry spektrumu."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kuvvet-hareket 'sürekli kuvvet gerekir'; ısı-sıcaklık; akım tüketimi ampulde akım biter ya", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Kuvvet-hareket için doğru bir açıklamadır?",
+    "options": ["A) Modelleme döngüsü varsayım-sınır-tahmin-deney.", "B) Kuvvet-hareket 'sürekli kuvvet gerekir'; ısı-sıcaklık; akım tüketimi ampulde akım biter yanılgısı.", "C) Işık görme için gözden ışın çıkması (ektramisyon) yanılgısı.", "D) Grafik konum-zaman eğimi hız; alan yorumları karışır.", "E) Analoji su-devre yararlı ama gerilim 'basınç' sınırlılığı konuşulur."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Işık görme için gözden ışın çıkması (ektramisyon) yanılgısı.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Işık hakkında hangisi doğrudur?",
+    "options": ["A) Kuvvet-hareket 'sürekli kuvvet gerekir'; ısı-sıcaklık; akım tüketimi ampulde akım biter yanılgısı.", "B) Grafik konum-zaman eğimi hız; alan yorumları karışır.", "C) Analoji su-devre yararlı ama gerilim 'basınç' sınırlılığı konuşulur.", "D) Modelleme döngüsü varsayım-sınır-tahmin-deney.", "E) Işık görme için gözden ışın çıkması (ektramisyon) yanılgısı."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Grafik konum-zaman eğimi hız; alan yorumları karışır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Grafik hangisini ifade eder?",
+    "options": ["A) Grafik konum-zaman eğimi hız; alan yorumları karışır.", "B) Kuvvet-hareket 'sürekli kuvvet gerekir'; ısı-sıcaklık; akım tüketimi ampulde akım biter yanılgısı.", "C) Işık görme için gözden ışın çıkması (ektramisyon) yanılgısı.", "D) Analoji su-devre yararlı ama gerilim 'basınç' sınırlılığı konuşulur.", "E) Modelleme döngüsü varsayım-sınır-tahmin-deney."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Analoji ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Işık görme için gözden ışın çıkması (ektramisyon) yanılgısı.", "B) Grafik konum-zaman eğimi hız; alan yorumları karışır.", "C) Modelleme döngüsü varsayım-sınır-tahmin-deney.", "D) Analoji su-devre yararlı ama gerilim 'basınç' sınırlılığı konuşulur.", "E) Kuvvet-hareket 'sürekli kuvvet gerekir'; ısı-sıcaklık; akım tüketimi ampulde akım biter yanılgısı."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Modelleme döngüsü için doğru bir açıklamadır?",
+    "options": ["A) Modelleme döngüsü varsayım-sınır-tahmin-deney.", "B) Kuvvet-hareket 'sürekli kuvvet gerekir'; ısı-sıcaklık; akım tüketimi ampulde akım biter yanılgısı.", "C) Işık görme için gözden ışın çıkması (ektramisyon) yanılgısı.", "D) Grafik konum-zaman eğimi hız; alan yorumları karışır.", "E) Analoji su-devre yararlı ama gerilim 'basınç' sınırlılığı konuşulur."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Gerçek deney hakkında hangisi doğrudur?",
+    "options": ["A) Gerçek deney hata çubuğu, uyum, model karşılaştırması.", "B) Kuvvet-hareket 'sürekli kuvvet gerekir'; ısı-sıcaklık; akım tüketimi ampulde akım biter yanılgısı.", "C) Işık görme için gözden ışın çıkması (ektramisyon) yanılgısı.", "D) Grafik konum-zaman eğimi hız; alan yorumları karışır.", "E) Analoji su-devre yararlı ama gerilim 'basınç' sınırlılığı konuşulur."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Sorgulama düzeyi hangisini ifade eder?",
+    "options": ["A) Kuvvet-hareket 'sürekli kuvvet gerekir'; ısı-sıcaklık; akım tüketimi ampulde akım biter yanılgısı.", "B) Işık görme için gözden ışın çıkması (ektramisyon) yanılgısı.", "C) Grafik konum-zaman eğimi hız; alan yorumları karışır.", "D) Analoji su-devre yararlı ama gerilim 'basınç' sınırlılığı konuşulur.", "E) Sorgulama düzeyi tarifli deneyden açık araştırmaya."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Matematikselleştirme ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Analoji su-devre yararlı ama gerilim 'basınç' sınırlılığı konuşulur.", "B) Matematikselleştirme sembolün anlamı; türev-integral fizik yorumu.", "C) Kuvvet-hareket 'sürekli kuvvet gerekir'; ısı-sıcaklık; akım tüketimi ampulde akım biter yanılgısı.", "D) Işık görme için gözden ışın çıkması (ektramisyon) yanılgısı.", "E) Grafik konum-zaman eğimi hız; alan yorumları karışır."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Analoji su-devre yararlı ama gerilim 'basınç' sınırlılığı konuşulur.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Simülasyon için doğru bir açıklamadır?",
+    "options": ["A) Simülasyon parametre taraması; gerçekliği ikame iddiası sorgulanır.", "B) Kuvvet-hareket 'sürekli kuvvet gerekir'; ısı-sıcaklık; akım tüketimi ampulde akım biter yanılgısı.", "C) Işık görme için gözden ışın çıkması (ektramisyon) yanılgısı.", "D) Grafik konum-zaman eğimi hız; alan yorumları karışır.", "E) Analoji su-devre yararlı ama gerilim 'basınç' sınırlılığı konuşulur."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Modelleme döngüsü varsayım-sınır-tahmin-deney.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Güvenlik hakkında hangisi doğrudur?",
+    "options": ["A) Işık görme için gözden ışın çıkması (ektramisyon) yanılgısı.", "B) Grafik konum-zaman eğimi hız; alan yorumları karışır.", "C) Analoji su-devre yararlı ama gerilim 'basınç' sınırlılığı konuşulur.", "D) Güvenlik yüksek gerilim, lazer sınıfı, radyoizotop lisansı.", "E) Kuvvet-hareket 'sürekli kuvvet gerekir'; ısı-sıcaklık; akım tüketimi ampulde akım biter yanılgısı."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Gerçek deney hata çubuğu, uyum, model karşılaştırması.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Sorgulama düzeyi tarifli deneyden açık araştırmaya.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Matematikselleştirme sembolün anlamı; türev-integral fizik yorumu.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Simülasyon parametre taraması; gerçekliği ikame iddiası sorgulanır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Güvenlik yüksek gerilim, lazer sınıfı, radyoizotop lisansı.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) FCI türü kavram envanteri ezber formülle çözülmez.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "FCI türü hangisini ifade eder?",
+    "options": ["A) FCI türü kavram envanteri ezber formülle çözülmez.", "B) Kuvvet-hareket 'sürekli kuvvet gerekir'; ısı-sıcaklık; akım tüketimi ampulde akım biter yanılgısı.", "C) Işık görme için gözden ışın çıkması (ektramisyon) yanılgısı.", "D) Grafik konum-zaman eğimi hız; alan yorumları karışır.", "E) Analoji su-devre yararlı ama gerilim 'basınç' sınırlılığı konuşulur."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 }
 ];

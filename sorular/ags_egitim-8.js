@@ -73,51 +73,51 @@ window.ags_egitim_8_sorulari = [
     "explanation": "Öğretmen ajansı."
 },
 {
-    "question": "Program Okuryazarlığı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Öğretim programı hedeflenen öğrenmeleri, içeriği, yaşantıları ve değerlendirmeyi bütünleşt", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Öğretim programı için doğru bir açıklamadır?",
+    "options": ["A) Taba öğretmenin tümevarımsal program geliştirmesini; Eisner ifade edici hedefler ve eleştirel beğeniyi öne çıkarır.", "B) Resmi, uygulanan, öğrenilen program ayrılır; gizli ve yok sayılan (null) program da okuryazarlığın parçasıdır.", "C) Yatay bağdaşıklık dersler arası, dikey sarmallık kademeler arası tutarlılıktır.", "D) Öğretim programı hedeflenen öğrenmeleri, içeriği, yaşantıları ve değerlendirmeyi bütünleştiren resmi plandır.", "E) Tyler dört soru: hangi amaçlar, hangi yaşantılar, nasıl örgütlenir, nasıl anlaşılır ki amaçlara ulaşıldı."],
+    "correctAnswerIndex": 3,
+    "explanation": "Program Okuryazarlığı notundaki temel bilgi."
 },
 {
-    "question": "Program Okuryazarlığı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Tyler dört soru: hangi amaçlar, hangi yaşantılar, nasıl örgütlenir, nasıl anlaşılır ki ama", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Tyler hakkında hangisi doğrudur?",
+    "options": ["A) Resmi, uygulanan, öğrenilen program ayrılır; gizli ve yok sayılan (null) program da okuryazarlığın parçasıdır.", "B) Yatay bağdaşıklık dersler arası, dikey sarmallık kademeler arası tutarlılıktır.", "C) Tyler dört soru: hangi amaçlar, hangi yaşantılar, nasıl örgütlenir, nasıl anlaşılır ki amaçlara ulaşıldı.", "D) Öğretim programı hedeflenen öğrenmeleri, içeriği, yaşantıları ve değerlendirmeyi bütünleştiren resmi plandır.", "E) Taba öğretmenin tümevarımsal program geliştirmesini; Eisner ifade edici hedefler ve eleştirel beğeniyi öne çıkarır."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Program Okuryazarlığı notundaki temel bilgi."
 },
 {
-    "question": "Program Okuryazarlığı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Taba öğretmenin tümevarımsal program geliştirmesini; Eisner ifade edici hedefler ve eleşti", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Taba hangisini ifade eder?",
+    "options": ["A) Taba öğretmenin tümevarımsal program geliştirmesini; Eisner ifade edici hedefler ve eleştirel beğeniyi öne çıkarır.", "B) Öğretim programı hedeflenen öğrenmeleri, içeriği, yaşantıları ve değerlendirmeyi bütünleştiren resmi plandır.", "C) Tyler dört soru: hangi amaçlar, hangi yaşantılar, nasıl örgütlenir, nasıl anlaşılır ki amaçlara ulaşıldı.", "D) Resmi, uygulanan, öğrenilen program ayrılır; gizli ve yok sayılan (null) program da okuryazarlığın parçasıdır.", "E) Yatay bağdaşıklık dersler arası, dikey sarmallık kademeler arası tutarlılıktır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Program Okuryazarlığı notundaki temel bilgi."
 },
 {
-    "question": "Program Okuryazarlığı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Resmi, uygulanan, öğrenilen program ayrılır; gizli ve yok sayılan (null) program da okurya", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Resmi, uygulanan, öğrenilen ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Öğretim programı hedeflenen öğrenmeleri, içeriği, yaşantıları ve değerlendirmeyi bütünleştiren resmi plandır.", "B) Tyler dört soru: hangi amaçlar, hangi yaşantılar, nasıl örgütlenir, nasıl anlaşılır ki amaçlara ulaşıldı.", "C) Taba öğretmenin tümevarımsal program geliştirmesini; Eisner ifade edici hedefler ve eleştirel beğeniyi öne çıkarır.", "D) Yatay bağdaşıklık dersler arası, dikey sarmallık kademeler arası tutarlılıktır.", "E) Resmi, uygulanan, öğrenilen program ayrılır; gizli ve yok sayılan (null) program da okuryazarlığın parçasıdır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Program Okuryazarlığı notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Yatay bağdaşıklık için doğru bir açıklamadır?",
+    "options": ["A) Taba öğretmenin tümevarımsal program geliştirmesini; Eisner ifade edici hedefler ve eleştirel beğeniyi öne çıkarır.", "B) Resmi, uygulanan, öğrenilen program ayrılır; gizli ve yok sayılan (null) program da okuryazarlığın parçasıdır.", "C) Yatay bağdaşıklık dersler arası, dikey sarmallık kademeler arası tutarlılıktır.", "D) Öğretim programı hedeflenen öğrenmeleri, içeriği, yaşantıları ve değerlendirmeyi bütünleştiren resmi plandır.", "E) Tyler dört soru: hangi amaçlar, hangi yaşantılar, nasıl örgütlenir, nasıl anlaşılır ki amaçlara ulaşıldı."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Program Okuryazarlığı notundaki temel bilgi."
 },
 {
-    "question": "Program Okuryazarlığı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Yatay bağdaşıklık dersler arası, dikey sarmallık kademeler arası tutarlılıktır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Bilişsel-duyuşsal-devinişsel hakkında hangisi doğrudur?",
+    "options": ["A) Resmi, uygulanan, öğrenilen program ayrılır; gizli ve yok sayılan (null) program da okuryazarlığın parçasıdır.", "B) Bilişsel-duyuşsal-devinişsel alanlar Bloom ve devamı taksonomilerle çözülür.", "C) Öğretim programı hedeflenen öğrenmeleri, içeriği, yaşantıları ve değerlendirmeyi bütünleştiren resmi plandır.", "D) Tyler dört soru: hangi amaçlar, hangi yaşantılar, nasıl örgütlenir, nasıl anlaşılır ki amaçlara ulaşıldı.", "E) Taba öğretmenin tümevarımsal program geliştirmesini; Eisner ifade edici hedefler ve eleştirel beğeniyi öne çıkarır."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Program Okuryazarlığı notundaki temel bilgi."
 },
 {
-    "question": "Program Okuryazarlığı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Bilişsel-duyuşsal-devinişsel alanlar Bloom ve devamı taksonomilerle çözülür.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "İhtiyaç analizi hangisini ifade eder?",
+    "options": ["A) Taba öğretmenin tümevarımsal program geliştirmesini; Eisner ifade edici hedefler ve eleştirel beğeniyi öne çıkarır.", "B) Resmi, uygulanan, öğrenilen program ayrılır; gizli ve yok sayılan (null) program da okuryazarlığın parçasıdır.", "C) İhtiyaç analizi birey, toplum ve konu kaynaklı açıkların saptanmasıdır.", "D) Öğretim programı hedeflenen öğrenmeleri, içeriği, yaşantıları ve değerlendirmeyi bütünleştiren resmi plandır.", "E) Tyler dört soru: hangi amaçlar, hangi yaşantılar, nasıl örgütlenir, nasıl anlaşılır ki amaçlara ulaşıldı."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Program Okuryazarlığı notundaki temel bilgi."
 },
 {
-    "question": "Program Okuryazarlığı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) İhtiyaç analizi birey, toplum ve konu kaynaklı açıkların saptanmasıdır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Program Okuryazarlığı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Çekirdek ve seçmeli içerik; yoğunluk-derinlik dengesi program kararındandır.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Çekirdek ve seçmeli ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Tyler dört soru: hangi amaçlar, hangi yaşantılar, nasıl örgütlenir, nasıl anlaşılır ki amaçlara ulaşıldı.", "B) Taba öğretmenin tümevarımsal program geliştirmesini; Eisner ifade edici hedefler ve eleştirel beğeniyi öne çıkarır.", "C) Resmi, uygulanan, öğrenilen program ayrılır; gizli ve yok sayılan (null) program da okuryazarlığın parçasıdır.", "D) Çekirdek ve seçmeli içerik; yoğunluk-derinlik dengesi program kararındandır.", "E) Öğretim programı hedeflenen öğrenmeleri, içeriği, yaşantıları ve değerlendirmeyi bütünleştiren resmi plandır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Program Okuryazarlığı notundaki temel bilgi."
 }
 ];

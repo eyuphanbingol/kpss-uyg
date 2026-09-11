@@ -61,63 +61,63 @@ window.oabt_rehber_4_sorulari = [
     "explanation": "Puan yorumlanınca değerlendirme olur."
 },
 {
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Geçerlik ölçülmek isteneni ölçme; kapsam, yordama, yapı, görünüş."],
+    "question": "Aşağıdakilerden hangisi Geçerlik için doğru bir açıklamadır?",
+    "options": ["A) Kullanışlılık zaman, maliyet, puanlama.", "B) Duyarlık birimler arası ayırt etme.", "C) Hata sistematik-tesadüfi; güvenirliği düşürür.", "D) Geçerlik ölçülmek isteneni ölçme; kapsam, yordama, yapı, görünüş.", "E) Güvenirlik tutarlılık; test-tekrar, eşdeğer, iç tutarlılık, puanlayıcı."],
+    "correctAnswerIndex": 3,
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "Güvenirlik hakkında hangisi doğrudur?",
+    "options": ["A) Geçerlik ölçülmek isteneni ölçme; kapsam, yordama, yapı, görünüş.", "B) Kullanışlılık zaman, maliyet, puanlama.", "C) Duyarlık birimler arası ayırt etme.", "D) Hata sistematik-tesadüfi; güvenirliği düşürür.", "E) Güvenirlik tutarlılık; test-tekrar, eşdeğer, iç tutarlılık, puanlayıcı."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
 },
 {
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Güvenirlik tutarlılık; test-tekrar, eşdeğer, iç tutarlılık, puanlayıcı.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Kullanışlılık hangisini ifade eder?",
+    "options": ["A) Duyarlık birimler arası ayırt etme.", "B) Hata sistematik-tesadüfi; güvenirliği düşürür.", "C) Kullanışlılık zaman, maliyet, puanlama.", "D) Geçerlik ölçülmek isteneni ölçme; kapsam, yordama, yapı, görünüş.", "E) Güvenirlik tutarlılık; test-tekrar, eşdeğer, iç tutarlılık, puanlayıcı."],
+    "correctAnswerIndex": 2,
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
 },
 {
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Kullanışlılık zaman, maliyet, puanlama."],
+    "question": "Duyarlık ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Güvenirlik tutarlılık; test-tekrar, eşdeğer, iç tutarlılık, puanlayıcı.", "B) Kullanışlılık zaman, maliyet, puanlama.", "C) Hata sistematik-tesadüfi; güvenirliği düşürür.", "D) Duyarlık birimler arası ayırt etme.", "E) Geçerlik ölçülmek isteneni ölçme; kapsam, yordama, yapı, görünüş."],
+    "correctAnswerIndex": 3,
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Hata için doğru bir açıklamadır?",
+    "options": ["A) Geçerlik ölçülmek isteneni ölçme; kapsam, yordama, yapı, görünüş.", "B) Güvenirlik tutarlılık; test-tekrar, eşdeğer, iç tutarlılık, puanlayıcı.", "C) Kullanışlılık zaman, maliyet, puanlama.", "D) Duyarlık birimler arası ayırt etme.", "E) Hata sistematik-tesadüfi; güvenirliği düşürür."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
 },
 {
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Duyarlık birimler arası ayırt etme.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Test türleri hakkında hangisi doğrudur?",
+    "options": ["A) Kullanışlılık zaman, maliyet, puanlama.", "B) Duyarlık birimler arası ayırt etme.", "C) Test türleri başarı, yetenek, zeka, kişilik, ilgi.", "D) Geçerlik ölçülmek isteneni ölçme; kapsam, yordama, yapı, görünüş.", "E) Güvenirlik tutarlılık; test-tekrar, eşdeğer, iç tutarlılık, puanlayıcı."],
+    "correctAnswerIndex": 2,
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
 },
 {
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Hata sistematik-tesadüfi; güvenirliği düşürür."],
+    "question": "Norm ve ölçüt hangisini ifade eder?",
+    "options": ["A) Güvenirlik tutarlılık; test-tekrar, eşdeğer, iç tutarlılık, puanlayıcı.", "B) Kullanışlılık zaman, maliyet, puanlama.", "C) Duyarlık birimler arası ayırt etme.", "D) Norm ve ölçüt dayanaklı yorum.", "E) Geçerlik ölçülmek isteneni ölçme; kapsam, yordama, yapı, görünüş."],
+    "correctAnswerIndex": 3,
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "Likert, semantik fark, dereceleme ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Kullanışlılık zaman, maliyet, puanlama.", "B) Duyarlık birimler arası ayırt etme.", "C) Likert, semantik fark, dereceleme tutum.", "D) Geçerlik ölçülmek isteneni ölçme; kapsam, yordama, yapı, görünüş.", "E) Güvenirlik tutarlılık; test-tekrar, eşdeğer, iç tutarlılık, puanlayıcı."],
+    "correctAnswerIndex": 2,
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Performans ve portfolyo için doğru bir açıklamadır?",
+    "options": ["A) Geçerlik ölçülmek isteneni ölçme; kapsam, yordama, yapı, görünüş.", "B) Güvenirlik tutarlılık; test-tekrar, eşdeğer, iç tutarlılık, puanlayıcı.", "C) Kullanışlılık zaman, maliyet, puanlama.", "D) Duyarlık birimler arası ayırt etme.", "E) Performans ve portfolyo otantik ölçme."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
 },
 {
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Test türleri başarı, yetenek, zeka, kişilik, ilgi.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Standart sapma, z, T, yüzdelik hakkında hangisi doğrudur?",
+    "options": ["A) Standart sapma, z, T, yüzdelik puan dönüşümü.", "B) Geçerlik ölçülmek isteneni ölçme; kapsam, yordama, yapı, görünüş.", "C) Güvenirlik tutarlılık; test-tekrar, eşdeğer, iç tutarlılık, puanlayıcı.", "D) Kullanışlılık zaman, maliyet, puanlama.", "E) Duyarlık birimler arası ayırt etme."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Norm ve ölçüt dayanaklı yorum."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Likert, semantik fark, dereceleme tutum.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Performans ve portfolyo otantik ölçme."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Standart sapma, z, T, yüzdelik puan dönüşümü.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
 }
 ];

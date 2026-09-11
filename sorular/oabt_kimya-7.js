@@ -55,69 +55,69 @@ window.oabt_kimya_7_sorulari = [
     "explanation": "Shulman + konu spesifik."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Yanılgılar: bağ elektron paylaşımı 'yüzde 50 iyonik değilse kovalent mutlak', denge 'ileri", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Yanılgılar için doğru bir açıklamadır?",
+    "options": ["A) Yanılgılar: bağ elektron paylaşımı 'yüzde 50 iyonik değilse kovalent mutlak', denge 'ileri durur', asit 'yakıcı madde', sıcaklık ısı.", "B) Johnstone üçgeni makro-sembol-mikro düzeyler arası geçiş.", "C) Laboratuvar türleri doğrulama, sorgulama, problem tabanlı.", "D) Güvenlik kültürü risk ≠ tehlike; maruziyet yönetimi.", "E) Model Dalton-Bohr-orbital; modelin sınırı öğretilir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Johnstone üçgeni makro-sembol-mikro düzeyler arası geçiş.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Johnstone üçgeni hakkında hangisi doğrudur?",
+    "options": ["A) Yanılgılar: bağ elektron paylaşımı 'yüzde 50 iyonik değilse kovalent mutlak', denge 'ileri durur', asit 'yakıcı madde', sıcaklık ısı.", "B) Laboratuvar türleri doğrulama, sorgulama, problem tabanlı.", "C) Güvenlik kültürü risk ≠ tehlike; maruziyet yönetimi.", "D) Model Dalton-Bohr-orbital; modelin sınırı öğretilir.", "E) Johnstone üçgeni makro-sembol-mikro düzeyler arası geçiş."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Laboratuvar türleri hangisini ifade eder?",
+    "options": ["A) Yanılgılar: bağ elektron paylaşımı 'yüzde 50 iyonik değilse kovalent mutlak', denge 'ileri durur', asit 'yakıcı madde', sıcaklık ısı.", "B) Johnstone üçgeni makro-sembol-mikro düzeyler arası geçiş.", "C) Güvenlik kültürü risk ≠ tehlike; maruziyet yönetimi.", "D) Model Dalton-Bohr-orbital; modelin sınırı öğretilir.", "E) Laboratuvar türleri doğrulama, sorgulama, problem tabanlı."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Güvenlik kültürü ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Güvenlik kültürü risk ≠ tehlike; maruziyet yönetimi.", "B) Yanılgılar: bağ elektron paylaşımı 'yüzde 50 iyonik değilse kovalent mutlak', denge 'ileri durur', asit 'yakıcı madde', sıcaklık ısı.", "C) Johnstone üçgeni makro-sembol-mikro düzeyler arası geçiş.", "D) Laboratuvar türleri doğrulama, sorgulama, problem tabanlı.", "E) Model Dalton-Bohr-orbital; modelin sınırı öğretilir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Model için doğru bir açıklamadır?",
+    "options": ["A) Yanılgılar: bağ elektron paylaşımı 'yüzde 50 iyonik değilse kovalent mutlak', denge 'ileri durur', asit 'yakıcı madde', sıcaklık ısı.", "B) Johnstone üçgeni makro-sembol-mikro düzeyler arası geçiş.", "C) Laboratuvar türleri doğrulama, sorgulama, problem tabanlı.", "D) Güvenlik kültürü risk ≠ tehlike; maruziyet yönetimi.", "E) Model Dalton-Bohr-orbital; modelin sınırı öğretilir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Kimya Dersi Öğretim Programı hakkında hangisi doğrudur?",
+    "options": ["A) Kimya Dersi Öğretim Programı beceri, bağlam (günlük yaşam, STS).", "B) Yanılgılar: bağ elektron paylaşımı 'yüzde 50 iyonik değilse kovalent mutlak', denge 'ileri durur', asit 'yakıcı madde', sıcaklık ısı.", "C) Johnstone üçgeni makro-sembol-mikro düzeyler arası geçiş.", "D) Laboratuvar türleri doğrulama, sorgulama, problem tabanlı.", "E) Güvenlik kültürü risk ≠ tehlike; maruziyet yönetimi."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "POGIL, 5E, argümantasyon hangisini ifade eder?",
+    "options": ["A) Güvenlik kültürü risk ≠ tehlike; maruziyet yönetimi.", "B) POGIL, 5E, argümantasyon veri-iddia-gerekçe.", "C) Yanılgılar: bağ elektron paylaşımı 'yüzde 50 iyonik değilse kovalent mutlak', denge 'ileri durur', asit 'yakıcı madde', sıcaklık ısı.", "D) Johnstone üçgeni makro-sembol-mikro düzeyler arası geçiş.", "E) Laboratuvar türleri doğrulama, sorgulama, problem tabanlı."],
+    "correctAnswerIndex": 1,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Çoklu temsil ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Laboratuvar türleri doğrulama, sorgulama, problem tabanlı.", "B) Güvenlik kültürü risk ≠ tehlike; maruziyet yönetimi.", "C) Çoklu temsil denklem, tanecik çizimi, grafik.", "D) Yanılgılar: bağ elektron paylaşımı 'yüzde 50 iyonik değilse kovalent mutlak', denge 'ileri durur', asit 'yakıcı madde', sıcaklık ısı.", "E) Johnstone üçgeni makro-sembol-mikro düzeyler arası geçiş."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Laboratuvar türleri doğrulama, sorgulama, problem tabanlı.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Stokiyometri PCK için doğru bir açıklamadır?",
+    "options": ["A) Johnstone üçgeni makro-sembol-mikro düzeyler arası geçiş.", "B) Laboratuvar türleri doğrulama, sorgulama, problem tabanlı.", "C) Güvenlik kültürü risk ≠ tehlike; maruziyet yönetimi.", "D) Stokiyometri PCK mol köprüsü, sınırlayıcı, oran-orantı yanılgısı.", "E) Yanılgılar: bağ elektron paylaşımı 'yüzde 50 iyonik değilse kovalent mutlak', denge 'ileri durur', asit 'yakıcı madde', sıcaklık ısı."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Sosyo-bilimsel hakkında hangisi doğrudur?",
+    "options": ["A) Sosyo-bilimsel iklim, plastik, aşı koruyucuları: kanıt+değer.", "B) Yanılgılar: bağ elektron paylaşımı 'yüzde 50 iyonik değilse kovalent mutlak', denge 'ileri durur', asit 'yakıcı madde', sıcaklık ısı.", "C) Johnstone üçgeni makro-sembol-mikro düzeyler arası geçiş.", "D) Laboratuvar türleri doğrulama, sorgulama, problem tabanlı.", "E) Güvenlik kültürü risk ≠ tehlike; maruziyet yönetimi."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Kavramsal test hangisini ifade eder?",
+    "options": ["A) Güvenlik kültürü risk ≠ tehlike; maruziyet yönetimi.", "B) Kavramsal test çeldirici yanılgıdan; hesap ayrı ölçülür.", "C) Yanılgılar: bağ elektron paylaşımı 'yüzde 50 iyonik değilse kovalent mutlak', denge 'ileri durur', asit 'yakıcı madde', sıcaklık ısı.", "D) Johnstone üçgeni makro-sembol-mikro düzeyler arası geçiş.", "E) Laboratuvar türleri doğrulama, sorgulama, problem tabanlı."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Güvenlik kültürü risk ≠ tehlike; maruziyet yönetimi.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Model Dalton-Bohr-orbital; modelin sınırı öğretilir.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Kimya Dersi Öğretim Programı beceri, bağlam (günlük yaşam, STS).", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) POGIL, 5E, argümantasyon veri-iddia-gerekçe.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Çoklu temsil denklem, tanecik çizimi, grafik.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Stokiyometri PCK mol köprüsü, sınırlayıcı, oran-orantı yanılgısı.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Sosyo-bilimsel iklim, plastik, aşı koruyucuları: kanıt+değer.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kavramsal test çeldirici yanılgıdan; hesap ayrı ölçülür.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 }
 ];

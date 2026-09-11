@@ -55,69 +55,69 @@ window.oabt_sosyal_10_sorulari = [
     "explanation": "Zaman baskısı etik gerilim."
 },
 {
-    "question": "Arkeoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Arkeoloji maddi kalıntılarla geçmiş toplumları inceler; tarih yazısı olmasa da.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Arkeoloji için doğru bir açıklamadır?",
+    "options": ["A) Tarihlendirme göreli (tipoloji, tabaka) ve mutlak (C14, dendrokronoloji).", "B) Yerleşim ve höyük Anadolu; yüzey araştırması.", "C) Etik kaçak kazı, koleksiyon, yerli hakları, UNESCO.", "D) Arkeoloji maddi kalıntılarla geçmiş toplumları inceler; tarih yazısı olmasa da.", "E) Tabakalanma süperpozisyon; bağlam (context) nesneden önemlidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Arkeoloji notundaki temel bilgi."
 },
 {
-    "question": "Arkeoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Tabakalanma süperpozisyon; bağlam (context) nesneden önemlidir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Tabakalanma hakkında hangisi doğrudur?",
+    "options": ["A) Arkeoloji maddi kalıntılarla geçmiş toplumları inceler; tarih yazısı olmasa da.", "B) Tarihlendirme göreli (tipoloji, tabaka) ve mutlak (C14, dendrokronoloji).", "C) Yerleşim ve höyük Anadolu; yüzey araştırması.", "D) Etik kaçak kazı, koleksiyon, yerli hakları, UNESCO.", "E) Tabakalanma süperpozisyon; bağlam (context) nesneden önemlidir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Arkeoloji notundaki temel bilgi."
 },
 {
-    "question": "Arkeoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Tarihlendirme göreli (tipoloji, tabaka) ve mutlak (C14, dendrokronoloji).", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Tarihlendirme hangisini ifade eder?",
+    "options": ["A) Arkeoloji maddi kalıntılarla geçmiş toplumları inceler; tarih yazısı olmasa da.", "B) Tabakalanma süperpozisyon; bağlam (context) nesneden önemlidir.", "C) Yerleşim ve höyük Anadolu; yüzey araştırması.", "D) Etik kaçak kazı, koleksiyon, yerli hakları, UNESCO.", "E) Tarihlendirme göreli (tipoloji, tabaka) ve mutlak (C14, dendrokronoloji)."],
+    "correctAnswerIndex": 4,
+    "explanation": "Arkeoloji notundaki temel bilgi."
 },
 {
-    "question": "Arkeoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Yerleşim ve höyük Anadolu; yüzey araştırması.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Yerleşim ve höyük ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Arkeoloji maddi kalıntılarla geçmiş toplumları inceler; tarih yazısı olmasa da.", "B) Tabakalanma süperpozisyon; bağlam (context) nesneden önemlidir.", "C) Tarihlendirme göreli (tipoloji, tabaka) ve mutlak (C14, dendrokronoloji).", "D) Etik kaçak kazı, koleksiyon, yerli hakları, UNESCO.", "E) Yerleşim ve höyük Anadolu; yüzey araştırması."],
+    "correctAnswerIndex": 4,
+    "explanation": "Arkeoloji notundaki temel bilgi."
 },
 {
-    "question": "Arkeoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Etik kaçak kazı, koleksiyon, yerli hakları, UNESCO.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Etik için doğru bir açıklamadır?",
+    "options": ["A) Arkeoloji maddi kalıntılarla geçmiş toplumları inceler; tarih yazısı olmasa da.", "B) Tabakalanma süperpozisyon; bağlam (context) nesneden önemlidir.", "C) Tarihlendirme göreli (tipoloji, tabaka) ve mutlak (C14, dendrokronoloji).", "D) Yerleşim ve höyük Anadolu; yüzey araştırması.", "E) Etik kaçak kazı, koleksiyon, yerli hakları, UNESCO."],
+    "correctAnswerIndex": 4,
+    "explanation": "Arkeoloji notundaki temel bilgi."
 },
 {
-    "question": "Arkeoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Neolitik Göbeklitepe-Çatalhöyük tarım ve tapınak tartışması.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Neolitik hakkında hangisi doğrudur?",
+    "options": ["A) Arkeoloji maddi kalıntılarla geçmiş toplumları inceler; tarih yazısı olmasa da.", "B) Tabakalanma süperpozisyon; bağlam (context) nesneden önemlidir.", "C) Tarihlendirme göreli (tipoloji, tabaka) ve mutlak (C14, dendrokronoloji).", "D) Yerleşim ve höyük Anadolu; yüzey araştırması.", "E) Neolitik Göbeklitepe-Çatalhöyük tarım ve tapınak tartışması."],
+    "correctAnswerIndex": 4,
+    "explanation": "Arkeoloji notundaki temel bilgi."
 },
 {
-    "question": "Arkeoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Tunç-demir Hitit, Troya, Frig, Urartu, İyon.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Tunç-demir hangisini ifade eder?",
+    "options": ["A) Tunç-demir Hitit, Troya, Frig, Urartu, İyon.", "B) Arkeoloji maddi kalıntılarla geçmiş toplumları inceler; tarih yazısı olmasa da.", "C) Tabakalanma süperpozisyon; bağlam (context) nesneden önemlidir.", "D) Tarihlendirme göreli (tipoloji, tabaka) ve mutlak (C14, dendrokronoloji).", "E) Yerleşim ve höyük Anadolu; yüzey araştırması."],
+    "correctAnswerIndex": 0,
+    "explanation": "Arkeoloji notundaki temel bilgi."
 },
 {
-    "question": "Arkeoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Klasik-Bizans-Selçuk-Osmanlı katmanlı kentler.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Klasik-Bizans-Selçuk-Osmanlı ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Tabakalanma süperpozisyon; bağlam (context) nesneden önemlidir.", "B) Tarihlendirme göreli (tipoloji, tabaka) ve mutlak (C14, dendrokronoloji).", "C) Yerleşim ve höyük Anadolu; yüzey araştırması.", "D) Klasik-Bizans-Selçuk-Osmanlı katmanlı kentler.", "E) Arkeoloji maddi kalıntılarla geçmiş toplumları inceler; tarih yazısı olmasa da."],
+    "correctAnswerIndex": 3,
+    "explanation": "Arkeoloji notundaki temel bilgi."
 },
 {
-    "question": "Arkeoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Yazısız toplumlarda arkeoloji tek ses olabilir; yorum ihtiyatı.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Yazısız toplumlarda için doğru bir açıklamadır?",
+    "options": ["A) Yazısız toplumlarda arkeoloji tek ses olabilir; yorum ihtiyatı.", "B) Arkeoloji maddi kalıntılarla geçmiş toplumları inceler; tarih yazısı olmasa da.", "C) Tabakalanma süperpozisyon; bağlam (context) nesneden önemlidir.", "D) Tarihlendirme göreli (tipoloji, tabaka) ve mutlak (C14, dendrokronoloji).", "E) Yerleşim ve höyük Anadolu; yüzey araştırması."],
+    "correctAnswerIndex": 0,
+    "explanation": "Arkeoloji notundaki temel bilgi."
 },
 {
-    "question": "Arkeoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Deniz ve ticaret amphora, liman, gemi batığı.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Deniz ve ticaret hakkında hangisi doğrudur?",
+    "options": ["A) Tabakalanma süperpozisyon; bağlam (context) nesneden önemlidir.", "B) Tarihlendirme göreli (tipoloji, tabaka) ve mutlak (C14, dendrokronoloji).", "C) Yerleşim ve höyük Anadolu; yüzey araştırması.", "D) Deniz ve ticaret amphora, liman, gemi batığı.", "E) Arkeoloji maddi kalıntılarla geçmiş toplumları inceler; tarih yazısı olmasa da."],
+    "correctAnswerIndex": 3,
+    "explanation": "Arkeoloji notundaki temel bilgi."
 },
 {
-    "question": "Arkeoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kazı tekniği grid, açma, kayıt, konservasyon.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Kazı tekniği hangisini ifade eder?",
+    "options": ["A) Arkeoloji maddi kalıntılarla geçmiş toplumları inceler; tarih yazısı olmasa da.", "B) Tabakalanma süperpozisyon; bağlam (context) nesneden önemlidir.", "C) Tarihlendirme göreli (tipoloji, tabaka) ve mutlak (C14, dendrokronoloji).", "D) Yerleşim ve höyük Anadolu; yüzey araştırması.", "E) Kazı tekniği grid, açma, kayıt, konservasyon."],
+    "correctAnswerIndex": 4,
+    "explanation": "Arkeoloji notundaki temel bilgi."
 }
 ];

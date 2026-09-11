@@ -67,57 +67,57 @@ window.ags_sayisal_3_sorulari = [
     "explanation": "Uç değer sınanır."
 },
 {
-    "question": "Mantıksal Muhakeme Problemleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Sayı dizileri aritmetik (ortak fark), geometrik (ortak çarpan) veya kare-küp örüntüsü kura", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Sayı dizileri için doğru bir açıklamadır?",
+    "options": ["A) İşlem-sembol sorularında yeni işlem tanımı verilir; tanıma uyulur, alışılmış işlem dayatılmaz.", "B) Kâğıt katlama-delme simetri; delik sayısı kat izine göre çoğalır.", "C) Küp açınımı karşılıklı yüzler açınımda bitişik olamaz; kenar eşleşmesi kontrol edilir.", "D) Sayı dizileri aritmetik (ortak fark), geometrik (ortak çarpan) veya kare-küp örüntüsü kurabilir.", "E) Şekil dizileri dönme, yansıma, ekleme-çıkarma ve renk/kod değişimi ile ilerler."],
+    "correctAnswerIndex": 3,
+    "explanation": "Mantıksal Muhakeme Problemleri notundaki temel bilgi."
 },
 {
-    "question": "Mantıksal Muhakeme Problemleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Şekil dizileri dönme, yansıma, ekleme-çıkarma ve renk/kod değişimi ile ilerler.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Şekil dizileri hakkında hangisi doğrudur?",
+    "options": ["A) Kâğıt katlama-delme simetri; delik sayısı kat izine göre çoğalır.", "B) Küp açınımı karşılıklı yüzler açınımda bitişik olamaz; kenar eşleşmesi kontrol edilir.", "C) Şekil dizileri dönme, yansıma, ekleme-çıkarma ve renk/kod değişimi ile ilerler.", "D) Sayı dizileri aritmetik (ortak fark), geometrik (ortak çarpan) veya kare-küp örüntüsü kurabilir.", "E) İşlem-sembol sorularında yeni işlem tanımı verilir; tanıma uyulur, alışılmış işlem dayatılmaz."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Mantıksal Muhakeme Problemleri notundaki temel bilgi."
 },
 {
-    "question": "Mantıksal Muhakeme Problemleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) İşlem-sembol sorularında yeni işlem tanımı verilir; tanıma uyulur, alışılmış işlem dayatıl", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "İşlem-sembol hangisini ifade eder?",
+    "options": ["A) Küp açınımı karşılıklı yüzler açınımda bitişik olamaz; kenar eşleşmesi kontrol edilir.", "B) İşlem-sembol sorularında yeni işlem tanımı verilir; tanıma uyulur, alışılmış işlem dayatılmaz.", "C) Sayı dizileri aritmetik (ortak fark), geometrik (ortak çarpan) veya kare-küp örüntüsü kurabilir.", "D) Şekil dizileri dönme, yansıma, ekleme-çıkarma ve renk/kod değişimi ile ilerler.", "E) Kâğıt katlama-delme simetri; delik sayısı kat izine göre çoğalır."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Mantıksal Muhakeme Problemleri notundaki temel bilgi."
 },
 {
-    "question": "Mantıksal Muhakeme Problemleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Kâğıt katlama-delme simetri; delik sayısı kat izine göre çoğalır.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Kâğıt katlama-delme ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Sayı dizileri aritmetik (ortak fark), geometrik (ortak çarpan) veya kare-küp örüntüsü kurabilir.", "B) Şekil dizileri dönme, yansıma, ekleme-çıkarma ve renk/kod değişimi ile ilerler.", "C) İşlem-sembol sorularında yeni işlem tanımı verilir; tanıma uyulur, alışılmış işlem dayatılmaz.", "D) Küp açınımı karşılıklı yüzler açınımda bitişik olamaz; kenar eşleşmesi kontrol edilir.", "E) Kâğıt katlama-delme simetri; delik sayısı kat izine göre çoğalır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Mantıksal Muhakeme Problemleri notundaki temel bilgi."
 },
 {
-    "question": "Mantıksal Muhakeme Problemleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Küp açınımı karşılıklı yüzler açınımda bitişik olamaz; kenar eşleşmesi kontrol edilir.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Küp açınımı için doğru bir açıklamadır?",
+    "options": ["A) Şekil dizileri dönme, yansıma, ekleme-çıkarma ve renk/kod değişimi ile ilerler.", "B) İşlem-sembol sorularında yeni işlem tanımı verilir; tanıma uyulur, alışılmış işlem dayatılmaz.", "C) Kâğıt katlama-delme simetri; delik sayısı kat izine göre çoğalır.", "D) Küp açınımı karşılıklı yüzler açınımda bitişik olamaz; kenar eşleşmesi kontrol edilir.", "E) Sayı dizileri aritmetik (ortak fark), geometrik (ortak çarpan) veya kare-küp örüntüsü kurabilir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Mantıksal Muhakeme Problemleri notundaki temel bilgi."
+},
+{
+    "question": "Tartı ve denge hakkında hangisi doğrudur?",
+    "options": ["A) Kâğıt katlama-delme simetri; delik sayısı kat izine göre çoğalır.", "B) Tartı ve denge eşit kollarda eşit ağırlık; bilinmeyeni denklemleştirir.", "C) Sayı dizileri aritmetik (ortak fark), geometrik (ortak çarpan) veya kare-küp örüntüsü kurabilir.", "D) Şekil dizileri dönme, yansıma, ekleme-çıkarma ve renk/kod değişimi ile ilerler.", "E) İşlem-sembol sorularında yeni işlem tanımı verilir; tanıma uyulur, alışılmış işlem dayatılmaz."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Mantıksal Muhakeme Problemleri notundaki temel bilgi."
 },
 {
-    "question": "Mantıksal Muhakeme Problemleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Tartı ve denge eşit kollarda eşit ağırlık; bilinmeyeni denklemleştirir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Yol-hız çizelgesi hangisini ifade eder?",
+    "options": ["A) Sayı dizileri aritmetik (ortak fark), geometrik (ortak çarpan) veya kare-küp örüntüsü kurabilir.", "B) Şekil dizileri dönme, yansıma, ekleme-çıkarma ve renk/kod değişimi ile ilerler.", "C) İşlem-sembol sorularında yeni işlem tanımı verilir; tanıma uyulur, alışılmış işlem dayatılmaz.", "D) Kâğıt katlama-delme simetri; delik sayısı kat izine göre çoğalır.", "E) Yol-hız çizelgesi birim zamanda konum; karşılaşmalar toplam yol."],
+    "correctAnswerIndex": 4,
+    "explanation": "Mantıksal Muhakeme Problemleri notundaki temel bilgi."
 },
 {
-    "question": "Mantıksal Muhakeme Problemleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Yol-hız çizelgesi birim zamanda konum; karşılaşmalar toplam yol.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Takvim-saat ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Takvim-saat 7 ve 24 modüler aritmetik; artıklı yıl 4 yılda bir (yüz yıllar 400 kuralı).", "B) Sayı dizileri aritmetik (ortak fark), geometrik (ortak çarpan) veya kare-küp örüntüsü kurabilir.", "C) Şekil dizileri dönme, yansıma, ekleme-çıkarma ve renk/kod değişimi ile ilerler.", "D) İşlem-sembol sorularında yeni işlem tanımı verilir; tanıma uyulur, alışılmış işlem dayatılmaz.", "E) Kâğıt katlama-delme simetri; delik sayısı kat izine göre çoğalır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Mantıksal Muhakeme Problemleri notundaki temel bilgi."
 },
 {
-    "question": "Mantıksal Muhakeme Problemleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Takvim-saat 7 ve 24 modüler aritmetik; artıklı yıl 4 yılda bir (yüz yıllar 400 kuralı).", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Mantıksal Muhakeme Problemleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kodlama harf-sayı kaydırma; alfabede sıra ve ters sıra.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Kodlama için doğru bir açıklamadır?",
+    "options": ["A) Sayı dizileri aritmetik (ortak fark), geometrik (ortak çarpan) veya kare-küp örüntüsü kurabilir.", "B) Şekil dizileri dönme, yansıma, ekleme-çıkarma ve renk/kod değişimi ile ilerler.", "C) İşlem-sembol sorularında yeni işlem tanımı verilir; tanıma uyulur, alışılmış işlem dayatılmaz.", "D) Kâğıt katlama-delme simetri; delik sayısı kat izine göre çoğalır.", "E) Kodlama harf-sayı kaydırma; alfabede sıra ve ters sıra."],
+    "correctAnswerIndex": 4,
+    "explanation": "Mantıksal Muhakeme Problemleri notundaki temel bilgi."
 }
 ];

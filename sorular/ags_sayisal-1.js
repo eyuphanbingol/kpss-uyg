@@ -67,57 +67,57 @@ window.ags_sayisal_1_sorulari = [
     "explanation": "Fark sabit, oran zamanla değişir."
 },
 {
-    "question": "Temel Matematik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Yüzde, bir niceliğin 100 üzerinden payıdır; yüzde r artışı çarpanı (1+r/100) ile bulunur."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Yüzde için doğru bir açıklamadır?",
+    "options": ["A) Doğru orantı biri artınca diğeri artar; ters orantı biri artınca diğeri azalır (iş-işçi-süre).", "B) Üslü sayı: a^m . a^n = a^(m+n); (a^m)^n = a^(mn); a^0 = 1 (a ≠ 0).", "C) Yüzde, bir niceliğin 100 üzerinden payıdır; yüzde r artışı çarpanı (1+r/100) ile bulunur.", "D) Oran, iki çokluğun bölümüdür; orantı iki oranın eşitliğidir (içler-dışlar çarpımı).", "E) Kesir, pay/payda; bileşik kesir pay paydaya eşit veya büyük, basit kesir pay küçük."],
+    "correctAnswerIndex": 2,
+    "explanation": "Temel Matematik notundaki temel bilgi."
 },
 {
-    "question": "Temel Matematik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Oran, iki çokluğun bölümüdür; orantı iki oranın eşitliğidir (içler-dışlar çarpımı).", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Oran hakkında hangisi doğrudur?",
+    "options": ["A) Oran, iki çokluğun bölümüdür; orantı iki oranın eşitliğidir (içler-dışlar çarpımı).", "B) Yüzde, bir niceliğin 100 üzerinden payıdır; yüzde r artışı çarpanı (1+r/100) ile bulunur.", "C) Kesir, pay/payda; bileşik kesir pay paydaya eşit veya büyük, basit kesir pay küçük.", "D) Üslü sayı: a^m . a^n = a^(m+n); (a^m)^n = a^(mn); a^0 = 1 (a ≠ 0).", "E) Negatif üs 1/a^n karşılığıdır; köklü ifade a^(1/n) ile üslüye döner."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Temel Matematik notundaki temel bilgi."
 },
 {
-    "question": "Temel Matematik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Kesir, pay/payda; bileşik kesir pay paydaya eşit veya büyük, basit kesir pay küçük."],
+    "question": "Kesir hangisini ifade eder?",
+    "options": ["A) Karışım ve faiz yüzde ve oran problemlerinin uygulama alanıdır; basit faiz Anapara x oran x süre.", "B) Kesir, pay/payda; bileşik kesir pay paydaya eşit veya büyük, basit kesir pay küçük.", "C) Yüzde, bir niceliğin 100 üzerinden payıdır; yüzde r artışı çarpanı (1+r/100) ile bulunur.", "D) Oran, iki çokluğun bölümüdür; orantı iki oranın eşitliğidir (içler-dışlar çarpımı).", "E) Doğru orantı biri artınca diğeri artar; ters orantı biri artınca diğeri azalır (iş-işçi-süre)."],
+    "correctAnswerIndex": 1,
+    "explanation": "Temel Matematik notundaki temel bilgi."
+},
+{
+    "question": "Doğru orantı ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Oran, iki çokluğun bölümüdür; orantı iki oranın eşitliğidir (içler-dışlar çarpımı).", "B) Kesir, pay/payda; bileşik kesir pay paydaya eşit veya büyük, basit kesir pay küçük.", "C) Karışım ve faiz yüzde ve oran problemlerinin uygulama alanıdır; basit faiz Anapara x oran x süre.", "D) Doğru orantı biri artınca diğeri artar; ters orantı biri artınca diğeri azalır (iş-işçi-süre).", "E) Yüzde, bir niceliğin 100 üzerinden payıdır; yüzde r artışı çarpanı (1+r/100) ile bulunur."],
+    "correctAnswerIndex": 3,
+    "explanation": "Temel Matematik notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Karışım ve faiz için doğru bir açıklamadır?",
+    "options": ["A) Doğru orantı biri artınca diğeri artar; ters orantı biri artınca diğeri azalır (iş-işçi-süre).", "B) Karışım ve faiz yüzde ve oran problemlerinin uygulama alanıdır; basit faiz Anapara x oran x süre.", "C) Yüzde, bir niceliğin 100 üzerinden payıdır; yüzde r artışı çarpanı (1+r/100) ile bulunur.", "D) Oran, iki çokluğun bölümüdür; orantı iki oranın eşitliğidir (içler-dışlar çarpımı).", "E) Kesir, pay/payda; bileşik kesir pay paydaya eşit veya büyük, basit kesir pay küçük."],
+    "correctAnswerIndex": 1,
+    "explanation": "Temel Matematik notundaki temel bilgi."
+},
+{
+    "question": "Birinci dereceden denklem ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Yüzde, bir niceliğin 100 üzerinden payıdır; yüzde r artışı çarpanı (1+r/100) ile bulunur.", "B) Oran, iki çokluğun bölümüdür; orantı iki oranın eşitliğidir (içler-dışlar çarpımı).", "C) Kesir, pay/payda; bileşik kesir pay paydaya eşit veya büyük, basit kesir pay küçük.", "D) Doğru orantı biri artınca diğeri artar; ters orantı biri artınca diğeri azalır (iş-işçi-süre).", "E) Birinci dereceden denklem ax+b=0 tek bilinmeyen; oran denklemi içler dışlar."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Temel Matematik notundaki temel bilgi."
 },
 {
-    "question": "Temel Matematik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Doğru orantı biri artınca diğeri artar; ters orantı biri artınca diğeri azalır (iş-işçi-sü", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Eşitsizlik için doğru bir açıklamadır?",
+    "options": ["A) Oran, iki çokluğun bölümüdür; orantı iki oranın eşitliğidir (içler-dışlar çarpımı).", "B) Kesir, pay/payda; bileşik kesir pay paydaya eşit veya büyük, basit kesir pay küçük.", "C) Doğru orantı biri artınca diğeri artar; ters orantı biri artınca diğeri azalır (iş-işçi-süre).", "D) Eşitsizlik çarpma/bölmede negatif sayı yön değiştirir.", "E) Yüzde, bir niceliğin 100 üzerinden payıdır; yüzde r artışı çarpanı (1+r/100) ile bulunur."],
+    "correctAnswerIndex": 3,
+    "explanation": "Temel Matematik notundaki temel bilgi."
+},
+{
+    "question": "Çarpanlara ayırma hakkında hangisi doğrudur?",
+    "options": ["A) Çarpanlara ayırma ortak çarpan, iki kare farkı, karesel trinom klasik yollardır.", "B) Yüzde, bir niceliğin 100 üzerinden payıdır; yüzde r artışı çarpanı (1+r/100) ile bulunur.", "C) Oran, iki çokluğun bölümüdür; orantı iki oranın eşitliğidir (içler-dışlar çarpımı).", "D) Kesir, pay/payda; bileşik kesir pay paydaya eşit veya büyük, basit kesir pay küçük.", "E) Doğru orantı biri artınca diğeri artar; ters orantı biri artınca diğeri azalır (iş-işçi-süre)."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Temel Matematik notundaki temel bilgi."
 },
 {
-    "question": "Temel Matematik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Karışım ve faiz yüzde ve oran problemlerinin uygulama alanıdır; basit faiz Anapara x oran "],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Temel Matematik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Üslü sayı: a^m . a^n = a^(m+n); (a^m)^n = a^(mn); a^0 = 1 (a ≠ 0).", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Temel Matematik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Negatif üs 1/a^n karşılığıdır; köklü ifade a^(1/n) ile üslüye döner."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Temel Matematik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Birinci dereceden denklem ax+b=0 tek bilinmeyen; oran denklemi içler dışlar.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Temel Matematik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Eşitsizlik çarpma/bölmede negatif sayı yön değiştirir."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "İşçi-havuz hangisini ifade eder?",
+    "options": ["A) Kesir, pay/payda; bileşik kesir pay paydaya eşit veya büyük, basit kesir pay küçük.", "B) Doğru orantı biri artınca diğeri artar; ters orantı biri artınca diğeri azalır (iş-işçi-süre).", "C) İşçi-havuz: birim zamanda iş; birlikte çalışma hızların toplamı, zıt yön farkıdır.", "D) Yüzde, bir niceliğin 100 üzerinden payıdır; yüzde r artışı çarpanı (1+r/100) ile bulunur.", "E) Oran, iki çokluğun bölümüdür; orantı iki oranın eşitliğidir (içler-dışlar çarpımı)."],
+    "correctAnswerIndex": 2,
+    "explanation": "Temel Matematik notundaki temel bilgi."
 }
 ];

@@ -61,63 +61,63 @@ window.oabt_cog_5_sorulari = [
     "explanation": "Çok ölçüt planlamada daha işlevseldir."
 },
 {
-    "question": "Bölgesel Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Bölge doğal, beşerî veya işlevsel ölçütle ayrılmış mekândır.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Bölge için doğru bir açıklamadır?",
+    "options": ["A) Latin Amerika eşitsizlik, mega kent, tarım ihracı ve hammaddeler.", "B) Sahraaltı Afrika genç nüfus, tarım, maden, altyapı açığı.", "C) Bölge doğal, beşerî veya işlevsel ölçütle ayrılmış mekândır.", "D) Avrupa sanayi-hizmet, yaşlanan nüfus, AB bütünleşmesi.", "E) Anglosakson Amerika yüksek gelir, göçmen ülke, tarım-enerji-teknoloji."],
+    "correctAnswerIndex": 2,
+    "explanation": "Bölgesel Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Bölgesel Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Avrupa sanayi-hizmet, yaşlanan nüfus, AB bütünleşmesi.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Avrupa hakkında hangisi doğrudur?",
+    "options": ["A) Latin Amerika eşitsizlik, mega kent, tarım ihracı ve hammaddeler.", "B) Sahraaltı Afrika genç nüfus, tarım, maden, altyapı açığı.", "C) Avrupa sanayi-hizmet, yaşlanan nüfus, AB bütünleşmesi.", "D) Bölge doğal, beşerî veya işlevsel ölçütle ayrılmış mekândır.", "E) Anglosakson Amerika yüksek gelir, göçmen ülke, tarım-enerji-teknoloji."],
+    "correctAnswerIndex": 2,
+    "explanation": "Bölgesel Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Anglosakson Amerika hangisini ifade eder?",
+    "options": ["A) Bölge doğal, beşerî veya işlevsel ölçütle ayrılmış mekândır.", "B) Avrupa sanayi-hizmet, yaşlanan nüfus, AB bütünleşmesi.", "C) Latin Amerika eşitsizlik, mega kent, tarım ihracı ve hammaddeler.", "D) Sahraaltı Afrika genç nüfus, tarım, maden, altyapı açığı.", "E) Anglosakson Amerika yüksek gelir, göçmen ülke, tarım-enerji-teknoloji."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Bölgesel Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Bölgesel Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Anglosakson Amerika yüksek gelir, göçmen ülke, tarım-enerji-teknoloji.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Latin Amerika ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Sahraaltı Afrika genç nüfus, tarım, maden, altyapı açığı.", "B) Latin Amerika eşitsizlik, mega kent, tarım ihracı ve hammaddeler.", "C) Bölge doğal, beşerî veya işlevsel ölçütle ayrılmış mekândır.", "D) Avrupa sanayi-hizmet, yaşlanan nüfus, AB bütünleşmesi.", "E) Anglosakson Amerika yüksek gelir, göçmen ülke, tarım-enerji-teknoloji."],
+    "correctAnswerIndex": 1,
+    "explanation": "Bölgesel Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Sahraaltı Afrika için doğru bir açıklamadır?",
+    "options": ["A) Avrupa sanayi-hizmet, yaşlanan nüfus, AB bütünleşmesi.", "B) Anglosakson Amerika yüksek gelir, göçmen ülke, tarım-enerji-teknoloji.", "C) Latin Amerika eşitsizlik, mega kent, tarım ihracı ve hammaddeler.", "D) Sahraaltı Afrika genç nüfus, tarım, maden, altyapı açığı.", "E) Bölge doğal, beşerî veya işlevsel ölçütle ayrılmış mekândır."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Bölgesel Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Bölgesel Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Latin Amerika eşitsizlik, mega kent, tarım ihracı ve hammaddeler.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Doğu Asya hakkında hangisi doğrudur?",
+    "options": ["A) Anglosakson Amerika yüksek gelir, göçmen ülke, tarım-enerji-teknoloji.", "B) Latin Amerika eşitsizlik, mega kent, tarım ihracı ve hammaddeler.", "C) Doğu Asya sanayi-ihracat, yüksek nüfus, teknoloji (Çin, Japonya, Kore).", "D) Bölge doğal, beşerî veya işlevsel ölçütle ayrılmış mekândır.", "E) Avrupa sanayi-hizmet, yaşlanan nüfus, AB bütünleşmesi."],
+    "correctAnswerIndex": 2,
+    "explanation": "Bölgesel Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Güney Asya hangisini ifade eder?",
+    "options": ["A) Latin Amerika eşitsizlik, mega kent, tarım ihracı ve hammaddeler.", "B) Güney Asya muson, tarım, genç nüfus, muson sel-kuraklık.", "C) Bölge doğal, beşerî veya işlevsel ölçütle ayrılmış mekândır.", "D) Avrupa sanayi-hizmet, yaşlanan nüfus, AB bütünleşmesi.", "E) Anglosakson Amerika yüksek gelir, göçmen ülke, tarım-enerji-teknoloji."],
+    "correctAnswerIndex": 1,
+    "explanation": "Bölgesel Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Güneydoğu Asya ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Güneydoğu Asya boğaz jeopolitiği, plantasyon, niceliksel büyüme.", "B) Bölge doğal, beşerî veya işlevsel ölçütle ayrılmış mekândır.", "C) Avrupa sanayi-hizmet, yaşlanan nüfus, AB bütünleşmesi.", "D) Anglosakson Amerika yüksek gelir, göçmen ülke, tarım-enerji-teknoloji.", "E) Latin Amerika eşitsizlik, mega kent, tarım ihracı ve hammaddeler."],
+    "correctAnswerIndex": 0,
+    "explanation": "Bölgesel Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Ortadoğu için doğru bir açıklamadır?",
+    "options": ["A) Ortadoğu petrol-doğalgaz, su stresi, çatışma ve kutsal mekânlar.", "B) Bölge doğal, beşerî veya işlevsel ölçütle ayrılmış mekândır.", "C) Avrupa sanayi-hizmet, yaşlanan nüfus, AB bütünleşmesi.", "D) Anglosakson Amerika yüksek gelir, göçmen ülke, tarım-enerji-teknoloji.", "E) Latin Amerika eşitsizlik, mega kent, tarım ihracı ve hammaddeler."],
+    "correctAnswerIndex": 0,
+    "explanation": "Bölgesel Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Orta Asya hakkında hangisi doğrudur?",
+    "options": ["A) Bölge doğal, beşerî veya işlevsel ölçütle ayrılmış mekândır.", "B) Avrupa sanayi-hizmet, yaşlanan nüfus, AB bütünleşmesi.", "C) Anglosakson Amerika yüksek gelir, göçmen ülke, tarım-enerji-teknoloji.", "D) Latin Amerika eşitsizlik, mega kent, tarım ihracı ve hammaddeler.", "E) Orta Asya kapalı havza, boru hattı, step ve geçiş ekonomisi."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Bölgesel Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Sahraaltı Afrika genç nüfus, tarım, maden, altyapı açığı.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Bölgesel Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Doğu Asya sanayi-ihracat, yüksek nüfus, teknoloji (Çin, Japonya, Kore).", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Bölgesel Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Güney Asya muson, tarım, genç nüfus, muson sel-kuraklık.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Bölgesel Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Güneydoğu Asya boğaz jeopolitiği, plantasyon, niceliksel büyüme.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Bölgesel Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Ortadoğu petrol-doğalgaz, su stresi, çatışma ve kutsal mekânlar.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Bölgesel Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Orta Asya kapalı havza, boru hattı, step ve geçiş ekonomisi.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Bölgesel Coğrafya notundaki temel bilgi."
 }
 ];

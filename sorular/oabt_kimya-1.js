@@ -55,69 +55,69 @@ window.oabt_kimya_1_sorulari = [
     "explanation": "Ayrıca çokrenkli ışık, saçılma."
 },
 {
-    "question": "Analitik Kimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Analitik derişim ile denge derişimi ayrıdır; zayıf asitte [H+]≈√(Ka c).", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Analitik derişim için doğru bir açıklamadır?",
+    "options": ["A) pH metre Nernst; kalibrasyon tamponları, alkali hata.", "B) Analitik derişim ile denge derişimi ayrıdır; zayıf asitte [H+]≈√(Ka c).", "C) Sistematik denge kütle ve yük denkliği; tampon Henderson-Hasselbalch.", "D) Ksp çözünürlük çarpımı; ortak iyon ve kompleksleşme çözünürlüğü zıt etkiler.", "E) Aktivite a=γc; yüksek iyon şiddetinde derişim dengeyi sapıtır."],
+    "correctAnswerIndex": 1,
+    "explanation": "Analitik Kimya notundaki temel bilgi."
 },
 {
-    "question": "Analitik Kimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Sistematik denge kütle ve yük denkliği; tampon Henderson-Hasselbalch."],
+    "question": "Sistematik denge hakkında hangisi doğrudur?",
+    "options": ["A) Analitik derişim ile denge derişimi ayrıdır; zayıf asitte [H+]≈√(Ka c).", "B) Ksp çözünürlük çarpımı; ortak iyon ve kompleksleşme çözünürlüğü zıt etkiler.", "C) Aktivite a=γc; yüksek iyon şiddetinde derişim dengeyi sapıtır.", "D) pH metre Nernst; kalibrasyon tamponları, alkali hata.", "E) Sistematik denge kütle ve yük denkliği; tampon Henderson-Hasselbalch."],
+    "correctAnswerIndex": 4,
+    "explanation": "Analitik Kimya notundaki temel bilgi."
+},
+{
+    "question": "Ksp hangisini ifade eder?",
+    "options": ["A) Analitik derişim ile denge derişimi ayrıdır; zayıf asitte [H+]≈√(Ka c).", "B) Sistematik denge kütle ve yük denkliği; tampon Henderson-Hasselbalch.", "C) Aktivite a=γc; yüksek iyon şiddetinde derişim dengeyi sapıtır.", "D) pH metre Nernst; kalibrasyon tamponları, alkali hata.", "E) Ksp çözünürlük çarpımı; ortak iyon ve kompleksleşme çözünürlüğü zıt etkiler."],
+    "correctAnswerIndex": 4,
+    "explanation": "Analitik Kimya notundaki temel bilgi."
+},
+{
+    "question": "Aktivite ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Ksp çözünürlük çarpımı; ortak iyon ve kompleksleşme çözünürlüğü zıt etkiler.", "B) pH metre Nernst; kalibrasyon tamponları, alkali hata.", "C) Aktivite a=γc; yüksek iyon şiddetinde derişim dengeyi sapıtır.", "D) Analitik derişim ile denge derişimi ayrıdır; zayıf asitte [H+]≈√(Ka c).", "E) Sistematik denge kütle ve yük denkliği; tampon Henderson-Hasselbalch."],
+    "correctAnswerIndex": 2,
+    "explanation": "Analitik Kimya notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi pH metre için doğru bir açıklamadır?",
+    "options": ["A) Analitik derişim ile denge derişimi ayrıdır; zayıf asitte [H+]≈√(Ka c).", "B) Sistematik denge kütle ve yük denkliği; tampon Henderson-Hasselbalch.", "C) Ksp çözünürlük çarpımı; ortak iyon ve kompleksleşme çözünürlüğü zıt etkiler.", "D) Aktivite a=γc; yüksek iyon şiddetinde derişim dengeyi sapıtır.", "E) pH metre Nernst; kalibrasyon tamponları, alkali hata."],
+    "correctAnswerIndex": 4,
+    "explanation": "Analitik Kimya notundaki temel bilgi."
+},
+{
+    "question": "Volumetri hakkında hangisi doğrudur?",
+    "options": ["A) Sistematik denge kütle ve yük denkliği; tampon Henderson-Hasselbalch.", "B) Ksp çözünürlük çarpımı; ortak iyon ve kompleksleşme çözünürlüğü zıt etkiler.", "C) Aktivite a=γc; yüksek iyon şiddetinde derişim dengeyi sapıtır.", "D) Volumetri asit-baz, redoks, kompleksometri (EDTA), çöktürme; dönüm noktası-indikatör.", "E) Analitik derişim ile denge derişimi ayrıdır; zayıf asitte [H+]≈√(Ka c)."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Analitik Kimya notundaki temel bilgi."
 },
 {
-    "question": "Analitik Kimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Ksp çözünürlük çarpımı; ortak iyon ve kompleksleşme çözünürlüğü zıt etkiler.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Gravimetri hangisini ifade eder?",
+    "options": ["A) Aktivite a=γc; yüksek iyon şiddetinde derişim dengeyi sapıtır.", "B) Gravimetri stokiyometrik çökelek, kirlenme (ortak çökelme).", "C) Analitik derişim ile denge derişimi ayrıdır; zayıf asitte [H+]≈√(Ka c).", "D) Sistematik denge kütle ve yük denkliği; tampon Henderson-Hasselbalch.", "E) Ksp çözünürlük çarpımı; ortak iyon ve kompleksleşme çözünürlüğü zıt etkiler."],
+    "correctAnswerIndex": 1,
+    "explanation": "Analitik Kimya notundaki temel bilgi."
+},
+{
+    "question": "Spektroskopi ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Aktivite a=γc; yüksek iyon şiddetinde derişim dengeyi sapıtır.", "B) Spektroskopi A=εbc Lambert-Beer; sapma yüksek derişim, dağılma.", "C) Analitik derişim ile denge derişimi ayrıdır; zayıf asitte [H+]≈√(Ka c).", "D) Sistematik denge kütle ve yük denkliği; tampon Henderson-Hasselbalch.", "E) Ksp çözünürlük çarpımı; ortak iyon ve kompleksleşme çözünürlüğü zıt etkiler."],
+    "correctAnswerIndex": 1,
+    "explanation": "Analitik Kimya notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Kromatografi için doğru bir açıklamadır?",
+    "options": ["A) Ksp çözünürlük çarpımı; ortak iyon ve kompleksleşme çözünürlüğü zıt etkiler.", "B) Aktivite a=γc; yüksek iyon şiddetinde derişim dengeyi sapıtır.", "C) Kromatografi dağılım, alıkonma, çözünürlük; HPLC, GC seçicilik.", "D) Analitik derişim ile denge derişimi ayrıdır; zayıf asitte [H+]≈√(Ka c).", "E) Sistematik denge kütle ve yük denkliği; tampon Henderson-Hasselbalch."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Analitik Kimya notundaki temel bilgi."
 },
 {
-    "question": "Analitik Kimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Aktivite a=γc; yüksek iyon şiddetinde derişim dengeyi sapıtır."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Elektroanalitik hakkında hangisi doğrudur?",
+    "options": ["A) Analitik derişim ile denge derişimi ayrıdır; zayıf asitte [H+]≈√(Ka c).", "B) Sistematik denge kütle ve yük denkliği; tampon Henderson-Hasselbalch.", "C) Ksp çözünürlük çarpımı; ortak iyon ve kompleksleşme çözünürlüğü zıt etkiler.", "D) Aktivite a=γc; yüksek iyon şiddetinde derişim dengeyi sapıtır.", "E) Elektroanalitik potansiyometri, voltametri, iletkenlik."],
+    "correctAnswerIndex": 4,
+    "explanation": "Analitik Kimya notundaki temel bilgi."
 },
 {
-    "question": "Analitik Kimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) pH metre Nernst; kalibrasyon tamponları, alkali hata.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Analitik Kimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Volumetri asit-baz, redoks, kompleksometri (EDTA), çöktürme; dönüm noktası-indikatör."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Analitik Kimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gravimetri stokiyometrik çökelek, kirlenme (ortak çökelme).", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Analitik Kimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Spektroskopi A=εbc Lambert-Beer; sapma yüksek derişim, dağılma."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Analitik Kimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Kromatografi dağılım, alıkonma, çözünürlük; HPLC, GC seçicilik.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Analitik Kimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Elektroanalitik potansiyometri, voltametri, iletkenlik."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Analitik Kimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Doğruluk-kesinlik sistematik-rastgele hata; standart sapma, güven aralığı.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Doğruluk-kesinlik hangisini ifade eder?",
+    "options": ["A) Analitik derişim ile denge derişimi ayrıdır; zayıf asitte [H+]≈√(Ka c).", "B) Sistematik denge kütle ve yük denkliği; tampon Henderson-Hasselbalch.", "C) Ksp çözünürlük çarpımı; ortak iyon ve kompleksleşme çözünürlüğü zıt etkiler.", "D) Aktivite a=γc; yüksek iyon şiddetinde derişim dengeyi sapıtır.", "E) Doğruluk-kesinlik sistematik-rastgele hata; standart sapma, güven aralığı."],
+    "correctAnswerIndex": 4,
+    "explanation": "Analitik Kimya notundaki temel bilgi."
 }
 ];

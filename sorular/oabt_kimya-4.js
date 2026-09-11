@@ -55,69 +55,69 @@ window.oabt_kimya_4_sorulari = [
     "explanation": "Elementary basamakta molekülerite=mertebe."
 },
 {
-    "question": "Fizikokimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) U, H, G, A hâl fonksiyonları; dG=V dP - S dT (kapalı, yalnız PV işi).", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi U, H, G, A için doğru bir açıklamadır?",
+    "options": ["A) U, H, G, A hâl fonksiyonları; dG=V dP - S dT (kapalı, yalnız PV işi).", "B) Spontanlık ΔG<0 (sabit T,P); ΔS_evren>0 evrensel.", "C) Kimyasal potansiyel μ=μ°+RT ln a; denge Σνμ=0 ⇒ K.", "D) Faz kuralı F=C-P+2; suyun üçlü noktası F=0.", "E) Kolligatif ΔTf=Kf m i; ozmotik π=cRT (ideal)."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Fizikokimya notundaki temel bilgi."
 },
 {
-    "question": "Fizikokimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Spontanlık ΔG<0 (sabit T,P); ΔS_evren>0 evrensel.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Kolligatif için doğru bir açıklamadır?",
+    "options": ["A) Faz kuralı F=C-P+2; suyun üçlü noktası F=0.", "B) Kolligatif ΔTf=Kf m i; ozmotik π=cRT (ideal).", "C) U, H, G, A hâl fonksiyonları; dG=V dP - S dT (kapalı, yalnız PV işi).", "D) Spontanlık ΔG<0 (sabit T,P); ΔS_evren>0 evrensel.", "E) Kimyasal potansiyel μ=μ°+RT ln a; denge Σνμ=0 ⇒ K."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Fizikokimya notundaki temel bilgi."
 },
 {
-    "question": "Fizikokimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Kimyasal potansiyel μ=μ°+RT ln a; denge Σνμ=0 ⇒ K.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Hız yasası hakkında hangisi doğrudur?",
+    "options": ["A) U, H, G, A hâl fonksiyonları; dG=V dP - S dT (kapalı, yalnız PV işi).", "B) Spontanlık ΔG<0 (sabit T,P); ΔS_evren>0 evrensel.", "C) Kimyasal potansiyel μ=μ°+RT ln a; denge Σνμ=0 ⇒ K.", "D) Faz kuralı F=C-P+2; suyun üçlü noktası F=0.", "E) Hız yasası mertebe deneysel; elementary molekülerite."],
+    "correctAnswerIndex": 4,
+    "explanation": "Fizikokimya notundaki temel bilgi."
 },
 {
-    "question": "Fizikokimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Faz kuralı F=C-P+2; suyun üçlü noktası F=0.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Arrhenius hangisini ifade eder?",
+    "options": ["A) Faz kuralı F=C-P+2; suyun üçlü noktası F=0.", "B) Arrhenius k=A e^{-Ea/RT}; Eyring geçiş hali.", "C) U, H, G, A hâl fonksiyonları; dG=V dP - S dT (kapalı, yalnız PV işi).", "D) Spontanlık ΔG<0 (sabit T,P); ΔS_evren>0 evrensel.", "E) Kimyasal potansiyel μ=μ°+RT ln a; denge Σνμ=0 ⇒ K."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Fizikokimya notundaki temel bilgi."
 },
 {
-    "question": "Fizikokimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Kolligatif ΔTf=Kf m i; ozmotik π=cRT (ideal).", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Mekanizma ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Mekanizma yavaş basamak, kararlı hal, denge yaklaşımları.", "B) U, H, G, A hâl fonksiyonları; dG=V dP - S dT (kapalı, yalnız PV işi).", "C) Spontanlık ΔG<0 (sabit T,P); ΔS_evren>0 evrensel.", "D) Kimyasal potansiyel μ=μ°+RT ln a; denge Σνμ=0 ⇒ K.", "E) Faz kuralı F=C-P+2; suyun üçlü noktası F=0."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Fizikokimya notundaki temel bilgi."
 },
 {
-    "question": "Fizikokimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Hız yasası mertebe deneysel; elementary molekülerite.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Kataliz için doğru bir açıklamadır?",
+    "options": ["A) Faz kuralı F=C-P+2; suyun üçlü noktası F=0.", "B) Kataliz homojen-heterojen, enzim MM kinetiği.", "C) U, H, G, A hâl fonksiyonları; dG=V dP - S dT (kapalı, yalnız PV işi).", "D) Spontanlık ΔG<0 (sabit T,P); ΔS_evren>0 evrensel.", "E) Kimyasal potansiyel μ=μ°+RT ln a; denge Σνμ=0 ⇒ K."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Fizikokimya notundaki temel bilgi."
 },
 {
-    "question": "Fizikokimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Arrhenius k=A e^{-Ea/RT}; Eyring geçiş hali.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Kuantum kimya hakkında hangisi doğrudur?",
+    "options": ["A) Spontanlık ΔG<0 (sabit T,P); ΔS_evren>0 evrensel.", "B) Kimyasal potansiyel μ=μ°+RT ln a; denge Σνμ=0 ⇒ K.", "C) Faz kuralı F=C-P+2; suyun üçlü noktası F=0.", "D) Kuantum kimya orbital, HF/DFT sezgisi; spektrum seçim kuralı.", "E) U, H, G, A hâl fonksiyonları; dG=V dP - S dT (kapalı, yalnız PV işi)."],
+    "correctAnswerIndex": 3,
+    "explanation": "Fizikokimya notundaki temel bilgi."
+},
+{
+    "question": "Le Chatelier nicel hangisini ifade eder?",
+    "options": ["A) U, H, G, A hâl fonksiyonları; dG=V dP - S dT (kapalı, yalnız PV işi).", "B) Spontanlık ΔG<0 (sabit T,P); ΔS_evren>0 evrensel.", "C) Kimyasal potansiyel μ=μ°+RT ln a; denge Σνμ=0 ⇒ K.", "D) Faz kuralı F=C-P+2; suyun üçlü noktası F=0.", "E) Le Chatelier nicel van't Hoff d lnK / dT = ΔH°/RT^2."],
+    "correctAnswerIndex": 4,
+    "explanation": "Fizikokimya notundaki temel bilgi."
+},
+{
+    "question": "Elektrokimya ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Elektrokimya ΔG°=-n F E°; Nernst.", "B) U, H, G, A hâl fonksiyonları; dG=V dP - S dT (kapalı, yalnız PV işi).", "C) Spontanlık ΔG<0 (sabit T,P); ΔS_evren>0 evrensel.", "D) Kimyasal potansiyel μ=μ°+RT ln a; denge Σνμ=0 ⇒ K.", "E) Faz kuralı F=C-P+2; suyun üçlü noktası F=0."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Fizikokimya notundaki temel bilgi."
 },
 {
-    "question": "Fizikokimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mekanizma yavaş basamak, kararlı hal, denge yaklaşımları.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi İletkenlik için doğru bir açıklamadır?",
+    "options": ["A) U, H, G, A hâl fonksiyonları; dG=V dP - S dT (kapalı, yalnız PV işi).", "B) Spontanlık ΔG<0 (sabit T,P); ΔS_evren>0 evrensel.", "C) Kimyasal potansiyel μ=μ°+RT ln a; denge Σνμ=0 ⇒ K.", "D) Faz kuralı F=C-P+2; suyun üçlü noktası F=0.", "E) İletkenlik Λ, Kohlrausch; iyon hareketliliği."],
+    "correctAnswerIndex": 4,
+    "explanation": "Fizikokimya notundaki temel bilgi."
 },
 {
-    "question": "Fizikokimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Kataliz homojen-heterojen, enzim MM kinetiği.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Yüzey hakkında hangisi doğrudur?",
+    "options": ["A) Yüzey adsorpsiyon Langmuir; kolloid DLVO sezgisi.", "B) U, H, G, A hâl fonksiyonları; dG=V dP - S dT (kapalı, yalnız PV işi).", "C) Spontanlık ΔG<0 (sabit T,P); ΔS_evren>0 evrensel.", "D) Kimyasal potansiyel μ=μ°+RT ln a; denge Σνμ=0 ⇒ K.", "E) Faz kuralı F=C-P+2; suyun üçlü noktası F=0."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Fizikokimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Kuantum kimya orbital, HF/DFT sezgisi; spektrum seçim kuralı.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Fizikokimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Le Chatelier nicel van't Hoff d lnK / dT = ΔH°/RT^2.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Fizikokimya notundaki temel bilgi."
 }
 ];

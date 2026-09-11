@@ -61,63 +61,63 @@ window.oabt_ozel_2_sorulari = [
     "explanation": "Değerlendirme etiği."
 },
 {
-    "question": "Öğrenme Güçlüğü ve Özel Yetenek konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Özgül öğrenme güçlüğü okuma, yazılı anlatım veya matematik alanında beklenmedik güçlük.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi Özgül öğrenme güçlüğü için doğru bir açıklamadır?",
+    "options": ["A) Özgül öğrenme güçlüğü okuma, yazılı anlatım veya matematik alanında beklenmedik güçlük.", "B) Zeka geriliği değildir; genel zihinsel yetersizlikten ayrılır.", "C) Disleksi, disgrafi, diskalkuli eğitim dilinde sık kullanılır; DSM-5 özgül öğrenme bozukluğu çatısı.", "D) Dışlama duyusal yetersizlik, yetersiz öğretim ve dil farkı tek başına OG açıklamaz.", "E) Müdahale sesbilgisel, çok duyulu, ek süre, sınav uyarlaması."],
+    "correctAnswerIndex": 0,
+    "explanation": "Öğrenme Güçlüğü ve Özel Yetenek notundaki temel bilgi."
+},
+{
+    "question": "Zeka geriliği değildir hakkında hangisi doğrudur?",
+    "options": ["A) Disleksi, disgrafi, diskalkuli eğitim dilinde sık kullanılır; DSM-5 özgül öğrenme bozukluğu çatısı.", "B) Dışlama duyusal yetersizlik, yetersiz öğretim ve dil farkı tek başına OG açıklamaz.", "C) Müdahale sesbilgisel, çok duyulu, ek süre, sınav uyarlaması.", "D) Zeka geriliği değildir; genel zihinsel yetersizlikten ayrılır.", "E) Özgül öğrenme güçlüğü okuma, yazılı anlatım veya matematik alanında beklenmedik güçlük."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Öğrenme Güçlüğü ve Özel Yetenek notundaki temel bilgi."
 },
 {
-    "question": "Öğrenme Güçlüğü ve Özel Yetenek konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zeka geriliği değildir; genel zihinsel yetersizlikten ayrılır.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Disleksi, disgrafi, diskalkuli hangisini ifade eder?",
+    "options": ["A) Disleksi, disgrafi, diskalkuli eğitim dilinde sık kullanılır; DSM-5 özgül öğrenme bozukluğu çatısı.", "B) Özgül öğrenme güçlüğü okuma, yazılı anlatım veya matematik alanında beklenmedik güçlük.", "C) Zeka geriliği değildir; genel zihinsel yetersizlikten ayrılır.", "D) Dışlama duyusal yetersizlik, yetersiz öğretim ve dil farkı tek başına OG açıklamaz.", "E) Müdahale sesbilgisel, çok duyulu, ek süre, sınav uyarlaması."],
+    "correctAnswerIndex": 0,
+    "explanation": "Öğrenme Güçlüğü ve Özel Yetenek notundaki temel bilgi."
+},
+{
+    "question": "Dışlama ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Dışlama duyusal yetersizlik, yetersiz öğretim ve dil farkı tek başına OG açıklamaz.", "B) Özgül öğrenme güçlüğü okuma, yazılı anlatım veya matematik alanında beklenmedik güçlük.", "C) Zeka geriliği değildir; genel zihinsel yetersizlikten ayrılır.", "D) Disleksi, disgrafi, diskalkuli eğitim dilinde sık kullanılır; DSM-5 özgül öğrenme bozukluğu çatısı.", "E) Müdahale sesbilgisel, çok duyulu, ek süre, sınav uyarlaması."],
+    "correctAnswerIndex": 0,
+    "explanation": "Öğrenme Güçlüğü ve Özel Yetenek notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Müdahale için doğru bir açıklamadır?",
+    "options": ["A) Müdahale sesbilgisel, çok duyulu, ek süre, sınav uyarlaması.", "B) Özgül öğrenme güçlüğü okuma, yazılı anlatım veya matematik alanında beklenmedik güçlük.", "C) Zeka geriliği değildir; genel zihinsel yetersizlikten ayrılır.", "D) Disleksi, disgrafi, diskalkuli eğitim dilinde sık kullanılır; DSM-5 özgül öğrenme bozukluğu çatısı.", "E) Dışlama duyusal yetersizlik, yetersiz öğretim ve dil farkı tek başına OG açıklamaz."],
+    "correctAnswerIndex": 0,
+    "explanation": "Öğrenme Güçlüğü ve Özel Yetenek notundaki temel bilgi."
+},
+{
+    "question": "Özel yetenek hakkında hangisi doğrudur?",
+    "options": ["A) Dışlama duyusal yetersizlik, yetersiz öğretim ve dil farkı tek başına OG açıklamaz.", "B) Özel yetenek zeka, yaratıcılık, sanat, liderlik, akademik hız gibi alanlarda yüksek performans.", "C) Özgül öğrenme güçlüğü okuma, yazılı anlatım veya matematik alanında beklenmedik güçlük.", "D) Zeka geriliği değildir; genel zihinsel yetersizlikten ayrılır.", "E) Disleksi, disgrafi, diskalkuli eğitim dilinde sık kullanılır; DSM-5 özgül öğrenme bozukluğu çatısı."],
+    "correctAnswerIndex": 1,
+    "explanation": "Öğrenme Güçlüğü ve Özel Yetenek notundaki temel bilgi."
+},
+{
+    "question": "Tanılama hangisini ifade eder?",
+    "options": ["A) Özgül öğrenme güçlüğü okuma, yazılı anlatım veya matematik alanında beklenmedik güçlük.", "B) Zeka geriliği değildir; genel zihinsel yetersizlikten ayrılır.", "C) Disleksi, disgrafi, diskalkuli eğitim dilinde sık kullanılır; DSM-5 özgül öğrenme bozukluğu çatısı.", "D) Dışlama duyusal yetersizlik, yetersiz öğretim ve dil farkı tek başına OG açıklamaz.", "E) Tanılama çok ölçütlü; tek IQ testi yetersizdir."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Öğrenme Güçlüğü ve Özel Yetenek notundaki temel bilgi."
 },
 {
-    "question": "Öğrenme Güçlüğü ve Özel Yetenek konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Disleksi, disgrafi, diskalkuli eğitim dilinde sık kullanılır; DSM-5 özgül öğrenme bozukluğ", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Hızlandırma, zenginleştirme, gruplama ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Dışlama duyusal yetersizlik, yetersiz öğretim ve dil farkı tek başına OG açıklamaz.", "B) Hızlandırma, zenginleştirme, gruplama eğitim seçenekleri.", "C) Özgül öğrenme güçlüğü okuma, yazılı anlatım veya matematik alanında beklenmedik güçlük.", "D) Zeka geriliği değildir; genel zihinsel yetersizlikten ayrılır.", "E) Disleksi, disgrafi, diskalkuli eğitim dilinde sık kullanılır; DSM-5 özgül öğrenme bozukluğu çatısı."],
+    "correctAnswerIndex": 1,
+    "explanation": "Öğrenme Güçlüğü ve Özel Yetenek notundaki temel bilgi."
 },
 {
-    "question": "Öğrenme Güçlüğü ve Özel Yetenek konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Dışlama duyusal yetersizlik, yetersiz öğretim ve dil farkı tek başına OG açıklamaz.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Duyuşsal için doğru bir açıklamadır?",
+    "options": ["A) Disleksi, disgrafi, diskalkuli eğitim dilinde sık kullanılır; DSM-5 özgül öğrenme bozukluğu çatısı.", "B) Dışlama duyusal yetersizlik, yetersiz öğretim ve dil farkı tek başına OG açıklamaz.", "C) Duyuşsal mükemmeliyetçilik, akran uyumu, gizleme.", "D) Özgül öğrenme güçlüğü okuma, yazılı anlatım veya matematik alanında beklenmedik güçlük.", "E) Zeka geriliği değildir; genel zihinsel yetersizlikten ayrılır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Öğrenme Güçlüğü ve Özel Yetenek notundaki temel bilgi."
 },
 {
-    "question": "Öğrenme Güçlüğü ve Özel Yetenek konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Müdahale sesbilgisel, çok duyulu, ek süre, sınav uyarlaması.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Öğrenme Güçlüğü ve Özel Yetenek konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Özel yetenek zeka, yaratıcılık, sanat, liderlik, akademik hız gibi alanlarda yüksek perfor", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Öğrenme Güçlüğü ve Özel Yetenek konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Tanılama çok ölçütlü; tek IQ testi yetersizdir.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Öğrenme Güçlüğü ve Özel Yetenek konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Hızlandırma, zenginleştirme, gruplama eğitim seçenekleri.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Öğrenme Güçlüğü ve Özel Yetenek konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Duyuşsal mükemmeliyetçilik, akran uyumu, gizleme.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Öğrenme Güçlüğü ve Özel Yetenek konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) BİLSEM Türkiye'de destek modelidir; tek yol değildir.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "BİLSEM hakkında hangisi doğrudur?",
+    "options": ["A) BİLSEM Türkiye'de destek modelidir; tek yol değildir.", "B) Özgül öğrenme güçlüğü okuma, yazılı anlatım veya matematik alanında beklenmedik güçlük.", "C) Zeka geriliği değildir; genel zihinsel yetersizlikten ayrılır.", "D) Disleksi, disgrafi, diskalkuli eğitim dilinde sık kullanılır; DSM-5 özgül öğrenme bozukluğu çatısı.", "E) Dışlama duyusal yetersizlik, yetersiz öğretim ve dil farkı tek başına OG açıklamaz."],
+    "correctAnswerIndex": 0,
+    "explanation": "Öğrenme Güçlüğü ve Özel Yetenek notundaki temel bilgi."
 }
 ];

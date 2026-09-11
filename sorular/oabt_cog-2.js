@@ -61,63 +61,63 @@ window.oabt_cog_2_sorulari = [
     "explanation": "Tarım terası, kutsal mekân, konut dokusu örnektir."
 },
 {
-    "question": "Beşerî Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Doğum, ölüm, göç nüfus değişiminin üç bileşenidir.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Doğum, ölüm, göç için doğru bir açıklamadır?",
+    "options": ["A) Artimetik ve fizyolojik yoğunluk farklı paydalar kullanır (alan / tarım alanı).", "B) Bağımlılık oranı çocuk ve yaşlıların aktif nüfusa oranıdır.", "C) Doğum, ölüm, göç nüfus değişiminin üç bileşenidir.", "D) Demografik geçiş yüksek doğum-ölümden düşük doğum-ölüme evrilmedir.", "E) Nüfus piramidi yaş-cinsiyet yapısını; geniş taban genç nüfusu gösterir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Beşerî Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Demografik geçiş hakkında hangisi doğrudur?",
+    "options": ["A) Demografik geçiş yüksek doğum-ölümden düşük doğum-ölüme evrilmedir.", "B) Doğum, ölüm, göç nüfus değişiminin üç bileşenidir.", "C) Nüfus piramidi yaş-cinsiyet yapısını; geniş taban genç nüfusu gösterir.", "D) Artimetik ve fizyolojik yoğunluk farklı paydalar kullanır (alan / tarım alanı).", "E) Bağımlılık oranı çocuk ve yaşlıların aktif nüfusa oranıdır."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Beşerî Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Beşerî Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Demografik geçiş yüksek doğum-ölümden düşük doğum-ölüme evrilmedir.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Nüfus piramidi hangisini ifade eder?",
+    "options": ["A) Demografik geçiş yüksek doğum-ölümden düşük doğum-ölüme evrilmedir.", "B) Artimetik ve fizyolojik yoğunluk farklı paydalar kullanır (alan / tarım alanı).", "C) Bağımlılık oranı çocuk ve yaşlıların aktif nüfusa oranıdır.", "D) Nüfus piramidi yaş-cinsiyet yapısını; geniş taban genç nüfusu gösterir.", "E) Doğum, ölüm, göç nüfus değişiminin üç bileşenidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Beşerî Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Artimetik ve fizyolojik yoğunluk ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Bağımlılık oranı çocuk ve yaşlıların aktif nüfusa oranıdır.", "B) Artimetik ve fizyolojik yoğunluk farklı paydalar kullanır (alan / tarım alanı).", "C) Doğum, ölüm, göç nüfus değişiminin üç bileşenidir.", "D) Demografik geçiş yüksek doğum-ölümden düşük doğum-ölüme evrilmedir.", "E) Nüfus piramidi yaş-cinsiyet yapısını; geniş taban genç nüfusu gösterir."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Beşerî Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Beşerî Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Nüfus piramidi yaş-cinsiyet yapısını; geniş taban genç nüfusu gösterir.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Bağımlılık oranı için doğru bir açıklamadır?",
+    "options": ["A) Bağımlılık oranı çocuk ve yaşlıların aktif nüfusa oranıdır.", "B) Doğum, ölüm, göç nüfus değişiminin üç bileşenidir.", "C) Demografik geçiş yüksek doğum-ölümden düşük doğum-ölüme evrilmedir.", "D) Nüfus piramidi yaş-cinsiyet yapısını; geniş taban genç nüfusu gösterir.", "E) Artimetik ve fizyolojik yoğunluk farklı paydalar kullanır (alan / tarım alanı)."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Beşerî Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Beşerî Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Artimetik ve fizyolojik yoğunluk farklı paydalar kullanır (alan / tarım alanı).", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Kır-kent eşiği hakkında hangisi doğrudur?",
+    "options": ["A) Artimetik ve fizyolojik yoğunluk farklı paydalar kullanır (alan / tarım alanı).", "B) Kır-kent eşiği ülkeden ülkeye değişir; Türkiye'de belediye ve 10.000 tartışmaları.", "C) Doğum, ölüm, göç nüfus değişiminin üç bileşenidir.", "D) Demografik geçiş yüksek doğum-ölümden düşük doğum-ölüme evrilmedir.", "E) Nüfus piramidi yaş-cinsiyet yapısını; geniş taban genç nüfusu gösterir."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Beşerî Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Beşerî Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Bağımlılık oranı çocuk ve yaşlıların aktif nüfusa oranıdır.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Site, kasaba, metropol, megalopolis hangisini ifade eder?",
+    "options": ["A) Site, kasaba, metropol, megalopolis kademelenme.", "B) Doğum, ölüm, göç nüfus değişiminin üç bileşenidir.", "C) Demografik geçiş yüksek doğum-ölümden düşük doğum-ölüme evrilmedir.", "D) Nüfus piramidi yaş-cinsiyet yapısını; geniş taban genç nüfusu gösterir.", "E) Artimetik ve fizyolojik yoğunluk farklı paydalar kullanır (alan / tarım alanı)."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Beşerî Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Beşerî Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Kır-kent eşiği ülkeden ülkeye değişir; Türkiye'de belediye ve 10.000 tartışmaları.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Fonksiyonel ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Artimetik ve fizyolojik yoğunluk farklı paydalar kullanır (alan / tarım alanı).", "B) Fonksiyonel sınıflama: sanayi, liman, turizm, idare, tarım kenti.", "C) Doğum, ölüm, göç nüfus değişiminin üç bileşenidir.", "D) Demografik geçiş yüksek doğum-ölümden düşük doğum-ölüme evrilmedir.", "E) Nüfus piramidi yaş-cinsiyet yapısını; geniş taban genç nüfusu gösterir."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Beşerî Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Beşerî Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Site, kasaba, metropol, megalopolis kademelenme.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Gecekondu, çöküntü, CBD, çeper için doğru bir açıklamadır?",
+    "options": ["A) Nüfus piramidi yaş-cinsiyet yapısını; geniş taban genç nüfusu gösterir.", "B) Artimetik ve fizyolojik yoğunluk farklı paydalar kullanır (alan / tarım alanı).", "C) Gecekondu, çöküntü, CBD, çeper kent içi kuşak modelleri.", "D) Doğum, ölüm, göç nüfus değişiminin üç bileşenidir.", "E) Demografik geçiş yüksek doğum-ölümden düşük doğum-ölüme evrilmedir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Beşerî Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Beşerî Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Fonksiyonel sınıflama: sanayi, liman, turizm, idare, tarım kenti.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Beşerî Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gecekondu, çöküntü, CBD, çeper kent içi kuşak modelleri.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Beşerî Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Kır yerleşmesi doku (toplu-dağınık) su, güvenlik ve tarıma bağlıdır.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Kır yerleşmesi hakkında hangisi doğrudur?",
+    "options": ["A) Demografik geçiş yüksek doğum-ölümden düşük doğum-ölüme evrilmedir.", "B) Nüfus piramidi yaş-cinsiyet yapısını; geniş taban genç nüfusu gösterir.", "C) Artimetik ve fizyolojik yoğunluk farklı paydalar kullanır (alan / tarım alanı).", "D) Kır yerleşmesi doku (toplu-dağınık) su, güvenlik ve tarıma bağlıdır.", "E) Doğum, ölüm, göç nüfus değişiminin üç bileşenidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Beşerî Coğrafya notundaki temel bilgi."
 }
 ];

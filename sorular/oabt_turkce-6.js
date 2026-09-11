@@ -55,69 +55,69 @@ window.oabt_turkce_6_sorulari = [
     "explanation": "Palincsar ve Brown: dört okuduğunu anlama stratejisi."
 },
 {
-    "question": "Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Türkçe Dersi Öğretim Programı dinleme, konuşma, okuma, yazma ile dil bilgisi ve söz varlığ", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Türkçe Dersi Öğretim Programı için doğru bir açıklamadır?",
+    "options": ["A) Beceri temelli yaklaşım kazanımı davranıştan çok süreç ve ürünle tanımlar.", "B) Tema etrafında metinler çok türlü seçilir; tek edebiyat antolojisi değildir.", "C) Süreç temelli yazma planlama, taslak, düzeltme, yayımlama döngüsüdür.", "D) Farklılaştırma hazırbulunuşluk, ilgi ve öğrenme profiline göre içerik-süreç-ürün uyarlanır.", "E) Türkçe Dersi Öğretim Programı dinleme, konuşma, okuma, yazma ile dil bilgisi ve söz varlığını bütünler."],
+    "correctAnswerIndex": 4,
+    "explanation": "Türkçe Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Beceri temelli yaklaşım kazanımı davranıştan çok süreç ve ürünle tanımlar."],
+    "question": "Beceri temelli hakkında hangisi doğrudur?",
+    "options": ["A) Türkçe Dersi Öğretim Programı dinleme, konuşma, okuma, yazma ile dil bilgisi ve söz varlığını bütünler.", "B) Tema etrafında metinler çok türlü seçilir; tek edebiyat antolojisi değildir.", "C) Süreç temelli yazma planlama, taslak, düzeltme, yayımlama döngüsüdür.", "D) Farklılaştırma hazırbulunuşluk, ilgi ve öğrenme profiline göre içerik-süreç-ürün uyarlanır.", "E) Beceri temelli yaklaşım kazanımı davranıştan çok süreç ve ürünle tanımlar."],
+    "correctAnswerIndex": 4,
+    "explanation": "Türkçe Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Tema hangisini ifade eder?",
+    "options": ["A) Tema etrafında metinler çok türlü seçilir; tek edebiyat antolojisi değildir.", "B) Türkçe Dersi Öğretim Programı dinleme, konuşma, okuma, yazma ile dil bilgisi ve söz varlığını bütünler.", "C) Beceri temelli yaklaşım kazanımı davranıştan çok süreç ve ürünle tanımlar.", "D) Süreç temelli yazma planlama, taslak, düzeltme, yayımlama döngüsüdür.", "E) Farklılaştırma hazırbulunuşluk, ilgi ve öğrenme profiline göre içerik-süreç-ürün uyarlanır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Türkçe Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Süreç temelli yazma ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Farklılaştırma hazırbulunuşluk, ilgi ve öğrenme profiline göre içerik-süreç-ürün uyarlanır.", "B) Süreç temelli yazma planlama, taslak, düzeltme, yayımlama döngüsüdür.", "C) Türkçe Dersi Öğretim Programı dinleme, konuşma, okuma, yazma ile dil bilgisi ve söz varlığını bütünler.", "D) Beceri temelli yaklaşım kazanımı davranıştan çok süreç ve ürünle tanımlar.", "E) Tema etrafında metinler çok türlü seçilir; tek edebiyat antolojisi değildir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Türkçe Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Farklılaştırma için doğru bir açıklamadır?",
+    "options": ["A) Beceri temelli yaklaşım kazanımı davranıştan çok süreç ve ürünle tanımlar.", "B) Tema etrafında metinler çok türlü seçilir; tek edebiyat antolojisi değildir.", "C) Süreç temelli yazma planlama, taslak, düzeltme, yayımlama döngüsüdür.", "D) Farklılaştırma hazırbulunuşluk, ilgi ve öğrenme profiline göre içerik-süreç-ürün uyarlanır.", "E) Türkçe Dersi Öğretim Programı dinleme, konuşma, okuma, yazma ile dil bilgisi ve söz varlığını bütünler."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Türkçe Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Tema etrafında metinler çok türlü seçilir; tek edebiyat antolojisi değildir.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Kazanım hakkında hangisi doğrudur?",
+    "options": ["A) Kazanım gözlenebilir dil becerisi ifadesidir; içerik konusu değildir.", "B) Türkçe Dersi Öğretim Programı dinleme, konuşma, okuma, yazma ile dil bilgisi ve söz varlığını bütünler.", "C) Tema etrafında metinler çok türlü seçilir; tek edebiyat antolojisi değildir.", "D) Süreç temelli yazma planlama, taslak, düzeltme, yayımlama döngüsüdür.", "E) Farklılaştırma hazırbulunuşluk, ilgi ve öğrenme profiline göre içerik-süreç-ürün uyarlanır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Türkçe Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Metin seçimi hangisini ifade eder?",
+    "options": ["A) Türkçe Dersi Öğretim Programı dinleme, konuşma, okuma, yazma ile dil bilgisi ve söz varlığını bütünler.", "B) Beceri temelli yaklaşım kazanımı davranıştan çok süreç ve ürünle tanımlar.", "C) Tema etrafında metinler çok türlü seçilir; tek edebiyat antolojisi değildir.", "D) Süreç temelli yazma planlama, taslak, düzeltme, yayımlama döngüsüdür.", "E) Metin seçimi yaş, sözvarlığı, tür çeşitliliği, toplumsal cinsiyet ve kültürel çoğulculuk ölçütleri."],
+    "correctAnswerIndex": 4,
+    "explanation": "Türkçe Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Ön bilgi ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Ön bilgi aktifleştirme (KWL, tahmin) anlamayı yükseltir.", "B) Türkçe Dersi Öğretim Programı dinleme, konuşma, okuma, yazma ile dil bilgisi ve söz varlığını bütünler.", "C) Beceri temelli yaklaşım kazanımı davranıştan çok süreç ve ürünle tanımlar.", "D) Tema etrafında metinler çok türlü seçilir; tek edebiyat antolojisi değildir.", "E) Süreç temelli yazma planlama, taslak, düzeltme, yayımlama döngüsüdür."],
+    "correctAnswerIndex": 0,
+    "explanation": "Türkçe Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Söz varlığı için doğru bir açıklamadır?",
+    "options": ["A) Beceri temelli yaklaşım kazanımı davranıştan çok süreç ve ürünle tanımlar.", "B) Tema etrafında metinler çok türlü seçilir; tek edebiyat antolojisi değildir.", "C) Süreç temelli yazma planlama, taslak, düzeltme, yayımlama döngüsüdür.", "D) Farklılaştırma hazırbulunuşluk, ilgi ve öğrenme profiline göre içerik-süreç-ürün uyarlanır.", "E) Söz varlığı öğretimi bağlama gömülür; yalıtık liste ezberi kalıcı olmaz."],
+    "correctAnswerIndex": 4,
+    "explanation": "Türkçe Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Medya okuryazarlığı hakkında hangisi doğrudur?",
+    "options": ["A) Tema etrafında metinler çok türlü seçilir; tek edebiyat antolojisi değildir.", "B) Süreç temelli yazma planlama, taslak, düzeltme, yayımlama döngüsüdür.", "C) Medya okuryazarlığı görsel ve dijital metinleri Türkçe dersinin parçası yapar.", "D) Türkçe Dersi Öğretim Programı dinleme, konuşma, okuma, yazma ile dil bilgisi ve söz varlığını bütünler.", "E) Beceri temelli yaklaşım kazanımı davranıştan çok süreç ve ürünle tanımlar."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Türkçe Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Süreç temelli yazma planlama, taslak, düzeltme, yayımlama döngüsüdür."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Farklılaştırma hazırbulunuşluk, ilgi ve öğrenme profiline göre içerik-süreç-ürün uyarlanır", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Model olma hangisini ifade eder?",
+    "options": ["A) Tema etrafında metinler çok türlü seçilir; tek edebiyat antolojisi değildir.", "B) Süreç temelli yazma planlama, taslak, düzeltme, yayımlama döngüsüdür.", "C) Model olma sesli düşünme ile okuma-yazma stratejisini gösterir.", "D) Türkçe Dersi Öğretim Programı dinleme, konuşma, okuma, yazma ile dil bilgisi ve söz varlığını bütünler.", "E) Beceri temelli yaklaşım kazanımı davranıştan çok süreç ve ürünle tanımlar."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Kazanım gözlenebilir dil becerisi ifadesidir; içerik konusu değildir."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Metin seçimi yaş, sözvarlığı, tür çeşitliliği, toplumsal cinsiyet ve kültürel çoğulculuk ö", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Ön bilgi aktifleştirme (KWL, tahmin) anlamayı yükseltir."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Söz varlığı öğretimi bağlama gömülür; yalıtık liste ezberi kalıcı olmaz.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Medya okuryazarlığı görsel ve dijital metinleri Türkçe dersinin parçası yapar."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Model olma sesli düşünme ile okuma-yazma stratejisini gösterir.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Türkçe Öğretimi notundaki temel bilgi."
 }
 ];

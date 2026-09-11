@@ -61,63 +61,63 @@ window.oabt_sinif_13_sorulari = [
     "explanation": "Alan eğitimi."
 },
 {
-    "question": "Drama konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Eğitici drama süreçtir, sahne ürünü zorunlu değildir."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Eğitici drama için doğru bir açıklamadır?",
+    "options": ["A) 2026 alan eğitimi drama yöntem olarak da sorulur.", "B) Eğitici drama süreçtir, sahne ürünü zorunlu değildir.", "C) Oyun, doğaçlama, rol oynama, donuk imge.", "D) Lider yargılamaz, yan ürünü yoklar.", "E) Güven çemberi gönüllülük."],
+    "correctAnswerIndex": 1,
+    "explanation": "Drama notundaki temel bilgi."
 },
 {
-    "question": "Drama konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Oyun, doğaçlama, rol oynama, donuk imge.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Oyun, doğaçlama, rol oynama, donuk imge hakkında hangisi doğrudur?",
+    "options": ["A) Lider yargılamaz, yan ürünü yoklar.", "B) Güven çemberi gönüllülük.", "C) 2026 alan eğitimi drama yöntem olarak da sorulur.", "D) Oyun, doğaçlama, rol oynama, donuk imge.", "E) Eğitici drama süreçtir, sahne ürünü zorunlu değildir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Drama notundaki temel bilgi."
+},
+{
+    "question": "Lider hangisini ifade eder?",
+    "options": ["A) Lider yargılamaz, yan ürünü yoklar.", "B) Eğitici drama süreçtir, sahne ürünü zorunlu değildir.", "C) Oyun, doğaçlama, rol oynama, donuk imge.", "D) Güven çemberi gönüllülük.", "E) 2026 alan eğitimi drama yöntem olarak da sorulur."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Drama notundaki temel bilgi."
 },
 {
-    "question": "Drama konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Lider yargılamaz, yan ürünü yoklar."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Güven çemberi ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Lider yargılamaz, yan ürünü yoklar.", "B) 2026 alan eğitimi drama yöntem olarak da sorulur.", "C) Güven çemberi gönüllülük.", "D) Eğitici drama süreçtir, sahne ürünü zorunlu değildir.", "E) Oyun, doğaçlama, rol oynama, donuk imge."],
+    "correctAnswerIndex": 2,
+    "explanation": "Drama notundaki temel bilgi."
 },
 {
-    "question": "Drama konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Güven çemberi gönüllülük.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi 2026 alan eğitimi için doğru bir açıklamadır?",
+    "options": ["A) 2026 alan eğitimi drama yöntem olarak da sorulur.", "B) Eğitici drama süreçtir, sahne ürünü zorunlu değildir.", "C) Oyun, doğaçlama, rol oynama, donuk imge.", "D) Lider yargılamaz, yan ürünü yoklar.", "E) Güven çemberi gönüllülük."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Drama notundaki temel bilgi."
 },
 {
-    "question": "Drama konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) 2026 alan eğitimi drama yöntem olarak da sorulur."],
+    "question": "Isınma, canlandırma, değerlendirme hakkında hangisi doğrudur?",
+    "options": ["A) Lider yargılamaz, yan ürünü yoklar.", "B) Güven çemberi gönüllülük.", "C) Isınma, canlandırma, değerlendirme üçlü.", "D) Eğitici drama süreçtir, sahne ürünü zorunlu değildir.", "E) Oyun, doğaçlama, rol oynama, donuk imge."],
+    "correctAnswerIndex": 2,
+    "explanation": "Drama notundaki temel bilgi."
+},
+{
+    "question": "Sıcak sandalye, bilinç koridoru ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Eğitici drama süreçtir, sahne ürünü zorunlu değildir.", "B) Oyun, doğaçlama, rol oynama, donuk imge.", "C) Lider yargılamaz, yan ürünü yoklar.", "D) Güven çemberi gönüllülük.", "E) Sıcak sandalye, bilinç koridoru."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Drama notundaki temel bilgi."
 },
 {
-    "question": "Drama konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Isınma, canlandırma, değerlendirme üçlü.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Müfredat bağ hakkında hangisi doğrudur?",
+    "options": ["A) Lider yargılamaz, yan ürünü yoklar.", "B) Güven çemberi gönüllülük.", "C) Müfredat bağ hayat bilgisi, Türkçe, sosyal.", "D) Eğitici drama süreçtir, sahne ürünü zorunlu değildir.", "E) Oyun, doğaçlama, rol oynama, donuk imge."],
+    "correctAnswerIndex": 2,
+    "explanation": "Drama notundaki temel bilgi."
 },
 {
-    "question": "Drama konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Öğretmen rolde."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Mahremiyet ve travma hangisini ifade eder?",
+    "options": ["A) Lider yargılamaz, yan ürünü yoklar.", "B) Güven çemberi gönüllülük.", "C) Mahremiyet ve travma tetiklememe.", "D) Eğitici drama süreçtir, sahne ürünü zorunlu değildir.", "E) Oyun, doğaçlama, rol oynama, donuk imge."],
+    "correctAnswerIndex": 2,
+    "explanation": "Drama notundaki temel bilgi."
 },
 {
-    "question": "Drama konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Sıcak sandalye, bilinç koridoru.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Drama konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Nesneyle oyun."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Drama konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Müfredat bağ hayat bilgisi, Türkçe, sosyal.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Kaynaştırma ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Oyun, doğaçlama, rol oynama, donuk imge.", "B) Lider yargılamaz, yan ürünü yoklar.", "C) Güven çemberi gönüllülük.", "D) Kaynaştırma rol dağılımı adil.", "E) Eğitici drama süreçtir, sahne ürünü zorunlu değildir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Drama notundaki temel bilgi."
 }
 ];

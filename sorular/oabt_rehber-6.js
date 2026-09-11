@@ -61,63 +61,63 @@ window.oabt_rehber_6_sorulari = [
     "explanation": "Mesleki standart."
 },
 {
-    "question": "Psikolojik Danışma İlke ve Teknikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gönüllülük, gizlilik, saygı, yetkinlik, yararlılık, zarar vermeme etik omurga.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi Gönüllülük, gizlilik, saygı, yetkinlik için doğru bir açıklamadır?",
+    "options": ["A) Gönüllülük, gizlilik, saygı, yetkinlik, yararlılık, zarar vermeme etik omurga.", "B) Bilgilendirilmiş onam süreç, sınır, kayıt.", "C) Terapötik ilişki değişimin ortak faktörü.", "D) Kültürel alçakgönüllülük evrensel tarif dayatmama.", "E) Çift ilişki (öğretmen-danışman) sınır çizer."],
+    "correctAnswerIndex": 0,
+    "explanation": "Psikolojik Danışma İlke ve Teknikleri notundaki temel bilgi."
+},
+{
+    "question": "Bilgilendirilmiş onam hakkında hangisi doğrudur?",
+    "options": ["A) Terapötik ilişki değişimin ortak faktörü.", "B) Kültürel alçakgönüllülük evrensel tarif dayatmama.", "C) Çift ilişki (öğretmen-danışman) sınır çizer.", "D) Bilgilendirilmiş onam süreç, sınır, kayıt.", "E) Gönüllülük, gizlilik, saygı, yetkinlik, yararlılık, zarar vermeme etik omurga."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Psikolojik Danışma İlke ve Teknikleri notundaki temel bilgi."
 },
 {
-    "question": "Psikolojik Danışma İlke ve Teknikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Bilgilendirilmiş onam süreç, sınır, kayıt.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Terapötik ilişki hangisini ifade eder?",
+    "options": ["A) Çift ilişki (öğretmen-danışman) sınır çizer.", "B) Terapötik ilişki değişimin ortak faktörü.", "C) Gönüllülük, gizlilik, saygı, yetkinlik, yararlılık, zarar vermeme etik omurga.", "D) Bilgilendirilmiş onam süreç, sınır, kayıt.", "E) Kültürel alçakgönüllülük evrensel tarif dayatmama."],
+    "correctAnswerIndex": 1,
+    "explanation": "Psikolojik Danışma İlke ve Teknikleri notundaki temel bilgi."
 },
 {
-    "question": "Psikolojik Danışma İlke ve Teknikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Terapötik ilişki değişimin ortak faktörü.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Kültürel alçakgönüllülük ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Çift ilişki (öğretmen-danışman) sınır çizer.", "B) Kültürel alçakgönüllülük evrensel tarif dayatmama.", "C) Gönüllülük, gizlilik, saygı, yetkinlik, yararlılık, zarar vermeme etik omurga.", "D) Bilgilendirilmiş onam süreç, sınır, kayıt.", "E) Terapötik ilişki değişimin ortak faktörü."],
+    "correctAnswerIndex": 1,
+    "explanation": "Psikolojik Danışma İlke ve Teknikleri notundaki temel bilgi."
 },
 {
-    "question": "Psikolojik Danışma İlke ve Teknikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Kültürel alçakgönüllülük evrensel tarif dayatmama.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Çift ilişki için doğru bir açıklamadır?",
+    "options": ["A) Kültürel alçakgönüllülük evrensel tarif dayatmama.", "B) Çift ilişki (öğretmen-danışman) sınır çizer.", "C) Gönüllülük, gizlilik, saygı, yetkinlik, yararlılık, zarar vermeme etik omurga.", "D) Bilgilendirilmiş onam süreç, sınır, kayıt.", "E) Terapötik ilişki değişimin ortak faktörü."],
+    "correctAnswerIndex": 1,
+    "explanation": "Psikolojik Danışma İlke ve Teknikleri notundaki temel bilgi."
 },
 {
-    "question": "Psikolojik Danışma İlke ve Teknikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Çift ilişki (öğretmen-danışman) sınır çizer.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Yansıtma, özet, açılı soru, minimal teşvik hakkında hangisi doğrudur?",
+    "options": ["A) Kültürel alçakgönüllülük evrensel tarif dayatmama.", "B) Yansıtma, özet, açılı soru, minimal teşvik.", "C) Gönüllülük, gizlilik, saygı, yetkinlik, yararlılık, zarar vermeme etik omurga.", "D) Bilgilendirilmiş onam süreç, sınır, kayıt.", "E) Terapötik ilişki değişimin ortak faktörü."],
+    "correctAnswerIndex": 1,
+    "explanation": "Psikolojik Danışma İlke ve Teknikleri notundaki temel bilgi."
 },
 {
-    "question": "Psikolojik Danışma İlke ve Teknikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Yansıtma, özet, açılı soru, minimal teşvik.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Yüzleştirme, yorum, kendini açma hangisini ifade eder?",
+    "options": ["A) Yüzleştirme, yorum, kendini açma dozunda.", "B) Gönüllülük, gizlilik, saygı, yetkinlik, yararlılık, zarar vermeme etik omurga.", "C) Bilgilendirilmiş onam süreç, sınır, kayıt.", "D) Terapötik ilişki değişimin ortak faktörü.", "E) Kültürel alçakgönüllülük evrensel tarif dayatmama."],
+    "correctAnswerIndex": 0,
+    "explanation": "Psikolojik Danışma İlke ve Teknikleri notundaki temel bilgi."
 },
 {
-    "question": "Psikolojik Danışma İlke ve Teknikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Yüzleştirme, yorum, kendini açma dozunda.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Rol oynama, ev ödevi, imgeleme ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Terapötik ilişki değişimin ortak faktörü.", "B) Kültürel alçakgönüllülük evrensel tarif dayatmama.", "C) Rol oynama, ev ödevi, imgeleme kurama göre.", "D) Gönüllülük, gizlilik, saygı, yetkinlik, yararlılık, zarar vermeme etik omurga.", "E) Bilgilendirilmiş onam süreç, sınır, kayıt."],
+    "correctAnswerIndex": 2,
+    "explanation": "Psikolojik Danışma İlke ve Teknikleri notundaki temel bilgi."
 },
 {
-    "question": "Psikolojik Danışma İlke ve Teknikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Rol oynama, ev ödevi, imgeleme kurama göre.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Kriz müdahalesi için doğru bir açıklamadır?",
+    "options": ["A) Kriz müdahalesi güvenlik, istismar protokolü.", "B) Gönüllülük, gizlilik, saygı, yetkinlik, yararlılık, zarar vermeme etik omurga.", "C) Bilgilendirilmiş onam süreç, sınır, kayıt.", "D) Terapötik ilişki değişimin ortak faktörü.", "E) Kültürel alçakgönüllülük evrensel tarif dayatmama."],
+    "correctAnswerIndex": 0,
+    "explanation": "Psikolojik Danışma İlke ve Teknikleri notundaki temel bilgi."
 },
 {
-    "question": "Psikolojik Danışma İlke ve Teknikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Kriz müdahalesi güvenlik, istismar protokolü.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Psikolojik Danışma İlke ve Teknikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Sevk yetki ve kaynak dışındaysa.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Sevk hakkında hangisi doğrudur?",
+    "options": ["A) Kültürel alçakgönüllülük evrensel tarif dayatmama.", "B) Sevk yetki ve kaynak dışındaysa.", "C) Gönüllülük, gizlilik, saygı, yetkinlik, yararlılık, zarar vermeme etik omurga.", "D) Bilgilendirilmiş onam süreç, sınır, kayıt.", "E) Terapötik ilişki değişimin ortak faktörü."],
+    "correctAnswerIndex": 1,
+    "explanation": "Psikolojik Danışma İlke ve Teknikleri notundaki temel bilgi."
 }
 ];

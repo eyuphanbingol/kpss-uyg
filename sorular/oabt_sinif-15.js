@@ -61,63 +61,63 @@ window.oabt_sinif_15_sorulari = [
     "explanation": "Sınıf yönetimi."
 },
 {
-    "question": "Müzik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Ritim, melodi, tını, gürlük, süre müzik elemanları.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Müzik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Eşlik beden perküsyonu ve Orff.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Ritim, melodi, tını, gürlük, süre için doğru bir açıklamadır?",
+    "options": ["A) Dinleme tür çeşitliliği, yerli-halk-dünya.", "B) 2026 alan eğitimi Orff-Kodaly-Dalcroze adları yöntem sorusu olabilir.", "C) Ritim, melodi, tını, gürlük, süre müzik elemanları.", "D) Eşlik beden perküsyonu ve Orff.", "E) Şarkı ses sağlığı, uygun tesbit."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Müzik notundaki temel bilgi."
 },
 {
-    "question": "Müzik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Şarkı ses sağlığı, uygun tesbit.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Eşlik hakkında hangisi doğrudur?",
+    "options": ["A) Eşlik beden perküsyonu ve Orff.", "B) Ritim, melodi, tını, gürlük, süre müzik elemanları.", "C) Şarkı ses sağlığı, uygun tesbit.", "D) Dinleme tür çeşitliliği, yerli-halk-dünya.", "E) 2026 alan eğitimi Orff-Kodaly-Dalcroze adları yöntem sorusu olabilir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Müzik notundaki temel bilgi."
 },
 {
-    "question": "Müzik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Dinleme tür çeşitliliği, yerli-halk-dünya.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Şarkı hangisini ifade eder?",
+    "options": ["A) Eşlik beden perküsyonu ve Orff.", "B) Dinleme tür çeşitliliği, yerli-halk-dünya.", "C) 2026 alan eğitimi Orff-Kodaly-Dalcroze adları yöntem sorusu olabilir.", "D) Şarkı ses sağlığı, uygun tesbit.", "E) Ritim, melodi, tını, gürlük, süre müzik elemanları."],
+    "correctAnswerIndex": 3,
+    "explanation": "Müzik notundaki temel bilgi."
 },
 {
-    "question": "Müzik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) 2026 alan eğitimi Orff-Kodaly-Dalcroze adları yöntem sorusu olabilir.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Dinleme ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Eşlik beden perküsyonu ve Orff.", "B) Şarkı ses sağlığı, uygun tesbit.", "C) 2026 alan eğitimi Orff-Kodaly-Dalcroze adları yöntem sorusu olabilir.", "D) Dinleme tür çeşitliliği, yerli-halk-dünya.", "E) Ritim, melodi, tını, gürlük, süre müzik elemanları."],
+    "correctAnswerIndex": 3,
+    "explanation": "Müzik notundaki temel bilgi."
 },
 {
-    "question": "Müzik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Orff konuşma-ritim-çalgı.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi 2026 alan eğitimi için doğru bir açıklamadır?",
+    "options": ["A) 2026 alan eğitimi Orff-Kodaly-Dalcroze adları yöntem sorusu olabilir.", "B) Ritim, melodi, tını, gürlük, süre müzik elemanları.", "C) Eşlik beden perküsyonu ve Orff.", "D) Şarkı ses sağlığı, uygun tesbit.", "E) Dinleme tür çeşitliliği, yerli-halk-dünya."],
+    "correctAnswerIndex": 0,
+    "explanation": "Müzik notundaki temel bilgi."
 },
 {
-    "question": "Müzik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kodaly el işareti ve halk şarkısı.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Orff hakkında hangisi doğrudur?",
+    "options": ["A) Şarkı ses sağlığı, uygun tesbit.", "B) Dinleme tür çeşitliliği, yerli-halk-dünya.", "C) Kodaly el işareti ve halk şarkısı.", "D) Orff konuşma-ritim-çalgı.", "E) Ritim, melodi, tını, gürlük, süre müzik elemanları."],
+    "correctAnswerIndex": 3,
+    "explanation": "Müzik notundaki temel bilgi."
 },
 {
-    "question": "Müzik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Dalcroze ritmik hareket.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Kodaly hangisini ifade eder?",
+    "options": ["A) Ritim, melodi, tını, gürlük, süre müzik elemanları.", "B) Eşlik beden perküsyonu ve Orff.", "C) Şarkı ses sağlığı, uygun tesbit.", "D) Dinleme tür çeşitliliği, yerli-halk-dünya.", "E) Kodaly el işareti ve halk şarkısı."],
+    "correctAnswerIndex": 4,
+    "explanation": "Müzik notundaki temel bilgi."
 },
 {
-    "question": "Müzik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Oyun ve dans.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Dalcroze ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Dalcroze ritmik hareket.", "B) Ritim, melodi, tını, gürlük, süre müzik elemanları.", "C) Eşlik beden perküsyonu ve Orff.", "D) Şarkı ses sağlığı, uygun tesbit.", "E) Dinleme tür çeşitliliği, yerli-halk-dünya."],
+    "correctAnswerIndex": 0,
+    "explanation": "Müzik notundaki temel bilgi."
 },
 {
-    "question": "Müzik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Basit çalgı blok flüt, marakas, ksilofon.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Basit çalgı hakkında hangisi doğrudur?",
+    "options": ["A) Basit çalgı blok flüt, marakas, ksilofon.", "B) Ritim, melodi, tını, gürlük, süre müzik elemanları.", "C) Eşlik beden perküsyonu ve Orff.", "D) Şarkı ses sağlığı, uygun tesbit.", "E) Dinleme tür çeşitliliği, yerli-halk-dünya."],
+    "correctAnswerIndex": 0,
+    "explanation": "Müzik notundaki temel bilgi."
+},
+{
+    "question": "Koro hangisini ifade eder?",
+    "options": ["A) Koro gönüllü, ses sağlığı.", "B) Ritim, melodi, tını, gürlük, süre müzik elemanları.", "C) Eşlik beden perküsyonu ve Orff.", "D) Şarkı ses sağlığı, uygun tesbit.", "E) Dinleme tür çeşitliliği, yerli-halk-dünya."],
+    "correctAnswerIndex": 0,
+    "explanation": "Müzik notundaki temel bilgi."
 }
 ];

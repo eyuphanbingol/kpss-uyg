@@ -12,11 +12,12 @@ def load_topics():
 
 if __name__ == "__main__":
     TOPICS = load_topics()
-    dist = []
+    ders_bullets = {}
     for t in TOPICS:
+        b = []
         for s in t["slides"]:
-            dist.extend(s[2][:2])
-    dist = [re.sub(r"\*\*", "", x)[:80] for x in dist]
+            b.extend(s[2])
+        ders_bullets.setdefault(t["ders"], []).extend(b)
     manifest = {}
     for t in TOPICS:
         ders = t["ders"]
@@ -26,7 +27,7 @@ if __name__ == "__main__":
         bullets = []
         for s in t["slides"]:
             bullets.extend(s[2])
-        qs = as_qs(t.get("facts") or [], bullets, t["title"], dist)
+        qs = as_qs(t.get("facts") or [], bullets, t["title"], ders_bullets.get(ders) or [])
         write_topic(prefix, idx, t["title"], t["slides"], qs)
         manifest[ders]["konular"].append(t["title"])
         print(ders, idx, t["title"], "q", len(qs))

@@ -55,69 +55,69 @@ window.oabt_fizik_2_sorulari = [
     "explanation": "Alan çizgileri kapalı."
 },
 {
-    "question": "Elektrik ve Manyetizma konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Coulomb ve alan sürekli dağılımda Gauss: simetri (nokta, çizgi, düzlem, küre)."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Elektrik ve Manyetizma konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Potansiyel V=∫E·dl, E=-∇V; iletken içinde E=0 elektrostatikte, yük yüzeyde.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Coulomb ve alan için doğru bir açıklamadır?",
+    "options": ["A) Coulomb ve alan sürekli dağılımda Gauss: simetri (nokta, çizgi, düzlem, küre).", "B) Potansiyel V=∫E·dl, E=-∇V; iletken içinde E=0 elektrostatikte, yük yüzeyde.", "C) Sığa C=Q/V; dizi-paralel; dielektrik κ C'yi artırır.", "D) Dielektrik polarizasyon; kırılma (breakdown).", "E) Enerji U=(1/2)CV^2; alan enerjisi (ε0/2)∫E^2."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Elektrik ve Manyetizma notundaki temel bilgi."
 },
 {
-    "question": "Elektrik ve Manyetizma konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Sığa C=Q/V; dizi-paralel; dielektrik κ C'yi artırır."],
+    "question": "Potansiyel hakkında hangisi doğrudur?",
+    "options": ["A) Enerji U=(1/2)CV^2; alan enerjisi (ε0/2)∫E^2.", "B) Potansiyel V=∫E·dl, E=-∇V; iletken içinde E=0 elektrostatikte, yük yüzeyde.", "C) Coulomb ve alan sürekli dağılımda Gauss: simetri (nokta, çizgi, düzlem, küre).", "D) Sığa C=Q/V; dizi-paralel; dielektrik κ C'yi artırır.", "E) Dielektrik polarizasyon; kırılma (breakdown)."],
+    "correctAnswerIndex": 1,
+    "explanation": "Elektrik ve Manyetizma notundaki temel bilgi."
+},
+{
+    "question": "Sığa hangisini ifade eder?",
+    "options": ["A) Coulomb ve alan sürekli dağılımda Gauss: simetri (nokta, çizgi, düzlem, küre).", "B) Potansiyel V=∫E·dl, E=-∇V; iletken içinde E=0 elektrostatikte, yük yüzeyde.", "C) Dielektrik polarizasyon; kırılma (breakdown).", "D) Enerji U=(1/2)CV^2; alan enerjisi (ε0/2)∫E^2.", "E) Sığa C=Q/V; dizi-paralel; dielektrik κ C'yi artırır."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Elektrik ve Manyetizma notundaki temel bilgi."
 },
 {
-    "question": "Elektrik ve Manyetizma konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Dielektrik polarizasyon; kırılma (breakdown).", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Dielektrik ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Potansiyel V=∫E·dl, E=-∇V; iletken içinde E=0 elektrostatikte, yük yüzeyde.", "B) Enerji U=(1/2)CV^2; alan enerjisi (ε0/2)∫E^2.", "C) Akım I=dq/dt, J=σE; direnç ρL/A, sıcaklık katsayısı.", "D) Dielektrik polarizasyon; kırılma (breakdown).", "E) Coulomb ve alan sürekli dağılımda Gauss: simetri (nokta, çizgi, düzlem, küre)."],
+    "correctAnswerIndex": 3,
+    "explanation": "Elektrik ve Manyetizma notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Enerji için doğru bir açıklamadır?",
+    "options": ["A) Dielektrik polarizasyon; kırılma (breakdown).", "B) Enerji U=(1/2)CV^2; alan enerjisi (ε0/2)∫E^2.", "C) Coulomb ve alan sürekli dağılımda Gauss: simetri (nokta, çizgi, düzlem, küre).", "D) Potansiyel V=∫E·dl, E=-∇V; iletken içinde E=0 elektrostatikte, yük yüzeyde.", "E) Sığa C=Q/V; dizi-paralel; dielektrik κ C'yi artırır."],
+    "correctAnswerIndex": 1,
+    "explanation": "Elektrik ve Manyetizma notundaki temel bilgi."
+},
+{
+    "question": "Akım hakkında hangisi doğrudur?",
+    "options": ["A) Coulomb ve alan sürekli dağılımda Gauss: simetri (nokta, çizgi, düzlem, küre).", "B) Potansiyel V=∫E·dl, E=-∇V; iletken içinde E=0 elektrostatikte, yük yüzeyde.", "C) Sığa C=Q/V; dizi-paralel; dielektrik κ C'yi artırır.", "D) Dielektrik polarizasyon; kırılma (breakdown).", "E) Akım I=dq/dt, J=σE; direnç ρL/A, sıcaklık katsayısı."],
+    "correctAnswerIndex": 4,
+    "explanation": "Elektrik ve Manyetizma notundaki temel bilgi."
+},
+{
+    "question": "Kirchhoff ve çevre hangisini ifade eder?",
+    "options": ["A) Sığa C=Q/V; dizi-paralel; dielektrik κ C'yi artırır.", "B) Dielektrik polarizasyon; kırılma (breakdown).", "C) Kirchhoff ve çevre RC zaman sabiti τ=RC; RL τ=L/R.", "D) Coulomb ve alan sürekli dağılımda Gauss: simetri (nokta, çizgi, düzlem, küre).", "E) Potansiyel V=∫E·dl, E=-∇V; iletken içinde E=0 elektrostatikte, yük yüzeyde."],
+    "correctAnswerIndex": 2,
+    "explanation": "Elektrik ve Manyetizma notundaki temel bilgi."
+},
+{
+    "question": "Güç ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Dielektrik polarizasyon; kırılma (breakdown).", "B) Güç P=IV=I^2R; emk ve iç direnç V=ε-Ir.", "C) Coulomb ve alan sürekli dağılımda Gauss: simetri (nokta, çizgi, düzlem, küre).", "D) Potansiyel V=∫E·dl, E=-∇V; iletken içinde E=0 elektrostatikte, yük yüzeyde.", "E) Sığa C=Q/V; dizi-paralel; dielektrik κ C'yi artırır."],
+    "correctAnswerIndex": 1,
+    "explanation": "Elektrik ve Manyetizma notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Manyetik alan için doğru bir açıklamadır?",
+    "options": ["A) Potansiyel V=∫E·dl, E=-∇V; iletken içinde E=0 elektrostatikte, yük yüzeyde.", "B) Sığa C=Q/V; dizi-paralel; dielektrik κ C'yi artırır.", "C) Dielektrik polarizasyon; kırılma (breakdown).", "D) Manyetik alan Biot-Savart, Ampere; solenoid B=μ0 n I.", "E) Coulomb ve alan sürekli dağılımda Gauss: simetri (nokta, çizgi, düzlem, küre)."],
+    "correctAnswerIndex": 3,
+    "explanation": "Elektrik ve Manyetizma notundaki temel bilgi."
+},
+{
+    "question": "Lorentz hakkında hangisi doğrudur?",
+    "options": ["A) Lorentz F=q(E+v×B); siklotron ω=qB/m.", "B) Coulomb ve alan sürekli dağılımda Gauss: simetri (nokta, çizgi, düzlem, küre).", "C) Potansiyel V=∫E·dl, E=-∇V; iletken içinde E=0 elektrostatikte, yük yüzeyde.", "D) Sığa C=Q/V; dizi-paralel; dielektrik κ C'yi artırır.", "E) Dielektrik polarizasyon; kırılma (breakdown)."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Elektrik ve Manyetizma notundaki temel bilgi."
 },
 {
-    "question": "Elektrik ve Manyetizma konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Enerji U=(1/2)CV^2; alan enerjisi (ε0/2)∫E^2."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Elektrik ve Manyetizma konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Akım I=dq/dt, J=σE; direnç ρL/A, sıcaklık katsayısı.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Faraday hangisini ifade eder?",
+    "options": ["A) Faraday emk=-dΦ_B/dt; Lenz karşı koyma.", "B) Coulomb ve alan sürekli dağılımda Gauss: simetri (nokta, çizgi, düzlem, küre).", "C) Potansiyel V=∫E·dl, E=-∇V; iletken içinde E=0 elektrostatikte, yük yüzeyde.", "D) Sığa C=Q/V; dizi-paralel; dielektrik κ C'yi artırır.", "E) Dielektrik polarizasyon; kırılma (breakdown)."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Elektrik ve Manyetizma konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Kirchhoff ve çevre RC zaman sabiti τ=RC; RL τ=L/R."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Elektrik ve Manyetizma konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Güç P=IV=I^2R; emk ve iç direnç V=ε-Ir.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Elektrik ve Manyetizma konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Manyetik alan Biot-Savart, Ampere; solenoid B=μ0 n I."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Elektrik ve Manyetizma konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Lorentz F=q(E+v×B); siklotron ω=qB/m.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Elektrik ve Manyetizma konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Faraday emk=-dΦ_B/dt; Lenz karşı koyma."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Elektrik ve Manyetizma notundaki temel bilgi."
 }
 ];

@@ -55,69 +55,69 @@ window.oabt_kimya_3_sorulari = [
     "explanation": "Katılma polimerinde küçük molekül çıkmaz."
 },
 {
-    "question": "Organik Kimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Hibritleşme geometri ve asitlik (s karakteri); konjugasyon, aromatiklik Hückel 4n+2.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Organik Kimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) İzomeri yapısal, stereo (enansiyomer, diastereomer); R/S, E/Z.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Hibritleşme için doğru bir açıklamadır?",
+    "options": ["A) Rezonans ve hiperkonjugasyon kararlılık; karbokatyon 3°>2°>1°.", "B) Hibritleşme geometri ve asitlik (s karakteri); konjugasyon, aromatiklik Hückel 4n+2.", "C) İzomeri yapısal, stereo (enansiyomer, diastereomer); R/S, E/Z.", "D) Asitlik indüksiyon, rezonans, hibrit; pKa karşılaştırması.", "E) Nükleofil-elektrofil HOMO-LUMO; çözücü protik nükleofiliği zayıflatır."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Organik Kimya notundaki temel bilgi."
 },
 {
-    "question": "Organik Kimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Asitlik indüksiyon, rezonans, hibrit; pKa karşılaştırması.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "İzomeri hakkında hangisi doğrudur?",
+    "options": ["A) Hibritleşme geometri ve asitlik (s karakteri); konjugasyon, aromatiklik Hückel 4n+2.", "B) Asitlik indüksiyon, rezonans, hibrit; pKa karşılaştırması.", "C) Nükleofil-elektrofil HOMO-LUMO; çözücü protik nükleofiliği zayıflatır.", "D) Rezonans ve hiperkonjugasyon kararlılık; karbokatyon 3°>2°>1°.", "E) İzomeri yapısal, stereo (enansiyomer, diastereomer); R/S, E/Z."],
+    "correctAnswerIndex": 4,
+    "explanation": "Organik Kimya notundaki temel bilgi."
+},
+{
+    "question": "Asitlik hangisini ifade eder?",
+    "options": ["A) Asitlik indüksiyon, rezonans, hibrit; pKa karşılaştırması.", "B) İzomeri yapısal, stereo (enansiyomer, diastereomer); R/S, E/Z.", "C) Nükleofil-elektrofil HOMO-LUMO; çözücü protik nükleofiliği zayıflatır.", "D) Rezonans ve hiperkonjugasyon kararlılık; karbokatyon 3°>2°>1°.", "E) SN1-SN2 3° SN1, 1° SN2; Walden tersinmesi SN2."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Organik Kimya notundaki temel bilgi."
 },
 {
-    "question": "Organik Kimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Nükleofil-elektrofil HOMO-LUMO; çözücü protik nükleofiliği zayıflatır.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Nükleofil-elektrofil ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Nükleofil-elektrofil HOMO-LUMO; çözücü protik nükleofiliği zayıflatır.", "B) Hibritleşme geometri ve asitlik (s karakteri); konjugasyon, aromatiklik Hückel 4n+2.", "C) İzomeri yapısal, stereo (enansiyomer, diastereomer); R/S, E/Z.", "D) Asitlik indüksiyon, rezonans, hibrit; pKa karşılaştırması.", "E) Rezonans ve hiperkonjugasyon kararlılık; karbokatyon 3°>2°>1°."],
+    "correctAnswerIndex": 0,
+    "explanation": "Organik Kimya notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Rezonans ve hiperkonjugasyon için doğru bir açıklamadır?",
+    "options": ["A) Nükleofil-elektrofil HOMO-LUMO; çözücü protik nükleofiliği zayıflatır.", "B) Rezonans ve hiperkonjugasyon kararlılık; karbokatyon 3°>2°>1°.", "C) Hibritleşme geometri ve asitlik (s karakteri); konjugasyon, aromatiklik Hückel 4n+2.", "D) İzomeri yapısal, stereo (enansiyomer, diastereomer); R/S, E/Z.", "E) Asitlik indüksiyon, rezonans, hibrit; pKa karşılaştırması."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Organik Kimya notundaki temel bilgi."
 },
 {
-    "question": "Organik Kimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Rezonans ve hiperkonjugasyon kararlılık; karbokatyon 3°>2°>1°.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "SN1-SN2 hakkında hangisi doğrudur?",
+    "options": ["A) Hibritleşme geometri ve asitlik (s karakteri); konjugasyon, aromatiklik Hückel 4n+2.", "B) İzomeri yapısal, stereo (enansiyomer, diastereomer); R/S, E/Z.", "C) Asitlik indüksiyon, rezonans, hibrit; pKa karşılaştırması.", "D) Nükleofil-elektrofil HOMO-LUMO; çözücü protik nükleofiliği zayıflatır.", "E) SN1-SN2 3° SN1, 1° SN2; Walden tersinmesi SN2."],
+    "correctAnswerIndex": 4,
+    "explanation": "Organik Kimya notundaki temel bilgi."
 },
 {
-    "question": "Organik Kimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) SN1-SN2 3° SN1, 1° SN2; Walden tersinmesi SN2.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "E1-E2 hangisini ifade eder?",
+    "options": ["A) Hibritleşme geometri ve asitlik (s karakteri); konjugasyon, aromatiklik Hückel 4n+2.", "B) İzomeri yapısal, stereo (enansiyomer, diastereomer); R/S, E/Z.", "C) Asitlik indüksiyon, rezonans, hibrit; pKa karşılaştırması.", "D) Nükleofil-elektrofil HOMO-LUMO; çözücü protik nükleofiliği zayıflatır.", "E) E1-E2 Zaitsev genelde; bulky baz Hofmann."],
+    "correctAnswerIndex": 4,
+    "explanation": "Organik Kimya notundaki temel bilgi."
+},
+{
+    "question": "Katılma ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İzomeri yapısal, stereo (enansiyomer, diastereomer); R/S, E/Z.", "B) Asitlik indüksiyon, rezonans, hibrit; pKa karşılaştırması.", "C) Nükleofil-elektrofil HOMO-LUMO; çözücü protik nükleofiliği zayıflatır.", "D) Katılma Markovnikov, hidroborasyon anti-Markovnikov.", "E) Hibritleşme geometri ve asitlik (s karakteri); konjugasyon, aromatiklik Hückel 4n+2."],
+    "correctAnswerIndex": 3,
+    "explanation": "Organik Kimya notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Aromatik için doğru bir açıklamadır?",
+    "options": ["A) Nükleofil-elektrofil HOMO-LUMO; çözücü protik nükleofiliği zayıflatır.", "B) Rezonans ve hiperkonjugasyon kararlılık; karbokatyon 3°>2°>1°.", "C) Aromatik SEAr (nitration), SNAr elektron çekici + iyi ayrılan.", "D) İzomeri yapısal, stereo (enansiyomer, diastereomer); R/S, E/Z.", "E) Asitlik indüksiyon, rezonans, hibrit; pKa karşılaştırması."],
+    "correctAnswerIndex": 2,
+    "explanation": "Organik Kimya notundaki temel bilgi."
+},
+{
+    "question": "Karbonil hakkında hangisi doğrudur?",
+    "options": ["A) Asitlik indüksiyon, rezonans, hibrit; pKa karşılaştırması.", "B) Nükleofil-elektrofil HOMO-LUMO; çözücü protik nükleofiliği zayıflatır.", "C) Karbonil nükleofilik katılma, asil sübstitüsyon, enolat (aldo, Claisen).", "D) Hibritleşme geometri ve asitlik (s karakteri); konjugasyon, aromatiklik Hückel 4n+2.", "E) İzomeri yapısal, stereo (enansiyomer, diastereomer); R/S, E/Z."],
+    "correctAnswerIndex": 2,
+    "explanation": "Organik Kimya notundaki temel bilgi."
+},
+{
+    "question": "Adlandırma hangisini ifade eder?",
+    "options": ["A) Nükleofil-elektrofil HOMO-LUMO; çözücü protik nükleofiliği zayıflatır.", "B) Adlandırma IUPAC öncelik; fonksiyonel grup soneki.", "C) Hibritleşme geometri ve asitlik (s karakteri); konjugasyon, aromatiklik Hückel 4n+2.", "D) İzomeri yapısal, stereo (enansiyomer, diastereomer); R/S, E/Z.", "E) Asitlik indüksiyon, rezonans, hibrit; pKa karşılaştırması."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Organik Kimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) E1-E2 Zaitsev genelde; bulky baz Hofmann.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Organik Kimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Katılma Markovnikov, hidroborasyon anti-Markovnikov.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Organik Kimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Aromatik SEAr (nitration), SNAr elektron çekici + iyi ayrılan.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Organik Kimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Karbonil nükleofilik katılma, asil sübstitüsyon, enolat (aldo, Claisen).", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Organik Kimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Adlandırma IUPAC öncelik; fonksiyonel grup soneki.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Organik Kimya notundaki temel bilgi."
 }
 ];

@@ -67,57 +67,57 @@ window.ags_sozel_3_sorulari = [
     "explanation": "Teşbih, fikri somut imgeye bağlar."
 },
 {
-    "question": "Anlatımın Oluşması konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Tanımlama, kavramın temel niteliklerini sınırlayarak belirtmektir.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Tanımlama için doğru bir açıklamadır?",
+    "options": ["A) Tanımlama, kavramın temel niteliklerini sınırlayarak belirtmektir.", "B) Karşılaştırma, iki varlık veya durumu benzerlik-fark yönünden yan yana getirmektir.", "C) Benzetme (teşbih), aradaki benzerlikten yararlanarak birini diğeriyle anlatmaktır.", "D) Örnekleme, soyut yargıyı somut durumlarla desteklemektir.", "E) Tanık gösterme, uzman, otorite veya bilinen kişinin sözünü aktararak inandırıcılığı artırmaktır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Anlatımın Oluşması notundaki temel bilgi."
 },
 {
-    "question": "Anlatımın Oluşması konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Karşılaştırma, iki varlık veya durumu benzerlik-fark yönünden yan yana getirmektir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Karşılaştırma hakkında hangisi doğrudur?",
+    "options": ["A) Tanık gösterme, uzman, otorite veya bilinen kişinin sözünü aktararak inandırıcılığı artırmaktır.", "B) Karşılaştırma, iki varlık veya durumu benzerlik-fark yönünden yan yana getirmektir.", "C) Tanımlama, kavramın temel niteliklerini sınırlayarak belirtmektir.", "D) Benzetme (teşbih), aradaki benzerlikten yararlanarak birini diğeriyle anlatmaktır.", "E) Örnekleme, soyut yargıyı somut durumlarla desteklemektir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Anlatımın Oluşması notundaki temel bilgi."
+},
+{
+    "question": "Benzetme (teşbih) hangisini ifade eder?",
+    "options": ["A) Örnekleme, soyut yargıyı somut durumlarla desteklemektir.", "B) Tanık gösterme, uzman, otorite veya bilinen kişinin sözünü aktararak inandırıcılığı artırmaktır.", "C) Benzetme (teşbih), aradaki benzerlikten yararlanarak birini diğeriyle anlatmaktır.", "D) Tanımlama, kavramın temel niteliklerini sınırlayarak belirtmektir.", "E) Karşılaştırma, iki varlık veya durumu benzerlik-fark yönünden yan yana getirmektir."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Anlatımın Oluşması notundaki temel bilgi."
 },
 {
-    "question": "Anlatımın Oluşması konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Benzetme (teşbih), aradaki benzerlikten yararlanarak birini diğeriyle anlatmaktır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Örnekleme ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Örnekleme, soyut yargıyı somut durumlarla desteklemektir.", "B) Tanımlama, kavramın temel niteliklerini sınırlayarak belirtmektir.", "C) Karşılaştırma, iki varlık veya durumu benzerlik-fark yönünden yan yana getirmektir.", "D) Benzetme (teşbih), aradaki benzerlikten yararlanarak birini diğeriyle anlatmaktır.", "E) Tanık gösterme, uzman, otorite veya bilinen kişinin sözünü aktararak inandırıcılığı artırmaktır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Anlatımın Oluşması notundaki temel bilgi."
 },
 {
-    "question": "Anlatımın Oluşması konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Örnekleme, soyut yargıyı somut durumlarla desteklemektir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Sayısal veri hakkında hangisi doğrudur?",
+    "options": ["A) Tanımlama, kavramın temel niteliklerini sınırlayarak belirtmektir.", "B) Karşılaştırma, iki varlık veya durumu benzerlik-fark yönünden yan yana getirmektir.", "C) Benzetme (teşbih), aradaki benzerlikten yararlanarak birini diğeriyle anlatmaktır.", "D) Örnekleme, soyut yargıyı somut durumlarla desteklemektir.", "E) Sayısal veri, istatistik, oran, tarih ve ölçüyle yargıyı güçlendirir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Anlatımın Oluşması notundaki temel bilgi."
+},
+{
+    "question": "Benzetme hangisini ifade eder?",
+    "options": ["A) Benzetme edebî; karşılaştırma düşünceyi geliştirme yoludur, ikisi iç içe geçebilir.", "B) Tanımlama, kavramın temel niteliklerini sınırlayarak belirtmektir.", "C) Karşılaştırma, iki varlık veya durumu benzerlik-fark yönünden yan yana getirmektir.", "D) Örnekleme, soyut yargıyı somut durumlarla desteklemektir.", "E) Tanık gösterme, uzman, otorite veya bilinen kişinin sözünü aktararak inandırıcılığı artırmaktır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Anlatımın Oluşması notundaki temel bilgi."
+},
+{
+    "question": "Kişileştirme ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Tanımlama, kavramın temel niteliklerini sınırlayarak belirtmektir.", "B) Karşılaştırma, iki varlık veya durumu benzerlik-fark yönünden yan yana getirmektir.", "C) Benzetme (teşbih), aradaki benzerlikten yararlanarak birini diğeriyle anlatmaktır.", "D) Örnekleme, soyut yargıyı somut durumlarla desteklemektir.", "E) Kişileştirme insan özelliğini doğaya yükler; düşünce yazısında da görülebilir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Anlatımın Oluşması notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Soyutlama için doğru bir açıklamadır?",
+    "options": ["A) Benzetme (teşbih), aradaki benzerlikten yararlanarak birini diğeriyle anlatmaktır.", "B) Örnekleme, soyut yargıyı somut durumlarla desteklemektir.", "C) Soyutlama, tekil örnekten genel kavrama gitmektir.", "D) Tanımlama, kavramın temel niteliklerini sınırlayarak belirtmektir.", "E) Karşılaştırma, iki varlık veya durumu benzerlik-fark yönünden yan yana getirmektir."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Anlatımın Oluşması notundaki temel bilgi."
 },
 {
-    "question": "Anlatımın Oluşması konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Tanık gösterme, uzman, otorite veya bilinen kişinin sözünü aktararak inandırıcılığı artırm", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Anlatımın Oluşması konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Sayısal veri, istatistik, oran, tarih ve ölçüyle yargıyı güçlendirir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Anlatımın Oluşması konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Benzetme edebî; karşılaştırma düşünceyi geliştirme yoludur, ikisi iç içe geçebilir.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Anlatımın Oluşması konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Kişileştirme insan özelliğini doğaya yükler; düşünce yazısında da görülebilir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Anlatımın Oluşması konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Soyutlama, tekil örnekten genel kavrama gitmektir.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Somutlama hakkında hangisi doğrudur?",
+    "options": ["A) Karşılaştırma, iki varlık veya durumu benzerlik-fark yönünden yan yana getirmektir.", "B) Benzetme (teşbih), aradaki benzerlikten yararlanarak birini diğeriyle anlatmaktır.", "C) Örnekleme, soyut yargıyı somut durumlarla desteklemektir.", "D) Somutlama, genel yargıyı görünür kılmaktır; örnekleme bunun aracıdır.", "E) Tanımlama, kavramın temel niteliklerini sınırlayarak belirtmektir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Anlatımın Oluşması notundaki temel bilgi."
 }
 ];

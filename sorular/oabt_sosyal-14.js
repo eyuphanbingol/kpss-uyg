@@ -55,69 +55,69 @@ window.oabt_sosyal_14_sorulari = [
     "explanation": "UNESCO barış kültürü."
 },
 {
-    "question": "Günümüz Dünya Sorunları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) İklim krizi adalet, göç, kaynak çatışması.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi İklim krizi için doğru bir açıklamadır?",
+    "options": ["A) Göç ve mültecilik 1951 Sözleşmesi sezgisi, uyum-ayrımcılık.", "B) Savaş, terör, silah insancıl hukuk, sivil kayıp.", "C) Salgin ve küresel sağlık dayanışma, aşı milliyetçiliği.", "D) İklim krizi adalet, göç, kaynak çatışması.", "E) Eşitsizlik küresel Kuzey-Güney, içeride Gini, toplumsal cinsiyet."],
+    "correctAnswerIndex": 3,
+    "explanation": "Günümüz Dünya Sorunları notundaki temel bilgi."
 },
 {
-    "question": "Günümüz Dünya Sorunları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Eşitsizlik küresel Kuzey-Güney, içeride Gini, toplumsal cinsiyet.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Eşitsizlik hakkında hangisi doğrudur?",
+    "options": ["A) Savaş, terör, silah insancıl hukuk, sivil kayıp.", "B) Salgin ve küresel sağlık dayanışma, aşı milliyetçiliği.", "C) Eşitsizlik küresel Kuzey-Güney, içeride Gini, toplumsal cinsiyet.", "D) İklim krizi adalet, göç, kaynak çatışması.", "E) Göç ve mültecilik 1951 Sözleşmesi sezgisi, uyum-ayrımcılık."],
+    "correctAnswerIndex": 2,
+    "explanation": "Günümüz Dünya Sorunları notundaki temel bilgi."
+},
+{
+    "question": "Göç ve mültecilik hangisini ifade eder?",
+    "options": ["A) Göç ve mültecilik 1951 Sözleşmesi sezgisi, uyum-ayrımcılık.", "B) İklim krizi adalet, göç, kaynak çatışması.", "C) Eşitsizlik küresel Kuzey-Güney, içeride Gini, toplumsal cinsiyet.", "D) Savaş, terör, silah insancıl hukuk, sivil kayıp.", "E) Salgin ve küresel sağlık dayanışma, aşı milliyetçiliği."],
+    "correctAnswerIndex": 0,
+    "explanation": "Günümüz Dünya Sorunları notundaki temel bilgi."
+},
+{
+    "question": "Savaş, terör, silah ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Göç ve mültecilik 1951 Sözleşmesi sezgisi, uyum-ayrımcılık.", "B) Salgin ve küresel sağlık dayanışma, aşı milliyetçiliği.", "C) Savaş, terör, silah insancıl hukuk, sivil kayıp.", "D) İklim krizi adalet, göç, kaynak çatışması.", "E) Eşitsizlik küresel Kuzey-Güney, içeride Gini, toplumsal cinsiyet."],
+    "correctAnswerIndex": 2,
+    "explanation": "Günümüz Dünya Sorunları notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Salgin ve küresel sağlık için doğru bir açıklamadır?",
+    "options": ["A) Eşitsizlik küresel Kuzey-Güney, içeride Gini, toplumsal cinsiyet.", "B) Göç ve mültecilik 1951 Sözleşmesi sezgisi, uyum-ayrımcılık.", "C) Savaş, terör, silah insancıl hukuk, sivil kayıp.", "D) Salgin ve küresel sağlık dayanışma, aşı milliyetçiliği.", "E) İklim krizi adalet, göç, kaynak çatışması."],
+    "correctAnswerIndex": 3,
+    "explanation": "Günümüz Dünya Sorunları notundaki temel bilgi."
+},
+{
+    "question": "Su, gıda, enerji hakkında hangisi doğrudur?",
+    "options": ["A) Savaş, terör, silah insancıl hukuk, sivil kayıp.", "B) Su, gıda, enerji güvenliği; sanal su, tarım ticareti.", "C) İklim krizi adalet, göç, kaynak çatışması.", "D) Eşitsizlik küresel Kuzey-Güney, içeride Gini, toplumsal cinsiyet.", "E) Göç ve mültecilik 1951 Sözleşmesi sezgisi, uyum-ayrımcılık."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Günümüz Dünya Sorunları notundaki temel bilgi."
 },
 {
-    "question": "Günümüz Dünya Sorunları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Göç ve mültecilik 1951 Sözleşmesi sezgisi, uyum-ayrımcılık.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Günümüz Dünya Sorunları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Savaş, terör, silah insancıl hukuk, sivil kayıp.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Biyoçeşitlilik kaybı hangisini ifade eder?",
+    "options": ["A) Savaş, terör, silah insancıl hukuk, sivil kayıp.", "B) Biyoçeşitlilik kaybı ve okyanus.", "C) İklim krizi adalet, göç, kaynak çatışması.", "D) Eşitsizlik küresel Kuzey-Güney, içeride Gini, toplumsal cinsiyet.", "E) Göç ve mültecilik 1951 Sözleşmesi sezgisi, uyum-ayrımcılık."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Günümüz Dünya Sorunları notundaki temel bilgi."
 },
 {
-    "question": "Günümüz Dünya Sorunları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Salgin ve küresel sağlık dayanışma, aşı milliyetçiliği.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Kentleşme ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Eşitsizlik küresel Kuzey-Güney, içeride Gini, toplumsal cinsiyet.", "B) Göç ve mültecilik 1951 Sözleşmesi sezgisi, uyum-ayrımcılık.", "C) Savaş, terör, silah insancıl hukuk, sivil kayıp.", "D) Kentleşme gecekondu, konut hakkı, ulaşım adaleti.", "E) İklim krizi adalet, göç, kaynak çatışması."],
+    "correctAnswerIndex": 3,
+    "explanation": "Günümüz Dünya Sorunları notundaki temel bilgi."
 },
 {
-    "question": "Günümüz Dünya Sorunları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Su, gıda, enerji güvenliği; sanal su, tarım ticareti.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Dijital gözetim ve mahremiyet için doğru bir açıklamadır?",
+    "options": ["A) Göç ve mültecilik 1951 Sözleşmesi sezgisi, uyum-ayrımcılık.", "B) Savaş, terör, silah insancıl hukuk, sivil kayıp.", "C) Dijital gözetim ve mahremiyet; dezenformasyon.", "D) İklim krizi adalet, göç, kaynak çatışması.", "E) Eşitsizlik küresel Kuzey-Güney, içeride Gini, toplumsal cinsiyet."],
+    "correctAnswerIndex": 2,
+    "explanation": "Günümüz Dünya Sorunları notundaki temel bilgi."
 },
 {
-    "question": "Günümüz Dünya Sorunları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Biyoçeşitlilik kaybı ve okyanus.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Nükleer ve siber güvenlik hakkında hangisi doğrudur?",
+    "options": ["A) Göç ve mültecilik 1951 Sözleşmesi sezgisi, uyum-ayrımcılık.", "B) Savaş, terör, silah insancıl hukuk, sivil kayıp.", "C) Nükleer ve siber güvenlik.", "D) İklim krizi adalet, göç, kaynak çatışması.", "E) Eşitsizlik küresel Kuzey-Güney, içeride Gini, toplumsal cinsiyet."],
+    "correctAnswerIndex": 2,
+    "explanation": "Günümüz Dünya Sorunları notundaki temel bilgi."
 },
 {
-    "question": "Günümüz Dünya Sorunları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Kentleşme gecekondu, konut hakkı, ulaşım adaleti.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Günümüz Dünya Sorunları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Dijital gözetim ve mahremiyet; dezenformasyon.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Günümüz Dünya Sorunları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Nükleer ve siber güvenlik.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Günümüz Dünya Sorunları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Küresel yönetişim BM, Paris İklim, DTÖ tartışmaları; egemenlik gerilimi.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Küresel yönetişim hangisini ifade eder?",
+    "options": ["A) İklim krizi adalet, göç, kaynak çatışması.", "B) Eşitsizlik küresel Kuzey-Güney, içeride Gini, toplumsal cinsiyet.", "C) Göç ve mültecilik 1951 Sözleşmesi sezgisi, uyum-ayrımcılık.", "D) Savaş, terör, silah insancıl hukuk, sivil kayıp.", "E) Küresel yönetişim BM, Paris İklim, DTÖ tartışmaları; egemenlik gerilimi."],
+    "correctAnswerIndex": 4,
+    "explanation": "Günümüz Dünya Sorunları notundaki temel bilgi."
 }
 ];

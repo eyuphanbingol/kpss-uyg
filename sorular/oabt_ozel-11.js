@@ -61,63 +61,63 @@ window.oabt_ozel_11_sorulari = [
     "explanation": "İş birliği."
 },
 {
-    "question": "Özel Eğitimde Okuma-Yazma Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Okuma sesbilgisel farkındalık, harf-ses, akıcılık, anlama.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Okuma için doğru bir açıklamadır?",
+    "options": ["A) OSB görsel destek, ilgiye bağlı metin.", "B) Sistematik ses küçük adım.", "C) Okuma sesbilgisel farkındalık, harf-ses, akıcılık, anlama.", "D) OG ve zihin yetersizliği yoğun, sistematik, çok duyulu ister.", "E) Görme Braille veya büyütme; işitme görsel dil."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Özel Eğitimde Okuma-Yazma Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Okuma-Yazma Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) OG ve zihin yetersizliği yoğun, sistematik, çok duyulu ister."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "OG ve zihin yetersizliği hakkında hangisi doğrudur?",
+    "options": ["A) Okuma sesbilgisel farkındalık, harf-ses, akıcılık, anlama.", "B) Görme Braille veya büyütme; işitme görsel dil.", "C) OSB görsel destek, ilgiye bağlı metin.", "D) İşlevsel okuma tabela, isim, güvenlik.", "E) OG ve zihin yetersizliği yoğun, sistematik, çok duyulu ister."],
+    "correctAnswerIndex": 4,
+    "explanation": "Özel Eğitimde Okuma-Yazma Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Okuma-Yazma Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Görme Braille veya büyütme; işitme görsel dil.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Görme hangisini ifade eder?",
+    "options": ["A) Görme Braille veya büyütme; işitme görsel dil.", "B) Okuma sesbilgisel farkındalık, harf-ses, akıcılık, anlama.", "C) OG ve zihin yetersizliği yoğun, sistematik, çok duyulu ister.", "D) OSB görsel destek, ilgiye bağlı metin.", "E) İşlevsel okuma tabela, isim, güvenlik."],
+    "correctAnswerIndex": 0,
+    "explanation": "Özel Eğitimde Okuma-Yazma Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "OSB ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Görme Braille veya büyütme; işitme görsel dil.", "B) İşlevsel okuma tabela, isim, güvenlik.", "C) OSB görsel destek, ilgiye bağlı metin.", "D) Okuma sesbilgisel farkındalık, harf-ses, akıcılık, anlama.", "E) OG ve zihin yetersizliği yoğun, sistematik, çok duyulu ister."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Özel Eğitimde Okuma-Yazma Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Okuma-Yazma Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) OSB görsel destek, ilgiye bağlı metin."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitimde Okuma-Yazma Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) İşlevsel okuma tabela, isim, güvenlik.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi İşlevsel okuma için doğru bir açıklamadır?",
+    "options": ["A) Görme Braille veya büyütme; işitme görsel dil.", "B) OSB görsel destek, ilgiye bağlı metin.", "C) İşlevsel okuma tabela, isim, güvenlik.", "D) Okuma sesbilgisel farkındalık, harf-ses, akıcılık, anlama.", "E) OG ve zihin yetersizliği yoğun, sistematik, çok duyulu ister."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Özel Eğitimde Okuma-Yazma Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Okuma-Yazma Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Sistematik ses küçük adım."],
+    "question": "Sistematik ses hakkında hangisi doğrudur?",
+    "options": ["A) OG ve zihin yetersizliği yoğun, sistematik, çok duyulu ister.", "B) Görme Braille veya büyütme; işitme görsel dil.", "C) OSB görsel destek, ilgiye bağlı metin.", "D) Sistematik ses küçük adım.", "E) Okuma sesbilgisel farkındalık, harf-ses, akıcılık, anlama."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Özel Eğitimde Okuma-Yazma Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Okuma-Yazma Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Tekrarlı okuma akıcılık.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Tekrarlı okuma hangisini ifade eder?",
+    "options": ["A) OG ve zihin yetersizliği yoğun, sistematik, çok duyulu ister.", "B) Görme Braille veya büyütme; işitme görsel dil.", "C) OSB görsel destek, ilgiye bağlı metin.", "D) Tekrarlı okuma akıcılık.", "E) Okuma sesbilgisel farkındalık, harf-ses, akıcılık, anlama."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitimde Okuma-Yazma Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "AAC destekli ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) OG ve zihin yetersizliği yoğun, sistematik, çok duyulu ister.", "B) Görme Braille veya büyütme; işitme görsel dil.", "C) OSB görsel destek, ilgiye bağlı metin.", "D) AAC destekli okuma öncesi anlam.", "E) Okuma sesbilgisel farkındalık, harf-ses, akıcılık, anlama."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitimde Okuma-Yazma Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Görev analizi için doğru bir açıklamadır?",
+    "options": ["A) Görev analizi yazı motoru.", "B) Okuma sesbilgisel farkındalık, harf-ses, akıcılık, anlama.", "C) OG ve zihin yetersizliği yoğun, sistematik, çok duyulu ister.", "D) Görme Braille veya büyütme; işitme görsel dil.", "E) OSB görsel destek, ilgiye bağlı metin."],
+    "correctAnswerIndex": 0,
+    "explanation": "Özel Eğitimde Okuma-Yazma Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Teknoloji hakkında hangisi doğrudur?",
+    "options": ["A) Görme Braille veya büyütme; işitme görsel dil.", "B) OSB görsel destek, ilgiye bağlı metin.", "C) Teknoloji sesli kitap, konuşma-metin.", "D) Okuma sesbilgisel farkındalık, harf-ses, akıcılık, anlama.", "E) OG ve zihin yetersizliği yoğun, sistematik, çok duyulu ister."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Okuma-Yazma Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) AAC destekli okuma öncesi anlam."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitimde Okuma-Yazma Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Görev analizi yazı motoru.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Okuma-Yazma Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Teknoloji sesli kitap, konuşma-metin."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Özel Eğitimde Okuma-Yazma Öğretimi notundaki temel bilgi."
 }
 ];

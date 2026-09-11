@@ -55,69 +55,69 @@ window.oabt_mat_6_sorulari = [
     "explanation": "Nadir olaylar."
 },
 {
-    "question": "Olasılık konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Olasılık uzayı (Ω,F,P); P(Ω)=1, sayılabilir katkısızlık.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Olasılık uzayı için doğru bir açıklamadır?",
+    "options": ["A) Kesikli PMF, sürekli PDF; karışım dağılımları.", "B) Beklenen değer E[g(X)]=∫ g dP; varyans E[X^2]-(E X)^2.", "C) Bağımsızlık sigma cebirlerinin çarpımı; Cov=0 bağımsızlık gerektirmez.", "D) Olasılık uzayı (Ω,F,P); P(Ω)=1, sayılabilir katkısızlık.", "E) Rassal değişken ölçülebilir fonksiyon; dağılım fonksiyonu F sağdan sürekli, monoton."],
+    "correctAnswerIndex": 3,
+    "explanation": "Olasılık notundaki temel bilgi."
 },
 {
-    "question": "Olasılık konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Rassal değişken ölçülebilir fonksiyon; dağılım fonksiyonu F sağdan sürekli, monoton.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Rassal değişken hakkında hangisi doğrudur?",
+    "options": ["A) Beklenen değer E[g(X)]=∫ g dP; varyans E[X^2]-(E X)^2.", "B) Bağımsızlık sigma cebirlerinin çarpımı; Cov=0 bağımsızlık gerektirmez.", "C) Rassal değişken ölçülebilir fonksiyon; dağılım fonksiyonu F sağdan sürekli, monoton.", "D) Olasılık uzayı (Ω,F,P); P(Ω)=1, sayılabilir katkısızlık.", "E) Kesikli PMF, sürekli PDF; karışım dağılımları."],
+    "correctAnswerIndex": 2,
+    "explanation": "Olasılık notundaki temel bilgi."
+},
+{
+    "question": "Kesikli hangisini ifade eder?",
+    "options": ["A) Kesikli PMF, sürekli PDF; karışım dağılımları.", "B) Olasılık uzayı (Ω,F,P); P(Ω)=1, sayılabilir katkısızlık.", "C) Rassal değişken ölçülebilir fonksiyon; dağılım fonksiyonu F sağdan sürekli, monoton.", "D) Beklenen değer E[g(X)]=∫ g dP; varyans E[X^2]-(E X)^2.", "E) Bağımsızlık sigma cebirlerinin çarpımı; Cov=0 bağımsızlık gerektirmez."],
+    "correctAnswerIndex": 0,
+    "explanation": "Olasılık notundaki temel bilgi."
+},
+{
+    "question": "Beklenen değer ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Bağımsızlık sigma cebirlerinin çarpımı; Cov=0 bağımsızlık gerektirmez.", "B) Beklenen değer E[g(X)]=∫ g dP; varyans E[X^2]-(E X)^2.", "C) Olasılık uzayı (Ω,F,P); P(Ω)=1, sayılabilir katkısızlık.", "D) Rassal değişken ölçülebilir fonksiyon; dağılım fonksiyonu F sağdan sürekli, monoton.", "E) Kesikli PMF, sürekli PDF; karışım dağılımları."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Olasılık notundaki temel bilgi."
 },
 {
-    "question": "Olasılık konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Kesikli PMF, sürekli PDF; karışım dağılımları.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Bağımsızlık için doğru bir açıklamadır?",
+    "options": ["A) Bağımsızlık sigma cebirlerinin çarpımı; Cov=0 bağımsızlık gerektirmez.", "B) Olasılık uzayı (Ω,F,P); P(Ω)=1, sayılabilir katkısızlık.", "C) Rassal değişken ölçülebilir fonksiyon; dağılım fonksiyonu F sağdan sürekli, monoton.", "D) Kesikli PMF, sürekli PDF; karışım dağılımları.", "E) Beklenen değer E[g(X)]=∫ g dP; varyans E[X^2]-(E X)^2."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Olasılık notundaki temel bilgi."
 },
 {
-    "question": "Olasılık konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Beklenen değer E[g(X)]=∫ g dP; varyans E[X^2]-(E X)^2.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Bayes hakkında hangisi doğrudur?",
+    "options": ["A) Bayes P(H|D)=P(D|H)P(H)/P(D); toplam olasılık payda.", "B) Olasılık uzayı (Ω,F,P); P(Ω)=1, sayılabilir katkısızlık.", "C) Rassal değişken ölçülebilir fonksiyon; dağılım fonksiyonu F sağdan sürekli, monoton.", "D) Kesikli PMF, sürekli PDF; karışım dağılımları.", "E) Beklenen değer E[g(X)]=∫ g dP; varyans E[X^2]-(E X)^2."],
+    "correctAnswerIndex": 0,
+    "explanation": "Olasılık notundaki temel bilgi."
+},
+{
+    "question": "Koşullu beklenen hangisini ifade eder?",
+    "options": ["A) Beklenen değer E[g(X)]=∫ g dP; varyans E[X^2]-(E X)^2.", "B) Koşullu beklenen E[X|G] projeksiyon (L2).", "C) Olasılık uzayı (Ω,F,P); P(Ω)=1, sayılabilir katkısızlık.", "D) Rassal değişken ölçülebilir fonksiyon; dağılım fonksiyonu F sağdan sürekli, monoton.", "E) Kesikli PMF, sürekli PDF; karışım dağılımları."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Olasılık notundaki temel bilgi."
 },
 {
-    "question": "Olasılık konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Bağımsızlık sigma cebirlerinin çarpımı; Cov=0 bağımsızlık gerektirmez.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Olasılık konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Bayes P(H|D)=P(D|H)P(H)/P(D); toplam olasılık payda.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "KKT ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Beklenen değer E[g(X)]=∫ g dP; varyans E[X^2]-(E X)^2.", "B) KKT (Chebyshev) kuyruk; Chernoff üstel moment.", "C) Olasılık uzayı (Ω,F,P); P(Ω)=1, sayılabilir katkısızlık.", "D) Rassal değişken ölçülebilir fonksiyon; dağılım fonksiyonu F sağdan sürekli, monoton.", "E) Kesikli PMF, sürekli PDF; karışım dağılımları."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Olasılık notundaki temel bilgi."
 },
 {
-    "question": "Olasılık konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Koşullu beklenen E[X|G] projeksiyon (L2).", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Büyük sayılar için doğru bir açıklamadır?",
+    "options": ["A) Olasılık uzayı (Ω,F,P); P(Ω)=1, sayılabilir katkısızlık.", "B) Rassal değişken ölçülebilir fonksiyon; dağılım fonksiyonu F sağdan sürekli, monoton.", "C) Kesikli PMF, sürekli PDF; karışım dağılımları.", "D) Beklenen değer E[g(X)]=∫ g dP; varyans E[X^2]-(E X)^2.", "E) Büyük sayılar zayıf/güçlü: örneklem ortalaması μ'ye."],
+    "correctAnswerIndex": 4,
+    "explanation": "Olasılık notundaki temel bilgi."
 },
 {
-    "question": "Olasılık konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) KKT (Chebyshev) kuyruk; Chernoff üstel moment.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Merkezi limit hakkında hangisi doğrudur?",
+    "options": ["A) Rassal değişken ölçülebilir fonksiyon; dağılım fonksiyonu F sağdan sürekli, monoton.", "B) Kesikli PMF, sürekli PDF; karışım dağılımları.", "C) Beklenen değer E[g(X)]=∫ g dP; varyans E[X^2]-(E X)^2.", "D) Merkezi limit (CLT) normalize toplam → N(0,1) (Lindeberg koşulları).", "E) Olasılık uzayı (Ω,F,P); P(Ω)=1, sayılabilir katkısızlık."],
+    "correctAnswerIndex": 3,
+    "explanation": "Olasılık notundaki temel bilgi."
 },
 {
-    "question": "Olasılık konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Büyük sayılar zayıf/güçlü: örneklem ortalaması μ'ye.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Olasılık konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Merkezi limit (CLT) normalize toplam → N(0,1) (Lindeberg koşulları).", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Olasılık konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Bernoulli-Binom-Poisson limit ilişkisi; Poisson nadir olay.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Bernoulli-Binom-Poisson hangisini ifade eder?",
+    "options": ["A) Rassal değişken ölçülebilir fonksiyon; dağılım fonksiyonu F sağdan sürekli, monoton.", "B) Kesikli PMF, sürekli PDF; karışım dağılımları.", "C) Beklenen değer E[g(X)]=∫ g dP; varyans E[X^2]-(E X)^2.", "D) Bernoulli-Binom-Poisson limit ilişkisi; Poisson nadir olay.", "E) Olasılık uzayı (Ω,F,P); P(Ω)=1, sayılabilir katkısızlık."],
+    "correctAnswerIndex": 3,
+    "explanation": "Olasılık notundaki temel bilgi."
 }
 ];

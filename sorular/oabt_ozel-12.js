@@ -61,63 +61,63 @@ window.oabt_ozel_12_sorulari = [
     "explanation": "Ölçme."
 },
 {
-    "question": "Özel Eğitimde Fen ve Sosyal Bilgiler Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Fen ve sosyal işlevsel yaşam ve yurttaşlık becerisine bağlanır."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Fen ve Sosyal Bilgiler Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Somut, yerel, tekrar, görsel.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Fen ve sosyal için doğru bir açıklamadır?",
+    "options": ["A) Fen ve sosyal işlevsel yaşam ve yurttaşlık becerisine bağlanır.", "B) Somut, yerel, tekrar, görsel.", "C) Güvenlik fenin birinci kazanımı olabilir.", "D) Vatandaşlık hak, kural, afet, tüketici.", "E) TYMM yetkinlik tema ile birleşir; madde uydurulmaz."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Özel Eğitimde Fen ve Sosyal Bilgiler Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Fen ve Sosyal Bilgiler Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Güvenlik fenin birinci kazanımı olabilir."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Fen ve Sosyal Bilgiler Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Vatandaşlık hak, kural, afet, tüketici.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Somut, yerel, tekrar, görsel hakkında hangisi doğrudur?",
+    "options": ["A) Somut, yerel, tekrar, görsel.", "B) Fen ve sosyal işlevsel yaşam ve yurttaşlık becerisine bağlanır.", "C) Güvenlik fenin birinci kazanımı olabilir.", "D) Vatandaşlık hak, kural, afet, tüketici.", "E) TYMM yetkinlik tema ile birleşir; madde uydurulmaz."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Özel Eğitimde Fen ve Sosyal Bilgiler Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Fen ve Sosyal Bilgiler Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) TYMM yetkinlik tema ile birleşir; madde uydurulmaz."],
+    "question": "Güvenlik hangisini ifade eder?",
+    "options": ["A) Fen ve sosyal işlevsel yaşam ve yurttaşlık becerisine bağlanır.", "B) Somut, yerel, tekrar, görsel.", "C) Vatandaşlık hak, kural, afet, tüketici.", "D) TYMM yetkinlik tema ile birleşir; madde uydurulmaz.", "E) Güvenlik fenin birinci kazanımı olabilir."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Özel Eğitimde Fen ve Sosyal Bilgiler Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Fen ve Sosyal Bilgiler Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Duyu masası, mutfak, bahçe.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Vatandaşlık ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) TYMM yetkinlik tema ile birleşir; madde uydurulmaz.", "B) Vatandaşlık hak, kural, afet, tüketici.", "C) Fen ve sosyal işlevsel yaşam ve yurttaşlık becerisine bağlanır.", "D) Somut, yerel, tekrar, görsel.", "E) Güvenlik fenin birinci kazanımı olabilir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Özel Eğitimde Fen ve Sosyal Bilgiler Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi TYMM yetkinlik için doğru bir açıklamadır?",
+    "options": ["A) Güvenlik fenin birinci kazanımı olabilir.", "B) Vatandaşlık hak, kural, afet, tüketici.", "C) TYMM yetkinlik tema ile birleşir; madde uydurulmaz.", "D) Fen ve sosyal işlevsel yaşam ve yurttaşlık becerisine bağlanır.", "E) Somut, yerel, tekrar, görsel."],
+    "correctAnswerIndex": 2,
+    "explanation": "Özel Eğitimde Fen ve Sosyal Bilgiler Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Duyu masası, mutfak, bahçe hakkında hangisi doğrudur?",
+    "options": ["A) Vatandaşlık hak, kural, afet, tüketici.", "B) Duyu masası, mutfak, bahçe.", "C) Fen ve sosyal işlevsel yaşam ve yurttaşlık becerisine bağlanır.", "D) Somut, yerel, tekrar, görsel.", "E) Güvenlik fenin birinci kazanımı olabilir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Özel Eğitimde Fen ve Sosyal Bilgiler Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Neden-sonuç hangisini ifade eder?",
+    "options": ["A) Güvenlik fenin birinci kazanımı olabilir.", "B) Vatandaşlık hak, kural, afet, tüketici.", "C) Neden-sonuç kısa deney.", "D) Fen ve sosyal işlevsel yaşam ve yurttaşlık becerisine bağlanır.", "E) Somut, yerel, tekrar, görsel."],
+    "correctAnswerIndex": 2,
+    "explanation": "Özel Eğitimde Fen ve Sosyal Bilgiler Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Kaynaştırma laboratuvar uyarlaması için doğru bir açıklamadır?",
+    "options": ["A) Somut, yerel, tekrar, görsel.", "B) Güvenlik fenin birinci kazanımı olabilir.", "C) Vatandaşlık hak, kural, afet, tüketici.", "D) Kaynaştırma laboratuvar uyarlaması.", "E) Fen ve sosyal işlevsel yaşam ve yurttaşlık becerisine bağlanır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitimde Fen ve Sosyal Bilgiler Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Ölçme hakkında hangisi doğrudur?",
+    "options": ["A) Güvenlik fenin birinci kazanımı olabilir.", "B) Vatandaşlık hak, kural, afet, tüketici.", "C) Ölçme süreç rubriği.", "D) Fen ve sosyal işlevsel yaşam ve yurttaşlık becerisine bağlanır.", "E) Somut, yerel, tekrar, görsel."],
+    "correctAnswerIndex": 2,
+    "explanation": "Özel Eğitimde Fen ve Sosyal Bilgiler Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Okul kuralı, para, saat, yön hangisini ifade eder?",
+    "options": ["A) Okul kuralı, para, saat, yön.", "B) Fen ve sosyal işlevsel yaşam ve yurttaşlık becerisine bağlanır.", "C) Somut, yerel, tekrar, görsel.", "D) Güvenlik fenin birinci kazanımı olabilir.", "E) Vatandaşlık hak, kural, afet, tüketici."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitimde Fen ve Sosyal Bilgiler Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Neden-sonuç kısa deney."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Fen ve Sosyal Bilgiler Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Afet ve sağlık.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitimde Fen ve Sosyal Bilgiler Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Kaynaştırma laboratuvar uyarlaması."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Fen ve Sosyal Bilgiler Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Ölçme süreç rubriği.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Özel Eğitimde Fen ve Sosyal Bilgiler Öğretimi notundaki temel bilgi."
 }
 ];

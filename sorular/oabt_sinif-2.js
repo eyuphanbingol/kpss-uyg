@@ -61,63 +61,63 @@ window.oabt_sinif_2_sorulari = [
     "explanation": "İlkokul laboratuvar etiği."
 },
 {
-    "question": "İlkokulda Temel Fen Bilimleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Canlı-cansız; ihtiyaçlar: besin, su, hava, barınak."],
+    "question": "Aşağıdakilerden hangisi Canlı-cansız için doğru bir açıklamadır?",
+    "options": ["A) Dönüşümler fiziksel-kimyasal ilkokul ayrımı sade.", "B) Canlı-cansız; ihtiyaçlar: besin, su, hava, barınak.", "C) Hayvan-bitki sınıflama sezgisi; habitat.", "D) Madde katı-sıvı-gaz; erime-kaynama-donma.", "E) Karışım elenme, süzme, mıknatıs."],
+    "correctAnswerIndex": 1,
+    "explanation": "İlkokulda Temel Fen Bilimleri notundaki temel bilgi."
+},
+{
+    "question": "Hayvan-bitki hakkında hangisi doğrudur?",
+    "options": ["A) Canlı-cansız; ihtiyaçlar: besin, su, hava, barınak.", "B) Madde katı-sıvı-gaz; erime-kaynama-donma.", "C) Karışım elenme, süzme, mıknatıs.", "D) Dönüşümler fiziksel-kimyasal ilkokul ayrımı sade.", "E) Hayvan-bitki sınıflama sezgisi; habitat."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "İlkokulda Temel Fen Bilimleri notundaki temel bilgi."
 },
 {
-    "question": "İlkokulda Temel Fen Bilimleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Hayvan-bitki sınıflama sezgisi; habitat.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Madde hangisini ifade eder?",
+    "options": ["A) Dönüşümler fiziksel-kimyasal ilkokul ayrımı sade.", "B) Madde katı-sıvı-gaz; erime-kaynama-donma.", "C) Canlı-cansız; ihtiyaçlar: besin, su, hava, barınak.", "D) Hayvan-bitki sınıflama sezgisi; habitat.", "E) Karışım elenme, süzme, mıknatıs."],
+    "correctAnswerIndex": 1,
+    "explanation": "İlkokulda Temel Fen Bilimleri notundaki temel bilgi."
 },
 {
-    "question": "İlkokulda Temel Fen Bilimleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Madde katı-sıvı-gaz; erime-kaynama-donma."],
+    "question": "Karışım ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Canlı-cansız; ihtiyaçlar: besin, su, hava, barınak.", "B) Hayvan-bitki sınıflama sezgisi; habitat.", "C) Madde katı-sıvı-gaz; erime-kaynama-donma.", "D) Dönüşümler fiziksel-kimyasal ilkokul ayrımı sade.", "E) Karışım elenme, süzme, mıknatıs."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "İlkokulda Temel Fen Bilimleri notundaki temel bilgi."
 },
 {
-    "question": "İlkokulda Temel Fen Bilimleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Karışım elenme, süzme, mıknatıs.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Dönüşümler için doğru bir açıklamadır?",
+    "options": ["A) Dönüşümler fiziksel-kimyasal ilkokul ayrımı sade.", "B) Canlı-cansız; ihtiyaçlar: besin, su, hava, barınak.", "C) Hayvan-bitki sınıflama sezgisi; habitat.", "D) Madde katı-sıvı-gaz; erime-kaynama-donma.", "E) Karışım elenme, süzme, mıknatıs."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İlkokulda Temel Fen Bilimleri notundaki temel bilgi."
 },
 {
-    "question": "İlkokulda Temel Fen Bilimleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Dönüşümler fiziksel-kimyasal ilkokul ayrımı sade."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İlkokulda Temel Fen Bilimleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Kuvvet itme-çekme; mıknatıs, yerçekimi sezgisi.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Kuvvet hakkında hangisi doğrudur?",
+    "options": ["A) Kuvvet itme-çekme; mıknatıs, yerçekimi sezgisi.", "B) Canlı-cansız; ihtiyaçlar: besin, su, hava, barınak.", "C) Hayvan-bitki sınıflama sezgisi; habitat.", "D) Madde katı-sıvı-gaz; erime-kaynama-donma.", "E) Karışım elenme, süzme, mıknatıs."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İlkokulda Temel Fen Bilimleri notundaki temel bilgi."
 },
 {
-    "question": "İlkokulda Temel Fen Bilimleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Hareket hızlı-yavaş, yön."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Hareket hangisini ifade eder?",
+    "options": ["A) Hayvan-bitki sınıflama sezgisi; habitat.", "B) Madde katı-sıvı-gaz; erime-kaynama-donma.", "C) Karışım elenme, süzme, mıknatıs.", "D) Hareket hızlı-yavaş, yön.", "E) Canlı-cansız; ihtiyaçlar: besin, su, hava, barınak."],
+    "correctAnswerIndex": 3,
+    "explanation": "İlkokulda Temel Fen Bilimleri notundaki temel bilgi."
 },
 {
-    "question": "İlkokulda Temel Fen Bilimleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Enerji ısı, ışık, ses, elektrik basit devre.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Enerji ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Enerji ısı, ışık, ses, elektrik basit devre.", "B) Canlı-cansız; ihtiyaçlar: besin, su, hava, barınak.", "C) Hayvan-bitki sınıflama sezgisi; habitat.", "D) Madde katı-sıvı-gaz; erime-kaynama-donma.", "E) Karışım elenme, süzme, mıknatıs."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İlkokulda Temel Fen Bilimleri notundaki temel bilgi."
 },
 {
-    "question": "İlkokulda Temel Fen Bilimleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Dünya gece-gündüz, mevsim; ay-güneş sezgisel."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Dünya için doğru bir açıklamadır?",
+    "options": ["A) Hayvan-bitki sınıflama sezgisi; habitat.", "B) Madde katı-sıvı-gaz; erime-kaynama-donma.", "C) Karışım elenme, süzme, mıknatıs.", "D) Dünya gece-gündüz, mevsim; ay-güneş sezgisel.", "E) Canlı-cansız; ihtiyaçlar: besin, su, hava, barınak."],
+    "correctAnswerIndex": 3,
+    "explanation": "İlkokulda Temel Fen Bilimleri notundaki temel bilgi."
 },
 {
-    "question": "İlkokulda Temel Fen Bilimleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Hava olayları yağış, rüzgâr, sıcaklık ölçme.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Hava olayları hakkında hangisi doğrudur?",
+    "options": ["A) Hayvan-bitki sınıflama sezgisi; habitat.", "B) Madde katı-sıvı-gaz; erime-kaynama-donma.", "C) Karışım elenme, süzme, mıknatıs.", "D) Hava olayları yağış, rüzgâr, sıcaklık ölçme.", "E) Canlı-cansız; ihtiyaçlar: besin, su, hava, barınak."],
+    "correctAnswerIndex": 3,
+    "explanation": "İlkokulda Temel Fen Bilimleri notundaki temel bilgi."
 }
 ];

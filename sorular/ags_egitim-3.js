@@ -73,51 +73,51 @@ window.ags_egitim_3_sorulari = [
     "explanation": "Toplumsal cinsiyet ve eğitim."
 },
 {
-    "question": "Eğitimin Toplumsal Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Toplumsallaşma, bireyin toplumun değer, norm ve rollerini içselleştirmesidir; okul resmi a", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Eğitimin Toplumsal Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Durkheim eğitimi toplumsal dayanışmanın (mekanik-organik) yeniden üretimi sayar."],
+    "question": "Aşağıdakilerden hangisi Toplumsallaşma için doğru bir açıklamadır?",
+    "options": ["A) Parsons okulu evrenselci-başarı yönelimli seçme ve yerleştirme işleviyle açıklar.", "B) Gizli müfredat resmi programda yazmayan norm, itaat, zaman ve hiyerarşi öğrenmesidir.", "C) Açık işlev okuryazarlık-meslek; örtük işlev evlilik piyasası, çocuk bakımı, statü işaretidir.", "D) Toplumsallaşma, bireyin toplumun değer, norm ve rollerini içselleştirmesidir; okul resmi aracıdır.", "E) Durkheim eğitimi toplumsal dayanışmanın (mekanik-organik) yeniden üretimi sayar."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Eğitimin Toplumsal Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Eğitimin Toplumsal Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Parsons okulu evrenselci-başarı yönelimli seçme ve yerleştirme işleviyle açıklar.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Durkheim hakkında hangisi doğrudur?",
+    "options": ["A) Durkheim eğitimi toplumsal dayanışmanın (mekanik-organik) yeniden üretimi sayar.", "B) Toplumsallaşma, bireyin toplumun değer, norm ve rollerini içselleştirmesidir; okul resmi aracıdır.", "C) Parsons okulu evrenselci-başarı yönelimli seçme ve yerleştirme işleviyle açıklar.", "D) Gizli müfredat resmi programda yazmayan norm, itaat, zaman ve hiyerarşi öğrenmesidir.", "E) Açık işlev okuryazarlık-meslek; örtük işlev evlilik piyasası, çocuk bakımı, statü işaretidir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Eğitimin Toplumsal Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Eğitimin Toplumsal Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Gizli müfredat resmi programda yazmayan norm, itaat, zaman ve hiyerarşi öğrenmesidir."],
+    "question": "Parsons hangisini ifade eder?",
+    "options": ["A) Toplumsallaşma, bireyin toplumun değer, norm ve rollerini içselleştirmesidir; okul resmi aracıdır.", "B) Durkheim eğitimi toplumsal dayanışmanın (mekanik-organik) yeniden üretimi sayar.", "C) Gizli müfredat resmi programda yazmayan norm, itaat, zaman ve hiyerarşi öğrenmesidir.", "D) Açık işlev okuryazarlık-meslek; örtük işlev evlilik piyasası, çocuk bakımı, statü işaretidir.", "E) Parsons okulu evrenselci-başarı yönelimli seçme ve yerleştirme işleviyle açıklar."],
+    "correctAnswerIndex": 4,
+    "explanation": "Eğitimin Toplumsal Temelleri notundaki temel bilgi."
+},
+{
+    "question": "Gizli müfredat ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Açık işlev okuryazarlık-meslek; örtük işlev evlilik piyasası, çocuk bakımı, statü işaretidir.", "B) Gizli müfredat resmi programda yazmayan norm, itaat, zaman ve hiyerarşi öğrenmesidir.", "C) Toplumsallaşma, bireyin toplumun değer, norm ve rollerini içselleştirmesidir; okul resmi aracıdır.", "D) Durkheim eğitimi toplumsal dayanışmanın (mekanik-organik) yeniden üretimi sayar.", "E) Parsons okulu evrenselci-başarı yönelimli seçme ve yerleştirme işleviyle açıklar."],
+    "correctAnswerIndex": 1,
+    "explanation": "Eğitimin Toplumsal Temelleri notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Açık işlev için doğru bir açıklamadır?",
+    "options": ["A) Durkheim eğitimi toplumsal dayanışmanın (mekanik-organik) yeniden üretimi sayar.", "B) Parsons okulu evrenselci-başarı yönelimli seçme ve yerleştirme işleviyle açıklar.", "C) Gizli müfredat resmi programda yazmayan norm, itaat, zaman ve hiyerarşi öğrenmesidir.", "D) Açık işlev okuryazarlık-meslek; örtük işlev evlilik piyasası, çocuk bakımı, statü işaretidir.", "E) Toplumsallaşma, bireyin toplumun değer, norm ve rollerini içselleştirmesidir; okul resmi aracıdır."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Eğitimin Toplumsal Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Eğitimin Toplumsal Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Açık işlev okuryazarlık-meslek; örtük işlev evlilik piyasası, çocuk bakımı, statü işaretid", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Kültürel sermaye hakkında hangisi doğrudur?",
+    "options": ["A) Toplumsallaşma, bireyin toplumun değer, norm ve rollerini içselleştirmesidir; okul resmi aracıdır.", "B) Durkheim eğitimi toplumsal dayanışmanın (mekanik-organik) yeniden üretimi sayar.", "C) Parsons okulu evrenselci-başarı yönelimli seçme ve yerleştirme işleviyle açıklar.", "D) Gizli müfredat resmi programda yazmayan norm, itaat, zaman ve hiyerarşi öğrenmesidir.", "E) Kültürel sermaye (Bourdieu) dil, beğeni ve okul kodlarının orta sınıf lehine işlemesi."],
+    "correctAnswerIndex": 4,
+    "explanation": "Eğitimin Toplumsal Temelleri notundaki temel bilgi."
+},
+{
+    "question": "Çatışmacı kuram hangisini ifade eder?",
+    "options": ["A) Parsons okulu evrenselci-başarı yönelimli seçme ve yerleştirme işleviyle açıklar.", "B) Gizli müfredat resmi programda yazmayan norm, itaat, zaman ve hiyerarşi öğrenmesidir.", "C) Çatışmacı kuram okulu egemen sınıfların ayrıcalığını meşrulaştıran aygıt görür.", "D) Toplumsallaşma, bireyin toplumun değer, norm ve rollerini içselleştirmesidir; okul resmi aracıdır.", "E) Durkheim eğitimi toplumsal dayanışmanın (mekanik-organik) yeniden üretimi sayar."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Eğitimin Toplumsal Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Eğitimin Toplumsal Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Kültürel sermaye (Bourdieu) dil, beğeni ve okul kodlarının orta sınıf lehine işlemesi."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Eğitimin Toplumsal Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Çatışmacı kuram okulu egemen sınıfların ayrıcalığını meşrulaştıran aygıt görür.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Eğitimin Toplumsal Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Sosyal hareketlilik eğitimle statü değişimi; asansör işlevi tartışmalıdır."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Sosyal hareketlilik ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Sosyal hareketlilik eğitimle statü değişimi; asansör işlevi tartışmalıdır.", "B) Toplumsallaşma, bireyin toplumun değer, norm ve rollerini içselleştirmesidir; okul resmi aracıdır.", "C) Durkheim eğitimi toplumsal dayanışmanın (mekanik-organik) yeniden üretimi sayar.", "D) Parsons okulu evrenselci-başarı yönelimli seçme ve yerleştirme işleviyle açıklar.", "E) Gizli müfredat resmi programda yazmayan norm, itaat, zaman ve hiyerarşi öğrenmesidir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Eğitimin Toplumsal Temelleri notundaki temel bilgi."
 }
 ];

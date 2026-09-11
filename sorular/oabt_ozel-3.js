@@ -61,63 +61,63 @@ window.oabt_ozel_3_sorulari = [
     "explanation": "Erişim."
 },
 {
-    "question": "İşitme ve Görme Yetersizliği konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) İşitme yetersizliği işitsel algı ve dil erişimini etkiler; derece ve başlangıç yaşı kritik"],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi İşitme yetersizliği için doğru bir açıklamadır?",
+    "options": ["A) İşaret dili, sözel yöntem, toplam iletişim, koklear implant aile-uzman kararıdır; tek doğru dayatılmaz.", "B) Akustik ortam gürültü, oturma düzeni, FM sistem.", "C) Yazı ve görsel erişim; altyazı.", "D) İşitme yetersizliği işitsel algı ve dil erişimini etkiler; derece ve başlangıç yaşı kritiktir.", "E) Premlingual-postlingual dil gelişimini farklı keser."],
+    "correctAnswerIndex": 3,
+    "explanation": "İşitme ve Görme Yetersizliği notundaki temel bilgi."
 },
 {
-    "question": "İşitme ve Görme Yetersizliği konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Premlingual-postlingual dil gelişimini farklı keser.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Premlingual-postlingual hakkında hangisi doğrudur?",
+    "options": ["A) Yazı ve görsel erişim; altyazı.", "B) Premlingual-postlingual dil gelişimini farklı keser.", "C) İşitme yetersizliği işitsel algı ve dil erişimini etkiler; derece ve başlangıç yaşı kritiktir.", "D) İşaret dili, sözel yöntem, toplam iletişim, koklear implant aile-uzman kararıdır; tek doğru dayatılmaz.", "E) Akustik ortam gürültü, oturma düzeni, FM sistem."],
+    "correctAnswerIndex": 1,
+    "explanation": "İşitme ve Görme Yetersizliği notundaki temel bilgi."
+},
+{
+    "question": "İşaret dili, sözel yöntem hangisini ifade eder?",
+    "options": ["A) İşaret dili, sözel yöntem, toplam iletişim, koklear implant aile-uzman kararıdır; tek doğru dayatılmaz.", "B) İşitme yetersizliği işitsel algı ve dil erişimini etkiler; derece ve başlangıç yaşı kritiktir.", "C) Premlingual-postlingual dil gelişimini farklı keser.", "D) Akustik ortam gürültü, oturma düzeni, FM sistem.", "E) Yazı ve görsel erişim; altyazı."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İşitme ve Görme Yetersizliği notundaki temel bilgi."
 },
 {
-    "question": "İşitme ve Görme Yetersizliği konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) İşaret dili, sözel yöntem, toplam iletişim, koklear implant aile-uzman kararıdır; tek doğr"],
+    "question": "Akustik ortam ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İşitme yetersizliği işitsel algı ve dil erişimini etkiler; derece ve başlangıç yaşı kritiktir.", "B) Premlingual-postlingual dil gelişimini farklı keser.", "C) İşaret dili, sözel yöntem, toplam iletişim, koklear implant aile-uzman kararıdır; tek doğru dayatılmaz.", "D) Yazı ve görsel erişim; altyazı.", "E) Akustik ortam gürültü, oturma düzeni, FM sistem."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "İşitme ve Görme Yetersizliği notundaki temel bilgi."
 },
 {
-    "question": "İşitme ve Görme Yetersizliği konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Akustik ortam gürültü, oturma düzeni, FM sistem.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Yazı ve görsel için doğru bir açıklamadır?",
+    "options": ["A) Premlingual-postlingual dil gelişimini farklı keser.", "B) İşaret dili, sözel yöntem, toplam iletişim, koklear implant aile-uzman kararıdır; tek doğru dayatılmaz.", "C) Akustik ortam gürültü, oturma düzeni, FM sistem.", "D) Yazı ve görsel erişim; altyazı.", "E) İşitme yetersizliği işitsel algı ve dil erişimini etkiler; derece ve başlangıç yaşı kritiktir."],
+    "correctAnswerIndex": 3,
+    "explanation": "İşitme ve Görme Yetersizliği notundaki temel bilgi."
+},
+{
+    "question": "Az gören ve kör hakkında hangisi doğrudur?",
+    "options": ["A) İşaret dili, sözel yöntem, toplam iletişim, koklear implant aile-uzman kararıdır; tek doğru dayatılmaz.", "B) Akustik ortam gürültü, oturma düzeni, FM sistem.", "C) Az gören ve kör ayrımı işlevseldir; görme keskinliği ve alan.", "D) İşitme yetersizliği işitsel algı ve dil erişimini etkiler; derece ve başlangıç yaşı kritiktir.", "E) Premlingual-postlingual dil gelişimini farklı keser."],
+    "correctAnswerIndex": 2,
+    "explanation": "İşitme ve Görme Yetersizliği notundaki temel bilgi."
+},
+{
+    "question": "Braille, büyütme, sesli betimleme, oryantasyon-mobilite hangisini ifade eder?",
+    "options": ["A) Braille, büyütme, sesli betimleme, oryantasyon-mobilite.", "B) İşitme yetersizliği işitsel algı ve dil erişimini etkiler; derece ve başlangıç yaşı kritiktir.", "C) Premlingual-postlingual dil gelişimini farklı keser.", "D) İşaret dili, sözel yöntem, toplam iletişim, koklear implant aile-uzman kararıdır; tek doğru dayatılmaz.", "E) Akustik ortam gürültü, oturma düzeni, FM sistem."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İşitme ve Görme Yetersizliği notundaki temel bilgi."
 },
 {
-    "question": "İşitme ve Görme Yetersizliği konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Yazı ve görsel erişim; altyazı."],
+    "question": "Beyaz baston ve rehber köpek ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İşitme yetersizliği işitsel algı ve dil erişimini etkiler; derece ve başlangıç yaşı kritiktir.", "B) Premlingual-postlingual dil gelişimini farklı keser.", "C) İşaret dili, sözel yöntem, toplam iletişim, koklear implant aile-uzman kararıdır; tek doğru dayatılmaz.", "D) Akustik ortam gürültü, oturma düzeni, FM sistem.", "E) Beyaz baston ve rehber köpek bağımsızlık."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "İşitme ve Görme Yetersizliği notundaki temel bilgi."
 },
 {
-    "question": "İşitme ve Görme Yetersizliği konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Az gören ve kör ayrımı işlevseldir; görme keskinliği ve alan.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "İşitme ve Görme Yetersizliği konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Braille, büyütme, sesli betimleme, oryantasyon-mobilite."],
+    "question": "Aşağıdakilerden hangisi Körlük için doğru bir açıklamadır?",
+    "options": ["A) İşitme yetersizliği işitsel algı ve dil erişimini etkiler; derece ve başlangıç yaşı kritiktir.", "B) Premlingual-postlingual dil gelişimini farklı keser.", "C) İşaret dili, sözel yöntem, toplam iletişim, koklear implant aile-uzman kararıdır; tek doğru dayatılmaz.", "D) Akustik ortam gürültü, oturma düzeni, FM sistem.", "E) Körlük zihin yetersizliği değildir."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "İşitme ve Görme Yetersizliği notundaki temel bilgi."
 },
 {
-    "question": "İşitme ve Görme Yetersizliği konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Beyaz baston ve rehber köpek bağımsızlık.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "İşitme ve Görme Yetersizliği konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Körlük zihin yetersizliği değildir."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İşitme ve Görme Yetersizliği konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Işık, kontrast, basılı malzeme uyarlama az gören için.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Işık, kontrast, basılı malzeme uyarlama hakkında hangisi doğrudur?",
+    "options": ["A) İşaret dili, sözel yöntem, toplam iletişim, koklear implant aile-uzman kararıdır; tek doğru dayatılmaz.", "B) Akustik ortam gürültü, oturma düzeni, FM sistem.", "C) Işık, kontrast, basılı malzeme uyarlama az gören için.", "D) İşitme yetersizliği işitsel algı ve dil erişimini etkiler; derece ve başlangıç yaşı kritiktir.", "E) Premlingual-postlingual dil gelişimini farklı keser."],
+    "correctAnswerIndex": 2,
+    "explanation": "İşitme ve Görme Yetersizliği notundaki temel bilgi."
 }
 ];

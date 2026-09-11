@@ -55,69 +55,69 @@ window.oabt_bio_3_sorulari = [
     "explanation": "Erken stop sık."
 },
 {
-    "question": "Genetik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Mendel ayrılma ve bağımsız açılım; test çaprazı 1:1.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Genetik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eksik baskınlık, kodominans, pleiotropi, epistazi, bağlı genler Mendel sapmaları.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi Mendel için doğru bir açıklamadır?",
+    "options": ["A) Cinsiyet XY, ZW, haplodiploidi; X'e bağlı kalıtım.", "B) Hardy-Weinberg p^2+2pq+q^2; sapma kuvvetleri seçilim, göç, sürüklenme, mutasyon, eşleşmeme.", "C) Soyağacı otozomal/X'e bağlı, baskın/çekinik ayırımı.", "D) Mutasyon nokta, çerçeve kayması, aneuploidi, poliploidi.", "E) Mendel ayrılma ve bağımsız açılım; test çaprazı 1:1."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Genetik notundaki temel bilgi."
 },
 {
-    "question": "Genetik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Cinsiyet XY, ZW, haplodiploidi; X'e bağlı kalıtım.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Eksik baskınlık, kodominans, pleiotropi hakkında hangisi doğrudur?",
+    "options": ["A) Soyağacı otozomal/X'e bağlı, baskın/çekinik ayırımı.", "B) Eksik baskınlık, kodominans, pleiotropi, epistazi, bağlı genler Mendel sapmaları.", "C) Mendel ayrılma ve bağımsız açılım; test çaprazı 1:1.", "D) Cinsiyet XY, ZW, haplodiploidi; X'e bağlı kalıtım.", "E) Hardy-Weinberg p^2+2pq+q^2; sapma kuvvetleri seçilim, göç, sürüklenme, mutasyon, eşleşmeme."],
+    "correctAnswerIndex": 1,
+    "explanation": "Genetik notundaki temel bilgi."
 },
 {
-    "question": "Genetik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Hardy-Weinberg p^2+2pq+q^2; sapma kuvvetleri seçilim, göç, sürüklenme, mutasyon, eşleşmeme", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Cinsiyet hangisini ifade eder?",
+    "options": ["A) Soyağacı otozomal/X'e bağlı, baskın/çekinik ayırımı.", "B) Cinsiyet XY, ZW, haplodiploidi; X'e bağlı kalıtım.", "C) Mendel ayrılma ve bağımsız açılım; test çaprazı 1:1.", "D) Eksik baskınlık, kodominans, pleiotropi, epistazi, bağlı genler Mendel sapmaları.", "E) Hardy-Weinberg p^2+2pq+q^2; sapma kuvvetleri seçilim, göç, sürüklenme, mutasyon, eşleşmeme."],
+    "correctAnswerIndex": 1,
+    "explanation": "Genetik notundaki temel bilgi."
+},
+{
+    "question": "Hardy-Weinberg ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Cinsiyet XY, ZW, haplodiploidi; X'e bağlı kalıtım.", "B) Soyağacı otozomal/X'e bağlı, baskın/çekinik ayırımı.", "C) Hardy-Weinberg p^2+2pq+q^2; sapma kuvvetleri seçilim, göç, sürüklenme, mutasyon, eşleşmeme.", "D) Mendel ayrılma ve bağımsız açılım; test çaprazı 1:1.", "E) Eksik baskınlık, kodominans, pleiotropi, epistazi, bağlı genler Mendel sapmaları."],
+    "correctAnswerIndex": 2,
+    "explanation": "Genetik notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Soyağacı için doğru bir açıklamadır?",
+    "options": ["A) Hardy-Weinberg p^2+2pq+q^2; sapma kuvvetleri seçilim, göç, sürüklenme, mutasyon, eşleşmeme.", "B) Soyağacı otozomal/X'e bağlı, baskın/çekinik ayırımı.", "C) Mendel ayrılma ve bağımsız açılım; test çaprazı 1:1.", "D) Eksik baskınlık, kodominans, pleiotropi, epistazi, bağlı genler Mendel sapmaları.", "E) Cinsiyet XY, ZW, haplodiploidi; X'e bağlı kalıtım."],
+    "correctAnswerIndex": 1,
+    "explanation": "Genetik notundaki temel bilgi."
+},
+{
+    "question": "Mutasyon hakkında hangisi doğrudur?",
+    "options": ["A) Soyağacı otozomal/X'e bağlı, baskın/çekinik ayırımı.", "B) Mutasyon nokta, çerçeve kayması, aneuploidi, poliploidi.", "C) Mendel ayrılma ve bağımsız açılım; test çaprazı 1:1.", "D) Eksik baskınlık, kodominans, pleiotropi, epistazi, bağlı genler Mendel sapmaları.", "E) Cinsiyet XY, ZW, haplodiploidi; X'e bağlı kalıtım."],
+    "correctAnswerIndex": 1,
+    "explanation": "Genetik notundaki temel bilgi."
+},
+{
+    "question": "Kromozom hangisini ifade eder?",
+    "options": ["A) Mendel ayrılma ve bağımsız açılım; test çaprazı 1:1.", "B) Eksik baskınlık, kodominans, pleiotropi, epistazi, bağlı genler Mendel sapmaları.", "C) Cinsiyet XY, ZW, haplodiploidi; X'e bağlı kalıtım.", "D) Hardy-Weinberg p^2+2pq+q^2; sapma kuvvetleri seçilim, göç, sürüklenme, mutasyon, eşleşmeme.", "E) Kromozom del-dup-inv-translokasyon; Barr cismi."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Genetik notundaki temel bilgi."
 },
 {
-    "question": "Genetik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Soyağacı otozomal/X'e bağlı, baskın/çekinik ayırımı.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Ekstrakromozomal ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Eksik baskınlık, kodominans, pleiotropi, epistazi, bağlı genler Mendel sapmaları.", "B) Cinsiyet XY, ZW, haplodiploidi; X'e bağlı kalıtım.", "C) Hardy-Weinberg p^2+2pq+q^2; sapma kuvvetleri seçilim, göç, sürüklenme, mutasyon, eşleşmeme.", "D) Ekstrakromozomal mitokondriyal anne hattı.", "E) Mendel ayrılma ve bağımsız açılım; test çaprazı 1:1."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Genetik notundaki temel bilgi."
 },
 {
-    "question": "Genetik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mutasyon nokta, çerçeve kayması, aneuploidi, poliploidi.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi Epigenetik için doğru bir açıklamadır?",
+    "options": ["A) Cinsiyet XY, ZW, haplodiploidi; X'e bağlı kalıtım.", "B) Hardy-Weinberg p^2+2pq+q^2; sapma kuvvetleri seçilim, göç, sürüklenme, mutasyon, eşleşmeme.", "C) Epigenetik metilasyon, histon, genomik imprinting.", "D) Mendel ayrılma ve bağımsız açılım; test çaprazı 1:1.", "E) Eksik baskınlık, kodominans, pleiotropi, epistazi, bağlı genler Mendel sapmaları."],
+    "correctAnswerIndex": 2,
+    "explanation": "Genetik notundaki temel bilgi."
+},
+{
+    "question": "Kantitatif hakkında hangisi doğrudur?",
+    "options": ["A) Hardy-Weinberg p^2+2pq+q^2; sapma kuvvetleri seçilim, göç, sürüklenme, mutasyon, eşleşmeme.", "B) Kantitatif çok gen + çevre; kalıtsallık h^2.", "C) Mendel ayrılma ve bağımsız açılım; test çaprazı 1:1.", "D) Eksik baskınlık, kodominans, pleiotropi, epistazi, bağlı genler Mendel sapmaları.", "E) Cinsiyet XY, ZW, haplodiploidi; X'e bağlı kalıtım."],
+    "correctAnswerIndex": 1,
+    "explanation": "Genetik notundaki temel bilgi."
+},
+{
+    "question": "Genetik danışma hangisini ifade eder?",
+    "options": ["A) Mendel ayrılma ve bağımsız açılım; test çaprazı 1:1.", "B) Eksik baskınlık, kodominans, pleiotropi, epistazi, bağlı genler Mendel sapmaları.", "C) Cinsiyet XY, ZW, haplodiploidi; X'e bağlı kalıtım.", "D) Hardy-Weinberg p^2+2pq+q^2; sapma kuvvetleri seçilim, göç, sürüklenme, mutasyon, eşleşmeme.", "E) Genetik danışma olasılık, etik."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Genetik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Kromozom del-dup-inv-translokasyon; Barr cismi.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Genetik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Ekstrakromozomal mitokondriyal anne hattı.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Genetik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Epigenetik metilasyon, histon, genomik imprinting.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Genetik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Kantitatif çok gen + çevre; kalıtsallık h^2.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Genetik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Genetik danışma olasılık, etik.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Genetik notundaki temel bilgi."
 }
 ];

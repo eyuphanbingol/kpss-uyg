@@ -61,63 +61,63 @@ window.oabt_rehber_10_sorulari = [
     "explanation": "Yetki sınırı."
 },
 {
-    "question": "Özel Eğitim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Özel eğitim ihtiyacı yetersizlik + eğitimsel gereksinimdir.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Kaynaştırma/bütünleştirme hakkında hangisi doğrudur?",
+    "options": ["A) BEP bireyselleştirilmiş hedefler; PDR ekip üyesidir.", "B) RAM eğitsel değerlendirme ve yönlendirme.", "C) UDA, görsel destek, PECS OSB ve iletişimde sık araç.", "D) Kaynaştırma/bütünleştirme en az kısıtlayıcı ortam.", "E) Özel eğitim ihtiyacı yetersizlik + eğitimsel gereksinimdir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitim notundaki temel bilgi."
+},
+{
+    "question": "BEP hangisini ifade eder?",
+    "options": ["A) UDA, görsel destek, PECS OSB ve iletişimde sık araç.", "B) BEP bireyselleştirilmiş hedefler; PDR ekip üyesidir.", "C) Özel eğitim ihtiyacı yetersizlik + eğitimsel gereksinimdir.", "D) Kaynaştırma/bütünleştirme en az kısıtlayıcı ortam.", "E) RAM eğitsel değerlendirme ve yönlendirme."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Özel Eğitim notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitim konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Kaynaştırma/bütünleştirme en az kısıtlayıcı ortam.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) BEP bireyselleştirilmiş hedefler; PDR ekip üyesidir.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "RAM ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) UDA, görsel destek, PECS OSB ve iletişimde sık araç.", "B) RAM eğitsel değerlendirme ve yönlendirme.", "C) Özel eğitim ihtiyacı yetersizlik + eğitimsel gereksinimdir.", "D) Kaynaştırma/bütünleştirme en az kısıtlayıcı ortam.", "E) BEP bireyselleştirilmiş hedefler; PDR ekip üyesidir."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Özel Eğitim notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitim konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) RAM eğitsel değerlendirme ve yönlendirme.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi UDA, görsel destek, PECS için doğru bir açıklamadır?",
+    "options": ["A) Kaynaştırma/bütünleştirme en az kısıtlayıcı ortam.", "B) BEP bireyselleştirilmiş hedefler; PDR ekip üyesidir.", "C) RAM eğitsel değerlendirme ve yönlendirme.", "D) UDA, görsel destek, PECS OSB ve iletişimde sık araç.", "E) Özel eğitim ihtiyacı yetersizlik + eğitimsel gereksinimdir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitim notundaki temel bilgi."
+},
+{
+    "question": "Zihin yetersizliği hakkında hangisi doğrudur?",
+    "options": ["A) Özel eğitim ihtiyacı yetersizlik + eğitimsel gereksinimdir.", "B) Kaynaştırma/bütünleştirme en az kısıtlayıcı ortam.", "C) BEP bireyselleştirilmiş hedefler; PDR ekip üyesidir.", "D) RAM eğitsel değerlendirme ve yönlendirme.", "E) Zihin yetersizliği zihinsel işlev + uyumsal davranış, gelişim döneminde başlar."],
+    "correctAnswerIndex": 4,
+    "explanation": "Özel Eğitim notundaki temel bilgi."
+},
+{
+    "question": "OSB hangisini ifade eder?",
+    "options": ["A) Kaynaştırma/bütünleştirme en az kısıtlayıcı ortam.", "B) BEP bireyselleştirilmiş hedefler; PDR ekip üyesidir.", "C) RAM eğitsel değerlendirme ve yönlendirme.", "D) OSB DSM-5 sosyal iletişim ve kısıtlı-tekrarlayan davranış.", "E) Özel eğitim ihtiyacı yetersizlik + eğitimsel gereksinimdir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitim notundaki temel bilgi."
+},
+{
+    "question": "Öğrenme güçlüğü ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) BEP bireyselleştirilmiş hedefler; PDR ekip üyesidir.", "B) RAM eğitsel değerlendirme ve yönlendirme.", "C) Öğrenme güçlüğü okuma, yazma, matematik; zeka geriliği değildir.", "D) Özel eğitim ihtiyacı yetersizlik + eğitimsel gereksinimdir.", "E) Kaynaştırma/bütünleştirme en az kısıtlayıcı ortam."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Özel Eğitim notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) UDA, görsel destek, PECS OSB ve iletişimde sık araç.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi DEHB için doğru bir açıklamadır?",
+    "options": ["A) RAM eğitsel değerlendirme ve yönlendirme.", "B) DEHB dikkat, hiperaktivite-dürtü; eğitim düzenlemesi.", "C) Özel eğitim ihtiyacı yetersizlik + eğitimsel gereksinimdir.", "D) Kaynaştırma/bütünleştirme en az kısıtlayıcı ortam.", "E) BEP bireyselleştirilmiş hedefler; PDR ekip üyesidir."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Özel Eğitim notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitim konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Zihin yetersizliği zihinsel işlev + uyumsal davranış, gelişim döneminde başlar.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Üstün yetenek hakkında hangisi doğrudur?",
+    "options": ["A) Kaynaştırma/bütünleştirme en az kısıtlayıcı ortam.", "B) BEP bireyselleştirilmiş hedefler; PDR ekip üyesidir.", "C) RAM eğitsel değerlendirme ve yönlendirme.", "D) Üstün yetenek hız ve derinlik; duyuşsal hassasiyet.", "E) Özel eğitim ihtiyacı yetersizlik + eğitimsel gereksinimdir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitim notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) OSB DSM-5 sosyal iletişim ve kısıtlı-tekrarlayan davranış.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aile danışmanlığı hangisini ifade eder?",
+    "options": ["A) RAM eğitsel değerlendirme ve yönlendirme.", "B) Aile danışmanlığı yas, kabul, kaynak.", "C) Özel eğitim ihtiyacı yetersizlik + eğitimsel gereksinimdir.", "D) Kaynaştırma/bütünleştirme en az kısıtlayıcı ortam.", "E) BEP bireyselleştirilmiş hedefler; PDR ekip üyesidir."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitim konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Öğrenme güçlüğü okuma, yazma, matematik; zeka geriliği değildir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) DEHB dikkat, hiperaktivite-dürtü; eğitim düzenlemesi.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitim konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Üstün yetenek hız ve derinlik; duyuşsal hassasiyet.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Özel Eğitim notundaki temel bilgi."
 }
 ];

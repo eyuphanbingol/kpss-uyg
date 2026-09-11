@@ -61,63 +61,63 @@ window.oabt_beden_2_sorulari = [
     "explanation": "Q = SV x HR."
 },
 {
-    "question": "Egzersiz Fizyolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) ATP-CP alaktik anaerobik; 0-10 sn güç.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Glikolitik hakkında hangisi doğrudur?",
+    "options": ["A) VO2max aerobik kapasite; yaş, cinsiyet, antrenman.", "B) Laktat eşiği tempo antrenmanının fizyolojik çapası.", "C) Glikolitik laktik anaerobik; 30-90 sn.", "D) ATP-CP alaktik anaerobik; 0-10 sn güç.", "E) Oksidatif aerobik; uzun süre."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Egzersiz Fizyolojisi notundaki temel bilgi."
 },
 {
-    "question": "Egzersiz Fizyolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Glikolitik laktik anaerobik; 30-90 sn."],
+    "question": "Oksidatif hangisini ifade eder?",
+    "options": ["A) Oksidatif aerobik; uzun süre.", "B) ATP-CP alaktik anaerobik; 0-10 sn güç.", "C) Glikolitik laktik anaerobik; 30-90 sn.", "D) VO2max aerobik kapasite; yaş, cinsiyet, antrenman.", "E) Laktat eşiği tempo antrenmanının fizyolojik çapası."],
+    "correctAnswerIndex": 0,
+    "explanation": "Egzersiz Fizyolojisi notundaki temel bilgi."
+},
+{
+    "question": "VO2max ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) ATP-CP alaktik anaerobik; 0-10 sn güç.", "B) Glikolitik laktik anaerobik; 30-90 sn.", "C) Oksidatif aerobik; uzun süre.", "D) Laktat eşiği tempo antrenmanının fizyolojik çapası.", "E) VO2max aerobik kapasite; yaş, cinsiyet, antrenman."],
+    "correctAnswerIndex": 4,
+    "explanation": "Egzersiz Fizyolojisi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Laktat eşiği için doğru bir açıklamadır?",
+    "options": ["A) VO2max aerobik kapasite; yaş, cinsiyet, antrenman.", "B) Laktat eşiği tempo antrenmanının fizyolojik çapası.", "C) ATP-CP alaktik anaerobik; 0-10 sn güç.", "D) Glikolitik laktik anaerobik; 30-90 sn.", "E) Oksidatif aerobik; uzun süre."],
+    "correctAnswerIndex": 1,
+    "explanation": "Egzersiz Fizyolojisi notundaki temel bilgi."
+},
+{
+    "question": "Kardiyak debi hakkında hangisi doğrudur?",
+    "options": ["A) Glikolitik laktik anaerobik; 30-90 sn.", "B) Oksidatif aerobik; uzun süre.", "C) VO2max aerobik kapasite; yaş, cinsiyet, antrenman.", "D) Kardiyak debi atım hacmi x kalp atım.", "E) ATP-CP alaktik anaerobik; 0-10 sn güç."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Egzersiz Fizyolojisi notundaki temel bilgi."
 },
 {
-    "question": "Egzersiz Fizyolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Oksidatif aerobik; uzun süre.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Frank-Starling hangisini ifade eder?",
+    "options": ["A) Oksidatif aerobik; uzun süre.", "B) VO2max aerobik kapasite; yaş, cinsiyet, antrenman.", "C) Frank-Starling venöz dönüş.", "D) ATP-CP alaktik anaerobik; 0-10 sn güç.", "E) Glikolitik laktik anaerobik; 30-90 sn."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Egzersiz Fizyolojisi notundaki temel bilgi."
 },
 {
-    "question": "Egzersiz Fizyolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) VO2max aerobik kapasite; yaş, cinsiyet, antrenman."],
+    "question": "Egzersiz hipertansiyonu ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) ATP-CP alaktik anaerobik; 0-10 sn güç.", "B) Glikolitik laktik anaerobik; 30-90 sn.", "C) Oksidatif aerobik; uzun süre.", "D) VO2max aerobik kapasite; yaş, cinsiyet, antrenman.", "E) Egzersiz hipertansiyonu sistolik artar, diastolik görece durur."],
+    "correctAnswerIndex": 4,
+    "explanation": "Egzersiz Fizyolojisi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Ventilasyon için doğru bir açıklamadır?",
+    "options": ["A) VO2max aerobik kapasite; yaş, cinsiyet, antrenman.", "B) Ventilasyon tidal, dakika; anaerobik eşiğe doğru sıçrama.", "C) ATP-CP alaktik anaerobik; 0-10 sn güç.", "D) Glikolitik laktik anaerobik; 30-90 sn.", "E) Oksidatif aerobik; uzun süre."],
+    "correctAnswerIndex": 1,
+    "explanation": "Egzersiz Fizyolojisi notundaki temel bilgi."
+},
+{
+    "question": "Kan hakkında hangisi doğrudur?",
+    "options": ["A) Glikolitik laktik anaerobik; 30-90 sn.", "B) Oksidatif aerobik; uzun süre.", "C) VO2max aerobik kapasite; yaş, cinsiyet, antrenman.", "D) Kan hematokrit, 2,3-BPG, Bohr kayması.", "E) ATP-CP alaktik anaerobik; 0-10 sn güç."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Egzersiz Fizyolojisi notundaki temel bilgi."
 },
 {
-    "question": "Egzersiz Fizyolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Laktat eşiği tempo antrenmanının fizyolojik çapası.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Egzersiz Fizyolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Kardiyak debi atım hacmi x kalp atım."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Egzersiz Fizyolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Frank-Starling venöz dönüş.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Egzersiz Fizyolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Egzersiz hipertansiyonu sistolik artar, diastolik görece durur."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Egzersiz Fizyolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Ventilasyon tidal, dakika; anaerobik eşiğe doğru sıçrama.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Egzersiz Fizyolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Kan hematokrit, 2,3-BPG, Bohr kayması."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aerobik uyum hangisini ifade eder?",
+    "options": ["A) ATP-CP alaktik anaerobik; 0-10 sn güç.", "B) Glikolitik laktik anaerobik; 30-90 sn.", "C) Oksidatif aerobik; uzun süre.", "D) VO2max aerobik kapasite; yaş, cinsiyet, antrenman.", "E) Aerobik uyum mitokondri, kapiler, enzim."],
+    "correctAnswerIndex": 4,
+    "explanation": "Egzersiz Fizyolojisi notundaki temel bilgi."
 }
 ];

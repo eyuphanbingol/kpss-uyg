@@ -61,63 +61,63 @@ window.oabt_okul_11_sorulari = [
     "explanation": "Kademe."
 },
 {
-    "question": "Fen Etkinlikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Merak, gözlem, tahmin, deneme bilimsel süreç tohumu.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Merak, gözlem, tahmin, deneme için doğru bir açıklamadır?",
+    "options": ["A) Merak, gözlem, tahmin, deneme bilimsel süreç tohumu.", "B) Canlı, hava, su, manyetizma, ışık, ses yaşam dünyası.", "C) Doğa mevsim, böcek, bitki.", "D) Güvenlik ısı-elektrik yok.", "E) 2026 fen etkinliği eğitim sorusu."],
+    "correctAnswerIndex": 0,
+    "explanation": "Fen Etkinlikleri notundaki temel bilgi."
 },
 {
-    "question": "Fen Etkinlikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Canlı, hava, su, manyetizma, ışık, ses yaşam dünyası.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Canlı, hava, su, manyetizma, ışık, ses hakkında hangisi doğrudur?",
+    "options": ["A) Merak, gözlem, tahmin, deneme bilimsel süreç tohumu.", "B) Doğa mevsim, böcek, bitki.", "C) Güvenlik ısı-elektrik yok.", "D) 2026 fen etkinliği eğitim sorusu.", "E) Canlı, hava, su, manyetizma, ışık, ses yaşam dünyası."],
+    "correctAnswerIndex": 4,
+    "explanation": "Fen Etkinlikleri notundaki temel bilgi."
+},
+{
+    "question": "Doğa hangisini ifade eder?",
+    "options": ["A) Canlı, hava, su, manyetizma, ışık, ses yaşam dünyası.", "B) Güvenlik ısı-elektrik yok.", "C) 2026 fen etkinliği eğitim sorusu.", "D) Doğa mevsim, böcek, bitki.", "E) Merak, gözlem, tahmin, deneme bilimsel süreç tohumu."],
+    "correctAnswerIndex": 3,
+    "explanation": "Fen Etkinlikleri notundaki temel bilgi."
+},
+{
+    "question": "Güvenlik ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Canlı, hava, su, manyetizma, ışık, ses yaşam dünyası.", "B) Doğa mevsim, böcek, bitki.", "C) 2026 fen etkinliği eğitim sorusu.", "D) Güvenlik ısı-elektrik yok.", "E) Merak, gözlem, tahmin, deneme bilimsel süreç tohumu."],
+    "correctAnswerIndex": 3,
+    "explanation": "Fen Etkinlikleri notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi 2026 için doğru bir açıklamadır?",
+    "options": ["A) Merak, gözlem, tahmin, deneme bilimsel süreç tohumu.", "B) Canlı, hava, su, manyetizma, ışık, ses yaşam dünyası.", "C) Doğa mevsim, böcek, bitki.", "D) Güvenlik ısı-elektrik yok.", "E) 2026 fen etkinliği eğitim sorusu."],
+    "correctAnswerIndex": 4,
+    "explanation": "Fen Etkinlikleri notundaki temel bilgi."
+},
+{
+    "question": "Doğa yürüyüşü ve defter hakkında hangisi doğrudur?",
+    "options": ["A) Canlı, hava, su, manyetizma, ışık, ses yaşam dünyası.", "B) Doğa mevsim, böcek, bitki.", "C) Güvenlik ısı-elektrik yok.", "D) Doğa yürüyüşü ve defter.", "E) Merak, gözlem, tahmin, deneme bilimsel süreç tohumu."],
+    "correctAnswerIndex": 3,
+    "explanation": "Fen Etkinlikleri notundaki temel bilgi."
+},
+{
+    "question": "Su-kum-mıknatıs masası hangisini ifade eder?",
+    "options": ["A) Merak, gözlem, tahmin, deneme bilimsel süreç tohumu.", "B) Canlı, hava, su, manyetizma, ışık, ses yaşam dünyası.", "C) Doğa mevsim, böcek, bitki.", "D) Güvenlik ısı-elektrik yok.", "E) Su-kum-mıknatıs masası."],
+    "correctAnswerIndex": 4,
+    "explanation": "Fen Etkinlikleri notundaki temel bilgi."
+},
+{
+    "question": "Mutfak fen ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Merak, gözlem, tahmin, deneme bilimsel süreç tohumu.", "B) Canlı, hava, su, manyetizma, ışık, ses yaşam dünyası.", "C) Doğa mevsim, böcek, bitki.", "D) Güvenlik ısı-elektrik yok.", "E) Mutfak fen erime-donma."],
+    "correctAnswerIndex": 4,
+    "explanation": "Fen Etkinlikleri notundaki temel bilgi."
+},
+{
+    "question": "STEM hakkında hangisi doğrudur?",
+    "options": ["A) Doğa mevsim, böcek, bitki.", "B) Güvenlik ısı-elektrik yok.", "C) STEM basit rampa-köprü.", "D) Merak, gözlem, tahmin, deneme bilimsel süreç tohumu.", "E) Canlı, hava, su, manyetizma, ışık, ses yaşam dünyası."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Fen Etkinlikleri notundaki temel bilgi."
 },
 {
-    "question": "Fen Etkinlikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Doğa mevsim, böcek, bitki.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Canlı sevgisi, sürdürülebilirlik hangisini ifade eder?",
+    "options": ["A) Güvenlik ısı-elektrik yok.", "B) Canlı sevgisi, sürdürülebilirlik.", "C) Merak, gözlem, tahmin, deneme bilimsel süreç tohumu.", "D) Canlı, hava, su, manyetizma, ışık, ses yaşam dünyası.", "E) Doğa mevsim, böcek, bitki."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Fen Etkinlikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Güvenlik ısı-elektrik yok.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Fen Etkinlikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) 2026 fen etkinliği eğitim sorusu.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Fen Etkinlikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Doğa yürüyüşü ve defter.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Fen Etkinlikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Su-kum-mıknatıs masası.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Fen Etkinlikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mutfak fen erime-donma.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Fen Etkinlikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Soru neden-nasıl.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Fen Etkinlikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) STEM basit rampa-köprü.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Fen Etkinlikleri notundaki temel bilgi."
 }
 ];

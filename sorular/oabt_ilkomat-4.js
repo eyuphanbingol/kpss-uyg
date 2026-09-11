@@ -55,69 +55,69 @@ window.oabt_ilkomat_4_sorulari = [
     "explanation": "Temsiller arası geçiş sayı duyusunun çekirdeğidir."
 },
 {
-    "question": "Sayılar konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Doğal, tam, rasyonel, irasyonel, reel iç içe kümelerdir; √2 rasyonel değildir."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Doğal, tam, rasyonel, irasyonel, reel için doğru bir açıklamadır?",
+    "options": ["A) Modüler kalan sınıfları bölünebilme kurallarını açıklar.", "B) Doğal, tam, rasyonel, irasyonel, reel iç içe kümelerdir; √2 rasyonel değildir.", "C) Asal 1'den büyük, tam iki pozitif bölen; 1 asal değildir.", "D) EBOB-EKOK çarpan; EBOB(a,b)·EKOK(a,b)=|ab|.", "E) Taban aritmetiği basamak değeri; 10'luk sistem ilköğretimin omurgasıdır."],
+    "correctAnswerIndex": 1,
+    "explanation": "Sayılar notundaki temel bilgi."
 },
 {
-    "question": "Sayılar konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Asal 1'den büyük, tam iki pozitif bölen; 1 asal değildir.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Asal hakkında hangisi doğrudur?",
+    "options": ["A) Asal 1'den büyük, tam iki pozitif bölen; 1 asal değildir.", "B) Doğal, tam, rasyonel, irasyonel, reel iç içe kümelerdir; √2 rasyonel değildir.", "C) EBOB-EKOK çarpan; EBOB(a,b)·EKOK(a,b)=|ab|.", "D) Taban aritmetiği basamak değeri; 10'luk sistem ilköğretimin omurgasıdır.", "E) Modüler kalan sınıfları bölünebilme kurallarını açıklar."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Sayılar notundaki temel bilgi."
 },
 {
-    "question": "Sayılar konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) EBOB-EKOK çarpan; EBOB(a,b)·EKOK(a,b)=|ab|."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "EBOB-EKOK hangisini ifade eder?",
+    "options": ["A) Asal 1'den büyük, tam iki pozitif bölen; 1 asal değildir.", "B) Taban aritmetiği basamak değeri; 10'luk sistem ilköğretimin omurgasıdır.", "C) Modüler kalan sınıfları bölünebilme kurallarını açıklar.", "D) EBOB-EKOK çarpan; EBOB(a,b)·EKOK(a,b)=|ab|.", "E) Doğal, tam, rasyonel, irasyonel, reel iç içe kümelerdir; √2 rasyonel değildir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Sayılar notundaki temel bilgi."
 },
 {
-    "question": "Sayılar konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Taban aritmetiği basamak değeri; 10'luk sistem ilköğretimin omurgasıdır.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Taban aritmetiği ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) EBOB-EKOK çarpan; EBOB(a,b)·EKOK(a,b)=|ab|.", "B) Modüler kalan sınıfları bölünebilme kurallarını açıklar.", "C) Taban aritmetiği basamak değeri; 10'luk sistem ilköğretimin omurgasıdır.", "D) Doğal, tam, rasyonel, irasyonel, reel iç içe kümelerdir; √2 rasyonel değildir.", "E) Asal 1'den büyük, tam iki pozitif bölen; 1 asal değildir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Sayılar notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Modüler için doğru bir açıklamadır?",
+    "options": ["A) Asal 1'den büyük, tam iki pozitif bölen; 1 asal değildir.", "B) EBOB-EKOK çarpan; EBOB(a,b)·EKOK(a,b)=|ab|.", "C) Taban aritmetiği basamak değeri; 10'luk sistem ilköğretimin omurgasıdır.", "D) Modüler kalan sınıfları bölünebilme kurallarını açıklar.", "E) Doğal, tam, rasyonel, irasyonel, reel iç içe kümelerdir; √2 rasyonel değildir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Sayılar notundaki temel bilgi."
+},
+{
+    "question": "İşlem özellikleri hakkında hangisi doğrudur?",
+    "options": ["A) İşlem özellikleri değişme, birleşme, dağılma, birim, ters.", "B) Doğal, tam, rasyonel, irasyonel, reel iç içe kümelerdir; √2 rasyonel değildir.", "C) Asal 1'den büyük, tam iki pozitif bölen; 1 asal değildir.", "D) EBOB-EKOK çarpan; EBOB(a,b)·EKOK(a,b)=|ab|.", "E) Taban aritmetiği basamak değeri; 10'luk sistem ilköğretimin omurgasıdır."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Sayılar notundaki temel bilgi."
 },
 {
-    "question": "Sayılar konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Modüler kalan sınıfları bölünebilme kurallarını açıklar."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Kesir hangisini ifade eder?",
+    "options": ["A) Taban aritmetiği basamak değeri; 10'luk sistem ilköğretimin omurgasıdır.", "B) Kesir parça-bütün, ölçme, bölüm anlamları; denk kesir ve sadeleştirme.", "C) Doğal, tam, rasyonel, irasyonel, reel iç içe kümelerdir; √2 rasyonel değildir.", "D) Asal 1'den büyük, tam iki pozitif bölen; 1 asal değildir.", "E) EBOB-EKOK çarpan; EBOB(a,b)·EKOK(a,b)=|ab|."],
+    "correctAnswerIndex": 1,
+    "explanation": "Sayılar notundaki temel bilgi."
 },
 {
-    "question": "Sayılar konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) İşlem özellikleri değişme, birleşme, dağılma, birim, ters.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Ondalık ve yüzde ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Ondalık ve yüzde kesrin farklı temsilleri; 1/4=0,25=%25.", "B) Doğal, tam, rasyonel, irasyonel, reel iç içe kümelerdir; √2 rasyonel değildir.", "C) Asal 1'den büyük, tam iki pozitif bölen; 1 asal değildir.", "D) EBOB-EKOK çarpan; EBOB(a,b)·EKOK(a,b)=|ab|.", "E) Taban aritmetiği basamak değeri; 10'luk sistem ilköğretimin omurgasıdır."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Sayılar notundaki temel bilgi."
 },
 {
-    "question": "Sayılar konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Kesir parça-bütün, ölçme, bölüm anlamları; denk kesir ve sadeleştirme."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Üslü ve köklü için doğru bir açıklamadır?",
+    "options": ["A) Asal 1'den büyük, tam iki pozitif bölen; 1 asal değildir.", "B) EBOB-EKOK çarpan; EBOB(a,b)·EKOK(a,b)=|ab|.", "C) Taban aritmetiği basamak değeri; 10'luk sistem ilköğretimin omurgasıdır.", "D) Üslü ve köklü a^{m+n}=a^m a^n; çift kökte asıl (principal) kök negatif olmaz.", "E) Doğal, tam, rasyonel, irasyonel, reel iç içe kümelerdir; √2 rasyonel değildir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Sayılar notundaki temel bilgi."
 },
 {
-    "question": "Sayılar konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Ondalık ve yüzde kesrin farklı temsilleri; 1/4=0,25=%25.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Bilimsel gösterim hakkında hangisi doğrudur?",
+    "options": ["A) EBOB-EKOK çarpan; EBOB(a,b)·EKOK(a,b)=|ab|.", "B) Taban aritmetiği basamak değeri; 10'luk sistem ilköğretimin omurgasıdır.", "C) Bilimsel gösterim a·10^k, 1≤|a|<10; büyüklük sırası ve hata.", "D) Doğal, tam, rasyonel, irasyonel, reel iç içe kümelerdir; √2 rasyonel değildir.", "E) Asal 1'den büyük, tam iki pozitif bölen; 1 asal değildir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Sayılar notundaki temel bilgi."
 },
 {
-    "question": "Sayılar konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Üslü ve köklü a^{m+n}=a^m a^n; çift kökte asıl (principal) kök negatif olmaz."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Sayılar konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Bilimsel gösterim a·10^k, 1≤|a|<10; büyüklük sırası ve hata.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Sayılar konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Oran iki çokluğun bölümü; orantı a/b=c/d çapraz çarpım."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Oran hangisini ifade eder?",
+    "options": ["A) Taban aritmetiği basamak değeri; 10'luk sistem ilköğretimin omurgasıdır.", "B) Oran iki çokluğun bölümü; orantı a/b=c/d çapraz çarpım.", "C) Doğal, tam, rasyonel, irasyonel, reel iç içe kümelerdir; √2 rasyonel değildir.", "D) Asal 1'den büyük, tam iki pozitif bölen; 1 asal değildir.", "E) EBOB-EKOK çarpan; EBOB(a,b)·EKOK(a,b)=|ab|."],
+    "correctAnswerIndex": 1,
+    "explanation": "Sayılar notundaki temel bilgi."
 }
 ];

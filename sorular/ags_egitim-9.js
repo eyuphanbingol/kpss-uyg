@@ -73,51 +73,51 @@ window.ags_egitim_9_sorulari = [
     "explanation": "Ortak metin vurgusu."
 },
 {
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Ölçme niteliğe sayı veya kategori atama; değerlendirme ölçme sonucunu ölçütle yargılama; k"],
+    "question": "Aşağıdakilerden hangisi Ölçme için doğru bir açıklamadır?",
+    "options": ["A) Bağıl değerlendirme grubun dağılımına, mutlak önceden ölçüte göredir.", "B) Tanılayıcı, biçimlendirici, düzey belirleyici, yerleştirme amaçları farklı araç ister.", "C) Madde güçlüğü (p) doğru cevap oranı; ayırt edicilik üst-alt grup farkı veya korelasyon.", "D) Ölçme niteliğe sayı veya kategori atama; değerlendirme ölçme sonucunu ölçütle yargılama; karar işleme koymadır.", "E) Kapsam, yordama, yapı, görünüş geçerliği ayrı kanıtlardır; güvenirlik geçerliğin önkoşulu gibidir ama yeterli değildir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "Geçerlik hakkında hangisi doğrudur?",
+    "options": ["A) Bağıl değerlendirme grubun dağılımına, mutlak önceden ölçüte göredir.", "B) Tanılayıcı, biçimlendirici, düzey belirleyici, yerleştirme amaçları farklı araç ister.", "C) Geçerlik ölçülmek isteneni ölçme; güvenirlik tutarlılık; kullanışlılık zaman-maliyet-uygulama kolaylığı.", "D) Ölçme niteliğe sayı veya kategori atama; değerlendirme ölçme sonucunu ölçütle yargılama; karar işleme koymadır.", "E) Kapsam, yordama, yapı, görünüş geçerliği ayrı kanıtlardır; güvenirlik geçerliğin önkoşulu gibidir ama yeterli değildir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "Kapsam, yordama, yapı, görünüş hangisini ifade eder?",
+    "options": ["A) Tanılayıcı, biçimlendirici, düzey belirleyici, yerleştirme amaçları farklı araç ister.", "B) Kapsam, yordama, yapı, görünüş geçerliği ayrı kanıtlardır; güvenirlik geçerliğin önkoşulu gibidir ama yeterli değildir.", "C) Ölçme niteliğe sayı veya kategori atama; değerlendirme ölçme sonucunu ölçütle yargılama; karar işleme koymadır.", "D) Geçerlik ölçülmek isteneni ölçme; güvenirlik tutarlılık; kullanışlılık zaman-maliyet-uygulama kolaylığı.", "E) Bağıl değerlendirme grubun dağılımına, mutlak önceden ölçüte göredir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "Bağıl değerlendirme ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Ölçme niteliğe sayı veya kategori atama; değerlendirme ölçme sonucunu ölçütle yargılama; karar işleme koymadır.", "B) Geçerlik ölçülmek isteneni ölçme; güvenirlik tutarlılık; kullanışlılık zaman-maliyet-uygulama kolaylığı.", "C) Kapsam, yordama, yapı, görünüş geçerliği ayrı kanıtlardır; güvenirlik geçerliğin önkoşulu gibidir ama yeterli değildir.", "D) Tanılayıcı, biçimlendirici, düzey belirleyici, yerleştirme amaçları farklı araç ister.", "E) Bağıl değerlendirme grubun dağılımına, mutlak önceden ölçüte göredir."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
 },
 {
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Geçerlik ölçülmek isteneni ölçme; güvenirlik tutarlılık; kullanışlılık zaman-maliyet-uygul", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Tanılayıcı, biçimlendirici, düzey belirleyici için doğru bir açıklamadır?",
+    "options": ["A) Tanılayıcı, biçimlendirici, düzey belirleyici, yerleştirme amaçları farklı araç ister.", "B) Ölçme niteliğe sayı veya kategori atama; değerlendirme ölçme sonucunu ölçütle yargılama; karar işleme koymadır.", "C) Geçerlik ölçülmek isteneni ölçme; güvenirlik tutarlılık; kullanışlılık zaman-maliyet-uygulama kolaylığı.", "D) Kapsam, yordama, yapı, görünüş geçerliği ayrı kanıtlardır; güvenirlik geçerliğin önkoşulu gibidir ama yeterli değildir.", "E) Bağıl değerlendirme grubun dağılımına, mutlak önceden ölçüte göredir."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
 },
 {
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Kapsam, yordama, yapı, görünüş geçerliği ayrı kanıtlardır; güvenirlik geçerliğin önkoşulu "],
+    "question": "Madde güçlüğü (p) hakkında hangisi doğrudur?",
+    "options": ["A) Geçerlik ölçülmek isteneni ölçme; güvenirlik tutarlılık; kullanışlılık zaman-maliyet-uygulama kolaylığı.", "B) Kapsam, yordama, yapı, görünüş geçerliği ayrı kanıtlardır; güvenirlik geçerliğin önkoşulu gibidir ama yeterli değildir.", "C) Bağıl değerlendirme grubun dağılımına, mutlak önceden ölçüte göredir.", "D) Madde güçlüğü (p) doğru cevap oranı; ayırt edicilik üst-alt grup farkı veya korelasyon.", "E) Ölçme niteliğe sayı veya kategori atama; değerlendirme ölçme sonucunu ölçütle yargılama; karar işleme koymadır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "KR-20, Cronbach alfa hangisini ifade eder?",
+    "options": ["A) Ölçme niteliğe sayı veya kategori atama; değerlendirme ölçme sonucunu ölçütle yargılama; karar işleme koymadır.", "B) Geçerlik ölçülmek isteneni ölçme; güvenirlik tutarlılık; kullanışlılık zaman-maliyet-uygulama kolaylığı.", "C) Kapsam, yordama, yapı, görünüş geçerliği ayrı kanıtlardır; güvenirlik geçerliğin önkoşulu gibidir ama yeterli değildir.", "D) Bağıl değerlendirme grubun dağılımına, mutlak önceden ölçüte göredir.", "E) KR-20, Cronbach alfa iç tutarlılık; test-tekrar, paralel form, puanlayıcılar arası diğer güvenirlik yolları."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
 },
 {
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Bağıl değerlendirme grubun dağılımına, mutlak önceden ölçüte göredir.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Tanılayıcı, biçimlendirici, düzey belirleyici, yerleştirme amaçları farklı araç ister."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Madde güçlüğü (p) doğru cevap oranı; ayırt edicilik üst-alt grup farkı veya korelasyon.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) KR-20, Cronbach alfa iç tutarlılık; test-tekrar, paralel form, puanlayıcılar arası diğer g"],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Standart hata puanın belirsizliği; kesme puanı civarında kritiktir.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Standart hata ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Bağıl değerlendirme grubun dağılımına, mutlak önceden ölçüte göredir.", "B) Standart hata puanın belirsizliği; kesme puanı civarında kritiktir.", "C) Ölçme niteliğe sayı veya kategori atama; değerlendirme ölçme sonucunu ölçütle yargılama; karar işleme koymadır.", "D) Geçerlik ölçülmek isteneni ölçme; güvenirlik tutarlılık; kullanışlılık zaman-maliyet-uygulama kolaylığı.", "E) Kapsam, yordama, yapı, görünüş geçerliği ayrı kanıtlardır; güvenirlik geçerliğin önkoşulu gibidir ama yeterli değildir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
 }
 ];

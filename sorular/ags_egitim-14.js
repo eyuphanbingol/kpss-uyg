@@ -73,51 +73,51 @@ window.ags_egitim_14_sorulari = [
     "explanation": "Cumhurbaşkanlığı hükümet sistemi teşkilatı."
 },
 {
-    "question": "Türk Millî Eğitim Sisteminin Genel Yapısı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) 1739 m.18: sistem örgün ve yaygın eğitimden oluşur.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi 1739 m.18 için doğru bir açıklamadır?",
+    "options": ["A) Ortaöğretim (m.26) ilköğretime dayalı 4 yıllık zorunlu genel, mesleki-teknik ve mesleki eğitim merkezleri.", "B) 2012 (6287) ile 12 yıllık kademeli zorunlu eğitim (4+4+4) yürürlüktedir.", "C) 1739 m.18: sistem örgün ve yaygın eğitimden oluşur.", "D) Örgün okul öncesi, ilköğretim, ortaöğretim, yükseköğretim; yaygın örgünün yanında veya dışında.", "E) İlköğretim 4 yıl zorunlu ilkokul + 4 yıl zorunlu ortaokul; çağ 6-14 (1739 m.22 / 222)."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Türk Millî Eğitim Sisteminin Genel Yapısı notundaki temel bilgi."
 },
 {
-    "question": "Türk Millî Eğitim Sisteminin Genel Yapısı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Örgün okul öncesi, ilköğretim, ortaöğretim, yükseköğretim; yaygın örgünün yanında veya dış"],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Türk Millî Eğitim Sisteminin Genel Yapısı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) İlköğretim 4 yıl zorunlu ilkokul + 4 yıl zorunlu ortaokul; çağ 6-14 (1739 m.22 / 222).", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Örgün hakkında hangisi doğrudur?",
+    "options": ["A) 2012 (6287) ile 12 yıllık kademeli zorunlu eğitim (4+4+4) yürürlüktedir.", "B) Genel amaçlar m.2: Atatürkçü, dengeli kişilik, meslek ve çağdaş uygarlık ortağı yurttaş.", "C) Örgün okul öncesi, ilköğretim, ortaöğretim, yükseköğretim; yaygın örgünün yanında veya dışında.", "D) İlköğretim 4 yıl zorunlu ilkokul + 4 yıl zorunlu ortaokul; çağ 6-14 (1739 m.22 / 222).", "E) Ortaöğretim (m.26) ilköğretime dayalı 4 yıllık zorunlu genel, mesleki-teknik ve mesleki eğitim merkezleri."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Türk Millî Eğitim Sisteminin Genel Yapısı notundaki temel bilgi."
 },
 {
-    "question": "Türk Millî Eğitim Sisteminin Genel Yapısı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Ortaöğretim (m.26) ilköğretime dayalı 4 yıllık zorunlu genel, mesleki-teknik ve mesleki eğ"],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "İlköğretim hangisini ifade eder?",
+    "options": ["A) 1739 m.18: sistem örgün ve yaygın eğitimden oluşur.", "B) Örgün okul öncesi, ilköğretim, ortaöğretim, yükseköğretim; yaygın örgünün yanında veya dışında.", "C) Ortaöğretim (m.26) ilköğretime dayalı 4 yıllık zorunlu genel, mesleki-teknik ve mesleki eğitim merkezleri.", "D) 2012 (6287) ile 12 yıllık kademeli zorunlu eğitim (4+4+4) yürürlüktedir.", "E) İlköğretim 4 yıl zorunlu ilkokul + 4 yıl zorunlu ortaokul; çağ 6-14 (1739 m.22 / 222)."],
+    "correctAnswerIndex": 4,
+    "explanation": "Türk Millî Eğitim Sisteminin Genel Yapısı notundaki temel bilgi."
 },
 {
-    "question": "Türk Millî Eğitim Sisteminin Genel Yapısı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) 2012 (6287) ile 12 yıllık kademeli zorunlu eğitim (4+4+4) yürürlüktedir.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Ortaöğretim (m.26) ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) 1739 m.18: sistem örgün ve yaygın eğitimden oluşur.", "B) Örgün okul öncesi, ilköğretim, ortaöğretim, yükseköğretim; yaygın örgünün yanında veya dışında.", "C) İlköğretim 4 yıl zorunlu ilkokul + 4 yıl zorunlu ortaokul; çağ 6-14 (1739 m.22 / 222).", "D) 2012 (6287) ile 12 yıllık kademeli zorunlu eğitim (4+4+4) yürürlüktedir.", "E) Ortaöğretim (m.26) ilköğretime dayalı 4 yıllık zorunlu genel, mesleki-teknik ve mesleki eğitim merkezleri."],
+    "correctAnswerIndex": 4,
+    "explanation": "Türk Millî Eğitim Sisteminin Genel Yapısı notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi 2012 (6287) için doğru bir açıklamadır?",
+    "options": ["A) Ortaöğretim (m.26) ilköğretime dayalı 4 yıllık zorunlu genel, mesleki-teknik ve mesleki eğitim merkezleri.", "B) 2012 (6287) ile 12 yıllık kademeli zorunlu eğitim (4+4+4) yürürlüktedir.", "C) 1739 m.18: sistem örgün ve yaygın eğitimden oluşur.", "D) Örgün okul öncesi, ilköğretim, ortaöğretim, yükseköğretim; yaygın örgünün yanında veya dışında.", "E) İlköğretim 4 yıl zorunlu ilkokul + 4 yıl zorunlu ortaokul; çağ 6-14 (1739 m.22 / 222)."],
+    "correctAnswerIndex": 1,
+    "explanation": "Türk Millî Eğitim Sisteminin Genel Yapısı notundaki temel bilgi."
+},
+{
+    "question": "Genel amaçlar m.2 hakkında hangisi doğrudur?",
+    "options": ["A) İlköğretim 4 yıl zorunlu ilkokul + 4 yıl zorunlu ortaokul; çağ 6-14 (1739 m.22 / 222).", "B) Ortaöğretim (m.26) ilköğretime dayalı 4 yıllık zorunlu genel, mesleki-teknik ve mesleki eğitim merkezleri.", "C) Genel amaçlar m.2: Atatürkçü, dengeli kişilik, meslek ve çağdaş uygarlık ortağı yurttaş.", "D) 1739 m.18: sistem örgün ve yaygın eğitimden oluşur.", "E) Örgün okul öncesi, ilköğretim, ortaöğretim, yükseköğretim; yaygın örgünün yanında veya dışında."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Türk Millî Eğitim Sisteminin Genel Yapısı notundaki temel bilgi."
 },
 {
-    "question": "Türk Millî Eğitim Sisteminin Genel Yapısı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Genel amaçlar m.2: Atatürkçü, dengeli kişilik, meslek ve çağdaş uygarlık ortağı yurttaş."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Türk Millî Eğitim Sisteminin Genel Yapısı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Temel ilkeler genellik-eşitlik, yöneltme, fırsat eşitliği, Atatürkçülük, demokrasi eğitimi", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Temel ilkeler hangisini ifade eder?",
+    "options": ["A) İlköğretim 4 yıl zorunlu ilkokul + 4 yıl zorunlu ortaokul; çağ 6-14 (1739 m.22 / 222).", "B) Ortaöğretim (m.26) ilköğretime dayalı 4 yıllık zorunlu genel, mesleki-teknik ve mesleki eğitim merkezleri.", "C) Temel ilkeler genellik-eşitlik, yöneltme, fırsat eşitliği, Atatürkçülük, demokrasi eğitimi, laiklik, bilim, planlılık, karma, her yerde eğitim.", "D) 1739 m.18: sistem örgün ve yaygın eğitimden oluşur.", "E) Örgün okul öncesi, ilköğretim, ortaöğretim, yükseköğretim; yaygın örgünün yanında veya dışında."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Türk Millî Eğitim Sisteminin Genel Yapısı notundaki temel bilgi."
 },
 {
-    "question": "Türk Millî Eğitim Sisteminin Genel Yapısı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) m.43 öğretmenliği özel ihtisas mesleği sayar; 7528 bu çerçeveyi meslek kanunuyla ayrıntıla"],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "m.43 ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İlköğretim 4 yıl zorunlu ilkokul + 4 yıl zorunlu ortaokul; çağ 6-14 (1739 m.22 / 222).", "B) Ortaöğretim (m.26) ilköğretime dayalı 4 yıllık zorunlu genel, mesleki-teknik ve mesleki eğitim merkezleri.", "C) m.43 öğretmenliği özel ihtisas mesleği sayar; 7528 bu çerçeveyi meslek kanunuyla ayrıntılandırır.", "D) 1739 m.18: sistem örgün ve yaygın eğitimden oluşur.", "E) Örgün okul öncesi, ilköğretim, ortaöğretim, yükseköğretim; yaygın örgünün yanında veya dışında."],
+    "correctAnswerIndex": 2,
+    "explanation": "Türk Millî Eğitim Sisteminin Genel Yapısı notundaki temel bilgi."
 }
 ];

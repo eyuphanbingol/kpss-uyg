@@ -61,63 +61,63 @@ window.oabt_beden_4_sorulari = [
     "explanation": "Tek tekrar maksimum."
 },
 {
-    "question": "Antrenman Bilgisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Yüklenme, bireysellik, süreklilik, çeşitlilik, bilinçlilik.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Antrenman Bilgisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Süperkompanzasyon dinlenme ile uyum.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi Yüklenme, bireysellik, süreklilik, çeşitlilik için doğru bir açıklamadır?",
+    "options": ["A) Süperkompanzasyon dinlenme ile uyum.", "B) Spesifite (SAID) ne çalışılırsa o gelişir.", "C) Periyodizasyon makro-mezo-mikro; hazırlık-yarış-geçiş.", "D) FITT sıklık, şiddet, süre, tip.", "E) Yüklenme, bireysellik, süreklilik, çeşitlilik, bilinçlilik."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Antrenman Bilgisi notundaki temel bilgi."
 },
 {
-    "question": "Antrenman Bilgisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Spesifite (SAID) ne çalışılırsa o gelişir.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Süperkompanzasyon hakkında hangisi doğrudur?",
+    "options": ["A) FITT sıklık, şiddet, süre, tip.", "B) Süperkompanzasyon dinlenme ile uyum.", "C) Yüklenme, bireysellik, süreklilik, çeşitlilik, bilinçlilik.", "D) Spesifite (SAID) ne çalışılırsa o gelişir.", "E) Periyodizasyon makro-mezo-mikro; hazırlık-yarış-geçiş."],
+    "correctAnswerIndex": 1,
+    "explanation": "Antrenman Bilgisi notundaki temel bilgi."
 },
 {
-    "question": "Antrenman Bilgisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Periyodizasyon makro-mezo-mikro; hazırlık-yarış-geçiş.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Spesifite hangisini ifade eder?",
+    "options": ["A) FITT sıklık, şiddet, süre, tip.", "B) Spesifite (SAID) ne çalışılırsa o gelişir.", "C) Yüklenme, bireysellik, süreklilik, çeşitlilik, bilinçlilik.", "D) Süperkompanzasyon dinlenme ile uyum.", "E) Periyodizasyon makro-mezo-mikro; hazırlık-yarış-geçiş."],
+    "correctAnswerIndex": 1,
+    "explanation": "Antrenman Bilgisi notundaki temel bilgi."
+},
+{
+    "question": "Periyodizasyon ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Spesifite (SAID) ne çalışılırsa o gelişir.", "B) FITT sıklık, şiddet, süre, tip.", "C) Periyodizasyon makro-mezo-mikro; hazırlık-yarış-geçiş.", "D) Yüklenme, bireysellik, süreklilik, çeşitlilik, bilinçlilik.", "E) Süperkompanzasyon dinlenme ile uyum."],
+    "correctAnswerIndex": 2,
+    "explanation": "Antrenman Bilgisi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi FITT için doğru bir açıklamadır?",
+    "options": ["A) FITT sıklık, şiddet, süre, tip.", "B) Yüklenme, bireysellik, süreklilik, çeşitlilik, bilinçlilik.", "C) Süperkompanzasyon dinlenme ile uyum.", "D) Spesifite (SAID) ne çalışılırsa o gelişir.", "E) Periyodizasyon makro-mezo-mikro; hazırlık-yarış-geçiş."],
+    "correctAnswerIndex": 0,
+    "explanation": "Antrenman Bilgisi notundaki temel bilgi."
+},
+{
+    "question": "Kuvvet, sürat, dayanıklılık, koordinasyon, esneklik hakkında hangisi doğrudur?",
+    "options": ["A) Periyodizasyon makro-mezo-mikro; hazırlık-yarış-geçiş.", "B) Kuvvet, sürat, dayanıklılık, koordinasyon, esneklik.", "C) Yüklenme, bireysellik, süreklilik, çeşitlilik, bilinçlilik.", "D) Süperkompanzasyon dinlenme ile uyum.", "E) Spesifite (SAID) ne çalışılırsa o gelişir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Antrenman Bilgisi notundaki temel bilgi."
+},
+{
+    "question": "Maksimum, çabuk, kuvvet dayanıklılığı hangisini ifade eder?",
+    "options": ["A) Yüklenme, bireysellik, süreklilik, çeşitlilik, bilinçlilik.", "B) Süperkompanzasyon dinlenme ile uyum.", "C) Spesifite (SAID) ne çalışılırsa o gelişir.", "D) Periyodizasyon makro-mezo-mikro; hazırlık-yarış-geçiş.", "E) Maksimum, çabuk, kuvvet dayanıklılığı."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Antrenman Bilgisi notundaki temel bilgi."
 },
 {
-    "question": "Antrenman Bilgisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) FITT sıklık, şiddet, süre, tip.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Alerjik sürat ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Süperkompanzasyon dinlenme ile uyum.", "B) Spesifite (SAID) ne çalışılırsa o gelişir.", "C) Periyodizasyon makro-mezo-mikro; hazırlık-yarış-geçiş.", "D) Alerjik sürat reaksiyon; ivmelenme, maksimum, sürat dayanıklılığı.", "E) Yüklenme, bireysellik, süreklilik, çeşitlilik, bilinçlilik."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Antrenman Bilgisi notundaki temel bilgi."
 },
 {
-    "question": "Antrenman Bilgisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Kuvvet, sürat, dayanıklılık, koordinasyon, esneklik.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Pliometrik için doğru bir açıklamadır?",
+    "options": ["A) Pliometrik gerim-kısa döngü; yaş ve teknik şart.", "B) Yüklenme, bireysellik, süreklilik, çeşitlilik, bilinçlilik.", "C) Süperkompanzasyon dinlenme ile uyum.", "D) Spesifite (SAID) ne çalışılırsa o gelişir.", "E) Periyodizasyon makro-mezo-mikro; hazırlık-yarış-geçiş."],
+    "correctAnswerIndex": 0,
+    "explanation": "Antrenman Bilgisi notundaki temel bilgi."
 },
 {
-    "question": "Antrenman Bilgisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Maksimum, çabuk, kuvvet dayanıklılığı.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Esneklik hakkında hangisi doğrudur?",
+    "options": ["A) Süperkompanzasyon dinlenme ile uyum.", "B) Spesifite (SAID) ne çalışılırsa o gelişir.", "C) Periyodizasyon makro-mezo-mikro; hazırlık-yarış-geçiş.", "D) Esneklik statik-dinamik; ısınma sonrası statik tartışması.", "E) Yüklenme, bireysellik, süreklilik, çeşitlilik, bilinçlilik."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Antrenman Bilgisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Alerjik sürat reaksiyon; ivmelenme, maksimum, sürat dayanıklılığı.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Antrenman Bilgisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Pliometrik gerim-kısa döngü; yaş ve teknik şart.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Antrenman Bilgisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Esneklik statik-dinamik; ısınma sonrası statik tartışması.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Antrenman Bilgisi notundaki temel bilgi."
 }
 ];

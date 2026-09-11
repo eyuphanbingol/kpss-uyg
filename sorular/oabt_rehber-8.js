@@ -61,63 +61,63 @@ window.oabt_rehber_8_sorulari = [
     "explanation": "Okul iklimi müdahalesi."
 },
 {
-    "question": "Eğitsel Rehberlik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Öğrenme becerisi plan, not tutma, sınav kaygısı.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Öğrenme becerisi için doğru bir açıklamadır?",
+    "options": ["A) Öğrenme becerisi plan, not tutma, sınav kaygısı.", "B) Güdü ve erteleme hedef koyma.", "C) Üstün başarı ve düşük başarı farklı müdahale.", "D) Okul terk riski erken uyarı, devamsızlık.", "E) Kaynaştırma öğrencisi akademik destek ve BEP iş birliği."],
+    "correctAnswerIndex": 0,
+    "explanation": "Eğitsel Rehberlik notundaki temel bilgi."
+},
+{
+    "question": "Güdü ve erteleme hakkında hangisi doğrudur?",
+    "options": ["A) Kaynaştırma öğrencisi akademik destek ve BEP iş birliği.", "B) Güdü ve erteleme hedef koyma.", "C) Öğrenme becerisi plan, not tutma, sınav kaygısı.", "D) Üstün başarı ve düşük başarı farklı müdahale.", "E) Okul terk riski erken uyarı, devamsızlık."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Eğitsel Rehberlik notundaki temel bilgi."
 },
 {
-    "question": "Eğitsel Rehberlik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Güdü ve erteleme hedef koyma.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Üstün başarı ve düşük başarı hangisini ifade eder?",
+    "options": ["A) Üstün başarı ve düşük başarı farklı müdahale.", "B) Öğrenme becerisi plan, not tutma, sınav kaygısı.", "C) Güdü ve erteleme hedef koyma.", "D) Okul terk riski erken uyarı, devamsızlık.", "E) Kaynaştırma öğrencisi akademik destek ve BEP iş birliği."],
+    "correctAnswerIndex": 0,
+    "explanation": "Eğitsel Rehberlik notundaki temel bilgi."
 },
 {
-    "question": "Eğitsel Rehberlik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Üstün başarı ve düşük başarı farklı müdahale.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Okul terk riski ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Kaynaştırma öğrencisi akademik destek ve BEP iş birliği.", "B) Okul terk riski erken uyarı, devamsızlık.", "C) Öğrenme becerisi plan, not tutma, sınav kaygısı.", "D) Güdü ve erteleme hedef koyma.", "E) Üstün başarı ve düşük başarı farklı müdahale."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Eğitsel Rehberlik notundaki temel bilgi."
 },
 {
-    "question": "Eğitsel Rehberlik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Okul terk riski erken uyarı, devamsızlık.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Kaynaştırma öğrencisi için doğru bir açıklamadır?",
+    "options": ["A) Kaynaştırma öğrencisi akademik destek ve BEP iş birliği.", "B) Öğrenme becerisi plan, not tutma, sınav kaygısı.", "C) Güdü ve erteleme hedef koyma.", "D) Üstün başarı ve düşük başarı farklı müdahale.", "E) Okul terk riski erken uyarı, devamsızlık."],
+    "correctAnswerIndex": 0,
+    "explanation": "Eğitsel Rehberlik notundaki temel bilgi."
 },
 {
-    "question": "Eğitsel Rehberlik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kaynaştırma öğrencisi akademik destek ve BEP iş birliği.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Ders seçimi, alan, lise türü hakkında hangisi doğrudur?",
+    "options": ["A) Ders seçimi, alan, lise türü veriye dayalı.", "B) Öğrenme becerisi plan, not tutma, sınav kaygısı.", "C) Güdü ve erteleme hedef koyma.", "D) Üstün başarı ve düşük başarı farklı müdahale.", "E) Okul terk riski erken uyarı, devamsızlık."],
+    "correctAnswerIndex": 0,
+    "explanation": "Eğitsel Rehberlik notundaki temel bilgi."
+},
+{
+    "question": "Öğrenme güçlüğü tarama hangisini ifade eder?",
+    "options": ["A) Okul terk riski erken uyarı, devamsızlık.", "B) Öğrenme güçlüğü tarama sevk RAM.", "C) Öğrenme becerisi plan, not tutma, sınav kaygısı.", "D) Güdü ve erteleme hedef koyma.", "E) Üstün başarı ve düşük başarı farklı müdahale."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Eğitsel Rehberlik notundaki temel bilgi."
 },
 {
-    "question": "Eğitsel Rehberlik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Ders seçimi, alan, lise türü veriye dayalı.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Çalışma alışkanlığı grupları ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Çalışma alışkanlığı grupları önleyici.", "B) Öğrenme becerisi plan, not tutma, sınav kaygısı.", "C) Güdü ve erteleme hedef koyma.", "D) Üstün başarı ve düşük başarı farklı müdahale.", "E) Okul terk riski erken uyarı, devamsızlık."],
+    "correctAnswerIndex": 0,
+    "explanation": "Eğitsel Rehberlik notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Aile eğitimi için doğru bir açıklamadır?",
+    "options": ["A) Üstün başarı ve düşük başarı farklı müdahale.", "B) Okul terk riski erken uyarı, devamsızlık.", "C) Aile eğitimi evde destek.", "D) Öğrenme becerisi plan, not tutma, sınav kaygısı.", "E) Güdü ve erteleme hedef koyma."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Eğitsel Rehberlik notundaki temel bilgi."
 },
 {
-    "question": "Eğitsel Rehberlik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Öğrenme güçlüğü tarama sevk RAM.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Eğitsel Rehberlik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Çalışma alışkanlığı grupları önleyici.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Öğretmen danışmanlığı hakkında hangisi doğrudur?",
+    "options": ["A) Üstün başarı ve düşük başarı farklı müdahale.", "B) Okul terk riski erken uyarı, devamsızlık.", "C) Öğretmen danışmanlığı sınıf yönetimi ve iklim.", "D) Öğrenme becerisi plan, not tutma, sınav kaygısı.", "E) Güdü ve erteleme hedef koyma."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Eğitsel Rehberlik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Aile eğitimi evde destek.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Eğitsel Rehberlik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Öğretmen danışmanlığı sınıf yönetimi ve iklim.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Eğitsel Rehberlik notundaki temel bilgi."
 }
 ];

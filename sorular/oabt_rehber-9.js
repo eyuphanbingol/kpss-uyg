@@ -61,63 +61,63 @@ window.oabt_rehber_9_sorulari = [
     "explanation": "Etik kapanış."
 },
 {
-    "question": "Grupla Psikolojik Danışma konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Grup gizlilik, gönüllülük, saygı kurallarıyla kurulur."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Grup için doğru bir açıklamadır?",
+    "options": ["A) Oluşma, fırtına, norm, performans, dağılma (Tuckman) sık uyarlanır.", "B) Burada-şimdi Yalom süreç yorumu.", "C) Grup gizlilik, gönüllülük, saygı kurallarıyla kurulur.", "D) Yalom ortak faktörler: umut, evrensellik, bağlılık, katarsis.", "E) Lider kolaylaştırıcıdır, vaiz değildir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Grupla Psikolojik Danışma notundaki temel bilgi."
 },
 {
-    "question": "Grupla Psikolojik Danışma konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Psikoeğitim, danışma, destek, görev grup türleri ayrılır.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Psikoeğitim, danışma, destek, görev hakkında hangisi doğrudur?",
+    "options": ["A) Psikoeğitim, danışma, destek, görev grup türleri ayrılır.", "B) Grup gizlilik, gönüllülük, saygı kurallarıyla kurulur.", "C) Yalom ortak faktörler: umut, evrensellik, bağlılık, katarsis.", "D) Lider kolaylaştırıcıdır, vaiz değildir.", "E) Seçme uygun üye; kriz ve psikoz grup için kontrendike olabilir."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Grupla Psikolojik Danışma notundaki temel bilgi."
 },
 {
-    "question": "Grupla Psikolojik Danışma konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Yalom ortak faktörler: umut, evrensellik, bağlılık, katarsis."],
+    "question": "Yalom hangisini ifade eder?",
+    "options": ["A) Lider kolaylaştırıcıdır, vaiz değildir.", "B) Seçme uygun üye; kriz ve psikoz grup için kontrendike olabilir.", "C) Yalom ortak faktörler: umut, evrensellik, bağlılık, katarsis.", "D) Grup gizlilik, gönüllülük, saygı kurallarıyla kurulur.", "E) Psikoeğitim, danışma, destek, görev grup türleri ayrılır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Grupla Psikolojik Danışma notundaki temel bilgi."
+},
+{
+    "question": "Lider ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Grup gizlilik, gönüllülük, saygı kurallarıyla kurulur.", "B) Psikoeğitim, danışma, destek, görev grup türleri ayrılır.", "C) Yalom ortak faktörler: umut, evrensellik, bağlılık, katarsis.", "D) Seçme uygun üye; kriz ve psikoz grup için kontrendike olabilir.", "E) Lider kolaylaştırıcıdır, vaiz değildir."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Grupla Psikolojik Danışma notundaki temel bilgi."
 },
 {
-    "question": "Grupla Psikolojik Danışma konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Lider kolaylaştırıcıdır, vaiz değildir.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Seçme için doğru bir açıklamadır?",
+    "options": ["A) Lider kolaylaştırıcıdır, vaiz değildir.", "B) Seçme uygun üye; kriz ve psikoz grup için kontrendike olabilir.", "C) Grup gizlilik, gönüllülük, saygı kurallarıyla kurulur.", "D) Psikoeğitim, danışma, destek, görev grup türleri ayrılır.", "E) Yalom ortak faktörler: umut, evrensellik, bağlılık, katarsis."],
+    "correctAnswerIndex": 1,
+    "explanation": "Grupla Psikolojik Danışma notundaki temel bilgi."
 },
 {
-    "question": "Grupla Psikolojik Danışma konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Seçme uygun üye; kriz ve psikoz grup için kontrendike olabilir."],
+    "question": "Oluşma, fırtına, norm, performans, dağılma hakkında hangisi doğrudur?",
+    "options": ["A) Grup gizlilik, gönüllülük, saygı kurallarıyla kurulur.", "B) Psikoeğitim, danışma, destek, görev grup türleri ayrılır.", "C) Yalom ortak faktörler: umut, evrensellik, bağlılık, katarsis.", "D) Lider kolaylaştırıcıdır, vaiz değildir.", "E) Oluşma, fırtına, norm, performans, dağılma (Tuckman) sık uyarlanır."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Grupla Psikolojik Danışma notundaki temel bilgi."
 },
 {
-    "question": "Grupla Psikolojik Danışma konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Oluşma, fırtına, norm, performans, dağılma (Tuckman) sık uyarlanır.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Burada-şimdi hangisini ifade eder?",
+    "options": ["A) Burada-şimdi Yalom süreç yorumu.", "B) Grup gizlilik, gönüllülük, saygı kurallarıyla kurulur.", "C) Psikoeğitim, danışma, destek, görev grup türleri ayrılır.", "D) Yalom ortak faktörler: umut, evrensellik, bağlılık, katarsis.", "E) Lider kolaylaştırıcıdır, vaiz değildir."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Grupla Psikolojik Danışma notundaki temel bilgi."
 },
 {
-    "question": "Grupla Psikolojik Danışma konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Burada-şimdi Yalom süreç yorumu."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Kutsal kural ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Yalom ortak faktörler: umut, evrensellik, bağlılık, katarsis.", "B) Lider kolaylaştırıcıdır, vaiz değildir.", "C) Kutsal kural birinin sözünü kesmeme, etiket yok.", "D) Grup gizlilik, gönüllülük, saygı kurallarıyla kurulur.", "E) Psikoeğitim, danışma, destek, görev grup türleri ayrılır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Grupla Psikolojik Danışma notundaki temel bilgi."
 },
 {
-    "question": "Grupla Psikolojik Danışma konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Kutsal kural birinin sözünü kesmeme, etiket yok.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Direnç ve sessizlik için doğru bir açıklamadır?",
+    "options": ["A) Lider kolaylaştırıcıdır, vaiz değildir.", "B) Direnç ve sessizlik teknikle çalışılır, cezayla değil.", "C) Grup gizlilik, gönüllülük, saygı kurallarıyla kurulur.", "D) Psikoeğitim, danışma, destek, görev grup türleri ayrılır.", "E) Yalom ortak faktörler: umut, evrensellik, bağlılık, katarsis."],
+    "correctAnswerIndex": 1,
+    "explanation": "Grupla Psikolojik Danışma notundaki temel bilgi."
+},
+{
+    "question": "Eş liderlik hakkında hangisi doğrudur?",
+    "options": ["A) Eş liderlik model ve güvenlik.", "B) Grup gizlilik, gönüllülük, saygı kurallarıyla kurulur.", "C) Psikoeğitim, danışma, destek, görev grup türleri ayrılır.", "D) Yalom ortak faktörler: umut, evrensellik, bağlılık, katarsis.", "E) Lider kolaylaştırıcıdır, vaiz değildir."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Grupla Psikolojik Danışma konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Direnç ve sessizlik teknikle çalışılır, cezayla değil."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Grupla Psikolojik Danışma konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Eş liderlik model ve güvenlik.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Grupla Psikolojik Danışma notundaki temel bilgi."
 }
 ];

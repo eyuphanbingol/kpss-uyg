@@ -61,63 +61,63 @@ window.oabt_okul_14_sorulari = [
     "explanation": "Tanım."
 },
 {
-    "question": "Drama konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Dramatik oyun evcilik zaten dramadır."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Dramatik oyun için doğru bir açıklamadır?",
+    "options": ["A) 2026 drama eğitim yöntemi sorusu.", "B) Öğretmen rolde sade.", "C) Dramatik oyun evcilik zaten dramadır.", "D) Eğitici drama ısınma-canlandırma-yansıtma.", "E) Kukla, maske, nesne mesafe."],
+    "correctAnswerIndex": 2,
+    "explanation": "Drama notundaki temel bilgi."
 },
 {
-    "question": "Drama konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Eğitici drama ısınma-canlandırma-yansıtma.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Eğitici drama hakkında hangisi doğrudur?",
+    "options": ["A) Eğitici drama ısınma-canlandırma-yansıtma.", "B) Dramatik oyun evcilik zaten dramadır.", "C) Kukla, maske, nesne mesafe.", "D) 2026 drama eğitim yöntemi sorusu.", "E) Öğretmen rolde sade."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Drama notundaki temel bilgi."
 },
 {
-    "question": "Drama konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Kukla, maske, nesne mesafe."],
+    "question": "Kukla, maske, nesne hangisini ifade eder?",
+    "options": ["A) Dramatik oyun evcilik zaten dramadır.", "B) Eğitici drama ısınma-canlandırma-yansıtma.", "C) 2026 drama eğitim yöntemi sorusu.", "D) Öğretmen rolde sade.", "E) Kukla, maske, nesne mesafe."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Drama notundaki temel bilgi."
 },
 {
-    "question": "Drama konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Gönüllülük.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Drama konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) 2026 drama eğitim yöntemi sorusu."],
+    "question": "Aşağıdakilerden hangisi 2026 için doğru bir açıklamadır?",
+    "options": ["A) Dramatik oyun evcilik zaten dramadır.", "B) Eğitici drama ısınma-canlandırma-yansıtma.", "C) Kukla, maske, nesne mesafe.", "D) Öğretmen rolde sade.", "E) 2026 drama eğitim yöntemi sorusu."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Drama notundaki temel bilgi."
 },
 {
-    "question": "Drama konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Öğretmen rolde sade.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Öğretmen rolde sade hakkında hangisi doğrudur?",
+    "options": ["A) Kukla, maske, nesne mesafe.", "B) 2026 drama eğitim yöntemi sorusu.", "C) Öğretmen rolde sade.", "D) Dramatik oyun evcilik zaten dramadır.", "E) Eğitici drama ısınma-canlandırma-yansıtma."],
+    "correctAnswerIndex": 2,
+    "explanation": "Drama notundaki temel bilgi."
+},
+{
+    "question": "Donuk imge fotoğraf hangisini ifade eder?",
+    "options": ["A) 2026 drama eğitim yöntemi sorusu.", "B) Donuk imge fotoğraf.", "C) Dramatik oyun evcilik zaten dramadır.", "D) Eğitici drama ısınma-canlandırma-yansıtma.", "E) Kukla, maske, nesne mesafe."],
+    "correctAnswerIndex": 1,
+    "explanation": "Drama notundaki temel bilgi."
+},
+{
+    "question": "Hikâye canlandırma ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Hikâye canlandırma.", "B) Dramatik oyun evcilik zaten dramadır.", "C) Eğitici drama ısınma-canlandırma-yansıtma.", "D) Kukla, maske, nesne mesafe.", "E) 2026 drama eğitim yöntemi sorusu."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Drama notundaki temel bilgi."
 },
 {
-    "question": "Drama konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Donuk imge fotoğraf."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Hayvan-meslek rolleri için doğru bir açıklamadır?",
+    "options": ["A) Kukla, maske, nesne mesafe.", "B) 2026 drama eğitim yöntemi sorusu.", "C) Hayvan-meslek rolleri kalıp kırma.", "D) Dramatik oyun evcilik zaten dramadır.", "E) Eğitici drama ısınma-canlandırma-yansıtma."],
+    "correctAnswerIndex": 2,
+    "explanation": "Drama notundaki temel bilgi."
 },
 {
-    "question": "Drama konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Hikâye canlandırma.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Müfredat bağ hakkında hangisi doğrudur?",
+    "options": ["A) Kukla, maske, nesne mesafe.", "B) 2026 drama eğitim yöntemi sorusu.", "C) Müfredat bağ dil, fen, sosyal sezgi.", "D) Dramatik oyun evcilik zaten dramadır.", "E) Eğitici drama ısınma-canlandırma-yansıtma."],
+    "correctAnswerIndex": 2,
+    "explanation": "Drama notundaki temel bilgi."
 },
 {
-    "question": "Drama konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Hayvan-meslek rolleri kalıp kırma."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Drama konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Müfredat bağ dil, fen, sosyal sezgi.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Çatışma oyunu hakkında hangisi doğrudur?",
+    "options": ["A) Eğitici drama ısınma-canlandırma-yansıtma.", "B) Kukla, maske, nesne mesafe.", "C) 2026 drama eğitim yöntemi sorusu.", "D) Çatışma oyunu sınır.", "E) Dramatik oyun evcilik zaten dramadır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Drama notundaki temel bilgi."
 }
 ];

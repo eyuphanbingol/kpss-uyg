@@ -55,69 +55,69 @@ window.oabt_bio_6_sorulari = [
     "explanation": "Lorenz kazları."
 },
 {
-    "question": "Hayvan Biyolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Sünger-cnidaria-platyhelminthes-nematod-anelid-mollusk-arthropod-ekinoderm-kordat temel ka"],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Hayvan Biyolojisi için doğru bir açıklamadır?",
+    "options": ["A) Omurgalı sınıfları balık-amfibi-reptil-kuş-memeli (kuşlar reptil kladında).", "B) Sünger-cnidaria-platyhelminthes-nematod-anelid-mollusk-arthropod-ekinoderm-kordat temel karakterler.", "C) Sölom akölomat-psödosölom-sölom.", "D) Protostom-deuterostom ağız gelişimi, bölünme tipi.", "E) Kordat notokord, dorsal sinir kordonu, faringeal yarıklık, postanal kuyruk."],
+    "correctAnswerIndex": 1,
+    "explanation": "Hayvan Biyolojisi notundaki temel bilgi."
 },
 {
-    "question": "Hayvan Biyolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Sölom akölomat-psödosölom-sölom.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Sölom hakkında hangisi doğrudur?",
+    "options": ["A) Protostom-deuterostom ağız gelişimi, bölünme tipi.", "B) Kordat notokord, dorsal sinir kordonu, faringeal yarıklık, postanal kuyruk.", "C) Omurgalı sınıfları balık-amfibi-reptil-kuş-memeli (kuşlar reptil kladında).", "D) Sölom akölomat-psödosölom-sölom.", "E) Sünger-cnidaria-platyhelminthes-nematod-anelid-mollusk-arthropod-ekinoderm-kordat temel karakterler."],
+    "correctAnswerIndex": 3,
+    "explanation": "Hayvan Biyolojisi notundaki temel bilgi."
+},
+{
+    "question": "Protostom-deuterostom hangisini ifade eder?",
+    "options": ["A) Kordat notokord, dorsal sinir kordonu, faringeal yarıklık, postanal kuyruk.", "B) Omurgalı sınıfları balık-amfibi-reptil-kuş-memeli (kuşlar reptil kladında).", "C) Protostom-deuterostom ağız gelişimi, bölünme tipi.", "D) Sünger-cnidaria-platyhelminthes-nematod-anelid-mollusk-arthropod-ekinoderm-kordat temel karakterler.", "E) Sölom akölomat-psödosölom-sölom."],
+    "correctAnswerIndex": 2,
+    "explanation": "Hayvan Biyolojisi notundaki temel bilgi."
+},
+{
+    "question": "Kordat ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Omurgalı sınıfları balık-amfibi-reptil-kuş-memeli (kuşlar reptil kladında).", "B) Sıcaklık ektoterm-endoterm; karşı akım.", "C) Kordat notokord, dorsal sinir kordonu, faringeal yarıklık, postanal kuyruk.", "D) Sölom akölomat-psödosölom-sölom.", "E) Protostom-deuterostom ağız gelişimi, bölünme tipi."],
+    "correctAnswerIndex": 2,
+    "explanation": "Hayvan Biyolojisi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Omurgalı sınıfları için doğru bir açıklamadır?",
+    "options": ["A) Kordat notokord, dorsal sinir kordonu, faringeal yarıklık, postanal kuyruk.", "B) Omurgalı sınıfları balık-amfibi-reptil-kuş-memeli (kuşlar reptil kladında).", "C) Sünger-cnidaria-platyhelminthes-nematod-anelid-mollusk-arthropod-ekinoderm-kordat temel karakterler.", "D) Sölom akölomat-psödosölom-sölom.", "E) Protostom-deuterostom ağız gelişimi, bölünme tipi."],
+    "correctAnswerIndex": 1,
+    "explanation": "Hayvan Biyolojisi notundaki temel bilgi."
+},
+{
+    "question": "Sıcaklık hakkında hangisi doğrudur?",
+    "options": ["A) Sünger-cnidaria-platyhelminthes-nematod-anelid-mollusk-arthropod-ekinoderm-kordat temel karakterler.", "B) Sölom akölomat-psödosölom-sölom.", "C) Protostom-deuterostom ağız gelişimi, bölünme tipi.", "D) Kordat notokord, dorsal sinir kordonu, faringeal yarıklık, postanal kuyruk.", "E) Sıcaklık ektoterm-endoterm; karşı akım."],
+    "correctAnswerIndex": 4,
+    "explanation": "Hayvan Biyolojisi notundaki temel bilgi."
+},
+{
+    "question": "Osmoregülasyon hangisini ifade eder?",
+    "options": ["A) Osmoregülasyon tatlı su-deniz balığı zıt strateji.", "B) Sünger-cnidaria-platyhelminthes-nematod-anelid-mollusk-arthropod-ekinoderm-kordat temel karakterler.", "C) Sölom akölomat-psödosölom-sölom.", "D) Protostom-deuterostom ağız gelişimi, bölünme tipi.", "E) Kordat notokord, dorsal sinir kordonu, faringeal yarıklık, postanal kuyruk."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Hayvan Biyolojisi notundaki temel bilgi."
 },
 {
-    "question": "Hayvan Biyolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Protostom-deuterostom ağız gelişimi, bölünme tipi."],
+    "question": "Sinir-kas ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Sünger-cnidaria-platyhelminthes-nematod-anelid-mollusk-arthropod-ekinoderm-kordat temel karakterler.", "B) Sölom akölomat-psödosölom-sölom.", "C) Protostom-deuterostom ağız gelişimi, bölünme tipi.", "D) Kordat notokord, dorsal sinir kordonu, faringeal yarıklık, postanal kuyruk.", "E) Sinir-kas aksiyon potansiyeli, motor ünite."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Hayvan Biyolojisi notundaki temel bilgi."
 },
 {
-    "question": "Hayvan Biyolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Kordat notokord, dorsal sinir kordonu, faringeal yarıklık, postanal kuyruk.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Davranış için doğru bir açıklamadır?",
+    "options": ["A) Kordat notokord, dorsal sinir kordonu, faringeal yarıklık, postanal kuyruk.", "B) Davranış içgüdü-öğrenme, imprinting, optimal foraging.", "C) Sünger-cnidaria-platyhelminthes-nematod-anelid-mollusk-arthropod-ekinoderm-kordat temel karakterler.", "D) Sölom akölomat-psödosölom-sölom.", "E) Protostom-deuterostom ağız gelişimi, bölünme tipi."],
+    "correctAnswerIndex": 1,
+    "explanation": "Hayvan Biyolojisi notundaki temel bilgi."
+},
+{
+    "question": "Sosyal hakkında hangisi doğrudur?",
+    "options": ["A) Sosyal eusosyal böcek, akraba seçilimi Hamilton rB>C.", "B) Sünger-cnidaria-platyhelminthes-nematod-anelid-mollusk-arthropod-ekinoderm-kordat temel karakterler.", "C) Sölom akölomat-psödosölom-sölom.", "D) Protostom-deuterostom ağız gelişimi, bölünme tipi.", "E) Kordat notokord, dorsal sinir kordonu, faringeal yarıklık, postanal kuyruk."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Hayvan Biyolojisi notundaki temel bilgi."
 },
 {
-    "question": "Hayvan Biyolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Omurgalı sınıfları balık-amfibi-reptil-kuş-memeli (kuşlar reptil kladında)."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Hayvan Biyolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Sıcaklık ektoterm-endoterm; karşı akım.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Hayvan Biyolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Osmoregülasyon tatlı su-deniz balığı zıt strateji."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Hayvan Biyolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Sinir-kas aksiyon potansiyeli, motor ünite.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Hayvan Biyolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Davranış içgüdü-öğrenme, imprinting, optimal foraging."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Hayvan Biyolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Sosyal eusosyal böcek, akraba seçilimi Hamilton rB>C.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Hayvan Biyolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Dış-iç döllenme, ovipar-vivipar-ovovivipar."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Dış-iç döllenme hangisini ifade eder?",
+    "options": ["A) Kordat notokord, dorsal sinir kordonu, faringeal yarıklık, postanal kuyruk.", "B) Dış-iç döllenme, ovipar-vivipar-ovovivipar.", "C) Sünger-cnidaria-platyhelminthes-nematod-anelid-mollusk-arthropod-ekinoderm-kordat temel karakterler.", "D) Sölom akölomat-psödosölom-sölom.", "E) Protostom-deuterostom ağız gelişimi, bölünme tipi."],
+    "correctAnswerIndex": 1,
+    "explanation": "Hayvan Biyolojisi notundaki temel bilgi."
 }
 ];

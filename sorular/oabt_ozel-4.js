@@ -61,63 +61,63 @@ window.oabt_ozel_4_sorulari = [
     "explanation": "EÇÖE içeriği."
 },
 {
-    "question": "Erken Çocuklukta Özel Eğitim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Erken müdahale beyin plastisitesi ve ikincil yetersizliği önleme.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Erken müdahale için doğru bir açıklamadır?",
+    "options": ["A) Erken müdahale beyin plastisitesi ve ikincil yetersizliği önleme.", "B) Aile merkezli hizmet; bebek-aile birimdir.", "C) Doğal ortam ev, kreş, park; klinik tek mekân değildir.", "D) Tarama işitme, gelişim, OSB izlem; tanı öğretmenin işi değildir.", "E) 573 sayılı KHK erken çocukluk özel eğitimini çerçeveye alan metinlerdendir; uydurma madde numarası yazılmaz."],
+    "correctAnswerIndex": 0,
+    "explanation": "Erken Çocuklukta Özel Eğitim notundaki temel bilgi."
 },
 {
-    "question": "Erken Çocuklukta Özel Eğitim konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Aile merkezli hizmet; bebek-aile birimdir.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aile merkezli hakkında hangisi doğrudur?",
+    "options": ["A) Tarama işitme, gelişim, OSB izlem; tanı öğretmenin işi değildir.", "B) 573 sayılı KHK erken çocukluk özel eğitimini çerçeveye alan metinlerdendir; uydurma madde numarası yazılmaz.", "C) Aile merkezli hizmet; bebek-aile birimdir.", "D) Erken müdahale beyin plastisitesi ve ikincil yetersizliği önleme.", "E) Doğal ortam ev, kreş, park; klinik tek mekân değildir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Erken Çocuklukta Özel Eğitim notundaki temel bilgi."
 },
 {
-    "question": "Erken Çocuklukta Özel Eğitim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Doğal ortam ev, kreş, park; klinik tek mekân değildir.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Doğal ortam hangisini ifade eder?",
+    "options": ["A) 573 sayılı KHK erken çocukluk özel eğitimini çerçeveye alan metinlerdendir; uydurma madde numarası yazılmaz.", "B) Doğal ortam ev, kreş, park; klinik tek mekân değildir.", "C) Erken müdahale beyin plastisitesi ve ikincil yetersizliği önleme.", "D) Aile merkezli hizmet; bebek-aile birimdir.", "E) Tarama işitme, gelişim, OSB izlem; tanı öğretmenin işi değildir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Erken Çocuklukta Özel Eğitim notundaki temel bilgi."
 },
 {
-    "question": "Erken Çocuklukta Özel Eğitim konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Tarama işitme, gelişim, OSB izlem; tanı öğretmenin işi değildir.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Tarama ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Doğal ortam ev, kreş, park; klinik tek mekân değildir.", "B) 573 sayılı KHK erken çocukluk özel eğitimini çerçeveye alan metinlerdendir; uydurma madde numarası yazılmaz.", "C) Tarama işitme, gelişim, OSB izlem; tanı öğretmenin işi değildir.", "D) Erken müdahale beyin plastisitesi ve ikincil yetersizliği önleme.", "E) Aile merkezli hizmet; bebek-aile birimdir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Erken Çocuklukta Özel Eğitim notundaki temel bilgi."
 },
 {
-    "question": "Erken Çocuklukta Özel Eğitim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) 573 sayılı KHK erken çocukluk özel eğitimini çerçeveye alan metinlerdendir; uydurma madde ", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi 573 sayılı KHK için doğru bir açıklamadır?",
+    "options": ["A) 573 sayılı KHK erken çocukluk özel eğitimini çerçeveye alan metinlerdendir; uydurma madde numarası yazılmaz.", "B) Erken müdahale beyin plastisitesi ve ikincil yetersizliği önleme.", "C) Aile merkezli hizmet; bebek-aile birimdir.", "D) Doğal ortam ev, kreş, park; klinik tek mekân değildir.", "E) Tarama işitme, gelişim, OSB izlem; tanı öğretmenin işi değildir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Erken Çocuklukta Özel Eğitim notundaki temel bilgi."
 },
 {
-    "question": "Erken Çocuklukta Özel Eğitim konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Bireyselleştirilmiş aile hizmet planı mantığı (IFSP benzeri) ekip ve aile önceliği.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Bireyselleştirilmiş aile hizmet planı hakkında hangisi doğrudur?",
+    "options": ["A) Bireyselleştirilmiş aile hizmet planı mantığı (IFSP benzeri) ekip ve aile önceliği.", "B) Erken müdahale beyin plastisitesi ve ikincil yetersizliği önleme.", "C) Aile merkezli hizmet; bebek-aile birimdir.", "D) Doğal ortam ev, kreş, park; klinik tek mekân değildir.", "E) Tarama işitme, gelişim, OSB izlem; tanı öğretmenin işi değildir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Erken Çocuklukta Özel Eğitim notundaki temel bilgi."
 },
 {
-    "question": "Erken Çocuklukta Özel Eğitim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Transdisipliner ekip, tek kapı iletişim.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Transdisipliner hangisini ifade eder?",
+    "options": ["A) Tarama işitme, gelişim, OSB izlem; tanı öğretmenin işi değildir.", "B) Transdisipliner ekip, tek kapı iletişim.", "C) Erken müdahale beyin plastisitesi ve ikincil yetersizliği önleme.", "D) Aile merkezli hizmet; bebek-aile birimdir.", "E) Doğal ortam ev, kreş, park; klinik tek mekân değildir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Erken Çocuklukta Özel Eğitim notundaki temel bilgi."
 },
 {
-    "question": "Erken Çocuklukta Özel Eğitim konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Geçiş EÇÖE'den okul öncesi/ilkokula BEP köprüsü.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Geçiş ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Tarama işitme, gelişim, OSB izlem; tanı öğretmenin işi değildir.", "B) Geçiş EÇÖE'den okul öncesi/ilkokula BEP köprüsü.", "C) Erken müdahale beyin plastisitesi ve ikincil yetersizliği önleme.", "D) Aile merkezli hizmet; bebek-aile birimdir.", "E) Doğal ortam ev, kreş, park; klinik tek mekân değildir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Erken Çocuklukta Özel Eğitim notundaki temel bilgi."
 },
 {
-    "question": "Erken Çocuklukta Özel Eğitim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) RAM ve sağlık iş birliği.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi RAM ve sağlık için doğru bir açıklamadır?",
+    "options": ["A) RAM ve sağlık iş birliği.", "B) Erken müdahale beyin plastisitesi ve ikincil yetersizliği önleme.", "C) Aile merkezli hizmet; bebek-aile birimdir.", "D) Doğal ortam ev, kreş, park; klinik tek mekân değildir.", "E) Tarama işitme, gelişim, OSB izlem; tanı öğretmenin işi değildir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Erken Çocuklukta Özel Eğitim notundaki temel bilgi."
 },
 {
-    "question": "Erken Çocuklukta Özel Eğitim konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Ev ziyareti koçluk, model olma.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Ev ziyareti hakkında hangisi doğrudur?",
+    "options": ["A) Ev ziyareti koçluk, model olma.", "B) Erken müdahale beyin plastisitesi ve ikincil yetersizliği önleme.", "C) Aile merkezli hizmet; bebek-aile birimdir.", "D) Doğal ortam ev, kreş, park; klinik tek mekân değildir.", "E) Tarama işitme, gelişim, OSB izlem; tanı öğretmenin işi değildir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Erken Çocuklukta Özel Eğitim notundaki temel bilgi."
 }
 ];

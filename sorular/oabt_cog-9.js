@@ -61,63 +61,63 @@ window.oabt_cog_9_sorulari = [
     "explanation": "Karşılıklı etkileşimdir."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Mekânı algılama, harita, arazi, sorgulama coğrafi becerilerdir.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Beş tema: konum, yer, insan-çevre, hareket, bölge.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Mekânı algılama, harita, arazi, sorgulama için doğru bir açıklamadır?",
+    "options": ["A) Ölçek yerel olayı küresele bağlar.", "B) Harita okuryazarlığı lejant, yön, projeksiyon farkındalığıdır.", "C) Mekânı algılama, harita, arazi, sorgulama coğrafi becerilerdir.", "D) Beş tema: konum, yer, insan-çevre, hareket, bölge.", "E) Coğrafi sorgulama soru-veri-analiz-sonuç döngüsüdür."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Coğrafi sorgulama soru-veri-analiz-sonuç döngüsüdür.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Ölçek yerel olayı küresele bağlar.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Beş tema hakkında hangisi doğrudur?",
+    "options": ["A) Ölçek yerel olayı küresele bağlar.", "B) Harita okuryazarlığı lejant, yön, projeksiyon farkındalığıdır.", "C) Beş tema: konum, yer, insan-çevre, hareket, bölge.", "D) Mekânı algılama, harita, arazi, sorgulama coğrafi becerilerdir.", "E) Coğrafi sorgulama soru-veri-analiz-sonuç döngüsüdür."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Harita okuryazarlığı lejant, yön, projeksiyon farkındalığıdır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Coğrafi sorgulama hangisini ifade eder?",
+    "options": ["A) Coğrafi sorgulama soru-veri-analiz-sonuç döngüsüdür.", "B) Mekânı algılama, harita, arazi, sorgulama coğrafi becerilerdir.", "C) Beş tema: konum, yer, insan-çevre, hareket, bölge.", "D) Ölçek yerel olayı küresele bağlar.", "E) Harita okuryazarlığı lejant, yön, projeksiyon farkındalığıdır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Arazi çalışması birincil veri; gözlem ve ölçme.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Ölçek ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Mekânı algılama, harita, arazi, sorgulama coğrafi becerilerdir.", "B) Beş tema: konum, yer, insan-çevre, hareket, bölge.", "C) Coğrafi sorgulama soru-veri-analiz-sonuç döngüsüdür.", "D) Harita okuryazarlığı lejant, yön, projeksiyon farkındalığıdır.", "E) Ölçek yerel olayı küresele bağlar."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Harita okuryazarlığı için doğru bir açıklamadır?",
+    "options": ["A) Beş tema: konum, yer, insan-çevre, hareket, bölge.", "B) Coğrafi sorgulama soru-veri-analiz-sonuç döngüsüdür.", "C) Ölçek yerel olayı küresele bağlar.", "D) Harita okuryazarlığı lejant, yön, projeksiyon farkındalığıdır.", "E) Mekânı algılama, harita, arazi, sorgulama coğrafi becerilerdir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Arazi çalışması hakkında hangisi doğrudur?",
+    "options": ["A) Coğrafi sorgulama soru-veri-analiz-sonuç döngüsüdür.", "B) Ölçek yerel olayı küresele bağlar.", "C) Arazi çalışması birincil veri; gözlem ve ölçme.", "D) Mekânı algılama, harita, arazi, sorgulama coğrafi becerilerdir.", "E) Beş tema: konum, yer, insan-çevre, hareket, bölge."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Örnek olay ve problem çözme yerel afeti sınıfa taşır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Örnek olay ve problem çözme hangisini ifade eder?",
+    "options": ["A) Mekânı algılama, harita, arazi, sorgulama coğrafi becerilerdir.", "B) Beş tema: konum, yer, insan-çevre, hareket, bölge.", "C) Coğrafi sorgulama soru-veri-analiz-sonuç döngüsüdür.", "D) Ölçek yerel olayı küresele bağlar.", "E) Örnek olay ve problem çözme yerel afeti sınıfa taşır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) İstasyon, istasyon-çark, istasyon grupla mekân istasyonu.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "İstasyon, istasyon-çark, istasyon ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İstasyon, istasyon-çark, istasyon grupla mekân istasyonu.", "B) Mekânı algılama, harita, arazi, sorgulama coğrafi becerilerdir.", "C) Beş tema: konum, yer, insan-çevre, hareket, bölge.", "D) Coğrafi sorgulama soru-veri-analiz-sonuç döngüsüdür.", "E) Ölçek yerel olayı küresele bağlar."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Ters yüz ve CBS laboratuvarı için doğru bir açıklamadır?",
+    "options": ["A) Coğrafi sorgulama soru-veri-analiz-sonuç döngüsüdür.", "B) Ölçek yerel olayı küresele bağlar.", "C) Ters yüz ve CBS laboratuvarı veri okumayı artırır.", "D) Mekânı algılama, harita, arazi, sorgulama coğrafi becerilerdir.", "E) Beş tema: konum, yer, insan-çevre, hareket, bölge."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Ters yüz ve CBS laboratuvarı veri okumayı artırır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Disiplinlerarasılık hakkında hangisi doğrudur?",
+    "options": ["A) Ölçek yerel olayı küresele bağlar.", "B) Disiplinlerarasılık tarih, fen ve matematik ile bağ.", "C) Mekânı algılama, harita, arazi, sorgulama coğrafi becerilerdir.", "D) Beş tema: konum, yer, insan-çevre, hareket, bölge.", "E) Coğrafi sorgulama soru-veri-analiz-sonuç döngüsüdür."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Disiplinlerarasılık tarih, fen ve matematik ile bağ.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 }
 ];

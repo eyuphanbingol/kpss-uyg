@@ -61,63 +61,63 @@ window.oabt_okul_6_sorulari = [
     "explanation": "Katılım."
 },
 {
-    "question": "Çocuk Edebiyatı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Resimli kitap metin-görsel bağ.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Resimli kitap için doğru bir açıklamadır?",
+    "options": ["A) Korku dozu ve klişe.", "B) Masal, fabl, tekerleme, ninni, hikâye.", "C) Resimli kitap metin-görsel bağ.", "D) Yaş 0-3 dokunsal, 3-6 öykü-şiir-masal.", "E) Tekrar ve ritim dil gelişimi."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Çocuk Edebiyatı notundaki temel bilgi."
 },
 {
-    "question": "Çocuk Edebiyatı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Yaş 0-3 dokunsal, 3-6 öykü-şiir-masal."],
+    "question": "Yaş hakkında hangisi doğrudur?",
+    "options": ["A) Tekrar ve ritim dil gelişimi.", "B) Korku dozu ve klişe.", "C) Masal, fabl, tekerleme, ninni, hikâye.", "D) Yaş 0-3 dokunsal, 3-6 öykü-şiir-masal.", "E) Resimli kitap metin-görsel bağ."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Çocuk Edebiyatı notundaki temel bilgi."
 },
 {
-    "question": "Çocuk Edebiyatı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Tekrar ve ritim dil gelişimi.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Tekrar ve ritim hangisini ifade eder?",
+    "options": ["A) Korku dozu ve klişe.", "B) Masal, fabl, tekerleme, ninni, hikâye.", "C) Tekrar ve ritim dil gelişimi.", "D) Resimli kitap metin-görsel bağ.", "E) Yaş 0-3 dokunsal, 3-6 öykü-şiir-masal."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Çocuk Edebiyatı notundaki temel bilgi."
 },
 {
-    "question": "Çocuk Edebiyatı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Korku dozu ve klişe."],
+    "question": "Korku dozu ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Resimli kitap metin-görsel bağ.", "B) Yaş 0-3 dokunsal, 3-6 öykü-şiir-masal.", "C) Tekrar ve ritim dil gelişimi.", "D) Masal, fabl, tekerleme, ninni, hikâye.", "E) Korku dozu ve klişe."],
+    "correctAnswerIndex": 4,
+    "explanation": "Çocuk Edebiyatı notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Yerli-çeviri için doğru bir açıklamadır?",
+    "options": ["A) Yerli-çeviri denge.", "B) Resimli kitap metin-görsel bağ.", "C) Yaş 0-3 dokunsal, 3-6 öykü-şiir-masal.", "D) Tekrar ve ritim dil gelişimi.", "E) Korku dozu ve klişe."],
+    "correctAnswerIndex": 0,
+    "explanation": "Çocuk Edebiyatı notundaki temel bilgi."
+},
+{
+    "question": "Masal, fabl, tekerleme, ninni, hikâye hakkında hangisi doğrudur?",
+    "options": ["A) Masal, fabl, tekerleme, ninni, hikâye.", "B) Resimli kitap metin-görsel bağ.", "C) Yaş 0-3 dokunsal, 3-6 öykü-şiir-masal.", "D) Tekrar ve ritim dil gelişimi.", "E) Korku dozu ve klişe."],
+    "correctAnswerIndex": 0,
+    "explanation": "Çocuk Edebiyatı notundaki temel bilgi."
+},
+{
+    "question": "Sessiz kitap hangisini ifade eder?",
+    "options": ["A) Korku dozu ve klişe.", "B) Sessiz kitap görsel anlatı.", "C) Resimli kitap metin-görsel bağ.", "D) Yaş 0-3 dokunsal, 3-6 öykü-şiir-masal.", "E) Tekrar ve ritim dil gelişimi."],
+    "correctAnswerIndex": 1,
+    "explanation": "Çocuk Edebiyatı notundaki temel bilgi."
+},
+{
+    "question": "Bilgi kitabı ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Yaş 0-3 dokunsal, 3-6 öykü-şiir-masal.", "B) Tekrar ve ritim dil gelişimi.", "C) Korku dozu ve klişe.", "D) Bilgi kitabı sade kavram.", "E) Resimli kitap metin-görsel bağ."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Çocuk Edebiyatı notundaki temel bilgi."
 },
 {
-    "question": "Çocuk Edebiyatı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Yerli-çeviri denge.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Çeşitlilik için doğru bir açıklamadır?",
+    "options": ["A) Korku dozu ve klişe.", "B) Çeşitlilik kahraman.", "C) Resimli kitap metin-görsel bağ.", "D) Yaş 0-3 dokunsal, 3-6 öykü-şiir-masal.", "E) Tekrar ve ritim dil gelişimi."],
+    "correctAnswerIndex": 1,
+    "explanation": "Çocuk Edebiyatı notundaki temel bilgi."
 },
 {
-    "question": "Çocuk Edebiyatı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Masal, fabl, tekerleme, ninni, hikâye."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Çocuk Edebiyatı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Sessiz kitap görsel anlatı.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Çocuk Edebiyatı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Bilgi kitabı sade kavram."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Çocuk Edebiyatı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Çeşitlilik kahraman.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Çocuk Edebiyatı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Dijital kitap etkileşim sınırı."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Dijital kitap hakkında hangisi doğrudur?",
+    "options": ["A) Korku dozu ve klişe.", "B) Dijital kitap etkileşim sınırı.", "C) Resimli kitap metin-görsel bağ.", "D) Yaş 0-3 dokunsal, 3-6 öykü-şiir-masal.", "E) Tekrar ve ritim dil gelişimi."],
+    "correctAnswerIndex": 1,
+    "explanation": "Çocuk Edebiyatı notundaki temel bilgi."
 }
 ];

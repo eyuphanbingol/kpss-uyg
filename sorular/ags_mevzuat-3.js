@@ -73,51 +73,51 @@ window.ags_mevzuat_3_sorulari = [
     "explanation": "Açık yasak."
 },
 {
-    "question": "1739 Sayılı Kanun konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) 1739 sayılı Millî Eğitim Temel Kanunu 14 Haziran 1973 kabul, 24 Haziran 1973 RG; amaç, ilk", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "1739 Sayılı Kanun konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) m.2 genel amaçlar: Atatürkçü yurttaş; dengeli kişilik; ilgi-istidatla meslek ve hayat; mil", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "m.3 özel amaçlar hangisini ifade eder?",
+    "options": ["A) 1739 çerçeve kanundur; kademe süreleri sonradan 4306 ve 6287 ile güncellenmiştir.", "B) m.3 özel amaçlar her kurumun genel amaçlara ve ilkelere uygun amaç tespitidir.", "C) 1739 sayılı Millî Eğitim Temel Kanunu 14 Haziran 1973 kabul, 24 Haziran 1973 RG; amaç, ilkeler, sistem yapısı, öğretmenlik, araç-gereç ve Devlet görevidir.", "D) m.2 genel amaçlar: Atatürkçü yurttaş; dengeli kişilik; ilgi-istidatla meslek ve hayat; milli birlik ve çağdaş uygarlık.", "E) m.1 kanunun sistem bütünlüğü içinde temel hükümleri kapsadığını belirtir."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "1739 Sayılı Kanun notundaki temel bilgi."
 },
 {
-    "question": "1739 Sayılı Kanun konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) m.3 özel amaçlar her kurumun genel amaçlara ve ilkelere uygun amaç tespitidir.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "1739 Sayılı Kanun konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) m.1 kanunun sistem bütünlüğü içinde temel hükümleri kapsadığını belirtir.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "m.1 ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) 1739 çerçeve kanundur; kademe süreleri sonradan 4306 ve 6287 ile güncellenmiştir.", "B) m.1 kanunun sistem bütünlüğü içinde temel hükümleri kapsadığını belirtir.", "C) 1739 sayılı Millî Eğitim Temel Kanunu 14 Haziran 1973 kabul, 24 Haziran 1973 RG; amaç, ilkeler, sistem yapısı, öğretmenlik, araç-gereç ve Devlet görevidir.", "D) m.2 genel amaçlar: Atatürkçü yurttaş; dengeli kişilik; ilgi-istidatla meslek ve hayat; milli birlik ve çağdaş uygarlık.", "E) m.3 özel amaçlar her kurumun genel amaçlara ve ilkelere uygun amaç tespitidir."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "1739 Sayılı Kanun notundaki temel bilgi."
 },
 {
-    "question": "1739 Sayılı Kanun konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) 1739 çerçeve kanundur; kademe süreleri sonradan 4306 ve 6287 ile güncellenmiştir.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi 1739 çerçeve kanundur; kademe için doğru bir açıklamadır?",
+    "options": ["A) 1739 çerçeve kanundur; kademe süreleri sonradan 4306 ve 6287 ile güncellenmiştir.", "B) 1739 sayılı Millî Eğitim Temel Kanunu 14 Haziran 1973 kabul, 24 Haziran 1973 RG; amaç, ilkeler, sistem yapısı, öğretmenlik, araç-gereç ve Devlet görevidir.", "C) m.2 genel amaçlar: Atatürkçü yurttaş; dengeli kişilik; ilgi-istidatla meslek ve hayat; milli birlik ve çağdaş uygarlık.", "D) m.3 özel amaçlar her kurumun genel amaçlara ve ilkelere uygun amaç tespitidir.", "E) m.1 kanunun sistem bütünlüğü içinde temel hükümleri kapsadığını belirtir."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "1739 Sayılı Kanun notundaki temel bilgi."
 },
 {
-    "question": "1739 Sayılı Kanun konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) m.4 genellik ve eşitlik: dil, ırk, cinsiyet, engellilik, din ayrımı gözetilmeksizin açıklı", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "m.4 genellik ve eşitlik hakkında hangisi doğrudur?",
+    "options": ["A) m.3 özel amaçlar her kurumun genel amaçlara ve ilkelere uygun amaç tespitidir.", "B) m.1 kanunun sistem bütünlüğü içinde temel hükümleri kapsadığını belirtir.", "C) m.4 genellik ve eşitlik: dil, ırk, cinsiyet, engellilik, din ayrımı gözetilmeksizin açıklık; imtiyaz yasağı.", "D) 1739 sayılı Millî Eğitim Temel Kanunu 14 Haziran 1973 kabul, 24 Haziran 1973 RG; amaç, ilkeler, sistem yapısı, öğretmenlik, araç-gereç ve Devlet görevidir.", "E) m.2 genel amaçlar: Atatürkçü yurttaş; dengeli kişilik; ilgi-istidatla meslek ve hayat; milli birlik ve çağdaş uygarlık."],
+    "correctAnswerIndex": 2,
+    "explanation": "1739 Sayılı Kanun notundaki temel bilgi."
 },
 {
-    "question": "1739 Sayılı Kanun konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) m.8 fırsat ve imkân eşitliği: kadın-erkek; burs, yatılılık; özel eğitim tedbiri.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi m.11 demokrasi eğitimi için doğru bir açıklamadır?",
+    "options": ["A) m.3 özel amaçlar her kurumun genel amaçlara ve ilkelere uygun amaç tespitidir.", "B) m.1 kanunun sistem bütünlüğü içinde temel hükümleri kapsadığını belirtir.", "C) m.11 demokrasi eğitimi bilinç ister, günlük siyasi telkin ve çekişmeyi yasaklar.", "D) 1739 sayılı Millî Eğitim Temel Kanunu 14 Haziran 1973 kabul, 24 Haziran 1973 RG; amaç, ilkeler, sistem yapısı, öğretmenlik, araç-gereç ve Devlet görevidir.", "E) m.2 genel amaçlar: Atatürkçü yurttaş; dengeli kişilik; ilgi-istidatla meslek ve hayat; milli birlik ve çağdaş uygarlık."],
+    "correctAnswerIndex": 2,
+    "explanation": "1739 Sayılı Kanun notundaki temel bilgi."
 },
 {
-    "question": "1739 Sayılı Kanun konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) m.10 Atatürk inkılap ve ilkeleri ve Atatürk milliyetçiliği program ve faaliyetlerin esası.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "m.12 laiklik hakkında hangisi doğrudur?",
+    "options": ["A) m.3 özel amaçlar her kurumun genel amaçlara ve ilkelere uygun amaç tespitidir.", "B) m.1 kanunun sistem bütünlüğü içinde temel hükümleri kapsadığını belirtir.", "C) m.12 laiklik; m.13 bilimsellik; m.14 planlılık; m.15 karma; m.17 her yerde eğitim.", "D) 1739 sayılı Millî Eğitim Temel Kanunu 14 Haziran 1973 kabul, 24 Haziran 1973 RG; amaç, ilkeler, sistem yapısı, öğretmenlik, araç-gereç ve Devlet görevidir.", "E) m.2 genel amaçlar: Atatürkçü yurttaş; dengeli kişilik; ilgi-istidatla meslek ve hayat; milli birlik ve çağdaş uygarlık."],
+    "correctAnswerIndex": 2,
+    "explanation": "1739 Sayılı Kanun notundaki temel bilgi."
+},
+{
+    "question": "m.16 hangisini ifade eder?",
+    "options": ["A) m.2 genel amaçlar: Atatürkçü yurttaş; dengeli kişilik; ilgi-istidatla meslek ve hayat; milli birlik ve çağdaş uygarlık.", "B) m.3 özel amaçlar her kurumun genel amaçlara ve ilkelere uygun amaç tespitidir.", "C) m.1 kanunun sistem bütünlüğü içinde temel hükümleri kapsadığını belirtir.", "D) m.16 okul-aile birliği; veli bağışa zorlanamaz.", "E) 1739 sayılı Millî Eğitim Temel Kanunu 14 Haziran 1973 kabul, 24 Haziran 1973 RG; amaç, ilkeler, sistem yapısı, öğretmenlik, araç-gereç ve Devlet görevidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "1739 Sayılı Kanun notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi 1739 sayılı Millî Eğitim Temel Kanunu için doğru bir açıklamadır?",
+    "options": ["A) m.1 kanunun sistem bütünlüğü içinde temel hükümleri kapsadığını belirtir.", "B) 1739 çerçeve kanundur; kademe süreleri sonradan 4306 ve 6287 ile güncellenmiştir.", "C) 1739 sayılı Millî Eğitim Temel Kanunu 14 Haziran 1973 kabul, 24 Haziran 1973 RG; amaç, ilkeler, sistem yapısı, öğretmenlik, araç-gereç ve Devlet görevidir.", "D) m.2 genel amaçlar: Atatürkçü yurttaş; dengeli kişilik; ilgi-istidatla meslek ve hayat; milli birlik ve çağdaş uygarlık.", "E) m.3 özel amaçlar her kurumun genel amaçlara ve ilkelere uygun amaç tespitidir."],
+    "correctAnswerIndex": 2,
+    "explanation": "1739 Sayılı Kanun notundaki temel bilgi."
 }
 ];

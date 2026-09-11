@@ -73,51 +73,51 @@ window.ags_cografya_1_sorulari = [
     "explanation": "İç Anadolu kapalı havzası."
 },
 {
-    "question": "Fiziki Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Kuzey Anadolu Dağları ve Toroslar alp kıvrımı; orta kesimde plato ve ovalar.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Kuzey Anadolu Dağları için doğru bir açıklamadır?",
+    "options": ["A) Doğu Anadolu yüksek ve engebeli; Ağrı, Süphan, Nemrut, Erciyes volkanik zirvelerdir.", "B) Karst Akdeniz-Toroslarda (lapyalar, dolin, polye, mağara); peribacaları kapadokya volkan-tüf aşınımı.", "C) Kuzey Anadolu Dağları ve Toroslar alp kıvrımı; orta kesimde plato ve ovalar.", "D) Kuzey Anadolu Fay Hattı ve Doğu Anadolu Fay Hattı deprem kuşağının belkemiğidir.", "E) Ege grabenleri (Gediz, Büyük Menderes) horst-graben; kıyı ege girintili-çıkıntılıdır."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Fiziki Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Fiziki Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Kuzey Anadolu Fay Hattı ve Doğu Anadolu Fay Hattı deprem kuşağının belkemiğidir."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Kuzey Anadolu Fay Hattı hakkında hangisi doğrudur?",
+    "options": ["A) Karst Akdeniz-Toroslarda (lapyalar, dolin, polye, mağara); peribacaları kapadokya volkan-tüf aşınımı.", "B) Kuzey Anadolu Fay Hattı ve Doğu Anadolu Fay Hattı deprem kuşağının belkemiğidir.", "C) Kuzey Anadolu Dağları ve Toroslar alp kıvrımı; orta kesimde plato ve ovalar.", "D) Ege grabenleri (Gediz, Büyük Menderes) horst-graben; kıyı ege girintili-çıkıntılıdır.", "E) Doğu Anadolu yüksek ve engebeli; Ağrı, Süphan, Nemrut, Erciyes volkanik zirvelerdir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Fiziki Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Fiziki Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Ege grabenleri (Gediz, Büyük Menderes) horst-graben; kıyı ege girintili-çıkıntılıdır.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Ege grabenleri hangisini ifade eder?",
+    "options": ["A) Ege grabenleri (Gediz, Büyük Menderes) horst-graben; kıyı ege girintili-çıkıntılıdır.", "B) Kuzey Anadolu Dağları ve Toroslar alp kıvrımı; orta kesimde plato ve ovalar.", "C) Kuzey Anadolu Fay Hattı ve Doğu Anadolu Fay Hattı deprem kuşağının belkemiğidir.", "D) Doğu Anadolu yüksek ve engebeli; Ağrı, Süphan, Nemrut, Erciyes volkanik zirvelerdir.", "E) Karst Akdeniz-Toroslarda (lapyalar, dolin, polye, mağara); peribacaları kapadokya volkan-tüf aşınımı."],
+    "correctAnswerIndex": 0,
+    "explanation": "Fiziki Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Doğu Anadolu ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Karst Akdeniz-Toroslarda (lapyalar, dolin, polye, mağara); peribacaları kapadokya volkan-tüf aşınımı.", "B) Karadeniz iklimi her mevsim yağış, Doğu Karadeniz maksimum; Akdeniz yaz kurak, kış ılık-yağışlı.", "C) Doğu Anadolu yüksek ve engebeli; Ağrı, Süphan, Nemrut, Erciyes volkanik zirvelerdir.", "D) Kuzey Anadolu Dağları ve Toroslar alp kıvrımı; orta kesimde plato ve ovalar.", "E) Ege grabenleri (Gediz, Büyük Menderes) horst-graben; kıyı ege girintili-çıkıntılıdır."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Fiziki Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Fiziki Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Doğu Anadolu yüksek ve engebeli; Ağrı, Süphan, Nemrut, Erciyes volkanik zirvelerdir."],
+    "question": "Aşağıdakilerden hangisi Karst için doğru bir açıklamadır?",
+    "options": ["A) Kuzey Anadolu Dağları ve Toroslar alp kıvrımı; orta kesimde plato ve ovalar.", "B) Kuzey Anadolu Fay Hattı ve Doğu Anadolu Fay Hattı deprem kuşağının belkemiğidir.", "C) Ege grabenleri (Gediz, Büyük Menderes) horst-graben; kıyı ege girintili-çıkıntılıdır.", "D) Doğu Anadolu yüksek ve engebeli; Ağrı, Süphan, Nemrut, Erciyes volkanik zirvelerdir.", "E) Karst Akdeniz-Toroslarda (lapyalar, dolin, polye, mağara); peribacaları kapadokya volkan-tüf aşınımı."],
+    "correctAnswerIndex": 4,
+    "explanation": "Fiziki Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Karadeniz iklimi hakkında hangisi doğrudur?",
+    "options": ["A) Kuzey Anadolu Fay Hattı ve Doğu Anadolu Fay Hattı deprem kuşağının belkemiğidir.", "B) Ege grabenleri (Gediz, Büyük Menderes) horst-graben; kıyı ege girintili-çıkıntılıdır.", "C) Doğu Anadolu yüksek ve engebeli; Ağrı, Süphan, Nemrut, Erciyes volkanik zirvelerdir.", "D) Karadeniz iklimi her mevsim yağış, Doğu Karadeniz maksimum; Akdeniz yaz kurak, kış ılık-yağışlı.", "E) Kuzey Anadolu Dağları ve Toroslar alp kıvrımı; orta kesimde plato ve ovalar."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Fiziki Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Fiziki Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Karst Akdeniz-Toroslarda (lapyalar, dolin, polye, mağara); peribacaları kapadokya volkan-t", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Karasal iklim hangisini ifade eder?",
+    "options": ["A) Ege grabenleri (Gediz, Büyük Menderes) horst-graben; kıyı ege girintili-çıkıntılıdır.", "B) Doğu Anadolu yüksek ve engebeli; Ağrı, Süphan, Nemrut, Erciyes volkanik zirvelerdir.", "C) Karasal iklim İç ve Doğu Anadolu da yağış az, sıcaklık farkı büyük; Marmara geçiş iklimidir.", "D) Kuzey Anadolu Dağları ve Toroslar alp kıvrımı; orta kesimde plato ve ovalar.", "E) Kuzey Anadolu Fay Hattı ve Doğu Anadolu Fay Hattı deprem kuşağının belkemiğidir."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Fiziki Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Fiziki Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Karadeniz iklimi her mevsim yağış, Doğu Karadeniz maksimum; Akdeniz yaz kurak, kış ılık-ya"],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Fiziki Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Karasal iklim İç ve Doğu Anadolu da yağış az, sıcaklık farkı büyük; Marmara geçiş iklimidi", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Fiziki Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Akarsu rejimleri yağış ve kar erimesine bağlıdır; Fırat-Dicle, Kızılırmak, Sakarya, Yeşilı"],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Akarsu rejimleri ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Akarsu rejimleri yağış ve kar erimesine bağlıdır; Fırat-Dicle, Kızılırmak, Sakarya, Yeşilırmak, Ceyhan-Seyhan.", "B) Kuzey Anadolu Dağları ve Toroslar alp kıvrımı; orta kesimde plato ve ovalar.", "C) Kuzey Anadolu Fay Hattı ve Doğu Anadolu Fay Hattı deprem kuşağının belkemiğidir.", "D) Ege grabenleri (Gediz, Büyük Menderes) horst-graben; kıyı ege girintili-çıkıntılıdır.", "E) Doğu Anadolu yüksek ve engebeli; Ağrı, Süphan, Nemrut, Erciyes volkanik zirvelerdir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Fiziki Coğrafya notundaki temel bilgi."
 }
 ];

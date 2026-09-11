@@ -61,63 +61,63 @@ window.oabt_sinif_5_sorulari = [
     "explanation": "Hayat bilgisi-coğrafya örtüşmesi."
 },
 {
-    "question": "Türkiye Coğrafyası ve Jeopolitiği konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Konum yarımada, boğazlar, komşular."],
+    "question": "Aşağıdakilerden hangisi Konum için doğru bir açıklamadır?",
+    "options": ["A) Yeryüzü dağ, ova, plato; deprem gerçeği.", "B) İklim ve bitki bölgelere göre sade.", "C) Nüfus ve şehir İstanbul yoğunluğu sezgisel.", "D) Tarım-sanayi-turizm bölge örnekleri.", "E) Konum yarımada, boğazlar, komşular."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Türkiye Coğrafyası ve Jeopolitiği notundaki temel bilgi."
 },
 {
-    "question": "Türkiye Coğrafyası ve Jeopolitiği konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Yeryüzü dağ, ova, plato; deprem gerçeği.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Türkiye Coğrafyası ve Jeopolitiği konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) İklim ve bitki bölgelere göre sade."],
+    "question": "Yeryüzü hakkında hangisi doğrudur?",
+    "options": ["A) Konum yarımada, boğazlar, komşular.", "B) İklim ve bitki bölgelere göre sade.", "C) Nüfus ve şehir İstanbul yoğunluğu sezgisel.", "D) Tarım-sanayi-turizm bölge örnekleri.", "E) Yeryüzü dağ, ova, plato; deprem gerçeği."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Türkiye Coğrafyası ve Jeopolitiği notundaki temel bilgi."
 },
 {
-    "question": "Türkiye Coğrafyası ve Jeopolitiği konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Nüfus ve şehir İstanbul yoğunluğu sezgisel.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Türkiye Coğrafyası ve Jeopolitiği konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Tarım-sanayi-turizm bölge örnekleri."],
+    "question": "İklim ve bitki hangisini ifade eder?",
+    "options": ["A) Konum yarımada, boğazlar, komşular.", "B) Yeryüzü dağ, ova, plato; deprem gerçeği.", "C) Nüfus ve şehir İstanbul yoğunluğu sezgisel.", "D) Tarım-sanayi-turizm bölge örnekleri.", "E) İklim ve bitki bölgelere göre sade."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Türkiye Coğrafyası ve Jeopolitiği notundaki temel bilgi."
 },
 {
-    "question": "Türkiye Coğrafyası ve Jeopolitiği konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Köprü kıta Avrupa-Asya.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Nüfus ve şehir ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Yeryüzü dağ, ova, plato; deprem gerçeği.", "B) İklim ve bitki bölgelere göre sade.", "C) Tarım-sanayi-turizm bölge örnekleri.", "D) Nüfus ve şehir İstanbul yoğunluğu sezgisel.", "E) Konum yarımada, boğazlar, komşular."],
+    "correctAnswerIndex": 3,
+    "explanation": "Türkiye Coğrafyası ve Jeopolitiği notundaki temel bilgi."
 },
 {
-    "question": "Türkiye Coğrafyası ve Jeopolitiği konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Enerji ve ticaret yolları sade anlatım."],
+    "question": "Aşağıdakilerden hangisi Tarım-sanayi-turizm için doğru bir açıklamadır?",
+    "options": ["A) Konum yarımada, boğazlar, komşular.", "B) Yeryüzü dağ, ova, plato; deprem gerçeği.", "C) İklim ve bitki bölgelere göre sade.", "D) Nüfus ve şehir İstanbul yoğunluğu sezgisel.", "E) Tarım-sanayi-turizm bölge örnekleri."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Türkiye Coğrafyası ve Jeopolitiği notundaki temel bilgi."
 },
 {
-    "question": "Türkiye Coğrafyası ve Jeopolitiği konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Su ve tarım ulusal kaynak.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Türkiye Coğrafyası ve Jeopolitiği konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Afet bilinci deprem-sel-yangın."],
+    "question": "Köprü kıta hakkında hangisi doğrudur?",
+    "options": ["A) Konum yarımada, boğazlar, komşular.", "B) Yeryüzü dağ, ova, plato; deprem gerçeği.", "C) İklim ve bitki bölgelere göre sade.", "D) Nüfus ve şehir İstanbul yoğunluğu sezgisel.", "E) Köprü kıta Avrupa-Asya."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Türkiye Coğrafyası ve Jeopolitiği notundaki temel bilgi."
 },
 {
-    "question": "Türkiye Coğrafyası ve Jeopolitiği konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Komşuluk barış ve iş birliği değeri.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Enerji ve ticaret yolları hangisini ifade eder?",
+    "options": ["A) Konum yarımada, boğazlar, komşular.", "B) Yeryüzü dağ, ova, plato; deprem gerçeği.", "C) İklim ve bitki bölgelere göre sade.", "D) Nüfus ve şehir İstanbul yoğunluğu sezgisel.", "E) Enerji ve ticaret yolları sade anlatım."],
+    "correctAnswerIndex": 4,
+    "explanation": "Türkiye Coğrafyası ve Jeopolitiği notundaki temel bilgi."
+},
+{
+    "question": "Su ve tarım ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Nüfus ve şehir İstanbul yoğunluğu sezgisel.", "B) Su ve tarım ulusal kaynak.", "C) Konum yarımada, boğazlar, komşular.", "D) Yeryüzü dağ, ova, plato; deprem gerçeği.", "E) İklim ve bitki bölgelere göre sade."],
+    "correctAnswerIndex": 1,
+    "explanation": "Türkiye Coğrafyası ve Jeopolitiği notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Afet bilinci için doğru bir açıklamadır?",
+    "options": ["A) Afet bilinci deprem-sel-yangın.", "B) Konum yarımada, boğazlar, komşular.", "C) Yeryüzü dağ, ova, plato; deprem gerçeği.", "D) İklim ve bitki bölgelere göre sade.", "E) Nüfus ve şehir İstanbul yoğunluğu sezgisel."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Türkiye Coğrafyası ve Jeopolitiği notundaki temel bilgi."
+},
+{
+    "question": "Komşuluk hakkında hangisi doğrudur?",
+    "options": ["A) Komşuluk barış ve iş birliği değeri.", "B) Konum yarımada, boğazlar, komşular.", "C) Yeryüzü dağ, ova, plato; deprem gerçeği.", "D) İklim ve bitki bölgelere göre sade.", "E) Nüfus ve şehir İstanbul yoğunluğu sezgisel."],
+    "correctAnswerIndex": 0,
+    "explanation": "Türkiye Coğrafyası ve Jeopolitiği notundaki temel bilgi."
 }
 ];

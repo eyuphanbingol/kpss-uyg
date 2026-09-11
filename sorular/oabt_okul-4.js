@@ -61,63 +61,63 @@ window.oabt_okul_4_sorulari = [
     "explanation": "Öz bakım."
 },
 {
-    "question": "Çocuk Ruh Sağlığı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Ruh sağlığı duyguları tanıma, düzenleme, ilişki.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Ruh sağlığı için doğru bir açıklamadır?",
+    "options": ["A) Oyun terapötik pencere, öğretmen terapist değildir.", "B) 2026 duygusal gelişim alan bilgisi ve eğitim kesişir.", "C) Ruh sağlığı duyguları tanıma, düzenleme, ilişki.", "D) Bağlanma güvenli taban; ayrılık kaygısı gelişimsel olabilir.", "E) Öz düzenleme co-regulation ile başlar."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Çocuk Ruh Sağlığı notundaki temel bilgi."
 },
 {
-    "question": "Çocuk Ruh Sağlığı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Bağlanma güvenli taban; ayrılık kaygısı gelişimsel olabilir."],
+    "question": "Bağlanma hakkında hangisi doğrudur?",
+    "options": ["A) Ruh sağlığı duyguları tanıma, düzenleme, ilişki.", "B) Öz düzenleme co-regulation ile başlar.", "C) Oyun terapötik pencere, öğretmen terapist değildir.", "D) 2026 duygusal gelişim alan bilgisi ve eğitim kesişir.", "E) Bağlanma güvenli taban; ayrılık kaygısı gelişimsel olabilir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Çocuk Ruh Sağlığı notundaki temel bilgi."
+},
+{
+    "question": "Öz düzenleme hangisini ifade eder?",
+    "options": ["A) Ruh sağlığı duyguları tanıma, düzenleme, ilişki.", "B) Bağlanma güvenli taban; ayrılık kaygısı gelişimsel olabilir.", "C) Oyun terapötik pencere, öğretmen terapist değildir.", "D) 2026 duygusal gelişim alan bilgisi ve eğitim kesişir.", "E) Öz düzenleme co-regulation ile başlar."],
+    "correctAnswerIndex": 4,
+    "explanation": "Çocuk Ruh Sağlığı notundaki temel bilgi."
+},
+{
+    "question": "Oyun ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Bağlanma güvenli taban; ayrılık kaygısı gelişimsel olabilir.", "B) Öz düzenleme co-regulation ile başlar.", "C) 2026 duygusal gelişim alan bilgisi ve eğitim kesişir.", "D) Oyun terapötik pencere, öğretmen terapist değildir.", "E) Ruh sağlığı duyguları tanıma, düzenleme, ilişki."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Çocuk Ruh Sağlığı notundaki temel bilgi."
 },
 {
-    "question": "Çocuk Ruh Sağlığı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Öz düzenleme co-regulation ile başlar.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi 2026 için doğru bir açıklamadır?",
+    "options": ["A) Ruh sağlığı duyguları tanıma, düzenleme, ilişki.", "B) Bağlanma güvenli taban; ayrılık kaygısı gelişimsel olabilir.", "C) Öz düzenleme co-regulation ile başlar.", "D) Oyun terapötik pencere, öğretmen terapist değildir.", "E) 2026 duygusal gelişim alan bilgisi ve eğitim kesişir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Çocuk Ruh Sağlığı notundaki temel bilgi."
 },
 {
-    "question": "Çocuk Ruh Sağlığı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Oyun terapötik pencere, öğretmen terapist değildir."],
+    "question": "Kaygı, seçici konuşmazlık, tırnak, alt ıslatma hakkında hangisi doğrudur?",
+    "options": ["A) Kaygı, seçici konuşmazlık, tırnak, alt ıslatma bağlamla.", "B) Ruh sağlığı duyguları tanıma, düzenleme, ilişki.", "C) Bağlanma güvenli taban; ayrılık kaygısı gelişimsel olabilir.", "D) Öz düzenleme co-regulation ile başlar.", "E) Oyun terapötik pencere, öğretmen terapist değildir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Çocuk Ruh Sağlığı notundaki temel bilgi."
+},
+{
+    "question": "Akran reddi ve zorbalık hangisini ifade eder?",
+    "options": ["A) Oyun terapötik pencere, öğretmen terapist değildir.", "B) Akran reddi ve zorbalık erken iz.", "C) Ruh sağlığı duyguları tanıma, düzenleme, ilişki.", "D) Bağlanma güvenli taban; ayrılık kaygısı gelişimsel olabilir.", "E) Öz düzenleme co-regulation ile başlar."],
+    "correctAnswerIndex": 1,
+    "explanation": "Çocuk Ruh Sağlığı notundaki temel bilgi."
+},
+{
+    "question": "Kayıp, boşanma, göç, afet ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Bağlanma güvenli taban; ayrılık kaygısı gelişimsel olabilir.", "B) Öz düzenleme co-regulation ile başlar.", "C) Oyun terapötik pencere, öğretmen terapist değildir.", "D) Kayıp, boşanma, göç, afet yas.", "E) Ruh sağlığı duyguları tanıma, düzenleme, ilişki."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Çocuk Ruh Sağlığı notundaki temel bilgi."
 },
 {
-    "question": "Çocuk Ruh Sağlığı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) 2026 duygusal gelişim alan bilgisi ve eğitim kesişir.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi İstismar için doğru bir açıklamadır?",
+    "options": ["A) Oyun terapötik pencere, öğretmen terapist değildir.", "B) İstismar ruhsal belirtiler.", "C) Ruh sağlığı duyguları tanıma, düzenleme, ilişki.", "D) Bağlanma güvenli taban; ayrılık kaygısı gelişimsel olabilir.", "E) Öz düzenleme co-regulation ile başlar."],
+    "correctAnswerIndex": 1,
+    "explanation": "Çocuk Ruh Sağlığı notundaki temel bilgi."
 },
 {
-    "question": "Çocuk Ruh Sağlığı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Kaygı, seçici konuşmazlık, tırnak, alt ıslatma bağlamla."],
+    "question": "Ekran ve uyku hakkında hangisi doğrudur?",
+    "options": ["A) Bağlanma güvenli taban; ayrılık kaygısı gelişimsel olabilir.", "B) Öz düzenleme co-regulation ile başlar.", "C) Oyun terapötik pencere, öğretmen terapist değildir.", "D) Ekran ve uyku duygu regülasyonu.", "E) Ruh sağlığı duyguları tanıma, düzenleme, ilişki."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Çocuk Ruh Sağlığı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Akran reddi ve zorbalık erken iz.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Çocuk Ruh Sağlığı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Kayıp, boşanma, göç, afet yas."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Çocuk Ruh Sağlığı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) İstismar ruhsal belirtiler.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Çocuk Ruh Sağlığı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Ekran ve uyku duygu regülasyonu."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Çocuk Ruh Sağlığı notundaki temel bilgi."
 }
 ];

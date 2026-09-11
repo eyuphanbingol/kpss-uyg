@@ -61,63 +61,63 @@ window.oabt_okul_5_sorulari = [
     "explanation": "Overjustification."
 },
 {
-    "question": "Oyun konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Oyun erken çocukluğun temel öğrenme yoludur; 2026'da ayrı konu başlığıdır.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Oyun için doğru bir açıklamadır?",
+    "options": ["A) Parten yalnız, paralel, birleşik, iş birlikçi.", "B) Smilansky işlevsel, yapı, dramatik, kural.", "C) Gözlem, katılım, genişletme.", "D) Çatışma arabuluculuk öğretimi.", "E) Oyun erken çocukluğun temel öğrenme yoludur; 2026'da ayrı konu başlığıdır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Oyun notundaki temel bilgi."
 },
 {
-    "question": "Oyun konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Piaget alıştırma, sembolik, kural oyunları."],
+    "question": "Piaget hakkında hangisi doğrudur?",
+    "options": ["A) Parten yalnız, paralel, birleşik, iş birlikçi.", "B) Smilansky işlevsel, yapı, dramatik, kural.", "C) Vygotsky oyun ZPD'si, kural ve rol.", "D) Piaget alıştırma, sembolik, kural oyunları.", "E) Oyun erken çocukluğun temel öğrenme yoludur; 2026'da ayrı konu başlığıdır."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Oyun notundaki temel bilgi."
 },
 {
-    "question": "Oyun konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Parten yalnız, paralel, birleşik, iş birlikçi.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Oyun konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Smilansky işlevsel, yapı, dramatik, kural."],
+    "question": "Parten hangisini ifade eder?",
+    "options": ["A) Piaget alıştırma, sembolik, kural oyunları.", "B) Smilansky işlevsel, yapı, dramatik, kural.", "C) Vygotsky oyun ZPD'si, kural ve rol.", "D) Parten yalnız, paralel, birleşik, iş birlikçi.", "E) Oyun erken çocukluğun temel öğrenme yoludur; 2026'da ayrı konu başlığıdır."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Oyun notundaki temel bilgi."
 },
 {
-    "question": "Oyun konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Vygotsky oyun ZPD'si, kural ve rol.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Smilansky ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Smilansky işlevsel, yapı, dramatik, kural.", "B) Oyun erken çocukluğun temel öğrenme yoludur; 2026'da ayrı konu başlığıdır.", "C) Piaget alıştırma, sembolik, kural oyunları.", "D) Parten yalnız, paralel, birleşik, iş birlikçi.", "E) Vygotsky oyun ZPD'si, kural ve rol."],
+    "correctAnswerIndex": 0,
+    "explanation": "Oyun notundaki temel bilgi."
 },
 {
-    "question": "Oyun konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Açık hava ve riskli oyun denetimli."],
+    "question": "Aşağıdakilerden hangisi Vygotsky için doğru bir açıklamadır?",
+    "options": ["A) Smilansky işlevsel, yapı, dramatik, kural.", "B) Vygotsky oyun ZPD'si, kural ve rol.", "C) Oyun erken çocukluğun temel öğrenme yoludur; 2026'da ayrı konu başlığıdır.", "D) Piaget alıştırma, sembolik, kural oyunları.", "E) Parten yalnız, paralel, birleşik, iş birlikçi."],
+    "correctAnswerIndex": 1,
+    "explanation": "Oyun notundaki temel bilgi."
+},
+{
+    "question": "Açık hava ve riskli oyun hakkında hangisi doğrudur?",
+    "options": ["A) Smilansky işlevsel, yapı, dramatik, kural.", "B) Açık hava ve riskli oyun denetimli.", "C) Oyun erken çocukluğun temel öğrenme yoludur; 2026'da ayrı konu başlığıdır.", "D) Piaget alıştırma, sembolik, kural oyunları.", "E) Parten yalnız, paralel, birleşik, iş birlikçi."],
+    "correctAnswerIndex": 1,
+    "explanation": "Oyun notundaki temel bilgi."
+},
+{
+    "question": "Merkezlerde oyun hangisini ifade eder?",
+    "options": ["A) Oyun erken çocukluğun temel öğrenme yoludur; 2026'da ayrı konu başlığıdır.", "B) Piaget alıştırma, sembolik, kural oyunları.", "C) Parten yalnız, paralel, birleşik, iş birlikçi.", "D) Smilansky işlevsel, yapı, dramatik, kural.", "E) Merkezlerde oyun evcilik, blok, sanat, kitap."],
+    "correctAnswerIndex": 4,
+    "explanation": "Oyun notundaki temel bilgi."
+},
+{
+    "question": "Dijital oyun ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Oyun erken çocukluğun temel öğrenme yoludur; 2026'da ayrı konu başlığıdır.", "B) Piaget alıştırma, sembolik, kural oyunları.", "C) Parten yalnız, paralel, birleşik, iş birlikçi.", "D) Smilansky işlevsel, yapı, dramatik, kural.", "E) Dijital oyun süre ve içerik sınırı."],
+    "correctAnswerIndex": 4,
+    "explanation": "Oyun notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Kapsayıcı oyun için doğru bir açıklamadır?",
+    "options": ["A) Oyun erken çocukluğun temel öğrenme yoludur; 2026'da ayrı konu başlığıdır.", "B) Piaget alıştırma, sembolik, kural oyunları.", "C) Parten yalnız, paralel, birleşik, iş birlikçi.", "D) Smilansky işlevsel, yapı, dramatik, kural.", "E) Kapsayıcı oyun kural uyarlama."],
+    "correctAnswerIndex": 4,
+    "explanation": "Oyun notundaki temel bilgi."
+},
+{
+    "question": "Cinsiyet kalıbı hakkında hangisi doğrudur?",
+    "options": ["A) Piaget alıştırma, sembolik, kural oyunları.", "B) Parten yalnız, paralel, birleşik, iş birlikçi.", "C) Smilansky işlevsel, yapı, dramatik, kural.", "D) Cinsiyet kalıbı oyuncak dayatmama.", "E) Oyun erken çocukluğun temel öğrenme yoludur; 2026'da ayrı konu başlığıdır."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Oyun konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Merkezlerde oyun evcilik, blok, sanat, kitap.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Oyun konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Dijital oyun süre ve içerik sınırı."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Oyun konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Kapsayıcı oyun kural uyarlama.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Oyun konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Cinsiyet kalıbı oyuncak dayatmama."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Oyun notundaki temel bilgi."
 }
 ];

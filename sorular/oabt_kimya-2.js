@@ -55,69 +55,69 @@ window.oabt_kimya_2_sorulari = [
     "explanation": "MA3B3'te mer-fac."
 },
 {
-    "question": "Anorganik Kimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Periyodik özellik Z_eff, yarıçap, IE, EA, EN; anyon>atom>katyon yarıçap (eşelektronlu).", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi Periyodik özellik için doğru bir açıklamadır?",
+    "options": ["A) Asit-baz Lux-Flood oksit, Lewis, HSAB sert-yumuşak.", "B) Yükseltgenme basamağı d-blok çoklu; oksokatyonlar.", "C) Katı hal NaCl, CsCl, ZnS; Born-Haber ızgara enerjisi.", "D) Periyodik özellik Z_eff, yarıçap, IE, EA, EN; anyon>atom>katyon yarıçap (eşelektronlu).", "E) Fajans küçük katyon-büyük anyon polarizasyon, kovalent karakter."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Anorganik Kimya notundaki temel bilgi."
 },
 {
-    "question": "Anorganik Kimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Fajans küçük katyon-büyük anyon polarizasyon, kovalent karakter.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Fajans hakkında hangisi doğrudur?",
+    "options": ["A) Fajans küçük katyon-büyük anyon polarizasyon, kovalent karakter.", "B) Periyodik özellik Z_eff, yarıçap, IE, EA, EN; anyon>atom>katyon yarıçap (eşelektronlu).", "C) Asit-baz Lux-Flood oksit, Lewis, HSAB sert-yumuşak.", "D) Yükseltgenme basamağı d-blok çoklu; oksokatyonlar.", "E) Katı hal NaCl, CsCl, ZnS; Born-Haber ızgara enerjisi."],
+    "correctAnswerIndex": 0,
+    "explanation": "Anorganik Kimya notundaki temel bilgi."
+},
+{
+    "question": "Asit-baz hangisini ifade eder?",
+    "options": ["A) Fajans küçük katyon-büyük anyon polarizasyon, kovalent karakter.", "B) Yükseltgenme basamağı d-blok çoklu; oksokatyonlar.", "C) Katı hal NaCl, CsCl, ZnS; Born-Haber ızgara enerjisi.", "D) Asit-baz Lux-Flood oksit, Lewis, HSAB sert-yumuşak.", "E) Periyodik özellik Z_eff, yarıçap, IE, EA, EN; anyon>atom>katyon yarıçap (eşelektronlu)."],
+    "correctAnswerIndex": 3,
+    "explanation": "Anorganik Kimya notundaki temel bilgi."
+},
+{
+    "question": "Yükseltgenme basamağı ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Katı hal NaCl, CsCl, ZnS; Born-Haber ızgara enerjisi.", "B) Yükseltgenme basamağı d-blok çoklu; oksokatyonlar.", "C) Periyodik özellik Z_eff, yarıçap, IE, EA, EN; anyon>atom>katyon yarıçap (eşelektronlu).", "D) Fajans küçük katyon-büyük anyon polarizasyon, kovalent karakter.", "E) Asit-baz Lux-Flood oksit, Lewis, HSAB sert-yumuşak."],
+    "correctAnswerIndex": 1,
+    "explanation": "Anorganik Kimya notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Katı hal için doğru bir açıklamadır?",
+    "options": ["A) Asit-baz Lux-Flood oksit, Lewis, HSAB sert-yumuşak.", "B) Yükseltgenme basamağı d-blok çoklu; oksokatyonlar.", "C) Katı hal NaCl, CsCl, ZnS; Born-Haber ızgara enerjisi.", "D) Periyodik özellik Z_eff, yarıçap, IE, EA, EN; anyon>atom>katyon yarıçap (eşelektronlu).", "E) Fajans küçük katyon-büyük anyon polarizasyon, kovalent karakter."],
+    "correctAnswerIndex": 2,
+    "explanation": "Anorganik Kimya notundaki temel bilgi."
+},
+{
+    "question": "Werner hakkında hangisi doğrudur?",
+    "options": ["A) Fajans küçük katyon-büyük anyon polarizasyon, kovalent karakter.", "B) Asit-baz Lux-Flood oksit, Lewis, HSAB sert-yumuşak.", "C) Yükseltgenme basamağı d-blok çoklu; oksokatyonlar.", "D) Werner birincil-ikincil değerlik; koordinasyon sayısı ve geometri.", "E) Periyodik özellik Z_eff, yarıçap, IE, EA, EN; anyon>atom>katyon yarıçap (eşelektronlu)."],
+    "correctAnswerIndex": 3,
+    "explanation": "Anorganik Kimya notundaki temel bilgi."
+},
+{
+    "question": "Adlandırma hangisini ifade eder?",
+    "options": ["A) Yükseltgenme basamağı d-blok çoklu; oksokatyonlar.", "B) Adlandırma ligand sırası, bis-tris, yükseltgenme.", "C) Periyodik özellik Z_eff, yarıçap, IE, EA, EN; anyon>atom>katyon yarıçap (eşelektronlu).", "D) Fajans küçük katyon-büyük anyon polarizasyon, kovalent karakter.", "E) Asit-baz Lux-Flood oksit, Lewis, HSAB sert-yumuşak."],
+    "correctAnswerIndex": 1,
+    "explanation": "Anorganik Kimya notundaki temel bilgi."
+},
+{
+    "question": "İzomeri ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Periyodik özellik Z_eff, yarıçap, IE, EA, EN; anyon>atom>katyon yarıçap (eşelektronlu).", "B) Fajans küçük katyon-büyük anyon polarizasyon, kovalent karakter.", "C) Asit-baz Lux-Flood oksit, Lewis, HSAB sert-yumuşak.", "D) Yükseltgenme basamağı d-blok çoklu; oksokatyonlar.", "E) İzomeri geometrik, optik, bağlanma, iyonlaşma."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Anorganik Kimya notundaki temel bilgi."
 },
 {
-    "question": "Anorganik Kimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Asit-baz Lux-Flood oksit, Lewis, HSAB sert-yumuşak.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Anorganik Kimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Yükseltgenme basamağı d-blok çoklu; oksokatyonlar.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi VBT-CFT-MOT için doğru bir açıklamadır?",
+    "options": ["A) Periyodik özellik Z_eff, yarıçap, IE, EA, EN; anyon>atom>katyon yarıçap (eşelektronlu).", "B) Fajans küçük katyon-büyük anyon polarizasyon, kovalent karakter.", "C) Asit-baz Lux-Flood oksit, Lewis, HSAB sert-yumuşak.", "D) Yükseltgenme basamağı d-blok çoklu; oksokatyonlar.", "E) VBT-CFT-MOT yüksek-alçak spin, Δo vs P; spektrokimyasal dizi."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Anorganik Kimya notundaki temel bilgi."
 },
 {
-    "question": "Anorganik Kimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Katı hal NaCl, CsCl, ZnS; Born-Haber ızgara enerjisi.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Anorganik Kimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Werner birincil-ikincil değerlik; koordinasyon sayısı ve geometri.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Jahn-Teller hakkında hangisi doğrudur?",
+    "options": ["A) Periyodik özellik Z_eff, yarıçap, IE, EA, EN; anyon>atom>katyon yarıçap (eşelektronlu).", "B) Fajans küçük katyon-büyük anyon polarizasyon, kovalent karakter.", "C) Asit-baz Lux-Flood oksit, Lewis, HSAB sert-yumuşak.", "D) Yükseltgenme basamağı d-blok çoklu; oksokatyonlar.", "E) Jahn-Teller e_g eşitsiz dolulukta bozulma (d9 Cu2+)."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Anorganik Kimya notundaki temel bilgi."
 },
 {
-    "question": "Anorganik Kimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Adlandırma ligand sırası, bis-tris, yükseltgenme.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Anorganik Kimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) İzomeri geometrik, optik, bağlanma, iyonlaşma.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Anorganik Kimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) VBT-CFT-MOT yüksek-alçak spin, Δo vs P; spektrokimyasal dizi.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Anorganik Kimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Jahn-Teller e_g eşitsiz dolulukta bozulma (d9 Cu2+).", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Anorganik Kimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Hidrojen üç merkezli bağ boranlarda; asit-baz.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Hidrojen hangisini ifade eder?",
+    "options": ["A) Asit-baz Lux-Flood oksit, Lewis, HSAB sert-yumuşak.", "B) Yükseltgenme basamağı d-blok çoklu; oksokatyonlar.", "C) Hidrojen üç merkezli bağ boranlarda; asit-baz.", "D) Periyodik özellik Z_eff, yarıçap, IE, EA, EN; anyon>atom>katyon yarıçap (eşelektronlu).", "E) Fajans küçük katyon-büyük anyon polarizasyon, kovalent karakter."],
+    "correctAnswerIndex": 2,
+    "explanation": "Anorganik Kimya notundaki temel bilgi."
 }
 ];

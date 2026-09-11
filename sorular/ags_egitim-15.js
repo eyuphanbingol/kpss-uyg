@@ -73,51 +73,51 @@ window.ags_egitim_15_sorulari = [
     "explanation": "Kaynaşık uygulama."
 },
 {
-    "question": "Türkiye Yüzyılı Maarif Modeli konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Türkiye Yüzyılı Maarif Modeli (TYMM) 2024 ten itibaren kademeli uygulanan öğretim programl", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Türkiye Yüzyılı Maarif Modeli (TYMM) için doğru bir açıklamadır?",
+    "options": ["A) Türkiye Yüzyılı Maarif Modeli (TYMM) 2024 ten itibaren kademeli uygulanan öğretim programları ortak yaklaşımıdır.", "B) Nihai hedef yetkin ve erdemli insan; bilgi, beceri, eğilim ve değer bütünleşir.", "C) Öğrenme çıktıları çerçevesi: kavramsal beceriler, fiziksel beceriler, eğilimler, alan becerileri.", "D) Kavramsal beceriler temel, bütünleşik ve üst düzey düşünme boyutlarını ortak dilde toplar.", "E) Eski kazanım dili yerine programlarda öğrenme çıktısı kullanılır; ölçme öğrenme kanıtı ile bağlanır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Türkiye Yüzyılı Maarif Modeli notundaki temel bilgi."
 },
 {
-    "question": "Türkiye Yüzyılı Maarif Modeli konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Nihai hedef yetkin ve erdemli insan; bilgi, beceri, eğilim ve değer bütünleşir.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "yetkin ve erdemli insan hakkında hangisi doğrudur?",
+    "options": ["A) Nihai hedef yetkin ve erdemli insan; bilgi, beceri, eğilim ve değer bütünleşir.", "B) Türkiye Yüzyılı Maarif Modeli (TYMM) 2024 ten itibaren kademeli uygulanan öğretim programları ortak yaklaşımıdır.", "C) Öğrenme çıktıları çerçevesi: kavramsal beceriler, fiziksel beceriler, eğilimler, alan becerileri.", "D) Kavramsal beceriler temel, bütünleşik ve üst düzey düşünme boyutlarını ortak dilde toplar.", "E) Eski kazanım dili yerine programlarda öğrenme çıktısı kullanılır; ölçme öğrenme kanıtı ile bağlanır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Türkiye Yüzyılı Maarif Modeli notundaki temel bilgi."
+},
+{
+    "question": "Öğrenme çıktıları çerçevesi hangisini ifade eder?",
+    "options": ["A) Eski kazanım dili yerine programlarda öğrenme çıktısı kullanılır; ölçme öğrenme kanıtı ile bağlanır.", "B) Öğrenme çıktıları çerçevesi: kavramsal beceriler, fiziksel beceriler, eğilimler, alan becerileri.", "C) Türkiye Yüzyılı Maarif Modeli (TYMM) 2024 ten itibaren kademeli uygulanan öğretim programları ortak yaklaşımıdır.", "D) Nihai hedef yetkin ve erdemli insan; bilgi, beceri, eğilim ve değer bütünleşir.", "E) Kavramsal beceriler temel, bütünleşik ve üst düzey düşünme boyutlarını ortak dilde toplar."],
+    "correctAnswerIndex": 1,
+    "explanation": "Türkiye Yüzyılı Maarif Modeli notundaki temel bilgi."
+},
+{
+    "question": "Kavramsal beceriler ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Eski kazanım dili yerine programlarda öğrenme çıktısı kullanılır; ölçme öğrenme kanıtı ile bağlanır.", "B) Erdem-Değer-Eylem (EDE): erdem kişilik güçlü yanı, değer yaşantıyla tutum, eylem gözlenen davranıştır.", "C) Kavramsal beceriler temel, bütünleşik ve üst düzey düşünme boyutlarını ortak dilde toplar.", "D) Türkiye Yüzyılı Maarif Modeli (TYMM) 2024 ten itibaren kademeli uygulanan öğretim programları ortak yaklaşımıdır.", "E) Nihai hedef yetkin ve erdemli insan; bilgi, beceri, eğilim ve değer bütünleşir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Türkiye Yüzyılı Maarif Modeli notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi kazanım için doğru bir açıklamadır?",
+    "options": ["A) Türkiye Yüzyılı Maarif Modeli (TYMM) 2024 ten itibaren kademeli uygulanan öğretim programları ortak yaklaşımıdır.", "B) Nihai hedef yetkin ve erdemli insan; bilgi, beceri, eğilim ve değer bütünleşir.", "C) Öğrenme çıktıları çerçevesi: kavramsal beceriler, fiziksel beceriler, eğilimler, alan becerileri.", "D) Kavramsal beceriler temel, bütünleşik ve üst düzey düşünme boyutlarını ortak dilde toplar.", "E) Eski kazanım dili yerine programlarda öğrenme çıktısı kullanılır; ölçme öğrenme kanıtı ile bağlanır."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Türkiye Yüzyılı Maarif Modeli notundaki temel bilgi."
 },
 {
-    "question": "Türkiye Yüzyılı Maarif Modeli konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Öğrenme çıktıları çerçevesi: kavramsal beceriler, fiziksel beceriler, eğilimler, alan bece", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Türkiye Yüzyılı Maarif Modeli konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Kavramsal beceriler temel, bütünleşik ve üst düzey düşünme boyutlarını ortak dilde toplar.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Erdem-Değer-Eylem (EDE) hakkında hangisi doğrudur?",
+    "options": ["A) Türkiye Yüzyılı Maarif Modeli (TYMM) 2024 ten itibaren kademeli uygulanan öğretim programları ortak yaklaşımıdır.", "B) Nihai hedef yetkin ve erdemli insan; bilgi, beceri, eğilim ve değer bütünleşir.", "C) Öğrenme çıktıları çerçevesi: kavramsal beceriler, fiziksel beceriler, eğilimler, alan becerileri.", "D) Kavramsal beceriler temel, bütünleşik ve üst düzey düşünme boyutlarını ortak dilde toplar.", "E) Erdem-Değer-Eylem (EDE): erdem kişilik güçlü yanı, değer yaşantıyla tutum, eylem gözlenen davranıştır."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Türkiye Yüzyılı Maarif Modeli notundaki temel bilgi."
 },
 {
-    "question": "Türkiye Yüzyılı Maarif Modeli konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Eski kazanım dili yerine programlarda öğrenme çıktısı kullanılır; ölçme öğrenme kanıtı ile", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "huzurlu aile ve toplum hangisini ifade eder?",
+    "options": ["A) Nihai hedef yetkin ve erdemli insan; bilgi, beceri, eğilim ve değer bütünleşir.", "B) Öğrenme çıktıları çerçevesi: kavramsal beceriler, fiziksel beceriler, eğilimler, alan becerileri.", "C) Kavramsal beceriler temel, bütünleşik ve üst düzey düşünme boyutlarını ortak dilde toplar.", "D) Modelin yönü eylemden değere, değerden erdemli insana; nihai ufuk huzurlu aile ve toplum ile yaşanabilir çevrede huzurlu insan.", "E) Türkiye Yüzyılı Maarif Modeli (TYMM) 2024 ten itibaren kademeli uygulanan öğretim programları ortak yaklaşımıdır."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Türkiye Yüzyılı Maarif Modeli notundaki temel bilgi."
 },
 {
-    "question": "Türkiye Yüzyılı Maarif Modeli konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Erdem-Değer-Eylem (EDE): erdem kişilik güçlü yanı, değer yaşantıyla tutum, eylem gözlenen ", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Programlar arası bileşenler ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Türkiye Yüzyılı Maarif Modeli (TYMM) 2024 ten itibaren kademeli uygulanan öğretim programları ortak yaklaşımıdır.", "B) Nihai hedef yetkin ve erdemli insan; bilgi, beceri, eğilim ve değer bütünleşir.", "C) Öğrenme çıktıları çerçevesi: kavramsal beceriler, fiziksel beceriler, eğilimler, alan becerileri.", "D) Kavramsal beceriler temel, bütünleşik ve üst düzey düşünme boyutlarını ortak dilde toplar.", "E) Programlar arası bileşenler: sosyal-duygusal öğrenme becerileri, EDE çerçevesi, sistem düşüncesi ve okuryazarlık."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Türkiye Yüzyılı Maarif Modeli konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Modelin yönü eylemden değere, değerden erdemli insana; nihai ufuk huzurlu aile ve toplum i", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Türkiye Yüzyılı Maarif Modeli konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Programlar arası bileşenler: sosyal-duygusal öğrenme becerileri, EDE çerçevesi, sistem düş", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Türkiye Yüzyılı Maarif Modeli notundaki temel bilgi."
 }
 ];

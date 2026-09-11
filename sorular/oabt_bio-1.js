@@ -55,69 +55,69 @@ window.oabt_bio_1_sorulari = [
     "explanation": "Na/K pompası."
 },
 {
-    "question": "Hücre ve Moleküler Biyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Zar akışkan mozaik, seçici geçirgen; pasif-aktif transport, osmoz tonisite."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Hücre ve Moleküler Biyoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Organeller GER-GER, Golgi, lizozom, mitokondri, kloroplast endosimbiyoz kanıtı.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Zar için doğru bir açıklamadır?",
+    "options": ["A) Zar akışkan mozaik, seçici geçirgen; pasif-aktif transport, osmoz tonisite.", "B) Organeller GER-GER, Golgi, lizozom, mitokondri, kloroplast endosimbiyoz kanıtı.", "C) İskelet mikrotübül, mikrofilament, ara filaman; motor proteinler.", "D) Sinyal reseptör, kaskad, apoptoz.", "E) Hücre döngüsü G1-S-G2-M, kontrol noktaları siklin-CDK."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Hücre ve Moleküler Biyoloji notundaki temel bilgi."
 },
 {
-    "question": "Hücre ve Moleküler Biyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) İskelet mikrotübül, mikrofilament, ara filaman; motor proteinler."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Hücre ve Moleküler Biyoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Sinyal reseptör, kaskad, apoptoz.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Organeller hakkında hangisi doğrudur?",
+    "options": ["A) Organeller GER-GER, Golgi, lizozom, mitokondri, kloroplast endosimbiyoz kanıtı.", "B) Zar akışkan mozaik, seçici geçirgen; pasif-aktif transport, osmoz tonisite.", "C) İskelet mikrotübül, mikrofilament, ara filaman; motor proteinler.", "D) Sinyal reseptör, kaskad, apoptoz.", "E) Hücre döngüsü G1-S-G2-M, kontrol noktaları siklin-CDK."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Hücre ve Moleküler Biyoloji notundaki temel bilgi."
 },
 {
-    "question": "Hücre ve Moleküler Biyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Hücre döngüsü G1-S-G2-M, kontrol noktaları siklin-CDK."],
+    "question": "İskelet hangisini ifade eder?",
+    "options": ["A) Zar akışkan mozaik, seçici geçirgen; pasif-aktif transport, osmoz tonisite.", "B) Organeller GER-GER, Golgi, lizozom, mitokondri, kloroplast endosimbiyoz kanıtı.", "C) Sinyal reseptör, kaskad, apoptoz.", "D) Hücre döngüsü G1-S-G2-M, kontrol noktaları siklin-CDK.", "E) İskelet mikrotübül, mikrofilament, ara filaman; motor proteinler."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Hücre ve Moleküler Biyoloji notundaki temel bilgi."
 },
 {
-    "question": "Hücre ve Moleküler Biyoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) DNA replikasyonu semikonservatif, helikaz, polimeraz 5'→3', Okazaki.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Sinyal ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Hücre döngüsü G1-S-G2-M, kontrol noktaları siklin-CDK.", "B) Sinyal reseptör, kaskad, apoptoz.", "C) Zar akışkan mozaik, seçici geçirgen; pasif-aktif transport, osmoz tonisite.", "D) Organeller GER-GER, Golgi, lizozom, mitokondri, kloroplast endosimbiyoz kanıtı.", "E) İskelet mikrotübül, mikrofilament, ara filaman; motor proteinler."],
+    "correctAnswerIndex": 1,
+    "explanation": "Hücre ve Moleküler Biyoloji notundaki temel bilgi."
 },
 {
-    "question": "Hücre ve Moleküler Biyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Onarım mismatch, nükleotid kesip çıkarma; telomeraz."],
+    "question": "Aşağıdakilerden hangisi Hücre döngüsü için doğru bir açıklamadır?",
+    "options": ["A) Organeller GER-GER, Golgi, lizozom, mitokondri, kloroplast endosimbiyoz kanıtı.", "B) İskelet mikrotübül, mikrofilament, ara filaman; motor proteinler.", "C) Sinyal reseptör, kaskad, apoptoz.", "D) Hücre döngüsü G1-S-G2-M, kontrol noktaları siklin-CDK.", "E) Zar akışkan mozaik, seçici geçirgen; pasif-aktif transport, osmoz tonisite."],
+    "correctAnswerIndex": 3,
+    "explanation": "Hücre ve Moleküler Biyoloji notundaki temel bilgi."
+},
+{
+    "question": "DNA replikasyonu hakkında hangisi doğrudur?",
+    "options": ["A) Zar akışkan mozaik, seçici geçirgen; pasif-aktif transport, osmoz tonisite.", "B) Organeller GER-GER, Golgi, lizozom, mitokondri, kloroplast endosimbiyoz kanıtı.", "C) İskelet mikrotübül, mikrofilament, ara filaman; motor proteinler.", "D) Sinyal reseptör, kaskad, apoptoz.", "E) DNA replikasyonu semikonservatif, helikaz, polimeraz 5'→3', Okazaki."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Hücre ve Moleküler Biyoloji notundaki temel bilgi."
 },
 {
-    "question": "Hücre ve Moleküler Biyoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Gen ifadesi operon (prokaryot), ekson-intron, transkripsiyon faktörü.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Onarım hangisini ifade eder?",
+    "options": ["A) İskelet mikrotübül, mikrofilament, ara filaman; motor proteinler.", "B) Sinyal reseptör, kaskad, apoptoz.", "C) Onarım mismatch, nükleotid kesip çıkarma; telomeraz.", "D) Zar akışkan mozaik, seçici geçirgen; pasif-aktif transport, osmoz tonisite.", "E) Organeller GER-GER, Golgi, lizozom, mitokondri, kloroplast endosimbiyoz kanıtı."],
+    "correctAnswerIndex": 2,
+    "explanation": "Hücre ve Moleküler Biyoloji notundaki temel bilgi."
 },
 {
-    "question": "Hücre ve Moleküler Biyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) RNA m,t,r,miRNA düzenleme; RNA splicing."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Gen ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Sinyal reseptör, kaskad, apoptoz.", "B) Gen ifadesi operon (prokaryot), ekson-intron, transkripsiyon faktörü.", "C) Zar akışkan mozaik, seçici geçirgen; pasif-aktif transport, osmoz tonisite.", "D) Organeller GER-GER, Golgi, lizozom, mitokondri, kloroplast endosimbiyoz kanıtı.", "E) İskelet mikrotübül, mikrofilament, ara filaman; motor proteinler."],
+    "correctAnswerIndex": 1,
+    "explanation": "Hücre ve Moleküler Biyoloji notundaki temel bilgi."
 },
 {
-    "question": "Hücre ve Moleküler Biyoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Teknik PCR, jel, CRISPR sezgisi, FISH.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi RNA için doğru bir açıklamadır?",
+    "options": ["A) Sinyal reseptör, kaskad, apoptoz.", "B) RNA m,t,r,miRNA düzenleme; RNA splicing.", "C) Zar akışkan mozaik, seçici geçirgen; pasif-aktif transport, osmoz tonisite.", "D) Organeller GER-GER, Golgi, lizozom, mitokondri, kloroplast endosimbiyoz kanıtı.", "E) İskelet mikrotübül, mikrofilament, ara filaman; motor proteinler."],
+    "correctAnswerIndex": 1,
+    "explanation": "Hücre ve Moleküler Biyoloji notundaki temel bilgi."
 },
 {
-    "question": "Hücre ve Moleküler Biyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Enzim kinetiği ve allosteri; kofaktör-koenzim-prostetik."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Teknik hakkında hangisi doğrudur?",
+    "options": ["A) Sinyal reseptör, kaskad, apoptoz.", "B) Teknik PCR, jel, CRISPR sezgisi, FISH.", "C) Zar akışkan mozaik, seçici geçirgen; pasif-aktif transport, osmoz tonisite.", "D) Organeller GER-GER, Golgi, lizozom, mitokondri, kloroplast endosimbiyoz kanıtı.", "E) İskelet mikrotübül, mikrofilament, ara filaman; motor proteinler."],
+    "correctAnswerIndex": 1,
+    "explanation": "Hücre ve Moleküler Biyoloji notundaki temel bilgi."
+},
+{
+    "question": "Enzim kinetiği hangisini ifade eder?",
+    "options": ["A) Organeller GER-GER, Golgi, lizozom, mitokondri, kloroplast endosimbiyoz kanıtı.", "B) İskelet mikrotübül, mikrofilament, ara filaman; motor proteinler.", "C) Sinyal reseptör, kaskad, apoptoz.", "D) Enzim kinetiği ve allosteri; kofaktör-koenzim-prostetik.", "E) Zar akışkan mozaik, seçici geçirgen; pasif-aktif transport, osmoz tonisite."],
+    "correctAnswerIndex": 3,
+    "explanation": "Hücre ve Moleküler Biyoloji notundaki temel bilgi."
 }
 ];

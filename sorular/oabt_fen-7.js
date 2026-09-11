@@ -55,69 +55,69 @@ window.oabt_fen_7_sorulari = [
     "explanation": "Engage-Explore-Explain-Elaborate-Evaluate."
 },
 {
-    "question": "Fen Bilimleri Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Fen, mühendislik ve girişimcilik uygulamaları programda tasarım döngüsüyle yer alır.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Fen, mühendislik ve girişimcilik için doğru bir açıklamadır?",
+    "options": ["A) Yapılandırmacılık ön bilgiye bağlama; kavram yanılgısı üzerine öğretim.", "B) Argümantasyon (Toulmin: iddia-veri-gerekçe) ve sorgulama (inquiry) düzeyleri.", "C) Doğa of science (NOS): tentatif, empirik, öznel, sosyokültürel, yaratıcı.", "D) STEM/STEAM bütünleşik bağlam; disiplin özü kaybolmadan bağlam.", "E) Fen, mühendislik ve girişimcilik uygulamaları programda tasarım döngüsüyle yer alır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Fen Bilimleri Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Fen Bilimleri Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Yapılandırmacılık ön bilgiye bağlama; kavram yanılgısı üzerine öğretim."],
+    "question": "Yapılandırmacılık hakkında hangisi doğrudur?",
+    "options": ["A) Argümantasyon (Toulmin: iddia-veri-gerekçe) ve sorgulama (inquiry) düzeyleri.", "B) Doğa of science (NOS): tentatif, empirik, öznel, sosyokültürel, yaratıcı.", "C) STEM/STEAM bütünleşik bağlam; disiplin özü kaybolmadan bağlam.", "D) Yapılandırmacılık ön bilgiye bağlama; kavram yanılgısı üzerine öğretim.", "E) Fen, mühendislik ve girişimcilik uygulamaları programda tasarım döngüsüyle yer alır."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Fen Bilimleri Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Fen Bilimleri Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Argümantasyon (Toulmin: iddia-veri-gerekçe) ve sorgulama (inquiry) düzeyleri.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Argümantasyon hangisini ifade eder?",
+    "options": ["A) STEM/STEAM bütünleşik bağlam; disiplin özü kaybolmadan bağlam.", "B) Argümantasyon (Toulmin: iddia-veri-gerekçe) ve sorgulama (inquiry) düzeyleri.", "C) Fen, mühendislik ve girişimcilik uygulamaları programda tasarım döngüsüyle yer alır.", "D) Yapılandırmacılık ön bilgiye bağlama; kavram yanılgısı üzerine öğretim.", "E) Doğa of science (NOS): tentatif, empirik, öznel, sosyokültürel, yaratıcı."],
+    "correctAnswerIndex": 1,
+    "explanation": "Fen Bilimleri Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Fen Bilimleri Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Doğa of science (NOS): tentatif, empirik, öznel, sosyokültürel, yaratıcı."],
+    "question": "Doğa of science ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Doğa of science (NOS): tentatif, empirik, öznel, sosyokültürel, yaratıcı.", "B) Fen, mühendislik ve girişimcilik uygulamaları programda tasarım döngüsüyle yer alır.", "C) Yapılandırmacılık ön bilgiye bağlama; kavram yanılgısı üzerine öğretim.", "D) Argümantasyon (Toulmin: iddia-veri-gerekçe) ve sorgulama (inquiry) düzeyleri.", "E) STEM/STEAM bütünleşik bağlam; disiplin özü kaybolmadan bağlam."],
+    "correctAnswerIndex": 0,
+    "explanation": "Fen Bilimleri Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi STEM/STEAM için doğru bir açıklamadır?",
+    "options": ["A) Yapılandırmacılık ön bilgiye bağlama; kavram yanılgısı üzerine öğretim.", "B) Argümantasyon (Toulmin: iddia-veri-gerekçe) ve sorgulama (inquiry) düzeyleri.", "C) Doğa of science (NOS): tentatif, empirik, öznel, sosyokültürel, yaratıcı.", "D) STEM/STEAM bütünleşik bağlam; disiplin özü kaybolmadan bağlam.", "E) Fen, mühendislik ve girişimcilik uygulamaları programda tasarım döngüsüyle yer alır."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Fen Bilimleri Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Fen Bilimleri Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) STEM/STEAM bütünleşik bağlam; disiplin özü kaybolmadan bağlam.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Yaygın yanılgılar hakkında hangisi doğrudur?",
+    "options": ["A) Yaygın yanılgılar: kuvvet hareketin nedeni (Aristoteles), soğuk bir maddedir, fotosentez-solunum zıtlığı yanlış sıfır toplam.", "B) Fen, mühendislik ve girişimcilik uygulamaları programda tasarım döngüsüyle yer alır.", "C) Yapılandırmacılık ön bilgiye bağlama; kavram yanılgısı üzerine öğretim.", "D) Argümantasyon (Toulmin: iddia-veri-gerekçe) ve sorgulama (inquiry) düzeyleri.", "E) Doğa of science (NOS): tentatif, empirik, öznel, sosyokültürel, yaratıcı."],
+    "correctAnswerIndex": 0,
+    "explanation": "Fen Bilimleri Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Fen Bilimleri Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Yaygın yanılgılar: kuvvet hareketin nedeni (Aristoteles), soğuk bir maddedir, fotosentez-s"],
+    "question": "POE hangisini ifade eder?",
+    "options": ["A) Yapılandırmacılık ön bilgiye bağlama; kavram yanılgısı üzerine öğretim.", "B) Argümantasyon (Toulmin: iddia-veri-gerekçe) ve sorgulama (inquiry) düzeyleri.", "C) Doğa of science (NOS): tentatif, empirik, öznel, sosyokültürel, yaratıcı.", "D) POE tahmin-gözle-açıkla; bilişsel çatışma.", "E) Fen, mühendislik ve girişimcilik uygulamaları programda tasarım döngüsüyle yer alır."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Fen Bilimleri Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Fen Bilimleri Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) POE tahmin-gözle-açıkla; bilişsel çatışma.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "5E/7E ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Argümantasyon (Toulmin: iddia-veri-gerekçe) ve sorgulama (inquiry) düzeyleri.", "B) Doğa of science (NOS): tentatif, empirik, öznel, sosyokültürel, yaratıcı.", "C) 5E/7E ve laboratuvar: doğrulama, keşif, açık uçlu sorgulama.", "D) Fen, mühendislik ve girişimcilik uygulamaları programda tasarım döngüsüyle yer alır.", "E) Yapılandırmacılık ön bilgiye bağlama; kavram yanılgısı üzerine öğretim."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Fen Bilimleri Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Fen Bilimleri Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) 5E/7E ve laboratuvar: doğrulama, keşif, açık uçlu sorgulama."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Modelleme için doğru bir açıklamadır?",
+    "options": ["A) Modelleme somut-analog-matematik; sınırlılıkları konuşulur.", "B) Fen, mühendislik ve girişimcilik uygulamaları programda tasarım döngüsüyle yer alır.", "C) Yapılandırmacılık ön bilgiye bağlama; kavram yanılgısı üzerine öğretim.", "D) Argümantasyon (Toulmin: iddia-veri-gerekçe) ve sorgulama (inquiry) düzeyleri.", "E) Doğa of science (NOS): tentatif, empirik, öznel, sosyokültürel, yaratıcı."],
+    "correctAnswerIndex": 0,
+    "explanation": "Fen Bilimleri Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Fen Bilimleri Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Modelleme somut-analog-matematik; sınırlılıkları konuşulur.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Güvenli laboratuvar hakkında hangisi doğrudur?",
+    "options": ["A) Doğa of science (NOS): tentatif, empirik, öznel, sosyokültürel, yaratıcı.", "B) Güvenli laboratuvar risk analizi, etiket, atık; sanal lab gerçek beceriyi tam ikame etmez.", "C) Fen, mühendislik ve girişimcilik uygulamaları programda tasarım döngüsüyle yer alır.", "D) Yapılandırmacılık ön bilgiye bağlama; kavram yanılgısı üzerine öğretim.", "E) Argümantasyon (Toulmin: iddia-veri-gerekçe) ve sorgulama (inquiry) düzeyleri."],
+    "correctAnswerIndex": 1,
+    "explanation": "Fen Bilimleri Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Fen Bilimleri Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Güvenli laboratuvar risk analizi, etiket, atık; sanal lab gerçek beceriyi tam ikame etmez."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Fen Bilimleri Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Fen PCK konu, öğrenci yanılgısı, strateji, ölçme bilgisi.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Fen PCK hangisini ifade eder?",
+    "options": ["A) Doğa of science (NOS): tentatif, empirik, öznel, sosyokültürel, yaratıcı.", "B) Fen PCK konu, öğrenci yanılgısı, strateji, ölçme bilgisi.", "C) Fen, mühendislik ve girişimcilik uygulamaları programda tasarım döngüsüyle yer alır.", "D) Yapılandırmacılık ön bilgiye bağlama; kavram yanılgısı üzerine öğretim.", "E) Argümantasyon (Toulmin: iddia-veri-gerekçe) ve sorgulama (inquiry) düzeyleri."],
+    "correctAnswerIndex": 1,
+    "explanation": "Fen Bilimleri Eğitimi notundaki temel bilgi."
 }
 ];

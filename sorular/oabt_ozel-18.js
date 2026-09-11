@@ -61,63 +61,63 @@ window.oabt_ozel_18_sorulari = [
     "explanation": "Gelişimsel."
 },
 {
-    "question": "Özel Eğitimde Oyun ve Müzik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Oyun öğretim ortamı ve değerlendirme penceresidir.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Oyun için doğru bir açıklamadır?",
+    "options": ["A) Ritim iletişim ve düzenleme.", "B) Orff ve vurmalı motor-dil.", "C) İşitme yetersizliği titreşim.", "D) Müzik terapisi ayrı unvan.", "E) Oyun öğretim ortamı ve değerlendirme penceresidir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Özel Eğitimde Oyun ve Müzik notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Oyun ve Müzik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Yapılandırılmış ve serbest denge; OSB'de oyun öğretimi gerekebilir.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Yapılandırılmış ve serbest hakkında hangisi doğrudur?",
+    "options": ["A) UDA oyun içi pekiştirme doğal.", "B) Riskli oyun denetimli motor.", "C) Yapılandırılmış ve serbest denge; OSB'de oyun öğretimi gerekebilir.", "D) Oyun öğretim ortamı ve değerlendirme penceresidir.", "E) Uyarlanmış kural kaynaştırma oyunu."],
+    "correctAnswerIndex": 2,
+    "explanation": "Özel Eğitimde Oyun ve Müzik notundaki temel bilgi."
+},
+{
+    "question": "Uyarlanmış kural hangisini ifade eder?",
+    "options": ["A) Oyun öğretim ortamı ve değerlendirme penceresidir.", "B) Yapılandırılmış ve serbest denge; OSB'de oyun öğretimi gerekebilir.", "C) UDA oyun içi pekiştirme doğal.", "D) Riskli oyun denetimli motor.", "E) Uyarlanmış kural kaynaştırma oyunu."],
+    "correctAnswerIndex": 4,
+    "explanation": "Özel Eğitimde Oyun ve Müzik notundaki temel bilgi."
+},
+{
+    "question": "UDA ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Uyarlanmış kural kaynaştırma oyunu.", "B) Riskli oyun denetimli motor.", "C) UDA oyun içi pekiştirme doğal.", "D) Oyun öğretim ortamı ve değerlendirme penceresidir.", "E) Yapılandırılmış ve serbest denge; OSB'de oyun öğretimi gerekebilir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Özel Eğitimde Oyun ve Müzik notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Riskli oyun için doğru bir açıklamadır?",
+    "options": ["A) Yapılandırılmış ve serbest denge; OSB'de oyun öğretimi gerekebilir.", "B) Uyarlanmış kural kaynaştırma oyunu.", "C) UDA oyun içi pekiştirme doğal.", "D) Riskli oyun denetimli motor.", "E) Oyun öğretim ortamı ve değerlendirme penceresidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitimde Oyun ve Müzik notundaki temel bilgi."
+},
+{
+    "question": "Ritim hakkında hangisi doğrudur?",
+    "options": ["A) Yapılandırılmış ve serbest denge; OSB'de oyun öğretimi gerekebilir.", "B) Uyarlanmış kural kaynaştırma oyunu.", "C) UDA oyun içi pekiştirme doğal.", "D) Ritim iletişim ve düzenleme.", "E) Oyun öğretim ortamı ve değerlendirme penceresidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitimde Oyun ve Müzik notundaki temel bilgi."
+},
+{
+    "question": "Orff ve vurmalı hangisini ifade eder?",
+    "options": ["A) Yapılandırılmış ve serbest denge; OSB'de oyun öğretimi gerekebilir.", "B) Uyarlanmış kural kaynaştırma oyunu.", "C) UDA oyun içi pekiştirme doğal.", "D) Orff ve vurmalı motor-dil.", "E) Oyun öğretim ortamı ve değerlendirme penceresidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitimde Oyun ve Müzik notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Müzik terapisi için doğru bir açıklamadır?",
+    "options": ["A) UDA oyun içi pekiştirme doğal.", "B) Müzik terapisi ayrı unvan.", "C) Oyun öğretim ortamı ve değerlendirme penceresidir.", "D) Yapılandırılmış ve serbest denge; OSB'de oyun öğretimi gerekebilir.", "E) Uyarlanmış kural kaynaştırma oyunu."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Özel Eğitimde Oyun ve Müzik notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Oyun ve Müzik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Uyarlanmış kural kaynaştırma oyunu.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Marş ve koro hakkında hangisi doğrudur?",
+    "options": ["A) Marş ve koro gönüllü, ses sağlığı.", "B) Oyun öğretim ortamı ve değerlendirme penceresidir.", "C) Yapılandırılmış ve serbest denge; OSB'de oyun öğretimi gerekebilir.", "D) Uyarlanmış kural kaynaştırma oyunu.", "E) UDA oyun içi pekiştirme doğal."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Özel Eğitimde Oyun ve Müzik notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Oyun ve Müzik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) UDA oyun içi pekiştirme doğal.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitimde Oyun ve Müzik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Riskli oyun denetimli motor.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Oyun ve Müzik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Ritim iletişim ve düzenleme.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitimde Oyun ve Müzik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Orff ve vurmalı motor-dil.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Oyun ve Müzik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) İşitme yetersizliği titreşim.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitimde Oyun ve Müzik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Müzik terapisi ayrı unvan.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Oyun ve Müzik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Marş ve koro gönüllü, ses sağlığı.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Amaç hangisini ifade eder?",
+    "options": ["A) Oyun öğretim ortamı ve değerlendirme penceresidir.", "B) Yapılandırılmış ve serbest denge; OSB'de oyun öğretimi gerekebilir.", "C) Uyarlanmış kural kaynaştırma oyunu.", "D) UDA oyun içi pekiştirme doğal.", "E) Amaç 3 dakikalık ortak oyun, ritim tekrarı."],
+    "correctAnswerIndex": 4,
+    "explanation": "Özel Eğitimde Oyun ve Müzik notundaki temel bilgi."
 }
 ];

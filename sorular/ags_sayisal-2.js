@@ -67,57 +67,57 @@ window.ags_sayisal_2_sorulari = [
     "explanation": "Birim ve başlık okunmadan işlem yanlış olur."
 },
 {
-    "question": "Grafik ve Tablo Yorumlama konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Sütun grafik kategorik karşılaştırmada yükseklik niceliği gösterir."],
+    "question": "Aşağıdakilerden hangisi Sütun grafik için doğru bir açıklamadır?",
+    "options": ["A) Daire (pasta) grafik bir bütünün yüzde paylarını merkez açı veya alanla verir.", "B) Tablo, satır-sütun kesişiminde ham veya özet veri sunar; toplam ve yüzde türetilir.", "C) Mutlak değişim son eksi ilk; bağıl (yüzde) değişim (son-ilk)/ilk x 100.", "D) Sütun grafik kategorik karşılaştırmada yükseklik niceliği gösterir.", "E) Çizgi grafik zamana bağlı değişim ve eğilimi (artış-azalış) izletir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Grafik ve Tablo Yorumlama notundaki temel bilgi."
+},
+{
+    "question": "Çizgi grafik hakkında hangisi doğrudur?",
+    "options": ["A) Histogram sürekli veriyi aralıklara böler; sütun grafikten farkı aralık (sınıf) kullanmasıdır.", "B) Çizgi grafik zamana bağlı değişim ve eğilimi (artış-azalış) izletir.", "C) Sütun grafik kategorik karşılaştırmada yükseklik niceliği gösterir.", "D) Daire (pasta) grafik bir bütünün yüzde paylarını merkez açı veya alanla verir.", "E) Tablo, satır-sütun kesişiminde ham veya özet veri sunar; toplam ve yüzde türetilir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Grafik ve Tablo Yorumlama notundaki temel bilgi."
+},
+{
+    "question": "Daire (pasta) grafik hangisini ifade eder?",
+    "options": ["A) Histogram sürekli veriyi aralıklara böler; sütun grafikten farkı aralık (sınıf) kullanmasıdır.", "B) Daire (pasta) grafik bir bütünün yüzde paylarını merkez açı veya alanla verir.", "C) Sütun grafik kategorik karşılaştırmada yükseklik niceliği gösterir.", "D) Çizgi grafik zamana bağlı değişim ve eğilimi (artış-azalış) izletir.", "E) Tablo, satır-sütun kesişiminde ham veya özet veri sunar; toplam ve yüzde türetilir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Grafik ve Tablo Yorumlama notundaki temel bilgi."
+},
+{
+    "question": "Tablo ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Daire (pasta) grafik bir bütünün yüzde paylarını merkez açı veya alanla verir.", "B) Histogram sürekli veriyi aralıklara böler; sütun grafikten farkı aralık (sınıf) kullanmasıdır.", "C) Tablo, satır-sütun kesişiminde ham veya özet veri sunar; toplam ve yüzde türetilir.", "D) Sütun grafik kategorik karşılaştırmada yükseklik niceliği gösterir.", "E) Çizgi grafik zamana bağlı değişim ve eğilimi (artış-azalış) izletir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Grafik ve Tablo Yorumlama notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Histogram için doğru bir açıklamadır?",
+    "options": ["A) Sütun grafik kategorik karşılaştırmada yükseklik niceliği gösterir.", "B) Çizgi grafik zamana bağlı değişim ve eğilimi (artış-azalış) izletir.", "C) Daire (pasta) grafik bir bütünün yüzde paylarını merkez açı veya alanla verir.", "D) Tablo, satır-sütun kesişiminde ham veya özet veri sunar; toplam ve yüzde türetilir.", "E) Histogram sürekli veriyi aralıklara böler; sütun grafikten farkı aralık (sınıf) kullanmasıdır."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Grafik ve Tablo Yorumlama notundaki temel bilgi."
 },
 {
-    "question": "Grafik ve Tablo Yorumlama konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Çizgi grafik zamana bağlı değişim ve eğilimi (artış-azalış) izletir.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Mutlak değişim hakkında hangisi doğrudur?",
+    "options": ["A) Çizgi grafik zamana bağlı değişim ve eğilimi (artış-azalış) izletir.", "B) Daire (pasta) grafik bir bütünün yüzde paylarını merkez açı veya alanla verir.", "C) Tablo, satır-sütun kesişiminde ham veya özet veri sunar; toplam ve yüzde türetilir.", "D) Mutlak değişim son eksi ilk; bağıl (yüzde) değişim (son-ilk)/ilk x 100.", "E) Sütun grafik kategorik karşılaştırmada yükseklik niceliği gösterir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Grafik ve Tablo Yorumlama notundaki temel bilgi."
 },
 {
-    "question": "Grafik ve Tablo Yorumlama konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Daire (pasta) grafik bir bütünün yüzde paylarını merkez açı veya alanla verir."],
+    "question": "Ortalama hangisini ifade eder?",
+    "options": ["A) Sütun grafik kategorik karşılaştırmada yükseklik niceliği gösterir.", "B) Çizgi grafik zamana bağlı değişim ve eğilimi (artış-azalış) izletir.", "C) Daire (pasta) grafik bir bütünün yüzde paylarını merkez açı veya alanla verir.", "D) Tablo, satır-sütun kesişiminde ham veya özet veri sunar; toplam ve yüzde türetilir.", "E) Ortalama, toplamın adede bölümü; medyan sıralı dizinin ortası, uç değerden az etkilenir."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Grafik ve Tablo Yorumlama notundaki temel bilgi."
 },
 {
-    "question": "Grafik ve Tablo Yorumlama konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Tablo, satır-sütun kesişiminde ham veya özet veri sunar; toplam ve yüzde türetilir.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Grafik ve Tablo Yorumlama konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Histogram sürekli veriyi aralıklara böler; sütun grafikten farkı aralık (sınıf) kullanması"],
+    "question": "Pay karşılaştırması ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Sütun grafik kategorik karşılaştırmada yükseklik niceliği gösterir.", "B) Çizgi grafik zamana bağlı değişim ve eğilimi (artış-azalış) izletir.", "C) Daire (pasta) grafik bir bütünün yüzde paylarını merkez açı veya alanla verir.", "D) Tablo, satır-sütun kesişiminde ham veya özet veri sunar; toplam ve yüzde türetilir.", "E) Pay karşılaştırması aynı bütünden; farklı bütünlerin yüzdeleri doğrudan kıyaslanamaz."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Grafik ve Tablo Yorumlama notundaki temel bilgi."
 },
 {
-    "question": "Grafik ve Tablo Yorumlama konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mutlak değişim son eksi ilk; bağıl (yüzde) değişim (son-ilk)/ilk x 100.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Grafik ve Tablo Yorumlama konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Ortalama, toplamın adede bölümü; medyan sıralı dizinin ortası, uç değerden az etkilenir."],
+    "question": "Aşağıdakilerden hangisi Eksen ölçeği için doğru bir açıklamadır?",
+    "options": ["A) Sütun grafik kategorik karşılaştırmada yükseklik niceliği gösterir.", "B) Çizgi grafik zamana bağlı değişim ve eğilimi (artış-azalış) izletir.", "C) Daire (pasta) grafik bir bütünün yüzde paylarını merkez açı veya alanla verir.", "D) Tablo, satır-sütun kesişiminde ham veya özet veri sunar; toplam ve yüzde türetilir.", "E) Eksen ölçeği sıfırdan başlamıyorsa görsel fark abartılır; okuma yanıltıcı olabilir."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Grafik ve Tablo Yorumlama konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Pay karşılaştırması aynı bütünden; farklı bütünlerin yüzdeleri doğrudan kıyaslanamaz.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Grafik ve Tablo Yorumlama konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Eksen ölçeği sıfırdan başlamıyorsa görsel fark abartılır; okuma yanıltıcı olabilir."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Grafik ve Tablo Yorumlama notundaki temel bilgi."
 }
 ];

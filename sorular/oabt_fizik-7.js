@@ -55,69 +55,69 @@ window.oabt_fizik_7_sorulari = [
     "explanation": "Elektron 511 keV/c^2."
 },
 {
-    "question": "Atom ve Nükleer Fizik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Rutherford saçılma çekirdek; Bohr E=-13,6/n^2 eV hidrojen.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Rutherford için doğru bir açıklamadır?",
+    "options": ["A) Rutherford saçılma çekirdek; Bohr E=-13,6/n^2 eV hidrojen.", "B) Kuantum sayı n,l,m,ms; seçim kuralları spektrum.", "C) X-ışını frenleme süreklisi, karakteristik Kα Moseley Z.", "D) Lazer ve soğurma Boltzmann nüfus, tersinim.", "E) Çok elektron tarama, kabuk, periyodik tablo fiziği."],
+    "correctAnswerIndex": 0,
+    "explanation": "Atom ve Nükleer Fizik notundaki temel bilgi."
 },
 {
-    "question": "Atom ve Nükleer Fizik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Kuantum sayı n,l,m,ms; seçim kuralları spektrum.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Kuantum sayı hakkında hangisi doğrudur?",
+    "options": ["A) Rutherford saçılma çekirdek; Bohr E=-13,6/n^2 eV hidrojen.", "B) X-ışını frenleme süreklisi, karakteristik Kα Moseley Z.", "C) Lazer ve soğurma Boltzmann nüfus, tersinim.", "D) Çok elektron tarama, kabuk, periyodik tablo fiziği.", "E) Kuantum sayı n,l,m,ms; seçim kuralları spektrum."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Atom ve Nükleer Fizik notundaki temel bilgi."
 },
 {
-    "question": "Atom ve Nükleer Fizik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) X-ışını frenleme süreklisi, karakteristik Kα Moseley Z.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "X-ışını hangisini ifade eder?",
+    "options": ["A) Lazer ve soğurma Boltzmann nüfus, tersinim.", "B) Çok elektron tarama, kabuk, periyodik tablo fiziği.", "C) X-ışını frenleme süreklisi, karakteristik Kα Moseley Z.", "D) Rutherford saçılma çekirdek; Bohr E=-13,6/n^2 eV hidrojen.", "E) Kuantum sayı n,l,m,ms; seçim kuralları spektrum."],
+    "correctAnswerIndex": 2,
+    "explanation": "Atom ve Nükleer Fizik notundaki temel bilgi."
 },
 {
-    "question": "Atom ve Nükleer Fizik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Lazer ve soğurma Boltzmann nüfus, tersinim.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Lazer ve soğurma ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) X-ışını frenleme süreklisi, karakteristik Kα Moseley Z.", "B) Çok elektron tarama, kabuk, periyodik tablo fiziği.", "C) Lazer ve soğurma Boltzmann nüfus, tersinim.", "D) Rutherford saçılma çekirdek; Bohr E=-13,6/n^2 eV hidrojen.", "E) Kuantum sayı n,l,m,ms; seçim kuralları spektrum."],
+    "correctAnswerIndex": 2,
+    "explanation": "Atom ve Nükleer Fizik notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Çok elektron için doğru bir açıklamadır?",
+    "options": ["A) Rutherford saçılma çekirdek; Bohr E=-13,6/n^2 eV hidrojen.", "B) Kuantum sayı n,l,m,ms; seçim kuralları spektrum.", "C) X-ışını frenleme süreklisi, karakteristik Kα Moseley Z.", "D) Lazer ve soğurma Boltzmann nüfus, tersinim.", "E) Çok elektron tarama, kabuk, periyodik tablo fiziği."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Atom ve Nükleer Fizik notundaki temel bilgi."
 },
 {
-    "question": "Atom ve Nükleer Fizik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Çok elektron tarama, kabuk, periyodik tablo fiziği.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Bileşim hakkında hangisi doğrudur?",
+    "options": ["A) Bileşim Z,N,A; bağ enerjisi/nükleon eğrisi Fe civarı maksimum.", "B) Rutherford saçılma çekirdek; Bohr E=-13,6/n^2 eV hidrojen.", "C) Kuantum sayı n,l,m,ms; seçim kuralları spektrum.", "D) X-ışını frenleme süreklisi, karakteristik Kα Moseley Z.", "E) Lazer ve soğurma Boltzmann nüfus, tersinim."],
+    "correctAnswerIndex": 0,
+    "explanation": "Atom ve Nükleer Fizik notundaki temel bilgi."
 },
 {
-    "question": "Atom ve Nükleer Fizik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Bileşim Z,N,A; bağ enerjisi/nükleon eğrisi Fe civarı maksimum.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Radyoaktivite hangisini ifade eder?",
+    "options": ["A) Radyoaktivite α tünel, β zayıf, γ EM; bozunma yasası.", "B) Rutherford saçılma çekirdek; Bohr E=-13,6/n^2 eV hidrojen.", "C) Kuantum sayı n,l,m,ms; seçim kuralları spektrum.", "D) X-ışını frenleme süreklisi, karakteristik Kα Moseley Z.", "E) Lazer ve soğurma Boltzmann nüfus, tersinim."],
+    "correctAnswerIndex": 0,
+    "explanation": "Atom ve Nükleer Fizik notundaki temel bilgi."
+},
+{
+    "question": "Nükleer kuvvet ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Nükleer kuvvet kısa menzil, yük bağımsız, doyma.", "B) Rutherford saçılma çekirdek; Bohr E=-13,6/n^2 eV hidrojen.", "C) Kuantum sayı n,l,m,ms; seçim kuralları spektrum.", "D) X-ışını frenleme süreklisi, karakteristik Kα Moseley Z.", "E) Lazer ve soğurma Boltzmann nüfus, tersinim."],
+    "correctAnswerIndex": 0,
+    "explanation": "Atom ve Nükleer Fizik notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Fisyon-füzyon için doğru bir açıklamadır?",
+    "options": ["A) Lazer ve soğurma Boltzmann nüfus, tersinim.", "B) Fisyon-füzyon kütle kaybı ΔE=Δm c^2; zincir tepkime kritik kütle.", "C) Rutherford saçılma çekirdek; Bohr E=-13,6/n^2 eV hidrojen.", "D) Kuantum sayı n,l,m,ms; seçim kuralları spektrum.", "E) X-ışını frenleme süreklisi, karakteristik Kα Moseley Z."],
+    "correctAnswerIndex": 1,
+    "explanation": "Atom ve Nükleer Fizik notundaki temel bilgi."
+},
+{
+    "question": "Etkileşim hakkında hangisi doğrudur?",
+    "options": ["A) Rutherford saçılma çekirdek; Bohr E=-13,6/n^2 eV hidrojen.", "B) Kuantum sayı n,l,m,ms; seçim kuralları spektrum.", "C) X-ışını frenleme süreklisi, karakteristik Kα Moseley Z.", "D) Lazer ve soğurma Boltzmann nüfus, tersinim.", "E) Etkileşim kesit σ, ortalama serbest yol."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Atom ve Nükleer Fizik notundaki temel bilgi."
 },
 {
-    "question": "Atom ve Nükleer Fizik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Radyoaktivite α tünel, β zayıf, γ EM; bozunma yasası.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Atom ve Nükleer Fizik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Nükleer kuvvet kısa menzil, yük bağımsız, doyma.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Standart model sezgisi hangisini ifade eder?",
+    "options": ["A) Rutherford saçılma çekirdek; Bohr E=-13,6/n^2 eV hidrojen.", "B) Kuantum sayı n,l,m,ms; seçim kuralları spektrum.", "C) X-ışını frenleme süreklisi, karakteristik Kα Moseley Z.", "D) Lazer ve soğurma Boltzmann nüfus, tersinim.", "E) Standart model sezgisi lepton-kuark, ara bozonlar."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Atom ve Nükleer Fizik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Fisyon-füzyon kütle kaybı ΔE=Δm c^2; zincir tepkime kritik kütle.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Atom ve Nükleer Fizik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Etkileşim kesit σ, ortalama serbest yol.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Atom ve Nükleer Fizik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Standart model sezgisi lepton-kuark, ara bozonlar.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Atom ve Nükleer Fizik notundaki temel bilgi."
 }
 ];

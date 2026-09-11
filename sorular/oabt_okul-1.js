@@ -61,63 +61,63 @@ window.oabt_okul_1_sorulari = [
     "explanation": "Sınıf ile benzer 50 soru notu."
 },
 {
-    "question": "Çocuk Gelişimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Bilişsel, dil, sosyal-duygusal, motor, özbakım gelişim alanları iç içedir."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Çocuk Gelişimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Piaget işlem öncesi: simge, benmerkezcilik, korunum yokluğu.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Bilişsel, dil, sosyal-duygusal, motor, özbakım için doğru bir açıklamadır?",
+    "options": ["A) Bilişsel, dil, sosyal-duygusal, motor, özbakım gelişim alanları iç içedir.", "B) Piaget işlem öncesi: simge, benmerkezcilik, korunum yokluğu.", "C) Vygotsky oyun ve dil ZPD'de.", "D) Erikson özerklik ve girişimcilik (1-6 yaş bandı).", "E) 2026 ÖABT okul öncesi 30 alan bilgisi + 20 alan eğitimi = 50; gelişim alan bilgisine girer."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Çocuk Gelişimi notundaki temel bilgi."
 },
 {
-    "question": "Çocuk Gelişimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Vygotsky oyun ve dil ZPD'de."],
+    "question": "Piaget hakkında hangisi doğrudur?",
+    "options": ["A) Vygotsky oyun ve dil ZPD'de.", "B) Erikson özerklik ve girişimcilik (1-6 yaş bandı).", "C) 2026 ÖABT okul öncesi 30 alan bilgisi + 20 alan eğitimi = 50; gelişim alan bilgisine girer.", "D) Piaget işlem öncesi: simge, benmerkezcilik, korunum yokluğu.", "E) Bilişsel, dil, sosyal-duygusal, motor, özbakım gelişim alanları iç içedir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Çocuk Gelişimi notundaki temel bilgi."
+},
+{
+    "question": "Vygotsky hangisini ifade eder?",
+    "options": ["A) 2026 ÖABT okul öncesi 30 alan bilgisi + 20 alan eğitimi = 50; gelişim alan bilgisine girer.", "B) Vygotsky oyun ve dil ZPD'de.", "C) Bilişsel, dil, sosyal-duygusal, motor, özbakım gelişim alanları iç içedir.", "D) Piaget işlem öncesi: simge, benmerkezcilik, korunum yokluğu.", "E) Erikson özerklik ve girişimcilik (1-6 yaş bandı)."],
+    "correctAnswerIndex": 1,
+    "explanation": "Çocuk Gelişimi notundaki temel bilgi."
+},
+{
+    "question": "Erikson ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Bilişsel, dil, sosyal-duygusal, motor, özbakım gelişim alanları iç içedir.", "B) Piaget işlem öncesi: simge, benmerkezcilik, korunum yokluğu.", "C) Vygotsky oyun ve dil ZPD'de.", "D) 2026 ÖABT okul öncesi 30 alan bilgisi + 20 alan eğitimi = 50; gelişim alan bilgisine girer.", "E) Erikson özerklik ve girişimcilik (1-6 yaş bandı)."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Çocuk Gelişimi notundaki temel bilgi."
 },
 {
-    "question": "Çocuk Gelişimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Erikson özerklik ve girişimcilik (1-6 yaş bandı).", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi 2026 ÖABT okul öncesi için doğru bir açıklamadır?",
+    "options": ["A) 2026 ÖABT okul öncesi 30 alan bilgisi + 20 alan eğitimi = 50; gelişim alan bilgisine girer.", "B) Bilişsel, dil, sosyal-duygusal, motor, özbakım gelişim alanları iç içedir.", "C) Piaget işlem öncesi: simge, benmerkezcilik, korunum yokluğu.", "D) Vygotsky oyun ve dil ZPD'de.", "E) Erikson özerklik ve girişimcilik (1-6 yaş bandı)."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Çocuk Gelişimi notundaki temel bilgi."
 },
 {
-    "question": "Çocuk Gelişimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) 2026 ÖABT okul öncesi 30 alan bilgisi + 20 alan eğitimi = 50; gelişim alan bilgisine girer"],
+    "question": "0-3 kritik hakkında hangisi doğrudur?",
+    "options": ["A) 0-3 kritik bağlanma ve beyin plastisitesi.", "B) Bilişsel, dil, sosyal-duygusal, motor, özbakım gelişim alanları iç içedir.", "C) Piaget işlem öncesi: simge, benmerkezcilik, korunum yokluğu.", "D) Vygotsky oyun ve dil ZPD'de.", "E) Erikson özerklik ve girişimcilik (1-6 yaş bandı)."],
+    "correctAnswerIndex": 0,
+    "explanation": "Çocuk Gelişimi notundaki temel bilgi."
+},
+{
+    "question": "3-6 hangisini ifade eder?",
+    "options": ["A) Erikson özerklik ve girişimcilik (1-6 yaş bandı).", "B) 3-6 oyun, akran, dil patlaması.", "C) Bilişsel, dil, sosyal-duygusal, motor, özbakım gelişim alanları iç içedir.", "D) Piaget işlem öncesi: simge, benmerkezcilik, korunum yokluğu.", "E) Vygotsky oyun ve dil ZPD'de."],
+    "correctAnswerIndex": 1,
+    "explanation": "Çocuk Gelişimi notundaki temel bilgi."
+},
+{
+    "question": "Yürütücü işlev ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Bilişsel, dil, sosyal-duygusal, motor, özbakım gelişim alanları iç içedir.", "B) Piaget işlem öncesi: simge, benmerkezcilik, korunum yokluğu.", "C) Vygotsky oyun ve dil ZPD'de.", "D) Erikson özerklik ve girişimcilik (1-6 yaş bandı).", "E) Yürütücü işlev dikkat, ketleme, esneklik sezgisel."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Çocuk Gelişimi notundaki temel bilgi."
 },
 {
-    "question": "Çocuk Gelişimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) 0-3 kritik bağlanma ve beyin plastisitesi.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Çocuk Gelişimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) 3-6 oyun, akran, dil patlaması."],
+    "question": "Aşağıdakilerden hangisi Mizaç için doğru bir açıklamadır?",
+    "options": ["A) Bilişsel, dil, sosyal-duygusal, motor, özbakım gelişim alanları iç içedir.", "B) Piaget işlem öncesi: simge, benmerkezcilik, korunum yokluğu.", "C) Vygotsky oyun ve dil ZPD'de.", "D) Erikson özerklik ve girişimcilik (1-6 yaş bandı).", "E) Mizaç kolay-zor-yavaş ısınan."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Çocuk Gelişimi notundaki temel bilgi."
 },
 {
-    "question": "Çocuk Gelişimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Yürütücü işlev dikkat, ketleme, esneklik sezgisel.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Çocuk Gelişimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Mizaç kolay-zor-yavaş ısınan."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Çocuk Gelişimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Risk yoksulluk, ihmal, ekran aşırı.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Risk hakkında hangisi doğrudur?",
+    "options": ["A) Erikson özerklik ve girişimcilik (1-6 yaş bandı).", "B) Risk yoksulluk, ihmal, ekran aşırı.", "C) Bilişsel, dil, sosyal-duygusal, motor, özbakım gelişim alanları iç içedir.", "D) Piaget işlem öncesi: simge, benmerkezcilik, korunum yokluğu.", "E) Vygotsky oyun ve dil ZPD'de."],
+    "correctAnswerIndex": 1,
+    "explanation": "Çocuk Gelişimi notundaki temel bilgi."
 }
 ];

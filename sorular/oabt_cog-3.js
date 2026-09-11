@@ -61,63 +61,63 @@ window.oabt_cog_3_sorulari = [
     "explanation": "Brundtland çizgisi gelecek kuşağı gözetir."
 },
 {
-    "question": "Ekonomik Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) İklim, yeryüzü, su, toprak, sermaye, emek, pazar tarımı belirler.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi İklim, yeryüzü, su, toprak, sermaye, emek, pazar için doğru bir açıklamadır?",
+    "options": ["A) Fosil enerji kömür-petrol-doğalgaz; yenilenebilir hidro, rüzgâr, güneş, jeotermal.", "B) Enerji jeopolitiği boru hatları ve ithalat bağımlılığı.", "C) İklim, yeryüzü, su, toprak, sermaye, emek, pazar tarımı belirler.", "D) Monokültür ve polikültür; plantasyon sömürge mirası tartışması.", "E) Yeşil Devrim verim artışı; çevre ve küçük çiftçi maliyeti."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Ekonomik Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Ekonomik Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Monokültür ve polikültür; plantasyon sömürge mirası tartışması."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Monokültür ve polikültür hakkında hangisi doğrudur?",
+    "options": ["A) İklim, yeryüzü, su, toprak, sermaye, emek, pazar tarımı belirler.", "B) Yeşil Devrim verim artışı; çevre ve küçük çiftçi maliyeti.", "C) Fosil enerji kömür-petrol-doğalgaz; yenilenebilir hidro, rüzgâr, güneş, jeotermal.", "D) Enerji jeopolitiği boru hatları ve ithalat bağımlılığı.", "E) Monokültür ve polikültür; plantasyon sömürge mirası tartışması."],
+    "correctAnswerIndex": 4,
+    "explanation": "Ekonomik Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Ekonomik Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Yeşil Devrim verim artışı; çevre ve küçük çiftçi maliyeti.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Yeşil Devrim hangisini ifade eder?",
+    "options": ["A) Yeşil Devrim verim artışı; çevre ve küçük çiftçi maliyeti.", "B) İklim, yeryüzü, su, toprak, sermaye, emek, pazar tarımı belirler.", "C) Monokültür ve polikültür; plantasyon sömürge mirası tartışması.", "D) Fosil enerji kömür-petrol-doğalgaz; yenilenebilir hidro, rüzgâr, güneş, jeotermal.", "E) Enerji jeopolitiği boru hatları ve ithalat bağımlılığı."],
+    "correctAnswerIndex": 0,
+    "explanation": "Ekonomik Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Fosil enerji ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Yeşil Devrim verim artışı; çevre ve küçük çiftçi maliyeti.", "B) Enerji jeopolitiği boru hatları ve ithalat bağımlılığı.", "C) Fosil enerji kömür-petrol-doğalgaz; yenilenebilir hidro, rüzgâr, güneş, jeotermal.", "D) İklim, yeryüzü, su, toprak, sermaye, emek, pazar tarımı belirler.", "E) Monokültür ve polikültür; plantasyon sömürge mirası tartışması."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Ekonomik Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Ekonomik Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Fosil enerji kömür-petrol-doğalgaz; yenilenebilir hidro, rüzgâr, güneş, jeotermal."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Ekonomik Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Enerji jeopolitiği boru hatları ve ithalat bağımlılığı.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Enerji jeopolitiği için doğru bir açıklamadır?",
+    "options": ["A) Yeşil Devrim verim artışı; çevre ve küçük çiftçi maliyeti.", "B) Fosil enerji kömür-petrol-doğalgaz; yenilenebilir hidro, rüzgâr, güneş, jeotermal.", "C) Enerji jeopolitiği boru hatları ve ithalat bağımlılığı.", "D) İklim, yeryüzü, su, toprak, sermaye, emek, pazar tarımı belirler.", "E) Monokültür ve polikültür; plantasyon sömürge mirası tartışması."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Ekonomik Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Ekonomik Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Hammadde, enerji, ulaşım, emek, sermaye, pazar, siyaset yer seçimi faktörleridir."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Ekonomik Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Fordist yığın ve esnek üretim; küresel değer zinciri.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Hammadde, enerji, ulaşım, emek, sermaye, pazar, siyaset hakkında hangisi doğrudur?",
+    "options": ["A) Yeşil Devrim verim artışı; çevre ve küçük çiftçi maliyeti.", "B) Fosil enerji kömür-petrol-doğalgaz; yenilenebilir hidro, rüzgâr, güneş, jeotermal.", "C) Hammadde, enerji, ulaşım, emek, sermaye, pazar, siyaset yer seçimi faktörleridir.", "D) İklim, yeryüzü, su, toprak, sermaye, emek, pazar tarımı belirler.", "E) Monokültür ve polikültür; plantasyon sömürge mirası tartışması."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Ekonomik Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Ekonomik Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Ağır-hafif, ham-ara-nihai sanayi tasnifi."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Fordist yığın hangisini ifade eder?",
+    "options": ["A) Fordist yığın ve esnek üretim; küresel değer zinciri.", "B) İklim, yeryüzü, su, toprak, sermaye, emek, pazar tarımı belirler.", "C) Monokültür ve polikültür; plantasyon sömürge mirası tartışması.", "D) Yeşil Devrim verim artışı; çevre ve küçük çiftçi maliyeti.", "E) Fosil enerji kömür-petrol-doğalgaz; yenilenebilir hidro, rüzgâr, güneş, jeotermal."],
+    "correctAnswerIndex": 0,
+    "explanation": "Ekonomik Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Ekonomik Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Turizm doğal-kültürel çekicilik; mevsimsellik ve taşıma kapasitesi.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Ağır-hafif, ham-ara-nihai ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İklim, yeryüzü, su, toprak, sermaye, emek, pazar tarımı belirler.", "B) Monokültür ve polikültür; plantasyon sömürge mirası tartışması.", "C) Yeşil Devrim verim artışı; çevre ve küçük çiftçi maliyeti.", "D) Fosil enerji kömür-petrol-doğalgaz; yenilenebilir hidro, rüzgâr, güneş, jeotermal.", "E) Ağır-hafif, ham-ara-nihai sanayi tasnifi."],
+    "correctAnswerIndex": 4,
+    "explanation": "Ekonomik Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Ekonomik Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Ulaşım ağları kara-deniz-hava-boru; hinterland."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Turizm için doğru bir açıklamadır?",
+    "options": ["A) Turizm doğal-kültürel çekicilik; mevsimsellik ve taşıma kapasitesi.", "B) İklim, yeryüzü, su, toprak, sermaye, emek, pazar tarımı belirler.", "C) Monokültür ve polikültür; plantasyon sömürge mirası tartışması.", "D) Yeşil Devrim verim artışı; çevre ve küçük çiftçi maliyeti.", "E) Fosil enerji kömür-petrol-doğalgaz; yenilenebilir hidro, rüzgâr, güneş, jeotermal."],
+    "correctAnswerIndex": 0,
+    "explanation": "Ekonomik Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Ulaşım ağları hakkında hangisi doğrudur?",
+    "options": ["A) Ulaşım ağları kara-deniz-hava-boru; hinterland.", "B) İklim, yeryüzü, su, toprak, sermaye, emek, pazar tarımı belirler.", "C) Monokültür ve polikültür; plantasyon sömürge mirası tartışması.", "D) Yeşil Devrim verim artışı; çevre ve küçük çiftçi maliyeti.", "E) Fosil enerji kömür-petrol-doğalgaz; yenilenebilir hidro, rüzgâr, güneş, jeotermal."],
+    "correctAnswerIndex": 0,
+    "explanation": "Ekonomik Coğrafya notundaki temel bilgi."
 }
 ];

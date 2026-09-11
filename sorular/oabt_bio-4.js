@@ -55,69 +55,69 @@ window.oabt_bio_4_sorulari = [
     "explanation": "Azot/fosfor sucul sistemde sık."
 },
 {
-    "question": "Ekoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) N(t) üssel r, lojistik K; yaşam tablosu, yaş piramidi.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi N(t) için doğru bir açıklamadır?",
+    "options": ["A) Biyoçeşitlilik indeksleri zenginlik-eşitlik.", "B) N(t) üssel r, lojistik K; yaşam tablosu, yaş piramidi.", "C) Niş temel-gerçekleşmiş; rekabet dışlama Gause.", "D) İlişkiler predatör-av, parazit, mutualizm, kommensalizm, amensalizm.", "E) Süksesyon ve ara rejim (disturbance); ada biyocoğrafyası."],
+    "correctAnswerIndex": 1,
+    "explanation": "Ekoloji notundaki temel bilgi."
 },
 {
-    "question": "Ekoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Niş temel-gerçekleşmiş; rekabet dışlama Gause."],
+    "question": "Niş hakkında hangisi doğrudur?",
+    "options": ["A) Biyoçeşitlilik indeksleri zenginlik-eşitlik.", "B) Niş temel-gerçekleşmiş; rekabet dışlama Gause.", "C) N(t) üssel r, lojistik K; yaşam tablosu, yaş piramidi.", "D) İlişkiler predatör-av, parazit, mutualizm, kommensalizm, amensalizm.", "E) Süksesyon ve ara rejim (disturbance); ada biyocoğrafyası."],
+    "correctAnswerIndex": 1,
+    "explanation": "Ekoloji notundaki temel bilgi."
+},
+{
+    "question": "İlişkiler hangisini ifade eder?",
+    "options": ["A) Niş temel-gerçekleşmiş; rekabet dışlama Gause.", "B) Süksesyon ve ara rejim (disturbance); ada biyocoğrafyası.", "C) Biyoçeşitlilik indeksleri zenginlik-eşitlik.", "D) İlişkiler predatör-av, parazit, mutualizm, kommensalizm, amensalizm.", "E) N(t) üssel r, lojistik K; yaşam tablosu, yaş piramidi."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Ekoloji notundaki temel bilgi."
 },
 {
-    "question": "Ekoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) İlişkiler predatör-av, parazit, mutualizm, kommensalizm, amensalizm.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Süksesyon ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Süksesyon ve ara rejim (disturbance); ada biyocoğrafyası.", "B) N(t) üssel r, lojistik K; yaşam tablosu, yaş piramidi.", "C) Niş temel-gerçekleşmiş; rekabet dışlama Gause.", "D) İlişkiler predatör-av, parazit, mutualizm, kommensalizm, amensalizm.", "E) Biyoçeşitlilik indeksleri zenginlik-eşitlik."],
+    "correctAnswerIndex": 0,
+    "explanation": "Ekoloji notundaki temel bilgi."
 },
 {
-    "question": "Ekoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Süksesyon ve ara rejim (disturbance); ada biyocoğrafyası."],
+    "question": "Aşağıdakilerden hangisi Biyoçeşitlilik indeksleri için doğru bir açıklamadır?",
+    "options": ["A) Niş temel-gerçekleşmiş; rekabet dışlama Gause.", "B) İlişkiler predatör-av, parazit, mutualizm, kommensalizm, amensalizm.", "C) Süksesyon ve ara rejim (disturbance); ada biyocoğrafyası.", "D) Biyoçeşitlilik indeksleri zenginlik-eşitlik.", "E) N(t) üssel r, lojistik K; yaşam tablosu, yaş piramidi."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Ekoloji notundaki temel bilgi."
 },
 {
-    "question": "Ekoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Biyoçeşitlilik indeksleri zenginlik-eşitlik.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Ekoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Enerji akışı üretici NPP, trofik verim."],
+    "question": "Enerji akışı hakkında hangisi doğrudur?",
+    "options": ["A) Niş temel-gerçekleşmiş; rekabet dışlama Gause.", "B) İlişkiler predatör-av, parazit, mutualizm, kommensalizm, amensalizm.", "C) Süksesyon ve ara rejim (disturbance); ada biyocoğrafyası.", "D) Enerji akışı üretici NPP, trofik verim.", "E) N(t) üssel r, lojistik K; yaşam tablosu, yaş piramidi."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Ekoloji notundaki temel bilgi."
 },
 {
-    "question": "Ekoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Madde döngüleri C N P su; sınırlayıcı besin.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Madde döngüleri hangisini ifade eder?",
+    "options": ["A) Madde döngüleri C N P su; sınırlayıcı besin.", "B) N(t) üssel r, lojistik K; yaşam tablosu, yaş piramidi.", "C) Niş temel-gerçekleşmiş; rekabet dışlama Gause.", "D) İlişkiler predatör-av, parazit, mutualizm, kommensalizm, amensalizm.", "E) Süksesyon ve ara rejim (disturbance); ada biyocoğrafyası."],
+    "correctAnswerIndex": 0,
+    "explanation": "Ekoloji notundaki temel bilgi."
 },
 {
-    "question": "Ekoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Karasal-sucul biyom iklim diyagramı."],
+    "question": "Karasal-sucul biyom ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Karasal-sucul biyom iklim diyagramı.", "B) N(t) üssel r, lojistik K; yaşam tablosu, yaş piramidi.", "C) Niş temel-gerçekleşmiş; rekabet dışlama Gause.", "D) İlişkiler predatör-av, parazit, mutualizm, kommensalizm, amensalizm.", "E) Süksesyon ve ara rejim (disturbance); ada biyocoğrafyası."],
+    "correctAnswerIndex": 0,
+    "explanation": "Ekoloji notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Ekolojik ayak izi ve hizmetler için doğru bir açıklamadır?",
+    "options": ["A) Süksesyon ve ara rejim (disturbance); ada biyocoğrafyası.", "B) Ekolojik ayak izi ve hizmetler tozlaşma, su, karbon.", "C) N(t) üssel r, lojistik K; yaşam tablosu, yaş piramidi.", "D) Niş temel-gerçekleşmiş; rekabet dışlama Gause.", "E) İlişkiler predatör-av, parazit, mutualizm, kommensalizm, amensalizm."],
+    "correctAnswerIndex": 1,
+    "explanation": "Ekoloji notundaki temel bilgi."
+},
+{
+    "question": "İklim değişimi etkileri hakkında hangisi doğrudur?",
+    "options": ["A) Niş temel-gerçekleşmiş; rekabet dışlama Gause.", "B) İlişkiler predatör-av, parazit, mutualizm, kommensalizm, amensalizm.", "C) Süksesyon ve ara rejim (disturbance); ada biyocoğrafyası.", "D) İklim değişimi etkileri fenoloji, dağılım kayması.", "E) N(t) üssel r, lojistik K; yaşam tablosu, yaş piramidi."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Ekoloji notundaki temel bilgi."
 },
 {
-    "question": "Ekoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Ekolojik ayak izi ve hizmetler tozlaşma, su, karbon.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Ekoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) İklim değişimi etkileri fenoloji, dağılım kayması."],
+    "question": "Koruma hangisini ifade eder?",
+    "options": ["A) Niş temel-gerçekleşmiş; rekabet dışlama Gause.", "B) İlişkiler predatör-av, parazit, mutualizm, kommensalizm, amensalizm.", "C) Süksesyon ve ara rejim (disturbance); ada biyocoğrafyası.", "D) Koruma in-situ ex-situ, şemsiye tür, koridor.", "E) N(t) üssel r, lojistik K; yaşam tablosu, yaş piramidi."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Ekoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Koruma in-situ ex-situ, şemsiye tür, koridor.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Ekoloji notundaki temel bilgi."
 }
 ];

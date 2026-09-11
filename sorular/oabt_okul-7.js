@@ -61,63 +61,63 @@ window.oabt_okul_7_sorulari = [
     "explanation": "İletişim."
 },
 {
-    "question": "Aile Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Aile birinci eğitimci; okul ortak.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Katılım basamakları hakkında hangisi doğrudur?",
+    "options": ["A) Aile birinci eğitimci; okul ortak.", "B) Kültürel alçakgönüllülük tek doğru aile yok.", "C) 2026 aile katılımı hem bilgi hem eğitim sorusu.", "D) Bireysel görüşme, atölye, ev ziyareti etik.", "E) Katılım basamakları bilgilendirme, gönüllülük, karar."],
+    "correctAnswerIndex": 4,
+    "explanation": "Aile Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Kültürel alçakgönüllülük hangisini ifade eder?",
+    "options": ["A) 2026 aile katılımı hem bilgi hem eğitim sorusu.", "B) Bireysel görüşme, atölye, ev ziyareti etik.", "C) Kültürel alçakgönüllülük tek doğru aile yok.", "D) Aile birinci eğitimci; okul ortak.", "E) Katılım basamakları bilgilendirme, gönüllülük, karar."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Aile Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Aile Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Katılım basamakları bilgilendirme, gönüllülük, karar."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi 2026 için doğru bir açıklamadır?",
+    "options": ["A) Aile birinci eğitimci; okul ortak.", "B) Katılım basamakları bilgilendirme, gönüllülük, karar.", "C) Kültürel alçakgönüllülük tek doğru aile yok.", "D) Bireysel görüşme, atölye, ev ziyareti etik.", "E) 2026 aile katılımı hem bilgi hem eğitim sorusu."],
+    "correctAnswerIndex": 4,
+    "explanation": "Aile Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Aile Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Kültürel alçakgönüllülük tek doğru aile yok.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Bireysel görüşme, atölye, ev ziyareti etik hakkında hangisi doğrudur?",
+    "options": ["A) Kültürel alçakgönüllülük tek doğru aile yok.", "B) 2026 aile katılımı hem bilgi hem eğitim sorusu.", "C) Bireysel görüşme, atölye, ev ziyareti etik.", "D) Aile birinci eğitimci; okul ortak.", "E) Katılım basamakları bilgilendirme, gönüllülük, karar."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Aile Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Aile Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mahremiyet."],
+    "question": "Günlük ve dijital bülten hangisini ifade eder?",
+    "options": ["A) Aile birinci eğitimci; okul ortak.", "B) Katılım basamakları bilgilendirme, gönüllülük, karar.", "C) Kültürel alçakgönüllülük tek doğru aile yok.", "D) 2026 aile katılımı hem bilgi hem eğitim sorusu.", "E) Günlük ve dijital bülten sade."],
+    "correctAnswerIndex": 4,
+    "explanation": "Aile Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Zor aile için doğru bir açıklamadır?",
+    "options": ["A) Katılım basamakları bilgilendirme, gönüllülük, karar.", "B) Kültürel alçakgönüllülük tek doğru aile yok.", "C) 2026 aile katılımı hem bilgi hem eğitim sorusu.", "D) Zor aile sınır ve PDR.", "E) Aile birinci eğitimci; okul ortak."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Aile Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Aile Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) 2026 aile katılımı hem bilgi hem eğitim sorusu.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Özel gereksinimli çocuk ailesi hakkında hangisi doğrudur?",
+    "options": ["A) Özel gereksinimli çocuk ailesi yas ve kaynak.", "B) Aile birinci eğitimci; okul ortak.", "C) Katılım basamakları bilgilendirme, gönüllülük, karar.", "D) Kültürel alçakgönüllülük tek doğru aile yok.", "E) 2026 aile katılımı hem bilgi hem eğitim sorusu."],
+    "correctAnswerIndex": 0,
+    "explanation": "Aile Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Oyun, dil, sınır, ekran, sağlık hangisini ifade eder?",
+    "options": ["A) Oyun, dil, sınır, ekran, sağlık.", "B) Aile birinci eğitimci; okul ortak.", "C) Katılım basamakları bilgilendirme, gönüllülük, karar.", "D) Kültürel alçakgönüllülük tek doğru aile yok.", "E) 2026 aile katılımı hem bilgi hem eğitim sorusu."],
+    "correctAnswerIndex": 0,
+    "explanation": "Aile Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "İstismar farkındalığı ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) 2026 aile katılımı hem bilgi hem eğitim sorusu.", "B) İstismar farkındalığı.", "C) Aile birinci eğitimci; okul ortak.", "D) Katılım basamakları bilgilendirme, gönüllülük, karar.", "E) Kültürel alçakgönüllülük tek doğru aile yok."],
+    "correctAnswerIndex": 1,
+    "explanation": "Aile Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Geçiş için doğru bir açıklamadır?",
+    "options": ["A) Kültürel alçakgönüllülük tek doğru aile yok.", "B) 2026 aile katılımı hem bilgi hem eğitim sorusu.", "C) Geçiş okula başlama.", "D) Aile birinci eğitimci; okul ortak.", "E) Katılım basamakları bilgilendirme, gönüllülük, karar."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Aile Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Bireysel görüşme, atölye, ev ziyareti etik."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Aile Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Günlük ve dijital bülten sade.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Aile Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Aile kitabı ve oyuncak ödünç."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Aile Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Zor aile sınır ve PDR.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Aile Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Özel gereksinimli çocuk ailesi yas ve kaynak."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Aile Eğitimi notundaki temel bilgi."
 }
 ];

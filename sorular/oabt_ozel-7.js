@@ -61,63 +61,63 @@ window.oabt_ozel_7_sorulari = [
     "explanation": "Kullanım."
 },
 {
-    "question": "Özel Eğitimde Değerlendirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Tarama, tanılama, izleme, program değerlendirme türleri ayrılır."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Değerlendirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Çoklu yöntem test, gözlem, görüşme, ürün, ekip.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Tarama, tanılama, izleme, program için doğru bir açıklamadır?",
+    "options": ["A) Tarama, tanılama, izleme, program değerlendirme türleri ayrılır.", "B) Çoklu yöntem test, gözlem, görüşme, ürün, ekip.", "C) Kültürel-dilsel adalet çeviri test birebir geçerli sayılmaz.", "D) RAM eğitsel değerlendirme ve yönlendirme kurumudur.", "E) Tıbbi tanı eğitim ihtiyacının tek belirleyicisi değildir."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Özel Eğitimde Değerlendirme notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Değerlendirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Kültürel-dilsel adalet çeviri test birebir geçerli sayılmaz."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Çoklu yöntem hakkında hangisi doğrudur?",
+    "options": ["A) Kültürel-dilsel adalet çeviri test birebir geçerli sayılmaz.", "B) RAM eğitsel değerlendirme ve yönlendirme kurumudur.", "C) Tıbbi tanı eğitim ihtiyacının tek belirleyicisi değildir.", "D) Çoklu yöntem test, gözlem, görüşme, ürün, ekip.", "E) Tarama, tanılama, izleme, program değerlendirme türleri ayrılır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitimde Değerlendirme notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Değerlendirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) RAM eğitsel değerlendirme ve yönlendirme kurumudur.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Kültürel-dilsel adalet hangisini ifade eder?",
+    "options": ["A) RAM eğitsel değerlendirme ve yönlendirme kurumudur.", "B) Tıbbi tanı eğitim ihtiyacının tek belirleyicisi değildir.", "C) Kültürel-dilsel adalet çeviri test birebir geçerli sayılmaz.", "D) Tarama, tanılama, izleme, program değerlendirme türleri ayrılır.", "E) Çoklu yöntem test, gözlem, görüşme, ürün, ekip."],
+    "correctAnswerIndex": 2,
+    "explanation": "Özel Eğitimde Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "RAM ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Tıbbi tanı eğitim ihtiyacının tek belirleyicisi değildir.", "B) RAM eğitsel değerlendirme ve yönlendirme kurumudur.", "C) Tarama, tanılama, izleme, program değerlendirme türleri ayrılır.", "D) Çoklu yöntem test, gözlem, görüşme, ürün, ekip.", "E) Kültürel-dilsel adalet çeviri test birebir geçerli sayılmaz."],
+    "correctAnswerIndex": 1,
+    "explanation": "Özel Eğitimde Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Tıbbi tanı için doğru bir açıklamadır?",
+    "options": ["A) RAM eğitsel değerlendirme ve yönlendirme kurumudur.", "B) Tıbbi tanı eğitim ihtiyacının tek belirleyicisi değildir.", "C) Tarama, tanılama, izleme, program değerlendirme türleri ayrılır.", "D) Çoklu yöntem test, gözlem, görüşme, ürün, ekip.", "E) Kültürel-dilsel adalet çeviri test birebir geçerli sayılmaz."],
+    "correctAnswerIndex": 1,
+    "explanation": "Özel Eğitimde Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "Norm ve ölçüt dayanaklı hakkında hangisi doğrudur?",
+    "options": ["A) Çoklu yöntem test, gözlem, görüşme, ürün, ekip.", "B) Kültürel-dilsel adalet çeviri test birebir geçerli sayılmaz.", "C) RAM eğitsel değerlendirme ve yönlendirme kurumudur.", "D) Norm ve ölçüt dayanaklı testler.", "E) Tarama, tanılama, izleme, program değerlendirme türleri ayrılır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitimde Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "Müfredat temelli ölçme hangisini ifade eder?",
+    "options": ["A) Müfredat temelli ölçme (CBM).", "B) Tarama, tanılama, izleme, program değerlendirme türleri ayrılır.", "C) Çoklu yöntem test, gözlem, görüşme, ürün, ekip.", "D) Kültürel-dilsel adalet çeviri test birebir geçerli sayılmaz.", "E) RAM eğitsel değerlendirme ve yönlendirme kurumudur."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Özel Eğitimde Değerlendirme notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Değerlendirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Tıbbi tanı eğitim ihtiyacının tek belirleyicisi değildir."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "İşlevsel davranış ve ekolojik ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) RAM eğitsel değerlendirme ve yönlendirme kurumudur.", "B) İşlevsel davranış ve ekolojik değerlendirme.", "C) Tarama, tanılama, izleme, program değerlendirme türleri ayrılır.", "D) Çoklu yöntem test, gözlem, görüşme, ürün, ekip.", "E) Kültürel-dilsel adalet çeviri test birebir geçerli sayılmaz."],
+    "correctAnswerIndex": 1,
+    "explanation": "Özel Eğitimde Değerlendirme notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Değerlendirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Norm ve ölçüt dayanaklı testler.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Uyumsal davranış ölçekleri için doğru bir açıklamadır?",
+    "options": ["A) Kültürel-dilsel adalet çeviri test birebir geçerli sayılmaz.", "B) RAM eğitsel değerlendirme ve yönlendirme kurumudur.", "C) Uyumsal davranış ölçekleri zihin yetersizliğinde kritik.", "D) Tarama, tanılama, izleme, program değerlendirme türleri ayrılır.", "E) Çoklu yöntem test, gözlem, görüşme, ürün, ekip."],
+    "correctAnswerIndex": 2,
+    "explanation": "Özel Eğitimde Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "Portfolyo ve görev analizi hakkında hangisi doğrudur?",
+    "options": ["A) Portfolyo ve görev analizi.", "B) Tarama, tanılama, izleme, program değerlendirme türleri ayrılır.", "C) Çoklu yöntem test, gözlem, görüşme, ürün, ekip.", "D) Kültürel-dilsel adalet çeviri test birebir geçerli sayılmaz.", "E) RAM eğitsel değerlendirme ve yönlendirme kurumudur."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitimde Değerlendirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Müfredat temelli ölçme (CBM)."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Değerlendirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) İşlevsel davranış ve ekolojik değerlendirme.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitimde Değerlendirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Uyumsal davranış ölçekleri zihin yetersizliğinde kritik."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Değerlendirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Portfolyo ve görev analizi.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Özel Eğitimde Değerlendirme notundaki temel bilgi."
 }
 ];

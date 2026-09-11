@@ -55,69 +55,69 @@ window.oabt_bio_7_sorulari = [
     "explanation": "Oto/allotetraploid."
 },
 {
-    "question": "Evrim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Doğal seçilim varyasyon+kalıtım+farklı üreme; uyum bireysel niyet değildir."],
+    "question": "Aşağıdakilerden hangisi Doğal seçilim için doğru bir açıklamadır?",
+    "options": ["A) Kanıt fosil, karşılaştırmalı anatomi (homoloji-analoji), embriyoloji, moleküler saat, biyocoğrafya.", "B) Türleşme allopatrik-sempatrik; üreme yalıtımı pre/postzigotik.", "C) Sürüklenme ve gen akışı seçilim dışı kuvvetler.", "D) Cinsel seçilim eşeysel dimorfizm.", "E) Doğal seçilim varyasyon+kalıtım+farklı üreme; uyum bireysel niyet değildir."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Evrim notundaki temel bilgi."
 },
 {
-    "question": "Evrim konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Kanıt fosil, karşılaştırmalı anatomi (homoloji-analoji), embriyoloji, moleküler saat, biyo", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Kanıt hakkında hangisi doğrudur?",
+    "options": ["A) Sürüklenme ve gen akışı seçilim dışı kuvvetler.", "B) Cinsel seçilim eşeysel dimorfizm.", "C) Kanıt fosil, karşılaştırmalı anatomi (homoloji-analoji), embriyoloji, moleküler saat, biyocoğrafya.", "D) Doğal seçilim varyasyon+kalıtım+farklı üreme; uyum bireysel niyet değildir.", "E) Türleşme allopatrik-sempatrik; üreme yalıtımı pre/postzigotik."],
+    "correctAnswerIndex": 2,
+    "explanation": "Evrim notundaki temel bilgi."
+},
+{
+    "question": "Türleşme hangisini ifade eder?",
+    "options": ["A) Cinsel seçilim eşeysel dimorfizm.", "B) Türleşme allopatrik-sempatrik; üreme yalıtımı pre/postzigotik.", "C) Doğal seçilim varyasyon+kalıtım+farklı üreme; uyum bireysel niyet değildir.", "D) Kanıt fosil, karşılaştırmalı anatomi (homoloji-analoji), embriyoloji, moleküler saat, biyocoğrafya.", "E) Sürüklenme ve gen akışı seçilim dışı kuvvetler."],
+    "correctAnswerIndex": 1,
+    "explanation": "Evrim notundaki temel bilgi."
+},
+{
+    "question": "Sürüklenme ve gen akışı ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Doğal seçilim varyasyon+kalıtım+farklı üreme; uyum bireysel niyet değildir.", "B) Kanıt fosil, karşılaştırmalı anatomi (homoloji-analoji), embriyoloji, moleküler saat, biyocoğrafya.", "C) Türleşme allopatrik-sempatrik; üreme yalıtımı pre/postzigotik.", "D) Cinsel seçilim eşeysel dimorfizm.", "E) Sürüklenme ve gen akışı seçilim dışı kuvvetler."],
+    "correctAnswerIndex": 4,
+    "explanation": "Evrim notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Cinsel seçilim için doğru bir açıklamadır?",
+    "options": ["A) Doğal seçilim varyasyon+kalıtım+farklı üreme; uyum bireysel niyet değildir.", "B) Kanıt fosil, karşılaştırmalı anatomi (homoloji-analoji), embriyoloji, moleküler saat, biyocoğrafya.", "C) Türleşme allopatrik-sempatrik; üreme yalıtımı pre/postzigotik.", "D) Sürüklenme ve gen akışı seçilim dışı kuvvetler.", "E) Cinsel seçilim eşeysel dimorfizm."],
+    "correctAnswerIndex": 4,
+    "explanation": "Evrim notundaki temel bilgi."
+},
+{
+    "question": "Filogeni hakkında hangisi doğrudur?",
+    "options": ["A) Türleşme allopatrik-sempatrik; üreme yalıtımı pre/postzigotik.", "B) Sürüklenme ve gen akışı seçilim dışı kuvvetler.", "C) Filogeni monofiletik klad; parafiletik (Reptilia kuşsuz) sorunlu.", "D) Doğal seçilim varyasyon+kalıtım+farklı üreme; uyum bireysel niyet değildir.", "E) Kanıt fosil, karşılaştırmalı anatomi (homoloji-analoji), embriyoloji, moleküler saat, biyocoğrafya."],
+    "correctAnswerIndex": 2,
+    "explanation": "Evrim notundaki temel bilgi."
+},
+{
+    "question": "Moleküler hangisini ifade eder?",
+    "options": ["A) Sürüklenme ve gen akışı seçilim dışı kuvvetler.", "B) Cinsel seçilim eşeysel dimorfizm.", "C) Moleküler DNA hibridizasyon, dizi hizalama, maksimum parsimoni/olabilirlik.", "D) Doğal seçilim varyasyon+kalıtım+farklı üreme; uyum bireysel niyet değildir.", "E) Türleşme allopatrik-sempatrik; üreme yalıtımı pre/postzigotik."],
+    "correctAnswerIndex": 2,
+    "explanation": "Evrim notundaki temel bilgi."
+},
+{
+    "question": "Koevrim ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Türleşme allopatrik-sempatrik; üreme yalıtımı pre/postzigotik.", "B) Sürüklenme ve gen akışı seçilim dışı kuvvetler.", "C) Koevrim av-yırtıcı, çiçek-tozlayıcı.", "D) Doğal seçilim varyasyon+kalıtım+farklı üreme; uyum bireysel niyet değildir.", "E) Kanıt fosil, karşılaştırmalı anatomi (homoloji-analoji), embriyoloji, moleküler saat, biyocoğrafya."],
+    "correctAnswerIndex": 2,
+    "explanation": "Evrim notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Sönüm için doğru bir açıklamadır?",
+    "options": ["A) Sürüklenme ve gen akışı seçilim dışı kuvvetler.", "B) Sönüm kütle yok oluşları, adaptif radyasyon.", "C) Doğal seçilim varyasyon+kalıtım+farklı üreme; uyum bireysel niyet değildir.", "D) Kanıt fosil, karşılaştırmalı anatomi (homoloji-analoji), embriyoloji, moleküler saat, biyocoğrafya.", "E) Türleşme allopatrik-sempatrik; üreme yalıtımı pre/postzigotik."],
+    "correctAnswerIndex": 1,
+    "explanation": "Evrim notundaki temel bilgi."
+},
+{
+    "question": "İnsan evrimi hakkında hangisi doğrudur?",
+    "options": ["A) İnsan evrimi hominin mozaik, Afrika çıkışı modelleri.", "B) Doğal seçilim varyasyon+kalıtım+farklı üreme; uyum bireysel niyet değildir.", "C) Kanıt fosil, karşılaştırmalı anatomi (homoloji-analoji), embriyoloji, moleküler saat, biyocoğrafya.", "D) Türleşme allopatrik-sempatrik; üreme yalıtımı pre/postzigotik.", "E) Sürüklenme ve gen akışı seçilim dışı kuvvetler."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Evrim notundaki temel bilgi."
 },
 {
-    "question": "Evrim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Türleşme allopatrik-sempatrik; üreme yalıtımı pre/postzigotik."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Evrim konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Sürüklenme ve gen akışı seçilim dışı kuvvetler.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Evrim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Cinsel seçilim eşeysel dimorfizm."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Evrim konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Filogeni monofiletik klad; parafiletik (Reptilia kuşsuz) sorunlu.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Evrim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Moleküler DNA hibridizasyon, dizi hizalama, maksimum parsimoni/olabilirlik."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Evrim konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Koevrim av-yırtıcı, çiçek-tozlayıcı.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Evrim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Sönüm kütle yok oluşları, adaptif radyasyon."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Evrim konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) İnsan evrimi hominin mozaik, Afrika çıkışı modelleri.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Evrim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Lamarck kullan-kalıtım; evrim bireyde olmaz."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Lamarck hangisini ifade eder?",
+    "options": ["A) Türleşme allopatrik-sempatrik; üreme yalıtımı pre/postzigotik.", "B) Sürüklenme ve gen akışı seçilim dışı kuvvetler.", "C) Lamarck kullan-kalıtım; evrim bireyde olmaz.", "D) Doğal seçilim varyasyon+kalıtım+farklı üreme; uyum bireysel niyet değildir.", "E) Kanıt fosil, karşılaştırmalı anatomi (homoloji-analoji), embriyoloji, moleküler saat, biyocoğrafya."],
+    "correctAnswerIndex": 2,
+    "explanation": "Evrim notundaki temel bilgi."
 }
 ];

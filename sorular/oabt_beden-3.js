@@ -61,63 +61,63 @@ window.oabt_beden_3_sorulari = [
     "explanation": "Erken branşlaşma yükü."
 },
 {
-    "question": "Spor Sağlığı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Akut-kronik (overuse) ayrımı; RICE/POLICE güncel tartışma.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Akut-kronik için doğru bir açıklamadır?",
+    "options": ["A) Anterior çapraz bağ kadın futbolunda epidemiyoloji.", "B) Isınma ve soğuma yaralanma riskini azaltır, sihir değildir.", "C) Akut-kronik (overuse) ayrımı; RICE/POLICE güncel tartışma.", "D) Burkulma, zorlanma, kırık, çıkık doku farkı.", "E) Konküzyon kafa; aynı gün oyuna dönüş riski."],
+    "correctAnswerIndex": 2,
+    "explanation": "Spor Sağlığı notundaki temel bilgi."
 },
 {
-    "question": "Spor Sağlığı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Burkulma, zorlanma, kırık, çıkık doku farkı.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Burkulma, zorlanma, kırık, çıkık hakkında hangisi doğrudur?",
+    "options": ["A) Isınma ve soğuma yaralanma riskini azaltır, sihir değildir.", "B) Burkulma, zorlanma, kırık, çıkık doku farkı.", "C) Akut-kronik (overuse) ayrımı; RICE/POLICE güncel tartışma.", "D) Konküzyon kafa; aynı gün oyuna dönüş riski.", "E) Anterior çapraz bağ kadın futbolunda epidemiyoloji."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Spor Sağlığı notundaki temel bilgi."
 },
 {
-    "question": "Spor Sağlığı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Konküzyon kafa; aynı gün oyuna dönüş riski.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Konküzyon hangisini ifade eder?",
+    "options": ["A) Anterior çapraz bağ kadın futbolunda epidemiyoloji.", "B) Isınma ve soğuma yaralanma riskini azaltır, sihir değildir.", "C) Konküzyon kafa; aynı gün oyuna dönüş riski.", "D) Akut-kronik (overuse) ayrımı; RICE/POLICE güncel tartışma.", "E) Burkulma, zorlanma, kırık, çıkık doku farkı."],
+    "correctAnswerIndex": 2,
+    "explanation": "Spor Sağlığı notundaki temel bilgi."
+},
+{
+    "question": "Anterior çapraz bağ ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Anterior çapraz bağ kadın futbolunda epidemiyoloji.", "B) Akut-kronik (overuse) ayrımı; RICE/POLICE güncel tartışma.", "C) Burkulma, zorlanma, kırık, çıkık doku farkı.", "D) Konküzyon kafa; aynı gün oyuna dönüş riski.", "E) Isınma ve soğuma yaralanma riskini azaltır, sihir değildir."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Spor Sağlığı notundaki temel bilgi."
 },
 {
-    "question": "Spor Sağlığı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Anterior çapraz bağ kadın futbolunda epidemiyoloji.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Isınma ve soğuma için doğru bir açıklamadır?",
+    "options": ["A) Burkulma, zorlanma, kırık, çıkık doku farkı.", "B) Konküzyon kafa; aynı gün oyuna dönüş riski.", "C) Anterior çapraz bağ kadın futbolunda epidemiyoloji.", "D) Isınma ve soğuma yaralanma riskini azaltır, sihir değildir.", "E) Akut-kronik (overuse) ayrımı; RICE/POLICE güncel tartışma."],
+    "correctAnswerIndex": 3,
+    "explanation": "Spor Sağlığı notundaki temel bilgi."
 },
 {
-    "question": "Spor Sağlığı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Isınma ve soğuma yaralanma riskini azaltır, sihir değildir.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "ABC/CAB hakkında hangisi doğrudur?",
+    "options": ["A) Konküzyon kafa; aynı gün oyuna dönüş riski.", "B) Anterior çapraz bağ kadın futbolunda epidemiyoloji.", "C) ABC/CAB temel yaşam; spor sahası AED.", "D) Akut-kronik (overuse) ayrımı; RICE/POLICE güncel tartışma.", "E) Burkulma, zorlanma, kırık, çıkık doku farkı."],
+    "correctAnswerIndex": 2,
+    "explanation": "Spor Sağlığı notundaki temel bilgi."
+},
+{
+    "question": "Sıcak çarpması hangisini ifade eder?",
+    "options": ["A) Burkulma, zorlanma, kırık, çıkık doku farkı.", "B) Konküzyon kafa; aynı gün oyuna dönüş riski.", "C) Anterior çapraz bağ kadın futbolunda epidemiyoloji.", "D) Sıcak çarpması tıbbi acil; kramp ayrıdır.", "E) Akut-kronik (overuse) ayrımı; RICE/POLICE güncel tartışma."],
+    "correctAnswerIndex": 3,
+    "explanation": "Spor Sağlığı notundaki temel bilgi."
+},
+{
+    "question": "Astım ve egzersiz ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Akut-kronik (overuse) ayrımı; RICE/POLICE güncel tartışma.", "B) Burkulma, zorlanma, kırık, çıkık doku farkı.", "C) Konküzyon kafa; aynı gün oyuna dönüş riski.", "D) Anterior çapraz bağ kadın futbolunda epidemiyoloji.", "E) Astım ve egzersiz ısınma ve ilaç protokolü (hekim)."],
+    "correctAnswerIndex": 4,
+    "explanation": "Spor Sağlığı notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Diyabet için doğru bir açıklamadır?",
+    "options": ["A) Diyabet hipoglisemi belirtileri.", "B) Akut-kronik (overuse) ayrımı; RICE/POLICE güncel tartışma.", "C) Burkulma, zorlanma, kırık, çıkık doku farkı.", "D) Konküzyon kafa; aynı gün oyuna dönüş riski.", "E) Anterior çapraz bağ kadın futbolunda epidemiyoloji."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Spor Sağlığı notundaki temel bilgi."
 },
 {
-    "question": "Spor Sağlığı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) ABC/CAB temel yaşam; spor sahası AED.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Spor Sağlığı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Sıcak çarpması tıbbi acil; kramp ayrıdır.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Spor Sağlığı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Astım ve egzersiz ısınma ve ilaç protokolü (hekim).", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Spor Sağlığı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Diyabet hipoglisemi belirtileri.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Spor Sağlığı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Ani kardiyak ölüm tarama ve acil plan.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Ani kardiyak ölüm hakkında hangisi doğrudur?",
+    "options": ["A) Burkulma, zorlanma, kırık, çıkık doku farkı.", "B) Konküzyon kafa; aynı gün oyuna dönüş riski.", "C) Anterior çapraz bağ kadın futbolunda epidemiyoloji.", "D) Ani kardiyak ölüm tarama ve acil plan.", "E) Akut-kronik (overuse) ayrımı; RICE/POLICE güncel tartışma."],
+    "correctAnswerIndex": 3,
+    "explanation": "Spor Sağlığı notundaki temel bilgi."
 }
 ];

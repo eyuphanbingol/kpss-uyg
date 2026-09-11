@@ -61,63 +61,63 @@ window.oabt_beden_9_sorulari = [
     "explanation": "ÖABT alan eğitimi boyutu."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kazanım bilişsel, duyuşsal, psikomotor.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Kazanım için doğru bir açıklamadır?",
+    "options": ["A) Kaynaştırma uyarlanmış beden eğitimi (APE).", "B) Kazanım bilişsel, duyuşsal, psikomotor.", "C) Isınma-geliştirme-bitiriş ders iskeleti.", "D) Değerlendirme gözlem rubriği, akran, öz.", "E) Güvenlik planı ve kaza kaydı."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Isınma-geliştirme-bitiriş ders iskeleti.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Isınma-geliştirme-bitiriş hakkında hangisi doğrudur?",
+    "options": ["A) Kazanım bilişsel, duyuşsal, psikomotor.", "B) Değerlendirme gözlem rubriği, akran, öz.", "C) Güvenlik planı ve kaza kaydı.", "D) Kaynaştırma uyarlanmış beden eğitimi (APE).", "E) Isınma-geliştirme-bitiriş ders iskeleti."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Değerlendirme hangisini ifade eder?",
+    "options": ["A) Güvenlik planı ve kaza kaydı.", "B) Kaynaştırma uyarlanmış beden eğitimi (APE).", "C) Değerlendirme gözlem rubriği, akran, öz.", "D) Kazanım bilişsel, duyuşsal, psikomotor.", "E) Isınma-geliştirme-bitiriş ders iskeleti."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Değerlendirme gözlem rubriği, akran, öz.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Güvenlik planı ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Kazanım bilişsel, duyuşsal, psikomotor.", "B) Isınma-geliştirme-bitiriş ders iskeleti.", "C) Değerlendirme gözlem rubriği, akran, öz.", "D) Kaynaştırma uyarlanmış beden eğitimi (APE).", "E) Güvenlik planı ve kaza kaydı."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Kaynaştırma için doğru bir açıklamadır?",
+    "options": ["A) Kazanım bilişsel, duyuşsal, psikomotor.", "B) Isınma-geliştirme-bitiriş ders iskeleti.", "C) Değerlendirme gözlem rubriği, akran, öz.", "D) Güvenlik planı ve kaza kaydı.", "E) Kaynaştırma uyarlanmış beden eğitimi (APE)."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Basitten karmaşığa, bilinenden bilinmeyene hakkında hangisi doğrudur?",
+    "options": ["A) Isınma-geliştirme-bitiriş ders iskeleti.", "B) Değerlendirme gözlem rubriği, akran, öz.", "C) Güvenlik planı ve kaza kaydı.", "D) Basitten karmaşığa, bilinenden bilinmeyene.", "E) Kazanım bilişsel, duyuşsal, psikomotor."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Göster-yap-düzelt hangisini ifade eder?",
+    "options": ["A) Kazanım bilişsel, duyuşsal, psikomotor.", "B) Isınma-geliştirme-bitiriş ders iskeleti.", "C) Değerlendirme gözlem rubriği, akran, öz.", "D) Güvenlik planı ve kaza kaydı.", "E) Göster-yap-düzelt geri bildirim zamanı (KB, KR)."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Kapalı-açık beceri ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Güvenlik planı ve kaza kaydı.", "B) Kapalı-açık beceri çevre değişkenliği.", "C) Kazanım bilişsel, duyuşsal, psikomotor.", "D) Isınma-geliştirme-bitiriş ders iskeleti.", "E) Değerlendirme gözlem rubriği, akran, öz."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Güvenlik planı ve kaza kaydı.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kaynaştırma uyarlanmış beden eğitimi (APE).", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Bütün-parça-bütün için doğru bir açıklamadır?",
+    "options": ["A) Güvenlik planı ve kaza kaydı.", "B) Bütün-parça-bütün teknik öğretimi.", "C) Kazanım bilişsel, duyuşsal, psikomotor.", "D) Isınma-geliştirme-bitiriş ders iskeleti.", "E) Değerlendirme gözlem rubriği, akran, öz."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Basitten karmaşığa, bilinenden bilinmeyene.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Göster-yap-düzelt geri bildirim zamanı (KB, KR).", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Geri bildirim dozu hakkında hangisi doğrudur?",
+    "options": ["A) Güvenlik planı ve kaza kaydı.", "B) Geri bildirim dozu aşırı düzeltme motoriği bozar.", "C) Kazanım bilişsel, duyuşsal, psikomotor.", "D) Isınma-geliştirme-bitiriş ders iskeleti.", "E) Değerlendirme gözlem rubriği, akran, öz."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Kapalı-açık beceri çevre değişkenliği.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Bütün-parça-bütün teknik öğretimi.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Geri bildirim dozu aşırı düzeltme motoriği bozar.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 }
 ];

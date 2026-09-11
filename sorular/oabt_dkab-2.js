@@ -61,63 +61,63 @@ window.oabt_dkab_2_sorulari = [
     "explanation": "Yöntem tartışması açıktır."
 },
 {
-    "question": "Tefsir konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Rivayet tefsiri ayet, hadis ve sahabe sözüyle açıklar.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi Rivayet tefsiri için doğru bir açıklamadır?",
+    "options": ["A) İsrailiyat Ehl-i kitap kökenli rivayet; temkinle okunur.", "B) Rivayet tefsiri ayet, hadis ve sahabe sözüyle açıklar.", "C) Dirayet tefsiri dil, akıl ve usulle yorumlar; ikisi çoğu eserde karışır.", "D) İşari/tasavvufi iç anlam arar; zahiri inkâr etmemek sınırıdır.", "E) Nüzul sebebi ayetin bağlamını aydınlatır; her ayete zorunlu sebep yoktur."],
+    "correctAnswerIndex": 1,
+    "explanation": "Tefsir notundaki temel bilgi."
+},
+{
+    "question": "Dirayet tefsiri hakkında hangisi doğrudur?",
+    "options": ["A) İşari/tasavvufi iç anlam arar; zahiri inkâr etmemek sınırıdır.", "B) Nüzul sebebi ayetin bağlamını aydınlatır; her ayete zorunlu sebep yoktur.", "C) İsrailiyat Ehl-i kitap kökenli rivayet; temkinle okunur.", "D) Dirayet tefsiri dil, akıl ve usulle yorumlar; ikisi çoğu eserde karışır.", "E) Rivayet tefsiri ayet, hadis ve sahabe sözüyle açıklar."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Tefsir notundaki temel bilgi."
 },
 {
-    "question": "Tefsir konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Dirayet tefsiri dil, akıl ve usulle yorumlar; ikisi çoğu eserde karışır.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Tefsir konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) İşari/tasavvufi iç anlam arar; zahiri inkâr etmemek sınırıdır.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "İşari/tasavvufi hangisini ifade eder?",
+    "options": ["A) Dirayet tefsiri dil, akıl ve usulle yorumlar; ikisi çoğu eserde karışır.", "B) Nüzul sebebi ayetin bağlamını aydınlatır; her ayete zorunlu sebep yoktur.", "C) İsrailiyat Ehl-i kitap kökenli rivayet; temkinle okunur.", "D) İşari/tasavvufi iç anlam arar; zahiri inkâr etmemek sınırıdır.", "E) Rivayet tefsiri ayet, hadis ve sahabe sözüyle açıklar."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Tefsir notundaki temel bilgi."
 },
 {
-    "question": "Tefsir konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Nüzul sebebi ayetin bağlamını aydınlatır; her ayete zorunlu sebep yoktur.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Tefsir konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) İsrailiyat Ehl-i kitap kökenli rivayet; temkinle okunur.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Nüzul sebebi ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Dirayet tefsiri dil, akıl ve usulle yorumlar; ikisi çoğu eserde karışır.", "B) İşari/tasavvufi iç anlam arar; zahiri inkâr etmemek sınırıdır.", "C) İsrailiyat Ehl-i kitap kökenli rivayet; temkinle okunur.", "D) Nüzul sebebi ayetin bağlamını aydınlatır; her ayete zorunlu sebep yoktur.", "E) Rivayet tefsiri ayet, hadis ve sahabe sözüyle açıklar."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Tefsir notundaki temel bilgi."
 },
 {
-    "question": "Tefsir konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Taberi, Zemahşeri, Razi, Kurtubi, İbn Kesir ekol hatları.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi İsrailiyat için doğru bir açıklamadır?",
+    "options": ["A) Rivayet tefsiri ayet, hadis ve sahabe sözüyle açıklar.", "B) Dirayet tefsiri dil, akıl ve usulle yorumlar; ikisi çoğu eserde karışır.", "C) İşari/tasavvufi iç anlam arar; zahiri inkâr etmemek sınırıdır.", "D) Nüzul sebebi ayetin bağlamını aydınlatır; her ayete zorunlu sebep yoktur.", "E) İsrailiyat Ehl-i kitap kökenli rivayet; temkinle okunur."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Tefsir notundaki temel bilgi."
 },
 {
-    "question": "Tefsir konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Elmalılı Hak Dini, Firuzabadi, Yazır Türkçe tefsir geleneği.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Taberi, Zemahşeri, Razi, Kurtubi, İbn Kesir hakkında hangisi doğrudur?",
+    "options": ["A) Dirayet tefsiri dil, akıl ve usulle yorumlar; ikisi çoğu eserde karışır.", "B) İşari/tasavvufi iç anlam arar; zahiri inkâr etmemek sınırıdır.", "C) Nüzul sebebi ayetin bağlamını aydınlatır; her ayete zorunlu sebep yoktur.", "D) Taberi, Zemahşeri, Razi, Kurtubi, İbn Kesir ekol hatları.", "E) Rivayet tefsiri ayet, hadis ve sahabe sözüyle açıklar."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Tefsir notundaki temel bilgi."
 },
 {
-    "question": "Tefsir konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Konulu tefsir bir kavramı tüm Kur'an'da izler.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Konulu tefsir ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İşari/tasavvufi iç anlam arar; zahiri inkâr etmemek sınırıdır.", "B) Nüzul sebebi ayetin bağlamını aydınlatır; her ayete zorunlu sebep yoktur.", "C) Konulu tefsir bir kavramı tüm Kur'an'da izler.", "D) Rivayet tefsiri ayet, hadis ve sahabe sözüyle açıklar.", "E) Dirayet tefsiri dil, akıl ve usulle yorumlar; ikisi çoğu eserde karışır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Tefsir notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Sosyal tefsir için doğru bir açıklamadır?",
+    "options": ["A) Nüzul sebebi ayetin bağlamını aydınlatır; her ayete zorunlu sebep yoktur.", "B) Sosyal tefsir (Abduh-Reşid Rıza hattı) çağın sorusuna yönelir.", "C) Rivayet tefsiri ayet, hadis ve sahabe sözüyle açıklar.", "D) Dirayet tefsiri dil, akıl ve usulle yorumlar; ikisi çoğu eserde karışır.", "E) İşari/tasavvufi iç anlam arar; zahiri inkâr etmemek sınırıdır."],
+    "correctAnswerIndex": 1,
+    "explanation": "Tefsir notundaki temel bilgi."
+},
+{
+    "question": "Bilimsel i'caz hakkında hangisi doğrudur?",
+    "options": ["A) Rivayet tefsiri ayet, hadis ve sahabe sözüyle açıklar.", "B) Dirayet tefsiri dil, akıl ve usulle yorumlar; ikisi çoğu eserde karışır.", "C) İşari/tasavvufi iç anlam arar; zahiri inkâr etmemek sınırıdır.", "D) Nüzul sebebi ayetin bağlamını aydınlatır; her ayete zorunlu sebep yoktur.", "E) Bilimsel i'caz iddiası yöntem tartışması taşır; zorlama yorum riski."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Tefsir notundaki temel bilgi."
 },
 {
-    "question": "Tefsir konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Sosyal tefsir (Abduh-Reşid Rıza hattı) çağın sorusuna yönelir.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Tefsir konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Bilimsel i'caz iddiası yöntem tartışması taşır; zorlama yorum riski.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Am, has, mutlak, mukayyet, mücmel, mübeyyen hangisini ifade eder?",
+    "options": ["A) İşari/tasavvufi iç anlam arar; zahiri inkâr etmemek sınırıdır.", "B) Nüzul sebebi ayetin bağlamını aydınlatır; her ayete zorunlu sebep yoktur.", "C) Am, has, mutlak, mukayyet, mücmel, mübeyyen dil-usul terimleri.", "D) Rivayet tefsiri ayet, hadis ve sahabe sözüyle açıklar.", "E) Dirayet tefsiri dil, akıl ve usulle yorumlar; ikisi çoğu eserde karışır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Tefsir notundaki temel bilgi."
 }
 ];

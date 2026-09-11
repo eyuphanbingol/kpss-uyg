@@ -61,63 +61,63 @@ window.oabt_cog_4_sorulari = [
     "explanation": "Seyhan-Ceyhan birikim ovası."
 },
 {
-    "question": "Türkiye Coğrafyası konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Üçgen yarımada; denizlerin ılımanlaştırıcı etkisi kıyıda, karasallık içte artar.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Üçgen yarımada için doğru bir açıklamadır?",
+    "options": ["A) Kuzey Anadolu ve Doğu Anadolu fay deprem kuşağı; 1999 ve 2023 yıkımları.", "B) İklim çeşitliliği Akdeniz, Karadeniz, karasal, step; bakı ve yükseltı.", "C) Akarsular döküldüğü denize göre; rejim çoğu düzensiz, Karadeniz daha düzenli.", "D) Bitki: Karadeniz orman, Akdeniz maki, iç bozkır, Doğu yüksek çayır.", "E) Üçgen yarımada; denizlerin ılımanlaştırıcı etkisi kıyıda, karasallık içte artar."],
+    "correctAnswerIndex": 4,
+    "explanation": "Türkiye Coğrafyası notundaki temel bilgi."
+},
+{
+    "question": "Kuzey Anadolu ve Doğu Anadolu fay hakkında hangisi doğrudur?",
+    "options": ["A) Bitki: Karadeniz orman, Akdeniz maki, iç bozkır, Doğu yüksek çayır.", "B) Kuzey Anadolu ve Doğu Anadolu fay deprem kuşağı; 1999 ve 2023 yıkımları.", "C) Üçgen yarımada; denizlerin ılımanlaştırıcı etkisi kıyıda, karasallık içte artar.", "D) İklim çeşitliliği Akdeniz, Karadeniz, karasal, step; bakı ve yükseltı.", "E) Akarsular döküldüğü denize göre; rejim çoğu düzensiz, Karadeniz daha düzenli."],
+    "correctAnswerIndex": 1,
+    "explanation": "Türkiye Coğrafyası notundaki temel bilgi."
+},
+{
+    "question": "İklim çeşitliliği hangisini ifade eder?",
+    "options": ["A) Üçgen yarımada; denizlerin ılımanlaştırıcı etkisi kıyıda, karasallık içte artar.", "B) Kuzey Anadolu ve Doğu Anadolu fay deprem kuşağı; 1999 ve 2023 yıkımları.", "C) Akarsular döküldüğü denize göre; rejim çoğu düzensiz, Karadeniz daha düzenli.", "D) Bitki: Karadeniz orman, Akdeniz maki, iç bozkır, Doğu yüksek çayır.", "E) İklim çeşitliliği Akdeniz, Karadeniz, karasal, step; bakı ve yükseltı."],
+    "correctAnswerIndex": 4,
+    "explanation": "Türkiye Coğrafyası notundaki temel bilgi."
+},
+{
+    "question": "Akarsular ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Bitki: Karadeniz orman, Akdeniz maki, iç bozkır, Doğu yüksek çayır.", "B) Akarsular döküldüğü denize göre; rejim çoğu düzensiz, Karadeniz daha düzenli.", "C) Üçgen yarımada; denizlerin ılımanlaştırıcı etkisi kıyıda, karasallık içte artar.", "D) Kuzey Anadolu ve Doğu Anadolu fay deprem kuşağı; 1999 ve 2023 yıkımları.", "E) İklim çeşitliliği Akdeniz, Karadeniz, karasal, step; bakı ve yükseltı."],
+    "correctAnswerIndex": 1,
+    "explanation": "Türkiye Coğrafyası notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Bitki için doğru bir açıklamadır?",
+    "options": ["A) İklim çeşitliliği Akdeniz, Karadeniz, karasal, step; bakı ve yükseltı.", "B) Akarsular döküldüğü denize göre; rejim çoğu düzensiz, Karadeniz daha düzenli.", "C) Bitki: Karadeniz orman, Akdeniz maki, iç bozkır, Doğu yüksek çayır.", "D) Üçgen yarımada; denizlerin ılımanlaştırıcı etkisi kıyıda, karasallık içte artar.", "E) Kuzey Anadolu ve Doğu Anadolu fay deprem kuşağı; 1999 ve 2023 yıkımları."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Türkiye Coğrafyası notundaki temel bilgi."
 },
 {
-    "question": "Türkiye Coğrafyası konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Kuzey Anadolu ve Doğu Anadolu fay deprem kuşağı; 1999 ve 2023 yıkımları."],
+    "question": "Nüfus hakkında hangisi doğrudur?",
+    "options": ["A) Akarsular döküldüğü denize göre; rejim çoğu düzensiz, Karadeniz daha düzenli.", "B) Nüfus batı ve kıyıda yoğun; Doğu-Güneydoğu kırılgan göç verir.", "C) Üçgen yarımada; denizlerin ılımanlaştırıcı etkisi kıyıda, karasallık içte artar.", "D) Kuzey Anadolu ve Doğu Anadolu fay deprem kuşağı; 1999 ve 2023 yıkımları.", "E) İklim çeşitliliği Akdeniz, Karadeniz, karasal, step; bakı ve yükseltı."],
+    "correctAnswerIndex": 1,
+    "explanation": "Türkiye Coğrafyası notundaki temel bilgi."
+},
+{
+    "question": "Metropoller hangisini ifade eder?",
+    "options": ["A) Kuzey Anadolu ve Doğu Anadolu fay deprem kuşağı; 1999 ve 2023 yıkımları.", "B) İklim çeşitliliği Akdeniz, Karadeniz, karasal, step; bakı ve yükseltı.", "C) Akarsular döküldüğü denize göre; rejim çoğu düzensiz, Karadeniz daha düzenli.", "D) Metropoller İstanbul, Ankara, İzmir, Bursa, Antalya; kırdan kente.", "E) Üçgen yarımada; denizlerin ılımanlaştırıcı etkisi kıyıda, karasallık içte artar."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Türkiye Coğrafyası notundaki temel bilgi."
 },
 {
-    "question": "Türkiye Coğrafyası konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) İklim çeşitliliği Akdeniz, Karadeniz, karasal, step; bakı ve yükseltı.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Kırsal çözülme ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Kırsal çözülme ve yaşlanan köy; mevsimlik tarım işçiliği.", "B) Üçgen yarımada; denizlerin ılımanlaştırıcı etkisi kıyıda, karasallık içte artar.", "C) Kuzey Anadolu ve Doğu Anadolu fay deprem kuşağı; 1999 ve 2023 yıkımları.", "D) İklim çeşitliliği Akdeniz, Karadeniz, karasal, step; bakı ve yükseltı.", "E) Akarsular döküldüğü denize göre; rejim çoğu düzensiz, Karadeniz daha düzenli."],
+    "correctAnswerIndex": 0,
+    "explanation": "Türkiye Coğrafyası notundaki temel bilgi."
 },
 {
-    "question": "Türkiye Coğrafyası konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Akarsular döküldüğü denize göre; rejim çoğu düzensiz, Karadeniz daha düzenli."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Mülteci ve düzensiz göç için doğru bir açıklamadır?",
+    "options": ["A) Akarsular döküldüğü denize göre; rejim çoğu düzensiz, Karadeniz daha düzenli.", "B) Mülteci ve düzensiz göç 2010'lar demografisini etkiler.", "C) Üçgen yarımada; denizlerin ılımanlaştırıcı etkisi kıyıda, karasallık içte artar.", "D) Kuzey Anadolu ve Doğu Anadolu fay deprem kuşağı; 1999 ve 2023 yıkımları.", "E) İklim çeşitliliği Akdeniz, Karadeniz, karasal, step; bakı ve yükseltı."],
+    "correctAnswerIndex": 1,
+    "explanation": "Türkiye Coğrafyası notundaki temel bilgi."
 },
 {
-    "question": "Türkiye Coğrafyası konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Bitki: Karadeniz orman, Akdeniz maki, iç bozkır, Doğu yüksek çayır.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Türkiye Coğrafyası konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Nüfus batı ve kıyıda yoğun; Doğu-Güneydoğu kırılgan göç verir."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Türkiye Coğrafyası konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Metropoller İstanbul, Ankara, İzmir, Bursa, Antalya; kırdan kente.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Türkiye Coğrafyası konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Kırsal çözülme ve yaşlanan köy; mevsimlik tarım işçiliği."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Türkiye Coğrafyası konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Mülteci ve düzensiz göç 2010'lar demografisini etkiler.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Türkiye Coğrafyası konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Bölge sınırları coğrafi (7 bölge) idari değildir; kalkınma ajansı ayrıdır."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Bölge sınırları hakkında hangisi doğrudur?",
+    "options": ["A) Akarsular döküldüğü denize göre; rejim çoğu düzensiz, Karadeniz daha düzenli.", "B) Bölge sınırları coğrafi (7 bölge) idari değildir; kalkınma ajansı ayrıdır.", "C) Üçgen yarımada; denizlerin ılımanlaştırıcı etkisi kıyıda, karasallık içte artar.", "D) Kuzey Anadolu ve Doğu Anadolu fay deprem kuşağı; 1999 ve 2023 yıkımları.", "E) İklim çeşitliliği Akdeniz, Karadeniz, karasal, step; bakı ve yükseltı."],
+    "correctAnswerIndex": 1,
+    "explanation": "Türkiye Coğrafyası notundaki temel bilgi."
 }
 ];

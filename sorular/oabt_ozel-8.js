@@ -61,63 +61,63 @@ window.oabt_ozel_8_sorulari = [
     "explanation": "Otantik."
 },
 {
-    "question": "Dil ve İletişim Becerilerinin Desteklenmesi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) İletişim gönderici-alıcı-ortam; dil onun bir aracıdır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Dil ve İletişim Becerilerinin Desteklenmesi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Alıcı-ifade, pragmatik, sesbilgisel, sözdizim bileşenler.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi İletişim için doğru bir açıklamadır?",
+    "options": ["A) AAC destekleyici ve alternatif iletişim: PECS, konuşma üretici, işaret.", "B) Dil konuşma terapisti ekipte; öğretmen günlük ortamı öğretir.", "C) İletişim gönderici-alıcı-ortam; dil onun bir aracıdır.", "D) Alıcı-ifade, pragmatik, sesbilgisel, sözdizim bileşenler.", "E) OSB'de pragmatik; zihin yetersizliğinde sözcük-sözdizim; işitmede erişim."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Dil ve İletişim Becerilerinin Desteklenmesi notundaki temel bilgi."
 },
 {
-    "question": "Dil ve İletişim Becerilerinin Desteklenmesi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) OSB'de pragmatik; zihin yetersizliğinde sözcük-sözdizim; işitmede erişim.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Dil ve İletişim Becerilerinin Desteklenmesi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) AAC destekleyici ve alternatif iletişim: PECS, konuşma üretici, işaret.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Alıcı-ifade, pragmatik, sesbilgisel, sözdizim hakkında hangisi doğrudur?",
+    "options": ["A) AAC destekleyici ve alternatif iletişim: PECS, konuşma üretici, işaret.", "B) Dil konuşma terapisti ekipte; öğretmen günlük ortamı öğretir.", "C) Alıcı-ifade, pragmatik, sesbilgisel, sözdizim bileşenler.", "D) İletişim gönderici-alıcı-ortam; dil onun bir aracıdır.", "E) OSB'de pragmatik; zihin yetersizliğinde sözcük-sözdizim; işitmede erişim."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Dil ve İletişim Becerilerinin Desteklenmesi notundaki temel bilgi."
 },
 {
-    "question": "Dil ve İletişim Becerilerinin Desteklenmesi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Dil konuşma terapisti ekipte; öğretmen günlük ortamı öğretir.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "OSB'de pragmatik hangisini ifade eder?",
+    "options": ["A) Dil konuşma terapisti ekipte; öğretmen günlük ortamı öğretir.", "B) OSB'de pragmatik; zihin yetersizliğinde sözcük-sözdizim; işitmede erişim.", "C) İletişim gönderici-alıcı-ortam; dil onun bir aracıdır.", "D) Alıcı-ifade, pragmatik, sesbilgisel, sözdizim bileşenler.", "E) AAC destekleyici ve alternatif iletişim: PECS, konuşma üretici, işaret."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Dil ve İletişim Becerilerinin Desteklenmesi notundaki temel bilgi."
 },
 {
-    "question": "Dil ve İletişim Becerilerinin Desteklenmesi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Model olma, genişletme, bekleme süresi.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "AAC ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Alıcı-ifade, pragmatik, sesbilgisel, sözdizim bileşenler.", "B) OSB'de pragmatik; zihin yetersizliğinde sözcük-sözdizim; işitmede erişim.", "C) Dil konuşma terapisti ekipte; öğretmen günlük ortamı öğretir.", "D) AAC destekleyici ve alternatif iletişim: PECS, konuşma üretici, işaret.", "E) İletişim gönderici-alıcı-ortam; dil onun bir aracıdır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Dil ve İletişim Becerilerinin Desteklenmesi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Dil konuşma terapisti için doğru bir açıklamadır?",
+    "options": ["A) Alıcı-ifade, pragmatik, sesbilgisel, sözdizim bileşenler.", "B) OSB'de pragmatik; zihin yetersizliğinde sözcük-sözdizim; işitmede erişim.", "C) AAC destekleyici ve alternatif iletişim: PECS, konuşma üretici, işaret.", "D) Dil konuşma terapisti ekipte; öğretmen günlük ortamı öğretir.", "E) İletişim gönderici-alıcı-ortam; dil onun bir aracıdır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Dil ve İletişim Becerilerinin Desteklenmesi notundaki temel bilgi."
+},
+{
+    "question": "Model olma, genişletme, bekleme süresi hakkında hangisi doğrudur?",
+    "options": ["A) Model olma, genişletme, bekleme süresi.", "B) İletişim gönderici-alıcı-ortam; dil onun bir aracıdır.", "C) Alıcı-ifade, pragmatik, sesbilgisel, sözdizim bileşenler.", "D) OSB'de pragmatik; zihin yetersizliğinde sözcük-sözdizim; işitmede erişim.", "E) AAC destekleyici ve alternatif iletişim: PECS, konuşma üretici, işaret."],
+    "correctAnswerIndex": 0,
+    "explanation": "Dil ve İletişim Becerilerinin Desteklenmesi notundaki temel bilgi."
+},
+{
+    "question": "Görsel destek ve ortam düzeni hangisini ifade eder?",
+    "options": ["A) OSB'de pragmatik; zihin yetersizliğinde sözcük-sözdizim; işitmede erişim.", "B) AAC destekleyici ve alternatif iletişim: PECS, konuşma üretici, işaret.", "C) Görsel destek ve ortam düzeni.", "D) İletişim gönderici-alıcı-ortam; dil onun bir aracıdır.", "E) Alıcı-ifade, pragmatik, sesbilgisel, sözdizim bileşenler."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Dil ve İletişim Becerilerinin Desteklenmesi notundaki temel bilgi."
 },
 {
-    "question": "Dil ve İletişim Becerilerinin Desteklenmesi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Görsel destek ve ortam düzeni.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Ortak dikkat, taklit, rutin ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Ortak dikkat, taklit, rutin erken OSB.", "B) İletişim gönderici-alıcı-ortam; dil onun bir aracıdır.", "C) Alıcı-ifade, pragmatik, sesbilgisel, sözdizim bileşenler.", "D) OSB'de pragmatik; zihin yetersizliğinde sözcük-sözdizim; işitmede erişim.", "E) AAC destekleyici ve alternatif iletişim: PECS, konuşma üretici, işaret."],
+    "correctAnswerIndex": 0,
+    "explanation": "Dil ve İletişim Becerilerinin Desteklenmesi notundaki temel bilgi."
+},
+{
+    "question": "Akran aracılı hakkında hangisi doğrudur?",
+    "options": ["A) Akran aracılı iletişim.", "B) İletişim gönderici-alıcı-ortam; dil onun bir aracıdır.", "C) Alıcı-ifade, pragmatik, sesbilgisel, sözdizim bileşenler.", "D) OSB'de pragmatik; zihin yetersizliğinde sözcük-sözdizim; işitmede erişim.", "E) AAC destekleyici ve alternatif iletişim: PECS, konuşma üretici, işaret."],
+    "correctAnswerIndex": 0,
+    "explanation": "Dil ve İletişim Becerilerinin Desteklenmesi notundaki temel bilgi."
+},
+{
+    "question": "Sınıf dili hangisini ifade eder?",
+    "options": ["A) AAC destekleyici ve alternatif iletişim: PECS, konuşma üretici, işaret.", "B) Sınıf dili kısa yönerge, görsel.", "C) İletişim gönderici-alıcı-ortam; dil onun bir aracıdır.", "D) Alıcı-ifade, pragmatik, sesbilgisel, sözdizim bileşenler.", "E) OSB'de pragmatik; zihin yetersizliğinde sözcük-sözdizim; işitmede erişim."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Dil ve İletişim Becerilerinin Desteklenmesi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Ortak dikkat, taklit, rutin erken OSB.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Dil ve İletişim Becerilerinin Desteklenmesi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Sosyal öykü.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Dil ve İletişim Becerilerinin Desteklenmesi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Akran aracılı iletişim.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Dil ve İletişim Becerilerinin Desteklenmesi notundaki temel bilgi."
 }
 ];

@@ -61,63 +61,63 @@ window.oabt_dkab_12_sorulari = [
     "explanation": "Etik ölçme sınırı."
 },
 {
-    "question": "Ahlak konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Ahlak huy ve davranış bütünüdür; niyet (kasd) esastır.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi Ahlak için doğru bir açıklamadır?",
+    "options": ["A) Ahlak huy ve davranış bütünüdür; niyet (kasd) esastır.", "B) Kur'an takva, adalet, ihsan, emanet, doğruluk.", "C) Hadis hüsn-i huluk; komşu, merhamet, infak.", "D) Fazilet-rezilet (adalet, iffet, şecaat, hikmet) felsefi-İslami tablo.", "E) Tasavvuf nefis terbiyesi; riya ve kibir uyarıları."],
+    "correctAnswerIndex": 0,
+    "explanation": "Ahlak notundaki temel bilgi."
+},
+{
+    "question": "Kur'an hakkında hangisi doğrudur?",
+    "options": ["A) Hadis hüsn-i huluk; komşu, merhamet, infak.", "B) Fazilet-rezilet (adalet, iffet, şecaat, hikmet) felsefi-İslami tablo.", "C) Tasavvuf nefis terbiyesi; riya ve kibir uyarıları.", "D) Kur'an takva, adalet, ihsan, emanet, doğruluk.", "E) Ahlak huy ve davranış bütünüdür; niyet (kasd) esastır."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Ahlak notundaki temel bilgi."
 },
 {
-    "question": "Ahlak konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Kur'an takva, adalet, ihsan, emanet, doğruluk.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Hadis hangisini ifade eder?",
+    "options": ["A) Fazilet-rezilet (adalet, iffet, şecaat, hikmet) felsefi-İslami tablo.", "B) Tasavvuf nefis terbiyesi; riya ve kibir uyarıları.", "C) Hadis hüsn-i huluk; komşu, merhamet, infak.", "D) Ahlak huy ve davranış bütünüdür; niyet (kasd) esastır.", "E) Kur'an takva, adalet, ihsan, emanet, doğruluk."],
+    "correctAnswerIndex": 2,
+    "explanation": "Ahlak notundaki temel bilgi."
+},
+{
+    "question": "Fazilet-rezilet ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Ahlak huy ve davranış bütünüdür; niyet (kasd) esastır.", "B) Kur'an takva, adalet, ihsan, emanet, doğruluk.", "C) Hadis hüsn-i huluk; komşu, merhamet, infak.", "D) Tasavvuf nefis terbiyesi; riya ve kibir uyarıları.", "E) Fazilet-rezilet (adalet, iffet, şecaat, hikmet) felsefi-İslami tablo."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Ahlak notundaki temel bilgi."
 },
 {
-    "question": "Ahlak konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Hadis hüsn-i huluk; komşu, merhamet, infak.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi Tasavvuf için doğru bir açıklamadır?",
+    "options": ["A) Kur'an takva, adalet, ihsan, emanet, doğruluk.", "B) Hadis hüsn-i huluk; komşu, merhamet, infak.", "C) Fazilet-rezilet (adalet, iffet, şecaat, hikmet) felsefi-İslami tablo.", "D) Tasavvuf nefis terbiyesi; riya ve kibir uyarıları.", "E) Ahlak huy ve davranış bütünüdür; niyet (kasd) esastır."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Ahlak notundaki temel bilgi."
 },
 {
-    "question": "Ahlak konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Fazilet-rezilet (adalet, iffet, şecaat, hikmet) felsefi-İslami tablo.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Ahlak konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Tasavvuf nefis terbiyesi; riya ve kibir uyarıları.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Erdem etiği, ödev etiği, sonuç etiği hakkında hangisi doğrudur?",
+    "options": ["A) Kur'an takva, adalet, ihsan, emanet, doğruluk.", "B) Hadis hüsn-i huluk; komşu, merhamet, infak.", "C) Fazilet-rezilet (adalet, iffet, şecaat, hikmet) felsefi-İslami tablo.", "D) Erdem etiği, ödev etiği, sonuç etiği karşılaştırmalı okunur.", "E) Ahlak huy ve davranış bütünüdür; niyet (kasd) esastır."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Ahlak notundaki temel bilgi."
 },
 {
-    "question": "Ahlak konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Erdem etiği, ödev etiği, sonuç etiği karşılaştırmalı okunur.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Altın kural hangisini ifade eder?",
+    "options": ["A) Hadis hüsn-i huluk; komşu, merhamet, infak.", "B) Fazilet-rezilet (adalet, iffet, şecaat, hikmet) felsefi-İslami tablo.", "C) Altın kural ve adalet ilkesi evrensel köprüdür.", "D) Ahlak huy ve davranış bütünüdür; niyet (kasd) esastır.", "E) Kur'an takva, adalet, ihsan, emanet, doğruluk."],
+    "correctAnswerIndex": 2,
+    "explanation": "Ahlak notundaki temel bilgi."
 },
 {
-    "question": "Ahlak konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Altın kural ve adalet ilkesi evrensel köprüdür.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Vicdan ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Kur'an takva, adalet, ihsan, emanet, doğruluk.", "B) Hadis hüsn-i huluk; komşu, merhamet, infak.", "C) Fazilet-rezilet (adalet, iffet, şecaat, hikmet) felsefi-İslami tablo.", "D) Vicdan gelişimi Piaget-Kohlberg basamaklarıyla işlenir.", "E) Ahlak huy ve davranış bütünüdür; niyet (kasd) esastır."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Ahlak notundaki temel bilgi."
 },
 {
-    "question": "Ahlak konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Vicdan gelişimi Piaget-Kohlberg basamaklarıyla işlenir.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Karakter eğitimi için doğru bir açıklamadır?",
+    "options": ["A) Karakter eğitimi model alma, pratik, okul iklimi.", "B) Ahlak huy ve davranış bütünüdür; niyet (kasd) esastır.", "C) Kur'an takva, adalet, ihsan, emanet, doğruluk.", "D) Hadis hüsn-i huluk; komşu, merhamet, infak.", "E) Fazilet-rezilet (adalet, iffet, şecaat, hikmet) felsefi-İslami tablo."],
+    "correctAnswerIndex": 0,
+    "explanation": "Ahlak notundaki temel bilgi."
 },
 {
-    "question": "Ahlak konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Karakter eğitimi model alma, pratik, okul iklimi.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Ahlak konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Dijital ahlak mahremiyet, siber zorbalık, telif.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Dijital ahlak hakkında hangisi doğrudur?",
+    "options": ["A) Dijital ahlak mahremiyet, siber zorbalık, telif.", "B) Ahlak huy ve davranış bütünüdür; niyet (kasd) esastır.", "C) Kur'an takva, adalet, ihsan, emanet, doğruluk.", "D) Hadis hüsn-i huluk; komşu, merhamet, infak.", "E) Fazilet-rezilet (adalet, iffet, şecaat, hikmet) felsefi-İslami tablo."],
+    "correctAnswerIndex": 0,
+    "explanation": "Ahlak notundaki temel bilgi."
 }
 ];

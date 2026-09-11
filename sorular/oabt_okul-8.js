@@ -61,63 +61,63 @@ window.oabt_okul_8_sorulari = [
     "explanation": "20 soruluk alan eğitimi."
 },
 {
-    "question": "Okul Öncesi Eğitim Programları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Güncel MEB Okul Öncesi Eğitim Programı gelişimsel, sarmal, esnek.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Güncel MEB Okul Öncesi Eğitim Programı için doğru bir açıklamadır?",
+    "options": ["A) Kazanım-gösterge davranışsal ipucu; ezber liste dersi değildir.", "B) Günlük akış serbest oyun, grup, açık hava, rutin.", "C) Öğretmen planı aylık-günlük; çocuk ilgisiyle sapabilir.", "D) 2026 30+20 yapı program bilgisi alan eğitiminde yoğundur.", "E) Güncel MEB Okul Öncesi Eğitim Programı gelişimsel, sarmal, esnek."],
+    "correctAnswerIndex": 4,
+    "explanation": "Okul Öncesi Eğitim Programları notundaki temel bilgi."
 },
 {
-    "question": "Okul Öncesi Eğitim Programları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Kazanım-gösterge davranışsal ipucu; ezber liste dersi değildir.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Kazanım-gösterge hakkında hangisi doğrudur?",
+    "options": ["A) 2026 30+20 yapı program bilgisi alan eğitiminde yoğundur.", "B) Kazanım-gösterge davranışsal ipucu; ezber liste dersi değildir.", "C) Güncel MEB Okul Öncesi Eğitim Programı gelişimsel, sarmal, esnek.", "D) Günlük akış serbest oyun, grup, açık hava, rutin.", "E) Öğretmen planı aylık-günlük; çocuk ilgisiyle sapabilir."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Okul Öncesi Eğitim Programları notundaki temel bilgi."
 },
 {
-    "question": "Okul Öncesi Eğitim Programları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Günlük akış serbest oyun, grup, açık hava, rutin.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Günlük akış hangisini ifade eder?",
+    "options": ["A) Güncel MEB Okul Öncesi Eğitim Programı gelişimsel, sarmal, esnek.", "B) Kazanım-gösterge davranışsal ipucu; ezber liste dersi değildir.", "C) Öğretmen planı aylık-günlük; çocuk ilgisiyle sapabilir.", "D) 2026 30+20 yapı program bilgisi alan eğitiminde yoğundur.", "E) Günlük akış serbest oyun, grup, açık hava, rutin."],
+    "correctAnswerIndex": 4,
+    "explanation": "Okul Öncesi Eğitim Programları notundaki temel bilgi."
+},
+{
+    "question": "Öğretmen planı ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Güncel MEB Okul Öncesi Eğitim Programı gelişimsel, sarmal, esnek.", "B) Kazanım-gösterge davranışsal ipucu; ezber liste dersi değildir.", "C) Günlük akış serbest oyun, grup, açık hava, rutin.", "D) 2026 30+20 yapı program bilgisi alan eğitiminde yoğundur.", "E) Öğretmen planı aylık-günlük; çocuk ilgisiyle sapabilir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Okul Öncesi Eğitim Programları notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi 2026 30+20 yapı için doğru bir açıklamadır?",
+    "options": ["A) 2026 30+20 yapı program bilgisi alan eğitiminde yoğundur.", "B) Güncel MEB Okul Öncesi Eğitim Programı gelişimsel, sarmal, esnek.", "C) Kazanım-gösterge davranışsal ipucu; ezber liste dersi değildir.", "D) Günlük akış serbest oyun, grup, açık hava, rutin.", "E) Öğretmen planı aylık-günlük; çocuk ilgisiyle sapabilir."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Okul Öncesi Eğitim Programları notundaki temel bilgi."
 },
 {
-    "question": "Okul Öncesi Eğitim Programları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Öğretmen planı aylık-günlük; çocuk ilgisiyle sapabilir.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "İlgi köşeleri ve proje hakkında hangisi doğrudur?",
+    "options": ["A) Kazanım-gösterge davranışsal ipucu; ezber liste dersi değildir.", "B) Günlük akış serbest oyun, grup, açık hava, rutin.", "C) Öğretmen planı aylık-günlük; çocuk ilgisiyle sapabilir.", "D) İlgi köşeleri ve proje.", "E) Güncel MEB Okul Öncesi Eğitim Programı gelişimsel, sarmal, esnek."],
+    "correctAnswerIndex": 3,
+    "explanation": "Okul Öncesi Eğitim Programları notundaki temel bilgi."
+},
+{
+    "question": "Değerlendirme hangisini ifade eder?",
+    "options": ["A) Günlük akış serbest oyun, grup, açık hava, rutin.", "B) Öğretmen planı aylık-günlük; çocuk ilgisiyle sapabilir.", "C) Değerlendirme günlük gözlemle plana döner.", "D) Güncel MEB Okul Öncesi Eğitim Programı gelişimsel, sarmal, esnek.", "E) Kazanım-gösterge davranışsal ipucu; ezber liste dersi değildir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Okul Öncesi Eğitim Programları notundaki temel bilgi."
+},
+{
+    "question": "Kaynaştırma ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Kazanım-gösterge davranışsal ipucu; ezber liste dersi değildir.", "B) Günlük akış serbest oyun, grup, açık hava, rutin.", "C) Öğretmen planı aylık-günlük; çocuk ilgisiyle sapabilir.", "D) Kaynaştırma BEP ile program esnetilir.", "E) Güncel MEB Okul Öncesi Eğitim Programı gelişimsel, sarmal, esnek."],
+    "correctAnswerIndex": 3,
+    "explanation": "Okul Öncesi Eğitim Programları notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Aile için doğru bir açıklamadır?",
+    "options": ["A) Günlük akış serbest oyun, grup, açık hava, rutin.", "B) Öğretmen planı aylık-günlük; çocuk ilgisiyle sapabilir.", "C) Aile programa dahil.", "D) Güncel MEB Okul Öncesi Eğitim Programı gelişimsel, sarmal, esnek.", "E) Kazanım-gösterge davranışsal ipucu; ezber liste dersi değildir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Okul Öncesi Eğitim Programları notundaki temel bilgi."
+},
+{
+    "question": "Yerel kültür hakkında hangisi doğrudur?",
+    "options": ["A) Öğretmen planı aylık-günlük; çocuk ilgisiyle sapabilir.", "B) Yerel kültür ve doğa.", "C) Güncel MEB Okul Öncesi Eğitim Programı gelişimsel, sarmal, esnek.", "D) Kazanım-gösterge davranışsal ipucu; ezber liste dersi değildir.", "E) Günlük akış serbest oyun, grup, açık hava, rutin."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Okul Öncesi Eğitim Programları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) 2026 30+20 yapı program bilgisi alan eğitiminde yoğundur.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Okul Öncesi Eğitim Programları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) İlgi köşeleri ve proje.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Okul Öncesi Eğitim Programları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Değerlendirme günlük gözlemle plana döner.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Okul Öncesi Eğitim Programları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Kaynaştırma BEP ile program esnetilir.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Okul Öncesi Eğitim Programları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Aile programa dahil.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Okul Öncesi Eğitim Programları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Yerel kültür ve doğa.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Okul Öncesi Eğitim Programları notundaki temel bilgi."
 }
 ];

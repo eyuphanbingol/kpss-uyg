@@ -55,69 +55,69 @@ window.oabt_mat_4_sorulari = [
     "explanation": "Özdeğerler benzerlikte ortaktır, iz onların toplamıdır."
 },
 {
-    "question": "Lineer Cebir konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Vektör uzayı cisim üzerinde toplama ve skaler çarpma aksiyomları.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Vektör uzayı için doğru bir açıklamadır?",
+    "options": ["A) Satır-sütun uzayı rank(A)=boyut sütun uzayı; rank-nullity: rank+nullity=n.", "B) İç çarpım Cauchy-Schwarz; ortonormal taban Gram-Schmidt.", "C) Vektör uzayı cisim üzerinde toplama ve skaler çarpma aksiyomları.", "D) Taban ve boyut lineer bağımsız üreteç; boyut iyi tanımlıdır.", "E) Alt uzay toplam ve skalerle kapalı; kesişim alt uzay, birleşim genelde değil."],
+    "correctAnswerIndex": 2,
+    "explanation": "Lineer Cebir notundaki temel bilgi."
 },
 {
-    "question": "Lineer Cebir konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Taban ve boyut lineer bağımsız üreteç; boyut iyi tanımlıdır.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Taban ve boyut hakkında hangisi doğrudur?",
+    "options": ["A) Alt uzay toplam ve skalerle kapalı; kesişim alt uzay, birleşim genelde değil.", "B) Satır-sütun uzayı rank(A)=boyut sütun uzayı; rank-nullity: rank+nullity=n.", "C) İç çarpım Cauchy-Schwarz; ortonormal taban Gram-Schmidt.", "D) Taban ve boyut lineer bağımsız üreteç; boyut iyi tanımlıdır.", "E) Vektör uzayı cisim üzerinde toplama ve skaler çarpma aksiyomları."],
+    "correctAnswerIndex": 3,
+    "explanation": "Lineer Cebir notundaki temel bilgi."
+},
+{
+    "question": "Alt uzay hangisini ifade eder?",
+    "options": ["A) Taban ve boyut lineer bağımsız üreteç; boyut iyi tanımlıdır.", "B) Satır-sütun uzayı rank(A)=boyut sütun uzayı; rank-nullity: rank+nullity=n.", "C) İç çarpım Cauchy-Schwarz; ortonormal taban Gram-Schmidt.", "D) Alt uzay toplam ve skalerle kapalı; kesişim alt uzay, birleşim genelde değil.", "E) Vektör uzayı cisim üzerinde toplama ve skaler çarpma aksiyomları."],
+    "correctAnswerIndex": 3,
+    "explanation": "Lineer Cebir notundaki temel bilgi."
+},
+{
+    "question": "Satır-sütun uzayı ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İç çarpım Cauchy-Schwarz; ortonormal taban Gram-Schmidt.", "B) Satır-sütun uzayı rank(A)=boyut sütun uzayı; rank-nullity: rank+nullity=n.", "C) Vektör uzayı cisim üzerinde toplama ve skaler çarpma aksiyomları.", "D) Taban ve boyut lineer bağımsız üreteç; boyut iyi tanımlıdır.", "E) Alt uzay toplam ve skalerle kapalı; kesişim alt uzay, birleşim genelde değil."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Lineer Cebir notundaki temel bilgi."
 },
 {
-    "question": "Lineer Cebir konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Alt uzay toplam ve skalerle kapalı; kesişim alt uzay, birleşim genelde değil.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Lineer Cebir konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Satır-sütun uzayı rank(A)=boyut sütun uzayı; rank-nullity: rank+nullity=n.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi İç çarpım için doğru bir açıklamadır?",
+    "options": ["A) Satır-sütun uzayı rank(A)=boyut sütun uzayı; rank-nullity: rank+nullity=n.", "B) İç çarpım Cauchy-Schwarz; ortonormal taban Gram-Schmidt.", "C) Vektör uzayı cisim üzerinde toplama ve skaler çarpma aksiyomları.", "D) Taban ve boyut lineer bağımsız üreteç; boyut iyi tanımlıdır.", "E) Alt uzay toplam ve skalerle kapalı; kesişim alt uzay, birleşim genelde değil."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Lineer Cebir notundaki temel bilgi."
 },
 {
-    "question": "Lineer Cebir konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) İç çarpım Cauchy-Schwarz; ortonormal taban Gram-Schmidt.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Lineer Cebir konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Lineer dönüşüm T(u+v)=T(u)+T(v), T(cu)=cT(u); matris temsili tabana bağlıdır.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Lineer dönüşüm hakkında hangisi doğrudur?",
+    "options": ["A) Satır-sütun uzayı rank(A)=boyut sütun uzayı; rank-nullity: rank+nullity=n.", "B) Lineer dönüşüm T(u+v)=T(u)+T(v), T(cu)=cT(u); matris temsili tabana bağlıdır.", "C) Vektör uzayı cisim üzerinde toplama ve skaler çarpma aksiyomları.", "D) Taban ve boyut lineer bağımsız üreteç; boyut iyi tanımlıdır.", "E) Alt uzay toplam ve skalerle kapalı; kesişim alt uzay, birleşim genelde değil."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Lineer Cebir notundaki temel bilgi."
 },
 {
-    "question": "Lineer Cebir konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Determinant hacim ölçeği; det=0 ⇔ tekil ⇔ 0 özdeğer.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Determinant hangisini ifade eder?",
+    "options": ["A) Vektör uzayı cisim üzerinde toplama ve skaler çarpma aksiyomları.", "B) Taban ve boyut lineer bağımsız üreteç; boyut iyi tanımlıdır.", "C) Alt uzay toplam ve skalerle kapalı; kesişim alt uzay, birleşim genelde değil.", "D) Satır-sütun uzayı rank(A)=boyut sütun uzayı; rank-nullity: rank+nullity=n.", "E) Determinant hacim ölçeği; det=0 ⇔ tekil ⇔ 0 özdeğer."],
+    "correctAnswerIndex": 4,
+    "explanation": "Lineer Cebir notundaki temel bilgi."
 },
 {
-    "question": "Lineer Cebir konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Özdeğer-özvektör Av=λv, v≠0; karakteristik polinom det(A-λI)=0.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Özdeğer-özvektör ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Satır-sütun uzayı rank(A)=boyut sütun uzayı; rank-nullity: rank+nullity=n.", "B) Özdeğer-özvektör Av=λv, v≠0; karakteristik polinom det(A-λI)=0.", "C) Vektör uzayı cisim üzerinde toplama ve skaler çarpma aksiyomları.", "D) Taban ve boyut lineer bağımsız üreteç; boyut iyi tanımlıdır.", "E) Alt uzay toplam ve skalerle kapalı; kesişim alt uzay, birleşim genelde değil."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Lineer Cebir notundaki temel bilgi."
 },
 {
-    "question": "Lineer Cebir konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Köşegenleştirme n bağımsız özvektör; simetrik reel matris ortogonal köşegenleşir.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Köşegenleştirme için doğru bir açıklamadır?",
+    "options": ["A) Vektör uzayı cisim üzerinde toplama ve skaler çarpma aksiyomları.", "B) Taban ve boyut lineer bağımsız üreteç; boyut iyi tanımlıdır.", "C) Alt uzay toplam ve skalerle kapalı; kesişim alt uzay, birleşim genelde değil.", "D) Satır-sütun uzayı rank(A)=boyut sütun uzayı; rank-nullity: rank+nullity=n.", "E) Köşegenleştirme n bağımsız özvektör; simetrik reel matris ortogonal köşegenleşir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Lineer Cebir notundaki temel bilgi."
 },
 {
-    "question": "Lineer Cebir konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Jordan formu özvektör yetmezse zincir; minimal polinom en küçük yok eden.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Jordan hakkında hangisi doğrudur?",
+    "options": ["A) Vektör uzayı cisim üzerinde toplama ve skaler çarpma aksiyomları.", "B) Taban ve boyut lineer bağımsız üreteç; boyut iyi tanımlıdır.", "C) Alt uzay toplam ve skalerle kapalı; kesişim alt uzay, birleşim genelde değil.", "D) Satır-sütun uzayı rank(A)=boyut sütun uzayı; rank-nullity: rank+nullity=n.", "E) Jordan formu özvektör yetmezse zincir; minimal polinom en küçük yok eden."],
+    "correctAnswerIndex": 4,
+    "explanation": "Lineer Cebir notundaki temel bilgi."
 },
 {
-    "question": "Lineer Cebir konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Ax=b tutarlı ⇔ b sütun uzayında; genel çözüm özel + homojen.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Ax=b hangisini ifade eder?",
+    "options": ["A) Alt uzay toplam ve skalerle kapalı; kesişim alt uzay, birleşim genelde değil.", "B) Satır-sütun uzayı rank(A)=boyut sütun uzayı; rank-nullity: rank+nullity=n.", "C) Ax=b tutarlı ⇔ b sütun uzayında; genel çözüm özel + homojen.", "D) Vektör uzayı cisim üzerinde toplama ve skaler çarpma aksiyomları.", "E) Taban ve boyut lineer bağımsız üreteç; boyut iyi tanımlıdır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Lineer Cebir notundaki temel bilgi."
 }
 ];

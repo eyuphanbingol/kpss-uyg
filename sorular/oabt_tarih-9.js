@@ -61,63 +61,63 @@ window.oabt_tarih_9_sorulari = [
     "explanation": "1993 AB adı ve üç sütun tartışması."
 },
 {
-    "question": "XX. Yüzyıl Türk ve Dünya Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) 1929 bunalımı faşizm ve otoriter rejimleri besler.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "XX. Yüzyıl Türk ve Dünya Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Faşizm-Nazizm ırkçılık, tek parti, yayılmacılık; Münih yatıştırma yanılgısı."],
+    "question": "Aşağıdakilerden hangisi 1929 için doğru bir açıklamadır?",
+    "options": ["A) 1939-1945 toplam savaş; Holokost; atom bombası.", "B) Yalta-Potsdam savaş sonrası düzen; BM (1945).", "C) Türkiye savaş dışı kalır, 1945 sonrası Batı bloğuna yaklaşır.", "D) 1929 bunalımı faşizm ve otoriter rejimleri besler.", "E) Faşizm-Nazizm ırkçılık, tek parti, yayılmacılık; Münih yatıştırma yanılgısı."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "XX. Yüzyıl Türk ve Dünya Tarihi notundaki temel bilgi."
 },
 {
-    "question": "XX. Yüzyıl Türk ve Dünya Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) 1939-1945 toplam savaş; Holokost; atom bombası.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "XX. Yüzyıl Türk ve Dünya Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Yalta-Potsdam savaş sonrası düzen; BM (1945)."],
+    "question": "Faşizm-Nazizm hakkında hangisi doğrudur?",
+    "options": ["A) 1939-1945 toplam savaş; Holokost; atom bombası.", "B) Yalta-Potsdam savaş sonrası düzen; BM (1945).", "C) Türkiye savaş dışı kalır, 1945 sonrası Batı bloğuna yaklaşır.", "D) Faşizm-Nazizm ırkçılık, tek parti, yayılmacılık; Münih yatıştırma yanılgısı.", "E) 1929 bunalımı faşizm ve otoriter rejimleri besler."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "XX. Yüzyıl Türk ve Dünya Tarihi notundaki temel bilgi."
 },
 {
-    "question": "XX. Yüzyıl Türk ve Dünya Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Türkiye savaş dışı kalır, 1945 sonrası Batı bloğuna yaklaşır.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Truman, Marshall, Eisenhower hangisini ifade eder?",
+    "options": ["A) 1929 bunalımı faşizm ve otoriter rejimleri besler.", "B) Faşizm-Nazizm ırkçılık, tek parti, yayılmacılık; Münih yatıştırma yanılgısı.", "C) 1939-1945 toplam savaş; Holokost; atom bombası.", "D) Yalta-Potsdam savaş sonrası düzen; BM (1945).", "E) Truman, Marshall, Eisenhower; Kore, Süveyş, Küba, Vietnam."],
+    "correctAnswerIndex": 4,
+    "explanation": "XX. Yüzyıl Türk ve Dünya Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Bağlantısızlar için doğru bir açıklamadır?",
+    "options": ["A) 1929 bunalımı faşizm ve otoriter rejimleri besler.", "B) Faşizm-Nazizm ırkçılık, tek parti, yayılmacılık; Münih yatıştırma yanılgısı.", "C) 1939-1945 toplam savaş; Holokost; atom bombası.", "D) Yalta-Potsdam savaş sonrası düzen; BM (1945).", "E) Bağlantısızlar Bandung; dekolonizasyon Asya-Afrika."],
+    "correctAnswerIndex": 4,
+    "explanation": "XX. Yüzyıl Türk ve Dünya Tarihi notundaki temel bilgi."
+},
+{
+    "question": "1979 hakkında hangisi doğrudur?",
+    "options": ["A) 1939-1945 toplam savaş; Holokost; atom bombası.", "B) Yalta-Potsdam savaş sonrası düzen; BM (1945).", "C) 1979 İran, Afganistan; 1980'ler silahlanma ve detant kırılmaları.", "D) 1929 bunalımı faşizm ve otoriter rejimleri besler.", "E) Faşizm-Nazizm ırkçılık, tek parti, yayılmacılık; Münih yatıştırma yanılgısı."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "XX. Yüzyıl Türk ve Dünya Tarihi notundaki temel bilgi."
 },
 {
-    "question": "XX. Yüzyıl Türk ve Dünya Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) NATO (1949) ve Varşova Paktı (1955) iki kutup."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "1989-1991 hangisini ifade eder?",
+    "options": ["A) 1989-1991 Berlin, SSCB dağılması; tek kutup tartışması.", "B) 1929 bunalımı faşizm ve otoriter rejimleri besler.", "C) Faşizm-Nazizm ırkçılık, tek parti, yayılmacılık; Münih yatıştırma yanılgısı.", "D) 1939-1945 toplam savaş; Holokost; atom bombası.", "E) Yalta-Potsdam savaş sonrası düzen; BM (1945)."],
+    "correctAnswerIndex": 0,
+    "explanation": "XX. Yüzyıl Türk ve Dünya Tarihi notundaki temel bilgi."
 },
 {
-    "question": "XX. Yüzyıl Türk ve Dünya Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Truman, Marshall, Eisenhower; Kore, Süveyş, Küba, Vietnam.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "AB Maastricht (1993) ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) AB Maastricht (1993); küreselleşme ve neoliberalizm.", "B) 1929 bunalımı faşizm ve otoriter rejimleri besler.", "C) Faşizm-Nazizm ırkçılık, tek parti, yayılmacılık; Münih yatıştırma yanılgısı.", "D) 1939-1945 toplam savaş; Holokost; atom bombası.", "E) Yalta-Potsdam savaş sonrası düzen; BM (1945)."],
+    "correctAnswerIndex": 0,
+    "explanation": "XX. Yüzyıl Türk ve Dünya Tarihi notundaki temel bilgi."
 },
 {
-    "question": "XX. Yüzyıl Türk ve Dünya Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Türkiye 1952 NATO; 1960 darbe, Kıbrıs 1963-74, Johnson mektubu."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Bosna, Kosova, I. ve II. Körfez, 11 Eylül 2001 için doğru bir açıklamadır?",
+    "options": ["A) Yalta-Potsdam savaş sonrası düzen; BM (1945).", "B) Bosna, Kosova, I. ve II. Körfez, 11 Eylül 2001 yeni güvenlik gündemi.", "C) 1929 bunalımı faşizm ve otoriter rejimleri besler.", "D) Faşizm-Nazizm ırkçılık, tek parti, yayılmacılık; Münih yatıştırma yanılgısı.", "E) 1939-1945 toplam savaş; Holokost; atom bombası."],
+    "correctAnswerIndex": 1,
+    "explanation": "XX. Yüzyıl Türk ve Dünya Tarihi notundaki temel bilgi."
 },
 {
-    "question": "XX. Yüzyıl Türk ve Dünya Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Bağlantısızlar Bandung; dekolonizasyon Asya-Afrika.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Türkiye hakkında hangisi doğrudur?",
+    "options": ["A) Yalta-Potsdam savaş sonrası düzen; BM (1945).", "B) Türkiye: Gümrük Birliği (1996), AB adaylığı, 2000'ler iç-dış siyaset.", "C) 1929 bunalımı faşizm ve otoriter rejimleri besler.", "D) Faşizm-Nazizm ırkçılık, tek parti, yayılmacılık; Münih yatıştırma yanılgısı.", "E) 1939-1945 toplam savaş; Holokost; atom bombası."],
+    "correctAnswerIndex": 1,
+    "explanation": "XX. Yüzyıl Türk ve Dünya Tarihi notundaki temel bilgi."
 },
 {
-    "question": "XX. Yüzyıl Türk ve Dünya Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) 1979 İran, Afganistan; 1980'ler silahlanma ve detant kırılmaları."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Çok kutupluluk hangisini ifade eder?",
+    "options": ["A) Yalta-Potsdam savaş sonrası düzen; BM (1945).", "B) Çok kutupluluk Çin yükselişi, bölgesel güçler, göç ve iklim.", "C) 1929 bunalımı faşizm ve otoriter rejimleri besler.", "D) Faşizm-Nazizm ırkçılık, tek parti, yayılmacılık; Münih yatıştırma yanılgısı.", "E) 1939-1945 toplam savaş; Holokost; atom bombası."],
+    "correctAnswerIndex": 1,
+    "explanation": "XX. Yüzyıl Türk ve Dünya Tarihi notundaki temel bilgi."
 }
 ];

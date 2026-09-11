@@ -61,63 +61,63 @@ window.oabt_rehber_2_sorulari = [
     "explanation": "Kapsayıcı PDR modelidir."
 },
 {
-    "question": "Gelişim Psikolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Piaget şema, özümleme, uyma, dönemler: duyu-motor, işlem öncesi, somut, soyut."],
+    "question": "Aşağıdakilerden hangisi Piaget için doğru bir açıklamadır?",
+    "options": ["A) Vygotsky ZPD ve iskele; sosyal dil.", "B) Erikson sekiz psikososyal kriz (güven, özerklik, kimlik...).", "C) Freud oral-anal-fallik-latent-genital; bağlanma değil doyum odak.", "D) Kohlberg ahlaki muhakeme; prekonvansiyonel-konvansiyonel-post.", "E) Piaget şema, özümleme, uyma, dönemler: duyu-motor, işlem öncesi, somut, soyut."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Gelişim Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Gelişim Psikolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Vygotsky ZPD ve iskele; sosyal dil.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Erikson hangisini ifade eder?",
+    "options": ["A) Erikson sekiz psikososyal kriz (güven, özerklik, kimlik...).", "B) Piaget şema, özümleme, uyma, dönemler: duyu-motor, işlem öncesi, somut, soyut.", "C) Vygotsky ZPD ve iskele; sosyal dil.", "D) Freud oral-anal-fallik-latent-genital; bağlanma değil doyum odak.", "E) Kohlberg ahlaki muhakeme; prekonvansiyonel-konvansiyonel-post."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Gelişim Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Gelişim Psikolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Erikson sekiz psikososyal kriz (güven, özerklik, kimlik...)."],
+    "question": "Freud ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Vygotsky ZPD ve iskele; sosyal dil.", "B) Erikson sekiz psikososyal kriz (güven, özerklik, kimlik...).", "C) Kohlberg ahlaki muhakeme; prekonvansiyonel-konvansiyonel-post.", "D) Freud oral-anal-fallik-latent-genital; bağlanma değil doyum odak.", "E) Piaget şema, özümleme, uyma, dönemler: duyu-motor, işlem öncesi, somut, soyut."],
+    "correctAnswerIndex": 3,
+    "explanation": "Gelişim Psikolojisi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Kohlberg için doğru bir açıklamadır?",
+    "options": ["A) Erikson sekiz psikososyal kriz (güven, özerklik, kimlik...).", "B) Freud oral-anal-fallik-latent-genital; bağlanma değil doyum odak.", "C) Kohlberg ahlaki muhakeme; prekonvansiyonel-konvansiyonel-post.", "D) Piaget şema, özümleme, uyma, dönemler: duyu-motor, işlem öncesi, somut, soyut.", "E) Vygotsky ZPD ve iskele; sosyal dil."],
+    "correctAnswerIndex": 2,
+    "explanation": "Gelişim Psikolojisi notundaki temel bilgi."
+},
+{
+    "question": "Bağlanma hakkında hangisi doğrudur?",
+    "options": ["A) Piaget şema, özümleme, uyma, dönemler: duyu-motor, işlem öncesi, somut, soyut.", "B) Vygotsky ZPD ve iskele; sosyal dil.", "C) Erikson sekiz psikososyal kriz (güven, özerklik, kimlik...).", "D) Kohlberg ahlaki muhakeme; prekonvansiyonel-konvansiyonel-post.", "E) Bağlanma güvenli, kaçıngan, dirençli, dağınık."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Gelişim Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Gelişim Psikolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Freud oral-anal-fallik-latent-genital; bağlanma değil doyum odak.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Dil hangisini ifade eder?",
+    "options": ["A) Dil sesbilgisel, sözdizim, edimbilim; kritik dönem tartışması.", "B) Piaget şema, özümleme, uyma, dönemler: duyu-motor, işlem öncesi, somut, soyut.", "C) Vygotsky ZPD ve iskele; sosyal dil.", "D) Erikson sekiz psikososyal kriz (güven, özerklik, kimlik...).", "E) Freud oral-anal-fallik-latent-genital; bağlanma değil doyum odak."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Gelişim Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Gelişim Psikolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Kohlberg ahlaki muhakeme; prekonvansiyonel-konvansiyonel-post."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Ergenlik ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Vygotsky ZPD ve iskele; sosyal dil.", "B) Erikson sekiz psikososyal kriz (güven, özerklik, kimlik...).", "C) Freud oral-anal-fallik-latent-genital; bağlanma değil doyum odak.", "D) Ergenlik beyin (prefrontal), kimlik, akran.", "E) Piaget şema, özümleme, uyma, dönemler: duyu-motor, işlem öncesi, somut, soyut."],
+    "correctAnswerIndex": 3,
+    "explanation": "Gelişim Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Gelişim Psikolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Bağlanma güvenli, kaçıngan, dirençli, dağınık.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Yetişkinlik için doğru bir açıklamadır?",
+    "options": ["A) Erikson sekiz psikososyal kriz (güven, özerklik, kimlik...).", "B) Freud oral-anal-fallik-latent-genital; bağlanma değil doyum odak.", "C) Yetişkinlik yakınlık, üretkenlik; yaşlılık bütünlük-umutsuzluk.", "D) Piaget şema, özümleme, uyma, dönemler: duyu-motor, işlem öncesi, somut, soyut.", "E) Vygotsky ZPD ve iskele; sosyal dil."],
+    "correctAnswerIndex": 2,
+    "explanation": "Gelişim Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Gelişim Psikolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Dil sesbilgisel, sözdizim, edimbilim; kritik dönem tartışması."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Gelişim görevleri hakkında hangisi doğrudur?",
+    "options": ["A) Vygotsky ZPD ve iskele; sosyal dil.", "B) Erikson sekiz psikososyal kriz (güven, özerklik, kimlik...).", "C) Freud oral-anal-fallik-latent-genital; bağlanma değil doyum odak.", "D) Gelişim görevleri Havighurst; kültürle değişir.", "E) Piaget şema, özümleme, uyma, dönemler: duyu-motor, işlem öncesi, somut, soyut."],
+    "correctAnswerIndex": 3,
+    "explanation": "Gelişim Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Gelişim Psikolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Ergenlik beyin (prefrontal), kimlik, akran.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Gelişim Psikolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Yetişkinlik yakınlık, üretkenlik; yaşlılık bütünlük-umutsuzluk."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Gelişim Psikolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Gelişim görevleri Havighurst; kültürle değişir.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Hazırbulunuşluk hangisini ifade eder?",
+    "options": ["A) Freud oral-anal-fallik-latent-genital; bağlanma değil doyum odak.", "B) Hazırbulunuşluk olgunlaşma + yaşantı.", "C) Piaget şema, özümleme, uyma, dönemler: duyu-motor, işlem öncesi, somut, soyut.", "D) Vygotsky ZPD ve iskele; sosyal dil.", "E) Erikson sekiz psikososyal kriz (güven, özerklik, kimlik...)."],
+    "correctAnswerIndex": 1,
+    "explanation": "Gelişim Psikolojisi notundaki temel bilgi."
 }
 ];

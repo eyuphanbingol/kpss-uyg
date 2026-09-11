@@ -61,63 +61,63 @@ window.oabt_okul_3_sorulari = [
     "explanation": "Güvenlik eğitimi."
 },
 {
-    "question": "Çocuk Sağlığı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Büyüme izlemi boy-kilo-baş çevresi eğrisi.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Çocuk Sağlığı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Aşı takvimi aileye hatırlatma, öğretmen tanı koymaz."],
+    "question": "Aşağıdakilerden hangisi Büyüme izlemi için doğru bir açıklamadır?",
+    "options": ["A) Beslenme çeşit, şeker-tuz, gıda alerjisi protokolü.", "B) Uyku ve hijyen el yıkama, diş.", "C) 2026 alan bilgisi sağlık-güvenlik soruları beklenir.", "D) Büyüme izlemi boy-kilo-baş çevresi eğrisi.", "E) Aşı takvimi aileye hatırlatma, öğretmen tanı koymaz."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Çocuk Sağlığı notundaki temel bilgi."
 },
 {
-    "question": "Çocuk Sağlığı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Beslenme çeşit, şeker-tuz, gıda alerjisi protokolü.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşı takvimi hakkında hangisi doğrudur?",
+    "options": ["A) Aşı takvimi aileye hatırlatma, öğretmen tanı koymaz.", "B) Büyüme izlemi boy-kilo-baş çevresi eğrisi.", "C) Beslenme çeşit, şeker-tuz, gıda alerjisi protokolü.", "D) Uyku ve hijyen el yıkama, diş.", "E) 2026 alan bilgisi sağlık-güvenlik soruları beklenir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Çocuk Sağlığı notundaki temel bilgi."
+},
+{
+    "question": "Beslenme hangisini ifade eder?",
+    "options": ["A) Beslenme çeşit, şeker-tuz, gıda alerjisi protokolü.", "B) Büyüme izlemi boy-kilo-baş çevresi eğrisi.", "C) Aşı takvimi aileye hatırlatma, öğretmen tanı koymaz.", "D) Uyku ve hijyen el yıkama, diş.", "E) 2026 alan bilgisi sağlık-güvenlik soruları beklenir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Çocuk Sağlığı notundaki temel bilgi."
+},
+{
+    "question": "Uyku ve hijyen ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Uyku ve hijyen el yıkama, diş.", "B) Büyüme izlemi boy-kilo-baş çevresi eğrisi.", "C) Aşı takvimi aileye hatırlatma, öğretmen tanı koymaz.", "D) Beslenme çeşit, şeker-tuz, gıda alerjisi protokolü.", "E) 2026 alan bilgisi sağlık-güvenlik soruları beklenir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Çocuk Sağlığı notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi 2026 alan bilgisi için doğru bir açıklamadır?",
+    "options": ["A) Büyüme izlemi boy-kilo-baş çevresi eğrisi.", "B) Aşı takvimi aileye hatırlatma, öğretmen tanı koymaz.", "C) Beslenme çeşit, şeker-tuz, gıda alerjisi protokolü.", "D) Uyku ve hijyen el yıkama, diş.", "E) 2026 alan bilgisi sağlık-güvenlik soruları beklenir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Çocuk Sağlığı notundaki temel bilgi."
+},
+{
+    "question": "Bulaşıcı hakkında hangisi doğrudur?",
+    "options": ["A) Beslenme çeşit, şeker-tuz, gıda alerjisi protokolü.", "B) Uyku ve hijyen el yıkama, diş.", "C) Bulaşıcı okulda kalma-gönderme ölçütü kurum protokolü.", "D) Büyüme izlemi boy-kilo-baş çevresi eğrisi.", "E) Aşı takvimi aileye hatırlatma, öğretmen tanı koymaz."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Çocuk Sağlığı notundaki temel bilgi."
 },
 {
-    "question": "Çocuk Sağlığı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Uyku ve hijyen el yıkama, diş."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "İlk yardım hangisini ifade eder?",
+    "options": ["A) Büyüme izlemi boy-kilo-baş çevresi eğrisi.", "B) Aşı takvimi aileye hatırlatma, öğretmen tanı koymaz.", "C) Beslenme çeşit, şeker-tuz, gıda alerjisi protokolü.", "D) Uyku ve hijyen el yıkama, diş.", "E) İlk yardım kanama, yanık, havale, yabancı cisim."],
+    "correctAnswerIndex": 4,
+    "explanation": "Çocuk Sağlığı notundaki temel bilgi."
 },
 {
-    "question": "Çocuk Sağlığı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) 2026 alan bilgisi sağlık-güvenlik soruları beklenir.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Ağızdan ilaç ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Uyku ve hijyen el yıkama, diş.", "B) Ağızdan ilaç yazılı izin.", "C) Büyüme izlemi boy-kilo-baş çevresi eğrisi.", "D) Aşı takvimi aileye hatırlatma, öğretmen tanı koymaz.", "E) Beslenme çeşit, şeker-tuz, gıda alerjisi protokolü."],
+    "correctAnswerIndex": 1,
+    "explanation": "Çocuk Sağlığı notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Güvenli ortam için doğru bir açıklamadır?",
+    "options": ["A) Beslenme çeşit, şeker-tuz, gıda alerjisi protokolü.", "B) Uyku ve hijyen el yıkama, diş.", "C) Güvenli ortam priz, temizlik maddesi, bahçe.", "D) Büyüme izlemi boy-kilo-baş çevresi eğrisi.", "E) Aşı takvimi aileye hatırlatma, öğretmen tanı koymaz."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Çocuk Sağlığı notundaki temel bilgi."
 },
 {
-    "question": "Çocuk Sağlığı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Bulaşıcı okulda kalma-gönderme ölçütü kurum protokolü."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Çocuk Sağlığı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) İlk yardım kanama, yanık, havale, yabancı cisim.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Çocuk Sağlığı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Ağızdan ilaç yazılı izin."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Çocuk Sağlığı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Güvenli ortam priz, temizlik maddesi, bahçe.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Çocuk Sağlığı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Cinsel istismar belirtileri eğitimcinin farkındalığı, soruşturmacı değil."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Cinsel istismar belirtileri hakkında hangisi doğrudur?",
+    "options": ["A) Büyüme izlemi boy-kilo-baş çevresi eğrisi.", "B) Aşı takvimi aileye hatırlatma, öğretmen tanı koymaz.", "C) Beslenme çeşit, şeker-tuz, gıda alerjisi protokolü.", "D) Uyku ve hijyen el yıkama, diş.", "E) Cinsel istismar belirtileri eğitimcinin farkındalığı, soruşturmacı değil."],
+    "correctAnswerIndex": 4,
+    "explanation": "Çocuk Sağlığı notundaki temel bilgi."
 }
 ];

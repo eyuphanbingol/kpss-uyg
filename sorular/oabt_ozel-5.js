@@ -61,63 +61,63 @@ window.oabt_ozel_5_sorulari = [
     "explanation": "Hedef."
 },
 {
-    "question": "Uygulamalı Davranış Analizi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) UDA davranışın çevreyle ilişkisini ölçerek değiştirir.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi UDA için doğru bir açıklamadır?",
+    "options": ["A) İşlev dikkat, kaçma, somut kazanç, duyusal.", "B) İşlevsel davranış değerlendirmesi (İDD) müdahaleden önce gelir.", "C) Olumlu pekiştirme istenen davranışı artırır; ceza birinci basamak değildir.", "D) UDA davranışın çevreyle ilişkisini ölçerek değiştirir.", "E) ABC öncül (A), davranış (B), sonuç (C)."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Uygulamalı Davranış Analizi notundaki temel bilgi."
 },
 {
-    "question": "Uygulamalı Davranış Analizi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) ABC öncül (A), davranış (B), sonuç (C).", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "ABC hakkında hangisi doğrudur?",
+    "options": ["A) İşlevsel davranış değerlendirmesi (İDD) müdahaleden önce gelir.", "B) Olumlu pekiştirme istenen davranışı artırır; ceza birinci basamak değildir.", "C) ABC öncül (A), davranış (B), sonuç (C).", "D) UDA davranışın çevreyle ilişkisini ölçerek değiştirir.", "E) İşlev dikkat, kaçma, somut kazanç, duyusal."],
+    "correctAnswerIndex": 2,
+    "explanation": "Uygulamalı Davranış Analizi notundaki temel bilgi."
+},
+{
+    "question": "İşlev hangisini ifade eder?",
+    "options": ["A) UDA davranışın çevreyle ilişkisini ölçerek değiştirir.", "B) ABC öncül (A), davranış (B), sonuç (C).", "C) Olumlu pekiştirme istenen davranışı artırır; ceza birinci basamak değildir.", "D) Ayrımlı pekiştirme (DRO, DRA, DRI).", "E) İşlev dikkat, kaçma, somut kazanç, duyusal."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Uygulamalı Davranış Analizi notundaki temel bilgi."
 },
 {
-    "question": "Uygulamalı Davranış Analizi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) İşlev dikkat, kaçma, somut kazanç, duyusal.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "İşlevsel davranış değerlendirmesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İşlev dikkat, kaçma, somut kazanç, duyusal.", "B) Olumlu pekiştirme istenen davranışı artırır; ceza birinci basamak değildir.", "C) İşlevsel davranış değerlendirmesi (İDD) müdahaleden önce gelir.", "D) UDA davranışın çevreyle ilişkisini ölçerek değiştirir.", "E) ABC öncül (A), davranış (B), sonuç (C)."],
+    "correctAnswerIndex": 2,
+    "explanation": "Uygulamalı Davranış Analizi notundaki temel bilgi."
 },
 {
-    "question": "Uygulamalı Davranış Analizi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) İşlevsel davranış değerlendirmesi (İDD) müdahaleden önce gelir.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Olumlu pekiştirme için doğru bir açıklamadır?",
+    "options": ["A) Olumlu pekiştirme istenen davranışı artırır; ceza birinci basamak değildir.", "B) UDA davranışın çevreyle ilişkisini ölçerek değiştirir.", "C) ABC öncül (A), davranış (B), sonuç (C).", "D) İşlev dikkat, kaçma, somut kazanç, duyusal.", "E) İşlevsel davranış değerlendirmesi (İDD) müdahaleden önce gelir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Uygulamalı Davranış Analizi notundaki temel bilgi."
 },
 {
-    "question": "Uygulamalı Davranış Analizi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Olumlu pekiştirme istenen davranışı artırır; ceza birinci basamak değildir.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Ayrımlı pekiştirme hakkında hangisi doğrudur?",
+    "options": ["A) Ayrımlı pekiştirme (DRO, DRA, DRI).", "B) UDA davranışın çevreyle ilişkisini ölçerek değiştirir.", "C) ABC öncül (A), davranış (B), sonuç (C).", "D) İşlev dikkat, kaçma, somut kazanç, duyusal.", "E) İşlevsel davranış değerlendirmesi (İDD) müdahaleden önce gelir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Uygulamalı Davranış Analizi notundaki temel bilgi."
 },
 {
-    "question": "Uygulamalı Davranış Analizi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Ayrımlı pekiştirme (DRO, DRA, DRI).", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Sönme hangisini ifade eder?",
+    "options": ["A) İşlev dikkat, kaçma, somut kazanç, duyusal.", "B) İşlevsel davranış değerlendirmesi (İDD) müdahaleden önce gelir.", "C) Sönme pekiştireci kesme; etik ve güvenlik.", "D) UDA davranışın çevreyle ilişkisini ölçerek değiştirir.", "E) ABC öncül (A), davranış (B), sonuç (C)."],
+    "correctAnswerIndex": 2,
+    "explanation": "Uygulamalı Davranış Analizi notundaki temel bilgi."
 },
 {
-    "question": "Uygulamalı Davranış Analizi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Sönme pekiştireci kesme; etik ve güvenlik.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Şekil verme, zincirleme, ipucu ve soluklaştırma ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Şekil verme, zincirleme, ipucu ve soluklaştırma.", "B) UDA davranışın çevreyle ilişkisini ölçerek değiştirir.", "C) ABC öncül (A), davranış (B), sonuç (C).", "D) İşlev dikkat, kaçma, somut kazanç, duyusal.", "E) İşlevsel davranış değerlendirmesi (İDD) müdahaleden önce gelir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Uygulamalı Davranış Analizi notundaki temel bilgi."
 },
 {
-    "question": "Uygulamalı Davranış Analizi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Şekil verme, zincirleme, ipucu ve soluklaştırma.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi DTT için doğru bir açıklamadır?",
+    "options": ["A) DTT yapılandırılmış deneme; doğal öğretim ve PRT oyun bağlamı.", "B) UDA davranışın çevreyle ilişkisini ölçerek değiştirir.", "C) ABC öncül (A), davranış (B), sonuç (C).", "D) İşlev dikkat, kaçma, somut kazanç, duyusal.", "E) İşlevsel davranış değerlendirmesi (İDD) müdahaleden önce gelir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Uygulamalı Davranış Analizi notundaki temel bilgi."
 },
 {
-    "question": "Uygulamalı Davranış Analizi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) DTT yapılandırılmış deneme; doğal öğretim ve PRT oyun bağlamı.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Uygulamalı Davranış Analizi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Genelleme ve kalıcılık son ölçüttür.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Genelleme ve kalıcılık hakkında hangisi doğrudur?",
+    "options": ["A) İşlevsel davranış değerlendirmesi (İDD) müdahaleden önce gelir.", "B) Genelleme ve kalıcılık son ölçüttür.", "C) UDA davranışın çevreyle ilişkisini ölçerek değiştirir.", "D) ABC öncül (A), davranış (B), sonuç (C).", "E) İşlev dikkat, kaçma, somut kazanç, duyusal."],
+    "correctAnswerIndex": 1,
+    "explanation": "Uygulamalı Davranış Analizi notundaki temel bilgi."
 }
 ];

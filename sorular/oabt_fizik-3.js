@@ -55,69 +55,69 @@ window.oabt_fizik_3_sorulari = [
     "explanation": "Ölçüm gürültüsü popüler basitleştirmedir, tam öykü değildir."
 },
 {
-    "question": "Modern Fizik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Kara cisim Planck E=hf; ultraviyole felaketi klasik başarısızlığı.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Kara cisim için doğru bir açıklamadır?",
+    "options": ["A) de Broglie λ=h/p; elektron kırınımı dalga-parçacık.", "B) Belirsizlik Δx Δp ≥ ħ/2; eşlenik değişkenler.", "C) Schrödinger iħ ∂ψ/∂t = Hψ; |ψ|^2 olasılık yoğunluğu (Born).", "D) Kara cisim Planck E=hf; ultraviyole felaketi klasik başarısızlığı.", "E) Fotoelektrik ve Compton h f = K + φ; λ' = λ + (h/mc)(1-cosθ)."],
+    "correctAnswerIndex": 3,
+    "explanation": "Modern Fizik notundaki temel bilgi."
 },
 {
-    "question": "Modern Fizik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Fotoelektrik ve Compton h f = K + φ; λ' = λ + (h/mc)(1-cosθ).", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Fotoelektrik ve Compton hakkında hangisi doğrudur?",
+    "options": ["A) Kara cisim Planck E=hf; ultraviyole felaketi klasik başarısızlığı.", "B) de Broglie λ=h/p; elektron kırınımı dalga-parçacık.", "C) Belirsizlik Δx Δp ≥ ħ/2; eşlenik değişkenler.", "D) Schrödinger iħ ∂ψ/∂t = Hψ; |ψ|^2 olasılık yoğunluğu (Born).", "E) Fotoelektrik ve Compton h f = K + φ; λ' = λ + (h/mc)(1-cosθ)."],
+    "correctAnswerIndex": 4,
+    "explanation": "Modern Fizik notundaki temel bilgi."
+},
+{
+    "question": "de Broglie hangisini ifade eder?",
+    "options": ["A) de Broglie λ=h/p; elektron kırınımı dalga-parçacık.", "B) Kara cisim Planck E=hf; ultraviyole felaketi klasik başarısızlığı.", "C) Fotoelektrik ve Compton h f = K + φ; λ' = λ + (h/mc)(1-cosθ).", "D) Belirsizlik Δx Δp ≥ ħ/2; eşlenik değişkenler.", "E) Schrödinger iħ ∂ψ/∂t = Hψ; |ψ|^2 olasılık yoğunluğu (Born)."],
+    "correctAnswerIndex": 0,
+    "explanation": "Modern Fizik notundaki temel bilgi."
+},
+{
+    "question": "Belirsizlik ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Kara cisim Planck E=hf; ultraviyole felaketi klasik başarısızlığı.", "B) Fotoelektrik ve Compton h f = K + φ; λ' = λ + (h/mc)(1-cosθ).", "C) de Broglie λ=h/p; elektron kırınımı dalga-parçacık.", "D) Schrödinger iħ ∂ψ/∂t = Hψ; |ψ|^2 olasılık yoğunluğu (Born).", "E) Belirsizlik Δx Δp ≥ ħ/2; eşlenik değişkenler."],
+    "correctAnswerIndex": 4,
+    "explanation": "Modern Fizik notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Schrödinger için doğru bir açıklamadır?",
+    "options": ["A) de Broglie λ=h/p; elektron kırınımı dalga-parçacık.", "B) Belirsizlik Δx Δp ≥ ħ/2; eşlenik değişkenler.", "C) Schrödinger iħ ∂ψ/∂t = Hψ; |ψ|^2 olasılık yoğunluğu (Born).", "D) Kara cisim Planck E=hf; ultraviyole felaketi klasik başarısızlığı.", "E) Fotoelektrik ve Compton h f = K + φ; λ' = λ + (h/mc)(1-cosθ)."],
+    "correctAnswerIndex": 2,
+    "explanation": "Modern Fizik notundaki temel bilgi."
+},
+{
+    "question": "Özel görelilik hakkında hangisi doğrudur?",
+    "options": ["A) Belirsizlik Δx Δp ≥ ħ/2; eşlenik değişkenler.", "B) Özel görelilik c invariant; zaman genişlemesi, boy kısalması, eşzamanlılık göreli.", "C) Kara cisim Planck E=hf; ultraviyole felaketi klasik başarısızlığı.", "D) Fotoelektrik ve Compton h f = K + φ; λ' = λ + (h/mc)(1-cosθ).", "E) de Broglie λ=h/p; elektron kırınımı dalga-parçacık."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Modern Fizik notundaki temel bilgi."
 },
 {
-    "question": "Modern Fizik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) de Broglie λ=h/p; elektron kırınımı dalga-parçacık.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Modern Fizik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Belirsizlik Δx Δp ≥ ħ/2; eşlenik değişkenler.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Lorentz hangisini ifade eder?",
+    "options": ["A) Belirsizlik Δx Δp ≥ ħ/2; eşlenik değişkenler.", "B) Lorentz enerji-momentum E^2=(pc)^2+(mc^2)^2; E=γ mc^2.", "C) Kara cisim Planck E=hf; ultraviyole felaketi klasik başarısızlığı.", "D) Fotoelektrik ve Compton h f = K + φ; λ' = λ + (h/mc)(1-cosθ).", "E) de Broglie λ=h/p; elektron kırınımı dalga-parçacık."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Modern Fizik notundaki temel bilgi."
 },
 {
-    "question": "Modern Fizik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Schrödinger iħ ∂ψ/∂t = Hψ; |ψ|^2 olasılık yoğunluğu (Born).", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Çift yarık ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) de Broglie λ=h/p; elektron kırınımı dalga-parçacık.", "B) Belirsizlik Δx Δp ≥ ħ/2; eşlenik değişkenler.", "C) Çift yarık gözlem/hangi-yol girişimi bozar (tamamlayıcılık).", "D) Kara cisim Planck E=hf; ultraviyole felaketi klasik başarısızlığı.", "E) Fotoelektrik ve Compton h f = K + φ; λ' = λ + (h/mc)(1-cosθ)."],
+    "correctAnswerIndex": 2,
+    "explanation": "Modern Fizik notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Spin ve Stern-Gerlach için doğru bir açıklamadır?",
+    "options": ["A) Spin ve Stern-Gerlach uzay kuantizasyonu; fermiyon-bozon.", "B) Kara cisim Planck E=hf; ultraviyole felaketi klasik başarısızlığı.", "C) Fotoelektrik ve Compton h f = K + φ; λ' = λ + (h/mc)(1-cosθ).", "D) de Broglie λ=h/p; elektron kırınımı dalga-parçacık.", "E) Belirsizlik Δx Δp ≥ ħ/2; eşlenik değişkenler."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Modern Fizik notundaki temel bilgi."
 },
 {
-    "question": "Modern Fizik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Özel görelilik c invariant; zaman genişlemesi, boy kısalması, eşzamanlılık göreli.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Pauli dışlama hakkında hangisi doğrudur?",
+    "options": ["A) Kara cisim Planck E=hf; ultraviyole felaketi klasik başarısızlığı.", "B) Fotoelektrik ve Compton h f = K + φ; λ' = λ + (h/mc)(1-cosθ).", "C) de Broglie λ=h/p; elektron kırınımı dalga-parçacık.", "D) Belirsizlik Δx Δp ≥ ħ/2; eşlenik değişkenler.", "E) Pauli dışlama madde yapısının kararlılığı."],
+    "correctAnswerIndex": 4,
+    "explanation": "Modern Fizik notundaki temel bilgi."
+},
+{
+    "question": "Kuantum kuyu hangisini ifade eder?",
+    "options": ["A) Belirsizlik Δx Δp ≥ ħ/2; eşlenik değişkenler.", "B) Kuantum kuyu enerji seviyeleri n^2; tünelleme E<V.", "C) Kara cisim Planck E=hf; ultraviyole felaketi klasik başarısızlığı.", "D) Fotoelektrik ve Compton h f = K + φ; λ' = λ + (h/mc)(1-cosθ).", "E) de Broglie λ=h/p; elektron kırınımı dalga-parçacık."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Modern Fizik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Lorentz enerji-momentum E^2=(pc)^2+(mc^2)^2; E=γ mc^2.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Modern Fizik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Çift yarık gözlem/hangi-yol girişimi bozar (tamamlayıcılık).", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Modern Fizik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Spin ve Stern-Gerlach uzay kuantizasyonu; fermiyon-bozon.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Modern Fizik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Pauli dışlama madde yapısının kararlılığı.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Modern Fizik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Kuantum kuyu enerji seviyeleri n^2; tünelleme E<V.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Modern Fizik notundaki temel bilgi."
 }
 ];

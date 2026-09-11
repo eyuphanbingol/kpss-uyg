@@ -55,69 +55,69 @@ window.oabt_kimya_5_sorulari = [
     "explanation": "Yatırım 2, üretim 4."
 },
 {
-    "question": "Biyokimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Amino asit zwitterion, peptit bağ düzlemsel; protein yapı 1-4°.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Amino asit için doğru bir açıklamadır?",
+    "options": ["A) Nükleik asit A-T/G-C, yön 5'→3'; replikasyon yarı koruyucu.", "B) Amino asit zwitterion, peptit bağ düzlemsel; protein yapı 1-4°.", "C) Enzim aktif site, kofaktör; inhibisyon yarışmalı Lineweaver burk kesişimi.", "D) Karbonhidrat anomer, glikozit; selüloz-nişasta bağ farkı β/α.", "E) Lipit amfifil zar, akışkanlık doymamışlık ve kolesterol."],
+    "correctAnswerIndex": 1,
+    "explanation": "Biyokimya notundaki temel bilgi."
 },
 {
-    "question": "Biyokimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Enzim aktif site, kofaktör; inhibisyon yarışmalı Lineweaver burk kesişimi."],
+    "question": "Enzim hakkında hangisi doğrudur?",
+    "options": ["A) Enzim aktif site, kofaktör; inhibisyon yarışmalı Lineweaver burk kesişimi.", "B) Amino asit zwitterion, peptit bağ düzlemsel; protein yapı 1-4°.", "C) Karbonhidrat anomer, glikozit; selüloz-nişasta bağ farkı β/α.", "D) Lipit amfifil zar, akışkanlık doymamışlık ve kolesterol.", "E) Nükleik asit A-T/G-C, yön 5'→3'; replikasyon yarı koruyucu."],
+    "correctAnswerIndex": 0,
+    "explanation": "Biyokimya notundaki temel bilgi."
+},
+{
+    "question": "Karbonhidrat hangisini ifade eder?",
+    "options": ["A) Karbonhidrat anomer, glikozit; selüloz-nişasta bağ farkı β/α.", "B) Amino asit zwitterion, peptit bağ düzlemsel; protein yapı 1-4°.", "C) Enzim aktif site, kofaktör; inhibisyon yarışmalı Lineweaver burk kesişimi.", "D) Lipit amfifil zar, akışkanlık doymamışlık ve kolesterol.", "E) Nükleik asit A-T/G-C, yön 5'→3'; replikasyon yarı koruyucu."],
+    "correctAnswerIndex": 0,
+    "explanation": "Biyokimya notundaki temel bilgi."
+},
+{
+    "question": "Lipit ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Nükleik asit A-T/G-C, yön 5'→3'; replikasyon yarı koruyucu.", "B) Lipit amfifil zar, akışkanlık doymamışlık ve kolesterol.", "C) Amino asit zwitterion, peptit bağ düzlemsel; protein yapı 1-4°.", "D) Enzim aktif site, kofaktör; inhibisyon yarışmalı Lineweaver burk kesişimi.", "E) Karbonhidrat anomer, glikozit; selüloz-nişasta bağ farkı β/α."],
+    "correctAnswerIndex": 1,
+    "explanation": "Biyokimya notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Nükleik asit için doğru bir açıklamadır?",
+    "options": ["A) Enzim aktif site, kofaktör; inhibisyon yarışmalı Lineweaver burk kesişimi.", "B) Karbonhidrat anomer, glikozit; selüloz-nişasta bağ farkı β/α.", "C) Lipit amfifil zar, akışkanlık doymamışlık ve kolesterol.", "D) Nükleik asit A-T/G-C, yön 5'→3'; replikasyon yarı koruyucu.", "E) Amino asit zwitterion, peptit bağ düzlemsel; protein yapı 1-4°."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Biyokimya notundaki temel bilgi."
 },
 {
-    "question": "Biyokimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Karbonhidrat anomer, glikozit; selüloz-nişasta bağ farkı β/α.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Biyokimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Lipit amfifil zar, akışkanlık doymamışlık ve kolesterol."],
+    "question": "Krebs hangisini ifade eder?",
+    "options": ["A) Enzim aktif site, kofaktör; inhibisyon yarışmalı Lineweaver burk kesişimi.", "B) Karbonhidrat anomer, glikozit; selüloz-nişasta bağ farkı β/α.", "C) Lipit amfifil zar, akışkanlık doymamışlık ve kolesterol.", "D) Krebs NADH, FADH2, GTP; anaplerotik.", "E) Amino asit zwitterion, peptit bağ düzlemsel; protein yapı 1-4°."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Biyokimya notundaki temel bilgi."
 },
 {
-    "question": "Biyokimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Nükleik asit A-T/G-C, yön 5'→3'; replikasyon yarı koruyucu.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "ETS ve oksidatif fosforilasyon ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Amino asit zwitterion, peptit bağ düzlemsel; protein yapı 1-4°.", "B) Enzim aktif site, kofaktör; inhibisyon yarışmalı Lineweaver burk kesişimi.", "C) Karbonhidrat anomer, glikozit; selüloz-nişasta bağ farkı β/α.", "D) Lipit amfifil zar, akışkanlık doymamışlık ve kolesterol.", "E) ETS ve oksidatif fosforilasyon proton motifi, ATP sentaz; O2 son alıcı."],
+    "correctAnswerIndex": 4,
+    "explanation": "Biyokimya notundaki temel bilgi."
 },
 {
-    "question": "Biyokimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Glikoliz sitozol, 2 ATP net glukozdan (aerob giriş); PDH mitokondri."],
+    "question": "Aşağıdakilerden hangisi Fotosentez için doğru bir açıklamadır?",
+    "options": ["A) Enzim aktif site, kofaktör; inhibisyon yarışmalı Lineweaver burk kesişimi.", "B) Karbonhidrat anomer, glikozit; selüloz-nişasta bağ farkı β/α.", "C) Lipit amfifil zar, akışkanlık doymamışlık ve kolesterol.", "D) Fotosentez ışık tepkimeleri NADPH+ATP, Calvin CO2 fiksasyonu.", "E) Amino asit zwitterion, peptit bağ düzlemsel; protein yapı 1-4°."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Biyokimya notundaki temel bilgi."
 },
 {
-    "question": "Biyokimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Krebs NADH, FADH2, GTP; anaplerotik.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Biyokimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) ETS ve oksidatif fosforilasyon proton motifi, ATP sentaz; O2 son alıcı."],
+    "question": "Düzenleme hakkında hangisi doğrudur?",
+    "options": ["A) Enzim aktif site, kofaktör; inhibisyon yarışmalı Lineweaver burk kesişimi.", "B) Karbonhidrat anomer, glikozit; selüloz-nişasta bağ farkı β/α.", "C) Lipit amfifil zar, akışkanlık doymamışlık ve kolesterol.", "D) Düzenleme allosterik, kovalent modifikasyon, gen ifadesi.", "E) Amino asit zwitterion, peptit bağ düzlemsel; protein yapı 1-4°."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Biyokimya notundaki temel bilgi."
 },
 {
-    "question": "Biyokimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Fotosentez ışık tepkimeleri NADPH+ATP, Calvin CO2 fiksasyonu.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Transkripsiyon-translasyon hangisini ifade eder?",
+    "options": ["A) Karbonhidrat anomer, glikozit; selüloz-nişasta bağ farkı β/α.", "B) Lipit amfifil zar, akışkanlık doymamışlık ve kolesterol.", "C) Transkripsiyon-translasyon kodon, tRNA, ribozom.", "D) Amino asit zwitterion, peptit bağ düzlemsel; protein yapı 1-4°.", "E) Enzim aktif site, kofaktör; inhibisyon yarışmalı Lineweaver burk kesişimi."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Biyokimya notundaki temel bilgi."
 },
 {
-    "question": "Biyokimya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Düzenleme allosterik, kovalent modifikasyon, gen ifadesi."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Biyokimya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Transkripsiyon-translasyon kodon, tRNA, ribozom.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Genetik kod ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Amino asit zwitterion, peptit bağ düzlemsel; protein yapı 1-4°.", "B) Enzim aktif site, kofaktör; inhibisyon yarışmalı Lineweaver burk kesişimi.", "C) Karbonhidrat anomer, glikozit; selüloz-nişasta bağ farkı β/α.", "D) Lipit amfifil zar, akışkanlık doymamışlık ve kolesterol.", "E) Genetik kod dejenere, evrensel (küçük sapmalar)."],
+    "correctAnswerIndex": 4,
+    "explanation": "Biyokimya notundaki temel bilgi."
 }
 ];

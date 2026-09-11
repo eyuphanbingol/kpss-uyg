@@ -61,63 +61,63 @@ window.oabt_sinif_7_sorulari = [
     "explanation": "30+20=50 notu."
 },
 {
-    "question": "Hayat Bilgisi Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Hayat bilgisi 1-3. sınıf bütünleşik hayat dersidir."],
+    "question": "Aşağıdakilerden hangisi Hayat bilgisi için doğru bir açıklamadır?",
+    "options": ["A) Yakın çevredan uzağa (Taba-Tyler ve spiral).", "B) 2026 ÖABT bu konu alan eğitimi (20 soru) havuzunun omurgalarındandır.", "C) Hayat bilgisi 1-3. sınıf bütünleşik hayat dersidir.", "D) Birey, toplum, doğa temaları iç içe.", "E) Beceri ve değer bilgi kadar ağırlıklıdır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Hayat Bilgisi Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Birey, toplum, doğa hakkında hangisi doğrudur?",
+    "options": ["A) Beceri ve değer bilgi kadar ağırlıklıdır.", "B) Yakın çevredan uzağa (Taba-Tyler ve spiral).", "C) 2026 ÖABT bu konu alan eğitimi (20 soru) havuzunun omurgalarındandır.", "D) Birey, toplum, doğa temaları iç içe.", "E) Hayat bilgisi 1-3. sınıf bütünleşik hayat dersidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Hayat Bilgisi Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Beceri ve değer hangisini ifade eder?",
+    "options": ["A) Hayat bilgisi 1-3. sınıf bütünleşik hayat dersidir.", "B) Birey, toplum, doğa temaları iç içe.", "C) Yakın çevredan uzağa (Taba-Tyler ve spiral).", "D) 2026 ÖABT bu konu alan eğitimi (20 soru) havuzunun omurgalarındandır.", "E) Beceri ve değer bilgi kadar ağırlıklıdır."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Hayat Bilgisi Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Hayat Bilgisi Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Birey, toplum, doğa temaları iç içe.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Yakın çevre ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Yakın çevredan uzağa (Taba-Tyler ve spiral).", "B) Hayat bilgisi 1-3. sınıf bütünleşik hayat dersidir.", "C) Birey, toplum, doğa temaları iç içe.", "D) Beceri ve değer bilgi kadar ağırlıklıdır.", "E) 2026 ÖABT bu konu alan eğitimi (20 soru) havuzunun omurgalarındandır."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Hayat Bilgisi Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Hayat Bilgisi Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Beceri ve değer bilgi kadar ağırlıklıdır."],
+    "question": "Aşağıdakilerden hangisi 2026 ÖABT için doğru bir açıklamadır?",
+    "options": ["A) Birey, toplum, doğa temaları iç içe.", "B) Beceri ve değer bilgi kadar ağırlıklıdır.", "C) Yakın çevredan uzağa (Taba-Tyler ve spiral).", "D) 2026 ÖABT bu konu alan eğitimi (20 soru) havuzunun omurgalarındandır.", "E) Hayat bilgisi 1-3. sınıf bütünleşik hayat dersidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Hayat Bilgisi Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Gezi, gözlem, konuşma halkası, istasyon, drama hakkında hangisi doğrudur?",
+    "options": ["A) Hayat bilgisi 1-3. sınıf bütünleşik hayat dersidir.", "B) Birey, toplum, doğa temaları iç içe.", "C) Beceri ve değer bilgi kadar ağırlıklıdır.", "D) Yakın çevredan uzağa (Taba-Tyler ve spiral).", "E) Gezi, gözlem, konuşma halkası, istasyon, drama."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Hayat Bilgisi Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Hayat Bilgisi Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Yakın çevredan uzağa (Taba-Tyler ve spiral).", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Örnek olay hangisini ifade eder?",
+    "options": ["A) Yakın çevredan uzağa (Taba-Tyler ve spiral).", "B) Örnek olay sınıf ve mahalle.", "C) Hayat bilgisi 1-3. sınıf bütünleşik hayat dersidir.", "D) Birey, toplum, doğa temaları iç içe.", "E) Beceri ve değer bilgi kadar ağırlıklıdır."],
+    "correctAnswerIndex": 1,
+    "explanation": "Hayat Bilgisi Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Hayat Bilgisi Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) 2026 ÖABT bu konu alan eğitimi (20 soru) havuzunun omurgalarındandır."],
+    "question": "Proje ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Birey, toplum, doğa temaları iç içe.", "B) Beceri ve değer bilgi kadar ağırlıklıdır.", "C) Yakın çevredan uzağa (Taba-Tyler ve spiral).", "D) Proje sınıf sözleşmesi, geri dönüşüm.", "E) Hayat bilgisi 1-3. sınıf bütünleşik hayat dersidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Hayat Bilgisi Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Kaynak için doğru bir açıklamadır?",
+    "options": ["A) Hayat bilgisi 1-3. sınıf bütünleşik hayat dersidir.", "B) Birey, toplum, doğa temaları iç içe.", "C) Beceri ve değer bilgi kadar ağırlıklıdır.", "D) Yakın çevredan uzağa (Taba-Tyler ve spiral).", "E) Kaynak aile büyükleri, yerel esnaf, afet müdürlüğü."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Hayat Bilgisi Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Hayat Bilgisi Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Gezi, gözlem, konuşma halkası, istasyon, drama.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Hayat Bilgisi Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Örnek olay sınıf ve mahalle."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Hayat Bilgisi Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Proje sınıf sözleşmesi, geri dönüşüm.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Hayat Bilgisi Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Kaynak aile büyükleri, yerel esnaf, afet müdürlüğü."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Hayat Bilgisi Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Ölçme performans, akran, öz değerlendirme.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Ölçme hakkında hangisi doğrudur?",
+    "options": ["A) Beceri ve değer bilgi kadar ağırlıklıdır.", "B) Yakın çevredan uzağa (Taba-Tyler ve spiral).", "C) Ölçme performans, akran, öz değerlendirme.", "D) Hayat bilgisi 1-3. sınıf bütünleşik hayat dersidir.", "E) Birey, toplum, doğa temaları iç içe."],
+    "correctAnswerIndex": 2,
+    "explanation": "Hayat Bilgisi Öğretimi notundaki temel bilgi."
 }
 ];

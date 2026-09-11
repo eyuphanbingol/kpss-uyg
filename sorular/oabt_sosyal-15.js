@@ -55,69 +55,69 @@ window.oabt_sosyal_15_sorulari = [
     "explanation": "Kurumsallaşma."
 },
 {
-    "question": "Sosyal Proje Geliştirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Sorun analizi ağaç, paydaş, ihtiyaç kanıtı (veri, görüşme).", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Sorun analizi için doğru bir açıklamadır?",
+    "options": ["A) Sorun analizi ağaç, paydaş, ihtiyaç kanıtı (veri, görüşme).", "B) Amaç-hedef-gösterge SMART; çıktı-sonuç-etki ayrımı.", "C) Mantıksal çerçeve varsayım ve risk.", "D) Kaynak ve bütçe gönüllülük, okul-mahalle ortaklığı.", "E) İzleme-değerlendirme süreç ve etki; etik (zarar vermeme, onam)."],
+    "correctAnswerIndex": 0,
+    "explanation": "Sosyal Proje Geliştirme notundaki temel bilgi."
 },
 {
-    "question": "Sosyal Proje Geliştirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Amaç-hedef-gösterge SMART; çıktı-sonuç-etki ayrımı."],
+    "question": "Amaç-hedef-gösterge hakkında hangisi doğrudur?",
+    "options": ["A) İzleme-değerlendirme süreç ve etki; etik (zarar vermeme, onam).", "B) Amaç-hedef-gösterge SMART; çıktı-sonuç-etki ayrımı.", "C) Sorun analizi ağaç, paydaş, ihtiyaç kanıtı (veri, görüşme).", "D) Mantıksal çerçeve varsayım ve risk.", "E) Kaynak ve bütçe gönüllülük, okul-mahalle ortaklığı."],
+    "correctAnswerIndex": 1,
+    "explanation": "Sosyal Proje Geliştirme notundaki temel bilgi."
+},
+{
+    "question": "Mantıksal çerçeve hangisini ifade eder?",
+    "options": ["A) Mantıksal çerçeve varsayım ve risk.", "B) Sorun analizi ağaç, paydaş, ihtiyaç kanıtı (veri, görüşme).", "C) Amaç-hedef-gösterge SMART; çıktı-sonuç-etki ayrımı.", "D) Kaynak ve bütçe gönüllülük, okul-mahalle ortaklığı.", "E) İzleme-değerlendirme süreç ve etki; etik (zarar vermeme, onam)."],
+    "correctAnswerIndex": 0,
+    "explanation": "Sosyal Proje Geliştirme notundaki temel bilgi."
+},
+{
+    "question": "Kaynak ve bütçe ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Mantıksal çerçeve varsayım ve risk.", "B) İzleme-değerlendirme süreç ve etki; etik (zarar vermeme, onam).", "C) Kaynak ve bütçe gönüllülük, okul-mahalle ortaklığı.", "D) Sorun analizi ağaç, paydaş, ihtiyaç kanıtı (veri, görüşme).", "E) Amaç-hedef-gösterge SMART; çıktı-sonuç-etki ayrımı."],
+    "correctAnswerIndex": 2,
+    "explanation": "Sosyal Proje Geliştirme notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi İzleme-değerlendirme için doğru bir açıklamadır?",
+    "options": ["A) İzleme-değerlendirme süreç ve etki; etik (zarar vermeme, onam).", "B) Sorun analizi ağaç, paydaş, ihtiyaç kanıtı (veri, görüşme).", "C) Amaç-hedef-gösterge SMART; çıktı-sonuç-etki ayrımı.", "D) Mantıksal çerçeve varsayım ve risk.", "E) Kaynak ve bütçe gönüllülük, okul-mahalle ortaklığı."],
+    "correctAnswerIndex": 0,
+    "explanation": "Sosyal Proje Geliştirme notundaki temel bilgi."
+},
+{
+    "question": "Hizmet ederek öğrenme hakkında hangisi doğrudur?",
+    "options": ["A) Sorun analizi ağaç, paydaş, ihtiyaç kanıtı (veri, görüşme).", "B) Amaç-hedef-gösterge SMART; çıktı-sonuç-etki ayrımı.", "C) Mantıksal çerçeve varsayım ve risk.", "D) Kaynak ve bütçe gönüllülük, okul-mahalle ortaklığı.", "E) Hizmet ederek öğrenme (service-learning) müfredat bağlantısı."],
+    "correctAnswerIndex": 4,
+    "explanation": "Sosyal Proje Geliştirme notundaki temel bilgi."
+},
+{
+    "question": "Katılımcı yöntem hangisini ifade eder?",
+    "options": ["A) Mantıksal çerçeve varsayım ve risk.", "B) Kaynak ve bütçe gönüllülük, okul-mahalle ortaklığı.", "C) Katılımcı yöntem öğrencinin sorun seçimi, söz hakkı.", "D) Sorun analizi ağaç, paydaş, ihtiyaç kanıtı (veri, görüşme).", "E) Amaç-hedef-gösterge SMART; çıktı-sonuç-etki ayrımı."],
+    "correctAnswerIndex": 2,
+    "explanation": "Sosyal Proje Geliştirme notundaki temel bilgi."
+},
+{
+    "question": "Yerel konular ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Kaynak ve bütçe gönüllülük, okul-mahalle ortaklığı.", "B) Yerel konular erişilebilirlik, çevre, yaşlı, göç, afet hazırlığı.", "C) Sorun analizi ağaç, paydaş, ihtiyaç kanıtı (veri, görüşme).", "D) Amaç-hedef-gösterge SMART; çıktı-sonuç-etki ayrımı.", "E) Mantıksal çerçeve varsayım ve risk."],
+    "correctAnswerIndex": 1,
+    "explanation": "Sosyal Proje Geliştirme notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi İşbirliği için doğru bir açıklamadır?",
+    "options": ["A) Sorun analizi ağaç, paydaş, ihtiyaç kanıtı (veri, görüşme).", "B) Amaç-hedef-gösterge SMART; çıktı-sonuç-etki ayrımı.", "C) Mantıksal çerçeve varsayım ve risk.", "D) Kaynak ve bütçe gönüllülük, okul-mahalle ortaklığı.", "E) İşbirliği STK, belediye, aile; güç dengesizliği."],
+    "correctAnswerIndex": 4,
+    "explanation": "Sosyal Proje Geliştirme notundaki temel bilgi."
+},
+{
+    "question": "Sürdürülebilirlik hakkında hangisi doğrudur?",
+    "options": ["A) Sorun analizi ağaç, paydaş, ihtiyaç kanıtı (veri, görüşme).", "B) Amaç-hedef-gösterge SMART; çıktı-sonuç-etki ayrımı.", "C) Mantıksal çerçeve varsayım ve risk.", "D) Kaynak ve bütçe gönüllülük, okul-mahalle ortaklığı.", "E) Sürdürülebilirlik proje bitince ne kalır?"],
+    "correctAnswerIndex": 4,
+    "explanation": "Sosyal Proje Geliştirme notundaki temel bilgi."
+},
+{
+    "question": "Kanıt hangisini ifade eder?",
+    "options": ["A) Mantıksal çerçeve varsayım ve risk.", "B) Kaynak ve bütçe gönüllülük, okul-mahalle ortaklığı.", "C) İzleme-değerlendirme süreç ve etki; etik (zarar vermeme, onam).", "D) Kanıt önce-sonra, gösterge, sınırlılık itirafı.", "E) Amaç-hedef-gösterge SMART; çıktı-sonuç-etki ayrımı."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Sosyal Proje Geliştirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Mantıksal çerçeve varsayım ve risk.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Sosyal Proje Geliştirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Kaynak ve bütçe gönüllülük, okul-mahalle ortaklığı."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Sosyal Proje Geliştirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) İzleme-değerlendirme süreç ve etki; etik (zarar vermeme, onam).", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Sosyal Proje Geliştirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Hizmet ederek öğrenme (service-learning) müfredat bağlantısı."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Sosyal Proje Geliştirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Katılımcı yöntem öğrencinin sorun seçimi, söz hakkı.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Sosyal Proje Geliştirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Yerel konular erişilebilirlik, çevre, yaşlı, göç, afet hazırlığı."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Sosyal Proje Geliştirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) İşbirliği STK, belediye, aile; güç dengesizliği.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Sosyal Proje Geliştirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Sürdürülebilirlik proje bitince ne kalır?"],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Sosyal Proje Geliştirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Kanıt önce-sonra, gösterge, sınırlılık itirafı.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Sosyal Proje Geliştirme notundaki temel bilgi."
 }
 ];

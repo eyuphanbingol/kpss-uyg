@@ -61,63 +61,63 @@ window.oabt_cog_7_sorulari = [
     "explanation": "Eğim-bakı hidrolojik analiz tabanıdır."
 },
 {
-    "question": "Coğrafi Bilgi Sistemleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) CBS mekânsal veriyi katman katman depolar, analiz eder, görselleştirir.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi CBS için doğru bir açıklamadır?",
+    "options": ["A) CBS mekânsal veriyi katman katman depolar, analiz eder, görselleştirir.", "B) Vektör nokta-çizgi-alan; raster hücre (uydu, yükseklik).", "C) Koordinat sistemi ve projeksiyon (UTM, coğrafi WGS84) konum doğruluğunu belirler.", "D) Öznitelik tablosu geometriye bağlı niteliktir (nüfus, arazi kullanımı).", "E) Topoloji komşuluk, kesişme, içerme ilişkilerini korur."],
+    "correctAnswerIndex": 0,
+    "explanation": "Coğrafi Bilgi Sistemleri notundaki temel bilgi."
+},
+{
+    "question": "Vektör hakkında hangisi doğrudur?",
+    "options": ["A) Vektör nokta-çizgi-alan; raster hücre (uydu, yükseklik).", "B) CBS mekânsal veriyi katman katman depolar, analiz eder, görselleştirir.", "C) Koordinat sistemi ve projeksiyon (UTM, coğrafi WGS84) konum doğruluğunu belirler.", "D) Öznitelik tablosu geometriye bağlı niteliktir (nüfus, arazi kullanımı).", "E) Topoloji komşuluk, kesişme, içerme ilişkilerini korur."],
+    "correctAnswerIndex": 0,
+    "explanation": "Coğrafi Bilgi Sistemleri notundaki temel bilgi."
+},
+{
+    "question": "Koordinat sistemi ve projeksiyon hangisini ifade eder?",
+    "options": ["A) Vektör nokta-çizgi-alan; raster hücre (uydu, yükseklik).", "B) Öznitelik tablosu geometriye bağlı niteliktir (nüfus, arazi kullanımı).", "C) Topoloji komşuluk, kesişme, içerme ilişkilerini korur.", "D) Koordinat sistemi ve projeksiyon (UTM, coğrafi WGS84) konum doğruluğunu belirler.", "E) CBS mekânsal veriyi katman katman depolar, analiz eder, görselleştirir."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Coğrafi Bilgi Sistemleri notundaki temel bilgi."
 },
 {
-    "question": "Coğrafi Bilgi Sistemleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Vektör nokta-çizgi-alan; raster hücre (uydu, yükseklik).", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Coğrafi Bilgi Sistemleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Koordinat sistemi ve projeksiyon (UTM, coğrafi WGS84) konum doğruluğunu belirler.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Öznitelik tablosu ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Vektör nokta-çizgi-alan; raster hücre (uydu, yükseklik).", "B) Koordinat sistemi ve projeksiyon (UTM, coğrafi WGS84) konum doğruluğunu belirler.", "C) Topoloji komşuluk, kesişme, içerme ilişkilerini korur.", "D) Öznitelik tablosu geometriye bağlı niteliktir (nüfus, arazi kullanımı).", "E) CBS mekânsal veriyi katman katman depolar, analiz eder, görselleştirir."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Coğrafi Bilgi Sistemleri notundaki temel bilgi."
 },
 {
-    "question": "Coğrafi Bilgi Sistemleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Öznitelik tablosu geometriye bağlı niteliktir (nüfus, arazi kullanımı).", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Coğrafi Bilgi Sistemleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Topoloji komşuluk, kesişme, içerme ilişkilerini korur.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi Topoloji için doğru bir açıklamadır?",
+    "options": ["A) Vektör nokta-çizgi-alan; raster hücre (uydu, yükseklik).", "B) Koordinat sistemi ve projeksiyon (UTM, coğrafi WGS84) konum doğruluğunu belirler.", "C) Öznitelik tablosu geometriye bağlı niteliktir (nüfus, arazi kullanımı).", "D) Topoloji komşuluk, kesişme, içerme ilişkilerini korur.", "E) CBS mekânsal veriyi katman katman depolar, analiz eder, görselleştirir."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Coğrafi Bilgi Sistemleri notundaki temel bilgi."
 },
 {
-    "question": "Coğrafi Bilgi Sistemleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Uzaktan algılama uydudan elektromanyetik yansıma; bantlar.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Uzaktan algılama hakkında hangisi doğrudur?",
+    "options": ["A) Uzaktan algılama uydudan elektromanyetik yansıma; bantlar.", "B) CBS mekânsal veriyi katman katman depolar, analiz eder, görselleştirir.", "C) Vektör nokta-çizgi-alan; raster hücre (uydu, yükseklik).", "D) Koordinat sistemi ve projeksiyon (UTM, coğrafi WGS84) konum doğruluğunu belirler.", "E) Öznitelik tablosu geometriye bağlı niteliktir (nüfus, arazi kullanımı)."],
+    "correctAnswerIndex": 0,
+    "explanation": "Coğrafi Bilgi Sistemleri notundaki temel bilgi."
+},
+{
+    "question": "Çözünürlük hangisini ifade eder?",
+    "options": ["A) CBS mekânsal veriyi katman katman depolar, analiz eder, görselleştirir.", "B) Vektör nokta-çizgi-alan; raster hücre (uydu, yükseklik).", "C) Koordinat sistemi ve projeksiyon (UTM, coğrafi WGS84) konum doğruluğunu belirler.", "D) Öznitelik tablosu geometriye bağlı niteliktir (nüfus, arazi kullanımı).", "E) Çözünürlük mekânsal, spektral, zamansal, radyometrik."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Coğrafi Bilgi Sistemleri notundaki temel bilgi."
 },
 {
-    "question": "Coğrafi Bilgi Sistemleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Çözünürlük mekânsal, spektral, zamansal, radyometrik.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Coğrafi Bilgi Sistemleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) GPS/GNSS uydu konumu; arazi ölçümü ve navigasyon.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "GPS/GNSS ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) CBS mekânsal veriyi katman katman depolar, analiz eder, görselleştirir.", "B) Vektör nokta-çizgi-alan; raster hücre (uydu, yükseklik).", "C) Koordinat sistemi ve projeksiyon (UTM, coğrafi WGS84) konum doğruluğunu belirler.", "D) Öznitelik tablosu geometriye bağlı niteliktir (nüfus, arazi kullanımı).", "E) GPS/GNSS uydu konumu; arazi ölçümü ve navigasyon."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Coğrafi Bilgi Sistemleri notundaki temel bilgi."
 },
 {
-    "question": "Coğrafi Bilgi Sistemleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Ortofoto ve DEM yükseklik ve gerçek konumlu görüntü.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Coğrafi Bilgi Sistemleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) İnsansız hava aracı yerel yüksek çözünürlüklü veri.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi Ortofoto ve DEM için doğru bir açıklamadır?",
+    "options": ["A) CBS mekânsal veriyi katman katman depolar, analiz eder, görselleştirir.", "B) Vektör nokta-çizgi-alan; raster hücre (uydu, yükseklik).", "C) Koordinat sistemi ve projeksiyon (UTM, coğrafi WGS84) konum doğruluğunu belirler.", "D) Öznitelik tablosu geometriye bağlı niteliktir (nüfus, arazi kullanımı).", "E) Ortofoto ve DEM yükseklik ve gerçek konumlu görüntü."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Coğrafi Bilgi Sistemleri notundaki temel bilgi."
+},
+{
+    "question": "İnsansız hava aracı hakkında hangisi doğrudur?",
+    "options": ["A) İnsansız hava aracı yerel yüksek çözünürlüklü veri.", "B) CBS mekânsal veriyi katman katman depolar, analiz eder, görselleştirir.", "C) Vektör nokta-çizgi-alan; raster hücre (uydu, yükseklik).", "D) Koordinat sistemi ve projeksiyon (UTM, coğrafi WGS84) konum doğruluğunu belirler.", "E) Öznitelik tablosu geometriye bağlı niteliktir (nüfus, arazi kullanımı)."],
+    "correctAnswerIndex": 0,
+    "explanation": "Coğrafi Bilgi Sistemleri notundaki temel bilgi."
 }
 ];

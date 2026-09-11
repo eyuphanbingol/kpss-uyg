@@ -55,69 +55,69 @@ window.oabt_fizik_4_sorulari = [
     "explanation": "Girişim d, kırınım a yarık genişliği."
 },
 {
-    "question": "Optik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Fermat en az zaman; yansıma i=r, kırılma Snell.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Fermat için doğru bir açıklamadır?",
+    "options": ["A) Aynalar 1/f=1/do+1/di; çukur pozitif f (işaret uzlaşısı net belirtilmeli).", "B) İnce mercek mercek yapıcı; diyoptri P=1/f.", "C) Aberasyon küresel, kromatik; açıklık diyafram.", "D) Optik alet büyüteç, teleskop, mikroskop açısal büyütme.", "E) Fermat en az zaman; yansıma i=r, kırılma Snell."],
+    "correctAnswerIndex": 4,
+    "explanation": "Optik notundaki temel bilgi."
 },
 {
-    "question": "Optik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Aynalar 1/f=1/do+1/di; çukur pozitif f (işaret uzlaşısı net belirtilmeli).", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aynalar hakkında hangisi doğrudur?",
+    "options": ["A) İnce mercek mercek yapıcı; diyoptri P=1/f.", "B) Aberasyon küresel, kromatik; açıklık diyafram.", "C) Optik alet büyüteç, teleskop, mikroskop açısal büyütme.", "D) Aynalar 1/f=1/do+1/di; çukur pozitif f (işaret uzlaşısı net belirtilmeli).", "E) Fermat en az zaman; yansıma i=r, kırılma Snell."],
+    "correctAnswerIndex": 3,
+    "explanation": "Optik notundaki temel bilgi."
+},
+{
+    "question": "İnce mercek hangisini ifade eder?",
+    "options": ["A) Fermat en az zaman; yansıma i=r, kırılma Snell.", "B) Aynalar 1/f=1/do+1/di; çukur pozitif f (işaret uzlaşısı net belirtilmeli).", "C) Aberasyon küresel, kromatik; açıklık diyafram.", "D) Optik alet büyüteç, teleskop, mikroskop açısal büyütme.", "E) İnce mercek mercek yapıcı; diyoptri P=1/f."],
+    "correctAnswerIndex": 4,
+    "explanation": "Optik notundaki temel bilgi."
+},
+{
+    "question": "Aberasyon ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Aynalar 1/f=1/do+1/di; çukur pozitif f (işaret uzlaşısı net belirtilmeli).", "B) İnce mercek mercek yapıcı; diyoptri P=1/f.", "C) Optik alet büyüteç, teleskop, mikroskop açısal büyütme.", "D) Aberasyon küresel, kromatik; açıklık diyafram.", "E) Fermat en az zaman; yansıma i=r, kırılma Snell."],
+    "correctAnswerIndex": 3,
+    "explanation": "Optik notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Optik alet için doğru bir açıklamadır?",
+    "options": ["A) Aynalar 1/f=1/do+1/di; çukur pozitif f (işaret uzlaşısı net belirtilmeli).", "B) İnce mercek mercek yapıcı; diyoptri P=1/f.", "C) Aberasyon küresel, kromatik; açıklık diyafram.", "D) Optik alet büyüteç, teleskop, mikroskop açısal büyütme.", "E) Fermat en az zaman; yansıma i=r, kırılma Snell."],
+    "correctAnswerIndex": 3,
+    "explanation": "Optik notundaki temel bilgi."
+},
+{
+    "question": "Huygens-Fresnel hakkında hangisi doğrudur?",
+    "options": ["A) İnce mercek mercek yapıcı; diyoptri P=1/f.", "B) Aberasyon küresel, kromatik; açıklık diyafram.", "C) Huygens-Fresnel girişim; Young d sinθ=mλ.", "D) Fermat en az zaman; yansıma i=r, kırılma Snell.", "E) Aynalar 1/f=1/do+1/di; çukur pozitif f (işaret uzlaşısı net belirtilmeli)."],
+    "correctAnswerIndex": 2,
+    "explanation": "Optik notundaki temel bilgi."
+},
+{
+    "question": "İnce film hangisini ifade eder?",
+    "options": ["A) Aberasyon küresel, kromatik; açıklık diyafram.", "B) İnce film yol farkı 2nt, faz değişimi n düşükten yükseğe yansımada π.", "C) Fermat en az zaman; yansıma i=r, kırılma Snell.", "D) Aynalar 1/f=1/do+1/di; çukur pozitif f (işaret uzlaşısı net belirtilmeli).", "E) İnce mercek mercek yapıcı; diyoptri P=1/f."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Optik notundaki temel bilgi."
 },
 {
-    "question": "Optik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) İnce mercek mercek yapıcı; diyoptri P=1/f.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Kırınım ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İnce mercek mercek yapıcı; diyoptri P=1/f.", "B) Aberasyon küresel, kromatik; açıklık diyafram.", "C) Kırınım tek yarık a sinθ=λ, çözünürlük Rayleigh 1,22 λ/D.", "D) Fermat en az zaman; yansıma i=r, kırılma Snell.", "E) Aynalar 1/f=1/do+1/di; çukur pozitif f (işaret uzlaşısı net belirtilmeli)."],
+    "correctAnswerIndex": 2,
+    "explanation": "Optik notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Polarizasyon için doğru bir açıklamadır?",
+    "options": ["A) Polarizasyon Malus I=I0 cos^2θ; Brewster tanθB=n2/n1.", "B) Fermat en az zaman; yansıma i=r, kırılma Snell.", "C) Aynalar 1/f=1/do+1/di; çukur pozitif f (işaret uzlaşısı net belirtilmeli).", "D) İnce mercek mercek yapıcı; diyoptri P=1/f.", "E) Aberasyon küresel, kromatik; açıklık diyafram."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Optik notundaki temel bilgi."
 },
 {
-    "question": "Optik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Aberasyon küresel, kromatik; açıklık diyafram.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Koherans hakkında hangisi doğrudur?",
+    "options": ["A) Aynalar 1/f=1/do+1/di; çukur pozitif f (işaret uzlaşısı net belirtilmeli).", "B) İnce mercek mercek yapıcı; diyoptri P=1/f.", "C) Aberasyon küresel, kromatik; açıklık diyafram.", "D) Koherans zaman ve uzay; lazer yüksek koherans.", "E) Fermat en az zaman; yansıma i=r, kırılma Snell."],
+    "correctAnswerIndex": 3,
+    "explanation": "Optik notundaki temel bilgi."
 },
 {
-    "question": "Optik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Optik alet büyüteç, teleskop, mikroskop açısal büyütme.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Optik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Huygens-Fresnel girişim; Young d sinθ=mλ.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Optik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) İnce film yol farkı 2nt, faz değişimi n düşükten yükseğe yansımada π.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Optik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Kırınım tek yarık a sinθ=λ, çözünürlük Rayleigh 1,22 λ/D.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Optik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Polarizasyon Malus I=I0 cos^2θ; Brewster tanθB=n2/n1.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Optik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Koherans zaman ve uzay; lazer yüksek koherans.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Optik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Foton enerjisi görünür ~eV; yoğunluk foton sayısı.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Foton enerjisi hangisini ifade eder?",
+    "options": ["A) Fermat en az zaman; yansıma i=r, kırılma Snell.", "B) Aynalar 1/f=1/do+1/di; çukur pozitif f (işaret uzlaşısı net belirtilmeli).", "C) İnce mercek mercek yapıcı; diyoptri P=1/f.", "D) Aberasyon küresel, kromatik; açıklık diyafram.", "E) Foton enerjisi görünür ~eV; yoğunluk foton sayısı."],
+    "correctAnswerIndex": 4,
+    "explanation": "Optik notundaki temel bilgi."
 }
 ];

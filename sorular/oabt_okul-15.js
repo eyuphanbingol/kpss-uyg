@@ -61,63 +61,63 @@ window.oabt_okul_15_sorulari = [
     "explanation": "Sağlık."
 },
 {
-    "question": "Hareket konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kaba motor koş, zıpla, tırman, denge.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Kaba motor için doğru bir açıklamadır?",
+    "options": ["A) Isınma oyunları, istasyon, dans, parkur.", "B) Kaba motor koş, zıpla, tırman, denge.", "C) İnce motor yap-boz, boncuk, kalem öncesi.", "D) Beden farkındalığı sağ-sol, hız, güç.", "E) 2026 hareket ayrı konu; oyun konusundan ayrılır."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Hareket notundaki temel bilgi."
 },
 {
-    "question": "Hareket konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) İnce motor yap-boz, boncuk, kalem öncesi.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "İnce motor hakkında hangisi doğrudur?",
+    "options": ["A) Beden farkındalığı sağ-sol, hız, güç.", "B) 2026 hareket ayrı konu; oyun konusundan ayrılır.", "C) Isınma oyunları, istasyon, dans, parkur.", "D) İnce motor yap-boz, boncuk, kalem öncesi.", "E) Kaba motor koş, zıpla, tırman, denge."],
+    "correctAnswerIndex": 3,
+    "explanation": "Hareket notundaki temel bilgi."
+},
+{
+    "question": "Beden farkındalığı hangisini ifade eder?",
+    "options": ["A) Kaba motor koş, zıpla, tırman, denge.", "B) İnce motor yap-boz, boncuk, kalem öncesi.", "C) 2026 hareket ayrı konu; oyun konusundan ayrılır.", "D) Isınma oyunları, istasyon, dans, parkur.", "E) Beden farkındalığı sağ-sol, hız, güç."],
+    "correctAnswerIndex": 4,
+    "explanation": "Hareket notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi 2026 için doğru bir açıklamadır?",
+    "options": ["A) Kaba motor koş, zıpla, tırman, denge.", "B) İnce motor yap-boz, boncuk, kalem öncesi.", "C) Beden farkındalığı sağ-sol, hız, güç.", "D) Isınma oyunları, istasyon, dans, parkur.", "E) 2026 hareket ayrı konu; oyun konusundan ayrılır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Hareket notundaki temel bilgi."
+},
+{
+    "question": "Isınma oyunları, istasyon, dans, parkur hakkında hangisi doğrudur?",
+    "options": ["A) Isınma oyunları, istasyon, dans, parkur.", "B) Kaba motor koş, zıpla, tırman, denge.", "C) İnce motor yap-boz, boncuk, kalem öncesi.", "D) Beden farkındalığı sağ-sol, hız, güç.", "E) 2026 hareket ayrı konu; oyun konusundan ayrılır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Hareket notundaki temel bilgi."
+},
+{
+    "question": "Araç ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İnce motor yap-boz, boncuk, kalem öncesi.", "B) Beden farkındalığı sağ-sol, hız, güç.", "C) 2026 hareket ayrı konu; oyun konusundan ayrılır.", "D) Araç top, çember, tünel, eşarp.", "E) Kaba motor koş, zıpla, tırman, denge."],
+    "correctAnswerIndex": 3,
+    "explanation": "Hareket notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Güvenlik için doğru bir açıklamadır?",
+    "options": ["A) Kaba motor koş, zıpla, tırman, denge.", "B) İnce motor yap-boz, boncuk, kalem öncesi.", "C) Beden farkındalığı sağ-sol, hız, güç.", "D) 2026 hareket ayrı konu; oyun konusundan ayrılır.", "E) Güvenlik alan, ayakkabı, su."],
+    "correctAnswerIndex": 4,
+    "explanation": "Hareket notundaki temel bilgi."
+},
+{
+    "question": "Kapsayıcı kural uyarlama hakkında hangisi doğrudur?",
+    "options": ["A) Beden farkındalığı sağ-sol, hız, güç.", "B) 2026 hareket ayrı konu; oyun konusundan ayrılır.", "C) Kapsayıcı kural uyarlama.", "D) Kaba motor koş, zıpla, tırman, denge.", "E) İnce motor yap-boz, boncuk, kalem öncesi."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Hareket notundaki temel bilgi."
 },
 {
-    "question": "Hareket konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Beden farkındalığı sağ-sol, hız, güç.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Motor gecikme izlem hangisini ifade eder?",
+    "options": ["A) İnce motor yap-boz, boncuk, kalem öncesi.", "B) Beden farkındalığı sağ-sol, hız, güç.", "C) 2026 hareket ayrı konu; oyun konusundan ayrılır.", "D) Motor gecikme izlem sevk.", "E) Kaba motor koş, zıpla, tırman, denge."],
+    "correctAnswerIndex": 3,
+    "explanation": "Hareket notundaki temel bilgi."
+},
+{
+    "question": "Obezite önleme ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) 2026 hareket ayrı konu; oyun konusundan ayrılır.", "B) Obezite önleme hareket kültürü.", "C) Kaba motor koş, zıpla, tırman, denge.", "D) İnce motor yap-boz, boncuk, kalem öncesi.", "E) Beden farkındalığı sağ-sol, hız, güç."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Hareket konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Açık hava günlük.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Hareket konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) 2026 hareket ayrı konu; oyun konusundan ayrılır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Hareket konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Isınma oyunları, istasyon, dans, parkur.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Hareket konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Müzik-hareket.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Hareket konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Araç top, çember, tünel, eşarp.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Hareket konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Güvenlik alan, ayakkabı, su.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Hareket konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Kapsayıcı kural uyarlama.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Hareket notundaki temel bilgi."
 }
 ];

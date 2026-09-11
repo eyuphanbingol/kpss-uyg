@@ -67,57 +67,57 @@ window.ags_sozel_5_sorulari = [
     "explanation": "Uzunluk kriter değildir."
 },
 {
-    "question": "Sözel Mantık konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Sıralama, kişileri veya nesneleri önünde-arkasında, sağında-solunda, önce-sonra ilişkisiyl", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Sözel Mantık konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Eşleştirme, kişi-meslek, kişi-şehir, kişi-renk gibi iki küme arasında birebir veya koşullu", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Sıralama için doğru bir açıklamadır?",
+    "options": ["A) İpucu tablosu, satır-sütun ile çelişen kombinasyonları eler.", "B) Sıralama, kişileri veya nesneleri önünde-arkasında, sağında-solunda, önce-sonra ilişkisiyle dizer.", "C) Eşleştirme, kişi-meslek, kişi-şehir, kişi-renk gibi iki küme arasında birebir veya koşullu bağ kurar.", "D) Kesin bilgi, önermelerden zorunlu çıkan durumdur; olası bilgi henüz kilitlenmemiştir.", "E) Olumsuz önerme eleme yapar; birini dışlamak diğerlerini güçlendirir."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Sözel Mantık notundaki temel bilgi."
 },
 {
-    "question": "Sözel Mantık konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Kesin bilgi, önermelerden zorunlu çıkan durumdur; olası bilgi henüz kilitlenmemiştir.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Eşleştirme hakkında hangisi doğrudur?",
+    "options": ["A) Eşleştirme, kişi-meslek, kişi-şehir, kişi-renk gibi iki küme arasında birebir veya koşullu bağ kurar.", "B) Sıralama, kişileri veya nesneleri önünde-arkasında, sağında-solunda, önce-sonra ilişkisiyle dizer.", "C) Kesin bilgi, önermelerden zorunlu çıkan durumdur; olası bilgi henüz kilitlenmemiştir.", "D) Olumsuz önerme eleme yapar; birini dışlamak diğerlerini güçlendirir.", "E) İpucu tablosu, satır-sütun ile çelişen kombinasyonları eler."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Sözel Mantık notundaki temel bilgi."
 },
 {
-    "question": "Sözel Mantık konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Olumsuz önerme eleme yapar; birini dışlamak diğerlerini güçlendirir.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Kesin bilgi hangisini ifade eder?",
+    "options": ["A) Sıralama, kişileri veya nesneleri önünde-arkasında, sağında-solunda, önce-sonra ilişkisiyle dizer.", "B) Eşleştirme, kişi-meslek, kişi-şehir, kişi-renk gibi iki küme arasında birebir veya koşullu bağ kurar.", "C) Olumsuz önerme eleme yapar; birini dışlamak diğerlerini güçlendirir.", "D) İpucu tablosu, satır-sütun ile çelişen kombinasyonları eler.", "E) Kesin bilgi, önermelerden zorunlu çıkan durumdur; olası bilgi henüz kilitlenmemiştir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Sözel Mantık notundaki temel bilgi."
+},
+{
+    "question": "Olumsuz önerme ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Olumsuz önerme eleme yapar; birini dışlamak diğerlerini güçlendirir.", "B) Sıralama, kişileri veya nesneleri önünde-arkasında, sağında-solunda, önce-sonra ilişkisiyle dizer.", "C) Eşleştirme, kişi-meslek, kişi-şehir, kişi-renk gibi iki küme arasında birebir veya koşullu bağ kurar.", "D) Kesin bilgi, önermelerden zorunlu çıkan durumdur; olası bilgi henüz kilitlenmemiştir.", "E) İpucu tablosu, satır-sütun ile çelişen kombinasyonları eler."],
+    "correctAnswerIndex": 0,
+    "explanation": "Sözel Mantık notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi İpucu tablosu için doğru bir açıklamadır?",
+    "options": ["A) Eşleştirme, kişi-meslek, kişi-şehir, kişi-renk gibi iki küme arasında birebir veya koşullu bağ kurar.", "B) Kesin bilgi, önermelerden zorunlu çıkan durumdur; olası bilgi henüz kilitlenmemiştir.", "C) Olumsuz önerme eleme yapar; birini dışlamak diğerlerini güçlendirir.", "D) İpucu tablosu, satır-sütun ile çelişen kombinasyonları eler.", "E) Sıralama, kişileri veya nesneleri önünde-arkasında, sağında-solunda, önce-sonra ilişkisiyle dizer."],
+    "correctAnswerIndex": 3,
+    "explanation": "Sözel Mantık notundaki temel bilgi."
+},
+{
+    "question": "Küme hakkında hangisi doğrudur?",
+    "options": ["A) Kesin bilgi, önermelerden zorunlu çıkan durumdur; olası bilgi henüz kilitlenmemiştir.", "B) Olumsuz önerme eleme yapar; birini dışlamak diğerlerini güçlendirir.", "C) İpucu tablosu, satır-sütun ile çelişen kombinasyonları eler.", "D) Küme, ortak özellikli eleman topluluğudur; kesişim, birleşim, fark işlemleri sözel mantıkta da geçerlidir.", "E) Sıralama, kişileri veya nesneleri önünde-arkasında, sağında-solunda, önce-sonra ilişkisiyle dizer."],
+    "correctAnswerIndex": 3,
+    "explanation": "Sözel Mantık notundaki temel bilgi."
+},
+{
+    "question": "Bütün-hiçbiri-bazı hangisini ifade eder?",
+    "options": ["A) Olumsuz önerme eleme yapar; birini dışlamak diğerlerini güçlendirir.", "B) Bütün-hiçbiri-bazı niceleyicileri evrensel veya tikel önerme kurar.", "C) Sıralama, kişileri veya nesneleri önünde-arkasında, sağında-solunda, önce-sonra ilişkisiyle dizer.", "D) Eşleştirme, kişi-meslek, kişi-şehir, kişi-renk gibi iki küme arasında birebir veya koşullu bağ kurar.", "E) Kesin bilgi, önermelerden zorunlu çıkan durumdur; olası bilgi henüz kilitlenmemiştir."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Sözel Mantık notundaki temel bilgi."
 },
 {
-    "question": "Sözel Mantık konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) İpucu tablosu, satır-sütun ile çelişen kombinasyonları eler.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Doğru-yanlış önerme ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Eşleştirme, kişi-meslek, kişi-şehir, kişi-renk gibi iki küme arasında birebir veya koşullu bağ kurar.", "B) Kesin bilgi, önermelerden zorunlu çıkan durumdur; olası bilgi henüz kilitlenmemiştir.", "C) Olumsuz önerme eleme yapar; birini dışlamak diğerlerini güçlendirir.", "D) Doğru-yanlış önerme: verilenlere göre değer alır; ek varsayım katılmaz.", "E) Sıralama, kişileri veya nesneleri önünde-arkasında, sağında-solunda, önce-sonra ilişkisiyle dizer."],
+    "correctAnswerIndex": 3,
+    "explanation": "Sözel Mantık notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Karşıt önerme için doğru bir açıklamadır?",
+    "options": ["A) Karşıt önerme evrensel olumlunun evrensel olumsuzu; çelişik hem nicelik hem nitelik değişir.", "B) Sıralama, kişileri veya nesneleri önünde-arkasında, sağında-solunda, önce-sonra ilişkisiyle dizer.", "C) Eşleştirme, kişi-meslek, kişi-şehir, kişi-renk gibi iki küme arasında birebir veya koşullu bağ kurar.", "D) Kesin bilgi, önermelerden zorunlu çıkan durumdur; olası bilgi henüz kilitlenmemiştir.", "E) Olumsuz önerme eleme yapar; birini dışlamak diğerlerini güçlendirir."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Sözel Mantık konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Küme, ortak özellikli eleman topluluğudur; kesişim, birleşim, fark işlemleri sözel mantıkt", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Sözel Mantık konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Bütün-hiçbiri-bazı niceleyicileri evrensel veya tikel önerme kurar.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Sözel Mantık konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Doğru-yanlış önerme: verilenlere göre değer alır; ek varsayım katılmaz.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Sözel Mantık konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Karşıt önerme evrensel olumlunun evrensel olumsuzu; çelişik hem nicelik hem nitelik değişi", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Sözel Mantık notundaki temel bilgi."
 }
 ];

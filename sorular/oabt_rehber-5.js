@@ -61,63 +61,63 @@ window.oabt_rehber_5_sorulari = [
     "explanation": "Yararlılık ilkesi."
 },
 {
-    "question": "Bireyi Tanıma Teknikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gözlem sistematik kayıt; zaman örnekleme, olay örnekleme."],
+    "question": "Aşağıdakilerden hangisi Gözlem için doğru bir açıklamadır?",
+    "options": ["A) Görüşme yapılandırılmış, yarı, serbest; onam ve gizlilik.", "B) Anket ve otograf öz bildirimin sınırları.", "C) Sosyometri akran seçimi; yalnız ve yıldız öğrenci.", "D) Otobiyografi, resim, oyun projektif-ifade teknikleri temkinle.", "E) Gözlem sistematik kayıt; zaman örnekleme, olay örnekleme."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Bireyi Tanıma Teknikleri notundaki temel bilgi."
 },
 {
-    "question": "Bireyi Tanıma Teknikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Görüşme yapılandırılmış, yarı, serbest; onam ve gizlilik.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Görüşme hakkında hangisi doğrudur?",
+    "options": ["A) Otobiyografi, resim, oyun projektif-ifade teknikleri temkinle.", "B) Görüşme yapılandırılmış, yarı, serbest; onam ve gizlilik.", "C) Gözlem sistematik kayıt; zaman örnekleme, olay örnekleme.", "D) Anket ve otograf öz bildirimin sınırları.", "E) Sosyometri akran seçimi; yalnız ve yıldız öğrenci."],
+    "correctAnswerIndex": 1,
+    "explanation": "Bireyi Tanıma Teknikleri notundaki temel bilgi."
+},
+{
+    "question": "Anket ve otograf hangisini ifade eder?",
+    "options": ["A) Anket ve otograf öz bildirimin sınırları.", "B) Gözlem sistematik kayıt; zaman örnekleme, olay örnekleme.", "C) Görüşme yapılandırılmış, yarı, serbest; onam ve gizlilik.", "D) Sosyometri akran seçimi; yalnız ve yıldız öğrenci.", "E) Otobiyografi, resim, oyun projektif-ifade teknikleri temkinle."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Bireyi Tanıma Teknikleri notundaki temel bilgi."
 },
 {
-    "question": "Bireyi Tanıma Teknikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Anket ve otograf öz bildirimin sınırları."],
+    "question": "Sosyometri ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Gözlem sistematik kayıt; zaman örnekleme, olay örnekleme.", "B) Görüşme yapılandırılmış, yarı, serbest; onam ve gizlilik.", "C) Anket ve otograf öz bildirimin sınırları.", "D) Otobiyografi, resim, oyun projektif-ifade teknikleri temkinle.", "E) Sosyometri akran seçimi; yalnız ve yıldız öğrenci."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Bireyi Tanıma Teknikleri notundaki temel bilgi."
 },
 {
-    "question": "Bireyi Tanıma Teknikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Sosyometri akran seçimi; yalnız ve yıldız öğrenci.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Bireyi Tanıma Teknikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Otobiyografi, resim, oyun projektif-ifade teknikleri temkinle."],
+    "question": "Aşağıdakilerden hangisi Otobiyografi, resim, oyun için doğru bir açıklamadır?",
+    "options": ["A) Gözlem sistematik kayıt; zaman örnekleme, olay örnekleme.", "B) Görüşme yapılandırılmış, yarı, serbest; onam ve gizlilik.", "C) Anket ve otograf öz bildirimin sınırları.", "D) Sosyometri akran seçimi; yalnız ve yıldız öğrenci.", "E) Otobiyografi, resim, oyun projektif-ifade teknikleri temkinle."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Bireyi Tanıma Teknikleri notundaki temel bilgi."
 },
 {
-    "question": "Bireyi Tanıma Teknikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) İlgi envanteri (Kuder, Holland temelli) meslek seçimine veri.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "İlgi envanteri hakkında hangisi doğrudur?",
+    "options": ["A) Sosyometri akran seçimi; yalnız ve yıldız öğrenci.", "B) İlgi envanteri (Kuder, Holland temelli) meslek seçimine veri.", "C) Gözlem sistematik kayıt; zaman örnekleme, olay örnekleme.", "D) Görüşme yapılandırılmış, yarı, serbest; onam ve gizlilik.", "E) Anket ve otograf öz bildirimin sınırları."],
+    "correctAnswerIndex": 1,
+    "explanation": "Bireyi Tanıma Teknikleri notundaki temel bilgi."
+},
+{
+    "question": "Yetenek testleri hangisini ifade eder?",
+    "options": ["A) Görüşme yapılandırılmış, yarı, serbest; onam ve gizlilik.", "B) Anket ve otograf öz bildirimin sınırları.", "C) Sosyometri akran seçimi; yalnız ve yıldız öğrenci.", "D) Yetenek testleri genel ve özel.", "E) Gözlem sistematik kayıt; zaman örnekleme, olay örnekleme."],
+    "correctAnswerIndex": 3,
+    "explanation": "Bireyi Tanıma Teknikleri notundaki temel bilgi."
+},
+{
+    "question": "Kişilik envanteri ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Kişilik envanteri (ör. 16PF, NEO) yetkinlik ve etik.", "B) Gözlem sistematik kayıt; zaman örnekleme, olay örnekleme.", "C) Görüşme yapılandırılmış, yarı, serbest; onam ve gizlilik.", "D) Anket ve otograf öz bildirimin sınırları.", "E) Sosyometri akran seçimi; yalnız ve yıldız öğrenci."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Bireyi Tanıma Teknikleri notundaki temel bilgi."
 },
 {
-    "question": "Bireyi Tanıma Teknikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Yetenek testleri genel ve özel."],
+    "question": "Aşağıdakilerden hangisi Başarı testleri için doğru bir açıklamadır?",
+    "options": ["A) Görüşme yapılandırılmış, yarı, serbest; onam ve gizlilik.", "B) Anket ve otograf öz bildirimin sınırları.", "C) Sosyometri akran seçimi; yalnız ve yıldız öğrenci.", "D) Başarı testleri akademik tanıma.", "E) Gözlem sistematik kayıt; zaman örnekleme, olay örnekleme."],
+    "correctAnswerIndex": 3,
+    "explanation": "Bireyi Tanıma Teknikleri notundaki temel bilgi."
+},
+{
+    "question": "Portfolyo ve ürün dosyası hakkında hangisi doğrudur?",
+    "options": ["A) Gözlem sistematik kayıt; zaman örnekleme, olay örnekleme.", "B) Görüşme yapılandırılmış, yarı, serbest; onam ve gizlilik.", "C) Anket ve otograf öz bildirimin sınırları.", "D) Sosyometri akran seçimi; yalnız ve yıldız öğrenci.", "E) Portfolyo ve ürün dosyası süreç."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Bireyi Tanıma Teknikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Kişilik envanteri (ör. 16PF, NEO) yetkinlik ve etik.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Bireyi Tanıma Teknikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Başarı testleri akademik tanıma."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Bireyi Tanıma Teknikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Portfolyo ve ürün dosyası süreç.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Bireyi Tanıma Teknikleri notundaki temel bilgi."
 }
 ];

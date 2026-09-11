@@ -55,69 +55,69 @@ window.oabt_mat_2_sorulari = [
     "explanation": "q=p^n asal kuvvet."
 },
 {
-    "question": "Cebir konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Grup (G,*) kapalı, birleşmeli, birim, ters; Abel ise değişmeli."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Grup için doğru bir açıklamadır?",
+    "options": ["A) Homomorfizma işlemi korur; çekirdek normal/idealdir.", "B) İzolemorfizm teoremleri G/ker ≅ im.", "C) Grup (G,*) kapalı, birleşmeli, birim, ters; Abel ise değişmeli.", "D) Halka iki işlem; ideal çekirdek benzeri; tamlık bölgesi sıfır bölensiz değişmeli halka.", "E) Cisim her sıfırdan farklı elemanın çarpmaya göre tersi vardır; Z cisim değildir, Q öyledir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Cebir notundaki temel bilgi."
 },
 {
-    "question": "Cebir konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Alt grup Lagrange: |H| |G|'yi böler; indeks [G:H].", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Alt grup hakkında hangisi doğrudur?",
+    "options": ["A) Halka iki işlem; ideal çekirdek benzeri; tamlık bölgesi sıfır bölensiz değişmeli halka.", "B) Cisim her sıfırdan farklı elemanın çarpmaya göre tersi vardır; Z cisim değildir, Q öyledir.", "C) Homomorfizma işlemi korur; çekirdek normal/idealdir.", "D) Alt grup Lagrange: |H| |G|'yi böler; indeks [G:H].", "E) Grup (G,*) kapalı, birleşmeli, birim, ters; Abel ise değişmeli."],
+    "correctAnswerIndex": 3,
+    "explanation": "Cebir notundaki temel bilgi."
+},
+{
+    "question": "Normal alt grup hangisini ifade eder?",
+    "options": ["A) Alt grup Lagrange: |H| |G|'yi böler; indeks [G:H].", "B) Halka iki işlem; ideal çekirdek benzeri; tamlık bölgesi sıfır bölensiz değişmeli halka.", "C) Cisim her sıfırdan farklı elemanın çarpmaya göre tersi vardır; Z cisim değildir, Q öyledir.", "D) Normal alt grup sol-sağ koset eşit; bölüm grubu G/N.", "E) Grup (G,*) kapalı, birleşmeli, birim, ters; Abel ise değişmeli."],
+    "correctAnswerIndex": 3,
+    "explanation": "Cebir notundaki temel bilgi."
+},
+{
+    "question": "Halka ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Grup (G,*) kapalı, birleşmeli, birim, ters; Abel ise değişmeli.", "B) Alt grup Lagrange: |H| |G|'yi böler; indeks [G:H].", "C) Normal alt grup sol-sağ koset eşit; bölüm grubu G/N.", "D) Cisim her sıfırdan farklı elemanın çarpmaya göre tersi vardır; Z cisim değildir, Q öyledir.", "E) Halka iki işlem; ideal çekirdek benzeri; tamlık bölgesi sıfır bölensiz değişmeli halka."],
+    "correctAnswerIndex": 4,
+    "explanation": "Cebir notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Cisim için doğru bir açıklamadır?",
+    "options": ["A) Cisim her sıfırdan farklı elemanın çarpmaya göre tersi vardır; Z cisim değildir, Q öyledir.", "B) Grup (G,*) kapalı, birleşmeli, birim, ters; Abel ise değişmeli.", "C) Alt grup Lagrange: |H| |G|'yi böler; indeks [G:H].", "D) Normal alt grup sol-sağ koset eşit; bölüm grubu G/N.", "E) Halka iki işlem; ideal çekirdek benzeri; tamlık bölgesi sıfır bölensiz değişmeli halka."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Cebir notundaki temel bilgi."
 },
 {
-    "question": "Cebir konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Normal alt grup sol-sağ koset eşit; bölüm grubu G/N."],
+    "question": "Homomorfizma hakkında hangisi doğrudur?",
+    "options": ["A) Alt grup Lagrange: |H| |G|'yi böler; indeks [G:H].", "B) Normal alt grup sol-sağ koset eşit; bölüm grubu G/N.", "C) Halka iki işlem; ideal çekirdek benzeri; tamlık bölgesi sıfır bölensiz değişmeli halka.", "D) Homomorfizma işlemi korur; çekirdek normal/idealdir.", "E) Grup (G,*) kapalı, birleşmeli, birim, ters; Abel ise değişmeli."],
+    "correctAnswerIndex": 3,
+    "explanation": "Cebir notundaki temel bilgi."
+},
+{
+    "question": "İzolemorfizm teoremleri hangisini ifade eder?",
+    "options": ["A) Halka iki işlem; ideal çekirdek benzeri; tamlık bölgesi sıfır bölensiz değişmeli halka.", "B) İzolemorfizm teoremleri G/ker ≅ im.", "C) Grup (G,*) kapalı, birleşmeli, birim, ters; Abel ise değişmeli.", "D) Alt grup Lagrange: |H| |G|'yi böler; indeks [G:H].", "E) Normal alt grup sol-sağ koset eşit; bölüm grubu G/N."],
+    "correctAnswerIndex": 1,
+    "explanation": "Cebir notundaki temel bilgi."
+},
+{
+    "question": "Permütasyon grubu ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Alt grup Lagrange: |H| |G|'yi böler; indeks [G:H].", "B) Normal alt grup sol-sağ koset eşit; bölüm grubu G/N.", "C) Halka iki işlem; ideal çekirdek benzeri; tamlık bölgesi sıfır bölensiz değişmeli halka.", "D) Permütasyon grubu Cayley: her sonlu grup S_n'ye gömülür.", "E) Grup (G,*) kapalı, birleşmeli, birim, ters; Abel ise değişmeli."],
+    "correctAnswerIndex": 3,
+    "explanation": "Cebir notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Polinom halkası için doğru bir açıklamadır?",
+    "options": ["A) Normal alt grup sol-sağ koset eşit; bölüm grubu G/N.", "B) Halka iki işlem; ideal çekirdek benzeri; tamlık bölgesi sıfır bölensiz değişmeli halka.", "C) Polinom halkası F[x] OID (PID, F cisimse); kök sayısı dereceyi aşmaz.", "D) Grup (G,*) kapalı, birleşmeli, birim, ters; Abel ise değişmeli.", "E) Alt grup Lagrange: |H| |G|'yi böler; indeks [G:H]."],
+    "correctAnswerIndex": 2,
+    "explanation": "Cebir notundaki temel bilgi."
+},
+{
+    "question": "Bölüm ve kalan hakkında hangisi doğrudur?",
+    "options": ["A) Normal alt grup sol-sağ koset eşit; bölüm grubu G/N.", "B) Halka iki işlem; ideal çekirdek benzeri; tamlık bölgesi sıfır bölensiz değişmeli halka.", "C) Bölüm ve kalan Öklid algoritması EBOB üretir.", "D) Grup (G,*) kapalı, birleşmeli, birim, ters; Abel ise değişmeli.", "E) Alt grup Lagrange: |H| |G|'yi böler; indeks [G:H]."],
+    "correctAnswerIndex": 2,
+    "explanation": "Cebir notundaki temel bilgi."
+},
+{
+    "question": "Cebirsel eleman hangisini ifade eder?",
+    "options": ["A) Grup (G,*) kapalı, birleşmeli, birim, ters; Abel ise değişmeli.", "B) Alt grup Lagrange: |H| |G|'yi böler; indeks [G:H].", "C) Normal alt grup sol-sağ koset eşit; bölüm grubu G/N.", "D) Halka iki işlem; ideal çekirdek benzeri; tamlık bölgesi sıfır bölensiz değişmeli halka.", "E) Cebirsel eleman polinom kökü; aşkın (transandant) π, e."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Cebir konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Halka iki işlem; ideal çekirdek benzeri; tamlık bölgesi sıfır bölensiz değişmeli halka.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Cebir konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Cisim her sıfırdan farklı elemanın çarpmaya göre tersi vardır; Z cisim değildir, Q öyledir"],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Cebir konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Homomorfizma işlemi korur; çekirdek normal/idealdir.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Cebir konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) İzolemorfizm teoremleri G/ker ≅ im."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Cebir konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Permütasyon grubu Cayley: her sonlu grup S_n'ye gömülür.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Cebir konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Polinom halkası F[x] OID (PID, F cisimse); kök sayısı dereceyi aşmaz."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Cebir konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Bölüm ve kalan Öklid algoritması EBOB üretir.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Cebir konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Cebirsel eleman polinom kökü; aşkın (transandant) π, e."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Cebir notundaki temel bilgi."
 }
 ];

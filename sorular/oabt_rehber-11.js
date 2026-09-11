@@ -61,63 +61,63 @@ window.oabt_rehber_11_sorulari = [
     "explanation": "Meslek kimliği."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kapsayıcı gelişimsel model sınıf-grup-birey katmanları.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Kapsayıcı gelişimsel model için doğru bir açıklamadır?",
+    "options": ["A) Kanıta dayalı uygulama moda teknik yığmama.", "B) Kapsayıcı gelişimsel model sınıf-grup-birey katmanları.", "C) Önleyici, müdahale, kriz düzeyleri.", "D) Program tasarımı ihtiyaç analizi, kazanım, değerlendirme.", "E) Konsültasyon öğretmen ve veliyle dolaylı hizmet."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Önleyici, müdahale, kriz düzeyleri.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Önleyici, müdahale, kriz hakkında hangisi doğrudur?",
+    "options": ["A) Kapsayıcı gelişimsel model sınıf-grup-birey katmanları.", "B) Program tasarımı ihtiyaç analizi, kazanım, değerlendirme.", "C) Konsültasyon öğretmen ve veliyle dolaylı hizmet.", "D) Kanıta dayalı uygulama moda teknik yığmama.", "E) Önleyici, müdahale, kriz düzeyleri."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Program tasarımı ihtiyaç analizi, kazanım, değerlendirme.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Program tasarımı hangisini ifade eder?",
+    "options": ["A) Önleyici, müdahale, kriz düzeyleri.", "B) Konsültasyon öğretmen ve veliyle dolaylı hizmet.", "C) Kanıta dayalı uygulama moda teknik yığmama.", "D) Program tasarımı ihtiyaç analizi, kazanım, değerlendirme.", "E) Kapsayıcı gelişimsel model sınıf-grup-birey katmanları."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Konsültasyon ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Kapsayıcı gelişimsel model sınıf-grup-birey katmanları.", "B) Önleyici, müdahale, kriz düzeyleri.", "C) Program tasarımı ihtiyaç analizi, kazanım, değerlendirme.", "D) Kanıta dayalı uygulama moda teknik yığmama.", "E) Konsültasyon öğretmen ve veliyle dolaylı hizmet."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Kanıta dayalı uygulama için doğru bir açıklamadır?",
+    "options": ["A) Kanıta dayalı uygulama moda teknik yığmama.", "B) Kapsayıcı gelişimsel model sınıf-grup-birey katmanları.", "C) Önleyici, müdahale, kriz düzeyleri.", "D) Program tasarımı ihtiyaç analizi, kazanım, değerlendirme.", "E) Konsültasyon öğretmen ve veliyle dolaylı hizmet."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "MEB PDR hizmetleri hakkında hangisi doğrudur?",
+    "options": ["A) Kapsayıcı gelişimsel model sınıf-grup-birey katmanları.", "B) Önleyici, müdahale, kriz düzeyleri.", "C) Program tasarımı ihtiyaç analizi, kazanım, değerlendirme.", "D) Konsültasyon öğretmen ve veliyle dolaylı hizmet.", "E) MEB PDR hizmetleri yönerge ve kadro gerçeği."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "RAM-okul-hastane hangisini ifade eder?",
+    "options": ["A) Kapsayıcı gelişimsel model sınıf-grup-birey katmanları.", "B) Önleyici, müdahale, kriz düzeyleri.", "C) Program tasarımı ihtiyaç analizi, kazanım, değerlendirme.", "D) Konsültasyon öğretmen ve veliyle dolaylı hizmet.", "E) RAM-okul-hastane sevk üçgeni."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Kaynaştırma ekibi ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Kaynaştırma ekibi BEP toplantısı.", "B) Kapsayıcı gelişimsel model sınıf-grup-birey katmanları.", "C) Önleyici, müdahale, kriz düzeyleri.", "D) Program tasarımı ihtiyaç analizi, kazanım, değerlendirme.", "E) Konsültasyon öğretmen ve veliyle dolaylı hizmet."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Kriz planı için doğru bir açıklamadır?",
+    "options": ["A) Konsültasyon öğretmen ve veliyle dolaylı hizmet.", "B) Kriz planı intihar, istismar, afet.", "C) Kapsayıcı gelişimsel model sınıf-grup-birey katmanları.", "D) Önleyici, müdahale, kriz düzeyleri.", "E) Program tasarımı ihtiyaç analizi, kazanım, değerlendirme."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Konsültasyon öğretmen ve veliyle dolaylı hizmet.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kanıta dayalı uygulama moda teknik yığmama.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) MEB PDR hizmetleri yönerge ve kadro gerçeği.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) RAM-okul-hastane sevk üçgeni.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Kaynaştırma ekibi BEP toplantısı.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kriz planı intihar, istismar, afet.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Dijital PDR sınır, kayıt, siber zorbalık.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Dijital PDR hakkında hangisi doğrudur?",
+    "options": ["A) Önleyici, müdahale, kriz düzeyleri.", "B) Program tasarımı ihtiyaç analizi, kazanım, değerlendirme.", "C) Konsültasyon öğretmen ve veliyle dolaylı hizmet.", "D) Dijital PDR sınır, kayıt, siber zorbalık.", "E) Kapsayıcı gelişimsel model sınıf-grup-birey katmanları."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 }
 ];

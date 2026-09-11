@@ -61,63 +61,63 @@ window.oabt_sinif_6_sorulari = [
     "explanation": "Ölçme."
 },
 {
-    "question": "Çocuk Edebiyatı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Masal, fabl, hikâye, şiir, çizgi roman, e-kitap.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Masal, fabl, hikâye, şiir, çizgi roman, e-kitap için doğru bir açıklamadır?",
+    "options": ["A) Kültür yerli-çeviri denge.", "B) Masal, fabl, hikâye, şiir, çizgi roman, e-kitap.", "C) Yaşa uygunluk tema, dil, sayfa, korku dozu.", "D) Görsel resim-metin ilişkisi.", "E) Değer ve eleştirel okuma klişe ve cinsiyet kalıbı."],
+    "correctAnswerIndex": 1,
+    "explanation": "Çocuk Edebiyatı notundaki temel bilgi."
 },
 {
-    "question": "Çocuk Edebiyatı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Yaşa uygunluk tema, dil, sayfa, korku dozu."],
+    "question": "Yaşa uygunluk hakkında hangisi doğrudur?",
+    "options": ["A) Masal, fabl, hikâye, şiir, çizgi roman, e-kitap.", "B) Görsel resim-metin ilişkisi.", "C) Değer ve eleştirel okuma klişe ve cinsiyet kalıbı.", "D) Kültür yerli-çeviri denge.", "E) Yaşa uygunluk tema, dil, sayfa, korku dozu."],
+    "correctAnswerIndex": 4,
+    "explanation": "Çocuk Edebiyatı notundaki temel bilgi."
+},
+{
+    "question": "Görsel hangisini ifade eder?",
+    "options": ["A) Kültür yerli-çeviri denge.", "B) Görsel resim-metin ilişkisi.", "C) Masal, fabl, hikâye, şiir, çizgi roman, e-kitap.", "D) Yaşa uygunluk tema, dil, sayfa, korku dozu.", "E) Değer ve eleştirel okuma klişe ve cinsiyet kalıbı."],
+    "correctAnswerIndex": 1,
+    "explanation": "Çocuk Edebiyatı notundaki temel bilgi."
+},
+{
+    "question": "Değer ve eleştirel okuma ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Yaşa uygunluk tema, dil, sayfa, korku dozu.", "B) Görsel resim-metin ilişkisi.", "C) Kültür yerli-çeviri denge.", "D) Değer ve eleştirel okuma klişe ve cinsiyet kalıbı.", "E) Masal, fabl, hikâye, şiir, çizgi roman, e-kitap."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Çocuk Edebiyatı notundaki temel bilgi."
 },
 {
-    "question": "Çocuk Edebiyatı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Görsel resim-metin ilişkisi.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Kültür için doğru bir açıklamadır?",
+    "options": ["A) Masal, fabl, hikâye, şiir, çizgi roman, e-kitap.", "B) Yaşa uygunluk tema, dil, sayfa, korku dozu.", "C) Görsel resim-metin ilişkisi.", "D) Değer ve eleştirel okuma klişe ve cinsiyet kalıbı.", "E) Kültür yerli-çeviri denge."],
+    "correctAnswerIndex": 4,
+    "explanation": "Çocuk Edebiyatı notundaki temel bilgi."
 },
 {
-    "question": "Çocuk Edebiyatı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Değer ve eleştirel okuma klişe ve cinsiyet kalıbı."],
+    "question": "Dil hakkında hangisi doğrudur?",
+    "options": ["A) Masal, fabl, hikâye, şiir, çizgi roman, e-kitap.", "B) Yaşa uygunluk tema, dil, sayfa, korku dozu.", "C) Görsel resim-metin ilişkisi.", "D) Değer ve eleştirel okuma klişe ve cinsiyet kalıbı.", "E) Dil sade ama yavan değil."],
+    "correctAnswerIndex": 4,
+    "explanation": "Çocuk Edebiyatı notundaki temel bilgi."
+},
+{
+    "question": "Kahraman hangisini ifade eder?",
+    "options": ["A) Yaşa uygunluk tema, dil, sayfa, korku dozu.", "B) Görsel resim-metin ilişkisi.", "C) Değer ve eleştirel okuma klişe ve cinsiyet kalıbı.", "D) Kahraman özdeşim ve çeşitlilik.", "E) Masal, fabl, hikâye, şiir, çizgi roman, e-kitap."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Çocuk Edebiyatı notundaki temel bilgi."
 },
 {
-    "question": "Çocuk Edebiyatı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Kültür yerli-çeviri denge.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Kurgu ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Masal, fabl, hikâye, şiir, çizgi roman, e-kitap.", "B) Yaşa uygunluk tema, dil, sayfa, korku dozu.", "C) Görsel resim-metin ilişkisi.", "D) Değer ve eleştirel okuma klişe ve cinsiyet kalıbı.", "E) Kurgu olay örgüsü netliği."],
+    "correctAnswerIndex": 4,
+    "explanation": "Çocuk Edebiyatı notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Bastırma yok için doğru bir açıklamadır?",
+    "options": ["A) Değer ve eleştirel okuma klişe ve cinsiyet kalıbı.", "B) Bastırma yok engelli, göçmen, kız kahraman görünür.", "C) Masal, fabl, hikâye, şiir, çizgi roman, e-kitap.", "D) Yaşa uygunluk tema, dil, sayfa, korku dozu.", "E) Görsel resim-metin ilişkisi."],
+    "correctAnswerIndex": 1,
+    "explanation": "Çocuk Edebiyatı notundaki temel bilgi."
+},
+{
+    "question": "Çeviri kalitesi hakkında hangisi doğrudur?",
+    "options": ["A) Görsel resim-metin ilişkisi.", "B) Değer ve eleştirel okuma klişe ve cinsiyet kalıbı.", "C) Çeviri kalitesi ve basım etiği.", "D) Masal, fabl, hikâye, şiir, çizgi roman, e-kitap.", "E) Yaşa uygunluk tema, dil, sayfa, korku dozu."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Çocuk Edebiyatı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Dil sade ama yavan değil."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Çocuk Edebiyatı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Kahraman özdeşim ve çeşitlilik.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Çocuk Edebiyatı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Kurgu olay örgüsü netliği."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Çocuk Edebiyatı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Bastırma yok engelli, göçmen, kız kahraman görünür.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Çocuk Edebiyatı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Çeviri kalitesi ve basım etiği."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Çocuk Edebiyatı notundaki temel bilgi."
 }
 ];

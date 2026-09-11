@@ -61,63 +61,63 @@ window.oabt_tarih_2_sorulari = [
     "explanation": "Karşılaştırılabilir metin için standart şarttır."
 },
 {
-    "question": "Osmanlı Türkçesi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Osmanlı Türkçesi Oğuz Türkçesi üzerine Arapça ve Farsça söz varlığı ve izafetle kurulur.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Osmanlı Türkçesi için doğru bir açıklamadır?",
+    "options": ["A) İnşa süslü nesir; ferman, berat, name dilini belirler.", "B) Sadeleşme 19. yüzyıl gazete ve Tanzimat'la artar; harf devrimi 1928 Latin'e geçer.", "C) Osmanlı Türkçesi Oğuz Türkçesi üzerine Arapça ve Farsça söz varlığı ve izafetle kurulur.", "D) Arap harfleri sağdan sola yazılır; elif, vav, ye ünlüleri çoğu kez tam göstermez.", "E) İzafet Farsça tamlama (devlet-i aliye) resmi üslupta sıktır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Osmanlı Türkçesi notundaki temel bilgi."
+},
+{
+    "question": "Arap harfleri hakkında hangisi doğrudur?",
+    "options": ["A) Arap harfleri sağdan sola yazılır; elif, vav, ye ünlüleri çoğu kez tam göstermez.", "B) Osmanlı Türkçesi Oğuz Türkçesi üzerine Arapça ve Farsça söz varlığı ve izafetle kurulur.", "C) İzafet Farsça tamlama (devlet-i aliye) resmi üslupta sıktır.", "D) İnşa süslü nesir; ferman, berat, name dilini belirler.", "E) Sadeleşme 19. yüzyıl gazete ve Tanzimat'la artar; harf devrimi 1928 Latin'e geçer."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Osmanlı Türkçesi notundaki temel bilgi."
 },
 {
-    "question": "Osmanlı Türkçesi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Arap harfleri sağdan sola yazılır; elif, vav, ye ünlüleri çoğu kez tam göstermez.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "İzafet hangisini ifade eder?",
+    "options": ["A) Osmanlı Türkçesi Oğuz Türkçesi üzerine Arapça ve Farsça söz varlığı ve izafetle kurulur.", "B) Arap harfleri sağdan sola yazılır; elif, vav, ye ünlüleri çoğu kez tam göstermez.", "C) İnşa süslü nesir; ferman, berat, name dilini belirler.", "D) Sadeleşme 19. yüzyıl gazete ve Tanzimat'la artar; harf devrimi 1928 Latin'e geçer.", "E) İzafet Farsça tamlama (devlet-i aliye) resmi üslupta sıktır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Osmanlı Türkçesi notundaki temel bilgi."
 },
 {
-    "question": "Osmanlı Türkçesi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) İzafet Farsça tamlama (devlet-i aliye) resmi üslupta sıktır.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "İnşa ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Arap harfleri sağdan sola yazılır; elif, vav, ye ünlüleri çoğu kez tam göstermez.", "B) İzafet Farsça tamlama (devlet-i aliye) resmi üslupta sıktır.", "C) Sadeleşme 19. yüzyıl gazete ve Tanzimat'la artar; harf devrimi 1928 Latin'e geçer.", "D) İnşa süslü nesir; ferman, berat, name dilini belirler.", "E) Osmanlı Türkçesi Oğuz Türkçesi üzerine Arapça ve Farsça söz varlığı ve izafetle kurulur."],
+    "correctAnswerIndex": 3,
+    "explanation": "Osmanlı Türkçesi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Sadeleşme için doğru bir açıklamadır?",
+    "options": ["A) Sadeleşme 19. yüzyıl gazete ve Tanzimat'la artar; harf devrimi 1928 Latin'e geçer.", "B) Osmanlı Türkçesi Oğuz Türkçesi üzerine Arapça ve Farsça söz varlığı ve izafetle kurulur.", "C) Arap harfleri sağdan sola yazılır; elif, vav, ye ünlüleri çoğu kez tam göstermez.", "D) İzafet Farsça tamlama (devlet-i aliye) resmi üslupta sıktır.", "E) İnşa süslü nesir; ferman, berat, name dilini belirler."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Osmanlı Türkçesi notundaki temel bilgi."
 },
 {
-    "question": "Osmanlı Türkçesi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) İnşa süslü nesir; ferman, berat, name dilini belirler.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Ferman hakkında hangisi doğrudur?",
+    "options": ["A) Osmanlı Türkçesi Oğuz Türkçesi üzerine Arapça ve Farsça söz varlığı ve izafetle kurulur.", "B) Arap harfleri sağdan sola yazılır; elif, vav, ye ünlüleri çoğu kez tam göstermez.", "C) İzafet Farsça tamlama (devlet-i aliye) resmi üslupta sıktır.", "D) Sadeleşme 19. yüzyıl gazete ve Tanzimat'la artar; harf devrimi 1928 Latin'e geçer.", "E) Ferman padişah emridir; berat imtiyaz ve görev belgesidir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Osmanlı Türkçesi notundaki temel bilgi."
 },
 {
-    "question": "Osmanlı Türkçesi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Sadeleşme 19. yüzyıl gazete ve Tanzimat'la artar; harf devrimi 1928 Latin'e geçer.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Tahrir defteri hangisini ifade eder?",
+    "options": ["A) İzafet Farsça tamlama (devlet-i aliye) resmi üslupta sıktır.", "B) İnşa süslü nesir; ferman, berat, name dilini belirler.", "C) Tahrir defteri timar ve vergi sayımı; mühimme Divan karar özetidir.", "D) Osmanlı Türkçesi Oğuz Türkçesi üzerine Arapça ve Farsça söz varlığı ve izafetle kurulur.", "E) Arap harfleri sağdan sola yazılır; elif, vav, ye ünlüleri çoğu kez tam göstermez."],
+    "correctAnswerIndex": 2,
+    "explanation": "Osmanlı Türkçesi notundaki temel bilgi."
 },
 {
-    "question": "Osmanlı Türkçesi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Ferman padişah emridir; berat imtiyaz ve görev belgesidir.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Şer'iyye sicili ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Osmanlı Türkçesi Oğuz Türkçesi üzerine Arapça ve Farsça söz varlığı ve izafetle kurulur.", "B) Arap harfleri sağdan sola yazılır; elif, vav, ye ünlüleri çoğu kez tam göstermez.", "C) İzafet Farsça tamlama (devlet-i aliye) resmi üslupta sıktır.", "D) İnşa süslü nesir; ferman, berat, name dilini belirler.", "E) Şer'iyye sicili kadı defteridir; toplumsal tarih kaynağıdır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Osmanlı Türkçesi notundaki temel bilgi."
 },
 {
-    "question": "Osmanlı Türkçesi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Tahrir defteri timar ve vergi sayımı; mühimme Divan karar özetidir.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Vakfiye için doğru bir açıklamadır?",
+    "options": ["A) İzafet Farsça tamlama (devlet-i aliye) resmi üslupta sıktır.", "B) İnşa süslü nesir; ferman, berat, name dilini belirler.", "C) Vakfiye vakıf senedi; mal, şart ve hayır amacını kaydeder.", "D) Osmanlı Türkçesi Oğuz Türkçesi üzerine Arapça ve Farsça söz varlığı ve izafetle kurulur.", "E) Arap harfleri sağdan sola yazılır; elif, vav, ye ünlüleri çoğu kez tam göstermez."],
+    "correctAnswerIndex": 2,
+    "explanation": "Osmanlı Türkçesi notundaki temel bilgi."
 },
 {
-    "question": "Osmanlı Türkçesi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Şer'iyye sicili kadı defteridir; toplumsal tarih kaynağıdır.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Osmanlı Türkçesi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Vakfiye vakıf senedi; mal, şart ve hayır amacını kaydeder.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Osmanlı Türkçesi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Siyakat mali yazı stili; okunması uzmanlık ister.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Siyakat hakkında hangisi doğrudur?",
+    "options": ["A) Osmanlı Türkçesi Oğuz Türkçesi üzerine Arapça ve Farsça söz varlığı ve izafetle kurulur.", "B) Arap harfleri sağdan sola yazılır; elif, vav, ye ünlüleri çoğu kez tam göstermez.", "C) İzafet Farsça tamlama (devlet-i aliye) resmi üslupta sıktır.", "D) İnşa süslü nesir; ferman, berat, name dilini belirler.", "E) Siyakat mali yazı stili; okunması uzmanlık ister."],
+    "correctAnswerIndex": 4,
+    "explanation": "Osmanlı Türkçesi notundaki temel bilgi."
 }
 ];

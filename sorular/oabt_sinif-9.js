@@ -61,63 +61,63 @@ window.oabt_sinif_9_sorulari = [
     "explanation": "Aile iş birliği."
 },
 {
-    "question": "Fen Bilimleri Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Fen okuryazarlığı bilme, yapma, değer.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Fen Bilimleri Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) 5E ve araştırma-sorgulama."],
+    "question": "Aşağıdakilerden hangisi Fen okuryazarlığı için doğru bir açıklamadır?",
+    "options": ["A) Kavram yanılgısı teşhisi.", "B) İlkokul 3-4 (hayat bilgisinden sonra 3'te fen başlar program dönemine göre; güncel MEB 3. sınıftan fen).", "C) 2026 alan eğitimi deney güvenliği ve kavram öğretimi sorar.", "D) Fen okuryazarlığı bilme, yapma, değer.", "E) 5E ve araştırma-sorgulama."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Fen Bilimleri Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Fen Bilimleri Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Kavram yanılgısı teşhisi.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "5E ve araştırma-sorgulama hakkında hangisi doğrudur?",
+    "options": ["A) Fen okuryazarlığı bilme, yapma, değer.", "B) Kavram yanılgısı teşhisi.", "C) İlkokul 3-4 (hayat bilgisinden sonra 3'te fen başlar program dönemine göre; güncel MEB 3. sınıftan fen).", "D) 2026 alan eğitimi deney güvenliği ve kavram öğretimi sorar.", "E) 5E ve araştırma-sorgulama."],
+    "correctAnswerIndex": 4,
+    "explanation": "Fen Bilimleri Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Fen Bilimleri Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) İlkokul 3-4 (hayat bilgisinden sonra 3'te fen başlar program dönemine göre; güncel MEB 3. "],
+    "question": "Kavram yanılgısı hangisini ifade eder?",
+    "options": ["A) Kavram yanılgısı teşhisi.", "B) Fen okuryazarlığı bilme, yapma, değer.", "C) 5E ve araştırma-sorgulama.", "D) İlkokul 3-4 (hayat bilgisinden sonra 3'te fen başlar program dönemine göre; güncel MEB 3. sınıftan fen).", "E) 2026 alan eğitimi deney güvenliği ve kavram öğretimi sorar."],
+    "correctAnswerIndex": 0,
+    "explanation": "Fen Bilimleri Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "İlkokul 3-4 ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) 5E ve araştırma-sorgulama.", "B) Kavram yanılgısı teşhisi.", "C) 2026 alan eğitimi deney güvenliği ve kavram öğretimi sorar.", "D) İlkokul 3-4 (hayat bilgisinden sonra 3'te fen başlar program dönemine göre; güncel MEB 3. sınıftan fen).", "E) Fen okuryazarlığı bilme, yapma, değer."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Fen Bilimleri Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Fen Bilimleri Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) 2026 alan eğitimi deney güvenliği ve kavram öğretimi sorar.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi 2026 alan eğitimi için doğru bir açıklamadır?",
+    "options": ["A) 2026 alan eğitimi deney güvenliği ve kavram öğretimi sorar.", "B) Fen okuryazarlığı bilme, yapma, değer.", "C) 5E ve araştırma-sorgulama.", "D) Kavram yanılgısı teşhisi.", "E) İlkokul 3-4 (hayat bilgisinden sonra 3'te fen başlar program dönemine göre; güncel MEB 3. sınıftan fen)."],
+    "correctAnswerIndex": 0,
+    "explanation": "Fen Bilimleri Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Fen Bilimleri Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Gözlem, deney, model, simülasyon."],
+    "question": "Gözlem, deney, model, simülasyon hakkında hangisi doğrudur?",
+    "options": ["A) Gözlem, deney, model, simülasyon.", "B) Fen okuryazarlığı bilme, yapma, değer.", "C) 5E ve araştırma-sorgulama.", "D) Kavram yanılgısı teşhisi.", "E) İlkokul 3-4 (hayat bilgisinden sonra 3'te fen başlar program dönemine göre; güncel MEB 3. sınıftan fen)."],
+    "correctAnswerIndex": 0,
+    "explanation": "Fen Bilimleri Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "İstasyon ve açık uçlu soru hangisini ifade eder?",
+    "options": ["A) İstasyon ve açık uçlu soru.", "B) Fen okuryazarlığı bilme, yapma, değer.", "C) 5E ve araştırma-sorgulama.", "D) Kavram yanılgısı teşhisi.", "E) İlkokul 3-4 (hayat bilgisinden sonra 3'te fen başlar program dönemine göre; güncel MEB 3. sınıftan fen)."],
+    "correctAnswerIndex": 0,
+    "explanation": "Fen Bilimleri Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "STEM/STEME ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) 5E ve araştırma-sorgulama.", "B) Kavram yanılgısı teşhisi.", "C) İlkokul 3-4 (hayat bilgisinden sonra 3'te fen başlar program dönemine göre; güncel MEB 3. sınıftan fen).", "D) STEM/STEME ilkokulda basit tasarım.", "E) Fen okuryazarlığı bilme, yapma, değer."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Fen Bilimleri Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Fen Bilimleri Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) İstasyon ve açık uçlu soru.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Güvenlik sözleşmesi için doğru bir açıklamadır?",
+    "options": ["A) Fen okuryazarlığı bilme, yapma, değer.", "B) 5E ve araştırma-sorgulama.", "C) Kavram yanılgısı teşhisi.", "D) İlkokul 3-4 (hayat bilgisinden sonra 3'te fen başlar program dönemine göre; güncel MEB 3. sınıftan fen).", "E) Güvenlik sözleşmesi."],
+    "correctAnswerIndex": 4,
+    "explanation": "Fen Bilimleri Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Fen Bilimleri Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) STEM/STEME ilkokulda basit tasarım."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Fen Bilimleri Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Güvenlik sözleşmesi.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Fen Bilimleri Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Doğa defteri yerel çevre."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Doğa defteri hakkında hangisi doğrudur?",
+    "options": ["A) İlkokul 3-4 (hayat bilgisinden sonra 3'te fen başlar program dönemine göre; güncel MEB 3. sınıftan fen).", "B) Doğa defteri yerel çevre.", "C) Fen okuryazarlığı bilme, yapma, değer.", "D) 5E ve araştırma-sorgulama.", "E) Kavram yanılgısı teşhisi."],
+    "correctAnswerIndex": 1,
+    "explanation": "Fen Bilimleri Öğretimi notundaki temel bilgi."
 }
 ];

@@ -73,51 +73,51 @@ window.ags_mevzuat_2_sorulari = [
     "explanation": "Öğrenci onuru ödevi."
 },
 {
-    "question": "İnsan Hakları Hukuku konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) BM İnsan Hakları Evrensel Bildirisi (1948) m.26 eğitim hakkını; ilköğretimin zorunlu ve pa", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi BM İnsan Hakları Evrensel Bildirisi (1948) m.26 için doğru bir açıklamadır?",
+    "options": ["A) AİHS (1950, Roma) medeni-siyasi haklar; Türkiye 1954 te onaylamıştır.", "B) 1. Ek Protokol m.2 eğitim hakkı ve ebeveynin inançlarına saygı; AİHM içtihadının eğitim ayağıdır.", "C) BM İnsan Hakları Evrensel Bildirisi (1948) m.26 eğitim hakkını; ilköğretimin zorunlu ve parasızlığını yazar (bağlayıcı sözleşme değildir, teamül-siyaset...", "D) Ekonomik, Sosyal ve Kültürel Haklar Uluslararası Sözleşmesi m.13 eğitim hakkını bağlayıcı çerçevede düzenler.", "E) Çocuk Hakları Sözleşmesi (1989) eğitim, üstün yarar ve ayrımcılık yasağı; Türkiye 1995 te taraftır."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "İnsan Hakları Hukuku notundaki temel bilgi."
 },
 {
-    "question": "İnsan Hakları Hukuku konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Ekonomik, Sosyal ve Kültürel Haklar Uluslararası Sözleşmesi m.13 eğitim hakkını bağlayıcı "],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Ekonomik, Sosyal ve Kültürel hakkında hangisi doğrudur?",
+    "options": ["A) 1. Ek Protokol m.2 eğitim hakkı ve ebeveynin inançlarına saygı; AİHM içtihadının eğitim ayağıdır.", "B) Ekonomik, Sosyal ve Kültürel Haklar Uluslararası Sözleşmesi m.13 eğitim hakkını bağlayıcı çerçevede düzenler.", "C) BM İnsan Hakları Evrensel Bildirisi (1948) m.26 eğitim hakkını; ilköğretimin zorunlu ve parasızlığını yazar (bağlayıcı sözleşme değildir, teamül-siyaset...", "D) Çocuk Hakları Sözleşmesi (1989) eğitim, üstün yarar ve ayrımcılık yasağı; Türkiye 1995 te taraftır.", "E) AİHS (1950, Roma) medeni-siyasi haklar; Türkiye 1954 te onaylamıştır."],
+    "correctAnswerIndex": 1,
+    "explanation": "İnsan Hakları Hukuku notundaki temel bilgi."
 },
 {
-    "question": "İnsan Hakları Hukuku konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Çocuk Hakları Sözleşmesi (1989) eğitim, üstün yarar ve ayrımcılık yasağı; Türkiye 1995 te ", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Çocuk Hakları Sözleşmesi (1989) hangisini ifade eder?",
+    "options": ["A) 1. Ek Protokol m.2 eğitim hakkı ve ebeveynin inançlarına saygı; AİHM içtihadının eğitim ayağıdır.", "B) Çocuk Hakları Sözleşmesi (1989) eğitim, üstün yarar ve ayrımcılık yasağı; Türkiye 1995 te taraftır.", "C) BM İnsan Hakları Evrensel Bildirisi (1948) m.26 eğitim hakkını; ilköğretimin zorunlu ve parasızlığını yazar (bağlayıcı sözleşme değildir, teamül-siyaset...", "D) Ekonomik, Sosyal ve Kültürel Haklar Uluslararası Sözleşmesi m.13 eğitim hakkını bağlayıcı çerçevede düzenler.", "E) AİHS (1950, Roma) medeni-siyasi haklar; Türkiye 1954 te onaylamıştır."],
+    "correctAnswerIndex": 1,
+    "explanation": "İnsan Hakları Hukuku notundaki temel bilgi."
+},
+{
+    "question": "AİHM hakkında hangisi doğrudur?",
+    "options": ["A) Çocuk Hakları Sözleşmesi (1989) eğitim, üstün yarar ve ayrımcılık yasağı; Türkiye 1995 te taraftır.", "B) AİHS (1950, Roma) medeni-siyasi haklar; Türkiye 1954 te onaylamıştır.", "C) AİHM bireysel başvuru, iç hukuk yollarının tüketilmesi, tazminat ve ihlal tespiti.", "D) BM İnsan Hakları Evrensel Bildirisi (1948) m.26 eğitim hakkını; ilköğretimin zorunlu ve parasızlığını yazar (bağlayıcı sözleşme değildir, teamül-siyaset...", "E) Ekonomik, Sosyal ve Kültürel Haklar Uluslararası Sözleşmesi m.13 eğitim hakkını bağlayıcı çerçevede düzenler."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "İnsan Hakları Hukuku notundaki temel bilgi."
 },
 {
-    "question": "İnsan Hakları Hukuku konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) AİHS (1950, Roma) medeni-siyasi haklar; Türkiye 1954 te onaylamıştır."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Kararlar bağlayıcıdır; infaz Avrupa hangisini ifade eder?",
+    "options": ["A) Kararlar bağlayıcıdır; infaz Avrupa Konseyi Bakanlar Komitesi gözetimindedir.", "B) BM İnsan Hakları Evrensel Bildirisi (1948) m.26 eğitim hakkını; ilköğretimin zorunlu ve parasızlığını yazar (bağlayıcı sözleşme değildir, teamül-siyaset...", "C) Ekonomik, Sosyal ve Kültürel Haklar Uluslararası Sözleşmesi m.13 eğitim hakkını bağlayıcı çerçevede düzenler.", "D) Çocuk Hakları Sözleşmesi (1989) eğitim, üstün yarar ve ayrımcılık yasağı; Türkiye 1995 te taraftır.", "E) AİHS (1950, Roma) medeni-siyasi haklar; Türkiye 1954 te onaylamıştır."],
+    "correctAnswerIndex": 0,
+    "explanation": "İnsan Hakları Hukuku notundaki temel bilgi."
 },
 {
-    "question": "İnsan Hakları Hukuku konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) 1. Ek Protokol m.2 eğitim hakkı ve ebeveynin inançlarına saygı; AİHM içtihadının eğitim ay", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "AYM bireysel başvuru ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) AYM bireysel başvuru (2010/2012) AİHS kapsamındaki haklar için iç yol; AİHM den önce tüketilir.", "B) BM İnsan Hakları Evrensel Bildirisi (1948) m.26 eğitim hakkını; ilköğretimin zorunlu ve parasızlığını yazar (bağlayıcı sözleşme değildir, teamül-siyaset...", "C) Ekonomik, Sosyal ve Kültürel Haklar Uluslararası Sözleşmesi m.13 eğitim hakkını bağlayıcı çerçevede düzenler.", "D) Çocuk Hakları Sözleşmesi (1989) eğitim, üstün yarar ve ayrımcılık yasağı; Türkiye 1995 te taraftır.", "E) AİHS (1950, Roma) medeni-siyasi haklar; Türkiye 1954 te onaylamıştır."],
+    "correctAnswerIndex": 0,
+    "explanation": "İnsan Hakları Hukuku notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Eğitim davalarında ayrımcılık AİHS için doğru bir açıklamadır?",
+    "options": ["A) Çocuk Hakları Sözleşmesi (1989) eğitim, üstün yarar ve ayrımcılık yasağı; Türkiye 1995 te taraftır.", "B) AİHS (1950, Roma) medeni-siyasi haklar; Türkiye 1954 te onaylamıştır.", "C) Eğitim davalarında ayrımcılık (AİHS m.14 + protokol), özel hayat (m.8), ifade (m.10), din (m.9) sıklıkla yan yana gelir.", "D) BM İnsan Hakları Evrensel Bildirisi (1948) m.26 eğitim hakkını; ilköğretimin zorunlu ve parasızlığını yazar (bağlayıcı sözleşme değildir, teamül-siyaset...", "E) Ekonomik, Sosyal ve Kültürel Haklar Uluslararası Sözleşmesi m.13 eğitim hakkını bağlayıcı çerçevede düzenler."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "İnsan Hakları Hukuku notundaki temel bilgi."
 },
 {
-    "question": "İnsan Hakları Hukuku konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) AİHM bireysel başvuru, iç hukuk yollarının tüketilmesi, tazminat ve ihlal tespiti."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "İnsan Hakları Hukuku konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Kararlar bağlayıcıdır; infaz Avrupa Konseyi Bakanlar Komitesi gözetimindedir.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İnsan Hakları Hukuku konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) AYM bireysel başvuru (2010/2012) AİHS kapsamındaki haklar için iç yol; AİHM den önce tüket"],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Pozitif yükümlülük hakkında hangisi doğrudur?",
+    "options": ["A) BM İnsan Hakları Evrensel Bildirisi (1948) m.26 eğitim hakkını; ilköğretimin zorunlu ve parasızlığını yazar (bağlayıcı sözleşme değildir, teamül-siyaset...", "B) Ekonomik, Sosyal ve Kültürel Haklar Uluslararası Sözleşmesi m.13 eğitim hakkını bağlayıcı çerçevede düzenler.", "C) Çocuk Hakları Sözleşmesi (1989) eğitim, üstün yarar ve ayrımcılık yasağı; Türkiye 1995 te taraftır.", "D) AİHS (1950, Roma) medeni-siyasi haklar; Türkiye 1954 te onaylamıştır.", "E) Pozitif yükümlülük: devlet hakkın kâğıt üzerinde kalmaması için tedbir alır (zorunlu eğitim, şiddetten koruma)."],
+    "correctAnswerIndex": 4,
+    "explanation": "İnsan Hakları Hukuku notundaki temel bilgi."
 }
 ];

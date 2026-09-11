@@ -61,63 +61,63 @@ window.oabt_ozel_6_sorulari = [
     "explanation": "Kaynaştırma."
 },
 {
-    "question": "Bireyselleştirilmiş Eğitim Programları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) BEP öğrencinin mevcut performansına dayalı yıllık ve kısa dönemli hedefler belgesidir.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi BEP için doğru bir açıklamadır?",
+    "options": ["A) BEP ders planı değildir ama planı bağlar.", "B) BEP öğrencinin mevcut performansına dayalı yıllık ve kısa dönemli hedefler belgesidir.", "C) Ekip öğretmen, özel eğitim, PDR, aile ve gerekiyorsa sağlık; öğrenci de katılır.", "D) En az kısıtlayıcı ortam yerleştirme kararı BEP ile bağlanır.", "E) Yasal dayanak 573 sayılı KHK ve Özel Eğitim Hizmetleri Yönetmeliği çerçevesindedir; uydurma madde ezberlenmez."],
+    "correctAnswerIndex": 1,
+    "explanation": "Bireyselleştirilmiş Eğitim Programları notundaki temel bilgi."
+},
+{
+    "question": "Ekip hakkında hangisi doğrudur?",
+    "options": ["A) Yasal dayanak 573 sayılı KHK ve Özel Eğitim Hizmetleri Yönetmeliği çerçevesindedir; uydurma madde ezberlenmez.", "B) BEP ders planı değildir ama planı bağlar.", "C) Ekip öğretmen, özel eğitim, PDR, aile ve gerekiyorsa sağlık; öğrenci de katılır.", "D) BEP öğrencinin mevcut performansına dayalı yıllık ve kısa dönemli hedefler belgesidir.", "E) En az kısıtlayıcı ortam yerleştirme kararı BEP ile bağlanır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Bireyselleştirilmiş Eğitim Programları notundaki temel bilgi."
+},
+{
+    "question": "En az kısıtlayıcı ortam hangisini ifade eder?",
+    "options": ["A) Yasal dayanak 573 sayılı KHK ve Özel Eğitim Hizmetleri Yönetmeliği çerçevesindedir; uydurma madde ezberlenmez.", "B) BEP ders planı değildir ama planı bağlar.", "C) En az kısıtlayıcı ortam yerleştirme kararı BEP ile bağlanır.", "D) BEP öğrencinin mevcut performansına dayalı yıllık ve kısa dönemli hedefler belgesidir.", "E) Ekip öğretmen, özel eğitim, PDR, aile ve gerekiyorsa sağlık; öğrenci de katılır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Bireyselleştirilmiş Eğitim Programları notundaki temel bilgi."
+},
+{
+    "question": "Yasal dayanak ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Ekip öğretmen, özel eğitim, PDR, aile ve gerekiyorsa sağlık; öğrenci de katılır.", "B) En az kısıtlayıcı ortam yerleştirme kararı BEP ile bağlanır.", "C) BEP ders planı değildir ama planı bağlar.", "D) Yasal dayanak 573 sayılı KHK ve Özel Eğitim Hizmetleri Yönetmeliği çerçevesindedir; uydurma madde ezberlenmez.", "E) BEP öğrencinin mevcut performansına dayalı yıllık ve kısa dönemli hedefler belgesidir."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Bireyselleştirilmiş Eğitim Programları notundaki temel bilgi."
 },
 {
-    "question": "Bireyselleştirilmiş Eğitim Programları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Ekip öğretmen, özel eğitim, PDR, aile ve gerekiyorsa sağlık; öğrenci de katılır.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Bireyselleştirilmiş Eğitim Programları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) En az kısıtlayıcı ortam yerleştirme kararı BEP ile bağlanır.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi BEP ders planı değildir için doğru bir açıklamadır?",
+    "options": ["A) Ekip öğretmen, özel eğitim, PDR, aile ve gerekiyorsa sağlık; öğrenci de katılır.", "B) En az kısıtlayıcı ortam yerleştirme kararı BEP ile bağlanır.", "C) Yasal dayanak 573 sayılı KHK ve Özel Eğitim Hizmetleri Yönetmeliği çerçevesindedir; uydurma madde ezberlenmez.", "D) BEP ders planı değildir ama planı bağlar.", "E) BEP öğrencinin mevcut performansına dayalı yıllık ve kısa dönemli hedefler belgesidir."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Bireyselleştirilmiş Eğitim Programları notundaki temel bilgi."
 },
 {
-    "question": "Bireyselleştirilmiş Eğitim Programları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Yasal dayanak 573 sayılı KHK ve Özel Eğitim Hizmetleri Yönetmeliği çerçevesindedir; uydurm", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Mevcut performans hakkında hangisi doğrudur?",
+    "options": ["A) Mevcut performans veriye dayalı.", "B) Ekip öğretmen, özel eğitim, PDR, aile ve gerekiyorsa sağlık; öğrenci de katılır.", "C) En az kısıtlayıcı ortam yerleştirme kararı BEP ile bağlanır.", "D) Yasal dayanak 573 sayılı KHK ve Özel Eğitim Hizmetleri Yönetmeliği çerçevesindedir; uydurma madde ezberlenmez.", "E) BEP ders planı değildir ama planı bağlar."],
+    "correctAnswerIndex": 0,
+    "explanation": "Bireyselleştirilmiş Eğitim Programları notundaki temel bilgi."
 },
 {
-    "question": "Bireyselleştirilmiş Eğitim Programları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) BEP ders planı değildir ama planı bağlar.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Uzun ve kısa dönemli amaç hangisini ifade eder?",
+    "options": ["A) Ekip öğretmen, özel eğitim, PDR, aile ve gerekiyorsa sağlık; öğrenci de katılır.", "B) En az kısıtlayıcı ortam yerleştirme kararı BEP ile bağlanır.", "C) Yasal dayanak 573 sayılı KHK ve Özel Eğitim Hizmetleri Yönetmeliği çerçevesindedir; uydurma madde ezberlenmez.", "D) Uzun ve kısa dönemli amaç ölçülebilir, koşullu, ölçütlü.", "E) BEP öğrencinin mevcut performansına dayalı yıllık ve kısa dönemli hedefler belgesidir."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Bireyselleştirilmiş Eğitim Programları notundaki temel bilgi."
 },
 {
-    "question": "Bireyselleştirilmiş Eğitim Programları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mevcut performans veriye dayalı.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Hizmet ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Hizmet destek eğitim, fizyoterapi, dil konuşma vb. süre.", "B) BEP öğrencinin mevcut performansına dayalı yıllık ve kısa dönemli hedefler belgesidir.", "C) Ekip öğretmen, özel eğitim, PDR, aile ve gerekiyorsa sağlık; öğrenci de katılır.", "D) En az kısıtlayıcı ortam yerleştirme kararı BEP ile bağlanır.", "E) BEP ders planı değildir ama planı bağlar."],
+    "correctAnswerIndex": 0,
+    "explanation": "Bireyselleştirilmiş Eğitim Programları notundaki temel bilgi."
 },
 {
-    "question": "Bireyselleştirilmiş Eğitim Programları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Uzun ve kısa dönemli amaç ölçülebilir, koşullu, ölçütlü.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi Uyarlama için doğru bir açıklamadır?",
+    "options": ["A) Ekip öğretmen, özel eğitim, PDR, aile ve gerekiyorsa sağlık; öğrenci de katılır.", "B) En az kısıtlayıcı ortam yerleştirme kararı BEP ile bağlanır.", "C) Yasal dayanak 573 sayılı KHK ve Özel Eğitim Hizmetleri Yönetmeliği çerçevesindedir; uydurma madde ezberlenmez.", "D) Uyarlama içerik-süreç-ürün-ortam.", "E) BEP öğrencinin mevcut performansına dayalı yıllık ve kısa dönemli hedefler belgesidir."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Bireyselleştirilmiş Eğitim Programları notundaki temel bilgi."
 },
 {
-    "question": "Bireyselleştirilmiş Eğitim Programları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Hizmet destek eğitim, fizyoterapi, dil konuşma vb. süre.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Bireyselleştirilmiş Eğitim Programları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Uyarlama içerik-süreç-ürün-ortam.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Bireyselleştirilmiş Eğitim Programları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Değerlendirme tarihleri ve geçiş.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Değerlendirme tarihleri ve geçiş hakkında hangisi doğrudur?",
+    "options": ["A) Yasal dayanak 573 sayılı KHK ve Özel Eğitim Hizmetleri Yönetmeliği çerçevesindedir; uydurma madde ezberlenmez.", "B) Değerlendirme tarihleri ve geçiş.", "C) BEP öğrencinin mevcut performansına dayalı yıllık ve kısa dönemli hedefler belgesidir.", "D) Ekip öğretmen, özel eğitim, PDR, aile ve gerekiyorsa sağlık; öğrenci de katılır.", "E) En az kısıtlayıcı ortam yerleştirme kararı BEP ile bağlanır."],
+    "correctAnswerIndex": 1,
+    "explanation": "Bireyselleştirilmiş Eğitim Programları notundaki temel bilgi."
 }
 ];

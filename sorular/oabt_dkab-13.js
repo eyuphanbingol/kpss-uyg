@@ -61,63 +61,63 @@ window.oabt_dkab_13_sorulari = [
     "explanation": "ÖABT alan eğitimi boyutu budur."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) DKAB genel eğitimde din okuryazarlığı; İHL meslek ve derin alan.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Program kazanım, tema, değer, yetkinlik dili.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi DKAB için doğru bir açıklamadır?",
+    "options": ["A) Öğretmen alan bilgisi + pedagoji + dinî hassasiyet etiği.", "B) 5E, örnek olay, proje, ters yüz din dersine uyarlanır.", "C) DKAB genel eğitimde din okuryazarlığı; İHL meslek ve derin alan.", "D) Program kazanım, tema, değer, yetkinlik dili.", "E) 2020'ler yetkinlik eleştirel düşünme ve saygı."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) İmam hatip meslek dersleri ile DKAB yöntemleri örtüşür ama hedef kitle ayrılır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) 2020'ler yetkinlik eleştirel düşünme ve saygı.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Program hakkında hangisi doğrudur?",
+    "options": ["A) 2020'ler yetkinlik eleştirel düşünme ve saygı.", "B) Öğretmen alan bilgisi + pedagoji + dinî hassasiyet etiği.", "C) Program kazanım, tema, değer, yetkinlik dili.", "D) DKAB genel eğitimde din okuryazarlığı; İHL meslek ve derin alan.", "E) İmam hatip meslek dersleri ile DKAB yöntemleri örtüşür ama hedef kitle ayrılır."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Öğretmen alan bilgisi + pedagoji + dinî hassasiyet etiği.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "İmam hatip hangisini ifade eder?",
+    "options": ["A) Öğretmen alan bilgisi + pedagoji + dinî hassasiyet etiği.", "B) İmam hatip meslek dersleri ile DKAB yöntemleri örtüşür ama hedef kitle ayrılır.", "C) DKAB genel eğitimde din okuryazarlığı; İHL meslek ve derin alan.", "D) Program kazanım, tema, değer, yetkinlik dili.", "E) 2020'ler yetkinlik eleştirel düşünme ve saygı."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) 5E, örnek olay, proje, ters yüz din dersine uyarlanır.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "2020'ler yetkinlik ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) 2020'ler yetkinlik eleştirel düşünme ve saygı.", "B) DKAB genel eğitimde din okuryazarlığı; İHL meslek ve derin alan.", "C) Program kazanım, tema, değer, yetkinlik dili.", "D) İmam hatip meslek dersleri ile DKAB yöntemleri örtüşür ama hedef kitle ayrılır.", "E) Öğretmen alan bilgisi + pedagoji + dinî hassasiyet etiği."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kavram yanılgısı: meal/mushaf, sünnet/adet, mezhep/din.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Öğretmen için doğru bir açıklamadır?",
+    "options": ["A) DKAB genel eğitimde din okuryazarlığı; İHL meslek ve derin alan.", "B) Program kazanım, tema, değer, yetkinlik dili.", "C) İmam hatip meslek dersleri ile DKAB yöntemleri örtüşür ama hedef kitle ayrılır.", "D) 2020'ler yetkinlik eleştirel düşünme ve saygı.", "E) Öğretmen alan bilgisi + pedagoji + dinî hassasiyet etiği."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "5E, örnek olay, proje, ters yüz hakkında hangisi doğrudur?",
+    "options": ["A) 2020'ler yetkinlik eleştirel düşünme ve saygı.", "B) 5E, örnek olay, proje, ters yüz din dersine uyarlanır.", "C) DKAB genel eğitimde din okuryazarlığı; İHL meslek ve derin alan.", "D) Program kazanım, tema, değer, yetkinlik dili.", "E) İmam hatip meslek dersleri ile DKAB yöntemleri örtüşür ama hedef kitle ayrılır."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Çoklu zekâ ve istasyon somutlaştırır.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Kavram yanılgısı hangisini ifade eder?",
+    "options": ["A) Kavram yanılgısı: meal/mushaf, sünnet/adet, mezhep/din.", "B) DKAB genel eğitimde din okuryazarlığı; İHL meslek ve derin alan.", "C) Program kazanım, tema, değer, yetkinlik dili.", "D) İmam hatip meslek dersleri ile DKAB yöntemleri örtüşür ama hedef kitle ayrılır.", "E) 2020'ler yetkinlik eleştirel düşünme ve saygı."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Çoklu zekâ ve istasyon ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İmam hatip meslek dersleri ile DKAB yöntemleri örtüşür ama hedef kitle ayrılır.", "B) 2020'ler yetkinlik eleştirel düşünme ve saygı.", "C) Çoklu zekâ ve istasyon somutlaştırır.", "D) DKAB genel eğitimde din okuryazarlığı; İHL meslek ve derin alan.", "E) Program kazanım, tema, değer, yetkinlik dili."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Ölçme: açık uçlu metin, performans, rubrik.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Ölçme için doğru bir açıklamadır?",
+    "options": ["A) Program kazanım, tema, değer, yetkinlik dili.", "B) İmam hatip meslek dersleri ile DKAB yöntemleri örtüşür ama hedef kitle ayrılır.", "C) 2020'ler yetkinlik eleştirel düşünme ve saygı.", "D) Ölçme: açık uçlu metin, performans, rubrik.", "E) DKAB genel eğitimde din okuryazarlığı; İHL meslek ve derin alan."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Dijital içerik resmi meal ve güvenilir kaynak.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Dijital içerik hakkında hangisi doğrudur?",
+    "options": ["A) Dijital içerik resmi meal ve güvenilir kaynak.", "B) DKAB genel eğitimde din okuryazarlığı; İHL meslek ve derin alan.", "C) Program kazanım, tema, değer, yetkinlik dili.", "D) İmam hatip meslek dersleri ile DKAB yöntemleri örtüşür ama hedef kitle ayrılır.", "E) 2020'ler yetkinlik eleştirel düşünme ve saygı."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 }
 ];

@@ -61,63 +61,63 @@ window.oabt_ozel_14_sorulari = [
     "explanation": "Sağlık."
 },
 {
-    "question": "Özel Eğitimde Sanatsal Becerilerin Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Sanat terapi markası değil, eğitim hakkıdır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Sanat için doğru bir açıklamadır?",
+    "options": ["A) Motor, duyu, ifade, kültür çoklu kazanç.", "B) OSB duyu ve ilgi; zorla dokunma yok.", "C) Görme doku ve sesli betim.", "D) Sanat terapi markası değil, eğitim hakkıdır.", "E) Süreç ürün yarışından önce gelir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitimde Sanatsal Becerilerin Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Sanatsal Becerilerin Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Süreç ürün yarışından önce gelir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Süreç hakkında hangisi doğrudur?",
+    "options": ["A) Sanat terapi markası değil, eğitim hakkıdır.", "B) Motor, duyu, ifade, kültür çoklu kazanç.", "C) OSB duyu ve ilgi; zorla dokunma yok.", "D) Görme doku ve sesli betim.", "E) Süreç ürün yarışından önce gelir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Özel Eğitimde Sanatsal Becerilerin Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Motor, duyu, ifade, kültür hangisini ifade eder?",
+    "options": ["A) Motor, duyu, ifade, kültür çoklu kazanç.", "B) Sanat terapi markası değil, eğitim hakkıdır.", "C) Süreç ürün yarışından önce gelir.", "D) OSB duyu ve ilgi; zorla dokunma yok.", "E) Görme doku ve sesli betim."],
+    "correctAnswerIndex": 0,
+    "explanation": "Özel Eğitimde Sanatsal Becerilerin Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "OSB ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Motor, duyu, ifade, kültür çoklu kazanç.", "B) Görme doku ve sesli betim.", "C) OSB duyu ve ilgi; zorla dokunma yok.", "D) Sanat terapi markası değil, eğitim hakkıdır.", "E) Süreç ürün yarışından önce gelir."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Özel Eğitimde Sanatsal Becerilerin Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Sanatsal Becerilerin Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Motor, duyu, ifade, kültür çoklu kazanç.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Görme için doğru bir açıklamadır?",
+    "options": ["A) Görme doku ve sesli betim.", "B) Sanat terapi markası değil, eğitim hakkıdır.", "C) Süreç ürün yarışından önce gelir.", "D) Motor, duyu, ifade, kültür çoklu kazanç.", "E) OSB duyu ve ilgi; zorla dokunma yok."],
+    "correctAnswerIndex": 0,
+    "explanation": "Özel Eğitimde Sanatsal Becerilerin Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Açık uçlu malzeme hakkında hangisi doğrudur?",
+    "options": ["A) Süreç ürün yarışından önce gelir.", "B) Motor, duyu, ifade, kültür çoklu kazanç.", "C) OSB duyu ve ilgi; zorla dokunma yok.", "D) Açık uçlu malzeme ve görev analizi.", "E) Sanat terapi markası değil, eğitim hakkıdır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitimde Sanatsal Becerilerin Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "İş birliği ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) OSB duyu ve ilgi; zorla dokunma yok.", "B) İş birliği duvar resmi, mozaik.", "C) Sanat terapi markası değil, eğitim hakkıdır.", "D) Süreç ürün yarışından önce gelir.", "E) Motor, duyu, ifade, kültür çoklu kazanç."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Özel Eğitimde Sanatsal Becerilerin Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Sanatsal Becerilerin Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) OSB duyu ve ilgi; zorla dokunma yok.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Teknoloji için doğru bir açıklamadır?",
+    "options": ["A) Süreç ürün yarışından önce gelir.", "B) Motor, duyu, ifade, kültür çoklu kazanç.", "C) OSB duyu ve ilgi; zorla dokunma yok.", "D) Teknoloji kalın kalem, tablet kalemi.", "E) Sanat terapi markası değil, eğitim hakkıdır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitimde Sanatsal Becerilerin Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Sanatsal Becerilerin Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Görme doku ve sesli betim.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Sergi hakkında hangisi doğrudur?",
+    "options": ["A) Sanat terapi markası değil, eğitim hakkıdır.", "B) Süreç ürün yarışından önce gelir.", "C) Motor, duyu, ifade, kültür çoklu kazanç.", "D) OSB duyu ve ilgi; zorla dokunma yok.", "E) Sergi gönüllü, onamlı."],
+    "correctAnswerIndex": 4,
+    "explanation": "Özel Eğitimde Sanatsal Becerilerin Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Sanatsal Becerilerin Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Açık uçlu malzeme ve görev analizi.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitimde Sanatsal Becerilerin Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Seçim özerklik.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Sanatsal Becerilerin Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) İş birliği duvar resmi, mozaik.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitimde Sanatsal Becerilerin Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Teknoloji kalın kalem, tablet kalemi.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Sanatsal Becerilerin Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Sergi gönüllü, onamlı.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Amaç hangisini ifade eder?",
+    "options": ["A) Sanat terapi markası değil, eğitim hakkıdır.", "B) Süreç ürün yarışından önce gelir.", "C) Motor, duyu, ifade, kültür çoklu kazanç.", "D) OSB duyu ve ilgi; zorla dokunma yok.", "E) Amaç tutuş, seçim, 5 dakika sürdürme gibi ölçülebilir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Özel Eğitimde Sanatsal Becerilerin Öğretimi notundaki temel bilgi."
 }
 ];

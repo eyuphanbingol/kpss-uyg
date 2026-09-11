@@ -61,63 +61,63 @@ window.oabt_beden_6_sorulari = [
     "explanation": "Ödül kullanımı temkinli."
 },
 {
-    "question": "Spor Psikolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) İçsel-dışsal güdü; öz belirleme kuramı (Deci-Ryan)."],
+    "question": "Aşağıdakilerden hangisi İçsel-dışsal güdü için doğru bir açıklamadır?",
+    "options": ["A) Akış (flow) beceri-meydan okuma dengesi.", "B) Hedef sonuç, performans, süreç hedefleri.", "C) İçsel-dışsal güdü; öz belirleme kuramı (Deci-Ryan).", "D) Başarı güdüsü (McClelland) yaklaşma-kaçınma.", "E) Kaygı durumluk-sürekli; ters U (Yerkes-Dodson) uyarılma."],
+    "correctAnswerIndex": 2,
+    "explanation": "Spor Psikolojisi notundaki temel bilgi."
+},
+{
+    "question": "Başarı güdüsü hakkında hangisi doğrudur?",
+    "options": ["A) İçsel-dışsal güdü; öz belirleme kuramı (Deci-Ryan).", "B) Kaygı durumluk-sürekli; ters U (Yerkes-Dodson) uyarılma.", "C) Akış (flow) beceri-meydan okuma dengesi.", "D) Hedef sonuç, performans, süreç hedefleri.", "E) Başarı güdüsü (McClelland) yaklaşma-kaçınma."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Spor Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Spor Psikolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Başarı güdüsü (McClelland) yaklaşma-kaçınma.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Kaygı hangisini ifade eder?",
+    "options": ["A) Kaygı durumluk-sürekli; ters U (Yerkes-Dodson) uyarılma.", "B) İçsel-dışsal güdü; öz belirleme kuramı (Deci-Ryan).", "C) Başarı güdüsü (McClelland) yaklaşma-kaçınma.", "D) Akış (flow) beceri-meydan okuma dengesi.", "E) Hedef sonuç, performans, süreç hedefleri."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Spor Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Spor Psikolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Kaygı durumluk-sürekli; ters U (Yerkes-Dodson) uyarılma."],
+    "question": "Akış (flow) ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İçsel-dışsal güdü; öz belirleme kuramı (Deci-Ryan).", "B) Başarı güdüsü (McClelland) yaklaşma-kaçınma.", "C) Kaygı durumluk-sürekli; ters U (Yerkes-Dodson) uyarılma.", "D) Hedef sonuç, performans, süreç hedefleri.", "E) Akış (flow) beceri-meydan okuma dengesi."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Spor Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Spor Psikolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Akış (flow) beceri-meydan okuma dengesi.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Hedef için doğru bir açıklamadır?",
+    "options": ["A) Hedef sonuç, performans, süreç hedefleri.", "B) İçsel-dışsal güdü; öz belirleme kuramı (Deci-Ryan).", "C) Başarı güdüsü (McClelland) yaklaşma-kaçınma.", "D) Kaygı durumluk-sürekli; ters U (Yerkes-Dodson) uyarılma.", "E) Akış (flow) beceri-meydan okuma dengesi."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Spor Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Spor Psikolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Hedef sonuç, performans, süreç hedefleri."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Takım bağlılığı hakkında hangisi doğrudur?",
+    "options": ["A) Akış (flow) beceri-meydan okuma dengesi.", "B) Takım bağlılığı görev ve sosyal.", "C) İçsel-dışsal güdü; öz belirleme kuramı (Deci-Ryan).", "D) Başarı güdüsü (McClelland) yaklaşma-kaçınma.", "E) Kaygı durumluk-sürekli; ters U (Yerkes-Dodson) uyarılma."],
+    "correctAnswerIndex": 1,
+    "explanation": "Spor Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Spor Psikolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Takım bağlılığı görev ve sosyal.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Rol netliği, liderlik hangisini ifade eder?",
+    "options": ["A) Kaygı durumluk-sürekli; ters U (Yerkes-Dodson) uyarılma.", "B) Akış (flow) beceri-meydan okuma dengesi.", "C) Rol netliği, liderlik (Chelladurai).", "D) İçsel-dışsal güdü; öz belirleme kuramı (Deci-Ryan).", "E) Başarı güdüsü (McClelland) yaklaşma-kaçınma."],
+    "correctAnswerIndex": 2,
+    "explanation": "Spor Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Spor Psikolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Rol netliği, liderlik (Chelladurai)."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "İletişim ve çatışma ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Kaygı durumluk-sürekli; ters U (Yerkes-Dodson) uyarılma.", "B) Akış (flow) beceri-meydan okuma dengesi.", "C) İletişim ve çatışma.", "D) İçsel-dışsal güdü; öz belirleme kuramı (Deci-Ryan).", "E) Başarı güdüsü (McClelland) yaklaşma-kaçınma."],
+    "correctAnswerIndex": 2,
+    "explanation": "Spor Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Spor Psikolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) İletişim ve çatışma.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Tükenmişlik için doğru bir açıklamadır?",
+    "options": ["A) Kaygı durumluk-sürekli; ters U (Yerkes-Dodson) uyarılma.", "B) Akış (flow) beceri-meydan okuma dengesi.", "C) Tükenmişlik aşırı yük + düşük kontrol.", "D) İçsel-dışsal güdü; öz belirleme kuramı (Deci-Ryan).", "E) Başarı güdüsü (McClelland) yaklaşma-kaçınma."],
+    "correctAnswerIndex": 2,
+    "explanation": "Spor Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Spor Psikolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Tükenmişlik aşırı yük + düşük kontrol."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Spor Psikolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Sakatlık psikolojisi korku, kimlik.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Sakatlık psikolojisi hakkında hangisi doğrudur?",
+    "options": ["A) Başarı güdüsü (McClelland) yaklaşma-kaçınma.", "B) Kaygı durumluk-sürekli; ters U (Yerkes-Dodson) uyarılma.", "C) Akış (flow) beceri-meydan okuma dengesi.", "D) Sakatlık psikolojisi korku, kimlik.", "E) İçsel-dışsal güdü; öz belirleme kuramı (Deci-Ryan)."],
+    "correctAnswerIndex": 3,
+    "explanation": "Spor Psikolojisi notundaki temel bilgi."
 }
 ];

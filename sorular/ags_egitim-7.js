@@ -73,51 +73,51 @@ window.ags_egitim_7_sorulari = [
     "explanation": "Least intervention."
 },
 {
-    "question": "Sınıf Yönetimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Sınıf yönetimi öğretimi mümkün kılan düzen, ilişki ve zaman yönetimidir; ceza sistemi deği", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Sınıf yönetimi için doğru bir açıklamadır?",
+    "options": ["A) Zaman yönetimi akademik öğrenme zamanını (ALT) artırmak; geçişleri kısaltmak.", "B) Sınıf yönetimi öğretimi mümkün kılan düzen, ilişki ve zaman yönetimidir; ceza sistemi değildir.", "C) Kounin: withitness (farkındalık), overlapping (eşzamanlı iş), dalga etkisi, akıcılık, momentum.", "D) Önleyici yaklaşım kuralların birlikte konması, rutin, fiziksel düzen ve anlamlı öğretim.", "E) Fiziksel düzen oturma, görüş, dolaşım, uyarıcıların kontrolü; psikososyal iklim güven ve aidiyet."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Sınıf Yönetimi notundaki temel bilgi."
 },
 {
-    "question": "Sınıf Yönetimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Kounin: withitness (farkındalık), overlapping (eşzamanlı iş), dalga etkisi, akıcılık, mome", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Kounin hakkında hangisi doğrudur?",
+    "options": ["A) Fiziksel düzen oturma, görüş, dolaşım, uyarıcıların kontrolü; psikososyal iklim güven ve aidiyet.", "B) Zaman yönetimi akademik öğrenme zamanını (ALT) artırmak; geçişleri kısaltmak.", "C) Kounin: withitness (farkındalık), overlapping (eşzamanlı iş), dalga etkisi, akıcılık, momentum.", "D) Sınıf yönetimi öğretimi mümkün kılan düzen, ilişki ve zaman yönetimidir; ceza sistemi değildir.", "E) Önleyici yaklaşım kuralların birlikte konması, rutin, fiziksel düzen ve anlamlı öğretim."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Sınıf Yönetimi notundaki temel bilgi."
 },
 {
-    "question": "Sınıf Yönetimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Önleyici yaklaşım kuralların birlikte konması, rutin, fiziksel düzen ve anlamlı öğretim.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Önleyici yaklaşım hangisini ifade eder?",
+    "options": ["A) Zaman yönetimi akademik öğrenme zamanını (ALT) artırmak; geçişleri kısaltmak.", "B) Önleyici yaklaşım kuralların birlikte konması, rutin, fiziksel düzen ve anlamlı öğretim.", "C) Sınıf yönetimi öğretimi mümkün kılan düzen, ilişki ve zaman yönetimidir; ceza sistemi değildir.", "D) Kounin: withitness (farkındalık), overlapping (eşzamanlı iş), dalga etkisi, akıcılık, momentum.", "E) Fiziksel düzen oturma, görüş, dolaşım, uyarıcıların kontrolü; psikososyal iklim güven ve aidiyet."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Sınıf Yönetimi notundaki temel bilgi."
 },
 {
-    "question": "Sınıf Yönetimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Fiziksel düzen oturma, görüş, dolaşım, uyarıcıların kontrolü; psikososyal iklim güven ve a", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Fiziksel düzen ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Fiziksel düzen oturma, görüş, dolaşım, uyarıcıların kontrolü; psikososyal iklim güven ve aidiyet.", "B) Sınıf yönetimi öğretimi mümkün kılan düzen, ilişki ve zaman yönetimidir; ceza sistemi değildir.", "C) Kounin: withitness (farkındalık), overlapping (eşzamanlı iş), dalga etkisi, akıcılık, momentum.", "D) Zaman yönetimi akademik öğrenme zamanını (ALT) artırmak; geçişleri kısaltmak.", "E) Canter (iddialı disiplin) net kural, tutarlı olumlu-olumsuz sonuç, sakin iddia."],
+    "correctAnswerIndex": 0,
+    "explanation": "Sınıf Yönetimi notundaki temel bilgi."
 },
 {
-    "question": "Sınıf Yönetimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Zaman yönetimi akademik öğrenme zamanını (ALT) artırmak; geçişleri kısaltmak.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Zaman yönetimi için doğru bir açıklamadır?",
+    "options": ["A) Önleyici yaklaşım kuralların birlikte konması, rutin, fiziksel düzen ve anlamlı öğretim.", "B) Fiziksel düzen oturma, görüş, dolaşım, uyarıcıların kontrolü; psikososyal iklim güven ve aidiyet.", "C) Canter (iddialı disiplin) net kural, tutarlı olumlu-olumsuz sonuç, sakin iddia.", "D) Zaman yönetimi akademik öğrenme zamanını (ALT) artırmak; geçişleri kısaltmak.", "E) Kounin: withitness (farkındalık), overlapping (eşzamanlı iş), dalga etkisi, akıcılık, momentum."],
+    "correctAnswerIndex": 3,
+    "explanation": "Sınıf Yönetimi notundaki temel bilgi."
 },
 {
-    "question": "Sınıf Yönetimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Canter (iddialı disiplin) net kural, tutarlı olumlu-olumsuz sonuç, sakin iddia.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Canter (iddialı disiplin) hakkında hangisi doğrudur?",
+    "options": ["A) Canter (iddialı disiplin) net kural, tutarlı olumlu-olumsuz sonuç, sakin iddia.", "B) Sınıf yönetimi öğretimi mümkün kılan düzen, ilişki ve zaman yönetimidir; ceza sistemi değildir.", "C) Kounin: withitness (farkındalık), overlapping (eşzamanlı iş), dalga etkisi, akıcılık, momentum.", "D) Önleyici yaklaşım kuralların birlikte konması, rutin, fiziksel düzen ve anlamlı öğretim.", "E) Fiziksel düzen oturma, görüş, dolaşım, uyarıcıların kontrolü; psikososyal iklim güven ve aidiyet."],
+    "correctAnswerIndex": 0,
+    "explanation": "Sınıf Yönetimi notundaki temel bilgi."
 },
 {
-    "question": "Sınıf Yönetimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gordon (Etkili Öğretmenlik Eğitimi) ben dili, kapı aralayıcı, kaybeden yok çatışma çözümü.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Gordon (Etkili Öğretmenlik Eğitimi) hangisini ifade eder?",
+    "options": ["A) Sınıf yönetimi öğretimi mümkün kılan düzen, ilişki ve zaman yönetimidir; ceza sistemi değildir.", "B) Kounin: withitness (farkındalık), overlapping (eşzamanlı iş), dalga etkisi, akıcılık, momentum.", "C) Önleyici yaklaşım kuralların birlikte konması, rutin, fiziksel düzen ve anlamlı öğretim.", "D) Fiziksel düzen oturma, görüş, dolaşım, uyarıcıların kontrolü; psikososyal iklim güven ve aidiyet.", "E) Gordon (Etkili Öğretmenlik Eğitimi) ben dili, kapı aralayıcı, kaybeden yok çatışma çözümü."],
+    "correctAnswerIndex": 4,
+    "explanation": "Sınıf Yönetimi notundaki temel bilgi."
 },
 {
-    "question": "Sınıf Yönetimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Dreikurs yanlış davranışın amacı: dikkat, güç, öç, yetersizlik; mantıksal sonuç.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Dreikurs ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Sınıf yönetimi öğretimi mümkün kılan düzen, ilişki ve zaman yönetimidir; ceza sistemi değildir.", "B) Kounin: withitness (farkındalık), overlapping (eşzamanlı iş), dalga etkisi, akıcılık, momentum.", "C) Önleyici yaklaşım kuralların birlikte konması, rutin, fiziksel düzen ve anlamlı öğretim.", "D) Fiziksel düzen oturma, görüş, dolaşım, uyarıcıların kontrolü; psikososyal iklim güven ve aidiyet.", "E) Dreikurs yanlış davranışın amacı: dikkat, güç, öç, yetersizlik; mantıksal sonuç."],
+    "correctAnswerIndex": 4,
+    "explanation": "Sınıf Yönetimi notundaki temel bilgi."
 }
 ];

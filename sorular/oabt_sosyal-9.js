@@ -55,69 +55,69 @@ window.oabt_sosyal_9_sorulari = [
     "explanation": "Bağımsız icat da vardır."
 },
 {
-    "question": "Antropoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Kültür öğrenilmiş, paylaşılan, sembolik, dinamik yaşam biçimi.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Kültür için doğru bir açıklamadır?",
+    "options": ["A) Etnosentrizm ve ötekileştirme; oryantalizm eleştirisi.", "B) Akrabalık soy, evlilik kuralları, hane.", "C) Biyolojik evrim, primat, paleoantropoloji.", "D) Holizm ve karşılaştırma; emik-etik bakış.", "E) Kültür öğrenilmiş, paylaşılan, sembolik, dinamik yaşam biçimi."],
+    "correctAnswerIndex": 4,
+    "explanation": "Antropoloji notundaki temel bilgi."
 },
 {
-    "question": "Antropoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Kültürel görelilik anlamı bağlamında; insan hakları evrenselliğiyle gerilim öğretimde açık", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Kültürel görelilik hakkında hangisi doğrudur?",
+    "options": ["A) Kültürel görelilik anlamı bağlamında; insan hakları evrenselliğiyle gerilim öğretimde açık konuşulur.", "B) Kültür öğrenilmiş, paylaşılan, sembolik, dinamik yaşam biçimi.", "C) Etnosentrizm ve ötekileştirme; oryantalizm eleştirisi.", "D) Dil ve kültür Sapir-Whorf zayıf/güçlü; kimlik.", "E) Akrabalık soy, evlilik kuralları, hane."],
+    "correctAnswerIndex": 0,
+    "explanation": "Antropoloji notundaki temel bilgi."
+},
+{
+    "question": "Etnosentrizm ve ötekileştirme hangisini ifade eder?",
+    "options": ["A) Etnosentrizm ve ötekileştirme; oryantalizm eleştirisi.", "B) Kültür öğrenilmiş, paylaşılan, sembolik, dinamik yaşam biçimi.", "C) Kültürel görelilik anlamı bağlamında; insan hakları evrenselliğiyle gerilim öğretimde açık konuşulur.", "D) Dil ve kültür Sapir-Whorf zayıf/güçlü; kimlik.", "E) Akrabalık soy, evlilik kuralları, hane."],
+    "correctAnswerIndex": 0,
+    "explanation": "Antropoloji notundaki temel bilgi."
+},
+{
+    "question": "Dil ve kültür ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Etnosentrizm ve ötekileştirme; oryantalizm eleştirisi.", "B) Akrabalık soy, evlilik kuralları, hane.", "C) Dil ve kültür Sapir-Whorf zayıf/güçlü; kimlik.", "D) Kültür öğrenilmiş, paylaşılan, sembolik, dinamik yaşam biçimi.", "E) Kültürel görelilik anlamı bağlamında; insan hakları evrenselliğiyle gerilim öğretimde açık konuşulur."],
+    "correctAnswerIndex": 2,
+    "explanation": "Antropoloji notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Akrabalık için doğru bir açıklamadır?",
+    "options": ["A) Kültürel görelilik anlamı bağlamında; insan hakları evrenselliğiyle gerilim öğretimde açık konuşulur.", "B) Etnosentrizm ve ötekileştirme; oryantalizm eleştirisi.", "C) Dil ve kültür Sapir-Whorf zayıf/güçlü; kimlik.", "D) Akrabalık soy, evlilik kuralları, hane.", "E) Kültür öğrenilmiş, paylaşılan, sembolik, dinamik yaşam biçimi."],
+    "correctAnswerIndex": 3,
+    "explanation": "Antropoloji notundaki temel bilgi."
+},
+{
+    "question": "Biyolojik hakkında hangisi doğrudur?",
+    "options": ["A) Biyolojik evrim, primat, paleoantropoloji.", "B) Kültür öğrenilmiş, paylaşılan, sembolik, dinamik yaşam biçimi.", "C) Kültürel görelilik anlamı bağlamında; insan hakları evrenselliğiyle gerilim öğretimde açık konuşulur.", "D) Etnosentrizm ve ötekileştirme; oryantalizm eleştirisi.", "E) Dil ve kültür Sapir-Whorf zayıf/güçlü; kimlik."],
+    "correctAnswerIndex": 0,
+    "explanation": "Antropoloji notundaki temel bilgi."
+},
+{
+    "question": "Arkeolojik hangisini ifade eder?",
+    "options": ["A) Dil ve kültür Sapir-Whorf zayıf/güçlü; kimlik.", "B) Arkeolojik maddi kültür (ayrı konuyla bağ).", "C) Kültür öğrenilmiş, paylaşılan, sembolik, dinamik yaşam biçimi.", "D) Kültürel görelilik anlamı bağlamında; insan hakları evrenselliğiyle gerilim öğretimde açık konuşulur.", "E) Etnosentrizm ve ötekileştirme; oryantalizm eleştirisi."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Antropoloji notundaki temel bilgi."
 },
 {
-    "question": "Antropoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Etnosentrizm ve ötekileştirme; oryantalizm eleştirisi.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Dilsel ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Dilsel ve sosyokültürel etnografi, katılımlı gözlem.", "B) Kültür öğrenilmiş, paylaşılan, sembolik, dinamik yaşam biçimi.", "C) Kültürel görelilik anlamı bağlamında; insan hakları evrenselliğiyle gerilim öğretimde açık konuşulur.", "D) Etnosentrizm ve ötekileştirme; oryantalizm eleştirisi.", "E) Dil ve kültür Sapir-Whorf zayıf/güçlü; kimlik."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Antropoloji notundaki temel bilgi."
 },
 {
-    "question": "Antropoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Dil ve kültür Sapir-Whorf zayıf/güçlü; kimlik.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Holizm için doğru bir açıklamadır?",
+    "options": ["A) Kültür öğrenilmiş, paylaşılan, sembolik, dinamik yaşam biçimi.", "B) Kültürel görelilik anlamı bağlamında; insan hakları evrenselliğiyle gerilim öğretimde açık konuşulur.", "C) Etnosentrizm ve ötekileştirme; oryantalizm eleştirisi.", "D) Dil ve kültür Sapir-Whorf zayıf/güçlü; kimlik.", "E) Holizm ve karşılaştırma; emik-etik bakış."],
+    "correctAnswerIndex": 4,
+    "explanation": "Antropoloji notundaki temel bilgi."
 },
 {
-    "question": "Antropoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Akrabalık soy, evlilik kuralları, hane.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Uygulamalı hakkında hangisi doğrudur?",
+    "options": ["A) Uygulamalı kalkınma, sağlık, eğitim antropolojisi.", "B) Kültür öğrenilmiş, paylaşılan, sembolik, dinamik yaşam biçimi.", "C) Kültürel görelilik anlamı bağlamında; insan hakları evrenselliğiyle gerilim öğretimde açık konuşulur.", "D) Etnosentrizm ve ötekileştirme; oryantalizm eleştirisi.", "E) Dil ve kültür Sapir-Whorf zayıf/güçlü; kimlik."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Antropoloji notundaki temel bilgi."
 },
 {
-    "question": "Antropoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Biyolojik evrim, primat, paleoantropoloji.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Antropoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Arkeolojik maddi kültür (ayrı konuyla bağ).", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Antropoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Dilsel ve sosyokültürel etnografi, katılımlı gözlem.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Antropoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Holizm ve karşılaştırma; emik-etik bakış.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Antropoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Uygulamalı kalkınma, sağlık, eğitim antropolojisi.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Antropoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Etnisite inşa; millet hayali cemaat (Anderson) bağları.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Etnisite hangisini ifade eder?",
+    "options": ["A) Kültür öğrenilmiş, paylaşılan, sembolik, dinamik yaşam biçimi.", "B) Kültürel görelilik anlamı bağlamında; insan hakları evrenselliğiyle gerilim öğretimde açık konuşulur.", "C) Etnosentrizm ve ötekileştirme; oryantalizm eleştirisi.", "D) Dil ve kültür Sapir-Whorf zayıf/güçlü; kimlik.", "E) Etnisite inşa; millet hayali cemaat (Anderson) bağları."],
+    "correctAnswerIndex": 4,
+    "explanation": "Antropoloji notundaki temel bilgi."
 }
 ];

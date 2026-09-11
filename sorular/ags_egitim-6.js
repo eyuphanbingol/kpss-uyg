@@ -73,51 +73,51 @@ window.ags_egitim_6_sorulari = [
     "explanation": "Yöntem-bağlam uyumu."
 },
 {
-    "question": "Öğretim Yöntem ve Teknikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Anlatım (takrir) bilgiyi kısa sürede aktarır; üst düzey düşünmede tek başına yetersizdir.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Anlatım (takrir) için doğru bir açıklamadır?",
+    "options": ["A) Anlatım (takrir) bilgiyi kısa sürede aktarır; üst düzey düşünmede tek başına yetersizdir.", "B) Tartışma, soru-cevap, beyin fırtınası katılım ve çoklu bakış; Sokratik yöntem çelişkiyle düşündürür.", "C) Örnek olay, problem çözme, proje yaşantı ve üst düzey beceri; işe koşulmuş bilgidir.", "D) İşbirlikli öğrenme (Johnson, Slavin) olumlu bağımlılık, bireysel sorumluluk, eşit katılım, grup süreci.", "E) Gösterip yaptırma, gezi-gözlem, deney psikomotor ve somut yaşantı; beceri öğretiminin belkemiği."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Öğretim Yöntem ve Teknikleri notundaki temel bilgi."
 },
 {
-    "question": "Öğretim Yöntem ve Teknikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Tartışma, soru-cevap, beyin fırtınası katılım ve çoklu bakış; Sokratik yöntem çelişkiyle d", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Öğretim Yöntem ve Teknikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Örnek olay, problem çözme, proje yaşantı ve üst düzey beceri; işe koşulmuş bilgidir.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Tartışma, soru-cevap, beyin fırtınası hakkında hangisi doğrudur?",
+    "options": ["A) Tartışma, soru-cevap, beyin fırtınası katılım ve çoklu bakış; Sokratik yöntem çelişkiyle düşündürür.", "B) Anlatım (takrir) bilgiyi kısa sürede aktarır; üst düzey düşünmede tek başına yetersizdir.", "C) Örnek olay, problem çözme, proje yaşantı ve üst düzey beceri; işe koşulmuş bilgidir.", "D) İşbirlikli öğrenme (Johnson, Slavin) olumlu bağımlılık, bireysel sorumluluk, eşit katılım, grup süreci.", "E) Gösterip yaptırma, gezi-gözlem, deney psikomotor ve somut yaşantı; beceri öğretiminin belkemiği."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Öğretim Yöntem ve Teknikleri notundaki temel bilgi."
 },
 {
-    "question": "Öğretim Yöntem ve Teknikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) İşbirlikli öğrenme (Johnson, Slavin) olumlu bağımlılık, bireysel sorumluluk, eşit katılım,", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Örnek olay, problem çözme, proje hangisini ifade eder?",
+    "options": ["A) Gösterip yaptırma, gezi-gözlem, deney psikomotor ve somut yaşantı; beceri öğretiminin belkemiği.", "B) Örnek olay, problem çözme, proje yaşantı ve üst düzey beceri; işe koşulmuş bilgidir.", "C) Anlatım (takrir) bilgiyi kısa sürede aktarır; üst düzey düşünmede tek başına yetersizdir.", "D) Tartışma, soru-cevap, beyin fırtınası katılım ve çoklu bakış; Sokratik yöntem çelişkiyle düşündürür.", "E) İşbirlikli öğrenme (Johnson, Slavin) olumlu bağımlılık, bireysel sorumluluk, eşit katılım, grup süreci."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Öğretim Yöntem ve Teknikleri notundaki temel bilgi."
 },
 {
-    "question": "Öğretim Yöntem ve Teknikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gösterip yaptırma, gezi-gözlem, deney psikomotor ve somut yaşantı; beceri öğretiminin belk", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "İşbirlikli öğrenme ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İşbirlikli öğrenme (Johnson, Slavin) olumlu bağımlılık, bireysel sorumluluk, eşit katılım, grup süreci.", "B) Anlatım (takrir) bilgiyi kısa sürede aktarır; üst düzey düşünmede tek başına yetersizdir.", "C) Tartışma, soru-cevap, beyin fırtınası katılım ve çoklu bakış; Sokratik yöntem çelişkiyle düşündürür.", "D) Örnek olay, problem çözme, proje yaşantı ve üst düzey beceri; işe koşulmuş bilgidir.", "E) Gösterip yaptırma, gezi-gözlem, deney psikomotor ve somut yaşantı; beceri öğretiminin belkemiği."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Öğretim Yöntem ve Teknikleri notundaki temel bilgi."
 },
 {
-    "question": "Öğretim Yöntem ve Teknikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Strateji sunuş, buluş, araştırma-inceleme (Ausubel, Bruner, J. Dewey hattı) üst karardır.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Gösterip yaptırma, gezi-gözlem, deney için doğru bir açıklamadır?",
+    "options": ["A) Tartışma, soru-cevap, beyin fırtınası katılım ve çoklu bakış; Sokratik yöntem çelişkiyle düşündürür.", "B) Örnek olay, problem çözme, proje yaşantı ve üst düzey beceri; işe koşulmuş bilgidir.", "C) İşbirlikli öğrenme (Johnson, Slavin) olumlu bağımlılık, bireysel sorumluluk, eşit katılım, grup süreci.", "D) Gösterip yaptırma, gezi-gözlem, deney psikomotor ve somut yaşantı; beceri öğretiminin belkemiği.", "E) Anlatım (takrir) bilgiyi kısa sürede aktarır; üst düzey düşünmede tek başına yetersizdir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Öğretim Yöntem ve Teknikleri notundaki temel bilgi."
+},
+{
+    "question": "5E hangisini ifade eder?",
+    "options": ["A) Anlatım (takrir) bilgiyi kısa sürede aktarır; üst düzey düşünmede tek başına yetersizdir.", "B) Tartışma, soru-cevap, beyin fırtınası katılım ve çoklu bakış; Sokratik yöntem çelişkiyle düşündürür.", "C) Örnek olay, problem çözme, proje yaşantı ve üst düzey beceri; işe koşulmuş bilgidir.", "D) İşbirlikli öğrenme (Johnson, Slavin) olumlu bağımlılık, bireysel sorumluluk, eşit katılım, grup süreci.", "E) 5E (girme, keşfetme, açıklama, derinleştirme, değerlendirme) yapılandırmacı ders akışıdır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Öğretim Yöntem ve Teknikleri notundaki temel bilgi."
+},
+{
+    "question": "İstasyon, köşeleme, akran öğretimi, drama, rol oynama ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İşbirlikli öğrenme (Johnson, Slavin) olumlu bağımlılık, bireysel sorumluluk, eşit katılım, grup süreci.", "B) İstasyon, köşeleme, akran öğretimi, drama, rol oynama aktif öğrenme teknikleridir.", "C) Anlatım (takrir) bilgiyi kısa sürede aktarır; üst düzey düşünmede tek başına yetersizdir.", "D) Tartışma, soru-cevap, beyin fırtınası katılım ve çoklu bakış; Sokratik yöntem çelişkiyle düşündürür.", "E) Örnek olay, problem çözme, proje yaşantı ve üst düzey beceri; işe koşulmuş bilgidir."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Öğretim Yöntem ve Teknikleri notundaki temel bilgi."
 },
 {
-    "question": "Öğretim Yöntem ve Teknikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) 5E (girme, keşfetme, açıklama, derinleştirme, değerlendirme) yapılandırmacı ders akışıdır.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Öğretim Yöntem ve Teknikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) İstasyon, köşeleme, akran öğretimi, drama, rol oynama aktif öğrenme teknikleridir.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Tersyüz sınıf için doğru bir açıklamadır?",
+    "options": ["A) Tartışma, soru-cevap, beyin fırtınası katılım ve çoklu bakış; Sokratik yöntem çelişkiyle düşündürür.", "B) Örnek olay, problem çözme, proje yaşantı ve üst düzey beceri; işe koşulmuş bilgidir.", "C) İşbirlikli öğrenme (Johnson, Slavin) olumlu bağımlılık, bireysel sorumluluk, eşit katılım, grup süreci.", "D) Tersyüz sınıf içerik evde, uygulama okulda; zamanı uygulama lehine çevirir.", "E) Anlatım (takrir) bilgiyi kısa sürede aktarır; üst düzey düşünmede tek başına yetersizdir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Öğretim Yöntem ve Teknikleri notundaki temel bilgi."
 }
 ];

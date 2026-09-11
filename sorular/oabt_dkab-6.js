@@ -61,63 +61,63 @@ window.oabt_dkab_6_sorulari = [
     "explanation": "Fasıklık tekfirden ayrılır."
 },
 {
-    "question": "Kelam konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Kelam iman esaslarını aklî ve naklî delille temellendirir."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Kelam için doğru bir açıklamadır?",
+    "options": ["A) Halku'l-Kur'an mihne tartışması.", "B) Kelam iman esaslarını aklî ve naklî delille temellendirir.", "C) Kader, sıfat, irade, nübüvvet, ahiret klasik meselelerdir.", "D) Cebriye fiili Allah'a yıkar; Kaderiyye/Mutezile kul iradesini öne çıkarır.", "E) Mutezile beş esas: tevhid, adl, va'd-vaid, menzile, emr-i bi'l-ma'ruf."],
+    "correctAnswerIndex": 1,
+    "explanation": "Kelam notundaki temel bilgi."
 },
 {
-    "question": "Kelam konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Kader, sıfat, irade, nübüvvet, ahiret klasik meselelerdir.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Kader, sıfat, irade, nübüvvet, ahiret hakkında hangisi doğrudur?",
+    "options": ["A) Kader, sıfat, irade, nübüvvet, ahiret klasik meselelerdir.", "B) Kelam iman esaslarını aklî ve naklî delille temellendirir.", "C) Cebriye fiili Allah'a yıkar; Kaderiyye/Mutezile kul iradesini öne çıkarır.", "D) Eş'ari ve Maturidi Ehl-i sünnet kelamının iki imamı.", "E) Selefi kelama mesafeli nakil vurgusu; teşbih-tenzih gerilimi."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Kelam notundaki temel bilgi."
 },
 {
-    "question": "Kelam konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Cebriye fiili Allah'a yıkar; Kaderiyye/Mutezile kul iradesini öne çıkarır."],
+    "question": "Cebriye hangisini ifade eder?",
+    "options": ["A) Kelam iman esaslarını aklî ve naklî delille temellendirir.", "B) Kader, sıfat, irade, nübüvvet, ahiret klasik meselelerdir.", "C) Eş'ari ve Maturidi Ehl-i sünnet kelamının iki imamı.", "D) Selefi kelama mesafeli nakil vurgusu; teşbih-tenzih gerilimi.", "E) Cebriye fiili Allah'a yıkar; Kaderiyye/Mutezile kul iradesini öne çıkarır."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Kelam notundaki temel bilgi."
 },
 {
-    "question": "Kelam konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Eş'ari ve Maturidi Ehl-i sünnet kelamının iki imamı.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Eş'ari ve Maturidi ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Selefi kelama mesafeli nakil vurgusu; teşbih-tenzih gerilimi.", "B) Eş'ari ve Maturidi Ehl-i sünnet kelamının iki imamı.", "C) Kelam iman esaslarını aklî ve naklî delille temellendirir.", "D) Kader, sıfat, irade, nübüvvet, ahiret klasik meselelerdir.", "E) Cebriye fiili Allah'a yıkar; Kaderiyye/Mutezile kul iradesini öne çıkarır."],
+    "correctAnswerIndex": 1,
+    "explanation": "Kelam notundaki temel bilgi."
 },
 {
-    "question": "Kelam konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Selefi kelama mesafeli nakil vurgusu; teşbih-tenzih gerilimi."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Selefi için doğru bir açıklamadır?",
+    "options": ["A) Eş'ari ve Maturidi Ehl-i sünnet kelamının iki imamı.", "B) Selefi kelama mesafeli nakil vurgusu; teşbih-tenzih gerilimi.", "C) Kelam iman esaslarını aklî ve naklî delille temellendirir.", "D) Kader, sıfat, irade, nübüvvet, ahiret klasik meselelerdir.", "E) Cebriye fiili Allah'a yıkar; Kaderiyye/Mutezile kul iradesini öne çıkarır."],
+    "correctAnswerIndex": 1,
+    "explanation": "Kelam notundaki temel bilgi."
 },
 {
-    "question": "Kelam konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mutezile beş esas: tevhid, adl, va'd-vaid, menzile, emr-i bi'l-ma'ruf.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Mutezile beş esas hakkında hangisi doğrudur?",
+    "options": ["A) Eş'ari ve Maturidi Ehl-i sünnet kelamının iki imamı.", "B) Mutezile beş esas: tevhid, adl, va'd-vaid, menzile, emr-i bi'l-ma'ruf.", "C) Kelam iman esaslarını aklî ve naklî delille temellendirir.", "D) Kader, sıfat, irade, nübüvvet, ahiret klasik meselelerdir.", "E) Cebriye fiili Allah'a yıkar; Kaderiyye/Mutezile kul iradesini öne çıkarır."],
+    "correctAnswerIndex": 1,
+    "explanation": "Kelam notundaki temel bilgi."
 },
 {
-    "question": "Kelam konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Halku'l-Kur'an mihne tartışması."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Halku'l-Kur'an hangisini ifade eder?",
+    "options": ["A) Eş'ari ve Maturidi Ehl-i sünnet kelamının iki imamı.", "B) Halku'l-Kur'an mihne tartışması.", "C) Kelam iman esaslarını aklî ve naklî delille temellendirir.", "D) Kader, sıfat, irade, nübüvvet, ahiret klasik meselelerdir.", "E) Cebriye fiili Allah'a yıkar; Kaderiyye/Mutezile kul iradesini öne çıkarır."],
+    "correctAnswerIndex": 1,
+    "explanation": "Kelam notundaki temel bilgi."
 },
 {
-    "question": "Kelam konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Kesb Eş'ari kulun fiili kazanımı; Maturidi iradeyi daha vurgular.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Kesb ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Eş'ari ve Maturidi Ehl-i sünnet kelamının iki imamı.", "B) Kesb Eş'ari kulun fiili kazanımı; Maturidi iradeyi daha vurgular.", "C) Kelam iman esaslarını aklî ve naklî delille temellendirir.", "D) Kader, sıfat, irade, nübüvvet, ahiret klasik meselelerdir.", "E) Cebriye fiili Allah'a yıkar; Kaderiyye/Mutezile kul iradesini öne çıkarır."],
+    "correctAnswerIndex": 1,
+    "explanation": "Kelam notundaki temel bilgi."
 },
 {
-    "question": "Kelam konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Sıfat zatın ne aynı ne gayrı formülü Eş'ari'de meşhurdur."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Sıfat için doğru bir açıklamadır?",
+    "options": ["A) Cebriye fiili Allah'a yıkar; Kaderiyye/Mutezile kul iradesini öne çıkarır.", "B) Eş'ari ve Maturidi Ehl-i sünnet kelamının iki imamı.", "C) Selefi kelama mesafeli nakil vurgusu; teşbih-tenzih gerilimi.", "D) Sıfat zatın ne aynı ne gayrı formülü Eş'ari'de meşhurdur.", "E) Kelam iman esaslarını aklî ve naklî delille temellendirir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Kelam notundaki temel bilgi."
 },
 {
-    "question": "Kelam konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Şefaat, kabir, mizan, sırat sem'iyyattır.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Şefaat, kabir, mizan, sırat hakkında hangisi doğrudur?",
+    "options": ["A) Kader, sıfat, irade, nübüvvet, ahiret klasik meselelerdir.", "B) Cebriye fiili Allah'a yıkar; Kaderiyye/Mutezile kul iradesini öne çıkarır.", "C) Eş'ari ve Maturidi Ehl-i sünnet kelamının iki imamı.", "D) Şefaat, kabir, mizan, sırat sem'iyyattır.", "E) Kelam iman esaslarını aklî ve naklî delille temellendirir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Kelam notundaki temel bilgi."
 }
 ];

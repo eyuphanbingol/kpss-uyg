@@ -61,63 +61,63 @@ window.oabt_sinif_16_sorulari = [
     "explanation": "Rol model."
 },
 {
-    "question": "Beden Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Temel motor lokomotor, denge, manipülatif.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi Temel motor için doğru bir açıklamadır?",
+    "options": ["A) Temel motor lokomotor, denge, manipülatif.", "B) Oyun kurala uyma ve fair play.", "C) Sağlık ısınma, temizlik, su.", "D) Kapsayıcı kız-erkek-engel.", "E) 2026 alan eğitimi oyun ve güvenlik sorar; elit branş değil."],
+    "correctAnswerIndex": 0,
+    "explanation": "Beden Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Oyun hakkında hangisi doğrudur?",
+    "options": ["A) Sağlık ısınma, temizlik, su.", "B) Kapsayıcı kız-erkek-engel.", "C) Araç ip, top, çember, eşarp.", "D) Oyun kurala uyma ve fair play.", "E) Temel motor lokomotor, denge, manipülatif."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Beden Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Beden Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Oyun kurala uyma ve fair play.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Sağlık hangisini ifade eder?",
+    "options": ["A) Temel motor lokomotor, denge, manipülatif.", "B) Oyun kurala uyma ve fair play.", "C) Kapsayıcı kız-erkek-engel.", "D) 2026 alan eğitimi oyun ve güvenlik sorar; elit branş değil.", "E) Sağlık ısınma, temizlik, su."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Beden Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Beden Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Sağlık ısınma, temizlik, su.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Kapsayıcı ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Temel motor lokomotor, denge, manipülatif.", "B) Oyun kurala uyma ve fair play.", "C) Sağlık ısınma, temizlik, su.", "D) 2026 alan eğitimi oyun ve güvenlik sorar; elit branş değil.", "E) Kapsayıcı kız-erkek-engel."],
+    "correctAnswerIndex": 4,
+    "explanation": "Beden Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi 2026 alan eğitimi için doğru bir açıklamadır?",
+    "options": ["A) 2026 alan eğitimi oyun ve güvenlik sorar; elit branş değil.", "B) Temel motor lokomotor, denge, manipülatif.", "C) Oyun kurala uyma ve fair play.", "D) Sağlık ısınma, temizlik, su.", "E) Kapsayıcı kız-erkek-engel."],
+    "correctAnswerIndex": 0,
+    "explanation": "Beden Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Cimnastik duruş, atletizm oyunları, halk oyunu hakkında hangisi doğrudur?",
+    "options": ["A) Oyun kurala uyma ve fair play.", "B) Sağlık ısınma, temizlik, su.", "C) Kapsayıcı kız-erkek-engel.", "D) Cimnastik duruş, atletizm oyunları, halk oyunu.", "E) Temel motor lokomotor, denge, manipülatif."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Beden Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Beden Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Kapsayıcı kız-erkek-engel.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Kış-yaz oyunları için doğru bir açıklamadır?",
+    "options": ["A) Kış-yaz oyunları yerel.", "B) Temel motor lokomotor, denge, manipülatif.", "C) Oyun kurala uyma ve fair play.", "D) Sağlık ısınma, temizlik, su.", "E) Kapsayıcı kız-erkek-engel."],
+    "correctAnswerIndex": 0,
+    "explanation": "Beden Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Beden Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) 2026 alan eğitimi oyun ve güvenlik sorar; elit branş değil.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Araç hakkında hangisi doğrudur?",
+    "options": ["A) Oyun kurala uyma ve fair play.", "B) Sağlık ısınma, temizlik, su.", "C) Kapsayıcı kız-erkek-engel.", "D) Araç ip, top, çember, eşarp.", "E) Temel motor lokomotor, denge, manipülatif."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Beden Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Beden Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Cimnastik duruş, atletizm oyunları, halk oyunu.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Beden Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Ritim ve dans.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Farklılaştırılmış istasyon ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Oyun kurala uyma ve fair play.", "B) Sağlık ısınma, temizlik, su.", "C) Kapsayıcı kız-erkek-engel.", "D) Farklılaştırılmış istasyon.", "E) Temel motor lokomotor, denge, manipülatif."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Beden Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Beden Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Doğa ve yürüyüş.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Beden Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Kış-yaz oyunları yerel.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Beden Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Araç ip, top, çember, eşarp.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Ölçme hakkında hangisi doğrudur?",
+    "options": ["A) Sağlık ısınma, temizlik, su.", "B) Kapsayıcı kız-erkek-engel.", "C) Ölçme çaba ve gelişim.", "D) Temel motor lokomotor, denge, manipülatif.", "E) Oyun kurala uyma ve fair play."],
+    "correctAnswerIndex": 2,
+    "explanation": "Beden Eğitimi notundaki temel bilgi."
 }
 ];

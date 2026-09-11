@@ -55,69 +55,69 @@ window.oabt_sosyal_7_sorulari = [
     "explanation": "Hars-medeniyet tartışması."
 },
 {
-    "question": "Felsefe konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Felsefe soru, gerekçe, kavram analizi; mitos-logos ayrımı.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Felsefe için doğru bir açıklamadır?",
+    "options": ["A) Ontoloji varlık; idealizm-materyalizm, töz.", "B) Dil anlam, doğruluk, söz edimleri.", "C) Etik erdem (Aristoteles), ödev (Kant), yarar (faydacılık).", "D) Felsefe soru, gerekçe, kavram analizi; mitos-logos ayrımı.", "E) Epistemoloji bilgi nedir: gerekçeli doğru inanç tartışması; rasyonalizm-empirizm."],
+    "correctAnswerIndex": 3,
+    "explanation": "Felsefe notundaki temel bilgi."
 },
 {
-    "question": "Felsefe konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Epistemoloji bilgi nedir: gerekçeli doğru inanç tartışması; rasyonalizm-empirizm.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Epistemoloji hakkında hangisi doğrudur?",
+    "options": ["A) Bilim felsefesi tümevarım sorunu, sahteleştirme (Popper), paradigma (Kuhn).", "B) Dil anlam, doğruluk, söz edimleri.", "C) Epistemoloji bilgi nedir: gerekçeli doğru inanç tartışması; rasyonalizm-empirizm.", "D) Felsefe soru, gerekçe, kavram analizi; mitos-logos ayrımı.", "E) Ontoloji varlık; idealizm-materyalizm, töz."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Felsefe notundaki temel bilgi."
 },
 {
-    "question": "Felsefe konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Ontoloji varlık; idealizm-materyalizm, töz.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Ontoloji hangisini ifade eder?",
+    "options": ["A) Ontoloji varlık; idealizm-materyalizm, töz.", "B) Felsefe soru, gerekçe, kavram analizi; mitos-logos ayrımı.", "C) Epistemoloji bilgi nedir: gerekçeli doğru inanç tartışması; rasyonalizm-empirizm.", "D) Bilim felsefesi tümevarım sorunu, sahteleştirme (Popper), paradigma (Kuhn).", "E) Dil anlam, doğruluk, söz edimleri."],
+    "correctAnswerIndex": 0,
+    "explanation": "Felsefe notundaki temel bilgi."
+},
+{
+    "question": "Bilim felsefesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Bilim felsefesi tümevarım sorunu, sahteleştirme (Popper), paradigma (Kuhn).", "B) Felsefe soru, gerekçe, kavram analizi; mitos-logos ayrımı.", "C) Epistemoloji bilgi nedir: gerekçeli doğru inanç tartışması; rasyonalizm-empirizm.", "D) Ontoloji varlık; idealizm-materyalizm, töz.", "E) Dil anlam, doğruluk, söz edimleri."],
+    "correctAnswerIndex": 0,
+    "explanation": "Felsefe notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Dil için doğru bir açıklamadır?",
+    "options": ["A) Dil anlam, doğruluk, söz edimleri.", "B) Felsefe soru, gerekçe, kavram analizi; mitos-logos ayrımı.", "C) Epistemoloji bilgi nedir: gerekçeli doğru inanç tartışması; rasyonalizm-empirizm.", "D) Ontoloji varlık; idealizm-materyalizm, töz.", "E) Bilim felsefesi tümevarım sorunu, sahteleştirme (Popper), paradigma (Kuhn)."],
+    "correctAnswerIndex": 0,
+    "explanation": "Felsefe notundaki temel bilgi."
+},
+{
+    "question": "Etik hakkında hangisi doğrudur?",
+    "options": ["A) Epistemoloji bilgi nedir: gerekçeli doğru inanç tartışması; rasyonalizm-empirizm.", "B) Ontoloji varlık; idealizm-materyalizm, töz.", "C) Bilim felsefesi tümevarım sorunu, sahteleştirme (Popper), paradigma (Kuhn).", "D) Etik erdem (Aristoteles), ödev (Kant), yarar (faydacılık).", "E) Felsefe soru, gerekçe, kavram analizi; mitos-logos ayrımı."],
+    "correctAnswerIndex": 3,
+    "explanation": "Felsefe notundaki temel bilgi."
+},
+{
+    "question": "Siyaset felsefesi hangisini ifade eder?",
+    "options": ["A) Bilim felsefesi tümevarım sorunu, sahteleştirme (Popper), paradigma (Kuhn).", "B) Siyaset felsefesi meşruiyet, özgürlük negatif-pozitif (Berlin), adalet (Rawls örtü).", "C) Felsefe soru, gerekçe, kavram analizi; mitos-logos ayrımı.", "D) Epistemoloji bilgi nedir: gerekçeli doğru inanç tartışması; rasyonalizm-empirizm.", "E) Ontoloji varlık; idealizm-materyalizm, töz."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Felsefe notundaki temel bilgi."
 },
 {
-    "question": "Felsefe konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Bilim felsefesi tümevarım sorunu, sahteleştirme (Popper), paradigma (Kuhn).", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "İnsan hakları ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İnsan hakları doğal hukuk-pozitif hukuk gerilimi.", "B) Felsefe soru, gerekçe, kavram analizi; mitos-logos ayrımı.", "C) Epistemoloji bilgi nedir: gerekçeli doğru inanç tartışması; rasyonalizm-empirizm.", "D) Ontoloji varlık; idealizm-materyalizm, töz.", "E) Bilim felsefesi tümevarım sorunu, sahteleştirme (Popper), paradigma (Kuhn)."],
+    "correctAnswerIndex": 0,
+    "explanation": "Felsefe notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Estetik için doğru bir açıklamadır?",
+    "options": ["A) Ontoloji varlık; idealizm-materyalizm, töz.", "B) Bilim felsefesi tümevarım sorunu, sahteleştirme (Popper), paradigma (Kuhn).", "C) Estetik güzel, beğeni, sanatın taklit-ifade-biçim kuramları.", "D) Felsefe soru, gerekçe, kavram analizi; mitos-logos ayrımı.", "E) Epistemoloji bilgi nedir: gerekçeli doğru inanç tartışması; rasyonalizm-empirizm."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Felsefe notundaki temel bilgi."
 },
 {
-    "question": "Felsefe konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Dil anlam, doğruluk, söz edimleri.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Felsefe konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Etik erdem (Aristoteles), ödev (Kant), yarar (faydacılık).", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Eğitim felsefesi hakkında hangisi doğrudur?",
+    "options": ["A) Ontoloji varlık; idealizm-materyalizm, töz.", "B) Bilim felsefesi tümevarım sorunu, sahteleştirme (Popper), paradigma (Kuhn).", "C) Eğitim felsefesi daimicilik, esasicilik, ilerlemecilik, yeniden kurmacılık.", "D) Felsefe soru, gerekçe, kavram analizi; mitos-logos ayrımı.", "E) Epistemoloji bilgi nedir: gerekçeli doğru inanç tartışması; rasyonalizm-empirizm."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Felsefe notundaki temel bilgi."
 },
 {
-    "question": "Felsefe konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Siyaset felsefesi meşruiyet, özgürlük negatif-pozitif (Berlin), adalet (Rawls örtü).", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "İslam felsefesi hangisini ifade eder?",
+    "options": ["A) Bilim felsefesi tümevarım sorunu, sahteleştirme (Popper), paradigma (Kuhn).", "B) İslam felsefesi Farabi toplum, İbn Sina varlık, Gazzali eleştiri, İbn Rüşd.", "C) Felsefe soru, gerekçe, kavram analizi; mitos-logos ayrımı.", "D) Epistemoloji bilgi nedir: gerekçeli doğru inanç tartışması; rasyonalizm-empirizm.", "E) Ontoloji varlık; idealizm-materyalizm, töz."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Felsefe konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) İnsan hakları doğal hukuk-pozitif hukuk gerilimi.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Felsefe konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Estetik güzel, beğeni, sanatın taklit-ifade-biçim kuramları.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Felsefe konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Eğitim felsefesi daimicilik, esasicilik, ilerlemecilik, yeniden kurmacılık.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Felsefe konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) İslam felsefesi Farabi toplum, İbn Sina varlık, Gazzali eleştiri, İbn Rüşd.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Felsefe notundaki temel bilgi."
 }
 ];

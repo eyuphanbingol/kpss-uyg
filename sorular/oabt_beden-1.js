@@ -61,63 +61,63 @@ window.oabt_beden_1_sorulari = [
     "explanation": "Postür taraması."
 },
 {
-    "question": "İnsan Anatomisi ve Kinesiyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Eksen ve düzlem sagittal, frontal, transversal hareketi tanımlar.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Eksen ve düzlem için doğru bir açıklamadır?",
+    "options": ["A) Sinerji agonist, antagonist, sinerjist, sabitleyici kas rolleridir.", "B) Eklem türleri menteşe, top-yuva, pivot; serbestlik derecesi.", "C) Omurga eğrileri lordoz, kifoz, skolyoz; postür.", "D) Kemik uzun-kısa-yassı-düzensiz; büyüme plağı çocukta risk.", "E) Eksen ve düzlem sagittal, frontal, transversal hareketi tanımlar."],
+    "correctAnswerIndex": 4,
+    "explanation": "İnsan Anatomisi ve Kinesiyoloji notundaki temel bilgi."
+},
+{
+    "question": "Sinerji hakkında hangisi doğrudur?",
+    "options": ["A) Kemik uzun-kısa-yassı-düzensiz; büyüme plağı çocukta risk.", "B) Sinerji agonist, antagonist, sinerjist, sabitleyici kas rolleridir.", "C) Eksen ve düzlem sagittal, frontal, transversal hareketi tanımlar.", "D) Eklem türleri menteşe, top-yuva, pivot; serbestlik derecesi.", "E) Omurga eğrileri lordoz, kifoz, skolyoz; postür."],
+    "correctAnswerIndex": 1,
+    "explanation": "İnsan Anatomisi ve Kinesiyoloji notundaki temel bilgi."
+},
+{
+    "question": "Eklem türleri hangisini ifade eder?",
+    "options": ["A) Eklem türleri menteşe, top-yuva, pivot; serbestlik derecesi.", "B) Eksen ve düzlem sagittal, frontal, transversal hareketi tanımlar.", "C) Sinerji agonist, antagonist, sinerjist, sabitleyici kas rolleridir.", "D) Omurga eğrileri lordoz, kifoz, skolyoz; postür.", "E) Kemik uzun-kısa-yassı-düzensiz; büyüme plağı çocukta risk."],
+    "correctAnswerIndex": 0,
+    "explanation": "İnsan Anatomisi ve Kinesiyoloji notundaki temel bilgi."
+},
+{
+    "question": "Omurga eğrileri ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Eksen ve düzlem sagittal, frontal, transversal hareketi tanımlar.", "B) Sinerji agonist, antagonist, sinerjist, sabitleyici kas rolleridir.", "C) Eklem türleri menteşe, top-yuva, pivot; serbestlik derecesi.", "D) Kemik uzun-kısa-yassı-düzensiz; büyüme plağı çocukta risk.", "E) Omurga eğrileri lordoz, kifoz, skolyoz; postür."],
+    "correctAnswerIndex": 4,
+    "explanation": "İnsan Anatomisi ve Kinesiyoloji notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Kemik için doğru bir açıklamadır?",
+    "options": ["A) Eksen ve düzlem sagittal, frontal, transversal hareketi tanımlar.", "B) Sinerji agonist, antagonist, sinerjist, sabitleyici kas rolleridir.", "C) Eklem türleri menteşe, top-yuva, pivot; serbestlik derecesi.", "D) Omurga eğrileri lordoz, kifoz, skolyoz; postür.", "E) Kemik uzun-kısa-yassı-düzensiz; büyüme plağı çocukta risk."],
+    "correctAnswerIndex": 4,
+    "explanation": "İnsan Anatomisi ve Kinesiyoloji notundaki temel bilgi."
+},
+{
+    "question": "İskelet kası hakkında hangisi doğrudur?",
+    "options": ["A) Eklem türleri menteşe, top-yuva, pivot; serbestlik derecesi.", "B) Omurga eğrileri lordoz, kifoz, skolyoz; postür.", "C) İskelet kası sarkomer, aktin-miyozin, kayan filaman.", "D) Eksen ve düzlem sagittal, frontal, transversal hareketi tanımlar.", "E) Sinerji agonist, antagonist, sinerjist, sabitleyici kas rolleridir."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "İnsan Anatomisi ve Kinesiyoloji notundaki temel bilgi."
 },
 {
-    "question": "İnsan Anatomisi ve Kinesiyoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Sinerji agonist, antagonist, sinerjist, sabitleyici kas rolleridir."],
+    "question": "Tip I ve Tip II hangisini ifade eder?",
+    "options": ["A) Sinerji agonist, antagonist, sinerjist, sabitleyici kas rolleridir.", "B) Eklem türleri menteşe, top-yuva, pivot; serbestlik derecesi.", "C) Omurga eğrileri lordoz, kifoz, skolyoz; postür.", "D) Tip I ve Tip II lifler dayanıklılık-güç ayrımı.", "E) Eksen ve düzlem sagittal, frontal, transversal hareketi tanımlar."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İnsan Anatomisi ve Kinesiyoloji notundaki temel bilgi."
 },
 {
-    "question": "İnsan Anatomisi ve Kinesiyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Eklem türleri menteşe, top-yuva, pivot; serbestlik derecesi.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Motor ünite ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Motor ünite sinir-kas; kuvvet gradasyonu.", "B) Eksen ve düzlem sagittal, frontal, transversal hareketi tanımlar.", "C) Sinerji agonist, antagonist, sinerjist, sabitleyici kas rolleridir.", "D) Eklem türleri menteşe, top-yuva, pivot; serbestlik derecesi.", "E) Omurga eğrileri lordoz, kifoz, skolyoz; postür."],
+    "correctAnswerIndex": 0,
+    "explanation": "İnsan Anatomisi ve Kinesiyoloji notundaki temel bilgi."
 },
 {
-    "question": "İnsan Anatomisi ve Kinesiyoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Omurga eğrileri lordoz, kifoz, skolyoz; postür."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Propriosepsiyon için doğru bir açıklamadır?",
+    "options": ["A) Eksen ve düzlem sagittal, frontal, transversal hareketi tanımlar.", "B) Sinerji agonist, antagonist, sinerjist, sabitleyici kas rolleridir.", "C) Eklem türleri menteşe, top-yuva, pivot; serbestlik derecesi.", "D) Omurga eğrileri lordoz, kifoz, skolyoz; postür.", "E) Propriosepsiyon kas iğciği, Golgi tendonu."],
+    "correctAnswerIndex": 4,
+    "explanation": "İnsan Anatomisi ve Kinesiyoloji notundaki temel bilgi."
 },
 {
-    "question": "İnsan Anatomisi ve Kinesiyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Kemik uzun-kısa-yassı-düzensiz; büyüme plağı çocukta risk.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İnsan Anatomisi ve Kinesiyoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) İskelet kası sarkomer, aktin-miyozin, kayan filaman."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "İnsan Anatomisi ve Kinesiyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Tip I ve Tip II lifler dayanıklılık-güç ayrımı.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İnsan Anatomisi ve Kinesiyoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Motor ünite sinir-kas; kuvvet gradasyonu."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "İnsan Anatomisi ve Kinesiyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Propriosepsiyon kas iğciği, Golgi tendonu.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İnsan Anatomisi ve Kinesiyoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Kapalı-açık kinetik zincir egzersiz seçimi."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Kapalı-açık kinetik zincir hakkında hangisi doğrudur?",
+    "options": ["A) Omurga eğrileri lordoz, kifoz, skolyoz; postür.", "B) Kapalı-açık kinetik zincir egzersiz seçimi.", "C) Eksen ve düzlem sagittal, frontal, transversal hareketi tanımlar.", "D) Sinerji agonist, antagonist, sinerjist, sabitleyici kas rolleridir.", "E) Eklem türleri menteşe, top-yuva, pivot; serbestlik derecesi."],
+    "correctAnswerIndex": 1,
+    "explanation": "İnsan Anatomisi ve Kinesiyoloji notundaki temel bilgi."
 }
 ];

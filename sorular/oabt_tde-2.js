@@ -61,63 +61,63 @@ window.oabt_tde_2_sorulari = [
     "explanation": "güzel ki ayrı; evdeki bitişik -ki'dir."
 },
 {
-    "question": "Yeni Türk Dili konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Ünlü uyumu: kalınlık-incelik (büyük) ve düzlük-yuvarlaklık (küçük) ek seçimini belirler.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Yeni Türk Dili konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Ünsüz yumuşaması p-ç-t-k > b-c-d-g/ğ ünlüyle başlayan ekte; istisnalar (hukuk, millet) ezb"],
+    "question": "Aşağıdakilerden hangisi Ünlü uyumu için doğru bir açıklamadır?",
+    "options": ["A) Ünlü daralması a/e + yor > ı/i/u/ü (başlıyor); ünlü düşmesi (omuz-u > omzu).", "B) Kaynaşma (pek iyi > pekiyi yazımı ayrıdır), ulanma konuşmada ünlüyle biten+ünlüyle başlayan.", "C) Ünsüz benzeşmesi (çalış-tı) ve ünsüz türemesi (fıkr-a) yazım-sınav klasiklerdir.", "D) Ünlü uyumu: kalınlık-incelik (büyük) ve düzlük-yuvarlaklık (küçük) ek seçimini belirler.", "E) Ünsüz yumuşaması p-ç-t-k > b-c-d-g/ğ ünlüyle başlayan ekte; istisnalar (hukuk, millet) ezberlenir."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Yeni Türk Dili notundaki temel bilgi."
 },
 {
-    "question": "Yeni Türk Dili konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Ünlü daralması a/e + yor > ı/i/u/ü (başlıyor); ünlü düşmesi (omuz-u > omzu).", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Ünsüz yumuşaması hakkında hangisi doğrudur?",
+    "options": ["A) Ünsüz benzeşmesi (çalış-tı) ve ünsüz türemesi (fıkr-a) yazım-sınav klasiklerdir.", "B) Ünsüz yumuşaması p-ç-t-k > b-c-d-g/ğ ünlüyle başlayan ekte; istisnalar (hukuk, millet) ezberlenir.", "C) Ünlü uyumu: kalınlık-incelik (büyük) ve düzlük-yuvarlaklık (küçük) ek seçimini belirler.", "D) Ünlü daralması a/e + yor > ı/i/u/ü (başlıyor); ünlü düşmesi (omuz-u > omzu).", "E) Kaynaşma (pek iyi > pekiyi yazımı ayrıdır), ulanma konuşmada ünlüyle biten+ünlüyle başlayan."],
+    "correctAnswerIndex": 1,
+    "explanation": "Yeni Türk Dili notundaki temel bilgi."
+},
+{
+    "question": "Ünlü daralması hangisini ifade eder?",
+    "options": ["A) Kaynaşma (pek iyi > pekiyi yazımı ayrıdır), ulanma konuşmada ünlüyle biten+ünlüyle başlayan.", "B) Ünsüz benzeşmesi (çalış-tı) ve ünsüz türemesi (fıkr-a) yazım-sınav klasiklerdir.", "C) Ünlü daralması a/e + yor > ı/i/u/ü (başlıyor); ünlü düşmesi (omuz-u > omzu).", "D) Ünlü uyumu: kalınlık-incelik (büyük) ve düzlük-yuvarlaklık (küçük) ek seçimini belirler.", "E) Ünsüz yumuşaması p-ç-t-k > b-c-d-g/ğ ünlüyle başlayan ekte; istisnalar (hukuk, millet) ezberlenir."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Yeni Türk Dili notundaki temel bilgi."
 },
 {
-    "question": "Yeni Türk Dili konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Kaynaşma (pek iyi > pekiyi yazımı ayrıdır), ulanma konuşmada ünlüyle biten+ünlüyle başlaya"],
+    "question": "Kaynaşma ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Ünsüz yumuşaması p-ç-t-k > b-c-d-g/ğ ünlüyle başlayan ekte; istisnalar (hukuk, millet) ezberlenir.", "B) Ünlü daralması a/e + yor > ı/i/u/ü (başlıyor); ünlü düşmesi (omuz-u > omzu).", "C) Ünsüz benzeşmesi (çalış-tı) ve ünsüz türemesi (fıkr-a) yazım-sınav klasiklerdir.", "D) Kaynaşma (pek iyi > pekiyi yazımı ayrıdır), ulanma konuşmada ünlüyle biten+ünlüyle başlayan.", "E) Ünlü uyumu: kalınlık-incelik (büyük) ve düzlük-yuvarlaklık (küçük) ek seçimini belirler."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Yeni Türk Dili notundaki temel bilgi."
 },
 {
-    "question": "Yeni Türk Dili konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Ünsüz benzeşmesi (çalış-tı) ve ünsüz türemesi (fıkr-a) yazım-sınav klasiklerdir.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Ünsüz benzeşmesi için doğru bir açıklamadır?",
+    "options": ["A) Ünlü daralması a/e + yor > ı/i/u/ü (başlıyor); ünlü düşmesi (omuz-u > omzu).", "B) Kaynaşma (pek iyi > pekiyi yazımı ayrıdır), ulanma konuşmada ünlüyle biten+ünlüyle başlayan.", "C) Ünsüz benzeşmesi (çalış-tı) ve ünsüz türemesi (fıkr-a) yazım-sınav klasiklerdir.", "D) Ünlü uyumu: kalınlık-incelik (büyük) ve düzlük-yuvarlaklık (küçük) ek seçimini belirler.", "E) Ünsüz yumuşaması p-ç-t-k > b-c-d-g/ğ ünlüyle başlayan ekte; istisnalar (hukuk, millet) ezberlenir."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Yeni Türk Dili notundaki temel bilgi."
 },
 {
-    "question": "Yeni Türk Dili konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Yapım eki yeni sözcük, çekim eki sözcüğün cümledeki görevini değiştirmeden ilişkilendirir."],
+    "question": "Yapım eki hakkında hangisi doğrudur?",
+    "options": ["A) Ünsüz yumuşaması p-ç-t-k > b-c-d-g/ğ ünlüyle başlayan ekte; istisnalar (hukuk, millet) ezberlenir.", "B) Ünlü daralması a/e + yor > ı/i/u/ü (başlıyor); ünlü düşmesi (omuz-u > omzu).", "C) Kaynaşma (pek iyi > pekiyi yazımı ayrıdır), ulanma konuşmada ünlüyle biten+ünlüyle başlayan.", "D) Yapım eki yeni sözcük, çekim eki sözcüğün cümledeki görevini değiştirmeden ilişkilendirir.", "E) Ünlü uyumu: kalınlık-incelik (büyük) ve düzlük-yuvarlaklık (küçük) ek seçimini belirler."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Yeni Türk Dili notundaki temel bilgi."
 },
 {
-    "question": "Yeni Türk Dili konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) İsim tamlaması belirtili/belirtisiz/takısız; sıfat tamlaması tamlayan sıfattır.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Yeni Türk Dili konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Cümle ögeleri: özne, yüklem, nesne, dolaylı tümleç, zarf tümleci, edat tümleci."],
+    "question": "İsim tamlaması hangisini ifade eder?",
+    "options": ["A) Ünsüz yumuşaması p-ç-t-k > b-c-d-g/ğ ünlüyle başlayan ekte; istisnalar (hukuk, millet) ezberlenir.", "B) Ünlü daralması a/e + yor > ı/i/u/ü (başlıyor); ünlü düşmesi (omuz-u > omzu).", "C) Kaynaşma (pek iyi > pekiyi yazımı ayrıdır), ulanma konuşmada ünlüyle biten+ünlüyle başlayan.", "D) İsim tamlaması belirtili/belirtisiz/takısız; sıfat tamlaması tamlayan sıfattır.", "E) Ünlü uyumu: kalınlık-incelik (büyük) ve düzlük-yuvarlaklık (küçük) ek seçimini belirler."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Yeni Türk Dili notundaki temel bilgi."
 },
 {
-    "question": "Yeni Türk Dili konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Birleşik cümle (girişik, şartlı, ki'li) ile bağlı cümle (bağlaçlı) ayrılır.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Yeni Türk Dili konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Fiilimsi (isim-fiil, sıfat-fiil, zarf-fiil) yargı bildirmez; yan cümle kurar."],
+    "question": "Cümle ögeleri ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Ünsüz yumuşaması p-ç-t-k > b-c-d-g/ğ ünlüyle başlayan ekte; istisnalar (hukuk, millet) ezberlenir.", "B) Ünlü daralması a/e + yor > ı/i/u/ü (başlıyor); ünlü düşmesi (omuz-u > omzu).", "C) Kaynaşma (pek iyi > pekiyi yazımı ayrıdır), ulanma konuşmada ünlüyle biten+ünlüyle başlayan.", "D) Cümle ögeleri: özne, yüklem, nesne, dolaylı tümleç, zarf tümleci, edat tümleci.", "E) Ünlü uyumu: kalınlık-incelik (büyük) ve düzlük-yuvarlaklık (küçük) ek seçimini belirler."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Yeni Türk Dili notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Birleşik cümle için doğru bir açıklamadır?",
+    "options": ["A) Ünsüz yumuşaması p-ç-t-k > b-c-d-g/ğ ünlüyle başlayan ekte; istisnalar (hukuk, millet) ezberlenir.", "B) Ünlü daralması a/e + yor > ı/i/u/ü (başlıyor); ünlü düşmesi (omuz-u > omzu).", "C) Kaynaşma (pek iyi > pekiyi yazımı ayrıdır), ulanma konuşmada ünlüyle biten+ünlüyle başlayan.", "D) Birleşik cümle (girişik, şartlı, ki'li) ile bağlı cümle (bağlaçlı) ayrılır.", "E) Ünlü uyumu: kalınlık-incelik (büyük) ve düzlük-yuvarlaklık (küçük) ek seçimini belirler."],
+    "correctAnswerIndex": 3,
+    "explanation": "Yeni Türk Dili notundaki temel bilgi."
+},
+{
+    "question": "Fiilimsi hakkında hangisi doğrudur?",
+    "options": ["A) Ünsüz yumuşaması p-ç-t-k > b-c-d-g/ğ ünlüyle başlayan ekte; istisnalar (hukuk, millet) ezberlenir.", "B) Ünlü daralması a/e + yor > ı/i/u/ü (başlıyor); ünlü düşmesi (omuz-u > omzu).", "C) Kaynaşma (pek iyi > pekiyi yazımı ayrıdır), ulanma konuşmada ünlüyle biten+ünlüyle başlayan.", "D) Fiilimsi (isim-fiil, sıfat-fiil, zarf-fiil) yargı bildirmez; yan cümle kurar.", "E) Ünlü uyumu: kalınlık-incelik (büyük) ve düzlük-yuvarlaklık (küçük) ek seçimini belirler."],
+    "correctAnswerIndex": 3,
+    "explanation": "Yeni Türk Dili notundaki temel bilgi."
 }
 ];

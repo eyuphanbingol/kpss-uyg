@@ -55,69 +55,69 @@ window.oabt_ilkomat_6_sorulari = [
     "explanation": "Niceleyici değillemesi yer değiştirir."
 },
 {
-    "question": "Matematiksel Yapıların Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Küme eleman ilişkisi ∈; alt küme ⊆, kuvvet kümesi 2^n eleman.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Matematiksel Yapıların Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) İşlemler birleşim, kesişim, fark, tümleyen; De Morgan: (A∪B)' = A'∩B'.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "İşlemler hakkında hangisi doğrudur?",
+    "options": ["A) Küme eleman ilişkisi ∈; alt küme ⊆, kuvvet kümesi 2^n eleman.", "B) Önerme doğru/yanlış değerli ifade; bağlaçlar ∧ ∨ → ↔ ¬.", "C) Niceleyici ∀, ∃; değili niceleyiciyi değiştirir: ¬∀x P ≡ ∃x ¬P.", "D) Kanıt doğrudan, karşıt ters, çelişki, tümevarım; örnek ispat değildir (evrenselde).", "E) İşlemler birleşim, kesişim, fark, tümleyen; De Morgan: (A∪B)' = A'∩B'."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Matematiksel Yapıların Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Matematiksel Yapıların Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Önerme doğru/yanlış değerli ifade; bağlaçlar ∧ ∨ → ↔ ¬.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Önerme hangisini ifade eder?",
+    "options": ["A) Niceleyici ∀, ∃; değili niceleyiciyi değiştirir: ¬∀x P ≡ ∃x ¬P.", "B) Kanıt doğrudan, karşıt ters, çelişki, tümevarım; örnek ispat değildir (evrenselde).", "C) Önerme doğru/yanlış değerli ifade; bağlaçlar ∧ ∨ → ↔ ¬.", "D) Küme eleman ilişkisi ∈; alt küme ⊆, kuvvet kümesi 2^n eleman.", "E) İşlemler birleşim, kesişim, fark, tümleyen; De Morgan: (A∪B)' = A'∩B'."],
+    "correctAnswerIndex": 2,
+    "explanation": "Matematiksel Yapıların Temelleri notundaki temel bilgi."
+},
+{
+    "question": "Niceleyici ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İşlemler birleşim, kesişim, fark, tümleyen; De Morgan: (A∪B)' = A'∩B'.", "B) Önerme doğru/yanlış değerli ifade; bağlaçlar ∧ ∨ → ↔ ¬.", "C) Kanıt doğrudan, karşıt ters, çelişki, tümevarım; örnek ispat değildir (evrenselde).", "D) Niceleyici ∀, ∃; değili niceleyiciyi değiştirir: ¬∀x P ≡ ∃x ¬P.", "E) Küme eleman ilişkisi ∈; alt küme ⊆, kuvvet kümesi 2^n eleman."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Matematiksel Yapıların Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Matematiksel Yapıların Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Niceleyici ∀, ∃; değili niceleyiciyi değiştirir: ¬∀x P ≡ ∃x ¬P.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Matematiksel Yapıların Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Kanıt doğrudan, karşıt ters, çelişki, tümevarım; örnek ispat değildir (evrenselde).", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi Kanıt için doğru bir açıklamadır?",
+    "options": ["A) İşlemler birleşim, kesişim, fark, tümleyen; De Morgan: (A∪B)' = A'∩B'.", "B) Önerme doğru/yanlış değerli ifade; bağlaçlar ∧ ∨ → ↔ ¬.", "C) Niceleyici ∀, ∃; değili niceleyiciyi değiştirir: ¬∀x P ≡ ∃x ¬P.", "D) Kanıt doğrudan, karşıt ters, çelişki, tümevarım; örnek ispat değildir (evrenselde).", "E) Küme eleman ilişkisi ∈; alt küme ⊆, kuvvet kümesi 2^n eleman."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Matematiksel Yapıların Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Matematiksel Yapıların Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Peano doğal sayıları aksiyomlaştırır; ardıl ve tümevarım.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Peano hakkında hangisi doğrudur?",
+    "options": ["A) Niceleyici ∀, ∃; değili niceleyiciyi değiştirir: ¬∀x P ≡ ∃x ¬P.", "B) Peano doğal sayıları aksiyomlaştırır; ardıl ve tümevarım.", "C) Küme eleman ilişkisi ∈; alt küme ⊆, kuvvet kümesi 2^n eleman.", "D) İşlemler birleşim, kesişim, fark, tümleyen; De Morgan: (A∪B)' = A'∩B'.", "E) Önerme doğru/yanlış değerli ifade; bağlaçlar ∧ ∨ → ↔ ¬."],
+    "correctAnswerIndex": 1,
+    "explanation": "Matematiksel Yapıların Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Matematiksel Yapıların Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Halka, cisim tam sayılar halka, rasyoneller cisim; sıfır bölen cisimde yoktur.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Halka, cisim hangisini ifade eder?",
+    "options": ["A) Niceleyici ∀, ∃; değili niceleyiciyi değiştirir: ¬∀x P ≡ ∃x ¬P.", "B) Halka, cisim tam sayılar halka, rasyoneller cisim; sıfır bölen cisimde yoktur.", "C) Küme eleman ilişkisi ∈; alt küme ⊆, kuvvet kümesi 2^n eleman.", "D) İşlemler birleşim, kesişim, fark, tümleyen; De Morgan: (A∪B)' = A'∩B'.", "E) Önerme doğru/yanlış değerli ifade; bağlaçlar ∧ ∨ → ↔ ¬."],
+    "correctAnswerIndex": 1,
+    "explanation": "Matematiksel Yapıların Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Matematiksel Yapıların Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Sıralama iyi sıralama doğal sayılarda her boş olmayan alt kümenin en küçük elemanı.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Sıralama ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Sıralama iyi sıralama doğal sayılarda her boş olmayan alt kümenin en küçük elemanı.", "B) Küme eleman ilişkisi ∈; alt küme ⊆, kuvvet kümesi 2^n eleman.", "C) İşlemler birleşim, kesişim, fark, tümleyen; De Morgan: (A∪B)' = A'∩B'.", "D) Önerme doğru/yanlış değerli ifade; bağlaçlar ∧ ∨ → ↔ ¬.", "E) Niceleyici ∀, ∃; değili niceleyiciyi değiştirir: ¬∀x P ≡ ∃x ¬P."],
+    "correctAnswerIndex": 0,
+    "explanation": "Matematiksel Yapıların Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Matematiksel Yapıların Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Sayılabilirlik Q sayılabilir, R değildir (Cantor çaprazlama).", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Sayılabilirlik için doğru bir açıklamadır?",
+    "options": ["A) Sayılabilirlik Q sayılabilir, R değildir (Cantor çaprazlama).", "B) Küme eleman ilişkisi ∈; alt küme ⊆, kuvvet kümesi 2^n eleman.", "C) İşlemler birleşim, kesişim, fark, tümleyen; De Morgan: (A∪B)' = A'∩B'.", "D) Önerme doğru/yanlış değerli ifade; bağlaçlar ∧ ∨ → ↔ ¬.", "E) Niceleyici ∀, ∃; değili niceleyiciyi değiştirir: ¬∀x P ≡ ∃x ¬P."],
+    "correctAnswerIndex": 0,
+    "explanation": "Matematiksel Yapıların Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Matematiksel Yapıların Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) İşlem özellikleri grup: kapalı, birleşmeli, birim, ters; değişmeli grup ab=ba.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "İşlem özellikleri hakkında hangisi doğrudur?",
+    "options": ["A) İşlem özellikleri grup: kapalı, birleşmeli, birim, ters; değişmeli grup ab=ba.", "B) Küme eleman ilişkisi ∈; alt küme ⊆, kuvvet kümesi 2^n eleman.", "C) İşlemler birleşim, kesişim, fark, tümleyen; De Morgan: (A∪B)' = A'∩B'.", "D) Önerme doğru/yanlış değerli ifade; bağlaçlar ∧ ∨ → ↔ ¬.", "E) Niceleyici ∀, ∃; değili niceleyiciyi değiştirir: ¬∀x P ≡ ∃x ¬P."],
+    "correctAnswerIndex": 0,
+    "explanation": "Matematiksel Yapıların Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Matematiksel Yapıların Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Bağıntı A×B'nin alt kümesi; yansıma, simetri, geçişme denklik bağıntısı üretir.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Bağıntı hangisini ifade eder?",
+    "options": ["A) Bağıntı A×B'nin alt kümesi; yansıma, simetri, geçişme denklik bağıntısı üretir.", "B) Küme eleman ilişkisi ∈; alt küme ⊆, kuvvet kümesi 2^n eleman.", "C) İşlemler birleşim, kesişim, fark, tümleyen; De Morgan: (A∪B)' = A'∩B'.", "D) Önerme doğru/yanlış değerli ifade; bağlaçlar ∧ ∨ → ↔ ¬.", "E) Niceleyici ∀, ∃; değili niceleyiciyi değiştirir: ¬∀x P ≡ ∃x ¬P."],
+    "correctAnswerIndex": 0,
+    "explanation": "Matematiksel Yapıların Temelleri notundaki temel bilgi."
+},
+{
+    "question": "Denklik sınıfı ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Denklik sınıfı kümeyi parçalar (partition).", "B) Küme eleman ilişkisi ∈; alt küme ⊆, kuvvet kümesi 2^n eleman.", "C) İşlemler birleşim, kesişim, fark, tümleyen; De Morgan: (A∪B)' = A'∩B'.", "D) Önerme doğru/yanlış değerli ifade; bağlaçlar ∧ ∨ → ↔ ¬.", "E) Niceleyici ∀, ∃; değili niceleyiciyi değiştirir: ¬∀x P ≡ ∃x ¬P."],
+    "correctAnswerIndex": 0,
+    "explanation": "Matematiksel Yapıların Temelleri notundaki temel bilgi."
 }
 ];

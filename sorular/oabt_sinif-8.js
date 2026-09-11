@@ -61,63 +61,63 @@ window.oabt_sinif_8_sorulari = [
     "explanation": "Tarihsel düşünme."
 },
 {
-    "question": "Sosyal Bilgiler Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) 4. sınıftan sosyal bilgiler; vatandaşlık, tarih, coğrafya, ekonomi sezgisi."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Beceriler hakkında hangisi doğrudur?",
+    "options": ["A) Disiplinlerarasılık hayat bilgisi devamı ama ayrı derstir.", "B) Beceriler harita, zaman, kanıt, empati, mali okuryazarlık sade.", "C) 4. sınıftan sosyal bilgiler; vatandaşlık, tarih, coğrafya, ekonomi sezgisi.", "D) Kimlik milli ve çoğul Anadolu.", "E) 2026 alan eğitimi sorusu yöntem ve kazanım odaklı beklenir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Sosyal Bilgiler Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Sosyal Bilgiler Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Beceriler harita, zaman, kanıt, empati, mali okuryazarlık sade.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Kimlik hangisini ifade eder?",
+    "options": ["A) 2026 alan eğitimi sorusu yöntem ve kazanım odaklı beklenir.", "B) Disiplinlerarasılık hayat bilgisi devamı ama ayrı derstir.", "C) Kimlik milli ve çoğul Anadolu.", "D) 4. sınıftan sosyal bilgiler; vatandaşlık, tarih, coğrafya, ekonomi sezgisi.", "E) Beceriler harita, zaman, kanıt, empati, mali okuryazarlık sade."],
+    "correctAnswerIndex": 2,
+    "explanation": "Sosyal Bilgiler Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "2026 ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Beceriler harita, zaman, kanıt, empati, mali okuryazarlık sade.", "B) Kimlik milli ve çoğul Anadolu.", "C) Disiplinlerarasılık hayat bilgisi devamı ama ayrı derstir.", "D) 2026 alan eğitimi sorusu yöntem ve kazanım odaklı beklenir.", "E) 4. sınıftan sosyal bilgiler; vatandaşlık, tarih, coğrafya, ekonomi sezgisi."],
+    "correctAnswerIndex": 3,
+    "explanation": "Sosyal Bilgiler Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Disiplinlerarasılık için doğru bir açıklamadır?",
+    "options": ["A) Kimlik milli ve çoğul Anadolu.", "B) 2026 alan eğitimi sorusu yöntem ve kazanım odaklı beklenir.", "C) Disiplinlerarasılık hayat bilgisi devamı ama ayrı derstir.", "D) 4. sınıftan sosyal bilgiler; vatandaşlık, tarih, coğrafya, ekonomi sezgisi.", "E) Beceriler harita, zaman, kanıt, empati, mali okuryazarlık sade."],
+    "correctAnswerIndex": 2,
+    "explanation": "Sosyal Bilgiler Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Belge ve fotoğraf okuma hakkında hangisi doğrudur?",
+    "options": ["A) Belge ve fotoğraf okuma.", "B) 4. sınıftan sosyal bilgiler; vatandaşlık, tarih, coğrafya, ekonomi sezgisi.", "C) Beceriler harita, zaman, kanıt, empati, mali okuryazarlık sade.", "D) Kimlik milli ve çoğul Anadolu.", "E) 2026 alan eğitimi sorusu yöntem ve kazanım odaklı beklenir."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Sosyal Bilgiler Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Sosyal Bilgiler Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Kimlik milli ve çoğul Anadolu."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Sosyal Bilgiler Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) 2026 alan eğitimi sorusu yöntem ve kazanım odaklı beklenir.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Tarih şeridi, harita, müze hangisini ifade eder?",
+    "options": ["A) Tarih şeridi, harita, müze.", "B) 4. sınıftan sosyal bilgiler; vatandaşlık, tarih, coğrafya, ekonomi sezgisi.", "C) Beceriler harita, zaman, kanıt, empati, mali okuryazarlık sade.", "D) Kimlik milli ve çoğul Anadolu.", "E) 2026 alan eğitimi sorusu yöntem ve kazanım odaklı beklenir."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Sosyal Bilgiler Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Sosyal Bilgiler Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Disiplinlerarasılık hayat bilgisi devamı ama ayrı derstir."],
+    "question": "Tartışma, altı şapka, istasyon ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Beceriler harita, zaman, kanıt, empati, mali okuryazarlık sade.", "B) Kimlik milli ve çoğul Anadolu.", "C) 2026 alan eğitimi sorusu yöntem ve kazanım odaklı beklenir.", "D) Tartışma, altı şapka, istasyon.", "E) 4. sınıftan sosyal bilgiler; vatandaşlık, tarih, coğrafya, ekonomi sezgisi."],
+    "correctAnswerIndex": 3,
+    "explanation": "Sosyal Bilgiler Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Yerel tarih projesi için doğru bir açıklamadır?",
+    "options": ["A) 4. sınıftan sosyal bilgiler; vatandaşlık, tarih, coğrafya, ekonomi sezgisi.", "B) Beceriler harita, zaman, kanıt, empati, mali okuryazarlık sade.", "C) Kimlik milli ve çoğul Anadolu.", "D) 2026 alan eğitimi sorusu yöntem ve kazanım odaklı beklenir.", "E) Yerel tarih projesi."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Sosyal Bilgiler Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Sosyal Bilgiler Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Belge ve fotoğraf okuma.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Dijital güvenilir kaynak hakkında hangisi doğrudur?",
+    "options": ["A) 2026 alan eğitimi sorusu yöntem ve kazanım odaklı beklenir.", "B) Dijital güvenilir kaynak.", "C) 4. sınıftan sosyal bilgiler; vatandaşlık, tarih, coğrafya, ekonomi sezgisi.", "D) Beceriler harita, zaman, kanıt, empati, mali okuryazarlık sade.", "E) Kimlik milli ve çoğul Anadolu."],
+    "correctAnswerIndex": 1,
+    "explanation": "Sosyal Bilgiler Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Sosyal Bilgiler Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Tarih şeridi, harita, müze."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Sosyal Bilgiler Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Tartışma, altı şapka, istasyon.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Sosyal Bilgiler Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Yerel tarih projesi."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Sosyal Bilgiler Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Dijital güvenilir kaynak.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Hak-sorumluluk hangisini ifade eder?",
+    "options": ["A) Kimlik milli ve çoğul Anadolu.", "B) 2026 alan eğitimi sorusu yöntem ve kazanım odaklı beklenir.", "C) Hak-sorumluluk çocuk hakları.", "D) 4. sınıftan sosyal bilgiler; vatandaşlık, tarih, coğrafya, ekonomi sezgisi.", "E) Beceriler harita, zaman, kanıt, empati, mali okuryazarlık sade."],
+    "correctAnswerIndex": 2,
+    "explanation": "Sosyal Bilgiler Öğretimi notundaki temel bilgi."
 }
 ];

@@ -61,63 +61,63 @@ window.oabt_ozel_1_sorulari = [
     "explanation": "Yetki sınırı."
 },
 {
-    "question": "Zihin Yetersizliği ve Otizm Spektrum Bozukluğu konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Zihin yetersizliği zihinsel işlev ve uyumsal davranışta belirgin sınırlılık; gelişim dönem", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Zihin yetersizliği için doğru bir açıklamadır?",
+    "options": ["A) Zihin yetersizliği zihinsel işlev ve uyumsal davranışta belirgin sınırlılık; gelişim döneminde başlar.", "B) Uyumsal davranış kavramsal, sosyal, pratik becerilerdir; yalnızca IQ puanı tanı değildir.", "C) Destek düzeyi aralıklı, sınırlı, geniş, yaygın (AAIDD hattı) eğitim planını yönlendirir.", "D) Öğretim somut, basamaklı, tekrar, genelleme ve ipucu sistematiği ister.", "E) 2026 yeni ÖABT alanı özel eğitim; bu konu alan bilgisi omurgasındandır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Zihin Yetersizliği ve Otizm Spektrum Bozukluğu notundaki temel bilgi."
+},
+{
+    "question": "Uyumsal davranış hakkında hangisi doğrudur?",
+    "options": ["A) Destek düzeyi aralıklı, sınırlı, geniş, yaygın (AAIDD hattı) eğitim planını yönlendirir.", "B) Öğretim somut, basamaklı, tekrar, genelleme ve ipucu sistematiği ister.", "C) 2026 yeni ÖABT alanı özel eğitim; bu konu alan bilgisi omurgasındandır.", "D) DSM-5 sosyal iletişim yetersizliği ve kısıtlı-tekrarlayan davranış/ilgi iki eksenlidir.", "E) Uyumsal davranış kavramsal, sosyal, pratik becerilerdir; yalnızca IQ puanı tanı değildir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Zihin Yetersizliği ve Otizm Spektrum Bozukluğu notundaki temel bilgi."
+},
+{
+    "question": "Destek düzeyi hangisini ifade eder?",
+    "options": ["A) Destek düzeyi aralıklı, sınırlı, geniş, yaygın (AAIDD hattı) eğitim planını yönlendirir.", "B) Zihin yetersizliği zihinsel işlev ve uyumsal davranışta belirgin sınırlılık; gelişim döneminde başlar.", "C) Uyumsal davranış kavramsal, sosyal, pratik becerilerdir; yalnızca IQ puanı tanı değildir.", "D) Öğretim somut, basamaklı, tekrar, genelleme ve ipucu sistematiği ister.", "E) 2026 yeni ÖABT alanı özel eğitim; bu konu alan bilgisi omurgasındandır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Zihin Yetersizliği ve Otizm Spektrum Bozukluğu notundaki temel bilgi."
+},
+{
+    "question": "Öğretim ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Zihin yetersizliği zihinsel işlev ve uyumsal davranışta belirgin sınırlılık; gelişim döneminde başlar.", "B) Uyumsal davranış kavramsal, sosyal, pratik becerilerdir; yalnızca IQ puanı tanı değildir.", "C) Destek düzeyi aralıklı, sınırlı, geniş, yaygın (AAIDD hattı) eğitim planını yönlendirir.", "D) 2026 yeni ÖABT alanı özel eğitim; bu konu alan bilgisi omurgasındandır.", "E) Öğretim somut, basamaklı, tekrar, genelleme ve ipucu sistematiği ister."],
+    "correctAnswerIndex": 4,
+    "explanation": "Zihin Yetersizliği ve Otizm Spektrum Bozukluğu notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi 2026 yeni ÖABT alanı için doğru bir açıklamadır?",
+    "options": ["A) 2026 yeni ÖABT alanı özel eğitim; bu konu alan bilgisi omurgasındandır.", "B) Zihin yetersizliği zihinsel işlev ve uyumsal davranışta belirgin sınırlılık; gelişim döneminde başlar.", "C) Uyumsal davranış kavramsal, sosyal, pratik becerilerdir; yalnızca IQ puanı tanı değildir.", "D) Destek düzeyi aralıklı, sınırlı, geniş, yaygın (AAIDD hattı) eğitim planını yönlendirir.", "E) Öğretim somut, basamaklı, tekrar, genelleme ve ipucu sistematiği ister."],
+    "correctAnswerIndex": 0,
+    "explanation": "Zihin Yetersizliği ve Otizm Spektrum Bozukluğu notundaki temel bilgi."
+},
+{
+    "question": "DSM-5 hakkında hangisi doğrudur?",
+    "options": ["A) Zihin yetersizliği zihinsel işlev ve uyumsal davranışta belirgin sınırlılık; gelişim döneminde başlar.", "B) Uyumsal davranış kavramsal, sosyal, pratik becerilerdir; yalnızca IQ puanı tanı değildir.", "C) Destek düzeyi aralıklı, sınırlı, geniş, yaygın (AAIDD hattı) eğitim planını yönlendirir.", "D) Öğretim somut, basamaklı, tekrar, genelleme ve ipucu sistematiği ister.", "E) DSM-5 sosyal iletişim yetersizliği ve kısıtlı-tekrarlayan davranış/ilgi iki eksenlidir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Zihin Yetersizliği ve Otizm Spektrum Bozukluğu notundaki temel bilgi."
+},
+{
+    "question": "Asperger hangisini ifade eder?",
+    "options": ["A) Öğretim somut, basamaklı, tekrar, genelleme ve ipucu sistematiği ister.", "B) Asperger DSM-5'te ayrı tanı değildir; spektrum içinde değerlendirilir.", "C) Zihin yetersizliği zihinsel işlev ve uyumsal davranışta belirgin sınırlılık; gelişim döneminde başlar.", "D) Uyumsal davranış kavramsal, sosyal, pratik becerilerdir; yalnızca IQ puanı tanı değildir.", "E) Destek düzeyi aralıklı, sınırlı, geniş, yaygın (AAIDD hattı) eğitim planını yönlendirir."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Zihin Yetersizliği ve Otizm Spektrum Bozukluğu notundaki temel bilgi."
 },
 {
-    "question": "Zihin Yetersizliği ve Otizm Spektrum Bozukluğu konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Uyumsal davranış kavramsal, sosyal, pratik becerilerdir; yalnızca IQ puanı tanı değildir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Şiddet düzeyleri ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Destek düzeyi aralıklı, sınırlı, geniş, yaygın (AAIDD hattı) eğitim planını yönlendirir.", "B) Öğretim somut, basamaklı, tekrar, genelleme ve ipucu sistematiği ister.", "C) Şiddet düzeyleri destek ihtiyacına göredir (1-2-3).", "D) Zihin yetersizliği zihinsel işlev ve uyumsal davranışta belirgin sınırlılık; gelişim döneminde başlar.", "E) Uyumsal davranış kavramsal, sosyal, pratik becerilerdir; yalnızca IQ puanı tanı değildir."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Zihin Yetersizliği ve Otizm Spektrum Bozukluğu notundaki temel bilgi."
 },
 {
-    "question": "Zihin Yetersizliği ve Otizm Spektrum Bozukluğu konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Destek düzeyi aralıklı, sınırlı, geniş, yaygın (AAIDD hattı) eğitim planını yönlendirir.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Erken belirtiler için doğru bir açıklamadır?",
+    "options": ["A) Uyumsal davranış kavramsal, sosyal, pratik becerilerdir; yalnızca IQ puanı tanı değildir.", "B) Destek düzeyi aralıklı, sınırlı, geniş, yaygın (AAIDD hattı) eğitim planını yönlendirir.", "C) Öğretim somut, basamaklı, tekrar, genelleme ve ipucu sistematiği ister.", "D) Erken belirtiler ortak dikkat, isme dönme, taklit, dil gecikmesi izlenir; tek belirti tanı değildir.", "E) Zihin yetersizliği zihinsel işlev ve uyumsal davranışta belirgin sınırlılık; gelişim döneminde başlar."],
+    "correctAnswerIndex": 3,
+    "explanation": "Zihin Yetersizliği ve Otizm Spektrum Bozukluğu notundaki temel bilgi."
 },
 {
-    "question": "Zihin Yetersizliği ve Otizm Spektrum Bozukluğu konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Öğretim somut, basamaklı, tekrar, genelleme ve ipucu sistematiği ister.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Zihin Yetersizliği ve Otizm Spektrum Bozukluğu konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) 2026 yeni ÖABT alanı özel eğitim; bu konu alan bilgisi omurgasındandır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Zihin Yetersizliği ve Otizm Spektrum Bozukluğu konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) DSM-5 sosyal iletişim yetersizliği ve kısıtlı-tekrarlayan davranış/ilgi iki eksenlidir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Zihin Yetersizliği ve Otizm Spektrum Bozukluğu konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Asperger DSM-5'te ayrı tanı değildir; spektrum içinde değerlendirilir.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Zihin Yetersizliği ve Otizm Spektrum Bozukluğu konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Şiddet düzeyleri destek ihtiyacına göredir (1-2-3).", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Zihin Yetersizliği ve Otizm Spektrum Bozukluğu konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Erken belirtiler ortak dikkat, isme dönme, taklit, dil gecikmesi izlenir; tek belirti tanı", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Zihin Yetersizliği ve Otizm Spektrum Bozukluğu konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Kanıta dayalı yapı, görsel destek, UDA ilkeleri, PECS/AAC; mucize diyet iddiası bilimsel t", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Kanıta dayalı hakkında hangisi doğrudur?",
+    "options": ["A) Kanıta dayalı yapı, görsel destek, UDA ilkeleri, PECS/AAC; mucize diyet iddiası bilimsel temel arar.", "B) Zihin yetersizliği zihinsel işlev ve uyumsal davranışta belirgin sınırlılık; gelişim döneminde başlar.", "C) Uyumsal davranış kavramsal, sosyal, pratik becerilerdir; yalnızca IQ puanı tanı değildir.", "D) Destek düzeyi aralıklı, sınırlı, geniş, yaygın (AAIDD hattı) eğitim planını yönlendirir.", "E) Öğretim somut, basamaklı, tekrar, genelleme ve ipucu sistematiği ister."],
+    "correctAnswerIndex": 0,
+    "explanation": "Zihin Yetersizliği ve Otizm Spektrum Bozukluğu notundaki temel bilgi."
 }
 ];

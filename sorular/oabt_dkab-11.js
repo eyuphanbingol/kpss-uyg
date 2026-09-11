@@ -61,63 +61,63 @@ window.oabt_dkab_11_sorulari = [
     "explanation": "Yurttaşlık ve barış eğitimidir."
 },
 {
-    "question": "Din Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Din eğitimi inanç, ibadet, ahlak ve dinler okuryazarlığını kazandırır.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi Din eğitimi için doğru bir açıklamadır?",
+    "options": ["A) Gelişimsel yaklaşım Piaget-Goldman tartışması; soyut din dili yaşa göre.", "B) Değer eğitimi telkin, açıklama, ahlaki ikilem, karakter.", "C) Dinî çoğulculuk sınıfta saygı ve doğru bilgi.", "D) Din eğitimi inanç, ibadet, ahlak ve dinler okuryazarlığını kazandırır.", "E) İtikadi dayatma ile anlama ayrılır; laik okulda DKAB Anayasa çerçevesindedir."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Din Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Din Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) İtikadi dayatma ile anlama ayrılır; laik okulda DKAB Anayasa çerçevesindedir.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "İtikadi dayatma hakkında hangisi doğrudur?",
+    "options": ["A) Değer eğitimi telkin, açıklama, ahlaki ikilem, karakter.", "B) Dinî çoğulculuk sınıfta saygı ve doğru bilgi.", "C) İtikadi dayatma ile anlama ayrılır; laik okulda DKAB Anayasa çerçevesindedir.", "D) Din eğitimi inanç, ibadet, ahlak ve dinler okuryazarlığını kazandırır.", "E) Gelişimsel yaklaşım Piaget-Goldman tartışması; soyut din dili yaşa göre."],
+    "correctAnswerIndex": 2,
+    "explanation": "Din Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Gelişimsel yaklaşım hangisini ifade eder?",
+    "options": ["A) Gelişimsel yaklaşım Piaget-Goldman tartışması; soyut din dili yaşa göre.", "B) Din eğitimi inanç, ibadet, ahlak ve dinler okuryazarlığını kazandırır.", "C) İtikadi dayatma ile anlama ayrılır; laik okulda DKAB Anayasa çerçevesindedir.", "D) Değer eğitimi telkin, açıklama, ahlaki ikilem, karakter.", "E) Dinî çoğulculuk sınıfta saygı ve doğru bilgi."],
+    "correctAnswerIndex": 0,
+    "explanation": "Din Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Değer eğitimi ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Din eğitimi inanç, ibadet, ahlak ve dinler okuryazarlığını kazandırır.", "B) İtikadi dayatma ile anlama ayrılır; laik okulda DKAB Anayasa çerçevesindedir.", "C) Gelişimsel yaklaşım Piaget-Goldman tartışması; soyut din dili yaşa göre.", "D) Dinî çoğulculuk sınıfta saygı ve doğru bilgi.", "E) Değer eğitimi telkin, açıklama, ahlaki ikilem, karakter."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Din Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Din Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gelişimsel yaklaşım Piaget-Goldman tartışması; soyut din dili yaşa göre.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Dinî çoğulculuk için doğru bir açıklamadır?",
+    "options": ["A) Değer eğitimi telkin, açıklama, ahlaki ikilem, karakter.", "B) Dinî çoğulculuk sınıfta saygı ve doğru bilgi.", "C) Din eğitimi inanç, ibadet, ahlak ve dinler okuryazarlığını kazandırır.", "D) İtikadi dayatma ile anlama ayrılır; laik okulda DKAB Anayasa çerçevesindedir.", "E) Gelişimsel yaklaşım Piaget-Goldman tartışması; soyut din dili yaşa göre."],
+    "correctAnswerIndex": 1,
+    "explanation": "Din Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Din Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Değer eğitimi telkin, açıklama, ahlaki ikilem, karakter.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Hikâye, kıssa, örnek olay, drama, istasyon hakkında hangisi doğrudur?",
+    "options": ["A) Değer eğitimi telkin, açıklama, ahlaki ikilem, karakter.", "B) Hikâye, kıssa, örnek olay, drama, istasyon.", "C) Din eğitimi inanç, ibadet, ahlak ve dinler okuryazarlığını kazandırır.", "D) İtikadi dayatma ile anlama ayrılır; laik okulda DKAB Anayasa çerçevesindedir.", "E) Gelişimsel yaklaşım Piaget-Goldman tartışması; soyut din dili yaşa göre."],
+    "correctAnswerIndex": 1,
+    "explanation": "Din Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Kutsal metin okuma hangisini ifade eder?",
+    "options": ["A) Gelişimsel yaklaşım Piaget-Goldman tartışması; soyut din dili yaşa göre.", "B) Değer eğitimi telkin, açıklama, ahlaki ikilem, karakter.", "C) Kutsal metin okuma yaş ve meal desteğiyle.", "D) Din eğitimi inanç, ibadet, ahlak ve dinler okuryazarlığını kazandırır.", "E) İtikadi dayatma ile anlama ayrılır; laik okulda DKAB Anayasa çerçevesindedir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Din Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Gezi ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Değer eğitimi telkin, açıklama, ahlaki ikilem, karakter.", "B) Gezi cami, cem evi, müze; izin ve saygı protokolü.", "C) Din eğitimi inanç, ibadet, ahlak ve dinler okuryazarlığını kazandırır.", "D) İtikadi dayatma ile anlama ayrılır; laik okulda DKAB Anayasa çerçevesindedir.", "E) Gelişimsel yaklaşım Piaget-Goldman tartışması; soyut din dili yaşa göre."],
+    "correctAnswerIndex": 1,
+    "explanation": "Din Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Soru-cevap için doğru bir açıklamadır?",
+    "options": ["A) Din eğitimi inanç, ibadet, ahlak ve dinler okuryazarlığını kazandırır.", "B) İtikadi dayatma ile anlama ayrılır; laik okulda DKAB Anayasa çerçevesindedir.", "C) Gelişimsel yaklaşım Piaget-Goldman tartışması; soyut din dili yaşa göre.", "D) Değer eğitimi telkin, açıklama, ahlaki ikilem, karakter.", "E) Soru-cevap ezber ötesi anlam."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Din Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Din Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Dinî çoğulculuk sınıfta saygı ve doğru bilgi.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Din Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Hikâye, kıssa, örnek olay, drama, istasyon.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Din Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Kutsal metin okuma yaş ve meal desteğiyle.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Din Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gezi cami, cem evi, müze; izin ve saygı protokolü.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Din Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Soru-cevap ezber ötesi anlam.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Din Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Dijital medya dinî dezenformasyon okuryazarlığı.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Dijital medya hakkında hangisi doğrudur?",
+    "options": ["A) Dijital medya dinî dezenformasyon okuryazarlığı.", "B) Din eğitimi inanç, ibadet, ahlak ve dinler okuryazarlığını kazandırır.", "C) İtikadi dayatma ile anlama ayrılır; laik okulda DKAB Anayasa çerçevesindedir.", "D) Gelişimsel yaklaşım Piaget-Goldman tartışması; soyut din dili yaşa göre.", "E) Değer eğitimi telkin, açıklama, ahlaki ikilem, karakter."],
+    "correctAnswerIndex": 0,
+    "explanation": "Din Eğitimi notundaki temel bilgi."
 }
 ];

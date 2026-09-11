@@ -55,69 +55,69 @@ window.oabt_sosyal_12_sorulari = [
     "explanation": "Kullanımlar ve doyumlar, alımlama."
 },
 {
-    "question": "İnsan İlişkileri ve İletişim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) İletişim kod, kanal, gürültü, geribildirim; doğrusal model yetersiz, işlemsel döngü.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İnsan İlişkileri ve İletişim konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Sözsüz jest, mesafe (proksemi), göz teması kültürel.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi İletişim için doğru bir açıklamadır?",
+    "options": ["A) Çatışma kaçınma, uyum, rekabet, işbirliği, uzlaşma.", "B) Grup içi roller, norm, grupdüşüncesi (Janis).", "C) İletişim kod, kanal, gürültü, geribildirim; doğrusal model yetersiz, işlemsel döngü.", "D) Sözsüz jest, mesafe (proksemi), göz teması kültürel.", "E) Dinleme türleri yüzeysel, empatik, eleştirel."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İnsan İlişkileri ve İletişim notundaki temel bilgi."
 },
 {
-    "question": "İnsan İlişkileri ve İletişim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Dinleme türleri yüzeysel, empatik, eleştirel.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Sözsüz hakkında hangisi doğrudur?",
+    "options": ["A) Sözsüz jest, mesafe (proksemi), göz teması kültürel.", "B) İletişim kod, kanal, gürültü, geribildirim; doğrusal model yetersiz, işlemsel döngü.", "C) Dinleme türleri yüzeysel, empatik, eleştirel.", "D) Çatışma kaçınma, uyum, rekabet, işbirliği, uzlaşma.", "E) Grup içi roller, norm, grupdüşüncesi (Janis)."],
+    "correctAnswerIndex": 0,
+    "explanation": "İnsan İlişkileri ve İletişim notundaki temel bilgi."
 },
 {
-    "question": "İnsan İlişkileri ve İletişim konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Çatışma kaçınma, uyum, rekabet, işbirliği, uzlaşma.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Dinleme türleri hangisini ifade eder?",
+    "options": ["A) Çatışma kaçınma, uyum, rekabet, işbirliği, uzlaşma.", "B) Grup içi roller, norm, grupdüşüncesi (Janis).", "C) Dinleme türleri yüzeysel, empatik, eleştirel.", "D) İletişim kod, kanal, gürültü, geribildirim; doğrusal model yetersiz, işlemsel döngü.", "E) Sözsüz jest, mesafe (proksemi), göz teması kültürel."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İnsan İlişkileri ve İletişim notundaki temel bilgi."
 },
 {
-    "question": "İnsan İlişkileri ve İletişim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Grup içi roller, norm, grupdüşüncesi (Janis).", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Çatışma ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Grup içi roller, norm, grupdüşüncesi (Janis).", "B) Çatışma kaçınma, uyum, rekabet, işbirliği, uzlaşma.", "C) İletişim kod, kanal, gürültü, geribildirim; doğrusal model yetersiz, işlemsel döngü.", "D) Sözsüz jest, mesafe (proksemi), göz teması kültürel.", "E) Dinleme türleri yüzeysel, empatik, eleştirel."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "İnsan İlişkileri ve İletişim notundaki temel bilgi."
 },
 {
-    "question": "İnsan İlişkileri ve İletişim konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Benlik sunumu (Goffman) sahne önü-arkası.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Grup içi için doğru bir açıklamadır?",
+    "options": ["A) İletişim kod, kanal, gürültü, geribildirim; doğrusal model yetersiz, işlemsel döngü.", "B) Sözsüz jest, mesafe (proksemi), göz teması kültürel.", "C) Dinleme türleri yüzeysel, empatik, eleştirel.", "D) Çatışma kaçınma, uyum, rekabet, işbirliği, uzlaşma.", "E) Grup içi roller, norm, grupdüşüncesi (Janis)."],
+    "correctAnswerIndex": 4,
+    "explanation": "İnsan İlişkileri ve İletişim notundaki temel bilgi."
+},
+{
+    "question": "Benlik sunumu hakkında hangisi doğrudur?",
+    "options": ["A) Çatışma kaçınma, uyum, rekabet, işbirliği, uzlaşma.", "B) Benlik sunumu (Goffman) sahne önü-arkası.", "C) İletişim kod, kanal, gürültü, geribildirim; doğrusal model yetersiz, işlemsel döngü.", "D) Sözsüz jest, mesafe (proksemi), göz teması kültürel.", "E) Dinleme türleri yüzeysel, empatik, eleştirel."],
+    "correctAnswerIndex": 1,
+    "explanation": "İnsan İlişkileri ve İletişim notundaki temel bilgi."
+},
+{
+    "question": "Kültürlerarası iletişim hangisini ifade eder?",
+    "options": ["A) Çatışma kaçınma, uyum, rekabet, işbirliği, uzlaşma.", "B) Kültürlerarası iletişim yüksek-düşük bağlam (Hall).", "C) İletişim kod, kanal, gürültü, geribildirim; doğrusal model yetersiz, işlemsel döngü.", "D) Sözsüz jest, mesafe (proksemi), göz teması kültürel.", "E) Dinleme türleri yüzeysel, empatik, eleştirel."],
+    "correctAnswerIndex": 1,
+    "explanation": "İnsan İlişkileri ve İletişim notundaki temel bilgi."
+},
+{
+    "question": "Kalıpyargı ve dil ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Dinleme türleri yüzeysel, empatik, eleştirel.", "B) Çatışma kaçınma, uyum, rekabet, işbirliği, uzlaşma.", "C) Kalıpyargı ve dil nefret söylemi, mikro saldırganlık.", "D) İletişim kod, kanal, gürültü, geribildirim; doğrusal model yetersiz, işlemsel döngü.", "E) Sözsüz jest, mesafe (proksemi), göz teması kültürel."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İnsan İlişkileri ve İletişim notundaki temel bilgi."
 },
 {
-    "question": "İnsan İlişkileri ve İletişim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kültürlerarası iletişim yüksek-düşük bağlam (Hall).", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Dijital iletişim için doğru bir açıklamadır?",
+    "options": ["A) İletişim kod, kanal, gürültü, geribildirim; doğrusal model yetersiz, işlemsel döngü.", "B) Sözsüz jest, mesafe (proksemi), göz teması kültürel.", "C) Dinleme türleri yüzeysel, empatik, eleştirel.", "D) Çatışma kaçınma, uyum, rekabet, işbirliği, uzlaşma.", "E) Dijital iletişim asenkron, emojiler, mahremiyet."],
+    "correctAnswerIndex": 4,
+    "explanation": "İnsan İlişkileri ve İletişim notundaki temel bilgi."
 },
 {
-    "question": "İnsan İlişkileri ve İletişim konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Kalıpyargı ve dil nefret söylemi, mikro saldırganlık.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aile ve akran hakkında hangisi doğrudur?",
+    "options": ["A) Sözsüz jest, mesafe (proksemi), göz teması kültürel.", "B) Dinleme türleri yüzeysel, empatik, eleştirel.", "C) Çatışma kaçınma, uyum, rekabet, işbirliği, uzlaşma.", "D) Aile ve akran bağlanma, zorbalık, siber zorbalık.", "E) İletişim kod, kanal, gürültü, geribildirim; doğrusal model yetersiz, işlemsel döngü."],
+    "correctAnswerIndex": 3,
+    "explanation": "İnsan İlişkileri ve İletişim notundaki temel bilgi."
 },
 {
-    "question": "İnsan İlişkileri ve İletişim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Dijital iletişim asenkron, emojiler, mahremiyet.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İnsan İlişkileri ve İletişim konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Aile ve akran bağlanma, zorbalık, siber zorbalık.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "İnsan İlişkileri ve İletişim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Sınıf iklimi saygı, söz sırası, kapsayıcı dil.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Sınıf iklimi hangisini ifade eder?",
+    "options": ["A) Sınıf iklimi saygı, söz sırası, kapsayıcı dil.", "B) İletişim kod, kanal, gürültü, geribildirim; doğrusal model yetersiz, işlemsel döngü.", "C) Sözsüz jest, mesafe (proksemi), göz teması kültürel.", "D) Dinleme türleri yüzeysel, empatik, eleştirel.", "E) Çatışma kaçınma, uyum, rekabet, işbirliği, uzlaşma."],
+    "correctAnswerIndex": 0,
+    "explanation": "İnsan İlişkileri ve İletişim notundaki temel bilgi."
 }
 ];

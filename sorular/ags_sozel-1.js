@@ -67,57 +67,57 @@ window.ags_sozel_1_sorulari = [
     "explanation": "İnsana özgü niteliğin doğaya/nesneye yüklenmesi deyim aktarmasıdır."
 },
 {
-    "question": "Sözcükte Anlam konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anlam korunur", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Sözcükte Anlam konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluyla kazandı"],
+    "question": "Aşağıdakilerden hangisi Gerçek anlam için doğru bir açıklamadır?",
+    "options": ["A) Deyim, en az iki sözcükten oluşan, genellikle mecazlı kalıplaşmış sözdür; sözcüklerin tek tek anlamı bütünü vermez.", "B) Atasözü genel kural ve öğüt bildirir; deyim ise durum veya davranışı adlandırır, yargı taşımak zorunda değildir.", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-derya, yoksul-fakir.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anlam korunur.", "E) Terim anlam, bir bilim, sanat veya meslek dalına özgü özel kullanımdır (hücre, tez, ritim)."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Sözcükte Anlam notundaki temel bilgi."
 },
 {
-    "question": "Sözcükte Anlam konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Terim anlam, bir bilim, sanat veya meslek dalına özgü özel kullanımdır (hücre, tez, ritim)", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Terim anlam hangisini ifade eder?",
+    "options": ["A) Terim anlam, bir bilim, sanat veya meslek dalına özgü özel kullanımdır (hücre, tez, ritim).", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anlam korunur.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluyla kazandığı yan anlamdır.", "D) Deyim, en az iki sözcükten oluşan, genellikle mecazlı kalıplaşmış sözdür; sözcüklerin tek tek anlamı bütünü vermez.", "E) Atasözü genel kural ve öğüt bildirir; deyim ise durum veya davranışı adlandırır, yargı taşımak zorunda değildir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Sözcükte Anlam notundaki temel bilgi."
+},
+{
+    "question": "Deyim ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-derya, yoksul-fakir.", "B) Deyim, en az iki sözcükten oluşan, genellikle mecazlı kalıplaşmış sözdür; sözcüklerin tek tek anlamı bütünü vermez.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anlam korunur.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluyla kazandığı yan anlamdır.", "E) Terim anlam, bir bilim, sanat veya meslek dalına özgü özel kullanımdır (hücre, tez, ritim)."],
+    "correctAnswerIndex": 1,
+    "explanation": "Sözcükte Anlam notundaki temel bilgi."
+},
+{
+    "question": "Eş anlamlı (anlamdaş) hakkında hangisi doğrudur?",
+    "options": ["A) Terim anlam, bir bilim, sanat veya meslek dalına özgü özel kullanımdır (hücre, tez, ritim).", "B) Deyim, en az iki sözcükten oluşan, genellikle mecazlı kalıplaşmış sözdür; sözcüklerin tek tek anlamı bütünü vermez.", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-derya, yoksul-fakir.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anlam korunur.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluyla kazandığı yan anlamdır."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Sözcükte Anlam notundaki temel bilgi."
 },
 {
-    "question": "Sözcükte Anlam konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Deyim, en az iki sözcükten oluşan, genellikle mecazlı kalıplaşmış sözdür; sözcüklerin tek "],
+    "question": "Zıt (karşıt) anlamlı hangisini ifade eder?",
+    "options": ["A) Deyim, en az iki sözcükten oluşan, genellikle mecazlı kalıplaşmış sözdür; sözcüklerin tek tek anlamı bütünü vermez.", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anlam korunur.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluyla kazandığı yan anlamdır.", "E) Terim anlam, bir bilim, sanat veya meslek dalına özgü özel kullanımdır (hücre, tez, ritim)."],
+    "correctAnswerIndex": 1,
+    "explanation": "Sözcükte Anlam notundaki temel bilgi."
+},
+{
+    "question": "Eşsesli (sesteş) ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anlam korunur.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluyla kazandığı yan anlamdır.", "C) Terim anlam, bir bilim, sanat veya meslek dalına özgü özel kullanımdır (hücre, tez, ritim).", "D) Deyim, en az iki sözcükten oluşan, genellikle mecazlı kalıplaşmış sözdür; sözcüklerin tek tek anlamı bütünü vermez.", "E) Eşsesli (sesteş) sözcükler yazılış ve okunuşu aynı, anlamı ayrıdır: yüz (sima) / yüz (sayı) / yüz- (eylem)."],
+    "correctAnswerIndex": 4,
+    "explanation": "Sözcükte Anlam notundaki temel bilgi."
+},
+{
+    "question": "Bağlam hangisini ifade eder?",
+    "options": ["A) Deyim, en az iki sözcükten oluşan, genellikle mecazlı kalıplaşmış sözdür; sözcüklerin tek tek anlamı bütünü vermez.", "B) Atasözü genel kural ve öğüt bildirir; deyim ise durum veya davranışı adlandırır, yargı taşımak zorunda değildir.", "C) Bağlam, sözcüğün cümle ve metin içindeki kullanım çevresidir; anlamı bağlam belirler.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluyla kazandığı yan anlamdır.", "E) Terim anlam, bir bilim, sanat veya meslek dalına özgü özel kullanımdır (hücre, tez, ritim)."],
+    "correctAnswerIndex": 2,
+    "explanation": "Sözcükte Anlam notundaki temel bilgi."
+},
+{
+    "question": "Ad aktarması (mecaz-ı mürsel) ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anlam korunur.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluyla kazandığı yan anlamdır.", "C) Terim anlam, bir bilim, sanat veya meslek dalına özgü özel kullanımdır (hücre, tez, ritim).", "D) Deyim, en az iki sözcükten oluşan, genellikle mecazlı kalıplaşmış sözdür; sözcüklerin tek tek anlamı bütünü vermez.", "E) Ad aktarması (mecaz-ı mürsel) benzerlik olmadan ilgiyle aktarım: bütün-parça, yer-içindekiler, neden-sonuç."],
+    "correctAnswerIndex": 4,
+    "explanation": "Sözcükte Anlam notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Deyim aktarması için doğru bir açıklamadır?",
+    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluyla kazandığı yan anlamdır.", "B) Terim anlam, bir bilim, sanat veya meslek dalına özgü özel kullanımdır (hücre, tez, ritim).", "C) Deyim, en az iki sözcükten oluşan, genellikle mecazlı kalıplaşmış sözdür; sözcüklerin tek tek anlamı bütünü vermez.", "D) Deyim aktarması benzerliğe dayanır: insan niteliğinin nesneye, nesnenin insana yüklenmesi (kişileştirme bu gruptandır).", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anlam korunur."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Sözcükte Anlam konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Atasözü genel kural ve öğüt bildirir; deyim ise durum veya davranışı adlandırır, yargı taş", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Sözcükte Anlam konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-derya, yoksul-"],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Sözcükte Anlam konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Bağlam, sözcüğün cümle ve metin içindeki kullanım çevresidir; anlamı bağlam beli", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Sözcükte Anlam konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Eşsesli (sesteş) sözcükler yazılış ve okunuşu aynı, anlamı ayrıdır: yüz (sima) / yüz (sayı"],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Sözcükte Anlam konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Eşyazımlı karışıklığı bağlam çözer; yakın anlamlı sözcükler tam eş değildir (ince-narin).", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Sözcükte Anlam notundaki temel bilgi."
 }
 ];

@@ -61,63 +61,63 @@ window.oabt_dkab_3_sorulari = [
     "explanation": "Fıkıh-örf ayrımı öğretim hedefidir."
 },
 {
-    "question": "Hadis konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Hadis peygamber söz, fiil, takrir ve sıfat rivayetidir.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Hadis için doğru bir açıklamadır?",
+    "options": ["A) Sahih, hasen, zayıf, mevzu sıhhat tasnifi.", "B) Mütevâtir-ahad bilgi değeri açısından ayrılır.", "C) Hadis peygamber söz, fiil, takrir ve sıfat rivayetidir.", "D) Sünnet bağlayıcılık tartışmasıyla fıkıh ve ahlakın ikinci kaynağıdır.", "E) İsnad ve metin tenkidi sahihliği belirler."],
+    "correctAnswerIndex": 2,
+    "explanation": "Hadis notundaki temel bilgi."
 },
 {
-    "question": "Hadis konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Sünnet bağlayıcılık tartışmasıyla fıkıh ve ahlakın ikinci kaynağıdır.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Sünnet hakkında hangisi doğrudur?",
+    "options": ["A) İsnad ve metin tenkidi sahihliği belirler.", "B) Sahih, hasen, zayıf, mevzu sıhhat tasnifi.", "C) Mütevâtir-ahad bilgi değeri açısından ayrılır.", "D) Sünnet bağlayıcılık tartışmasıyla fıkıh ve ahlakın ikinci kaynağıdır.", "E) Hadis peygamber söz, fiil, takrir ve sıfat rivayetidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Hadis notundaki temel bilgi."
+},
+{
+    "question": "İsnad ve metin hangisini ifade eder?",
+    "options": ["A) Mütevâtir-ahad bilgi değeri açısından ayrılır.", "B) İsnad ve metin tenkidi sahihliği belirler.", "C) Hadis peygamber söz, fiil, takrir ve sıfat rivayetidir.", "D) Sünnet bağlayıcılık tartışmasıyla fıkıh ve ahlakın ikinci kaynağıdır.", "E) Sahih, hasen, zayıf, mevzu sıhhat tasnifi."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Hadis notundaki temel bilgi."
 },
 {
-    "question": "Hadis konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) İsnad ve metin tenkidi sahihliği belirler.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Sahih, hasen, zayıf, mevzu ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Sünnet bağlayıcılık tartışmasıyla fıkıh ve ahlakın ikinci kaynağıdır.", "B) İsnad ve metin tenkidi sahihliği belirler.", "C) Mütevâtir-ahad bilgi değeri açısından ayrılır.", "D) Sahih, hasen, zayıf, mevzu sıhhat tasnifi.", "E) Hadis peygamber söz, fiil, takrir ve sıfat rivayetidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Hadis notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Mütevâtir-ahad için doğru bir açıklamadır?",
+    "options": ["A) Sünnet bağlayıcılık tartışmasıyla fıkıh ve ahlakın ikinci kaynağıdır.", "B) İsnad ve metin tenkidi sahihliği belirler.", "C) Sahih, hasen, zayıf, mevzu sıhhat tasnifi.", "D) Mütevâtir-ahad bilgi değeri açısından ayrılır.", "E) Hadis peygamber söz, fiil, takrir ve sıfat rivayetidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Hadis notundaki temel bilgi."
+},
+{
+    "question": "Kütüb-i Sitte hakkında hangisi doğrudur?",
+    "options": ["A) Hadis peygamber söz, fiil, takrir ve sıfat rivayetidir.", "B) Sünnet bağlayıcılık tartışmasıyla fıkıh ve ahlakın ikinci kaynağıdır.", "C) İsnad ve metin tenkidi sahihliği belirler.", "D) Sahih, hasen, zayıf, mevzu sıhhat tasnifi.", "E) Kütüb-i Sitte Buhari, Müslim, Ebu Davud, Tirmizi, Nesai, İbn Mace."],
+    "correctAnswerIndex": 4,
+    "explanation": "Hadis notundaki temel bilgi."
+},
+{
+    "question": "Cerh-tadil hangisini ifade eder?",
+    "options": ["A) Hadis peygamber söz, fiil, takrir ve sıfat rivayetidir.", "B) Sünnet bağlayıcılık tartışmasıyla fıkıh ve ahlakın ikinci kaynağıdır.", "C) İsnad ve metin tenkidi sahihliği belirler.", "D) Sahih, hasen, zayıf, mevzu sıhhat tasnifi.", "E) Cerh-tadil ravi eleştirisi; adalet ve zabt."],
+    "correctAnswerIndex": 4,
+    "explanation": "Hadis notundaki temel bilgi."
+},
+{
+    "question": "Mürsel, munkatı, mu'dal ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Mürsel, munkatı, mu'dal isnat kopukluğu türleri.", "B) Hadis peygamber söz, fiil, takrir ve sıfat rivayetidir.", "C) Sünnet bağlayıcılık tartışmasıyla fıkıh ve ahlakın ikinci kaynağıdır.", "D) İsnad ve metin tenkidi sahihliği belirler.", "E) Sahih, hasen, zayıf, mevzu sıhhat tasnifi."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Hadis notundaki temel bilgi."
 },
 {
-    "question": "Hadis konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Sahih, hasen, zayıf, mevzu sıhhat tasnifi.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Şerh için doğru bir açıklamadır?",
+    "options": ["A) İsnad ve metin tenkidi sahihliği belirler.", "B) Sahih, hasen, zayıf, mevzu sıhhat tasnifi.", "C) Şerh hadis açıklama geleneği.", "D) Hadis peygamber söz, fiil, takrir ve sıfat rivayetidir.", "E) Sünnet bağlayıcılık tartışmasıyla fıkıh ve ahlakın ikinci kaynağıdır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Hadis notundaki temel bilgi."
 },
 {
-    "question": "Hadis konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mütevâtir-ahad bilgi değeri açısından ayrılır.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Hadis konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Kütüb-i Sitte Buhari, Müslim, Ebu Davud, Tirmizi, Nesai, İbn Mace.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Hadis konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Cerh-tadil ravi eleştirisi; adalet ve zabt.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Hadis konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mürsel, munkatı, mu'dal isnat kopukluğu türleri.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Hadis konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Şerh hadis açıklama geleneği.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Hadis konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Ahkâm hadisleri fıkha malzeme; ahlak hadisleri terbiye.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Ahkâm hadisleri hakkında hangisi doğrudur?",
+    "options": ["A) Sünnet bağlayıcılık tartışmasıyla fıkıh ve ahlakın ikinci kaynağıdır.", "B) İsnad ve metin tenkidi sahihliği belirler.", "C) Sahih, hasen, zayıf, mevzu sıhhat tasnifi.", "D) Ahkâm hadisleri fıkha malzeme; ahlak hadisleri terbiye.", "E) Hadis peygamber söz, fiil, takrir ve sıfat rivayetidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Hadis notundaki temel bilgi."
 }
 ];

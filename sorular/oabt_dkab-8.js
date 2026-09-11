@@ -61,63 +61,63 @@ window.oabt_dkab_8_sorulari = [
     "explanation": "Felsefi düşünme becerisidir."
 },
 {
-    "question": "İslam Felsefesi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kindî ilk İslam filozofu; felsefe-din uzlaştırma.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Kindî için doğru bir açıklamadır?",
+    "options": ["A) İbn Sina varlık-mahiyet, nefs, tıb; Meşşai zirve.", "B) İbn Rüşd Aristoteles şerhi; din-felsefe çift hakikat tartışması.", "C) Çeviri hareketi Yunanca mirası Arapçaya taşır.", "D) Kindî ilk İslam filozofu; felsefe-din uzlaştırma.", "E) Farabi erdemli şehir, sudur, peygamber-filozof."],
+    "correctAnswerIndex": 3,
+    "explanation": "İslam Felsefesi notundaki temel bilgi."
 },
 {
-    "question": "İslam Felsefesi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Farabi erdemli şehir, sudur, peygamber-filozof.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "İbn Sina hangisini ifade eder?",
+    "options": ["A) İbn Rüşd Aristoteles şerhi; din-felsefe çift hakikat tartışması.", "B) Çeviri hareketi Yunanca mirası Arapçaya taşır.", "C) İbn Sina varlık-mahiyet, nefs, tıb; Meşşai zirve.", "D) Kindî ilk İslam filozofu; felsefe-din uzlaştırma.", "E) Farabi erdemli şehir, sudur, peygamber-filozof."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İslam Felsefesi notundaki temel bilgi."
 },
 {
-    "question": "İslam Felsefesi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) İbn Sina varlık-mahiyet, nefs, tıb; Meşşai zirve.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "İbn Rüşd ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Çeviri hareketi Yunanca mirası Arapçaya taşır.", "B) İbn Rüşd Aristoteles şerhi; din-felsefe çift hakikat tartışması.", "C) Kindî ilk İslam filozofu; felsefe-din uzlaştırma.", "D) Farabi erdemli şehir, sudur, peygamber-filozof.", "E) İbn Sina varlık-mahiyet, nefs, tıb; Meşşai zirve."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "İslam Felsefesi notundaki temel bilgi."
 },
 {
-    "question": "İslam Felsefesi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) İbn Rüşd Aristoteles şerhi; din-felsefe çift hakikat tartışması.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Çeviri hareketi için doğru bir açıklamadır?",
+    "options": ["A) İbn Sina varlık-mahiyet, nefs, tıb; Meşşai zirve.", "B) İbn Rüşd Aristoteles şerhi; din-felsefe çift hakikat tartışması.", "C) Çeviri hareketi Yunanca mirası Arapçaya taşır.", "D) Kindî ilk İslam filozofu; felsefe-din uzlaştırma.", "E) Farabi erdemli şehir, sudur, peygamber-filozof."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İslam Felsefesi notundaki temel bilgi."
 },
 {
-    "question": "İslam Felsefesi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Çeviri hareketi Yunanca mirası Arapçaya taşır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Gazzali hakkında hangisi doğrudur?",
+    "options": ["A) Farabi erdemli şehir, sudur, peygamber-filozof.", "B) İbn Sina varlık-mahiyet, nefs, tıb; Meşşai zirve.", "C) İbn Rüşd Aristoteles şerhi; din-felsefe çift hakikat tartışması.", "D) Gazzali Tehafüt; nedensellik ve filozofların üç meselesi.", "E) Kindî ilk İslam filozofu; felsefe-din uzlaştırma."],
+    "correctAnswerIndex": 3,
+    "explanation": "İslam Felsefesi notundaki temel bilgi."
 },
 {
-    "question": "İslam Felsefesi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Gazzali Tehafüt; nedensellik ve filozofların üç meselesi.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi İbn Arabi için doğru bir açıklamadır?",
+    "options": ["A) Farabi erdemli şehir, sudur, peygamber-filozof.", "B) İbn Sina varlık-mahiyet, nefs, tıb; Meşşai zirve.", "C) İbn Rüşd Aristoteles şerhi; din-felsefe çift hakikat tartışması.", "D) İbn Arabi vahdet-i vücud; tasavvuf metafiziği (felsefe-kelam sınırı).", "E) Kindî ilk İslam filozofu; felsefe-din uzlaştırma."],
+    "correctAnswerIndex": 3,
+    "explanation": "İslam Felsefesi notundaki temel bilgi."
+},
+{
+    "question": "Osmanlı düşüncesi hakkında hangisi doğrudur?",
+    "options": ["A) Osmanlı düşüncesi kelam-felsefe-tasavvuf sentezleri.", "B) Kindî ilk İslam filozofu; felsefe-din uzlaştırma.", "C) Farabi erdemli şehir, sudur, peygamber-filozof.", "D) İbn Sina varlık-mahiyet, nefs, tıb; Meşşai zirve.", "E) İbn Rüşd Aristoteles şerhi; din-felsefe çift hakikat tartışması."],
+    "correctAnswerIndex": 0,
+    "explanation": "İslam Felsefesi notundaki temel bilgi."
+},
+{
+    "question": "Erdem ahlakı hangisini ifade eder?",
+    "options": ["A) Farabi erdemli şehir, sudur, peygamber-filozof.", "B) İbn Sina varlık-mahiyet, nefs, tıb; Meşşai zirve.", "C) İbn Rüşd Aristoteles şerhi; din-felsefe çift hakikat tartışması.", "D) Erdem ahlakı Eflatun-Aristo'nun İslamileşmesi.", "E) Kindî ilk İslam filozofu; felsefe-din uzlaştırma."],
+    "correctAnswerIndex": 3,
+    "explanation": "İslam Felsefesi notundaki temel bilgi."
+},
+{
+    "question": "İbn Haldun ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İbn Sina varlık-mahiyet, nefs, tıb; Meşşai zirve.", "B) İbn Rüşd Aristoteles şerhi; din-felsefe çift hakikat tartışması.", "C) İbn Haldun umran, asabiyet; tarih felsefesine yakın.", "D) Kindî ilk İslam filozofu; felsefe-din uzlaştırma.", "E) Farabi erdemli şehir, sudur, peygamber-filozof."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İslam Felsefesi notundaki temel bilgi."
 },
 {
-    "question": "İslam Felsefesi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) İbn Rüşd Tehafütü'l-Tehafüt ile cevap.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İslam Felsefesi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Sühreverdi İşrak; nur metafiziği.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "İslam Felsefesi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) İbn Arabi vahdet-i vücud; tasavvuf metafiziği (felsefe-kelam sınırı).", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İslam Felsefesi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Osmanlı düşüncesi kelam-felsefe-tasavvuf sentezleri.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Akıl-vahiy hakkında hangisi doğrudur?",
+    "options": ["A) Akıl-vahiy çatışma değil mertebe tartışması.", "B) Kindî ilk İslam filozofu; felsefe-din uzlaştırma.", "C) Farabi erdemli şehir, sudur, peygamber-filozof.", "D) İbn Sina varlık-mahiyet, nefs, tıb; Meşşai zirve.", "E) İbn Rüşd Aristoteles şerhi; din-felsefe çift hakikat tartışması."],
+    "correctAnswerIndex": 0,
+    "explanation": "İslam Felsefesi notundaki temel bilgi."
 }
 ];

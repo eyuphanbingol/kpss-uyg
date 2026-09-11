@@ -55,69 +55,69 @@ window.oabt_bio_5_sorulari = [
     "explanation": "İstisnalar vardır, tanılayıcı demet."
 },
 {
-    "question": "Bitki Biyolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Kök-gövde-yaprak primer-sekonder büyüme; kambiyum.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Kök-gövde-yaprak için doğru bir açıklamadır?",
+    "options": ["A) Mineral N P K eksiklik belirtileri; simbiyotik azot fiksasyonu.", "B) Hormon oksin polar taşınma, sitokinin, giberellin, etilen, ABA.", "C) Kök-gövde-yaprak primer-sekonder büyüme; kambiyum.", "D) Stoma turgor, ABA kuraklıkta kapanma; C3 C4 CAM.", "E) Transpirasyon-kohezyon su ksilemde; basınca bağlı floem."],
+    "correctAnswerIndex": 2,
+    "explanation": "Bitki Biyolojisi notundaki temel bilgi."
 },
 {
-    "question": "Bitki Biyolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Stoma turgor, ABA kuraklıkta kapanma; C3 C4 CAM.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Stoma hakkında hangisi doğrudur?",
+    "options": ["A) Kök-gövde-yaprak primer-sekonder büyüme; kambiyum.", "B) Transpirasyon-kohezyon su ksilemde; basınca bağlı floem.", "C) Mineral N P K eksiklik belirtileri; simbiyotik azot fiksasyonu.", "D) Hormon oksin polar taşınma, sitokinin, giberellin, etilen, ABA.", "E) Stoma turgor, ABA kuraklıkta kapanma; C3 C4 CAM."],
+    "correctAnswerIndex": 4,
+    "explanation": "Bitki Biyolojisi notundaki temel bilgi."
+},
+{
+    "question": "Transpirasyon-kohezyon hangisini ifade eder?",
+    "options": ["A) Kök-gövde-yaprak primer-sekonder büyüme; kambiyum.", "B) Stoma turgor, ABA kuraklıkta kapanma; C3 C4 CAM.", "C) Mineral N P K eksiklik belirtileri; simbiyotik azot fiksasyonu.", "D) Hormon oksin polar taşınma, sitokinin, giberellin, etilen, ABA.", "E) Transpirasyon-kohezyon su ksilemde; basınca bağlı floem."],
+    "correctAnswerIndex": 4,
+    "explanation": "Bitki Biyolojisi notundaki temel bilgi."
+},
+{
+    "question": "Mineral ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Stoma turgor, ABA kuraklıkta kapanma; C3 C4 CAM.", "B) Transpirasyon-kohezyon su ksilemde; basınca bağlı floem.", "C) Hormon oksin polar taşınma, sitokinin, giberellin, etilen, ABA.", "D) Mineral N P K eksiklik belirtileri; simbiyotik azot fiksasyonu.", "E) Kök-gövde-yaprak primer-sekonder büyüme; kambiyum."],
+    "correctAnswerIndex": 3,
+    "explanation": "Bitki Biyolojisi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Hormon için doğru bir açıklamadır?",
+    "options": ["A) Kök-gövde-yaprak primer-sekonder büyüme; kambiyum.", "B) Stoma turgor, ABA kuraklıkta kapanma; C3 C4 CAM.", "C) Transpirasyon-kohezyon su ksilemde; basınca bağlı floem.", "D) Mineral N P K eksiklik belirtileri; simbiyotik azot fiksasyonu.", "E) Hormon oksin polar taşınma, sitokinin, giberellin, etilen, ABA."],
+    "correctAnswerIndex": 4,
+    "explanation": "Bitki Biyolojisi notundaki temel bilgi."
+},
+{
+    "question": "Döl almaşı hakkında hangisi doğrudur?",
+    "options": ["A) Kök-gövde-yaprak primer-sekonder büyüme; kambiyum.", "B) Stoma turgor, ABA kuraklıkta kapanma; C3 C4 CAM.", "C) Transpirasyon-kohezyon su ksilemde; basınca bağlı floem.", "D) Mineral N P K eksiklik belirtileri; simbiyotik azot fiksasyonu.", "E) Döl almaşı sporofit-gametofit; tohumlu bitkide gametofit indirgenmiş."],
+    "correctAnswerIndex": 4,
+    "explanation": "Bitki Biyolojisi notundaki temel bilgi."
+},
+{
+    "question": "Çiçek hangisini ifade eder?",
+    "options": ["A) Stoma turgor, ABA kuraklıkta kapanma; C3 C4 CAM.", "B) Transpirasyon-kohezyon su ksilemde; basınca bağlı floem.", "C) Mineral N P K eksiklik belirtileri; simbiyotik azot fiksasyonu.", "D) Çiçek stamen pistil; çift döllenme angiosperm (2n zigot + 3n endosperm).", "E) Kök-gövde-yaprak primer-sekonder büyüme; kambiyum."],
+    "correctAnswerIndex": 3,
+    "explanation": "Bitki Biyolojisi notundaki temel bilgi."
+},
+{
+    "question": "Tozlaşma ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Mineral N P K eksiklik belirtileri; simbiyotik azot fiksasyonu.", "B) Tozlaşma abiyotik-biyotik; meyve tohum yayılımı.", "C) Kök-gövde-yaprak primer-sekonder büyüme; kambiyum.", "D) Stoma turgor, ABA kuraklıkta kapanma; C3 C4 CAM.", "E) Transpirasyon-kohezyon su ksilemde; basınca bağlı floem."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Bitki Biyolojisi notundaki temel bilgi."
 },
 {
-    "question": "Bitki Biyolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Transpirasyon-kohezyon su ksilemde; basınca bağlı floem.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Fitokrom için doğru bir açıklamadır?",
+    "options": ["A) Stoma turgor, ABA kuraklıkta kapanma; C3 C4 CAM.", "B) Transpirasyon-kohezyon su ksilemde; basınca bağlı floem.", "C) Mineral N P K eksiklik belirtileri; simbiyotik azot fiksasyonu.", "D) Fitokrom kırmızı/uzak kırmızı, fotoperiyot.", "E) Kök-gövde-yaprak primer-sekonder büyüme; kambiyum."],
+    "correctAnswerIndex": 3,
+    "explanation": "Bitki Biyolojisi notundaki temel bilgi."
 },
 {
-    "question": "Bitki Biyolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mineral N P K eksiklik belirtileri; simbiyotik azot fiksasyonu.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Tropizma hakkında hangisi doğrudur?",
+    "options": ["A) Mineral N P K eksiklik belirtileri; simbiyotik azot fiksasyonu.", "B) Tropizma fototropizma oksin, gravitropizma.", "C) Kök-gövde-yaprak primer-sekonder büyüme; kambiyum.", "D) Stoma turgor, ABA kuraklıkta kapanma; C3 C4 CAM.", "E) Transpirasyon-kohezyon su ksilemde; basınca bağlı floem."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Bitki Biyolojisi notundaki temel bilgi."
 },
 {
-    "question": "Bitki Biyolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Hormon oksin polar taşınma, sitokinin, giberellin, etilen, ABA.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Bitki Biyolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Döl almaşı sporofit-gametofit; tohumlu bitkide gametofit indirgenmiş.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Bryofit hangisini ifade eder?",
+    "options": ["A) Mineral N P K eksiklik belirtileri; simbiyotik azot fiksasyonu.", "B) Bryofit damarsız, gametofit baskın.", "C) Kök-gövde-yaprak primer-sekonder büyüme; kambiyum.", "D) Stoma turgor, ABA kuraklıkta kapanma; C3 C4 CAM.", "E) Transpirasyon-kohezyon su ksilemde; basınca bağlı floem."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Bitki Biyolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Çiçek stamen pistil; çift döllenme angiosperm (2n zigot + 3n endosperm).", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Bitki Biyolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Tozlaşma abiyotik-biyotik; meyve tohum yayılımı.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Bitki Biyolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Fitokrom kırmızı/uzak kırmızı, fotoperiyot.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Bitki Biyolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Tropizma fototropizma oksin, gravitropizma.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Bitki Biyolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Bryofit damarsız, gametofit baskın.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Bitki Biyolojisi notundaki temel bilgi."
 }
 ];

@@ -55,69 +55,69 @@ window.oabt_bio_8_sorulari = [
     "explanation": "Miyoglobin hiperbolik."
 },
 {
-    "question": "Fizyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Homeostazi negatif geribildirim; hipotalamus-hipofiz ekseni.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Homeostazi için doğru bir açıklamadır?",
+    "options": ["A) Dolaşım-solunum hemoglobin eğrisi Bohr, kalp döngüsü.", "B) Böbrek nefron, ADH-aldosteron, karşı akım çarpan.", "C) Homeostazi negatif geribildirim; hipotalamus-hipofiz ekseni.", "D) Sinir dinlenim potansiyeli, AP, sinaps, nörotransmitter.", "E) Endokrin peptid-steroid reseptör farkı (zar/hücre içi)."],
+    "correctAnswerIndex": 2,
+    "explanation": "Fizyoloji notundaki temel bilgi."
+},
+{
+    "question": "Sinir hakkında hangisi doğrudur?",
+    "options": ["A) Endokrin peptid-steroid reseptör farkı (zar/hücre içi).", "B) Dolaşım-solunum hemoglobin eğrisi Bohr, kalp döngüsü.", "C) Böbrek nefron, ADH-aldosteron, karşı akım çarpan.", "D) Sinir dinlenim potansiyeli, AP, sinaps, nörotransmitter.", "E) Homeostazi negatif geribildirim; hipotalamus-hipofiz ekseni."],
+    "correctAnswerIndex": 3,
+    "explanation": "Fizyoloji notundaki temel bilgi."
+},
+{
+    "question": "Endokrin hangisini ifade eder?",
+    "options": ["A) Endokrin peptid-steroid reseptör farkı (zar/hücre içi).", "B) Homeostazi negatif geribildirim; hipotalamus-hipofiz ekseni.", "C) Sinir dinlenim potansiyeli, AP, sinaps, nörotransmitter.", "D) Dolaşım-solunum hemoglobin eğrisi Bohr, kalp döngüsü.", "E) Böbrek nefron, ADH-aldosteron, karşı akım çarpan."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Fizyoloji notundaki temel bilgi."
 },
 {
-    "question": "Fizyoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Sinir dinlenim potansiyeli, AP, sinaps, nörotransmitter.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Dolaşım-solunum ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Homeostazi negatif geribildirim; hipotalamus-hipofiz ekseni.", "B) Sinir dinlenim potansiyeli, AP, sinaps, nörotransmitter.", "C) Endokrin peptid-steroid reseptör farkı (zar/hücre içi).", "D) Böbrek nefron, ADH-aldosteron, karşı akım çarpan.", "E) Dolaşım-solunum hemoglobin eğrisi Bohr, kalp döngüsü."],
+    "correctAnswerIndex": 4,
+    "explanation": "Fizyoloji notundaki temel bilgi."
 },
 {
-    "question": "Fizyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Endokrin peptid-steroid reseptör farkı (zar/hücre içi).", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Böbrek için doğru bir açıklamadır?",
+    "options": ["A) Homeostazi negatif geribildirim; hipotalamus-hipofiz ekseni.", "B) Sinir dinlenim potansiyeli, AP, sinaps, nörotransmitter.", "C) Endokrin peptid-steroid reseptör farkı (zar/hücre içi).", "D) Dolaşım-solunum hemoglobin eğrisi Bohr, kalp döngüsü.", "E) Böbrek nefron, ADH-aldosteron, karşı akım çarpan."],
+    "correctAnswerIndex": 4,
+    "explanation": "Fizyoloji notundaki temel bilgi."
+},
+{
+    "question": "Sindirim hakkında hangisi doğrudur?",
+    "options": ["A) Homeostazi negatif geribildirim; hipotalamus-hipofiz ekseni.", "B) Sinir dinlenim potansiyeli, AP, sinaps, nörotransmitter.", "C) Endokrin peptid-steroid reseptör farkı (zar/hücre içi).", "D) Dolaşım-solunum hemoglobin eğrisi Bohr, kalp döngüsü.", "E) Sindirim enzim bölgeleri, karaciğer-pankreas, emilim ince bağırsak."],
+    "correctAnswerIndex": 4,
+    "explanation": "Fizyoloji notundaki temel bilgi."
+},
+{
+    "question": "Bağışıklık hangisini ifade eder?",
+    "options": ["A) Sinir dinlenim potansiyeli, AP, sinaps, nörotransmitter.", "B) Endokrin peptid-steroid reseptör farkı (zar/hücre içi).", "C) Dolaşım-solunum hemoglobin eğrisi Bohr, kalp döngüsü.", "D) Bağışıklık MHC, antikor sınıfları, bellek, aşı.", "E) Homeostazi negatif geribildirim; hipotalamus-hipofiz ekseni."],
+    "correctAnswerIndex": 3,
+    "explanation": "Fizyoloji notundaki temel bilgi."
+},
+{
+    "question": "Kas ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Sinir dinlenim potansiyeli, AP, sinaps, nörotransmitter.", "B) Endokrin peptid-steroid reseptör farkı (zar/hücre içi).", "C) Dolaşım-solunum hemoglobin eğrisi Bohr, kalp döngüsü.", "D) Kas kayan filaman, Ca2+, tetanos.", "E) Homeostazi negatif geribildirim; hipotalamus-hipofiz ekseni."],
+    "correctAnswerIndex": 3,
+    "explanation": "Fizyoloji notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Duyu için doğru bir açıklamadır?",
+    "options": ["A) Sinir dinlenim potansiyeli, AP, sinaps, nörotransmitter.", "B) Endokrin peptid-steroid reseptör farkı (zar/hücre içi).", "C) Dolaşım-solunum hemoglobin eğrisi Bohr, kalp döngüsü.", "D) Duyu transdüksiyon, reseptör potansiyeli.", "E) Homeostazi negatif geribildirim; hipotalamus-hipofiz ekseni."],
+    "correctAnswerIndex": 3,
+    "explanation": "Fizyoloji notundaki temel bilgi."
+},
+{
+    "question": "Üreme fizyolojisi hakkında hangisi doğrudur?",
+    "options": ["A) Endokrin peptid-steroid reseptör farkı (zar/hücre içi).", "B) Dolaşım-solunum hemoglobin eğrisi Bohr, kalp döngüsü.", "C) Üreme fizyolojisi menstrual döngü hormonları, spermatogenez.", "D) Homeostazi negatif geribildirim; hipotalamus-hipofiz ekseni.", "E) Sinir dinlenim potansiyeli, AP, sinaps, nörotransmitter."],
+    "correctAnswerIndex": 2,
+    "explanation": "Fizyoloji notundaki temel bilgi."
+},
+{
+    "question": "Bitki su potansiyeli hangisini ifade eder?",
+    "options": ["A) Bitki su potansiyeli ψ=ψs+ψp; stomatal iletkenlik.", "B) Homeostazi negatif geribildirim; hipotalamus-hipofiz ekseni.", "C) Sinir dinlenim potansiyeli, AP, sinaps, nörotransmitter.", "D) Endokrin peptid-steroid reseptör farkı (zar/hücre içi).", "E) Dolaşım-solunum hemoglobin eğrisi Bohr, kalp döngüsü."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Fizyoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Dolaşım-solunum hemoglobin eğrisi Bohr, kalp döngüsü.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Fizyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Böbrek nefron, ADH-aldosteron, karşı akım çarpan.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Fizyoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Sindirim enzim bölgeleri, karaciğer-pankreas, emilim ince bağırsak.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Fizyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Bağışıklık MHC, antikor sınıfları, bellek, aşı.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Fizyoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Kas kayan filaman, Ca2+, tetanos.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Fizyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Duyu transdüksiyon, reseptör potansiyeli.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Fizyoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Üreme fizyolojisi menstrual döngü hormonları, spermatogenez.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Fizyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Bitki su potansiyeli ψ=ψs+ψp; stomatal iletkenlik.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Fizyoloji notundaki temel bilgi."
 }
 ];

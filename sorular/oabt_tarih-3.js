@@ -61,63 +61,63 @@ window.oabt_tarih_3_sorulari = [
     "explanation": "Batı Akdeniz üstünlüğü için üç büyük savaştır."
 },
 {
-    "question": "Eski Çağ Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Mezopotamya'da Sümer şehir devletleri, çivi yazısı ve ziggurat öne çıkar.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Hammurabi hakkında hangisi doğrudur?",
+    "options": ["A) Hitit Anadolu; Anıtkabir öncesi Boğazköy arşivi ve vasal krallık sistemi.", "B) Asur ve Pers imparatorluk ölçeğinde yol, vergi ve satraplık örgütler.", "C) Hammurabi kânunu kısas ve toplumsal tabakaya göre ceza örneğidir.", "D) Mezopotamya'da Sümer şehir devletleri, çivi yazısı ve ziggurat öne çıkar.", "E) Mısır Nil'e bağlı merkezi krallık, hiyeroglif ve öte dünya inancıyla anılır."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Eski Çağ Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Eski Çağ Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Hammurabi kânunu kısas ve toplumsal tabakaya göre ceza örneğidir."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Mısır hangisini ifade eder?",
+    "options": ["A) Mısır Nil'e bağlı merkezi krallık, hiyeroglif ve öte dünya inancıyla anılır.", "B) Mezopotamya'da Sümer şehir devletleri, çivi yazısı ve ziggurat öne çıkar.", "C) Hammurabi kânunu kısas ve toplumsal tabakaya göre ceza örneğidir.", "D) Hitit Anadolu; Anıtkabir öncesi Boğazköy arşivi ve vasal krallık sistemi.", "E) Asur ve Pers imparatorluk ölçeğinde yol, vergi ve satraplık örgütler."],
+    "correctAnswerIndex": 0,
+    "explanation": "Eski Çağ Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Eski Çağ Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Mısır Nil'e bağlı merkezi krallık, hiyeroglif ve öte dünya inancıyla anılır.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Hitit ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Asur ve Pers imparatorluk ölçeğinde yol, vergi ve satraplık örgütler.", "B) Hitit Anadolu; Anıtkabir öncesi Boğazköy arşivi ve vasal krallık sistemi.", "C) Mezopotamya'da Sümer şehir devletleri, çivi yazısı ve ziggurat öne çıkar.", "D) Hammurabi kânunu kısas ve toplumsal tabakaya göre ceza örneğidir.", "E) Mısır Nil'e bağlı merkezi krallık, hiyeroglif ve öte dünya inancıyla anılır."],
+    "correctAnswerIndex": 1,
+    "explanation": "Eski Çağ Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Asur ve Pers için doğru bir açıklamadır?",
+    "options": ["A) Mısır Nil'e bağlı merkezi krallık, hiyeroglif ve öte dünya inancıyla anılır.", "B) Hitit Anadolu; Anıtkabir öncesi Boğazköy arşivi ve vasal krallık sistemi.", "C) Asur ve Pers imparatorluk ölçeğinde yol, vergi ve satraplık örgütler.", "D) Mezopotamya'da Sümer şehir devletleri, çivi yazısı ve ziggurat öne çıkar.", "E) Hammurabi kânunu kısas ve toplumsal tabakaya göre ceza örneğidir."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Eski Çağ Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Eski Çağ Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Hitit Anadolu; Anıtkabir öncesi Boğazköy arşivi ve vasal krallık sistemi."],
+    "question": "Fenike hakkında hangisi doğrudur?",
+    "options": ["A) Hitit Anadolu; Anıtkabir öncesi Boğazköy arşivi ve vasal krallık sistemi.", "B) Fenike alfabetik yazı ve deniz ticareti; Yunan alfabesine kaynaklık tartışması.", "C) Mezopotamya'da Sümer şehir devletleri, çivi yazısı ve ziggurat öne çıkar.", "D) Hammurabi kânunu kısas ve toplumsal tabakaya göre ceza örneğidir.", "E) Mısır Nil'e bağlı merkezi krallık, hiyeroglif ve öte dünya inancıyla anılır."],
+    "correctAnswerIndex": 1,
+    "explanation": "Eski Çağ Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Yunan hangisini ifade eder?",
+    "options": ["A) Hammurabi kânunu kısas ve toplumsal tabakaya göre ceza örneğidir.", "B) Mısır Nil'e bağlı merkezi krallık, hiyeroglif ve öte dünya inancıyla anılır.", "C) Hitit Anadolu; Anıtkabir öncesi Boğazköy arşivi ve vasal krallık sistemi.", "D) Yunan polis, demokrasi deneyi (Atina), felsefe ve kolonizasyon.", "E) Mezopotamya'da Sümer şehir devletleri, çivi yazısı ve ziggurat öne çıkar."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Eski Çağ Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Eski Çağ Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Asur ve Pers imparatorluk ölçeğinde yol, vergi ve satraplık örgütler.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Makedonya ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Mezopotamya'da Sümer şehir devletleri, çivi yazısı ve ziggurat öne çıkar.", "B) Hammurabi kânunu kısas ve toplumsal tabakaya göre ceza örneğidir.", "C) Mısır Nil'e bağlı merkezi krallık, hiyeroglif ve öte dünya inancıyla anılır.", "D) Hitit Anadolu; Anıtkabir öncesi Boğazköy arşivi ve vasal krallık sistemi.", "E) Makedonya İskender'le Hellenistik sentez; Doğu-Batı kültür karışımı."],
+    "correctAnswerIndex": 4,
+    "explanation": "Eski Çağ Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Kartaca hakkında hangisi doğrudur?",
+    "options": ["A) Kartaca Pön savaşlarıyla Roma'nın rakibidir; Batı Akdeniz ticareti.", "B) Mezopotamya'da Sümer şehir devletleri, çivi yazısı ve ziggurat öne çıkar.", "C) Hammurabi kânunu kısas ve toplumsal tabakaya göre ceza örneğidir.", "D) Mısır Nil'e bağlı merkezi krallık, hiyeroglif ve öte dünya inancıyla anılır.", "E) Hitit Anadolu; Anıtkabir öncesi Boğazköy arşivi ve vasal krallık sistemi."],
+    "correctAnswerIndex": 0,
+    "explanation": "Eski Çağ Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Çok tanrılı hangisini ifade eder?",
+    "options": ["A) Mısır Nil'e bağlı merkezi krallık, hiyeroglif ve öte dünya inancıyla anılır.", "B) Hitit Anadolu; Anıtkabir öncesi Boğazköy arşivi ve vasal krallık sistemi.", "C) Çok tanrılı sistemler tarım ve şehir kültüyle bağlıdır.", "D) Mezopotamya'da Sümer şehir devletleri, çivi yazısı ve ziggurat öne çıkar.", "E) Hammurabi kânunu kısas ve toplumsal tabakaya göre ceza örneğidir."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Eski Çağ Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Eski Çağ Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Fenike alfabetik yazı ve deniz ticareti; Yunan alfabesine kaynaklık tartışması."],
+    "question": "Yahudilik ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Hammurabi kânunu kısas ve toplumsal tabakaya göre ceza örneğidir.", "B) Mısır Nil'e bağlı merkezi krallık, hiyeroglif ve öte dünya inancıyla anılır.", "C) Hitit Anadolu; Anıtkabir öncesi Boğazköy arşivi ve vasal krallık sistemi.", "D) Yahudilik tek tanrı inancının Yakındoğu'daki erken örneğidir.", "E) Mezopotamya'da Sümer şehir devletleri, çivi yazısı ve ziggurat öne çıkar."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Eski Çağ Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Yunan polis, demokrasi deneyi (Atina), felsefe ve kolonizasyon.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Eski Çağ Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Makedonya İskender'le Hellenistik sentez; Doğu-Batı kültür karışımı."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Eski Çağ Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Roma cumhuriyet-imparatorluk, hukuk, lejyon, Akdeniz birliği (Mare Nostrum).", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Eski Çağ Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Kartaca Pön savaşlarıyla Roma'nın rakibidir; Batı Akdeniz ticareti."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Eski Çağ Tarihi notundaki temel bilgi."
 }
 ];

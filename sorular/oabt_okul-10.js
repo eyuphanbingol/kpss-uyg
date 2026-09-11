@@ -61,63 +61,63 @@ window.oabt_okul_10_sorulari = [
     "explanation": "Alan eğitimi."
 },
 {
-    "question": "Matematik Etkinlikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Sayı duyusu sayma, karşılaştırma, altitme (subitizing).", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Sayı duyusu için doğru bir açıklamadır?",
+    "options": ["A) 2026 matematik etkinliği eğitim bloğu.", "B) Sayı duyusu sayma, karşılaştırma, altitme (subitizing).", "C) Örüntü, sıra, sınıflama, ölçme.", "D) Uzay konum, şekil, simetri sezgisi.", "E) Problem oyun ve hikâye."],
+    "correctAnswerIndex": 1,
+    "explanation": "Matematik Etkinlikleri notundaki temel bilgi."
+},
+{
+    "question": "Örüntü, sıra, sınıflama, ölçme hakkında hangisi doğrudur?",
+    "options": ["A) Örüntü, sıra, sınıflama, ölçme.", "B) Sayı duyusu sayma, karşılaştırma, altitme (subitizing).", "C) Uzay konum, şekil, simetri sezgisi.", "D) Problem oyun ve hikâye.", "E) 2026 matematik etkinliği eğitim bloğu."],
+    "correctAnswerIndex": 0,
+    "explanation": "Matematik Etkinlikleri notundaki temel bilgi."
+},
+{
+    "question": "Uzay hangisini ifade eder?",
+    "options": ["A) 2026 matematik etkinliği eğitim bloğu.", "B) Uzay konum, şekil, simetri sezgisi.", "C) Sayı duyusu sayma, karşılaştırma, altitme (subitizing).", "D) Örüntü, sıra, sınıflama, ölçme.", "E) Problem oyun ve hikâye."],
+    "correctAnswerIndex": 1,
+    "explanation": "Matematik Etkinlikleri notundaki temel bilgi."
+},
+{
+    "question": "Problem ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Sayı duyusu sayma, karşılaştırma, altitme (subitizing).", "B) Örüntü, sıra, sınıflama, ölçme.", "C) Uzay konum, şekil, simetri sezgisi.", "D) 2026 matematik etkinliği eğitim bloğu.", "E) Problem oyun ve hikâye."],
+    "correctAnswerIndex": 4,
+    "explanation": "Matematik Etkinlikleri notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi 2026 için doğru bir açıklamadır?",
+    "options": ["A) Sayı duyusu sayma, karşılaştırma, altitme (subitizing).", "B) Örüntü, sıra, sınıflama, ölçme.", "C) Uzay konum, şekil, simetri sezgisi.", "D) Problem oyun ve hikâye.", "E) 2026 matematik etkinliği eğitim bloğu."],
+    "correctAnswerIndex": 4,
+    "explanation": "Matematik Etkinlikleri notundaki temel bilgi."
+},
+{
+    "question": "Blok, kum, mutfak, takvim hakkında hangisi doğrudur?",
+    "options": ["A) Uzay konum, şekil, simetri sezgisi.", "B) Problem oyun ve hikâye.", "C) Blok, kum, mutfak, takvim.", "D) Sayı duyusu sayma, karşılaştırma, altitme (subitizing).", "E) Örüntü, sıra, sınıflama, ölçme."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Matematik Etkinlikleri notundaki temel bilgi."
 },
 {
-    "question": "Matematik Etkinlikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Örüntü, sıra, sınıflama, ölçme."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Şarkı ve parmak oyunu hangisini ifade eder?",
+    "options": ["A) Problem oyun ve hikâye.", "B) Şarkı ve parmak oyunu.", "C) Sayı duyusu sayma, karşılaştırma, altitme (subitizing).", "D) Örüntü, sıra, sınıflama, ölçme.", "E) Uzay konum, şekil, simetri sezgisi."],
+    "correctAnswerIndex": 1,
+    "explanation": "Matematik Etkinlikleri notundaki temel bilgi."
 },
 {
-    "question": "Matematik Etkinlikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Uzay konum, şekil, simetri sezgisi.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Doğa ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Uzay konum, şekil, simetri sezgisi.", "B) Problem oyun ve hikâye.", "C) Doğa taş-yaprak sınıflama.", "D) Sayı duyusu sayma, karşılaştırma, altitme (subitizing).", "E) Örüntü, sıra, sınıflama, ölçme."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Matematik Etkinlikleri notundaki temel bilgi."
 },
 {
-    "question": "Matematik Etkinlikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Problem oyun ve hikâye."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Masa oyunları için doğru bir açıklamadır?",
+    "options": ["A) Masa oyunları zar-kart.", "B) Sayı duyusu sayma, karşılaştırma, altitme (subitizing).", "C) Örüntü, sıra, sınıflama, ölçme.", "D) Uzay konum, şekil, simetri sezgisi.", "E) Problem oyun ve hikâye."],
+    "correctAnswerIndex": 0,
+    "explanation": "Matematik Etkinlikleri notundaki temel bilgi."
 },
 {
-    "question": "Matematik Etkinlikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) 2026 matematik etkinliği eğitim bloğu.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Matematik Etkinlikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Blok, kum, mutfak, takvim."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Matematik Etkinlikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Şarkı ve parmak oyunu.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Matematik Etkinlikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Doğa taş-yaprak sınıflama."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Matematik Etkinlikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Masa oyunları zar-kart.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Matematik Etkinlikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Dil matematik sözcükleri."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Dil hakkında hangisi doğrudur?",
+    "options": ["A) Sayı duyusu sayma, karşılaştırma, altitme (subitizing).", "B) Örüntü, sıra, sınıflama, ölçme.", "C) Uzay konum, şekil, simetri sezgisi.", "D) Problem oyun ve hikâye.", "E) Dil matematik sözcükleri."],
+    "correctAnswerIndex": 4,
+    "explanation": "Matematik Etkinlikleri notundaki temel bilgi."
 }
 ];

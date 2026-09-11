@@ -61,63 +61,63 @@ window.oabt_beden_8_sorulari = [
     "explanation": "Program dengesi."
 },
 {
-    "question": "Spor Branşları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Koşu, atlama, atma atletizm aileleri; çıkış, adım, açı.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Koşu, atlama, atma için doğru bir açıklamadır?",
+    "options": ["A) Ritmik ve aerobik ritim-koordinasyon.", "B) Oyunlaştırılmış atletizm çocukta çok yönlülük.", "C) Koşu, atlama, atma atletizm aileleri; çıkış, adım, açı.", "D) Bayrak değişim bölgesi kuralı.", "E) Artistik cimnastik aletler; güvenlik ve yardımcı."],
+    "correctAnswerIndex": 2,
+    "explanation": "Spor Branşları notundaki temel bilgi."
+},
+{
+    "question": "Bayrak hakkında hangisi doğrudur?",
+    "options": ["A) Artistik cimnastik aletler; güvenlik ve yardımcı.", "B) Ritmik ve aerobik ritim-koordinasyon.", "C) Oyunlaştırılmış atletizm çocukta çok yönlülük.", "D) Bayrak değişim bölgesi kuralı.", "E) Koşu, atlama, atma atletizm aileleri; çıkış, adım, açı."],
+    "correctAnswerIndex": 3,
+    "explanation": "Spor Branşları notundaki temel bilgi."
+},
+{
+    "question": "Artistik cimnastik hangisini ifade eder?",
+    "options": ["A) Bayrak değişim bölgesi kuralı.", "B) Ritmik ve aerobik ritim-koordinasyon.", "C) Oyunlaştırılmış atletizm çocukta çok yönlülük.", "D) Artistik cimnastik aletler; güvenlik ve yardımcı.", "E) Koşu, atlama, atma atletizm aileleri; çıkış, adım, açı."],
+    "correctAnswerIndex": 3,
+    "explanation": "Spor Branşları notundaki temel bilgi."
+},
+{
+    "question": "Ritmik ve aerobik ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Ritmik ve aerobik ritim-koordinasyon.", "B) Koşu, atlama, atma atletizm aileleri; çıkış, adım, açı.", "C) Bayrak değişim bölgesi kuralı.", "D) Artistik cimnastik aletler; güvenlik ve yardımcı.", "E) Oyunlaştırılmış atletizm çocukta çok yönlülük."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Spor Branşları notundaki temel bilgi."
 },
 {
-    "question": "Spor Branşları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Bayrak değişim bölgesi kuralı.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Oyunlaştırılmış atletizm için doğru bir açıklamadır?",
+    "options": ["A) Koşu, atlama, atma atletizm aileleri; çıkış, adım, açı.", "B) Bayrak değişim bölgesi kuralı.", "C) Artistik cimnastik aletler; güvenlik ve yardımcı.", "D) Ritmik ve aerobik ritim-koordinasyon.", "E) Oyunlaştırılmış atletizm çocukta çok yönlülük."],
+    "correctAnswerIndex": 4,
+    "explanation": "Spor Branşları notundaki temel bilgi."
 },
 {
-    "question": "Spor Branşları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Artistik cimnastik aletler; güvenlik ve yardımcı.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Futbol, basketbol, voleybol, hentbol hakkında hangisi doğrudur?",
+    "options": ["A) Artistik cimnastik aletler; güvenlik ve yardımcı.", "B) Ritmik ve aerobik ritim-koordinasyon.", "C) Futbol, basketbol, voleybol, hentbol saldırı-savunma ilkeleri.", "D) Koşu, atlama, atma atletizm aileleri; çıkış, adım, açı.", "E) Bayrak değişim bölgesi kuralı."],
+    "correctAnswerIndex": 2,
+    "explanation": "Spor Branşları notundaki temel bilgi."
 },
 {
-    "question": "Spor Branşları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Ritmik ve aerobik ritim-koordinasyon.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Mini ve uyarlanmış kural hangisini ifade eder?",
+    "options": ["A) Artistik cimnastik aletler; güvenlik ve yardımcı.", "B) Ritmik ve aerobik ritim-koordinasyon.", "C) Mini ve uyarlanmış kural (mini voley, 3x3).", "D) Koşu, atlama, atma atletizm aileleri; çıkış, adım, açı.", "E) Bayrak değişim bölgesi kuralı."],
+    "correctAnswerIndex": 2,
+    "explanation": "Spor Branşları notundaki temel bilgi."
 },
 {
-    "question": "Spor Branşları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Oyunlaştırılmış atletizm çocukta çok yönlülük.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Raket ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Artistik cimnastik aletler; güvenlik ve yardımcı.", "B) Ritmik ve aerobik ritim-koordinasyon.", "C) Raket tenis, masa tenisi, badminton; raket-göz koordinasyonu.", "D) Koşu, atlama, atma atletizm aileleri; çıkış, adım, açı.", "E) Bayrak değişim bölgesi kuralı."],
+    "correctAnswerIndex": 2,
+    "explanation": "Spor Branşları notundaki temel bilgi."
 },
 {
-    "question": "Spor Branşları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Futbol, basketbol, voleybol, hentbol saldırı-savunma ilkeleri.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Hakem eli için doğru bir açıklamadır?",
+    "options": ["A) Koşu, atlama, atma atletizm aileleri; çıkış, adım, açı.", "B) Bayrak değişim bölgesi kuralı.", "C) Artistik cimnastik aletler; güvenlik ve yardımcı.", "D) Ritmik ve aerobik ritim-koordinasyon.", "E) Hakem eli eğitim aracı, ceza aracı değil."],
+    "correctAnswerIndex": 4,
+    "explanation": "Spor Branşları notundaki temel bilgi."
 },
 {
-    "question": "Spor Branşları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mini ve uyarlanmış kural (mini voley, 3x3).", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Spor Branşları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Raket tenis, masa tenisi, badminton; raket-göz koordinasyonu.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Spor Branşları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Hakem eli eğitim aracı, ceza aracı değil.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Spor Branşları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Taktik alan paylaşma, iletişim.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Taktik hakkında hangisi doğrudur?",
+    "options": ["A) Koşu, atlama, atma atletizm aileleri; çıkış, adım, açı.", "B) Bayrak değişim bölgesi kuralı.", "C) Artistik cimnastik aletler; güvenlik ve yardımcı.", "D) Ritmik ve aerobik ritim-koordinasyon.", "E) Taktik alan paylaşma, iletişim."],
+    "correctAnswerIndex": 4,
+    "explanation": "Spor Branşları notundaki temel bilgi."
 }
 ];

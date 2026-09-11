@@ -73,51 +73,51 @@ window.ags_mevzuat_4_sorulari = [
     "explanation": "Zamanında yazdırma."
 },
 {
-    "question": "222 Sayılı Kanun konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) 222 sayılı İlköğretim ve Eğitim Kanunu 5 Ocak 1961; ilköğretimin mecburi ve Devlet okullar", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi 222 sayılı İlköğretim ve Eğitim Kanunu için doğru bir açıklamadır?",
+    "options": ["A) İlköğretim 4 yıl zorunlu ilkokul + 4 yıl zorunlu ortaokul olarak tanımlanır (güncel metin).", "B) Amaç, milli gayelere uygun bedeni, zihni ve ahlaki gelişmedir (kanunun amaç maddesi).", "C) 222 sayılı İlköğretim ve Eğitim Kanunu 5 Ocak 1961; ilköğretimin mecburi ve Devlet okullarında parasız oluşunu düzenler.", "D) m.2: ilköğretim ilköğrenim kurumlarında verilir; öğrenim çağındaki kız ve erkek çocuklar için mecburi, Devlet okullarında parasızdır.", "E) Anayasa m.42 ile aynı doğrultudadır; 1739 kademe ve ilkeleri tamamlar."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "222 Sayılı Kanun notundaki temel bilgi."
 },
 {
-    "question": "222 Sayılı Kanun konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) m.2: ilköğretim ilköğrenim kurumlarında verilir; öğrenim çağındaki kız ve erkek çocuklar i"],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "m.2 hakkında hangisi doğrudur?",
+    "options": ["A) m.2: ilköğretim ilköğrenim kurumlarında verilir; öğrenim çağındaki kız ve erkek çocuklar için mecburi, Devlet okullarında parasızdır.", "B) 222 sayılı İlköğretim ve Eğitim Kanunu 5 Ocak 1961; ilköğretimin mecburi ve Devlet okullarında parasız oluşunu düzenler.", "C) Anayasa m.42 ile aynı doğrultudadır; 1739 kademe ve ilkeleri tamamlar.", "D) İlköğretim 4 yıl zorunlu ilkokul + 4 yıl zorunlu ortaokul olarak tanımlanır (güncel metin).", "E) Amaç, milli gayelere uygun bedeni, zihni ve ahlaki gelişmedir (kanunun amaç maddesi)."],
+    "correctAnswerIndex": 0,
+    "explanation": "222 Sayılı Kanun notundaki temel bilgi."
 },
 {
-    "question": "222 Sayılı Kanun konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Anayasa m.42 ile aynı doğrultudadır; 1739 kademe ve ilkeleri tamamlar.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Anayasa m.42 ile aynı hangisini ifade eder?",
+    "options": ["A) 222 sayılı İlköğretim ve Eğitim Kanunu 5 Ocak 1961; ilköğretimin mecburi ve Devlet okullarında parasız oluşunu düzenler.", "B) m.2: ilköğretim ilköğrenim kurumlarında verilir; öğrenim çağındaki kız ve erkek çocuklar için mecburi, Devlet okullarında parasızdır.", "C) İlköğretim 4 yıl zorunlu ilkokul + 4 yıl zorunlu ortaokul olarak tanımlanır (güncel metin).", "D) Amaç, milli gayelere uygun bedeni, zihni ve ahlaki gelişmedir (kanunun amaç maddesi).", "E) Anayasa m.42 ile aynı doğrultudadır; 1739 kademe ve ilkeleri tamamlar."],
+    "correctAnswerIndex": 4,
+    "explanation": "222 Sayılı Kanun notundaki temel bilgi."
+},
+{
+    "question": "4 yıl zorunlu ilkokul + 4 yıl zorunlu ortaokul ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Anayasa m.42 ile aynı doğrultudadır; 1739 kademe ve ilkeleri tamamlar.", "B) Amaç, milli gayelere uygun bedeni, zihni ve ahlaki gelişmedir (kanunun amaç maddesi).", "C) İlköğretim 4 yıl zorunlu ilkokul + 4 yıl zorunlu ortaokul olarak tanımlanır (güncel metin).", "D) 222 sayılı İlköğretim ve Eğitim Kanunu 5 Ocak 1961; ilköğretimin mecburi ve Devlet okullarında parasız oluşunu düzenler.", "E) m.2: ilköğretim ilköğrenim kurumlarında verilir; öğrenim çağındaki kız ve erkek çocuklar için mecburi, Devlet okullarında parasızdır."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "222 Sayılı Kanun notundaki temel bilgi."
 },
 {
-    "question": "222 Sayılı Kanun konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) İlköğretim 4 yıl zorunlu ilkokul + 4 yıl zorunlu ortaokul olarak tanımlanır (güncel metin)"],
+    "question": "Aşağıdakilerden hangisi Amaç, milli gayelere uygun için doğru bir açıklamadır?",
+    "options": ["A) Amaç, milli gayelere uygun bedeni, zihni ve ahlaki gelişmedir (kanunun amaç maddesi).", "B) 222 sayılı İlköğretim ve Eğitim Kanunu 5 Ocak 1961; ilköğretimin mecburi ve Devlet okullarında parasız oluşunu düzenler.", "C) m.2: ilköğretim ilköğrenim kurumlarında verilir; öğrenim çağındaki kız ve erkek çocuklar için mecburi, Devlet okullarında parasızdır.", "D) Anayasa m.42 ile aynı doğrultudadır; 1739 kademe ve ilkeleri tamamlar.", "E) İlköğretim 4 yıl zorunlu ilkokul + 4 yıl zorunlu ortaokul olarak tanımlanır (güncel metin)."],
+    "correctAnswerIndex": 0,
+    "explanation": "222 Sayılı Kanun notundaki temel bilgi."
+},
+{
+    "question": "31 Aralık tarihinde 72 ayını dolduran hangisini ifade eder?",
+    "options": ["A) m.2: ilköğretim ilköğrenim kurumlarında verilir; öğrenim çağındaki kız ve erkek çocuklar için mecburi, Devlet okullarında parasızdır.", "B) Anayasa m.42 ile aynı doğrultudadır; 1739 kademe ve ilkeleri tamamlar.", "C) İlköğretim 4 yıl zorunlu ilkokul + 4 yıl zorunlu ortaokul olarak tanımlanır (güncel metin).", "D) İlkokul 1. sınıfa o yılın 31 Aralık tarihinde 72 ayını dolduran çocuklar kaydedilir.", "E) 222 sayılı İlköğretim ve Eğitim Kanunu 5 Ocak 1961; ilköğretimin mecburi ve Devlet okullarında parasız oluşunu düzenler."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "222 Sayılı Kanun notundaki temel bilgi."
 },
 {
-    "question": "222 Sayılı Kanun konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Amaç, milli gayelere uygun bedeni, zihni ve ahlaki gelişmedir (kanunun amaç maddesi).", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "yönetmelikle ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Anayasa m.42 ile aynı doğrultudadır; 1739 kademe ve ilkeleri tamamlar.", "B) İlköğretim 4 yıl zorunlu ilkokul + 4 yıl zorunlu ortaokul olarak tanımlanır (güncel metin).", "C) Gelişim durumuna göre erken başlama veya kaydı erteleme yönetmelikle düzenlenir.", "D) 222 sayılı İlköğretim ve Eğitim Kanunu 5 Ocak 1961; ilköğretimin mecburi ve Devlet okullarında parasız oluşunu düzenler.", "E) m.2: ilköğretim ilköğrenim kurumlarında verilir; öğrenim çağındaki kız ve erkek çocuklar için mecburi, Devlet okullarında parasızdır."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "222 Sayılı Kanun notundaki temel bilgi."
 },
 {
-    "question": "222 Sayılı Kanun konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecburi ilköğretim çağı 6-14 yaş grubudur."],
+    "question": "Nüfus kaydı olmayan çocukların hakkında hangisi doğrudur?",
+    "options": ["A) m.2: ilköğretim ilköğrenim kurumlarında verilir; öğrenim çağındaki kız ve erkek çocuklar için mecburi, Devlet okullarında parasızdır.", "B) Anayasa m.42 ile aynı doğrultudadır; 1739 kademe ve ilkeleri tamamlar.", "C) İlköğretim 4 yıl zorunlu ilkokul + 4 yıl zorunlu ortaokul olarak tanımlanır (güncel metin).", "D) Nüfus kaydı olmayan çocukların yaşı ihtiyar heyetince görülerek tespit edilir; çağ çizelgesine yazılır.", "E) 222 sayılı İlköğretim ve Eğitim Kanunu 5 Ocak 1961; ilköğretimin mecburi ve Devlet okullarında parasız oluşunu düzenler."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "222 Sayılı Kanun konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) İlkokul 1. sınıfa o yılın 31 Aralık tarihinde 72 ayını dolduran çocuklar kaydedilir.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "222 Sayılı Kanun konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Gelişim durumuna göre erken başlama veya kaydı erteleme yönetmelikle düzenlenir."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "222 Sayılı Kanun notundaki temel bilgi."
 }
 ];

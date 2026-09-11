@@ -61,63 +61,63 @@ window.oabt_ozel_19_sorulari = [
     "explanation": "Alan eğitimi değerlendirme."
 },
 {
-    "question": "Özel Eğitimde Aile Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Aile ekip üyesidir; uzman aileye emir vermez.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Aile Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Yas, inkâr, pazarlık, kabul dalgalanır; tek seferlik kabul beklenmez.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Aile için doğru bir açıklamadır?",
+    "options": ["A) Kültürel ve dilsel alçakgönüllülük.", "B) BEP ve hak sade hukuk (573-5378 ilkeleri, madde uydurma yok).", "C) Aile ekip üyesidir; uzman aileye emir vermez.", "D) Yas, inkâr, pazarlık, kabul dalgalanır; tek seferlik kabul beklenmez.", "E) Güçlü yan ve kaynak yoksunlukla karıştırılmaz."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Özel Eğitimde Aile Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Aile Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Güçlü yan ve kaynak yoksunlukla karıştırılmaz.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Yas, inkâr, pazarlık, kabul hakkında hangisi doğrudur?",
+    "options": ["A) Yas, inkâr, pazarlık, kabul dalgalanır; tek seferlik kabul beklenmez.", "B) Aile ekip üyesidir; uzman aileye emir vermez.", "C) Güçlü yan ve kaynak yoksunlukla karıştırılmaz.", "D) Kültürel ve dilsel alçakgönüllülük.", "E) BEP ve hak sade hukuk (573-5378 ilkeleri, madde uydurma yok)."],
+    "correctAnswerIndex": 0,
+    "explanation": "Özel Eğitimde Aile Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Aile Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Kardeş görünür.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Güçlü yan ve kaynak hangisini ifade eder?",
+    "options": ["A) Güçlü yan ve kaynak yoksunlukla karıştırılmaz.", "B) Aile ekip üyesidir; uzman aileye emir vermez.", "C) Yas, inkâr, pazarlık, kabul dalgalanır; tek seferlik kabul beklenmez.", "D) Kültürel ve dilsel alçakgönüllülük.", "E) BEP ve hak sade hukuk (573-5378 ilkeleri, madde uydurma yok)."],
+    "correctAnswerIndex": 0,
+    "explanation": "Özel Eğitimde Aile Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Kültürel ve dilsel için doğru bir açıklamadır?",
+    "options": ["A) Kültürel ve dilsel alçakgönüllülük.", "B) Aile ekip üyesidir; uzman aileye emir vermez.", "C) Yas, inkâr, pazarlık, kabul dalgalanır; tek seferlik kabul beklenmez.", "D) Güçlü yan ve kaynak yoksunlukla karıştırılmaz.", "E) BEP ve hak sade hukuk (573-5378 ilkeleri, madde uydurma yok)."],
+    "correctAnswerIndex": 0,
+    "explanation": "Özel Eğitimde Aile Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "BEP ve hak hakkında hangisi doğrudur?",
+    "options": ["A) Aile ekip üyesidir; uzman aileye emir vermez.", "B) Yas, inkâr, pazarlık, kabul dalgalanır; tek seferlik kabul beklenmez.", "C) Güçlü yan ve kaynak yoksunlukla karıştırılmaz.", "D) Kültürel ve dilsel alçakgönüllülük.", "E) BEP ve hak sade hukuk (573-5378 ilkeleri, madde uydurma yok)."],
+    "correctAnswerIndex": 4,
+    "explanation": "Özel Eğitimde Aile Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "UDA koçluğu hangisini ifade eder?",
+    "options": ["A) Yas, inkâr, pazarlık, kabul dalgalanır; tek seferlik kabul beklenmez.", "B) Güçlü yan ve kaynak yoksunlukla karıştırılmaz.", "C) Kültürel ve dilsel alçakgönüllülük.", "D) UDA koçluğu pekiştireç tutarlılığı.", "E) Aile ekip üyesidir; uzman aileye emir vermez."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitimde Aile Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "AAC'nin evde yaşaması ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Yas, inkâr, pazarlık, kabul dalgalanır; tek seferlik kabul beklenmez.", "B) Güçlü yan ve kaynak yoksunlukla karıştırılmaz.", "C) Kültürel ve dilsel alçakgönüllülük.", "D) AAC'nin evde yaşaması.", "E) Aile ekip üyesidir; uzman aileye emir vermez."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitimde Aile Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Davranış kriz planı için doğru bir açıklamadır?",
+    "options": ["A) Güçlü yan ve kaynak yoksunlukla karıştırılmaz.", "B) Kültürel ve dilsel alçakgönüllülük.", "C) Davranış kriz planı güvenlik.", "D) Aile ekip üyesidir; uzman aileye emir vermez.", "E) Yas, inkâr, pazarlık, kabul dalgalanır; tek seferlik kabul beklenmez."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Özel Eğitimde Aile Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Aile Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kültürel ve dilsel alçakgönüllülük.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Geçiş hakkında hangisi doğrudur?",
+    "options": ["A) Kültürel ve dilsel alçakgönüllülük.", "B) Geçiş okul-iş-bağımsız yaşam.", "C) Aile ekip üyesidir; uzman aileye emir vermez.", "D) Yas, inkâr, pazarlık, kabul dalgalanır; tek seferlik kabul beklenmez.", "E) Güçlü yan ve kaynak yoksunlukla karıştırılmaz."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Özel Eğitimde Aile Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Aile Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) BEP ve hak sade hukuk (573-5378 ilkeleri, madde uydurma yok).", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Bireysel görüşme, atölye, ev ziyareti onamlı hangisini ifade eder?",
+    "options": ["A) Güçlü yan ve kaynak yoksunlukla karıştırılmaz.", "B) Kültürel ve dilsel alçakgönüllülük.", "C) Bireysel görüşme, atölye, ev ziyareti onamlı.", "D) Aile ekip üyesidir; uzman aileye emir vermez.", "E) Yas, inkâr, pazarlık, kabul dalgalanır; tek seferlik kabul beklenmez."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitimde Aile Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) UDA koçluğu pekiştireç tutarlılığı.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Aile Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) AAC'nin evde yaşaması.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitimde Aile Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Davranış kriz planı güvenlik.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Aile Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Geçiş okul-iş-bağımsız yaşam.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Özel Eğitimde Aile Eğitimi notundaki temel bilgi."
 }
 ];

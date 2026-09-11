@@ -73,51 +73,51 @@ window.ags_egitim_12_sorulari = [
     "explanation": "Dayatmama."
 },
 {
-    "question": "Rehberlik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Rehberlik bireyin kendini tanıması, karar vermesi ve gelişmesi için profesyonel yardımdır;"],
+    "question": "Aşağıdakilerden hangisi Rehberlik için doğru bir açıklamadır?",
+    "options": ["A) Gönüllülük, gizlilik, kabul, bireye saygı, özerklik temel ilkelerdir.", "B) Rehberlik bireyin kendini tanıması, karar vermesi ve gelişmesi için profesyonel yardımdır; emir değildir.", "C) Eğitsel, mesleki, kişisel-sosyal hizmet alanlarıdır; yöneltme 1739 m.6 ile de bağlanır.", "D) Sınıf rehberliği öğretmenin gelişimsel etkinliği; psikolojik danışma uzmanlık alanıdır.", "E) Kapsayıcı PDR önleyici, gelişimsel ve müdahale katmanlı hizmet modelidir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Rehberlik notundaki temel bilgi."
+},
+{
+    "question": "Gelişimsel rehberlik hakkında hangisi doğrudur?",
+    "options": ["A) Sınıf rehberliği öğretmenin gelişimsel etkinliği; psikolojik danışma uzmanlık alanıdır.", "B) Kapsayıcı PDR önleyici, gelişimsel ve müdahale katmanlı hizmet modelidir.", "C) Gelişimsel rehberlik tüm öğrencilere; kriz rehberliği acil duruma; çare bulucu sorun odaklıdır.", "D) Rehberlik bireyin kendini tanıması, karar vermesi ve gelişmesi için profesyonel yardımdır; emir değildir.", "E) Eğitsel, mesleki, kişisel-sosyal hizmet alanlarıdır; yöneltme 1739 m.6 ile de bağlanır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Rehberlik notundaki temel bilgi."
+},
+{
+    "question": "Eğitsel, mesleki, kişisel-sosyal hangisini ifade eder?",
+    "options": ["A) Gelişimsel rehberlik tüm öğrencilere; kriz rehberliği acil duruma; çare bulucu sorun odaklıdır.", "B) Sınıf rehberliği öğretmenin gelişimsel etkinliği; psikolojik danışma uzmanlık alanıdır.", "C) Kapsayıcı PDR önleyici, gelişimsel ve müdahale katmanlı hizmet modelidir.", "D) Eğitsel, mesleki, kişisel-sosyal hizmet alanlarıdır; yöneltme 1739 m.6 ile de bağlanır.", "E) Rehberlik bireyin kendini tanıması, karar vermesi ve gelişmesi için profesyonel yardımdır; emir değildir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Rehberlik notundaki temel bilgi."
+},
+{
+    "question": "Sınıf rehberliği ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Kapsayıcı PDR önleyici, gelişimsel ve müdahale katmanlı hizmet modelidir.", "B) Sınıf rehberliği öğretmenin gelişimsel etkinliği; psikolojik danışma uzmanlık alanıdır.", "C) Rehberlik bireyin kendini tanıması, karar vermesi ve gelişmesi için profesyonel yardımdır; emir değildir.", "D) Gelişimsel rehberlik tüm öğrencilere; kriz rehberliği acil duruma; çare bulucu sorun odaklıdır.", "E) Eğitsel, mesleki, kişisel-sosyal hizmet alanlarıdır; yöneltme 1739 m.6 ile de bağlanır."],
+    "correctAnswerIndex": 1,
+    "explanation": "Rehberlik notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Kapsayıcı PDR için doğru bir açıklamadır?",
+    "options": ["A) Gelişimsel rehberlik tüm öğrencilere; kriz rehberliği acil duruma; çare bulucu sorun odaklıdır.", "B) Eğitsel, mesleki, kişisel-sosyal hizmet alanlarıdır; yöneltme 1739 m.6 ile de bağlanır.", "C) Sınıf rehberliği öğretmenin gelişimsel etkinliği; psikolojik danışma uzmanlık alanıdır.", "D) Kapsayıcı PDR önleyici, gelişimsel ve müdahale katmanlı hizmet modelidir.", "E) Rehberlik bireyin kendini tanıması, karar vermesi ve gelişmesi için profesyonel yardımdır; emir değildir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Rehberlik notundaki temel bilgi."
+},
+{
+    "question": "Gönüllülük, gizlilik, kabul, bireye saygı, özerklik hakkında hangisi doğrudur?",
+    "options": ["A) Rehberlik bireyin kendini tanıması, karar vermesi ve gelişmesi için profesyonel yardımdır; emir değildir.", "B) Gelişimsel rehberlik tüm öğrencilere; kriz rehberliği acil duruma; çare bulucu sorun odaklıdır.", "C) Eğitsel, mesleki, kişisel-sosyal hizmet alanlarıdır; yöneltme 1739 m.6 ile de bağlanır.", "D) Sınıf rehberliği öğretmenin gelişimsel etkinliği; psikolojik danışma uzmanlık alanıdır.", "E) Gönüllülük, gizlilik, kabul, bireye saygı, özerklik temel ilkelerdir."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Rehberlik notundaki temel bilgi."
 },
 {
-    "question": "Rehberlik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Gelişimsel rehberlik tüm öğrencilere; kriz rehberliği acil duruma; çare bulucu sorun odakl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Rogers hangisini ifade eder?",
+    "options": ["A) Rogers koşulsuz kabul, empati, saydamlık; danışanın kapasitesine güven.", "B) Rehberlik bireyin kendini tanıması, karar vermesi ve gelişmesi için profesyonel yardımdır; emir değildir.", "C) Gelişimsel rehberlik tüm öğrencilere; kriz rehberliği acil duruma; çare bulucu sorun odaklıdır.", "D) Eğitsel, mesleki, kişisel-sosyal hizmet alanlarıdır; yöneltme 1739 m.6 ile de bağlanır.", "E) Sınıf rehberliği öğretmenin gelişimsel etkinliği; psikolojik danışma uzmanlık alanıdır."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Rehberlik notundaki temel bilgi."
 },
 {
-    "question": "Rehberlik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Eğitsel, mesleki, kişisel-sosyal hizmet alanlarıdır; yöneltme 1739 m.6 ile de bağlanır."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Rehberlik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Sınıf rehberliği öğretmenin gelişimsel etkinliği; psikolojik danışma uzmanlık alanıdır.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Rehberlik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Kapsayıcı PDR önleyici, gelişimsel ve müdahale katmanlı hizmet modelidir."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Rehberlik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Gönüllülük, gizlilik, kabul, bireye saygı, özerklik temel ilkelerdir.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Rehberlik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Rogers koşulsuz kabul, empati, saydamlık; danışanın kapasitesine güven."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Rehberlik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Yönlendirici olmayan iklim ile bilgi vermek karıştırılmamalıdır; meslek bilgisi paylaşılır", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Yönlendirici olmayan ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Gelişimsel rehberlik tüm öğrencilere; kriz rehberliği acil duruma; çare bulucu sorun odaklıdır.", "B) Eğitsel, mesleki, kişisel-sosyal hizmet alanlarıdır; yöneltme 1739 m.6 ile de bağlanır.", "C) Sınıf rehberliği öğretmenin gelişimsel etkinliği; psikolojik danışma uzmanlık alanıdır.", "D) Yönlendirici olmayan iklim ile bilgi vermek karıştırılmamalıdır; meslek bilgisi paylaşılır, meslek dayatılmaz.", "E) Rehberlik bireyin kendini tanıması, karar vermesi ve gelişmesi için profesyonel yardımdır; emir değildir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Rehberlik notundaki temel bilgi."
 }
 ];

@@ -55,69 +55,69 @@ window.oabt_fen_4_sorulari = [
     "explanation": "Porozite ve geçirgenlik birlikte gerekir."
 },
 {
-    "question": "Yer Bilimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) İç yapı kabuk, manto, dış-iç çekirdek; S dalgası sıvı dış çekirdekten geçmez.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi İç yapı için doğru bir açıklamadır?",
+    "options": ["A) Levha tektoniği ıraksak, yakınsak, transform; deprem-volkan-dağ kuşakları.", "B) Kayaç döngüsü magmatik, tortul, metamorfik; mineraller kristal yapı.", "C) Jeolojik zaman relâtif (süperpozisyon, fosil) ve mutlak (radyoizotop) yaş.", "D) Deprem odak-dışmerkez, Richter/moment büyüklük, şiddet (Mercalli) hasar.", "E) İç yapı kabuk, manto, dış-iç çekirdek; S dalgası sıvı dış çekirdekten geçmez."],
+    "correctAnswerIndex": 4,
+    "explanation": "Yer Bilimi notundaki temel bilgi."
 },
 {
-    "question": "Yer Bilimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Levha tektoniği ıraksak, yakınsak, transform; deprem-volkan-dağ kuşakları.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Levha tektoniği hakkında hangisi doğrudur?",
+    "options": ["A) İç yapı kabuk, manto, dış-iç çekirdek; S dalgası sıvı dış çekirdekten geçmez.", "B) Kayaç döngüsü magmatik, tortul, metamorfik; mineraller kristal yapı.", "C) Jeolojik zaman relâtif (süperpozisyon, fosil) ve mutlak (radyoizotop) yaş.", "D) Deprem odak-dışmerkez, Richter/moment büyüklük, şiddet (Mercalli) hasar.", "E) Levha tektoniği ıraksak, yakınsak, transform; deprem-volkan-dağ kuşakları."],
+    "correctAnswerIndex": 4,
+    "explanation": "Yer Bilimi notundaki temel bilgi."
+},
+{
+    "question": "Kayaç döngüsü hangisini ifade eder?",
+    "options": ["A) Kayaç döngüsü magmatik, tortul, metamorfik; mineraller kristal yapı.", "B) İç yapı kabuk, manto, dış-iç çekirdek; S dalgası sıvı dış çekirdekten geçmez.", "C) Levha tektoniği ıraksak, yakınsak, transform; deprem-volkan-dağ kuşakları.", "D) Jeolojik zaman relâtif (süperpozisyon, fosil) ve mutlak (radyoizotop) yaş.", "E) Deprem odak-dışmerkez, Richter/moment büyüklük, şiddet (Mercalli) hasar."],
+    "correctAnswerIndex": 0,
+    "explanation": "Yer Bilimi notundaki temel bilgi."
+},
+{
+    "question": "Jeolojik zaman ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Jeolojik zaman relâtif (süperpozisyon, fosil) ve mutlak (radyoizotop) yaş.", "B) İç yapı kabuk, manto, dış-iç çekirdek; S dalgası sıvı dış çekirdekten geçmez.", "C) Levha tektoniği ıraksak, yakınsak, transform; deprem-volkan-dağ kuşakları.", "D) Kayaç döngüsü magmatik, tortul, metamorfik; mineraller kristal yapı.", "E) Deprem odak-dışmerkez, Richter/moment büyüklük, şiddet (Mercalli) hasar."],
+    "correctAnswerIndex": 0,
+    "explanation": "Yer Bilimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Deprem için doğru bir açıklamadır?",
+    "options": ["A) Ayrışma fiziksel-kimyasal; erozyon-birikim akarsu, rüzgâr, buzul, dalga.", "B) Deprem odak-dışmerkez, Richter/moment büyüklük, şiddet (Mercalli) hasar.", "C) İç yapı kabuk, manto, dış-iç çekirdek; S dalgası sıvı dış çekirdekten geçmez.", "D) Kayaç döngüsü magmatik, tortul, metamorfik; mineraller kristal yapı.", "E) Jeolojik zaman relâtif (süperpozisyon, fosil) ve mutlak (radyoizotop) yaş."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Yer Bilimi notundaki temel bilgi."
 },
 {
-    "question": "Yer Bilimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Kayaç döngüsü magmatik, tortul, metamorfik; mineraller kristal yapı.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Ayrışma hakkında hangisi doğrudur?",
+    "options": ["A) Levha tektoniği ıraksak, yakınsak, transform; deprem-volkan-dağ kuşakları.", "B) Kayaç döngüsü magmatik, tortul, metamorfik; mineraller kristal yapı.", "C) Jeolojik zaman relâtif (süperpozisyon, fosil) ve mutlak (radyoizotop) yaş.", "D) Ayrışma fiziksel-kimyasal; erozyon-birikim akarsu, rüzgâr, buzul, dalga.", "E) İç yapı kabuk, manto, dış-iç çekirdek; S dalgası sıvı dış çekirdekten geçmez."],
+    "correctAnswerIndex": 3,
+    "explanation": "Yer Bilimi notundaki temel bilgi."
 },
 {
-    "question": "Yer Bilimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Jeolojik zaman relâtif (süperpozisyon, fosil) ve mutlak (radyoizotop) yaş.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Toprak hangisini ifade eder?",
+    "options": ["A) Jeolojik zaman relâtif (süperpozisyon, fosil) ve mutlak (radyoizotop) yaş.", "B) Toprak horizonlar, ana kaya, iklim, organizma, zaman (CLORPT).", "C) İç yapı kabuk, manto, dış-iç çekirdek; S dalgası sıvı dış çekirdekten geçmez.", "D) Levha tektoniği ıraksak, yakınsak, transform; deprem-volkan-dağ kuşakları.", "E) Kayaç döngüsü magmatik, tortul, metamorfik; mineraller kristal yapı."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Yer Bilimi notundaki temel bilgi."
 },
 {
-    "question": "Yer Bilimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Deprem odak-dışmerkez, Richter/moment büyüklük, şiddet (Mercalli) hasar.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Su döngüsü ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Su döngüsü buharlaşma, yoğuşma, infiltrasyon, yeraltı suyu akifer.", "B) İç yapı kabuk, manto, dış-iç çekirdek; S dalgası sıvı dış çekirdekten geçmez.", "C) Levha tektoniği ıraksak, yakınsak, transform; deprem-volkan-dağ kuşakları.", "D) Kayaç döngüsü magmatik, tortul, metamorfik; mineraller kristal yapı.", "E) Jeolojik zaman relâtif (süperpozisyon, fosil) ve mutlak (radyoizotop) yaş."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Yer Bilimi notundaki temel bilgi."
 },
 {
-    "question": "Yer Bilimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Ayrışma fiziksel-kimyasal; erozyon-birikim akarsu, rüzgâr, buzul, dalga.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Karst için doğru bir açıklamadır?",
+    "options": ["A) İç yapı kabuk, manto, dış-iç çekirdek; S dalgası sıvı dış çekirdekten geçmez.", "B) Levha tektoniği ıraksak, yakınsak, transform; deprem-volkan-dağ kuşakları.", "C) Kayaç döngüsü magmatik, tortul, metamorfik; mineraller kristal yapı.", "D) Jeolojik zaman relâtif (süperpozisyon, fosil) ve mutlak (radyoizotop) yaş.", "E) Karst kireçtaşı çözünmesi; mağara, dolin, polye."],
+    "correctAnswerIndex": 4,
+    "explanation": "Yer Bilimi notundaki temel bilgi."
+},
+{
+    "question": "Kütle hareketi hakkında hangisi doğrudur?",
+    "options": ["A) Jeolojik zaman relâtif (süperpozisyon, fosil) ve mutlak (radyoizotop) yaş.", "B) Kütle hareketi heyelan; eğim, su, bitki örtüsü, tetik (deprem).", "C) İç yapı kabuk, manto, dış-iç çekirdek; S dalgası sıvı dış çekirdekten geçmez.", "D) Levha tektoniği ıraksak, yakınsak, transform; deprem-volkan-dağ kuşakları.", "E) Kayaç döngüsü magmatik, tortul, metamorfik; mineraller kristal yapı."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Yer Bilimi notundaki temel bilgi."
 },
 {
-    "question": "Yer Bilimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Toprak horizonlar, ana kaya, iklim, organizma, zaman (CLORPT).", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Ölçek hangisini ifade eder?",
+    "options": ["A) Ölçek payda büyüdükçe ayrıntı azalır (küçük ölçek).", "B) İç yapı kabuk, manto, dış-iç çekirdek; S dalgası sıvı dış çekirdekten geçmez.", "C) Levha tektoniği ıraksak, yakınsak, transform; deprem-volkan-dağ kuşakları.", "D) Kayaç döngüsü magmatik, tortul, metamorfik; mineraller kristal yapı.", "E) Jeolojik zaman relâtif (süperpozisyon, fosil) ve mutlak (radyoizotop) yaş."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Yer Bilimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Su döngüsü buharlaşma, yoğuşma, infiltrasyon, yeraltı suyu akifer.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Yer Bilimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Karst kireçtaşı çözünmesi; mağara, dolin, polye.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Yer Bilimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Kütle hareketi heyelan; eğim, su, bitki örtüsü, tetik (deprem).", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Yer Bilimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Ölçek payda büyüdükçe ayrıntı azalır (küçük ölçek).", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Yer Bilimi notundaki temel bilgi."
 }
 ];

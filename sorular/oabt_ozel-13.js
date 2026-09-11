@@ -61,63 +61,63 @@ window.oabt_ozel_13_sorulari = [
     "explanation": "Ölçülebilirlik."
 },
 {
-    "question": "Özel Eğitimde Matematik Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Sayı duyusu, para, saat, ölçü, takvim yaşam matematiği.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Sayı duyusu, para, saat, ölçü, takvim için doğru bir açıklamadır?",
+    "options": ["A) Zihin yetersizliği basamaklı, genelleme, gerçek nesne.", "B) Üstün yetenek zenginleştirme, atlatma değil her zaman.", "C) Hesap makinesi erişim aracı olabilir, yasak değil.", "D) Sayı duyusu, para, saat, ölçü, takvim yaşam matematiği.", "E) OG diskalkuli somut-çok duyulu, az işlem yükü."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitimde Matematik Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "OG diskalkuli hakkında hangisi doğrudur?",
+    "options": ["A) Sayı duyusu, para, saat, ölçü, takvim yaşam matematiği.", "B) Zihin yetersizliği basamaklı, genelleme, gerçek nesne.", "C) Üstün yetenek zenginleştirme, atlatma değil her zaman.", "D) Hesap makinesi erişim aracı olabilir, yasak değil.", "E) OG diskalkuli somut-çok duyulu, az işlem yükü."],
+    "correctAnswerIndex": 4,
+    "explanation": "Özel Eğitimde Matematik Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Zihin yetersizliği hangisini ifade eder?",
+    "options": ["A) Zihin yetersizliği basamaklı, genelleme, gerçek nesne.", "B) Sayı duyusu, para, saat, ölçü, takvim yaşam matematiği.", "C) OG diskalkuli somut-çok duyulu, az işlem yükü.", "D) Üstün yetenek zenginleştirme, atlatma değil her zaman.", "E) Hesap makinesi erişim aracı olabilir, yasak değil."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Özel Eğitimde Matematik Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Matematik Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) OG diskalkuli somut-çok duyulu, az işlem yükü.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Üstün yetenek ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) OG diskalkuli somut-çok duyulu, az işlem yükü.", "B) Zihin yetersizliği basamaklı, genelleme, gerçek nesne.", "C) Hesap makinesi erişim aracı olabilir, yasak değil.", "D) Üstün yetenek zenginleştirme, atlatma değil her zaman.", "E) Sayı duyusu, para, saat, ölçü, takvim yaşam matematiği."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitimde Matematik Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Hesap makinesi için doğru bir açıklamadır?",
+    "options": ["A) OG diskalkuli somut-çok duyulu, az işlem yükü.", "B) Zihin yetersizliği basamaklı, genelleme, gerçek nesne.", "C) Üstün yetenek zenginleştirme, atlatma değil her zaman.", "D) Hesap makinesi erişim aracı olabilir, yasak değil.", "E) Sayı duyusu, para, saat, ölçü, takvim yaşam matematiği."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitimde Matematik Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "CPA hakkında hangisi doğrudur?",
+    "options": ["A) OG diskalkuli somut-çok duyulu, az işlem yükü.", "B) Zihin yetersizliği basamaklı, genelleme, gerçek nesne.", "C) Üstün yetenek zenginleştirme, atlatma değil her zaman.", "D) CPA somut-görsel-soyut.", "E) Sayı duyusu, para, saat, ölçü, takvim yaşam matematiği."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitimde Matematik Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Oyun ve rutin ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) OG diskalkuli somut-çok duyulu, az işlem yükü.", "B) Zihin yetersizliği basamaklı, genelleme, gerçek nesne.", "C) Üstün yetenek zenginleştirme, atlatma değil her zaman.", "D) Oyun ve rutin (yemek payı).", "E) Sayı duyusu, para, saat, ölçü, takvim yaşam matematiği."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitimde Matematik Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Hata analizi için doğru bir açıklamadır?",
+    "options": ["A) OG diskalkuli somut-çok duyulu, az işlem yükü.", "B) Zihin yetersizliği basamaklı, genelleme, gerçek nesne.", "C) Üstün yetenek zenginleştirme, atlatma değil her zaman.", "D) Hata analizi basamak nerede kopuyor.", "E) Sayı duyusu, para, saat, ölçü, takvim yaşam matematiği."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitimde Matematik Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Teknoloji hakkında hangisi doğrudur?",
+    "options": ["A) Zihin yetersizliği basamaklı, genelleme, gerçek nesne.", "B) Üstün yetenek zenginleştirme, atlatma değil her zaman.", "C) Teknoloji abaküs, uygulama.", "D) Sayı duyusu, para, saat, ölçü, takvim yaşam matematiği.", "E) OG diskalkuli somut-çok duyulu, az işlem yükü."],
+    "correctAnswerIndex": 2,
+    "explanation": "Özel Eğitimde Matematik Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Ölçülebilir amaç hangisini ifade eder?",
+    "options": ["A) Üstün yetenek zenginleştirme, atlatma değil her zaman.", "B) Ölçülebilir amaç (8/10 doğru para üstü).", "C) Sayı duyusu, para, saat, ölçü, takvim yaşam matematiği.", "D) OG diskalkuli somut-çok duyulu, az işlem yükü.", "E) Zihin yetersizliği basamaklı, genelleme, gerçek nesne."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitimde Matematik Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zihin yetersizliği basamaklı, genelleme, gerçek nesne.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Matematik Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Üstün yetenek zenginleştirme, atlatma değil her zaman.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitimde Matematik Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Hesap makinesi erişim aracı olabilir, yasak değil.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Matematik Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) CPA somut-görsel-soyut.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitimde Matematik Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Görev analizi.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Matematik Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Oyun ve rutin (yemek payı).", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitimde Matematik Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Hata analizi basamak nerede kopuyor.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Matematik Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Teknoloji abaküs, uygulama.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Özel Eğitimde Matematik Öğretimi notundaki temel bilgi."
 }
 ];

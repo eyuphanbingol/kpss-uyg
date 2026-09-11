@@ -67,57 +67,57 @@ window.ags_sozel_4_sorulari = [
     "explanation": "Sanatsal anlatım duygu taşır."
 },
 {
-    "question": "Paragrafta Anlam konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Ana düşünce, paragrafın savunulan temel yargısıdır; tüm yardımcı düşünceler ona bağlanır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Paragrafta Anlam konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Yardımcı düşünce, ana yargıyı örnek, gerekçe, karşıtlık veya ayrıntıyla destekler.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Ana düşünce için doğru bir açıklamadır?",
+    "options": ["A) Yapı: girişte konu/tez, gelişmede destek, sonuçta vurgu veya yargı pekişir.", "B) Öyküleyici anlatım olay, kişi, zaman, yer zinciri kurar.", "C) Ana düşünce, paragrafın savunulan temel yargısıdır; tüm yardımcı düşünceler ona bağlanır.", "D) Yardımcı düşünce, ana yargıyı örnek, gerekçe, karşıtlık veya ayrıntıyla destekler.", "E) Başlık, konuyu ve bakış açısını en geniş ve doğru kapsayan addır; ayrıntıya inmez."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Paragrafta Anlam notundaki temel bilgi."
 },
 {
-    "question": "Paragrafta Anlam konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Konu, üzerinde durulan varlık veya olaydır; ana düşünce konu hakkındaki hükümdür.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Yardımcı düşünce hakkında hangisi doğrudur?",
+    "options": ["A) Yardımcı düşünce, ana yargıyı örnek, gerekçe, karşıtlık veya ayrıntıyla destekler.", "B) Konu, üzerinde durulan varlık veya olaydır; ana düşünce konu hakkındaki hükümdür.", "C) Başlık, konuyu ve bakış açısını en geniş ve doğru kapsayan addır; ayrıntıya inmez.", "D) Yapı: girişte konu/tez, gelişmede destek, sonuçta vurgu veya yargı pekişir.", "E) Öyküleyici anlatım olay, kişi, zaman, yer zinciri kurar."],
+    "correctAnswerIndex": 0,
+    "explanation": "Paragrafta Anlam notundaki temel bilgi."
+},
+{
+    "question": "Konu hangisini ifade eder?",
+    "options": ["A) Yardımcı düşünce, ana yargıyı örnek, gerekçe, karşıtlık veya ayrıntıyla destekler.", "B) Öyküleyici anlatım olay, kişi, zaman, yer zinciri kurar.", "C) Betimleyici anlatım izlenim, ayrıntı ve sıfatlarla resmeder.", "D) Konu, üzerinde durulan varlık veya olaydır; ana düşünce konu hakkındaki hükümdür.", "E) Ana düşünce, paragrafın savunulan temel yargısıdır; tüm yardımcı düşünceler ona bağlanır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Paragrafta Anlam notundaki temel bilgi."
+},
+{
+    "question": "Başlık ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Yapı: girişte konu/tez, gelişmede destek, sonuçta vurgu veya yargı pekişir.", "B) Başlık, konuyu ve bakış açısını en geniş ve doğru kapsayan addır; ayrıntıya inmez.", "C) Ana düşünce, paragrafın savunulan temel yargısıdır; tüm yardımcı düşünceler ona bağlanır.", "D) Yardımcı düşünce, ana yargıyı örnek, gerekçe, karşıtlık veya ayrıntıyla destekler.", "E) Konu, üzerinde durulan varlık veya olaydır; ana düşünce konu hakkındaki hükümdür."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Paragrafta Anlam notundaki temel bilgi."
 },
 {
-    "question": "Paragrafta Anlam konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Başlık, konuyu ve bakış açısını en geniş ve doğru kapsayan addır; ayrıntıya inmez.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Yapı için doğru bir açıklamadır?",
+    "options": ["A) Yardımcı düşünce, ana yargıyı örnek, gerekçe, karşıtlık veya ayrıntıyla destekler.", "B) Konu, üzerinde durulan varlık veya olaydır; ana düşünce konu hakkındaki hükümdür.", "C) Başlık, konuyu ve bakış açısını en geniş ve doğru kapsayan addır; ayrıntıya inmez.", "D) Yapı: girişte konu/tez, gelişmede destek, sonuçta vurgu veya yargı pekişir.", "E) Ana düşünce, paragrafın savunulan temel yargısıdır; tüm yardımcı düşünceler ona bağlanır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Paragrafta Anlam notundaki temel bilgi."
 },
 {
-    "question": "Paragrafta Anlam konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Yapı: girişte konu/tez, gelişmede destek, sonuçta vurgu veya yargı pekişir.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Öyküleyici anlatım hakkında hangisi doğrudur?",
+    "options": ["A) Yardımcı düşünce, ana yargıyı örnek, gerekçe, karşıtlık veya ayrıntıyla destekler.", "B) Konu, üzerinde durulan varlık veya olaydır; ana düşünce konu hakkındaki hükümdür.", "C) Başlık, konuyu ve bakış açısını en geniş ve doğru kapsayan addır; ayrıntıya inmez.", "D) Öyküleyici anlatım olay, kişi, zaman, yer zinciri kurar.", "E) Ana düşünce, paragrafın savunulan temel yargısıdır; tüm yardımcı düşünceler ona bağlanır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Paragrafta Anlam notundaki temel bilgi."
+},
+{
+    "question": "Betimleyici anlatım hangisini ifade eder?",
+    "options": ["A) Başlık, konuyu ve bakış açısını en geniş ve doğru kapsayan addır; ayrıntıya inmez.", "B) Betimleyici anlatım izlenim, ayrıntı ve sıfatlarla resmeder.", "C) Ana düşünce, paragrafın savunulan temel yargısıdır; tüm yardımcı düşünceler ona bağlanır.", "D) Yardımcı düşünce, ana yargıyı örnek, gerekçe, karşıtlık veya ayrıntıyla destekler.", "E) Konu, üzerinde durulan varlık veya olaydır; ana düşünce konu hakkındaki hükümdür."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Paragrafta Anlam notundaki temel bilgi."
 },
 {
-    "question": "Paragrafta Anlam konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Öyküleyici anlatım olay, kişi, zaman, yer zinciri kurar.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Açıklayıcı anlatım ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Yardımcı düşünce, ana yargıyı örnek, gerekçe, karşıtlık veya ayrıntıyla destekler.", "B) Konu, üzerinde durulan varlık veya olaydır; ana düşünce konu hakkındaki hükümdür.", "C) Başlık, konuyu ve bakış açısını en geniş ve doğru kapsayan addır; ayrıntıya inmez.", "D) Açıklayıcı anlatım öğretir; tartışmacı savı savunur veya çürütür.", "E) Ana düşünce, paragrafın savunulan temel yargısıdır; tüm yardımcı düşünceler ona bağlanır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Paragrafta Anlam notundaki temel bilgi."
 },
 {
-    "question": "Paragrafta Anlam konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Betimleyici anlatım izlenim, ayrıntı ve sıfatlarla resmeder.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Paragrafta Anlam konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Açıklayıcı anlatım öğretir; tartışmacı savı savunur veya çürütür.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Paragrafta Anlam konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kanıtlayıcı mantık ve veri; emredici kural ve yönerge taşır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Kanıtlayıcı için doğru bir açıklamadır?",
+    "options": ["A) Yardımcı düşünce, ana yargıyı örnek, gerekçe, karşıtlık veya ayrıntıyla destekler.", "B) Konu, üzerinde durulan varlık veya olaydır; ana düşünce konu hakkındaki hükümdür.", "C) Başlık, konuyu ve bakış açısını en geniş ve doğru kapsayan addır; ayrıntıya inmez.", "D) Kanıtlayıcı mantık ve veri; emredici kural ve yönerge taşır.", "E) Ana düşünce, paragrafın savunulan temel yargısıdır; tüm yardımcı düşünceler ona bağlanır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Paragrafta Anlam notundaki temel bilgi."
 }
 ];

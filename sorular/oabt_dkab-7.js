@@ -61,63 +61,63 @@ window.oabt_dkab_7_sorulari = [
     "explanation": "Modern bir spektrumdur."
 },
 {
-    "question": "İslam Mezhepleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Hilafet tartışması Şia, Harici, Mürcie ayrışmasının zeminidir."],
+    "question": "Aşağıdakilerden hangisi Hilafet tartışması için doğru bir açıklamadır?",
+    "options": ["A) Şia Ali'nin imameti; İmamiyye, Zeydiyye, İsmailîyye kolları.", "B) Mürcie iman-amel ertelemesi; siyasi itidal tartışması.", "C) Ehl-i sünnet ve'l-cemaat çoğunluk itikadi kimlik adı.", "D) Hilafet tartışması Şia, Harici, Mürcie ayrışmasının zeminidir.", "E) Haricilik büyük günahı küfür sayma ve tekfir eğilimi."],
+    "correctAnswerIndex": 3,
+    "explanation": "İslam Mezhepleri notundaki temel bilgi."
+},
+{
+    "question": "Haricilik hakkında hangisi doğrudur?",
+    "options": ["A) Şia Ali'nin imameti; İmamiyye, Zeydiyye, İsmailîyye kolları.", "B) Mürcie iman-amel ertelemesi; siyasi itidal tartışması.", "C) Ehl-i sünnet ve'l-cemaat çoğunluk itikadi kimlik adı.", "D) Haricilik büyük günahı küfür sayma ve tekfir eğilimi.", "E) Hilafet tartışması Şia, Harici, Mürcie ayrışmasının zeminidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "İslam Mezhepleri notundaki temel bilgi."
+},
+{
+    "question": "Şia hangisini ifade eder?",
+    "options": ["A) Hilafet tartışması Şia, Harici, Mürcie ayrışmasının zeminidir.", "B) Haricilik büyük günahı küfür sayma ve tekfir eğilimi.", "C) Mürcie iman-amel ertelemesi; siyasi itidal tartışması.", "D) Ehl-i sünnet ve'l-cemaat çoğunluk itikadi kimlik adı.", "E) Şia Ali'nin imameti; İmamiyye, Zeydiyye, İsmailîyye kolları."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "İslam Mezhepleri notundaki temel bilgi."
 },
 {
-    "question": "İslam Mezhepleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Haricilik büyük günahı küfür sayma ve tekfir eğilimi.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Mürcie ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Ehl-i sünnet ve'l-cemaat çoğunluk itikadi kimlik adı.", "B) Dört Sünni fıkıh mezhebi coğrafi yayılım haritasıyla okunur.", "C) Mürcie iman-amel ertelemesi; siyasi itidal tartışması.", "D) Haricilik büyük günahı küfür sayma ve tekfir eğilimi.", "E) Şia Ali'nin imameti; İmamiyye, Zeydiyye, İsmailîyye kolları."],
+    "correctAnswerIndex": 2,
+    "explanation": "İslam Mezhepleri notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Ehl-i sünnet ve'l-cemaat için doğru bir açıklamadır?",
+    "options": ["A) Şia Ali'nin imameti; İmamiyye, Zeydiyye, İsmailîyye kolları.", "B) Mürcie iman-amel ertelemesi; siyasi itidal tartışması.", "C) Ehl-i sünnet ve'l-cemaat çoğunluk itikadi kimlik adı.", "D) Hilafet tartışması Şia, Harici, Mürcie ayrışmasının zeminidir.", "E) Haricilik büyük günahı küfür sayma ve tekfir eğilimi."],
+    "correctAnswerIndex": 2,
+    "explanation": "İslam Mezhepleri notundaki temel bilgi."
+},
+{
+    "question": "Dört Sünni fıkıh mezhebi hakkında hangisi doğrudur?",
+    "options": ["A) Şia Ali'nin imameti; İmamiyye, Zeydiyye, İsmailîyye kolları.", "B) Mürcie iman-amel ertelemesi; siyasi itidal tartışması.", "C) Dört Sünni fıkıh mezhebi coğrafi yayılım haritasıyla okunur.", "D) Hilafet tartışması Şia, Harici, Mürcie ayrışmasının zeminidir.", "E) Haricilik büyük günahı küfür sayma ve tekfir eğilimi."],
+    "correctAnswerIndex": 2,
+    "explanation": "İslam Mezhepleri notundaki temel bilgi."
+},
+{
+    "question": "Zahiri hangisini ifade eder?",
+    "options": ["A) Mürcie iman-amel ertelemesi; siyasi itidal tartışması.", "B) Zahiri kıyası reddeder; İbn Hazm.", "C) Hilafet tartışması Şia, Harici, Mürcie ayrışmasının zeminidir.", "D) Haricilik büyük günahı küfür sayma ve tekfir eğilimi.", "E) Şia Ali'nin imameti; İmamiyye, Zeydiyye, İsmailîyye kolları."],
+    "correctAnswerIndex": 1,
+    "explanation": "İslam Mezhepleri notundaki temel bilgi."
+},
+{
+    "question": "Yezidilik, Dürzilik, Nusayrilik ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Haricilik büyük günahı küfür sayma ve tekfir eğilimi.", "B) Şia Ali'nin imameti; İmamiyye, Zeydiyye, İsmailîyye kolları.", "C) Mürcie iman-amel ertelemesi; siyasi itidal tartışması.", "D) Yezidilik, Dürzilik, Nusayrilik İslam kenarı veya ayrı din tartışması bağlamında tanıtılır, tekfir dili kullanılmaz.", "E) Hilafet tartışması Şia, Harici, Mürcie ayrışmasının zeminidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "İslam Mezhepleri notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Tasavvufi tarikatlar için doğru bir açıklamadır?",
+    "options": ["A) Tasavvufi tarikatlar mezhep değil yol; bazen itikadi gerilim yaratır.", "B) Hilafet tartışması Şia, Harici, Mürcie ayrışmasının zeminidir.", "C) Haricilik büyük günahı küfür sayma ve tekfir eğilimi.", "D) Şia Ali'nin imameti; İmamiyye, Zeydiyye, İsmailîyye kolları.", "E) Mürcie iman-amel ertelemesi; siyasi itidal tartışması."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İslam Mezhepleri notundaki temel bilgi."
 },
 {
-    "question": "İslam Mezhepleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Şia Ali'nin imameti; İmamiyye, Zeydiyye, İsmailîyye kolları."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İslam Mezhepleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mürcie iman-amel ertelemesi; siyasi itidal tartışması.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Selefilik-Vehhabilik hakkında hangisi doğrudur?",
+    "options": ["A) Selefilik-Vehhabilik modern ıslah ve siyaset katmanlıdır.", "B) Hilafet tartışması Şia, Harici, Mürcie ayrışmasının zeminidir.", "C) Haricilik büyük günahı küfür sayma ve tekfir eğilimi.", "D) Şia Ali'nin imameti; İmamiyye, Zeydiyye, İsmailîyye kolları.", "E) Mürcie iman-amel ertelemesi; siyasi itidal tartışması."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "İslam Mezhepleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Ehl-i sünnet ve'l-cemaat çoğunluk itikadi kimlik adı."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İslam Mezhepleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Dört Sünni fıkıh mezhebi coğrafi yayılım haritasıyla okunur.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "İslam Mezhepleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Zahiri kıyası reddeder; İbn Hazm."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İslam Mezhepleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Yezidilik, Dürzilik, Nusayrilik İslam kenarı veya ayrı din tartışması bağlamında tanıtılır", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "İslam Mezhepleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Tasavvufi tarikatlar mezhep değil yol; bazen itikadi gerilim yaratır."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İslam Mezhepleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Selefilik-Vehhabilik modern ıslah ve siyaset katmanlıdır.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İslam Mezhepleri notundaki temel bilgi."
 }
 ];

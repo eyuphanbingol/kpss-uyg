@@ -61,63 +61,63 @@ window.oabt_sinif_10_sorulari = [
     "explanation": "Alan eğitimi dili."
 },
 {
-    "question": "Matematik Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Matematik okuryazarlığı PISA hattı: bağlamda problem.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Matematik okuryazarlığı için doğru bir açıklamadır?",
+    "options": ["A) Somut-yarı somut-soyut (Bruner EİS).", "B) Sayı duyusu ezber işlemden önce.", "C) Hata dostu sınıf yanılgı veridir.", "D) 2026 alan eğitimi yöntem, yanılgı, materyal sorar.", "E) Matematik okuryazarlığı PISA hattı: bağlamda problem."],
+    "correctAnswerIndex": 4,
+    "explanation": "Matematik Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Matematik Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Somut-yarı somut-soyut (Bruner EİS).", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Somut-yarı somut-soyut hakkında hangisi doğrudur?",
+    "options": ["A) Hata dostu sınıf yanılgı veridir.", "B) 2026 alan eğitimi yöntem, yanılgı, materyal sorar.", "C) Somut-yarı somut-soyut (Bruner EİS).", "D) Matematik okuryazarlığı PISA hattı: bağlamda problem.", "E) Sayı duyusu ezber işlemden önce."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Matematik Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Matematik Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Sayı duyusu ezber işlemden önce.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Sayı duyusu hangisini ifade eder?",
+    "options": ["A) 2026 alan eğitimi yöntem, yanılgı, materyal sorar.", "B) Sayı duyusu ezber işlemden önce.", "C) Matematik okuryazarlığı PISA hattı: bağlamda problem.", "D) Somut-yarı somut-soyut (Bruner EİS).", "E) Hata dostu sınıf yanılgı veridir."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Matematik Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Matematik Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Hata dostu sınıf yanılgı veridir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Hata dostu sınıf ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Somut-yarı somut-soyut (Bruner EİS).", "B) Sayı duyusu ezber işlemden önce.", "C) 2026 alan eğitimi yöntem, yanılgı, materyal sorar.", "D) Hata dostu sınıf yanılgı veridir.", "E) Matematik okuryazarlığı PISA hattı: bağlamda problem."],
+    "correctAnswerIndex": 3,
+    "explanation": "Matematik Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Matematik Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) 2026 alan eğitimi yöntem, yanılgı, materyal sorar.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi 2026 alan eğitimi için doğru bir açıklamadır?",
+    "options": ["A) 2026 alan eğitimi yöntem, yanılgı, materyal sorar.", "B) Matematik okuryazarlığı PISA hattı: bağlamda problem.", "C) Somut-yarı somut-soyut (Bruner EİS).", "D) Sayı duyusu ezber işlemden önce.", "E) Hata dostu sınıf yanılgı veridir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Matematik Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Problem çözme, modelleme, oyun, istasyon hakkında hangisi doğrudur?",
+    "options": ["A) Somut-yarı somut-soyut (Bruner EİS).", "B) Sayı duyusu ezber işlemden önce.", "C) Hata dostu sınıf yanılgı veridir.", "D) Problem çözme, modelleme, oyun, istasyon.", "E) Matematik okuryazarlığı PISA hattı: bağlamda problem."],
+    "correctAnswerIndex": 3,
+    "explanation": "Matematik Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Manipülatif hangisini ifade eder?",
+    "options": ["A) Manipülatif onluk taban, kesir çubuğu, geoboard.", "B) Matematik okuryazarlığı PISA hattı: bağlamda problem.", "C) Somut-yarı somut-soyut (Bruner EİS).", "D) Sayı duyusu ezber işlemden önce.", "E) Hata dostu sınıf yanılgı veridir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Matematik Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Matematik konuşması ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Hata dostu sınıf yanılgı veridir.", "B) Matematik konuşması gerekçe.", "C) Matematik okuryazarlığı PISA hattı: bağlamda problem.", "D) Somut-yarı somut-soyut (Bruner EİS).", "E) Sayı duyusu ezber işlemden önce."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Matematik Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Matematik Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Problem çözme, modelleme, oyun, istasyon.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Farklılaştırma için doğru bir açıklamadır?",
+    "options": ["A) Somut-yarı somut-soyut (Bruner EİS).", "B) Sayı duyusu ezber işlemden önce.", "C) Hata dostu sınıf yanılgı veridir.", "D) Farklılaştırma açık uçlu görev.", "E) Matematik okuryazarlığı PISA hattı: bağlamda problem."],
+    "correctAnswerIndex": 3,
+    "explanation": "Matematik Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Teknoloji hakkında hangisi doğrudur?",
+    "options": ["A) Sayı duyusu ezber işlemden önce.", "B) Hata dostu sınıf yanılgı veridir.", "C) Teknoloji abaküs-uygulama denge.", "D) Matematik okuryazarlığı PISA hattı: bağlamda problem.", "E) Somut-yarı somut-soyut (Bruner EİS)."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Matematik Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Manipülatif onluk taban, kesir çubuğu, geoboard.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Matematik Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Matematik konuşması gerekçe.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Matematik Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Farklılaştırma açık uçlu görev.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Matematik Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Teknoloji abaküs-uygulama denge.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Matematik Öğretimi notundaki temel bilgi."
 }
 ];

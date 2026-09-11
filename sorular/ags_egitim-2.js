@@ -73,51 +73,51 @@ window.ags_egitim_2_sorulari = [
     "explanation": "Hutchins-Adler Great Books."
 },
 {
-    "question": "Eğitimin Felsefi Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) İdealizm (Platon) gerçekliği ideada arar; öğretmen otorite, müfredat evrensel idealar ve a", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi İdealizm için doğru bir açıklamadır?",
+    "options": ["A) İdealizm (Platon) gerçekliği ideada arar; öğretmen otorite, müfredat evrensel idealar ve ahlak.", "B) Realizm (Aristoteles) nesnel evren ve akıl; konu merkezli, bilimsel yöntem ve disiplin.", "C) Pragmatizm (Dewey, James, Peirce) hakikat işe yarayandır; deneyim, problem çözme, okul hayatın ta kendisi.", "D) Varoluşçuluk (Kierkegaard, Sartre) özgürlük, seçim ve özgünlük; öğrenci kendi anlamını kurar.", "E) Natüralizm (Rousseau) doğaya uygunluk; olumsuz eğitim, çocuğun doğal gelişimine müdahaleyi sınırlama."],
+    "correctAnswerIndex": 0,
+    "explanation": "Eğitimin Felsefi Temelleri notundaki temel bilgi."
+},
+{
+    "question": "Realizm hakkında hangisi doğrudur?",
+    "options": ["A) Natüralizm (Rousseau) doğaya uygunluk; olumsuz eğitim, çocuğun doğal gelişimine müdahaleyi sınırlama.", "B) Realizm (Aristoteles) nesnel evren ve akıl; konu merkezli, bilimsel yöntem ve disiplin.", "C) İdealizm (Platon) gerçekliği ideada arar; öğretmen otorite, müfredat evrensel idealar ve ahlak.", "D) Pragmatizm (Dewey, James, Peirce) hakikat işe yarayandır; deneyim, problem çözme, okul hayatın ta kendisi.", "E) Varoluşçuluk (Kierkegaard, Sartre) özgürlük, seçim ve özgünlük; öğrenci kendi anlamını kurar."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Eğitimin Felsefi Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Eğitimin Felsefi Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Realizm (Aristoteles) nesnel evren ve akıl; konu merkezli, bilimsel yöntem ve disiplin.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Pragmatizm hangisini ifade eder?",
+    "options": ["A) İdealizm (Platon) gerçekliği ideada arar; öğretmen otorite, müfredat evrensel idealar ve ahlak.", "B) Realizm (Aristoteles) nesnel evren ve akıl; konu merkezli, bilimsel yöntem ve disiplin.", "C) Varoluşçuluk (Kierkegaard, Sartre) özgürlük, seçim ve özgünlük; öğrenci kendi anlamını kurar.", "D) Natüralizm (Rousseau) doğaya uygunluk; olumsuz eğitim, çocuğun doğal gelişimine müdahaleyi sınırlama.", "E) Pragmatizm (Dewey, James, Peirce) hakikat işe yarayandır; deneyim, problem çözme, okul hayatın ta kendisi."],
+    "correctAnswerIndex": 4,
+    "explanation": "Eğitimin Felsefi Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Eğitimin Felsefi Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Pragmatizm (Dewey, James, Peirce) hakikat işe yarayandır; deneyim, problem çözme, okul hay", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Varoluşçuluk ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Natüralizm (Rousseau) doğaya uygunluk; olumsuz eğitim, çocuğun doğal gelişimine müdahaleyi sınırlama.", "B) Varoluşçuluk (Kierkegaard, Sartre) özgürlük, seçim ve özgünlük; öğrenci kendi anlamını kurar.", "C) İdealizm (Platon) gerçekliği ideada arar; öğretmen otorite, müfredat evrensel idealar ve ahlak.", "D) Realizm (Aristoteles) nesnel evren ve akıl; konu merkezli, bilimsel yöntem ve disiplin.", "E) Pragmatizm (Dewey, James, Peirce) hakikat işe yarayandır; deneyim, problem çözme, okul hayatın ta kendisi."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Eğitimin Felsefi Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Eğitimin Felsefi Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Varoluşçuluk (Kierkegaard, Sartre) özgürlük, seçim ve özgünlük; öğrenci kendi anlamını kur", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Natüralizm için doğru bir açıklamadır?",
+    "options": ["A) Realizm (Aristoteles) nesnel evren ve akıl; konu merkezli, bilimsel yöntem ve disiplin.", "B) Pragmatizm (Dewey, James, Peirce) hakikat işe yarayandır; deneyim, problem çözme, okul hayatın ta kendisi.", "C) Varoluşçuluk (Kierkegaard, Sartre) özgürlük, seçim ve özgünlük; öğrenci kendi anlamını kurar.", "D) Natüralizm (Rousseau) doğaya uygunluk; olumsuz eğitim, çocuğun doğal gelişimine müdahaleyi sınırlama.", "E) İdealizm (Platon) gerçekliği ideada arar; öğretmen otorite, müfredat evrensel idealar ve ahlak."],
+    "correctAnswerIndex": 3,
+    "explanation": "Eğitimin Felsefi Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Eğitimin Felsefi Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Natüralizm (Rousseau) doğaya uygunluk; olumsuz eğitim, çocuğun doğal gelişimine müdahaleyi", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Essentialism (özcülük) hakkında hangisi doğrudur?",
+    "options": ["A) Varoluşçuluk (Kierkegaard, Sartre) özgürlük, seçim ve özgünlük; öğrenci kendi anlamını kurar.", "B) Essentialism (özcülük) Bagley; temel okuma-yazma-matematik ve kültür çekirdeği, öğretmen merkezli.", "C) İdealizm (Platon) gerçekliği ideada arar; öğretmen otorite, müfredat evrensel idealar ve ahlak.", "D) Realizm (Aristoteles) nesnel evren ve akıl; konu merkezli, bilimsel yöntem ve disiplin.", "E) Pragmatizm (Dewey, James, Peirce) hakikat işe yarayandır; deneyim, problem çözme, okul hayatın ta kendisi."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Eğitimin Felsefi Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Eğitimin Felsefi Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Essentialism (özcülük) Bagley; temel okuma-yazma-matematik ve kültür çekirdeği, öğretmen m", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Progressivism (ilerlemecilik) hangisini ifade eder?",
+    "options": ["A) Pragmatizm (Dewey, James, Peirce) hakikat işe yarayandır; deneyim, problem çözme, okul hayatın ta kendisi.", "B) Varoluşçuluk (Kierkegaard, Sartre) özgürlük, seçim ve özgünlük; öğrenci kendi anlamını kurar.", "C) Progressivism (ilerlemecilik) Dewey-Kilpatrick; çocuk merkezli, proje, yaşantı ve demokrasi.", "D) İdealizm (Platon) gerçekliği ideada arar; öğretmen otorite, müfredat evrensel idealar ve ahlak.", "E) Realizm (Aristoteles) nesnel evren ve akıl; konu merkezli, bilimsel yöntem ve disiplin."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Eğitimin Felsefi Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Eğitimin Felsefi Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Progressivism (ilerlemecilik) Dewey-Kilpatrick; çocuk merkezli, proje, yaşantı ve demokras", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Eğitimin Felsefi Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Reconstructionism (yeniden kurmacılık) Counts, Brameld; okulu toplumsal değişimin aracı ya", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Reconstructionism (yeniden kurmacılık) ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İdealizm (Platon) gerçekliği ideada arar; öğretmen otorite, müfredat evrensel idealar ve ahlak.", "B) Realizm (Aristoteles) nesnel evren ve akıl; konu merkezli, bilimsel yöntem ve disiplin.", "C) Pragmatizm (Dewey, James, Peirce) hakikat işe yarayandır; deneyim, problem çözme, okul hayatın ta kendisi.", "D) Varoluşçuluk (Kierkegaard, Sartre) özgürlük, seçim ve özgünlük; öğrenci kendi anlamını kurar.", "E) Reconstructionism (yeniden kurmacılık) Counts, Brameld; okulu toplumsal değişimin aracı yapar."],
+    "correctAnswerIndex": 4,
+    "explanation": "Eğitimin Felsefi Temelleri notundaki temel bilgi."
 }
 ];

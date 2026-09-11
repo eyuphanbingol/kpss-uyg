@@ -55,69 +55,69 @@ window.oabt_mat_5_sorulari = [
     "explanation": "Kapalı form F(x,y)=c."
 },
 {
-    "question": "Diferansiyel Denklemler konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Sıradan DD y'=f(x,y); varlık-teklik Lipschitz koşuluna bağlıdır.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Sıradan DD için doğru bir açıklamadır?",
+    "options": ["A) Tam diferansiyel M dx+N dy=0, ∂M/∂y=∂N/∂x.", "B) Bernoulli ve Riccati yerdeğiştirme ile lineere indirgenebilir sınıflar.", "C) Sıradan DD y'=f(x,y); varlık-teklik Lipschitz koşuluna bağlıdır.", "D) Ayrılabilir dy/g(y)=f(x)dx; homojen y=vx yerdeğiştirme.", "E) Lineer y'+P(x)y=Q(x); integre çarpan μ=e^{∫P dx}."],
+    "correctAnswerIndex": 2,
+    "explanation": "Diferansiyel Denklemler notundaki temel bilgi."
 },
 {
-    "question": "Diferansiyel Denklemler konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Ayrılabilir dy/g(y)=f(x)dx; homojen y=vx yerdeğiştirme.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Ayrılabilir hakkında hangisi doğrudur?",
+    "options": ["A) Ayrılabilir dy/g(y)=f(x)dx; homojen y=vx yerdeğiştirme.", "B) Sıradan DD y'=f(x,y); varlık-teklik Lipschitz koşuluna bağlıdır.", "C) Lineer y'+P(x)y=Q(x); integre çarpan μ=e^{∫P dx}.", "D) Tam diferansiyel M dx+N dy=0, ∂M/∂y=∂N/∂x.", "E) Bernoulli ve Riccati yerdeğiştirme ile lineere indirgenebilir sınıflar."],
+    "correctAnswerIndex": 0,
+    "explanation": "Diferansiyel Denklemler notundaki temel bilgi."
+},
+{
+    "question": "Lineer hangisini ifade eder?",
+    "options": ["A) Sıradan DD y'=f(x,y); varlık-teklik Lipschitz koşuluna bağlıdır.", "B) Ayrılabilir dy/g(y)=f(x)dx; homojen y=vx yerdeğiştirme.", "C) Tam diferansiyel M dx+N dy=0, ∂M/∂y=∂N/∂x.", "D) Belirsiz katsayılar ve parametre değişimi homojen olmayan özel çözüm.", "E) Lineer y'+P(x)y=Q(x); integre çarpan μ=e^{∫P dx}."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Diferansiyel Denklemler notundaki temel bilgi."
 },
 {
-    "question": "Diferansiyel Denklemler konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Lineer y'+P(x)y=Q(x); integre çarpan μ=e^{∫P dx}.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Diferansiyel Denklemler konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Tam diferansiyel M dx+N dy=0, ∂M/∂y=∂N/∂x.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Tam diferansiyel ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Sıradan DD y'=f(x,y); varlık-teklik Lipschitz koşuluna bağlıdır.", "B) Ayrılabilir dy/g(y)=f(x)dx; homojen y=vx yerdeğiştirme.", "C) Lineer y'+P(x)y=Q(x); integre çarpan μ=e^{∫P dx}.", "D) Bernoulli ve Riccati yerdeğiştirme ile lineere indirgenebilir sınıflar.", "E) Tam diferansiyel M dx+N dy=0, ∂M/∂y=∂N/∂x."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Diferansiyel Denklemler notundaki temel bilgi."
 },
 {
-    "question": "Diferansiyel Denklemler konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Bernoulli ve Riccati yerdeğiştirme ile lineere indirgenebilir sınıflar.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Bernoulli ve Riccati için doğru bir açıklamadır?",
+    "options": ["A) Bernoulli ve Riccati yerdeğiştirme ile lineere indirgenebilir sınıflar.", "B) Sıradan DD y'=f(x,y); varlık-teklik Lipschitz koşuluna bağlıdır.", "C) Ayrılabilir dy/g(y)=f(x)dx; homojen y=vx yerdeğiştirme.", "D) Lineer y'+P(x)y=Q(x); integre çarpan μ=e^{∫P dx}.", "E) Tam diferansiyel M dx+N dy=0, ∂M/∂y=∂N/∂x."],
+    "correctAnswerIndex": 0,
+    "explanation": "Diferansiyel Denklemler notundaki temel bilgi."
 },
 {
-    "question": "Diferansiyel Denklemler konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Sabit katsayılı lineer karakteristik kök: gerçek, tekrar, karmaşık.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Sabit katsayılı lineer hakkında hangisi doğrudur?",
+    "options": ["A) Lineer y'+P(x)y=Q(x); integre çarpan μ=e^{∫P dx}.", "B) Tam diferansiyel M dx+N dy=0, ∂M/∂y=∂N/∂x.", "C) Sabit katsayılı lineer karakteristik kök: gerçek, tekrar, karmaşık.", "D) Sıradan DD y'=f(x,y); varlık-teklik Lipschitz koşuluna bağlıdır.", "E) Ayrılabilir dy/g(y)=f(x)dx; homojen y=vx yerdeğiştirme."],
+    "correctAnswerIndex": 2,
+    "explanation": "Diferansiyel Denklemler notundaki temel bilgi."
+},
+{
+    "question": "Belirsiz katsayılar ve parametre değişimi hangisini ifade eder?",
+    "options": ["A) Lineer y'+P(x)y=Q(x); integre çarpan μ=e^{∫P dx}.", "B) Tam diferansiyel M dx+N dy=0, ∂M/∂y=∂N/∂x.", "C) Belirsiz katsayılar ve parametre değişimi homojen olmayan özel çözüm.", "D) Sıradan DD y'=f(x,y); varlık-teklik Lipschitz koşuluna bağlıdır.", "E) Ayrılabilir dy/g(y)=f(x)dx; homojen y=vx yerdeğiştirme."],
+    "correctAnswerIndex": 2,
+    "explanation": "Diferansiyel Denklemler notundaki temel bilgi."
+},
+{
+    "question": "Wronskian ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Sıradan DD y'=f(x,y); varlık-teklik Lipschitz koşuluna bağlıdır.", "B) Ayrılabilir dy/g(y)=f(x)dx; homojen y=vx yerdeğiştirme.", "C) Lineer y'+P(x)y=Q(x); integre çarpan μ=e^{∫P dx}.", "D) Tam diferansiyel M dx+N dy=0, ∂M/∂y=∂N/∂x.", "E) Wronskian bağımsızlık; Abel formülü."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Diferansiyel Denklemler notundaki temel bilgi."
 },
 {
-    "question": "Diferansiyel Denklemler konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Belirsiz katsayılar ve parametre değişimi homojen olmayan özel çözüm.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Sistem için doğru bir açıklamadır?",
+    "options": ["A) Lineer y'+P(x)y=Q(x); integre çarpan μ=e^{∫P dx}.", "B) Tam diferansiyel M dx+N dy=0, ∂M/∂y=∂N/∂x.", "C) Sistem x'=Ax; çözüm e^{At}v; özdeğer kararlılık (Reel kısım <0).", "D) Sıradan DD y'=f(x,y); varlık-teklik Lipschitz koşuluna bağlıdır.", "E) Ayrılabilir dy/g(y)=f(x)dx; homojen y=vx yerdeğiştirme."],
+    "correctAnswerIndex": 2,
+    "explanation": "Diferansiyel Denklemler notundaki temel bilgi."
 },
 {
-    "question": "Diferansiyel Denklemler konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Wronskian bağımsızlık; Abel formülü.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Laplace dönüşümü hakkında hangisi doğrudur?",
+    "options": ["A) Tam diferansiyel M dx+N dy=0, ∂M/∂y=∂N/∂x.", "B) Laplace dönüşümü başlangıç değer problemlerini cebirle çözer.", "C) Sıradan DD y'=f(x,y); varlık-teklik Lipschitz koşuluna bağlıdır.", "D) Ayrılabilir dy/g(y)=f(x)dx; homojen y=vx yerdeğiştirme.", "E) Lineer y'+P(x)y=Q(x); integre çarpan μ=e^{∫P dx}."],
+    "correctAnswerIndex": 1,
+    "explanation": "Diferansiyel Denklemler notundaki temel bilgi."
 },
 {
-    "question": "Diferansiyel Denklemler konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Sistem x'=Ax; çözüm e^{At}v; özdeğer kararlılık (Reel kısım <0).", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Diferansiyel Denklemler konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Laplace dönüşümü başlangıç değer problemlerini cebirle çözer.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Diferansiyel Denklemler konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Isı, dalga, Laplace denklemleri; ayrışım (değişkenlere ayırma).", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Isı, dalga, Laplace hangisini ifade eder?",
+    "options": ["A) Tam diferansiyel M dx+N dy=0, ∂M/∂y=∂N/∂x.", "B) Isı, dalga, Laplace denklemleri; ayrışım (değişkenlere ayırma).", "C) Sıradan DD y'=f(x,y); varlık-teklik Lipschitz koşuluna bağlıdır.", "D) Ayrılabilir dy/g(y)=f(x)dx; homojen y=vx yerdeğiştirme.", "E) Lineer y'+P(x)y=Q(x); integre çarpan μ=e^{∫P dx}."],
+    "correctAnswerIndex": 1,
+    "explanation": "Diferansiyel Denklemler notundaki temel bilgi."
 }
 ];

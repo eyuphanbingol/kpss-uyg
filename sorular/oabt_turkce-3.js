@@ -55,69 +55,69 @@ window.oabt_turkce_3_sorulari = [
     "explanation": "Gözlemci bakış kameraya benzer."
 },
 {
-    "question": "Anlama ve Anlatma konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Ana düşünce metnin savunduğu temel yargı; yardımcı düşünce onu destekler.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Ana düşünce için doğru bir açıklamadır?",
+    "options": ["A) Paragraf giriş-gelişme-sonuç; konu cümlesi çoğunlukla girişte veya sonda yer alır.", "B) Tutarsızlık bakış açısı, zaman, kişi ve mantık kaymalarından doğar.", "C) Ana düşünce metnin savunduğu temel yargı; yardımcı düşünce onu destekler.", "D) Çıkarım açıkça yazılmayan ama kanıtlanan anlamdır; ima dolaylı iletidir.", "E) Özet ayrıntı ve örnekleri eler, yapıyı korur; yorum öznel değerlendirme katar."],
+    "correctAnswerIndex": 2,
+    "explanation": "Anlama ve Anlatma notundaki temel bilgi."
 },
 {
-    "question": "Anlama ve Anlatma konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Çıkarım açıkça yazılmayan ama kanıtlanan anlamdır; ima dolaylı iletidir.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Çıkarım hakkında hangisi doğrudur?",
+    "options": ["A) Ana düşünce metnin savunduğu temel yargı; yardımcı düşünce onu destekler.", "B) Özet ayrıntı ve örnekleri eler, yapıyı korur; yorum öznel değerlendirme katar.", "C) Paragraf giriş-gelişme-sonuç; konu cümlesi çoğunlukla girişte veya sonda yer alır.", "D) Tutarsızlık bakış açısı, zaman, kişi ve mantık kaymalarından doğar.", "E) Çıkarım açıkça yazılmayan ama kanıtlanan anlamdır; ima dolaylı iletidir."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Anlama ve Anlatma notundaki temel bilgi."
 },
 {
-    "question": "Anlama ve Anlatma konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Özet ayrıntı ve örnekleri eler, yapıyı korur; yorum öznel değerlendirme katar.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Özet hangisini ifade eder?",
+    "options": ["A) Çıkarım açıkça yazılmayan ama kanıtlanan anlamdır; ima dolaylı iletidir.", "B) Paragraf giriş-gelişme-sonuç; konu cümlesi çoğunlukla girişte veya sonda yer alır.", "C) Tutarsızlık bakış açısı, zaman, kişi ve mantık kaymalarından doğar.", "D) Özet ayrıntı ve örnekleri eler, yapıyı korur; yorum öznel değerlendirme katar.", "E) Ana düşünce metnin savunduğu temel yargı; yardımcı düşünce onu destekler."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Anlama ve Anlatma notundaki temel bilgi."
 },
 {
-    "question": "Anlama ve Anlatma konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Paragraf giriş-gelişme-sonuç; konu cümlesi çoğunlukla girişte veya sonda yer alır.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Paragraf ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Tutarsızlık bakış açısı, zaman, kişi ve mantık kaymalarından doğar.", "B) Paragraf giriş-gelişme-sonuç; konu cümlesi çoğunlukla girişte veya sonda yer alır.", "C) Ana düşünce metnin savunduğu temel yargı; yardımcı düşünce onu destekler.", "D) Çıkarım açıkça yazılmayan ama kanıtlanan anlamdır; ima dolaylı iletidir.", "E) Özet ayrıntı ve örnekleri eler, yapıyı korur; yorum öznel değerlendirme katar."],
+    "correctAnswerIndex": 1,
+    "explanation": "Anlama ve Anlatma notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Tutarsızlık için doğru bir açıklamadır?",
+    "options": ["A) Paragraf giriş-gelişme-sonuç; konu cümlesi çoğunlukla girişte veya sonda yer alır.", "B) Tutarsızlık bakış açısı, zaman, kişi ve mantık kaymalarından doğar.", "C) Ana düşünce metnin savunduğu temel yargı; yardımcı düşünce onu destekler.", "D) Çıkarım açıkça yazılmayan ama kanıtlanan anlamdır; ima dolaylı iletidir.", "E) Özet ayrıntı ve örnekleri eler, yapıyı korur; yorum öznel değerlendirme katar."],
+    "correctAnswerIndex": 1,
+    "explanation": "Anlama ve Anlatma notundaki temel bilgi."
+},
+{
+    "question": "Öyküleme hakkında hangisi doğrudur?",
+    "options": ["A) Özet ayrıntı ve örnekleri eler, yapıyı korur; yorum öznel değerlendirme katar.", "B) Paragraf giriş-gelişme-sonuç; konu cümlesi çoğunlukla girişte veya sonda yer alır.", "C) Öyküleme olay; betimleme izlenim; açıklama bilgi; tartışma sav-kanıt.", "D) Ana düşünce metnin savunduğu temel yargı; yardımcı düşünce onu destekler.", "E) Çıkarım açıkça yazılmayan ama kanıtlanan anlamdır; ima dolaylı iletidir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Anlama ve Anlatma notundaki temel bilgi."
+},
+{
+    "question": "Nesnel anlatım hangisini ifade eder?",
+    "options": ["A) Ana düşünce metnin savunduğu temel yargı; yardımcı düşünce onu destekler.", "B) Çıkarım açıkça yazılmayan ama kanıtlanan anlamdır; ima dolaylı iletidir.", "C) Özet ayrıntı ve örnekleri eler, yapıyı korur; yorum öznel değerlendirme katar.", "D) Paragraf giriş-gelişme-sonuç; konu cümlesi çoğunlukla girişte veya sonda yer alır.", "E) Nesnel anlatım gözlemlenebilir; öznel anlatım yargı ve beğeni taşır."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Anlama ve Anlatma notundaki temel bilgi."
 },
 {
-    "question": "Anlama ve Anlatma konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Tutarsızlık bakış açısı, zaman, kişi ve mantık kaymalarından doğar.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Dolaylı anlatım ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Çıkarım açıkça yazılmayan ama kanıtlanan anlamdır; ima dolaylı iletidir.", "B) Özet ayrıntı ve örnekleri eler, yapıyı korur; yorum öznel değerlendirme katar.", "C) Paragraf giriş-gelişme-sonuç; konu cümlesi çoğunlukla girişte veya sonda yer alır.", "D) Dolaylı anlatım başkasının sözünü aktarır; iç konuşma ve bilinç akışı modern anlatı teknikleridir.", "E) Ana düşünce metnin savunduğu temel yargı; yardımcı düşünce onu destekler."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Anlama ve Anlatma notundaki temel bilgi."
 },
 {
-    "question": "Anlama ve Anlatma konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Öyküleme olay; betimleme izlenim; açıklama bilgi; tartışma sav-kanıt.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Bakış açısı için doğru bir açıklamadır?",
+    "options": ["A) Bakış açısı hâkim, müşahit ve kahraman bakış açıları olarak sınıflanır.", "B) Ana düşünce metnin savunduğu temel yargı; yardımcı düşünce onu destekler.", "C) Çıkarım açıkça yazılmayan ama kanıtlanan anlamdır; ima dolaylı iletidir.", "D) Özet ayrıntı ve örnekleri eler, yapıyı korur; yorum öznel değerlendirme katar.", "E) Paragraf giriş-gelişme-sonuç; konu cümlesi çoğunlukla girişte veya sonda yer alır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Anlama ve Anlatma notundaki temel bilgi."
 },
 {
-    "question": "Anlama ve Anlatma konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Nesnel anlatım gözlemlenebilir; öznel anlatım yargı ve beğeni taşır.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Anlatıcı hakkında hangisi doğrudur?",
+    "options": ["A) Anlatıcı birinci/üçüncü kişi; güvenilmez anlatıcı ironi üretir.", "B) Ana düşünce metnin savunduğu temel yargı; yardımcı düşünce onu destekler.", "C) Çıkarım açıkça yazılmayan ama kanıtlanan anlamdır; ima dolaylı iletidir.", "D) Özet ayrıntı ve örnekleri eler, yapıyı korur; yorum öznel değerlendirme katar.", "E) Paragraf giriş-gelişme-sonuç; konu cümlesi çoğunlukla girişte veya sonda yer alır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Anlama ve Anlatma notundaki temel bilgi."
 },
 {
-    "question": "Anlama ve Anlatma konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Dolaylı anlatım başkasının sözünü aktarır; iç konuşma ve bilinç akışı modern anlatı teknik", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Anlama ve Anlatma konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Bakış açısı hâkim, müşahit ve kahraman bakış açıları olarak sınıflanır.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Anlama ve Anlatma konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Anlatıcı birinci/üçüncü kişi; güvenilmez anlatıcı ironi üretir.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Anlama ve Anlatma konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Plan taslak, giriş-gelişme-sonuç ve bağlaçsal geçişleri içerir.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Plan hangisini ifade eder?",
+    "options": ["A) Paragraf giriş-gelişme-sonuç; konu cümlesi çoğunlukla girişte veya sonda yer alır.", "B) Plan taslak, giriş-gelişme-sonuç ve bağlaçsal geçişleri içerir.", "C) Ana düşünce metnin savunduğu temel yargı; yardımcı düşünce onu destekler.", "D) Çıkarım açıkça yazılmayan ama kanıtlanan anlamdır; ima dolaylı iletidir.", "E) Özet ayrıntı ve örnekleri eler, yapıyı korur; yorum öznel değerlendirme katar."],
+    "correctAnswerIndex": 1,
+    "explanation": "Anlama ve Anlatma notundaki temel bilgi."
 }
 ];

@@ -73,51 +73,51 @@ window.ags_tarih_3_sorulari = [
     "explanation": "San Francisco düzeni; NATO üyeliği 1952 dir."
 },
 {
-    "question": "Atatürk İlkeleri ve İnkılap Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) 30 Ekim 1918 Mondros ateşkesi işgallere zemin; 28 Ocak 1920 Misak-ı Milli milli sınır siya", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi 30 Ekim 1918 Mondros için doğru bir açıklamadır?",
+    "options": ["A) Sakarya (23 Ağustos-13 Eylül 1921) savunma-taarruz eşiği; 30 Ağustos 1922 Başkomutan Meydan Muharebesi.", "B) 24 Temmuz 1923 Lozan yeni devletin uluslararası tanınması; Sevr fiilen düşer.", "C) 30 Ekim 1918 Mondros ateşkesi işgallere zemin; 28 Ocak 1920 Misak-ı Milli milli sınır siyasi programıdır.", "D) 19 Mayıs 1919 Samsun; Amasya Tamimi milletin istiklalini yine milletin kurtaracağı ilkesini duyurur.", "E) Erzurum ve Sivas Kongreleri milli iradeyi örgütler; 23 Nisan 1920 TBMM açılır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Atatürk İlkeleri ve İnkılap Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Atatürk İlkeleri ve İnkılap Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) 19 Mayıs 1919 Samsun; Amasya Tamimi milletin istiklalini yine milletin kurtaracağı ilkesin", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "19 Mayıs 1919 hakkında hangisi doğrudur?",
+    "options": ["A) Erzurum ve Sivas Kongreleri milli iradeyi örgütler; 23 Nisan 1920 TBMM açılır.", "B) Sakarya (23 Ağustos-13 Eylül 1921) savunma-taarruz eşiği; 30 Ağustos 1922 Başkomutan Meydan Muharebesi.", "C) 24 Temmuz 1923 Lozan yeni devletin uluslararası tanınması; Sevr fiilen düşer.", "D) 19 Mayıs 1919 Samsun; Amasya Tamimi milletin istiklalini yine milletin kurtaracağı ilkesini duyurur.", "E) 30 Ekim 1918 Mondros ateşkesi işgallere zemin; 28 Ocak 1920 Misak-ı Milli milli sınır siyasi programıdır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Atatürk İlkeleri ve İnkılap Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Cumhuriyetçilik hakkında hangisi doğrudur?",
+    "options": ["A) 19 Mayıs 1919 Samsun; Amasya Tamimi milletin istiklalini yine milletin kurtaracağı ilkesini duyurur.", "B) Erzurum ve Sivas Kongreleri milli iradeyi örgütler; 23 Nisan 1920 TBMM açılır.", "C) Sakarya (23 Ağustos-13 Eylül 1921) savunma-taarruz eşiği; 30 Ağustos 1922 Başkomutan Meydan Muharebesi.", "D) Cumhuriyetçilik egemenliğin millete ait oluşu; milliyetçilik siyasi millet ve bağımsızlık.", "E) 30 Ekim 1918 Mondros ateşkesi işgallere zemin; 28 Ocak 1920 Misak-ı Milli milli sınır siyasi programıdır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Atatürk İlkeleri ve İnkılap Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Halkçılık hangisini ifade eder?",
+    "options": ["A) Sakarya (23 Ağustos-13 Eylül 1921) savunma-taarruz eşiği; 30 Ağustos 1922 Başkomutan Meydan Muharebesi.", "B) Halkçılık imtiyazsızlık ve halkın kaynaşması; devletçilik ekonomiye yön verici devlet.", "C) 30 Ekim 1918 Mondros ateşkesi işgallere zemin; 28 Ocak 1920 Misak-ı Milli milli sınır siyasi programıdır.", "D) 19 Mayıs 1919 Samsun; Amasya Tamimi milletin istiklalini yine milletin kurtaracağı ilkesini duyurur.", "E) Erzurum ve Sivas Kongreleri milli iradeyi örgütler; 23 Nisan 1920 TBMM açılır."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Atatürk İlkeleri ve İnkılap Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Atatürk İlkeleri ve İnkılap Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Erzurum ve Sivas Kongreleri milli iradeyi örgütler; 23 Nisan 1920 TBMM açılır.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Laiklik ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Laiklik din ve devlet işlerinin ayrılığı, vicdan hürriyeti; inkılapçılık yenileşmenin sürekliliği.", "B) 30 Ekim 1918 Mondros ateşkesi işgallere zemin; 28 Ocak 1920 Misak-ı Milli milli sınır siyasi programıdır.", "C) 19 Mayıs 1919 Samsun; Amasya Tamimi milletin istiklalini yine milletin kurtaracağı ilkesini duyurur.", "D) Erzurum ve Sivas Kongreleri milli iradeyi örgütler; 23 Nisan 1920 TBMM açılır.", "E) Sakarya (23 Ağustos-13 Eylül 1921) savunma-taarruz eşiği; 30 Ağustos 1922 Başkomutan Meydan Muharebesi."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Atatürk İlkeleri ve İnkılap Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Atatürk İlkeleri ve İnkılap Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Sakarya (23 Ağustos-13 Eylül 1921) savunma-taarruz eşiği; 30 Ağustos 1922 Başkomutan Meyda", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "1925 Tekke ve zaviyeler ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) 30 Ekim 1918 Mondros ateşkesi işgallere zemin; 28 Ocak 1920 Misak-ı Milli milli sınır siyasi programıdır.", "B) 19 Mayıs 1919 Samsun; Amasya Tamimi milletin istiklalini yine milletin kurtaracağı ilkesini duyurur.", "C) Erzurum ve Sivas Kongreleri milli iradeyi örgütler; 23 Nisan 1920 TBMM açılır.", "D) Sakarya (23 Ağustos-13 Eylül 1921) savunma-taarruz eşiği; 30 Ağustos 1922 Başkomutan Meydan Muharebesi.", "E) 1925 Tekke ve zaviyeler, şapka ve kılık kıyafet; 1931 TTK, 1932 TDK kültür kurumlarıdır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Atatürk İlkeleri ve İnkılap Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Atatürk İlkeleri ve İnkılap Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) 24 Temmuz 1923 Lozan yeni devletin uluslararası tanınması; Sevr fiilen düşer.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi 1938 için doğru bir açıklamadır?",
+    "options": ["A) 19 Mayıs 1919 Samsun; Amasya Tamimi milletin istiklalini yine milletin kurtaracağı ilkesini duyurur.", "B) Erzurum ve Sivas Kongreleri milli iradeyi örgütler; 23 Nisan 1920 TBMM açılır.", "C) Sakarya (23 Ağustos-13 Eylül 1921) savunma-taarruz eşiği; 30 Ağustos 1922 Başkomutan Meydan Muharebesi.", "D) 1938 Atatürk ün vefatı; İnönü Milli Şef döneminde II. Dünya Savaşında dengeci tarafsızlık.", "E) 30 Ekim 1918 Mondros ateşkesi işgallere zemin; 28 Ocak 1920 Misak-ı Milli milli sınır siyasi programıdır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Atatürk İlkeleri ve İnkılap Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Atatürk İlkeleri ve İnkılap Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Cumhuriyetçilik egemenliğin millete ait oluşu; milliyetçilik siyasi millet ve bağımsızlık.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Atatürk İlkeleri ve İnkılap Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Halkçılık imtiyazsızlık ve halkın kaynaşması; devletçilik ekonomiye yön verici devlet.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Atatürk İlkeleri ve İnkılap Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Laiklik din ve devlet işlerinin ayrılığı, vicdan hürriyeti; inkılapçılık yenileşmenin süre", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Erzurum ve Sivas Kongreleri hangisini ifade eder?",
+    "options": ["A) 30 Ekim 1918 Mondros ateşkesi işgallere zemin; 28 Ocak 1920 Misak-ı Milli milli sınır siyasi programıdır.", "B) 19 Mayıs 1919 Samsun; Amasya Tamimi milletin istiklalini yine milletin kurtaracağı ilkesini duyurur.", "C) Sakarya (23 Ağustos-13 Eylül 1921) savunma-taarruz eşiği; 30 Ağustos 1922 Başkomutan Meydan Muharebesi.", "D) 24 Temmuz 1923 Lozan yeni devletin uluslararası tanınması; Sevr fiilen düşer.", "E) Erzurum ve Sivas Kongreleri milli iradeyi örgütler; 23 Nisan 1920 TBMM açılır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Atatürk İlkeleri ve İnkılap Tarihi notundaki temel bilgi."
 }
 ];

@@ -55,69 +55,69 @@ window.oabt_turkce_2_sorulari = [
     "explanation": "Büyük ünlü uyumu kalın-ince; küçük ünlü uyumu düz-yuvarlaktır."
 },
 {
-    "question": "Dil Bilgisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Ünlü uyumu büyük (kalın-ince) ve küçük (düz-yuvarlak) olmak üzere ikiye ayrılır."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Ünlü uyumu için doğru bir açıklamadır?",
+    "options": ["A) Ünsüz benzeşmesi ilerleyici (kitapçı) ve gerileyici (mektup) yönlerde görülür.", "B) Morfem en küçük anlamlı birim; kök, gövde, çekim ve yapım ekleri ayırt edilir.", "C) Çekim eki sözcük türünü değiştirmez; yapım eki yeni sözcük üretir.", "D) Ünlü uyumu büyük (kalın-ince) ve küçük (düz-yuvarlak) olmak üzere ikiye ayrılır.", "E) Ünsüz yumuşaması p-ç-t-k'nin b-c-d-g/ğ'ye dönüşmesidir; kural köke ünlüyle başlayan ek gelince işler."],
+    "correctAnswerIndex": 3,
+    "explanation": "Dil Bilgisi notundaki temel bilgi."
 },
 {
-    "question": "Dil Bilgisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Ünsüz yumuşaması p-ç-t-k'nin b-c-d-g/ğ'ye dönüşmesidir; kural köke ünlüyle başlayan ek gel", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Ünsüz yumuşaması hakkında hangisi doğrudur?",
+    "options": ["A) Çekim eki sözcük türünü değiştirmez; yapım eki yeni sözcük üretir.", "B) Ünsüz yumuşaması p-ç-t-k'nin b-c-d-g/ğ'ye dönüşmesidir; kural köke ünlüyle başlayan ek gelince işler.", "C) Ünlü uyumu büyük (kalın-ince) ve küçük (düz-yuvarlak) olmak üzere ikiye ayrılır.", "D) Ünsüz benzeşmesi ilerleyici (kitapçı) ve gerileyici (mektup) yönlerde görülür.", "E) Morfem en küçük anlamlı birim; kök, gövde, çekim ve yapım ekleri ayırt edilir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Dil Bilgisi notundaki temel bilgi."
+},
+{
+    "question": "Ünsüz benzeşmesi hangisini ifade eder?",
+    "options": ["A) Morfem en küçük anlamlı birim; kök, gövde, çekim ve yapım ekleri ayırt edilir.", "B) Çekim eki sözcük türünü değiştirmez; yapım eki yeni sözcük üretir.", "C) Ünsüz benzeşmesi ilerleyici (kitapçı) ve gerileyici (mektup) yönlerde görülür.", "D) Ünlü uyumu büyük (kalın-ince) ve küçük (düz-yuvarlak) olmak üzere ikiye ayrılır.", "E) Ünsüz yumuşaması p-ç-t-k'nin b-c-d-g/ğ'ye dönüşmesidir; kural köke ünlüyle başlayan ek gelince işler."],
+    "correctAnswerIndex": 2,
+    "explanation": "Dil Bilgisi notundaki temel bilgi."
+},
+{
+    "question": "Morfem ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Çekim eki sözcük türünü değiştirmez; yapım eki yeni sözcük üretir.", "B) Morfem en küçük anlamlı birim; kök, gövde, çekim ve yapım ekleri ayırt edilir.", "C) Ünlü uyumu büyük (kalın-ince) ve küçük (düz-yuvarlak) olmak üzere ikiye ayrılır.", "D) Ünsüz yumuşaması p-ç-t-k'nin b-c-d-g/ğ'ye dönüşmesidir; kural köke ünlüyle başlayan ek gelince işler.", "E) Ünsüz benzeşmesi ilerleyici (kitapçı) ve gerileyici (mektup) yönlerde görülür."],
+    "correctAnswerIndex": 1,
+    "explanation": "Dil Bilgisi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Çekim eki için doğru bir açıklamadır?",
+    "options": ["A) Çekim eki sözcük türünü değiştirmez; yapım eki yeni sözcük üretir.", "B) Ünlü uyumu büyük (kalın-ince) ve küçük (düz-yuvarlak) olmak üzere ikiye ayrılır.", "C) Ünsüz yumuşaması p-ç-t-k'nin b-c-d-g/ğ'ye dönüşmesidir; kural köke ünlüyle başlayan ek gelince işler.", "D) Ünsüz benzeşmesi ilerleyici (kitapçı) ve gerileyici (mektup) yönlerde görülür.", "E) Morfem en küçük anlamlı birim; kök, gövde, çekim ve yapım ekleri ayırt edilir."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Dil Bilgisi notundaki temel bilgi."
 },
 {
-    "question": "Dil Bilgisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Ünsüz benzeşmesi ilerleyici (kitapçı) ve gerileyici (mektup) yönlerde görülür."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "İsim tamlaması hakkında hangisi doğrudur?",
+    "options": ["A) Ünsüz benzeşmesi ilerleyici (kitapçı) ve gerileyici (mektup) yönlerde görülür.", "B) Morfem en küçük anlamlı birim; kök, gövde, çekim ve yapım ekleri ayırt edilir.", "C) İsim tamlaması belirtisiz (kapı kolu) ve belirtili (evin kapısı) diye ayrılır; takısız tamlama sıfat işlevi görür (demir kapı).", "D) Ünlü uyumu büyük (kalın-ince) ve küçük (düz-yuvarlak) olmak üzere ikiye ayrılır.", "E) Ünsüz yumuşaması p-ç-t-k'nin b-c-d-g/ğ'ye dönüşmesidir; kural köke ünlüyle başlayan ek gelince işler."],
+    "correctAnswerIndex": 2,
+    "explanation": "Dil Bilgisi notundaki temel bilgi."
 },
 {
-    "question": "Dil Bilgisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Morfem en küçük anlamlı birim; kök, gövde, çekim ve yapım ekleri ayırt edilir.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Sıfat-fiil, zarf-fiil, isim-fiil hangisini ifade eder?",
+    "options": ["A) Ünsüz benzeşmesi ilerleyici (kitapçı) ve gerileyici (mektup) yönlerde görülür.", "B) Morfem en küçük anlamlı birim; kök, gövde, çekim ve yapım ekleri ayırt edilir.", "C) Sıfat-fiil, zarf-fiil, isim-fiil eylemsi; cümlede isim/sıfat/zarf görevi alır, yargı bildirmez.", "D) Ünlü uyumu büyük (kalın-ince) ve küçük (düz-yuvarlak) olmak üzere ikiye ayrılır.", "E) Ünsüz yumuşaması p-ç-t-k'nin b-c-d-g/ğ'ye dönüşmesidir; kural köke ünlüyle başlayan ek gelince işler."],
+    "correctAnswerIndex": 2,
+    "explanation": "Dil Bilgisi notundaki temel bilgi."
+},
+{
+    "question": "Nesne ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Nesne belirtili/belirtisiz; dolaylı tümleç -e/-de/-den; zarf tümleci zaman, durum, yer, miktar.", "B) Ünlü uyumu büyük (kalın-ince) ve küçük (düz-yuvarlak) olmak üzere ikiye ayrılır.", "C) Ünsüz yumuşaması p-ç-t-k'nin b-c-d-g/ğ'ye dönüşmesidir; kural köke ünlüyle başlayan ek gelince işler.", "D) Ünsüz benzeşmesi ilerleyici (kitapçı) ve gerileyici (mektup) yönlerde görülür.", "E) Morfem en küçük anlamlı birim; kök, gövde, çekim ve yapım ekleri ayırt edilir."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Dil Bilgisi notundaki temel bilgi."
 },
 {
-    "question": "Dil Bilgisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Çekim eki sözcük türünü değiştirmez; yapım eki yeni sözcük üretir."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Devrik cümle için doğru bir açıklamadır?",
+    "options": ["A) Ünsüz benzeşmesi ilerleyici (kitapçı) ve gerileyici (mektup) yönlerde görülür.", "B) Morfem en küçük anlamlı birim; kök, gövde, çekim ve yapım ekleri ayırt edilir.", "C) Devrik cümle yüklemi sonda olmayan; kurallı yüklemi sonda olan cümledir.", "D) Ünlü uyumu büyük (kalın-ince) ve küçük (düz-yuvarlak) olmak üzere ikiye ayrılır.", "E) Ünsüz yumuşaması p-ç-t-k'nin b-c-d-g/ğ'ye dönüşmesidir; kural köke ünlüyle başlayan ek gelince işler."],
+    "correctAnswerIndex": 2,
+    "explanation": "Dil Bilgisi notundaki temel bilgi."
 },
 {
-    "question": "Dil Bilgisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) İsim tamlaması belirtisiz (kapı kolu) ve belirtili (evin kapısı) diye ayrılır; takısız tam", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Birleşik cümle hakkında hangisi doğrudur?",
+    "options": ["A) Ünsüz benzeşmesi ilerleyici (kitapçı) ve gerileyici (mektup) yönlerde görülür.", "B) Morfem en küçük anlamlı birim; kök, gövde, çekim ve yapım ekleri ayırt edilir.", "C) Birleşik cümle birden fazla yargı; girişik birleşikte yan cümlecik temel cümleye eklenir.", "D) Ünlü uyumu büyük (kalın-ince) ve küçük (düz-yuvarlak) olmak üzere ikiye ayrılır.", "E) Ünsüz yumuşaması p-ç-t-k'nin b-c-d-g/ğ'ye dönüşmesidir; kural köke ünlüyle başlayan ek gelince işler."],
+    "correctAnswerIndex": 2,
+    "explanation": "Dil Bilgisi notundaki temel bilgi."
+},
+{
+    "question": "Eş anlamlılık hangisini ifade eder?",
+    "options": ["A) Eş anlamlılık tam örtüşmez; bağlam seçer (savaş/harp).", "B) Ünlü uyumu büyük (kalın-ince) ve küçük (düz-yuvarlak) olmak üzere ikiye ayrılır.", "C) Ünsüz yumuşaması p-ç-t-k'nin b-c-d-g/ğ'ye dönüşmesidir; kural köke ünlüyle başlayan ek gelince işler.", "D) Ünsüz benzeşmesi ilerleyici (kitapçı) ve gerileyici (mektup) yönlerde görülür.", "E) Morfem en küçük anlamlı birim; kök, gövde, çekim ve yapım ekleri ayırt edilir."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Dil Bilgisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Sıfat-fiil, zarf-fiil, isim-fiil eylemsi; cümlede isim/sıfat/zarf görevi alır, yargı bildi"],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Dil Bilgisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Nesne belirtili/belirtisiz; dolaylı tümleç -e/-de/-den; zarf tümleci zaman, durum, yer, mi", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Dil Bilgisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Devrik cümle yüklemi sonda olmayan; kurallı yüklemi sonda olan cümledir."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Dil Bilgisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Birleşik cümle birden fazla yargı; girişik birleşikte yan cümlecik temel cümleye eklenir.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Dil Bilgisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Eş anlamlılık tam örtüşmez; bağlam seçer (savaş/harp)."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Dil Bilgisi notundaki temel bilgi."
 }
 ];

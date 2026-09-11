@@ -55,69 +55,69 @@ window.oabt_sosyal_16_sorulari = [
     "explanation": "Yazma, sergi, tartışma, dijital ürün."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Sosyal bilgiler PCK disiplin bilgisi + öğrenci düşüncesi + yöntem + ölçme.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Sosyal bilgiler PCK için doğru bir açıklamadır?",
+    "options": ["A) Zaman-mekân-kanıt üçlüsü her temada.", "B) Tartışmalı konular (Hess) yansız değil adil; çoklu bakış, sınıf iklimi.", "C) Kaynak eleştirisi ders kitabının da bir anlatı olduğu.", "D) Sosyal bilgiler PCK disiplin bilgisi + öğrenci düşüncesi + yöntem + ölçme.", "E) Yaygın yanılgılar: tarih ezber, coğrafya yer listesi, vatandaşlık itaat, ekonomi zenginleşme vaazı."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Yaygın yanılgılar hakkında hangisi doğrudur?",
+    "options": ["A) Yaygın yanılgılar: tarih ezber, coğrafya yer listesi, vatandaşlık itaat, ekonomi zenginleşme vaazı.", "B) Sosyal bilgiler PCK disiplin bilgisi + öğrenci düşüncesi + yöntem + ölçme.", "C) Zaman-mekân-kanıt üçlüsü her temada.", "D) Tartışmalı konular (Hess) yansız değil adil; çoklu bakış, sınıf iklimi.", "E) Kaynak eleştirisi ders kitabının da bir anlatı olduğu."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Zaman-mekân-kanıt hangisini ifade eder?",
+    "options": ["A) Zaman-mekân-kanıt üçlüsü her temada.", "B) Sosyal bilgiler PCK disiplin bilgisi + öğrenci düşüncesi + yöntem + ölçme.", "C) Yaygın yanılgılar: tarih ezber, coğrafya yer listesi, vatandaşlık itaat, ekonomi zenginleşme vaazı.", "D) Tartışmalı konular (Hess) yansız değil adil; çoklu bakış, sınıf iklimi.", "E) Kaynak eleştirisi ders kitabının da bir anlatı olduğu."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Tartışmalı konular ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Yaygın yanılgılar: tarih ezber, coğrafya yer listesi, vatandaşlık itaat, ekonomi zenginleşme vaazı.", "B) Zaman-mekân-kanıt üçlüsü her temada.", "C) Kaynak eleştirisi ders kitabının da bir anlatı olduğu.", "D) Tartışmalı konular (Hess) yansız değil adil; çoklu bakış, sınıf iklimi.", "E) Sosyal bilgiler PCK disiplin bilgisi + öğrenci düşüncesi + yöntem + ölçme."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Kaynak eleştirisi için doğru bir açıklamadır?",
+    "options": ["A) Tartışmalı konular (Hess) yansız değil adil; çoklu bakış, sınıf iklimi.", "B) Kaynak eleştirisi ders kitabının da bir anlatı olduğu.", "C) Sosyal bilgiler PCK disiplin bilgisi + öğrenci düşüncesi + yöntem + ölçme.", "D) Yaygın yanılgılar: tarih ezber, coğrafya yer listesi, vatandaşlık itaat, ekonomi zenginleşme vaazı.", "E) Zaman-mekân-kanıt üçlüsü her temada."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Yaygın yanılgılar: tarih ezber, coğrafya yer listesi, vatandaşlık itaat, ekonomi zenginleş", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Zaman-mekân-kanıt üçlüsü her temada.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Sorgulama döngüsü hakkında hangisi doğrudur?",
+    "options": ["A) Tartışmalı konular (Hess) yansız değil adil; çoklu bakış, sınıf iklimi.", "B) Sorgulama döngüsü soru-kaynak-iddia-iletişim.", "C) Sosyal bilgiler PCK disiplin bilgisi + öğrenci düşüncesi + yöntem + ölçme.", "D) Yaygın yanılgılar: tarih ezber, coğrafya yer listesi, vatandaşlık itaat, ekonomi zenginleşme vaazı.", "E) Zaman-mekân-kanıt üçlüsü her temada."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Tartışmalı konular (Hess) yansız değil adil; çoklu bakış, sınıf iklimi.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Kanıt çantası hangisini ifade eder?",
+    "options": ["A) Kanıt çantası, kanıt temelli tarih dersi, sözlü tarih.", "B) Sosyal bilgiler PCK disiplin bilgisi + öğrenci düşüncesi + yöntem + ölçme.", "C) Yaygın yanılgılar: tarih ezber, coğrafya yer listesi, vatandaşlık itaat, ekonomi zenginleşme vaazı.", "D) Zaman-mekân-kanıt üçlüsü her temada.", "E) Tartışmalı konular (Hess) yansız değil adil; çoklu bakış, sınıf iklimi."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kaynak eleştirisi ders kitabının da bir anlatı olduğu.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Mekân ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Sosyal bilgiler PCK disiplin bilgisi + öğrenci düşüncesi + yöntem + ölçme.", "B) Yaygın yanılgılar: tarih ezber, coğrafya yer listesi, vatandaşlık itaat, ekonomi zenginleşme vaazı.", "C) Tartışmalı konular (Hess) yansız değil adil; çoklu bakış, sınıf iklimi.", "D) Kaynak eleştirisi ders kitabının da bir anlatı olduğu.", "E) Mekân: harita, CBS basit, saha, mahalle yürüyüşü."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Simülasyon, mahkeme, BM modeli için doğru bir açıklamadır?",
+    "options": ["A) Tartışmalı konular (Hess) yansız değil adil; çoklu bakış, sınıf iklimi.", "B) Simülasyon, mahkeme, BM modeli rol; debrief şart.", "C) Sosyal bilgiler PCK disiplin bilgisi + öğrenci düşüncesi + yöntem + ölçme.", "D) Yaygın yanılgılar: tarih ezber, coğrafya yer listesi, vatandaşlık itaat, ekonomi zenginleşme vaazı.", "E) Zaman-mekân-kanıt üçlüsü her temada."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Sorgulama döngüsü soru-kaynak-iddia-iletişim.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Dijital hakkında hangisi doğrudur?",
+    "options": ["A) Dijital güvenilir kaynak, telif, siber vatandaşlık.", "B) Sosyal bilgiler PCK disiplin bilgisi + öğrenci düşüncesi + yöntem + ölçme.", "C) Yaygın yanılgılar: tarih ezber, coğrafya yer listesi, vatandaşlık itaat, ekonomi zenginleşme vaazı.", "D) Zaman-mekân-kanıt üçlüsü her temada.", "E) Tartışmalı konular (Hess) yansız değil adil; çoklu bakış, sınıf iklimi."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kanıt çantası, kanıt temelli tarih dersi, sözlü tarih.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mekân: harita, CBS basit, saha, mahalle yürüyüşü.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Simülasyon, mahkeme, BM modeli rol; debrief şart.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Dijital güvenilir kaynak, telif, siber vatandaşlık.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Performans kanıt paragrafı, proje rubriği, tartışma gözlem.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Performans hangisini ifade eder?",
+    "options": ["A) Yaygın yanılgılar: tarih ezber, coğrafya yer listesi, vatandaşlık itaat, ekonomi zenginleşme vaazı.", "B) Zaman-mekân-kanıt üçlüsü her temada.", "C) Tartışmalı konular (Hess) yansız değil adil; çoklu bakış, sınıf iklimi.", "D) Performans kanıt paragrafı, proje rubriği, tartışma gözlem.", "E) Sosyal bilgiler PCK disiplin bilgisi + öğrenci düşüncesi + yöntem + ölçme."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 }
 ];

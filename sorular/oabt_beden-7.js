@@ -61,63 +61,63 @@ window.oabt_beden_7_sorulari = [
     "explanation": "Pedagoji."
 },
 {
-    "question": "Beden Eğitimi ve Spor konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Beden eğitimi tüm çocukların hareket okuryazarlığıdır; elit spor değildir.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Beden eğitimi için doğru bir açıklamadır?",
+    "options": ["A) MEB programı oyun, cimnastik, atletizm, takım, ritim, açık alan.", "B) Kapsayıcı BE engelli ve kız çocuk katılımı.", "C) Ölçme ürün (süre-mesafe) + süreç (çaba, fair play).", "D) Beden eğitimi tüm çocukların hareket okuryazarlığıdır; elit spor değildir.", "E) Hareket okuryazarlığı temel motor, özgüven, bilgi, yaşam boyu katılım."],
+    "correctAnswerIndex": 3,
+    "explanation": "Beden Eğitimi ve Spor notundaki temel bilgi."
+},
+{
+    "question": "Hareket okuryazarlığı hakkında hangisi doğrudur?",
+    "options": ["A) Hareket okuryazarlığı temel motor, özgüven, bilgi, yaşam boyu katılım.", "B) MEB programı oyun, cimnastik, atletizm, takım, ritim, açık alan.", "C) Kapsayıcı BE engelli ve kız çocuk katılımı.", "D) Ölçme ürün (süre-mesafe) + süreç (çaba, fair play).", "E) Oyun, alıştırma, istasyon, eşli, devre."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Beden Eğitimi ve Spor notundaki temel bilgi."
 },
 {
-    "question": "Beden Eğitimi ve Spor konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Hareket okuryazarlığı temel motor, özgüven, bilgi, yaşam boyu katılım.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "MEB programı hangisini ifade eder?",
+    "options": ["A) Kapsayıcı BE engelli ve kız çocuk katılımı.", "B) Ölçme ürün (süre-mesafe) + süreç (çaba, fair play).", "C) MEB programı oyun, cimnastik, atletizm, takım, ritim, açık alan.", "D) Beden eğitimi tüm çocukların hareket okuryazarlığıdır; elit spor değildir.", "E) Hareket okuryazarlığı temel motor, özgüven, bilgi, yaşam boyu katılım."],
+    "correctAnswerIndex": 2,
+    "explanation": "Beden Eğitimi ve Spor notundaki temel bilgi."
+},
+{
+    "question": "Kapsayıcı BE ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) MEB programı oyun, cimnastik, atletizm, takım, ritim, açık alan.", "B) Ölçme ürün (süre-mesafe) + süreç (çaba, fair play).", "C) Kapsayıcı BE engelli ve kız çocuk katılımı.", "D) Beden eğitimi tüm çocukların hareket okuryazarlığıdır; elit spor değildir.", "E) Hareket okuryazarlığı temel motor, özgüven, bilgi, yaşam boyu katılım."],
+    "correctAnswerIndex": 2,
+    "explanation": "Beden Eğitimi ve Spor notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Ölçme için doğru bir açıklamadır?",
+    "options": ["A) Hareket okuryazarlığı temel motor, özgüven, bilgi, yaşam boyu katılım.", "B) MEB programı oyun, cimnastik, atletizm, takım, ritim, açık alan.", "C) Kapsayıcı BE engelli ve kız çocuk katılımı.", "D) Ölçme ürün (süre-mesafe) + süreç (çaba, fair play).", "E) Beden eğitimi tüm çocukların hareket okuryazarlığıdır; elit spor değildir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Beden Eğitimi ve Spor notundaki temel bilgi."
+},
+{
+    "question": "Oyun, alıştırma, istasyon, eşli, devre hakkında hangisi doğrudur?",
+    "options": ["A) Hareket okuryazarlığı temel motor, özgüven, bilgi, yaşam boyu katılım.", "B) MEB programı oyun, cimnastik, atletizm, takım, ritim, açık alan.", "C) Kapsayıcı BE engelli ve kız çocuk katılımı.", "D) Oyun, alıştırma, istasyon, eşli, devre.", "E) Beden eğitimi tüm çocukların hareket okuryazarlığıdır; elit spor değildir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Beden Eğitimi ve Spor notundaki temel bilgi."
+},
+{
+    "question": "Komut, görev, problem çözme, keşfetme hangisini ifade eder?",
+    "options": ["A) Kapsayıcı BE engelli ve kız çocuk katılımı.", "B) Komut, görev, problem çözme, keşfetme (Mosston spektrumu).", "C) Beden eğitimi tüm çocukların hareket okuryazarlığıdır; elit spor değildir.", "D) Hareket okuryazarlığı temel motor, özgüven, bilgi, yaşam boyu katılım.", "E) MEB programı oyun, cimnastik, atletizm, takım, ritim, açık alan."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Beden Eğitimi ve Spor notundaki temel bilgi."
 },
 {
-    "question": "Beden Eğitimi ve Spor konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) MEB programı oyun, cimnastik, atletizm, takım, ritim, açık alan.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Güvenlik ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Hareket okuryazarlığı temel motor, özgüven, bilgi, yaşam boyu katılım.", "B) MEB programı oyun, cimnastik, atletizm, takım, ritim, açık alan.", "C) Kapsayıcı BE engelli ve kız çocuk katılımı.", "D) Güvenlik alan, malzeme, ısınma, sayı.", "E) Beden eğitimi tüm çocukların hareket okuryazarlığıdır; elit spor değildir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Beden Eğitimi ve Spor notundaki temel bilgi."
 },
 {
-    "question": "Beden Eğitimi ve Spor konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Kapsayıcı BE engelli ve kız çocuk katılımı.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Farklılaştırma için doğru bir açıklamadır?",
+    "options": ["A) Hareket okuryazarlığı temel motor, özgüven, bilgi, yaşam boyu katılım.", "B) MEB programı oyun, cimnastik, atletizm, takım, ritim, açık alan.", "C) Kapsayıcı BE engelli ve kız çocuk katılımı.", "D) Farklılaştırma görev basitleştirme, kural uyarlama.", "E) Beden eğitimi tüm çocukların hareket okuryazarlığıdır; elit spor değildir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Beden Eğitimi ve Spor notundaki temel bilgi."
 },
 {
-    "question": "Beden Eğitimi ve Spor konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Ölçme ürün (süre-mesafe) + süreç (çaba, fair play).", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Beden Eğitimi ve Spor konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Oyun, alıştırma, istasyon, eşli, devre.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Beden Eğitimi ve Spor konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Komut, görev, problem çözme, keşfetme (Mosston spektrumu).", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Beden Eğitimi ve Spor konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Güvenlik alan, malzeme, ısınma, sayı.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Beden Eğitimi ve Spor konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Farklılaştırma görev basitleştirme, kural uyarlama.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Beden Eğitimi ve Spor konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Disiplin aşağılama ve ceza turu eğitim dışıdır.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Disiplin hakkında hangisi doğrudur?",
+    "options": ["A) MEB programı oyun, cimnastik, atletizm, takım, ritim, açık alan.", "B) Kapsayıcı BE engelli ve kız çocuk katılımı.", "C) Disiplin aşağılama ve ceza turu eğitim dışıdır.", "D) Beden eğitimi tüm çocukların hareket okuryazarlığıdır; elit spor değildir.", "E) Hareket okuryazarlığı temel motor, özgüven, bilgi, yaşam boyu katılım."],
+    "correctAnswerIndex": 2,
+    "explanation": "Beden Eğitimi ve Spor notundaki temel bilgi."
 }
 ];

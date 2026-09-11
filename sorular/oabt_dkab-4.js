@@ -61,63 +61,63 @@ window.oabt_dkab_4_sorulari = [
     "explanation": "Bütüncül peygamber tasavvuru gerekir."
 },
 {
-    "question": "Siyer konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Cahiliye kabile asabiyeti, put, şiir ve ticaret (Mekke-Şam).", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Cahiliye için doğru bir açıklamadır?",
+    "options": ["A) Davet gizli-açık; boykot, Taif, İsra-Mirac rivayetleri.", "B) Hicret Habeş ve Medine (622); hicri takvim başlangıcı.", "C) Akabe biatları Medine'de siyasi-dini dayanışma eşiği.", "D) Cahiliye kabile asabiyeti, put, şiir ve ticaret (Mekke-Şam).", "E) Biset 40 yaş; ilk vahiy Hira; ilk Müslümanlar."],
+    "correctAnswerIndex": 3,
+    "explanation": "Siyer notundaki temel bilgi."
 },
 {
-    "question": "Siyer konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Biset 40 yaş; ilk vahiy Hira; ilk Müslümanlar.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Biset hakkında hangisi doğrudur?",
+    "options": ["A) Hicret Habeş ve Medine (622); hicri takvim başlangıcı.", "B) Akabe biatları Medine'de siyasi-dini dayanışma eşiği.", "C) Biset 40 yaş; ilk vahiy Hira; ilk Müslümanlar.", "D) Cahiliye kabile asabiyeti, put, şiir ve ticaret (Mekke-Şam).", "E) Davet gizli-açık; boykot, Taif, İsra-Mirac rivayetleri."],
+    "correctAnswerIndex": 2,
+    "explanation": "Siyer notundaki temel bilgi."
+},
+{
+    "question": "Davet hangisini ifade eder?",
+    "options": ["A) Akabe biatları Medine'de siyasi-dini dayanışma eşiği.", "B) Davet gizli-açık; boykot, Taif, İsra-Mirac rivayetleri.", "C) Cahiliye kabile asabiyeti, put, şiir ve ticaret (Mekke-Şam).", "D) Biset 40 yaş; ilk vahiy Hira; ilk Müslümanlar.", "E) Hicret Habeş ve Medine (622); hicri takvim başlangıcı."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Siyer notundaki temel bilgi."
 },
 {
-    "question": "Siyer konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Davet gizli-açık; boykot, Taif, İsra-Mirac rivayetleri.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Hicret Habeş ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Davet gizli-açık; boykot, Taif, İsra-Mirac rivayetleri.", "B) Akabe biatları Medine'de siyasi-dini dayanışma eşiği.", "C) Hicret Habeş ve Medine (622); hicri takvim başlangıcı.", "D) Cahiliye kabile asabiyeti, put, şiir ve ticaret (Mekke-Şam).", "E) Biset 40 yaş; ilk vahiy Hira; ilk Müslümanlar."],
+    "correctAnswerIndex": 2,
+    "explanation": "Siyer notundaki temel bilgi."
 },
 {
-    "question": "Siyer konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Hicret Habeş ve Medine (622); hicri takvim başlangıcı.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Akabe biatları için doğru bir açıklamadır?",
+    "options": ["A) Hicret Habeş ve Medine (622); hicri takvim başlangıcı.", "B) Akabe biatları Medine'de siyasi-dini dayanışma eşiği.", "C) Cahiliye kabile asabiyeti, put, şiir ve ticaret (Mekke-Şam).", "D) Biset 40 yaş; ilk vahiy Hira; ilk Müslümanlar.", "E) Davet gizli-açık; boykot, Taif, İsra-Mirac rivayetleri."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Siyer notundaki temel bilgi."
 },
 {
-    "question": "Siyer konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Akabe biatları Medine'de siyasi-dini dayanışma eşiği.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Mescid, kardeşleştirme, Medine vesikası hakkında hangisi doğrudur?",
+    "options": ["A) Davet gizli-açık; boykot, Taif, İsra-Mirac rivayetleri.", "B) Hicret Habeş ve Medine (622); hicri takvim başlangıcı.", "C) Mescid, kardeşleştirme, Medine vesikası toplum inşası.", "D) Cahiliye kabile asabiyeti, put, şiir ve ticaret (Mekke-Şam).", "E) Biset 40 yaş; ilk vahiy Hira; ilk Müslümanlar."],
+    "correctAnswerIndex": 2,
+    "explanation": "Siyer notundaki temel bilgi."
 },
 {
-    "question": "Siyer konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mescid, kardeşleştirme, Medine vesikası toplum inşası.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Bedir, Uhud, Hendek hangisini ifade eder?",
+    "options": ["A) Hicret Habeş ve Medine (622); hicri takvim başlangıcı.", "B) Bedir, Uhud, Hendek savunma ve disiplin dersleri.", "C) Cahiliye kabile asabiyeti, put, şiir ve ticaret (Mekke-Şam).", "D) Biset 40 yaş; ilk vahiy Hira; ilk Müslümanlar.", "E) Davet gizli-açık; boykot, Taif, İsra-Mirac rivayetleri."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Siyer notundaki temel bilgi."
 },
 {
-    "question": "Siyer konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Bedir, Uhud, Hendek savunma ve disiplin dersleri.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Hudeybiye ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Cahiliye kabile asabiyeti, put, şiir ve ticaret (Mekke-Şam).", "B) Biset 40 yaş; ilk vahiy Hira; ilk Müslümanlar.", "C) Davet gizli-açık; boykot, Taif, İsra-Mirac rivayetleri.", "D) Hicret Habeş ve Medine (622); hicri takvim başlangıcı.", "E) Hudeybiye diplomatik zafer; Mekke'nin fethi af vurgusu."],
+    "correctAnswerIndex": 4,
+    "explanation": "Siyer notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Huneyn, Taif, Tebük için doğru bir açıklamadır?",
+    "options": ["A) Biset 40 yaş; ilk vahiy Hira; ilk Müslümanlar.", "B) Davet gizli-açık; boykot, Taif, İsra-Mirac rivayetleri.", "C) Hicret Habeş ve Medine (622); hicri takvim başlangıcı.", "D) Huneyn, Taif, Tebük; kabile İslam'ı ve elçiler.", "E) Cahiliye kabile asabiyeti, put, şiir ve ticaret (Mekke-Şam)."],
+    "correctAnswerIndex": 3,
+    "explanation": "Siyer notundaki temel bilgi."
+},
+{
+    "question": "Veda Haccı ve Hutbesi hakkında hangisi doğrudur?",
+    "options": ["A) Veda Haccı ve Hutbesi can, mal, ırz, kadın hakları, ırk reddi.", "B) Cahiliye kabile asabiyeti, put, şiir ve ticaret (Mekke-Şam).", "C) Biset 40 yaş; ilk vahiy Hira; ilk Müslümanlar.", "D) Davet gizli-açık; boykot, Taif, İsra-Mirac rivayetleri.", "E) Hicret Habeş ve Medine (622); hicri takvim başlangıcı."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Siyer konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Hudeybiye diplomatik zafer; Mekke'nin fethi af vurgusu.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Siyer konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Huneyn, Taif, Tebük; kabile İslam'ı ve elçiler.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Siyer konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Veda Haccı ve Hutbesi can, mal, ırz, kadın hakları, ırk reddi.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Siyer notundaki temel bilgi."
 }
 ];

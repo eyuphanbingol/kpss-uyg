@@ -61,63 +61,63 @@ window.oabt_tarih_5_sorulari = [
     "explanation": "Muhtesip klasik şehir denetçisidir."
 },
 {
-    "question": "Orta Çağ İslam Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Hulefa-i Raşidin dört halife; fetih, hilafet tartışması ve Cemel-Sıffin fitnesi.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Hulefa-i Raşidin için doğru bir açıklamadır?",
+    "options": ["A) Endülüs Emevi Kurtuba; bilim ve çok dinli şehir hayatı.", "B) Fatımi İsmailî-Şii Kuzey Afrika-Mısır; Kahire ve Ezher.", "C) Hulefa-i Raşidin dört halife; fetih, hilafet tartışması ve Cemel-Sıffin fitnesi.", "D) Emevi Şam merkezi, saltanata dönüş, Kuzey Afrika-Endülüs açılımı.", "E) Abbasi Bağdat, vezirlik, çeviri hareketi ve eski İran bürokrasi etkisi."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Orta Çağ İslam Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Orta Çağ İslam Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Emevi Şam merkezi, saltanata dönüş, Kuzey Afrika-Endülüs açılımı."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Endülüs Emevi ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Endülüs Emevi Kurtuba; bilim ve çok dinli şehir hayatı.", "B) Hulefa-i Raşidin dört halife; fetih, hilafet tartışması ve Cemel-Sıffin fitnesi.", "C) Emevi Şam merkezi, saltanata dönüş, Kuzey Afrika-Endülüs açılımı.", "D) Abbasi Bağdat, vezirlik, çeviri hareketi ve eski İran bürokrasi etkisi.", "E) Fatımi İsmailî-Şii Kuzey Afrika-Mısır; Kahire ve Ezher."],
+    "correctAnswerIndex": 0,
+    "explanation": "Orta Çağ İslam Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Orta Çağ İslam Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Abbasi Bağdat, vezirlik, çeviri hareketi ve eski İran bürokrasi etkisi.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Ehl-i Sünnet, Şia, Harici hakkında hangisi doğrudur?",
+    "options": ["A) Hulefa-i Raşidin dört halife; fetih, hilafet tartışması ve Cemel-Sıffin fitnesi.", "B) Emevi Şam merkezi, saltanata dönüş, Kuzey Afrika-Endülüs açılımı.", "C) Abbasi Bağdat, vezirlik, çeviri hareketi ve eski İran bürokrasi etkisi.", "D) Endülüs Emevi Kurtuba; bilim ve çok dinli şehir hayatı.", "E) Ehl-i Sünnet, Şia, Harici siyasal-itikadi ayrışmanın erken halkalarıdır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Orta Çağ İslam Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Haçlı seferleri hangisini ifade eder?",
+    "options": ["A) Haçlı seferleri Doğu Akdeniz'de Latin devletçikleri ve cihat-cihad söylemi.", "B) Hulefa-i Raşidin dört halife; fetih, hilafet tartışması ve Cemel-Sıffin fitnesi.", "C) Emevi Şam merkezi, saltanata dönüş, Kuzey Afrika-Endülüs açılımı.", "D) Abbasi Bağdat, vezirlik, çeviri hareketi ve eski İran bürokrasi etkisi.", "E) Endülüs Emevi Kurtuba; bilim ve çok dinli şehir hayatı."],
+    "correctAnswerIndex": 0,
+    "explanation": "Orta Çağ İslam Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Memlük için doğru bir açıklamadır?",
+    "options": ["A) Abbasi Bağdat, vezirlik, çeviri hareketi ve eski İran bürokrasi etkisi.", "B) Endülüs Emevi Kurtuba; bilim ve çok dinli şehir hayatı.", "C) Memlük Ayn Calut (1260) Moğol durdurulması; hilafeti Kahire'de sembolik tutma.", "D) Hulefa-i Raşidin dört halife; fetih, hilafet tartışması ve Cemel-Sıffin fitnesi.", "E) Emevi Şam merkezi, saltanata dönüş, Kuzey Afrika-Endülüs açılımı."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Orta Çağ İslam Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Orta Çağ İslam Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Endülüs Emevi Kurtuba; bilim ve çok dinli şehir hayatı."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Orta Çağ İslam Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Fatımi İsmailî-Şii Kuzey Afrika-Mısır; Kahire ve Ezher.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Selçuklu ve atabeylikler hakkında hangisi doğrudur?",
+    "options": ["A) Abbasi Bağdat, vezirlik, çeviri hareketi ve eski İran bürokrasi etkisi.", "B) Endülüs Emevi Kurtuba; bilim ve çok dinli şehir hayatı.", "C) Selçuklu ve atabeylikler İslam coğrafyasında Türk-İslam siyasetini öne çıkarır.", "D) Hulefa-i Raşidin dört halife; fetih, hilafet tartışması ve Cemel-Sıffin fitnesi.", "E) Emevi Şam merkezi, saltanata dönüş, Kuzey Afrika-Endülüs açılımı."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Orta Çağ İslam Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Orta Çağ İslam Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Ehl-i Sünnet, Şia, Harici siyasal-itikadi ayrışmanın erken halkalarıdır."],
+    "question": "Medrese, vakıf, hisbe, kadılık hangisini ifade eder?",
+    "options": ["A) Emevi Şam merkezi, saltanata dönüş, Kuzey Afrika-Endülüs açılımı.", "B) Abbasi Bağdat, vezirlik, çeviri hareketi ve eski İran bürokrasi etkisi.", "C) Endülüs Emevi Kurtuba; bilim ve çok dinli şehir hayatı.", "D) Medrese, vakıf, hisbe, kadılık şehir yönetiminin omurgasıdır.", "E) Hulefa-i Raşidin dört halife; fetih, hilafet tartışması ve Cemel-Sıffin fitnesi."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Orta Çağ İslam Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Orta Çağ İslam Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Haçlı seferleri Doğu Akdeniz'de Latin devletçikleri ve cihat-cihad söylemi.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Beytülmal ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Abbasi Bağdat, vezirlik, çeviri hareketi ve eski İran bürokrasi etkisi.", "B) Endülüs Emevi Kurtuba; bilim ve çok dinli şehir hayatı.", "C) Beytülmal kamu maliyesi; cizye-haraç-öşür vergi dilimleri.", "D) Hulefa-i Raşidin dört halife; fetih, hilafet tartışması ve Cemel-Sıffin fitnesi.", "E) Emevi Şam merkezi, saltanata dönüş, Kuzey Afrika-Endülüs açılımı."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Orta Çağ İslam Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Orta Çağ İslam Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Moğol 1258 Bağdat; Abbasi fiili sonu, İlhanlı ve Memlük direnişi."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Orta Çağ İslam Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Memlük Ayn Calut (1260) Moğol durdurulması; hilafeti Kahire'de sembolik tutma.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Çeviri hareketi için doğru bir açıklamadır?",
+    "options": ["A) Endülüs Emevi Kurtuba; bilim ve çok dinli şehir hayatı.", "B) Fatımi İsmailî-Şii Kuzey Afrika-Mısır; Kahire ve Ezher.", "C) Çeviri hareketi Yunanca-Süryanice eserlerin Arapçaya aktarımı.", "D) Hulefa-i Raşidin dört halife; fetih, hilafet tartışması ve Cemel-Sıffin fitnesi.", "E) Emevi Şam merkezi, saltanata dönüş, Kuzey Afrika-Endülüs açılımı."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Orta Çağ İslam Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Orta Çağ İslam Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Selçuklu ve atabeylikler İslam coğrafyasında Türk-İslam siyasetini öne çıkarır."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Tasavvuf hakkında hangisi doğrudur?",
+    "options": ["A) Abbasi Bağdat, vezirlik, çeviri hareketi ve eski İran bürokrasi etkisi.", "B) Endülüs Emevi Kurtuba; bilim ve çok dinli şehir hayatı.", "C) Tasavvuf tekkelerle toplumsal İslam'ı yayar.", "D) Hulefa-i Raşidin dört halife; fetih, hilafet tartışması ve Cemel-Sıffin fitnesi.", "E) Emevi Şam merkezi, saltanata dönüş, Kuzey Afrika-Endülüs açılımı."],
+    "correctAnswerIndex": 2,
+    "explanation": "Orta Çağ İslam Tarihi notundaki temel bilgi."
 }
 ];

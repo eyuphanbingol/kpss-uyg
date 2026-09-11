@@ -55,69 +55,69 @@ window.oabt_fen_5_sorulari = [
     "explanation": "RA sağ açıklık, saat açısı gibi."
 },
 {
-    "question": "Astronomi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Güneş hidrojen füzyonu; spektrum soğurma çizgileri bileşim.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi Güneş için doğru bir açıklamadır?",
+    "options": ["A) Dünya hareketi dönme gün, dolanma yıl, eksen eğikliği mevsim (uzaklık değil).", "B) Güneş hidrojen füzyonu; spektrum soğurma çizgileri bileşim.", "C) Gezegen iç kaya, dış gaz; Kepler: elips, eşit alan, T^2 ∝ a^3.", "D) Ay evreleri gölge geometrisi; tutulma düğüm hizası.", "E) Meteor-asteroit-kuyrukluyıldız buz-toz; gezegenimsi oluşum diski."],
+    "correctAnswerIndex": 1,
+    "explanation": "Astronomi notundaki temel bilgi."
+},
+{
+    "question": "Gezegen hakkında hangisi doğrudur?",
+    "options": ["A) HR diyagramı spektral sınıf ve parlaklık; ana kol hidrojen yakımı.", "B) Gezegen iç kaya, dış gaz; Kepler: elips, eşit alan, T^2 ∝ a^3.", "C) Güneş hidrojen füzyonu; spektrum soğurma çizgileri bileşim.", "D) Ay evreleri gölge geometrisi; tutulma düğüm hizası.", "E) Dünya hareketi dönme gün, dolanma yıl, eksen eğikliği mevsim (uzaklık değil)."],
+    "correctAnswerIndex": 1,
+    "explanation": "Astronomi notundaki temel bilgi."
+},
+{
+    "question": "Ay hangisini ifade eder?",
+    "options": ["A) Ay evreleri gölge geometrisi; tutulma düğüm hizası.", "B) Güneş hidrojen füzyonu; spektrum soğurma çizgileri bileşim.", "C) Gezegen iç kaya, dış gaz; Kepler: elips, eşit alan, T^2 ∝ a^3.", "D) Meteor-asteroit-kuyrukluyıldız buz-toz; gezegenimsi oluşum diski.", "E) Dünya hareketi dönme gün, dolanma yıl, eksen eğikliği mevsim (uzaklık değil)."],
+    "correctAnswerIndex": 0,
+    "explanation": "Astronomi notundaki temel bilgi."
+},
+{
+    "question": "Meteor-asteroit-kuyrukluyıldız ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Dünya hareketi dönme gün, dolanma yıl, eksen eğikliği mevsim (uzaklık değil).", "B) Meteor-asteroit-kuyrukluyıldız buz-toz; gezegenimsi oluşum diski.", "C) Güneş hidrojen füzyonu; spektrum soğurma çizgileri bileşim.", "D) Gezegen iç kaya, dış gaz; Kepler: elips, eşit alan, T^2 ∝ a^3.", "E) Ay evreleri gölge geometrisi; tutulma düğüm hizası."],
+    "correctAnswerIndex": 1,
+    "explanation": "Astronomi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Dünya hareketi için doğru bir açıklamadır?",
+    "options": ["A) Meteor-asteroit-kuyrukluyıldız buz-toz; gezegenimsi oluşum diski.", "B) Dünya hareketi dönme gün, dolanma yıl, eksen eğikliği mevsim (uzaklık değil).", "C) Güneş hidrojen füzyonu; spektrum soğurma çizgileri bileşim.", "D) Gezegen iç kaya, dış gaz; Kepler: elips, eşit alan, T^2 ∝ a^3.", "E) Ay evreleri gölge geometrisi; tutulma düğüm hizası."],
+    "correctAnswerIndex": 1,
+    "explanation": "Astronomi notundaki temel bilgi."
+},
+{
+    "question": "HR diyagramı hakkında hangisi doğrudur?",
+    "options": ["A) Gezegen iç kaya, dış gaz; Kepler: elips, eşit alan, T^2 ∝ a^3.", "B) Ay evreleri gölge geometrisi; tutulma düğüm hizası.", "C) Meteor-asteroit-kuyrukluyıldız buz-toz; gezegenimsi oluşum diski.", "D) HR diyagramı spektral sınıf ve parlaklık; ana kol hidrojen yakımı.", "E) Güneş hidrojen füzyonu; spektrum soğurma çizgileri bileşim."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Astronomi notundaki temel bilgi."
 },
 {
-    "question": "Astronomi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gezegen iç kaya, dış gaz; Kepler: elips, eşit alan, T^2 ∝ a^3.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Astronomi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Ay evreleri gölge geometrisi; tutulma düğüm hizası.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Yıldız evrimi hangisini ifade eder?",
+    "options": ["A) Gezegen iç kaya, dış gaz; Kepler: elips, eşit alan, T^2 ∝ a^3.", "B) Ay evreleri gölge geometrisi; tutulma düğüm hizası.", "C) Meteor-asteroit-kuyrukluyıldız buz-toz; gezegenimsi oluşum diski.", "D) Yıldız evrimi kütle kaderi: beyaz cüce, nötron, kara delik.", "E) Güneş hidrojen füzyonu; spektrum soğurma çizgileri bileşim."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Astronomi notundaki temel bilgi."
 },
 {
-    "question": "Astronomi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Meteor-asteroit-kuyrukluyıldız buz-toz; gezegenimsi oluşum diski.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Astronomi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Dünya hareketi dönme gün, dolanma yıl, eksen eğikliği mevsim (uzaklık değil).", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Işık yılı ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Gezegen iç kaya, dış gaz; Kepler: elips, eşit alan, T^2 ∝ a^3.", "B) Ay evreleri gölge geometrisi; tutulma düğüm hizası.", "C) Meteor-asteroit-kuyrukluyıldız buz-toz; gezegenimsi oluşum diski.", "D) Işık yılı uzaklık; parsek, kırmızıya kayma kozmolojik genişleme.", "E) Güneş hidrojen füzyonu; spektrum soğurma çizgileri bileşim."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Astronomi notundaki temel bilgi."
 },
 {
-    "question": "Astronomi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) HR diyagramı spektral sınıf ve parlaklık; ana kol hidrojen yakımı.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Astronomi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Yıldız evrimi kütle kaderi: beyaz cüce, nötron, kara delik.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi Samanyolu için doğru bir açıklamadır?",
+    "options": ["A) Gezegen iç kaya, dış gaz; Kepler: elips, eşit alan, T^2 ∝ a^3.", "B) Ay evreleri gölge geometrisi; tutulma düğüm hizası.", "C) Meteor-asteroit-kuyrukluyıldız buz-toz; gezegenimsi oluşum diski.", "D) Samanyolu sarmal; karanlık madde dönüş eğrisi.", "E) Güneş hidrojen füzyonu; spektrum soğurma çizgileri bileşim."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Astronomi notundaki temel bilgi."
 },
 {
-    "question": "Astronomi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Işık yılı uzaklık; parsek, kırmızıya kayma kozmolojik genişleme.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Büyük Patlama hakkında hangisi doğrudur?",
+    "options": ["A) Meteor-asteroit-kuyrukluyıldız buz-toz; gezegenimsi oluşum diski.", "B) Büyük Patlama evrenin genişlemesi; CMB kanıt.", "C) Güneş hidrojen füzyonu; spektrum soğurma çizgileri bileşim.", "D) Gezegen iç kaya, dış gaz; Kepler: elips, eşit alan, T^2 ∝ a^3.", "E) Ay evreleri gölge geometrisi; tutulma düğüm hizası."],
+    "correctAnswerIndex": 1,
+    "explanation": "Astronomi notundaki temel bilgi."
 },
 {
-    "question": "Astronomi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Samanyolu sarmal; karanlık madde dönüş eğrisi.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Astronomi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Büyük Patlama evrenin genişlemesi; CMB kanıt.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Astronomi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Koordinat ufuk (azimut-yükseklik), ekvatoral (RA-Dec).", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Koordinat hangisini ifade eder?",
+    "options": ["A) Ay evreleri gölge geometrisi; tutulma düğüm hizası.", "B) Meteor-asteroit-kuyrukluyıldız buz-toz; gezegenimsi oluşum diski.", "C) Koordinat ufuk (azimut-yükseklik), ekvatoral (RA-Dec).", "D) Güneş hidrojen füzyonu; spektrum soğurma çizgileri bileşim.", "E) Gezegen iç kaya, dış gaz; Kepler: elips, eşit alan, T^2 ∝ a^3."],
+    "correctAnswerIndex": 2,
+    "explanation": "Astronomi notundaki temel bilgi."
 }
 ];

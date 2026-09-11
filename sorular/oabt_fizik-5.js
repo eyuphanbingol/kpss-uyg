@@ -55,69 +55,69 @@ window.oabt_fizik_5_sorulari = [
     "explanation": "Nernst."
 },
 {
-    "question": "Termodinamik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) 0. yasa ısıl denge geçişken; sıcaklık tanımı.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi 0. yasa için doğru bir açıklamadır?",
+    "options": ["A) 0. yasa ısıl denge geçişken; sıcaklık tanımı.", "B) 1. yasa ΔU=Q-W (işaret uzlaşısı netleştirilir); U hâl fonksiyonu.", "C) 2. yasa Kelvin-Planck ve Clausius ifadeleri; entropi ΔS≥∫dQ/T.", "D) 3. yasa T→0'da S→sabit (Planck: kristalde 0); mutlak sıfır ulaşılamaz.", "E) Isı sığası C=dQ/dT; Cp-Cv=nR ideal gaz."],
+    "correctAnswerIndex": 0,
+    "explanation": "Termodinamik notundaki temel bilgi."
 },
 {
-    "question": "Termodinamik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) 1. yasa ΔU=Q-W (işaret uzlaşısı netleştirilir); U hâl fonksiyonu."],
+    "question": "1. yasa hakkında hangisi doğrudur?",
+    "options": ["A) 2. yasa Kelvin-Planck ve Clausius ifadeleri; entropi ΔS≥∫dQ/T.", "B) 3. yasa T→0'da S→sabit (Planck: kristalde 0); mutlak sıfır ulaşılamaz.", "C) Isı sığası C=dQ/dT; Cp-Cv=nR ideal gaz.", "D) 1. yasa ΔU=Q-W (işaret uzlaşısı netleştirilir); U hâl fonksiyonu.", "E) 0. yasa ısıl denge geçişken; sıcaklık tanımı."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Termodinamik notundaki temel bilgi."
 },
 {
-    "question": "Termodinamik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) 2. yasa Kelvin-Planck ve Clausius ifadeleri; entropi ΔS≥∫dQ/T.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Termodinamik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) 3. yasa T→0'da S→sabit (Planck: kristalde 0); mutlak sıfır ulaşılamaz."],
+    "question": "2. yasa hangisini ifade eder?",
+    "options": ["A) 1. yasa ΔU=Q-W (işaret uzlaşısı netleştirilir); U hâl fonksiyonu.", "B) 3. yasa T→0'da S→sabit (Planck: kristalde 0); mutlak sıfır ulaşılamaz.", "C) Isı sığası C=dQ/dT; Cp-Cv=nR ideal gaz.", "D) 2. yasa Kelvin-Planck ve Clausius ifadeleri; entropi ΔS≥∫dQ/T.", "E) 0. yasa ısıl denge geçişken; sıcaklık tanımı."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Termodinamik notundaki temel bilgi."
 },
 {
-    "question": "Termodinamik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Isı sığası C=dQ/dT; Cp-Cv=nR ideal gaz.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "3. yasa ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Isı sığası C=dQ/dT; Cp-Cv=nR ideal gaz.", "B) 3. yasa T→0'da S→sabit (Planck: kristalde 0); mutlak sıfır ulaşılamaz.", "C) 0. yasa ısıl denge geçişken; sıcaklık tanımı.", "D) 1. yasa ΔU=Q-W (işaret uzlaşısı netleştirilir); U hâl fonksiyonu.", "E) 2. yasa Kelvin-Planck ve Clausius ifadeleri; entropi ΔS≥∫dQ/T."],
+    "correctAnswerIndex": 1,
+    "explanation": "Termodinamik notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Isı sığası için doğru bir açıklamadır?",
+    "options": ["A) 2. yasa Kelvin-Planck ve Clausius ifadeleri; entropi ΔS≥∫dQ/T.", "B) 3. yasa T→0'da S→sabit (Planck: kristalde 0); mutlak sıfır ulaşılamaz.", "C) Isı sığası C=dQ/dT; Cp-Cv=nR ideal gaz.", "D) 0. yasa ısıl denge geçişken; sıcaklık tanımı.", "E) 1. yasa ΔU=Q-W (işaret uzlaşısı netleştirilir); U hâl fonksiyonu."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Termodinamik notundaki temel bilgi."
 },
 {
-    "question": "Termodinamik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) İzotermal, izobarik, izokorik, adyabatik PV^γ=sabit adyabatte."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "İzotermal, izobarik, izokorik, adyabatik hakkında hangisi doğrudur?",
+    "options": ["A) 3. yasa T→0'da S→sabit (Planck: kristalde 0); mutlak sıfır ulaşılamaz.", "B) İzotermal, izobarik, izokorik, adyabatik PV^γ=sabit adyabatte.", "C) 0. yasa ısıl denge geçişken; sıcaklık tanımı.", "D) 1. yasa ΔU=Q-W (işaret uzlaşısı netleştirilir); U hâl fonksiyonu.", "E) 2. yasa Kelvin-Planck ve Clausius ifadeleri; entropi ΔS≥∫dQ/T."],
+    "correctAnswerIndex": 1,
+    "explanation": "Termodinamik notundaki temel bilgi."
 },
 {
-    "question": "Termodinamik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Carnot η=1-Tc/Th; tüm tersinir makineler aynı verim (Th,Tc).", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Carnot hangisini ifade eder?",
+    "options": ["A) 3. yasa T→0'da S→sabit (Planck: kristalde 0); mutlak sıfır ulaşılamaz.", "B) Carnot η=1-Tc/Th; tüm tersinir makineler aynı verim (Th,Tc).", "C) 0. yasa ısıl denge geçişken; sıcaklık tanımı.", "D) 1. yasa ΔU=Q-W (işaret uzlaşısı netleştirilir); U hâl fonksiyonu.", "E) 2. yasa Kelvin-Planck ve Clausius ifadeleri; entropi ΔS≥∫dQ/T."],
+    "correctAnswerIndex": 1,
+    "explanation": "Termodinamik notundaki temel bilgi."
+},
+{
+    "question": "Buzdolabı ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) 3. yasa T→0'da S→sabit (Planck: kristalde 0); mutlak sıfır ulaşılamaz.", "B) Buzdolabı COP=Qc/W; ısı pompası Qh/W.", "C) 0. yasa ısıl denge geçişken; sıcaklık tanımı.", "D) 1. yasa ΔU=Q-W (işaret uzlaşısı netleştirilir); U hâl fonksiyonu.", "E) 2. yasa Kelvin-Planck ve Clausius ifadeleri; entropi ΔS≥∫dQ/T."],
+    "correctAnswerIndex": 1,
+    "explanation": "Termodinamik notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Serbest genleşme için doğru bir açıklamadır?",
+    "options": ["A) 2. yasa Kelvin-Planck ve Clausius ifadeleri; entropi ΔS≥∫dQ/T.", "B) 3. yasa T→0'da S→sabit (Planck: kristalde 0); mutlak sıfır ulaşılamaz.", "C) Serbest genleşme W=0,Q=0 ⇒ ΔU=0 ideal gazda T sabit, S artar.", "D) 0. yasa ısıl denge geçişken; sıcaklık tanımı.", "E) 1. yasa ΔU=Q-W (işaret uzlaşısı netleştirilir); U hâl fonksiyonu."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Termodinamik notundaki temel bilgi."
 },
 {
-    "question": "Termodinamik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Buzdolabı COP=Qc/W; ısı pompası Qh/W."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Hâl değişimi hakkında hangisi doğrudur?",
+    "options": ["A) 0. yasa ısıl denge geçişken; sıcaklık tanımı.", "B) 1. yasa ΔU=Q-W (işaret uzlaşısı netleştirilir); U hâl fonksiyonu.", "C) 2. yasa Kelvin-Planck ve Clausius ifadeleri; entropi ΔS≥∫dQ/T.", "D) 3. yasa T→0'da S→sabit (Planck: kristalde 0); mutlak sıfır ulaşılamaz.", "E) Hâl değişimi gizli ısı, Clapeyron dP/dT=L/(TΔV)."],
+    "correctAnswerIndex": 4,
+    "explanation": "Termodinamik notundaki temel bilgi."
 },
 {
-    "question": "Termodinamik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Serbest genleşme W=0,Q=0 ⇒ ΔU=0 ideal gazda T sabit, S artar.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Termodinamik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Hâl değişimi gizli ısı, Clapeyron dP/dT=L/(TΔV)."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Termodinamik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Kinetik kuram (1/2)m v_rms^2 = (3/2) kT bir serbestlik üç boyutta.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Kinetik kuram hangisini ifade eder?",
+    "options": ["A) 3. yasa T→0'da S→sabit (Planck: kristalde 0); mutlak sıfır ulaşılamaz.", "B) Kinetik kuram (1/2)m v_rms^2 = (3/2) kT bir serbestlik üç boyutta.", "C) 0. yasa ısıl denge geçişken; sıcaklık tanımı.", "D) 1. yasa ΔU=Q-W (işaret uzlaşısı netleştirilir); U hâl fonksiyonu.", "E) 2. yasa Kelvin-Planck ve Clausius ifadeleri; entropi ΔS≥∫dQ/T."],
+    "correctAnswerIndex": 1,
+    "explanation": "Termodinamik notundaki temel bilgi."
 }
 ];

@@ -61,63 +61,63 @@ window.oabt_okul_16_sorulari = [
     "explanation": "Sınıf öğretmenliği ile aynı 50'lik yapı notu."
 },
 {
-    "question": "Alan Eğitimi ve Değerlendirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Otantik, sürekli, gelişimsel değerlendirme; not harfi değildir."],
+    "question": "Aşağıdakilerden hangisi Otantik, sürekli, gelişimsel için doğru bir açıklamadır?",
+    "options": ["A) TYMM yetkinlik dili izlenir; resmi madde uydurulmaz.", "B) Otantik, sürekli, gelişimsel değerlendirme; not harfi değildir.", "C) Gözlem, ürün dosyası, gelişim raporu, aile görüşmesi.", "D) Program döngüsü değerlendir-planla.", "E) 2026 20 soruluk alan eğitimi ölçme-program-yöntem yoğundur."],
+    "correctAnswerIndex": 1,
+    "explanation": "Alan Eğitimi ve Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "Gözlem, ürün dosyası, gelişim raporu, aile görüşmesi hakkında hangisi doğrudur?",
+    "options": ["A) Program döngüsü değerlendir-planla.", "B) 2026 20 soruluk alan eğitimi ölçme-program-yöntem yoğundur.", "C) TYMM yetkinlik dili izlenir; resmi madde uydurulmaz.", "D) Gözlem, ürün dosyası, gelişim raporu, aile görüşmesi.", "E) Otantik, sürekli, gelişimsel değerlendirme; not harfi değildir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi ve Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "Program döngüsü hangisini ifade eder?",
+    "options": ["A) Gözlem, ürün dosyası, gelişim raporu, aile görüşmesi.", "B) 2026 20 soruluk alan eğitimi ölçme-program-yöntem yoğundur.", "C) TYMM yetkinlik dili izlenir; resmi madde uydurulmaz.", "D) Program döngüsü değerlendir-planla.", "E) Otantik, sürekli, gelişimsel değerlendirme; not harfi değildir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi ve Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "2026 20 soruluk alan eğitimi ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Gözlem, ürün dosyası, gelişim raporu, aile görüşmesi.", "B) Program döngüsü değerlendir-planla.", "C) TYMM yetkinlik dili izlenir; resmi madde uydurulmaz.", "D) 2026 20 soruluk alan eğitimi ölçme-program-yöntem yoğundur.", "E) Otantik, sürekli, gelişimsel değerlendirme; not harfi değildir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi ve Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi TYMM yetkinlik dili için doğru bir açıklamadır?",
+    "options": ["A) Program döngüsü değerlendir-planla.", "B) 2026 20 soruluk alan eğitimi ölçme-program-yöntem yoğundur.", "C) TYMM yetkinlik dili izlenir; resmi madde uydurulmaz.", "D) Otantik, sürekli, gelişimsel değerlendirme; not harfi değildir.", "E) Gözlem, ürün dosyası, gelişim raporu, aile görüşmesi."],
+    "correctAnswerIndex": 2,
+    "explanation": "Alan Eğitimi ve Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "Anekdot, kontrol listesi, rubrik sade hakkında hangisi doğrudur?",
+    "options": ["A) Otantik, sürekli, gelişimsel değerlendirme; not harfi değildir.", "B) Gözlem, ürün dosyası, gelişim raporu, aile görüşmesi.", "C) Program döngüsü değerlendir-planla.", "D) 2026 20 soruluk alan eğitimi ölçme-program-yöntem yoğundur.", "E) Anekdot, kontrol listesi, rubrik sade."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Alan Eğitimi ve Değerlendirme notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi ve Değerlendirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Gözlem, ürün dosyası, gelişim raporu, aile görüşmesi.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Portfolyo hangisini ifade eder?",
+    "options": ["A) Program döngüsü değerlendir-planla.", "B) 2026 20 soruluk alan eğitimi ölçme-program-yöntem yoğundur.", "C) Portfolyo çocuk seçimi.", "D) Otantik, sürekli, gelişimsel değerlendirme; not harfi değildir.", "E) Gözlem, ürün dosyası, gelişim raporu, aile görüşmesi."],
+    "correctAnswerIndex": 2,
+    "explanation": "Alan Eğitimi ve Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "Gelişim rapor dili ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Gelişim rapor dili güç yanlı, etiket yok.", "B) Otantik, sürekli, gelişimsel değerlendirme; not harfi değildir.", "C) Gözlem, ürün dosyası, gelişim raporu, aile görüşmesi.", "D) Program döngüsü değerlendir-planla.", "E) 2026 20 soruluk alan eğitimi ölçme-program-yöntem yoğundur."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Alan Eğitimi ve Değerlendirme notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi ve Değerlendirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Program döngüsü değerlendir-planla."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi BEP değerlendirmesi için doğru bir açıklamadır?",
+    "options": ["A) Gözlem, ürün dosyası, gelişim raporu, aile görüşmesi.", "B) Program döngüsü değerlendir-planla.", "C) 2026 20 soruluk alan eğitimi ölçme-program-yöntem yoğundur.", "D) BEP değerlendirmesi ekip.", "E) Otantik, sürekli, gelişimsel değerlendirme; not harfi değildir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi ve Değerlendirme notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi ve Değerlendirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) 2026 20 soruluk alan eğitimi ölçme-program-yöntem yoğundur.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi ve Değerlendirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) TYMM yetkinlik dili izlenir; resmi madde uydurulmaz."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi ve Değerlendirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Anekdot, kontrol listesi, rubrik sade.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi ve Değerlendirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Portfolyo çocuk seçimi."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi ve Değerlendirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Gelişim rapor dili güç yanlı, etiket yok.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi ve Değerlendirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) BEP değerlendirmesi ekip."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi ve Değerlendirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Öz değerlendirme sade emoji-söz.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Öz değerlendirme hakkında hangisi doğrudur?",
+    "options": ["A) 2026 20 soruluk alan eğitimi ölçme-program-yöntem yoğundur.", "B) Öz değerlendirme sade emoji-söz.", "C) Otantik, sürekli, gelişimsel değerlendirme; not harfi değildir.", "D) Gözlem, ürün dosyası, gelişim raporu, aile görüşmesi.", "E) Program döngüsü değerlendir-planla."],
+    "correctAnswerIndex": 1,
+    "explanation": "Alan Eğitimi ve Değerlendirme notundaki temel bilgi."
 }
 ];

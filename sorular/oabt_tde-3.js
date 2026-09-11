@@ -61,63 +61,63 @@ window.oabt_tde_3_sorulari = [
     "explanation": "Ferman dinlemez dağlar söylemi bu zemindendir."
 },
 {
-    "question": "Türk Halk Edebiyatı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Anonim, âşık ve tekke halk edebiyatının üç ana koludur.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Destan, masal, efsane, menkıbe hakkında hangisi doğrudur?",
+    "options": ["A) Koşma, semai, varsağı, destan hece ölçülü âşık nazım biçimleridir.", "B) Mani, ninni, ağıt, türkü anonim nazım-müzik türleridir.", "C) Destan, masal, efsane, menkıbe, fıkra, tekerleme, bilmece anonim anlatı türleridir.", "D) Anonim, âşık ve tekke halk edebiyatının üç ana koludur.", "E) Halk hikâyesi (Kereme, Köroğlu, Âşık Garip) âşık geleneğiyle icra edilir."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Türk Halk Edebiyatı notundaki temel bilgi."
 },
 {
-    "question": "Türk Halk Edebiyatı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Destan, masal, efsane, menkıbe, fıkra, tekerleme, bilmece anonim anlatı türleridir."],
+    "question": "Halk hikâyesi hangisini ifade eder?",
+    "options": ["A) Mani, ninni, ağıt, türkü anonim nazım-müzik türleridir.", "B) Halk hikâyesi (Kereme, Köroğlu, Âşık Garip) âşık geleneğiyle icra edilir.", "C) Anonim, âşık ve tekke halk edebiyatının üç ana koludur.", "D) Destan, masal, efsane, menkıbe, fıkra, tekerleme, bilmece anonim anlatı türleridir.", "E) Koşma, semai, varsağı, destan hece ölçülü âşık nazım biçimleridir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Türk Halk Edebiyatı notundaki temel bilgi."
+},
+{
+    "question": "Koşma, semai, varsağı, destan ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Koşma, semai, varsağı, destan hece ölçülü âşık nazım biçimleridir.", "B) Anonim, âşık ve tekke halk edebiyatının üç ana koludur.", "C) Destan, masal, efsane, menkıbe, fıkra, tekerleme, bilmece anonim anlatı türleridir.", "D) Halk hikâyesi (Kereme, Köroğlu, Âşık Garip) âşık geleneğiyle icra edilir.", "E) Mani, ninni, ağıt, türkü anonim nazım-müzik türleridir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Türk Halk Edebiyatı notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Mani, ninni, ağıt, türkü için doğru bir açıklamadır?",
+    "options": ["A) Destan, masal, efsane, menkıbe, fıkra, tekerleme, bilmece anonim anlatı türleridir.", "B) Halk hikâyesi (Kereme, Köroğlu, Âşık Garip) âşık geleneğiyle icra edilir.", "C) Koşma, semai, varsağı, destan hece ölçülü âşık nazım biçimleridir.", "D) Mani, ninni, ağıt, türkü anonim nazım-müzik türleridir.", "E) Anonim, âşık ve tekke halk edebiyatının üç ana koludur."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Türk Halk Edebiyatı notundaki temel bilgi."
 },
 {
-    "question": "Türk Halk Edebiyatı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Halk hikâyesi (Kereme, Köroğlu, Âşık Garip) âşık geleneğiyle icra edilir.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Karacaoğlan hakkında hangisi doğrudur?",
+    "options": ["A) Destan, masal, efsane, menkıbe, fıkra, tekerleme, bilmece anonim anlatı türleridir.", "B) Halk hikâyesi (Kereme, Köroğlu, Âşık Garip) âşık geleneğiyle icra edilir.", "C) Koşma, semai, varsağı, destan hece ölçülü âşık nazım biçimleridir.", "D) Karacaoğlan güzelleme ve doğa; Köroğlu koçaklama ve kahramanlık.", "E) Anonim, âşık ve tekke halk edebiyatının üç ana koludur."],
+    "correctAnswerIndex": 3,
+    "explanation": "Türk Halk Edebiyatı notundaki temel bilgi."
+},
+{
+    "question": "Dadaloğlu hangisini ifade eder?",
+    "options": ["A) Destan, masal, efsane, menkıbe, fıkra, tekerleme, bilmece anonim anlatı türleridir.", "B) Halk hikâyesi (Kereme, Köroğlu, Âşık Garip) âşık geleneğiyle icra edilir.", "C) Koşma, semai, varsağı, destan hece ölçülü âşık nazım biçimleridir.", "D) Dadaloğlu Avşar göçü ve isyan; Âşık Veysel Cumhuriyet dönemi âşıklık.", "E) Anonim, âşık ve tekke halk edebiyatının üç ana koludur."],
+    "correctAnswerIndex": 3,
+    "explanation": "Türk Halk Edebiyatı notundaki temel bilgi."
+},
+{
+    "question": "Yunus Emre ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Halk hikâyesi (Kereme, Köroğlu, Âşık Garip) âşık geleneğiyle icra edilir.", "B) Koşma, semai, varsağı, destan hece ölçülü âşık nazım biçimleridir.", "C) Yunus Emre ilahi ve insan-ı kâmil; Kaygusuz Abdal tekkede mizah-sembol.", "D) Anonim, âşık ve tekke halk edebiyatının üç ana koludur.", "E) Destan, masal, efsane, menkıbe, fıkra, tekerleme, bilmece anonim anlatı türleridir."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Türk Halk Edebiyatı notundaki temel bilgi."
 },
 {
-    "question": "Türk Halk Edebiyatı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Koşma, semai, varsağı, destan hece ölçülü âşık nazım biçimleridir."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Pir Sultan Abdal için doğru bir açıklamadır?",
+    "options": ["A) Anonim, âşık ve tekke halk edebiyatının üç ana koludur.", "B) Destan, masal, efsane, menkıbe, fıkra, tekerleme, bilmece anonim anlatı türleridir.", "C) Halk hikâyesi (Kereme, Köroğlu, Âşık Garip) âşık geleneğiyle icra edilir.", "D) Koşma, semai, varsağı, destan hece ölçülü âşık nazım biçimleridir.", "E) Pir Sultan Abdal Alevi-Bektaşi deyiş; Nesimi hurufi-tekkesel lirizm."],
+    "correctAnswerIndex": 4,
+    "explanation": "Türk Halk Edebiyatı notundaki temel bilgi."
 },
 {
-    "question": "Türk Halk Edebiyatı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Mani, ninni, ağıt, türkü anonim nazım-müzik türleridir.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Mahlas, sabak, muamma, atışma hakkında hangisi doğrudur?",
+    "options": ["A) Halk hikâyesi (Kereme, Köroğlu, Âşık Garip) âşık geleneğiyle icra edilir.", "B) Koşma, semai, varsağı, destan hece ölçülü âşık nazım biçimleridir.", "C) Mahlas, sabak, muamma, atışma âşık fasıllarının terimleridir.", "D) Anonim, âşık ve tekke halk edebiyatının üç ana koludur.", "E) Destan, masal, efsane, menkıbe, fıkra, tekerleme, bilmece anonim anlatı türleridir."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Türk Halk Edebiyatı notundaki temel bilgi."
 },
 {
-    "question": "Türk Halk Edebiyatı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Karacaoğlan güzelleme ve doğa; Köroğlu koçaklama ve kahramanlık."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Türk Halk Edebiyatı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Dadaloğlu Avşar göçü ve isyan; Âşık Veysel Cumhuriyet dönemi âşıklık.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Hece ölçüsü hangisini ifade eder?",
+    "options": ["A) Halk hikâyesi (Kereme, Köroğlu, Âşık Garip) âşık geleneğiyle icra edilir.", "B) Koşma, semai, varsağı, destan hece ölçülü âşık nazım biçimleridir.", "C) Hece ölçüsü 7, 8, 11 en sık; dörtlük temel birimdir.", "D) Anonim, âşık ve tekke halk edebiyatının üç ana koludur.", "E) Destan, masal, efsane, menkıbe, fıkra, tekerleme, bilmece anonim anlatı türleridir."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Türk Halk Edebiyatı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Yunus Emre ilahi ve insan-ı kâmil; Kaygusuz Abdal tekkede mizah-sembol."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Türk Halk Edebiyatı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Pir Sultan Abdal Alevi-Bektaşi deyiş; Nesimi hurufi-tekkesel lirizm.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Türk Halk Edebiyatı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mahlas, sabak, muamma, atışma âşık fasıllarının terimleridir."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Türk Halk Edebiyatı notundaki temel bilgi."
 }
 ];

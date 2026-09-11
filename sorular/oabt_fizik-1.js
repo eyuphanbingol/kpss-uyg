@@ -55,69 +55,69 @@ window.oabt_fizik_1_sorulari = [
     "explanation": "İç kuvvetler çift olup CM'yi ivmelendirmez."
 },
 {
-    "question": "Mekanik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Konum-hız-ivme vektör; ortalama ve anlık; serbest düşmede a=g aşağı.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Konum-hız-ivme için doğru bir açıklamadır?",
+    "options": ["A) Konum-hız-ivme vektör; ortalama ve anlık; serbest düşmede a=g aşağı.", "B) Bağıl hareket Galilei dönüşümü düşük hızda; ivmeli çerçevede sözde kuvvet.", "C) Newton eylemsiz çerçeve; serbest cisim diyagramı, bağ kuvvetleri.", "D) Sürtünme statik ≤ μs N, kinetik μk N; yuvarlanma direnci ayrı.", "E) İş-enerji-güç P=F·v; korunumlu alanda ΔU=-W."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Mekanik notundaki temel bilgi."
 },
 {
-    "question": "Mekanik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Bağıl hareket Galilei dönüşümü düşük hızda; ivmeli çerçevede sözde kuvvet.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Bağıl hareket hakkında hangisi doğrudur?",
+    "options": ["A) Bağıl hareket Galilei dönüşümü düşük hızda; ivmeli çerçevede sözde kuvvet.", "B) Konum-hız-ivme vektör; ortalama ve anlık; serbest düşmede a=g aşağı.", "C) Newton eylemsiz çerçeve; serbest cisim diyagramı, bağ kuvvetleri.", "D) Sürtünme statik ≤ μs N, kinetik μk N; yuvarlanma direnci ayrı.", "E) İş-enerji-güç P=F·v; korunumlu alanda ΔU=-W."],
+    "correctAnswerIndex": 0,
+    "explanation": "Mekanik notundaki temel bilgi."
+},
+{
+    "question": "Newton hangisini ifade eder?",
+    "options": ["A) İş-enerji-güç P=F·v; korunumlu alanda ΔU=-W.", "B) Newton eylemsiz çerçeve; serbest cisim diyagramı, bağ kuvvetleri.", "C) Konum-hız-ivme vektör; ortalama ve anlık; serbest düşmede a=g aşağı.", "D) Bağıl hareket Galilei dönüşümü düşük hızda; ivmeli çerçevede sözde kuvvet.", "E) Sürtünme statik ≤ μs N, kinetik μk N; yuvarlanma direnci ayrı."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Mekanik notundaki temel bilgi."
 },
 {
-    "question": "Mekanik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Newton eylemsiz çerçeve; serbest cisim diyagramı, bağ kuvvetleri.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Sürtünme ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Bağıl hareket Galilei dönüşümü düşük hızda; ivmeli çerçevede sözde kuvvet.", "B) Newton eylemsiz çerçeve; serbest cisim diyagramı, bağ kuvvetleri.", "C) İş-enerji-güç P=F·v; korunumlu alanda ΔU=-W.", "D) Sürtünme statik ≤ μs N, kinetik μk N; yuvarlanma direnci ayrı.", "E) Konum-hız-ivme vektör; ortalama ve anlık; serbest düşmede a=g aşağı."],
+    "correctAnswerIndex": 3,
+    "explanation": "Mekanik notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi İş-enerji-güç için doğru bir açıklamadır?",
+    "options": ["A) Bağıl hareket Galilei dönüşümü düşük hızda; ivmeli çerçevede sözde kuvvet.", "B) Newton eylemsiz çerçeve; serbest cisim diyagramı, bağ kuvvetleri.", "C) Sürtünme statik ≤ μs N, kinetik μk N; yuvarlanma direnci ayrı.", "D) İş-enerji-güç P=F·v; korunumlu alanda ΔU=-W.", "E) Konum-hız-ivme vektör; ortalama ve anlık; serbest düşmede a=g aşağı."],
+    "correctAnswerIndex": 3,
+    "explanation": "Mekanik notundaki temel bilgi."
+},
+{
+    "question": "Sistem momentumu hakkında hangisi doğrudur?",
+    "options": ["A) Sistem momentumu dış impuls yoksa korunur; kütle merkezi G gibi hareket eder.", "B) Konum-hız-ivme vektör; ortalama ve anlık; serbest düşmede a=g aşağı.", "C) Bağıl hareket Galilei dönüşümü düşük hızda; ivmeli çerçevede sözde kuvvet.", "D) Newton eylemsiz çerçeve; serbest cisim diyagramı, bağ kuvvetleri.", "E) Sürtünme statik ≤ μs N, kinetik μk N; yuvarlanma direnci ayrı."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Mekanik notundaki temel bilgi."
 },
 {
-    "question": "Mekanik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Sürtünme statik ≤ μs N, kinetik μk N; yuvarlanma direnci ayrı.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Çarpışma hangisini ifade eder?",
+    "options": ["A) Newton eylemsiz çerçeve; serbest cisim diyagramı, bağ kuvvetleri.", "B) Sürtünme statik ≤ μs N, kinetik μk N; yuvarlanma direnci ayrı.", "C) Çarpışma restitution e; 1 boyutlu esnek formüller.", "D) Konum-hız-ivme vektör; ortalama ve anlık; serbest düşmede a=g aşağı.", "E) Bağıl hareket Galilei dönüşümü düşük hızda; ivmeli çerçevede sözde kuvvet."],
+    "correctAnswerIndex": 2,
+    "explanation": "Mekanik notundaki temel bilgi."
+},
+{
+    "question": "Katı cisim ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Newton eylemsiz çerçeve; serbest cisim diyagramı, bağ kuvvetleri.", "B) Sürtünme statik ≤ μs N, kinetik μk N; yuvarlanma direnci ayrı.", "C) Katı cisim I=∫r^2 dm; paralel eksen I=I_cm+Md^2 (Steiner).", "D) Konum-hız-ivme vektör; ortalama ve anlık; serbest düşmede a=g aşağı.", "E) Bağıl hareket Galilei dönüşümü düşük hızda; ivmeli çerçevede sözde kuvvet."],
+    "correctAnswerIndex": 2,
+    "explanation": "Mekanik notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Tork ve L için doğru bir açıklamadır?",
+    "options": ["A) Sürtünme statik ≤ μs N, kinetik μk N; yuvarlanma direnci ayrı.", "B) Tork ve L τ=dL/dt; merkezi kuvvette L korunur (Kepler 2. yasa).", "C) Konum-hız-ivme vektör; ortalama ve anlık; serbest düşmede a=g aşağı.", "D) Bağıl hareket Galilei dönüşümü düşük hızda; ivmeli çerçevede sözde kuvvet.", "E) Newton eylemsiz çerçeve; serbest cisim diyagramı, bağ kuvvetleri."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Mekanik notundaki temel bilgi."
 },
 {
-    "question": "Mekanik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) İş-enerji-güç P=F·v; korunumlu alanda ΔU=-W.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Denge hakkında hangisi doğrudur?",
+    "options": ["A) Newton eylemsiz çerçeve; serbest cisim diyagramı, bağ kuvvetleri.", "B) Sürtünme statik ≤ μs N, kinetik μk N; yuvarlanma direnci ayrı.", "C) Denge ΣF=0 ve Στ=0; kararlılık potansiyel minimumu.", "D) Konum-hız-ivme vektör; ortalama ve anlık; serbest düşmede a=g aşağı.", "E) Bağıl hareket Galilei dönüşümü düşük hızda; ivmeli çerçevede sözde kuvvet."],
+    "correctAnswerIndex": 2,
+    "explanation": "Mekanik notundaki temel bilgi."
 },
 {
-    "question": "Mekanik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Sistem momentumu dış impuls yoksa korunur; kütle merkezi G gibi hareket eder.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Mekanik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Çarpışma restitution e; 1 boyutlu esnek formüller.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Mekanik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Katı cisim I=∫r^2 dm; paralel eksen I=I_cm+Md^2 (Steiner).", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Mekanik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Tork ve L τ=dL/dt; merkezi kuvvette L korunur (Kepler 2. yasa).", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Mekanik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Denge ΣF=0 ve Στ=0; kararlılık potansiyel minimumu.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Mekanik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) SHM F=-kx, T=2π√(m/k); enerji (1/2)kA^2.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "SHM hangisini ifade eder?",
+    "options": ["A) Konum-hız-ivme vektör; ortalama ve anlık; serbest düşmede a=g aşağı.", "B) Bağıl hareket Galilei dönüşümü düşük hızda; ivmeli çerçevede sözde kuvvet.", "C) Newton eylemsiz çerçeve; serbest cisim diyagramı, bağ kuvvetleri.", "D) Sürtünme statik ≤ μs N, kinetik μk N; yuvarlanma direnci ayrı.", "E) SHM F=-kx, T=2π√(m/k); enerji (1/2)kA^2."],
+    "correctAnswerIndex": 4,
+    "explanation": "Mekanik notundaki temel bilgi."
 }
 ];

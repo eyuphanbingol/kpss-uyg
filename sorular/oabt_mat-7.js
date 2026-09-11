@@ -55,69 +55,69 @@ window.oabt_mat_7_sorulari = [
     "explanation": "α/m her test; tutucu olabilir."
 },
 {
-    "question": "İstatistik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Nokta tahmini yansızlık E[θ̂]=θ; tutarlılık olasılıkta yakınsama.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İstatistik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) MSE = Var + yan^2; yanlı ama düşük MSE olabilir (ridge sezgisi).", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi Nokta tahmini için doğru bir açıklamadır?",
+    "options": ["A) MSE = Var + yan^2; yanlı ama düşük MSE olabilir (ridge sezgisi).", "B) Olabilirlik L(θ|x); MLE L'yi (veya log L) en büyükler.", "C) Yeterlilik Fisher-Neyman çarpan; Rao-Blackwell varyansı düşürür.", "D) Güven aralığı tesadüfi aralık; %95 'parametre %95 olasılıkla içindedir' değil, yöntemin uzun vadeli kapsamasıdır.", "E) Nokta tahmini yansızlık E[θ̂]=θ; tutarlılık olasılıkta yakınsama."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İstatistik notundaki temel bilgi."
 },
 {
-    "question": "İstatistik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Olabilirlik L(θ|x); MLE L'yi (veya log L) en büyükler.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "MSE hakkında hangisi doğrudur?",
+    "options": ["A) Güven aralığı tesadüfi aralık; %95 'parametre %95 olasılıkla içindedir' değil, yöntemin uzun vadeli kapsamasıdır.", "B) MSE = Var + yan^2; yanlı ama düşük MSE olabilir (ridge sezgisi).", "C) Nokta tahmini yansızlık E[θ̂]=θ; tutarlılık olasılıkta yakınsama.", "D) Olabilirlik L(θ|x); MLE L'yi (veya log L) en büyükler.", "E) Yeterlilik Fisher-Neyman çarpan; Rao-Blackwell varyansı düşürür."],
+    "correctAnswerIndex": 1,
+    "explanation": "İstatistik notundaki temel bilgi."
 },
 {
-    "question": "İstatistik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Yeterlilik Fisher-Neyman çarpan; Rao-Blackwell varyansı düşürür.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Olabilirlik hangisini ifade eder?",
+    "options": ["A) Yeterlilik Fisher-Neyman çarpan; Rao-Blackwell varyansı düşürür.", "B) Güven aralığı tesadüfi aralık; %95 'parametre %95 olasılıkla içindedir' değil, yöntemin uzun vadeli kapsamasıdır.", "C) Olabilirlik L(θ|x); MLE L'yi (veya log L) en büyükler.", "D) Nokta tahmini yansızlık E[θ̂]=θ; tutarlılık olasılıkta yakınsama.", "E) MSE = Var + yan^2; yanlı ama düşük MSE olabilir (ridge sezgisi)."],
+    "correctAnswerIndex": 2,
+    "explanation": "İstatistik notundaki temel bilgi."
+},
+{
+    "question": "Yeterlilik ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Güven aralığı tesadüfi aralık; %95 'parametre %95 olasılıkla içindedir' değil, yöntemin uzun vadeli kapsamasıdır.", "B) Yeterlilik Fisher-Neyman çarpan; Rao-Blackwell varyansı düşürür.", "C) Nokta tahmini yansızlık E[θ̂]=θ; tutarlılık olasılıkta yakınsama.", "D) MSE = Var + yan^2; yanlı ama düşük MSE olabilir (ridge sezgisi).", "E) Olabilirlik L(θ|x); MLE L'yi (veya log L) en büyükler."],
+    "correctAnswerIndex": 1,
+    "explanation": "İstatistik notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Güven aralığı için doğru bir açıklamadır?",
+    "options": ["A) Nokta tahmini yansızlık E[θ̂]=θ; tutarlılık olasılıkta yakınsama.", "B) MSE = Var + yan^2; yanlı ama düşük MSE olabilir (ridge sezgisi).", "C) Olabilirlik L(θ|x); MLE L'yi (veya log L) en büyükler.", "D) Yeterlilik Fisher-Neyman çarpan; Rao-Blackwell varyansı düşürür.", "E) Güven aralığı tesadüfi aralık; %95 'parametre %95 olasılıkla içindedir' değil, yöntemin uzun vadeli kapsamasıdır."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İstatistik notundaki temel bilgi."
 },
 {
-    "question": "İstatistik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Güven aralığı tesadüfi aralık; %95 'parametre %95 olasılıkla içindedir' değil, yöntemin uz", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İstatistik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) H0-H1; I. tip α, II. tip β, güç=1-β.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "H0-H1 hakkında hangisi doğrudur?",
+    "options": ["A) Nokta tahmini yansızlık E[θ̂]=θ; tutarlılık olasılıkta yakınsama.", "B) MSE = Var + yan^2; yanlı ama düşük MSE olabilir (ridge sezgisi).", "C) Olabilirlik L(θ|x); MLE L'yi (veya log L) en büyükler.", "D) Yeterlilik Fisher-Neyman çarpan; Rao-Blackwell varyansı düşürür.", "E) H0-H1; I. tip α, II. tip β, güç=1-β."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İstatistik notundaki temel bilgi."
 },
 {
-    "question": "İstatistik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) p-değeri H0 altında gözlenen kadar uç veri olasılığı; P(H0|veri) değildir.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "p-değeri hangisini ifade eder?",
+    "options": ["A) Yeterlilik Fisher-Neyman çarpan; Rao-Blackwell varyansı düşürür.", "B) p-değeri H0 altında gözlenen kadar uç veri olasılığı; P(H0|veri) değildir.", "C) Nokta tahmini yansızlık E[θ̂]=θ; tutarlılık olasılıkta yakınsama.", "D) MSE = Var + yan^2; yanlı ama düşük MSE olabilir (ridge sezgisi).", "E) Olabilirlik L(θ|x); MLE L'yi (veya log L) en büyükler."],
+    "correctAnswerIndex": 1,
+    "explanation": "İstatistik notundaki temel bilgi."
 },
 {
-    "question": "İstatistik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Neyman-Pearson basit H0-H1'de olabilirlik oranı en güçlü test.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Neyman-Pearson ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Yeterlilik Fisher-Neyman çarpan; Rao-Blackwell varyansı düşürür.", "B) Neyman-Pearson basit H0-H1'de olabilirlik oranı en güçlü test.", "C) Nokta tahmini yansızlık E[θ̂]=θ; tutarlılık olasılıkta yakınsama.", "D) MSE = Var + yan^2; yanlı ama düşük MSE olabilir (ridge sezgisi).", "E) Olabilirlik L(θ|x); MLE L'yi (veya log L) en büyükler."],
+    "correctAnswerIndex": 1,
+    "explanation": "İstatistik notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi t, z, ki-kare, F için doğru bir açıklamadır?",
+    "options": ["A) Nokta tahmini yansızlık E[θ̂]=θ; tutarlılık olasılıkta yakınsama.", "B) MSE = Var + yan^2; yanlı ama düşük MSE olabilir (ridge sezgisi).", "C) Olabilirlik L(θ|x); MLE L'yi (veya log L) en büyükler.", "D) Yeterlilik Fisher-Neyman çarpan; Rao-Blackwell varyansı düşürür.", "E) t, z, ki-kare, F varsayımları: normallik, bağımsızlık, varyans eşitliği."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İstatistik notundaki temel bilgi."
 },
 {
-    "question": "İstatistik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) t, z, ki-kare, F varsayımları: normallik, bağımsızlık, varyans eşitliği.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Çoklu karşılaştırma hakkında hangisi doğrudur?",
+    "options": ["A) Çoklu karşılaştırma hata şişmesi; Bonferroni düzeltmesi.", "B) Nokta tahmini yansızlık E[θ̂]=θ; tutarlılık olasılıkta yakınsama.", "C) MSE = Var + yan^2; yanlı ama düşük MSE olabilir (ridge sezgisi).", "D) Olabilirlik L(θ|x); MLE L'yi (veya log L) en büyükler.", "E) Yeterlilik Fisher-Neyman çarpan; Rao-Blackwell varyansı düşürür."],
+    "correctAnswerIndex": 0,
+    "explanation": "İstatistik notundaki temel bilgi."
 },
 {
-    "question": "İstatistik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Çoklu karşılaştırma hata şişmesi; Bonferroni düzeltmesi.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "İstatistik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Doğrusal regresyon Y=Xβ+ε; EKK, Gauss-Markov: BLUE (varsayımlarla).", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Doğrusal regresyon hangisini ifade eder?",
+    "options": ["A) Olabilirlik L(θ|x); MLE L'yi (veya log L) en büyükler.", "B) Yeterlilik Fisher-Neyman çarpan; Rao-Blackwell varyansı düşürür.", "C) Doğrusal regresyon Y=Xβ+ε; EKK, Gauss-Markov: BLUE (varsayımlarla).", "D) Nokta tahmini yansızlık E[θ̂]=θ; tutarlılık olasılıkta yakınsama.", "E) MSE = Var + yan^2; yanlı ama düşük MSE olabilir (ridge sezgisi)."],
+    "correctAnswerIndex": 2,
+    "explanation": "İstatistik notundaki temel bilgi."
 }
 ];

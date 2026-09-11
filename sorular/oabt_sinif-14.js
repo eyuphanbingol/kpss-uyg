@@ -61,63 +61,63 @@ window.oabt_sinif_14_sorulari = [
     "explanation": "Kültür."
 },
 {
-    "question": "Görsel Sanatlar konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Görsel sanatlar ürün güzelliği yarışı değil süreç ve görme biçimidir.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Görsel sanatlar için doğru bir açıklamadır?",
+    "options": ["A) Görsel sanatlar ürün güzelliği yarışı değil süreç ve görme biçimidir.", "B) Çizgi, renk, doku, biçim, kompozisyon eleman-ilkeler.", "C) Çocuk resmi evreleri karalama, şema, gerçekçilik (Lowenfeld).", "D) Eleştiri betimle-çözümle-yorumla-yargıla.", "E) 2026 alan eğitimi evre ve özgür ifade sorar."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Görsel Sanatlar notundaki temel bilgi."
 },
 {
-    "question": "Görsel Sanatlar konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Çizgi, renk, doku, biçim, kompozisyon eleman-ilkeler.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Çizgi, renk, doku, biçim, kompozisyon hakkında hangisi doğrudur?",
+    "options": ["A) Çocuk resmi evreleri karalama, şema, gerçekçilik (Lowenfeld).", "B) Eleştiri betimle-çözümle-yorumla-yargıla.", "C) 2026 alan eğitimi evre ve özgür ifade sorar.", "D) Çizgi, renk, doku, biçim, kompozisyon eleman-ilkeler.", "E) Görsel sanatlar ürün güzelliği yarışı değil süreç ve görme biçimidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Görsel Sanatlar notundaki temel bilgi."
+},
+{
+    "question": "Çocuk resmi evreleri hangisini ifade eder?",
+    "options": ["A) Çizgi, renk, doku, biçim, kompozisyon eleman-ilkeler.", "B) Eleştiri betimle-çözümle-yorumla-yargıla.", "C) 2026 alan eğitimi evre ve özgür ifade sorar.", "D) Çocuk resmi evreleri karalama, şema, gerçekçilik (Lowenfeld).", "E) Görsel sanatlar ürün güzelliği yarışı değil süreç ve görme biçimidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Görsel Sanatlar notundaki temel bilgi."
+},
+{
+    "question": "Eleştiri ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) 2026 alan eğitimi evre ve özgür ifade sorar.", "B) Eleştiri betimle-çözümle-yorumla-yargıla.", "C) Görsel sanatlar ürün güzelliği yarışı değil süreç ve görme biçimidir.", "D) Çizgi, renk, doku, biçim, kompozisyon eleman-ilkeler.", "E) Çocuk resmi evreleri karalama, şema, gerçekçilik (Lowenfeld)."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Görsel Sanatlar notundaki temel bilgi."
 },
 {
-    "question": "Görsel Sanatlar konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Çocuk resmi evreleri karalama, şema, gerçekçilik (Lowenfeld).", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi 2026 alan eğitimi için doğru bir açıklamadır?",
+    "options": ["A) 2026 alan eğitimi evre ve özgür ifade sorar.", "B) Görsel sanatlar ürün güzelliği yarışı değil süreç ve görme biçimidir.", "C) Çizgi, renk, doku, biçim, kompozisyon eleman-ilkeler.", "D) Çocuk resmi evreleri karalama, şema, gerçekçilik (Lowenfeld).", "E) Eleştiri betimle-çözümle-yorumla-yargıla."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Görsel Sanatlar notundaki temel bilgi."
 },
 {
-    "question": "Görsel Sanatlar konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Eleştiri betimle-çözümle-yorumla-yargıla.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "İki ve üç boyut hakkında hangisi doğrudur?",
+    "options": ["A) Çizgi, renk, doku, biçim, kompozisyon eleman-ilkeler.", "B) Çocuk resmi evreleri karalama, şema, gerçekçilik (Lowenfeld).", "C) Eleştiri betimle-çözümle-yorumla-yargıla.", "D) İki ve üç boyut yoğurma, kolaj, baskı.", "E) Görsel sanatlar ürün güzelliği yarışı değil süreç ve görme biçimidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Görsel Sanatlar notundaki temel bilgi."
+},
+{
+    "question": "Geri dönüşüm malzeme hangisini ifade eder?",
+    "options": ["A) Görsel sanatlar ürün güzelliği yarışı değil süreç ve görme biçimidir.", "B) Çizgi, renk, doku, biçim, kompozisyon eleman-ilkeler.", "C) Çocuk resmi evreleri karalama, şema, gerçekçilik (Lowenfeld).", "D) Eleştiri betimle-çözümle-yorumla-yargıla.", "E) Geri dönüşüm malzeme."],
+    "correctAnswerIndex": 4,
+    "explanation": "Görsel Sanatlar notundaki temel bilgi."
+},
+{
+    "question": "Kültür ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Çizgi, renk, doku, biçim, kompozisyon eleman-ilkeler.", "B) Çocuk resmi evreleri karalama, şema, gerçekçilik (Lowenfeld).", "C) Eleştiri betimle-çözümle-yorumla-yargıla.", "D) Kültür geleneksel motif ve çağdaş.", "E) Görsel sanatlar ürün güzelliği yarışı değil süreç ve görme biçimidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Görsel Sanatlar notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Dijital görüntü için doğru bir açıklamadır?",
+    "options": ["A) Eleştiri betimle-çözümle-yorumla-yargıla.", "B) Dijital görüntü etik, telif.", "C) Görsel sanatlar ürün güzelliği yarışı değil süreç ve görme biçimidir.", "D) Çizgi, renk, doku, biçim, kompozisyon eleman-ilkeler.", "E) Çocuk resmi evreleri karalama, şema, gerçekçilik (Lowenfeld)."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Görsel Sanatlar notundaki temel bilgi."
 },
 {
-    "question": "Görsel Sanatlar konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) 2026 alan eğitimi evre ve özgür ifade sorar.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Görsel Sanatlar konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) İki ve üç boyut yoğurma, kolaj, baskı.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Görsel Sanatlar konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Geri dönüşüm malzeme.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Görsel Sanatlar konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Kültür geleneksel motif ve çağdaş.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Görsel Sanatlar konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Dijital görüntü etik, telif.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Görsel Sanatlar konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Kaynaştırma kalın fırça, dokunsal.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Kaynaştırma hakkında hangisi doğrudur?",
+    "options": ["A) Çizgi, renk, doku, biçim, kompozisyon eleman-ilkeler.", "B) Çocuk resmi evreleri karalama, şema, gerçekçilik (Lowenfeld).", "C) Eleştiri betimle-çözümle-yorumla-yargıla.", "D) Kaynaştırma kalın fırça, dokunsal.", "E) Görsel sanatlar ürün güzelliği yarışı değil süreç ve görme biçimidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Görsel Sanatlar notundaki temel bilgi."
 }
 ];

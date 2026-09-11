@@ -55,69 +55,69 @@ window.oabt_sosyal_2_sorulari = [
     "explanation": "Mercator alanı kutuplarda şişirir."
 },
 {
-    "question": "Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Mekân mutlak koordinat değil; algılanan, yaşanan, tasarlanan mekân (Lefebvre sezgisi) öğre", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi Mekân için doğru bir açıklamadır?",
+    "options": ["A) Mekân mutlak koordinat değil; algılanan, yaşanan, tasarlanan mekân (Lefebvre sezgisi) öğretimde yer algısıdır.", "B) Yer (place) anlam yüklü; konum mutlak-göreli; bölge ölçüte göre değişir.", "C) Ölçek yerel-küresel bağ (glokal); harita projeksiyonu bozar.", "D) Beşeri-fiziki etkileşim: imkan-kısıt, imkancılık-determinizm tartışması.", "E) İklim ve yerşekli Türkiye'nin geçiş konumu, dağların uzanışı kıyı-iç farkı."],
+    "correctAnswerIndex": 0,
+    "explanation": "Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Yer hakkında hangisi doğrudur?",
+    "options": ["A) CBS ve uzaktan algılama mekânsal düşünmeyi nicelleştirir.", "B) Yer (place) anlam yüklü; konum mutlak-göreli; bölge ölçüte göre değişir.", "C) Mekân mutlak koordinat değil; algılanan, yaşanan, tasarlanan mekân (Lefebvre sezgisi) öğretimde yer algısıdır.", "D) Ölçek yerel-küresel bağ (glokal); harita projeksiyonu bozar.", "E) Beşeri-fiziki etkileşim: imkan-kısıt, imkancılık-determinizm tartışması."],
+    "correctAnswerIndex": 1,
+    "explanation": "Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Ölçek hangisini ifade eder?",
+    "options": ["A) Ölçek yerel-küresel bağ (glokal); harita projeksiyonu bozar.", "B) Mekân mutlak koordinat değil; algılanan, yaşanan, tasarlanan mekân (Lefebvre sezgisi) öğretimde yer algısıdır.", "C) Yer (place) anlam yüklü; konum mutlak-göreli; bölge ölçüte göre değişir.", "D) Beşeri-fiziki etkileşim: imkan-kısıt, imkancılık-determinizm tartışması.", "E) CBS ve uzaktan algılama mekânsal düşünmeyi nicelleştirir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Beşeri-fiziki ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) CBS ve uzaktan algılama mekânsal düşünmeyi nicelleştirir.", "B) Beşeri-fiziki etkileşim: imkan-kısıt, imkancılık-determinizm tartışması.", "C) Mekân mutlak koordinat değil; algılanan, yaşanan, tasarlanan mekân (Lefebvre sezgisi) öğretimde yer algısıdır.", "D) Yer (place) anlam yüklü; konum mutlak-göreli; bölge ölçüte göre değişir.", "E) Ölçek yerel-küresel bağ (glokal); harita projeksiyonu bozar."],
+    "correctAnswerIndex": 1,
+    "explanation": "Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi CBS ve uzaktan algılama için doğru bir açıklamadır?",
+    "options": ["A) CBS ve uzaktan algılama mekânsal düşünmeyi nicelleştirir.", "B) Mekân mutlak koordinat değil; algılanan, yaşanan, tasarlanan mekân (Lefebvre sezgisi) öğretimde yer algısıdır.", "C) Yer (place) anlam yüklü; konum mutlak-göreli; bölge ölçüte göre değişir.", "D) Ölçek yerel-küresel bağ (glokal); harita projeksiyonu bozar.", "E) Beşeri-fiziki etkileşim: imkan-kısıt, imkancılık-determinizm tartışması."],
+    "correctAnswerIndex": 0,
+    "explanation": "Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "İklim ve yerşekli hakkında hangisi doğrudur?",
+    "options": ["A) Beşeri-fiziki etkileşim: imkan-kısıt, imkancılık-determinizm tartışması.", "B) İklim ve yerşekli Türkiye'nin geçiş konumu, dağların uzanışı kıyı-iç farkı.", "C) Mekân mutlak koordinat değil; algılanan, yaşanan, tasarlanan mekân (Lefebvre sezgisi) öğretimde yer algısıdır.", "D) Yer (place) anlam yüklü; konum mutlak-göreli; bölge ölçüte göre değişir.", "E) Ölçek yerel-küresel bağ (glokal); harita projeksiyonu bozar."],
+    "correctAnswerIndex": 1,
+    "explanation": "Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Nüfus hangisini ifade eder?",
+    "options": ["A) Ölçek yerel-küresel bağ (glokal); harita projeksiyonu bozar.", "B) Beşeri-fiziki etkileşim: imkan-kısıt, imkancılık-determinizm tartışması.", "C) Nüfus dağılış etmenleri, göç itici-çekici, kır-kent.", "D) Mekân mutlak koordinat değil; algılanan, yaşanan, tasarlanan mekân (Lefebvre sezgisi) öğretimde yer algısıdır.", "E) Yer (place) anlam yüklü; konum mutlak-göreli; bölge ölçüte göre değişir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Ekonomik coğrafya ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Beşeri-fiziki etkileşim: imkan-kısıt, imkancılık-determinizm tartışması.", "B) Ekonomik coğrafya tarım kuşakları, sanayi yer seçimi, turizm.", "C) Mekân mutlak koordinat değil; algılanan, yaşanan, tasarlanan mekân (Lefebvre sezgisi) öğretimde yer algısıdır.", "D) Yer (place) anlam yüklü; konum mutlak-göreli; bölge ölçüte göre değişir.", "E) Ölçek yerel-küresel bağ (glokal); harita projeksiyonu bozar."],
+    "correctAnswerIndex": 1,
+    "explanation": "Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Siyasi coğrafya için doğru bir açıklamadır?",
+    "options": ["A) Siyasi coğrafya sınır, Ege-Doğu Akdeniz, su havzaları.", "B) Mekân mutlak koordinat değil; algılanan, yaşanan, tasarlanan mekân (Lefebvre sezgisi) öğretimde yer algısıdır.", "C) Yer (place) anlam yüklü; konum mutlak-göreli; bölge ölçüte göre değişir.", "D) Ölçek yerel-küresel bağ (glokal); harita projeksiyonu bozar.", "E) Beşeri-fiziki etkileşim: imkan-kısıt, imkancılık-determinizm tartışması."],
+    "correctAnswerIndex": 0,
+    "explanation": "Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Afet hakkında hangisi doğrudur?",
+    "options": ["A) Beşeri-fiziki etkileşim: imkan-kısıt, imkancılık-determinizm tartışması.", "B) Afet tehlike-kırılganlık-risk; yer seçimi.", "C) Mekân mutlak koordinat değil; algılanan, yaşanan, tasarlanan mekân (Lefebvre sezgisi) öğretimde yer algısıdır.", "D) Yer (place) anlam yüklü; konum mutlak-göreli; bölge ölçüte göre değişir.", "E) Ölçek yerel-küresel bağ (glokal); harita projeksiyonu bozar."],
+    "correctAnswerIndex": 1,
+    "explanation": "Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Harita okuryazarlığı hangisini ifade eder?",
+    "options": ["A) Yer (place) anlam yüklü; konum mutlak-göreli; bölge ölçüte göre değişir.", "B) Ölçek yerel-küresel bağ (glokal); harita projeksiyonu bozar.", "C) Beşeri-fiziki etkileşim: imkan-kısıt, imkancılık-determinizm tartışması.", "D) Harita okuryazarlığı lejant, ölçek, yön, izohips, çarpıtma.", "E) Mekân mutlak koordinat değil; algılanan, yaşanan, tasarlanan mekân (Lefebvre sezgisi) öğretimde yer algısıdır."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Yer (place) anlam yüklü; konum mutlak-göreli; bölge ölçüte göre değişir.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Ölçek yerel-küresel bağ (glokal); harita projeksiyonu bozar.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Beşeri-fiziki etkileşim: imkan-kısıt, imkancılık-determinizm tartışması.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) CBS ve uzaktan algılama mekânsal düşünmeyi nicelleştirir.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) İklim ve yerşekli Türkiye'nin geçiş konumu, dağların uzanışı kıyı-iç farkı.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Nüfus dağılış etmenleri, göç itici-çekici, kır-kent.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Ekonomik coğrafya tarım kuşakları, sanayi yer seçimi, turizm.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Siyasi coğrafya sınır, Ege-Doğu Akdeniz, su havzaları.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Afet tehlike-kırılganlık-risk; yer seçimi.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Harita okuryazarlığı lejant, ölçek, yön, izohips, çarpıtma.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Coğrafya notundaki temel bilgi."
 }
 ];

@@ -61,63 +61,63 @@ window.oabt_ozel_16_sorulari = [
     "explanation": "Etik UDA."
 },
 {
-    "question": "Özel Eğitimde Sosyal Uyum Becerilerinin Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Sosyal uyum selam, sıra, empati, çatışma, güvenlik, dijital davranış.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Sosyal uyum için doğru bir açıklamadır?",
+    "options": ["A) Sosyal uyum selam, sıra, empati, çatışma, güvenlik, dijital davranış.", "B) Gizli müfredat açık öğretilmezse öğrenilmez.", "C) OSB sosyal biliş ve pragmatik açık öğretim ister.", "D) Zihin yetersizliği basamak ve genelleme.", "E) Kaynaştırma akran kabulü programlıdır, tesadüf değildir."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Özel Eğitimde Sosyal Uyum Becerilerinin Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Sosyal Uyum Becerilerinin Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Gizli müfredat açık öğretilmezse öğrenilmez.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Gizli müfredat hakkında hangisi doğrudur?",
+    "options": ["A) Kaynaştırma akran kabulü programlıdır, tesadüf değildir.", "B) Gizli müfredat açık öğretilmezse öğrenilmez.", "C) Sosyal uyum selam, sıra, empati, çatışma, güvenlik, dijital davranış.", "D) OSB sosyal biliş ve pragmatik açık öğretim ister.", "E) Zihin yetersizliği basamak ve genelleme."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Özel Eğitimde Sosyal Uyum Becerilerinin Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Sosyal Uyum Becerilerinin Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) OSB sosyal biliş ve pragmatik açık öğretim ister.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "OSB hangisini ifade eder?",
+    "options": ["A) Gizli müfredat açık öğretilmezse öğrenilmez.", "B) Zihin yetersizliği basamak ve genelleme.", "C) Kaynaştırma akran kabulü programlıdır, tesadüf değildir.", "D) OSB sosyal biliş ve pragmatik açık öğretim ister.", "E) Sosyal uyum selam, sıra, empati, çatışma, güvenlik, dijital davranış."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitimde Sosyal Uyum Becerilerinin Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Zihin yetersizliği ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Sosyal uyum selam, sıra, empati, çatışma, güvenlik, dijital davranış.", "B) Gizli müfredat açık öğretilmezse öğrenilmez.", "C) OSB sosyal biliş ve pragmatik açık öğretim ister.", "D) Kaynaştırma akran kabulü programlıdır, tesadüf değildir.", "E) Zihin yetersizliği basamak ve genelleme."],
+    "correctAnswerIndex": 4,
+    "explanation": "Özel Eğitimde Sosyal Uyum Becerilerinin Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Kaynaştırma için doğru bir açıklamadır?",
+    "options": ["A) Sosyal uyum selam, sıra, empati, çatışma, güvenlik, dijital davranış.", "B) Gizli müfredat açık öğretilmezse öğrenilmez.", "C) OSB sosyal biliş ve pragmatik açık öğretim ister.", "D) Zihin yetersizliği basamak ve genelleme.", "E) Kaynaştırma akran kabulü programlıdır, tesadüf değildir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Özel Eğitimde Sosyal Uyum Becerilerinin Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Sosyal öykü, video model, rol oynama hakkında hangisi doğrudur?",
+    "options": ["A) Sosyal uyum selam, sıra, empati, çatışma, güvenlik, dijital davranış.", "B) Gizli müfredat açık öğretilmezse öğrenilmez.", "C) OSB sosyal biliş ve pragmatik açık öğretim ister.", "D) Zihin yetersizliği basamak ve genelleme.", "E) Sosyal öykü, video model, rol oynama."],
+    "correctAnswerIndex": 4,
+    "explanation": "Özel Eğitimde Sosyal Uyum Becerilerinin Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "UDA ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) OSB sosyal biliş ve pragmatik açık öğretim ister.", "B) Zihin yetersizliği basamak ve genelleme.", "C) UDA uygun davranışı pekiştir.", "D) Sosyal uyum selam, sıra, empati, çatışma, güvenlik, dijital davranış.", "E) Gizli müfredat açık öğretilmezse öğrenilmez."],
+    "correctAnswerIndex": 2,
+    "explanation": "Özel Eğitimde Sosyal Uyum Becerilerinin Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Sosyal beceri grubu için doğru bir açıklamadır?",
+    "options": ["A) Sosyal beceri grubu.", "B) Sosyal uyum selam, sıra, empati, çatışma, güvenlik, dijital davranış.", "C) Gizli müfredat açık öğretilmezse öğrenilmez.", "D) OSB sosyal biliş ve pragmatik açık öğretim ister.", "E) Zihin yetersizliği basamak ve genelleme."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Özel Eğitimde Sosyal Uyum Becerilerinin Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Sosyal Uyum Becerilerinin Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Zihin yetersizliği basamak ve genelleme.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Toplum temelli hakkında hangisi doğrudur?",
+    "options": ["A) Sosyal uyum selam, sıra, empati, çatışma, güvenlik, dijital davranış.", "B) Gizli müfredat açık öğretilmezse öğrenilmez.", "C) OSB sosyal biliş ve pragmatik açık öğretim ister.", "D) Zihin yetersizliği basamak ve genelleme.", "E) Toplum temelli market, toplu taşıma."],
+    "correctAnswerIndex": 4,
+    "explanation": "Özel Eğitimde Sosyal Uyum Becerilerinin Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Beden okuryazarlığı hangisini ifade eder?",
+    "options": ["A) Zihin yetersizliği basamak ve genelleme.", "B) Beden okuryazarlığı hayır diyebilme.", "C) Sosyal uyum selam, sıra, empati, çatışma, güvenlik, dijital davranış.", "D) Gizli müfredat açık öğretilmezse öğrenilmez.", "E) OSB sosyal biliş ve pragmatik açık öğretim ister."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitimde Sosyal Uyum Becerilerinin Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Kaynaştırma akran kabulü programlıdır, tesadüf değildir.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Sosyal Uyum Becerilerinin Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Sosyal öykü, video model, rol oynama.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitimde Sosyal Uyum Becerilerinin Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Akran aracılı.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Sosyal Uyum Becerilerinin Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) UDA uygun davranışı pekiştir.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitimde Sosyal Uyum Becerilerinin Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Sosyal beceri grubu.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Sosyal Uyum Becerilerinin Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Toplum temelli market, toplu taşıma.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Özel Eğitimde Sosyal Uyum Becerilerinin Öğretimi notundaki temel bilgi."
 }
 ];

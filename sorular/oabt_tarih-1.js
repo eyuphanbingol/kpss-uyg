@@ -61,63 +61,63 @@ window.oabt_tarih_1_sorulari = [
     "explanation": "Tez, kaynak değil tarih yazımı bağlamıdır."
 },
 {
-    "question": "Tarih Metodolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Birinci el kaynak olaya çağdaş belge, kitabe, arşiv, hatırat, arkeolojik bulgudur.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Birinci el kaynak için doğru bir açıklamadır?",
+    "options": ["A) Birinci el kaynak olaya çağdaş belge, kitabe, arşiv, hatırat, arkeolojik bulgudur.", "B) İkinci el kaynak sonradan yazılmış araştırma, ders kitabı ve sentez eserlerdir.", "C) Dış tenkit belgenin sahiciliğini; iç tenkit içeriğin güvenilirliğini sorgular.", "D) Kronoloji olayları zaman sırasına dizer; tarih yazımı yorum ve anlatı kurar.", "E) Periodizasyon geçmişi anlamlı dilimlere ayırır; dilimler mutlak doğa yasası değildir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Tarih Metodolojisi notundaki temel bilgi."
 },
 {
-    "question": "Tarih Metodolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) İkinci el kaynak sonradan yazılmış araştırma, ders kitabı ve sentez eserlerdir."],
+    "question": "İkinci el kaynak hakkında hangisi doğrudur?",
+    "options": ["A) Dış tenkit belgenin sahiciliğini; iç tenkit içeriğin güvenilirliğini sorgular.", "B) Kronoloji olayları zaman sırasına dizer; tarih yazımı yorum ve anlatı kurar.", "C) Periodizasyon geçmişi anlamlı dilimlere ayırır; dilimler mutlak doğa yasası değildir.", "D) İkinci el kaynak sonradan yazılmış araştırma, ders kitabı ve sentez eserlerdir.", "E) Birinci el kaynak olaya çağdaş belge, kitabe, arşiv, hatırat, arkeolojik bulgudur."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Tarih Metodolojisi notundaki temel bilgi."
 },
 {
-    "question": "Tarih Metodolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Dış tenkit belgenin sahiciliğini; iç tenkit içeriğin güvenilirliğini sorgular.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Dış tenkit hangisini ifade eder?",
+    "options": ["A) Dış tenkit belgenin sahiciliğini; iç tenkit içeriğin güvenilirliğini sorgular.", "B) Birinci el kaynak olaya çağdaş belge, kitabe, arşiv, hatırat, arkeolojik bulgudur.", "C) İkinci el kaynak sonradan yazılmış araştırma, ders kitabı ve sentez eserlerdir.", "D) Kronoloji olayları zaman sırasına dizer; tarih yazımı yorum ve anlatı kurar.", "E) Periodizasyon geçmişi anlamlı dilimlere ayırır; dilimler mutlak doğa yasası değildir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Tarih Metodolojisi notundaki temel bilgi."
+},
+{
+    "question": "Kronoloji ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Birinci el kaynak olaya çağdaş belge, kitabe, arşiv, hatırat, arkeolojik bulgudur.", "B) İkinci el kaynak sonradan yazılmış araştırma, ders kitabı ve sentez eserlerdir.", "C) Dış tenkit belgenin sahiciliğini; iç tenkit içeriğin güvenilirliğini sorgular.", "D) Periodizasyon geçmişi anlamlı dilimlere ayırır; dilimler mutlak doğa yasası değildir.", "E) Kronoloji olayları zaman sırasına dizer; tarih yazımı yorum ve anlatı kurar."],
+    "correctAnswerIndex": 4,
+    "explanation": "Tarih Metodolojisi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Periodizasyon için doğru bir açıklamadır?",
+    "options": ["A) Birinci el kaynak olaya çağdaş belge, kitabe, arşiv, hatırat, arkeolojik bulgudur.", "B) İkinci el kaynak sonradan yazılmış araştırma, ders kitabı ve sentez eserlerdir.", "C) Dış tenkit belgenin sahiciliğini; iç tenkit içeriğin güvenilirliğini sorgular.", "D) Kronoloji olayları zaman sırasına dizer; tarih yazımı yorum ve anlatı kurar.", "E) Periodizasyon geçmişi anlamlı dilimlere ayırır; dilimler mutlak doğa yasası değildir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Tarih Metodolojisi notundaki temel bilgi."
+},
+{
+    "question": "Pozitivist hakkında hangisi doğrudur?",
+    "options": ["A) Dış tenkit belgenin sahiciliğini; iç tenkit içeriğin güvenilirliğini sorgular.", "B) Kronoloji olayları zaman sırasına dizer; tarih yazımı yorum ve anlatı kurar.", "C) Pozitivist tarih olguları belgeye bağlar; yasa arayışı 19. yüzyıl etkisidir.", "D) Birinci el kaynak olaya çağdaş belge, kitabe, arşiv, hatırat, arkeolojik bulgudur.", "E) İkinci el kaynak sonradan yazılmış araştırma, ders kitabı ve sentez eserlerdir."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Tarih Metodolojisi notundaki temel bilgi."
 },
 {
-    "question": "Tarih Metodolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Kronoloji olayları zaman sırasına dizer; tarih yazımı yorum ve anlatı kurar."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Annales hangisini ifade eder?",
+    "options": ["A) Annales uzun süre, coğrafya, ekonomi ve zihniyeti öne çıkarır; olay tarihini aşar.", "B) Birinci el kaynak olaya çağdaş belge, kitabe, arşiv, hatırat, arkeolojik bulgudur.", "C) İkinci el kaynak sonradan yazılmış araştırma, ders kitabı ve sentez eserlerdir.", "D) Dış tenkit belgenin sahiciliğini; iç tenkit içeriğin güvenilirliğini sorgular.", "E) Kronoloji olayları zaman sırasına dizer; tarih yazımı yorum ve anlatı kurar."],
+    "correctAnswerIndex": 0,
+    "explanation": "Tarih Metodolojisi notundaki temel bilgi."
 },
 {
-    "question": "Tarih Metodolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Periodizasyon geçmişi anlamlı dilimlere ayırır; dilimler mutlak doğa yasası değildir.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Marksist ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Birinci el kaynak olaya çağdaş belge, kitabe, arşiv, hatırat, arkeolojik bulgudur.", "B) İkinci el kaynak sonradan yazılmış araştırma, ders kitabı ve sentez eserlerdir.", "C) Dış tenkit belgenin sahiciliğini; iç tenkit içeriğin güvenilirliğini sorgular.", "D) Kronoloji olayları zaman sırasına dizer; tarih yazımı yorum ve anlatı kurar.", "E) Marksist yaklaşım üretim ilişkileri ve sınıf çatışmasını merkeze alır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Tarih Metodolojisi notundaki temel bilgi."
 },
 {
-    "question": "Tarih Metodolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Pozitivist tarih olguları belgeye bağlar; yasa arayışı 19. yüzyıl etkisidir."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Milliyetçi tarih yazımı için doğru bir açıklamadır?",
+    "options": ["A) Milliyetçi tarih yazımı kimlik ve devlet inşasına hizmet edebilir; eleştirel mesafe ister.", "B) Birinci el kaynak olaya çağdaş belge, kitabe, arşiv, hatırat, arkeolojik bulgudur.", "C) İkinci el kaynak sonradan yazılmış araştırma, ders kitabı ve sentez eserlerdir.", "D) Dış tenkit belgenin sahiciliğini; iç tenkit içeriğin güvenilirliğini sorgular.", "E) Kronoloji olayları zaman sırasına dizer; tarih yazımı yorum ve anlatı kurar."],
+    "correctAnswerIndex": 0,
+    "explanation": "Tarih Metodolojisi notundaki temel bilgi."
 },
 {
-    "question": "Tarih Metodolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Annales uzun süre, coğrafya, ekonomi ve zihniyeti öne çıkarır; olay tarihini aşar.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Tarih Metodolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Marksist yaklaşım üretim ilişkileri ve sınıf çatışmasını merkeze alır."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Tarih Metodolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Milliyetçi tarih yazımı kimlik ve devlet inşasına hizmet edebilir; eleştirel mesafe ister.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Tarih Metodolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Sözlü tarih yaşayan tanıklığı kaydeder; bellek yanılması riski taşır."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Sözlü tarih hakkında hangisi doğrudur?",
+    "options": ["A) Kronoloji olayları zaman sırasına dizer; tarih yazımı yorum ve anlatı kurar.", "B) Sözlü tarih yaşayan tanıklığı kaydeder; bellek yanılması riski taşır.", "C) Birinci el kaynak olaya çağdaş belge, kitabe, arşiv, hatırat, arkeolojik bulgudur.", "D) İkinci el kaynak sonradan yazılmış araştırma, ders kitabı ve sentez eserlerdir.", "E) Dış tenkit belgenin sahiciliğini; iç tenkit içeriğin güvenilirliğini sorgular."],
+    "correctAnswerIndex": 1,
+    "explanation": "Tarih Metodolojisi notundaki temel bilgi."
 }
 ];

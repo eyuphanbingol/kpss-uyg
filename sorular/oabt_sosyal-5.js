@@ -55,69 +55,69 @@ window.oabt_sosyal_5_sorulari = [
     "explanation": "Gender vs sex ayrımı öğretimde netleştirilir."
 },
 {
-    "question": "Sosyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Sosyolojik bakış (Mills) özel-kamusal, birey-yapı.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi Sosyolojik bakış için doğru bir açıklamadır?",
+    "options": ["A) Statü-rol-norm-yaptırım; statü kümesi ve rol çatışması.", "B) Grup birincil-ikincil, referans, iç-dış grup (in-group).", "C) Tabakalaşma sınıf, statü, parti (Weber); toplumsal hareketlilik.", "D) Sosyolojik bakış (Mills) özel-kamusal, birey-yapı.", "E) Toplumsallaşma birincil-ikincil; ajanlar aile, okul, medya, akran."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Sosyoloji notundaki temel bilgi."
 },
 {
-    "question": "Sosyoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Toplumsallaşma birincil-ikincil; ajanlar aile, okul, medya, akran.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Toplumsallaşma hakkında hangisi doğrudur?",
+    "options": ["A) Grup birincil-ikincil, referans, iç-dış grup (in-group).", "B) Tabakalaşma sınıf, statü, parti (Weber); toplumsal hareketlilik.", "C) Toplumsallaşma birincil-ikincil; ajanlar aile, okul, medya, akran.", "D) Sosyolojik bakış (Mills) özel-kamusal, birey-yapı.", "E) Statü-rol-norm-yaptırım; statü kümesi ve rol çatışması."],
+    "correctAnswerIndex": 2,
+    "explanation": "Sosyoloji notundaki temel bilgi."
+},
+{
+    "question": "Statü-rol-norm-yaptırım hangisini ifade eder?",
+    "options": ["A) Tabakalaşma sınıf, statü, parti (Weber); toplumsal hareketlilik.", "B) Statü-rol-norm-yaptırım; statü kümesi ve rol çatışması.", "C) Sosyolojik bakış (Mills) özel-kamusal, birey-yapı.", "D) Toplumsallaşma birincil-ikincil; ajanlar aile, okul, medya, akran.", "E) Grup birincil-ikincil, referans, iç-dış grup (in-group)."],
+    "correctAnswerIndex": 1,
+    "explanation": "Sosyoloji notundaki temel bilgi."
+},
+{
+    "question": "Grup ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Tabakalaşma sınıf, statü, parti (Weber); toplumsal hareketlilik.", "B) Grup birincil-ikincil, referans, iç-dış grup (in-group).", "C) Sosyolojik bakış (Mills) özel-kamusal, birey-yapı.", "D) Toplumsallaşma birincil-ikincil; ajanlar aile, okul, medya, akran.", "E) Statü-rol-norm-yaptırım; statü kümesi ve rol çatışması."],
+    "correctAnswerIndex": 1,
+    "explanation": "Sosyoloji notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Tabakalaşma için doğru bir açıklamadır?",
+    "options": ["A) Sosyolojik bakış (Mills) özel-kamusal, birey-yapı.", "B) Toplumsallaşma birincil-ikincil; ajanlar aile, okul, medya, akran.", "C) Statü-rol-norm-yaptırım; statü kümesi ve rol çatışması.", "D) Grup birincil-ikincil, referans, iç-dış grup (in-group).", "E) Tabakalaşma sınıf, statü, parti (Weber); toplumsal hareketlilik."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Sosyoloji notundaki temel bilgi."
 },
 {
-    "question": "Sosyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Statü-rol-norm-yaptırım; statü kümesi ve rol çatışması.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Kültür hakkında hangisi doğrudur?",
+    "options": ["A) Toplumsallaşma birincil-ikincil; ajanlar aile, okul, medya, akran.", "B) Statü-rol-norm-yaptırım; statü kümesi ve rol çatışması.", "C) Grup birincil-ikincil, referans, iç-dış grup (in-group).", "D) Kültür maddi-manevi; alt kültür, karşı kültür, kültürel görelilik-etnosentrizm.", "E) Sosyolojik bakış (Mills) özel-kamusal, birey-yapı."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Sosyoloji notundaki temel bilgi."
 },
 {
-    "question": "Sosyoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Grup birincil-ikincil, referans, iç-dış grup (in-group).", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Kurumlar hangisini ifade eder?",
+    "options": ["A) Kurumlar aile, eğitim, din, siyaset, ekonomi; işlevselci-çatışmacı okuma.", "B) Sosyolojik bakış (Mills) özel-kamusal, birey-yapı.", "C) Toplumsallaşma birincil-ikincil; ajanlar aile, okul, medya, akran.", "D) Statü-rol-norm-yaptırım; statü kümesi ve rol çatışması.", "E) Grup birincil-ikincil, referans, iç-dış grup (in-group)."],
+    "correctAnswerIndex": 0,
+    "explanation": "Sosyoloji notundaki temel bilgi."
+},
+{
+    "question": "Sapma ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Statü-rol-norm-yaptırım; statü kümesi ve rol çatışması.", "B) Grup birincil-ikincil, referans, iç-dış grup (in-group).", "C) Sapma durkheim anomi; etiketleme kuramı.", "D) Sosyolojik bakış (Mills) özel-kamusal, birey-yapı.", "E) Toplumsallaşma birincil-ikincil; ajanlar aile, okul, medya, akran."],
+    "correctAnswerIndex": 2,
+    "explanation": "Sosyoloji notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Toplumsal değişme için doğru bir açıklamadır?",
+    "options": ["A) Sosyolojik bakış (Mills) özel-kamusal, birey-yapı.", "B) Toplumsallaşma birincil-ikincil; ajanlar aile, okul, medya, akran.", "C) Statü-rol-norm-yaptırım; statü kümesi ve rol çatışması.", "D) Grup birincil-ikincil, referans, iç-dış grup (in-group).", "E) Toplumsal değişme modernleşme, bağımlılık, küreselleşme."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Sosyoloji notundaki temel bilgi."
 },
 {
-    "question": "Sosyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Tabakalaşma sınıf, statü, parti (Weber); toplumsal hareketlilik.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Toplumsal cinsiyet hakkında hangisi doğrudur?",
+    "options": ["A) Toplumsal cinsiyet inşa; ataerkil yapı, eşitlik politikaları.", "B) Sosyolojik bakış (Mills) özel-kamusal, birey-yapı.", "C) Toplumsallaşma birincil-ikincil; ajanlar aile, okul, medya, akran.", "D) Statü-rol-norm-yaptırım; statü kümesi ve rol çatışması.", "E) Grup birincil-ikincil, referans, iç-dış grup (in-group)."],
+    "correctAnswerIndex": 0,
+    "explanation": "Sosyoloji notundaki temel bilgi."
 },
 {
-    "question": "Sosyoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Kültür maddi-manevi; alt kültür, karşı kültür, kültürel görelilik-etnosentrizm.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Kentleşme hangisini ifade eder?",
+    "options": ["A) Sosyolojik bakış (Mills) özel-kamusal, birey-yapı.", "B) Toplumsallaşma birincil-ikincil; ajanlar aile, okul, medya, akran.", "C) Statü-rol-norm-yaptırım; statü kümesi ve rol çatışması.", "D) Grup birincil-ikincil, referans, iç-dış grup (in-group).", "E) Kentleşme gecekondu, hemşehri ağları, kentsel ayrışma."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Sosyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Kurumlar aile, eğitim, din, siyaset, ekonomi; işlevselci-çatışmacı okuma.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Sosyoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Sapma durkheim anomi; etiketleme kuramı.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Sosyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Toplumsal değişme modernleşme, bağımlılık, küreselleşme.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Sosyoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Toplumsal cinsiyet inşa; ataerkil yapı, eşitlik politikaları.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Sosyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Kentleşme gecekondu, hemşehri ağları, kentsel ayrışma.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Sosyoloji notundaki temel bilgi."
 }
 ];

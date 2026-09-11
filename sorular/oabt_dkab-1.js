@@ -61,63 +61,63 @@ window.oabt_dkab_1_sorulari = [
     "explanation": "Hükmün kaldırılıp kaldırılmadığı usul konusudur."
 },
 {
-    "question": "Kur'an-ı Kerim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Vahiy Allah'ın peygamberine bildirimidir; Kur'an son vahiy kabul edilir.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Vahiy için doğru bir açıklamadır?",
+    "options": ["A) Ayet, sure, cüz, hizb mushaf birimleridir; 114 sure.", "B) Tertil ve tecvid doğru okuyuş; mahreç ve sıfat.", "C) Kıraat okuyuş farklılıkları mütevatir gelenek içinde tartışılır.", "D) Vahiy Allah'ın peygamberine bildirimidir; Kur'an son vahiy kabul edilir.", "E) Mekki-Medeni sureler nüzul yeri ve üslup-tema farkıyla ayrılır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Kur'an-ı Kerim notundaki temel bilgi."
+},
+{
+    "question": "Mekki-Medeni hakkında hangisi doğrudur?",
+    "options": ["A) Vahiy Allah'ın peygamberine bildirimidir; Kur'an son vahiy kabul edilir.", "B) Ayet, sure, cüz, hizb mushaf birimleridir; 114 sure.", "C) Tertil ve tecvid doğru okuyuş; mahreç ve sıfat.", "D) Kıraat okuyuş farklılıkları mütevatir gelenek içinde tartışılır.", "E) Mekki-Medeni sureler nüzul yeri ve üslup-tema farkıyla ayrılır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Kur'an-ı Kerim notundaki temel bilgi."
+},
+{
+    "question": "Ayet, sure, cüz, hizb hangisini ifade eder?",
+    "options": ["A) Kıraat okuyuş farklılıkları mütevatir gelenek içinde tartışılır.", "B) Ayet, sure, cüz, hizb mushaf birimleridir; 114 sure.", "C) Vahiy Allah'ın peygamberine bildirimidir; Kur'an son vahiy kabul edilir.", "D) Mekki-Medeni sureler nüzul yeri ve üslup-tema farkıyla ayrılır.", "E) Tertil ve tecvid doğru okuyuş; mahreç ve sıfat."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Kur'an-ı Kerim notundaki temel bilgi."
 },
 {
-    "question": "Kur'an-ı Kerim konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mekki-Medeni sureler nüzul yeri ve üslup-tema farkıyla ayrılır.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Tertil ve tecvid ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Tertil ve tecvid doğru okuyuş; mahreç ve sıfat.", "B) Vahiy Allah'ın peygamberine bildirimidir; Kur'an son vahiy kabul edilir.", "C) Mekki-Medeni sureler nüzul yeri ve üslup-tema farkıyla ayrılır.", "D) Ayet, sure, cüz, hizb mushaf birimleridir; 114 sure.", "E) Kıraat okuyuş farklılıkları mütevatir gelenek içinde tartışılır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Kur'an-ı Kerim notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Kıraat için doğru bir açıklamadır?",
+    "options": ["A) Ayet, sure, cüz, hizb mushaf birimleridir; 114 sure.", "B) Tertil ve tecvid doğru okuyuş; mahreç ve sıfat.", "C) Kıraat okuyuş farklılıkları mütevatir gelenek içinde tartışılır.", "D) Vahiy Allah'ın peygamberine bildirimidir; Kur'an son vahiy kabul edilir.", "E) Mekki-Medeni sureler nüzul yeri ve üslup-tema farkıyla ayrılır."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Kur'an-ı Kerim notundaki temel bilgi."
 },
 {
-    "question": "Kur'an-ı Kerim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Ayet, sure, cüz, hizb mushaf birimleridir; 114 sure.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Tevhid, nübüvvet, ahiret hakkında hangisi doğrudur?",
+    "options": ["A) Vahiy Allah'ın peygamberine bildirimidir; Kur'an son vahiy kabul edilir.", "B) Mekki-Medeni sureler nüzul yeri ve üslup-tema farkıyla ayrılır.", "C) Ayet, sure, cüz, hizb mushaf birimleridir; 114 sure.", "D) Tertil ve tecvid doğru okuyuş; mahreç ve sıfat.", "E) Tevhid, nübüvvet, ahiret itikadi omurga; ahkâm ayetleri hukukun kaynağıdır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Kur'an-ı Kerim notundaki temel bilgi."
 },
 {
-    "question": "Kur'an-ı Kerim konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Tertil ve tecvid doğru okuyuş; mahreç ve sıfat.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Kıssa hangisini ifade eder?",
+    "options": ["A) Vahiy Allah'ın peygamberine bildirimidir; Kur'an son vahiy kabul edilir.", "B) Mekki-Medeni sureler nüzul yeri ve üslup-tema farkıyla ayrılır.", "C) Ayet, sure, cüz, hizb mushaf birimleridir; 114 sure.", "D) Tertil ve tecvid doğru okuyuş; mahreç ve sıfat.", "E) Kıssa öğüt amaçlı geçmiş anlatısıdır; tarih dersi tek amacı değildir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Kur'an-ı Kerim notundaki temel bilgi."
+},
+{
+    "question": "Muhkem-müteşabih ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Ayet, sure, cüz, hizb mushaf birimleridir; 114 sure.", "B) Tertil ve tecvid doğru okuyuş; mahreç ve sıfat.", "C) Muhkem-müteşabih ayet ayrımı tevil sınırını çizer.", "D) Vahiy Allah'ın peygamberine bildirimidir; Kur'an son vahiy kabul edilir.", "E) Mekki-Medeni sureler nüzul yeri ve üslup-tema farkıyla ayrılır."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Kur'an-ı Kerim notundaki temel bilgi."
 },
 {
-    "question": "Kur'an-ı Kerim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kıraat okuyuş farklılıkları mütevatir gelenek içinde tartışılır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Nesh için doğru bir açıklamadır?",
+    "options": ["A) Mekki-Medeni sureler nüzul yeri ve üslup-tema farkıyla ayrılır.", "B) Ayet, sure, cüz, hizb mushaf birimleridir; 114 sure.", "C) Tertil ve tecvid doğru okuyuş; mahreç ve sıfat.", "D) Nesh tartışması ahkâm ayetlerinde gündeme gelir.", "E) Vahiy Allah'ın peygamberine bildirimidir; Kur'an son vahiy kabul edilir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Kur'an-ı Kerim notundaki temel bilgi."
 },
 {
-    "question": "Kur'an-ı Kerim konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Tevhid, nübüvvet, ahiret itikadi omurga; ahkâm ayetleri hukukun kaynağıdır.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Kur'an-ı Kerim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kıssa öğüt amaçlı geçmiş anlatısıdır; tarih dersi tek amacı değildir.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Kur'an-ı Kerim konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Muhkem-müteşabih ayet ayrımı tevil sınırını çizer.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Kur'an-ı Kerim konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Nesh tartışması ahkâm ayetlerinde gündeme gelir.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Kur'an-ı Kerim konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) İ'caz dil, gayb haberi ve teşri iddiasıyla bağlanır.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "İ'caz hakkında hangisi doğrudur?",
+    "options": ["A) Vahiy Allah'ın peygamberine bildirimidir; Kur'an son vahiy kabul edilir.", "B) Mekki-Medeni sureler nüzul yeri ve üslup-tema farkıyla ayrılır.", "C) Ayet, sure, cüz, hizb mushaf birimleridir; 114 sure.", "D) Tertil ve tecvid doğru okuyuş; mahreç ve sıfat.", "E) İ'caz dil, gayb haberi ve teşri iddiasıyla bağlanır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Kur'an-ı Kerim notundaki temel bilgi."
 }
 ];

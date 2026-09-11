@@ -61,63 +61,63 @@ window.oabt_ozel_15_sorulari = [
     "explanation": "İklim."
 },
 {
-    "question": "Özel Eğitimde Fiziksel Eğitim ve Spor konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Uyarlanmış beden eğitimi katılım hakkıdır, muafiyet ilk çözüm değildir."],
+    "question": "Aşağıdakilerden hangisi Uyarlanmış beden eğitimi için doğru bir açıklamadır?",
+    "options": ["A) Paralimpik farkındalık adil sınıflama bilgisi.", "B) Kaynaştırma kural-malzeme-alan uyarlaması.", "C) Uyarlanmış beden eğitimi katılım hakkıdır, muafiyet ilk çözüm değildir.", "D) Motor değerlendirme görev analizi.", "E) Tıbbi izin bazı kalp-nöbet-ortopedi profillerinde."],
+    "correctAnswerIndex": 2,
+    "explanation": "Özel Eğitimde Fiziksel Eğitim ve Spor notundaki temel bilgi."
+},
+{
+    "question": "Motor değerlendirme hakkında hangisi doğrudur?",
+    "options": ["A) Tıbbi izin bazı kalp-nöbet-ortopedi profillerinde.", "B) Paralimpik farkındalık adil sınıflama bilgisi.", "C) Kaynaştırma kural-malzeme-alan uyarlaması.", "D) Motor değerlendirme görev analizi.", "E) Uyarlanmış beden eğitimi katılım hakkıdır, muafiyet ilk çözüm değildir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitimde Fiziksel Eğitim ve Spor notundaki temel bilgi."
+},
+{
+    "question": "Tıbbi izin hangisini ifade eder?",
+    "options": ["A) Paralimpik farkındalık adil sınıflama bilgisi.", "B) Kaynaştırma kural-malzeme-alan uyarlaması.", "C) Tıbbi izin bazı kalp-nöbet-ortopedi profillerinde.", "D) Uyarlanmış beden eğitimi katılım hakkıdır, muafiyet ilk çözüm değildir.", "E) Motor değerlendirme görev analizi."],
+    "correctAnswerIndex": 2,
+    "explanation": "Özel Eğitimde Fiziksel Eğitim ve Spor notundaki temel bilgi."
+},
+{
+    "question": "Paralimpik farkındalık ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Tıbbi izin bazı kalp-nöbet-ortopedi profillerinde.", "B) Kaynaştırma kural-malzeme-alan uyarlaması.", "C) Paralimpik farkındalık adil sınıflama bilgisi.", "D) Uyarlanmış beden eğitimi katılım hakkıdır, muafiyet ilk çözüm değildir.", "E) Motor değerlendirme görev analizi."],
+    "correctAnswerIndex": 2,
+    "explanation": "Özel Eğitimde Fiziksel Eğitim ve Spor notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Kaynaştırma için doğru bir açıklamadır?",
+    "options": ["A) Uyarlanmış beden eğitimi katılım hakkıdır, muafiyet ilk çözüm değildir.", "B) Motor değerlendirme görev analizi.", "C) Tıbbi izin bazı kalp-nöbet-ortopedi profillerinde.", "D) Paralimpik farkındalık adil sınıflama bilgisi.", "E) Kaynaştırma kural-malzeme-alan uyarlaması."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Özel Eğitimde Fiziksel Eğitim ve Spor notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Fiziksel Eğitim ve Spor konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Motor değerlendirme görev analizi.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitimde Fiziksel Eğitim ve Spor konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Tıbbi izin bazı kalp-nöbet-ortopedi profillerinde."],
+    "question": "Büyük top, kısa mesafe, eş destek hakkında hangisi doğrudur?",
+    "options": ["A) Uyarlanmış beden eğitimi katılım hakkıdır, muafiyet ilk çözüm değildir.", "B) Motor değerlendirme görev analizi.", "C) Tıbbi izin bazı kalp-nöbet-ortopedi profillerinde.", "D) Paralimpik farkındalık adil sınıflama bilgisi.", "E) Büyük top, kısa mesafe, eş destek."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Özel Eğitimde Fiziksel Eğitim ve Spor notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Fiziksel Eğitim ve Spor konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Paralimpik farkındalık adil sınıflama bilgisi.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Denge ve germe hangisini ifade eder?",
+    "options": ["A) Tıbbi izin bazı kalp-nöbet-ortopedi profillerinde.", "B) Paralimpik farkındalık adil sınıflama bilgisi.", "C) Denge ve germe fizyoterapi iş birliği sınırlı.", "D) Uyarlanmış beden eğitimi katılım hakkıdır, muafiyet ilk çözüm değildir.", "E) Motor değerlendirme görev analizi."],
+    "correctAnswerIndex": 2,
+    "explanation": "Özel Eğitimde Fiziksel Eğitim ve Spor notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Fiziksel Eğitim ve Spor konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Kaynaştırma kural-malzeme-alan uyarlaması."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Duyu için doğru bir açıklamadır?",
+    "options": ["A) Motor değerlendirme görev analizi.", "B) Tıbbi izin bazı kalp-nöbet-ortopedi profillerinde.", "C) Paralimpik farkındalık adil sınıflama bilgisi.", "D) Duyu OSB'de gürültü-ışık.", "E) Uyarlanmış beden eğitimi katılım hakkıdır, muafiyet ilk çözüm değildir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitimde Fiziksel Eğitim ve Spor notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Fiziksel Eğitim ve Spor konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Büyük top, kısa mesafe, eş destek.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Yüzme hakkında hangisi doğrudur?",
+    "options": ["A) Tıbbi izin bazı kalp-nöbet-ortopedi profillerinde.", "B) Paralimpik farkındalık adil sınıflama bilgisi.", "C) Yüzme su güvenliği öncelikli.", "D) Uyarlanmış beden eğitimi katılım hakkıdır, muafiyet ilk çözüm değildir.", "E) Motor değerlendirme görev analizi."],
+    "correctAnswerIndex": 2,
+    "explanation": "Özel Eğitimde Fiziksel Eğitim ve Spor notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Fiziksel Eğitim ve Spor konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Denge ve germe fizyoterapi iş birliği sınırlı."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Fiziksel Eğitim ve Spor konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Oyun kural sade.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitimde Fiziksel Eğitim ve Spor konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Duyu OSB'de gürültü-ışık."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Fiziksel Eğitim ve Spor konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Yüzme su güvenliği öncelikli.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Akran hangisini ifade eder?",
+    "options": ["A) Motor değerlendirme görev analizi.", "B) Tıbbi izin bazı kalp-nöbet-ortopedi profillerinde.", "C) Paralimpik farkındalık adil sınıflama bilgisi.", "D) Akran aşırı yardım bağımlılığı.", "E) Uyarlanmış beden eğitimi katılım hakkıdır, muafiyet ilk çözüm değildir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitimde Fiziksel Eğitim ve Spor notundaki temel bilgi."
 }
 ];

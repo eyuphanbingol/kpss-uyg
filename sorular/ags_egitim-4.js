@@ -73,51 +73,51 @@ window.ags_egitim_4_sorulari = [
     "explanation": "Kalkınma literatürü."
 },
 {
-    "question": "Eğitimin Ekonomik Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) İnsan sermayesi (Schultz, Becker) eğitimi gelecekte gelir ve verimlilik artıran yatırımdır"],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Eğitimin Ekonomik Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Fırsat maliyeti okula ayrılan zamanın vazgeçilen kazancıdır.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi İnsan sermayesi için doğru bir açıklamadır?",
+    "options": ["A) İnsan sermayesi (Schultz, Becker) eğitimi gelecekte gelir ve verimlilik artıran yatırımdır.", "B) Fırsat maliyeti okula ayrılan zamanın vazgeçilen kazancıdır.", "C) Özel getiri bireyin, toplumsal getiri dışsallıklar dahil toplumun kazancıdır.", "D) Tarama/sinyal kuramı (Spence) diploma nın üretkenlikten çok yeteneği işaret edebileceğini söyler.", "E) Beşeri kalkınma yalnızca büyüme değil sağlık, eğitim ve gelir bileşik göstergesidir (İGE)."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Eğitimin Ekonomik Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Eğitimin Ekonomik Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Özel getiri bireyin, toplumsal getiri dışsallıklar dahil toplumun kazancıdır."],
+    "question": "Fırsat maliyeti hakkında hangisi doğrudur?",
+    "options": ["A) İnsan sermayesi (Schultz, Becker) eğitimi gelecekte gelir ve verimlilik artıran yatırımdır.", "B) Özel getiri bireyin, toplumsal getiri dışsallıklar dahil toplumun kazancıdır.", "C) Tarama/sinyal kuramı (Spence) diploma nın üretkenlikten çok yeteneği işaret edebileceğini söyler.", "D) Beşeri kalkınma yalnızca büyüme değil sağlık, eğitim ve gelir bileşik göstergesidir (İGE).", "E) Fırsat maliyeti okula ayrılan zamanın vazgeçilen kazancıdır."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Eğitimin Ekonomik Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Eğitimin Ekonomik Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Tarama/sinyal kuramı (Spence) diploma nın üretkenlikten çok yeteneği işaret edebileceğini ", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Özel getiri hangisini ifade eder?",
+    "options": ["A) Özel getiri bireyin, toplumsal getiri dışsallıklar dahil toplumun kazancıdır.", "B) İnsan sermayesi (Schultz, Becker) eğitimi gelecekte gelir ve verimlilik artıran yatırımdır.", "C) Fırsat maliyeti okula ayrılan zamanın vazgeçilen kazancıdır.", "D) Tarama/sinyal kuramı (Spence) diploma nın üretkenlikten çok yeteneği işaret edebileceğini söyler.", "E) Beşeri kalkınma yalnızca büyüme değil sağlık, eğitim ve gelir bileşik göstergesidir (İGE)."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Eğitimin Ekonomik Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Eğitimin Ekonomik Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Beşeri kalkınma yalnızca büyüme değil sağlık, eğitim ve gelir bileşik göstergesidir (İGE)."],
+    "question": "Tarama/sinyal kuramı ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Fırsat maliyeti okula ayrılan zamanın vazgeçilen kazancıdır.", "B) Özel getiri bireyin, toplumsal getiri dışsallıklar dahil toplumun kazancıdır.", "C) Beşeri kalkınma yalnızca büyüme değil sağlık, eğitim ve gelir bileşik göstergesidir (İGE).", "D) Tarama/sinyal kuramı (Spence) diploma nın üretkenlikten çok yeteneği işaret edebileceğini söyler.", "E) İnsan sermayesi (Schultz, Becker) eğitimi gelecekte gelir ve verimlilik artıran yatırımdır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Eğitimin Ekonomik Temelleri notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Beşeri kalkınma için doğru bir açıklamadır?",
+    "options": ["A) Tarama/sinyal kuramı (Spence) diploma nın üretkenlikten çok yeteneği işaret edebileceğini söyler.", "B) Beşeri kalkınma yalnızca büyüme değil sağlık, eğitim ve gelir bileşik göstergesidir (İGE).", "C) İnsan sermayesi (Schultz, Becker) eğitimi gelecekte gelir ve verimlilik artıran yatırımdır.", "D) Fırsat maliyeti okula ayrılan zamanın vazgeçilen kazancıdır.", "E) Özel getiri bireyin, toplumsal getiri dışsallıklar dahil toplumun kazancıdır."],
+    "correctAnswerIndex": 1,
+    "explanation": "Eğitimin Ekonomik Temelleri notundaki temel bilgi."
+},
+{
+    "question": "İnsan gücü planlaması hakkında hangisi doğrudur?",
+    "options": ["A) Tarama/sinyal kuramı (Spence) diploma nın üretkenlikten çok yeteneği işaret edebileceğini söyler.", "B) İnsan gücü planlaması meslek kotalarıyla arz-talep dengeleme; getiri oranı yatırımı piyasaya bırakma.", "C) İnsan sermayesi (Schultz, Becker) eğitimi gelecekte gelir ve verimlilik artıran yatırımdır.", "D) Fırsat maliyeti okula ayrılan zamanın vazgeçilen kazancıdır.", "E) Özel getiri bireyin, toplumsal getiri dışsallıklar dahil toplumun kazancıdır."],
+    "correctAnswerIndex": 1,
+    "explanation": "Eğitimin Ekonomik Temelleri notundaki temel bilgi."
+},
+{
+    "question": "Beyin göçü hangisini ifade eder?",
+    "options": ["A) İnsan sermayesi (Schultz, Becker) eğitimi gelecekte gelir ve verimlilik artıran yatırımdır.", "B) Fırsat maliyeti okula ayrılan zamanın vazgeçilen kazancıdır.", "C) Özel getiri bireyin, toplumsal getiri dışsallıklar dahil toplumun kazancıdır.", "D) Tarama/sinyal kuramı (Spence) diploma nın üretkenlikten çok yeteneği işaret edebileceğini söyler.", "E) Beyin göçü nitelikli emeğin yurt dışına çıkışı; tersine beyin göçü politikası tartışılır."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Eğitimin Ekonomik Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Eğitimin Ekonomik Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) İnsan gücü planlaması meslek kotalarıyla arz-talep dengeleme; getiri oranı yatırımı piyasa", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Eğitimin Ekonomik Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Beyin göçü nitelikli emeğin yurt dışına çıkışı; tersine beyin göçü politikası tartışılır."],
+    "question": "Eğitim-istihdam uyumsuzluğu ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İnsan sermayesi (Schultz, Becker) eğitimi gelecekte gelir ve verimlilik artıran yatırımdır.", "B) Fırsat maliyeti okula ayrılan zamanın vazgeçilen kazancıdır.", "C) Özel getiri bireyin, toplumsal getiri dışsallıklar dahil toplumun kazancıdır.", "D) Tarama/sinyal kuramı (Spence) diploma nın üretkenlikten çok yeteneği işaret edebileceğini söyler.", "E) Eğitim-istihdam uyumsuzluğu aşırı eğitim veya alan dışı çalışma."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Eğitimin Ekonomik Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Eğitim-istihdam uyumsuzluğu aşırı eğitim veya alan dışı çalışma.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Eğitimin Ekonomik Temelleri notundaki temel bilgi."
 }
 ];

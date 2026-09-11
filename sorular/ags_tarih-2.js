@@ -73,51 +73,51 @@ window.ags_tarih_2_sorulari = [
     "explanation": "Kırım ve Rusya nüfuzu klasik maddeleridir."
 },
 {
-    "question": "Osmanlı Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Osman Bey Söğüt-Domaniç uç beyliği; geleneksel kuruluş 1299 kabulüdür.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Osmanlı Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Orhan Bey Bursa (1326), düzenli yaya-müsellem; I. Murad Rumeli, Edirne, 1389 I. Kosova.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Osman Bey için doğru bir açıklamadır?",
+    "options": ["A) Yavuz (1514 Çaldıran, 1516-17 Mercidabık-Ridaniye) Anadolu-Suriye-Mısır hattı; halifelik Osmanlıya geçer anlatısı klasiktir.", "B) Osman Bey Söğüt-Domaniç uç beyliği; geleneksel kuruluş 1299 kabulüdür.", "C) Orhan Bey Bursa (1326), düzenli yaya-müsellem; I. Murad Rumeli, Edirne, 1389 I. Kosova.", "D) 1402 Ankara Yıldırım Bayezid-Timur yenilgisi Fetret Devrini açar.", "E) 1453 İstanbul II. Mehmed; kara surları, donanma ve top teknolojisi birleşir."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Osmanlı Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Osmanlı Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) 1402 Ankara Yıldırım Bayezid-Timur yenilgisi Fetret Devrini açar.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "1402 Ankara hangisini ifade eder?",
+    "options": ["A) 1402 Ankara Yıldırım Bayezid-Timur yenilgisi Fetret Devrini açar.", "B) Osman Bey Söğüt-Domaniç uç beyliği; geleneksel kuruluş 1299 kabulüdür.", "C) Orhan Bey Bursa (1326), düzenli yaya-müsellem; I. Murad Rumeli, Edirne, 1389 I. Kosova.", "D) 1453 İstanbul II. Mehmed; kara surları, donanma ve top teknolojisi birleşir.", "E) Yavuz (1514 Çaldıran, 1516-17 Mercidabık-Ridaniye) Anadolu-Suriye-Mısır hattı; halifelik Osmanlıya geçer anlatısı klasiktir."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Osmanlı Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Osmanlı Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) 1453 İstanbul II. Mehmed; kara surları, donanma ve top teknolojisi birleşir.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Yavuz (1514 Çaldıran, 1516-17 Mercidabık-Ridaniye) için doğru bir açıklamadır?",
+    "options": ["A) Osman Bey Söğüt-Domaniç uç beyliği; geleneksel kuruluş 1299 kabulüdür.", "B) Orhan Bey Bursa (1326), düzenli yaya-müsellem; I. Murad Rumeli, Edirne, 1389 I. Kosova.", "C) 1402 Ankara Yıldırım Bayezid-Timur yenilgisi Fetret Devrini açar.", "D) 1453 İstanbul II. Mehmed; kara surları, donanma ve top teknolojisi birleşir.", "E) Yavuz (1514 Çaldıran, 1516-17 Mercidabık-Ridaniye) Anadolu-Suriye-Mısır hattı; halifelik Osmanlıya geçer anlatısı klasiktir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Osmanlı Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Tımar hakkında hangisi doğrudur?",
+    "options": ["A) 1453 İstanbul II. Mehmed; kara surları, donanma ve top teknolojisi birleşir.", "B) Tımar sipahiye vergi geliri karşılığı asker; merkezi hazineyi rahatlatır.", "C) Osman Bey Söğüt-Domaniç uç beyliği; geleneksel kuruluş 1299 kabulüdür.", "D) Orhan Bey Bursa (1326), düzenli yaya-müsellem; I. Murad Rumeli, Edirne, 1389 I. Kosova.", "E) 1402 Ankara Yıldırım Bayezid-Timur yenilgisi Fetret Devrini açar."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Osmanlı Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Osmanlı Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Yavuz (1514 Çaldıran, 1516-17 Mercidabık-Ridaniye) Anadolu-Suriye-Mısır hattı; halifelik O", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Kapıkulu hangisini ifade eder?",
+    "options": ["A) Orhan Bey Bursa (1326), düzenli yaya-müsellem; I. Murad Rumeli, Edirne, 1389 I. Kosova.", "B) 1402 Ankara Yıldırım Bayezid-Timur yenilgisi Fetret Devrini açar.", "C) 1453 İstanbul II. Mehmed; kara surları, donanma ve top teknolojisi birleşir.", "D) Kapıkulu (yeniçeri, cebeci, topçu) maaşlı merkez ocaklarıdır; devşirme insan kaynağıdır.", "E) Osman Bey Söğüt-Domaniç uç beyliği; geleneksel kuruluş 1299 kabulüdür."],
+    "correctAnswerIndex": 3,
+    "explanation": "Osmanlı Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Osmanlı Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Tımar sipahiye vergi geliri karşılığı asker; merkezi hazineyi rahatlatır.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "İlmiye-seyfiye-kalemiye ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) 1402 Ankara Yıldırım Bayezid-Timur yenilgisi Fetret Devrini açar.", "B) 1453 İstanbul II. Mehmed; kara surları, donanma ve top teknolojisi birleşir.", "C) İlmiye-seyfiye-kalemiye ulema, asker, bürokrasi üçlüsüdür.", "D) Osman Bey Söğüt-Domaniç uç beyliği; geleneksel kuruluş 1299 kabulüdür.", "E) Orhan Bey Bursa (1326), düzenli yaya-müsellem; I. Murad Rumeli, Edirne, 1389 I. Kosova."],
+    "correctAnswerIndex": 2,
+    "explanation": "Osmanlı Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Millet sistemi için doğru bir açıklamadır?",
+    "options": ["A) Orhan Bey Bursa (1326), düzenli yaya-müsellem; I. Murad Rumeli, Edirne, 1389 I. Kosova.", "B) 1402 Ankara Yıldırım Bayezid-Timur yenilgisi Fetret Devrini açar.", "C) 1453 İstanbul II. Mehmed; kara surları, donanma ve top teknolojisi birleşir.", "D) Millet sistemi cemaatlere iç işlerinde özerklik; vergi ve asayiş merkeze bağlıdır.", "E) Osman Bey Söğüt-Domaniç uç beyliği; geleneksel kuruluş 1299 kabulüdür."],
+    "correctAnswerIndex": 3,
+    "explanation": "Osmanlı Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Ahilik-lonca hakkında hangisi doğrudur?",
+    "options": ["A) 1453 İstanbul II. Mehmed; kara surları, donanma ve top teknolojisi birleşir.", "B) Ahilik-lonca üretim ve meslek ahlakı; klasik dönemde şehir ekonomisini düzenler.", "C) Osman Bey Söğüt-Domaniç uç beyliği; geleneksel kuruluş 1299 kabulüdür.", "D) Orhan Bey Bursa (1326), düzenli yaya-müsellem; I. Murad Rumeli, Edirne, 1389 I. Kosova.", "E) 1402 Ankara Yıldırım Bayezid-Timur yenilgisi Fetret Devrini açar."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Osmanlı Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Kapıkulu (yeniçeri, cebeci, topçu) maaşlı merkez ocaklarıdır; devşirme insan kaynağıdır.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Osmanlı Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) İlmiye-seyfiye-kalemiye ulema, asker, bürokrasi üçlüsüdür.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Osmanlı Tarihi notundaki temel bilgi."
 }
 ];

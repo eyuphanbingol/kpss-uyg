@@ -61,63 +61,63 @@ window.oabt_sinif_1_sorulari = [
     "explanation": "Konu notlarında belirtilir."
 },
 {
-    "question": "İlkokulda Temel Matematik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Doğal sayı basamak değeri onluk sistem.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Doğal sayı için doğru bir açıklamadır?",
+    "options": ["A) Doğal sayı basamak değeri onluk sistem.", "B) Toplama-çıkarma parça-bütün; çarpma tekrarlı toplama.", "C) Bölme paylaşma ve gruplama anlamları ayrıdır.", "D) Kesir parça-bütün, sayı doğrusu, birim kesir.", "E) İşlem özellikleri değişme, birleşme, dağılma; sıfır ve bir."],
+    "correctAnswerIndex": 0,
+    "explanation": "İlkokulda Temel Matematik notundaki temel bilgi."
 },
 {
-    "question": "İlkokulda Temel Matematik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Toplama-çıkarma parça-bütün; çarpma tekrarlı toplama.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Toplama-çıkarma hakkında hangisi doğrudur?",
+    "options": ["A) Kesir parça-bütün, sayı doğrusu, birim kesir.", "B) İşlem özellikleri değişme, birleşme, dağılma; sıfır ve bir.", "C) Toplama-çıkarma parça-bütün; çarpma tekrarlı toplama.", "D) Doğal sayı basamak değeri onluk sistem.", "E) Bölme paylaşma ve gruplama anlamları ayrıdır."],
+    "correctAnswerIndex": 2,
+    "explanation": "İlkokulda Temel Matematik notundaki temel bilgi."
+},
+{
+    "question": "Bölme hangisini ifade eder?",
+    "options": ["A) İşlem özellikleri değişme, birleşme, dağılma; sıfır ve bir.", "B) Bölme paylaşma ve gruplama anlamları ayrıdır.", "C) Doğal sayı basamak değeri onluk sistem.", "D) Toplama-çıkarma parça-bütün; çarpma tekrarlı toplama.", "E) Kesir parça-bütün, sayı doğrusu, birim kesir."],
+    "correctAnswerIndex": 1,
+    "explanation": "İlkokulda Temel Matematik notundaki temel bilgi."
+},
+{
+    "question": "Kesir ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Kesir parça-bütün, sayı doğrusu, birim kesir.", "B) Doğal sayı basamak değeri onluk sistem.", "C) Toplama-çıkarma parça-bütün; çarpma tekrarlı toplama.", "D) Bölme paylaşma ve gruplama anlamları ayrıdır.", "E) İşlem özellikleri değişme, birleşme, dağılma; sıfır ve bir."],
+    "correctAnswerIndex": 0,
+    "explanation": "İlkokulda Temel Matematik notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi İşlem özellikleri için doğru bir açıklamadır?",
+    "options": ["A) Kesir parça-bütün, sayı doğrusu, birim kesir.", "B) İşlem özellikleri değişme, birleşme, dağılma; sıfır ve bir.", "C) Doğal sayı basamak değeri onluk sistem.", "D) Toplama-çıkarma parça-bütün; çarpma tekrarlı toplama.", "E) Bölme paylaşma ve gruplama anlamları ayrıdır."],
+    "correctAnswerIndex": 1,
+    "explanation": "İlkokulda Temel Matematik notundaki temel bilgi."
+},
+{
+    "question": "Şekil hakkında hangisi doğrudur?",
+    "options": ["A) Doğal sayı basamak değeri onluk sistem.", "B) Toplama-çıkarma parça-bütün; çarpma tekrarlı toplama.", "C) Bölme paylaşma ve gruplama anlamları ayrıdır.", "D) Kesir parça-bütün, sayı doğrusu, birim kesir.", "E) Şekil kenar-köşe; simetri, öteleme."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İlkokulda Temel Matematik notundaki temel bilgi."
 },
 {
-    "question": "İlkokulda Temel Matematik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Bölme paylaşma ve gruplama anlamları ayrıdır.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Uzunluk, alan, hacim, zaman, para, tartı hangisini ifade eder?",
+    "options": ["A) Kesir parça-bütün, sayı doğrusu, birim kesir.", "B) Uzunluk, alan, hacim, zaman, para, tartı standart birim.", "C) Doğal sayı basamak değeri onluk sistem.", "D) Toplama-çıkarma parça-bütün; çarpma tekrarlı toplama.", "E) Bölme paylaşma ve gruplama anlamları ayrıdır."],
+    "correctAnswerIndex": 1,
+    "explanation": "İlkokulda Temel Matematik notundaki temel bilgi."
 },
 {
-    "question": "İlkokulda Temel Matematik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Kesir parça-bütün, sayı doğrusu, birim kesir.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Açı ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Doğal sayı basamak değeri onluk sistem.", "B) Toplama-çıkarma parça-bütün; çarpma tekrarlı toplama.", "C) Bölme paylaşma ve gruplama anlamları ayrıdır.", "D) Kesir parça-bütün, sayı doğrusu, birim kesir.", "E) Açı ilkokulda doğru-dar-dik-geniş sezgisel."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İlkokulda Temel Matematik notundaki temel bilgi."
 },
 {
-    "question": "İlkokulda Temel Matematik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) İşlem özellikleri değişme, birleşme, dağılma; sıfır ve bir.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi Örüntü için doğru bir açıklamadır?",
+    "options": ["A) Toplama-çıkarma parça-bütün; çarpma tekrarlı toplama.", "B) Bölme paylaşma ve gruplama anlamları ayrıdır.", "C) Kesir parça-bütün, sayı doğrusu, birim kesir.", "D) Örüntü tekrar ve büyüme.", "E) Doğal sayı basamak değeri onluk sistem."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "İlkokulda Temel Matematik notundaki temel bilgi."
 },
 {
-    "question": "İlkokulda Temel Matematik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Şekil kenar-köşe; simetri, öteleme.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Veri hakkında hangisi doğrudur?",
+    "options": ["A) Doğal sayı basamak değeri onluk sistem.", "B) Toplama-çıkarma parça-bütün; çarpma tekrarlı toplama.", "C) Bölme paylaşma ve gruplama anlamları ayrıdır.", "D) Kesir parça-bütün, sayı doğrusu, birim kesir.", "E) Veri tablo, çubuk grafik, basit olasılık sezgisi."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "İlkokulda Temel Matematik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Uzunluk, alan, hacim, zaman, para, tartı standart birim.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İlkokulda Temel Matematik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Açı ilkokulda doğru-dar-dik-geniş sezgisel.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "İlkokulda Temel Matematik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Örüntü tekrar ve büyüme.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İlkokulda Temel Matematik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Veri tablo, çubuk grafik, basit olasılık sezgisi.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İlkokulda Temel Matematik notundaki temel bilgi."
 }
 ];

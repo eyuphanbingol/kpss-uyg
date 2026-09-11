@@ -73,51 +73,51 @@ window.ags_egitim_1_sorulari = [
     "explanation": "Millî Eğitim Temel Kanunu."
 },
 {
-    "question": "Eğitim Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Sibyan mektebi mahallede temel okuma-yazma ve dinî bilgiler; medrese yüksek ilim ve ulema ", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Eğitim Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Nizamiye medreseleri Selçuklu; Osmanlıda Sahn-ı Seman (Fatih) ve Süleymaniye hiyerarşisi."],
+    "question": "Aşağıdakilerden hangisi Sibyan mektebi için doğru bir açıklamadır?",
+    "options": ["A) Enderun sarayda yönetici ve asker yetiştiren Enderun Mektebidir; devşirme kaynağıyla bağlantılıdır.", "B) Tanzimat rüştiye, idadi, sultani; 1848 Darülmuallimin öğretmen yetiştirmenin kurumsal miladıdır.", "C) Darülfünun yükseköğretimin Osmanlıdaki adı; II. Meşrutiyet sonrası modernleşme hızlanır.", "D) Sibyan mektebi mahallede temel okuma-yazma ve dinî bilgiler; medrese yüksek ilim ve ulema yetiştirir.", "E) Nizamiye medreseleri Selçuklu; Osmanlıda Sahn-ı Seman (Fatih) ve Süleymaniye hiyerarşisi."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Eğitim Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Eğitim Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Enderun sarayda yönetici ve asker yetiştiren Enderun Mektebidir; devşirme kaynağıyla bağla", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Nizamiye medreseleri hakkında hangisi doğrudur?",
+    "options": ["A) Darülfünun yükseköğretimin Osmanlıdaki adı; II. Meşrutiyet sonrası modernleşme hızlanır.", "B) Nizamiye medreseleri Selçuklu; Osmanlıda Sahn-ı Seman (Fatih) ve Süleymaniye hiyerarşisi.", "C) Sibyan mektebi mahallede temel okuma-yazma ve dinî bilgiler; medrese yüksek ilim ve ulema yetiştirir.", "D) Enderun sarayda yönetici ve asker yetiştiren Enderun Mektebidir; devşirme kaynağıyla bağlantılıdır.", "E) Tanzimat rüştiye, idadi, sultani; 1848 Darülmuallimin öğretmen yetiştirmenin kurumsal miladıdır."],
+    "correctAnswerIndex": 1,
+    "explanation": "Eğitim Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Enderun hangisini ifade eder?",
+    "options": ["A) Enderun sarayda yönetici ve asker yetiştiren Enderun Mektebidir; devşirme kaynağıyla bağlantılıdır.", "B) Sibyan mektebi mahallede temel okuma-yazma ve dinî bilgiler; medrese yüksek ilim ve ulema yetiştirir.", "C) Nizamiye medreseleri Selçuklu; Osmanlıda Sahn-ı Seman (Fatih) ve Süleymaniye hiyerarşisi.", "D) Tanzimat rüştiye, idadi, sultani; 1848 Darülmuallimin öğretmen yetiştirmenin kurumsal miladıdır.", "E) Darülfünun yükseköğretimin Osmanlıdaki adı; II. Meşrutiyet sonrası modernleşme hızlanır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Eğitim Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Darülfünun için doğru bir açıklamadır?",
+    "options": ["A) Tanzimat rüştiye, idadi, sultani; 1848 Darülmuallimin öğretmen yetiştirmenin kurumsal miladıdır.", "B) Darülfünun yükseköğretimin Osmanlıdaki adı; II. Meşrutiyet sonrası modernleşme hızlanır.", "C) Sibyan mektebi mahallede temel okuma-yazma ve dinî bilgiler; medrese yüksek ilim ve ulema yetiştirir.", "D) Nizamiye medreseleri Selçuklu; Osmanlıda Sahn-ı Seman (Fatih) ve Süleymaniye hiyerarşisi.", "E) Enderun sarayda yönetici ve asker yetiştiren Enderun Mektebidir; devşirme kaynağıyla bağlantılıdır."],
+    "correctAnswerIndex": 1,
+    "explanation": "Eğitim Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Medreselerin kapatılması bu kanunun hangisini ifade eder?",
+    "options": ["A) Enderun sarayda yönetici ve asker yetiştiren Enderun Mektebidir; devşirme kaynağıyla bağlantılıdır.", "B) Tanzimat rüştiye, idadi, sultani; 1848 Darülmuallimin öğretmen yetiştirmenin kurumsal miladıdır.", "C) Medreselerin kapatılması bu kanunun uygulanmasıyla hızlanır; yabancı okullar devlet denetimine alınır.", "D) Sibyan mektebi mahallede temel okuma-yazma ve dinî bilgiler; medrese yüksek ilim ve ulema yetiştirir.", "E) Nizamiye medreseleri Selçuklu; Osmanlıda Sahn-ı Seman (Fatih) ve Süleymaniye hiyerarşisi."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Eğitim Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Eğitim Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Tanzimat rüştiye, idadi, sultani; 1848 Darülmuallimin öğretmen yetiştirmenin kurumsal mila"],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Harf İnkılabı (1 Kasım 1928) ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Harf İnkılabı (1 Kasım 1928) ve Millet Mektepleri yetişkin okuryazarlığını hedefler.", "B) Sibyan mektebi mahallede temel okuma-yazma ve dinî bilgiler; medrese yüksek ilim ve ulema yetiştirir.", "C) Nizamiye medreseleri Selçuklu; Osmanlıda Sahn-ı Seman (Fatih) ve Süleymaniye hiyerarşisi.", "D) Enderun sarayda yönetici ve asker yetiştiren Enderun Mektebidir; devşirme kaynağıyla bağlantılıdır.", "E) Tanzimat rüştiye, idadi, sultani; 1848 Darülmuallimin öğretmen yetiştirmenin kurumsal miladıdır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Eğitim Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Eğitim Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Darülfünun yükseköğretimin Osmanlıdaki adı; II. Meşrutiyet sonrası modernleşme hızlanır.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "1997 (4306) ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Sibyan mektebi mahallede temel okuma-yazma ve dinî bilgiler; medrese yüksek ilim ve ulema yetiştirir.", "B) Nizamiye medreseleri Selçuklu; Osmanlıda Sahn-ı Seman (Fatih) ve Süleymaniye hiyerarşisi.", "C) Enderun sarayda yönetici ve asker yetiştiren Enderun Mektebidir; devşirme kaynağıyla bağlantılıdır.", "D) Tanzimat rüştiye, idadi, sultani; 1848 Darülmuallimin öğretmen yetiştirmenin kurumsal miladıdır.", "E) 1997 (4306) kesintisiz 8 yıllık zorunlu ilköğretim; 2012 (6287) 4+4+4 ve 12 yıllık kademeli zorunluluk."],
+    "correctAnswerIndex": 4,
+    "explanation": "Eğitim Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Eğitim Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Tevhid-i Tedrisat (3 Mart 1924) tüm eğitim kurumlarını Maarif Vekâleti çatısında birleştir"],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Eğitim Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Medreselerin kapatılması bu kanunun uygulanmasıyla hızlanır; yabancı okullar devlet deneti", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Eğitim Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Harf İnkılabı (1 Kasım 1928) ve Millet Mektepleri yetişkin okuryazarlığını hedefler."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Öğretmen okulları, eğitim enstitüleri için doğru bir açıklamadır?",
+    "options": ["A) Tanzimat rüştiye, idadi, sultani; 1848 Darülmuallimin öğretmen yetiştirmenin kurumsal miladıdır.", "B) Öğretmen okulları, eğitim enstitüleri ve eğitim fakülteleri öğretmen yetiştirmenin evreleridir.", "C) Sibyan mektebi mahallede temel okuma-yazma ve dinî bilgiler; medrese yüksek ilim ve ulema yetiştirir.", "D) Nizamiye medreseleri Selçuklu; Osmanlıda Sahn-ı Seman (Fatih) ve Süleymaniye hiyerarşisi.", "E) Enderun sarayda yönetici ve asker yetiştiren Enderun Mektebidir; devşirme kaynağıyla bağlantılıdır."],
+    "correctAnswerIndex": 1,
+    "explanation": "Eğitim Tarihi notundaki temel bilgi."
 }
 ];

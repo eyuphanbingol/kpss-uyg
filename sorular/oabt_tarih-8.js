@@ -61,63 +61,63 @@ window.oabt_tarih_8_sorulari = [
     "explanation": "Halkların baharı Avrupa'yı sarsar."
 },
 {
-    "question": "Orta Çağ'dan XX. Yüzyıla Dünya Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Feodalite toprak-sadakat; senyör-vassal; Kilise ve şövalyelik.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Orta Çağ'dan XX. Yüzyıla Dünya Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Rönesans hümanizm, antikiteye dönüş, İtalyan kent devletleri.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Feodalite için doğru bir açıklamadır?",
+    "options": ["A) Coğrafi Keşifler okyanus yolları, sömürge, merkantilizm.", "B) Aydınlanma akıl, doğal hak, kuvvetler ayrılığı düşüncesi.", "C) Feodalite toprak-sadakat; senyör-vassal; Kilise ve şövalyelik.", "D) Rönesans hümanizm, antikiteye dönüş, İtalyan kent devletleri.", "E) Reform Luther; mezhep savaşları ve Westphalia (1648) devlet egemenliği."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Orta Çağ'dan XX. Yüzyıla Dünya Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Orta Çağ'dan XX. Yüzyıla Dünya Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Reform Luther; mezhep savaşları ve Westphalia (1648) devlet egemenliği.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Rönesans hakkında hangisi doğrudur?",
+    "options": ["A) Feodalite toprak-sadakat; senyör-vassal; Kilise ve şövalyelik.", "B) Reform Luther; mezhep savaşları ve Westphalia (1648) devlet egemenliği.", "C) Coğrafi Keşifler okyanus yolları, sömürge, merkantilizm.", "D) Aydınlanma akıl, doğal hak, kuvvetler ayrılığı düşüncesi.", "E) Rönesans hümanizm, antikiteye dönüş, İtalyan kent devletleri."],
+    "correctAnswerIndex": 4,
+    "explanation": "Orta Çağ'dan XX. Yüzyıla Dünya Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Orta Çağ'dan XX. Yüzyıla Dünya Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Coğrafi Keşifler okyanus yolları, sömürge, merkantilizm.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Reform hangisini ifade eder?",
+    "options": ["A) Coğrafi Keşifler okyanus yolları, sömürge, merkantilizm.", "B) Aydınlanma akıl, doğal hak, kuvvetler ayrılığı düşüncesi.", "C) Reform Luther; mezhep savaşları ve Westphalia (1648) devlet egemenliği.", "D) Feodalite toprak-sadakat; senyör-vassal; Kilise ve şövalyelik.", "E) Rönesans hümanizm, antikiteye dönüş, İtalyan kent devletleri."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Orta Çağ'dan XX. Yüzyıla Dünya Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Orta Çağ'dan XX. Yüzyıla Dünya Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Aydınlanma akıl, doğal hak, kuvvetler ayrılığı düşüncesi.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Coğrafi Keşifler ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Rönesans hümanizm, antikiteye dönüş, İtalyan kent devletleri.", "B) Reform Luther; mezhep savaşları ve Westphalia (1648) devlet egemenliği.", "C) Aydınlanma akıl, doğal hak, kuvvetler ayrılığı düşüncesi.", "D) Coğrafi Keşifler okyanus yolları, sömürge, merkantilizm.", "E) Feodalite toprak-sadakat; senyör-vassal; Kilise ve şövalyelik."],
+    "correctAnswerIndex": 3,
+    "explanation": "Orta Çağ'dan XX. Yüzyıla Dünya Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Orta Çağ'dan XX. Yüzyıla Dünya Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) 1688 İngiltere Şanlı Devrim; parlamentosal sınırlı monarşi.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Aydınlanma için doğru bir açıklamadır?",
+    "options": ["A) Feodalite toprak-sadakat; senyör-vassal; Kilise ve şövalyelik.", "B) Rönesans hümanizm, antikiteye dönüş, İtalyan kent devletleri.", "C) Reform Luther; mezhep savaşları ve Westphalia (1648) devlet egemenliği.", "D) Coğrafi Keşifler okyanus yolları, sömürge, merkantilizm.", "E) Aydınlanma akıl, doğal hak, kuvvetler ayrılığı düşüncesi."],
+    "correctAnswerIndex": 4,
+    "explanation": "Orta Çağ'dan XX. Yüzyıla Dünya Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Orta Çağ'dan XX. Yüzyıla Dünya Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) 1776 Amerikan; 1789 Fransız İhtilali: millet, vatandaş, laiklik tartışması.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "1776 hangisini ifade eder?",
+    "options": ["A) Rönesans hümanizm, antikiteye dönüş, İtalyan kent devletleri.", "B) Reform Luther; mezhep savaşları ve Westphalia (1648) devlet egemenliği.", "C) Coğrafi Keşifler okyanus yolları, sömürge, merkantilizm.", "D) 1776 Amerikan; 1789 Fransız İhtilali: millet, vatandaş, laiklik tartışması.", "E) Feodalite toprak-sadakat; senyör-vassal; Kilise ve şövalyelik."],
+    "correctAnswerIndex": 3,
+    "explanation": "Orta Çağ'dan XX. Yüzyıla Dünya Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Orta Çağ'dan XX. Yüzyıla Dünya Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Sanayi Devrimi İngiltere; fabrika, işçi sınıfı, kentleşme.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi 1848 için doğru bir açıklamadır?",
+    "options": ["A) Rönesans hümanizm, antikiteye dönüş, İtalyan kent devletleri.", "B) Reform Luther; mezhep savaşları ve Westphalia (1648) devlet egemenliği.", "C) Coğrafi Keşifler okyanus yolları, sömürge, merkantilizm.", "D) 1848 halkların baharı; milliyetçilik ve liberal anayasalar.", "E) Feodalite toprak-sadakat; senyör-vassal; Kilise ve şövalyelik."],
+    "correctAnswerIndex": 3,
+    "explanation": "Orta Çağ'dan XX. Yüzyıla Dünya Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Orta Çağ'dan XX. Yüzyıla Dünya Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) 1848 halkların baharı; milliyetçilik ve liberal anayasalar.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "1870-71 hakkında hangisi doğrudur?",
+    "options": ["A) Rönesans hümanizm, antikiteye dönüş, İtalyan kent devletleri.", "B) Reform Luther; mezhep savaşları ve Westphalia (1648) devlet egemenliği.", "C) Coğrafi Keşifler okyanus yolları, sömürge, merkantilizm.", "D) 1870-71 Alman ve İtalyan birlikleri; Bismarck realpolitik.", "E) Feodalite toprak-sadakat; senyör-vassal; Kilise ve şövalyelik."],
+    "correctAnswerIndex": 3,
+    "explanation": "Orta Çağ'dan XX. Yüzyıla Dünya Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Orta Çağ'dan XX. Yüzyıla Dünya Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) 1870-71 Alman ve İtalyan birlikleri; Bismarck realpolitik.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Emperyalizm hangisini ifade eder?",
+    "options": ["A) Feodalite toprak-sadakat; senyör-vassal; Kilise ve şövalyelik.", "B) Rönesans hümanizm, antikiteye dönüş, İtalyan kent devletleri.", "C) Reform Luther; mezhep savaşları ve Westphalia (1648) devlet egemenliği.", "D) Coğrafi Keşifler okyanus yolları, sömürge, merkantilizm.", "E) Emperyalizm hammadde, pazar, sömürge paylaşımı (Berlin 1884-85 Afrika)."],
+    "correctAnswerIndex": 4,
+    "explanation": "Orta Çağ'dan XX. Yüzyıla Dünya Tarihi notundaki temel bilgi."
+},
+{
+    "question": "İttifak ve İtilaf ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Rönesans hümanizm, antikiteye dönüş, İtalyan kent devletleri.", "B) Reform Luther; mezhep savaşları ve Westphalia (1648) devlet egemenliği.", "C) Coğrafi Keşifler okyanus yolları, sömürge, merkantilizm.", "D) İttifak ve İtilaf; 1914-1918 toplam savaş, cephe ve cephe ardı.", "E) Feodalite toprak-sadakat; senyör-vassal; Kilise ve şövalyelik."],
+    "correctAnswerIndex": 3,
+    "explanation": "Orta Çağ'dan XX. Yüzyıla Dünya Tarihi notundaki temel bilgi."
 }
 ];

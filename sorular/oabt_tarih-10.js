@@ -61,63 +61,63 @@ window.oabt_tarih_10_sorulari = [
     "explanation": "Erişim düzenlemesi içeriği yok etmez."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kanıt kullanma belge, nesne, sözlü tanıklığı soruyla okumaktır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Kanıt kullanma için doğru bir açıklamadır?",
+    "options": ["A) Neden-sonuç ve değişim-süreklilik ikinci basamak becerilerdir.", "B) Tarihsel empati geçmişi kendi bağlamında anlamaktır; ahlak dersi değildir.", "C) Çoklu bakış aynı olayı farklı aktörlerden okumaktır.", "D) Kanıt kullanma belge, nesne, sözlü tanıklığı soruyla okumaktır.", "E) Kronolojik düşünme önce-sonra ve eşzamanlılığı ayırır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Kronolojik düşünme hakkında hangisi doğrudur?",
+    "options": ["A) Kronolojik düşünme önce-sonra ve eşzamanlılığı ayırır.", "B) Kanıt kullanma belge, nesne, sözlü tanıklığı soruyla okumaktır.", "C) Neden-sonuç ve değişim-süreklilik ikinci basamak becerilerdir.", "D) Tarihsel empati geçmişi kendi bağlamında anlamaktır; ahlak dersi değildir.", "E) Çoklu bakış aynı olayı farklı aktörlerden okumaktır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Neden-sonuç ve değişim-süreklilik hangisini ifade eder?",
+    "options": ["A) Kanıt kullanma belge, nesne, sözlü tanıklığı soruyla okumaktır.", "B) Kronolojik düşünme önce-sonra ve eşzamanlılığı ayırır.", "C) Tarihsel empati geçmişi kendi bağlamında anlamaktır; ahlak dersi değildir.", "D) Çoklu bakış aynı olayı farklı aktörlerden okumaktır.", "E) Neden-sonuç ve değişim-süreklilik ikinci basamak becerilerdir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Tarihsel empati ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Tarihsel empati geçmişi kendi bağlamında anlamaktır; ahlak dersi değildir.", "B) Kanıt kullanma belge, nesne, sözlü tanıklığı soruyla okumaktır.", "C) Kronolojik düşünme önce-sonra ve eşzamanlılığı ayırır.", "D) Neden-sonuç ve değişim-süreklilik ikinci basamak becerilerdir.", "E) Çoklu bakış aynı olayı farklı aktörlerden okumaktır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Çoklu bakış için doğru bir açıklamadır?",
+    "options": ["A) Kanıt kullanma belge, nesne, sözlü tanıklığı soruyla okumaktır.", "B) Kronolojik düşünme önce-sonra ve eşzamanlılığı ayırır.", "C) Neden-sonuç ve değişim-süreklilik ikinci basamak becerilerdir.", "D) Tarihsel empati geçmişi kendi bağlamında anlamaktır; ahlak dersi değildir.", "E) Çoklu bakış aynı olayı farklı aktörlerden okumaktır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Belge inceleme hakkında hangisi doğrudur?",
+    "options": ["A) Belge inceleme dış-iç tenkit basamaklarıyla öğretilir.", "B) Kanıt kullanma belge, nesne, sözlü tanıklığı soruyla okumaktır.", "C) Kronolojik düşünme önce-sonra ve eşzamanlılığı ayırır.", "D) Neden-sonuç ve değişim-süreklilik ikinci basamak becerilerdir.", "E) Tarihsel empati geçmişi kendi bağlamında anlamaktır; ahlak dersi değildir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Tarih şeridi, harita, müze, saha hangisini ifade eder?",
+    "options": ["A) Tarihsel empati geçmişi kendi bağlamında anlamaktır; ahlak dersi değildir.", "B) Tarih şeridi, harita, müze, saha zaman-mekân bağını kurar.", "C) Kanıt kullanma belge, nesne, sözlü tanıklığı soruyla okumaktır.", "D) Kronolojik düşünme önce-sonra ve eşzamanlılığı ayırır.", "E) Neden-sonuç ve değişim-süreklilik ikinci basamak becerilerdir."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Kronolojik düşünme önce-sonra ve eşzamanlılığı ayırır.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Neden-sonuç ve değişim-süreklilik ikinci basamak becerilerdir.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Tartışma ve münazara ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Tarihsel empati geçmişi kendi bağlamında anlamaktır; ahlak dersi değildir.", "B) Tartışma ve münazara gerekçeli yorum üretir.", "C) Kanıt kullanma belge, nesne, sözlü tanıklığı soruyla okumaktır.", "D) Kronolojik düşünme önce-sonra ve eşzamanlılığı ayırır.", "E) Neden-sonuç ve değişim-süreklilik ikinci basamak becerilerdir."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Tarihsel empati geçmişi kendi bağlamında anlamaktır; ahlak dersi değildir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Yerel tarih için doğru bir açıklamadır?",
+    "options": ["A) Yerel tarih somut çevreyle bağ kurar; ulusal anlatıyı iptal etmez.", "B) Kanıt kullanma belge, nesne, sözlü tanıklığı soruyla okumaktır.", "C) Kronolojik düşünme önce-sonra ve eşzamanlılığı ayırır.", "D) Neden-sonuç ve değişim-süreklilik ikinci basamak becerilerdir.", "E) Tarihsel empati geçmişi kendi bağlamında anlamaktır; ahlak dersi değildir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Çoklu bakış aynı olayı farklı aktörlerden okumaktır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Belge inceleme dış-iç tenkit basamaklarıyla öğretilir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Tarih şeridi, harita, müze, saha zaman-mekân bağını kurar.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Tartışma ve münazara gerekçeli yorum üretir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Yerel tarih somut çevreyle bağ kurar; ulusal anlatıyı iptal etmez.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Dijital arşiv ve sahte belge medya okuryazarlığı ister.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Dijital arşiv ve sahte belge hakkında hangisi doğrudur?",
+    "options": ["A) Kanıt kullanma belge, nesne, sözlü tanıklığı soruyla okumaktır.", "B) Kronolojik düşünme önce-sonra ve eşzamanlılığı ayırır.", "C) Neden-sonuç ve değişim-süreklilik ikinci basamak becerilerdir.", "D) Tarihsel empati geçmişi kendi bağlamında anlamaktır; ahlak dersi değildir.", "E) Dijital arşiv ve sahte belge medya okuryazarlığı ister."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 }
 ];

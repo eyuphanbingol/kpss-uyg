@@ -55,69 +55,69 @@ window.oabt_sosyal_13_sorulari = [
     "explanation": "Sosyal bilgiler-sanat kesişimi."
 },
 {
-    "question": "Sanat ve Estetik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Estetik duyusal algı ve beğeni üzerine düşünme; güzel-yüce-çirkin."],
+    "question": "Aşağıdakilerden hangisi Estetik için doğru bir açıklamadır?",
+    "options": ["A) Üslup ve dönem Rönesans, barok, modern, çağdaş; kopuş-süreklilik.", "B) İkonografi imge okuma; propaganda ve kutsal imgeler.", "C) Estetik duyusal algı ve beğeni üzerine düşünme; güzel-yüce-çirkin.", "D) Sanat kuramları taklit (mimesis), ifade, biçim, kurumsal (artworld).", "E) Beğeni toplumsal (Bourdieu) ve tarihsel; evrensel zevk iddiası sorgulanır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Sanat ve Estetik notundaki temel bilgi."
+},
+{
+    "question": "Sanat kuramları hakkında hangisi doğrudur?",
+    "options": ["A) Üslup ve dönem Rönesans, barok, modern, çağdaş; kopuş-süreklilik.", "B) İkonografi imge okuma; propaganda ve kutsal imgeler.", "C) Sanat kuramları taklit (mimesis), ifade, biçim, kurumsal (artworld).", "D) Estetik duyusal algı ve beğeni üzerine düşünme; güzel-yüce-çirkin.", "E) Beğeni toplumsal (Bourdieu) ve tarihsel; evrensel zevk iddiası sorgulanır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Sanat ve Estetik notundaki temel bilgi."
+},
+{
+    "question": "Beğeni hangisini ifade eder?",
+    "options": ["A) Somut-somut olmayan miras UNESCO; yaşayan kültür.", "B) Beğeni toplumsal (Bourdieu) ve tarihsel; evrensel zevk iddiası sorgulanır.", "C) Sanat kuramları taklit (mimesis), ifade, biçim, kurumsal (artworld).", "D) Üslup ve dönem Rönesans, barok, modern, çağdaş; kopuş-süreklilik.", "E) İkonografi imge okuma; propaganda ve kutsal imgeler."],
+    "correctAnswerIndex": 1,
+    "explanation": "Sanat ve Estetik notundaki temel bilgi."
+},
+{
+    "question": "Üslup ve dönem ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Estetik duyusal algı ve beğeni üzerine düşünme; güzel-yüce-çirkin.", "B) Sanat kuramları taklit (mimesis), ifade, biçim, kurumsal (artworld).", "C) Beğeni toplumsal (Bourdieu) ve tarihsel; evrensel zevk iddiası sorgulanır.", "D) İkonografi imge okuma; propaganda ve kutsal imgeler.", "E) Üslup ve dönem Rönesans, barok, modern, çağdaş; kopuş-süreklilik."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Sanat ve Estetik notundaki temel bilgi."
 },
 {
-    "question": "Sanat ve Estetik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Sanat kuramları taklit (mimesis), ifade, biçim, kurumsal (artworld).", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi İkonografi için doğru bir açıklamadır?",
+    "options": ["A) Beğeni toplumsal (Bourdieu) ve tarihsel; evrensel zevk iddiası sorgulanır.", "B) Üslup ve dönem Rönesans, barok, modern, çağdaş; kopuş-süreklilik.", "C) İkonografi imge okuma; propaganda ve kutsal imgeler.", "D) Estetik duyusal algı ve beğeni üzerine düşünme; güzel-yüce-çirkin.", "E) Sanat kuramları taklit (mimesis), ifade, biçim, kurumsal (artworld)."],
+    "correctAnswerIndex": 2,
+    "explanation": "Sanat ve Estetik notundaki temel bilgi."
 },
 {
-    "question": "Sanat ve Estetik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Beğeni toplumsal (Bourdieu) ve tarihsel; evrensel zevk iddiası sorgulanır."],
+    "question": "Somut-somut olmayan miras hakkında hangisi doğrudur?",
+    "options": ["A) Estetik duyusal algı ve beğeni üzerine düşünme; güzel-yüce-çirkin.", "B) Sanat kuramları taklit (mimesis), ifade, biçim, kurumsal (artworld).", "C) Beğeni toplumsal (Bourdieu) ve tarihsel; evrensel zevk iddiası sorgulanır.", "D) Üslup ve dönem Rönesans, barok, modern, çağdaş; kopuş-süreklilik.", "E) Somut-somut olmayan miras UNESCO; yaşayan kültür."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Sanat ve Estetik notundaki temel bilgi."
 },
 {
-    "question": "Sanat ve Estetik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Üslup ve dönem Rönesans, barok, modern, çağdaş; kopuş-süreklilik.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Anadolu hangisini ifade eder?",
+    "options": ["A) Sanat kuramları taklit (mimesis), ifade, biçim, kurumsal (artworld).", "B) Beğeni toplumsal (Bourdieu) ve tarihsel; evrensel zevk iddiası sorgulanır.", "C) Üslup ve dönem Rönesans, barok, modern, çağdaş; kopuş-süreklilik.", "D) Anadolu çok katmanlı miras; koruma-kullanma gerilimi.", "E) Estetik duyusal algı ve beğeni üzerine düşünme; güzel-yüce-çirkin."],
+    "correctAnswerIndex": 3,
+    "explanation": "Sanat ve Estetik notundaki temel bilgi."
 },
 {
-    "question": "Sanat ve Estetik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) İkonografi imge okuma; propaganda ve kutsal imgeler."],
+    "question": "Halk sanatı ve yüksek sanat ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Üslup ve dönem Rönesans, barok, modern, çağdaş; kopuş-süreklilik.", "B) Halk sanatı ve yüksek sanat hiyerarşisinin eleştirisi.", "C) Estetik duyusal algı ve beğeni üzerine düşünme; güzel-yüce-çirkin.", "D) Sanat kuramları taklit (mimesis), ifade, biçim, kurumsal (artworld).", "E) Beğeni toplumsal (Bourdieu) ve tarihsel; evrensel zevk iddiası sorgulanır."],
+    "correctAnswerIndex": 1,
+    "explanation": "Sanat ve Estetik notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Müze için doğru bir açıklamadır?",
+    "options": ["A) Estetik duyusal algı ve beğeni üzerine düşünme; güzel-yüce-çirkin.", "B) Sanat kuramları taklit (mimesis), ifade, biçim, kurumsal (artworld).", "C) Beğeni toplumsal (Bourdieu) ve tarihsel; evrensel zevk iddiası sorgulanır.", "D) Üslup ve dönem Rönesans, barok, modern, çağdaş; kopuş-süreklilik.", "E) Müze anlatı kurar; dekolonizasyon tartışması."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Sanat ve Estetik notundaki temel bilgi."
 },
 {
-    "question": "Sanat ve Estetik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Somut-somut olmayan miras UNESCO; yaşayan kültür.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Telif ve kamu malı hakkında hangisi doğrudur?",
+    "options": ["A) Üslup ve dönem Rönesans, barok, modern, çağdaş; kopuş-süreklilik.", "B) Telif ve kamu malı eğitimde görsel kullanım etiği.", "C) Estetik duyusal algı ve beğeni üzerine düşünme; güzel-yüce-çirkin.", "D) Sanat kuramları taklit (mimesis), ifade, biçim, kurumsal (artworld).", "E) Beğeni toplumsal (Bourdieu) ve tarihsel; evrensel zevk iddiası sorgulanır."],
+    "correctAnswerIndex": 1,
+    "explanation": "Sanat ve Estetik notundaki temel bilgi."
 },
 {
-    "question": "Sanat ve Estetik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Anadolu çok katmanlı miras; koruma-kullanma gerilimi."],
+    "question": "Görsel okuryazarlık hangisini ifade eder?",
+    "options": ["A) Estetik duyusal algı ve beğeni üzerine düşünme; güzel-yüce-çirkin.", "B) Sanat kuramları taklit (mimesis), ifade, biçim, kurumsal (artworld).", "C) Beğeni toplumsal (Bourdieu) ve tarihsel; evrensel zevk iddiası sorgulanır.", "D) Üslup ve dönem Rönesans, barok, modern, çağdaş; kopuş-süreklilik.", "E) Görsel okuryazarlık kadraj, renk, sembol, manipülasyon."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Sanat ve Estetik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Halk sanatı ve yüksek sanat hiyerarşisinin eleştirisi.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Sanat ve Estetik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Müze anlatı kurar; dekolonizasyon tartışması."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Sanat ve Estetik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Telif ve kamu malı eğitimde görsel kullanım etiği.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Sanat ve Estetik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Görsel okuryazarlık kadraj, renk, sembol, manipülasyon."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Sanat ve Estetik notundaki temel bilgi."
 }
 ];

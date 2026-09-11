@@ -61,63 +61,63 @@ window.oabt_cog_8_sorulari = [
     "explanation": "Yoksul mahalle döküm sahası olmamalıdır."
 },
 {
-    "question": "Çevre ve Toplum konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Küresel ısınma sera gazı; iklim değişikliği ekstrem olayları artırır.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Küresel ısınma için doğru bir açıklamadır?",
+    "options": ["A) Kentsel hava kirliliği, atık, gürültü yerleşme baskısı.", "B) Biyoçeşitlilik kaybı habitat parçalanması ve aşırı av.", "C) Küresel ısınma sera gazı; iklim değişikliği ekstrem olayları artırır.", "D) Çölleşme, erozyon, ormansızlaşma arazi bozulması.", "E) Su stresi miktar ve kirlenme; havza yönetimi."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Çevre ve Toplum notundaki temel bilgi."
 },
 {
-    "question": "Çevre ve Toplum konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Çölleşme, erozyon, ormansızlaşma arazi bozulması."],
+    "question": "Çölleşme, erozyon, ormansızlaşma hakkında hangisi doğrudur?",
+    "options": ["A) Çölleşme, erozyon, ormansızlaşma arazi bozulması.", "B) Küresel ısınma sera gazı; iklim değişikliği ekstrem olayları artırır.", "C) Su stresi miktar ve kirlenme; havza yönetimi.", "D) Kentsel hava kirliliği, atık, gürültü yerleşme baskısı.", "E) Biyoçeşitlilik kaybı habitat parçalanması ve aşırı av."],
+    "correctAnswerIndex": 0,
+    "explanation": "Çevre ve Toplum notundaki temel bilgi."
+},
+{
+    "question": "Su stresi hangisini ifade eder?",
+    "options": ["A) Çölleşme, erozyon, ormansızlaşma arazi bozulması.", "B) Kentsel hava kirliliği, atık, gürültü yerleşme baskısı.", "C) Biyoçeşitlilik kaybı habitat parçalanması ve aşırı av.", "D) Su stresi miktar ve kirlenme; havza yönetimi.", "E) Küresel ısınma sera gazı; iklim değişikliği ekstrem olayları artırır."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Çevre ve Toplum notundaki temel bilgi."
 },
 {
-    "question": "Çevre ve Toplum konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Su stresi miktar ve kirlenme; havza yönetimi.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Kentsel hava kirliliği, atık, gürültü ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Biyoçeşitlilik kaybı habitat parçalanması ve aşırı av.", "B) Kentsel hava kirliliği, atık, gürültü yerleşme baskısı.", "C) Küresel ısınma sera gazı; iklim değişikliği ekstrem olayları artırır.", "D) Çölleşme, erozyon, ormansızlaşma arazi bozulması.", "E) Su stresi miktar ve kirlenme; havza yönetimi."],
+    "correctAnswerIndex": 1,
+    "explanation": "Çevre ve Toplum notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Biyoçeşitlilik kaybı için doğru bir açıklamadır?",
+    "options": ["A) Kentsel hava kirliliği, atık, gürültü yerleşme baskısı.", "B) Biyoçeşitlilik kaybı habitat parçalanması ve aşırı av.", "C) Küresel ısınma sera gazı; iklim değişikliği ekstrem olayları artırır.", "D) Çölleşme, erozyon, ormansızlaşma arazi bozulması.", "E) Su stresi miktar ve kirlenme; havza yönetimi."],
+    "correctAnswerIndex": 1,
+    "explanation": "Çevre ve Toplum notundaki temel bilgi."
+},
+{
+    "question": "Sürdürülebilir kalkınma amaçları (SKA/SDG) hakkında hangisi doğrudur?",
+    "options": ["A) Su stresi miktar ve kirlenme; havza yönetimi.", "B) Kentsel hava kirliliği, atık, gürültü yerleşme baskısı.", "C) Sürdürülebilir kalkınma amaçları (SKA/SDG) küresel çerçeve.", "D) Küresel ısınma sera gazı; iklim değişikliği ekstrem olayları artırır.", "E) Çölleşme, erozyon, ormansızlaşma arazi bozulması."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Çevre ve Toplum notundaki temel bilgi."
 },
 {
-    "question": "Çevre ve Toplum konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Kentsel hava kirliliği, atık, gürültü yerleşme baskısı."],
+    "question": "Paris İklim Anlaşması hangisini ifade eder?",
+    "options": ["A) Kentsel hava kirliliği, atık, gürültü yerleşme baskısı.", "B) Paris İklim Anlaşması ulusal katkı beyanları; bağlayıcılık tartışması.", "C) Küresel ısınma sera gazı; iklim değişikliği ekstrem olayları artırır.", "D) Çölleşme, erozyon, ormansızlaşma arazi bozulması.", "E) Su stresi miktar ve kirlenme; havza yönetimi."],
+    "correctAnswerIndex": 1,
+    "explanation": "Çevre ve Toplum notundaki temel bilgi."
+},
+{
+    "question": "Ramsar, CITES, Biyolojik Çeşitlilik Sözleşmesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Çölleşme, erozyon, ormansızlaşma arazi bozulması.", "B) Su stresi miktar ve kirlenme; havza yönetimi.", "C) Kentsel hava kirliliği, atık, gürültü yerleşme baskısı.", "D) Ramsar, CITES, Biyolojik Çeşitlilik Sözleşmesi koruma rejimleri.", "E) Küresel ısınma sera gazı; iklim değişikliği ekstrem olayları artırır."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Çevre ve Toplum notundaki temel bilgi."
 },
 {
-    "question": "Çevre ve Toplum konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Biyoçeşitlilik kaybı habitat parçalanması ve aşırı av.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi ÇED için doğru bir açıklamadır?",
+    "options": ["A) ÇED yatırımın çevresel etki değerlendirmesi.", "B) Küresel ısınma sera gazı; iklim değişikliği ekstrem olayları artırır.", "C) Çölleşme, erozyon, ormansızlaşma arazi bozulması.", "D) Su stresi miktar ve kirlenme; havza yönetimi.", "E) Kentsel hava kirliliği, atık, gürültü yerleşme baskısı."],
+    "correctAnswerIndex": 0,
+    "explanation": "Çevre ve Toplum notundaki temel bilgi."
 },
 {
-    "question": "Çevre ve Toplum konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Sürdürülebilir kalkınma amaçları (SKA/SDG) küresel çerçeve."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Çevre ve Toplum konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Paris İklim Anlaşması ulusal katkı beyanları; bağlayıcılık tartışması.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Çevre ve Toplum konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Ramsar, CITES, Biyolojik Çeşitlilik Sözleşmesi koruma rejimleri."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Çevre ve Toplum konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) ÇED yatırımın çevresel etki değerlendirmesi.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Çevre ve Toplum konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Döngüsel ekonomi atığı kaynak sayma."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Döngüsel ekonomi hakkında hangisi doğrudur?",
+    "options": ["A) Kentsel hava kirliliği, atık, gürültü yerleşme baskısı.", "B) Döngüsel ekonomi atığı kaynak sayma.", "C) Küresel ısınma sera gazı; iklim değişikliği ekstrem olayları artırır.", "D) Çölleşme, erozyon, ormansızlaşma arazi bozulması.", "E) Su stresi miktar ve kirlenme; havza yönetimi."],
+    "correctAnswerIndex": 1,
+    "explanation": "Çevre ve Toplum notundaki temel bilgi."
 }
 ];

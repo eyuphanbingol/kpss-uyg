@@ -55,69 +55,69 @@ window.oabt_sosyal_8_sorulari = [
     "explanation": "0 eşitlik, 1 tam eşitsizlik."
 },
 {
-    "question": "Ekonomi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Kıtlık tercih, fırsat maliyeti, üretim imkanları eğrisi.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Kıtlık için doğru bir açıklamadır?",
+    "options": ["A) Kıtlık tercih, fırsat maliyeti, üretim imkanları eğrisi.", "B) Piyasa başarısızlığı dışsallık, kamu malı, asimetrik bilgi, tekel.", "C) Milli gelir GSYH; nominal-reel, kişi başı sınırlı refah ölçüsü.", "D) Enflasyon-işsizlik türleri; Phillips tartışması, Nairu sezgisi.", "E) Para M1-M2; merkez bankası, faiz, enflasyon hedefi."],
+    "correctAnswerIndex": 0,
+    "explanation": "Ekonomi notundaki temel bilgi."
 },
 {
-    "question": "Ekonomi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Arz-talep denge, esneklik; tavan-taban fiyat kıtlık/fazla."],
+    "question": "Arz-talep hakkında hangisi doğrudur?",
+    "options": ["A) Arz-talep denge, esneklik; tavan-taban fiyat kıtlık/fazla.", "B) Kıtlık tercih, fırsat maliyeti, üretim imkanları eğrisi.", "C) Piyasa başarısızlığı dışsallık, kamu malı, asimetrik bilgi, tekel.", "D) Milli gelir GSYH; nominal-reel, kişi başı sınırlı refah ölçüsü.", "E) Enflasyon-işsizlik türleri; Phillips tartışması, Nairu sezgisi."],
+    "correctAnswerIndex": 0,
+    "explanation": "Ekonomi notundaki temel bilgi."
+},
+{
+    "question": "Piyasa başarısızlığı hangisini ifade eder?",
+    "options": ["A) Piyasa başarısızlığı dışsallık, kamu malı, asimetrik bilgi, tekel.", "B) Kıtlık tercih, fırsat maliyeti, üretim imkanları eğrisi.", "C) Arz-talep denge, esneklik; tavan-taban fiyat kıtlık/fazla.", "D) Milli gelir GSYH; nominal-reel, kişi başı sınırlı refah ölçüsü.", "E) Enflasyon-işsizlik türleri; Phillips tartışması, Nairu sezgisi."],
+    "correctAnswerIndex": 0,
+    "explanation": "Ekonomi notundaki temel bilgi."
+},
+{
+    "question": "Milli gelir ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Kıtlık tercih, fırsat maliyeti, üretim imkanları eğrisi.", "B) Arz-talep denge, esneklik; tavan-taban fiyat kıtlık/fazla.", "C) Piyasa başarısızlığı dışsallık, kamu malı, asimetrik bilgi, tekel.", "D) Enflasyon-işsizlik türleri; Phillips tartışması, Nairu sezgisi.", "E) Milli gelir GSYH; nominal-reel, kişi başı sınırlı refah ölçüsü."],
+    "correctAnswerIndex": 4,
+    "explanation": "Ekonomi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Enflasyon-işsizlik için doğru bir açıklamadır?",
+    "options": ["A) Enflasyon-işsizlik türleri; Phillips tartışması, Nairu sezgisi.", "B) Kıtlık tercih, fırsat maliyeti, üretim imkanları eğrisi.", "C) Arz-talep denge, esneklik; tavan-taban fiyat kıtlık/fazla.", "D) Piyasa başarısızlığı dışsallık, kamu malı, asimetrik bilgi, tekel.", "E) Milli gelir GSYH; nominal-reel, kişi başı sınırlı refah ölçüsü."],
+    "correctAnswerIndex": 0,
+    "explanation": "Ekonomi notundaki temel bilgi."
+},
+{
+    "question": "Para hakkında hangisi doğrudur?",
+    "options": ["A) Piyasa başarısızlığı dışsallık, kamu malı, asimetrik bilgi, tekel.", "B) Milli gelir GSYH; nominal-reel, kişi başı sınırlı refah ölçüsü.", "C) Para M1-M2; merkez bankası, faiz, enflasyon hedefi.", "D) Kıtlık tercih, fırsat maliyeti, üretim imkanları eğrisi.", "E) Arz-talep denge, esneklik; tavan-taban fiyat kıtlık/fazla."],
+    "correctAnswerIndex": 2,
+    "explanation": "Ekonomi notundaki temel bilgi."
+},
+{
+    "question": "Maliye hangisini ifade eder?",
+    "options": ["A) Milli gelir GSYH; nominal-reel, kişi başı sınırlı refah ölçüsü.", "B) Enflasyon-işsizlik türleri; Phillips tartışması, Nairu sezgisi.", "C) Maliye vergi-harcama, bütçe açığı, borç.", "D) Arz-talep denge, esneklik; tavan-taban fiyat kıtlık/fazla.", "E) Piyasa başarısızlığı dışsallık, kamu malı, asimetrik bilgi, tekel."],
+    "correctAnswerIndex": 2,
+    "explanation": "Ekonomi notundaki temel bilgi."
+},
+{
+    "question": "Dış ticaret ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Milli gelir GSYH; nominal-reel, kişi başı sınırlı refah ölçüsü.", "B) Dış ticaret karşılaştırmalı üstünlük, kur, cari açık.", "C) Kıtlık tercih, fırsat maliyeti, üretim imkanları eğrisi.", "D) Arz-talep denge, esneklik; tavan-taban fiyat kıtlık/fazla.", "E) Piyasa başarısızlığı dışsallık, kamu malı, asimetrik bilgi, tekel."],
+    "correctAnswerIndex": 1,
+    "explanation": "Ekonomi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Büyüme için doğru bir açıklamadır?",
+    "options": ["A) Büyüme emek, sermaye, teknoloji, beşeri sermaye.", "B) Kıtlık tercih, fırsat maliyeti, üretim imkanları eğrisi.", "C) Arz-talep denge, esneklik; tavan-taban fiyat kıtlık/fazla.", "D) Piyasa başarısızlığı dışsallık, kamu malı, asimetrik bilgi, tekel.", "E) Milli gelir GSYH; nominal-reel, kişi başı sınırlı refah ölçüsü."],
+    "correctAnswerIndex": 0,
+    "explanation": "Ekonomi notundaki temel bilgi."
+},
+{
+    "question": "Gelir dağılımı hakkında hangisi doğrudur?",
+    "options": ["A) Arz-talep denge, esneklik; tavan-taban fiyat kıtlık/fazla.", "B) Piyasa başarısızlığı dışsallık, kamu malı, asimetrik bilgi, tekel.", "C) Milli gelir GSYH; nominal-reel, kişi başı sınırlı refah ölçüsü.", "D) Gelir dağılımı Gini, yoksulluk, sosyal politika.", "E) Kıtlık tercih, fırsat maliyeti, üretim imkanları eğrisi."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Ekonomi notundaki temel bilgi."
 },
 {
-    "question": "Ekonomi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Piyasa başarısızlığı dışsallık, kamu malı, asimetrik bilgi, tekel.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Ekonomi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Milli gelir GSYH; nominal-reel, kişi başı sınırlı refah ölçüsü."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Ekonomi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Enflasyon-işsizlik türleri; Phillips tartışması, Nairu sezgisi.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Ekonomi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Para M1-M2; merkez bankası, faiz, enflasyon hedefi."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Ekonomi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Maliye vergi-harcama, bütçe açığı, borç.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Ekonomi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Dış ticaret karşılaştırmalı üstünlük, kur, cari açık."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Ekonomi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Büyüme emek, sermaye, teknoloji, beşeri sermaye.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Ekonomi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Gelir dağılımı Gini, yoksulluk, sosyal politika."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Ekonomi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Akılcı tüketici varsayımı sınırlı (davranışsal ekonomi).", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Akılcı tüketici hangisini ifade eder?",
+    "options": ["A) Kıtlık tercih, fırsat maliyeti, üretim imkanları eğrisi.", "B) Arz-talep denge, esneklik; tavan-taban fiyat kıtlık/fazla.", "C) Piyasa başarısızlığı dışsallık, kamu malı, asimetrik bilgi, tekel.", "D) Milli gelir GSYH; nominal-reel, kişi başı sınırlı refah ölçüsü.", "E) Akılcı tüketici varsayımı sınırlı (davranışsal ekonomi)."],
+    "correctAnswerIndex": 4,
+    "explanation": "Ekonomi notundaki temel bilgi."
 }
 ];

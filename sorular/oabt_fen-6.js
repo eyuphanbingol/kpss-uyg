@@ -55,69 +55,69 @@ window.oabt_fen_6_sorulari = [
     "explanation": "Sorun doğal sera değil, kuvvetlenmesidir."
 },
 {
-    "question": "Çevre Bilimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Madde döngüleri karbon, azot, su, fosfor; insan müdahalesi (gübre, fosil).", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Madde döngüleri için doğru bir açıklamadır?",
+    "options": ["A) Madde döngüleri karbon, azot, su, fosfor; insan müdahalesi (gübre, fosil).", "B) Biyoçeşitlilik genetik-tür-ekosistem; habitat kaybı birincil tehdit.", "C) Süksesyon primer-sekonder; klimaks tartışmalı, dinamik denge.", "D) Kirlilik noktasal/yayılı; biyobirikim ve biyomagnifikasyon (civa, DDT).", "E) Ötrofikasyon azot-fosfor→alg patlaması→oksijen çöküşü."],
+    "correctAnswerIndex": 0,
+    "explanation": "Çevre Bilimi notundaki temel bilgi."
 },
 {
-    "question": "Çevre Bilimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Biyoçeşitlilik genetik-tür-ekosistem; habitat kaybı birincil tehdit.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Biyoçeşitlilik hakkında hangisi doğrudur?",
+    "options": ["A) Biyoçeşitlilik genetik-tür-ekosistem; habitat kaybı birincil tehdit.", "B) Madde döngüleri karbon, azot, su, fosfor; insan müdahalesi (gübre, fosil).", "C) Süksesyon primer-sekonder; klimaks tartışmalı, dinamik denge.", "D) Kirlilik noktasal/yayılı; biyobirikim ve biyomagnifikasyon (civa, DDT).", "E) Ötrofikasyon azot-fosfor→alg patlaması→oksijen çöküşü."],
+    "correctAnswerIndex": 0,
+    "explanation": "Çevre Bilimi notundaki temel bilgi."
+},
+{
+    "question": "Süksesyon hangisini ifade eder?",
+    "options": ["A) Ötrofikasyon azot-fosfor→alg patlaması→oksijen çöküşü.", "B) Süksesyon primer-sekonder; klimaks tartışmalı, dinamik denge.", "C) Madde döngüleri karbon, azot, su, fosfor; insan müdahalesi (gübre, fosil).", "D) Biyoçeşitlilik genetik-tür-ekosistem; habitat kaybı birincil tehdit.", "E) Kirlilik noktasal/yayılı; biyobirikim ve biyomagnifikasyon (civa, DDT)."],
+    "correctAnswerIndex": 1,
+    "explanation": "Çevre Bilimi notundaki temel bilgi."
+},
+{
+    "question": "Kirlilik ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Biyoçeşitlilik genetik-tür-ekosistem; habitat kaybı birincil tehdit.", "B) Süksesyon primer-sekonder; klimaks tartışmalı, dinamik denge.", "C) Ötrofikasyon azot-fosfor→alg patlaması→oksijen çöküşü.", "D) Kirlilik noktasal/yayılı; biyobirikim ve biyomagnifikasyon (civa, DDT).", "E) Madde döngüleri karbon, azot, su, fosfor; insan müdahalesi (gübre, fosil)."],
+    "correctAnswerIndex": 3,
+    "explanation": "Çevre Bilimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Ötrofikasyon için doğru bir açıklamadır?",
+    "options": ["A) Biyoçeşitlilik genetik-tür-ekosistem; habitat kaybı birincil tehdit.", "B) Süksesyon primer-sekonder; klimaks tartışmalı, dinamik denge.", "C) Kirlilik noktasal/yayılı; biyobirikim ve biyomagnifikasyon (civa, DDT).", "D) Ötrofikasyon azot-fosfor→alg patlaması→oksijen çöküşü.", "E) Madde döngüleri karbon, azot, su, fosfor; insan müdahalesi (gübre, fosil)."],
+    "correctAnswerIndex": 3,
+    "explanation": "Çevre Bilimi notundaki temel bilgi."
+},
+{
+    "question": "Sera etkisi hakkında hangisi doğrudur?",
+    "options": ["A) Madde döngüleri karbon, azot, su, fosfor; insan müdahalesi (gübre, fosil).", "B) Biyoçeşitlilik genetik-tür-ekosistem; habitat kaybı birincil tehdit.", "C) Süksesyon primer-sekonder; klimaks tartışmalı, dinamik denge.", "D) Kirlilik noktasal/yayılı; biyobirikim ve biyomagnifikasyon (civa, DDT).", "E) Sera etkisi doğal yaşamsal; artan sera gazı kuvvetlenmiş sera, küresel ısınma."],
+    "correctAnswerIndex": 4,
+    "explanation": "Çevre Bilimi notundaki temel bilgi."
+},
+{
+    "question": "Ozon incelmesi hangisini ifade eder?",
+    "options": ["A) Madde döngüleri karbon, azot, su, fosfor; insan müdahalesi (gübre, fosil).", "B) Biyoçeşitlilik genetik-tür-ekosistem; habitat kaybı birincil tehdit.", "C) Süksesyon primer-sekonder; klimaks tartışmalı, dinamik denge.", "D) Kirlilik noktasal/yayılı; biyobirikim ve biyomagnifikasyon (civa, DDT).", "E) Ozon incelmesi stratosfer CFCs; sera ile karıştırılmamalı (farklı gaz-farklı katman vurgusu)."],
+    "correctAnswerIndex": 4,
+    "explanation": "Çevre Bilimi notundaki temel bilgi."
+},
+{
+    "question": "Asit yağmuru ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Asit yağmuru SOx NOx; göl asitleşmesi, kireçtaşı yıpranma.", "B) Madde döngüleri karbon, azot, su, fosfor; insan müdahalesi (gübre, fosil).", "C) Biyoçeşitlilik genetik-tür-ekosistem; habitat kaybı birincil tehdit.", "D) Süksesyon primer-sekonder; klimaks tartışmalı, dinamik denge.", "E) Kirlilik noktasal/yayılı; biyobirikim ve biyomagnifikasyon (civa, DDT)."],
+    "correctAnswerIndex": 0,
+    "explanation": "Çevre Bilimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Sürdürülebilirlik için doğru bir açıklamadır?",
+    "options": ["A) Sürdürülebilirlik yenilenebilir hızın aşılmaması; ekolojik ayak izi.", "B) Madde döngüleri karbon, azot, su, fosfor; insan müdahalesi (gübre, fosil).", "C) Biyoçeşitlilik genetik-tür-ekosistem; habitat kaybı birincil tehdit.", "D) Süksesyon primer-sekonder; klimaks tartışmalı, dinamik denge.", "E) Kirlilik noktasal/yayılı; biyobirikim ve biyomagnifikasyon (civa, DDT)."],
+    "correctAnswerIndex": 0,
+    "explanation": "Çevre Bilimi notundaki temel bilgi."
+},
+{
+    "question": "Atık hiyerarşisi hakkında hangisi doğrudur?",
+    "options": ["A) Biyoçeşitlilik genetik-tür-ekosistem; habitat kaybı birincil tehdit.", "B) Süksesyon primer-sekonder; klimaks tartışmalı, dinamik denge.", "C) Kirlilik noktasal/yayılı; biyobirikim ve biyomagnifikasyon (civa, DDT).", "D) Atık hiyerarşisi azalt, tekrar kullan, geri dönüştür; yakma-gömme son çare.", "E) Madde döngüleri karbon, azot, su, fosfor; insan müdahalesi (gübre, fosil)."],
+    "correctAnswerIndex": 3,
+    "explanation": "Çevre Bilimi notundaki temel bilgi."
+},
+{
+    "question": "Çevre etiği hangisini ifade eder?",
+    "options": ["A) Süksesyon primer-sekonder; klimaks tartışmalı, dinamik denge.", "B) Kirlilik noktasal/yayılı; biyobirikim ve biyomagnifikasyon (civa, DDT).", "C) Çevre etiği insanmerkez-canlımerkez-ekosistemmerkez.", "D) Madde döngüleri karbon, azot, su, fosfor; insan müdahalesi (gübre, fosil).", "E) Biyoçeşitlilik genetik-tür-ekosistem; habitat kaybı birincil tehdit."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Çevre Bilimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Süksesyon primer-sekonder; klimaks tartışmalı, dinamik denge.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Çevre Bilimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Kirlilik noktasal/yayılı; biyobirikim ve biyomagnifikasyon (civa, DDT).", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Çevre Bilimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Ötrofikasyon azot-fosfor→alg patlaması→oksijen çöküşü.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Çevre Bilimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Sera etkisi doğal yaşamsal; artan sera gazı kuvvetlenmiş sera, küresel ısınma.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Çevre Bilimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Ozon incelmesi stratosfer CFCs; sera ile karıştırılmamalı (farklı gaz-farklı katman vurgus", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Çevre Bilimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Asit yağmuru SOx NOx; göl asitleşmesi, kireçtaşı yıpranma.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Çevre Bilimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Sürdürülebilirlik yenilenebilir hızın aşılmaması; ekolojik ayak izi.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Çevre Bilimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Atık hiyerarşisi azalt, tekrar kullan, geri dönüştür; yakma-gömme son çare.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Çevre Bilimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Çevre etiği insanmerkez-canlımerkez-ekosistemmerkez.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Çevre Bilimi notundaki temel bilgi."
 }
 ];

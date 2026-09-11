@@ -73,51 +73,51 @@ window.ags_mevzuat_1_sorulari = [
     "explanation": "657 ve 7528 kanunla ayrıntı."
 },
 {
-    "question": "T.C. Anayasası konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) 2709 sayılı 1982 Anayasası 7 Kasım 1982 de kabul edilmiş sert anayasadır; Cumhuriyetin nit", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "zorunlu hangisini ifade eder?",
+    "options": ["A) Eğitim-öğretim Atatürk ilkeleri ve inkılapları ile çağdaş bilim esaslarına göre, Devletin gözetim ve denetiminde yapılır.", "B) Türkçeden başka dil, Türk vatandaşlarına ana dil olarak okutulamaz; yabancı dille öğretim ve milletlerarası andlaşma istisnaları kanuna bağlıdır.", "C) İlköğretim kız ve erkek bütün vatandaşlar için zorunlu, Devlet okullarında parasızdır.", "D) 2709 sayılı 1982 Anayasası 7 Kasım 1982 de kabul edilmiş sert anayasadır; Cumhuriyetin nitelikleri m.2, değiştirilemez çekirdek m.4.", "E) m.42 eğitim ve öğrenim hakkı: kimse bu haktan yoksun bırakılamaz; kapsamı kanunla düzenlenir."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "T.C. Anayasası notundaki temel bilgi."
 },
 {
-    "question": "T.C. Anayasası konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) m.42 eğitim ve öğrenim hakkı: kimse bu haktan yoksun bırakılamaz; kapsamı kanunla düzenlen"],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Atatürk ilkeleri ve inkılapları ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Türkçeden başka dil, Türk vatandaşlarına ana dil olarak okutulamaz; yabancı dille öğretim ve milletlerarası andlaşma istisnaları kanuna bağlıdır.", "B) Eğitim-öğretim Atatürk ilkeleri ve inkılapları ile çağdaş bilim esaslarına göre, Devletin gözetim ve denetiminde yapılır.", "C) 2709 sayılı 1982 Anayasası 7 Kasım 1982 de kabul edilmiş sert anayasadır; Cumhuriyetin nitelikleri m.2, değiştirilemez çekirdek m.4.", "D) m.42 eğitim ve öğrenim hakkı: kimse bu haktan yoksun bırakılamaz; kapsamı kanunla düzenlenir.", "E) İlköğretim kız ve erkek bütün vatandaşlar için zorunlu, Devlet okullarında parasızdır."],
+    "correctAnswerIndex": 1,
+    "explanation": "T.C. Anayasası notundaki temel bilgi."
 },
 {
-    "question": "T.C. Anayasası konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) İlköğretim kız ve erkek bütün vatandaşlar için zorunlu, Devlet okullarında parasızdır.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi ana dil için doğru bir açıklamadır?",
+    "options": ["A) İlköğretim kız ve erkek bütün vatandaşlar için zorunlu, Devlet okullarında parasızdır.", "B) Eğitim-öğretim Atatürk ilkeleri ve inkılapları ile çağdaş bilim esaslarına göre, Devletin gözetim ve denetiminde yapılır.", "C) Türkçeden başka dil, Türk vatandaşlarına ana dil olarak okutulamaz; yabancı dille öğretim ve milletlerarası andlaşma istisnaları kanuna bağlıdır.", "D) 2709 sayılı 1982 Anayasası 7 Kasım 1982 de kabul edilmiş sert anayasadır; Cumhuriyetin nitelikleri m.2, değiştirilemez çekirdek m.4.", "E) m.42 eğitim ve öğrenim hakkı: kimse bu haktan yoksun bırakılamaz; kapsamı kanunla düzenlenir."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "T.C. Anayasası notundaki temel bilgi."
 },
 {
-    "question": "T.C. Anayasası konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Eğitim-öğretim Atatürk ilkeleri ve inkılapları ile çağdaş bilim esaslarına göre, Devletin "],
+    "question": "Aşağıdakilerden hangisi m.70 için doğru bir açıklamadır?",
+    "options": ["A) m.42 eğitim ve öğrenim hakkı: kimse bu haktan yoksun bırakılamaz; kapsamı kanunla düzenlenir.", "B) İlköğretim kız ve erkek bütün vatandaşlar için zorunlu, Devlet okullarında parasızdır.", "C) Eğitim-öğretim Atatürk ilkeleri ve inkılapları ile çağdaş bilim esaslarına göre, Devletin gözetim ve denetiminde yapılır.", "D) m.70 kamu hizmetlerine girme hakkı; m.49 çalışma hakkı ve ödevi.", "E) 2709 sayılı 1982 Anayasası 7 Kasım 1982 de kabul edilmiş sert anayasadır; Cumhuriyetin nitelikleri m.2, değiştirilemez çekirdek m.4."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "T.C. Anayasası notundaki temel bilgi."
 },
 {
-    "question": "T.C. Anayasası konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Türkçeden başka dil, Türk vatandaşlarına ana dil olarak okutulamaz; yabancı dille öğretim ", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "m.130 hakkında hangisi doğrudur?",
+    "options": ["A) İlköğretim kız ve erkek bütün vatandaşlar için zorunlu, Devlet okullarında parasızdır.", "B) Eğitim-öğretim Atatürk ilkeleri ve inkılapları ile çağdaş bilim esaslarına göre, Devletin gözetim ve denetiminde yapılır.", "C) m.130 üniversiteler; bilimsel özerklik ve YÖK çerçevesi anayasal plandadır.", "D) 2709 sayılı 1982 Anayasası 7 Kasım 1982 de kabul edilmiş sert anayasadır; Cumhuriyetin nitelikleri m.2, değiştirilemez çekirdek m.4.", "E) m.42 eğitim ve öğrenim hakkı: kimse bu haktan yoksun bırakılamaz; kapsamı kanunla düzenlenir."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "T.C. Anayasası notundaki temel bilgi."
 },
 {
-    "question": "T.C. Anayasası konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) m.10 eşitlik: kanun önünde eşitlik; dil, ırk, renk, cinsiyet, siyasi düşünce, felsefi inan"],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "m.90 hangisini ifade eder?",
+    "options": ["A) Eğitim-öğretim Atatürk ilkeleri ve inkılapları ile çağdaş bilim esaslarına göre, Devletin gözetim ve denetiminde yapılır.", "B) m.90: usulüne göre yürürlüğe andlaşmalar kanun hükmündedir; 2004 değişikliğiyle temel haklara ilişkin andlaşmalar-kanun çatışmasında andlaşma esas alınır.", "C) 2709 sayılı 1982 Anayasası 7 Kasım 1982 de kabul edilmiş sert anayasadır; Cumhuriyetin nitelikleri m.2, değiştirilemez çekirdek m.4.", "D) m.42 eğitim ve öğrenim hakkı: kimse bu haktan yoksun bırakılamaz; kapsamı kanunla düzenlenir.", "E) İlköğretim kız ve erkek bütün vatandaşlar için zorunlu, Devlet okullarında parasızdır."],
+    "correctAnswerIndex": 1,
+    "explanation": "T.C. Anayasası notundaki temel bilgi."
 },
 {
-    "question": "T.C. Anayasası konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) m.2 laik, demokratik, sosyal hukuk devleti; m.24 din ve vicdan hürriyeti, din kültürü ve a", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi 2007 için doğru bir açıklamadır?",
+    "options": ["A) 2007: Cumhurbaşkanının halk tarafından seçimi; 2017: Cumhurbaşkanlığı hükümet sistemi, başbakanlığın kalkması, 600 milletvekili.", "B) 2709 sayılı 1982 Anayasası 7 Kasım 1982 de kabul edilmiş sert anayasadır; Cumhuriyetin nitelikleri m.2, değiştirilemez çekirdek m.4.", "C) m.42 eğitim ve öğrenim hakkı: kimse bu haktan yoksun bırakılamaz; kapsamı kanunla düzenlenir.", "D) İlköğretim kız ve erkek bütün vatandaşlar için zorunlu, Devlet okullarında parasızdır.", "E) Eğitim-öğretim Atatürk ilkeleri ve inkılapları ile çağdaş bilim esaslarına göre, Devletin gözetim ve denetiminde yapılır."],
+    "correctAnswerIndex": 0,
+    "explanation": "T.C. Anayasası notundaki temel bilgi."
 },
 {
-    "question": "T.C. Anayasası konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) m.128 memurlar ve diğer kamu görevlileri; nitelikleri, atanmaları, görev ve yetkileri, hak"],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "m.174 hakkında hangisi doğrudur?",
+    "options": ["A) 2709 sayılı 1982 Anayasası 7 Kasım 1982 de kabul edilmiş sert anayasadır; Cumhuriyetin nitelikleri m.2, değiştirilemez çekirdek m.4.", "B) m.42 eğitim ve öğrenim hakkı: kimse bu haktan yoksun bırakılamaz; kapsamı kanunla düzenlenir.", "C) İlköğretim kız ve erkek bütün vatandaşlar için zorunlu, Devlet okullarında parasızdır.", "D) Eğitim-öğretim Atatürk ilkeleri ve inkılapları ile çağdaş bilim esaslarına göre, Devletin gözetim ve denetiminde yapılır.", "E) m.174 inkılap kanunlarının korunması; eğitim laikleşmesinin anayasal kalkanıdır."],
+    "correctAnswerIndex": 4,
+    "explanation": "T.C. Anayasası notundaki temel bilgi."
 }
 ];

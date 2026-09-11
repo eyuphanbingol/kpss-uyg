@@ -55,69 +55,69 @@ window.oabt_ilkomat_5_sorulari = [
     "explanation": "Dirençli istatistik: medyan ve IQR."
 },
 {
-    "question": "Olasılık ve İstatistik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Klasik olasılık P=uygun/mümkün; eşit olasılıklı sonlu örnek uzayı varsayar.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Klasik olasılık için doğru bir açıklamadır?",
+    "options": ["A) Geometrik olasılık uzunluk-alan oranı; süreklide nokta olasılığı sıfırdır.", "B) Klasik olasılık P=uygun/mümkün; eşit olasılıklı sonlu örnek uzayı varsayar.", "C) Bağımsızlık P(A∩B)=P(A)P(B); koşullu P(A|B)=P(A∩B)/P(B).", "D) Toplama ayrık olaylarda P(A∪B)=P(A)+P(B); genel halde kesişim çıkarılır.", "E) Permütasyon-kombinasyon sıralı/sırasız sayım; tekrarlı durumlarda düzeltilir."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Olasılık ve İstatistik notundaki temel bilgi."
 },
 {
-    "question": "Olasılık ve İstatistik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Bağımsızlık P(A∩B)=P(A)P(B); koşullu P(A|B)=P(A∩B)/P(B).", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Bağımsızlık hakkında hangisi doğrudur?",
+    "options": ["A) Klasik olasılık P=uygun/mümkün; eşit olasılıklı sonlu örnek uzayı varsayar.", "B) Toplama ayrık olaylarda P(A∪B)=P(A)+P(B); genel halde kesişim çıkarılır.", "C) Permütasyon-kombinasyon sıralı/sırasız sayım; tekrarlı durumlarda düzeltilir.", "D) Geometrik olasılık uzunluk-alan oranı; süreklide nokta olasılığı sıfırdır.", "E) Bağımsızlık P(A∩B)=P(A)P(B); koşullu P(A|B)=P(A∩B)/P(B)."],
+    "correctAnswerIndex": 4,
+    "explanation": "Olasılık ve İstatistik notundaki temel bilgi."
+},
+{
+    "question": "Toplama hangisini ifade eder?",
+    "options": ["A) Bağımsızlık P(A∩B)=P(A)P(B); koşullu P(A|B)=P(A∩B)/P(B).", "B) Permütasyon-kombinasyon sıralı/sırasız sayım; tekrarlı durumlarda düzeltilir.", "C) Geometrik olasılık uzunluk-alan oranı; süreklide nokta olasılığı sıfırdır.", "D) Toplama ayrık olaylarda P(A∪B)=P(A)+P(B); genel halde kesişim çıkarılır.", "E) Klasik olasılık P=uygun/mümkün; eşit olasılıklı sonlu örnek uzayı varsayar."],
+    "correctAnswerIndex": 3,
+    "explanation": "Olasılık ve İstatistik notundaki temel bilgi."
+},
+{
+    "question": "Permütasyon-kombinasyon ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Permütasyon-kombinasyon sıralı/sırasız sayım; tekrarlı durumlarda düzeltilir.", "B) Klasik olasılık P=uygun/mümkün; eşit olasılıklı sonlu örnek uzayı varsayar.", "C) Bağımsızlık P(A∩B)=P(A)P(B); koşullu P(A|B)=P(A∩B)/P(B).", "D) Toplama ayrık olaylarda P(A∪B)=P(A)+P(B); genel halde kesişim çıkarılır.", "E) Geometrik olasılık uzunluk-alan oranı; süreklide nokta olasılığı sıfırdır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Olasılık ve İstatistik notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Geometrik olasılık için doğru bir açıklamadır?",
+    "options": ["A) Bağımsızlık P(A∩B)=P(A)P(B); koşullu P(A|B)=P(A∩B)/P(B).", "B) Toplama ayrık olaylarda P(A∪B)=P(A)+P(B); genel halde kesişim çıkarılır.", "C) Permütasyon-kombinasyon sıralı/sırasız sayım; tekrarlı durumlarda düzeltilir.", "D) Geometrik olasılık uzunluk-alan oranı; süreklide nokta olasılığı sıfırdır.", "E) Klasik olasılık P=uygun/mümkün; eşit olasılıklı sonlu örnek uzayı varsayar."],
+    "correctAnswerIndex": 3,
+    "explanation": "Olasılık ve İstatistik notundaki temel bilgi."
+},
+{
+    "question": "Merkez hakkında hangisi doğrudur?",
+    "options": ["A) Bağımsızlık P(A∩B)=P(A)P(B); koşullu P(A|B)=P(A∩B)/P(B).", "B) Toplama ayrık olaylarda P(A∪B)=P(A)+P(B); genel halde kesişim çıkarılır.", "C) Permütasyon-kombinasyon sıralı/sırasız sayım; tekrarlı durumlarda düzeltilir.", "D) Merkez ortalama, medyan, tepe değer; çarpık dağılımda medyan daha dirençlidir.", "E) Klasik olasılık P=uygun/mümkün; eşit olasılıklı sonlu örnek uzayı varsayar."],
+    "correctAnswerIndex": 3,
+    "explanation": "Olasılık ve İstatistik notundaki temel bilgi."
+},
+{
+    "question": "Yayılım hangisini ifade eder?",
+    "options": ["A) Toplama ayrık olaylarda P(A∪B)=P(A)+P(B); genel halde kesişim çıkarılır.", "B) Permütasyon-kombinasyon sıralı/sırasız sayım; tekrarlı durumlarda düzeltilir.", "C) Yayılım açıklık, çeyrekler açıklığı, varyans, standart sapma.", "D) Klasik olasılık P=uygun/mümkün; eşit olasılıklı sonlu örnek uzayı varsayar.", "E) Bağımsızlık P(A∩B)=P(A)P(B); koşullu P(A|B)=P(A∩B)/P(B)."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Olasılık ve İstatistik notundaki temel bilgi."
 },
 {
-    "question": "Olasılık ve İstatistik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Toplama ayrık olaylarda P(A∪B)=P(A)+P(B); genel halde kesişim çıkarılır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Grafik ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Klasik olasılık P=uygun/mümkün; eşit olasılıklı sonlu örnek uzayı varsayar.", "B) Bağımsızlık P(A∩B)=P(A)P(B); koşullu P(A|B)=P(A∩B)/P(B).", "C) Toplama ayrık olaylarda P(A∪B)=P(A)+P(B); genel halde kesişim çıkarılır.", "D) Permütasyon-kombinasyon sıralı/sırasız sayım; tekrarlı durumlarda düzeltilir.", "E) Grafik çubuk, pasta, histogram, çizgi, kutu-bıyık; histogram sürekli yığılmadır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Olasılık ve İstatistik notundaki temel bilgi."
 },
 {
-    "question": "Olasılık ve İstatistik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Permütasyon-kombinasyon sıralı/sırasız sayım; tekrarlı durumlarda düzeltilir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Örneklem-evren için doğru bir açıklamadır?",
+    "options": ["A) Bağımsızlık P(A∩B)=P(A)P(B); koşullu P(A|B)=P(A∩B)/P(B).", "B) Toplama ayrık olaylarda P(A∪B)=P(A)+P(B); genel halde kesişim çıkarılır.", "C) Permütasyon-kombinasyon sıralı/sırasız sayım; tekrarlı durumlarda düzeltilir.", "D) Örneklem-evren çıkarımın kaynağı; yanlı örneklem temsiliyeti bozar.", "E) Klasik olasılık P=uygun/mümkün; eşit olasılıklı sonlu örnek uzayı varsayar."],
+    "correctAnswerIndex": 3,
+    "explanation": "Olasılık ve İstatistik notundaki temel bilgi."
+},
+{
+    "question": "Aykırı değer hakkında hangisi doğrudur?",
+    "options": ["A) Bağımsızlık P(A∩B)=P(A)P(B); koşullu P(A|B)=P(A∩B)/P(B).", "B) Toplama ayrık olaylarda P(A∪B)=P(A)+P(B); genel halde kesişim çıkarılır.", "C) Permütasyon-kombinasyon sıralı/sırasız sayım; tekrarlı durumlarda düzeltilir.", "D) Aykırı değer ortalamayı çeker; medyanı az etkiler.", "E) Klasik olasılık P=uygun/mümkün; eşit olasılıklı sonlu örnek uzayı varsayar."],
+    "correctAnswerIndex": 3,
+    "explanation": "Olasılık ve İstatistik notundaki temel bilgi."
+},
+{
+    "question": "Göreli sıklık hangisini ifade eder?",
+    "options": ["A) Toplama ayrık olaylarda P(A∪B)=P(A)+P(B); genel halde kesişim çıkarılır.", "B) Permütasyon-kombinasyon sıralı/sırasız sayım; tekrarlı durumlarda düzeltilir.", "C) Göreli sıklık deneme artınca olasılığa yaklaşır (büyük sayılar sezgisi).", "D) Klasik olasılık P=uygun/mümkün; eşit olasılıklı sonlu örnek uzayı varsayar.", "E) Bağımsızlık P(A∩B)=P(A)P(B); koşullu P(A|B)=P(A∩B)/P(B)."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Olasılık ve İstatistik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Geometrik olasılık uzunluk-alan oranı; süreklide nokta olasılığı sıfırdır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Olasılık ve İstatistik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Merkez ortalama, medyan, tepe değer; çarpık dağılımda medyan daha dirençlidir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Olasılık ve İstatistik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Yayılım açıklık, çeyrekler açıklığı, varyans, standart sapma.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Olasılık ve İstatistik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Grafik çubuk, pasta, histogram, çizgi, kutu-bıyık; histogram sürekli yığılmadır.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Olasılık ve İstatistik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Örneklem-evren çıkarımın kaynağı; yanlı örneklem temsiliyeti bozar.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Olasılık ve İstatistik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Aykırı değer ortalamayı çeker; medyanı az etkiler.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Olasılık ve İstatistik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Göreli sıklık deneme artınca olasılığa yaklaşır (büyük sayılar sezgisi).", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Olasılık ve İstatistik notundaki temel bilgi."
 }
 ];

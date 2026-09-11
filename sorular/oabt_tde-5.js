@@ -61,63 +61,63 @@ window.oabt_tde_5_sorulari = [
     "explanation": "Tanzimat romanının öncü metinlerindendir."
 },
 {
-    "question": "Yeni Türk Edebiyatı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Tanzimat (Şinasi, Namık Kemal, Ziya Paşa) vatan, hürriyet, hak; tiyatro ve gazete.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Tanzimat için doğru bir açıklamadır?",
+    "options": ["A) Abdülhak Hamit romantik tiyatro-şiir; Muallim Naci klasik taraftar.", "B) Tanzimat (Şinasi, Namık Kemal, Ziya Paşa) vatan, hürriyet, hak; tiyatro ve gazete.", "C) Servet-i Fünun (Tevfik Fikret, Halit Ziya, Cenap) sanat için sanat, ağır dil, roman-şiir.", "D) Fecr-i Ati geçiş; Milli Edebiyat (Yeni Lisan, Ömer Seyfettin, Gökalp, Yakup Kadri erken) sade dil.", "E) Recaizade Araba Sevdası realizm-eleştiri; Samipaşazade Taaşşuk-ı Talat ve Fitnat ilk roman tartışması."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Yeni Türk Edebiyatı notundaki temel bilgi."
 },
 {
-    "question": "Yeni Türk Edebiyatı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Servet-i Fünun (Tevfik Fikret, Halit Ziya, Cenap) sanat için sanat, ağır dil, roman-şiir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Yeni Türk Edebiyatı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Fecr-i Ati geçiş; Milli Edebiyat (Yeni Lisan, Ömer Seyfettin, Gökalp, Yakup Kadri erken) s", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Servet-i Fünun hakkında hangisi doğrudur?",
+    "options": ["A) Abdülhak Hamit romantik tiyatro-şiir; Muallim Naci klasik taraftar.", "B) Servet-i Fünun (Tevfik Fikret, Halit Ziya, Cenap) sanat için sanat, ağır dil, roman-şiir.", "C) Tanzimat (Şinasi, Namık Kemal, Ziya Paşa) vatan, hürriyet, hak; tiyatro ve gazete.", "D) Fecr-i Ati geçiş; Milli Edebiyat (Yeni Lisan, Ömer Seyfettin, Gökalp, Yakup Kadri erken) sade dil.", "E) Recaizade Araba Sevdası realizm-eleştiri; Samipaşazade Taaşşuk-ı Talat ve Fitnat ilk roman tartışması."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Yeni Türk Edebiyatı notundaki temel bilgi."
 },
 {
-    "question": "Yeni Türk Edebiyatı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Recaizade Araba Sevdası realizm-eleştiri; Samipaşazade Taaşşuk-ı Talat ve Fitnat ilk roman", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Fecr-i Ati hangisini ifade eder?",
+    "options": ["A) Tanzimat (Şinasi, Namık Kemal, Ziya Paşa) vatan, hürriyet, hak; tiyatro ve gazete.", "B) Servet-i Fünun (Tevfik Fikret, Halit Ziya, Cenap) sanat için sanat, ağır dil, roman-şiir.", "C) Recaizade Araba Sevdası realizm-eleştiri; Samipaşazade Taaşşuk-ı Talat ve Fitnat ilk roman tartışması.", "D) Abdülhak Hamit romantik tiyatro-şiir; Muallim Naci klasik taraftar.", "E) Fecr-i Ati geçiş; Milli Edebiyat (Yeni Lisan, Ömer Seyfettin, Gökalp, Yakup Kadri erken) sade dil."],
+    "correctAnswerIndex": 4,
+    "explanation": "Yeni Türk Edebiyatı notundaki temel bilgi."
 },
 {
-    "question": "Yeni Türk Edebiyatı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Abdülhak Hamit romantik tiyatro-şiir; Muallim Naci klasik taraftar.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Recaizade ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Abdülhak Hamit romantik tiyatro-şiir; Muallim Naci klasik taraftar.", "B) Recaizade Araba Sevdası realizm-eleştiri; Samipaşazade Taaşşuk-ı Talat ve Fitnat ilk roman tartışması.", "C) Tanzimat (Şinasi, Namık Kemal, Ziya Paşa) vatan, hürriyet, hak; tiyatro ve gazete.", "D) Servet-i Fünun (Tevfik Fikret, Halit Ziya, Cenap) sanat için sanat, ağır dil, roman-şiir.", "E) Fecr-i Ati geçiş; Milli Edebiyat (Yeni Lisan, Ömer Seyfettin, Gökalp, Yakup Kadri erken) sade dil."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Yeni Türk Edebiyatı notundaki temel bilgi."
 },
 {
-    "question": "Yeni Türk Edebiyatı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Beş Hececiler hece ve memleket; Yedi Meşaleciler kısmi yenilik.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Abdülhak Hamit için doğru bir açıklamadır?",
+    "options": ["A) Tanzimat (Şinasi, Namık Kemal, Ziya Paşa) vatan, hürriyet, hak; tiyatro ve gazete.", "B) Servet-i Fünun (Tevfik Fikret, Halit Ziya, Cenap) sanat için sanat, ağır dil, roman-şiir.", "C) Fecr-i Ati geçiş; Milli Edebiyat (Yeni Lisan, Ömer Seyfettin, Gökalp, Yakup Kadri erken) sade dil.", "D) Recaizade Araba Sevdası realizm-eleştiri; Samipaşazade Taaşşuk-ı Talat ve Fitnat ilk roman tartışması.", "E) Abdülhak Hamit romantik tiyatro-şiir; Muallim Naci klasik taraftar."],
+    "correctAnswerIndex": 4,
+    "explanation": "Yeni Türk Edebiyatı notundaki temel bilgi."
+},
+{
+    "question": "Beş Hececiler hakkında hangisi doğrudur?",
+    "options": ["A) Beş Hececiler hece ve memleket; Yedi Meşaleciler kısmi yenilik.", "B) Tanzimat (Şinasi, Namık Kemal, Ziya Paşa) vatan, hürriyet, hak; tiyatro ve gazete.", "C) Servet-i Fünun (Tevfik Fikret, Halit Ziya, Cenap) sanat için sanat, ağır dil, roman-şiir.", "D) Fecr-i Ati geçiş; Milli Edebiyat (Yeni Lisan, Ömer Seyfettin, Gökalp, Yakup Kadri erken) sade dil.", "E) Recaizade Araba Sevdası realizm-eleştiri; Samipaşazade Taaşşuk-ı Talat ve Fitnat ilk roman tartışması."],
+    "correctAnswerIndex": 0,
+    "explanation": "Yeni Türk Edebiyatı notundaki temel bilgi."
+},
+{
+    "question": "İkinci Yeni ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Servet-i Fünun (Tevfik Fikret, Halit Ziya, Cenap) sanat için sanat, ağır dil, roman-şiir.", "B) Fecr-i Ati geçiş; Milli Edebiyat (Yeni Lisan, Ömer Seyfettin, Gökalp, Yakup Kadri erken) sade dil.", "C) Recaizade Araba Sevdası realizm-eleştiri; Samipaşazade Taaşşuk-ı Talat ve Fitnat ilk roman tartışması.", "D) İkinci Yeni (İlhan Berk, Turgut Uyar, Cemal Süreya, Ece Ayhan) imge, kapalılık.", "E) Tanzimat (Şinasi, Namık Kemal, Ziya Paşa) vatan, hürriyet, hak; tiyatro ve gazete."],
+    "correctAnswerIndex": 3,
+    "explanation": "Yeni Türk Edebiyatı notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Toplumcu için doğru bir açıklamadır?",
+    "options": ["A) Tanzimat (Şinasi, Namık Kemal, Ziya Paşa) vatan, hürriyet, hak; tiyatro ve gazete.", "B) Servet-i Fünun (Tevfik Fikret, Halit Ziya, Cenap) sanat için sanat, ağır dil, roman-şiir.", "C) Fecr-i Ati geçiş; Milli Edebiyat (Yeni Lisan, Ömer Seyfettin, Gökalp, Yakup Kadri erken) sade dil.", "D) Recaizade Araba Sevdası realizm-eleştiri; Samipaşazade Taaşşuk-ı Talat ve Fitnat ilk roman tartışması.", "E) Toplumcu nesir-şiir (Nazım Hikmet, Sabahattin Ali); Hisar gelenekçi muhalefet."],
+    "correctAnswerIndex": 4,
+    "explanation": "Yeni Türk Edebiyatı notundaki temel bilgi."
+},
+{
+    "question": "Halide Edip, Reşat Nuri hakkında hangisi doğrudur?",
+    "options": ["A) Halide Edip, Reşat Nuri, Yakup Kadri, Tanpınar, Kemal Tahir, Yaşar Kemal roman hatları.", "B) Tanzimat (Şinasi, Namık Kemal, Ziya Paşa) vatan, hürriyet, hak; tiyatro ve gazete.", "C) Servet-i Fünun (Tevfik Fikret, Halit Ziya, Cenap) sanat için sanat, ağır dil, roman-şiir.", "D) Fecr-i Ati geçiş; Milli Edebiyat (Yeni Lisan, Ömer Seyfettin, Gökalp, Yakup Kadri erken) sade dil.", "E) Recaizade Araba Sevdası realizm-eleştiri; Samipaşazade Taaşşuk-ı Talat ve Fitnat ilk roman tartışması."],
+    "correctAnswerIndex": 0,
+    "explanation": "Yeni Türk Edebiyatı notundaki temel bilgi."
+},
+{
+    "question": "Romantizm, realizm, natüralizm, parnas, sembolizm hangisini ifade eder?",
+    "options": ["A) Fecr-i Ati geçiş; Milli Edebiyat (Yeni Lisan, Ömer Seyfettin, Gökalp, Yakup Kadri erken) sade dil.", "B) Recaizade Araba Sevdası realizm-eleştiri; Samipaşazade Taaşşuk-ı Talat ve Fitnat ilk roman tartışması.", "C) Romantizm, realizm, natüralizm, parnas, sembolizm Tanzimat-Fünun'a yansır.", "D) Tanzimat (Şinasi, Namık Kemal, Ziya Paşa) vatan, hürriyet, hak; tiyatro ve gazete.", "E) Servet-i Fünun (Tevfik Fikret, Halit Ziya, Cenap) sanat için sanat, ağır dil, roman-şiir."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Yeni Türk Edebiyatı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Garip (Orhan Veli, Oktay Rifat, Melih Cevdet) ölçü-kafiye-mazmun reddi, gündelik dil.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Yeni Türk Edebiyatı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) İkinci Yeni (İlhan Berk, Turgut Uyar, Cemal Süreya, Ece Ayhan) imge, kapalılık.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Yeni Türk Edebiyatı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Toplumcu nesir-şiir (Nazım Hikmet, Sabahattin Ali); Hisar gelenekçi muhalefet.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Yeni Türk Edebiyatı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Halide Edip, Reşat Nuri, Yakup Kadri, Tanpınar, Kemal Tahir, Yaşar Kemal roman hatları.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Yeni Türk Edebiyatı notundaki temel bilgi."
 }
 ];

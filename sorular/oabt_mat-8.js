@@ -55,69 +55,69 @@ window.oabt_mat_8_sorulari = [
     "explanation": "Extended abstract yeni bağlama transfer."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kavramsal-işlemsel denge; ezber prosedür kavramı taşımaz.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Kavramsal-işlemsel için doğru bir açıklamadır?",
+    "options": ["A) Kavram yanılgısı: limit 'ulaşılmaz', türev 'bölme', sonsuz 'çok büyük sayı', olasılık 'geçmiş dengeler'.", "B) Kanıt şemaları (Harel): dışsal, deneysel, analitik; öğretim analitiğe geçiş ister.", "C) Temsil grafik-cebir-sözel-sayısal (kural of four) çoklu kayıt.", "D) Kavramsal-işlemsel denge; ezber prosedür kavramı taşımaz.", "E) APOS (aksiyon-süreç-nesne-şema) üniversite matematiği bilişsel modeli."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) APOS (aksiyon-süreç-nesne-şema) üniversite matematiği bilişsel modeli.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "APOS hakkında hangisi doğrudur?",
+    "options": ["A) Kavram yanılgısı: limit 'ulaşılmaz', türev 'bölme', sonsuz 'çok büyük sayı', olasılık 'geçmiş dengeler'.", "B) Kanıt şemaları (Harel): dışsal, deneysel, analitik; öğretim analitiğe geçiş ister.", "C) Temsil grafik-cebir-sözel-sayısal (kural of four) çoklu kayıt.", "D) APOS (aksiyon-süreç-nesne-şema) üniversite matematiği bilişsel modeli.", "E) Kavramsal-işlemsel denge; ezber prosedür kavramı taşımaz."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kavram yanılgısı: limit 'ulaşılmaz', türev 'bölme', sonsuz 'çok büyük sayı', olasılık 'geç", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Kavram yanılgısı hangisini ifade eder?",
+    "options": ["A) Kavram yanılgısı: limit 'ulaşılmaz', türev 'bölme', sonsuz 'çok büyük sayı', olasılık 'geçmiş dengeler'.", "B) Kavramsal-işlemsel denge; ezber prosedür kavramı taşımaz.", "C) APOS (aksiyon-süreç-nesne-şema) üniversite matematiği bilişsel modeli.", "D) Kanıt şemaları (Harel): dışsal, deneysel, analitik; öğretim analitiğe geçiş ister.", "E) Temsil grafik-cebir-sözel-sayısal (kural of four) çoklu kayıt."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Kanıt şemaları (Harel): dışsal, deneysel, analitik; öğretim analitiğe geçiş ister.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Kanıt şemaları ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) APOS (aksiyon-süreç-nesne-şema) üniversite matematiği bilişsel modeli.", "B) Kavram yanılgısı: limit 'ulaşılmaz', türev 'bölme', sonsuz 'çok büyük sayı', olasılık 'geçmiş dengeler'.", "C) Temsil grafik-cebir-sözel-sayısal (kural of four) çoklu kayıt.", "D) Kanıt şemaları (Harel): dışsal, deneysel, analitik; öğretim analitiğe geçiş ister.", "E) Kavramsal-işlemsel denge; ezber prosedür kavramı taşımaz."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Temsil grafik-cebir-sözel-sayısal (kural of four) çoklu kayıt.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Temsil için doğru bir açıklamadır?",
+    "options": ["A) Kavramsal-işlemsel denge; ezber prosedür kavramı taşımaz.", "B) APOS (aksiyon-süreç-nesne-şema) üniversite matematiği bilişsel modeli.", "C) Kavram yanılgısı: limit 'ulaşılmaz', türev 'bölme', sonsuz 'çok büyük sayı', olasılık 'geçmiş dengeler'.", "D) Kanıt şemaları (Harel): dışsal, deneysel, analitik; öğretim analitiğe geçiş ister.", "E) Temsil grafik-cebir-sözel-sayısal (kural of four) çoklu kayıt."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Aktif öğrenme tanım-teorem-örnek tek yönünü kırar; tahmin-karşı örnek-ispat döngüsü.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aktif öğrenme hakkında hangisi doğrudur?",
+    "options": ["A) Aktif öğrenme tanım-teorem-örnek tek yönünü kırar; tahmin-karşı örnek-ispat döngüsü.", "B) Kavramsal-işlemsel denge; ezber prosedür kavramı taşımaz.", "C) APOS (aksiyon-süreç-nesne-şema) üniversite matematiği bilişsel modeli.", "D) Kavram yanılgısı: limit 'ulaşılmaz', türev 'bölme', sonsuz 'çok büyük sayı', olasılık 'geçmiş dengeler'.", "E) Kanıt şemaları (Harel): dışsal, deneysel, analitik; öğretim analitiğe geçiş ister."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Geogebra/CAS keşif; kara kutu riski: işlem yetisi erimesin.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Geogebra/CAS hangisini ifade eder?",
+    "options": ["A) APOS (aksiyon-süreç-nesne-şema) üniversite matematiği bilişsel modeli.", "B) Kavram yanılgısı: limit 'ulaşılmaz', türev 'bölme', sonsuz 'çok büyük sayı', olasılık 'geçmiş dengeler'.", "C) Kanıt şemaları (Harel): dışsal, deneysel, analitik; öğretim analitiğe geçiş ister.", "D) Geogebra/CAS keşif; kara kutu riski: işlem yetisi erimesin.", "E) Kavramsal-işlemsel denge; ezber prosedür kavramı taşımaz."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Problem çözme rutin olmayan; örnek uzayı ve karşı örnek üretme.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Problem çözme ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) APOS (aksiyon-süreç-nesne-şema) üniversite matematiği bilişsel modeli.", "B) Kavram yanılgısı: limit 'ulaşılmaz', türev 'bölme', sonsuz 'çok büyük sayı', olasılık 'geçmiş dengeler'.", "C) Kanıt şemaları (Harel): dışsal, deneysel, analitik; öğretim analitiğe geçiş ister.", "D) Problem çözme rutin olmayan; örnek uzayı ve karşı örnek üretme.", "E) Kavramsal-işlemsel denge; ezber prosedür kavramı taşımaz."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Ters-yüz ve akran öğretimi (Mazur) kavram testleri.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Ters-yüz ve akran öğretimi için doğru bir açıklamadır?",
+    "options": ["A) Kavramsal-işlemsel denge; ezber prosedür kavramı taşımaz.", "B) APOS (aksiyon-süreç-nesne-şema) üniversite matematiği bilişsel modeli.", "C) Kavram yanılgısı: limit 'ulaşılmaz', türev 'bölme', sonsuz 'çok büyük sayı', olasılık 'geçmiş dengeler'.", "D) Kanıt şemaları (Harel): dışsal, deneysel, analitik; öğretim analitiğe geçiş ister.", "E) Ters-yüz ve akran öğretimi (Mazur) kavram testleri."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) SOLO taksonomisi yapısal öğrenme çıktısı: tekli-çoklu-ilişkisel-soyutlanmış.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "SOLO taksonomisi hakkında hangisi doğrudur?",
+    "options": ["A) SOLO taksonomisi yapısal öğrenme çıktısı: tekli-çoklu-ilişkisel-soyutlanmış.", "B) Kavramsal-işlemsel denge; ezber prosedür kavramı taşımaz.", "C) APOS (aksiyon-süreç-nesne-şema) üniversite matematiği bilişsel modeli.", "D) Kavram yanılgısı: limit 'ulaşılmaz', türev 'bölme', sonsuz 'çok büyük sayı', olasılık 'geçmiş dengeler'.", "E) Kanıt şemaları (Harel): dışsal, deneysel, analitik; öğretim analitiğe geçiş ister."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kanıt yazma rubriği varsayım, mantık bağı, sonuç; yalnızca 'doğru/yanlış teorem'.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Kanıt yazma rubriği hangisini ifade eder?",
+    "options": ["A) APOS (aksiyon-süreç-nesne-şema) üniversite matematiği bilişsel modeli.", "B) Kavram yanılgısı: limit 'ulaşılmaz', türev 'bölme', sonsuz 'çok büyük sayı', olasılık 'geçmiş dengeler'.", "C) Kanıt şemaları (Harel): dışsal, deneysel, analitik; öğretim analitiğe geçiş ister.", "D) Kanıt yazma rubriği varsayım, mantık bağı, sonuç; yalnızca 'doğru/yanlış teorem'.", "E) Kavramsal-işlemsel denge; ezber prosedür kavramı taşımaz."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 }
 ];

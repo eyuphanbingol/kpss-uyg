@@ -61,63 +61,63 @@ window.oabt_tarih_4_sorulari = [
     "explanation": "Selçuklu zaferi göçü hızlandırır."
 },
 {
-    "question": "İlk Türk Devletleri Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Asya Hun (Mete) onluk ordu, kut ve bozkır imparatorluğu modelidir.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Asya Hun için doğru bir açıklamadır?",
+    "options": ["A) Avar, Hazar, Bulgar, Karluk, Oğuz, Peçenek, Kıpçak göç ve konfederasyon halkalarıdır.", "B) Kut, töre, kurultay, ikili hükümdarlık (doğu-batı) bozkır siyasetinin kavramlarıdır.", "C) Asya Hun (Mete) onluk ordu, kut ve bozkır imparatorluğu modelidir.", "D) Göktürk ilk defa Türk adını devlet adı yapan kağanlıktır; Orhun yazıtları siyasi vasiyettir.", "E) Uygur yerleşikleşme, Manihaizm, tarım ve kent; Karabalgasun."],
+    "correctAnswerIndex": 2,
+    "explanation": "İlk Türk Devletleri Tarihi notundaki temel bilgi."
 },
 {
-    "question": "İlk Türk Devletleri Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Göktürk ilk defa Türk adını devlet adı yapan kağanlıktır; Orhun yazıtları siyasi vasiyetti", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Uygur hangisini ifade eder?",
+    "options": ["A) Kut, töre, kurultay, ikili hükümdarlık (doğu-batı) bozkır siyasetinin kavramlarıdır.", "B) Uygur yerleşikleşme, Manihaizm, tarım ve kent; Karabalgasun.", "C) Asya Hun (Mete) onluk ordu, kut ve bozkır imparatorluğu modelidir.", "D) Göktürk ilk defa Türk adını devlet adı yapan kağanlıktır; Orhun yazıtları siyasi vasiyettir.", "E) Avar, Hazar, Bulgar, Karluk, Oğuz, Peçenek, Kıpçak göç ve konfederasyon halkalarıdır."],
+    "correctAnswerIndex": 1,
+    "explanation": "İlk Türk Devletleri Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Avar, Hazar, Bulgar, Karluk, Oğuz, Peçenek, Kıpçak ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Uygur yerleşikleşme, Manihaizm, tarım ve kent; Karabalgasun.", "B) Kut, töre, kurultay, ikili hükümdarlık (doğu-batı) bozkır siyasetinin kavramlarıdır.", "C) Avar, Hazar, Bulgar, Karluk, Oğuz, Peçenek, Kıpçak göç ve konfederasyon halkalarıdır.", "D) Asya Hun (Mete) onluk ordu, kut ve bozkır imparatorluğu modelidir.", "E) Göktürk ilk defa Türk adını devlet adı yapan kağanlıktır; Orhun yazıtları siyasi vasiyettir."],
+    "correctAnswerIndex": 2,
+    "explanation": "İlk Türk Devletleri Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Kut, töre, kurultay, ikili hükümdarlık için doğru bir açıklamadır?",
+    "options": ["A) Asya Hun (Mete) onluk ordu, kut ve bozkır imparatorluğu modelidir.", "B) Göktürk ilk defa Türk adını devlet adı yapan kağanlıktır; Orhun yazıtları siyasi vasiyettir.", "C) Uygur yerleşikleşme, Manihaizm, tarım ve kent; Karabalgasun.", "D) Avar, Hazar, Bulgar, Karluk, Oğuz, Peçenek, Kıpçak göç ve konfederasyon halkalarıdır.", "E) Kut, töre, kurultay, ikili hükümdarlık (doğu-batı) bozkır siyasetinin kavramlarıdır."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İlk Türk Devletleri Tarihi notundaki temel bilgi."
 },
 {
-    "question": "İlk Türk Devletleri Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Uygur yerleşikleşme, Manihaizm, tarım ve kent; Karabalgasun.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Karahanlı hakkında hangisi doğrudur?",
+    "options": ["A) Göktürk ilk defa Türk adını devlet adı yapan kağanlıktır; Orhun yazıtları siyasi vasiyettir.", "B) Uygur yerleşikleşme, Manihaizm, tarım ve kent; Karabalgasun.", "C) Avar, Hazar, Bulgar, Karluk, Oğuz, Peçenek, Kıpçak göç ve konfederasyon halkalarıdır.", "D) Karahanlı ilk Müslüman Türk devletidir; Satuk Buğra Han geleneği.", "E) Asya Hun (Mete) onluk ordu, kut ve bozkır imparatorluğu modelidir."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "İlk Türk Devletleri Tarihi notundaki temel bilgi."
 },
 {
-    "question": "İlk Türk Devletleri Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Avar, Hazar, Bulgar, Karluk, Oğuz, Peçenek, Kıpçak göç ve konfederasyon halkalarıdır.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Gazneli hangisini ifade eder?",
+    "options": ["A) Uygur yerleşikleşme, Manihaizm, tarım ve kent; Karabalgasun.", "B) Avar, Hazar, Bulgar, Karluk, Oğuz, Peçenek, Kıpçak göç ve konfederasyon halkalarıdır.", "C) Gazneli Mahmud Hint seferleri ve sultan unvanı.", "D) Asya Hun (Mete) onluk ordu, kut ve bozkır imparatorluğu modelidir.", "E) Göktürk ilk defa Türk adını devlet adı yapan kağanlıktır; Orhun yazıtları siyasi vasiyettir."],
+    "correctAnswerIndex": 2,
+    "explanation": "İlk Türk Devletleri Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Harzemşah için doğru bir açıklamadır?",
+    "options": ["A) Asya Hun (Mete) onluk ordu, kut ve bozkır imparatorluğu modelidir.", "B) Göktürk ilk defa Türk adını devlet adı yapan kağanlıktır; Orhun yazıtları siyasi vasiyettir.", "C) Uygur yerleşikleşme, Manihaizm, tarım ve kent; Karabalgasun.", "D) Avar, Hazar, Bulgar, Karluk, Oğuz, Peçenek, Kıpçak göç ve konfederasyon halkalarıdır.", "E) Harzemşah ve Anadolu Selçuklu devam hatlarıdır."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İlk Türk Devletleri Tarihi notundaki temel bilgi."
 },
 {
-    "question": "İlk Türk Devletleri Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Kut, töre, kurultay, ikili hükümdarlık (doğu-batı) bozkır siyasetinin kavramlarıdır.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Kutadgu Bilig hakkında hangisi doğrudur?",
+    "options": ["A) Avar, Hazar, Bulgar, Karluk, Oğuz, Peçenek, Kıpçak göç ve konfederasyon halkalarıdır.", "B) Kutadgu Bilig ve Divanü Lügati't-Türk bu çağın kültür belgeleridir.", "C) Asya Hun (Mete) onluk ordu, kut ve bozkır imparatorluğu modelidir.", "D) Göktürk ilk defa Türk adını devlet adı yapan kağanlıktır; Orhun yazıtları siyasi vasiyettir.", "E) Uygur yerleşikleşme, Manihaizm, tarım ve kent; Karabalgasun."],
+    "correctAnswerIndex": 1,
+    "explanation": "İlk Türk Devletleri Tarihi notundaki temel bilgi."
 },
 {
-    "question": "İlk Türk Devletleri Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Karahanlı ilk Müslüman Türk devletidir; Satuk Buğra Han geleneği.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Balbal, kurgan, hayvan üslubu ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Balbal, kurgan, hayvan üslubu maddi kültürdür.", "B) Asya Hun (Mete) onluk ordu, kut ve bozkır imparatorluğu modelidir.", "C) Göktürk ilk defa Türk adını devlet adı yapan kağanlıktır; Orhun yazıtları siyasi vasiyettir.", "D) Uygur yerleşikleşme, Manihaizm, tarım ve kent; Karabalgasun.", "E) Avar, Hazar, Bulgar, Karluk, Oğuz, Peçenek, Kıpçak göç ve konfederasyon halkalarıdır."],
+    "correctAnswerIndex": 0,
+    "explanation": "İlk Türk Devletleri Tarihi notundaki temel bilgi."
 },
 {
-    "question": "İlk Türk Devletleri Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gazneli Mahmud Hint seferleri ve sultan unvanı.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İlk Türk Devletleri Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Büyük Selçuklu Oğuz; Dandanakan (1040), Malazgirt (1071), Nizamiye.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "İlk Türk Devletleri Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Harzemşah ve Anadolu Selçuklu devam hatlarıdır.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İlk Türk Devletleri Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Kutadgu Bilig ve Divanü Lügati't-Türk bu çağın kültür belgeleridir.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi İpek Yolu için doğru bir açıklamadır?",
+    "options": ["A) İpek Yolu gelir ve diplomasi; Çin ile gerginlik süreklidir.", "B) Asya Hun (Mete) onluk ordu, kut ve bozkır imparatorluğu modelidir.", "C) Göktürk ilk defa Türk adını devlet adı yapan kağanlıktır; Orhun yazıtları siyasi vasiyettir.", "D) Uygur yerleşikleşme, Manihaizm, tarım ve kent; Karabalgasun.", "E) Avar, Hazar, Bulgar, Karluk, Oğuz, Peçenek, Kıpçak göç ve konfederasyon halkalarıdır."],
+    "correctAnswerIndex": 0,
+    "explanation": "İlk Türk Devletleri Tarihi notundaki temel bilgi."
 }
 ];

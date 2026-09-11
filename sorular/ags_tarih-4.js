@@ -73,51 +73,51 @@ window.ags_tarih_4_sorulari = [
     "explanation": "1950-53 tugay; 1952 NATO."
 },
 {
-    "question": "Çağdaş Türk ve Dünya Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) I. Dünya Savaşı (1914-18) imparatorlukları yıkar; 1917 Rusya da Bolşevik Devrimi.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi I. Dünya Savaşı (1914-18) için doğru bir açıklamadır?",
+    "options": ["A) 1919 Versailles düzeni Almanya yı cezalandırır; 1929 dünya ekonomik bunalımı otoriter rejimleri besler.", "B) II. Dünya Savaşı (1939-45) Mihver-Müttefik; 1945 BM, Hiroşima-Nagazaki, soğuk savaşın eşiği.", "C) Soğuk Savaş: 1947 Truman Doktrini, 1949 NATO ve iki Almanya; 1962 Küba füze krizi.", "D) 1989 Berlin Duvarı, 1991 SSCB nin dağılması iki kutuplu düzeni bitirir; küreselleşme ve bölgesel savaşlar.", "E) I. Dünya Savaşı (1914-18) imparatorlukları yıkar; 1917 Rusya da Bolşevik Devrimi."],
+    "correctAnswerIndex": 4,
+    "explanation": "Çağdaş Türk ve Dünya Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Çağdaş Türk ve Dünya Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) 1919 Versailles düzeni Almanya yı cezalandırır; 1929 dünya ekonomik bunalımı otoriter reji"],
+    "question": "1919 Versailles hakkında hangisi doğrudur?",
+    "options": ["A) 1989 Berlin Duvarı, 1991 SSCB nin dağılması iki kutuplu düzeni bitirir; küreselleşme ve bölgesel savaşlar.", "B) 1919 Versailles düzeni Almanya yı cezalandırır; 1929 dünya ekonomik bunalımı otoriter rejimleri besler.", "C) I. Dünya Savaşı (1914-18) imparatorlukları yıkar; 1917 Rusya da Bolşevik Devrimi.", "D) II. Dünya Savaşı (1939-45) Mihver-Müttefik; 1945 BM, Hiroşima-Nagazaki, soğuk savaşın eşiği.", "E) Soğuk Savaş: 1947 Truman Doktrini, 1949 NATO ve iki Almanya; 1962 Küba füze krizi."],
+    "correctAnswerIndex": 1,
+    "explanation": "Çağdaş Türk ve Dünya Tarihi notundaki temel bilgi."
+},
+{
+    "question": "II. Dünya Savaşı (1939-45) hangisini ifade eder?",
+    "options": ["A) I. Dünya Savaşı (1914-18) imparatorlukları yıkar; 1917 Rusya da Bolşevik Devrimi.", "B) 1919 Versailles düzeni Almanya yı cezalandırır; 1929 dünya ekonomik bunalımı otoriter rejimleri besler.", "C) Soğuk Savaş: 1947 Truman Doktrini, 1949 NATO ve iki Almanya; 1962 Küba füze krizi.", "D) 1989 Berlin Duvarı, 1991 SSCB nin dağılması iki kutuplu düzeni bitirir; küreselleşme ve bölgesel savaşlar.", "E) II. Dünya Savaşı (1939-45) Mihver-Müttefik; 1945 BM, Hiroşima-Nagazaki, soğuk savaşın eşiği."],
+    "correctAnswerIndex": 4,
+    "explanation": "Çağdaş Türk ve Dünya Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi 1989 Berlin Duvarı için doğru bir açıklamadır?",
+    "options": ["A) 1989 Berlin Duvarı, 1991 SSCB nin dağılması iki kutuplu düzeni bitirir; küreselleşme ve bölgesel savaşlar.", "B) I. Dünya Savaşı (1914-18) imparatorlukları yıkar; 1917 Rusya da Bolşevik Devrimi.", "C) 1919 Versailles düzeni Almanya yı cezalandırır; 1929 dünya ekonomik bunalımı otoriter rejimleri besler.", "D) II. Dünya Savaşı (1939-45) Mihver-Müttefik; 1945 BM, Hiroşima-Nagazaki, soğuk savaşın eşiği.", "E) Soğuk Savaş: 1947 Truman Doktrini, 1949 NATO ve iki Almanya; 1962 Küba füze krizi."],
+    "correctAnswerIndex": 0,
+    "explanation": "Çağdaş Türk ve Dünya Tarihi notundaki temel bilgi."
+},
+{
+    "question": "12 Mart 1971 ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) 1919 Versailles düzeni Almanya yı cezalandırır; 1929 dünya ekonomik bunalımı otoriter rejimleri besler.", "B) II. Dünya Savaşı (1939-45) Mihver-Müttefik; 1945 BM, Hiroşima-Nagazaki, soğuk savaşın eşiği.", "C) Soğuk Savaş: 1947 Truman Doktrini, 1949 NATO ve iki Almanya; 1962 Küba füze krizi.", "D) 12 Mart 1971 muhtıra, 12 Eylül 1980 darbe, 1982 Anayasası.", "E) I. Dünya Savaşı (1914-18) imparatorlukları yıkar; 1917 Rusya da Bolşevik Devrimi."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Çağdaş Türk ve Dünya Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Çağdaş Türk ve Dünya Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) II. Dünya Savaşı (1939-45) Mihver-Müttefik; 1945 BM, Hiroşima-Nagazaki, soğuk savaşın eşiğ", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Çağdaş Türk ve Dünya Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Soğuk Savaş: 1947 Truman Doktrini, 1949 NATO ve iki Almanya; 1962 Küba füze krizi."],
+    "question": "Kore Savaşı (1950-53) hangisini ifade eder?",
+    "options": ["A) 1919 Versailles düzeni Almanya yı cezalandırır; 1929 dünya ekonomik bunalımı otoriter rejimleri besler.", "B) II. Dünya Savaşı (1939-45) Mihver-Müttefik; 1945 BM, Hiroşima-Nagazaki, soğuk savaşın eşiği.", "C) Soğuk Savaş: 1947 Truman Doktrini, 1949 NATO ve iki Almanya; 1962 Küba füze krizi.", "D) Kore Savaşı (1950-53) Türkiye tugayı BM yanında; NATO kapısını aralar.", "E) I. Dünya Savaşı (1914-18) imparatorlukları yıkar; 1917 Rusya da Bolşevik Devrimi."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Çağdaş Türk ve Dünya Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Çağdaş Türk ve Dünya Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) 1989 Berlin Duvarı, 1991 SSCB nin dağılması iki kutuplu düzeni bitirir; küreselleşme ve bö", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "1973 petrol krizi ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) I. Dünya Savaşı (1914-18) imparatorlukları yıkar; 1917 Rusya da Bolşevik Devrimi.", "B) 1919 Versailles düzeni Almanya yı cezalandırır; 1929 dünya ekonomik bunalımı otoriter rejimleri besler.", "C) II. Dünya Savaşı (1939-45) Mihver-Müttefik; 1945 BM, Hiroşima-Nagazaki, soğuk savaşın eşiği.", "D) Soğuk Savaş: 1947 Truman Doktrini, 1949 NATO ve iki Almanya; 1962 Küba füze krizi.", "E) 1973 petrol krizi ve 1990-91 Körfez Türkiye nin jeopolitik konumunu öne çıkarır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Çağdaş Türk ve Dünya Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Çağdaş Türk ve Dünya Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) 1950 Demokrat Parti iktidarı; 1952 NATO; 1960 27 Mayıs ve 1961 Anayasası."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Çağdaş Türk ve Dünya Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) 1963 Ankara Anlaşması Türkiye-AET ortaklığı; 1974 Kıbrıs Barış Harekâtı.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Çağdaş Türk ve Dünya Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) 12 Mart 1971 muhtıra, 12 Eylül 1980 darbe, 1982 Anayasası."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Avrupa Konseyi (1949) için doğru bir açıklamadır?",
+    "options": ["A) Avrupa Konseyi (1949) Türkiye 1949 da kurucu üye değildir, 9 Ağustos 1949ta katılır (kurucular 5 Mayıs 1949).", "B) I. Dünya Savaşı (1914-18) imparatorlukları yıkar; 1917 Rusya da Bolşevik Devrimi.", "C) 1919 Versailles düzeni Almanya yı cezalandırır; 1929 dünya ekonomik bunalımı otoriter rejimleri besler.", "D) II. Dünya Savaşı (1939-45) Mihver-Müttefik; 1945 BM, Hiroşima-Nagazaki, soğuk savaşın eşiği.", "E) Soğuk Savaş: 1947 Truman Doktrini, 1949 NATO ve iki Almanya; 1962 Küba füze krizi."],
+    "correctAnswerIndex": 0,
+    "explanation": "Çağdaş Türk ve Dünya Tarihi notundaki temel bilgi."
 }
 ];

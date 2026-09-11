@@ -55,69 +55,69 @@ window.oabt_fizik_6_sorulari = [
     "explanation": "Şok dalgası."
 },
 {
-    "question": "Dalgalar konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Dalga enerji taşır, ortam parçacığı net göç etmeyebilir.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Dalgalar konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Enine-boyuna polarizasyon eninede; ses boyuna (akışkan)."],
+    "question": "Aşağıdakilerden hangisi Dalga için doğru bir açıklamadır?",
+    "options": ["A) v=fλ; ortam v'si gerilim/yoğunluk (tel √(τ/μ)).", "B) Süperpozisyon girişim; doğrusal ortam.", "C) Yansıma fazı sabit uç π, serbest uç 0.", "D) Dalga enerji taşır, ortam parçacığı net göç etmeyebilir.", "E) Enine-boyuna polarizasyon eninede; ses boyuna (akışkan)."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Dalgalar notundaki temel bilgi."
 },
 {
-    "question": "Dalgalar konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) v=fλ; ortam v'si gerilim/yoğunluk (tel √(τ/μ)).", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Enine-boyuna hakkında hangisi doğrudur?",
+    "options": ["A) Yansıma fazı sabit uç π, serbest uç 0.", "B) Enine-boyuna polarizasyon eninede; ses boyuna (akışkan).", "C) Dalga enerji taşır, ortam parçacığı net göç etmeyebilir.", "D) v=fλ; ortam v'si gerilim/yoğunluk (tel √(τ/μ)).", "E) Süperpozisyon girişim; doğrusal ortam."],
+    "correctAnswerIndex": 1,
+    "explanation": "Dalgalar notundaki temel bilgi."
+},
+{
+    "question": "v=fλ hangisini ifade eder?",
+    "options": ["A) v=fλ; ortam v'si gerilim/yoğunluk (tel √(τ/μ)).", "B) Dalga enerji taşır, ortam parçacığı net göç etmeyebilir.", "C) Enine-boyuna polarizasyon eninede; ses boyuna (akışkan).", "D) Süperpozisyon girişim; doğrusal ortam.", "E) Yansıma fazı sabit uç π, serbest uç 0."],
+    "correctAnswerIndex": 0,
+    "explanation": "Dalgalar notundaki temel bilgi."
+},
+{
+    "question": "Süperpozisyon ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Yansıma fazı sabit uç π, serbest uç 0.", "B) Süperpozisyon girişim; doğrusal ortam.", "C) Dalga enerji taşır, ortam parçacığı net göç etmeyebilir.", "D) Enine-boyuna polarizasyon eninede; ses boyuna (akışkan).", "E) v=fλ; ortam v'si gerilim/yoğunluk (tel √(τ/μ))."],
+    "correctAnswerIndex": 1,
+    "explanation": "Dalgalar notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Yansıma fazı için doğru bir açıklamadır?",
+    "options": ["A) Süperpozisyon girişim; doğrusal ortam.", "B) Yansıma fazı sabit uç π, serbest uç 0.", "C) Dalga enerji taşır, ortam parçacığı net göç etmeyebilir.", "D) Enine-boyuna polarizasyon eninede; ses boyuna (akışkan).", "E) v=fλ; ortam v'si gerilim/yoğunluk (tel √(τ/μ))."],
+    "correctAnswerIndex": 1,
+    "explanation": "Dalgalar notundaki temel bilgi."
+},
+{
+    "question": "Ses şiddeti hakkında hangisi doğrudur?",
+    "options": ["A) Süperpozisyon girişim; doğrusal ortam.", "B) Ses şiddeti I ∝ A^2, dB logaritmik; Doppler vs = v(f kaynağı, gözlemci işaret).", "C) Dalga enerji taşır, ortam parçacığı net göç etmeyebilir.", "D) Enine-boyuna polarizasyon eninede; ses boyuna (akışkan).", "E) v=fλ; ortam v'si gerilim/yoğunluk (tel √(τ/μ))."],
+    "correctAnswerIndex": 1,
+    "explanation": "Dalgalar notundaki temel bilgi."
+},
+{
+    "question": "Vuru hangisini ifade eder?",
+    "options": ["A) v=fλ; ortam v'si gerilim/yoğunluk (tel √(τ/μ)).", "B) Süperpozisyon girişim; doğrusal ortam.", "C) Vuru |f1-f2|; uyum.", "D) Dalga enerji taşır, ortam parçacığı net göç etmeyebilir.", "E) Enine-boyuna polarizasyon eninede; ses boyuna (akışkan)."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Dalgalar notundaki temel bilgi."
 },
 {
-    "question": "Dalgalar konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Süperpozisyon girişim; doğrusal ortam."],
+    "question": "EM dalga ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) v=fλ; ortam v'si gerilim/yoğunluk (tel √(τ/μ)).", "B) Süperpozisyon girişim; doğrusal ortam.", "C) EM dalga E⊥B⊥k, enine, vakumda c; enerji (ε0 E^2 /2 + ...).", "D) Dalga enerji taşır, ortam parçacığı net göç etmeyebilir.", "E) Enine-boyuna polarizasyon eninede; ses boyuna (akışkan)."],
+    "correctAnswerIndex": 2,
+    "explanation": "Dalgalar notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Poynting için doğru bir açıklamadır?",
+    "options": ["A) Poynting S=E×H enerji akısı.", "B) Dalga enerji taşır, ortam parçacığı net göç etmeyebilir.", "C) Enine-boyuna polarizasyon eninede; ses boyuna (akışkan).", "D) v=fλ; ortam v'si gerilim/yoğunluk (tel √(τ/μ)).", "E) Süperpozisyon girişim; doğrusal ortam."],
+    "correctAnswerIndex": 0,
+    "explanation": "Dalgalar notundaki temel bilgi."
+},
+{
+    "question": "Su dalgası hakkında hangisi doğrudur?",
+    "options": ["A) Enine-boyuna polarizasyon eninede; ses boyuna (akışkan).", "B) v=fλ; ortam v'si gerilim/yoğunluk (tel √(τ/μ)).", "C) Süperpozisyon girişim; doğrusal ortam.", "D) Su dalgası dispersiyon; tsunami sığ su √(gh).", "E) Dalga enerji taşır, ortam parçacığı net göç etmeyebilir."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Dalgalar notundaki temel bilgi."
 },
 {
-    "question": "Dalgalar konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Yansıma fazı sabit uç π, serbest uç 0.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Dalgalar konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Ses şiddeti I ∝ A^2, dB logaritmik; Doppler vs = v(f kaynağı, gözlemci işaret)."],
+    "question": "Duran dalga hangisini ifade eder?",
+    "options": ["A) Enine-boyuna polarizasyon eninede; ses boyuna (akışkan).", "B) v=fλ; ortam v'si gerilim/yoğunluk (tel √(τ/μ)).", "C) Süperpozisyon girişim; doğrusal ortam.", "D) Duran dalga düğüm-karın; tel L=nλ/2 (iki sabit).", "E) Dalga enerji taşır, ortam parçacığı net göç etmeyebilir."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Dalgalar konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Vuru |f1-f2|; uyum.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Dalgalar konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) EM dalga E⊥B⊥k, enine, vakumda c; enerji (ε0 E^2 /2 + ...)."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Dalgalar konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Poynting S=E×H enerji akısı.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Dalgalar konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Su dalgası dispersiyon; tsunami sığ su √(gh)."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Dalgalar konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Duran dalga düğüm-karın; tel L=nλ/2 (iki sabit).", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Dalgalar notundaki temel bilgi."
 }
 ];

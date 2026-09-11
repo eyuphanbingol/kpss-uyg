@@ -55,69 +55,69 @@ window.oabt_ilkomat_3_sorulari = [
     "explanation": "Skew lines üç boyuta özgüdür."
 },
 {
-    "question": "Geometri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Nokta, doğru, düzlem tanımsız terimler; aksiyomlar aralarındaki ilişkileri koyar.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Nokta, doğru, düzlem için doğru bir açıklamadır?",
+    "options": ["A) Üçgen iç açılar toplamı 180° (Öklid); kenar-açı ilişkileri: büyük kenar karşısı büyük açı.", "B) Eşlik (SSS, SAS, ASA, AAS, dik-hipotenüs-kenar); benzerlik (AAA, kenar oranları).", "C) Pisagor dik üçgende a^2+b^2=c^2; tersi de dikliği verir.", "D) Çember teğet yarıçapa dik; iç-dış açı, çevre açı ölçüleri yayla bağlanır.", "E) Nokta, doğru, düzlem tanımsız terimler; aksiyomlar aralarındaki ilişkileri koyar."],
+    "correctAnswerIndex": 4,
+    "explanation": "Geometri notundaki temel bilgi."
 },
 {
-    "question": "Geometri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Üçgen iç açılar toplamı 180° (Öklid); kenar-açı ilişkileri: büyük kenar karşısı büyük açı.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Üçgen hakkında hangisi doğrudur?",
+    "options": ["A) Üçgen iç açılar toplamı 180° (Öklid); kenar-açı ilişkileri: büyük kenar karşısı büyük açı.", "B) Nokta, doğru, düzlem tanımsız terimler; aksiyomlar aralarındaki ilişkileri koyar.", "C) Eşlik (SSS, SAS, ASA, AAS, dik-hipotenüs-kenar); benzerlik (AAA, kenar oranları).", "D) Çember teğet yarıçapa dik; iç-dış açı, çevre açı ölçüleri yayla bağlanır.", "E) Hacim prizma taban alanı·yükseklik; koni ve piramit 1/3, küre 4/3 πr^3."],
+    "correctAnswerIndex": 0,
+    "explanation": "Geometri notundaki temel bilgi."
+},
+{
+    "question": "Eşlik hangisini ifade eder?",
+    "options": ["A) Çember teğet yarıçapa dik; iç-dış açı, çevre açı ölçüleri yayla bağlanır.", "B) Eşlik (SSS, SAS, ASA, AAS, dik-hipotenüs-kenar); benzerlik (AAA, kenar oranları).", "C) Nokta, doğru, düzlem tanımsız terimler; aksiyomlar aralarındaki ilişkileri koyar.", "D) Üçgen iç açılar toplamı 180° (Öklid); kenar-açı ilişkileri: büyük kenar karşısı büyük açı.", "E) Pisagor dik üçgende a^2+b^2=c^2; tersi de dikliği verir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Geometri notundaki temel bilgi."
+},
+{
+    "question": "Pisagor ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Pisagor dik üçgende a^2+b^2=c^2; tersi de dikliği verir.", "B) Nokta, doğru, düzlem tanımsız terimler; aksiyomlar aralarındaki ilişkileri koyar.", "C) Üçgen iç açılar toplamı 180° (Öklid); kenar-açı ilişkileri: büyük kenar karşısı büyük açı.", "D) Eşlik (SSS, SAS, ASA, AAS, dik-hipotenüs-kenar); benzerlik (AAA, kenar oranları).", "E) Çember teğet yarıçapa dik; iç-dış açı, çevre açı ölçüleri yayla bağlanır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Geometri notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Çember için doğru bir açıklamadır?",
+    "options": ["A) Nokta, doğru, düzlem tanımsız terimler; aksiyomlar aralarındaki ilişkileri koyar.", "B) Üçgen iç açılar toplamı 180° (Öklid); kenar-açı ilişkileri: büyük kenar karşısı büyük açı.", "C) Eşlik (SSS, SAS, ASA, AAS, dik-hipotenüs-kenar); benzerlik (AAA, kenar oranları).", "D) Pisagor dik üçgende a^2+b^2=c^2; tersi de dikliği verir.", "E) Çember teğet yarıçapa dik; iç-dış açı, çevre açı ölçüleri yayla bağlanır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Geometri notundaki temel bilgi."
+},
+{
+    "question": "Alan hakkında hangisi doğrudur?",
+    "options": ["A) Alan iki boyutlu ölçü; üçgen (taban·yükseklik)/2, daire πr^2, yamuk ((a+b)/2)·h.", "B) Nokta, doğru, düzlem tanımsız terimler; aksiyomlar aralarındaki ilişkileri koyar.", "C) Üçgen iç açılar toplamı 180° (Öklid); kenar-açı ilişkileri: büyük kenar karşısı büyük açı.", "D) Eşlik (SSS, SAS, ASA, AAS, dik-hipotenüs-kenar); benzerlik (AAA, kenar oranları).", "E) Pisagor dik üçgende a^2+b^2=c^2; tersi de dikliği verir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Geometri notundaki temel bilgi."
+},
+{
+    "question": "Hacim hangisini ifade eder?",
+    "options": ["A) Nokta, doğru, düzlem tanımsız terimler; aksiyomlar aralarındaki ilişkileri koyar.", "B) Üçgen iç açılar toplamı 180° (Öklid); kenar-açı ilişkileri: büyük kenar karşısı büyük açı.", "C) Eşlik (SSS, SAS, ASA, AAS, dik-hipotenüs-kenar); benzerlik (AAA, kenar oranları).", "D) Pisagor dik üçgende a^2+b^2=c^2; tersi de dikliği verir.", "E) Hacim prizma taban alanı·yükseklik; koni ve piramit 1/3, küre 4/3 πr^3."],
+    "correctAnswerIndex": 4,
+    "explanation": "Geometri notundaki temel bilgi."
+},
+{
+    "question": "Öteleme, dönme, yansıma ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Üçgen iç açılar toplamı 180° (Öklid); kenar-açı ilişkileri: büyük kenar karşısı büyük açı.", "B) Eşlik (SSS, SAS, ASA, AAS, dik-hipotenüs-kenar); benzerlik (AAA, kenar oranları).", "C) Pisagor dik üçgende a^2+b^2=c^2; tersi de dikliği verir.", "D) Öteleme, dönme, yansıma izometriler (uzunluk korur); homoteti benzerlik üretir.", "E) Nokta, doğru, düzlem tanımsız terimler; aksiyomlar aralarındaki ilişkileri koyar."],
+    "correctAnswerIndex": 3,
+    "explanation": "Geometri notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Koordinat için doğru bir açıklamadır?",
+    "options": ["A) Eşlik (SSS, SAS, ASA, AAS, dik-hipotenüs-kenar); benzerlik (AAA, kenar oranları).", "B) Pisagor dik üçgende a^2+b^2=c^2; tersi de dikliği verir.", "C) Koordinat uzaklık √[(x2-x1)^2+(y2-y1)^2]; doğru eğimi (y2-y1)/(x2-x1).", "D) Nokta, doğru, düzlem tanımsız terimler; aksiyomlar aralarındaki ilişkileri koyar.", "E) Üçgen iç açılar toplamı 180° (Öklid); kenar-açı ilişkileri: büyük kenar karşısı büyük açı."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Geometri notundaki temel bilgi."
 },
 {
-    "question": "Geometri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Eşlik (SSS, SAS, ASA, AAS, dik-hipotenüs-kenar); benzerlik (AAA, kenar oranları).", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Vektör hakkında hangisi doğrudur?",
+    "options": ["A) Vektör yönlü doğru parçası; toplam paralelkenar, skaler çarpım diklikte sıfır.", "B) Nokta, doğru, düzlem tanımsız terimler; aksiyomlar aralarındaki ilişkileri koyar.", "C) Üçgen iç açılar toplamı 180° (Öklid); kenar-açı ilişkileri: büyük kenar karşısı büyük açı.", "D) Eşlik (SSS, SAS, ASA, AAS, dik-hipotenüs-kenar); benzerlik (AAA, kenar oranları).", "E) Pisagor dik üçgende a^2+b^2=c^2; tersi de dikliği verir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Geometri notundaki temel bilgi."
+},
+{
+    "question": "Diklik ve paralellik hangisini ifade eder?",
+    "options": ["A) Pisagor dik üçgende a^2+b^2=c^2; tersi de dikliği verir.", "B) Diklik ve paralellik uzayda doğru-düzlem ilişkileri: kesişen, paralel, aykırı doğrular.", "C) Nokta, doğru, düzlem tanımsız terimler; aksiyomlar aralarındaki ilişkileri koyar.", "D) Üçgen iç açılar toplamı 180° (Öklid); kenar-açı ilişkileri: büyük kenar karşısı büyük açı.", "E) Eşlik (SSS, SAS, ASA, AAS, dik-hipotenüs-kenar); benzerlik (AAA, kenar oranları)."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Geometri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Pisagor dik üçgende a^2+b^2=c^2; tersi de dikliği verir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Geometri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Çember teğet yarıçapa dik; iç-dış açı, çevre açı ölçüleri yayla bağlanır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Geometri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Alan iki boyutlu ölçü; üçgen (taban·yükseklik)/2, daire πr^2, yamuk ((a+b)/2)·h.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Geometri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Hacim prizma taban alanı·yükseklik; koni ve piramit 1/3, küre 4/3 πr^3.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Geometri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Öteleme, dönme, yansıma izometriler (uzunluk korur); homoteti benzerlik üretir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Geometri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Koordinat uzaklık √[(x2-x1)^2+(y2-y1)^2]; doğru eğimi (y2-y1)/(x2-x1).", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Geometri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Vektör yönlü doğru parçası; toplam paralelkenar, skaler çarpım diklikte sıfır.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Geometri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Diklik ve paralellik uzayda doğru-düzlem ilişkileri: kesişen, paralel, aykırı doğrular.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Geometri notundaki temel bilgi."
 }
 ];

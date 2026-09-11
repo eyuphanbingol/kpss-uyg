@@ -73,51 +73,51 @@ window.ags_tarih_1_sorulari = [
     "explanation": "Selçuklu devletleşmesinin askeri temelidir."
 },
 {
-    "question": "Osmanlı Öncesi Türk Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) I. Göktürk Devleti (552) Bumin Kağan ile kurulur; Türk adını resmi devlet adı olarak kulla", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Osmanlı Öncesi Türk Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Orhun Yazıtları (Kül Tigin, Bilge Kağan, Tonyukuk) Türkçenin ilk uzun yazılı belgeleridir;", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Orhun Yazıtları hakkında hangisi doğrudur?",
+    "options": ["A) 840 Kırgız darbesi Uygur merkezini dağıtır; bir kol Turfan-Beşbalık yöresinde kültür devletine dönüşür.", "B) Orhun Yazıtları (Kül Tigin, Bilge Kağan, Tonyukuk) Türkçenin ilk uzun yazılı belgeleridir; töre, kut ve millet bilinci işlenir.", "C) I. Göktürk Devleti (552) Bumin Kağan ile kurulur; Türk adını resmi devlet adı olarak kullanan ilk teşkilattır.", "D) II. Göktürk (Kutluk) Devleti (682-744) İlteriş Kutluk ve vezir Tonyukuk ile bağımsızlık yeniden kurulur.", "E) Uygur Kağanlığı (744-840) Manihaizm benimsenir; tarım, ticaret, kâğıt ve matbaa yerleşik hayatı güçlendirir."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Osmanlı Öncesi Türk Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Osmanlı Öncesi Türk Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) II. Göktürk (Kutluk) Devleti (682-744) İlteriş Kutluk ve vezir Tonyukuk ile bağımsızlık ye", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "II. Göktürk (Kutluk) Devleti (682-744) hangisini ifade eder?",
+    "options": ["A) II. Göktürk (Kutluk) Devleti (682-744) İlteriş Kutluk ve vezir Tonyukuk ile bağımsızlık yeniden kurulur.", "B) I. Göktürk Devleti (552) Bumin Kağan ile kurulur; Türk adını resmi devlet adı olarak kullanan ilk teşkilattır.", "C) Orhun Yazıtları (Kül Tigin, Bilge Kağan, Tonyukuk) Türkçenin ilk uzun yazılı belgeleridir; töre, kut ve millet bilinci işlenir.", "D) Uygur Kağanlığı (744-840) Manihaizm benimsenir; tarım, ticaret, kâğıt ve matbaa yerleşik hayatı güçlendirir.", "E) 840 Kırgız darbesi Uygur merkezini dağıtır; bir kol Turfan-Beşbalık yöresinde kültür devletine dönüşür."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Osmanlı Öncesi Türk Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Osmanlı Öncesi Türk Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Uygur Kağanlığı (744-840) Manihaizm benimsenir; tarım, ticaret, kâğıt ve matbaa yerleşik h", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Uygur Kağanlığı (744-840) ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) I. Göktürk Devleti (552) Bumin Kağan ile kurulur; Türk adını resmi devlet adı olarak kullanan ilk teşkilattır.", "B) Orhun Yazıtları (Kül Tigin, Bilge Kağan, Tonyukuk) Türkçenin ilk uzun yazılı belgeleridir; töre, kut ve millet bilinci işlenir.", "C) II. Göktürk (Kutluk) Devleti (682-744) İlteriş Kutluk ve vezir Tonyukuk ile bağımsızlık yeniden kurulur.", "D) 840 Kırgız darbesi Uygur merkezini dağıtır; bir kol Turfan-Beşbalık yöresinde kültür devletine dönüşür.", "E) Uygur Kağanlığı (744-840) Manihaizm benimsenir; tarım, ticaret, kâğıt ve matbaa yerleşik hayatı güçlendirir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Osmanlı Öncesi Türk Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Osmanlı Öncesi Türk Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) 840 Kırgız darbesi Uygur merkezini dağıtır; bir kol Turfan-Beşbalık yöresinde kültür devle", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi 840 için doğru bir açıklamadır?",
+    "options": ["A) 840 Kırgız darbesi Uygur merkezini dağıtır; bir kol Turfan-Beşbalık yöresinde kültür devletine dönüşür.", "B) I. Göktürk Devleti (552) Bumin Kağan ile kurulur; Türk adını resmi devlet adı olarak kullanan ilk teşkilattır.", "C) Orhun Yazıtları (Kül Tigin, Bilge Kağan, Tonyukuk) Türkçenin ilk uzun yazılı belgeleridir; töre, kut ve millet bilinci işlenir.", "D) II. Göktürk (Kutluk) Devleti (682-744) İlteriş Kutluk ve vezir Tonyukuk ile bağımsızlık yeniden kurulur.", "E) Uygur Kağanlığı (744-840) Manihaizm benimsenir; tarım, ticaret, kâğıt ve matbaa yerleşik hayatı güçlendirir."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Osmanlı Öncesi Türk Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Osmanlı Öncesi Türk Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Talas (751) Abbasiler ile Çin (Tang) arasında; Karlukların taraf değiştirmesi Orta Asya de", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Anadolu Selçuklu hakkında hangisi doğrudur?",
+    "options": ["A) Orhun Yazıtları (Kül Tigin, Bilge Kağan, Tonyukuk) Türkçenin ilk uzun yazılı belgeleridir; töre, kut ve millet bilinci işlenir.", "B) II. Göktürk (Kutluk) Devleti (682-744) İlteriş Kutluk ve vezir Tonyukuk ile bağımsızlık yeniden kurulur.", "C) Uygur Kağanlığı (744-840) Manihaizm benimsenir; tarım, ticaret, kâğıt ve matbaa yerleşik hayatı güçlendirir.", "D) Anadolu Selçuklu Konya merkezlidir; 1176 Miryokefalon, 1243 Kösedağ yenilgisi Moğol üstünlüğünü pekiştirir.", "E) I. Göktürk Devleti (552) Bumin Kağan ile kurulur; Türk adını resmi devlet adı olarak kullanan ilk teşkilattır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Osmanlı Öncesi Türk Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Osmanlı Öncesi Türk Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Karahanlılar ilk Müslüman Türk devletidir; Satuk Buğra Han X. yüzyılda İslamiyeti resmi di", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Kut hangisini ifade eder?",
+    "options": ["A) Orhun Yazıtları (Kül Tigin, Bilge Kağan, Tonyukuk) Türkçenin ilk uzun yazılı belgeleridir; töre, kut ve millet bilinci işlenir.", "B) II. Göktürk (Kutluk) Devleti (682-744) İlteriş Kutluk ve vezir Tonyukuk ile bağımsızlık yeniden kurulur.", "C) Uygur Kağanlığı (744-840) Manihaizm benimsenir; tarım, ticaret, kâğıt ve matbaa yerleşik hayatı güçlendirir.", "D) Kut anlayışı hükümdarlık yetkisinin Tanrı kaynaklı olduğunu bildirir; töre hukuku sınırlar.", "E) I. Göktürk Devleti (552) Bumin Kağan ile kurulur; Türk adını resmi devlet adı olarak kullanan ilk teşkilattır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Osmanlı Öncesi Türk Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Osmanlı Öncesi Türk Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Kutadgu Bilig (Yusuf Has Hacib) ve Divanü Lügati't-Türk (Kaşgarlı Mahmud) Karahanlı kültür", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "İkili teşkilat ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Orhun Yazıtları (Kül Tigin, Bilge Kağan, Tonyukuk) Türkçenin ilk uzun yazılı belgeleridir; töre, kut ve millet bilinci işlenir.", "B) II. Göktürk (Kutluk) Devleti (682-744) İlteriş Kutluk ve vezir Tonyukuk ile bağımsızlık yeniden kurulur.", "C) Uygur Kağanlığı (744-840) Manihaizm benimsenir; tarım, ticaret, kâğıt ve matbaa yerleşik hayatı güçlendirir.", "D) İkili teşkilat (doğu-batı / sağ-sol) ve kurultay siyasi geleneğin omurgasıdır.", "E) I. Göktürk Devleti (552) Bumin Kağan ile kurulur; Türk adını resmi devlet adı olarak kullanan ilk teşkilattır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Osmanlı Öncesi Türk Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Konargöçer ekonomi için doğru bir açıklamadır?",
+    "options": ["A) Orhun Yazıtları (Kül Tigin, Bilge Kağan, Tonyukuk) Türkçenin ilk uzun yazılı belgeleridir; töre, kut ve millet bilinci işlenir.", "B) II. Göktürk (Kutluk) Devleti (682-744) İlteriş Kutluk ve vezir Tonyukuk ile bağımsızlık yeniden kurulur.", "C) Uygur Kağanlığı (744-840) Manihaizm benimsenir; tarım, ticaret, kâğıt ve matbaa yerleşik hayatı güçlendirir.", "D) Konargöçer ekonomi hayvancılık ve akın; Uygur ve Karahanlıda tarım-ticaret (İpek Yolu) ağırlığı artar.", "E) I. Göktürk Devleti (552) Bumin Kağan ile kurulur; Türk adını resmi devlet adı olarak kullanan ilk teşkilattır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Osmanlı Öncesi Türk Tarihi notundaki temel bilgi."
 }
 ];

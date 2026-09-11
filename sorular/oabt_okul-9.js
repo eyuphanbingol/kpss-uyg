@@ -61,63 +61,63 @@ window.oabt_okul_9_sorulari = [
     "explanation": "Aile eğitimi bağ."
 },
 {
-    "question": "Türkçe Dil Etkinlikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Alıcı-ifade edici dil; sözcük, söz dizimi, edim.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Alıcı-ifade edici dil için doğru bir açıklamadır?",
+    "options": ["A) Soru türleri açık uç.", "B) 2026 dil etkinliği eğitim sorusu yoğundur.", "C) Alıcı-ifade edici dil; sözcük, söz dizimi, edim.", "D) Fonolojik farkındalık tekerleme, kafiye, hece alkışı.", "E) Kitap, sohbet, şarkı, drama dil banyosu."],
+    "correctAnswerIndex": 2,
+    "explanation": "Türkçe Dil Etkinlikleri notundaki temel bilgi."
 },
 {
-    "question": "Türkçe Dil Etkinlikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Fonolojik farkındalık tekerleme, kafiye, hece alkışı.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Fonolojik farkındalık hakkında hangisi doğrudur?",
+    "options": ["A) Soru türleri açık uç.", "B) 2026 dil etkinliği eğitim sorusu yoğundur.", "C) Fonolojik farkındalık tekerleme, kafiye, hece alkışı.", "D) Alıcı-ifade edici dil; sözcük, söz dizimi, edim.", "E) Kitap, sohbet, şarkı, drama dil banyosu."],
+    "correctAnswerIndex": 2,
+    "explanation": "Türkçe Dil Etkinlikleri notundaki temel bilgi."
+},
+{
+    "question": "Kitap, sohbet, şarkı, drama hangisini ifade eder?",
+    "options": ["A) Soru türleri açık uç.", "B) 2026 dil etkinliği eğitim sorusu yoğundur.", "C) Kitap, sohbet, şarkı, drama dil banyosu.", "D) Alıcı-ifade edici dil; sözcük, söz dizimi, edim.", "E) Fonolojik farkındalık tekerleme, kafiye, hece alkışı."],
+    "correctAnswerIndex": 2,
+    "explanation": "Türkçe Dil Etkinlikleri notundaki temel bilgi."
+},
+{
+    "question": "Soru türleri ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Fonolojik farkındalık tekerleme, kafiye, hece alkışı.", "B) Kitap, sohbet, şarkı, drama dil banyosu.", "C) 2026 dil etkinliği eğitim sorusu yoğundur.", "D) Soru türleri açık uç.", "E) Alıcı-ifade edici dil; sözcük, söz dizimi, edim."],
+    "correctAnswerIndex": 3,
+    "explanation": "Türkçe Dil Etkinlikleri notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi 2026 için doğru bir açıklamadır?",
+    "options": ["A) Alıcı-ifade edici dil; sözcük, söz dizimi, edim.", "B) Fonolojik farkındalık tekerleme, kafiye, hece alkışı.", "C) Kitap, sohbet, şarkı, drama dil banyosu.", "D) Soru türleri açık uç.", "E) 2026 dil etkinliği eğitim sorusu yoğundur."],
+    "correctAnswerIndex": 4,
+    "explanation": "Türkçe Dil Etkinlikleri notundaki temel bilgi."
+},
+{
+    "question": "Sabah toplantısı, paylaşım çemberi hakkında hangisi doğrudur?",
+    "options": ["A) Kitap, sohbet, şarkı, drama dil banyosu.", "B) Soru türleri açık uç.", "C) Sabah toplantısı, paylaşım çemberi.", "D) Alıcı-ifade edici dil; sözcük, söz dizimi, edim.", "E) Fonolojik farkındalık tekerleme, kafiye, hece alkışı."],
+    "correctAnswerIndex": 2,
+    "explanation": "Türkçe Dil Etkinlikleri notundaki temel bilgi."
+},
+{
+    "question": "Öykü tamamlama, resimden anlatma hangisini ifade eder?",
+    "options": ["A) Alıcı-ifade edici dil; sözcük, söz dizimi, edim.", "B) Fonolojik farkındalık tekerleme, kafiye, hece alkışı.", "C) Kitap, sohbet, şarkı, drama dil banyosu.", "D) Soru türleri açık uç.", "E) Öykü tamamlama, resimden anlatma."],
+    "correctAnswerIndex": 4,
+    "explanation": "Türkçe Dil Etkinlikleri notundaki temel bilgi."
+},
+{
+    "question": "Tiyatro köşesi ve kukla ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Soru türleri açık uç.", "B) Tiyatro köşesi ve kukla.", "C) Alıcı-ifade edici dil; sözcük, söz dizimi, edim.", "D) Fonolojik farkındalık tekerleme, kafiye, hece alkışı.", "E) Kitap, sohbet, şarkı, drama dil banyosu."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Türkçe Dil Etkinlikleri notundaki temel bilgi."
 },
 {
-    "question": "Türkçe Dil Etkinlikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Kitap, sohbet, şarkı, drama dil banyosu.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Yazı öncesi için doğru bir açıklamadır?",
+    "options": ["A) Yazı öncesi isim, liste, menü oyunu.", "B) Alıcı-ifade edici dil; sözcük, söz dizimi, edim.", "C) Fonolojik farkındalık tekerleme, kafiye, hece alkışı.", "D) Kitap, sohbet, şarkı, drama dil banyosu.", "E) Soru türleri açık uç."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Türkçe Dil Etkinlikleri notundaki temel bilgi."
 },
 {
-    "question": "Türkçe Dil Etkinlikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Soru türleri açık uç.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Çok dilli sınıf hakkında hangisi doğrudur?",
+    "options": ["A) Soru türleri açık uç.", "B) Çok dilli sınıf köprü.", "C) Alıcı-ifade edici dil; sözcük, söz dizimi, edim.", "D) Fonolojik farkındalık tekerleme, kafiye, hece alkışı.", "E) Kitap, sohbet, şarkı, drama dil banyosu."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Türkçe Dil Etkinlikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) 2026 dil etkinliği eğitim sorusu yoğundur.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Türkçe Dil Etkinlikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Sabah toplantısı, paylaşım çemberi.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Türkçe Dil Etkinlikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Öykü tamamlama, resimden anlatma.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Türkçe Dil Etkinlikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Tiyatro köşesi ve kukla.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Türkçe Dil Etkinlikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Yazı öncesi isim, liste, menü oyunu.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Türkçe Dil Etkinlikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Çok dilli sınıf köprü.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Türkçe Dil Etkinlikleri notundaki temel bilgi."
 }
 ];

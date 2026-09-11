@@ -73,51 +73,51 @@ window.ags_egitim_5_sorulari = [
     "explanation": "7528 siyasi-hukuki tercih."
 },
 {
-    "question": "Eğitimin Politik Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Siyasal toplumsallaşma okulun yurttaş, aidiyet ve meşruiyet üretmesidir.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Siyasal toplumsallaşma için doğru bir açıklamadır?",
+    "options": ["A) Hegemonya (Gramsci) rızanın kültür ve eğitimle üretilmesidir.", "B) Yurttaşlık eğitimi hak-ödev, demokrasi ve hukuk devleti bilinci; 1739 demokrasi eğitimi ilkesi.", "C) Laiklik din-devlet ayrılığı ve vicdan hürriyeti; eğitim politikasının anayasal çerçevesidir.", "D) Siyasal toplumsallaşma okulun yurttaş, aidiyet ve meşruiyet üretmesidir.", "E) İdeoloji müfredat, ders kitabı ve törenlerle görünür; yansız okul iddiası naiftir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Eğitimin Politik Temelleri notundaki temel bilgi."
+},
+{
+    "question": "İdeoloji hakkında hangisi doğrudur?",
+    "options": ["A) Siyasal toplumsallaşma okulun yurttaş, aidiyet ve meşruiyet üretmesidir.", "B) Hegemonya (Gramsci) rızanın kültür ve eğitimle üretilmesidir.", "C) Yurttaşlık eğitimi hak-ödev, demokrasi ve hukuk devleti bilinci; 1739 demokrasi eğitimi ilkesi.", "D) Laiklik din-devlet ayrılığı ve vicdan hürriyeti; eğitim politikasının anayasal çerçevesidir.", "E) İdeoloji müfredat, ders kitabı ve törenlerle görünür; yansız okul iddiası naiftir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Eğitimin Politik Temelleri notundaki temel bilgi."
+},
+{
+    "question": "Hegemonya hangisini ifade eder?",
+    "options": ["A) Laiklik din-devlet ayrılığı ve vicdan hürriyeti; eğitim politikasının anayasal çerçevesidir.", "B) Hegemonya (Gramsci) rızanın kültür ve eğitimle üretilmesidir.", "C) Siyasal toplumsallaşma okulun yurttaş, aidiyet ve meşruiyet üretmesidir.", "D) İdeoloji müfredat, ders kitabı ve törenlerle görünür; yansız okul iddiası naiftir.", "E) Yurttaşlık eğitimi hak-ödev, demokrasi ve hukuk devleti bilinci; 1739 demokrasi eğitimi ilkesi."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Eğitimin Politik Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Eğitimin Politik Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) İdeoloji müfredat, ders kitabı ve törenlerle görünür; yansız okul iddiası naiftir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Yurttaşlık eğitimi ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Yurttaşlık eğitimi hak-ödev, demokrasi ve hukuk devleti bilinci; 1739 demokrasi eğitimi ilkesi.", "B) Siyasal toplumsallaşma okulun yurttaş, aidiyet ve meşruiyet üretmesidir.", "C) İdeoloji müfredat, ders kitabı ve törenlerle görünür; yansız okul iddiası naiftir.", "D) Hegemonya (Gramsci) rızanın kültür ve eğitimle üretilmesidir.", "E) Laiklik din-devlet ayrılığı ve vicdan hürriyeti; eğitim politikasının anayasal çerçevesidir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Eğitimin Politik Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Eğitimin Politik Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Hegemonya (Gramsci) rızanın kültür ve eğitimle üretilmesidir.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Laiklik için doğru bir açıklamadır?",
+    "options": ["A) Yurttaşlık eğitimi hak-ödev, demokrasi ve hukuk devleti bilinci; 1739 demokrasi eğitimi ilkesi.", "B) Laiklik din-devlet ayrılığı ve vicdan hürriyeti; eğitim politikasının anayasal çerçevesidir.", "C) Siyasal toplumsallaşma okulun yurttaş, aidiyet ve meşruiyet üretmesidir.", "D) İdeoloji müfredat, ders kitabı ve törenlerle görünür; yansız okul iddiası naiftir.", "E) Hegemonya (Gramsci) rızanın kültür ve eğitimle üretilmesidir."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Eğitimin Politik Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Eğitimin Politik Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Yurttaşlık eğitimi hak-ödev, demokrasi ve hukuk devleti bilinci; 1739 demokrasi eğitimi il", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Eğitimin Politik Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Laiklik din-devlet ayrılığı ve vicdan hürriyeti; eğitim politikasının anayasal çerçevesidi", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Eğitim politikası hakkında hangisi doğrudur?",
+    "options": ["A) Yurttaşlık eğitimi hak-ödev, demokrasi ve hukuk devleti bilinci; 1739 demokrasi eğitimi ilkesi.", "B) Eğitim politikası amaç, kaynak ve müfredatı siyasi tercihlerle dağıtır.", "C) Siyasal toplumsallaşma okulun yurttaş, aidiyet ve meşruiyet üretmesidir.", "D) İdeoloji müfredat, ders kitabı ve törenlerle görünür; yansız okul iddiası naiftir.", "E) Hegemonya (Gramsci) rızanın kültür ve eğitimle üretilmesidir."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Eğitimin Politik Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Eğitimin Politik Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Eğitim politikası amaç, kaynak ve müfredatı siyasi tercihlerle dağıtır.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Merkeziyet-yerinden yönetim hangisini ifade eder?",
+    "options": ["A) Siyasal toplumsallaşma okulun yurttaş, aidiyet ve meşruiyet üretmesidir.", "B) İdeoloji müfredat, ders kitabı ve törenlerle görünür; yansız okul iddiası naiftir.", "C) Hegemonya (Gramsci) rızanın kültür ve eğitimle üretilmesidir.", "D) Yurttaşlık eğitimi hak-ödev, demokrasi ve hukuk devleti bilinci; 1739 demokrasi eğitimi ilkesi.", "E) Merkeziyet-yerinden yönetim gerilimi; Türkiye de program ve öğretmen ataması büyük ölçüde merkezidir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Eğitimin Politik Temelleri notundaki temel bilgi."
 },
 {
-    "question": "Eğitimin Politik Temelleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Merkeziyet-yerinden yönetim gerilimi; Türkiye de program ve öğretmen ataması büyük ölçüde ", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Eğitimin Politik Temelleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Zorunlu eğitim hem hak hem ödevdir; devlet-birey sözleşmesinin eğitim ayağıdır.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Zorunlu eğitim ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İdeoloji müfredat, ders kitabı ve törenlerle görünür; yansız okul iddiası naiftir.", "B) Hegemonya (Gramsci) rızanın kültür ve eğitimle üretilmesidir.", "C) Yurttaşlık eğitimi hak-ödev, demokrasi ve hukuk devleti bilinci; 1739 demokrasi eğitimi ilkesi.", "D) Zorunlu eğitim hem hak hem ödevdir; devlet-birey sözleşmesinin eğitim ayağıdır.", "E) Siyasal toplumsallaşma okulun yurttaş, aidiyet ve meşruiyet üretmesidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Eğitimin Politik Temelleri notundaki temel bilgi."
 }
 ];

@@ -61,63 +61,63 @@ window.oabt_rehber_3_sorulari = [
     "explanation": "Mastery vs performance."
 },
 {
-    "question": "Öğrenme Psikolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Pavlov klasik koşullanma; sönme, genelleme, ayırt etme.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Öğrenme Psikolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Watson gözlenebilir davranış; Küçük Albert tartışması.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi Pavlov için doğru bir açıklamadır?",
+    "options": ["A) Watson gözlenebilir davranış; Küçük Albert tartışması.", "B) Skinner edimsel; olumlu-olumsuz pekiştirme, ceza, sönme.", "C) Thorndike etki yasası; deneme-yanılma.", "D) Pekiştireç tarifeleri sürekli, aralıklı; sönmeye direnç.", "E) Pavlov klasik koşullanma; sönme, genelleme, ayırt etme."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Öğrenme Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Öğrenme Psikolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Skinner edimsel; olumlu-olumsuz pekiştirme, ceza, sönme.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Öğrenme Psikolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Thorndike etki yasası; deneme-yanılma.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Watson hakkında hangisi doğrudur?",
+    "options": ["A) Pavlov klasik koşullanma; sönme, genelleme, ayırt etme.", "B) Skinner edimsel; olumlu-olumsuz pekiştirme, ceza, sönme.", "C) Thorndike etki yasası; deneme-yanılma.", "D) Pekiştireç tarifeleri sürekli, aralıklı; sönmeye direnç.", "E) Watson gözlenebilir davranış; Küçük Albert tartışması."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Öğrenme Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Öğrenme Psikolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Pekiştireç tarifeleri sürekli, aralıklı; sönmeye direnç.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Skinner hangisini ifade eder?",
+    "options": ["A) Pekiştireç tarifeleri sürekli, aralıklı; sönmeye direnç.", "B) Skinner edimsel; olumlu-olumsuz pekiştirme, ceza, sönme.", "C) Pavlov klasik koşullanma; sönme, genelleme, ayırt etme.", "D) Watson gözlenebilir davranış; Küçük Albert tartışması.", "E) Thorndike etki yasası; deneme-yanılma."],
+    "correctAnswerIndex": 1,
+    "explanation": "Öğrenme Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Öğrenme Psikolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gestalt içgörü; bütün parça toplamı değildir.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Thorndike ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Pavlov klasik koşullanma; sönme, genelleme, ayırt etme.", "B) Watson gözlenebilir davranış; Küçük Albert tartışması.", "C) Skinner edimsel; olumlu-olumsuz pekiştirme, ceza, sönme.", "D) Pekiştireç tarifeleri sürekli, aralıklı; sönmeye direnç.", "E) Thorndike etki yasası; deneme-yanılma."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Öğrenme Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Öğrenme Psikolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Ausubel anlamlı öğrenme, ön örgütleyici.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi Pekiştireç tarifeleri için doğru bir açıklamadır?",
+    "options": ["A) Pekiştireç tarifeleri sürekli, aralıklı; sönmeye direnç.", "B) Pavlov klasik koşullanma; sönme, genelleme, ayırt etme.", "C) Watson gözlenebilir davranış; Küçük Albert tartışması.", "D) Skinner edimsel; olumlu-olumsuz pekiştirme, ceza, sönme.", "E) Thorndike etki yasası; deneme-yanılma."],
+    "correctAnswerIndex": 0,
+    "explanation": "Öğrenme Psikolojisi notundaki temel bilgi."
+},
+{
+    "question": "Ausubel hangisini ifade eder?",
+    "options": ["A) Ausubel anlamlı öğrenme, ön örgütleyici.", "B) Pavlov klasik koşullanma; sönme, genelleme, ayırt etme.", "C) Watson gözlenebilir davranış; Küçük Albert tartışması.", "D) Skinner edimsel; olumlu-olumsuz pekiştirme, ceza, sönme.", "E) Thorndike etki yasası; deneme-yanılma."],
+    "correctAnswerIndex": 0,
+    "explanation": "Öğrenme Psikolojisi notundaki temel bilgi."
+},
+{
+    "question": "Bruner ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Watson gözlenebilir davranış; Küçük Albert tartışması.", "B) Skinner edimsel; olumlu-olumsuz pekiştirme, ceza, sönme.", "C) Thorndike etki yasası; deneme-yanılma.", "D) Bruner keşfederek öğrenme, spiral program.", "E) Pavlov klasik koşullanma; sönme, genelleme, ayırt etme."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Öğrenme Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Öğrenme Psikolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Bruner keşfederek öğrenme, spiral program.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Bandura için doğru bir açıklamadır?",
+    "options": ["A) Bandura model alma, özyeterlik, üçlü karşılıklı belirleme.", "B) Pavlov klasik koşullanma; sönme, genelleme, ayırt etme.", "C) Watson gözlenebilir davranış; Küçük Albert tartışması.", "D) Skinner edimsel; olumlu-olumsuz pekiştirme, ceza, sönme.", "E) Thorndike etki yasası; deneme-yanılma."],
+    "correctAnswerIndex": 0,
+    "explanation": "Öğrenme Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Öğrenme Psikolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Bandura model alma, özyeterlik, üçlü karşılıklı belirleme.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Bilgi işleme hakkında hangisi doğrudur?",
+    "options": ["A) Thorndike etki yasası; deneme-yanılma.", "B) Bilgi işleme kısa-uzun süreli bellek, dikkat, kodlama.", "C) Pavlov klasik koşullanma; sönme, genelleme, ayırt etme.", "D) Watson gözlenebilir davranış; Küçük Albert tartışması.", "E) Skinner edimsel; olumlu-olumsuz pekiştirme, ceza, sönme."],
+    "correctAnswerIndex": 1,
+    "explanation": "Öğrenme Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Öğrenme Psikolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Bilgi işleme kısa-uzun süreli bellek, dikkat, kodlama.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Güdü hangisini ifade eder?",
+    "options": ["A) Thorndike etki yasası; deneme-yanılma.", "B) Güdü içsel-dışsal; hedef yönelimi (öğrenme/performans).", "C) Pavlov klasik koşullanma; sönme, genelleme, ayırt etme.", "D) Watson gözlenebilir davranış; Küçük Albert tartışması.", "E) Skinner edimsel; olumlu-olumsuz pekiştirme, ceza, sönme."],
+    "correctAnswerIndex": 1,
+    "explanation": "Öğrenme Psikolojisi notundaki temel bilgi."
 }
 ];

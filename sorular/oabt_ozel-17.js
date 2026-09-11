@@ -61,63 +61,63 @@ window.oabt_ozel_17_sorulari = [
     "explanation": "Türkçe öğretimi."
 },
 {
-    "question": "Özel Eğitimde Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Türkçe dinleme-konuşma-okuma-yazma uyarlanmış.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Anlam sökmeden önce de görsel ve dinleme ile kurulur.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Türkçe için doğru bir açıklamadır?",
+    "options": ["A) Dil bilgisi metin içinde, kural listesi değil.", "B) İki dilli ve göçmen özel eğitimde yok sayılmaz.", "C) Türkçe dinleme-konuşma-okuma-yazma uyarlanmış.", "D) Anlam sökmeden önce de görsel ve dinleme ile kurulur.", "E) Söz varlığı işlevsel ve akademik iki hat."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Özel Eğitimde Türkçe Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Söz varlığı işlevsel ve akademik iki hat.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Anlam hakkında hangisi doğrudur?",
+    "options": ["A) İki dilli ve göçmen özel eğitimde yok sayılmaz.", "B) Anlam sökmeden önce de görsel ve dinleme ile kurulur.", "C) Türkçe dinleme-konuşma-okuma-yazma uyarlanmış.", "D) Söz varlığı işlevsel ve akademik iki hat.", "E) Dil bilgisi metin içinde, kural listesi değil."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Özel Eğitimde Türkçe Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Dil bilgisi metin içinde, kural listesi değil.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Söz varlığı hangisini ifade eder?",
+    "options": ["A) Türkçe dinleme-konuşma-okuma-yazma uyarlanmış.", "B) Anlam sökmeden önce de görsel ve dinleme ile kurulur.", "C) Dil bilgisi metin içinde, kural listesi değil.", "D) İki dilli ve göçmen özel eğitimde yok sayılmaz.", "E) Söz varlığı işlevsel ve akademik iki hat."],
+    "correctAnswerIndex": 4,
+    "explanation": "Özel Eğitimde Türkçe Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) İki dilli ve göçmen özel eğitimde yok sayılmaz.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Dil bilgisi ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Anlam sökmeden önce de görsel ve dinleme ile kurulur.", "B) Söz varlığı işlevsel ve akademik iki hat.", "C) İki dilli ve göçmen özel eğitimde yok sayılmaz.", "D) Dil bilgisi metin içinde, kural listesi değil.", "E) Türkçe dinleme-konuşma-okuma-yazma uyarlanmış."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitimde Türkçe Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi İki dilli ve göçmen için doğru bir açıklamadır?",
+    "options": ["A) Türkçe dinleme-konuşma-okuma-yazma uyarlanmış.", "B) Anlam sökmeden önce de görsel ve dinleme ile kurulur.", "C) Söz varlığı işlevsel ve akademik iki hat.", "D) Dil bilgisi metin içinde, kural listesi değil.", "E) İki dilli ve göçmen özel eğitimde yok sayılmaz."],
+    "correctAnswerIndex": 4,
+    "explanation": "Özel Eğitimde Türkçe Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Sade metin, görsel, okuyucu hakkında hangisi doğrudur?",
+    "options": ["A) Anlam sökmeden önce de görsel ve dinleme ile kurulur.", "B) Söz varlığı işlevsel ve akademik iki hat.", "C) Dil bilgisi metin içinde, kural listesi değil.", "D) Sade metin, görsel, okuyucu.", "E) Türkçe dinleme-konuşma-okuma-yazma uyarlanmış."],
+    "correctAnswerIndex": 3,
+    "explanation": "Özel Eğitimde Türkçe Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Ek süre, sözlü yanıt hangisini ifade eder?",
+    "options": ["A) Dil bilgisi metin içinde, kural listesi değil.", "B) Ek süre, sözlü yanıt.", "C) Türkçe dinleme-konuşma-okuma-yazma uyarlanmış.", "D) Anlam sökmeden önce de görsel ve dinleme ile kurulur.", "E) Söz varlığı işlevsel ve akademik iki hat."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Özel Eğitimde Türkçe Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Sade metin, görsel, okuyucu.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitimde Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Ek süre, sözlü yanıt.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "PECS/AAC ile anlatı ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Dil bilgisi metin içinde, kural listesi değil.", "B) PECS/AAC ile anlatı.", "C) Türkçe dinleme-konuşma-okuma-yazma uyarlanmış.", "D) Anlam sökmeden önce de görsel ve dinleme ile kurulur.", "E) Söz varlığı işlevsel ve akademik iki hat."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Özel Eğitimde Türkçe Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Özel Eğitimde Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) PECS/AAC ile anlatı.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Disleksi font ve satır aralığı tartışması kanıta temkin için doğru bir açıklamadır?",
+    "options": ["A) Disleksi font ve satır aralığı tartışması kanıta temkin.", "B) Türkçe dinleme-konuşma-okuma-yazma uyarlanmış.", "C) Anlam sökmeden önce de görsel ve dinleme ile kurulur.", "D) Söz varlığı işlevsel ve akademik iki hat.", "E) Dil bilgisi metin içinde, kural listesi değil."],
+    "correctAnswerIndex": 0,
+    "explanation": "Özel Eğitimde Türkçe Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "OSB hakkında hangisi doğrudur?",
+    "options": ["A) Söz varlığı işlevsel ve akademik iki hat.", "B) Dil bilgisi metin içinde, kural listesi değil.", "C) OSB somut dil, deyim öğretimi açık.", "D) Türkçe dinleme-konuşma-okuma-yazma uyarlanmış.", "E) Anlam sökmeden önce de görsel ve dinleme ile kurulur."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Özel Eğitimde Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Disleksi font ve satır aralığı tartışması kanıta temkin.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Özel Eğitimde Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) OSB somut dil, deyim öğretimi açık.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Özel Eğitimde Türkçe Öğretimi notundaki temel bilgi."
 }
 ];

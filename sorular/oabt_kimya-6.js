@@ -55,69 +55,69 @@ window.oabt_kimya_6_sorulari = [
     "explanation": "Green chemistry değerlendirmesi."
 },
 {
-    "question": "Kimya Teknolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Kimyasal mühendislik sezgisi kesikli-sürekli, verim-seçicilik-dönüşüm.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Kimya Teknolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Haber-Bosch N2+H2 amonyak; yüksek P, orta T, katalizör Fe."],
+    "question": "Aşağıdakilerden hangisi Kimyasal mühendislik sezgisi için doğru bir açıklamadır?",
+    "options": ["A) Kontakt SO2→SO3 sülfürik asit; Ostwald nitrik asit.", "B) Petrol damıtma, kraking, reforming; oktan.", "C) Polimer teknolojisi Ziegler-Natta, radikal, yoğuşma reaktörü.", "D) Kimyasal mühendislik sezgisi kesikli-sürekli, verim-seçicilik-dönüşüm.", "E) Haber-Bosch N2+H2 amonyak; yüksek P, orta T, katalizör Fe."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Kimya Teknolojisi notundaki temel bilgi."
 },
 {
-    "question": "Kimya Teknolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Kontakt SO2→SO3 sülfürik asit; Ostwald nitrik asit.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Kimya Teknolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Petrol damıtma, kraking, reforming; oktan."],
+    "question": "Haber-Bosch hakkında hangisi doğrudur?",
+    "options": ["A) Kontakt SO2→SO3 sülfürik asit; Ostwald nitrik asit.", "B) Petrol damıtma, kraking, reforming; oktan.", "C) Polimer teknolojisi Ziegler-Natta, radikal, yoğuşma reaktörü.", "D) Haber-Bosch N2+H2 amonyak; yüksek P, orta T, katalizör Fe.", "E) Kimyasal mühendislik sezgisi kesikli-sürekli, verim-seçicilik-dönüşüm."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Kimya Teknolojisi notundaki temel bilgi."
 },
 {
-    "question": "Kimya Teknolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Polimer teknolojisi Ziegler-Natta, radikal, yoğuşma reaktörü.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Kontakt hangisini ifade eder?",
+    "options": ["A) Kimyasal mühendislik sezgisi kesikli-sürekli, verim-seçicilik-dönüşüm.", "B) Haber-Bosch N2+H2 amonyak; yüksek P, orta T, katalizör Fe.", "C) Petrol damıtma, kraking, reforming; oktan.", "D) Polimer teknolojisi Ziegler-Natta, radikal, yoğuşma reaktörü.", "E) Kontakt SO2→SO3 sülfürik asit; Ostwald nitrik asit."],
+    "correctAnswerIndex": 4,
+    "explanation": "Kimya Teknolojisi notundaki temel bilgi."
+},
+{
+    "question": "Petrol ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Petrol damıtma, kraking, reforming; oktan.", "B) Kimyasal mühendislik sezgisi kesikli-sürekli, verim-seçicilik-dönüşüm.", "C) Haber-Bosch N2+H2 amonyak; yüksek P, orta T, katalizör Fe.", "D) Kontakt SO2→SO3 sülfürik asit; Ostwald nitrik asit.", "E) Polimer teknolojisi Ziegler-Natta, radikal, yoğuşma reaktörü."],
+    "correctAnswerIndex": 0,
+    "explanation": "Kimya Teknolojisi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Polimer teknolojisi için doğru bir açıklamadır?",
+    "options": ["A) Petrol damıtma, kraking, reforming; oktan.", "B) Polimer teknolojisi Ziegler-Natta, radikal, yoğuşma reaktörü.", "C) Kimyasal mühendislik sezgisi kesikli-sürekli, verim-seçicilik-dönüşüm.", "D) Haber-Bosch N2+H2 amonyak; yüksek P, orta T, katalizör Fe.", "E) Kontakt SO2→SO3 sülfürik asit; Ostwald nitrik asit."],
+    "correctAnswerIndex": 1,
+    "explanation": "Kimya Teknolojisi notundaki temel bilgi."
+},
+{
+    "question": "Çelik-cam-çimento hakkında hangisi doğrudur?",
+    "options": ["A) Kontakt SO2→SO3 sülfürik asit; Ostwald nitrik asit.", "B) Petrol damıtma, kraking, reforming; oktan.", "C) Çelik-cam-çimento redoks ve fırın kimyası; klinker.", "D) Kimyasal mühendislik sezgisi kesikli-sürekli, verim-seçicilik-dönüşüm.", "E) Haber-Bosch N2+H2 amonyak; yüksek P, orta T, katalizör Fe."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Kimya Teknolojisi notundaki temel bilgi."
 },
 {
-    "question": "Kimya Teknolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Çelik-cam-çimento redoks ve fırın kimyası; klinker."],
+    "question": "Yarıiletken hangisini ifade eder?",
+    "options": ["A) Haber-Bosch N2+H2 amonyak; yüksek P, orta T, katalizör Fe.", "B) Kontakt SO2→SO3 sülfürik asit; Ostwald nitrik asit.", "C) Petrol damıtma, kraking, reforming; oktan.", "D) Yarıiletken saflaştırma, doping (Si).", "E) Kimyasal mühendislik sezgisi kesikli-sürekli, verim-seçicilik-dönüşüm."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Kimya Teknolojisi notundaki temel bilgi."
 },
 {
-    "question": "Kimya Teknolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Yarıiletken saflaştırma, doping (Si).", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Yeşil kimya ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Yeşil kimya 12 ilke: atom ekonomisi, daha zararsız çözücü, kataliz.", "B) Kimyasal mühendislik sezgisi kesikli-sürekli, verim-seçicilik-dönüşüm.", "C) Haber-Bosch N2+H2 amonyak; yüksek P, orta T, katalizör Fe.", "D) Kontakt SO2→SO3 sülfürik asit; Ostwald nitrik asit.", "E) Petrol damıtma, kraking, reforming; oktan."],
+    "correctAnswerIndex": 0,
+    "explanation": "Kimya Teknolojisi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Atık ve arıtma için doğru bir açıklamadır?",
+    "options": ["A) Kontakt SO2→SO3 sülfürik asit; Ostwald nitrik asit.", "B) Petrol damıtma, kraking, reforming; oktan.", "C) Atık ve arıtma BOD, koagülasyon, ileri oksidasyon.", "D) Kimyasal mühendislik sezgisi kesikli-sürekli, verim-seçicilik-dönüşüm.", "E) Haber-Bosch N2+H2 amonyak; yüksek P, orta T, katalizör Fe."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Kimya Teknolojisi notundaki temel bilgi."
 },
 {
-    "question": "Kimya Teknolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Yeşil kimya 12 ilke: atom ekonomisi, daha zararsız çözücü, kataliz."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Korozyon hakkında hangisi doğrudur?",
+    "options": ["A) Korozyon elektrokimyasal hücre; katodik koruma.", "B) Kimyasal mühendislik sezgisi kesikli-sürekli, verim-seçicilik-dönüşüm.", "C) Haber-Bosch N2+H2 amonyak; yüksek P, orta T, katalizör Fe.", "D) Kontakt SO2→SO3 sülfürik asit; Ostwald nitrik asit.", "E) Petrol damıtma, kraking, reforming; oktan."],
+    "correctAnswerIndex": 0,
+    "explanation": "Kimya Teknolojisi notundaki temel bilgi."
 },
 {
-    "question": "Kimya Teknolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Atık ve arıtma BOD, koagülasyon, ileri oksidasyon.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "GHS etiket hangisini ifade eder?",
+    "options": ["A) Kontakt SO2→SO3 sülfürik asit; Ostwald nitrik asit.", "B) Petrol damıtma, kraking, reforming; oktan.", "C) GHS etiket piktogram, H ve P cümleleri.", "D) Kimyasal mühendislik sezgisi kesikli-sürekli, verim-seçicilik-dönüşüm.", "E) Haber-Bosch N2+H2 amonyak; yüksek P, orta T, katalizör Fe."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Kimya Teknolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Korozyon elektrokimyasal hücre; katodik koruma."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Kimya Teknolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) GHS etiket piktogram, H ve P cümleleri.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Kimya Teknolojisi notundaki temel bilgi."
 }
 ];

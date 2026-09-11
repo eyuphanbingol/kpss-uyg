@@ -55,69 +55,69 @@ window.oabt_turkce_1_sorulari = [
     "explanation": "Önvarsayım, inkârda bile ayakta kalan bilgidir."
 },
 {
-    "question": "Alan Bilgisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Dil, seslerden oluşan, toplumsal uzlaşıya dayalı, çift eklemli bir göstergeler dizgesidir.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Dil için doğru bir açıklamadır?",
+    "options": ["A) Dil, seslerden oluşan, toplumsal uzlaşıya dayalı, çift eklemli bir göstergeler dizgesidir.", "B) Gösteren işitim imgesi, gösterilen kavramdır; ilişki nedensiz (nedensizlik/arbitraire) kabul edilir.", "C) Çift eklemlilik: anlamsız sesbirimler (fonem) anlamlı birimlere (morfem/sözcük) dönüşür.", "D) Dil-söz (langue-parole) ayrımında dil toplumsal dizge, söz bireysel gerçekleşmedir.", "E) İletişim gönderici, alıcı, ileti, kanal, bağlam ve kod unsurlarıyla işler."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Alan Bilgisi notundaki temel bilgi."
 },
 {
-    "question": "Alan Bilgisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Gösteren işitim imgesi, gösterilen kavramdır; ilişki nedensiz (nedensizlik/arbitraire) kab", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Gösteren hakkında hangisi doğrudur?",
+    "options": ["A) İletişim gönderici, alıcı, ileti, kanal, bağlam ve kod unsurlarıyla işler.", "B) Gösteren işitim imgesi, gösterilen kavramdır; ilişki nedensiz (nedensizlik/arbitraire) kabul edilir.", "C) Dil, seslerden oluşan, toplumsal uzlaşıya dayalı, çift eklemli bir göstergeler dizgesidir.", "D) Çift eklemlilik: anlamsız sesbirimler (fonem) anlamlı birimlere (morfem/sözcük) dönüşür.", "E) Dil-söz (langue-parole) ayrımında dil toplumsal dizge, söz bireysel gerçekleşmedir."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Alan Bilgisi notundaki temel bilgi."
 },
 {
-    "question": "Alan Bilgisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Çift eklemlilik: anlamsız sesbirimler (fonem) anlamlı birimlere (morfem/sözcük) dönüşür.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Çift eklemlilik hangisini ifade eder?",
+    "options": ["A) Gösteren işitim imgesi, gösterilen kavramdır; ilişki nedensiz (nedensizlik/arbitraire) kabul edilir.", "B) Dil-söz (langue-parole) ayrımında dil toplumsal dizge, söz bireysel gerçekleşmedir.", "C) İletişim gönderici, alıcı, ileti, kanal, bağlam ve kod unsurlarıyla işler.", "D) Çift eklemlilik: anlamsız sesbirimler (fonem) anlamlı birimlere (morfem/sözcük) dönüşür.", "E) Dil, seslerden oluşan, toplumsal uzlaşıya dayalı, çift eklemli bir göstergeler dizgesidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Bilgisi notundaki temel bilgi."
 },
 {
-    "question": "Alan Bilgisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Dil-söz (langue-parole) ayrımında dil toplumsal dizge, söz bireysel gerçekleşmedir.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Dil-söz ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İletişim gönderici, alıcı, ileti, kanal, bağlam ve kod unsurlarıyla işler.", "B) Dil-söz (langue-parole) ayrımında dil toplumsal dizge, söz bireysel gerçekleşmedir.", "C) Dil, seslerden oluşan, toplumsal uzlaşıya dayalı, çift eklemli bir göstergeler dizgesidir.", "D) Gösteren işitim imgesi, gösterilen kavramdır; ilişki nedensiz (nedensizlik/arbitraire) kabul edilir.", "E) Çift eklemlilik: anlamsız sesbirimler (fonem) anlamlı birimlere (morfem/sözcük) dönüşür."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Alan Bilgisi notundaki temel bilgi."
 },
 {
-    "question": "Alan Bilgisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) İletişim gönderici, alıcı, ileti, kanal, bağlam ve kod unsurlarıyla işler.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi İletişim için doğru bir açıklamadır?",
+    "options": ["A) Çift eklemlilik: anlamsız sesbirimler (fonem) anlamlı birimlere (morfem/sözcük) dönüşür.", "B) Dil-söz (langue-parole) ayrımında dil toplumsal dizge, söz bireysel gerçekleşmedir.", "C) İletişim gönderici, alıcı, ileti, kanal, bağlam ve kod unsurlarıyla işler.", "D) Dil, seslerden oluşan, toplumsal uzlaşıya dayalı, çift eklemli bir göstergeler dizgesidir.", "E) Gösteren işitim imgesi, gösterilen kavramdır; ilişki nedensiz (nedensizlik/arbitraire) kabul edilir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Alan Bilgisi notundaki temel bilgi."
+},
+{
+    "question": "Gönderge hakkında hangisi doğrudur?",
+    "options": ["A) Dil, seslerden oluşan, toplumsal uzlaşıya dayalı, çift eklemli bir göstergeler dizgesidir.", "B) Gösteren işitim imgesi, gösterilen kavramdır; ilişki nedensiz (nedensizlik/arbitraire) kabul edilir.", "C) Çift eklemlilik: anlamsız sesbirimler (fonem) anlamlı birimlere (morfem/sözcük) dönüşür.", "D) Dil-söz (langue-parole) ayrımında dil toplumsal dizge, söz bireysel gerçekleşmedir.", "E) Gönderge işlevi dünyaya gönderme; heyecan işlevi göndericiyi; çağrı işlevi alıcıyı öne çıkarır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Bilgisi notundaki temel bilgi."
+},
+{
+    "question": "Üstdil hangisini ifade eder?",
+    "options": ["A) Çift eklemlilik: anlamsız sesbirimler (fonem) anlamlı birimlere (morfem/sözcük) dönüşür.", "B) Dil-söz (langue-parole) ayrımında dil toplumsal dizge, söz bireysel gerçekleşmedir.", "C) Üstdil işlevi kodu açıklar; şiirsel işlev iletiyi; kanal (temas) işlevi iletişimi açık tutar.", "D) Dil, seslerden oluşan, toplumsal uzlaşıya dayalı, çift eklemli bir göstergeler dizgesidir.", "E) Gösteren işitim imgesi, gösterilen kavramdır; ilişki nedensiz (nedensizlik/arbitraire) kabul edilir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Alan Bilgisi notundaki temel bilgi."
+},
+{
+    "question": "Edimsel ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Gösteren işitim imgesi, gösterilen kavramdır; ilişki nedensiz (nedensizlik/arbitraire) kabul edilir.", "B) Çift eklemlilik: anlamsız sesbirimler (fonem) anlamlı birimlere (morfem/sözcük) dönüşür.", "C) Dil-söz (langue-parole) ayrımında dil toplumsal dizge, söz bireysel gerçekleşmedir.", "D) Edimsel boyutta sözce, sözceleme ve bağlam birlikte anlam üretir.", "E) Dil, seslerden oluşan, toplumsal uzlaşıya dayalı, çift eklemli bir göstergeler dizgesidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Bilgisi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Gönderim için doğru bir açıklamadır?",
+    "options": ["A) Gönderim (deixis) kişi, yer, zaman zamirleriyle bağlama bağlanır.", "B) Dil, seslerden oluşan, toplumsal uzlaşıya dayalı, çift eklemli bir göstergeler dizgesidir.", "C) Gösteren işitim imgesi, gösterilen kavramdır; ilişki nedensiz (nedensizlik/arbitraire) kabul edilir.", "D) Çift eklemlilik: anlamsız sesbirimler (fonem) anlamlı birimlere (morfem/sözcük) dönüşür.", "E) Dil-söz (langue-parole) ayrımında dil toplumsal dizge, söz bireysel gerçekleşmedir."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Alan Bilgisi notundaki temel bilgi."
 },
 {
-    "question": "Alan Bilgisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Gönderge işlevi dünyaya gönderme; heyecan işlevi göndericiyi; çağrı işlevi alıcıyı öne çık", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Edimbilim hakkında hangisi doğrudur?",
+    "options": ["A) Çift eklemlilik: anlamsız sesbirimler (fonem) anlamlı birimlere (morfem/sözcük) dönüşür.", "B) Dil-söz (langue-parole) ayrımında dil toplumsal dizge, söz bireysel gerçekleşmedir.", "C) Edimbilim ima, önvarsayım ve nezaket ilkelerini dil kullanımına taşır.", "D) Dil, seslerden oluşan, toplumsal uzlaşıya dayalı, çift eklemli bir göstergeler dizgesidir.", "E) Gösteren işitim imgesi, gösterilen kavramdır; ilişki nedensiz (nedensizlik/arbitraire) kabul edilir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Alan Bilgisi notundaki temel bilgi."
 },
 {
-    "question": "Alan Bilgisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Üstdil işlevi kodu açıklar; şiirsel işlev iletiyi; kanal (temas) işlevi iletişimi açık tut", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Bilgisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Edimsel boyutta sözce, sözceleme ve bağlam birlikte anlam üretir.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Bilgisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gönderim (deixis) kişi, yer, zaman zamirleriyle bağlama bağlanır.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Bilgisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Edimbilim ima, önvarsayım ve nezaket ilkelerini dil kullanımına taşır.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Bilgisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Metinsellik bağlaşıklık (cohesion) ve bağdaşıklık (coherence) ister.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Metinsellik hangisini ifade eder?",
+    "options": ["A) Gösteren işitim imgesi, gösterilen kavramdır; ilişki nedensiz (nedensizlik/arbitraire) kabul edilir.", "B) Çift eklemlilik: anlamsız sesbirimler (fonem) anlamlı birimlere (morfem/sözcük) dönüşür.", "C) Dil-söz (langue-parole) ayrımında dil toplumsal dizge, söz bireysel gerçekleşmedir.", "D) Metinsellik bağlaşıklık (cohesion) ve bağdaşıklık (coherence) ister.", "E) Dil, seslerden oluşan, toplumsal uzlaşıya dayalı, çift eklemli bir göstergeler dizgesidir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Bilgisi notundaki temel bilgi."
 }
 ];

@@ -73,51 +73,51 @@ window.ags_mevzuat_5_sorulari = [
     "explanation": "Kanunun kuruluş amacı."
 },
 {
-    "question": "7528 Sayılı Kanun konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) 7528 sayılı Öğretmenlik Mesleği Kanunu 10 Ekim 2024 kabul, 18 Ekim 2024 RG (32696); 7354 s", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Millî Eğitim Akademisi hakkında hangisi doğrudur?",
+    "options": ["A) Amaç: öğretmenlerin seçimi, yetiştirilmesi, atama, hak-ödev, ödül-ceza, kariyer ve Millî Eğitim Akademisi.", "B) 7528 sayılı Öğretmenlik Mesleği Kanunu 10 Ekim 2024 kabul, 18 Ekim 2024 RG (32696); 7354 sayılı 2022 kanununun yerini alır.", "C) m.20: meslek öğretmen, uzman öğretmen, başöğretmen üç kariyer basamağından oluşur.", "D) Uzman öğretmenlik: öğretmenlikte en az 10 yıl, kademe durdurma cezası yokluğu, Akademi uzmanlık eğitimini tamamlama.", "E) Başöğretmenlik: uzman öğretmenlikte en az 10 yıl, aynı disiplin şartı, Akademi başöğretmenlik eğitimi."],
+    "correctAnswerIndex": 0,
+    "explanation": "7528 Sayılı Kanun notundaki temel bilgi."
+},
+{
+    "question": "m.20 hangisini ifade eder?",
+    "options": ["A) Amaç: öğretmenlerin seçimi, yetiştirilmesi, atama, hak-ödev, ödül-ceza, kariyer ve Millî Eğitim Akademisi.", "B) Uzman öğretmenlik: öğretmenlikte en az 10 yıl, kademe durdurma cezası yokluğu, Akademi uzmanlık eğitimini tamamlama.", "C) Başöğretmenlik: uzman öğretmenlikte en az 10 yıl, aynı disiplin şartı, Akademi başöğretmenlik eğitimi.", "D) m.20: meslek öğretmen, uzman öğretmen, başöğretmen üç kariyer basamağından oluşur.", "E) 7528 sayılı Öğretmenlik Mesleği Kanunu 10 Ekim 2024 kabul, 18 Ekim 2024 RG (32696); 7354 sayılı 2022 kanununun yerini alır."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "7528 Sayılı Kanun notundaki temel bilgi."
 },
 {
-    "question": "7528 Sayılı Kanun konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Amaç: öğretmenlerin seçimi, yetiştirilmesi, atama, hak-ödev, ödül-ceza, kariyer ve Millî E", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "7528 Sayılı Kanun konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) m.20: meslek öğretmen, uzman öğretmen, başöğretmen üç kariyer basamağından oluşur.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "en az 10 yıl ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Amaç: öğretmenlerin seçimi, yetiştirilmesi, atama, hak-ödev, ödül-ceza, kariyer ve Millî Eğitim Akademisi.", "B) m.20: meslek öğretmen, uzman öğretmen, başöğretmen üç kariyer basamağından oluşur.", "C) m.7: öğretmenlik genel kültür, özel alan ve meslek bilgisi bakımından hazırlık isteyen özel ihtisas mesleğidir (1739 m.43 ile uyum).", "D) Uzman öğretmenlik: öğretmenlikte en az 10 yıl, kademe durdurma cezası yokluğu, Akademi uzmanlık eğitimini tamamlama.", "E) 7528 sayılı Öğretmenlik Mesleği Kanunu 10 Ekim 2024 kabul, 18 Ekim 2024 RG (32696); 7354 sayılı 2022 kanununun yerini alır."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "7528 Sayılı Kanun notundaki temel bilgi."
 },
 {
-    "question": "7528 Sayılı Kanun konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Uzman öğretmenlik: öğretmenlikte en az 10 yıl, kademe durdurma cezası yokluğu, Akademi uzm", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi en az 10 yıl için doğru bir açıklamadır?",
+    "options": ["A) 7528 sayılı Öğretmenlik Mesleği Kanunu 10 Ekim 2024 kabul, 18 Ekim 2024 RG (32696); 7354 sayılı 2022 kanununun yerini alır.", "B) Amaç: öğretmenlerin seçimi, yetiştirilmesi, atama, hak-ödev, ödül-ceza, kariyer ve Millî Eğitim Akademisi.", "C) m.20: meslek öğretmen, uzman öğretmen, başöğretmen üç kariyer basamağından oluşur.", "D) m.7: öğretmenlik genel kültür, özel alan ve meslek bilgisi bakımından hazırlık isteyen özel ihtisas mesleğidir (1739 m.43 ile uyum).", "E) Başöğretmenlik: uzman öğretmenlikte en az 10 yıl, aynı disiplin şartı, Akademi başöğretmenlik eğitimi."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "7528 Sayılı Kanun notundaki temel bilgi."
 },
 {
-    "question": "7528 Sayılı Kanun konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Başöğretmenlik: uzman öğretmenlikte en az 10 yıl, aynı disiplin şartı, Akademi başöğretmen", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "m.7 hakkında hangisi doğrudur?",
+    "options": ["A) m.7: öğretmenlik genel kültür, özel alan ve meslek bilgisi bakımından hazırlık isteyen özel ihtisas mesleğidir (1739 m.43 ile uyum).", "B) 7528 sayılı Öğretmenlik Mesleği Kanunu 10 Ekim 2024 kabul, 18 Ekim 2024 RG (32696); 7354 sayılı 2022 kanununun yerini alır.", "C) Amaç: öğretmenlerin seçimi, yetiştirilmesi, atama, hak-ödev, ödül-ceza, kariyer ve Millî Eğitim Akademisi.", "D) m.20: meslek öğretmen, uzman öğretmen, başöğretmen üç kariyer basamağından oluşur.", "E) Uzman öğretmenlik: öğretmenlikte en az 10 yıl, kademe durdurma cezası yokluğu, Akademi uzmanlık eğitimini tamamlama."],
+    "correctAnswerIndex": 0,
+    "explanation": "7528 Sayılı Kanun notundaki temel bilgi."
 },
 {
-    "question": "7528 Sayılı Kanun konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) m.7: öğretmenlik genel kültür, özel alan ve meslek bilgisi bakımından hazırlık isteyen öze", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Hazırlık eğitimi hangisini ifade eder?",
+    "options": ["A) Uzman öğretmenlik: öğretmenlikte en az 10 yıl, kademe durdurma cezası yokluğu, Akademi uzmanlık eğitimini tamamlama.", "B) Hazırlık eğitimi Akademide teorik ve uygulamalıdır; kural olarak dört dönem, mezuniyete göre üç dönem uygulanabilir.", "C) 7528 sayılı Öğretmenlik Mesleği Kanunu 10 Ekim 2024 kabul, 18 Ekim 2024 RG (32696); 7354 sayılı 2022 kanununun yerini alır.", "D) Amaç: öğretmenlerin seçimi, yetiştirilmesi, atama, hak-ödev, ödül-ceza, kariyer ve Millî Eğitim Akademisi.", "E) m.20: meslek öğretmen, uzman öğretmen, başöğretmen üç kariyer basamağından oluşur."],
+    "correctAnswerIndex": 1,
+    "explanation": "7528 Sayılı Kanun notundaki temel bilgi."
 },
 {
-    "question": "7528 Sayılı Kanun konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Hazırlık eğitimi Akademide teorik ve uygulamalıdır; kural olarak dört dönem, mezuniyete gö", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Hazırlıkta teorik başarı eşiği ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Uzman öğretmenlik: öğretmenlikte en az 10 yıl, kademe durdurma cezası yokluğu, Akademi uzmanlık eğitimini tamamlama.", "B) Hazırlıkta teorik başarı eşiği 60, uygulama 70; atamaya esas puanda uygulama ağırlığı yüzde 60 tır.", "C) 7528 sayılı Öğretmenlik Mesleği Kanunu 10 Ekim 2024 kabul, 18 Ekim 2024 RG (32696); 7354 sayılı 2022 kanununun yerini alır.", "D) Amaç: öğretmenlerin seçimi, yetiştirilmesi, atama, hak-ödev, ödül-ceza, kariyer ve Millî Eğitim Akademisi.", "E) m.20: meslek öğretmen, uzman öğretmen, başöğretmen üç kariyer basamağından oluşur."],
+    "correctAnswerIndex": 1,
+    "explanation": "7528 Sayılı Kanun notundaki temel bilgi."
 },
 {
-    "question": "7528 Sayılı Kanun konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Hazırlıkta teorik başarı eşiği 60, uygulama 70; atamaya esas puanda uygulama ağırlığı yüzd", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi 657/4-B sözleşmeli öğretmen için doğru bir açıklamadır?",
+    "options": ["A) Başarılılar 657/4-B sözleşmeli öğretmen olur; kural olarak üç yıl (can güvenliği ve sağlık hariç) yer değiştiremez.", "B) 7528 sayılı Öğretmenlik Mesleği Kanunu 10 Ekim 2024 kabul, 18 Ekim 2024 RG (32696); 7354 sayılı 2022 kanununun yerini alır.", "C) Amaç: öğretmenlerin seçimi, yetiştirilmesi, atama, hak-ödev, ödül-ceza, kariyer ve Millî Eğitim Akademisi.", "D) m.20: meslek öğretmen, uzman öğretmen, başöğretmen üç kariyer basamağından oluşur.", "E) Uzman öğretmenlik: öğretmenlikte en az 10 yıl, kademe durdurma cezası yokluğu, Akademi uzmanlık eğitimini tamamlama."],
+    "correctAnswerIndex": 0,
+    "explanation": "7528 Sayılı Kanun notundaki temel bilgi."
 }
 ];

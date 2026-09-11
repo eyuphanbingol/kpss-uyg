@@ -61,63 +61,63 @@ window.oabt_okul_2_sorulari = [
     "explanation": "Ortaklık."
 },
 {
-    "question": "Erken Çocukluk Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Montessori hazır çevre, duyu malzemesi, özgür seçim sınırlı.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi Montessori için doğru bir açıklamadır?",
+    "options": ["A) MEB okul öncesi eklektik program; tek yaklaşım dayatılmaz.", "B) Montessori hazır çevre, duyu malzemesi, özgür seçim sınırlı.", "C) Reggio Emilia proje, yüz dil, çevre üçüncü öğretmen.", "D) HighScope plan-yap-değerlendir; etkin öğrenme.", "E) Waldorf ritim, imge, geç akademik."],
+    "correctAnswerIndex": 1,
+    "explanation": "Erken Çocukluk Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Reggio Emilia hakkında hangisi doğrudur?",
+    "options": ["A) Reggio Emilia proje, yüz dil, çevre üçüncü öğretmen.", "B) Montessori hazır çevre, duyu malzemesi, özgür seçim sınırlı.", "C) HighScope plan-yap-değerlendir; etkin öğrenme.", "D) Waldorf ritim, imge, geç akademik.", "E) MEB okul öncesi eklektik program; tek yaklaşım dayatılmaz."],
+    "correctAnswerIndex": 0,
+    "explanation": "Erken Çocukluk Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "HighScope hangisini ifade eder?",
+    "options": ["A) MEB okul öncesi eklektik program; tek yaklaşım dayatılmaz.", "B) HighScope plan-yap-değerlendir; etkin öğrenme.", "C) Montessori hazır çevre, duyu malzemesi, özgür seçim sınırlı.", "D) Reggio Emilia proje, yüz dil, çevre üçüncü öğretmen.", "E) Waldorf ritim, imge, geç akademik."],
+    "correctAnswerIndex": 1,
+    "explanation": "Erken Çocukluk Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Waldorf ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) MEB okul öncesi eklektik program; tek yaklaşım dayatılmaz.", "B) Waldorf ritim, imge, geç akademik.", "C) Montessori hazır çevre, duyu malzemesi, özgür seçim sınırlı.", "D) Reggio Emilia proje, yüz dil, çevre üçüncü öğretmen.", "E) HighScope plan-yap-değerlendir; etkin öğrenme."],
+    "correctAnswerIndex": 1,
+    "explanation": "Erken Çocukluk Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi MEB okul öncesi için doğru bir açıklamadır?",
+    "options": ["A) Waldorf ritim, imge, geç akademik.", "B) MEB okul öncesi eklektik program; tek yaklaşım dayatılmaz.", "C) Montessori hazır çevre, duyu malzemesi, özgür seçim sınırlı.", "D) Reggio Emilia proje, yüz dil, çevre üçüncü öğretmen.", "E) HighScope plan-yap-değerlendir; etkin öğrenme."],
+    "correctAnswerIndex": 1,
+    "explanation": "Erken Çocukluk Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Çocuk merkezlilik hakkında hangisi doğrudur?",
+    "options": ["A) Reggio Emilia proje, yüz dil, çevre üçüncü öğretmen.", "B) HighScope plan-yap-değerlendir; etkin öğrenme.", "C) Waldorf ritim, imge, geç akademik.", "D) Çocuk merkezlilik ve oyun temelli.", "E) Montessori hazır çevre, duyu malzemesi, özgür seçim sınırlı."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Erken Çocukluk Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Erken Çocukluk Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Reggio Emilia proje, yüz dil, çevre üçüncü öğretmen.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Doğa ve açık hava hakkında hangisi doğrudur?",
+    "options": ["A) Waldorf ritim, imge, geç akademik.", "B) Doğa ve açık hava.", "C) Montessori hazır çevre, duyu malzemesi, özgür seçim sınırlı.", "D) Reggio Emilia proje, yüz dil, çevre üçüncü öğretmen.", "E) HighScope plan-yap-değerlendir; etkin öğrenme."],
+    "correctAnswerIndex": 1,
+    "explanation": "Erken Çocukluk Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Gözlemci-tasarımcı-kolaylaştırıcı hangisini ifade eder?",
+    "options": ["A) Montessori hazır çevre, duyu malzemesi, özgür seçim sınırlı.", "B) Reggio Emilia proje, yüz dil, çevre üçüncü öğretmen.", "C) HighScope plan-yap-değerlendir; etkin öğrenme.", "D) Waldorf ritim, imge, geç akademik.", "E) Gözlemci-tasarımcı-kolaylaştırıcı."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Erken Çocukluk Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Erken Çocukluk Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) HighScope plan-yap-değerlendir; etkin öğrenme.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Soru ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Soru kapalı değil açık.", "B) Montessori hazır çevre, duyu malzemesi, özgür seçim sınırlı.", "C) Reggio Emilia proje, yüz dil, çevre üçüncü öğretmen.", "D) HighScope plan-yap-değerlendir; etkin öğrenme.", "E) Waldorf ritim, imge, geç akademik."],
+    "correctAnswerIndex": 0,
+    "explanation": "Erken Çocukluk Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Erken Çocukluk Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Waldorf ritim, imge, geç akademik.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Erken Çocukluk Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) MEB okul öncesi eklektik program; tek yaklaşım dayatılmaz.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Erken Çocukluk Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Çocuk merkezlilik ve oyun temelli.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Erken Çocukluk Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Bütüncül gelişim.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Erken Çocukluk Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Aile katılımı.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Erken Çocukluk Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Kapsayıcılık.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Erken Çocukluk Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Doğa ve açık hava.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Mesleki etik hakkında hangisi doğrudur?",
+    "options": ["A) Mesleki etik ihmal-istismar bildirimi.", "B) Montessori hazır çevre, duyu malzemesi, özgür seçim sınırlı.", "C) Reggio Emilia proje, yüz dil, çevre üçüncü öğretmen.", "D) HighScope plan-yap-değerlendir; etkin öğrenme.", "E) Waldorf ritim, imge, geç akademik."],
+    "correctAnswerIndex": 0,
+    "explanation": "Erken Çocukluk Eğitimi notundaki temel bilgi."
 }
 ];

@@ -61,63 +61,63 @@ window.oabt_rehber_7_sorulari = [
     "explanation": "İş bilgisi altyapısı."
 },
 {
-    "question": "Mesleki Rehberlik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Parsons özellik-faktör; kişi-iş eşleştirme.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Mesleki Rehberlik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Holland RIASEC altı kişilik-çevre tipi.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Aşağıdakilerden hangisi Parsons için doğru bir açıklamadır?",
+    "options": ["A) Holland RIASEC altı kişilik-çevre tipi.", "B) Super yaşam boyu gelişim, benlik kavramı, yaşam gökkuşağı.", "C) Gottfredson sınırlama ve uzlaşma; cinsiyet-prestij.", "D) Krumboltz sosyal öğrenme; planlı rastlantı.", "E) Parsons özellik-faktör; kişi-iş eşleştirme."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Mesleki Rehberlik notundaki temel bilgi."
 },
 {
-    "question": "Mesleki Rehberlik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Super yaşam boyu gelişim, benlik kavramı, yaşam gökkuşağı.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Mesleki Rehberlik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gottfredson sınırlama ve uzlaşma; cinsiyet-prestij.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Holland hakkında hangisi doğrudur?",
+    "options": ["A) Parsons özellik-faktör; kişi-iş eşleştirme.", "B) Super yaşam boyu gelişim, benlik kavramı, yaşam gökkuşağı.", "C) Gottfredson sınırlama ve uzlaşma; cinsiyet-prestij.", "D) Krumboltz sosyal öğrenme; planlı rastlantı.", "E) Holland RIASEC altı kişilik-çevre tipi."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Mesleki Rehberlik notundaki temel bilgi."
 },
 {
-    "question": "Mesleki Rehberlik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Krumboltz sosyal öğrenme; planlı rastlantı.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Mesleki Rehberlik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Kendini tanıma ilgi, değer, yetenek, kişilik.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Super hangisini ifade eder?",
+    "options": ["A) Parsons özellik-faktör; kişi-iş eşleştirme.", "B) Holland RIASEC altı kişilik-çevre tipi.", "C) Gottfredson sınırlama ve uzlaşma; cinsiyet-prestij.", "D) Krumboltz sosyal öğrenme; planlı rastlantı.", "E) Super yaşam boyu gelişim, benlik kavramı, yaşam gökkuşağı."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Mesleki Rehberlik notundaki temel bilgi."
 },
 {
-    "question": "Mesleki Rehberlik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Meslekleri tanıma ISCO, iş gücü, eğitim yolu.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Gottfredson ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Holland RIASEC altı kişilik-çevre tipi.", "B) Super yaşam boyu gelişim, benlik kavramı, yaşam gökkuşağı.", "C) Krumboltz sosyal öğrenme; planlı rastlantı.", "D) Gottfredson sınırlama ve uzlaşma; cinsiyet-prestij.", "E) Parsons özellik-faktör; kişi-iş eşleştirme."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Mesleki Rehberlik notundaki temel bilgi."
 },
 {
-    "question": "Mesleki Rehberlik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Karar kararsızlık ve kaygı ile çalışma.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Mesleki Rehberlik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) İş arama becerisi CV, görüşme, ağ.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Kendini tanıma hakkında hangisi doğrudur?",
+    "options": ["A) Holland RIASEC altı kişilik-çevre tipi.", "B) Super yaşam boyu gelişim, benlik kavramı, yaşam gökkuşağı.", "C) Gottfredson sınırlama ve uzlaşma; cinsiyet-prestij.", "D) Kendini tanıma ilgi, değer, yetenek, kişilik.", "E) Parsons özellik-faktör; kişi-iş eşleştirme."],
     "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Mesleki Rehberlik notundaki temel bilgi."
 },
 {
-    "question": "Mesleki Rehberlik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Dezavantaj cinsiyet kalıbı, engel, göç, sosyoekonomi.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Meslekleri tanıma hangisini ifade eder?",
+    "options": ["A) Holland RIASEC altı kişilik-çevre tipi.", "B) Super yaşam boyu gelişim, benlik kavramı, yaşam gökkuşağı.", "C) Gottfredson sınırlama ve uzlaşma; cinsiyet-prestij.", "D) Meslekleri tanıma ISCO, iş gücü, eğitim yolu.", "E) Parsons özellik-faktör; kişi-iş eşleştirme."],
+    "correctAnswerIndex": 3,
+    "explanation": "Mesleki Rehberlik notundaki temel bilgi."
+},
+{
+    "question": "Karar ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Holland RIASEC altı kişilik-çevre tipi.", "B) Super yaşam boyu gelişim, benlik kavramı, yaşam gökkuşağı.", "C) Gottfredson sınırlama ve uzlaşma; cinsiyet-prestij.", "D) Karar kararsızlık ve kaygı ile çalışma.", "E) Parsons özellik-faktör; kişi-iş eşleştirme."],
+    "correctAnswerIndex": 3,
+    "explanation": "Mesleki Rehberlik notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi İş arama becerisi için doğru bir açıklamadır?",
+    "options": ["A) İş arama becerisi CV, görüşme, ağ.", "B) Parsons özellik-faktör; kişi-iş eşleştirme.", "C) Holland RIASEC altı kişilik-çevre tipi.", "D) Super yaşam boyu gelişim, benlik kavramı, yaşam gökkuşağı.", "E) Gottfredson sınırlama ve uzlaşma; cinsiyet-prestij."],
+    "correctAnswerIndex": 0,
+    "explanation": "Mesleki Rehberlik notundaki temel bilgi."
+},
+{
+    "question": "Dezavantaj hakkında hangisi doğrudur?",
+    "options": ["A) Holland RIASEC altı kişilik-çevre tipi.", "B) Super yaşam boyu gelişim, benlik kavramı, yaşam gökkuşağı.", "C) Gottfredson sınırlama ve uzlaşma; cinsiyet-prestij.", "D) Dezavantaj cinsiyet kalıbı, engel, göç, sosyoekonomi.", "E) Parsons özellik-faktör; kişi-iş eşleştirme."],
+    "correctAnswerIndex": 3,
+    "explanation": "Mesleki Rehberlik notundaki temel bilgi."
+},
+{
+    "question": "E-okul ve tercih dönemleri hangisini ifade eder?",
+    "options": ["A) Gottfredson sınırlama ve uzlaşma; cinsiyet-prestij.", "B) E-okul ve tercih dönemleri bilgi + danışma.", "C) Parsons özellik-faktör; kişi-iş eşleştirme.", "D) Holland RIASEC altı kişilik-çevre tipi.", "E) Super yaşam boyu gelişim, benlik kavramı, yaşam gökkuşağı."],
+    "correctAnswerIndex": 1,
+    "explanation": "Mesleki Rehberlik notundaki temel bilgi."
 }
 ];

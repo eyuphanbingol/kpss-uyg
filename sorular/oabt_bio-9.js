@@ -55,69 +55,69 @@ window.oabt_bio_9_sorulari = [
     "explanation": "Model sınırı konuşulur."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Yanılgılar: fotosentez-solunum zıtlığı 'bitki gece CO2 verir gündüz vermez' basitleştirmes", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Yanılgılar için doğru bir açıklamadır?",
+    "options": ["A) Yanılgılar: fotosentez-solunum zıtlığı 'bitki gece CO2 verir gündüz vermez' basitleştirmesi, evrim ihtiyaç, edinilmiş karakter, cinsiyet kromozomu 'gen...", "B) Ölçek molekül-hücre-organizma-ekosistem geçişi.", "C) NOS teori-yasa, gözlem-çıkarım, insan boyutu.", "D) Canlı materyal etiği diseksiyon alternatifleri, 3R.", "E) Model hücre çizimi 2D yanılgısı, DNA merdiven gerçek değil ölçek."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Ölçek molekül-hücre-organizma-ekosistem geçişi.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Ölçek hakkında hangisi doğrudur?",
+    "options": ["A) Yanılgılar: fotosentez-solunum zıtlığı 'bitki gece CO2 verir gündüz vermez' basitleştirmesi, evrim ihtiyaç, edinilmiş karakter, cinsiyet kromozomu 'gen...", "B) NOS teori-yasa, gözlem-çıkarım, insan boyutu.", "C) Canlı materyal etiği diseksiyon alternatifleri, 3R.", "D) Sorgulama gözlem-hipotez-değişken-kontrol.", "E) Ölçek molekül-hücre-organizma-ekosistem geçişi."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "NOS hangisini ifade eder?",
+    "options": ["A) Model hücre çizimi 2D yanılgısı, DNA merdiven gerçek değil ölçek.", "B) NOS teori-yasa, gözlem-çıkarım, insan boyutu.", "C) Yanılgılar: fotosentez-solunum zıtlığı 'bitki gece CO2 verir gündüz vermez' basitleştirmesi, evrim ihtiyaç, edinilmiş karakter, cinsiyet kromozomu 'gen...", "D) Ölçek molekül-hücre-organizma-ekosistem geçişi.", "E) Canlı materyal etiği diseksiyon alternatifleri, 3R."],
+    "correctAnswerIndex": 1,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Canlı materyal etiği ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) NOS teori-yasa, gözlem-çıkarım, insan boyutu.", "B) Model hücre çizimi 2D yanılgısı, DNA merdiven gerçek değil ölçek.", "C) Canlı materyal etiği diseksiyon alternatifleri, 3R.", "D) Yanılgılar: fotosentez-solunum zıtlığı 'bitki gece CO2 verir gündüz vermez' basitleştirmesi, evrim ihtiyaç, edinilmiş karakter, cinsiyet kromozomu 'gen...", "E) Ölçek molekül-hücre-organizma-ekosistem geçişi."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) NOS teori-yasa, gözlem-çıkarım, insan boyutu.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Model için doğru bir açıklamadır?",
+    "options": ["A) Yanılgılar: fotosentez-solunum zıtlığı 'bitki gece CO2 verir gündüz vermez' basitleştirmesi, evrim ihtiyaç, edinilmiş karakter, cinsiyet kromozomu 'gen...", "B) Ölçek molekül-hücre-organizma-ekosistem geçişi.", "C) NOS teori-yasa, gözlem-çıkarım, insan boyutu.", "D) Canlı materyal etiği diseksiyon alternatifleri, 3R.", "E) Model hücre çizimi 2D yanılgısı, DNA merdiven gerçek değil ölçek."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Sorgulama hakkında hangisi doğrudur?",
+    "options": ["A) Canlı materyal etiği diseksiyon alternatifleri, 3R.", "B) Sorgulama gözlem-hipotez-değişken-kontrol.", "C) Yanılgılar: fotosentez-solunum zıtlığı 'bitki gece CO2 verir gündüz vermez' basitleştirmesi, evrim ihtiyaç, edinilmiş karakter, cinsiyet kromozomu 'gen...", "D) Ölçek molekül-hücre-organizma-ekosistem geçişi.", "E) NOS teori-yasa, gözlem-çıkarım, insan boyutu."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Canlı materyal etiği diseksiyon alternatifleri, 3R.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Mikroskop hangisini ifade eder?",
+    "options": ["A) NOS teori-yasa, gözlem-çıkarım, insan boyutu.", "B) Canlı materyal etiği diseksiyon alternatifleri, 3R.", "C) Mikroskop çözünürlük, boyama, ölçek çubuğu.", "D) Yanılgılar: fotosentez-solunum zıtlığı 'bitki gece CO2 verir gündüz vermez' basitleştirmesi, evrim ihtiyaç, edinilmiş karakter, cinsiyet kromozomu 'gen...", "E) Ölçek molekül-hücre-organizma-ekosistem geçişi."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Model hücre çizimi 2D yanılgısı, DNA merdiven gerçek değil ölçek.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Sorgulama gözlem-hipotez-değişken-kontrol.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Arazi çalışması ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) NOS teori-yasa, gözlem-çıkarım, insan boyutu.", "B) Canlı materyal etiği diseksiyon alternatifleri, 3R.", "C) Arazi çalışması kuadrat, transekt, etik toplama.", "D) Yanılgılar: fotosentez-solunum zıtlığı 'bitki gece CO2 verir gündüz vermez' basitleştirmesi, evrim ihtiyaç, edinilmiş karakter, cinsiyet kromozomu 'gen...", "E) Ölçek molekül-hücre-organizma-ekosistem geçişi."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Mikroskop çözünürlük, boyama, ölçek çubuğu.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Argümantasyon için doğru bir açıklamadır?",
+    "options": ["A) Canlı materyal etiği diseksiyon alternatifleri, 3R.", "B) Argümantasyon veri-iddia CER (claim evidence reasoning).", "C) Yanılgılar: fotosentez-solunum zıtlığı 'bitki gece CO2 verir gündüz vermez' basitleştirmesi, evrim ihtiyaç, edinilmiş karakter, cinsiyet kromozomu 'gen...", "D) Ölçek molekül-hücre-organizma-ekosistem geçişi.", "E) NOS teori-yasa, gözlem-çıkarım, insan boyutu."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Arazi çalışması kuadrat, transekt, etik toplama.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Argümantasyon veri-iddia CER (claim evidence reasoning).", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "SSI hakkında hangisi doğrudur?",
+    "options": ["A) Canlı materyal etiği diseksiyon alternatifleri, 3R.", "B) SSI aşı, GDO, iklim, biyoteknoloji etiği.", "C) Yanılgılar: fotosentez-solunum zıtlığı 'bitki gece CO2 verir gündüz vermez' basitleştirmesi, evrim ihtiyaç, edinilmiş karakter, cinsiyet kromozomu 'gen...", "D) Ölçek molekül-hücre-organizma-ekosistem geçişi.", "E) NOS teori-yasa, gözlem-çıkarım, insan boyutu."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) SSI aşı, GDO, iklim, biyoteknoloji etiği.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kavram haritası ve çizim dolaşım-solunum entegrasyonu.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Kavram haritası ve çizim hangisini ifade eder?",
+    "options": ["A) Canlı materyal etiği diseksiyon alternatifleri, 3R.", "B) Kavram haritası ve çizim dolaşım-solunum entegrasyonu.", "C) Yanılgılar: fotosentez-solunum zıtlığı 'bitki gece CO2 verir gündüz vermez' basitleştirmesi, evrim ihtiyaç, edinilmiş karakter, cinsiyet kromozomu 'gen...", "D) Ölçek molekül-hücre-organizma-ekosistem geçişi.", "E) NOS teori-yasa, gözlem-çıkarım, insan boyutu."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 }
 ];

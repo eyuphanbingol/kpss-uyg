@@ -61,63 +61,63 @@ window.oabt_okul_13_sorulari = [
     "explanation": "Gelişimsel."
 },
 {
-    "question": "Müzik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Ritim her çocuğun hakkı; şarkı yarışı değil.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Müzik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Beden perküsyonu, ninni, tekerleme, Orff.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Ritim her çocuğun hakkı için doğru bir açıklamadır?",
+    "options": ["A) Ses sağlığı bağırma yok.", "B) 2026 müzik eğitim sorusu yöntem odaklı.", "C) Ritim her çocuğun hakkı; şarkı yarışı değil.", "D) Beden perküsyonu, ninni, tekerleme, Orff.", "E) Dinleme tür çeşitliliği."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Müzik notundaki temel bilgi."
 },
 {
-    "question": "Müzik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Dinleme tür çeşitliliği.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Müzik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Ses sağlığı bağırma yok.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Beden perküsyonu, ninni, tekerleme, Orff hakkında hangisi doğrudur?",
+    "options": ["A) Ses sağlığı bağırma yok.", "B) 2026 müzik eğitim sorusu yöntem odaklı.", "C) Beden perküsyonu, ninni, tekerleme, Orff.", "D) Ritim her çocuğun hakkı; şarkı yarışı değil.", "E) Dinleme tür çeşitliliği."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Müzik notundaki temel bilgi."
 },
 {
-    "question": "Müzik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) 2026 müzik eğitim sorusu yöntem odaklı.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Dinleme hangisini ifade eder?",
+    "options": ["A) Ritim her çocuğun hakkı; şarkı yarışı değil.", "B) Beden perküsyonu, ninni, tekerleme, Orff.", "C) Ses sağlığı bağırma yok.", "D) 2026 müzik eğitim sorusu yöntem odaklı.", "E) Dinleme tür çeşitliliği."],
+    "correctAnswerIndex": 4,
+    "explanation": "Müzik notundaki temel bilgi."
 },
 {
-    "question": "Müzik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Orff, Dalcroze hareket.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Ses sağlığı ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Ses sağlığı bağırma yok.", "B) Ritim her çocuğun hakkı; şarkı yarışı değil.", "C) Beden perküsyonu, ninni, tekerleme, Orff.", "D) Dinleme tür çeşitliliği.", "E) 2026 müzik eğitim sorusu yöntem odaklı."],
+    "correctAnswerIndex": 0,
+    "explanation": "Müzik notundaki temel bilgi."
 },
 {
-    "question": "Müzik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kodaly sade el-şarkı.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi 2026 için doğru bir açıklamadır?",
+    "options": ["A) Ritim her çocuğun hakkı; şarkı yarışı değil.", "B) Beden perküsyonu, ninni, tekerleme, Orff.", "C) Dinleme tür çeşitliliği.", "D) Ses sağlığı bağırma yok.", "E) 2026 müzik eğitim sorusu yöntem odaklı."],
+    "correctAnswerIndex": 4,
+    "explanation": "Müzik notundaki temel bilgi."
 },
 {
-    "question": "Müzik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Oyun şarkıları.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Orff, Dalcroze hareket hakkında hangisi doğrudur?",
+    "options": ["A) Orff, Dalcroze hareket.", "B) Ritim her çocuğun hakkı; şarkı yarışı değil.", "C) Beden perküsyonu, ninni, tekerleme, Orff.", "D) Dinleme tür çeşitliliği.", "E) Ses sağlığı bağırma yok."],
+    "correctAnswerIndex": 0,
+    "explanation": "Müzik notundaki temel bilgi."
 },
 {
-    "question": "Müzik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Doğa sesi.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Kodaly hangisini ifade eder?",
+    "options": ["A) Ritim her çocuğun hakkı; şarkı yarışı değil.", "B) Beden perküsyonu, ninni, tekerleme, Orff.", "C) Dinleme tür çeşitliliği.", "D) Ses sağlığı bağırma yok.", "E) Kodaly sade el-şarkı."],
+    "correctAnswerIndex": 4,
+    "explanation": "Müzik notundaki temel bilgi."
 },
 {
-    "question": "Müzik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Çalgı basit, dönüşümlü.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Çalgı hakkında hangisi doğrudur?",
+    "options": ["A) Beden perküsyonu, ninni, tekerleme, Orff.", "B) Dinleme tür çeşitliliği.", "C) Ses sağlığı bağırma yok.", "D) Çalgı basit, dönüşümlü.", "E) Ritim her çocuğun hakkı; şarkı yarışı değil."],
+    "correctAnswerIndex": 3,
+    "explanation": "Müzik notundaki temel bilgi."
+},
+{
+    "question": "İşitme fark hangisini ifade eder?",
+    "options": ["A) Beden perküsyonu, ninni, tekerleme, Orff.", "B) Dinleme tür çeşitliliği.", "C) Ses sağlığı bağırma yok.", "D) İşitme fark titreşim.", "E) Ritim her çocuğun hakkı; şarkı yarışı değil."],
+    "correctAnswerIndex": 3,
+    "explanation": "Müzik notundaki temel bilgi."
+},
+{
+    "question": "Motor fark ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Ritim her çocuğun hakkı; şarkı yarışı değil.", "B) Beden perküsyonu, ninni, tekerleme, Orff.", "C) Dinleme tür çeşitliliği.", "D) Ses sağlığı bağırma yok.", "E) Motor fark basit vurmalı."],
+    "correctAnswerIndex": 4,
+    "explanation": "Müzik notundaki temel bilgi."
 }
 ];

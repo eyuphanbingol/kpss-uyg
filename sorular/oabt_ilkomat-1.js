@@ -55,69 +55,69 @@ window.oabt_ilkomat_1_sorulari = [
     "explanation": "Yan limitler eşitlenmezse atlama süreksizliği oluşur."
 },
 {
-    "question": "Analiz konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Fonksiyon her x'e tek y eşleyen kuraldır; tanım, değer ve görüntü kümesi ayrılır.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Fonksiyon için doğru bir açıklamadır?",
+    "options": ["A) İkinci türev içbükeylik ve büküm noktası; f''>0 yerel dışbükey (konveks) yorumu bağlama göre netleştirilir.", "B) Fonksiyon her x'e tek y eşleyen kuraldır; tanım, değer ve görüntü kümesi ayrılır.", "C) Limit x→a iken f(x)'in yaklaştığı değerdir; f(a) tanımlı olmak zorunda değildir.", "D) Türev anlık değişim oranı ve teğetin eğimidir; tanım: lim h→0 [f(x+h)-f(x)]/h.", "E) Artan-azalan f'>0 artan; kritik noktalar f'=0 veya tanımsız."],
+    "correctAnswerIndex": 1,
+    "explanation": "Analiz notundaki temel bilgi."
 },
 {
-    "question": "Analiz konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Birebir (injektif) ve örten (surjektif) koşulları ters fonksiyonun varlığını belirler."],
+    "question": "Birebir hakkında hangisi doğrudur?",
+    "options": ["A) Süreklilik lim x→a f(x) = f(a) ister; parça tanımlı fonksiyonlarda yan limitler kontrol edilir.", "B) Ara değer teoremi sürekli fonksiyonun aralıkta ara değerleri aldığını söyler.", "C) Birebir (injektif) ve örten (surjektif) koşulları ters fonksiyonun varlığını belirler.", "D) Fonksiyon her x'e tek y eşleyen kuraldır; tanım, değer ve görüntü kümesi ayrılır.", "E) Limit x→a iken f(x)'in yaklaştığı değerdir; f(a) tanımlı olmak zorunda değildir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Analiz notundaki temel bilgi."
+},
+{
+    "question": "Süreklilik ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Süreklilik lim x→a f(x) = f(a) ister; parça tanımlı fonksiyonlarda yan limitler kontrol edilir.", "B) Fonksiyon her x'e tek y eşleyen kuraldır; tanım, değer ve görüntü kümesi ayrılır.", "C) Birebir (injektif) ve örten (surjektif) koşulları ters fonksiyonun varlığını belirler.", "D) Limit x→a iken f(x)'in yaklaştığı değerdir; f(a) tanımlı olmak zorunda değildir.", "E) Ara değer teoremi sürekli fonksiyonun aralıkta ara değerleri aldığını söyler."],
+    "correctAnswerIndex": 0,
+    "explanation": "Analiz notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Ara değer teoremi için doğru bir açıklamadır?",
+    "options": ["A) Süreklilik lim x→a f(x) = f(a) ister; parça tanımlı fonksiyonlarda yan limitler kontrol edilir.", "B) Ara değer teoremi sürekli fonksiyonun aralıkta ara değerleri aldığını söyler.", "C) Fonksiyon her x'e tek y eşleyen kuraldır; tanım, değer ve görüntü kümesi ayrılır.", "D) Birebir (injektif) ve örten (surjektif) koşulları ters fonksiyonun varlığını belirler.", "E) Limit x→a iken f(x)'in yaklaştığı değerdir; f(a) tanımlı olmak zorunda değildir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Analiz notundaki temel bilgi."
+},
+{
+    "question": "Türev hakkında hangisi doğrudur?",
+    "options": ["A) Süreklilik lim x→a f(x) = f(a) ister; parça tanımlı fonksiyonlarda yan limitler kontrol edilir.", "B) Türev anlık değişim oranı ve teğetin eğimidir; tanım: lim h→0 [f(x+h)-f(x)]/h.", "C) Fonksiyon her x'e tek y eşleyen kuraldır; tanım, değer ve görüntü kümesi ayrılır.", "D) Birebir (injektif) ve örten (surjektif) koşulları ters fonksiyonun varlığını belirler.", "E) Limit x→a iken f(x)'in yaklaştığı değerdir; f(a) tanımlı olmak zorunda değildir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Analiz notundaki temel bilgi."
+},
+{
+    "question": "Ürün, bölüm, zincir hangisini ifade eder?",
+    "options": ["A) Ürün, bölüm, zincir kuralları bileşik fonksiyonlarda uygulanır.", "B) Fonksiyon her x'e tek y eşleyen kuraldır; tanım, değer ve görüntü kümesi ayrılır.", "C) Birebir (injektif) ve örten (surjektif) koşulları ters fonksiyonun varlığını belirler.", "D) Limit x→a iken f(x)'in yaklaştığı değerdir; f(a) tanımlı olmak zorunda değildir.", "E) Süreklilik lim x→a f(x) = f(a) ister; parça tanımlı fonksiyonlarda yan limitler kontrol edilir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Analiz notundaki temel bilgi."
+},
+{
+    "question": "Artan-azalan ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Limit x→a iken f(x)'in yaklaştığı değerdir; f(a) tanımlı olmak zorunda değildir.", "B) Süreklilik lim x→a f(x) = f(a) ister; parça tanımlı fonksiyonlarda yan limitler kontrol edilir.", "C) Artan-azalan f'>0 artan; kritik noktalar f'=0 veya tanımsız.", "D) Fonksiyon her x'e tek y eşleyen kuraldır; tanım, değer ve görüntü kümesi ayrılır.", "E) Birebir (injektif) ve örten (surjektif) koşulları ters fonksiyonun varlığını belirler."],
+    "correctAnswerIndex": 2,
+    "explanation": "Analiz notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi İkinci türev için doğru bir açıklamadır?",
+    "options": ["A) Birebir (injektif) ve örten (surjektif) koşulları ters fonksiyonun varlığını belirler.", "B) Limit x→a iken f(x)'in yaklaştığı değerdir; f(a) tanımlı olmak zorunda değildir.", "C) Süreklilik lim x→a f(x) = f(a) ister; parça tanımlı fonksiyonlarda yan limitler kontrol edilir.", "D) İkinci türev içbükeylik ve büküm noktası; f''>0 yerel dışbükey (konveks) yorumu bağlama göre netleştirilir.", "E) Fonksiyon her x'e tek y eşleyen kuraldır; tanım, değer ve görüntü kümesi ayrılır."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Analiz notundaki temel bilgi."
 },
 {
-    "question": "Analiz konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Limit x→a iken f(x)'in yaklaştığı değerdir; f(a) tanımlı olmak zorunda değildir.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Ortalama değer teoremi hakkında hangisi doğrudur?",
+    "options": ["A) Fonksiyon her x'e tek y eşleyen kuraldır; tanım, değer ve görüntü kümesi ayrılır.", "B) Birebir (injektif) ve örten (surjektif) koşulları ters fonksiyonun varlığını belirler.", "C) Limit x→a iken f(x)'in yaklaştığı değerdir; f(a) tanımlı olmak zorunda değildir.", "D) Süreklilik lim x→a f(x) = f(a) ister; parça tanımlı fonksiyonlarda yan limitler kontrol edilir.", "E) Ortalama değer teoremi (Lagrange) f'(c)=(f(b)-f(a))/(b-a) eşitliğini verir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Analiz notundaki temel bilgi."
+},
+{
+    "question": "Belirsiz integral hangisini ifade eder?",
+    "options": ["A) Fonksiyon her x'e tek y eşleyen kuraldır; tanım, değer ve görüntü kümesi ayrılır.", "B) Birebir (injektif) ve örten (surjektif) koşulları ters fonksiyonun varlığını belirler.", "C) Limit x→a iken f(x)'in yaklaştığı değerdir; f(a) tanımlı olmak zorunda değildir.", "D) Süreklilik lim x→a f(x) = f(a) ister; parça tanımlı fonksiyonlarda yan limitler kontrol edilir.", "E) Belirsiz integral antütrev ailesi; +C unutulmaz."],
+    "correctAnswerIndex": 4,
+    "explanation": "Analiz notundaki temel bilgi."
+},
+{
+    "question": "Belirli integral ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Limit x→a iken f(x)'in yaklaştığı değerdir; f(a) tanımlı olmak zorunda değildir.", "B) Süreklilik lim x→a f(x) = f(a) ister; parça tanımlı fonksiyonlarda yan limitler kontrol edilir.", "C) Belirli integral Riemann toplamının limiti; net alan işaretli, geometrik alan mutlak değer ister.", "D) Fonksiyon her x'e tek y eşleyen kuraldır; tanım, değer ve görüntü kümesi ayrılır.", "E) Birebir (injektif) ve örten (surjektif) koşulları ters fonksiyonun varlığını belirler."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Analiz konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Süreklilik lim x→a f(x) = f(a) ister; parça tanımlı fonksiyonlarda yan limitler kontrol ed"],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Analiz konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Ara değer teoremi sürekli fonksiyonun aralıkta ara değerleri aldığını söyler.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Analiz konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Türev anlık değişim oranı ve teğetin eğimidir; tanım: lim h→0 [f(x+h)-f(x)]/h."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Analiz konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Ürün, bölüm, zincir kuralları bileşik fonksiyonlarda uygulanır.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Analiz konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Artan-azalan f'>0 artan; kritik noktalar f'=0 veya tanımsız."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Analiz konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) İkinci türev içbükeylik ve büküm noktası; f''>0 yerel dışbükey (konveks) yorumu bağlama gö", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Analiz konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Ortalama değer teoremi (Lagrange) f'(c)=(f(b)-f(a))/(b-a) eşitliğini verir."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Analiz konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Belirsiz integral antütrev ailesi; +C unutulmaz.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Analiz notundaki temel bilgi."
 }
 ];

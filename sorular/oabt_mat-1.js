@@ -55,69 +55,69 @@ window.oabt_mat_1_sorulari = [
     "explanation": "F(x)=∫a^x f, F'=f (uygun koşullarda)."
 },
 {
-    "question": "Analiz konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Supremum üst sınırların en küçüğü; tamlık aksiyomu: üstten sınırlı boş olmayan alt kümenin", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Supremum için doğru bir açıklamadır?",
+    "options": ["A) Dizi yakınsaklığı ε-N; monoton ve sınırlı dizi yakınsar (R'de).", "B) Cauchy dizisi R'de yakınsaklığa denktir; Q tam değildir.", "C) Seri kısmi toplam dizisi; mutlak yakınsaklık şartlıdan güçlüdür.", "D) Fonksiyon limiti ve süreklilik ε-δ; düzgün süreklilik kapalı sınırlı aralıkta sürekliden gelir (Heine-Cantor).", "E) Supremum üst sınırların en küçüğü; tamlık aksiyomu: üstten sınırlı boş olmayan alt kümenin sup'u vardır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Analiz notundaki temel bilgi."
 },
 {
-    "question": "Analiz konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Dizi yakınsaklığı ε-N; monoton ve sınırlı dizi yakınsar (R'de)."],
+    "question": "Dizi yakınsaklığı hakkında hangisi doğrudur?",
+    "options": ["A) Supremum üst sınırların en küçüğü; tamlık aksiyomu: üstten sınırlı boş olmayan alt kümenin sup'u vardır.", "B) Cauchy dizisi R'de yakınsaklığa denktir; Q tam değildir.", "C) Seri kısmi toplam dizisi; mutlak yakınsaklık şartlıdan güçlüdür.", "D) Fonksiyon limiti ve süreklilik ε-δ; düzgün süreklilik kapalı sınırlı aralıkta sürekliden gelir (Heine-Cantor).", "E) Dizi yakınsaklığı ε-N; monoton ve sınırlı dizi yakınsar (R'de)."],
+    "correctAnswerIndex": 4,
+    "explanation": "Analiz notundaki temel bilgi."
+},
+{
+    "question": "Cauchy dizisi hangisini ifade eder?",
+    "options": ["A) Seri kısmi toplam dizisi; mutlak yakınsaklık şartlıdan güçlüdür.", "B) Fonksiyon limiti ve süreklilik ε-δ; düzgün süreklilik kapalı sınırlı aralıkta sürekliden gelir (Heine-Cantor).", "C) Cauchy dizisi R'de yakınsaklığa denktir; Q tam değildir.", "D) Supremum üst sınırların en küçüğü; tamlık aksiyomu: üstten sınırlı boş olmayan alt kümenin sup'u vardır.", "E) Dizi yakınsaklığı ε-N; monoton ve sınırlı dizi yakınsar (R'de)."],
+    "correctAnswerIndex": 2,
+    "explanation": "Analiz notundaki temel bilgi."
+},
+{
+    "question": "Seri ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Cauchy dizisi R'de yakınsaklığa denktir; Q tam değildir.", "B) Fonksiyon limiti ve süreklilik ε-δ; düzgün süreklilik kapalı sınırlı aralıkta sürekliden gelir (Heine-Cantor).", "C) Seri kısmi toplam dizisi; mutlak yakınsaklık şartlıdan güçlüdür.", "D) Supremum üst sınırların en küçüğü; tamlık aksiyomu: üstten sınırlı boş olmayan alt kümenin sup'u vardır.", "E) Dizi yakınsaklığı ε-N; monoton ve sınırlı dizi yakınsar (R'de)."],
+    "correctAnswerIndex": 2,
+    "explanation": "Analiz notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Fonksiyon limiti ve süreklilik için doğru bir açıklamadır?",
+    "options": ["A) Seri kısmi toplam dizisi; mutlak yakınsaklık şartlıdan güçlüdür.", "B) Fonksiyon limiti ve süreklilik ε-δ; düzgün süreklilik kapalı sınırlı aralıkta sürekliden gelir (Heine-Cantor).", "C) Supremum üst sınırların en küçüğü; tamlık aksiyomu: üstten sınırlı boş olmayan alt kümenin sup'u vardır.", "D) Dizi yakınsaklığı ε-N; monoton ve sınırlı dizi yakınsar (R'de).", "E) Cauchy dizisi R'de yakınsaklığa denktir; Q tam değildir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Analiz notundaki temel bilgi."
+},
+{
+    "question": "Türevlenebilirlik hakkında hangisi doğrudur?",
+    "options": ["A) Seri kısmi toplam dizisi; mutlak yakınsaklık şartlıdan güçlüdür.", "B) Türevlenebilirlik sürekliliği gerektirir; tersi yanlış (Weierstrass sürekli hiç türevlenemez örnekleri).", "C) Supremum üst sınırların en küçüğü; tamlık aksiyomu: üstten sınırlı boş olmayan alt kümenin sup'u vardır.", "D) Dizi yakınsaklığı ε-N; monoton ve sınırlı dizi yakınsar (R'de).", "E) Cauchy dizisi R'de yakınsaklığa denktir; Q tam değildir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Analiz notundaki temel bilgi."
+},
+{
+    "question": "Taylor hangisini ifade eder?",
+    "options": ["A) Seri kısmi toplam dizisi; mutlak yakınsaklık şartlıdan güçlüdür.", "B) Taylor açılımı; Lagrange kalanı hata kontrolü.", "C) Supremum üst sınırların en küçüğü; tamlık aksiyomu: üstten sınırlı boş olmayan alt kümenin sup'u vardır.", "D) Dizi yakınsaklığı ε-N; monoton ve sınırlı dizi yakınsar (R'de).", "E) Cauchy dizisi R'de yakınsaklığa denktir; Q tam değildir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Analiz notundaki temel bilgi."
+},
+{
+    "question": "Riemann integral ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Riemann integral üst-alt toplam; süreksizlik kümesi sıfır ölçülü ise (Lebesgue kriteri) Riemann integrallenebilir.", "B) Supremum üst sınırların en küçüğü; tamlık aksiyomu: üstten sınırlı boş olmayan alt kümenin sup'u vardır.", "C) Dizi yakınsaklığı ε-N; monoton ve sınırlı dizi yakınsar (R'de).", "D) Cauchy dizisi R'de yakınsaklığa denktir; Q tam değildir.", "E) Seri kısmi toplam dizisi; mutlak yakınsaklık şartlıdan güçlüdür."],
+    "correctAnswerIndex": 0,
+    "explanation": "Analiz notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Düzgün yakınsaklık için doğru bir açıklamadır?",
+    "options": ["A) Dizi yakınsaklığı ε-N; monoton ve sınırlı dizi yakınsar (R'de).", "B) Cauchy dizisi R'de yakınsaklığa denktir; Q tam değildir.", "C) Seri kısmi toplam dizisi; mutlak yakınsaklık şartlıdan güçlüdür.", "D) Düzgün yakınsaklık limit ile integrali/türevi yer değiştirmede yeter koşuldur.", "E) Supremum üst sınırların en küçüğü; tamlık aksiyomu: üstten sınırlı boş olmayan alt kümenin sup'u vardır."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Analiz notundaki temel bilgi."
 },
 {
-    "question": "Analiz konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Cauchy dizisi R'de yakınsaklığa denktir; Q tam değildir.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Çok değişkenli hakkında hangisi doğrudur?",
+    "options": ["A) Seri kısmi toplam dizisi; mutlak yakınsaklık şartlıdan güçlüdür.", "B) Çok değişkenli kısmi türev, gradyan, Jacobian; kapalı fonksiyon teoremi yerel ters verir.", "C) Supremum üst sınırların en küçüğü; tamlık aksiyomu: üstten sınırlı boş olmayan alt kümenin sup'u vardır.", "D) Dizi yakınsaklığı ε-N; monoton ve sınırlı dizi yakınsar (R'de).", "E) Cauchy dizisi R'de yakınsaklığa denktir; Q tam değildir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Analiz notundaki temel bilgi."
+},
+{
+    "question": "Metrik uzay hangisini ifade eder?",
+    "options": ["A) Cauchy dizisi R'de yakınsaklığa denktir; Q tam değildir.", "B) Seri kısmi toplam dizisi; mutlak yakınsaklık şartlıdan güçlüdür.", "C) Metrik uzay (X,d); tam metrik Banach (normlu tam), Hilbert iç çarpımlı tam.", "D) Supremum üst sınırların en küçüğü; tamlık aksiyomu: üstten sınırlı boş olmayan alt kümenin sup'u vardır.", "E) Dizi yakınsaklığı ε-N; monoton ve sınırlı dizi yakınsar (R'de)."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Analiz konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Seri kısmi toplam dizisi; mutlak yakınsaklık şartlıdan güçlüdür."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Analiz konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Fonksiyon limiti ve süreklilik ε-δ; düzgün süreklilik kapalı sınırlı aralıkta sürekliden g", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Analiz konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Türevlenebilirlik sürekliliği gerektirir; tersi yanlış (Weierstrass sürekli hiç türevlenem"],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Analiz konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Taylor açılımı; Lagrange kalanı hata kontrolü.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Analiz konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Riemann integral üst-alt toplam; süreksizlik kümesi sıfır ölçülü ise (Lebesgue kriteri) Ri"],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Analiz konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Düzgün yakınsaklık limit ile integrali/türevi yer değiştirmede yeter koşuldur.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Analiz konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Çok değişkenli kısmi türev, gradyan, Jacobian; kapalı fonksiyon teoremi yerel ters verir."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Analiz konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Metrik uzay (X,d); tam metrik Banach (normlu tam), Hilbert iç çarpımlı tam.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Analiz notundaki temel bilgi."
 }
 ];

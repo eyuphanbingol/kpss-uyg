@@ -61,63 +61,63 @@ window.oabt_sinif_12_sorulari = [
     "explanation": "Okuryazarlık."
 },
 {
-    "question": "İlk Okuma ve Yazma Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Ses temelli cümle yöntemi güncel MEB ana yaklaşımdır."],
+    "question": "Ses-harf-hece-kelime-cümle hakkında hangisi doğrudur?",
+    "options": ["A) Ses temelli cümle yöntemi güncel MEB ana yaklaşımdır.", "B) Bitişik eğik ve dik temel yazı politikası dönemsel değişmiştir; güncel yönergeye bakılır.", "C) Hazırbulunuşluk görsel-işitsel ayırt etme, motor.", "D) 2026 alan eğitimi klasik yöntem sorusu: çözümleme vs sentez tarihi.", "E) Ses-harf-hece-kelime-cümle aşamaları."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "İlk Okuma ve Yazma Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "İlk Okuma ve Yazma Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Ses-harf-hece-kelime-cümle aşamaları.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Bitişik eğik ve dik temel hangisini ifade eder?",
+    "options": ["A) Hazırbulunuşluk görsel-işitsel ayırt etme, motor.", "B) 2026 alan eğitimi klasik yöntem sorusu: çözümleme vs sentez tarihi.", "C) Bitişik eğik ve dik temel yazı politikası dönemsel değişmiştir; güncel yönergeye bakılır.", "D) Ses temelli cümle yöntemi güncel MEB ana yaklaşımdır.", "E) Ses-harf-hece-kelime-cümle aşamaları."],
+    "correctAnswerIndex": 2,
+    "explanation": "İlk Okuma ve Yazma Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Hazırbulunuşluk ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Hazırbulunuşluk görsel-işitsel ayırt etme, motor.", "B) Ses temelli cümle yöntemi güncel MEB ana yaklaşımdır.", "C) Ses-harf-hece-kelime-cümle aşamaları.", "D) Bitişik eğik ve dik temel yazı politikası dönemsel değişmiştir; güncel yönergeye bakılır.", "E) 2026 alan eğitimi klasik yöntem sorusu: çözümleme vs sentez tarihi."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "İlk Okuma ve Yazma Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "İlk Okuma ve Yazma Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Bitişik eğik ve dik temel yazı politikası dönemsel değişmiştir; güncel yönergeye bakılır."],
+    "question": "Aşağıdakilerden hangisi 2026 alan eğitimi için doğru bir açıklamadır?",
+    "options": ["A) 2026 alan eğitimi klasik yöntem sorusu: çözümleme vs sentez tarihi.", "B) Ses temelli cümle yöntemi güncel MEB ana yaklaşımdır.", "C) Ses-harf-hece-kelime-cümle aşamaları.", "D) Bitişik eğik ve dik temel yazı politikası dönemsel değişmiştir; güncel yönergeye bakılır.", "E) Hazırbulunuşluk görsel-işitsel ayırt etme, motor."],
+    "correctAnswerIndex": 0,
+    "explanation": "İlk Okuma ve Yazma Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Önce sesin işitilmesi hakkında hangisi doğrudur?",
+    "options": ["A) Hazırbulunuşluk görsel-işitsel ayırt etme, motor.", "B) Önce sesin işitilmesi sonra harf.", "C) Ses temelli cümle yöntemi güncel MEB ana yaklaşımdır.", "D) Ses-harf-hece-kelime-cümle aşamaları.", "E) Bitişik eğik ve dik temel yazı politikası dönemsel değişmiştir; güncel yönergeye bakılır."],
+    "correctAnswerIndex": 1,
+    "explanation": "İlk Okuma ve Yazma Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Okuma yazma eşzamanlı hangisini ifade eder?",
+    "options": ["A) Bitişik eğik ve dik temel yazı politikası dönemsel değişmiştir; güncel yönergeye bakılır.", "B) Hazırbulunuşluk görsel-işitsel ayırt etme, motor.", "C) Okuma yazma eşzamanlı.", "D) Ses temelli cümle yöntemi güncel MEB ana yaklaşımdır.", "E) Ses-harf-hece-kelime-cümle aşamaları."],
+    "correctAnswerIndex": 2,
+    "explanation": "İlk Okuma ve Yazma Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Serbest okuma ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Ses temelli cümle yöntemi güncel MEB ana yaklaşımdır.", "B) Ses-harf-hece-kelime-cümle aşamaları.", "C) Bitişik eğik ve dik temel yazı politikası dönemsel değişmiştir; güncel yönergeye bakılır.", "D) Hazırbulunuşluk görsel-işitsel ayırt etme, motor.", "E) Serbest okuma kısa metin erken."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "İlk Okuma ve Yazma Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "İlk Okuma ve Yazma Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Hazırbulunuşluk görsel-işitsel ayırt etme, motor.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Yazı motoru için doğru bir açıklamadır?",
+    "options": ["A) Ses-harf-hece-kelime-cümle aşamaları.", "B) Bitişik eğik ve dik temel yazı politikası dönemsel değişmiştir; güncel yönergeye bakılır.", "C) Hazırbulunuşluk görsel-işitsel ayırt etme, motor.", "D) Yazı motoru kalem tutuş, sıra.", "E) Ses temelli cümle yöntemi güncel MEB ana yaklaşımdır."],
+    "correctAnswerIndex": 3,
+    "explanation": "İlk Okuma ve Yazma Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "İlk Okuma ve Yazma Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) 2026 alan eğitimi klasik yöntem sorusu: çözümleme vs sentez tarihi."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aile hakkında hangisi doğrudur?",
+    "options": ["A) Hazırbulunuşluk görsel-işitsel ayırt etme, motor.", "B) Aile evde yanlış yöntem karmaşası önlenir.", "C) Ses temelli cümle yöntemi güncel MEB ana yaklaşımdır.", "D) Ses-harf-hece-kelime-cümle aşamaları.", "E) Bitişik eğik ve dik temel yazı politikası dönemsel değişmiştir; güncel yönergeye bakılır."],
+    "correctAnswerIndex": 1,
+    "explanation": "İlk Okuma ve Yazma Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "İlk Okuma ve Yazma Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Önce sesin işitilmesi sonra harf.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "İlk Okuma ve Yazma Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Okuma yazma eşzamanlı."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İlk Okuma ve Yazma Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Serbest okuma kısa metin erken.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "İlk Okuma ve Yazma Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Yazı motoru kalem tutuş, sıra."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "İlk Okuma ve Yazma Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Aile evde yanlış yöntem karmaşası önlenir.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Ses düşürme, ters çevirme, heceleme hangisini ifade eder?",
+    "options": ["A) Ses-harf-hece-kelime-cümle aşamaları.", "B) Bitişik eğik ve dik temel yazı politikası dönemsel değişmiştir; güncel yönergeye bakılır.", "C) Hazırbulunuşluk görsel-işitsel ayırt etme, motor.", "D) Ses düşürme, ters çevirme, heceleme hata analizi.", "E) Ses temelli cümle yöntemi güncel MEB ana yaklaşımdır."],
+    "correctAnswerIndex": 3,
+    "explanation": "İlk Okuma ve Yazma Öğretimi notundaki temel bilgi."
 }
 ];

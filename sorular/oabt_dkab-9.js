@@ -61,63 +61,63 @@ window.oabt_dkab_9_sorulari = [
     "explanation": "Cumartesi dinlenme ahididir."
 },
 {
-    "question": "Dinler Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Yahudilik tevhid, Tevrat, ahit, sinagoga, Şabat.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Hıristiyanlık hakkında hangisi doğrudur?",
+    "options": ["A) Hıristiyanlık teslis tartışması, İncil, kilise, Mesih inancı.", "B) Yahudilik tevhid, Tevrat, ahit, sinagoga, Şabat.", "C) İslam son peygamber iddiası; Ehl-i kitap kavramı.", "D) Karşılaştırma ahit, peygamber, ahiret ortak zemini; teoloji farkı.", "E) Yöntem fenomenolojik anlama; polemik vaaz değil."],
+    "correctAnswerIndex": 0,
+    "explanation": "Dinler Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Dinler Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Hıristiyanlık teslis tartışması, İncil, kilise, Mesih inancı."],
+    "question": "İslam hangisini ifade eder?",
+    "options": ["A) Hıristiyanlık teslis tartışması, İncil, kilise, Mesih inancı.", "B) Karşılaştırma ahit, peygamber, ahiret ortak zemini; teoloji farkı.", "C) Yöntem fenomenolojik anlama; polemik vaaz değil.", "D) İslam son peygamber iddiası; Ehl-i kitap kavramı.", "E) Yahudilik tevhid, Tevrat, ahit, sinagoga, Şabat."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Dinler Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Dinler Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) İslam son peygamber iddiası; Ehl-i kitap kavramı.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Karşılaştırma ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Yöntem fenomenolojik anlama; polemik vaaz değil.", "B) Karşılaştırma ahit, peygamber, ahiret ortak zemini; teoloji farkı.", "C) Yahudilik tevhid, Tevrat, ahit, sinagoga, Şabat.", "D) Hıristiyanlık teslis tartışması, İncil, kilise, Mesih inancı.", "E) İslam son peygamber iddiası; Ehl-i kitap kavramı."],
+    "correctAnswerIndex": 1,
+    "explanation": "Dinler Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Yöntem için doğru bir açıklamadır?",
+    "options": ["A) Yöntem fenomenolojik anlama; polemik vaaz değil.", "B) Yahudilik tevhid, Tevrat, ahit, sinagoga, Şabat.", "C) Hıristiyanlık teslis tartışması, İncil, kilise, Mesih inancı.", "D) İslam son peygamber iddiası; Ehl-i kitap kavramı.", "E) Karşılaştırma ahit, peygamber, ahiret ortak zemini; teoloji farkı."],
+    "correctAnswerIndex": 0,
+    "explanation": "Dinler Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Hinduizm hakkında hangisi doğrudur?",
+    "options": ["A) Hinduizm dharma, karma, samsara, Veda.", "B) Yahudilik tevhid, Tevrat, ahit, sinagoga, Şabat.", "C) Hıristiyanlık teslis tartışması, İncil, kilise, Mesih inancı.", "D) İslam son peygamber iddiası; Ehl-i kitap kavramı.", "E) Karşılaştırma ahit, peygamber, ahiret ortak zemini; teoloji farkı."],
+    "correctAnswerIndex": 0,
+    "explanation": "Dinler Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Budizm hangisini ifade eder?",
+    "options": ["A) İslam son peygamber iddiası; Ehl-i kitap kavramı.", "B) Karşılaştırma ahit, peygamber, ahiret ortak zemini; teoloji farkı.", "C) Budizm dört asil hakikat, Nirvana; tanrısız yorum tartışması.", "D) Yahudilik tevhid, Tevrat, ahit, sinagoga, Şabat.", "E) Hıristiyanlık teslis tartışması, İncil, kilise, Mesih inancı."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Dinler Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Dinler Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Karşılaştırma ahit, peygamber, ahiret ortak zemini; teoloji farkı."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Dinler Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Yöntem fenomenolojik anlama; polemik vaaz değil.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Konfüçyanizm-Taoizm ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İslam son peygamber iddiası; Ehl-i kitap kavramı.", "B) Karşılaştırma ahit, peygamber, ahiret ortak zemini; teoloji farkı.", "C) Konfüçyanizm-Taoizm Çin ahlak ve kozmoloji.", "D) Yahudilik tevhid, Tevrat, ahit, sinagoga, Şabat.", "E) Hıristiyanlık teslis tartışması, İncil, kilise, Mesih inancı."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Dinler Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Dinler Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Hinduizm dharma, karma, samsara, Veda."],
+    "question": "Aşağıdakilerden hangisi Şinto için doğru bir açıklamadır?",
+    "options": ["A) Yahudilik tevhid, Tevrat, ahit, sinagoga, Şabat.", "B) Hıristiyanlık teslis tartışması, İncil, kilise, Mesih inancı.", "C) İslam son peygamber iddiası; Ehl-i kitap kavramı.", "D) Karşılaştırma ahit, peygamber, ahiret ortak zemini; teoloji farkı.", "E) Şinto Japon yer kültü."],
+    "correctAnswerIndex": 4,
+    "explanation": "Dinler Tarihi notundaki temel bilgi."
+},
+{
+    "question": "Geleneksel Afrika ve yerli hakkında hangisi doğrudur?",
+    "options": ["A) Hıristiyanlık teslis tartışması, İncil, kilise, Mesih inancı.", "B) İslam son peygamber iddiası; Ehl-i kitap kavramı.", "C) Karşılaştırma ahit, peygamber, ahiret ortak zemini; teoloji farkı.", "D) Geleneksel Afrika ve yerli dinleri yazılı kitap şartı aramaz.", "E) Yahudilik tevhid, Tevrat, ahit, sinagoga, Şabat."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Dinler Tarihi notundaki temel bilgi."
 },
 {
-    "question": "Dinler Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Budizm dört asil hakikat, Nirvana; tanrısız yorum tartışması.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Dinler Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Konfüçyanizm-Taoizm Çin ahlak ve kozmoloji."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Dinler Tarihi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Şinto Japon yer kültü.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Dinler Tarihi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Geleneksel Afrika ve yerli dinleri yazılı kitap şartı aramaz."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Sekülerleşme ve yeni dinî hareketler hangisini ifade eder?",
+    "options": ["A) Sekülerleşme ve yeni dinî hareketler 20. yüzyıl.", "B) Yahudilik tevhid, Tevrat, ahit, sinagoga, Şabat.", "C) Hıristiyanlık teslis tartışması, İncil, kilise, Mesih inancı.", "D) İslam son peygamber iddiası; Ehl-i kitap kavramı.", "E) Karşılaştırma ahit, peygamber, ahiret ortak zemini; teoloji farkı."],
+    "correctAnswerIndex": 0,
+    "explanation": "Dinler Tarihi notundaki temel bilgi."
 }
 ];

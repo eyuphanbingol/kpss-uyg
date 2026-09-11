@@ -55,69 +55,69 @@ window.oabt_fen_1_sorulari = [
     "explanation": "Ortam v'si genelde f'den bağımsızdır."
 },
 {
-    "question": "Fizik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Newton yasaları eylemsizlik, F=ma, etki-tepki; sürtünme ve gerilme bağ kuvvetleridir.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Fizik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) İş-enerji W=ΔK; korunumlu kuvvette mekanik enerji sabit, potansiyel tanımlanır.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Newton için doğru bir açıklamadır?",
+    "options": ["A) Basınç P=F/A; Bernoulli akışkanlarda hız-basınç ilişkisi (ideal).", "B) Newton yasaları eylemsizlik, F=ma, etki-tepki; sürtünme ve gerilme bağ kuvvetleridir.", "C) İş-enerji W=ΔK; korunumlu kuvvette mekanik enerji sabit, potansiyel tanımlanır.", "D) Momentum p=mv, impuls J=Δp; çarpışma esnek/inesnek.", "E) Dönme τ=Iα, L=Iω; tork yoksa açısal momentum korunur."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Fizik notundaki temel bilgi."
 },
 {
-    "question": "Fizik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Momentum p=mv, impuls J=Δp; çarpışma esnek/inesnek.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "İş-enerji hakkında hangisi doğrudur?",
+    "options": ["A) Momentum p=mv, impuls J=Δp; çarpışma esnek/inesnek.", "B) Dönme τ=Iα, L=Iω; tork yoksa açısal momentum korunur.", "C) Basınç P=F/A; Bernoulli akışkanlarda hız-basınç ilişkisi (ideal).", "D) İş-enerji W=ΔK; korunumlu kuvvette mekanik enerji sabit, potansiyel tanımlanır.", "E) Newton yasaları eylemsizlik, F=ma, etki-tepki; sürtünme ve gerilme bağ kuvvetleridir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Fizik notundaki temel bilgi."
 },
 {
-    "question": "Fizik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Dönme τ=Iα, L=Iω; tork yoksa açısal momentum korunur.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Momentum hangisini ifade eder?",
+    "options": ["A) Coulomb F=kq1q2/r^2; alan E=F/q; potansiyel skaler, alan vektör.", "B) Momentum p=mv, impuls J=Δp; çarpışma esnek/inesnek.", "C) Newton yasaları eylemsizlik, F=ma, etki-tepki; sürtünme ve gerilme bağ kuvvetleridir.", "D) İş-enerji W=ΔK; korunumlu kuvvette mekanik enerji sabit, potansiyel tanımlanır.", "E) Basınç P=F/A; Bernoulli akışkanlarda hız-basınç ilişkisi (ideal)."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Fizik notundaki temel bilgi."
 },
 {
-    "question": "Fizik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Basınç P=F/A; Bernoulli akışkanlarda hız-basınç ilişkisi (ideal).", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Fizik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Coulomb F=kq1q2/r^2; alan E=F/q; potansiyel skaler, alan vektör.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Dönme ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Basınç P=F/A; Bernoulli akışkanlarda hız-basınç ilişkisi (ideal).", "B) Dönme τ=Iα, L=Iω; tork yoksa açısal momentum korunur.", "C) Newton yasaları eylemsizlik, F=ma, etki-tepki; sürtünme ve gerilme bağ kuvvetleridir.", "D) İş-enerji W=ΔK; korunumlu kuvvette mekanik enerji sabit, potansiyel tanımlanır.", "E) Momentum p=mv, impuls J=Δp; çarpışma esnek/inesnek."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Fizik notundaki temel bilgi."
 },
 {
-    "question": "Fizik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Ohm V=IR ohmik; seri-paralel direnç; Kirchhoff düğüm ve çevrim.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Basınç için doğru bir açıklamadır?",
+    "options": ["A) Momentum p=mv, impuls J=Δp; çarpışma esnek/inesnek.", "B) Dönme τ=Iα, L=Iω; tork yoksa açısal momentum korunur.", "C) Basınç P=F/A; Bernoulli akışkanlarda hız-basınç ilişkisi (ideal).", "D) Newton yasaları eylemsizlik, F=ma, etki-tepki; sürtünme ve gerilme bağ kuvvetleridir.", "E) İş-enerji W=ΔK; korunumlu kuvvette mekanik enerji sabit, potansiyel tanımlanır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Fizik notundaki temel bilgi."
+},
+{
+    "question": "Coulomb hakkında hangisi doğrudur?",
+    "options": ["A) Newton yasaları eylemsizlik, F=ma, etki-tepki; sürtünme ve gerilme bağ kuvvetleridir.", "B) İş-enerji W=ΔK; korunumlu kuvvette mekanik enerji sabit, potansiyel tanımlanır.", "C) Momentum p=mv, impuls J=Δp; çarpışma esnek/inesnek.", "D) Dönme τ=Iα, L=Iω; tork yoksa açısal momentum korunur.", "E) Coulomb F=kq1q2/r^2; alan E=F/q; potansiyel skaler, alan vektör."],
+    "correctAnswerIndex": 4,
+    "explanation": "Fizik notundaki temel bilgi."
+},
+{
+    "question": "Ohm hangisini ifade eder?",
+    "options": ["A) Newton yasaları eylemsizlik, F=ma, etki-tepki; sürtünme ve gerilme bağ kuvvetleridir.", "B) İş-enerji W=ΔK; korunumlu kuvvette mekanik enerji sabit, potansiyel tanımlanır.", "C) Momentum p=mv, impuls J=Δp; çarpışma esnek/inesnek.", "D) Dönme τ=Iα, L=Iω; tork yoksa açısal momentum korunur.", "E) Ohm V=IR ohmik; seri-paralel direnç; Kirchhoff düğüm ve çevrim."],
+    "correctAnswerIndex": 4,
+    "explanation": "Fizik notundaki temel bilgi."
+},
+{
+    "question": "Manyetizma ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Manyetizma hareketli yük, Lorentz F=q(v×B); indüksiyon Faraday.", "B) Newton yasaları eylemsizlik, F=ma, etki-tepki; sürtünme ve gerilme bağ kuvvetleridir.", "C) İş-enerji W=ΔK; korunumlu kuvvette mekanik enerji sabit, potansiyel tanımlanır.", "D) Momentum p=mv, impuls J=Δp; çarpışma esnek/inesnek.", "E) Dönme τ=Iα, L=Iω; tork yoksa açısal momentum korunur."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Fizik notundaki temel bilgi."
 },
 {
-    "question": "Fizik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Manyetizma hareketli yük, Lorentz F=q(v×B); indüksiyon Faraday.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Dalga için doğru bir açıklamadır?",
+    "options": ["A) İş-enerji W=ΔK; korunumlu kuvvette mekanik enerji sabit, potansiyel tanımlanır.", "B) Momentum p=mv, impuls J=Δp; çarpışma esnek/inesnek.", "C) Dönme τ=Iα, L=Iω; tork yoksa açısal momentum korunur.", "D) Dalga v=fλ; boyuna-enine; girişim, kırınım, Doppler.", "E) Newton yasaları eylemsizlik, F=ma, etki-tepki; sürtünme ve gerilme bağ kuvvetleridir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Fizik notundaki temel bilgi."
 },
 {
-    "question": "Fizik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Dalga v=fλ; boyuna-enine; girişim, kırınım, Doppler.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Işık hakkında hangisi doğrudur?",
+    "options": ["A) Newton yasaları eylemsizlik, F=ma, etki-tepki; sürtünme ve gerilme bağ kuvvetleridir.", "B) İş-enerji W=ΔK; korunumlu kuvvette mekanik enerji sabit, potansiyel tanımlanır.", "C) Momentum p=mv, impuls J=Δp; çarpışma esnek/inesnek.", "D) Dönme τ=Iα, L=Iω; tork yoksa açısal momentum korunur.", "E) Işık hem dalga hem tanecik; yansıma n1 sinθ1=n2 sinθ2 (Snell)."],
+    "correctAnswerIndex": 4,
+    "explanation": "Fizik notundaki temel bilgi."
 },
 {
-    "question": "Fizik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Işık hem dalga hem tanecik; yansıma n1 sinθ1=n2 sinθ2 (Snell).", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Fizik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Fotoelektrik E=hf-φ; şiddet akımı, frekans kinetiği belirler (Einstein).", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Fotoelektrik hangisini ifade eder?",
+    "options": ["A) Newton yasaları eylemsizlik, F=ma, etki-tepki; sürtünme ve gerilme bağ kuvvetleridir.", "B) İş-enerji W=ΔK; korunumlu kuvvette mekanik enerji sabit, potansiyel tanımlanır.", "C) Momentum p=mv, impuls J=Δp; çarpışma esnek/inesnek.", "D) Dönme τ=Iα, L=Iω; tork yoksa açısal momentum korunur.", "E) Fotoelektrik E=hf-φ; şiddet akımı, frekans kinetiği belirler (Einstein)."],
+    "correctAnswerIndex": 4,
+    "explanation": "Fizik notundaki temel bilgi."
 }
 ];

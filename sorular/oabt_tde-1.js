@@ -61,63 +61,63 @@ window.oabt_tde_1_sorulari = [
     "explanation": "Nevai, Çağatay yazı dilinin zirve şair-nesircisidir."
 },
 {
-    "question": "Eski Türk Dili konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Köktürk (Göktürk) alfabesi runik nitelikli 38 işaretli bir yazı sistemidir; sağdan sola ya", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Köktürk (Göktürk) alfabesi için doğru bir açıklamadır?",
+    "options": ["A) Yenisey yazıtları daha kısa mezar kitabeleridir; Orhun'dan dilce arkaik farklar taşır.", "B) Eski Uygur döneminde Manihaist ve Budist metinler, Soğd kökenli Uygur alfabesiyle yazılmıştır.", "C) Irk Bitig Köktürk harfli fal kitabıdır; kâğıt üzerindeki runik Türkçe örneğidir.", "D) Köktürk (Göktürk) alfabesi runik nitelikli 38 işaretli bir yazı sistemidir; sağdan sola yazılır.", "E) Orhun Yazıtları (Köl Tigin, Bilge Kağan, Tonyukuk) 8. yüzyıl, ilk uzunca Türkçe metinlerdir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Eski Türk Dili notundaki temel bilgi."
+},
+{
+    "question": "Orhun Yazıtları hakkında hangisi doğrudur?",
+    "options": ["A) Irk Bitig Köktürk harfli fal kitabıdır; kâğıt üzerindeki runik Türkçe örneğidir.", "B) Orhun Yazıtları (Köl Tigin, Bilge Kağan, Tonyukuk) 8. yüzyıl, ilk uzunca Türkçe metinlerdir.", "C) Köktürk (Göktürk) alfabesi runik nitelikli 38 işaretli bir yazı sistemidir; sağdan sola yazılır.", "D) Yenisey yazıtları daha kısa mezar kitabeleridir; Orhun'dan dilce arkaik farklar taşır.", "E) Eski Uygur döneminde Manihaist ve Budist metinler, Soğd kökenli Uygur alfabesiyle yazılmıştır."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Eski Türk Dili notundaki temel bilgi."
 },
 {
-    "question": "Eski Türk Dili konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Orhun Yazıtları (Köl Tigin, Bilge Kağan, Tonyukuk) 8. yüzyıl, ilk uzunca Türkçe metinlerdi", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Yenisey yazıtları hangisini ifade eder?",
+    "options": ["A) Eski Uygur döneminde Manihaist ve Budist metinler, Soğd kökenli Uygur alfabesiyle yazılmıştır.", "B) Irk Bitig Köktürk harfli fal kitabıdır; kâğıt üzerindeki runik Türkçe örneğidir.", "C) Yenisey yazıtları daha kısa mezar kitabeleridir; Orhun'dan dilce arkaik farklar taşır.", "D) Köktürk (Göktürk) alfabesi runik nitelikli 38 işaretli bir yazı sistemidir; sağdan sola yazılır.", "E) Orhun Yazıtları (Köl Tigin, Bilge Kağan, Tonyukuk) 8. yüzyıl, ilk uzunca Türkçe metinlerdir."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Eski Türk Dili notundaki temel bilgi."
 },
 {
-    "question": "Eski Türk Dili konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Yenisey yazıtları daha kısa mezar kitabeleridir; Orhun'dan dilce arkaik farklar taşır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Eski Uygur ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Yenisey yazıtları daha kısa mezar kitabeleridir; Orhun'dan dilce arkaik farklar taşır.", "B) Irk Bitig Köktürk harfli fal kitabıdır; kâğıt üzerindeki runik Türkçe örneğidir.", "C) Eski Uygur döneminde Manihaist ve Budist metinler, Soğd kökenli Uygur alfabesiyle yazılmıştır.", "D) Köktürk (Göktürk) alfabesi runik nitelikli 38 işaretli bir yazı sistemidir; sağdan sola yazılır.", "E) Orhun Yazıtları (Köl Tigin, Bilge Kağan, Tonyukuk) 8. yüzyıl, ilk uzunca Türkçe metinlerdir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Eski Türk Dili notundaki temel bilgi."
+},
+{
+    "question": "Karahanlı Türkçesi hakkında hangisi doğrudur?",
+    "options": ["A) Yenisey yazıtları daha kısa mezar kitabeleridir; Orhun'dan dilce arkaik farklar taşır.", "B) Eski Uygur döneminde Manihaist ve Budist metinler, Soğd kökenli Uygur alfabesiyle yazılmıştır.", "C) Karahanlı Türkçesi İslami dönemin ilk yazı dilidir; Arap harfleri hâkim olur.", "D) Köktürk (Göktürk) alfabesi runik nitelikli 38 işaretli bir yazı sistemidir; sağdan sola yazılır.", "E) Orhun Yazıtları (Köl Tigin, Bilge Kağan, Tonyukuk) 8. yüzyıl, ilk uzunca Türkçe metinlerdir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Eski Türk Dili notundaki temel bilgi."
+},
+{
+    "question": "Kutadgu Bilig ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Eski Uygur döneminde Manihaist ve Budist metinler, Soğd kökenli Uygur alfabesiyle yazılmıştır.", "B) Kutadgu Bilig (Yusuf Has Hacib, 1069) mesnevi, siyasetname-öğüt; aruzla yazılmıştır.", "C) Köktürk (Göktürk) alfabesi runik nitelikli 38 işaretli bir yazı sistemidir; sağdan sola yazılır.", "D) Orhun Yazıtları (Köl Tigin, Bilge Kağan, Tonyukuk) 8. yüzyıl, ilk uzunca Türkçe metinlerdir.", "E) Yenisey yazıtları daha kısa mezar kitabeleridir; Orhun'dan dilce arkaik farklar taşır."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Eski Türk Dili notundaki temel bilgi."
 },
 {
-    "question": "Eski Türk Dili konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Eski Uygur döneminde Manihaist ve Budist metinler, Soğd kökenli Uygur alfabesiyle yazılmış", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Atabetü'l-Hakayık için doğru bir açıklamadır?",
+    "options": ["A) Orhun Yazıtları (Köl Tigin, Bilge Kağan, Tonyukuk) 8. yüzyıl, ilk uzunca Türkçe metinlerdir.", "B) Yenisey yazıtları daha kısa mezar kitabeleridir; Orhun'dan dilce arkaik farklar taşır.", "C) Eski Uygur döneminde Manihaist ve Budist metinler, Soğd kökenli Uygur alfabesiyle yazılmıştır.", "D) Atabetü'l-Hakayık (Edib Ahmed Yükneki) didaktik; Divan-ı Hikmet (Ahmed Yesevi) tekke-hikmet geleneğidir.", "E) Köktürk (Göktürk) alfabesi runik nitelikli 38 işaretli bir yazı sistemidir; sağdan sola yazılır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Eski Türk Dili notundaki temel bilgi."
+},
+{
+    "question": "Harezm, Kıpçak, Çağatay hakkında hangisi doğrudur?",
+    "options": ["A) Yenisey yazıtları daha kısa mezar kitabeleridir; Orhun'dan dilce arkaik farklar taşır.", "B) Eski Uygur döneminde Manihaist ve Budist metinler, Soğd kökenli Uygur alfabesiyle yazılmıştır.", "C) Harezm, Kıpçak, Çağatay yazı dilleri Orta Türkçe kolunun bölgesel devamlarıdır.", "D) Köktürk (Göktürk) alfabesi runik nitelikli 38 işaretli bir yazı sistemidir; sağdan sola yazılır.", "E) Orhun Yazıtları (Köl Tigin, Bilge Kağan, Tonyukuk) 8. yüzyıl, ilk uzunca Türkçe metinlerdir."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Eski Türk Dili notundaki temel bilgi."
 },
 {
-    "question": "Eski Türk Dili konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Irk Bitig Köktürk harfli fal kitabıdır; kâğıt üzerindeki runik Türkçe örneğidir.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "d/y/z hangisini ifade eder?",
+    "options": ["A) Köktürk (Göktürk) alfabesi runik nitelikli 38 işaretli bir yazı sistemidir; sağdan sola yazılır.", "B) Orhun Yazıtları (Köl Tigin, Bilge Kağan, Tonyukuk) 8. yüzyıl, ilk uzunca Türkçe metinlerdir.", "C) Yenisey yazıtları daha kısa mezar kitabeleridir; Orhun'dan dilce arkaik farklar taşır.", "D) Eski Uygur döneminde Manihaist ve Budist metinler, Soğd kökenli Uygur alfabesiyle yazılmıştır.", "E) d/y/z denklikleri (adak/ayak) lehçe tasnifinde temel ölçüttür."],
+    "correctAnswerIndex": 4,
+    "explanation": "Eski Türk Dili notundaki temel bilgi."
 },
 {
-    "question": "Eski Türk Dili konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Karahanlı Türkçesi İslami dönemin ilk yazı dilidir; Arap harfleri hâkim olur.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Eski Türk Dili konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Divanü Lügati't-Türk (Kaşgarlı Mahmud, 1072-74) ansiklopedik sözlük, lehçe bilgisi ve hari", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Eski Türk Dili konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Kutadgu Bilig (Yusuf Has Hacib, 1069) mesnevi, siyasetname-öğüt; aruzla yazılmıştır.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Eski Türk Dili konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Atabetü'l-Hakayık (Edib Ahmed Yükneki) didaktik; Divan-ı Hikmet (Ahmed Yesevi) tekke-hikme", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Eski Türk Dili konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Harezm, Kıpçak, Çağatay yazı dilleri Orta Türkçe kolunun bölgesel devamlarıdır.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "ünlü uyumu ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Eski Türkçede ünlü uyumu güçlüdür; ekler kalınlık-incelik ve çoğu kez düzlük-yuvarlaklık izler.", "B) Köktürk (Göktürk) alfabesi runik nitelikli 38 işaretli bir yazı sistemidir; sağdan sola yazılır.", "C) Orhun Yazıtları (Köl Tigin, Bilge Kağan, Tonyukuk) 8. yüzyıl, ilk uzunca Türkçe metinlerdir.", "D) Yenisey yazıtları daha kısa mezar kitabeleridir; Orhun'dan dilce arkaik farklar taşır.", "E) Eski Uygur döneminde Manihaist ve Budist metinler, Soğd kökenli Uygur alfabesiyle yazılmıştır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Eski Türk Dili notundaki temel bilgi."
 }
 ];

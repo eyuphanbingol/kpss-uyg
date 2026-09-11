@@ -55,69 +55,69 @@ window.oabt_turkce_9_sorulari = [
     "explanation": "Kriter temelli; bağıl ise norme göredir."
 },
 {
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Ölçme niteliğe sayı/sembol; değerlendirme ölçüme dayanarak karar."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Ölçme için doğru bir açıklamadır?",
+    "options": ["A) Ölçüt mutlak (kriter) veya bağıl (norm); yeterlik temelli program mutlakı yeğler.", "B) Çoktan seçmeli geniş kapsam, tahmin; üst düzey düşünmede sınırlıdır.", "C) Açık uçlu ve performans görevi yazma-konuşmayı doğrudan ölçer; puanlama anahtarı şarttır.", "D) Ölçme niteliğe sayı/sembol; değerlendirme ölçüme dayanarak karar.", "E) Biçimlendirici (formative) öğrenmeyi izler; değer biçici (summative) yargı verir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
 },
 {
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Geçerlik amacı ölçme; güvenirlik tutarlılık; kullanışlılık pratiklik.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Geçerlik hakkında hangisi doğrudur?",
+    "options": ["A) Tanılayıcı ölçme ön bilgi ve yanılgıyı açığa çıkarır.", "B) Ölçüt mutlak (kriter) veya bağıl (norm); yeterlik temelli program mutlakı yeğler.", "C) Geçerlik amacı ölçme; güvenirlik tutarlılık; kullanışlılık pratiklik.", "D) Ölçme niteliğe sayı/sembol; değerlendirme ölçüme dayanarak karar.", "E) Biçimlendirici (formative) öğrenmeyi izler; değer biçici (summative) yargı verir."],
+    "correctAnswerIndex": 2,
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "Biçimlendirici hangisini ifade eder?",
+    "options": ["A) Geçerlik amacı ölçme; güvenirlik tutarlılık; kullanışlılık pratiklik.", "B) Tanılayıcı ölçme ön bilgi ve yanılgıyı açığa çıkarır.", "C) Ölçüt mutlak (kriter) veya bağıl (norm); yeterlik temelli program mutlakı yeğler.", "D) Biçimlendirici (formative) öğrenmeyi izler; değer biçici (summative) yargı verir.", "E) Ölçme niteliğe sayı/sembol; değerlendirme ölçüme dayanarak karar."],
+    "correctAnswerIndex": 3,
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "Tanılayıcı ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Ölçme niteliğe sayı/sembol; değerlendirme ölçüme dayanarak karar.", "B) Geçerlik amacı ölçme; güvenirlik tutarlılık; kullanışlılık pratiklik.", "C) Biçimlendirici (formative) öğrenmeyi izler; değer biçici (summative) yargı verir.", "D) Ölçüt mutlak (kriter) veya bağıl (norm); yeterlik temelli program mutlakı yeğler.", "E) Tanılayıcı ölçme ön bilgi ve yanılgıyı açığa çıkarır."],
+    "correctAnswerIndex": 4,
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Ölçüt için doğru bir açıklamadır?",
+    "options": ["A) Ölçüt mutlak (kriter) veya bağıl (norm); yeterlik temelli program mutlakı yeğler.", "B) Ölçme niteliğe sayı/sembol; değerlendirme ölçüme dayanarak karar.", "C) Geçerlik amacı ölçme; güvenirlik tutarlılık; kullanışlılık pratiklik.", "D) Biçimlendirici (formative) öğrenmeyi izler; değer biçici (summative) yargı verir.", "E) Tanılayıcı ölçme ön bilgi ve yanılgıyı açığa çıkarır."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
 },
 {
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Biçimlendirici (formative) öğrenmeyi izler; değer biçici (summative) yargı verir."],
+    "question": "Çoktan seçmeli hakkında hangisi doğrudur?",
+    "options": ["A) Geçerlik amacı ölçme; güvenirlik tutarlılık; kullanışlılık pratiklik.", "B) Biçimlendirici (formative) öğrenmeyi izler; değer biçici (summative) yargı verir.", "C) Tanılayıcı ölçme ön bilgi ve yanılgıyı açığa çıkarır.", "D) Çoktan seçmeli geniş kapsam, tahmin; üst düzey düşünmede sınırlıdır.", "E) Ölçme niteliğe sayı/sembol; değerlendirme ölçüme dayanarak karar."],
+    "correctAnswerIndex": 3,
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "Açık uçlu hangisini ifade eder?",
+    "options": ["A) Geçerlik amacı ölçme; güvenirlik tutarlılık; kullanışlılık pratiklik.", "B) Biçimlendirici (formative) öğrenmeyi izler; değer biçici (summative) yargı verir.", "C) Tanılayıcı ölçme ön bilgi ve yanılgıyı açığa çıkarır.", "D) Açık uçlu ve performans görevi yazma-konuşmayı doğrudan ölçer; puanlama anahtarı şarttır.", "E) Ölçme niteliğe sayı/sembol; değerlendirme ölçüme dayanarak karar."],
+    "correctAnswerIndex": 3,
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "Rubrik ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Biçimlendirici (formative) öğrenmeyi izler; değer biçici (summative) yargı verir.", "B) Tanılayıcı ölçme ön bilgi ve yanılgıyı açığa çıkarır.", "C) Rubrik bütünsel veya analitik; ölçütler öğrenciyle paylaşılır.", "D) Ölçme niteliğe sayı/sembol; değerlendirme ölçüme dayanarak karar.", "E) Geçerlik amacı ölçme; güvenirlik tutarlılık; kullanışlılık pratiklik."],
+    "correctAnswerIndex": 2,
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Portfolyo için doğru bir açıklamadır?",
+    "options": ["A) Biçimlendirici (formative) öğrenmeyi izler; değer biçici (summative) yargı verir.", "B) Tanılayıcı ölçme ön bilgi ve yanılgıyı açığa çıkarır.", "C) Portfolyo süreç kanıtı; öz ve akran değerlendirme yansıtmayı büyütür.", "D) Ölçme niteliğe sayı/sembol; değerlendirme ölçüme dayanarak karar.", "E) Geçerlik amacı ölçme; güvenirlik tutarlılık; kullanışlılık pratiklik."],
+    "correctAnswerIndex": 2,
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "Dereceleme ölçeği, kontrol listesi, gözlem formu hakkında hangisi doğrudur?",
+    "options": ["A) Biçimlendirici (formative) öğrenmeyi izler; değer biçici (summative) yargı verir.", "B) Tanılayıcı ölçme ön bilgi ve yanılgıyı açığa çıkarır.", "C) Dereceleme ölçeği, kontrol listesi, gözlem formu konuşma ve dinlemeyi görünür kılar.", "D) Ölçme niteliğe sayı/sembol; değerlendirme ölçüme dayanarak karar.", "E) Geçerlik amacı ölçme; güvenirlik tutarlılık; kullanışlılık pratiklik."],
+    "correctAnswerIndex": 2,
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
+},
+{
+    "question": "Madde güçlüğü hangisini ifade eder?",
+    "options": ["A) Ölçme niteliğe sayı/sembol; değerlendirme ölçüme dayanarak karar.", "B) Geçerlik amacı ölçme; güvenirlik tutarlılık; kullanışlılık pratiklik.", "C) Biçimlendirici (formative) öğrenmeyi izler; değer biçici (summative) yargı verir.", "D) Tanılayıcı ölçme ön bilgi ve yanılgıyı açığa çıkarır.", "E) Madde güçlüğü doğru oranı; ayırıcılık üst-alt grup farkı."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Tanılayıcı ölçme ön bilgi ve yanılgıyı açığa çıkarır.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Ölçüt mutlak (kriter) veya bağıl (norm); yeterlik temelli program mutlakı yeğler."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Çoktan seçmeli geniş kapsam, tahmin; üst düzey düşünmede sınırlıdır.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Açık uçlu ve performans görevi yazma-konuşmayı doğrudan ölçer; puanlama anahtarı şarttır."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Rubrik bütünsel veya analitik; ölçütler öğrenciyle paylaşılır.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Portfolyo süreç kanıtı; öz ve akran değerlendirme yansıtmayı büyütür."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Dereceleme ölçeği, kontrol listesi, gözlem formu konuşma ve dinlemeyi görünür kılar.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Ölçme ve Değerlendirme konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Madde güçlüğü doğru oranı; ayırıcılık üst-alt grup farkı."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Ölçme ve Değerlendirme notundaki temel bilgi."
 }
 ];

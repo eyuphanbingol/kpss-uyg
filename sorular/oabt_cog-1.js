@@ -61,63 +61,63 @@ window.oabt_cog_1_sorulari = [
     "explanation": "Orta okyanus sırtı örnektir."
 },
 {
-    "question": "Fiziki Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) İç kuvvetler orojenez, epirojeniz, volkanizma, deprem; dış kuvvetler akarsu, rüzgâr, buzul", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi İç kuvvetler için doğru bir açıklamadır?",
+    "options": ["A) Levha tektoniği yakınlaşma, uzaklaşma, yanal atım; deprem kuşaklarını açıklar.", "B) Kırık (horst-graben) ve kıvrım dağ oluşum tipleridir; Türkiye'de her ikisi de vardır.", "C) Akarsu aşındırması çentik vadi, boğaz, menderes, delta-iri malzeme ayrımı.", "D) Karst kalkerde dolin, uvala, polye, düden, traverten; Akdeniz kuşağı.", "E) İç kuvvetler orojenez, epirojeniz, volkanizma, deprem; dış kuvvetler akarsu, rüzgâr, buzul, karst, dalga."],
+    "correctAnswerIndex": 4,
+    "explanation": "Fiziki Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Fiziki Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Levha tektoniği yakınlaşma, uzaklaşma, yanal atım; deprem kuşaklarını açıklar."],
+    "question": "Levha tektoniği hakkında hangisi doğrudur?",
+    "options": ["A) İç kuvvetler orojenez, epirojeniz, volkanizma, deprem; dış kuvvetler akarsu, rüzgâr, buzul, karst, dalga.", "B) Kırık (horst-graben) ve kıvrım dağ oluşum tipleridir; Türkiye'de her ikisi de vardır.", "C) Akarsu aşındırması çentik vadi, boğaz, menderes, delta-iri malzeme ayrımı.", "D) Karst kalkerde dolin, uvala, polye, düden, traverten; Akdeniz kuşağı.", "E) Levha tektoniği yakınlaşma, uzaklaşma, yanal atım; deprem kuşaklarını açıklar."],
+    "correctAnswerIndex": 4,
+    "explanation": "Fiziki Coğrafya notundaki temel bilgi."
+},
+{
+    "question": "Kırık (horst-graben) ve kıvrım hangisini ifade eder?",
+    "options": ["A) Levha tektoniği yakınlaşma, uzaklaşma, yanal atım; deprem kuşaklarını açıklar.", "B) Akarsu aşındırması çentik vadi, boğaz, menderes, delta-iri malzeme ayrımı.", "C) Karst kalkerde dolin, uvala, polye, düden, traverten; Akdeniz kuşağı.", "D) Kırık (horst-graben) ve kıvrım dağ oluşum tipleridir; Türkiye'de her ikisi de vardır.", "E) İç kuvvetler orojenez, epirojeniz, volkanizma, deprem; dış kuvvetler akarsu, rüzgâr, buzul, karst, dalga."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Fiziki Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Fiziki Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Kırık (horst-graben) ve kıvrım dağ oluşum tipleridir; Türkiye'de her ikisi de vardır.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Akarsu aşındırması ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Akarsu aşındırması çentik vadi, boğaz, menderes, delta-iri malzeme ayrımı.", "B) İç kuvvetler orojenez, epirojeniz, volkanizma, deprem; dış kuvvetler akarsu, rüzgâr, buzul, karst, dalga.", "C) Levha tektoniği yakınlaşma, uzaklaşma, yanal atım; deprem kuşaklarını açıklar.", "D) Kırık (horst-graben) ve kıvrım dağ oluşum tipleridir; Türkiye'de her ikisi de vardır.", "E) Karst kalkerde dolin, uvala, polye, düden, traverten; Akdeniz kuşağı."],
+    "correctAnswerIndex": 0,
+    "explanation": "Fiziki Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Fiziki Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Akarsu aşındırması çentik vadi, boğaz, menderes, delta-iri malzeme ayrımı."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "İklim elemanları hakkında hangisi doğrudur?",
+    "options": ["A) İklim elemanları sıcaklık, basınç, rüzgâr, nem, yağış; faktörler enlem, kara-deniz, yükseltı, bakı.", "B) İç kuvvetler orojenez, epirojeniz, volkanizma, deprem; dış kuvvetler akarsu, rüzgâr, buzul, karst, dalga.", "C) Levha tektoniği yakınlaşma, uzaklaşma, yanal atım; deprem kuşaklarını açıklar.", "D) Kırık (horst-graben) ve kıvrım dağ oluşum tipleridir; Türkiye'de her ikisi de vardır.", "E) Akarsu aşındırması çentik vadi, boğaz, menderes, delta-iri malzeme ayrımı."],
+    "correctAnswerIndex": 0,
+    "explanation": "Fiziki Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Fiziki Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Karst kalkerde dolin, uvala, polye, düden, traverten; Akdeniz kuşağı.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Cephe ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Cephe polar-tropikal hava kütlesi karşılaşması; orta enlem siklonu.", "B) İç kuvvetler orojenez, epirojeniz, volkanizma, deprem; dış kuvvetler akarsu, rüzgâr, buzul, karst, dalga.", "C) Levha tektoniği yakınlaşma, uzaklaşma, yanal atım; deprem kuşaklarını açıklar.", "D) Kırık (horst-graben) ve kıvrım dağ oluşum tipleridir; Türkiye'de her ikisi de vardır.", "E) Akarsu aşındırması çentik vadi, boğaz, menderes, delta-iri malzeme ayrımı."],
+    "correctAnswerIndex": 0,
+    "explanation": "Fiziki Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Fiziki Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) İklim elemanları sıcaklık, basınç, rüzgâr, nem, yağış; faktörler enlem, kara-deniz, yüksel"],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Akarsu rejimi için doğru bir açıklamadır?",
+    "options": ["A) İç kuvvetler orojenez, epirojeniz, volkanizma, deprem; dış kuvvetler akarsu, rüzgâr, buzul, karst, dalga.", "B) Levha tektoniği yakınlaşma, uzaklaşma, yanal atım; deprem kuşaklarını açıklar.", "C) Kırık (horst-graben) ve kıvrım dağ oluşum tipleridir; Türkiye'de her ikisi de vardır.", "D) Akarsu aşındırması çentik vadi, boğaz, menderes, delta-iri malzeme ayrımı.", "E) Akarsu rejimi düzenli/düzensiz; kar, yağmur, kaynak beslenmesi."],
+    "correctAnswerIndex": 4,
+    "explanation": "Fiziki Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Fiziki Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Köppen sınıflaması; Akdeniz, nemli subtropikal, karasal, step, tundra tipleri.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Göl hakkında hangisi doğrudur?",
+    "options": ["A) Göl tektonik, karstik, volkanik, set; yeraltı suyu akifer.", "B) İç kuvvetler orojenez, epirojeniz, volkanizma, deprem; dış kuvvetler akarsu, rüzgâr, buzul, karst, dalga.", "C) Levha tektoniği yakınlaşma, uzaklaşma, yanal atım; deprem kuşaklarını açıklar.", "D) Kırık (horst-graben) ve kıvrım dağ oluşum tipleridir; Türkiye'de her ikisi de vardır.", "E) Akarsu aşındırması çentik vadi, boğaz, menderes, delta-iri malzeme ayrımı."],
+    "correctAnswerIndex": 0,
+    "explanation": "Fiziki Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Fiziki Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Cephe polar-tropikal hava kütlesi karşılaşması; orta enlem siklonu."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Doğal bitki örtüsü hangisini ifade eder?",
+    "options": ["A) Doğal bitki örtüsü iklimin uzun süreli yansımasıdır; kültür bitkisi değildir.", "B) İç kuvvetler orojenez, epirojeniz, volkanizma, deprem; dış kuvvetler akarsu, rüzgâr, buzul, karst, dalga.", "C) Levha tektoniği yakınlaşma, uzaklaşma, yanal atım; deprem kuşaklarını açıklar.", "D) Kırık (horst-graben) ve kıvrım dağ oluşum tipleridir; Türkiye'de her ikisi de vardır.", "E) Akarsu aşındırması çentik vadi, boğaz, menderes, delta-iri malzeme ayrımı."],
+    "correctAnswerIndex": 0,
+    "explanation": "Fiziki Coğrafya notundaki temel bilgi."
 },
 {
-    "question": "Fiziki Coğrafya konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Akarsu rejimi düzenli/düzensiz; kar, yağmur, kaynak beslenmesi.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Fiziki Coğrafya konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Göl tektonik, karstik, volkanik, set; yeraltı suyu akifer."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Maki, bozkır, tayga, tundra, tropikal yağmur ormanı ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Maki, bozkır, tayga, tundra, tropikal yağmur ormanı biyom örnekleridir.", "B) İç kuvvetler orojenez, epirojeniz, volkanizma, deprem; dış kuvvetler akarsu, rüzgâr, buzul, karst, dalga.", "C) Levha tektoniği yakınlaşma, uzaklaşma, yanal atım; deprem kuşaklarını açıklar.", "D) Kırık (horst-graben) ve kıvrım dağ oluşum tipleridir; Türkiye'de her ikisi de vardır.", "E) Akarsu aşındırması çentik vadi, boğaz, menderes, delta-iri malzeme ayrımı."],
+    "correctAnswerIndex": 0,
+    "explanation": "Fiziki Coğrafya notundaki temel bilgi."
 }
 ];

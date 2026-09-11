@@ -73,51 +73,51 @@ window.ags_egitim_10_sorulari = [
     "explanation": "Conditions of Learning."
 },
 {
-    "question": "Öğrenme Psikolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Klasik koşullanma (Pavlov, Watson) nötr uyarıcının koşulsuz uyarıcıyla eşlenerek tepki üre", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Klasik koşullanma için doğru bir açıklamadır?",
+    "options": ["A) Sönme, genelleme, ayırt etme, peş peşe pekiştireç tarifeleri davranışçı tekniklerdir.", "B) Davranışçılık gözlenen davranışı açıklar; anlam, şema ve sosyal bağlamı tek başına kapsamaz.", "C) Klasik koşullanma (Pavlov, Watson) nötr uyarıcının koşulsuz uyarıcıyla eşlenerek tepki üretmesi.", "D) Edimsel koşullanma (Skinner) pekiştireç ve cezanın davranış sıklığını değiştirmesi; olumlu-olumsuz pekiştireç ayrılır.", "E) Thorndike etki yasası doyurucu sonuçlu bağın güçlenmesi; deneme-yanılma."],
+    "correctAnswerIndex": 2,
+    "explanation": "Öğrenme Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Öğrenme Psikolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Edimsel koşullanma (Skinner) pekiştireç ve cezanın davranış sıklığını değiştirmesi; olumlu", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Edimsel koşullanma hakkında hangisi doğrudur?",
+    "options": ["A) Davranışçılık gözlenen davranışı açıklar; anlam, şema ve sosyal bağlamı tek başına kapsamaz.", "B) Edimsel koşullanma (Skinner) pekiştireç ve cezanın davranış sıklığını değiştirmesi; olumlu-olumsuz pekiştireç ayrılır.", "C) Klasik koşullanma (Pavlov, Watson) nötr uyarıcının koşulsuz uyarıcıyla eşlenerek tepki üretmesi.", "D) Thorndike etki yasası doyurucu sonuçlu bağın güçlenmesi; deneme-yanılma.", "E) Sönme, genelleme, ayırt etme, peş peşe pekiştireç tarifeleri davranışçı tekniklerdir."],
+    "correctAnswerIndex": 1,
+    "explanation": "Öğrenme Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Öğrenme Psikolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Thorndike etki yasası doyurucu sonuçlu bağın güçlenmesi; deneme-yanılma.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Thorndike etki yasası hangisini ifade eder?",
+    "options": ["A) Sönme, genelleme, ayırt etme, peş peşe pekiştireç tarifeleri davranışçı tekniklerdir.", "B) Davranışçılık gözlenen davranışı açıklar; anlam, şema ve sosyal bağlamı tek başına kapsamaz.", "C) Thorndike etki yasası doyurucu sonuçlu bağın güçlenmesi; deneme-yanılma.", "D) Klasik koşullanma (Pavlov, Watson) nötr uyarıcının koşulsuz uyarıcıyla eşlenerek tepki üretmesi.", "E) Edimsel koşullanma (Skinner) pekiştireç ve cezanın davranış sıklığını değiştirmesi; olumlu-olumsuz pekiştireç ayrılır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Öğrenme Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Öğrenme Psikolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Sönme, genelleme, ayırt etme, peş peşe pekiştireç tarifeleri davranışçı tekniklerdir.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Sönme, genelleme, ayırt etme ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Sönme, genelleme, ayırt etme, peş peşe pekiştireç tarifeleri davranışçı tekniklerdir.", "B) Klasik koşullanma (Pavlov, Watson) nötr uyarıcının koşulsuz uyarıcıyla eşlenerek tepki üretmesi.", "C) Edimsel koşullanma (Skinner) pekiştireç ve cezanın davranış sıklığını değiştirmesi; olumlu-olumsuz pekiştireç ayrılır.", "D) Thorndike etki yasası doyurucu sonuçlu bağın güçlenmesi; deneme-yanılma.", "E) Davranışçılık gözlenen davranışı açıklar; anlam, şema ve sosyal bağlamı tek başına kapsamaz."],
+    "correctAnswerIndex": 0,
+    "explanation": "Öğrenme Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Öğrenme Psikolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Davranışçılık gözlenen davranışı açıklar; anlam, şema ve sosyal bağlamı tek başına kapsama", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Davranışçılık gözlenen davranışı açıklar için doğru bir açıklamadır?",
+    "options": ["A) Thorndike etki yasası doyurucu sonuçlu bağın güçlenmesi; deneme-yanılma.", "B) Sönme, genelleme, ayırt etme, peş peşe pekiştireç tarifeleri davranışçı tekniklerdir.", "C) Davranışçılık gözlenen davranışı açıklar; anlam, şema ve sosyal bağlamı tek başına kapsamaz.", "D) Klasik koşullanma (Pavlov, Watson) nötr uyarıcının koşulsuz uyarıcıyla eşlenerek tepki üretmesi.", "E) Edimsel koşullanma (Skinner) pekiştireç ve cezanın davranış sıklığını değiştirmesi; olumlu-olumsuz pekiştireç ayrılır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Öğrenme Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Öğrenme Psikolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Bilgi işleme dikkat, kısa süreli/çalışan bellek, uzun süreli bellek; bilişsel yük.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Bilgi işleme hakkında hangisi doğrudur?",
+    "options": ["A) Sönme, genelleme, ayırt etme, peş peşe pekiştireç tarifeleri davranışçı tekniklerdir.", "B) Bilgi işleme dikkat, kısa süreli/çalışan bellek, uzun süreli bellek; bilişsel yük.", "C) Klasik koşullanma (Pavlov, Watson) nötr uyarıcının koşulsuz uyarıcıyla eşlenerek tepki üretmesi.", "D) Edimsel koşullanma (Skinner) pekiştireç ve cezanın davranış sıklığını değiştirmesi; olumlu-olumsuz pekiştireç ayrılır.", "E) Thorndike etki yasası doyurucu sonuçlu bağın güçlenmesi; deneme-yanılma."],
+    "correctAnswerIndex": 1,
+    "explanation": "Öğrenme Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Öğrenme Psikolojisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Ausubel anlamlı öğrenme ve ön örgütleyici; ezber anlamlılığa karşıdır.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Ausubel hangisini ifade eder?",
+    "options": ["A) Ausubel anlamlı öğrenme ve ön örgütleyici; ezber anlamlılığa karşıdır.", "B) Klasik koşullanma (Pavlov, Watson) nötr uyarıcının koşulsuz uyarıcıyla eşlenerek tepki üretmesi.", "C) Edimsel koşullanma (Skinner) pekiştireç ve cezanın davranış sıklığını değiştirmesi; olumlu-olumsuz pekiştireç ayrılır.", "D) Thorndike etki yasası doyurucu sonuçlu bağın güçlenmesi; deneme-yanılma.", "E) Sönme, genelleme, ayırt etme, peş peşe pekiştireç tarifeleri davranışçı tekniklerdir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Öğrenme Psikolojisi notundaki temel bilgi."
 },
 {
-    "question": "Öğrenme Psikolojisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gestalt içgörü ve bütün; Gagné öğrenme türleri ve dokuz olay.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Gestalt ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Sönme, genelleme, ayırt etme, peş peşe pekiştireç tarifeleri davranışçı tekniklerdir.", "B) Gestalt içgörü ve bütün; Gagné öğrenme türleri ve dokuz olay.", "C) Klasik koşullanma (Pavlov, Watson) nötr uyarıcının koşulsuz uyarıcıyla eşlenerek tepki üretmesi.", "D) Edimsel koşullanma (Skinner) pekiştireç ve cezanın davranış sıklığını değiştirmesi; olumlu-olumsuz pekiştireç ayrılır.", "E) Thorndike etki yasası doyurucu sonuçlu bağın güçlenmesi; deneme-yanılma."],
+    "correctAnswerIndex": 1,
+    "explanation": "Öğrenme Psikolojisi notundaki temel bilgi."
 }
 ];

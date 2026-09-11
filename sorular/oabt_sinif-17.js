@@ -61,63 +61,63 @@ window.oabt_sinif_17_sorulari = [
     "explanation": "2026 20 soruluk eğitim bloğu dili."
 },
 {
-    "question": "Din Kültürü ve Ahlak Bilgisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Bilgi, değer, tutum; inanç samimiyeti notlanmaz.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Bilgi, değer, tutum için doğru bir açıklamadır?",
+    "options": ["A) Ahlak dürüstlük, yardım, merhamet yaşantısı.", "B) Dinler okuryazarlığı saygı dili.", "C) İbadet bilgisi zorla kıldırma değildir.", "D) 2026 alan eğitimi yöntem ve etik sorar; fıkıh usulü derinliği İHL ÖABT düzeyinde beklenmez.", "E) Bilgi, değer, tutum; inanç samimiyeti notlanmaz."],
+    "correctAnswerIndex": 4,
+    "explanation": "Din Kültürü ve Ahlak Bilgisi notundaki temel bilgi."
 },
 {
-    "question": "Din Kültürü ve Ahlak Bilgisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Ahlak dürüstlük, yardım, merhamet yaşantısı."],
+    "question": "Ahlak hakkında hangisi doğrudur?",
+    "options": ["A) Bilgi, değer, tutum; inanç samimiyeti notlanmaz.", "B) Dinler okuryazarlığı saygı dili.", "C) İbadet bilgisi zorla kıldırma değildir.", "D) 2026 alan eğitimi yöntem ve etik sorar; fıkıh usulü derinliği İHL ÖABT düzeyinde beklenmez.", "E) Ahlak dürüstlük, yardım, merhamet yaşantısı."],
+    "correctAnswerIndex": 4,
+    "explanation": "Din Kültürü ve Ahlak Bilgisi notundaki temel bilgi."
+},
+{
+    "question": "Dinler okuryazarlığı hangisini ifade eder?",
+    "options": ["A) Ahlak dürüstlük, yardım, merhamet yaşantısı.", "B) İbadet bilgisi zorla kıldırma değildir.", "C) 2026 alan eğitimi yöntem ve etik sorar; fıkıh usulü derinliği İHL ÖABT düzeyinde beklenmez.", "D) Dinler okuryazarlığı saygı dili.", "E) Bilgi, değer, tutum; inanç samimiyeti notlanmaz."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Din Kültürü ve Ahlak Bilgisi notundaki temel bilgi."
 },
 {
-    "question": "Din Kültürü ve Ahlak Bilgisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Dinler okuryazarlığı saygı dili.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Din Kültürü ve Ahlak Bilgisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) İbadet bilgisi zorla kıldırma değildir."],
+    "question": "İbadet bilgisi ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Ahlak dürüstlük, yardım, merhamet yaşantısı.", "B) Dinler okuryazarlığı saygı dili.", "C) 2026 alan eğitimi yöntem ve etik sorar; fıkıh usulü derinliği İHL ÖABT düzeyinde beklenmez.", "D) İbadet bilgisi zorla kıldırma değildir.", "E) Bilgi, değer, tutum; inanç samimiyeti notlanmaz."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Din Kültürü ve Ahlak Bilgisi notundaki temel bilgi."
 },
 {
-    "question": "Din Kültürü ve Ahlak Bilgisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) 2026 alan eğitimi yöntem ve etik sorar; fıkıh usulü derinliği İHL ÖABT düzeyinde beklenmez", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi 2026 alan eğitimi için doğru bir açıklamadır?",
+    "options": ["A) 2026 alan eğitimi yöntem ve etik sorar; fıkıh usulü derinliği İHL ÖABT düzeyinde beklenmez.", "B) Bilgi, değer, tutum; inanç samimiyeti notlanmaz.", "C) Ahlak dürüstlük, yardım, merhamet yaşantısı.", "D) Dinler okuryazarlığı saygı dili.", "E) İbadet bilgisi zorla kıldırma değildir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Din Kültürü ve Ahlak Bilgisi notundaki temel bilgi."
+},
+{
+    "question": "Hikâye, kıssa, örnek olay, drama hakkında hangisi doğrudur?",
+    "options": ["A) Dinler okuryazarlığı saygı dili.", "B) İbadet bilgisi zorla kıldırma değildir.", "C) Hikâye, kıssa, örnek olay, drama.", "D) Bilgi, değer, tutum; inanç samimiyeti notlanmaz.", "E) Ahlak dürüstlük, yardım, merhamet yaşantısı."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Din Kültürü ve Ahlak Bilgisi notundaki temel bilgi."
 },
 {
-    "question": "Din Kültürü ve Ahlak Bilgisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Hikâye, kıssa, örnek olay, drama."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Din Kültürü ve Ahlak Bilgisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gezi cami-müze saygı protokolü.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Gezi hangisini ifade eder?",
+    "options": ["A) Dinler okuryazarlığı saygı dili.", "B) İbadet bilgisi zorla kıldırma değildir.", "C) Gezi cami-müze saygı protokolü.", "D) Bilgi, değer, tutum; inanç samimiyeti notlanmaz.", "E) Ahlak dürüstlük, yardım, merhamet yaşantısı."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Din Kültürü ve Ahlak Bilgisi notundaki temel bilgi."
 },
 {
-    "question": "Din Kültürü ve Ahlak Bilgisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Değer ikilemi sade."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Din Kültürü ve Ahlak Bilgisi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Görsel somutlaştırma.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Değer ikilemi ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Dinler okuryazarlığı saygı dili.", "B) İbadet bilgisi zorla kıldırma değildir.", "C) Değer ikilemi sade.", "D) Bilgi, değer, tutum; inanç samimiyeti notlanmaz.", "E) Ahlak dürüstlük, yardım, merhamet yaşantısı."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Din Kültürü ve Ahlak Bilgisi notundaki temel bilgi."
 },
 {
-    "question": "Din Kültürü ve Ahlak Bilgisi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Aile mahremiyet ve dayatma yasağı."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Görsel için doğru bir açıklamadır?",
+    "options": ["A) İbadet bilgisi zorla kıldırma değildir.", "B) Görsel somutlaştırma.", "C) Bilgi, değer, tutum; inanç samimiyeti notlanmaz.", "D) Ahlak dürüstlük, yardım, merhamet yaşantısı.", "E) Dinler okuryazarlığı saygı dili."],
+    "correctAnswerIndex": 1,
+    "explanation": "Din Kültürü ve Ahlak Bilgisi notundaki temel bilgi."
+},
+{
+    "question": "Aile hakkında hangisi doğrudur?",
+    "options": ["A) İbadet bilgisi zorla kıldırma değildir.", "B) Aile mahremiyet ve dayatma yasağı.", "C) Bilgi, değer, tutum; inanç samimiyeti notlanmaz.", "D) Ahlak dürüstlük, yardım, merhamet yaşantısı.", "E) Dinler okuryazarlığı saygı dili."],
+    "correctAnswerIndex": 1,
+    "explanation": "Din Kültürü ve Ahlak Bilgisi notundaki temel bilgi."
 }
 ];

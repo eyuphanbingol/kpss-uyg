@@ -55,69 +55,69 @@ window.oabt_sosyal_11_sorulari = [
     "explanation": "Paywall eşitsizliği."
 },
 {
-    "question": "Bilim, Teknoloji ve Toplum konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) BTS/STS bilimin toplumsal bağlamı; nötr araç miti.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi BTS/STS için doğru bir açıklamadır?",
+    "options": ["A) Dijital bölünme erişim, beceri, katılım eşitsizliği.", "B) BTS/STS bilimin toplumsal bağlamı; nötr araç miti.", "C) Teknolojik determinizm eleştirisi: toplum da teknolojiyi şekillendirir (karşılıklı inşa).", "D) NOS bağları değer, finansman, öncelik.", "E) Risk toplumu (Beck) belirsizlik, uzmanlık krizi."],
+    "correctAnswerIndex": 1,
+    "explanation": "Bilim, Teknoloji ve Toplum notundaki temel bilgi."
 },
 {
-    "question": "Bilim, Teknoloji ve Toplum konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Teknolojik determinizm eleştirisi: toplum da teknolojiyi şekillendirir (karşılıklı inşa).", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Teknolojik determinizm hakkında hangisi doğrudur?",
+    "options": ["A) Dijital bölünme erişim, beceri, katılım eşitsizliği.", "B) Teknolojik determinizm eleştirisi: toplum da teknolojiyi şekillendirir (karşılıklı inşa).", "C) BTS/STS bilimin toplumsal bağlamı; nötr araç miti.", "D) NOS bağları değer, finansman, öncelik.", "E) Risk toplumu (Beck) belirsizlik, uzmanlık krizi."],
+    "correctAnswerIndex": 1,
+    "explanation": "Bilim, Teknoloji ve Toplum notundaki temel bilgi."
+},
+{
+    "question": "NOS bağları hangisini ifade eder?",
+    "options": ["A) Teknolojik determinizm eleştirisi: toplum da teknolojiyi şekillendirir (karşılıklı inşa).", "B) Risk toplumu (Beck) belirsizlik, uzmanlık krizi.", "C) Dijital bölünme erişim, beceri, katılım eşitsizliği.", "D) NOS bağları değer, finansman, öncelik.", "E) BTS/STS bilimin toplumsal bağlamı; nötr araç miti."],
+    "correctAnswerIndex": 3,
+    "explanation": "Bilim, Teknoloji ve Toplum notundaki temel bilgi."
+},
+{
+    "question": "Risk toplumu ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) BTS/STS bilimin toplumsal bağlamı; nötr araç miti.", "B) Teknolojik determinizm eleştirisi: toplum da teknolojiyi şekillendirir (karşılıklı inşa).", "C) NOS bağları değer, finansman, öncelik.", "D) Dijital bölünme erişim, beceri, katılım eşitsizliği.", "E) Risk toplumu (Beck) belirsizlik, uzmanlık krizi."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Bilim, Teknoloji ve Toplum notundaki temel bilgi."
 },
 {
-    "question": "Bilim, Teknoloji ve Toplum konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) NOS bağları değer, finansman, öncelik.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Dijital bölünme için doğru bir açıklamadır?",
+    "options": ["A) Dijital bölünme erişim, beceri, katılım eşitsizliği.", "B) BTS/STS bilimin toplumsal bağlamı; nötr araç miti.", "C) Teknolojik determinizm eleştirisi: toplum da teknolojiyi şekillendirir (karşılıklı inşa).", "D) NOS bağları değer, finansman, öncelik.", "E) Risk toplumu (Beck) belirsizlik, uzmanlık krizi."],
+    "correctAnswerIndex": 0,
+    "explanation": "Bilim, Teknoloji ve Toplum notundaki temel bilgi."
 },
 {
-    "question": "Bilim, Teknoloji ve Toplum konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Risk toplumu (Beck) belirsizlik, uzmanlık krizi.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Tarım-yazı-matbaa-sanayi-dijital hakkında hangisi doğrudur?",
+    "options": ["A) Tarım-yazı-matbaa-sanayi-dijital devrimlerin toplumsal etkileri.", "B) BTS/STS bilimin toplumsal bağlamı; nötr araç miti.", "C) Teknolojik determinizm eleştirisi: toplum da teknolojiyi şekillendirir (karşılıklı inşa).", "D) NOS bağları değer, finansman, öncelik.", "E) Risk toplumu (Beck) belirsizlik, uzmanlık krizi."],
+    "correctAnswerIndex": 0,
+    "explanation": "Bilim, Teknoloji ve Toplum notundaki temel bilgi."
 },
 {
-    "question": "Bilim, Teknoloji ve Toplum konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Dijital bölünme erişim, beceri, katılım eşitsizliği.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Enerji rejimleri hangisini ifade eder?",
+    "options": ["A) Risk toplumu (Beck) belirsizlik, uzmanlık krizi.", "B) Enerji rejimleri kömür-petrol-yenilenebilir; jeopolitik.", "C) BTS/STS bilimin toplumsal bağlamı; nötr araç miti.", "D) Teknolojik determinizm eleştirisi: toplum da teknolojiyi şekillendirir (karşılıklı inşa).", "E) NOS bağları değer, finansman, öncelik."],
+    "correctAnswerIndex": 1,
+    "explanation": "Bilim, Teknoloji ve Toplum notundaki temel bilgi."
 },
 {
-    "question": "Bilim, Teknoloji ve Toplum konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Tarım-yazı-matbaa-sanayi-dijital devrimlerin toplumsal etkileri.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Biyoteknoloji ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) NOS bağları değer, finansman, öncelik.", "B) Risk toplumu (Beck) belirsizlik, uzmanlık krizi.", "C) Biyoteknoloji GDO, CRISPR, mahremiyet.", "D) BTS/STS bilimin toplumsal bağlamı; nötr araç miti.", "E) Teknolojik determinizm eleştirisi: toplum da teknolojiyi şekillendirir (karşılıklı inşa)."],
+    "correctAnswerIndex": 2,
+    "explanation": "Bilim, Teknoloji ve Toplum notundaki temel bilgi."
 },
 {
-    "question": "Bilim, Teknoloji ve Toplum konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Enerji rejimleri kömür-petrol-yenilenebilir; jeopolitik.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Yapay zekâ için doğru bir açıklamadır?",
+    "options": ["A) NOS bağları değer, finansman, öncelik.", "B) Risk toplumu (Beck) belirsizlik, uzmanlık krizi.", "C) Yapay zekâ önyargı, emek, gözetim.", "D) BTS/STS bilimin toplumsal bağlamı; nötr araç miti.", "E) Teknolojik determinizm eleştirisi: toplum da teknolojiyi şekillendirir (karşılıklı inşa)."],
+    "correctAnswerIndex": 2,
+    "explanation": "Bilim, Teknoloji ve Toplum notundaki temel bilgi."
 },
 {
-    "question": "Bilim, Teknoloji ve Toplum konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Biyoteknoloji GDO, CRISPR, mahremiyet.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Sorumlu inovasyon hakkında hangisi doğrudur?",
+    "options": ["A) Risk toplumu (Beck) belirsizlik, uzmanlık krizi.", "B) Sorumlu inovasyon öngörü, kapsayıcılık, geri alınabilirlik.", "C) BTS/STS bilimin toplumsal bağlamı; nötr araç miti.", "D) Teknolojik determinizm eleştirisi: toplum da teknolojiyi şekillendirir (karşılıklı inşa).", "E) NOS bağları değer, finansman, öncelik."],
+    "correctAnswerIndex": 1,
+    "explanation": "Bilim, Teknoloji ve Toplum notundaki temel bilgi."
 },
 {
-    "question": "Bilim, Teknoloji ve Toplum konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Yapay zekâ önyargı, emek, gözetim.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Bilim, Teknoloji ve Toplum konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Sorumlu inovasyon öngörü, kapsayıcılık, geri alınabilirlik.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Bilim, Teknoloji ve Toplum konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Bilim okuryazarlığı iddia-kanıt, istatistik tuzakları.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Bilim okuryazarlığı hangisini ifade eder?",
+    "options": ["A) Risk toplumu (Beck) belirsizlik, uzmanlık krizi.", "B) Bilim okuryazarlığı iddia-kanıt, istatistik tuzakları.", "C) BTS/STS bilimin toplumsal bağlamı; nötr araç miti.", "D) Teknolojik determinizm eleştirisi: toplum da teknolojiyi şekillendirir (karşılıklı inşa).", "E) NOS bağları değer, finansman, öncelik."],
+    "correctAnswerIndex": 1,
+    "explanation": "Bilim, Teknoloji ve Toplum notundaki temel bilgi."
 }
 ];

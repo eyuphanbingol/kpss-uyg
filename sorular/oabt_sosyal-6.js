@@ -55,69 +55,69 @@ window.oabt_sosyal_6_sorulari = [
     "explanation": "Tutum: biliş-duygu-davranış."
 },
 {
-    "question": "Psikoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gelişim bedensel, bilişsel, sosyal-duygusal; süreklilik-evre tartışması.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Gelişim için doğru bir açıklamadır?",
+    "options": ["A) Bellek duyusal-kısa-uzun; çalışma belleği, unutma.", "B) Gelişim bedensel, bilişsel, sosyal-duygusal; süreklilik-evre tartışması.", "C) Piaget şema, özümseme-uyma, dönemler; Vygotsky ZPD, iskele, dil.", "D) Erikson kimlik vs rol karmaşası ergenlikte.", "E) Öğrenme klasik, edimsel, sosyal öğrenme (Bandura)."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Psikoloji notundaki temel bilgi."
 },
 {
-    "question": "Psikoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Piaget şema, özümseme-uyma, dönemler; Vygotsky ZPD, iskele, dil.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Piaget hakkında hangisi doğrudur?",
+    "options": ["A) Erikson kimlik vs rol karmaşası ergenlikte.", "B) Öğrenme klasik, edimsel, sosyal öğrenme (Bandura).", "C) Bellek duyusal-kısa-uzun; çalışma belleği, unutma.", "D) Piaget şema, özümseme-uyma, dönemler; Vygotsky ZPD, iskele, dil.", "E) Gelişim bedensel, bilişsel, sosyal-duygusal; süreklilik-evre tartışması."],
+    "correctAnswerIndex": 3,
+    "explanation": "Psikoloji notundaki temel bilgi."
+},
+{
+    "question": "Erikson hangisini ifade eder?",
+    "options": ["A) Erikson kimlik vs rol karmaşası ergenlikte.", "B) Gelişim bedensel, bilişsel, sosyal-duygusal; süreklilik-evre tartışması.", "C) Piaget şema, özümseme-uyma, dönemler; Vygotsky ZPD, iskele, dil.", "D) Öğrenme klasik, edimsel, sosyal öğrenme (Bandura).", "E) Bellek duyusal-kısa-uzun; çalışma belleği, unutma."],
+    "correctAnswerIndex": 0,
+    "explanation": "Psikoloji notundaki temel bilgi."
+},
+{
+    "question": "Öğrenme ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Gelişim bedensel, bilişsel, sosyal-duygusal; süreklilik-evre tartışması.", "B) Piaget şema, özümseme-uyma, dönemler; Vygotsky ZPD, iskele, dil.", "C) Erikson kimlik vs rol karmaşası ergenlikte.", "D) Bellek duyusal-kısa-uzun; çalışma belleği, unutma.", "E) Öğrenme klasik, edimsel, sosyal öğrenme (Bandura)."],
+    "correctAnswerIndex": 4,
+    "explanation": "Psikoloji notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Bellek için doğru bir açıklamadır?",
+    "options": ["A) Bellek duyusal-kısa-uzun; çalışma belleği, unutma.", "B) Gelişim bedensel, bilişsel, sosyal-duygusal; süreklilik-evre tartışması.", "C) Piaget şema, özümseme-uyma, dönemler; Vygotsky ZPD, iskele, dil.", "D) Erikson kimlik vs rol karmaşası ergenlikte.", "E) Öğrenme klasik, edimsel, sosyal öğrenme (Bandura)."],
+    "correctAnswerIndex": 0,
+    "explanation": "Psikoloji notundaki temel bilgi."
+},
+{
+    "question": "Güdü hakkında hangisi doğrudur?",
+    "options": ["A) Güdü içgüdü, dürtü, ihtiyaç basamağı (Maslow eleştirili), öz belirleme.", "B) Gelişim bedensel, bilişsel, sosyal-duygusal; süreklilik-evre tartışması.", "C) Piaget şema, özümseme-uyma, dönemler; Vygotsky ZPD, iskele, dil.", "D) Erikson kimlik vs rol karmaşası ergenlikte.", "E) Öğrenme klasik, edimsel, sosyal öğrenme (Bandura)."],
+    "correctAnswerIndex": 0,
+    "explanation": "Psikoloji notundaki temel bilgi."
+},
+{
+    "question": "Duygu hangisini ifade eder?",
+    "options": ["A) Duygu James-Lange tartışması; duygusal zekâ iddiası ölçülür kullanılır.", "B) Piaget şema, özümseme-uyma, dönemler; Vygotsky ZPD, iskele, dil.", "C) Erikson kimlik vs rol karmaşası ergenlikte.", "D) Öğrenme klasik, edimsel, sosyal öğrenme (Bandura).", "E) Bellek duyusal-kısa-uzun; çalışma belleği, unutma."],
+    "correctAnswerIndex": 0,
+    "explanation": "Psikoloji notundaki temel bilgi."
+},
+{
+    "question": "Kişilik ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Gelişim bedensel, bilişsel, sosyal-duygusal; süreklilik-evre tartışması.", "B) Piaget şema, özümseme-uyma, dönemler; Vygotsky ZPD, iskele, dil.", "C) Erikson kimlik vs rol karmaşası ergenlikte.", "D) Öğrenme klasik, edimsel, sosyal öğrenme (Bandura).", "E) Kişilik özellik (Big Five), durum-kişi etkileşimi."],
+    "correctAnswerIndex": 4,
+    "explanation": "Psikoloji notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Tutum için doğru bir açıklamadır?",
+    "options": ["A) Piaget şema, özümseme-uyma, dönemler; Vygotsky ZPD, iskele, dil.", "B) Erikson kimlik vs rol karmaşası ergenlikte.", "C) Öğrenme klasik, edimsel, sosyal öğrenme (Bandura).", "D) Tutum biliş-duygu-davranış; bilişsel çelişki (Festinger).", "E) Gelişim bedensel, bilişsel, sosyal-duygusal; süreklilik-evre tartışması."],
+    "correctAnswerIndex": 3,
+    "explanation": "Psikoloji notundaki temel bilgi."
+},
+{
+    "question": "Sosyal psikoloji hakkında hangisi doğrudur?",
+    "options": ["A) Piaget şema, özümseme-uyma, dönemler; Vygotsky ZPD, iskele, dil.", "B) Erikson kimlik vs rol karmaşası ergenlikte.", "C) Öğrenme klasik, edimsel, sosyal öğrenme (Bandura).", "D) Sosyal psikoloji uyma (Asch), itaat (Milgram), sosyal kimlik, önyargı.", "E) Gelişim bedensel, bilişsel, sosyal-duygusal; süreklilik-evre tartışması."],
+    "correctAnswerIndex": 3,
+    "explanation": "Psikoloji notundaki temel bilgi."
+},
+{
+    "question": "Güdülenme hangisini ifade eder?",
+    "options": ["A) Erikson kimlik vs rol karmaşası ergenlikte.", "B) Öğrenme klasik, edimsel, sosyal öğrenme (Bandura).", "C) Güdülenme içsel-dışsal; ödülün içsel motivasyonu zayıflatma riski.", "D) Gelişim bedensel, bilişsel, sosyal-duygusal; süreklilik-evre tartışması.", "E) Piaget şema, özümseme-uyma, dönemler; Vygotsky ZPD, iskele, dil."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Psikoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Erikson kimlik vs rol karmaşası ergenlikte.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Psikoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Öğrenme klasik, edimsel, sosyal öğrenme (Bandura).", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Psikoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Bellek duyusal-kısa-uzun; çalışma belleği, unutma.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Psikoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Güdü içgüdü, dürtü, ihtiyaç basamağı (Maslow eleştirili), öz belirleme.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Psikoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Duygu James-Lange tartışması; duygusal zekâ iddiası ölçülür kullanılır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Psikoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Kişilik özellik (Big Five), durum-kişi etkileşimi.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Psikoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Tutum biliş-duygu-davranış; bilişsel çelişki (Festinger).", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Psikoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Sosyal psikoloji uyma (Asch), itaat (Milgram), sosyal kimlik, önyargı.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Psikoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Güdülenme içsel-dışsal; ödülün içsel motivasyonu zayıflatma riski.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Psikoloji notundaki temel bilgi."
 }
 ];

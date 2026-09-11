@@ -55,69 +55,69 @@ window.oabt_fen_3_sorulari = [
     "explanation": "Lojistik eğri platosu."
 },
 {
-    "question": "Biyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Hücre teorisi tüm canlılar hücreden; zar, kalıtım, metabolizma ortak.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Hücre teorisi için doğru bir açıklamadır?",
+    "options": ["A) Prokaryot çekirdeksiz; ökaryot organel ve çekirdek.", "B) Mitoz özdeş somatik; mayoz haploid gamet, çeşitlilik (crossing over).", "C) DNA yarı koruyucu eşleme; transkripsiyon-translasyon (merkezi dogma).", "D) Enzim biyo-kataliz; pH ve sıcaklık optimumu, denatürasyon.", "E) Hücre teorisi tüm canlılar hücreden; zar, kalıtım, metabolizma ortak."],
+    "correctAnswerIndex": 4,
+    "explanation": "Biyoloji notundaki temel bilgi."
 },
 {
-    "question": "Biyoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Prokaryot çekirdeksiz; ökaryot organel ve çekirdek.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Prokaryot hakkında hangisi doğrudur?",
+    "options": ["A) Hücre teorisi tüm canlılar hücreden; zar, kalıtım, metabolizma ortak.", "B) Mitoz özdeş somatik; mayoz haploid gamet, çeşitlilik (crossing over).", "C) DNA yarı koruyucu eşleme; transkripsiyon-translasyon (merkezi dogma).", "D) Enzim biyo-kataliz; pH ve sıcaklık optimumu, denatürasyon.", "E) Prokaryot çekirdeksiz; ökaryot organel ve çekirdek."],
+    "correctAnswerIndex": 4,
+    "explanation": "Biyoloji notundaki temel bilgi."
+},
+{
+    "question": "Mitoz hangisini ifade eder?",
+    "options": ["A) Mitoz özdeş somatik; mayoz haploid gamet, çeşitlilik (crossing over).", "B) Hücre teorisi tüm canlılar hücreden; zar, kalıtım, metabolizma ortak.", "C) Prokaryot çekirdeksiz; ökaryot organel ve çekirdek.", "D) DNA yarı koruyucu eşleme; transkripsiyon-translasyon (merkezi dogma).", "E) Enzim biyo-kataliz; pH ve sıcaklık optimumu, denatürasyon."],
+    "correctAnswerIndex": 0,
+    "explanation": "Biyoloji notundaki temel bilgi."
+},
+{
+    "question": "DNA ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Hücre teorisi tüm canlılar hücreden; zar, kalıtım, metabolizma ortak.", "B) Prokaryot çekirdeksiz; ökaryot organel ve çekirdek.", "C) Mitoz özdeş somatik; mayoz haploid gamet, çeşitlilik (crossing over).", "D) Enzim biyo-kataliz; pH ve sıcaklık optimumu, denatürasyon.", "E) DNA yarı koruyucu eşleme; transkripsiyon-translasyon (merkezi dogma)."],
+    "correctAnswerIndex": 4,
+    "explanation": "Biyoloji notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Enzim için doğru bir açıklamadır?",
+    "options": ["A) DNA yarı koruyucu eşleme; transkripsiyon-translasyon (merkezi dogma).", "B) Enzim biyo-kataliz; pH ve sıcaklık optimumu, denatürasyon.", "C) Hücre teorisi tüm canlılar hücreden; zar, kalıtım, metabolizma ortak.", "D) Prokaryot çekirdeksiz; ökaryot organel ve çekirdek.", "E) Mitoz özdeş somatik; mayoz haploid gamet, çeşitlilik (crossing over)."],
+    "correctAnswerIndex": 1,
+    "explanation": "Biyoloji notundaki temel bilgi."
+},
+{
+    "question": "Sınıflandırma hakkında hangisi doğrudur?",
+    "options": ["A) Sınıflandırma üç domain: Bakteri, Arkeler, Eukarya; tür binominal.", "B) Hücre teorisi tüm canlılar hücreden; zar, kalıtım, metabolizma ortak.", "C) Prokaryot çekirdeksiz; ökaryot organel ve çekirdek.", "D) Mitoz özdeş somatik; mayoz haploid gamet, çeşitlilik (crossing over).", "E) DNA yarı koruyucu eşleme; transkripsiyon-translasyon (merkezi dogma)."],
+    "correctAnswerIndex": 0,
+    "explanation": "Biyoloji notundaki temel bilgi."
+},
+{
+    "question": "Fotosentez hangisini ifade eder?",
+    "options": ["A) Prokaryot çekirdeksiz; ökaryot organel ve çekirdek.", "B) Mitoz özdeş somatik; mayoz haploid gamet, çeşitlilik (crossing over).", "C) DNA yarı koruyucu eşleme; transkripsiyon-translasyon (merkezi dogma).", "D) Fotosentez ışık-karbon; solunum mitokondride ATP.", "E) Hücre teorisi tüm canlılar hücreden; zar, kalıtım, metabolizma ortak."],
+    "correctAnswerIndex": 3,
+    "explanation": "Biyoloji notundaki temel bilgi."
+},
+{
+    "question": "Besin ağı ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Mitoz özdeş somatik; mayoz haploid gamet, çeşitlilik (crossing over).", "B) DNA yarı koruyucu eşleme; transkripsiyon-translasyon (merkezi dogma).", "C) Besin ağı üretici-tüketici-ayrıştırıcı; enerji piramidi %10 sezgisi.", "D) Hücre teorisi tüm canlılar hücreden; zar, kalıtım, metabolizma ortak.", "E) Prokaryot çekirdeksiz; ökaryot organel ve çekirdek."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Biyoloji notundaki temel bilgi."
 },
 {
-    "question": "Biyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Mitoz özdeş somatik; mayoz haploid gamet, çeşitlilik (crossing over).", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Popülasyon için doğru bir açıklamadır?",
+    "options": ["A) Hücre teorisi tüm canlılar hücreden; zar, kalıtım, metabolizma ortak.", "B) Prokaryot çekirdeksiz; ökaryot organel ve çekirdek.", "C) Mitoz özdeş somatik; mayoz haploid gamet, çeşitlilik (crossing over).", "D) DNA yarı koruyucu eşleme; transkripsiyon-translasyon (merkezi dogma).", "E) Popülasyon doğum-ölüm-göç; taşıma kapasitesi K, lojistik büyüme."],
+    "correctAnswerIndex": 4,
+    "explanation": "Biyoloji notundaki temel bilgi."
 },
 {
-    "question": "Biyoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) DNA yarı koruyucu eşleme; transkripsiyon-translasyon (merkezi dogma).", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Evrim hakkında hangisi doğrudur?",
+    "options": ["A) Evrim doğal seçilim; adaptasyon bireysel çaba değil popülasyon değişimidir.", "B) Hücre teorisi tüm canlılar hücreden; zar, kalıtım, metabolizma ortak.", "C) Prokaryot çekirdeksiz; ökaryot organel ve çekirdek.", "D) Mitoz özdeş somatik; mayoz haploid gamet, çeşitlilik (crossing over).", "E) DNA yarı koruyucu eşleme; transkripsiyon-translasyon (merkezi dogma)."],
+    "correctAnswerIndex": 0,
+    "explanation": "Biyoloji notundaki temel bilgi."
+},
+{
+    "question": "Homeostazi hangisini ifade eder?",
+    "options": ["A) Mitoz özdeş somatik; mayoz haploid gamet, çeşitlilik (crossing over).", "B) DNA yarı koruyucu eşleme; transkripsiyon-translasyon (merkezi dogma).", "C) Homeostazi negatif geribildirim (vücut ısısı, kan şekeri).", "D) Hücre teorisi tüm canlılar hücreden; zar, kalıtım, metabolizma ortak.", "E) Prokaryot çekirdeksiz; ökaryot organel ve çekirdek."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Biyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Enzim biyo-kataliz; pH ve sıcaklık optimumu, denatürasyon.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Biyoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Sınıflandırma üç domain: Bakteri, Arkeler, Eukarya; tür binominal.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Biyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Fotosentez ışık-karbon; solunum mitokondride ATP.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Biyoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Besin ağı üretici-tüketici-ayrıştırıcı; enerji piramidi %10 sezgisi.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Biyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Popülasyon doğum-ölüm-göç; taşıma kapasitesi K, lojistik büyüme.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Biyoloji konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Evrim doğal seçilim; adaptasyon bireysel çaba değil popülasyon değişimidir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Biyoloji konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Homeostazi negatif geribildirim (vücut ısısı, kan şekeri).", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Biyoloji notundaki temel bilgi."
 }
 ];

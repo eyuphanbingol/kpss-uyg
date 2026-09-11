@@ -55,69 +55,69 @@ window.oabt_bio_2_sorulari = [
     "explanation": "Zorunlu hücre içi parazit."
 },
 {
-    "question": "Canlıların Yapısı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Hayvan dokuları epitelyum, bağ, kas, sinir.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Hayvan dokuları için doğru bir açıklamadır?",
+    "options": ["A) Hayvan dokuları epitelyum, bağ, kas, sinir.", "B) Bitki dokuları meristem, parankima, kollenkima, sklerenkima, iletim ksilem-floem.", "C) Organ sistemleri yapı-fonksiyon uyumu; yüzey/hacim oranı.", "D) Simetri radial-bilateral; sölom tipleri.", "E) Gelişim embriyonik tabakalar ektoderm-mezoderm-endoderm."],
+    "correctAnswerIndex": 0,
+    "explanation": "Canlıların Yapısı notundaki temel bilgi."
 },
 {
-    "question": "Canlıların Yapısı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Bitki dokuları meristem, parankima, kollenkima, sklerenkima, iletim ksilem-floem.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Bitki dokuları hakkında hangisi doğrudur?",
+    "options": ["A) Bitki dokuları meristem, parankima, kollenkima, sklerenkima, iletim ksilem-floem.", "B) Hayvan dokuları epitelyum, bağ, kas, sinir.", "C) Organ sistemleri yapı-fonksiyon uyumu; yüzey/hacim oranı.", "D) Simetri radial-bilateral; sölom tipleri.", "E) Gelişim embriyonik tabakalar ektoderm-mezoderm-endoderm."],
+    "correctAnswerIndex": 0,
+    "explanation": "Canlıların Yapısı notundaki temel bilgi."
+},
+{
+    "question": "Organ sistemleri hangisini ifade eder?",
+    "options": ["A) Simetri radial-bilateral; sölom tipleri.", "B) Gelişim embriyonik tabakalar ektoderm-mezoderm-endoderm.", "C) Organ sistemleri yapı-fonksiyon uyumu; yüzey/hacim oranı.", "D) Hayvan dokuları epitelyum, bağ, kas, sinir.", "E) Bitki dokuları meristem, parankima, kollenkima, sklerenkima, iletim ksilem-floem."],
+    "correctAnswerIndex": 2,
+    "explanation": "Canlıların Yapısı notundaki temel bilgi."
+},
+{
+    "question": "Simetri ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Organ sistemleri yapı-fonksiyon uyumu; yüzey/hacim oranı.", "B) Gelişim embriyonik tabakalar ektoderm-mezoderm-endoderm.", "C) Simetri radial-bilateral; sölom tipleri.", "D) Hayvan dokuları epitelyum, bağ, kas, sinir.", "E) Bitki dokuları meristem, parankima, kollenkima, sklerenkima, iletim ksilem-floem."],
+    "correctAnswerIndex": 2,
+    "explanation": "Canlıların Yapısı notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Gelişim için doğru bir açıklamadır?",
+    "options": ["A) Simetri radial-bilateral; sölom tipleri.", "B) Gelişim embriyonik tabakalar ektoderm-mezoderm-endoderm.", "C) Hayvan dokuları epitelyum, bağ, kas, sinir.", "D) Bitki dokuları meristem, parankima, kollenkima, sklerenkima, iletim ksilem-floem.", "E) Organ sistemleri yapı-fonksiyon uyumu; yüzey/hacim oranı."],
+    "correctAnswerIndex": 1,
+    "explanation": "Canlıların Yapısı notundaki temel bilgi."
+},
+{
+    "question": "Virüs hakkında hangisi doğrudur?",
+    "options": ["A) Bitki dokuları meristem, parankima, kollenkima, sklerenkima, iletim ksilem-floem.", "B) Organ sistemleri yapı-fonksiyon uyumu; yüzey/hacim oranı.", "C) Simetri radial-bilateral; sölom tipleri.", "D) Virüs hücre dışı, zorunlu parazit; canlılık tartışması.", "E) Hayvan dokuları epitelyum, bağ, kas, sinir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Canlıların Yapısı notundaki temel bilgi."
+},
+{
+    "question": "Bakteri-arke hangisini ifade eder?",
+    "options": ["A) Simetri radial-bilateral; sölom tipleri.", "B) Bakteri-arke hücre duvarı farkı (peptidoglikan).", "C) Hayvan dokuları epitelyum, bağ, kas, sinir.", "D) Bitki dokuları meristem, parankima, kollenkima, sklerenkima, iletim ksilem-floem.", "E) Organ sistemleri yapı-fonksiyon uyumu; yüzey/hacim oranı."],
+    "correctAnswerIndex": 1,
+    "explanation": "Canlıların Yapısı notundaki temel bilgi."
+},
+{
+    "question": "Protista ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Simetri radial-bilateral; sölom tipleri.", "B) Protista parafiletik çöp sepeti tarihi; ökaryot çeşitlilik.", "C) Hayvan dokuları epitelyum, bağ, kas, sinir.", "D) Bitki dokuları meristem, parankima, kollenkima, sklerenkima, iletim ksilem-floem.", "E) Organ sistemleri yapı-fonksiyon uyumu; yüzey/hacim oranı."],
+    "correctAnswerIndex": 1,
+    "explanation": "Canlıların Yapısı notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Mantar için doğru bir açıklamadır?",
+    "options": ["A) Mantar kitin, heterotrof absorpsiyon, mikoriza.", "B) Hayvan dokuları epitelyum, bağ, kas, sinir.", "C) Bitki dokuları meristem, parankima, kollenkima, sklerenkima, iletim ksilem-floem.", "D) Organ sistemleri yapı-fonksiyon uyumu; yüzey/hacim oranı.", "E) Simetri radial-bilateral; sölom tipleri."],
+    "correctAnswerIndex": 0,
+    "explanation": "Canlıların Yapısı notundaki temel bilgi."
+},
+{
+    "question": "Bitki-hayvan hakkında hangisi doğrudur?",
+    "options": ["A) Hayvan dokuları epitelyum, bağ, kas, sinir.", "B) Bitki dokuları meristem, parankima, kollenkima, sklerenkima, iletim ksilem-floem.", "C) Organ sistemleri yapı-fonksiyon uyumu; yüzey/hacim oranı.", "D) Simetri radial-bilateral; sölom tipleri.", "E) Bitki-hayvan diplontik/haplontik/alternans; tohumlu-tohumuz."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Canlıların Yapısı notundaki temel bilgi."
 },
 {
-    "question": "Canlıların Yapısı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Organ sistemleri yapı-fonksiyon uyumu; yüzey/hacim oranı.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Canlıların Yapısı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Simetri radial-bilateral; sölom tipleri.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
+    "question": "Gaz alışverişi hangisini ifade eder?",
+    "options": ["A) Hayvan dokuları epitelyum, bağ, kas, sinir.", "B) Bitki dokuları meristem, parankima, kollenkima, sklerenkima, iletim ksilem-floem.", "C) Organ sistemleri yapı-fonksiyon uyumu; yüzey/hacim oranı.", "D) Simetri radial-bilateral; sölom tipleri.", "E) Gaz alışverişi solungaç, akciğer, trake, stoma."],
     "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Canlıların Yapısı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gelişim embriyonik tabakalar ektoderm-mezoderm-endoderm.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Canlıların Yapısı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Virüs hücre dışı, zorunlu parazit; canlılık tartışması.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Canlıların Yapısı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Bakteri-arke hücre duvarı farkı (peptidoglikan).", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Canlıların Yapısı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Protista parafiletik çöp sepeti tarihi; ökaryot çeşitlilik.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Canlıların Yapısı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Mantar kitin, heterotrof absorpsiyon, mikoriza.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Canlıların Yapısı konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Bitki-hayvan diplontik/haplontik/alternans; tohumlu-tohumuz.", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 4,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Canlıların Yapısı konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gaz alışverişi solungaç, akciğer, trake, stoma.", "E) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl"],
-    "correctAnswerIndex": 3,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Canlıların Yapısı notundaki temel bilgi."
 }
 ];

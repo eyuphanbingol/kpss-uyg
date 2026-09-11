@@ -55,69 +55,69 @@ window.oabt_mat_3_sorulari = [
     "explanation": "cisθ + i sinθ."
 },
 {
-    "question": "Geometri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Öklid beşinci postulat (paralel) bağımsızdır; yokluğu hiperbolik, küre eliptik geometriye ", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Geometri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Hilbert aksiyomatik: bağlantı, sıra, eşlik, paralellik, süreklilik.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Öklid için doğru bir açıklamadır?",
+    "options": ["A) Çember kuvveti, kuvvet ekseni; inversiyon çemberleri çember/doğruya çevirir.", "B) Alan ve Pick (kafes); vektör çarpımı paralelkenar alanı.", "C) Öklid beşinci postulat (paralel) bağımsızdır; yokluğu hiperbolik, küre eliptik geometriye götürür.", "D) Hilbert aksiyomatik: bağlantı, sıra, eşlik, paralellik, süreklilik.", "E) Üçgen eşliği ve benzerliği izometri ve homoteti gruplarıyla yorumlanır."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Geometri notundaki temel bilgi."
 },
 {
-    "question": "Geometri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Üçgen eşliği ve benzerliği izometri ve homoteti gruplarıyla yorumlanır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Hilbert hakkında hangisi doğrudur?",
+    "options": ["A) Alan ve Pick (kafes); vektör çarpımı paralelkenar alanı.", "B) Hilbert aksiyomatik: bağlantı, sıra, eşlik, paralellik, süreklilik.", "C) Öklid beşinci postulat (paralel) bağımsızdır; yokluğu hiperbolik, küre eliptik geometriye götürür.", "D) Üçgen eşliği ve benzerliği izometri ve homoteti gruplarıyla yorumlanır.", "E) Çember kuvveti, kuvvet ekseni; inversiyon çemberleri çember/doğruya çevirir."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Geometri notundaki temel bilgi."
 },
 {
-    "question": "Geometri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Çember kuvveti, kuvvet ekseni; inversiyon çemberleri çember/doğruya çevirir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Üçgen eşliği ve benzerliği hangisini ifade eder?",
+    "options": ["A) Hilbert aksiyomatik: bağlantı, sıra, eşlik, paralellik, süreklilik.", "B) Çember kuvveti, kuvvet ekseni; inversiyon çemberleri çember/doğruya çevirir.", "C) Alan ve Pick (kafes); vektör çarpımı paralelkenar alanı.", "D) Üçgen eşliği ve benzerliği izometri ve homoteti gruplarıyla yorumlanır.", "E) Öklid beşinci postulat (paralel) bağımsızdır; yokluğu hiperbolik, küre eliptik geometriye götürür."],
+    "correctAnswerIndex": 3,
+    "explanation": "Geometri notundaki temel bilgi."
 },
 {
-    "question": "Geometri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Alan ve Pick (kafes); vektör çarpımı paralelkenar alanı.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Çember kuvveti ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Öklid beşinci postulat (paralel) bağımsızdır; yokluğu hiperbolik, küre eliptik geometriye götürür.", "B) Hilbert aksiyomatik: bağlantı, sıra, eşlik, paralellik, süreklilik.", "C) Üçgen eşliği ve benzerliği izometri ve homoteti gruplarıyla yorumlanır.", "D) Alan ve Pick (kafes); vektör çarpımı paralelkenar alanı.", "E) Çember kuvveti, kuvvet ekseni; inversiyon çemberleri çember/doğruya çevirir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Geometri notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Alan için doğru bir açıklamadır?",
+    "options": ["A) Çember kuvveti, kuvvet ekseni; inversiyon çemberleri çember/doğruya çevirir.", "B) Alan ve Pick (kafes); vektör çarpımı paralelkenar alanı.", "C) Öklid beşinci postulat (paralel) bağımsızdır; yokluğu hiperbolik, küre eliptik geometriye götürür.", "D) Hilbert aksiyomatik: bağlantı, sıra, eşlik, paralellik, süreklilik.", "E) Üçgen eşliği ve benzerliği izometri ve homoteti gruplarıyla yorumlanır."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Geometri notundaki temel bilgi."
 },
 {
-    "question": "Geometri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Konikler e=c/a: elips e<1, parabol e=1, hiperbol e>1.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Konikler hakkında hangisi doğrudur?",
+    "options": ["A) Öklid beşinci postulat (paralel) bağımsızdır; yokluğu hiperbolik, küre eliptik geometriye götürür.", "B) Hilbert aksiyomatik: bağlantı, sıra, eşlik, paralellik, süreklilik.", "C) Üçgen eşliği ve benzerliği izometri ve homoteti gruplarıyla yorumlanır.", "D) Çember kuvveti, kuvvet ekseni; inversiyon çemberleri çember/doğruya çevirir.", "E) Konikler e=c/a: elips e<1, parabol e=1, hiperbol e>1."],
+    "correctAnswerIndex": 4,
+    "explanation": "Geometri notundaki temel bilgi."
 },
 {
-    "question": "Geometri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) İzometri grubu Öklid düzleminde öteleme, dönme, yansıma, kayan yansıma (üç tür). ", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "İzometri grubu hangisini ifade eder?",
+    "options": ["A) Hilbert aksiyomatik: bağlantı, sıra, eşlik, paralellik, süreklilik.", "B) Üçgen eşliği ve benzerliği izometri ve homoteti gruplarıyla yorumlanır.", "C) Çember kuvveti, kuvvet ekseni; inversiyon çemberleri çember/doğruya çevirir.", "D) İzometri grubu Öklid düzleminde öteleme, dönme, yansıma, kayan yansıma (üç tür).", "E) Öklid beşinci postulat (paralel) bağımsızdır; yokluğu hiperbolik, küre eliptik geometriye götürür."],
+    "correctAnswerIndex": 3,
+    "explanation": "Geometri notundaki temel bilgi."
 },
 {
-    "question": "Geometri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Afin paralelliği korur, uzunluğu genel korumaz; projektif sonsuz noktayı sonluya getirir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Afin ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Hilbert aksiyomatik: bağlantı, sıra, eşlik, paralellik, süreklilik.", "B) Üçgen eşliği ve benzerliği izometri ve homoteti gruplarıyla yorumlanır.", "C) Çember kuvveti, kuvvet ekseni; inversiyon çemberleri çember/doğruya çevirir.", "D) Afin paralelliği korur, uzunluğu genel korumaz; projektif sonsuz noktayı sonluya getirir.", "E) Öklid beşinci postulat (paralel) bağımsızdır; yokluğu hiperbolik, küre eliptik geometriye götürür."],
+    "correctAnswerIndex": 3,
+    "explanation": "Geometri notundaki temel bilgi."
 },
 {
-    "question": "Geometri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Vektör geometrisi doğru parametrik r=a+tv; düzlem n·(r-a)=0.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Vektör geometrisi için doğru bir açıklamadır?",
+    "options": ["A) Öklid beşinci postulat (paralel) bağımsızdır; yokluğu hiperbolik, küre eliptik geometriye götürür.", "B) Hilbert aksiyomatik: bağlantı, sıra, eşlik, paralellik, süreklilik.", "C) Üçgen eşliği ve benzerliği izometri ve homoteti gruplarıyla yorumlanır.", "D) Çember kuvveti, kuvvet ekseni; inversiyon çemberleri çember/doğruya çevirir.", "E) Vektör geometrisi doğru parametrik r=a+tv; düzlem n·(r-a)=0."],
+    "correctAnswerIndex": 4,
+    "explanation": "Geometri notundaki temel bilgi."
 },
 {
-    "question": "Geometri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Eğrilik düzlem eğride κ=|φ'|; uzayda Frenet teğet-normal-binormal.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Eğrilik hakkında hangisi doğrudur?",
+    "options": ["A) Eğrilik düzlem eğride κ=|φ'|; uzayda Frenet teğet-normal-binormal.", "B) Öklid beşinci postulat (paralel) bağımsızdır; yokluğu hiperbolik, küre eliptik geometriye götürür.", "C) Hilbert aksiyomatik: bağlantı, sıra, eşlik, paralellik, süreklilik.", "D) Üçgen eşliği ve benzerliği izometri ve homoteti gruplarıyla yorumlanır.", "E) Çember kuvveti, kuvvet ekseni; inversiyon çemberleri çember/doğruya çevirir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Geometri notundaki temel bilgi."
 },
 {
-    "question": "Geometri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Çokyüzlü açı steradyan; Euler karakteristik topolojik değişmez.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Çokyüzlü açı hangisini ifade eder?",
+    "options": ["A) Öklid beşinci postulat (paralel) bağımsızdır; yokluğu hiperbolik, küre eliptik geometriye götürür.", "B) Hilbert aksiyomatik: bağlantı, sıra, eşlik, paralellik, süreklilik.", "C) Üçgen eşliği ve benzerliği izometri ve homoteti gruplarıyla yorumlanır.", "D) Çember kuvveti, kuvvet ekseni; inversiyon çemberleri çember/doğruya çevirir.", "E) Çokyüzlü açı steradyan; Euler karakteristik topolojik değişmez."],
+    "correctAnswerIndex": 4,
+    "explanation": "Geometri notundaki temel bilgi."
 }
 ];

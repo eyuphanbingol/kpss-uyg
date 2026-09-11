@@ -61,63 +61,63 @@ window.oabt_sinif_11_sorulari = [
     "explanation": "Program."
 },
 {
-    "question": "Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Dinleme, konuşma, okuma, yazma dengeli işlenir.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Dinleme, konuşma, okuma, yazma için doğru bir açıklamadır?",
+    "options": ["A) Konuşma hazırlıklı-hazırlıksız.", "B) 2026 alan eğitimi yöntem ve metin seçimi sorar.", "C) Dinleme, konuşma, okuma, yazma dengeli işlenir.", "D) Okuma sesli, sessiz, paylaşarak, eleştirel.", "E) Yazma süreç: plan-taslak-düzelt-yayım."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Türkçe Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Okuma sesli, sessiz, paylaşarak, eleştirel."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Okuma hakkında hangisi doğrudur?",
+    "options": ["A) Ön bilgi, tahmin, özet, soru üretme.", "B) Okuma sesli, sessiz, paylaşarak, eleştirel.", "C) Yazma süreç: plan-taslak-düzelt-yayım.", "D) Konuşma hazırlıklı-hazırlıksız.", "E) 2026 alan eğitimi yöntem ve metin seçimi sorar."],
+    "correctAnswerIndex": 1,
+    "explanation": "Türkçe Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Yazma süreç: plan-taslak-düzelt-yayım.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Yazma hangisini ifade eder?",
+    "options": ["A) 2026 alan eğitimi yöntem ve metin seçimi sorar.", "B) Ön bilgi, tahmin, özet, soru üretme.", "C) Yazma süreç: plan-taslak-düzelt-yayım.", "D) Okuma sesli, sessiz, paylaşarak, eleştirel.", "E) Konuşma hazırlıklı-hazırlıksız."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Türkçe Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Konuşma hazırlıklı-hazırlıksız."],
+    "question": "Konuşma ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Konuşma hazırlıklı-hazırlıksız.", "B) Okuma sesli, sessiz, paylaşarak, eleştirel.", "C) Yazma süreç: plan-taslak-düzelt-yayım.", "D) 2026 alan eğitimi yöntem ve metin seçimi sorar.", "E) Ön bilgi, tahmin, özet, soru üretme."],
+    "correctAnswerIndex": 0,
+    "explanation": "Türkçe Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi 2026 alan eğitimi için doğru bir açıklamadır?",
+    "options": ["A) 2026 alan eğitimi yöntem ve metin seçimi sorar.", "B) Dinleme, konuşma, okuma, yazma dengeli işlenir.", "C) Okuma sesli, sessiz, paylaşarak, eleştirel.", "D) Yazma süreç: plan-taslak-düzelt-yayım.", "E) Konuşma hazırlıklı-hazırlıksız."],
+    "correctAnswerIndex": 0,
+    "explanation": "Türkçe Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Ön bilgi, tahmin, özet, soru üretme hakkında hangisi doğrudur?",
+    "options": ["A) Dinleme, konuşma, okuma, yazma dengeli işlenir.", "B) Okuma sesli, sessiz, paylaşarak, eleştirel.", "C) Yazma süreç: plan-taslak-düzelt-yayım.", "D) Konuşma hazırlıklı-hazırlıksız.", "E) Ön bilgi, tahmin, özet, soru üretme."],
+    "correctAnswerIndex": 4,
+    "explanation": "Türkçe Öğretimi notundaki temel bilgi."
+},
+{
+    "question": "Grafik örgütleyici hangisini ifade eder?",
+    "options": ["A) Okuma sesli, sessiz, paylaşarak, eleştirel.", "B) Yazma süreç: plan-taslak-düzelt-yayım.", "C) Konuşma hazırlıklı-hazırlıksız.", "D) Grafik örgütleyici.", "E) Dinleme, konuşma, okuma, yazma dengeli işlenir."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Türkçe Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) 2026 alan eğitimi yöntem ve metin seçimi sorar.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Tür ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Tür öykü, şiir, bilgilendirici.", "B) Dinleme, konuşma, okuma, yazma dengeli işlenir.", "C) Okuma sesli, sessiz, paylaşarak, eleştirel.", "D) Yazma süreç: plan-taslak-düzelt-yayım.", "E) Konuşma hazırlıklı-hazırlıksız."],
+    "correctAnswerIndex": 0,
+    "explanation": "Türkçe Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Ön bilgi, tahmin, özet, soru üretme."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi Söz varlığı için doğru bir açıklamadır?",
+    "options": ["A) Dinleme, konuşma, okuma, yazma dengeli işlenir.", "B) Okuma sesli, sessiz, paylaşarak, eleştirel.", "C) Yazma süreç: plan-taslak-düzelt-yayım.", "D) Konuşma hazırlıklı-hazırlıksız.", "E) Söz varlığı bağlam, morfem, sözlük."],
+    "correctAnswerIndex": 4,
+    "explanation": "Türkçe Öğretimi notundaki temel bilgi."
 },
 {
-    "question": "Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Grafik örgütleyici.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Tür öykü, şiir, bilgilendirici."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Söz varlığı bağlam, morfem, sözlük.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Türkçe Öğretimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Medya reklam ve haber sade."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Medya hakkında hangisi doğrudur?",
+    "options": ["A) Dinleme, konuşma, okuma, yazma dengeli işlenir.", "B) Okuma sesli, sessiz, paylaşarak, eleştirel.", "C) Yazma süreç: plan-taslak-düzelt-yayım.", "D) Konuşma hazırlıklı-hazırlıksız.", "E) Medya reklam ve haber sade."],
+    "correctAnswerIndex": 4,
+    "explanation": "Türkçe Öğretimi notundaki temel bilgi."
 }
 ];

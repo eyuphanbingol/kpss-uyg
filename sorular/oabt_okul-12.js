@@ -61,63 +61,63 @@ window.oabt_okul_12_sorulari = [
     "explanation": "Yaratıcılık."
 },
 {
-    "question": "Sanat Etkinlikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Süreç sanatı ürün benzerliği değil keşif."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Süreç sanatı için doğru bir açıklamadır?",
+    "options": ["A) Malzeme açık uçlu (açık-ended).", "B) Duyu parmak boya, kil, kolaj.", "C) 2026 sanat etkinliği eğitim bloğu.", "D) Süreç sanatı ürün benzerliği değil keşif.", "E) Karalama evresi saygı."],
+    "correctAnswerIndex": 3,
+    "explanation": "Sanat Etkinlikleri notundaki temel bilgi."
 },
 {
-    "question": "Sanat Etkinlikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Karalama evresi saygı.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Karalama evresi hakkında hangisi doğrudur?",
+    "options": ["A) Karalama evresi saygı.", "B) Süreç sanatı ürün benzerliği değil keşif.", "C) Malzeme açık uçlu (açık-ended).", "D) Duyu parmak boya, kil, kolaj.", "E) 2026 sanat etkinliği eğitim bloğu."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Sanat Etkinlikleri notundaki temel bilgi."
 },
 {
-    "question": "Sanat Etkinlikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Malzeme açık uçlu (açık-ended)."],
+    "question": "Malzeme hangisini ifade eder?",
+    "options": ["A) 2026 sanat etkinliği eğitim bloğu.", "B) Malzeme açık uçlu (açık-ended).", "C) Süreç sanatı ürün benzerliği değil keşif.", "D) Karalama evresi saygı.", "E) Duyu parmak boya, kil, kolaj."],
+    "correctAnswerIndex": 1,
+    "explanation": "Sanat Etkinlikleri notundaki temel bilgi."
+},
+{
+    "question": "Duyu ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Malzeme açık uçlu (açık-ended).", "B) 2026 sanat etkinliği eğitim bloğu.", "C) Duyu parmak boya, kil, kolaj.", "D) Süreç sanatı ürün benzerliği değil keşif.", "E) Karalama evresi saygı."],
+    "correctAnswerIndex": 2,
+    "explanation": "Sanat Etkinlikleri notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi 2026 için doğru bir açıklamadır?",
+    "options": ["A) Süreç sanatı ürün benzerliği değil keşif.", "B) Karalama evresi saygı.", "C) Malzeme açık uçlu (açık-ended).", "D) Duyu parmak boya, kil, kolaj.", "E) 2026 sanat etkinliği eğitim bloğu."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Sanat Etkinlikleri notundaki temel bilgi."
 },
 {
-    "question": "Sanat Etkinlikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Duyu parmak boya, kil, kolaj.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Atölye hakkında hangisi doğrudur?",
+    "options": ["A) Karalama evresi saygı.", "B) Malzeme açık uçlu (açık-ended).", "C) Duyu parmak boya, kil, kolaj.", "D) Atölye Reggio izi belgeleme.", "E) Süreç sanatı ürün benzerliği değil keşif."],
+    "correctAnswerIndex": 3,
+    "explanation": "Sanat Etkinlikleri notundaki temel bilgi."
 },
 {
-    "question": "Sanat Etkinlikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) 2026 sanat etkinliği eğitim bloğu."],
+    "question": "Müzik-hareket bağ ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Karalama evresi saygı.", "B) Malzeme açık uçlu (açık-ended).", "C) Duyu parmak boya, kil, kolaj.", "D) Müzik-hareket bağ.", "E) Süreç sanatı ürün benzerliği değil keşif."],
+    "correctAnswerIndex": 3,
+    "explanation": "Sanat Etkinlikleri notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Kültür motif için doğru bir açıklamadır?",
+    "options": ["A) Süreç sanatı ürün benzerliği değil keşif.", "B) Karalama evresi saygı.", "C) Malzeme açık uçlu (açık-ended).", "D) Duyu parmak boya, kil, kolaj.", "E) Kültür motif dayatmasız."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Sanat Etkinlikleri notundaki temel bilgi."
 },
 {
-    "question": "Sanat Etkinlikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Atölye Reggio izi belgeleme.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Dijital çekim hakkında hangisi doğrudur?",
+    "options": ["A) Dijital çekim onam.", "B) Süreç sanatı ürün benzerliği değil keşif.", "C) Karalama evresi saygı.", "D) Malzeme açık uçlu (açık-ended).", "E) Duyu parmak boya, kil, kolaj."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Sanat Etkinlikleri notundaki temel bilgi."
 },
 {
-    "question": "Sanat Etkinlikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Doğa malzeme."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Sanat Etkinlikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Müzik-hareket bağ.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Motor fark hangisini ifade eder?",
+    "options": ["A) Motor fark kalın fırça.", "B) Süreç sanatı ürün benzerliği değil keşif.", "C) Karalama evresi saygı.", "D) Malzeme açık uçlu (açık-ended).", "E) Duyu parmak boya, kil, kolaj."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Sanat Etkinlikleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Kültür motif dayatmasız."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Sanat Etkinlikleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Dijital çekim onam.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Sanat Etkinlikleri notundaki temel bilgi."
 }
 ];

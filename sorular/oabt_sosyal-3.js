@@ -55,69 +55,69 @@ window.oabt_sosyal_3_sorulari = [
     "explanation": "Rekabetçi otoriterlik yazını."
 },
 {
-    "question": "Siyaset Bilimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Siyaset değerlerin yetkili dağıtımı (Easton) ve iktidar ilişkisi.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Siyaset için doğru bir açıklamadır?",
+    "options": ["A) Egemenlik iç-dış; küreselleşme ve paylaşılmış egemenlik tartışması.", "B) Rejim demokrasi, otoriterlik, totaliterlik; hibrit rejimler.", "C) Anayasa sınırlı iktidar, haklar, kuvvetler ayrılığı.", "D) Siyaset değerlerin yetkili dağıtımı (Easton) ve iktidar ilişkisi.", "E) Devlet toplum, toprak, egemenlik, hükümet; meşruiyet Weber: geleneksel-karizmatik-yasal."],
+    "correctAnswerIndex": 3,
+    "explanation": "Siyaset Bilimi notundaki temel bilgi."
 },
 {
-    "question": "Siyaset Bilimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Devlet toplum, toprak, egemenlik, hükümet; meşruiyet Weber: geleneksel-karizmatik-yasal.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Devlet hakkında hangisi doğrudur?",
+    "options": ["A) Egemenlik iç-dış; küreselleşme ve paylaşılmış egemenlik tartışması.", "B) Rejim demokrasi, otoriterlik, totaliterlik; hibrit rejimler.", "C) Anayasa sınırlı iktidar, haklar, kuvvetler ayrılığı.", "D) Devlet toplum, toprak, egemenlik, hükümet; meşruiyet Weber: geleneksel-karizmatik-yasal.", "E) Siyaset değerlerin yetkili dağıtımı (Easton) ve iktidar ilişkisi."],
+    "correctAnswerIndex": 3,
+    "explanation": "Siyaset Bilimi notundaki temel bilgi."
+},
+{
+    "question": "Egemenlik hangisini ifade eder?",
+    "options": ["A) Rejim demokrasi, otoriterlik, totaliterlik; hibrit rejimler.", "B) Anayasa sınırlı iktidar, haklar, kuvvetler ayrılığı.", "C) Temsili-katılımcı-müzakereci demokrasi modelleri.", "D) Egemenlik iç-dış; küreselleşme ve paylaşılmış egemenlik tartışması.", "E) Siyaset değerlerin yetkili dağıtımı (Easton) ve iktidar ilişkisi."],
+    "correctAnswerIndex": 3,
+    "explanation": "Siyaset Bilimi notundaki temel bilgi."
+},
+{
+    "question": "Rejim ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Egemenlik iç-dış; küreselleşme ve paylaşılmış egemenlik tartışması.", "B) Anayasa sınırlı iktidar, haklar, kuvvetler ayrılığı.", "C) Rejim demokrasi, otoriterlik, totaliterlik; hibrit rejimler.", "D) Siyaset değerlerin yetkili dağıtımı (Easton) ve iktidar ilişkisi.", "E) Devlet toplum, toprak, egemenlik, hükümet; meşruiyet Weber: geleneksel-karizmatik-yasal."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Siyaset Bilimi notundaki temel bilgi."
 },
 {
-    "question": "Siyaset Bilimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Egemenlik iç-dış; küreselleşme ve paylaşılmış egemenlik tartışması.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Anayasa için doğru bir açıklamadır?",
+    "options": ["A) Siyaset değerlerin yetkili dağıtımı (Easton) ve iktidar ilişkisi.", "B) Devlet toplum, toprak, egemenlik, hükümet; meşruiyet Weber: geleneksel-karizmatik-yasal.", "C) Egemenlik iç-dış; küreselleşme ve paylaşılmış egemenlik tartışması.", "D) Rejim demokrasi, otoriterlik, totaliterlik; hibrit rejimler.", "E) Anayasa sınırlı iktidar, haklar, kuvvetler ayrılığı."],
+    "correctAnswerIndex": 4,
+    "explanation": "Siyaset Bilimi notundaki temel bilgi."
+},
+{
+    "question": "Temsili-katılımcı-müzakereci hakkında hangisi doğrudur?",
+    "options": ["A) Temsili-katılımcı-müzakereci demokrasi modelleri.", "B) Siyaset değerlerin yetkili dağıtımı (Easton) ve iktidar ilişkisi.", "C) Devlet toplum, toprak, egemenlik, hükümet; meşruiyet Weber: geleneksel-karizmatik-yasal.", "D) Egemenlik iç-dış; küreselleşme ve paylaşılmış egemenlik tartışması.", "E) Rejim demokrasi, otoriterlik, totaliterlik; hibrit rejimler."],
+    "correctAnswerIndex": 0,
+    "explanation": "Siyaset Bilimi notundaki temel bilgi."
+},
+{
+    "question": "Seçim sistemleri hangisini ifade eder?",
+    "options": ["A) Rejim demokrasi, otoriterlik, totaliterlik; hibrit rejimler.", "B) Seçim sistemleri çoğunluk-nispi; baraj, temsiliyet-istikrar ödünü.", "C) Siyaset değerlerin yetkili dağıtımı (Easton) ve iktidar ilişkisi.", "D) Devlet toplum, toprak, egemenlik, hükümet; meşruiyet Weber: geleneksel-karizmatik-yasal.", "E) Egemenlik iç-dış; küreselleşme ve paylaşılmış egemenlik tartışması."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Siyaset Bilimi notundaki temel bilgi."
 },
 {
-    "question": "Siyaset Bilimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Rejim demokrasi, otoriterlik, totaliterlik; hibrit rejimler.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Siyasi partiler ve baskı grupları ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Devlet toplum, toprak, egemenlik, hükümet; meşruiyet Weber: geleneksel-karizmatik-yasal.", "B) Egemenlik iç-dış; küreselleşme ve paylaşılmış egemenlik tartışması.", "C) Rejim demokrasi, otoriterlik, totaliterlik; hibrit rejimler.", "D) Siyasi partiler ve baskı grupları çıkar, ideoloji, kitle.", "E) Siyaset değerlerin yetkili dağıtımı (Easton) ve iktidar ilişkisi."],
+    "correctAnswerIndex": 3,
+    "explanation": "Siyaset Bilimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Sivil toplum için doğru bir açıklamadır?",
+    "options": ["A) Egemenlik iç-dış; küreselleşme ve paylaşılmış egemenlik tartışması.", "B) Rejim demokrasi, otoriterlik, totaliterlik; hibrit rejimler.", "C) Sivil toplum devlet-piyasa arası özerk alan.", "D) Siyaset değerlerin yetkili dağıtımı (Easton) ve iktidar ilişkisi.", "E) Devlet toplum, toprak, egemenlik, hükümet; meşruiyet Weber: geleneksel-karizmatik-yasal."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Siyaset Bilimi notundaki temel bilgi."
 },
 {
-    "question": "Siyaset Bilimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Anayasa sınırlı iktidar, haklar, kuvvetler ayrılığı.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Vatandaşlık hakkında hangisi doğrudur?",
+    "options": ["A) Rejim demokrasi, otoriterlik, totaliterlik; hibrit rejimler.", "B) Vatandaşlık hak-ödev, aktif vatandaşlık, anayasal yurttaşlık.", "C) Siyaset değerlerin yetkili dağıtımı (Easton) ve iktidar ilişkisi.", "D) Devlet toplum, toprak, egemenlik, hükümet; meşruiyet Weber: geleneksel-karizmatik-yasal.", "E) Egemenlik iç-dış; küreselleşme ve paylaşılmış egemenlik tartışması."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Siyaset Bilimi notundaki temel bilgi."
 },
 {
-    "question": "Siyaset Bilimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Temsili-katılımcı-müzakereci demokrasi modelleri.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Siyaset Bilimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Seçim sistemleri çoğunluk-nispi; baraj, temsiliyet-istikrar ödünü.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Siyaset Bilimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Siyasi partiler ve baskı grupları çıkar, ideoloji, kitle.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Siyaset Bilimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Sivil toplum devlet-piyasa arası özerk alan.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Siyaset Bilimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Vatandaşlık hak-ödev, aktif vatandaşlık, anayasal yurttaşlık.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Siyaset Bilimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) 1982 Anayasası ve değişiklikler; Cumhurbaşkanlığı hükümet sistemi (2017).", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "1982 Anayasası hangisini ifade eder?",
+    "options": ["A) 1982 Anayasası ve değişiklikler; Cumhurbaşkanlığı hükümet sistemi (2017).", "B) Siyaset değerlerin yetkili dağıtımı (Easton) ve iktidar ilişkisi.", "C) Devlet toplum, toprak, egemenlik, hükümet; meşruiyet Weber: geleneksel-karizmatik-yasal.", "D) Egemenlik iç-dış; küreselleşme ve paylaşılmış egemenlik tartışması.", "E) Rejim demokrasi, otoriterlik, totaliterlik; hibrit rejimler."],
+    "correctAnswerIndex": 0,
+    "explanation": "Siyaset Bilimi notundaki temel bilgi."
 }
 ];

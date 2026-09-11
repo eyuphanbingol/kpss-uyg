@@ -55,69 +55,69 @@ window.oabt_turkce_8_sorulari = [
     "explanation": "Evet/hayır dalları yanılgı haritası çıkarır."
 },
 {
-    "question": "Türkçe Öğretim Yöntemleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Davranışçı tekrar, pekiştireç, hata cezası; dil bilgisi-çeviri yöntemi buna yakındır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Davranışçı için doğru bir açıklamadır?",
+    "options": ["A) Davranışçı tekrar, pekiştireç, hata cezası; dil bilgisi-çeviri yöntemi buna yakındır.", "B) Bilişsel zihin şemaları, strateji öğretimi; yapılandırmacı özgün görev ve sosyal etkileşim.", "C) İletişimsel yaklaşım anlam odaklı görev, gerçek dil kullanımı; dil bilgisi hizmetkârdır.", "D) Metin merkezli öğretim tür, yapı ve söylemi öne çıkarır.", "E) Çoklu zekâ ve öğrenme stilleri iddiaları ölçülür kullanılır; kanıt temeli tartışmalıdır, çeşitlilik yine de yararlıdır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Türkçe Öğretim Yöntemleri notundaki temel bilgi."
 },
 {
-    "question": "Türkçe Öğretim Yöntemleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Bilişsel zihin şemaları, strateji öğretimi; yapılandırmacı özgün görev ve sosyal etkileşim", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Bilişsel hakkında hangisi doğrudur?",
+    "options": ["A) Çoklu zekâ ve öğrenme stilleri iddiaları ölçülür kullanılır; kanıt temeli tartışmalıdır, çeşitlilik yine de yararlıdır.", "B) Bilişsel zihin şemaları, strateji öğretimi; yapılandırmacı özgün görev ve sosyal etkileşim.", "C) Davranışçı tekrar, pekiştireç, hata cezası; dil bilgisi-çeviri yöntemi buna yakındır.", "D) İletişimsel yaklaşım anlam odaklı görev, gerçek dil kullanımı; dil bilgisi hizmetkârdır.", "E) Metin merkezli öğretim tür, yapı ve söylemi öne çıkarır."],
+    "correctAnswerIndex": 1,
+    "explanation": "Türkçe Öğretim Yöntemleri notundaki temel bilgi."
+},
+{
+    "question": "İletişimsel yaklaşım hangisini ifade eder?",
+    "options": ["A) Çoklu zekâ ve öğrenme stilleri iddiaları ölçülür kullanılır; kanıt temeli tartışmalıdır, çeşitlilik yine de yararlıdır.", "B) İletişimsel yaklaşım anlam odaklı görev, gerçek dil kullanımı; dil bilgisi hizmetkârdır.", "C) Davranışçı tekrar, pekiştireç, hata cezası; dil bilgisi-çeviri yöntemi buna yakındır.", "D) Bilişsel zihin şemaları, strateji öğretimi; yapılandırmacı özgün görev ve sosyal etkileşim.", "E) Metin merkezli öğretim tür, yapı ve söylemi öne çıkarır."],
+    "correctAnswerIndex": 1,
+    "explanation": "Türkçe Öğretim Yöntemleri notundaki temel bilgi."
+},
+{
+    "question": "Metin merkezli ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) İletişimsel yaklaşım anlam odaklı görev, gerçek dil kullanımı; dil bilgisi hizmetkârdır.", "B) Çoklu zekâ ve öğrenme stilleri iddiaları ölçülür kullanılır; kanıt temeli tartışmalıdır, çeşitlilik yine de yararlıdır.", "C) Metin merkezli öğretim tür, yapı ve söylemi öne çıkarır.", "D) Davranışçı tekrar, pekiştireç, hata cezası; dil bilgisi-çeviri yöntemi buna yakındır.", "E) Bilişsel zihin şemaları, strateji öğretimi; yapılandırmacı özgün görev ve sosyal etkileşim."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Türkçe Öğretim Yöntemleri notundaki temel bilgi."
 },
 {
-    "question": "Türkçe Öğretim Yöntemleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) İletişimsel yaklaşım anlam odaklı görev, gerçek dil kullanımı; dil bilgisi hizmetkârdır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Çoklu zekâ ve öğrenme stilleri için doğru bir açıklamadır?",
+    "options": ["A) Metin merkezli öğretim tür, yapı ve söylemi öne çıkarır.", "B) Çoklu zekâ ve öğrenme stilleri iddiaları ölçülür kullanılır; kanıt temeli tartışmalıdır, çeşitlilik yine de yararlıdır.", "C) Davranışçı tekrar, pekiştireç, hata cezası; dil bilgisi-çeviri yöntemi buna yakındır.", "D) Bilişsel zihin şemaları, strateji öğretimi; yapılandırmacı özgün görev ve sosyal etkileşim.", "E) İletişimsel yaklaşım anlam odaklı görev, gerçek dil kullanımı; dil bilgisi hizmetkârdır."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Türkçe Öğretim Yöntemleri notundaki temel bilgi."
 },
 {
-    "question": "Türkçe Öğretim Yöntemleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Metin merkezli öğretim tür, yapı ve söylemi öne çıkarır.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Düz anlatım hakkında hangisi doğrudur?",
+    "options": ["A) Davranışçı tekrar, pekiştireç, hata cezası; dil bilgisi-çeviri yöntemi buna yakındır.", "B) Bilişsel zihin şemaları, strateji öğretimi; yapılandırmacı özgün görev ve sosyal etkileşim.", "C) İletişimsel yaklaşım anlam odaklı görev, gerçek dil kullanımı; dil bilgisi hizmetkârdır.", "D) Metin merkezli öğretim tür, yapı ve söylemi öne çıkarır.", "E) Düz anlatım kısa girişte; asıl iş soru-cevap, tartışma, beyin fırtınası, istasyon, köşeleme."],
+    "correctAnswerIndex": 4,
+    "explanation": "Türkçe Öğretim Yöntemleri notundaki temel bilgi."
+},
+{
+    "question": "Drama, rol oynama, örnek olay hangisini ifade eder?",
+    "options": ["A) İletişimsel yaklaşım anlam odaklı görev, gerçek dil kullanımı; dil bilgisi hizmetkârdır.", "B) Metin merkezli öğretim tür, yapı ve söylemi öne çıkarır.", "C) Drama, rol oynama, örnek olay konuşma ve empatiyi büyütür.", "D) Davranışçı tekrar, pekiştireç, hata cezası; dil bilgisi-çeviri yöntemi buna yakındır.", "E) Bilişsel zihin şemaları, strateji öğretimi; yapılandırmacı özgün görev ve sosyal etkileşim."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Türkçe Öğretim Yöntemleri notundaki temel bilgi."
 },
 {
-    "question": "Türkçe Öğretim Yöntemleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Çoklu zekâ ve öğrenme stilleri iddiaları ölçülür kullanılır; kanıt temeli tartışmalıdır, ç", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Kavram haritası, yapılandırılmış grid ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Bilişsel zihin şemaları, strateji öğretimi; yapılandırmacı özgün görev ve sosyal etkileşim.", "B) İletişimsel yaklaşım anlam odaklı görev, gerçek dil kullanımı; dil bilgisi hizmetkârdır.", "C) Metin merkezli öğretim tür, yapı ve söylemi öne çıkarır.", "D) Kavram haritası, yapılandırılmış grid, tanılayıcı dallanmış ağaç kavram yanılgısını görür.", "E) Davranışçı tekrar, pekiştireç, hata cezası; dil bilgisi-çeviri yöntemi buna yakındır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Türkçe Öğretim Yöntemleri notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Proje ve performans için doğru bir açıklamadır?",
+    "options": ["A) Metin merkezli öğretim tür, yapı ve söylemi öne çıkarır.", "B) Proje ve performans uzun erimli ürün; altı şapka bakış çeşitliliği.", "C) Davranışçı tekrar, pekiştireç, hata cezası; dil bilgisi-çeviri yöntemi buna yakındır.", "D) Bilişsel zihin şemaları, strateji öğretimi; yapılandırmacı özgün görev ve sosyal etkileşim.", "E) İletişimsel yaklaşım anlam odaklı görev, gerçek dil kullanımı; dil bilgisi hizmetkârdır."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Türkçe Öğretim Yöntemleri notundaki temel bilgi."
 },
 {
-    "question": "Türkçe Öğretim Yöntemleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Düz anlatım kısa girişte; asıl iş soru-cevap, tartışma, beyin fırtınası, istasyon, köşelem", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "İstasyon, öğrenme galerisi, cümle tamamlatma hakkında hangisi doğrudur?",
+    "options": ["A) İstasyon, öğrenme galerisi, cümle tamamlatma aktif katılım teknikleridir.", "B) Davranışçı tekrar, pekiştireç, hata cezası; dil bilgisi-çeviri yöntemi buna yakındır.", "C) Bilişsel zihin şemaları, strateji öğretimi; yapılandırmacı özgün görev ve sosyal etkileşim.", "D) İletişimsel yaklaşım anlam odaklı görev, gerçek dil kullanımı; dil bilgisi hizmetkârdır.", "E) Metin merkezli öğretim tür, yapı ve söylemi öne çıkarır."],
+    "correctAnswerIndex": 0,
+    "explanation": "Türkçe Öğretim Yöntemleri notundaki temel bilgi."
 },
 {
-    "question": "Türkçe Öğretim Yöntemleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Drama, rol oynama, örnek olay konuşma ve empatiyi büyütür.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Kazanım-strateji-ölçme hangisini ifade eder?",
+    "options": ["A) Metin merkezli öğretim tür, yapı ve söylemi öne çıkarır.", "B) Kazanım-strateji-ölçme hizası (alignment) ders planının omurgasıdır.", "C) Davranışçı tekrar, pekiştireç, hata cezası; dil bilgisi-çeviri yöntemi buna yakındır.", "D) Bilişsel zihin şemaları, strateji öğretimi; yapılandırmacı özgün görev ve sosyal etkileşim.", "E) İletişimsel yaklaşım anlam odaklı görev, gerçek dil kullanımı; dil bilgisi hizmetkârdır."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Türkçe Öğretim Yöntemleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Kavram haritası, yapılandırılmış grid, tanılayıcı dallanmış ağaç kavram yanılgısını görür.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Türkçe Öğretim Yöntemleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Proje ve performans uzun erimli ürün; altı şapka bakış çeşitliliği.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Türkçe Öğretim Yöntemleri konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) İstasyon, öğrenme galerisi, cümle tamamlatma aktif katılım teknikleridir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Türkçe Öğretim Yöntemleri konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Kazanım-strateji-ölçme hizası (alignment) ders planının omurgasıdır.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Türkçe Öğretim Yöntemleri notundaki temel bilgi."
 }
 ];

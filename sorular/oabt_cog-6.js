@@ -61,63 +61,63 @@ window.oabt_cog_6_sorulari = [
     "explanation": "Yeni güvenlik gündemidir."
 },
 {
-    "question": "Jeopolitik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Mackinder Heartland: kara hâkimiyeti; Doğu Avrupa-Rusya kalpgâhı."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Mahan hangisini ifade eder?",
+    "options": ["A) Jeostrateji coğrafi verinin güvenlik politikasına çevrilmesidir.", "B) Mahan deniz gücü; üs, filo, ticaret yolları.", "C) Mackinder Heartland: kara hâkimiyeti; Doğu Avrupa-Rusya kalpgâhı.", "D) Spykman Rimland: kenar kuşak ve denizden kuşatma.", "E) Haushofer lebensraum tartışması; jeopolitiğin ideolojik suistimali."],
+    "correctAnswerIndex": 1,
+    "explanation": "Jeopolitik notundaki temel bilgi."
 },
 {
-    "question": "Jeopolitik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Spykman Rimland: kenar kuşak ve denizden kuşatma.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Haushofer ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Mahan deniz gücü; üs, filo, ticaret yolları.", "B) Jeostrateji coğrafi verinin güvenlik politikasına çevrilmesidir.", "C) Haushofer lebensraum tartışması; jeopolitiğin ideolojik suistimali.", "D) Mackinder Heartland: kara hâkimiyeti; Doğu Avrupa-Rusya kalpgâhı.", "E) Spykman Rimland: kenar kuşak ve denizden kuşatma."],
+    "correctAnswerIndex": 2,
+    "explanation": "Jeopolitik notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Jeostrateji için doğru bir açıklamadır?",
+    "options": ["A) Jeostrateji coğrafi verinin güvenlik politikasına çevrilmesidir.", "B) Mackinder Heartland: kara hâkimiyeti; Doğu Avrupa-Rusya kalpgâhı.", "C) Spykman Rimland: kenar kuşak ve denizden kuşatma.", "D) Mahan deniz gücü; üs, filo, ticaret yolları.", "E) Haushofer lebensraum tartışması; jeopolitiğin ideolojik suistimali."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Jeopolitik notundaki temel bilgi."
 },
 {
-    "question": "Jeopolitik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Mahan deniz gücü; üs, filo, ticaret yolları."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Boğazlar hakkında hangisi doğrudur?",
+    "options": ["A) Spykman Rimland: kenar kuşak ve denizden kuşatma.", "B) Mahan deniz gücü; üs, filo, ticaret yolları.", "C) Haushofer lebensraum tartışması; jeopolitiğin ideolojik suistimali.", "D) Boğazlar Montreux (1936) rejimine bağlı stratejik geçittir.", "E) Mackinder Heartland: kara hâkimiyeti; Doğu Avrupa-Rusya kalpgâhı."],
+    "correctAnswerIndex": 3,
+    "explanation": "Jeopolitik notundaki temel bilgi."
 },
 {
-    "question": "Jeopolitik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Haushofer lebensraum tartışması; jeopolitiğin ideolojik suistimali.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Enerji koridoru hangisini ifade eder?",
+    "options": ["A) Enerji koridoru Hazar-Doğu Akdeniz-Kafkas transit iddiası.", "B) Mackinder Heartland: kara hâkimiyeti; Doğu Avrupa-Rusya kalpgâhı.", "C) Spykman Rimland: kenar kuşak ve denizden kuşatma.", "D) Mahan deniz gücü; üs, filo, ticaret yolları.", "E) Haushofer lebensraum tartışması; jeopolitiğin ideolojik suistimali."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Jeopolitik notundaki temel bilgi."
 },
 {
-    "question": "Jeopolitik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Jeostrateji coğrafi verinin güvenlik politikasına çevrilmesidir."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Jeopolitik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Boğazlar Montreux (1936) rejimine bağlı stratejik geçittir.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "NATO kanat ülkesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) NATO kanat ülkesi; Ortadoğu, Balkan, Kafkas, Doğu Akdeniz dört cephe.", "B) Mackinder Heartland: kara hâkimiyeti; Doğu Avrupa-Rusya kalpgâhı.", "C) Spykman Rimland: kenar kuşak ve denizden kuşatma.", "D) Mahan deniz gücü; üs, filo, ticaret yolları.", "E) Haushofer lebensraum tartışması; jeopolitiğin ideolojik suistimali."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Jeopolitik notundaki temel bilgi."
 },
 {
-    "question": "Jeopolitik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Enerji koridoru Hazar-Doğu Akdeniz-Kafkas transit iddiası."],
+    "question": "Aşağıdakilerden hangisi Mavi vatan için doğru bir açıklamadır?",
+    "options": ["A) Mackinder Heartland: kara hâkimiyeti; Doğu Avrupa-Rusya kalpgâhı.", "B) Spykman Rimland: kenar kuşak ve denizden kuşatma.", "C) Mahan deniz gücü; üs, filo, ticaret yolları.", "D) Haushofer lebensraum tartışması; jeopolitiğin ideolojik suistimali.", "E) Mavi vatan söylemi kıta sahanlığı-MEB tartışmasıdır; hukuk-coğrafya kesişir."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Jeopolitik notundaki temel bilgi."
 },
 {
-    "question": "Jeopolitik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) NATO kanat ülkesi; Ortadoğu, Balkan, Kafkas, Doğu Akdeniz dört cephe.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Su hakkında hangisi doğrudur?",
+    "options": ["A) Su Dicle-Fırat; sınır aşan havza diplomasisi.", "B) Mackinder Heartland: kara hâkimiyeti; Doğu Avrupa-Rusya kalpgâhı.", "C) Spykman Rimland: kenar kuşak ve denizden kuşatma.", "D) Mahan deniz gücü; üs, filo, ticaret yolları.", "E) Haushofer lebensraum tartışması; jeopolitiğin ideolojik suistimali."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Jeopolitik notundaki temel bilgi."
 },
 {
-    "question": "Jeopolitik konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Mavi vatan söylemi kıta sahanlığı-MEB tartışmasıdır; hukuk-coğrafya kesişir."],
+    "question": "Kuşak-Yol hangisini ifade eder?",
+    "options": ["A) Haushofer lebensraum tartışması; jeopolitiğin ideolojik suistimali.", "B) Kuşak-Yol Çin'in kara-deniz bağlantı stratejisi.", "C) Mackinder Heartland: kara hâkimiyeti; Doğu Avrupa-Rusya kalpgâhı.", "D) Spykman Rimland: kenar kuşak ve denizden kuşatma.", "E) Mahan deniz gücü; üs, filo, ticaret yolları."],
+    "correctAnswerIndex": 1,
+    "explanation": "Jeopolitik notundaki temel bilgi."
+},
+{
+    "question": "Kutuplar ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Mackinder Heartland: kara hâkimiyeti; Doğu Avrupa-Rusya kalpgâhı.", "B) Spykman Rimland: kenar kuşak ve denizden kuşatma.", "C) Mahan deniz gücü; üs, filo, ticaret yolları.", "D) Haushofer lebensraum tartışması; jeopolitiğin ideolojik suistimali.", "E) Kutuplar buz erimesiyle yeni deniz yolları ve kaynak rekabeti."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Jeopolitik konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Su Dicle-Fırat; sınır aşan havza diplomasisi.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Jeopolitik notundaki temel bilgi."
 }
 ];

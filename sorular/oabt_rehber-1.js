@@ -61,63 +61,63 @@ window.oabt_rehber_1_sorulari = [
     "explanation": "Zarar vermeme ilkesi."
 },
 {
-    "question": "Psikolojik Danışma Kuramları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Freud bilinçdışı, savunma, aktarım; psikoseksüel evreler.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Aşağıdakilerden hangisi Freud için doğru bir açıklamadır?",
+    "options": ["A) Adler aşağılık duygusu, toplumsal ilgi, yaşam stili.", "B) Jung kollektif bilinçdışı ve arketip; bireyleşme.", "C) Rogers danışan merkezli; koşulsuz kabul, empati, içtenlik.", "D) Gestalt (Perls) şimdi-burada, tamamlanmamış iş, farkındalık.", "E) Freud bilinçdışı, savunma, aktarım; psikoseksüel evreler."],
+    "correctAnswerIndex": 4,
+    "explanation": "Psikolojik Danışma Kuramları notundaki temel bilgi."
+},
+{
+    "question": "Adler hakkında hangisi doğrudur?",
+    "options": ["A) Rogers danışan merkezli; koşulsuz kabul, empati, içtenlik.", "B) Gestalt (Perls) şimdi-burada, tamamlanmamış iş, farkındalık.", "C) Adler aşağılık duygusu, toplumsal ilgi, yaşam stili.", "D) Freud bilinçdışı, savunma, aktarım; psikoseksüel evreler.", "E) Jung kollektif bilinçdışı ve arketip; bireyleşme."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Psikolojik Danışma Kuramları notundaki temel bilgi."
 },
 {
-    "question": "Psikolojik Danışma Kuramları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Adler aşağılık duygusu, toplumsal ilgi, yaşam stili."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Psikolojik Danışma Kuramları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Jung kollektif bilinçdışı ve arketip; bireyleşme.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Jung hangisini ifade eder?",
+    "options": ["A) Rogers danışan merkezli; koşulsuz kabul, empati, içtenlik.", "B) Gestalt (Perls) şimdi-burada, tamamlanmamış iş, farkındalık.", "C) Jung kollektif bilinçdışı ve arketip; bireyleşme.", "D) Freud bilinçdışı, savunma, aktarım; psikoseksüel evreler.", "E) Adler aşağılık duygusu, toplumsal ilgi, yaşam stili."],
     "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Psikolojik Danışma Kuramları notundaki temel bilgi."
 },
 {
-    "question": "Psikolojik Danışma Kuramları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Rogers danışan merkezli; koşulsuz kabul, empati, içtenlik."],
+    "question": "Rogers ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Freud bilinçdışı, savunma, aktarım; psikoseksüel evreler.", "B) Adler aşağılık duygusu, toplumsal ilgi, yaşam stili.", "C) Jung kollektif bilinçdışı ve arketip; bireyleşme.", "D) Gestalt (Perls) şimdi-burada, tamamlanmamış iş, farkındalık.", "E) Rogers danışan merkezli; koşulsuz kabul, empati, içtenlik."],
+    "correctAnswerIndex": 4,
+    "explanation": "Psikolojik Danışma Kuramları notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Gestalt (Perls) için doğru bir açıklamadır?",
+    "options": ["A) Rogers danışan merkezli; koşulsuz kabul, empati, içtenlik.", "B) Gestalt (Perls) şimdi-burada, tamamlanmamış iş, farkındalık.", "C) Freud bilinçdışı, savunma, aktarım; psikoseksüel evreler.", "D) Adler aşağılık duygusu, toplumsal ilgi, yaşam stili.", "E) Jung kollektif bilinçdışı ve arketip; bireyleşme."],
+    "correctAnswerIndex": 1,
+    "explanation": "Psikolojik Danışma Kuramları notundaki temel bilgi."
+},
+{
+    "question": "Davranışçı hakkında hangisi doğrudur?",
+    "options": ["A) Freud bilinçdışı, savunma, aktarım; psikoseksüel evreler.", "B) Adler aşağılık duygusu, toplumsal ilgi, yaşam stili.", "C) Jung kollektif bilinçdışı ve arketip; bireyleşme.", "D) Rogers danışan merkezli; koşulsuz kabul, empati, içtenlik.", "E) Davranışçı klasik-edimsel koşullanma; maruz bırakma, pekiştirme."],
+    "correctAnswerIndex": 4,
+    "explanation": "Psikolojik Danışma Kuramları notundaki temel bilgi."
+},
+{
+    "question": "BDT/CBT (Beck) hangisini ifade eder?",
+    "options": ["A) Adler aşağılık duygusu, toplumsal ilgi, yaşam stili.", "B) Jung kollektif bilinçdışı ve arketip; bireyleşme.", "C) Rogers danışan merkezli; koşulsuz kabul, empati, içtenlik.", "D) BDT/CBT (Beck) otomatik düşünce, bilişsel çarpıtma, ödev.", "E) Freud bilinçdışı, savunma, aktarım; psikoseksüel evreler."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Psikolojik Danışma Kuramları notundaki temel bilgi."
 },
 {
-    "question": "Psikolojik Danışma Kuramları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gestalt (Perls) şimdi-burada, tamamlanmamış iş, farkındalık.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "REBT (Ellis) ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Rogers danışan merkezli; koşulsuz kabul, empati, içtenlik.", "B) REBT (Ellis) A-B-C; irrasyonel inanç.", "C) Freud bilinçdışı, savunma, aktarım; psikoseksüel evreler.", "D) Adler aşağılık duygusu, toplumsal ilgi, yaşam stili.", "E) Jung kollektif bilinçdışı ve arketip; bireyleşme."],
+    "correctAnswerIndex": 1,
+    "explanation": "Psikolojik Danışma Kuramları notundaki temel bilgi."
 },
 {
-    "question": "Psikolojik Danışma Kuramları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Davranışçı klasik-edimsel koşullanma; maruz bırakma, pekiştirme."],
+    "question": "Aşağıdakilerden hangisi Glasser gerçeklik için doğru bir açıklamadır?",
+    "options": ["A) Rogers danışan merkezli; koşulsuz kabul, empati, içtenlik.", "B) Glasser gerçeklik seçim kuramı, WDEP, sorumluluk.", "C) Freud bilinçdışı, savunma, aktarım; psikoseksüel evreler.", "D) Adler aşağılık duygusu, toplumsal ilgi, yaşam stili.", "E) Jung kollektif bilinçdışı ve arketip; bireyleşme."],
+    "correctAnswerIndex": 1,
+    "explanation": "Psikolojik Danışma Kuramları notundaki temel bilgi."
+},
+{
+    "question": "Varoluşçu hakkında hangisi doğrudur?",
+    "options": ["A) Adler aşağılık duygusu, toplumsal ilgi, yaşam stili.", "B) Jung kollektif bilinçdışı ve arketip; bireyleşme.", "C) Rogers danışan merkezli; koşulsuz kabul, empati, içtenlik.", "D) Varoluşçu anlam, ölüm, özgürlük, yalıtım kaygısı.", "E) Freud bilinçdışı, savunma, aktarım; psikoseksüel evreler."],
     "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Psikolojik Danışma Kuramları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) BDT/CBT (Beck) otomatik düşünce, bilişsel çarpıtma, ödev.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Psikolojik Danışma Kuramları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) REBT (Ellis) A-B-C; irrasyonel inanç."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Psikolojik Danışma Kuramları konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Glasser gerçeklik seçim kuramı, WDEP, sorumluluk.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Psikolojik Danışma Kuramları konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "B) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "C) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "D) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "E) Varoluşçu anlam, ölüm, özgürlük, yalıtım kaygısı."],
-    "correctAnswerIndex": 3,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Psikolojik Danışma Kuramları notundaki temel bilgi."
 }
 ];

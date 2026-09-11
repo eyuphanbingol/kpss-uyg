@@ -55,69 +55,69 @@ window.oabt_ilkomat_2_sorulari = [
     "explanation": "Sıfır çarpım kuralı: etkenlerden biri sıfır."
 },
 {
-    "question": "Cebir konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Cebirsel ifade değişken ve işlemlerden oluşur; denklem bir eşitlik iddiasıdır."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Cebir konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Özdeşlik her değerde doğru; denklem seçilmiş çözüm kümesinde doğru.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Aşağıdakilerden hangisi Cebirsel ifade için doğru bir açıklamadır?",
+    "options": ["A) Cebirsel ifade değişken ve işlemlerden oluşur; denklem bir eşitlik iddiasıdır.", "B) Özdeşlik her değerde doğru; denklem seçilmiş çözüm kümesinde doğru.", "C) Lineer denklem ax+b=0; eşitsizliklerde çarpanın işaretine göre yön döner.", "D) İki bilinmeyenli sistem yok etme, yerine koyma, grafik; tutarlı-tutarsız-sonsuz çözüm.", "E) Çarpanlara ayırma ortak çarpan, gruplandırma, kare farkı, iki kare toplamı (karmaşıkta)."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Cebir notundaki temel bilgi."
 },
 {
-    "question": "Cebir konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Lineer denklem ax+b=0; eşitsizliklerde çarpanın işaretine göre yön döner."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Özdeşlik hakkında hangisi doğrudur?",
+    "options": ["A) İki bilinmeyenli sistem yok etme, yerine koyma, grafik; tutarlı-tutarsız-sonsuz çözüm.", "B) Çarpanlara ayırma ortak çarpan, gruplandırma, kare farkı, iki kare toplamı (karmaşıkta).", "C) Özdeşlik her değerde doğru; denklem seçilmiş çözüm kümesinde doğru.", "D) Cebirsel ifade değişken ve işlemlerden oluşur; denklem bir eşitlik iddiasıdır.", "E) Lineer denklem ax+b=0; eşitsizliklerde çarpanın işaretine göre yön döner."],
+    "correctAnswerIndex": 2,
+    "explanation": "Cebir notundaki temel bilgi."
 },
 {
-    "question": "Cebir konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) İki bilinmeyenli sistem yok etme, yerine koyma, grafik; tutarlı-tutarsız-sonsuz çözüm.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Lineer denklem hangisini ifade eder?",
+    "options": ["A) Çarpanlara ayırma ortak çarpan, gruplandırma, kare farkı, iki kare toplamı (karmaşıkta).", "B) Lineer denklem ax+b=0; eşitsizliklerde çarpanın işaretine göre yön döner.", "C) Cebirsel ifade değişken ve işlemlerden oluşur; denklem bir eşitlik iddiasıdır.", "D) Özdeşlik her değerde doğru; denklem seçilmiş çözüm kümesinde doğru.", "E) İki bilinmeyenli sistem yok etme, yerine koyma, grafik; tutarlı-tutarsız-sonsuz çözüm."],
+    "correctAnswerIndex": 1,
+    "explanation": "Cebir notundaki temel bilgi."
+},
+{
+    "question": "İki bilinmeyenli sistem ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Özdeşlik her değerde doğru; denklem seçilmiş çözüm kümesinde doğru.", "B) Lineer denklem ax+b=0; eşitsizliklerde çarpanın işaretine göre yön döner.", "C) Çarpanlara ayırma ortak çarpan, gruplandırma, kare farkı, iki kare toplamı (karmaşıkta).", "D) İki bilinmeyenli sistem yok etme, yerine koyma, grafik; tutarlı-tutarsız-sonsuz çözüm.", "E) Cebirsel ifade değişken ve işlemlerden oluşur; denklem bir eşitlik iddiasıdır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Cebir notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Çarpanlara ayırma için doğru bir açıklamadır?",
+    "options": ["A) İki bilinmeyenli sistem yok etme, yerine koyma, grafik; tutarlı-tutarsız-sonsuz çözüm.", "B) Çarpanlara ayırma ortak çarpan, gruplandırma, kare farkı, iki kare toplamı (karmaşıkta).", "C) Cebirsel ifade değişken ve işlemlerden oluşur; denklem bir eşitlik iddiasıdır.", "D) Özdeşlik her değerde doğru; denklem seçilmiş çözüm kümesinde doğru.", "E) Lineer denklem ax+b=0; eşitsizliklerde çarpanın işaretine göre yön döner."],
+    "correctAnswerIndex": 1,
+    "explanation": "Cebir notundaki temel bilgi."
+},
+{
+    "question": "Polinom hakkında hangisi doğrudur?",
+    "options": ["A) İki bilinmeyenli sistem yok etme, yerine koyma, grafik; tutarlı-tutarsız-sonsuz çözüm.", "B) Polinom a_n x^n+...+a0; derece en yüksek üs, kök çarpan teoremiyle bağlanır.", "C) Cebirsel ifade değişken ve işlemlerden oluşur; denklem bir eşitlik iddiasıdır.", "D) Özdeşlik her değerde doğru; denklem seçilmiş çözüm kümesinde doğru.", "E) Lineer denklem ax+b=0; eşitsizliklerde çarpanın işaretine göre yön döner."],
+    "correctAnswerIndex": 1,
+    "explanation": "Cebir notundaki temel bilgi."
+},
+{
+    "question": "Kalan teoremi hangisini ifade eder?",
+    "options": ["A) Kalan teoremi f(c) = f(x)'in (x-c)'ye bölümünden kalan.", "B) Cebirsel ifade değişken ve işlemlerden oluşur; denklem bir eşitlik iddiasıdır.", "C) Özdeşlik her değerde doğru; denklem seçilmiş çözüm kümesinde doğru.", "D) Lineer denklem ax+b=0; eşitsizliklerde çarpanın işaretine göre yön döner.", "E) İki bilinmeyenli sistem yok etme, yerine koyma, grafik; tutarlı-tutarsız-sonsuz çözüm."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Cebir notundaki temel bilgi."
 },
 {
-    "question": "Cebir konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Çarpanlara ayırma ortak çarpan, gruplandırma, kare farkı, iki kare toplamı (karmaşıkta)."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Üstel ve logaritma ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Lineer denklem ax+b=0; eşitsizliklerde çarpanın işaretine göre yön döner.", "B) İki bilinmeyenli sistem yok etme, yerine koyma, grafik; tutarlı-tutarsız-sonsuz çözüm.", "C) Üstel ve logaritma ters süreçtir; log_a (xy)=log_a x + log_a y.", "D) Cebirsel ifade değişken ve işlemlerden oluşur; denklem bir eşitlik iddiasıdır.", "E) Özdeşlik her değerde doğru; denklem seçilmiş çözüm kümesinde doğru."],
+    "correctAnswerIndex": 2,
+    "explanation": "Cebir notundaki temel bilgi."
 },
 {
-    "question": "Cebir konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Polinom a_n x^n+...+a0; derece en yüksek üs, kök çarpan teoremiyle bağlanır.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Aşağıdakilerden hangisi İkinci derece için doğru bir açıklamadır?",
+    "options": ["A) Özdeşlik her değerde doğru; denklem seçilmiş çözüm kümesinde doğru.", "B) Lineer denklem ax+b=0; eşitsizliklerde çarpanın işaretine göre yön döner.", "C) İki bilinmeyenli sistem yok etme, yerine koyma, grafik; tutarlı-tutarsız-sonsuz çözüm.", "D) İkinci derece diskiminant; tepe noktası x=-b/(2a); parabol yönü a'nın işaretine bağlıdır.", "E) Cebirsel ifade değişken ve işlemlerden oluşur; denklem bir eşitlik iddiasıdır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Cebir notundaki temel bilgi."
 },
 {
-    "question": "Cebir konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Kalan teoremi f(c) = f(x)'in (x-c)'ye bölümünden kalan."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Oran-orantı ve yüzde hakkında hangisi doğrudur?",
+    "options": ["A) Özdeşlik her değerde doğru; denklem seçilmiş çözüm kümesinde doğru.", "B) Lineer denklem ax+b=0; eşitsizliklerde çarpanın işaretine göre yön döner.", "C) İki bilinmeyenli sistem yok etme, yerine koyma, grafik; tutarlı-tutarsız-sonsuz çözüm.", "D) Oran-orantı ve yüzde ilköğretim cebirinin aritmetik köprüsüdür.", "E) Cebirsel ifade değişken ve işlemlerden oluşur; denklem bir eşitlik iddiasıdır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Cebir notundaki temel bilgi."
 },
 {
-    "question": "Cebir konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Üstel ve logaritma ters süreçtir; log_a (xy)=log_a x + log_a y.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Cebir konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) İkinci derece diskiminant; tepe noktası x=-b/(2a); parabol yönü a'nın işaretine bağlıdır."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Cebir konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Oran-orantı ve yüzde ilköğretim cebirinin aritmetik köprüsüdür.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Cebir konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Sayı örüntüsü yineleme kuralı veya kapalı form ile ifade edilir."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Sayı örüntüsü hangisini ifade eder?",
+    "options": ["A) İki bilinmeyenli sistem yok etme, yerine koyma, grafik; tutarlı-tutarsız-sonsuz çözüm.", "B) Sayı örüntüsü yineleme kuralı veya kapalı form ile ifade edilir.", "C) Cebirsel ifade değişken ve işlemlerden oluşur; denklem bir eşitlik iddiasıdır.", "D) Özdeşlik her değerde doğru; denklem seçilmiş çözüm kümesinde doğru.", "E) Lineer denklem ax+b=0; eşitsizliklerde çarpanın işaretine göre yön döner."],
+    "correctAnswerIndex": 1,
+    "explanation": "Cebir notundaki temel bilgi."
 }
 ];

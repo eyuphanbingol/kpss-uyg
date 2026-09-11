@@ -61,63 +61,63 @@ window.oabt_tde_6_sorulari = [
     "explanation": "Bloom'da bilgi ile analiz ayrılır."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Metin türü bilgisi (şiir, roman, tiyatro, deneme) kazandırma hedefi ÖABT alan eğitiminin o", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Metin türü için doğru bir açıklamadır?",
+    "options": ["A) Dil bilgisi öğretimi metin bağlamında işlevsel olmalı; kural listesi tek yöntem değildir.", "B) Metin türü bilgisi (şiir, roman, tiyatro, deneme) kazandırma hedefi ÖABT alan eğitiminin omurgasıdır.", "C) Tarihsel-biyografik, toplumcu, yapısal, okur odaklı yaklaşımlar metin çözümlemesinde kullanılır.", "D) Karşılaştırmalı okuma dönem-akım-şair ilişkisini kurdurur.", "E) Yaratıcı yazma ve metin tamamlama üretim becerisidir; ezber tek başına yeterli değildir."],
     "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Tarihsel-biyografik, toplumcu, yapısal, okur odaklı yaklaşımlar metin çözümlemesinde kulla", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Tarihsel-biyografik, toplumcu, yapısal, okur odaklı hakkında hangisi doğrudur?",
+    "options": ["A) Karşılaştırmalı okuma dönem-akım-şair ilişkisini kurdurur.", "B) Yaratıcı yazma ve metin tamamlama üretim becerisidir; ezber tek başına yeterli değildir.", "C) Dil bilgisi öğretimi metin bağlamında işlevsel olmalı; kural listesi tek yöntem değildir.", "D) Tarihsel-biyografik, toplumcu, yapısal, okur odaklı yaklaşımlar metin çözümlemesinde kullanılır.", "E) Metin türü bilgisi (şiir, roman, tiyatro, deneme) kazandırma hedefi ÖABT alan eğitiminin omurgasıdır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Karşılaştırmalı hangisini ifade eder?",
+    "options": ["A) Metin türü bilgisi (şiir, roman, tiyatro, deneme) kazandırma hedefi ÖABT alan eğitiminin omurgasıdır.", "B) Tarihsel-biyografik, toplumcu, yapısal, okur odaklı yaklaşımlar metin çözümlemesinde kullanılır.", "C) Yaratıcı yazma ve metin tamamlama üretim becerisidir; ezber tek başına yeterli değildir.", "D) Dil bilgisi öğretimi metin bağlamında işlevsel olmalı; kural listesi tek yöntem değildir.", "E) Karşılaştırmalı okuma dönem-akım-şair ilişkisini kurdurur."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Yaratıcı yazma ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Yaratıcı yazma ve metin tamamlama üretim becerisidir; ezber tek başına yeterli değildir.", "B) Metin türü bilgisi (şiir, roman, tiyatro, deneme) kazandırma hedefi ÖABT alan eğitiminin omurgasıdır.", "C) Tarihsel-biyografik, toplumcu, yapısal, okur odaklı yaklaşımlar metin çözümlemesinde kullanılır.", "D) Karşılaştırmalı okuma dönem-akım-şair ilişkisini kurdurur.", "E) Dil bilgisi öğretimi metin bağlamında işlevsel olmalı; kural listesi tek yöntem değildir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Dil bilgisi öğretimi için doğru bir açıklamadır?",
+    "options": ["A) Metin türü bilgisi (şiir, roman, tiyatro, deneme) kazandırma hedefi ÖABT alan eğitiminin omurgasıdır.", "B) Tarihsel-biyografik, toplumcu, yapısal, okur odaklı yaklaşımlar metin çözümlemesinde kullanılır.", "C) Karşılaştırmalı okuma dönem-akım-şair ilişkisini kurdurur.", "D) Yaratıcı yazma ve metin tamamlama üretim becerisidir; ezber tek başına yeterli değildir.", "E) Dil bilgisi öğretimi metin bağlamında işlevsel olmalı; kural listesi tek yöntem değildir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Ortaöğretim Türk Dili ve Edebiyatı hakkında hangisi doğrudur?",
+    "options": ["A) Metin türü bilgisi (şiir, roman, tiyatro, deneme) kazandırma hedefi ÖABT alan eğitiminin omurgasıdır.", "B) Tarihsel-biyografik, toplumcu, yapısal, okur odaklı yaklaşımlar metin çözümlemesinde kullanılır.", "C) Karşılaştırmalı okuma dönem-akım-şair ilişkisini kurdurur.", "D) Yaratıcı yazma ve metin tamamlama üretim becerisidir; ezber tek başına yeterli değildir.", "E) Ortaöğretim Türk Dili ve Edebiyatı programı tema, tür ve dönem eksenli kazanımlar içerir."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
+},
+{
+    "question": "Okuma, yazma, konuşma, dinleme hangisini ifade eder?",
+    "options": ["A) Karşılaştırmalı okuma dönem-akım-şair ilişkisini kurdurur.", "B) Yaratıcı yazma ve metin tamamlama üretim becerisidir; ezber tek başına yeterli değildir.", "C) Okuma, yazma, konuşma, dinleme dört temel dil becerisi edebiyat dersinde de işlenir.", "D) Metin türü bilgisi (şiir, roman, tiyatro, deneme) kazandırma hedefi ÖABT alan eğitiminin omurgasıdır.", "E) Tarihsel-biyografik, toplumcu, yapısal, okur odaklı yaklaşımlar metin çözümlemesinde kullanılır."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Karşılaştırmalı okuma dönem-akım-şair ilişkisini kurdurur.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Yaratıcı yazma ve metin tamamlama üretim becerisidir; ezber tek başına yeterli değildir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
+    "question": "Ölçme ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Karşılaştırmalı okuma dönem-akım-şair ilişkisini kurdurur.", "B) Yaratıcı yazma ve metin tamamlama üretim becerisidir; ezber tek başına yeterli değildir.", "C) Ölçme: açık uçlu metin sorusu, performans, portfolyo, çoktan seçmeli bilgi.", "D) Metin türü bilgisi (şiir, roman, tiyatro, deneme) kazandırma hedefi ÖABT alan eğitiminin omurgasıdır.", "E) Tarihsel-biyografik, toplumcu, yapısal, okur odaklı yaklaşımlar metin çözümlemesinde kullanılır."],
     "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Dil bilgisi öğretimi metin bağlamında işlevsel olmalı; kural listesi tek yöntem değildir.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Yanlış kavrama için doğru bir açıklamadır?",
+    "options": ["A) Yanlış kavrama: dönem ezberi metni örter; şair hayatı tek başına yorum değildir.", "B) Metin türü bilgisi (şiir, roman, tiyatro, deneme) kazandırma hedefi ÖABT alan eğitiminin omurgasıdır.", "C) Tarihsel-biyografik, toplumcu, yapısal, okur odaklı yaklaşımlar metin çözümlemesinde kullanılır.", "D) Karşılaştırmalı okuma dönem-akım-şair ilişkisini kurdurur.", "E) Yaratıcı yazma ve metin tamamlama üretim becerisidir; ezber tek başına yeterli değildir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 },
 {
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Ortaöğretim Türk Dili ve Edebiyatı programı tema, tür ve dönem eksenli kazanımlar içerir.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Okuma, yazma, konuşma, dinleme dört temel dil becerisi edebiyat dersinde de işlenir.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Ölçme: açık uçlu metin sorusu, performans, portfolyo, çoktan seçmeli bilgi.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Yanlış kavrama: dönem ezberi metni örter; şair hayatı tek başına yorum değildir.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Alan Eğitimi konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "B) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "C) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "D) Dijital metin ve medya okuryazarlığı 2020'ler program vurgusudur.", "E) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy"],
-    "correctAnswerIndex": 2,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Dijital metin ve medya okuryazarlığı hakkında hangisi doğrudur?",
+    "options": ["A) Metin türü bilgisi (şiir, roman, tiyatro, deneme) kazandırma hedefi ÖABT alan eğitiminin omurgasıdır.", "B) Tarihsel-biyografik, toplumcu, yapısal, okur odaklı yaklaşımlar metin çözümlemesinde kullanılır.", "C) Karşılaştırmalı okuma dönem-akım-şair ilişkisini kurdurur.", "D) Yaratıcı yazma ve metin tamamlama üretim becerisidir; ezber tek başına yeterli değildir.", "E) Dijital metin ve medya okuryazarlığı 2020'ler program vurgusudur."],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan Eğitimi notundaki temel bilgi."
 }
 ];

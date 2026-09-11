@@ -67,57 +67,57 @@ window.ags_sozel_2_sorulari = [
     "explanation": "ÖSYM nesnel-öznel sorularında bu ayrım sıkça işlenir."
 },
 {
-    "question": "Cümlede Anlam konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Yargı, cümlenin bildirdiği hükümdür; olumlu-olumsuz, soru, ünlem, emir kipleriyle çeşitlen", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Yargı için doğru bir açıklamadır?",
+    "options": ["A) Amaç-sonuç istenen hedefi gösterir: diye, için, üzere, -mek amacıyla.", "B) Koşul (şart) gerçekleşmenin bağlandığı durumu bildirir: ise, -se, şartıyla, takdirde.", "C) Karşıtlık (zıtlık) beklenenin tersini veya dengeyi kurar: ama, fakat, rağmen, oysa, buna karşın.", "D) Yargı, cümlenin bildirdiği hükümdür; olumlu-olumsuz, soru, ünlem, emir kipleriyle çeşitlenir.", "E) Neden-sonuç ilişkisi gerekçe bildirir: çünkü, için, -den dolayı, dolayısiyla."],
+    "correctAnswerIndex": 3,
+    "explanation": "Cümlede Anlam notundaki temel bilgi."
 },
 {
-    "question": "Cümlede Anlam konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Neden-sonuç ilişkisi gerekçe bildirir: çünkü, için, -den dolayı, dolayısiyla.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Neden-sonuç hakkında hangisi doğrudur?",
+    "options": ["A) Karşıtlık (zıtlık) beklenenin tersini veya dengeyi kurar: ama, fakat, rağmen, oysa, buna karşın.", "B) Neden-sonuç ilişkisi gerekçe bildirir: çünkü, için, -den dolayı, dolayısiyla.", "C) Yargı, cümlenin bildirdiği hükümdür; olumlu-olumsuz, soru, ünlem, emir kipleriyle çeşitlenir.", "D) Amaç-sonuç istenen hedefi gösterir: diye, için, üzere, -mek amacıyla.", "E) Koşul (şart) gerçekleşmenin bağlandığı durumu bildirir: ise, -se, şartıyla, takdirde."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Cümlede Anlam notundaki temel bilgi."
 },
 {
-    "question": "Cümlede Anlam konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Amaç-sonuç istenen hedefi gösterir: diye, için, üzere, -mek amacıyla.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Amaç-sonuç hangisini ifade eder?",
+    "options": ["A) Amaç-sonuç istenen hedefi gösterir: diye, için, üzere, -mek amacıyla.", "B) Yargı, cümlenin bildirdiği hükümdür; olumlu-olumsuz, soru, ünlem, emir kipleriyle çeşitlenir.", "C) Neden-sonuç ilişkisi gerekçe bildirir: çünkü, için, -den dolayı, dolayısiyla.", "D) Koşul (şart) gerçekleşmenin bağlandığı durumu bildirir: ise, -se, şartıyla, takdirde.", "E) Karşıtlık (zıtlık) beklenenin tersini veya dengeyi kurar: ama, fakat, rağmen, oysa, buna karşın."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Cümlede Anlam notundaki temel bilgi."
 },
 {
-    "question": "Cümlede Anlam konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Koşul (şart) gerçekleşmenin bağlandığı durumu bildirir: ise, -se, şartıyla, takdirde.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Koşul (şart) ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Amaç-sonuç istenen hedefi gösterir: diye, için, üzere, -mek amacıyla.", "B) Karşıtlık (zıtlık) beklenenin tersini veya dengeyi kurar: ama, fakat, rağmen, oysa, buna karşın.", "C) Koşul (şart) gerçekleşmenin bağlandığı durumu bildirir: ise, -se, şartıyla, takdirde.", "D) Yargı, cümlenin bildirdiği hükümdür; olumlu-olumsuz, soru, ünlem, emir kipleriyle çeşitlenir.", "E) Neden-sonuç ilişkisi gerekçe bildirir: çünkü, için, -den dolayı, dolayısiyla."],
+    "correctAnswerIndex": 2,
+    "explanation": "Cümlede Anlam notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Karşıtlık (zıtlık) için doğru bir açıklamadır?",
+    "options": ["A) Amaç-sonuç istenen hedefi gösterir: diye, için, üzere, -mek amacıyla.", "B) Koşul (şart) gerçekleşmenin bağlandığı durumu bildirir: ise, -se, şartıyla, takdirde.", "C) Karşıtlık (zıtlık) beklenenin tersini veya dengeyi kurar: ama, fakat, rağmen, oysa, buna karşın.", "D) Yargı, cümlenin bildirdiği hükümdür; olumlu-olumsuz, soru, ünlem, emir kipleriyle çeşitlenir.", "E) Neden-sonuç ilişkisi gerekçe bildirir: çünkü, için, -den dolayı, dolayısiyla."],
+    "correctAnswerIndex": 2,
+    "explanation": "Cümlede Anlam notundaki temel bilgi."
+},
+{
+    "question": "Nesnel hakkında hangisi doğrudur?",
+    "options": ["A) Amaç-sonuç istenen hedefi gösterir: diye, için, üzere, -mek amacıyla.", "B) Koşul (şart) gerçekleşmenin bağlandığı durumu bildirir: ise, -se, şartıyla, takdirde.", "C) Nesnel cümle gözlem ve ölçümle doğrulanır; kişiye göre değişmez.", "D) Yargı, cümlenin bildirdiği hükümdür; olumlu-olumsuz, soru, ünlem, emir kipleriyle çeşitlenir.", "E) Neden-sonuç ilişkisi gerekçe bildirir: çünkü, için, -den dolayı, dolayısiyla."],
+    "correctAnswerIndex": 2,
+    "explanation": "Cümlede Anlam notundaki temel bilgi."
+},
+{
+    "question": "Öznel hangisini ifade eder?",
+    "options": ["A) Koşul (şart) gerçekleşmenin bağlandığı durumu bildirir: ise, -se, şartıyla, takdirde.", "B) Öznel cümle beğeni, yorum, varsayım ve duygu içerir.", "C) Yargı, cümlenin bildirdiği hükümdür; olumlu-olumsuz, soru, ünlem, emir kipleriyle çeşitlenir.", "D) Neden-sonuç ilişkisi gerekçe bildirir: çünkü, için, -den dolayı, dolayısiyla.", "E) Amaç-sonuç istenen hedefi gösterir: diye, için, üzere, -mek amacıyla."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Cümlede Anlam notundaki temel bilgi."
 },
 {
-    "question": "Cümlede Anlam konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Karşıtlık (zıtlık) beklenenin tersini veya dengeyi kurar: ama, fakat, rağmen, oysa, buna k", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Kanı (yorum) ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Neden-sonuç ilişkisi gerekçe bildirir: çünkü, için, -den dolayı, dolayısiyla.", "B) Amaç-sonuç istenen hedefi gösterir: diye, için, üzere, -mek amacıyla.", "C) Koşul (şart) gerçekleşmenin bağlandığı durumu bildirir: ise, -se, şartıyla, takdirde.", "D) Kanı (yorum) ile kanıt karıştırılmamalıdır; kanıt nesnel veri, kanı kişisel hükümdür.", "E) Yargı, cümlenin bildirdiği hükümdür; olumlu-olumsuz, soru, ünlem, emir kipleriyle çeşitlenir."],
+    "correctAnswerIndex": 3,
+    "explanation": "Cümlede Anlam notundaki temel bilgi."
 },
 {
-    "question": "Cümlede Anlam konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Nesnel cümle gözlem ve ölçümle doğrulanır; kişiye göre değişmez.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Cümlede Anlam konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Öznel cümle beğeni, yorum, varsayım ve duygu içerir.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Cümlede Anlam konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Kanı (yorum) ile kanıt karıştırılmamalıdır; kanıt nesnel veri, kanı kişisel hükümdür.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Cümlede Anlam konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Varsayım henüz kanıtlanmamış kabul; olasılık gerçekleşme derecesi bildirir.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Varsayım için doğru bir açıklamadır?",
+    "options": ["A) Amaç-sonuç istenen hedefi gösterir: diye, için, üzere, -mek amacıyla.", "B) Koşul (şart) gerçekleşmenin bağlandığı durumu bildirir: ise, -se, şartıyla, takdirde.", "C) Varsayım henüz kanıtlanmamış kabul; olasılık gerçekleşme derecesi bildirir.", "D) Yargı, cümlenin bildirdiği hükümdür; olumlu-olumsuz, soru, ünlem, emir kipleriyle çeşitlenir.", "E) Neden-sonuç ilişkisi gerekçe bildirir: çünkü, için, -den dolayı, dolayısiyla."],
+    "correctAnswerIndex": 2,
+    "explanation": "Cümlede Anlam notundaki temel bilgi."
 }
 ];

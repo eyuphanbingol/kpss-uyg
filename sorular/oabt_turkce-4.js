@@ -55,69 +55,69 @@ window.oabt_turkce_4_sorulari = [
     "explanation": "Kıpçak kolu Kuzeybatı Türk lehçeleridir."
 },
 {
-    "question": "Türk Dili konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Ural-Altay hipotezi tartışmalıdır; Türkçe Altay dilleri içinde Oğuz, Kıpçak, Karluk kollar"],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Köktürk hakkında hangisi doğrudur?",
+    "options": ["A) Karahanlı (Hakaniye) Türkçesi İslami dönem; Kutadgu Bilig, Divan-ı Lügati't-Türk.", "B) Eski Anadolu Türkçesi 13-15. yy; Osmanlı Türkçesi Arap-Fars sözvarlığı ve izafetle yoğrulur.", "C) Türkiye Türkçesi 20. yy yazı dilinin sadeleşmesi ve dil devrimiyle biçimlenir.", "D) Köktürk (Orhun) Türkçesi ilk yazılı dönem; Uygur döneminde dini ve hukuki metinler çoğalır.", "E) Ural-Altay hipotezi tartışmalıdır; Türkçe Altay dilleri içinde Oğuz, Kıpçak, Karluk kollarına ayrılır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Türk Dili notundaki temel bilgi."
 },
 {
-    "question": "Türk Dili konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Köktürk (Orhun) Türkçesi ilk yazılı dönem; Uygur döneminde dini ve hukuki metinler çoğalır", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Karahanlı hangisini ifade eder?",
+    "options": ["A) Ural-Altay hipotezi tartışmalıdır; Türkçe Altay dilleri içinde Oğuz, Kıpçak, Karluk kollarına ayrılır.", "B) Köktürk (Orhun) Türkçesi ilk yazılı dönem; Uygur döneminde dini ve hukuki metinler çoğalır.", "C) Eski Anadolu Türkçesi 13-15. yy; Osmanlı Türkçesi Arap-Fars sözvarlığı ve izafetle yoğrulur.", "D) Türkiye Türkçesi 20. yy yazı dilinin sadeleşmesi ve dil devrimiyle biçimlenir.", "E) Karahanlı (Hakaniye) Türkçesi İslami dönem; Kutadgu Bilig, Divan-ı Lügati't-Türk."],
+    "correctAnswerIndex": 4,
+    "explanation": "Türk Dili notundaki temel bilgi."
+},
+{
+    "question": "Eski Anadolu Türkçesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Köktürk (Orhun) Türkçesi ilk yazılı dönem; Uygur döneminde dini ve hukuki metinler çoğalır.", "B) Karahanlı (Hakaniye) Türkçesi İslami dönem; Kutadgu Bilig, Divan-ı Lügati't-Türk.", "C) Türkiye Türkçesi 20. yy yazı dilinin sadeleşmesi ve dil devrimiyle biçimlenir.", "D) Eski Anadolu Türkçesi 13-15. yy; Osmanlı Türkçesi Arap-Fars sözvarlığı ve izafetle yoğrulur.", "E) Ural-Altay hipotezi tartışmalıdır; Türkçe Altay dilleri içinde Oğuz, Kıpçak, Karluk kollarına ayrılır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Türk Dili notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Türkiye Türkçesi için doğru bir açıklamadır?",
+    "options": ["A) Eski Anadolu Türkçesi 13-15. yy; Osmanlı Türkçesi Arap-Fars sözvarlığı ve izafetle yoğrulur.", "B) Türkiye Türkçesi 20. yy yazı dilinin sadeleşmesi ve dil devrimiyle biçimlenir.", "C) Ural-Altay hipotezi tartışmalıdır; Türkçe Altay dilleri içinde Oğuz, Kıpçak, Karluk kollarına ayrılır.", "D) Köktürk (Orhun) Türkçesi ilk yazılı dönem; Uygur döneminde dini ve hukuki metinler çoğalır.", "E) Karahanlı (Hakaniye) Türkçesi İslami dönem; Kutadgu Bilig, Divan-ı Lügati't-Türk."],
+    "correctAnswerIndex": 1,
+    "explanation": "Türk Dili notundaki temel bilgi."
+},
+{
+    "question": "Sondan eklemeli hakkında hangisi doğrudur?",
+    "options": ["A) Karahanlı (Hakaniye) Türkçesi İslami dönem; Kutadgu Bilig, Divan-ı Lügati't-Türk.", "B) Eski Anadolu Türkçesi 13-15. yy; Osmanlı Türkçesi Arap-Fars sözvarlığı ve izafetle yoğrulur.", "C) Sondan eklemeli (aglutinan) yapı: ekler art arda, her ek bir işlev.", "D) Ural-Altay hipotezi tartışmalıdır; Türkçe Altay dilleri içinde Oğuz, Kıpçak, Karluk kollarına ayrılır.", "E) Köktürk (Orhun) Türkçesi ilk yazılı dönem; Uygur döneminde dini ve hukuki metinler çoğalır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Türk Dili notundaki temel bilgi."
+},
+{
+    "question": "Ünlü uyumu hangisini ifade eder?",
+    "options": ["A) Köktürk (Orhun) Türkçesi ilk yazılı dönem; Uygur döneminde dini ve hukuki metinler çoğalır.", "B) Karahanlı (Hakaniye) Türkçesi İslami dönem; Kutadgu Bilig, Divan-ı Lügati't-Türk.", "C) Eski Anadolu Türkçesi 13-15. yy; Osmanlı Türkçesi Arap-Fars sözvarlığı ve izafetle yoğrulur.", "D) Ünlü uyumu Türkçenin tipolojik belirleyicilerindendir.", "E) Ural-Altay hipotezi tartışmalıdır; Türkçe Altay dilleri içinde Oğuz, Kıpçak, Karluk kollarına ayrılır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Türk Dili notundaki temel bilgi."
+},
+{
+    "question": "Sözcük yapımı ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Sözcük yapımı türetme, birleştirme, kalıplaşma; ödünçleme Arapça, Farsça, Fransızca, İngilizce katmanları.", "B) Ural-Altay hipotezi tartışmalıdır; Türkçe Altay dilleri içinde Oğuz, Kıpçak, Karluk kollarına ayrılır.", "C) Köktürk (Orhun) Türkçesi ilk yazılı dönem; Uygur döneminde dini ve hukuki metinler çoğalır.", "D) Karahanlı (Hakaniye) Türkçesi İslami dönem; Kutadgu Bilig, Divan-ı Lügati't-Türk.", "E) Eski Anadolu Türkçesi 13-15. yy; Osmanlı Türkçesi Arap-Fars sözvarlığı ve izafetle yoğrulur."],
     "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Türk Dili notundaki temel bilgi."
 },
 {
-    "question": "Türk Dili konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Karahanlı (Hakaniye) Türkçesi İslami dönem; Kutadgu Bilig, Divan-ı Lügati't-Türk."],
+    "question": "Aşağıdakilerden hangisi Lehçe-şive-ağız için doğru bir açıklamadır?",
+    "options": ["A) Karahanlı (Hakaniye) Türkçesi İslami dönem; Kutadgu Bilig, Divan-ı Lügati't-Türk.", "B) Eski Anadolu Türkçesi 13-15. yy; Osmanlı Türkçesi Arap-Fars sözvarlığı ve izafetle yoğrulur.", "C) Lehçe-şive-ağız: lehçe anlaşılmazlık eşiği, ağız yerel konuşma farkı.", "D) Ural-Altay hipotezi tartışmalıdır; Türkçe Altay dilleri içinde Oğuz, Kıpçak, Karluk kollarına ayrılır.", "E) Köktürk (Orhun) Türkçesi ilk yazılı dönem; Uygur döneminde dini ve hukuki metinler çoğalır."],
+    "correctAnswerIndex": 2,
+    "explanation": "Türk Dili notundaki temel bilgi."
+},
+{
+    "question": "Dil planlaması hakkında hangisi doğrudur?",
+    "options": ["A) Ural-Altay hipotezi tartışmalıdır; Türkçe Altay dilleri içinde Oğuz, Kıpçak, Karluk kollarına ayrılır.", "B) Köktürk (Orhun) Türkçesi ilk yazılı dönem; Uygur döneminde dini ve hukuki metinler çoğalır.", "C) Karahanlı (Hakaniye) Türkçesi İslami dönem; Kutadgu Bilig, Divan-ı Lügati't-Türk.", "D) Eski Anadolu Türkçesi 13-15. yy; Osmanlı Türkçesi Arap-Fars sözvarlığı ve izafetle yoğrulur.", "E) Dil planlaması 1928 harf devrimi, TDK, özleştirme ve terim üretimi."],
     "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Türk Dili notundaki temel bilgi."
 },
 {
-    "question": "Türk Dili konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Eski Anadolu Türkçesi 13-15. yy; Osmanlı Türkçesi Arap-Fars sözvarlığı ve izafetle yoğrulu", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "question": "Ses denklikleri ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Köktürk (Orhun) Türkçesi ilk yazılı dönem; Uygur döneminde dini ve hukuki metinler çoğalır.", "B) Karahanlı (Hakaniye) Türkçesi İslami dönem; Kutadgu Bilig, Divan-ı Lügati't-Türk.", "C) Eski Anadolu Türkçesi 13-15. yy; Osmanlı Türkçesi Arap-Fars sözvarlığı ve izafetle yoğrulur.", "D) Ses denklikleri (z/d/y, ş/l) tarihsel karşılaştırmada kullanılır.", "E) Ural-Altay hipotezi tartışmalıdır; Türkçe Altay dilleri içinde Oğuz, Kıpçak, Karluk kollarına ayrılır."],
+    "correctAnswerIndex": 3,
+    "explanation": "Türk Dili notundaki temel bilgi."
 },
 {
-    "question": "Türk Dili konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Türkiye Türkçesi 20. yy yazı dilinin sadeleşmesi ve dil devrimiyle biçimlenir."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Türk Dili konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Sondan eklemeli (aglutinan) yapı: ekler art arda, her ek bir işlev.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Türk Dili konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Ünlü uyumu Türkçenin tipolojik belirleyicilerindendir."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Türk Dili konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Sözcük yapımı türetme, birleştirme, kalıplaşma; ödünçleme Arapça, Farsça, Fransızca, İngil", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Türk Dili konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Lehçe-şive-ağız: lehçe anlaşılmazlık eşiği, ağız yerel konuşma farkı."],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Türk Dili konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Dil planlaması 1928 harf devrimi, TDK, özleştirme ve terim üretimi.", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Türk Dili konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "B) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "C) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "D) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "E) Oğuz grubu: Türkiye, Azerbaycan, Türkmen; Kıpçak: Kazak, Kırgız, Tatar; Karluk: Özbek, Uyg"],
-    "correctAnswerIndex": 4,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Ortak iletişim için doğru bir açıklamadır?",
+    "options": ["A) Eski Anadolu Türkçesi 13-15. yy; Osmanlı Türkçesi Arap-Fars sözvarlığı ve izafetle yoğrulur.", "B) Ortak iletişim Türkiye Türkçesi medya etkisiyle genişler; karşılıklı anlaşılırlık derecelidir.", "C) Ural-Altay hipotezi tartışmalıdır; Türkçe Altay dilleri içinde Oğuz, Kıpçak, Karluk kollarına ayrılır.", "D) Köktürk (Orhun) Türkçesi ilk yazılı dönem; Uygur döneminde dini ve hukuki metinler çoğalır.", "E) Karahanlı (Hakaniye) Türkçesi İslami dönem; Kutadgu Bilig, Divan-ı Lügati't-Türk."],
+    "correctAnswerIndex": 1,
+    "explanation": "Türk Dili notundaki temel bilgi."
 }
 ];

@@ -55,69 +55,69 @@ window.oabt_sosyal_1_sorulari = [
     "explanation": "Çapraz kaynak gerekir."
 },
 {
-    "question": "Tarih konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Tarih geçmişin kendisi değil, kanıta dayalı inşadır; kaynak türü birincil-ikincil.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "question": "Aşağıdakilerden hangisi Tarih için doğru bir açıklamadır?",
+    "options": ["A) Uygarlık tarım, kent, yazı, devlet; Mezopotamya-Anadolu-Akdeniz bağları.", "B) Ortaçağ-erken modern feodalite tartışması, Osmanlı timar-millet, Avrupa mutlakiyet.", "C) Tarih geçmişin kendisi değil, kanıta dayalı inşadır; kaynak türü birincil-ikincil.", "D) Kronoloji dönemleme bakış açısına bağlıdır; çağ adları nötr değildir.", "E) Nedensellik tek neden tuzağı; yapı-ajan, kısa-uzun erim."],
+    "correctAnswerIndex": 2,
+    "explanation": "Tarih notundaki temel bilgi."
 },
 {
-    "question": "Tarih konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Kanıt temelli tarih soru, kaynak eleştirisi (kim, ne zaman, neden, kime), çoklu bakış.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Kanıt temelli tarih hakkında hangisi doğrudur?",
+    "options": ["A) Tarih geçmişin kendisi değil, kanıta dayalı inşadır; kaynak türü birincil-ikincil.", "B) Kronoloji dönemleme bakış açısına bağlıdır; çağ adları nötr değildir.", "C) Nedensellik tek neden tuzağı; yapı-ajan, kısa-uzun erim.", "D) Tarihsel empati geçmişi bugünün ahlakıyla yargılamadan bağlamında anlamaktır, olumlamak değildir.", "E) Kanıt temelli tarih soru, kaynak eleştirisi (kim, ne zaman, neden, kime), çoklu bakış."],
+    "correctAnswerIndex": 4,
+    "explanation": "Tarih notundaki temel bilgi."
+},
+{
+    "question": "Kronoloji hangisini ifade eder?",
+    "options": ["A) Kronoloji dönemleme bakış açısına bağlıdır; çağ adları nötr değildir.", "B) Tarih geçmişin kendisi değil, kanıta dayalı inşadır; kaynak türü birincil-ikincil.", "C) Kanıt temelli tarih soru, kaynak eleştirisi (kim, ne zaman, neden, kime), çoklu bakış.", "D) Nedensellik tek neden tuzağı; yapı-ajan, kısa-uzun erim.", "E) Tarihsel empati geçmişi bugünün ahlakıyla yargılamadan bağlamında anlamaktır, olumlamak değildir."],
+    "correctAnswerIndex": 0,
+    "explanation": "Tarih notundaki temel bilgi."
+},
+{
+    "question": "Nedensellik ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Tarihsel empati geçmişi bugünün ahlakıyla yargılamadan bağlamında anlamaktır, olumlamak değildir.", "B) Nedensellik tek neden tuzağı; yapı-ajan, kısa-uzun erim.", "C) Tarih geçmişin kendisi değil, kanıta dayalı inşadır; kaynak türü birincil-ikincil.", "D) Kanıt temelli tarih soru, kaynak eleştirisi (kim, ne zaman, neden, kime), çoklu bakış.", "E) Kronoloji dönemleme bakış açısına bağlıdır; çağ adları nötr değildir."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Tarih notundaki temel bilgi."
 },
 {
-    "question": "Tarih konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Kronoloji dönemleme bakış açısına bağlıdır; çağ adları nötr değildir.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Tarih konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Nedensellik tek neden tuzağı; yapı-ajan, kısa-uzun erim.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Aşağıdakilerden hangisi Tarihsel empati için doğru bir açıklamadır?",
+    "options": ["A) Nedensellik tek neden tuzağı; yapı-ajan, kısa-uzun erim.", "B) Tarihsel empati geçmişi bugünün ahlakıyla yargılamadan bağlamında anlamaktır, olumlamak değildir.", "C) Tarih geçmişin kendisi değil, kanıta dayalı inşadır; kaynak türü birincil-ikincil.", "D) Kanıt temelli tarih soru, kaynak eleştirisi (kim, ne zaman, neden, kime), çoklu bakış.", "E) Kronoloji dönemleme bakış açısına bağlıdır; çağ adları nötr değildir."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
+    "explanation": "Tarih notundaki temel bilgi."
 },
 {
-    "question": "Tarih konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Tarihsel empati geçmişi bugünün ahlakıyla yargılamadan bağlamında anlamaktır, olumlamak de", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
+    "question": "Uygarlık hakkında hangisi doğrudur?",
+    "options": ["A) Uygarlık tarım, kent, yazı, devlet; Mezopotamya-Anadolu-Akdeniz bağları.", "B) Tarih geçmişin kendisi değil, kanıta dayalı inşadır; kaynak türü birincil-ikincil.", "C) Kanıt temelli tarih soru, kaynak eleştirisi (kim, ne zaman, neden, kime), çoklu bakış.", "D) Kronoloji dönemleme bakış açısına bağlıdır; çağ adları nötr değildir.", "E) Nedensellik tek neden tuzağı; yapı-ajan, kısa-uzun erim."],
     "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Tarih notundaki temel bilgi."
 },
 {
-    "question": "Tarih konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Uygarlık tarım, kent, yazı, devlet; Mezopotamya-Anadolu-Akdeniz bağları.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
+    "question": "Ortaçağ-erken modern hangisini ifade eder?",
+    "options": ["A) Ortaçağ-erken modern feodalite tartışması, Osmanlı timar-millet, Avrupa mutlakiyet.", "B) Tarih geçmişin kendisi değil, kanıta dayalı inşadır; kaynak türü birincil-ikincil.", "C) Kanıt temelli tarih soru, kaynak eleştirisi (kim, ne zaman, neden, kime), çoklu bakış.", "D) Kronoloji dönemleme bakış açısına bağlıdır; çağ adları nötr değildir.", "E) Nedensellik tek neden tuzağı; yapı-ajan, kısa-uzun erim."],
+    "correctAnswerIndex": 0,
+    "explanation": "Tarih notundaki temel bilgi."
+},
+{
+    "question": "Devrimler ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "options": ["A) Kronoloji dönemleme bakış açısına bağlıdır; çağ adları nötr değildir.", "B) Nedensellik tek neden tuzağı; yapı-ajan, kısa-uzun erim.", "C) Devrimler 1789, sanayi, 1917; milliyetçilik ve imparatorluk çözülmesi.", "D) Tarih geçmişin kendisi değil, kanıta dayalı inşadır; kaynak türü birincil-ikincil.", "E) Kanıt temelli tarih soru, kaynak eleştirisi (kim, ne zaman, neden, kime), çoklu bakış."],
+    "correctAnswerIndex": 2,
+    "explanation": "Tarih notundaki temel bilgi."
+},
+{
+    "question": "Aşağıdakilerden hangisi Türkiye için doğru bir açıklamadır?",
+    "options": ["A) Kronoloji dönemleme bakış açısına bağlıdır; çağ adları nötr değildir.", "B) Nedensellik tek neden tuzağı; yapı-ajan, kısa-uzun erim.", "C) Türkiye Milli Mücadele, inkılaplar, çok partili hayat, 1960-80 darbeleri bağlamı.", "D) Tarih geçmişin kendisi değil, kanıta dayalı inşadır; kaynak türü birincil-ikincil.", "E) Kanıt temelli tarih soru, kaynak eleştirisi (kim, ne zaman, neden, kime), çoklu bakış."],
+    "correctAnswerIndex": 2,
+    "explanation": "Tarih notundaki temel bilgi."
+},
+{
+    "question": "Dünya savaşları ve Soğuk Savaş hakkında hangisi doğrudur?",
+    "options": ["A) Kronoloji dönemleme bakış açısına bağlıdır; çağ adları nötr değildir.", "B) Nedensellik tek neden tuzağı; yapı-ajan, kısa-uzun erim.", "C) Dünya savaşları ve Soğuk Savaş ideoloji, kutup, dekolonizasyon.", "D) Tarih geçmişin kendisi değil, kanıta dayalı inşadır; kaynak türü birincil-ikincil.", "E) Kanıt temelli tarih soru, kaynak eleştirisi (kim, ne zaman, neden, kime), çoklu bakış."],
+    "correctAnswerIndex": 2,
+    "explanation": "Tarih notundaki temel bilgi."
+},
+{
+    "question": "Tarihsel düşünme hangisini ifade eder?",
+    "options": ["A) Nedensellik tek neden tuzağı; yapı-ajan, kısa-uzun erim.", "B) Tarihsel düşünme (Seixas): kanıt, nedensellik, değişim-süreklilik, bakış, etik boyut.", "C) Tarih geçmişin kendisi değil, kanıta dayalı inşadır; kaynak türü birincil-ikincil.", "D) Kanıt temelli tarih soru, kaynak eleştirisi (kim, ne zaman, neden, kime), çoklu bakış.", "E) Kronoloji dönemleme bakış açısına bağlıdır; çağ adları nötr değildir."],
     "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Tarih konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Ortaçağ-erken modern feodalite tartışması, Osmanlı timar-millet, Avrupa mutlakiyet.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Tarih konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Devrimler 1789, sanayi, 1917; milliyetçilik ve imparatorluk çözülmesi.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Tarih konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Türkiye Milli Mücadele, inkılaplar, çok partili hayat, 1960-80 darbeleri bağlamı.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
-},
-{
-    "question": "Tarih konusunda aşağıdakilerden hangisi yer almaz?",
-    "options": ["A) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Dünya savaşları ve Soğuk Savaş ideoloji, kutup, dekolonizasyon.", "D) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "E) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery"],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu ifade bu konunun kapsamı dışındadır."
-},
-{
-    "question": "Tarih konusunda aşağıdakilerden hangisi yer alır?",
-    "options": ["A) Tarihsel düşünme (Seixas): kanıt, nedensellik, değişim-süreklilik, bakış, etik boyut.", "B) Gerçek anlam, sözcüğün dilde ilk ve temel karşılığıdır; bağlam değişmeden bu anl", "C) Mecaz anlam, sözcüğün gerçek anlamından uzaklaşıp benzerlik veya ilgilenme yoluy", "D) Eş anlamlı (anlamdaş) sözcükler aynı veya çok yakın kavramı karşılar: deniz-dery", "E) Zıt (karşıt) anlamlı sözcükler birbirini olumsuzlar: açık-kapalı, somut-soyut."],
-    "correctAnswerIndex": 0,
-    "explanation": "Konu notunda açıkça yer alır."
+    "explanation": "Tarih notundaki temel bilgi."
 }
 ];
