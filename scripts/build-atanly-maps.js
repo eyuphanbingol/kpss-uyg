@@ -287,6 +287,40 @@ function writePng(file, svg, w) {
     fs.renameSync(tmp, file);
 }
 
+function writeWideOvaMap(provs, opts) {
+    var W = 1600;
+    var H = 900;
+    var paper = "#F4EBDA";
+    var land = "#E6D9C4";
+    var hiFill = opts.hiFill;
+    var hiStroke = opts.hiStroke || "#0E3329";
+    var ink = opts.ink || "#12382E";
+    var set = {};
+    (opts.hiKeys || []).forEach(function (k) { set[keyOf(k)] = true; });
+    var fills = provs.map(function (p) {
+        var on = set[keyOf(p.name)];
+        return '<path d="' + p.d + '" fill="' + (on ? hiFill : land) + '" stroke="none"/>';
+    }).join("");
+    var strokes = provs.map(function (p) {
+        var on = set[keyOf(p.name)];
+        return '<path d="' + p.d + '" fill="none" stroke="' + (on ? hiStroke : "#D3C4AB") + '" stroke-width="' + (on ? "1.6" : "0.55") + '" stroke-linejoin="round"/>';
+    }).join("");
+    var nameSvg = (opts.names || []).map(function (n) {
+        var fs = n.fs || 8.6;
+        var common = 'x="' + n.x + '" y="' + n.y + '" text-anchor="' + (n.anchor || "middle") + '" font-family="Segoe UI, Inter, Calibri, sans-serif" font-size="' + fs + '" font-weight="800"';
+        return '<text ' + common + ' fill="#F4EBDA" stroke="' + ink + '" stroke-width="2.4" stroke-linejoin="round" paint-order="stroke">' + esc(n.t) + "</text>";
+    }).join("");
+    var extra = opts.extra || "";
+    var svg = '<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns="http://www.w3.org/2000/svg" width="' + W + '" height="' + H + '" viewBox="0 0 ' + W + " " + H + '">\n' +
+        '<rect width="' + W + '" height="' + H + '" fill="' + paper + '"/>' +
+        '<text x="56" y="58" font-family="Segoe UI, Inter, Calibri, sans-serif" font-size="26" font-weight="800" fill="' + hiFill + '" letter-spacing="1.4">' + esc(opts.title) + "</text>" +
+        '<g transform="translate(48,86) scale(1.52)">' + fills + strokes + nameSvg + extra + "</g>" +
+        "</svg>";
+    fs.writeFileSync(path.join(IMG, opts.file.replace(/\.png$/i, ".svg")), svg);
+    writePng(path.join(IMG, opts.file), svg, 1920);
+    console.log("ok", opts.file);
+}
+
 function mapCaption(s) {
     s = String(s || "").replace(/^\d+\s+/, "").trim();
     var em = s.indexOf(" — ");
@@ -1190,6 +1224,29 @@ function main() {
         fs.writeFileSync(path.join(IMG, "tr_ova_karst.svg"), karstSvg);
         writePng(path.join(IMG, "tr_ova_karst.png"), karstSvg, 1920);
         console.log("ok tr_ova_karst");
+    }
+
+    if (wantFile("tr_ova_delta")) {
+        writeWideOvaMap(provs, {
+            file: "tr_ova_delta.png",
+            title: "DELTA OVALARI",
+            hiKeys: ["Edirne", "Sakarya", "Samsun", "İzmir", "Aydın", "Adana", "Mersin"],
+            hiFill: "#164A5E",
+            hiStroke: "#0C2F3C",
+            ink: "#0C2F3C",
+            names: [
+                { t: "Meriç", x: 74, y: 102 },
+                { t: "Karasu", x: 272, y: 78 },
+                { t: "Bafra", x: 508, y: 54 },
+                { t: "Çarşamba", x: 562, y: 58 },
+                { t: "Dikili", x: 96, y: 198 },
+                { t: "Menemen", x: 118, y: 236 },
+                { t: "Selçuk", x: 142, y: 274 },
+                { t: "Balat", x: 132, y: 302 },
+                { t: "Çukurova", x: 522, y: 338 },
+                { t: "Silifke", x: 452, y: 372 }
+            ]
+        });
     }
 
     labeled({ file: "milli_parklar.png", head: "ÖNEMLİ MİLLÎ PARKLAR" }, "Ezber ilkler",
