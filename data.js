@@ -95,6 +95,10 @@ window.getKpssData = function () {
                 notlar: window.tarih_23_notlari || [],
                 sorular: window.tarih_23_sorulari || []
             },
+            "II. Dünya Savaşı":{
+                notlar: window.tarih_24_notlari || [],
+                sorular: window.tarih_24_sorulari || []
+            },
         },
         "Coğrafya": {
             "Türkiye'nin Coğrafi Konumu": {
