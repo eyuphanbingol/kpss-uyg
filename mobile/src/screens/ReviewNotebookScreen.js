@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Alert, Text, TextInput, View, StyleSheet } from "react-native";
 import { useApp } from "../AppProvider";
 import { StudentStore } from "../lib/store";
@@ -17,6 +17,50 @@ function fmtWhen(iso) {
     return dd + "." + mm + " " + hh + ":" + mi;
 }
 
+function applyBold(val, start, end) {
+    val = String(val || "");
+    start = Math.max(0, start || 0);
+    end = Math.max(start, end || 0);
+    if (start === end) {
+        var a = val.lastIndexOf("\n", start - 1) + 1;
+        var b = val.indexOf("\n", start);
+        if (b < 0) b = val.length;
+        start = a;
+        end = b;
+        if (start === end) {
+            return { val: val.slice(0, start) + "****" + val.slice(end), start: start + 2, end: start + 2 };
+        }
+    }
+    var sel = val.slice(start, end);
+    if (sel.length > 4 && sel.slice(0, 2) === "**" && sel.slice(-2) === "**") {
+        var inner = sel.slice(2, -2);
+        return { val: val.slice(0, start) + inner + val.slice(end), start: start, end: start + inner.length };
+    }
+    if (start >= 2 && val.slice(start - 2, start) === "**" && val.slice(end, end + 2) === "**") {
+        return { val: val.slice(0, start - 2) + sel + val.slice(end + 2), start: start - 2, end: end - 2 };
+    }
+    return { val: val.slice(0, start) + "**" + sel + "**" + val.slice(end), start: start, end: end + 4 };
+}
+
+function RichText(props) {
+    var text = String(props.text || "");
+    var nodes = [];
+    var re = /\*\*([^*]+)\*\*/g;
+    var last = 0;
+    var m;
+    var i = 0;
+    while ((m = re.exec(text))) {
+        if (m.index > last) nodes.push(<Text key={"t" + i}>{text.slice(last, m.index)}</Text>);
+        i += 1;
+        nodes.push(<Text key={"b" + i} style={{ fontWeight: "800" }}>{m[1]}</Text>);
+        last = m.index + m[0].length;
+        i += 1;
+    }
+    if (last < text.length) nodes.push(<Text key={"t" + i}>{text.slice(last)}</Text>);
+    if (!nodes.length) return <Text style={props.style}>{text}</Text>;
+    return <Text style={props.style}>{nodes}</Text>;
+}
+
 export default function ReviewNotebookScreen({ navigation }) {
     var app = useApp();
     var isDark = app.dark;
@@ -31,6 +75,9 @@ export default function ReviewNotebookScreen({ navigation }) {
     var _edit = useState("");
     var editId = _edit[0];
     var setEditId = _edit[1];
+    var lastField = useRef("body");
+    var titleSel = useRef({ start: 0, end: 0 });
+    var bodySel = useRef({ start: 0, end: 0 });
 
     function resetForm() {
         setTitle("");
@@ -51,6 +98,18 @@ export default function ReviewNotebookScreen({ navigation }) {
         setEditId(n.id);
         setTitle(n.title || "");
         setBody(n.body || "");
+    }
+
+    function makeBold() {
+        var which = lastField.current === "title" ? "title" : "body";
+        var val = which === "title" ? title : body;
+        var sel = which === "title" ? titleSel.current : bodySel.current;
+        var next = applyBold(val, sel.start, sel.end);
+        if (which === "title") setTitle(next.val);
+        else setBody(next.val);
+        var stored = { start: next.start, end: next.end };
+        if (which === "title") titleSel.current = stored;
+        else bodySel.current = stored;
     }
 
     function remove(id) {
@@ -84,14 +143,23 @@ export default function ReviewNotebookScreen({ navigation }) {
                 <TextInput
                     value={title}
                     onChangeText={setTitle}
+                    onFocus={function () { lastField.current = "title"; }}
+                    onSelectionChange={function (e) { titleSel.current = e.nativeEvent.selection; }}
                     placeholder="Başlık (isteğe bağlı)"
                     placeholderTextColor={colors.muted}
                     maxLength={80}
-                    style={[styles.input, isDark && styles.inputDark]}
+                    style={[styles.input, styles.titleInput, isDark && styles.inputDark]}
                 />
+                <Tap onPress={makeBold}>
+                    <View style={[styles.boldBtn, isDark && styles.inputDark]}>
+                        <Text style={styles.boldBtnText}>K Kalın</Text>
+                    </View>
+                </Tap>
                 <TextInput
                     value={body}
                     onChangeText={setBody}
+                    onFocus={function () { lastField.current = "body"; }}
+                    onSelectionChange={function (e) { bodySel.current = e.nativeEvent.selection; }}
                     placeholder="Tekrar etmek istediğin şeyi yaz…"
                     placeholderTextColor={colors.muted}
                     maxLength={4000}
@@ -118,7 +186,7 @@ export default function ReviewNotebookScreen({ navigation }) {
                         <View style={styles.noteHead}>
                             <View style={{ flex: 1, minWidth: 0 }}>
                                 {n.title ? (
-                                    <Text style={[styles.noteTitle, isDark && styles.textLight]}>{n.title}</Text>
+                                    <RichText text={n.title} style={[styles.noteTitle, isDark && styles.textLight]} />
                                 ) : null}
                                 <Text style={[styles.noteWhen, isDark && styles.textMuted]}>{fmtWhen(n.updatedAt)}</Text>
                             </View>
@@ -130,7 +198,7 @@ export default function ReviewNotebookScreen({ navigation }) {
                             </Tap>
                         </View>
                         {n.body ? (
-                            <Text style={[styles.noteBody, isDark && styles.textLight]}>{n.body}</Text>
+                            <RichText text={n.body} style={[styles.noteBody, isDark && styles.textLight]} />
                         ) : null}
                     </Card>
                 );
@@ -163,6 +231,24 @@ var styles = StyleSheet.create({
         backgroundColor: "#fff",
         color: colors.text,
         marginBottom: 8,
+    },
+    titleInput: {
+        fontWeight: "700",
+    },
+    boldBtn: {
+        alignSelf: "flex-start",
+        borderWidth: 1,
+        borderColor: colors.border,
+        borderRadius: 10,
+        paddingHorizontal: 12,
+        paddingVertical: 8,
+        marginBottom: 8,
+        backgroundColor: "#fff",
+    },
+    boldBtnText: {
+        fontWeight: "800",
+        fontSize: 14,
+        color: colors.text,
     },
     inputDark: {
         backgroundColor: colors.navyDeep,
