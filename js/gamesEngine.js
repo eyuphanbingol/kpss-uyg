@@ -490,60 +490,72 @@
         });
     }
 
-    function kodlamaDeck(n, seen) {
-        n = n || 10;
-        seen = seen || {};
-        var all = (bank().KODLAMA || []).map(function (row) {
-            return Object.assign({}, row, { id: "k:" + fold(row.slogan || row.a || "") });
-        }).filter(function (row) { return row.a && row.slogan; });
-        var rows = all.filter(function (row) { return !seen[row.id]; });
-        if (!rows.length) return [];
-        return shuffle(rows).slice(0, n).map(function (row, i) {
-            var cipher = i % 3 === 2;
-            if (cipher) {
-                var others = shuffle(all.filter(function (r) { return r.id !== row.id; }).map(function (r) { return r.slogan; })).slice(0, 3);
-                while (others.length < 3) others.push("—");
-                return {
-                    id: row.id || ("k:" + i),
-                    cat: row.cat || "Kodlama",
-                    mode: "cipher",
-                    q: "Bu kavramın kodlaması hangisi?",
-                    prompt: row.a,
-                    slogan: row.slogan,
-                    a: row.slogan,
-                    note: row.note || "",
-                    choices: shuffle([row.slogan].concat(others))
-                };
+    function kodlamaPaint(slogan) {
+        var s = String(slogan || "");
+        var raw = [];
+        var i = 0;
+        function isLetter(ch) {
+            return /[A-Za-zÇĞİÖŞÜçğıöşü]/.test(ch);
+        }
+        function isUpper(ch) {
+            return ch.toLocaleUpperCase("tr-TR") === ch && ch.toLocaleLowerCase("tr-TR") !== ch;
+        }
+        while (i < s.length) {
+            var ch = s.charAt(i);
+            if (isLetter(ch)) {
+                var j = i + 1;
+                while (j < s.length && fold(s.charAt(j)) === fold(ch)) j++;
+                if (j - i >= 3) {
+                    raw.push({ k: "stretch", v: s.slice(i, j) });
+                    i = j;
+                    continue;
+                }
+                if (isUpper(ch)) {
+                    var k = i;
+                    while (k < s.length && isLetter(s.charAt(k)) && isUpper(s.charAt(k))) k++;
+                    if (k - i >= 3) {
+                        raw.push({ k: "code", v: s.slice(i, k) });
+                        i = k;
+                        continue;
+                    }
+                }
             }
+            raw.push({ k: "text", v: ch });
+            i++;
+        }
+        var parts = [];
+        raw.forEach(function (p) {
+            if (parts.length && p.k === "text" && parts[parts.length - 1].k === "text") {
+                parts[parts.length - 1].v += p.v;
+            } else parts.push({ k: p.k, v: p.v });
+        });
+        var mark = "";
+        parts.forEach(function (p) {
+            if (!mark && (p.k === "stretch" || p.k === "code")) mark = p.v;
+        });
+        return { parts: parts, mark: mark || s.slice(0, 12) };
+    }
+
+    function kodlamaDeck(n, seen) {
+        seen = seen || {};
+        var rows = (bank().KODLAMA || []).map(function (row) {
+            return Object.assign({}, row, { id: "k:" + fold(row.slogan || row.a || "") });
+        }).filter(function (row) { return row.a && row.slogan && !seen[row.id]; });
+        if (!rows.length) return [];
+        var take = n > 0 ? shuffle(rows).slice(0, n) : shuffle(rows);
+        return take.map(function (row, i) {
+            var painted = kodlamaPaint(row.slogan);
             return {
                 id: row.id || ("k:" + i),
                 cat: row.cat || "Kodlama",
-                mode: "decode",
-                q: row.q || "Bu kodlama neyi hatırlatır?",
-                prompt: row.slogan,
                 slogan: row.slogan,
+                parts: painted.parts,
+                mark: painted.mark,
                 a: row.a,
                 note: row.note || "",
                 choices: shuffle((row.choices || [row.a]).slice())
             };
         });
-    }
-
-    function kodlamaTickMs() { return 12000; }
-
-    function kodlamaScore(leftMs, combo, cipher) {
-        var sec = Math.max(0, Math.ceil((Number(leftMs) || 0) / 1000));
-        return (cipher ? 140 : 100) + sec * 8 + Math.max(0, combo) * 20;
-    }
-
-    function kodlamaTitle(score, comboMax, lives) {
-        score = Number(score) || 0;
-        comboMax = Number(comboMax) || 0;
-        if (score >= 1500 || comboMax >= 8) return "Kod ustası";
-        if (score >= 1000) return "Atlas";
-        if ((Number(lives) || 0) <= 0) return "Şifre kaçtı";
-        if (score >= 500) return "Çırak";
-        return "Isınma turu";
     }
 
     global.GamesEngine = {
@@ -556,9 +568,7 @@
         tabuPoints: tabuPoints,
         panicDeck: panicDeck,
         kodlamaDeck: kodlamaDeck,
-        kodlamaTickMs: kodlamaTickMs,
-        kodlamaScore: kodlamaScore,
-        kodlamaTitle: kodlamaTitle,
+        kodlamaPaint: kodlamaPaint,
         allCodes: allCodes,
         regionTitle: regionTitle,
         nameOf: function (code) { return names()[code] || code; }

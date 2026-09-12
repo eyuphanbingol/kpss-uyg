@@ -1136,7 +1136,7 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             if (!state.games) state.games = defaultGames();
             n = Math.max(0, Number(n) || 0);
             var cur = Number(state.games.kodlamaBest) || 0;
-            if (cur > 0 && cur < 80) cur = 0;
+            if (cur >= 80) cur = 0;
             if (n > cur) {
                 state.games.kodlamaBest = n;
                 emit();

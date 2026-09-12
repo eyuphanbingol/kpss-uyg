@@ -601,118 +601,64 @@
         );
     }
 
+    function KodPaint(props) {
+        var parts = props.parts || [];
+        if (!parts.length) return <p className="kod-paint">{props.fallback || ""}</p>;
+        return (
+            <p className="kod-paint">
+                {parts.map(function (p, pi) {
+                    if (p.k === "stretch") return <span key={pi} className="kod-stretch">{p.v}</span>;
+                    if (p.k === "code") return <span key={pi} className="kod-code">{p.v}</span>;
+                    return <span key={pi}>{p.v}</span>;
+                })}
+            </p>
+        );
+    }
+
     function KodlamaPlay(props) {
         var student = props.student || {};
         var games = student.games || {};
         var engine = ge();
-        var TICK = engine && engine.kodlamaTickMs ? engine.kodlamaTickMs() : 12000;
         var deck = useMemo(function () {
             var seen = (props.student && props.student.games && props.student.games.kodlamaSeen) || {};
-            return engine && engine.kodlamaDeck ? engine.kodlamaDeck(10, seen) : [];
+            return engine && engine.kodlamaDeck ? engine.kodlamaDeck(0, seen) : [];
         }, [engine, props.seed]);
         var [i, setI] = useState(0);
         var [picked, setPicked] = useState(null);
         var [score, setScore] = useState(0);
-        var [combo, setCombo] = useState(0);
-        var [comboMax, setComboMax] = useState(0);
-        var [lives, setLives] = useState(3);
-        var [ms, setMs] = useState(TICK);
         var [done, setDone] = useState(false);
-        var [gain, setGain] = useState(0);
-        var live = useRef({ picked: false, done: false, lives: 3, combo: 0, comboMax: 0, score: 0, ms: TICK });
         var card = deck[i];
-
-        useEffect(function () {
-            live.current = { picked: false, done: false, lives: 3, combo: 0, comboMax: 0, score: 0, ms: TICK };
-            setI(0); setPicked(null); setScore(0); setCombo(0); setComboMax(0);
-            setLives(3); setMs(TICK); setDone(false); setGain(0);
-        }, [props.seed]);
 
         useEffect(function () {
             if (done || !card || !card.id) return;
             if (store() && store().markGameSeen) store().markGameSeen("kodlama", card.id);
         }, [card && card.id, done]);
 
-        function finish() {
-            if (live.current.done) return;
-            live.current.done = true;
-            setDone(true);
-            if (store() && store().noteKodlamaBest) store().noteKodlamaBest(live.current.score);
-        }
-
-        function goNext() {
-            if (live.current.done) return;
-            if (live.current.lives <= 0 || i + 1 >= deck.length) {
-                finish();
-                return;
-            }
-            live.current.picked = false;
-            setPicked(null);
-            setGain(0);
-            setI(i + 1);
-        }
-
-        function resolve(opt) {
-            if (live.current.picked || live.current.done || !card) return;
-            live.current.picked = true;
-            var ok = opt !== "__time" && String(opt) === String(card.a);
-            var left = Math.max(0, live.current.ms);
-            if (ok) {
-                var nextCombo = live.current.combo + 1;
-                live.current.combo = nextCombo;
-                if (nextCombo > live.current.comboMax) live.current.comboMax = nextCombo;
-                var add = engine && engine.kodlamaScore ? engine.kodlamaScore(left, nextCombo, card.mode === "cipher") : 100;
-                live.current.score += add;
-                setCombo(nextCombo);
-                setComboMax(live.current.comboMax);
-                setScore(live.current.score);
-                setGain(add);
-            } else {
-                live.current.combo = 0;
-                live.current.lives = Math.max(0, live.current.lives - 1);
-                setCombo(0);
-                setLives(live.current.lives);
-                setGain(0);
-            }
-            setPicked(opt);
-        }
-
-        useEffect(function () {
-            if (done || picked || !card) return;
-            live.current.picked = false;
-            live.current.ms = TICK;
-            setMs(TICK);
-            var t0 = Date.now();
-            var id = setInterval(function () {
-                var left = TICK - (Date.now() - t0);
-                live.current.ms = left;
-                setMs(left);
-                if (left <= 0 && !live.current.picked) {
-                    clearInterval(id);
-                    resolve("__time");
-                }
-            }, 80);
-            return function () { clearInterval(id); };
-        }, [i, done, picked, card && card.id]);
-
-        useEffect(function () {
-            if (!picked || done) return;
-            var ok = picked !== "__time" && card && String(picked) === String(card.a);
-            var t = setTimeout(goNext, ok ? 1050 : 1750);
-            return function () { clearTimeout(t); };
-        }, [picked, done]);
-
         function resetCards() {
-            if (!window.confirm("Görülen kodlama kartları sıfırlansın mı? Sorular yeniden gelir.")) return;
+            if (!window.confirm("Görülen kodlamalar sıfırlansın mı? Yeniden gelir.")) return;
             if (store() && store().resetGameSeen) store().resetGameSeen("kodlama");
             if (props.onAgain) props.onAgain();
         }
 
+        function choose(opt) {
+            if (picked || !card) return;
+            var ok = String(opt) === String(card.a);
+            setPicked(opt);
+            if (ok) setScore(function (s) { return s + 1; });
+        }
+
+        function next() {
+            if (i + 1 >= deck.length) {
+                setDone(true);
+                if (store() && store().noteKodlamaBest) store().noteKodlamaBest(score);
+                return;
+            }
+            setI(i + 1);
+            setPicked(null);
+        }
+
         var best = Number(games.kodlamaBest) || 0;
-        if (best > 0 && best < 80) best = 0;
-        var title = engine && engine.kodlamaTitle ? engine.kodlamaTitle(score, comboMax, lives) : "Tur bitti";
-        var flash = !picked ? "" : (picked !== "__time" && card && String(picked) === String(card.a) ? "ok" : "bad");
-        var low = !picked && ms < 4000;
+        if (best >= 80) best = 0;
 
         if (done) {
             return (
@@ -721,12 +667,12 @@
                         <BackBtn onClick={props.onBack} label="Alıştırmalar" />
                     </header>
                     <div className="game-end">
-                        <p className="tabu-end-kicker">{title}</p>
-                        <p className="tabu-end-score">{score}</p>
-                        <p className="text-sm text-stone-500 mt-2">En iyi: {Math.max(score, best)} · combo {comboMax}</p>
-                        <p className="tabu-end-note">12 saniye, 3 can. Hızlı ve seri doğru daha çok puan. Çıkan kart bir daha gelmez.</p>
+                        <p className="tabu-end-kicker">Kodlamalar</p>
+                        <p className="tabu-end-score">{score}/{deck.length}</p>
+                        <p className="text-sm text-stone-500 mt-2">En iyi: {Math.max(score, best)}</p>
+                        <p className="tabu-end-note">Harfleri gör, kavramı tut. Çıkan kodlama bir daha gelmez.</p>
                         <button type="button" className="btn-primary text-white px-5 py-2.5 rounded-full mt-6" onClick={props.onAgain}>Yeniden</button>
-                        <button type="button" className="conquer-reset mt-3" onClick={resetCards}>Kartları sıfırla</button>
+                        <button type="button" className="conquer-reset mt-3" onClick={resetCards}>Sıfırla</button>
                     </div>
                 </div>
             );
@@ -740,71 +686,54 @@
                     </header>
                     <div className="tabu-body">
                         <p className="tabu-ask">Tüm kodlamaları gördün.</p>
-                        <p className="text-sm text-stone-400 mt-2">Sıfırlarsan sorular yeniden gelir.</p>
-                        <button type="button" className="btn-primary text-white px-5 py-2.5 rounded-full mt-6" onClick={resetCards}>Kartları sıfırla</button>
+                        <p className="text-sm text-stone-400 mt-2">Sıfırlarsan yeniden gelir.</p>
+                        <button type="button" className="btn-primary text-white px-5 py-2.5 rounded-full mt-6" onClick={resetCards}>Sıfırla</button>
                     </div>
                 </div>
             );
         }
 
-        var ok = picked && picked !== "__time" && String(picked) === String(card.a);
-        var timedOut = picked === "__time";
-        var cipher = card.mode === "cipher";
-        var sec = Math.max(0, ms / 1000);
-        var barPct = Math.max(0, Math.min(100, (ms / TICK) * 100));
+        var ok = picked && String(picked) === String(card.a);
 
         return (
-            <div className={"map-play-root kodlama-root" + (flash === "ok" ? " kodlama-hit" : "") + (flash === "bad" ? " kodlama-miss" : "") + (low ? " kodlama-low" : "")}>
+            <div className="map-play-root kodlama-root">
                 <header className="map-play-top">
                     <div className="map-play-bar">
                         <BackBtn onClick={props.onBack} label="Alıştırmalar" />
-                        <span className="tabu-scorepill">{score} puan</span>
+                        <span className="tabu-scorepill">{i + 1}/{deck.length}</span>
                         <button type="button" className="conquer-reset" onClick={resetCards}>Sıfırla</button>
                     </div>
-                    <div className="kodlama-hud">
-                        <span className="kodlama-hearts" aria-label="can">
-                            {[0, 1, 2].map(function (h) {
-                                return <span key={h} className={h < lives ? "on" : ""}>{h < lives ? "♥" : "♡"}</span>;
-                            })}
-                        </span>
-                        <span className={"kodlama-combo" + (combo >= 3 ? " hot" : "")}>{combo >= 2 ? "Combo ×" + combo : i + 1 + "/" + deck.length}</span>
-                        <span className="kodlama-clock">{sec.toFixed(1)}</span>
-                    </div>
-                    <div className="kodlama-bar" aria-hidden="true"><span style={{ width: barPct + "%" }} /></div>
                 </header>
-                <div className="tabu-body">
-                    <div className="tabu-hero">
-                        <span className="tabu-topic">{card.cat} · {cipher ? "ters şifre" : "kod çöz"}</span>
-                        <p className="tabu-ask">{card.q}</p>
-                        {cipher ? (
-                            <div className="tabu-mystery shown">{card.prompt}</div>
-                        ) : (
-                            <p className="kodlama-slogan">{card.prompt}</p>
-                        )}
-                        {gain > 0 ? <p className="kodlama-gain">+{gain}</p> : null}
+                <div className="tabu-body kod-body">
+                    <div className="kod-poster">
+                        <span className="kod-wm" aria-hidden="true">{card.mark}</span>
+                        <span className="kod-ribbon">{card.cat}</span>
+                        <KodPaint parts={card.parts} fallback={card.slogan} />
+                        <p className={"kod-stamp" + (picked ? " on" : "")}>{picked ? card.a : "· · ·"}</p>
                     </div>
-                    <div className="panic-choices">
+                    <p className="kod-prompt">Bu kodlama neyi tutar?</p>
+                    <div className="kod-chips">
                         {card.choices.map(function (opt, oi) {
-                            var cls = "panic-opt";
+                            var cls = "kod-chip";
                             if (picked) {
-                                if (String(opt) === String(card.a)) cls += " kodlama-ok";
-                                else if (String(opt) === String(picked)) cls += " kodlama-bad";
+                                if (String(opt) === String(card.a)) cls += " yes";
+                                else if (String(opt) === String(picked)) cls += " no";
                             }
                             return (
                                 <button key={oi} type="button" className={cls} disabled={!!picked}
-                                    onClick={function () { resolve(opt); }}>
-                                    <span className="panic-letter">{String.fromCharCode(65 + oi)}</span>
-                                    <span className="panic-opt-text">{opt}</span>
-                                </button>
+                                    onClick={function () { choose(opt); }}>{opt}</button>
                             );
                         })}
                     </div>
                     {picked ? (
                         <div className="kodlama-note">
                             <p className={ok ? "text-emerald-700 dark:text-emerald-400 font-semibold" : "text-rose-600 dark:text-rose-400 font-semibold"}>
-                                {ok ? (combo >= 3 ? "Seri devam · ×" + combo : "Çözüldü") : (timedOut ? "Süre bitti · " + card.a : "Yanlış · " + card.a)}
+                                {ok ? "Tam" : "Bu · " + card.a}
                             </p>
-                            {card.note ? <p className="text-sm text-stone-500 mt-1">{card.note}</p> : null}
+                            {card.note ? <p className="kod-gloss">{card.note}</p> : null}
+                            <button type="button" className="btn-primary text-white px-5 py-2.5 rounded-full mt-4" onClick={next}>
+                                {i + 1 >= deck.length ? "Bitir" : "Sonraki kodlama"}
+                            </button>
                         </div>
                     ) : null}
                 </div>
