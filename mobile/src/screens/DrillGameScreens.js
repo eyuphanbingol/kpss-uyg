@@ -422,13 +422,14 @@ export function PanicPlayScreen({ navigation }) {
 export function KodlamaPlayScreen({ navigation }) {
     var app = useApp();
     var isDark = app.dark;
+    var TICK = GamesEngine.kodlamaTickMs ? GamesEngine.kodlamaTickMs() : 12000;
     var seedState = useState(0);
     var seed = seedState[0];
     var setSeed = seedState[1];
     var deck = useMemo(function () {
         try {
             var seen = ((app.student && app.student.games) || {}).kodlamaSeen || {};
-            return GamesEngine.kodlamaDeck ? (GamesEngine.kodlamaDeck(12, seen) || []) : [];
+            return GamesEngine.kodlamaDeck ? (GamesEngine.kodlamaDeck(10, seen) || []) : [];
         } catch (e) {
             return [];
         }
@@ -442,50 +443,127 @@ export function KodlamaPlayScreen({ navigation }) {
     var scoreState = useState(0);
     var score = scoreState[0];
     var setScore = scoreState[1];
+    var comboState = useState(0);
+    var combo = comboState[0];
+    var setCombo = comboState[1];
+    var comboMaxState = useState(0);
+    var comboMax = comboMaxState[0];
+    var setComboMax = comboMaxState[1];
+    var livesState = useState(3);
+    var lives = livesState[0];
+    var setLives = livesState[1];
+    var msState = useState(TICK);
+    var ms = msState[0];
+    var setMs = msState[1];
     var doneState = useState(false);
     var done = doneState[0];
     var setDone = doneState[1];
-    var best = ((app.student && app.student.games) || {}).kodlamaBest || 0;
+    var gainState = useState(0);
+    var gain = gainState[0];
+    var setGain = gainState[1];
+    var live = useRef({ picked: false, done: false, lives: 3, combo: 0, comboMax: 0, score: 0, ms: TICK });
+    var bestRaw = ((app.student && app.student.games) || {}).kodlamaBest || 0;
+    var best = (bestRaw > 0 && bestRaw < 80) ? 0 : bestRaw;
     var card = deck[i];
+
+    useEffect(function () {
+        live.current = { picked: false, done: false, lives: 3, combo: 0, comboMax: 0, score: 0, ms: TICK };
+        setI(0); setPicked(null); setScore(0); setCombo(0); setComboMax(0);
+        setLives(3); setMs(TICK); setDone(false); setGain(0);
+    }, [seed]);
 
     useEffect(function () {
         if (done || !card || !card.id) return;
         if (StudentStore.markGameSeen) StudentStore.markGameSeen("kodlama", card.id);
     }, [card && card.id, done]);
 
+    function finish() {
+        if (live.current.done) return;
+        live.current.done = true;
+        setDone(true);
+        StudentStore.noteKodlamaBest(live.current.score);
+    }
+
+    function goNext() {
+        if (live.current.done) return;
+        if (live.current.lives <= 0 || i + 1 >= deck.length) {
+            finish();
+            return;
+        }
+        live.current.picked = false;
+        setPicked(null);
+        setGain(0);
+        setI(i + 1);
+    }
+
+    function resolve(opt) {
+        if (live.current.picked || live.current.done || !card) return;
+        live.current.picked = true;
+        var ok = opt !== "__time" && String(opt) === String(card.a);
+        var left = Math.max(0, live.current.ms);
+        if (ok) {
+            var nextCombo = live.current.combo + 1;
+            live.current.combo = nextCombo;
+            if (nextCombo > live.current.comboMax) live.current.comboMax = nextCombo;
+            var add = GamesEngine.kodlamaScore ? GamesEngine.kodlamaScore(left, nextCombo, card.mode === "cipher") : 100;
+            live.current.score += add;
+            setCombo(nextCombo);
+            setComboMax(live.current.comboMax);
+            setScore(live.current.score);
+            setGain(add);
+        } else {
+            live.current.combo = 0;
+            live.current.lives = Math.max(0, live.current.lives - 1);
+            setCombo(0);
+            setLives(live.current.lives);
+            setGain(0);
+        }
+        setPicked(opt);
+    }
+
+    useEffect(function () {
+        if (done || picked || !card) return;
+        live.current.picked = false;
+        live.current.ms = TICK;
+        setMs(TICK);
+        var t0 = Date.now();
+        var id = setInterval(function () {
+            var left = TICK - (Date.now() - t0);
+            live.current.ms = left;
+            setMs(left);
+            if (left <= 0 && !live.current.picked) {
+                clearInterval(id);
+                resolve("__time");
+            }
+        }, 80);
+        return function () { clearInterval(id); };
+    }, [i, done, picked, card && card.id]);
+
+    useEffect(function () {
+        if (!picked || done) return;
+        var ok = picked !== "__time" && card && String(picked) === String(card.a);
+        var t = setTimeout(goNext, ok ? 1050 : 1750);
+        return function () { clearTimeout(t); };
+    }, [picked, done]);
+
     function resetCards() {
         Alert.alert("Kartları sıfırla", "Görülen kodlama kartları silinsin, sorular yeniden gelsin mi?", [
             { text: "Vazgeç", style: "cancel" },
-            { text: "Sıfırla", onPress: function () { StudentStore.resetGameSeen("kodlama"); setSeed(seed + 1); setI(0); setPicked(null); setScore(0); setDone(false); } }
+            { text: "Sıfırla", onPress: function () { StudentStore.resetGameSeen("kodlama"); setSeed(seed + 1); } }
         ]);
     }
 
-    function choose(opt) {
-        if (picked || !card) return;
-        var ok = String(opt) === String(card.a);
-        setPicked(opt);
-        if (ok) setScore(function (s) { return s + 1; });
-    }
-
-    function next() {
-        if (i + 1 >= deck.length) {
-            setDone(true);
-            StudentStore.noteKodlamaBest(score);
-            return;
-        }
-        setI(i + 1);
-        setPicked(null);
-    }
+    var title = GamesEngine.kodlamaTitle ? GamesEngine.kodlamaTitle(score, comboMax, lives) : "Tur bitti";
 
     if (done) {
         return (
             <ScrollScreen dark={isDark}>
                 <BackChip dark={isDark} label="Alıştırmalar" onPress={function () { navigation.goBack(); }} />
                 <View style={styles.result}>
-                    <Text style={[styles.kicker, isDark && styles.muted]}>Kodlamalar bitti</Text>
-                    <Text style={styles.pct}>{score}/{deck.length}</Text>
-                    <Text style={[styles.meta, isDark && styles.muted, { marginTop: 8 }]}>En iyi: {Math.max(score, best)}</Text>
-                    <PrimaryButton title="Yeniden" onPress={function () { setSeed(seed + 1); setI(0); setPicked(null); setScore(0); setDone(false); }} style={{ marginTop: 18 }} />
+                    <Text style={[styles.kicker, isDark && styles.muted]}>{title}</Text>
+                    <Text style={styles.pct}>{score}</Text>
+                    <Text style={[styles.meta, isDark && styles.muted, { marginTop: 8 }]}>En iyi: {Math.max(score, best)} · combo {comboMax}</Text>
+                    <PrimaryButton title="Yeniden" onPress={function () { setSeed(seed + 1); }} style={{ marginTop: 18 }} />
                     <PrimaryButton title="Kartları sıfırla" onPress={resetCards} style={{ marginTop: 10 }} />
                 </View>
             </ScrollScreen>
@@ -503,16 +581,28 @@ export function KodlamaPlayScreen({ navigation }) {
         );
     }
 
-    var ok = picked && String(picked) === String(card.a);
+    var ok = picked && picked !== "__time" && String(picked) === String(card.a);
+    var timedOut = picked === "__time";
+    var cipher = card.mode === "cipher";
+    var sec = Math.max(0, ms / 1000);
+    var barPct = Math.max(0, Math.min(100, (ms / TICK) * 100));
+    var hearts = [0, 1, 2].map(function (h) { return h < lives ? "♥" : "♡"; }).join(" ");
+
     return (
         <ScrollScreen dark={isDark}>
             <BackChip dark={isDark} label="Alıştırmalar" onPress={function () { navigation.goBack(); }} />
-            <Text style={[styles.kicker, isDark && styles.muted]}>{card.cat} · {i + 1}/{deck.length} · {score} doğru</Text>
-            <PrimaryButton title="Kartları sıfırla" onPress={resetCards} style={{ marginTop: 4, marginBottom: 8 }} />
+            <View style={styles.hud}>
+                <Text style={styles.hearts}>{hearts}</Text>
+                <Text style={[styles.meta, combo >= 3 && styles.comboHot]}>{combo >= 2 ? ("Combo ×" + combo) : ((i + 1) + "/" + deck.length)}</Text>
+                <Text style={[styles.clock, isDark && styles.light, ms < 4000 && styles.clockLow]}>{sec.toFixed(1)}</Text>
+            </View>
+            <View style={styles.timerTrack}><View style={[styles.timerFill, { width: barPct + "%" }, ms < 4000 && styles.timerLow]} /></View>
+            <Text style={[styles.kicker, isDark && styles.muted]}>{card.cat} · {cipher ? "ters şifre" : "kod çöz"} · {score} puan</Text>
             <Text style={[styles.title, isDark && styles.light]}>{card.q}</Text>
             <View style={[styles.stem, isDark && styles.stemDark]}>
-                <Text style={[styles.stemText, isDark && styles.light]}>{card.slogan}</Text>
+                <Text style={[styles.stemText, isDark && styles.light]}>{card.prompt}</Text>
             </View>
+            {gain > 0 ? <Text style={styles.gain}>+{gain}</Text> : null}
             {card.choices.map(function (opt, oi) {
                 var extra = {};
                 if (picked) {
@@ -520,7 +610,7 @@ export function KodlamaPlayScreen({ navigation }) {
                     else if (String(opt) === String(picked)) extra = styles.no;
                 }
                 return (
-                    <Tap key={oi} onPress={function () { choose(opt); }} style={[styles.choice, extra, isDark && styles.cardDark]} disabled={!!picked}>
+                    <Tap key={oi} onPress={function () { resolve(opt); }} style={[styles.choice, extra, isDark && styles.cardDark]} disabled={!!picked}>
                         <View style={styles.choiceRow}>
                             <Text style={[styles.letter, isDark && styles.letterDark]}>{String.fromCharCode(65 + oi)}</Text>
                             <Text style={[styles.choiceText, isDark && styles.light]}>{opt}</Text>
@@ -530,11 +620,16 @@ export function KodlamaPlayScreen({ navigation }) {
             })}
             {picked ? (
                 <View style={{ marginTop: 14 }}>
-                    <Text style={ok ? { color: "#059669", fontWeight: "800" } : styles.bad}>{ok ? "Doğru" : "Yanlış · " + card.a}</Text>
+                    <Text style={ok ? { color: "#059669", fontWeight: "800" } : styles.bad}>
+                        {ok ? (combo >= 3 ? ("Seri devam · ×" + combo) : "Çözüldü") : (timedOut ? ("Süre bitti · " + card.a) : ("Yanlış · " + card.a))}
+                    </Text>
                     {card.note ? <Text style={[styles.meta, isDark && styles.muted, { marginTop: 6 }]}>{card.note}</Text> : null}
-                    <PrimaryButton title={i + 1 >= deck.length ? "Bitir" : "Sonraki"} onPress={next} style={{ marginTop: 14 }} />
                 </View>
-            ) : null}
+            ) : (
+                <Tap onPress={resetCards} style={{ marginTop: 18 }}>
+                    <Text style={[styles.meta, isDark && styles.muted]}>Kartları sıfırla</Text>
+                </Tap>
+            )}
         </ScrollScreen>
     );
 }
@@ -574,5 +669,14 @@ var styles = StyleSheet.create({
     clue: { width: "100%", borderWidth: 1, borderStyle: "dashed", borderColor: "#D6D3D1", borderRadius: 12, padding: 12, minHeight: 64, marginBottom: 8 },
     clueLead: { width: "100%" },
     clueOpen: { backgroundColor: "#ECFDF5", borderStyle: "solid", borderColor: "#34D399" },
-    timer: { fontSize: 52, fontWeight: "900", color: colors.navy, marginVertical: 6 }
+    timer: { fontSize: 52, fontWeight: "900", color: colors.navy, marginVertical: 6 },
+    hud: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginBottom: 8 },
+    hearts: { color: "#E11D48", fontSize: 16, fontWeight: "800", letterSpacing: 2 },
+    clock: { fontSize: 20, fontWeight: "900", color: colors.navy, fontVariant: ["tabular-nums"] },
+    clockLow: { color: "#E11D48" },
+    comboHot: { color: "#C2410C", fontWeight: "800" },
+    timerTrack: { height: 8, borderRadius: 99, backgroundColor: "#E7E5E4", overflow: "hidden", marginBottom: 12 },
+    timerFill: { height: 8, borderRadius: 99, backgroundColor: "#C5A059" },
+    timerLow: { backgroundColor: "#FB7185" },
+    gain: { color: "#D97706", fontSize: 20, fontWeight: "900", marginBottom: 6 }
 });

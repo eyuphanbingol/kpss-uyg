@@ -758,7 +758,7 @@ function AlistirmalarHome(props) {
                     className="text-left p-6 rounded-3xl glass card-hover">
                     <div className="h-14 w-14 rounded-2xl bg-sky-50 text-2xl flex items-center justify-center mb-3">🔤</div>
                     <h2 className="font-bold text-lg">Kodlamalarla coğrafya</h2>
-                    <p className="text-sm text-stone-400 mt-1">Sloganı oku, kavramı veya yer listesini tut.</p>
+                    <p className="text-sm text-stone-400 mt-1">12 saniye, 3 can. Sloganı çöz, combo yakala.</p>
                 </button>
                 <button type="button" onClick={function () { props.onKind("conquer"); }}
                     className="text-left p-6 rounded-3xl glass card-hover">

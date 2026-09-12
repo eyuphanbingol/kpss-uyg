@@ -55,7 +55,7 @@ export function AlistirmalarHomeScreen({ navigation }) {
                     <View style={styles.playIco}><Hash size={20} color="#0F172A" /></View>
                     <View style={{ flex: 1, minWidth: 0 }}>
                         <Text style={[styles.dersName, isDark && styles.textLight]}>Kodlamalarla coğrafya</Text>
-                        <Text style={styles.meta}>Sloganı oku, kavramı veya yer listesini tut.</Text>
+                        <Text style={styles.meta}>12 saniye, 3 can. Sloganı çöz, combo yakala.</Text>
                     </View>
                 </View>
             </AccentCard>

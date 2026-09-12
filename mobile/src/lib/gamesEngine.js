@@ -499,23 +499,59 @@ import { GamesBank } from "./gamesBank";
     }
 
     function kodlamaDeck(n, seen) {
-        n = n || 12;
+        n = n || 10;
         seen = seen || {};
-        var rows = (bank().KODLAMA || []).map(function (row) {
+        var all = (bank().KODLAMA || []).map(function (row) {
             return Object.assign({}, row, { id: "k:" + fold(row.slogan || row.a || "") });
-        }).filter(function (row) { return row.a && !seen[row.id]; });
+        }).filter(function (row) { return row.a && row.slogan; });
+        var rows = all.filter(function (row) { return !seen[row.id]; });
         if (!rows.length) return [];
         return shuffle(rows).slice(0, n).map(function (row, i) {
+            var cipher = i % 3 === 2;
+            if (cipher) {
+                var others = shuffle(all.filter(function (r) { return r.id !== row.id; }).map(function (r) { return r.slogan; })).slice(0, 3);
+                while (others.length < 3) others.push("—");
+                return {
+                    id: row.id || ("k:" + i),
+                    cat: row.cat || "Kodlama",
+                    mode: "cipher",
+                    q: "Bu kavramın kodlaması hangisi?",
+                    prompt: row.a,
+                    slogan: row.slogan,
+                    a: row.slogan,
+                    note: row.note || "",
+                    choices: shuffle([row.slogan].concat(others))
+                };
+            }
             return {
                 id: row.id || ("k:" + i),
                 cat: row.cat || "Kodlama",
-                slogan: row.slogan,
+                mode: "decode",
                 q: row.q || "Bu kodlama neyi hatırlatır?",
+                prompt: row.slogan,
+                slogan: row.slogan,
                 a: row.a,
                 note: row.note || "",
                 choices: shuffle((row.choices || [row.a]).slice())
             };
         });
+    }
+
+    function kodlamaTickMs() { return 12000; }
+
+    function kodlamaScore(leftMs, combo, cipher) {
+        var sec = Math.max(0, Math.ceil((Number(leftMs) || 0) / 1000));
+        return (cipher ? 140 : 100) + sec * 8 + Math.max(0, combo) * 20;
+    }
+
+    function kodlamaTitle(score, comboMax, lives) {
+        score = Number(score) || 0;
+        comboMax = Number(comboMax) || 0;
+        if (score >= 1500 || comboMax >= 8) return "Kod ustası";
+        if (score >= 1000) return "Atlas";
+        if ((Number(lives) || 0) <= 0) return "Şifre kaçtı";
+        if (score >= 500) return "Çırak";
+        return "Isınma turu";
     }
 
     global.GamesEngine = {
@@ -528,6 +564,9 @@ import { GamesBank } from "./gamesBank";
         tabuPoints: tabuPoints,
         panicDeck: panicDeck,
         kodlamaDeck: kodlamaDeck,
+        kodlamaTickMs: kodlamaTickMs,
+        kodlamaScore: kodlamaScore,
+        kodlamaTitle: kodlamaTitle,
         allCodes: allCodes,
         regionTitle: regionTitle,
         nameOf: function (code) { return names()[code] || code; }
