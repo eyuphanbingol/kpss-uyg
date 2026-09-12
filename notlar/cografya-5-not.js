@@ -237,9 +237,5 @@ window.cografya_5_notlari = [
             <p class="text-lg font-bold text-indigo-700 dark:text-indigo-400 mt-1">Konya Ovası</p>
         </div>
     </div>
-    <!-- 🗺️ HARİTA / RESİM ALANI -->
-            <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/tr_ovalar.jpg?v=9" alt="21 Aralık Haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
-            </div>
     `
 ];
