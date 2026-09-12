@@ -31,7 +31,7 @@ window.cografya_5_notlari = [
     </div>
     <!-- 🗺️ HARİTA / RESİM ALANI -->
             <div class="mt-4 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
-                <img src="./src/img/tr_ova_karst.png?v=1" alt="Karstik ovalar (polye) haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+                <img src="./src/img/tr_ova_karst.png?v=2" alt="Karstik ovalar (polye) haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
             </div>
     `,
 
@@ -69,7 +69,7 @@ window.cografya_5_notlari = [
         </div>
     </div>
     <div class="mt-4 overflow-hidden rounded-xl border border-amber-200 dark:border-amber-700/50 bg-white dark:bg-slate-800 p-2">
-        <img src="./src/img/tr_ova_karst.png?v=1" alt="Karstik ovalar (polye) haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+        <img src="./src/img/tr_ova_karst.png?v=2" alt="Karstik ovalar (polye) haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
     </div>
     `,
 

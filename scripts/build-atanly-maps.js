@@ -1162,25 +1162,29 @@ function main() {
             var on = karstSet[keyOf(p.name)];
             return '<path d="' + p.d + '" fill="none" stroke="' + (on ? "#0E3329" : "#D3C4AB") + '" stroke-width="' + (on ? "1.6" : "0.55") + '" stroke-linejoin="round"/>';
         }).join("");
-        var ant = findProv(provs, "Antalya");
-        var mug = findProv(provs, "Muğla");
-        var cx = ant ? ant.vx : 280;
-        var cy = ant ? ant.vy : 310;
-        if (mug) {
-            cx = (cx + mug.vx) / 2;
-            cy = (cy + mug.vy) / 2;
-        }
-        var labelX = cx + 118;
-        var labelY = cy + 78;
+        var names = [
+            { t: "Muğla", x: 172, y: 322 },
+            { t: "Acıpayam", x: 222, y: 308 },
+            { t: "Tefenni", x: 238, y: 326 },
+            { t: "Kestel", x: 274, y: 316 },
+            { t: "Korkuteli", x: 252, y: 340 },
+            { t: "Elmalı", x: 236, y: 360 }
+        ];
+        var nameSvg = names.map(function (n) {
+            var common = 'x="' + n.x + '" y="' + n.y + '" text-anchor="middle" font-family="Segoe UI, Inter, Calibri, sans-serif" font-size="8.6" font-weight="800"';
+            return '<text ' + common + ' fill="#F4EBDA" stroke="#12382E" stroke-width="2.4" stroke-linejoin="round" paint-order="stroke">' + esc(n.t) + "</text>";
+        }).join("");
+        var labelX = 318;
+        var labelY = 378;
         var karstSvg = '<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns="http://www.w3.org/2000/svg" width="' + karstW + '" height="' + karstH + '" viewBox="0 0 ' + karstW + " " + karstH + '">\n' +
             '<rect width="' + karstW + '" height="' + karstH + '" fill="' + karstPaper + '"/>' +
             '<text x="56" y="58" font-family="Segoe UI, Inter, Calibri, sans-serif" font-size="26" font-weight="800" fill="#1B4D3E" letter-spacing="1.4">KARSTİK OVALAR</text>' +
             '<g transform="translate(48,86) scale(1.52)">' +
             karstFills + karstStrokes +
-            '<line x1="' + cx + '" y1="' + cy + '" x2="' + (labelX - 8) + '" y2="' + (labelY - 10) + '" stroke="#1B4D3E" stroke-width="1.4" stroke-linecap="round"/>' +
-            '<circle cx="' + cx + '" cy="' + cy + '" r="4.2" fill="#1B4D3E"/>' +
+            nameSvg +
+            '<line x1="292" y1="368" x2="' + (labelX - 6) + '" y2="' + (labelY - 10) + '" stroke="#1B4D3E" stroke-width="1.4" stroke-linecap="round"/>' +
             '<rect x="' + (labelX - 8) + '" y="' + (labelY - 22) + '" width="168" height="32" rx="8" fill="#1B4D3E"/>' +
-            '<text x="' + (labelX + 76) + '" y="' + (labelY) + '" text-anchor="middle" font-family="Segoe UI, Inter, Calibri, sans-serif" font-size="15" font-weight="700" fill="#F4EBDA">Karstik (polye)</text>' +
+            '<text x="' + (labelX + 76) + '" y="' + labelY + '" text-anchor="middle" font-family="Segoe UI, Inter, Calibri, sans-serif" font-size="15" font-weight="700" fill="#F4EBDA">Karstik (polye)</text>' +
             "</g>" +
             "</svg>";
         fs.writeFileSync(path.join(IMG, "tr_ova_karst.svg"), karstSvg);
