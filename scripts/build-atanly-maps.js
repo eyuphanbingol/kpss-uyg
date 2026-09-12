@@ -297,25 +297,41 @@ function writeWideOvaMap(provs, opts) {
     var ink = opts.ink || "#12382E";
     var set = {};
     (opts.hiKeys || []).forEach(function (k) { set[keyOf(k)] = true; });
+    var colorMap = {};
+    Object.keys(opts.hiColors || {}).forEach(function (k) { colorMap[keyOf(k)] = opts.hiColors[k]; });
+    function styleOf(name) {
+        var k = keyOf(name);
+        if (colorMap[k]) return colorMap[k];
+        if (set[k]) return { fill: hiFill, stroke: hiStroke };
+        return null;
+    }
     var fills = provs.map(function (p) {
-        var on = set[keyOf(p.name)];
-        return '<path d="' + p.d + '" fill="' + (on ? hiFill : land) + '" stroke="none"/>';
+        var st = styleOf(p.name);
+        return '<path d="' + p.d + '" fill="' + (st ? st.fill : land) + '" stroke="none"/>';
     }).join("");
     var strokes = provs.map(function (p) {
-        var on = set[keyOf(p.name)];
-        return '<path d="' + p.d + '" fill="none" stroke="' + (on ? hiStroke : "#D3C4AB") + '" stroke-width="' + (on ? "1.6" : "0.55") + '" stroke-linejoin="round"/>';
+        var st = styleOf(p.name);
+        return '<path d="' + p.d + '" fill="none" stroke="' + (st ? (st.stroke || hiStroke) : "#D3C4AB") + '" stroke-width="' + (st ? "1.6" : "0.55") + '" stroke-linejoin="round"/>';
     }).join("");
     var nameSvg = (opts.names || []).map(function (n) {
         var fs = n.fs || 8.6;
         var sw = n.sw != null ? n.sw : 2.4;
+        var inkN = n.ink || ink;
         var common = 'x="' + n.x + '" y="' + n.y + '" text-anchor="' + (n.anchor || "middle") + '" font-family="Segoe UI, Inter, Calibri, sans-serif" font-size="' + fs + '" font-weight="800"';
-        return '<text ' + common + ' fill="#F4EBDA" stroke="' + ink + '" stroke-width="' + sw + '" stroke-linejoin="round" paint-order="stroke">' + esc(n.t) + "</text>";
+        var t = '<text ' + common + ' fill="#F4EBDA" stroke="' + inkN + '" stroke-width="' + sw + '" stroke-linejoin="round" paint-order="stroke">' + esc(n.t) + "</text>";
+        if (n.sub) {
+            var sub = 'x="' + n.x + '" y="' + (n.y + (n.subDy || 11)) + '" text-anchor="' + (n.anchor || "middle") + '" font-family="Segoe UI, Inter, Calibri, sans-serif" font-size="' + (n.subFs || 6.6) + '" font-weight="700"';
+            t += '<text ' + sub + ' fill="#F4EBDA" stroke="' + inkN + '" stroke-width="' + Math.max(1.4, sw - 0.3) + '" stroke-linejoin="round" paint-order="stroke">' + esc(n.sub) + "</text>";
+        }
+        return t;
     }).join("");
     var extra = opts.extra || "";
+    var titleFill = opts.titleFill || hiFill || "#3D3428";
     var svg = '<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns="http://www.w3.org/2000/svg" width="' + W + '" height="' + H + '" viewBox="0 0 ' + W + " " + H + '">\n' +
         '<rect width="' + W + '" height="' + H + '" fill="' + paper + '"/>' +
-        '<text x="56" y="58" font-family="Segoe UI, Inter, Calibri, sans-serif" font-size="26" font-weight="800" fill="' + hiFill + '" letter-spacing="1.4">' + esc(opts.title) + "</text>" +
+        '<text x="56" y="58" font-family="Segoe UI, Inter, Calibri, sans-serif" font-size="26" font-weight="800" fill="' + titleFill + '" letter-spacing="1.4">' + esc(opts.title) + "</text>" +
         '<g transform="translate(48,86) scale(1.52)">' + fills + strokes + nameSvg + extra + "</g>" +
+        (opts.legend || "") +
         "</svg>";
     fs.writeFileSync(path.join(IMG, opts.file.replace(/\.png$/i, ".svg")), svg);
     writePng(path.join(IMG, opts.file), svg, 1920);
@@ -1287,6 +1303,32 @@ function main() {
                 { t: "Muş", x: 808, y: 222, fs: 7.4, sw: 1.7 },
                 { t: "Amik", x: 544, y: 378, fs: 7.4, sw: 1.7 }
             ]
+        });
+    }
+
+    if (wantFile("tr_ova_ozel")) {
+        writeWideOvaMap(provs, {
+            file: "tr_ova_ozel.png",
+            title: "ÖZEL OLUŞUMLU OVALAR",
+            titleFill: "#4A3F32",
+            hiColors: {
+                Bursa: { fill: "#2F6F62", stroke: "#1B4D3E" },
+                Muş: { fill: "#164A5E", stroke: "#0C2F3C" },
+                Kayseri: { fill: "#C05621", stroke: "#7C2D12" }
+            },
+            names: [
+                { t: "Bursa Ovası", sub: "Dağ eteği", x: 203, y: 142, fs: 8.2, sw: 2.0, ink: "#1B4D3E" },
+                { t: "Muş Ovası", sub: "Dağ içi", x: 808, y: 214, fs: 8.2, sw: 2.0, ink: "#0C2F3C" },
+                { t: "Develi Ovası", sub: "Volkanik", x: 522, y: 258, fs: 8.2, sw: 2.0, ink: "#7C2D12" }
+            ],
+            legend: '<g font-family="Segoe UI, Inter, Calibri, sans-serif">' +
+                '<rect x="56" y="838" width="14" height="14" rx="3" fill="#2F6F62"/>' +
+                '<text x="78" y="850" font-size="15" font-weight="700" fill="#2F6F62">Dağ eteği</text>' +
+                '<rect x="210" y="838" width="14" height="14" rx="3" fill="#164A5E"/>' +
+                '<text x="232" y="850" font-size="15" font-weight="700" fill="#164A5E">Dağ içi</text>' +
+                '<rect x="340" y="838" width="14" height="14" rx="3" fill="#C05621"/>' +
+                '<text x="362" y="850" font-size="15" font-weight="700" fill="#C05621">Volkanik</text>' +
+                "</g>"
         });
     }
 
