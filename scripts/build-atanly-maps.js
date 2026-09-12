@@ -1145,6 +1145,49 @@ function main() {
         ]
     );
 
+    if (wantFile("tr_ova_karst")) {
+        var karstW = 1600;
+        var karstH = 900;
+        var karstPaper = "#F4EBDA";
+        var karstLand = "#E6D9C4";
+        var karstHi = "#1B4D3E";
+        var karstHiKeys = ["Antalya", "Burdur", "Denizli", "Muğla"];
+        var karstSet = {};
+        karstHiKeys.forEach(function (k) { karstSet[keyOf(k)] = true; });
+        var karstFills = provs.map(function (p) {
+            var on = karstSet[keyOf(p.name)];
+            return '<path d="' + p.d + '" fill="' + (on ? karstHi : karstLand) + '" stroke="none"/>';
+        }).join("");
+        var karstStrokes = provs.map(function (p) {
+            var on = karstSet[keyOf(p.name)];
+            return '<path d="' + p.d + '" fill="none" stroke="' + (on ? "#0E3329" : "#D3C4AB") + '" stroke-width="' + (on ? "1.6" : "0.55") + '" stroke-linejoin="round"/>';
+        }).join("");
+        var ant = findProv(provs, "Antalya");
+        var mug = findProv(provs, "Muğla");
+        var cx = ant ? ant.vx : 280;
+        var cy = ant ? ant.vy : 310;
+        if (mug) {
+            cx = (cx + mug.vx) / 2;
+            cy = (cy + mug.vy) / 2;
+        }
+        var labelX = cx + 118;
+        var labelY = cy + 78;
+        var karstSvg = '<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns="http://www.w3.org/2000/svg" width="' + karstW + '" height="' + karstH + '" viewBox="0 0 ' + karstW + " " + karstH + '">\n' +
+            '<rect width="' + karstW + '" height="' + karstH + '" fill="' + karstPaper + '"/>' +
+            '<text x="56" y="58" font-family="Segoe UI, Inter, Calibri, sans-serif" font-size="26" font-weight="800" fill="#1B4D3E" letter-spacing="1.4">KARSTİK OVALAR</text>' +
+            '<g transform="translate(48,86) scale(1.52)">' +
+            karstFills + karstStrokes +
+            '<line x1="' + cx + '" y1="' + cy + '" x2="' + (labelX - 8) + '" y2="' + (labelY - 10) + '" stroke="#1B4D3E" stroke-width="1.4" stroke-linecap="round"/>' +
+            '<circle cx="' + cx + '" cy="' + cy + '" r="4.2" fill="#1B4D3E"/>' +
+            '<rect x="' + (labelX - 8) + '" y="' + (labelY - 22) + '" width="168" height="32" rx="8" fill="#1B4D3E"/>' +
+            '<text x="' + (labelX + 76) + '" y="' + (labelY) + '" text-anchor="middle" font-family="Segoe UI, Inter, Calibri, sans-serif" font-size="15" font-weight="700" fill="#F4EBDA">Karstik (polye)</text>' +
+            "</g>" +
+            "</svg>";
+        fs.writeFileSync(path.join(IMG, "tr_ova_karst.svg"), karstSvg);
+        writePng(path.join(IMG, "tr_ova_karst.png"), karstSvg, 1920);
+        console.log("ok tr_ova_karst");
+    }
+
     labeled({ file: "milli_parklar.png", head: "ÖNEMLİ MİLLÎ PARKLAR" }, "Ezber ilkler",
         [
             { il: "Yozgat", label: "1 Yozgat Çamlığı — ilk millî park (1958)" },
