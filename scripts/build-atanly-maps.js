@@ -326,11 +326,27 @@ function writeWideOvaMap(provs, opts) {
         return t;
     }).join("");
     var extra = opts.extra || "";
+    var lineSvg = "";
+    (opts.lines || []).forEach(function (ln) {
+        var pts = (ln.iller || []).map(function (name) {
+            var p = findProv(provs, name);
+            return p ? { x: p.vx, y: p.vy } : null;
+        }).filter(Boolean);
+        if (pts.length < 2) return;
+        lineSvg += '<polyline points="' + pts.map(function (p) { return p.x.toFixed(1) + "," + p.y.toFixed(1); }).join(" ") +
+            '" fill="none" stroke="' + (ln.color || "#B23A3A") + '" stroke-width="' + (ln.width || 4.2) + '" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>';
+        if (ln.label) {
+            var mid = pts[Math.floor(pts.length / 2)];
+            lineSvg += '<text x="' + (mid.x + (ln.ldx || 10)).toFixed(1) + '" y="' + (mid.y + (ln.ldy || -12)).toFixed(1) +
+                '" font-family="Segoe UI, Inter, Calibri, sans-serif" font-size="' + (ln.fs || 12) + '" font-weight="800" fill="' + (ln.color || "#B23A3A") + '" stroke="#F4EBDA" stroke-width="3.2" paint-order="stroke">' + esc(ln.label) + "</text>";
+        }
+    });
+    extra = lineSvg + extra;
     var titleFill = opts.titleFill || hiFill || "#3D3428";
     var svg = '<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns="http://www.w3.org/2000/svg" width="' + W + '" height="' + H + '" viewBox="0 0 ' + W + " " + H + '">\n' +
         '<rect width="' + W + '" height="' + H + '" fill="' + paper + '"/>' +
         '<text x="56" y="58" font-family="Segoe UI, Inter, Calibri, sans-serif" font-size="26" font-weight="800" fill="' + titleFill + '" letter-spacing="1.4">' + esc(opts.title) + "</text>" +
-        '<g transform="translate(48,86) scale(1.52)">' + fills + strokes + nameSvg + extra + "</g>" +
+        '<g transform="translate(48,86) scale(1.52)">' + fills + strokes + extra + nameSvg + "</g>" +
         (opts.legend || "") +
         "</svg>";
     fs.writeFileSync(path.join(IMG, opts.file.replace(/\.png$/i, ".svg")), svg);
@@ -1329,6 +1345,188 @@ function main() {
                 '<rect x="340" y="838" width="14" height="14" rx="3" fill="#C05621"/>' +
                 '<text x="362" y="850" font-size="15" font-weight="700" fill="#C05621">Volkanik</text>' +
                 "</g>"
+        });
+    }
+
+    if (wantFile("c5_q")) {
+        var KAF5 = ["Bingöl", "Erzincan", "Tokat", "Amasya", "Çorum", "Bolu", "Düzce", "Sakarya", "Kocaeli", "Yalova", "Tekirdağ", "Çanakkale"];
+        var DAF5 = ["Bingöl", "Elazığ", "Malatya", "Kahramanmaraş", "Osmaniye", "Hatay"];
+        var BAF5a = ["Uşak", "Manisa", "İzmir"];
+        var BAF5b = ["Denizli", "Aydın", "İzmir"];
+        var tok = findProv(provs, "Tokat");
+        var tokX = tok ? tok.vx : 575;
+        var tokY = tok ? tok.vy : 125;
+
+        writeWideOvaMap(provs, {
+            file: "c5_q3_karst.png",
+            title: "KARSTİK OVALAR",
+            hiKeys: ["Antalya", "Burdur", "Denizli"],
+            hiFill: "#1B4D3E",
+            hiStroke: "#0E3329",
+            ink: "#12382E",
+            names: [
+                { t: "Acıpayam", sub: "Denizli", x: 222, y: 308, fs: 7.4, sw: 1.7 },
+                { t: "Tefenni", sub: "Burdur", x: 238, y: 326, fs: 7.4, sw: 1.7 },
+                { t: "Kestel", sub: "Burdur", x: 274, y: 316, fs: 7.4, sw: 1.7 },
+                { t: "Korkuteli", sub: "Antalya", x: 252, y: 340, fs: 7.3, sw: 1.7 },
+                { t: "Elmalı", sub: "Antalya", x: 236, y: 360, fs: 7.4, sw: 1.7 }
+            ]
+        });
+
+        writeWideOvaMap(provs, {
+            file: "c5_q6_delta.png",
+            title: "AKARSU – DELTA",
+            hiKeys: ["Samsun", "Mersin", "İzmir", "Aydın"],
+            hiFill: "#164A5E",
+            hiStroke: "#0C2F3C",
+            ink: "#0C2F3C",
+            names: [
+                { t: "Bafra", sub: "Kızılırmak", x: 508, y: 54, fs: 7.6, sw: 1.8 },
+                { t: "Çarşamba", sub: "Yeşilırmak", x: 562, y: 58, fs: 7.4, sw: 1.8 },
+                { t: "Menemen", sub: "Gediz", x: 118, y: 236, fs: 7.6, sw: 1.8 },
+                { t: "Balat", sub: "Büyük Menderes", x: 132, y: 302, fs: 7.2, sw: 1.8 },
+                { t: "Silifke", sub: "Göksu", x: 452, y: 372, fs: 7.6, sw: 1.8 }
+            ]
+        });
+
+        writeWideOvaMap(provs, {
+            file: "c5_q8_ege_delta.png",
+            title: "EGE DELTA OVALARI",
+            titleFill: "#164A5E",
+            hiColors: {
+                İzmir: { fill: "#164A5E", stroke: "#0C2F3C" },
+                Aydın: { fill: "#164A5E", stroke: "#0C2F3C" },
+                Samsun: { fill: "#8A8378", stroke: "#5C564E" }
+            },
+            names: [
+                { t: "Dikili", sub: "Bakırçay", x: 96, y: 198, fs: 7.4, sw: 1.8, ink: "#0C2F3C" },
+                { t: "Menemen", sub: "Gediz", x: 118, y: 236, fs: 7.4, sw: 1.8, ink: "#0C2F3C" },
+                { t: "Selçuk", sub: "Küçük Menderes", x: 142, y: 274, fs: 7.1, sw: 1.8, ink: "#0C2F3C" },
+                { t: "Balat", sub: "Büyük Menderes", x: 132, y: 302, fs: 7.1, sw: 1.8, ink: "#0C2F3C" },
+                { t: "Çarşamba", sub: "Ege’de değil", x: 555, y: 58, fs: 7.4, sw: 1.8, ink: "#3F3A34" }
+            ],
+            legend: '<g font-family="Segoe UI, Inter, Calibri, sans-serif">' +
+                '<rect x="56" y="838" width="14" height="14" rx="3" fill="#164A5E"/>' +
+                '<text x="78" y="850" font-size="15" font-weight="700" fill="#164A5E">Ege deltası</text>' +
+                '<rect x="230" y="838" width="14" height="14" rx="3" fill="#8A8378"/>' +
+                '<text x="252" y="850" font-size="15" font-weight="700" fill="#5C564E">Ege’de değil</text>' +
+                "</g>"
+        });
+
+        writeWideOvaMap(provs, {
+            file: "c5_q12_fay.png",
+            title: "TEKTONİK OVA – FAY",
+            titleFill: "#8F2D2A",
+            hiKeys: ["Erzincan", "Tokat", "Hatay", "Malatya", "Manisa"],
+            hiFill: "#C05621",
+            hiStroke: "#7C2D12",
+            ink: "#7C2D12",
+            lines: [
+                { iller: KAF5, label: "KAF", color: "#B23A3A", ldx: 8, ldy: -16 },
+                { iller: DAF5, label: "DAF", color: "#B23A3A", ldx: 18, ldy: 22 },
+                { iller: BAF5a, label: "BAF", color: "#B23A3A", width: 3.8, ldx: -36, ldy: -12 },
+                { iller: BAF5b, label: "", color: "#B23A3A", width: 3.8 }
+            ],
+            names: [
+                { t: "Erzincan", sub: "KAF", x: 676, y: 160, fs: 7.4, sw: 1.7 },
+                { t: "Niksar", sub: "KAF", x: tokX + 18, y: tokY - 6, fs: 7.4, sw: 1.7 },
+                { t: "Malatya", sub: "DAF", x: 622, y: 248, fs: 7.4, sw: 1.7 },
+                { t: "Amik", sub: "DAF · Hatay", x: 544, y: 372, fs: 7.3, sw: 1.7 },
+                { t: "Salihli", sub: "BAF", x: 178, y: 238, fs: 7.4, sw: 1.7 }
+            ]
+        });
+
+        writeWideOvaMap(provs, {
+            file: "c5_q13_kaf.png",
+            title: "KAF OVALARI",
+            hiKeys: ["Erzincan", "Tokat"],
+            hiFill: "#C05621",
+            hiStroke: "#7C2D12",
+            ink: "#7C2D12",
+            lines: [{ iller: KAF5, label: "KAF", color: "#B23A3A", ldx: 8, ldy: -16 }],
+            names: [
+                { t: "Tercan", x: 720, y: 178, fs: 7.6, sw: 1.8 },
+                { t: "Erzincan", x: 670, y: 158, fs: 7.6, sw: 1.8 },
+                { t: "Niksar", x: tokX + 20, y: tokY - 4, fs: 7.6, sw: 1.8 },
+                { t: "Erbaa", x: tokX - 22, y: tokY - 18, fs: 7.6, sw: 1.8 }
+            ]
+        });
+
+        writeWideOvaMap(provs, {
+            file: "c5_q14_baf.png",
+            title: "BAF – GRABEN OVALARI",
+            hiKeys: ["Manisa"],
+            hiFill: "#C05621",
+            hiStroke: "#7C2D12",
+            ink: "#7C2D12",
+            lines: [
+                { iller: BAF5a, label: "BAF", color: "#B23A3A", width: 4.2, ldx: -28, ldy: -14 },
+                { iller: BAF5b, label: "", color: "#B23A3A", width: 4.2 }
+            ],
+            names: [
+                { t: "Salihli", x: 182, y: 236, fs: 8.2, sw: 2.0 },
+                { t: "Turgutlu", x: 160, y: 248, fs: 8.2, sw: 2.0 }
+            ]
+        });
+
+        writeWideOvaMap(provs, {
+            file: "c5_q18_buyuk.png",
+            title: "EN BÜYÜK OVALAR",
+            titleFill: "#4A3F32",
+            hiColors: {
+                Adana: { fill: "#164A5E", stroke: "#0C2F3C" },
+                Mersin: { fill: "#164A5E", stroke: "#0C2F3C" },
+                Konya: { fill: "#C05621", stroke: "#7C2D12" }
+            },
+            names: [
+                { t: "Çukurova", sub: "Kıyıdaki en büyük delta", x: 522, y: 328, fs: 8.0, sw: 2.0, ink: "#0C2F3C" },
+                { t: "Konya Ovası", sub: "En büyük iç ova", x: 372, y: 286, fs: 8.0, sw: 2.0, ink: "#7C2D12" }
+            ],
+            legend: '<g font-family="Segoe UI, Inter, Calibri, sans-serif">' +
+                '<rect x="56" y="838" width="14" height="14" rx="3" fill="#164A5E"/>' +
+                '<text x="78" y="850" font-size="15" font-weight="700" fill="#164A5E">Delta · Akdeniz</text>' +
+                '<rect x="270" y="838" width="14" height="14" rx="3" fill="#C05621"/>' +
+                '<text x="292" y="850" font-size="15" font-weight="700" fill="#C05621">İç ova · İç Anadolu</text>' +
+                "</g>"
+        });
+
+        writeWideOvaMap(provs, {
+            file: "c5_q20_bolge.png",
+            title: "OVA – BÖLGE",
+            titleFill: "#2F6F62",
+            hiColors: {
+                Samsun: { fill: "#2F6F62", stroke: "#1B4D3E" },
+                Adana: { fill: "#2F6F62", stroke: "#1B4D3E" },
+                İzmir: { fill: "#2F6F62", stroke: "#1B4D3E" },
+                Muş: { fill: "#2F6F62", stroke: "#1B4D3E" },
+                Kayseri: { fill: "#B23A3A", stroke: "#7A1F1F" }
+            },
+            names: [
+                { t: "Bafra", sub: "Orta Karadeniz", x: 508, y: 54, fs: 7.4, sw: 1.8, ink: "#1B4D3E" },
+                { t: "Menemen", sub: "Ege", x: 118, y: 236, fs: 7.6, sw: 1.8, ink: "#1B4D3E" },
+                { t: "Çukurova", sub: "Akdeniz", x: 522, y: 338, fs: 7.6, sw: 1.8, ink: "#1B4D3E" },
+                { t: "Muş", sub: "Doğu Anadolu", x: 808, y: 214, fs: 7.4, sw: 1.8, ink: "#1B4D3E" },
+                { t: "Develi", sub: "Akdeniz’de değil", x: 522, y: 258, fs: 7.4, sw: 1.8, ink: "#7A1F1F" }
+            ],
+            legend: '<g font-family="Segoe UI, Inter, Calibri, sans-serif">' +
+                '<rect x="56" y="838" width="14" height="14" rx="3" fill="#2F6F62"/>' +
+                '<text x="78" y="850" font-size="15" font-weight="700" fill="#2F6F62">Doğru eşleşme</text>' +
+                '<rect x="250" y="838" width="14" height="14" rx="3" fill="#B23A3A"/>' +
+                '<text x="272" y="850" font-size="15" font-weight="700" fill="#B23A3A">Akdeniz’de değil</text>' +
+                "</g>"
+        });
+
+        writeWideOvaMap(provs, {
+            file: "c5_q21_karst.png",
+            title: "BATI TOROS KARSTİK",
+            hiKeys: ["Antalya", "Burdur", "Denizli", "Muğla"],
+            hiFill: "#1B4D3E",
+            hiStroke: "#0E3329",
+            ink: "#12382E",
+            names: [
+                { t: "Karstik ovalar", sub: "Kalker · dolomit · gölova", x: 236, y: 338, fs: 8.4, sw: 2.0 }
+            ],
+            extra: '<text x="236" y="318" text-anchor="middle" font-family="Segoe UI, Inter, Calibri, sans-serif" font-size="7.2" font-weight="700" fill="#F4EBDA" stroke="#12382E" stroke-width="1.8" paint-order="stroke">Batı Toros kuşağı</text>'
         });
     }
 

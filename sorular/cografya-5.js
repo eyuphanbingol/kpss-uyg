@@ -37,7 +37,9 @@ window.cografya_5_sorulari = [
       "E) Kestel – Denizli"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "TAKKEM kodlamasında yer alan Kestel Ovası, Denizli'de değil Burdur il sınırları içerisinde yer almaktadır. Diğer tüm eşleştirmeler coğrafi olarak doğrudur."
+    "explanation": "TAKKEM kodlamasında yer alan Kestel Ovası, Denizli'de değil Burdur il sınırları içerisinde yer almaktadır. Diğer tüm eşleştirmeler coğrafi olarak doğrudur.",
+    "img": "./src/img/c5_q3_karst.png?v=1",
+    "imgAlt": "Tefenni, Acıpayam, Korkuteli, Elmalı ve Kestel karstik ovaları"
   },
   {
     "id": "4",
@@ -76,7 +78,9 @@ window.cografya_5_sorulari = [
       "E) Büyük Menderes – Selçuk Ovası"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Büyük Menderes Nehri, Aydın'da 'Balat Ovası' deltasını oluşturur. Selçuk Ovası ise Küçük Menderes Nehri'nin taşıdığı alüvyonlarla oluşmuş bir deltadır."
+    "explanation": "Büyük Menderes Nehri, Aydın'da 'Balat Ovası' deltasını oluşturur. Selçuk Ovası ise Küçük Menderes Nehri'nin taşıdığı alüvyonlarla oluşmuş bir deltadır.",
+    "img": "./src/img/c5_q6_delta.png?v=1",
+    "imgAlt": "Kızılırmak–Bafra, Yeşilırmak–Çarşamba, Göksu–Silifke, Gediz–Menemen, Büyük Menderes–Balat"
   },
   {
     "id": "7",
@@ -102,7 +106,9 @@ window.cografya_5_sorulari = [
       "E) Çarşamba Ovası (Yeşilırmak)"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Çarşamba Ovası, Yeşilırmak'ın Karadeniz'e döküldüğü yerde (Samsun - Orta Karadeniz) oluşturduğu bir deltadır. Diğer seçenekler Ege Bölgesi kıyılarındadır."
+    "explanation": "Çarşamba Ovası, Yeşilırmak'ın Karadeniz'e döküldüğü yerde (Samsun - Orta Karadeniz) oluşturduğu bir deltadır. Diğer seçenekler Ege Bölgesi kıyılarındadır.",
+    "img": "./src/img/c5_q8_ege_delta.png?v=1",
+    "imgAlt": "Ege delta ovaları ve Çarşamba’nın Karadeniz’deki konumu"
   },
   {
     "id": "9",
@@ -154,7 +160,9 @@ window.cografya_5_sorulari = [
       "E) Salihli – Kuzey Anadolu Fayı (KAF)"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Salihli Ovası, Ege Bölgesi'ndeki horst-graben sistemi içinde yer alır ve Batı Anadolu Fay Hattı (BAF) kuşağındadır. Kuzey Anadolu Fayı ile bir ilişkisi yoktur."
+    "explanation": "Salihli Ovası, Ege Bölgesi'ndeki horst-graben sistemi içinde yer alır ve Batı Anadolu Fay Hattı (BAF) kuşağındadır. Kuzey Anadolu Fayı ile bir ilişkisi yoktur.",
+    "img": "./src/img/c5_q12_fay.png?v=1",
+    "imgAlt": "Erzincan, Niksar, Amik, Malatya ve Salihli ovaları ile KAF, DAF, BAF"
   },
   {
     "id": "13",
@@ -167,7 +175,9 @@ window.cografya_5_sorulari = [
       "E) Bafra – Çarşamba – Çukurova"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Tercan, Erzincan, Niksar ve Erbaa ovaları Türkiye'nin kuzeyini bir yay gibi kesen Kuzey Anadolu Fay Hattı (KAF) çizgisi üzerinde dizilmiş tektonik çöküntü ovalarıdır."
+    "explanation": "Tercan, Erzincan, Niksar ve Erbaa ovaları Türkiye'nin kuzeyini bir yay gibi kesen Kuzey Anadolu Fay Hattı (KAF) çizgisi üzerinde dizilmiş tektonik çöküntü ovalarıdır.",
+    "img": "./src/img/c5_q13_kaf.png?v=1",
+    "imgAlt": "KAF üzerindeki Tercan, Erzincan, Niksar ve Erbaa ovaları"
   },
   {
     "id": "14",
@@ -180,7 +190,9 @@ window.cografya_5_sorulari = [
       "E) Hiçbir fay hattıyla ilişkili değildir"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "Ege Bölgesi'nde kırılmalarla oluşan, doğu-batı uzantılı graben çöküntülerindeki tüm ovalar Batı Anadolu Fay Hattı (BAF) deprem kuşağındadır."
+    "explanation": "Ege Bölgesi'nde kırılmalarla oluşan, doğu-batı uzantılı graben çöküntülerindeki tüm ovalar Batı Anadolu Fay Hattı (BAF) deprem kuşağındadır.",
+    "img": "./src/img/c5_q14_baf.png?v=1",
+    "imgAlt": "BAF üzerindeki Salihli ve Turgutlu graben ovaları"
   },
   {
     "id": "15",
@@ -232,7 +244,9 @@ window.cografya_5_sorulari = [
       "E) Çukurova – Develi Ovası"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Kıyı kesimindeki en büyük akarsu delta ovamız Akdeniz'deki Çukurova'dır; iç kesimlerde yer alan en büyük iç ova/tektonik ova ise Konya Ovası'dır."
+    "explanation": "Kıyı kesimindeki en büyük akarsu delta ovamız Akdeniz'deki Çukurova'dır; iç kesimlerde yer alan en büyük iç ova/tektonik ova ise Konya Ovası'dır.",
+    "img": "./src/img/c5_q18_buyuk.png?v=1",
+    "imgAlt": "Çukurova ve Konya Ovası karşılaştırması"
   },
   {
     "id": "19",
@@ -258,7 +272,9 @@ window.cografya_5_sorulari = [
       "E) Develi Ovası – Akdeniz"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Develi Ovası, İç Anadolu Bölgesi'nde yer alan Kayseri ilinin sınırları içerisindedir, Akdeniz Bölgesi'nde yer almaz."
+    "explanation": "Develi Ovası, İç Anadolu Bölgesi'nde yer alan Kayseri ilinin sınırları içerisindedir, Akdeniz Bölgesi'nde yer almaz.",
+    "img": "./src/img/c5_q20_bolge.png?v=1",
+    "imgAlt": "Bafra, Çukurova, Menemen, Muş ve Develi ova–bölge eşleştirmesi"
   },
   {
     "id": "21",
@@ -271,7 +287,9 @@ window.cografya_5_sorulari = [
       "E) Dağ eteği ovasıdır"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Batı Toroslar (Teke-Taşeli çevresi) ve kalker-dolomit gibi çözünebilen kayaçların varlığı doğrudan 'Karstik Ovaları' (Gölovaları) tanımlamaktadır."
+    "explanation": "Batı Toroslar (Teke-Taşeli çevresi) ve kalker-dolomit gibi çözünebilen kayaçların varlığı doğrudan 'Karstik Ovaları' (Gölovaları) tanımlamaktadır.",
+    "img": "./src/img/c5_q21_karst.png?v=1",
+    "imgAlt": "Batı Toroslar'daki kalker–dolomit kuşağı ve karstik ovalar"
   },
   {
     "id": "22",
