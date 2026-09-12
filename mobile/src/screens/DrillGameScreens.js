@@ -404,6 +404,109 @@ export function PanicPlayScreen({ navigation }) {
     );
 }
 
+export function KodlamaPlayScreen({ navigation }) {
+    var app = useApp();
+    var isDark = app.dark;
+    var seedState = useState(0);
+    var seed = seedState[0];
+    var setSeed = seedState[1];
+    var deck = useMemo(function () {
+        try {
+            return GamesEngine.kodlamaDeck ? (GamesEngine.kodlamaDeck(12) || []) : [];
+        } catch (e) {
+            return [];
+        }
+    }, [seed]);
+    var iState = useState(0);
+    var i = iState[0];
+    var setI = iState[1];
+    var pickedState = useState(null);
+    var picked = pickedState[0];
+    var setPicked = pickedState[1];
+    var scoreState = useState(0);
+    var score = scoreState[0];
+    var setScore = scoreState[1];
+    var doneState = useState(false);
+    var done = doneState[0];
+    var setDone = doneState[1];
+    var best = ((app.student && app.student.games) || {}).kodlamaBest || 0;
+    var card = deck[i];
+
+    function choose(opt) {
+        if (picked || !card) return;
+        var ok = String(opt) === String(card.a);
+        setPicked(opt);
+        if (ok) setScore(function (s) { return s + 1; });
+    }
+
+    function next() {
+        if (i + 1 >= deck.length) {
+            setDone(true);
+            StudentStore.noteKodlamaBest(score);
+            return;
+        }
+        setI(i + 1);
+        setPicked(null);
+    }
+
+    if (done) {
+        return (
+            <ScrollScreen dark={isDark}>
+                <BackChip dark={isDark} label="Alıştırmalar" onPress={function () { navigation.goBack(); }} />
+                <View style={styles.result}>
+                    <Text style={[styles.kicker, isDark && styles.muted]}>Kodlamalar bitti</Text>
+                    <Text style={styles.pct}>{score}/{deck.length}</Text>
+                    <Text style={[styles.meta, isDark && styles.muted, { marginTop: 8 }]}>En iyi: {Math.max(score, best)}</Text>
+                    <PrimaryButton title="Yeniden" onPress={function () { setSeed(seed + 1); setI(0); setPicked(null); setScore(0); setDone(false); }} style={{ marginTop: 18 }} />
+                </View>
+            </ScrollScreen>
+        );
+    }
+
+    if (!deck.length || !card) {
+        return (
+            <ScrollScreen dark={isDark}>
+                <BackChip dark={isDark} label="Alıştırmalar" onPress={function () { navigation.goBack(); }} />
+                <Text style={[styles.title, isDark && styles.light]}>Kodlamalar yüklenemedi.</Text>
+            </ScrollScreen>
+        );
+    }
+
+    var ok = picked && String(picked) === String(card.a);
+    return (
+        <ScrollScreen dark={isDark}>
+            <BackChip dark={isDark} label="Alıştırmalar" onPress={function () { navigation.goBack(); }} />
+            <Text style={[styles.kicker, isDark && styles.muted]}>{card.cat} · {i + 1}/{deck.length} · {score} doğru</Text>
+            <Text style={[styles.title, isDark && styles.light]}>{card.q}</Text>
+            <View style={[styles.stem, isDark && styles.stemDark]}>
+                <Text style={[styles.stemText, isDark && styles.light]}>{card.slogan}</Text>
+            </View>
+            {card.choices.map(function (opt, oi) {
+                var extra = {};
+                if (picked) {
+                    if (String(opt) === String(card.a)) extra = styles.ok;
+                    else if (String(opt) === String(picked)) extra = styles.no;
+                }
+                return (
+                    <Tap key={oi} onPress={function () { choose(opt); }} style={[styles.choice, extra, isDark && styles.cardDark]} disabled={!!picked}>
+                        <View style={styles.choiceRow}>
+                            <Text style={[styles.letter, isDark && styles.letterDark]}>{String.fromCharCode(65 + oi)}</Text>
+                            <Text style={[styles.choiceText, isDark && styles.light]}>{opt}</Text>
+                        </View>
+                    </Tap>
+                );
+            })}
+            {picked ? (
+                <View style={{ marginTop: 14 }}>
+                    <Text style={ok ? { color: "#059669", fontWeight: "800" } : styles.bad}>{ok ? "Doğru" : "Yanlış · " + card.a}</Text>
+                    {card.note ? <Text style={[styles.meta, isDark && styles.muted, { marginTop: 6 }]}>{card.note}</Text> : null}
+                    <PrimaryButton title={i + 1 >= deck.length ? "Bitir" : "Sonraki"} onPress={next} style={{ marginTop: 14 }} />
+                </View>
+            ) : null}
+        </ScrollScreen>
+    );
+}
+
 var styles = StyleSheet.create({
     back: { color: colors.muted, fontWeight: "700", marginBottom: 8 },
     title: { fontSize: 24, fontWeight: "800", color: colors.text, marginBottom: 4 },

@@ -245,7 +245,8 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             conquerAt: "",
             badges: {},
             panicBest: 0,
-            tabuBest: 0
+            tabuBest: 0,
+            kodlamaBest: 0
         };
     }
 
@@ -294,7 +295,8 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             conquerAt: typeof g.conquerAt === "string" ? g.conquerAt : "",
             badges: isObj(g.badges) ? g.badges : {},
             panicBest: Math.max(0, Number(g.panicBest) || 0),
-            tabuBest: Math.max(0, Number(g.tabuBest) || 0)
+            tabuBest: Math.max(0, Number(g.tabuBest) || 0),
+            kodlamaBest: Math.max(0, Number(g.kodlamaBest) || 0)
         };
     }
 
@@ -1110,6 +1112,14 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             n = Math.max(0, Number(n) || 0);
             if (n > state.games.panicBest) {
                 state.games.panicBest = n;
+                emit();
+            }
+        },
+        noteKodlamaBest: function (n) {
+            if (!state.games) state.games = defaultGames();
+            n = Math.max(0, Number(n) || 0);
+            if (n > (state.games.kodlamaBest || 0)) {
+                state.games.kodlamaBest = n;
                 emit();
             }
         },

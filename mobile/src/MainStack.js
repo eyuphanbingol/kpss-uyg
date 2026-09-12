@@ -9,7 +9,7 @@ import BugunScreen from "./screens/BugunScreen";
 import ProgramScreen from "./screens/ProgramScreen";
 import { DersHomeScreen, KonuHubScreen, KonuListScreen } from "./screens/DerslerScreens";
 import { AlistirmalarHomeScreen, AlistirmaDersListScreen, AlistirmaKonuListScreen, ClozePlayScreen, MapTopicsScreen, MapPlayScreen } from "./screens/AlistirmalarScreens";
-import { ConquerPlayScreen, TabuPlayScreen, PanicPlayScreen } from "./screens/DrillGameScreens";
+import { ConquerPlayScreen, TabuPlayScreen, PanicPlayScreen, KodlamaPlayScreen } from "./screens/DrillGameScreens";
 import EksiklerScreen from "./screens/EksiklerScreen";
 import BenScreen from "./screens/BenScreen";
 import NotesScreen from "./screens/NotesScreen";
@@ -166,6 +166,7 @@ export default function MainStack() {
                 <Stack.Screen name="ConquerPlay" component={ConquerPlayScreen} />
                 <Stack.Screen name="TabuPlay" component={TabuPlayScreen} />
                 <Stack.Screen name="PanicPlay" component={PanicPlayScreen} />
+                <Stack.Screen name="KodlamaPlay" component={KodlamaPlayScreen} />
                 <Stack.Screen name="Notes" component={NotesScreen} />
                 <Stack.Screen name="Test" component={TestScreen} />
                 <Stack.Screen name="ReviewNotebook" component={ReviewNotebookScreen} />

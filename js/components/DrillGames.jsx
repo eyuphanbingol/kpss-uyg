@@ -584,8 +584,120 @@
         );
     }
 
+        );
+    }
+
+    function KodlamaPlay(props) {
+        var student = props.student || {};
+        var games = student.games || {};
+        var engine = ge();
+        var deck = useMemo(function () {
+            return engine && engine.kodlamaDeck ? engine.kodlamaDeck(12) : [];
+        }, [engine, props.seed]);
+        var [i, setI] = useState(0);
+        var [picked, setPicked] = useState(null);
+        var [score, setScore] = useState(0);
+        var [done, setDone] = useState(false);
+        var card = deck[i];
+
+        function choose(opt) {
+            if (picked || !card) return;
+            var ok = String(opt) === String(card.a);
+            setPicked(opt);
+            if (ok) setScore(function (s) { return s + 1; });
+        }
+
+        function next() {
+            if (i + 1 >= deck.length) {
+                setDone(true);
+                if (store() && store().noteKodlamaBest) store().noteKodlamaBest(score);
+                return;
+            }
+            setI(i + 1);
+            setPicked(null);
+        }
+
+        if (done) {
+            return (
+                <div className="map-play-root tabu-root">
+                    <header className="map-play-top">
+                        <BackBtn onClick={props.onBack} label="Alıştırmalar" />
+                    </header>
+                    <div className="game-end">
+                        <p className="tabu-end-kicker">Kodlamalar bitti</p>
+                        <p className="tabu-end-score">{score}/{deck.length}</p>
+                        <p className="text-sm text-stone-500 mt-2">En iyi: {Math.max(score, games.kodlamaBest || 0)}</p>
+                        <p className="tabu-end-note">Sloganı gör, kavramı veya yer listesini tut.</p>
+                        <button type="button" className="btn-primary text-white px-5 py-2.5 rounded-full mt-6" onClick={props.onAgain}>Yeniden</button>
+                    </div>
+                </div>
+            );
+        }
+
+        if (!deck.length) {
+            return (
+                <div className="map-play-root tabu-root">
+                    <header className="map-play-top">
+                        <BackBtn onClick={props.onBack} label="Alıştırmalar" />
+                    </header>
+                    <div className="tabu-body">
+                        <p className="tabu-ask">Kodlamalar yüklenemedi.</p>
+                    </div>
+                </div>
+            );
+        }
+
+        var ok = picked && String(picked) === String(card.a);
+        return (
+            <div className="map-play-root tabu-root">
+                <header className="map-play-top">
+                    <div className="map-play-bar">
+                        <BackBtn onClick={props.onBack} label="Alıştırmalar" />
+                        <span className="tabu-scorepill">{score} doğru · {i + 1}/{deck.length}</span>
+                    </div>
+                    <p className="map-play-kicker">Kodlamalarla coğrafya · sloganı oku, kavramı seç</p>
+                </header>
+                <div className="tabu-body">
+                    <div className="tabu-hero">
+                        <span className="tabu-topic">{card.cat}</span>
+                        <p className="tabu-ask">{card.q}</p>
+                        <p className="kodlama-slogan">{card.slogan}</p>
+                    </div>
+                    <div className="panic-choices">
+                        {card.choices.map(function (opt, oi) {
+                            var cls = "panic-opt";
+                            if (picked) {
+                                if (String(opt) === String(card.a)) cls += " kodlama-ok";
+                                else if (String(opt) === String(picked)) cls += " kodlama-bad";
+                            }
+                            return (
+                                <button key={oi} type="button" className={cls} disabled={!!picked}
+                                    onClick={function () { choose(opt); }}>
+                                    <span className="panic-letter">{String.fromCharCode(65 + oi)}</span>
+                                    <span className="panic-opt-text">{opt}</span>
+                                </button>
+                            );
+                        })}
+                    </div>
+                    {picked ? (
+                        <div className="kodlama-note">
+                            <p className={ok ? "text-emerald-700 dark:text-emerald-400 font-semibold" : "text-rose-600 dark:text-rose-400 font-semibold"}>
+                                {ok ? "Doğru" : "Yanlış · " + card.a}
+                            </p>
+                            {card.note ? <p className="text-sm text-stone-500 mt-1">{card.note}</p> : null}
+                            <button type="button" className="btn-primary text-white px-5 py-2.5 rounded-full mt-4" onClick={next}>
+                                {i + 1 >= deck.length ? "Bitir" : "Sonraki"}
+                            </button>
+                        </div>
+                    ) : null}
+                </div>
+            </div>
+        );
+    }
+
     window.KpssComponents = window.KpssComponents || {};
     window.KpssComponents.ConquerPlay = ConquerPlay;
     window.KpssComponents.TabuPlay = TabuPlay;
     window.KpssComponents.PanicPlay = PanicPlay;
+    window.KpssComponents.KodlamaPlay = KodlamaPlay;
 })();

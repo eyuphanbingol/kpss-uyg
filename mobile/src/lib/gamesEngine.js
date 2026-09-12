@@ -6,7 +6,7 @@ import { GamesBank } from "./gamesBank";
     if (GamesBank) global.GamesBank = GamesBank;
 
     function bank() {
-        return GamesBank || global.GamesBank || { SPECIAL: {}, REGION_FACTS: {}, TABU: [], PANIC: [], TABU_SCORE: [5, 3, 2, 1] };
+        return GamesBank || global.GamesBank || { SPECIAL: {}, REGION_FACTS: {}, TABU: [], PANIC: [], KODLAMA: [], TABU_SCORE: [5, 3, 2, 1] };
     }
 
     function mq() {
@@ -493,6 +493,23 @@ import { GamesBank } from "./gamesBank";
         });
     }
 
+    function kodlamaDeck(n) {
+        n = n || 12;
+        var rows = (bank().KODLAMA || []).slice();
+        if (!rows.length) return [];
+        return shuffle(rows).slice(0, n).map(function (row, i) {
+            return {
+                id: i,
+                cat: row.cat || "Kodlama",
+                slogan: row.slogan,
+                q: row.q || "Bu kodlama neyi hatırlatır?",
+                a: row.a,
+                note: row.note || "",
+                choices: shuffle((row.choices || [row.a]).slice())
+            };
+        });
+    }
+
     global.GamesEngine = {
         shuffle: shuffle,
         quizForProvince: quizForProvince,
@@ -502,6 +519,7 @@ import { GamesBank } from "./gamesBank";
         tabuDeck: tabuDeck,
         tabuPoints: tabuPoints,
         panicDeck: panicDeck,
+        kodlamaDeck: kodlamaDeck,
         allCodes: allCodes,
         regionTitle: regionTitle,
         nameOf: function (code) { return names()[code] || code; }

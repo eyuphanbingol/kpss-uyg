@@ -8,7 +8,7 @@ import { StudentStore } from "../lib/store";
 import { go } from "../nav";
 import { Card, PrimaryButton, ScrollScreen, Screen, Tap, PageHeader, BackChip } from "../ui";
 import { colors } from "../lib/theme";
-import { PencilLine, Map, Shield, Layers, Timer, ChevronRight } from "lucide-react-native";
+import { PencilLine, Map, Shield, Layers, Timer, ChevronRight, Hash } from "lucide-react-native";
 import { AccentCard, PctBadge, Hit } from "../kit";
 import { TrMapView } from "../components/TrMapView";
 import { useLandscapeLock } from "../lib/useLandscapeLock";
@@ -31,7 +31,7 @@ export function AlistirmalarHomeScreen({ navigation }) {
 
     return (
         <ScrollScreen dark={isDark} noBottom>
-            <PageHeader dark={isDark} title="Alıştırmalar" subtitle="Boşluk, harita ve üç yeni oyun" />
+            <PageHeader dark={isDark} title="Alıştırmalar" subtitle="Boşluk, harita, kodlama ve oyunlar" />
             <AccentCard dark={isDark} chevron onPress={function () { go(navigation, "AlistirmaDersList"); }} style={styles.playCard}>
                 <View style={styles.playRow}>
                     <View style={styles.playIco}><PencilLine size={20} color="#0F172A" /></View>
@@ -47,6 +47,15 @@ export function AlistirmalarHomeScreen({ navigation }) {
                     <View style={{ flex: 1, minWidth: 0 }}>
                         <Text style={[styles.dersName, isDark && styles.textLight]}>Harita oyunu</Text>
                         <Text style={styles.meta}>Konuyu seç, yeri haritada işaretle.</Text>
+                    </View>
+                </View>
+            </AccentCard>
+            <AccentCard dark={isDark} chevron onPress={function () { go(navigation, "KodlamaPlay"); }} style={styles.playCard}>
+                <View style={styles.playRow}>
+                    <View style={styles.playIco}><Hash size={20} color="#0F172A" /></View>
+                    <View style={{ flex: 1, minWidth: 0 }}>
+                        <Text style={[styles.dersName, isDark && styles.textLight]}>Kodlamalarla coğrafya</Text>
+                        <Text style={styles.meta}>Sloganı oku, kavramı veya yer listesini tut.</Text>
                     </View>
                 </View>
             </AccentCard>

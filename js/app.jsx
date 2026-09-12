@@ -737,7 +737,7 @@ function AlistirmalarHome(props) {
             <div className="flex justify-between items-start mb-8">
                 <div className="slide-up">
                     <h1 className="text-3xl sm:text-4xl font-display font-black tracking-tight gradient-text">Alıştırmalar</h1>
-                    <p className="text-sm text-stone-400 mt-1">Boşluk, harita ve üç yeni oyun.</p>
+                    <p className="text-sm text-stone-400 mt-1">Boşluk, harita, kodlama ve oyunlar.</p>
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
@@ -753,6 +753,12 @@ function AlistirmalarHome(props) {
                     <div className="h-14 w-14 rounded-2xl bg-amber-50 text-2xl flex items-center justify-center mb-3">🗺️</div>
                     <h2 className="font-bold text-lg">Harita oyunu</h2>
                     <p className="text-sm text-stone-400 mt-1">Konuyu seç, yeri haritada işaretle.</p>
+                </button>
+                <button type="button" onClick={function () { props.onKind("kodlama"); }}
+                    className="text-left p-6 rounded-3xl glass card-hover">
+                    <div className="h-14 w-14 rounded-2xl bg-sky-50 text-2xl flex items-center justify-center mb-3">🔤</div>
+                    <h2 className="font-bold text-lg">Kodlamalarla coğrafya</h2>
+                    <p className="text-sm text-stone-400 mt-1">Sloganı oku, kavramı veya yer listesini tut.</p>
                 </button>
                 <button type="button" onClick={function () { props.onKind("conquer"); }}
                     className="text-left p-6 rounded-3xl glass card-hover">
@@ -2689,7 +2695,7 @@ function App() {
     }, [session]);
 
     useEffect(function () {
-        var names = { conquer: "ConquerPlay", tabu: "TabuPlay", panic: "PanicPlay" };
+        var names = { conquer: "ConquerPlay", tabu: "TabuPlay", panic: "PanicPlay", kodlama: "KodlamaPlay" };
         var name = names[drillKind];
         if (!name || !window.JsxLoader) {
             setDrillGameCmp(null);
@@ -2835,7 +2841,7 @@ function App() {
 
     const inTest = !!session;
     const inMapPlay = nav === "alistirmalar" && drillKind === "map" && !!drillMapTopic;
-    const inDrillGame = nav === "alistirmalar" && (drillKind === "conquer" || drillKind === "tabu" || drillKind === "panic");
+    const inDrillGame = nav === "alistirmalar" && (drillKind === "conquer" || drillKind === "tabu" || drillKind === "panic" || drillKind === "kodlama");
     const konuData = (selectedDers && selectedKonu && kpssData[selectedDers]) ? (kpssData[selectedDers][selectedKonu] || {}) : {};
 
     let body = null;
@@ -2885,7 +2891,7 @@ function App() {
                     onBack={function () { setDrillMapTopic(null); }}
                     onAgain={function () { setDrillSeed(Date.now()); }} />;
             }
-        } else if (drillKind === "conquer" || drillKind === "tabu" || drillKind === "panic") {
+        } else if (drillKind === "conquer" || drillKind === "tabu" || drillKind === "panic" || drillKind === "kodlama") {
             if (drillGameErr) {
                 body = (
                     <Shell>
