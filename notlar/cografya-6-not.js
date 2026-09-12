@@ -65,7 +65,7 @@ window.cografya_6_notlari = [
         <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl border border-purple-100 dark:border-purple-800/30">
             <h4 class="font-bold text-purple-700 dark:text-purple-400">Erzurum (Narman) Peri Bacaları</h4>
             <ul class="list-disc list-inside space-y-1 text-xs mt-2">
-                <li>Erzurum Narlı'da bulunur.</li>
+                <li>Erzurum'un <b>Narman</b> ilçesinde bulunur.</li>
                 <li>Nevşehir'den farkı, volkanik değil <u>kumtaşının</u> (tortul kayaçların) su tarafından aşındırılmasıyla oluşmuş olmasıdır.</li>
             </ul>
         </div>

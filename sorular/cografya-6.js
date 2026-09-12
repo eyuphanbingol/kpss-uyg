@@ -15,7 +15,7 @@ window.cografya_6_sorulari = [
   },
   {
     "id": "2",
-    "question": "Peri bacalarının oluşumuyla ilgili;\nI. Nevşehir'deki peri bacalarının oluşumunda volkanizma, akarsu aşındırması ve rüzgâr etkilidir.\nII. Erzurum Narlı'daki peri bacaları kumtaşının aşınmasıyla oluşmuştur.\nIII. Peri bacaları yalnızca karstik arazilerde oluşur.\nyargılarından hangileri doğrudur?",
+    "question": "Peri bacalarının oluşumuyla ilgili;\nI. Nevşehir'deki peri bacalarının oluşumunda volkanizma, akarsu aşındırması ve rüzgâr etkilidir.\nII. Erzurum Narman'daki peri bacaları kumtaşının aşınmasıyla oluşmuştur.\nIII. Peri bacaları yalnızca karstik arazilerde oluşur.\nyargılarından hangileri doğrudur?",
     "options": [
       "A) Yalnız I",
       "B) I ve II",
@@ -24,7 +24,7 @@ window.cografya_6_sorulari = [
       "E) I, II ve III"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Nevşehir peri bacalarının oluşumunda volkanizma, akarsu/sel aşındırması ve rüzgar etkilidir. Erzurum Narlı (Narman) peri bacaları ise volkanik değil, kumtaşının aşınmasıyla oluşmuştur. Karstik arazilerle bir ilgisi yoktur (III. öncül yanlıştır)."
+    "explanation": "Nevşehir peri bacalarının oluşumunda volkanizma, akarsu/sel aşındırması ve rüzgar etkilidir. Erzurum Narman peri bacaları ise volkanik değil, kumtaşının (tortul kayaçların) su tarafından aşındırılmasıyla oluşmuştur. Karstik arazilerle bir ilgisi yoktur (III. öncül yanlıştır)."
   },
   {
     "id": "3",
