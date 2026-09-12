@@ -68,6 +68,9 @@ window.cografya_5_notlari = [
             </div>
         </div>
     </div>
+    <div class="mt-4 overflow-hidden rounded-xl border border-amber-200 dark:border-amber-700/50 bg-white dark:bg-slate-800 p-2">
+        <img src="./src/img/tr_ova_karst.png?v=1" alt="Karstik ovalar (polye) haritası" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+    </div>
     `,
 
     `
