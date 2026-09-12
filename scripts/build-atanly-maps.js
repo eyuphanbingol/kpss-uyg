@@ -307,8 +307,9 @@ function writeWideOvaMap(provs, opts) {
     }).join("");
     var nameSvg = (opts.names || []).map(function (n) {
         var fs = n.fs || 8.6;
+        var sw = n.sw != null ? n.sw : 2.4;
         var common = 'x="' + n.x + '" y="' + n.y + '" text-anchor="' + (n.anchor || "middle") + '" font-family="Segoe UI, Inter, Calibri, sans-serif" font-size="' + fs + '" font-weight="800"';
-        return '<text ' + common + ' fill="#F4EBDA" stroke="' + ink + '" stroke-width="2.4" stroke-linejoin="round" paint-order="stroke">' + esc(n.t) + "</text>";
+        return '<text ' + common + ' fill="#F4EBDA" stroke="' + ink + '" stroke-width="' + sw + '" stroke-linejoin="round" paint-order="stroke">' + esc(n.t) + "</text>";
     }).join("");
     var extra = opts.extra || "";
     var svg = '<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns="http://www.w3.org/2000/svg" width="' + W + '" height="' + H + '" viewBox="0 0 ' + W + " " + H + '">\n' +
@@ -1245,6 +1246,46 @@ function main() {
                 { t: "Balat", x: 132, y: 302 },
                 { t: "Çukurova", x: 522, y: 338 },
                 { t: "Silifke", x: 452, y: 372 }
+            ]
+        });
+    }
+
+    if (wantFile("tr_ova_tektonik")) {
+        writeWideOvaMap(provs, {
+            file: "tr_ova_tektonik.png",
+            title: "TEKTONİK OVALAR",
+            hiKeys: [
+                "Bursa", "Balıkesir", "Sakarya", "Düzce", "Amasya", "Erzincan", "Erzurum",
+                "Muş", "Malatya", "Elazığ", "Konya", "Kayseri", "Sivas", "Eskişehir",
+                "Manisa", "Aydın", "Denizli", "Isparta", "Burdur", "Hatay"
+            ],
+            hiFill: "#8F2D2A",
+            hiStroke: "#5C1A18",
+            ink: "#4A1210",
+            names: [
+                { t: "Balıkesir", x: 148, y: 168, fs: 7.2, sw: 1.7 },
+                { t: "Bursa", x: 198, y: 148, fs: 7.2, sw: 1.7 },
+                { t: "İnegöl", x: 232, y: 156, fs: 7.2, sw: 1.7 },
+                { t: "Adapazarı", x: 274, y: 108, fs: 7.1, sw: 1.7 },
+                { t: "Düzce", x: 312, y: 94, fs: 7.2, sw: 1.7 },
+                { t: "Eskişehir", x: 292, y: 176, fs: 7.1, sw: 1.7 },
+                { t: "Akhisar", x: 162, y: 208, fs: 7.1, sw: 1.7 },
+                { t: "Turgutlu", x: 168, y: 244, fs: 7.1, sw: 1.7 },
+                { t: "Söke", x: 122, y: 296, fs: 7.2, sw: 1.7 },
+                { t: "Nazilli", x: 178, y: 286, fs: 7.1, sw: 1.7 },
+                { t: "Denizli", x: 216, y: 278, fs: 7.2, sw: 1.7 },
+                { t: "Burdur", x: 248, y: 310, fs: 7.2, sw: 1.7 },
+                { t: "Isparta", x: 300, y: 276, fs: 7.2, sw: 1.7 },
+                { t: "Konya", x: 372, y: 286, fs: 7.6, sw: 1.8 },
+                { t: "Amasya", x: 522, y: 108, fs: 7.2, sw: 1.7 },
+                { t: "Kayseri", x: 522, y: 236, fs: 7.2, sw: 1.7 },
+                { t: "Sivas", x: 598, y: 168, fs: 7.2, sw: 1.7 },
+                { t: "Malatya", x: 622, y: 248, fs: 7.1, sw: 1.7 },
+                { t: "Elazığ", x: 698, y: 228, fs: 7.2, sw: 1.7 },
+                { t: "Erzincan", x: 676, y: 168, fs: 7.1, sw: 1.7 },
+                { t: "Erzurum", x: 798, y: 148, fs: 7.2, sw: 1.7 },
+                { t: "Muş", x: 808, y: 222, fs: 7.4, sw: 1.7 },
+                { t: "Amik", x: 544, y: 378, fs: 7.4, sw: 1.7 }
             ]
         });
     }
