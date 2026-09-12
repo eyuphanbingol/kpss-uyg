@@ -1,1202 +1,602 @@
 window.tarih_9_sorulari = [
-{
-    question: "Soru 1: Napolyon'un Mısır'ı işgal etmesi üzerine Fransız ordusunu Akka'da durduran Osmanlı devlet adamı aşağıdakilerden hangisidir?",
-    options: [
-        "A) Kavalalı Mehmet Ali Paşa",
-        "B) Cezzar Ahmet Paşa",
-        "C) Gazi Osman Paşa",
-        "D) Alemdar Mustafa Paşa",
-        "E) Tepedelenli Ali Paşa"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "1798 yılında Napolyon'un Mısır Seferi sırasında Fransız ordusu Akka'da Cezzar Ahmet Paşa tarafından durdurulmuştur."
-},
-{
-    question: "Soru 2: Fransızların Mısır'dan çekilmesini sağlayan antlaşma aşağıdakilerden hangisidir?",
-    options: [
-        "A) Paris Antlaşması",
-        "B) El Ariş Antlaşması",
-        "C) Kale-i Sultaniye Antlaşması",
-        "D) Edirne Antlaşması",
-        "E) Bükreş Antlaşması"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "1801 El Ariş Antlaşması ile Fransızlar Mısır'dan çekilmiştir."
-},
-{
-    question: "Soru 3: Mısır'ın Osmanlı Devleti'ne ait olduğunun uluslararası alanda kabul edildiği antlaşma aşağıdakilerden hangisidir?",
-    options: [
-        "A) El Ariş Antlaşması",
-        "B) Paris Paktı",
-        "C) Hünkâr İskelesi Antlaşması",
-        "D) Londra Boğazlar Sözleşmesi",
-        "E) Baltalimanı Antlaşması"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "1802 Paris Paktı ile Mısır'ın Osmanlı Devleti'ne ait olduğu kabul edilmiştir."
-},
-{
-    question: "Soru 4: 1804 yılında Kara Yorgi önderliğinde isyan eden millet aşağıdakilerden hangisidir?",
-    options: [
-        "A) Rumlar",
-        "B) Bulgarlar",
-        "C) Sırplar",
-        "D) Ermeniler",
-        "E) Arnavutlar"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "1804 yılında Kara Yorgi önderliğinde Sırplar isyan etmiş ancak isyan bastırılmıştır."
-},
-{
-    question: "Soru 5: 1806 Osmanlı-Rus Savaşı'nın başlamasında aşağıdaki devletlerden hangisinin etkisi olmuştur?",
-    options: [
-        "A) İngiltere",
-        "B) Fransa",
-        "C) Avusturya",
-        "D) Prusya",
-        "E) İran"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Osmanlı-Rus Savaşı Fransızların teşvikiyle başlamıştır."
-},
-{
-    question: "Soru 6: Rusya ile Fransa arasında imzalanan Tilsit Antlaşması hangi yılda yapılmıştır?",
-    options: [
-        "A) 1806",
-        "B) 1807",
-        "C) 1808",
-        "D) 1809",
-        "E) 1812"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Tilsit Antlaşması 1807 yılında Rusya ile Fransa arasında imzalanmıştır."
-},
-{
-    question: "Soru 7: Osmanlı Devleti ile İngiltere arasında imzalanan Kale-i Sultaniye Antlaşması'nın diğer adı aşağıdakilerden hangisidir?",
-    options: [
-        "A) Çanakkale Antlaşması",
-        "B) Londra Antlaşması",
-        "C) Balta Limanı Antlaşması",
-        "D) Paris Antlaşması",
-        "E) Hünkâr İskelesi Antlaşması"
-    ],
-    correctAnswerIndex: 0,
-    explanation: "1809 tarihli Kale-i Sultaniye Antlaşması, Çanakkale Antlaşması olarak da bilinir."
-},
-{
-    question: "Soru 8: Sırpların Osmanlı Devleti'nden ilk siyasi imtiyazı elde ettiği antlaşma aşağıdakilerden hangisidir?",
-    options: [
-        "A) Edirne",
-        "B) Bükreş",
-        "C) Paris",
-        "D) Ayastefanos",
-        "E) Berlin"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "1812 Bükreş Antlaşması ile Sırplar Osmanlı Devleti'nden ilk imtiyazlarını elde etmiştir."
-},
-{
-    question: "Soru 9: Viyana Kongresi'nin toplanmasına başkanlık eden devlet adamı aşağıdakilerden hangisidir?",
-    options: [
-        "A) Bismarck",
-        "B) Metternich",
-        "C) Gorçakov",
-        "D) Aleksandr",
-        "E) Palmerston"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "1815 Viyana Kongresi Avusturya Başbakanı Metternich başkanlığında toplanmıştır."
-},
-{
-    question: "Soru 10: Şark Sorunu ilk kez aşağıdaki toplantıların hangisinde dile getirilmiştir?",
-    options: [
-        "A) Berlin Kongresi",
-        "B) Paris Barış Konferansı",
-        "C) Viyana Kongresi",
-        "D) Londra Konferansı",
-        "E) Tersane Konferansı"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "Şark Sorunu ilk kez 1815 Viyana Kongresi'nde Rus Çarı Aleksandr tarafından dile getirilmiştir."
-},
-{
-    question: "Soru 11: Viyana Kongresi sonrasında 1815-1827 yılları arasındaki döneme verilen ad aşağıdakilerden hangisidir?",
-    options: [
-        "A) Tanzimat Dönemi",
-        "B) Restorasyon Dönemi",
-        "C) Islahat Dönemi",
-        "D) Lale Devri",
-        "E) Meşrutiyet Dönemi"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "1815-1827 yılları arası Restorasyon Dönemi olarak adlandırılmıştır."
-},
-{
-    question: "Soru 12: Filiki Eterya Cemiyeti aşağıdakilerden hangisi tarafından kurulmuştur?",
-    options: [
-        "A) Kara Yorgi",
-        "B) Aleksandr İpsilanti",
-        "C) Tepedelenli Ali Paşa",
-        "D) Metternich",
-        "E) Mehmet Ali Paşa"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Filiki Eterya Cemiyeti 1820 yılında Rus Generali Aleksandr İpsilanti tarafından kurulmuştur."
-},
-{
-    question: "Soru 13: Mora'da başlayan Yunan İsyanı hangi yılda başlamıştır?",
-    options: [
-        "A) 1815",
-        "B) 1818",
-        "C) 1820",
-        "D) 1821",
-        "E) 1823"
-    ],
-    correctAnswerIndex: 3,
-    explanation: "Yunan İsyanı 1821 yılında Mora'da başlamıştır."
-},
-{
-    question: "Soru 14: Aşağıdakilerden hangisi Yunan İsyanı'nın nedenlerinden biri değildir?",
-    options: [
-        "A) Milliyetçilik akımı",
-        "B) Filiki Eterya Cemiyeti",
-        "C) Avrupalı devletlerin kışkırtması",
-        "D) Tepedelenli Ali Paşa İsyanı",
-        "E) Sened-i İttifak'ın ilan edilmesi"
-    ],
-    correctAnswerIndex: 4,
-    explanation: "Sened-i İttifak'ın Yunan İsyanı'nın çıkışında etkisi bulunmamaktadır."
-},
-{
-    question: "Soru 15: II. Mahmut'un Yunan İsyanı ile başlangıçta yeterince ilgilenememesinin temel nedeni aşağıdakilerden hangisidir?",
-    options: [
-        "A) Osmanlı-Rus Savaşı",
-        "B) Mehmet Ali Paşa İsyanı",
-        "C) Tepedelenli Ali Paşa İsyanı",
-        "D) Navarin Baskını",
-        "E) Kırım Savaşı"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "II. Mahmut'un dikkatini Tepedelenli Ali Paşa İsyanı meşgul ettiği için Yunan İsyanı ile yeterince ilgilenememiştir."
-},
-{
-    question: "Soru 16: Mora İsyanı'nı bastırmak amacıyla donanmasını Mora'ya gönderen ve isyan bastırıldıktan sonra donanmasını Mısır'a geri çeken kişi aşağıdakilerden hangisidir?",
-    options: [
-        "A) Cezzar Ahmet Paşa",
-        "B) Kavalalı Mehmet Ali Paşa",
-        "C) Gazi Osman Paşa",
-        "D) Alemdar Mustafa Paşa",
-        "E) Mahmut Şevket Paşa"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "II. Mahmut'un isteği üzerine Mora'ya donanma gönderen Mehmet Ali Paşa isyan bastırıldıktan sonra kuvvetlerini Mısır'a geri çekmiştir."
-},
-{
-    question: "Soru 17: Navarin Olayı'nın gerçekleşmesinde aşağıdakilerden hangisi doğrudan etkili olmuştur?",
-    options: [
-        "A) Osmanlı Devleti'nin Yunanistan'ın bağımsızlığını kabul etmesi",
-        "B) Osmanlı Devleti'nin Yunanistan'a özerklik vermesi",
-        "C) Osmanlı Devleti'nin Yunanlılara bağımsızlık verilmesi talebini reddetmesi",
-        "D) Mehmet Ali Paşa'nın Osmanlı Devleti'ne savaş açması",
-        "E) Rusya'nın Boğazları işgal etmesi"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "İngiltere, Fransa ve Rusya'nın Yunanistan'a bağımsızlık verilmesi isteğini Osmanlı Devleti reddedince Navarin Olayı gerçekleşmiştir."
-},
-{
-    question: "Soru 18: Aşağıdakilerden hangisi Navarin Olayı'nın sonuçlarından biridir?",
-    options: [
-        "A) Restorasyon Dönemi başlamıştır.",
-        "B) Restorasyon Dönemi sona ermiştir.",
-        "C) Şark Sorunu çözülmüştür.",
-        "D) Kırım Savaşı başlamıştır.",
-        "E) Mısır Sorunu çözülmüştür."
-    ],
-    correctAnswerIndex: 1,
-    explanation: "1815-1827 arasındaki Restorasyon Dönemi Navarin Olayı ile sona ermiştir."
-},
-{
-    question: "Soru 19: Navarin Olayı'nın ardından Osmanlı Devleti aşağıdaki devletlerden hangisiyle savaşa girmiştir?",
-    options: [
-        "A) İngiltere",
-        "B) Fransa",
-        "C) Avusturya",
-        "D) Rusya",
-        "E) Prusya"
-    ],
-    correctAnswerIndex: 3,
-    explanation: "Navarin Olayı'nın ardından 1827-1828 Osmanlı-Rus Savaşı yaşanmıştır."
-},
-{
-    question: "Soru 20: Edirne Antlaşması ile aşağıdakilerden hangisi gerçekleşmiştir?",
-    options: [
-        "A) Bulgaristan bağımsız olmuştur.",
-        "B) Yunanistan bağımsız olmuştur.",
-        "C) Sırbistan bağımsız olmuştur.",
-        "D) Romanya bağımsız olmuştur.",
-        "E) Bosna Avusturya'ya bırakılmıştır."
-    ],
-    correctAnswerIndex: 1,
-    explanation: "1829 Edirne Antlaşması ile Yunanistan bağımsız olmuş, Sırbistan ise özerklik kazanmıştır."
-},
-{
-    question: "Soru 21: Edirne Antlaşması ile aşağıdaki milletlerden hangisi özerklik kazanmıştır?",
-    options: [
-        "A) Bulgarlar",
-        "B) Rumlar",
-        "C) Sırplar",
-        "D) Ermeniler",
-        "E) Arnavutlar"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "Edirne Antlaşması ile Sırplar özerk hale gelmiştir."
-},
-{
-    question: "Soru 22: Osmanlı Devleti'nin Kuzey Afrika'da kaybettiği ilk toprak aşağıdakilerden hangisidir?",
-    options: [
-        "A) Tunus",
-        "B) Trablusgarp",
-        "C) Mısır",
-        "D) Cezayir",
-        "E) Fas"
-    ],
-    correctAnswerIndex: 3,
-    explanation: "1830 yılında Fransa Cezayir'i işgal etmiş ve Osmanlı Devleti Kuzey Afrika'da ilk toprağını kaybetmiştir."
-},
-{
-    question: "Soru 23: Mehmet Ali Paşa'nın Osmanlı Devleti'ne karşı ayaklanmasının temel nedeni aşağıdakilerden hangisidir?",
-    options: [
-        "A) Mısır Valiliğinin elinden alınması",
-        "B) Mora Valiliğini alamaması ve Suriye Valiliğini istemesi",
-        "C) Rusya'nın desteğini kaybetmesi",
-        "D) İngiltere'nin Mısır'ı işgal etmesi",
-        "E) Fransa'nın Cezayir'i işgal etmesi"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Mehmet Ali Paşa Mora Valiliğini alamayınca bunun yerine Suriye Valiliğini istemiştir."
-},
-{
-    question: "Soru 24: Mehmet Ali Paşa'nın Kütahya'ya kadar ilerlemesi üzerine aşağıdaki antlaşmalardan hangisi imzalanmıştır?",
-    options: [
-        "A) Baltalimanı",
-        "B) Hünkâr İskelesi",
-        "C) Kütahya",
-        "D) Londra",
-        "E) Edirne"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "1833 yılında Osmanlı Devleti ile Mehmet Ali Paşa arasında Kütahya Antlaşması imzalanmıştır."
-},
-{
-    question: "Soru 25: Kütahya Antlaşması ile aşağıdakilerden hangisi Kavalalı Mehmet Ali Paşa'ya verilmiştir?",
-    options: [
-        "A) Bosna ve Sırbistan",
-        "B) Mısır, Girit ve Şam Valilikleri",
-        "C) Cidde ve Halep",
-        "D) Mora ve Selanik",
-        "E) Trablusgarp ve Tunus"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Mehmet Ali Paşa'ya Mısır Valiliğine ek olarak Girit ve Şam Valilikleri verilmiştir."
-},
-{
-    question: "Soru 26: Kütahya Antlaşması ile Cidde ve Adana muhassıllığı aşağıdakilerden hangisine verilmiştir?",
-    options: [
-        "A) Abbas Paşa",
-        "B) İbrahim Paşa",
-        "C) Cezzar Ahmet Paşa",
-        "D) Ahmet Fevzi Paşa",
-        "E) Mustafa Reşit Paşa"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Kavalalı Mehmet Ali Paşa'nın oğlu İbrahim Paşa'ya Cidde ve Adana muhassıllığı verilmiştir."
-},
-{
-    question: "Soru 27: 'Denize düşen yılana sarılır.' sözü aşağıdaki gelişmelerden hangisiyle ilişkilidir?",
-    options: [
-        "A) Osmanlı'nın Rusya'dan yardım istemesi",
-        "B) İngiltere'nin Osmanlı'yı desteklemesi",
-        "C) Fransa'nın Cezayir'i işgal etmesi",
-        "D) Navarin Baskını",
-        "E) Kırım Savaşı"
-    ],
-    correctAnswerIndex: 0,
-    explanation: "İngiltere ve Fransa destek vermeyince Osmanlı Devleti Rusya'dan yardım istemiştir."
-},
-{
-    question: "Soru 28: Boğazlar Sorunu ilk kez aşağıdaki antlaşmalardan hangisiyle ortaya çıkmıştır?",
-    options: [
-        "A) Baltalimanı Antlaşması",
-        "B) Hünkâr İskelesi Antlaşması",
-        "C) Edirne Antlaşması",
-        "D) Paris Antlaşması",
-        "E) Londra Konferansı"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Boğazlar Sorunu ilk kez 1833 Hünkâr İskelesi Antlaşması ile ortaya çıkmıştır."
-},
-{
-    question: "Soru 29: Hünkâr İskelesi Antlaşması kaç yıllığına imzalanmıştır?",
-    options: [
-        "A) 5",
-        "B) 8",
-        "C) 10",
-        "D) 12",
-        "E) Süresiz"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Hünkâr İskelesi Antlaşması 8 yıllık olarak imzalanmıştır."
-},
-{
-    question: "Soru 30: Baltalimanı Antlaşması'nın imzalanmasındaki temel amaç aşağıdakilerden hangisidir?",
-    options: [
-        "A) Rusya'nın desteğini almak",
-        "B) Fransa ile ittifak kurmak",
-        "C) İngiltere'nin Mısır Sorunu'nda desteğini sağlamak",
-        "D) Boğazları uluslararası denetime açmak",
-        "E) Kırım Savaşı'nı sona erdirmek"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "Osmanlı Devleti Mısır Sorunu'nun çözümünde İngiltere'nin desteğini almak istemiştir."
-},
-{
-    question: "Soru 31: Baltalimanı Antlaşması'nın aşağıdaki sonuçlarından hangisi Osmanlı ekonomisini olumsuz etkilemiştir?",
-    options: [
-        "A) Kapitülasyonların kaldırılması",
-        "B) İç gümrük vergisinin kaldırılması ve ithalat vergisinin %12'den %5'e düşürülmesi",
-        "C) Yerli sanayinin korunması",
-        "D) Dış ticaret fazlası verilmesi",
-        "E) İhracat vergilerinin artırılması"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Bu düzenlemeler sonucunda Osmanlı Devleti Avrupa'nın açık pazarı hâline gelmiştir."
-},
-{
-    question: "Soru 32: Aşağıdakilerden hangisi Baltalimanı Antlaşması'nın doğrudan sonuçlarından biridir?",
-    options: [
-        "A) Osmanlı Devleti Avrupa'nın açık pazarı hâline gelmiştir.",
-        "B) Boğazlar Sorunu çözülmüştür.",
-        "C) Yunanistan bağımsız olmuştur.",
-        "D) Kırım Savaşı sona ermiştir.",
-        "E) Karadeniz tarafsız hâle gelmiştir."
-    ],
-    correctAnswerIndex: 0,
-    explanation: "Baltalimanı Antlaşması ile Osmanlı ekonomisi Avrupa karşısında zayıflamış ve ülke açık pazar hâline gelmiştir."
-},
-{
-    question: "Soru 33: Osmanlı Devleti'nin Mehmet Ali Paşa karşısında Nizip Savaşı'nı kaybettiği yıl aşağıdakilerden hangisidir?",
-    options: [
-        "A) 1833",
-        "B) 1836",
-        "C) 1838",
-        "D) 1839",
-        "E) 1841"
-    ],
-    correctAnswerIndex: 3,
-    explanation: "Osmanlı Devleti 1839 yılında Mehmet Ali Paşa karşısında Nizip Savaşı'nı kaybetmiştir."
-},
-{
-    question: "Soru 34: Mısır Sorunu'nun uluslararası bir mesele hâline gelmesini sağlayan gelişme aşağıdakilerden hangisidir?",
-    options: [
-        "A) Edirne Antlaşması",
-        "B) Londra Konferansı",
-        "C) Baltalimanı Antlaşması",
-        "D) Hünkâr İskelesi Antlaşması",
-        "E) Paris Antlaşması"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "1840 Londra Konferansı ile Mısır Sorunu uluslararası bir sorun hâline gelmiştir."
-},
-{
-    question: "Soru 35: 1840 Londra Konferansı'na aşağıdaki devletlerden hangisi katılmamıştır?",
-    options: [
-        "A) Rusya",
-        "B) İngiltere",
-        "C) Avusturya",
-        "D) Fransa",
-        "E) Prusya"
-    ],
-    correctAnswerIndex: 3,
-    explanation: "Fransa, Mehmet Ali Paşa'yı desteklediği için Londra Konferansı'na katılmamıştır."
-},
-{
-    question: "Soru 36: Osmanlı Devleti'nin 1840 Londra Konferansı sırasında Avrupalı devletlerin desteğini alabilmek amacıyla ilan ettiği belge aşağıdakilerden hangisidir?",
-    options: [
-        "A) Sened-i İttifak",
-        "B) Islahat Fermanı",
-        "C) Tanzimat Fermanı",
-        "D) Kanun-i Esasi",
-        "E) Gülhane Hatt-ı Hümayunu"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "Notta belirtildiği üzere Osmanlı Devleti, Londra Konferansı sırasında Tanzimat Fermanı'nı ilan etmiştir."
-},
-{
-    question: "Soru 37: Boğazlar Sorunu'nun çözümüne yönelik olarak imzalanan Londra Boğazlar Sözleşmesi hangi yılda kabul edilmiştir?",
-    options: [
-        "A) 1838",
-        "B) 1839",
-        "C) 1840",
-        "D) 1841",
-        "E) 1856"
-    ],
-    correctAnswerIndex: 3,
-    explanation: "Londra Boğazlar Sözleşmesi 1841 yılında imzalanmıştır."
-},
-{
-    question: "Soru 38: Aşağıdakilerden hangisi Kırım Savaşı'nın nedenlerinden biri değildir?",
-    options: [
-        "A) Kutsal Yerler Sorunu",
-        "B) Mençikov'un istekleri",
-        "C) Macar ve Leh mülteci sorunu",
-        "D) Osmanlı donanmasının Sinop'ta yakılması",
-        "E) Berlin Antlaşması'nın uygulanmaması"
-    ],
-    correctAnswerIndex: 4,
-    explanation: "Berlin Antlaşması 1878 yılında imzalanmıştır ve Kırım Savaşı'nın nedeni değildir."
-},
-{
-    question: "Soru 39: Kırım Savaşı sırasında Osmanlı Devleti hangi devletlerin desteğini almıştır?",
-    options: [
-        "A) Almanya ve Avusturya",
-        "B) İngiltere ve Fransa",
-        "C) Rusya ve Fransa",
-        "D) İngiltere ve Prusya",
-        "E) Avusturya ve İtalya"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Kırım Savaşı'nda Osmanlı Devleti İngiltere ve Fransa'nın desteğini almıştır."
-},
-{
-    question: "Soru 40: Kırım Savaşı sırasında yaralı Osmanlı ve İngiliz askerlerini tedavi ederek modern hemşireliğin kurucusu kabul edilen kişi aşağıdakilerden hangisidir?",
-    options: [
-        "A) Clara Barton",
-        "B) Florence Nightingale",
-        "C) Marie Curie",
-        "D) Halide Edip",
-        "E) Safiye Ali"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Florence Nightingale Levent ve Selimiye Kışlalarında yaralı askerleri tedavi etmiştir."
-},
-{
-    question: "Soru 41: Osmanlı Devleti tarihinde ilk dış borç aşağıdaki gelişmelerden hangisi sırasında alınmıştır?",
-    options: [
-        "A) Navarin Olayı",
-        "B) Kırım Savaşı",
-        "C) 93 Harbi",
-        "D) Trablusgarp Savaşı",
-        "E) Balkan Savaşları"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "İlk dış borç Kırım Savaşı sırasında Sultan Abdülmecid döneminde İngiltere'den alınmıştır."
-},
-{
-    question: "Soru 42: Osmanlı Devleti'nde ilk telgraf hattı aşağıdaki güzergâhlardan hangisinde çekilmiştir?",
-    options: [
-        "A) İstanbul-Ankara",
-        "B) İstanbul-İzmir",
-        "C) Kırım-Varna-Edirne (İstanbul-Şumnu-Edirne)",
-        "D) İstanbul-Bursa",
-        "E) Edirne-Selanik"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "Notta ilk telgraf hattının Kırım-Varna-Edirne (İstanbul-Şumnu-Edirne) arasında çekildiği belirtilmiştir."
-},
-{
-    question: "Soru 43: Paris Barış Antlaşması ile ilgili aşağıdaki bilgilerden hangisi yanlıştır?",
-    options: [
-        "A) Osmanlı Devleti bir Avrupa devleti sayılmıştır.",
-        "B) Osmanlı Devleti Avrupa hukukundan yararlanacaktır.",
-        "C) Karadeniz'de Osmanlı ve Rusya donanma bulunduramayacaktır.",
-        "D) Osmanlı Devleti'nin toprak bütünlüğü Avrupa devletlerinin garantisi altına alınmıştır.",
-        "E) Osmanlı Devleti kapitülasyonları kaldırmıştır."
-    ],
-    correctAnswerIndex: 4,
-    explanation: "Paris Antlaşması ile kapitülasyonlar kaldırılmamıştır."
-},
-{
-    question: "Soru 44: Paris Antlaşması'nın aşağıdaki sonuçlarından hangisi Osmanlı Devleti'nin zayıflığını açıkça göstermektedir?",
-    options: [
-        "A) Avrupa hukukundan yararlanması",
-        "B) Avrupa devleti sayılması",
-        "C) Toprak bütünlüğünün Avrupa devletleri tarafından korunacak olması",
-        "D) Karadeniz'in tarafsız hâle gelmesi",
-        "E) Paris Konferansı'nın toplanması"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "Toprak bütünlüğünün Avrupa'nın garantisine bırakılması Osmanlı'nın tek başına varlığını koruyamadığını göstermektedir."
-},
-{
-    question: "Soru 45: Osmanlı Devleti'nin Paris Barış Konferansı kararlarında etkili olabilmek amacıyla ilan ettiği belge aşağıdakilerden hangisidir?",
-    options: [
-        "A) Tanzimat Fermanı",
-        "B) Sened-i İttifak",
-        "C) Islahat Fermanı",
-        "D) Kanun-i Esasi",
-        "E) Islahat Layihası"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "Paris Konferansı öncesinde Osmanlı Devleti Islahat Fermanı'nı ilan etmiştir."
-},
-{
-    question: "Soru 46: 93 Harbi sırasında Batı Cephesi'nde gösterdiği kahramanlık nedeniyle 'Plevne Kahramanı' unvanını alan komutan aşağıdakilerden hangisidir?",
-    options: [
-        "A) Gazi Ahmet Muhtar Paşa",
-        "B) Gazi Osman Paşa",
-        "C) Nene Hatun",
-        "D) Kavalalı Mehmet Ali Paşa",
-        "E) Cezzar Ahmet Paşa"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Plevne Savunması'nın kahramanı Gazi Osman Paşa'dır."
-},
-{
-    question: "Soru 47: 93 Harbi sırasında Doğu Cephesi'nde başarı gösteren komutan aşağıdakilerden hangisidir?",
-    options: [
-        "A) Gazi Osman Paşa",
-        "B) Enver Paşa",
-        "C) Gazi Ahmet Muhtar Paşa",
-        "D) Mustafa Kemal Paşa",
-        "E) Ali Fuat Paşa"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "Doğu Cephesi'nde Gazi Ahmet Muhtar Paşa öne çıkmıştır."
-},
-{
-    question: "Soru 48: Elviye-i Selase olarak adlandırılan bölge aşağıdakilerden hangisidir?",
-    options: [
-        "A) Kars - Erzurum - Van",
-        "B) Kars - Ardahan - Batum",
-        "C) Erzurum - Ardahan - Bayburt",
-        "D) Kars - Trabzon - Batum",
-        "E) Ardahan - Rize - Artvin"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Elviye-i Selase; Kars, Ardahan ve Batum'dan oluşmaktadır."
-},
-{
-    question: "Soru 49: Balkan Bunalımı'nın ortaya çıktığı yıl aşağıdakilerden hangisidir?",
-    options: [
-        "A) 1871",
-        "B) 1873",
-        "C) 1875",
-        "D) 1876",
-        "E) 1877"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "Balkan Bunalımı 1875 yılında ortaya çıkmış ve isyanlar Balkanlar'a yayılmıştır."
-},
-{
-    question: "Soru 50: Balkan sorununu çözmek amacıyla İstanbul'da toplanan uluslararası konferans aşağıdakilerden hangisidir?",
-    options: [
-        "A) Londra Konferansı",
-        "B) Paris Konferansı",
-        "C) Berlin Kongresi",
-        "D) Tersane Konferansı",
-        "E) Viyana Kongresi"
-    ],
-    correctAnswerIndex: 3,
-    explanation: "1876 yılında Balkan sorununu çözmek amacıyla Tersane Konferansı toplanmıştır."
-},
-{
-    question: "Soru 51: Tersane Konferansı devam ederken Osmanlı Devleti aşağıdakilerden hangisini ilan etmiştir?",
-    options: [
-        "A) Tanzimat Fermanı",
-        "B) Islahat Fermanı",
-        "C) Sened-i İttifak",
-        "D) I. Meşrutiyet",
-        "E) II. Meşrutiyet"
-    ],
-    correctAnswerIndex: 3,
-    explanation: "Tersane Konferansı sırasında I. Meşrutiyet ilan edilmiştir."
-},
-{
-    question: "Soru 52: I. Meşrutiyet'in ilan edilmesine rağmen Osmanlı Devleti'nin toprak bütünlüğünü koruma politikasından vazgeçen devlet aşağıdakilerden hangisidir?",
-    options: [
-        "A) Fransa",
-        "B) Rusya",
-        "C) İngiltere",
-        "D) Avusturya",
-        "E) Almanya"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "İngiltere bu tarihten sonra Osmanlı'nın toprak bütünlüğünü koruma politikasını terk etmiştir."
-},
-{
-    question: "Soru 53: Aşağıdakilerden hangisi 93 Harbi'nin öne çıkan kahramanlarından biri değildir?",
-    options: [
-        "A) Gazi Osman Paşa",
-        "B) Gazi Ahmet Muhtar Paşa",
-        "C) Nene Hatun",
-        "D) Cezzar Ahmet Paşa",
-        "E) Hepsi öne çıkmıştır."
-    ],
-    correctAnswerIndex: 3,
-    explanation: "Cezzar Ahmet Paşa Napolyon'un Mısır Seferi sırasında öne çıkmıştır; 93 Harbi'nin kahramanlarından değildir."
-},
-{
-    question: "Soru 54: 93 Harbi sonunda Osmanlı Devleti ile Rusya arasında imzalanan ancak yürürlüğe girmeyen antlaşma aşağıdakilerden hangisidir?",
-    options: [
-        "A) Berlin Antlaşması",
-        "B) Ayastefanos Antlaşması",
-        "C) Paris Antlaşması",
-        "D) Edirne Antlaşması",
-        "E) Bükreş Antlaşması"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Ayastefanos Antlaşması imzalanmış ancak yürürlüğe girmemiştir."
-},
-{
-    question: "Soru 55: Berlin Antlaşması ile aşağıdakilerden hangisi gerçekleştirilmiştir?",
-    options: [
-        "A) Bulgaristan tamamen bağımsız olmuştur.",
-        "B) Bulgaristan üç ayrı bölgeye ayrılmıştır.",
-        "C) Bulgaristan Rusya'ya bağlanmıştır.",
-        "D) Bulgaristan Osmanlı'dan ayrılmamıştır.",
-        "E) Bulgaristan ikiye ayrılmıştır."
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Berlin Antlaşması ile Bulgaristan; Bulgar Prensliği, Doğu Rumeli ve Makedonya olmak üzere üçe ayrılmıştır."
-},
-{
-    question: "Soru 56: Berlin Antlaşması'nın aşağıdaki sonuçlarından hangisi Rusya'nın Akdeniz'e inmesini engellemeye yöneliktir?",
-    options: [
-        "A) Bulgaristan'ın üçe ayrılması",
-        "B) Bosna'nın Avusturya yönetimine bırakılması",
-        "C) Ermeniler lehine ıslahat yapılması",
-        "D) Kars'ın Rusya'ya verilmesi",
-        "E) Karadağ'ın bağımsız olması"
-    ],
-    correctAnswerIndex: 0,
-    explanation: "Bulgaristan'ın küçültülmesi Rusya'nın Akdeniz'e ulaşmasını engellemiştir."
-},
-{
-    question: "Soru 57: Berlin Antlaşması ile bağımsızlığı kabul edilen devletler arasında aşağıdakilerden hangisi yer almaz?",
-    options: [
-        "A) Sırbistan",
-        "B) Karadağ",
-        "C) Romanya",
-        "D) Bulgaristan",
-        "E) Hepsi yer alır."
-    ],
-    correctAnswerIndex: 3,
-    explanation: "Berlin Antlaşması ile Sırbistan, Karadağ ve Romanya bağımsız olmuş; Bulgaristan ise üçe ayrılmıştır."
-},
-{
-    question: "Soru 58: Ermeni Meselesi'nin uluslararası bir sorun hâline gelmesine neden olan gelişme aşağıdakilerden hangisidir?",
-    options: [
-        "A) Paris Antlaşması",
-        "B) Edirne Antlaşması",
-        "C) Berlin Antlaşması",
-        "D) Londra Konferansı",
-        "E) Ayastefanos Antlaşması"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "Berlin Antlaşması ile Doğu Anadolu'da Ermeniler lehine ıslahat maddesi kabul edilmiştir."
-},
-{
-    question: "Soru 59: Berlin Antlaşması'na göre Bosna'nın durumu aşağıdakilerden hangisidir?",
-    options: [
-        "A) Rusya'ya bırakılmıştır.",
-        "B) Bağımsız olmuştur.",
-        "C) Osmanlı'ya bağlı kalmış, yönetimi Avusturya'ya verilmiştir.",
-        "D) İngiltere tarafından işgal edilmiştir.",
-        "E) Sırbistan'a bırakılmıştır."
-    ],
-    correctAnswerIndex: 2,
-    explanation: "Bosna hukuken Osmanlı toprağı olarak kalmış, yönetimi Avusturya'ya bırakılmıştır."
-},
-{
-    question: "Soru 60: Berlin Antlaşması ile aşağıdaki şehirlerden hangisi Osmanlı Devleti'nde kalmıştır?",
-    options: [
-        "A) Kars",
-        "B) Ardahan",
-        "C) Batum",
-        "D) Doğu Beyazıt",
-        "E) Elviye-i Selase'nin tamamı"
-    ],
-    correctAnswerIndex: 3,
-    explanation: "Kars, Ardahan ve Batum Rusya'ya bırakılırken Doğu Beyazıt Osmanlı Devleti'nde kalmıştır."
-},
-{
-    question: "Soru 61: Berlin Antlaşması öncesinde idaresi İngiltere'ye bırakılan ada aşağıdakilerden hangisidir?",
-    options: [
-        "A) Girit",
-        "B) Rodos",
-        "C) Midilli",
-        "D) Kıbrıs",
-        "E) Sakız"
-    ],
-    correctAnswerIndex: 3,
-    explanation: "Berlin Antlaşması öncesinde Kıbrıs'ın yönetimi İngiltere'ye bırakılmıştır."
-},
-{
-    question: "Soru 62: Giritli Rumlara yönelik Halep Fermanı hangi yılda yayımlanmıştır?",
-    options: [
-        "A) 1876",
-        "B) 1877",
-        "C) 1878",
-        "D) 1880",
-        "E) 1882"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "Halep Fermanı 1878 yılında yayımlanmıştır."
-},
-{
-    question: "Soru 63: Aşağıdaki eşleştirmelerden hangisi doğrudur?",
-    options: [
-        "A) Fransa - Mısır / İngiltere - Tunus",
-        "B) Fransa - Tunus / İngiltere - Mısır",
-        "C) Rusya - Tunus / İngiltere - Mısır",
-        "D) Fransa - Cezayir / İngiltere - Bosna",
-        "E) Avusturya - Mısır / Fransa - Tunus"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "1881-1882 yıllarında Fransa Tunus'u, İngiltere ise Mısır'ı işgal etmiştir."
-},
-{
-    question: "Soru 64: Mustafa Kemal Atatürk'ün 'Gençliğimin en heyecan verici günleriydi.' sözünü söylediği savaş aşağıdakilerden hangisidir?",
-    options: [
-        "A) Trablusgarp Savaşı",
-        "B) 93 Harbi",
-        "C) Domoke Meydan Savaşı",
-        "D) Dömeke Meydan Muharebesi",
-        "E) Kırım Savaşı"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "1897 Domoke (Dömeke) Meydan Savaşı için Mustafa Kemal bu ifadeyi kullanmış, savaşa katılmayı çok istemiştir."
-},
-{
-    question: "Soru 65: Aşağıdaki gelişmelerden hangisi Boğazlar Sorunu'nun ortaya çıkmasına neden olmuştur?",
-    options: [
-        "A) Baltalimanı Antlaşması",
-        "B) Hünkâr İskelesi Antlaşması",
-        "C) Edirne Antlaşması",
-        "D) Paris Antlaşması",
-        "E) Berlin Antlaşması"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Boğazlar Sorunu ilk kez Hünkâr İskelesi Antlaşması ile ortaya çıkmıştır."
-},
-{
-    question: "Soru 66: Aşağıdaki antlaşmalardan hangisi Boğazlar Sorunu'nun uluslararası bir mesele hâline gelmesinden sonra çözüm amacıyla imzalanmıştır?",
-    options: [
-        "A) Londra Boğazlar Sözleşmesi",
-        "B) Kütahya Antlaşması",
-        "C) Baltalimanı Antlaşması",
-        "D) El Ariş Antlaşması",
-        "E) Paris Antlaşması"
-    ],
-    correctAnswerIndex: 0,
-    explanation: "1841 Londra Boğazlar Sözleşmesi Boğazlar Sorunu'nu çözmek amacıyla imzalanmıştır."
-},
-{
-    question: "Soru 67: Osmanlı Devleti'nin Avrupa'nın açık pazarı hâline gelmesine neden olan antlaşma aşağıdakilerden hangisidir?",
-    options: [
-        "A) Paris",
-        "B) Baltalimanı",
-        "C) Berlin",
-        "D) Hünkâr İskelesi",
-        "E) Edirne"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Baltalimanı Antlaşması sonucunda Osmanlı Devleti Avrupa'nın açık pazarı hâline gelmiştir."
-},
-{
-    question: "Soru 68: Osmanlı Devleti'nin tek başına varlığını sürdüremeyeceğini ortaya koyan gelişme aşağıdakilerden hangisidir?",
-    options: [
-        "A) Viyana Kongresi",
-        "B) Paris Antlaşması",
-        "C) Baltalimanı Antlaşması",
-        "D) Kütahya Antlaşması",
-        "E) Kale-i Sultaniye Antlaşması"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Paris Antlaşması ile Osmanlı'nın toprak bütünlüğü Avrupa devletlerinin garantisine bırakılmıştır."
-},
-{
-    question: "Soru 69: Osmanlı Devleti'nin Avrupa Devleti sayıldığı antlaşma aşağıdakilerden hangisidir?",
-    options: [
-        "A) Berlin",
-        "B) Edirne",
-        "C) Paris",
-        "D) Londra",
-        "E) Bükreş"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "1856 Paris Antlaşması ile Osmanlı Devleti Avrupa Devleti sayılmıştır."
-},
-{
-    question: "Soru 70: Osmanlı Devleti tarihinde ilk dış borcun alınması aşağıdaki olaylardan hangisinin sonucudur?",
-    options: [
-        "A) 93 Harbi",
-        "B) Kırım Savaşı",
-        "C) Navarin Olayı",
-        "D) Mora İsyanı",
-        "E) Balkan Bunalımı"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "İlk dış borç Kırım Savaşı sırasında alınmıştır."
-},
-{
-    question: "Soru 71: Aşağıdaki gelişmelerden hangisi Osmanlı Devleti'nin iç sorununun uluslararası soruna dönüşmesine örnektir?",
-    options: [
-        "A) Mısır Sorunu",
-        "B) Sened-i İttifak",
-        "C) Sırp İsyanı",
-        "D) Tanzimat Fermanı",
-        "E) Kırım Savaşı"
-    ],
-    correctAnswerIndex: 0,
-    explanation: "Mısır Sorunu 1840 Londra Konferansı ile uluslararası sorun hâline gelmiştir."
-},
-{
-    question: "Soru 72: Osmanlı Devleti aşağıdaki devletlerden hangisinin desteğini alabilmek amacıyla Baltalimanı Antlaşması'nı imzalamıştır?",
-    options: [
-        "A) Fransa",
-        "B) Rusya",
-        "C) Avusturya",
-        "D) İngiltere",
-        "E) Prusya"
-    ],
-    correctAnswerIndex: 3,
-    explanation: "Amaç İngiltere'nin desteğini almaktı."
-},
-{
-    question: "Soru 73: Osmanlı Devleti'nin Kuzey Afrika'da kaybettiği ilk toprak aşağıdakilerden hangisidir?",
-    options: [
-        "A) Tunus",
-        "B) Cezayir",
-        "C) Mısır",
-        "D) Trablusgarp",
-        "E) Fas"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "1830'da Fransa Cezayir'i işgal etmiştir."
-},
-{
-    question: "Soru 74: Aşağıdakilerden hangisi Berlin Antlaşması'nın sonuçlarından biri değildir?",
-    options: [
-        "A) Bulgaristan'ın üçe ayrılması",
-        "B) Bosna yönetiminin Avusturya'ya bırakılması",
-        "C) Karadeniz'in tarafsız hâle gelmesi",
-        "D) Ermeni Meselesi'nin uluslararası hâle gelmesi",
-        "E) Sırbistan'ın bağımsız olması"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "Karadeniz'in tarafsız olması Paris Antlaşması'nın sonucudur."
-},
-{
-    question: "Soru 75: Elviye-i Selase aşağıdaki şehirlerden hangisini kapsamaz?",
-    options: [
-        "A) Kars",
-        "B) Ardahan",
-        "C) Batum",
-        "D) Erzurum",
-        "E) Hiçbiri"
-    ],
-    correctAnswerIndex: 3,
-    explanation: "Elviye-i Selase; Kars, Ardahan ve Batum'dur."
-},
-{
-    question: "Soru 76: Berlin Antlaşması öncesinde yönetimi İngiltere'ye bırakılan ada aşağıdakilerden hangisidir?",
-    options: [
-        "A) Midilli",
-        "B) Girit",
-        "C) Kıbrıs",
-        "D) Rodos",
-        "E) Sakız"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "Kıbrıs'ın idaresi İngiltere'ye bırakılmıştır."
-},
-{
-    question: "Soru 77: Aşağıdaki devletlerden hangisi 1881-1882 yıllarında Mısır'ı işgal etmiştir?",
-    options: [
-        "A) Fransa",
-        "B) İngiltere",
-        "C) Rusya",
-        "D) Almanya",
-        "E) Avusturya"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "İngiltere Mısır'ı işgal etmiştir."
-},
-{
-    question: "Soru 78: Fransa'nın 1881-1882 yıllarında işgal ettiği Osmanlı toprağı aşağıdakilerden hangisidir?",
-    options: [
-        "A) Tunus",
-        "B) Mısır",
-        "C) Cezayir",
-        "D) Trablusgarp",
-        "E) Bingazi"
-    ],
-    correctAnswerIndex: 0,
-    explanation: "Fransa Tunus'u işgal etmiştir."
-},
-{
-    question: "Soru 79: 1897 Domoke Meydan Savaşı aşağıdaki devletlerden hangisine karşı yapılmıştır?",
-    options: [
-        "A) Bulgaristan",
-        "B) Yunanistan",
-        "C) Rusya",
-        "D) Sırbistan",
-        "E) Karadağ"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Domoke Meydan Savaşı Yunanistan'a karşı yapılmıştır."
-},
-{
-    question: "Soru 80: Aşağıdaki olaylardan hangisi kronolojik olarak en önce gerçekleşmiştir?",
-    options: [
-        "A) Kırım Savaşı",
-        "B) Berlin Antlaşması",
-        "C) Navarin Olayı",
-        "D) Tersane Konferansı",
-        "E) Domoke Meydan Savaşı"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "Navarin Olayı 1827 yılında gerçekleşmiştir."
-},
-{
-    question: "Soru 81: Aşağıdaki gelişmelerden hangisi Osmanlı Devleti'nin XIX. yüzyılda uluslararası destek arayışına girdiğinin en açık göstergesidir?",
-    options: [
-        "A) El Ariş Antlaşması'nın imzalanması",
-        "B) Rusya'dan yardım istenerek Hünkâr İskelesi Antlaşması'nın yapılması",
-        "C) Paris Paktı'nın kabul edilmesi",
-        "D) Kale-i Sultaniye Antlaşması'nın imzalanması",
-        "E) Bükreş Antlaşması'nın imzalanması"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "İngiltere ve Fransa destek vermeyince Osmanlı Devleti Rusya'dan yardım istemiş ve Hünkâr İskelesi Antlaşması'nı imzalamıştır."
-},
-{
-    question: "Soru 82: Aşağıdaki gelişmelerden hangisi Osmanlı Devleti'nin egemenlik haklarını ekonomik açıdan en fazla sınırlandırmıştır?",
-    options: [
-        "A) Kütahya Antlaşması",
-        "B) Baltalimanı Antlaşması",
-        "C) Edirne Antlaşması",
-        "D) Hünkâr İskelesi Antlaşması",
-        "E) Bükreş Antlaşması"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Baltalimanı Antlaşması ile iç gümrük kaldırılmış, ithalat vergileri düşürülmüş ve Osmanlı Avrupa'nın açık pazarı hâline gelmiştir."
-},
-{
-    question: "Soru 83: Aşağıdakilerden hangisi Osmanlı Devleti'nin iç meselesinin uluslararası bir sorun hâline geldiğini gösteren gelişmelerden biridir?",
-    options: [
-        "A) Sırp İsyanı",
-        "B) Mısır Sorunu için Londra Konferansı'nın toplanması",
-        "C) Tepedelenli Ali Paşa İsyanı",
-        "D) Kara Yorgi İsyanı",
-        "E) Filiki Eterya'nın kurulması"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Mısır Sorunu Londra Konferansı ile uluslararası sorun hâline gelmiştir."
-},
-{
-    question: "Soru 84: Osmanlı Devleti'nin Avrupa hukukundan yararlanması ve Avrupa Devleti sayılması aşağıdaki antlaşmalardan hangisinin sonucudur?",
-    options: [
-        "A) Berlin",
-        "B) Paris",
-        "C) Edirne",
-        "D) Londra",
-        "E) Kütahya"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Bu gelişmeler Paris Antlaşması'nın sonuçlarıdır."
-},
-{
-    question: "Soru 85: Osmanlı Devleti'nin toprak bütünlüğünü koruma politikasından vazgeçen Avrupa devleti aşağıdakilerden hangisidir?",
-    options: [
-        "A) Fransa",
-        "B) Rusya",
-        "C) İngiltere",
-        "D) Avusturya",
-        "E) Prusya"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "Tersane Konferansı sırasında İngiltere bu politikasını değiştirmiştir."
-},
-{
-    question: "Soru 86: Aşağıdaki olaylardan hangisi Osmanlı Devleti'nin Kuzey Afrika'daki hâkimiyetinin zayıflamaya başladığını gösteren ilk gelişmedir?",
-    options: [
-        "A) Tunus'un işgali",
-        "B) Mısır'ın işgali",
-        "C) Cezayir'in işgali",
-        "D) Trablusgarp Savaşı",
-        "E) Kırım Savaşı"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "1830'da Fransa'nın Cezayir'i işgali Kuzey Afrika'daki ilk toprak kaybıdır."
-},
-{
-    question: "Soru 87: Berlin Antlaşması ile aşağıdaki devletlerden hangisinin Akdeniz'e inmesi engellenmek istenmiştir?",
-    options: [
-        "A) İngiltere",
-        "B) Fransa",
-        "C) Rusya",
-        "D) Avusturya",
-        "E) Almanya"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "Bulgaristan'ın küçültülmesiyle Rusya'nın Akdeniz'e inmesi engellenmiştir."
-},
-{
-    question: "Soru 88: Aşağıdakilerden hangisi Berlin Antlaşması'nın Osmanlı Devleti açısından olumsuz sonuçlarından biri değildir?",
-    options: [
-        "A) Ermeni Meselesi'nin uluslararası sorun hâline gelmesi",
-        "B) Bosna'nın yönetiminin Avusturya'ya bırakılması",
-        "C) Kars, Ardahan ve Batum'un Rusya'ya verilmesi",
-        "D) Osmanlı Devleti'nin Avrupa Devleti sayılması",
-        "E) Bulgaristan'ın üçe ayrılması"
-    ],
-    correctAnswerIndex: 3,
-    explanation: "Osmanlı Devleti'nin Avrupa Devleti sayılması Paris Antlaşması'nın sonucudur."
-},
-{
-    question: "Soru 89: Aşağıdakilerden hangisi XIX. yüzyılda Osmanlı Devleti'nin ilan ettiği fermanlardan biridir?",
-    options: [
-        "A) Sened-i İttifak",
-        "B) Tanzimat Fermanı",
-        "C) Kanunname-i Ali Osman",
-        "D) Adaletname",
-        "E) Islahat Layihası"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Notta Tanzimat ve Islahat Fermanları yer almaktadır."
-},
-{
-    question: "Soru 90: Osmanlı Devleti'nin ilk kez dış borç aldığı padişah aşağıdakilerden hangisidir?",
-    options: [
-        "A) II. Mahmut",
-        "B) Abdülaziz",
-        "C) Abdülmecid",
-        "D) V. Murat",
-        "E) II. Abdülhamit"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "Kırım Savaşı sırasında Sultan Abdülmecid döneminde ilk dış borç alınmıştır."
-},
-{
-    question: "Soru 91: Aşağıdakilerden hangisi XIX. yüzyılda Osmanlı Devleti'nin karşı karşıya kaldığı milliyetçilik hareketlerinden biridir?",
-    options: [
-        "A) Celali İsyanları",
-        "B) Patrona Halil İsyanı",
-        "C) Yunan İsyanı",
-        "D) Kabakçı Mustafa İsyanı",
-        "E) Suhte Ayaklanmaları"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "Yunan İsyanı milliyetçilik akımının etkisiyle başlamıştır."
-},
-{
-    question: "Soru 92: Mora İsyanı'nın bastırılmasında Osmanlı Devleti'ne yardım eden vali aşağıdakilerden hangisidir?",
-    options: [
-        "A) Cezzar Ahmet Paşa",
-        "B) Kavalalı Mehmet Ali Paşa",
-        "C) Tepedelenli Ali Paşa",
-        "D) Alemdar Mustafa Paşa",
-        "E) Gazi Osman Paşa"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Mora İsyanı Mehmet Ali Paşa tarafından bastırılmıştır."
-},
-{
-    question: "Soru 93: Aşağıdaki olaylardan hangisi kronolojik olarak en son gerçekleşmiştir?",
-    options: [
-        "A) Baltalimanı Antlaşması",
-        "B) Paris Antlaşması",
-        "C) Berlin Antlaşması",
-        "D) Domoke Meydan Savaşı",
-        "E) Kırım Savaşı"
-    ],
-    correctAnswerIndex: 3,
-    explanation: "Domoke Meydan Savaşı 1897 yılında yapılmıştır."
-},
-{
-    question: "Soru 94: XIX. yüzyılda Osmanlı Devleti'nin Avrupa'nın açık pazarı hâline gelmesine yol açan gelişme aşağıdakilerden hangisidir?",
-    options: [
-        "A) Hünkâr İskelesi",
-        "B) Baltalimanı",
-        "C) Paris",
-        "D) Berlin",
-        "E) Edirne"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Baltalimanı Antlaşması bu sonucu doğurmuştur."
-},
-{
-    question: "Soru 95: Aşağıdaki antlaşmalardan hangisi Osmanlı Devleti ile Rusya arasında imzalanmıştır?",
-    options: [
-        "A) Baltalimanı",
-        "B) Hünkâr İskelesi",
-        "C) Kale-i Sultaniye",
-        "D) Paris Paktı",
-        "E) Londra Boğazlar Sözleşmesi"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Hünkâr İskelesi Antlaşması Osmanlı Devleti ile Rusya arasında imzalanmıştır."
-},
-{
-    question: "Soru 96: XIX. yüzyılda Osmanlı Devleti'nin ilk kez Avrupa devletlerinin ortak garantisi altına alınması hangi gelişmenin sonucudur?",
-    options: [
-        "A) Paris Antlaşması",
-        "B) Berlin Antlaşması",
-        "C) Londra Konferansı",
-        "D) Baltalimanı Antlaşması",
-        "E) Kütahya Antlaşması"
-    ],
-    correctAnswerIndex: 0,
-    explanation: "Paris Antlaşması ile Osmanlı'nın toprak bütünlüğü Avrupa'nın garantisine bırakılmıştır."
-},
-{
-    question: "Soru 97: Aşağıdakilerden hangisi Osmanlı Devleti'nin XIX. yüzyılda yaşadığı siyasi gelişmelerden biri değildir?",
-    options: [
-        "A) Navarin Olayı",
-        "B) Kırım Savaşı",
-        "C) Berlin Antlaşması",
-        "D) Karlofça Antlaşması",
-        "E) Domoke Meydan Savaşı"
-    ],
-    correctAnswerIndex: 3,
-    explanation: "Karlofça Antlaşması XVII. yüzyıl sonlarında imzalanmıştır."
-},
-{
-    question: "Soru 98: Aşağıdaki eşleştirmelerden hangisi doğrudur?",
-    options: [
-        "A) Paris - Avrupa Devleti sayılması",
-        "B) Berlin - Avrupa Devleti sayılması",
-        "C) Baltalimanı - Boğazlar Sorunu",
-        "D) Hünkâr İskelesi - Avrupa Devleti sayılması",
-        "E) Edirne - Karadeniz'in tarafsız olması"
-    ],
-    correctAnswerIndex: 0,
-    explanation: "Osmanlı Devleti Paris Antlaşması ile Avrupa Devleti sayılmıştır."
-},
-{
-    question: "Soru 99: XIX. yüzyılda Osmanlı Devleti'nin siyasi tarihinde aşağıdakilerden hangisi ilk gerçekleşmiştir?",
-    options: [
-        "A) Navarin Olayı",
-        "B) Baltalimanı Antlaşması",
-        "C) Kütahya Antlaşması",
-        "D) Edirne Antlaşması",
-        "E) Londra Boğazlar Sözleşmesi"
-    ],
-    correctAnswerIndex: 3,
-    explanation: "Edirne Antlaşması 1829 yılında imzalanmış olup diğer seçeneklerden daha erkendir."
-},
-{
-    question: "Soru 100: XIX. yüzyılda Osmanlı Devleti'nin dağılma sürecini hızlandıran gelişmeler birlikte değerlendirildiğinde aşağıdakilerden hangisine ulaşılabilir?",
-    options: [
-        "A) Osmanlı Devleti askerî ve ekonomik bakımdan güçlenmiştir.",
-        "B) Avrupa devletleri Osmanlı'nın iç işlerine karışmamıştır.",
-        "C) Osmanlı Devleti siyasi, ekonomik ve askerî alanlarda dış desteğe ihtiyaç duymuştur.",
-        "D) Milliyetçilik hareketleri tamamen sona ermiştir.",
-        "E) Osmanlı Devleti kapitülasyonları kaldırmıştır."
-    ],
-    correctAnswerIndex: 2,
-    explanation: "Notta yer alan gelişmeler, Osmanlı Devleti'nin dış desteğe ihtiyaç duyduğunu ve dağılma sürecinin hızlandığını göstermektedir."
-}
+    {
+        question: "Soru 1: XIX. yüzyıl Osmanlı Devleti dağılma döneminde izlenen temel dış politika aşağıdakilerden hangisidir?",
+        options: ["A) Fetih politikası", "B) Denge politikası", "C) Panislamizm", "D) İttihad-ı anasır", "E) Kapitülasyon kaldırma"],
+        correctAnswerIndex: 1,
+        explanation: "Dağılma döneminde Osmanlı büyük devletleri birbirine karşı kullanarak ayakta kalmaya çalışmış; bu denge politikasıdır."
+    },
+    {
+        question: "Soru 2: 1804 Sırp İsyanı ile ilgili aşağıdakilerden hangisi doğrudur?",
+        options: ["A) İsyan başarıyla sonuçlanmış ve Sırplar bağımsız olmuştur", "B) İsyan Kara Yorgi önderliğinde başlamış ancak bastırılmıştır", "C) İsyanın lideri Tepedelenli Ali Paşa'dır", "D) İsyan Navarin Baskını'ndan sonra çıkmıştır", "E) İsyanın nedeni Tanzimat Fermanı'dır"],
+        correctAnswerIndex: 1,
+        explanation: "1804 Sırp İsyanı Kara Yorgi önderliğindedir ve bastırılmıştır. Milliyetçilik etkisiyle isyan eden ilk azınlık Sırplardır."
+    },
+    {
+        question: "Soru 3: Milliyetçilik etkisi ile isyan eden ilk Osmanlı azınlığı aşağıdakilerden hangisidir?",
+        options: ["A) Rumlar", "B) Bulgarlar", "C) Sırplar", "D) Ermeniler", "E) Arnavutlar"],
+        correctAnswerIndex: 2,
+        explanation: "Kara Yorgi önderliğindeki 1804 Sırp İsyanı, milliyetçilik etkisiyle isyan eden ilk azınlıktır."
+    },
+    {
+        question: "Soru 4: 1806–1812 Osmanlı–Rus Savaşı'nın sonucunda imzalanan antlaşma aşağıdakilerden hangisidir?",
+        options: ["A) Edirne Antlaşması", "B) Berlin Antlaşması", "C) Bükreş Antlaşması", "D) Paris Antlaşması", "E) Ayastefanos Antlaşması"],
+        correctAnswerIndex: 2,
+        explanation: "Osmanlı bu savaşı kaybetmiş, Bükreş Antlaşması imzalanmıştır."
+    },
+    {
+        question: "Soru 5: Milliyetçilik etkisi ile imtiyaz kazanan ilk azınlık aşağıdakilerden hangisidir?",
+        options: ["A) Yunanlılar — Edirne", "B) Sırplar — Bükreş", "C) Sırplar — Berlin", "D) Rumlar — Halepa", "E) Bulgarlar — Ayastefanos"],
+        correctAnswerIndex: 1,
+        explanation: "Bükreş Antlaşması ile milliyetçilik etkisiyle imtiyaz kazanan ilk azınlık Sırplardır."
+    },
+    {
+        question: "Soru 6: Sırpların bağımsızlık aşamaları aşağıdakilerin hangisinde doğru sıralanmıştır?",
+        options: [
+            "A) 1812 imtiyaz — 1829 özerklik — 1878 bağımsızlık",
+            "B) 1829 imtiyaz — 1812 özerklik — 1878 bağımsızlık",
+            "C) 1878 imtiyaz — 1829 özerklik — 1812 bağımsızlık",
+            "D) 1812 bağımsızlık — 1829 özerklik — 1878 imtiyaz",
+            "E) 1829 bağımsızlık — 1878 özerklik — 1812 imtiyaz"
+        ],
+        correctAnswerIndex: 0,
+        explanation: "1812 Bükreş'te imtiyaz, 1829 Edirne'de özerklik, 1878 Berlin'de bağımsızlık."
+    },
+    {
+        question: "Soru 7: Sırpların özerk hale geldikleri antlaşma hangisidir?",
+        options: ["A) 1812 Bükreş", "B) 1829 Edirne", "C) 1856 Paris", "D) 1878 Berlin", "E) 1833 Kütahya"],
+        correctAnswerIndex: 1,
+        explanation: "1829 Edirne Antlaşması ile Sırplar özerk hale gelmiştir."
+    },
+    {
+        question: "Soru 8: 1815 Viyana Kongresi ile ilgili aşağıdakilerden hangisi söylenemez?",
+        options: [
+            "A) Restorasyon Dönemi başlamıştır",
+            "B) Milliyetçilik isyanlarının bastırılıp imparatorlukların korunması kararı alınmıştır",
+            "C) İlk defa Şark Sorunu gündeme gelmiştir",
+            "D) Osmanlı donanması yakılmıştır",
+            "E) Avrupa'da mevcut düzenin korunması amaçlanmıştır"
+        ],
+        correctAnswerIndex: 3,
+        explanation: "Osmanlı donanmasının yakılması Navarin Baskını'dır; Viyana Kongresi'nin konusu değildir."
+    },
+    {
+        question: "Soru 9: İlk defa Şark Sorunu'nun gündeme geldiği toplantı aşağıdakilerden hangisidir?",
+        options: ["A) Londra Konferansı", "B) Tersane Konferansı", "C) Viyana Kongresi", "D) Paris Barış Konferansı", "E) Berlin Kongresi"],
+        correctAnswerIndex: 2,
+        explanation: "1815 Viyana Kongresi'nde ilk defa Şark Sorunu gündeme gelmiştir."
+    },
+    {
+        question: "Soru 10: Yunan İsyanına destek olmak için Alexandr İpsilanti tarafından kurulan cemiyet hangisidir?",
+        options: ["A) Etniki Eterya", "B) Filiki Eterya", "C) Megali Idea", "D) Hürriyet Taburları", "E) İttihad-ı Osmani"],
+        correctAnswerIndex: 1,
+        explanation: "Filiki Eterya, Yunan İsyanına destek için İpsilanti tarafından kurulmuştur."
+    },
+    {
+        question: "Soru 11: Yunan isyanına destek için gelen İngiliz şair kimdir?",
+        options: ["A) Lord Byron", "B) Florence Nightingale", "C) Mençikof", "D) I. Nikola", "E) Lord Stratford"],
+        correctAnswerIndex: 0,
+        explanation: "Yunan isyanına destek için gelen İngiliz şair Lord Byron'dır."
+    },
+    {
+        question: "Soru 12: Yunanlıların isyan ettiği başlıca bölgeler aşağıdakilerin hangisinde doğru verilmiştir?",
+        options: ["A) Mora ve ardından Eflak", "B) Eflak ve sonrasında Mora", "C) Yanya ve Girit", "D) Teselya ve Kıbrıs", "E) Sırbistan ve Karadağ"],
+        correctAnswerIndex: 1,
+        explanation: "Yunanlılar Eflak ve sonrasında Mora merkezli isyan etmişlerdir."
+    },
+    {
+        question: "Soru 13: Yunan İsyanının büyümesine neden olan Girit valisi kimdir?",
+        options: ["A) Kavalalı Mehmet Ali Paşa", "B) Cezzar Ahmet Paşa", "C) Tepedelenli Ali Paşa", "D) Gazi Osman Paşa", "E) Alemdar Mustafa Paşa"],
+        correctAnswerIndex: 2,
+        explanation: "Tepedelenli Ali Paşa, Yunan İsyanının büyümesine neden olan Girit valisidir."
+    },
+    {
+        question: "Soru 14: Osmanlı Devleti Yunan İsyanında hangi valisinden yardım istemek zorunda kalmıştır?",
+        options: ["A) Tepedelenli Ali Paşa", "B) Cezzar Ahmet Paşa", "C) Kavalalı Mehmet Ali Paşa", "D) Gazi Ahmet Muhtar Paşa", "E) Süleyman Hüsnü Paşa"],
+        correctAnswerIndex: 2,
+        explanation: "Yunanlılar ikinci kez Mora'da isyan edince Mısır valisi Kavalalı Mehmet Ali Paşa'dan yardım istenmiştir."
+    },
+    {
+        question: "Soru 15: Kavalalı Mehmet Ali Paşa Yunan İsyanına yardım karşılığında hangilerini istemiştir?",
+        options: ["A) Şam ve Adana", "B) Mora ve Girit", "C) Cidde ve Hicaz", "D) Suriye ve Irak", "E) Trablusgarp ve Tunus"],
+        correctAnswerIndex: 1,
+        explanation: "Kavalalı, Mora ve Girit'in kendisine verilmesi karşılığında yardım etmiş ve isyan bastırılmıştır."
+    },
+    {
+        question: "Soru 16: Navarin Baskını'nda Osmanlı donanmasını yakan devletler hangileridir?",
+        options: ["A) İngiltere ve Fransa", "B) Rusya ve Avusturya", "C) İngiltere, Fransa ve Rusya", "D) Prusya, Rusya ve Avusturya", "E) İngiltere, Piyemonte ve Fransa"],
+        correctAnswerIndex: 2,
+        explanation: "Rum isyanının bastırılması üzerine İngiltere, Fransa ve Rusya Navarin'de Osmanlı donanmasını yakmıştır."
+    },
+    {
+        question: "Soru 17: Navarin Baskını'nın doğrudan sonuçlarından biri aşağıdakilerden hangisidir?",
+        options: [
+            "A) Tanzimat Fermanı ilan edilmiştir",
+            "B) Restorasyon Dönemi sona ermiş, 1827–1828 Osmanlı–Rus Savaşı başlamıştır",
+            "C) Sırplar bağımsız olmuştur",
+            "D) Boğazlar uluslararası hale gelmiştir",
+            "E) Kanun-ı Esasi yürürlüğe girmiştir"
+        ],
+        correctAnswerIndex: 1,
+        explanation: "Navarin ile Restorasyon Dönemi sona ermiş ve 1827–1828 Osmanlı–Rus Savaşı başlamıştır."
+    },
+    {
+        question: "Soru 18: 1829 Edirne Antlaşması'nın sonuçları arasında aşağıdakilerden hangisi yoktur?",
+        options: [
+            "A) Yunanlılar bağımsız olmuştur",
+            "B) Milliyetçilik etkisiyle ayrılan ilk azınlık Yunanlılar olmuştur",
+            "C) Sırplar özerklik kazanmıştır",
+            "D) Sırplar bağımsız olmuştur",
+            "E) Osmanlı Rusya'ya mağlup olmuştur"
+        ],
+        correctAnswerIndex: 3,
+        explanation: "Sırpların bağımsızlığı 1878 Berlin Antlaşması'ndadır; Edirne'de özerklik kazanmışlardır."
+    },
+    {
+        question: "Soru 19: Milliyetçilik etkisi ile Osmanlı Devleti'nden ayrılan ilk azınlık hangisidir?",
+        options: ["A) Sırplar", "B) Yunanlılar", "C) Bulgarlar", "D) Romenler", "E) Karadağlılar"],
+        correctAnswerIndex: 1,
+        explanation: "1829 Edirne ile Yunanlılar bağımsız olmuş; milliyetçilikle ayrılan ilk azınlık onlardır. Sırplar ilk isyan eden ve ilk imtiyaz alan azınlıktır."
+    },
+    {
+        question: "Soru 20: 14 Mayıs 1833 Kütahya Antlaşması ile Kavalalı Mehmet Ali Paşa'ya hangi valiliklerde hak tanınmıştır?",
+        options: ["A) Mora, Girit, Şam, Bağdat", "B) Şam, Girit, Adana, Cidde", "C) Suriye, Irak, Hicaz, Yemen", "D) Trablus, Tunus, Cezayir, Mısır", "E) Adana, Halep, Musul, Trablus"],
+        correctAnswerIndex: 1,
+        explanation: "Kütahya Antlaşması'nda Kavalalı'ya Şam, Girit, Adana ve Cidde valilikleri tanınmıştır."
+    },
+    {
+        question: "Soru 21: Kavalalı'nın ordusunun Kütahya'ya kadar gelmesinin nedeni aşağıdakilerden hangisidir?",
+        options: [
+            "A) Navarin'de donanmanın yanması",
+            "B) Girit ve Mora yerine Girit ve Suriye valiliklerini istemesi ve Osmanlı'yı mağlup etmesi",
+            "C) Tanzimat'ın ilanı",
+            "D) Hünkâr İskelesi'nin bozulması",
+            "E) Londra Boğazlar Sözleşmesi"
+        ],
+        correctAnswerIndex: 1,
+        explanation: "Kavalalı Girit ve Mora yerine Girit ve Suriye valiliklerini istemiş, Osmanlı'yı yenerek Kütahya'ya kadar gelmiştir."
+    },
+    {
+        question: "Soru 22: II. Mahmut'un «Denize düşen yılana sarılır» sözü hangi antlaşma ile ilişkilidir?",
+        options: ["A) Balta Limanı", "B) Kütahya", "C) Hünkâr İskelesi", "D) Londra Boğazlar", "E) Paris"],
+        correctAnswerIndex: 2,
+        explanation: "İngiltere ve Fransa yardım etmeyince Rusya ile Hünkâr İskelesi imzalanmış; II. Mahmut bu sözü bu bağlamda kullanmıştır."
+    },
+    {
+        question: "Soru 23: 8 Temmuz 1833 Hünkâr İskelesi Antlaşması'na göre Rusya saldırıya uğrarsa Osmanlı ne yapacaktır?",
+        options: [
+            "A) Rusya'ya asker gönderecektir",
+            "B) Rusya lehine boğazları kapatacaktır",
+            "C) Mısır'ı Rusya'ya bırakacaktır",
+            "D) Kapitülasyonları kaldıracaktır",
+            "E) Sırbistan'a özerklik verecektir"
+        ],
+        correctAnswerIndex: 1,
+        explanation: "Osmanlı saldırıya uğrarsa Rusya yardım edecek; Rusya saldırıya uğrarsa Osmanlı Rusya lehine boğazları kapatacaktır."
+    },
+    {
+        question: "Soru 24: Osmanlı Devleti'nin boğazlar üzerindeki egemenlik haklarını son kez tek başına kullandığı antlaşma hangisidir?",
+        options: ["A) Londra Boğazlar Sözleşmesi", "B) Hünkâr İskelesi Antlaşması", "C) Paris Antlaşması", "D) Balta Limanı Antlaşması", "E) Ayastefanos Antlaşması"],
+        correctAnswerIndex: 1,
+        explanation: "Hünkâr İskelesi, boğaz egemenliğinin son kez tek başına kullanıldığı antlaşmadır. 1841'de boğazlar uluslararası sorun olmuştur."
+    },
+    {
+        question: "Soru 25: 1838 Balta Limanı Ticaret Antlaşması hangi devletler arasında imzalanmıştır?",
+        options: ["A) Osmanlı–Fransa", "B) Osmanlı–Rusya", "C) Osmanlı–İngiltere", "D) Osmanlı–Avusturya", "E) Osmanlı–Prusya"],
+        correctAnswerIndex: 2,
+        explanation: "Balta Limanı, Osmanlı ile İngiltere arasındadır."
+    },
+    {
+        question: "Soru 26: Balta Limanı Antlaşması'nın sonuçları arasında aşağıdakilerden hangisi yoktur?",
+        options: [
+            "A) Kapitülasyonlar genişletilmiştir",
+            "B) Osmanlı pazarları ithal mallarla dolmuştur",
+            "C) Lonca Teşkilatı çökmüştür",
+            "D) Osmanlı açık pazar ve yarı sömürge durumuna düşmüştür",
+            "E) Boğazlar uluslararası hale gelmiştir"
+        ],
+        correctAnswerIndex: 4,
+        explanation: "Boğazların uluslararası hale gelmesi 1841 Londra Boğazlar Sözleşmesi'ndedir."
+    },
+    {
+        question: "Soru 27: Lonca Teşkilatı'nın çökmesine yol açan antlaşma hangisidir?",
+        options: ["A) Hünkâr İskelesi", "B) Balta Limanı", "C) Paris", "D) Berlin", "E) Kütahya"],
+        correctAnswerIndex: 1,
+        explanation: "Sanayi İnkılabı etkisiyle ithal malların Osmanlı pazarını doldurması Lonca'yı çökertmiş; bu Balta Limanı sonucudur."
+    },
+    {
+        question: "Soru 28: 1839 Tanzimat Fermanı'nın ilan edilmesinin notlara göre temel nedeni nedir?",
+        options: [
+            "A) 93 Harbi'nde Avrupa'nın desteğini almak",
+            "B) Mısır Meselesinin görüşüleceği Londra Konferansı kararlarında etkili olabilmek",
+            "C) Navarin Baskını'nı protesto etmek",
+            "D) Sırp İsyanını bastırmak",
+            "E) Kanun-ı Esasi'yi yürürlüğe koymak"
+        ],
+        correctAnswerIndex: 1,
+        explanation: "Abdülmecid, Londra Konferansı'nda Mısır Meselesinde etkili olabilmek için Tanzimat'ı ilan etmiştir."
+    },
+    {
+        question: "Soru 29: 1840 Londra Konferansı'nın sonuçlarından biri aşağıdakilerden hangisidir?",
+        options: [
+            "A) Kavalalı'ya verilen yerler geri alındı",
+            "B) Yunanistan bağımsız oldu",
+            "C) Kıbrıs İngiltere'ye bırakıldı",
+            "D) Karadeniz tarafsız ilan edildi",
+            "E) Meşrutiyet ilan edildi"
+        ],
+        correctAnswerIndex: 0,
+        explanation: "Mısır Sorunu büyük devletlerin katılımıyla çözüldü ve Kavalalı'ya verilen yerler geri alındı."
+    },
+    {
+        question: "Soru 30: Mısır Sorunu'nun iç sorunken dış sorun haline gelmesi notlara göre kaçıncı olaydır?",
+        options: ["A) 1. olay", "B) 2. olay", "C) 3. olay", "D) 4. olay", "E) Son olay"],
+        correctAnswerIndex: 1,
+        explanation: "1840 Londra Konferansı ile Mısır Sorunu dış sorun haline gelmiştir; notta 2. olay olarak işaretlenir."
+    },
+    {
+        question: "Soru 31: Boğazların ilk kez uluslararası sorun haline geldiği belge hangisidir?",
+        options: ["A) Hünkâr İskelesi Antlaşması", "B) 1841 Londra Boğazlar Sözleşmesi", "C) 1856 Paris Antlaşması", "D) 1878 Berlin Antlaşması", "E) Balta Limanı Antlaşması"],
+        correctAnswerIndex: 1,
+        explanation: "1841 Londra Boğazlar Sözleşmesi ile boğazlar ilk kez uluslararası sorun olmuştur."
+    },
+    {
+        question: "Soru 32: Osmanlı Devleti'ne «Hasta Adam» diyen ve Kırım Savaşı'nın nedenleri arasında yer alan kişi kimdir?",
+        options: ["A) II. Mahmut", "B) I. Nikola", "C) Abdülmecid", "D) Lord Byron", "E) Mençikof"],
+        correctAnswerIndex: 1,
+        explanation: "Rusya'nın Osmanlı'yı parçalamak istemesi Hasta Adam nitelemesiyle I. Nikola'ya bağlanır."
+    },
+    {
+        question: "Soru 33: Kırım Savaşı'nın nedenleri arasında aşağıdakilerden hangisi yoktur?",
+        options: [
+            "A) Rusya'nın sıcak denizlere inmek istemesi",
+            "B) Kutsal Yerler sorunu",
+            "C) Mülteciler sorunu",
+            "D) Mençikof'un istekleri",
+            "E) Tersane Konferansı'nda Rusya'nın isteklerinin reddi"
+        ],
+        correctAnswerIndex: 4,
+        explanation: "Tersane Konferansı ve Rusya isteklerinin reddi 93 Harbi'nin nedenidir, Kırım'ın değil."
+    },
+    {
+        question: "Soru 34: Kırım Savaşı'nda Osmanlı'nın yanında yer almayan devlet hangisidir?",
+        options: ["A) İngiltere", "B) Fransa", "C) Avusturya", "D) Piyemonte", "E) Rusya"],
+        correctAnswerIndex: 4,
+        explanation: "Osmanlı, İngiltere, Fransa, Avusturya ve Piyemonte Rusya'ya karşı savaşmıştır."
+    },
+    {
+        question: "Soru 35: Kırım Savaşı'nda Osmanlı donanmasının yakıldığı baskın hangisidir?",
+        options: ["A) Navarin Baskını", "B) Sinop Baskını", "C) Reval", "D) Çeşme Baskını", "E) 31 Mart"],
+        correctAnswerIndex: 1,
+        explanation: "Kırım Savaşı'nda Osmanlı donanması Sinop Baskını'nda yakılmıştır. Navarin 1827'dedir."
+    },
+    {
+        question: "Soru 36: Osmanlı Devleti'nde ilk kez dış borç hangi savaşta ve hangi devletten alınmıştır?",
+        options: ["A) 93 Harbi — Fransa", "B) Kırım Savaşı — İngiltere", "C) Yunan İsyanı — Rusya", "D) Trablusgarp — İtalya", "E) Balkan Bunalımı — Almanya"],
+        correctAnswerIndex: 1,
+        explanation: "Kırım Savaşı sırasında ilk dış borç İngiltere'den alınmıştır."
+    },
+    {
+        question: "Soru 37: Osmanlı Devleti'nde ilk telgraf hattı hangi güzergâhta kurulmuştur?",
+        options: ["A) İstanbul–İzmir–Selanik", "B) İstanbul–Edirne–Şumnu", "C) İstanbul–Ankara–Konya", "D) İstanbul–Bursa–Eskişehir", "E) İstanbul–Bağdat"],
+        correctAnswerIndex: 1,
+        explanation: "Kırım Savaşı sırasında ilk telgraf hattı İstanbul–Edirne–Şumnu'dur."
+    },
+    {
+        question: "Soru 38: Selimiye Kışlasında modern hemşireliğin kurucusu olarak öne çıkan kişi kimdir?",
+        options: ["A) Nene Hatun", "B) Florence Nightingale", "C) Halide Edip", "D) Kara Fatma", "E) Tepedelenli"],
+        correctAnswerIndex: 1,
+        explanation: "Kırım Savaşı'nda Selimiye Kışlasında Florence Nightingale modern hemşireliğin kurucusu olarak ortaya çıkmıştır."
+    },
+    {
+        question: "Soru 39: 1856 Islahat Fermanı neden ilan edilmiştir?",
+        options: [
+            "A) Tersane Konferansı'nda etkili olmak için",
+            "B) Paris Barış Konferansı kararlarında etkili olabilmek için gayrimüslimlere yeni haklar vermek",
+            "C) Navarin'i protesto etmek için",
+            "D) II. Meşrutiyet'i ilan etmek için",
+            "E) Balta Limanı'nı kaldırmak için"
+        ],
+        correctAnswerIndex: 1,
+        explanation: "Islahat Fermanı, Paris Barış Konferansı'nda etkili olmak amacıyla gayrimüslimlere yeni haklar verilerek ilan edilmiştir."
+    },
+    {
+        question: "Soru 40: Tanzimat ve Islahat fermanlarının ilan gerekçelerindeki ortak yön nedir?",
+        options: [
+            "A) Her ikisi de 93 Harbi sırasında ilan edilmiştir",
+            "B) Her ikisi de uluslararası bir toplantıda etkili olabilmek için ilan edilmiştir",
+            "C) Her ikisi de II. Abdülhamid döneminde ilan edilmiştir",
+            "D) Her ikisi de Meşrutiyet'i getirmiştir",
+            "E) Her ikisi de boğazlar için ilan edilmiştir"
+        ],
+        correctAnswerIndex: 1,
+        explanation: "Tanzimat Londra Konferansı, Islahat Paris Konferansı için; ikisi de uluslararası toplantıda etkili olmak içindir."
+    },
+    {
+        question: "Soru 41: 1856 Paris Antlaşması'na göre Osmanlı toprak bütünlüğünün Avrupalılarca korunması hangi yoruma götürür?",
+        options: [
+            "A) Osmanlı Avrupa'nın en güçlü devletidir",
+            "B) Osmanlı kendi toprak bütünlüğünü koruyamayacak kadar güçsüzdür",
+            "C) Osmanlı kapitülasyonları kaldırmıştır",
+            "D) Osmanlı Karadeniz'de üstünlük sağlamıştır",
+            "E) Osmanlı Mısır'ı geri almıştır"
+        ],
+        correctAnswerIndex: 1,
+        explanation: "Toprak bütünlüğünün başkalarınca korunması, Osmanlı'nın bunu kendi başına yapamayacak kadar güçsüz olduğunu gösterir."
+    },
+    {
+        question: "Soru 42: Osmanlı Devleti'nin ilk kez Avrupa Devleti sayılması hangi antlaşma iledir?",
+        options: ["A) Hünkâr İskelesi", "B) Viyana Kongresi", "C) 1856 Paris Antlaşması", "D) Berlin Antlaşması", "E) Londra Boğazlar"],
+        correctAnswerIndex: 2,
+        explanation: "Paris'te Osmanlı Avrupa hukukundan yararlanacak ve Avrupa Devleti sayılacaktır; notta ilk kez denir."
+    },
+    {
+        question: "Soru 43: Paris Antlaşması'nda Karadeniz'de donanma ve tersane bulunduramama hükmü için hangi yorum doğrudur?",
+        options: [
+            "A) Osmanlı savaşı kazandığı halde yenilmiş devlet muamelesi görmüştür",
+            "B) Osmanlı Karadeniz'de tam hâkimiyet kurmuştur",
+            "C) Yalnız Rusya kısıtlanmıştır",
+            "D) İngiltere Karadeniz'e donanma sokmuştur",
+            "E) Boğazlar Osmanlı'nın tek başına tasarrufuna bırakılmıştır"
+        ],
+        correctAnswerIndex: 0,
+        explanation: "Hem Osmanlı hem Rusya Karadeniz'de donanma/tersane bulunduramayacaktır; kazanan Osmanlı yenilmiş muamelesi görmüştür."
+    },
+    {
+        question: "Soru 44: Kırım Savaşı'nda yer almamasına rağmen 1856 Paris Antlaşması'nda yer alan devlet hangisidir?",
+        options: ["A) Piyemonte", "B) Avusturya", "C) Prusya", "D) İngiltere", "E) Fransa"],
+        correctAnswerIndex: 2,
+        explanation: "Savaşta yer almayan fakat antlaşmada bulunan devlet Prusya'dır."
+    },
+    {
+        question: "Soru 45: Islahat Fermanı hangi antlaşmaya madde olarak eklenmiştir?",
+        options: ["A) Edirne", "B) Berlin", "C) Paris", "D) Ayastefanos", "E) Uşi"],
+        correctAnswerIndex: 2,
+        explanation: "Islahat Fermanı 1856 Paris Antlaşması'na madde olarak eklenmiştir."
+    },
+    {
+        question: "Soru 46: 1875 Balkan Bunalımı'nın temel nedeni notlara göre nedir?",
+        options: [
+            "A) Navarin Baskını",
+            "B) Balkanlardaki azınlıkların vergi vermek istememeleri ve isyanları",
+            "C) Balta Limanı",
+            "D) Halepa Fermanı",
+            "E) Dömeke zaferi"
+        ],
+        correctAnswerIndex: 1,
+        explanation: "Balkan Bunalımı, azınlıkların vergi vermek istememeleri ve isyan süreçleridir; 1876'da Tersane Konferansı toplanmıştır."
+    },
+    {
+        question: "Soru 47: 1876 Tersane Konferansı'nda etkili olabilmek için Osmanlı ne yapmıştır?",
+        options: [
+            "A) Tanzimat Fermanı'nı ilan etmiştir",
+            "B) Kanun-ı Esasi'yi yürürlüğe koyup Meşrutiyet'i ilan etmiştir",
+            "C) Islahat Fermanı'nı ilan etmiştir",
+            "D) Hünkâr İskelesi'ni imzalamıştır",
+            "E) Kıbrıs'ı İngiltere'ye bırakmıştır"
+        ],
+        correctAnswerIndex: 1,
+        explanation: "II. Abdülhamid döneminde Tersane Konferansı için Kanun-ı Esasi ve I. Meşrutiyet devreye sokulmuştur."
+    },
+    {
+        question: "Soru 48: 93 Harbi'nin başlamasında Tersane Konferansı ile ilgili hangisi doğrudur?",
+        options: [
+            "A) Rusya'nın istekleri kabul edilmiş, savaş önlenmiştir",
+            "B) Rusya'nın isteklerinin reddedilmesi 93 Harbi'ne neden olmuştur",
+            "C) Konferans Kırım Savaşı'nı başlatmıştır",
+            "D) Konferansta Yunanistan bağımsız olmuştur",
+            "E) Konferans Londra'da toplanmıştır"
+        ],
+        correctAnswerIndex: 1,
+        explanation: "Tersane'de Rusya'nın isteklerinin reddi 93 Harbi'ne yol açmıştır."
+    },
+    {
+        question: "Soru 49: 93 Harbi'nde Kafkas Cephesi'nde Ruslara direnen komutan kimdir?",
+        options: ["A) Gazi Osman Paşa", "B) Gazi Ahmet Muhtar Paşa", "C) Süleyman Hüsnü Paşa", "D) Tepedelenli Ali Paşa", "E) Kavalalı Mehmet Ali Paşa"],
+        correctAnswerIndex: 1,
+        explanation: "Kafkas Cephesi'nde Ruslara direnen Gazi Ahmet Muhtar Paşa'dır."
+    },
+    {
+        question: "Soru 50: Erzurum Aziziye Tabyasında direnişin sembolü olan kişi kimdir?",
+        options: ["A) Florence Nightingale", "B) Nene Hatun", "C) Kara Yorgi", "D) Halepa", "E) Lord Byron"],
+        correctAnswerIndex: 1,
+        explanation: "Aziziye Tabyasında direnişin sembolü Nene Hatun'dur."
+    },
+    {
+        question: "Soru 51: 93 Harbi'nde Plevne Müdafii olarak bilinen kişi kimdir?",
+        options: ["A) Gazi Osman Paşa", "B) Gazi Ahmet Muhtar Paşa", "C) Süleyman Hüsnü Paşa", "D) II. Abdülhamid", "E) Abdülaziz"],
+        correctAnswerIndex: 0,
+        explanation: "Balkan Cephesi'nde Plevne Müdafii Gazi Osman Paşa'dır."
+    },
+    {
+        question: "Soru 52: Şıpka Kahramanı olarak bilinen kişi kimdir?",
+        options: ["A) Gazi Osman Paşa", "B) Nene Hatun", "C) Süleyman Hüsnü Paşa", "D) Gazi Ahmet Muhtar Paşa", "E) Tepedelenli Ali Paşa"],
+        correctAnswerIndex: 2,
+        explanation: "Şıpka Kahramanı Süleyman Hüsnü Paşa'dır."
+    },
+    {
+        question: "Soru 53: 93 Harbi sonunda imzalanan antlaşma hangisidir?",
+        options: ["A) Berlin Antlaşması", "B) Ayastefanos (Yeşilköy) Antlaşması", "C) Paris Antlaşması", "D) Edirne Antlaşması", "E) Uşi Antlaşması"],
+        correctAnswerIndex: 1,
+        explanation: "Ağır mağlubiyet sonrası Ayastefanos (Yeşilköy) Antlaşması imzalanmıştır; ardından Berlin'de yumuşatılmıştır."
+    },
+    {
+        question: "Soru 54: 1878 Berlin Antlaşması'nda Osmanlı'nın yardım karşılığında geçici olarak İngiltere'ye bıraktığı yer hangisidir?",
+        options: ["A) Mısır", "B) Kıbrıs", "C) Girit", "D) Bosna", "E) Teselya"],
+        correctAnswerIndex: 1,
+        explanation: "Berlin'de yardım karşılığında Kıbrıs geçici olarak İngiltere'ye bırakılmış; bu ileride Kıbrıs Sorunu'na yol açacaktır."
+    },
+    {
+        question: "Soru 55: Berlin Antlaşması ile bağımsız olan devletler hangileridir?",
+        options: ["A) Yunanistan, Sırbistan, Bulgaristan", "B) Sırbistan, Karadağ, Romanya", "C) Bulgaristan, Bosna, Girit", "D) Cezayir, Tunus, Mısır", "E) Sırbistan, Yunanistan, Mısır"],
+        correctAnswerIndex: 1,
+        explanation: "Sırbistan, Karadağ ve Romanya bağımsız olmuştur; bu Panslavizm sonucudur."
+    },
+    {
+        question: "Soru 56: Berlin'de Sırbistan, Karadağ ve Romanya'nın bağımsızlığı hangi politikanın sonucu olarak yorumlanır?",
+        options: ["A) Denge politikası", "B) Panslavizm", "C) Panislamizm", "D) Restorasyon", "E) Kapitülasyon"],
+        correctAnswerIndex: 1,
+        explanation: "Notlara göre bu bağımsızlıklar Panslavizm politikasının sonucudur."
+    },
+    {
+        question: "Soru 57: Berlin Antlaşması'nda Rusya'ya bırakılan yerler hangileridir?",
+        options: ["A) Kars, Ardahan, Batum", "B) Kars, Ardahan, Doğu Beyazıt", "C) Batum, Teselya, Kıbrıs", "D) Elviye-i Selâse ve Bosna", "E) Girit, Kars, Mısır"],
+        correctAnswerIndex: 0,
+        explanation: "Kars, Ardahan, Batum Rusya'ya; Doğu Beyazıt Osmanlı'ya kalmıştır. Elviye-i Selâse I. Dünya Savaşı'nda geri alınacaktır."
+    },
+    {
+        question: "Soru 58: Ermeni sorununun ilk kez uluslararası hale geldiği antlaşma hangisidir?",
+        options: ["A) Paris", "B) Edirne", "C) Berlin", "D) Ayastefanos", "E) Halepa"],
+        correctAnswerIndex: 2,
+        explanation: "Berlin'de Ermenilerin bulunduğu bölgelerde ve Girit'te ıslahat öngörülmüş; Ermeni sorunu ilk kez uluslararası hale gelmiştir."
+    },
+    {
+        question: "Soru 59: Berlin'de Bulgaristan'ın üçe bölünerek Osmanlı'ya bırakılmasının yorumu nedir?",
+        options: [
+            "A) Rusya sıcak denizlere inmiştir",
+            "B) Rusların sıcak denizlere inmesi engellenmiştir",
+            "C) Yunanistan bağımsız olmuştur",
+            "D) Meşrutiyet ilan edilmiştir",
+            "E) Karadeniz tarafsız kalmıştır"
+        ],
+        correctAnswerIndex: 1,
+        explanation: "Ayastefanos'a göre değişen bu madde ile Rusların sıcak denizlere inmesi engellenmiştir."
+    },
+    {
+        question: "Soru 60: Berlin Antlaşması'nda Bosna Hersek ve Teselya ile ilgili hangisi doğrudur?",
+        options: [
+            "A) İkisi de Rusya'ya bırakılmıştır",
+            "B) Bosna Hersek geçici olarak Avusturya'ya, Teselya Yunanistan'a bırakılmıştır",
+            "C) İkisi de bağımsız olmuştur",
+            "D) İkisi de İngiltere'ye bırakılmıştır",
+            "E) Teselya Avusturya'ya, Bosna Yunanistan'a bırakılmıştır"
+        ],
+        correctAnswerIndex: 1,
+        explanation: "Bosna Hersek geçici Avusturya'ya, Teselya Yunanistan'a bırakılmıştır."
+    },
+    {
+        question: "Soru 61: 93 Harbi'nden sonra İngiltere'nin Osmanlı toprak bütünlüğünü korumaktan vazgeçmesi üzerine Osmanlı hangi devletle yakınlaşmıştır?",
+        options: ["A) Fransa", "B) Rusya", "C) Almanya", "D) İtalya", "E) Avusturya"],
+        correctAnswerIndex: 2,
+        explanation: "İngiltere vazgeçince Osmanlı Almanya ile yakınlaşmıştır."
+    },
+    {
+        question: "Soru 62: 1878 Halepa Fermanı nedir?",
+        options: [
+            "A) Sırplara bağımsızlık belgesi",
+            "B) Giritli Rumlara özerklik verilen belgedir",
+            "C) Ermenilere toprak veren belgedir",
+            "D) Mısır'a özerklik veren belgedir",
+            "E) Kanun-ı Esasi'nin diğer adıdır"
+        ],
+        correctAnswerIndex: 1,
+        explanation: "Halepa Fermanı, II. Abdülhamid döneminde Giritli Rumlara özerklik verilen belgedir."
+    },
+    {
+        question: "Soru 63: 1897 Dömeke Meydan Muharebesi ile ilgili hangisi doğrudur?",
+        options: [
+            "A) Osmanlı yenilmiş, Girit kaybedilmiştir",
+            "B) Osmanlı–Yunanistan arasında yapılmış, Osmanlı zaferi ile sonuçlanmıştır",
+            "C) Rusya ile yapılmıştır",
+            "D) Kırım Savaşı'nın parçasıdır",
+            "E) Navarin'den hemen sonra yapılmıştır"
+        ],
+        correctAnswerIndex: 1,
+        explanation: "Dömeke, Osmanlı–Yunan savaşıdır ve Osmanlı zaferidir. Atatürk gençlik heyecanıyla katılmak istediğini söylemiştir."
+    },
+    {
+        question: "Soru 64: I. Meşrutiyet hangi yılda ilan edilmiştir?",
+        options: ["A) 1839", "B) 1856", "C) 1876", "D) 1908", "E) 1909"],
+        correctAnswerIndex: 2,
+        explanation: "1876'da I. Meşrutiyet ilan edilmiştir (Tersane Konferansı süreci, Kanun-ı Esasi)."
+    },
+    {
+        question: "Soru 65: 1878–1908 arasındaki 30 yıllık dönemin adı nedir?",
+        options: ["A) Restorasyon", "B) Tanzimat", "C) İstibdat Dönemi", "D) Islahat", "E) Meşrutiyet'in ikinci devri"],
+        correctAnswerIndex: 2,
+        explanation: "93 Harbi bahane edilerek meclis feshedilmiş, 1878–1908 İstibdat Dönemi olmuştur."
+    },
+    {
+        question: "Soru 66: II. Meşrutiyet'in ilanında etkili olan gelişmeler hangileridir?",
+        options: [
+            "A) Navarin ve Sinop",
+            "B) Reval Görüşmeleri ve Hürriyet Taburlarının isyanı",
+            "C) Dömeke ve Halepa",
+            "D) Viyana Kongresi ve Şark Sorunu",
+            "E) Balta Limanı ve Tanzimat"
+        ],
+        correctAnswerIndex: 1,
+        explanation: "1908'de Reval Görüşmeleri ve Hürriyet Taburları isyanı ile II. Meşrutiyet ilan edilmiştir."
+    },
+    {
+        question: "Soru 67: II. Meşrutiyet'in ilanı sonrasında kaybedilen yerler hangileridir?",
+        options: ["A) Cezayir, Tunus, Mısır", "B) Bulgaristan, Bosna, Girit", "C) Kars, Ardahan, Batum", "D) Kıbrıs, Teselya, Adana", "E) Mora, Eflak, Boğdan"],
+        correctAnswerIndex: 1,
+        explanation: "II. Meşrutiyet karşılıklarında Bulgaristan, Bosna ve Girit kaybedilmiştir."
+    },
+    {
+        question: "Soru 68: 1909'da rejime karşı çıkan ilk isyan hangisidir?",
+        options: ["A) Sırp İsyanı", "B) Yunan İsyanı", "C) 31 Mart İsyanı", "D) Tepedelenli İsyanı", "E) Balkan Bunalımı"],
+        correctAnswerIndex: 2,
+        explanation: "Rejime karşı ilk isyan 31 Mart İsyanı'dır (1909)."
+    },
+    {
+        question: "Soru 69: Osmanlı'nın Kuzey Afrika'da kaybettiği ilk toprak hangisidir?",
+        options: ["A) 1881 Tunus", "B) 1830 Cezayir", "C) 1882 Mısır", "D) 1912 Trablusgarp", "E) 1878 Kıbrıs"],
+        correctAnswerIndex: 1,
+        explanation: "1830'da Fransa'nın işgal ettiği Cezayir, Kuzey Afrika'da kaybedilen ilk topraktır."
+    },
+    {
+        question: "Soru 70: 1881'de Tunus'u işgal eden devlet hangisidir?",
+        options: ["A) İngiltere", "B) İtalya", "C) Fransa", "D) Almanya", "E) İspanya"],
+        correctAnswerIndex: 2,
+        explanation: "Tunus 1881'de Fransa tarafından işgal edilmiştir."
+    },
+    {
+        question: "Soru 71: 1882'de Mısır'ı işgal eden devlet hangisidir?",
+        options: ["A) Fransa", "B) İngiltere", "C) İtalya", "D) Rusya", "E) Avusturya"],
+        correctAnswerIndex: 1,
+        explanation: "Mısır 1882'de İngiltere tarafından işgal edilmiştir."
+    },
+    {
+        question: "Soru 72: Trablusgarp'ın İtalya'ya kaybedildiği antlaşma hangisidir?",
+        options: ["A) Paris", "B) Berlin", "C) Uşi", "D) Londra", "E) Ayastefanos"],
+        correctAnswerIndex: 2,
+        explanation: "1912'de Trablusgarp Uşi Antlaşması ile İtalya'ya kaybedilmiştir."
+    },
+    {
+        question: "Soru 73: Aşağıdakilerden hangisi «ilk isyan eden azınlık / ilk imtiyaz alan azınlık / ilk bağımsız ayrılan azınlık» eşleşmesini doğru verir?",
+        options: [
+            "A) Yunan — Sırp — Bulgar",
+            "B) Sırp — Sırp — Yunan",
+            "C) Sırp — Yunan — Sırp",
+            "D) Rum — Sırp — Yunan",
+            "E) Sırp — Rum — Sırp"
+        ],
+        correctAnswerIndex: 1,
+        explanation: "İlk isyan ve ilk imtiyaz Sırplar; Osmanlı'dan milliyetçilikle ayrılan ilk bağımsız azınlık Yunanlılardır."
+    },
+    {
+        question: "Soru 74: Restorasyon Dönemi'nin başlangıcı ve bitişi notlara göre hangisidir?",
+        options: [
+            "A) Başlangıç: Tanzimat — Bitiş: Islahat",
+            "B) Başlangıç: 1815 Viyana Kongresi — Bitiş: Navarin Baskını",
+            "C) Başlangıç: Hünkâr İskelesi — Bitiş: Paris",
+            "D) Başlangıç: Bükreş — Bitiş: Edirne",
+            "E) Başlangıç: Berlin — Bitiş: II. Meşrutiyet"
+        ],
+        correctAnswerIndex: 1,
+        explanation: "Restorasyon Viyana Kongresi ile başlamış, Navarin Baskını ile sona ermiştir."
+    },
+    {
+        question: "Soru 75: Aşağıdaki antlaşma–padişah eşleşmelerinden hangisi yanlıştır?",
+        options: [
+            "A) Hünkâr İskelesi — II. Mahmut",
+            "B) Balta Limanı — II. Mahmut",
+            "C) Paris Antlaşması — Abdülmecid",
+            "D) Berlin Antlaşması — II. Abdülhamid",
+            "E) Tanzimat Fermanı — II. Abdülhamid"
+        ],
+        correctAnswerIndex: 4,
+        explanation: "Tanzimat Fermanı Abdülmecid döneminde (1839) ilan edilmiştir, II. Abdülhamid'de değil."
+    }
 ];
