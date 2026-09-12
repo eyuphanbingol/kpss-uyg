@@ -246,7 +246,11 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             badges: {},
             panicBest: 0,
             tabuBest: 0,
-            kodlamaBest: 0
+            kodlamaBest: 0,
+            tabuSeen: {},
+            kodlamaSeen: {},
+            tabuSeenResetAt: "",
+            kodlamaSeenResetAt: ""
         };
     }
 
@@ -280,6 +284,15 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
         return out;
     }
 
+    function seenMap(x) {
+        var out = {};
+        if (!isObj(x)) return out;
+        Object.keys(x).forEach(function (k) {
+            if (x[k]) out[String(k)] = true;
+        });
+        return out;
+    }
+
     function migrateGames(g) {
         var base = defaultGames();
         if (!isObj(g)) return base;
@@ -296,7 +309,11 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             badges: isObj(g.badges) ? g.badges : {},
             panicBest: Math.max(0, Number(g.panicBest) || 0),
             tabuBest: Math.max(0, Number(g.tabuBest) || 0),
-            kodlamaBest: Math.max(0, Number(g.kodlamaBest) || 0)
+            kodlamaBest: Math.max(0, Number(g.kodlamaBest) || 0),
+            tabuSeen: seenMap(g.tabuSeen),
+            kodlamaSeen: seenMap(g.kodlamaSeen),
+            tabuSeenResetAt: typeof g.tabuSeenResetAt === "string" ? g.tabuSeenResetAt : "",
+            kodlamaSeenResetAt: typeof g.kodlamaSeenResetAt === "string" ? g.kodlamaSeenResetAt : ""
         };
     }
 
@@ -1122,6 +1139,23 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
                 state.games.kodlamaBest = n;
                 emit();
             }
+        },
+        markGameSeen: function (kind, id) {
+            if (!state.games) state.games = defaultGames();
+            var key = kind === "kodlama" ? "kodlamaSeen" : "tabuSeen";
+            if (!isObj(state.games[key])) state.games[key] = {};
+            id = String(id || "");
+            if (!id || state.games[key][id]) return;
+            state.games[key][id] = true;
+            emit();
+        },
+        resetGameSeen: function (kind) {
+            if (!state.games) state.games = defaultGames();
+            var key = kind === "kodlama" ? "kodlamaSeen" : "tabuSeen";
+            var atKey = kind === "kodlama" ? "kodlamaSeenResetAt" : "tabuSeenResetAt";
+            state.games[key] = {};
+            state.games[atKey] = nowIso();
+            emit();
         },
         bumpShare: function () {
             state.counters.shareCards += 1;

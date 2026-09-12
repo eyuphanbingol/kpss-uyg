@@ -112,7 +112,24 @@
             conquerAt: lAt >= rAt ? lAt : rAt,
             badges: badges,
             panicBest: Math.max(Number(L.panicBest) || 0, Number(R.panicBest) || 0),
-            tabuBest: Math.max(Number(L.tabuBest) || 0, Number(R.tabuBest) || 0)
+            tabuBest: Math.max(Number(L.tabuBest) || 0, Number(R.tabuBest) || 0),
+            kodlamaBest: Math.max(Number(L.kodlamaBest) || 0, Number(R.kodlamaBest) || 0),
+            tabuSeenResetAt: (L.tabuSeenResetAt || "") >= (R.tabuSeenResetAt || "") ? (L.tabuSeenResetAt || "") : (R.tabuSeenResetAt || ""),
+            kodlamaSeenResetAt: (L.kodlamaSeenResetAt || "") >= (R.kodlamaSeenResetAt || "") ? (L.kodlamaSeenResetAt || "") : (R.kodlamaSeenResetAt || ""),
+            tabuSeen: (function () {
+                var lAt = L.tabuSeenResetAt || "";
+                var rAt = R.tabuSeenResetAt || "";
+                if (lAt > rAt) return Object.assign({}, L.tabuSeen || {});
+                if (rAt > lAt) return Object.assign({}, R.tabuSeen || {});
+                return Object.assign({}, R.tabuSeen || {}, L.tabuSeen || {});
+            })(),
+            kodlamaSeen: (function () {
+                var lAt = L.kodlamaSeenResetAt || "";
+                var rAt = R.kodlamaSeenResetAt || "";
+                if (lAt > rAt) return Object.assign({}, L.kodlamaSeen || {});
+                if (rAt > lAt) return Object.assign({}, R.kodlamaSeen || {});
+                return Object.assign({}, R.kodlamaSeen || {}, L.kodlamaSeen || {});
+            })()
         };
     }
 

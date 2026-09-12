@@ -172,7 +172,8 @@ export function TabuPlayScreen({ navigation }) {
     var setSeed = seedState[1];
     var deck = useMemo(function () {
         try {
-            return GamesEngine.tabuDeck(12, app.kpssData) || [];
+            var seen = ((app.student && app.student.games) || {}).tabuSeen || {};
+            return GamesEngine.tabuDeck(12, app.kpssData, seen) || [];
         } catch (e) {
             return [];
         }
@@ -199,6 +200,18 @@ export function TabuPlayScreen({ navigation }) {
         setI(0); setOpen(1); setPicked(null); setScore(0); setDone(false);
     }, [seed]);
 
+    useEffect(function () {
+        if (done || !card || !card.id) return;
+        if (StudentStore.markGameSeen) StudentStore.markGameSeen("tabu", card.id);
+    }, [card && card.id, done]);
+
+    function resetCards() {
+        Alert.alert("Kartları sıfırla", "Görülen tabu kartları silinsin, sorular yeniden gelsin mi?", [
+            { text: "Vazgeç", style: "cancel" },
+            { text: "Sıfırla", onPress: function () { StudentStore.resetGameSeen("tabu"); setSeed(seed + 1); } }
+        ]);
+    }
+
     function choose(opt) {
         if (picked || !card) return;
         var ok = String(opt) === String(card.answer);
@@ -223,6 +236,7 @@ export function TabuPlayScreen({ navigation }) {
                     <Text style={[styles.pct, isDark && styles.light]}>{score}</Text>
                     <Text style={[styles.meta, isDark && styles.muted]}>Rekor: {Math.max(score, best)}</Text>
                     <PrimaryButton title="Yeniden" onPress={function () { setSeed(seed + 1); }} style={{ marginTop: 16 }} />
+                    <PrimaryButton title="Kartları sıfırla" onPress={resetCards} style={{ marginTop: 10 }} />
                 </Card>
             </ScrollScreen>
         );
@@ -233,8 +247,8 @@ export function TabuPlayScreen({ navigation }) {
             <ScrollScreen dark={isDark}>
                 <BackChip dark={isDark} label="Alıştırmalar" onPress={function () { navigation.goBack(); }} />
                 <Text style={[styles.title, isDark && styles.light]}>Tabu</Text>
-                <Text style={[styles.meta, isDark && styles.muted]}>Kartlar yüklenemedi. Tekrar dene.</Text>
-                <PrimaryButton title="Yeniden dene" onPress={function () { setSeed(seed + 1); }} style={{ marginTop: 16 }} />
+                <Text style={[styles.meta, isDark && styles.muted]}>Tüm kartları gördün. Sıfırlarsan sorular yeniden gelir.</Text>
+                <PrimaryButton title="Kartları sıfırla" onPress={resetCards} style={{ marginTop: 16 }} />
             </ScrollScreen>
         );
     }
@@ -243,6 +257,7 @@ export function TabuPlayScreen({ navigation }) {
         <ScrollScreen dark={isDark}>
             <BackChip dark={isDark} label="Alıştırmalar" onPress={function () { navigation.goBack(); }} />
             <Text style={[styles.kicker, isDark && styles.muted]}>{score} puan · {i + 1}/{deck.length} · az ipucu daha çok puan</Text>
+            <PrimaryButton title="Kartları sıfırla" onPress={resetCards} style={{ marginTop: 4, marginBottom: 8 }} />
             <Text style={[styles.meta, { marginBottom: 6 }]}>{card && card.topic ? card.topic : "KPSS"}</Text>
             <Text style={[styles.title, isDark && styles.light]}>Bu hangi kavram?</Text>
             <View style={styles.mystery}>
@@ -412,7 +427,8 @@ export function KodlamaPlayScreen({ navigation }) {
     var setSeed = seedState[1];
     var deck = useMemo(function () {
         try {
-            return GamesEngine.kodlamaDeck ? (GamesEngine.kodlamaDeck(12) || []) : [];
+            var seen = ((app.student && app.student.games) || {}).kodlamaSeen || {};
+            return GamesEngine.kodlamaDeck ? (GamesEngine.kodlamaDeck(12, seen) || []) : [];
         } catch (e) {
             return [];
         }
@@ -431,6 +447,18 @@ export function KodlamaPlayScreen({ navigation }) {
     var setDone = doneState[1];
     var best = ((app.student && app.student.games) || {}).kodlamaBest || 0;
     var card = deck[i];
+
+    useEffect(function () {
+        if (done || !card || !card.id) return;
+        if (StudentStore.markGameSeen) StudentStore.markGameSeen("kodlama", card.id);
+    }, [card && card.id, done]);
+
+    function resetCards() {
+        Alert.alert("Kartları sıfırla", "Görülen kodlama kartları silinsin, sorular yeniden gelsin mi?", [
+            { text: "Vazgeç", style: "cancel" },
+            { text: "Sıfırla", onPress: function () { StudentStore.resetGameSeen("kodlama"); setSeed(seed + 1); setI(0); setPicked(null); setScore(0); setDone(false); } }
+        ]);
+    }
 
     function choose(opt) {
         if (picked || !card) return;
@@ -458,6 +486,7 @@ export function KodlamaPlayScreen({ navigation }) {
                     <Text style={styles.pct}>{score}/{deck.length}</Text>
                     <Text style={[styles.meta, isDark && styles.muted, { marginTop: 8 }]}>En iyi: {Math.max(score, best)}</Text>
                     <PrimaryButton title="Yeniden" onPress={function () { setSeed(seed + 1); setI(0); setPicked(null); setScore(0); setDone(false); }} style={{ marginTop: 18 }} />
+                    <PrimaryButton title="Kartları sıfırla" onPress={resetCards} style={{ marginTop: 10 }} />
                 </View>
             </ScrollScreen>
         );
@@ -467,7 +496,9 @@ export function KodlamaPlayScreen({ navigation }) {
         return (
             <ScrollScreen dark={isDark}>
                 <BackChip dark={isDark} label="Alıştırmalar" onPress={function () { navigation.goBack(); }} />
-                <Text style={[styles.title, isDark && styles.light]}>Kodlamalar yüklenemedi.</Text>
+                <Text style={[styles.title, isDark && styles.light]}>Tüm kodlamaları gördün.</Text>
+                <Text style={[styles.meta, isDark && styles.muted]}>Sıfırlarsan sorular yeniden gelir.</Text>
+                <PrimaryButton title="Kartları sıfırla" onPress={resetCards} style={{ marginTop: 16 }} />
             </ScrollScreen>
         );
     }
@@ -477,6 +508,7 @@ export function KodlamaPlayScreen({ navigation }) {
         <ScrollScreen dark={isDark}>
             <BackChip dark={isDark} label="Alıştırmalar" onPress={function () { navigation.goBack(); }} />
             <Text style={[styles.kicker, isDark && styles.muted]}>{card.cat} · {i + 1}/{deck.length} · {score} doğru</Text>
+            <PrimaryButton title="Kartları sıfırla" onPress={resetCards} style={{ marginTop: 4, marginBottom: 8 }} />
             <Text style={[styles.title, isDark && styles.light]}>{card.q}</Text>
             <View style={[styles.stem, isDark && styles.stemDark]}>
                 <Text style={[styles.stemText, isDark && styles.light]}>{card.slogan}</Text>

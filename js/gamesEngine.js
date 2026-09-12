@@ -432,12 +432,14 @@
         return fresh;
     }
 
-    function tabuDeck(n, kpssData) {
+    function tabuDeck(n, kpssData, seen) {
         n = n || 12;
+        seen = seen || {};
         var extra = (bank().TABU || []).map(function (card) {
             var clues = collectTabuClues(card.clues || [], card.answer, 6);
             if (clues.length < 2) clues = (card.clues || []).slice(0, 3);
             return {
+                id: "t:" + fold((card.answer || "") + "|" + ((clues && clues[0]) || "")),
                 answer: card.answer,
                 clues: clues,
                 choices: card.choices || [card.answer],
@@ -448,13 +450,16 @@
         try {
             if (!extra.length) fromNotes = tabuFromNotes(kpssData);
         } catch (e) { fromNotes = []; }
-        var pool = extra.concat(fromNotes);
+        var pool = extra.concat(fromNotes).map(function (card) {
+            if (card.id) return card;
+            return Object.assign({}, card, { id: "t:" + fold((card.answer || "") + "|" + ((card.clues && card.clues[0]) || "") + "|" + (card.topic || "")) });
+        }).filter(function (card) { return card.answer && !seen[card.id]; });
         if (!pool.length) return [];
         return shuffle(pool).slice(0, n).map(function (card, i) {
             var clues = (card.clues || []).slice(0, 3);
             while (clues.length < 3) clues.push("Notlardaki tanımına göre tahmin et");
             return {
-                id: i,
+                id: card.id || ("t:" + i),
                 answer: card.answer,
                 clues: clues,
                 topic: card.topic || "KPSS",
@@ -485,13 +490,16 @@
         });
     }
 
-    function kodlamaDeck(n) {
+    function kodlamaDeck(n, seen) {
         n = n || 12;
-        var rows = (bank().KODLAMA || []).slice();
+        seen = seen || {};
+        var rows = (bank().KODLAMA || []).map(function (row) {
+            return Object.assign({}, row, { id: "k:" + fold(row.slogan || row.a || "") });
+        }).filter(function (row) { return row.a && !seen[row.id]; });
         if (!rows.length) return [];
         return shuffle(rows).slice(0, n).map(function (row, i) {
             return {
-                id: i,
+                id: row.id || ("k:" + i),
                 cat: row.cat || "Kodlama",
                 slogan: row.slogan,
                 q: row.q || "Bu kodlama neyi hatırlatır?",

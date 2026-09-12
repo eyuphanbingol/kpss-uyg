@@ -312,13 +312,27 @@
     function TabuPlay(props) {
         var engine = ge();
         var games = (props.student && props.student.games) || {};
-        var deck = useMemo(function () { return engine ? engine.tabuDeck(12, props.kpssData) : []; }, [props.seed]);
+        var deck = useMemo(function () {
+            var seen = (props.student && props.student.games && props.student.games.tabuSeen) || {};
+            return engine ? engine.tabuDeck(12, props.kpssData, seen) : [];
+        }, [props.seed]);
         var [i, setI] = useState(0);
         var [open, setOpen] = useState(1);
         var [picked, setPicked] = useState(null);
         var [score, setScore] = useState(0);
         var [done, setDone] = useState(false);
         var card = deck[i];
+
+        useEffect(function () {
+            if (done || !card || !card.id) return;
+            if (store() && store().markGameSeen) store().markGameSeen("tabu", card.id);
+        }, [card && card.id, done]);
+
+        function resetCards() {
+            if (!window.confirm("Görülen tabu kartları sıfırlansın mı? Sorular yeniden gelir.")) return;
+            if (store() && store().resetGameSeen) store().resetGameSeen("tabu");
+            if (props.onAgain) props.onAgain();
+        }
 
         function reveal() {
             if (picked || !card) return;
@@ -354,8 +368,9 @@
                         <p className="tabu-end-kicker">Tur bitti</p>
                         <p className="tabu-end-score">{score}</p>
                         <p className="text-sm text-stone-500 mt-2">En iyi: {Math.max(score, games.tabuBest || 0)}</p>
-                        <p className="tabu-end-note">İpucu açmadan bilmek 5, ikinci ipucu 3, üçüncü 1 puan.</p>
+                        <p className="tabu-end-note">İpucu açmadan bilmek 5, ikinci ipucu 3, üçüncü 1 puan. Çıkan kart bir daha gelmez.</p>
                         <button type="button" className="btn-primary text-white px-5 py-2.5 rounded-full mt-6" onClick={props.onAgain}>Yeniden</button>
+                        <button type="button" className="conquer-reset mt-3" onClick={resetCards}>Kartları sıfırla</button>
                     </div>
                 </div>
             );
@@ -368,8 +383,9 @@
                         <BackBtn onClick={props.onBack} label="Alıştırmalar" />
                     </header>
                     <div className="tabu-body">
-                        <p className="tabu-ask">Kartlar yüklenemedi.</p>
-                        <button type="button" className="btn-primary text-white px-5 py-2.5 rounded-full mt-6" onClick={props.onAgain}>Yeniden dene</button>
+                        <p className="tabu-ask">Tüm tabu kartlarını gördün.</p>
+                        <p className="text-sm text-stone-400 mt-2">Sıfırlarsan sorular yeniden gelir.</p>
+                        <button type="button" className="btn-primary text-white px-5 py-2.5 rounded-full mt-6" onClick={resetCards}>Kartları sıfırla</button>
                     </div>
                 </div>
             );
@@ -384,6 +400,7 @@
                     <div className="map-play-bar">
                         <BackBtn onClick={props.onBack} label="Alıştırmalar" />
                         <span className="tabu-scorepill">{score} puan · {i + 1}/{deck.length}</span>
+                        <button type="button" className="conquer-reset" onClick={resetCards}>Sıfırla</button>
                     </div>
                     <p className="map-play-kicker">Notlardan kavram · az ipucu = yüksek puan</p>
                 </header>
@@ -589,13 +606,25 @@
         var games = student.games || {};
         var engine = ge();
         var deck = useMemo(function () {
-            return engine && engine.kodlamaDeck ? engine.kodlamaDeck(12) : [];
+            var seen = (props.student && props.student.games && props.student.games.kodlamaSeen) || {};
+            return engine && engine.kodlamaDeck ? engine.kodlamaDeck(12, seen) : [];
         }, [engine, props.seed]);
         var [i, setI] = useState(0);
         var [picked, setPicked] = useState(null);
         var [score, setScore] = useState(0);
         var [done, setDone] = useState(false);
         var card = deck[i];
+
+        useEffect(function () {
+            if (done || !card || !card.id) return;
+            if (store() && store().markGameSeen) store().markGameSeen("kodlama", card.id);
+        }, [card && card.id, done]);
+
+        function resetCards() {
+            if (!window.confirm("Görülen kodlama kartları sıfırlansın mı? Sorular yeniden gelir.")) return;
+            if (store() && store().resetGameSeen) store().resetGameSeen("kodlama");
+            if (props.onAgain) props.onAgain();
+        }
 
         function choose(opt) {
             if (picked || !card) return;
@@ -624,8 +653,9 @@
                         <p className="tabu-end-kicker">Kodlamalar bitti</p>
                         <p className="tabu-end-score">{score}/{deck.length}</p>
                         <p className="text-sm text-stone-500 mt-2">En iyi: {Math.max(score, games.kodlamaBest || 0)}</p>
-                        <p className="tabu-end-note">Sloganı gör, kavramı veya yer listesini tut.</p>
+                        <p className="tabu-end-note">Sloganı gör, kavramı veya yer listesini tut. Çıkan kart bir daha gelmez.</p>
                         <button type="button" className="btn-primary text-white px-5 py-2.5 rounded-full mt-6" onClick={props.onAgain}>Yeniden</button>
+                        <button type="button" className="conquer-reset mt-3" onClick={resetCards}>Kartları sıfırla</button>
                     </div>
                 </div>
             );
@@ -638,7 +668,9 @@
                         <BackBtn onClick={props.onBack} label="Alıştırmalar" />
                     </header>
                     <div className="tabu-body">
-                        <p className="tabu-ask">Kodlamalar yüklenemedi.</p>
+                        <p className="tabu-ask">Tüm kodlamaları gördün.</p>
+                        <p className="text-sm text-stone-400 mt-2">Sıfırlarsan sorular yeniden gelir.</p>
+                        <button type="button" className="btn-primary text-white px-5 py-2.5 rounded-full mt-6" onClick={resetCards}>Kartları sıfırla</button>
                     </div>
                 </div>
             );
@@ -651,6 +683,7 @@
                     <div className="map-play-bar">
                         <BackBtn onClick={props.onBack} label="Alıştırmalar" />
                         <span className="tabu-scorepill">{score} doğru · {i + 1}/{deck.length}</span>
+                        <button type="button" className="conquer-reset" onClick={resetCards}>Sıfırla</button>
                     </div>
                     <p className="map-play-kicker">Kodlamalarla coğrafya · sloganı oku, kavramı seç</p>
                 </header>
