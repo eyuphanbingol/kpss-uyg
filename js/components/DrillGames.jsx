@@ -584,9 +584,6 @@
         );
     }
 
-        );
-    }
-
     function KodlamaPlay(props) {
         var student = props.student || {};
         var games = student.games || {};
