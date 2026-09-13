@@ -823,6 +823,21 @@
         return expandRound(shuffle(list).slice(0, take));
     }
 
+    function pickPlaceRound(topicId, n) {
+        var list = itemsForTopic(topicId).filter(function (it) {
+            return it && !it.mcq && it.id && it.name;
+        });
+        var want = n == null ? 7 : n;
+        if (want < 6) want = 6;
+        if (want > 8) want = 8;
+        var take = Math.min(want, list.length);
+        var items = shuffle(list).slice(0, take);
+        var chips = shuffle(items.map(function (it) {
+            return { id: it.id, name: it.name };
+        }));
+        return { items: items, chips: chips };
+    }
+
     function tapChoices(item) {
         var codes = resolveCodes(item);
         if (codes.length && codes.length <= 12) {
@@ -1177,6 +1192,7 @@
         TREE: TREE,
         ITEMS: ITEMS,
         pickRound: pickRound,
+        pickPlaceRound: pickPlaceRound,
         itemsForTopic: itemsForTopic,
         topicMeta: topicMeta,
         isCorrect: isCorrect,

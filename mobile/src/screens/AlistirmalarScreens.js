@@ -1,5 +1,5 @@
 import React, { memo, useEffect, useMemo, useState } from "react";
-import { Image, ScrollView, Text, View, StyleSheet, useWindowDimensions } from "react-native";
+import { Image, Pressable, ScrollView, Text, View, StyleSheet, useWindowDimensions } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useApp } from "../AppProvider";
 import { ClozeEngine } from "../lib/clozeEngine";
@@ -46,7 +46,7 @@ export function AlistirmalarHomeScreen({ navigation }) {
                     <View style={styles.playIco}><Map size={20} color="#0F172A" /></View>
                     <View style={{ flex: 1, minWidth: 0 }}>
                         <Text style={[styles.dersName, isDark && styles.textLight]}>Harita oyunu</Text>
-                        <Text style={styles.meta}>Konuyu seç, yeri haritada işaretle.</Text>
+                        <Text style={styles.meta}>Konuyu seç, isimleri haritaya yerleştir.</Text>
                     </View>
                 </View>
             </AccentCard>
@@ -383,7 +383,7 @@ export function MapTopicsScreen({ navigation }) {
             <PageHeader
                 dark={isDark}
                 title="Harita oyunu"
-                subtitle="Konu seç, hedef ili bul, sonra bilgi bağı."
+                subtitle="Konu seç, turdaki isimleri haritaya yerleştir."
                 onBack={function () { navigation.goBack(); }}
                 right={null}
             />
@@ -422,43 +422,40 @@ export function MapPlayScreen({ route, navigation }) {
     var _seed = useState(0);
     var seed = _seed[0];
     var setSeed = _seed[1];
-    var list = useMemo(function () {
-        return MapQuiz.pickRound(topicId, 8);
+    var round = useMemo(function () {
+        var n = 6 + Math.floor(Math.random() * 3);
+        return MapQuiz.pickPlaceRound ? MapQuiz.pickPlaceRound(topicId, n) : { items: [], chips: [] };
     }, [seed, topicId]);
+    var want = useMemo(function () {
+        var m = {};
+        (round.items || []).forEach(function (it) { m[it.id] = true; });
+        return m;
+    }, [round]);
     var layer = useMemo(function () {
-        if (MapQuiz.topicPinsForPlay) return { pins: MapQuiz.topicPinsForPlay(topicId) };
-        return MapQuiz.topicLayer ? MapQuiz.topicLayer(topicId) : { pins: [], viewBox: "0 0 1000 422" };
-    }, [topicId]);
+        var pins = MapQuiz.topicPinsForPlay ? MapQuiz.topicPinsForPlay(topicId) : ((MapQuiz.topicLayer && MapQuiz.topicLayer(topicId).pins) || []);
+        return { pins: pins.filter(function (p) { return want[p.id]; }) };
+    }, [topicId, want]);
     var glyph = MapQuiz.topicGlyph ? MapQuiz.topicGlyph(topicId) : "📍";
-    var _i = useState(0);
-    var idx = _i[0];
-    var setIdx = _i[1];
-    var _p = useState(null);
-    var picked = _p[0];
-    var setPicked = _p[1];
-    var _s = useState(0);
-    var score = _s[0];
-    var setScore = _s[1];
+    var _placed = useState({});
+    var placed = _placed[0];
+    var setPlaced = _placed[1];
+    var _sel = useState(null);
+    var selected = _sel[0];
+    var setSelected = _sel[1];
+    var _miss = useState(0);
+    var misses = _miss[0];
+    var setMisses = _miss[1];
+    var _flash = useState(null);
+    var flash = _flash[0];
+    var setFlash = _flash[1];
     var _d = useState(false);
     var done = _d[0];
     var setDone = _d[1];
-
-    var _c = useState([]);
-    var cleared = _c[0];
-    var setCleared = _c[1];
+    var total = (round.items || []).length;
 
     useEffect(function () {
-        setIdx(0); setPicked(null); setScore(0); setDone(false); setCleared([]);
+        setPlaced({}); setSelected(null); setMisses(0); setFlash(null); setDone(false);
     }, [seed, topicId]);
-
-    function advance() {
-        var stepNow = list[idx];
-        if (stepNow && stepNow.type === "map") {
-            setCleared(cleared.concat([stepNow.item.id]));
-        }
-        if (idx + 1 >= list.length) setDone(true);
-        else { setIdx(idx + 1); setPicked(null); }
-    }
 
     var playPad = {
         paddingTop: Math.min(Math.max(insets.top, 12), Math.round(win.height * 0.12)),
@@ -467,14 +464,29 @@ export function MapPlayScreen({ route, navigation }) {
         paddingRight: Math.min(Math.max(insets.right, 12), Math.round(win.width * 0.12))
     };
 
+    function tryPlace(pinId) {
+        if (!selected || placed[pinId] || placed[selected]) return;
+        if (selected === pinId) {
+            var next = Object.assign({}, placed);
+            next[pinId] = true;
+            setPlaced(next);
+            setSelected(null);
+            if (Object.keys(next).length >= total) setTimeout(function () { setDone(true); }, 420);
+            return;
+        }
+        setMisses(misses + 1);
+        setFlash(pinId);
+        setTimeout(function () { setFlash(null); }, 520);
+    }
+
     if (done) {
         return (
             <Screen dark={isDark} edges={[]} style={{ overflow: "hidden" }}>
                 <ScrollView contentContainerStyle={[playPad, { paddingBottom: Math.max(insets.bottom, 28) }]} keyboardShouldPersistTaps="handled">
                     <Card style={[styles.result, isDark && styles.cardDark]}>
                         <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} style={{ marginBottom: 12 }} />
-                        <Text style={[styles.pct, isDark && styles.textLight]}>{Math.round((score / list.length) * 100)}%</Text>
-                        <Text style={[styles.meta, isDark && styles.textMuted]}>{score} doğru · {list.length - score} yanlış</Text>
+                        <Text style={[styles.pct, isDark && styles.textLight]}>{total} isim</Text>
+                        <Text style={[styles.meta, isDark && styles.textMuted]}>{misses ? (misses + " yanlış deneme") : "Hepsi ilk denemede"}</Text>
                         <PrimaryButton title="Tekrar oyna" onPress={function () { setSeed(seed + 1); }} style={{ marginTop: 16 }} />
                     </Card>
                 </ScrollView>
@@ -482,26 +494,8 @@ export function MapPlayScreen({ route, navigation }) {
         );
     }
 
-    var step = list[idx];
-    var isMap = step && step.type === "map";
-    var ok = false;
-    if (picked) {
-        if (isMap) ok = picked === step.item.id;
-        else ok = String(picked) === String(step.answer);
-    }
-    var clearedMap = {};
-    cleared.forEach(function (id) { clearedMap[id] = true; });
     var landscape = win.width > win.height;
-    var labels = [];
-    if (isMap && picked && step.item) {
-        var hitPin = (layer.pins || []).filter(function (p) { return p.id === picked; })[0];
-        var rightPin = (layer.pins || []).filter(function (p) { return p.id === step.item.id; })[0];
-        if (picked === step.item.id && rightPin) labels.push({ id: rightPin.id, x: rightPin.x, y: rightPin.y, text: step.item.name, kind: "ok" });
-        else {
-            if (hitPin) labels.push({ id: hitPin.id, x: hitPin.x, y: hitPin.y, text: hitPin.name, kind: "bad" });
-            if (rightPin) labels.push({ id: rightPin.id, x: rightPin.x, y: rightPin.y, text: step.item.name, kind: "ok" });
-        }
-    }
+    var left = (round.chips || []).filter(function (c) { return !placed[c.id]; });
 
     if (!landReady) {
         return (
@@ -515,92 +509,46 @@ export function MapPlayScreen({ route, navigation }) {
     }
 
     return (
-        isMap ? (
-        <Screen dark={isDark} style={{ overflow: "hidden" }} edges={[]}>
+        <Screen dark={isDark} style={{ overflow: "hidden", backgroundColor: "#152018" }} edges={[]}>
             <View key={win.width + "x" + win.height} style={[{ flex: 1, minHeight: 0, minWidth: 0, overflow: "hidden" }, playPad]}>
-            <Card style={[styles.mapAskCard, isDark && styles.cardDark]}>
                 <View style={styles.mapAskRow}>
                     <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} style={{ marginBottom: 0 }} />
-                    <Text style={[styles.kicker, { flex: 1, marginBottom: 0, minWidth: 0 }, isDark && styles.textMuted]} numberOfLines={1}>
-                        {meta ? meta.title : "Harita"} · {idx + 1}/{list.length}
+                    <Text style={[styles.kicker, { flex: 1, marginBottom: 0, minWidth: 0, color: "#d7c39a" }]} numberOfLines={1}>
+                        {meta ? meta.title : "Harita"} · {Object.keys(placed).length}/{total}
                     </Text>
                 </View>
-                <Text style={[styles.prompt, { marginBottom: 0, marginTop: 8, fontSize: landscape ? 13 : 16, lineHeight: landscape ? 18 : 24 }, isDark && styles.textLight]} numberOfLines={landscape ? 2 : 4}>
-                    {step.prompt}
+                <Text style={[styles.prompt, { marginBottom: 8, marginTop: 8, fontSize: landscape ? 13 : 16, lineHeight: landscape ? 18 : 24, color: "#fff8e8" }]} numberOfLines={2}>
+                    Bu turdaki {total} ismi haritadaki boş pinlere yerleştir
                 </Text>
-            </Card>
-            <View style={{ flex: 1, minHeight: 0, minWidth: 0, overflow: "hidden", marginTop: 8 }}>
-            <TrMapView
-                mode="play"
-                pins={layer.pins || []}
-                glyph={glyph}
-                separate={topicId === "volkanik" ? 20 : (topicId === "kirik" ? 50 : 36)}
-                picked={picked}
-                targetId={step.item && step.item.id}
-                cleared={clearedMap}
-                labels={labels}
-                locked={!!picked}
-                onPin={function (id) {
-                    if (picked || clearedMap[id]) return;
-                    setPicked(id);
-                    if (id === step.item.id) setScore(score + 1);
-                    setTimeout(advance, 5500);
-                }}
-            />
-            </View>
-            {picked ? (
-                <Text style={{ marginTop: 6, fontWeight: "700", color: ok ? "#059669" : "#E11D48" }} numberOfLines={1}>
-                    {ok ? "Doğru — " + step.item.name : ("Doğrusu: " + step.item.name)}
-                </Text>
-            ) : (
-                <Text style={[styles.mapHint, isDark && styles.textMuted]}>İşarete bas</Text>
-            )}
-            </View>
-        </Screen>
-        ) : (
-        <Screen dark={isDark} edges={[]} style={{ overflow: "hidden" }}>
-            <ScrollView
-                style={{ flex: 1 }}
-                contentContainerStyle={[playPad, { paddingBottom: Math.max(insets.bottom, 28) }]}
-                keyboardShouldPersistTaps="handled"
-                showsVerticalScrollIndicator={false}
-            >
-            <Card style={[isDark && styles.cardDark]}>
-                <View style={styles.mapAskRow}>
-                    <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} style={{ marginBottom: 0 }} />
-                    <Text style={[styles.kicker, { flex: 1, marginBottom: 0, minWidth: 0 }, isDark && styles.textMuted]} numberOfLines={1}>
-                        {meta ? meta.title : "Harita"} · {idx + 1}/{list.length}
-                    </Text>
+                <View style={{ flex: 1, minHeight: 0, minWidth: 0, overflow: "hidden" }}>
+                    <TrMapView
+                        mode="play"
+                        place
+                        pins={layer.pins || []}
+                        glyph={glyph}
+                        separate={topicId === "volkanik" ? 20 : (topicId === "kirik" ? 50 : 36)}
+                        placed={placed}
+                        flash={flash}
+                        onPin={tryPlace}
+                    />
                 </View>
-                <Text style={[styles.konuTitle, { fontSize: landscape ? 18 : 22, marginTop: 8 }, isDark && styles.textLight]}>Bilgi bağı</Text>
-                <Text style={[styles.prompt, isDark && styles.textLight]}>{step.prompt}</Text>
-                    {(step.choices || []).map(function (c, ci) {
-                        var isP = picked === c;
-                        var isA = String(c) === String(step.answer);
-                        var bg = "#fff";
-                        var border = colors.border;
-                        if (picked && isA) { bg = "#ECFDF5"; border = "#34D399"; }
-                        else if (picked && isP) { bg = "#FEF2F2"; border = "#F87171"; }
+                <Text style={styles.placeHint}>{selected ? "Haritadaki boş pine dokun" : "İsmi seç, sonra pine bas"}</Text>
+                <View style={styles.chipDock}>
+                    {left.map(function (c) {
+                        var on = selected === c.id;
                         return (
-                            <Tap key={ci} disabled={!!picked} onPress={function () {
-                                if (picked) return;
-                                setPicked(c);
-                                if (String(c) === String(step.answer)) setScore(score + 1);
-                                setTimeout(advance, 5500);
-                            }} style={[styles.choice, { backgroundColor: isDark && !picked ? colors.navyDeep : bg, borderColor: border }]}>
-                                <Text style={[styles.choiceText, isDark && !picked && styles.textLight]}>{c}</Text>
-                            </Tap>
+                            <Pressable
+                                key={c.id}
+                                onPress={function () { setSelected(on ? null : c.id); }}
+                                style={[styles.placeChip, on && styles.placeChipOn]}
+                            >
+                                <Text style={styles.placeChipTxt}>{c.name}</Text>
+                            </Pressable>
                         );
                     })}
-                {picked ? (
-                    <Text style={{ marginTop: 10, fontWeight: "700", color: ok ? "#059669" : "#E11D48" }}>
-                        {ok ? "Doğru — " + step.answer : ("Doğrusu: " + step.answer)}
-                    </Text>
-                ) : null}
-            </Card>
-            </ScrollView>
+                </View>
+            </View>
         </Screen>
-        )
     );
 }
 
@@ -730,5 +678,15 @@ var styles = StyleSheet.create({
     mapBoard: { width: "100%", backgroundColor: "#d7e5db", borderRadius: 16, overflow: "visible", marginTop: 4, position: "relative" },
     mapMark: { position: "absolute", width: 40, height: 40, marginLeft: -20, marginTop: -20, borderRadius: 20, alignItems: "center", justifyContent: "center" },
     mapIco: { fontSize: 22, lineHeight: 26 },
-    mapHint: { marginTop: 8, fontSize: 12, color: colors.muted, fontWeight: "600" }
+    mapHint: { marginTop: 8, fontSize: 12, color: colors.muted, fontWeight: "600" },
+    placeHint: { marginTop: 8, marginBottom: 6, fontSize: 12, color: "#d7c39a", fontWeight: "700", textAlign: "center" },
+    chipDock: { flexDirection: "row", flexWrap: "wrap", gap: 8, justifyContent: "center", paddingBottom: 4 },
+    placeChip: {
+        backgroundColor: "#ead9a8",
+        borderRadius: 999,
+        paddingVertical: 8,
+        paddingHorizontal: 14
+    },
+    placeChipOn: { backgroundColor: "#fff4c4", transform: [{ scale: 1.04 }] },
+    placeChipTxt: { color: "#2a2114", fontWeight: "800", fontSize: 13 }
 });

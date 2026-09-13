@@ -64,7 +64,10 @@ export function TrMapView(props) {
                 targetId: props.targetId || null,
                 cleared: props.cleared || {},
                 labels: props.labels || [],
-                separate: props.separate || 36
+                separate: props.separate || 36,
+                place: !!props.place,
+                placed: props.placed || {},
+                flash: props.flash || null
             }) + "); true;";
         }
         wv.injectJavaScript(js);
@@ -72,7 +75,7 @@ export function TrMapView(props) {
 
     useEffect(function () {
         inject();
-    }, [mode, props.pins, props.glyph, props.picked, props.targetId, props.cleared, props.labels, props.separate, props.owned, props.pick, props.color, html, box.gen, box.w, box.h]);
+    }, [mode, props.pins, props.glyph, props.picked, props.targetId, props.cleared, props.labels, props.separate, props.owned, props.pick, props.color, props.place, props.placed, props.flash, html, box.gen, box.w, box.h]);
 
     function onMessage(ev) {
         var data = {};
@@ -154,14 +157,14 @@ var styles = StyleSheet.create({
         maxWidth: "100%",
         minWidth: 0,
         minHeight: 0,
-        backgroundColor: "#8fa89a",
+        backgroundColor: "#152018",
         borderRadius: 16,
         overflow: "hidden",
         marginTop: 4
     },
     web: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: "#8fa89a"
+        backgroundColor: "#152018"
     },
     fail: {
         alignItems: "center",

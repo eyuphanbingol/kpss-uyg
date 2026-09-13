@@ -752,7 +752,7 @@ function AlistirmalarHome(props) {
                     className="text-left p-6 rounded-3xl glass card-hover">
                     <div className="h-14 w-14 rounded-2xl bg-amber-50 text-2xl flex items-center justify-center mb-3">🗺️</div>
                     <h2 className="font-bold text-lg">Harita oyunu</h2>
-                    <p className="text-sm text-stone-400 mt-1">Konuyu seç, yeri haritada işaretle.</p>
+                    <p className="text-sm text-stone-400 mt-1">Konuyu seç, turdaki isimleri haritaya yerleştir.</p>
                 </button>
                 <button type="button" onClick={function () { props.onKind("conquer"); }}
                     className="text-left p-6 rounded-3xl glass card-hover">
@@ -1066,7 +1066,7 @@ function MapTopics(props) {
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
             <h1 className="text-3xl font-black tracking-tight gradient-text">Harita oyunu</h1>
-            <p className="text-sm text-stone-400 mt-1 mb-6">KPSS fiziki · iklim · nüfus · maden · ulaşım haritaları. Konuyu seç, noktayı bul.</p>
+            <p className="text-sm text-stone-400 mt-1 mb-6">KPSS fiziki · iklim · nüfus · maden · ulaşım. Konuyu seç, 6–8 ismi haritadaki pinlere bırak.</p>
             {tree.map(function (g) {
                 return (
                     <div key={g.id} className="mb-6">
@@ -1096,37 +1096,51 @@ function MapTopics(props) {
 function MapPlay(props) {
     const quiz = window.MapQuiz;
     const meta = quiz ? quiz.topicMeta(props.topicId) : null;
-    const items = useMemo(function () {
-        return quiz ? quiz.pickRound(props.topicId, 8) : [];
+    const round = useMemo(function () {
+        if (!quiz) return { items: [], chips: [] };
+        var n = 6 + Math.floor(Math.random() * 3);
+        if (quiz.pickPlaceRound) return quiz.pickPlaceRound(props.topicId, n);
+        var steps = quiz.pickRound(props.topicId, n) || [];
+        var items = steps.filter(function (s) { return s.type === "map" && s.item; }).map(function (s) { return s.item; });
+        var chips = items.map(function (it) { return { id: it.id, name: it.name }; });
+        return { items: items, chips: chips };
     }, [props.seed, props.topicId]);
     const layerRef = useRef({ pins: [] });
-    const [idx, setIdx] = useState(0);
-    const [picked, setPicked] = useState(null);
-    const [okHit, setOkHit] = useState(false);
-    const [score, setScore] = useState(0);
+    const [placed, setPlaced] = useState({});
+    const [selected, setSelected] = useState(null);
+    const [flash, setFlash] = useState(null);
+    const [misses, setMisses] = useState(0);
     const [done, setDone] = useState(false);
-    const [cleared, setCleared] = useState([]);
-    const [pins, setPins] = useState([]);
     const [svgHtml, setSvgHtml] = useState("");
     const [mapFail, setMapFail] = useState(false);
+    const [drag, setDrag] = useState(null);
     const hostRef = useRef(null);
     const stageRef = useRef(null);
-    const pickedRef = useRef(null);
-    const timerRef = useRef(null);
     const zoomRef = useRef({ s: 1, x: 0, y: 0 });
-    const HOLD_MS = 5500;
+    const placedRef = useRef({});
+    const selectedRef = useRef(null);
+    const dragRef = useRef(null);
+    const flashTimer = useRef(null);
+    const skipClickRef = useRef(false);
+    const total = round.items.length;
 
     useEffect(function () {
-        setIdx(0); setPicked(null); setOkHit(false); setScore(0); setDone(false);
-        setCleared([]); setPins([]);
-        pickedRef.current = null;
+        setPlaced({});
+        setSelected(null);
+        setFlash(null);
+        setMisses(0);
+        setDone(false);
+        setDrag(null);
+        placedRef.current = {};
+        selectedRef.current = null;
+        dragRef.current = null;
         zoomRef.current = { s: 1, x: 0, y: 0 };
         if (hostRef.current) hostRef.current.style.transform = "translate(0px, 0px) scale(1)";
     }, [props.seed, props.topicId]);
 
     useEffect(function () {
         var gone = false;
-        fetch("svg/tr.svg?v=2").then(function (r) { return r.ok ? r.text() : Promise.reject(); })
+        fetch("svg/tr.svg?v=3").then(function (r) { return r.ok ? r.text() : Promise.reject(); })
             .then(function (txt) {
                 if (gone) return;
                 var doc = new DOMParser().parseFromString(txt, "image/svg+xml");
@@ -1164,6 +1178,7 @@ function MapPlay(props) {
         }
 
         function onTouchStart(e) {
+            if (dragRef.current) return;
             if (e.touches.length === 2) {
                 gest.mode = "pinch";
                 gest.dist = pinchDist(e.touches);
@@ -1184,6 +1199,7 @@ function MapPlay(props) {
         }
 
         function onTouchMove(e) {
+            if (dragRef.current) return;
             if (gest.mode === "pinch" && e.touches.length === 2) {
                 e.preventDefault();
                 var d = pinchDist(e.touches);
@@ -1235,84 +1251,60 @@ function MapPlay(props) {
         if (hostRef.current) hostRef.current.style.transform = "translate(" + x + "px, " + y + "px) scale(" + s + ")";
     }
 
-    function goNext() {
-        if (timerRef.current) { clearTimeout(timerRef.current); timerRef.current = null; }
-        if (!pickedRef.current) return;
-        var stepNow = items[idx];
-        if (stepNow && stepNow.type === "map" && quiz) {
-            var loc = (layerRef.current.pins || []).filter(function (p) { return p.id === stepNow.item.id; })[0];
-            setCleared(function (prev) {
-                return prev.concat([{
-                    id: stepNow.item.id,
-                    label: stepNow.item.name,
-                    x: loc ? loc.x : stepNow.item.x,
-                    y: loc ? loc.y : stepNow.item.y
-                }]);
-            });
-        }
-        pickedRef.current = null;
-        setPicked(null);
-        setOkHit(false);
-        setPins([]);
-        setIdx(function (i) {
-            if (i + 1 >= items.length) {
-                setDone(true);
-                return i;
+    function tryPlace(pinId, chipId) {
+        if (!pinId || !chipId || placedRef.current[pinId] || placedRef.current[chipId]) return;
+        if (chipId === pinId) {
+            var next = Object.assign({}, placedRef.current);
+            next[pinId] = true;
+            placedRef.current = next;
+            setPlaced(next);
+            setSelected(null);
+            selectedRef.current = null;
+            if (Object.keys(next).length >= total) {
+                setTimeout(function () { setDone(true); }, 480);
             }
-            return i + 1;
-        });
-    }
-
-    function choosePin(pinId) {
-        if (pickedRef.current || !quiz) return;
-        var step = items[idx];
-        if (!step || step.type !== "map") return;
-        var hit = pinId === step.item.id;
-        var clicked = (layerRef.current.pins || []).filter(function (p) { return p.id === pinId; })[0];
-        var right = (layerRef.current.pins || []).filter(function (p) { return p.id === step.item.id; })[0];
-        var nextPins = [];
-        if (hit && clicked) {
-            nextPins.push({ x: clicked.x, y: clicked.y, text: step.item.name, kind: "ok" });
-        } else {
-            if (clicked) nextPins.push({ x: clicked.x, y: clicked.y, text: clicked.name, kind: "bad" });
-            if (right) nextPins.push({ x: right.x, y: right.y, text: step.item.name, kind: "ok" });
+            return;
         }
-        pickedRef.current = pinId;
-        setPicked(pinId);
-        setOkHit(hit);
-        setPins(nextPins);
-        if (hit) setScore(function (s) { return s + 1; });
-        timerRef.current = setTimeout(goNext, HOLD_MS);
+        setMisses(function (m) { return m + 1; });
+        setFlash(pinId);
+        if (flashTimer.current) clearTimeout(flashTimer.current);
+        flashTimer.current = setTimeout(function () { setFlash(null); }, 560);
     }
 
-    function chooseMcq(label) {
-        if (pickedRef.current || !quiz) return;
-        var step = items[idx];
-        if (!step || step.type !== "mcq") return;
-        var hit = String(label) === String(step.answer);
-        pickedRef.current = label;
-        setPicked(label);
-        setOkHit(hit);
-        if (hit) setScore(function (s) { return s + 1; });
-        timerRef.current = setTimeout(goNext, HOLD_MS);
+    function onChipPointerDown(e, chip) {
+        if (placed[chip.id] || done) return;
+        e.preventDefault();
+        setSelected(chip.id);
+        selectedRef.current = chip.id;
+        dragRef.current = { id: chip.id, name: chip.name, x: e.clientX, y: e.clientY };
+        setDrag({ id: chip.id, name: chip.name, x: e.clientX, y: e.clientY });
+        if (e.currentTarget.setPointerCapture) e.currentTarget.setPointerCapture(e.pointerId);
     }
 
-    function chooseTap(choice) {
-        if (pickedRef.current || !quiz) return;
-        var step = items[idx];
-        if (!step || step.type !== "map") return;
-        var hit = quiz.isTapCorrect(step.item, choice);
-        pickedRef.current = choice.label;
-        setPicked(choice.label);
-        setOkHit(hit);
-        if (hit) setScore(function (s) { return s + 1; });
-        timerRef.current = setTimeout(goNext, HOLD_MS);
+    function onChipPointerMove(e) {
+        if (!dragRef.current) return;
+        var next = { id: dragRef.current.id, name: dragRef.current.name, x: e.clientX, y: e.clientY };
+        dragRef.current = next;
+        setDrag(next);
+    }
+
+    function onChipPointerUp(e) {
+        if (!dragRef.current) return;
+        var chipId = dragRef.current.id;
+        var x = e.clientX, y = e.clientY;
+        dragRef.current = null;
+        setDrag(null);
+        var el = document.elementFromPoint(x, y);
+        var n = el && el.closest ? el.closest("[data-pin]") : null;
+        if (n) {
+            skipClickRef.current = true;
+            tryPlace(n.getAttribute("data-pin"), chipId);
+        }
     }
 
     useEffect(function () {
         var el = hostRef.current;
         if (!el || !svgHtml || done) return;
-        var step = items[idx];
         var svg = el.querySelector("svg");
         if (!svg) return;
         svg.setAttribute("viewBox", "0 0 1000 422");
@@ -1322,79 +1314,90 @@ function MapPlay(props) {
             p.setAttribute("class", "map-stage");
         });
         var built = (quiz && quiz.topicLayerFromSvg) ? quiz.topicLayerFromSvg(svg, props.topicId) : { pins: [] };
-        layerRef.current = built;
+        var want = {};
+        round.items.forEach(function (it) { want[it.id] = true; });
+        var pins = (built.pins || []).filter(function (p) { return want[p.id]; });
+        layerRef.current = { pins: pins };
         var oldDots = svg.querySelector("g.topic-dots");
         if (oldDots) oldDots.remove();
         var oldLabs = svg.querySelector("g.map-float-labels");
         if (oldLabs) oldLabs.remove();
-        var doneIds = {};
-        cleared.forEach(function (row) { doneIds[row.id] = true; });
         var glyph = (quiz && quiz.topicGlyph) ? quiz.topicGlyph(props.topicId) : "📍";
         var dots = document.createElementNS("http://www.w3.org/2000/svg", "g");
         dots.setAttribute("class", "topic-dots");
-        (built.pins || []).forEach(function (pin) {
+        pins.forEach(function (pin) {
             var wrap = document.createElementNS("http://www.w3.org/2000/svg", "g");
             wrap.setAttribute("data-pin", pin.id);
-            wrap.setAttribute("class", "topic-mark");
+            var locked = !!placed[pin.id];
+            var bad = flash === pin.id;
+            wrap.setAttribute("class", "topic-mark place-mark" + (locked ? " place-locked" : "") + (bad ? " place-miss" : ""));
+            var glow = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            glow.setAttribute("cx", String(pin.x));
+            glow.setAttribute("cy", String(pin.y));
+            glow.setAttribute("r", locked ? "16" : "20");
+            glow.setAttribute("class", locked ? "place-well-core is-locked" : "place-well-core");
+            var ring = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            ring.setAttribute("cx", String(pin.x));
+            ring.setAttribute("cy", String(pin.y));
+            ring.setAttribute("r", "15");
+            ring.setAttribute("class", "place-well");
             var hit = document.createElementNS("http://www.w3.org/2000/svg", "circle");
             hit.setAttribute("cx", String(pin.x));
             hit.setAttribute("cy", String(pin.y));
-            hit.setAttribute("r", "26");
+            hit.setAttribute("r", "28");
             hit.setAttribute("class", "topic-hit");
-            var ico = document.createElementNS("http://www.w3.org/2000/svg", "text");
-            ico.setAttribute("x", String(pin.x));
-            ico.setAttribute("y", String(pin.y));
-            ico.setAttribute("class", "topic-ico");
-            ico.setAttribute("text-anchor", "middle");
-            ico.setAttribute("dominant-baseline", "central");
-            ico.setAttribute("font-size", "26");
-            ico.textContent = pin.glyph || glyph;
-            if (doneIds[pin.id]) wrap.setAttribute("class", "topic-mark topic-mark-done");
-            if (picked && step && step.type === "map") {
-                if (pin.id === step.item.id) wrap.setAttribute("class", "topic-mark topic-mark-ok");
-                else if (pin.id === picked) wrap.setAttribute("class", "topic-mark topic-mark-bad");
-            }
+            wrap.appendChild(glow);
+            wrap.appendChild(ring);
             wrap.appendChild(hit);
-            wrap.appendChild(ico);
+            if (locked) {
+                var ico = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                ico.setAttribute("x", String(pin.x));
+                ico.setAttribute("y", String(pin.y));
+                ico.setAttribute("class", "topic-ico");
+                ico.setAttribute("text-anchor", "middle");
+                ico.setAttribute("dominant-baseline", "central");
+                ico.setAttribute("font-size", "22");
+                ico.textContent = pin.glyph || glyph;
+                wrap.appendChild(ico);
+            }
             dots.appendChild(wrap);
         });
         svg.appendChild(dots);
         var g = document.createElementNS("http://www.w3.org/2000/svg", "g");
         g.setAttribute("class", "map-float-labels");
-        function addLab(x, y, text, kind) {
-            if (!text) return;
+        pins.forEach(function (pin) {
+            if (!placed[pin.id]) return;
             var t = document.createElementNS("http://www.w3.org/2000/svg", "text");
-            t.setAttribute("x", String(x));
-            t.setAttribute("y", String(y - 22));
-            t.setAttribute("class", "map-pin map-pin-" + kind);
-            t.setAttribute("font-size", "16");
-            t.textContent = text;
+            t.setAttribute("x", String(pin.x));
+            t.setAttribute("y", String(pin.y - 24));
+            t.setAttribute("class", "map-pin map-pin-ok");
+            t.setAttribute("font-size", "15");
+            t.textContent = pin.name;
             g.appendChild(t);
-        }
-        cleared.forEach(function (row) { addLab(row.x, row.y, row.label, "done"); });
-        pins.forEach(function (pin) { addLab(pin.x, pin.y, pin.text, pin.kind); });
+        });
         svg.appendChild(g);
         function onClick(ev) {
+            if (skipClickRef.current) {
+                skipClickRef.current = false;
+                return;
+            }
             if (stageRef.current && stageRef.current.getAttribute("data-skip-click") === "1") {
                 stageRef.current.removeAttribute("data-skip-click");
                 return;
             }
             var n = ev.target.closest ? ev.target.closest("[data-pin]") : null;
-            if (!n || pickedRef.current) return;
-            var stepNow = items[idx];
-            if (!stepNow || stepNow.type !== "map") return;
-            if (n.classList && (n.classList.contains("topic-mark-done") || (n.closest && n.closest(".topic-mark-done")))) return;
-            choosePin(n.getAttribute("data-pin"));
+            if (!n) return;
+            tryPlace(n.getAttribute("data-pin"), selectedRef.current);
         }
         el.addEventListener("click", onClick);
         return function () { el.removeEventListener("click", onClick); };
-    }, [svgHtml, idx, picked, items, done, cleared, pins, props.topicId]);
+    }, [svgHtml, placed, flash, round, done, props.topicId]);
 
     useEffect(function () {
-        return function () { if (timerRef.current) clearTimeout(timerRef.current); };
+        return function () { if (flashTimer.current) clearTimeout(flashTimer.current); };
     }, []);
 
-    if (!quiz || !items.length) {
+    if (!quiz || !total) {
         return (
             <Shell wide>
                 <BackBtn onClick={props.onBack} label="Konular" />
@@ -1404,6 +1407,7 @@ function MapPlay(props) {
     }
 
     if (done) {
+        var okN = total;
         return (
             <Shell wide>
                 <div className="flex justify-between mb-4">
@@ -1413,14 +1417,14 @@ function MapPlay(props) {
                 <article className="study-card fade-in">
                     <header className="study-card-head">
                         <div>
-                            <p className="study-card-kicker">Konu tamamlandı</p>
+                            <p className="study-card-kicker">Tur bitti</p>
                             <h2 className="study-card-title">{meta ? meta.title : "Harita"}</h2>
                         </div>
-                        <div className="note-progress">{score}/{items.length}</div>
+                        <div className="note-progress">{okN}/{total}</div>
                     </header>
                     <div className="study-card-body text-center py-8">
-                        <p className="text-4xl font-black mb-2">{Math.round((score / items.length) * 100)}%</p>
-                        <p className="text-stone-500">{score} doğru · {items.length - score} yanlış</p>
+                        <p className="text-4xl font-black mb-2">{okN} isim</p>
+                        <p className="text-stone-500">{misses ? (misses + " yanlış deneme") : "Hepsi ilk denemede"}</p>
                     </div>
                     <footer className="study-card-foot">
                         <BackBtn onClick={props.onBack} label="Konular" />
@@ -1431,80 +1435,63 @@ function MapPlay(props) {
         );
     }
 
-    const step = items[idx];
-    const taps = mapFail && step.type === "map" ? quiz.tapChoices(step.item) : [];
+    var left = round.chips.filter(function (c) { return !placed[c.id]; });
     return (
-        <div className="map-play-root">
+        <div className="map-play-root map-place">
             <header className="map-play-top">
                 <div className="map-play-bar">
                     <BackBtn onClick={props.onBack} label="Konular" />
-                    <div className="note-progress shrink-0">{idx + 1}/{items.length}</div>
+                    <div className="note-progress shrink-0">{placedNLabel(placed, total)}</div>
                     <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
                 </div>
                 <p className="map-play-kicker">{meta ? ((meta.hoverImg ? "" : (meta.icon + " ")) + meta.title) : "Harita"}</p>
-                <p className="map-play-prompt">{step.prompt}</p>
+                <p className="map-play-prompt">Bu turdaki {total} ismi haritadaki boş pinlere yerleştir</p>
             </header>
             {!mapFail ? (
                 <div className="map-play-stage tr-map-wrap" ref={stageRef}>
+                    <div className="map-relief" aria-hidden="true" />
                     <div className="map-play-canvas" ref={hostRef} dangerouslySetInnerHTML={{ __html: svgHtml }} />
                     <div className="map-zoom-tools" aria-label="Harita yakınlaştır">
                         <button type="button" onClick={function () { bumpZoom(1); }}>+</button>
                         <button type="button" onClick={function () { bumpZoom(-1); }}>−</button>
                         <button type="button" className="map-zoom-reset" onClick={function () { bumpZoom(0); }}>Tam</button>
                     </div>
-                    <p className="map-zoom-hint">Harita tam görünür · iki parmakla büyüt, kaydırarak gez</p>
                 </div>
             ) : (
                 <div className="map-play-stage p-4 overflow-auto">
-                    <div className="grid grid-cols-2 gap-2 max-w-lg mx-auto">
-                        {taps.map(function (c) {
-                            var isP = picked === c.label;
-                            var isA = quiz.isTapCorrect(step.item, c);
-                            var cls = "px-3 py-3 rounded-2xl border text-sm font-semibold ";
-                            if (!picked) cls += "bg-white border-stone-200";
-                            else if (isA) cls += "bg-emerald-50 border-emerald-400";
-                            else if (isP) cls += "bg-rose-50 border-rose-400";
-                            else cls += "opacity-50";
-                            return (
-                                <button key={c.kind + c.id} disabled={!!picked} className={cls} onClick={function () { chooseTap(c); }}>{c.label}</button>
-                            );
-                        })}
-                    </div>
+                    <p className="text-center text-stone-300 py-10">Harita yüklenemedi. Bağlantıyı kontrol edip tekrar dene.</p>
                 </div>
             )}
             <footer className="map-play-foot">
-                {step.type === "mcq" ? (
-                    <div className="grid gap-2 mb-3">
-                        {(step.choices || []).map(function (c, ci) {
-                            var isP = picked === c;
-                            var isA = String(c) === String(step.answer);
-                            var cls = "w-full text-left px-4 py-3 rounded-2xl border font-medium ";
-                            if (!picked) cls += "bg-white dark:bg-stone-800 border-stone-200";
-                            else if (isA) cls += "bg-emerald-50 border-emerald-400";
-                            else if (isP) cls += "bg-rose-50 border-rose-400";
-                            else cls += "opacity-50";
-                            return (
-                                <button key={ci} disabled={!!picked} className={cls} onClick={function () { chooseMcq(c); }}>{c}</button>
-                            );
-                        })}
-                    </div>
-                ) : null}
-                {picked ? (
-                    <p className={"mb-2 text-sm font-semibold " + (okHit ? "text-emerald-700" : "text-rose-600")}>
-                        {okHit
-                            ? ("Doğru — " + (step.type === "mcq" ? step.answer : (step.item.name + " · " + quiz.answerLabel(step.item))))
-                            : (step.type === "mcq" ? ("Doğrusu: " + step.answer) : ("Yanlış nokta · doğrusu: " + step.item.name))}
-                    </p>
-                ) : null}
-                <div className="flex items-center justify-between gap-3">
-                    <span className="text-xs text-stone-500">{score} doğru{picked ? " · 5–6 sn" : ""}</span>
-                    <button disabled={!picked} onClick={goNext} className={"btn-primary text-white px-5 py-2.5 rounded-full font-semibold " + (!picked ? "opacity-40 pointer-events-none" : "")}>
-                        {idx + 1 >= items.length ? "Bitir" : "Sonraki"}
-                    </button>
+                <p className="map-place-hint">{selected ? "Pin’e bırak veya haritadaki boşluğa dokun" : "İsmi tut, boş pine sürükle"}</p>
+                <div className="map-chip-dock">
+                    {left.map(function (c) {
+                        var on = selected === c.id;
+                        return (
+                            <button
+                                key={c.id}
+                                type="button"
+                                className={"map-chip" + (on ? " is-on" : "")}
+                                onPointerDown={function (e) { onChipPointerDown(e, c); }}
+                                onPointerMove={onChipPointerMove}
+                                onPointerUp={onChipPointerUp}
+                                onPointerCancel={onChipPointerUp}
+                                onClick={function (e) { e.preventDefault(); }}
+                            >{c.name}</button>
+                        );
+                    })}
                 </div>
+                <p className="map-place-meta">{misses ? (misses + " yanlış deneme") : "İlk deneme"}</p>
             </footer>
+            {drag ? (
+                <div className="map-chip-ghost" style={{ left: drag.x + "px", top: drag.y + "px" }}>{drag.name}</div>
+            ) : null}
         </div>
     );
+}
+
+function placedNLabel(placed, total) {
+    return Object.keys(placed || {}).length + "/" + total;
 }
 
 function DersHome(props) {

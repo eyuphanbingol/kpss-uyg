@@ -1,6 +1,6 @@
 export var TR_MAP_URLS = [
-    "https://www.atanly.com/svg/tr.svg?v=2",
-    "https://kpss-uyg.vercel.app/svg/tr.svg?v=2"
+    "https://www.atanly.com/svg/tr.svg?v=3",
+    "https://kpss-uyg.vercel.app/svg/tr.svg?v=3"
 ];
 
 var svgCache = "";
@@ -39,15 +39,19 @@ function prepSvg(raw) {
 }
 
 var CSS = [
-    "html,body{margin:0;padding:0;background:#8fa89a;width:100%;height:100%;max-width:100%;max-height:100%;overflow:hidden;touch-action:none;-webkit-user-select:none;user-select:none;}",
-    ".wrap{position:relative;width:100%;height:100%;max-width:100%;max-height:100%;overflow:hidden;background:#8fa89a;touch-action:none;}",
-    ".canvas{width:100%;height:100%;transform-origin:center center;will-change:transform;}",
+    "html,body{margin:0;padding:0;background:#152018;width:100%;height:100%;max-width:100%;max-height:100%;overflow:hidden;touch-action:none;-webkit-user-select:none;user-select:none;}",
+    ".wrap{position:relative;width:100%;height:100%;max-width:100%;max-height:100%;overflow:hidden;background:#152018;touch-action:none;}",
+    ".wrap:before{content:'';position:absolute;inset:-10%;background:radial-gradient(ellipse 70% 55% at 22% 42%,#5a7a3a 0%,transparent 55%),radial-gradient(ellipse 55% 50% at 78% 48%,#b0894a 0%,transparent 50%),linear-gradient(180deg,#3d5a4a 0%,#7a8f55 40%,#c9b07a 72%,#5f7d58 100%);opacity:.97;pointer-events:none;}",
+    ".wrap:after{content:'';position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(ellipse 85% 70% at 50% 45%,transparent 42%,rgba(8,12,10,.4) 100%);}",
+    ".canvas{position:relative;z-index:1;width:100%;height:100%;transform-origin:center center;will-change:transform;}",
     "svg{width:100%;height:100%;max-width:100%;max-height:100%;display:block;}",
     ".zoom-tools{position:absolute;right:8px;bottom:8px;z-index:6;display:flex;flex-direction:column;gap:6px;}",
     ".zoom-tools button{width:40px;height:40px;border-radius:12px;border:1px solid rgba(13,44,77,.12);background:rgba(255,255,255,.94);font-size:20px;font-weight:800;line-height:1;color:#0f172a;box-shadow:0 6px 16px rgba(4,28,36,.12);}",
     ".zoom-tools .zreset{width:auto;padding:0 10px;font-size:12px;letter-spacing:.04em;text-transform:uppercase;}",
-    "path{fill:#eef6f1!important;stroke:#1f3d32!important;stroke-width:1.35!important;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none;}",
-    ".mode-conquer path{fill:#dce8e1!important;pointer-events:auto;cursor:pointer;}",
+    "path{fill:rgba(214,192,138,.42)!important;stroke:rgba(36,26,14,.78)!important;stroke-width:.9!important;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none;}",
+    ".mode-conquer:before{display:none;}",
+    ".mode-conquer{background:#8fa89a;}",
+    ".mode-conquer path{fill:#dce8e1!important;stroke:#1f3d32!important;stroke-width:1.35!important;pointer-events:auto;cursor:pointer;}",
     ".mode-conquer path.conquer-owned{fill:var(--c,#127880)!important;stroke:#0b3d42!important;}",
     ".mode-conquer path.conquer-pick{fill:#d97706!important;stroke:#7c2d12!important;}",
     ".topic-hit{fill:transparent;pointer-events:auto;cursor:pointer;stroke:none!important;}",
@@ -55,6 +59,12 @@ var CSS = [
     ".topic-mark-done{opacity:.42;}",
     ".topic-mark-ok .topic-hit{fill:rgba(5,150,105,.28);}",
     ".topic-mark-bad .topic-hit{fill:rgba(225,29,72,.28);}",
+    ".place-well{fill:none;stroke:#f3e2a6;stroke-width:2.2;stroke-dasharray:5 4;pointer-events:none;}",
+    ".place-well-core{fill:rgba(255,236,179,.28);pointer-events:none;}",
+    ".place-locked .place-well{stroke:#34d399;stroke-dasharray:none;}",
+    ".place-locked .place-well-core{fill:rgba(16,185,129,.28);}",
+    ".place-miss .place-well{stroke:#fb7185;}",
+    ".place-miss .place-well-core{fill:rgba(225,29,72,.35);}",
     ".map-pin{font-size:14px;font-weight:800;paint-order:stroke;stroke:#fff;stroke-width:4px;}",
     ".map-pin-ok{fill:#064e3b;}",
     ".map-pin-bad{fill:#9f1239;}",
@@ -107,18 +117,30 @@ export function mapDocument(svgText, mode) {
         + "var wrap=document.createElementNS('http://www.w3.org/2000/svg','g');"
         + "wrap.setAttribute('data-pin',p.id);"
         + "wrap.setAttribute('data-x',String(x));wrap.setAttribute('data-y',String(y));"
-        + "var cls='topic-mark';"
-        + "if(st.cleared&&st.cleared[p.id])cls+=' topic-mark-done';"
+        + "var locked=!!(st.placed&&st.placed[p.id]);"
+        + "var cls=st.place?'topic-mark place-mark':'topic-mark';"
+        + "if(st.place){if(locked)cls+=' place-locked';if(st.flash===p.id)cls+=' place-miss';}"
+        + "else{if(st.cleared&&st.cleared[p.id])cls+=' topic-mark-done';"
         + "if(st.picked&&p.id===st.targetId)cls+=' topic-mark-ok';"
-        + "else if(st.picked&&p.id===st.picked)cls+=' topic-mark-bad';"
+        + "else if(st.picked&&p.id===st.picked)cls+=' topic-mark-bad';}"
         + "wrap.setAttribute('class',cls);"
+        + "if(st.place){var glow=document.createElementNS('http://www.w3.org/2000/svg','circle');"
+        + "glow.setAttribute('cx',String(x));glow.setAttribute('cy',String(y));glow.setAttribute('r',locked?'16':'20');glow.setAttribute('class',locked?'place-well-core is-locked':'place-well-core');"
+        + "var ring=document.createElementNS('http://www.w3.org/2000/svg','circle');"
+        + "ring.setAttribute('cx',String(x));ring.setAttribute('cy',String(y));ring.setAttribute('r','15');ring.setAttribute('class','place-well');"
+        + "wrap.appendChild(glow);wrap.appendChild(ring);}"
         + "var hit=document.createElementNS('http://www.w3.org/2000/svg','circle');"
         + "hit.setAttribute('cx',String(x));hit.setAttribute('cy',String(y));hit.setAttribute('r','26');hit.setAttribute('class','topic-hit');"
-        + "var ico=document.createElementNS('http://www.w3.org/2000/svg','text');"
+        + "wrap.appendChild(hit);"
+        + "if(!st.place||locked){var ico=document.createElementNS('http://www.w3.org/2000/svg','text');"
         + "ico.setAttribute('x',String(x));ico.setAttribute('y',String(y));"
         + "ico.setAttribute('class','topic-ico');ico.setAttribute('text-anchor','middle');"
         + "ico.setAttribute('dominant-baseline','central');ico.textContent=p.glyph||st.glyph||'📍';"
-        + "wrap.appendChild(hit);wrap.appendChild(ico);g.appendChild(wrap);"
+        + "wrap.appendChild(ico);}"
+        + "g.appendChild(wrap);"
+        + "if(st.place&&locked){var t=document.createElementNS('http://www.w3.org/2000/svg','text');"
+        + "t.setAttribute('x',String(x));t.setAttribute('y',String(y-24));"
+        + "t.setAttribute('class','map-pin map-pin-ok');t.textContent=p.name||'';lg.appendChild(t);}"
         + "});"
         + "(st.labels||[]).forEach(function(row){"
         + "var x=row.x,y=row.y;"

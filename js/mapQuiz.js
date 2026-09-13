@@ -839,6 +839,21 @@
         return expandRound(shuffle(list).slice(0, take));
     }
 
+    function pickPlaceRound(topicId, n) {
+        var list = itemsForTopic(topicId).filter(function (it) {
+            return it && !it.mcq && it.id && it.name;
+        });
+        var want = n == null ? 7 : n;
+        if (want < 6) want = 6;
+        if (want > 8) want = 8;
+        var take = Math.min(want, list.length);
+        var items = shuffle(list).slice(0, take);
+        var chips = shuffle(items.map(function (it) {
+            return { id: it.id, name: it.name };
+        }));
+        return { items: items, chips: chips };
+    }
+
     function tapChoices(item) {
         var codes = resolveCodes(item);
         if (codes.length && codes.length <= 12) {
@@ -1151,6 +1166,36 @@
         return { pins: pins, viewBox: "0 0 1000 422", glyph: topicGlyph(topicId) };
     }
 
+    function topicPinsForPlay(topicId) {
+        var list = itemsForTopic(topicId);
+        var groups = {};
+        list.forEach(function (it) {
+            var code = pinHomeCode(it);
+            (groups[code] = groups[code] || []).push(it);
+        });
+        var pins = [];
+        Object.keys(groups).forEach(function (code) {
+            var g = groups[code];
+            g.forEach(function (it, i) {
+                var spec = PIN_OFF[it.name];
+                pins.push({
+                    id: it.id,
+                    name: it.name,
+                    glyph: it.glyph || itemGlyph(it),
+                    x: it.x,
+                    y: it.y,
+                    code: code,
+                    ox: spec ? spec[1] : 0,
+                    oy: spec ? spec[2] : 0,
+                    hasOff: !!spec,
+                    fanI: i,
+                    fanN: g.length
+                });
+            });
+        });
+        return pins;
+    }
+
     var api = {
         REGION_LABEL: REGION_LABEL,
         PROVINCE_REGION: PROVINCE_REGION,
@@ -1158,6 +1203,7 @@
         TREE: TREE,
         ITEMS: ITEMS,
         pickRound: pickRound,
+        pickPlaceRound: pickPlaceRound,
         itemsForTopic: itemsForTopic,
         topicMeta: topicMeta,
         isCorrect: isCorrect,
@@ -1171,6 +1217,7 @@
         countFor: countFor,
         topicLayer: topicLayer,
         topicLayerFromSvg: topicLayerFromSvg,
+        topicPinsForPlay: topicPinsForPlay,
         topicGlyph: topicGlyph,
         itemGlyph: itemGlyph,
         PARK_SOURCE: "Tarım ve Orman Bakanlığı DKMP — 54 milli park (2026)"
