@@ -1088,7 +1088,6 @@ function MapTopics(props) {
                     </div>
                 );
             })}
-            <p className="text-[10px] text-stone-400 pb-4">{quiz && quiz.PARK_SOURCE}</p>
         </Shell>
     );
 }

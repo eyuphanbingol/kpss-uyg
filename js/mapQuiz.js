@@ -183,19 +183,6 @@
                 { id: "transit", title: "Transit ticaret yolları", icon: "🚛" },
                 { id: "yht", title: "YHT ve demiryolu kapıları", icon: "🚄" }
             ]
-        },
-        {
-            id: "koruma", title: "Milli parklar", icon: "🏞️",
-            kids: [
-                { id: "milli", title: "Tümü (54 park)", icon: "🏞️" },
-                { id: "milli-marmara", title: "Marmara", icon: "🏞️" },
-                { id: "milli-ege", title: "Ege", icon: "🏞️" },
-                { id: "milli-akdeniz", title: "Akdeniz", icon: "🏞️" },
-                { id: "milli-ic", title: "İç Anadolu", icon: "🏞️" },
-                { id: "milli-karadeniz", title: "Karadeniz", icon: "🏞️" },
-                { id: "milli-dogu", title: "Doğu Anadolu", icon: "🏞️" },
-                { id: "milli-guneydogu", title: "Güneydoğu", icon: "🏞️" }
-            ]
         }
     ];
 
@@ -685,68 +672,6 @@
         ["GAP kargo havalimanı", "Şanlıurfa"]
     ].forEach(function (r) { ITEMS.push(F("yht", r[0], r[1], r[2] || {})); });
 
-    var PARKS = [
-        ["Nemrut Dağı", "Adıyaman-Malatya", "guneydogu"],
-        ["Akdağ", "Afyonkarahisar-Denizli", "ege"],
-        ["Başkomutan Tarihi Milli Parkı", "Afyonkarahisar-Kütahya-Uşak", "ege"],
-        ["Ağrı Dağı", "Ağrı-Iğdır", "dogu"],
-        ["Soğuksu", "Ankara", "ic"],
-        ["Sakarya Meydan Muharebesi TMP", "Ankara", "ic"],
-        ["Sarıçalı Dağı", "Ankara", "ic"],
-        ["Güllük Dağı-Termessos", "Antalya", "akdeniz"],
-        ["Beydağları Sahil", "Antalya", "akdeniz"],
-        ["Altınbeşik Mağarası", "Antalya", "akdeniz"],
-        ["Köprülü Kanyon", "Antalya-Isparta", "akdeniz"],
-        ["Hatila Vadisi", "Artvin", "karadeniz"],
-        ["Kaçkar Dağları", "Artvin", "karadeniz"],
-        ["Dilek Yarımadası-Büyük Menderes", "Aydın", "ege"],
-        ["Kuşcenneti", "Balıkesir", "marmara"],
-        ["Kazdağı", "Balıkesir", "marmara"],
-        ["Kop Dağı Müdafaası TMP", "Bayburt-Erzurum", "dogu"],
-        ["Yedigöller", "Bolu", "karadeniz"],
-        ["Abant Gölü", "Bolu", "karadeniz"],
-        ["Uludağ", "Bursa", "marmara"],
-        ["Troya TMP", "Çanakkale", "marmara"],
-        ["Boğazköy-Alacahöyük", "Çorum", "karadeniz"],
-        ["Honaz Dağı", "Denizli", "ege"],
-        ["Gala Gölü", "Edirne", "marmara"],
-        ["Nene Hatun TMP", "Erzurum", "dogu"],
-        ["Hakkari Cilo ve Sat Dağları", "Hakkâri", "dogu"],
-        ["Kızıldağ", "Isparta", "akdeniz"],
-        ["Kovada Gölü", "Isparta", "akdeniz"],
-        ["Geben Vadisi", "Kahramanmaraş", "akdeniz"],
-        ["Sarıkamış-Allahuekber Dağları", "Kars-Erzurum", "dogu"],
-        ["Küre Dağları", "Kastamonu-Bartın", "karadeniz"],
-        ["Ilgaz Dağı", "Kastamonu-Çankırı", "karadeniz"],
-        ["İstiklal Yolu TMP", "Kastamonu-Çankırı", "karadeniz"],
-        ["Sultan Sazlığı", "Kayseri", "ic"],
-        ["İğneada Longoz Ormanları", "Kırklareli", "marmara"],
-        ["Beyşehir Gölü", "Konya", "ic"],
-        ["Derebucak Çamlık Mağaraları", "Konya", "ic"],
-        ["Spil Dağı", "Manisa", "ege"],
-        ["Marmaris", "Muğla", "ege"],
-        ["Saklıkent", "Muğla-Antalya", "ege"],
-        ["Malazgirt Meydan Muharebesi TMP", "Muş", "dogu"],
-        ["Aladağlar", "Niğde-Adana-Kayseri", "ic"],
-        ["Karatepe-Aslantaş", "Osmaniye", "akdeniz"],
-        ["Karagöl-Sahara", "Rize-Artvin", "karadeniz"],
-        ["Botan Vadisi", "Siirt", "guneydogu"],
-        ["Divriği", "Sivas", "ic"],
-        ["Tek Tek Dağları", "Şanlıurfa", "guneydogu"],
-        ["Altındere Vadisi", "Trabzon", "karadeniz"],
-        ["Munzur Vadisi", "Tunceli", "dogu"],
-        ["Yozgat Çamlığı", "Yozgat", "ic"],
-        ["Fethiye-Kaş Deniz Milli Parkı", "Muğla-Antalya", "ege"],
-        ["Kuzey Ege Deniz Milli Parkı", "Çanakkale-Tekirdağ", "marmara"],
-        ["Nemrut Kalderası", "Bitlis", "dogu"],
-        ["Van Gölü Deveboynu Yarımadası", "Van-Bitlis", "dogu"]
-    ];
-    PARKS.forEach(function (r) {
-        var it = F("milli", r[0], r[1], { prompt: r[0] + " Milli Parkı'nı bul.", region: r[2] });
-        it.parkRegion = r[2];
-        ITEMS.push(it);
-    });
-
     ITEMS.forEach(function (it, i) { it.id = "m" + i; });
 
     function project(lon, lat) {
@@ -768,11 +693,6 @@
     function topicIdOf(it) { return it.topic; }
 
     function itemsForTopic(topicId) {
-        if (topicId === "milli") return ITEMS.filter(function (it) { return it.topic === "milli"; });
-        if (topicId.indexOf("milli-") === 0) {
-            var rg = topicId.slice(6);
-            return ITEMS.filter(function (it) { return it.topic === "milli" && it.parkRegion === rg; });
-        }
         return ITEMS.filter(function (it) { return it.topic === topicId; });
     }
 
@@ -1219,8 +1139,7 @@
         topicLayerFromSvg: topicLayerFromSvg,
         topicPinsForPlay: topicPinsForPlay,
         topicGlyph: topicGlyph,
-        itemGlyph: itemGlyph,
-        PARK_SOURCE: "Tarım ve Orman Bakanlığı DKMP — 54 milli park (2026)"
+        itemGlyph: itemGlyph
     };
     global.MapQuiz = api;
     if (typeof module !== "undefined" && module.exports) module.exports = api;

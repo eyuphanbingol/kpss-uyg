@@ -406,7 +406,6 @@ export function MapTopicsScreen({ navigation }) {
                     </View>
                 );
             })}
-            <Text style={[styles.meta, isDark && styles.textMuted]}>{MapQuiz.PARK_SOURCE}</Text>
         </ScrollScreen>
     );
 }
