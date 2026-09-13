@@ -415,7 +415,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.86.0/dist/umd/supabase.js"></script>
     <script src="js/supabaseClient.js?v=20"></script>
     <script src="js/syncEngine.js?v=36"></script>
-    <script src="js/jsxLoader.js?v=90"></script>
+    <script src="js/jsxLoader.js?v=91"></script>
     <script src="js/icons.js?v=18"></script>
 
     <style>
@@ -1806,80 +1806,6 @@
             padding: 4px 8px; border-radius: 999px;
         }
         .tabu-ask { margin: 10px 0 12px; color: #F6F1E4; font-weight: 800; font-size: 18px; }
-        .kodlama-slogan {
-            margin: 0 0 4px; padding: 14px 16px; border-radius: 16px;
-            background: rgba(0,0,0,.28); color: #F6F1E4; font-weight: 700; font-size: 17px; line-height: 1.45;
-            border-left: 4px solid #C5A059;
-        }
-        .kodlama-root { background: #1c1814; }
-        .kod-body { padding-bottom: 28px; }
-        .kod-poster {
-            position: relative; overflow: hidden;
-            background: linear-gradient(165deg, #F6F1E4 0%, #E4D5B5 100%);
-            border: 3px solid #0d2c4d;
-            box-shadow: 8px 10px 0 #C5A059;
-            border-radius: 6px;
-            padding: 22px 18px 18px;
-            min-height: 210px;
-            margin-bottom: 16px;
-        }
-        .kod-wm {
-            position: absolute; right: -6px; top: 8px;
-            font-size: 72px; font-weight: 900; letter-spacing: -0.06em;
-            color: rgba(13,44,77,.08); line-height: 1; pointer-events: none;
-            max-width: 70%; overflow: hidden; white-space: nowrap;
-        }
-        .kod-ribbon {
-            display: inline-block; font-size: 11px; font-weight: 900;
-            letter-spacing: 0.16em; text-transform: uppercase;
-            background: #0d2c4d; color: #C5A059;
-            padding: 5px 10px; margin-bottom: 12px;
-        }
-        .kod-paint {
-            position: relative; margin: 0;
-            font-size: 22px; line-height: 1.55; font-weight: 700;
-            color: #1c1917; z-index: 1;
-        }
-        .kod-stretch {
-            display: inline; font-size: 1.55em; font-weight: 900;
-            letter-spacing: -0.06em; color: #041C24;
-            background: #C5A059; padding: 0 5px 2px; border-radius: 4px;
-            box-shadow: 2px 2px 0 #0d2c4d;
-        }
-        .kod-code {
-            font-weight: 900; letter-spacing: 0.06em; color: #0d2c4d;
-            border-bottom: 3px solid #C5A059;
-        }
-        .kod-stamp {
-            position: relative; z-index: 1;
-            margin: 16px 0 0; font-size: 20px; font-weight: 900;
-            letter-spacing: 0.04em; color: rgba(13,44,77,.28);
-        }
-        .kod-stamp.on { color: #0d2c4d; }
-        .kod-prompt {
-            margin: 0 0 10px; font-size: 13px; font-weight: 800;
-            letter-spacing: 0.08em; text-transform: uppercase; color: #C5A059;
-        }
-        .kod-chips { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-        .kod-chip {
-            background: #F6F1E4; color: #0d2c4d; border: 2px solid #0d2c4d;
-            border-radius: 3px 14px 14px 3px; padding: 14px 12px;
-            font-weight: 800; font-size: 14px; line-height: 1.35; text-align: left;
-            box-shadow: 3px 3px 0 rgba(197,160,89,.55);
-        }
-        .kod-chip:nth-child(2) { transform: rotate(0.4deg); }
-        .kod-chip:nth-child(3) { transform: rotate(-0.5deg); }
-        .kod-chip:nth-child(4) { transform: rotate(0.3deg); }
-        .kod-chip.yes { background: #ecfdf5; border-color: #047857; box-shadow: 3px 3px 0 #34d399; }
-        .kod-chip.no { background: #fff1f2; border-color: #e11d48; }
-        .kod-gloss { margin: 8px 0 0; font-size: 14px; color: #a8a29e; line-height: 1.45; }
-        .kodlama-note { margin-top: 14px; }
-        html.dark .kodlama-root { background: #12100e; }
-        html.dark .kod-poster { background: linear-gradient(165deg, #efe6d2 0%, #d9c8a4 100%); }
-        .panic-opt.kodlama-ok { background: #ecfdf5; border-color: #34d399; }
-        .panic-opt.kodlama-bad { background: #fff1f2; border-color: #fb7185; }
-        html.dark .panic-opt.kodlama-ok { background: rgba(16,185,129,.18); }
-        html.dark .panic-opt.kodlama-bad { background: rgba(244,63,94,.18); }
         .tabu-mystery {
             min-height: 72px; border-radius: 16px; display: flex; align-items: center; justify-content: center;
             font-size: 26px; font-weight: 900; background: rgba(0,0,0,.28); color: #C5A059;
@@ -2298,10 +2224,6 @@
             .conquer-colors { flex-wrap: wrap; }
             .conquer-hero, .tabu-hero, .panic-hero { padding: 14px 12px 12px; border-radius: 18px; }
             .tabu-ask, .panic-ask { font-size: 15px; }
-            .kod-paint { font-size: 19px; }
-            .kod-stretch { font-size: 1.4em; }
-            .kod-chips { grid-template-columns: 1fr; }
-            .kod-chip { transform: none !important; }
             .tabu-mystery { font-size: 20px; min-height: 52px; padding: 10px; }
             .tabu-end-score { font-size: 44px; }
             .tabu-body, .panic-body, .conquer-sheet { padding: 10px 12px 24px; }
@@ -2349,7 +2271,7 @@
         </main>
     </noscript>
     <div id="root"></div>
-    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=126"></script>
+    <script type="text/babel" data-presets="react-classic" src="js/app.jsx?v=127"></script>
     <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.getRegistrations().then(function (regs) {
