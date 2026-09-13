@@ -103,6 +103,10 @@ window.getKpssData = function () {
                 notlar: window.tarih_25_notlari || [],
                 sorular: window.tarih_25_sorulari || []
             },
+            "Soğuk Savaş Dönemi":{
+                notlar: window.tarih_26_notlari || [],
+                sorular: window.tarih_26_sorulari || []
+            },
         },
         "Coğrafya": {
             "Türkiye'nin Coğrafi Konumu": {
