@@ -107,6 +107,10 @@ window.getKpssData = function () {
                 notlar: window.tarih_26_notlari || [],
                 sorular: window.tarih_26_sorulari || []
             },
+            "Yumuşama Dönemi":{
+                notlar: window.tarih_27_notlari || [],
+                sorular: window.tarih_27_sorulari || []
+            },
         },
         "Coğrafya": {
             "Türkiye'nin Coğrafi Konumu": {
