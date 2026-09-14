@@ -329,6 +329,10 @@ window.cografya_12_notlari = [
     </div>
     <div class="bg-emerald-50 dark:bg-emerald-900/20 p-4 rounded-xl border border-emerald-100 dark:border-emerald-800/30 text-sm w-full">
         <p class="text-xs text-slate-500 dark:text-slate-400 mb-3 text-center uppercase font-bold tracking-widest">Türkiye Haritasında Hat Boyunca</p>
+        <figure class="note-rain-map mb-4">
+            <img src="img/map/yagis-mevsimsel.svg?v=1" alt="Yağışın mevsimsel dağılımı: Afyon–Erzurum ilkbahar, Erzurum–Trabzon yaz, Trabzon–İstanbul sonbahar, İstanbul–Diyarbakır kış" class="w-full rounded-xl border border-emerald-200/70 dark:border-emerald-800/40 bg-white dark:bg-slate-900/40" loading="lazy" />
+            <figcaption class="mt-2 text-[11px] text-slate-500 dark:text-slate-400 text-center">“Küçük e” hattı · renkler mevsimi, yazılar yağış tipini gösterir</figcaption>
+        </figure>
         <div class="space-y-2">
             <div class="flex justify-between items-center bg-white dark:bg-slate-800/50 p-2 rounded-lg border border-emerald-100 dark:border-emerald-800/30">
                 <span class="text-slate-600 dark:text-slate-300">Afyon ➔ Erzurum</span>
@@ -336,15 +340,15 @@ window.cografya_12_notlari = [
             </div>
             <div class="flex justify-between items-center bg-white dark:bg-slate-800/50 p-2 rounded-lg border border-emerald-100 dark:border-emerald-800/30">
                 <span class="text-slate-600 dark:text-slate-300">Erzurum ➔ Trabzon</span>
-                <span class="font-black text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-900/30 px-2 py-0.5 rounded">YAZ</span>
+                <span class="font-black text-violet-600 dark:text-violet-400 bg-violet-100 dark:bg-violet-900/30 px-2 py-0.5 rounded">YAZ</span>
             </div>
             <div class="flex justify-between items-center bg-white dark:bg-slate-800/50 p-2 rounded-lg border border-emerald-100 dark:border-emerald-800/30">
                 <span class="text-slate-600 dark:text-slate-300">Trabzon ➔ İstanbul</span>
-                <span class="font-black text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-900/30 px-2 py-0.5 rounded">SONBAHAR</span>
+                <span class="font-black text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-900/30 px-2 py-0.5 rounded">SONBAHAR</span>
             </div>
             <div class="flex justify-between items-center bg-white dark:bg-slate-800/50 p-2 rounded-lg border border-emerald-100 dark:border-emerald-800/30">
                 <span class="text-slate-600 dark:text-slate-300">İstanbul ➔ Diyarbakır</span>
-                <span class="font-black text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-900/30 px-2 py-0.5 rounded">KIŞ</span>
+                <span class="font-black text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/30 px-2 py-0.5 rounded">KIŞ</span>
             </div>
         </div>
     </div>
