@@ -149,7 +149,7 @@ window.cografya_12_notlari = [
     <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-xl border border-teal-100 dark:border-teal-800/30 text-sm w-full text-center">
         <p class="mb-3">Basınç farkından dolayı oluşan yatay hava akımıdır.</p>
         <figure class="note-wind-map mb-4">
-            <img src="img/map/ruzgarlar-kayipsakal.svg?v=1" alt="KayıpSaKaL rüzgarları: Karayel, Yıldız, Poyraz, Samyeli, Kıble, Lodos" class="w-full rounded-xl border border-teal-200/70 dark:border-teal-800/40 bg-white dark:bg-slate-900/40" loading="lazy" />
+            <img src="img/map/ruzgarlar-kayipsakal.svg?v=2" alt="KayıpSaKaL rüzgarları: Karayel, Yıldız, Poyraz, Samyeli, Kıble, Lodos" class="w-full rounded-xl border border-teal-200/70 dark:border-teal-800/40 bg-white dark:bg-slate-900/40" loading="lazy" />
             <figcaption class="mt-2 text-[11px] text-slate-500 dark:text-slate-400">Kuzeyden esenler soğuk (mavi) · Güneyden esenler sıcak (kırmızı)</figcaption>
         </figure>
         <div class="bg-white dark:bg-slate-800/50 p-3 rounded-lg inline-block text-lg tracking-widest font-mono">
