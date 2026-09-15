@@ -261,25 +261,34 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
     function migrateNotebook(list) {
         if (!Array.isArray(list)) return [];
         var out = [];
+        var TITLE_MAX = 500;
+        var BODY_MAX = 100000;
+        var NOTE_MAX = 300;
+        var COLORS = { rose: 1, amber: 1, emerald: 1, sky: 1, violet: 1, slate: 1 };
         list.forEach(function (n) {
             if (!n || typeof n !== "object") return;
             var id = String(n.id || "").trim();
             if (!id) return;
-            var title = String(n.title || "").trim().slice(0, 80);
-            var body = String(n.body || "").trim().slice(0, 4000);
+            var title = String(n.title || "").trim().slice(0, TITLE_MAX);
+            var body = String(n.body || "").trim().slice(0, BODY_MAX);
             if (!n.deleted && !body && !title) return;
+            var ders = String(n.ders || "").trim();
+            var color = String(n.color || "").trim();
+            if (!COLORS[color]) color = "";
             out.push({
                 id: id,
                 title: title,
                 body: body,
+                ders: ders,
+                color: color,
                 deleted: !!n.deleted,
                 createdAt: n.createdAt || n.updatedAt || nowIso(),
                 updatedAt: n.updatedAt || n.createdAt || nowIso()
             });
         });
-        if (out.length > 80) {
+        if (out.length > NOTE_MAX) {
             out.sort(function (a, b) { return String(b.updatedAt).localeCompare(String(a.updatedAt)); });
-            out = out.slice(0, 80);
+            out = out.slice(0, NOTE_MAX);
         }
         return out;
     }
@@ -776,9 +785,12 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
         },
         upsertReviewNote: function (payload) {
             payload = payload || {};
-            var title = String(payload.title || "").trim().slice(0, 80);
-            var body = String(payload.body || "").trim().slice(0, 4000);
+            var title = String(payload.title || "").trim().slice(0, 500);
+            var body = String(payload.body || "").trim().slice(0, 100000);
             if (!title && !body) return null;
+            var ders = String(payload.ders || "").trim();
+            var color = String(payload.color || "").trim();
+            if (["rose", "amber", "emerald", "sky", "violet", "slate"].indexOf(color) < 0) color = "";
             var id = String(payload.id || "").trim() || notebookId();
             var list = state.reviewNotebook || [];
             var found = false;
@@ -790,6 +802,8 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
                     id: id,
                     title: title,
                     body: body,
+                    ders: ders,
+                    color: color,
                     deleted: false,
                     createdAt: n.createdAt || stamp,
                     updatedAt: stamp
@@ -800,6 +814,8 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
                     id: id,
                     title: title,
                     body: body,
+                    ders: ders,
+                    color: color,
                     deleted: false,
                     createdAt: stamp,
                     updatedAt: stamp
