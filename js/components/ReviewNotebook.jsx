@@ -137,6 +137,11 @@
             if (editId === id) resetForm();
         }
 
+        function moveNote(id, dir) {
+            if (!window.StudentStore || !window.StudentStore.moveReviewNote) return;
+            window.StudentStore.moveReviewNote(id, dir);
+        }
+
         function makeBold() {
             var which = lastField.current === "title" ? "title" : "body";
             var el = which === "title" ? titleRef.current : bodyRef.current;
@@ -265,7 +270,7 @@
                                 <div key={g.ders || "genel"}>
                                     <h2 className="text-xs font-black uppercase tracking-widest text-stone-400 mb-2">{dersLabel(g.ders)}</h2>
                                     <div className="space-y-3">
-                                        {g.items.map(function (n) {
+                                        {g.items.map(function (n, ni) {
                                             var cm = colorMeta(n.color);
                                             return (
                                                 <div key={n.id} className={"rounded-2xl border p-4 " + (cm.card || "glass") + " " + (editId === n.id ? "ring-2 ring-teal-600/30" : "")}>
@@ -274,7 +279,11 @@
                                                             {n.title ? <p className="font-semibold text-sm"><RichText text={n.title} /></p> : null}
                                                             <p className="text-[11px] text-stone-400 mt-0.5">{fmtWhen(n.updatedAt)}</p>
                                                         </div>
-                                                        <div className="flex gap-1 shrink-0">
+                                                        <div className="flex gap-1 shrink-0 items-center">
+                                                            <button type="button" disabled={ni === 0} onClick={function () { moveNote(n.id, -1); }}
+                                                                className="px-2 py-1 rounded-lg text-xs font-black border border-stone-200 dark:border-stone-600 disabled:opacity-30" title="Yukarı">↑</button>
+                                                            <button type="button" disabled={ni === g.items.length - 1} onClick={function () { moveNote(n.id, 1); }}
+                                                                className="px-2 py-1 rounded-lg text-xs font-black border border-stone-200 dark:border-stone-600 disabled:opacity-30" title="Aşağı">↓</button>
                                                             <button type="button" onClick={function () { startEdit(n); }}
                                                                 className="px-2.5 py-1 rounded-lg text-xs font-medium text-teal-700 dark:text-teal-300">Düzenle</button>
                                                             <button type="button" onClick={function () { remove(n.id); }}

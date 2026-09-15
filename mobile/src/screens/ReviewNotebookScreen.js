@@ -172,6 +172,12 @@ export default function ReviewNotebookScreen({ navigation }) {
         ]);
     }
 
+    function moveNote(id, dir) {
+        if (!StudentStore.moveReviewNote) return;
+        StudentStore.moveReviewNote(id, dir);
+        SyncEngine.sync();
+    }
+
     var filtered = useMemo(function () {
         if (filterDers === "all") return notes;
         if (filterDers === "genel") return notes.filter(function (n) { return !n.ders; });
@@ -308,7 +314,7 @@ export default function ReviewNotebookScreen({ navigation }) {
                 return (
                     <View key={g.ders || "genel"} style={{ marginBottom: 8 }}>
                         <Text style={[styles.sectionHead, isDark && styles.textMuted]}>{g.ders || "Genel"}</Text>
-                        {g.items.map(function (n) {
+                        {g.items.map(function (n, ni) {
                             var tint = COLOR_CARD[n.color] || null;
                             return (
                                 <Card
@@ -326,6 +332,12 @@ export default function ReviewNotebookScreen({ navigation }) {
                                             ) : null}
                                             <Text style={[styles.noteWhen, isDark && styles.textMuted]}>{fmtWhen(n.updatedAt)}</Text>
                                         </View>
+                                        <Tap onPress={function () { if (ni > 0) moveNote(n.id, -1); }}>
+                                            <Text style={[styles.moveBtn, ni === 0 && styles.moveDisabled]}>↑</Text>
+                                        </Tap>
+                                        <Tap onPress={function () { if (ni < g.items.length - 1) moveNote(n.id, 1); }}>
+                                            <Text style={[styles.moveBtn, ni === g.items.length - 1 && styles.moveDisabled]}>↓</Text>
+                                        </Tap>
                                         <Tap onPress={function () { startEdit(n); }}>
                                             <Text style={styles.editBtn}>Düzenle</Text>
                                         </Tap>
@@ -484,6 +496,16 @@ var styles = StyleSheet.create({
         fontWeight: "600",
         fontSize: 13,
         paddingHorizontal: 4,
+    },
+    moveBtn: {
+        color: colors.text,
+        fontWeight: "800",
+        fontSize: 15,
+        paddingHorizontal: 6,
+        paddingVertical: 2,
+    },
+    moveDisabled: {
+        opacity: 0.25,
     },
     delBtn: {
         color: "#E11D48",

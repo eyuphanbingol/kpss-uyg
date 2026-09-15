@@ -275,19 +275,33 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             var ders = String(n.ders || "").trim();
             var color = String(n.color || "").trim();
             if (!COLORS[color]) color = "";
+            var sort = Number(n.sort);
+            if (!isFinite(sort)) sort = null;
             out.push({
                 id: id,
                 title: title,
                 body: body,
                 ders: ders,
                 color: color,
+                sort: sort,
                 deleted: !!n.deleted,
                 createdAt: n.createdAt || n.updatedAt || nowIso(),
                 updatedAt: n.updatedAt || n.createdAt || nowIso()
             });
         });
+        out.sort(function (a, b) {
+            var as = a.sort;
+            var bs = b.sort;
+            if (as == null && bs == null) return String(b.updatedAt).localeCompare(String(a.updatedAt));
+            if (as == null) return 1;
+            if (bs == null) return -1;
+            if (as !== bs) return as - bs;
+            return String(b.updatedAt).localeCompare(String(a.updatedAt));
+        });
+        out.forEach(function (n, i) {
+            if (n.sort == null) n.sort = i;
+        });
         if (out.length > NOTE_MAX) {
-            out.sort(function (a, b) { return String(b.updatedAt).localeCompare(String(a.updatedAt)); });
             out = out.slice(0, NOTE_MAX);
         }
         return out;
@@ -780,7 +794,14 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
         consumeMixed: consumeMixed,
         listReviewNotes: function () {
             return (state.reviewNotebook || []).filter(function (n) { return n && !n.deleted; })
-                .sort(function (a, b) { return String(b.updatedAt || "").localeCompare(String(a.updatedAt || "")); })
+                .sort(function (a, b) {
+                    var as = Number(a.sort);
+                    var bs = Number(b.sort);
+                    if (!isFinite(as)) as = 1e12;
+                    if (!isFinite(bs)) bs = 1e12;
+                    if (as !== bs) return as - bs;
+                    return String(b.updatedAt || "").localeCompare(String(a.updatedAt || ""));
+                })
                 .map(function (n) { return clone(n); });
         },
         upsertReviewNote: function (payload) {
@@ -795,6 +816,12 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             var list = state.reviewNotebook || [];
             var found = false;
             var stamp = nowIso();
+            var minSort = 0;
+            list.forEach(function (n) {
+                if (!n || n.deleted) return;
+                var s = Number(n.sort);
+                if (isFinite(s) && s < minSort) minSort = s;
+            });
             list = list.map(function (n) {
                 if (!n || n.id !== id) return n;
                 found = true;
@@ -804,6 +831,7 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
                     body: body,
                     ders: ders,
                     color: color,
+                    sort: isFinite(Number(n.sort)) ? Number(n.sort) : minSort,
                     deleted: false,
                     createdAt: n.createdAt || stamp,
                     updatedAt: stamp
@@ -816,6 +844,7 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
                     body: body,
                     ders: ders,
                     color: color,
+                    sort: minSort - 1,
                     deleted: false,
                     createdAt: stamp,
                     updatedAt: stamp
@@ -824,6 +853,45 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             state.reviewNotebook = migrateNotebook(list);
             emit();
             return id;
+        },
+        moveReviewNote: function (id, dir) {
+            id = String(id || "").trim();
+            dir = Number(dir) < 0 ? -1 : 1;
+            if (!id) return false;
+            var list = (state.reviewNotebook || []).slice();
+            var live = list.filter(function (n) { return n && !n.deleted; })
+                .sort(function (a, b) {
+                    var as = Number(a.sort);
+                    var bs = Number(b.sort);
+                    if (!isFinite(as)) as = 1e12;
+                    if (!isFinite(bs)) bs = 1e12;
+                    if (as !== bs) return as - bs;
+                    return String(b.updatedAt || "").localeCompare(String(a.updatedAt || ""));
+                });
+            var cur = null;
+            live.forEach(function (n) { if (n.id === id) cur = n; });
+            if (!cur) return false;
+            var peers = live.filter(function (n) { return String(n.ders || "") === String(cur.ders || ""); });
+            var idx = -1;
+            peers.forEach(function (n, i) { if (n.id === id) idx = i; });
+            var j = idx + dir;
+            if (idx < 0 || j < 0 || j >= peers.length) return false;
+            var a = peers[idx];
+            var b = peers[j];
+            var sa = Number(a.sort);
+            var sb = Number(b.sort);
+            if (!isFinite(sa)) sa = idx;
+            if (!isFinite(sb)) sb = j;
+            var stamp = nowIso();
+            list = list.map(function (n) {
+                if (!n) return n;
+                if (n.id === a.id) return Object.assign({}, n, { sort: sb, updatedAt: stamp });
+                if (n.id === b.id) return Object.assign({}, n, { sort: sa, updatedAt: stamp });
+                return n;
+            });
+            state.reviewNotebook = migrateNotebook(list);
+            emit();
+            return true;
         },
         deleteReviewNote: function (id) {
             id = String(id || "").trim();
