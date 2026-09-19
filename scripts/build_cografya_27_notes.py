@@ -98,21 +98,70 @@ cards.append(card(
 cards.append(card(
     "2.1 OROJENEZ & EPİROJENEZ",
     ul([
-        "<b>Orojenez:</b> dağ oluşumu · <b>Kırık:</b> horst–graben (Ege) · <b>Kıvrım:</b> antiklinal–senklinal (Toroslar, K. Anadolu Dağları).",
-        "Kıvrım dağlar <b>Alp–Himalaya</b> sistemine bağlıdır.",
+        "<b>Orojenez:</b> dağ oluşumu → <b>kırık</b> (horst–graben) + <b>kıvrım</b> (antiklinal–senklinal).",
+        "Kıvrım dağlar <b>Alp–Himalaya</b> sistemine bağlıdır (Kuzey Anadolu + Toroslar).",
         "<b>Epirojenez:</b> toptan yükselme/alçalma · platoların genişliği buna kanıt.",
         "İç kuvvetler: orojenez + epirojenez + volkanizma + deprem (seizma).",
+        "Linyitin yaygınlığı → genç arazi; taşkömürü (Zonguldak) → yaşlı/eski arazi kalıntısı.",
     ]) + trap("Horst yüksekte kalan, graben çökendir — ters ezberleme klasik çeldirici."),
     "rose",
 ))
 
 cards.append(card(
-    "2.2 DEPREM, FAY, VOLKAN",
+    "2.2 KIRIK DAĞLAR — ÖRNEKLER",
     ul([
-        "<b>Hiposantr</b> yerin içi merkez · <b>Episantır</b> yer yüzündeki izdüşüm (en şiddetli sarsıntı).",
-        "Aktif faylar: <b>Kuzey Anadolu</b>, <b>Doğu Anadolu</b>, Batı Anadolu graben fayları.",
-        "Volkanik alan: Doğu Anadolu + İç Anadolu (Erciyes, Nemrut, Süphan, Ağrı, Tendürek…).",
-        "Genç oluşum → deprem riski yüksek; kıyı ve iç bölgelerde yerleşim planlaması kritik.",
+        "Sert tabaka kırılır → <b>horst</b> (dağ) / <b>graben</b> (ova). En yaygın: <b>Ege (Batı Anadolu)</b>.",
+        "<b>Kuzey→güney kod:</b> KAZ–MA–YUNT–BOZ–AYI–ME",
+        "<b>Kaz Dağı</b> (Balıkesir–Çanakkale) · <b>Madra</b> · <b>Yunt</b> · <b>Bozdağlar</b> · <b>Aydın Dağları</b> · <b>Menteşe</b> (Muğla).",
+        "Horst–graben ovaları: Bakırçay, Gediz, Küçük/Büyük Menderes (dağların arasını doldurur).",
+        "<b>İstisna:</b> <b>Amanos (Nur) Dağları</b> Akdeniz’de olmasına rağmen kırık dağdır; önü <b>Amik Ovası</b> (graben).",
+    ])
+    + """<div class="mt-3 overflow-hidden rounded-xl border border-rose-200 dark:border-rose-700/50 bg-white dark:bg-slate-800 p-2">
+        <img src="./src/img/kırık_dağlar.png?v=10" alt="Kırık dağlar" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+    </div>"""
+    + trap("Amanos = kırık (horst); Torosların diğerleri çoğunlukla kıvrım. Karıştırma."),
+    "rose",
+))
+
+cards.append(card(
+    "2.3 KIVRIM DAĞLAR — ÖRNEKLER",
+    ul([
+        "Esnek tabaka sıkışır → kıvrım. İki ana kuşak: <b>Kuzey Anadolu Dağları</b> + <b>Toroslar</b>.",
+        "<b>Kuzey:</b> Yıldız–Istranca (Trakya) · Küre (Kastamonu–Sinop) · Ilgaz · Köroğlu (Bolu) · Canik (Samsun) · <b>Kaçkarlar</b> (Rize–Artvin; en yüksek kıvrım hattı).",
+        "<b>Toros / güney:</b> Bey Dağları (Antalya) · Geyik · Bolkarlar · <b>Aladağlar</b> · Sultan Dağları (Afyon–Konya–Isparta).",
+        "<b>Doğu:</b> Mercan / Munzur (Tunceli–Erzincan) · <b>Cilo–Sat</b> (Hakkâri; buzul).",
+        "Toroslar: Muğla’dan Van Gölü güneyine kadar uzanan güney kıvrım kuşağıdır.",
+    ])
+    + """<div class="mt-3 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
+        <img src="./src/img/kıvrım_dağlar.png?v=14" alt="Kıvrım dağlar" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+    </div>"""
+    + trap("Kaçkar = kıvrım (Kuzey Anadolu). Ağrı = volkanik. İkisi de yüksek ama oluşum farklı."),
+    "sky",
+))
+
+cards.append(card(
+    "2.4 VOLKANİK DAĞLAR — ÖRNEKLER",
+    ul([
+        "Magma yüzeye çıkar → koni. Alan: İç Anadolu + Doğu Anadolu (+ Kula, Karacadağ).",
+        "<b>İç Anadolu (Ke–Ke–M–E–Hasan):</b> Karacadağ (Konya) · Karadağ (Karaman) · Melendiz (Niğde) · <b>Erciyes</b> (Kayseri) · <b>Hasan Dağı</b> (Aksaray–Niğde).",
+        "<b>Doğu (Ne–S–T–A):</b> <b>Nemrut</b> (Bitlis; krater gölü) · <b>Süphan</b> · <b>Tendürek</b> · <b>Ağrı</b> (Ağrı–Iğdır; en yüksek).",
+        "<b>Kula</b> (Manisa): en genç volkanik saha · <b>Mardin–Karacadağ:</b> en yayvan / kalkan volkan.",
+        "Derinlik volkanizması: <b>Uludağ</b> (Bursa) = batolit (granit) örneği — yüzey konisi değildir.",
+    ])
+    + """<div class="mt-3 overflow-hidden rounded-xl border border-red-200 dark:border-red-700/50 bg-white dark:bg-slate-800 p-2">
+        <img src="./src/img/volkanik_dağlar.png?v=12" alt="Volkanik dağlar" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+    </div>"""
+    + trap("İki Karacadağ var: Konya (İç Anadolu volkanı) ≠ Mardin–Karacadağ (GDA kalkan volkan)."),
+    "rose",
+))
+
+cards.append(card(
+    "2.5 DEPREM & FAYLAR",
+    ul([
+        "<b>Hiposantr</b> yerin içi merkez · <b>Episantır</b> yüzeye izdüşüm (en şiddetli sarsıntı).",
+        "<b>KAF:</b> Karlıova → Kuzey Anadolu güneyi → Saros · <b>DAF:</b> Karlıova → Elazığ–Malatya–Maraş → Hatay.",
+        "<b>BAF:</b> Ege horst–graben kırık sistemi (çok parçalı).",
+        "Genç oluşum + aktif fay → deprem riski yüksek; yerleşim ve ulaşım planlaması kritik.",
     ]) + trap("Deprem kuşağı = yalnız KAF değildir; Ege grabenleri de sarsıntılıdır."),
     "rose",
 ))
@@ -121,13 +170,13 @@ cards.append(card(
 cards.append(card(
     "3.1 DIŞ KUVVETLER — GENEL TABLO",
     table(
-        ["Kuvvet", "Nerede baskın?", "Örnek şekil"],
+        ["Kuvvet", "Nerede baskın?", "Örnek şekil / yer"],
         [
-            ["Akarsu", "Yağışlı / eğimli alanlar", "Vadi, sekiler, delta"],
-            ["Rüzgar", "Kurak–yarı kurak (İç/GDA)", "Mantar kaya, kumul, lös"],
-            ["Buzul", "Yüksek dağlar", "Sirk, U vadi, moren"],
-            ["Dalga", "Kıyılar", "Falez, lagün, tombolo"],
-            ["Karst", "Kalker (Akdeniz/GB)", "Obruk, düden, polye"],
+            ["Akarsu", "Yağışlı / eğimli", "Vadi, seki · Çukurova, Bafra delta"],
+            ["Rüzgar", "İç / GDA kurak", "Mantar kaya · Karapınar, Develi, Iğdır"],
+            ["Buzul", "Yüksek dağlar", "Sirk, U · Ağrı, Cilo, Kaçkar, Uludağ"],
+            ["Dalga", "Kıyılar", "Falez (Antalya) · lagün (Terkos)"],
+            ["Karst", "Akdeniz / GB", "Obruk, polye · Teke–Taşeli, Pamukkale"],
         ],
     ) + trap("Aynı bölgede birden fazla kuvvet etkili olabilir; ‘en baskın’a bak."),
     "orange",
@@ -159,10 +208,13 @@ cards.append(card(
 cards.append(card(
     "4.2 ÖNEMLİ PLATOLAR (EŞLEŞTİRME)",
     ul([
-        "<b>Erzurum–Kars–Ardahan:</b> yaz yağışı · çayır · büyükbaş mera · et-süt.",
+        "<b>Erzurum–Kars–Ardahan:</b> en yüksek · yaz yağışı · çayır · büyükbaş (et–süt).",
         "<b>Kapadokya:</b> peri bacası–turizm · <b>Kırşehir:</b> tarıma uygun volkanik düzlük.",
-        "<b>Çatalca–Kocaeli:</b> sanayi/nüfus yoğun · tarım-hayvancılık az.",
-        "<b>Gaziantep / Haymana / Cihanbeyli / Obruk:</b> İç–GDA klasik platolar.",
+        "<b>Çatalca–Kocaeli:</b> en alçak + en gelişmiş · sanayi/nüfus · tarım az.",
+        "<b>Perşembe</b> (Ordu): aşınım · yeşil · tarım aktif (Çatalca’nın tersi).",
+        "<b>Teke / Taşeli:</b> karstik · su yer altı · nüfus seyrek · kıl keçisi.",
+        "<b>İç Anadolu:</b> Bozok (Yozgat) · Haymana (Ankara) · Cihanbeyli · Obruk (Konya) · Uzunyayla (Sivas–Kayseri).",
+        "<b>Gaziantep Platosu:</b> GDA · Antep fıstığı / tarım.",
     ]),
     "violet",
 ))
@@ -220,7 +272,9 @@ cards.append(card(
     ul([
         "<b>Aşındırma:</b> sirk (buzul gölleri) · U vadi · hörgüç kaya · cilalı yüzey.",
         "<b>Biriktirme:</b> moren (ön/yan/orta) · sandur ovaları.",
-        "TR dağılış: yüksek dağlar — <b>Ağrı, Cilo–Sat, Kaçkar, Erciyes, Süphan, Uludağ</b> vb.",
+        "<b>Doğu:</b> Ağrı · Süphan · Cilo–Sat (Hakkâri) · Kaçkar (Rize–Artvin).",
+        "<b>İç / Batı:</b> Erciyes · Hasan Dağı · Uludağ (Bursa; Kilimli, Kara, Aynalı göller).",
+        "<b>Toros:</b> Bolkarlar · Aladağlar (yüksek sirk/buzul kalıntısı).",
         "Günümüz buzulları sınırlı; çoğu şekil eski buzullaşma kalıntısıdır.",
     ]) + trap("U vadi = buzul · V vadi = akarsu. Karıştırma."),
     "cyan",
@@ -231,8 +285,10 @@ cards.append(card(
     "9. KARSTİK ŞEKİLLER",
     ul([
         "<b>Aşındırma:</b> lapya · dolin · uvala · <b>polye</b> (en büyük) · <b>obruk</b> · düden · mağara · kanyon.",
-        "<b>Biriktirme:</b> sarkıt–dikit · <b>traverten</b> (Pamukkale, Antalya traverten platosu).",
-        "Yoğun alan: <b>Akdeniz / GB Anadolu</b> (Batı–Orta Toroslar); obruk gölleri Toroslar’da klasik.",
+        "<b>Polye örnekleri (TAKKEM):</b> Tefenni, Acıpayam, Korkuteli, Kestel, Elmalı, Muğla…",
+        "<b>Biriktirme:</b> sarkıt–dikit · <b>traverten</b> — Pamukkale (Denizli), Antalya traverten platosu.",
+        "<b>Mağara:</b> Karain, Damlataş, Dim, İnsuyu, Cennet–Cehennem (Mersin) klasik eşleşmeler.",
+        "Yoğun alan: <b>Batı–Orta Toroslar</b> (Teke–Taşeli); obruk gölleri burada sık.",
         "Yüzey suyu az → tarım/nüfus sınırlı; kıl keçisi ve maki ile ilişkilendir.",
     ]) + trap("Obruk ≠ volkanik krater. Obruk karstik çökmedir."),
     "lime",
@@ -317,9 +373,11 @@ cards.append(card(
     "13.1 AKARSULAR & GÖLLER",
     ul([
         "Rejim: Karadeniz düzenli · Akdeniz kış yüksek · Doğu Anadolu kar erimesi (ilkbahar).",
-        "Kapalı havza: Van, Tuz, Burdur, Akşehir vb. · açık havza denize dökülür.",
-        "<b>Van:</b> en büyük göl (sodalı) · <b>Tuz:</b> en sığ / tuz · <b>Beyşehir:</b> en büyük tatlı (doğal).",
-        "Yeraltı suyu / artezyen: çöküntü ovaları ve karstik alanlarda kritik.",
+        "<b>Uzun akarsular:</b> Kızılırmak (en uzun) · Fırat · Sakarya · Yeşilırmak · Seyhan–Ceyhan · Dicle.",
+        "Kapalı havza: Van, Tuz, Burdur, Akşehir, Eber… · açık havza denize dökülür.",
+        "<b>Van:</b> en büyük (sodalı) · <b>Tuz:</b> en sığ/tuz · <b>Beyşehir:</b> en büyük tatlı (doğal).",
+        "<b>Volkanik göl:</b> Nemrut (Bitlis), Meke (Konya), Acıgöl · <b>Buzul göl:</b> Uludağ (Kilimli…).",
+        "Yeraltı / artezyen: çöküntü ovaları ve karstik alanlarda kritik.",
     ]) + trap("En büyük göl = Van (alan). En derin doğal göl sorularında da Van öne çıkar."),
     "cyan",
 ))
@@ -584,7 +642,7 @@ cards.append(card(
 
 # ── KAPANIŞ / ÖZET ─────────────────────────────────────────────────────
 cards.append(card(
-    "🔥 ÖSYM SIK EŞLEŞTİRME — 20 SATIR",
+    "🔥 ÖSYM SIK EŞLEŞTİRME — 24 SATIR",
     ul([
         "1) 36–42K / 26–45D · 2) ABCD orta kuşak · 3) Bakı tersliği→Karadeniz",
         "4) Epirojenez→platolar · 5) Çukurova en büyük delta · 6) Falez↔delta zıt",
@@ -593,6 +651,9 @@ cards.append(card(
         "13) Bor→Eskişehir/Kütahya · 14) Krom→Guleman · 15) Taşkömürü→Zonguldak",
         "16) Akkuyu→Mersin · 17) TANAP→Azerbaycan · 18) Çay→Rize",
         "19) Fındık→Ordu–Giresun · 20) GAP→sulama+enerji+tarım",
+        "21) Kırık dağ kodu: Kaz–Madra–Yunt–Boz–Aydın–Menteşe",
+        "22) Amanos=kırık (horst) + Amik=graben · 23) İç volkan: Erciyes–Hasan–Melendiz…",
+        "24) Doğu volkan: Nemrut–Süphan–Tendürek–Ağrı · Kula=en genç · Mardin Karacadağ=kalkan",
     ]),
     "amber",
 ))
@@ -610,7 +671,7 @@ cards.append(card(
     "indigo",
 ))
 
-assert 45 <= len(cards) <= 55, len(cards)
+assert 45 <= len(cards) <= 60, len(cards)
 
 out = Path(__file__).resolve().parents[1] / "notlar" / "cografya-27-not.js"
 parts = ",\n\n".join(cards)

@@ -53,10 +53,11 @@ window.cografya_27_notlari = [
         </span>
     </div>
     <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
-        <li><b>Orojenez:</b> dağ oluşumu · <b>Kırık:</b> horst–graben (Ege) · <b>Kıvrım:</b> antiklinal–senklinal (Toroslar, K. Anadolu Dağları).</li>
-        <li>Kıvrım dağlar <b>Alp–Himalaya</b> sistemine bağlıdır.</li>
+        <li><b>Orojenez:</b> dağ oluşumu → <b>kırık</b> (horst–graben) + <b>kıvrım</b> (antiklinal–senklinal).</li>
+        <li>Kıvrım dağlar <b>Alp–Himalaya</b> sistemine bağlıdır (Kuzey Anadolu + Toroslar).</li>
         <li><b>Epirojenez:</b> toptan yükselme/alçalma · platoların genişliği buna kanıt.</li>
         <li>İç kuvvetler: orojenez + epirojenez + volkanizma + deprem (seizma).</li>
+        <li>Linyitin yaygınlığı → genç arazi; taşkömürü (Zonguldak) → yaşlı/eski arazi kalıntısı.</li>
     </ul><div class="mt-3 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 p-3">
         <p class="text-xs"><b>ÖSYM / çeldirici:</b> Horst yüksekte kalan, graben çökendir — ters ezberleme klasik çeldirici.</p>
     </div>
@@ -65,14 +66,71 @@ window.cografya_27_notlari = [
     `
     <div class="mb-4">
         <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-rose-100 dark:bg-rose-900/40 text-rose-900 dark:text-rose-100 font-black text-sm uppercase tracking-wider">
-            2.2 DEPREM, FAY, VOLKAN
+            2.2 KIRIK DAĞLAR — ÖRNEKLER
         </span>
     </div>
     <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
-        <li><b>Hiposantr</b> yerin içi merkez · <b>Episantır</b> yer yüzündeki izdüşüm (en şiddetli sarsıntı).</li>
-        <li>Aktif faylar: <b>Kuzey Anadolu</b>, <b>Doğu Anadolu</b>, Batı Anadolu graben fayları.</li>
-        <li>Volkanik alan: Doğu Anadolu + İç Anadolu (Erciyes, Nemrut, Süphan, Ağrı, Tendürek…).</li>
-        <li>Genç oluşum → deprem riski yüksek; kıyı ve iç bölgelerde yerleşim planlaması kritik.</li>
+        <li>Sert tabaka kırılır → <b>horst</b> (dağ) / <b>graben</b> (ova). En yaygın: <b>Ege (Batı Anadolu)</b>.</li>
+        <li><b>Kuzey→güney kod:</b> KAZ–MA–YUNT–BOZ–AYI–ME</li>
+        <li><b>Kaz Dağı</b> (Balıkesir–Çanakkale) · <b>Madra</b> · <b>Yunt</b> · <b>Bozdağlar</b> · <b>Aydın Dağları</b> · <b>Menteşe</b> (Muğla).</li>
+        <li>Horst–graben ovaları: Bakırçay, Gediz, Küçük/Büyük Menderes (dağların arasını doldurur).</li>
+        <li><b>İstisna:</b> <b>Amanos (Nur) Dağları</b> Akdeniz’de olmasına rağmen kırık dağdır; önü <b>Amik Ovası</b> (graben).</li>
+    </ul><div class="mt-3 overflow-hidden rounded-xl border border-rose-200 dark:border-rose-700/50 bg-white dark:bg-slate-800 p-2">
+        <img src="./src/img/kırık_dağlar.png?v=10" alt="Kırık dağlar" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+    </div><div class="mt-3 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 p-3">
+        <p class="text-xs"><b>ÖSYM / çeldirici:</b> Amanos = kırık (horst); Torosların diğerleri çoğunlukla kıvrım. Karıştırma.</p>
+    </div>
+    `,
+
+    `
+    <div class="mb-4">
+        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-sky-100 dark:bg-sky-900/40 text-sky-900 dark:text-sky-100 font-black text-sm uppercase tracking-wider">
+            2.3 KIVRIM DAĞLAR — ÖRNEKLER
+        </span>
+    </div>
+    <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
+        <li>Esnek tabaka sıkışır → kıvrım. İki ana kuşak: <b>Kuzey Anadolu Dağları</b> + <b>Toroslar</b>.</li>
+        <li><b>Kuzey:</b> Yıldız–Istranca (Trakya) · Küre (Kastamonu–Sinop) · Ilgaz · Köroğlu (Bolu) · Canik (Samsun) · <b>Kaçkarlar</b> (Rize–Artvin; en yüksek kıvrım hattı).</li>
+        <li><b>Toros / güney:</b> Bey Dağları (Antalya) · Geyik · Bolkarlar · <b>Aladağlar</b> · Sultan Dağları (Afyon–Konya–Isparta).</li>
+        <li><b>Doğu:</b> Mercan / Munzur (Tunceli–Erzincan) · <b>Cilo–Sat</b> (Hakkâri; buzul).</li>
+        <li>Toroslar: Muğla’dan Van Gölü güneyine kadar uzanan güney kıvrım kuşağıdır.</li>
+    </ul><div class="mt-3 overflow-hidden rounded-xl border border-blue-200 dark:border-blue-700/50 bg-white dark:bg-slate-800 p-2">
+        <img src="./src/img/kıvrım_dağlar.png?v=14" alt="Kıvrım dağlar" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+    </div><div class="mt-3 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 p-3">
+        <p class="text-xs"><b>ÖSYM / çeldirici:</b> Kaçkar = kıvrım (Kuzey Anadolu). Ağrı = volkanik. İkisi de yüksek ama oluşum farklı.</p>
+    </div>
+    `,
+
+    `
+    <div class="mb-4">
+        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-rose-100 dark:bg-rose-900/40 text-rose-900 dark:text-rose-100 font-black text-sm uppercase tracking-wider">
+            2.4 VOLKANİK DAĞLAR — ÖRNEKLER
+        </span>
+    </div>
+    <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
+        <li>Magma yüzeye çıkar → koni. Alan: İç Anadolu + Doğu Anadolu (+ Kula, Karacadağ).</li>
+        <li><b>İç Anadolu (Ke–Ke–M–E–Hasan):</b> Karacadağ (Konya) · Karadağ (Karaman) · Melendiz (Niğde) · <b>Erciyes</b> (Kayseri) · <b>Hasan Dağı</b> (Aksaray–Niğde).</li>
+        <li><b>Doğu (Ne–S–T–A):</b> <b>Nemrut</b> (Bitlis; krater gölü) · <b>Süphan</b> · <b>Tendürek</b> · <b>Ağrı</b> (Ağrı–Iğdır; en yüksek).</li>
+        <li><b>Kula</b> (Manisa): en genç volkanik saha · <b>Mardin–Karacadağ:</b> en yayvan / kalkan volkan.</li>
+        <li>Derinlik volkanizması: <b>Uludağ</b> (Bursa) = batolit (granit) örneği — yüzey konisi değildir.</li>
+    </ul><div class="mt-3 overflow-hidden rounded-xl border border-red-200 dark:border-red-700/50 bg-white dark:bg-slate-800 p-2">
+        <img src="./src/img/volkanik_dağlar.png?v=12" alt="Volkanik dağlar" class="w-full h-auto rounded-lg object-contain" loading="lazy">
+    </div><div class="mt-3 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 p-3">
+        <p class="text-xs"><b>ÖSYM / çeldirici:</b> İki Karacadağ var: Konya (İç Anadolu volkanı) ≠ Mardin–Karacadağ (GDA kalkan volkan).</p>
+    </div>
+    `,
+
+    `
+    <div class="mb-4">
+        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-rose-100 dark:bg-rose-900/40 text-rose-900 dark:text-rose-100 font-black text-sm uppercase tracking-wider">
+            2.5 DEPREM & FAYLAR
+        </span>
+    </div>
+    <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
+        <li><b>Hiposantr</b> yerin içi merkez · <b>Episantır</b> yüzeye izdüşüm (en şiddetli sarsıntı).</li>
+        <li><b>KAF:</b> Karlıova → Kuzey Anadolu güneyi → Saros · <b>DAF:</b> Karlıova → Elazığ–Malatya–Maraş → Hatay.</li>
+        <li><b>BAF:</b> Ege horst–graben kırık sistemi (çok parçalı).</li>
+        <li>Genç oluşum + aktif fay → deprem riski yüksek; yerleşim ve ulaşım planlaması kritik.</li>
     </ul><div class="mt-3 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 p-3">
         <p class="text-xs"><b>ÖSYM / çeldirici:</b> Deprem kuşağı = yalnız KAF değildir; Ege grabenleri de sarsıntılıdır.</p>
     </div>
@@ -86,9 +144,9 @@ window.cografya_27_notlari = [
     </div>
     <div class="overflow-x-auto text-sm w-full">
         <table class="w-full min-w-[280px]">
-            <thead><tr><th class="px-2 py-1.5 text-left font-bold border-b border-stone-200 dark:border-stone-600">Kuvvet</th><th class="px-2 py-1.5 text-left font-bold border-b border-stone-200 dark:border-stone-600">Nerede baskın?</th><th class="px-2 py-1.5 text-left font-bold border-b border-stone-200 dark:border-stone-600">Örnek şekil</th></tr></thead>
+            <thead><tr><th class="px-2 py-1.5 text-left font-bold border-b border-stone-200 dark:border-stone-600">Kuvvet</th><th class="px-2 py-1.5 text-left font-bold border-b border-stone-200 dark:border-stone-600">Nerede baskın?</th><th class="px-2 py-1.5 text-left font-bold border-b border-stone-200 dark:border-stone-600">Örnek şekil / yer</th></tr></thead>
             <tbody>
-                <tr><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Akarsu</td><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Yağışlı / eğimli alanlar</td><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Vadi, sekiler, delta</td></tr><tr><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Rüzgar</td><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Kurak–yarı kurak (İç/GDA)</td><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Mantar kaya, kumul, lös</td></tr><tr><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Buzul</td><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Yüksek dağlar</td><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Sirk, U vadi, moren</td></tr><tr><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Dalga</td><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Kıyılar</td><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Falez, lagün, tombolo</td></tr><tr><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Karst</td><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Kalker (Akdeniz/GB)</td><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Obruk, düden, polye</td></tr>
+                <tr><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Akarsu</td><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Yağışlı / eğimli</td><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Vadi, seki · Çukurova, Bafra delta</td></tr><tr><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Rüzgar</td><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">İç / GDA kurak</td><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Mantar kaya · Karapınar, Develi, Iğdır</td></tr><tr><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Buzul</td><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Yüksek dağlar</td><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Sirk, U · Ağrı, Cilo, Kaçkar, Uludağ</td></tr><tr><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Dalga</td><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Kıyılar</td><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Falez (Antalya) · lagün (Terkos)</td></tr><tr><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Karst</td><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Akdeniz / GB</td><td class="px-2 py-1.5 border-b border-stone-100 dark:border-stone-700 align-top">Obruk, polye · Teke–Taşeli, Pamukkale</td></tr>
             </tbody>
         </table>
     </div><div class="mt-3 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 p-3">
@@ -133,10 +191,13 @@ window.cografya_27_notlari = [
         </span>
     </div>
     <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
-        <li><b>Erzurum–Kars–Ardahan:</b> yaz yağışı · çayır · büyükbaş mera · et-süt.</li>
+        <li><b>Erzurum–Kars–Ardahan:</b> en yüksek · yaz yağışı · çayır · büyükbaş (et–süt).</li>
         <li><b>Kapadokya:</b> peri bacası–turizm · <b>Kırşehir:</b> tarıma uygun volkanik düzlük.</li>
-        <li><b>Çatalca–Kocaeli:</b> sanayi/nüfus yoğun · tarım-hayvancılık az.</li>
-        <li><b>Gaziantep / Haymana / Cihanbeyli / Obruk:</b> İç–GDA klasik platolar.</li>
+        <li><b>Çatalca–Kocaeli:</b> en alçak + en gelişmiş · sanayi/nüfus · tarım az.</li>
+        <li><b>Perşembe</b> (Ordu): aşınım · yeşil · tarım aktif (Çatalca’nın tersi).</li>
+        <li><b>Teke / Taşeli:</b> karstik · su yer altı · nüfus seyrek · kıl keçisi.</li>
+        <li><b>İç Anadolu:</b> Bozok (Yozgat) · Haymana (Ankara) · Cihanbeyli · Obruk (Konya) · Uzunyayla (Sivas–Kayseri).</li>
+        <li><b>Gaziantep Platosu:</b> GDA · Antep fıstığı / tarım.</li>
     </ul>
     `,
 
@@ -211,7 +272,9 @@ window.cografya_27_notlari = [
     <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
         <li><b>Aşındırma:</b> sirk (buzul gölleri) · U vadi · hörgüç kaya · cilalı yüzey.</li>
         <li><b>Biriktirme:</b> moren (ön/yan/orta) · sandur ovaları.</li>
-        <li>TR dağılış: yüksek dağlar — <b>Ağrı, Cilo–Sat, Kaçkar, Erciyes, Süphan, Uludağ</b> vb.</li>
+        <li><b>Doğu:</b> Ağrı · Süphan · Cilo–Sat (Hakkâri) · Kaçkar (Rize–Artvin).</li>
+        <li><b>İç / Batı:</b> Erciyes · Hasan Dağı · Uludağ (Bursa; Kilimli, Kara, Aynalı göller).</li>
+        <li><b>Toros:</b> Bolkarlar · Aladağlar (yüksek sirk/buzul kalıntısı).</li>
         <li>Günümüz buzulları sınırlı; çoğu şekil eski buzullaşma kalıntısıdır.</li>
     </ul><div class="mt-3 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 p-3">
         <p class="text-xs"><b>ÖSYM / çeldirici:</b> U vadi = buzul · V vadi = akarsu. Karıştırma.</p>
@@ -226,8 +289,10 @@ window.cografya_27_notlari = [
     </div>
     <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
         <li><b>Aşındırma:</b> lapya · dolin · uvala · <b>polye</b> (en büyük) · <b>obruk</b> · düden · mağara · kanyon.</li>
-        <li><b>Biriktirme:</b> sarkıt–dikit · <b>traverten</b> (Pamukkale, Antalya traverten platosu).</li>
-        <li>Yoğun alan: <b>Akdeniz / GB Anadolu</b> (Batı–Orta Toroslar); obruk gölleri Toroslar’da klasik.</li>
+        <li><b>Polye örnekleri (TAKKEM):</b> Tefenni, Acıpayam, Korkuteli, Kestel, Elmalı, Muğla…</li>
+        <li><b>Biriktirme:</b> sarkıt–dikit · <b>traverten</b> — Pamukkale (Denizli), Antalya traverten platosu.</li>
+        <li><b>Mağara:</b> Karain, Damlataş, Dim, İnsuyu, Cennet–Cehennem (Mersin) klasik eşleşmeler.</li>
+        <li>Yoğun alan: <b>Batı–Orta Toroslar</b> (Teke–Taşeli); obruk gölleri burada sık.</li>
         <li>Yüzey suyu az → tarım/nüfus sınırlı; kıl keçisi ve maki ile ilişkilendir.</li>
     </ul><div class="mt-3 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 p-3">
         <p class="text-xs"><b>ÖSYM / çeldirici:</b> Obruk ≠ volkanik krater. Obruk karstik çökmedir.</p>
@@ -339,9 +404,11 @@ window.cografya_27_notlari = [
     </div>
     <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
         <li>Rejim: Karadeniz düzenli · Akdeniz kış yüksek · Doğu Anadolu kar erimesi (ilkbahar).</li>
-        <li>Kapalı havza: Van, Tuz, Burdur, Akşehir vb. · açık havza denize dökülür.</li>
-        <li><b>Van:</b> en büyük göl (sodalı) · <b>Tuz:</b> en sığ / tuz · <b>Beyşehir:</b> en büyük tatlı (doğal).</li>
-        <li>Yeraltı suyu / artezyen: çöküntü ovaları ve karstik alanlarda kritik.</li>
+        <li><b>Uzun akarsular:</b> Kızılırmak (en uzun) · Fırat · Sakarya · Yeşilırmak · Seyhan–Ceyhan · Dicle.</li>
+        <li>Kapalı havza: Van, Tuz, Burdur, Akşehir, Eber… · açık havza denize dökülür.</li>
+        <li><b>Van:</b> en büyük (sodalı) · <b>Tuz:</b> en sığ/tuz · <b>Beyşehir:</b> en büyük tatlı (doğal).</li>
+        <li><b>Volkanik göl:</b> Nemrut (Bitlis), Meke (Konya), Acıgöl · <b>Buzul göl:</b> Uludağ (Kilimli…).</li>
+        <li>Yeraltı / artezyen: çöküntü ovaları ve karstik alanlarda kritik.</li>
     </ul><div class="mt-3 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 p-3">
         <p class="text-xs"><b>ÖSYM / çeldirici:</b> En büyük göl = Van (alan). En derin doğal göl sorularında da Van öne çıkar.</p>
     </div>
@@ -670,7 +737,7 @@ window.cografya_27_notlari = [
     `
     <div class="mb-4">
         <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-amber-100 dark:bg-amber-900/40 text-amber-900 dark:text-amber-100 font-black text-sm uppercase tracking-wider">
-            🔥 ÖSYM SIK EŞLEŞTİRME — 20 SATIR
+            🔥 ÖSYM SIK EŞLEŞTİRME — 24 SATIR
         </span>
     </div>
     <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
@@ -681,6 +748,9 @@ window.cografya_27_notlari = [
         <li>13) Bor→Eskişehir/Kütahya · 14) Krom→Guleman · 15) Taşkömürü→Zonguldak</li>
         <li>16) Akkuyu→Mersin · 17) TANAP→Azerbaycan · 18) Çay→Rize</li>
         <li>19) Fındık→Ordu–Giresun · 20) GAP→sulama+enerji+tarım</li>
+        <li>21) Kırık dağ kodu: Kaz–Madra–Yunt–Boz–Aydın–Menteşe</li>
+        <li>22) Amanos=kırık (horst) + Amik=graben · 23) İç volkan: Erciyes–Hasan–Melendiz…</li>
+        <li>24) Doğu volkan: Nemrut–Süphan–Tendürek–Ağrı · Kula=en genç · Mardin Karacadağ=kalkan</li>
     </ul>
     `,
 
