@@ -222,6 +222,10 @@ window.getKpssData = function () {
             "Türkiye'nin Jeopolitik Konumu ve Bölgesel Projeler":{
                 notlar:window.cografya_26_notlari || [],
                 sorular:window.cografya_26_sorulari || []
+            },
+            "Genel Tekrar":{
+                notlar:window.cografya_27_notlari || [],
+                sorular:window.cografya_27_sorulari || []
             }
         },
         "Türkçe": {
