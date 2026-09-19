@@ -115,6 +115,10 @@ window.getKpssData = function () {
                 notlar: window.tarih_28_notlari || [],
                 sorular: window.tarih_28_sorulari || []
             },
+            "Genel Tekrar":{
+                notlar: window.tarih_29_notlari || [],
+                sorular: window.tarih_29_sorulari || []
+            },
         },
         "Coğrafya": {
             "Türkiye'nin Coğrafi Konumu": {
