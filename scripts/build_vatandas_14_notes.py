@@ -103,9 +103,9 @@ cards.append(card(
 cards.append(card(
     "2.1 YAPTIRIM (MÜEYYİDE)",
     ul([
-        "Yaptırım: kurala <b>uymamaya</b> gösterilen tepkidir.",
-        "<b>Maddi yaptırım</b> yalnızca <b>hukuk</b>ta vardır.",
-        "Din / ahlak / görgü / örf → <b>manevi</b> yaptırım.",
+        "<b>Yaptırım (müeyyide):</b> kuralın emir/yasaklarına uymama karşılığında verilen tepkidir.",
+        "<b>Maddi yaptırım:</b> sadece <b>hukuk kurallarında</b> bulunur.",
+        "Din / ahlak / görgü / örf / âdet → <b>manevi</b> yaptırım.",
     ]) + trap("Maddi yaptırım = hukuk tekeli. Manevi yaptırımı hukuk yaptırımı sanma."),
     "rose",
 ))
@@ -125,11 +125,11 @@ cards.append(card(
 cards.append(card(
     "2.2 YAPTIRIM ÇEŞİTLERİ",
     ul([
-        "<b>Ceza</b>",
-        "<b>Cebr-i icra</b> (zorla yerine getirme)",
-        "<b>Tazminat</b>",
-        "<b>İptal</b> (idari işlemlerde)",
-        "<b>Hükümsüzlük</b>",
+        "<b>Ceza</b> → suç işlersek",
+        "<b>Cebr-i icra</b> → borç/sorumluluk yerine getirilmezse",
+        "<b>Tazminat</b> → maddi–manevi zarar",
+        "<b>İptal</b> → hukuka aykırı idari işlemin yargı kararıyla ortadan kaldırılması",
+        "<b>Hükümsüzlük (geçersizlik)</b> → hukuki işlemin sonuç doğurmaması",
     ]),
     "rose",
 ))
@@ -359,7 +359,8 @@ cards.append(card(
     ul([
         "Normal erginlik: <b>18</b>",
         "Evlilikle: <b>17</b> / olağanüstü hâllerde <b>16</b>",
-        "<b>Kaza-i rüşt:</b> <b>15+</b> istek + izin + menfaat",
+        "<b>Kaza-i rüşt (ergin kılınma):</b> <b>15+</b> · küçüğün isteği · veli/vasi izni · küçüğün menfaati",
+        "<b>Kısıtlanma:</b> işlerini göremeyecek / korunma–bakım ihtiyacı / başkalarının güvenliğini tehlikeye sokan kişilerin mahkeme kararıyla koruma altına alınması.",
     ]),
     "emerald",
 ))
@@ -455,11 +456,14 @@ cards.append(card(
 cards.append(card(
     "9.2b İLKELER — KISA ÖRNEKLER",
     ul([
-        "<b>İrade özerkliği:</b> taraflar sözleşmenin konusunu/şartlarını belirler (emredici sınırlar saklı)",
-        "<b>Eşitlik:</b> alacaklı–borçlu hukuken eşit konumda",
-        "<b>Nisbilik:</b> A–B sözleşmesi C’yi kural olarak bağlamaz",
-        "<b>İvazlık:</b> satışta mal ↔ bedel",
-        "<b>Ödeme yeri:</b> para borcu kural olarak alacaklı yerinde; genel kural borçlu ikametgâhı (para/parça hariç)",
+        "<b>İrade özerkliği:</b> Ahmet evini satarken alıcıyı ve fiyatı özgürce belirler.",
+        "<b>Eşitlik:</b> zengin iş insanı ile işçinin kira sözleşmesinde kanun önünde eşit haklar.",
+        "<b>Nisbilik:</b> Ali Veli’ye borçlandıysa borç yalnız Ali’den istenir; kardeşinden değil.",
+        "<b>Dürüstlük (TMK 2):</b> ödemeyi gece yarısı değil mesai saatlerinde yapmak.",
+        "<b>Kusurlu sorumluluk:</b> dikkatsizlikle araca çarpma → zararı ödeme.",
+        "<b>İvazlık:</b> satışta satıcı mal verir ↔ alıcı para öder.",
+        "<b>Borçlu ikametgâhında ödeme:</b> bir çuval buğday teslimatı borçlunun deposunda (para/parça hariç).",
+        "<b>3. kişi aleyhine borç yok:</b> Ayşe–Fatma “Mehmet 1000 TL ödesin” diyemez.",
     ]),
     "indigo",
 ))
@@ -492,12 +496,13 @@ cards.append(card(
 cards.append(card(
     "9.4b SONA ERME — KISA ÖRNEKLER",
     ul([
-        "<b>İfa:</b> satılan malın teslimi / bedelin ödenmesi",
-        "<b>İbra:</b> alacaklı “alacağımdan vazgeçtim”",
-        "<b>Tecdit:</b> eski borç yerine yeni borç ilişkisi",
-        "<b>Birleşme:</b> miras vb. ile alacaklı–borçlu sıfatı bir kişide toplanır",
-        "<b>Takas:</b> karşılıklı borçların mahsubu",
-        "<b>Kusursuz imkânsızlık:</b> edim objektif olarak imkânsızlaşır, kusur yok",
+        "<b>İfa:</b> 5.000 TL kredi borcunun nakit kapatılması",
+        "<b>İbra:</b> “Bu parayı almaktan vazgeçtim” diye anlaşma",
+        "<b>Tecdit:</b> kira borcunun senet borcuna dönüştürülmesi",
+        "<b>Birleşme:</b> babadan borç alan kişinin babası ölünce tek mirasçı olması",
+        "<b>Kusursuz imkânsızlık:</b> satılan atın yıldırımla ölmesi",
+        "<b>Takas:</b> karşılıklı 1.000 TL borçlarda “hesaplaşalım” (muaccel + aynı tür)",
+        "<b>Zamanaşımı:</b> süre dolunca eksik borç + def’i (“süre doldu”)",
     ]),
     "indigo",
 ))

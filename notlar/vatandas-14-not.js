@@ -70,9 +70,9 @@ window.vatandas_14_notlari = [
         </span>
     </div>
     <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
-        <li>Yaptırım: kurala <b>uymamaya</b> gösterilen tepkidir.</li>
-        <li><b>Maddi yaptırım</b> yalnızca <b>hukuk</b>ta vardır.</li>
-        <li>Din / ahlak / görgü / örf → <b>manevi</b> yaptırım.</li>
+        <li><b>Yaptırım (müeyyide):</b> kuralın emir/yasaklarına uymama karşılığında verilen tepkidir.</li>
+        <li><b>Maddi yaptırım:</b> sadece <b>hukuk kurallarında</b> bulunur.</li>
+        <li>Din / ahlak / görgü / örf / âdet → <b>manevi</b> yaptırım.</li>
     </ul><div class="mt-3 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 p-3">
         <p class="text-xs"><b>ÖSYM / çeldirici:</b> Maddi yaptırım = hukuk tekeli. Manevi yaptırımı hukuk yaptırımı sanma.</p>
     </div>
@@ -100,11 +100,11 @@ window.vatandas_14_notlari = [
         </span>
     </div>
     <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
-        <li><b>Ceza</b></li>
-        <li><b>Cebr-i icra</b> (zorla yerine getirme)</li>
-        <li><b>Tazminat</b></li>
-        <li><b>İptal</b> (idari işlemlerde)</li>
-        <li><b>Hükümsüzlük</b></li>
+        <li><b>Ceza</b> → suç işlersek</li>
+        <li><b>Cebr-i icra</b> → borç/sorumluluk yerine getirilmezse</li>
+        <li><b>Tazminat</b> → maddi–manevi zarar</li>
+        <li><b>İptal</b> → hukuka aykırı idari işlemin yargı kararıyla ortadan kaldırılması</li>
+        <li><b>Hükümsüzlük (geçersizlik)</b> → hukuki işlemin sonuç doğurmaması</li>
     </ul>
     `,
 
@@ -414,7 +414,8 @@ window.vatandas_14_notlari = [
     <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
         <li>Normal erginlik: <b>18</b></li>
         <li>Evlilikle: <b>17</b> / olağanüstü hâllerde <b>16</b></li>
-        <li><b>Kaza-i rüşt:</b> <b>15+</b> istek + izin + menfaat</li>
+        <li><b>Kaza-i rüşt (ergin kılınma):</b> <b>15+</b> · küçüğün isteği · veli/vasi izni · küçüğün menfaati</li>
+        <li><b>Kısıtlanma:</b> işlerini göremeyecek / korunma–bakım ihtiyacı / başkalarının güvenliğini tehlikeye sokan kişilerin mahkeme kararıyla koruma altına alınması.</li>
     </ul>
     `,
 
@@ -540,11 +541,14 @@ window.vatandas_14_notlari = [
         </span>
     </div>
     <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
-        <li><b>İrade özerkliği:</b> taraflar sözleşmenin konusunu/şartlarını belirler (emredici sınırlar saklı)</li>
-        <li><b>Eşitlik:</b> alacaklı–borçlu hukuken eşit konumda</li>
-        <li><b>Nisbilik:</b> A–B sözleşmesi C’yi kural olarak bağlamaz</li>
-        <li><b>İvazlık:</b> satışta mal ↔ bedel</li>
-        <li><b>Ödeme yeri:</b> para borcu kural olarak alacaklı yerinde; genel kural borçlu ikametgâhı (para/parça hariç)</li>
+        <li><b>İrade özerkliği:</b> Ahmet evini satarken alıcıyı ve fiyatı özgürce belirler.</li>
+        <li><b>Eşitlik:</b> zengin iş insanı ile işçinin kira sözleşmesinde kanun önünde eşit haklar.</li>
+        <li><b>Nisbilik:</b> Ali Veli’ye borçlandıysa borç yalnız Ali’den istenir; kardeşinden değil.</li>
+        <li><b>Dürüstlük (TMK 2):</b> ödemeyi gece yarısı değil mesai saatlerinde yapmak.</li>
+        <li><b>Kusurlu sorumluluk:</b> dikkatsizlikle araca çarpma → zararı ödeme.</li>
+        <li><b>İvazlık:</b> satışta satıcı mal verir ↔ alıcı para öder.</li>
+        <li><b>Borçlu ikametgâhında ödeme:</b> bir çuval buğday teslimatı borçlunun deposunda (para/parça hariç).</li>
+        <li><b>3. kişi aleyhine borç yok:</b> Ayşe–Fatma “Mehmet 1000 TL ödesin” diyemez.</li>
     </ul>
     `,
 
@@ -587,12 +591,13 @@ window.vatandas_14_notlari = [
         </span>
     </div>
     <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
-        <li><b>İfa:</b> satılan malın teslimi / bedelin ödenmesi</li>
-        <li><b>İbra:</b> alacaklı “alacağımdan vazgeçtim”</li>
-        <li><b>Tecdit:</b> eski borç yerine yeni borç ilişkisi</li>
-        <li><b>Birleşme:</b> miras vb. ile alacaklı–borçlu sıfatı bir kişide toplanır</li>
-        <li><b>Takas:</b> karşılıklı borçların mahsubu</li>
-        <li><b>Kusursuz imkânsızlık:</b> edim objektif olarak imkânsızlaşır, kusur yok</li>
+        <li><b>İfa:</b> 5.000 TL kredi borcunun nakit kapatılması</li>
+        <li><b>İbra:</b> “Bu parayı almaktan vazgeçtim” diye anlaşma</li>
+        <li><b>Tecdit:</b> kira borcunun senet borcuna dönüştürülmesi</li>
+        <li><b>Birleşme:</b> babadan borç alan kişinin babası ölünce tek mirasçı olması</li>
+        <li><b>Kusursuz imkânsızlık:</b> satılan atın yıldırımla ölmesi</li>
+        <li><b>Takas:</b> karşılıklı 1.000 TL borçlarda “hesaplaşalım” (muaccel + aynı tür)</li>
+        <li><b>Zamanaşımı:</b> süre dolunca eksik borç + def’i (“süre doldu”)</li>
     </ul>
     `,
 
