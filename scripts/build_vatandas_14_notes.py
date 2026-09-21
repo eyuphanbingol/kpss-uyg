@@ -208,8 +208,8 @@ cards.append(card(
         "<b>Tamamlayıcı</b> kurallar — boşluğu doldurur",
         "<b>Yorumlayıcı</b> kurallar — örn. ayın başı = <b>1</b>",
         "<b>Tanımlayıcı</b> kurallar",
-        "<b>Yetki verici</b> kurallar — örn. <b>miras reddi</b>",
-    ]) + trap("Yorumlayıcı örnek: ayın başı = ayın 1’i. Yetki verici: miras reddi."),
+        "<b>Yetki verici</b> kurallar — örn. <b>mirasın reddi</b>",
+    ]) + trap("Yorumlayıcı örnek: ayın başı = ayın 1’i. Yetki verici: mirasın reddi."),
     "violet",
 ))
 
@@ -230,8 +230,8 @@ cards.append(card(
         "Anayasa Hukuku",
         "İdare Hukuku",
         "Devletler Genel Hukuku",
-        "Yargılama Hukuku",
-        "İcra–İflas Hukuku",
+        "Yargılama Hukuku (Yargılanma Hukuku)",
+        "İcra ve İflas Hukuku",
         "Ceza Hukuku",
         "Vergi Hukuku",
     ]),
@@ -302,8 +302,8 @@ cards.append(card(
     "8.1 GERÇEK KİŞİLİK",
     ul([
         "Gerçek kişilik: <b>tam</b> ve <b>sağ</b> doğumla başlar.",
-        "Doğum <b>nüfus kütüğüne</b> yazılır.",
-        "Ölüm: <b>10 gün</b> içinde bildirim.",
+        "Doğum ve soybağı kayıtları: <b>doğum kütüğü</b>.",
+        "Ölüm: gerçek kişiliği sona erdirir · <b>10 gün</b> içinde bildirim zorunlu.",
     ]),
     "emerald",
 ))
@@ -311,9 +311,9 @@ cards.append(card(
 cards.append(card(
     "8.2 ÖLÜM KARİNESİ",
     ul([
-        "Ölüm karinesi: <b>mülki amir</b> kararıyla.",
-        "Birden fazla kişinin ölümünde <b>ölüm karinesi = aynı anda</b> ölmüş sayılır.",
-        "(Miras sıralaması için önemli.)",
+        "Ölümüne kesin gözle bakılacak durumda kaybolma + ceset yok → <b>ölmüş sayılır</b>.",
+        "Mahallin en büyük <b>mülki amiri</b> emriyle düzenlenir · varsa evlilik sona erer.",
+        "Birden fazla kişinin kim önce öldüğü ispat edilemezse → <b>aynı anda</b> ölmüş sayılır.",
     ]) + trap("Birden fazla ölüm karinesi → aynı anda; birbirinin mirasçısı olmaz varsayımı."),
     "emerald",
 ))
@@ -335,11 +335,11 @@ cards.append(card(
 cards.append(card(
     "8.4 TÜZEL KİŞİLER",
     ul([
-        "<b>Dernek:</b> ≥ <b>7</b> kişi; kazanç paylaşma yok",
-        "<b>Vakıf:</b> mal topluluğu",
-        "Şirket",
-        "<b>TRT</b>",
-        "<b>Kamu tüzel:</b> devlet, il özel idare",
+        "<b>Dernek:</b> kazanç paylaşma amacı gütmeyen · en az <b>7 gerçek veya tüzel kişi</b>",
+        "<b>Vakıf:</b> herhangi bir amaca yönelik <b>mal topluluğu</b>",
+        "Şirketler · <b>TRT</b> örneği",
+        "<b>Kamu tüzel kişileri:</b> Devlet, il özel idareleri",
+        "<b>Özel hukuk tüzel kişileri:</b> şirketler, vakıflar, dernekler",
     ]),
     "emerald",
 ))
@@ -390,9 +390,12 @@ cards.append(card(
 cards.append(card(
     "8.8 HISIMLIK",
     ul([
-        "Türler: <b>kan</b> hısımlığı, <b>kayın</b> hısımlığı, <b>yapay</b> hısımlık",
-        "Dereceler: üst soy · alt soy · yan soy",
-        "Koruma kurumları: <b>velayet</b>, <b>vesayet</b>, <b>kayyum</b>",
+        "Türler: doğumla <b>kan bağı</b> · evlenmeyle <b>kayın</b> · evlat edinmeyle <b>yapay</b> hısımlık",
+        "<b>Üst soy 1°:</b> anne–baba · <b>Alt soy 1°:</b> çocuk · <b>2°:</b> torun",
+        "<b>Yan soy 2°:</b> kardeş · <b>3°:</b> yeğen, amca, hala, dayı, teyze · <b>4°:</b> yeğen çocukları, kuzen",
+        "Aynı ortak kök = tam kan soy; üvey vb. = yarım kan soy",
+        "Kayın hısımlığında kan bağı yoktur.",
+        "<b>Velayet:</b> anne–baba (kural küçükler) · <b>Vesayet:</b> mahkeme + vasi · <b>Kayyum:</b> sulh mahkemesi, belirli iş/mal",
     ]),
     "emerald",
 ))
@@ -400,8 +403,9 @@ cards.append(card(
 cards.append(card(
     "8.9 AİLE — KISA",
     ul([
-        "Aile hukuku: evlilik, nişan, boşanma, velayet ilişkilerini düzenler.",
-        "Evliliğin kurucu unsuru: yetkili <b>memur önünde</b> (yokluk bağlantısı).",
+        "<b>Aile Hukuku:</b> evlenme, <b>nişanlanma</b>, <b>evlat edinme</b>, <b>nafaka</b>, velayet, vesayet",
+        "Evliliğin kurucu unsuru: yetkili <b>memur önünde</b> (yoksa <b>yokluk</b>).",
+        "Eşler: evlat edinme / mal düzenlemede bazı işlerde <b>birbirinin rızası</b> gerekir.",
     ]),
     "emerald",
 ))
@@ -409,10 +413,9 @@ cards.append(card(
 cards.append(card(
     "8.10 MİRAS — KISA",
     ul([
-        "<b>Muris:</b> miras bırakan",
-        "<b>Varis:</b> mirasçı",
-        "<b>Tereke:</b> miras bırakanın malvarlığı (aktif–pasif)",
-        "Miras reddi → <b>yetki verici</b> kural örneği",
+        "<b>Miras Hukuku:</b> miras dağıtımını düzenler.",
+        "<b>Muris:</b> miras bırakan · <b>Varis:</b> mirasçı · <b>Tereke:</b> mirasa konu tüm malvarlığı",
+        "<b>Mirasın reddi</b> → <b>yetki verici</b> hukuk kuralı örneği",
     ]),
     "emerald",
 ))
@@ -513,8 +516,8 @@ cards.append(card(
 cards.append(card(
     "10.1 ÖZEL HAKLAR — MUTLAK / NİSPİ",
     ul([
-        "<b>Mutlak hak:</b> herkese karşı ileri sürülebilir (örn. ayni hak, kişilik hakları)",
-        "<b>Nispi hak:</b> yalnızca belirli kişiye karşı (örn. alacak hakkı)",
+        "<b>Mutlak hak:</b> herkese karşı · örn. <b>mülkiyet</b>, yaşam/kişilik hakları",
+        "<b>Nispi hak:</b> yalnız tarafa karşı · örn. <b>alacak hakkı</b>",
     ]),
     "violet",
 ))
@@ -522,11 +525,11 @@ cards.append(card(
 cards.append(card(
     "10.2 ÖZEL HAKLAR — DİĞER AYRIMLAR",
     ul([
-        "<b>Mal varlığı hakları</b> / <b>Kişilik hakları</b>",
-        "<b>Devredilebilir</b> / <b>Devredilemez</b>",
-        "<b>Yenilik doğuran haklar</b> vs <b>alelade haklar</b>",
-        "Yenilik doğuran: <b>kurucu</b> · <b>değiştirici</b> · <b>bozucu</b>",
-        "Alelade örnek bağlamı: <b>velayet</b> (sürekli/statü)",
+        "<b>Mal varlığı:</b> parayla ölçülür · örn. mülkiyet, alacak, <b>telif</b>",
+        "<b>Kişilik hakları:</b> şeref, haysiyet, vücut bütünlüğü, yaşam · devredilemez/satılamaz",
+        "<b>Devredilebilir:</b> araba mülkiyeti, alacak, telif · <b>Devredilemeyen:</b> <b>nafaka</b>, <b>intifa</b>, nişanlılığı bozma",
+        "<b>Yenilik doğuran (inşai):</b> tek taraflı beyan · <b>kurucu</b> (istifa, teklifi kabul) · <b>değiştirici</b> (ayıplı mal değişimi) · <b>bozucu</b> (fesih, boşanma)",
+        "<b>Alelade:</b> yeni durum yaratmaz · <b>velayet/vesayet</b>, <b>yönetim hakkı</b>",
     ]),
     "violet",
 ))
@@ -545,20 +548,19 @@ cards.append(card(
 cards.append(card(
     "11.2 MEŞRU MÜDAFAA / ZARURET / KUVVET",
     ul([
-        "<b>Meşru müdafaa:</b> saldırıya karşı orantılı savunma",
-        "<b>Zaruret (zorunluluk) hâli:</b> daha ağır zararı önlemek için başka çare yokluğu",
-        "<b>Kuvvet kullanma:</b> hukuken izin verilen zor kullanma (yetkili makamlar vb.)",
+        "<b>Meşru müdafaa:</b> saldırıyı önlemek için <b>orantılı</b> karşı saldırı",
+        "<b>Zaruret hali (zorda kalma):</b> cana/mala yönelen tehlikeden korunmak için <b>üçüncü kişinin malına</b> zarar",
+        "<b>Kuvvet kullanma:</b> devlet müdahalesi zamanında yetişmezse kendi eşya/şahsını koruma · hukuka uygunsa ceza yok",
     ]),
     "sky",
 ))
 
-# ── KAYNAKLAR ──
 cards.append(card(
     "12.1 HUKUKUN KAYNAKLARI — ASLİ / TALİ",
     ul([
-        "<b>Asli yazılı</b> kaynaklar: Anayasa, kanun, CBK, yönetmelik…",
-        "<b>Asli yazısız:</b> örf–adet hukuku",
-        "<b>Tali kaynaklar:</b> doktrin, içtihat — <b>bağlayıcı değildir</b> (İBK hariç!)",
+        "<b>Asli:</b> hâkimin bakmak zorunda olduğu bağlayıcı kaynaklar → yazılı + yazısız",
+        "<b>Yazısız (örf–âdet):</b> yazılıda hüküm yoksa · örn. ticari <b>çağrı usulü</b>, bölgesel gelenekler",
+        "<b>Tali:</b> doktrin (bilimsel görüş) + içtihat — kural olarak <b>bağlayıcı değil</b> (İBK / AYM hariç)",
     ]) + trap("İçtihat genel olarak bağlayıcı değil; İBK bağlayıcı yazılı asli kaynaktır."),
     "amber",
 ))
@@ -566,14 +568,13 @@ cards.append(card(
 cards.append(card(
     "12.2 NORM HİYERARŞİSİ (ÖZET)",
     ul([
-        "<b>Anayasa</b>",
-        "<b>Kanun</b>",
-        "<b>Uluslararası antlaşmalar</b> — temel hak ve özgürlüklerde kanunla çakışırsa <b>antlaşma</b> uygulanır",
-        "<b>CBK</b> — olağan CBK: sosyal–ekonomik alanda",
+        "<b>Anayasa</b> (örn. 1982)",
+        "<b>Kanun</b> (TBMM · TCK, TMK…)",
+        "<b>Uluslararası antlaşmalar</b> — kanun hükmünde · temel hakta çakışmada antlaşma (örn. <b>AİHS</b> / Avrupa İnsan Hakları Sözleşmesi)",
+        "<b>Cumhurbaşkanlığı Kararnamesi (CBK)</b> — olağan dönemde sosyal–ekonomik haklar",
         "<b>Meclis İçtüzüğü</b>",
-        "<b>İBK</b> — İçtihadı Birleştirme Kararı",
-        "<b>Yönetmelik</b>",
-        "<b>Genelge</b>",
+        "<b>İçtihadı Birleştirme Kararları (İBK)</b> — bağlayıcı yazılı asli",
+        "<b>Yönetmelik</b> · <b>Genelge</b>",
     ]),
     "amber",
 ))
@@ -602,8 +603,9 @@ cards.append(card(
 cards.append(card(
     "12.4 KIYAS",
     ul([
-        "Kıyas = <b>kaynak değildir</b>; bir <b>yorum / uygulama</b> yöntemidir.",
-        "<b>Ceza hukukunda kıyas yasaktır</b> (kanunilik ilkesi).",
+        "Kıyas = <b>kaynak değildir</b>; <b>yorum metodu</b>dur.",
+        "<b>Ceza hukukunda kıyas yasaktır</b> (kanunilik).",
+        "Örn: elektrik hırsızlığı kuralını benzer diye doğalgaz hırsızlığına uygulamak → cezada yasak yol.",
     ]) + trap("Kıyas kaynağı sanma. Ceza + kıyas = yasak."),
     "amber",
 ))

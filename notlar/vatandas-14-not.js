@@ -211,9 +211,9 @@ window.vatandas_14_notlari = [
         <li><b>Tamamlayıcı</b> kurallar — boşluğu doldurur</li>
         <li><b>Yorumlayıcı</b> kurallar — örn. ayın başı = <b>1</b></li>
         <li><b>Tanımlayıcı</b> kurallar</li>
-        <li><b>Yetki verici</b> kurallar — örn. <b>miras reddi</b></li>
+        <li><b>Yetki verici</b> kurallar — örn. <b>mirasın reddi</b></li>
     </ul><div class="mt-3 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 p-3">
-        <p class="text-xs"><b>ÖSYM / çeldirici:</b> Yorumlayıcı örnek: ayın başı = ayın 1’i. Yetki verici: miras reddi.</p>
+        <p class="text-xs"><b>ÖSYM / çeldirici:</b> Yorumlayıcı örnek: ayın başı = ayın 1’i. Yetki verici: mirasın reddi.</p>
     </div>
     `,
 
@@ -242,8 +242,8 @@ window.vatandas_14_notlari = [
         <li>Anayasa Hukuku</li>
         <li>İdare Hukuku</li>
         <li>Devletler Genel Hukuku</li>
-        <li>Yargılama Hukuku</li>
-        <li>İcra–İflas Hukuku</li>
+        <li>Yargılama Hukuku (Yargılanma Hukuku)</li>
+        <li>İcra ve İflas Hukuku</li>
         <li>Ceza Hukuku</li>
         <li>Vergi Hukuku</li>
     </ul>
@@ -335,8 +335,8 @@ window.vatandas_14_notlari = [
     </div>
     <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
         <li>Gerçek kişilik: <b>tam</b> ve <b>sağ</b> doğumla başlar.</li>
-        <li>Doğum <b>nüfus kütüğüne</b> yazılır.</li>
-        <li>Ölüm: <b>10 gün</b> içinde bildirim.</li>
+        <li>Doğum ve soybağı kayıtları: <b>doğum kütüğü</b>.</li>
+        <li>Ölüm: gerçek kişiliği sona erdirir · <b>10 gün</b> içinde bildirim zorunlu.</li>
     </ul>
     `,
 
@@ -347,9 +347,9 @@ window.vatandas_14_notlari = [
         </span>
     </div>
     <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
-        <li>Ölüm karinesi: <b>mülki amir</b> kararıyla.</li>
-        <li>Birden fazla kişinin ölümünde <b>ölüm karinesi = aynı anda</b> ölmüş sayılır.</li>
-        <li>(Miras sıralaması için önemli.)</li>
+        <li>Ölümüne kesin gözle bakılacak durumda kaybolma + ceset yok → <b>ölmüş sayılır</b>.</li>
+        <li>Mahallin en büyük <b>mülki amiri</b> emriyle düzenlenir · varsa evlilik sona erer.</li>
+        <li>Birden fazla kişinin kim önce öldüğü ispat edilemezse → <b>aynı anda</b> ölmüş sayılır.</li>
     </ul><div class="mt-3 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 p-3">
         <p class="text-xs"><b>ÖSYM / çeldirici:</b> Birden fazla ölüm karinesi → aynı anda; birbirinin mirasçısı olmaz varsayımı.</p>
     </div>
@@ -382,11 +382,11 @@ window.vatandas_14_notlari = [
         </span>
     </div>
     <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
-        <li><b>Dernek:</b> ≥ <b>7</b> kişi; kazanç paylaşma yok</li>
-        <li><b>Vakıf:</b> mal topluluğu</li>
-        <li>Şirket</li>
-        <li><b>TRT</b></li>
-        <li><b>Kamu tüzel:</b> devlet, il özel idare</li>
+        <li><b>Dernek:</b> kazanç paylaşma amacı gütmeyen · en az <b>7 gerçek veya tüzel kişi</b></li>
+        <li><b>Vakıf:</b> herhangi bir amaca yönelik <b>mal topluluğu</b></li>
+        <li>Şirketler · <b>TRT</b> örneği</li>
+        <li><b>Kamu tüzel kişileri:</b> Devlet, il özel idareleri</li>
+        <li><b>Özel hukuk tüzel kişileri:</b> şirketler, vakıflar, dernekler</li>
     </ul>
     `,
 
@@ -456,9 +456,12 @@ window.vatandas_14_notlari = [
         </span>
     </div>
     <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
-        <li>Türler: <b>kan</b> hısımlığı, <b>kayın</b> hısımlığı, <b>yapay</b> hısımlık</li>
-        <li>Dereceler: üst soy · alt soy · yan soy</li>
-        <li>Koruma kurumları: <b>velayet</b>, <b>vesayet</b>, <b>kayyum</b></li>
+        <li>Türler: doğumla <b>kan bağı</b> · evlenmeyle <b>kayın</b> · evlat edinmeyle <b>yapay</b> hısımlık</li>
+        <li><b>Üst soy 1°:</b> anne–baba · <b>Alt soy 1°:</b> çocuk · <b>2°:</b> torun</li>
+        <li><b>Yan soy 2°:</b> kardeş · <b>3°:</b> yeğen, amca, hala, dayı, teyze · <b>4°:</b> yeğen çocukları, kuzen</li>
+        <li>Aynı ortak kök = tam kan soy; üvey vb. = yarım kan soy</li>
+        <li>Kayın hısımlığında kan bağı yoktur.</li>
+        <li><b>Velayet:</b> anne–baba (kural küçükler) · <b>Vesayet:</b> mahkeme + vasi · <b>Kayyum:</b> sulh mahkemesi, belirli iş/mal</li>
     </ul>
     `,
 
@@ -469,8 +472,9 @@ window.vatandas_14_notlari = [
         </span>
     </div>
     <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
-        <li>Aile hukuku: evlilik, nişan, boşanma, velayet ilişkilerini düzenler.</li>
-        <li>Evliliğin kurucu unsuru: yetkili <b>memur önünde</b> (yokluk bağlantısı).</li>
+        <li><b>Aile Hukuku:</b> evlenme, <b>nişanlanma</b>, <b>evlat edinme</b>, <b>nafaka</b>, velayet, vesayet</li>
+        <li>Evliliğin kurucu unsuru: yetkili <b>memur önünde</b> (yoksa <b>yokluk</b>).</li>
+        <li>Eşler: evlat edinme / mal düzenlemede bazı işlerde <b>birbirinin rızası</b> gerekir.</li>
     </ul>
     `,
 
@@ -481,10 +485,9 @@ window.vatandas_14_notlari = [
         </span>
     </div>
     <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
-        <li><b>Muris:</b> miras bırakan</li>
-        <li><b>Varis:</b> mirasçı</li>
-        <li><b>Tereke:</b> miras bırakanın malvarlığı (aktif–pasif)</li>
-        <li>Miras reddi → <b>yetki verici</b> kural örneği</li>
+        <li><b>Miras Hukuku:</b> miras dağıtımını düzenler.</li>
+        <li><b>Muris:</b> miras bırakan · <b>Varis:</b> mirasçı · <b>Tereke:</b> mirasa konu tüm malvarlığı</li>
+        <li><b>Mirasın reddi</b> → <b>yetki verici</b> hukuk kuralı örneği</li>
     </ul>
     `,
 
@@ -616,8 +619,8 @@ window.vatandas_14_notlari = [
         </span>
     </div>
     <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
-        <li><b>Mutlak hak:</b> herkese karşı ileri sürülebilir (örn. ayni hak, kişilik hakları)</li>
-        <li><b>Nispi hak:</b> yalnızca belirli kişiye karşı (örn. alacak hakkı)</li>
+        <li><b>Mutlak hak:</b> herkese karşı · örn. <b>mülkiyet</b>, yaşam/kişilik hakları</li>
+        <li><b>Nispi hak:</b> yalnız tarafa karşı · örn. <b>alacak hakkı</b></li>
     </ul>
     `,
 
@@ -628,11 +631,11 @@ window.vatandas_14_notlari = [
         </span>
     </div>
     <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
-        <li><b>Mal varlığı hakları</b> / <b>Kişilik hakları</b></li>
-        <li><b>Devredilebilir</b> / <b>Devredilemez</b></li>
-        <li><b>Yenilik doğuran haklar</b> vs <b>alelade haklar</b></li>
-        <li>Yenilik doğuran: <b>kurucu</b> · <b>değiştirici</b> · <b>bozucu</b></li>
-        <li>Alelade örnek bağlamı: <b>velayet</b> (sürekli/statü)</li>
+        <li><b>Mal varlığı:</b> parayla ölçülür · örn. mülkiyet, alacak, <b>telif</b></li>
+        <li><b>Kişilik hakları:</b> şeref, haysiyet, vücut bütünlüğü, yaşam · devredilemez/satılamaz</li>
+        <li><b>Devredilebilir:</b> araba mülkiyeti, alacak, telif · <b>Devredilemeyen:</b> <b>nafaka</b>, <b>intifa</b>, nişanlılığı bozma</li>
+        <li><b>Yenilik doğuran (inşai):</b> tek taraflı beyan · <b>kurucu</b> (istifa, teklifi kabul) · <b>değiştirici</b> (ayıplı mal değişimi) · <b>bozucu</b> (fesih, boşanma)</li>
+        <li><b>Alelade:</b> yeni durum yaratmaz · <b>velayet/vesayet</b>, <b>yönetim hakkı</b></li>
     </ul>
     `,
 
@@ -656,9 +659,9 @@ window.vatandas_14_notlari = [
         </span>
     </div>
     <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
-        <li><b>Meşru müdafaa:</b> saldırıya karşı orantılı savunma</li>
-        <li><b>Zaruret (zorunluluk) hâli:</b> daha ağır zararı önlemek için başka çare yokluğu</li>
-        <li><b>Kuvvet kullanma:</b> hukuken izin verilen zor kullanma (yetkili makamlar vb.)</li>
+        <li><b>Meşru müdafaa:</b> saldırıyı önlemek için <b>orantılı</b> karşı saldırı</li>
+        <li><b>Zaruret hali (zorda kalma):</b> cana/mala yönelen tehlikeden korunmak için <b>üçüncü kişinin malına</b> zarar</li>
+        <li><b>Kuvvet kullanma:</b> devlet müdahalesi zamanında yetişmezse kendi eşya/şahsını koruma · hukuka uygunsa ceza yok</li>
     </ul>
     `,
 
@@ -669,9 +672,9 @@ window.vatandas_14_notlari = [
         </span>
     </div>
     <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
-        <li><b>Asli yazılı</b> kaynaklar: Anayasa, kanun, CBK, yönetmelik…</li>
-        <li><b>Asli yazısız:</b> örf–adet hukuku</li>
-        <li><b>Tali kaynaklar:</b> doktrin, içtihat — <b>bağlayıcı değildir</b> (İBK hariç!)</li>
+        <li><b>Asli:</b> hâkimin bakmak zorunda olduğu bağlayıcı kaynaklar → yazılı + yazısız</li>
+        <li><b>Yazısız (örf–âdet):</b> yazılıda hüküm yoksa · örn. ticari <b>çağrı usulü</b>, bölgesel gelenekler</li>
+        <li><b>Tali:</b> doktrin (bilimsel görüş) + içtihat — kural olarak <b>bağlayıcı değil</b> (İBK / AYM hariç)</li>
     </ul><div class="mt-3 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 p-3">
         <p class="text-xs"><b>ÖSYM / çeldirici:</b> İçtihat genel olarak bağlayıcı değil; İBK bağlayıcı yazılı asli kaynaktır.</p>
     </div>
@@ -684,14 +687,13 @@ window.vatandas_14_notlari = [
         </span>
     </div>
     <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
-        <li><b>Anayasa</b></li>
-        <li><b>Kanun</b></li>
-        <li><b>Uluslararası antlaşmalar</b> — temel hak ve özgürlüklerde kanunla çakışırsa <b>antlaşma</b> uygulanır</li>
-        <li><b>CBK</b> — olağan CBK: sosyal–ekonomik alanda</li>
+        <li><b>Anayasa</b> (örn. 1982)</li>
+        <li><b>Kanun</b> (TBMM · TCK, TMK…)</li>
+        <li><b>Uluslararası antlaşmalar</b> — kanun hükmünde · temel hakta çakışmada antlaşma (örn. <b>AİHS</b> / Avrupa İnsan Hakları Sözleşmesi)</li>
+        <li><b>Cumhurbaşkanlığı Kararnamesi (CBK)</b> — olağan dönemde sosyal–ekonomik haklar</li>
         <li><b>Meclis İçtüzüğü</b></li>
-        <li><b>İBK</b> — İçtihadı Birleştirme Kararı</li>
-        <li><b>Yönetmelik</b></li>
-        <li><b>Genelge</b></li>
+        <li><b>İçtihadı Birleştirme Kararları (İBK)</b> — bağlayıcı yazılı asli</li>
+        <li><b>Yönetmelik</b> · <b>Genelge</b></li>
     </ul>
     `,
 
@@ -732,8 +734,9 @@ window.vatandas_14_notlari = [
         </span>
     </div>
     <ul class="list-disc list-inside space-y-1.5 text-sm w-full text-left">
-        <li>Kıyas = <b>kaynak değildir</b>; bir <b>yorum / uygulama</b> yöntemidir.</li>
-        <li><b>Ceza hukukunda kıyas yasaktır</b> (kanunilik ilkesi).</li>
+        <li>Kıyas = <b>kaynak değildir</b>; <b>yorum metodu</b>dur.</li>
+        <li><b>Ceza hukukunda kıyas yasaktır</b> (kanunilik).</li>
+        <li>Örn: elektrik hırsızlığı kuralını benzer diye doğalgaz hırsızlığına uygulamak → cezada yasak yol.</li>
     </ul><div class="mt-3 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 p-3">
         <p class="text-xs"><b>ÖSYM / çeldirici:</b> Kıyas kaynağı sanma. Ceza + kıyas = yasak.</p>
     </div>
