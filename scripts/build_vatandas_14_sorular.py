@@ -1,0 +1,362 @@
+# -*- coding: utf-8 -*-
+"""Build sorular/vatandas-14.js — Vatandaşlık Genel Tekrar 1 (80–100 ÖSYM MCQ)."""
+from pathlib import Path
+import json
+
+def Q(question, options, correct, explanation):
+    assert 0 <= correct < 5, (question, correct)
+    assert len(options) == 5, (question, len(options))
+    opts = []
+    for i, o in enumerate(options):
+        letter = "ABCDE"[i]
+        if o.startswith(letter + ")") or o.startswith(letter + " )"):
+            opts.append(o)
+        else:
+            opts.append(f"{letter}) {o}")
+    return {
+        "question": question,
+        "options": opts,
+        "correctAnswerIndex": correct,
+        "explanation": explanation,
+    }
+
+qs = []
+
+# ── Hukuk kuralları ──
+qs += [
+Q("Hukuk kuralları için aşağıdakilerden hangisi doğrudur?",
+  ["Yalnızca ahlaki yaptırım içerir", "Kamu gücü tarafından desteklenir ve uyulması zorunludur", "Sadece kişiler arası ilişkileri düzenler, devletle ilişkileri düzenlemez", "Geçici ve somut kurallardır", "Yalnızca yazılı olabilir"], 1,
+  "Hukuk kuralları kamu gücüyle desteklenir; kişiler arası ve devletle ilişkileri düzenler; uyma zorunludur."),
+Q("Hukuk kurallarının özellikleri arasında hangisi yer almaz?",
+  ["Genellik", "Soyutluk", "Süreklilik", "Maddi yaptırım", "Mutlak toplumsal eşitlik"], 4,
+  "Toplumsal eşitlik mutlak değildir; hukuk adalet amacı güder ama mutlak eşitlik vaat etmez."),
+Q("Hukuk kurallarıyla sağlananlar arasında hangisi vardır?",
+  ["Mutlak eşitlik", "Adalet, özgürlük, düzen ve barış", "Yalnızca ekonomik büyüme", "Sadece dini birlik", "Yaptırımsız düzen"], 1,
+  "Adalet, özgürlük, düzen ve barış; eşitlik ise mutlak değildir."),
+Q("“Maddi yaptırım yalnızca hukukta vardır” yargısı neden doğrudur?",
+  ["Din de maddi yaptırım uygular", "Ahlak maddi yaptırım uygular", "Hukuk kamu gücüyle desteklenen maddi tepki içerir; din/ahlak/görgü manevidir", "Örf maddi yaptırımdır", "Görgü kuralları hapis öngörür"], 2,
+  "Maddi yaptırım hukukun ayırt edici özelliğidir; diğer sosyal kurallar manevi yaptırım uygular."),
+]
+
+# ── Yaptırım / hükümsüzlük ──
+qs += [
+Q("Aşağıdakilerden hangisi hukuk yaptırımı türlerinden biri değildir?",
+  ["Ceza", "Cebr-i icra", "Tazminat", "Manevi kınama", "İptal"], 3,
+  "Manevi kınama din/ahlak/görgü alanındadır; hukuk yaptırımları ceza, cebr-i icra, tazminat, iptal, hükümsüzlüktür."),
+Q("Türkiye’de ceza yaptırımı olarak hangileri uygulanır?",
+  ["Hapis ve para cezası", "İdam ve hapis", "Kıssas ve para", "Sürgün ve hapis", "Genel müsadere ve para"], 0,
+  "TR’de hapis + para. İdam, genel müsadere, kıssas, sürgün yoktur."),
+Q("Disiplin cezası hakkında hangisi doğrudur?",
+  ["TCK’da düzenlenmiştir", "657 sayılı Kanun’da vardır; TCK’da yoktur", "Yalnızca Anayasa’da vardır", "İBK ile konulur", "Örf-adetle belirlenir"], 1,
+  "Disiplin cezası 657’de vardır; TCK’da yoktur."),
+Q("Aşağıdakilerden hangisi Türkiye’de uygulanmayan yaptırımdır?",
+  ["Hapis", "Para cezası", "Tazminat", "İdam", "Cebr-i icra"], 3,
+  "İdam Türkiye’de yoktur."),
+Q("Evliliğin yetkili memur önünde yapılmaması hangi hükümsüzlük türüne girer?",
+  ["Nispi butlan", "Mutlak butlan", "Yokluk", "Tek taraflı bağlamazlık", "İptal"], 2,
+  "Kurucu unsur (memur önünde) yoksa yokluk vardır."),
+Q("Öz dayı ile evlilik hangi hükümsüzlük türüne örnektir?",
+  ["Yokluk", "Mutlak butlan", "Nispi butlan", "Tek taraflı bağlamazlık", "İbra"], 1,
+  "Emredici kurala aykırı = mutlak butlan."),
+Q("Sarhoşken yapılan sözleşme tipik olarak hangi hükümsüzlükle ilişkilendirilir?",
+  ["Yokluk", "Mutlak butlan", "Nispi butlan", "İdam", "Genel müsadere"], 2,
+  "İrade sakatlığı → nispi butlan."),
+Q("Küçük ile reşit arasında yapılan sözleşmede küçük yönünden durum hangisidir?",
+  ["Mutlak butlan", "Yokluk", "Tek taraflı bağlamazlık; veli icazeti ile bağlar", "Otomatik geçerli", "Nispi butlan zorunlu"], 2,
+  "Tek taraflı bağlamazlık; veli icazeti ile bağlayıcı hâle gelir."),
+]
+
+# ── Hukuk türleri / kural türleri ──
+qs += [
+Q("Yürürlükteki yazılı ve yazısız tüm hukuka ne denir?",
+  ["Mevzu hukuk", "Pozitif (müspet) hukuk", "Tabii hukuk", "Tarihi hukuk", "İdeal hukuk"], 1,
+  "Pozitif hukuk = yürürlükteki tüm (yazılı+yazısız)."),
+Q("Yalnızca yazılı yürürlükteki hukuka ne denir?",
+  ["Pozitif hukuk", "Mevzu hukuk", "Tabii hukuk", "Tarihi hukuk", "Örf hukuku"], 1,
+  "Mevzu hukuk = yazılı yürürlükteki."),
+Q("“Olması gereken hukuk” hangisidir?",
+  ["Pozitif", "Mevzu", "Tabii / ideal / doğal", "Tarihi", "İBK"], 2,
+  "Tabii/ideal/doğal hukuk = olması gereken."),
+Q("Yürürlükten kalkmış hukuka ne denir?",
+  ["Pozitif", "Mevzu", "Tabii", "Tarihi hukuk", "Asli"], 3,
+  "Tarihi hukuk = kalkmış hukuk."),
+Q("Ayın başının “ayın 1’i” sayılması hangi kural türüne örnektir?",
+  ["Emredici", "Tamamlayıcı", "Yorumlayıcı", "Yetki verici", "Tanımlayıcı zorunlu ceza"], 2,
+  "Yorumlayıcı kural örneği: ayın başı = 1."),
+Q("Miras reddi hakkı hangi kural türüne örnek gösterilir?",
+  ["Emredici", "Tamamlayıcı", "Yorumlayıcı", "Yetki verici", "Yalnız kamu kuralı"], 3,
+  "Yetki verici kurallar — miras reddi."),
+Q("Aksi kararlaştırılamayan hukuk kurallarına ne denir?",
+  ["Tamamlayıcı", "Yorumlayıcı", "Emredici / amir", "Yetki verici", "Tali"], 2,
+  "Emredici/amir kurallar."),
+]
+
+# ── Hukuk dalları ──
+qs += [
+Q("Aşağıdakilerden hangisi kamu hukuku dalıdır?",
+  ["Ticaret", "Borçlar", "Medeni", "Vergi", "Devletler özel"], 3,
+  "Vergi hukuku kamu hukukudur."),
+Q("Medeni hukukun alt dalları arasında hangisi yoktur?",
+  ["Şahıs", "Eşya", "Miras", "Aile", "Ceza"], 4,
+  "Ceza kamu hukukudur; medeni: şahıs/eşya/miras/aile."),
+Q("Aşağıdakilerden hangisi karma hukuk dalıdır?",
+  ["Anayasa", "Ceza", "İş hukuku", "Borçlar", "İdare"], 2,
+  "İş, FSEK, bankacılık, toprak, çevre = karma."),
+Q("FSEK hangi hukuk grubunda yer alır?",
+  ["Salt kamu", "Salt özel", "Karma", "Yalnızca ceza", "Tarihi hukuk"], 2,
+  "Fikir ve Sanat Eserleri hukuku karma dallardandır."),
+Q("İcra–İflas hukuku hangi gruba girer?",
+  ["Özel hukuk", "Kamu hukuku", "Karma", "Tabii hukuk", "Doktrin"], 1,
+  "İcra–İflas kamu hukuku dallarındandır."),
+]
+
+# ── Ceza ehliyeti / vergi ──
+qs += [
+Q("0–12 yaş grubunda ceza ehliyeti nasıldır?",
+  ["Tam", "Sınırlı indirimli", "İndirimli veya yok", "Yok", "Yalnız para cezası"], 3,
+  "0–12: ceza ehliyeti yoktur."),
+Q("13–15 yaş için ceza ehliyeti hangisidir?",
+  ["Tam", "Yok (mutlak)", "İndirimli veya yok", "Sınırlı indirimli", "Sadece sürgün"], 2,
+  "13–15: indirimli sorumluluk veya yok."),
+Q("16–18 yaş için ceza ehliyeti hangisidir?",
+  ["Yok", "Tam", "Sınırlı indirimli", "Mutlak artırım", "Disiplin cezası"], 2,
+  "16–18: sınırlı indirimli."),
+Q("Sağır–dilsizlerde ceza ehliyeti yaş sınırları nasıl uygulanır?",
+  ["−3 yaş", "+3 yaş", "Değişmez", "Yalnızca 18’e sabitlenir", "Hiç uygulanmaz"], 1,
+  "Sağır–dilsiz: +3 yaş."),
+Q("Verginin kanunla konulup kaldırılması hangi ilkeyle ilgilidir?",
+  ["Genellik", "Adalet", "Kanunilik", "İvazlık", "Nisbilik"], 2,
+  "Kanunilik: vergi kanunla konulur/kaldırılır."),
+Q("Vergide alt–üst limitleri belirleme yetkisi kime aittir?",
+  ["Yargıtay", "Anayasa Mahkemesi", "Cumhurbaşkanı", "Belediye", "Doktrin"], 2,
+  "Alt–üst limit CB tarafından belirlenir."),
+Q("Paylaştırıcı adalet vergide neyi ifade eder?",
+  ["Herkesten aynı tutar", "Yüksek gelire yüksek vergi", "Vergisizlik", "Yalnızca dolaylı vergi", "CBK ile vergi koyma"], 1,
+  "Yüksek gelire yüksek vergi = paylaştırıcı adalet."),
+]
+
+# ── Kişi / gaiplik / ehliyet ──
+qs += [
+Q("Gerçek kişilik ne zaman başlar?",
+  ["Ana rahmine düşmeyle kesin olarak", "Tam ve sağ doğumla", "18 yaşında", "Nüfus cüzdanıyla", "Mahkeme kararıyla"], 1,
+  "Gerçek kişilik tam ve sağ doğumla başlar. (Hak ehliyeti ana rahmine düşmeyle — sağ tam doğum şartıyla.)"),
+Q("Ölüm bildirimi kaç gün içinde yapılmalıdır?",
+  ["3", "5", "7", "10", "15"], 3,
+  "Ölüm 10 gün içinde bildirilir."),
+Q("Ölüm karinesi kararı hangi makamla ilişkilendirilir?",
+  ["Sulh ceza hâkimi", "Mülki amir", "Cumhurbaşkanı", "Noter", "Müftü"], 1,
+  "Ölüm karinesi mülki amir kararıyladır."),
+Q("Birden fazla kişinin ölümünde ölüm karinesi nasıl işler?",
+  ["Yaşlı önce ölmüş sayılır", "Genç önce ölmüş sayılır", "Aynı anda ölmüş sayılır", "Mahkeme rastgele sıralar", "Hepsi gaipliğe gider"], 2,
+  "Birden fazla ölüm karinesi = aynı anda."),
+Q("Ölüm tehlikesi içinde gaiplik için başvuru süresi nedir?",
+  ["1 yıl", "5 yıl", "10 yıl", "15 yıl", "6 ay"], 0,
+  "Ölüm tehlikesi → 1 yıl başvuru (miras için 5 yıl)."),
+Q("Haber alınamama hâlinde gaiplik başvurusu için süre nedir?",
+  ["1 yıl", "5 yıl", "10 yıl", "15 yıl", "3 yıl"], 1,
+  "Haber alınamama → 5 yıl başvuru (miras 15)."),
+Q("Gaiplik davası hangi mahkemede görülür?",
+  ["Asliye Ceza", "İdare", "Sulh Hukuk", "Anayasa Mahkemesi", "İş Mahkemesi"], 2,
+  "Gaiplik: Sulh Hukuk Mahkemesi."),
+Q("Ölüm tehlikesi gaipliğinde miras açısından aranan süre hangisidir?",
+  ["1 yıl", "5 yıl", "10 yıl", "15 yıl", "20 yıl"], 1,
+  "Ölüm tehlikesi: başvuru 1, miras 5."),
+Q("Haber alınamama gaipliğinde miras süresi hangisidir?",
+  ["5 yıl", "10 yıl", "15 yıl", "1 yıl", "3 yıl"], 2,
+  "Haber alınamama: başvuru 5, miras 15."),
+Q("Dernek kurulması için asgari üye sayısı nedir?",
+  ["3", "5", "7", "10", "20"], 2,
+  "Dernek ≥7 kişi; kazanç paylaşma yoktur."),
+Q("Vakıf hangi niteliğiyle tanımlanır?",
+  ["Kişi topluluğu", "Mal topluluğu", "Yalnız kamu tüzel kişisi", "Ticari şirket zorunlu", "≥7 üye şartı"], 1,
+  "Vakıf = mal topluluğu."),
+Q("Hak ehliyeti ne zaman başlar?",
+  ["18 yaşında", "Ana rahmine düşmeyle (sağ ve tam doğum şartıyla)", "Evlilikle", "Mahkeme tesciliyle", "Fiil ehliyetiyle aynı anda zorunlu"], 1,
+  "Hak ehliyeti ana rahmine düşmeyle; sağ tam doğum şarttır."),
+Q("Fiil ehliyetinin koşulları hangisidir?",
+  ["Yalnız yaş", "Reşit + ayırt etme + kısıtlı olmamak", "Yalnız ayırt etme", "Yalnız nüfus kaydı", "Yalnız evlilik"], 1,
+  "Reşit, ayırt etme gücü, kısıtlı olmamak."),
+Q("Kaza-i rüşt için asgari yaş nedir?",
+  ["12", "14", "15", "16", "17"], 2,
+  "Kaza-i rüşt: 15+ istek + izin + menfaat."),
+Q("Evlilikle erginlik yaşı (olağan / olağanüstü) hangisidir?",
+  ["18 / 17", "17 / 16", "16 / 15", "15 / 14", "18 / 16"], 1,
+  "Evlilik 17; olağanüstü hâllerde 16."),
+Q("12–18 yaş grubu fiil ehliyeti sınıfı hangisidir?",
+  ["Tam ehliyetli", "Sınırlı ehliyetli", "Sınırlı ehliyetsiz", "Tam ehliyetsiz", "Yasal danışmanlı zorunlu"], 2,
+  "Sınırlı ehliyetsiz: 12–18; kefalet/bağış/vakıf yasak."),
+Q("0–12 yaş veya ayırt etme gücü olmayanlar hangi sınıftadır?",
+  ["Tam ehliyetli", "Sınırlı ehliyetli", "Sınırlı ehliyetsiz", "Tam ehliyetsiz", "Yetki verici"], 3,
+  "Tam ehliyetsiz."),
+Q("Sınırlı ehliyetsizlerin yapamayacağı işlemler arasında hangisi vardır?",
+  ["Günlük alışveriş (kural)", "Kefalet, bağış, vakıf kurma", "Okula gitme", "Spor yapma", "Nüfus kaydı"], 1,
+  "Kefalet / bağış / vakıf yasaktır."),
+Q("Tüzel kişide hak ehliyeti ne zaman başlar?",
+  ["Organ seçimiyle", "Kuruluşla", "18 yıl sonra", "Mahkeme onayı zorunlu her zaman", "İlk sözleşme ile"], 1,
+  "Tüzel hak ehliyeti kuruluşla; fiil ehliyeti zorunlu organlarla."),
+Q("Hısımlık türleri hangileridir?",
+  ["Yalnız kan", "Kan, kayın, yapay", "Yalnız kayın", "Yalnız yapay", "Yalnız sözleşmesel"], 1,
+  "Kan, kayın, yapay hısımlık."),
+Q("Velayet, vesayet ve kayyum neyin örnekleridir?",
+  ["Borç kaynakları", "Koruma / temsil kurumları", "Ceza yaptırımları", "Vergi türleri", "İBK çeşitleri"], 1,
+  "Kişi koruma kurumları: velayet, vesayet, kayyum."),
+Q("Miras bırakan kişiye ne denir?",
+  ["Varis", "Muris", "Tereke", "Alacaklı", "Kayyum"], 1,
+  "Muris = miras bırakan; varis = mirasçı; tereke = malvarlığı."),
+]
+
+# ── Borçlar ──
+qs += [
+Q("Borçlar hukukunun ana / temel ilkesi olarak vurgulanan hangisidir?",
+  ["İvazlık", "Nisbilik", "Dürüstlük (TMK m. 2)", "Takas", "Tecdit"], 2,
+  "Dürüstlük ilkesi TMK 2 — ana ilke."),
+Q("“Üçüncü kişi aleyhine borç kurulamaz” ilkesi neyi ifade eder?",
+  ["Herkes herkese borçlu olur", "Borç ilişkisi kural olarak üçüncü kişiyi borç altına sokamaz", "Alacaklı herkese karşı hak ileri sürer", "Zamanaşımı yoktur", "İfa yasaktır"], 1,
+  "3. kişi aleyhine borç yok."),
+Q("Kural olarak ödemenin yapılacağı yer hangisidir?",
+  ["Alacaklının ikametgâhı her zaman", "Borçlunun ikametgâhı (para ve parça borçları hariç)", "Noter", "Mahkeme", "Banka zorunlu"], 1,
+  "Borçlunun ikametgâhında ödeme; para/parça hariç."),
+Q("Borç doğuran sebepler arasında hangisi vardır?",
+  ["Yalnız kanun", "Hukuki işlem, haksız fiil, sebepsiz zenginleşme", "Yalnız İBK", "Yalnız örf", "Yalnız genelge"], 1,
+  "Üç kaynak: hukuki işlem, haksız fiil, sebepsiz zenginleşme."),
+Q("Edim nedir?",
+  ["Yalnız para", "Borç ilişkisinin konusu olan davranış (verme/yapma/yapmama)", "Yalnız mahkeme kararı", "Vergi türü", "Ceza"], 1,
+  "Edim = borç konusu davranış."),
+Q("Zamanaşımı hakkında ÖSYM’nin sık sorduğu doğru yargı hangisidir?",
+  ["Borcu tamamen sona erdirir", "Borcu eksik borca dönüştürür; def’i ileri sürülebilir", "Alacağı artırır", "Otomatik ifa sayılır", "İbra demektir"], 1,
+  "Zamanaşımı borcu bitirmez; eksik borç + def’i."),
+Q("Aşağıdakilerden hangisi borcun sona erme sebeplerinden biri değildir?",
+  ["İfa", "İbra", "Tecdit", "Kıyas", "Takas"], 3,
+  "Kıyas sona erme sebebi değildir."),
+Q("İbra ne demektir?",
+  ["Yenileme", "Alacaklının alacaktan vazgeçmesi", "Takas", "Birleşme", "İmkânsızlık"], 1,
+  "İbra = vazgeçme."),
+Q("Tecdit ne demektir?",
+  ["Takas", "Yenileme", "İfa", "Def’i", "Butlan"], 1,
+  "Tecdit = yenileme."),
+Q("Nisbilik ilkesi neyi ifade eder?",
+  ["Hak herkese karşıdır", "Borç ilişkisi kural olarak yalnız tarafları bağlar", "Herkes eşit vergi verir", "Kıyas serbesttir", "İBK bağlayıcı değildir"], 1,
+  "Nisbilik: ilişki taraflar arasındadır."),
+]
+
+# ── Özel haklar / hukuki olay ──
+qs += [
+Q("Herkese karşı ileri sürülebilen haklara ne denir?",
+  ["Nispi hak", "Mutlak hak", "Eksik borç", "Def’i", "Genelge"], 1,
+  "Mutlak hak herkese karşıdır."),
+Q("Alacak hakkı tipik olarak hangi hak türüdür?",
+  ["Mutlak", "Nispi", "Ayni zorunlu", "Yenilik doğuran bozucu zorunlu", "Kamu tüzel"], 1,
+  "Alacak = nispi hak."),
+Q("Yenilik doğuran hakların türleri hangileridir?",
+  ["Yalnız kurucu", "Kurucu, değiştirici, bozucu", "Yalnız bozucu", "Yalnız alelade", "Yalnız kişilik"], 1,
+  "Kurucu / değiştirici / bozucu."),
+Q("Hukuki sonuç doğurma iradesiyle yapılan işleme ne denir?",
+  ["Hukuki olay", "Hukuki fiil", "Hukuki işlem", "Zaruret", "Kıyas"], 2,
+  "Hukuki işlem = iradeyle hukuki sonuç."),
+Q("Doğum, ölüm, zamanaşımı tipik olarak neye örnektir?",
+  ["Hukuki işlem", "Hukuki olay", "Sözleşme", "İbra", "İBK"], 1,
+  "Hukuki olay: irade dışı da olsa sonuç doğuran olay."),
+Q("Saldırıya karşı orantılı savunma hangi kavramdır?",
+  ["Zaruret hâli", "Meşru müdafaa", "Kuvvet kullanma (idari)", "Butlan", "İfa"], 1,
+  "Meşru müdafaa."),
+Q("Daha ağır zararı önlemek için başka çare yokluğunda başvurulan hâle ne denir?",
+  ["Meşru müdafaa", "Zaruret (zorunluluk) hâli", "Nispi butlan", "Tecdit", "Takas"], 1,
+  "Zaruret hâli."),
+]
+
+# ── Kaynaklar / boşluk / kıyas ──
+qs += [
+Q("Doktrin ve içtihat (İBK hariç) kaynak niteliği bakımından nasıldır?",
+  ["Asli bağlayıcı", "Tali; bağlayıcı değildir", "Anayasa üstü", "Ceza kaynağı zorunlu", "Yalnız yazılı asli"], 1,
+  "Tali kaynaklar bağlayıcı değildir; İBK istisnadır."),
+Q("İçtihadı Birleştirme Kararı (İBK) için hangisi doğrudur?",
+  ["Bağlayıcı değildir", "Bağlayıcı yazılı asli kaynaktır", "Yalnız doktrindir", "Genelgeye eşittir", "Ceza kıyasıdır"], 1,
+  "İBK bağlayıcı yazılı asli kaynaktır."),
+Q("Temel hak ve özgürlüklere ilişkin uluslararası antlaşma ile kanun çakışırsa ne olur?",
+  ["Kanun uygulanır", "Antlaşma uygulanır", "CBK uygulanır", "Genelge uygulanır", "Örf uygulanır"], 1,
+  "Temel haklarda çakışmada antlaşma önceliklidir."),
+Q("Olağan CBK’ların alanı hangisidir?",
+  ["Yalnız ceza", "Sosyal–ekonomik alan", "Yalnız yargı", "Yalnız seçim", "Yalnız idam"], 1,
+  "Olağan CBK: sosyal–ekonomik."),
+Q("Kıyas hakkında hangisi doğrudur?",
+  ["Asli yazılı kaynaktır", "Kaynak değil, yorum yöntemidir; cezada yasaktır", "Cezada serbesttir", "İBK’dır", "Vergi koyar"], 1,
+  "Kıyas kaynak değildir; ceza hukukunda yasaktır."),
+Q("Hukuk boşluğunda hâkim ne yapar?",
+  ["Davayı reddeder", "O olay için hukuk yaratır", "Genel kanun koyar", "İBK çıkarır", "Vergi koyar"], 1,
+  "Hâkim yalnız o olay için hukuk yaratır."),
+Q("Kanun boşluğunda sıra hangisidir?",
+  ["Doğrudan kıyas", "Önce örf–adet; yoksa hukuk boşluğu yolu", "Doğrudan ceza", "Doğrudan genelge", "Davayı düşürme"], 1,
+  "Kanun boşluğu → örf-adet → yoksa hukuk boşluğu."),
+Q("Kural içi (bilinçli) boşlukta hâkim ne yapar?",
+  ["Kanun iptal eder", "Takdir yetkisi kullanır", "İdam verir", "İBK yazar", "Kıyasla ceza verir"], 1,
+  "Bilinçli boşluk → takdir."),
+Q("Kural dışı (bilinçsiz) boşluk hangi yolla çözülür?",
+  ["Yalnız takdir", "Kanun boşluğu yolu", "Otomatik yokluk", "Vergi", "Disiplin"], 1,
+  "Bilinçsiz = kanun boşluğu yolu."),
+Q("Örtülü boşlukta yaklaşım hangisidir?",
+  ["Kuralı genişletme zorunlu", "Kuralı daraltma / istisna tanıma", "İdam", "Zamanaşımı silme", "İBK iptali"], 1,
+  "Örtülü boşluk: daralt / istisna."),
+Q("Örf–adet hukuku kaynak niteliği bakımından nasıldır?",
+  ["Tali", "Asli yazısız", "Yalnız doktrin", "Bağlayıcı değildir her zaman", "CBK"], 1,
+  "Örf–adet = asli yazısız kaynak."),
+Q("Yönetmelik normlar hiyerarşisinde hangi grubun örneğidir?",
+  ["Anayasa", "Yürütmenin düzenleyici işlemi / alt norm", "İBK zorunlu üstü", "Tabii hukuk", "Tereke"], 1,
+  "Yönetmelik alt düzey düzenleyici normdur."),
+]
+
+# ── Karışık / çeldirici ağır ──
+qs += [
+Q("Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+  ["Yokluk – kurucu unsur yok", "Mutlak butlan – emredici aykırı", "Nispi butlan – irade sakatlığı", "Zamanaşımı – borcu tamamen ortadan kaldırır", "İBK – bağlayıcı"], 3,
+  "Zamanaşımı borcu bitirmez; eksik borç yapar."),
+Q("Aşağıdakilerden hangisi doğru bir gaiplik bilgisidir?",
+  ["Ölüm tehlikesi başvuru 5 yıl", "Haber alınamama başvuru 1 yıl", "Mahkeme Sulh Hukuk’tur", "Miras süreleri başvuru ile aynıdır", "Gaiplik Asliye Ceza’dadır"], 2,
+  "Sulh Hukuk; süreler: 1/5 ve 5/15."),
+Q("Aşağıdakilerden hangisi borçlar ilkelerinden biri değildir?",
+  ["İrade özerkliği", "Eşitlik", "Dürüstlük", "Kıyas serbestliği", "Nisbilik"], 3,
+  "Kıyas bir borçlar ilkesi değildir."),
+Q("“Pozitif hukuk = mevzu hukuk” ifadesi neden yanlıştır?",
+  ["İkisi de yazısızdır", "Pozitif yazılı+yazısız; mevzu yalnızca yazılıdır", "Mevzu daha geniştir", "Tarihi hukuku kapsar", "İkisi de tabii hukuktur"], 1,
+  "Klasik çeldirici: pozitif ≠ mevzu."),
+Q("Aşağıdakilerden hangisi sınırlı ehliyetli ile ilişkilendirilir?",
+  ["0–12 yaş", "Yasal danışman / eş rızası", "Ayırt etme yokluğu", "Kefalet yasağı zorunlu her işlem", "Ceza ehliyetsizliği"], 1,
+  "Sınırlı ehliyetli: yasal danışman; eş rızası gereken işlemler."),
+Q("TRT tüzel kişilik bakımından nasıl sınıflandırılabilir?",
+  ["Yalnız gerçek kişi", "Tüzel kişi örnekleri arasında sayılır", "Dernek zorunlu", "Vakıf zorunlu", "Muris"], 1,
+  "Tüzel kişiler: dernek, vakıf, şirket, TRT; kamu tüzel: devlet, il özel idare."),
+Q("Aşağıdakilerden hangisi kamu tüzel kişisidir?",
+  ["Dernek", "Vakıf", "İl özel idare", "Anonim şirket", "Adi ortaklık"], 2,
+  "Kamu tüzel: devlet, il özel idare."),
+Q("Kusursuz imkânsızlık borcu nasıl etkiler?",
+  ["Borcu artırır", "Sona erme sebeplerinden biridir", "Eksik borç yapmaz hiç", "İBK sayılır", "Kıyastır"], 1,
+  "Kusursuz imkânsızlık sona erme sebebidir."),
+Q("Aşağıdaki yargılardan hangisi yanlıştır?",
+  ["Hukuk kuralları genel ve soyuttur", "Disiplin cezası 657’de vardır", "Kıyas cezada serbesttir", "İBK bağlayıcıdır", "Gaiplik Sulh Hukuk’tadır"], 2,
+  "Cezada kıyas yasaktır."),
+Q("Velayet hangi hak ayrımı bağlamında “alelade” örneği olarak anılır?",
+  ["Yenilik doğuran kurucu", "Alelade (sürekli/statü) hak bağlamı", "Mutlak vergi", "Eksik borç", "İBK"], 1,
+  "Yenilik doğuran vs alelade; velayet alelade örnek bağlamında geçer."),
+]
+
+def validate(questions):
+    assert 80 <= len(questions) <= 100, len(questions)
+    for i, q in enumerate(questions):
+        assert len(q["options"]) == 5, i
+        assert 0 <= q["correctAnswerIndex"] < 5, i
+        assert q["question"] and q["explanation"]
+        letters = [o[0] for o in q["options"]]
+        assert letters == list("ABCDE"), (i, letters)
+
+validate(qs)
+
+out = Path(__file__).resolve().parents[1] / "sorular" / "vatandas-14.js"
+lines = ["// sorular/vatandas-14.js — VATANDAŞLIK GENEL TEKRAR 1", "window.vatandas_14_sorulari = ["]
+for i, q in enumerate(qs):
+    block = json.dumps(q, ensure_ascii=False, indent=4)
+    indented = "\n".join(("    " + ln if ln else ln) for ln in block.split("\n"))
+    comma = "," if i < len(qs) - 1 else ""
+    lines.append(indented + comma)
+lines.append("];")
+lines.append("")
+out.write_text("\n".join(lines), encoding="utf-8")
+print("wrote", out, "questions", len(qs), "validation OK")

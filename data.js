@@ -362,6 +362,10 @@ window.getKpssData = function () {
             "Önemli Düşünür ve Bilim İnsanları": {
                 notlar: window.vatandas_13_notlari || [],
                 sorular: window.vatandas_13_sorulari || []
+            },
+            "Genel Tekrar 1": {
+                notlar: window.vatandas_14_notlari || [],
+                sorular: window.vatandas_14_sorulari || []
             }
         },
          "Güncel Bilgiler": {
