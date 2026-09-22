@@ -11,10 +11,20 @@
     "icon": "./assets/icon.png",
     "orientation": "default",
     "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash-full.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#041C24"
+    },
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "app.atanly.mobile",
-      "requireFullScreen": true
+      "requireFullScreen": true,
+      "splash": {
+        "image": "./assets/splash-full.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#041C24"
+      }
     },
     "android": {
       "package": "app.atanly.mobile",
@@ -23,6 +33,11 @@
       "adaptiveIcon": {
         "backgroundColor": "#041C24",
         "foregroundImage": "./assets/adaptive-icon.png"
+      },
+      "splash": {
+        "image": "./assets/splash-full.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#041C24"
       },
       "intentFilters": [
         {
@@ -36,7 +51,8 @@
       ]
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "backgroundColor": "#041C24"
     },
     "plugins": [
       "expo-web-browser",
@@ -50,8 +66,8 @@
         "expo-splash-screen",
         {
           "backgroundColor": "#041C24",
-          "image": "./assets/adaptive-icon.png",
-          "imageWidth": 120,
+          "image": "./assets/splash-full.png",
+          "imageWidth": 280,
           "resizeMode": "contain"
         }
       ]
