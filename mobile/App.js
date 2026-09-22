@@ -77,7 +77,7 @@ export default function App() {
     // ============================================================
 
     return (
-        <GestureHandlerRootView style={{ flex: 1 }}>
+        <GestureHandlerRootView style={styles.root}>
         <SafeAreaProvider initialMetrics={initialWindowMetrics}>
             <CrashGate>
             <AppProvider>
@@ -86,7 +86,7 @@ export default function App() {
                 </View>
                 <StatusBar 
                     style="light" 
-                    backgroundColor="#0f172a"
+                    backgroundColor="#041C24"
                     translucent={true}
                 />
             </AppProvider>
@@ -101,9 +101,13 @@ export default function App() {
 // ============================================================
 
 const styles = StyleSheet.create({
+    root: {
+        flex: 1,
+        backgroundColor: "#041C24",
+    },
     container: {
         flex: 1,
-        backgroundColor: "#f8fafc",
+        backgroundColor: "#041C24",
         // Android için ekstra
         ...(Platform.OS === "android" && {
             paddingTop: 0,
