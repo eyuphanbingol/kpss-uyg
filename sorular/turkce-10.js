@@ -3,12 +3,12 @@ window.turkce_10_sorulari = [
 {
     "question": "Kip ve kişi eki almayan; ad, sıfat veya zarf görevinde kullanılan fiil türevlerine ne denir?",
     "options": [
-        "A) Fiil",
-        "B) Eylemsi (fiilimsi)",
+        "A) Eylemsi (fiilimsi)",
+        "B) Fiil",
         "C) Bağlaç",
         "D) Edat"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Eylemsiler fiil anlamını korur ama çekimlenmez."
 },
 {
@@ -36,12 +36,12 @@ window.turkce_10_sorulari = [
 {
     "question": "“Okuma, gelme, yazma” sözcükleri hangi isim-fiil ekini taşır?",
     "options": [
-        "A) -mak",
-        "B) -ma/-me",
+        "A) -ma/-me",
+        "B) -mak",
         "C) -ış",
         "D) -an"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "-ma/-me isim-fiil ekidir."
 },
 {
@@ -69,12 +69,12 @@ window.turkce_10_sorulari = [
 {
     "question": "“Gördüğü, bildiği, yaptığı” sözcükleri hangi sıfat-fiil ekini taşır?",
     "options": [
-        "A) -an",
-        "B) -dik/-dık",
+        "A) -dik/-dık",
+        "B) -an",
         "C) -ecek",
         "D) -arak"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "-dik/-dık geçmiş zaman sıfat-fiilidir."
 },
 {
@@ -91,12 +91,12 @@ window.turkce_10_sorulari = [
 {
     "question": "“Olmuş, gitmiş, yazmış” sıfat-fiil ekleri hangisidir?",
     "options": [
-        "A) -an",
-        "B) -miş/-mış",
+        "A) -miş/-mış",
+        "B) -an",
         "C) -ecek",
         "D) -ma"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Duyulan geçmiş sıfat-fiil eki."
 },
 {
@@ -113,23 +113,23 @@ window.turkce_10_sorulari = [
 {
     "question": "“Gelirken, bakarken” sözcükleri hangi zarf-fiil ekini taşır?",
     "options": [
-        "A) -arak",
-        "B) -ken",
+        "A) -ken",
+        "B) -arak",
         "C) -madan",
         "D) -ıp"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "-ken zaman zarf-fiilidir."
 },
 {
     "question": "“Gelmeden, bakmadan” sözcükleri hangi zarf-fiil ekini taşır?",
     "options": [
         "A) -ken",
-        "B) -madan/-meden",
+        "B) -dıkça",
         "C) -arak",
-        "D) -dıkça"
+        "D) -madan/-meden"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "-madan durum zarf-fiilidir."
 },
 {
@@ -158,44 +158,44 @@ window.turkce_10_sorulari = [
     "question": "“Gelip, bakıp” sözcükleri hangi zarf-fiil ekini taşır?",
     "options": [
         "A) -arak",
-        "B) -ıp/-ip",
+        "B) -ma",
         "C) -ken",
-        "D) -ma"
+        "D) -ıp/-ip"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "-ıp/-ip durum zarf-fiilidir."
 },
 {
     "question": "“Durmaksızın, bakmaksızın” sözcükleri hangi zarf-fiil ekini taşır?",
     "options": [
-        "A) -ken",
-        "B) -maksızın/-meksizin",
+        "A) -maksızın/-meksizin",
+        "B) -ken",
         "C) -madan",
         "D) -arak"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "-maksızın durum zarf-fiilidir."
 },
 {
     "question": "“Gördüğü film güzeldi.” cümlesinde “gördüğü” hangi görevdedir?",
     "options": [
-        "A) Yüklem",
-        "B) Sıfat (addan önce)",
+        "A) Sıfat (addan önce)",
+        "B) Yüklem",
         "C) Zarf",
         "D) Edat"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Film adını niteliyor; sıfat-fiil."
 },
 {
     "question": "“Ağlayanlar dışarı çıktı.” cümlesinde “ağlayanlar” hangi yapıdadır?",
     "options": [
         "A) Çekimli fiil",
-        "B) Adlaşmış sıfat-fiil",
-        "C) İsim-fiil",
+        "B) İsim-fiil",
+        "C) Adlaşmış sıfat-fiil",
         "D) Edat"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Sıfat-fiil adlaşmış, ad gibi kullanılmış."
 },
 {
@@ -235,11 +235,11 @@ window.turkce_10_sorulari = [
     "question": "“Paketleri danışmadan verdiler.” cümlesinde “danışma” ne olarak kullanılmıştır?",
     "options": [
         "A) Zarf-fiil",
-        "B) Kalıcı ad (yer/ofis)",
+        "B) Çekimli fiil",
         "C) Sıfat-fiil",
-        "D) Çekimli fiil"
+        "D) Kalıcı ad (yer/ofis)"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Danışma kalıcı ad; ofis anlamında."
 },
 {
@@ -257,11 +257,11 @@ window.turkce_10_sorulari = [
     "question": "“Sakın gülme!” cümlesinde “gülme” hangi türüdür?",
     "options": [
         "A) İsim-fiil",
-        "B) Çekimli fiil (olumsuz emir)",
+        "B) Sıfat-fiil",
         "C) Zarf-fiil",
-        "D) Sıfat-fiil"
+        "D) Çekimli fiil (olumsuz emir)"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Kip/kişi eki var; çekimli fiil."
 },
 {
@@ -289,12 +289,12 @@ window.turkce_10_sorulari = [
 {
     "question": "“Okumaktan zevk alıyorum.” cümlesinde “okumaktan” hangi türden türemiştir?",
     "options": [
-        "A) Sıfat-fiil",
-        "B) İsim-fiil",
+        "A) İsim-fiil",
+        "B) Sıfat-fiil",
         "C) Zarf-fiil",
         "D) Bağlaç"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Okumak isim-fiil; ek alabilir."
 },
 {
@@ -323,11 +323,11 @@ window.turkce_10_sorulari = [
     "question": "Aşağıdakilerden hangisi kalıcı ad örneğidir?",
     "options": [
         "A) Okuma",
-        "B) Uçurtma",
+        "B) Bakarak",
         "C) Geliş",
-        "D) Bakarak"
+        "D) Uçurtma"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Uçurtma kalıcı ad listesindedir."
 },
 {
@@ -356,11 +356,11 @@ window.turkce_10_sorulari = [
     "question": "“Beklediğini söyledi.” cümlesinde “beklediğini” nasıl değerlendirilir?",
     "options": [
         "A) Yüklem",
-        "B) Adlaşmış sıfat-fiil",
+        "B) Bağlaç",
         "C) Edat",
-        "D) Bağlaç"
+        "D) Adlaşmış sıfat-fiil"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Sıfat-fiil adlaşmış kullanılmış."
 },
 {
@@ -377,12 +377,12 @@ window.turkce_10_sorulari = [
 {
     "question": "Aşağıdakilerden hangisi doğrudur?",
     "options": [
-        "A) Eylemsi fiil gibi çekimlenir.",
-        "B) Eylemsi kip ve kişi almaz.",
+        "A) Eylemsi kip ve kişi almaz.",
+        "B) Eylemsi fiil gibi çekimlenir.",
         "C) Gülme her zaman isim-fiildir.",
         "D) Dondurma her zaman zarf-fiildir."
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Eylemsinin temel tanımı."
 }
 ];

@@ -51,97 +51,97 @@ window.guncel_5_sorulari = [
 {
     "question": "Atabetü'l-Hakayık hangi yazara aittir?",
     "options": [
-        "A) Edip Ahmet Yükneki",
+        "A) Şeyhi",
         "B) Ali Şir Nevai",
-        "C) Şeyhi",
+        "C) Edip Ahmet Yükneki",
         "D) Nabi",
         "E) Nedim"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 2,
     "explanation": "Edip Ahmet Yükneki."
 },
 {
     "question": "Hoca Ahmet Yesevi'nin eseri aşağıdakilerden hangisidir?",
     "options": [
-        "A) Divan-ı Hikmet",
+        "A) Harabat",
         "B) Muhakemetü'l-Lugateyn",
         "C) Siham-ı Kaza",
         "D) Şikâyetname",
-        "E) Harabat"
+        "E) Divan-ı Hikmet"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 4,
     "explanation": "Divan-ı Hikmet."
 },
 {
     "question": "Muhakemetü'l-Lugateyn hangi yazara aittir?",
     "options": [
-        "A) Ali Şir Nevai",
+        "A) Nefi",
         "B) Fuzuli",
         "C) Baki",
-        "D) Nefi",
+        "D) Ali Şir Nevai",
         "E) Şeyh Galip"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Ali Şir Nevai."
 },
 {
     "question": "Harnâme hangi şaire aittir?",
     "options": [
-        "A) Şeyhi",
+        "A) Nedim",
         "B) Süleyman Çelebi",
         "C) Fuzuli",
         "D) Baki",
-        "E) Nedim"
+        "E) Şeyhi"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 4,
     "explanation": "Şeyhi."
 },
 {
     "question": "Vesiletü'n-Necat (Mevlid) hangi yazara aittir?",
     "options": [
-        "A) Süleyman Çelebi",
+        "A) Şinasi",
         "B) Fuzuli",
         "C) Baki",
         "D) Nabi",
-        "E) Şinasi"
+        "E) Süleyman Çelebi"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 4,
     "explanation": "Süleyman Çelebi."
 },
 {
     "question": "Leyla vü Mecnun ve Şikâyetname hangi şaire aittir?",
     "options": [
-        "A) Fuzuli",
+        "A) Nefi",
         "B) Baki",
-        "C) Nefi",
+        "C) Fuzuli",
         "D) Nabi",
         "E) Nedim"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 2,
     "explanation": "Fuzuli."
 },
 {
     "question": "Kanuni Mersiyesi ile tanınan şair aşağıdakilerden hangisidir?",
     "options": [
-        "A) Baki",
+        "A) Nabi",
         "B) Nefi",
-        "C) Nabi",
+        "C) Baki",
         "D) Nedim",
         "E) Şeyh Galip"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 2,
     "explanation": "Baki."
 },
 {
     "question": "Siham-ı Kaza hangi şaire aittir?",
     "options": [
-        "A) Nefi",
+        "A) Nedim",
         "B) Nabi",
-        "C) Nedim",
+        "C) Nefi",
         "D) Şeyh Galip",
         "E) Fuzuli"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 2,
     "explanation": "Nefi."
 },
 {
@@ -159,61 +159,61 @@ window.guncel_5_sorulari = [
 {
     "question": "Hüsn ü Aşk hangi şaire aittir?",
     "options": [
-        "A) Şeyh Galip",
+        "A) Fuzuli",
         "B) Nedim",
         "C) Nabi",
-        "D) Fuzuli",
+        "D) Şeyh Galip",
         "E) Yunus Emre"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Şeyh Galip."
 },
 {
     "question": "Şair Evlenmesi hangi yazara aittir?",
     "options": [
-        "A) Şinasi",
+        "A) Recaizade Mahmut Ekrem",
         "B) Namık Kemal",
         "C) Ziya Paşa",
-        "D) Recaizade Mahmut Ekrem",
+        "D) Şinasi",
         "E) Ahmet Mithat"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Şinasi."
 },
 {
     "question": "Vatan Yahut Silistre hangi yazara aittir?",
     "options": [
-        "A) Namık Kemal",
-        "B) Şinasi",
+        "A) Şinasi",
+        "B) Namık Kemal",
         "C) Ziya Paşa",
         "D) Abdülhak Hamit",
         "E) Samipaşazade Sezai"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "Namık Kemal."
 },
 {
     "question": "Araba Sevdası hangi yazara aittir?",
     "options": [
-        "A) Recaizade Mahmut Ekrem",
+        "A) Mehmet Rauf",
         "B) Ahmet Mithat",
         "C) Nabizade Nazım",
         "D) Halit Ziya",
-        "E) Mehmet Rauf"
+        "E) Recaizade Mahmut Ekrem"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 4,
     "explanation": "Recaizade Mahmut Ekrem."
 },
 {
     "question": "Felatun Bey ile Rakım Efendi hangi yazara aittir?",
     "options": [
-        "A) Ahmet Mithat Efendi",
+        "A) Tevfik Fikret",
         "B) Namık Kemal",
         "C) Halit Ziya",
-        "D) Tevfik Fikret",
+        "D) Ahmet Mithat Efendi",
         "E) Ömer Seyfettin"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Ahmet Mithat Efendi."
 },
 {
@@ -231,37 +231,37 @@ window.guncel_5_sorulari = [
 {
     "question": "Sergüzeşt hangi yazara aittir?",
     "options": [
-        "A) Samipaşazade Sezai",
+        "A) Sait Faik",
         "B) Nabizade Nazım",
         "C) Halit Ziya",
         "D) Mehmet Rauf",
-        "E) Sait Faik"
+        "E) Samipaşazade Sezai"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 4,
     "explanation": "Samipaşazade Sezai."
 },
 {
     "question": "Karabibik ve Zehra hangi yazara aittir?",
     "options": [
-        "A) Nabizade Nazım",
+        "A) Orhan Kemal",
         "B) Ahmet Mithat",
         "C) Halit Ziya",
         "D) Yakup Kadri",
-        "E) Orhan Kemal"
+        "E) Nabizade Nazım"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 4,
     "explanation": "Nabizade Nazım."
 },
 {
     "question": "Rübab-ı Şikeste hangi şaire aittir?",
     "options": [
-        "A) Tevfik Fikret",
+        "A) Yahya Kemal",
         "B) Cenap Şahabettin",
-        "C) Yahya Kemal",
+        "C) Tevfik Fikret",
         "D) Necip Fazıl",
         "E) Nazım Hikmet"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 2,
     "explanation": "Tevfik Fikret."
 },
 {
@@ -279,97 +279,97 @@ window.guncel_5_sorulari = [
 {
     "question": "Eylül romanı hangi yazara aittir?",
     "options": [
-        "A) Mehmet Rauf",
+        "A) Sabahattin Ali",
         "B) Halit Ziya",
         "C) Yakup Kadri",
-        "D) Sabahattin Ali",
+        "D) Mehmet Rauf",
         "E) Oğuz Atay"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Mehmet Rauf."
 },
 {
     "question": "Kaşağı, Falaka ve Diyet hangi yazara aittir?",
     "options": [
-        "A) Ömer Seyfettin",
+        "A) Sait Faik",
         "B) Refik Halit Karay",
-        "C) Sait Faik",
+        "C) Ömer Seyfettin",
         "D) Füruzan",
         "E) Mustafa Kutlu"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 2,
     "explanation": "Ömer Seyfettin."
 },
 {
     "question": "Türkçülüğün Esasları hangi yazara aittir?",
     "options": [
-        "A) Ziya Gökalp",
-        "B) Yahya Kemal",
+        "A) Yahya Kemal",
+        "B) Ziya Gökalp",
         "C) Yakup Kadri",
         "D) Namık Kemal",
         "E) Necip Fazıl"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "Ziya Gökalp."
 },
 {
     "question": "Yaban romanı hangi yazara aittir?",
     "options": [
-        "A) Yakup Kadri Karaosmanoğlu",
+        "A) Yaşar Kemal",
         "B) Halide Edip",
         "C) Reşat Nuri",
         "D) Kemal Tahir",
-        "E) Yaşar Kemal"
+        "E) Yakup Kadri Karaosmanoğlu"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 4,
     "explanation": "Yakup Kadri."
 },
 {
     "question": "Ateşten Gömlek hangi yazara aittir?",
     "options": [
-        "A) Halide Edip Adıvar",
+        "A) Halit Ziya",
         "B) Reşat Nuri",
-        "C) Halit Ziya",
+        "C) Halide Edip Adıvar",
         "D) Adalet Ağaoğlu",
         "E) Sevgi Soysal"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 2,
     "explanation": "Halide Edip."
 },
 {
     "question": "Çalıkuşu hangi yazara aittir?",
     "options": [
-        "A) Reşat Nuri Güntekin",
+        "A) Refik Halit",
         "B) Halide Edip",
         "C) Yakup Kadri",
-        "D) Refik Halit",
+        "D) Reşat Nuri Güntekin",
         "E) Peyami Safa"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Reşat Nuri."
 },
 {
     "question": "Memleket Hikâyeleri hangi yazara aittir?",
     "options": [
-        "A) Refik Halit Karay",
+        "A) Mustafa Kutlu",
         "B) Ömer Seyfettin",
         "C) Sait Faik",
         "D) Füruzan",
-        "E) Mustafa Kutlu"
+        "E) Refik Halit Karay"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 4,
     "explanation": "Refik Halit Karay."
 },
 {
     "question": "Kendi Gök Kubbemiz hangi şaire aittir?",
     "options": [
-        "A) Yahya Kemal",
-        "B) Necip Fazıl",
+        "A) Necip Fazıl",
+        "B) Yahya Kemal",
         "C) Nazım Hikmet",
         "D) Tevfik Fikret",
         "E) Ahmet Hamdi Tanpınar"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "Yahya Kemal."
 },
 {
@@ -387,73 +387,73 @@ window.guncel_5_sorulari = [
 {
     "question": "Çile ve Kaldırımlar hangi şaire aittir?",
     "options": [
-        "A) Necip Fazıl",
+        "A) Tevfik Fikret",
         "B) Nazım Hikmet",
         "C) Yahya Kemal",
-        "D) Tevfik Fikret",
+        "D) Necip Fazıl",
         "E) Cenap Şahabettin"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Necip Fazıl."
 },
 {
     "question": "Memleketimden İnsan Manzaraları hangi şaire aittir?",
     "options": [
-        "A) Nazım Hikmet",
+        "A) Yahya Kemal",
         "B) Necip Fazıl",
-        "C) Yahya Kemal",
+        "C) Nazım Hikmet",
         "D) Orhan Kemal",
         "E) Yaşar Kemal"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 2,
     "explanation": "Nazım Hikmet."
 },
 {
     "question": "Kürk Mantolu Madonna hangi yazara aittir?",
     "options": [
-        "A) Sabahattin Ali",
+        "A) Peyami Safa",
         "B) Sait Faik",
         "C) Yusuf Atılgan",
         "D) Oğuz Atay",
-        "E) Peyami Safa"
+        "E) Sabahattin Ali"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 4,
     "explanation": "Sabahattin Ali."
 },
 {
     "question": "Semaver hangi yazara aittir?",
     "options": [
-        "A) Sait Faik",
+        "A) Füruzan",
         "B) Ömer Seyfettin",
-        "C) Füruzan",
+        "C) Sait Faik",
         "D) Mustafa Kutlu",
         "E) Refik Halit"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 2,
     "explanation": "Sait Faik."
 },
 {
     "question": "İnce Memed hangi yazara aittir?",
     "options": [
-        "A) Yaşar Kemal",
-        "B) Orhan Kemal",
+        "A) Orhan Kemal",
+        "B) Yaşar Kemal",
         "C) Kemal Tahir",
         "D) Tarık Buğra",
         "E) Yakup Kadri"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "Yaşar Kemal."
 },
 {
     "question": "Bereketli Topraklar Üzerinde hangi yazara aittir?",
     "options": [
-        "A) Orhan Kemal",
+        "A) Sabahattin Ali",
         "B) Yaşar Kemal",
         "C) Kemal Tahir",
-        "D) Sabahattin Ali",
+        "D) Orhan Kemal",
         "E) Halide Edip"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Orhan Kemal."
 },
 {
@@ -495,13 +495,13 @@ window.guncel_5_sorulari = [
 {
     "question": "Tutunamayanlar hangi yazara aittir?",
     "options": [
-        "A) Oğuz Atay",
+        "A) Sevgi Soysal",
         "B) Yusuf Atılgan",
         "C) Adalet Ağaoğlu",
-        "D) Sevgi Soysal",
+        "D) Oğuz Atay",
         "E) Mustafa Kutlu"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Oğuz Atay."
 },
 {
@@ -519,13 +519,13 @@ window.guncel_5_sorulari = [
 {
     "question": "Ölmeye Yatmak hangi yazara aittir?",
     "options": [
-        "A) Adalet Ağaoğlu",
-        "B) Sevgi Soysal",
+        "A) Sevgi Soysal",
+        "B) Adalet Ağaoğlu",
         "C) Füruzan",
         "D) Halide Edip",
         "E) Mustafa Kutlu"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "Adalet Ağaoğlu."
 },
 {

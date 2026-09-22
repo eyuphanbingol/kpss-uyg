@@ -8,8 +8,8 @@ window.vatandas_13_sorulari = [
     },
     {
         question: "Ekonomi biliminin kurucusu kabul edilen ve “Milletlerin Zenginliği” eseriyle bilinen düşünür kimdir?",
-        options: ["A) Auguste Comte", "B) Adam Smith", "C) İbn-i Haldun", "D) Montesquieu", "E) Francis Bacon"],
-        correctAnswerIndex: 1,
+        options: ["A) Auguste Comte", "B) Francis Bacon", "C) İbn-i Haldun", "D) Montesquieu", "E) Adam Smith"],
+        correctAnswerIndex: 4,
         explanation: "Adam Smith ekonomi biliminin kurucusu sayılır."
     },
     {
@@ -56,8 +56,8 @@ window.vatandas_13_sorulari = [
     },
     {
         question: "Klasik mantık, tümdengelim yönteminin ve biyolojinin kurucusu; “İnsan düşünen bir hayvandır.” önermesi kime aittir?",
-        options: ["A) Thales", "B) Aristoteles", "C) Auguste Comte", "D) Adam Smith", "E) Francis Bacon"],
-        correctAnswerIndex: 1,
+        options: ["A) Aristoteles", "B) Thales", "C) Auguste Comte", "D) Adam Smith", "E) Francis Bacon"],
+        correctAnswerIndex: 0,
         explanation: "Aristoteles klasik mantık ve biyolojinin kurucusu kabul edilir."
     },
     {

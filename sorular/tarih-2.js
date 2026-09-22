@@ -10,8 +10,8 @@ window.tarih_2_sorulari = [
   {
     "id": 2,
     "question": "2. Talas Savaşı'ndan sonra esir düşen Çinliler aracılığıyla Müslümanların ve Türklerin eline geçtiği belirtilen teknik/buluşlar arasında aşağıdakilerden hangisi yoktur?",
-    "options": ["A) Kâğıt yapımı", "B) Matbaa", "C) Pusula", "D) Barut", "E) Sabanın icadı"],
-    "correctAnswerIndex": 4,
+    "options": ["A) Kâğıt yapımı", "B) Matbaa", "C) Pusula", "D) Sabanın icadı", "E) Barut"],
+    "correctAnswerIndex": 3,
     "explanation": "Sabanın icadı çok daha eski dönemlere (Neolitik Çağ'a) dayanır ve yerleşik tarım hayatıyla ilgilidir. Talas Savaşı sonrası Çin'den İslam dünyasına yayılan teknik buluşlar kâğıt, matbaa, pusula ve baruttur."
   },
   {
@@ -52,8 +52,8 @@ window.tarih_2_sorulari = [
   {
     "id": 8,
     "question": "8. Karahanlılarla ilgili olarak aşağıdakilerden hangisi söylenemez?",
-    "options": ["A) Dünya tarihinin ilk burslu öğrencilik sistemini başlatmışlardır", "B) 'Ribat' adı verilen kervansarayların ilk örneklerini vermişlerdir", "C) İslamiyet'i resmî din olarak kabul eden ilk büyük Türk-İslam devletidir", "D) Gulam sistemi ilk kez Karahanlılarda başlamıştır", "E) Resmî dilleri Farsçadır"],
-    "correctAnswerIndex": 4,
+    "options": ["A) Resmî dilleri Farsçadır", "B) 'Ribat' adı verilen kervansarayların ilk örneklerini vermişlerdir", "C) İslamiyet'i resmî din olarak kabul eden ilk büyük Türk-İslam devletidir", "D) Gulam sistemi ilk kez Karahanlılarda başlamıştır", "E) Dünya tarihinin ilk burslu öğrencilik sistemini başlatmışlardır"],
+    "correctAnswerIndex": 0,
     "explanation": "Karahanlılar milli kimliklerini sıkı biçimde korumuş, resmî dil olarak Farsça değil Türkçenin Hakaniye lehçesini kullanmıştır."
   },
   {
@@ -73,8 +73,8 @@ window.tarih_2_sorulari = [
   {
     "id": 11,
     "question": "11. Gazneli Mahmut'un Hindistan'a sefer düzenleme amaçları arasında aşağıdakilerden hangisi gösterilemez?",
-    "options": ["A) İslam dünyasının lideri olarak güçlenmek", "B) Bölgedeki yer altı ve yer üstü kaynaklarını ele geçirmek", "C) Bölücü mezhep mensuplarının faaliyetlerine son vermek", "D) Hindistan'ı ele geçirip İslamiyet'i yaymak", "E) Çin ile ticaret yollarının denetimini ele geçirmek"],
-    "correctAnswerIndex": 4,
+    "options": ["A) İslam dünyasının lideri olarak güçlenmek", "B) Bölgedeki yer altı ve yer üstü kaynaklarını ele geçirmek", "C) Bölücü mezhep mensuplarının faaliyetlerine son vermek", "D) Çin ile ticaret yollarının denetimini ele geçirmek", "E) Hindistan'ı ele geçirip İslamiyet'i yaymak"],
+    "correctAnswerIndex": 3,
     "explanation": "Gazneli Mahmut'un Hindistan seferlerindeki temel amaç bölgenin zenginliklerini ele geçirmek ve İslamiyet'i yaymaktır. Bu seferlerin Çin ile yürütülen ticaret yollarının denetimiyle doğrudan bir ilgisi yoktur."
   },
   {
@@ -87,8 +87,8 @@ window.tarih_2_sorulari = [
   {
     "id": 13,
     "question": "13. Bugünkü Pakistan ve Bangladeş'in İslamlaşmasının temellerini attığı kabul edilen; 17. seferini Hindular için kutsal sayılan Somnat'a yaparak putları kıran hükümdar aşağıdakilerden hangisidir?",
-    "options": ["A) Alp Tigin", "B) Gazneli Mahmut", "C) Tuğrul Bey", "D) Sultan Sencer", "E) Selahattin Eyyubi"],
-    "correctAnswerIndex": 1,
+    "options": ["A) Alp Tigin", "B) Sultan Sencer", "C) Tuğrul Bey", "D) Gazneli Mahmut", "E) Selahattin Eyyubi"],
+    "correctAnswerIndex": 3,
     "explanation": "Hindistan'a düzenlediği seferlerle bölgede İslamiyet'in yayılmasını sağlayan ve bu yönüyle bugünkü Pakistan ile Bangladeş'in İslamlaşma sürecinin temellerini atan hükümdar Gazneli Mahmut'tur."
   },
   {
@@ -115,8 +115,8 @@ window.tarih_2_sorulari = [
   {
     "id": 17,
     "question": "17. Sultan Alparslan'ın, Hristiyan dünyası için alınamaz kabul edilen Ani Kalesi'ni fethetmesi üzerine Abbasi Halifesi tarafından kendisine verilen unvan aşağıdakilerden hangisidir?",
-    "options": ["A) Put Kırıcı", "B) Ebu'l-Feth (Fetihlerin Babası)", "C) Hadimü'l-Harameyn", "D) Akşit", "E) Sultan-ı Azam"],
-    "correctAnswerIndex": 1,
+    "options": ["A) Ebu'l-Feth (Fetihlerin Babası)", "B) Put Kırıcı", "C) Hadimü'l-Harameyn", "D) Akşit", "E) Sultan-ı Azam"],
+    "correctAnswerIndex": 0,
     "explanation": "1064'te Ani Kalesi'ni fetheden Sultan Alparslan'a halife tarafından 'Fetihlerin Babası' anlamına gelen 'Ebu'l-Feth' unvanı verilmiştir."
   },
   {
@@ -143,15 +143,15 @@ window.tarih_2_sorulari = [
   {
     "id": 21,
     "question": "21. Büyük Selçuklu Devleti'nin en parlak dönemini yaşadığı hükümdar ve bu dönemin ünlü veziri aşağıdakilerden hangisinde doğru verilmiştir?",
-    "options": ["A) Tuğrul Bey – Nizamülmülk", "B) Sultan Melikşah – Nizamülmülk", "C) Alparslan – Hasan Sabbah", "D) Sultan Sencer – Utbi", "E) Çağrı Bey – Firdevsi"],
-    "correctAnswerIndex": 1,
+    "options": ["A) Tuğrul Bey – Nizamülmülk", "B) Sultan Sencer – Utbi", "C) Alparslan – Hasan Sabbah", "D) Sultan Melikşah – Nizamülmülk", "E) Çağrı Bey – Firdevsi"],
+    "correctAnswerIndex": 3,
     "explanation": "Büyük Selçuklu Devleti en geniş sınırlarına ve en parlak dönemine Sultan Melikşah zamanında ulaşmıştır. Bu dönemin ve bir önceki dönemin ünlü veziri, devletin nizamını kuran Nizamülmülk'tür."
   },
   {
     "id": 22,
     "question": "22. Büyük Selçuklu Devleti'nin yıkılış nedenleri arasında aşağıdakilerden hangisi gösterilemez?",
-    "options": ["A) Batınilik hareketiyle devlet adamlarının suikaste uğraması", "B) Oğuzların devlete küserek isyan etmesi", "C) Katvan Savaşı'nın Karahıtaylara kaybedilmesi", "D) Sultan Sencer'in vefatı", "E) Dandanakan Savaşı'nın kaybedilmesi"],
-    "correctAnswerIndex": 4,
+    "options": ["A) Batınilik hareketiyle devlet adamlarının suikaste uğraması", "B) Oğuzların devlete küserek isyan etmesi", "C) Dandanakan Savaşı'nın kaybedilmesi", "D) Sultan Sencer'in vefatı", "E) Katvan Savaşı'nın Karahıtaylara kaybedilmesi"],
+    "correctAnswerIndex": 2,
     "explanation": "Dandanakan Savaşı kaybedilmemiş, aksine Selçuklular tarafından kazanılarak devletin resmen kurulmasını sağlamıştır. Diğer seçenekler ise devletin yıkılış nedenleri arasındadır."
   },
   {
@@ -248,8 +248,8 @@ window.tarih_2_sorulari = [
   {
     "id": 36,
     "question": "36. Danişmentliler, Saltuklular, Mengücekliler ve Artukluların ortak özelliği aşağıdakilerden hangisidir?",
-    "options": ["A) Mısır'da kurulmaları", "B) Varlıklarına Anadolu Selçuklu Devleti tarafından son verilmesi", "C) Şii karakterli olmaları", "D) Denizcilikle uğraşmaları", "E) İlhanlılar tarafından yıkılmaları"],
-    "correctAnswerIndex": 1,
+    "options": ["A) Mısır'da kurulmaları", "B) Şii karakterli olmaları", "C) Varlıklarına Anadolu Selçuklu Devleti tarafından son verilmesi", "D) Denizcilikle uğraşmaları", "E) İlhanlılar tarafından yıkılmaları"],
+    "correctAnswerIndex": 2,
     "explanation": "Bu beyliklerin tamamı Malazgirt sonrasında Anadolu'da kurulmuş birinci dönem beylikleridir ve zamanla Anadolu Selçuklu Devleti (Türkiye Selçukluları) tarafından itaat altına alınmıştır."
   },
   {
@@ -276,8 +276,8 @@ window.tarih_2_sorulari = [
   {
     "id": 40,
     "question": "40. 1514 Çaldıran Savaşı'nda Yavuz Sultan Selim'e mağlup olan, İran'da kurulmuş Şii karakterli devlet aşağıdakilerden hangisidir?",
-    "options": ["A) Babürler", "B) Safaviler", "C) Karakoyunlular", "D) Timur Devleti", "E) Harzemşahlar"],
-    "correctAnswerIndex": 1,
+    "options": ["A) Babürler", "B) Karakoyunlular", "C) Safaviler", "D) Timur Devleti", "E) Harzemşahlar"],
+    "correctAnswerIndex": 2,
     "explanation": "Şah İsmail tarafından İran'da kurulan, Şii inancını devlet politikası hâline getiren ve 1514 Çaldıran Savaşı'nda Yavuz Sultan Selim'e yenilen devlet Safeviler'dir."
   },
   {
@@ -290,8 +290,8 @@ window.tarih_2_sorulari = [
   {
     "id": 42,
     "question": "42. Eşi Mümtaz Mahal için Tac Mahal'i yaptıran hükümdarın mensup olduğu devlet aşağıdakilerden hangisidir?",
-    "options": ["A) Safaviler", "B) Babürler", "C) Timur Devleti", "D) Akkoyunlular", "E) Memlükler"],
-    "correctAnswerIndex": 1,
+    "options": ["A) Safaviler", "B) Timur Devleti", "C) Babürler", "D) Akkoyunlular", "E) Memlükler"],
+    "correctAnswerIndex": 2,
     "explanation": "Dünyanın yedi harikasından biri sayılan Agra'daki Tac Mahal, Babür İmparatoru Şah Cihan tarafından vefat eden eşi Mümtaz Mahal anısına yaptırılmıştır."
   },
   {
@@ -318,29 +318,29 @@ window.tarih_2_sorulari = [
   {
     "id": 46,
     "question": "46. Kendisi Türk, idaresindeki halkın büyük bölümü Moğol kökenli olan; döneminde Uluğ Bey, Ali Kuşçu, Hüseyin Baykara ve Ali Şir Nevai gibi isimlerin yetiştiği devlet aşağıdakilerden hangisidir?",
-    "options": ["A) İlhanlılar", "B) Timur Devleti", "C) Altınorda", "D) Çağatay Hanlığı", "E) Kubilay Hanlığı"],
-    "correctAnswerIndex": 1,
+    "options": ["A) İlhanlılar", "B) Çağatay Hanlığı", "C) Altınorda", "D) Timur Devleti", "E) Kubilay Hanlığı"],
+    "correctAnswerIndex": 3,
     "explanation": "Timur İmparatorluğu'nun kurucu kadroları büyük ölçüde Türkleşmiş Moğol/Türk unsurlardan oluşuyordu. Semerkant merkezli bu dönemde bilim ve edebiyatta (Uluğ Bey, Ali Şir Nevai gibi isimlerle) büyük bir gelişme yaşanmıştır."
   },
   {
     "id": 47,
     "question": "47. İlk Türk-İslam devletlerinde hükümdarlık sembolleri arasında aşağıdakilerden hangisi yoktur?",
-    "options": ["A) Otağ ve Örgün (taht)", "B) Nevbet (davul) ve Çetr", "C) Hutbe ve Tıraz", "D) Hilat ve tuğra mührü", "E) Cizye ve haraç defteri"],
-    "correctAnswerIndex": 4,
+    "options": ["A) Cizye ve haraç defteri", "B) Nevbet (davul) ve Çetr", "C) Hutbe ve Tıraz", "D) Hilat ve tuğra mührü", "E) Otağ ve Örgün (taht)"],
+    "correctAnswerIndex": 0,
     "explanation": "Cizye ve haraç, gayrimüslimlerden alınan şer'i vergilerdir; bunların tutulduğu defterler mali kayıt niteliğinde olup bir hükümdarlık sembolü sayılmaz."
   },
   {
     "id": 48,
     "question": "48. İslamiyet öncesi 'kut' anlayışına dayanan Türk Cihan Hâkimiyeti düşüncesinin İslamiyet'le birlikte aldığı biçimle ilgili olarak aşağıdakilerden hangisi doğrudur?",
-    "options": ["A) Kut anlayışı tamamen terk edilmiştir", "B) Cihan hâkimiyeti düşüncesi 'cihat ve ilay-ı kelimetullah' anlayışıyla devam etmiştir", "C) Kut anlayışı yerini cizyeye bırakmıştır", "D) Cihan hâkimiyeti düşüncesi yalnızca ticaretle sınırlı kalmıştır", "E) Kut anlayışı Hint inançlarıyla birleşmiştir"],
-    "correctAnswerIndex": 1,
+    "options": ["A) Cihan hâkimiyeti düşüncesi 'cihat ve ilay-ı kelimetullah' anlayışıyla devam etmiştir", "B) Kut anlayışı tamamen terk edilmiştir", "C) Kut anlayışı yerini cizyeye bırakmıştır", "D) Cihan hâkimiyeti düşüncesi yalnızca ticaretle sınırlı kalmıştır", "E) Kut anlayışı Hint inançlarıyla birleşmiştir"],
+    "correctAnswerIndex": 0,
     "explanation": "İslamiyet'le birlikte eski Türk dünyasındaki 'gökyüzünün altındaki her yeri yönetme' ülküsü, Allah'ın adını ve adaletini her yere yayma gayesi olan 'cihat' ve 'ilay-ı kelimetullah' (Allah'ın adını yüceltme) anlayışına dönüşmüştür."
   },
   {
     "id": 49,
     "question": "49. Aşağıdaki saray görevlisi–görev eşleştirmelerinden hangisi yanlıştır?",
-    "options": ["A) Candar – hükümdarın özel muhafızı", "B) Alemdar – devlet bayraklarını taşıyan", "C) Emir-i Ahur – atların bakımından sorumlu", "D) Hansalar – hükümdarın sofra düzeniyle ilgilenen", "E) Çaşnigir – devlet bayraklarını taşıyan"],
-    "correctAnswerIndex": 4,
+    "options": ["A) Candar – hükümdarın özel muhafızı", "B) Alemdar – devlet bayraklarını taşıyan", "C) Emir-i Ahur – atların bakımından sorumlu", "D) Çaşnigir – devlet bayraklarını taşıyan", "E) Hansalar – hükümdarın sofra düzeniyle ilgilenen"],
+    "correctAnswerIndex": 3,
     "explanation": "Çaşnigir, hükümdarın yemeklerini ilk tadarak zehirlenmeye karşı güvenliği sağlayan ve mutfaktan sorumlu görevlidir. Bayrak taşıma görevi 'Alemdar'a aittir."
   },
   {
@@ -360,8 +360,8 @@ window.tarih_2_sorulari = [
   {
     "id": 52,
     "question": "52. Aşağıdaki divan–sorumlu görevli eşleştirmelerinden hangisi yanlıştır?",
-    "options": ["A) Divan-ı İstifa – Müstevfi", "B) Divan-ı Arz – Emir-i Arz", "C) Divan-ı İşraf – Müşrif-i Memalik", "D) Divan-ı İnşa – Tuğrai", "E) Divan-ı Berid – Naip"],
-    "correctAnswerIndex": 4,
+    "options": ["A) Divan-ı İstifa – Müstevfi", "B) Divan-ı Arz – Emir-i Arz", "C) Divan-ı Berid – Naip", "D) Divan-ı İnşa – Tuğrai", "E) Divan-ı İşraf – Müşrif-i Memalik"],
+    "correctAnswerIndex": 2,
     "explanation": "Divan-ı Berid, posta ve istihbarat işlerinden sorumlu bir görevlinin yönetimindedir. 'Naip' ise hükümdar başkentte bulunmadığında veya küçük yaşta tahta çıktığında onun adına vekâlet eden görevlidir (Divan-ı Niyabet-i Saltanat); bu nedenle Divan-ı Berid ile eşleştirilemez."
   },
   {
@@ -388,8 +388,8 @@ window.tarih_2_sorulari = [
   {
     "id": 56,
     "question": "56. Kaynakları Kur'an, Sünnet, İcma ve Kıyas olan; evlenme, boşanma ve miras gibi alanları düzenleyen; başında Kadı'l-Kudat'ın bulunduğu hukuk türü aşağıdakilerden hangisidir?",
-    "options": ["A) Örfi hukuk", "B) Şer'i hukuk", "C) Töre hukuku", "D) Askerî hukuk", "E) Ticaret hukuku"],
-    "correctAnswerIndex": 1,
+    "options": ["A) Örfi hukuk", "B) Töre hukuku", "C) Şer'i hukuk", "D) Askerî hukuk", "E) Ticaret hukuku"],
+    "correctAnswerIndex": 2,
     "explanation": "İslam hukuk kurallarına dayalı olan, aile ve miras gibi medeni ilişkileri düzenleyen ve başında en üst yargıç olarak Kadı'l-Kudat'ın bulunduğu hukuk sistemi şer'i hukuktur."
   },
   {
@@ -416,29 +416,29 @@ window.tarih_2_sorulari = [
   {
     "id": 60,
     "question": "60. İkta sisteminde yetişen askere barış ve savaş zamanındaki adlandırması aşağıdakilerden hangisinde doğru verilmiştir?",
-    "options": ["A) Barışta cebelü – savaşta sipahi", "B) Barışta sipahi – savaşta cebelü", "C) Barışta gulam – savaşta candar", "D) Barışta tımarlı – savaşta yaya", "E) Barışta akıncı – savaşta sipahi"],
-    "correctAnswerIndex": 1,
+    "options": ["A) Barışta cebelü – savaşta sipahi", "B) Barışta tımarlı – savaşta yaya", "C) Barışta gulam – savaşta candar", "D) Barışta sipahi – savaşta cebelü", "E) Barışta akıncı – savaşta sipahi"],
+    "correctAnswerIndex": 3,
     "explanation": "İkta sahiplerinin geliriyle beslediği zırhlı süvari askerlerine barış zamanında 'sipahi', savaş çıkıp teçhizatıyla sefere katıldıklarında ise 'cebelü' denir."
   },
   {
     "id": 61,
     "question": "61. Aşağıdaki toprak türü–açıklama eşleştirmelerinden hangisi yanlıştır?",
-    "options": ["A) Has – gelirleri sultana ayrılan miri toprak", "B) Vakıf – malın özel mülkiyetten çıkarılması", "C) Öşri – Müslümanlara ait topraklar", "D) Haraci – gayrimüslimlere ait topraklar", "E) Öşri – gayrimüslimlere ait miri toprak"],
-    "correctAnswerIndex": 4,
+    "options": ["A) Has – gelirleri sultana ayrılan miri toprak", "B) Vakıf – malın özel mülkiyetten çıkarılması", "C) Öşri – Müslümanlara ait topraklar", "D) Öşri – gayrimüslimlere ait miri toprak", "E) Haraci – gayrimüslimlere ait topraklar"],
+    "correctAnswerIndex": 3,
     "explanation": "Öşri topraklar Müslüman mülkiyetindeki topraklardır. Gayrimüslimlere ait topraklara ise 'haraci' toprak denir."
   },
   {
     "id": 62,
     "question": "62. Aşağıdaki sosyal hayat terimi–açıklama eşleştirmelerinden hangisi yanlıştır?",
-    "options": ["A) İmarethane – sıcak yemek dağıtılan aşevi", "B) Bedesten – her türlü ticari malın satıldığı yer", "C) Kapan – tek bir cins malın satıldığı yer", "D) Darüşşifa – hastane", "E) Bargah – din eğitimi verilen kurum"],
-    "correctAnswerIndex": 4,
+    "options": ["A) Bargah – din eğitimi verilen kurum", "B) Bedesten – her türlü ticari malın satıldığı yer", "C) Kapan – tek bir cins malın satıldığı yer", "D) Darüşşifa – hastane", "E) İmarethane – sıcak yemek dağıtılan aşevi"],
+    "correctAnswerIndex": 0,
     "explanation": "Bargah (dergâh-ı mualla), hükümdarın huzuru veya yüksek kabul salonu anlamına gelir; doğrudan din eğitimi verilen bir kurum değildir."
   },
   {
     "id": 63,
     "question": "63. İlk Müslüman Türk devletlerinde 'kümbet' ve 'türbe' kavramları arasındaki fark aşağıdakilerden hangisinde doğru verilmiştir?",
-    "options": ["A) Kümbet dinî şahsiyetler, türbe komutanlar içindir", "B) Kümbet siyasi devlet adamı ve komutanlar, türbe dinî şahsiyetler içindir", "C) İkisi de yalnızca padişahlar içindir", "D) Kümbet hastane, türbe çeşme anlamına gelir", "E) Kümbet çarşı, türbe saray anlamına gelir"],
-    "correctAnswerIndex": 1,
+    "options": ["A) Kümbet siyasi devlet adamı ve komutanlar, türbe dinî şahsiyetler içindir", "B) Kümbet dinî şahsiyetler, türbe komutanlar içindir", "C) İkisi de yalnızca padişahlar içindir", "D) Kümbet hastane, türbe çeşme anlamına gelir", "E) Kümbet çarşı, türbe saray anlamına gelir"],
+    "correctAnswerIndex": 0,
     "explanation": "Kümbetler genellikle silindirik veya çokgen gövdeli, konik çatılı anıt mezarlardır ve çoğunlukla sultan, komutan ve devlet adamları için yapılmıştır. Türbeler ise daha çok derviş, evliya ve dinî önderler için inşa edilmiştir."
   },
   {
@@ -451,22 +451,22 @@ window.tarih_2_sorulari = [
   {
     "id": 65,
     "question": "65. Aşağıdaki medrese–nitelik eşleştirmelerinden hangisi yanlıştır?",
-    "options": ["A) Semerkant Medresesi – ilk Türk-İslam medresesi (Karahanlılar)", "B) Yağıbasan Medresesi – Anadolu'da kurulan ilk medrese", "C) Nişabur Medresesi – Büyük Selçuklu Devleti'nin kurduğu ilk Nizamiye medresesi", "D) Nizamiye Medresesi – Büyük Selçuklu Devleti'nin en önemli medresesi", "E) Nizamiye Medresesi – Anadolu'da kurulan ilk medrese"],
-    "correctAnswerIndex": 4,
+    "options": ["A) Nizamiye Medresesi – Anadolu'da kurulan ilk medrese", "B) Yağıbasan Medresesi – Anadolu'da kurulan ilk medrese", "C) Nişabur Medresesi – Büyük Selçuklu Devleti'nin kurduğu ilk Nizamiye medresesi", "D) Nizamiye Medresesi – Büyük Selçuklu Devleti'nin en önemli medresesi", "E) Semerkant Medresesi – ilk Türk-İslam medresesi (Karahanlılar)"],
+    "correctAnswerIndex": 0,
     "explanation": "Nizamiye Medreseleri Irak ve İran coğrafyasında (Bağdat, Nişabur vb.) kurulmuştur. Anadolu'da kurulan ilk medrese ise Danişmentlilerin yaptığı 'Yağıbasan Medresesi'dir."
   },
   {
     "id": 66,
     "question": "66. Nizamiye Medreseleri'nin açılma nedenleri arasında aşağıdakilerden hangisi gösterilemez?",
-    "options": ["A) İslamiyet'e yeni geçen Oğuz toplumlarının inançlarını pekiştirmek", "B) Yoksul ve yetenekli çocukları topluma kazandırmak", "C) Devlet memuru ve din adamı ihtiyacını karşılamak", "D) Batınilik gibi zararlı fikir akımlarına fikirle karşılık vermek", "E) Haçlı ordularına karşı askerî üstünlük sağlamak"],
-    "correctAnswerIndex": 4,
+    "options": ["A) Haçlı ordularına karşı askerî üstünlük sağlamak", "B) Yoksul ve yetenekli çocukları topluma kazandırmak", "C) Devlet memuru ve din adamı ihtiyacını karşılamak", "D) Batınilik gibi zararlı fikir akımlarına fikirle karşılık vermek", "E) İslamiyet'e yeni geçen Oğuz toplumlarının inançlarını pekiştirmek"],
+    "correctAnswerIndex": 0,
     "explanation": "Medreseler eğitim ve fikir kurumlarıdır; temel amaçları özellikle Batınilik akımına karşı fikri mücadele vermektir. Haçlı ya da başka ordulara karşı askerî bir üstünlük kurmak medreselerin işlevi değildir."
   },
   {
     "id": 67,
     "question": "67. İlk Nizamiye Medresesi'nin açıldığı yer ve onu açtıran hükümdar aşağıdakilerden hangisinde doğru verilmiştir?",
-    "options": ["A) Bağdat – Melikşah", "B) Nişabur – Sultan Alparslan", "C) Semerkant – Tamgaç Buğra Han", "D) İsfahan – Tuğrul Bey", "E) Rey – Sultan Sencer"],
-    "correctAnswerIndex": 1,
+    "options": ["A) Bağdat – Melikşah", "B) Semerkant – Tamgaç Buğra Han", "C) Nişabur – Sultan Alparslan", "D) İsfahan – Tuğrul Bey", "E) Rey – Sultan Sencer"],
+    "correctAnswerIndex": 2,
     "explanation": "Büyük Selçuklu Devleti'nde ilk Nizamiye yapısı, Sultan Alparslan döneminde Vezir Nizamülmülk tarafından Nişabur'da açılmıştır; en büyüğü daha sonra Bağdat'ta inşa edilecektir."
   },
   {
@@ -479,8 +479,8 @@ window.tarih_2_sorulari = [
   {
     "id": 69,
     "question": "69. Aşağıdaki sanat dalı–açıklama eşleştirmelerinden hangisi yanlıştır?",
-    "options": ["A) Hat – Arap harfleriyle güzel yazma sanatı", "B) Tezhip – altınlama/yıldızlama ile Kur'an süslemesi", "C) Telkari – gümüş işlemeciliği", "D) Malakari – duvar kabartma sanatı", "E) Ebru – cam süsleme sanatı"],
-    "correctAnswerIndex": 4,
+    "options": ["A) Hat – Arap harfleriyle güzel yazma sanatı", "B) Tezhip – altınlama/yıldızlama ile Kur'an süslemesi", "C) Ebru – cam süsleme sanatı", "D) Malakari – duvar kabartma sanatı", "E) Telkari – gümüş işlemeciliği"],
+    "correctAnswerIndex": 2,
     "explanation": "Ebru, cam süsleme sanatı değildir; kitreyle yoğunlaştırılmış suyun üzerine boyalarla desen oluşturup bu deseni kâğıda aktarma sanatıdır."
   },
   {
@@ -507,8 +507,8 @@ window.tarih_2_sorulari = [
   {
     "id": 73,
     "question": "73. Batı dünyasında 'Avicenna' olarak bilinen; 'El-Kanun fi't-Tıp' ve 'Kitabü'ş-Şifa' eserlerini yazan, yüzyıllarca Avrupa üniversitelerinde ders kitabı olarak okutulan hekim aşağıdakilerden hangisidir?",
-    "options": ["A) İbn-i Rüşd", "B) İbn-i Sina", "C) Cabir bin Hayyam", "D) İbn-ü Heysem", "E) İdrisi"],
-    "correctAnswerIndex": 1,
+    "options": ["A) İbn-i Sina", "B) İbn-i Rüşd", "C) Cabir bin Hayyam", "D) İbn-ü Heysem", "E) İdrisi"],
+    "correctAnswerIndex": 0,
     "explanation": "Batı dünyasında 'Avicenna' olarak bilinen, 'El-Kanun fi't-Tıp' adlı eseriyle Avrupa tıp eğitiminde uzun süre temel kaynak olarak kullanılan büyük hekim İbn-i Sina'dır."
   },
   {
@@ -521,8 +521,8 @@ window.tarih_2_sorulari = [
   {
     "id": 75,
     "question": "75. Cebirin kurucusu kabul edilen; 'Hisabü'l-Cebr ve'l-Mukabele'yi yazan ve ondalık sayı sistemini geliştiren matematikçi-astronom aşağıdakilerden hangisidir?",
-    "options": ["A) Ömer Hayyam", "B) Harezmî", "C) Farabi", "D) Biruni", "E) İdrisi"],
-    "correctAnswerIndex": 1,
+    "options": ["A) Ömer Hayyam", "B) Biruni", "C) Farabi", "D) Harezmî", "E) İdrisi"],
+    "correctAnswerIndex": 3,
     "explanation": "Matematikte 'sıfır' rakamını sistematik olarak kullanan, bilinmeyeni ('x') matematiğe kazandıran ve cebiri müstakil bir bilim dalı hâline getiren El-Harezmî'dir."
   },
   {
@@ -542,8 +542,8 @@ window.tarih_2_sorulari = [
   {
     "id": 78,
     "question": "78. Aşağıdaki bilim insanı–özellik eşleştirmelerinden hangisi yanlıştır?",
-    "options": ["A) Gazali – Hüccetü'l-İslam unvanıyla Batınilik'e karşı fikir üretmesi", "B) Razi – çiçek ile kızamık hastalıkları arasındaki farkı belirlemesi", "C) İdrisi – Batı Avrupa'yı gerçeğe uygun biçimde çizen ilk kişi olması", "D) Ömer Hayyam – Celali Takvimi'ni hazırlayan heyete başkanlık etmesi", "E) Gazali – cebirin kurucusu olması"],
-    "correctAnswerIndex": 4,
+    "options": ["A) Gazali – Hüccetü'l-İslam unvanıyla Batınilik'e karşı fikir üretmesi", "B) Razi – çiçek ile kızamık hastalıkları arasındaki farkı belirlemesi", "C) Gazali – cebirin kurucusu olması", "D) Ömer Hayyam – Celali Takvimi'ni hazırlayan heyete başkanlık etmesi", "E) İdrisi – Batı Avrupa'yı gerçeğe uygun biçimde çizen ilk kişi olması"],
+    "correctAnswerIndex": 2,
     "explanation": "Gazali; fıkıh, kelam ve tasavvuf alanında büyük bir âlimdir. Cebirin kurucusu Gazali değil El-Harezmî'dir."
   },
   {
@@ -556,22 +556,22 @@ window.tarih_2_sorulari = [
   {
     "id": 80,
     "question": "80. Divanü Lügati't-Türk ile ilgili olarak aşağıdakilerden hangisi yanlıştır?",
-    "options": ["A) Kaşgarlı Mahmut tarafından yazılmıştır", "B) İlk Türkçe ansiklopedik sözlüktür", "C) İçinde Türk dünyasına ait bir harita bulunur", "D) Araplara Türkçenin zengin bir dil olduğunu göstermek için Arapça yazılmıştır", "E) Tamgaç Buğra Han'a sunulan bir siyasetnamedir"],
-    "correctAnswerIndex": 4,
+    "options": ["A) Kaşgarlı Mahmut tarafından yazılmıştır", "B) İlk Türkçe ansiklopedik sözlüktür", "C) İçinde Türk dünyasına ait bir harita bulunur", "D) Tamgaç Buğra Han'a sunulan bir siyasetnamedir", "E) Araplara Türkçenin zengin bir dil olduğunu göstermek için Arapça yazılmıştır"],
+    "correctAnswerIndex": 3,
     "explanation": "Divanü Lügati't-Türk, Tamgaç Buğra Han'a değil Bağdat'taki Abbasi Halifesi El-Muktedî Billah'a sunulmuştur; bir siyasetname değil, dil ve sözlük eseridir."
   },
   {
     "id": 81,
     "question": "81. Aşağıdaki eser–yazar eşleştirmelerinden hangisi yanlıştır?",
-    "options": ["A) Atabetü'l-Hakayık – Edip Ahmet Yükneki", "B) Divan-ı Hikmet – Ahmet Yesevi", "C) Şehname – Firdevsi", "D) Siyasetname – Nizamülmülk", "E) Mühakemetü'l-Lügateyn – Kaşgarlı Mahmut"],
-    "correctAnswerIndex": 4,
+    "options": ["A) Atabetü'l-Hakayık – Edip Ahmet Yükneki", "B) Divan-ı Hikmet – Ahmet Yesevi", "C) Mühakemetü'l-Lügateyn – Kaşgarlı Mahmut", "D) Siyasetname – Nizamülmülk", "E) Şehname – Firdevsi"],
+    "correctAnswerIndex": 2,
     "explanation": "Mühakemetü'l-Lügateyn (İki Dilin Karşılaştırılması) adlı eser Kaşgarlı Mahmut'a değil, Çağatay edebiyatının en büyük ismi sayılan Ali Şir Nevai'ye aittir."
   },
   {
     "id": 82,
     "question": "82. 'Piri Türkistan' olarak bilinen; Türk tasavvuf edebiyatının ilk eseri sayılan Divan-ı Hikmet'in yazarı; ilk Türk mutasavvıfı kabul edilen ve mezarını Timur'un yaptırdığı kişi aşağıdakilerden hangisidir?",
-    "options": ["A) Yusuf Has Hacip", "B) Ahmet Yesevi", "C) Edip Ahmet Yükneki", "D) Ali Şir Nevai", "E) Firdevsi"],
-    "correctAnswerIndex": 1,
+    "options": ["A) Ahmet Yesevi", "B) Yusuf Has Hacip", "C) Edip Ahmet Yükneki", "D) Ali Şir Nevai", "E) Firdevsi"],
+    "correctAnswerIndex": 0,
     "explanation": "Türkistan'da kurduğu tarikatla Anadolu'nun İslamlaşmasında etkili olan dervişleri yetiştiren, Divan-ı Hikmet'in yazarı büyük mutasavvıf Hoca Ahmet Yesevi'dir."
   },
   {
@@ -605,8 +605,8 @@ window.tarih_2_sorulari = [
   {
     "id": 87,
     "question": "87. Aşağıdaki olay–kişi eşleştirmelerinden hangisi yanlıştır?",
-    "options": ["A) Malazgirt Savaşı – Romen Diyojen", "B) Batınilik propagandası – Hasan Sabbah", "C) Pasinler Savaşı – Gürcü Kralı Liparit", "D) Otrar Faciası – Cengiz Han", "E) Dandanakan Savaşı – Babür Şah"],
-    "correctAnswerIndex": 4,
+    "options": ["A) Dandanakan Savaşı – Babür Şah", "B) Batınilik propagandası – Hasan Sabbah", "C) Pasinler Savaşı – Gürcü Kralı Liparit", "D) Otrar Faciası – Cengiz Han", "E) Malazgirt Savaşı – Romen Diyojen"],
+    "correctAnswerIndex": 0,
     "explanation": "1040 Dandanakan Savaşı, Gazneliler (Sultan Mesud) ile Selçuklular (Tuğrul ve Çağrı Bey) arasında yapılmıştır; Babür Şah çok daha sonra yaşamıştır ve bu olayla ilgisi yoktur."
   },
   {
@@ -626,15 +626,15 @@ window.tarih_2_sorulari = [
   {
     "id": 90,
     "question": "90. Aşağıdaki devlet–devleti yıkan güç eşleştirmelerinden hangisi yanlıştır?",
-    "options": ["A) Gazneliler – Gurlular", "B) İhşidiler – Fatımiler", "C) Harzemşahlar – İlhanlılar", "D) Karakoyunlular – Akkoyunlular", "E) Memlükler – İlhanlılar"],
-    "correctAnswerIndex": 4,
+    "options": ["A) Gazneliler – Gurlular", "B) İhşidiler – Fatımiler", "C) Harzemşahlar – İlhanlılar", "D) Memlükler – İlhanlılar", "E) Karakoyunlular – Akkoyunlular"],
+    "correctAnswerIndex": 3,
     "explanation": "Memlükler Devleti'ne son veren güç Moğollar (İlhanlılar) değil, 1517 Ridaniye Savaşı ile Osmanlı İmparatorluğu'dur (Yavuz Sultan Selim)."
   },
   {
     "id": 91,
     "question": "91. Coğrafi konum bakımından değerlendirildiğinde, aşağıdaki devletlerden hangisi diğerlerinden farklı bir bölgede kurulmuştur?",
-    "options": ["A) Saltuklular", "B) Danişmentliler", "C) Mengücekliler", "D) Artuklular", "E) Tolunoğulları"],
-    "correctAnswerIndex": 4,
+    "options": ["A) Saltuklular", "B) Danişmentliler", "C) Mengücekliler", "D) Tolunoğulları", "E) Artuklular"],
+    "correctAnswerIndex": 3,
     "explanation": "Saltuklular, Danişmentliler, Mengücekliler ve Artuklular tamamen Anadolu coğrafyasında kurulmuş beyliklerdir. Tolunoğulları ise Kuzey Afrika'da, Mısır'da kurulmuştur."
   },
   {

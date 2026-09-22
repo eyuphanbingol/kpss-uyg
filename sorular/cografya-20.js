@@ -1,7 +1,7 @@
 // sorular/cografya-20.js
 window.cografya_20_sorulari = [
     {
-        question: "Soru 1: Türkiye'de hayvancılığın geliştirilmesine yönelik aşağıdaki uygulamalardan hangisinin, hayvansal ürünlerde verim artışını doğrudan sağlamaya yönelik olduğu söylenebilir?",
+        question: "Türkiye'de hayvancılığın geliştirilmesine yönelik aşağıdaki uygulamalardan hangisinin, hayvansal ürünlerde verim artışını doğrudan sağlamaya yönelik olduğu söylenebilir?",
         options: [
             "A) Kaçak avlanmanın önlenmesi",
             "B) Hayvan soylarının ıslah edilmesi",
@@ -13,7 +13,7 @@ window.cografya_20_sorulari = [
         explanation: "Hayvan soylarının ıslah edilmesi, genetik özelliklerin iyileştirilerek hayvansal verimin artırılmasını amaçlar. Bu, hayvancılıkta verim artışını doğrudan sağlayan bir uygulamadır."
     },
     {
-        question: "Soru 2: Türkiye'de hayvancılığın geliştirilmesi amacıyla;\n\nI. Ahır-besi hayvancılığının teşvik edilmesi\nII. Yem ekimi ve yem sanayisinin geliştirilmesi\nIII. Veterinerlik hizmetlerinin yaygınlaştırılması\nIV. Süt danası ve kuzusu kesiminin engellenmesi\n\nuygulamalarından hangilerinin hayvansal üretimde verimliliği artırması beklenir?",
+        question: "Türkiye'de hayvancılığın geliştirilmesi amacıyla;\n\nI. Ahır-besi hayvancılığının teşvik edilmesi\nII. Yem ekimi ve yem sanayisinin geliştirilmesi\nIII. Veterinerlik hizmetlerinin yaygınlaştırılması\nIV. Süt danası ve kuzusu kesiminin engellenmesi\n\nuygulamalarından hangilerinin hayvansal üretimde verimliliği artırması beklenir?",
         options: [
             "A) Yalnız I",
             "B) I ve II",
@@ -25,7 +25,7 @@ window.cografya_20_sorulari = [
         explanation: "Ahır-besi hayvancılığı, yem sanayisi, veterinerlik hizmetleri ve süt danası-kuzusu kesiminin engellenmesi, hayvansal üretimde verimliliği artıran uygulamalardır. Tümü hayvancılığın gelişmesine katkı sağlar."
     },
     {
-        question: "Soru 3: Aşağıdaki hayvancılık faaliyetlerinden hangisinde iklim koşullarının üretim üzerindeki etkisi diğerlerine göre daha azdır?",
+        question: "Aşağıdaki hayvancılık faaliyetlerinden hangisinde iklim koşullarının üretim üzerindeki etkisi diğerlerine göre daha azdır?",
         options: [
             "A) Mera hayvancılığı",
             "B) Koyun yetiştiriciliği",
@@ -37,7 +37,7 @@ window.cografya_20_sorulari = [
         explanation: "Ahır-besi hayvancılığı kapalı ortamlarda, suni yem kullanılarak gerçekleştirildiğinden iklim koşullarından büyük ölçüde bağımsızdır. Diğer hayvancılık türleri doğal koşullara daha bağımlıdır."
     },
     {
-        question: "Soru 4: Bir bölgede büyükbaş hayvancılık yapılırken hayvanların yıl boyunca kapalı ortamlarda tutulduğu ve beslenmelerinde suni yemlerden yararlanıldığı belirlenmiştir.\n\nBuna göre bu bölgede aşağıdaki hayvancılık türlerinden hangisinin yapıldığı söylenebilir?",
+        question: "Bir bölgede büyükbaş hayvancılık yapılırken hayvanların yıl boyunca kapalı ortamlarda tutulduğu ve beslenmelerinde suni yemlerden yararlanıldığı belirlenmiştir.\n\nBuna göre bu bölgede aşağıdaki hayvancılık türlerinden hangisinin yapıldığı söylenebilir?",
         options: [
             "A) Mera hayvancılığı",
             "B) Yaylacılık",
@@ -49,7 +49,7 @@ window.cografya_20_sorulari = [
         explanation: "Kapalı ortamlarda suni yemle yapılan büyükbaş hayvancılık, ahır-besi hayvancılığıdır. Bu yöntemde iklim koşullarının etkisi sınırlıdır."
     },
     {
-        question: "Soru 5: Mera hayvancılığıyla ilgili aşağıdaki özelliklerden hangisi bu hayvancılık türünün iklim koşullarına bağımlı olmasının temel sonucudur?",
+        question: "Mera hayvancılığıyla ilgili aşağıdaki özelliklerden hangisi bu hayvancılık türünün iklim koşullarına bağımlı olmasının temel sonucudur?",
         options: [
             "A) Suni yem kullanımının zorunlu olması",
             "B) Hayvansal verimin düşük olması",
@@ -61,19 +61,19 @@ window.cografya_20_sorulari = [
         explanation: "Mera hayvancılığı doğal otlaklara bağlıdır ve iklim koşullarından doğrudan etkilenir. Bu durum, hayvansal verimin düşük olmasına neden olur."
     },
     {
-        question: "Soru 6: Türkiye'de otlak-mera hayvancılığının yaygın olduğu iller arasında aşağıdakilerden hangisi gösterilebilir?",
+        question: "Türkiye'de otlak-mera hayvancılığının yaygın olduğu iller arasında aşağıdakilerden hangisi gösterilebilir?",
         options: [
             "A) İzmir",
             "B) Antalya",
-            "C) Erzurum",
-            "D) Mersin",
+            "C) Mersin",
+            "D) Erzurum",
             "E) Manisa"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 3,
         explanation: "Erzurum, Kars ve Ağrı başlıca mera hayvancılığı merkezleridir. Doğu Anadolu'nun yüksek platoları ve çayırları, mera hayvancılığı için uygun koşullar sağlar."
     },
     {
-        question: "Soru 7: Türkiye'de büyükbaş hayvan sayısının fazla olduğu iller arasında;\n\nI. Konya\nII. İzmir\nIII. Erzurum\nIV. Mersin\nV. Şanlıurfa\n\nverilenlerden hangileri bulunmaktadır?",
+        question: "Türkiye'de büyükbaş hayvan sayısının fazla olduğu iller arasında;\n\nI. Konya\nII. İzmir\nIII. Erzurum\nIV. Mersin\nV. Şanlıurfa\n\nverilenlerden hangileri bulunmaktadır?",
         options: [
             "A) I ve II",
             "B) I ve III",
@@ -85,19 +85,19 @@ window.cografya_20_sorulari = [
         explanation: "Büyükbaş hayvancılıkta Konya, İzmir ve Erzurum önemli merkezlerdir. Konya ve İzmir ahır-besi hayvancılığı, Erzurum ise mera hayvancılığı ile öne çıkar."
     },
     {
-        question: "Soru 8: Aşağıdaki illerden hangisi hem büyükbaş hayvancılıkta önemli üretim merkezlerinden biri olması hem de mera hayvancılığının yaygın olduğu iller arasında bulunması bakımından diğerlerinden ayrılır?",
+        question: "Aşağıdaki illerden hangisi hem büyükbaş hayvancılıkta önemli üretim merkezlerinden biri olması hem de mera hayvancılığının yaygın olduğu iller arasında bulunması bakımından diğerlerinden ayrılır?",
         options: [
             "A) İzmir",
             "B) Konya",
-            "C) Erzurum",
-            "D) Manisa",
+            "C) Manisa",
+            "D) Erzurum",
             "E) Balıkesir"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 3,
         explanation: "Erzurum, hem büyükbaş hayvancılıkta önemli bir merkezdir hem de mera hayvancılığının yaygın olduğu iller arasındadır. İzmir, Konya, Manisa ve Balıkesir daha çok ahır-besi hayvancılığı ile öne çıkar."
     },
     {
-        question: "Soru 9: Manda yetiştiriciliğiyle ilgili aşağıdaki bilgilerden hangisi doğrudur?",
+        question: "Manda yetiştiriciliğiyle ilgili aşağıdaki bilgilerden hangisi doğrudur?",
         options: [
             "A) Kurak ve bozkır alanlarda yaygınlaşmıştır.",
             "B) En fazla Samsun çevresinde görülür.",
@@ -109,7 +109,7 @@ window.cografya_20_sorulari = [
         explanation: "Manda yetiştiriciliği en fazla Samsun çevresinde görülür. Manda, sulak ve bataklık alanları seven bir hayvandır. Kurak ve bozkır alanlarda yaygın değildir."
     },
     {
-        question: "Soru 10: Manda yetiştiriciliğinin belirli alanlarda yoğunlaşmasında aşağıdaki doğal koşullardan hangisi daha belirleyicidir?",
+        question: "Manda yetiştiriciliğinin belirli alanlarda yoğunlaşmasında aşağıdaki doğal koşullardan hangisi daha belirleyicidir?",
         options: [
             "A) Geniş bozkırların bulunması",
             "B) Engebeli arazi yapısı",
@@ -121,7 +121,7 @@ window.cografya_20_sorulari = [
         explanation: "Manda, sulak ve bataklık alanları seven bir hayvandır. Samsun çevresindeki sulak alanlar, manda yetiştiriciliğinin yoğunlaşmasında belirleyici olmuştur."
     },
     {
-        question: "Soru 11: Türkiye'de sayıca en fazla bulunan hayvan türü aşağıdakilerden hangisidir?",
+        question: "Türkiye'de sayıca en fazla bulunan hayvan türü aşağıdakilerden hangisidir?",
         options: [
             "A) Sığır",
             "B) Manda",
@@ -133,7 +133,7 @@ window.cografya_20_sorulari = [
         explanation: "Türkiye'de sayıca en fazla bulunan hayvan türü koyundur. Küçükbaş hayvancılık, özellikle koyun yetiştiriciliği, Türkiye hayvancılığında önemli bir yere sahiptir."
     },
     {
-        question: "Soru 12: Türkiye'de koyun yetiştiriciliğinin özellikle bozkır ve düz alanlarda yaygın olması aşağıdakilerden hangisiyle daha fazla ilişkilidir?",
+        question: "Türkiye'de koyun yetiştiriciliğinin özellikle bozkır ve düz alanlarda yaygın olması aşağıdakilerden hangisiyle daha fazla ilişkilidir?",
         options: [
             "A) Yoğun orman örtüsüyle",
             "B) Maki topluluklarıyla",
@@ -145,19 +145,19 @@ window.cografya_20_sorulari = [
         explanation: "Koyun, bozkır ve düz alanlarda yaygın olarak yetiştirilir. Çayır ve bozkır alanları, koyun yetiştiriciliği için uygun otlak alanlarıdır."
     },
     {
-        question: "Soru 13: Türkiye'de koyun sayısının en fazla olduğu il aşağıdakilerden hangisidir?",
+        question: "Türkiye'de koyun sayısının en fazla olduğu il aşağıdakilerden hangisidir?",
         options: [
             "A) Ankara",
-            "B) Van",
+            "B) Samsun",
             "C) Mersin",
-            "D) Samsun",
+            "D) Van",
             "E) Diyarbakır"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Türkiye'de koyun sayısının en fazla olduğu il Van'dır. Doğu Anadolu Bölgesi'ndeki geniş mera alanları, koyun yetiştiriciliği için uygundur."
     },
     {
-        question: "Soru 14: Kıl keçisi yetiştiriciliğinin Toroslar ve çevresinde yaygın olmasında aşağıdaki özelliklerden hangisinin etkili olduğu söylenebilir?",
+        question: "Kıl keçisi yetiştiriciliğinin Toroslar ve çevresinde yaygın olmasında aşağıdaki özelliklerden hangisinin etkili olduğu söylenebilir?",
         options: [
             "A) Düz ve geniş tarım alanlarının bulunması",
             "B) Maki bitki örtüsünden yararlanabilmesi",
@@ -169,19 +169,19 @@ window.cografya_20_sorulari = [
         explanation: "Kıl keçisi, maki bitki örtüsünden yararlanarak beslenir. Toroslar'daki maki örtüsü, kıl keçisi yetiştiriciliğinin yaygınlaşmasını sağlamıştır."
     },
     {
-        question: "Soru 15: Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+        question: "Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
         options: [
-            "A) Koyun — Van",
+            "A) Kıl keçisi — Erzurum",
             "B) Kıl keçisi — Mersin",
             "C) Tiftik keçisi — Ankara",
             "D) Manda — Samsun",
-            "E) Kıl keçisi — Erzurum"
+            "E) Koyun — Van"
         ],
-        correctAnswerIndex: 4,
+        correctAnswerIndex: 0,
         explanation: "Kıl keçisi, Akdeniz Bölgesi'nde (Mersin, Antalya, Isparta) Toroslar ve çevresinde yetiştirilir. Erzurum, kıl keçisi değil, mera hayvancılığı ile öne çıkar."
     },
     {
-        question: "Soru 16: Türkiye'de kıl keçisi yetiştiriciliğinin;\n\n* Toroslar'da,\n* engebeli arazilerde,\n* maki bitki örtüsünün bulunduğu alanlarda\n\nyaygın olması aşağıdakilerden hangisini göstermektedir?",
+        question: "Türkiye'de kıl keçisi yetiştiriciliğinin;\n\n* Toroslar'da,\n* engebeli arazilerde,\n* maki bitki örtüsünün bulunduğu alanlarda\n\nyaygın olması aşağıdakilerden hangisini göstermektedir?",
         options: [
             "A) Kıl keçisinin düz ve kurak ovalara bağımlı olduğunu",
             "B) Doğal bitki örtüsünün hayvancılık faaliyetlerini etkilediğini",
@@ -193,7 +193,7 @@ window.cografya_20_sorulari = [
         explanation: "Kıl keçisinin Toroslar'daki maki örtüsüyle ilişkisi, doğal bitki örtüsünün hayvancılık faaliyetlerini etkilediğini göstermektedir."
     },
     {
-        question: "Soru 17: Tiftik keçisiyle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+        question: "Tiftik keçisiyle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
         options: [
             "A) Akdeniz Bölgesi'nde birinci sıradadır.",
             "B) Sulak alanlarda yetiştirilmektedir.",
@@ -205,7 +205,7 @@ window.cografya_20_sorulari = [
         explanation: "Tiftik keçisi, endemik bir tür olup Ankara'da yaygındır. Tiftik (Ankara) keçisi olarak da bilinir ve tiftik üretiminde önemlidir. Ancak ekonomik önemi zamanla azalmıştır."
     },
     {
-        question: "Soru 18: Türkiye'de tiftik keçisinin ekonomik öneminin zaman içinde azalmasına rağmen belirli bir ilde önemini koruması aşağıdaki eşleştirmelerden hangisini ortaya çıkarır?",
+        question: "Türkiye'de tiftik keçisinin ekonomik öneminin zaman içinde azalmasına rağmen belirli bir ilde önemini koruması aşağıdaki eşleştirmelerden hangisini ortaya çıkarır?",
         options: [
             "A) Tiftik keçisi — Ankara",
             "B) Kıl keçisi — Samsun",
@@ -217,7 +217,7 @@ window.cografya_20_sorulari = [
         explanation: "Tiftik keçisi, Ankara ve çevresinde yetiştirilen endemik bir türdür. Ankara, tiftik üretiminde önemli merkez olmaya devam etmektedir."
     },
     {
-        question: "Soru 19: Türkiye'de arıcılık faaliyetlerinin gelişmesinde;\n\nI. Yer şekillerinin engebeli olması\nII. Yağış miktarının yeterli olması\nIII. Bitki çeşitliliğinin fazla olması\n\nözelliklerinden hangilerinin etkili olduğu söylenebilir?",
+        question: "Türkiye'de arıcılık faaliyetlerinin gelişmesinde;\n\nI. Yer şekillerinin engebeli olması\nII. Yağış miktarının yeterli olması\nIII. Bitki çeşitliliğinin fazla olması\n\nözelliklerinden hangilerinin etkili olduğu söylenebilir?",
         options: [
             "A) Yalnız I",
             "B) Yalnız II",
@@ -229,7 +229,7 @@ window.cografya_20_sorulari = [
         explanation: "Arıcılık, engebeli alanlar, yağış ve bitki çeşitliliğinden olumlu etkilenir. Bu üç faktör, arıcılık için uygun doğal koşulları oluşturur."
     },
     {
-        question: "Soru 20: Türkiye'de arıcılığın gelişmesi için uygun koşulların bir arada bulunduğu yerlerde aşağıdakilerden hangisinin etkisinin daha fazla olması beklenir?",
+        question: "Türkiye'de arıcılığın gelişmesi için uygun koşulların bir arada bulunduğu yerlerde aşağıdakilerden hangisinin etkisinin daha fazla olması beklenir?",
         options: [
             "A) Bitki çeşitliliğinin fazla olması",
             "B) Tarım alanlarının tamamen sulanması",
@@ -241,7 +241,7 @@ window.cografya_20_sorulari = [
         explanation: "Arıcılığın gelişmesinde bitki çeşitliliği önemli bir faktördür. Farklı bitki türleri, arılara farklı nektar kaynakları sağlar."
     },
     {
-        question: "Soru 21: Türkiye'de il bazında arıcılık faaliyetlerinin en fazla geliştiği merkez aşağıdakilerden hangisidir?",
+        question: "Türkiye'de il bazında arıcılık faaliyetlerinin en fazla geliştiği merkez aşağıdakilerden hangisidir?",
         options: [
             "A) Ordu",
             "B) Konya",
@@ -253,7 +253,7 @@ window.cografya_20_sorulari = [
         explanation: "Türkiye'de arıcılığın en fazla geliştiği il Ordu'dur. Karadeniz Bölgesi'nin bitki çeşitliliği ve yağışlı iklimi arıcılık için uygundur."
     },
     {
-        question: "Soru 22: Aşağıdaki illerden hangisi arıcılık açısından önemli merkezlerden biri olarak gösterilebilir?",
+        question: "Aşağıdaki illerden hangisi arıcılık açısından önemli merkezlerden biri olarak gösterilebilir?",
         options: [
             "A) Adana",
             "B) Kayseri",
@@ -265,7 +265,7 @@ window.cografya_20_sorulari = [
         explanation: "Adana, arıcılık açısından önemli merkezlerden biridir. Akdeniz Bölgesi'nin bitki çeşitliliği arıcılık için uygun koşullar sağlar."
     },
     {
-        question: "Soru 23: İpek böcekçiliğinin yapılabilmesi için aşağıdaki tarımsal faaliyetlerden hangisinin gelişmiş olması özellikle önemlidir?",
+        question: "İpek böcekçiliğinin yapılabilmesi için aşağıdaki tarımsal faaliyetlerden hangisinin gelişmiş olması özellikle önemlidir?",
         options: [
             "A) Buğday tarımı",
             "B) Dut yetiştiriciliği",
@@ -277,7 +277,7 @@ window.cografya_20_sorulari = [
         explanation: "İpek böceği, dut yapraklarıyla beslenir. Bu nedenle ipek böcekçiliğinin yapılabilmesi için dut yetiştiriciliğinin gelişmiş olması özellikle önemlidir."
     },
     {
-        question: "Soru 24: İpek böcekçiliğinin kışları ılık geçen alanlarda daha uygun olması aşağıdaki özelliklerden hangisiyle açıklanabilir?",
+        question: "İpek böcekçiliğinin kışları ılık geçen alanlarda daha uygun olması aşağıdaki özelliklerden hangisiyle açıklanabilir?",
         options: [
             "A) Soğuğa dayanıklı olması",
             "B) Soğuğa dayanıksız olması",
@@ -289,19 +289,19 @@ window.cografya_20_sorulari = [
         explanation: "İpek böceği soğuğa dayanıksızdır. Bu nedenle ipek böcekçiliği, kışları ılık geçen alanlarda daha uygun olmaktadır."
     },
     {
-        question: "Soru 25: Türkiye'de ipek böcekçiliğinin başlıca üretim merkezi aşağıdakilerden hangisidir?",
+        question: "Türkiye'de ipek böcekçiliğinin başlıca üretim merkezi aşağıdakilerden hangisidir?",
         options: [
             "A) Erzurum",
-            "B) Diyarbakır",
+            "B) Ankara",
             "C) Samsun",
-            "D) Ankara",
+            "D) Diyarbakır",
             "E) Isparta"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Türkiye'de ipek böcekçiliğinin başlıca üretim merkezi Diyarbakır'dır. Güneydoğu Anadolu Bölgesi'nin ılıman iklimi, ipek böcekçiliği için uygun koşullar sağlar."
     },
     {
-        question: "Soru 26: Kümes hayvancılığının kapalı ortamlarda ve suni yem kullanılarak yapılması aşağıdakilerden hangisine neden olur?",
+        question: "Kümes hayvancılığının kapalı ortamlarda ve suni yem kullanılarak yapılması aşağıdakilerden hangisine neden olur?",
         options: [
             "A) İklim koşullarından tamamen bağımsız hâle gelmesine",
             "B) Yalnızca mera alanlarında yapılmasına",
@@ -313,19 +313,19 @@ window.cografya_20_sorulari = [
         explanation: "Kümes hayvancılığı kapalı ortamlarda ve suni yem kullanılarak yapıldığı için iklim koşullarından tamamen bağımsız hâle gelir."
     },
     {
-        question: "Soru 27: Türkiye'de kümes hayvancılığının en fazla geliştiği iller aşağıdakilerden hangisidir?",
+        question: "Türkiye'de kümes hayvancılığının en fazla geliştiği iller aşağıdakilerden hangisidir?",
         options: [
             "A) Erzurum – Kars",
             "B) Mersin – Antalya",
-            "C) Manisa – Balıkesir",
-            "D) Van – Ağrı",
+            "C) Van – Ağrı",
+            "D) Manisa – Balıkesir",
             "E) Ankara – Konya"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 3,
         explanation: "Türkiye'de kümes hayvancılığı en fazla Manisa ve Balıkesir illerinde gelişmiştir. Bu iller, tavukçuluk ve hindi yetiştiriciliğinde önemli merkezlerdir."
     },
     {
-        question: "Soru 28: Aşağıdaki hayvancılık faaliyetlerinden hangileri yetiştirme koşulları bakımından birbirine daha fazla benzer?",
+        question: "Aşağıdaki hayvancılık faaliyetlerinden hangileri yetiştirme koşulları bakımından birbirine daha fazla benzer?",
         options: [
             "A) Mera hayvancılığı – koyunculuk",
             "B) Ahır-besi hayvancılığı – kümes hayvancılığı",
@@ -337,7 +337,7 @@ window.cografya_20_sorulari = [
         explanation: "Ahır-besi hayvancılığı ve kümes hayvancılığı, her ikisinde de kapalı ortamlardan ve suni yemden yararlanılır, iklim koşullarının etkisi sınırlıdır."
     },
     {
-        question: "Soru 29: Türkiye'de balıkçılığın istenilen düzeyde gelişememesinin nedenleri arasında aşağıdakilerden hangisi yer almaz?",
+        question: "Türkiye'de balıkçılığın istenilen düzeyde gelişememesinin nedenleri arasında aşağıdakilerden hangisi yer almaz?",
         options: [
             "A) Suların kirletilmesi",
             "B) Kaçak avlanmanın yaygın olması",
@@ -349,7 +349,7 @@ window.cografya_20_sorulari = [
         explanation: "Balık tüketiminin toplumda çok yaygın olması, balıkçılığın gelişememe nedeni değil, aksine gelişmesini teşvik eden bir durumdur. Diğer seçenekler balıkçılığın gelişememe nedenleridir."
     },
     {
-        question: "Soru 30: Türkiye'de balıkçılığın gelişmesinin önündeki engellerden biri olan usulsüz avlanma, aşağıdakilerden hangisine doğrudan neden olur?",
+        question: "Türkiye'de balıkçılığın gelişmesinin önündeki engellerden biri olan usulsüz avlanma, aşağıdakilerden hangisine doğrudan neden olur?",
         options: [
             "A) Balık popülasyonlarının zarar görmesine",
             "B) Yem bitkilerinin azalmasına",
@@ -361,7 +361,7 @@ window.cografya_20_sorulari = [
         explanation: "Usulsüz (kaçak) avlanma, balık popülasyonlarının zarar görmesine ve deniz ekosisteminin dengesinin bozulmasına neden olur."
     },
     {
-        question: "Soru 31: Türkiye'de balıkçılığın ekonomik değerinin artırılabilmesi için yalnızca avlanma miktarının artırılması yeterli değildir.\n\nBuna göre aşağıdakilerden hangisinin geliştirilmesi de gereklidir?",
+        question: "Türkiye'de balıkçılığın ekonomik değerinin artırılabilmesi için yalnızca avlanma miktarının artırılması yeterli değildir.\n\nBuna göre aşağıdakilerden hangisinin geliştirilmesi de gereklidir?",
         options: [
             "A) Balık işleme ve paketleme sanayisinin",
             "B) Mera hayvancılığının",
@@ -373,7 +373,7 @@ window.cografya_20_sorulari = [
         explanation: "Balıkçılığın ekonomik değerinin artırılması için balık işleme ve paketleme sanayisinin geliştirilmesi gereklidir. Bu sayede avlanan balıklar daha yüksek katma değerle pazarlanabilir."
     },
     {
-        question: "Soru 32: Türkiye'de balık tüketim kültürünün yeterince gelişmemesi aşağıdaki sonuçlardan hangisine doğrudan katkı sağlar?",
+        question: "Türkiye'de balık tüketim kültürünün yeterince gelişmemesi aşağıdaki sonuçlardan hangisine doğrudan katkı sağlar?",
         options: [
             "A) Balıkçılığın ekonomik öneminin sınırlı kalmasına",
             "B) Hayvan soylarının ıslah edilmesine",
@@ -385,7 +385,7 @@ window.cografya_20_sorulari = [
         explanation: "Balık tüketim kültürünün yeterince gelişmemesi, iç talebin sınırlı kalmasına ve balıkçılığın ekonomik öneminin azalmasına neden olur."
     },
     {
-        question: "Soru 33: Aşağıdakilerden hangisi Türkiye'nin iç sularında yetiştirilen veya bulunan balık türlerinden biri olarak verilen notlarda yer almaktadır?",
+        question: "Aşağıdakilerden hangisi Türkiye'nin iç sularında yetiştirilen veya bulunan balık türlerinden biri olarak verilen notlarda yer almaktadır?",
         options: [
             "A) Uskumru",
             "B) Hamsi",
@@ -397,19 +397,19 @@ window.cografya_20_sorulari = [
         explanation: "Alabalık, Türkiye'nin iç sularında yetiştirilen veya bulunan balık türleri arasındadır. Hamsi, uskumru, palamut ve lüfer deniz balıklarıdır."
     },
     {
-        question: "Soru 34: Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+        question: "Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
         options: [
             "A) İnci kefali — Van Gölü",
             "B) Alabalık — İç sular",
             "C) Gümüş balığı — İç sular",
-            "D) İnci kefali — Van Gölü",
+            "D) Hamsi — Karadeniz",
             "E) Hamsi — Van Gölü"
         ],
         correctAnswerIndex: 4,
-        explanation: "Hamsi, deniz balığıdır ve Van Gölü'nde bulunmaz. Van Gölü'nde inci kefali yaşar. Alabalık ve gümüş balığı iç sularda bulunur."
+        explanation: "Hamsi bir deniz balığıdır ve Van Gölü'nde yaşamaz; Karadeniz'de avlanır. Van Gölü'nün sodalı suyunda yalnızca inci kefali yaşar. Alabalık ve gümüş balığı iç sularda bulunur."
     },
     {
-        question: "Soru 35: Aşağıdaki hayvancılık faaliyetlerinden hangisinin yaygın olduğu yer ile bu faaliyetin doğal koşullarla ilişkisi yanlış eşleştirilmiştir?",
+        question: "Aşağıdaki hayvancılık faaliyetlerinden hangisinin yaygın olduğu yer ile bu faaliyetin doğal koşullarla ilişkisi yanlış eşleştirilmiştir?",
         options: [
             "A) Manda — Samsun — Sulak ve bataklık alanlar",
             "B) Kıl keçisi — Mersin — Maki ve engebeli arazi",
@@ -421,7 +421,7 @@ window.cografya_20_sorulari = [
         explanation: "İpek böceği soğuğa dayanıksızdır ve kış ılıklığı ister. Diyarbakır'daki ipek böcekçiliği, soğuk kış koşullarıyla değil, ılıman iklimle ilişkilidir."
     },
     {
-        question: "Soru 36: Aşağıdaki faaliyetlerden hangisinde doğal bitki örtüsü ile hayvanın beslenmesi arasında doğrudan bir ilişki bulunmaktadır?",
+        question: "Aşağıdaki faaliyetlerden hangisinde doğal bitki örtüsü ile hayvanın beslenmesi arasında doğrudan bir ilişki bulunmaktadır?",
         options: [
             "A) Kıl keçisi – maki",
             "B) Kümes hayvancılığı – suni yem",
@@ -433,7 +433,7 @@ window.cografya_20_sorulari = [
         explanation: "Kıl keçisi, doğal bitki örtüsü olan maki ile beslenir. Diğer seçeneklerde hayvanlar suni yem veya özel yetiştirilen bitkilerle beslenir."
     },
     {
-        question: "Soru 37: Aşağıdaki eşleştirmelerden hangisinde hayvan – önemli üretim merkezi ilişkisi doğru verilmiştir?",
+        question: "Aşağıdaki eşleştirmelerden hangisinde hayvan – önemli üretim merkezi ilişkisi doğru verilmiştir?",
         options: [
             "A) Manda — Ankara",
             "B) Tiftik keçisi — Mersin",
@@ -445,7 +445,7 @@ window.cografya_20_sorulari = [
         explanation: "Kıl keçisi, Mersin'de önemli bir üretim merkezine sahiptir. Toroslar'daki maki örtüsü, kıl keçisi yetiştiriciliği için uygun koşullar sağlar."
     },
     {
-        question: "Soru 38: Bir araştırmacı Türkiye'deki hayvancılık faaliyetlerini incelerken şu özellikleri belirlemiştir:\n\n* Hayvanlar kapalı ortamlarda yetiştirilmektedir.\n* Suni yem kullanılmaktadır.\n* İklim koşullarının etkisi sınırlıdır.\n\nBu araştırmacının incelediği faaliyet aşağıdakilerden hangisi olabilir?",
+        question: "Bir araştırmacı Türkiye'deki hayvancılık faaliyetlerini incelerken şu özellikleri belirlemiştir:\n\n* Hayvanlar kapalı ortamlarda yetiştirilmektedir.\n* Suni yem kullanılmaktadır.\n* İklim koşullarının etkisi sınırlıdır.\n\nBu araştırmacının incelediği faaliyet aşağıdakilerden hangisi olabilir?",
         options: [
             "A) Otlak-mera hayvancılığı",
             "B) Koyun yetiştiriciliği",
@@ -457,7 +457,7 @@ window.cografya_20_sorulari = [
         explanation: "Kapalı ortamlarda suni yemle yapılan hayvancılık, ahır-besi hayvancılığıdır. Bu yöntemde iklim koşullarının etkisi sınırlıdır."
     },
     {
-        question: "Soru 39: Aşağıdaki hayvanlardan hangisinin yetiştirilmesinde sulak veya bataklık alanların varlığı diğerlerinden daha belirleyicidir?",
+        question: "Aşağıdaki hayvanlardan hangisinin yetiştirilmesinde sulak veya bataklık alanların varlığı diğerlerinden daha belirleyicidir?",
         options: [
             "A) Koyun",
             "B) Kıl keçisi",
@@ -469,7 +469,7 @@ window.cografya_20_sorulari = [
         explanation: "Manda, sulak ve bataklık alanları seven bir hayvandır. Bu nedenle manda yetiştiriciliğinde sulak alanların varlığı diğer hayvanlardan daha belirleyicidir."
     },
     {
-        question: "Soru 40: Türkiye'de;\n\n* Erzurum,\n* Kars,\n* Ağrı\n\nillerinde yaygın olan hayvancılık türünün aşağıdaki özelliklerden hangisine sahip olması beklenir?",
+        question: "Türkiye'de;\n\n* Erzurum,\n* Kars,\n* Ağrı\n\nillerinde yaygın olan hayvancılık türünün aşağıdaki özelliklerden hangisine sahip olması beklenir?",
         options: [
             "A) Suni yemle ve kapalı ortamlarda yapılması",
             "B) Çayırlara bağlı ve iklim koşullarından etkilenmesi",
@@ -481,19 +481,19 @@ window.cografya_20_sorulari = [
         explanation: "Erzurum, Kars ve Ağrı, mera hayvancılığının yaygın olduğu illerdir. Bu hayvancılık türü çayırlara bağlıdır ve iklim koşullarından etkilenir."
     },
     {
-        question: "Soru 41: Aşağıdaki faaliyetlerden hangisinin geliştirilmesinde bitki çeşitliliği ve yağış miktarı birlikte önemli rol oynar?",
+        question: "Aşağıdaki faaliyetlerden hangisinin geliştirilmesinde bitki çeşitliliği ve yağış miktarı birlikte önemli rol oynar?",
         options: [
             "A) Kümes hayvancılığı",
-            "B) Arıcılık",
+            "B) Tiftik keçisi yetiştiriciliği",
             "C) Ahır-besi hayvancılığı",
-            "D) Tiftik keçisi yetiştiriciliği",
+            "D) Arıcılık",
             "E) Balık işleme sanayisi"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Arıcılık, bitki çeşitliliği ve yağış miktarından doğrudan etkilenir. Farklı bitki türleri arılara nektar kaynağı sağlar, yağış ise bitki örtüsünün gelişmesini destekler."
     },
     {
-        question: "Soru 42: Türkiye'de hayvancılığın geliştirilmesi amacıyla aşağıdaki uygulamalardan hangisinin yapılması, hayvanların beslenme koşullarının iyileştirilmesine doğrudan katkı sağlar?",
+        question: "Türkiye'de hayvancılığın geliştirilmesi amacıyla aşağıdaki uygulamalardan hangisinin yapılması, hayvanların beslenme koşullarının iyileştirilmesine doğrudan katkı sağlar?",
         options: [
             "A) Veterinerlik hizmetlerinin yaygınlaştırılması",
             "B) Hayvan soylarının ıslah edilmesi",
@@ -505,7 +505,7 @@ window.cografya_20_sorulari = [
         explanation: "Yem ekimi ve yem sanayisinin geliştirilmesi, hayvanların beslenme koşullarını iyileştirerek hayvancılık verimini artırır."
     },
     {
-        question: "Soru 43: Aşağıdakilerden hangisi Türkiye'de hayvancılığın geliştirilmesi için alınabilecek önlemler arasında yer almaz?",
+        question: "Aşağıdakilerden hangisi Türkiye'de hayvancılığın geliştirilmesi için alınabilecek önlemler arasında yer almaz?",
         options: [
             "A) Hayvan soylarının ıslah edilmesi",
             "B) Veterinerlik hizmetlerinin yaygınlaştırılması",
@@ -517,7 +517,7 @@ window.cografya_20_sorulari = [
         explanation: "Kaçak avlanmanın yaygınlaştırılması, hayvancılığın geliştirilmesi için alınabilecek bir önlem değildir. Aksine kaçak avlanma önlenmelidir."
     },
     {
-        question: "Soru 44: Aşağıdaki hayvanlardan hangisi sayısal olarak Türkiye'de en fazla bulunan hayvan türüdür?",
+        question: "Aşağıdaki hayvanlardan hangisi sayısal olarak Türkiye'de en fazla bulunan hayvan türüdür?",
         options: [
             "A) Sığır",
             "B) Koyun",
@@ -529,7 +529,7 @@ window.cografya_20_sorulari = [
         explanation: "Türkiye'de sayıca en fazla bulunan hayvan türü koyundur. Küçükbaş hayvancılık, Türkiye hayvancılığında önemli bir yere sahiptir."
     },
     {
-        question: "Soru 45: Bir bölgede;\n\n* geniş düzlüklerin,\n* bozkır alanların\n\nyaygın olduğu ve hayvancılığın daha çok doğal otlaklardan yararlanılarak gerçekleştirildiği belirlenmiştir.\n\nBu bölgedeki hayvancılık faaliyetleriyle ilgili aşağıdakilerden hangisine ulaşılabilir?",
+        question: "Bir bölgede;\n\n* geniş düzlüklerin,\n* bozkır alanların\n\nyaygın olduğu ve hayvancılığın daha çok doğal otlaklardan yararlanılarak gerçekleştirildiği belirlenmiştir.\n\nBu bölgedeki hayvancılık faaliyetleriyle ilgili aşağıdakilerden hangisine ulaşılabilir?",
         options: [
             "A) Suni yem kullanımı zorunludur.",
             "B) İklim koşullarından etkilenme düzeyi düşüktür.",
@@ -541,7 +541,7 @@ window.cografya_20_sorulari = [
         explanation: "Bozkır ve düzlük alanlar, koyun yetiştiriciliği için uygun otlak alanlarıdır. Bu bölgelerde koyun yetiştiriciliği yaygındır."
     },
     {
-        question: "Soru 46: Aşağıdaki hayvancılık faaliyetlerinden hangisi hem yetiştirilen canlının besin kaynağı hem de iklim isteği bakımından diğerlerinden farklı bir özellik göstermektedir?",
+        question: "Aşağıdaki hayvancılık faaliyetlerinden hangisi hem yetiştirilen canlının besin kaynağı hem de iklim isteği bakımından diğerlerinden farklı bir özellik göstermektedir?",
         options: [
             "A) Koyun yetiştiriciliği",
             "B) Kıl keçisi yetiştiriciliği",
@@ -553,7 +553,7 @@ window.cografya_20_sorulari = [
         explanation: "İpek böcekçiliği, diğer hayvancılık türlerinden farklı olarak dut yapraklarıyla beslenen ve soğuğa dayanıksız olan ipek böceğine dayanır. Diğer hayvancılık türleri ot, maki veya bozkır bitkileriyle beslenir."
     },
     {
-        question: "Soru 47: Aşağıdaki merkezlerden hangisi karşısındaki hayvancılık faaliyetiyle yanlış eşleştirilmiştir?",
+        question: "Aşağıdaki merkezlerden hangisi karşısındaki hayvancılık faaliyetiyle yanlış eşleştirilmiştir?",
         options: [
             "A) Ordu — Arıcılık",
             "B) Diyarbakır — İpek böcekçiliği",
@@ -565,19 +565,19 @@ window.cografya_20_sorulari = [
         explanation: "Balıkesir, kümes hayvancılığı ile öne çıkar, kıl keçisi değil. Kıl keçisi Toroslar ve Akdeniz Bölgesi'nde (Mersin, Antalya, Isparta) yetiştirilir."
     },
     {
-        question: "Soru 48: Türkiye'deki hayvancılık faaliyetleriyle ilgili aşağıdaki bilgilerden hangisi doğrudur?",
+        question: "Türkiye'deki hayvancılık faaliyetleriyle ilgili aşağıdaki bilgilerden hangisi doğrudur?",
         options: [
             "A) Mera hayvancılığında iklim koşullarının etkisi yoktur.",
             "B) Tiftik keçisinin Türkiye'deki önemi zamanla artmıştır.",
-            "C) Kıl keçisi özellikle Toroslar ve engebeli alanlarda yetiştirilir.",
-            "D) Manda yetiştiriciliği kurak ve bozkır alanlarda yaygındır.",
+            "C) Manda yetiştiriciliği kurak ve bozkır alanlarda yaygındır.",
+            "D) Kıl keçisi özellikle Toroslar ve engebeli alanlarda yetiştirilir.",
             "E) Kümes hayvancılığı yalnızca mera alanlarında yapılır."
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 3,
         explanation: "Kıl keçisi, Toroslar ve engebeli arazilerde maki bitki örtüsünden yararlanarak yetiştirilir. Diğer ifadeler yanlıştır."
     },
     {
-        question: "Soru 49: Aşağıdaki faaliyetlerden hangisinin kapalı ortam + suni yem + iklim koşullarından sınırlı etkilenme özelliklerinin üçünü birden taşıması beklenir?",
+        question: "Aşağıdaki faaliyetlerden hangisinin kapalı ortam + suni yem + iklim koşullarından sınırlı etkilenme özelliklerinin üçünü birden taşıması beklenir?",
         options: [
             "A) Otlak hayvancılığı",
             "B) Ahır-besi hayvancılığı",
@@ -589,7 +589,7 @@ window.cografya_20_sorulari = [
         explanation: "Ahır-besi hayvancılığı, kapalı ortamlarda suni yemle yapılır ve iklim koşullarından sınırlı etkilenir. Bu üç özelliği birden taşır."
     },
     {
-        question: "Soru 50: Türkiye'de balıkçılığın geri kalmasında;\n\nI. Su kirliliğinin fazla olması\nII. Kaçak avlanmanın yaygın olması\nIII. Balık tüketim kültürünün yeterince gelişmemesi\nIV. Balık işleme ve paketleme sanayisinin yetersiz olması\n\nfaktörlerinden hangileri etkili olmuştur?",
+        question: "Türkiye'de balıkçılığın geri kalmasında;\n\nI. Su kirliliğinin fazla olması\nII. Kaçak avlanmanın yaygın olması\nIII. Balık tüketim kültürünün yeterince gelişmemesi\nIV. Balık işleme ve paketleme sanayisinin yetersiz olması\n\nfaktörlerinden hangileri etkili olmuştur?",
         options: [
             "A) Yalnız I",
             "B) I ve II",
@@ -601,7 +601,7 @@ window.cografya_20_sorulari = [
         explanation: "Su kirliliği, kaçak avlanma, balık tüketim kültürünün yetersizliği ve balık sanayisinin yetersizliği, Türkiye'de balıkçılığın geri kalmasında etkili olan faktörlerdir."
     },
     {
-        question: "Soru 51: Aşağıdakilerden hangisi Türkiye'nin iç sularında yetiştirilen veya bulunan balık türlerinden biri değildir?",
+        question: "Aşağıdakilerden hangisi Türkiye'nin iç sularında yetiştirilen veya bulunan balık türlerinden biri değildir?",
         options: [
             "A) Alabalık",
             "B) İnci kefali",
@@ -613,7 +613,7 @@ window.cografya_20_sorulari = [
         explanation: "Palamut, deniz balığıdır ve iç sularda bulunmaz. Alabalık, inci kefali ve gümüş balığı iç sularda yaşar."
     },
     {
-        question: "Soru 52: Türkiye'deki hayvancılık faaliyetleriyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+        question: "Türkiye'deki hayvancılık faaliyetleriyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
         options: [
             "A) Koyun yetiştiriciliğinde Van önemli bir merkezdir.",
             "B) Kıl keçisi yetiştiriciliğinde Mersin öne çıkar.",
@@ -625,7 +625,7 @@ window.cografya_20_sorulari = [
         explanation: "İpek böcekçiliğinin en önemli merkezi Diyarbakır'dır. Erzurum, mera hayvancılığı ile öne çıkar, ipek böcekçiliği ile değil."
     },
     {
-        question: "Soru 53: Aşağıdaki faaliyetlerden hangisinin gelişmesinde kışların ılık geçmesi temel doğal koşullardan biri olarak gösterilebilir?",
+        question: "Aşağıdaki faaliyetlerden hangisinin gelişmesinde kışların ılık geçmesi temel doğal koşullardan biri olarak gösterilebilir?",
         options: [
             "A) Mera hayvancılığı",
             "B) İpek böcekçiliği",
@@ -637,7 +637,7 @@ window.cografya_20_sorulari = [
         explanation: "İpek böceği soğuğa dayanıksız olduğu için ipek böcekçiliğinin gelişmesinde kışların ılık geçmesi temel bir doğal koşuldur."
     },
     {
-        question: "Soru 54: Bir coğrafya öğretmeni öğrencilerinden aşağıdaki eşleştirmeleri yapmalarını istemiştir:\n\n| Hayvancılık faaliyeti | Özellik                  |\n| --------------------- | ------------------------ |\n| I. Mera hayvancılığı  | Çayıra bağlılık          |\n| II. Manda             | Sulak alan isteği        |\n| III. Kıl keçisi       | Maki ile beslenme        |\n| IV. İpek böcekçiliği  | Dut yaprağı ile beslenme |\n| V. Arıcılık           | Bitki çeşitliliği        |\n\nBu eşleştirmelerden hangileri doğrudur?",
+        question: "Bir coğrafya öğretmeni öğrencilerinden aşağıdaki eşleştirmeleri yapmalarını istemiştir:\n\n| Hayvancılık faaliyeti | Özellik                  |\n| --------------------- | ------------------------ |\n| I. Mera hayvancılığı  | Çayıra bağlılık          |\n| II. Manda             | Sulak alan isteği        |\n| III. Kıl keçisi       | Maki ile beslenme        |\n| IV. İpek böcekçiliği  | Dut yaprağı ile beslenme |\n| V. Arıcılık           | Bitki çeşitliliği        |\n\nBu eşleştirmelerden hangileri doğrudur?",
         options: [
             "A) I ve II",
             "B) II ve III",
@@ -649,7 +649,7 @@ window.cografya_20_sorulari = [
         explanation: "Tüm eşleştirmeler doğrudur. Mera hayvancılığı çayıra bağlıdır, manda sulak alan ister, kıl keçisi maki ile beslenir, ipek böceği dut yaprağı ile beslenir, arıcılık ise bitki çeşitliliğine bağlıdır."
     },
     {
-        question: "Soru 55: Aşağıdaki merkezlerden hangisi, karşısındaki faaliyetle birlikte düşünüldüğünde hem Türkiye'deki üretim merkezlerinden biri hem de o hayvancılık türünün doğal koşullarıyla ilişkilendirilebilir?",
+        question: "Aşağıdaki merkezlerden hangisi, karşısındaki faaliyetle birlikte düşünüldüğünde hem Türkiye'deki üretim merkezlerinden biri hem de o hayvancılık türünün doğal koşullarıyla ilişkilendirilebilir?",
         options: [
             "A) Samsun — Manda — Sulak alan",
             "B) Ankara — Manda — Bataklık",
@@ -661,7 +661,7 @@ window.cografya_20_sorulari = [
         explanation: "Samsun, manda yetiştiriciliğinde önemli bir merkezdir ve manda sulak alanları sever. Bu eşleştirme doğrudur."
     },
     {
-        question: "Soru 56: Türkiye'de hayvancılığın geliştirilmesiyle ilgili aşağıdaki uygulamalardan hangisinin doğrudan hayvan sağlığına yönelik olduğu söylenebilir?",
+        question: "Türkiye'de hayvancılığın geliştirilmesiyle ilgili aşağıdaki uygulamalardan hangisinin doğrudan hayvan sağlığına yönelik olduğu söylenebilir?",
         options: [
             "A) Yem sanayisinin geliştirilmesi",
             "B) Hayvan soylarının ıslah edilmesi",
@@ -673,7 +673,7 @@ window.cografya_20_sorulari = [
         explanation: "Veterinerlik hizmetlerinin yaygınlaştırılması, hayvan hastalıklarının önlenmesi ve tedavi edilmesi yoluyla doğrudan hayvan sağlığına yönelik bir uygulamadır."
     },
     {
-        question: "Soru 57: Aşağıdaki faaliyetlerden hangisinde doğal çevre koşullarına bağımlılık diğerlerine göre daha belirgindir?",
+        question: "Aşağıdaki faaliyetlerden hangisinde doğal çevre koşullarına bağımlılık diğerlerine göre daha belirgindir?",
         options: [
             "A) Kümes hayvancılığı",
             "B) Ahır-besi hayvancılığı",
@@ -685,7 +685,7 @@ window.cografya_20_sorulari = [
         explanation: "Mera hayvancılığı, doğal otlaklara bağlıdır ve iklim koşullarından doğrudan etkilenir. Bu nedenle doğal çevre koşullarına bağımlılığı diğerlerine göre daha belirgindir."
     },
     {
-        question: "Soru 58: Türkiye'de hayvancılığın geliştirilmesine yönelik olarak süt danası ve kuzusu kesiminin engellenmesi aşağıdakilerden hangisine yönelik bir uygulamadır?",
+        question: "Türkiye'de hayvancılığın geliştirilmesine yönelik olarak süt danası ve kuzusu kesiminin engellenmesi aşağıdakilerden hangisine yönelik bir uygulamadır?",
         options: [
             "A) Hayvan varlığının ve gelecekteki üretimin korunmasına",
             "B) Balıkçılıkta kaçak avlanmanın önlenmesine",
@@ -697,7 +697,7 @@ window.cografya_20_sorulari = [
         explanation: "Süt danası ve kuzusu kesiminin engellenmesi, hayvan varlığının korunması ve gelecekteki üretimin sürdürülebilirliğinin sağlanmasına yönelik bir uygulamadır."
     },
     {
-        question: "Soru 59: Aşağıdaki hayvancılık türlerinden hangisi ile Türkiye'deki önemli merkezi yanlış eşleştirilmiştir?",
+        question: "Aşağıdaki hayvancılık türlerinden hangisi ile Türkiye'deki önemli merkezi yanlış eşleştirilmiştir?",
         options: [
             "A) Arıcılık — Ordu",
             "B) Kümes hayvancılığı — Manisa",
@@ -709,7 +709,7 @@ window.cografya_20_sorulari = [
         explanation: "Manda yetiştiriciliğinin önemli merkezi Samsun'dur. Ağrı, mera hayvancılığı ile öne çıkar, manda yetiştiriciliği ile değil."
     },
     {
-        question: "Soru 60: Türkiye'de hayvancılık faaliyetleriyle ilgili;\n\nI. Büyükbaş hayvancılıkta mera ve ahır-besi yöntemleri farklı çevre koşullarında uygulanabilir.\nII. Küçükbaş hayvancılıkta koyun sayısı diğer türlere göre fazladır.\nIII. Arıcılıkta bitki çeşitliliği önemli bir doğal avantajdır.\nIV. İpek böcekçiliğinde dut yaprağı temel besin kaynağıdır.\nV. Balıkçılığın gelişmesindeki temel sorunlardan biri balık işleme ve paketleme sanayisinin yetersizliğidir.\n\nyargılarından hangilerine ulaşılabilir?",
+        question: "Türkiye'de hayvancılık faaliyetleriyle ilgili;\n\nI. Büyükbaş hayvancılıkta mera ve ahır-besi yöntemleri farklı çevre koşullarında uygulanabilir.\nII. Küçükbaş hayvancılıkta koyun sayısı diğer türlere göre fazladır.\nIII. Arıcılıkta bitki çeşitliliği önemli bir doğal avantajdır.\nIV. İpek böcekçiliğinde dut yaprağı temel besin kaynağıdır.\nV. Balıkçılığın gelişmesindeki temel sorunlardan biri balık işleme ve paketleme sanayisinin yetersizliğidir.\n\nyargılarından hangilerine ulaşılabilir?",
         options: [
             "A) I ve II",
             "B) II ve III",

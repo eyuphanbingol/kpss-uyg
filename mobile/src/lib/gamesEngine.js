@@ -374,7 +374,13 @@ import { GamesBank } from "./gamesBank";
         var q = formatPanicStem(item.question || item.q || "");
         if (!q) return null;
         if (yearInStemLeak(q, a)) return null;
-        return { q: q, a: a, choices: choices.slice(0, 4) };
+        // "Hepsi / I ve II" gibi bağlama bağlı şıklar 4'e kırpılınca anlamını yitirir; bu soruları atla.
+        var ctx = /^(hepsi|hiçbiri|tümü|her ikisi|hiçbiri değil|yukarıdakilerin hepsi)\b|^(yalnız\s+)?(I|II|III|IV|V)(\s*(,|ve|-|ile)\s*(I|II|III|IV|V))*$/i;
+        if (choices.some(function (c) { return ctx.test(c); })) return null;
+        // Doğru şık her zaman seçeneklerde olsun (5 şıklı sorularda E şıkkı kırpılıyordu).
+        var others = choices.filter(function (c) { return fold(c) !== fold(a); });
+        if (!others.length) return null;
+        return { q: q, a: a, choices: [a].concat(shuffle(others).slice(0, 3)) };
     }
 
     function uniquePush(list, item) {
@@ -397,7 +403,8 @@ import { GamesBank } from "./gamesBank";
         });
         localFeatureQs(code).forEach(function (q) { uniquePush(list, q); });
         uniquePush(list, regionQ(code));
-        var picked = shuffle(list);
+        // Her denemede en fazla 6 soru (İstanbul'da 161 soruyu art arda bilmek gerekiyordu).
+        var picked = shuffle(list).slice(0, 6);
         if (!picked.length) uniquePush(picked, regionQ(code));
         return picked;
     }

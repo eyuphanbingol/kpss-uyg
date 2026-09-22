@@ -3,25 +3,25 @@ window.guncel_7_sorulari = [
 {
     "question": "İlyada ve Odysseia hangi yazara aittir?",
     "options": [
-        "A) Homeros",
+        "A) Shakespeare",
         "B) Dante",
-        "C) Shakespeare",
+        "C) Homeros",
         "D) Cervantes",
         "E) Goethe"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 2,
     "explanation": "Homeros."
 },
 {
     "question": "İlahi Komedya hangi yazara aittir?",
     "options": [
-        "A) Dante",
+        "A) Kafka",
         "B) Homeros",
         "C) Goethe",
         "D) Hugo",
-        "E) Kafka"
+        "E) Dante"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 4,
     "explanation": "Dante."
 },
 {
@@ -39,37 +39,37 @@ window.guncel_7_sorulari = [
 {
     "question": "Don Kişot hangi yazara aittir?",
     "options": [
-        "A) Cervantes",
-        "B) Shakespeare",
+        "A) Shakespeare",
+        "B) Cervantes",
         "C) Dumas",
         "D) Balzac",
         "E) Hugo"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "Cervantes."
 },
 {
     "question": "Faust hangi yazara aittir?",
     "options": [
-        "A) Goethe",
+        "A) Camus",
         "B) Dante",
         "C) Kafka",
-        "D) Camus",
+        "D) Goethe",
         "E) Huxley"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Goethe."
 },
 {
     "question": "Sefiller ve Notre Dame'ın Kamburu hangi yazara aittir?",
     "options": [
-        "A) Victor Hugo",
+        "A) Balzac",
         "B) Dostoyevski",
         "C) Tolstoy",
-        "D) Balzac",
+        "D) Victor Hugo",
         "E) Dumas"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Victor Hugo."
 },
 {
@@ -87,25 +87,25 @@ window.guncel_7_sorulari = [
 {
     "question": "Savaş ve Barış ile Anna Karenina hangi yazara aittir?",
     "options": [
-        "A) Tolstoy",
+        "A) Balzac",
         "B) Dostoyevski",
         "C) Hugo",
-        "D) Balzac",
+        "D) Tolstoy",
         "E) Hemingway"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Tolstoy."
 },
 {
     "question": "Goriot Baba hangi yazara aittir?",
     "options": [
-        "A) Balzac",
+        "A) Goethe",
         "B) Hugo",
         "C) Dumas",
-        "D) Goethe",
+        "D) Balzac",
         "E) Cervantes"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Balzac."
 },
 {
@@ -123,73 +123,73 @@ window.guncel_7_sorulari = [
 {
     "question": "Dönüşüm ve Dava hangi yazara aittir?",
     "options": [
-        "A) Kafka",
+        "A) Hemingway",
         "B) Orwell",
         "C) Camus",
         "D) Huxley",
-        "E) Hemingway"
+        "E) Kafka"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 4,
     "explanation": "Kafka."
 },
 {
     "question": "1984 ve Hayvan Çiftliği hangi yazara aittir?",
     "options": [
-        "A) George Orwell",
-        "B) Aldous Huxley",
+        "A) Aldous Huxley",
+        "B) George Orwell",
         "C) Albert Camus",
         "D) Kafka",
         "E) Hemingway"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "Orwell."
 },
 {
     "question": "Cesur Yeni Dünya hangi yazara aittir?",
     "options": [
-        "A) Aldous Huxley",
+        "A) Albert Camus",
         "B) George Orwell",
-        "C) Albert Camus",
+        "C) Aldous Huxley",
         "D) Kafka",
         "E) Marquez"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 2,
     "explanation": "Huxley."
 },
 {
     "question": "Yaşlı Adam ve Deniz hangi yazara aittir?",
     "options": [
-        "A) Ernest Hemingway",
+        "A) Albert Camus",
         "B) Gabriel Garcia Marquez",
-        "C) Albert Camus",
+        "C) Ernest Hemingway",
         "D) Tolstoy",
         "E) Hugo"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 2,
     "explanation": "Hemingway."
 },
 {
     "question": "Yüzyıllık Yalnızlık hangi yazara aittir?",
     "options": [
-        "A) Gabriel Garcia Marquez",
+        "A) Camus",
         "B) Hemingway",
-        "C) Camus",
+        "C) Gabriel Garcia Marquez",
         "D) Orwell",
         "E) Kafka"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 2,
     "explanation": "Marquez."
 },
 {
     "question": "Yabancı ve Veba hangi yazara aittir?",
     "options": [
-        "A) Albert Camus",
-        "B) Kafka",
+        "A) Kafka",
+        "B) Albert Camus",
         "C) Orwell",
         "D) Huxley",
         "E) Dostoyevski"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "Camus."
 },
 {
@@ -219,25 +219,25 @@ window.guncel_7_sorulari = [
 {
     "question": "Karamazov Kardeşler hangi yazara aittir?",
     "options": [
-        "A) Dostoyevski",
-        "B) Tolstoy",
+        "A) Tolstoy",
+        "B) Dostoyevski",
         "C) Balzac",
         "D) Hugo",
         "E) Camus"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "Dostoyevski."
 },
 {
     "question": "Yeraltından Notlar hangi yazara aittir?",
     "options": [
-        "A) Dostoyevski",
+        "A) Orwell",
         "B) Tolstoy",
         "C) Kafka",
         "D) Camus",
-        "E) Orwell"
+        "E) Dostoyevski"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 4,
     "explanation": "Dostoyevski."
 }
 ];

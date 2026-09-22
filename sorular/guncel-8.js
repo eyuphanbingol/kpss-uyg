@@ -3,37 +3,37 @@ window.guncel_8_sorulari = [
 {
     "question": "Türkiye'nin en büyük gölü aşağıdakilerden hangisidir?",
     "options": [
-        "A) Van Gölü",
+        "A) İznik Gölü",
         "B) Tuz Gölü",
         "C) Beyşehir Gölü",
         "D) Eğirdir Gölü",
-        "E) İznik Gölü"
+        "E) Van Gölü"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 4,
     "explanation": "Van Gölü."
 },
 {
     "question": "Türkiye'nin en uzun akarsuyu aşağıdakilerden hangisidir?",
     "options": [
-        "A) Kızılırmak",
-        "B) Fırat",
+        "A) Fırat",
+        "B) Kızılırmak",
         "C) Sakarya",
         "D) Yeşilırmak",
         "E) Dicle"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "Kızılırmak."
 },
 {
     "question": "Türkiye'nin en yüksek dağı aşağıdakilerden hangisidir?",
     "options": [
-        "A) Ağrı Dağı",
+        "A) Kaçkar",
         "B) Erciyes",
         "C) Süphan",
-        "D) Kaçkar",
+        "D) Ağrı Dağı",
         "E) Uludağ"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Ağrı Dağı."
 },
 {
@@ -51,37 +51,37 @@ window.guncel_8_sorulari = [
 {
     "question": "Türkiye'nin batıdaki uç noktası hangi ildedir?",
     "options": [
-        "A) Çanakkale",
+        "A) Balıkesir",
         "B) Edirne",
         "C) İzmir",
-        "D) Balıkesir",
+        "D) Çanakkale",
         "E) Muğla"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Çanakkale."
 },
 {
     "question": "Türkiye'nin güneydeki uç noktası hangi ildedir?",
     "options": [
-        "A) Hatay",
-        "B) Mersin",
+        "A) Mersin",
+        "B) Hatay",
         "C) Antalya",
         "D) Adana",
         "E) Muğla"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "Hatay."
 },
 {
     "question": "Türkiye'nin kuzeydeki uç noktası hangi ildedir?",
     "options": [
-        "A) Sinop",
+        "A) Zonguldak",
         "B) Samsun",
-        "C) Zonguldak",
+        "C) Sinop",
         "D) Trabzon",
         "E) Rize"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 2,
     "explanation": "Sinop."
 },
 {
@@ -99,49 +99,49 @@ window.guncel_8_sorulari = [
 {
     "question": "Türkiye'nin son büyükşehirlerinden biri olarak notlarda özellikle verilen il hangisidir?",
     "options": [
-        "A) Ordu",
-        "B) Bayburt",
+        "A) Bayburt",
+        "B) Ordu",
         "C) Bartın",
         "D) Ardahan",
         "E) Tunceli"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "Ordu."
 },
 {
     "question": "Türkiye'nin ilk millî parkı aşağıdakilerden hangisidir?",
     "options": [
-        "A) Yozgat Çamlığı Millî Parkı",
+        "A) Kapadokya",
         "B) Camili/Macahel",
-        "C) Kapadokya",
+        "C) Yozgat Çamlığı Millî Parkı",
         "D) Uludağ",
         "E) Gelibolu"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 2,
     "explanation": "Yozgat Çamlığı."
 },
 {
     "question": "Türkiye'nin UNESCO tarafından tanınan ilk biyosfer rezerv alanı aşağıdakilerden hangisidir?",
     "options": [
-        "A) Camili/Macahel",
+        "A) Gordion",
         "B) Yozgat Çamlığı",
         "C) Göbeklitepe",
-        "D) Gordion",
+        "D) Camili/Macahel",
         "E) Sardis"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Camili/Macahel, Artvin."
 },
 {
     "question": "Camili/Macahel hangi ildedir?",
     "options": [
-        "A) Artvin",
-        "B) Yozgat",
+        "A) Yozgat",
+        "B) Artvin",
         "C) Ankara",
         "D) Şanlıurfa",
         "E) Antalya"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "Artvin."
 },
 {

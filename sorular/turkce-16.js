@@ -27,10 +27,10 @@ window.turkce_16_sorulari = [
     "options": [
         "A) e",
         "B) i",
-        "C) a",
-        "D) ö"
+        "C) ö",
+        "D) a"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Kalın: a, ı, o, u."
 },
 {
@@ -60,10 +60,10 @@ window.turkce_16_sorulari = [
     "options": [
         "A) a",
         "B) e",
-        "C) o",
-        "D) ı"
+        "C) ı",
+        "D) o"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Yuvarlak: o, ö, u, ü."
 },
 {
@@ -136,11 +136,11 @@ window.turkce_16_sorulari = [
     "question": "Büyük ünlü uyumu hangi özelliğe dayanır?",
     "options": [
         "A) Düzlük-yuvarlaklık",
-        "B) Kalınlık-incelik",
+        "B) Hece sayısı",
         "C) Sertlik-yumuşaklık",
-        "D) Hece sayısı"
+        "D) Kalınlık-incelik"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "İlk hece kalınsa sonrakiler kalın, ince ise ince."
 },
 {
@@ -225,10 +225,10 @@ window.turkce_16_sorulari = [
     "options": [
         "A) y",
         "B) s",
-        "C) ş",
-        "D) n"
+        "C) n",
+        "D) ş"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "iki + ş + er."
 },
 {
@@ -246,22 +246,22 @@ window.turkce_16_sorulari = [
     "question": "“Uçaktan” sözcüğünde hangi ses olayı vardır?",
     "options": [
         "A) Ünsüz yumuşaması",
-        "B) Ünsüz benzeşmesi",
+        "B) Ünlü düşmesi",
         "C) Ünlü türemesi",
-        "D) Ünlü düşmesi"
+        "D) Ünsüz benzeşmesi"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "uçak + dan → uçaktan (k→t)."
 },
 {
     "question": "“Kitapta” sözcüğünde hangi ses olayı vardır?",
     "options": [
         "A) Ünsüz yumuşaması",
-        "B) Ünsüz benzeşmesi",
+        "B) Ulama",
         "C) Ünlü daralması",
-        "D) Ulama"
+        "D) Ünsüz benzeşmesi"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "kitap + da → kitapta."
 },
 {
@@ -278,12 +278,12 @@ window.turkce_16_sorulari = [
 {
     "question": "“Kalbim” sözcüğünde hangi ses olayı vardır?",
     "options": [
-        "A) Ünsüz yumuşaması",
+        "A) Ulama",
         "B) Ünsüz benzeşmesi",
         "C) Ünlü türemesi",
-        "D) Ulama"
+        "D) Ünsüz yumuşaması"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "kalp + im → kalbim (p→b)."
 },
 {

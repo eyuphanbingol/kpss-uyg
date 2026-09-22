@@ -4,11 +4,11 @@ window.turkce_3_sorulari = [
     "question": "Okuyucuyu bilgilendirmeyi amaçlayan anlatım türü hangisidir?",
     "options": [
         "A) Tartışmacı",
-        "B) Açıklayıcı",
+        "B) Betimleyici",
         "C) Öyküleyici",
-        "D) Betimleyici"
+        "D) Açıklayıcı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Açıklayıcı anlatım öğretmeyi / bilgi vermeyi amaçlar."
 },
 {
@@ -48,11 +48,11 @@ window.turkce_3_sorulari = [
     "question": "“Korku; gerçek bir tehlikenin uyandırdığı kaygı duygusudur.” cümlesinde hangi düşünceyi geliştirme yolu vardır?",
     "options": [
         "A) Örnekleme",
-        "B) Tanımlama",
+        "B) Tanık gösterme",
         "C) Benzetme",
-        "D) Tanık gösterme"
+        "D) Tanımlama"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Korkunun ne olduğu tanımlanmıştır."
 },
 {
@@ -92,11 +92,11 @@ window.turkce_3_sorulari = [
     "question": "Bir düşünceyi desteklemek amacıyla uzman kişinin görüşüne yer verilmesine ne denir?",
     "options": [
         "A) Örneklendirme",
-        "B) Tanık gösterme",
+        "B) Betimleme",
         "C) Karşılaştırma",
-        "D) Betimleme"
+        "D) Tanık gösterme"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Otorite görüşü tanık göstermedir."
 },
 {
@@ -125,11 +125,11 @@ window.turkce_3_sorulari = [
     "question": "Konunun örneklerle zenginleştirilip açıklandığı bölüm hangisidir?",
     "options": [
         "A) Giriş",
-        "B) Gelişme",
-        "C) Sonuç",
+        "B) Sonuç",
+        "C) Gelişme",
         "D) Başlık"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Gelişme bölümü konuyu açar."
 },
 {
@@ -147,22 +147,22 @@ window.turkce_3_sorulari = [
     "question": "Paragraftaki anlam bütünlüğünü bozan cümleye ne ad verilir?",
     "options": [
         "A) Ana düşünce",
-        "B) Akışı bozan cümle",
+        "B) Sonuç",
         "C) Yardımcı düşünce",
-        "D) Sonuç"
+        "D) Akışı bozan cümle"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Konu dışına çıkan cümle akışı bozar."
 },
 {
     "question": "Paragraf ikiye bölünürken temel olarak neye dikkat edilir?",
     "options": [
         "A) Cümle uzunluğuna",
-        "B) Ana düşüncenin veya yönün değişmesine",
-        "C) Noktalama işaretlerine",
+        "B) Noktalama işaretlerine",
+        "C) Ana düşüncenin veya yönün değişmesine",
         "D) Sözcük sayısına"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Yön veya ana düşünce değişince iki paragraf olur."
 },
 {
@@ -179,12 +179,12 @@ window.turkce_3_sorulari = [
 {
     "question": "Paragrafın konusunun bir veya birkaç sözcükle ifade edilmesine ne denir?",
     "options": [
-        "A) Başlık",
+        "A) Sonuç",
         "B) Ana düşünce",
         "C) Yardımcı düşünce",
-        "D) Sonuç"
+        "D) Başlık"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Başlık konuyu kısa adlandırır."
 },
 {

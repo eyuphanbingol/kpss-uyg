@@ -4,11 +4,11 @@ window.turkce_12_sorulari = [
     "question": "Yapım eki almış sözcüklere ne denir?",
     "options": [
         "A) Basit",
-        "B) Türemiş",
-        "C) Birleşik",
+        "B) Birleşik",
+        "C) Türemiş",
         "D) Kök"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Türemiş = kök + yapım eki."
 },
 {
@@ -37,11 +37,11 @@ window.turkce_12_sorulari = [
     "question": "“Uçak” sözcüğü hangi yapıdadır?",
     "options": [
         "A) Basit",
-        "B) Türemiş",
-        "C) Birleşik",
+        "B) Birleşik",
+        "C) Türemiş",
         "D) Sesteş"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "uç- + -ak → türemiş."
 },
 {
@@ -59,11 +59,11 @@ window.turkce_12_sorulari = [
     "question": "“Uçağımız” sözcüğünde “-ak” nasıl değerlendirilmiştir?",
     "options": [
         "A) Çekim eki",
-        "B) Yapım eki",
+        "B) İlgi eki",
         "C) İyelik eki",
-        "D) İlgi eki"
+        "D) Yapım eki"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "-ak yapım ekidir; isimden isim."
 },
 {
@@ -81,22 +81,22 @@ window.turkce_12_sorulari = [
     "question": "“Sevgi” sözcüğü hangi yapıdadır?",
     "options": [
         "A) Basit",
-        "B) Türemiş",
-        "C) Birleşik",
+        "B) Birleşik",
+        "C) Türemiş",
         "D) Deyim"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "sev- + -gi → yapım eki almış türemiş."
 },
 {
     "question": "“Yün kazaklı çocuk” sözündeki birleşik sıfat hangi yolla kurulmuştur?",
     "options": [
         "A) Anlamca kaynaşma",
-        "B) Yapım eki getirme",
-        "C) Fiilimsiyle",
+        "B) Fiilimsiyle",
+        "C) Yapım eki getirme",
         "D) Çekim ekiyle"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "yün kazak + -lı → birleşik sıfat."
 },
 {
@@ -158,33 +158,33 @@ window.turkce_12_sorulari = [
     "question": "“Kırkbayır” hangi yapıya örnektir?",
     "options": [
         "A) Ad + ad",
-        "B) Sıfat + ad",
+        "B) Yansıma + yansıma",
         "C) Fiil + fiil",
-        "D) Yansıma + yansıma"
+        "D) Sıfat + ad"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "kırk + bayır → sıfat + ad."
 },
 {
     "question": "“Akdeniz” hangi birleşik ad türüdür?",
     "options": [
         "A) Ad + ad",
-        "B) Sıfat + ad",
+        "B) Yansıma",
         "C) Fiil + fiil",
-        "D) Yansıma"
+        "D) Sıfat + ad"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Ak + deniz → sıfat + ad."
 },
 {
     "question": "“Biçerdöver” nasıl oluşmuştur?",
     "options": [
         "A) Ad + ad",
-        "B) Fiil + fiil",
+        "B) Ad + fiilimsi",
         "C) Fiilimsi + ad",
-        "D) Ad + fiilimsi"
+        "D) Fiil + fiil"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "biçer + döver → fiil + fiil."
 },
 {
@@ -213,11 +213,11 @@ window.turkce_12_sorulari = [
     "question": "“Buluverdim” hangi birleşik fiildir?",
     "options": [
         "A) Yeterlik",
-        "B) Tezlik",
+        "B) Yaklaşma",
         "C) Sürerlik",
-        "D) Yaklaşma"
+        "D) Tezlik"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "-i ver- → tezlik."
 },
 {
@@ -235,11 +235,11 @@ window.turkce_12_sorulari = [
     "question": "“Düşeyazdı” hangi birleşik fiildir?",
     "options": [
         "A) Tezlik",
-        "B) Yaklaşma",
+        "B) Yeterlik",
         "C) Sürerlik",
-        "D) Yeterlik"
+        "D) Yaklaşma"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "-e yaz- → yaklaşma."
 },
 {
@@ -268,33 +268,33 @@ window.turkce_12_sorulari = [
     "question": "“Başvurmak” hangi birleşik fiil türüdür?",
     "options": [
         "A) Yardımcı fiille kurulan",
-        "B) Anlamca kaynaşmış",
-        "C) Kurallı birleşik",
+        "B) Kurallı birleşik",
+        "C) Anlamca kaynaşmış",
         "D) Basit fiil"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "baş + vur → anlamca kaynaşmış (müracaat etmek)."
 },
 {
     "question": "“Hemen hemen” aşağıdakilerden hangisidir?",
     "options": [
         "A) Birleşik ad",
-        "B) Birleşik zarf / öbekleşmiş zarf",
-        "C) Sıfat tamlaması",
+        "B) Sıfat tamlaması",
+        "C) Birleşik zarf / öbekleşmiş zarf",
         "D) Deyim"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Öbekleşmiş zarf; ayrı yazılır."
 },
 {
     "question": "İki sözcüğün birleşmesiyle oluşan sözcüklere ne denir?",
     "options": [
         "A) Türemiş",
-        "B) Birleşik",
-        "C) Basit",
+        "B) Basit",
+        "C) Birleşik",
         "D) Kök"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Birleşik: hanımeli, kahverengi, kapıkule."
 },
 {
@@ -312,11 +312,11 @@ window.turkce_12_sorulari = [
     "question": "Kurallı birleşik fiillerde “-e bil-” eki hangi anlamı verir?",
     "options": [
         "A) Tezlik",
-        "B) Yeterlik",
+        "B) Yaklaşma",
         "C) Sürerlik",
-        "D) Yaklaşma"
+        "D) Yeterlik"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "gelebildi → yeterlik."
 },
 {
@@ -356,22 +356,22 @@ window.turkce_12_sorulari = [
     "question": "Bitişik mi ayrı mı ayrımında hangisi doğrudur?",
     "options": [
         "A) hissetmek ayrı, hasta olmak bitişik",
-        "B) hissetmek bitişik, hasta olmak ayrı",
+        "B) ikisi de ayrı",
         "C) ikisi de bitişik",
-        "D) ikisi de ayrı"
+        "D) hissetmek bitişik, hasta olmak ayrı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Ses olayı/kaynaşma kuralı (dikkat kutusu)."
 },
 {
     "question": "“Uçak” sözcüğünde “-ak” yapım eki hangi türde fiil/isim ilişkisi kurar?",
     "options": [
         "A) İsimden isim",
-        "B) Fiilden isim",
+        "B) Fiilden fiil",
         "C) İsimden fiil",
-        "D) Fiilden fiil"
+        "D) Fiilden isim"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "uçmak fiilinden uçak ismi → fiilden isim (-ak)."
 },
 {

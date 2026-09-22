@@ -33,13 +33,13 @@ window.vatandas_9_sorulari = [
     {
         question: "657 sayılı Kanun’a göre çalışma saatleri ve izinleri ile ilgili hangisinde bilgi yanlışlığı vardır?",
         options: [
-            "A) Haftalık çalışma süresi genel olarak 40 saattir.",
-            "B) Hizmeti 1 yıldan on yıla kadar olanlar için yıllık izin 15 gündür.",
+            "A) Hizmeti 1 yıldan on yıla kadar olanlar için yıllık izin 15 gündür.",
+            "B) Haftalık çalışma süresi genel olarak 40 saattir.",
             "C) Hizmeti on yıldan fazla olanlar için yıllık izin 30 gündür.",
             "D) Yıllık izinler toptan veya kısım kısım kullanılabilir.",
             "E) Öğretmenlere hastalık ve mazeret dışında ayrıca yıllık izin verilmez."
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "10 yıldan az hizmette yıllık izin 20 gündür, 15 gün değildir."
     },
     {

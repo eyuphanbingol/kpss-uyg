@@ -4,22 +4,22 @@ window.turkce_2_sorulari = [
     "question": "“Arabamı sattığım için toplu taşıma kullanıyorum.” cümlesinde hangi anlam ilişkisi vardır?",
     "options": [
         "A) Amaç-sonuç",
-        "B) Neden-sonuç",
+        "B) Karşılaştırma",
         "C) Koşul-sonuç",
-        "D) Karşılaştırma"
+        "D) Neden-sonuç"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Satmak gerekçe (neden), toplu taşıma sonuçtur."
 },
 {
     "question": "“Buraya tatil yapmak için geldiler.” cümlesi aşağıdakilerden hangisidir?",
     "options": [
         "A) Neden-sonuç",
-        "B) Amaç-sonuç",
+        "B) Varsayım",
         "C) Koşul-sonuç",
-        "D) Varsayım"
+        "D) Amaç-sonuç"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "-mak için amaç bildirir."
 },
 {
@@ -48,11 +48,11 @@ window.turkce_2_sorulari = [
     "question": "Aşağıdakilerden hangisi dolaylı anlatımdır?",
     "options": [
         "A) “Bugün çok yoruldum.” dedi.",
-        "B) Bugün çok yorulduğunu söyledi.",
-        "C) “Yarın geleceğim.” dedi.",
+        "B) “Yarın geleceğim.” dedi.",
+        "C) Bugün çok yorulduğunu söyledi.",
         "D) “Seni bekliyorum.” dedi."
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Söz, tırnaksız ve -dığını biçiminde aktarılmıştır."
 },
 {
@@ -81,11 +81,11 @@ window.turkce_2_sorulari = [
     "question": "“İstanbul, kalabalık şehirlerden biridir.” cümlesi hangi türdedir?",
     "options": [
         "A) Öznel",
-        "B) Nesnel",
+        "B) Ön yargı",
         "C) Kinayeli",
-        "D) Ön yargı"
+        "D) Nesnel"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Gözlemle doğrulanabilir bir saptamadır."
 },
 {
@@ -125,11 +125,11 @@ window.turkce_2_sorulari = [
     "question": "Bir sanat eserinin “ne anlattığını” bildiren ifadeler aşağıdakilerden hangisidir?",
     "options": [
         "A) Üslup",
-        "B) İçerik",
+        "B) Yoğunluk",
         "C) Özgünlük",
-        "D) Yoğunluk"
+        "D) İçerik"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Ne anlatıldığı içeriktir; nasıl anlatıldığı üsluptur."
 },
 {
@@ -191,22 +191,22 @@ window.turkce_2_sorulari = [
     "question": "“Yaşar Kemal, kendi toprağından beslenen bir yazardır.” cümlesi hangi kavramla ilgilidir?",
     "options": [
         "A) Evrensellik",
-        "B) Ulusallık",
+        "B) Yoğunluk",
         "C) Kalıcılık",
-        "D) Yoğunluk"
+        "D) Ulusallık"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Yerel/ulusal kaynaktan beslenme ulusallıktır."
 },
 {
     "question": "“Seni yanlış anlamış olabilir.” cümlesinde hangi anlam vardır?",
     "options": [
         "A) Pişmanlık",
-        "B) Olasılık",
-        "C) Varsayım",
+        "B) Varsayım",
+        "C) Olasılık",
         "D) Sitem"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "“olabilir” olasılık bildirir."
 },
 {

@@ -16,24 +16,24 @@ window.cografya_27_sorulari = [
         "question": "Aynı enlemdeki iki merkezde sıcaklıklar belirgin farklıysa temel neden genelde hangisidir?",
         "options": [
             "A) Matematik konum",
-            "B) Özel konum (yükselti, denizellik, bakı vb.)",
+            "B) Jeoid şekli",
             "C) Boylam farkı",
             "D) Saat dilimi",
-            "E) Jeoid şekli"
+            "E) Özel konum (yükselti, denizellik, bakı vb.)"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "Aynı enlem → enlem etkisi aynıdır; fark özel konumdan gelir."
     },
     {
         "question": "Kuzey–güney doğrultusunda sıcaklık farkı öncelikle hangi faktörle açıklanır?",
         "options": [
-            "A) Boylam",
-            "B) Enlem",
+            "A) Enlem",
+            "B) Boylam",
             "C) Bakı",
             "D) Denizellik",
             "E) Kıtasal konum"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 0,
         "explanation": "K–G kıyas = enlem."
     },
     {
@@ -64,24 +64,24 @@ window.cografya_27_sorulari = [
         "question": "Aynı enlemde İzmir’in Van’dan daha sıcak olmasının temel nedeni hangisidir?",
         "options": [
             "A) Boylam",
-            "B) Yükselti",
+            "B) Karstik yapı",
             "C) Enlem",
             "D) Fay hatları",
-            "E) Karstik yapı"
+            "E) Yükselti"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "Van daha yüksektir → özel konum (yükselti)."
     },
     {
         "question": "Yazın Şanlıurfa’nın aynı enlemdeki Antalya’dan daha sıcak olması öncelikle neye bağlanır?",
         "options": [
-            "A) Enlem",
-            "B) Karasallık",
+            "A) Karasallık",
+            "B) Enlem",
             "C) Bakı",
             "D) Buzullaşma",
             "E) Ria kıyı"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 0,
         "explanation": "Karasal iç kesim yazın daha çok ısınır."
     },
     {
@@ -100,12 +100,12 @@ window.cografya_27_sorulari = [
         "question": "Horst–graben sistemi ülkemizde en yaygın olarak nerede görülür?",
         "options": [
             "A) Doğu Karadeniz",
-            "B) Batı Anadolu (Ege)",
+            "B) GAP ovaları",
             "C) İç Anadolu ovaları",
             "D) Trakya platosu",
-            "E) GAP ovaları"
+            "E) Batı Anadolu (Ege)"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "Ege kırıklı yapı / BAF."
     },
     {
@@ -148,24 +148,24 @@ window.cografya_27_sorulari = [
         "question": "Türkiye’de platoların geniş yer kaplaması hangi sürecin kanıtı olarak gösterilir?",
         "options": [
             "A) Yalnızca buzullaşma",
-            "B) Kuvaterner’de toptan yükselme (epirojenez)",
+            "B) Fiyort oluşumu",
             "C) Delta birikimi",
             "D) Lagün oluşumu",
-            "E) Fiyort oluşumu"
+            "E) Kuvaterner’de toptan yükselme (epirojenez)"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "Plato yaygınlığı = toptan yükselme kanıtı."
     },
     {
         "question": "Türkiye’nin en yüksek platoları hangi kökene aittir?",
         "options": [
             "A) Karstik (Taşeli)",
-            "B) Volkanik (Erzurum–Kars çevresi)",
+            "B) Dalga aşındırması",
             "C) Aşınım (Çatalca–Kocaeli)",
             "D) Delta",
-            "E) Dalga aşındırması"
+            "E) Volkanik (Erzurum–Kars çevresi)"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "Erzurum–Kars volkanik platoları en yüksektir."
     },
     {
@@ -184,12 +184,12 @@ window.cografya_27_sorulari = [
         "question": "Tektonik (çöküntü) ovalarına örnek hangisidir?",
         "options": [
             "A) Çarşamba Deltası",
-            "B) Gediz / Büyük Menderes graben ovaları",
-            "C) Bafra Deltası",
+            "B) Bafra Deltası",
+            "C) Gediz / Büyük Menderes graben ovaları",
             "D) Dalga birikim seti",
             "E) Morén ovası"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 2,
         "explanation": "Ege graben ovaları tektonik kökenlidir."
     },
     {
@@ -208,96 +208,96 @@ window.cografya_27_sorulari = [
         "question": "Akarsu aşındırmasıyla oluşan “V” şekilli vadi için hangisi doğrudur?",
         "options": [
             "A) Olgunluk döneminde yaygındır",
-            "B) Gençlik döneminde dik yamaçlıdır",
+            "B) Karstiktir",
             "C) Yalnızca buzul vadisidir",
             "D) U şeklindedir",
-            "E) Karstiktir"
+            "E) Gençlik döneminde dik yamaçlıdır"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "Genç vadi = V; buzul = U."
     },
     {
         "question": "Türkiye’de rüzgâr aşındırma–biriktirme şekillerinin daha belirgin olduğu yerler hangisidir?",
         "options": [
             "A) Doğu Karadeniz kıyısı",
-            "B) Kurak–yarı kurak iç bölgeler",
+            "B) Buzul zirveleri",
             "C) Akdeniz’in her yeri",
             "D) Marmara’nın tamamı",
-            "E) Buzul zirveleri"
+            "E) Kurak–yarı kurak iç bölgeler"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "Bitki örtüsü seyrek + kuraklık → rüzgâr etkili."
     },
     {
         "question": "Barkan (hilal biçimli kumulu) için hangisi doğrudur?",
         "options": [
             "A) Nemli ormanlarda oluşur",
-            "B) Kurak alanlarda rüzgâr biriktirmesiyle oluşur",
-            "C) Buzul aşındırmasıdır",
+            "B) Buzul aşındırmasıdır",
+            "C) Kurak alanlarda rüzgâr biriktirmesiyle oluşur",
             "D) Dalga aşındırmasıdır",
             "E) Karstiktir"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 2,
         "explanation": "Barkan = çöl/kurak kumulu."
     },
     {
         "question": "Türkiye’de deniz seviyesinde buzul şekillerinin görülmemesinin temel nedeni hangisidir?",
         "options": [
             "A) Özel konum",
-            "B) Orta Kuşak’ta (matematik konum) yer alması",
+            "B) Boylam",
             "C) Fay hatları",
             "D) GAP",
-            "E) Boylam"
+            "E) Orta Kuşak’ta (matematik konum) yer alması"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "Orta Kuşak → deniz seviyesinde buzul yok; yükseklerde özel konumla var."
     },
     {
         "question": "Sirk gölü nasıl oluşur?",
         "options": [
-            "A) Delta birikimiyle",
-            "B) Buzul aşındırmasıyla oluşan çukurun suyla dolmasıyla",
+            "A) Buzul aşındırmasıyla oluşan çukurun suyla dolmasıyla",
+            "B) Delta birikimiyle",
             "C) Lagün kapanmasıyla",
             "D) Obruk çökmesiyle",
             "E) Volkanik kraterle her zaman"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 0,
         "explanation": "Sirk → buzul çukuru + su."
     },
     {
         "question": "Karstik şekillerin yaygın olduğu ana kaya hangisidir?",
         "options": [
             "A) Granit",
-            "B) Kalker (kireçtaşı)",
+            "B) Kil",
             "C) Bazalt",
             "D) Kumtaşı yalnız",
-            "E) Kil"
+            "E) Kalker (kireçtaşı)"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "Kalker çözünmesi → karst."
     },
     {
         "question": "Pamukkale hangi karstik/kimyasal birikim şekliyle anılır?",
         "options": [
             "A) Obruk",
-            "B) Traverten",
-            "C) Lapya",
+            "B) Lapya",
+            "C) Traverten",
             "D) Doline",
             "E) Polye"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 2,
         "explanation": "Pamukkale = traverten."
     },
     {
         "question": "Türkiye kıyılarında fiyort tipinin görülmemesinin nedeni hangisidir?",
         "options": [
             "A) Ege kırıklıdır",
-            "B) Buzul aşındırmasıyla oluşmuş derin körfezler (fiyort) Türkiye’de yoktur",
+            "B) Akdeniz’de falez yoktur",
             "C) Karadeniz’de delta çoktur",
-            "D) Akdeniz’de falez yoktur",
+            "D) Buzul aşındırmasıyla oluşmuş derin körfezler (fiyort) Türkiye’de yoktur",
             "E) Marmara kapalıdır"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 3,
         "explanation": "Fiyort = buzul kökenli; TR’de klasik fiyort yok."
     },
     {
@@ -328,36 +328,36 @@ window.cografya_27_sorulari = [
         "question": "İzohipsler birbirine yaklaştıkça ne artar?",
         "options": [
             "A) Sıcaklık",
-            "B) Eğim",
-            "C) Yağış her zaman",
+            "B) Yağış her zaman",
+            "C) Eğim",
             "D) Nüfus",
             "E) Nem"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 2,
         "explanation": "Sık izohips = dik/eğimli yer."
     },
     {
         "question": "Haritada bir noktanın yükseltisi nasıl okunur?",
         "options": [
             "A) Boylamdan",
-            "B) İzohips değerinden",
-            "C) Ölçekten yalnız",
+            "B) Ölçekten yalnız",
+            "C) İzohips değerinden",
             "D) Lejandan yalnız renk adından",
             "E) Kuzey okundan"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 2,
         "explanation": "İzohips = eşit yükselti eğrisi."
     },
     {
         "question": "Türkiye’de Ocak ayında en soğuk yerler genelde hangisidir?",
         "options": [
             "A) Antalya–Mersin",
-            "B) Erzurum–Kars (kuzeydoğu)",
-            "C) İzmir–Aydın",
+            "B) İzmir–Aydın",
+            "C) Erzurum–Kars (kuzeydoğu)",
             "D) Adana–Hatay",
             "E) Zonguldak–Bartın"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 2,
         "explanation": "Klasik: Ocak en soğuk Erzurum–Kars."
     },
     {
@@ -411,25 +411,25 @@ window.cografya_27_sorulari = [
     {
         "question": "Sert karasal (Erzurum–Kars) ikliminin görüldüğü iller notlara göre hangileridir?",
         "options": [
-            "A) İzmir–Manisa–Aydın",
-            "B) Erzurum–Kars–Ardahan",
+            "A) Erzurum–Kars–Ardahan",
+            "B) İzmir–Manisa–Aydın",
             "C) Antalya–Muğla–Mersin",
             "D) Edirne–Tekirdağ–Kırklareli",
             "E) Gaziantep–Kilis–Adıyaman"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 0,
         "explanation": "Sadece Erzurum, Kars, Ardahan."
     },
     {
         "question": "Yamaç yağışlarının belirgin olduğu bölgeler hangileridir?",
         "options": [
             "A) Yalnızca İç Anadolu",
-            "B) Dağların kıyıya paralel uzandığı Karadeniz ve Akdeniz",
+            "B) Yalnızca Trakya",
             "C) Yalnızca GAP",
-            "D) Yalnızca Trakya",
+            "D) Dağların kıyıya paralel uzandığı Karadeniz ve Akdeniz",
             "E) Çöller"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 3,
         "explanation": "Kıyıya paralel dağlar → yamaç yağışı."
     },
     {
@@ -472,24 +472,24 @@ window.cografya_27_sorulari = [
         "question": "Türkiye’de can ve mal kaybı açısından en yıkıcı doğal afet genelde hangisidir?",
         "options": [
             "A) Çığ",
-            "B) Deprem",
+            "B) Kırç",
             "C) Dolu",
             "D) Sis",
-            "E) Kırç"
+            "E) Deprem"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "Deprem = en yıkıcı."
     },
     {
         "question": "Heyelan riskinin yüksek olduğu bölge hangisidir?",
         "options": [
-            "A) İç Anadolu’nun kurak ovaları",
-            "B) Doğu Karadeniz (eğim + yağış + kil)",
+            "A) Doğu Karadeniz (eğim + yağış + kil)",
+            "B) İç Anadolu’nun kurak ovaları",
             "C) GAP’ın düz ovaları",
             "D) Çatalca Platosu",
             "E) Ergene"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 0,
         "explanation": "Doğu Karadeniz heyelan klasiktir."
     },
     {
@@ -520,72 +520,72 @@ window.cografya_27_sorulari = [
         "question": "Gerçek nüfus artışının yüksek olması genelde neyi gösterir?",
         "options": [
             "A) Yalnızca doğum fazlalığı",
-            "B) Göç alma (gelişmişlik / çekicilik)",
+            "B) Yalnızca yaşlı nüfus",
             "C) Yalnızca ölüm azlığı",
             "D) Yalnızca kır nüfusu",
-            "E) Yalnızca yaşlı nüfus"
+            "E) Göç alma (gelişmişlik / çekicilik)"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "3G = gerçek artış → göç alır."
     },
     {
         "question": "Türkiye’de nüfusun en yoğun olduğu kuşak hangisidir?",
         "options": [
             "A) Doğu Anadolu’nun tamamı",
-            "B) İstanbul–Bursa ve batı kıyı/sanayi kuşakları",
+            "B) Yalnızca Toroslar",
             "C) Yalnızca Erzurum–Kars",
             "D) Yalnızca İç Anadolu stepı",
-            "E) Yalnızca Toroslar"
+            "E) İstanbul–Bursa ve batı kıyı/sanayi kuşakları"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "Sanayi–ticaret–ulaşım → batı yoğunluğu."
     },
     {
         "question": "Yaş bağımlılık oranında paydada yer alan grup hangisidir?",
         "options": [
             "A) 0–14 + 65+",
-            "B) 15–64 (çalışma çağındaki nüfus)",
-            "C) Yalnızca 65+",
+            "B) Yalnızca 65+",
+            "C) 15–64 (çalışma çağındaki nüfus)",
             "D) Yalnızca 0–14",
             "E) Tüm nüfus"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 2,
         "explanation": "Bağımlılık = (0–14+65+) / 15–64."
     },
     {
         "question": "Ortanca yaşın yükselmesi ne anlama gelir?",
         "options": [
             "A) Nüfus gençleşiyor",
-            "B) Doğumlar azalıyor / yaşam süresi uzuyor; nüfus yaşlanıyor",
+            "B) Enlem değişiyor",
             "C) Göç duruyor",
-            "D) Enlem değişiyor",
+            "D) Doğumlar azalıyor / yaşam süresi uzuyor; nüfus yaşlanıyor",
             "E) Yağış artıyor"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 3,
         "explanation": "Ortanca yaş ↑ = yaşlanma eğilimi."
     },
     {
         "question": "Kırdan kente göçün sonuçları arasında hangisi vardır?",
         "options": [
-            "A) Kırsalda nüfus artar",
-            "B) Kentlerde gecekondu/altyapı baskısı artabilir",
+            "A) Kentlerde gecekondu/altyapı baskısı artabilir",
+            "B) Kırsalda nüfus artar",
             "C) Tarım işgücü artar",
             "D) Doğumlar her yerde artar",
             "E) Sanayi geriler"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 0,
         "explanation": "Kentlere baskı + kırda işgücü azalması."
     },
     {
         "question": "Türkiye’de kırsal yerleşme tipinin dağınık olduğu yerler genelde hangisidir?",
         "options": [
             "A) İç Anadolu düzlükleri",
-            "B) Doğu Karadeniz (eğim, yağış, arazi parçalılığı)",
+            "B) Ergene Ovası",
             "C) GAP ovalarının tamamı",
-            "D) Ergene Ovası",
+            "D) Doğu Karadeniz (eğim, yağış, arazi parçalılığı)",
             "E) Konya Ovası"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 3,
         "explanation": "Doğu Karadeniz = dağınık yerleşme."
     },
     {
@@ -604,24 +604,24 @@ window.cografya_27_sorulari = [
         "question": "1923 İzmir İktisat Kongresi’nin ruhu hangisine yakındır?",
         "options": [
             "A) Tam devletçilik",
-            "B) Özel girişim ve millî ekonomi hedefleri",
+            "B) Yalnızca turizm",
             "C) Yalnızca tarım kapanması",
             "D) Yalnızca petrol ithali",
-            "E) Yalnızca turizm"
+            "E) Özel girişim ve millî ekonomi hedefleri"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "Erken dönem: millî burjuvazi / özel teşebbüs vurgusu."
     },
     {
         "question": "1930’larda uygulanan ekonomi politikası hangisidir?",
         "options": [
             "A) Liberalizm yalnız",
-            "B) Devletçilik",
+            "B) Yalnızca ithalat",
             "C) Tam serbest piyasa",
-            "D) Yalnızca ithalat",
+            "D) Devletçilik",
             "E) Yalnızca hayvancılık"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 3,
         "explanation": "Dünya buhranı sonrası devletçilik."
     },
     {
@@ -639,25 +639,25 @@ window.cografya_27_sorulari = [
     {
         "question": "Nadasın azalmasına katkı sağlayan projeler notlara göre hangileridir?",
         "options": [
-            "A) Yalnızca turizm",
-            "B) GAP ve KOP (sulama)",
+            "A) GAP ve KOP (sulama)",
+            "B) Yalnızca turizm",
             "C) Yalnızca HES",
             "D) Yalnızca maden",
             "E) Yalnızca liman"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 0,
         "explanation": "Sulama → nadas azalır."
     },
     {
         "question": "Çay üretiminin yoğunlaştığı yer hangisidir?",
         "options": [
             "A) İç Anadolu",
-            "B) Doğu Karadeniz kıyı kuşağı",
-            "C) GAP’ın tamamı",
+            "B) GAP’ın tamamı",
+            "C) Doğu Karadeniz kıyı kuşağı",
             "D) Ege grabenleri",
             "E) Ergene"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 2,
         "explanation": "Çay = Doğu Karadeniz (Rize vb.)."
     },
     {
@@ -676,12 +676,12 @@ window.cografya_27_sorulari = [
         "question": "Pamuk üretiminin yoğun olduğu alanlara örnek hangisidir?",
         "options": [
             "A) Erzurum–Kars",
-            "B) Çukurova, Ege grabenleri, GAP sulama alanları",
+            "B) Kaçkar etekleri",
             "C) Doğu Karadeniz",
-            "D) Kaçkar etekleri",
+            "D) Çukurova, Ege grabenleri, GAP sulama alanları",
             "E) Buzul vadileri"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 3,
         "explanation": "Pamuk sıcak + sulama ister."
     },
     {
@@ -699,25 +699,25 @@ window.cografya_27_sorulari = [
     {
         "question": "Kayısı ile özdeşleşen il hangisidir?",
         "options": [
-            "A) Rize",
-            "B) Malatya",
+            "A) Malatya",
+            "B) Rize",
             "C) Zonguldak",
             "D) Trabzon",
             "E) Antalya"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 0,
         "explanation": "Malatya kayısı."
     },
     {
         "question": "Antep fıstığı üretiminde öne çıkan bölge hangisidir?",
         "options": [
             "A) Doğu Karadeniz",
-            "B) Güneydoğu Anadolu (Gaziantep–Şanlıurfa çevresi)",
+            "B) Trakya",
             "C) Marmara’nın tamamı",
-            "D) Trakya",
+            "D) Güneydoğu Anadolu (Gaziantep–Şanlıurfa çevresi)",
             "E) Karadeniz yaylaları"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 3,
         "explanation": "Antep fıstığı = Güneydoğu."
     },
     {
@@ -748,60 +748,60 @@ window.cografya_27_sorulari = [
         "question": "Küçükbaş hayvancılığın (kırkım/otlak) daha yaygın olduğu yerler hangisidir?",
         "options": [
             "A) Doğu Karadeniz orman içi",
-            "B) İç Anadolu ve Doğu Anadolu’nun step/yayla alanları",
-            "C) Yalnızca Marmara sanayi kuşağı",
+            "B) Yalnızca Marmara sanayi kuşağı",
+            "C) İç Anadolu ve Doğu Anadolu’nun step/yayla alanları",
             "D) Yalnızca Çukurova",
             "E) Yalnızca Zonguldak"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 2,
         "explanation": "Step + yayla → koyun/keçi."
     },
     {
         "question": "Büyükbaş (süt) hayvancılığının modern işletmelerle öne çıktığı bölgeler genelde hangisidir?",
         "options": [
             "A) Yalnızca çöller",
-            "B) Marmara, Ege ve İç Anadolu’nun gelişmiş tarım alanları",
+            "B) Yalnızca obruklar",
             "C) Yalnızca falez kıyıları",
-            "D) Yalnızca obruklar",
+            "D) Marmara, Ege ve İç Anadolu’nun gelişmiş tarım alanları",
             "E) Yalnızca buzul sirkleri"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 3,
         "explanation": "Pazar + yem + tesis → batı/gelişmiş alanlar."
     },
     {
         "question": "Türkiye’de maden çeşitliliğinin en fazla olduğu yer notlara göre hangisidir?",
         "options": [
             "A) Çatalca Platosu",
-            "B) Yukarı Fırat (Elazığ çevresi)",
+            "B) Bafra Deltası",
             "C) Ergene Ovası",
-            "D) Bafra Deltası",
+            "D) Yukarı Fırat (Elazığ çevresi)",
             "E) İstanbul Boğazı"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 3,
         "explanation": "Yukarı Fırat / Elazığ — volkanizma etkisi."
     },
     {
         "question": "Bor madeninin başlıca çıkarım/işleme alanları hangileridir?",
         "options": [
-            "A) Zonguldak–Bartın",
-            "B) Eskişehir–Kütahya–Balıkesir (Kırka, Bandırma)",
+            "A) Eskişehir–Kütahya–Balıkesir (Kırka, Bandırma)",
+            "B) Zonguldak–Bartın",
             "C) Rize–Artvin",
             "D) Antalya–Mersin",
             "E) Erzurum–Kars"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 0,
         "explanation": "Bor = Eskişehir vb.; Kırka–Bandırma."
     },
     {
         "question": "Krom çıkarımında öne çıkan yerler hangileridir?",
         "options": [
-            "A) Zonguldak",
-            "B) Elazığ (Guleman) ve Fethiye (Köyceğiz)",
+            "A) Elazığ (Guleman) ve Fethiye (Köyceğiz)",
+            "B) Zonguldak",
             "C) Batman",
             "D) Sinop",
             "E) Edirne"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 0,
         "explanation": "Krom: Guleman–Köyceğiz; işleme Elazığ/Antalya."
     },
     {
@@ -820,12 +820,12 @@ window.cografya_27_sorulari = [
         "question": "Taş kömürü çıkarımıyla özdeşleşen il hangisidir?",
         "options": [
             "A) Batman",
-            "B) Zonguldak (Ereğli)",
+            "B) Şanlıurfa",
             "C) Antalya",
             "D) Muğla",
-            "E) Şanlıurfa"
+            "E) Zonguldak (Ereğli)"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "Zonguldak taş kömürü."
     },
     {
@@ -843,25 +843,25 @@ window.cografya_27_sorulari = [
     {
         "question": "Türkiye’de taş kömürünün başlıca bulunduğu yerler hangileridir?",
         "options": [
-            "A) Batman–Siirt",
-            "B) Zonguldak–Bartın (Kozlu, Karadon, Amasra)",
+            "A) Zonguldak–Bartın (Kozlu, Karadon, Amasra)",
+            "B) Batman–Siirt",
             "C) Antalya–Mersin",
             "D) Konya–Karaman",
             "E) Edirne–Kırklareli"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 0,
         "explanation": "Taş kömürü = Zonguldak havzası."
     },
     {
         "question": "Türkiye’nin en büyük linyit santrali notlara göre hangisidir?",
         "options": [
             "A) Soma yalnız",
-            "B) Afşin–Elbistan (Kahramanmaraş)",
+            "B) Aliağa",
             "C) Çatalağzı yalnız",
-            "D) Aliağa",
+            "D) Afşin–Elbistan (Kahramanmaraş)",
             "E) Akkuyu"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 3,
         "explanation": "Afşin–Elbistan."
     },
     {
@@ -892,24 +892,24 @@ window.cografya_27_sorulari = [
         "question": "Doğal gazda dışa bağımlılık için notlara göre hangisi doğrudur?",
         "options": [
             "A) Tamamen yerli",
-            "B) İhtiyacın çok büyük bölümü ithal edilir",
+            "B) Yalnızca jeotermaldir",
             "C) İhracatçıdır",
             "D) Yalnızca kömürden üretilir",
-            "E) Yalnızca jeotermaldir"
+            "E) İhtiyacın çok büyük bölümü ithal edilir"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "Doğal gazda bağımlılık çok yüksektir."
     },
     {
         "question": "Türkiye’nin ilk nükleer güç santrali projesi nerededir?",
         "options": [
             "A) Zonguldak",
-            "B) Mersin (Akkuyu)",
+            "B) Sinop işletmede",
             "C) Erzurum",
             "D) Van",
-            "E) Sinop işletmede"
+            "E) Mersin (Akkuyu)"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "Akkuyu – Mersin (inşaat süreci)."
     },
     {
@@ -940,60 +940,60 @@ window.cografya_27_sorulari = [
         "question": "Ham maddeye bağlı sanayi yerleşimine örnek hangisidir?",
         "options": [
             "A) İstanbul tekstili yalnız",
-            "B) Şeker fabrikalarının pancar alanlarına yakınlığı",
-            "C) Yalnızca yazılım",
+            "B) Yalnızca yazılım",
+            "C) Şeker fabrikalarının pancar alanlarına yakınlığı",
             "D) Yalnızca turizm",
             "E) Yalnızca liman gümrüğü"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 2,
         "explanation": "Şeker = ham maddeye yakın."
     },
     {
         "question": "Türkiye’de en çok kullanılan yük/yolcu taşıma sistemi hangisidir?",
         "options": [
             "A) Denizyolu yalnız",
-            "B) Karayolu",
+            "B) Hava yalnız",
             "C) Boru hattı yalnız",
-            "D) Hava yalnız",
+            "D) Karayolu",
             "E) Nehir"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 3,
         "explanation": "Karayolu baskındır."
     },
     {
         "question": "Boğaz köprüleri ve geçitler hangi coğrafi engeli aşmaya yöneliktir?",
         "options": [
             "A) Çöl",
-            "B) Su engeli / boğaz geçişi",
-            "C) Enlem",
+            "B) Enlem",
+            "C) Su engeli / boğaz geçişi",
             "D) Boylam",
             "E) İzohips"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 2,
         "explanation": "İstanbul/Çanakkale boğaz geçişleri."
     },
     {
         "question": "Deniz–kum–güneş turizminin yoğun olduğu bölgeler hangileridir?",
         "options": [
             "A) Doğu Anadolu yüksek yaylaları",
-            "B) Akdeniz ve Ege kıyıları",
+            "B) Zonguldak maden sahaları",
             "C) Erzurum–Kars kış turizmi yalnız",
-            "D) Zonguldak maden sahaları",
+            "D) Akdeniz ve Ege kıyıları",
             "E) İç Anadolu stepı"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 3,
         "explanation": "Akdeniz–Ege kıyı turizmi."
     },
     {
         "question": "Kış turizmi (kayak) merkezlerine örnek hangisidir?",
         "options": [
-            "A) Anamur muz alanları",
-            "B) Uludağ, Palandöken, Kartalkaya, Erciyes",
+            "A) Uludağ, Palandöken, Kartalkaya, Erciyes",
+            "B) Anamur muz alanları",
             "C) Çukurova",
             "D) Bafra Deltası",
             "E) Ergene"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 0,
         "explanation": "Kayak = yüksek dağ merkezleri."
     },
     {
@@ -1036,12 +1036,12 @@ window.cografya_27_sorulari = [
         "question": "GAP’ın kapsamı için hangisi doğrudur?",
         "options": [
             "A) Yalnızca turizm",
-            "B) Tarım, enerji, ulaşım, sanayi gibi çok sektörlü kalkınma",
-            "C) Yalnızca maden",
+            "B) Yalnızca maden",
+            "C) Tarım, enerji, ulaşım, sanayi gibi çok sektörlü kalkınma",
             "D) Yalnızca balıkçılık",
             "E) Yalnızca orman"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 2,
         "explanation": "GAP çok amaçlıdır."
     },
     {
@@ -1072,12 +1072,12 @@ window.cografya_27_sorulari = [
         "question": "Aşağıdakilerden hangisi “bakı = her zaman güney yamaç daha sıcaktır” yargısını çürütür?",
         "options": [
             "A) Ege’de zeytin",
-            "B) Karadeniz’de kışın kuzey yamaçların daha ılık olabilmesi",
+            "B) İç Anadolu’da step",
             "C) Akdeniz’de muz",
-            "D) İç Anadolu’da step",
+            "D) Karadeniz’de kışın kuzey yamaçların daha ılık olabilmesi",
             "E) GAP’ta pamuk"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 3,
         "explanation": "Karadeniz ters olay / bakı çeldiricisi."
     },
     {

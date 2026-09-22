@@ -4,99 +4,99 @@ window.turkce_8_sorulari = [
     "question": "Tek başına anlamı olmayan; sözcükler arasında anlam ilişkisi kuran sözcüklere ne denir?",
     "options": [
         "A) Bağlaç",
-        "B) Edat (ilgeç)",
-        "C) Zarf",
+        "B) Zarf",
+        "C) Edat (ilgeç)",
         "D) Ünlem"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Edat cümleden çıkarılınca anlam bozulur."
 },
 {
     "question": "Edat için altın kural nedir?",
     "options": [
-        "A) Cümleden çıkarılınca anlam bozulmaz.",
-        "B) Cümleden çıkarılınca anlam bozulur veya değişir.",
+        "A) Cümleden çıkarılınca anlam bozulur veya değişir.",
+        "B) Cümleden çıkarılınca anlam bozulmaz.",
         "C) Her zaman bağlaçtır.",
         "D) Yalnız fiilden sonra gelir."
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Edat anlam taşıyan sözcüklerdendir."
 },
 {
     "question": "“Senin için geldim.” cümlesinde “için” hangi sözcük türüdür?",
     "options": [
         "A) Bağlaç",
-        "B) Edat",
+        "B) Ünlem",
         "C) Zarf",
-        "D) Ünlem"
+        "D) Edat"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "İçin çıkarılırsa anlam bozulur."
 },
 {
     "question": "“için” edatı aşağıdaki anlamlardan hangisini taşıyabilir?",
     "options": [
         "A) Yalnız zaman",
-        "B) Amaç, neden veya hakkında",
+        "B) Yalnız seslenme",
         "C) Yalnız karşılaştırma",
-        "D) Yalnız seslenme"
+        "D) Amaç, neden veya hakkında"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Başarılı olmak için / hasta olduğu için / senin için."
 },
 {
     "question": "“Ali, Ayşe kadar çalışkan.” cümlesinde “kadar” hangi anlamdadır?",
     "options": [
-        "A) Bağlaç",
-        "B) Edat (karşılaştırma)",
+        "A) Edat (karşılaştırma)",
+        "B) Bağlaç",
         "C) Ünlem",
         "D) Zarf"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Karşılaştırma edatı."
 },
 {
     "question": "“Akşama kadar bekledim.” cümlesinde “kadar” hangi anlamdadır?",
     "options": [
-        "A) Karşılaştırma",
-        "B) Zaman",
+        "A) Zaman",
+        "B) Karşılaştırma",
         "C) Benzerlik",
         "D) Bağlaç"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Zaman edatı olarak kullanılmış."
 },
 {
     "question": "“Kalemle yazdı.” cümlesinde “ile” hangi anlamdadır?",
     "options": [
         "A) Bağlaç (ve)",
-        "B) Edat (araç)",
+        "B) Zarf",
         "C) Ünlem",
-        "D) Zarf"
+        "D) Edat (araç)"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Araç anlamında edat."
 },
 {
     "question": "“Ali ile Ayşe geldi.” cümlesinde “ile” hangi sözcük türüdür?",
     "options": [
-        "A) Edat",
-        "B) Bağlaç",
+        "A) Bağlaç",
+        "B) Edat",
         "C) Zarf",
         "D) Edat ve bağlaç karışık"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Ve anlamında; bağlaç."
 },
 {
     "question": "Bağlaç için altın kural nedir?",
     "options": [
         "A) Cümleden çıkarılınca anlam bozulur.",
-        "B) Cümleden çıkarılınca temel anlam bozulmaz.",
+        "B) Yalnız duygu bildirir.",
         "C) Her zaman edattır.",
-        "D) Yalnız duygu bildirir."
+        "D) Cümleden çıkarılınca temel anlam bozulmaz."
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Ve çıkarılırsa anlam zayıflar ama bozulmaz."
 },
 {
@@ -114,11 +114,11 @@ window.turkce_8_sorulari = [
     "question": "Edat–bağlaç ayrımında “ve” testi ne işe yarar?",
     "options": [
         "A) Her zaman edat bulur.",
-        "B) Yerine ve geliyorsa bağlaç.",
+        "B) Ünlem ayırır.",
         "C) Yerine ama geliyorsa edat.",
-        "D) Ünlem ayırır."
+        "D) Yerine ve geliyorsa bağlaç."
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Ve geliyorsa bağlaç; gelmiyorsa edat."
 },
 {
@@ -136,11 +136,11 @@ window.turkce_8_sorulari = [
     "question": "“Geldi yalnız konuşmadı.” cümlesinde “yalnız” hangi sözcük türüdür?",
     "options": [
         "A) Edat",
-        "B) Bağlaç (ama)",
-        "C) Zarf",
+        "B) Zarf",
+        "C) Bağlaç (ama)",
         "D) Ünlem"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "İki cümleyi bağlıyor; ama anlamında."
 },
 {
@@ -157,23 +157,23 @@ window.turkce_8_sorulari = [
 {
     "question": "“Geldi ancak konuşmadı.” cümlesinde “ancak” hangi anlamdadır?",
     "options": [
-        "A) Edat (sadece)",
-        "B) Bağlaç (ama)",
+        "A) Bağlaç (ama)",
+        "B) Edat (sadece)",
         "C) Ünlem",
         "D) Zarf"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Ama anlamında bağlaç."
 },
 {
     "question": "“Ne geldi ne gitti.” cümlesinde “ne...ne” hangi sözcük türüdür?",
     "options": [
         "A) Edat",
-        "B) Bağlaç",
+        "B) Sıfat",
         "C) Zarf",
-        "D) Sıfat"
+        "D) Bağlaç"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "İkileme bağlacı."
 },
 {
@@ -201,12 +201,12 @@ window.turkce_8_sorulari = [
 {
     "question": "“Eyvah, cüzdanımı kaybettim!” cümlesinde “eyvah” hangi sözcük türüdür?",
     "options": [
-        "A) Edat",
-        "B) Ünlem",
+        "A) Ünlem",
+        "B) Edat",
         "C) Bağlaç",
         "D) Zarf"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Korku/şaşkınlık duygusu bildirir."
 },
 {
@@ -235,44 +235,44 @@ window.turkce_8_sorulari = [
     "question": "“Şiirle müzik bir arada güzel.” cümlesinde “ile” hangi sözcük türüdür?",
     "options": [
         "A) Edat",
-        "B) Bağlaç",
+        "B) Ünlem",
         "C) Zarf",
-        "D) Ünlem"
+        "D) Bağlaç"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Ve yerine geçer; bağlaç."
 },
 {
     "question": "“Kardeşim gibi severim.” cümlesinde “gibi” hangi sözcük türüdür?",
     "options": [
-        "A) Bağlaç",
-        "B) Edat (benzerlik)",
+        "A) Edat (benzerlik)",
+        "B) Bağlaç",
         "C) Ünlem",
         "D) Zarf"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Benzerlik edatı; çıkarılınca anlam bozulur."
 },
 {
     "question": "“Yağmura rağmen geldi.” cümlesinde “rağmen” hangi sözcük türüdür?",
     "options": [
         "A) Bağlaç",
-        "B) Edat",
-        "C) Zarf",
+        "B) Zarf",
+        "C) Edat",
         "D) Ünlem"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Edat örneklerindendir."
 },
 {
     "question": "Aşağıdakilerden hangisi bağlaçtır?",
     "options": [
-        "A) için",
-        "B) çünkü",
+        "A) çünkü",
+        "B) için",
         "C) kadar",
         "D) göre"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Çünkü neden bağlacı; diğerleri edat."
 },
 {
@@ -290,22 +290,22 @@ window.turkce_8_sorulari = [
     "question": "Edat–bağlaç–ünlem özeti: hangisi doğrudur?",
     "options": [
         "A) Edat çıkar → anlam bozulmaz.",
-        "B) Bağlaç çıkar → anlam bozulmaz.",
+        "B) İle her zaman edattır.",
         "C) Ünlem her zaman edattır.",
-        "D) İle her zaman edattır."
+        "D) Bağlaç çıkar → anlam bozulmaz."
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Bağlaç çıkarılınca temel anlam korunur."
 },
 {
     "question": "“Bir tek sen varsın.” cümlesinde “bir tek” hangi anlamdadır?",
     "options": [
         "A) Bağlaç (ama)",
-        "B) Edat (sadece)",
-        "C) Ünlem",
+        "B) Ünlem",
+        "C) Edat (sadece)",
         "D) Zarf"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Sadece anlamında edat."
 },
 {
@@ -345,11 +345,11 @@ window.turkce_8_sorulari = [
     "question": "“Sana göre her şey kolay.” cümlesinde “göre” hangi sözcük türüdür?",
     "options": [
         "A) Bağlaç",
-        "B) Edat",
-        "C) Zarf",
+        "B) Zarf",
+        "C) Edat",
         "D) Ünlem"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Karşılaştırma/uygunluk edatı."
 },
 {

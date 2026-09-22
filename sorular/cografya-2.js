@@ -33,13 +33,13 @@ window.cografya_2_sorulari = [
     "id": "3",
     "question": "Kıvrılma sonucunda oluşan yer şekilleriyle ilgili aşağıdaki eşleştirmelerden hangisi doğrudur?",
     "options": [
-      "A) Antiklinal – yükselen kıvrım",
+      "A) Graben – kubbe biçimli kıvrım",
       "B) Senklinal – yükselen kıvrım",
       "C) Horst – alçalan kıvrım",
-      "D) Graben – kubbe biçimli kıvrım",
+      "D) Antiklinal – yükselen kıvrım",
       "E) Batolit – çöküntü kıvrımı"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Kıvrım sisteminde yukarı doğru kubbeleşen kesim antiklinal, aşağı doğru çukurlaşan kesim ise senklinal olarak adlandırılır."
   },
 
@@ -79,13 +79,13 @@ window.cografya_2_sorulari = [
     "id": "6",
     "question": "Epirojenez ile ilgili aşağıdaki bilgilerden hangisi doğrudur?",
     "options": [
-      "A) Yer kabuğunun geniş alanlı yükselip alçalmasıdır.",
+      "A) Dar alanlarda gerçekleşen kıvrılma hareketidir.",
       "B) Sadece volkanik dağların oluşumunda etkilidir.",
       "C) Yalnızca fayların kırılması sonucunda meydana gelir.",
-      "D) Dar alanlarda gerçekleşen kıvrılma hareketidir.",
+      "D) Yer kabuğunun geniş alanlı yükselip alçalmasıdır.",
       "E) Magmanın yeryüzüne çıkmasıyla gerçekleşir."
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Epirojenez, geniş kara parçalarının yükselmesi veya alçalması şeklinde gerçekleşen dikey yönlü yer kabuğu hareketleridir."
   },
 
@@ -108,12 +108,12 @@ window.cografya_2_sorulari = [
     "question": "Türkiye'de Anadolu Yarımadası'nın genel olarak yükselmesi aşağıdaki iç kuvvetlerden hangisiyle açıklanır?",
     "options": [
       "A) Orojenez",
-      "B) Epirojenez",
-      "C) Volkanizma",
+      "B) Volkanizma",
+      "C) Epirojenez",
       "D) Deprem",
       "E) Karstlaşma"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Geniş bir kara parçasının toptan yükselmesi veya alçalması epirojenez olarak adlandırılır. Anadolu'nun genel yükselmesi bu hareketle ilişkilendirilir."
   },
 
@@ -135,13 +135,13 @@ window.cografya_2_sorulari = [
     "id": "10",
     "question": "Bir kara parçasının yükselmesi sonucunda daha önce deniz altında bulunan yüzeylerin açığa çıkması aşağıdaki olaylardan hangisine örnek oluşturur?",
     "options": [
-      "A) Epirojenez",
+      "A) Deprem",
       "B) Volkanizma",
       "C) Orojenez",
-      "D) Deprem",
+      "D) Epirojenez",
       "E) Akarsu biriktirmesi"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Geniş kara kütlelerinin yükselmesi epirojenik hareketlerle gerçekleşebilir. Bu yükselme sonucunda deniz altında bulunan alanlar kara hâline gelebilir."
   },
 
@@ -205,13 +205,13 @@ window.cografya_2_sorulari = [
     "id": "15",
     "question": "Aşağıdaki oluşumlardan hangisinin meydana gelmesinde volkanik patlama sonucu oluşan çöküntü alanının suyla dolması etkili olmuştur?",
     "options": [
-      "A) Nemrut Gölü",
+      "A) Manyas Gölü",
       "B) Tuz Gölü",
       "C) Sapanca Gölü",
-      "D) Manyas Gölü",
+      "D) Nemrut Gölü",
       "E) Beyşehir Gölü"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Bitlis'teki Nemrut volkanının oluşturduğu geniş kaldera içerisinde su birikmesiyle Nemrut Gölü oluşmuştur. Bu nedenle volkanik oluşumlu göller arasında değerlendirilir."
   },
 
@@ -219,13 +219,13 @@ window.cografya_2_sorulari = [
     "id": "16",
     "question": "Volkanik arazilerin tarımsal açıdan verimli olabilmesinde aşağıdaki özelliklerden hangisi daha fazla etkilidir?",
     "options": [
-      "A) Volkanik materyalin mineral bakımından zengin olması",
+      "A) Yükseltinin bütün alanlarda düşük olması",
       "B) Yağışın her mevsim aynı miktarda gerçekleşmesi",
-      "C) Yükseltinin bütün alanlarda düşük olması",
+      "C) Volkanik materyalin mineral bakımından zengin olması",
       "D) Akarsuların tamamının kısa boylu olması",
       "E) Günlük sıcaklık farklarının çok az olması"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 2,
     "explanation": "Volkanik materyallerin ayrışmasıyla oluşan topraklar bazı mineraller bakımından zengin olabilir. Bu durum uygun iklim koşullarında tarımsal verimliliği artırabilir."
   },
 
@@ -421,13 +421,13 @@ window.cografya_2_sorulari = [
     "id": "29",
     "question": "Aşağıdaki olaylardan hangisinin oluşumunda iç kuvvetlerden biri olan volkanizmanın etkisi vardır?",
     "options": [
-      "A) Erciyes Dağı'nın oluşumu",
+      "A) Kızılırmak'ın vadi oluşturması",
       "B) Bafra Deltası'nın oluşumu",
       "C) Kapıdağ Yarımadası'nın oluşumu",
-      "D) Kızılırmak'ın vadi oluşturması",
+      "D) Erciyes Dağı'nın oluşumu",
       "E) Çukurova'nın delta ovasına dönüşmesi"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Erciyes, volkanik faaliyetler sonucunda oluşmuş önemli bir volkanik dağdır. Diğer seçeneklerdeki oluşumlarda dış kuvvetler ve kıyı süreçleri daha belirleyicidir."
   },
 
@@ -435,13 +435,13 @@ window.cografya_2_sorulari = [
     "id": "30",
     "question": "Aşağıdaki yer şekillerinden hangileri aynı temel tektonik süreçle ilişkilidir?",
     "options": [
-      "A) Horst – graben",
+      "A) Sirk – moren",
       "B) Delta – falez",
-      "C) Sirk – moren",
+      "C) Horst – graben",
       "D) Menderes – delta",
       "E) Peribacası – kırgıbayır"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 2,
     "explanation": "Horst ve graben, faylanma yani kırılma hareketleri sonucunda oluşan yer şekilleridir."
   },
 

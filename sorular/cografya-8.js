@@ -44,25 +44,25 @@ window.cografya_8_sorulari = [
     "question": "Buzulların taşıdığı malzemenin birikmesiyle oluşan şekil aşağıdakilerden hangisidir?",
     "options": [
       "A) Sirk",
-      "B) Moren",
+      "B) Kumul",
       "C) Lös",
-      "D) Kumul",
+      "D) Moren",
       "E) Traverten"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Buzulların aşındırıp önlerine katarak taşıdıkları çakıl, kum ve toprakları erime bölgelerinde üst üste yığmasıyla oluşan buzul taşlara moren denir. Lös ve kumul rüzgar, traverten ise karstik biriktirme şeklidir."
   },
   {
     "id": "5",
     "question": "İç Anadolu Bölgesi'nde buzullaşan dağlar aşağıdakilerin hangisinde birlikte ve doğru verilmiştir?",
     "options": [
-      "A) Kaçkarlar – Ağrı",
-      "B) Erciyes – Hasan",
+      "A) Erciyes – Hasan",
+      "B) Kaçkarlar – Ağrı",
       "C) Bolkarlar – Aladağlar",
       "D) Uludağ – Beydağları",
       "E) Cilo – Sat"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "İç Anadolu Bölgesi'nde volkanik kökenli olan Erciyes ve Hasan dağlarının zirve kesimlerinde yüksek olmalarından dolayı buzullaşma ve buzul izleri görülür."
   }
 ];

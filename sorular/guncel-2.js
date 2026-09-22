@@ -40,12 +40,12 @@ window.guncel_2_sorulari = [
     "question": "Verilen notlara göre KAAN'ın 2028 sonlarında envantere girmesi planlanmaktadır. Buna göre aşağıdakilerden hangisi KAAN ile ilgili doğru bir bilgidir?",
     "options": [
         "A) Türkiye'nin ilk haberleşme uydusudur.",
-        "B) Türkiye'nin millî savaş uçağı projesidir.",
+        "B) Millî ana muharebe tankıdır.",
         "C) Katmanlı hava savunma sistemidir.",
-        "D) Millî ana muharebe tankıdır.",
+        "D) Türkiye'nin millî savaş uçağı projesidir.",
         "E) Jet motorlu insansız savaş uçağıdır."
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "KAAN millî savaş uçağıdır."
 },
 {
@@ -124,12 +124,12 @@ window.guncel_2_sorulari = [
     "question": "TÜRKSAT 6A'nın Türkiye açısından önemi aşağıdakilerden hangisidir?",
     "options": [
         "A) Türkiye'nin ilk savaş uçağı olması",
-        "B) Türkiye'nin haberleşme uydusu üretebilen ülkeler arasına girmesine katkı sağlaması",
+        "B) Türkiye'nin ilk hava savunma sistemi olması",
         "C) Türkiye'nin ilk astronotunu taşıması",
-        "D) Türkiye'nin ilk hava savunma sistemi olması",
+        "D) Türkiye'nin haberleşme uydusu üretebilen ülkeler arasına girmesine katkı sağlaması",
         "E) Türkiye'nin ilk ana muharebe tankı olması"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Haberleşme uydusu üretebilen ülkeler arasına giriştir."
 },
 {
@@ -171,13 +171,13 @@ window.guncel_2_sorulari = [
 {
     "question": "ALTAY aşağıdakilerden hangisiyle ilişkilidir?",
     "options": [
-        "A) Millî ana muharebe tankı",
+        "A) Elektrikli otomobil",
         "B) Haberleşme uydusu",
         "C) Jet motorlu insansız savaş uçağı",
         "D) Hava savunma sistemi",
-        "E) Elektrikli otomobil"
+        "E) Millî ana muharebe tankı"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 4,
     "explanation": "ALTAY millî tanktır."
 },
 {
@@ -303,13 +303,13 @@ window.guncel_2_sorulari = [
 {
     "question": "Gazi Yaşargil aşağıdaki alanlardan hangisiyle özdeşleşmiştir?",
     "options": [
-        "A) Beyin cerrahisi ve mikronöroşirürji",
+        "A) Ekonomi",
         "B) Matematik",
         "C) Astronomi",
         "D) Kimya",
-        "E) Ekonomi"
+        "E) Beyin cerrahisi ve mikronöroşirürji"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 4,
     "explanation": "Beyin cerrahisi."
 },
 {
@@ -364,12 +364,12 @@ window.guncel_2_sorulari = [
     "question": "Türkiye'nin ilk astronotu aşağıdakilerden hangisidir?",
     "options": [
         "A) Tuva Cihangir Atasever",
-        "B) Alper Gezeravcı",
+        "B) Mehmet Nuri Ersoy",
         "C) Aziz Sancar",
         "D) Cahit Arf",
-        "E) Mehmet Nuri Ersoy"
+        "E) Alper Gezeravcı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 4,
     "explanation": "Alper Gezeravcı."
 },
 {
@@ -412,24 +412,24 @@ window.guncel_2_sorulari = [
     "question": "Türkiye'nin ikinci astronotu aşağıdakilerden hangisidir?",
     "options": [
         "A) Alper Gezeravcı",
-        "B) Tuva Cihangir Atasever",
+        "B) Gazi Yaşargil",
         "C) Cahit Arf",
         "D) Aziz Sancar",
-        "E) Gazi Yaşargil"
+        "E) Tuva Cihangir Atasever"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 4,
     "explanation": "Tuva Cihangir Atasever."
 },
 {
     "question": "Tuva Cihangir Atasever'in gerçekleştirdiği uçuş aşağıdakilerden hangisidir?",
     "options": [
         "A) Ay'a iniş",
-        "B) Yörünge altı araştırma uçuşu",
+        "B) Uzun süreli ISS görevi",
         "C) Mars görevi",
-        "D) Uzun süreli ISS görevi",
+        "D) Yörünge altı araştırma uçuşu",
         "E) Jeostatik uydu görevi"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Yörünge altı araştırma uçuşu."
 },
 {
@@ -460,12 +460,12 @@ window.guncel_2_sorulari = [
     "question": "TEKNOFEST aşağıdakilerden hangisiyle en doğrudan ilişkilidir?",
     "options": [
         "A) Tarım ve hayvancılık",
-        "B) Havacılık, uzay ve teknoloji",
+        "B) Kültürel miras",
         "C) Petrol üretimi",
-        "D) Kültürel miras",
+        "D) Havacılık, uzay ve teknoloji",
         "E) Uluslararası hukuk"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Havacılık, uzay ve teknoloji festivalidir."
 },
 {
@@ -507,25 +507,25 @@ window.guncel_2_sorulari = [
 {
     "question": "Aşağıdaki bilgilerden hangisi birlikte doğru verilmiştir?",
     "options": [
-        "A) Alper Gezeravcı — Ax-3 — SpaceX Dragon",
+        "A) TÜRKSAT 6A — Ay görevi — NASA",
         "B) Tuva Cihangir Atasever — Ax-3 — ISS'de uzun süreli görev",
         "C) KAAN — Ax-3 — Uzay aracı",
-        "D) TÜRKSAT 6A — Ay görevi — NASA",
+        "D) Alper Gezeravcı — Ax-3 — SpaceX Dragon",
         "E) TEKNOFEST — Birleşmiş Milletler organizasyonu"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Gezeravcı Ax-3 / Dragon / ISS."
 },
 {
     "question": "Aşağıdaki gelişmelerden hangisi Türkiye'nin uzay alanındaki insanlı görevleriyle doğrudan ilişkilidir?",
     "options": [
         "A) KAAN'ın ilk uçuşu",
-        "B) Alper Gezeravcı'nın Ax-3 misyonu",
+        "B) TOGG'un geliştirilmesi",
         "C) Çelik Kubbe'nin geliştirilmesi",
-        "D) TOGG'un geliştirilmesi",
+        "D) Alper Gezeravcı'nın Ax-3 misyonu",
         "E) ALTAY'ın geliştirilmesi"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Ax-3 insanlı görevdir."
 },
 {

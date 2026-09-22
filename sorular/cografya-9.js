@@ -5,12 +5,12 @@ window.cografya_9_sorulari = [
     "question": "Karstik arazi tanımı ve Türkiye'deki en belirgin karstik şekilleri oluşturan kayaçla ilgili aşağıdakilerden hangisi doğrudur?",
     "options": [
       "A) Karstik arazi, su içinde erimeyen sert kayaçlardan oluşur; en belirgin kayaç granittir",
-      "B) Karstik arazi, su içinde eriyebilen kayaçlardan oluşur; Akdeniz'de en belirgin kayaç kalkerdir (kireçtaşı)",
-      "C) Karstik arazi yalnızca volkanik kayaçlardan oluşur",
+      "B) Karstik arazi yalnızca volkanik kayaçlardan oluşur",
+      "C) Karstik arazi, su içinde eriyebilen kayaçlardan oluşur; Akdeniz'de en belirgin kayaç kalkerdir (kireçtaşı)",
       "D) Karstik şekiller yalnızca Doğu Anadolu'da görülür",
       "E) Karstik arazi tamamen alüvyal kökenlidir"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Karstik araziler, suyla temas ettiğinde kolayca eriyebilen kimyasal tortul kayaçlardan oluşur. Türkiye'de en yaygın ve belirgin karstik yer şekillerini oluşturan kayaç kalkerdir (kireç taşı) ve en çok Akdeniz Bölgesi'nde (Toroslar) bulunur."
   },
   {
@@ -135,12 +135,12 @@ window.cografya_9_sorulari = [
     "question": "Obruk göllerinin yoğun olarak görüldüğü bölge aşağıdakilerden hangisidir?",
     "options": [
       "A) Doğu Karadeniz",
-      "B) Batı ve Orta Toroslar",
-      "C) Trakya",
+      "B) Trakya",
+      "C) Batı ve Orta Toroslar",
       "D) Doğu Anadolu geneli",
       "E) Marmara kıyıları"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Mağara tavanlarının çökmesiyle oluşan obrukların tabanının suyla dolmasıyla oluşan obruk göllerine, karstik yapının ve kalın kalker tabakalarının en belirgin olduğu Batı ve Orta Toroslar'da sıklıkla rastlanır."
   }
 ];

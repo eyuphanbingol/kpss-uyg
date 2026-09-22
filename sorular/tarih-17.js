@@ -1,7 +1,7 @@
 // sorular/tarih-17.js
 window.tarih_17_sorulari = [
 {
-    "question": "Soru 1: Mustafa Kemal'in eğitim hayatıyla ilgili aşağıdakilerden hangisi doğrudur?",
+    "question": "Mustafa Kemal'in eğitim hayatıyla ilgili aşağıdakilerden hangisi doğrudur?",
     "options": [
         "A) İlk eğitimine Manastır Askerî İdadisi'nde başlamıştır.",
         "B) İlk eğitim aldığı okul Selanik Mahalle Mektebi'dir.",
@@ -13,7 +13,7 @@ window.tarih_17_sorulari = [
     "explanation": "İlk eğitim aldığı okul Selanik Mahalle Mektebi'dir. İlkokul Şemsi Efendi'dedir; askerî rüştiye daha sonradır."
 },
 {
-    "question": "Soru 2: Mustafa Kemal'in modern eğitim anlayışıyla eğitim veren Şemsi Efendi Okulunda öğrenim görmesi, aşağıdakilerden hangisiyle ilişkilendirilebilir?",
+    "question": "Mustafa Kemal'in modern eğitim anlayışıyla eğitim veren Şemsi Efendi Okulunda öğrenim görmesi, aşağıdakilerden hangisiyle ilişkilendirilebilir?",
     "options": [
         "A) Askerî eğitim hayatının başlamasıyla",
         "B) Yükseköğrenim hayatına geçmesiyle",
@@ -25,7 +25,7 @@ window.tarih_17_sorulari = [
     "explanation": "Şemsi Efendi Okulu, ilkokulu okuduğu modern özel okuldur."
 },
 {
-    "question": "Soru 3: Mustafa Kemal'in Selanik Mülkiye Rüştiyesinden kısa süre sonra ayrılarak eğitimine Selanik Askerî Rüştiyesinde devam etmesinde aşağıdakilerden hangisinin etkili olduğu söylenebilir?",
+    "question": "Mustafa Kemal'in Selanik Mülkiye Rüştiyesinden kısa süre sonra ayrılarak eğitimine Selanik Askerî Rüştiyesinde devam etmesinde aşağıdakilerden hangisinin etkili olduğu söylenebilir?",
     "options": [
         "A) Askerî eğitime yönelmesi",
         "B) Tarih öğretmeni olması",
@@ -37,7 +37,7 @@ window.tarih_17_sorulari = [
     "explanation": "Mülkiye Rüştiyesi'nden kısa sonra ayrılıp Askerî Rüştiye'ye geçmesi askerî eğitime yönelişidir."
 },
 {
-    "question": "Soru 4: Mustafa Kemal'in siyasi ve askerî hayatında ihtiyaç duyacağı düzen ve disiplin anlayışının ilk temellerinin atıldığı okul aşağıdakilerden hangisidir?",
+    "question": "Mustafa Kemal'in siyasi ve askerî hayatında ihtiyaç duyacağı düzen ve disiplin anlayışının ilk temellerinin atıldığı okul aşağıdakilerden hangisidir?",
     "options": [
         "A) Selanik Mahalle Mektebi",
         "B) Şemsi Efendi Okulu",
@@ -49,7 +49,7 @@ window.tarih_17_sorulari = [
     "explanation": "Düzen ve disiplinin ilk temelleri Selanik Askerî Rüştiyesi'nde atılmıştır."
 },
 {
-    "question": "Soru 5: Mustafa Kemal'e \"Kemal\" adını veren öğretmeni aşağıdakilerden hangisidir?",
+    "question": "Mustafa Kemal'e \"Kemal\" adını veren öğretmeni aşağıdakilerden hangisidir?",
     "options": [
         "A) Ömer Naci",
         "B) Mehmet Tevfik Bilge",
@@ -61,7 +61,7 @@ window.tarih_17_sorulari = [
     "explanation": "Matematik öğretmeni Yüzbaşı Mustafa Efendi 'Kemal' adını vermiştir."
 },
 {
-    "question": "Soru 6: Matematik öğretmeni Yüzbaşı Mustafa Efendi'nin Mustafa'ya \"Kemal\" adını vermesinde aşağıdakilerden hangisi etkili olmuştur?",
+    "question": "Matematik öğretmeni Yüzbaşı Mustafa Efendi'nin Mustafa'ya \"Kemal\" adını vermesinde aşağıdakilerden hangisi etkili olmuştur?",
     "options": [
         "A) Askerî başarısı",
         "B) Bilgi ve erdem bakımından olgunluğu",
@@ -73,7 +73,7 @@ window.tarih_17_sorulari = [
     "explanation": "Kemal, bilgi ve erdem bakımından olgunluk anlamına gelir."
 },
 {
-    "question": "Soru 7: Mustafa Kemal'in tarih ve edebiyata olan ilgisinin belirgin biçimde gelişmesinde etkili olan okul aşağıdakilerden hangisidir?",
+    "question": "Mustafa Kemal'in tarih ve edebiyata olan ilgisinin belirgin biçimde gelişmesinde etkili olan okul aşağıdakilerden hangisidir?",
     "options": [
         "A) Selanik Mahalle Mektebi",
         "B) Selanik Mülkiye Rüştiyesi",
@@ -85,43 +85,43 @@ window.tarih_17_sorulari = [
     "explanation": "Manastır Askerî İdadisi'nde tarih ve edebiyata ağırlık vermiştir."
 },
 {
-    "question": "Soru 8: Mustafa Kemal'in tarih bilincinin gelişmesinde etkili olan öğretmeni aşağıdakilerden hangisidir?",
+    "question": "Mustafa Kemal'in tarih bilincinin gelişmesinde etkili olan öğretmeni aşağıdakilerden hangisidir?",
     "options": [
         "A) Yüzbaşı Mustafa Efendi",
         "B) Ömer Naci",
-        "C) Mehmet Tevfik Bilge",
+        "C) Mustafa Necati",
         "D) Şemsi Efendi",
-        "E) Mustafa Necati"
+        "E) Mehmet Tevfik Bilge"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 4,
     "explanation": "Tarih öğretmeni Mehmet Tevfik Bilge tarih bilincini geliştirmiştir."
 },
 {
-    "question": "Soru 9: Mustafa Kemal'in \"Ona minnet borcum var, bana yeni ufuklar açtı.\" sözleriyle andığı öğretmeni aşağıdakilerden hangisidir?",
-    "options": [
-        "A) Yüzbaşı Mustafa Efendi",
-        "B) Mehmet Tevfik Bilge",
-        "C) Ömer Naci",
-        "D) Şemsi Efendi",
-        "E) Ali Rıza Efendi"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Bu söz Mehmet Tevfik Bilge içindir."
-},
-{
-    "question": "Soru 10: Mustafa Kemal'in edebiyat ve şiire ilgi duymasını sağlayan kişi aşağıdakilerden hangisidir?",
+    "question": "Mustafa Kemal'in \"Ona minnet borcum var, bana yeni ufuklar açtı.\" sözleriyle andığı öğretmeni aşağıdakilerden hangisidir?",
     "options": [
         "A) Mehmet Tevfik Bilge",
         "B) Yüzbaşı Mustafa Efendi",
         "C) Ömer Naci",
         "D) Şemsi Efendi",
+        "E) Ali Rıza Efendi"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Bu söz Mehmet Tevfik Bilge içindir."
+},
+{
+    "question": "Mustafa Kemal'in edebiyat ve şiire ilgi duymasını sağlayan kişi aşağıdakilerden hangisidir?",
+    "options": [
+        "A) Ömer Naci",
+        "B) Yüzbaşı Mustafa Efendi",
+        "C) Mehmet Tevfik Bilge",
+        "D) Şemsi Efendi",
         "E) İsmet İnönü"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 0,
     "explanation": "Edebiyat ve şiire ilgiyi Ömer Naci sağlamıştır."
 },
 {
-    "question": "Soru 11: Aşağıdakilerden hangisi Mustafa Kemal'in eğitim aldığı okulların doğru kronolojik sıralamasını göstermektedir?",
+    "question": "Aşağıdakilerden hangisi Mustafa Kemal'in eğitim aldığı okulların doğru kronolojik sıralamasını göstermektedir?",
     "options": [
         "A) Şemsi Efendi → Mahalle Mektebi → Askerî Rüştiye → Manastır",
         "B) Mahalle Mektebi → Şemsi Efendi → Mülkiye Rüştiyesi → Askerî Rüştiye → Manastır",
@@ -133,19 +133,7 @@ window.tarih_17_sorulari = [
     "explanation": "Mahalle Mektebi, Şemsi Efendi, Mülkiye Rüştiyesi, Askerî Rüştiye, Manastır sırası doğrudur."
 },
 {
-    "question": "Soru 12: Mustafa Kemal'in aşağıdaki eğitim kurumlarından hangisinden Teğmen rütbesiyle mezun olduğu belirtilmiştir?",
-    "options": [
-        "A) Manastır Askerî İdadisi",
-        "B) İstanbul Harp Okulu",
-        "C) İstanbul Harp Akademisi",
-        "D) Selanik Askerî Rüştiyesi",
-        "E) Selanik Mülkiye Rüştiyesi"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "İstanbul Harp Okulu'ndan teğmen olarak mezun olmuştur."
-},
-{
-    "question": "Soru 13: Mustafa Kemal'in Yüzbaşı rütbesiyle mezun olduğu eğitim kurumu aşağıdakilerden hangisidir?",
+    "question": "Mustafa Kemal'in aşağıdaki eğitim kurumlarından hangisinden Teğmen rütbesiyle mezun olduğu belirtilmiştir?",
     "options": [
         "A) İstanbul Harp Okulu",
         "B) Manastır Askerî İdadisi",
@@ -153,23 +141,35 @@ window.tarih_17_sorulari = [
         "D) Selanik Askerî Rüştiyesi",
         "E) Selanik Mülkiye Rüştiyesi"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 0,
+    "explanation": "İstanbul Harp Okulu'ndan teğmen olarak mezun olmuştur."
+},
+{
+    "question": "Mustafa Kemal'in Yüzbaşı rütbesiyle mezun olduğu eğitim kurumu aşağıdakilerden hangisidir?",
+    "options": [
+        "A) İstanbul Harp Okulu",
+        "B) Manastır Askerî İdadisi",
+        "C) Selanik Mülkiye Rüştiyesi",
+        "D) Selanik Askerî Rüştiyesi",
+        "E) İstanbul Harp Akademisi"
+    ],
+    "correctAnswerIndex": 4,
     "explanation": "Harp Akademisi'nden yüzbaşı rütbesiyle mezun olmuştur."
 },
 {
-    "question": "Soru 14: Mustafa Kemal'in İstanbul Harp Akademisinden mezun olduktan sonraki ilk görev yeri aşağıdakilerden hangisidir?",
+    "question": "Mustafa Kemal'in İstanbul Harp Akademisinden mezun olduktan sonraki ilk görev yeri aşağıdakilerden hangisidir?",
     "options": [
-        "A) 3. Ordu – Selanik",
-        "B) 5. Ordu – Şam",
+        "A) 5. Ordu – Şam",
+        "B) 3. Ordu – Selanik",
         "C) 7. Ordu – Halep",
         "D) Yıldırım Orduları – Filistin",
         "E) 19. Tümen – Çanakkale"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "İlk görev yeri 5. Ordu (Şam)'dır."
 },
 {
-    "question": "Soru 15: Mustafa Kemal'in Vatan ve Hürriyet Cemiyetini kurduğu yer ve yıl aşağıdakilerden hangisinde doğru verilmiştir?",
+    "question": "Mustafa Kemal'in Vatan ve Hürriyet Cemiyetini kurduğu yer ve yıl aşağıdakilerden hangisinde doğru verilmiştir?",
     "options": [
         "A) Selanik – 1909",
         "B) Şam – 1905",
@@ -181,7 +181,7 @@ window.tarih_17_sorulari = [
     "explanation": "1905'te Şam'da Vatan ve Hürriyet Cemiyeti'ni kurmuştur."
 },
 {
-    "question": "Soru 16: Mustafa Kemal'in 1905 yılında kurmay yüzbaşı olarak atandığı görev yeri aşağıdakilerden hangisidir?",
+    "question": "Mustafa Kemal'in 1905 yılında kurmay yüzbaşı olarak atandığı görev yeri aşağıdakilerden hangisidir?",
     "options": [
         "A) 3. Ordu – Selanik",
         "B) 5. Ordu – Şam",
@@ -193,7 +193,7 @@ window.tarih_17_sorulari = [
     "explanation": "1905'te Şam 5. Ordu'ya kurmay yüzbaşı olarak atanmıştır."
 },
 {
-    "question": "Soru 17: Mustafa Kemal'in tarih sahnesine ilk çıkışı olarak kabul edilen gelişme aşağıdakilerden hangisidir?",
+    "question": "Mustafa Kemal'in tarih sahnesine ilk çıkışı olarak kabul edilen gelişme aşağıdakilerden hangisidir?",
     "options": [
         "A) Trablusgarp Savaşı'na katılması",
         "B) Vatan ve Hürriyet Cemiyetini kurması",
@@ -205,7 +205,7 @@ window.tarih_17_sorulari = [
     "explanation": "31 Mart Vakası'nın bastırılması tarih sahnesine ilk çıkışı sayılır."
 },
 {
-    "question": "Soru 18: Mustafa Kemal'in 31 Mart Vakası'nın bastırılmasında görev alması aşağıdaki askerî oluşumlardan hangisiyle ilişkilidir?",
+    "question": "Mustafa Kemal'in 31 Mart Vakası'nın bastırılmasında görev alması aşağıdaki askerî oluşumlardan hangisiyle ilişkilidir?",
     "options": [
         "A) Yıldırım Orduları",
         "B) Hareket Ordusu",
@@ -217,7 +217,7 @@ window.tarih_17_sorulari = [
     "explanation": "Hareket Ordusu ile Selanik'ten İstanbul'a gelmiştir."
 },
 {
-    "question": "Soru 19: Mustafa Kemal'in 1909 yılında Selanik'ten İstanbul'a gelerek 31 Mart Vakası'nın bastırılmasında görev aldığı oluşum aşağıdakilerden hangisidir?",
+    "question": "Mustafa Kemal'in 1909 yılında Selanik'ten İstanbul'a gelerek 31 Mart Vakası'nın bastırılmasında görev aldığı oluşum aşağıdakilerden hangisidir?",
     "options": [
         "A) Müdafaa-i Hukuk Cemiyeti",
         "B) Vatan ve Hürriyet Cemiyeti",
@@ -229,19 +229,19 @@ window.tarih_17_sorulari = [
     "explanation": "Oluşum Hareket Ordusu'dur."
 },
 {
-    "question": "Soru 20: Mustafa Kemal'in 1910 yılında katıldığı Picardi Manevraları aşağıdaki ülkelerden hangisinde gerçekleştirilmiştir?",
+    "question": "Mustafa Kemal'in 1910 yılında katıldığı Picardi Manevraları aşağıdaki ülkelerden hangisinde gerçekleştirilmiştir?",
     "options": [
         "A) Almanya",
         "B) İtalya",
-        "C) Fransa",
-        "D) İngiltere",
+        "C) İngiltere",
+        "D) Fransa",
         "E) Avusturya"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Picardi Manevraları Fransa'dadır."
 },
 {
-    "question": "Soru 21: Mustafa Kemal'in ilk defa fiilen katıldığı savaş aşağıdakilerden hangisidir?",
+    "question": "Mustafa Kemal'in ilk defa fiilen katıldığı savaş aşağıdakilerden hangisidir?",
     "options": [
         "A) Balkan Savaşları",
         "B) I. Dünya Savaşı",
@@ -253,7 +253,7 @@ window.tarih_17_sorulari = [
     "explanation": "İlk fiilî savaş Trablusgarp'tır (1911)."
 },
 {
-    "question": "Soru 22: Mustafa Kemal'in Trablusgarp Savaşı'na katılırken kullandığı isim aşağıdakilerden hangisidir?",
+    "question": "Mustafa Kemal'in Trablusgarp Savaşı'na katılırken kullandığı isim aşağıdakilerden hangisidir?",
     "options": [
         "A) Mustafa Kemal Bey",
         "B) Mustafa Şerif Bey",
@@ -265,7 +265,7 @@ window.tarih_17_sorulari = [
     "explanation": "Gazeteci Mustafa Şerif Bey adıyla gitmiştir."
 },
 {
-    "question": "Soru 23: Mustafa Kemal'in Trablusgarp Savaşı sırasında üstlendiği görevlerden biri aşağıdakilerden hangisidir?",
+    "question": "Mustafa Kemal'in Trablusgarp Savaşı sırasında üstlendiği görevlerden biri aşağıdakilerden hangisidir?",
     "options": [
         "A) Derne Komutanlığı",
         "B) 7. Ordu Komutanlığı",
@@ -277,7 +277,7 @@ window.tarih_17_sorulari = [
     "explanation": "1912'de Derne Komutanlığı'na getirilmiştir."
 },
 {
-    "question": "Soru 24: Mustafa Kemal'in askerî hayatındaki gelişmeler dikkate alındığında aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+    "question": "Mustafa Kemal'in askerî hayatındaki gelişmeler dikkate alındığında aşağıdaki eşleştirmelerden hangisi yanlıştır?",
     "options": [
         "A) 1905 – Şam – Vatan ve Hürriyet Cemiyeti",
         "B) 1909 – Selanik – Hareket Ordusu",
@@ -289,19 +289,19 @@ window.tarih_17_sorulari = [
     "explanation": "Derne 1912, Sofya 1913'tür; 1913-Sofya-Derne yanlıştır."
 },
 {
-    "question": "Soru 25: Mustafa Kemal'in I. Dünya Savaşı öncesindeki son görevi aşağıdakilerden hangisidir?",
+    "question": "Mustafa Kemal'in I. Dünya Savaşı öncesindeki son görevi aşağıdakilerden hangisidir?",
     "options": [
         "A) Derne Komutanlığı",
-        "B) Sofya Ateşemiliterliği",
+        "B) 19. Tümen Komutanlığı",
         "C) 7. Ordu Komutanlığı",
-        "D) 19. Tümen Komutanlığı",
+        "D) Sofya Ateşemiliterliği",
         "E) 5. Ordu Kurmay Başkanlığı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "I. Dünya Savaşı öncesi son görev Sofya Ateşemiliterliği'dir."
 },
 {
-    "question": "Soru 26: Mustafa Kemal'in Sofya Ateşemiliterliği görevine atanması hangi yılda gerçekleşmiştir?",
+    "question": "Mustafa Kemal'in Sofya Ateşemiliterliği görevine atanması hangi yılda gerçekleşmiştir?",
     "options": [
         "A) 1909",
         "B) 1910",
@@ -313,7 +313,7 @@ window.tarih_17_sorulari = [
     "explanation": "Sofya görevi 1913'tedir."
 },
 {
-    "question": "Soru 27: Mustafa Kemal'in Çanakkale Savaşı sırasında görev yaptığı birlik aşağıdakilerden hangisidir?",
+    "question": "Mustafa Kemal'in Çanakkale Savaşı sırasında görev yaptığı birlik aşağıdakilerden hangisidir?",
     "options": [
         "A) 5. Ordu",
         "B) 7. Ordu",
@@ -325,7 +325,7 @@ window.tarih_17_sorulari = [
     "explanation": "Çanakkale'de 19. Tümen Komutanı'dır."
 },
 {
-    "question": "Soru 28: Mustafa Kemal, Nisan 1915'te Çanakkale Cephesi'ne bağlı olarak aşağıdaki yerlerden hangisine gönderilmiştir?",
+    "question": "Mustafa Kemal, Nisan 1915'te Çanakkale Cephesi'ne bağlı olarak aşağıdaki yerlerden hangisine gönderilmiştir?",
     "options": [
         "A) Gelibolu",
         "B) Bigalı",
@@ -337,7 +337,7 @@ window.tarih_17_sorulari = [
     "explanation": "Nisan 1915'te Bigalı'ya gönderilmiştir."
 },
 {
-    "question": "Soru 29: Mustafa Kemal'in Çanakkale Savaşı'ndaki başarıları sonucunda elde ettiği askerî rütbe aşağıdakilerden hangisidir?",
+    "question": "Mustafa Kemal'in Çanakkale Savaşı'ndaki başarıları sonucunda elde ettiği askerî rütbe aşağıdakilerden hangisidir?",
     "options": [
         "A) Yüzbaşı",
         "B) Binbaşı",
@@ -349,7 +349,7 @@ window.tarih_17_sorulari = [
     "explanation": "Çanakkale başarılarıyla albay olmuştur. Tuğgeneral 1 Nisan 1916'dır."
 },
 {
-    "question": "Soru 30: Mustafa Kemal'e Çanakkale'deki başarıları nedeniyle verilen unvan aşağıdakilerden hangisidir?",
+    "question": "Mustafa Kemal'e Çanakkale'deki başarıları nedeniyle verilen unvan aşağıdakilerden hangisidir?",
     "options": [
         "A) Gazi",
         "B) Başkomutan",
@@ -361,7 +361,7 @@ window.tarih_17_sorulari = [
     "explanation": "Unvan Anafartalar Kahramanı'dır."
 },
 {
-    "question": "Soru 31: Mustafa Kemal'in 1 Nisan 1916'da terfi ettiği rütbe aşağıdakilerden hangisidir?",
+    "question": "Mustafa Kemal'in 1 Nisan 1916'da terfi ettiği rütbe aşağıdakilerden hangisidir?",
     "options": [
         "A) Binbaşı",
         "B) Yarbay",
@@ -373,7 +373,7 @@ window.tarih_17_sorulari = [
     "explanation": "1 Nisan 1916'da tuğgeneral olmuştur."
 },
 {
-    "question": "Soru 32: Aşağıdakilerden hangisi Mustafa Kemal'in askerlik hayatındaki gelişmelerden biri değildir?",
+    "question": "Aşağıdakilerden hangisi Mustafa Kemal'in askerlik hayatındaki gelişmelerden biri değildir?",
     "options": [
         "A) Trablusgarp'ta görev yapması",
         "B) Picardi Manevraları'na katılması",
@@ -385,31 +385,31 @@ window.tarih_17_sorulari = [
     "explanation": "Hindistan'da askerî görev notlarda yoktur."
 },
 {
-    "question": "Soru 33: Mustafa Kemal'in 1917 yılında atandığı 7. Ordu, aşağıdaki askerî oluşumlardan hangisine bağlıydı?",
+    "question": "Mustafa Kemal'in 1917 yılında atandığı 7. Ordu, aşağıdaki askerî oluşumlardan hangisine bağlıydı?",
     "options": [
-        "A) Hareket Ordusu",
-        "B) Yıldırım Orduları Grup Komutanlığı",
+        "A) Yıldırım Orduları Grup Komutanlığı",
+        "B) Hareket Ordusu",
         "C) 3. Ordu",
         "D) 5. Ordu",
         "E) Kafkas İslam Ordusu"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "7. Ordu Yıldırım Orduları Grup Komutanlığı'na bağlıdır."
 },
 {
-    "question": "Soru 34: Mustafa Kemal'in 1917 yılında gerçekleştirdiği gelişmelerden biri aşağıdakilerden hangisidir?",
+    "question": "Mustafa Kemal'in 1917 yılında gerçekleştirdiği gelişmelerden biri aşağıdakilerden hangisidir?",
     "options": [
         "A) Samsun'a çıkması",
         "B) Erzurum'da askerlikten istifa etmesi",
-        "C) Veliaht Vahdettin ile Almanya gezisine katılması",
-        "D) Vatan ve Hürriyet Cemiyetini kurması",
+        "C) Vatan ve Hürriyet Cemiyetini kurması",
+        "D) Veliaht Vahdettin ile Almanya gezisine katılması",
         "E) Trablusgarp'a gitmesi"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "1917'de Veliaht Vahdettin ile Almanya gezisine katılmıştır."
 },
 {
-    "question": "Soru 35: Mustafa Kemal'in Veliaht Vahdettin ile Almanya gezisine katılması hangi dönemde gerçekleşmiştir?",
+    "question": "Mustafa Kemal'in Veliaht Vahdettin ile Almanya gezisine katılması hangi dönemde gerçekleşmiştir?",
     "options": [
         "A) Trablusgarp Savaşı sırasında",
         "B) Balkan Savaşları sırasında",
@@ -421,31 +421,31 @@ window.tarih_17_sorulari = [
     "explanation": "Gezi 1917'de, I. Dünya Savaşı sırasındadır."
 },
 {
-    "question": "Soru 36: Mustafa Kemal'in 1918 yılında mücadele ettiği cephe aşağıdakilerden hangisidir?",
+    "question": "Mustafa Kemal'in 1918 yılında mücadele ettiği cephe aşağıdakilerden hangisidir?",
     "options": [
         "A) Kafkas Cephesi",
         "B) Irak Cephesi",
-        "C) Suriye-Filistin Cephesi",
-        "D) Çanakkale Cephesi",
+        "C) Çanakkale Cephesi",
+        "D) Suriye-Filistin Cephesi",
         "E) Hicaz-Yemen Cephesi"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "1918'de Suriye-Filistin Cephesi'ndedir."
 },
 {
-    "question": "Soru 37: Mondros Mütarekesi sonrasında Mustafa Kemal'in üstlendiği görev aşağıdakilerden hangisidir?",
+    "question": "Mondros Mütarekesi sonrasında Mustafa Kemal'in üstlendiği görev aşağıdakilerden hangisidir?",
     "options": [
         "A) 19. Tümen Komutanlığı",
         "B) 7. Ordu Komutanlığı",
-        "C) Yıldırım Orduları Grup Komutanlığı",
-        "D) 3. Ordu Kurmay Başkanlığı",
+        "C) 3. Ordu Kurmay Başkanlığı",
+        "D) Yıldırım Orduları Grup Komutanlığı",
         "E) 5. Ordu Müfettişliği"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Mondros sonrası Yıldırım Orduları Grup Komutanı olmuştur."
 },
 {
-    "question": "Soru 38: Mustafa Kemal'in 1919 yılında Samsun'a gönderilmesinde kullandığı resmî görev aşağıdakilerden hangisidir?",
+    "question": "Mustafa Kemal'in 1919 yılında Samsun'a gönderilmesinde kullandığı resmî görev aşağıdakilerden hangisidir?",
     "options": [
         "A) Yıldırım Orduları Grup Komutanlığı",
         "B) 9. Ordu Müfettişliği",
@@ -457,7 +457,7 @@ window.tarih_17_sorulari = [
     "explanation": "Samsun'a 9. Ordu Müfettişi olarak gönderilmiştir."
 },
 {
-    "question": "Soru 39: Mustafa Kemal'in askerlik hayatında askerlikten istifa ettiği yer aşağıdakilerden hangisidir?",
+    "question": "Mustafa Kemal'in askerlik hayatında askerlikten istifa ettiği yer aşağıdakilerden hangisidir?",
     "options": [
         "A) Samsun",
         "B) Havza",
@@ -469,19 +469,19 @@ window.tarih_17_sorulari = [
     "explanation": "Askerlikten istifa Erzurum'dadır."
 },
 {
-    "question": "Soru 40: Mustafa Kemal'in 1919 yılına ilişkin aşağıdaki gelişmelerden hangisi doğru sırayla verilmiştir?",
+    "question": "Mustafa Kemal'in 1919 yılına ilişkin aşağıdaki gelişmelerden hangisi doğru sırayla verilmiştir?",
     "options": [
         "A) Erzurum → Samsun → askerlikten istifa",
-        "B) Samsun → Erzurum → askerlikten istifa",
+        "B) Askerlikten istifa → Samsun → Erzurum",
         "C) Samsun → askerlikten istifa → Erzurum",
         "D) Erzurum → askerlikten istifa → Samsun",
-        "E) Askerlikten istifa → Samsun → Erzurum"
+        "E) Samsun → Erzurum → askerlikten istifa"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 4,
     "explanation": "Önce Samsun, sonra Erzurum, orada istifa."
 },
 {
-    "question": "Soru 41: Mustafa Kemal Atatürk aşağıdaki yıllardan hangisinde doğmuştur?",
+    "question": "Mustafa Kemal Atatürk aşağıdaki yıllardan hangisinde doğmuştur?",
     "options": [
         "A) 1876",
         "B) 1879",
@@ -493,19 +493,19 @@ window.tarih_17_sorulari = [
     "explanation": "Doğum yılı 1881'dir."
 },
 {
-    "question": "Soru 42: Mustafa Kemal Atatürk'ün doğduğu şehir aşağıdakilerden hangisidir?",
+    "question": "Mustafa Kemal Atatürk'ün doğduğu şehir aşağıdakilerden hangisidir?",
     "options": [
         "A) Manastır",
         "B) İstanbul",
-        "C) Selanik",
+        "C) Üsküp",
         "D) Sofya",
-        "E) Üsküp"
+        "E) Selanik"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 4,
     "explanation": "Doğduğu şehir Selanik'tir."
 },
 {
-    "question": "Soru 43: Mustafa Kemal Atatürk aşağıdaki tarihlerden hangisinde vefat etmiştir?",
+    "question": "Mustafa Kemal Atatürk aşağıdaki tarihlerden hangisinde vefat etmiştir?",
     "options": [
         "A) 29 Ekim 1933",
         "B) 10 Kasım 1938",
@@ -517,7 +517,7 @@ window.tarih_17_sorulari = [
     "explanation": "Vefat 10 Kasım 1938'dir."
 },
 {
-    "question": "Soru 44: Atatürk'ün vefat ettiği yer aşağıdakilerden hangisidir?",
+    "question": "Atatürk'ün vefat ettiği yer aşağıdakilerden hangisidir?",
     "options": [
         "A) Çankaya Köşkü",
         "B) Dolmabahçe Sarayı",
@@ -529,7 +529,7 @@ window.tarih_17_sorulari = [
     "explanation": "Dolmabahçe Sarayı, İstanbul."
 },
 {
-    "question": "Soru 45: Atatürk'ün vefat ettiği sırada Türkiye Büyük Millet Meclisi Başkanı aşağıdakilerden hangisidir?",
+    "question": "Atatürk'ün vefat ettiği sırada Türkiye Büyük Millet Meclisi Başkanı aşağıdakilerden hangisidir?",
     "options": [
         "A) İsmet İnönü",
         "B) Celâl Bayar",
@@ -541,7 +541,7 @@ window.tarih_17_sorulari = [
     "explanation": "Meclis Başkanı Abdülhalik Renda'dır."
 },
 {
-    "question": "Soru 46: Atatürk'ün vefat ettiği sırada Türkiye Cumhuriyeti Başbakanı aşağıdakilerden hangisidir?",
+    "question": "Atatürk'ün vefat ettiği sırada Türkiye Cumhuriyeti Başbakanı aşağıdakilerden hangisidir?",
     "options": [
         "A) İsmet İnönü",
         "B) Celâl Bayar",
@@ -553,7 +553,7 @@ window.tarih_17_sorulari = [
     "explanation": "Başbakan Celâl Bayar'dır."
 },
 {
-    "question": "Soru 47: Aşağıdaki gelişmelerden hangisi diğerlerinden daha önce gerçekleşmiştir?",
+    "question": "Aşağıdaki gelişmelerden hangisi diğerlerinden daha önce gerçekleşmiştir?",
     "options": [
         "A) Sofya Ateşemiliterliği",
         "B) Trablusgarp Savaşı'na katılması",
@@ -565,7 +565,7 @@ window.tarih_17_sorulari = [
     "explanation": "Picardi 1910; Trablusgarp 1911; Sofya 1913; Çanakkale 1915; 7. Ordu 1917."
 },
 {
-    "question": "Soru 48: Aşağıdaki gelişmelerden hangisi 1911–1913 yılları arasındaki askerî hayatıyla ilgilidir?",
+    "question": "Aşağıdaki gelişmelerden hangisi 1911–1913 yılları arasındaki askerî hayatıyla ilgilidir?",
     "options": [
         "A) Vatan ve Hürriyet Cemiyetinin kurulması",
         "B) 31 Mart Vakası'nın bastırılması",
@@ -577,7 +577,7 @@ window.tarih_17_sorulari = [
     "explanation": "1911 Trablusgarp, 1912 Derne, 1913 Sofya bu aralıktadır. Şık C Trablusgarp ve Derne'dir."
 },
 {
-    "question": "Soru 49: Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+    "question": "Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
     "options": [
         "A) 1905 – Şam – Vatan ve Hürriyet Cemiyeti",
         "B) 1909 – Selanik – 31 Mart Vakası",
@@ -589,7 +589,7 @@ window.tarih_17_sorulari = [
     "explanation": "Sofya ateşemiliterliği 1913'tür; 1919 Samsun/Erzurum'dur."
 },
 {
-    "question": "Soru 50: Mustafa Kemal'in askerî hayatıyla ilgili;\n\nI. Şam'da Vatan ve Hürriyet Cemiyetini kurmuştur.\nII. Trablusgarp Savaşı'na gazeteci kimliğiyle katılmıştır.\nIII. Çanakkale'deki başarıları nedeniyle Albay olmuştur.\nIV. Mondros Mütarekesi'nden sonra Yıldırım Orduları Grup Komutanlığı görevini üstlenmiştir.\n\nbilgilerinden hangileri doğrudur?",
+    "question": "Mustafa Kemal'in askerî hayatıyla ilgili;\n\nI. Şam'da Vatan ve Hürriyet Cemiyetini kurmuştur.\nII. Trablusgarp Savaşı'na gazeteci kimliğiyle katılmıştır.\nIII. Çanakkale'deki başarıları nedeniyle Albay olmuştur.\nIV. Mondros Mütarekesi'nden sonra Yıldırım Orduları Grup Komutanlığı görevini üstlenmiştir.\n\nbilgilerinden hangileri doğrudur?",
     "options": [
         "A) I ve II",
         "B) I ve III",
@@ -601,31 +601,31 @@ window.tarih_17_sorulari = [
     "explanation": "Dört bilgi de notlara uygundur."
 },
 {
-    "question": "Soru 51: Mustafa Kemal'in eğitim hayatı ile ilgili aşağıdaki eşleştirmelerden hangisi doğrudur?",
+    "question": "Mustafa Kemal'in eğitim hayatı ile ilgili aşağıdaki eşleştirmelerden hangisi doğrudur?",
     "options": [
         "A) Yüzbaşı Mustafa Efendi – Tarih bilinci",
         "B) Ömer Naci – Matematik eğitimi",
-        "C) Mehmet Tevfik Bilge – Tarih bilinci",
-        "D) Şemsi Efendi – Askerî rütbe",
+        "C) Şemsi Efendi – Askerî rütbe",
+        "D) Mehmet Tevfik Bilge – Tarih bilinci",
         "E) Tevfik Bilge – \"Kemal\" adının verilmesi"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Mehmet Tevfik Bilge tarih bilinciyle eşleşir. Kemal adını Yüzbaşı Mustafa Efendi vermiştir."
 },
 {
-    "question": "Soru 52: Mustafa Kemal'in eğitim hayatı ve askerî hayatı birlikte değerlendirildiğinde aşağıdakilerden hangisine ulaşılabilir?",
+    "question": "Mustafa Kemal'in eğitim hayatı ve askerî hayatı birlikte değerlendirildiğinde aşağıdakilerden hangisine ulaşılabilir?",
     "options": [
-        "A) Eğitim hayatının tamamı askerî okullarda geçmiştir.",
+        "A) Farklı öğretmen ve okulların etkisiyle askerî eğitimin yanında tarih ve edebiyata da ilgi geliştirmiştir.",
         "B) Tarih ve edebiyata ilgisi yalnızca askerlik hayatından sonra ortaya çıkmıştır.",
-        "C) Farklı öğretmen ve okulların etkisiyle askerî eğitimin yanında tarih ve edebiyata da ilgi geliştirmiştir.",
+        "C) Eğitim hayatının tamamı askerî okullarda geçmiştir.",
         "D) Askerî eğitime İstanbul'da başlamıştır.",
         "E) Öğrenim hayatını yalnızca Selanik'te sürdürmüştür."
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 0,
     "explanation": "Mahalle/Şemsi sivil; Manastır'da tarih-edebiyat; askerî rüştiye Selanik'tedir."
 },
 {
-    "question": "Soru 53: Aşağıdakilerden hangisi Mustafa Kemal'in 1915–1918 yılları arasındaki askerî hayatıyla ilişkilendirilemez?",
+    "question": "Aşağıdakilerden hangisi Mustafa Kemal'in 1915–1918 yılları arasındaki askerî hayatıyla ilişkilendirilemez?",
     "options": [
         "A) 19. Tümen Komutanlığı",
         "B) Çanakkale Savaşı",
@@ -637,7 +637,7 @@ window.tarih_17_sorulari = [
     "explanation": "Vatan ve Hürriyet 1905 Şam'dadır."
 },
 {
-    "question": "Soru 54: Mustafa Kemal'in askerî hayatındaki görev yerleri dikkate alındığında aşağıdaki sıralamalardan hangisi doğrudur?",
+    "question": "Mustafa Kemal'in askerî hayatındaki görev yerleri dikkate alındığında aşağıdaki sıralamalardan hangisi doğrudur?",
     "options": [
         "A) Şam → Selanik → Trablusgarp → Sofya → Çanakkale",
         "B) Selanik → Şam → Sofya → Trablusgarp → Çanakkale",
@@ -649,7 +649,7 @@ window.tarih_17_sorulari = [
     "explanation": "1905 Şam, 1909 Selanik, 1911 Trablusgarp, 1913 Sofya, 1915 Çanakkale."
 },
 {
-    "question": "Soru 55: Mustafa Kemal'in hayatıyla ilgili aşağıdaki gelişmelerden hangisi diğerlerinden sonra gerçekleşmiştir?",
+    "question": "Mustafa Kemal'in hayatıyla ilgili aşağıdaki gelişmelerden hangisi diğerlerinden sonra gerçekleşmiştir?",
     "options": [
         "A) Vatan ve Hürriyet Cemiyetinin kurulması",
         "B) 31 Mart Vakası'nın bastırılması",
@@ -661,7 +661,7 @@ window.tarih_17_sorulari = [
     "explanation": "İstifa 1919; diğerleri 1905–1913'tür."
 },
 {
-    "question": "Soru 56: Aşağıdakilerden hangisinde Mustafa Kemal'in yaşamındaki gelişmeler kronolojik olarak doğru verilmiştir?",
+    "question": "Aşağıdakilerden hangisinde Mustafa Kemal'in yaşamındaki gelişmeler kronolojik olarak doğru verilmiştir?",
     "options": [
         "A) Şam → 31 Mart → Trablusgarp → Sofya → Çanakkale → Samsun",
         "B) Trablusgarp → Şam → Sofya → Çanakkale → Samsun",
@@ -673,7 +673,7 @@ window.tarih_17_sorulari = [
     "explanation": "1905 Şam, 1909 31 Mart, 1911 Trablusgarp, 1913 Sofya, 1915 Çanakkale, 1919 Samsun."
 },
 {
-    "question": "Soru 57: Aşağıdakilerden hangisi Mustafa Kemal'in eğitim hayatından askerî hayatına geçişini doğru biçimde göstermektedir?",
+    "question": "Aşağıdakilerden hangisi Mustafa Kemal'in eğitim hayatından askerî hayatına geçişini doğru biçimde göstermektedir?",
     "options": [
         "A) Manastır Askerî İdadisi → İstanbul Harp Okulu → İstanbul Harp Akademisi → 5. Ordu",
         "B) Selanik Askerî Rüştiyesi → Manastır Askerî İdadisi → Şam → İstanbul Harp Okulu",
@@ -685,7 +685,7 @@ window.tarih_17_sorulari = [
     "explanation": "İdadi, Harp Okulu, Akademi, sonra Şam 5. Ordu."
 },
 {
-    "question": "Soru 58: Mustafa Kemal'in hayatındaki;\n\nI. Şam'da cemiyet kurması,\nII. 31 Mart Vakası'nın bastırılmasında görev alması,\nIII. Trablusgarp'a gitmesi,\nIV. Çanakkale'de başarı göstermesi\n\ngelişmeleri aşağıdaki seçeneklerden hangisinde kronolojik olarak doğru sıralanmıştır?",
+    "question": "Mustafa Kemal'in hayatındaki;\n\nI. Şam'da cemiyet kurması,\nII. 31 Mart Vakası'nın bastırılmasında görev alması,\nIII. Trablusgarp'a gitmesi,\nIV. Çanakkale'de başarı göstermesi\n\ngelişmeleri aşağıdaki seçeneklerden hangisinde kronolojik olarak doğru sıralanmıştır?",
     "options": [
         "A) I – II – III – IV",
         "B) II – I – III – IV",
@@ -697,7 +697,7 @@ window.tarih_17_sorulari = [
     "explanation": "1905 cemiyet, 1909 31 Mart, 1911 Trablusgarp, 1915 Çanakkale → I-II-III-IV."
 },
 {
-    "question": "Soru 59: Mustafa Kemal'in askerlik hayatındaki bazı gelişmeler şöyledir:\n\n• 1905: Şam\n• 1909: Selanik\n• 1911: Trablusgarp\n• 1913: Sofya\n• 1915: Çanakkale\n\nBu bilgilerden hareketle aşağıdakilerden hangisine ulaşılamaz?",
+    "question": "Mustafa Kemal'in askerlik hayatındaki bazı gelişmeler şöyledir:\n\n• 1905: Şam\n• 1909: Selanik\n• 1911: Trablusgarp\n• 1913: Sofya\n• 1915: Çanakkale\n\nBu bilgilerden hareketle aşağıdakilerden hangisine ulaşılamaz?",
     "options": [
         "A) Farklı coğrafyalarda askerî görevler üstlenmiştir.",
         "B) I. Dünya Savaşı öncesinde Sofya'da görev yapmıştır.",
@@ -709,7 +709,7 @@ window.tarih_17_sorulari = [
     "explanation": "Çanakkale 1915, Sofya 1913; Çanakkale Sofya'dan sonradır. D ulaşılamaz."
 },
 {
-    "question": "Soru 60: Mustafa Kemal'in doğumundan vefatına kadar verilen aşağıdaki bilgilerden hangisi doğru değildir?",
+    "question": "Mustafa Kemal'in doğumundan vefatına kadar verilen aşağıdaki bilgilerden hangisi doğru değildir?",
     "options": [
         "A) 1881'de Selanik'te doğmuştur.",
         "B) Manastır Askerî İdadisinde tarih ve edebiyata ilgi göstermiştir.",

@@ -10,18 +10,18 @@ window.tarih_23_sorulari = [
     "question": "Monroe Doktrini’ne göre ABD’nin temel yaklaşımı aşağıdakilerden hangisidir?",
     "options": [
         "A) Avrupa ittifaklarına asker göndermek",
-        "B) Kendi kıtasına Avrupa saldırısı olmadığı sürece Avrupa’nın iç işlerine karışmamak",
+        "B) Japonya’ya savaş açmak",
         "C) Osmanlı topraklarını paylaşmak",
         "D) Milletler Cemiyeti’ni kurmak",
-        "E) Japonya’ya savaş açmak"
+        "E) Kendi kıtasına Avrupa saldırısı olmadığı sürece Avrupa’nın iç işlerine karışmamak"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 4,
     "explanation": "Yalnızlık politikası: ABD kıtasına saldırı yoksa Avrupa iç işlerine karışmaz."
 },
 {
     "question": "1904–1905 Rus–Japon Savaşı’nın sonucu aşağıdakilerden hangisidir?",
-    "options": ["A) Rusya kesin zafer kazandı", "B) Japonya kazandı", "C) Savaş berabere bitti", "D) Çin kazandı", "E) ABD aracılığıyla Rusya galip ilan edildi"],
-    "correctAnswerIndex": 1,
+    "options": ["A) Rusya kesin zafer kazandı", "B) Çin kazandı", "C) Savaş berabere bitti", "D) Japonya kazandı", "E) ABD aracılığıyla Rusya galip ilan edildi"],
+    "correctAnswerIndex": 3,
     "explanation": "Savaşı Japonya kazandı; Çarlık sarsıldı."
 },
 {
@@ -32,8 +32,8 @@ window.tarih_23_sorulari = [
 },
 {
     "question": "1917 Bolşevik İhtilali’nde Lenin’in kitlelere verdiği üçlü vaat hangisidir?",
-    "options": ["A) Hürriyet, eşitlik, kardeşlik", "B) Barış, ekmek ve toprak", "C) Din, dil, ırk", "D) Sanayi, tarım, ticaret", "E) Ordu, donanma, hava"],
-    "correctAnswerIndex": 1,
+    "options": ["A) Barış, ekmek ve toprak", "B) Hürriyet, eşitlik, kardeşlik", "C) Din, dil, ırk", "D) Sanayi, tarım, ticaret", "E) Ordu, donanma, hava"],
+    "correctAnswerIndex": 0,
     "explanation": "Lenin: barış, ekmek ve toprak."
 },
 {
@@ -44,8 +44,8 @@ window.tarih_23_sorulari = [
 },
 {
     "question": "1918–1921 yıllarında Rusya’da Kızıl Ordu’nun karşısında yer alan güç aşağıdakilerden hangisidir?",
-    "options": ["A) Kızıl Ordu", "B) Beyaz Ordu", "C) Yeşil Ordu", "D) Basmacılar", "E) Korbaşılar"],
-    "correctAnswerIndex": 1,
+    "options": ["A) Kızıl Ordu", "B) Basmacılar", "C) Yeşil Ordu", "D) Beyaz Ordu", "E) Korbaşılar"],
+    "correctAnswerIndex": 3,
     "explanation": "İç savaşta Beyaz Ordu–Kızıl Ordu çatışması yaklaşık üç yıl sürdü."
 },
 {
@@ -62,8 +62,8 @@ window.tarih_23_sorulari = [
 },
 {
     "question": "NEP döneminde ticari işletmelerin bırakıldığı kişilere verilen ad aşağıdakilerden hangisidir?",
-    "options": ["A) Kulak", "B) Nepmen", "C) Korbaşı", "D) Şogun", "E) Kolhoz"],
-    "correctAnswerIndex": 1,
+    "options": ["A) Nepmen", "B) Kulak", "C) Korbaşı", "D) Şogun", "E) Kolhoz"],
+    "correctAnswerIndex": 0,
     "explanation": "Ticari işletmeler nepmenlere bırakıldı."
 },
 {
@@ -87,13 +87,13 @@ window.tarih_23_sorulari = [
 {
     "question": "Rusya Müslümanları I. Kongresi’nde öne çıkan isimler aşağıdakilerin hangisinde birlikte verilmiştir?",
     "options": [
-        "A) Enver Paşa – Şeyh Şamil",
-        "B) Yusuf Akçura – İsmail Gaspıralı",
+        "A) Yusuf Akçura – İsmail Gaspıralı",
+        "B) Enver Paşa – Şeyh Şamil",
         "C) Mehmet Emin Resulzade – Picasso",
         "D) Şerif Hüseyin – İbn Suud",
         "E) Fleming – Steinbeck"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Kongrede Yusuf Akçura ve İsmail Gaspıralı öne çıkar."
 },
 {
@@ -106,12 +106,12 @@ window.tarih_23_sorulari = [
     "question": "Basmacı sözcüğünün anlamı ve hareketin başladığı kent hangi seçenekte doğru verilmiştir?",
     "options": [
         "A) Göçmen – Bakü",
-        "B) Baskın yapan, hücum eden – Hokand",
+        "B) Öğrenci – Ufa",
         "C) Çiftçi – Semerkant",
         "D) Tüccar – Buhara",
-        "E) Öğrenci – Ufa"
+        "E) Baskın yapan, hücum eden – Hokand"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 4,
     "explanation": "Basmacı: baskın yapan. Hareket Hokand’da başladı."
 },
 {
@@ -148,30 +148,30 @@ window.tarih_23_sorulari = [
     "question": "San Remo Konferansı’na göre Fransa ve İngiltere’nin Ortadoğu mandaları hangi seçenekte doğru eşleştirilmiştir?",
     "options": [
         "A) Fransa: Irak–Filistin / İngiltere: Suriye–Lübnan",
-        "B) Fransa: Suriye–Lübnan / İngiltere: Irak–Filistin–Ürdün",
+        "B) İkisi de yalnızca Filistin",
         "C) Fransa: Mısır–Sudan / İngiltere: Suriye",
         "D) Fransa: Suudi Arabistan / İngiltere: İran",
-        "E) İkisi de yalnızca Filistin"
+        "E) Fransa: Suriye–Lübnan / İngiltere: Irak–Filistin–Ürdün"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 4,
     "explanation": "Fransa Suriye–Lübnan; İngiltere Irak–Filistin–Ürdün."
 },
 {
     "question": "Şerif Hüseyin’in oğullarından Abdullah ve Faysal’ın atandığı yerler hangisidir?",
-    "options": ["A) Abdullah Irak, Faysal Ürdün", "B) Abdullah Ürdün, Faysal Irak", "C) İkisi de Hicaz", "D) Abdullah Suriye, Faysal Lübnan", "E) Abdullah Filistin, Faysal Mısır"],
-    "correctAnswerIndex": 1,
+    "options": ["A) Abdullah Ürdün, Faysal Irak", "B) Abdullah Irak, Faysal Ürdün", "C) İkisi de Hicaz", "D) Abdullah Suriye, Faysal Lübnan", "E) Abdullah Filistin, Faysal Mısır"],
+    "correctAnswerIndex": 0,
     "explanation": "Abdullah Ürdün’e, Faysal Irak’a tayin edildi."
 },
 {
     "question": "1936’da Suudi Arabistan’da petrol imtiyazı verilen şirket ve bunun sonucu aşağıdakilerden hangisidir?",
     "options": [
-        "A) BP – İngiltere etkisi azaldı",
-        "B) ARAMCO – ABD etkinliği bölgede arttı",
+        "A) ARAMCO – ABD etkinliği bölgede arttı",
+        "B) BP – İngiltere etkisi azaldı",
         "C) Shell – Japonya güçlendi",
         "D) Total – Fransa çekildi",
         "E) Gazprom – SSCB petrolü kesti"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "1932 Suudi Arabistan Krallığı; 1936 ARAMCO imtiyazı ABD etkisini artırdı."
 },
 {
@@ -182,32 +182,32 @@ window.tarih_23_sorulari = [
 },
 {
     "question": "Fransa’nın Anadolu’nun güneyinden çekilmesini sağlayan antlaşma aşağıdakilerden hangisidir?",
-    "options": ["A) Sevr", "B) Mondros", "C) Ankara Antlaşması", "D) Lozan", "E) San Remo"],
-    "correctAnswerIndex": 2,
+    "options": ["A) Sevr", "B) Mondros", "C) Lozan", "D) Ankara Antlaşması", "E) San Remo"],
+    "correctAnswerIndex": 3,
     "explanation": "Fransa Ankara Antlaşması ile güneyden çekildi. 1926 Lübnan, 1930 Suriye bağımsızlık süreçleri."
 },
 {
     "question": "Japonya’da derebeylikleri kaldırıp merkezi devlet kuran ve Meiji Restorasyonu’nu yürüten imparator kimdir?",
-    "options": ["A) Hirohito", "B) Mutsuhito", "C) Tokugawa", "D) Şogun Iwakura", "E) Mao"],
-    "correctAnswerIndex": 1,
+    "options": ["A) Hirohito", "B) Şogun Iwakura", "C) Tokugawa", "D) Mutsuhito", "E) Mao"],
+    "correctAnswerIndex": 3,
     "explanation": "1867’de tahta geçen Mutsuhito (Meiji) derebeyliği kaldırdı. Şogun ordu komutanıdır, imparator değildir."
 },
 {
     "question": "Meiji Restorasyonu’nda anayasa ve donanma için örnek alınan ülkeler hangi seçenekte doğru verilmiştir?",
     "options": [
         "A) Anayasa: ABD / Donanma: Rusya",
-        "B) Anayasa: Prusya / Donanma: İngiltere",
+        "B) Anayasa: İngiltere / Donanma: Prusya",
         "C) Anayasa: Osmanlı / Donanma: Çin",
         "D) Anayasa: Fransa / Donanma: İtalya",
-        "E) Anayasa: İngiltere / Donanma: Prusya"
+        "E) Anayasa: Prusya / Donanma: İngiltere"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 4,
     "explanation": "Prusya tipi anayasa; İngiliz donanması örnek alındı. Prusya’dan uzman getirildi."
 },
 {
     "question": "ABD’de 1920’lerde üretim ve istihdamın yükseldiği döneme verilen ad aşağıdakilerden hangisidir?",
-    "options": ["A) Kara Perşembe", "B) Kükreyen Yirmiler", "C) New Deal", "D) NEP", "E) Meiji"],
-    "correctAnswerIndex": 1,
+    "options": ["A) Kara Perşembe", "B) Meiji", "C) New Deal", "D) NEP", "E) Kükreyen Yirmiler"],
+    "correctAnswerIndex": 4,
     "explanation": "Bu yıllara Kükreyen Yirmiler denir. Kara Perşembe 1929 çöküşüdür."
 },
 {
@@ -255,37 +255,37 @@ window.tarih_23_sorulari = [
 {
     "question": "1928 Briand–Kellogg Paktı’na göre hangisi doğrudur?",
     "options": [
-        "A) Türkiye pakta dahil olmamıştır",
-        "B) Savunmaya dayanmayan savaş kanun dışı sayılmıştır; Türkiye aynı yıl katılmıştır",
+        "A) Savunmaya dayanmayan savaş kanun dışı sayılmıştır; Türkiye aynı yıl katılmıştır",
+        "B) Türkiye pakta dahil olmamıştır",
         "C) Yalnızca Almanya imzalamıştır",
         "D) Monroe Doktrini’ni iptal etmiştir",
         "E) Basmacı hareketini desteklemiştir"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Paris 1928; aynı yıl SSCB ve Türkiye dahil oldu. Saldırı savaşı yasaklandı."
 },
 {
     "question": "1937’de Guernica kasabasının bombalanmasını tablosuna aktaran kübizm öncüsü kimdir?",
-    "options": ["A) Charlie Chaplin", "B) Pablo Picasso", "C) John Steinbeck", "D) Alexander Fleming", "E) Adnan Saygun"],
-    "correctAnswerIndex": 1,
+    "options": ["A) Charlie Chaplin", "B) Alexander Fleming", "C) John Steinbeck", "D) Pablo Picasso", "E) Adnan Saygun"],
+    "correctAnswerIndex": 3,
     "explanation": "Picasso’nun Guernica tablosu 1937’dir."
 },
 {
     "question": "Penisilini bulan bilim insanı aşağıdakilerden hangisidir?",
-    "options": ["A) Louis Pasteur", "B) Alexander Fleming", "C) Marie Curie", "D) Einstein", "E) Edison"],
-    "correctAnswerIndex": 1,
+    "options": ["A) Louis Pasteur", "B) Edison", "C) Marie Curie", "D) Einstein", "E) Alexander Fleming"],
+    "correctAnswerIndex": 4,
     "explanation": "Alexander Fleming penisilini buldu. Pasteur tuzak şıktır."
 },
 {
     "question": "Gazap Üzümleri adlı eserin yazarı kimdir?",
-    "options": ["A) Picasso", "B) John Steinbeck", "C) Charlie Chaplin", "D) Marx", "E) Halide Edip"],
-    "correctAnswerIndex": 1,
+    "options": ["A) Picasso", "B) Marx", "C) Charlie Chaplin", "D) John Steinbeck", "E) Halide Edip"],
+    "correctAnswerIndex": 3,
     "explanation": "John Steinbeck — Gazap Üzümleri."
 },
 {
     "question": "Şarlo karakteriyle tanınan, Modern Zamanlar ve Diktatör filmlerini çeken sanatçı kimdir?",
-    "options": ["A) Pablo Picasso", "B) Charlie Chaplin", "C) John Steinbeck", "D) Mutsuhito", "E) Wilson"],
-    "correctAnswerIndex": 1,
+    "options": ["A) Pablo Picasso", "B) Mutsuhito", "C) John Steinbeck", "D) Charlie Chaplin", "E) Wilson"],
+    "correctAnswerIndex": 3,
     "explanation": "Charlie Chaplin (Şarlo): Modern Zamanlar ve Diktatör."
 }
 ];

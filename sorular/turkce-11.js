@@ -15,33 +15,33 @@ window.turkce_11_sorulari = [
     "question": "Çekim eklerinin temel görevi nedir?",
     "options": [
         "A) Yeni sözcük türetmek",
-        "B) Sözcükler arasında anlam ve görev bağı kurmak",
-        "C) Sözcüğün türünü değiştirmek",
+        "B) Sözcüğün türünü değiştirmek",
+        "C) Sözcükler arasında anlam ve görev bağı kurmak",
         "D) Sözcüğü kalıcı ada dönüştürmek"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Çekim eki türetmez; cümlede görev kazandırır."
 },
 {
     "question": "Ekler genel olarak kaça ayrılır?",
     "options": [
         "A) Üçe: kök, gövde, ek",
-        "B) İkiye: yapım ekleri ve çekim ekleri",
-        "C) Dörde: hâl, ilgi, iyelik, çoğul",
+        "B) Dörde: hâl, ilgi, iyelik, çoğul",
+        "C) İkiye: yapım ekleri ve çekim ekleri",
         "D) Beşe: isim, fiil, sıfat, zarf, zamir"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Notlarda ekler yapım ve çekim olarak ikiye ayrılır."
 },
 {
     "question": "“Masayı temiz tutun.” cümlesindeki “-ı” nedir?",
     "options": [
         "A) Yönelme",
-        "B) Belirtme",
-        "C) İlgi",
+        "B) İlgi",
+        "C) Belirtme",
         "D) İyelik"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Neyi? masayı → belirtme hâl eki."
 },
 {
@@ -59,11 +59,11 @@ window.turkce_11_sorulari = [
     "question": "“Masada kitap var.” cümlesindeki “-da” nedir?",
     "options": [
         "A) Yapım eki",
-        "B) Bulunma hâl eki",
+        "B) İyelik eki",
         "C) İlgi eki",
-        "D) İyelik eki"
+        "D) Bulunma hâl eki"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Nerede? → bulunma (-da/-de/-ta/-te)."
 },
 {
@@ -81,44 +81,44 @@ window.turkce_11_sorulari = [
     "question": "“Kelebeğin kanadı” sözündeki “-in” nedir?",
     "options": [
         "A) İyelik",
-        "B) İlgi",
-        "C) Belirtme",
+        "B) Belirtme",
+        "C) İlgi",
         "D) Yapım"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Tamlayan ilgi ekidir (-ın/-in/-un/-ün)."
 },
 {
     "question": "“Suçumuz ne?” sözcüğündeki “-umuz” nedir?",
     "options": [
         "A) İlgi",
-        "B) İyelik",
+        "B) Yapım",
         "C) Çoğul",
-        "D) Yapım"
+        "D) İyelik"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Bizim suçumuz → iyelik eki."
 },
 {
     "question": "“Kitaplar” sözcüğündeki “-lar” hangi çekim ekidir?",
     "options": [
         "A) İyelik",
-        "B) Çoğul",
-        "C) Soru",
+        "B) Soru",
+        "C) Çoğul",
         "D) Yapım"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Çoğul eki: -lar/-ler."
 },
 {
     "question": "Aşağıdakilerden hangisi isimden isim yapan yapım ekidir?",
     "options": [
         "A) -la",
-        "B) -cı",
+        "B) -dır",
         "C) -ıl",
-        "D) -dır"
+        "D) -cı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "yol-cu, göz-lük, su-suz → isimden isim."
 },
 {
@@ -136,11 +136,11 @@ window.turkce_11_sorulari = [
     "question": "“Evlenmek” sözcüğündeki “-len” hangi yapım ekidir?",
     "options": [
         "A) Fiilden fiil",
-        "B) İsimden fiil",
+        "B) İsimden isim",
         "C) Fiilden isim",
-        "D) İsimden isim"
+        "D) İsimden fiil"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "ev + -len → isimden fiil."
 },
 {
@@ -191,22 +191,22 @@ window.turkce_11_sorulari = [
     "question": "“Seçim” sözcüğündeki “-im” hangi tür yapım ekidir?",
     "options": [
         "A) İsimden isim",
-        "B) Fiilden isim",
+        "B) İsimden fiil",
         "C) Fiilden fiil",
-        "D) İsimden fiil"
+        "D) Fiilden isim"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "seç- + -im → fiilden isim (-ım, -i, -gı, -ıcı)."
 },
 {
     "question": "“Satıcı” sözcüğündeki “-ıcı” hangi yapım ekidir?",
     "options": [
         "A) İsimden isim",
-        "B) Fiilden isim",
-        "C) Fiilden fiil",
+        "B) Fiilden fiil",
+        "C) Fiilden isim",
         "D) İsimden fiil"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "sat- + -ıcı → fiilden isim."
 },
 {
@@ -246,11 +246,11 @@ window.turkce_11_sorulari = [
     "question": "“Ödevi annemle yaptık.” cümlesinde “-le” hangi anlamdadır?",
     "options": [
         "A) Araç",
-        "B) Birliktelik",
+        "B) Durum",
         "C) Sebep",
-        "D) Durum"
+        "D) Birliktelik"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Kiminle? annemle → birliktelik (çekim eki)."
 },
 {
@@ -290,11 +290,11 @@ window.turkce_11_sorulari = [
     "question": "“Kitabı bana verdi.” cümlesindeki “-i” hangi ektir?",
     "options": [
         "A) İyelik",
-        "B) Belirtme hâl",
-        "C) Yapım",
+        "B) Yapım",
+        "C) Belirtme hâl",
         "D) İlgi"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Neyi verdi? → belirtme."
 },
 {
@@ -334,11 +334,11 @@ window.turkce_11_sorulari = [
     "question": "“Yaşlı” sözcüğündeki “-lı” hangi yapım ekidir?",
     "options": [
         "A) Fiilden isim",
-        "B) İsimden isim",
+        "B) Fiilden fiil",
         "C) İsimden fiil",
-        "D) Fiilden fiil"
+        "D) İsimden isim"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "yaş + -lı → isimden isim (-cı, -lı, -sız, -lık)."
 },
 {
@@ -367,11 +367,11 @@ window.turkce_11_sorulari = [
     "question": "Çekim ekleri sözcüğün anlamını değiştirir mi?",
     "options": [
         "A) Evet, her zaman yeni sözcük türetir.",
-        "B) Hayır, yalnızca cümlede görev kazandırır.",
+        "B) Hayır, hiç ek almaz.",
         "C) Evet, tür değiştirir.",
-        "D) Hayır, hiç ek almaz."
+        "D) Hayır, yalnızca cümlede görev kazandırır."
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Çekim eki anlamı/türü değiştirmez."
 },
 {

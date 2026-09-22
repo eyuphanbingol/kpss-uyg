@@ -32,11 +32,11 @@ window.cografya_13_sorulari = [
         options: [
             "A) Boylarının kısa olması",
             "B) Yer şekillerinin engebeli olması",
-            "C) Kurak iklim koşullarının etkili olması",
+            "C) Açık havzaların fazla olması",
             "D) Kaynaklarının yüksekten doğması",
-            "E) Açık havzaların fazla olması"
+            "E) Kurak iklim koşullarının etkili olması"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 4,
         explanation: "Kurak iklim nedeniyle akarsuların taşıdığı su miktarı (debi) düşüktür."
     },
     {
@@ -71,11 +71,11 @@ window.cografya_13_sorulari = [
         options: [
             "A) Delta havzası",
             "B) Açık havza",
-            "C) Kapalı havza",
+            "C) Taşkın havzası",
             "D) Akarsu havzası",
-            "E) Taşkın havzası"
+            "E) Kapalı havza"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 4,
         explanation: "Denize ulaşamayan akarsular kapalı havza oluşturur."
     },
     {
@@ -121,13 +121,13 @@ window.cografya_13_sorulari = [
         id: 10,
         question: "Aşağıdaki akarsulardan hangisi Karadeniz'e dökülür?",
         options: [
-            "A) Gediz",
+            "A) Sakarya",
             "B) Seyhan",
-            "C) Sakarya",
+            "C) Gediz",
             "D) Susurluk",
             "E) Büyük Menderes"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Sakarya Nehri Karadeniz'e dökülür."
     },
     {
@@ -149,11 +149,11 @@ window.cografya_13_sorulari = [
         options: [
             "A) Fırat",
             "B) Kızılırmak",
-            "C) Yeşilırmak",
+            "C) Ceyhan",
             "D) Sakarya",
-            "E) Ceyhan"
+            "E) Yeşilırmak"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 4,
         explanation: "Kelkit Çayı Yeşilırmak'ın en önemli koludur."
     },
     {
@@ -201,24 +201,24 @@ window.cografya_13_sorulari = [
         options: [
             "A) Sakarya",
             "B) Çoruh",
-            "C) Filyos",
-            "D) Ceyhan",
+            "C) Ceyhan",
+            "D) Filyos",
             "E) Asi"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 3,
         explanation: "Filyos Çayı'nın kaynağı Köroğlu Dağları'dır."
     },
     {
         id: 17,
         question: "Türkiye'de en fazla coğrafi bölgede akış gösteren akarsu aşağıdakilerden hangisidir?",
         options: [
-            "A) Kızılırmak",
+            "A) Sakarya",
             "B) Fırat",
-            "C) Sakarya",
+            "C) Kızılırmak",
             "D) Dicle",
             "E) Yeşilırmak"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Sakarya, en fazla coğrafi bölgede akış gösteren akarsudur."
     },
     {
@@ -240,11 +240,11 @@ window.cografya_13_sorulari = [
         options: [
             "A) Asi",
             "B) Çoruh",
-            "C) Meriç",
+            "C) Kura",
             "D) Aras",
-            "E) Kura"
+            "E) Meriç"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 4,
         explanation: "Meriç Nehri Bulgaristan'dan doğar ve Ege Denizi'ne dökülür."
     },
     {
@@ -304,12 +304,12 @@ window.cografya_13_sorulari = [
         question: "Kaynağını Lübnan'dan alıp Suriye üzerinden Türkiye'ye girerek Akdeniz'e dökülen akarsu aşağıdakilerden hangisidir?",
         options: [
             "A) Meriç",
-            "B) Asi",
+            "B) Zap",
             "C) Aras",
             "D) Kura",
-            "E) Zap"
+            "E) Asi"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "Asi Nehri Lübnan'dan doğar, Suriye'den geçerek Türkiye'de Akdeniz'e ulaşır."
     },
     {
@@ -381,13 +381,13 @@ window.cografya_13_sorulari = [
         id: 30,
         question: "Türkiye'den doğarak Azerbaycan'a ulaşan akarsular aşağıdakilerden hangisidir?",
         options: [
-            "A) Meriç - Asi",
+            "A) Aras - Kura",
             "B) Fırat - Dicle",
-            "C) Aras - Kura",
+            "C) Meriç - Asi",
             "D) Zap - Dicle",
             "E) Çoruh - Sakarya"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Aras ve Kura nehirleri Azerbaycan'a ulaşmaktadır."
     },
     {
@@ -485,13 +485,13 @@ window.cografya_13_sorulari = [
         id: 38,
         question: "Fırat ve Dicle nehirleri arasında kalan verimli alan aşağıdakilerden hangisi olarak adlandırılır?",
         options: [
-            "A) Çukurova",
+            "A) Mezopotamya",
             "B) Ergene",
-            "C) Mezopotamya",
+            "C) Çukurova",
             "D) Taşeli",
             "E) Bafra"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Fırat ile Dicle arasında kalan bölge Mezopotamya olarak adlandırılır."
     },
     {
@@ -552,24 +552,24 @@ window.cografya_13_sorulari = [
         options: [
             "A) Sığ olması",
             "B) Buharlaşmanın fazla olması",
-            "C) Gideğeninin bulunması",
+            "C) Su seviyesinin düşmesi",
             "D) Yaz kuraklığı",
-            "E) Su seviyesinin düşmesi"
+            "E) Gideğeninin bulunması"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 4,
         explanation: "Tuz Gölü'nün gideğeni yoktur."
     },
     {
         id: 44,
         question: "Türkiye'de üzerinde demir yolu ulaşımı yapılan tek göl aşağıdakilerden hangisidir?",
         options: [
-            "A) Eğirdir",
+            "A) Van",
             "B) Beyşehir",
-            "C) Van",
+            "C) Eğirdir",
             "D) Hazar",
             "E) Çıldır"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Demir yolu ulaşımı yapılan tek göl Van Gölü'dür."
     },
     {
@@ -578,11 +578,11 @@ window.cografya_13_sorulari = [
         options: [
             "A) Derin olması",
             "B) Volkanik kökenli olması",
-            "C) Gideğeninin bulunması",
+            "C) Dağlık alanda bulunması",
             "D) Büyük yüzölçümüne sahip olması",
-            "E) Dağlık alanda bulunması"
+            "E) Gideğeninin bulunması"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 4,
         explanation: "Gideğeni bulunan göllerin suları tatlıdır."
     },
     {
@@ -667,13 +667,13 @@ window.cografya_13_sorulari = [
         id: 52,
         question: "Türkiye'de tuz üretimiyle öne çıkan göl aşağıdakilerden hangisidir?",
         options: [
-            "A) Eğirdir",
+            "A) Tuz",
             "B) Van",
-            "C) Tuz",
+            "C) Eğirdir",
             "D) Akşehir",
             "E) Eber"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Tuz Gölü Türkiye'nin en önemli tuz üretim alanıdır."
     },
     {
@@ -747,11 +747,11 @@ window.cografya_13_sorulari = [
         options: [
             "A) Acıgöl",
             "B) Meke",
-            "C) Nemrut Krater Gölü",
+            "C) Balık Gölü",
             "D) Salda",
-            "E) Balık Gölü"
+            "E) Nemrut Krater Gölü"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 4,
         explanation: "Nemrut Krater Gölü Bitlis'te yer alır."
     },
     {
@@ -759,12 +759,12 @@ window.cografya_13_sorulari = [
         question: "\"Dünyanın Nazar Boncuğu\" olarak tanınan göl aşağıdakilerden hangisidir?",
         options: [
             "A) Acıgöl",
-            "B) Meke",
+            "B) Salda",
             "C) Van",
-            "D) Salda",
+            "D) Meke",
             "E) Abant"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Meke Gölü bu özelliğiyle bilinmektedir."
     },
     {
@@ -784,13 +784,13 @@ window.cografya_13_sorulari = [
         id: 61,
         question: "Uludağ'da bulunan Kilimli, Kara ve Aynalı gölleri oluşumlarına göre aşağıdaki göl gruplarından hangisinde yer alır?",
         options: [
-            "A) Karstik",
+            "A) Buzul",
             "B) Volkanik",
-            "C) Buzul",
+            "C) Karstik",
             "D) Tektonik",
             "E) Heyelan set"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Kilimli, Kara ve Aynalı gölleri Uludağ'da bulunan buzul gölleridir."
     },
     {
@@ -981,11 +981,11 @@ window.cografya_13_sorulari = [
         options: [
             "A) Tektonik göl olmaları",
             "B) Karstik göl olmaları",
-            "C) Kıyı set gölü olmaları",
-            "D) Heyelan set gölü olmaları",
+            "C) Heyelan set gölü olmaları",
+            "D) Kıyı set gölü olmaları",
             "E) Volkanik göl olmaları"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 3,
         explanation: "Büyükçekmece ve Küçükçekmece kıyı set gölleridir."
     },
     {
@@ -1200,13 +1200,13 @@ window.cografya_13_sorulari = [
         id: 93,
         question: "Balık türü bakımından en zengin denizimiz aşağıdakilerden hangisidir?",
         options: [
-            "A) Karadeniz",
+            "A) Akdeniz",
             "B) Marmara",
-            "C) Akdeniz",
+            "C) Karadeniz",
             "D) Ege",
             "E) Van"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Akdeniz'de balık çeşidi fazla, miktarı ise azdır."
     },
     {
@@ -1215,11 +1215,11 @@ window.cografya_13_sorulari = [
         options: [
             "A) Gemlik",
             "B) Saros",
-            "C) Antalya",
+            "C) Bandırma",
             "D) İzmit",
-            "E) Bandırma"
+            "E) Antalya"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 4,
         explanation: "Antalya ve İskenderun Körfezleri Akdeniz kıyısındadır."
     },
     {
@@ -1280,11 +1280,11 @@ window.cografya_13_sorulari = [
         options: [
             "A) Antalya'nın sulama ihtiyacını karşılamak",
             "B) Kıbrıs'a içme suyu sağlamak",
-            "C) İstanbul Avrupa Yakası'nın su ihtiyacını karşılamak",
-            "D) GAP'a enerji üretmek",
+            "C) GAP'a enerji üretmek",
+            "D) İstanbul Avrupa Yakası'nın su ihtiyacını karşılamak",
             "E) Tuz Gölü'nü beslemek"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 3,
         explanation: "Melen Çayı suları Boğaziçi Tüneli ile İstanbul Avrupa Yakası'na ulaştırılmıştır."
     },
     {
@@ -1305,12 +1305,12 @@ window.cografya_13_sorulari = [
         question: "Toprakta bulunan organik maddelere verilen ad aşağıdakilerden hangisidir?",
         options: [
             "A) Lös",
-            "B) Humus",
+            "B) Marn",
             "C) Kil",
-            "D) Marn",
+            "D) Humus",
             "E) Alüvyon"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Humus, topraktaki organik maddeyi ifade eder."
     },
     {
@@ -1330,13 +1330,13 @@ window.cografya_13_sorulari = [
         id: 103,
         question: "Karasal bölgelerde yaygın görülen ve toprak oluşumunu yavaşlatan çözülme türü aşağıdakilerden hangisidir?",
         options: [
-            "A) Kimyasal çözülme",
-            "B) Fiziksel çözülme",
+            "A) Fiziksel çözülme",
+            "B) Kimyasal çözülme",
             "C) Biyolojik çözülme",
             "D) Organik çözülme",
             "E) Karstik çözülme"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "Karasal iklimlerde sıcaklık farkı fazla olduğundan fiziksel çözülme yaygındır."
     },
     {
@@ -1369,26 +1369,26 @@ window.cografya_13_sorulari = [
         id: 106,
         question: "Kahverengi orman topraklarının Türkiye'de en yaygın görüldüğü bölge aşağıdakilerden hangisidir?",
         options: [
-            "A) İç Anadolu",
+            "A) Karadeniz",
             "B) Akdeniz",
-            "C) Karadeniz",
+            "C) İç Anadolu",
             "D) Güneydoğu Anadolu",
             "E) Marmara"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Kahverengi orman toprakları en yaygın Karadeniz Bölgesi'nde görülür."
     },
     {
         id: 107,
         question: "Kül renginde olan ve nemli-soğuk bölgelerde görülen toprak tipi aşağıdakilerden hangisidir?",
         options: [
-            "A) Terra Rossa",
-            "B) Podzol",
+            "A) Podzol",
+            "B) Terra Rossa",
             "C) Çernezyom",
             "D) Rendzina",
             "E) Step"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "Podzol toprakları kül rengindedir."
     },
     {
@@ -1434,13 +1434,13 @@ window.cografya_13_sorulari = [
         id: 111,
         question: "Çernezyom topraklarının tarım açısından yeterince değerlendirilememesinin temel nedeni aşağıdakilerden hangisidir?",
         options: [
-            "A) Tuzlu olmaları",
-            "B) İklimin elverişsiz olması",
+            "A) İklimin elverişsiz olması",
+            "B) Tuzlu olmaları",
             "C) Eğimin fazla olması",
             "D) Sulanamamaları",
             "E) Taşlı olmaları"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "Toprak verimli olmasına rağmen iklim koşulları tarımı sınırlar."
     },
     {
@@ -1449,24 +1449,24 @@ window.cografya_13_sorulari = [
         options: [
             "A) Podzol",
             "B) Step",
-            "C) Terra Rossa",
+            "C) Hidromorfik",
             "D) Regosol",
-            "E) Hidromorfik"
+            "E) Terra Rossa"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 4,
         explanation: "Terra Rossa kırmızı renkli Akdeniz toprağıdır."
     },
     {
         id: 113,
         question: "Terra Rossa topraklarının kırmızı renkli olmasının temel nedeni aşağıdakilerden hangisidir?",
         options: [
-            "A) Organik madde fazlalığı",
+            "A) Demir oksit bakımından zengin olması",
             "B) Tuz oranının yüksek olması",
-            "C) Demir oksit bakımından zengin olması",
+            "C) Organik madde fazlalığı",
             "D) Kil oranının yüksek olması",
             "E) Kalker içermesi"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Terra Rossa demir oksit nedeniyle kırmızı renklidir."
     },
     {
@@ -1486,13 +1486,13 @@ window.cografya_13_sorulari = [
         id: 115,
         question: "Bozkır (step) topraklarının oluşmasındaki temel etken aşağıdakilerden hangisidir?",
         options: [
-            "A) Fazla yağış",
+            "A) Yağış azlığı",
             "B) Volkanizma",
-            "C) Yağış azlığı",
+            "C) Fazla yağış",
             "D) Heyelan",
             "E) Buzullaşma"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Step toprakları kurak iklim şartlarında oluşur."
     },
     {
@@ -1514,11 +1514,11 @@ window.cografya_13_sorulari = [
         options: [
             "A) Tuz ve kireç fazladır.",
             "B) Yıkanma hiç görülmez.",
-            "C) Yıkanma daha fazladır.",
+            "C) Demir oksitçe zengindir.",
             "D) Sadece Karadeniz'de görülür.",
-            "E) Demir oksitçe zengindir."
+            "E) Yıkanma daha fazladır."
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 4,
         explanation: "Kestane rengi step topraklarında yıkanma daha fazla, tuz ve kireç daha azdır."
     },
     {
@@ -1566,11 +1566,11 @@ window.cografya_13_sorulari = [
         options: [
             "A) Zonal",
             "B) İntrazonal",
-            "C) Azonal",
+            "C) Terra Rossa",
             "D) Kahverengi orman",
-            "E) Terra Rossa"
+            "E) Azonal"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 4,
         explanation: "Azonal (taşınmış) topraklar taşındıkları için oluştukları yerin iklimi ve ana kaya özelliklerini yansıtmaz."
     },
     {
@@ -1669,12 +1669,12 @@ window.cografya_13_sorulari = [
         question: "Yağından kozmetik sanayisinde yararlanılan ve Muğla Köyceğiz çevresinde görülen endemik tür aşağıdakilerden hangisidir?",
         options: [
             "A) Kazdağı Köknarı",
-            "B) Sığla Ağacı",
+            "B) Nemrut Soğanı",
             "C) Datça Hurması",
             "D) Ters Lale",
-            "E) Nemrut Soğanı"
+            "E) Sığla Ağacı"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "Sığla (Günlük) Ağacı Köyceğiz çevresinde görülür ve kozmetik sanayisinde kullanılır."
     },
     {
@@ -1694,13 +1694,13 @@ window.cografya_13_sorulari = [
         id: 131,
         question: "Karadeniz ikliminin klimaks türü aşağıdakilerden hangisidir?",
         options: [
-            "A) Sarıçam",
+            "A) Ladin",
             "B) Meşe",
-            "C) Ladin",
+            "C) Sarıçam",
             "D) Kızılçam",
             "E) Ardıç"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Karadeniz ormanlarının klimaks (doruk) türü ladindir."
     },
     {
@@ -1735,11 +1735,11 @@ window.cografya_13_sorulari = [
         options: [
             "A) Endemik",
             "B) Klimaks",
-            "C) Relikt",
+            "C) Garig",
             "D) Psödomaki",
-            "E) Garig"
+            "E) Relikt"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 4,
         explanation: "Relikt türler geçmiş jeolojik dönemlerden günümüze ulaşan kalıntı bitkilerdir."
     },
     {
@@ -1774,11 +1774,11 @@ window.cografya_13_sorulari = [
         options: [
             "A) İspanya",
             "B) Yunanistan",
-            "C) Türkiye",
-            "D) İtalya",
+            "C) İtalya",
+            "D) Türkiye",
             "E) Fransa"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 3,
         explanation: "Dünyadaki en geniş kızılçam ormanları Türkiye'dedir."
     },
     {
@@ -1800,11 +1800,11 @@ window.cografya_13_sorulari = [
         options: [
             "A) Muğla",
             "B) Kastamonu",
-            "C) Antalya",
+            "C) Bursa",
             "D) Artvin",
-            "E) Bursa"
+            "E) Antalya"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 4,
         explanation: "Türkiye'de orman varlığı en fazla olan il Antalya'dır."
     },
     {
@@ -1852,11 +1852,11 @@ window.cografya_13_sorulari = [
         options: [
             "A) Ladin",
             "B) Kayın",
-            "C) Kızılçam",
-            "D) Sarıçam",
+            "C) Sarıçam",
+            "D) Kızılçam",
             "E) Göknar"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 3,
         explanation: "Akdeniz'de 500-1000 metre arasında meşe türleri ve kızılçam yaygındır."
     },
     {
@@ -1874,7 +1874,7 @@ window.cografya_13_sorulari = [
     },
     {
         id: 145,
-        question: "Türkiye'de ormanların en yüksek seviyeye ulaştığı bölge aşağıdakilerden hangisidir?",
+        question: "Türkiye'de orman üst sınırının en yüksek olduğu bölge aşağıdakilerden hangisidir?",
         options: [
             "A) İç Anadolu",
             "B) Karadeniz",
@@ -1883,7 +1883,7 @@ window.cografya_13_sorulari = [
             "E) Güneydoğu Anadolu"
         ],
         correctAnswerIndex: 2,
-        explanation: "Karasal ormanlarda en yüksek orman üst sınırı Doğu Anadolu'da yaklaşık 2800 metredir."
+        explanation: "Seçenekler arasında orman üst sınırının en yüksek olduğu bölge Akdeniz'dir; Toroslarda ormanlar yaklaşık 2000–2400 metreye kadar çıkar. Güneyde sıcaklığın yüksek olması orman üst sınırını yükseltir."
     },
     {
         id: 146,
@@ -1902,13 +1902,13 @@ window.cografya_13_sorulari = [
         id: 147,
         question: "Kızılçam ormanlarının tahrip edilmesi sonucunda oluşan çalı topluluğu aşağıdakilerden hangisidir?",
         options: [
-            "A) Psödomaki",
+            "A) Maki",
             "B) Garig",
-            "C) Maki",
+            "C) Psödomaki",
             "D) Bozkır",
             "E) Çayır"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Makiler kızılçam ormanlarının tahrip edilmesiyle oluşur."
     },
     {
@@ -1929,12 +1929,12 @@ window.cografya_13_sorulari = [
         question: "Kızılçam dışındaki ormanların tahrip edilmesi sonucu oluşan çalı topluluğu aşağıdakilerden hangisidir?",
         options: [
             "A) Garig",
-            "B) Psödomaki",
+            "B) Çayır",
             "C) Maki",
             "D) Step",
-            "E) Çayır"
+            "E) Psödomaki"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "Psödomaki, kızılçam dışındaki ormanların tahribiyle oluşur."
     },
     {
@@ -1954,13 +1954,13 @@ window.cografya_13_sorulari = [
         id: 151,
         question: "İlkbaharda yeşerip yazın sararan ve sonbaharda kuruyan doğal bitki topluluğu aşağıdakilerden hangisidir?",
         options: [
-            "A) Çayır",
+            "A) Bozkır",
             "B) Maki",
-            "C) Bozkır",
+            "C) Çayır",
             "D) Garig",
             "E) Psödomaki"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Bozkır bitkileri ilkbaharda yeşerir, yazın kurur."
     },
     {
@@ -1980,13 +1980,13 @@ window.cografya_13_sorulari = [
         id: 153,
         question: "İnsanların ormanları tahrip etmesi sonucu oluşan bozkırlara ne ad verilir?",
         options: [
-            "A) Garig",
+            "A) Antropojen Bozkır",
             "B) Psödomaki",
-            "C) Antropojen Bozkır",
+            "C) Garig",
             "D) Alpin Çayır",
             "E) Step"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "İnsan etkisiyle oluşan bozkırlara antropojen bozkır denir."
     },
     {
@@ -2007,12 +2007,12 @@ window.cografya_13_sorulari = [
         question: "Erzurum-Kars yöresindeki yaylalarda görülen doğal bitki topluluğu aşağıdakilerden hangisidir?",
         options: [
             "A) Bozkır",
-            "B) Çayır",
+            "B) Garig",
             "C) Maki",
-            "D) Garig",
+            "D) Çayır",
             "E) Psödomaki"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Erzurum-Kars yaylalarında çayırlar yaygındır."
     },
     {
@@ -2021,11 +2021,11 @@ window.cografya_13_sorulari = [
         options: [
             "A) Step",
             "B) Garig",
-            "C) Alpin Çayır",
+            "C) Maki",
             "D) Psödomaki",
-            "E) Maki"
+            "E) Alpin Çayır"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 4,
         explanation: "Yüksek dağ çayırları alpin çayır olarak adlandırılır."
     },
     {
@@ -2058,26 +2058,26 @@ window.cografya_13_sorulari = [
         id: 159,
         question: "Akdeniz flora bölgesinin karakteristik bitkileri arasında aşağıdakilerden hangisi bulunmaktadır?",
         options: [
-            "A) Ladin",
+            "A) Zeytin",
             "B) Sarıçam",
-            "C) Zeytin",
+            "C) Ladin",
             "D) Kayın",
             "E) Gürgen"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Akdeniz flora bölgesinin tipik bitkileri arasında zeytin, defne ve keçiboynuzu yer alır."
     },
     {
         id: 160,
         question: "İç Anadolu, Doğu Anadolu ve Güneydoğu Anadolu'yu kapsayan flora bölgesi aşağıdakilerden hangisidir?",
         options: [
-            "A) Avrupa-Sibirya",
+            "A) İran-Turan",
             "B) Akdeniz",
-            "C) İran-Turan",
+            "C) Avrupa-Sibirya",
             "D) Karadeniz",
             "E) Marmara"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "İran-Turan flora bölgesi karasal ve kurak iklim alanlarını kapsar."
     },
 

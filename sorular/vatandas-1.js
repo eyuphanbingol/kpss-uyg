@@ -14,8 +14,8 @@ window.vatandas_1_sorulari = [
     },
     {
         question: "Bir ülkede ideal yani “olması gereken hukuk” kavramını ifade eden hukuk türüne ne ad verilir?",
-        options: ["A) Pozitif hukuk", "B) Mevzu hukuk", "C) Tabii hukuk", "D) Tarihi hukuk", "E) Objektif hukuk"],
-        correctAnswerIndex: 2,
+        options: ["A) Pozitif hukuk", "B) Mevzu hukuk", "C) Tarihi hukuk", "D) Tabii hukuk", "E) Objektif hukuk"],
+        correctAnswerIndex: 3,
         explanation: "Tabii (doğal) hukuk, yürürlükteki kanunlardan çıkan değil doğadan kaynaklanan “olması gereken hukuk”tur."
     },
     {
@@ -26,8 +26,8 @@ window.vatandas_1_sorulari = [
     },
     {
         question: "● Uygulama bakımından zorunluluk taşır.\n● Kişiler bu kuralları değiştiremez.\n● Kanun ve yönetmeliklerde yazılı olan kurallardır.\nBu özellikler aşağıdaki hukuk kuralı çeşitlerinden hangisine aittir?",
-        options: ["A) Tanımlayıcı hukuk kuralları", "B) Tamamlayıcı hukuk kuralları", "C) Emredici hukuk kuralları", "D) Yorumlayıcı hukuk kuralları", "E) İlga edici hukuk kuralları"],
-        correctAnswerIndex: 2,
+        options: ["A) Emredici hukuk kuralları", "B) Tamamlayıcı hukuk kuralları", "C) Tanımlayıcı hukuk kuralları", "D) Yorumlayıcı hukuk kuralları", "E) İlga edici hukuk kuralları"],
+        correctAnswerIndex: 0,
         explanation: "Emredici (amir) kurallar taraflarca kaldırılamaz; kanun ve yönetmelikte yazılıdır ve uyulması zorunludur."
     },
     {
@@ -44,8 +44,8 @@ window.vatandas_1_sorulari = [
     },
     {
         question: "Yaptırımı ayıplama, dışlama olan sosyal hayatı düzenleyen kurallar aşağıdakilerden hangisidir?",
-        options: ["A) Hukuk kuralları", "B) Ahlak kuralları", "C) Din kuralları", "D) Felsefe kuralları", "E) Vatandaşlık kuralları"],
-        correctAnswerIndex: 1,
+        options: ["A) Hukuk kuralları", "B) Vatandaşlık kuralları", "C) Din kuralları", "D) Felsefe kuralları", "E) Ahlak kuralları"],
+        correctAnswerIndex: 4,
         explanation: "Ahlak kurallarının yaptırımı ayıplanma, kınama ve dışlanmadır."
     },
     {

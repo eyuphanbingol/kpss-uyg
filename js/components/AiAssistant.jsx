@@ -355,7 +355,7 @@
                                     {item.ders || "—"}
                                 </span>
                                 <span className="text-[10px] font-medium text-stone-400">·</span>
-                                <span className="text-xs text-stone-500 dark:text-stone-400">{item.konu || "—"}</span>
+                                <span className="text-xs text-stone-500 dark:text-stone-400">{item.konu ? (window.konuLabel ? window.konuLabel(item.konu) : item.konu) : "—"}</span>
                             </div>
 
                             {/* Soru Metni */}

@@ -115,12 +115,12 @@ window.cografya_5_sorulari = [
     "question": "Delta ovalarının topraklarının çok verimli olmasının temel nedeni aşağıdakilerden hangisidir?",
     "options": [
       "A) Karstik malzemeyle kaplı olmaları",
-      "B) Akarsuların taşıdığı alüvyonlarla oluşmaları",
+      "B) Tektonik çöküntü alanı olmaları",
       "C) Volkanik tüflerden meydana gelmeleri",
-      "D) Tektonik çöküntü alanı olmaları",
+      "D) Akarsuların taşıdığı alüvyonlarla oluşmaları",
       "E) Buzul aşındırmasıyla oluşmaları"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Akarsular farklı mineral ve organik madde bakımından zengin toprakları (alüvyonları) iç kesimlerden taşır ve deltada biriktirir. Bu mineral çeşitliliği toprakları aşırı verimli kılar."
   },
   {
@@ -141,12 +141,12 @@ window.cografya_5_sorulari = [
     "question": "Türkiye'de tektonik ovaların en yaygın ova türü olmasının temel nedeni aşağıdakilerden hangisidir?",
     "options": [
       "A) Kıyılarının çok uzun olması",
-      "B) Genç oluşumlu olması ve çok sayıda kırık (fay) hattı bulundurması",
-      "C) Volkanik dağların fazla olması",
+      "B) Volkanik dağların fazla olması",
+      "C) Genç oluşumlu olması ve çok sayıda kırık (fay) hattı bulundurması",
       "D) Karstik arazinin yaygın olması",
       "E) Buzullaşmanın çok görülmesi"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Türkiye jeolojik olarak yakın zamanda (3. ve 4. zaman) şekillenen genç bir ülkedir. Bu yüzden KAF, DAF ve BAF gibi aktif, büyük kırık ve fay hatları barındırır. Çöküntü alanları çok olduğundan tektonik ovalar en yaygın türdür."
   },
   {
@@ -201,10 +201,10 @@ window.cografya_5_sorulari = [
       "A) Dağ eteği ovası – Bursa Ovası",
       "B) Dağ içi ovası – Muş Ovası",
       "C) Volkanik ova – Develi Ovası (Kayseri)",
-      "D) Delta ovası – Çukurova",
-      "E) Karstik ova – Develi Ovası"
+      "D) Karstik ova – Develi Ovası",
+      "E) Delta ovası – Çukurova"
     ],
-    "correctAnswerIndex": 4,
+    "correctAnswerIndex": 3,
     "explanation": "Develi Ovası (Kayseri), Erciyes Dağı'nın eteklerinde volkanik malzemelerin birikmesiyle oluşmuş volkanik bir ovadır, karstik süreçlerle hiçbir bağlantısı yoktur."
   },
   {
@@ -295,13 +295,13 @@ window.cografya_5_sorulari = [
     "id": "22",
     "question": "Aşağıdaki ova türlerinden hangisinin toprakları, oluşum biçimi gereği genellikle EN VERİMLİDİR?",
     "options": [
-      "A) Karstik ovalar",
-      "B) Delta ovaları",
+      "A) Delta ovaları",
+      "B) Karstik ovalar",
       "C) Dağ içi ovaları",
       "D) Volkanik ovalar",
       "E) Aşınım ovaları"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Delta ovaları, akarsuların binlerce kilometrelik havzalardan topladığı en üstün nitelikli, humuslu ve mineral zengini alüvyon topraklardan (taşınmış topraklar) oluştuğu için tarımsal verimliliği en yüksek alanlardır."
   }
 ];

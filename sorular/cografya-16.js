@@ -4,7 +4,7 @@ window.cografya_16_sorulari = [
     // 1. SET: TEMEL KAVRAMLAR VE İLK YERLEŞMELER
     // ============================================================
     {
-        question: "Soru 1: Anadolu'nun tarih boyunca farklı topluluklar tarafından yoğun biçimde yerleşim alanı olarak tercih edilmesinde;\n\nI. orta kuşakta yer alması,\nII. verimli tarım alanlarına sahip olması,\nIII. kıtalar arasında geçiş alanı oluşturması,\nIV. doğal barınma alanlarının bulunması\n\nözelliklerinden hangilerinin etkili olduğu söylenebilir?",
+        question: "Anadolu'nun tarih boyunca farklı topluluklar tarafından yoğun biçimde yerleşim alanı olarak tercih edilmesinde;\n\nI. orta kuşakta yer alması,\nII. verimli tarım alanlarına sahip olması,\nIII. kıtalar arasında geçiş alanı oluşturması,\nIV. doğal barınma alanlarının bulunması\n\nözelliklerinden hangilerinin etkili olduğu söylenebilir?",
         options: [
             "A) Yalnız I",
             "B) I ve II",
@@ -16,7 +16,7 @@ window.cografya_16_sorulari = [
         explanation: "Anadolu'nun yerleşim tarihi boyunca tercih edilmesinde; orta kuşakta yer alması (I), verimli tarım alanlarına sahip olması (II), kıtalar arasında geçiş alanı oluşturması (III) ve doğal barınma alanlarının bulunması (IV) gibi hem iklimsel hem coğrafi hem de jeopolitik faktörler etkili olmuştur. Bu nedenle tüm özellikler doğrudur."
     },
     {
-        question: "Soru 2: Bir coğrafyada insanların sürekli olarak yerleşebileceği uygun koşullar bulunurken başka bir bölgede yerleşme faaliyetlerinin son derece sınırlı olduğu görülmektedir.\n\nBu durum aşağıdaki kavram çiftlerinden hangisiyle açıklanabilir?",
+        question: "Bir coğrafyada insanların sürekli olarak yerleşebileceği uygun koşullar bulunurken başka bir bölgede yerleşme faaliyetlerinin son derece sınırlı olduğu görülmektedir.\n\nBu durum aşağıdaki kavram çiftlerinden hangisiyle açıklanabilir?",
         options: [
             "A) Kır – kent",
             "B) Ökümen – anökümen",
@@ -28,31 +28,31 @@ window.cografya_16_sorulari = [
         explanation: "İnsanların sürekli yerleşebildiği ve yerleşme koşullarının uygun olduğu alanlara 'ökümen', yerleşme koşullarının elverişsiz olduğu ve yerleşmenin sınırlı kaldığı alanlara ise 'anökümen' denir. Bu kavram çifti, soruda verilen durumu tam olarak açıklamaktadır."
     },
     {
-        question: "Soru 3: Aşağıdaki yerleşim merkezlerinden hangisi Anadolu'daki yerleşme tarihi açısından diğerlerinden farklı bir özelliğe sahiptir?",
+        question: "Aşağıdaki yerleşim merkezlerinden hangisi Anadolu'daki yerleşme tarihi açısından diğerlerinden farklı bir özelliğe sahiptir?",
         options: [
-            "A) Çayönü",
+            "A) Karain",
             "B) Çatalhöyük",
             "C) Kültepe",
             "D) Göbeklitepe",
-            "E) Karain"
+            "E) Çayönü"
         ],
-        correctAnswerIndex: 4,
+        correctAnswerIndex: 0,
         explanation: "Karain Mağarası, Anadolu'daki en eski yerleşim yerlerinden biri olup Paleolitik Dönem'e tarihlenen bir mağara yerleşmesidir. Çayönü, Çatalhöyük, Kültepe ve Göbeklitepe ise açık hava yerleşmeleri olup Neolitik ve Kalkolitik Dönem'e aittir. Karain, mağara yerleşmesi olmasıyla diğerlerinden ayrılır."
     },
     {
-        question: "Soru 4: Anadolu'da yerleşme tarihinin gelişimiyle ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+        question: "Anadolu'da yerleşme tarihinin gelişimiyle ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
         options: [
             "A) Karain – Mağara yerleşmesi",
             "B) Çayönü – İlk köy yerleşmesi",
             "C) Çatalhöyük – İlk şehir yerleşmesi",
-            "D) Kültepe – İlk ticaret kenti",
-            "E) Göbeklitepe – İlk sanayi kenti"
+            "D) Göbeklitepe – İlk sanayi kenti",
+            "E) Kültepe – İlk ticaret kenti"
         ],
-        correctAnswerIndex: 4,
+        correctAnswerIndex: 3,
         explanation: "Göbeklitepe, dünyanın bilinen en eski tapınak merkezi olup dinsel/ritüel bir işleve sahiptir. 'İlk sanayi kenti' olarak nitelendirilmesi yanlıştır. Karain mağara, Çayönü ilk köy, Çatalhöyük ilk şehir ve Kültepe ilk ticaret kenti olarak doğru eşleştirilmiştir."
     },
     {
-        question: "Soru 5: Aşağıdakilerden hangisi Türkiye'de kır ve kent yerleşmelerini birbirinden ayırmada kullanılan ölçütlerden biri değildir?",
+        question: "Aşağıdakilerden hangisi Türkiye'de kır ve kent yerleşmelerini birbirinden ayırmada kullanılan ölçütlerden biri değildir?",
         options: [
             "A) Nüfus miktarı",
             "B) Ekonomik faaliyetlerin niteliği",
@@ -64,7 +64,7 @@ window.cografya_16_sorulari = [
         explanation: "Kır ve kent ayrımında nüfus miktarı, ekonomik faaliyetlerin niteliği, mesleki uzmanlaşma ve idari yönetim biçimi gibi beşerî ölçütler kullanılır. Yıllık yağış miktarı ise doğal bir faktör olup kır-kent ayrımında belirleyici bir ölçüt değildir."
     },
     {
-        question: "Soru 6: İdari bakımdan bir köye bağlı olan, ancak köy merkezinden ayrı bir yerde geçici veya sürekli olarak insanların yaşadığı yerleşmelere ne ad verilir?",
+        question: "İdari bakımdan bir köye bağlı olan, ancak köy merkezinden ayrı bir yerde geçici veya sürekli olarak insanların yaşadığı yerleşmelere ne ad verilir?",
         options: [
             "A) Kent",
             "B) Köy altı yerleşmesi",
@@ -76,19 +76,19 @@ window.cografya_16_sorulari = [
         explanation: "Köy altı yerleşmeleri, idari bakımdan bir köye bağlı olan ancak köy merkezinden ayrı konumda bulunan, geçici veya sürekli yerleşim alanlarıdır. Mezra, kom, oba, yayla gibi türleri bulunur."
     },
     {
-        question: "Soru 7: Aşağıdaki köy altı yerleşmelerinden hangisinin kuruluş amacı ve yaygın olduğu bölge birlikte düşünüldüğünde diğerlerinden farklı olduğu söylenebilir?",
+        question: "Aşağıdaki köy altı yerleşmelerinden hangisinin kuruluş amacı ve yaygın olduğu bölge birlikte düşünüldüğünde diğerlerinden farklı olduğu söylenebilir?",
         options: [
             "A) Mezra – Doğu Anadolu",
             "B) Kom – Doğu Anadolu",
             "C) Divan – Batı Karadeniz",
-            "D) Ağıl – İç Anadolu",
-            "E) Dalyan – Doğu Anadolu"
+            "D) Dalyan – Doğu Anadolu",
+            "E) Ağıl – İç Anadolu"
         ],
-        correctAnswerIndex: 4,
+        correctAnswerIndex: 3,
         explanation: "Dalyan, balıkçılık faaliyetleriyle ilişkili olup kıyı bölgelerinde (özellikle Ege ve Akdeniz) görülür. Doğu Anadolu'da yaygın olması beklenmez. Mezra, kom, divan ve ağıl ise tarım ve hayvancılık faaliyetleriyle ilişkili olup daha çok iç ve doğu bölgelerde yaygındır."
     },
     {
-        question: "Soru 8: Doğu Anadolu'da tarımsal faaliyetlerin yürütüldüğü alanlarda, köyden ayrı küçük yerleşmelerin ortaya çıktığı görülmektedir.\n\nBu yerleşme aşağıdakilerden hangisidir?",
+        question: "Doğu Anadolu'da tarımsal faaliyetlerin yürütüldüğü alanlarda, köyden ayrı küçük yerleşmelerin ortaya çıktığı görülmektedir.\n\nBu yerleşme aşağıdakilerden hangisidir?",
         options: [
             "A) Oba",
             "B) Mezra",
@@ -100,7 +100,7 @@ window.cografya_16_sorulari = [
         explanation: "Mezra, Doğu Anadolu'da tarımsal faaliyetlerin yürütüldüğü, köyden ayrı ve genellikle küçük ölçekli yerleşmelerdir. Tarım alanlarının köy merkezine uzak olması nedeniyle ortaya çıkmışlardır."
     },
     {
-        question: "Soru 9: Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+        question: "Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
         options: [
             "A) Oba – Konargöçer hayvancılık",
             "B) Yayla – Yaz mevsiminin geçirildiği yer",
@@ -112,7 +112,7 @@ window.cografya_16_sorulari = [
         explanation: "Kom, Doğu Anadolu'da yaygın olan bir köy altı yerleşme türüdür. Batı Anadolu'ya özgü olmaması nedeniyle bu eşleştirme yanlıştır. Oba, yayla, ağıl ve dalyan eşleştirmeleri doğrudur."
     },
     {
-        question: "Soru 10: Bir bölgede yaz mevsiminde hayvancılık faaliyetlerinin sürdürülmesi amacıyla yüksek kesimlere çıkılmakta, yaz sonunda ise ana yerleşim alanlarına geri dönülmektedir.\n\nBu yerleşme türü aşağıdakilerden hangisidir?",
+        question: "Bir bölgede yaz mevsiminde hayvancılık faaliyetlerinin sürdürülmesi amacıyla yüksek kesimlere çıkılmakta, yaz sonunda ise ana yerleşim alanlarına geri dönülmektedir.\n\nBu yerleşme türü aşağıdakilerden hangisidir?",
         options: [
             "A) Güzle",
             "B) Yayla",
@@ -124,7 +124,7 @@ window.cografya_16_sorulari = [
         explanation: "Yayla, yaz mevsiminde hayvancılık faaliyetlerinin sürdürülmesi amacıyla yüksek kesimlere çıkılan ve yaz sonunda ana yerleşim alanlarına dönülen geçici yerleşme türüdür. Güzle ise bu dönüş sırasında kullanılan ara yerleşmedir."
     },
     {
-        question: "Soru 11: Yaylacılık faaliyetleriyle ilgili aşağıdaki bilgilerden hangisi yanlıştır?",
+        question: "Yaylacılık faaliyetleriyle ilgili aşağıdaki bilgilerden hangisi yanlıştır?",
         options: [
             "A) Doğu Karadeniz'de yaygındır.",
             "B) Akdeniz'de serinleme amacıyla kullanılabilir.",
@@ -136,7 +136,7 @@ window.cografya_16_sorulari = [
         explanation: "Yaylacılık günümüzde yalnızca hayvancılık amacıyla değil, aynı zamanda turizm, dinlenme ve serinleme gibi farklı amaçlarla da kullanılmaktadır. Bu nedenle 'yalnızca hayvancılık amacıyla kullanıldığı' ifadesi yanlıştır."
     },
     {
-        question: "Soru 12: Aşağıdaki köy altı yerleşmelerinden hangisi balıkçılık faaliyetleriyle doğrudan ilişkilidir?",
+        question: "Aşağıdaki köy altı yerleşmelerinden hangisi balıkçılık faaliyetleriyle doğrudan ilişkilidir?",
         options: [
             "A) Kom",
             "B) Dam",
@@ -148,7 +148,7 @@ window.cografya_16_sorulari = [
         explanation: "Dalyan, balıkçılık faaliyetleriyle doğrudan ilişkili olan köy altı yerleşme türüdür. Özellikle kıyı bölgelerinde balıkçıların kullandığı geçici yerleşmelerdir."
     },
     {
-        question: "Soru 13: Türkiye'de dağınık yerleşme dokusunun özellikle Karadeniz kıyılarında yaygın olmasında;\n\nI. arazinin engebeli olması,\nII. su kaynaklarının fazla olması,\nIII. tarım alanlarının parçalı olması\n\nözelliklerinden hangileri etkili olmuştur?",
+        question: "Türkiye'de dağınık yerleşme dokusunun özellikle Karadeniz kıyılarında yaygın olmasında;\n\nI. arazinin engebeli olması,\nII. su kaynaklarının fazla olması,\nIII. tarım alanlarının parçalı olması\n\nözelliklerinden hangileri etkili olmuştur?",
         options: [
             "A) Yalnız I",
             "B) Yalnız II",
@@ -160,7 +160,7 @@ window.cografya_16_sorulari = [
         explanation: "Karadeniz kıyılarında dağınık yerleşmenin yaygın olmasında; arazinin engebeli olması (I), su kaynaklarının fazla olması (II) ve tarım alanlarının parçalı olması (III) hep birlikte etkili olmuştur. Bu faktörler yerleşmelerin birbirinden uzak ve dağınık olmasına neden olmuştur."
     },
     {
-        question: "Soru 14: Aşağıdaki özelliklerden hangisinin toplu yerleşme dokusunun oluşumunu desteklemesi beklenir?",
+        question: "Aşağıdaki özelliklerden hangisinin toplu yerleşme dokusunun oluşumunu desteklemesi beklenir?",
         options: [
             "A) Engebeli arazi",
             "B) Bol su kaynakları",
@@ -172,19 +172,19 @@ window.cografya_16_sorulari = [
         explanation: "Düz ve geniş tarım alanları, insanların bir arada toplu halde yaşamasını kolaylaştırır ve toplu yerleşme dokusunun oluşumunu destekler. Engebeli arazi, parçalı tarım alanları ve çeşitli yer şekilleri ise dağınık yerleşmeyi teşvik eder."
     },
     {
-        question: "Soru 15: Bir yerleşmenin ulaşım güzergâhı boyunca uzanarak geliştiği görülmektedir. Başka bir yerleşme ise bir akarsu vadisini takip ederek uzanmaktadır.\n\nBu iki yerleşme şekli aşağıdakilerden hangisinde doğru verilmiştir?",
+        question: "Bir yerleşmenin ulaşım güzergâhı boyunca uzanarak geliştiği görülmektedir. Başka bir yerleşme ise bir akarsu vadisini takip ederek uzanmaktadır.\n\nBu iki yerleşme şekli aşağıdakilerden hangisinde doğru verilmiştir?",
         options: [
             "A) Dairesel – toplu",
-            "B) Çizgisel – çizgisel",
+            "B) Dağınık – çizgisel",
             "C) Toplu – dağınık",
-            "D) Dağınık – çizgisel",
+            "D) Çizgisel – çizgisel",
             "E) Dairesel – dağınık"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Ulaşım güzergâhı boyunca uzanan yerleşmeler 'çizgisel' yerleşme örneğidir. Bir akarsu vadisini takip ederek uzanan yerleşmeler de 'çizgisel' yerleşme şeklindedir. Her iki durumda da yerleşme doğrusal bir hat boyunca gelişmiştir."
     },
     {
-        question: "Soru 16: Türkiye'deki yerleşme şekilleriyle ilgili aşağıdaki bilgilerden hangisi doğrudur?",
+        question: "Türkiye'deki yerleşme şekilleriyle ilgili aşağıdaki bilgilerden hangisi doğrudur?",
         options: [
             "A) Atça, Türkiye'deki çizgisel yerleşmelerin en belirgin örneğidir.",
             "B) Düzce, akarsu boyunca gelişmiş dairesel yerleşmedir.",
@@ -196,7 +196,7 @@ window.cografya_16_sorulari = [
         explanation: "Amasya, Yeşilırmak vadisi boyunca uzandığı için çizgisel yerleşmeye iyi bir örnektir. Atça ise Türkiye'deki dairesel yerleşmelerin en belirgin örneğidir. Düzce ve Amasya ile ilgili diğer ifadeler yanlıştır."
     },
     {
-        question: "Soru 17: Karadeniz'de ahşap meskenlerin yaygın olmasında aşağıdakilerden hangisinin etkisi daha fazladır?",
+        question: "Karadeniz'de ahşap meskenlerin yaygın olmasında aşağıdakilerden hangisinin etkisi daha fazladır?",
         options: [
             "A) Taş rezervlerinin fazla olması",
             "B) Ormanların geniş yer kaplaması",
@@ -208,31 +208,31 @@ window.cografya_16_sorulari = [
         explanation: "Karadeniz Bölgesi, Türkiye'nin en geniş orman varlığına sahip bölgesidir. Ahşap meskenlerin yaygın olmasının temel nedeni, ormanların geniş alan kaplaması ve ahşap malzemenin kolayca temin edilebilmesidir."
     },
     {
-        question: "Soru 18: Aşağıdaki mesken–özellik eşleştirmelerinden hangisi yanlıştır?",
+        question: "Aşağıdaki mesken–özellik eşleştirmelerinden hangisi yanlıştır?",
         options: [
             "A) Kerpiç – Karasal iklim bölgeleri",
             "B) Ahşap – Karadeniz",
             "C) Tüf taş – Nevşehir",
-            "D) Bazalt – Erzurum",
-            "E) Hımış – Yalnızca taş malzemeden yapılma"
+            "D) Hımış – Yalnızca taş malzemeden yapılma",
+            "E) Bazalt – Erzurum"
         ],
-        correctAnswerIndex: 4,
+        correctAnswerIndex: 3,
         explanation: "Hımış evler, taş, ahşap ve kerpiç gibi farklı yapı malzemelerinin birlikte kullanılmasıyla oluşturulur. 'Yalnızca taş malzemeden yapılma' ifadesi yanlıştır. Kerpiç, ahşap, tüf ve bazalt eşleştirmeleri doğrudur."
     },
     {
-        question: "Soru 19: Aşağıdaki kent–fonksiyon eşleştirmelerinden hangisi diğerlerinden farklı bir fonksiyonu ifade eder?",
+        question: "Aşağıdaki kent–fonksiyon eşleştirmelerinden hangisi diğerlerinden farklı bir fonksiyonu ifade eder?",
         options: [
-            "A) Zonguldak – Madencilik",
+            "A) Ankara – İdari",
             "B) Batman – Madencilik",
             "C) Soma – Madencilik",
             "D) Seydişehir – Madencilik",
-            "E) Ankara – İdari"
+            "E) Zonguldak – Madencilik"
         ],
-        correctAnswerIndex: 4,
+        correctAnswerIndex: 0,
         explanation: "Zonguldak, Batman, Soma ve Seydişehir maden kentleridir (sırasıyla taşkömürü, petrol, linyit ve alüminyum). Ankara ise idari fonksiyonu gelişmiş bir başkenttir. Bu nedenle Ankara diğerlerinden farklıdır."
     },
     {
-        question: "Soru 20: Bir coğrafya öğrencisi Türkiye'deki kentlerin fonksiyonlarıyla ilgili aşağıdaki değerlendirmeleri yapmıştır:\n\nI. Ankara'nın idari fonksiyonu gelişmiştir.\nII. Karabük önemli bir sanayi kentidir.\nIII. Antalya'nın turizm fonksiyonu gelişmiştir.\nIV. Zonguldak'ın gelişmesinde madencilik etkili olmuştur.\nV. Eskişehir önemli bir eğitim kentidir.\n\nBuna göre öğrencinin değerlendirmelerinden hangileri doğrudur?",
+        question: "Bir coğrafya öğrencisi Türkiye'deki kentlerin fonksiyonlarıyla ilgili aşağıdaki değerlendirmeleri yapmıştır:\n\nI. Ankara'nın idari fonksiyonu gelişmiştir.\nII. Karabük önemli bir sanayi kentidir.\nIII. Antalya'nın turizm fonksiyonu gelişmiştir.\nIV. Zonguldak'ın gelişmesinde madencilik etkili olmuştur.\nV. Eskişehir önemli bir eğitim kentidir.\n\nBuna göre öğrencinin değerlendirmelerinden hangileri doğrudur?",
         options: [
             "A) I ve II",
             "B) II ve III",
@@ -248,7 +248,7 @@ window.cografya_16_sorulari = [
     // 2. SET: KENT SINIFLANDIRMALARI VE FONKSİYONEL KENTLER
     // ============================================================
     {
-        question: "Soru 21: Türkiye'de kırsal yerleşmeler nüfus miktarlarına göre sınıflandırıldığında aşağıdakilerden hangisi doğrudur?",
+        question: "Türkiye'de kırsal yerleşmeler nüfus miktarlarına göre sınıflandırıldığında aşağıdakilerden hangisi doğrudur?",
         options: [
             "A) 2.000'e kadar olan yerleşmeler kasaba olarak adlandırılır.",
             "B) 2.000–5.000 arasındaki yerleşmeler köy olarak adlandırılır.",
@@ -260,7 +260,7 @@ window.cografya_16_sorulari = [
         explanation: "Türkiye'de kırsal yerleşmeler nüfuslarına göre: 2.000'e kadar 'köy', 2.000-5.000 arası 'kasaba', 5.000'in üzeri ise 'belde' olarak sınıflandırılır. 20.000'in üzerindeki yerleşmeler kentsel yerleşme kabul edilir."
     },
     {
-        question: "Soru 22: Türkiye'de köy sayısının en fazla olduğu il aşağıdakilerden hangisidir?",
+        question: "Türkiye'de köy sayısının en fazla olduğu il aşağıdakilerden hangisidir?",
         options: [
             "A) Erzurum",
             "B) Sivas",
@@ -272,19 +272,19 @@ window.cografya_16_sorulari = [
         explanation: "Sivas, Türkiye'de en fazla köy sayısına sahip ildir. Yüzölçümünün geniş olması, dağlık ve engebeli arazisi nedeniyle kırsal yerleşmelerin fazla olması bu durumu açıklamaktadır."
     },
     {
-        question: "Soru 23: Aşağıdaki yerleşmelerden hangisinin kuruluşunda geniş tarım arazilerinden yararlanma amacı daha belirgindir?",
+        question: "Aşağıdaki yerleşmelerden hangisinin kuruluşunda geniş tarım arazilerinden yararlanma amacı daha belirgindir?",
         options: [
-            "A) Oba",
-            "B) Çiftlik",
+            "A) Çiftlik",
+            "B) Oba",
             "C) Dalyan",
             "D) Güzle",
             "E) Kom"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "Çiftlikler, geniş tarım arazilerinden yararlanmak amacıyla kurulan tarımsal işletmelerdir. Oba hayvancılık, dalyan balıkçılık, güzle mevsimsel konaklama ve kom ise tarım amaçlıdır."
     },
     {
-        question: "Soru 24: Batı Karadeniz'de birden fazla mahallenin bir araya gelmesiyle oluşan köy altı yerleşmesine aşağıdakilerden hangisi denir?",
+        question: "Batı Karadeniz'de birden fazla mahallenin bir araya gelmesiyle oluşan köy altı yerleşmesine aşağıdakilerden hangisi denir?",
         options: [
             "A) Divan",
             "B) Mezra",
@@ -296,7 +296,7 @@ window.cografya_16_sorulari = [
         explanation: "Divan, Batı Karadeniz Bölgesi'ne özgü olup birden fazla mahallenin bir araya gelmesiyle oluşan köy altı yerleşme türüdür. Mezra Doğu Anadolu, oba konargöçer, kom ise Doğu Anadolu'ya özgüdür."
     },
     {
-        question: "Soru 25: Aşağıdaki köy altı yerleşmelerinden hangisinin geçici yerleşme özelliği taşıması beklenir?",
+        question: "Aşağıdaki köy altı yerleşmelerinden hangisinin geçici yerleşme özelliği taşıması beklenir?",
         options: [
             "A) Divan",
             "B) Mezra",
@@ -308,19 +308,19 @@ window.cografya_16_sorulari = [
         explanation: "Yaylalar, yaz mevsiminde hayvancılık faaliyetleri için çıkılan ve yaz sonunda boşaltılan geçici yerleşmelerdir. Divan, mezra ve kom kalıcı köy altı yerleşmeleridir."
     },
     {
-        question: "Soru 26: Aşağıdakilerden hangisi geçici köy altı yerleşmelerinin ortaya çıkmasında etkili olan faktörlerden biri değildir?",
+        question: "Aşağıdakilerden hangisi geçici köy altı yerleşmelerinin ortaya çıkmasında etkili olan faktörlerden biri değildir?",
         options: [
-            "A) Otlakların yetersiz olması",
+            "A) Sanayi faaliyetlerinin gelişmiş olması",
             "B) Tarım alanlarının yerleşim merkezlerinden uzakta bulunması",
             "C) Hayvancılık faaliyetlerinin mevsimsel olarak sürdürülmesi",
             "D) Tarım ve hayvancılık faaliyetlerinin farklı alanlarda yürütülmesi",
-            "E) Sanayi faaliyetlerinin gelişmiş olması"
+            "E) Otlakların yetersiz olması"
         ],
-        correctAnswerIndex: 4,
+        correctAnswerIndex: 0,
         explanation: "Geçici köy altı yerleşmeleri (yayla, oba, güzle vb.) tarım ve hayvancılık faaliyetleriyle ilişkilidir. Sanayi faaliyetlerinin gelişmiş olması, geçici yerleşmelerin ortaya çıkmasında etkili bir faktör değildir."
     },
     {
-        question: "Soru 27: Aşağıdaki yerleşme türlerinden hangisi konargöçer hayvancılıkla uğraşan insanların oluşturduğu çadır topluluğu olarak tanımlanabilir?",
+        question: "Aşağıdaki yerleşme türlerinden hangisi konargöçer hayvancılıkla uğraşan insanların oluşturduğu çadır topluluğu olarak tanımlanabilir?",
         options: [
             "A) Yayla",
             "B) Oba",
@@ -332,7 +332,7 @@ window.cografya_16_sorulari = [
         explanation: "Oba, konargöçer hayvancılıkla uğraşan insanların oluşturduğu çadır topluluğudur. Yayla yazlık, güzle ara konaklama, dam hayvan barınağı ve dalyan balıkçılık yerleşmesidir."
     },
     {
-        question: "Soru 28: Bir yerleşmede yaz döneminde yüksek kesimlere çıkılmakta, sonbaharda ana yerleşim alanlarına dönülmeden önce belirli bir ara yerleşmede kısa süreli konaklanmaktadır.\n\nBu ara yerleşmeye aşağıdakilerden hangisi denir?",
+        question: "Bir yerleşmede yaz döneminde yüksek kesimlere çıkılmakta, sonbaharda ana yerleşim alanlarına dönülmeden önce belirli bir ara yerleşmede kısa süreli konaklanmaktadır.\n\nBu ara yerleşmeye aşağıdakilerden hangisi denir?",
         options: [
             "A) Mezra",
             "B) Divan",
@@ -344,7 +344,7 @@ window.cografya_16_sorulari = [
         explanation: "Güzle, yaylacılık faaliyetlerinde yayladan dönüş esnasında kullanılan ara konaklama yeridir. Mevsimsel geçiş dönemlerinde kısa süreli konaklama amacıyla kullanılır."
     },
     {
-        question: "Soru 29: Aşağıdaki eşleştirmelerden hangisi Türkiye'deki geçici köy altı yerleşmeleri ile ekonomik faaliyet arasındaki ilişkiyi yanlış göstermektedir?",
+        question: "Aşağıdaki eşleştirmelerden hangisi Türkiye'deki geçici köy altı yerleşmeleri ile ekonomik faaliyet arasındaki ilişkiyi yanlış göstermektedir?",
         options: [
             "A) Oba → Hayvancılık",
             "B) Yayla → Hayvancılık ve turizm",
@@ -356,7 +356,7 @@ window.cografya_16_sorulari = [
         explanation: "Dalyan bir yerleşme türü değil, balıkçılıkta kullanılan bir tuzak/tesis türüdür. Köy altı yerleşmesi olarak değil, balıkçılık aracı olarak değerlendirilmelidir. Diğer eşleştirmeler doğrudur."
     },
     {
-        question: "Soru 30: Türkiye'de yerleşmelerin fonksiyonlarıyla ilgili aşağıdakilerden hangisi doğru değildir?",
+        question: "Türkiye'de yerleşmelerin fonksiyonlarıyla ilgili aşağıdakilerden hangisi doğru değildir?",
         options: [
             "A) Kocaeli'nin sanayi fonksiyonu gelişmiştir.",
             "B) Mersin'in ulaşım fonksiyonu gelişmiştir.",
@@ -368,7 +368,7 @@ window.cografya_16_sorulari = [
         explanation: "Bodrum, turizm ve liman kenti olarak bilinir. Madencilik fonksiyonu gelişmemiştir. Kocaeli (sanayi), Mersin (ulaşım/liman), Rize (tarım/çay) ve Sarıkamış (askeri) doğru eşleştirmelerdir."
     },
     {
-        question: "Soru 31: Aşağıdaki kentlerden hangisinin gelişmesinde ticaret fonksiyonu diğerlerine göre daha belirgin bir rol oynamıştır?",
+        question: "Aşağıdaki kentlerden hangisinin gelişmesinde ticaret fonksiyonu diğerlerine göre daha belirgin bir rol oynamıştır?",
         options: [
             "A) Zonguldak",
             "B) Karabük",
@@ -380,19 +380,19 @@ window.cografya_16_sorulari = [
         explanation: "İstanbul, tarih boyunca ticaretin merkezi olmuş, doğu ile batı arasında köprü görevi gören bir ticaret kentidir. Zonguldak, Karabük ve Soma maden/sanayi; Sarıkamış ise askeri kenttir."
     },
     {
-        question: "Soru 32: Aşağıdaki kentlerden hangisi eğitim fonksiyonuyla ilişkilendirilemez?",
+        question: "Aşağıdaki kentlerden hangisi eğitim fonksiyonuyla ilişkilendirilemez?",
         options: [
             "A) Eskişehir",
             "B) Ankara",
             "C) İstanbul",
-            "D) İzmir",
-            "E) Zonguldak"
+            "D) Zonguldak",
+            "E) İzmir"
         ],
-        correctAnswerIndex: 4,
+        correctAnswerIndex: 3,
         explanation: "Zonguldak, eğitim fonksiyonuyla değil, madencilik (taşkömürü) fonksiyonuyla öne çıkar. Eskişehir (Anadolu Üniversitesi), Ankara (ODTÜ, Ankara Ü.), İstanbul (İstanbul Ü., Boğaziçi) ve İzmir (Ege Ü.) eğitim kentleridir."
     },
     {
-        question: "Soru 33: Aşağıdaki kentlerden hangisi Türkiye'deki maden kentlerine örnek gösterilemez?",
+        question: "Aşağıdaki kentlerden hangisi Türkiye'deki maden kentlerine örnek gösterilemez?",
         options: [
             "A) Batman",
             "B) Zonguldak",
@@ -404,19 +404,19 @@ window.cografya_16_sorulari = [
         explanation: "Samsun, madencilikle değil, tarım, ticaret ve ulaşım fonksiyonlarıyla öne çıkar. Batman (petrol), Zonguldak (taşkömürü), Soma (linyit) ve Seydişehir (alüminyum/boksit) maden kentleridir."
     },
     {
-        question: "Soru 34: Aşağıdaki kentlerden hangisinin fonksiyonunun belirlenmesinde turizm faaliyetleri daha fazla etkili olmuştur?",
+        question: "Aşağıdaki kentlerden hangisinin fonksiyonunun belirlenmesinde turizm faaliyetleri daha fazla etkili olmuştur?",
         options: [
             "A) Kırıkkale",
             "B) Karabük",
             "C) Kemer",
             "D) Kocaeli",
-            "E) Kırıkkale"
+            "E) Zonguldak"
         ],
         correctAnswerIndex: 2,
-        explanation: "Kemer, Antalya'nın turizm merkezlerinden biri olup turizm fonksiyonu gelişmiştir. Kırıkkale (sanayi), Karabük (sanayi) ve Kocaeli (sanayi) ise turizmle öne çıkmaz."
+        explanation: "Kemer, Antalya'nın turizm merkezlerinden biri olup turizm fonksiyonu gelişmiştir. Kırıkkale, Karabük ve Kocaeli sanayi, Zonguldak ise madencilik (taş kömürü) fonksiyonuyla öne çıkar."
     },
     {
-        question: "Soru 35: Bir kentin gelişmesinde aşağıdaki faktörlerden hangisinin etkili olması, o kentin idari fonksiyonunun geliştiğini gösterir?",
+        question: "Bir kentin gelişmesinde aşağıdaki faktörlerden hangisinin etkili olması, o kentin idari fonksiyonunun geliştiğini gösterir?",
         options: [
             "A) Maden kaynaklarının işletilmesi",
             "B) Tarımsal ürünlerin pazarlanması",
@@ -428,7 +428,7 @@ window.cografya_16_sorulari = [
         explanation: "İdari fonksiyon, kamu kurumları ve yönetim birimlerinin yoğunlaştığı kentlerde gelişir. Başkent veya il merkezleri bu fonksiyonun en belirgin örnekleridir. Diğer seçenekler farklı fonksiyonları ifade eder."
     },
     {
-        question: "Soru 36: Türkiye'de nüfusu belirli bir seviyenin üzerine çıkan bazı yerleşmelerin büyükşehir belediyesi statüsüne geçirilmesi, aşağıdaki sınıflandırma ölçütlerinden hangisinin önemini gösterir?",
+        question: "Türkiye'de nüfusu belirli bir seviyenin üzerine çıkan bazı yerleşmelerin büyükşehir belediyesi statüsüne geçirilmesi, aşağıdaki sınıflandırma ölçütlerinden hangisinin önemini gösterir?",
         options: [
             "A) Yerleşmenin ekonomik fonksiyonu",
             "B) Yerleşmenin nüfus miktarı",
@@ -440,7 +440,7 @@ window.cografya_16_sorulari = [
         explanation: "Büyükşehir belediyesi statüsü, yerleşmenin nüfus miktarına göre belirlenir. Nüfusun belirli bir seviyenin üzerine çıkması, o yerleşmenin büyükşehir olarak kabul edilmesinde temel ölçüttür."
     },
     {
-        question: "Soru 37: Aşağıdakilerden hangisi Türkiye'deki büyükşehir belediyesi uygulamasıyla ilgili verilen bilgiler arasında yer alır?",
+        question: "Aşağıdakilerden hangisi Türkiye'deki büyükşehir belediyesi uygulamasıyla ilgili verilen bilgiler arasında yer alır?",
         options: [
             "A) Büyükşehir belediyesi için nüfusun 750 bini geçmesi esas alınır.",
             "B) Büyükşehir belediyesi yalnızca kırsal yerleşmelere uygulanır.",
@@ -452,19 +452,19 @@ window.cografya_16_sorulari = [
         explanation: "Türkiye'de büyükşehir belediyesi kurulabilmesi için yerleşmenin nüfusunun 750.000'i geçmesi gerekmektedir. Diğer seçeneklerdeki ifadeler yanlıştır."
     },
     {
-        question: "Soru 38: Doğal ve kültürel dokusunu büyük ölçüde koruyan, yaşamın daha sakin bir biçimde sürdürüldüğü kentlerin belirli ölçütler doğrultusunda 'sakin şehir' olarak nitelendirilmesi aşağıdaki kavramlardan hangisiyle daha fazla ilişkilidir?",
+        question: "Doğal ve kültürel dokusunu büyük ölçüde koruyan, yaşamın daha sakin bir biçimde sürdürüldüğü kentlerin belirli ölçütler doğrultusunda 'sakin şehir' olarak nitelendirilmesi aşağıdaki kavramlardan hangisiyle daha fazla ilişkilidir?",
         options: [
-            "A) Sanayileşme",
-            "B) Sürdürülebilir yerleşme",
+            "A) Sürdürülebilir yerleşme",
+            "B) Sanayileşme",
             "C) Metropolleşme",
             "D) Kırsal nüfusun artması",
             "E) Maden işletmeciliği"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "Sakin şehir (Cittaslow) kavramı, doğal ve kültürel dokuyu koruyarak sürdürülebilir yerleşme anlayışını benimser. Sanayileşme ve metropolleşmenin tersine, yavaş ve sürdürülebilir yaşamı savunur."
     },
     {
-        question: "Soru 39: Türkiye'de ilk sakin şehir olarak bilinen yerleşme aşağıdakilerden hangisidir?",
+        question: "Türkiye'de ilk sakin şehir olarak bilinen yerleşme aşağıdakilerden hangisidir?",
         options: [
             "A) Bodrum",
             "B) Seferihisar",
@@ -476,19 +476,19 @@ window.cografya_16_sorulari = [
         explanation: "Seferihisar (İzmir), Türkiye'nin ilk sakin şehri (Cittaslow) unvanına sahiptir. Safranbolu ise UNESCO Dünya Mirası Listesi'ndedir ancak ilk sakin şehir değildir."
     },
     {
-        question: "Soru 40: Türkiye'de yerleşme dokusunun oluşmasında doğal çevre koşullarının etkisiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+        question: "Türkiye'de yerleşme dokusunun oluşmasında doğal çevre koşullarının etkisiyle ilgili aşağıdakilerden hangisi yanlıştır?",
         options: [
             "A) Engebeli arazilerde yerleşmeler daha dağınık olabilir.",
             "B) Su kaynaklarının fazla olduğu yerlerde dağınık yerleşme görülebilir.",
             "C) Tarım alanlarının parçalı olması dağınık yerleşmeyi destekleyebilir.",
-            "D) Düz ve geniş tarım alanlarının bulunduğu yerlerde toplu yerleşmeler görülebilir.",
-            "E) Su kaynaklarının sınırlı olması dağınık yerleşmenin temel nedenidir."
+            "D) Su kaynaklarının sınırlı olması dağınık yerleşmenin temel nedenidir.",
+            "E) Düz ve geniş tarım alanlarının bulunduğu yerlerde toplu yerleşmeler görülebilir."
         ],
-        correctAnswerIndex: 4,
+        correctAnswerIndex: 3,
         explanation: "Su kaynaklarının sınırlı olduğu alanlarda yerleşmeler su çevresinde toplanır, yani toplu yerleşme görülür. Dağınık yerleşmenin temel nedeni su kaynaklarının sınırlı olması değil, aksine bol ve yaygın su kaynaklarıdır."
     },
     {
-        question: "Soru 41: Karadeniz Bölgesi'nde kırsal yerleşmelerin çoğu zaman dağınık bir görünüm göstermesinde;\n\nI. arazinin engebeli olması,\nII. tarım alanlarının parçalı olması,\nIII. su kaynaklarının fazla olması\n\nfaktörlerinden hangileri etkili olmuştur?",
+        question: "Karadeniz Bölgesi'nde kırsal yerleşmelerin çoğu zaman dağınık bir görünüm göstermesinde;\n\nI. arazinin engebeli olması,\nII. tarım alanlarının parçalı olması,\nIII. su kaynaklarının fazla olması\n\nfaktörlerinden hangileri etkili olmuştur?",
         options: [
             "A) Yalnız I",
             "B) Yalnız II",
@@ -500,31 +500,31 @@ window.cografya_16_sorulari = [
         explanation: "Karadeniz Bölgesi'ndeki dağınık yerleşme dokusunda her üç faktör de etkilidir. Engebeli arazi (I), tarım alanlarının parçalı olması (II) ve su kaynaklarının fazla olması (III) yerleşmelerin dağınık olmasına neden olmuştur."
     },
     {
-        question: "Soru 42: Kurak ve yarı kurak bölgelerde su kaynaklarının sınırlı olması nedeniyle insanların yerleşim alanlarını su kaynaklarının çevresinde yoğunlaştırması aşağıdaki yerleşme dokularından hangisinin oluşmasına daha fazla katkı sağlar?",
+        question: "Kurak ve yarı kurak bölgelerde su kaynaklarının sınırlı olması nedeniyle insanların yerleşim alanlarını su kaynaklarının çevresinde yoğunlaştırması aşağıdaki yerleşme dokularından hangisinin oluşmasına daha fazla katkı sağlar?",
         options: [
             "A) Dağınık",
-            "B) Toplu",
+            "B) Dairesel",
             "C) Çizgisel",
-            "D) Dairesel",
+            "D) Toplu",
             "E) Geçici"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Su kaynaklarının sınırlı olduğu kurak alanlarda insanlar su çevresinde toplanır. Bu durum toplu yerleşme dokusunun oluşmasına katkı sağlar. Dağınık yerleşme ise bol ve yaygın su kaynaklarının olduğu yerlerde görülür."
     },
     {
-        question: "Soru 43: Bir yerleşmenin yapı malzemesi seçiminde aşağıdakilerden hangisinin etkisi diğerlerinden daha azdır?",
+        question: "Bir yerleşmenin yapı malzemesi seçiminde aşağıdakilerden hangisinin etkisi diğerlerinden daha azdır?",
         options: [
             "A) İklim",
             "B) Bitki örtüsü",
             "C) Jeolojik yapı",
-            "D) Ekonomik faaliyetler",
-            "E) Dünya'nın günlük hareketi"
+            "D) Dünya'nın günlük hareketi",
+            "E) Ekonomik faaliyetler"
         ],
-        correctAnswerIndex: 4,
+        correctAnswerIndex: 3,
         explanation: "Yapı malzemesi seçiminde iklim, bitki örtüsü, jeolojik yapı ve ekonomik faaliyetler etkiliyken, Dünya'nın günlük hareketi (dönme hareketi) yerleşme yapı malzemeleri üzerinde belirleyici bir etkiye sahip değildir."
     },
     {
-        question: "Soru 44: Karadeniz'de ahşap meskenlerin yaygın olmasının temel nedenlerinden biri aşağıdakilerden hangisidir?",
+        question: "Karadeniz'de ahşap meskenlerin yaygın olmasının temel nedenlerinden biri aşağıdakilerden hangisidir?",
         options: [
             "A) Ormanların geniş alan kaplaması",
             "B) Kuraklığın çok şiddetli olması",
@@ -536,19 +536,19 @@ window.cografya_16_sorulari = [
         explanation: "Karadeniz, Türkiye'nin orman varlığının en fazla olduğu bölgesidir. Ahşap malzemenin bol ve ucuz olması, bölgede ahşap meskenlerin yaygınlaşmasının temel nedenidir."
     },
     {
-        question: "Soru 45: Kerpiç meskenlerle ilgili aşağıdaki bilgilerden hangisi doğrudur?",
+        question: "Kerpiç meskenlerle ilgili aşağıdaki bilgilerden hangisi doğrudur?",
         options: [
             "A) Nemli iklim bölgelerinde en yaygın yapı malzemesidir.",
-            "B) Karasal iklim bölgelerinde yaygın olarak kullanılır.",
+            "B) Yalnızca kıyı bölgelerinde görülür.",
             "C) Temel yapı malzemesi bazalttır.",
-            "D) Yalnızca kıyı bölgelerinde görülür.",
+            "D) Karasal iklim bölgelerinde yaygın olarak kullanılır.",
             "E) Depreme karşı dayanıklılığı çok yüksektir."
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Kerpiç, karasal iklimin hâkim olduğu İç Anadolu, Güneydoğu Anadolu ve Doğu Anadolu gibi bölgelerde yaygın olarak kullanılan geleneksel yapı malzemesidir. Nemli bölgelerde kerpiç dayanıksızdır."
     },
     {
-        question: "Soru 46: Aşağıdaki kayaç–yerleşme yeri eşleştirmelerinden hangisi doğrudur?",
+        question: "Aşağıdaki kayaç–yerleşme yeri eşleştirmelerinden hangisi doğrudur?",
         options: [
             "A) Tüf – Nevşehir",
             "B) Bazalt – Muğla",
@@ -560,7 +560,7 @@ window.cografya_16_sorulari = [
         explanation: "Nevşehir ve çevresinde tüf (volkanik kül) kayacı yaygındır. Peribacaları ve kayadan oyma yapılar bu malzeme ile oluşturulmuştur. Bazalt, andezit ve tüf eşleştirmeleri diğer bölgeler için yanlıştır."
     },
     {
-        question: "Soru 47: Akdeniz Bölgesi'nde bazı yörelerde taş meskenlerin yaygın olmasında aşağıdakilerden hangisi etkili olmuştur?",
+        question: "Akdeniz Bölgesi'nde bazı yörelerde taş meskenlerin yaygın olmasında aşağıdakilerden hangisi etkili olmuştur?",
         options: [
             "A) Karstik arazilerin bulunması",
             "B) Ormanların tamamen yok olması",
@@ -572,7 +572,7 @@ window.cografya_16_sorulari = [
         explanation: "Akdeniz Bölgesi'nde karstik araziler (kalker, traverten vb.) yaygındır. Bu kayaçların bol olması, bölgede taş malzemenin kolayca temin edilmesini sağlamış ve taş meskenlerin yaygınlaşmasına neden olmuştur."
     },
     {
-        question: "Soru 48: Hımış evler; taş, ahşap ve kerpiç gibi farklı yapı malzemelerinin birlikte kullanılmasıyla oluşturulur.\n\nBuna göre hımış evlerle ilgili aşağıdakilerden hangisi söylenebilir?",
+        question: "Hımış evler; taş, ahşap ve kerpiç gibi farklı yapı malzemelerinin birlikte kullanılmasıyla oluşturulur.\n\nBuna göre hımış evlerle ilgili aşağıdakilerden hangisi söylenebilir?",
         options: [
             "A) Yalnızca taş malzemeden yapılırlar.",
             "B) Yalnızca Karadeniz'de görülürler.",
@@ -584,7 +584,7 @@ window.cografya_16_sorulari = [
         explanation: "Hımış evler, ahşap iskelet sistemi üzerine taş, kerpiç veya tuğla dolgu malzemesinin kullanıldığı, farklı yapı malzemelerinin bir arada kullanıldığı geleneksel mesken tipidir. Safranbolu ve Beypazarı'nda yaygındır."
     },
     {
-        question: "Soru 49: Safranbolu ve Beypazarı'ndaki geleneksel konutlar aşağıdaki mesken tiplerinden hangisine örnek gösterilebilir?",
+        question: "Safranbolu ve Beypazarı'ndaki geleneksel konutlar aşağıdaki mesken tiplerinden hangisine örnek gösterilebilir?",
         options: [
             "A) Kerpiç ev",
             "B) Hımış ev",
@@ -596,15 +596,15 @@ window.cografya_16_sorulari = [
         explanation: "Safranbolu ve Beypazarı'ndaki geleneksel konutlar, ahşap iskelet üzerine kerpiç veya taş dolgulu hımış evlere örnektir. Bu evler, Osmanlı dönemi sivil mimarisinin en güzel örneklerindendir."
     },
     {
-        question: "Soru 50: Aşağıdaki durumlardan hangisi yerleşme ile doğal çevre arasındaki ilişkiye örnek oluşturmaz?",
+        question: "Aşağıdaki durumlardan hangisi yerleşme ile doğal çevre arasındaki ilişkiye örnek oluşturmaz?",
         options: [
             "A) Karadeniz'de ormanların fazla olması nedeniyle ahşap meskenlerin yaygınlaşması",
             "B) Karasal bölgelerde kerpiç meskenlerin görülmesi",
-            "C) Engebeli arazilerde dağınık yerleşmelerin yaygınlaşması",
+            "C) Kentlerin fonksiyonlarının doğal çevreden tamamen bağımsız olarak gelişmesi",
             "D) Su kaynaklarının sınırlı olduğu alanlarda yerleşmelerin su çevresinde toplanması",
-            "E) Kentlerin fonksiyonlarının doğal çevreden tamamen bağımsız olarak gelişmesi"
+            "E) Engebeli arazilerde dağınık yerleşmelerin yaygınlaşması"
         ],
-        correctAnswerIndex: 4,
+        correctAnswerIndex: 2,
         explanation: "Kentlerin fonksiyonları doğal çevreden tamamen bağımsız değildir. Tarihsel süreçte kentlerin kuruluşu, gelişimi ve fonksiyonları doğal çevre koşullarıyla yakından ilişkilidir. Bu nedenle 'tamamen bağımsız' ifadesi yanlıştır."
     }
 ];

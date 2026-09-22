@@ -2,14 +2,14 @@
 window.vatandas_2_sorulari = [
     {
         question: "Edim ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
-        options: ["A) Edimin konusu belirsiz olabilir.", "B) Edimin konusu imkânsız olamaz.", "C) Her borç ilişkisinde mutlaka bir edim bulunur.", "D) Edimin konusu hukuka aykırı olamaz.", "E) Edimin konusu vermek, yapmak veya yapmamaktır."],
-        correctAnswerIndex: 0,
+        options: ["A) Edimin konusu vermek, yapmak veya yapmamaktır.", "B) Edimin konusu imkânsız olamaz.", "C) Her borç ilişkisinde mutlaka bir edim bulunur.", "D) Edimin konusu hukuka aykırı olamaz.", "E) Edimin konusu belirsiz olabilir."],
+        correctAnswerIndex: 4,
         explanation: "Edimin konusu belirli olmalıdır; belirsiz edim geçerli bir borç ilişkisi doğurmaz."
     },
     {
         question: "Tarafların bir hukuki sonuç elde etmek için karşılıklı ve birbirine uygun irade açıklamasında bulunmaları ile meydana gelen borçlar hukuku müessesesi aşağıdakilerden hangisidir?",
-        options: ["A) Gabin", "B) Tereke", "C) Edim", "D) Sözleşme", "E) İcap"],
-        correctAnswerIndex: 3,
+        options: ["A) Gabin", "B) Sözleşme", "C) Edim", "D) Tereke", "E) İcap"],
+        correctAnswerIndex: 1,
         explanation: "Sözleşme, karşılıklı ve birbirine uygun irade beyanıyla (icap + kabul) kurulur."
     },
     {

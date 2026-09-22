@@ -4,7 +4,7 @@ window.cografya_18_sorulari = [
     // BÖLÜM 1: TARIM TİPLERİ (Soru 1-6)
     // ============================================================
     {
-        question: "Soru 1: I. Ekstansif tarım, engebeli alanlarda ilkel yöntemlerle yapılır.\nII. İntansif tarım, geniş ova ve deltalarda sulama-gübreleme-makineleşme ile yapılır.\nIII. Nadas tarımı ülkemizde en fazla Karadeniz Bölgesi'nde uygulanır.\n\nYukarıdaki bilgilerden hangileri doğrudur?",
+        question: "I. Ekstansif tarım, engebeli alanlarda ilkel yöntemlerle yapılır.\nII. İntansif tarım, geniş ova ve deltalarda sulama-gübreleme-makineleşme ile yapılır.\nIII. Nadas tarımı ülkemizde en fazla Karadeniz Bölgesi'nde uygulanır.\n\nYukarıdaki bilgilerden hangileri doğrudur?",
         options: [
             "A) Yalnız I",
             "B) Yalnız III",
@@ -16,7 +16,7 @@ window.cografya_18_sorulari = [
         explanation: "I doğrudur; ekstansif tarım 'engebeli alanlarda yapılır' ve 'ilkel tarım yöntemleri uygulanır' şeklinde tanımlanmıştır. II doğrudur; intansif tarım 'modern tarım', 'sulama, gübreleme, makineleşme' ve 'geniş ova ve deltalar' ile açıklanmıştır. III yanlıştır; nadas tarımı yağış azlığı nedeniyle en fazla İç Anadolu'da, en az ise Karadeniz'de uygulanır."
     },
     {
-        question: "Soru 2: Nadas tarımı ile ilgili aşağıdakilerden hangisi söylenemez?",
+        question: "Nadas tarımı ile ilgili aşağıdakilerden hangisi söylenemez?",
         options: [
             "A) Toprağın bir yıl boş bırakılması yöntemidir.",
             "B) Erozyona neden olabilen bir uygulamadır.",
@@ -28,7 +28,7 @@ window.cografya_18_sorulari = [
         explanation: "A, B ve C doğrudur. E de doğrudur; 'sulama yapılırsa nadas azalır' bilgisiyle örtüşür. D ise yanlıştır; GAP ve KOP sulamayı artırarak nadas alanlarını azaltmıştır, artırmamıştır."
     },
     {
-        question: "Soru 3: Nöbetleşe tarımın etkileri arasında aşağıdakilerden hangisi yer almaz?",
+        question: "Nöbetleşe tarımın etkileri arasında aşağıdakilerden hangisi yer almaz?",
         options: [
             "A) Erozyonun azalması",
             "B) Ekilebilir tarım alanlarının artması",
@@ -40,7 +40,7 @@ window.cografya_18_sorulari = [
         explanation: "Nöbetleşe tarım; nadası ve erozyonu azaltır (A, C doğru), ekilen araziyi artırır (B doğru), tarımsal üretim ve verimi artırır (D doğru). E seçeneği yanlıştır; nöbetleşe tarım sulama ihtiyacını tamamen ortadan kaldırmaz."
     },
     {
-        question: "Soru 4: İntansif tarım kapsamında örnek verilen ürünler arasında aşağıdakilerden hangisi yer almaz?",
+        question: "İntansif tarım kapsamında örnek verilen ürünler arasında aşağıdakilerden hangisi yer almaz?",
         options: [
             "A) Pamuk",
             "B) Mısır",
@@ -52,19 +52,19 @@ window.cografya_18_sorulari = [
         explanation: "İntansif tarıma örnek olarak pamuk, ayçiçeği ve mısır verilir. Fındık bu grupta değildir; Karadeniz'de ekstansif tarımın devirli ürünüdür."
     },
     {
-        question: "Soru 5: Ekstansif tarım ile ilgili aşağıdaki bilgilerden hangisi yanlıştır?",
+        question: "Ekstansif tarım ile ilgili aşağıdaki bilgilerden hangisi yanlıştır?",
         options: [
-            "A) Genellikle engebeli alanlarda uygulanır.",
+            "A) Ekonomik ve tarımsal açıdan gelişmiş yerlerde uygulanan bir yöntemdir.",
             "B) İlkel tarım yöntemleri kullanılır.",
             "C) Verimi düşüktür.",
-            "D) Ekonomik ve tarımsal açıdan gelişmiş yerlerde uygulanan bir yöntemdir.",
+            "D) Genellikle engebeli alanlarda uygulanır.",
             "E) Karadeniz ve Doğu Anadolu bölgelerinde yaygındır."
         ],
-        correctAnswerIndex: 3,
-        explanation: "A, B, C ve E doğrudur. D ise yanlıştır; ekstansif tarım geri kalmış yerlerde uygulanır, gelişmiş yerlerde değil. Gelişmiş yerler intansif tarımla ilişkilidir."
+        correctAnswerIndex: 0,
+        explanation: "“Ekonomik ve tarımsal açıdan gelişmiş yerlerde uygulanan bir yöntemdir” ifadesi yanlıştır; ekstansif tarım geri kalmış yerlerde uygulanır, gelişmiş yerlerde değil. Gelişmiş yerler intansif tarımla ilişkilidir. Diğer ifadeler doğrudur."
     },
     {
-        question: "Soru 6: Nöbetleşe tarımda aynı tarlaya dönüşümlü ekilen ürün grupları için;\n\nI. Fasulye (baklagil)\nII. Pirinç (tahıl)\nIII. Soğan (yumru kök)\n\nYukarıdakilerden hangileri doğrudur?",
+        question: "Nöbetleşe tarımda aynı tarlaya dönüşümlü ekilen ürün grupları için;\n\nI. Fasulye (baklagil)\nII. Pirinç (tahıl)\nIII. Soğan (yumru kök)\n\nYukarıdakilerden hangileri doğrudur?",
         options: [
             "A) Yalnız I",
             "B) I ve II",
@@ -80,7 +80,7 @@ window.cografya_18_sorulari = [
     // BÖLÜM 2: TARIMI GELİŞTİRMEK İÇİN ALINMASI GEREKEN ÖNLEMLER (Soru 7-11)
     // ============================================================
     {
-        question: "Soru 7: Sulamanın tarım üzerindeki etkileri arasında aşağıdakilerden hangisi gösterilemez?",
+        question: "Sulamanın tarım üzerindeki etkileri arasında aşağıdakilerden hangisi gösterilemez?",
         options: [
             "A) Verimin artması",
             "B) Ürün çeşitliliğinin artması",
@@ -92,7 +92,7 @@ window.cografya_18_sorulari = [
         explanation: "Sulamanın etkileri; verim artışı (A), gelir artışı (E), ürün çeşidinin artması (B) ve nadasın azalmasıdır (C) — bunların hepsi doğrudur. D seçeneği sulamanın değil, makineleşmenin sonucudur: kırsalda işsizlik artar."
     },
     {
-        question: "Soru 8: Tarımda makineleşme ile ilgili aşağıdaki bilgilerden hangisi yanlıştır?",
+        question: "Tarımda makineleşme ile ilgili aşağıdaki bilgilerden hangisi yanlıştır?",
         options: [
             "A) Kırsal kesimde işsizliğe yol açabilir.",
             "B) Ekim ve hasat süresini kısaltır.",
@@ -101,10 +101,10 @@ window.cografya_18_sorulari = [
             "E) Ekilen tarım alanlarının genişlemesini sağlar."
         ],
         correctAnswerIndex: 3,
-        explanation: "A, B, C ve E doğrudur. D ise yanlıştır; makineleşme ekim ve hasatta ürün kaybını azaltır, artırmaz."
+        explanation: "“Ekim ve hasat sırasındaki ürün kayıplarını artırır” ifadesi yanlıştır; makineleşme ekim ve hasatta ürün kaybını azaltır, artırmaz. Diğer ifadeler doğrudur."
     },
     {
-        question: "Soru 9: I. Arazi dağıtımı en fazla Şanlıurfa'da gerçekleştirilmiştir.\nII. Arazi toplulaştırması, dağınık parselleri bir araya getirme işlemidir.\nIII. Arazi toplulaştırması, engebeli arazi nedeniyle en çok Güneydoğu Anadolu Bölgesi'nde uygulanmıştır.\n\nYukarıdaki bilgilerden hangileri doğrudur?",
+        question: "I. Arazi dağıtımı en fazla Şanlıurfa'da gerçekleştirilmiştir.\nII. Arazi toplulaştırması, dağınık parselleri bir araya getirme işlemidir.\nIII. Arazi toplulaştırması, engebeli arazi nedeniyle en çok Güneydoğu Anadolu Bölgesi'nde uygulanmıştır.\n\nYukarıdaki bilgilerden hangileri doğrudur?",
         options: [
             "A) Yalnız I",
             "B) I ve II",
@@ -116,19 +116,19 @@ window.cografya_18_sorulari = [
         explanation: "I doğrudur: arazi dağıtımı en fazla Şanlıurfa'dadır. II doğrudur: toplulaştırma dağınık parselleri birleştirir. III yanlıştır; engebeli arazi nedeniyle en çok Doğu Karadeniz'de uygulanır."
     },
     {
-        question: "Soru 10: Aşağıdakilerden hangisi tarımı destekleyen kuruluşlar arasında yer almaz?",
+        question: "Aşağıdakilerden hangisi tarımı destekleyen kuruluşlar arasında yer almaz?",
         options: [
-            "A) Ziraat Bankası",
+            "A) Türkiye Petrolleri Anonim Ortaklığı (TPAO)",
             "B) Toprak Mahsulleri Ofisi",
             "C) Pankobirlik",
             "D) Çukobirlik",
-            "E) Fiskobirlik"
+            "E) Ziraat Bankası"
         ],
-        correctAnswerIndex: 4,
-        explanation: "Tarımı destekleyen kuruluşlar arasında Ziraat Bankası, Toprak Mahsulleri Ofisi, Pankobirlik ve Çukobirlik vardır. Fiskobirlik bu grupta sayılmaz."
+        correctAnswerIndex: 0,
+        explanation: "Ziraat Bankası (tarımsal kredi), Toprak Mahsulleri Ofisi (ürün alımı ve fiyat desteği), Pankobirlik ve Çukobirlik (üretici kooperatif birlikleri) tarımı destekleyen kuruluşlardır. TPAO ise petrol ve doğal gaz arayan bir enerji kuruluşudur."
     },
     {
-        question: "Soru 11: Sulama ve makineleşmenin ortak sonuçlarından biri aşağıdakilerden hangisidir?",
+        question: "Sulama ve makineleşmenin ortak sonuçlarından biri aşağıdakilerden hangisidir?",
         options: [
             "A) Ekilen tarım alanlarının genişlemesi",
             "B) Kırsal kesimde işsizliğin artması",
@@ -144,7 +144,7 @@ window.cografya_18_sorulari = [
     // BÖLÜM 3: BAŞLICA TARIM ÜRÜNLERİ VE ÜRÜN GRUPLARI (Soru 12-14)
     // ============================================================
     {
-        question: "Soru 12: Türkiye'de tarım ürünü çeşitliliğinin fazla olmasının nedenleri arasında aşağıdakilerden hangisi gösterilemez?",
+        question: "Türkiye'de tarım ürünü çeşitliliğinin fazla olmasının nedenleri arasında aşağıdakilerden hangisi gösterilemez?",
         options: [
             "A) Orta kuşakta yer alması",
             "B) Yükselti farklılıklarının fazla olması",
@@ -156,19 +156,19 @@ window.cografya_18_sorulari = [
         explanation: "Çeşitliliğin nedeni 'bulunduğu enlem değerleri (orta kuşakta bulunması)' (A doğru) ve 'göreceli konumu (yükselti, yer şekilleri çeşitliliği, denizellik-karasallık)'dır (B, C, D doğru). E seçeneği yanlıştır; Türkiye orta kuşaktadır, ekvatoral iklime yakın değildir."
     },
     {
-        question: "Soru 13: Aşağıdaki ürün — ürün grubu eşleştirmelerinden hangisi yanlıştır?",
+        question: "Aşağıdaki ürün — ürün grubu eşleştirmelerinden hangisi yanlıştır?",
         options: [
-            "A) Buğday — Tahıl",
+            "A) Zeytin — Meyve",
             "B) Mercimek — Baklagil",
             "C) Kenevir — Sanayi bitkisi",
             "D) Patates — Yumru bitki",
-            "E) Zeytin — Meyve"
+            "E) Buğday — Tahıl"
         ],
-        correctAnswerIndex: 4,
-        explanation: "A, B, C ve D doğrudur. E ise yanlıştır; zeytin yağ bitkileri grubundadır (ayçiçeği, soya, yer fıstığı, zeytin, mısır, kanola), meyve grubunda değildir."
+        correctAnswerIndex: 0,
+        explanation: "“Zeytin — Meyve” ifadesi yanlıştır; zeytin yağ bitkileri grubundadır (ayçiçeği, soya, yer fıstığı, zeytin, mısır, kanola), meyve grubunda değildir. Diğer ifadeler doğrudur."
     },
     {
-        question: "Soru 14: I. Kayısı ve üzüm meyve grubundadır.\nII. Mısır hem tahıllar hem yağ bitkileri grubunda yer alır.\nIII. Haşhaş baklagiller grubundadır.\n\nYukarıdaki bilgilerden hangileri doğrudur?",
+        question: "I. Kayısı ve üzüm meyve grubundadır.\nII. Mısır hem tahıllar hem yağ bitkileri grubunda yer alır.\nIII. Haşhaş baklagiller grubundadır.\n\nYukarıdaki bilgilerden hangileri doğrudur?",
         options: [
             "A) Yalnız I",
             "B) Yalnız II",
@@ -184,19 +184,19 @@ window.cografya_18_sorulari = [
     // BÖLÜM 4: KARADENİZ BÖLGESİ ÜRÜNLERİ (Soru 15-20)
     // ============================================================
     {
-        question: "Soru 15: Fındık ile ilgili aşağıdaki bilgilerden hangisi yanlıştır?",
+        question: "Fındık ile ilgili aşağıdaki bilgilerden hangisi yanlıştır?",
         options: [
-            "A) Nemli Karadeniz ikliminin yetişme koşullarına uygundur.",
+            "A) Türkiye'deki fındık üretiminin tamamı yalnızca Karadeniz Bölgesi'nde gerçekleşir.",
             "B) Karadeniz kıyı kuşağında kendiliğinden yetişebilir.",
             "C) Dünya üretiminde Türkiye ilk sıradadır.",
             "D) Devirli (periyodik verim veren) bir tarım ürünüdür.",
-            "E) Türkiye'deki fındık üretiminin tamamı yalnızca Karadeniz Bölgesi'nde gerçekleşir."
+            "E) Nemli Karadeniz ikliminin yetişme koşullarına uygundur."
         ],
-        correctAnswerIndex: 4,
-        explanation: "A, B, C ve D doğrudur. E ise yanlıştır; fındıkta Karadeniz birinci sıradadır ama Marmara'da da yetişir, üretim yalnızca Karadeniz'de değildir."
+        correctAnswerIndex: 0,
+        explanation: "“Türkiye'deki fındık üretiminin tamamı yalnızca Karadeniz Bölgesi'nde gerçekleşir” ifadesi yanlıştır; fındıkta Karadeniz birinci sıradadır ama Marmara'da da yetişir, üretim yalnızca Karadeniz'de değildir. Diğer ifadeler doğrudur."
     },
     {
-        question: "Soru 16: Çay tarımı hakkında aşağıdaki yargılardan hangisine ulaşılamaz?",
+        question: "Çay tarımı hakkında aşağıdaki yargılardan hangisine ulaşılamaz?",
         options: [
             "A) Yetişmesi için yıl boyunca bol nem ve yağış gereklidir.",
             "B) Ziraatçi Zihni Derin tarafından Batum'dan getirilmiştir.",
@@ -205,10 +205,10 @@ window.cografya_18_sorulari = [
             "E) Rize, çayın yetiştirildiği önemli illerdendir."
         ],
         correctAnswerIndex: 3,
-        explanation: "A, B, C ve E doğrudur. D ise yanlıştır; dünya çay üretiminde Türkiye 5. sıradadır, birinci değildir. Birincilik fındıkta geçerlidir."
+        explanation: "“Dünya çay üretiminde Türkiye ilk sıradadır” ifadesi yanlıştır; dünya çay üretiminde Türkiye 5. sıradadır, birinci değildir. Birincilik fındıkta geçerlidir. Diğer ifadeler doğrudur."
     },
     {
-        question: "Soru 17: Kenevir (kendir) ile ilgili verilen bilgilerden hareketle aşağıdaki yargılardan hangisine ulaşılabilir?",
+        question: "Kenevir (kendir) ile ilgili verilen bilgilerden hareketle aşağıdaki yargılardan hangisine ulaşılabilir?",
         options: [
             "A) Üretimi tamamen serbest bırakılmıştır.",
             "B) Tohumuna 'çedene' adı verilir.",
@@ -220,7 +220,7 @@ window.cografya_18_sorulari = [
         explanation: "A yanlıştır; kenevir uyuşturucu madde olabildiği için üretim alanları devlet kontrolündedir. B doğrudur; kenevir tohumuna çedene denir. C yanlıştır; ekimine en çok izin verilen bölge Karadeniz'dir. D yanlıştır; Kastamonu, Amasya ve Samsun'da yetişir. E yanlıştır; tohum un olarak kullanılmaz."
     },
     {
-        question: "Soru 18: I. Fındık ve çay, yetişme koşulları bakımından nemli Karadeniz iklimine ihtiyaç duyar.\nII. Kenevir üretimi, uyuşturucu madde elde edilebilmesi nedeniyle devlet denetimindedir.\nIII. Çayın yetiştirildiği iller arasında Ordu ve Sakarya da bulunmaktadır.\n\nYukarıdaki bilgilerden hangileri doğrudur?",
+        question: "I. Fındık ve çay, yetişme koşulları bakımından nemli Karadeniz iklimine ihtiyaç duyar.\nII. Kenevir üretimi, uyuşturucu madde elde edilebilmesi nedeniyle devlet denetimindedir.\nIII. Çayın yetiştirildiği iller arasında Ordu ve Sakarya da bulunmaktadır.\n\nYukarıdaki bilgilerden hangileri doğrudur?",
         options: [
             "A) Yalnız I",
             "B) Yalnız II",
@@ -232,7 +232,7 @@ window.cografya_18_sorulari = [
         explanation: "I doğrudur; hem fındık hem çay için 'Nemli Karadeniz ikliminde yetişir' ifadesi kullanılmıştır. II doğrudur, kenevirle ilgili açıklamayla örtüşür. III ise yanlıştır; Ordu ve Sakarya fındığın yetiştirildiği illerdir, çayın değil."
     },
     {
-        question: "Soru 19: Çayın yetiştirildiği iller arasında aşağıdakilerden hangisi yer alır?",
+        question: "Çayın yetiştirildiği iller arasında aşağıdakilerden hangisi yer alır?",
         options: [
             "A) Ordu",
             "B) Amasya",
@@ -244,7 +244,7 @@ window.cografya_18_sorulari = [
         explanation: "Çayın yetiştirildiği iller Rize, Trabzon, Artvin ve Giresun'dur; bu dört ilden yalnızca Trabzon seçenekler arasındadır (C). Ordu fındık ili, Amasya kenevir ili, Balıkesir çeltik ili, Tekirdağ ise ayçiçeği/kanola iline aittir."
     },
     {
-        question: "Soru 20: Fındığın yetiştirildiği iller arasında aşağıdakilerden hangisi yer almaz?",
+        question: "Fındığın yetiştirildiği iller arasında aşağıdakilerden hangisi yer almaz?",
         options: [
             "A) Ordu",
             "B) Düzce",
@@ -260,19 +260,19 @@ window.cografya_18_sorulari = [
     // BÖLÜM 5: MARMARA BÖLGESİ ÜRÜNLERİ (Soru 21-27)
     // ============================================================
     {
-        question: "Soru 21: Çeltik (pirinç) tarımı ile ilgili aşağıdaki bilgilerden hangisi yanlıştır?",
+        question: "Çeltik (pirinç) tarımı ile ilgili aşağıdaki bilgilerden hangisi yanlıştır?",
         options: [
-            "A) Yetiştirilebilmesi için bol suya ihtiyaç vardır.",
+            "A) Üretimi tamamen serbest piyasa koşullarına bırakılmıştır.",
             "B) Üretim alanları akarsu boylarıyla paralellik gösterir.",
             "C) En fazla Trakya'da, Meriç (Edirne) boylarında yetiştirilir.",
             "D) Osmancık ve Tosya bilinen diğer ekim alanlarındandır.",
-            "E) Üretimi tamamen serbest piyasa koşullarına bırakılmıştır."
+            "E) Yetiştirilebilmesi için bol suya ihtiyaç vardır."
         ],
-        correctAnswerIndex: 4,
-        explanation: "A, B, C ve D doğrudur. E ise yanlıştır; çeltik üretimi devlet kontrolündedir, serbest piyasaya bırakılmamıştır."
+        correctAnswerIndex: 0,
+        explanation: "“Üretimi tamamen serbest piyasa koşullarına bırakılmıştır” ifadesi yanlıştır; çeltik üretimi devlet kontrolündedir, serbest piyasaya bırakılmamıştır. Diğer ifadeler doğrudur."
     },
     {
-        question: "Soru 22: Çeltiğin Meriç boyları dışında bilinen diğer ekim alanları aşağıdakilerin hangisinde birlikte verilmiştir?",
+        question: "Çeltiğin Meriç boyları dışında bilinen diğer ekim alanları aşağıdakilerin hangisinde birlikte verilmiştir?",
         options: [
             "A) Bafra ve Çarşamba",
             "B) Osmancık ve Tosya",
@@ -284,7 +284,7 @@ window.cografya_18_sorulari = [
         explanation: "Çeltik başta Meriç boylarında yetişir; diğer bilinen ekim alanları Osmancık ve Tosya'dır."
     },
     {
-        question: "Soru 23: Ayçiçeği tarımı hakkında aşağıdakilerden hangisi söylenemez?",
+        question: "Ayçiçeği tarımı hakkında aşağıdakilerden hangisi söylenemez?",
         options: [
             "A) En iyi vertisol topraklarında yetişir.",
             "B) Üretiminin büyük kısmı Ergene Havzası'ndan karşılanır.",
@@ -293,10 +293,10 @@ window.cografya_18_sorulari = [
             "E) İntansif tarım kapsamında değerlendirilen ürünler arasında yer almaz."
         ],
         correctAnswerIndex: 4,
-        explanation: "A, B, C ve D doğrudur. E ise yanlıştır; ayçiçeği pamuk ve mısır gibi intansif tarım ürünlerindendir."
+        explanation: "“İntansif tarım kapsamında değerlendirilen ürünler arasında yer almaz” ifadesi yanlıştır; ayçiçeği pamuk ve mısır gibi intansif tarım ürünlerindendir. Diğer ifadeler doğrudur."
     },
     {
-        question: "Soru 24: Ayçiçeğinin yetiştirildiği iller arasında aşağıdakilerden hangisi yer alır?",
+        question: "Ayçiçeğinin yetiştirildiği iller arasında aşağıdakilerden hangisi yer alır?",
         options: [
             "A) Rize",
             "B) Kastamonu",
@@ -308,7 +308,7 @@ window.cografya_18_sorulari = [
         explanation: "Ayçiçeğinin yetiştirildiği iller Tekirdağ, Konya ve Adana'dır; seçenekler arasında yalnızca Adana (C) bu listededir. Rize çay, Kastamonu kenevir, Edirne çeltik/kanola, Yalova ise kivi iliyle ilişkilendirilmiştir."
     },
     {
-        question: "Soru 25: Kivi ile ilgili aşağıdaki bilgilerden hangisine ulaşılamaz?",
+        question: "Kivi ile ilgili aşağıdaki bilgilerden hangisine ulaşılamaz?",
         options: [
             "A) Tropikal bir bitkidir.",
             "B) Türkiye kıyılarında denizellik etkisiyle yetişebilmektedir.",
@@ -317,22 +317,22 @@ window.cografya_18_sorulari = [
             "E) Yalova, kivi üretiminde öne çıkan illerdendir."
         ],
         correctAnswerIndex: 3,
-        explanation: "A, B, C ve E doğrudur. D ise yanlıştır; kivinin en önemli üretim alanı Ege değil, Marmara'da Yalova çevresidir."
+        explanation: "“En önemli üretim alanı Ege Bölgesi'dir” ifadesi yanlıştır; kivinin en önemli üretim alanı Ege değil, Marmara'da Yalova çevresidir. Diğer ifadeler doğrudur."
     },
     {
-        question: "Soru 26: Keten bitkisi ile ilgili aşağıdaki bilgilerden hangisi yanlıştır?",
+        question: "Keten bitkisi ile ilgili aşağıdaki bilgilerden hangisi yanlıştır?",
         options: [
-            "A) Türkiye'de üretim miktarı ve alanı sınırlıdır.",
+            "A) Türkiye'nin en fazla ihraç ettiği sanayi bitkisidir.",
             "B) İp, urgan ve çuval yapımında kullanılır.",
             "C) Pamukla karıştırılarak banknot üretiminde kullanılmaktadır.",
             "D) Yetiştirildiği iller arasında Uşak ve Samsun sayılabilir.",
-            "E) Türkiye'nin en fazla ihraç ettiği sanayi bitkisidir."
+            "E) Türkiye'de üretim miktarı ve alanı sınırlıdır."
         ],
-        correctAnswerIndex: 4,
-        explanation: "A, B, C ve D doğrudur. E ise yanlıştır; keten üretim miktarı azdır ve sınırlı alanda yetişir, en fazla ihraç edilen sanayi bitkisi değildir."
+        correctAnswerIndex: 0,
+        explanation: "“Türkiye'nin en fazla ihraç ettiği sanayi bitkisidir” ifadesi yanlıştır; keten üretim miktarı azdır ve sınırlı alanda yetişir, en fazla ihraç edilen sanayi bitkisi değildir. Diğer ifadeler doğrudur."
     },
     {
-        question: "Soru 27: Kanola (kolza) hakkında verilen bilgilere göre aşağıdaki yargılardan hangisine ulaşılabilir?",
+        question: "Kanola (kolza) hakkında verilen bilgilere göre aşağıdaki yargılardan hangisine ulaşılabilir?",
         options: [
             "A) Yağ oranı düşük bir bitkidir.",
             "B) Ülkemizde çok eski zamanlardan beri yoğun şekilde üretilmektedir.",
@@ -348,7 +348,7 @@ window.cografya_18_sorulari = [
     // BÖLÜM 6: KARMA SENTEZ VE İL EŞLEŞTİRME (Soru 28-32)
     // ============================================================
     {
-        question: "Soru 28: I. Çeltik üretimi devlet kontrolü altındadır.\nII. Ayçiçeği en iyi vertisol topraklarında yetişir.\nIII. Kivinin en önemli üretim alanı Bursa'dır.\n\nYukarıdaki bilgilerden hangileri doğrudur?",
+        question: "I. Çeltik üretimi devlet kontrolü altındadır.\nII. Ayçiçeği en iyi vertisol topraklarında yetişir.\nIII. Kivinin en önemli üretim alanı Bursa'dır.\n\nYukarıdaki bilgilerden hangileri doğrudur?",
         options: [
             "A) Yalnız I",
             "B) Yalnız II",
@@ -360,31 +360,31 @@ window.cografya_18_sorulari = [
         explanation: "I ve II doğrudur. III yanlıştır; kivinin en önemli üretim alanı Bursa değil, Yalova çevresidir."
     },
     {
-        question: "Soru 29: Aşağıdaki ürün — il eşleştirmelerinden hangisi yanlıştır?",
+        question: "Aşağıdaki ürün — il eşleştirmelerinden hangisi yanlıştır?",
         options: [
             "A) Fındık — Düzce",
-            "B) Çay — Artvin",
+            "B) Çeltik — Yalova",
             "C) Kenevir — Kastamonu",
-            "D) Çeltik — Yalova",
+            "D) Çay — Artvin",
             "E) Keten — Uşak"
         ],
-        correctAnswerIndex: 3,
-        explanation: "A, B, C ve E doğrudur. D yanlıştır; çeltik Edirne, Samsun ve Balıkesir'de yetişir. Yalova çeltik değil kivi ile öne çıkar."
+        correctAnswerIndex: 1,
+        explanation: "“Çeltik — Yalova” ifadesi yanlıştır; çeltik Edirne, Samsun ve Balıkesir'de yetişir. Yalova çeltik değil kivi ile öne çıkar. Diğer ifadeler doğrudur."
     },
     {
-        question: "Soru 30: Aşağıdaki ürün — il eşleştirmelerinden hangisi yanlıştır?",
+        question: "Aşağıdaki ürün — il eşleştirmelerinden hangisi yanlıştır?",
         options: [
             "A) Kivi — Bursa",
-            "B) Kanola — Konya",
+            "B) Kenevir — Rize",
             "C) Ayçiçeği — Adana",
             "D) Çeltik — Samsun",
-            "E) Kenevir — Rize"
+            "E) Kanola — Konya"
         ],
-        correctAnswerIndex: 4,
-        explanation: "A, B, C ve D doğrudur. E yanlıştır; kenevir Kastamonu, Amasya ve Samsun'dadır. Rize çay iliyle anılır."
+        correctAnswerIndex: 1,
+        explanation: "“Kenevir — Rize” ifadesi yanlıştır; kenevir Kastamonu, Amasya ve Samsun'dadır. Rize çay iliyle anılır. Diğer ifadeler doğrudur."
     },
     {
-        question: "Soru 31: Samsun ili, aşağıdaki tarım ürünlerinden hangisinin yetiştirildiği iller arasında yer almaz?",
+        question: "Samsun ili, aşağıdaki tarım ürünlerinden hangisinin yetiştirildiği iller arasında yer almaz?",
         options: [
             "A) Fındık",
             "B) Çeltik",
@@ -396,7 +396,7 @@ window.cografya_18_sorulari = [
         explanation: "Samsun ilinin dört ayrı üründe tekrar ettiği görülür: fındık, çeltik, keten ve kenevir — A, B, C, D doğrudur. Kanolanın illeri ise yalnızca Tekirdağ ve Konya'dır; Samsun bu listede yoktur."
     },
     {
-        question: "Soru 32: Aşağıdaki bilgilerden hangisi yanlıştır?",
+        question: "Aşağıdaki bilgilerden hangisi yanlıştır?",
         options: [
             "A) Fındık üretiminde Türkiye dünyada 1. sıradadır.",
             "B) Çay üretiminde Türkiye dünyada 5. sıradadır.",
@@ -405,6 +405,6 @@ window.cografya_18_sorulari = [
             "E) Arazi dağıtımı en fazla Şanlıurfa'da yapılmıştır."
         ],
         correctAnswerIndex: 3,
-        explanation: "A, B, C ve E doğrudur. D ise yanlıştır; arazi toplulaştırması engebeli arazi nedeniyle en çok Doğu Karadeniz'de uygulanır, Güneydoğu Anadolu'da değil."
+        explanation: "“Arazi toplulaştırması, engebeli arazi nedeniyle en çok Güneydoğu Anadolu Bölgesi'nde uygulanır” ifadesi yanlıştır; arazi toplulaştırması engebeli arazi nedeniyle en çok Doğu Karadeniz'de uygulanır, Güneydoğu Anadolu'da değil. Diğer ifadeler doğrudur."
     }
 ];

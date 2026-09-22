@@ -12,6 +12,7 @@ import { PencilLine, Map, Shield, Layers, Timer, ChevronRight } from "lucide-rea
 import { AccentCard, PctBadge, Hit } from "../kit";
 import { TrMapView } from "../components/TrMapView";
 import { useLandscapeLock } from "../lib/useLandscapeLock";
+import { konuLabel } from "../lib/konuLabels";
 
 var MAP_CARD_IMG = {
     volkan: require("../../assets/volkan-hover.png"),
@@ -172,7 +173,7 @@ export function AlistirmaKonuListScreen({ route, navigation }) {
                     >
                         <View style={styles.konuRow}>
                             <View style={{ flex: 1, minWidth: 0, paddingRight: 8 }}>
-                                <Text style={[styles.dersName, isDark && styles.textLight]} numberOfLines={2}>{konu}</Text>
+                                <Text style={[styles.dersName, isDark && styles.textLight]} numberOfLines={2}>{konuLabel(konu)}</Text>
                                 <Text style={styles.meta}>{open ? (st.n ? (st.left + " / " + st.n + " boşluk") : (stats ? "Henüz yok" : " ")) : "Önce önceki konunun testlerini bitir"}</Text>
                             </View>
                             {st.done ? <PctBadge label="Tamam" /> : null}
@@ -241,7 +242,7 @@ export function ClozePlayScreen({ route, navigation }) {
             <ScrollScreen dark={isDark}>
                 <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} />
                 <Text style={[styles.kicker, isDark && styles.textMuted]}>{ders}</Text>
-                <Text style={[styles.konuTitle, isDark && styles.textLight]}>{konu}</Text>
+                <Text style={[styles.konuTitle, isDark && styles.textLight]}>{konuLabel(konu)}</Text>
             </ScrollScreen>
         );
     }
@@ -291,7 +292,7 @@ export function ClozePlayScreen({ route, navigation }) {
         <ScrollScreen dark={isDark}>
             <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} />
             <Text style={[styles.kicker, isDark && styles.textMuted]}>{ders} · {idx + 1}/{list.length}</Text>
-            <Text style={[styles.konuTitle, isDark && styles.textLight]}>{konu}</Text>
+            <Text style={[styles.konuTitle, isDark && styles.textLight]}>{konuLabel(konu)}</Text>
             <Card style={[isDark && styles.cardDark]}>
                 {it.hint ? <Text style={[styles.clozeHint, isDark && styles.textMuted]}>{it.hint}</Text> : null}
                 <View style={[styles.clozeStem, isDark && styles.clozeStemDark]}>
@@ -327,7 +328,7 @@ export function ClozePlayScreen({ route, navigation }) {
                                 StudentStore.markClozeSolved(ders, konu, it.id);
                             }
                         }} style={[styles.choice, { backgroundColor: isDark && !picked ? colors.navyDeep : bg, borderColor: border }]}>
-                            <Text style={[styles.choiceText, isDark && !picked && styles.textLight]}>{c}</Text>
+                            <Text style={[styles.choiceText, isDark && !picked && styles.textLight]}>{String(c).charAt(0).toLocaleUpperCase("tr-TR") + String(c).slice(1)}</Text>
                         </Tap>
                     );
                 })}

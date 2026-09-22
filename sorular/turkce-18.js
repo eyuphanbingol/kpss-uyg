@@ -4,11 +4,11 @@ window.turkce_18_sorulari = [
     "question": "Aşağıdakilerden hangisinin doğru yazımı “açıortay”dır?",
     "options": [
         "A) Açı ortay",
-        "B) Açıortay",
+        "B) Açıyortay",
         "C) Açı-ortay",
-        "D) Açıyortay"
+        "D) Açıortay"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "açıortay bitişik."
 },
 {
@@ -48,11 +48,11 @@ window.turkce_18_sorulari = [
     "question": "“Ard arda” kelimesinin doğru yazımı hangisidir?",
     "options": [
         "A) Ardarda",
-        "B) Art arda",
+        "B) Ard-arda",
         "C) Ardı ardına",
-        "D) Ard-arda"
+        "D) Art arda"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "art arda ayrı."
 },
 {
@@ -114,55 +114,55 @@ window.turkce_18_sorulari = [
     "question": "Aşağıdakilerden hangisi doğru yazılmıştır?",
     "options": [
         "A) Restaurant",
-        "B) Restoran",
-        "C) Restorant",
+        "B) Restorant",
+        "C) Restoran",
         "D) Restourant"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "restoran."
 },
 {
     "question": "“Stajer” kelimesinin doğru biçimi hangisidir?",
     "options": [
         "A) Stajer",
-        "B) Stajyer",
+        "B) Stajyerh",
         "C) Stajiyer",
-        "D) Stajyerh"
+        "D) Stajyer"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "stajyer."
 },
 {
     "question": "“Süpriz” kelimesinin doğru biçimi hangisidir?",
     "options": [
         "A) Süpriz",
-        "B) Sürpriz",
+        "B) Sürprüz",
         "C) Sürpüriz",
-        "D) Sürprüz"
+        "D) Sürpriz"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "sürpriz."
 },
 {
     "question": "“Tenefüs” kelimesinin doğru yazımı hangisidir?",
     "options": [
         "A) Tenefüs",
-        "B) Teneffüs",
+        "B) Tenefüz",
         "C) Teneffuz",
-        "D) Tenefüz"
+        "D) Teneffüs"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "teneffüs."
 },
 {
     "question": "“Traş” kelimesinin doğru yazımı hangisidir?",
     "options": [
         "A) Traş",
-        "B) Tıraş",
-        "C) Tıraşş",
+        "B) Tıraşş",
+        "C) Tıraş",
         "D) Tıraşh"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "tıraş."
 },
 {
@@ -201,12 +201,12 @@ window.turkce_18_sorulari = [
 {
     "question": "“Klavuz” kelimesinin doğru biçimi hangisidir?",
     "options": [
-        "A) Klavuz",
-        "B) Kılavuz",
+        "A) Kılavuz",
+        "B) Klavuz",
         "C) Kılavvus",
         "D) Kilavuz"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "kılavuz."
 },
 {
@@ -224,22 +224,22 @@ window.turkce_18_sorulari = [
     "question": "“Baş vurmak” ifadesinin doğru yazımı hangisidir?",
     "options": [
         "A) Baş vurmak",
-        "B) Başvurmak",
-        "C) Baş-vurmak",
+        "B) Baş-vurmak",
+        "C) Başvurmak",
         "D) Başvur"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "başvurmak bitişik."
 },
 {
     "question": "“His etmek” ifadesinin doğru yazımı hangisidir?",
     "options": [
         "A) His etmek",
-        "B) Hissetmek",
+        "B) Hiss etmek",
         "C) His-etmek",
-        "D) Hiss etmek"
+        "D) Hissetmek"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "hissetmek bitişik (ses olayı)."
 },
 {
@@ -256,34 +256,34 @@ window.turkce_18_sorulari = [
 {
     "question": "“Red etmek” ifadesinin doğru yazımı hangisidir?",
     "options": [
-        "A) Red etmek",
-        "B) Reddetmek",
+        "A) Reddetmek",
+        "B) Red etmek",
         "C) Red-etmek",
         "D) Rededetmek"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "reddetmek bitişik."
 },
 {
     "question": "“Köpekbalığı” ifadesinin doğru yazımı hangisidir?",
     "options": [
         "A) Köpekbalığı",
-        "B) Köpek balığı",
-        "C) Köpek-balığı",
+        "B) Köpek-balığı",
+        "C) Köpek balığı",
         "D) Köpekbalıgı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "köpek balığı ayrı (hayvan adı)."
 },
 {
     "question": "“Hastaolmak” ifadesinin doğru yazımı hangisidir?",
     "options": [
         "A) Hastaolmak",
-        "B) Hasta olmak",
+        "B) Hastaolmek",
         "C) Hasta-olmak",
-        "D) Hastaolmek"
+        "D) Hasta olmak"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "hasta olmak ayrı (kaynaşmamış)."
 },
 {
@@ -312,11 +312,11 @@ window.turkce_18_sorulari = [
     "question": "“Restorant” kelimesinin doğru yazımı hangisidir?",
     "options": [
         "A) Restorant",
-        "B) Restoran",
+        "B) Restorann",
         "C) Restorantt",
-        "D) Restorann"
+        "D) Restoran"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "restoran."
 },
 {
@@ -334,22 +334,22 @@ window.turkce_18_sorulari = [
     "question": "“Süpriz” yerine hangi biçim kullanılmalıdır?",
     "options": [
         "A) Süpriz",
-        "B) Sürpriz",
-        "C) Süprizz",
+        "B) Süprizz",
+        "C) Sürpriz",
         "D) Sürpirz"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "sürpriz."
 },
 {
     "question": "“Teneffüz” yerine TDK’ye göre hangi biçim doğrudur?",
     "options": [
         "A) Teneffüz",
-        "B) Teneffüs",
-        "C) Tenefüs",
+        "B) Tenefüs",
+        "C) Teneffüs",
         "D) Teneffuz"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "teneffüs."
 },
 {

@@ -2,7 +2,7 @@
 window.cografya_1_sorulari = [
 
     {
-        question: "Soru 1: Türkiye'de genel olarak dağların güneye bakan yamaçları, bakı etkisi nedeniyle kuzeye bakan yamaçlara göre daha sıcaktır. Ancak Karadeniz kıyısındaki dağların kuzeye bakan yamaçlarının kış mevsiminde bazı durumlarda daha ılık olduğu görülmektedir.\n\nBu durumun temel nedeni aşağıdakilerden hangisidir?",
+        question: "Türkiye'de genel olarak dağların güneye bakan yamaçları, bakı etkisi nedeniyle kuzeye bakan yamaçlara göre daha sıcaktır. Ancak Karadeniz kıyısındaki dağların kuzeye bakan yamaçlarının kış mevsiminde bazı durumlarda daha ılık olduğu görülmektedir.\n\nBu durumun temel nedeni aşağıdakilerden hangisidir?",
         options: [
             "A) Kuzey yamaçların daha yüksek olması",
             "B) Karadeniz'in denizellik ve nemlilik etkisi",
@@ -15,20 +15,20 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 2: Türkiye'nin matematik konumu dikkate alındığında aşağıdakilerden hangisinin açıklanmasında enlem etkisinden yararlanılamaz?",
+        question: "Türkiye'nin matematik konumu dikkate alındığında aşağıdakilerden hangisinin açıklanmasında enlem etkisinden yararlanılamaz?",
         options: [
             "A) Güneş ışınlarının geliş açısının yıl içinde değişmesi",
             "B) Gece ve gündüz sürelerinin yıl içinde değişmesi",
-            "C) Kuzeye gidildikçe çizgisel hızın azalması",
+            "C) Doğu Anadolu'da karın yerde kalma süresinin uzun olması",
             "D) Dört mevsimin belirgin olarak yaşanması",
-            "E) Doğu Anadolu'da karın yerde kalma süresinin uzun olması"
+            "E) Kuzeye gidildikçe çizgisel hızın azalması"
         ],
-        correctAnswerIndex: 4,
+        correctAnswerIndex: 2,
         explanation: "Doğu Anadolu'da karın yerde kalma süresinin uzun olması öncelikle yükselti ve karasallıkla ilgilidir. Bu nedenle doğrudan enlem sonucu değildir."
     },
 
     {
-        question: "Soru 3: Aynı enlem üzerinde bulunan iki merkez için aşağıdaki özelliklerden hangisinin yıl boyunca aynı olması beklenmez?",
+        question: "Aynı enlem üzerinde bulunan iki merkez için aşağıdaki özelliklerden hangisinin yıl boyunca aynı olması beklenmez?",
         options: [
             "A) Güneş ışınlarının geliş açısı",
             "B) Gece ve gündüz süreleri",
@@ -41,7 +41,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 4: Aynı boylam üzerinde bulunan İzmit, Bilecik, Afyonkarahisar ve Finike için aşağıdakilerden hangisinin ortak olması beklenir?",
+        question: "Aynı boylam üzerinde bulunan İzmit, Bilecik, Afyonkarahisar ve Finike için aşağıdakilerden hangisinin ortak olması beklenir?",
         options: [
             "A) Güneşin doğuş saati",
             "B) Güneşin batış saati",
@@ -56,20 +56,20 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 5: Türkiye'de batıdan doğuya doğru gidildikçe ortalama yükseltinin genel olarak arttığı görülür.\n\nAşağıdakilerden hangisi bu durumun sonuçlarından biri değildir?",
+        question: "Türkiye'de batıdan doğuya doğru gidildikçe ortalama yükseltinin genel olarak arttığı görülür.\n\nAşağıdakilerden hangisi bu durumun sonuçlarından biri değildir?",
         options: [
-            "A) Sıcaklık değerlerinin genel olarak azalması",
+            "A) Yerel saat farkının ortaya çıkması",
             "B) Karın yerde kalma süresinin uzaması",
             "C) Tarım ürünlerinin olgunlaşma süresinin uzaması",
             "D) Hidroelektrik enerji potansiyelinin artması",
-            "E) Yerel saat farkının ortaya çıkması"
+            "E) Sıcaklık değerlerinin genel olarak azalması"
         ],
-        correctAnswerIndex: 4,
+        correctAnswerIndex: 0,
         explanation: "Yerel saat farkı yükseltiyle değil, boylam farkıyla ilgilidir. Batıdan doğuya gidildikçe yerel saatin ilerlemesinin nedeni boylam farkıdır."
     },
 
     {
-        question: "Soru 6: Türkiye'de kuzey ve güney yönünde yapılan karşılaştırmalarda aşağıdakilerden hangisi öncelikle enlem etkisiyle açıklanabilir?",
+        question: "Türkiye'de kuzey ve güney yönünde yapılan karşılaştırmalarda aşağıdakilerden hangisi öncelikle enlem etkisiyle açıklanabilir?",
         options: [
             "A) Sinop'un kışın Yozgat'tan daha sıcak olması",
             "B) Güneyden kuzeye gidildikçe denizlerin tuzluluk oranının azalması",
@@ -82,7 +82,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 7: Türkiye'nin matematik konumu dikkate alındığında aşağıdakilerden hangisi yanlıştır?",
+        question: "Türkiye'nin matematik konumu dikkate alındığında aşağıdakilerden hangisi yanlıştır?",
         options: [
             "A) Güneş ışınları hiçbir zaman dik açıyla gelmez.",
             "B) Öğle vakti gölge boyu hiçbir zaman sıfır olmaz.",
@@ -95,7 +95,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 8: Marmara Bölgesi'nin ortalama yükseltisinin az ve nüfus yoğunluğunun fazla olması, Ege Bölgesi'nde horst-graben sisteminin görülmesi ve Akdeniz Bölgesi'nde karstik arazilerin yaygın olması aşağıdakilerden hangisiyle açıklanabilir?",
+        question: "Marmara Bölgesi'nin ortalama yükseltisinin az ve nüfus yoğunluğunun fazla olması, Ege Bölgesi'nde horst-graben sisteminin görülmesi ve Akdeniz Bölgesi'nde karstik arazilerin yaygın olması aşağıdakilerden hangisiyle açıklanabilir?",
         options: [
             "A) Enlem",
             "B) Boylam",
@@ -108,7 +108,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 9: 21 Aralık tarihinde Türkiye'de en uzun gece yaşanır.\n\nAynı tarihte, Türkiye'deki aşağıdaki merkezlerden hangisinde gündüz süresinin en kısa olması beklenir?",
+        question: "21 Aralık tarihinde Türkiye'de en uzun gece yaşanır.\n\nAynı tarihte, Türkiye'deki aşağıdaki merkezlerden hangisinde gündüz süresinin en kısa olması beklenir?",
         options: [
             "A) Hatay",
             "B) Antalya",
@@ -123,20 +123,20 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 10: Aynı enlem üzerinde bulunan Antalya ve Şanlıurfa'nın yaz sıcaklıkları arasında belirgin fark bulunmasında aşağıdakilerden hangisinin etkisi daha fazladır?",
+        question: "Aynı enlem üzerinde bulunan Antalya ve Şanlıurfa'nın yaz sıcaklıkları arasında belirgin fark bulunmasında aşağıdakilerden hangisinin etkisi daha fazladır?",
         options: [
             "A) Boylam farkının",
-            "B) Karasallık ve denizellik farkının",
-            "C) Gece-gündüz sürelerinin",
+            "B) Gece-gündüz sürelerinin",
+            "C) Karasallık ve denizellik farkının",
             "D) Çizgisel hız farkının",
             "E) Güneş ışınlarının geliş açısının"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 2,
         explanation: "Aynı enlemde bulunan merkezlerin güneş ışınlarını alma açıları benzerdir. Şanlıurfa'nın deniz etkisinden uzak olması yazın daha fazla ısınmasına neden olur."
     },
 
     {
-        question: "Soru 11: Türkiye'de yer şekillerinin kısa mesafelerde değişmesi, doğal ve beşerî özelliklerin de kısa mesafelerde farklılaşmasına neden olmaktadır.\n\nAşağıdakilerden hangisi bu duruma örnek gösterilemez?",
+        question: "Türkiye'de yer şekillerinin kısa mesafelerde değişmesi, doğal ve beşerî özelliklerin de kısa mesafelerde farklılaşmasına neden olmaktadır.\n\nAşağıdakilerden hangisi bu duruma örnek gösterilemez?",
         options: [
             "A) Antalya kıyılarından kısa sürede yüksek kesimlere çıkılabilmesi",
             "B) Karadeniz kıyılarında dağların iç kesimlere geçişi zorlaştırması",
@@ -149,7 +149,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 12: Ankara'nın yerel saati 33° Doğu boylamına göre belirlenmektedir. Ankara'dan 40 dakika ileride olan bir merkezin boylamı aşağıdakilerden hangisidir?",
+        question: "Ankara'nın yerel saati 33° Doğu boylamına göre belirlenmektedir. Ankara'dan 40 dakika ileride olan bir merkezin boylamı aşağıdakilerden hangisidir?",
         options: [
             "A) 23° Doğu",
             "B) 30° Doğu",
@@ -164,7 +164,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 13: 21 Aralık tarihinde Türkiye'de kuzeyden güneye gidildikçe gündüz süresi uzar.\n\nBuna göre aşağıdaki merkez çiftlerinden hangisinde ilk verilen merkezden ikinci verilen merkeze gidildiğinde gündüz süresinin uzaması beklenir?",
+        question: "21 Aralık tarihinde Türkiye'de kuzeyden güneye gidildikçe gündüz süresi uzar.\n\nBuna göre aşağıdaki merkez çiftlerinden hangisinde ilk verilen merkezden ikinci verilen merkeze gidildiğinde gündüz süresinin uzaması beklenir?",
         options: [
             "A) Sinop - Hatay",
             "B) Hatay - Sinop",
@@ -179,7 +179,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 14: X merkezinde yıllık sıcaklık farkı az, nem oranı yüksek ve sıcaklıkların değişimi yavaş gerçekleşmektedir. Y merkezinde ise yıllık sıcaklık farkı fazla, nem oranı düşük ve sıcaklık değişimleri daha hızlıdır.\n\nBu merkezlerin sahip olduğu özellikler aşağıdakilerin hangisinde doğru verilmiştir?",
+        question: "X merkezinde yıllık sıcaklık farkı az, nem oranı yüksek ve sıcaklıkların değişimi yavaş gerçekleşmektedir. Y merkezinde ise yıllık sıcaklık farkı fazla, nem oranı düşük ve sıcaklık değişimleri daha hızlıdır.\n\nBu merkezlerin sahip olduğu özellikler aşağıdakilerin hangisinde doğru verilmiştir?",
         options: [
             "A) X: Karasal - Y: Denizel",
             "B) X: Denizel - Y: Karasal",
@@ -192,7 +192,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 15: Türkiye'nin Kuzey Yarım Küre'de bulunduğunu kesin olarak kanıtlayan aşağıdaki özelliklerden hangisidir?",
+        question: "Türkiye'nin Kuzey Yarım Küre'de bulunduğunu kesin olarak kanıtlayan aşağıdaki özelliklerden hangisidir?",
         options: [
             "A) Doğu-batı yönünde yerel saat farklarının bulunması",
             "B) Güneyden kuzeye gidildikçe çizgisel hızın azalması",
@@ -205,7 +205,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 16: Aynı boylam üzerinde bulunan merkezlerde aşağıdakilerden hangisinin 21 Mart ve 23 Eylül tarihlerinde aynı anda gerçekleşmesi beklenir?",
+        question: "Aynı boylam üzerinde bulunan merkezlerde aşağıdakilerden hangisinin 21 Mart ve 23 Eylül tarihlerinde aynı anda gerçekleşmesi beklenir?",
         options: [
             "A) Yerel öğle vaktinin",
             "B) Güneş'in doğuşunun",
@@ -220,7 +220,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 17: Türkiye'de batıdan doğuya doğru gidildikçe yükseltinin genel olarak arttığı bilinmektedir.\n\nBuna göre aşağıdakilerden hangisi bu yükselti değişiminin doğrudan sonucu değildir?",
+        question: "Türkiye'de batıdan doğuya doğru gidildikçe yükseltinin genel olarak arttığı bilinmektedir.\n\nBuna göre aşağıdakilerden hangisi bu yükselti değişiminin doğrudan sonucu değildir?",
         options: [
             "A) Doğuya gidildikçe sıcaklıkların genel olarak azalması",
             "B) Karın yerde kalma süresinin uzaması",
@@ -235,20 +235,20 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 18: Kış mevsiminde Sinop'un, daha güneyde yer alan Yozgat'tan daha sıcak olabilmesi aşağıdakilerden hangisinin sonucudur?",
+        question: "Kış mevsiminde Sinop'un, daha güneyde yer alan Yozgat'tan daha sıcak olabilmesi aşağıdakilerden hangisinin sonucudur?",
         options: [
             "A) Sinop'un enleminin daha düşük olmasının",
-            "B) Sinop'un denizellik etkisinde kalmasının",
-            "C) Sinop'un çizgisel hızının daha fazla olmasının",
+            "B) Sinop'un çizgisel hızının daha fazla olmasının",
+            "C) Sinop'un denizellik etkisinde kalmasının",
             "D) Yozgat'ın başlangıç meridyenine daha uzak olmasının",
             "E) Yozgat'ın Güneş ışınlarını daha küçük açıyla almasının"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 2,
         explanation: "Sinop'un deniz kıyısında bulunması kışın sıcaklıkların aşırı düşmesini engeller. Yozgat'ın yüksek ve karasal olması ise kış sıcaklıklarının daha düşük olmasına neden olur."
     },
 
     {
-        question: "Soru 19: 21 Mart tarihinde gece ve gündüz süreleri eşittir.\n\nBu tarihten sonra Türkiye'de aşağıdakilerden hangisinin gerçekleşmesi beklenir?",
+        question: "21 Mart tarihinde gece ve gündüz süreleri eşittir.\n\nBu tarihten sonra Türkiye'de aşağıdakilerden hangisinin gerçekleşmesi beklenir?",
         options: [
             "A) Gecelerin gündüzlerden uzun olmaya başlaması",
             "B) Güneş ışınlarının geliş açısının küçülmesi",
@@ -261,7 +261,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 20: Bir coğrafya sorusunda aşağıdaki özelliklerden hangilerinin süre bakımından incelenmesi, doğrudan enlemle ilişkilendirilebilir?\n\nI. Gündüz süresi\nII. Yerel saat farkı\nIII. Alacakaranlık süresi",
+        question: "Bir coğrafya sorusunda aşağıdaki özelliklerden hangilerinin süre bakımından incelenmesi, doğrudan enlemle ilişkilendirilebilir?\n\nI. Gündüz süresi\nII. Yerel saat farkı\nIII. Alacakaranlık süresi",
         options: [
             "A) Yalnız I",
             "B) Yalnız II",
@@ -274,7 +274,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 21: Türkiye'de dağların güney yamaçlarında karların daha erken erimesi ve tarımsal faaliyetlerin daha erken başlaması aşağıdakilerden hangisiyle doğrudan ilişkilidir?",
+        question: "Türkiye'de dağların güney yamaçlarında karların daha erken erimesi ve tarımsal faaliyetlerin daha erken başlaması aşağıdakilerden hangisiyle doğrudan ilişkilidir?",
         options: [
             "A) Türkiye'nin Kuzey Yarım Küre'de bulunması",
             "B) Türkiye'nin üç tarafının denizlerle çevrili olması",
@@ -287,7 +287,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 22: Türkiye'nin Yengeç Dönencesi'nin kuzeyinde bulunması aşağıdakilerden hangilerinin kesin olarak gerçekleşmesini sağlar?\n\nI. Güneş ışınlarının hiçbir zaman dik açıyla gelmemesi\nII. Öğle vakti gölge boyunun hiçbir zaman sıfır olmaması\nIII. Güney yamaçların bakıdan daha fazla yararlanması",
+        question: "Türkiye'nin Yengeç Dönencesi'nin kuzeyinde bulunması aşağıdakilerden hangilerinin kesin olarak gerçekleşmesini sağlar?\n\nI. Güneş ışınlarının hiçbir zaman dik açıyla gelmemesi\nII. Öğle vakti gölge boyunun hiçbir zaman sıfır olmaması\nIII. Güney yamaçların bakıdan daha fazla yararlanması",
         options: [
             "A) Yalnız I",
             "B) Yalnız II",
@@ -300,7 +300,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 23: Aşağıdaki öğrencilerden hangisinin yaptığı yorumda matematik konum ile özel konum birbirine karıştırılmıştır?",
+        question: "Aşağıdaki öğrencilerden hangisinin yaptığı yorumda matematik konum ile özel konum birbirine karıştırılmıştır?",
         options: [
             "A) Hakan: 'Marmara Bölgesi'nin ortalama yükseltisinin az olması yer şekilleriyle ilgilidir.'",
             "B) Aylin: 'Ege Bölgesi'nde fay hatlarının yaygın olması jeotermal potansiyeli artırmıştır.'",
@@ -313,7 +313,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 24: 21 Haziran tarihinde X merkezinden Y merkezine giden bir araştırmacı, Y merkezinde gündüz süresinin daha kısa olduğunu ve yerel saatin daha ileri olduğunu belirlemiştir.\n\nBuna göre X ve Y merkezlerinin konumları arasındaki ilişki aşağıdakilerden hangisinde doğru verilmiştir?",
+        question: "21 Haziran tarihinde X merkezinden Y merkezine giden bir araştırmacı, Y merkezinde gündüz süresinin daha kısa olduğunu ve yerel saatin daha ileri olduğunu belirlemiştir.\n\nBuna göre X ve Y merkezlerinin konumları arasındaki ilişki aşağıdakilerden hangisinde doğru verilmiştir?",
         options: [
             "A) X kuzeybatıda, Y güneydoğudadır.",
             "B) X güneydoğuda, Y kuzeybatıdadır.",
@@ -328,20 +328,20 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 25: Türkiye'de yaz mevsiminde sıcaklıkların en yüksek değerlere ulaştığı alanlardan birinin Güneydoğu Anadolu Bölgesi olmasında aşağıdakilerden hangisi daha etkilidir?",
+        question: "Türkiye'de yaz mevsiminde sıcaklıkların en yüksek değerlere ulaştığı alanlardan birinin Güneydoğu Anadolu Bölgesi olmasında aşağıdakilerden hangisi daha etkilidir?",
         options: [
-            "A) Denizellik etkisinin güçlü olması",
-            "B) Nem oranının düşük ve karasallığın belirgin olması",
+            "A) Nem oranının düşük ve karasallığın belirgin olması",
+            "B) Denizellik etkisinin güçlü olması",
             "C) Ortalama yükseltinin çok fazla olması",
             "D) Kuzey rüzgârlarının sürekli etkili olması",
             "E) Karstik arazilerin yaygın olması"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "Güneydoğu Anadolu'da deniz etkisinin zayıf, nem oranının düşük ve karasallığın belirgin olması yaz sıcaklıklarının yükselmesine neden olur."
     },
 
     {
-        question: "Soru 26: İzmir ile Van'ın yaklaşık aynı enlemde bulunmasına rağmen kış sıcaklıklarının farklı olması aşağıdakilerden hangisiyle açıklanamaz?",
+        question: "İzmir ile Van'ın yaklaşık aynı enlemde bulunmasına rağmen kış sıcaklıklarının farklı olması aşağıdakilerden hangisiyle açıklanamaz?",
         options: [
             "A) İzmir'in deniz etkisinde olması",
             "B) Van'ın yükseltisinin fazla olması",
@@ -354,20 +354,20 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 27: Türkiye'de aşağıdaki yer şekli özelliklerinden hangilerinin birlikte görülmesi ilgili bölgenin Ege Bölgesi olduğunu düşündürür?",
+        question: "Türkiye'de aşağıdaki yer şekli özelliklerinden hangilerinin birlikte görülmesi ilgili bölgenin Ege Bölgesi olduğunu düşündürür?",
         options: [
-            "A) Karstik araziler ve obruklar",
-            "B) Horst-graben sistemi ve kırıklı yapı",
+            "A) Horst-graben sistemi ve kırıklı yapı",
+            "B) Karstik araziler ve obruklar",
             "C) Volkanik platolar ve yüksek dağlar",
             "D) Kıyıya paralel uzanan yüksek dağlar",
             "E) Geniş düzlükler ve kapalı havzalar"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "Ege Bölgesi'nde doğu-batı doğrultulu horst ve graben sistemleri ile kırıklı yapı yaygındır."
     },
 
     {
-        question: "Soru 28: 23 Eylül tarihinden sonra Türkiye'de yaşanan değişimlerle ilgili aşağıdakilerden hangisi doğrudur?",
+        question: "23 Eylül tarihinden sonra Türkiye'de yaşanan değişimlerle ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
             "A) Gündüz süreleri gecelerden uzun olmaya devam eder.",
             "B) Güneş ışınlarının geliş açısı giderek büyür.",
@@ -380,20 +380,20 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 29: Türkiye'de maden çeşitliliğinin fazla olmasında aşağıdakilerden hangisinin etkili olduğu söylenebilir?",
+        question: "Türkiye'de maden çeşitliliğinin fazla olmasında aşağıdakilerden hangisinin etkili olduğu söylenebilir?",
         options: [
             "A) Tek tip kayaç yapısının bulunmasının",
-            "B) Jeolojik yapının ve oluşum dönemlerinin çeşitlilik göstermesinin",
+            "B) Madenlerin yalnızca fay hatları üzerinde bulunmasının",
             "C) Ülkenin yalnızca genç arazilerden oluşmasının",
-            "D) Madenlerin yalnızca fay hatları üzerinde bulunmasının",
+            "D) Jeolojik yapının ve oluşum dönemlerinin çeşitlilik göstermesinin",
             "E) Matematik konumun maden dağılışını belirlemesinin"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Türkiye'nin farklı jeolojik dönemlere ait arazilerinin bulunması maden çeşitliliğinin fazla olmasını sağlamıştır."
     },
 
     {
-        question: "Soru 30: Türkiye'de genel kurallara aykırı bir durum olarak Karadeniz Dağları'nın kuzey yamaçlarının kış mevsiminde bazı dönemlerde güney yamaçlardan daha ılık olması aşağıdakilerden hangisiyle açıklanır?",
+        question: "Türkiye'de genel kurallara aykırı bir durum olarak Karadeniz Dağları'nın kuzey yamaçlarının kış mevsiminde bazı dönemlerde güney yamaçlardan daha ılık olması aşağıdakilerden hangisiyle açıklanır?",
         options: [
             "A) Kuzey yamaçların denizellik etkisinde kalmasıyla",
             "B) Güney yamaçların daha fazla yükseltiye sahip olmasıyla",
@@ -406,7 +406,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 31: Türkiye'nin Orta Kuşak'ta yer almasının sonuçları arasında aşağıdakilerden hangisi gösterilemez?",
+        question: "Türkiye'nin Orta Kuşak'ta yer almasının sonuçları arasında aşağıdakilerden hangisi gösterilemez?",
         options: [
             "A) Dört mevsimin belirgin olarak yaşanması",
             "B) Batı rüzgârlarının etkili olması",
@@ -419,7 +419,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 32: Yaz mevsiminde sıcaklık farklarının fazla, nem oranının düşük ve günlük sıcaklık farklarının belirgin olduğu bir bölge aşağıdakilerden hangisidir?",
+        question: "Yaz mevsiminde sıcaklık farklarının fazla, nem oranının düşük ve günlük sıcaklık farklarının belirgin olduğu bir bölge aşağıdakilerden hangisidir?",
         options: [
             "A) Karadeniz",
             "B) Marmara",
@@ -432,7 +432,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 33: İzmir ile Van'ın yaklaşık aynı enlemde bulunmasına rağmen kışın İzmir'in daha sıcak olması aşağıdaki ilişkilerden hangisinin tek başına sıcaklık üzerinde yeterli açıklama sağlamadığını gösterir?",
+        question: "İzmir ile Van'ın yaklaşık aynı enlemde bulunmasına rağmen kışın İzmir'in daha sıcak olması aşağıdaki ilişkilerden hangisinin tek başına sıcaklık üzerinde yeterli açıklama sağlamadığını gösterir?",
         options: [
             "A) Enlem-sıcaklık ilişkisi",
             "B) Boylam-yerel saat ilişkisi",
@@ -445,7 +445,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 34: Türkiye'nin matematik konumuyla ilgili aşağıdaki eşleştirmelerden hangisi doğrudur?\n\nI. Gündüz süresi — Enlem\nII. Alacakaranlık süresi — Enlem\nIII. Yerel saat farkı — Boylam",
+        question: "Türkiye'nin matematik konumuyla ilgili aşağıdaki eşleştirmelerden hangisi doğrudur?\n\nI. Gündüz süresi — Enlem\nII. Alacakaranlık süresi — Enlem\nIII. Yerel saat farkı — Boylam",
         options: [
             "A) Yalnız I",
             "B) Yalnız II",
@@ -458,7 +458,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 35: 21 Mart tarihinde gece ve gündüz süreleri eşittir.\n\nBu tarihten sonra Türkiye'de aşağıdakilerden hangisinin gerçekleşmesi beklenir?",
+        question: "21 Mart tarihinde gece ve gündüz süreleri eşittir.\n\nBu tarihten sonra Türkiye'de aşağıdakilerden hangisinin gerçekleşmesi beklenir?",
         options: [
             "A) Gecelerin uzaması",
             "B) Gündüzlerin gecelerden daha uzun hâle gelmesi",
@@ -471,7 +471,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 36: Türkiye'de batıdan doğuya gidildikçe yükseltinin genel olarak artmasına bağlı olarak aşağıdakilerden hangisinin azalması beklenir?",
+        question: "Türkiye'de batıdan doğuya gidildikçe yükseltinin genel olarak artmasına bağlı olarak aşağıdakilerden hangisinin azalması beklenir?",
         options: [
             "A) Karın yerde kalma süresi",
             "B) Tarım ürünlerinin olgunlaşma süresi",
@@ -484,7 +484,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 37: 21 Aralık tarihinde Türkiye'de en uzun gece yaşanmaktadır.\n\nBu tarihten sonra gerçekleşecek değişim aşağıdakilerden hangisidir?",
+        question: "21 Aralık tarihinde Türkiye'de en uzun gece yaşanmaktadır.\n\nBu tarihten sonra gerçekleşecek değişim aşağıdakilerden hangisidir?",
         options: [
             "A) Gündüz süreleri kısalmaya devam eder.",
             "B) Geceler uzamaya devam eder.",
@@ -497,7 +497,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 38: Aşağıdaki özelliklerden hangisi Ege Bölgesi'nin yer şekilleriyle doğrudan ilişkilidir?",
+        question: "Aşağıdaki özelliklerden hangisi Ege Bölgesi'nin yer şekilleriyle doğrudan ilişkilidir?",
         options: [
             "A) Kıyıya paralel uzanan yüksek dağlar",
             "B) Horst ve graben sistemlerinin yaygın olması",
@@ -510,7 +510,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 39: Ankara'nın yerel saati 33° Doğu boylamına göre belirlenmektedir. Ankara'dan 40 dakika geri olan bir merkezin boylamı aşağıdakilerden hangisidir?",
+        question: "Ankara'nın yerel saati 33° Doğu boylamına göre belirlenmektedir. Ankara'dan 40 dakika geri olan bir merkezin boylamı aşağıdakilerden hangisidir?",
         options: [
             "A) 23° Doğu",
             "B) 25° Doğu",
@@ -525,7 +525,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 40: Türkiye'nin maden kaynaklarıyla ilgili aşağıdaki değerlendirmelerden hangisi doğrudur?",
+        question: "Türkiye'nin maden kaynaklarıyla ilgili aşağıdaki değerlendirmelerden hangisi doğrudur?",
         options: [
             "A) Maden çeşidi az, rezerv miktarı fazladır.",
             "B) Maden çeşidi fazla, birçok madenin rezervi sınırlıdır.",
@@ -538,7 +538,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 41: Hatay'dan Sinop'a doğru hareket eden bir araştırmacının aşağıdaki özelliklerden hangisinde artış gözlemlemesi beklenir?",
+        question: "Hatay'dan Sinop'a doğru hareket eden bir araştırmacının aşağıdaki özelliklerden hangisinde artış gözlemlemesi beklenir?",
         options: [
             "A) Yıllık ortalama sıcaklık",
             "B) Güneş ışınlarının geliş açısı",
@@ -553,7 +553,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 42: Karadeniz Dağları'nın kuzey yamaçlarının kışın güney yamaçlara göre daha ılık olabilmesinde aşağıdakilerden hangisi daha etkilidir?",
+        question: "Karadeniz Dağları'nın kuzey yamaçlarının kışın güney yamaçlara göre daha ılık olabilmesinde aşağıdakilerden hangisi daha etkilidir?",
         options: [
             "A) Kuzey yamaçların deniz etkisine açık olması",
             "B) Kuzey yamaçların daha yüksek olması",
@@ -566,7 +566,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 43: X ve Y bölgelerine ilişkin aşağıdaki bilgiler verilmiştir:\n\nX: Ortalama yükseltisi az, nüfus yoğunluğu fazladır.\nY: Ortalama yükseltisi fazla, volkanik araziler yaygındır.\n\nBuna göre X ve Y bölgeleri aşağıdakilerden hangisinde doğru verilmiştir?",
+        question: "X ve Y bölgelerine ilişkin aşağıdaki bilgiler verilmiştir:\n\nX: Ortalama yükseltisi az, nüfus yoğunluğu fazladır.\nY: Ortalama yükseltisi fazla, volkanik araziler yaygındır.\n\nBuna göre X ve Y bölgeleri aşağıdakilerden hangisinde doğru verilmiştir?",
         options: [
             "A) Ege - İç Anadolu",
             "B) Marmara - Doğu Anadolu",
@@ -579,7 +579,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 44: 21 Aralık tarihinde aşağıdaki şehirlerin hangisinde gündüz süresinin diğerlerine göre daha uzun olması beklenir?",
+        question: "21 Aralık tarihinde aşağıdaki şehirlerin hangisinde gündüz süresinin diğerlerine göre daha uzun olması beklenir?",
         options: [
             "A) Sinop",
             "B) Ankara",
@@ -594,7 +594,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 45: Aynı boylam üzerinde bulunan İzmit, Bilecik, Afyonkarahisar ve Finike için aşağıdakilerden hangisinin yıl boyunca aynı olması beklenmez?",
+        question: "Aynı boylam üzerinde bulunan İzmit, Bilecik, Afyonkarahisar ve Finike için aşağıdakilerden hangisinin yıl boyunca aynı olması beklenmez?",
         options: [
             "A) Yerel saat",
             "B) Yerel öğle vakti",
@@ -609,7 +609,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 46: Kış mevsiminde Sinop'un Yozgat'tan daha sıcak olabilmesi aşağıdakilerden hangisinin sonucu olarak açıklanabilir?",
+        question: "Kış mevsiminde Sinop'un Yozgat'tan daha sıcak olabilmesi aşağıdakilerden hangisinin sonucu olarak açıklanabilir?",
         options: [
             "A) Sinop'un daha güneyde bulunmasının",
             "B) Sinop'un denizel, Yozgat'ın karasal özellik göstermesinin",
@@ -622,7 +622,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 47: Türkiye'de batıdan doğuya gidildikçe yükseltinin genel olarak arttığı dikkate alındığında aşağıdakilerden hangisinin bu durumla doğrudan açıklanması mümkün değildir?",
+        question: "Türkiye'de batıdan doğuya gidildikçe yükseltinin genel olarak arttığı dikkate alındığında aşağıdakilerden hangisinin bu durumla doğrudan açıklanması mümkün değildir?",
         options: [
             "A) Sıcaklıkların genel olarak azalması",
             "B) Karın yerde kalma süresinin uzaması",
@@ -637,7 +637,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 48: Türkiye'de karstik şekillerin yaygın olarak görüldüğü alanların başında aşağıdaki bölgelerden hangisi gelir?",
+        question: "Türkiye'de karstik şekillerin yaygın olarak görüldüğü alanların başında aşağıdaki bölgelerden hangisi gelir?",
         options: [
             "A) Marmara",
             "B) Akdeniz",
@@ -650,7 +650,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 49: Karasal iklimin görüldüğü bir merkez için aşağıdakilerden hangisi söylenemez?",
+        question: "Karasal iklimin görüldüğü bir merkez için aşağıdakilerden hangisi söylenemez?",
         options: [
             "A) Nem oranının genel olarak düşük olması",
             "B) Günlük sıcaklık farkının fazla olması",
@@ -663,7 +663,7 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Soru 50: Türkiye'nin matematik konumu ve bakı koşulları dikkate alındığında aşağıdakilerden hangisi yanlıştır?",
+        question: "Türkiye'nin matematik konumu ve bakı koşulları dikkate alındığında aşağıdakilerden hangisi yanlıştır?",
         options: [
             "A) Güneş ışınları Türkiye'ye hiçbir zaman dik açıyla gelmez.",
             "B) Öğle vakti gölge boyu hiçbir zaman sıfır olmaz.",

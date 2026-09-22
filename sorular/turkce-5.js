@@ -4,44 +4,44 @@ window.turkce_5_sorulari = [
     "question": "Bir adı niteleyen ya da belirten sözcüklere ne denir?",
     "options": [
         "A) Zamir",
-        "B) Sıfat (ön ad)",
+        "B) Edat",
         "C) Zarf",
-        "D) Edat"
+        "D) Sıfat (ön ad)"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Sıfat mutlaka bir adı etkiler."
 },
 {
     "question": "“Kırmızı elma” ifadesinde “kırmızı” hangi sözcük türüdür?",
     "options": [
         "A) Ad",
-        "B) Sıfat",
-        "C) Zamir",
+        "B) Zamir",
+        "C) Sıfat",
         "D) Zarf"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Elma adını niteliyor."
 },
 {
     "question": "Ada “nasıl?” sorusunu soran sıfat türü hangisidir?",
     "options": [
-        "A) Sayı sıfatı",
-        "B) Niteleme sıfatı",
+        "A) Niteleme sıfatı",
+        "B) Sayı sıfatı",
         "C) Belirtme sıfatı",
         "D) Adlaşmış sıfat"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "akıllı öğrenci → nasıl öğrenci? akıllı."
 },
 {
     "question": "“Sekizinci sınıf” ifadesinde “sekizinci” hangi sıfat türüdür?",
     "options": [
-        "A) Asıl sayı",
-        "B) Sıra sayı",
+        "A) Sıra sayı",
+        "B) Asıl sayı",
         "C) Üleştirme sayı",
         "D) Kesir sayı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "-ıncı/-nci ekiyle sıra bildirir."
 },
 {
@@ -69,34 +69,34 @@ window.turkce_5_sorulari = [
 {
     "question": "“Üç kişi geldi.” cümlesinde “üç” hangi sözcük türüdür?",
     "options": [
-        "A) Zamir",
-        "B) Sıfat",
+        "A) Sıfat",
+        "B) Zamir",
         "C) Ad",
         "D) Zarf"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Kişi adının önünde sayı sıfatıdır."
 },
 {
     "question": "“Üçü geldi.” cümlesinde “üçü” hangi sözcük türüdür?",
     "options": [
         "A) Sıfat",
-        "B) Zamir",
-        "C) Ad",
+        "B) Ad",
+        "C) Zamir",
         "D) Edat"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Adın yerini tutuyor; zamirdir."
 },
 {
     "question": "“Çürükleri çöpe at.” cümlesinde “çürükleri” hangi sözcük türüdür?",
     "options": [
-        "A) Zamir",
-        "B) Adlaşmış sıfat",
+        "A) Adlaşmış sıfat",
+        "B) Zamir",
         "C) Belirtme sıfatı",
         "D) Niteleme sıfatı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Aslında çürük meyveler; ad düşmüş, sıfat adlaşmış."
 },
 {
@@ -114,44 +114,44 @@ window.turkce_5_sorulari = [
     "question": "“Simsiyah saç” ifadesinde “simsiyah” hangi sıfat türüdür?",
     "options": [
         "A) Küçültme",
-        "B) Pekiştirme",
-        "C) Unvan",
+        "B) Unvan",
+        "C) Pekiştirme",
         "D) Sayı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Anlamı güçlendiren pekiştirme sıfatı."
 },
 {
     "question": "“Beyazımsı duvar” ifadesinde “beyazımsı” hangi sıfat türüdür?",
     "options": [
         "A) Pekiştirme",
-        "B) Küçültme",
+        "B) Belirtme",
         "C) Unvan",
-        "D) Belirtme"
+        "D) Küçültme"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "-ımsı ekiyle biraz anlamı katar."
 },
 {
     "question": "“Doktor Ayşe” ifadesinde “Doktor” hangi sıfat türüdür?",
     "options": [
-        "A) Niteleme",
-        "B) Unvan sıfatı",
+        "A) Unvan sıfatı",
+        "B) Niteleme",
         "C) Belirtme",
         "D) Sayı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Kişinin adıyla birlikte kullanılan unvan sıfatı."
 },
 {
     "question": "Adı işaret yoluyla belirten sıfat türü hangisidir?",
     "options": [
         "A) Soru sıfatı",
-        "B) İşaret sıfatı",
+        "B) Niteleme sıfatı",
         "C) Belgisiz sıfat",
-        "D) Niteleme sıfatı"
+        "D) İşaret sıfatı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "bu, şu, o, öteki işaret sıfatı örnekleridir."
 },
 {
@@ -169,11 +169,11 @@ window.turkce_5_sorulari = [
     "question": "“Birçok kişi geldi.” cümlesinde “birçok” hangi sıfat türüdür?",
     "options": [
         "A) Soru",
-        "B) Belgisiz",
-        "C) İşaret",
+        "B) İşaret",
+        "C) Belgisiz",
         "D) Niteleme"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Adı kesin olmayan biçimde belirtir."
 },
 {
@@ -191,11 +191,11 @@ window.turkce_5_sorulari = [
     "question": "“Benimki, seninki” sözcükleri hangi sözcük türüdür?",
     "options": [
         "A) -ki ile yapılan sıfat",
-        "B) İlgi zamiri",
+        "B) Edat",
         "C) Belgisiz sıfat",
-        "D) Edat"
+        "D) İlgi zamiri"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Adın yerini tutuyor; zamirdir, sıfat değil."
 },
 {
@@ -213,11 +213,11 @@ window.turkce_5_sorulari = [
     "question": "“Bu, senin değil miydi?” cümlesinde “bu” hangi sözcük türüdür?",
     "options": [
         "A) İşaret sıfatı",
-        "B) İşaret zamiri",
+        "B) Soru zamiri",
         "C) Belgisiz sıfat",
-        "D) Soru zamiri"
+        "D) İşaret zamiri"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Yanında ad yok; işaret zamiri."
 },
 {
@@ -235,11 +235,11 @@ window.turkce_5_sorulari = [
     "question": "“Onları çöpe at.” cümlesinde “onları” ile “Çürükleri çöpe at.” cümlesinde “çürükleri” arasındaki fark nedir?",
     "options": [
         "A) İkisi de zamirdir.",
-        "B) Birincisi zamir, ikincisi adlaşmış sıfat.",
+        "B) Birincisi sıfat, ikincisi zamir.",
         "C) İkisi de adlaşmış sıfattır.",
-        "D) Birincisi sıfat, ikincisi zamir."
+        "D) Birincisi zamir, ikincisi adlaşmış sıfat."
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Onları zamir; çürükleri niteleme sıfatının adlaşması."
 },
 {
@@ -289,12 +289,12 @@ window.turkce_5_sorulari = [
 {
     "question": "Adlaşmış sıfat hakkında aşağıdakilerden hangisi doğrudur?",
     "options": [
-        "A) Kök olarak zamirdir.",
-        "B) Ad gibi çekimlenir.",
+        "A) Ad gibi çekimlenir.",
+        "B) Kök olarak zamirdir.",
         "C) Kip eki alır.",
         "D) Yalnız fiilden türer."
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "çürükler, çürüklere gibi ad gibi çekimlenir."
 },
 {
@@ -311,12 +311,12 @@ window.turkce_5_sorulari = [
 {
     "question": "“Kaç kişi geldi?” cümlesinde “kaç” hangi sözcük türüdür?",
     "options": [
-        "A) Soru zamiri",
-        "B) Soru sıfatı",
+        "A) Soru sıfatı",
+        "B) Soru zamiri",
         "C) Belgisiz sıfat",
         "D) Sayı zamiri"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Kişi adının önünde soru sıfatı."
 },
 {
@@ -342,25 +342,25 @@ window.turkce_5_sorulari = [
     "explanation": "İşaret, soru, belgisiz ve -ki ile belirtme."
 },
 {
-    "question": "“Masal kitap” ifadesinde “masal” hangi sözcük türü değildir?",
+    "question": "“Masal kitabı” tamlamasında “masal” sözcüğünün türü aşağıdakilerden hangisidir?",
     "options": [
-        "A) Ad",
-        "B) Sıfat",
-        "C) Zamir",
-        "D) Belirtme sıfatı"
+        "A) Sıfat",
+        "B) Zamir",
+        "C) Ad (isim)",
+        "D) Zarf"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "Masal bir ad; kitap adını belirtmez, tamlama kurar."
+    "explanation": "“Masal kitabı” belirtisiz ad tamlamasıdır; tamlayan “masal” bir addır. Sıfat olsaydı tamlanan ek almazdı (ör. “kırmızı kitap”)."
 },
 {
     "question": "Sıfat–zamir ayrımında altın kural nedir?",
     "options": [
         "A) Yanında ad varsa zamir.",
-        "B) Yanında ad varsa sıfat, yoksa zamir.",
+        "B) Fiilden sonra gelirse zamirdir.",
         "C) Her zaman sıfattır.",
-        "D) Fiilden sonra gelirse zamirdir."
+        "D) Yanında ad varsa sıfat, yoksa zamir."
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Notlardaki temel ayrım kuralı."
 },
 {

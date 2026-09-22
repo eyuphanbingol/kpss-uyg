@@ -9,6 +9,7 @@ import { Screen, hapticTap } from "../ui";
 import { mediaUrl, rewriteHtmlMedia } from "../lib/media";
 import { parseNoteBlocks } from "../lib/noteHtml";
 import { ZoomableImage } from "../components/ZoomableImage";
+import { konuLabel } from "../lib/konuLabels";
 
 var SCREEN_W = Dimensions.get("window").width;
 var PAGE_PAD = 16;
@@ -235,7 +236,7 @@ export default function NotesScreen({ route, navigation }) {
                 </Pressable>
                 <View style={styles.headerMid}>
                     <Text style={[styles.kicker, isDark && { color: "#94A3B8" }]} numberOfLines={1}>{ders}</Text>
-                    <Text style={[styles.title, isDark && { color: "#F8FAFC" }]} numberOfLines={2}>{konu}</Text>
+                    <Text style={[styles.title, isDark && { color: "#F8FAFC" }]} numberOfLines={2}>{konuLabel(konu)}</Text>
                 </View>
                 <Pressable onPress={toggleDark} android_ripple={{ color: "rgba(0,0,0,0.05)" }} style={[styles.iconBtn, isDark && styles.iconBtnDark]} hitSlop={8}>
                     {isDark ? <Sun size={20} color="#FDE68A" /> : <Moon size={20} color={iconColor} />}

@@ -4,11 +4,11 @@ window.turkce_19_sorulari = [
     "question": "Tamamlanmış cümlelerin sonunda hangi noktalama işareti kullanılır?",
     "options": [
         "A) Virgül",
-        "B) Nokta",
+        "B) Noktalı virgül",
         "C) İki nokta",
-        "D) Noktalı virgül"
+        "D) Nokta"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Cümle sonu nokta."
 },
 {
@@ -37,44 +37,44 @@ window.turkce_19_sorulari = [
     "question": "“19. yüzyıl” yazımında noktanın görevi nedir?",
     "options": [
         "A) Cümleyi bitirmek",
-        "B) Sıra sayı ekini göstermek",
+        "B) Açıklama yapmak",
         "C) Kısaltma yapmak",
-        "D) Açıklama yapmak"
+        "D) Sıra sayı ekini göstermek"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "19. = on dokuzuncu."
 },
 {
     "question": "“Küçük; afacan, sevimli ve zekiydi.” cümlesinde noktalı virgül neden kullanılmıştır?",
     "options": [
-        "A) Cümleyi bitirmek için",
-        "B) Virgülle giderilemeyen anlam belirsizliğini gidermek için",
+        "A) Virgülle giderilemeyen anlam belirsizliğini gidermek için",
+        "B) Cümleyi bitirmek için",
         "C) Soru sormak için",
         "D) Açıklama yapmak için"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Küçük ile sıfatlar karışmasın diye."
 },
 {
     "question": "Virgüllü sıralı cümleleri birbirinden ayırmak için hangi işaret kullanılabilir?",
     "options": [
         "A) Nokta",
-        "B) Noktalı virgül",
-        "C) Soru işareti",
+        "B) Soru işareti",
+        "C) Noktalı virgül",
         "D) Kesme"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Geldi; konuştu; gitti."
 },
 {
     "question": "Kendisiyle ilgili açıklama veya örnek verilecek ifadenin ardından hangi işaret kullanılır?",
     "options": [
         "A) Virgül",
-        "B) İki nokta",
+        "B) Kesme",
         "C) Nokta",
-        "D) Kesme"
+        "D) İki nokta"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "İki nokta açıklama getirir."
 },
 {
@@ -92,11 +92,11 @@ window.turkce_19_sorulari = [
     "question": "Karşılıklı konuşmalarda cümle başında kullanılan işaret hangisidir?",
     "options": [
         "A) Kısa çizgi",
-        "B) Uzun çizgi",
-        "C) Kesme",
+        "B) Kesme",
+        "C) Uzun çizgi",
         "D) Tırnak"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Konuşma çizgisi uzun çizgidir."
 },
 {
@@ -136,22 +136,22 @@ window.turkce_19_sorulari = [
     "question": "“Türk-Alman dostluğu” ifadesinde kısa çizginin görevi nedir?",
     "options": [
         "A) Satır bölmek",
-        "B) Arasında anlamı vermek",
+        "B) Ara söz belirtmek",
         "C) Fiil kökü göstermek",
-        "D) Ara söz belirtmek"
+        "D) Arasında anlamı vermek"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "1914-1918, Türk-Alman arasında."
 },
 {
     "question": "Eş görevli söz ve söz öbeklerini ayırmada hangi işaret kullanılır?",
     "options": [
         "A) Nokta",
-        "B) Virgül",
-        "C) Kesme",
+        "B) Kesme",
+        "C) Virgül",
         "D) İki nokta"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "elma, armut, çilek."
 },
 {
@@ -169,11 +169,11 @@ window.turkce_19_sorulari = [
     "question": "Eksiltili cümlelerin sonunda hangi işaret kullanılır?",
     "options": [
         "A) Nokta",
-        "B) Üç nokta",
-        "C) Soru",
+        "B) Soru",
+        "C) Üç nokta",
         "D) Ünlem"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Oğlan dayıya, kız halaya..."
 },
 {
@@ -201,23 +201,23 @@ window.turkce_19_sorulari = [
 {
     "question": "Kurum ve kuruluş adlarına gelen çekim eklerinde hangisi doğrudur?",
     "options": [
-        "A) Kesme kullanılır.",
-        "B) Kesme kullanılmaz.",
+        "A) Kesme kullanılmaz.",
+        "B) Kesme kullanılır.",
         "C) Nokta kullanılır.",
         "D) Tırnak kullanılır."
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Türk Dil Kurumuna (kesme yok)."
 },
 {
     "question": "“Zeki (!) olduğunu herkes bilir.” cümlesindeki ünlem işaretinin görevi nedir?",
     "options": [
         "A) Sevinç",
-        "B) Söze inanılmadığını/ters anlamı göstermek",
-        "C) Soru",
+        "B) Soru",
+        "C) Söze inanılmadığını/ters anlamı göstermek",
         "D) Seslenme"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Parantez içi ünlem: inanmama/ters anlam."
 },
 {
@@ -257,22 +257,22 @@ window.turkce_19_sorulari = [
     "question": "“Genç, adama baktı.” cümlesinde virgül neden kullanılmıştır?",
     "options": [
         "A) Hitap",
-        "B) Anlam karışıklığını önlemek",
+        "B) Kısaltma",
         "C) Tarih",
-        "D) Kısaltma"
+        "D) Anlam karışıklığını önlemek"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Genç adama / Genç, adama ayrımı."
 },
 {
     "question": "“Üç renk vardır: kırmızı, mavi, yeşil.” cümlesinde iki noktanın görevi nedir?",
     "options": [
         "A) Cümle sonu",
-        "B) Açıklama/örnek getirmek",
+        "B) Kesme",
         "C) Soru",
-        "D) Kesme"
+        "D) Açıklama/örnek getirmek"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "İki nokta açıklama öncesi."
 },
 {
@@ -290,22 +290,22 @@ window.turkce_19_sorulari = [
     "question": "Sözün bitmediğini göstermek için hangi işaret kullanılır?",
     "options": [
         "A) Nokta",
-        "B) Üç nokta",
+        "B) Kesme",
         "C) Virgül",
-        "D) Kesme"
+        "D) Üç nokta"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Bilmiyorum ki..."
 },
 {
     "question": "“Geldi mi?” cümlesinde hangi işaret kullanılır?",
     "options": [
         "A) Nokta",
-        "B) Soru işareti",
+        "B) Virgül",
         "C) Ünlem",
-        "D) Virgül"
+        "D) Soru işareti"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Soru cümlesi sonu ?"
 },
 {
@@ -323,11 +323,11 @@ window.turkce_19_sorulari = [
     "question": "“Ey Türk gençliği!” cümlesinde ünlem işaretinin görevi nedir?",
     "options": [
         "A) Soru",
-        "B) Seslenme",
-        "C) Eksilti",
+        "B) Eksilti",
+        "C) Seslenme",
         "D) Kısaltma"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Seslenme/hitapta ünlem."
 },
 {
@@ -345,22 +345,22 @@ window.turkce_19_sorulari = [
     "question": "“1965’te” yazımında kesme işaretinin görevi nedir?",
     "options": [
         "A) Özel ada ek",
-        "B) Sayıya ek",
-        "C) Kısaltmaya ek",
+        "B) Kısaltmaya ek",
+        "C) Sayıya ek",
         "D) Fiil eki"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Rakama gelen ek kesmeyle ayrılır."
 },
 {
     "question": "“5. sınıf” ifadesinde noktanın görevi nedir?",
     "options": [
         "A) Cümle sonu",
-        "B) Sıra sayısı",
-        "C) Kısaltma",
+        "B) Kısaltma",
+        "C) Sıra sayısı",
         "D) Tarih"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Sıra sayılarında nokta."
 },
 {
@@ -378,11 +378,11 @@ window.turkce_19_sorulari = [
     "question": "“M.Ö.” gibi kısaltmalarda nokta hangi amaçla kullanılır?",
     "options": [
         "A) Virgül yerine",
-        "B) Kısaltma harflerini ayırmak",
+        "B) Kesme",
         "C) Soru",
-        "D) Kesme"
+        "D) Kısaltma harflerini ayırmak"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Kısaltmalarda nokta kullanılır."
 }
 ];

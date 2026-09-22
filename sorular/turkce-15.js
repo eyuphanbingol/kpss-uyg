@@ -15,11 +15,11 @@ window.turkce_15_sorulari = [
     "question": "“Ali geldi.” cümlesi yüklemin türüne göre nedir?",
     "options": [
         "A) Ad cümlesi",
-        "B) Fiil cümlesi",
+        "B) Devrik",
         "C) Eksilti",
-        "D) Devrik"
+        "D) Fiil cümlesi"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "geldi fiil yüklem."
 },
 {
@@ -37,55 +37,55 @@ window.turkce_15_sorulari = [
     "question": "“En güzel şey çalışmaktır.” cümlesi neden ad cümlesidir?",
     "options": [
         "A) Yüklem fiildir.",
-        "B) Fiilimsi yüklem ad soylu kabul edilir.",
-        "C) Özne yoktur.",
+        "B) Özne yoktur.",
+        "C) Fiilimsi yüklem ad soylu kabul edilir.",
         "D) Devriktir."
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "çalışmaktır isim-fiil → ad cümlesi."
 },
 {
     "question": "Yüklemi sonda olan cümle hangisidir?",
     "options": [
         "A) Devrik",
-        "B) Kurallı (düz)",
-        "C) Eksilti",
+        "B) Eksilti",
+        "C) Kurallı (düz)",
         "D) Sıralı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Kurallı cümlede yüklem sondadır."
 },
 {
     "question": "“Ali dün okula gitti.” cümlesi yüklemin yerine göre nedir?",
     "options": [
         "A) Devrik",
-        "B) Kurallı",
-        "C) Eksilti",
+        "B) Eksilti",
+        "C) Kurallı",
         "D) Bağlı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Yüklem sonda → kurallı."
 },
 {
     "question": "“Duymuyor beni kimseler.” cümlesi nedir?",
     "options": [
         "A) Kurallı",
-        "B) Devrik",
-        "C) Eksilti",
+        "B) Eksilti",
+        "C) Devrik",
         "D) Basit"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Yüklem başta → devrik."
 },
 {
     "question": "Yüklemi olmayan cümle türü hangisidir?",
     "options": [
         "A) Devrik",
-        "B) Eksilti",
+        "B) Sıralı",
         "C) Bağlı",
-        "D) Sıralı"
+        "D) Eksilti"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Eksilti: yüklem yok, ... ile biter."
 },
 {
@@ -114,22 +114,22 @@ window.turkce_15_sorulari = [
     "question": "“Ali gelmedi.” cümlesi anlamına göre nedir?",
     "options": [
         "A) Olumlu",
-        "B) Olumsuz",
+        "B) Ünlem",
         "C) Soru",
-        "D) Ünlem"
+        "D) Olumsuz"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Olumsuz cümle."
 },
 {
     "question": "“Bu mağazada yok yok.” cümlesi biçimce ve anlamca nasıldır?",
     "options": [
         "A) Biçimce olumlu, anlamca olumsuz",
-        "B) Biçimce olumsuz, anlamca olumlu",
+        "B) İkisi de olumsuz",
         "C) İkisi de olumlu",
-        "D) İkisi de olumsuz"
+        "D) Biçimce olumsuz, anlamca olumlu"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "yok yok = her şey var (biçimce olumsuz, anlamca olumlu)."
 },
 {
@@ -147,11 +147,11 @@ window.turkce_15_sorulari = [
     "question": "“Geldi mi?” cümlesi anlamına göre nedir?",
     "options": [
         "A) Emir",
-        "B) Soru",
+        "B) Şart",
         "C) Ünlem",
-        "D) Şart"
+        "D) Soru"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Soru cümlesi."
 },
 {
@@ -202,55 +202,55 @@ window.turkce_15_sorulari = [
     "question": "Tek yargılı cümlelere ne denir?",
     "options": [
         "A) Birleşik",
-        "B) Basit",
-        "C) Sıralı",
+        "B) Sıralı",
+        "C) Basit",
         "D) Bağlı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Basit cümle tek yargılıdır."
 },
 {
     "question": "“Ali geldi.” cümlesi yapısına göre nedir?",
     "options": [
         "A) Birleşik",
-        "B) Basit",
-        "C) Sıralı",
+        "B) Sıralı",
+        "C) Basit",
         "D) Bağlı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Tek yargı → basit."
 },
 {
     "question": "Fiilimsi bulunan birleşik cümle türü hangisidir?",
     "options": [
         "A) Ki'li",
-        "B) Girişik birleşik",
-        "C) Şartlı",
+        "B) Şartlı",
+        "C) Girişik birleşik",
         "D) İç içe"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Girişik birleşikte fiilimsi vardır."
 },
 {
     "question": "“Ali'nin geldiğini gördüm.” cümlesi hangi birleşik cümledir?",
     "options": [
         "A) Ki'li",
-        "B) Girişik birleşik",
+        "B) Bağlı",
         "C) Şartlı",
-        "D) Bağlı"
+        "D) Girişik birleşik"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "geldiğini fiilimsi → girişik birleşik."
 },
 {
     "question": "“Anladım ki gelmeyecek.” cümlesi hangi birleşik cümledir?",
     "options": [
         "A) Girişik",
-        "B) Ki'li",
+        "B) Sıralı",
         "C) Şartlı",
-        "D) Sıralı"
+        "D) Ki'li"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "ki bağlacı → ki'li birleşik."
 },
 {
@@ -301,22 +301,22 @@ window.turkce_15_sorulari = [
     "question": "Yüklemin türüne göre cümle kaça ayrılır?",
     "options": [
         "A) Üçe",
-        "B) İkiye: fiil ve ad cümlesi",
+        "B) Beşe",
         "C) Dörde",
-        "D) Beşe"
+        "D) İkiye: fiil ve ad cümlesi"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Fiil cümlesi / ad cümlesi."
 },
 {
     "question": "Yüklemin yerine göre cümle türleri hangileridir?",
     "options": [
         "A) Olumlu, olumsuz, soru",
-        "B) Kurallı, devrik, eksilti",
-        "C) Basit, birleşik, bağlı",
+        "B) Basit, birleşik, bağlı",
+        "C) Kurallı, devrik, eksilti",
         "D) Fiil, ad, fiilimsi"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Kurallı / devrik / eksilti."
 },
 {
@@ -334,11 +334,11 @@ window.turkce_15_sorulari = [
     "question": "Yapısına göre cümle türlerinden biri hangisidir?",
     "options": [
         "A) Devrik",
-        "B) Girişik birleşik",
+        "B) Fiil cümlesi",
         "C) Olumlu",
-        "D) Fiil cümlesi"
+        "D) Girişik birleşik"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Yapı: basit, girişik, ki'li, şartlı, bağlı, sıralı."
 },
 {

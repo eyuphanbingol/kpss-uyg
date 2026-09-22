@@ -2,8 +2,8 @@
 window.tarih_24_sorulari = [
     {
         question: "İtalya’da faşist sempatizanlara verilen ad aşağıdakilerden hangisidir?",
-        options: ["A) Kahverengi Gömlekliler", "B) Kara Gömlekliler", "C) Kızıl Gömlekliler", "D) Gestapo", "E) SS"],
-        correctAnswerIndex: 1,
+        options: ["A) Kahverengi Gömlekliler", "B) SS", "C) Kızıl Gömlekliler", "D) Gestapo", "E) Kara Gömlekliler"],
+        correctAnswerIndex: 4,
         explanation: "İtalya’da Kara Gömlekliler, Almanya’da Kahverengi Gömlekliler kullanılır. Gestapo Alman gizli polisidir."
     },
     {
@@ -14,20 +14,20 @@ window.tarih_24_sorulari = [
     },
     {
         question: "“Sürekli barış ne mümkün ne faydalıdır. Sadece savaş insan enerjisini en yüksek gerilimde tutar.” sözü hangi rejimin ruhunu yansıtır?",
-        options: ["A) Liberalizm", "B) Faşizm", "C) Wilsonculuk", "D) Monroe yalnızlığı", "E) Komünizm"],
-        correctAnswerIndex: 1,
+        options: ["A) Faşizm", "B) Liberalizm", "C) Wilsonculuk", "D) Monroe yalnızlığı", "E) Komünizm"],
+        correctAnswerIndex: 0,
         explanation: "Bu ifade İtalyan faşizminin savaşı yücelten söylemidir."
     },
     {
         question: "Almanya’da Nazi sempatizanlarına verilen ad aşağıdakilerden hangisidir?",
-        options: ["A) Kara Gömlekliler", "B) Kahverengi Gömlekliler", "C) Kızıl Ordu", "D) Wehrmacht", "E) Cheka"],
-        correctAnswerIndex: 1,
+        options: ["A) Kara Gömlekliler", "B) Wehrmacht", "C) Kızıl Ordu", "D) Kahverengi Gömlekliler", "E) Cheka"],
+        correctAnswerIndex: 3,
         explanation: "Kahverengi Gömlekliler Nazi sempatizanlarıdır; Kara Gömlekliler İtalya’dadır."
     },
     {
         question: "Nazi Almanyası’nın “hayat sahasını genişletme” politikası aşağıdakilerden hangisidir?",
-        options: ["A) Yatıştırma", "B) Lebensraum", "C) Monroe", "D) Açık kapı", "E) Splendid isolation"],
-        correctAnswerIndex: 1,
+        options: ["A) Yatıştırma", "B) Monroe", "C) Lebensraum", "D) Açık kapı", "E) Splendid isolation"],
+        correctAnswerIndex: 2,
         explanation: "Hayat sahası (Lebensraum) yeni topraklara yayılma ideolojisidir."
     },
     {
@@ -56,8 +56,8 @@ window.tarih_24_sorulari = [
     },
     {
         question: "Hitler’in “nasyonal sosyalist akım onu dar yurdundan çıkarıp yeni topraklara yürütmelidir” sözü hangi politikayı destekler?",
-        options: ["A) Yatıştırma", "B) Hayat sahasını genişletme", "C) Monroe Doktrini", "D) Atlantik Bildirisi", "E) Ödünç Verme ve Kiralama"],
-        correctAnswerIndex: 1,
+        options: ["A) Yatıştırma", "B) Monroe Doktrini", "C) Hayat sahasını genişletme", "D) Atlantik Bildirisi", "E) Ödünç Verme ve Kiralama"],
+        correctAnswerIndex: 2,
         explanation: "Söz, hayat sahası/Lebensraum ideolojisine işaret eder."
     },
     {
@@ -74,8 +74,8 @@ window.tarih_24_sorulari = [
     },
     {
         question: "“Asya Asyalılarındır” sloganı ve İmparator Hirohito hangi devlete aittir?",
-        options: ["A) Çin", "B) Japonya", "C) Kore", "D) Tayland", "E) Hindistan"],
-        correctAnswerIndex: 1,
+        options: ["A) Çin", "B) Tayland", "C) Kore", "D) Japonya", "E) Hindistan"],
+        correctAnswerIndex: 3,
         explanation: "Japon militarizminin sloganı ve imparatoru Hirohito’dur."
     },
     {
@@ -86,8 +86,8 @@ window.tarih_24_sorulari = [
     },
     {
         question: "Berlin–Roma Mihveri hangi devletler arasındadır?",
-        options: ["A) Almanya–Japonya", "B) Almanya–İtalya", "C) İtalya–Japonya", "D) Almanya–SSCB", "E) İngiltere–Fransa"],
-        correctAnswerIndex: 1,
+        options: ["A) Almanya–Japonya", "B) İngiltere–Fransa", "C) İtalya–Japonya", "D) Almanya–SSCB", "E) Almanya–İtalya"],
+        correctAnswerIndex: 4,
         explanation: "Berlin–Roma: Almanya–İtalya. Berlin–Tokyo: Almanya–Japonya."
     },
     {
@@ -117,19 +117,19 @@ window.tarih_24_sorulari = [
     {
         question: "Müttefik ve Mihver grupları aşağıdakilerin hangisinde doğru verilmiştir?",
         options: [
-            "A) Müttefik: Almanya–İtalya–Japonya / Mihver: İngiltere–SSCB–Fransa–ABD",
-            "B) Müttefik: İngiltere–SSCB–Fransa–ABD / Mihver: Almanya–İtalya–Japonya",
+            "A) Müttefik: İngiltere–SSCB–Fransa–ABD / Mihver: Almanya–İtalya–Japonya",
+            "B) Müttefik: Almanya–İtalya–Japonya / Mihver: İngiltere–SSCB–Fransa–ABD",
             "C) Müttefik: Almanya–SSCB / Mihver: ABD–Japonya",
             "D) Müttefik: İtalya–Japonya / Mihver: İngiltere–Fransa",
             "E) Müttefik: yalnız ABD / Mihver: yalnız Almanya"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "Müttefik İngiltere, SSCB, Fransa, ABD; Mihver Almanya, İtalya, Japonya’dır."
     },
     {
         question: "Almanya’nın Polonya’dan istediği, Versay’da serbest statüdeki liman hangisidir?",
-        options: ["A) Hamburg", "B) Danzig", "C) Trieste", "D) Odessa", "E) Selanik"],
-        correctAnswerIndex: 1,
+        options: ["A) Hamburg", "B) Odessa", "C) Trieste", "D) Danzig", "E) Selanik"],
+        correctAnswerIndex: 3,
         explanation: "Danzig (Gdańsk) limanı savaşın fitilini ateşleyen taleplerdendir."
     },
     {
@@ -146,8 +146,8 @@ window.tarih_24_sorulari = [
     },
     {
         question: "SSCB’nin savaşın başında işgal ettiği Baltık ülkeleri hangileridir?",
-        options: ["A) Finlandiya–İsveç–Norveç", "B) Estonya–Letonya–Litvanya", "C) Polonya–Macaristan–Romanya", "D) Çekoslovakya–Avusturya–Saar", "E) Belçika–Hollanda–Lüksemburg"],
-        correctAnswerIndex: 1,
+        options: ["A) Finlandiya–İsveç–Norveç", "B) Çekoslovakya–Avusturya–Saar", "C) Polonya–Macaristan–Romanya", "D) Estonya–Letonya–Litvanya", "E) Belçika–Hollanda–Lüksemburg"],
+        correctAnswerIndex: 3,
         explanation: "SSCB Estonya, Letonya ve Litvanya’yı işgal etmiştir."
     },
     {
@@ -158,26 +158,26 @@ window.tarih_24_sorulari = [
     },
     {
         question: "Almanların aşarak Fransa’yı ele geçirdiği savunma hattı hangisidir?",
-        options: ["A) Siegfried", "B) Maginot Hattı", "C) Çekoslovak tahkimatı", "D) Atlantik Duvarı yalnız", "E) Mannerheim"],
-        correctAnswerIndex: 1,
+        options: ["A) Siegfried", "B) Atlantik Duvarı yalnız", "C) Çekoslovak tahkimatı", "D) Maginot Hattı", "E) Mannerheim"],
+        correctAnswerIndex: 3,
         explanation: "Maginot Hattı aşılarak Fransa düşmüştür."
     },
     {
         question: "Almanların işgal ettikleri Fransa bölgesinde kurdukları yönetim aşağıdakilerden hangisidir?",
-        options: ["A) Özgür Fransa", "B) Vichy Hükümeti", "C) Weimar", "D) Viyana Kongresi", "E) Geçici BM yönetimi"],
-        correctAnswerIndex: 1,
+        options: ["A) Özgür Fransa", "B) Weimar", "C) Vichy Hükümeti", "D) Viyana Kongresi", "E) Geçici BM yönetimi"],
+        correctAnswerIndex: 2,
         explanation: "İşgal Fransası’nda Vichy Hükümeti kurulmuştur."
     },
     {
         question: "Almanya’nın İngiltere’ye yönelik hava harekâtının adı nedir?",
-        options: ["A) Barbarossa", "B) Kartal Hücumu", "C) Overlord", "D) Market Garden", "E) Torch"],
-        correctAnswerIndex: 1,
+        options: ["A) Barbarossa", "B) Market Garden", "C) Overlord", "D) Kartal Hücumu", "E) Torch"],
+        correctAnswerIndex: 3,
         explanation: "Kartal Hücumu İngiltere’ye karşıdır. Barbarossa SSCB’yedir."
     },
     {
         question: "1941’de Almanya’nın SSCB’ye saldırısı hangi harekât adıyla anılır?",
-        options: ["A) Kartal Hücumu", "B) Barbarossa", "C) Normandiya", "D) Pearl Harbor", "E) Midway"],
-        correctAnswerIndex: 1,
+        options: ["A) Barbarossa", "B) Kartal Hücumu", "C) Normandiya", "D) Pearl Harbor", "E) Midway"],
+        correctAnswerIndex: 0,
         explanation: "Barbarossa Harekâtı 1941’de SSCB’ye yöneliktir."
     },
     {
@@ -194,14 +194,14 @@ window.tarih_24_sorulari = [
     },
     {
         question: "Kuzey Afrika Cephesi’nin sonucu aşağıdakilerden hangisidir?",
-        options: ["A) İtalya ve Almanya kazandı", "B) İngiltere kazandı", "C) Japonya kazandı", "D) Savaş berabere bitti", "E) Vichy kazandı"],
-        correctAnswerIndex: 1,
+        options: ["A) İtalya ve Almanya kazandı", "B) Vichy kazandı", "C) Japonya kazandı", "D) Savaş berabere bitti", "E) İngiltere kazandı"],
+        correctAnswerIndex: 4,
         explanation: "İngiltere, İtalya ve Almanya’ya karşı Kuzey Afrika’da galip gelmiştir."
     },
     {
         question: "ABD’nin savaşa girmeden müttefikleri desteklediği yasa aşağıdakilerden hangisidir?",
-        options: ["A) Homestead", "B) Ödünç Verme ve Kiralama Yasası", "C) New Deal yalnız tarım", "D) Sherman", "E) Neutrality Act’in sıkılaştırılması"],
-        correctAnswerIndex: 1,
+        options: ["A) Homestead", "B) Neutrality Act’in sıkılaştırılması", "C) New Deal yalnız tarım", "D) Sherman", "E) Ödünç Verme ve Kiralama Yasası"],
+        correctAnswerIndex: 4,
         explanation: "Ödünç Verme ve Kiralama (Lend-Lease) ABD’nin savaş öncesi desteğidir."
     },
     {
@@ -224,20 +224,20 @@ window.tarih_24_sorulari = [
     },
     {
         question: "Pasifik’te ABD’nin Japonya’ya karşı kazandığı deniz savaşları hangileridir?",
-        options: ["A) Jutland – Trafalgar – Navarin", "B) Midway – Leyte – Mercan Denizi", "C) Çanakkale – Midilli – İmroz", "D) Incheon – Yalu – Pusan", "E) Tsushima yalnız"],
-        correctAnswerIndex: 1,
+        options: ["A) Jutland – Trafalgar – Navarin", "B) Incheon – Yalu – Pusan", "C) Çanakkale – Midilli – İmroz", "D) Midway – Leyte – Mercan Denizi", "E) Tsushima yalnız"],
+        correctAnswerIndex: 3,
         explanation: "Midway, Leyte ve Mercan Denizi ABD zaferleridir."
     },
     {
         question: "Casablanca Konferansı’nın temel kararı aşağıdakilerden hangisidir?",
-        options: ["A) BM’nin kurulması", "B) Mihverin kayıtsız şartsız teslimi", "C) Normandiya çıkarması takvimi yalnız", "D) Atom bombasının atılması", "E) Türkiye’nin savaşa fiilen girmesi"],
-        correctAnswerIndex: 1,
+        options: ["A) BM’nin kurulması", "B) Türkiye’nin savaşa fiilen girmesi", "C) Normandiya çıkarması takvimi yalnız", "D) Atom bombasının atılması", "E) Mihverin kayıtsız şartsız teslimi"],
+        correctAnswerIndex: 4,
         explanation: "Casablanca’da ABD ve İngiltere kayıtsız şartsız teslim kararı almıştır. SSCB bu toplantıya katılmamıştır."
     },
     {
         question: "Fransa’nın Alman işgalinden kurtarılması için harekât kararı hangi konferansta alınmış, hangi çıkarma ile uygulanmıştır?",
-        options: ["A) Yalta – Sicilya", "B) Quebec – Normandiya", "C) Potsdam – Anzio", "D) Casablanca – Pearl Harbor", "E) San Francisco – Midway"],
-        correctAnswerIndex: 1,
+        options: ["A) Yalta – Sicilya", "B) San Francisco – Midway", "C) Potsdam – Anzio", "D) Casablanca – Pearl Harbor", "E) Quebec – Normandiya"],
+        correctAnswerIndex: 4,
         explanation: "Quebec’te karar, Normandiya Çıkarması ile Fransa kurtarılmıştır."
     },
     {
@@ -254,8 +254,8 @@ window.tarih_24_sorulari = [
     },
     {
         question: "Birleşmiş Milletler’in kurulduğu konferans ve Türkiye’nin statüsü aşağıdakilerin hangisinde doğrudur?",
-        options: ["A) Yalta – gözlemci", "B) San Francisco – kurucu üye", "C) Potsdam – mağlup", "D) Casablanca – mihver", "E) Quebec – işgal kuvveti"],
-        correctAnswerIndex: 1,
+        options: ["A) Yalta – gözlemci", "B) Quebec – işgal kuvveti", "C) Potsdam – mağlup", "D) Casablanca – mihver", "E) San Francisco – kurucu üye"],
+        correctAnswerIndex: 4,
         explanation: "San Francisco’da BM kurulmuş, Türkiye kurucu üye olmuştur."
     },
     {
@@ -266,14 +266,14 @@ window.tarih_24_sorulari = [
     },
     {
         question: "Potsdam’da Fransa ve Çekoslovakya lehine alınan toprak kararı hangisidir?",
-        options: ["A) Fransa Danzig, Çekoslovakya Mançurya", "B) Fransa Alsas-Loren, Çekoslovakya Südetler", "C) Fransa Saar yalnız, Çekoslovakya Boğazlar", "D) İkisi de Hiroşima", "E) Fransa Kore, Çekoslovakya Habeşistan"],
-        correctAnswerIndex: 1,
+        options: ["A) Fransa Alsas-Loren, Çekoslovakya Südetler", "B) Fransa Danzig, Çekoslovakya Mançurya", "C) Fransa Saar yalnız, Çekoslovakya Boğazlar", "D) İkisi de Hiroşima", "E) Fransa Kore, Çekoslovakya Habeşistan"],
+        correctAnswerIndex: 0,
         explanation: "Fransa Alsas-Loren’i, Çekoslovakya Südetler’i geri alacaktır."
     },
     {
         question: "Pasifik’te savaşı bitiren atom bombaları hangi sırayla atılmıştır?",
-        options: ["A) Nagazaki sonra Hiroşima", "B) Önce Hiroşima, sonra Nagazaki", "C) İkisi aynı gün Tokyo’ya", "D) Yalnız Berlin", "E) Önce Stalingrad"],
-        correctAnswerIndex: 1,
+        options: ["A) Nagazaki sonra Hiroşima", "B) Yalnız Berlin", "C) İkisi aynı gün Tokyo’ya", "D) Önce Hiroşima, sonra Nagazaki", "E) Önce Stalingrad"],
+        correctAnswerIndex: 3,
         explanation: "Önce Hiroşima, sonra Nagazaki. ABD atom bombasını ilk kez kullanmıştır."
     },
     {

@@ -3,37 +3,37 @@ window.guncel_1_sorulari = [
 {
     "question": "2024 yılı Türkiye'de aşağıdakilerden hangisi olarak ilan edilmiştir?",
     "options": [
-        "A) Gençlik Yılı",
-        "B) Emekliler Yılı",
+        "A) Emekliler Yılı",
+        "B) Gençlik Yılı",
         "C) Aile Yılı",
         "D) Eğitim Yılı",
         "E) Teknoloji Yılı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "2024 yılı Emekliler Yılı ilan edilmiştir."
 },
 {
     "question": "2025 yılı aşağıdakilerden hangisi olarak ilan edilmiştir?",
     "options": [
-        "A) Emekliler Yılı",
+        "A) Aile Yılı",
         "B) Türkiye Yüzyılı Yılı",
-        "C) Aile Yılı",
+        "C) Emekliler Yılı",
         "D) Gençlik Yılı",
         "E) Kalkınma Yılı"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 0,
     "explanation": "2025 yılı Aile Yılı ilan edilmiştir."
 },
 {
     "question": "2025 Aile Yılı'nın teması aşağıdakilerden hangisidir?",
     "options": [
         "A) Güçlü Türkiye, Güçlü Aile",
-        "B) Ailemiz Geleceğimiz",
+        "B) Büyük Türkiye, Büyük Aile",
         "C) Türkiye'nin Gücü Ailemiz",
         "D) Geleceğimiz Ailemiz",
-        "E) Büyük Türkiye, Büyük Aile"
+        "E) Ailemiz Geleceğimiz"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 4,
     "explanation": "Tema: Ailemiz Geleceğimiz."
 },
 {
@@ -75,13 +75,13 @@ window.guncel_1_sorulari = [
 {
     "question": "Verilen notlara göre 2026 yılı için kullanılan ekonomik ifade aşağıdakilerden hangisidir?",
     "options": [
-        "A) Kalkınmada Atılım Yılı",
+        "A) Ekonomide Reform Yılı",
         "B) Üretim Yılı",
-        "C) Ekonomide Reform Yılı",
+        "C) Kalkınmada Atılım Yılı",
         "D) İhracat Yılı",
         "E) Türkiye Ekonomi Yılı"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 0,
     "explanation": "2026: Ekonomide Reform Yılı."
 },
 {
@@ -245,23 +245,23 @@ window.guncel_1_sorulari = [
     "options": [
         "A) Bursa",
         "B) Antalya",
-        "C) Tunceli",
+        "C) Konya",
         "D) Adana",
-        "E) Konya"
+        "E) Tunceli"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 4,
     "explanation": "En az nüfuslu üç il: Bayburt, Tunceli, Ardahan."
 },
 {
     "question": "Aşağıdaki sıralamalardan hangisi Türkiye'nin en kalabalık illerini doğru vermektedir?",
     "options": [
-        "A) İstanbul – İzmir – Ankara",
+        "A) İstanbul – Ankara – İzmir",
         "B) Ankara – İstanbul – İzmir",
-        "C) İstanbul – Ankara – İzmir",
+        "C) İstanbul – İzmir – Ankara",
         "D) İzmir – İstanbul – Ankara",
         "E) İstanbul – Bursa – Ankara"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 0,
     "explanation": "Sıra: İstanbul, Ankara, İzmir."
 },
 {
@@ -293,11 +293,11 @@ window.guncel_1_sorulari = [
     "options": [
         "A) TÜİK — Para politikasını yürütür.",
         "B) TCMB — Resmî nüfus istatistiklerini yayımlar.",
-        "C) TÜİK — Türkiye'nin resmî istatistik kurumudur.",
+        "C) Hazine ve Maliye Bakanlığı — Nobel ödüllerini açıklar.",
         "D) Borsa İstanbul — Maliye politikasını belirler.",
-        "E) Hazine ve Maliye Bakanlığı — Nobel ödüllerini açıklar."
+        "E) TÜİK — Türkiye'nin resmî istatistik kurumudur."
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 4,
     "explanation": "TÜİK resmî istatistik kurumudur."
 },
 {
@@ -327,13 +327,13 @@ window.guncel_1_sorulari = [
 {
     "question": "Türkiye'nin organize sermaye piyasası yapısının temel kurumlarından biri aşağıdakilerden hangisidir?",
     "options": [
-        "A) TÜİK",
+        "A) Borsa İstanbul",
         "B) TCMB",
-        "C) Borsa İstanbul",
+        "C) TÜİK",
         "D) Hazine ve Maliye Bakanlığı",
         "E) OECD"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 0,
     "explanation": "Borsa İstanbul."
 },
 {
@@ -449,11 +449,11 @@ window.guncel_1_sorulari = [
     "options": [
         "A) Toplam doğurganlık hızının 2,10 olduğu",
         "B) Nüfusun kendini yenileme düzeyinin 1,42 olduğu",
-        "C) Toplam doğurganlık hızının 1,42 olduğu",
+        "C) En düşük doğurganlığın Şanlıurfa'da olduğu",
         "D) En yüksek doğurganlığın Bartın'da olduğu",
-        "E) En düşük doğurganlığın Şanlıurfa'da olduğu"
+        "E) Toplam doğurganlık hızının 1,42 olduğu"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 4,
     "explanation": "Doğurganlık 1,42; yenilenme 2,10; en yüksek Şanlıurfa, en düşük Bartın."
 },
 {

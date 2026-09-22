@@ -208,12 +208,12 @@ window.geometri_7_sorulari = [
     "question": "Eğimleri 2 ve −1/2 olan iki doğru arasındaki ilişki nedir?",
     "options": [
         "A) Paralel",
-        "B) Dik",
+        "B) Belirsiz",
         "C) 45° açılı",
         "D) Çakışık",
-        "E) Belirsiz"
+        "E) Dik"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 4,
     "explanation": "2·(−1/2) = −1 → dik doğrular."
 },
 {

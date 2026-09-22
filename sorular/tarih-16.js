@@ -4,7 +4,7 @@ window.tarih_16_sorulari = [
     // BÖLÜM 1: MUDANYA ATEŞKES ANTLAŞMASI (Soru 1-13)
     // ============================================================
     {
-        question: "Soru 1: Mudanya Ateşkes Antlaşması ile ilgili aşağıdakilerden hangisi doğrudur?",
+        question: "Mudanya Ateşkes Antlaşması ile ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
             "A) Antlaşmada TBMM Hükûmeti'ni Rauf Orbay temsil etmiştir.",
             "B) Yunanistan, görüşmelere doğrudan kendi delegeleriyle katılmıştır.",
@@ -16,7 +16,7 @@ window.tarih_16_sorulari = [
         explanation: "İsmet İnönü, Mudanya Ateşkes Antlaşması'ndaki başarılı diplomatik performansı sayesinde Lozan Konferansı'nda Türkiye'yi temsil eden başdelege olarak görevlendirilmiştir. Yunanistan görüşmelere doğrudan katılmamış, Mudanya açıklarında gemide bekletilmiştir."
     },
     {
-        question: "Soru 2: Mudanya Ateşkes Antlaşması görüşmelerinde İtilaf Devletleri'nin temsilcileri aşağıdakilerin hangisinde doğru eşleştirilmiştir?",
+        question: "Mudanya Ateşkes Antlaşması görüşmelerinde İtilaf Devletleri'nin temsilcileri aşağıdakilerin hangisinde doğru eşleştirilmiştir?",
         options: [
             "A) İngiltere – General Harington / İtalya – General Monbelli / Fransa – G. Charpy",
             "B) İngiltere – General Monbelli / İtalya – G. Charpy / Fransa – General Harington",
@@ -28,7 +28,7 @@ window.tarih_16_sorulari = [
         explanation: "Mudanya Ateşkes Antlaşması'nda İngiltere'yi General Harington, İtalya'yı General Monbelli, Fransa'yı ise G. Charpy temsil etmiştir."
     },
     {
-        question: "Soru 3: Mudanya Ateşkes Antlaşması'nda Yunan delegelerinin görüşmelere katılım biçimi aşağıdakilerden hangisidir?",
+        question: "Mudanya Ateşkes Antlaşması'nda Yunan delegelerinin görüşmelere katılım biçimi aşağıdakilerden hangisidir?",
         options: [
             "A) Görüşmelere doğrudan katılarak antlaşmayı imzalamışlardır.",
             "B) İngiliz heyeti içerisinde temsil edilmişlerdir.",
@@ -40,7 +40,7 @@ window.tarih_16_sorulari = [
         explanation: "Yunan delegeleri, Mudanya Ateşkes Antlaşması görüşmelerine doğrudan katılmamış, Mudanya açıklarında bir gemide bekletilmişlerdir. Bu, Yunanistan'ın savaşı kaybeden taraf olarak konumunu göstermektedir."
     },
     {
-        question: "Soru 4: Mudanya Ateşkes Antlaşması'nın;\n\nI. Türk-Yunan Savaşı'nın sona ermesi,\nII. Doğu Trakya'nın Yunanistan tarafından boşaltılması,\nIII. İstanbul ve Boğazların TBMM Hükûmeti'ne bırakılması\n\nkararlarından hangileri, Millî Mücadele'nin askerî kazanımlarının diplomatik alanda kabul edildiğini gösterir?",
+        question: "Mudanya Ateşkes Antlaşması'nın;\n\nI. Türk-Yunan Savaşı'nın sona ermesi,\nII. Doğu Trakya'nın Yunanistan tarafından boşaltılması,\nIII. İstanbul ve Boğazların TBMM Hükûmeti'ne bırakılması\n\nkararlarından hangileri, Millî Mücadele'nin askerî kazanımlarının diplomatik alanda kabul edildiğini gösterir?",
         options: [
             "A) Yalnız I",
             "B) Yalnız II",
@@ -52,7 +52,7 @@ window.tarih_16_sorulari = [
         explanation: "Her üç karar da Millî Mücadele'nin askerî kazanımlarının diplomatik alanda kabul edildiğini göstermektedir. Savaşın sona ermesi, Doğu Trakya'nın boşaltılması ve İstanbul-Boğazların TBMM'ye bırakılması, Türk tarafının askerî başarısının diplomatik yansımalarıdır."
     },
     {
-        question: "Soru 5: Mudanya Ateşkes Antlaşması'na göre Yunanistan'ın Doğu Trakya'yı boşaltması için verilen süre aşağıdakilerden hangisidir?",
+        question: "Mudanya Ateşkes Antlaşması'na göre Yunanistan'ın Doğu Trakya'yı boşaltması için verilen süre aşağıdakilerden hangisidir?",
         options: [
             "A) 7 gün",
             "B) 10 gün",
@@ -64,7 +64,7 @@ window.tarih_16_sorulari = [
         explanation: "Mudanya Ateşkes Antlaşması'na göre Yunanistan'a Doğu Trakya'yı boşaltması için 15 gün süre verilmiştir."
     },
     {
-        question: "Soru 6: Mudanya Ateşkes Antlaşması'nda TBMM Hükûmeti'ne devredilen yerlerin güvenliğini sağlamak amacıyla kaç jandarmanın görev yapması öngörülmüştür?",
+        question: "Mudanya Ateşkes Antlaşması'nda TBMM Hükûmeti'ne devredilen yerlerin güvenliğini sağlamak amacıyla kaç jandarmanın görev yapması öngörülmüştür?",
         options: [
             "A) 4.000",
             "B) 6.000",
@@ -76,7 +76,7 @@ window.tarih_16_sorulari = [
         explanation: "Mudanya Ateşkes Antlaşması'nda, TBMM Hükûmeti'ne devredilen yerlerin güvenliğini sağlamak amacıyla 8.000 jandarmanın görev yapması öngörülmüştür."
     },
     {
-        question: "Soru 7: Mudanya Ateşkes Antlaşması'na göre İstanbul ve Boğazlarla ilgili aşağıdaki gelişmelerden hangisi gerçekleşmiştir?",
+        question: "Mudanya Ateşkes Antlaşması'na göre İstanbul ve Boğazlarla ilgili aşağıdaki gelişmelerden hangisi gerçekleşmiştir?",
         options: [
             "A) İstanbul uluslararası bir yönetime bırakılmıştır.",
             "B) İstanbul ve Boğazlar TBMM Hükûmeti'ne bırakılmıştır.",
@@ -88,43 +88,43 @@ window.tarih_16_sorulari = [
         explanation: "Mudanya Ateşkes Antlaşması ile İstanbul ve Boğazlar TBMM Hükûmeti'ne bırakılmıştır. Ancak İtilaf Devletleri, barış yapılıncaya kadar İstanbul'da kalmıştır."
     },
     {
-        question: "Soru 8: Mudanya Ateşkes Antlaşması'na göre İtilaf Devletleri askerlerinin İstanbul'daki varlığıyla ilgili aşağıdakilerden hangisi doğrudur?",
+        question: "Mudanya Ateşkes Antlaşması'na göre İtilaf Devletleri askerlerinin İstanbul'daki varlığıyla ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) Antlaşmanın imzalanmasıyla İstanbul'u hemen terk etmişlerdir.",
+            "A) Barış yapılıncaya kadar İstanbul'da kalmışlardır.",
             "B) Doğu Trakya'nın boşaltılmasına kadar İstanbul'da kalmışlardır.",
-            "C) Barış yapılıncaya kadar İstanbul'da kalmışlardır.",
+            "C) Antlaşmanın imzalanmasıyla İstanbul'u hemen terk etmişlerdir.",
             "D) Lozan Konferansı'nın sonuna kadar İstanbul'da kalmışlardır.",
             "E) Cumhuriyet ilan edilinceye kadar İstanbul'da kalmışlardır."
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Mudanya Ateşkes Antlaşması'na göre İtilaf Devletleri, barış yapılıncaya kadar İstanbul'da kalmışlardır. Lozan Antlaşması'ndan sonra İstanbul'u terk etmişlerdir."
     },
     {
-        question: "Soru 9: Doğu Trakya'nın Yunan işgalinden teslim alınması sırasında 'Rumeli Yüksek Komiseri' unvanını kullanan kişi aşağıdakilerden hangisidir?",
+        question: "Doğu Trakya'nın Yunan işgalinden teslim alınması sırasında 'Rumeli Yüksek Komiseri' unvanını kullanan kişi aşağıdakilerden hangisidir?",
         options: [
-            "A) İsmet İnönü",
-            "B) Refet Bele",
+            "A) Refet Bele",
+            "B) İsmet İnönü",
             "C) Rauf Orbay",
             "D) Kâzım Karabekir",
             "E) Ali Fuat Cebesoy"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "Doğu Trakya'nın Yunan işgalinden teslim alınması sırasında Refet Bele, 'Rumeli Yüksek Komiseri' unvanını kullanmıştır."
     },
     {
-        question: "Soru 10: Aşağıdaki gelişmelerden hangisi Millî Mücadele'nin farklı aşamalarını doğru bir sıralamayla göstermektedir?",
+        question: "Aşağıdaki gelişmelerden hangisi Millî Mücadele'nin farklı aşamalarını doğru bir sıralamayla göstermektedir?",
         options: [
             "A) Lozan → Mudanya → Saltanatın kaldırılması",
             "B) Saltanatın kaldırılması → Mudanya → Lozan",
-            "C) Mudanya → Saltanatın kaldırılması → Lozan",
+            "C) Lozan → Saltanatın kaldırılması → Mudanya",
             "D) Mudanya → Lozan → Saltanatın kaldırılması",
-            "E) Lozan → Saltanatın kaldırılması → Mudanya"
+            "E) Mudanya → Saltanatın kaldırılması → Lozan"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 4,
         explanation: "Kronolojik sıralama: Mudanya Ateşkes Antlaşması (11 Ekim 1922) → Saltanatın kaldırılması (1 Kasım 1922) → Lozan Barış Antlaşması (24 Temmuz 1923)."
     },
     {
-        question: "Soru 11: Aşağıdaki gelişmelerden hangisi Mudanya Ateşkes Antlaşması'nın doğrudan sonuçlarından biri değildir?",
+        question: "Aşağıdaki gelişmelerden hangisi Mudanya Ateşkes Antlaşması'nın doğrudan sonuçlarından biri değildir?",
         options: [
             "A) Millî Mücadele'nin askerî safhasının sona ermesi",
             "B) Lozan Barış Konferansı'na giden yolun açılması",
@@ -136,7 +136,7 @@ window.tarih_16_sorulari = [
         explanation: "Saltanatın kaldırılması, Mudanya Ateşkes Antlaşması'nın doğrudan sonucu değildir. Saltanat, Lozan Konferansı'na hem Osmanlı hem TBMM'nin davet edilmesi üzerine 1 Kasım 1922'de kaldırılmıştır."
     },
     {
-        question: "Soru 12: Mudanya Ateşkes Antlaşması'nın Millî Mücadele açısından önemi aşağıdakilerden hangisiyle en doğru ifade edilmiştir?",
+        question: "Mudanya Ateşkes Antlaşması'nın Millî Mücadele açısından önemi aşağıdakilerden hangisiyle en doğru ifade edilmiştir?",
         options: [
             "A) Millî Mücadele'nin diplomatik safhasını sona erdirmiştir.",
             "B) Türk zaferini gösteren ilk diplomatik belge olmuştur.",
@@ -148,7 +148,7 @@ window.tarih_16_sorulari = [
         explanation: "Mudanya Ateşkes Antlaşması, Türk zaferini gösteren ilk diplomatik belge olmuştur. Millî Mücadele'nin askerî safhasını sona erdirmiş, diplomatik safhayı başlatmıştır."
     },
     {
-        question: "Soru 13: Mudanya Ateşkes Antlaşması'nın ardından İngiltere'de siyasi sonuç doğuran gelişme aşağıdakilerden hangisidir?",
+        question: "Mudanya Ateşkes Antlaşması'nın ardından İngiltere'de siyasi sonuç doğuran gelişme aşağıdakilerden hangisidir?",
         options: [
             "A) General Harington görevinden alınmıştır.",
             "B) İngiltere, Lozan Konferansı'na katılmamıştır.",
@@ -164,19 +164,19 @@ window.tarih_16_sorulari = [
     // BÖLÜM 2: SALTANATIN KALDIRILMASI (Soru 14-20)
     // ============================================================
     {
-        question: "Soru 14: Saltanatın kaldırılmasında etkili olan nedenlerden biri, Lozan Konferansı'na hem Osmanlı Devleti'nin hem de TBMM Hükûmeti'nin davet edilmesidir.\n\nBu durumun öncelikle aşağıdaki sorunlardan hangisini ortaya çıkardığı söylenebilir?",
+        question: "Saltanatın kaldırılmasında etkili olan nedenlerden biri, Lozan Konferansı'na hem Osmanlı Devleti'nin hem de TBMM Hükûmeti'nin davet edilmesidir.\n\nBu durumun öncelikle aşağıdaki sorunlardan hangisini ortaya çıkardığı söylenebilir?",
         options: [
             "A) Boğazlar sorunu",
             "B) Musul sorunu",
-            "C) İkilik sorunu",
-            "D) Azınlıklar sorunu",
+            "C) Azınlıklar sorunu",
+            "D) İkilik sorunu",
             "E) Kapitülasyonlar sorunu"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 3,
         explanation: "Lozan'a hem Osmanlı hem TBMM Hükûmeti'nin davet edilmesi, 'ikilik sorunu'nu ortaya çıkarmıştır. Bu sorun, saltanatın kaldırılmasıyla çözülmüştür."
     },
     {
-        question: "Soru 15: Aşağıdakilerden hangisi saltanatın kaldırılmasının nedenlerinden biri değildir?",
+        question: "Aşağıdakilerden hangisi saltanatın kaldırılmasının nedenlerinden biri değildir?",
         options: [
             "A) Ulusal egemenliğin önünde engel oluşturması",
             "B) Anadolu'da iki ayrı devlet anlayışının bulunması",
@@ -188,7 +188,7 @@ window.tarih_16_sorulari = [
         explanation: "Boğazların askerî açıdan güvence altına alınması, saltanatın kaldırılmasının nedeni değildir. Boğazlar sorunu, Lozan ve Montrö ile ilgilidir."
     },
     {
-        question: "Soru 16: Saltanatın kaldırılmasıyla;\n\nI. ulusal egemenlik anlayışının güçlendirilmesi,\nII. Osmanlı Devleti'nin resmen sona erdirilmesi,\nIII. Lozan'a tek bir Türk hükûmetinin katılmasının sağlanması\n\namaçlarından hangilerine ulaşılması hedeflenmiştir?",
+        question: "Saltanatın kaldırılmasıyla;\n\nI. ulusal egemenlik anlayışının güçlendirilmesi,\nII. Osmanlı Devleti'nin resmen sona erdirilmesi,\nIII. Lozan'a tek bir Türk hükûmetinin katılmasının sağlanması\n\namaçlarından hangilerine ulaşılması hedeflenmiştir?",
         options: [
             "A) Yalnız I",
             "B) Yalnız II",
@@ -200,7 +200,7 @@ window.tarih_16_sorulari = [
         explanation: "Saltanatın kaldırılması ile ulusal egemenlik güçlendirilmiş, Osmanlı Devleti resmen sona erdirilmiş ve Lozan'a tek bir Türk hükûmetinin katılması sağlanmıştır."
     },
     {
-        question: "Soru 17: Saltanatın kaldırılmasıyla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+        question: "Saltanatın kaldırılmasıyla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
         options: [
             "A) 1 Kasım 1922'de gerçekleştirilmiştir.",
             "B) I. TBMM'nin gerçekleştirdiği önemli inkılaplardan biridir.",
@@ -212,19 +212,19 @@ window.tarih_16_sorulari = [
         explanation: "Cumhuriyet, 29 Ekim 1923'te ilan edilmiştir. Saltanatın kaldırılması (1 Kasım 1922) ile Cumhuriyet'in ilanı (29 Ekim 1923) aynı gün değildir."
     },
     {
-        question: "Soru 18: Saltanatın kaldırılması sonrasında devlet başkanlığı ve rejim sorununun gündeme gelmesinin temel nedeni aşağıdakilerden hangisidir?",
+        question: "Saltanatın kaldırılması sonrasında devlet başkanlığı ve rejim sorununun gündeme gelmesinin temel nedeni aşağıdakilerden hangisidir?",
         options: [
-            "A) Halifeliğin kaldırılması",
-            "B) Saltanat kurumunun ortadan kaldırılması",
+            "A) Saltanat kurumunun ortadan kaldırılması",
+            "B) Halifeliğin kaldırılması",
             "C) Lozan'ın imzalanması",
             "D) Mudanya'nın yapılması",
             "E) Boğazlar Komisyonu'nun kurulması"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "Saltanatın kaldırılmasıyla devlet başkanı ve rejim sorunu ortaya çıkmıştır. Bu sorun, 29 Ekim 1923'te Cumhuriyet'in ilanıyla çözülmüştür."
     },
     {
-        question: "Soru 19: Saltanatın kaldırılmasından sonra TBMM tarafından halife seçilen kişi aşağıdakilerden hangisidir?",
+        question: "Saltanatın kaldırılmasından sonra TBMM tarafından halife seçilen kişi aşağıdakilerden hangisidir?",
         options: [
             "A) Abdülaziz",
             "B) Abdülmecit Efendi",
@@ -236,7 +236,7 @@ window.tarih_16_sorulari = [
         explanation: "Saltanat kaldırıldıktan sonra TBMM, Abdülmecit Efendi'yi halife seçmiştir. Halifelik, 3 Mart 1924'te kaldırılana kadar sürmüştür."
     },
     {
-        question: "Soru 20: Abdülmecit Efendi'nin halifelik görevine ilişkin aşağıdaki bilgilerden hangisi doğrudur?",
+        question: "Abdülmecit Efendi'nin halifelik görevine ilişkin aşağıdaki bilgilerden hangisi doğrudur?",
         options: [
             "A) 1920-1922 yılları arasında görev yapmıştır.",
             "B) 1922-1923 yılları arasında görev yapmıştır.",
@@ -252,7 +252,7 @@ window.tarih_16_sorulari = [
     // BÖLÜM 3: LOZAN BARIŞ ANTLAŞMASI – GENEL (Soru 21-35)
     // ============================================================
     {
-        question: "Soru 21: Lozan Konferansı'nda Türkiye'yi temsil eden başdelegeler aşağıdakilerden hangisinde birlikte verilmiştir?",
+        question: "Lozan Konferansı'nda Türkiye'yi temsil eden başdelegeler aşağıdakilerden hangisinde birlikte verilmiştir?",
         options: [
             "A) İsmet İnönü – Rauf Orbay – Kâzım Karabekir",
             "B) İsmet İnönü – Hasan Saka – Dr. Rıza Nur",
@@ -264,19 +264,19 @@ window.tarih_16_sorulari = [
         explanation: "Lozan Konferansı'nda Türkiye'yi İsmet İnönü, Hasan Saka ve Dr. Rıza Nur'dan oluşan heyet temsil etmiştir. İsmet İnönü başdelegedir."
     },
     {
-        question: "Soru 22: Lozan Konferansı'na Türkiye adına başdelege olarak katılan İsmet İnönü'nün görevlendirilmesinde aşağıdakilerden hangisi etkili olmuştur?",
+        question: "Lozan Konferansı'na Türkiye adına başdelege olarak katılan İsmet İnönü'nün görevlendirilmesinde aşağıdakilerden hangisi etkili olmuştur?",
         options: [
-            "A) Saltanatın kaldırılmasındaki rolü",
-            "B) Mudanya Ateşkes Antlaşması'ndaki başarısı",
+            "A) Mudanya Ateşkes Antlaşması'ndaki başarısı",
+            "B) Saltanatın kaldırılmasındaki rolü",
             "C) Doğu Cephesi'ndeki başarıları",
             "D) İzmir İktisat Kongresi'ni yönetmesi",
             "E) Ankara Antlaşması'nı imzalaması"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "İsmet İnönü, Mudanya Ateşkes Antlaşması'ndaki başarılı diplomatik performansı sayesinde Lozan Konferansı'nda başdelege olarak görevlendirilmiştir."
     },
     {
-        question: "Soru 23: Mustafa Kemal'in Lozan Konferansı'nda kesinlikle taviz verilmemesini istediği iki temel konu aşağıdakilerden hangisidir?",
+        question: "Mustafa Kemal'in Lozan Konferansı'nda kesinlikle taviz verilmemesini istediği iki temel konu aşağıdakilerden hangisidir?",
         options: [
             "A) Musul ve Boğazlar",
             "B) Kapitülasyonlar ve Ermenilere yurt verilmesi",
@@ -288,7 +288,7 @@ window.tarih_16_sorulari = [
         explanation: "Mustafa Kemal, Lozan'da kapitülasyonların kaldırılması ve Ermenilere yurt verilmemesi konularında kesinlikle taviz verilmemesini istemiştir."
     },
     {
-        question: "Soru 24: Lozan Konferansı'na ilişkin aşağıdaki devletlerden hangisi verilen listede yer alan katılımcılar arasında değildir?",
+        question: "Lozan Konferansı'na ilişkin aşağıdaki devletlerden hangisi verilen listede yer alan katılımcılar arasında değildir?",
         options: [
             "A) Japonya",
             "B) Romanya",
@@ -300,7 +300,7 @@ window.tarih_16_sorulari = [
         explanation: "Amerika Birleşik Devletleri, Lozan Konferansı'na gözlemci olarak katılmıştır. Japonya, Romanya, Yugoslavya ve İtalya ise katılımcı devletler arasındadır."
     },
     {
-        question: "Soru 25: Lozan Konferansı'nın ilk aşamasının sonuç alınamadan dağılması ve sonraki süreç dikkate alındığında aşağıdaki tarihlerden hangisinin doğru eşleştirmesi yapılmıştır?",
+        question: "Lozan Konferansı'nın ilk aşamasının sonuç alınamadan dağılması ve sonraki süreç dikkate alındığında aşağıdaki tarihlerden hangisinin doğru eşleştirmesi yapılmıştır?",
         options: [
             "A) 4 Şubat 1923 – Konferansın sonuç alınamadan dağılması",
             "B) 17 Şubat 1923 – Lozan Antlaşması'nın imzalanması",
@@ -312,7 +312,7 @@ window.tarih_16_sorulari = [
         explanation: "Lozan Konferansı, 4 Şubat 1923'te sonuç alınamadan dağılmıştır. 17 Şubat 1923'te İzmir İktisat Kongresi toplanmış, 24 Temmuz 1923'te Lozan Antlaşması imzalanmıştır."
     },
     {
-        question: "Soru 26: Lozan görüşmelerinin kesintiye uğradığı dönemde Türkiye'nin ekonomik bağımsızlık konusundaki kararlılığını ortaya koyan gelişme aşağıdakilerden hangisidir?",
+        question: "Lozan görüşmelerinin kesintiye uğradığı dönemde Türkiye'nin ekonomik bağımsızlık konusundaki kararlılığını ortaya koyan gelişme aşağıdakilerden hangisidir?",
         options: [
             "A) İzmir İktisat Kongresi'nin toplanması",
             "B) Saltanatın kaldırılması",
@@ -324,7 +324,7 @@ window.tarih_16_sorulari = [
         explanation: "Lozan görüşmelerinin kesintiye uğradığı dönemde (17 Şubat - 4 Mart 1923) İzmir İktisat Kongresi toplanarak Türkiye'nin ekonomik bağımsızlık konusundaki kararlılığı ortaya konmuştur."
     },
     {
-        question: "Soru 27: Aşağıdakilerden hangisi Lozan sürecinde Türkiye'nin siyasal iradesini ortaya koyan gelişmelerden biridir?",
+        question: "Aşağıdakilerden hangisi Lozan sürecinde Türkiye'nin siyasal iradesini ortaya koyan gelişmelerden biridir?",
         options: [
             "A) 1 Nisan 1923'te seçimlerin yenilenmesine karar verilmesi",
             "B) 11 Ekim 1922'de saltanatın kaldırılması",
@@ -336,7 +336,7 @@ window.tarih_16_sorulari = [
         explanation: "Lozan sürecinde Türkiye'nin siyasal iradesini ortaya koyan gelişmelerden biri, 1 Nisan 1923'te seçimlerin yenilenmesine karar verilmesidir. Bu, TBMM'nin kararlılığını göstermiştir."
     },
     {
-        question: "Soru 28: Lozan görüşmeleriyle ilgili aşağıdakilerden hangisi doğrudur?",
+        question: "Lozan görüşmeleriyle ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
             "A) Görüşmeler II. TBMM döneminde başlayıp I. TBMM döneminde tamamlanmıştır.",
             "B) Görüşmeler ve antlaşmanın imzalanması I. TBMM döneminde gerçekleşmiştir.",
@@ -348,7 +348,7 @@ window.tarih_16_sorulari = [
         explanation: "Lozan görüşmeleri I. TBMM döneminde (1922-1923) başlamış, antlaşma II. TBMM tarafından onaylanmıştır. I. TBMM, 1 Nisan 1923'te seçim kararı almış ve II. TBMM açılmıştır."
     },
     {
-        question: "Soru 29: Lozan görüşmelerinin başladığı ve antlaşmanın imzalandığı süreçte Meclis Hükûmeti Başkanı aşağıdakilerden hangisidir?",
+        question: "Lozan görüşmelerinin başladığı ve antlaşmanın imzalandığı süreçte Meclis Hükûmeti Başkanı aşağıdakilerden hangisidir?",
         options: [
             "A) Mustafa Kemal Paşa",
             "B) İsmet İnönü",
@@ -360,7 +360,7 @@ window.tarih_16_sorulari = [
         explanation: "Lozan görüşmelerinin başladığı ve antlaşmanın imzalandığı süreçte (1922-1923) Meclis Hükûmeti Başkanı Rauf Orbay'dır."
     },
     {
-        question: "Soru 30: Lozan Konferansı'nın ekonomik yönünü ortaya koyan konular arasında aşağıdakilerden hangisi yer almaz?",
+        question: "Lozan Konferansı'nın ekonomik yönünü ortaya koyan konular arasında aşağıdakilerden hangisi yer almaz?",
         options: [
             "A) Kapitülasyonlar",
             "B) Dış borçlar",
@@ -372,43 +372,43 @@ window.tarih_16_sorulari = [
         explanation: "Saltanatın kaldırılması, siyasi bir konudur. Kapitülasyonlar, dış borçlar, nüfus mübadelesi ve gümrük düzenlemeleri ise ekonomik konulardır."
     },
     {
-        question: "Soru 31: Lozan Konferansı'nda Türkiye'nin ekonomik bağımsızlığını ilgilendiren aşağıdaki konulardan hangisinin tamamen ortadan kaldırılması kararlaştırılmıştır?",
+        question: "Lozan Konferansı'nda Türkiye'nin ekonomik bağımsızlığını ilgilendiren aşağıdaki konulardan hangisinin tamamen ortadan kaldırılması kararlaştırılmıştır?",
         options: [
-            "A) Dış borçlar",
-            "B) Kapitülasyonlar",
+            "A) Kapitülasyonlar",
+            "B) Dış borçlar",
             "C) Gümrük vergileri",
             "D) Nüfus mübadelesi",
             "E) Savaş tazminatı"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "Lozan'da kapitülasyonlar tamamen kaldırılmıştır. Bu, Türkiye'nin ekonomik bağımsızlığı açısından en önemli kazanımdır."
     },
     {
-        question: "Soru 32: Lozan Konferansı'nda Amerika Birleşik Devletleri'nin konumu aşağıdakilerden hangisidir?",
+        question: "Lozan Konferansı'nda Amerika Birleşik Devletleri'nin konumu aşağıdakilerden hangisidir?",
         options: [
             "A) Türkiye'nin resmî müttefiki",
             "B) Konferansın başkanlığını yapan devlet",
-            "C) Gözlemci devlet",
-            "D) Boğazlar Komisyonu başkanı",
+            "C) Boğazlar Komisyonu başkanı",
+            "D) Gözlemci devlet",
             "E) Musul sorununda hakem devlet"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 3,
         explanation: "Amerika Birleşik Devletleri, Lozan Konferansı'na gözlemci olarak katılmıştır. Musul sorununda Milletler Cemiyeti karar vermiştir."
     },
     {
-        question: "Soru 33: İsmet İnönü'nün Lozan Konferansı'ndaki tutumunu yansıtan aşağıdaki ifadelerden hangisi Millî Mücadele'nin dayandığı temel anlayışla doğrudan ilişkilidir?",
+        question: "İsmet İnönü'nün Lozan Konferansı'ndaki tutumunu yansıtan aşağıdaki ifadelerden hangisi Millî Mücadele'nin dayandığı temel anlayışla doğrudan ilişkilidir?",
         options: [
             "A) 'Yurtta sulh, cihanda sulh.'",
-            "B) 'Biz buraya Mondros'tan değil, Mudanya'dan geldik.'",
+            "B) 'Hayatta en hakiki mürşit ilimdir.'",
             "C) 'Egemenlik kayıtsız şartsız milletindir.'",
             "D) 'Ne mutlu Türküm diyene.'",
-            "E) 'Hayatta en hakiki mürşit ilimdir.'"
+            "E) 'Biz buraya Mondros'tan değil, Mudanya'dan geldik.'"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "İsmet İnönü'nün 'Biz buraya Mondros'tan değil, Mudanya'dan geldik.' sözü, Millî Mücadele'nin askerî zaferle sonuçlandığını ve Türkiye'nin güçlü bir konumdan müzakere ettiğini vurgulamaktadır."
     },
     {
-        question: "Soru 34: İsmet İnönü'nün Lozan Konferansı'nda söylediği,\n\n> 'Çok ızdırap çektik, çok kan akıttık. Bütün milletler gibi özgürlük ve bağımsızlık istiyoruz.'\n\nsözü aşağıdaki kavramlardan hangisini özellikle vurgulamaktadır?",
+        question: "İsmet İnönü'nün Lozan Konferansı'nda söylediği,\n\n> 'Çok ızdırap çektik, çok kan akıttık. Bütün milletler gibi özgürlük ve bağımsızlık istiyoruz.'\n\nsözü aşağıdaki kavramlardan hangisini özellikle vurgulamaktadır?",
         options: [
             "A) Ekonomik kalkınma",
             "B) Ulusal bağımsızlık",
@@ -420,15 +420,15 @@ window.tarih_16_sorulari = [
         explanation: "İsmet İnönü'nün bu sözü, Türkiye'nin ulusal bağımsızlık talebini vurgulamaktadır. Millî Mücadele'nin temel amacı bağımsızlıktır."
     },
     {
-        question: "Soru 35: Mustafa Kemal'in Lozan Antlaşması'nı, Sevr Antlaşması'nın geçersizliğini ortaya koyan bir belge olarak değerlendirmesinin temel nedeni aşağıdakilerden hangisidir?",
+        question: "Mustafa Kemal'in Lozan Antlaşması'nı, Sevr Antlaşması'nın geçersizliğini ortaya koyan bir belge olarak değerlendirmesinin temel nedeni aşağıdakilerden hangisidir?",
         options: [
             "A) Osmanlı Devleti'nin Lozan'a katılması",
-            "B) Türk milletinin bağımsızlık mücadelesinin başarıya ulaşması",
+            "B) Boğazların tamamen Türkiye'nin denetimine bırakılması",
             "C) İngiltere'nin Musul'u Türkiye'ye bırakması",
-            "D) Boğazların tamamen Türkiye'nin denetimine bırakılması",
+            "D) Türk milletinin bağımsızlık mücadelesinin başarıya ulaşması",
             "E) Yunanistan'ın Batı Trakya'dan çekilmesi"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Lozan, Sevr'i geçersiz kılmıştır. Mustafa Kemal'e göre bu, Türk milletinin bağımsızlık mücadelesinin başarıya ulaşmasının sonucudur. Sevr dayatılmış, Lozan ise kazanılmıştır."
     },
 
@@ -436,7 +436,7 @@ window.tarih_16_sorulari = [
     // BÖLÜM 4: LOZAN – SINIRLAR (Soru 36-39)
     // ============================================================
     {
-        question: "Soru 36: Türkiye'nin Lozan'daki sınırlarıyla ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+        question: "Türkiye'nin Lozan'daki sınırlarıyla ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
         options: [
             "A) Batı sınırı – Mudanya ve İstanbul Antlaşması",
             "B) Doğu sınırı – Kars Antlaşması",
@@ -448,19 +448,19 @@ window.tarih_16_sorulari = [
         explanation: "Irak sınırı (Musul), Lozan'da kesin olarak belirlenmemiş, sonraya bırakılmıştır. Musul sorunu, 1926'da Ankara Antlaşması ile çözülmüştür."
     },
     {
-        question: "Soru 37: Türkiye'nin doğu sınırının belirlenmesinde aşağıdaki antlaşmalardan hangisi esas alınmıştır?",
+        question: "Türkiye'nin doğu sınırının belirlenmesinde aşağıdaki antlaşmalardan hangisi esas alınmıştır?",
         options: [
             "A) Ankara Antlaşması",
             "B) İstanbul Antlaşması",
-            "C) Kars Antlaşması",
-            "D) Mudanya Ateşkes Antlaşması",
+            "C) Mudanya Ateşkes Antlaşması",
+            "D) Kars Antlaşması",
             "E) Gümrü Antlaşması"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 3,
         explanation: "Türkiye'nin doğu sınırı, 13 Ekim 1921'de imzalanan Kars Antlaşması ile belirlenmiştir. Lozan'da bu sınır kabul edilmiştir."
     },
     {
-        question: "Soru 38: Lozan'da Irak sınırının kesin olarak belirlenememesi aşağıdaki sorunlardan hangisinin devam etmesine neden olmuştur?",
+        question: "Lozan'da Irak sınırının kesin olarak belirlenememesi aşağıdaki sorunlardan hangisinin devam etmesine neden olmuştur?",
         options: [
             "A) Hatay",
             "B) Musul",
@@ -472,7 +472,7 @@ window.tarih_16_sorulari = [
         explanation: "Lozan'da Irak sınırı (Musul), Türkiye ile İngiltere arasında çözülememiş ve sonraya bırakılmıştır. Musul sorunu, 1926'da çözülmüştür."
     },
     {
-        question: "Soru 39: Türkiye-Suriye sınırıyla ilgili aşağıdaki bilgilerden hangisi doğrudur?",
+        question: "Türkiye-Suriye sınırıyla ilgili aşağıdaki bilgilerden hangisi doğrudur?",
         options: [
             "A) Lozan'da ilk kez belirlenmiştir.",
             "B) Kars Antlaşması ile belirlenmiştir.",
@@ -488,7 +488,7 @@ window.tarih_16_sorulari = [
     // BÖLÜM 5: LOZAN – KAPİTÜLASYONLAR VE AZINLIKLAR (Soru 40-42)
     // ============================================================
     {
-        question: "Soru 40: Lozan Barış Antlaşması'nda kapitülasyonların tamamen kaldırılması aşağıdakilerden hangisinin göstergesidir?",
+        question: "Lozan Barış Antlaşması'nda kapitülasyonların tamamen kaldırılması aşağıdakilerden hangisinin göstergesidir?",
         options: [
             "A) Askerî bağımsızlığın sona erdiğinin",
             "B) Ekonomik bağımsızlık yönünde önemli bir adım atıldığının",
@@ -500,7 +500,7 @@ window.tarih_16_sorulari = [
         explanation: "Kapitülasyonların kaldırılması, Türkiye'nin ekonomik bağımsızlığı yönünde atılan en önemli adımdır. Yabancı devletlerin ekonomik ayrıcalıkları sona ermiştir."
     },
     {
-        question: "Soru 41: Lozan'da Türkiye'deki gayrimüslim azınlıklarla ilgili aşağıdakilerden hangisi kararlaştırılmıştır?",
+        question: "Lozan'da Türkiye'deki gayrimüslim azınlıklarla ilgili aşağıdakilerden hangisi kararlaştırılmıştır?",
         options: [
             "A) Ayrı devletler kurmaları sağlanmıştır.",
             "B) Yabancı devletlerin himayesine bırakılmıştır.",
@@ -512,7 +512,7 @@ window.tarih_16_sorulari = [
         explanation: "Lozan'da gayrimüslim azınlıklar, Türk vatandaşlarının sahip olduğu haklara sahip olacaklardır. Bu, eşit yurttaşlık anlayışının bir gereğidir."
     },
     {
-        question: "Soru 42: Lozan'da azınlıklar konusunda Türkiye'nin egemenlik anlayışını güçlendiren temel düzenleme aşağıdakilerden hangisidir?",
+        question: "Lozan'da azınlıklar konusunda Türkiye'nin egemenlik anlayışını güçlendiren temel düzenleme aşağıdakilerden hangisidir?",
         options: [
             "A) Gayrimüslimlerin yabancı devletlerin vatandaşı sayılması",
             "B) Gayrimüslimlerin Türk vatandaşı kabul edilmesi",
@@ -528,7 +528,7 @@ window.tarih_16_sorulari = [
     // BÖLÜM 6: İSTANBUL – PATRİKHANE (Soru 43-45)
     // ============================================================
     {
-        question: "Soru 43: Lozan Antlaşması'na göre İtilaf Devletleri'nin İstanbul'u boşaltması için öngörülen süre aşağıdakilerden hangisidir?",
+        question: "Lozan Antlaşması'na göre İtilaf Devletleri'nin İstanbul'u boşaltması için öngörülen süre aşağıdakilerden hangisidir?",
         options: [
             "A) 15 gün",
             "B) 30 gün",
@@ -540,27 +540,27 @@ window.tarih_16_sorulari = [
         explanation: "Lozan Antlaşması'na göre İtilaf Devletleri, 45 gün içinde İstanbul'u boşaltmayı kabul etmiştir."
     },
     {
-        question: "Soru 44: Lozan'da Patrikhane konusunda alınan karar aşağıdakilerden hangisidir?",
+        question: "Lozan'da Patrikhane konusunda alınan karar aşağıdakilerden hangisidir?",
         options: [
-            "A) Patrikhane tamamen kaldırılmıştır.",
+            "A) Patrikhane İstanbul'da bırakılmış, siyasi yetkileri bulunmaması kabul edilmiştir.",
             "B) Patrikhane Atina'ya taşınmıştır.",
-            "C) Patrikhane İstanbul'da bırakılmış, siyasi yetkileri bulunmaması kabul edilmiştir.",
+            "C) Patrikhane tamamen kaldırılmıştır.",
             "D) Patrikhane Rusya'nın denetimine verilmiştir.",
             "E) Patrikhane bağımsız bir devlet hâline getirilmiştir."
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Lozan'da Patrikhane İstanbul'da bırakılmış, ancak siyasi yetkileri olmayacağı kabul edilmiştir. Patrikhane, sadece dini bir kurum olarak faaliyet gösterecektir."
     },
     {
-        question: "Soru 45: Lozan görüşmelerinde Patrikhane konusunda aşağıdakilerden hangisi doğrudur?",
+        question: "Lozan görüşmelerinde Patrikhane konusunda aşağıdakilerden hangisi doğrudur?",
         options: [
             "A) Lozan'da ele alınan son mesele olmuştur.",
-            "B) Taraflar arasında uzlaşılıp yazıya geçirilen ilk mesele olmuştur.",
+            "B) Patrikhane'nin siyasi yetkileri genişletilmiştir.",
             "C) Görüşmelerin kesilmesine neden olan temel sorun olmuştur.",
-            "D) Patrikhane'nin siyasi yetkileri genişletilmiştir.",
+            "D) Taraflar arasında uzlaşılıp yazıya geçirilen ilk mesele olmuştur.",
             "E) Patrikhane'nin Türkiye dışına çıkarılması kesin olarak kararlaştırılmıştır."
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Patrikhane konusu, Lozan'da taraflar arasında uzlaşılıp yazıya geçirilen ilk mesele olmuştur. Patrikhane İstanbul'da kalacak, siyasi yetkileri olmayacaktır."
     },
 
@@ -568,7 +568,7 @@ window.tarih_16_sorulari = [
     // BÖLÜM 7: LOZAN – ADALAR (Soru 46-50)
     // ============================================================
     {
-        question: "Soru 46: Lozan'daki ada düzenlemeleriyle ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+        question: "Lozan'daki ada düzenlemeleriyle ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
         options: [
             "A) Kıbrıs – İngiltere",
             "B) On İki Ada – İtalya",
@@ -580,7 +580,7 @@ window.tarih_16_sorulari = [
         explanation: "Rodos, Lozan'da İtalya'ya bırakılmıştır. On İki Ada ile birlikte İtalya'ya verilmiştir. Rodos Yunanistan'a 1947'de geçmiştir."
     },
     {
-        question: "Soru 47: Lozan Antlaşması'na göre Kıbrıs aşağıdaki devletlerden hangisine bırakılmıştır?",
+        question: "Lozan Antlaşması'na göre Kıbrıs aşağıdaki devletlerden hangisine bırakılmıştır?",
         options: [
             "A) İtalya",
             "B) Yunanistan",
@@ -592,7 +592,7 @@ window.tarih_16_sorulari = [
         explanation: "Kıbrıs, Lozan Antlaşması ile İngiltere'ye bırakılmıştır. Türkiye, Kıbrıs üzerindeki haklarından vazgeçmiştir."
     },
     {
-        question: "Soru 48: Aşağıdakilerden hangisi Lozan'da İtalya'ya bırakılan adalar arasında yer alır?",
+        question: "Aşağıdakilerden hangisi Lozan'da İtalya'ya bırakılan adalar arasında yer alır?",
         options: [
             "A) Gökçeada",
             "B) Bozcaada",
@@ -604,7 +604,7 @@ window.tarih_16_sorulari = [
         explanation: "Lozan'da Rodos ve On İki Ada İtalya'ya bırakılmıştır. Gökçeada ve Bozcaada Türkiye'de kalmıştır."
     },
     {
-        question: "Soru 49: Lozan'da Ege Adaları'yla ilgili aşağıdakilerden hangisi doğrudur?",
+        question: "Lozan'da Ege Adaları'yla ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
             "A) Tüm Ege Adaları Türkiye'ye bırakılmıştır.",
             "B) Bozcaada ve Gökçeada Türkiye'ye bırakılmış, diğer Ege Adaları Yunanistan'a verilmiştir.",
@@ -616,7 +616,7 @@ window.tarih_16_sorulari = [
         explanation: "Lozan'da Bozcaada ve Gökçeada Türkiye'ye bırakılmış, diğer Ege Adaları (Midilli, Sakız, Sisam vb.) Yunanistan'a verilmiştir."
     },
     {
-        question: "Soru 50: Lozan'da Ege Adaları'nın Yunanistan'a bırakılması hangi koşulla gerçekleştirilmiştir?",
+        question: "Lozan'da Ege Adaları'nın Yunanistan'a bırakılması hangi koşulla gerçekleştirilmiştir?",
         options: [
             "A) Türkiye'nin ekonomik yardım sağlaması koşuluyla",
             "B) Adaların silahsızlandırılması koşuluyla",
@@ -632,7 +632,7 @@ window.tarih_16_sorulari = [
     // BÖLÜM 8: LOZAN – SAVAŞ TAZMİNATI (Soru 51-52)
     // ============================================================
     {
-        question: "Soru 51: Yunanistan'ın savaş tazminatı olarak Türkiye'ye verdiği yerler aşağıdakilerden hangisidir?",
+        question: "Yunanistan'ın savaş tazminatı olarak Türkiye'ye verdiği yerler aşağıdakilerden hangisidir?",
         options: [
             "A) Musul ve Karaağaç",
             "B) Bosnaköy ve Karaağaç",
@@ -644,7 +644,7 @@ window.tarih_16_sorulari = [
         explanation: "Yunanistan, savaş tazminatı olarak Türkiye'ye Bosnaköy ve Karaağaç'ı vermiştir. Bu, toprak kazanımı ile savaş tazminatının birleştirildiği bir örnektir."
     },
     {
-        question: "Soru 52: Aşağıdaki gelişmelerden hangisi toprak kazanımı ile savaş tazminatı kavramlarının birlikte değerlendirilebileceği bir örnektir?",
+        question: "Aşağıdaki gelişmelerden hangisi toprak kazanımı ile savaş tazminatı kavramlarının birlikte değerlendirilebileceği bir örnektir?",
         options: [
             "A) Musul'un Türkiye'ye bırakılması",
             "B) Kıbrıs'ın Türkiye'ye verilmesi",
@@ -660,7 +660,7 @@ window.tarih_16_sorulari = [
     // BÖLÜM 9: LOZAN – BOĞAZLAR (Soru 53-56)
     // ============================================================
     {
-        question: "Soru 53: Lozan Antlaşması'nda Boğazlarla ilgili aşağıdaki düzenlemelerden hangisi doğrudur?",
+        question: "Lozan Antlaşması'nda Boğazlarla ilgili aşağıdaki düzenlemelerden hangisi doğrudur?",
         options: [
             "A) Boğazların yönetimi tamamen Türkiye'ye bırakılmıştır.",
             "B) Boğazlar tamamen Sovyet Rusya'nın yönetimine verilmiştir.",
@@ -672,19 +672,19 @@ window.tarih_16_sorulari = [
         explanation: "Lozan'da Boğazların yönetimi bir komisyona bırakılmış, komisyon başkanının Türk olması kabul edilmiştir. Boğazlar askerden arındırılmıştır."
     },
     {
-        question: "Soru 54: Lozan'da oluşturulan Boğazlar Komisyonu'nda aşağıdaki devletlerden hangilerinin yer aldığı kabul edilmiştir?",
+        question: "Lozan'da oluşturulan Boğazlar Komisyonu'nda aşağıdaki devletlerden hangilerinin yer aldığı kabul edilmiştir?",
         options: [
-            "A) İngiltere ve Fransa",
+            "A) Sovyet Rusya ve Bulgaristan",
             "B) İtalya ve Yunanistan",
-            "C) Sovyet Rusya ve Bulgaristan",
+            "C) İngiltere ve Fransa",
             "D) Amerika Birleşik Devletleri ve Japonya",
             "E) Romanya ve Yugoslavya"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Lozan'da Boğazlar Komisyonu'nda Sovyet Rusya ve Bulgaristan da yer almıştır. Boğazların uluslararası statüsü bu komisyonla düzenlenmiştir."
     },
     {
-        question: "Soru 55: Lozan'da Boğazlar Komisyonu ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+        question: "Lozan'da Boğazlar Komisyonu ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
         options: [
             "A) Boğazların yönetiminde komisyon görev yapacaktır.",
             "B) Komisyon başkanı Türk olacaktır.",
@@ -696,7 +696,7 @@ window.tarih_16_sorulari = [
         explanation: "Lozan'da Boğazlar askerden arındırılmıştır, tamamen serbest bırakılmamıştır. Askerden arındırma, Montrö'ye kadar devam etmiştir."
     },
     {
-        question: "Soru 56: Lozan'da Boğazların askerden arındırılması uygulaması aşağıdaki gelişmelerden hangisine kadar devam etmiştir?",
+        question: "Lozan'da Boğazların askerden arındırılması uygulaması aşağıdaki gelişmelerden hangisine kadar devam etmiştir?",
         options: [
             "A) Ankara Antlaşması",
             "B) Gümrü Antlaşması",
@@ -712,19 +712,19 @@ window.tarih_16_sorulari = [
     // BÖLÜM 10: LOZAN – YABANCI OKULLAR (Soru 57-58)
     // ============================================================
     {
-        question: "Soru 57: Lozan'da yabancı okullarla ilgili aşağıdaki düzenlemelerden hangisi kabul edilmiştir?",
+        question: "Lozan'da yabancı okullarla ilgili aşağıdaki düzenlemelerden hangisi kabul edilmiştir?",
         options: [
             "A) Yabancı okullar tamamen kapatılmıştır.",
             "B) Yabancı okullar kendi devletlerinin eğitim kanunlarına tabi olmuştur.",
-            "C) Yabancı okulların Türkiye'nin çıkaracağı kanunlara uyması kabul edilmiştir.",
-            "D) Yabancı okullara siyasi özerklik verilmiştir.",
+            "C) Yabancı okullara siyasi özerklik verilmiştir.",
+            "D) Yabancı okulların Türkiye'nin çıkaracağı kanunlara uyması kabul edilmiştir.",
             "E) Yabancı okulların yönetimi Patrikhane'ye bırakılmıştır."
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 3,
         explanation: "Lozan'da yabancı okulların Türkiye'nin çıkaracağı kanunlara uyması kabul edilmiştir. Bu, Türkiye'nin eğitim alanındaki egemenliğini güçlendirmiştir."
     },
     {
-        question: "Soru 58: Yabancı okulların Türk tarafının çıkaracağı kanunlara uymasının kabul edilmesi aşağıdakilerden hangisiyle doğrudan ilişkilidir?",
+        question: "Yabancı okulların Türk tarafının çıkaracağı kanunlara uymasının kabul edilmesi aşağıdakilerden hangisiyle doğrudan ilişkilidir?",
         options: [
             "A) Türkiye'nin eğitim alanındaki egemenliği",
             "B) Türkiye'nin Boğazlar üzerindeki askerî hâkimiyeti",
@@ -740,7 +740,7 @@ window.tarih_16_sorulari = [
     // BÖLÜM 11: LOZAN – OSMANLI BORÇLARI (Soru 59-60)
     // ============================================================
     {
-        question: "Soru 59: Lozan'da Osmanlı Devleti'nin dış borçlarıyla ilgili aşağıdaki kararlardan hangisi alınmıştır?",
+        question: "Lozan'da Osmanlı Devleti'nin dış borçlarıyla ilgili aşağıdaki kararlardan hangisi alınmıştır?",
         options: [
             "A) Borçların tamamı Türkiye tarafından üstlenilmiştir.",
             "B) Borçlar tamamen silinmiştir.",
@@ -752,7 +752,7 @@ window.tarih_16_sorulari = [
         explanation: "Lozan'da Osmanlı borçları, Osmanlı'dan ayrılan devletlere yüzölçümleri esas alınarak paylaştırılmıştır. Türkiye, kendi payına düşen borcu ödemeyi kabul etmiştir."
     },
     {
-        question: "Soru 60: Osmanlı Devleti'nin dış borçlarının Osmanlı'dan ayrılan devletlere dağıtılmasında kullanılan temel ölçüt aşağıdakilerden hangisidir?",
+        question: "Osmanlı Devleti'nin dış borçlarının Osmanlı'dan ayrılan devletlere dağıtılmasında kullanılan temel ölçüt aşağıdakilerden hangisidir?",
         options: [
             "A) Nüfus",
             "B) Askerî güç",
@@ -768,19 +768,19 @@ window.tarih_16_sorulari = [
     // BÖLÜM 12: LOZAN – NÜFUS MÜBADELESİ (Soru 61-63)
     // ============================================================
     {
-        question: "Soru 61: Lozan'daki nüfus mübadelesi düzenlemesiyle ilgili aşağıdakilerden hangisi doğrudur?",
+        question: "Lozan'daki nüfus mübadelesi düzenlemesiyle ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
             "A) İstanbul'daki bütün Rumların Türkiye dışına çıkarılması kararlaştırılmıştır.",
             "B) Batı Trakya'daki Türklerin tamamı Türkiye'ye getirilecektir.",
-            "C) İstanbul'da yaşayan Rumlar ile Trakya'da yaşayan Türkler yerleşik kabul edilmiştir.",
+            "C) Türkiye'deki bütün Türkler Yunanistan'a gönderilmiştir.",
             "D) Türkiye'deki bütün Rumlar yer değiştirmeye zorlanmıştır.",
-            "E) Türkiye'deki bütün Türkler Yunanistan'a gönderilmiştir."
+            "E) İstanbul'da yaşayan Rumlar ile Trakya'da yaşayan Türkler yerleşik kabul edilmiştir."
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 4,
         explanation: "Lozan'da İstanbul Rumları ve Batı Trakya Türkleri yerleşik (etablı) kabul edilmiştir. Bunlar zorunlu nüfus mübadelesine tabi tutulmamıştır."
     },
     {
-        question: "Soru 62: Lozan'daki nüfus mübadelesinde aşağıdaki gruplardan hangileri yerleşik (etablı) kabul edilmiştir?",
+        question: "Lozan'daki nüfus mübadelesinde aşağıdaki gruplardan hangileri yerleşik (etablı) kabul edilmiştir?",
         options: [
             "A) Batı Trakya Rumları ve İstanbul Türkleri",
             "B) İstanbul Rumları ve Trakya Türkleri",
@@ -792,7 +792,7 @@ window.tarih_16_sorulari = [
         explanation: "Nüfus mübadelesinde İstanbul Rumları ve Batı Trakya Türkleri yerleşik kabul edilmiştir. Bu iki grup, zorunlu göçten muaf tutulmuştur."
     },
     {
-        question: "Soru 63: Lozan'daki nüfus mübadelesi kapsamında yer değiştirmeye tabi tutulan gruplarla ilgili aşağıdakilerden hangisi doğrudur?",
+        question: "Lozan'daki nüfus mübadelesi kapsamında yer değiştirmeye tabi tutulan gruplarla ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
             "A) İstanbul Rumları ve Batı Trakya Türkleri zorunlu olarak yer değiştirmiştir.",
             "B) Trakya Türkleri ve İstanbul Rumları hariç diğer bölgelerdeki Türk ve Rumların yer değiştirmesi öngörülmüştür.",
@@ -808,7 +808,7 @@ window.tarih_16_sorulari = [
     // BÖLÜM 13: KARMA – ÇOK ZOR SORULAR (Soru 64-80)
     // ============================================================
     {
-        question: "Soru 64: Aşağıdaki gelişmelerden hangisi doğru tarih sıralaması içinde verilmiştir?",
+        question: "Aşağıdaki gelişmelerden hangisi doğru tarih sıralaması içinde verilmiştir?",
         options: [
             "A) Saltanatın kaldırılması → Mudanya → Lozan'ın imzalanması",
             "B) Mudanya → Saltanatın kaldırılması → Lozan'ın imzalanması",
@@ -820,19 +820,19 @@ window.tarih_16_sorulari = [
         explanation: "Doğru kronolojik sıralama: Mudanya Ateşkes (11 Ekim 1922) → Saltanatın kaldırılması (1 Kasım 1922) → Lozan'ın imzalanması (24 Temmuz 1923)."
     },
     {
-        question: "Soru 65: Aşağıdaki gelişmelerden hangisi Millî Mücadele'nin askerî safhasından diplomatik safhasına geçişi doğrudan ifade eder?",
+        question: "Aşağıdaki gelişmelerden hangisi Millî Mücadele'nin askerî safhasından diplomatik safhasına geçişi doğrudan ifade eder?",
         options: [
             "A) Saltanatın kaldırılması",
             "B) Lozan Antlaşması'nın imzalanması",
-            "C) Mudanya Ateşkes Antlaşması",
+            "C) Halifeliğin kaldırılması",
             "D) Cumhuriyetin ilanı",
-            "E) Halifeliğin kaldırılması"
+            "E) Mudanya Ateşkes Antlaşması"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 4,
         explanation: "Mudanya Ateşkes Antlaşması, Millî Mücadele'nin askerî safhasını sona erdirip diplomatik safhayı başlatmıştır. Bu, askerî zaferin diplomatik aşamaya geçişidir."
     },
     {
-        question: "Soru 66: Aşağıdakilerden hangisi Mudanya Ateşkes Antlaşması ile Lozan Barış Antlaşması arasındaki temel farklardan biri olarak gösterilebilir?",
+        question: "Aşağıdakilerden hangisi Mudanya Ateşkes Antlaşması ile Lozan Barış Antlaşması arasındaki temel farklardan biri olarak gösterilebilir?",
         options: [
             "A) Mudanya askerî safhayı sona erdirirken Lozan diplomatik çözümün temel belgesi olmuştur.",
             "B) Mudanya ekonomik sorunları, Lozan askerî sorunları çözmüştür.",
@@ -844,19 +844,19 @@ window.tarih_16_sorulari = [
         explanation: "Mudanya askerî safhayı sona erdiren ateşkes antlaşmasıdır. Lozan ise kalıcı barışı sağlayan ve Türkiye'nin bağımsızlığını uluslararası alanda tescil eden antlaşmadır."
     },
     {
-        question: "Soru 67: Aşağıdakilerden hangisi Lozan Antlaşması'nda çözülemeyip sonraya bırakılan konulardan biridir?",
+        question: "Aşağıdakilerden hangisi Lozan Antlaşması'nda çözülemeyip sonraya bırakılan konulardan biridir?",
         options: [
             "A) Kapitülasyonlar",
             "B) Azınlıklar",
-            "C) Musul",
-            "D) Savaş tazminatı",
+            "C) Savaş tazminatı",
+            "D) Musul",
             "E) Yabancı okullar"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 3,
         explanation: "Musul sorunu, Lozan'da çözülememiş ve sonraya bırakılmıştır. 1926'da Ankara Antlaşması ile çözülmüştür."
     },
     {
-        question: "Soru 68: Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+        question: "Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
         options: [
             "A) Doğu sınırı — Kars Antlaşması",
             "B) Suriye sınırı — Ankara Antlaşması",
@@ -868,7 +868,7 @@ window.tarih_16_sorulari = [
         explanation: "Doğu sınırı, Kars Antlaşması ile belirlenmiştir, Ankara Antlaşması ile değil. Ankara Antlaşması, Suriye sınırını belirlemiştir."
     },
     {
-        question: "Soru 69: Lozan'da alınan;\n\nI. kapitülasyonların kaldırılması,\nII. yabancı okulların Türk kanunlarına tabi olması,\nIII. azınlıkların Türk vatandaşı kabul edilmesi\n\nkararlarının ortak özelliği aşağıdakilerden hangisidir?",
+        question: "Lozan'da alınan;\n\nI. kapitülasyonların kaldırılması,\nII. yabancı okulların Türk kanunlarına tabi olması,\nIII. azınlıkların Türk vatandaşı kabul edilmesi\n\nkararlarının ortak özelliği aşağıdakilerden hangisidir?",
         options: [
             "A) Türkiye'nin iç ve dış egemenliğini güçlendirmeleri",
             "B) Türkiye'nin topraklarını genişletmeleri",
@@ -880,7 +880,7 @@ window.tarih_16_sorulari = [
         explanation: "Her üç karar da Türkiye'nin iç ve dış egemenliğini güçlendirmiştir. Kapitülasyonların kaldırılması ekonomik, yabancı okullar eğitim, azınlıklar ise yurttaşlık alanında egemenliği pekiştirmiştir."
     },
     {
-        question: "Soru 70: Aşağıdaki gelişmelerden hangisi Türkiye'nin tam bağımsızlık anlayışıyla doğrudan ilişkilendirilemez?",
+        question: "Aşağıdaki gelişmelerden hangisi Türkiye'nin tam bağımsızlık anlayışıyla doğrudan ilişkilendirilemez?",
         options: [
             "A) Kapitülasyonların kaldırılması",
             "B) Yabancı okulların Türk kanunlarına tabi olması",
@@ -892,7 +892,7 @@ window.tarih_16_sorulari = [
         explanation: "Boğazların askerden arındırılması, tam bağımsızlık anlayışıyla doğrudan ilişkili değildir. Bu, Türkiye'nin egemenlik hakkını sınırlayan bir düzenlemedir ve Montrö'ye kadar devam etmiştir."
     },
     {
-        question: "Soru 71: Aşağıdakilerden hangisi Lozan Barış Antlaşması'nın ekonomik sonuçlarından biri değildir?",
+        question: "Aşağıdakilerden hangisi Lozan Barış Antlaşması'nın ekonomik sonuçlarından biri değildir?",
         options: [
             "A) Kapitülasyonların kaldırılması",
             "B) Osmanlı dış borçlarının paylaştırılması",
@@ -904,7 +904,7 @@ window.tarih_16_sorulari = [
         explanation: "Musul sorunu, Lozan'da çözülememiştir. Ekonomik sonuçlar arasında kapitülasyonlar, dış borçlar, gümrük düzenlemeleri ve nüfus mübadelesi sayılabilir."
     },
     {
-        question: "Soru 72: Aşağıdaki gelişmelerden hangisi doğrudan ulusal egemenlik anlayışının güçlendirilmesiyle ilişkilidir?",
+        question: "Aşağıdaki gelişmelerden hangisi doğrudan ulusal egemenlik anlayışının güçlendirilmesiyle ilişkilidir?",
         options: [
             "A) Saltanatın kaldırılması",
             "B) Rodos'un İtalya'ya bırakılması",
@@ -916,7 +916,7 @@ window.tarih_16_sorulari = [
         explanation: "Saltanatın kaldırılması, ulusal egemenlik anlayışının güçlendirilmesiyle doğrudan ilişkilidir. Egemenlik kayıtsız şartsız millete geçmiştir."
     },
     {
-        question: "Soru 73: Aşağıdaki gelişmelerden hangileri Lozan'ın Türkiye açısından tam bağımsızlık anlayışıyla ilişkilendirilebilir?\n\nI. Kapitülasyonların kaldırılması\nII. Yabancı okulların Türk kanunlarına tabi olması\nIII. Azınlıkların Türk vatandaşı kabul edilmesi",
+        question: "Aşağıdaki gelişmelerden hangileri Lozan'ın Türkiye açısından tam bağımsızlık anlayışıyla ilişkilendirilebilir?\n\nI. Kapitülasyonların kaldırılması\nII. Yabancı okulların Türk kanunlarına tabi olması\nIII. Azınlıkların Türk vatandaşı kabul edilmesi",
         options: [
             "A) Yalnız I",
             "B) Yalnız II",
@@ -928,31 +928,31 @@ window.tarih_16_sorulari = [
         explanation: "Her üç gelişme de Türkiye'nin tam bağımsızlık anlayışıyla ilişkilidir. Kapitülasyonlar ekonomik, yabancı okullar eğitim, azınlıklar ise yurttaşlık alanında tam bağımsızlığı sağlamıştır."
     },
     {
-        question: "Soru 74: Aşağıdakilerden hangisi Lozan Barış Antlaşması ile Mudanya Ateşkes Antlaşması'nın ortak sonucu olarak değerlendirilebilir?",
+        question: "Aşağıdakilerden hangisi Lozan Barış Antlaşması ile Mudanya Ateşkes Antlaşması'nın ortak sonucu olarak değerlendirilebilir?",
         options: [
             "A) Kapitülasyonların kaldırılması",
             "B) Musul sorununun çözüme kavuşturulması",
-            "C) Türk tarafının savaş sonrası diplomatik konumunun güçlenmesi",
+            "C) Boğazların tamamen Türkiye'nin denetimine bırakılması",
             "D) Saltanatın kaldırılması",
-            "E) Boğazların tamamen Türkiye'nin denetimine bırakılması"
+            "E) Türk tarafının savaş sonrası diplomatik konumunun güçlenmesi"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 4,
         explanation: "Hem Mudanya hem Lozan, Türk tarafının savaş sonrası diplomatik konumunu güçlendirmiştir. Mudanya askerî zaferi tescil etmiş, Lozan ise kalıcı barışı sağlamıştır."
     },
     {
-        question: "Soru 75: Bir tarih öğretmeni öğrencilerine şu bilgileri vermiştir:\n\n* Birinci gelişmede askerî mücadele sona ermiştir.\n* İkinci gelişmede Osmanlı Devleti resmen sona ermiştir.\n* Üçüncü gelişmede Türkiye'nin bağımsızlığını uluslararası alanda tanıyan temel belge ortaya çıkmıştır.\n\nBu gelişmeler aşağıdakilerin hangisinde doğru verilmiştir?",
+        question: "Bir tarih öğretmeni öğrencilerine şu bilgileri vermiştir:\n\n* Birinci gelişmede askerî mücadele sona ermiştir.\n* İkinci gelişmede Osmanlı Devleti resmen sona ermiştir.\n* Üçüncü gelişmede Türkiye'nin bağımsızlığını uluslararası alanda tanıyan temel belge ortaya çıkmıştır.\n\nBu gelişmeler aşağıdakilerin hangisinde doğru verilmiştir?",
         options: [
             "A) Lozan – Mudanya – Saltanatın kaldırılması",
-            "B) Mudanya – Saltanatın kaldırılması – Lozan",
+            "B) Mudanya – Lozan – Saltanatın kaldırılması",
             "C) Saltanatın kaldırılması – Mudanya – Lozan",
-            "D) Mudanya – Lozan – Saltanatın kaldırılması",
+            "D) Mudanya – Saltanatın kaldırılması – Lozan",
             "E) Lozan – Saltanatın kaldırılması – Mudanya"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Doğru sıralama: Mudanya (askerî mücadele sona erdi) → Saltanatın kaldırılması (Osmanlı Devleti sona erdi) → Lozan (Türkiye'nin bağımsızlığı uluslararası alanda tanındı)."
     },
     {
-        question: "Soru 76: Aşağıdaki gelişmelerden hangisi kişi-görev/başarı ilişkisi bakımından diğerlerinden farklıdır?",
+        question: "Aşağıdaki gelişmelerden hangisi kişi-görev/başarı ilişkisi bakımından diğerlerinden farklıdır?",
         options: [
             "A) İsmet İnönü – Mudanya Ateşkes Antlaşması'ndaki başarı",
             "B) Refet Bele – Doğu Trakya'nın teslim alınması",
@@ -964,7 +964,7 @@ window.tarih_16_sorulari = [
         explanation: "Abdülmecit Efendi, Mudanya görüşmelerinde TBMM'yi temsil etmemiştir. Mudanya'da TBMM'yi İsmet İnönü temsil etmiştir. Abdülmecit Efendi halifedir."
     },
     {
-        question: "Soru 77: Aşağıdaki olaylardan hangisinin gerçekleşmesi, Osmanlı Devleti ile TBMM Hükûmeti arasındaki siyasal ikiliğin ortadan kaldırılması amacına yöneliktir?",
+        question: "Aşağıdaki olaylardan hangisinin gerçekleşmesi, Osmanlı Devleti ile TBMM Hükûmeti arasındaki siyasal ikiliğin ortadan kaldırılması amacına yöneliktir?",
         options: [
             "A) Mudanya Ateşkes Antlaşması",
             "B) Saltanatın kaldırılması",
@@ -976,19 +976,19 @@ window.tarih_16_sorulari = [
         explanation: "Saltanatın kaldırılması, Osmanlı Devleti ile TBMM arasındaki siyasal ikiliği ortadan kaldırmıştır. Bu sayede Lozan'a tek bir Türk hükûmeti katılmıştır."
     },
     {
-        question: "Soru 78: Lozan Barış Antlaşması'nda aşağıdaki konulardan hangisinin Türkiye lehine sonuçlanması, ekonomik bağımsızlık açısından diğerlerinden daha belirgin bir gelişmedir?",
+        question: "Lozan Barış Antlaşması'nda aşağıdaki konulardan hangisinin Türkiye lehine sonuçlanması, ekonomik bağımsızlık açısından diğerlerinden daha belirgin bir gelişmedir?",
         options: [
             "A) Karaağaç'ın alınması",
-            "B) Kapitülasyonların kaldırılması",
+            "B) Bozcaada'nın alınması",
             "C) İstanbul'un boşaltılması",
-            "D) Bozcaada'nın alınması",
+            "D) Kapitülasyonların kaldırılması",
             "E) Doğu Trakya'nın Türkiye'ye bırakılması"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Kapitülasyonların kaldırılması, ekonomik bağımsızlık açısından en belirgin gelişmedir. Yabancı devletlerin ekonomik ayrıcalıkları sona ermiştir."
     },
     {
-        question: "Soru 79: Aşağıdaki gelişmelerden hangileri arasında doğrudan bir neden-sonuç ilişkisi kurulabilir?",
+        question: "Aşağıdaki gelişmelerden hangileri arasında doğrudan bir neden-sonuç ilişkisi kurulabilir?",
         options: [
             "A) Mudanya Ateşkesi → Lozan Konferansı'na giden yolun açılması",
             "B) Karaağaç'ın alınması → Saltanatın kaldırılması",
@@ -1000,7 +1000,7 @@ window.tarih_16_sorulari = [
         explanation: "Mudanya Ateşkes Antlaşması, Lozan Konferansı'nın toplanmasına zemin hazırlamıştır. Askerî zaferin ardından diplomatik süreç başlamıştır."
     },
     {
-        question: "Soru 80: Lozan Barış Antlaşması ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+        question: "Lozan Barış Antlaşması ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
         options: [
             "A) 24 Temmuz 1923'te imzalanmıştır.",
             "B) Türkiye'yi İsmet İnönü, Hasan Saka ve Dr. Rıza Nur'un başında bulunduğu heyet temsil etmiştir.",

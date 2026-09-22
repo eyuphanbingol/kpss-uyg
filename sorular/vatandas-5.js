@@ -10,12 +10,12 @@ window.vatandas_5_sorulari = [
         question: "1982 Anayasası’na göre vatandaşlık hakkına ilişkin aşağıdakilerden hangisi yanlıştır?",
         options: [
             "A) Vatandaşlıktan çıkarma ile ilgili karar ve işlemlere karşı yargı yolu açıktır.",
-            "B) Türk vatandaşlığının kazanılması için ana – babanın her ikisinin de Türk olması gerekir.",
+            "B) Hiçbir Türk, vatana bağlılıkla bağdaşmayan bir eylemde bulunmadıkça vatandaşlıktan çıkarılamaz.",
             "C) Türk devletine vatandaşlık bağı ile bağlı olan herkes Türk’tür.",
             "D) Vatandaşlık kanunun gösterdiği koşullarla kazanılır ve ancak kanunda gösterilen hâllerde kaybedilir.",
-            "E) Hiçbir Türk, vatana bağlılıkla bağdaşmayan bir eylemde bulunmadıkça vatandaşlıktan çıkarılamaz."
+            "E) Türk vatandaşlığının kazanılması için ana – babanın her ikisinin de Türk olması gerekir."
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "Türk babanın veya Türk ananın çocuğu Türk’tür; her iki ebeveynin Türk olması şart değildir."
     },
     {
@@ -32,8 +32,8 @@ window.vatandas_5_sorulari = [
     },
     {
         question: "1982 Anayasası’na göre siyasi partilerin kapatılması davası aşağıdakilerden hangisi tarafından açılır?",
-        options: ["A) Danıştay Başsavcısı", "B) Yargıtay Cumhuriyet Başsavcısı", "C) Partinin merkezinin bulunduğu yer Cumhuriyet başsavcılığı", "D) Yüksek Seçim Kurulu Başkanlığı", "E) TBMM Genel Kurulu"],
-        correctAnswerIndex: 1,
+        options: ["A) Danıştay Başsavcısı", "B) Yüksek Seçim Kurulu Başkanlığı", "C) Partinin merkezinin bulunduğu yer Cumhuriyet başsavcılığı", "D) Yargıtay Cumhuriyet Başsavcısı", "E) TBMM Genel Kurulu"],
+        correctAnswerIndex: 3,
         explanation: "Kapatma davasını Yargıtay Cumhuriyet Başsavcısı açar; kararı Anayasa Mahkemesi verir."
     },
     {

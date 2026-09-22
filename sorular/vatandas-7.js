@@ -26,8 +26,8 @@ window.vatandas_7_sorulari = [
     },
     {
         question: "1982 Anayasası’na göre yürütme yetki ve görevi aşağıdakilerden hangisine aittir?",
-        options: ["A) Bakanlara", "B) Cumhurbaşkanı yardımcılarına", "C) En fazla oyu alan siyasi partiye", "D) TBMM Başkanlık Divanına", "E) Cumhurbaşkanına"],
-        correctAnswerIndex: 4,
+        options: ["A) Cumhurbaşkanına", "B) Cumhurbaşkanı yardımcılarına", "C) En fazla oyu alan siyasi partiye", "D) TBMM Başkanlık Divanına", "E) Bakanlara"],
+        correctAnswerIndex: 0,
         explanation: "2017 sonrası yürütme yetki ve görevi Cumhurbaşkanına aittir."
     },
     {
@@ -62,8 +62,8 @@ window.vatandas_7_sorulari = [
     },
     {
         question: "Cumhurbaşkanlığı seçiminin birinci oylamada sonuçlanması için genel oyla yapılan seçimde hangi oy oranı aranır?",
-        options: ["A) 3/5 oy çoğunluğu", "B) 2/3 oy çoğunluğu", "C) 3/4 oy çoğunluğu", "D) 4/5 oy çoğunluğu", "E) Salt çoğunluk"],
-        correctAnswerIndex: 4,
+        options: ["A) 3/5 oy çoğunluğu", "B) 2/3 oy çoğunluğu", "C) 3/4 oy çoğunluğu", "D) Salt çoğunluk", "E) 4/5 oy çoğunluğu"],
+        correctAnswerIndex: 3,
         explanation: "Birinci turda geçerli oyların salt çoğunluğu gerekir."
     },
     {

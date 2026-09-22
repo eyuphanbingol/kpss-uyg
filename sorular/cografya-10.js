@@ -83,12 +83,12 @@ window.cografya_10_sorulari = [
     "question": "Finike ile Kaş arasında, Teke Yarımadası'nın güneyinde görülen kıyı tipi aşağıdakilerden hangisidir?",
     "options": [
       "A) Ria kıyısı",
-      "B) Dalmaçya kıyısı",
+      "B) Boyuna kıyı",
       "C) Kalanlı kıyı",
-      "D) Boyuna kıyı",
+      "D) Dalmaçya kıyısı",
       "E) Falezli kıyı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Deniz seviyesinin yükselmesiyle kıyıya paralel uzanan dağlar arasındaki vadilerin sular altında kalması ve dağ zirvelerinin adacıklara dönüşmesiyle oluşan kıyı tipine Dalmaçya kıyı tipi denir. Türkiye'de sadece Antalya Finike-Kaş arasında görülür."
   },
   {

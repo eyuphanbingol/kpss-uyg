@@ -76,7 +76,7 @@
         "Alaçatı RES": [26.38, 38.28],
         "Aladağlar (Demirkazık)": [35.2, 37.8],
         "Altın: Cerattepe": [41.7, 41.2],
-        "Altın: Ovacık": [26.7, 39.3],
+        "Altın: Ovacık": [27.08, 39.13],
         "Altınkaya HES": [35.85, 41.35],
         "Alüminyum: Seydişehir": [31.85, 37.42],
         "Alüvyal (Bafra)": [35.9, 41.5],
@@ -1000,10 +1000,14 @@
 
     ITEMS.forEach(function (it, i) { it.id = "m" + i; });
 
+    // svg/tr.svg (Simplemaps, 1000x422) Mercator izdüşümü; katsayılar SVG içindeki
+    // <g id="points"> kalibrasyon noktalarından çıkarıldı. 81 il merkezinin 80'i kendi
+    // il sınırına düşer (eski doğrusal formülde 44/81; pinler denize/komşu ile kayıyordu).
     function project(lon, lat) {
+        var phi = (lat * Math.PI) / 180;
         return {
-            x: ((lon - 25.6) / (44.9 - 25.6)) * 1000,
-            y: ((42.15 - lat) / (42.15 - 35.85)) * 422
+            x: 47.488895 * lon - 1173.262453,
+            y: 2227.465234 - 2721.320104 * Math.log(Math.tan(Math.PI / 4 + phi / 2))
         };
     }
 

@@ -33,12 +33,12 @@ window.cografya_4_sorulari = [
     "question": "Teke ve Taşeli platolarında kıl keçisi yetiştiriciliğinin yaygın olması, öncelikle aşağıdakilerden hangisiyle açıklanır?",
     "options": [
       "A) Geniş çayırların bulunmasıyla",
-      "B) Maki bitki örtüsünün varlığıyla",
+      "B) Bol yağış and ormanlık alanlarla",
       "C) Volkanik toprakların verimliliğiyle",
-      "D) Bol yağış and ormanlık alanlarla",
+      "D) Maki bitki örtüsünün varlığıyla",
       "E) Sulu tarımın gelişmiş olmasıyla"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Kıl keçileri, çalı ve maki yapraklarını yiyerek beslenen bir hayvandır. Akdeniz'in karstik platolarında maki bitki örtüsü baskın olduğu için kıl keçisi yetiştiriciliği coğrafi bir sonuç olarak yaygınlaşmıştır."
   },
   {
@@ -46,12 +46,12 @@ window.cografya_4_sorulari = [
     "question": "Aşağıdaki plato–tür eşleştirmelerinden hangisi doğrudur?",
     "options": [
       "A) Taşeli – aşınım düzlüğü platosu",
-      "B) Teke – karstik plato",
+      "B) Obruk – volkanik plato",
       "C) Erzurum-Kars – karstik plato",
-      "D) Obruk – volkanik plato",
+      "D) Teke – karstik plato",
       "E) Perşembe – tabaka düzlüğü platosu"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Teke ve Taşeli platoları karstik erime sonucu oluşmuş karstik platolardır. Taşeli karstik, Erzurum-Kars volkanik, Obruk tabaka düzlüğü, Perşembe ise aşınım düzlüğü platosudur."
   },
   {
@@ -89,12 +89,12 @@ window.cografya_4_sorulari = [
     "question": "Erzurum-Kars-Ardahan platosunda et ve süt sanayisinin gelişmiş olması en çok aşağıdakilerden hangisiyle açıklanabilir?",
     "options": [
       "A) Karstik kayaçların yaygın olmasıyla",
-      "B) Yaz yağışlarına bağlı çayırların büyükbaş hayvancılığı desteklemesiyle",
-      "C) Maki bitki örtüsünün kıl keçisini beslemesiyle",
+      "B) Maki bitki örtüsünün kıl keçisini beslemesiyle",
+      "C) Yaz yağışlarına bağlı çayırların büyükbaş hayvancılığı desteklemesiyle",
       "D) Tahıl tarımının çok gelişmiş olmasıyla",
       "E) Turizm gelirlerinin yüksek olmasıyla"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Bölgenin yaz aylarında konvektiyonel yağışlar alması, otların kurumayıp gür çayırlar halinde kalmasını sağlar. Bu gür meralar büyükbaş hayvancılığı, o da doğrudan et-süt sanayisini tetiklemiştir."
   },
   {
@@ -169,12 +169,12 @@ window.cografya_4_sorulari = [
     "question": "Tabaka düzlüğü platolarında küçükbaş hayvancılık ve tahıl tarımının ön planda olması, öncelikle aşağıdakilerden hangisiyle ilişkilidir?",
     "options": [
       "A) Bol yağışlı okyanusal iklimle",
-      "B) Karasal iklim ve bozkır bitki örtüsüyle",
-      "C) Maki örtüsü ve kıl keçisiyle",
+      "B) Maki örtüsü ve kıl keçisiyle",
+      "C) Karasal iklim ve bozkır bitki örtüsüyle",
       "D) Volkanik toprak yardımı ve çayır örtüsüyle",
       "E) Karstik arazi ve yer altı sularıyla"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Tahıl (özellikle buğday) ilkbahar yağışı ve yaz kuraklığı ister, küçükbaş hayvanlar ise ilkbaharda yeşeren cılız otları (bozkır) sever. Bu durum doğrudan karasal iklim ve bozkır bitki örtüsünün bir sonucudur."
   },
   {

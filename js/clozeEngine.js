@@ -129,11 +129,11 @@
                     var k = norm(term);
                     if (seen[k]) return;
                     seen[k] = 1;
+                    // Tamamı büyük harf çok kelimeli kalın yazılar not başlığıdır; boşluk olarak anlamsız.
+                    if (/\s/.test(term) && term === term.toLocaleUpperCase("tr-TR") && /[A-ZÇĞİÖŞÜ]{3}/.test(term)) return;
                     var prompt = clipAround(blankIn(plain, term), 180);
-                    if (tidyPlain(prompt.replace(/_/g, "")).length < 10) {
-                        if (!hint) return;
-                        prompt = hint + " · doğru ifade: ______";
-                    }
+                    // Bağlamı olmayan boşluk (yalnız başlık + ____) çözülemez; üretme.
+                    if (tidyPlain(prompt.replace(/_/g, "")).length < 10) return;
                     items.push({
                         id: "n-" + ni + "-" + ci + "-" + ti,
                         prompt: prompt,

@@ -45,13 +45,13 @@ window.vatandas_11_sorulari = [
     {
         question: "Aşağıdakilerden hangisi TBMM İnsan Haklarını İnceleme Komisyonunun yetkileri arasında yer almaz?",
         options: [
-            "A) Yurt içinde kamu kuruluşlarında inceleme yapmak",
+            "A) İlgililer hakkında idari ve adli tahkikat başlatmak",
             "B) Yurt içinde özel kuruluşlarda inceleme yapmak",
-            "C) İlgililer hakkında idari ve adli tahkikat başlatmak",
+            "C) Yurt içinde kamu kuruluşlarında inceleme yapmak",
             "D) Kurum ve kuruluşlardan bilgi istemek",
             "E) Yurt dışında araştırma veya inceleme yapmak"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Komisyon inceleme ve bilgi isteme yetkisine sahiptir; idari veya adli tahkikat başlatamaz."
     }
 ];

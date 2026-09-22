@@ -27,37 +27,37 @@ window.guncel_3_sorulari = [
 {
     "question": "2025 Nobel Kimya Ödülü'nü kazananlar aşağıdakilerden hangisinde doğru verilmiştir?",
     "options": [
-        "A) Susumu Kitagawa – Richard Robson – Omar M. Yaghi",
+        "A) Joel Mokyr – Philippe Aghion – Peter Howitt",
         "B) John Clarke – Michel Devoret – John Martinis",
         "C) David Baker – Demis Hassabis – John Jumper",
         "D) Mary Brunkow – Fred Ramsdell – Shimon Sakaguchi",
-        "E) Joel Mokyr – Philippe Aghion – Peter Howitt"
+        "E) Susumu Kitagawa – Richard Robson – Omar M. Yaghi"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 4,
     "explanation": "Kitagawa, Robson, Yaghi."
 },
 {
     "question": "2025 Nobel Kimya Ödülü hangi çalışma alanıyla ilişkilidir?",
     "options": [
         "A) DNA onarımı",
-        "B) Metal-organik çerçeveler",
+        "B) Bağışıklık sistemi",
         "C) Kuantum bilgisayarlar",
-        "D) Bağışıklık sistemi",
+        "D) Metal-organik çerçeveler",
         "E) Ekonomik kalkınma"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Metal-organik çerçeveler (MOF)."
 },
 {
     "question": "Aşağıdakilerden hangisi 2025 Nobel Tıp Ödülü sahiplerinden biridir?",
     "options": [
-        "A) Mary Brunkow",
+        "A) László Krasznahorkai",
         "B) David Baker",
         "C) John Clarke",
-        "D) László Krasznahorkai",
+        "D) Mary Brunkow",
         "E) Joel Mokyr"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Mary Brunkow tıp ödülündedir."
 },
 {
@@ -123,25 +123,25 @@ window.guncel_3_sorulari = [
 {
     "question": "2024 Nobel Fizik Ödülü aşağıdaki isimlerden hangilerine verilmiştir?",
     "options": [
-        "A) John Hopfield – Geoffrey Hinton",
+        "A) Daron Acemoğlu – Simon Johnson – James A. Robinson",
         "B) Victor Ambros – Gary Ruvkun",
         "C) David Baker – Demis Hassabis – John Jumper",
-        "D) Daron Acemoğlu – Simon Johnson – James A. Robinson",
+        "D) John Hopfield – Geoffrey Hinton",
         "E) Joel Mokyr – Philippe Aghion – Peter Howitt"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Hopfield ve Hinton."
 },
 {
     "question": "2024 Nobel Kimya Ödülü sahipleri aşağıdakilerden hangisidir?",
     "options": [
         "A) John Hopfield – Geoffrey Hinton",
-        "B) David Baker – Demis Hassabis – John Jumper",
+        "B) Susumu Kitagawa – Richard Robson – Omar M. Yaghi",
         "C) Victor Ambros – Gary Ruvkun",
         "D) Daron Acemoğlu – Simon Johnson – James A. Robinson",
-        "E) Susumu Kitagawa – Richard Robson – Omar M. Yaghi"
+        "E) David Baker – Demis Hassabis – John Jumper"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 4,
     "explanation": "Baker, Hassabis, Jumper."
 },
 {
@@ -291,13 +291,13 @@ window.guncel_3_sorulari = [
 {
     "question": "2026 Oscar Ödülleri'nde En İyi Film ödülünü kazanan yapım aşağıdakilerden hangisidir?",
     "options": [
-        "A) One Battle After Another",
+        "A) The Brutalist",
         "B) Sentimental Value",
         "C) KPop Demon Hunters",
         "D) Hamlet",
-        "E) The Brutalist"
+        "E) One Battle After Another"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 4,
     "explanation": "One Battle After Another."
 },
 {
@@ -436,12 +436,12 @@ window.guncel_3_sorulari = [
     "question": "Göbeklitepe hangi ildedir?",
     "options": [
         "A) Ankara",
-        "B) Şanlıurfa",
+        "B) Diyarbakır",
         "C) Mardin",
         "D) Gaziantep",
-        "E) Diyarbakır"
+        "E) Şanlıurfa"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 4,
     "explanation": "Şanlıurfa."
 },
 {
@@ -459,13 +459,13 @@ window.guncel_3_sorulari = [
 {
     "question": "Gordion Antik Kenti aşağıdaki illerden hangisindedir?",
     "options": [
-        "A) Ankara",
+        "A) Konya",
         "B) Eskişehir",
         "C) Afyonkarahisar",
-        "D) Konya",
+        "D) Ankara",
         "E) Kütahya"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Ankara / Polatlı."
 },
 {
@@ -507,13 +507,13 @@ window.guncel_3_sorulari = [
 {
     "question": "Sardis aşağıdakilerden hangisinin başkentidir?",
     "options": [
-        "A) Lidya Krallığı",
+        "A) Roma İmparatorluğu",
         "B) Frig Krallığı",
         "C) Hitit Krallığı",
         "D) Urartu Krallığı",
-        "E) Roma İmparatorluğu"
+        "E) Lidya Krallığı"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 4,
     "explanation": "Lidya başkenti."
 },
 {
@@ -567,61 +567,61 @@ window.guncel_3_sorulari = [
 {
     "question": "2023 yılıyla ilgili aşağıdaki eşleştirmelerden hangisi doğrudur?",
     "options": [
-        "A) Balaban/Mey",
+        "A) Antep İşi",
         "B) Türk kahvesi",
         "C) Hüsn-i Hat",
-        "D) Antep İşi",
+        "D) Balaban/Mey",
         "E) Kırkpınar"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "2023'te Balaban/Mey vardır."
 },
 {
     "question": "Aşağıdakilerden hangisi 2023 yılında verilen UNESCO Somut Olmayan Kültürel Miras unsurlarından biridir?",
     "options": [
-        "A) Sedef kakma",
+        "A) Çay kültürü",
         "B) Hıdırellez",
         "C) Ebru",
-        "D) Çay kültürü",
+        "D) Sedef kakma",
         "E) Türk kahvesi"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Sedef kakma 2023."
 },
 {
     "question": "2023 yılında UNESCO kapsamında Acil Koruma Listesi ile ilişkilendirilen unsur aşağıdakilerden hangisidir?",
     "options": [
-        "A) Zeytin yetiştiriciliği",
+        "A) Çini sanatı",
         "B) Hüsn-i Hat",
         "C) Türk kahvesi",
-        "D) Çini sanatı",
+        "D) Zeytin yetiştiriciliği",
         "E) Nevruz"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Zeytin yetiştiriciliği acil korumadır."
 },
 {
     "question": "2022 yılı UNESCO Somut Olmayan Kültürel Miras unsurları arasında aşağıdakilerden hangisi vardır?",
     "options": [
-        "A) Çay kültürü",
+        "A) Ebru",
         "B) Antep İşi",
         "C) Nevruz",
-        "D) Ebru",
+        "D) Çay kültürü",
         "E) Hıdırellez"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "2022 çay kültürü."
 },
 {
     "question": "2022 yılında UNESCO kapsamında Acil Koruma Listesi ile ilişkilendirilen unsur aşağıdakilerden hangisidir?",
     "options": [
-        "A) Ahlat taş işçiliği",
+        "A) Nasreddin Hoca",
         "B) Minyatür",
         "C) Mangala",
-        "D) Nasreddin Hoca",
+        "D) Ahlat taş işçiliği",
         "E) Hüsn-i Hat"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Ahlat taş işçiliği."
 },
 {
@@ -651,61 +651,61 @@ window.guncel_3_sorulari = [
 {
     "question": "2019 yılında UNESCO Somut Olmayan Kültürel Miras kapsamında aşağıdakilerden hangisi yer almıştır?",
     "options": [
-        "A) Geleneksel Türk okçuluğu",
+        "A) Ebru",
         "B) Dede Korkut",
         "C) Çini sanatı",
-        "D) Ebru",
+        "D) Geleneksel Türk okçuluğu",
         "E) Kırkpınar"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "2019 okçuluk."
 },
 {
     "question": "2018 yılında UNESCO Somut Olmayan Kültürel Miras kapsamında aşağıdakilerden hangisi yer almıştır?",
     "options": [
-        "A) Dede Korkut",
+        "A) Türk kahvesi",
         "B) Hıdırellez",
-        "C) Türk kahvesi",
+        "C) Dede Korkut",
         "D) Mesir Macunu",
         "E) Minyatür"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 2,
     "explanation": "2018 Dede Korkut."
 },
 {
     "question": "2017 yılında UNESCO kapsamında aşağıdakilerden hangileri yer almıştır?",
     "options": [
-        "A) Hıdırellez ve ıslık dili",
+        "A) Dede Korkut ve okçuluk",
         "B) Ebru ve çini",
         "C) Türk kahvesi ve mesir macunu",
-        "D) Dede Korkut ve okçuluk",
+        "D) Hıdırellez ve ıslık dili",
         "E) Hüsn-i Hat ve minyatür"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "2017 Hıdırellez ve ıslık dili."
 },
 {
     "question": "2017 yılında UNESCO kapsamında Acil Koruma Listesi ile ilişkilendirilen unsur aşağıdakilerden hangisidir?",
     "options": [
-        "A) Islık dili",
+        "A) Ebru",
         "B) Türk kahvesi",
         "C) Dede Korkut",
-        "D) Ebru",
+        "D) Islık dili",
         "E) Çini"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Islık dili acil korumadır."
 },
 {
     "question": "2016 yılında UNESCO Somut Olmayan Kültürel Miras kapsamında aşağıdakilerden hangileri yer almıştır?",
     "options": [
-        "A) Lavaş/Yufka ve Çini sanatı",
+        "A) Hüsn-i Hat ve okçuluk",
         "B) Ebru ve Türk kahvesi",
         "C) Minyatür ve Mangala",
         "D) Dede Korkut ve Hıdırellez",
-        "E) Hüsn-i Hat ve okçuluk"
+        "E) Lavaş/Yufka ve Çini sanatı"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 4,
     "explanation": "2016 lavaş ve çini."
 },
 {
@@ -783,13 +783,13 @@ window.guncel_3_sorulari = [
 {
     "question": "Aşağıdakilerden hangisi UNESCO Somut Olmayan Kültürel Miras listesinde 2013–2014 yıllarıyla ilişkilendirilen unsurlardır?",
     "options": [
-        "A) Türk kahvesi – Ebru",
+        "A) Dede Korkut – Hıdırellez",
         "B) Ebru – Çini",
         "C) Mesir Macunu – Keşkek",
-        "D) Dede Korkut – Hıdırellez",
+        "D) Türk kahvesi – Ebru",
         "E) Çay kültürü – Hüsn-i Hat"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "2013 kahve, 2014 ebru."
 },
 {

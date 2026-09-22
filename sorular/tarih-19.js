@@ -1,7 +1,7 @@
 // sorular/tarih-19.js
 window.tarih_19_sorulari = [
 {
-    question: "Soru 1: Atatürk'ün egemenlik anlayışında, devlet yönetiminde belirleyici unsurun herhangi bir kişi, aile veya zümre değil millet olması esas alınmıştır.\n\nBuna göre aşağıdaki gelişmelerden hangisinin bu anlayışın hayata geçirilmesinde diğerlerinden daha doğrudan etkili olduğu söylenebilir?",
+    question: "Atatürk'ün egemenlik anlayışında, devlet yönetiminde belirleyici unsurun herhangi bir kişi, aile veya zümre değil millet olması esas alınmıştır.\n\nBuna göre aşağıdaki gelişmelerden hangisinin bu anlayışın hayata geçirilmesinde diğerlerinden daha doğrudan etkili olduğu söylenebilir?",
     options: [
         "A) Türk Tarih Kurumunun açılması",
         "B) Cumhuriyet'in ilan edilmesi",
@@ -13,7 +13,7 @@ window.tarih_19_sorulari = [
     explanation: "Millet egemenliği Cumhuriyetçilik'tir. En doğrudan yansıma Cumhuriyet'in ilanıdır."
 },
 {
-    question: "Soru 2: Aşağıdakilerden hangisi Cumhuriyetçilik ilkesiyle ilişkilendirilebilecek gelişmeler arasında yer almaz?",
+    question: "Aşağıdakilerden hangisi Cumhuriyetçilik ilkesiyle ilişkilendirilebilecek gelişmeler arasında yer almaz?",
     options: [
         "A) TBMM'nin açılması",
         "B) Saltanatın kaldırılması",
@@ -25,19 +25,19 @@ window.tarih_19_sorulari = [
     explanation: "TTK milliyetçilik (kültür-tarih bilinci) ile ilgilidir, Cumhuriyetçilik listesinde yoktur."
 },
 {
-    question: "Soru 3: Laiklik ilkesi doğrultusunda gerçekleştirilen düzenlemelerin önemli bir bölümü, dinî otoritenin devlet yönetimi ve hukuk sistemi üzerindeki etkisini azaltmaya yöneliktir.\n\nBuna göre aşağıdakilerden hangisi bu amaca yönelik gelişmelerden biri değildir?",
+    question: "Laiklik ilkesi doğrultusunda gerçekleştirilen düzenlemelerin önemli bir bölümü, dinî otoritenin devlet yönetimi ve hukuk sistemi üzerindeki etkisini azaltmaya yöneliktir.\n\nBuna göre aşağıdakilerden hangisi bu amaca yönelik gelişmelerden biri değildir?",
     options: [
         "A) Şer'iye ve Evkaf Vekâletinin kaldırılması",
         "B) Şer'i mahkemelerin kapatılması",
         "C) Halifeliğin kaldırılması",
-        "D) Türk Medeni Kanunu'nun kabul edilmesi",
-        "E) Etibankın kurulması"
+        "D) Etibankın kurulması",
+        "E) Türk Medeni Kanunu'nun kabul edilmesi"
     ],
-    correctAnswerIndex: 4,
+    correctAnswerIndex: 3,
     explanation: "Etibank devletçilik (ekonomi-yatırım) örneğidir; laiklikle ilgili değildir."
 },
 {
-    question: "Soru 4: Tevhîd-i Tedrisât Kanunu'nun kabul edilmesi;\n\nI. eğitim ve öğretimde birlik sağlanması,\nII. laik eğitim anlayışının güçlendirilmesi,\nIII. devletin ekonomik faaliyetlere katılımının artırılması\n\namaçlarından hangileriyle ilişkilendirilebilir?",
+    question: "Tevhîd-i Tedrisât Kanunu'nun kabul edilmesi;\n\nI. eğitim ve öğretimde birlik sağlanması,\nII. laik eğitim anlayışının güçlendirilmesi,\nIII. devletin ekonomik faaliyetlere katılımının artırılması\n\namaçlarından hangileriyle ilişkilendirilebilir?",
     options: [
         "A) Yalnız I",
         "B) Yalnız II",
@@ -49,7 +49,7 @@ window.tarih_19_sorulari = [
     explanation: "Tevhîd-i Tedrisât eğitim birliği ve laik eğitimle ilgilidir. Ekonomik faaliyet (III) devletçiliktir."
 },
 {
-    question: "Soru 5: Aşağıdaki gelişmelerden hangisi halkçılık ilkesinin temelindeki eşitlik anlayışını en açık biçimde yansıtır?",
+    question: "Aşağıdaki gelişmelerden hangisi halkçılık ilkesinin temelindeki eşitlik anlayışını en açık biçimde yansıtır?",
     options: [
         "A) Merkez Bankasının kurulması",
         "B) Soyadı Kanunu'nun kabul edilmesi",
@@ -61,7 +61,7 @@ window.tarih_19_sorulari = [
     explanation: "Soyadı Kanunu ayrıcalıklı unvan/kimlik farklarını kaldırır; halkçılık-eşitliktir. Diğerleri ekonomi veya kültürdür."
 },
 {
-    question: "Soru 6: Atatürk Dönemi'nde bazı ayrıcalık belirten unvanların kaldırılması ve kişilerin toplum içindeki konumlarının doğuştan gelen ayrıcalıklara göre belirlenmemesi yönünde düzenlemeler yapılmıştır.\n\nBu düzenlemelerin temel olarak aşağıdaki ilkelerden hangisiyle ilişkili olduğu söylenebilir?",
+    question: "Atatürk Dönemi'nde bazı ayrıcalık belirten unvanların kaldırılması ve kişilerin toplum içindeki konumlarının doğuştan gelen ayrıcalıklara göre belirlenmemesi yönünde düzenlemeler yapılmıştır.\n\nBu düzenlemelerin temel olarak aşağıdaki ilkelerden hangisiyle ilişkili olduğu söylenebilir?",
     options: [
         "A) Halkçılık",
         "B) Devletçilik",
@@ -73,7 +73,7 @@ window.tarih_19_sorulari = [
     explanation: "Ayrıcalıkların kaldırılması halkçılığın eşitlik ilkesidir."
 },
 {
-    question: "Soru 7: Aşağıdakilerden hangisi milliyetçilik ilkesinin ekonomik bağımsızlık anlayışıyla doğrudan ilişkilendirilebilir?",
+    question: "Aşağıdakilerden hangisi milliyetçilik ilkesinin ekonomik bağımsızlık anlayışıyla doğrudan ilişkilendirilebilir?",
     options: [
         "A) Halkevlerinin açılması",
         "B) Millet Mekteplerinin açılması",
@@ -85,7 +85,7 @@ window.tarih_19_sorulari = [
     explanation: "Kabotaj, karasularda taşımacılığı millîleştirir; ekonomik bağımsızlık / milliyetçiliktir."
 },
 {
-    question: "Soru 8: Kapitülasyonların kaldırılması, Kabotaj Kanunu'nun kabul edilmesi ve Reji İdaresinin millîleştirilmesi gibi gelişmeler birlikte değerlendirildiğinde aşağıdaki sonuçlardan hangisine ulaşılabilir?",
+    question: "Kapitülasyonların kaldırılması, Kabotaj Kanunu'nun kabul edilmesi ve Reji İdaresinin millîleştirilmesi gibi gelişmeler birlikte değerlendirildiğinde aşağıdaki sonuçlardan hangisine ulaşılabilir?",
     options: [
         "A) Din ve devlet işlerinin birbirinden ayrılması amaçlanmıştır.",
         "B) Siyasal egemenliğin halka devredilmesi amaçlanmıştır.",
@@ -97,7 +97,7 @@ window.tarih_19_sorulari = [
     explanation: "Üçü de ekonomik millîleşmedir. E tersidir; devlet çekilmez, millî ekonomi güçlenir."
 },
 {
-    question: "Soru 9: Aşağıdakilerden hangisi milliyetçilik ilkesinin kültürel yönüyle daha yakından ilişkilidir?",
+    question: "Aşağıdakilerden hangisi milliyetçilik ilkesinin kültürel yönüyle daha yakından ilişkilidir?",
     options: [
         "A) Türk Tarih Kurumunun açılması",
         "B) Etibankın kurulması",
@@ -109,7 +109,7 @@ window.tarih_19_sorulari = [
     explanation: "TTK millî tarih-kültür bilincidir. Etibank/baraj devletçilik, aşar halkçılık, mahkeme laikliktir."
 },
 {
-    question: "Soru 10: Türk Dil Kurumunun ve Türk Tarih Kurumunun açılmasıyla öncelikle;",
+    question: "Türk Dil Kurumunun ve Türk Tarih Kurumunun açılmasıyla öncelikle;",
     options: [
         "A) ekonomik bağımsızlığın sağlanması",
         "B) millî kültür ve tarih bilincinin geliştirilmesi",
@@ -121,7 +121,7 @@ window.tarih_19_sorulari = [
     explanation: "TDK ve TTK milliyetçiliğin kültürel ayağıdır."
 },
 {
-    question: "Soru 11: Devletçilik ilkesi doğrultusunda yapılan uygulamaların temelinde, özel sektörün yetersiz kaldığı alanlarda devletin ekonomik kalkınmayı hızlandırmak amacıyla üretim ve yatırıma katılması anlayışı bulunmaktadır.\n\nBuna göre aşağıdakilerden hangisi bu anlayışa doğrudan örnek gösterilemez?",
+    question: "Devletçilik ilkesi doğrultusunda yapılan uygulamaların temelinde, özel sektörün yetersiz kaldığı alanlarda devletin ekonomik kalkınmayı hızlandırmak amacıyla üretim ve yatırıma katılması anlayışı bulunmaktadır.\n\nBuna göre aşağıdakilerden hangisi bu anlayışa doğrudan örnek gösterilemez?",
     options: [
         "A) Etibankın kurulması",
         "B) Devlet bankalarının kurulması",
@@ -133,7 +133,7 @@ window.tarih_19_sorulari = [
     explanation: "TDK kültür-milliyetçiliktir; devlet yatırımı değildir."
 },
 {
-    question: "Soru 12: Aşağıdakilerden hangisi devletçilik ilkesiyle doğrudan ilişkilendirilebilecek gelişmelerden biri değildir?",
+    question: "Aşağıdakilerden hangisi devletçilik ilkesiyle doğrudan ilişkilendirilebilecek gelişmelerden biri değildir?",
     options: [
         "A) II. Beş Yıllık Sanayi Planı'nın hazırlanması",
         "B) Elektrik İşleri Etüt İdaresinin kurulması",
@@ -145,7 +145,7 @@ window.tarih_19_sorulari = [
     explanation: "TTK devletçilik tablosunda yoktur; milliyetçilik-kültürdür."
 },
 {
-    question: "Soru 13: İnkılâpçılık ilkesi, yalnızca belirli bir alanda değişiklik yapılmasını değil, toplumun çağın gereklerine uygun hâle getirilmesini ve gerekli görülen eski kurumların yerine yeni kurumların oluşturulmasını esas alır.\n\nBuna göre aşağıdakilerden hangisi bu anlayışın en açık örneklerinden biridir?",
+    question: "İnkılâpçılık ilkesi, yalnızca belirli bir alanda değişiklik yapılmasını değil, toplumun çağın gereklerine uygun hâle getirilmesini ve gerekli görülen eski kurumların yerine yeni kurumların oluşturulmasını esas alır.\n\nBuna göre aşağıdakilerden hangisi bu anlayışın en açık örneklerinden biridir?",
     options: [
         "A) Aşar vergisinin kaldırılması",
         "B) Darülfünun yerine İstanbul Üniversitesinin kurulması",
@@ -157,31 +157,31 @@ window.tarih_19_sorulari = [
     explanation: "Eski kurumun yerine yenisinin kurulması inkılâpçılığın tanımıdır (Darülfünun → İstanbul Üniversitesi)."
 },
 {
-    question: "Soru 14: Aşağıdaki gelişmelerden hangisi İnkılâpçılık ilkesiyle ilişkilendirilemez?",
+    question: "Aşağıdaki gelişmelerden hangisi İnkılâpçılık ilkesiyle ilişkilendirilemez?",
     options: [
         "A) Hicri takvim yerine Miladi takvimin kabul edilmesi",
         "B) Ölçü ve tartı birimlerinin değiştirilmesi",
         "C) Uluslararası saat sistemine geçilmesi",
-        "D) Hafta tatilinin Cuma gününden Pazar gününe alınması",
-        "E) Reji İdaresinin millîleştirilmesi"
+        "D) Reji İdaresinin millîleştirilmesi",
+        "E) Hafta tatilinin Cuma gününden Pazar gününe alınması"
     ],
-    correctAnswerIndex: 4,
+    correctAnswerIndex: 3,
     explanation: "Reji millîleştirmesi milliyetçilik / ekonomik bağımsızlıktır; inkılâpçılık listesindeki çağdaşlaşma örnekleri değildir."
 },
 {
-    question: "Soru 15: Atatürk Dönemi'nde gerçekleştirilen;\n\n• ölçü ve tartı birimlerinin değiştirilmesi,\n• uluslararası saat sistemine geçilmesi,\n• Miladi takvimin kabul edilmesi\n\ngibi düzenlemelerin ortak amacı aşağıdakilerden hangisidir?",
+    question: "Atatürk Dönemi'nde gerçekleştirilen;\n\n• ölçü ve tartı birimlerinin değiştirilmesi,\n• uluslararası saat sistemine geçilmesi,\n• Miladi takvimin kabul edilmesi\n\ngibi düzenlemelerin ortak amacı aşağıdakilerden hangisidir?",
     options: [
         "A) Ekonomide devletin payını artırmak",
         "B) Toplumda sınıfsal farklılıkları ortadan kaldırmak",
-        "C) Uluslararası uygulamalarla uyum sağlamak",
-        "D) Dinî kurumların sayısını artırmak",
+        "C) Dinî kurumların sayısını artırmak",
+        "D) Uluslararası uygulamalarla uyum sağlamak",
         "E) Millî ekonomiyi dış rekabete kapatmak"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 3,
     explanation: "Metrik sistem, uluslararası saat ve miladi takvim çağdaşlaşma / dış dünyayla uyumdur (inkılâpçılık)."
 },
 {
-    question: "Soru 16: Aşağıdakilerden hangisi hem halkçılık hem de laiklik ilkeleriyle ilişkilendirilebilir?",
+    question: "Aşağıdakilerden hangisi hem halkçılık hem de laiklik ilkeleriyle ilişkilendirilebilir?",
     options: [
         "A) Türk Medeni Kanunu'nun kabul edilmesi",
         "B) Etibankın kurulması",
@@ -193,7 +193,7 @@ window.tarih_19_sorulari = [
     explanation: "Medeni Kanun hem laik hukuku (laiklik) hem kadın-erkek eşitliğini (halkçılık) taşır."
 },
 {
-    question: "Soru 17: Aşağıdaki gelişmelerden hangisinin birden fazla Atatürk ilkesiyle ilişkilendirilmesi, diğerlerine göre daha belirgin bir durumdur?",
+    question: "Aşağıdaki gelişmelerden hangisinin birden fazla Atatürk ilkesiyle ilişkilendirilmesi, diğerlerine göre daha belirgin bir durumdur?",
     options: [
         "A) Etibankın kurulması",
         "B) Türk Dil Kurumunun açılması",
@@ -205,7 +205,7 @@ window.tarih_19_sorulari = [
     explanation: "Tevhîd-i Tedrisât laiklik, halkçılık ve milliyetçilikle birlikte okunur; diğerleri tek alana (ekonomi veya kültür) daha sıkı bağlıdır."
 },
 {
-    question: "Soru 18: Kadınlara seçme ve seçilme hakkının verilmesi aşağıdaki ilkelerden hangileriyle doğrudan ilişkilendirilebilir?",
+    question: "Kadınlara seçme ve seçilme hakkının verilmesi aşağıdaki ilkelerden hangileriyle doğrudan ilişkilendirilebilir?",
     options: [
         "A) Yalnız devletçilik",
         "B) Yalnız milliyetçilik",
@@ -217,19 +217,19 @@ window.tarih_19_sorulari = [
     explanation: "Siyasal katılım Cumhuriyetçilik, eşit yurttaşlık halkçılıktır."
 },
 {
-    question: "Soru 19: Seçmen olabilmek için aranan vergi şartının kaldırılmasıyla aşağıdakilerden hangisinin güçlendirilmesi amaçlanmıştır?",
+    question: "Seçmen olabilmek için aranan vergi şartının kaldırılmasıyla aşağıdakilerden hangisinin güçlendirilmesi amaçlanmıştır?",
     options: [
         "A) Ekonomik devletçilik",
-        "B) Vatandaşlar arasında siyasal eşitlik",
+        "B) Millî kültürün korunması",
         "C) Dinî kurumların etkinliği",
-        "D) Millî kültürün korunması",
+        "D) Vatandaşlar arasında siyasal eşitlik",
         "E) Uluslararası ekonomik bütünleşme"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 3,
     explanation: "Vergi şartının kalkması servete bakılmaksızın seçmen olmaktır; siyasal eşitlik / halkçılık-cumhuriyetçilik."
 },
 {
-    question: "Soru 20: Aşağıdaki gelişmelerden hangisi hem Cumhuriyetçilik hem de halkçılık ilkeleriyle açıklanabilir?",
+    question: "Aşağıdaki gelişmelerden hangisi hem Cumhuriyetçilik hem de halkçılık ilkeleriyle açıklanabilir?",
     options: [
         "A) TBMM'nin açılması",
         "B) Kadınlara seçme ve seçilme hakkı verilmesi",
@@ -241,7 +241,7 @@ window.tarih_19_sorulari = [
     explanation: "Kadınlara seçme-seçilme hem millet egemenliğinin genişlemesi (cumhuriyetçilik) hem eşitlik (halkçılık)tir. TBMM daha çok cumhuriyetçilik ağırlıklıdır."
 },
 {
-    question: "Soru 21: Atatürk Dönemi'nde gerçekleştirilen bazı düzenlemelerle eğitim, hukuk ve toplumsal yaşamda dinî kuralların belirleyici olmasının önüne geçilmiştir.\n\nAşağıdakilerden hangisi bu doğrultudaki gelişmelerden biri değildir?",
+    question: "Atatürk Dönemi'nde gerçekleştirilen bazı düzenlemelerle eğitim, hukuk ve toplumsal yaşamda dinî kuralların belirleyici olmasının önüne geçilmiştir.\n\nAşağıdakilerden hangisi bu doğrultudaki gelişmelerden biri değildir?",
     options: [
         "A) Medreselerin kapatılması",
         "B) Şer'i mahkemelerin kapatılması",
@@ -253,7 +253,7 @@ window.tarih_19_sorulari = [
     explanation: "Merkez Bankası ekonomi / devletçilik-milliyetçiliktir; dinî otoriteyi kesecek bir laiklik adımı değildir."
 },
 {
-    question: "Soru 22: Aşağıdaki gelişmelerden hangisi millî bağımsızlık düşüncesinin ekonomik alandaki yansıması olarak değerlendirilebilir?",
+    question: "Aşağıdaki gelişmelerden hangisi millî bağımsızlık düşüncesinin ekonomik alandaki yansıması olarak değerlendirilebilir?",
     options: [
         "A) Misak-ı İktisadî kararlarının kabul edilmesi",
         "B) Millet Mekteplerinin açılması",
@@ -265,7 +265,7 @@ window.tarih_19_sorulari = [
     explanation: "Misak-ı İktisadî millî ekonomi-bağımsızlık programıdır."
 },
 {
-    question: "Soru 23: İzmir İktisat Kongresi'nin toplanması ve Misak-ı İktisadî kararlarının kabul edilmesi aşağıdaki ilkelerden hangisiyle en doğrudan ilişkilidir?",
+    question: "İzmir İktisat Kongresi'nin toplanması ve Misak-ı İktisadî kararlarının kabul edilmesi aşağıdaki ilkelerden hangisiyle en doğrudan ilişkilidir?",
     options: [
         "A) Laiklik",
         "B) Devletçilik",
@@ -277,19 +277,19 @@ window.tarih_19_sorulari = [
     explanation: "Kongre ve Misak-ı İktisadî devletçilik notunun ilk maddeleridir (ekonomiye devlet yönü)."
 },
 {
-    question: "Soru 24: Aşağıdakilerden hangisi devletçilik ile milliyetçilik arasındaki ilişkiyi en iyi açıklayan gelişmelerden biridir?",
+    question: "Aşağıdakilerden hangisi devletçilik ile milliyetçilik arasındaki ilişkiyi en iyi açıklayan gelişmelerden biridir?",
     options: [
         "A) Türk Tarih Kurumunun açılması",
         "B) Türk Dil Kurumunun açılması",
-        "C) Millî ekonomiyi güçlendirmeye yönelik devlet yatırımlarının yapılması",
-        "D) Şer'i mahkemelerin kapatılması",
+        "C) Şer'i mahkemelerin kapatılması",
+        "D) Millî ekonomiyi güçlendirmeye yönelik devlet yatırımlarının yapılması",
         "E) Kadınlara seçme ve seçilme hakkı verilmesi"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 3,
     explanation: "Devlet yatırımı devletçilik, millî ekonomi milliyetçiliktir; ikisini birleştirir."
 },
 {
-    question: "Soru 25: Atatürk ilkelerinden biri, toplumdaki ayrıcalıkların kaldırılmasını ve bütün vatandaşların kanun önünde eşit olmasını esas alırken; bir diğeri millî kültür ve bağımsızlığın korunmasına ağırlık vermektedir.\n\nBu parçada sözü edilen ilkeler aşağıdakilerin hangisinde doğru verilmiştir?",
+    question: "Atatürk ilkelerinden biri, toplumdaki ayrıcalıkların kaldırılmasını ve bütün vatandaşların kanun önünde eşit olmasını esas alırken; bir diğeri millî kültür ve bağımsızlığın korunmasına ağırlık vermektedir.\n\nBu parçada sözü edilen ilkeler aşağıdakilerin hangisinde doğru verilmiştir?",
     options: [
         "A) Halkçılık – Milliyetçilik",
         "B) Devletçilik – Halkçılık",
@@ -301,7 +301,7 @@ window.tarih_19_sorulari = [
     explanation: "Eşitlik-ayrıcalık = halkçılık; millî kültür ve bağımsızlık = milliyetçilik."
 },
 {
-    question: "Soru 26: Aşağıdakilerden hangisi Atatürk'ün “çağdaşlaşma ve yenileşme” anlayışının bir sonucu olarak değerlendirilemez?",
+    question: "Aşağıdakilerden hangisi Atatürk'ün “çağdaşlaşma ve yenileşme” anlayışının bir sonucu olarak değerlendirilemez?",
     options: [
         "A) Uluslararası rakamların kullanılmaya başlanması",
         "B) Miladi takvimin kabul edilmesi",
@@ -313,7 +313,7 @@ window.tarih_19_sorulari = [
     explanation: "Reji millîleştirme ekonomik milliyetçiliktir; inkılâpçılığın çağdaşlaşma takvim/saat/ölçü örneklerinden değildir."
 },
 {
-    question: "Soru 27: Atatürk Dönemi'nde yapılan;\n\nI. TBMM'nin açılması,\nII. Cumhuriyet'in ilan edilmesi,\nIII. çok partili hayata geçiş denemelerinin başlaması\n\ngibi gelişmeler aşağıdaki ilkelerden hangisinin siyasal hayata yansımaları olarak değerlendirilebilir?",
+    question: "Atatürk Dönemi'nde yapılan;\n\nI. TBMM'nin açılması,\nII. Cumhuriyet'in ilan edilmesi,\nIII. çok partili hayata geçiş denemelerinin başlaması\n\ngibi gelişmeler aşağıdaki ilkelerden hangisinin siyasal hayata yansımaları olarak değerlendirilebilir?",
     options: [
         "A) Laiklik",
         "B) Devletçilik",
@@ -325,7 +325,7 @@ window.tarih_19_sorulari = [
     explanation: "Üçü de Cumhuriyetçilik notundaki siyasal gelişmelerdir."
 },
 {
-    question: "Soru 28: Aşağıdaki gelişmelerden hangisi doğrudan ekonomik amaç taşımamasına rağmen millî bağımsızlığın güçlendirilmesine katkı sağlamıştır?",
+    question: "Aşağıdaki gelişmelerden hangisi doğrudan ekonomik amaç taşımamasına rağmen millî bağımsızlığın güçlendirilmesine katkı sağlamıştır?",
     options: [
         "A) Türk Dil Kurumunun açılması",
         "B) Etibankın kurulması",
@@ -337,7 +337,7 @@ window.tarih_19_sorulari = [
     explanation: "TDK ekonomik yatırım değildir; millî kültür/bağımsızlık bilincine katkı verir. Diğerleri doğrudan ekonomi-devletçiliktir."
 },
 {
-    question: "Soru 29: Atatürk ilkeleriyle ilgili aşağıdaki yargılardan hangisi yanlıştır?",
+    question: "Atatürk ilkeleriyle ilgili aşağıdaki yargılardan hangisi yanlıştır?",
     options: [
         "A) Cumhuriyetçilik, millî egemenlik anlayışını esas alır.",
         "B) Halkçılık, toplumda ayrıcalıkların kaldırılmasını savunur.",
@@ -349,7 +349,7 @@ window.tarih_19_sorulari = [
     explanation: "İnkılâpçılık tam tersidir: eskiyi gerektiğinde değiştirmek, çağdaşlaşmaktır."
 },
 {
-    question: "Soru 30: Atatürk Dönemi'nde gerçekleştirilen aşağıdaki gelişmelerden hangisi, devlet yönetimi, toplum yapısı, hukuk, eğitim ve ekonomik hayat gibi farklı alanlarda çağın gereklerine uygun değişiklikler yapılması anlayışını en kapsamlı biçimde yansıtır?",
+    question: "Atatürk Dönemi'nde gerçekleştirilen aşağıdaki gelişmelerden hangisi, devlet yönetimi, toplum yapısı, hukuk, eğitim ve ekonomik hayat gibi farklı alanlarda çağın gereklerine uygun değişiklikler yapılması anlayışını en kapsamlı biçimde yansıtır?",
     options: [
         "A) Aşar vergisinin kaldırılması",
         "B) Kabotaj Kanunu'nun kabul edilmesi",

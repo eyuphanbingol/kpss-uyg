@@ -3,61 +3,61 @@ window.guncel_6_sorulari = [
 {
     "question": "Türkiye'nin ilk kadın pilotu aşağıdakilerden hangisidir?",
     "options": [
-        "A) Sabiha Gökçen",
+        "A) Halide Edip",
         "B) Tansu Çiller",
         "C) Lale Aytaman",
-        "D) Halide Edip",
+        "D) Sabiha Gökçen",
         "E) Nene Hatun"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Sabiha Gökçen."
 },
 {
     "question": "Türkiye'nin ilk kadın başbakanı aşağıdakilerden hangisidir?",
     "options": [
-        "A) Tansu Çiller",
-        "B) Sabiha Gökçen",
+        "A) Sabiha Gökçen",
+        "B) Tansu Çiller",
         "C) Lale Aytaman",
         "D) Meral Akşener",
         "E) Tansu Çiller dışındaki isimler bu unvanı taşımaz."
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "Tansu Çiller."
 },
 {
     "question": "Türkiye'nin ilk kadın valisi kimdir ve hangi ilde görev yapmıştır?",
     "options": [
-        "A) Lale Aytaman – Muğla",
+        "A) Halide Edip – İzmir",
         "B) Sabiha Gökçen – Ankara",
         "C) Tansu Çiller – İstanbul",
-        "D) Halide Edip – İzmir",
+        "D) Lale Aytaman – Muğla",
         "E) Lale Aytaman – İstanbul"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Lale Aytaman, Muğla."
 },
 {
     "question": "İbn-i Sina'nın tıp alanındaki temel eseri aşağıdakilerden hangisidir?",
     "options": [
-        "A) El-Kanun fi't-Tıb",
+        "A) Seyahatname",
         "B) El-Medinetü'l-Fazıla",
         "C) Cihannüma",
         "D) Kitab-ı Bahriye",
-        "E) Seyahatname"
+        "E) El-Kanun fi't-Tıb"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 4,
     "explanation": "El-Kanun fi't-Tıb."
 },
 {
     "question": "Farabi'nin eseri aşağıdakilerden hangisidir?",
     "options": [
-        "A) El-Medinetü'l-Fazıla",
+        "A) Divanü Lügati't-Türk",
         "B) El-Kanun fi't-Tıb",
-        "C) Divanü Lügati't-Türk",
+        "C) El-Medinetü'l-Fazıla",
         "D) Mesnevi",
         "E) Hüsn ü Aşk"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 2,
     "explanation": "El-Medinetü'l-Fazıla."
 },
 {
@@ -87,13 +87,13 @@ window.guncel_6_sorulari = [
 {
     "question": "Kâtip Çelebi'nin eserleri arasında aşağıdakilerden hangisi yer alır?",
     "options": [
-        "A) Cihannüma",
+        "A) Mesnevi",
         "B) Seyahatname",
         "C) Kitab-ı Bahriye",
-        "D) Mesnevi",
+        "D) Cihannüma",
         "E) Kaplumbağa Terbiyecisi"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Cihannüma ve Keşfü'z-Zünun."
 },
 {
@@ -111,61 +111,61 @@ window.guncel_6_sorulari = [
 {
     "question": "Ali Kuşçu aşağıdaki alanlardan hangisiyle tanınır?",
     "options": [
-        "A) Astronomi",
+        "A) Edebiyat",
         "B) Dermatoloji",
-        "C) Edebiyat",
+        "C) Astronomi",
         "D) Resim",
         "E) Müzik"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 2,
     "explanation": "Astronomi."
 },
 {
     "question": "Kaplumbağa Terbiyecisi hangi ressama aittir?",
     "options": [
-        "A) Osman Hamdi Bey",
+        "A) Bedri Rahmi Eyüboğlu",
         "B) Şeker Ahmet Paşa",
         "C) İbrahim Çallı",
-        "D) Bedri Rahmi Eyüboğlu",
+        "D) Osman Hamdi Bey",
         "E) Fikret Mualla"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 3,
     "explanation": "Osman Hamdi Bey."
 },
 {
     "question": "Osman Hamdi Bey aşağıdaki kurumlardan hangisinin kurucularındandır?",
     "options": [
-        "A) Arkeoloji Müzesi ve Sanayi-i Nefise Mektebi",
-        "B) TÜİK ve TCMB",
+        "A) TÜİK ve TCMB",
+        "B) Arkeoloji Müzesi ve Sanayi-i Nefise Mektebi",
         "C) NATO ve UNESCO",
         "D) TEKNOFEST ve TOGG",
         "E) Borsa İstanbul"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "Arkeoloji Müzesi ve Sanayi-i Nefise."
 },
 {
     "question": "Çallı Kuşağı hangi ressamla ilişkilidir?",
     "options": [
-        "A) İbrahim Çallı",
-        "B) Osman Hamdi Bey",
+        "A) Osman Hamdi Bey",
+        "B) İbrahim Çallı",
         "C) Şeker Ahmet Paşa",
         "D) Fikret Mualla",
         "E) Bedri Rahmi"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "İbrahim Çallı."
 },
 {
     "question": "Paris merkezli sanat hayatıyla tanınan ressam aşağıdakilerden hangisidir?",
     "options": [
-        "A) Fikret Mualla",
+        "A) Itri",
         "B) Osman Hamdi Bey",
         "C) İbrahim Çallı",
         "D) Şeker Ahmet Paşa",
-        "E) Itri"
+        "E) Fikret Mualla"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 4,
     "explanation": "Fikret Mualla."
 },
 {
@@ -183,25 +183,25 @@ window.guncel_6_sorulari = [
 {
     "question": "Uzun İnce Bir Yoldayım ve Kara Toprak hangi ozana aittir?",
     "options": [
-        "A) Âşık Veysel",
+        "A) Itri",
         "B) Neşet Ertaş",
-        "C) Itri",
+        "C) Âşık Veysel",
         "D) Dede Efendi",
         "E) Erkin Koray"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 2,
     "explanation": "Âşık Veysel."
 },
 {
     "question": "Bozkırın Tezenesi unvanı kime aittir?",
     "options": [
-        "A) Neşet Ertaş",
+        "A) Itri",
         "B) Âşık Veysel",
-        "C) Itri",
+        "C) Neşet Ertaş",
         "D) Dede Efendi",
         "E) Osman Hamdi"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 2,
     "explanation": "Neşet Ertaş."
 },
 {
@@ -219,25 +219,25 @@ window.guncel_6_sorulari = [
 {
     "question": "Bedri Rahmi Eyüboğlu aşağıdaki alanlardan hangilerinde eser vermiştir?",
     "options": [
-        "A) Resim ve şiir",
-        "B) Yalnız astronomi",
+        "A) Yalnız astronomi",
+        "B) Resim ve şiir",
         "C) Yalnız tıp",
         "D) Yalnız ekonomi",
         "E) Yalnız hukuk"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "Resim ve şiir."
 },
 {
     "question": "Şeker Ahmet Paşa aşağıdakilerden hangisiyle tanınır?",
     "options": [
-        "A) Türk resim sanatının öncülerinden olması",
+        "A) KAAN tasarımı",
         "B) Nobel kimya ödülü",
         "C) NATO genel sekreterliği",
         "D) İlk kadın vali olması",
-        "E) KAAN tasarımı"
+        "E) Türk resim sanatının öncülerinden olması"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 4,
     "explanation": "Resim öncülerindendir."
 }
 ];

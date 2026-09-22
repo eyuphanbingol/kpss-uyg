@@ -113,7 +113,7 @@
 
         useEffect(function () {
             var gone = false;
-            fetch("svg/tr.svg?v=2").then(function (r) { return r.ok ? r.text() : Promise.reject(); })
+            fetch("svg/tr.svg?v=4").then(function (r) { return r.ok ? r.text() : Promise.reject(); })
                 .then(function (txt) {
                     if (gone) return;
                     var doc = new DOMParser().parseFromString(txt, "image/svg+xml");
@@ -262,6 +262,22 @@
                         </div>
                     </div>
                 )}
+                {!quiz && !mapFail ? (
+                    <div className="conquer-board" aria-label="Bölge ilerlemesi">
+                        {progress.map(function (r) {
+                            var pct = r.total ? Math.round((r.have / r.total) * 100) : 0;
+                            return (
+                                <div key={r.id} className={"conquer-board-card" + (r.done ? " on" : "")}>
+                                    <div className="conquer-board-row">
+                                        <span className="conquer-board-title">{r.done ? "🏅 " : ""}{r.title}</span>
+                                        <span className="conquer-board-num">{r.have}/{r.total}</span>
+                                    </div>
+                                    <div className="conquer-board-bar"><span style={{ width: pct + "%", background: color }} /></div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                ) : null}
                 {toast ? <div className="conquer-toast">{toast}</div> : null}
                 {quiz ? (
                     <div className="conquer-sheet">

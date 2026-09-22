@@ -25,45 +25,45 @@ window.turkce_4_sorulari = [
 {
     "question": "Tek bir varlığı karşılayan, benzeri olmayan ad türü hangisidir?",
     "options": [
-        "A) Cins ad",
-        "B) Özel ad",
+        "A) Özel ad",
+        "B) Cins ad",
         "C) Topluluk adı",
         "D) Soyut ad"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Ali, Ankara, Kızılırmak özel ad örnekleridir."
 },
 {
     "question": "Aynı türden bütün varlıkları karşılayan ad türü hangisidir?",
     "options": [
         "A) Özel ad",
-        "B) Cins ad",
+        "B) Tekil ad",
         "C) Somut ad",
-        "D) Tekil ad"
+        "D) Cins ad"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "ağaç, şehir, nehir, kitap cins ad örnekleridir."
 },
 {
     "question": "“Ay, Dünya'nın uydusudur.” cümlesinde “Ay” hangi tür addır?",
     "options": [
         "A) Cins",
-        "B) Özel",
+        "B) Topluluk",
         "C) Soyut",
-        "D) Topluluk"
+        "D) Özel"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Tek gök cismi olduğu için özel addır."
 },
 {
     "question": "“Dünya kadar işim var.” cümlesinde “dünya” hangi tür addır?",
     "options": [
         "A) Özel",
-        "B) Cinsleşmiş (cins)",
-        "C) Somut",
+        "B) Somut",
+        "C) Cinsleşmiş (cins)",
         "D) Topluluk"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Deyimde tür adı gibi kullanılmış, cinsleşmiştir."
 },
 {
@@ -92,77 +92,77 @@ window.turkce_4_sorulari = [
     "question": "Akılla kavranan, duyularla algılanmayan ad türü hangisidir?",
     "options": [
         "A) Somut ad",
-        "B) Soyut ad",
+        "B) Özel ad",
         "C) Cins ad",
-        "D) Özel ad"
+        "D) Soyut ad"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "sevgi, umut, özgürlük, mutluluk soyut ad örnekleridir."
 },
 {
     "question": "“Gülüşü çok güzeldi.” cümlesinde “gülüş” hangi tür addır?",
     "options": [
         "A) Soyut",
-        "B) Somut",
-        "C) Özel",
+        "B) Özel",
+        "C) Somut",
         "D) Topluluk"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Duyulabilir olduğu için somut addır."
 },
 {
     "question": "“Ona karşı bir sıcaklık duydu.” cümlesinde “sıcaklık” hangi tür addır?",
     "options": [
-        "A) Somut",
-        "B) Soyut",
+        "A) Soyut",
+        "B) Somut",
         "C) Cins",
         "D) Özel"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Mecaz anlamda kullanıldığı için soyut addır."
 },
 {
     "question": "-lar/-ler ekiyle birden çok varlığı karşılayan ad türü hangisidir?",
     "options": [
         "A) Tekil",
-        "B) Çoğul",
-        "C) Topluluk",
+        "B) Topluluk",
+        "C) Çoğul",
         "D) Özel"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "kitaplar, öğrenciler, kuşlar çoğul ad örnekleridir."
 },
 {
     "question": "Çoğul eki almadığı hâlde birden çok varlığı karşılayan ad türü hangisidir?",
     "options": [
         "A) Çoğul",
-        "B) Topluluk",
-        "C) Tekil",
+        "B) Tekil",
+        "C) Topluluk",
         "D) Cins"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "orman, sınıf, ordu, halk topluluk adı örnekleridir."
 },
 {
     "question": "Aşağıdaki cümlelerden hangisinde yüklem topluluk adına uygun kullanılmıştır?",
     "options": [
         "A) Sınıf bahçeye çıktılar.",
-        "B) Ordu düşmana karşı yürüdü.",
+        "B) Halk toplandılar.",
         "C) Takım kazandılar.",
-        "D) Halk toplandılar."
+        "D) Ordu düşmana karşı yürüdü."
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Topluluk adında yüklem tekil olur: ordu yürüdü."
 },
 {
     "question": "“Kitap masanın üstünde.” cümlesinde “kitap” hangi görevdedir?",
     "options": [
-        "A) Nesne",
-        "B) Özne",
+        "A) Özne",
+        "B) Nesne",
         "C) Yüklem",
         "D) Yer tamlayıcısı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Kitap cümlenin öznesidir."
 },
 {
@@ -201,23 +201,23 @@ window.turkce_4_sorulari = [
 {
     "question": "“ben, sen, o, biz, siz, onlar” hangi zamir türüdür?",
     "options": [
-        "A) İşaret",
-        "B) Kişi (şahıs)",
+        "A) Kişi (şahıs)",
+        "B) İşaret",
         "C) Soru",
         "D) Belgisiz"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Konuşan, dinleyen ve söz edilen kişileri karşılar."
 },
 {
     "question": "“Kafese koyulan onları gördüm.” cümlesinde “onları” hangi zamirdir?",
     "options": [
         "A) Kişi",
-        "B) İşaret",
+        "B) Soru",
         "C) Belgisiz",
-        "D) Soru"
+        "D) İşaret"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Canlı/cansız varlığı işaret eder."
 },
 {
@@ -246,66 +246,66 @@ window.turkce_4_sorulari = [
     "question": "“Bu işi kendim yaptım.” cümlesinde “kendim” hangi zamirdir?",
     "options": [
         "A) Kişi",
-        "B) Dönüşlülük",
-        "C) İlgi",
+        "B) İlgi",
+        "C) Dönüşlülük",
         "D) Belgisiz"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Özneye dönüşü anlatan dönüşlülük zamiri."
 },
 {
     "question": "“Seninki daha güzel.” cümlesinde “seninki” hangi zamirdir?",
     "options": [
-        "A) İşaret",
-        "B) İlgi (aitlik)",
+        "A) İlgi (aitlik)",
+        "B) İşaret",
         "C) Kişi",
         "D) Belgisiz"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "-ki ekiyle kurulan ilgi zamiri; senin kalemin anlamında."
 },
 {
     "question": "“Bu resmi çok beğendim.” cümlesinde “bu” hangi sözcük türüdür?",
     "options": [
-        "A) İşaret zamiri",
-        "B) İşaret sıfatı",
+        "A) İşaret sıfatı",
+        "B) İşaret zamiri",
         "C) Belgisiz sıfat",
         "D) Soru sıfatı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Yanında ad (resmi) olduğu için işaret sıfatıdır."
 },
 {
     "question": "“Bu mu söylemişti?” cümlesinde “bu” hangi sözcük türüdür?",
     "options": [
-        "A) İşaret sıfatı",
-        "B) İşaret zamiri",
+        "A) İşaret zamiri",
+        "B) İşaret sıfatı",
         "C) Belgisiz zamir",
         "D) Kişi zamiri"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Yanında ad yok; adın yerini tutuyor."
 },
 {
     "question": "“O çocuk çok çalışkan.” cümlesinde “o” hangi görevdedir?",
     "options": [
-        "A) Kişi zamiri",
-        "B) İşaret sıfatı",
+        "A) İşaret sıfatı",
+        "B) Kişi zamiri",
         "C) İşaret zamiri",
         "D) Belgisiz sıfat"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Çocuk adını niteliyor; işaret sıfatı."
 },
 {
     "question": "“O, dün aradı.” cümlesinde “o” hangi zamirdir?",
     "options": [
         "A) İşaret",
-        "B) Kişi",
+        "B) Soru",
         "C) Belgisiz",
-        "D) Soru"
+        "D) Kişi"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Bir insanı karşılıyor; kişi zamiri."
 },
 {
@@ -323,33 +323,33 @@ window.turkce_4_sorulari = [
     "question": "“Hangisini okuyorsun?” cümlesinde “hangisini” hangi sözcük türüdür?",
     "options": [
         "A) Soru sıfatı",
-        "B) Soru zamiri",
+        "B) İşaret zamiri",
         "C) Belgisiz zamir",
-        "D) İşaret zamiri"
+        "D) Soru zamiri"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Ad düşmüş; adın yerini tutuyor."
 },
 {
     "question": "“Bazı öğrenciler gelmedi.” cümlesinde “bazı” hangi sözcük türüdür?",
     "options": [
         "A) Belgisiz zamir",
-        "B) Belgisiz sıfat",
+        "B) İşaret sıfatı",
         "C) Soru sıfatı",
-        "D) İşaret sıfatı"
+        "D) Belgisiz sıfat"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Yanında öğrenciler adı vardır."
 },
 {
     "question": "“Bazısı gelmedi.” cümlesinde “bazısı” hangi sözcük türüdür?",
     "options": [
         "A) Belgisiz sıfat",
-        "B) Belgisiz zamir",
-        "C) Soru zamiri",
+        "B) Soru zamiri",
+        "C) Belgisiz zamir",
         "D) Kişi zamiri"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Ad yok; belgisiz zamirdir."
 },
 {
@@ -377,12 +377,12 @@ window.turkce_4_sorulari = [
 {
     "question": "“Şunu ver.” cümlesinde “şunu” ile “Şu kitabı ver.” cümlesinde “şu” arasındaki fark nedir?",
     "options": [
-        "A) İkisi de zamirdir.",
-        "B) Birincisi zamir, ikincisi sıfat.",
+        "A) Birincisi zamir, ikincisi sıfat.",
+        "B) İkisi de zamirdir.",
         "C) İkisi de sıfattır.",
         "D) Birincisi sıfat, ikincisi zamir."
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Şunu adın yerini tutar (zamir); şu kitabı yanında ad vardır (sıfat)."
 }
 ];

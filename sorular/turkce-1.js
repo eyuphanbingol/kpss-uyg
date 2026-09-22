@@ -14,12 +14,12 @@ window.turkce_1_sorulari = [
 {
     "question": "Aşağıdakilerden hangisinde “ağız” sözcüğü terim anlamda kullanılmıştır?",
     "options": [
-        "A) Ağzında yara çıkmış.",
+        "A) Yörede farklı ağız özellikleri görülür.",
         "B) Çantanın ağzı açık kalmış.",
-        "C) Yörede farklı ağız özellikleri görülür.",
+        "C) Ağzında yara çıkmış.",
         "D) Ağzını kapat."
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 0,
     "explanation": "Dil bilimindeki ağız (şive) terimdir. Yara gerçek, çanta yan, kapat gerçek/mecaz kullanımdır."
 },
 {
@@ -49,10 +49,10 @@ window.turkce_1_sorulari = [
     "options": [
         "A) Zengin – fakir",
         "B) Hikâye – öykü",
-        "C) Doğru – dürüst",
-        "D) Yol – el"
+        "C) Yol – el",
+        "D) Doğru – dürüst"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Doğru-dürüst birbirinin yerini tam tutmaz; yakın anlamlıdır. Hikâye-öykü eş anlamlı, zengin-fakir zıttır."
 },
 {
@@ -136,44 +136,44 @@ window.turkce_1_sorulari = [
     "question": "“Kitap çok sıkıcıydı.” cümlesinde “kitap” hangi anlamda kullanılmıştır?",
     "options": [
         "A) Genel",
-        "B) Özel",
+        "B) Mecaz",
         "C) Soyut",
-        "D) Mecaz"
+        "D) Özel"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Belirli bir kitabı karşıladığı için özel anlamdadır. “Kitap en iyi dosttur” geneldir."
 },
 {
     "question": "Aşağıdakilerden hangisi eş anlamlı sözcük çiftidir?",
     "options": [
         "A) Fakir – zengin",
-        "B) Hikâye – öykü",
+        "B) Yalan – yanlış",
         "C) Doğru – dürüst",
-        "D) Yalan – yanlış"
+        "D) Hikâye – öykü"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Hikâye ve öykü anlamdaşdır."
 },
 {
     "question": "“Bire bin katmak” aşağıdakilerden hangisidir?",
     "options": [
         "A) Atasözü",
-        "B) Deyim",
+        "B) Dolaylama",
         "C) İkileme",
-        "D) Dolaylama"
+        "D) Deyim"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Kalıplaşmış söz öbeği deyimdir."
 },
 {
     "question": "“Damlaya damlaya göl olur.” sözü aşağıdakilerden hangisidir?",
     "options": [
-        "A) Deyim",
-        "B) Atasözü",
+        "A) Atasözü",
+        "B) Deyim",
         "C) Dolaylama",
         "D) Terim"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Öğüt veren özlü yargı atasözüdür."
 },
 {
@@ -201,12 +201,12 @@ window.turkce_1_sorulari = [
 {
     "question": "“Bu kadar katı olmanı anlayamıyorum.” cümlesinde hangi anlam olayı vardır?",
     "options": [
-        "A) Somutlama",
-        "B) Soyutlama",
+        "A) Soyutlama",
+        "B) Somutlama",
         "C) Yansıma",
         "D) Terim"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Somut katı, kişilik için soyut anlamda kullanılmıştır."
 },
 {

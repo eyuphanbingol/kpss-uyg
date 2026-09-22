@@ -3,23 +3,23 @@ window.turkce_9_sorulari = [
 {
     "question": "Bir işi, oluşu, hareketi, durumu bildiren; cümlede yüklem olan sözcüklere ne denir?",
     "options": [
-        "A) Eylemsi",
-        "B) Fiil (eylem)",
+        "A) Fiil (eylem)",
+        "B) Eylemsi",
         "C) Ad",
         "D) Zarf"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Fiiller cümlede yüklem olur."
 },
 {
     "question": "Fiillerin iki temel özelliği nedir?",
     "options": [
         "A) Tür ve görev",
-        "B) Kip ve kişi",
-        "C) Ek ve kök",
+        "B) Ek ve kök",
+        "C) Kip ve kişi",
         "D) Anlam ve yazım"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Kip zaman/dilek; kişi fiili yapanı bildirir."
 },
 {
@@ -36,23 +36,23 @@ window.turkce_9_sorulari = [
 {
     "question": "“Gelmiş” fiilinde hangi haber kipi vardır?",
     "options": [
-        "A) -di",
-        "B) -miş (duyulan geçmiş)",
+        "A) -miş (duyulan geçmiş)",
+        "B) -di",
         "C) -yor",
         "D) -r"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Duyulan geçmiş zaman -miş ekidir."
 },
 {
     "question": "“Geliyor” fiilinde hangi haber kipi vardır?",
     "options": [
         "A) Geçmiş",
-        "B) Şimdiki (-yor)",
-        "C) Gelecek",
+        "B) Gelecek",
+        "C) Şimdiki (-yor)",
         "D) Geniş"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Şimdiki zaman -yor ekidir."
 },
 {
@@ -81,11 +81,11 @@ window.turkce_9_sorulari = [
     "question": "“Gitmeliyim” fiilinde hangi dilek kipi vardır?",
     "options": [
         "A) İstek",
-        "B) Gereklilik (-meli/-malı)",
-        "C) Emir",
+        "B) Emir",
+        "C) Gereklilik (-meli/-malı)",
         "D) Şart"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Gitmeli gereklilik kipidir."
 },
 {
@@ -114,33 +114,33 @@ window.turkce_9_sorulari = [
     "question": "“Gelsem” fiilinde hangi dilek kipi vardır?",
     "options": [
         "A) Emir",
-        "B) Şart (-se/-sa)",
-        "C) İstek",
+        "B) İstek",
+        "C) Şart (-se/-sa)",
         "D) Gereklilik"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Gelsem şart kipidir."
 },
 {
     "question": "Dilek kipleri hakkında aşağıdakilerden hangisi doğrudur?",
     "options": [
         "A) Zaman bildirirler.",
-        "B) Yalnız dilek anlamı vardır.",
+        "B) Kişi eki almazlar.",
         "C) Her zaman -di alır.",
-        "D) Kişi eki almazlar."
+        "D) Yalnız dilek anlamı vardır."
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Dilek kiplerinde zaman yoktur."
 },
 {
     "question": "“Gelmeliydim” cümlesinde çekim türü nedir?",
     "options": [
-        "A) Basit",
-        "B) Birleşik (gereklilik + -di ek fiil)",
+        "A) Birleşik (gereklilik + -di ek fiil)",
+        "B) Basit",
         "C) Emir",
         "D) Geniş zaman"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Kip + ek fiil birleşik çekim."
 },
 {
@@ -158,11 +158,11 @@ window.turkce_9_sorulari = [
     "question": "“Yazacakmış” fiilinde birleşik çekim türü nedir?",
     "options": [
         "A) Hikâye",
-        "B) Rivayet (imiş)",
+        "B) Basit",
         "C) Şart",
-        "D) Basit"
+        "D) Rivayet (imiş)"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Rivayet birleşik çekimi imiş ek fiili."
 },
 {
@@ -191,33 +191,33 @@ window.turkce_9_sorulari = [
     "question": "“Hava sıcaktı.” cümlesinde “sıcaktı” nasıl oluşmuştur?",
     "options": [
         "A) Basit fiil",
-        "B) Ad + ek fiil (yüklem)",
+        "B) İsim-fiil",
         "C) Zarf-fiil",
-        "D) İsim-fiil"
+        "D) Ad + ek fiil (yüklem)"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Sıcak adı -dı ek fiiliyle yüklem olmuş."
 },
 {
     "question": "Öznenin yaptığı iş bir nesneyi etkileyen fiil türü hangisidir?",
     "options": [
         "A) Oluş fiili",
-        "B) İş (kılış) fiili",
+        "B) Eylemsi",
         "C) Durum fiili",
-        "D) Eylemsi"
+        "D) İş (kılış) fiili"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Gördüm, yazdım, kırdım iş fiilidir."
 },
 {
     "question": "Kendiliğinden gerçekleşen fiil türü hangisidir?",
     "options": [
-        "A) İş fiili",
-        "B) Oluş fiili",
+        "A) Oluş fiili",
+        "B) İş fiili",
         "C) Durum fiili",
         "D) Bağlaç"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Ağarmak, büyümek oluş fiilidir."
 },
 {
@@ -235,11 +235,11 @@ window.turkce_9_sorulari = [
     "question": "“Yarın buraya geliyor.” cümlesinde kip kayması nasıldır?",
     "options": [
         "A) -di geçmiş anlatır",
-        "B) -yor eki gelecek anlamında",
+        "B) Kip kayması yok",
         "C) -ecek şimdiki anlatır",
-        "D) Kip kayması yok"
+        "D) -yor eki gelecek anlamında"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Şimdiki kip gelecek zaman anlamında kullanılmış."
 },
 {
@@ -268,33 +268,33 @@ window.turkce_9_sorulari = [
     "question": "Basit çekim örneği hangisidir?",
     "options": [
         "A) Gelmişti",
-        "B) Dinledik",
+        "B) Gelirse",
         "C) Yazacakmış",
-        "D) Gelirse"
+        "D) Dinledik"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Dinledik tek kip ekiyle basit çekim."
 },
 {
     "question": "Aşağıdakilerden hangisi haber kipi değildir?",
     "options": [
-        "A) -di",
-        "B) -meli",
+        "A) -meli",
+        "B) -di",
         "C) -yor",
         "D) -ecek"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "-meli dilek (gereklilik) kipidir."
 },
 {
     "question": "Aşağıdakilerden hangisi dilek kipidir?",
     "options": [
         "A) -miş",
-        "B) -se",
+        "B) -di",
         "C) -yor",
-        "D) -di"
+        "D) -se"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "-se şart dilek kipidir."
 },
 {
@@ -333,12 +333,12 @@ window.turkce_9_sorulari = [
 {
     "question": "“Okumuşmuş” fiilinde kaç ek fiil/birleşim vardır?",
     "options": [
-        "A) Basit",
-        "B) Kip + rivayet ek fiili (birleşik)",
+        "A) Kip + rivayet ek fiili (birleşik)",
+        "B) Basit",
         "C) Yalnız -di",
         "D) Emir"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Okumuş + imiş rivayet birleşik çekim."
 },
 {

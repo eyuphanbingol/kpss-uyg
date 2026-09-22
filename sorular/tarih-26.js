@@ -16,12 +16,12 @@ window.tarih_26_sorulari = [
         question: "Soğuk Savaş’ın temel özelliği aşağıdakilerden hangisidir?",
         options: [
             "A) ABD ile SSCB’nin Avrupa’da topyekûn savaşa girmesi",
-            "B) Doğrudan büyük savaş yerine vekâlet savaşları, ittifaklar, propaganda ve silahlanma",
+            "B) Nükleer silahların yasaklanması",
             "C) Yalnızca ekonomik rekabet",
             "D) BM’nin lağvedilmesi",
-            "E) Nükleer silahların yasaklanması"
+            "E) Doğrudan büyük savaş yerine vekâlet savaşları, ittifaklar, propaganda ve silahlanma"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "Süper güçler doğrudan topyekûn savaşa girmeden vekâlet, yardım, ittifak, propaganda, silah ve uzay yarışı üzerinden mücadele etmiştir."
     },
     {
@@ -50,8 +50,8 @@ window.tarih_26_sorulari = [
     },
     {
         question: "1944 Yüzdeler Antlaşması kimler arasında yapılmıştır?",
-        options: ["A) Roosevelt–Stalin", "B) Churchill–Stalin", "C) Truman–Churchill", "D) de Gaulle–Stalin", "E) Tito–Churchill"],
-        correctAnswerIndex: 1,
+        options: ["A) Churchill–Stalin", "B) Roosevelt–Stalin", "C) Truman–Churchill", "D) de Gaulle–Stalin", "E) Tito–Churchill"],
+        correctAnswerIndex: 0,
         explanation: "Ekim 1944’te Churchill ile Stalin Doğu Avrupa nüfuzunu taslak yüzdelerle konuşmuştur."
     },
     {
@@ -75,31 +75,31 @@ window.tarih_26_sorulari = [
     {
         question: "Berlin Ablukası (1948–1949) sonrası Almanya’da ortaya çıkan devletler hangileridir?",
         options: [
-            "A) Yalnız Federal Almanya",
-            "B) Federal Almanya ve Demokratik Alman Cumhuriyeti",
+            "A) Federal Almanya ve Demokratik Alman Cumhuriyeti",
+            "B) Yalnız Federal Almanya",
             "C) Avusturya ve Prusya",
             "D) Weimar ve Bonn",
             "E) Yalnız Doğu Almanya"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "1949’da Batı’da Federal Almanya (Bonn), Doğu’da Demokratik Alman Cumhuriyeti kuruldu. Abluka ikiye ayrılmayı hızlandırdı."
     },
     {
         question: "Batılıların Batı Berlin’e yardım ulaştırma yöntemi hangisidir?",
-        options: ["A) Varşova Paktı", "B) Berlin Hava Köprüsü", "C) Molotov Planı", "D) SEATO", "E) Panmunjom"],
-        correctAnswerIndex: 1,
+        options: ["A) Varşova Paktı", "B) Molotov Planı", "C) Berlin Hava Köprüsü", "D) SEATO", "E) Panmunjom"],
+        correctAnswerIndex: 2,
         explanation: "SSCB kara ve demiryolunu kesince ABD ve Batılılar Berlin Hava Köprüsü’nü kullandı."
     },
     {
         question: "Baruch Planı (1946) neyi amaçlamıştır?",
         options: [
             "A) NATO’nun kurulmasını",
-            "B) Atom enerjisinin uluslararası denetimini ve nükleer yayılmanın önlenmesini",
+            "B) Varşova Paktı’nın feshedilmesini",
             "C) Marshall yardımının kesilmesini",
             "D) Çin’in BM’ye alınmasını",
-            "E) Varşova Paktı’nın feshedilmesini"
+            "E) Atom enerjisinin uluslararası denetimini ve nükleer yayılmanın önlenmesini"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "SSCB planı ABD üstünlüğünü koruyacağı gerekçesiyle kabul etmedi; silahlanma yarışı derinleşti."
     },
     {
@@ -128,14 +128,14 @@ window.tarih_26_sorulari = [
     },
     {
         question: "Kore’nin Kuzey–Güney ayrım çizgisi hangisidir?",
-        options: ["A) 17. paralel", "B) 38. paralel", "C) 49. paralel", "D) Greenwich", "E) Ural Dağları"],
-        correctAnswerIndex: 1,
+        options: ["A) 17. paralel", "B) Ural Dağları", "C) 49. paralel", "D) Greenwich", "E) 38. paralel"],
+        correctAnswerIndex: 4,
         explanation: "Kore = 38. paralel. Vietnam = 17. paralel. Bu iki sayı sık karıştırılır."
     },
     {
         question: "Kore Savaşı’nı sona erdiren 1953 düzenlemesi hangisidir?",
-        options: ["A) Cenevre", "B) Panmunjom Ateşkesi", "C) Roma Antlaşması", "D) Potsdam", "E) Camp David"],
-        correctAnswerIndex: 1,
+        options: ["A) Cenevre", "B) Roma Antlaşması", "C) Panmunjom Ateşkesi", "D) Potsdam", "E) Camp David"],
+        correctAnswerIndex: 2,
         explanation: "1953 Panmunjom Ateşkesi; sınır yaklaşık 38. paralel çevresinde kaldı."
     },
     {
@@ -164,50 +164,50 @@ window.tarih_26_sorulari = [
     },
     {
         question: "Varşova Paktı’ndan 1968’de çekilen ülke hangisidir?",
-        options: ["A) Romanya", "B) Arnavutluk", "C) Polonya", "D) Macaristan", "E) Küba"],
-        correctAnswerIndex: 1,
+        options: ["A) Romanya", "B) Macaristan", "C) Polonya", "D) Arnavutluk", "E) Küba"],
+        correctAnswerIndex: 3,
         explanation: "Arnavutluk 1968’de çekildi. Doğu Almanya 1990’da ayrıldı; pakt 1991’de sona erdi."
     },
     {
         question: "1948’de COMINFORM’dan çıkarılan ve millî komünizm örneği sayılan ülke hangisidir?",
-        options: ["A) Arnavutluk", "B) Yugoslavya", "C) Çin", "D) Küba", "E) Romanya"],
-        correctAnswerIndex: 1,
+        options: ["A) Yugoslavya", "B) Arnavutluk", "C) Çin", "D) Küba", "E) Romanya"],
+        correctAnswerIndex: 0,
         explanation: "Tito, Moskova denetimine karşı çıktı; Partizan zaferi daha bağımsız hareket imkânı verdi."
     },
     {
         question: "1956 Macaristan Ayaklanması’nda daha bağımsız politika arayan lider hangisidir?",
-        options: ["A) Alexander Dubček", "B) İmre Nagy", "C) Tito", "D) Enver Hoca", "E) Gomułka"],
-        correctAnswerIndex: 1,
+        options: ["A) Alexander Dubček", "B) Gomułka", "C) Tito", "D) Enver Hoca", "E) İmre Nagy"],
+        correctAnswerIndex: 4,
         explanation: "İmre Nagy’nin tarafsızlık/NATO’ya yaklaşma arayışı Sovyetlerce kabul edilmedi."
     },
     {
         question: "Prag Baharı (1968) ile ilgili hangisi doğrudur?",
         options: [
             "A) Mao’nun Çin’deki reformudur",
-            "B) Dubček’in insancıl sosyalizm reformları Sovyet/Varşova müdahalesiyle sona erdi",
+            "B) 1956’da gerçekleşmiştir",
             "C) NATO Çekoslovakya’yı işgal etti",
-            "D) 1956’da gerçekleşmiştir",
+            "D) Dubček’in insancıl sosyalizm reformları Sovyet/Varşova müdahalesiyle sona erdi",
             "E) Yalnız ekonomik bir yardım paketidir"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "1968, Alexander Dubček, insancıl sosyalizm; Ağustos 1968 müdahalesi."
     },
     {
         question: "Truman Doktrini (1947) kapsamında ABD yardımından yararlanan ülkeler hangileridir?",
-        options: ["A) Çin–Kore", "B) Türkiye–Yunanistan", "C) İran–Irak", "D) Hindistan–Pakistan", "E) Mısır–Suriye"],
-        correctAnswerIndex: 1,
+        options: ["A) Çin–Kore", "B) Hindistan–Pakistan", "C) İran–Irak", "D) Türkiye–Yunanistan", "E) Mısır–Suriye"],
+        correctAnswerIndex: 3,
         explanation: "Türkiye 100, Yunanistan 300 milyon dolar. Truman = askerî/siyasi yardım ve çevreleme."
     },
     {
         question: "Marshall Planı ile Truman Doktrini farkı için hangisi doğrudur?",
         options: [
             "A) İkisi de yalnızca Orta Doğu’ya yöneliktir",
-            "B) Truman daha çok askerî/siyasi, Marshall ekonomik yardımdır",
+            "B) Truman yalnızca tarım kredisi verir",
             "C) Marshall NATO’nun askerî koludur",
-            "D) Truman yalnızca tarım kredisi verir",
+            "D) Truman daha çok askerî/siyasi, Marshall ekonomik yardımdır",
             "E) Marshall SSCB tarafından uygulanmıştır"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Marshall Avrupa ekonomisini ayağa kaldırmak ve komünizmi ekonomik yoldan sınırlamak içindir; OEEC koordinasyon sağlar. SSCB Molotov Planı’nı geliştirdi."
     },
     {
@@ -226,12 +226,12 @@ window.tarih_26_sorulari = [
         question: "9 Mayıs 1950 Schuman Bildirisi neyi önermiştir?",
         options: [
             "A) NATO’nun genişlemesini",
-            "B) Fransa ve Batı Almanya kömür-çeliğinin ortak otorite altında toplanmasını",
+            "B) Süveyş’in millîleştirilmesini",
             "C) Varşova Paktı’nı",
-            "D) Süveyş’in millîleştirilmesini",
+            "D) Fransa ve Batı Almanya kömür-çeliğinin ortak otorite altında toplanmasını",
             "E) Bağdat Paktı’nı"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "9 Mayıs Avrupa Günü olarak da anılır. 18 Nisan 1951 AKÇT; kurucu altı: Fransa, B. Almanya, İtalya, Belçika, Hollanda, Lüksemburg. Jean Monnet öncülerden."
     },
     {
@@ -242,8 +242,8 @@ window.tarih_26_sorulari = [
     },
     {
         question: "İsrail Devleti’nin kuruluşunu 14 Mayıs 1948’de ilan eden lider hangisidir?",
-        options: ["A) Theodor Herzl", "B) David Ben-Gurion", "C) Balfour", "D) Nâsır", "E) Musaddık"],
-        correctAnswerIndex: 1,
+        options: ["A) David Ben-Gurion", "B) Theodor Herzl", "C) Balfour", "D) Nâsır", "E) Musaddık"],
+        correctAnswerIndex: 0,
         explanation: "Zincir: 1897 Herzl/Basel → 1917 Balfour → 29 Kasım 1947 BM Taksim → 14 Mayıs 1948 İsrail → 1948–49 I. Arap–İsrail Savaşı."
     },
     {
@@ -254,50 +254,50 @@ window.tarih_26_sorulari = [
     },
     {
         question: "İran’da petrolü millîleştiren ve 1953’te darbeyle düşürülen başbakan hangisidir?",
-        options: ["A) Pehlevi", "B) Musaddık", "C) Nâsır", "D) Chamoun", "E) Cinnah"],
-        correctAnswerIndex: 1,
+        options: ["A) Pehlevi", "B) Cinnah", "C) Nâsır", "D) Chamoun", "E) Musaddık"],
+        correctAnswerIndex: 4,
         explanation: "Musaddık 1951’de başbakan oldu ve petrolü millîleştirdi; 1953’te Şah döneminde devrildi."
     },
     {
         question: "1956 Süveyş Krizi’nin sonuçlarından hangisi doğrudur?",
         options: [
-            "A) İngiltere ve Fransa Orta Doğu’daki nüfuzunu pekiştirdi",
-            "B) Eski sömürgeci güçler zayıfladı, Nâsır’ın prestiji ve SSCB’nin bölge etkisi arttı",
+            "A) Eski sömürgeci güçler zayıfladı, Nâsır’ın prestiji ve SSCB’nin bölge etkisi arttı",
+            "B) İngiltere ve Fransa Orta Doğu’daki nüfuzunu pekiştirdi",
             "C) Kanal İngiltere’ye bırakıldı",
             "D) ABD ve SSCB İngiltere’yi destekledi",
             "E) İsrail devlet olmaktan çıktı"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "Nâsır kanalı millîleştirdi; İsrail, İngiltere ve Fransa müdahale etti; ABD ve SSCB baskısıyla çekildiler."
     },
     {
         question: "Eisenhower Doktrini (1957) özellikle hangi bölgeye yöneliktir?",
-        options: ["A) Latin Amerika", "B) Orta Doğu", "C) Batı Avrupa", "D) Güney Afrika", "E) İskandinavya"],
-        correctAnswerIndex: 1,
+        options: ["A) Latin Amerika", "B) Güney Afrika", "C) Batı Avrupa", "D) Orta Doğu", "E) İskandinavya"],
+        correctAnswerIndex: 3,
         explanation: "Truman genel çevreleme; Eisenhower özellikle Orta Doğu’da Sovyet/komünist yayılmaya karşıdır. 1958 Lübnan müdahalesi uygulama örneğidir."
     },
     {
         question: "Vietnam’ın geçici Kuzey–Güney ayrım çizgisi hangisidir?",
-        options: ["A) 38. paralel", "B) 17. paralel", "C) Mekong", "D) 49. paralel", "E) Ural"],
-        correctAnswerIndex: 1,
+        options: ["A) 17. paralel", "B) 38. paralel", "C) Mekong", "D) 49. paralel", "E) Ural"],
+        correctAnswerIndex: 0,
         explanation: "1954 Dien Bien Phu ve Cenevre sonrası Vietnam 17. paralel. Kore 38."
     },
     {
         question: "SEATO / Manila Paktı (1954) hangi coğrafyaya yöneliktir?",
-        options: ["A) Kuzey Atlantik", "B) Güneydoğu Asya", "C) Orta Doğu", "D) Balkanlar", "E) Kuzey Afrika"],
-        correctAnswerIndex: 1,
+        options: ["A) Güneydoğu Asya", "B) Kuzey Atlantik", "C) Orta Doğu", "D) Balkanlar", "E) Kuzey Afrika"],
+        correctAnswerIndex: 0,
         explanation: "SEATO Güneydoğu Asya; NATO Kuzey Atlantik; CENTO Orta Doğu merkezlidir."
     },
     {
         question: "Pakistan’ın kurucusu ve ilk genel valisi hangisidir?",
-        options: ["A) Gandhi", "B) Muhammed Ali Cinnah", "C) Nehru", "D) Ho Chi Minh", "E) Nkrumah"],
-        correctAnswerIndex: 1,
+        options: ["A) Gandhi", "B) Ho Chi Minh", "C) Nehru", "D) Muhammed Ali Cinnah", "E) Nkrumah"],
+        correctAnswerIndex: 3,
         explanation: "Lahor Kararı 1940; Pakistan 14 Ağustos 1947. Gandhi şiddetsiz direniş / sivil itaatsizlik (Tuz Yürüyüşü 1930, Quit India 1942) ile anılır."
     },
     {
         question: "Sahraaltı Afrika’da bağımsızlığını kazanan ilk sömürge ülkesi olarak öne çıkan hangisidir?",
-        options: ["A) Cezayir", "B) Gana (1957)", "C) Kenya", "D) Nijerya", "E) Fas"],
-        correctAnswerIndex: 1,
+        options: ["A) Cezayir", "B) Fas", "C) Kenya", "D) Nijerya", "E) Gana (1957)"],
+        correctAnswerIndex: 4,
         explanation: "Gana 1957. 1960 çok sayıda ülkenin bağımsızlığı nedeniyle Afrika Yılı’dır. Cezayir 1962, Kenya 1963."
     },
     {
@@ -310,12 +310,12 @@ window.tarih_26_sorulari = [
         question: "SSCB’nin 19 Mart 1945’te yenilemeyeceğini bildirdiği belge hangisidir?",
         options: [
             "A) Montreux Boğazlar Sözleşmesi",
-            "B) 1925 Türk–Sovyet Dostluk ve Tarafsızlık Antlaşması",
-            "C) Balkan Paktı",
+            "B) Balkan Paktı",
+            "C) 1925 Türk–Sovyet Dostluk ve Tarafsızlık Antlaşması",
             "D) Sadabad Paktı",
             "E) Lozan"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 2,
         explanation: "Ardından Kars–Ardahan ve Boğaz üssü talepleri; 8 Ağustos 1946 Sovyet notası. Bu baskı Türkiye’yi Batı Bloku’na yaklaştırdı."
     },
     {
@@ -346,12 +346,12 @@ window.tarih_26_sorulari = [
         question: "1957 Suriye Buhranı’nda Türkiye’nin tutumu hangisidir?",
         options: [
             "A) Varşova Paktı’na katıldı",
-            "B) Sınırda askerî tedbir aldı; ABD desteğiyle kriz büyümeyi durdurdu",
+            "B) CENTO’dan çekildi",
             "C) Suriye’ye savaş ilan edip Şam’ı işgal etti",
-            "D) CENTO’dan çekildi",
+            "D) Sınırda askerî tedbir aldı; ABD desteğiyle kriz büyümeyi durdurdu",
             "E) SSCB ile ortak üs kurdu"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Suriye’nin SSCB ile yakınlaşması endişe yarattı. 1958’de Mısır–Suriye Birleşik Arap Cumhuriyeti kuruldu; 1961’de bitti."
     },
     {
@@ -381,13 +381,13 @@ window.tarih_26_sorulari = [
     {
         question: "12 Temmuz Beyannamesi (1947) ile ilgili hangisi doğrudur?",
         options: [
-            "A) Menderes tarafından DP programı olarak yayımlandı",
-            "B) İnönü, iktidar–muhalefet gerilimini azaltmak için yayımladı",
+            "A) İnönü, iktidar–muhalefet gerilimini azaltmak için yayımladı",
+            "B) Menderes tarafından DP programı olarak yayımlandı",
             "C) Çok partili hayatı yasakladı",
             "D) NATO üyeliğini ilan etti",
             "E) Devalüasyonu duyurdu"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "İktidar ve muhalefetin demokratik sistemdeki meşru konumunu vurguladı. 20 Temmuz 1948 Millet Partisi kuruldu."
     },
     {
@@ -406,54 +406,54 @@ window.tarih_26_sorulari = [
         question: "Demokrat Parti’nin 1950–1957 seçim performansı için hangisi doğrudur?",
         options: [
             "A) 1950’de kaybetti, 1954’te kazandı",
-            "B) 1950’de iktidara geldi, 1954’te oyunu artırdı, 1957’de oy kaybetmesine rağmen iktidarda kaldı",
+            "B) 1957’de iktidardan düştü",
             "C) Üç seçimi de CHP kazandı",
-            "D) 1957’de iktidardan düştü",
+            "D) 1950’de iktidara geldi, 1954’te oyunu artırdı, 1957’de oy kaybetmesine rağmen iktidarda kaldı",
             "E) Yalnız 1954’te seçime girdi"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "1957’de ekonomik sorunlar ve gerilim nedeniyle seçimler öne alındı; CHP oyunu artırdı ancak DP iktidarını korudu."
     },
     {
         question: "Türkiye’de 7 Eylül 1946’da yapılan ekonomik işlem hangisidir?",
-        options: ["A) DPT’nin kuruluşu", "B) Devalüasyon", "C) Varlık Vergisi", "D) Marshall’ın reddi", "E) COMECON’a katılım"],
-        correctAnswerIndex: 1,
+        options: ["A) DPT’nin kuruluşu", "B) COMECON’a katılım", "C) Varlık Vergisi", "D) Marshall’ın reddi", "E) Devalüasyon"],
+        correctAnswerIndex: 4,
         explanation: "Türk lirasının değeri düşürüldü. Kaynaklardaki 1947 ifadesi yanlıştır. DPT 1960’tadır."
     },
     {
         question: "DP dönemi ekonomisinin ilk yılları için hangisi daha doğrudur?",
         options: [
-            "A) Yalnız ağır sanayi ve kapalı ekonomi",
-            "B) Tarım, makineleşme, dış yardım ve altyapı; sonraki yıllarda dış açık ve enflasyon",
+            "A) Tarım, makineleşme, dış yardım ve altyapı; sonraki yıllarda dış açık ve enflasyon",
+            "B) Yalnız ağır sanayi ve kapalı ekonomi",
             "C) COMECON üyeliği",
             "D) Altın standardına dönüş",
             "E) Toprak reformunun tamamlanması"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "1948 OEEC; 1958 istikrar arayışı. 1960 sonrası planlı kalkınma / DPT."
     },
     {
         question: "Uzay yarışı kronolojisi hangisinde doğru verilmiştir?",
         options: [
-            "A) NASA – Luna 2 – Sputnik I",
-            "B) Sputnik I (1957) → Sputnik II/Laika → Explorer I ve NASA (1958) → Luna 2 (1959)",
+            "A) Sputnik I (1957) → Sputnik II/Laika → Explorer I ve NASA (1958) → Luna 2 (1959)",
+            "B) NASA – Luna 2 – Sputnik I",
             "C) Explorer I – Sputnik I – Laika",
             "D) Luna 2 – Sputnik I – NASA",
             "E) 1960 Sputnik – 1957 lazer"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "Sputnik I 1957; Laika Sputnik II ile; ABD Explorer I ve NASA 1958; Luna 2 Ay’a ulaşan ilk insan yapımı araç (1959)."
     },
     {
         question: "DNA’nın çift sarmal modelini 1953’te açıklayan bilim insanları hangileridir?",
-        options: ["A) Einstein–Fermi", "B) Watson–Crick", "C) Salk–Sabin", "D) Baruch–Marshall", "E) Tito–Nagy"],
-        correctAnswerIndex: 1,
+        options: ["A) Einstein–Fermi", "B) Baruch–Marshall", "C) Salk–Sabin", "D) Watson–Crick", "E) Tito–Nagy"],
+        correctAnswerIndex: 3,
         explanation: "James Watson ve Francis Crick. Aynı yıl SSCB hidrojen bombası denemesi de yapılır."
     },
     {
         question: "Dünyanın ilk nükleer enerjiyle çalışan denizaltısı hangisidir?",
-        options: ["A) Sputnik I", "B) USS Nautilus", "C) Luna 2", "D) Explorer I", "E) ENIAC"],
-        correctAnswerIndex: 1,
+        options: ["A) Sputnik I", "B) ENIAC", "C) Luna 2", "D) Explorer I", "E) USS Nautilus"],
+        correctAnswerIndex: 4,
         explanation: "USS Nautilus 1954’te denize indirildi."
     },
     {
@@ -471,49 +471,49 @@ window.tarih_26_sorulari = [
     {
         question: "Batı Avrupa Birliği (17 Mart 1948) kurucu devletleri hangileridir?",
         options: [
-            "A) ABD–Kanada–Türkiye",
-            "B) İngiltere, Fransa, Belçika, Hollanda, Lüksemburg",
+            "A) İngiltere, Fransa, Belçika, Hollanda, Lüksemburg",
+            "B) ABD–Kanada–Türkiye",
             "C) SSCB ve uydu devletler",
             "D) Yalnız Benelüks",
             "E) İtalya–Yunanistan–Türkiye"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "Sovyet tehdidine karşı Batı Avrupa güvenlik iş birliği adımlarındandır."
     },
     {
         question: "Ho Chi Minh ve Vietminh’in 1954’te Fransa’yı yendiği muharebe hangisidir?",
-        options: ["A) Panmunjom", "B) Dien Bien Phu", "C) Moncada", "D) Inchon", "E) El-Alameyn"],
-        correctAnswerIndex: 1,
+        options: ["A) Panmunjom", "B) Moncada", "C) Dien Bien Phu", "D) Inchon", "E) El-Alameyn"],
+        correctAnswerIndex: 2,
         explanation: "Hindiçini Savaşı 1946–1954; Cenevre düzenlemeleriyle Vietnam geçici olarak 17. paralel çevresinde ayrıldı."
     },
     {
         question: "1950’de Kore’de BM kuvvetlerinin komutanlığı kime verilmiştir?",
-        options: ["A) Eisenhower", "B) Douglas MacArthur", "C) Marshall", "D) Montgomery", "E) Zhukov"],
-        correctAnswerIndex: 1,
+        options: ["A) Douglas MacArthur", "B) Eisenhower", "C) Marshall", "D) Montgomery", "E) Zhukov"],
+        correctAnswerIndex: 0,
         explanation: "25 Haziran 1950 Kuzey saldırısı; Güvenlik Konseyi kararıyla Güney’e uluslararası destek."
     },
     {
         question: "Çin–SSCB anlaşmazlığı için hangisi söylenebilir?",
         options: [
             "A) Komünist dünya her zaman tek merkezden yönetilmiştir",
-            "B) 1960’larda ayrılık derinleşmiş, 1969’da sınır çatışmaları yaşanmıştır",
+            "B) Anlaşmazlık 1945’te bitmiştir",
             "C) Çin 1949’da NATO’ya girmiştir",
-            "D) Anlaşmazlık 1945’te bitmiştir",
+            "D) 1960’larda ayrılık derinleşmiş, 1969’da sınır çatışmaları yaşanmıştır",
             "E) Yalnız petrol millîleştirmesiyle ilgilidir"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Komünist dünyanın Moskova’dan tek elden yönetilemediğini gösteren gelişmelerdendir."
     },
     {
         question: "1958 Lübnan Buhranı’nda ABD müdahalesinin dayandığı doktrin hangisidir?",
-        options: ["A) Truman", "B) Eisenhower", "C) Marshall", "D) Baruch", "E) Molotov"],
-        correctAnswerIndex: 1,
+        options: ["A) Truman", "B) Molotov", "C) Marshall", "D) Baruch", "E) Eisenhower"],
+        correctAnswerIndex: 4,
         explanation: "Camille Chamoun’un yerine Fuad Şihab’ın seçilmesiyle kriz yatıştı."
     },
     {
         question: "Millî Kalkınma Partisi’ni 18 Temmuz 1945’te kuran isim hangisidir?",
-        options: ["A) Celal Bayar", "B) Nuri Demirağ", "C) Recep Peker", "D) Adnan Menderes", "E) Fuat Köprülü"],
-        correctAnswerIndex: 1,
+        options: ["A) Celal Bayar", "B) Fuat Köprülü", "C) Recep Peker", "D) Adnan Menderes", "E) Nuri Demirağ"],
+        correctAnswerIndex: 4,
         explanation: "19 Mayıs 1945’te İnönü çok partili hayata geçiş mesajı vermişti."
     },
     {
@@ -538,48 +538,48 @@ window.tarih_26_sorulari = [
         question: "COMECON’un Marshall Planı ile ilişkisi hangisidir?",
         options: [
             "A) Marshall’ın Avrupa’daki uygulama koludur",
-            "B) Doğu Bloku’nun ekonomik örgütlenmesi / Marshall’a karşı cevap niteliğindedir",
-            "C) Türkiye’nin OEEC’deki adıdır",
+            "B) Türkiye’nin OEEC’deki adıdır",
+            "C) Doğu Bloku’nun ekonomik örgütlenmesi / Marshall’a karşı cevap niteliğindedir",
             "D) NATO’nun bütçe komisyonudur",
             "E) AET’nin ilk adıdır"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 2,
         explanation: "Başlangıç üyeleri SSCB, Bulgaristan, Çekoslovakya, Macaristan, Polonya, Romanya; sonra DAC, Arnavutluk, Küba, Moğolistan vb."
     },
     {
         question: "COMINFORM’un kuruluş amacı hangisidir?",
         options: [
             "A) Ortak nükleer silah üretmek",
-            "B) Komünist partiler arasında siyasal/ideolojik koordinasyon",
+            "B) SEATO’yu desteklemek",
             "C) Gümrük birliği kurmak",
             "D) İsrail’i tanımak",
-            "E) SEATO’yu desteklemek"
+            "E) Komünist partiler arasında siyasal/ideolojik koordinasyon"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "5 Ekim 1947, SSCB öncülüğünde; Marshall’a karşı siyasi-ideolojik örgütlenmeyi güçlendirdi."
     },
     {
         question: "Küba Devrimi’nin Soğuk Savaş açısından önemi nedir?",
         options: [
             "A) ABD’nin Avrupa’daki ilk üssüdür",
-            "B) SSCB’nin Batı Yarım Küre’deki önemli müttefikini oluşturması",
+            "B) Çin’in Latin Amerika’yı işgali",
             "C) NATO’nun Havana’da kurulması",
-            "D) Çin’in Latin Amerika’yı işgali",
+            "D) SSCB’nin Batı Yarım Küre’deki önemli müttefikini oluşturması",
             "E) Bağlantısızların dağılması"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Castro önderliğindeki rejim Moskova ile yakınlaştı."
     },
     {
         question: "Türkiye Marshall Planı ve OEEC ile ilgili hangisi doğrudur?",
         options: [
             "A) Yardımı reddetmiştir",
-            "B) 1948’den itibaren Marshall kapsamında yardım almış, OEEC’ye katılmıştır",
+            "B) COMECON üyesi olmuştur",
             "C) Yalnızca 1960’ta katılmıştır",
-            "D) COMECON üyesi olmuştur",
+            "D) 1948’den itibaren Marshall kapsamında yardım almış, OEEC’ye katılmıştır",
             "E) Planı Stalin önermiştir"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Yardımlar tarım, ulaştırma, altyapı ve kalkınmada etkili oldu."
     },
     {
@@ -602,8 +602,8 @@ window.tarih_26_sorulari = [
     },
     {
         question: "İlk Akdeniz Oyunları nerede düzenlenmiştir?",
-        options: ["A) Atina", "B) Mısır (1951)", "C) Roma", "D) İstanbul", "E) Barcelona"],
-        correctAnswerIndex: 1,
+        options: ["A) Atina", "B) Roma", "C) Mısır (1951)", "D) İstanbul", "E) Barcelona"],
+        correctAnswerIndex: 2,
         explanation: "1951’de Mısır’da. 1955–56’da ilk Avrupa Şampiyon Kulüpler Kupası’nı Real Madrid kazandı."
     }
 ];

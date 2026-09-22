@@ -4,18 +4,18 @@ window.tarih_27_sorulari = [
         question: "Yumuşama (Detant) dönemi en doğru hangisiyle tanımlanır?",
         options: [
             "A) ABD ile SSCB’nin Avrupa’da topyekûn savaşa girmesi",
-            "B) Batı ve Doğu blokları arasındaki gerginliğin azaltılmaya çalışılması",
-            "C) Varşova Paktı’nın kurulması",
+            "B) Varşova Paktı’nın kurulması",
+            "C) Batı ve Doğu blokları arasındaki gerginliğin azaltılmaya çalışılması",
             "D) Yalnızca ekonomik birlik",
             "E) Bağlantısızların NATO’ya katılması"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 2,
         explanation: "Detant, iki kutup arasındaki gerilimi düşürme arayışıdır (yaklaşık 1961–1990)."
     },
     {
         question: "1961’de Kennedy ile Kruşçev’in görüştüğü yer hangisidir?",
-        options: ["A) Belgrad", "B) Viyana", "C) Helsinki", "D) Bandung", "E) Camp David"],
-        correctAnswerIndex: 1,
+        options: ["A) Belgrad", "B) Bandung", "C) Helsinki", "D) Viyana", "E) Camp David"],
+        correctAnswerIndex: 3,
         explanation: "1961 Viyana. Belgrad 1961 = Bağlantısızlar ilk zirvesi. SALT-I bu görüşmede imzalanmadı."
     },
     {
@@ -56,8 +56,8 @@ window.tarih_27_sorulari = [
     },
     {
         question: "Ping-Pong Diplomasisi hangi ülkeler arasındadır?",
-        options: ["A) ABD–SSCB", "B) ABD–Çin", "C) Çin–Hindistan", "D) ABD–Küba", "E) SSCB–Yugoslavya"],
-        correctAnswerIndex: 1,
+        options: ["A) ABD–Çin", "B) ABD–SSCB", "C) Çin–Hindistan", "D) ABD–Küba", "E) SSCB–Yugoslavya"],
+        correctAnswerIndex: 0,
         explanation: "1971 masa tenisi temasları ABD–Çin açılımını hızlandırdı; 1972’de Nixon Çin’i ziyaret etti."
     },
     {
@@ -112,72 +112,72 @@ window.tarih_27_sorulari = [
         question: "1961 Domuzlar Körfezi Çıkarması’nın sonucu hangisidir?",
         options: [
             "A) Castro düştü, Batista döndü",
-            "B) ABD destekli muhalifler Castro’yu deviremedi",
+            "B) NATO Havana’ya girdi",
             "C) SSCB Küba’yı işgal etti",
-            "D) NATO Havana’ya girdi",
+            "D) ABD destekli muhalifler Castro’yu deviremedi",
             "E) SALT-I imzalandı"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "ABD, Castro’yu devirmek için Kübalı muhalifleri destekledi; çıkarma başarısız oldu."
     },
     {
         question: "1962 Küba Krizi’nin temel nedeni hangisidir?",
         options: [
-            "A) ABD’nin Moskova’ya füze yerleştirmesi",
-            "B) SSCB’nin Küba’ya nükleer füze yerleştirmesi",
+            "A) SSCB’nin Küba’ya nükleer füze yerleştirmesi",
+            "B) ABD’nin Moskova’ya füze yerleştirmesi",
             "C) Çin’in Taiwan’a saldırması",
             "D) SALT-II’nin iptali",
             "E) Kardak kayalıkları"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "ABD Türkiye’de Jüpiter bulunduruyordu. Kriz nükleer savaş tehlikesi yarattı; doğrudan savaş olmadı."
     },
     {
         question: "Küba Krizi’nin sonucu için hangisi doğrudur?",
         options: [
             "A) ABD ve SSCB Avrupa’da nükleer savaşa girdi",
-            "B) SSCB Küba’daki füzeleri kaldırdı; ABD Türkiye’deki Jüpiter’leri gizli anlaşmayla kaldırdı",
+            "B) Küba ABD eyaleti oldu",
             "C) Türkiye NATO’dan çıkarıldı",
             "D) Castro Washington’a sığındı",
-            "E) Küba ABD eyaleti oldu"
+            "E) SSCB Küba’daki füzeleri kaldırdı; ABD Türkiye’deki Jüpiter’leri gizli anlaşmayla kaldırdı"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "ÖSYM bağlantısı: Küba–SSCB, Türkiye–ABD, iki tarafta nükleer füzeler."
     },
     {
         question: "Vietnam Savaşı’nın ABD açısından sonucu hangisidir?",
         options: [
             "A) ABD kesin zafer kazandı",
-            "B) ABD çekildi; savaş ABD açısından başarısızlıkla sonuçlandı",
+            "B) Savaş 1948’de bitti",
             "C) Kuzey Vietnam NATO’ya girdi",
-            "D) Savaş 1948’de bitti",
+            "D) ABD çekildi; savaş ABD açısından başarısızlıkla sonuçlandı",
             "E) Çin Güney’i işgal etti ve ABD üssü kurdu"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Kuzey komünist, Güney ABD destekli. Nixon Doktrini (1969) doğrudan müdahaleyi azaltma çizgisindedir."
     },
     {
         question: "Nixon Doktrini (1969) neyi öngörür?",
         options: [
             "A) ABD’nin her yerde daha fazla kara ordusu konuşlandırması",
-            "B) Müttefiklerin kendi savunmasında daha fazla sorumluluk; ABD’nin doğrudan askerî müdahaleyi azaltması",
-            "C) SALT-I’in 1961’de imzası",
+            "B) SALT-I’in 1961’de imzası",
+            "C) Müttefiklerin kendi savunmasında daha fazla sorumluluk; ABD’nin doğrudan askerî müdahaleyi azaltması",
             "D) Çin’in işgali",
             "E) Varşova Paktı üyeliği"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 2,
         explanation: "Vietnam sonrası ABD yükünü paylaştırma politikasıdır."
     },
     {
         question: "1956 Süveyş Krizi için hangisi doğrudur?",
         options: [
-            "A) Yalnızca Mısır–İsrail savaşıdır",
-            "B) Nâsır kanalı millîleştirdi; İsrail, İngiltere ve Fransa Mısır’a saldırdı",
+            "A) Nâsır kanalı millîleştirdi; İsrail, İngiltere ve Fransa Mısır’a saldırdı",
+            "B) Yalnızca Mısır–İsrail savaşıdır",
             "C) ABD ve SSCB saldırganları destekledi",
             "D) Kanal İngiltere’ye bırakıldı",
             "E) 1967 Altı Gün Savaşı’nın diğer adıdır"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "ABD ve SSCB baskısıyla saldırganlar çekildi. ‘1956 Mısır–İsrail savaşı’ eksik ifadedir."
     },
     {
@@ -188,14 +188,14 @@ window.tarih_27_sorulari = [
     },
     {
         question: "1973 Yom Kippur Savaşı’nın önemli ekonomik sonucu hangisidir?",
-        options: ["A) Marshall Planı", "B) 1973 Petrol Krizi", "C) SALT-I", "D) TRT’nin kapanması", "E) Bandung"],
-        correctAnswerIndex: 1,
+        options: ["A) 1973 Petrol Krizi", "B) Marshall Planı", "C) SALT-I", "D) TRT’nin kapanması", "E) Bandung"],
+        correctAnswerIndex: 0,
         explanation: "Mısır ve Suriye saldırdı; İsrail üstünlüğünü korudu. Arapların petrolü siyasi araç kullanması petrol krizini doğurdu."
     },
     {
         question: "Mekik diplomasisi hangi isimle anılır?",
-        options: ["A) Marshall", "B) Henry Kissinger", "C) Reagan", "D) Johnson", "E) Aldıkaçtı"],
-        correctAnswerIndex: 1,
+        options: ["A) Henry Kissinger", "B) Marshall", "C) Reagan", "D) Johnson", "E) Aldıkaçtı"],
+        correctAnswerIndex: 0,
         explanation: "Kissinger, Arap–İsrail sonrası taraflar arasında gidip gelerek diplomasi yürüttü."
     },
     {
@@ -214,18 +214,18 @@ window.tarih_27_sorulari = [
         question: "I. Körfez Savaşı’nı başlatan gelişme hangisidir?",
         options: [
             "A) İsrail’in Golan’ı alması",
-            "B) Irak’ın 1990’da Kuveyt’i işgali",
+            "B) Bandung",
             "C) SALT-I",
-            "D) Bandung",
+            "D) Irak’ın 1990’da Kuveyt’i işgali",
             "E) KKTC ilanı"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "İran–Irak 1980–88; Kuveyt işgali 1990; I. Körfez 1990–1991."
     },
     {
         question: "1976’de Ege kıta sahanlığı geriliminde Türkiye’nin araştırma gemisi hangisidir?",
-        options: ["A) Barbaros", "B) Sismik-I", "C) Piri Reis 1960", "D) Nautilus", "E) Vostok-I"],
-        correctAnswerIndex: 1,
+        options: ["A) Sismik-I", "B) Barbaros", "C) Piri Reis 1960", "D) Nautilus", "E) Vostok-I"],
+        correctAnswerIndex: 0,
         explanation: "Kıta sahanlığı: karasuları ötesi kaynak hakları. 1976 Sismik-I ve Bern Deklarasyonu."
     },
     {
@@ -237,13 +237,13 @@ window.tarih_27_sorulari = [
     {
         question: "FIR hattı sorunu neyi ifade eder?",
         options: [
-            "A) Karasularının 200 mil olması",
-            "B) Ege’de uçuş bilgi bölgesi / hava trafiği kontrolü ve bilgi paylaşımı anlaşmazlığı",
+            "A) Ege’de uçuş bilgi bölgesi / hava trafiği kontrolü ve bilgi paylaşımı anlaşmazlığı",
+            "B) Karasularının 200 mil olması",
             "C) Kıbrıs’ın Yunanistan’a bağlanması",
             "D) Petrolün millîleştirilmesi",
             "E) SALT görüşmeleri"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "FIR = Flight Information Region. ‘Yunanistan tüm uçakları yasakladı’ ifadesi fazla basittir."
     },
     {
@@ -256,12 +256,12 @@ window.tarih_27_sorulari = [
         question: "1960 Kıbrıs Cumhuriyeti’nin garantör devletleri hangileridir?",
         options: [
             "A) ABD–SSCB–Fransa",
-            "B) Türkiye–Yunanistan–İngiltere",
+            "B) Yalnız İngiltere",
             "C) Mısır–İsrail–ABD",
-            "D) Yalnız İngiltere",
+            "D) Türkiye–Yunanistan–İngiltere",
             "E) NATO’nun tüm üyeleri"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Zürih ve Londra 1959; cumhuriyet 1960. CB Makarios, CB yardımcısı Dr. Fazıl Küçük."
     },
     {
@@ -273,13 +273,13 @@ window.tarih_27_sorulari = [
     {
         question: "Enosis ve EOKA için hangisi doğrudur?",
         options: [
-            "A) Enosis Kıbrıs’ın Türkiye’ye bağlanmasıdır",
-            "B) Enosis Kıbrıs’ın Yunanistan’a bağlanması; EOKA bunu savunan Rum örgütüdür",
+            "A) Enosis Kıbrıs’ın Yunanistan’a bağlanması; EOKA bunu savunan Rum örgütüdür",
+            "B) Enosis Kıbrıs’ın Türkiye’ye bağlanmasıdır",
             "C) TMT Enosis örgütüdür",
             "D) EOKA Türk Mukavemet Teşkilatı’dır",
             "E) Enosis 1983 Annan Planı’dır"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "TMT, Türk toplumunun savunma örgütüdür."
     },
     {
@@ -292,60 +292,60 @@ window.tarih_27_sorulari = [
         question: "Akritas Planı’nın amacı hangisidir?",
         options: [
             "A) KKTC’yi ilan etmek",
-            "B) Kıbrıs Türklerini siyasal/toplumsal olarak etkisizleştirmek ve Enosis’e zemin hazırlamak",
-            "C) SALT-I’i imzalamak",
+            "B) SALT-I’i imzalamak",
+            "C) Kıbrıs Türklerini siyasal/toplumsal olarak etkisizleştirmek ve Enosis’e zemin hazırlamak",
             "D) Annan Planı’nı kabul ettirmek",
             "E) FIR hattını kaldırmak"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 2,
         explanation: "1963. Gazete sızıntısı gibi ayrıntılar ana ezber değildir."
     },
     {
         question: "Johnson Mektubu (1964) kimden kime ve hangi konuda gönderilmiştir?",
         options: [
             "A) Kruşçev’den İnönü’ye – NATO",
-            "B) Johnson’dan İnönü’ye – Türkiye’nin Kıbrıs’a müdahalesi uyarısı",
+            "B) Nixon’dan Demirel’e – SALT",
             "C) Ecevit’ten Carter’a – Camp David",
-            "D) Nixon’dan Demirel’e – SALT",
+            "D) Johnson’dan İnönü’ye – Türkiye’nin Kıbrıs’a müdahalesi uyarısı",
             "E) Makarios’tan Evren’e – anayasa"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "ABD’ye güven sarsıldı; çok yönlü dış politika arayışına katkı sağladı."
     },
     {
         question: "Cengiz Topel için en doğru KPSS ifadesi hangisidir?",
         options: [
             "A) Türkiye’nin ilk hava şehididir (mutlak)",
-            "B) Kıbrıs olaylarında şehit olan ilk Türk jet pilotudur",
+            "B) Annan Planı’nı hazırlamıştır",
             "C) 1974 harekâtının kara komutanıdır",
             "D) KKTC’nin ilk cumhurbaşkanıdır",
-            "E) Annan Planı’nı hazırlamıştır"
+            "E) Kıbrıs olaylarında şehit olan ilk Türk jet pilotudur"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "1964. ‘İlk hava şehidi’ kesin yazılmamalı."
     },
     {
         question: "15 Temmuz 1974’te Kıbrıs’ta ne olmuştur?",
         options: [
             "A) KKTC ilan edildi",
-            "B) Yunanistan destekli darbeyle Makarios düştü, Nikos Sampson geldi; Enosis tehlikesi arttı",
+            "B) Sismik-I Ege’ye çıktı",
             "C) Annan referandumu yapıldı",
             "D) Johnson Mektubu yazıldı",
-            "E) Sismik-I Ege’ye çıktı"
+            "E) Yunanistan destekli darbeyle Makarios düştü, Nikos Sampson geldi; Enosis tehlikesi arttı"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "Türkiye 1960 Garanti Antlaşması’na dayanarak 20 Temmuz’da I. Barış Harekâtı’nı başlattı."
     },
     {
         question: "1974 Kıbrıs Barış Harekâtı döneminde hükümet ve cumhurbaşkanı hangisidir?",
         options: [
-            "A) Demirel – Evren",
-            "B) Ecevit başbakan, Erbakan yardımcı, Fahri Korutürk CB",
+            "A) Ecevit başbakan, Erbakan yardımcı, Fahri Korutürk CB",
+            "B) Demirel – Evren",
             "C) İnönü – Bayar",
             "D) Özal – Korutürk",
             "E) Ecevit – Fahri Karatürk"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "Doğru soyad Korutürk’tür, Karatürk değil. Parola: Ayşe tatile çıksın (harekâtın nedeni değil)."
     },
     {
@@ -374,62 +374,62 @@ window.tarih_27_sorulari = [
     },
     {
         question: "12 Eylül 1980 darbesinin lideri ve 7. cumhurbaşkanı hangisidir?",
-        options: ["A) Cemal Gürsel", "B) Kenan Evren", "C) Orhan Aldıkaçtı", "D) Fahri Korutürk", "E) Alparslan Türkeş"],
-        correctAnswerIndex: 1,
+        options: ["A) Cemal Gürsel", "B) Orhan Aldıkaçtı", "C) Kenan Evren", "D) Fahri Korutürk", "E) Alparslan Türkeş"],
+        correctAnswerIndex: 2,
         explanation: "Demirel, Ecevit, Erbakan, Türkeş siyasi faaliyetten uzaklaştırıldı. Evren 1982 referandumuyla CB oldu."
     },
     {
         question: "1982 Anayasası’nı hazırlayan komisyonun başkanı hangisidir?",
-        options: ["A) Kenan Evren", "B) Orhan Aldıkaçtı", "C) Bülent Ecevit", "D) Rauf Denktaş", "E) Metin Erksan"],
-        correctAnswerIndex: 1,
+        options: ["A) Orhan Aldıkaçtı", "B) Kenan Evren", "C) Bülent Ecevit", "D) Rauf Denktaş", "E) Metin Erksan"],
+        correctAnswerIndex: 0,
         explanation: "7 Kasım 1982’de referandumla kabul edildi."
     },
     {
         question: "Uzaya çıkan ilk insan ve aracı hangisidir?",
-        options: ["A) Armstrong – Apollo-11", "B) Gagarin – Vostok-I (1961)", "C) Laika – Sputnik-I", "D) Reagan – SDI", "E) Neil – Sputnik-II"],
-        correctAnswerIndex: 1,
+        options: ["A) Armstrong – Apollo-11", "B) Neil – Sputnik-II", "C) Laika – Sputnik-I", "D) Reagan – SDI", "E) Gagarin – Vostok-I (1961)"],
+        correctAnswerIndex: 4,
         explanation: "Sputnik-I 1957 SSCB ilk yapay uydu. Armstrong 1969 Apollo-11 ile Ay’a ilk insan."
     },
     {
         question: "‘Yıldız Savaşları’ olarak anılan proje hangisidir?",
         options: [
-            "A) Apollo-11",
-            "B) Reagan’ın 1983’te açıkladığı Stratejik Savunma Girişimi (SDI)",
+            "A) Reagan’ın 1983’te açıkladığı Stratejik Savunma Girişimi (SDI)",
+            "B) Apollo-11",
             "C) SALT-I",
             "D) ARPANET",
             "E) TRT 1968"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "SDI = Strategic Defense Initiative."
     },
     {
         question: "Türkiye’de TRT televizyon yayınlarının başladığı yıl hangisidir?",
         options: ["A) 1957", "B) 1964", "C) 1968", "D) 1980", "E) 1993"],
         correctAnswerIndex: 2,
-        explanation: "1964 Tokyo Olimpiyatları küresel uydu canlı yayın örneğidir. 1993 ODTÜ Türkiye’nin internet bağlantısıdır."
+        explanation: "TRT televizyonu 31 Ocak 1968'de Ankara'da deneme yayınlarıyla başlamıştır. TRT kurumu 1964'te kurulmuştu; Türkiye'deki ilk televizyon yayını ise 1952'de İTÜ tarafından yapılmıştır."
     },
     {
         question: "ARPANET için en doğru ifade hangisidir?",
         options: [
             "A) 1961’de internet bulundu",
-            "B) İnternetin öncüsü ağ sistemidir",
+            "B) SALT’ın nükleer koludur",
             "C) SSCB’nin Ay programıdır",
             "D) TRT’nin ilk kanalıdır",
-            "E) SALT’ın nükleer koludur"
+            "E) İnternetin öncüsü ağ sistemidir"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "‘İnternet bulundu’ denmez. Türkiye bağlantısı 1993 ODTÜ."
     },
     {
         question: "Susuz Yaz (1964) ile Yol (1982) ödül eşleştirmesi hangisidir?",
         options: [
             "A) İkisi de Altın Palmiye",
-            "B) Metin Erksan Altın Ayı; Yılmaz Güney Yol ile Altın Palmiye",
+            "B) Yol Berlin Altın Ayı almıştır",
             "C) İkisi de Nuri Bilge Ceylan",
             "D) Susuz Yaz 2014’tür",
-            "E) Yol Berlin Altın Ayı almıştır"
+            "E) Metin Erksan Altın Ayı; Yılmaz Güney Yol ile Altın Palmiye"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "Kış Uykusu (2014, Ceylan, Altın Palmiye) Yumuşama Dönemi’ne ait değildir."
     },
     {
@@ -441,25 +441,25 @@ window.tarih_27_sorulari = [
     {
         question: "İslam Konferansı Örgütü’nün (bugün İİT) kuruluşunu hızlandıran gelişme hangisidir?",
         options: [
-            "A) SALT-I",
-            "B) Mescid-i Aksa’nın kundaklanması girişimi (1969)",
+            "A) Mescid-i Aksa’nın kundaklanması girişimi (1969)",
+            "B) SALT-I",
             "C) Kardak",
             "D) Ping-Pong",
             "E) 12 Eylül"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "1969 İKÖ; İslam ülkeleri arasında iş birliği."
     },
     {
         question: "1948–1949 Arap–İsrail Savaşı’nın sonuçlarından hangisi doğrudur?",
         options: [
             "A) İsrail yıkıldı",
-            "B) İsrail üstün çıktı; Filistinli mülteci sorunu doğdu",
+            "B) Golan 1948’de alındı",
             "C) Camp David imzalandı",
-            "D) Golan 1948’de alındı",
+            "D) İsrail üstün çıktı; Filistinli mülteci sorunu doğdu",
             "E) Süveyş millîleştirildi"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "İsrail kuruluşu sonrası savaş. Golan 1967; Süveyş 1956; Camp David 1978."
     },
     {
@@ -496,12 +496,12 @@ window.tarih_27_sorulari = [
         question: "Yunanistan’ın Ege adalarını silahlandırması Türkiye açısından neden sorundur?",
         options: [
             "A) SALT-II’yi ihlal eder",
-            "B) Adaların silahsız statüsü / egemenlik ve güvenlik dengesiyle ilgilidir",
-            "C) KKTC’yi tanır",
+            "B) KKTC’yi tanır",
+            "C) Adaların silahsız statüsü / egemenlik ve güvenlik dengesiyle ilgilidir",
             "D) FIR’ı kaldırır",
             "E) NPT’yi sona erdirir"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 2,
         explanation: "Türk–Yunan Ege sorunlarından biridir; kıta sahanlığı, karasuları ve FIR ile birlikte sorulur."
     },
     {
@@ -514,36 +514,36 @@ window.tarih_27_sorulari = [
         question: "İran-Contra / İrangate skandalının özü hangisidir?",
         options: [
             "A) SSCB’nin İran’ı işgali",
-            "B) ABD’nin İran’a gizlice silah satması",
+            "B) Mısır’ın Süveyş’i İngiltere’ye vermesi",
             "C) Türkiye’nin Kuveyt’i işgali",
-            "D) Mısır’ın Süveyş’i İngiltere’ye vermesi",
+            "D) ABD’nin İran’a gizlice silah satması",
             "E) Çin’in Ping-Pong’u yasaklaması"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "İran–Irak Savaşı döneminde ABD’nin İran’a gizli silah satışı ortaya çıktı."
     },
     {
         question: "Ayşe tatile çıksın ifadesi ÖSYM açısından nasıl öğrenilmelidir?",
         options: [
             "A) Harekâtın hukuki nedeni olarak",
-            "B) 1974 Kıbrıs Barış Harekâtı parolası olarak",
-            "C) Johnson Mektubu’nun son cümlesi olarak",
+            "B) Johnson Mektubu’nun son cümlesi olarak",
+            "C) 1974 Kıbrıs Barış Harekâtı parolası olarak",
             "D) Annan Planı’nın sloganı olarak",
             "E) Kardak çıkarma emri olarak"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 2,
         explanation: "Temel neden Enosis darbesi ve garantörlüktür; parola ayrıntıdır."
     },
     {
         question: "Kış Uykusu filmi için hangisi doğrudur?",
         options: [
             "A) 1964’te Altın Ayı aldı",
-            "B) 2014, Nuri Bilge Ceylan, Altın Palmiye; Yumuşama Dönemi filmi değildir",
+            "B) Metin Erksan’ındır",
             "C) Yılmaz Güney yönetti",
             "D) 1982 Anayasası’nı konu alır",
-            "E) Metin Erksan’ındır"
+            "E) 2014, Nuri Bilge Ceylan, Altın Palmiye; Yumuşama Dönemi filmi değildir"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "Dönem notuna karıştırılmamalı; Türk sineması kutusundadır."
     },
     {
@@ -616,18 +616,18 @@ window.tarih_27_sorulari = [
         question: "Aşağıdakilerden hangisi 1968 NPT ile 1967 Dış Uzay Antlaşması ayrımını doğru verir?",
         options: [
             "A) NPT uzay, Dış Uzay nükleer yayılma",
-            "B) NPT nükleer yayılmayı önleme; Dış Uzay uzayın barışçıl kullanımı",
+            "B) İkisi de İKÖ belgesidir",
             "C) İkisi de 1972 SALT’tır",
-            "D) İkisi de İKÖ belgesidir",
+            "D) NPT nükleer yayılmayı önleme; Dış Uzay uzayın barışçıl kullanımı",
             "E) NPT 1983 SDI’dır"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Sık karıştırılan iki ayrı düzenlemedir."
     },
     {
         question: "Kıbrıs Türk toplumunun savunma örgütü hangisidir?",
-        options: ["A) EOKA", "B) TMT", "C) SDI", "D) SEATO", "E) FIR"],
-        correctAnswerIndex: 1,
+        options: ["A) EOKA", "B) FIR", "C) SDI", "D) SEATO", "E) TMT"],
+        correctAnswerIndex: 4,
         explanation: "Türk Mukavemet Teşkilatı. EOKA Enosis amaçlı Rum örgütüdür."
     },
     {

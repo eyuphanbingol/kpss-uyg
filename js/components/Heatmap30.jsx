@@ -450,7 +450,7 @@
                                                                 return (
                                                                     <div key={r.konu} className="rounded-xl bg-white dark:bg-stone-800/50 p-3 border border-stone-200 dark:border-stone-700">
                                                                         <div className="flex items-center justify-between">
-                                                                            <p className="text-xs font-medium truncate flex-1">{r.konu}</p>
+                                                                            <p className="text-xs font-medium truncate flex-1">{window.konuLabel ? window.konuLabel(r.konu) : r.konu}</p>
                                                                             <span className="text-[10px] ml-2">{label.emoji}</span>
                                                                         </div>
                                                                         <div className="mt-1.5 h-1.5 rounded-full bg-stone-200 dark:bg-stone-700 overflow-hidden">

@@ -3,23 +3,23 @@ window.turkce_14_sorulari = [
 {
     "question": "Fiillerin özne ve nesneyle olan ilişkisine ne denir?",
     "options": [
-        "A) Yapı",
-        "B) Çatı",
+        "A) Çatı",
+        "B) Yapı",
         "C) Ek",
         "D) Tür"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Çatı: özne-yüklem ve nesne-yüklem ilişkisi."
 },
 {
     "question": "Çatı aranırken cümlenin yüklemi nasıl olmalıdır?",
     "options": [
         "A) Ad soylu",
-        "B) Fiil",
+        "B) Zarf",
         "C) Fiilimsi",
-        "D) Zarf"
+        "D) Fiil"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Ad cümlelerinde çatı aranmaz; yüklemi fiil olmalı."
 },
 {
@@ -37,11 +37,11 @@ window.turkce_14_sorulari = [
     "question": "Etken fiillerde iş kim tarafından yapılır?",
     "options": [
         "A) Sözde özne",
-        "B) Gerçek veya gizli özne",
+        "B) Dolaylı tümleç",
         "C) Nesne",
-        "D) Dolaylı tümleç"
+        "D) Gerçek veya gizli özne"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Gerçek/gizli özne işi yapar."
 },
 {
@@ -80,12 +80,12 @@ window.turkce_14_sorulari = [
 {
     "question": "Dönüşlü fiillerde özne için hangisi doğrudur?",
     "options": [
-        "A) İşten etkilenmez.",
-        "B) İşi yapar ve yaptığı işten etkilenir.",
+        "A) İşi yapar ve yaptığı işten etkilenir.",
+        "B) İşten etkilenmez.",
         "C) İşi başkasına yaptırır.",
         "D) Sözde öznedir."
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Dönüşlü: yapan = etkilenen."
 },
 {
@@ -103,11 +103,11 @@ window.turkce_14_sorulari = [
     "question": "İşteş fiillerde temel olarak hangi anlam bulunur?",
     "options": [
         "A) Başkasına yaptırma",
-        "B) Karşılıklı veya birlikte yapma",
-        "C) Kendiliğinden olma",
+        "B) Kendiliğinden olma",
+        "C) Karşılıklı veya birlikte yapma",
         "D) Edilgenlik"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Mektup laşmak → karşılıklı."
 },
 {
@@ -124,23 +124,23 @@ window.turkce_14_sorulari = [
 {
     "question": "“Camlar silindi.” cümlesinde fiil hangi çatıdadır?",
     "options": [
-        "A) Dönüşlü",
-        "B) Edilgen",
+        "A) Edilgen",
+        "B) Dönüşlü",
         "C) Etken",
         "D) İşteş"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "İşi yapan belli değil → edilgen."
 },
 {
     "question": "“Bu soruyu çözdüm.” fiili nedir?",
     "options": [
         "A) Geçişsiz",
-        "B) Geçişli",
+        "B) İşteş",
         "C) Dönüşlü",
-        "D) İşteş"
+        "D) Geçişli"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Neyi? soruyu → geçişli."
 },
 {
@@ -158,11 +158,11 @@ window.turkce_14_sorulari = [
     "question": "Geçişli fiiller hangi sorulara cevap verir?",
     "options": [
         "A) Nasıl?",
-        "B) Ne, neyi, kimi?",
+        "B) Ne zaman?",
         "C) Nereye?",
-        "D) Ne zaman?"
+        "D) Ne, neyi, kimi?"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Nesne soruları: ne, neyi, kimi."
 },
 {
@@ -191,11 +191,11 @@ window.turkce_14_sorulari = [
     "question": "“Bebeği uyuttuk.” fiili hangi çatıdır?",
     "options": [
         "A) Ettirgen",
-        "B) Oldurgan",
-        "C) İşteş",
+        "B) İşteş",
+        "C) Oldurgan",
         "D) Edilgen"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "uyumak (geçişsiz) → uyutmak (geçişli) → oldurgan."
 },
 {
@@ -213,33 +213,33 @@ window.turkce_14_sorulari = [
     "question": "“Soruyu çözdürdü.” fiili hangi çatıdır?",
     "options": [
         "A) Oldurgan",
-        "B) Ettirgen",
+        "B) Dönüşlü",
         "C) İşteş",
-        "D) Dönüşlü"
+        "D) Ettirgen"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Geçişli fiile -dır → ettirgen."
 },
 {
     "question": "Ettirgen fiillerde hangi anlam vardır?",
     "options": [
-        "A) İşin özne tarafından kendisinin yapılması",
-        "B) İşin başkasına yaptırılması",
+        "A) İşin başkasına yaptırılması",
+        "B) İşin özne tarafından kendisinin yapılması",
         "C) İşin karşılıklı yapılması",
         "D) İşten öznenin etkilenmesi"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Başkasına yaptırma."
 },
 {
     "question": "Oldurgan mı ettirgen mi? Girişte geçişsiz fiil varsa hangisi oluşur?",
     "options": [
         "A) Ettirgen",
-        "B) Oldurgan",
-        "C) İşteş",
+        "B) İşteş",
+        "C) Oldurgan",
         "D) Edilgen"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Uyumak → uyutmak oldurgan (kritik kutu)."
 },
 {
@@ -290,11 +290,11 @@ window.turkce_14_sorulari = [
     "question": "“Ali çalışkandır.” cümlesinde çatı aranır mı?",
     "options": [
         "A) Evet, etkendir.",
-        "B) Hayır, ad cümlesidir.",
-        "C) Evet, geçişlidir.",
+        "B) Evet, geçişlidir.",
+        "C) Hayır, ad cümlesidir.",
         "D) Evet, edilgendir."
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Yüklem ad soylu → çatı aranmaz."
 },
 {
@@ -312,11 +312,11 @@ window.turkce_14_sorulari = [
     "question": "Dönüşlü fiiller hangi eklerle yapılabilir?",
     "options": [
         "A) -ş",
-        "B) -ıl/-il/-n",
+        "B) -le",
         "C) -t",
-        "D) -le"
+        "D) -ıl/-il/-n"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Dönüşlü de -ıl/-il/-n alabilir; anlam farklı."
 },
 {
@@ -334,55 +334,55 @@ window.turkce_14_sorulari = [
     "question": "“Çocuklar aylardır mektuplaşıyor.” fiili hangi çatıdır?",
     "options": [
         "A) Edilgen",
-        "B) İşteş",
+        "B) Ettirgen",
         "C) Dönüşlü",
-        "D) Ettirgen"
+        "D) İşteş"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "-laş- → işteş."
 },
 {
     "question": "Oldurgan fiile örnek hangisidir?",
     "options": [
         "A) Yazdırmak",
-        "B) Uyutmak",
+        "B) Uyumak",
         "C) Yazmak",
-        "D) Uyumak"
+        "D) Uyutmak"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "uyumak → uyutmak oldurgan."
 },
 {
     "question": "Ettirgen fiile örnek hangisidir?",
     "options": [
-        "A) Uyutmak",
-        "B) Yazdırmak",
+        "A) Yazdırmak",
+        "B) Uyutmak",
         "C) Uyumak",
         "D) Koşmak"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "yazmak → yazdırmak ettirgen."
 },
 {
     "question": "Çatı özeti: Geçişsiz fiil nesne alır mı?",
     "options": [
         "A) Evet, her zaman",
-        "B) Hayır",
-        "C) Yalnızca edilgende",
+        "B) Yalnızca edilgende",
+        "C) Hayır",
         "D) Yalnızca işteşte"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Geçişsiz: nesne almaz."
 },
 {
     "question": "Çatı incelenirken iki ana başlık hangileridir?",
     "options": [
         "A) Yapım ve çekim",
-        "B) Özne-yüklem ve nesne-yüklem ilişkisi",
-        "C) Basit ve birleşik",
+        "B) Basit ve birleşik",
+        "C) Özne-yüklem ve nesne-yüklem ilişkisi",
         "D) Olumlu ve olumsuz"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Özne-yüklem + nesne-yüklem (geçişlilik)."
 }
 ];

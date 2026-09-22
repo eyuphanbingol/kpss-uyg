@@ -45,6 +45,11 @@ function stripChoicePrefix(opt) {
     return String(opt || "").replace(/^[A-Ea-e][\s\)\.:\-]+\s*/, "").trim();
 }
 
+// Konu adını ekranda yazım düzeltilmiş göster (anahtar değişmez; bkz. data.js KONU_LABELS).
+function kLabel(k) {
+    return (typeof window !== "undefined" && window.konuLabel) ? window.konuLabel(k) : k;
+}
+
 function SoruGorsel(soru) {
     if (!soru) return null;
     var list = soru.imgs || (soru.img ? (Array.isArray(soru.img) ? soru.img : [soru.img]) : []);
@@ -691,11 +696,11 @@ function Bugun(props) {
     const name = props.student.profile.name;
     const level = (props.student.userProfile && props.student.userProfile.educationLevel) || "lisans";
     const track = examTrackName(level);
-    var examLine;
-    if (plan.daysLeft == null) examLine = track + " · sınav tarihi yok";
-    else if (plan.daysLeft < 0) examLine = track + " tarihi geçti";
-    else if (plan.daysLeft === 0) examLine = track + " bugün";
-    else examLine = track + "’ye " + plan.daysLeft + " gün kaldı";
+    var examLine, examSub = "";
+    if (plan.daysLeft == null) { examLine = track + " · sınav tarihi yok"; examSub = "Ben › Ayarlar’dan sınav tarihini seç, plan ona göre kurulsun."; }
+    else if (plan.daysLeft < 0) { examLine = track + " geride kaldı"; examSub = "Yeni hedefin için Ben › Ayarlar’dan sınav tarihini güncelle."; }
+    else if (plan.daysLeft === 0) { examLine = track + " bugün"; examSub = "Başarılar! Sakin kal, bildiğin soruya önce git."; }
+    else { examLine = track + "’ye " + plan.daysLeft + " gün kaldı"; examSub = plan.daysLeft <= 30 ? "Son düzlük: tekrar ve deneme ağırlıklı çalış." : "Her gün not + test; yanlışlar tekrara düşer."; }
     return (
         <Shell>
             <div className="flex justify-between items-start mb-8">
@@ -710,16 +715,18 @@ function Bugun(props) {
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
 
-            <div className="rounded-3xl bg-gradient-to-br from-indigo-600 to-purple-600 text-white p-5 mb-6 shadow-xl shadow-indigo-500/20 slide-up">
-                <div className="flex items-center justify-between flex-wrap gap-2">
-                    <div>
-                        <p className="text-xs font-semibold uppercase tracking-wider opacity-80">Sınav takvimi</p>
-                        <p className="text-xl font-bold mt-0.5">{examLine}</p>
+            <div className="exam-hero rounded-3xl text-white p-5 mb-6 slide-up">
+                <div className="flex items-center justify-between gap-3">
+                    <div className="min-w-0">
+                        <p className="text-xs font-semibold uppercase tracking-wider exam-hero-kicker">Sınav takvimi</p>
+                        <p className="text-xl font-bold mt-0.5 leading-snug">{examLine}</p>
+                        {examSub ? <p className="text-[13px] mt-1 opacity-80 leading-snug">{examSub}</p> : null}
                     </div>
-                    {plan.daysLeft != null && plan.daysLeft > 0 && plan.daysLeft < 30 ? (
-                        <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-2xl text-sm font-bold animate-pulse">
-                            {plan.daysLeft} gün
-                        </span>
+                    {plan.daysLeft != null && plan.daysLeft > 0 ? (
+                        <div className={"exam-hero-count shrink-0" + (plan.daysLeft <= 30 ? " is-soon" : "")}>
+                            <span className="font-stat">{plan.daysLeft}</span>
+                            <small>gün</small>
+                        </div>
                     ) : null}
                 </div>
             </div>
@@ -741,34 +748,34 @@ function AlistirmalarHome(props) {
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
-            <div className="grid gap-4">
+            <div className="grid gap-4 sm:grid-cols-2">
                 <button type="button" onClick={function () { props.onKind("cloze"); }}
-                    className="text-left p-6 rounded-3xl glass card-hover">
-                    <div className="h-14 w-14 rounded-2xl bg-teal-50 text-2xl flex items-center justify-center mb-3">✏️</div>
+                    className="text-left p-6 rounded-3xl glass card-hover flex flex-col items-start justify-start">
+                    <div className="h-14 w-14 rounded-2xl bg-teal-50 dark:bg-teal-900/40 text-2xl flex items-center justify-center mb-3">✏️</div>
                     <h2 className="font-bold text-lg">Boşluk doldurma</h2>
                     <p className="text-sm text-stone-400 mt-1">Nottaki boşluğu şıklardan tamamla.</p>
                 </button>
                 <button type="button" onClick={function () { props.onKind("map"); }}
-                    className="text-left p-6 rounded-3xl glass card-hover">
-                    <div className="h-14 w-14 rounded-2xl bg-amber-50 text-2xl flex items-center justify-center mb-3">🗺️</div>
+                    className="text-left p-6 rounded-3xl glass card-hover flex flex-col items-start justify-start">
+                    <div className="h-14 w-14 rounded-2xl bg-amber-50 dark:bg-amber-900/40 text-2xl flex items-center justify-center mb-3">🗺️</div>
                     <h2 className="font-bold text-lg">Harita oyunu</h2>
                     <p className="text-sm text-stone-400 mt-1">Konuyu seç, turdaki isimleri haritaya yerleştir.</p>
                 </button>
                 <button type="button" onClick={function () { props.onKind("conquer"); }}
-                    className="text-left p-6 rounded-3xl glass card-hover">
-                    <div className="h-14 w-14 rounded-2xl bg-emerald-50 text-2xl flex items-center justify-center mb-3">🛡️</div>
+                    className="text-left p-6 rounded-3xl glass card-hover flex flex-col items-start justify-start">
+                    <div className="h-14 w-14 rounded-2xl bg-emerald-50 dark:bg-emerald-900/40 text-2xl flex items-center justify-center mb-3">🛡️</div>
                     <h2 className="font-bold text-lg">Türkiye'yi Fethet</h2>
                     <p className="text-sm text-stone-400 mt-1">İli seç, soruları bitir; ili boya, bölge rozeti kap.</p>
                 </button>
                 <button type="button" onClick={function () { props.onKind("tabu"); }}
-                    className="text-left p-6 rounded-3xl glass card-hover">
-                    <div className="h-14 w-14 rounded-2xl bg-violet-50 text-2xl flex items-center justify-center mb-3">🃏</div>
+                    className="text-left p-6 rounded-3xl glass card-hover flex flex-col items-start justify-start">
+                    <div className="h-14 w-14 rounded-2xl bg-violet-50 dark:bg-violet-900/40 text-2xl flex items-center justify-center mb-3">🃏</div>
                     <h2 className="font-bold text-lg">Tabu</h2>
                     <p className="text-sm text-stone-400 mt-1">İpuçlarından kavrama ulaş. Az ipucu, çok puan.</p>
                 </button>
                 <button type="button" onClick={function () { props.onKind("panic"); }}
-                    className="text-left p-6 rounded-3xl glass card-hover">
-                    <div className="h-14 w-14 rounded-2xl bg-rose-50 text-2xl flex items-center justify-center mb-3">⏱️</div>
+                    className="text-left p-6 rounded-3xl glass card-hover flex flex-col items-start justify-start">
+                    <div className="h-14 w-14 rounded-2xl bg-rose-50 dark:bg-rose-900/40 text-2xl flex items-center justify-center mb-3">⏱️</div>
                     <h2 className="font-bold text-lg">Son 30 saniye</h2>
                     <p className="text-sm text-stone-400 mt-1">Doğru +2 sn, yanlış −3 sn. Hızlı net bilgi.</p>
                 </button>
@@ -861,7 +868,7 @@ function AlistirmaKonuList(props) {
                                 <div className="flex gap-3 min-w-0">
                                     <div className={"h-10 w-10 rounded-xl flex items-center justify-center font-stat text-sm shrink-0 " + (st.done ? "bg-emerald-50 text-emerald-600" : (open ? "bg-teal-50 text-teal-800" : "bg-stone-100 text-stone-400"))}>{st.done ? "✓" : (open ? idx + 1 : "🔒")}</div>
                                     <div className="min-w-0">
-                                        <div className="font-bold text-slate-800 dark:text-slate-100">{konu}</div>
+                                        <div className="font-bold text-slate-800 dark:text-slate-100">{kLabel(konu)}</div>
                                         <p className="text-xs text-slate-400 mt-1">{open ? (st.n ? (st.left + " / " + st.n + " boşluk") : (stats ? "Henüz alıştırma yok" : "\u00a0")) : "Önce önceki konunun testlerini bitir"}</p>
                                     </div>
                                 </div>
@@ -903,12 +910,29 @@ function clozePromptNodes(text, fill, fillOk) {
     return nodes;
 }
 
+function clozeChoiceLabel(c) {
+    var t = String(c == null ? "" : c).trim();
+    return t ? t.charAt(0).toLocaleUpperCase("tr-TR") + t.slice(1) : t;
+}
+
+// Cevaptan sonra "Sonraki" düğmesi alt menünün arkasında kalmasın.
+function revealSoon(ref) {
+    setTimeout(function () {
+        var el = ref && ref.current;
+        if (el && el.scrollIntoView) {
+            try { el.scrollIntoView({ block: "nearest", behavior: "smooth" }); } catch (e) { el.scrollIntoView(false); }
+        }
+    }, 60);
+}
+
 function ClozePlay(props) {
     const [items, setItems] = useState(null);
     const [idx, setIdx] = useState(0);
     const [picked, setPicked] = useState(null);
     const [score, setScore] = useState(0);
     const [done, setDone] = useState(false);
+    const footRef = useRef(null);
+    useEffect(function () { if (picked) revealSoon(footRef); }, [picked]);
 
     useEffect(function () {
         setIdx(0); setPicked(null); setScore(0); setDone(false); setItems(null);
@@ -930,7 +954,7 @@ function ClozePlay(props) {
                     <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
                 </div>
                 <p className="text-xs font-semibold text-stone-400 uppercase tracking-wider">{props.ders}</p>
-                <h1 className="text-2xl font-black mb-4">{props.konu}</h1>
+                <h1 className="text-2xl font-black mb-4">{kLabel(props.konu)}</h1>
             </Shell>
         );
     }
@@ -968,7 +992,7 @@ function ClozePlay(props) {
                     <header className="study-card-head">
                         <div>
                             <p className="study-card-kicker">{props.ders}</p>
-                            <h2 className="study-card-title">{props.konu} · Bitti</h2>
+                            <h2 className="study-card-title">{kLabel(props.konu)} · Bitti</h2>
                         </div>
                         <div className="note-progress">{score}/{items.length}</div>
                     </header>
@@ -1005,7 +1029,7 @@ function ClozePlay(props) {
                 <header className="study-card-head">
                     <div>
                         <p className="study-card-kicker">{props.ders}</p>
-                        <h2 className="study-card-title">{props.konu} · Boşluk</h2>
+                        <h2 className="study-card-title">{kLabel(props.konu)} · Boşluk</h2>
                     </div>
                     <div className="note-progress">{idx + 1}/{items.length}</div>
                 </header>
@@ -1032,7 +1056,7 @@ function ClozePlay(props) {
                                         setScore(score + 1);
                                         StudentStore.markClozeSolved(props.ders, props.konu, it.id);
                                     }
-                                }} className={cls}>{c}</button>
+                                }} className={cls}>{clozeChoiceLabel(c)}</button>
                             );
                         })}
                     </div>
@@ -1042,7 +1066,7 @@ function ClozePlay(props) {
                         </p>
                     ) : null}
                 </div>
-                <footer className="study-card-foot">
+                <footer className="study-card-foot" ref={footRef} style={{ scrollMarginBottom: "calc(var(--app-tabbar-h) + 16px)" }}>
                     <span className="text-xs text-stone-400">{score} doğru</span>
                     <button disabled={!picked} onClick={function () {
                         if (idx + 1 >= items.length) setDone(true);
@@ -1121,6 +1145,7 @@ function MapPlay(props) {
     const dragRef = useRef(null);
     const flashTimer = useRef(null);
     const skipClickRef = useRef(false);
+    const fitKeyRef = useRef("");
     const total = round.items.length;
 
     useEffect(function () {
@@ -1139,7 +1164,7 @@ function MapPlay(props) {
 
     useEffect(function () {
         var gone = false;
-        fetch("svg/tr.svg?v=3").then(function (r) { return r.ok ? r.text() : Promise.reject(); })
+        fetch("svg/tr.svg?v=4").then(function (r) { return r.ok ? r.text() : Promise.reject(); })
             .then(function (txt) {
                 if (gone) return;
                 var doc = new DOMParser().parseFromString(txt, "image/svg+xml");
@@ -1270,6 +1295,23 @@ function MapPlay(props) {
         flashTimer.current = setTimeout(function () { setFlash(null); }, 560);
     }
 
+    // Bırakılan noktaya en yakın boş pini bul (üst üste binen isabet alanlarında yanlış pine düşmesin).
+    function nearestPinAt(x, y) {
+        var host = hostRef.current;
+        if (!host) return null;
+        var best = null, bestD = Infinity;
+        Array.prototype.forEach.call(host.querySelectorAll("[data-pin]"), function (n) {
+            if (placedRef.current[n.getAttribute("data-pin")]) return;
+            var ring = n.querySelector(".place-well") || n;
+            var r = ring.getBoundingClientRect();
+            var cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+            var d = Math.sqrt((cx - x) * (cx - x) + (cy - y) * (cy - y));
+            var reach = Math.max(26, r.width * 0.95);
+            if (d <= reach && d < bestD) { bestD = d; best = n; }
+        });
+        return best;
+    }
+
     function onChipPointerDown(e, chip) {
         if (placed[chip.id] || done) return;
         e.preventDefault();
@@ -1293,8 +1335,11 @@ function MapPlay(props) {
         var x = e.clientX, y = e.clientY;
         dragRef.current = null;
         setDrag(null);
-        var el = document.elementFromPoint(x, y);
-        var n = el && el.closest ? el.closest("[data-pin]") : null;
+        var n = nearestPinAt(x, y);
+        if (!n) {
+            var el = document.elementFromPoint(x, y);
+            n = el && el.closest ? el.closest("[data-pin]") : null;
+        }
         if (n) {
             skipClickRef.current = true;
             tryPlace(n.getAttribute("data-pin"), chipId);
@@ -1345,8 +1390,14 @@ function MapPlay(props) {
             hit.setAttribute("cy", String(pin.y));
             hit.setAttribute("r", "28");
             hit.setAttribute("class", "topic-hit");
+            var dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            dot.setAttribute("cx", String(pin.x));
+            dot.setAttribute("cy", String(pin.y));
+            dot.setAttribute("r", "3.2");
+            dot.setAttribute("class", "place-dot");
             wrap.appendChild(glow);
             wrap.appendChild(ring);
+            if (!locked) wrap.appendChild(dot);
             wrap.appendChild(hit);
             if (locked) {
                 var ico = document.createElementNS("http://www.w3.org/2000/svg", "text");
@@ -1362,6 +1413,31 @@ function MapPlay(props) {
             dots.appendChild(wrap);
         });
         svg.appendChild(dots);
+        // Küçük ekranda turun pinlerine otomatik yakınlaş (bir kez; "Tam" ile tüm harita).
+        var fitKey = props.seed + "|" + props.topicId;
+        var stageEl = stageRef.current;
+        if (fitKeyRef.current !== fitKey && stageEl && pins.length) {
+            fitKeyRef.current = fitKey;
+            var W = stageEl.clientWidth, H = stageEl.clientHeight;
+            if (W > 0 && H > 0) {
+                var k = Math.min(W / 1000, H / 422);
+                var pad = 55;
+                var mnx = Math.min.apply(null, pins.map(function (p) { return p.x; })) - pad;
+                var mxx = Math.max.apply(null, pins.map(function (p) { return p.x; })) + pad;
+                var mny = Math.min.apply(null, pins.map(function (p) { return p.y; })) - pad;
+                var mxy = Math.max.apply(null, pins.map(function (p) { return p.y; })) + pad;
+                var sFit = Math.min(W / ((mxx - mnx) * k), H / ((mxy - mny) * k));
+                var sMax = Math.max(1, 17 / (15 * k));
+                var s = Math.max(1, Math.min(sFit, sMax, 4.5));
+                if (s > 1.15) {
+                    var bx = (W - 1000 * k) / 2 + k * (mnx + mxx) / 2;
+                    var by = (H - 422 * k) / 2 + k * (mny + mxy) / 2;
+                    var tx = -s * (bx - W / 2), ty = -s * (by - H / 2);
+                    zoomRef.current = { s: s, x: tx, y: ty };
+                    el.style.transform = "translate(" + tx + "px, " + ty + "px) scale(" + s + ")";
+                }
+            }
+        }
         var g = document.createElementNS("http://www.w3.org/2000/svg", "g");
         g.setAttribute("class", "map-float-labels");
         pins.forEach(function (pin) {
@@ -1384,7 +1460,7 @@ function MapPlay(props) {
                 stageRef.current.removeAttribute("data-skip-click");
                 return;
             }
-            var n = ev.target.closest ? ev.target.closest("[data-pin]") : null;
+            var n = nearestPinAt(ev.clientX, ev.clientY) || (ev.target.closest ? ev.target.closest("[data-pin]") : null);
             if (!n) return;
             tryPlace(n.getAttribute("data-pin"), selectedRef.current);
         }
@@ -1610,7 +1686,7 @@ function KonuList(props) {
                                 <div className="flex gap-3 min-w-0">
                                     <div className={"h-10 w-10 rounded-xl flex items-center justify-center font-stat text-sm shrink-0 " + (done ? "bg-emerald-50 text-emerald-600" : (open ? "bg-stone-100 text-stone-700" : "bg-stone-100 text-stone-400"))}>{done ? "✓" : (open ? idx + 1 : "🔒")}</div>
                                     <div className="min-w-0">
-                                        <div className="font-bold text-slate-800 dark:text-slate-100">{konu}</div>
+                                        <div className="font-bold text-slate-800 dark:text-slate-100">{kLabel(konu)}</div>
                                         <p className="text-xs text-slate-400 mt-1">{open ? (function () {
                                             var packs = StudentStore.topicTestPacks(kd.sorular || []);
                                             var nLen = (kd.notlar || []).length;
@@ -1648,7 +1724,7 @@ function KonuHub(props) {
                 <BackBtn onClick={props.onBack} label="Konular" />
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
-            <h2 className="text-3xl font-black mb-2">{props.konu}</h2>
+            <h2 className="text-3xl font-black mb-2">{kLabel(props.konu)}</h2>
             <p className="text-slate-500 mb-2">{props.ders}</p>
             <div className="flex gap-2 mb-8">
                 <span className={"text-xs font-bold px-3 py-1 rounded-full " + m.cls}>{m.text}</span>
@@ -1764,7 +1840,7 @@ function NotesView(props) {
                     <header className="study-card-head">
                         <div className="min-w-0">
                             {props.ders ? <p className="study-card-kicker">{props.ders}</p> : null}
-                            <h2 className="study-card-title">{props.konu} · Özet</h2>
+                            <h2 className="study-card-title">{kLabel(props.konu)} · Özet</h2>
                         </div>
                         <div className="note-progress">{idx + 1}/{notlar.length}</div>
                     </header>
@@ -1812,6 +1888,8 @@ function TestView(props) {
     const ss = timed ? String(props.session.secondsLeft % 60).padStart(2, "0") : "";
     const tLeft = props.session.secondsLeft;
     const tCls = !timed ? "" : (tLeft <= 60 ? "text-coral-500" : tLeft <= 300 ? "text-amber-500" : "text-navy-600");
+    const nextRef = useRef(null);
+    useEffect(function () { if (props.answered) revealSoon(nextRef); }, [props.answered, qIndex]);
     return (
         <Shell>
             <div className="flex justify-between items-center text-sm font-bold text-slate-500 mb-4 gap-2">
@@ -1824,7 +1902,7 @@ function TestView(props) {
                 <div className="w-full bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full mb-4 overflow-hidden">
                 <div className="h-2.5 rounded-full" style={{ width: progress + "%", background: "linear-gradient(90deg, #0D2C4D, #1D8A99, #C5A059)" }} />
             </div>
-            {item.ders ? <p className="text-xs font-bold text-slate-400 mb-3">{item.ders} · {item.konu}</p> : null}
+            {item.ders ? <p className="text-xs font-bold text-slate-400 mb-3">{item.ders} · {kLabel(item.konu)}</p> : null}
             <div className="q-stem p-4 sm:p-8 rounded-3xl mb-6 relative overflow-hidden fade-in">
                 <div className="q-stem-bar absolute top-0 left-0 w-1.5 h-full"></div>
                 <h3 className="text-lg font-bold leading-relaxed whitespace-pre-line text-stone-900 pl-2">{soru.question}</h3>
@@ -1867,7 +1945,7 @@ function TestView(props) {
                             {StudentStore.inReviewBook(item.ders, item.konu, item.id) ? "Tekrardan çıkar" : "Tekrara at"}
                         </button>
                     ) : null}
-                    <button onClick={props.onNext} className="w-full btn-primary text-white p-5 rounded-2xl font-semibold">
+                    <button ref={nextRef} style={{ scrollMarginBottom: "24px" }} onClick={props.onNext} className="w-full btn-primary text-white p-5 rounded-2xl font-semibold">
                         {qIndex + 1 === items.length ? "Sonuçları gör" : "Sonraki soru"}
                     </button>
                 </div>
@@ -1908,7 +1986,7 @@ function ResultView(props) {
                         {props.breakdown.slice(0, 5).map(function (b) {
                             return (
                                 <div key={b.ders + b.konu} className="flex justify-between text-sm py-2 border-b border-slate-100 dark:border-slate-700">
-                                    <span className="pr-2">{b.konu}</span>
+                                    <span className="pr-2">{kLabel(b.konu)}</span>
                                     <span className="font-black">%{b.pct}</span>
                                 </div>
                             );
@@ -2006,7 +2084,7 @@ function Eksikler(props) {
                                         className={"w-full flex justify-between items-center p-3 rounded-xl border pointer-events-none " + (done
                                             ? "bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800"
                                             : "bg-stone-50 dark:bg-stone-900 border-stone-200 dark:border-stone-800 opacity-45")}>
-                                        <span className={"text-sm text-left pr-2 " + (done ? "font-semibold text-emerald-800 dark:text-emerald-200" : "font-medium text-stone-500")}>{r.konu}</span>
+                                        <span className={"text-sm text-left pr-2 " + (done ? "font-semibold text-emerald-800 dark:text-emerald-200" : "font-medium text-stone-500")}>{kLabel(r.konu)}</span>
                                         <span className={"text-[10px] font-semibold px-2 py-0.5 rounded-full shrink-0 " + (done ? "bg-emerald-100 text-emerald-700" : "bg-stone-100 text-stone-400")}>
                                             {done ? "Bitti" : "Bekliyor"}
                                         </span>
@@ -2380,7 +2458,10 @@ function packFromKonu(kpssData, ders, konu, packIdx) {
 function App() {
     const student = useStudent();
     const isDark = !!(student.profile && student.profile.dark);
-    const rawData = (typeof window !== "undefined" && window.kpssData) ? window.kpssData : {};
+    // window.kpssData her okunuşta yeni nesne üretir; bir kez al ki plan/filtre her render'da baştan hesaplanmasın.
+    const rawData = useMemo(function () {
+        return (typeof window !== "undefined" && window.kpssData) ? window.kpssData : {};
+    }, []);
     const kpssData = useMemo(function () {
         var ac = window.AlanCatalog;
         return (ac && ac.filterCatalog) ? ac.filterCatalog(rawData, student) : rawData;

@@ -3,13 +3,13 @@ window.tarih_29_sorulari = [
     {
         "question": "Türklerde hükümdarlık yetkisinin Tanrı tarafından verildiğine inanılması hangi kavramla ifade edilir?",
         "options": [
-            "A) Töre",
-            "B) Kut",
+            "A) Kut",
+            "B) Töre",
             "C) Kurultay",
             "D) İkta",
             "E) Veraset"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 0,
         "explanation": "Kut anlayışı: yetki Tanrı’dan gelir; ancak sınırsız değildir, töreye uyulur."
     },
     {
@@ -28,12 +28,12 @@ window.tarih_29_sorulari = [
         "question": "Yazılı olmayan hukuk kurallarının adı nedir?",
         "options": [
             "A) Divan",
-            "B) Töre",
+            "B) Tımar",
             "C) İkta",
-            "D) Tımar",
+            "D) Töre",
             "E) Kanunname"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 3,
         "explanation": "Töre = yazılı olmayan hukuk."
     },
     {
@@ -88,12 +88,12 @@ window.tarih_29_sorulari = [
         "question": "Attila hangi Türk devletinin hükümdarıdır?",
         "options": [
             "A) Asya Hun",
-            "B) Avrupa Hun",
+            "B) Avar",
             "C) Göktürk",
             "D) Uygur",
-            "E) Avar"
+            "E) Avrupa Hun"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "Avrupa Hunları — Attila."
     },
     {
@@ -124,60 +124,60 @@ window.tarih_29_sorulari = [
         "question": "İlk Müslüman Türk devleti olarak kabul edilen hangisidir?",
         "options": [
             "A) Gazneliler",
-            "B) Karahanlılar",
+            "B) Harzemşahlar",
             "C) Büyük Selçuklu",
             "D) Tolunoğulları",
-            "E) Harzemşahlar"
+            "E) Karahanlılar"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "Karahanlılar."
     },
     {
         "question": "Resmî dili Türkçe olan ilk Türk-İslam devleti hangisidir?",
         "options": [
-            "A) Gazneliler",
-            "B) Karahanlılar",
+            "A) Karahanlılar",
+            "B) Gazneliler",
             "C) Büyük Selçuklu",
             "D) Anadolu Selçuklu",
             "E) Osmanlı"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 0,
         "explanation": "Karahanlılar."
     },
     {
         "question": "Kutadgu Bilig’in yazarı kimdir?",
         "options": [
             "A) Kaşgarlı Mahmut",
-            "B) Yusuf Has Hacip",
-            "C) Edip Ahmet Yükneki",
+            "B) Edip Ahmet Yükneki",
+            "C) Yusuf Has Hacip",
             "D) Ahmet Yesevi",
             "E) Biruni"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 2,
         "explanation": "Yusuf Has Hacip — siyasetname."
     },
     {
         "question": "Divanü Lügati’t-Türk’ün yazarı kimdir?",
         "options": [
             "A) Yusuf Has Hacip",
-            "B) Kaşgarlı Mahmut",
+            "B) Nizamülmülk",
             "C) Edip Ahmet Yükneki",
             "D) Ahmet Yesevi",
-            "E) Nizamülmülk"
+            "E) Kaşgarlı Mahmut"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "Kaşgarlı Mahmut — Türkçenin zenginliği / Araplara Türkçe."
     },
     {
         "question": "Atabetü’l-Hakayık hangi yazar–konu ile eşleşir?",
         "options": [
             "A) Ahmet Yesevi – tasavvuf",
-            "B) Edip Ahmet Yükneki – ahlak",
-            "C) Yusuf Has Hacip – dil",
+            "B) Yusuf Has Hacip – dil",
+            "C) Edip Ahmet Yükneki – ahlak",
             "D) Kaşgarlı Mahmut – siyaset",
             "E) Biruni – tıp"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 2,
         "explanation": "Edip Ahmet Yükneki — ahlak."
     },
     {
@@ -207,13 +207,13 @@ window.tarih_29_sorulari = [
     {
         "question": "1040 Dandanakan Savaşı’nda Büyük Selçuklu kimi yenmiştir?",
         "options": [
-            "A) Bizans",
-            "B) Gazneliler",
+            "A) Gazneliler",
+            "B) Bizans",
             "C) Abbasiler",
             "D) Moğollar",
             "E) Haçlılar"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 0,
         "explanation": "Tuğrul Bey dönemi — Gazneliler."
     },
     {
@@ -231,37 +231,37 @@ window.tarih_29_sorulari = [
     {
         "question": "Nizamiye Medreseleri kiminle ilişkilendirilir?",
         "options": [
-            "A) Biruni",
-            "B) Nizamülmülk",
+            "A) Nizamülmülk",
+            "B) Biruni",
             "C) Gazneli Mahmut",
             "D) Kaşgarlı Mahmut",
             "E) Ahmet Yesevi"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 0,
         "explanation": "Nizamülmülk — Büyük Selçuklu."
     },
     {
         "question": "İkta sistemi için hangisi doğrudur?",
         "options": [
             "A) Özel mülkiyettir",
-            "B) Vergi geliri görevliye bırakılır, görevli asker besler",
-            "C) Osmanlı’da yoktur",
+            "B) Osmanlı’da yoktur",
+            "C) Vergi geliri görevliye bırakılır, görevli asker besler",
             "D) Yalnızca ticaret içindir",
             "E) Halife mülküdür"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 2,
         "explanation": "İkta ≠ özel mülkiyet; tımarın öncülü."
     },
     {
         "question": "Atabey’in temel görevi nedir?",
         "options": [
             "A) Ordu komutanlığı",
-            "B) Şehzade eğitimi ve devlet yönetimini öğretmek",
+            "B) Vergi toplamak",
             "C) Halife seçmek",
-            "D) Vergi toplamak",
+            "D) Şehzade eğitimi ve devlet yönetimini öğretmek",
             "E) Donanma kurmak"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 3,
         "explanation": "Şehzade eğitimi; bazı Atabeyler sonra bağımsızlaşabilmiştir."
     },
     {
@@ -280,12 +280,12 @@ window.tarih_29_sorulari = [
         "question": "Anadolu Selçuklu’da başkent sırası hangisidir?",
         "options": [
             "A) Konya → İznik",
-            "B) İznik → Konya",
+            "B) Alanya → Konya",
             "C) Sivas → Konya",
             "D) İznik → Sivas",
-            "E) Alanya → Konya"
+            "E) İznik → Konya"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "I. Kılıç Arslan İznik’i bırakıp Konya’ya taşıdı."
     },
     {
@@ -328,36 +328,36 @@ window.tarih_29_sorulari = [
         "question": "Divriği Ulu Camii hangi beylikle ilişkilidir?",
         "options": [
             "A) Danişmentliler",
-            "B) Mengücekliler",
+            "B) Karamanoğulları",
             "C) Saltuklular",
             "D) Artuklular",
-            "E) Karamanoğulları"
+            "E) Mengücekliler"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "Mengücekliler."
     },
     {
         "question": "Yağıbasan Medresesi hangi beylikle ilişkilidir?",
         "options": [
             "A) Mengücekliler",
-            "B) Danişmentliler",
-            "C) Saltuklular",
+            "B) Saltuklular",
+            "C) Danişmentliler",
             "D) Çaka",
             "E) Karamanoğulları"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 2,
         "explanation": "Danişmentliler."
     },
     {
         "question": "İlk Türk denizcisi olarak bilinen kimdir?",
         "options": [
             "A) Barbaros",
-            "B) Çaka Bey",
+            "B) Oruç Reis",
             "C) Piri Reis",
             "D) Turgut Reis",
-            "E) Oruç Reis"
+            "E) Çaka Bey"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "Çaka Beyliği — İzmir."
     },
     {
@@ -424,12 +424,12 @@ window.tarih_29_sorulari = [
         "question": "Ankara Savaşı (1402) sonucu ne olmuştur?",
         "options": [
             "A) İstanbul fethedildi",
-            "B) Fetret Devri başladı",
+            "B) Yeniçeri kaldırıldı",
             "C) Lale Devri başladı",
-            "D) Yeniçeri kaldırıldı",
+            "D) Fetret Devri başladı",
             "E) Halifelik alındı"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 3,
         "explanation": "Yıldırım, Timur’a yenildi → Fetret."
     },
     {
@@ -460,24 +460,24 @@ window.tarih_29_sorulari = [
         "question": "Çaldıran Savaşı (1514) kime karşıdır?",
         "options": [
             "A) Memlükler",
-            "B) Safeviler",
+            "B) Portekiz",
             "C) Haçlılar",
             "D) Bizans",
-            "E) Portekiz"
+            "E) Safeviler"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "Yavuz — Safeviler."
     },
     {
         "question": "Halifeliğin Osmanlı’ya geçmesi hangi olaylar zinciriyle ilişkilidir?",
         "options": [
-            "A) Malazgirt–Kösedağ",
-            "B) Mercidabık–Ridaniye (Mısır Seferi)",
+            "A) Mercidabık–Ridaniye (Mısır Seferi)",
+            "B) Malazgirt–Kösedağ",
             "C) Preveze–Mohaç",
             "D) Karlofça–Pasarofça",
             "E) Tanzimat–Islahat"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 0,
         "explanation": "1516–1517 Memlüklerin yıkılışı."
     },
     {
@@ -495,37 +495,37 @@ window.tarih_29_sorulari = [
     {
         "question": "1535’te Fransa’ya kapitülasyon verilmesinin amaçlarından biri nedir?",
         "options": [
-            "A) Halifeliği almak",
-            "B) Habsburglar’a karşı Fransa’yı yanında tutmak",
+            "A) Habsburglar’a karşı Fransa’yı yanında tutmak",
+            "B) Halifeliği almak",
             "C) Yeniçeri kurmak",
             "D) Matbaa getirmek",
             "E) Musul’u almak"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 0,
         "explanation": "Kanuni — siyasi denge."
     },
     {
         "question": "Osmanlı’nın ilk büyük toprak kaybı hangi antlaşmayla ilişkilendirilir?",
         "options": [
             "A) Pasarofça",
-            "B) Karlofça",
+            "B) Lozan",
             "C) Küçük Kaynarca",
             "D) Yaş",
-            "E) Lozan"
+            "E) Karlofça"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "Karlofça 1699 — savunmaya geçiş."
     },
     {
         "question": "Lale Devri hangi antlaşmayla başlar?",
         "options": [
-            "A) Karlofça",
-            "B) Pasarofça",
+            "A) Pasarofça",
+            "B) Karlofça",
             "C) Küçük Kaynarca",
             "D) Yaş",
             "E) Berlin"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 0,
         "explanation": "1718 Pasarofça → 1730 Patrona Halil."
     },
     {
@@ -628,48 +628,48 @@ window.tarih_29_sorulari = [
         "question": "Seyfiye–İlmiye–Kalemiye eşleştirmesinde hangisi doğrudur?",
         "options": [
             "A) Kalemiye = askerlik",
-            "B) İlmiye = eğitim–hukuk–din",
+            "B) Kalemiye = ordu",
             "C) Seyfiye = matbaa",
             "D) İlmiye = maliye",
-            "E) Kalemiye = ordu"
+            "E) İlmiye = eğitim–hukuk–din"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "Seyfiye asker/yönetim; İlmiye eğitim/hukuk/din; Kalemiye bürokrasi/maliye."
     },
     {
         "question": "Dirlik gelir sırası hangisidir?",
         "options": [
             "A) Tımar → Zeamet → Has",
-            "B) Has → Zeamet → Tımar",
+            "B) Has → Tımar → Zeamet",
             "C) Zeamet → Has → Tımar",
-            "D) Has → Tımar → Zeamet",
+            "D) Has → Zeamet → Tımar",
             "E) Tımar → Has → Zeamet"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 3,
         "explanation": "Has yüksek, tımar daha düşük."
     },
     {
         "question": "Trablusgarp Savaşı (1911–12) sonunda imzalanan antlaşma hangisidir?",
         "options": [
-            "A) Londra",
-            "B) Uşi",
+            "A) Uşi",
+            "B) Londra",
             "C) Sevr",
             "D) Mondros",
             "E) Gümrü"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 0,
         "explanation": "Trablusgarp İtalya’ya bırakıldı."
     },
     {
         "question": "Mustafa Kemal’in ilk askerî başarıları hangi cepheyle anılır?",
         "options": [
             "A) Çanakkale",
-            "B) Trablusgarp (Tobruk–Derne)",
-            "C) Sakarya",
+            "B) Sakarya",
+            "C) Trablusgarp (Tobruk–Derne)",
             "D) Büyük Taarruz",
             "E) Kafkas"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 2,
         "explanation": "Gazeteci Şerif kimliğiyle Trablusgarp."
     },
     {
@@ -712,24 +712,24 @@ window.tarih_29_sorulari = [
         "question": "Bölgesel toplanıp ulusal kararlar alan kongre hangisidir?",
         "options": [
             "A) Sivas",
-            "B) Erzurum",
+            "B) Balıkesir",
             "C) Amasya",
-            "D) Balıkesir",
+            "D) Erzurum",
             "E) Alaşehir"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 3,
         "explanation": "Erzurum = bölgesel + ulusal karar."
     },
     {
         "question": "Cemiyetlerin birleştirildiği ulusal kongre hangisidir?",
         "options": [
             "A) Erzurum",
-            "B) Sivas",
+            "B) İzmir",
             "C) Amasya",
-            "D) İzmir",
+            "D) Sivas",
             "E) Trabzon"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 3,
         "explanation": "Anadolu ve Rumeli Müdafaa-i Hukuk."
     },
     {
@@ -748,12 +748,12 @@ window.tarih_29_sorulari = [
         "question": "TBMM’nin uluslararası alanda imzaladığı ilk antlaşma hangisidir?",
         "options": [
             "A) Lozan",
-            "B) Gümrü",
+            "B) Moskova",
             "C) Ankara",
-            "D) Moskova",
+            "D) Gümrü",
             "E) Kars"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 3,
         "explanation": "Doğu Cephesi — Ermeniler."
     },
     {
@@ -772,12 +772,12 @@ window.tarih_29_sorulari = [
         "question": "Sakarya Zaferi sonrası Mustafa Kemal’e verilen unvanlar hangileridir?",
         "options": [
             "A) Halife ve Padişah",
-            "B) Gazi ve Mareşal",
+            "B) Başbakan",
             "C) Veziriazam",
             "D) Kayser",
-            "E) Başbakan"
+            "E) Gazi ve Mareşal"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "23 Ağustos–13 Eylül 1921."
     },
     {
@@ -795,25 +795,25 @@ window.tarih_29_sorulari = [
     {
         "question": "Tevhid-i Tedrisat ve Medeni Kanun hangi ilkeyle daha doğrudan ilişkilendirilir?",
         "options": [
-            "A) Devletçilik",
-            "B) Laiklik",
+            "A) Laiklik",
+            "B) Devletçilik",
             "C) Milliyetçilik",
             "D) Halkçılık",
             "E) İnkılapçılık yalnız"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 0,
         "explanation": "Din–devlet/eğitim–hukuk ayrımı çizgisi."
     },
     {
         "question": "Sümerbank ve Etibank hangi ilkenin örneğidir?",
         "options": [
             "A) Laiklik",
-            "B) Devletçilik",
+            "B) Cumhuriyetçilik",
             "C) Halkçılık",
-            "D) Cumhuriyetçilik",
+            "D) Devletçilik",
             "E) Milliyetçilik"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 3,
         "explanation": "Ekonomide devletin aktif rolü."
     },
     {
@@ -868,12 +868,12 @@ window.tarih_29_sorulari = [
         "question": "Sadabat Paktı (1937) üyeleri hangileridir?",
         "options": [
             "A) TR–Yunanistan–Romanya–Yugoslavya",
-            "B) TR–İran–Irak–Afganistan",
+            "B) TR–Almanya–İtalya",
             "C) TR–İngiltere–Fransa",
             "D) TR–SSCB–ABD",
-            "E) TR–Almanya–İtalya"
+            "E) TR–İran–Irak–Afganistan"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "Doğu sınırlarında güvenlik."
     },
     {
@@ -903,13 +903,13 @@ window.tarih_29_sorulari = [
     {
         "question": "II. Dünya Savaşı’nda Mihver devletleri hangileridir?",
         "options": [
-            "A) İngiltere–Fransa–ABD",
-            "B) Almanya–İtalya–Japonya",
+            "A) Almanya–İtalya–Japonya",
+            "B) İngiltere–Fransa–ABD",
             "C) SSCB–ABD–Çin",
             "D) Türkiye–Yunanistan–Romanya",
             "E) İran–Irak–Afganistan"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 0,
         "explanation": "Müttefik: İngiltere–Fransa–SSCB–ABD."
     },
     {
@@ -964,12 +964,12 @@ window.tarih_29_sorulari = [
         "question": "Osmanlı’da Defterdar’ın temel alanı hangisidir?",
         "options": [
             "A) Adalet",
-            "B) Maliye",
+            "B) Dış politika yalnız",
             "C) Donanma",
             "D) Eğitim",
-            "E) Dış politika yalnız"
+            "E) Maliye"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 4,
         "explanation": "Divan’da maliye."
     },
     {

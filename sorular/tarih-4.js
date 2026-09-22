@@ -82,13 +82,13 @@ window.tarih_4_sorulari = [
     "id": "7",
     "question": "Herhangi bir devşirmeyi öldürme hakkına sahip olma yetkisi aşağıdaki kavramlardan hangisiyle ifade edilir?",
     "options": [
-      "A) Müsadere",
-      "B) Kulluk hakkı",
+      "A) Kulluk hakkı",
+      "B) Müsadere",
       "C) Beratname",
       "D) Yasakname",
       "E) Amanname"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Padişahın, devşirme kökenli devlet görevlileri (kul taifesi) üzerinde doğrudan yargılama yapmadan cezalandırma, canını alma veya mallarına el koyma hakkına 'Kulluk Hakkı' denir. Bu sistem merkezi otoritenin mutlak kalmasını sağlamıştır."
   },
   {
@@ -200,12 +200,12 @@ window.tarih_4_sorulari = [
     "question": "Topkapı Sarayı'nın 'Birun' (dış) kısmıyla ilgili aşağıdakilerden hangisi doğrudur?",
     "options": [
       "A) Padişah ve ailesinin özel yaşam alanıdır",
-      "B) Dışarıdan gelen elçiler kabul edilmiş, divan toplantıları Babüssaade Kapısı'nda yapılmıştır",
-      "C) Devşirme çocukların eğitim gördüğü okuldur",
+      "B) Devşirme çocukların eğitim gördüğü okuldur",
+      "C) Dışarıdan gelen elçiler kabul edilmiş, divan toplantıları Babüssaade Kapısı'nda yapılmıştır",
       "D) Sadrazam ve verzir yetiştiren bölümdür",
       "E) Kız çocuklarının eğitim gördüğü bölümdür"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Birun, sarayın dış bölümüdür ve burada devlet işleri yürütülür, elçiler kabul edilir, Divan-ı Hümayun toplantıları yapılırdı. Padişahın özel hayatı Harem'de; devşirmelerin eğitimi (okul) ise Enderun'da (iç saray) gerçekleşirdi."
   },
   {
@@ -265,25 +265,25 @@ window.tarih_4_sorulari = [
     "question": "Divan-ı Hümayun'da alınan kararların (hükümlerin) kaydedildiği deftere ne ad verilir?",
     "options": [
       "A) Ruzname",
-      "B) Mühimme",
+      "B) Tahrir",
       "C) Tereke",
-      "D) Tahrir",
+      "D) Mühimme",
       "E) Ceride"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Divan-ı Hümayun'da görüşülen siyasi, askeri, hukuki ve sosyal kararlar (hükümler) 'Mühimme Defterleri' adı verilen resmi defterlere Nişancı'nın gözetiminde kaydedilirdi."
   },
   {
     "id": "22",
     "question": "Divan-ı Hümayun'un, herkesin davalarına itiraz için başvurabilmesi özelliğiyle benzetildiği Türk-İslam devletlerindeki kurum aşağıdakilerden hangisidir?",
     "options": [
-      "A) Divan-ı İstifa",
-      "B) Divan-ı Mezalim",
+      "A) Divan-ı Mezalim",
+      "B) Divan-ı İstifa",
       "C) Divan-ı Arz",
       "D) Divan-ı İnşa",
       "E) Divan-ı Berid"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Türk-İslam devletlerinde (örneğin Selçuklularda) hükümdarın başkanlığında toplanan, ağır siyasi suçların yargılandığı ve halkın haksızlıklara karşı üst mahkeme olarak başvurduğu kuruma 'Divan-ı Mezalim' denirdi. Divan-ı Hümayun da bu yönüyle en yüksek yargı mercii konumundadır."
   },
   {
@@ -356,12 +356,12 @@ window.tarih_4_sorulari = [
     "question": "Divana sonradan üye olan görevlilerin yüzyıllara göre sıralaması aşağıdakilerden hangisinde doğru verilmiştir?",
     "options": [
       "A) XVI. yy Reisülküttab – XVII. yy Kaptan-ı Derya – XVIII. yy Şeyhülislam",
-      "B) XVI. yy Kaptan-ı Derya – XVII. yy Reisülküttab – XVIII. yy Şeyhülislam",
-      "C) XVI. yy Şeyhülislam – XVII. yy Kaptan-ı Derya – XVIII. yy Reisülküttab",
+      "B) XVI. yy Şeyhülislam – XVII. yy Kaptan-ı Derya – XVIII. yy Reisülküttab",
+      "C) XVI. yy Kaptan-ı Derya – XVII. yy Reisülküttab – XVIII. yy Şeyhülislam",
       "D) XVI. yy Kaptan-ı Derya – XVII. yy Şeyhülislam – XVIII. yy Reisülküttab",
       "E) XVI. yy Reisülküttab – XVII. yy Şeyhülislam – XVIII. yy Kaptan-ı Derya"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Divana sonradan dahil olan üyelerin kronolojisi şu şekildedir: 16. yüzyılda Kaptan-ı Derya (Barbaros Hayrettin Paşa ile), 17. yüzyılda dış işlerinin önem kazanmasıyla Reisülküttab, 18. yüzyılda ise resmi olarak Şeyhülislam divanın sürekli ve asli unsurları arasına katılmıştır."
   },
   {
@@ -395,12 +395,12 @@ window.tarih_4_sorulari = [
     "question": "1840 Vilayet Nizamnamesi'nde 'eyalet' biriminin yöneticisi aşağıdakilerden hangisidir?",
     "options": [
       "A) Vali",
-      "B) Müşir",
+      "B) Beylerbeyi",
       "C) Mutasarrıf",
-      "D) Beylerbeyi",
+      "D) Müşir",
       "E) Kaza müdürü"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "1840 Vilayet Nizamnamesi ile taşra yeniden yapılandırılmış ve en büyük idari birim olan 'Eyalet'lerin başına askeri-mülki bir unvan olan 'Müşir' getirilmiştir."
   },
   {
@@ -525,12 +525,12 @@ window.tarih_4_sorulari = [
     "question": "'Garp Ocakları' olarak adlandırılan eyaletler aşağıdakilerin hangisinde birlikte ve doğru verilmiştir?",
     "options": [
       "A) Mısır – Bağdat – Yemen",
-      "B) Tunus – Cezayir – Trablusgarp",
-      "C) Eflak – Boğdan – Erdel",
+      "B) Eflak – Boğdan – Erdel",
+      "C) Tunus – Cezayir – Trablusgarp",
       "D) Halep – Şam – Musul",
       "E) Hicaz – Kırım – Erdel"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Osmanlı Devleti'nin Kuzey Afrika'daki Akdeniz korsanlığı ve denizcilik üssü olan en batıdaki üç eyaletine (Tunus, Cezayir, Trablusgarp) tarih literatüründe 'Garp Ocakları' denmiştir."
   },
   {
@@ -616,12 +616,12 @@ window.tarih_4_sorulari = [
     "question": "Bursa, Edirne ve İstanbul gibi büyük merkezlerde görev yapan kadılara verilen ad aşağıdakilerden hangisidir?",
     "options": [
       "A) Merkeziyet Kadısı",
-      "B) Taht Kadısı",
+      "B) Müderris",
       "C) Naib",
-      "D) Müderris",
+      "D) Taht Kadısı",
       "E) Kazasker"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Devletin en önemli büyük merkezlerinde, eski ve yeni başkentlerinde (Bursa, Edirne, İstanbul, Kahire vb.) görev yapan en yüksek rütbeli kadılara 'Taht Kadısı' unvanı verilirdi."
   },
   {
@@ -654,13 +654,13 @@ window.tarih_4_sorulari = [
     "id": "51",
     "question": "Hacca gidenleri İstanbul'dan uğurlamak ve hediyeleri götürmek amacıyla düzenlenen alaya ne ad verilir?",
     "options": [
-      "A) Cülus alayı",
-      "B) Surre alayı",
+      "A) Surre alayı",
+      "B) Cülus alayı",
       "C) Kılıç alayı",
       "D) Mehter alayı",
       "E) Cirit alayı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Her yıl hac mevsiminde mukaddes topraklara (Hicaz) padişahın ve halkın gönderdiği para, altın, Kabe örtüsü ve hediyeleri götürmek üzere İstanbul'dan dualarla yola çıkarılan kervana ve yapılan törene 'Surre Alayı' denir."
   },
   {
@@ -746,12 +746,12 @@ window.tarih_4_sorulari = [
     "question": "Medreselerde yetişen, 'ulema' olarak da adlandırılan ve başında şeyhülislamın bulunduğu memur kesimi aşağıdakilerden hangisidir?",
     "options": [
       "A) Seyfiye",
-      "B) İlmiye",
+      "B) Reaya",
       "C) Kalemiye",
-      "D) Reaya",
+      "D) İlmiye",
       "E) Beraya"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Eğitim (müderrisler), yargı/adalet (kadılar) ve din (müftüler/şeyhülislam) işlerini yürüten, medrese mezunu ulema kesiminden oluşan sınıfa 'İlmiye sınıfı' (Din ve hukuk ehli) denir."
   },
   {
@@ -772,12 +772,12 @@ window.tarih_4_sorulari = [
     "question": "Osmanlı toplumunda yönetici sınıf ile yönetilen sınıfa verilen adlar aşağıdakilerden hangisinde sırasıyla doğru verilmiştir?",
     "options": [
       "A) Reaya – Beraya",
-      "B) Beraya – Reaya",
+      "B) İlmiye – Kalemiye",
       "C) Seyfiye – İlmiye",
-      "D) İlmiye – Kalemiye",
+      "D) Beraya – Reaya",
       "E) Kalemiye – Seyfiye"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Osmanlı'da vergi vermeyen, askeri, idari, hukuki görevleri yürüten yönetici sınıfa 'Beraya' (Askeriler); tarım, ticaret ve zanaatla uğraşan, vergi veren yönetilen halk sınıfına ise 'Reaya' denir."
   },
   {
@@ -797,13 +797,13 @@ window.tarih_4_sorulari = [
     "id": "62",
     "question": "Kapıkulu askerlerinin üç ayda bir aldığı düzenli maaşa ve tahta çıkışta verilen ödemeye verilen adlar aşağıdakilerden hangisinde sırasıyla doğru verilmiştir?",
     "options": [
-      "A) Cülus bahşişi – ulufe",
-      "B) Ulufe – cülus bahşişi",
+      "A) Ulufe – cülus bahşişi",
+      "B) Cülus bahşişi – ulufe",
       "C) Ulufe – gülbank",
       "D) Tımar – ulufe",
       "E) Gülbank – cülus bahşişi"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Merkezi orduda yer alan kapıkulu (yeniçeri vb.) askerlerinin 3 ayda bir aldıkları maaşa 'Ulufe', her padişah değiştiğinde tahta çıkan yeni hükümdarın dağıttığı ikramiyeye ise 'Cülus Bahşişi' denir."
   },
   {
@@ -836,13 +836,13 @@ window.tarih_4_sorulari = [
     "id": "65",
     "question": "Acemi Oğlanlar Ocağı'ndan usta birliğe (yeniçeriliğe) geçme işlemine ne ad verilir?",
     "options": [
-      "A) Cerre çıkmak",
-      "B) Bedergah (kapıya çıkma)",
+      "A) Bedergah (kapıya çıkma)",
+      "B) Cerre çıkmak",
       "C) Taşraya çıkma",
       "D) Çıkma",
       "E) Bed-i besmele"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Devşirme çocukların ilk eğitildiği Acemi Oğlanlar Ocağı'ndan, Yeniçeri Ocağı'na veya diğer usta kapıkulu birliklerine tayin edilip geçmelerine 'Bedergâh' ya da 'Kapıya Çıkma' işlemi denir."
   },
   {
@@ -941,12 +941,12 @@ window.tarih_4_sorulari = [
     "question": "İlk Osmanlı tersanesinin açıldığı yer ve dönemin padişahı aşağıdakilerden hangisinde doğru verilmiştir?",
     "options": [
       "A) Sinop – Orhan Bey",
-      "B) Karamürsel – Orhan Bey",
-      "C) Gelibolu – I. Murat",
+      "B) Gelibolu – I. Murat",
+      "C) Karamürsel – Orhan Bey",
       "D) İstanbul – Fatih Sultan Mehmet",
       "E) İzmit – Yıldırım Bayezid"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Osmanlı Devleti'nde ilk gemi yapım yeri (tersane) Orhan Bey döneminde Marmara Denizi kıyısındaki 'Karamürsel'de açılmıştır. Daha sonra Yıldırım Bayezid döneminde Gelibolu'da büyük bir tersane kurulacaktır."
   },
   {
@@ -1006,12 +1006,12 @@ window.tarih_4_sorulari = [
     "question": "Geliri doğrudan hazineye ait olan ve iltizam sisteminin uygulandığı miri arazi türü aşağıdakilerden hangisidir?",
     "options": [
       "A) Paşmaklık",
-      "B) Mukataa",
-      "C) Malikane",
+      "B) Malikane",
+      "C) Mukataa",
       "D) Ocaklık",
       "E) Arpalık"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Geliri doğrudan doğruya merkez hazineye aktarılan, dirlik sistemine dahil edilmeyip vergileri nakit para olarak iltizam yoluyla mültezimlerce toplanan miri arazi türüne 'Mukataa' denir."
   },
   {
@@ -1083,13 +1083,13 @@ window.tarih_4_sorulari = [
     "id": "84",
     "question": "Osmanlı örgün eğitiminde ilk basamak olan ve 4-6 yaş arası çocukların eğitim gördüğü kurum aşağıdakilerden hangisidir?",
     "options": [
-      "A) Medrese",
-      "B) Sıbyan Mektebi",
+      "A) Sıbyan Mektebi",
+      "B) Medrese",
       "C) Enderun",
       "D) Harem",
       "E) Şehzadegan Mektebi"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Osmanlı eğitim sisteminin ilk basamağı olan, her mahallede veya cami yanında bulunan ve küçük yaştaki kız/erkek çocuklarına temel okuma-yazma ile dini bilgilerin öğretildiği kurumlara 'Sıbyan Mektebi' (Mahalle Mektebi) denir."
   },
   {
@@ -1240,12 +1240,12 @@ window.tarih_4_sorulari = [
     "question": "Osmanlı'nın kuruluşu hakkında bilgi veren elimizdeki en eski kaynaklardan 'İskendername'nin yazarı aşağıdakilerden hangisidir?",
     "options": [
       "A) Yahşi Fakih",
-      "B) Ahmedi",
+      "B) Neşri",
       "C) Aşık Paşazade",
-      "D) Neşri",
+      "D) Ahmedi",
       "E) Kadızade-i Rumi"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Osmanlı Devleti'nin kuruluşu ve ilk dönemlerine ait bilgileri bir bölüm halinde içeren, günümüze ulaşmış en eski yazılı Türkçe manzum eser olan 'İskendername'nin yazarı şair ve hekim Ahmedi'dir."
   },
   {
@@ -1266,12 +1266,12 @@ window.tarih_4_sorulari = [
     "question": "Osmanlı'nın ilk müderrisi ve ilk şeyhülislamı aşağıdakilerden hangisinde sırasıyla doğru verilmiştir?",
     "options": [
       "A) Molla Fenari – Davud-u Kayseri",
-      "B) Davud-u Kayseri – Molla Fenari",
+      "B) Akşemseddin – Molla Fenari",
       "C) Kadızade-i Rumi – Davud-u Kayseri",
-      "D) Akşemseddin – Molla Fenari",
+      "D) Davud-u Kayseri – Molla Fenari",
       "E) Davud-u Kayseri – Akşemseddin"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Osmanlı Devleti'nin atanan ilk müderrisi Davud-u Kayseri (İznik Medresesi), II. Murat döneminde resmiyet kazanan ilk Şeyhülislamı (Müftüsü) ise Molla Fenari'dir."
   },
   {
@@ -1279,12 +1279,12 @@ window.tarih_4_sorulari = [
     "question": "Fatih Sultan Mehmet döneminde yaşayan; mikrop teorisi üzerine çalışan ilk kanser araştırmacısı olarak anılan ve aynı zamanda Fatih'in hocalığını yapan âlim aşağıdakilerden hangisidir?",
     "options": [
       "A) Sabuncuoğlu Şerafettin",
-      "B) Akşemseddin",
-      "C) Ali Kuşçu",
+      "B) Ali Kuşçu",
+      "C) Akşemseddin",
       "D) Altuncuzade",
       "E) Molla Fenari"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Fatih Sultan Mehmet'in hocası olan, İstanbul'un manevi fatihi kabul edilen Akşemseddin, tıp alanında çalışmalar yapmış ve Fracastoro'dan çok önce 'Maddetü'l-Hayat' adlı eserinde hastalıkların gözle görülmeyen küçük tohumlar (mikroplar) yoluyla insandan insana geçtiğini belirtmiştir."
   },
   {
@@ -1305,38 +1305,38 @@ window.tarih_4_sorulari = [
     "question": "Timur Devleti'nde Semerkant'ta yetişen, Ay'ın haritasını çıkaran ve Fatih'e 'El Risalettün Fethiye' eserini sunan astronom-matematikçi aşağıdakilerden hangisidir?",
     "options": [
       "A) Kadızade-i Rumi",
-      "B) Ali Kuşçu",
+      "B) Piri Reis",
       "C) Takiyüddin Mehmet",
-      "D) Piri Reis",
+      "D) Ali Kuşçu",
       "E) Seydi Ali Reis"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Semerkant Rasathanesi müdürlüğü yapmış, Uluğ Bey'in öğrencisi olan ve Fatih Sultan Mehmet'in davetiyle İstanbul'a gelerek Ay'ın haritasını çıkaran, Sahn-ı Seman medresesinde matematik dersleri veren ünlü bilgin Ali Kuşçu'dır."
   },
   {
     "id": "102",
     "question": "İlk dünya haritasını çizip Yavuz Sultan Selim'e sunan ve Kitab-ı Bahriye'yi yazan denizci-bilgin aşağıdakilerden hangisidir?",
     "options": [
-      "A) Seydi Ali Reis",
-      "B) Piri Reis",
+      "A) Piri Reis",
+      "B) Seydi Ali Reis",
       "C) Kemal Reis",
       "D) Turgut Reis",
       "E) Barbaros Hayrettin Paşa"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "1513 yılında çizdiği ceylan derisi üzerine dünya haritasını Yavuz Sultan Selim'e takdim eden, denizcilik klasiği 'Kitab-ı Bahriye'nin yazarı olan Coğrafya Dehası ve Osmanlı Amirali Piri Reis'tir."
   },
   {
     "id": "103",
     "question": "Kanuni döneminde yaşayan, 'Miratü'l Memalik' ve 'Kitabü Nuhit' adlı eserleri yazan denizci-bilgin aşağıdakilerden hangisidir?",
     "options": [
-      "A) Piri Reis",
-      "B) Seydi Ali Reis",
+      "A) Seydi Ali Reis",
+      "B) Piri Reis",
       "C) Kemal Reis",
       "D) Oruç Reis",
       "E) Turgut Reis"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Hint Deniz Seferleri sonrasında yaşadığı maceraları ve ülkeleri 'Miratü'l-Memalik' (Ülkelerin Aynası) adlı ünlü seyahatname eserinde anlatan, aynı zamanda coğrafya uzmanı olan kaptan Seydi Ali Reis'tir."
   },
   {
@@ -1357,12 +1357,12 @@ window.tarih_4_sorulari = [
     "question": "III. Murat döneminde Osmanlı'nın ilk rasathanesini kuran ve güneş-ay cetvellerini içeren 'Zic'i hazırlatan bilgin aşağıdakilerden hangisidir?",
     "options": [
       "A) Ali Kuşçu",
-      "B) Takiyüddin Mehmet",
-      "C) Kadızade-i Rumi",
+      "B) Kadızade-i Rumi",
+      "C) Takiyüddin Mehmet",
       "D) Piri Reis",
       "E) Katip Çelebi"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "1577 yılında III. Murat'ın izniyle Tophane sırtlarında Osmanlı tarihinin ilk astronomik gözlemevini (İstanbul Rasathanesi) kuran matematikçi ve mühendis Takiyüddin Mehmet'tir."
   },
   {
@@ -1370,12 +1370,12 @@ window.tarih_4_sorulari = [
     "question": "'Seyahat yarasılullah' diyerek yola çıkan ve Seyahatname'yi yazan Osmanlı'nın en ünlü seyyahı aşağıdakilerden hangisidir?",
     "options": [
       "A) Katip Çelebi",
-      "B) Evliya Çelebi",
-      "C) Piri Reis",
+      "B) Piri Reis",
+      "C) Evliya Çelebi",
       "D) Seydi Ali Reis",
       "E) Koçi Bey"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Rüyasında Hz. Muhammed'den 'Şefaat' dileyecekken heyecanlanıp 'Seyahat ya Resulallah' dediği rivayet edilen ve 50 yıl boyunca Osmanlı coğrafyasını gezerek 10 ciltlik devasa 'Seyahatname'yi yazan kişi Evliya Çelebi'dir."
   },
   {
@@ -1383,12 +1383,12 @@ window.tarih_4_sorulari = [
     "question": "Hacı Kalfa veya Hacı Halife olarak da bilinen; Cihannüma ve Keşf-üz-Zünun adlı eserleri yazan bibliyograf-seyyah aşağıdakilerden hangisidir?",
     "options": [
       "A) Evliya Çelebi",
-      "B) Katip Çelebi",
-      "C) Koçi Bey",
+      "B) Koçi Bey",
+      "C) Katip Çelebi",
       "D) Naima",
       "E) Erzurumlu İbrahim Hakkı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Batı dünyasında 'Hacı Kalfa' olarak tanınan; coğrafya eseri 'Cihannüma' ve binlerce kitabı/yazarı listeleyen devasa bibliyografya eseri 'Keşfü'z-Zünun'u yazan 17. yüzyıl Osmanlı aydını Kâtip Çelebi'dir."
   },
   {
@@ -1421,13 +1421,13 @@ window.tarih_4_sorulari = [
     "id": "110",
     "question": "IV. Murat'a devletin gidişatı hakkında 'Koçi Bey Risalesi'ni sunan kişi aşağıdakilerden hangisidir?",
     "options": [
-      "A) Naima",
-      "B) Koçi Bey",
+      "A) Koçi Bey",
+      "B) Naima",
       "C) Katip Çelebi",
       "D) Erzurumlu İbrahim Hakkı",
       "E) Ahmet Cevdet Paşa"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "17. yüzyılda duraklamanın nedenlerini araştıran ordudaki, tımar sistemindeki ve rüşvetteki yozlaşmaları ele alarak padişah IV. Murat'a ve daha sonra Sultan İbrahim'e ıslahat raporu (Risale) sunan devlet adamı Koçi Bey'dir."
   },
   {
@@ -1435,12 +1435,12 @@ window.tarih_4_sorulari = [
     "question": "'Marifetname' adlı eserin yazarı aşağıdakilerden hangisidir?",
     "options": [
       "A) Katip Çelebi",
-      "B) Erzurumlu İbrahim Hakkı",
+      "B) Naima",
       "C) Evliya Çelebi",
-      "D) Naima",
+      "D) Erzurumlu İbrahim Hakkı",
       "E) Koçi Bey"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "18. yüzyılda yaşamış; astronomi, matematik, anatomi ve dini ilimleri sentezleyen, içerisinde ünlü 'Öznelerin Uyumu/Güzelliği' şiirini ve insan uzuvlarından karakter analizi yapan kıyafetname bölümünü barındıran 'Marifetname' eserinin müellifi Erzurumlu İbrahim Hakkı'dır."
   },
   {
@@ -1460,26 +1460,26 @@ window.tarih_4_sorulari = [
     "id": "113",
     "question": "Kısas-ı Enbiya, Mecelle ve Tarih-i Cevdet gibi eserleri yazan devlet adamı-tarihçi aşağıdakilerden hangisidir?",
     "options": [
-      "A) Koçi Bey",
-      "B) Ahmet Cevdet Paşa",
+      "A) Ahmet Cevdet Paşa",
+      "B) Koçi Bey",
       "C) Naima",
       "D) Erzurumlu İbrahim Hakkı",
       "E) Katip Çelebi"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Osmanlı Devleti'nin ilk medeni kanunu olan 'Mecelle'yi hazırlayan komisyona başkanlık eden, peygamberler tarihini anlatan 'Kısas-ı Enbiya'yı ve kendi adıyla anılan ünlü tarih kitabını yazan 19. yüzyıl devlet ve hukuk adamı Ahmet Cevdet Paşa'dır."
   },
   {
     "id": "114",
     "question": "Üroloji ve idrar yolları hastalıklarıyla ilgili çalışmalar yapan Osmanlı hekimi aşağıdakilerden hangisidir?",
     "options": [
-      "A) Sabuncuoğlu Şerafettin",
-      "B) Altuncuzade",
+      "A) Altuncuzade",
+      "B) Sabuncuoğlu Şerafettin",
       "C) Akşemseddin",
       "D) Ali Kuşçu",
       "E) Takiyüddin Mehmet"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Fatih Sultan Mehmet döneminde yaşayan Altuncuzade (Altunî), idrar yolları hastalıkları, mesane tıkanıklıkları ve üroloji alanında yaptığı cerrahi buluşlar ve geliştirdiği sondalarla tanınan ünlü tıp bilginidir."
   },
   {
@@ -1512,13 +1512,13 @@ window.tarih_4_sorulari = [
     "id": "117",
     "question": "Lonca Teşkilatı'nda esnafı koruyan görevli, esnaf-devlet/esnaf-halk ilişkilerini yürüten görevli ve teşkilatın başındaki kişiye verilen adlar aşağıdakilerden hangisinde sırasıyla doğru verilmiştir?",
     "options": [
-      "A) Kethüda – yiğitbaşı – şeyh/pir",
-      "B) Yiğitbaşı – kethüda – şeyh/pir",
+      "A) Yiğitbaşı – kethüda – şeyh/pir",
+      "B) Kethüda – yiğitbaşı – şeyh/pir",
       "C) Şeyh – yiğitbaşı – kethüda",
       "D) Pir – kethüda – yiğitbaşı",
       "E) Yiğitbaşı – şeyh – kethüda"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Loncada esnafın güvenliğini sağlayan ve disiplini koruyan 'Yiğitbaşı'; loncanın hükümetle ve dış dünya ile ilişkilerini yürüten idari temsilci 'Kethüda' (Esnaf Şeyhi); en tepedeki manevi ve mesleki lider ise 'Şeyh' veya 'Pir'dir."
   },
   {
@@ -1538,13 +1538,13 @@ window.tarih_4_sorulari = [
     "id": "119",
     "question": "Büyük tüccarlara verilen isim ile çarşı-pazarın denetiminden sorumlu görevli aşağıdakilerden hangisinde sırasıyla doğru verilmiştir?",
     "options": [
-      "A) Muhtesip – bezirgan",
-      "B) Bezirgan – muhtesip",
+      "A) Bezirgan – muhtesip",
+      "B) Muhtesip – bezirgan",
       "C) Ehli hibre – bezirgan",
       "D) Bezirgan – ehli hibre",
       "E) Yiğitbaşı – muhtesip"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Osmanlı'da toptan ve büyük çaplı ticaret yapan zengin tüccarlara 'Bezirgan'; çarşı, pazar, tartı aletleri ve narh (fiyat) denetimini belediye adına yürüten zabıta benzeri görevliye ise 'Muhtesip' denir."
   },
   {
@@ -1591,25 +1591,25 @@ window.tarih_4_sorulari = [
     "question": "Sefer zamanı ve barış zamanı alınan vergiler aşağıdakilerden hangisinde sırasıyla doğru verilmiştir?",
     "options": [
       "A) İmdad-ı Hazariye – İmdad-ı Seferiye",
-      "B) İmdad-ı Seferiye – İmdad-ı Hazariye",
+      "B) İzn-i Sefine – Derbent",
       "C) Derbent – İzn-i Sefine",
-      "D) İzn-i Sefine – Derbent",
+      "D) İmdad-ı Seferiye – İmdad-ı Hazariye",
       "E) Avarız – Ağnam"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Osmanlı'nın geç dönemlerinde bütçe açıklarını kapatmak için savaş zamanı alınan acil vergiye 'İmdad-ı Seferiye', barış (hazar) zamanında devlet harcamaları için toplanan vergiye ise 'İmdad-ı Hazariye' denirdi."
   },
   {
     "id": "124",
     "question": "Boğazlardan geçen gemilerden alınan vergiye ne ad verilir?",
     "options": [
-      "A) Derbent",
-      "B) İzn-i Sefine",
+      "A) İzn-i Sefine",
+      "B) Derbent",
       "C) Bac",
       "D) Avarız",
       "E) Çiftbozan"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Osmanlı Devleti'nde yabancı veya yerli gemilerin Türk sularından ve özellikle boğazlardan geçiş güvenliği ve müsaadesi için ödedikleri denizcilik/geçiş vergisine 'İzn-i Sefine' (Gemi İzni) denir."
   },
   {
@@ -1695,12 +1695,12 @@ window.tarih_4_sorulari = [
   "question": "Osmanlı Devleti'nin ilk camisi aşağıdakilerden hangisidir?",
   "options": [
     "A) Konya Alaeddin Camii",
-    "B) İznik Hacı Özbek Camii",
-    "C) Sultan Ahmet Camii",
+    "B) Sultan Ahmet Camii",
+    "C) İznik Hacı Özbek Camii",
     "D) Nuruosmaniye Camii",
     "E) Bursa Ulu Camii"
   ],
-  "correctAnswerIndex": 1,
+  "correctAnswerIndex": 2,
   "explanation": "1333 yılında Orhan Bey döneminde yaptırılan İznik Hacı Özbek Camii, Osmanlı Devleti'nin ilk camisidir."
 },
 {
@@ -1708,12 +1708,12 @@ window.tarih_4_sorulari = [
   "question": "Mimar Sinan'ın çıraklık, kalfalık ve ustalık eserleri aşağıdakilerden hangisinde sırasıyla doğru verilmiştir?",
   "options": [
     "A) Süleymaniye – Şehzade – Selimiye",
-    "B) Şehzade – Süleymaniye – Selimiye",
+    "B) Şehzade – Selimiye – Süleymaniye",
     "C) Selimiye – Süleymaniye – Şehzade",
-    "D) Şehzade – Selimiye – Süleymaniye",
+    "D) Şehzade – Süleymaniye – Selimiye",
     "E) Süleymaniye – Selimiye – Şehzade"
   ],
-  "correctAnswerIndex": 1,
+  "correctAnswerIndex": 3,
   "explanation": "Mimar Sinan'ın çıraklık eseri Şehzade Camii, kalfalık eseri Süleymaniye Camii, ustalık eseri ise Selimiye Camii'dir."
 },
 {
@@ -1734,12 +1734,12 @@ window.tarih_4_sorulari = [
   "question": "Osmanlı Devleti'nin ilk 6 minareli camisi ve mimarı aşağıdakilerden hangisinde doğru verilmiştir?",
   "options": [
     "A) Selimiye Camii – Mimar Sinan",
-    "B) Sultan Ahmet Camii – Sedefkar Mehmet Ağa",
+    "B) Nuruosmaniye Camii – Mimar Sinan",
     "C) Süleymaniye Camii – Mimar Sinan",
-    "D) Nuruosmaniye Camii – Mimar Sinan",
+    "D) Sultan Ahmet Camii – Sedefkar Mehmet Ağa",
     "E) Şehzade Camii – Sedefkar Mehmet Ağa"
   ],
-  "correctAnswerIndex": 1,
+  "correctAnswerIndex": 3,
   "explanation": "Osmanlı'nın ilk altı minareli camisi Sultan Ahmet Camii olup mimarı Sedefkar Mehmet Ağa'dır."
 },
 {
@@ -1760,12 +1760,12 @@ window.tarih_4_sorulari = [
   "question": "Mostar Köprüsü'nü yapan mimar ile bizzat padişahın yaptırdığı camiye verilen ad aşağıdakilerden hangisinde sırasıyla doğru verilmiştir?",
   "options": [
     "A) Mimar Sinan – selatin cami",
-    "B) Mimar Hayreddin – selatin cami",
+    "B) Mimar Hayreddin – vakıf cami",
     "C) Sedefkar Mehmet Ağa – vakıf cami",
-    "D) Mimar Hayreddin – vakıf cami",
+    "D) Mimar Hayreddin – selatin cami",
     "E) Mimar Sinan – vakıf cami"
   ],
-  "correctAnswerIndex": 1,
+  "correctAnswerIndex": 3,
   "explanation": "Mostar Köprüsü'nün mimarı Mimar Hayreddin'dir. Padişah tarafından yaptırılan camilere Selatin Camii denir."
 },
 {
@@ -1864,12 +1864,12 @@ window.tarih_4_sorulari = [
   "question": "II. Mahmut zamanında kurulan; batı tarzı müzik icra eden kurum aşağıdakilerden hangisidir?",
   "options": [
     "A) Mehterhane",
-    "B) Mızıka-i Hümayun",
-    "C) Darülelhan",
+    "B) Darülelhan",
+    "C) Mızıka-i Hümayun",
     "D) Enderun Musiki Bölümü",
     "E) Sahn-ı Seman"
   ],
-  "correctAnswerIndex": 1,
+  "correctAnswerIndex": 2,
   "explanation": "II. Mahmut tarafından kurulan Mızıka-i Hümayun, Osmanlı Devleti'nin Batı tarzı müzik icra eden ilk resmi kurumudur."
 },
 {

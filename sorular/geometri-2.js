@@ -39,13 +39,13 @@ window.geometri_2_sorulari = [
 {
     "question": "Kenarları 6, 8, 10 olan üçgende en büyük açıya karşı kenar 10'dur. Bu üçgen hangi türdedir?",
     "options": [
-        "A) Dar açılı",
-        "B) Dik açılı",
+        "A) Dik açılı",
+        "B) Dar açılı",
         "C) Geniş açılı",
         "D) İkizkenar",
         "E) Eşkenar"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "6²+8²=36+64=100=10² → dik üçgen."
 },
 {
@@ -53,11 +53,11 @@ window.geometri_2_sorulari = [
     "options": [
         "A) Dar",
         "B) Dik",
-        "C) Geniş",
+        "C) Eşkenar",
         "D) Doğru açı",
-        "E) Eşkenar"
+        "E) Geniş"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 4,
     "explanation": "12²=144; 7²+8²=49+64=113; 144>113 → geniş açılı."
 },
 {

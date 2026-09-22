@@ -4,12 +4,12 @@ window.geometri_9_sorulari = [
     "question": "Paralelkenarda karşı kenarlar ve karşı açılar hakkında hangisi doğrudur?",
     "options": [
         "A) Komşu kenarlar eşit",
-        "B) Karşı kenarlar eşit",
+        "B) Alan = a²",
         "C) Tüm kenarlar eşit",
         "D) Köşegenler dik",
-        "E) Alan = a²"
+        "E) Karşı kenarlar eşit"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 4,
     "explanation": "Paralelkenarda karşı kenarlar paralel ve eşittir."
 },
 {

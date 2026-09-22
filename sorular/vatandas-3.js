@@ -2,14 +2,14 @@
 window.vatandas_3_sorulari = [
     {
         question: "Kişilerle devlet arasındaki ilişkileri düzenleyen hukuk kurallarından doğan haklara ne ad verilir?",
-        options: ["A) Kişilik hakları", "B) Özel haklar", "C) Tazminat hakları", "D) Kamu hakları", "E) Mutlak haklar"],
-        correctAnswerIndex: 3,
+        options: ["A) Kişilik hakları", "B) Özel haklar", "C) Kamu hakları", "D) Tazminat hakları", "E) Mutlak haklar"],
+        correctAnswerIndex: 2,
         explanation: "Kamu hakları (temel haklar) kişi–devlet ilişkisinden doğar."
     },
     {
         question: "Kişilik hakları ile ilgili aşağıdakilerden hangisi yanlıştır?",
-        options: ["A) Başkalarına devredilemez.", "B) Kişiliğe bağlıdır.", "C) Herkese karşı ileri sürülebilir.", "D) Nisbi hak niteliğindedir.", "E) Mirasçılara geçmez."],
-        correctAnswerIndex: 3,
+        options: ["A) Başkalarına devredilemez.", "B) Nisbi hak niteliğindedir.", "C) Herkese karşı ileri sürülebilir.", "D) Kişiliğe bağlıdır.", "E) Mirasçılara geçmez."],
+        correctAnswerIndex: 1,
         explanation: "Kişilik hakları mutlak haktır; nisbi (nispi) değildir."
     },
     {

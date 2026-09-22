@@ -1,4 +1,5 @@
 (function (global) {
+    function lbl(k) { return (global && global.konuLabel) ? global.konuLabel(k) : k; }
     function realKeys(obj) {
         return Object.keys(obj || {}).filter(function (k) { return k && k !== "_"; });
     }
@@ -123,7 +124,7 @@
                 id: "notes",
                 kind: "notes",
                 title: "Konu notu",
-                detail: unread[0].ders + " · " + unread[0].konu,
+                detail: unread[0].ders + " · " + lbl(unread[0].konu),
                 ders: unread[0].ders,
                 konu: unread[0].konu,
                 why: "Notları bitirmeden soru çözmek ezberi güçlendirir, anlamayı değil."
@@ -136,7 +137,7 @@
                 id: "test",
                 kind: "test",
                 title: testTarget.lastPct == null ? "İlk test" : "Zayıf konu testi",
-                detail: testTarget.ders + " · " + testTarget.konu + (testTarget.lastPct != null ? " (%" + testTarget.lastPct + ")" : ""),
+                detail: testTarget.ders + " · " + lbl(testTarget.konu) + (testTarget.lastPct != null ? " (%" + testTarget.lastPct + ")" : ""),
                 ders: testTarget.ders,
                 konu: testTarget.konu,
                 why: testTarget.lastPct == null ? "Bu konuda henüz deneme yok." : "Net %" + testTarget.lastPct + " — eşiğin altında."
@@ -169,9 +170,9 @@
         var remaining = Math.max(0, qGoal - (sess.questions || 0));
         var coach;
         if (weak[0] && weak[0].lastPct != null && weak[0].lastPct < 60) {
-            coach = weak[0].ders + " / " + weak[0].konu + " %" + weak[0].lastPct + ". Önce not, sonra 10 soru. Dağılma.";
+            coach = weak[0].ders + " / " + lbl(weak[0].konu) + " %" + weak[0].lastPct + ". Önce not, sonra 10 soru. Dağılma.";
         } else if (unread[0]) {
-            coach = "Sıradaki konu: " + unread[0].konu + ". Notu bitir, aynı gün test çöz.";
+            coach = "Sıradaki konu: " + lbl(unread[0].konu) + ". Notu bitir, aynı gün test çöz.";
         } else if (wrong.length) {
             coach = "Yanlış defterinde " + wrong.length + " soru var. Bugün onları temizle, yeni konu açma.";
         } else if (remaining > 0) {
@@ -210,7 +211,7 @@
             return {
                 day: d,
                 minutes: mins,
-                focus: focus ? (focus.ders + " · " + focus.konu) : "GY-GK karışık",
+                focus: focus ? (focus.ders + " · " + lbl(focus.konu)) : "GY-GK karışık",
                 weight: focus ? Math.round(100 - (focus.masteryScore || 0)) : 40
             };
         });

@@ -1,7 +1,7 @@
 // sorular/tarih-20.js
 window.tarih_20_sorulari = [
     {
-        "question": "Soru 1: Atatürk inkılaplarının;\n\nI. Türk milletinin ihtiyaçlarından doğması\nII. belli bir ideolojinin ürünü olmaması\nIII. toplumdaki ikiliklere son vermeyi amaçlaması\nIV. tavandan tabana doğru gerçekleştirilmesi\n\nözelliklerinden hangileri inkılapların toplumsal bütünleşmeyi ve millî karakteri güçlendirdiğini gösterir?",
+        "question": "Atatürk inkılaplarının;\n\nI. Türk milletinin ihtiyaçlarından doğması\nII. belli bir ideolojinin ürünü olmaması\nIII. toplumdaki ikiliklere son vermeyi amaçlaması\nIV. tavandan tabana doğru gerçekleştirilmesi\n\nözelliklerinden hangileri inkılapların toplumsal bütünleşmeyi ve millî karakteri güçlendirdiğini gösterir?",
         "options": [
             "A) Yalnız I",
             "B) I ve II",
@@ -13,7 +13,7 @@ window.tarih_20_sorulari = [
         "explanation": "İhtiyaçlardan doğması (I) millî karakteri, ikiliklere son (III) toplumsal bütünleşmeyi, tavandan tabana (IV) uygulamanın toplumun bütününe yayılmasını gösterir. II millî karakter/bütünleşme ile doğrudan bağlanmaz."
     },
     {
-        "question": "Soru 2: Saltanatın kaldırılmasında aşağıdakilerden hangisinin doğrudan etkili olduğu söylenebilir?",
+        "question": "Saltanatın kaldırılmasında aşağıdakilerden hangisinin doğrudan etkili olduğu söylenebilir?",
         "options": [
             "A) Ekonomik bağımsızlığın sağlanmak istenmesi",
             "B) Lozan görüşmelerine Osmanlı Hükûmeti'nin de katılmasının önlenmek istenmesi",
@@ -25,7 +25,7 @@ window.tarih_20_sorulari = [
         "explanation": "Osmanlı'nın Lozan'a daveti karmaşa çıkaracağı için saltanat kaldırılarak tek temsilci TBMM olmuştur."
     },
     {
-        "question": "Soru 3: Saltanatın kaldırılmasıyla;\n\nI. Osmanlı Devleti resmen sona ermiştir.\nII. TBMM'nin milletin tek temsilcisi olduğu ortaya konmuştur.\nIII. Halifelik makamı kaldırılmıştır.\nIV. Rejim ve devlet başkanlığı sorunu ortaya çıkmıştır.\n\nyargılarından hangilerine ulaşılabilir?",
+        "question": "Saltanatın kaldırılmasıyla;\n\nI. Osmanlı Devleti resmen sona ermiştir.\nII. TBMM'nin milletin tek temsilcisi olduğu ortaya konmuştur.\nIII. Halifelik makamı kaldırılmıştır.\nIV. Rejim ve devlet başkanlığı sorunu ortaya çıkmıştır.\n\nyargılarından hangilerine ulaşılabilir?",
         "options": [
             "A) I ve II",
             "B) II ve III",
@@ -37,19 +37,19 @@ window.tarih_20_sorulari = [
         "explanation": "Halifelik 3 Mart 1924'te kaldırılmıştır (III yanlış). I, II ve IV saltanatın sonuçlarıdır."
     },
     {
-        "question": "Soru 4: Aşağıdakilerden hangisi saltanatın kaldırılmasının nedenlerinden biri değildir?",
+        "question": "Aşağıdakilerden hangisi saltanatın kaldırılmasının nedenlerinden biri değildir?",
         "options": [
             "A) Yönetimdeki çift başlılığa son vermek",
             "B) Ulusal egemenliği gerçekleştirmek",
             "C) Cumhuriyet yönetimine ortam hazırlamak",
-            "D) Lozan'a tek temsilciyle katılmak",
-            "E) Eğitim ve öğretimde birliği sağlamak"
+            "D) Eğitim ve öğretimde birliği sağlamak",
+            "E) Lozan'a tek temsilciyle katılmak"
         ],
-        "correctAnswerIndex": 4,
+        "correctAnswerIndex": 3,
         "explanation": "Eğitimde birlik Tevhid-i Tedrisat'ın amacıdır, saltanatın nedeni değildir."
     },
     {
-        "question": "Soru 5: Ankara'nın başkent ilan edilmesiyle ilgili aşağıdakilerden hangisi doğrudur?",
+        "question": "Ankara'nın başkent ilan edilmesiyle ilgili aşağıdakilerden hangisi doğrudur?",
         "options": [
             "A) Cumhuriyetin ilanından sonra gerçekleştirilmiştir.",
             "B) Halifeliğin kaldırılmasından sonra gerçekleştirilmiştir.",
@@ -61,31 +61,31 @@ window.tarih_20_sorulari = [
         "explanation": "Ankara'nın başkent olması Cumhuriyet'in ilanından önce yaşanan bir gelişmedir."
     },
     {
-        "question": "Soru 6: Cumhuriyetin ilan edilmesinin temel amaçları arasında aşağıdakilerden hangisi yer almaz?",
+        "question": "Cumhuriyetin ilan edilmesinin temel amaçları arasında aşağıdakilerden hangisi yer almaz?",
         "options": [
             "A) Devlet başkanlığı sorununu çözmek",
             "B) Rejim tartışmalarına son vermek",
             "C) Hükûmet bunalımını çözmek",
-            "D) Ulusun tek egemen güç olmasını sağlamak",
-            "E) Eğitimde ikiliği ortadan kaldırmak"
+            "D) Eğitimde ikiliği ortadan kaldırmak",
+            "E) Ulusun tek egemen güç olmasını sağlamak"
         ],
-        "correctAnswerIndex": 4,
+        "correctAnswerIndex": 3,
         "explanation": "Eğitimde ikilik Tevhid-i Tedrisat ile ilgilidir."
     },
     {
-        "question": "Soru 7: Meclis hükûmeti sisteminden kabine sistemine geçilmesinin temel sonucu aşağıdakilerden hangisidir?",
+        "question": "Meclis hükûmeti sisteminden kabine sistemine geçilmesinin temel sonucu aşağıdakilerden hangisidir?",
         "options": [
             "A) Yasama yetkisinin kaldırılması",
-            "B) Hükûmet kurmanın ve yürütme faaliyetlerinin hızlanması",
+            "B) Cumhurbaşkanlığı makamının kaldırılması",
             "C) TBMM'nin kapatılması",
-            "D) Cumhurbaşkanlığı makamının kaldırılması",
+            "D) Hükûmet kurmanın ve yürütme faaliyetlerinin hızlanması",
             "E) Halifeliğin yeniden güçlendirilmesi"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 3,
         "explanation": "Kabine sisteminde bakanları başbakan belirler; hükûmet kurma kısa, yürütme hızlanır."
     },
     {
-        "question": "Soru 8: Cumhuriyetin ilanıyla aşağıdakilerden hangisi gerçekleşmiştir?",
+        "question": "Cumhuriyetin ilanıyla aşağıdakilerden hangisi gerçekleşmiştir?",
         "options": [
             "A) İlk cumhurbaşkanı İsmet İnönü olmuştur.",
             "B) İlk başbakan Ali Fethi Okyar olmuştur.",
@@ -97,7 +97,7 @@ window.tarih_20_sorulari = [
         "explanation": "İlk CB Mustafa Kemal, ilk başbakan İnönü, ilk meclis başkanı Ali Fethi Okyar'dır. Halifelik 1924, Ankara başkent Cumhuriyet'ten önce."
     },
     {
-        "question": "Soru 9: 1923'te yapılan anayasa değişikliğiyle 1921 Anayasası'na aşağıdaki hükümlerden hangisi eklenmiştir?",
+        "question": "1923'te yapılan anayasa değişikliğiyle 1921 Anayasası'na aşağıdaki hükümlerden hangisi eklenmiştir?",
         "options": [
             "A) Devletin dini İslam'dır.",
             "B) Türkiye Devleti'nin yönetim şekli Cumhuriyet'tir.",
@@ -109,7 +109,7 @@ window.tarih_20_sorulari = [
         "explanation": "1923 değişikliğiyle yönetim şeklinin Cumhuriyet olduğu 1921 Anayasası'na eklenmiştir."
     },
     {
-        "question": "Soru 10: Halifeliğin kaldırılmasının;\n\nI. laikleşme\nII. millî egemenlik\nIII. ümmetçilik\nIV. ulus-devlet anlayışı\n\nalanlarından hangileriyle doğrudan ilişkili olduğu söylenebilir?",
+        "question": "Halifeliğin kaldırılmasının;\n\nI. laikleşme\nII. millî egemenlik\nIII. ümmetçilik\nIV. ulus-devlet anlayışı\n\nalanlarından hangileriyle doğrudan ilişkili olduğu söylenebilir?",
         "options": [
             "A) I ve II",
             "B) I ve IV",
@@ -121,7 +121,7 @@ window.tarih_20_sorulari = [
         "explanation": "Halifelik kaldırılınca ümmetçilik zayıflamıştır; ilişki I, II ve IV iledir (güçlenen yönler)."
     },
     {
-        "question": "Soru 11: 3 Mart 1924 tarihinde gerçekleştirilen gelişmeler arasında aşağıdakilerden hangisi yer almaz?",
+        "question": "3 Mart 1924 tarihinde gerçekleştirilen gelişmeler arasında aşağıdakilerden hangisi yer almaz?",
         "options": [
             "A) Halifeliğin kaldırılması",
             "B) Tevhid-i Tedrisat Kanunu'nun çıkarılması",
@@ -133,7 +133,7 @@ window.tarih_20_sorulari = [
         "explanation": "Soyadı Kanunu 21 Haziran 1934'tedir."
     },
     {
-        "question": "Soru 12: Şeriye ve Evkaf Vekâleti'nin kaldırılması sonucunda oluşturulan kurumlardan biri aşağıdakilerden hangisidir?",
+        "question": "Şeriye ve Evkaf Vekâleti'nin kaldırılması sonucunda oluşturulan kurumlardan biri aşağıdakilerden hangisidir?",
         "options": [
             "A) Diyanet İşleri Başkanlığı",
             "B) Türk Dil Kurumu",
@@ -145,7 +145,7 @@ window.tarih_20_sorulari = [
         "explanation": "Şeriye ve Evkaf, Diyanet İşleri Başkanlığı'na dönüştürülmüştür. İlk başkan Rıfat Börekçi'dir."
     },
     {
-        "question": "Soru 13: Aşağıdakilerden hangisi halifeliğin kaldırılmasının sonuçlarından biri değildir?",
+        "question": "Aşağıdakilerden hangisi halifeliğin kaldırılmasının sonuçlarından biri değildir?",
         "options": [
             "A) Ümmetçilik anlayışının zayıflaması",
             "B) Ulus-toplum anlayışının güçlenmesi",
@@ -157,7 +157,7 @@ window.tarih_20_sorulari = [
         "explanation": "Osmanlı siyasi varlığı saltanatın kaldırılmasıyla sona ermiştir; halifeliğin kalkması Osmanlı'yı güçlendirmez."
     },
     {
-        "question": "Soru 14: 1924 Anayasası'nın hazırlanmasında 1921 Anayasası'nın savaş ortamında hazırlanmış olması ve yetersiz kalması etkili olmuştur.\n\nBuna göre 1924 Anayasası'nın temel işlevlerinden biri aşağıdakilerden hangisidir?",
+        "question": "1924 Anayasası'nın hazırlanmasında 1921 Anayasası'nın savaş ortamında hazırlanmış olması ve yetersiz kalması etkili olmuştur.\n\nBuna göre 1924 Anayasası'nın temel işlevlerinden biri aşağıdakilerden hangisidir?",
         "options": [
             "A) Hukuki yapıyı daha kapsamlı hâle getirmek",
             "B) Saltanatı yeniden kurmak",
@@ -169,19 +169,19 @@ window.tarih_20_sorulari = [
         "explanation": "1924 Anayasası 6 bölüm 105 madde ile daha kapsamlı hukuki çerçeve sunmuş, parlamenter sisteme geçişte adım atmıştır."
     },
     {
-        "question": "Soru 15: 1924 Anayasası ile ilgili aşağıdakilerden hangisi yanlıştır?",
+        "question": "1924 Anayasası ile ilgili aşağıdakilerden hangisi yanlıştır?",
         "options": [
             "A) Altı bölüm ve 105 maddeden oluşmuştur.",
             "B) Parlamenter sisteme geçiş bakımından önemli bir adım olmuştur.",
-            "C) 1928'de devletin dininin İslam olduğu hükmü kaldırılmıştır.",
+            "C) 1982 Anayasası'ndan daha uzun süre yürürlükte kalmıştır.",
             "D) 1937'de Atatürk ilkeleri anayasaya girmiştir.",
-            "E) 1982 Anayasası'ndan daha uzun süre yürürlükte kalmıştır."
+            "E) 1928'de devletin dininin İslam olduğu hükmü kaldırılmıştır."
         ],
-        "correctAnswerIndex": 4,
+        "correctAnswerIndex": 2,
         "explanation": "En uzun süreli anayasa 1982 Anayasası'dır."
     },
     {
-        "question": "Soru 16: 1928 yılında 1924 Anayasası'nda yapılan değişikliklerden biri aşağıdakilerden hangisidir?",
+        "question": "1928 yılında 1924 Anayasası'nda yapılan değişikliklerden biri aşağıdakilerden hangisidir?",
         "options": [
             "A) Kadınlara milletvekili seçme hakkı verilmesi",
             "B) Devletin dini İslam'dır hükmünün kaldırılması",
@@ -193,7 +193,7 @@ window.tarih_20_sorulari = [
         "explanation": "1928'de 'Devletin dini İslam'dır' ibaresi ve 'Vallahi' kaldırılmıştır. İlkeler 1937, kadın milletvekili 1934, yaş 18'den 22'ye çıkarılmıştır."
     },
     {
-        "question": "Soru 17: Türk Medeni Kanunu'nun kabul edilmesinde;\n\nI. hukuk birliğini sağlamak\nII. kadın-erkek eşitliğini geliştirmek\nIII. laik hukuk düzenini oluşturmak\nIV. azınlıkların kendi hukuk sistemlerini sürdürmesini sağlamak\n\namaçlarından hangileri etkili olmuştur?",
+        "question": "Türk Medeni Kanunu'nun kabul edilmesinde;\n\nI. hukuk birliğini sağlamak\nII. kadın-erkek eşitliğini geliştirmek\nIII. laik hukuk düzenini oluşturmak\nIV. azınlıkların kendi hukuk sistemlerini sürdürmesini sağlamak\n\namaçlarından hangileri etkili olmuştur?",
         "options": [
             "A) Yalnız IV",
             "B) I ve II",
@@ -205,31 +205,31 @@ window.tarih_20_sorulari = [
         "explanation": "IV tam tersidir; azınlıklar Türk kanunlarına tabi olmuştur."
     },
     {
-        "question": "Soru 18: Türk Medeni Kanunu ile aşağıdakilerden hangisinin gerçekleştirilmesi beklenemez?",
+        "question": "Türk Medeni Kanunu ile aşağıdakilerden hangisinin gerçekleştirilmesi beklenemez?",
         "options": [
             "A) Resmî nikâhın zorunlu hâle getirilmesi",
             "B) Kadına boşanma hakkı tanınması",
-            "C) Miras konusunda kadın-erkek eşitliğinin geliştirilmesi",
+            "C) Dini mahkemelerin yetkisinin genişletilmesi",
             "D) Patrikhane ve konsoloslukların mahkeme kurma yetkisinin kaldırılması",
-            "E) Dini mahkemelerin yetkisinin genişletilmesi"
+            "E) Miras konusunda kadın-erkek eşitliğinin geliştirilmesi"
         ],
-        "correctAnswerIndex": 4,
+        "correctAnswerIndex": 2,
         "explanation": "Medeni Kanun laik hukuku güçlendirir; dini mahkemelerin yetkisini genişletmez."
     },
     {
-        "question": "Soru 19: Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+        "question": "Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
         "options": [
             "A) Medeni Kanun – İsviçre",
             "B) Borçlar Kanunu – İsviçre",
             "C) Türk Ceza Kanunu – İtalya",
-            "D) Deniz Ticaret Kanunu – Almanya",
-            "E) İdare Kanunu – İngiltere"
+            "D) İdare Kanunu – İngiltere",
+            "E) Deniz Ticaret Kanunu – Almanya"
         ],
-        "correctAnswerIndex": 4,
+        "correctAnswerIndex": 3,
         "explanation": "İdare Kanunu Fransa kaynaklıdır."
     },
     {
-        "question": "Soru 20: Türk Medeni Kanunu'nun kabul edilmesiyle aşağıdakilerden hangisi doğrudan sağlanmıştır?",
+        "question": "Türk Medeni Kanunu'nun kabul edilmesiyle aşağıdakilerden hangisi doğrudan sağlanmıştır?",
         "options": [
             "A) Eğitimde birlik",
             "B) Hukuk alanında birlik",
@@ -241,7 +241,7 @@ window.tarih_20_sorulari = [
         "explanation": "Medeni Kanun hukuk birliğini sağlar. Eğitim birliği Tevhid-i Tedrisat'tır."
     },
     {
-        "question": "Soru 21: Şapka Kanunu'nun temel amaçları arasında aşağıdakilerden hangisi gösterilemez?",
+        "question": "Şapka Kanunu'nun temel amaçları arasında aşağıdakilerden hangisi gösterilemez?",
         "options": [
             "A) Modern bir görünüm oluşturmak",
             "B) Batı ile bütünleşmek",
@@ -253,7 +253,7 @@ window.tarih_20_sorulari = [
         "explanation": "Eğitim kurumlarını tek çatıda toplamak Tevhid-i Tedrisat'tır."
     },
     {
-        "question": "Soru 22: Tekke, zaviye ve türbelerin kapatılmasında;\n\nI. din istismarını önlemek\nII. laikleşmeyi sağlamak\nIII. rejim karşıtı faaliyetleri önlemek\nIV. eğitimde birlik sağlamak\n\namaçlarından hangileri etkili olmuştur?",
+        "question": "Tekke, zaviye ve türbelerin kapatılmasında;\n\nI. din istismarını önlemek\nII. laikleşmeyi sağlamak\nIII. rejim karşıtı faaliyetleri önlemek\nIV. eğitimde birlik sağlamak\n\namaçlarından hangileri etkili olmuştur?",
         "options": [
             "A) I ve II",
             "B) II ve III",
@@ -265,7 +265,7 @@ window.tarih_20_sorulari = [
         "explanation": "Eğitimde birlik Tevhid-i Tedrisat'ın amacıdır (IV değil)."
     },
     {
-        "question": "Soru 23: 30 Kasım 1925'te çıkarılan kanunla aşağıdakilerden hangisi kaldırılmıştır?",
+        "question": "30 Kasım 1925'te çıkarılan kanunla aşağıdakilerden hangisi kaldırılmıştır?",
         "options": [
             "A) Halifelik",
             "B) Saltanat",
@@ -277,19 +277,19 @@ window.tarih_20_sorulari = [
         "explanation": "30 Kasım 1925 tekke, zaviye ve türbelerin kapatılmasıdır."
     },
     {
-        "question": "Soru 24: Soyadı Kanunu'nun çıkarılmasının temel nedenlerinden biri aşağıdakilerden hangisidir?",
+        "question": "Soyadı Kanunu'nun çıkarılmasının temel nedenlerinden biri aşağıdakilerden hangisidir?",
         "options": [
             "A) Eğitimde laikleşmeyi sağlamak",
-            "B) Resmî ve sosyal ilişkilerde yaşanan karmaşayı önlemek",
+            "B) Hukuk sistemini değiştirmek",
             "C) Dış ticareti geliştirmek",
-            "D) Hukuk sistemini değiştirmek",
+            "D) Resmî ve sosyal ilişkilerde yaşanan karmaşayı önlemek",
             "E) Devletçilik ilkesini uygulamak"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 3,
         "explanation": "Soyadı Kanunu resmî-sosyal karmaşayı ve asalet lakaplarından ayrımcılığı önlemeyi amaçlar."
     },
     {
-        "question": "Soru 25: Aşağıdakilerden hangisi eğitim ve kültür alanındaki inkılaplardan biridir?",
+        "question": "Aşağıdakilerden hangisi eğitim ve kültür alanındaki inkılaplardan biridir?",
         "options": [
             "A) Kabotaj Kanunu",
             "B) Teşvik-i Sanayi Kanunu",
@@ -301,7 +301,7 @@ window.tarih_20_sorulari = [
         "explanation": "Tevhid-i Tedrisat eğitim inkılabıdır."
     },
     {
-        "question": "Soru 26: Maarif Kongresi'nin toplandığı dönemin özelliği aşağıdakilerden hangisidir?",
+        "question": "Maarif Kongresi'nin toplandığı dönemin özelliği aşağıdakilerden hangisidir?",
         "options": [
             "A) Lozan görüşmelerinin devam ettiği dönem",
             "B) Kütahya-Eskişehir Muharebelerinin devam ettiği dönem",
@@ -313,7 +313,7 @@ window.tarih_20_sorulari = [
         "explanation": "I. Maarif Kongresi 15–21 Temmuz 1921'de Kütahya-Eskişehir Muharebeleri sürerken Ankara'da toplandı."
     },
     {
-        "question": "Soru 27: Tevhid-i Tedrisat Kanunu'nun temel amacı aşağıdakilerden hangisidir?",
+        "question": "Tevhid-i Tedrisat Kanunu'nun temel amacı aşağıdakilerden hangisidir?",
         "options": [
             "A) Eğitim kurumlarının farklı otoriteler tarafından yönetilmesini sağlamak",
             "B) Eğitim ve öğretimde birlik oluşturmak",
@@ -325,19 +325,19 @@ window.tarih_20_sorulari = [
         "explanation": "Temel amaç eğitim-öğretimde birlik ve beraberliktir."
     },
     {
-        "question": "Soru 28: Tevhid-i Tedrisat Kanunu ile aşağıdakilerden hangisi gerçekleştirilmiştir?",
+        "question": "Tevhid-i Tedrisat Kanunu ile aşağıdakilerden hangisi gerçekleştirilmiştir?",
         "options": [
-            "A) Tüm eğitim ve öğretim kurumları Millî Eğitim Bakanlığına bağlanmıştır.",
+            "A) Üniversiteler kaldırılmıştır.",
             "B) Yabancı okullar tamamen kapatılmıştır.",
-            "C) Üniversiteler kaldırılmıştır.",
+            "C) Tüm eğitim ve öğretim kurumları Millî Eğitim Bakanlığına bağlanmıştır.",
             "D) Eğitim kurumları vakıflara bırakılmıştır.",
             "E) Medreselerin yetkileri artırılmıştır."
         ],
-        "correctAnswerIndex": 0,
+        "correctAnswerIndex": 2,
         "explanation": "Tüm eğitim kurumları MEB'e bağlanmıştır; yabancı okullar kapatılmamış, denetim artmıştır."
     },
     {
-        "question": "Soru 29: Tevhid-i Tedrisat Kanunu'nun;\n\nI. eğitimde ikiliği kaldırması\nII. eğitimi millîleştirmesi\nIII. yabancı okullar üzerindeki devlet denetimini artırması\nIV. eğitim kurumlarını yabancı devletlerin yönetimine bırakması\n\nsonuçlarından hangileri doğrudur?",
+        "question": "Tevhid-i Tedrisat Kanunu'nun;\n\nI. eğitimde ikiliği kaldırması\nII. eğitimi millîleştirmesi\nIII. yabancı okullar üzerindeki devlet denetimini artırması\nIV. eğitim kurumlarını yabancı devletlerin yönetimine bırakması\n\nsonuçlarından hangileri doğrudur?",
         "options": [
             "A) I ve II",
             "B) II ve IV",
@@ -349,19 +349,19 @@ window.tarih_20_sorulari = [
         "explanation": "IV yanlıştır; denetim artmıştır, yönetim yabancıya bırakılmamıştır."
     },
     {
-        "question": "Soru 30: Aşağıdakilerden hangisi Maarif Teşkilatı Kanunu kapsamında gerçekleştirilen uygulamalardan biri değildir?",
+        "question": "Aşağıdakilerden hangisi Maarif Teşkilatı Kanunu kapsamında gerçekleştirilen uygulamalardan biri değildir?",
         "options": [
             "A) Okul açılmasının Bakanlık iznine bağlanması",
             "B) İlköğretimin parasız ve zorunlu hâle getirilmesi",
-            "C) Talim ve Terbiye Kurulunun oluşturulması",
+            "C) Medreselerin yeniden açılması",
             "D) Yabancı okullara Türkçe, tarih ve coğrafya derslerinin konulması",
-            "E) Medreselerin yeniden açılması"
+            "E) Talim ve Terbiye Kurulunun oluşturulması"
         ],
-        "correctAnswerIndex": 4,
+        "correctAnswerIndex": 2,
         "explanation": "Medreseler kapatılmıştır, yeniden açılmamıştır."
     },
     {
-        "question": "Soru 31: Medreselerin kapatılmasıyla aşağıdakilerden hangisinin amaçlandığı söylenebilir?",
+        "question": "Medreselerin kapatılmasıyla aşağıdakilerden hangisinin amaçlandığı söylenebilir?",
         "options": [
             "A) Eğitimde ikiliğin sürdürülmesi",
             "B) Eğitim sisteminin laik ve millî hâle getirilmesi",
@@ -373,19 +373,19 @@ window.tarih_20_sorulari = [
         "explanation": "Medreselerin kapatılması eğitimde ikiliği kaldırmış, laik ve ulusal eğitime zemin hazırlamıştır."
     },
     {
-        "question": "Soru 32: Harf Devrimi'nin yapılma nedenleri arasında aşağıdakilerden hangisi bulunmaz?",
+        "question": "Harf Devrimi'nin yapılma nedenleri arasında aşağıdakilerden hangisi bulunmaz?",
         "options": [
             "A) Okuma oranını artırmak",
             "B) Batı ile kültürel ilişkileri geliştirmek",
             "C) Konuşma ve yazı dili arasındaki farkı azaltmak",
-            "D) Türk dilinin gelişimine katkıda bulunmak",
-            "E) Osmanlı hukuk sistemini yeniden kurmak"
+            "D) Osmanlı hukuk sistemini yeniden kurmak",
+            "E) Türk dilinin gelişimine katkıda bulunmak"
         ],
-        "correctAnswerIndex": 4,
+        "correctAnswerIndex": 3,
         "explanation": "Osmanlı hukukunun yeniden kurulması Harf Devrimi'nin gerekçesi değildir."
     },
     {
-        "question": "Soru 33: Yeni harflerin kabulüyle ilgili aşağıdaki kronolojik sıralamalardan hangisi doğrudur?",
+        "question": "Yeni harflerin kabulüyle ilgili aşağıdaki kronolojik sıralamalardan hangisi doğrudur?",
         "options": [
             "A) Kanun – Elifba raporu – tanıtım",
             "B) Elifba raporu – yeni harflerin tanıtımı – kanunun kabulü",
@@ -397,7 +397,7 @@ window.tarih_20_sorulari = [
         "explanation": "29 Mayıs 1928 Elif-Ba raporu, ardından Sarayburnu tanıtımı, 1 Kasım 1928 kanun."
     },
     {
-        "question": "Soru 34: Harf Devrimi'nin sonuçları arasında;\n\nI. okuryazar oranının artması\nII. kitap sayısının artması\nIII. Batı'daki teknik gelişmelerin takibinin kolaylaşması\n\ngelişmelerinden hangileri bulunmaktadır?",
+        "question": "Harf Devrimi'nin sonuçları arasında;\n\nI. okuryazar oranının artması\nII. kitap sayısının artması\nIII. Batı'daki teknik gelişmelerin takibinin kolaylaşması\n\ngelişmelerinden hangileri bulunmaktadır?",
         "options": [
             "A) Yalnız I",
             "B) I ve II",
@@ -409,7 +409,7 @@ window.tarih_20_sorulari = [
         "explanation": "Üçü de Harf Devrimi'nin sonuçlarıdır."
     },
     {
-        "question": "Soru 35: Millet Mekteplerinin açılmasının temel amacı aşağıdakilerden hangisidir?",
+        "question": "Millet Mekteplerinin açılmasının temel amacı aşağıdakilerden hangisidir?",
         "options": [
             "A) Üniversite eğitimi vermek",
             "B) Yeni harfleri halka öğretmek",
@@ -421,19 +421,19 @@ window.tarih_20_sorulari = [
         "explanation": "Millet Mektepleri yeni harfleri öğretmek için 11 Kasım 1928'de açılmıştır."
     },
     {
-        "question": "Soru 36: Türk Tarih Kurumunun kurulmasının amaçları arasında aşağıdakilerden hangisi yer almaz?",
+        "question": "Türk Tarih Kurumunun kurulmasının amaçları arasında aşağıdakilerden hangisi yer almaz?",
         "options": [
             "A) Türk milletinin kökenlerini araştırmak",
             "B) Türklerin dünya ve İslam tarihine katkılarını ortaya koymak",
-            "C) Anadolu'nun Türklerden önceki tarihini aydınlatmak",
+            "C) Hanedancı tarih anlayışını güçlendirmek",
             "D) Millî tarih anlayışını geliştirmek",
-            "E) Hanedancı tarih anlayışını güçlendirmek"
+            "E) Anadolu'nun Türklerden önceki tarihini aydınlatmak"
         ],
-        "correctAnswerIndex": 4,
+        "correctAnswerIndex": 2,
         "explanation": "Amaç ümmetçi ve hanedancı tarihten millî tarihe geçmektir."
     },
     {
-        "question": "Soru 37: Halkevlerinin temel amaçlarından biri aşağıdakilerden hangisidir?",
+        "question": "Halkevlerinin temel amaçlarından biri aşağıdakilerden hangisidir?",
         "options": [
             "A) Cumhuriyet'in ilke ve inkılaplarını halka anlatmak",
             "B) Yükseköğretim kurumlarının yerine geçmek",
@@ -445,19 +445,19 @@ window.tarih_20_sorulari = [
         "explanation": "Halkevleri ilke ve inkılapları halka anlatmak için kurulmuştur."
     },
     {
-        "question": "Soru 38: Türk Dil Kurumunun kuruluş amaçları arasında aşağıdakilerden hangisi yoktur?",
+        "question": "Türk Dil Kurumunun kuruluş amaçları arasında aşağıdakilerden hangisi yoktur?",
         "options": [
             "A) Türkçeyi yabancı kelimelerin etkisinden kurtarmak",
             "B) Türkçenin kökenlerini araştırmak",
-            "C) Teknik kavramlara Türkçe karşılıklar bulmak",
+            "C) Osmanlıca kullanımını yaygınlaştırmak",
             "D) Halk ile aydınlar arasındaki dil kopukluğunu azaltmak",
-            "E) Osmanlıca kullanımını yaygınlaştırmak"
+            "E) Teknik kavramlara Türkçe karşılıklar bulmak"
         ],
-        "correctAnswerIndex": 4,
+        "correctAnswerIndex": 2,
         "explanation": "TDK Osmanlıcayı yaygınlaştırmaz; yabancı kelimelerden kurtarmayı amaçlar."
     },
     {
-        "question": "Soru 39: Üniversite reformuyla ilgili aşağıdakilerden hangisi doğrudur?",
+        "question": "Üniversite reformuyla ilgili aşağıdakilerden hangisi doğrudur?",
         "options": [
             "A) Darülfünun yerine İstanbul Üniversitesi açılmıştır.",
             "B) Ankara Hukuk Mektebi 1933'te açılmıştır.",
@@ -469,19 +469,19 @@ window.tarih_20_sorulari = [
         "explanation": "Albert Malche raporuyla Darülfünun yerine İstanbul Üniversitesi açıldı. Ankara Hukuk 1925, Gazi Eğitim 1926, Yüksek Ziraat 1933."
     },
     {
-        "question": "Soru 40: Aşağıdaki gelişmelerden hangisi 1925 → 1926 → 1933 şeklindeki kronolojik sıraya uygundur?",
+        "question": "Aşağıdaki gelişmelerden hangisi 1925 → 1926 → 1933 şeklindeki kronolojik sıraya uygundur?",
         "options": [
-            "A) Ankara Hukuk Mektebi → Gazi Eğitim Enstitüsü → İstanbul Üniversitesi",
+            "A) İstanbul Üniversitesi → Ankara Hukuk Mektebi → Gazi Eğitim Enstitüsü",
             "B) Gazi Eğitim Enstitüsü → Ankara Hukuk Mektebi → İstanbul Üniversitesi",
-            "C) İstanbul Üniversitesi → Ankara Hukuk Mektebi → Gazi Eğitim Enstitüsü",
+            "C) Ankara Hukuk Mektebi → Gazi Eğitim Enstitüsü → İstanbul Üniversitesi",
             "D) Ankara Hukuk Mektebi → İstanbul Üniversitesi → Gazi Eğitim Enstitüsü",
             "E) Gazi Eğitim Enstitüsü → İstanbul Üniversitesi → Ankara Hukuk Mektebi"
         ],
-        "correctAnswerIndex": 0,
+        "correctAnswerIndex": 2,
         "explanation": "1925 Ankara Hukuk, 1926 Gazi Eğitim, 1933 İstanbul Üniversitesi."
     },
     {
-        "question": "Soru 41: İzmir İktisat Kongresi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+        "question": "İzmir İktisat Kongresi ile ilgili aşağıdakilerden hangisi yanlıştır?",
         "options": [
             "A) Lozan görüşmelerinin kesildiği sırada İzmir'de toplanmıştır.",
             "B) Sanayici, tüccar, çiftçi ve işçiler katılmıştır.",
@@ -493,7 +493,7 @@ window.tarih_20_sorulari = [
         "explanation": "Kongre ekonomik (Misak-ı İktisat) kararlar almıştır, siyasi inkılap kongresi değildir."
     },
     {
-        "question": "Soru 42: İzmir İktisat Kongresi kararlarında;\n\nI. millî bankaların kurulması\nII. devlet temelli yatırımların yapılması\nIII. yerli malların kullanılmasının teşvik edilmesi\nIV. yabancı tekellerin güçlendirilmesi\n\nyaklaşımlarından hangileri benimsenmiştir?",
+        "question": "İzmir İktisat Kongresi kararlarında;\n\nI. millî bankaların kurulması\nII. devlet temelli yatırımların yapılması\nIII. yerli malların kullanılmasının teşvik edilmesi\nIV. yabancı tekellerin güçlendirilmesi\n\nyaklaşımlarından hangileri benimsenmiştir?",
         "options": [
             "A) I ve II",
             "B) I ve III",
@@ -505,19 +505,19 @@ window.tarih_20_sorulari = [
         "explanation": "Yabancı tekellerden kaçınılmıştır; IV yanlıştır."
     },
     {
-        "question": "Soru 43: Aşağıdakilerden hangisi tarım alanında yapılan çalışmalardan biridir?",
+        "question": "Aşağıdakilerden hangisi tarım alanında yapılan çalışmalardan biridir?",
         "options": [
             "A) Kabotaj Kanunu",
-            "B) Aşar vergisinin kaldırılması",
-            "C) Merkez Bankasının kurulması",
+            "B) Merkez Bankasının kurulması",
+            "C) Aşar vergisinin kaldırılması",
             "D) Sümerbankın kurulması",
             "E) Teşvik-i Sanayi Kanunu"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 2,
         "explanation": "Aşar 1925'te kaldırılmıştır; tarım alanındadır."
     },
     {
-        "question": "Soru 44: Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+        "question": "Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
         "options": [
             "A) 1925 – Aşar vergisinin kaldırılması",
             "B) 1933 – Yüksek Ziraat Enstitüsü",
@@ -529,7 +529,7 @@ window.tarih_20_sorulari = [
         "explanation": "Merkez Bankası 1930'da kurulmuştur. 1938'de TMO kurulmuştur."
     },
     {
-        "question": "Soru 45: Aşağıdakilerden hangisi ticaret alanında yapılan gelişmelerden biridir?",
+        "question": "Aşağıdakilerden hangisi ticaret alanında yapılan gelişmelerden biridir?",
         "options": [
             "A) İş Bankasının kurulması",
             "B) Etibankın kurulması",
@@ -541,7 +541,7 @@ window.tarih_20_sorulari = [
         "explanation": "İş Bankası 1924'te kurulmuştur (ticaret/bankacılık)."
     },
     {
-        "question": "Soru 46: Aşağıdaki kuruluşlardan hangisi Atatürk Dönemi'nde kurulmamıştır?",
+        "question": "Aşağıdaki kuruluşlardan hangisi Atatürk Dönemi'nde kurulmamıştır?",
         "options": [
             "A) Ziraat Bankası",
             "B) İş Bankası",
@@ -553,7 +553,7 @@ window.tarih_20_sorulari = [
         "explanation": "Ziraat Bankası 1863'te Osmanlı döneminde kurulmuştur."
     },
     {
-        "question": "Soru 47: Teşvik-i Sanayi Kanunu'nun temel amacı aşağıdakilerden hangisidir?",
+        "question": "Teşvik-i Sanayi Kanunu'nun temel amacı aşağıdakilerden hangisidir?",
         "options": [
             "A) Özel sektörü sanayi alanına çekmek",
             "B) Yabancı tekelleri güçlendirmek",
@@ -565,7 +565,7 @@ window.tarih_20_sorulari = [
         "explanation": "28 Mayıs 1927 Teşvik-i Sanayi özel sektörü sanayiye çekmeyi amaçlar."
     },
     {
-        "question": "Soru 48: Teşvik-i Sanayi Kanunu'nun istenilen ölçüde uygulanamamasında;\n\nI. özel sektörün yeterli sermayeye sahip olmaması\nII. teknik bilgi ve eleman eksikliği\nIII. 1929 Dünya Ekonomik Bunalımı\n\netkenlerinden hangileri rol oynamıştır?",
+        "question": "Teşvik-i Sanayi Kanunu'nun istenilen ölçüde uygulanamamasında;\n\nI. özel sektörün yeterli sermayeye sahip olmaması\nII. teknik bilgi ve eleman eksikliği\nIII. 1929 Dünya Ekonomik Bunalımı\n\netkenlerinden hangileri rol oynamıştır?",
         "options": [
             "A) Yalnız I",
             "B) I ve II",
@@ -577,19 +577,19 @@ window.tarih_20_sorulari = [
         "explanation": "Üç etken de kanunun yeterince uygulanamamasında rol oynamıştır."
     },
     {
-        "question": "Soru 49: Aşağıdakilerden hangisi sağlık ve sosyal alandaki gelişmelerden biri değildir?",
+        "question": "Aşağıdakilerden hangisi sağlık ve sosyal alandaki gelişmelerden biri değildir?",
         "options": [
             "A) Çocuk Esirgeme Kurumunun kurulması",
             "B) Hilal-i Ahmer'in Kızılay'a dönüştürülmesi",
-            "C) Verem savaş dernekleri ve dispanserlerinin kurulması",
+            "C) Kabotaj Kanunu'nun kabul edilmesi",
             "D) Genel Hıfzıssıhha Kanunu'nun kabul edilmesi",
-            "E) Kabotaj Kanunu'nun kabul edilmesi"
+            "E) Verem savaş dernekleri ve dispanserlerinin kurulması"
         ],
-        "correctAnswerIndex": 4,
+        "correctAnswerIndex": 2,
         "explanation": "Kabotaj denizcilik/milliyetçilik alanındadır."
     },
     {
-        "question": "Soru 50: Atatürk Dönemi'nde nüfusun artırılmasına yönelik;\n\nI. çok çocuklu ailelere vergi kolaylıkları sağlanması\nII. doğumevlerinin kurulması\nIII. ücretsiz ilaç dağıtılması\nIV. doğum kontrolü sağlayan ilaç ve araçların ülkeye girişinin yasaklanması\n\nuygulamalarından hangileri gerçekleştirilmiştir?",
+        "question": "Atatürk Dönemi'nde nüfusun artırılmasına yönelik;\n\nI. çok çocuklu ailelere vergi kolaylıkları sağlanması\nII. doğumevlerinin kurulması\nIII. ücretsiz ilaç dağıtılması\nIV. doğum kontrolü sağlayan ilaç ve araçların ülkeye girişinin yasaklanması\n\nuygulamalarından hangileri gerçekleştirilmiştir?",
         "options": [
             "A) I ve II",
             "B) II ve III",
@@ -601,7 +601,7 @@ window.tarih_20_sorulari = [
         "explanation": "Dört uygulama da nüfus artırma tedbirlerindendir."
     },
     {
-        "question": "Soru 51: Atatürk inkılaplarının ortaya çıkış süreci değerlendirildiğinde aşağıdakilerden hangisine ulaşılamaz?",
+        "question": "Atatürk inkılaplarının ortaya çıkış süreci değerlendirildiğinde aşağıdakilerden hangisine ulaşılamaz?",
         "options": [
             "A) Toplumsal ihtiyaçların inkılapların oluşumunda etkili olduğuna",
             "B) İnkılapların millî nitelik taşıdığına",
@@ -613,7 +613,7 @@ window.tarih_20_sorulari = [
         "explanation": "İnkılaplar belli bir ideolojinin ürünü değildir."
     },
     {
-        "question": "Soru 52: Osmanlı Devleti'nin Lozan görüşmelerine davet edilmesi üzerine Mustafa Kemal'in saltanatın kaldırılması yönünde harekete geçmesi, öncelikle aşağıdakilerden hangisini gerçekleştirmeye yöneliktir?",
+        "question": "Osmanlı Devleti'nin Lozan görüşmelerine davet edilmesi üzerine Mustafa Kemal'in saltanatın kaldırılması yönünde harekete geçmesi, öncelikle aşağıdakilerden hangisini gerçekleştirmeye yöneliktir?",
         "options": [
             "A) Halifelik makamının kaldırılmasını",
             "B) Temsil yetkisindeki ikiliği önlemeyi",
@@ -625,7 +625,7 @@ window.tarih_20_sorulari = [
         "explanation": "Amaç Lozan'a tek temsilciyle gitmek, temsil ikiliğini önlemektir."
     },
     {
-        "question": "Soru 53: Saltanatın kaldırılmasıyla birlikte Vahdettin'in yurt dışına çıkması ve Tevfik Paşa Hükûmeti'nin sona ermesi aşağıdakilerden hangisinin doğrudan göstergesidir?",
+        "question": "Saltanatın kaldırılmasıyla birlikte Vahdettin'in yurt dışına çıkması ve Tevfik Paşa Hükûmeti'nin sona ermesi aşağıdakilerden hangisinin doğrudan göstergesidir?",
         "options": [
             "A) Halifeliğin kaldırıldığının",
             "B) Osmanlı Devleti'nin siyasi varlığının sona erdiğinin",
@@ -637,19 +637,19 @@ window.tarih_20_sorulari = [
         "explanation": "Saltanatın kalkmasıyla Osmanlı Devleti resmen sona ermiştir."
     },
     {
-        "question": "Soru 54: Saltanatın kaldırılmasının ardından rejim ve devlet başkanlığı sorununun ortaya çıkması, aşağıdaki gelişmelerden hangisinin önünü açan bir durum oluşturmuştur?",
+        "question": "Saltanatın kaldırılmasının ardından rejim ve devlet başkanlığı sorununun ortaya çıkması, aşağıdaki gelişmelerden hangisinin önünü açan bir durum oluşturmuştur?",
         "options": [
             "A) Tevhid-i Tedrisat",
-            "B) Cumhuriyetin ilanı",
-            "C) Medeni Kanun",
+            "B) Medeni Kanun",
+            "C) Cumhuriyetin ilanı",
             "D) Harf Devrimi",
             "E) Soyadı Kanunu"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 2,
         "explanation": "Rejim ve devlet başkanlığı sorunu Cumhuriyet'in ilanıyla çözülmüştür."
     },
     {
-        "question": "Soru 55: Ankara'nın başkent ilan edilmesiyle ilgili aşağıdaki gelişmelerden hangisinin Cumhuriyetin ilanından önce gerçekleşmiş olması, Cumhuriyetin ilanının hangi sorunlara çözüm getirmeyi amaçladığı konusunda önemlidir?",
+        "question": "Ankara'nın başkent ilan edilmesiyle ilgili aşağıdaki gelişmelerden hangisinin Cumhuriyetin ilanından önce gerçekleşmiş olması, Cumhuriyetin ilanının hangi sorunlara çözüm getirmeyi amaçladığı konusunda önemlidir?",
         "options": [
             "A) Hükûmet ve devlet başkanlığı",
             "B) Eğitim ve kültür",
@@ -661,19 +661,19 @@ window.tarih_20_sorulari = [
         "explanation": "Başkent sorunu çözülmüş olsa da rejim ve devlet başkanlığı sorunu Cumhuriyet'le çözülmüştür."
     },
     {
-        "question": "Soru 56: Aşağıdakilerden hangisi Cumhuriyetin ilan edilmesinin doğrudan sonuçlarından biri değildir?",
+        "question": "Aşağıdakilerden hangisi Cumhuriyetin ilan edilmesinin doğrudan sonuçlarından biri değildir?",
         "options": [
             "A) Mustafa Kemal'in cumhurbaşkanı seçilmesi",
             "B) Kabine sistemine geçilmesi",
             "C) Devlet başkanlığı sorununun çözülmesi",
-            "D) İlk başbakanın İsmet İnönü olması",
-            "E) Halifeliğin kaldırılması"
+            "D) Halifeliğin kaldırılması",
+            "E) İlk başbakanın İsmet İnönü olması"
         ],
-        "correctAnswerIndex": 4,
+        "correctAnswerIndex": 3,
         "explanation": "Halifelik 3 Mart 1924'te kaldırılmıştır."
     },
     {
-        "question": "Soru 57: Meclis hükûmeti sisteminde yürütme organının oluşumu ile kabine sistemindeki oluşum karşılaştırıldığında aşağıdakilerden hangisi doğrudur?",
+        "question": "Meclis hükûmeti sisteminde yürütme organının oluşumu ile kabine sistemindeki oluşum karşılaştırıldığında aşağıdakilerden hangisi doğrudur?",
         "options": [
             "A) Her iki sistemde de bakanları doğrudan cumhurbaşkanı belirler.",
             "B) Meclis hükûmeti sisteminde bakanlar meclis içinden seçilirken kabine sisteminde başbakan belirleyici olmuştur.",
@@ -685,7 +685,7 @@ window.tarih_20_sorulari = [
         "explanation": "Meclis hükûmetinde bakanlar meclisten seçilir; kabinede başbakan belirler, cumhurbaşkanı onaylar."
     },
     {
-        "question": "Soru 58: 1923'te yapılan değişiklikle 1921 Anayasası'na \"Türkiye Devleti'nin yönetim şekli Cumhuriyet'tir.\" hükmünün eklenmesi aşağıdakilerden hangisini doğrudan ortaya koymuştur?",
+        "question": "1923'te yapılan değişiklikle 1921 Anayasası'na \"Türkiye Devleti'nin yönetim şekli Cumhuriyet'tir.\" hükmünün eklenmesi aşağıdakilerden hangisini doğrudan ortaya koymuştur?",
         "options": [
             "A) Laiklik ilkesinin benimsendiğini",
             "B) Devletin rejiminin kesinleştirildiğini",
@@ -697,19 +697,19 @@ window.tarih_20_sorulari = [
         "explanation": "Bu madde devlet rejimini anayasal olarak belirlemiştir."
     },
     {
-        "question": "Soru 59: Halifeliğin kaldırılmasıyla ilgili aşağıdaki gelişmelerden hangisi diğerlerinden farklı bir alana yöneliktir?",
+        "question": "Halifeliğin kaldırılmasıyla ilgili aşağıdaki gelişmelerden hangisi diğerlerinden farklı bir alana yöneliktir?",
         "options": [
             "A) Ümmetçilik anlayışının zayıflatılması",
             "B) Ulus-devlet anlayışının güçlendirilmesi",
-            "C) Devlet yönetimindeki iki başlılığın sona erdirilmesi",
+            "C) Eğitim-öğretimde birlik sağlanması",
             "D) Laiklik yolunda ilerlenmesi",
-            "E) Eğitim-öğretimde birlik sağlanması"
+            "E) Devlet yönetimindeki iki başlılığın sona erdirilmesi"
         ],
-        "correctAnswerIndex": 4,
+        "correctAnswerIndex": 2,
         "explanation": "Eğitimde birlik Tevhid-i Tedrisat'ın alanıdır."
     },
     {
-        "question": "Soru 60: 3 Mart 1924'te gerçekleştirilen düzenlemeler bir bütün olarak değerlendirildiğinde aşağıdaki sonuçlardan hangisine ulaşılması en uygundur?",
+        "question": "3 Mart 1924'te gerçekleştirilen düzenlemeler bir bütün olarak değerlendirildiğinde aşağıdaki sonuçlardan hangisine ulaşılması en uygundur?",
         "options": [
             "A) Ekonomik devletçilik anlayışı güçlendirilmiştir.",
             "B) Siyasi, hukuki ve eğitim alanlarında laikleşme süreci hızlandırılmıştır.",
@@ -721,7 +721,7 @@ window.tarih_20_sorulari = [
         "explanation": "Halifelik, Tevhid-i Tedrisat, Şeriye ve Evkaf aynı günde laikleşmeyi hızlandırmıştır."
     },
     {
-        "question": "Soru 61: Halifeliğin kaldırılmasıyla ilgili;\n\nI. Yabancı devletlerin iç işlerine müdahale etmesini zorlaştırmıştır.\nII. Ümmetçilik anlayışının güçlenmesini sağlamıştır.\nIII. Devlet yönetimindeki iki başlılığı sona erdirmiştir.\nIV. Millî egemenlik anlayışını desteklemiştir.\n\nyargılarından hangileri doğrudur?",
+        "question": "Halifeliğin kaldırılmasıyla ilgili;\n\nI. Yabancı devletlerin iç işlerine müdahale etmesini zorlaştırmıştır.\nII. Ümmetçilik anlayışının güçlenmesini sağlamıştır.\nIII. Devlet yönetimindeki iki başlılığı sona erdirmiştir.\nIV. Millî egemenlik anlayışını desteklemiştir.\n\nyargılarından hangileri doğrudur?",
         "options": [
             "A) I ve II",
             "B) I ve III",
@@ -733,7 +733,7 @@ window.tarih_20_sorulari = [
         "explanation": "Ümmetçilik zayıflamıştır; II yanlıştır."
     },
     {
-        "question": "Soru 62: Aşağıdakilerden hangisi 1924 Anayasası'nın hazırlanmasında etkili olan gerekçelerden biri olarak gösterilebilir?",
+        "question": "Aşağıdakilerden hangisi 1924 Anayasası'nın hazırlanmasında etkili olan gerekçelerden biri olarak gösterilebilir?",
         "options": [
             "A) 1921 Anayasası'nın savaş koşullarında hazırlanması",
             "B) Çok partili hayata geçiş zorunluluğu",
@@ -745,7 +745,7 @@ window.tarih_20_sorulari = [
         "explanation": "1921 Anayasası savaş ortamında kısa ve yetersiz kalmıştır."
     },
     {
-        "question": "Soru 63: 1924 Anayasası'nda 1928 yılında yapılan değişiklik ile 1937 yılında yapılan değişiklik karşılaştırıldığında aşağıdakilerden hangisi doğrudur?",
+        "question": "1924 Anayasası'nda 1928 yılında yapılan değişiklik ile 1937 yılında yapılan değişiklik karşılaştırıldığında aşağıdakilerden hangisi doğrudur?",
         "options": [
             "A) Her ikisi de kadınların siyasi haklarıyla ilgilidir.",
             "B) 1928 değişikliği laikleşme, 1937 değişikliği Atatürk ilkeleriyle ilgilidir.",
@@ -757,7 +757,7 @@ window.tarih_20_sorulari = [
         "explanation": "1928'de din ibaresi kalkmış, 1937'de Atatürk ilkeleri anayasaya girmiştir."
     },
     {
-        "question": "Soru 64: Türk Medeni Kanunu'nun kabul edilmesiyle aşağıdakilerden hangisinin aynı anda gerçekleştiği söylenemez?",
+        "question": "Türk Medeni Kanunu'nun kabul edilmesiyle aşağıdakilerden hangisinin aynı anda gerçekleştiği söylenemez?",
         "options": [
             "A) Hukuk birliğinin güçlenmesi",
             "B) Kadın-erkek eşitliğinin geliştirilmesi",
@@ -769,19 +769,19 @@ window.tarih_20_sorulari = [
         "explanation": "Azınlıklar kendi istekleriyle Türk kanunlarına tabi olmuştur."
     },
     {
-        "question": "Soru 65: Osmanlı Devleti'nde Mecelle'nin yanında azınlıkların kendi hukuk sistemlerine tabi olması aşağıdaki sorunlardan hangisini ortaya çıkarmıştır?",
+        "question": "Osmanlı Devleti'nde Mecelle'nin yanında azınlıkların kendi hukuk sistemlerine tabi olması aşağıdaki sorunlardan hangisini ortaya çıkarmıştır?",
         "options": [
             "A) Eğitimde birlik sorunu",
-            "B) Hukukta birlik sorunu",
+            "B) Yönetimde çift başlılık sorunu",
             "C) Ekonomik bağımsızlık sorunu",
-            "D) Yönetimde çift başlılık sorunu",
+            "D) Hukukta birlik sorunu",
             "E) Ulaşım sorunu"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 3,
         "explanation": "Çoklu hukuk sistemi hukuk birliği sorununu doğurmuştur."
     },
     {
-        "question": "Soru 66: Aşağıdaki kanunlardan hangisinin kabul edilmesiyle hukuk birliğinin sağlanmasına yönelik en kapsamlı adımlardan biri atılmıştır?",
+        "question": "Aşağıdaki kanunlardan hangisinin kabul edilmesiyle hukuk birliğinin sağlanmasına yönelik en kapsamlı adımlardan biri atılmıştır?",
         "options": [
             "A) Şapka Kanunu",
             "B) Türk Medeni Kanunu",
@@ -793,7 +793,7 @@ window.tarih_20_sorulari = [
         "explanation": "Medeni Kanun hukuk birliği, eşitlik ve laik hukukun temel metnidir."
     },
     {
-        "question": "Soru 67: Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+        "question": "Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
         "options": [
             "A) Medeni Kanun – İsviçre",
             "B) Borçlar Kanunu – İsviçre",
@@ -805,7 +805,7 @@ window.tarih_20_sorulari = [
         "explanation": "Deniz Ticaret Kanunu Almanya kaynaklıdır."
     },
     {
-        "question": "Soru 68: Tekke, zaviye ve türbelerin kapatılmasının amaçları düşünüldüğünde bu düzenlemenin özellikle aşağıdaki ilkelerden hangisiyle ilişkili olduğu söylenebilir?",
+        "question": "Tekke, zaviye ve türbelerin kapatılmasının amaçları düşünüldüğünde bu düzenlemenin özellikle aşağıdaki ilkelerden hangisiyle ilişkili olduğu söylenebilir?",
         "options": [
             "A) Devletçilik",
             "B) Laiklik",
@@ -817,7 +817,7 @@ window.tarih_20_sorulari = [
         "explanation": "Din istismarını önlemek ve laikleşmek temel amaçlardandır."
     },
     {
-        "question": "Soru 69: Aşağıdakilerden hangisi Tekke, Zaviye ve Türbelerin kapatılmasıyla aynı düzenleme kapsamında ele alınan unsurlardan biridir?",
+        "question": "Aşağıdakilerden hangisi Tekke, Zaviye ve Türbelerin kapatılmasıyla aynı düzenleme kapsamında ele alınan unsurlardan biridir?",
         "options": [
             "A) Dedelik",
             "B) Milletvekilliği",
@@ -829,7 +829,7 @@ window.tarih_20_sorulari = [
         "explanation": "Dedelik, şeyhlik, seyitlik, dervişlik, türbedarlık, çelebilik, babalık, emirlik kaldırılmıştır."
     },
     {
-        "question": "Soru 70: Soyadı Kanunu'nun çıkarılmasıyla;\n\nI. Toplumsal eşitliğin güçlendirilmesi\nII. Resmî ilişkilerdeki karmaşanın giderilmesi\nIII. Asalet ve aile kaynaklı ayrıcalıkların azaltılması\nIV. Eğitimde birliğin sağlanması\n\namaçlarından hangilerine ulaşılmak istenmiştir?",
+        "question": "Soyadı Kanunu'nun çıkarılmasıyla;\n\nI. Toplumsal eşitliğin güçlendirilmesi\nII. Resmî ilişkilerdeki karmaşanın giderilmesi\nIII. Asalet ve aile kaynaklı ayrıcalıkların azaltılması\nIV. Eğitimde birliğin sağlanması\n\namaçlarından hangilerine ulaşılmak istenmiştir?",
         "options": [
             "A) I ve II",
             "B) I ve III",
@@ -841,7 +841,7 @@ window.tarih_20_sorulari = [
         "explanation": "Eğitimde birlik Tevhid-i Tedrisat'tır."
     },
     {
-        "question": "Soru 71: Aşağıdaki gelişmelerden hangisi toplumsal alanda yapılan inkılaplar arasında değerlendirilemez?",
+        "question": "Aşağıdaki gelişmelerden hangisi toplumsal alanda yapılan inkılaplar arasında değerlendirilemez?",
         "options": [
             "A) Şapka Kanunu",
             "B) Tekke ve zaviyelerin kapatılması",
@@ -853,7 +853,7 @@ window.tarih_20_sorulari = [
         "explanation": "Tevhid-i Tedrisat eğitim-kültür alanındadır."
     },
     {
-        "question": "Soru 72: Maarif Kongresi'nin Kütahya-Eskişehir Muharebeleri devam ederken toplanması aşağıdakilerden hangisini göstermesi bakımından önemlidir?",
+        "question": "Maarif Kongresi'nin Kütahya-Eskişehir Muharebeleri devam ederken toplanması aşağıdakilerden hangisini göstermesi bakımından önemlidir?",
         "options": [
             "A) Askerî mücadele devam ederken eğitim politikalarının da planlandığını",
             "B) Savaşın tamamen sona erdiğini",
@@ -865,7 +865,7 @@ window.tarih_20_sorulari = [
         "explanation": "Savaş sürerken millî eğitim konuşulmuştur."
     },
     {
-        "question": "Soru 73: Tevhid-i Tedrisat Kanunu'nun aşağıdaki sonuçlarından hangisi doğrudan eğitimde birlik kavramıyla ilişkilendirilemez?",
+        "question": "Tevhid-i Tedrisat Kanunu'nun aşağıdaki sonuçlarından hangisi doğrudan eğitimde birlik kavramıyla ilişkilendirilemez?",
         "options": [
             "A) Tüm eğitim kurumlarının MEB'e bağlanması",
             "B) Eğitimde ikiliğin kaldırılması",
@@ -877,19 +877,19 @@ window.tarih_20_sorulari = [
         "explanation": "Kabotaj deniz ticareti / milliyetçilik alanındadır."
     },
     {
-        "question": "Soru 74: Tevhid-i Tedrisat Kanunu'nun çıkarılmasıyla aşağıdakilerden hangisinin zemini hazırlanmıştır?",
+        "question": "Tevhid-i Tedrisat Kanunu'nun çıkarılmasıyla aşağıdakilerden hangisinin zemini hazırlanmıştır?",
         "options": [
-            "A) Medreselerin kapatılması",
+            "A) İş Bankasının kurulması",
             "B) Merkez Bankasının kurulması",
             "C) Kabotaj Kanunu",
-            "D) İş Bankasının kurulması",
+            "D) Medreselerin kapatılması",
             "E) Aşar vergisinin kaldırılması"
         ],
-        "correctAnswerIndex": 0,
+        "correctAnswerIndex": 3,
         "explanation": "Tevhid-i Tedrisat medreselerin kapatılmasına ortam hazırlamıştır."
     },
     {
-        "question": "Soru 75: Aşağıdaki gelişmelerden hangisi eğitim alanında millîleştirme ve merkezileştirme amacı taşıyan uygulamalardan biri olarak değerlendirilebilir?",
+        "question": "Aşağıdaki gelişmelerden hangisi eğitim alanında millîleştirme ve merkezileştirme amacı taşıyan uygulamalardan biri olarak değerlendirilebilir?",
         "options": [
             "A) Yabancı okullara Türkçe, tarih ve coğrafya dersleri konulması",
             "B) İzmir İktisat Kongresi'nin toplanması",
@@ -901,31 +901,31 @@ window.tarih_20_sorulari = [
         "explanation": "Maarif Teşkilatı Kanunu kapsamında yabancı okullara Türkçe, tarih, coğrafya konulmuştur."
     },
     {
-        "question": "Soru 76: Maarif Teşkilatı Kanunu ile ilgili aşağıdakilerden hangisi yanlıştır?",
+        "question": "Maarif Teşkilatı Kanunu ile ilgili aşağıdakilerden hangisi yanlıştır?",
         "options": [
             "A) Okul açılması Bakanlığın iznine bağlanmıştır.",
             "B) İlköğretim parasız ve zorunlu hâle getirilmiştir.",
-            "C) Talim ve Terbiye Kurulu oluşturulmuştur.",
+            "C) Eğitim kurumlarının dinî otoriteler tarafından yönetilmesi sağlanmıştır.",
             "D) Yabancı okullara Türkçe, tarih ve coğrafya dersleri konulmuştur.",
-            "E) Eğitim kurumlarının dinî otoriteler tarafından yönetilmesi sağlanmıştır."
+            "E) Talim ve Terbiye Kurulu oluşturulmuştur."
         ],
-        "correctAnswerIndex": 4,
+        "correctAnswerIndex": 2,
         "explanation": "Kanun eğitimi din etkisinden kurtarmayı amaçlar."
     },
     {
-        "question": "Soru 77: Medreselerin kapatılması ve Tevhid-i Tedrisat Kanunu birlikte değerlendirildiğinde aşağıdaki sonuçlardan hangisine ulaşılabilir?",
+        "question": "Medreselerin kapatılması ve Tevhid-i Tedrisat Kanunu birlikte değerlendirildiğinde aşağıdaki sonuçlardan hangisine ulaşılabilir?",
         "options": [
             "A) Eğitimde çok başlılık güçlendirilmiştir.",
-            "B) Eğitim sistemi laik ve millî bir yapıya yöneltilmiştir.",
-            "C) Yabancı okullar tamamen bağımsız hâle getirilmiştir.",
+            "B) Yabancı okullar tamamen bağımsız hâle getirilmiştir.",
+            "C) Eğitim sistemi laik ve millî bir yapıya yöneltilmiştir.",
             "D) Dinî eğitim tamamen yasaklanmıştır.",
             "E) Yükseköğretim kurumları kaldırılmıştır."
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 2,
         "explanation": "İkilik kalkmış, laik ve millî eğitim güçlenmiştir. İmam hatip ve ilahiyat amaçlanmıştır."
     },
     {
-        "question": "Soru 78: Harf Devrimi'nin gerekçeleri arasında;\n\nI. Arap harflerinin Türkçenin yapısına uygun olmaması\nII. Okuryazarlık oranının yükseltilmek istenmesi\nIII. Batı ile kültürel ilişkilerin geliştirilmesi\nIV. Konuşma ve yazı dili arasındaki farkın azaltılması\n\nhangileri bulunmaktadır?",
+        "question": "Harf Devrimi'nin gerekçeleri arasında;\n\nI. Arap harflerinin Türkçenin yapısına uygun olmaması\nII. Okuryazarlık oranının yükseltilmek istenmesi\nIII. Batı ile kültürel ilişkilerin geliştirilmesi\nIV. Konuşma ve yazı dili arasındaki farkın azaltılması\n\nhangileri bulunmaktadır?",
         "options": [
             "A) I ve II",
             "B) II ve III",
@@ -937,7 +937,7 @@ window.tarih_20_sorulari = [
         "explanation": "Dört gerekçe de Harf Devrimi'nin nedenlerindendir."
     },
     {
-        "question": "Soru 79: Yeni harflerin kabul edilmesiyle birlikte Millet Mekteplerinin açılması aşağıdakilerden hangisini göstermektedir?",
+        "question": "Yeni harflerin kabul edilmesiyle birlikte Millet Mekteplerinin açılması aşağıdakilerden hangisini göstermektedir?",
         "options": [
             "A) Harf değişikliğinin yalnızca hukuki bir düzenleme olarak bırakılmadığını",
             "B) Üniversitelerin kapatıldığını",
@@ -949,7 +949,7 @@ window.tarih_20_sorulari = [
         "explanation": "Millet Mektepleri yeni harfleri halka öğretmek için açılmıştır."
     },
     {
-        "question": "Soru 80: Aşağıdaki gelişmelerden hangisi Türk milletinin geçmişini araştırma ve millî bilinç oluşturma amacıyla doğrudan ilişkilidir?",
+        "question": "Aşağıdaki gelişmelerden hangisi Türk milletinin geçmişini araştırma ve millî bilinç oluşturma amacıyla doğrudan ilişkilidir?",
         "options": [
             "A) Türk Dil Kurumunun kurulması",
             "B) Türk Tarih Kurumunun kurulması",
@@ -961,7 +961,7 @@ window.tarih_20_sorulari = [
         "explanation": "TTK millî tarih bilinci ve köken araştırması içindir. TDK dil, halkevleri inkılabı halka anlatma, millet mektepleri harf öğretimidir."
     },
     {
-        "question": "Soru 81: Türk Tarih Kurumunun kuruluş amaçları dikkate alındığında aşağıdakilerden hangisi bu amaçlarla çelişir?",
+        "question": "Türk Tarih Kurumunun kuruluş amaçları dikkate alındığında aşağıdakilerden hangisi bu amaçlarla çelişir?",
         "options": [
             "A) Millî tarih anlayışını geliştirmek",
             "B) Türklerin tarihî katkılarını araştırmak",
@@ -973,19 +973,19 @@ window.tarih_20_sorulari = [
         "explanation": "Hanedancı tarih anlayışından millî tarihe geçilmek istenmiştir."
     },
     {
-        "question": "Soru 82: Türk Dil Kurumunun çalışmalarının;\n\n* halk ağzından derlemeler yapması,\n* kitaplardan taramalar gerçekleştirmesi,\n* teknik kavramlara Türkçe karşılıklar bulmaya çalışması\n\naşağıdaki amaçlardan hangisine yöneliktir?",
+        "question": "Türk Dil Kurumunun çalışmalarının;\n\n* halk ağzından derlemeler yapması,\n* kitaplardan taramalar gerçekleştirmesi,\n* teknik kavramlara Türkçe karşılıklar bulmaya çalışması\n\naşağıdaki amaçlardan hangisine yöneliktir?",
         "options": [
-            "A) Türkçeyi geliştirmek ve zenginleştirmek",
+            "A) Yabancı okulları kapatmak",
             "B) Osmanlı siyasi yapısını canlandırmak",
             "C) Dini eğitimi yaygınlaştırmak",
-            "D) Yabancı okulları kapatmak",
+            "D) Türkçeyi geliştirmek ve zenginleştirmek",
             "E) Ekonomik bağımsızlığı sağlamak"
         ],
-        "correctAnswerIndex": 0,
+        "correctAnswerIndex": 3,
         "explanation": "Derleme, tarama ve karşılık bulma Türkçeyi geliştirme hedefidir."
     },
     {
-        "question": "Soru 83: Aşağıdaki gelişmelerden hangisi doğru kronolojik sırada verilmiştir?",
+        "question": "Aşağıdaki gelişmelerden hangisi doğru kronolojik sırada verilmiştir?",
         "options": [
             "A) Ankara Hukuk Mektebi → Gazi Eğitim Enstitüsü → İstanbul Üniversitesi",
             "B) Gazi Eğitim Enstitüsü → Ankara Hukuk Mektebi → İstanbul Üniversitesi",
@@ -997,7 +997,7 @@ window.tarih_20_sorulari = [
         "explanation": "1925 → 1926 → 1933."
     },
     {
-        "question": "Soru 84: Üniversite reformunda Albert Malche'nin raporunun dikkate alınması aşağıdakilerden hangisiyle sonuçlanmıştır?",
+        "question": "Üniversite reformunda Albert Malche'nin raporunun dikkate alınması aşağıdakilerden hangisiyle sonuçlanmıştır?",
         "options": [
             "A) Darülfünunun yerine İstanbul Üniversitesinin açılması",
             "B) Ankara'nın başkent olması",
@@ -1009,7 +1009,7 @@ window.tarih_20_sorulari = [
         "explanation": "31 Mayıs 1933 üniversite reformu Malche raporuna dayanır."
     },
     {
-        "question": "Soru 85: İzmir İktisat Kongresi'nin toplanması ve Misak-ı İktisadi kararlarının alınması aşağıdaki amaçlardan hangisiyle daha yakından ilişkilidir?",
+        "question": "İzmir İktisat Kongresi'nin toplanması ve Misak-ı İktisadi kararlarının alınması aşağıdaki amaçlardan hangisiyle daha yakından ilişkilidir?",
         "options": [
             "A) Millî ekonomik politikaların belirlenmesi",
             "B) Eğitimde birlik sağlanması",
@@ -1021,7 +1021,7 @@ window.tarih_20_sorulari = [
         "explanation": "Kongre millî ekonomi (Misak-ı İktisat) kararları almıştır."
     },
     {
-        "question": "Soru 86: İzmir İktisat Kongresi kararları arasında aşağıdakilerden hangisi yer almaz?",
+        "question": "İzmir İktisat Kongresi kararları arasında aşağıdakilerden hangisi yer almaz?",
         "options": [
             "A) Millî bankaların kurulması",
             "B) Yerli malların kullanımının teşvik edilmesi",
@@ -1033,7 +1033,7 @@ window.tarih_20_sorulari = [
         "explanation": "Kongre özel sektörü yok etmez; anonim şirketleri kolaylaştırır, teşvik yasaları öngörür."
     },
     {
-        "question": "Soru 87: Aşağıdaki gelişmelerden hangisi 1925 yılıyla ilişkilendirilemez?",
+        "question": "Aşağıdaki gelişmelerden hangisi 1925 yılıyla ilişkilendirilemez?",
         "options": [
             "A) Aşar vergisinin kaldırılması",
             "B) Atatürk Orman Çiftliği'nin kurulması",
@@ -1045,7 +1045,7 @@ window.tarih_20_sorulari = [
         "explanation": "Teşvik-i Sanayi Kanunu 28 Mayıs 1927'dir."
     },
     {
-        "question": "Soru 88: Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+        "question": "Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
         "options": [
             "A) 1930 – Merkez Bankası",
             "B) 1933 – Halk Bankası",
@@ -1057,7 +1057,7 @@ window.tarih_20_sorulari = [
         "explanation": "Sümerbank 1933'te kurulmuştur."
     },
     {
-        "question": "Soru 89: Sümerbank'ın kurulması ile ilgili aşağıdakilerden hangisi doğrudur?",
+        "question": "Sümerbank'ın kurulması ile ilgili aşağıdakilerden hangisi doğrudur?",
         "options": [
             "A) I. Beş Yıllık Kalkınma Planının finansmanında rol üstlenmiştir.",
             "B) Madenlerin aranması ve satışıyla görevlendirilmiştir.",
@@ -1069,7 +1069,7 @@ window.tarih_20_sorulari = [
         "explanation": "Sümerbank I. Plan'ın finansmanıdır. Maden Etibank/MTA, esnaf Halk Bankası'dır."
     },
     {
-        "question": "Soru 90: Etibank ile MTA'nın aynı yıl kurulması aşağıdakilerden hangisiyle daha yakından ilişkilidir?",
+        "question": "Etibank ile MTA'nın aynı yıl kurulması aşağıdakilerden hangisiyle daha yakından ilişkilidir?",
         "options": [
             "A) Tarımsal üretimin artırılması",
             "B) Maden kaynaklarının araştırılması ve ekonomiye kazandırılması",
@@ -1081,7 +1081,7 @@ window.tarih_20_sorulari = [
         "explanation": "Her ikisi de 1935'te maden-ekonomi hattındadır."
     },
     {
-        "question": "Soru 91: Teşvik-i Sanayi Kanunu'nun uygulanmasında karşılaşılan sorunlar dikkate alındığında aşağıdakilerden hangisinin bu sorunlardan biri olmadığı söylenebilir?",
+        "question": "Teşvik-i Sanayi Kanunu'nun uygulanmasında karşılaşılan sorunlar dikkate alındığında aşağıdakilerden hangisinin bu sorunlardan biri olmadığı söylenebilir?",
         "options": [
             "A) Özel sektörün sermaye yetersizliği",
             "B) Teknik eleman eksikliği",
@@ -1093,7 +1093,7 @@ window.tarih_20_sorulari = [
         "explanation": "Tarım sektörü ortadan kalkmamıştır; 1925'ten itibaren tarımda yenilikler sürmüştür."
     },
     {
-        "question": "Soru 92: Aşağıdaki gelişmelerden hangisi devletçilik politikasının belirginleştiği dönemin göstergelerinden biridir?",
+        "question": "Aşağıdaki gelişmelerden hangisi devletçilik politikasının belirginleştiği dönemin göstergelerinden biridir?",
         "options": [
             "A) Sümerbankın kurulması",
             "B) Saltanatın kaldırılması",
@@ -1105,7 +1105,7 @@ window.tarih_20_sorulari = [
         "explanation": "1933'te devletçilik uygulamasına geçilmiş, Sümerbank I. Plan finansmanında yer almıştır."
     },
     {
-        "question": "Soru 93: Sağlık alanındaki düzenlemelerin temel hedefi aşağıdakilerden hangisidir?",
+        "question": "Sağlık alanındaki düzenlemelerin temel hedefi aşağıdakilerden hangisidir?",
         "options": [
             "A) Yalnızca şehirlerde sağlık hizmetlerini yaygınlaştırmak",
             "B) Halkın sağlıklı ve dinamik bir yapıya sahip olmasını sağlamak",
@@ -1117,7 +1117,7 @@ window.tarih_20_sorulari = [
         "explanation": "Halkın sağlıklı ve dinamik yapıya sahip olması hedeflenmiş, köylere kadar hizmet götürülmüştür."
     },
     {
-        "question": "Soru 94: Aşağıdakilerden hangisi Atatürk Dönemi sağlık politikalarıyla doğrudan ilişkilidir?",
+        "question": "Aşağıdakilerden hangisi Atatürk Dönemi sağlık politikalarıyla doğrudan ilişkilidir?",
         "options": [
             "A) Genel Hıfzıssıhha Kanunu",
             "B) Kabotaj Kanunu",
@@ -1129,7 +1129,7 @@ window.tarih_20_sorulari = [
         "explanation": "Genel Hıfzıssıhha Kanunu sağlık alanındadır."
     },
     {
-        "question": "Soru 95: Atatürk Dönemi'nde nüfusun artırılmasına yönelik uygulamalar arasında aşağıdakilerden hangisi yer almaz?",
+        "question": "Atatürk Dönemi'nde nüfusun artırılmasına yönelik uygulamalar arasında aşağıdakilerden hangisi yer almaz?",
         "options": [
             "A) Çok çocuklu ailelere vergi kolaylıkları",
             "B) Doğumevlerinin kurulması",
@@ -1141,7 +1141,7 @@ window.tarih_20_sorulari = [
         "explanation": "Doğum kontrolü sağlayan ilaç ve araçların ülkeye girişi yasaklanmıştır, teşvik edilmemiştir."
     },
     {
-        "question": "Soru 96: Aşağıdakilerden hangisi demir yolu politikasının temel uygulamalarından biri olarak notta verilen gelişmeler arasında yer almaz?",
+        "question": "Aşağıdakilerden hangisi demir yolu politikasının temel uygulamalarından biri olarak notta verilen gelişmeler arasında yer almaz?",
         "options": [
             "A) Ankara-Kayseri hattı",
             "B) Sivas-Erzurum hattı",
@@ -1153,19 +1153,19 @@ window.tarih_20_sorulari = [
         "explanation": "Notta İzmir-Antalya hattı yoktur."
     },
     {
-        "question": "Soru 97: Hava yolları alanındaki gelişmeler birlikte değerlendirildiğinde aşağıdakilerden hangisi bu alanla doğrudan ilişkilidir?",
+        "question": "Hava yolları alanındaki gelişmeler birlikte değerlendirildiğinde aşağıdakilerden hangisi bu alanla doğrudan ilişkilidir?",
         "options": [
-            "A) Tayyare Cemiyetinin kurulması",
+            "A) Devlet Demir Yolları Genel Müdürlüğü",
             "B) Kabotaj Kanunu",
             "C) Denizbankın kurulması",
-            "D) Devlet Demir Yolları Genel Müdürlüğü",
+            "D) Tayyare Cemiyetinin kurulması",
             "E) Aşar vergisinin kaldırılması"
         ],
-        "correctAnswerIndex": 0,
+        "correctAnswerIndex": 3,
         "explanation": "Tayyare Cemiyeti, Kayseri fabrikası, Vecihi Hürkuş ve Türkkuşu havacılık alanındadır."
     },
     {
-        "question": "Soru 98: Aşağıdaki gelişmelerden hangisi denizcilik alanında milliyetçilik ilkesiyle ilişkilendirilebilecek bir düzenlemedir?",
+        "question": "Aşağıdaki gelişmelerden hangisi denizcilik alanında milliyetçilik ilkesiyle ilişkilendirilebilecek bir düzenlemedir?",
         "options": [
             "A) Kabotaj Kanunu",
             "B) Tevhid-i Tedrisat Kanunu",
@@ -1177,7 +1177,7 @@ window.tarih_20_sorulari = [
         "explanation": "1926 Kabotaj Kanunu milliyetçilik ilkesiyle ilişkilendirilir."
     },
     {
-        "question": "Soru 99: Aşağıdaki gelişmelerden hangisinde alan – amaç eşleştirmesi yanlıştır?",
+        "question": "Aşağıdaki gelişmelerden hangisinde alan – amaç eşleştirmesi yanlıştır?",
         "options": [
             "A) Türk Tarih Kurumu – Millî tarih bilincini geliştirmek",
             "B) Türk Dil Kurumu – Türkçeyi geliştirmek",
@@ -1189,7 +1189,7 @@ window.tarih_20_sorulari = [
         "explanation": "Kabotaj denizcilikte millî egemenlik / milliyetçiliktir, eğitim laikliği değildir."
     },
     {
-        "question": "Soru 100: Aşağıdaki gelişmelerden hangileri birlikte değerlendirildiğinde millîleşme ve laikleşme eğilimlerinin aynı süreçte ilerlediği söylenebilir?\n\nI. Halifeliğin kaldırılması\nII. Tevhid-i Tedrisat Kanunu\nIII. Türk Tarih Kurumunun kurulması\nIV. Türk Dil Kurumunun kurulması\nV. Kabotaj Kanunu",
+        "question": "Aşağıdaki gelişmelerden hangileri birlikte değerlendirildiğinde millîleşme ve laikleşme eğilimlerinin aynı süreçte ilerlediği söylenebilir?\n\nI. Halifeliğin kaldırılması\nII. Tevhid-i Tedrisat Kanunu\nIII. Türk Tarih Kurumunun kurulması\nIV. Türk Dil Kurumunun kurulması\nV. Kabotaj Kanunu",
         "options": [
             "A) I ve II",
             "B) II ve III",

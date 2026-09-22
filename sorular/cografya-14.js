@@ -6,13 +6,13 @@ window.cografya_14_sorulari = [
         id: 1,
         question: "Türkiye'de tektonik depremlerin en sık görülmesinin temel nedeni aşağıdakilerden hangisidir?",
         options: [
-            "A) Karstik arazilerin geniş yer kaplaması",
-            "B) Aktif fay hatlarının bulunması",
+            "A) Aktif fay hatlarının bulunması",
+            "B) Karstik arazilerin geniş yer kaplaması",
             "C) Volkanik dağların fazla olması",
             "D) Ortalama yükseltinin fazla olması",
             "E) Akarsu aşındırmasının etkili olması"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "Türkiye'de depremlerin büyük çoğunluğu Kuzey Anadolu, Doğu Anadolu ve Batı Anadolu fay sistemlerine bağlı olarak gelişen tektonik depremlerdir."
     },
     {
@@ -189,11 +189,11 @@ window.cografya_14_sorulari = [
         options: [
             "A) Sel yalnızca kar erimeleriyle oluşur.",
             "B) Taşkın yalnızca kıyılarda görülür.",
-            "C) Sel ani sağanaklarla, taşkın ise eğimin az olduğu alanlarda meydana gelir.",
+            "C) Taşkın yalnızca baraj yıkılması sonucu oluşur.",
             "D) Sel sadece yaz aylarında oluşur.",
-            "E) Taşkın yalnızca baraj yıkılması sonucu oluşur."
+            "E) Sel ani sağanaklarla, taşkın ise eğimin az olduğu alanlarda meydana gelir."
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 4,
         explanation: "Sel ani yağışlarla oluşurken taşkınlar daha çok eğimin az olduğu alanlarda akarsuların yatağından taşmasıyla meydana gelir."
     },
 
@@ -201,13 +201,13 @@ window.cografya_14_sorulari = [
         id: 15,
         question: "Aşağıdaki akarsulardan hangisi taşkınlarıyla sıkça bilinen akarsular arasında yer almaz?",
         options: [
-            "A) Meriç",
+            "A) Zap Suyu",
             "B) Asi",
             "C) Gediz",
-            "D) Zap Suyu",
+            "D) Meriç",
             "E) Meriç Nehri"
         ],
-        correctAnswerIndex: 3,
+        correctAnswerIndex: 0,
         explanation: "Taşkınlarıyla öne çıkan akarsular Meriç, Asi ve Gediz'dir. Zap Suyu bu grupta yer almaz."
     },    {
         id: 16,
@@ -216,10 +216,10 @@ window.cografya_14_sorulari = [
             "A) Hakkari",
             "B) Van",
             "C) Bitlis",
-            "D) Muğla",
-            "E) Tunceli"
+            "D) Tunceli",
+            "E) Muğla"
         ],
-        correctAnswerIndex: 3,
+        correctAnswerIndex: 4,
         explanation: "Çığ riski Tunceli, Hakkari, Van, Muş ve Bitlis'te yüksektir. Muğla'da böyle bir risk bulunmaz."
     },
 
@@ -241,13 +241,13 @@ window.cografya_14_sorulari = [
         id: 18,
         question: "Türkiye'de orman yangını riskinin en yüksek olduğu bölgeler aşağıdakilerden hangisidir?",
         options: [
-            "A) Karadeniz ve Marmara",
+            "A) Akdeniz ve Ege",
             "B) İç Anadolu ve Doğu Anadolu",
-            "C) Akdeniz ve Ege",
+            "C) Karadeniz ve Marmara",
             "D) Güneydoğu Anadolu ve İç Anadolu",
             "E) Marmara ve Doğu Anadolu"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Akdeniz ikliminin görüldüğü Akdeniz ve Ege bölgelerinde yazların sıcak ve kurak geçmesi nedeniyle orman yangını riski yüksektir."
     },
 
@@ -327,11 +327,11 @@ window.cografya_14_sorulari = [
         options: [
             "A) Çoruh",
             "B) Fırat",
-            "C) Zap Suyu",
+            "C) Ceyhan",
             "D) Yeşilırmak",
-            "E) Ceyhan"
+            "E) Zap Suyu"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 4,
         explanation: "Türkiye'nin en temiz akarsuyu Zap Suyu'dur."
     },
 
@@ -561,13 +561,13 @@ window.cografya_14_sorulari = [
         id: 41,
         question: "Türkiye'nin UNESCO tarafından ilan edilen ilk biyosfer rezervi aşağıdakilerden hangisidir?",
         options: [
-            "A) Küre Dağları",
-            "B) Camili Biyosfer Havzası",
+            "A) Camili Biyosfer Havzası",
+            "B) Küre Dağları",
             "C) Kaçkar Dağları",
             "D) Yıldız Dağları",
             "E) Sultan Sazlığı"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "Camili Biyosfer Havzası Türkiye'nin UNESCO tarafından ilan edilen ilk biyosfer rezervidir."
     },
 
@@ -575,13 +575,13 @@ window.cografya_14_sorulari = [
         id: 42,
         question: "Camili Biyosfer Havzası aşağıdaki illerden hangisinde yer almaktadır?",
         options: [
-            "A) Rize",
+            "A) Artvin",
             "B) Trabzon",
-            "C) Artvin",
+            "C) Rize",
             "D) Erzurum",
             "E) Ardahan"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Camili Biyosfer Havzası Artvin'in Borçka ilçesinde bulunmaktadır."
     },
 
@@ -603,13 +603,13 @@ window.cografya_14_sorulari = [
         id: 44,
         question: "Camili Biyosfer Havzası'nın UNESCO tarafından koruma altına alınmasında aşağıdakilerden hangisi daha etkili olmuştur?",
         options: [
-            "A) Tuz üretiminin fazla olması",
-            "B) Zengin biyolojik çeşitliliğe sahip olması",
+            "A) Zengin biyolojik çeşitliliğe sahip olması",
+            "B) Tuz üretiminin fazla olması",
             "C) Büyük sanayi tesislerini barındırması",
             "D) Yoğun nüfuslu bir alan olması",
             "E) Petrol rezervlerinin bulunması"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "Camili Biyosfer Havzası Kafkas ormanları, endemik türleri ve zengin biyolojik çeşitliliği nedeniyle UNESCO tarafından koruma altına alınmıştır."
     },
 
@@ -617,13 +617,13 @@ window.cografya_14_sorulari = [
         id: 45,
         question: "Aşağıdakilerden hangisi Türkiye'de çevreyi korumaya yönelik uygulamalardan biridir?",
         options: [
-            "A) Anız yakımını yaygınlaştırmak",
-            "B) Otlak ve meraları korumak",
+            "A) Otlak ve meraları korumak",
+            "B) Anız yakımını yaygınlaştırmak",
             "C) Eğim yönünde sürüm yapmak",
             "D) Vahşi sulamayı artırmak",
             "E) Orman alanlarını yerleşime açmak"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "Otlak ve meraların korunması bitki örtüsünün devamlılığını sağlayarak erozyon ve çevre sorunlarının azaltılmasına katkı sağlar."
     }
 

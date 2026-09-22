@@ -5,12 +5,12 @@ window.cografya_6_sorulari = [
     "question": "Bitki örtüsünden yoksun, kurak yamaçlarda sel sularının etkisiyle oluşan ve İç Anadolu ile Güneydoğu Anadolu'da yaygın görülen aşındırma şekli aşağıdakilerden hangisidir?",
     "options": [
       "A) Peri bacası",
-      "B) Kırık bayır",
+      "B) Dev kazanı",
       "C) Şelale",
-      "D) Dev kazanı",
+      "D) Kırık bayır",
       "E) Kanyon vadi"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Bitki örtüsünden yoksun kurak yamaçlarda sel sularının aşındırmasıyla oluşan pürüzlü yer şekillerine kırık bayır (badlands) denir. Türkiye'de en çok İç Anadolu ve Güneydoğu Anadolu bölgelerinde görülür."
   },
   {
@@ -96,12 +96,12 @@ window.cografya_6_sorulari = [
     "question": "Vadi tabanı bulunmayan, tarım alanları dar ve taşkın riski düşük olan; genellikle yükseltinin fazla olduğu yerlerde görülen vadi türü aşağıdakilerden hangisidir?",
     "options": [
       "A) Boğaz vadi",
-      "B) Çentik (V şekilli) vadi",
+      "B) Menderesli vadi",
       "C) Geniş tabanlı vadi",
       "D) Kanyon vadi",
-      "E) Menderesli vadi"
+      "E) Çentik (V şekilli) vadi"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 4,
     "explanation": "Yükseltinin ve eğimin fazla olduğu dağlık alanlarda akarsuyun derine aşındırmasıyla oluşan 'V' profilli, tabansız vadilere çentik vadi denir. Dar oldukları için tarım alanları azdır, su derinden aktığı için taşkın riski düşüktür."
   },
   {

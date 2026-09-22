@@ -20,20 +20,20 @@ window.vatandas_10_sorulari = [
     },
     {
         question: "Belediye başkanlarının görevlerine son verilmesinde yetkili makam aşağıdakilerden hangisidir?",
-        options: ["A) İçişleri Bakanlığı", "B) Vali", "C) Danıştay", "D) Bölge İdare Mahkemesi", "E) İdare Mahkemesi"],
-        correctAnswerIndex: 2,
+        options: ["A) İçişleri Bakanlığı", "B) Danıştay", "C) Vali", "D) Bölge İdare Mahkemesi", "E) İdare Mahkemesi"],
+        correctAnswerIndex: 1,
         explanation: "Belediye başkanının görevine son vermede yetkili makam Danıştay’dır."
     },
     {
         question: "Aşağıda verilen açıklamalardan hangisi köy derneğiyle ilgilidir?",
         options: [
-            "A) Köy idaresinin başıdır.",
+            "A) Köyde yer alan seçmenler tarafından oluşturulan bir seçim kuruludur.",
             "B) Köy işlerine harcanacak parayı toplayan organdır.",
-            "C) Köyde yer alan seçmenler tarafından oluşturulan bir seçim kuruludur.",
+            "C) Köy idaresinin başıdır.",
             "D) İhtiyar meclisi üyelerinden oluşan bir kuruldur.",
             "E) İl idare kurulunun köydeki temsilcisidir."
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Köy derneği köydeki tüm seçmenlerden oluşur; muhtar ve ihtiyar heyetini seçer."
     },
     {

@@ -31,12 +31,12 @@ window.tarih_8_sorulari = [
         question: "XVIII. yüzyılda Avusturya'nın Rusya ile yakın iş birliği kurmasının temel amaçlarından biri aşağıdakilerden hangisidir?",
         options: [
             "A) Hint ticaret yolunu ele geçirmek",
-            "B) Balkanlara egemen olup Ege Denizi'ne ulaşmak",
+            "B) İran'a karşı ittifak oluşturmak",
             "C) Kuzey Afrika'yı sömürgeleştirmek",
-            "D) İran'a karşı ittifak oluşturmak",
+            "D) Balkanlara egemen olup Ege Denizi'ne ulaşmak",
             "E) Amerika kıtasında yeni sömürgeler kurmak"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Avusturya'nın temel hedeflerinden biri Balkanlarda hâkimiyet kurarak Ege Denizi'ne ulaşmaktı."
     },
     {
@@ -69,13 +69,13 @@ window.tarih_8_sorulari = [
         id: 6,
         question: "İstanbul merkezli bir Rus devleti kurularak Bizans İmparatorluğu'nun yeniden canlandırılmasını hedefleyen plan aşağıdakilerden hangisidir?",
         options: [
-            "A) Dakya Planı",
-            "B) Grek Planı",
+            "A) Grek Planı",
+            "B) Dakya Planı",
             "C) Islahat Fermanı",
             "D) Viyana Protokolü",
             "E) Kutsal İttifak"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "Rus prensi Potyomkin tarafından hazırlanan Grek Planı'nın amacı Bizans'ı yeniden canlandırmaktı."
     },
     {
@@ -83,12 +83,12 @@ window.tarih_8_sorulari = [
         question: "1711 Prut Antlaşması'nın Osmanlı Devleti açısından en önemli sonucu aşağıdakilerden hangisidir?",
         options: [
             "A) Belgrad'ın geri alınması",
-            "B) Azak Kalesi'nin geri alınması",
+            "B) Osmanlı'nın savaş tazminatı ödemesi",
             "C) Kırım'ın bağımsız olması",
             "D) Rusya'nın kapitülasyon elde etmesi",
-            "E) Osmanlı'nın savaş tazminatı ödemesi"
+            "E) Azak Kalesi'nin geri alınması"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "Prut Antlaşması ile Azak Kalesi Osmanlı Devleti'ne geri verilmiştir."
     },
     {
@@ -109,12 +109,12 @@ window.tarih_8_sorulari = [
         question: "Aşağıdaki gelişmelerden hangisi Pasarofça Antlaşması'nın doğrudan bir sonucu olarak değerlendirilebilir?",
         options: [
             "A) Nizam-ı Cedid Ordusu'nun kurulması",
-            "B) Lale Devri'nin başlaması",
+            "B) Kabakçı Mustafa İsyanı",
             "C) Sened-i İttifak'ın ilanı",
             "D) Tanzimat Fermanı'nın yayımlanması",
-            "E) Kabakçı Mustafa İsyanı"
+            "E) Lale Devri'nin başlaması"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "1718 Pasarofça Antlaşması sonrasında Lale Devri başlamıştır."
     },
     {
@@ -149,11 +149,11 @@ window.tarih_8_sorulari = [
         options: [
             "A) Sinop",
             "B) Navarin",
-            "C) Çeşme",
+            "C) Koyun Adaları",
             "D) İnebahtı",
-            "E) Koyun Adaları"
+            "E) Çeşme"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 4,
         explanation: "Çeşme Baskını'nda Osmanlı donanması Ruslar tarafından yakılmıştır."
     },
     {
@@ -175,24 +175,24 @@ window.tarih_8_sorulari = [
         options: [
             "A) İlk kez Anadolu toprağının kaybedilmesi",
             "B) İlk kez gayrimüslim nüfusun çoğunlukta olduğu bir bölgenin elden çıkması",
-            "C) İlk kez tamamı Müslüman olan bir bölgenin kaybedilmesi",
-            "D) İlk kez Boğazların uluslararası denetime açılması",
+            "C) İlk kez Boğazların uluslararası denetime açılması",
+            "D) İlk kez tamamı Müslüman olan bir bölgenin kaybedilmesi",
             "E) İlk kez Mısır'ın kaybedilmesi"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 3,
         explanation: "Kırım, Osmanlı'nın kaybettiği tamamı Müslüman olan ilk bölgedir."
     },
     {
         id: 15,
         question: "Küçük Kaynarca Antlaşması'nda Kırım'ın dinî bakımdan Osmanlı padişahına bağlı bırakılması aşağıdakilerden hangisinin siyasi amaçla kullanılmasının ilk örneğidir?",
         options: [
-            "A) Saltanat",
+            "A) Halifelik",
             "B) Sadrazamlık",
-            "C) Halifelik",
+            "C) Saltanat",
             "D) Divan teşkilatı",
             "E) Şeyhülislamlık"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Halifelik makamı ilk kez siyasi bir güç unsuru olarak kullanılmıştır."
     },
     {
@@ -213,12 +213,12 @@ window.tarih_8_sorulari = [
         question: "Kırım'ın bağımsızlığının tanınması ile Rusya'ya ait olduğunun kabul edilmesi aşağıdaki antlaşmaların hangisinde sırasıyla gerçekleşmiştir?",
         options: [
             "A) Prut - Belgrad",
-            "B) Küçük Kaynarca - Yaş",
+            "B) Karlofça - İstanbul",
             "C) Pasarofça - Ziştovi",
             "D) Belgrad - Yaş",
-            "E) Karlofça - İstanbul"
+            "E) Küçük Kaynarca - Yaş"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "Küçük Kaynarca'da bağımsızlık, Yaş Antlaşması'nda ise Rusya'ya ait olduğu kabul edilmiştir."
     },
     {
@@ -240,11 +240,11 @@ window.tarih_8_sorulari = [
         options: [
             "A) Koca Ragıp Paşa",
             "B) Nevşehirli Damat İbrahim Paşa",
-            "C) Cezzar Ahmet Paşa",
+            "C) Yusuf Agah Efendi",
             "D) Halil Hamit Paşa",
-            "E) Yusuf Agah Efendi"
+            "E) Cezzar Ahmet Paşa"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 4,
         explanation: "Akka Savunması'nın kahramanı Cezzar Ahmet Paşa'dır."
     },
     {
@@ -265,12 +265,12 @@ window.tarih_8_sorulari = [
         question: "XVIII. yüzyıl Osmanlı ıslahatları ile XVII. yüzyıl ıslahatları karşılaştırıldığında aşağıdakilerden hangisi XVIII. yüzyıl ıslahatlarının ayırt edici özelliklerinden biridir?",
         options: [
             "A) Daha çok hukuk alanına yönelmesi",
-            "B) Batı örnek alınarak gerçekleştirilmesi",
+            "B) Halkın isteği doğrultusunda gerçekleştirilmesi",
             "C) Tamamının asker kökenli kişilerce hazırlanması",
             "D) Sadece eyaletlerde uygulanması",
-            "E) Halkın isteği doğrultusunda gerçekleştirilmesi"
+            "E) Batı örnek alınarak gerçekleştirilmesi"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "XVIII. yüzyıl ıslahatlarının temel özelliği Batı'nın örnek alınmasıdır."
     },
     {
@@ -357,11 +357,11 @@ window.tarih_8_sorulari = [
         options: [
             "A) Baki",
             "B) Nabi",
-            "C) Nedim",
-            "D) Fuzuli",
+            "C) Fuzuli",
+            "D) Nedim",
             "E) Şeyh Galip"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 3,
         explanation: "Lale Devri'nin ünlü şairi Nedim'dir."
     },
     {
@@ -434,12 +434,12 @@ window.tarih_8_sorulari = [
         question: "Avrupa'da 'Turquerie (Türk modası)' akımının başlamasında etkili olan devlet adamı aşağıdakilerden hangisidir?",
         options: [
             "A) 28 Mehmet Çelebi",
-            "B) Sait Efendi",
+            "B) Humbaracı Ahmet Paşa",
             "C) İbrahim Müteferrika",
             "D) Yusuf Agah Efendi",
-            "E) Humbaracı Ahmet Paşa"
+            "E) Sait Efendi"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "Sait Efendi'nin çalışmaları Avrupa'da Turquerie akımının yayılmasına katkı sağlamıştır."
     },
     {
@@ -447,12 +447,12 @@ window.tarih_8_sorulari = [
         question: "Lale Devri'nde ilk kez uygulamaya konulan diplomatik gelişme aşağıdakilerden hangisidir?",
         options: [
             "A) Kalıcı elçilikler",
-            "B) Geçici elçilikler",
+            "B) Daimi büyükelçilikler",
             "C) Konsolosluk teşkilatı",
             "D) Hariciye Nezareti",
-            "E) Daimi büyükelçilikler"
+            "E) Geçici elçilikler"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "Lale Devri'nde ilk kez geçici elçilikler açılmıştır."
     },
     {
@@ -486,25 +486,25 @@ window.tarih_8_sorulari = [
         question: "Lale Devri'nde İran'dan alınarak Osmanlı ülkesinde uygulanmaya başlanan sağlık yeniliği aşağıdakilerden hangisidir?",
         options: [
             "A) Kuduz aşısı",
-            "B) Çiçek aşısı",
+            "B) Kolera aşısı",
             "C) Verem aşısı",
-            "D) Kolera aşısı",
+            "D) Çiçek aşısı",
             "E) Çocuk felci aşısı"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "İran'dan çiçek aşısı getirilerek uygulanmaya başlanmıştır."
     },
     {
         id: 39,
         question: "Osmanlı Devleti'nde modern anlamda ilk itfaiye teşkilatı kabul edilen Tulumbacılar Ocağı'nı kuran kişi aşağıdakilerden hangisidir?",
         options: [
-            "A) Humbaracı Ahmet Paşa",
+            "A) Gerçek Davut Ağa",
             "B) Baron de Tott",
-            "C) Gerçek Davut Ağa",
+            "C) Humbaracı Ahmet Paşa",
             "D) Sait Efendi",
             "E) Levni"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Tulumbacılar Ocağı Gerçek Davut Ağa tarafından kurulmuştur."
     },
     {
@@ -512,24 +512,24 @@ window.tarih_8_sorulari = [
         question: "Lale Devri'nde mimaride benimsenen Batı kökenli üsluplar aşağıdakilerin hangisinde birlikte verilmiştir?",
         options: [
             "A) Gotik - Roman",
-            "B) Barok - Rokoko",
+            "B) Roman - Barok",
             "C) Rönesans - Gotik",
             "D) Ampir - Klasik",
-            "E) Roman - Barok"
+            "E) Barok - Rokoko"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "Lale Devri'nde Barok ve Rokoko mimari anlayışı benimsenmiştir."
     },    {
         id: 41,
         question: "Lale Devri'nde inşa edilen ve Fransa'daki Versay Sarayı örnek alınarak yaptırılan yapı aşağıdakilerden hangisidir?",
         options: [
-            "A) Dolmabahçe Sarayı",
-            "B) Sadabad Sarayı",
+            "A) Sadabad Sarayı",
+            "B) Dolmabahçe Sarayı",
             "C) Beylerbeyi Sarayı",
             "D) Topkapı Sarayı",
             "E) Yıldız Sarayı"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "Lale Devri'nde Sadabad Sarayı, Versay Sarayı örnek alınarak inşa edilmiştir."
     },
     {
@@ -589,25 +589,25 @@ window.tarih_8_sorulari = [
         question: "Osmanlı Devleti'nde Batı tarzı askerî yeniliklerde görev alan ve 'Humbaracı Ahmet Paşa' adıyla tanınan kişi aşağıdakilerden hangisidir?",
         options: [
             "A) Baron de Tott",
-            "B) Kont Bonneval",
+            "B) Yusuf Agah Efendi",
             "C) Moltke",
-            "D) Yusuf Agah Efendi",
+            "D) Kont Bonneval",
             "E) Gerçek Davut Ağa"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Kont Bonneval Müslüman olduktan sonra Humbaracı Ahmet Paşa adını almıştır."
     },
     {
         id: 47,
         question: "Osmanlı Devleti'nde Batı tarzında açılan ilk teknik okul aşağıdakilerden hangisidir?",
         options: [
-            "A) Tersane Hendesehanesi",
+            "A) Hendesehane",
             "B) Mühendishane-i Bahr-i Hümayun",
-            "C) Hendesehane",
+            "C) Tersane Hendesehanesi",
             "D) Mühendishane-i Berr-i Hümayun",
             "E) İstihkam Okulu"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Hendesehane, Batı tarzında açılan ilk teknik okuldur."
     },
     {
@@ -653,13 +653,13 @@ window.tarih_8_sorulari = [
         id: 51,
         question: "1773 yılında açılan ve Osmanlı denizciliğinin modernleşmesinde önemli rol oynayan eğitim kurumu aşağıdakilerden hangisidir?",
         options: [
-            "A) Hendesehane",
+            "A) Tersane Hendesehanesi",
             "B) Mühendishane-i Bahr-i Hümayun",
-            "C) Tersane Hendesehanesi",
+            "C) Hendesehane",
             "D) Mühendishane-i Berr-i Hümayun",
             "E) İstihkam Okulu"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "1773 yılında III. Mustafa döneminde Tersane Hendesehanesi açılmıştır."
     },
     {
@@ -693,12 +693,12 @@ window.tarih_8_sorulari = [
         question: "Aşağıdaki gelişmelerden hangisi III. Mustafa döneminde gerçekleştirilmiştir?",
         options: [
             "A) İlk kalıcı elçilik açılmıştır.",
-            "B) Sürat Topçuları Ocağı kurulmuştur.",
+            "B) İrad-ı Cedid Hazinesi kurulmuştur.",
             "C) Nizam-ı Cedid Ordusu kurulmuştur.",
             "D) Cülus bahşişi kaldırılmıştır.",
-            "E) İrad-ı Cedid Hazinesi kurulmuştur."
+            "E) Sürat Topçuları Ocağı kurulmuştur."
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "Sürat Topçuları Ocağı III. Mustafa döneminde kurulmuştur."
     },
     {
@@ -744,13 +744,13 @@ window.tarih_8_sorulari = [
         id: 58,
         question: "I. Abdülhamit'in ulufe ile ilgili yaptığı düzenleme aşağıdakilerden hangisidir?",
         options: [
-            "A) Ulufeyi tamamen kaldırmıştır.",
+            "A) Ulufe alma hakkının alınıp satılmasını yasaklamıştır.",
             "B) Ulufeyi yabancılara vermiştir.",
-            "C) Ulufe alma hakkının alınıp satılmasını yasaklamıştır.",
+            "C) Ulufeyi tamamen kaldırmıştır.",
             "D) Ulufeyi yalnızca sipahilere vermiştir.",
             "E) Ulufeyi vergiye bağlamıştır."
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Ulufe kaldırılmamış, ulufe alma hakkının alınıp satılması yasaklanmıştır."
     },
     {
@@ -759,11 +759,11 @@ window.tarih_8_sorulari = [
         options: [
             "A) Din adamı yetiştirmek",
             "B) Maliye görevlisi yetiştirmek",
-            "C) Kale ve istihkam konusunda uzman asker yetiştirmek",
+            "C) Diplomatik personel yetiştirmek",
             "D) Tercüman yetiştirmek",
-            "E) Diplomatik personel yetiştirmek"
+            "E) Kale ve istihkam konusunda uzman asker yetiştirmek"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 4,
         explanation: "İstihkam Okulu askerî mühendislik ve tahkimat alanında personel yetiştirmek amacıyla açılmıştır."
     },
     {
@@ -811,24 +811,24 @@ window.tarih_8_sorulari = [
         options: [
             "A) Patrona Halil İsyanı",
             "B) Celali İsyanları",
-            "C) Kabakçı Mustafa İsyanı",
+            "C) 31 Mart Olayı",
             "D) Vak'a-i Hayriye",
-            "E) 31 Mart Olayı"
+            "E) Kabakçı Mustafa İsyanı"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 4,
         explanation: "III. Selim dönemi Kabakçı Mustafa İsyanı ile sona ermiştir."
     },
     {
         id: 64,
         question: "Osmanlı Devleti'nin ilk kalıcı elçiliği aşağıdaki şehirlerin hangisinde açılmıştır?",
         options: [
-            "A) Paris",
+            "A) Londra",
             "B) Viyana",
-            "C) Londra",
+            "C) Paris",
             "D) Berlin",
             "E) Petersburg"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "İlk kalıcı elçilik Londra'da açılmıştır."
     },
     {
@@ -848,26 +848,26 @@ window.tarih_8_sorulari = [
         id: 66,
         question: "III. Selim döneminde yeniden etkin hâle getirilen ve devlet meselelerinin görüşüldüğü danışma organı aşağıdakilerden hangisidir?",
         options: [
-            "A) Divan-ı Hümayun",
-            "B) Meşveret Meclisleri",
+            "A) Meşveret Meclisleri",
+            "B) Divan-ı Hümayun",
             "C) Encümen-i Daniş",
             "D) Heyet-i Vükela",
             "E) Ayan Meclisi"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "Nizam-ı Cedid döneminde Meşveret Meclisleri aktif hâle getirilmiştir."
     },
     {
         id: 67,
         question: "III. Selim'in devlet adamları ve bilim insanlarından ülke sorunlarına ilişkin rapor istemesi aşağıdaki uygulamalardan hangisiyle ilgilidir?",
         options: [
-            "A) Islahat Fermanı",
-            "B) Layihalar",
+            "A) Layihalar",
+            "B) Islahat Fermanı",
             "C) Islahat layihaları",
             "D) Islahat layihelerinin kaldırılması",
             "E) Sefaretname"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "III. Selim döneminde bilim insanlarından ve devlet adamlarından layihalar (raporlar) istenmiştir."
     },
     {
@@ -889,24 +889,24 @@ window.tarih_8_sorulari = [
         options: [
             "A) Vergi gelirlerini artırmak",
             "B) Donanmayı güçlendirmek",
-            "C) Karaborsacılığı önlemek",
+            "C) Yeni vergiler koymak",
             "D) Dış ticareti geliştirmek",
-            "E) Yeni vergiler koymak"
+            "E) Karaborsacılığı önlemek"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 4,
         explanation: "Zahire Nazırlığı, özellikle karaborsacılığı önlemek amacıyla kurulmuştur."
     },
     {
         id: 70,
         question: "III. Selim döneminde saraydaki altın ve gümüş eşyaların eritilmesinin temel amacı aşağıdakilerden hangisidir?",
         options: [
-            "A) Darphaneyi kapatmak",
+            "A) Hazineye gelir sağlamak",
             "B) Savaş ganimeti elde etmek",
-            "C) Hazineye gelir sağlamak",
+            "C) Darphaneyi kapatmak",
             "D) Yeni para birimi oluşturmak",
             "E) Vergileri kaldırmak"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "Altın ve gümüş eşyalar hazineyi güçlendirmek amacıyla eritilmiştir."
     },
     {
@@ -926,13 +926,13 @@ window.tarih_8_sorulari = [
         id: 72,
         question: "III. Selim döneminde açılan Mühendishane-i Berr-i Hümayun aşağıdaki alanlardan hangisine yönelik eğitim vermek amacıyla kurulmuştur?",
         options: [
-            "A) Deniz mühendisliği",
-            "B) Kara mühendisliği",
+            "A) Kara mühendisliği",
+            "B) Deniz mühendisliği",
             "C) Hukuk",
             "D) Tıp",
             "E) Maliye"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "Mühendishane-i Berr-i Hümayun kara mühendisi yetiştirmek amacıyla açılmıştır."
     },
     {
@@ -965,13 +965,13 @@ window.tarih_8_sorulari = [
         id: 75,
         question: "III. Selim döneminde Şeyhülislam'ın yetkilerinin sınırlandırılması aşağıdaki alanlardan hangisinde atılmış önemli bir adım olarak değerlendirilir?",
         options: [
-            "A) Yerel yönetimlerin güçlendirilmesi",
-            "B) Din-devlet işlerinin ayrılması",
+            "A) Din-devlet işlerinin ayrılması",
+            "B) Yerel yönetimlerin güçlendirilmesi",
             "C) Vergi sisteminin kaldırılması",
             "D) Meşrutiyet yönetimine geçilmesi",
             "E) Kapitülasyonların kaldırılması"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 0,
         explanation: "Şeyhülislamın yetkilerinin kısıtlanması din-devlet ayrılığı yönünde önemli bir adımdır."
     },
     {
@@ -1019,11 +1019,11 @@ window.tarih_8_sorulari = [
         options: [
             "A) Çeşme Deniz Savaşı",
             "B) Prut Savaşı",
-            "C) Akka Savunması",
-            "D) Belgrad Savaşı",
+            "C) Belgrad Savaşı",
+            "D) Akka Savunması",
             "E) Navarin Baskını"
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 3,
         explanation: "Nizam-ı Cedid Ordusu'nun ilk ve son başarısı Akka Savunması'dır."
     },
     {

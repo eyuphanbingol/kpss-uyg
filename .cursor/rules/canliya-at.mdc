@@ -9,4 +9,7 @@ Uygulama değişikliği bitince sormadan `main`'e commit + `git push origin HEAD
 
 - `supabase/.temp/` ve sırları commit etme.
 - Cache kırıcı `?v=` numaralarını `index.html` / ilgili script'te artır.
+- `js/app.jsx` veya `js/components/*.jsx` değiştiyse `npm run build:jsx` çalıştır ve `js/compiled/` dosyalarını da commit et (unutulursa site çalışır ama ilk açılış yavaşlar).
+- Soru/not değiştiyse `node scripts/export-catalog.js` ile `catalog.json` (mobil) güncelle.
+- Konu adlarını (data.js anahtarları) değiştirme; kullanıcı ilerlemesi bu adlara bağlı. Yazım düzeltmesi için `KONU_LABELS` kullan.
 - Destructive git (force push, hard reset) yapma.

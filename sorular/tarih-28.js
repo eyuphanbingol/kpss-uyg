@@ -20,8 +20,8 @@ window.tarih_28_sorulari = [
     },
     {
         question: "SSCB’den ayrılarak bağımsızlığını ilan eden ilk devlet hangisidir?",
-        options: ["A) Azerbaycan", "B) Litvanya", "C) Ukrayna", "D) Kazakistan", "E) Gürcistan"],
-        correctAnswerIndex: 1,
+        options: ["A) Azerbaycan", "B) Gürcistan", "C) Ukrayna", "D) Kazakistan", "E) Litvanya"],
+        correctAnswerIndex: 4,
         explanation: "11 Mart 1990 Litvanya. İlk bağımsız Türk Cumhuriyeti Azerbaycan’dır (1991)."
     },
     {
@@ -46,12 +46,12 @@ window.tarih_28_sorulari = [
         question: "Kara Eylül (1970) ile Münih Olimpiyatları (1972) için hangisi doğrudur?",
         options: [
             "A) İkisi de 1972’dir",
-            "B) Kara Eylül Ürdün’deki çatışmalardır; Münih, Kara Eylül örgütünün İsrailli sporcuları rehin almasıyla bağlantılıdır",
-            "C) Kara Eylül Çernobil’dir",
+            "B) Kara Eylül Çernobil’dir",
+            "C) Kara Eylül Ürdün’deki çatışmalardır; Münih, Kara Eylül örgütünün İsrailli sporcuları rehin almasıyla bağlantılıdır",
             "D) Münih 1970’tir",
             "E) İkisi de İntifada’dır"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 2,
         explanation: "Kara Eylül 1970 Ürdün; Münih 1972. Karıştırılmamalıdır."
     },
     {
@@ -88,12 +88,12 @@ window.tarih_28_sorulari = [
         question: "I. Körfez Savaşı’nı başlatan gelişme hangisidir?",
         options: [
             "A) Saddam’ın 2006’da idamı",
-            "B) Irak’ın 1990’da Kuveyt’i işgali",
+            "B) Kyoto",
             "C) Ebu Garib görüntüleri",
             "D) Dayton",
-            "E) Kyoto"
+            "E) Irak’ın 1990’da Kuveyt’i işgali"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "ABD öncülüğündeki koalisyon; Çöl Fırtınası ile Irak kuvvetleri Kuveyt’ten çıkarıldı (1991)."
     },
     {
@@ -116,20 +116,20 @@ window.tarih_28_sorulari = [
     },
     {
         question: "Bosna Savaşı’nı sona erdiren 1995 antlaşması hangisidir?",
-        options: ["A) Kyoto", "B) Dayton", "C) Camp David", "D) Helsinki", "E) SALT-I"],
-        correctAnswerIndex: 1,
+        options: ["A) Dayton", "B) Kyoto", "C) Camp David", "D) Helsinki", "E) SALT-I"],
+        correctAnswerIndex: 0,
         explanation: "Dayton 1995, ABD öncülüğünde. Srebrenica Katliamı da 1995; Ratko Mladiç “Bosna Kasabı”. Aliya İzzetbegoviç Boşnak lider."
     },
     {
         question: "Şanghay Beşlisi’nin kurucu ülkeleri hangileridir?",
         options: [
             "A) Çin, ABD, Türkiye, İran, Irak",
-            "B) Çin, Rusya, Kazakistan, Kırgızistan, Tacikistan",
+            "B) NATO üyeleri",
             "C) Çin, Rusya, Özbekistan, Azerbaycan, Türkiye",
-            "D) NATO üyeleri",
+            "D) Çin, Rusya, Kazakistan, Kırgızistan, Tacikistan",
             "E) Yalnız Çin ve Rusya"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "1996, kod Ç-R-K-K-T. Özbekistan’ın katılımıyla 2001’de ŞİÖ oldu."
     },
     {
@@ -146,38 +146,38 @@ window.tarih_28_sorulari = [
     },
     {
         question: "“Bir millet, iki devlet” sözü hangi liderle anılır?",
-        options: ["A) Nazarbayev", "B) Haydar Aliyev", "C) Kerimov", "D) Niyazov", "E) Akayev"],
-        correctAnswerIndex: 1,
+        options: ["A) Nazarbayev", "B) Akayev", "C) Kerimov", "D) Niyazov", "E) Haydar Aliyev"],
+        correctAnswerIndex: 4,
         explanation: "Türkiye–Azerbaycan. Ebulfez Elçibey Azerbaycan Halk Cephesi lideridir."
     },
     {
         question: "Bakü-Tiflis-Ceyhan (BTC) neyin taşımasında önemlidir?",
-        options: ["A) Doğal gazın yalnızca Rusya’ya", "B) Azerbaycan petrolünün Türkiye üzerinden dünya pazarlarına", "C) Uranyumun Pripyat’a", "D) Buğdayın Bosna’ya", "E) Sera gazının Kyoto’ya"],
-        correctAnswerIndex: 1,
+        options: ["A) Azerbaycan petrolünün Türkiye üzerinden dünya pazarlarına", "B) Doğal gazın yalnızca Rusya’ya", "C) Uranyumun Pripyat’a", "D) Buğdayın Bosna’ya", "E) Sera gazının Kyoto’ya"],
+        correctAnswerIndex: 0,
         explanation: "Önemli petrol boru hattıdır."
     },
     {
         question: "Kazakistan’ın ilk cumhurbaşkanı ve başkenti hangisidir?",
-        options: ["A) Akayev – Bişkek", "B) Nazarbayev – Astana", "C) Kerimov – Taşkent", "D) Niyazov – Aşkabat", "E) Elçibey – Bakü"],
-        correctAnswerIndex: 1,
+        options: ["A) Akayev – Bişkek", "B) Niyazov – Aşkabat", "C) Kerimov – Taşkent", "D) Nazarbayev – Astana", "E) Elçibey – Bakü"],
+        correctAnswerIndex: 3,
         explanation: "1991 bağımsızlık. Nur-Sultan adı 2019; 2022’de yeniden Astana. 1992 Ahmet Yesevi Üniversitesi."
     },
     {
         question: "Cengiz Aytmatov hangi ülkenin dünyaca ünlü yazarıdır?",
-        options: ["A) Özbekistan", "B) Kırgızistan", "C) Türkmenistan", "D) Azerbaycan", "E) Kazakistan"],
-        correctAnswerIndex: 1,
+        options: ["A) Özbekistan", "B) Azerbaycan", "C) Türkmenistan", "D) Kırgızistan", "E) Kazakistan"],
+        correctAnswerIndex: 3,
         explanation: "Kırgızistan: 1991, Bişkek, Askar Akayev ilk CB."
     },
     {
         question: "Türkmenistan için hangisi daha doğrudur?",
         options: [
             "A) Dünyada kesin en çok doğalgaz rezervine sahip ülkedir",
-            "B) Doğal gaz rezervleri açısından zengin Türk Cumhuriyetlerindendir; başkent Aşkabat, ilk CB Niyazov’dur",
+            "B) Başkenti Taşkent’tir",
             "C) Nüfusu en fazla Türk Cumhuriyeti’dir",
-            "D) Başkenti Taşkent’tir",
+            "D) Doğal gaz rezervleri açısından zengin Türk Cumhuriyetlerindendir; başkent Aşkabat, ilk CB Niyazov’dur",
             "E) 1990’da Litvanya’dan ayrılmıştır"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Nüfusu en fazla Özbekistan’dır (Taşkent, İslam Kerimov)."
     },
     {
@@ -188,8 +188,8 @@ window.tarih_28_sorulari = [
     },
     {
         question: "27 Mayıs 1960 darbesi sonrası yönetime el koyan kurul hangisidir?",
-        options: ["A) Millî Güvenlik Konseyi", "B) Millî Birlik Komitesi", "C) Refah-Yol", "D) Şanghay Beşlisi", "E) FKÖ"],
-        correctAnswerIndex: 1,
+        options: ["A) Millî Güvenlik Konseyi", "B) FKÖ", "C) Refah-Yol", "D) Şanghay Beşlisi", "E) Millî Birlik Komitesi"],
+        correctAnswerIndex: 4,
         explanation: "DP iktidarına son verildi. MGK 12 Eylül 1980’dir."
     },
     {
@@ -200,20 +200,20 @@ window.tarih_28_sorulari = [
     },
     {
         question: "1965 seçimleri sonrası başbakan kimdir?",
-        options: ["A) İsmet İnönü", "B) Süleyman Demirel", "C) Turgut Özal", "D) Nihat Erim", "E) Tansu Çiller"],
-        correctAnswerIndex: 1,
+        options: ["A) İsmet İnönü", "B) Nihat Erim", "C) Turgut Özal", "D) Süleyman Demirel", "E) Tansu Çiller"],
+        correctAnswerIndex: 3,
         explanation: "Adalet Partisi tek başına iktidara geldi."
     },
     {
         question: "12 Mart 1971 için doğru ifade hangisidir?",
-        options: ["A) Askerî darbe", "B) Muhtıra; Nihat Erim başbakan oldu", "C) Postmodern darbe", "D) ANAP iktidarı", "E) Millî Güvenlik Konseyi kuruldu"],
-        correctAnswerIndex: 1,
+        options: ["A) Askerî darbe", "B) Postmodern darbe", "C) Muhtıra; Nihat Erim başbakan oldu", "D) ANAP iktidarı", "E) Millî Güvenlik Konseyi kuruldu"],
+        correctAnswerIndex: 2,
         explanation: "TSK hükümete muhtıra verdi. Nihat Erim 1980’de suikastla öldürülen ilk eski başbakan olarak bilinir."
     },
     {
         question: "1968 Kuşağı’nın dünyadaki önemli merkezlerinden biri hangisidir?",
-        options: ["A) Kyoto", "B) Fransa", "C) Pripyat", "D) Dayton", "E) Bakü"],
-        correctAnswerIndex: 1,
+        options: ["A) Kyoto", "B) Bakü", "C) Pripyat", "D) Dayton", "E) Fransa"],
+        correctAnswerIndex: 4,
         explanation: "Öğrenci ve gençlik hareketleri; Türkiye’de de etkili oldu."
     },
     {
@@ -224,14 +224,14 @@ window.tarih_28_sorulari = [
     },
     {
         question: "1982 Anayasası’nı hazırlayan komisyonun başkanı hangisidir?",
-        options: ["A) Kenan Evren", "B) Orhan Aldıkaçtı", "C) Turgut Özal", "D) Bülend Ulusu", "E) Muhsin Ertuğrul"],
-        correctAnswerIndex: 1,
+        options: ["A) Kenan Evren", "B) Bülend Ulusu", "C) Turgut Özal", "D) Orhan Aldıkaçtı", "E) Muhsin Ertuğrul"],
+        correctAnswerIndex: 3,
         explanation: "7 Kasım 1982 halkoylaması. Evren döneminde hazırlandı."
     },
     {
         question: "1983 seçimlerini kazanan parti ve başbakan hangisidir?",
-        options: ["A) CHP – İnönü", "B) ANAP – Turgut Özal", "C) RP – Erbakan", "D) DYP – Çiller", "E) AP – Demirel"],
-        correctAnswerIndex: 1,
+        options: ["A) ANAP – Turgut Özal", "B) CHP – İnönü", "C) RP – Erbakan", "D) DYP – Çiller", "E) AP – Demirel"],
+        correctAnswerIndex: 0,
         explanation: "Anavatan Partisi, Turgut Özal başbakan."
     },
     {
@@ -244,12 +244,12 @@ window.tarih_28_sorulari = [
         question: "1995 seçimlerinden sonra kurulan koalisyon hangisidir?",
         options: [
             "A) Refah + Anavatan + DSP",
-            "B) DYP – CHP Koalisyonu",
+            "B) RP + ANAP",
             "C) CHP – AP 1961",
             "D) ANAP tek başına 1995",
-            "E) RP + ANAP"
+            "E) DYP – CHP Koalisyonu"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "Refah + ANAP + DSP üçlüsü yanlıştır. Sonra Refah-Yol: RP + DYP, Erbakan, 1996–1997."
     },
     {
@@ -260,8 +260,8 @@ window.tarih_28_sorulari = [
     },
     {
         question: "28 Şubat 1997 süreci nasıl adlandırılır?",
-        options: ["A) 12 Mart Muhtırası", "B) Postmodern darbe / postmodern müdahale", "C) 27 Mayıs darbesi", "D) Kadife Devrim", "E) Çöl Fırtınası"],
-        correctAnswerIndex: 1,
+        options: ["A) 12 Mart Muhtırası", "B) Çöl Fırtınası", "C) 27 Mayıs darbesi", "D) Kadife Devrim", "E) Postmodern darbe / postmodern müdahale"],
+        correctAnswerIndex: 4,
         explanation: "Refah-Yol üzerinde askerî ve bürokratik baskı."
     },
     {
@@ -296,8 +296,8 @@ window.tarih_28_sorulari = [
     },
     {
         question: "Nuri Bilge Ceylan’ın Cannes’da En İyi Yönetmen aldığı film hangisidir?",
-        options: ["A) Kış Uykusu", "B) Üç Maymun (2008)", "C) Halıcı Kız", "D) Yol", "E) Susuz Yaz"],
-        correctAnswerIndex: 1,
+        options: ["A) Kış Uykusu", "B) Halıcı Kız", "C) Üç Maymun (2008)", "D) Yol", "E) Susuz Yaz"],
+        correctAnswerIndex: 2,
         explanation: "2008 Cannes En İyi Yönetmen."
     },
     {
@@ -310,12 +310,12 @@ window.tarih_28_sorulari = [
         question: "1917 Balfour Deklarasyonu neyi ifade eder?",
         options: [
             "A) İsrail’in BM’ye üyeliği",
-            "B) İngiltere’nin Filistin’de Yahudiler için bir yurt kurulmasını desteklemesi",
+            "B) Dayton",
             "C) FKÖ’nün kuruluşu",
             "D) İntifada",
-            "E) Dayton"
+            "E) İngiltere’nin Filistin’de Yahudiler için bir yurt kurulmasını desteklemesi"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "İsrail kuruluşu 1948’dir."
     },
     {
@@ -332,14 +332,14 @@ window.tarih_28_sorulari = [
     },
     {
         question: "Şanghay İşbirliği Örgütü (ŞİÖ) hangi ülkenin katılımıyla 2001’de oluşmuştur?",
-        options: ["A) Türkiye", "B) Özbekistan", "C) Azerbaycan", "D) ABD", "E) Irak"],
-        correctAnswerIndex: 1,
+        options: ["A) Türkiye", "B) ABD", "C) Azerbaycan", "D) Özbekistan", "E) Irak"],
+        correctAnswerIndex: 3,
         explanation: "Beşli 1996; Özbekistan ile ŞİÖ 2001."
     },
     {
         question: "Türkiye’de Körfez Savaşı sonrası Kuzey Irak bağlamında anılan uygulama hangisidir?",
-        options: ["A) SALT-II", "B) Çekiç Güç / İncirlik", "C) Refah-Yol", "D) Kadife Devrim", "E) Star 1"],
-        correctAnswerIndex: 1,
+        options: ["A) Çekiç Güç / İncirlik", "B) SALT-II", "C) Refah-Yol", "D) Kadife Devrim", "E) Star 1"],
+        correctAnswerIndex: 0,
         explanation: "İncirlik Üssü ve Çekiç Güç."
     },
     {
@@ -370,18 +370,18 @@ window.tarih_28_sorulari = [
         question: "27 Mayıs, 12 Mart ve 12 Eylül için doğru niteleme hangisidir?",
         options: [
             "A) Üçü de muhtıradır",
-            "B) 1960 darbe, 1971 muhtıra, 1980 darbe",
+            "B) 1980 muhtıra, 1960 koalisyon",
             "C) Üçü de postmodern darbedir",
             "D) 1971 darbe, diğerleri muhtıra",
-            "E) 1980 muhtıra, 1960 koalisyon"
+            "E) 1960 darbe, 1971 muhtıra, 1980 darbe"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "28 Şubat 1997 postmodern darbe/müdahaledir."
     },
     {
         question: "Azerbaycan’ın başkenti hangisidir?",
-        options: ["A) Astana", "B) Bakü", "C) Bişkek", "D) Aşkabat", "E) Taşkent"],
-        correctAnswerIndex: 1,
+        options: ["A) Bakü", "B) Astana", "C) Bişkek", "D) Aşkabat", "E) Taşkent"],
+        correctAnswerIndex: 0,
         explanation: "Kazakistan Astana, Kırgızistan Bişkek, Türkmenistan Aşkabat, Özbekistan Taşkent."
     },
     {

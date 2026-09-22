@@ -1,18 +1,18 @@
 window.tarih_10_sorulari = [
 {
-    question: "Soru 1: XIX. yüzyıl Osmanlı ıslahatlarının genel özelliklerinden biri aşağıdakilerden hangisidir?",
+    question: "XIX. yüzyıl Osmanlı ıslahatlarının genel özelliklerinden biri aşağıdakilerden hangisidir?",
     options: [
         "A) Islahatlarda yalnızca Osmanlı gelenekleri esas alınmıştır.",
-        "B) Avrupa örnek alınarak hemen her alanda düzenlemeler yapılmıştır.",
+        "B) Demokratikleşme düşüncesinden uzak durulmuştur.",
         "C) Islahatlar yalnızca askerî alanla sınırlı kalmıştır.",
         "D) Halk yönetime tamamen kapatılmıştır.",
-        "E) Demokratikleşme düşüncesinden uzak durulmuştur."
+        "E) Avrupa örnek alınarak hemen her alanda düzenlemeler yapılmıştır."
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 4,
     explanation: "XIX. yüzyıl ıslahatlarında Avrupa örnek alınmış ve hemen her alanda düzenlemeler yapılmıştır."
 },
 {
-    question: "Soru 2: XIX. yüzyıl Osmanlı ıslahatlarıyla ilgili aşağıdakilerden hangisi söylenemez?",
+    question: "XIX. yüzyıl Osmanlı ıslahatlarıyla ilgili aşağıdakilerden hangisi söylenemez?",
     options: [
         "A) Demokratikleşme hareketleri başlamıştır.",
         "B) Halk ilk kez yönetime katılmıştır.",
@@ -24,7 +24,7 @@ window.tarih_10_sorulari = [
     explanation: "Islahatlar sadece ekonomi alanında değil, yönetim, askerlik, eğitim ve diğer alanlarda da yapılmıştır."
 },
 {
-    question: "Soru 3: III. Selim'den sonra Osmanlı tahtına sırasıyla aşağıdaki padişahlardan hangileri geçmiştir?",
+    question: "III. Selim'den sonra Osmanlı tahtına sırasıyla aşağıdaki padişahlardan hangileri geçmiştir?",
     options: [
         "A) II. Mahmut - IV. Mustafa",
         "B) IV. Mustafa - II. Mahmut",
@@ -36,7 +36,7 @@ window.tarih_10_sorulari = [
     explanation: "Taht sıralaması III. Selim → IV. Mustafa → II. Mahmut şeklindedir."
 },
 {
-    question: "Soru 4: II. Mahmut'un tahta çıkmasını sağlayan ve daha sonra sadrazam olan devlet adamı aşağıdakilerden hangisidir?",
+    question: "II. Mahmut'un tahta çıkmasını sağlayan ve daha sonra sadrazam olan devlet adamı aşağıdakilerden hangisidir?",
     options: [
         "A) Mustafa Reşit Paşa",
         "B) Cezzar Ahmet Paşa",
@@ -48,19 +48,19 @@ window.tarih_10_sorulari = [
     explanation: "Ruscuk Ayanı Alemdar Mustafa Paşa, II. Mahmut'u tahta çıkarmış ve sadrazam olmuştur."
 },
 {
-    question: "Soru 5: Osmanlı Devleti'nde 'ayan' kavramı aşağıdakilerden hangisini ifade eder?",
+    question: "Osmanlı Devleti'nde 'ayan' kavramı aşağıdakilerden hangisini ifade eder?",
     options: [
-        "A) İlmiye sınıfının en üst yöneticisini",
+        "A) Bir bölgede ekonomik ve askerî güce sahip kişiyi",
         "B) Eyalet valisini",
-        "C) Bir bölgede ekonomik ve askerî güce sahip kişiyi",
+        "C) İlmiye sınıfının en üst yöneticisini",
         "D) Yeniçeri ağasını",
         "E) Divan üyelerini"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 0,
     explanation: "Ayan; bulunduğu bölgede ekonomik ve askerî güç sahibi olan kişidir."
 },
 {
-    question: "Soru 6: II. Mahmut döneminde ayanların İstanbul'a davet edilmesinin temel amacı aşağıdakilerden hangisidir?",
+    question: "II. Mahmut döneminde ayanların İstanbul'a davet edilmesinin temel amacı aşağıdakilerden hangisidir?",
     options: [
         "A) Yeniçeri Ocağını kaldırmak",
         "B) Sened-i İttifak'ı imzalamak",
@@ -72,7 +72,7 @@ window.tarih_10_sorulari = [
     explanation: "Ayanlar İstanbul'a Sened-i İttifak'ın imzalanması için çağrılmıştır."
 },
 {
-    question: "Soru 7: Sened-i İttifak aşağıdakilerden hangileri arasında imzalanmıştır?",
+    question: "Sened-i İttifak aşağıdakilerden hangileri arasında imzalanmıştır?",
     options: [
         "A) II. Mahmut - Yeniçeriler",
         "B) II. Mahmut - Ayanlar",
@@ -84,7 +84,7 @@ window.tarih_10_sorulari = [
     explanation: "Sened-i İttifak II. Mahmut ile ayanlar arasında imzalanmıştır."
 },
 {
-    question: "Soru 8: Sened-i İttifak'a göre ayanlar aşağıdaki görevlerden hangisini üstlenmiştir?",
+    question: "Sened-i İttifak'a göre ayanlar aşağıdaki görevlerden hangisini üstlenmiştir?",
     options: [
         "A) Kanun yapma",
         "B) Padişah seçme",
@@ -96,19 +96,19 @@ window.tarih_10_sorulari = [
     explanation: "Ayanlar merkezi otoriteyi kabul edecek, asker ve vergi toplamada devlete yardımcı olacaktı."
 },
 {
-    question: "Soru 9: Sened-i İttifak'a göre padişahın üstlendiği yükümlülüklerden biri aşağıdakilerden hangisidir?",
+    question: "Sened-i İttifak'a göre padişahın üstlendiği yükümlülüklerden biri aşağıdakilerden hangisidir?",
     options: [
         "A) Ağır vergiler koymak",
         "B) Vergi toplamayı tamamen ayanlara bırakmak",
-        "C) Eşit ve adaletli vergi almak",
+        "C) Tımar sistemini geri getirmek",
         "D) Yeniçeri Ocağını yeniden kurmak",
-        "E) Tımar sistemini geri getirmek"
+        "E) Eşit ve adaletli vergi almak"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "Padişah eşit ve adaletli vergi alacak, ağır vergiler koymayacaktı."
 },
 {
-    question: "Soru 10: Sened-i İttifak hükümlerine göre ayanlık kurumuyla ilgili aşağıdakilerden hangisi kabul edilmiştir?",
+    question: "Sened-i İttifak hükümlerine göre ayanlık kurumuyla ilgili aşağıdakilerden hangisi kabul edilmiştir?",
     options: [
         "A) Ayanlık seçimle belirlenecektir.",
         "B) Ayanlık kaldırılacaktır.",
@@ -120,7 +120,7 @@ window.tarih_10_sorulari = [
     explanation: "Sened-i İttifak ile ayanlığın babadan oğula geçmesi kabul edilmiştir."
 },
 {
-    question: "Soru 11: Sened-i İttifak'a göre İstanbul'da isyan çıkması durumunda ayanların görevi aşağıdakilerden hangisidir?",
+    question: "Sened-i İttifak'a göre İstanbul'da isyan çıkması durumunda ayanların görevi aşağıdakilerden hangisidir?",
     options: [
         "A) İsyancıları desteklemek",
         "B) Tarafsız kalmak",
@@ -132,19 +132,19 @@ window.tarih_10_sorulari = [
     explanation: "Ayanlar İstanbul'daki isyanların bastırılmasına yardım edecekti."
 },
 {
-    question: "Soru 12: Sened-i İttifak'ın Osmanlı siyasi tarihi açısından en önemli sonucu aşağıdakilerden hangisidir?",
+    question: "Sened-i İttifak'ın Osmanlı siyasi tarihi açısından en önemli sonucu aşağıdakilerden hangisidir?",
     options: [
         "A) Meşrutiyetin ilan edilmesi",
         "B) Halifeliğin kaldırılması",
-        "C) Padişahın mutlak otoritesinin ilk kez sınırlandırılması",
+        "C) İlk anayasanın hazırlanması",
         "D) Cumhuriyetin ilan edilmesi",
-        "E) İlk anayasanın hazırlanması"
+        "E) Padişahın mutlak otoritesinin ilk kez sınırlandırılması"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "Sened-i İttifak ile padişahın mutlak otoritesi ilk kez sınırlandırılmıştır."
 },
 {
-    question: "Soru 13: Sened-i İttifak için aşağıdakilerden hangisi söylenebilir?",
+    question: "Sened-i İttifak için aşağıdakilerden hangisi söylenebilir?",
     options: [
         "A) Osmanlı'nın ilk anayasasıdır.",
         "B) İlk demokratikleşme hareketi olarak kabul edilir.",
@@ -156,7 +156,7 @@ window.tarih_10_sorulari = [
     explanation: "Sened-i İttifak Osmanlı tarihinin ilk demokratikleşme hareketi kabul edilir."
 },
 {
-    question: "Soru 14: Sened-i İttifak'ın aşağıdaki belgelerden hangisine benzetilmesi, mutlak otoriteyi sınırlandırmasıyla ilgilidir?",
+    question: "Sened-i İttifak'ın aşağıdaki belgelerden hangisine benzetilmesi, mutlak otoriteyi sınırlandırmasıyla ilgilidir?",
     options: [
         "A) İnsan ve Yurttaş Hakları Bildirisi",
         "B) Westphalia Antlaşması",
@@ -168,7 +168,7 @@ window.tarih_10_sorulari = [
     explanation: "Sened-i İttifak, 1215 tarihli Magna Carta'ya benzetilmiştir."
 },
 {
-    question: "Soru 15: II. Mahmut'un Sened-i İttifak'ı imzalamasındaki temel amaç aşağıdakilerden hangisidir?",
+    question: "II. Mahmut'un Sened-i İttifak'ı imzalamasındaki temel amaç aşağıdakilerden hangisidir?",
     options: [
         "A) Cumhuriyeti ilan etmek",
         "B) Merkezi otoriteyi güçlendirmek",
@@ -180,7 +180,7 @@ window.tarih_10_sorulari = [
     explanation: "II. Mahmut'un temel amacı merkezi otoriteyi sağlamaktı."
 },
 {
-    question: "Soru 16: II. Mahmut döneminde ayanlık kaldırılarak köylere muhtar, eyaletlere ise aşağıdaki görevlilerden hangisi atanmıştır?",
+    question: "II. Mahmut döneminde ayanlık kaldırılarak köylere muhtar, eyaletlere ise aşağıdaki görevlilerden hangisi atanmıştır?",
     options: [
         "A) Sadrazam",
         "B) Defterdar",
@@ -192,7 +192,7 @@ window.tarih_10_sorulari = [
     explanation: "Ayanlık kaldırılmış, köylere muhtar, eyaletlere müşir (vali) atanmıştır."
 },
 {
-    question: "Soru 17: II. Mahmut'un aşağıdaki uygulamalarından hangisi ekonomik ve askerî gücü yerel yöneticilerden alarak merkezi yönetimi güçlendirmeye yöneliktir?",
+    question: "II. Mahmut'un aşağıdaki uygulamalarından hangisi ekonomik ve askerî gücü yerel yöneticilerden alarak merkezi yönetimi güçlendirmeye yöneliktir?",
     options: [
         "A) Tımar sistemini kaldırması",
         "B) Takvim-i Vekayi'yi çıkarması",
@@ -204,7 +204,7 @@ window.tarih_10_sorulari = [
     explanation: "Tımar sisteminin kaldırılması merkezi yönetimi güçlendirme amacı taşımaktadır."
 },
 {
-    question: "Soru 18: II. Mahmut döneminde aşağıdaki uygulamalardan hangisi kaldırılmıştır?",
+    question: "II. Mahmut döneminde aşağıdaki uygulamalardan hangisi kaldırılmıştır?",
     options: [
         "A) Müsadere sistemi",
         "B) Pasaport sistemi",
@@ -216,7 +216,7 @@ window.tarih_10_sorulari = [
     explanation: "II. Mahmut hem tımar hem de müsadere sistemini kaldırmıştır."
 },
 {
-    question: "Soru 19: II. Mahmut'un devlet dairelerine kendi resmini astırmasının temel amacı aşağıdakilerden hangisidir?",
+    question: "II. Mahmut'un devlet dairelerine kendi resmini astırmasının temel amacı aşağıdakilerden hangisidir?",
     options: [
         "A) Sanatı geliştirmek",
         "B) Padişah otoritesini görünür kılmak",
@@ -228,7 +228,7 @@ window.tarih_10_sorulari = [
     explanation: "Devlet dairelerine padişah resminin asılması merkezi otoriteyi ve padişahın görünürlüğünü artırmaya yöneliktir."
 },
 {
-    question: "Soru 20: II. Mahmut döneminde Vakıflar Genel Müdürlüğünün temelini oluşturan kurum aşağıdakilerden hangisidir?",
+    question: "II. Mahmut döneminde Vakıflar Genel Müdürlüğünün temelini oluşturan kurum aşağıdakilerden hangisidir?",
     options: [
         "A) Evkaf Vekâleti",
         "B) Ticaret Nezareti",
@@ -240,7 +240,7 @@ window.tarih_10_sorulari = [
     explanation: "II. Mahmut döneminde Evkaf Vekâleti kurulmuş, bu kurum günümüzdeki Vakıflar Genel Müdürlüğünün temelini oluşturmuştur."
 },
 {
-    question: "Soru 21: II. Mahmut döneminde belediye işlerini düzenlemek amacıyla aşağıdaki kurumlardan hangisi kurulmuştur?",
+    question: "II. Mahmut döneminde belediye işlerini düzenlemek amacıyla aşağıdaki kurumlardan hangisi kurulmuştur?",
     options: [
         "A) Ticaret Nezareti",
         "B) İhtisab Nezareti",
@@ -252,7 +252,7 @@ window.tarih_10_sorulari = [
     explanation: "Belediye hizmetlerini düzenlemek amacıyla İhtisab Nezareti kurulmuştur."
 },
 {
-    question: "Soru 22: II. Mahmut döneminde hayata geçirilen pasaport uygulamasının temel amacı aşağıdakilerden hangisidir?",
+    question: "II. Mahmut döneminde hayata geçirilen pasaport uygulamasının temel amacı aşağıdakilerden hangisidir?",
     options: [
         "A) Vergi gelirlerini artırmak",
         "B) Ticareti tamamen devletleştirmek",
@@ -264,19 +264,19 @@ window.tarih_10_sorulari = [
     explanation: "Pasaport uygulaması ülkeye giriş-çıkışları denetim altına almak amacıyla uygulanmıştır."
 },
 {
-    question: "Soru 23: II. Mahmut döneminde İstanbul'a gelen kişilere verilen izin belgesi aşağıdakilerden hangisidir?",
+    question: "II. Mahmut döneminde İstanbul'a gelen kişilere verilen izin belgesi aşağıdakilerden hangisidir?",
     options: [
         "A) Menşur",
         "B) Berat",
-        "C) Mürur Tezkeresi",
+        "C) İrade-i Seniyye",
         "D) Ferman",
-        "E) İrade-i Seniyye"
+        "E) Mürur Tezkeresi"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "İstanbul'a gelenler için mürur tezkeresi düzenlenmiştir."
 },
 {
-    question: "Soru 24: İdari işleri ve devlet teşkilatındaki yenilikleri düzenlemek amacıyla kurulan kurum aşağıdakilerden hangisidir?",
+    question: "İdari işleri ve devlet teşkilatındaki yenilikleri düzenlemek amacıyla kurulan kurum aşağıdakilerden hangisidir?",
     options: [
         "A) Dar-ı Şura-yı Bab-ı Âli",
         "B) Meclis-i Maarif",
@@ -288,31 +288,31 @@ window.tarih_10_sorulari = [
     explanation: "Dar-ı Şura-yı Bab-ı Âli idari işleri ve ıslahatları düzenlemek amacıyla kurulmuştur."
 },
 {
-    question: "Soru 25: Memurların yargılanması ve terfi işlemlerini yürütmek amacıyla kurulan kurum aşağıdakilerden hangisidir?",
+    question: "Memurların yargılanması ve terfi işlemlerini yürütmek amacıyla kurulan kurum aşağıdakilerden hangisidir?",
     options: [
         "A) Evkaf Vekâleti",
-        "B) Meclis-i Vâlâ-yı Ahkâm-ı Adliye",
+        "B) İhtisab Nezareti",
         "C) Dar-ı Şura-yı Askerî",
-        "D) İhtisab Nezareti",
+        "D) Meclis-i Vâlâ-yı Ahkâm-ı Adliye",
         "E) Şura-yı Devlet"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 3,
     explanation: "Memurların yargı ve terfi işlemleri için Meclis-i Vâlâ-yı Ahkâm-ı Adliye kurulmuştur."
 },
 {
-    question: "Soru 26: Osmanlı Devleti'nin ilk resmî gazetesi aşağıdakilerden hangisidir?",
+    question: "Osmanlı Devleti'nin ilk resmî gazetesi aşağıdakilerden hangisidir?",
     options: [
         "A) Ceride-i Havadis",
         "B) Tercüman-ı Ahvâl",
-        "C) Takvim-i Vekayi",
-        "D) Tasvir-i Efkâr",
+        "C) Tasvir-i Efkâr",
+        "D) Takvim-i Vekayi",
         "E) Tercüman-ı Hakikat"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 3,
     explanation: "İlk resmî gazete Takvim-i Vekayi'dir."
 },
 {
-    question: "Soru 27: II. Mahmut'un memurlara maaş bağlamasının temel amacı aşağıdakilerden hangisidir?",
+    question: "II. Mahmut'un memurlara maaş bağlamasının temel amacı aşağıdakilerden hangisidir?",
     options: [
         "A) Memurluğu düzenli bir devlet görevi hâline getirmek",
         "B) Yeniçeri Ocağını güçlendirmek",
@@ -324,31 +324,31 @@ window.tarih_10_sorulari = [
     explanation: "Memurlara maaş bağlanarak devlet memurluğu düzenli bir meslek hâline getirilmiştir."
 },
 {
-    question: "Soru 28: II. Mahmut döneminde memurlar aşağıdaki gruplardan hangilerine ayrılmıştır?",
+    question: "II. Mahmut döneminde memurlar aşağıdaki gruplardan hangilerine ayrılmıştır?",
     options: [
         "A) Seyfiye - İlmiye",
         "B) Kalemiye - İlmiye",
-        "C) Dahiliye - Hariciye",
+        "C) Mülkiye - Harbiye",
         "D) Askerî - Sivil",
-        "E) Mülkiye - Harbiye"
+        "E) Dahiliye - Hariciye"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "Memurlar dahiliye ve hariciye olarak iki gruba ayrılmıştır."
 },
 {
-    question: "Soru 29: II. Mahmut döneminde devlet memurları için zorunlu hâle getirilen kıyafet aşağıdakilerden hangisidir?",
+    question: "II. Mahmut döneminde devlet memurları için zorunlu hâle getirilen kıyafet aşağıdakilerden hangisidir?",
     options: [
         "A) Şalvar ve sarık",
-        "B) Pantolon, ceket ve fes",
+        "B) Mintan ve çarık",
         "C) Cübbe ve kavuk",
         "D) Kaftan ve sarık",
-        "E) Mintan ve çarık"
+        "E) Pantolon, ceket ve fes"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 4,
     explanation: "Memurların pantolon, ceket ve fes giymesi zorunlu tutulmuştur."
 },
 {
-    question: "Soru 30: Devlet memuru yetiştirmek amacıyla kurulan eğitim kurumu aşağıdakilerden hangisidir?",
+    question: "Devlet memuru yetiştirmek amacıyla kurulan eğitim kurumu aşağıdakilerden hangisidir?",
     options: [
         "A) Mekteb-i Harbiye",
         "B) Mekteb-i Tıbbiye",
@@ -360,7 +360,7 @@ window.tarih_10_sorulari = [
     explanation: "Mekteb-i Maarif-i Adliye devlet memuru yetiştirmek amacıyla açılmıştır."
 },
 {
-    question: "Soru 31: II. Mahmut döneminde Divan-ı Hümayun kaldırılarak yerine aşağıdaki kurumlardan hangisi oluşturulmuştur?",
+    question: "II. Mahmut döneminde Divan-ı Hümayun kaldırılarak yerine aşağıdaki kurumlardan hangisi oluşturulmuştur?",
     options: [
         "A) Heyet-i Vükela",
         "B) Meclis-i Mebusan",
@@ -372,19 +372,19 @@ window.tarih_10_sorulari = [
     explanation: "Divan-ı Hümayun kaldırılmış, yerine Heyet-i Vükela kurulmuştur."
 },
 {
-    question: "Soru 32: II. Mahmut döneminde Sadrazamlık makamının yerine aşağıdakilerden hangisi getirilmiştir?",
+    question: "II. Mahmut döneminde Sadrazamlık makamının yerine aşağıdakilerden hangisi getirilmiştir?",
     options: [
         "A) Seraskerlik",
-        "B) Başvekalet",
+        "B) Dahiliye Nazırlığı",
         "C) Hariciye Nazırlığı",
-        "D) Dahiliye Nazırlığı",
+        "D) Başvekalet",
         "E) Şeyhülislamlık"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 3,
     explanation: "Sadrazamlık kaldırılarak Başvekalet oluşturulmuştur."
 },
 {
-    question: "Soru 33: Reisülküttaplık makamı aşağıdaki nazırlıklardan hangisine dönüştürülmüştür?",
+    question: "Reisülküttaplık makamı aşağıdaki nazırlıklardan hangisine dönüştürülmüştür?",
     options: [
         "A) Dahiliye Nazırlığı",
         "B) Evkaf Nezareti",
@@ -396,7 +396,7 @@ window.tarih_10_sorulari = [
     explanation: "Reisülküttaplık, Hariciye Nazırlığına dönüştürülmüştür."
 },
 {
-    question: "Soru 34: Sadaret Kethüdalığı aşağıdaki kurumlardan hangisine dönüştürülmüştür?",
+    question: "Sadaret Kethüdalığı aşağıdaki kurumlardan hangisine dönüştürülmüştür?",
     options: [
         "A) Hariciye Nazırlığı",
         "B) Dahiliye Nazırlığı",
@@ -408,7 +408,7 @@ window.tarih_10_sorulari = [
     explanation: "Sadaret Kethüdalığı, Dahiliye Nazırlığına dönüştürülmüştür."
 },
 {
-    question: "Soru 35: II. Mahmut'un 'Adli' unvanıyla anılmasının temel nedeni aşağıdakilerden hangisidir?",
+    question: "II. Mahmut'un 'Adli' unvanıyla anılmasının temel nedeni aşağıdakilerden hangisidir?",
     options: [
         "A) Çok sayıda savaş kazanması",
         "B) Denizciliği geliştirmesi",
@@ -420,19 +420,19 @@ window.tarih_10_sorulari = [
     explanation: "II. Mahmut adalete önem vermesi ve yeni kanun-tüzükler hazırlatması nedeniyle 'Adli' unvanını almıştır."
 },
 {
-    question: "Soru 36: II. Mahmut döneminde yazılı hâle getirilen hukuk ilkesi aşağıdakilerden hangisidir?",
+    question: "II. Mahmut döneminde yazılı hâle getirilen hukuk ilkesi aşağıdakilerden hangisidir?",
     options: [
         "A) Kuvvetler ayrılığı",
         "B) Millî egemenlik",
-        "C) Masumiyet karinesi",
+        "C) Laiklik",
         "D) Çifte vatandaşlık",
-        "E) Laiklik"
+        "E) Masumiyet karinesi"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "Masumiyet karinesi ilkesi ilk kez yazılı hâle getirilmiştir."
 },
 {
-    question: "Soru 37: II. Mahmut döneminde kurulan ilk modern ordulardan biri aşağıdakilerden hangisidir?",
+    question: "II. Mahmut döneminde kurulan ilk modern ordulardan biri aşağıdakilerden hangisidir?",
     options: [
         "A) Nizam-ı Cedid",
         "B) Sekban-ı Cedid",
@@ -444,19 +444,19 @@ window.tarih_10_sorulari = [
     explanation: "II. Mahmut döneminde Sekban-ı Cedid kurulmuştur."
 },
 {
-    question: "Soru 38: Yeniçeri Ocağı kaldırılmadan hemen önce oluşturulan askerî teşkilat aşağıdakilerden hangisidir?",
+    question: "Yeniçeri Ocağı kaldırılmadan hemen önce oluşturulan askerî teşkilat aşağıdakilerden hangisidir?",
     options: [
         "A) Redif Birlikleri",
         "B) Seraskerlik",
-        "C) Eşkinci Ocağı",
+        "C) Hamidiye Alayları",
         "D) Nizam-ı Cedid",
-        "E) Hamidiye Alayları"
+        "E) Eşkinci Ocağı"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "Yeniçeri Ocağının yerine geçmesi amacıyla önce Eşkinci Ocağı kurulmuştur."
 },
 {
-    question: "Soru 39: 1826 yılında Yeniçeri Ocağı'nın kaldırılması olayı Osmanlı tarihinde hangi adla anılmaktadır?",
+    question: "1826 yılında Yeniçeri Ocağı'nın kaldırılması olayı Osmanlı tarihinde hangi adla anılmaktadır?",
     options: [
         "A) Vak'a-i Vakvakiye",
         "B) Vak'a-i Hayriye",
@@ -468,7 +468,7 @@ window.tarih_10_sorulari = [
     explanation: "1826'da Yeniçeri Ocağı'nın kaldırılması Vak'a-i Hayriye olarak adlandırılmıştır."
 },
 {
-    question: "Soru 40: Vak'a-i Hayriye sonrasında kurulan yeni düzenli ordu aşağıdakilerden hangisidir?",
+    question: "Vak'a-i Hayriye sonrasında kurulan yeni düzenli ordu aşağıdakilerden hangisidir?",
     options: [
         "A) Nizam-ı Cedid",
         "B) Redif Birlikleri",
@@ -480,31 +480,31 @@ window.tarih_10_sorulari = [
     explanation: "Yeniçeri Ocağı kaldırıldıktan sonra Asâkir-i Mansûre-i Muhammediye kurulmuştur."
 },
 {
-    question: "Soru 41: II. Mahmut döneminde ilk genel nüfus sayımının yapılmasının temel amacı aşağıdakilerden hangisidir?",
+    question: "II. Mahmut döneminde ilk genel nüfus sayımının yapılmasının temel amacı aşağıdakilerden hangisidir?",
     options: [
-        "A) Okullaşma oranını belirlemek",
-        "B) Askerlik çağına gelenleri ve vergi mükelleflerini tespit etmek",
+        "A) Askerlik çağına gelenleri ve vergi mükelleflerini tespit etmek",
+        "B) Okullaşma oranını belirlemek",
         "C) Gayrimüslim nüfusun haklarını genişletmek",
         "D) Yerel seçimleri gerçekleştirmek",
         "E) Sanayi üretimini belirlemek"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 0,
     explanation: "İlk nüfus sayımı askerlik çağına gelenleri belirlemek ve vergi toplamak amacıyla yapılmıştır."
 },
 {
-    question: "Soru 42: II. Mahmut döneminde askerî işlerin görüşülmesi amacıyla aşağıdaki kurumlardan hangisi kurulmuştur?",
+    question: "II. Mahmut döneminde askerî işlerin görüşülmesi amacıyla aşağıdaki kurumlardan hangisi kurulmuştur?",
     options: [
-        "A) Dar-ı Şura-yı Bab-ı Âli",
-        "B) Dar-ı Şura-yı Askerî",
+        "A) Dar-ı Şura-yı Askerî",
+        "B) Dar-ı Şura-yı Bab-ı Âli",
         "C) Şura-yı Devlet",
         "D) Meclis-i Maarif",
         "E) Meclis-i Mebusan"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 0,
     explanation: "Askerî konuları düzenlemek amacıyla Dar-ı Şura-yı Askerî kurulmuştur."
 },
 {
-    question: "Soru 43: II. Mahmut döneminde modern subay yetiştirmek amacıyla açılan okul aşağıdakilerden hangisidir?",
+    question: "II. Mahmut döneminde modern subay yetiştirmek amacıyla açılan okul aşağıdakilerden hangisidir?",
     options: [
         "A) Mekteb-i Mülkiye",
         "B) Darülmuallimin",
@@ -516,7 +516,7 @@ window.tarih_10_sorulari = [
     explanation: "Modern subay yetiştirmek amacıyla Mekteb-i Harbiye açılmıştır."
 },
 {
-    question: "Soru 44: II. Mahmut döneminde modern hekim yetiştirmek amacıyla açılan eğitim kurumu aşağıdakilerden hangisidir?",
+    question: "II. Mahmut döneminde modern hekim yetiştirmek amacıyla açılan eğitim kurumu aşağıdakilerden hangisidir?",
     options: [
         "A) Darülmuallimin",
         "B) Mekteb-i Tıbbiye",
@@ -528,7 +528,7 @@ window.tarih_10_sorulari = [
     explanation: "Modern tıp eğitimi vermek amacıyla Mekteb-i Tıbbiye kurulmuştur."
 },
 {
-    question: "Soru 45: II. Mahmut döneminde köy ve kasabaların güvenliğini sağlamak amacıyla aşağıdakilerden hangisi oluşturulmuştur?",
+    question: "II. Mahmut döneminde köy ve kasabaların güvenliğini sağlamak amacıyla aşağıdakilerden hangisi oluşturulmuştur?",
     options: [
         "A) Hamidiye Alayları",
         "B) Redif Birlikleri",
@@ -540,7 +540,7 @@ window.tarih_10_sorulari = [
     explanation: "Köy ve kasabaların güvenliğini sağlamak amacıyla Redif Birlikleri kurulmuştur."
 },
 {
-    question: "Soru 46: Günümüzdeki Genelkurmay Başkanlığının temeli sayılan kurum aşağıdakilerden hangisidir?",
+    question: "Günümüzdeki Genelkurmay Başkanlığının temeli sayılan kurum aşağıdakilerden hangisidir?",
     options: [
         "A) Seraskerlik",
         "B) Harbiye Nezareti",
@@ -552,7 +552,7 @@ window.tarih_10_sorulari = [
     explanation: "Seraskerlik, Genelkurmay Başkanlığının temeli kabul edilmektedir."
 },
 {
-    question: "Soru 47: Osmanlı Devleti'nde Avrupa'ya eğitim amacıyla ilk öğrenciler hangi padişah döneminde gönderilmiştir?",
+    question: "Osmanlı Devleti'nde Avrupa'ya eğitim amacıyla ilk öğrenciler hangi padişah döneminde gönderilmiştir?",
     options: [
         "A) III. Selim",
         "B) II. Mahmut",
@@ -564,31 +564,31 @@ window.tarih_10_sorulari = [
     explanation: "Avrupa'ya eğitim amacıyla ilk öğrenciler II. Mahmut döneminde gönderilmiştir."
 },
 {
-    question: "Soru 48: II. Mahmut döneminde ortaöğretim düzeyinde eğitim vermek amacıyla açılan okullar aşağıdakilerden hangisidir?",
+    question: "II. Mahmut döneminde ortaöğretim düzeyinde eğitim vermek amacıyla açılan okullar aşağıdakilerden hangisidir?",
     options: [
         "A) Sıbyan mektepleri",
         "B) Medreseler",
-        "C) Rüştiyeler",
+        "C) Sultaniler",
         "D) İdadiler",
-        "E) Sultaniler"
+        "E) Rüştiyeler"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "II. Mahmut döneminde rüştiyeler açılmıştır."
 },
 {
-    question: "Soru 49: II. Mahmut döneminde açılan Mekteb-i Ulûm-ı Edebiyye'nin faaliyet alanı aşağıdakilerden hangisidir?",
+    question: "II. Mahmut döneminde açılan Mekteb-i Ulûm-ı Edebiyye'nin faaliyet alanı aşağıdakilerden hangisidir?",
     options: [
         "A) Hukuk",
-        "B) Edebiyat ve kültür",
+        "B) Tıp",
         "C) Denizcilik",
         "D) Askerî eğitim",
-        "E) Tıp"
+        "E) Edebiyat ve kültür"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 4,
     explanation: "Mekteb-i Ulûm-ı Edebiyye eğitim ve kültür alanında açılmıştır."
 },
 {
-    question: "Soru 50: Bulaşıcı hastalıkların yayılmasını önlemek amacıyla II. Mahmut döneminde aşağıdaki uygulamalardan hangisi başlatılmıştır?",
+    question: "Bulaşıcı hastalıkların yayılmasını önlemek amacıyla II. Mahmut döneminde aşağıdaki uygulamalardan hangisi başlatılmıştır?",
     options: [
         "A) Aşar vergisi",
         "B) Karantina",
@@ -600,7 +600,7 @@ window.tarih_10_sorulari = [
     explanation: "Bulaşıcı hastalıkların önlenmesi amacıyla karantina uygulamasına geçilmiştir."
 },
 {
-    question: "Soru 51: II. Mahmut döneminde eğitim alanında gerçekleştirilen aşağıdaki uygulamalardan hangisi doğrudur?",
+    question: "II. Mahmut döneminde eğitim alanında gerçekleştirilen aşağıdaki uygulamalardan hangisi doğrudur?",
     options: [
         "A) İlköğretim tüm Osmanlı ülkesinde zorunlu hâle getirildi.",
         "B) İlköğretim yalnızca İstanbul'da zorunlu hâle getirildi.",
@@ -612,19 +612,19 @@ window.tarih_10_sorulari = [
     explanation: "İlkokul eğitimi yalnızca İstanbul'da zorunlu hâle getirilmiştir."
 },
 {
-    question: "Soru 52: Osmanlı'nın geleneksel askerî bandosu olan Mehterhane kapatılarak yerine aşağıdakilerden hangisi kurulmuştur?",
+    question: "Osmanlı'nın geleneksel askerî bandosu olan Mehterhane kapatılarak yerine aşağıdakilerden hangisi kurulmuştur?",
     options: [
         "A) Darülbedayi",
-        "B) Mızıka-yı Hümayun",
+        "B) Tercüme Odası",
         "C) Sanayi-i Nefise",
         "D) Darülmuallimin",
-        "E) Tercüme Odası"
+        "E) Mızıka-yı Hümayun"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 4,
     explanation: "Mehterhane kapatılmış, yerine Mızıka-yı Hümayun kurulmuştur."
 },
 {
-    question: "Soru 53: Yabancı dil bilen Müslüman diplomat yetiştirmek amacıyla kurulan kurum aşağıdakilerden hangisidir?",
+    question: "Yabancı dil bilen Müslüman diplomat yetiştirmek amacıyla kurulan kurum aşağıdakilerden hangisidir?",
     options: [
         "A) Encümen-i Daniş",
         "B) Darülmuallimin",
@@ -636,7 +636,7 @@ window.tarih_10_sorulari = [
     explanation: "Tercüme Odaları yabancı dil bilen Müslüman diplomat yetiştirmek amacıyla kurulmuştur."
 },
 {
-    question: "Soru 54: II. Mahmut'un 'Ben tebamdan Müslüman'ı camide, Hristiyan'ı kilisede, Musevi'yi havrada fark ederim...' sözü aşağıdaki anlayışlardan hangisini yansıtmaktadır?",
+    question: "II. Mahmut'un 'Ben tebamdan Müslüman'ı camide, Hristiyan'ı kilisede, Musevi'yi havrada fark ederim...' sözü aşağıdaki anlayışlardan hangisini yansıtmaktadır?",
     options: [
         "A) Irk üstünlüğü",
         "B) Dinî ayrımcılık",
@@ -648,7 +648,7 @@ window.tarih_10_sorulari = [
     explanation: "Bu söz, din ayrımı yapılmaksızın tüm tebaanın eşit görülmesi anlayışını ifade etmektedir."
 },
 {
-    question: "Soru 55: Tarım ve ticaret işlerini düzenlemek amacıyla II. Mahmut döneminde aşağıdaki kurumlardan hangisi kurulmuştur?",
+    question: "Tarım ve ticaret işlerini düzenlemek amacıyla II. Mahmut döneminde aşağıdaki kurumlardan hangisi kurulmuştur?",
     options: [
         "A) Maarif Nezareti",
         "B) Ticaret Nezareti",
@@ -660,7 +660,7 @@ window.tarih_10_sorulari = [
     explanation: "Tarım ve ticaret işlerini düzenlemek amacıyla Ticaret Nezareti kurulmuştur."
 },
 {
-    question: "Soru 56: II. Mahmut döneminde ekonomi alanında aşağıdaki uygulamalardan hangisi yerli üretimi desteklemeye yöneliktir?",
+    question: "II. Mahmut döneminde ekonomi alanında aşağıdaki uygulamalardan hangisi yerli üretimi desteklemeye yöneliktir?",
     options: [
         "A) Yerli malı kullanımının teşvik edilmesi",
         "B) Kapitülasyonların kaldırılması",
@@ -672,7 +672,7 @@ window.tarih_10_sorulari = [
     explanation: "Yerli malı kullanımı teşvik edilerek yerli üretim desteklenmek istenmiştir."
 },
 {
-    question: "Soru 57: II. Mahmut döneminde açılan Bakırköy Fabrikası hangi ürünün üretimi amacıyla kurulmuştur?",
+    question: "II. Mahmut döneminde açılan Bakırköy Fabrikası hangi ürünün üretimi amacıyla kurulmuştur?",
     options: [
         "A) Silah",
         "B) Kâğıt",
@@ -684,19 +684,19 @@ window.tarih_10_sorulari = [
     explanation: "Bakırköy'de bez fabrikası açılmıştır."
 },
 {
-    question: "Soru 58: Osmanlı tüccarlarının Avrupalı tüccarlarla rekabet edebilmesi amacıyla aşağıdaki uygulamalardan hangisine başvurulmuştur?",
+    question: "Osmanlı tüccarlarının Avrupalı tüccarlarla rekabet edebilmesi amacıyla aşağıdaki uygulamalardan hangisine başvurulmuştur?",
     options: [
         "A) Cizye artırılmıştır.",
-        "B) Gümrük vergilerinde kolaylık sağlanmıştır.",
+        "B) Yabancı tüccarlar ülkeden çıkarılmıştır.",
         "C) İltizam sistemi güçlendirilmiştir.",
         "D) Aşar vergisi kaldırılmıştır.",
-        "E) Yabancı tüccarlar ülkeden çıkarılmıştır."
+        "E) Gümrük vergilerinde kolaylık sağlanmıştır."
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 4,
     explanation: "Osmanlı tüccarlarını desteklemek amacıyla gümrük vergilerinde kolaylık sağlanmıştır."
 },
 {
-    question: "Soru 59: Ordunun fes ihtiyacını karşılamak amacıyla açılan kuruluş aşağıdakilerden hangisidir?",
+    question: "Ordunun fes ihtiyacını karşılamak amacıyla açılan kuruluş aşağıdakilerden hangisidir?",
     options: [
         "A) Hereke Fabrikası",
         "B) Feshane",
@@ -708,19 +708,19 @@ window.tarih_10_sorulari = [
     explanation: "Feshane, ordunun fes ihtiyacını karşılamak amacıyla kurulmuştur."
 },
 {
-    question: "Soru 60: II. Mahmut döneminde devlet memurlarının giyecekleri kıyafetlerle ilgili aşağıdaki uygulamalardan hangisi gerçekleştirilmiştir?",
+    question: "II. Mahmut döneminde devlet memurlarının giyecekleri kıyafetlerle ilgili aşağıdaki uygulamalardan hangisi gerçekleştirilmiştir?",
     options: [
         "A) Avrupa'dan ithal edilmesi zorunlu tutulmuştur.",
         "B) Yalnızca ipek kullanılması şart koşulmuştur.",
-        "C) Yerli malı olma zorunluluğu getirilmiştir.",
+        "C) Serbest kıyafet uygulamasına geçilmiştir.",
         "D) Üniforma uygulaması kaldırılmıştır.",
-        "E) Serbest kıyafet uygulamasına geçilmiştir."
+        "E) Yerli malı olma zorunluluğu getirilmiştir."
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "Memurların giyeceği kıyafetlerin yerli malı olması zorunlu tutulmuştur."
 },
 {
-    question: "Soru 61: Tanzimat Fermanı'nın ilan edilmesinde aşağıdakilerden hangisinin etkili olduğu söylenebilir?",
+    question: "Tanzimat Fermanı'nın ilan edilmesinde aşağıdakilerden hangisinin etkili olduğu söylenebilir?",
     options: [
         "A) 93 Harbi'nde alınan yenilgi",
         "B) Londra Konferansı kararlarında etkili olma isteği",
@@ -732,7 +732,7 @@ window.tarih_10_sorulari = [
     explanation: "Tanzimat Fermanı'nın ilan edilme nedenlerinden biri Londra Konferansı kararlarında etkili olabilmek ve Mısır meselesinde Avrupa'nın desteğini kazanmaktı."
 },
 {
-    question: "Soru 62: Tanzimat Fermanı'nın ilan edilmesinde aşağıdaki gelişmelerden hangisi doğrudan etkili olmuştur?",
+    question: "Tanzimat Fermanı'nın ilan edilmesinde aşağıdaki gelişmelerden hangisi doğrudan etkili olmuştur?",
     options: [
         "A) Mısır Sorunu",
         "B) Girit İsyanı",
@@ -744,55 +744,55 @@ window.tarih_10_sorulari = [
     explanation: "Mısır Sorunu'nun çözümünde Avrupa devletlerinin desteğini sağlamak Tanzimat Fermanı'nın ilan nedenlerinden biridir."
 },
 {
-    question: "Soru 63: Tanzimat Fermanı'nın hazırlanmasında başlıca rol oynayan devlet adamı aşağıdakilerden hangisidir?",
+    question: "Tanzimat Fermanı'nın hazırlanmasında başlıca rol oynayan devlet adamı aşağıdakilerden hangisidir?",
     options: [
         "A) Mithat Paşa",
         "B) Ahmet Cevdet Paşa",
-        "C) Mustafa Reşit Paşa",
-        "D) Ali Paşa",
+        "C) Ali Paşa",
+        "D) Mustafa Reşit Paşa",
         "E) Fuat Paşa"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 3,
     explanation: "Tanzimat Fermanı Mustafa Reşit Paşa tarafından hazırlanmıştır."
 },
 {
-    question: "Soru 64: Tanzimat Fermanı'nın hazırlanışında etkili olan fikir akımı aşağıdakilerden hangisidir?",
+    question: "Tanzimat Fermanı'nın hazırlanışında etkili olan fikir akımı aşağıdakilerden hangisidir?",
     options: [
-        "A) Türkçülük",
+        "A) Osmanlıcılık",
         "B) İslamcılık",
-        "C) Osmanlıcılık",
+        "C) Türkçülük",
         "D) Batıcılık",
         "E) Adem-i Merkeziyetçilik"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 0,
     explanation: "Tanzimat Fermanı'nın temelinde Osmanlıcılık düşüncesi yer almaktadır."
 },
 {
-    question: "Soru 65: Tanzimat Fermanı aşağıdaki adlardan hangisiyle de bilinmektedir?",
+    question: "Tanzimat Fermanı aşağıdaki adlardan hangisiyle de bilinmektedir?",
     options: [
         "A) Kanun-ı Esasi",
         "B) Islahat Fermanı",
-        "C) Gülhane Hatt-ı Hümayunu",
-        "D) Sened-i İttifak",
+        "C) Sened-i İttifak",
+        "D) Gülhane Hatt-ı Hümayunu",
         "E) Hatt-ı Hümayun-ı Islahat"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 3,
     explanation: "Tanzimat Fermanı'nın diğer adı Gülhane Hatt-ı Hümayunu'dur."
 },
 {
-    question: "Soru 66: Tanzimat Fermanı ile Osmanlı padişahı aşağıdakilerden hangisini kabul etmiştir?",
+    question: "Tanzimat Fermanı ile Osmanlı padişahı aşağıdakilerden hangisini kabul etmiştir?",
     options: [
         "A) Egemenliğin millete ait olduğunu",
-        "B) Hukukun üstünlüğünü",
+        "B) Halifeliğin kaldırılmasını",
         "C) Cumhuriyet yönetimini",
-        "D) Halifeliğin kaldırılmasını",
+        "D) Hukukun üstünlüğünü",
         "E) Kuvvetler ayrılığını"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 3,
     explanation: "Tanzimat Fermanı ile padişah kendi gücünün üstünde hukukun üstünlüğünü kabul etmiştir."
 },
 {
-    question: "Soru 67: Tanzimat Fermanı'nın aşağıdaki gelişmelerden hangisine zemin hazırladığı kabul edilir?",
+    question: "Tanzimat Fermanı'nın aşağıdaki gelişmelerden hangisine zemin hazırladığı kabul edilir?",
     options: [
         "A) Saltanatın kaldırılması",
         "B) Anayasal düzene geçiş",
@@ -804,7 +804,7 @@ window.tarih_10_sorulari = [
     explanation: "Tanzimat Fermanı anayasal yönetime geçişin ilk adımı olarak kabul edilmektedir."
 },
 {
-    question: "Soru 68: Tanzimat Fermanı'nın temel amaçlarından biri aşağıdakilerden hangisidir?",
+    question: "Tanzimat Fermanı'nın temel amaçlarından biri aşağıdakilerden hangisidir?",
     options: [
         "A) Gayrimüslimlerin devlete bağlılığını artırmak",
         "B) Kapitülasyonları kaldırmak",
@@ -816,7 +816,7 @@ window.tarih_10_sorulari = [
     explanation: "Gayrimüslimlerin haklarının genişletilerek devlete bağlılıklarının artırılması hedeflenmiştir."
 },
 {
-    question: "Soru 69: Tanzimat Fermanı ile aşağıdaki fikir akımlarından hangisinin olumsuz etkilerinin azaltılması amaçlanmıştır?",
+    question: "Tanzimat Fermanı ile aşağıdaki fikir akımlarından hangisinin olumsuz etkilerinin azaltılması amaçlanmıştır?",
     options: [
         "A) Liberalizm",
         "B) Sosyalizm",
@@ -828,7 +828,7 @@ window.tarih_10_sorulari = [
     explanation: "Fransız İhtilali sonrası yayılan ulusçuluk akımının etkisi azaltılmak istenmiştir."
 },
 {
-    question: "Soru 70: Tanzimat Fermanı'nın amaçlarından biri de aşağıdakilerden hangisidir?",
+    question: "Tanzimat Fermanı'nın amaçlarından biri de aşağıdakilerden hangisidir?",
     options: [
         "A) Avrupa devletlerinin Osmanlı iç işlerine karışmasını önlemek",
         "B) Yeniçeri Ocağını güçlendirmek",
@@ -840,31 +840,31 @@ window.tarih_10_sorulari = [
     explanation: "Azınlıklar bahane edilerek yapılan Avrupa müdahalelerini önlemek amaçlanmıştır."
 },
 {
-    question: "Soru 71: Tanzimat Fermanı'na göre aşağıdakilerden hangisi devlet güvencesi altına alınmıştır?",
+    question: "Tanzimat Fermanı'na göre aşağıdakilerden hangisi devlet güvencesi altına alınmıştır?",
     options: [
         "A) Yalnızca Müslümanların can güvenliği",
-        "B) Müslüman ve Hristiyan tebaanın can, mal ve namus güvenliği",
+        "B) Yalnızca ayanların hakları",
         "C) Sadece askerlerin hakları",
         "D) Yalnızca devlet memurlarının hakları",
-        "E) Yalnızca ayanların hakları"
+        "E) Müslüman ve Hristiyan tebaanın can, mal ve namus güvenliği"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 4,
     explanation: "Ferman ile Müslüman ve Hristiyan tebaanın can, mal, ırz ve namus güvenliği güvence altına alınmıştır."
 },
 {
-    question: "Soru 72: Tanzimat Fermanı'na göre vergiler hangi ilkeye göre alınacaktır?",
+    question: "Tanzimat Fermanı'na göre vergiler hangi ilkeye göre alınacaktır?",
     options: [
         "A) Din esasına göre",
         "B) Soyluluk durumuna göre",
-        "C) Herkesin gücü oranında",
+        "C) Yalnızca gayrimüslimlerden",
         "D) Yalnızca Müslümanlardan",
-        "E) Yalnızca gayrimüslimlerden"
+        "E) Herkesin gücü oranında"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "Vergilerin herkesin ödeme gücüne göre alınacağı belirtilmiştir."
 },
 {
-    question: "Soru 73: Tanzimat Fermanı'na göre askerlikle ilgili aşağıdaki hükümlerden hangisi kabul edilmiştir?",
+    question: "Tanzimat Fermanı'na göre askerlikle ilgili aşağıdaki hükümlerden hangisi kabul edilmiştir?",
     options: [
         "A) Askerlik yalnızca Müslümanlara ait olacaktır.",
         "B) Gayrimüslimler tamamen askerlikten çıkarılmıştır.",
@@ -876,7 +876,7 @@ window.tarih_10_sorulari = [
     explanation: "Tanzimat Fermanı askerliği bütün tebaa için zorunlu hâle getirmeyi öngörmüştür."
 },
 {
-    question: "Soru 74: Tanzimat Fermanı'na göre aşağıdakilerden hangisi yargı güvencesinin bir göstergesidir?",
+    question: "Tanzimat Fermanı'na göre aşağıdakilerden hangisi yargı güvencesinin bir göstergesidir?",
     options: [
         "A) Yargılanmadan idam cezası verilebilmesi",
         "B) Hiç kimsenin yargılanmadan ölüm cezasına çarptırılamaması",
@@ -888,7 +888,7 @@ window.tarih_10_sorulari = [
     explanation: "Ferman ile hiç kimsenin yargılanmadan idam edilemeyeceği kabul edilmiştir."
 },
 {
-    question: "Soru 75: Tanzimat Fermanı ile aşağıdaki uygulamalardan hangisi tamamen kaldırılmıştır?",
+    question: "Tanzimat Fermanı ile aşağıdaki uygulamalardan hangisi tamamen kaldırılmıştır?",
     options: [
         "A) İltizam",
         "B) Cizye",
@@ -900,19 +900,19 @@ window.tarih_10_sorulari = [
     explanation: "Tanzimat Fermanı ile müsadere sistemi tamamen kaldırılmıştır."
 },
 {
-    question: "Soru 76: Tanzimat Fermanı'nda aşağıdaki sorunlardan hangisinin önlenmesine yönelik hüküm bulunmaktadır?",
+    question: "Tanzimat Fermanı'nda aşağıdaki sorunlardan hangisinin önlenmesine yönelik hüküm bulunmaktadır?",
     options: [
         "A) Eşkıyalık",
-        "B) Rüşvet",
+        "B) Korsanlık",
         "C) Göç",
-        "D) Korsanlık",
+        "D) Rüşvet",
         "E) Enflasyon"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 3,
     explanation: "Fermanda rüşveti önlemek amacıyla kanunlar çıkarılacağı belirtilmiştir."
 },
 {
-    question: "Soru 77: Tanzimat Fermanı'nın ilan edilmesiyle ilgili aşağıdakilerden hangisi doğrudur?",
+    question: "Tanzimat Fermanı'nın ilan edilmesiyle ilgili aşağıdakilerden hangisi doğrudur?",
     options: [
         "A) Avrupa devletlerinin baskısıyla ilan edilmiştir.",
         "B) Rusya'nın isteğiyle hazırlanmıştır.",
@@ -924,7 +924,7 @@ window.tarih_10_sorulari = [
     explanation: "Tanzimat Fermanı, Avrupalı devletlerin doğrudan baskısı olmadan ilan edilmiştir."
 },
 {
-    question: "Soru 78: Tanzimat Fermanı aşağıdaki padişahlardan hangisinin döneminde ilan edilmiştir?",
+    question: "Tanzimat Fermanı aşağıdaki padişahlardan hangisinin döneminde ilan edilmiştir?",
     options: [
         "A) II. Mahmut",
         "B) Abdülaziz",
@@ -936,7 +936,7 @@ window.tarih_10_sorulari = [
     explanation: "Tanzimat Fermanı Sultan Abdülmecid döneminde ilan edilmiştir."
 },
 {
-    question: "Soru 79: Tanzimat Fermanı'nın ilan edilmesinde etkili olan temel düşünce aşağıdakilerden hangisidir?",
+    question: "Tanzimat Fermanı'nın ilan edilmesinde etkili olan temel düşünce aşağıdakilerden hangisidir?",
     options: [
         "A) Osmanlı Devleti'nde din ve ırk ayrımı yapmadan birlik oluşturmak",
         "B) Türkleri tek çatı altında toplamak",
@@ -948,7 +948,7 @@ window.tarih_10_sorulari = [
     explanation: "Osmanlıcılık düşüncesi din ve ırk ayrımı gözetmeden bütün Osmanlı vatandaşlarını bir arada tutmayı amaçlamıştır."
 },
 {
-    question: "Soru 80: Aşağıdakilerden hangisi Tanzimat Fermanı'nın amaçlarından biri değildir?",
+    question: "Aşağıdakilerden hangisi Tanzimat Fermanı'nın amaçlarından biri değildir?",
     options: [
         "A) Devlete bağlılığı artırmak",
         "B) Avrupa'nın iç işlerine karışmasını önlemek",
@@ -960,7 +960,7 @@ window.tarih_10_sorulari = [
     explanation: "Gayrimüslimlerin bedel ödeyerek askerlikten muaf olması Islahat Fermanı'nın hükümlerindendir."
 },
 {
-    question: "Soru 81: Islahat Fermanı'nın ilan edilmesinde aşağıdaki gelişmelerden hangisinin etkisi olmuştur?",
+    question: "Islahat Fermanı'nın ilan edilmesinde aşağıdaki gelişmelerden hangisinin etkisi olmuştur?",
     options: [
         "A) Londra Konferansı",
         "B) Paris Barış Konferansı",
@@ -972,19 +972,19 @@ window.tarih_10_sorulari = [
     explanation: "Islahat Fermanı, Paris Barış Konferansı kararlarında etkili olabilmek amacıyla ilan edilmiştir."
 },
 {
-    question: "Soru 82: Islahat Fermanı'nın ilan edilmesinde aşağıdakilerden hangisi Tanzimat Fermanı'ndan farklı olarak etkili olmuştur?",
+    question: "Islahat Fermanı'nın ilan edilmesinde aşağıdakilerden hangisi Tanzimat Fermanı'ndan farklı olarak etkili olmuştur?",
     options: [
-        "A) Osmanlıcılık düşüncesi",
+        "A) Avrupa devletlerinin baskısı",
         "B) Azınlıkları devlete bağlama isteği",
-        "C) Avrupa devletlerinin baskısı",
+        "C) Osmanlıcılık düşüncesi",
         "D) Ulusçuluğun etkisini azaltma isteği",
         "E) İç huzuru sağlama düşüncesi"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 0,
     explanation: "Islahat Fermanı'nın ilanında Avrupa devletlerinin baskısı etkili olmuştur."
 },
 {
-    question: "Soru 83: Islahat Fermanı aşağıdaki padişahlardan hangisi döneminde ilan edilmiştir?",
+    question: "Islahat Fermanı aşağıdaki padişahlardan hangisi döneminde ilan edilmiştir?",
     options: [
         "A) II. Mahmut",
         "B) Abdülaziz",
@@ -996,19 +996,19 @@ window.tarih_10_sorulari = [
     explanation: "Islahat Fermanı Sultan Abdülmecid döneminde ilan edilmiştir."
 },
 {
-    question: "Soru 84: Islahat Fermanı'nın hazırlanışında etkili olan fikir akımı aşağıdakilerden hangisidir?",
+    question: "Islahat Fermanı'nın hazırlanışında etkili olan fikir akımı aşağıdakilerden hangisidir?",
     options: [
         "A) Türkçülük",
-        "B) Osmanlıcılık",
+        "B) İslamcılık",
         "C) Batıcılık",
-        "D) İslamcılık",
+        "D) Osmanlıcılık",
         "E) Adem-i Merkeziyetçilik"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 3,
     explanation: "Islahat Fermanı da Osmanlıcılık düşüncesi doğrultusunda hazırlanmıştır."
 },
 {
-    question: "Soru 85: Islahat Fermanı'nın temel anlayışı aşağıdakilerden hangisidir?",
+    question: "Islahat Fermanı'nın temel anlayışı aşağıdakilerden hangisidir?",
     options: [
         "A) Müslümanlara ayrıcalık tanımak",
         "B) Gayrimüslimleri devlet yönetiminden uzaklaştırmak",
@@ -1020,7 +1020,7 @@ window.tarih_10_sorulari = [
     explanation: "Islahat Fermanı'nın temel ilkesi Müslümanlarla gayrimüslimlerin kanun önünde eşit olmasıdır."
 },
 {
-    question: "Soru 86: Islahat Fermanı'na göre aşağıdakilerden hangisi tüm Osmanlı tebaasına açık hâle getirilmiştir?",
+    question: "Islahat Fermanı'na göre aşağıdakilerden hangisi tüm Osmanlı tebaasına açık hâle getirilmiştir?",
     options: [
         "A) Yalnızca askerlik",
         "B) Yalnızca devlet memurluğu",
@@ -1032,7 +1032,7 @@ window.tarih_10_sorulari = [
     explanation: "Devlet hizmetleri, askerlik ve okullar tüm tebaaya açılmıştır."
 },
 {
-    question: "Soru 87: Islahat Fermanı ile gayrimüslimlere aşağıdaki haklardan hangisi tanınmıştır?",
+    question: "Islahat Fermanı ile gayrimüslimlere aşağıdaki haklardan hangisi tanınmıştır?",
     options: [
         "A) Padişah seçebilme",
         "B) Okul açabilme",
@@ -1044,7 +1044,7 @@ window.tarih_10_sorulari = [
     explanation: "Gayrimüslimlerin okul açabilmesine izin verilmiştir."
 },
 {
-    question: "Soru 88: Islahat Fermanı ile aşağıdaki vergilerden hangisi kaldırılmıştır?",
+    question: "Islahat Fermanı ile aşağıdaki vergilerden hangisi kaldırılmıştır?",
     options: [
         "A) Aşar",
         "B) Haraç",
@@ -1056,7 +1056,7 @@ window.tarih_10_sorulari = [
     explanation: "Islahat Fermanı ile cizye kaldırılmıştır."
 },
 {
-    question: "Soru 89: Islahat Fermanı'na göre gayrimüslimler askerlik hizmeti yerine aşağıdakilerden hangisini yapabilecektir?",
+    question: "Islahat Fermanı'na göre gayrimüslimler askerlik hizmeti yerine aşağıdakilerden hangisini yapabilecektir?",
     options: [
         "A) Vakıf kuracaktır.",
         "B) Nakdî bedel ödeyecektir.",
@@ -1068,19 +1068,19 @@ window.tarih_10_sorulari = [
     explanation: "Gayrimüslimler nakdî bedel ödeyerek askerlikten muaf tutulmuştur."
 },
 {
-    question: "Soru 90: Islahat Fermanı'na göre mahkemelerle ilgili aşağıdakilerden hangisi kabul edilmiştir?",
+    question: "Islahat Fermanı'na göre mahkemelerle ilgili aşağıdakilerden hangisi kabul edilmiştir?",
     options: [
         "A) Gizli yapılacaktır.",
         "B) Sadece Müslümanlar katılacaktır.",
-        "C) Herkese açık olacak ve keyfi cezalar verilmeyecektir.",
-        "D) Sadece askerler yargılanacaktır.",
+        "C) Sadece askerler yargılanacaktır.",
+        "D) Herkese açık olacak ve keyfi cezalar verilmeyecektir.",
         "E) Şer'i mahkemeler kaldırılacaktır."
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 3,
     explanation: "Mahkemelerin herkese açık olması ve keyfi cezaların kaldırılması kabul edilmiştir."
 },
 {
-    question: "Soru 91: Müslümanlarla gayrimüslimler arasındaki davalara bakmak amacıyla aşağıdaki mahkemelerden hangisi kurulmuştur?",
+    question: "Müslümanlarla gayrimüslimler arasındaki davalara bakmak amacıyla aşağıdaki mahkemelerden hangisi kurulmuştur?",
     options: [
         "A) Divan-ı Hümayun",
         "B) Nizamiye Mahkemeleri",
@@ -1092,19 +1092,19 @@ window.tarih_10_sorulari = [
     explanation: "Müslüman ve gayrimüslimler arasındaki davalar için karma mahkemeler kurulmuştur."
 },
 {
-    question: "Soru 92: Islahat Fermanı'na göre aşağıdakilerden hangisi yasaklanmıştır?",
+    question: "Islahat Fermanı'na göre aşağıdakilerden hangisi yasaklanmıştır?",
     options: [
         "A) Yabancı ticareti",
-        "B) Gayrimüslimleri aşağılayıcı ifadeler kullanılması",
+        "B) Demiryolu yapılması",
         "C) Vakıf kurulması",
-        "D) Demiryolu yapılması",
+        "D) Gayrimüslimleri aşağılayıcı ifadeler kullanılması",
         "E) Gazete çıkarılması"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 3,
     explanation: "Gayrimüslimleri aşağılayıcı ifadelerin kullanılması yasaklanmıştır."
 },
 {
-    question: "Soru 93: Islahat Fermanı ile yabancılara tanınan haklardan biri aşağıdakilerden hangisidir?",
+    question: "Islahat Fermanı ile yabancılara tanınan haklardan biri aşağıdakilerden hangisidir?",
     options: [
         "A) Osmanlı padişahını seçebilme",
         "B) Osmanlı ülkesinde mülk sahibi olabilme",
@@ -1116,19 +1116,19 @@ window.tarih_10_sorulari = [
     explanation: "Yabancıların Osmanlı topraklarında mülk sahibi olabilmelerine izin verilmiştir."
 },
 {
-    question: "Soru 94: Islahat Fermanı'na göre aşağıdaki uygulamalardan hangisinin kaldırılması öngörülmüştür?",
+    question: "Islahat Fermanı'na göre aşağıdaki uygulamalardan hangisinin kaldırılması öngörülmüştür?",
     options: [
         "A) Müsadere",
-        "B) İltizam",
+        "B) Redif",
         "C) Tımar",
         "D) Sekban-ı Cedid",
-        "E) Redif"
+        "E) İltizam"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 4,
     explanation: "Islahat Fermanı'nda iltizam usulünün kaldırılması öngörülmüştür."
 },
 {
-    question: "Soru 95: Islahat Fermanı'na göre vergi konusunda aşağıdakilerden hangisi amaçlanmıştır?",
+    question: "Islahat Fermanı'na göre vergi konusunda aşağıdakilerden hangisi amaçlanmıştır?",
     options: [
         "A) Gayrimüslimlerden vergi alınmaması",
         "B) Sadece Müslümanların vergi vermesi",
@@ -1140,7 +1140,7 @@ window.tarih_10_sorulari = [
     explanation: "İltizamın kaldırılmasıyla tüm Osmanlı tebaasının aynı vergileri ödemesi amaçlanmıştır."
 },
 {
-    question: "Soru 96: Sultan Abdülmecid döneminde açılan Meclis-i Âlî-i Tanzimat'ın temel amacı aşağıdakilerden hangisidir?",
+    question: "Sultan Abdülmecid döneminde açılan Meclis-i Âlî-i Tanzimat'ın temel amacı aşağıdakilerden hangisidir?",
     options: [
         "A) Eğitim işlerini yürütmek",
         "B) Tanzimat uygulamalarını düzenlemek",
@@ -1152,7 +1152,7 @@ window.tarih_10_sorulari = [
     explanation: "Meclis-i Âlî-i Tanzimat Tanzimat uygulamalarını yürütmek amacıyla kurulmuştur."
 },
 {
-    question: "Soru 97: Sultan Abdülmecid döneminde Milli Eğitim Bakanlığının temeli kabul edilen kurum aşağıdakilerden hangisidir?",
+    question: "Sultan Abdülmecid döneminde Milli Eğitim Bakanlığının temeli kabul edilen kurum aşağıdakilerden hangisidir?",
     options: [
         "A) Encümen-i Daniş",
         "B) Meclis-i Maarif-i Umumiye Nezareti",
@@ -1164,7 +1164,7 @@ window.tarih_10_sorulari = [
     explanation: "Meclis-i Maarif-i Umumiye Nezareti günümüz Milli Eğitim Bakanlığının temelidir."
 },
 {
-    question: "Soru 98: Talim ve Terbiye Kurulunun temeli kabul edilen Encümen-i Daniş hangi dönemde kurulmuştur?",
+    question: "Talim ve Terbiye Kurulunun temeli kabul edilen Encümen-i Daniş hangi dönemde kurulmuştur?",
     options: [
         "A) II. Mahmut",
         "B) Abdülmecid",
@@ -1176,7 +1176,7 @@ window.tarih_10_sorulari = [
     explanation: "Encümen-i Daniş Sultan Abdülmecid döneminde kurulmuştur."
 },
 {
-    question: "Soru 99: Sultan Abdülmecid döneminde açılan Darülmuallimin'in kuruluş amacı aşağıdakilerden hangisidir?",
+    question: "Sultan Abdülmecid döneminde açılan Darülmuallimin'in kuruluş amacı aşağıdakilerden hangisidir?",
     options: [
         "A) Doktor yetiştirmek",
         "B) Erkek öğretmen yetiştirmek",
@@ -1188,7 +1188,7 @@ window.tarih_10_sorulari = [
     explanation: "Darülmuallimin erkek öğretmen okulu olarak açılmıştır."
 },
 {
-    question: "Soru 100: Aşağıdaki teşkilatlardan hangisi Sultan Abdülmecid döneminde kurulmuştur?",
+    question: "Aşağıdaki teşkilatlardan hangisi Sultan Abdülmecid döneminde kurulmuştur?",
     options: [
         "A) Jandarma, polis ve posta teşkilatları",
         "B) Hamidiye Alayları",
@@ -1200,7 +1200,7 @@ window.tarih_10_sorulari = [
     explanation: "Jandarma, polis ve posta teşkilatları Sultan Abdülmecid döneminde kurulmuştur."
 },
 {
-    question: "Soru 101: Osmanlı Devleti'nde ilk demiryolu aşağıdaki hatlardan hangisinde yapılmıştır?",
+    question: "Osmanlı Devleti'nde ilk demiryolu aşağıdaki hatlardan hangisinde yapılmıştır?",
     options: [
         "A) İstanbul - İzmit",
         "B) İzmir - Aydın (Turgutlu)",
@@ -1212,7 +1212,7 @@ window.tarih_10_sorulari = [
     explanation: "Notuna göre ilk demiryolu İzmir-Aydın (Turgutlu) hattında yapılmıştır."
 },
 {
-    question: "Soru 102: Osmanlı Devleti'nde ilk telgraf hattı hangi savaş sırasında çekilmiştir?",
+    question: "Osmanlı Devleti'nde ilk telgraf hattı hangi savaş sırasında çekilmiştir?",
     options: [
         "A) 93 Harbi",
         "B) Trablusgarp Savaşı",
@@ -1224,19 +1224,19 @@ window.tarih_10_sorulari = [
     explanation: "İlk telgraf hattı Kırım Savaşı sırasında İstanbul-Edirne-Şumnu arasında çekilmiştir."
 },
 {
-    question: "Soru 103: Kırım Savaşı sırasında çekilen ilk telgraf hattı aşağıdakilerden hangisidir?",
+    question: "Kırım Savaşı sırasında çekilen ilk telgraf hattı aşağıdakilerden hangisidir?",
     options: [
         "A) İstanbul-Ankara",
-        "B) İstanbul-Edirne-Şumnu",
+        "B) Bursa-İstanbul",
         "C) İzmir-Manisa",
         "D) İstanbul-İzmit",
-        "E) Bursa-İstanbul"
+        "E) İstanbul-Edirne-Şumnu"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 4,
     explanation: "İlk telgraf hattı İstanbul-Edirne-Şumnu arasında kurulmuştur."
 },
 {
-    question: "Soru 104: Vapur taşımacılığı ve deniz ulaşımını düzenlemek amacıyla kurulan kuruluş aşağıdakilerden hangisidir?",
+    question: "Vapur taşımacılığı ve deniz ulaşımını düzenlemek amacıyla kurulan kuruluş aşağıdakilerden hangisidir?",
     options: [
         "A) Fevâid-i Osmaniye",
         "B) Şirket-i Hayriye",
@@ -1248,31 +1248,31 @@ window.tarih_10_sorulari = [
     explanation: "Şirket-i Hayriye vapur taşımacılığını düzenlemek amacıyla kurulmuştur."
 },
 {
-    question: "Soru 105: Sultan Abdülmecid döneminde çıkarılan Arazi Kanunnamesi aşağıdaki alanlardan hangisiyle ilgilidir?",
+    question: "Sultan Abdülmecid döneminde çıkarılan Arazi Kanunnamesi aşağıdaki alanlardan hangisiyle ilgilidir?",
     options: [
-        "A) Ceza hukuku",
-        "B) Toprak düzeni",
+        "A) Toprak düzeni",
+        "B) Ceza hukuku",
         "C) Basın özgürlüğü",
         "D) Deniz ticareti",
         "E) Eğitim sistemi"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 0,
     explanation: "Arazi Kanunnamesi toprak düzenini düzenlemek amacıyla çıkarılmıştır."
 },
 {
-    question: "Soru 106: Osmanlı Devleti ilk dış borcunu aşağıdaki devletlerden hangisinden almıştır?",
+    question: "Osmanlı Devleti ilk dış borcunu aşağıdaki devletlerden hangisinden almıştır?",
     options: [
         "A) Fransa",
         "B) Almanya",
-        "C) İngiltere",
-        "D) Rusya",
+        "C) Rusya",
+        "D) İngiltere",
         "E) Avusturya"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 3,
     explanation: "İlk dış borç İngiltere'den Kırım Savaşı sırasında alınmıştır."
 },
 {
-    question: "Soru 107: Osmanlı Devleti'nin ilk dış borç almasının temel nedeni aşağıdakilerden hangisidir?",
+    question: "Osmanlı Devleti'nin ilk dış borç almasının temel nedeni aşağıdakilerden hangisidir?",
     options: [
         "A) Balkan Savaşları",
         "B) Kırım Savaşı'nın giderlerini karşılamak",
@@ -1284,67 +1284,67 @@ window.tarih_10_sorulari = [
     explanation: "İlk dış borç Kırım Savaşı'nın finansmanı için alınmıştır."
 },
 {
-    question: "Soru 108: Osmanlı Devleti'nde basılan ilk kâğıt para aşağıdakilerden hangisidir?",
+    question: "Osmanlı Devleti'nde basılan ilk kâğıt para aşağıdakilerden hangisidir?",
     options: [
         "A) Mecidiye",
-        "B) Kaime",
+        "B) Mangır",
         "C) Osmanlı Lirası",
         "D) Akçe",
-        "E) Mangır"
+        "E) Kaime"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 4,
     explanation: "İlk kâğıt para Kaime adıyla basılmıştır."
 },
 {
-    question: "Soru 109: Osmanlı Devleti'nde Galatalı bankerler tarafından açılan ilk banka aşağıdakilerden hangisidir?",
+    question: "Osmanlı Devleti'nde Galatalı bankerler tarafından açılan ilk banka aşağıdakilerden hangisidir?",
     options: [
         "A) Ziraat Bankası",
         "B) Bank-ı Osmani",
-        "C) Bank-ı Dersaadet",
-        "D) Osmanlı Bankası",
+        "C) Osmanlı Bankası",
+        "D) Bank-ı Dersaadet",
         "E) Memleket Sandıkları"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 3,
     explanation: "İlk banka Bank-ı Dersaadet olup Galatalı bankerler tarafından kurulmuştur."
 },
 {
-    question: "Soru 110: Para basma yetkisine sahip olan Bank-ı Osmani aşağıdaki ülkelerden hangisinin bankasıdır?",
+    question: "Para basma yetkisine sahip olan Bank-ı Osmani aşağıdaki ülkelerden hangisinin bankasıdır?",
     options: [
-        "A) Fransa",
+        "A) İngiltere",
         "B) Rusya",
-        "C) İngiltere",
+        "C) Fransa",
         "D) Almanya",
         "E) Avusturya"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 0,
     explanation: "Bank-ı Osmani İngiliz sermayeli olup para basma yetkisine sahipti."
 },
 {
-    question: "Soru 111: Osmanlı Devleti'nde yayımlanan ilk özel gazete aşağıdakilerden hangisidir?",
+    question: "Osmanlı Devleti'nde yayımlanan ilk özel gazete aşağıdakilerden hangisidir?",
     options: [
         "A) Ceride-i Havadis",
         "B) Takvim-i Vekayi",
-        "C) Tercüman-ı Ahvâl",
+        "C) Tercüman-ı Hakikat",
         "D) Tasvir-i Efkâr",
-        "E) Tercüman-ı Hakikat"
+        "E) Tercüman-ı Ahvâl"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "İlk özel gazete Tercüman-ı Ahvâl'dir."
 },
 {
-    question: "Soru 112: İlk özel gazete olan Tercüman-ı Ahvâl aşağıdaki isimlerden hangileri tarafından çıkarılmıştır?",
+    question: "İlk özel gazete olan Tercüman-ı Ahvâl aşağıdaki isimlerden hangileri tarafından çıkarılmıştır?",
     options: [
         "A) Namık Kemal - Ziya Paşa",
-        "B) Şinasi - Agah Efendi",
+        "B) Ahmet Cevdet Paşa - Fuat Paşa",
         "C) Mithat Paşa - Ali Suavi",
         "D) Tevfik Fikret - Cenap Şahabettin",
-        "E) Ahmet Cevdet Paşa - Fuat Paşa"
+        "E) Şinasi - Agah Efendi"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 4,
     explanation: "Tercüman-ı Ahvâl Şinasi ve Agah Efendi tarafından çıkarılmıştır."
 },
 {
-    question: "Soru 113: Osmanlı Devleti'nde yayımlanan yarı resmî gazete aşağıdakilerden hangisidir?",
+    question: "Osmanlı Devleti'nde yayımlanan yarı resmî gazete aşağıdakilerden hangisidir?",
     options: [
         "A) Ceride-i Havadis",
         "B) Takvim-i Vekayi",
@@ -1356,7 +1356,7 @@ window.tarih_10_sorulari = [
     explanation: "Ceride-i Havadis Osmanlı Devleti'nin yarı resmî gazetesidir."
 },
 {
-    question: "Soru 114: Osmanlı Devleti'nde ilk Osmanlı tiyatrosunu kuran kişi aşağıdakilerden hangisidir?",
+    question: "Osmanlı Devleti'nde ilk Osmanlı tiyatrosunu kuran kişi aşağıdakilerden hangisidir?",
     options: [
         "A) Şinasi",
         "B) Namık Kemal",
@@ -1368,31 +1368,31 @@ window.tarih_10_sorulari = [
     explanation: "İlk Osmanlı tiyatrosunu Güllü Agop kurmuştur."
 },
 {
-    question: "Soru 115: Devletin memur ihtiyacını karşılamak amacıyla açılan okul aşağıdakilerden hangisidir?",
+    question: "Devletin memur ihtiyacını karşılamak amacıyla açılan okul aşağıdakilerden hangisidir?",
     options: [
         "A) Darülmuallimin",
         "B) Mekteb-i Harbiye",
-        "C) Mekteb-i Mülkiye",
-        "D) Mekteb-i Tıbbiye",
+        "C) Mekteb-i Tıbbiye",
+        "D) Mekteb-i Mülkiye",
         "E) Sanayi-i Nefise"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 3,
     explanation: "Mekteb-i Mülkiye devlet memuru yetiştirmek amacıyla açılmıştır."
 },
 {
-    question: "Soru 116: Sanayileşmeyi yürütecek eleman yetiştirmek amacıyla kurulan kurum aşağıdakilerden hangisidir?",
+    question: "Sanayileşmeyi yürütecek eleman yetiştirmek amacıyla kurulan kurum aşağıdakilerden hangisidir?",
     options: [
         "A) Ticaret Nezareti",
-        "B) Islâh-ı Sanayi Komisyonu",
+        "B) Meclis-i Maarif",
         "C) Encümen-i Daniş",
         "D) Darüşşafaka",
-        "E) Meclis-i Maarif"
+        "E) Islâh-ı Sanayi Komisyonu"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 4,
     explanation: "Islâh-ı Sanayi Komisyonu sanayileşmeyi yürütecek elemanları yetiştirmek amacıyla kurulmuştur."
 },
 {
-    question: "Soru 117: Kuleli Vakası'nın temel nedeni aşağıdakilerden hangisidir?",
+    question: "Kuleli Vakası'nın temel nedeni aşağıdakilerden hangisidir?",
     options: [
         "A) Tanzimat Fermanı'na tepki",
         "B) Islahat Fermanı'na tepki",
@@ -1404,7 +1404,7 @@ window.tarih_10_sorulari = [
     explanation: "Kuleli Vakası, Islahat Fermanı'na tepki olarak Sultan Abdülmecid'i tahttan indirmeyi amaçlayan bir girişimdir."
 },
 {
-    question: "Soru 118: Kuleli Vakası'nın hedefi aşağıdakilerden hangisidir?",
+    question: "Kuleli Vakası'nın hedefi aşağıdakilerden hangisidir?",
     options: [
         "A) Abdülaziz'i tahta çıkarmak",
         "B) Sultan Abdülmecid'i tahttan indirmek",
@@ -1416,19 +1416,19 @@ window.tarih_10_sorulari = [
     explanation: "Kuleli Vakası'nın amacı Sultan Abdülmecid'i tahttan indirmekti."
 },
 {
-    question: "Soru 119: Aşağıdakilerden hangisi Sultan Abdülmecid döneminde gerçekleştirilen yeniliklerden biridir?",
+    question: "Aşağıdakilerden hangisi Sultan Abdülmecid döneminde gerçekleştirilen yeniliklerden biridir?",
     options: [
         "A) Mecelle'nin hazırlanması",
         "B) Düyun-u Umumiye'nin kurulması",
-        "C) İlk telgraf hattının çekilmesi",
+        "C) Hareket Ordusunun oluşturulması",
         "D) Hamidiye Alaylarının kurulması",
-        "E) Hareket Ordusunun oluşturulması"
+        "E) İlk telgraf hattının çekilmesi"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "İlk telgraf hattı Sultan Abdülmecid döneminde Kırım Savaşı sırasında kurulmuştur."
 },
 {
-    question: "Soru 120: Aşağıdakilerden hangisi Sultan Abdülmecid dönemindeki gelişmeler arasında yer almaz?",
+    question: "Aşağıdakilerden hangisi Sultan Abdülmecid dönemindeki gelişmeler arasında yer almaz?",
     options: [
         "A) İlk dış borcun alınması",
         "B) Kaime'nin basılması",
@@ -1440,19 +1440,19 @@ window.tarih_10_sorulari = [
     explanation: "Mecelle, Sultan Abdülaziz döneminde Ahmet Cevdet Paşa tarafından hazırlanarak yürürlüğe girmiştir."
 },
 {
-    question: "Soru 121: Sultan Abdülaziz döneminde aşağıdaki yüksek yargı kurumlarından hangisi kurulmuştur?",
+    question: "Sultan Abdülaziz döneminde aşağıdaki yüksek yargı kurumlarından hangisi kurulmuştur?",
     options: [
         "A) Divan-ı Ahkâm-ı Adliye",
-        "B) Meclis-i Ahkâm-ı Adliye (Yargıtay)",
+        "B) Divan-ı Hümayun",
         "C) Ayan Meclisi",
         "D) Meclis-i Vâlâ",
-        "E) Divan-ı Hümayun"
+        "E) Meclis-i Ahkâm-ı Adliye (Yargıtay)"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 4,
     explanation: "Sultan Abdülaziz döneminde Meclis-i Ahkâm-ı Adliye (Yargıtay) kurulmuştur."
 },
 {
-    question: "Soru 122: Günümüzde Danıştayın temeli kabul edilen kurum aşağıdakilerden hangisidir?",
+    question: "Günümüzde Danıştayın temeli kabul edilen kurum aşağıdakilerden hangisidir?",
     options: [
         "A) Şûra-yı Devlet",
         "B) Meclis-i Mebusan",
@@ -1464,55 +1464,55 @@ window.tarih_10_sorulari = [
     explanation: "Şûra-yı Devlet, günümüz Danıştayının temelini oluşturmaktadır."
 },
 {
-    question: "Soru 123: Ahmet Cevdet Paşa tarafından hazırlanan ve Osmanlı Devleti'nin ilk medeni kanunu kabul edilen eser aşağıdakilerden hangisidir?",
+    question: "Ahmet Cevdet Paşa tarafından hazırlanan ve Osmanlı Devleti'nin ilk medeni kanunu kabul edilen eser aşağıdakilerden hangisidir?",
     options: [
-        "A) Kanun-i Esasi",
-        "B) Mecelle",
+        "A) Mecelle",
+        "B) Kanun-i Esasi",
         "C) Arazi Kanunnamesi",
         "D) Tanzimat Fermanı",
         "E) Islahat Fermanı"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 0,
     explanation: "Mecelle, Ahmet Cevdet Paşa tarafından hazırlanmış ilk medeni kanundur."
 },
 {
-    question: "Soru 124: Mecelle'nin hazırlanmasında başlıca görev alan devlet adamı aşağıdakilerden hangisidir?",
+    question: "Mecelle'nin hazırlanmasında başlıca görev alan devlet adamı aşağıdakilerden hangisidir?",
     options: [
         "A) Mithat Paşa",
         "B) Mustafa Reşit Paşa",
-        "C) Ahmet Cevdet Paşa",
+        "C) Namık Kemal",
         "D) Ziya Paşa",
-        "E) Namık Kemal"
+        "E) Ahmet Cevdet Paşa"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "Mecelle Ahmet Cevdet Paşa tarafından hazırlanmıştır."
 },
 {
-    question: "Soru 125: Sultan Abdülaziz döneminde Osmanlı Devleti denizcilik alanında aşağıdaki başarılarından hangisine ulaşmıştır?",
+    question: "Sultan Abdülaziz döneminde Osmanlı Devleti denizcilik alanında aşağıdaki başarılarından hangisine ulaşmıştır?",
     options: [
         "A) Dünyanın en büyük filosuna sahip olmuştur.",
         "B) Dünyanın ikinci büyük filosuna sahip olmuştur.",
-        "C) Dünyanın üçüncü büyük deniz filosuna sahip olmuştur.",
+        "C) İlk zırhlı gemisini üretmiştir.",
         "D) Donanmasını tamamen kaldırmıştır.",
-        "E) İlk zırhlı gemisini üretmiştir."
+        "E) Dünyanın üçüncü büyük deniz filosuna sahip olmuştur."
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "Sultan Abdülaziz döneminde Osmanlı donanması dünyanın üçüncü büyük deniz filosu hâline gelmiştir."
 },
 {
-    question: "Soru 126: Yetim çocukların eğitim görmesi amacıyla açılan okul aşağıdakilerden hangisidir?",
+    question: "Yetim çocukların eğitim görmesi amacıyla açılan okul aşağıdakilerden hangisidir?",
     options: [
         "A) Darülmuallimin",
-        "B) Darüşşafaka",
+        "B) Darülfünun",
         "C) Sanayi-i Nefise",
         "D) Mekteb-i Mülkiye",
-        "E) Darülfünun"
+        "E) Darüşşafaka"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 4,
     explanation: "Darüşşafaka yetim çocukların eğitimi amacıyla açılmıştır."
 },
 {
-    question: "Soru 127: Günümüzde Kızılay adıyla faaliyet gösteren kuruluşun Osmanlı dönemindeki adı aşağıdakilerden hangisidir?",
+    question: "Günümüzde Kızılay adıyla faaliyet gösteren kuruluşun Osmanlı dönemindeki adı aşağıdakilerden hangisidir?",
     options: [
         "A) Himaye-i Etfal",
         "B) Darülaceze",
@@ -1524,7 +1524,7 @@ window.tarih_10_sorulari = [
     explanation: "Hilal-i Ahmer günümüzdeki Kızılayın ilk adıdır."
 },
 {
-    question: "Soru 128: Sultan Abdülaziz döneminde kurulan Nizamiye Mahkemelerinin kuruluş amacı aşağıdakilerden hangisidir?",
+    question: "Sultan Abdülaziz döneminde kurulan Nizamiye Mahkemelerinin kuruluş amacı aşağıdakilerden hangisidir?",
     options: [
         "A) Askerî davalara bakmak",
         "B) Modern hukuk anlayışına uygun yargılama yapmak",
@@ -1536,19 +1536,19 @@ window.tarih_10_sorulari = [
     explanation: "Nizamiye Mahkemeleri modern hukuk sistemine uygun yargılama yapmak amacıyla kurulmuştur."
 },
 {
-    question: "Soru 129: Köy, nahiye, kaza ve liva esasına göre taşra teşkilatını düzenleyen uygulama aşağıdakilerden hangisidir?",
+    question: "Köy, nahiye, kaza ve liva esasına göre taşra teşkilatını düzenleyen uygulama aşağıdakilerden hangisidir?",
     options: [
-        "A) Arazi Kanunnamesi",
+        "A) Vilayet Nizamnamesi",
         "B) Mecelle",
-        "C) Vilayet Nizamnamesi",
+        "C) Arazi Kanunnamesi",
         "D) Kanun-i Esasi",
         "E) Sened-i İttifak"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 0,
     explanation: "Vilayet Nizamnamesi ile taşra teşkilatı köy, nahiye, kaza ve liva esasına göre düzenlenmiştir."
 },
 {
-    question: "Soru 130: Osmanlı tarihinde yurt dışına gezi amacıyla çıkan ilk padişah aşağıdakilerden hangisidir?",
+    question: "Osmanlı tarihinde yurt dışına gezi amacıyla çıkan ilk padişah aşağıdakilerden hangisidir?",
     options: [
         "A) II. Mahmut",
         "B) Sultan Abdülmecid",
@@ -1560,7 +1560,7 @@ window.tarih_10_sorulari = [
     explanation: "Yurt dışına gezi amacıyla çıkan ilk Osmanlı padişahı Sultan Abdülaziz'dir."
 },
 {
-    question: "Soru 131: Sultan Abdülaziz'in yurt dışı gezisinin amaçları arasında aşağıdakilerden hangisi yer almaz?",
+    question: "Sultan Abdülaziz'in yurt dışı gezisinin amaçları arasında aşağıdakilerden hangisi yer almaz?",
     options: [
         "A) Borç para bulmak",
         "B) Rusya'nın planlarını Avrupa'ya anlatmak",
@@ -1572,7 +1572,7 @@ window.tarih_10_sorulari = [
     explanation: "Cumhuriyet yönetimini tanıtmak böyle bir gezi amacı değildir."
 },
 {
-    question: "Soru 132: Sultan Abdülaziz döneminde yaptırılan saraylardan biri aşağıdakilerden hangisidir?",
+    question: "Sultan Abdülaziz döneminde yaptırılan saraylardan biri aşağıdakilerden hangisidir?",
     options: [
         "A) Dolmabahçe Sarayı",
         "B) Yıldız Sarayı",
@@ -1584,7 +1584,7 @@ window.tarih_10_sorulari = [
     explanation: "Beylerbeyi ve Çırağan Sarayları Sultan Abdülaziz döneminde yapılmıştır."
 },
 {
-    question: "Soru 133: Sultan Abdülaziz döneminde inşa edilen diğer önemli saray aşağıdakilerden hangisidir?",
+    question: "Sultan Abdülaziz döneminde inşa edilen diğer önemli saray aşağıdakilerden hangisidir?",
     options: [
         "A) Çırağan Sarayı",
         "B) Yıldız Sarayı",
@@ -1596,19 +1596,19 @@ window.tarih_10_sorulari = [
     explanation: "Çırağan Sarayı Sultan Abdülaziz döneminin önemli eserlerindendir."
 },
 {
-    question: "Soru 134: Sultan Abdülaziz döneminde yayımlanan Ramazan Kararnamesi aşağıdaki alanlardan hangisiyle ilgilidir?",
+    question: "Sultan Abdülaziz döneminde yayımlanan Ramazan Kararnamesi aşağıdaki alanlardan hangisiyle ilgilidir?",
     options: [
-        "A) Eğitim",
-        "B) Maliye",
+        "A) Maliye",
+        "B) Eğitim",
         "C) Askerlik",
         "D) Basın",
         "E) Dış politika"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 0,
     explanation: "Ramazan Kararnamesi mali alanda yayımlanan önemli düzenlemelerden biridir."
 },
 {
-    question: "Soru 135: İlkokul, ortaokul, lise ve üniversite basamaklarını düzenleyen Maarif Nizamnamesi hangi padişah döneminde yayımlanmıştır?",
+    question: "İlkokul, ortaokul, lise ve üniversite basamaklarını düzenleyen Maarif Nizamnamesi hangi padişah döneminde yayımlanmıştır?",
     options: [
         "A) II. Mahmut",
         "B) Abdülmecid",
@@ -1620,7 +1620,7 @@ window.tarih_10_sorulari = [
     explanation: "Maarif Nizamnamesi Sultan Abdülaziz döneminde yayımlanmıştır."
 },
 {
-    question: "Soru 136: Maarif Nizamnamesi'ne göre eğitim basamaklarının doğru sıralanışı aşağıdakilerden hangisidir?",
+    question: "Maarif Nizamnamesi'ne göre eğitim basamaklarının doğru sıralanışı aşağıdakilerden hangisidir?",
     options: [
         "A) İptidai - Rüştiye - İdadi/Sultani - Darülfünun",
         "B) Rüştiye - İptidai - Darülfünun - İdadi",
@@ -1632,19 +1632,19 @@ window.tarih_10_sorulari = [
     explanation: "Maarif Nizamnamesi eğitim sistemini İptidai-Rüştiye-İdadi/Sultani-Darülfünun şeklinde düzenlemiştir."
 },
 {
-    question: "Soru 137: Sultan Abdülaziz aşağıdaki nedenlerden hangisi nedeniyle tahttan indirilmiştir?",
+    question: "Sultan Abdülaziz aşağıdaki nedenlerden hangisi nedeniyle tahttan indirilmiştir?",
     options: [
         "A) Kanun-i Esasi'yi yürürlükten kaldırdığı için",
-        "B) Meşrutiyeti ilan etmediği için",
+        "B) Düyun-u Umumiye'yi kurduğu için",
         "C) Yeniçeri Ocağını yeniden açtığı için",
-        "D) Düyun-u Umumiye'yi kurduğu için",
+        "D) Meşrutiyeti ilan etmediği için",
         "E) Halifeliği kaldırdığı için"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 3,
     explanation: "Sultan Abdülaziz, meşrutiyeti ilan etmediği gerekçesiyle tahttan indirilmiştir."
 },
 {
-    question: "Soru 138: Osmanlı tarihinde yenilik yapmadığı gerekçesiyle tahttan indirilen ilk padişah aşağıdakilerden hangisidir?",
+    question: "Osmanlı tarihinde yenilik yapmadığı gerekçesiyle tahttan indirilen ilk padişah aşağıdakilerden hangisidir?",
     options: [
         "A) II. Mahmut",
         "B) Abdülmecid",
@@ -1656,7 +1656,7 @@ window.tarih_10_sorulari = [
     explanation: "Sultan Abdülaziz, yenilik yapmadığı gerekçesiyle tahttan indirilen ilk Osmanlı padişahıdır."
 },
 {
-    question: "Soru 139: Aşağıdakilerden hangisi Sultan Abdülaziz dönemi gelişmelerinden biri değildir?",
+    question: "Aşağıdakilerden hangisi Sultan Abdülaziz dönemi gelişmelerinden biri değildir?",
     options: [
         "A) Hilal-i Ahmer'in kurulması",
         "B) Darüşşafaka'nın açılması",
@@ -1668,7 +1668,7 @@ window.tarih_10_sorulari = [
     explanation: "Kanun-i Esasi II. Abdülhamit döneminde ilan edilmiştir."
 },
 {
-    question: "Soru 140: Sultan Abdülaziz dönemiyle ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+    question: "Sultan Abdülaziz dönemiyle ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
     options: [
         "A) Ahmet Cevdet Paşa - Mecelle",
         "B) Hilal-i Ahmer - Kızılay",
@@ -1680,7 +1680,7 @@ window.tarih_10_sorulari = [
     explanation: "Kanun-i Esasi Sultan Abdülaziz değil, II. Abdülhamit döneminde ilan edilmiştir."
 },
 {
-    question: "Soru 141: Genç Osmanlılar aşağıdaki padişahlardan hangisini tahttan indirerek yerine V. Murat'ı geçirmiştir?",
+    question: "Genç Osmanlılar aşağıdaki padişahlardan hangisini tahttan indirerek yerine V. Murat'ı geçirmiştir?",
     options: [
         "A) II. Mahmut",
         "B) Sultan Abdülmecid",
@@ -1692,19 +1692,19 @@ window.tarih_10_sorulari = [
     explanation: "Genç Osmanlılar Sultan Abdülaziz'i tahttan indirerek yerine V. Murat'ı geçirmiştir."
 },
 {
-    question: "Soru 142: V. Murat aşağıdaki gerekçelerden hangisiyle tahttan indirilmiştir?",
+    question: "V. Murat aşağıdaki gerekçelerden hangisiyle tahttan indirilmiştir?",
     options: [
         "A) Kanun-i Esasi'yi kaldırdığı için",
-        "B) Meşrutiyeti ilan etmediği için",
+        "B) Halifeliği kaldırdığı için",
         "C) Islahat Fermanı'nı reddettiği için",
         "D) Yeniçeri Ocağı'nı yeniden kurduğu için",
-        "E) Halifeliği kaldırdığı için"
+        "E) Meşrutiyeti ilan etmediği için"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 4,
     explanation: "V. Murat meşrutiyeti ilan etmediği için şeyhülislam fetvasıyla tahttan indirilmiştir."
 },
 {
-    question: "Soru 143: V. Murat'ın yerine meşrutiyeti ilan edeceğine söz vererek tahta çıkan padişah aşağıdakilerden hangisidir?",
+    question: "V. Murat'ın yerine meşrutiyeti ilan edeceğine söz vererek tahta çıkan padişah aşağıdakilerden hangisidir?",
     options: [
         "A) Abdülaziz",
         "B) II. Mahmut",
@@ -1716,19 +1716,19 @@ window.tarih_10_sorulari = [
     explanation: "II. Abdülhamit meşrutiyeti ilan edeceğine söz vererek tahta çıkmıştır."
 },
 {
-    question: "Soru 144: Osmanlı Devleti'nde I. Meşrutiyet'in ilan edilmesiyle birlikte aşağıdakilerden hangisi yürürlüğe girmiştir?",
+    question: "Osmanlı Devleti'nde I. Meşrutiyet'in ilan edilmesiyle birlikte aşağıdakilerden hangisi yürürlüğe girmiştir?",
     options: [
         "A) Mecelle",
         "B) Sened-i İttifak",
-        "C) Kanun-i Esasi",
+        "C) Arazi Kanunnamesi",
         "D) Islahat Fermanı",
-        "E) Arazi Kanunnamesi"
+        "E) Kanun-i Esasi"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "I. Meşrutiyet'in ilanıyla Kanun-i Esasi yürürlüğe girmiştir."
 },
 {
-    question: "Soru 145: Kanun-i Esasi aşağıdaki padişahlardan hangisi döneminde ilan edilmiştir?",
+    question: "Kanun-i Esasi aşağıdaki padişahlardan hangisi döneminde ilan edilmiştir?",
     options: [
         "A) II. Mahmut",
         "B) Abdülmecid",
@@ -1740,7 +1740,7 @@ window.tarih_10_sorulari = [
     explanation: "Kanun-i Esasi II. Abdülhamit döneminde ilan edilmiştir."
 },
 {
-    question: "Soru 146: Kanun-i Esasi'nin ilan edilmesinden sonra aşağıdaki gelişmelerden hangisi yaşanmıştır?",
+    question: "Kanun-i Esasi'nin ilan edilmesinden sonra aşağıdaki gelişmelerden hangisi yaşanmıştır?",
     options: [
         "A) Saltanat kaldırılmıştır.",
         "B) Ülke genelinde seçimler yapılmıştır.",
@@ -1752,7 +1752,7 @@ window.tarih_10_sorulari = [
     explanation: "Kanun-i Esasi'nin ilanından sonra ülke genelinde seçimler yapılmıştır."
 },
 {
-    question: "Soru 147: I. Meşrutiyet döneminde oluşturulan Ayan Meclisi üyeleri nasıl belirlenmiştir?",
+    question: "I. Meşrutiyet döneminde oluşturulan Ayan Meclisi üyeleri nasıl belirlenmiştir?",
     options: [
         "A) Halk tarafından seçilmiştir.",
         "B) Padişah tarafından atanmıştır.",
@@ -1764,19 +1764,19 @@ window.tarih_10_sorulari = [
     explanation: "Ayan Meclisi üyeleri padişah tarafından atanmıştır."
 },
 {
-    question: "Soru 148: Ayan Meclisi üyeleriyle ilgili aşağıdakilerden hangisi doğrudur?",
+    question: "Ayan Meclisi üyeleriyle ilgili aşağıdakilerden hangisi doğrudur?",
     options: [
         "A) Dört yılda bir seçilirler.",
         "B) 30 yaşını doldurmuş olmaları gerekir.",
-        "C) Ömür boyu görev yapabilirler.",
-        "D) Halk tarafından seçilirler.",
+        "C) Halk tarafından seçilirler.",
+        "D) Ömür boyu görev yapabilirler.",
         "E) Görev süreleri iki yıldır."
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 3,
     explanation: "Ayan üyeleri ömür boyu görev yapabilmekteydi."
 },
 {
-    question: "Soru 149: Ayan Meclisi üyelerinde aranan yaş şartı aşağıdakilerden hangisidir?",
+    question: "Ayan Meclisi üyelerinde aranan yaş şartı aşağıdakilerden hangisidir?",
     options: [
         "A) 25",
         "B) 30",
@@ -1788,7 +1788,7 @@ window.tarih_10_sorulari = [
     explanation: "Ayan Meclisi üyelerinin 40 yaşını doldurmuş olması gerekiyordu."
 },
 {
-    question: "Soru 150: Ayan Meclisi'nin ilk başkanı aşağıdakilerden hangisidir?",
+    question: "Ayan Meclisi'nin ilk başkanı aşağıdakilerden hangisidir?",
     options: [
         "A) Mithat Paşa",
         "B) Ahmet Vefik Paşa",
@@ -1800,7 +1800,7 @@ window.tarih_10_sorulari = [
     explanation: "Ayan Meclisi'nin ilk başkanı Server Paşa'dır."
 },
 {
-    question: "Soru 151: Mebusan Meclisi üyeleri nasıl belirlenmiştir?",
+    question: "Mebusan Meclisi üyeleri nasıl belirlenmiştir?",
     options: [
         "A) Padişah atamıştır.",
         "B) Halk tarafından seçilmiştir.",
@@ -1812,7 +1812,7 @@ window.tarih_10_sorulari = [
     explanation: "Mebusan Meclisi üyeleri halk tarafından seçilmiştir."
 },
 {
-    question: "Soru 152: Mebusan Meclisi kaç yılda bir seçilmiştir?",
+    question: "Mebusan Meclisi kaç yılda bir seçilmiştir?",
     options: [
         "A) 2",
         "B) 3",
@@ -1824,7 +1824,7 @@ window.tarih_10_sorulari = [
     explanation: "Mebusan Meclisi dört yılda bir seçilmiştir."
 },
 {
-    question: "Soru 153: I. Meşrutiyet döneminde her kaç erkek nüfus için bir mebus seçilmesi öngörülmüştür?",
+    question: "I. Meşrutiyet döneminde her kaç erkek nüfus için bir mebus seçilmesi öngörülmüştür?",
     options: [
         "A) 10.000",
         "B) 25.000",
@@ -1836,103 +1836,103 @@ window.tarih_10_sorulari = [
     explanation: "Her 50.000 erkek nüfus için bir mebus seçilmesi kabul edilmiştir."
 },
 {
-    question: "Soru 154: Mebusan Meclisi'nin ilk başkanı aşağıdakilerden hangisidir?",
+    question: "Mebusan Meclisi'nin ilk başkanı aşağıdakilerden hangisidir?",
     options: [
-        "A) Mithat Paşa",
-        "B) Ahmet Vefik Paşa",
+        "A) Ahmet Vefik Paşa",
+        "B) Mithat Paşa",
         "C) Server Paşa",
         "D) Namık Kemal",
         "E) Ahmet Cevdet Paşa"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 0,
     explanation: "Mebusan Meclisi'nin ilk başkanı Ahmet Vefik Paşa'dır."
 },
 {
-    question: "Soru 155: I. Meşrutiyet döneminde Osmanlı Devleti aşağıdaki yönetim özelliklerinden hangisini yaşamıştır?",
+    question: "I. Meşrutiyet döneminde Osmanlı Devleti aşağıdaki yönetim özelliklerinden hangisini yaşamıştır?",
     options: [
-        "A) Tek meclisli yönetim",
+        "A) Çift parlamentolu sistem",
         "B) Başkanlık sistemi",
-        "C) Çift parlamentolu sistem",
+        "C) Tek meclisli yönetim",
         "D) Cumhuriyet yönetimi",
         "E) Federatif yönetim"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 0,
     explanation: "I. Meşrutiyet döneminde Ayan ve Mebusan Meclislerinden oluşan çift parlamentolu sistem uygulanmıştır."
 },
 {
-    question: "Soru 156: 1876 Kanun-i Esasi'ne göre Osmanlı Devleti'nde hükümdarlık aşağıdakilerden hangisine göre belirlenmiştir?",
+    question: "1876 Kanun-i Esasi'ne göre Osmanlı Devleti'nde hükümdarlık aşağıdakilerden hangisine göre belirlenmiştir?",
     options: [
         "A) Halk oylaması",
         "B) Meclis seçimi",
-        "C) Osmanoğulları soyunun en büyük erkek üyesi",
+        "C) Şeyhülislamın seçimi",
         "D) Sadrazamın önerisi",
-        "E) Şeyhülislamın seçimi"
+        "E) Osmanoğulları soyunun en büyük erkek üyesi"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "Kanun-i Esasi'ne göre padişahlık Osmanoğulları hanedanının en büyük erkek üyesine aitti."
 },
 {
-    question: "Soru 157: 1876 Kanun-i Esasi'ne göre Osmanlı Devleti'nin resmi dili aşağıdakilerden hangisidir?",
+    question: "1876 Kanun-i Esasi'ne göre Osmanlı Devleti'nin resmi dili aşağıdakilerden hangisidir?",
     options: [
         "A) Arapça",
         "B) Osmanlıca",
-        "C) Türkçe",
+        "C) Fransızca",
         "D) Farsça",
-        "E) Fransızca"
+        "E) Türkçe"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "Kanun-i Esasi'nde devletin dilinin Türkçe olduğu belirtilmiştir."
 },
 {
-    question: "Soru 158: 1876 Kanun-i Esasi'ne göre Osmanlı Devleti'nin resmi dini aşağıdakilerden hangisidir?",
+    question: "1876 Kanun-i Esasi'ne göre Osmanlı Devleti'nin resmi dini aşağıdakilerden hangisidir?",
     options: [
-        "A) Hristiyanlık",
+        "A) İslam",
         "B) Musevilik",
-        "C) İslam",
+        "C) Hristiyanlık",
         "D) Laiklik esas alınmıştır.",
         "E) Din belirtilmemiştir."
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 0,
     explanation: "Kanun-i Esasi'nde devletin dininin İslam olduğu belirtilmiştir."
 },
 {
-    question: "Soru 159: 1876 Kanun-i Esasi'ne göre yasama yetkisi aşağıdakilerden hangisine aittir?",
+    question: "1876 Kanun-i Esasi'ne göre yasama yetkisi aşağıdakilerden hangisine aittir?",
     options: [
-        "A) Padişaha",
+        "A) Ayan ve Mebusan Meclislerine",
         "B) Heyet-i Vükela'ya",
-        "C) Ayan ve Mebusan Meclislerine",
+        "C) Padişaha",
         "D) Sadrazama",
         "E) Şeyhülislama"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 0,
     explanation: "Yasama yetkisi Ayan ve Mebusan Meclislerinden oluşan parlamentoya verilmiştir."
 },
 {
-    question: "Soru 160: 1876 Kanun-i Esasi'ne göre yürütme yetkisi aşağıdakilerden hangisine verilmiştir?",
+    question: "1876 Kanun-i Esasi'ne göre yürütme yetkisi aşağıdakilerden hangisine verilmiştir?",
     options: [
         "A) Padişah",
         "B) Meclis-i Mebusan",
-        "C) Heyet-i Vükela",
+        "C) Şûra-yı Devlet",
         "D) Ayan Meclisi",
-        "E) Şûra-yı Devlet"
+        "E) Heyet-i Vükela"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "Kanun-i Esasi'ne göre yürütme yetkisi Heyet-i Vükela'ya aittir."
 },
 {
-    question: "Soru 161: 1876 Kanun-i Esasi'ne göre hükümet yaptığı işlerden aşağıdakilerden hangisine karşı sorumludur?",
+    question: "1876 Kanun-i Esasi'ne göre hükümet yaptığı işlerden aşağıdakilerden hangisine karşı sorumludur?",
     options: [
         "A) Meclis-i Mebusan",
         "B) Ayan Meclisi",
-        "C) Padişah",
+        "C) Halk",
         "D) Şûra-yı Devlet",
-        "E) Halk"
+        "E) Padişah"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "1876 Kanun-i Esasi'ne göre hükümet yaptığı tüm işlerden padişaha karşı sorumludur."
 },
 {
-    question: "Soru 162: 1876 Kanun-i Esasi'ne göre kanun teklif etme yetkisi aşağıdakilerden hangisine aittir?",
+    question: "1876 Kanun-i Esasi'ne göre kanun teklif etme yetkisi aşağıdakilerden hangisine aittir?",
     options: [
         "A) Mebusan Meclisi",
         "B) Ayan Meclisi",
@@ -1944,7 +1944,7 @@ window.tarih_10_sorulari = [
     explanation: "Kanun teklif etme yetkisi yalnızca hükümete verilmiştir."
 },
 {
-    question: "Soru 163: 1876 Kanun-i Esasi'ne göre padişahın kanunlarla ilgili yetkisi aşağıdakilerden hangisidir?",
+    question: "1876 Kanun-i Esasi'ne göre padişahın kanunlarla ilgili yetkisi aşağıdakilerden hangisidir?",
     options: [
         "A) Hiç veto yetkisi yoktur.",
         "B) Bir kez veto edebilir.",
@@ -1956,7 +1956,7 @@ window.tarih_10_sorulari = [
     explanation: "1876 Kanun-i Esasi padişaha sınırsız veto yetkisi tanımıştır."
 },
 {
-    question: "Soru 164: 1876 Kanun-i Esasi'ne göre aşağıdakilerden hangisi padişahın yetkileri arasında yer alır?",
+    question: "1876 Kanun-i Esasi'ne göre aşağıdakilerden hangisi padişahın yetkileri arasında yer alır?",
     options: [
         "A) Meclisi kapatabilmesi",
         "B) Başbakanı halkın seçmesi",
@@ -1968,67 +1968,67 @@ window.tarih_10_sorulari = [
     explanation: "Kanun-i Esasi padişaha meclisi kapatma yetkisi vermiştir."
 },
 {
-    question: "Soru 165: 1876 Kanun-i Esasi'ne göre aşağıdaki cezalardan hangilerini verme yetkisi padişaha aittir?",
+    question: "1876 Kanun-i Esasi'ne göre aşağıdaki cezalardan hangilerini verme yetkisi padişaha aittir?",
     options: [
         "A) Kürek ve idam",
         "B) Para ve hapis",
-        "C) Sürgün ve angarya",
-        "D) Kürek ve sürgün",
+        "C) Kürek ve sürgün",
+        "D) Sürgün ve angarya",
         "E) Para ve sürgün"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 3,
     explanation: "Kanun-i Esasi'ye göre padişah sürgün ve angarya cezası verebilirdi."
 },
 {
-    question: "Soru 166: 20 Mayıs 1878'de II. Abdülhamit'e karşı gerçekleştirilen başarısız darbe girişimi tarihe hangi adla geçmiştir?",
+    question: "20 Mayıs 1878'de II. Abdülhamit'e karşı gerçekleştirilen başarısız darbe girişimi tarihe hangi adla geçmiştir?",
     options: [
         "A) Kuleli Vakası",
         "B) 31 Mart Vakası",
-        "C) Çırağan Vakası",
+        "C) Vak'a-i Hayriye",
         "D) Kabakçı Mustafa İsyanı",
-        "E) Vak'a-i Hayriye"
+        "E) Çırağan Vakası"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "Ali Suavi'nin öncülük ettiği girişim Çırağan Vakası olarak bilinmektedir."
 },
 {
-    question: "Soru 167: Çırağan Vakası'nın lideri aşağıdakilerden hangisidir?",
+    question: "Çırağan Vakası'nın lideri aşağıdakilerden hangisidir?",
     options: [
         "A) Mithat Paşa",
         "B) Namık Kemal",
-        "C) Ali Suavi",
-        "D) Ziya Paşa",
+        "C) Ziya Paşa",
+        "D) Ali Suavi",
         "E) Mahmut Şevket Paşa"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 3,
     explanation: "20 Mayıs 1878'deki Çırağan Vakası Ali Suavi tarafından başlatılmıştır."
 },
 {
-    question: "Soru 168: Çırağan Vakası sırasında Ali Suavi'yi öldürerek girişimi engelleyen kişi aşağıdakilerden hangisidir?",
+    question: "Çırağan Vakası sırasında Ali Suavi'yi öldürerek girişimi engelleyen kişi aşağıdakilerden hangisidir?",
     options: [
         "A) Ahmet Muhtar Paşa",
         "B) Hasan Tahsin Paşa",
-        "C) 7-8 Hasan Paşa",
+        "C) Hüseyin Avni Paşa",
         "D) Mahmut Şevket Paşa",
-        "E) Hüseyin Avni Paşa"
+        "E) 7-8 Hasan Paşa"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "Ali Suavi, 7-8 Hasan Paşa tarafından öldürülmüş ve darbe girişimi başarısız olmuştur."
 },
 {
-    question: "Soru 169: Eğitim alanındaki çalışmaları nedeniyle II. Abdülhamit'e verilen unvan aşağıdakilerden hangisidir?",
+    question: "Eğitim alanındaki çalışmaları nedeniyle II. Abdülhamit'e verilen unvan aşağıdakilerden hangisidir?",
     options: [
         "A) Gazi",
         "B) Adli",
-        "C) Maarif-i Perver",
-        "D) Fatih",
+        "C) Fatih",
+        "D) Maarif-i Perver",
         "E) Hakan"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 3,
     explanation: "II. Abdülhamit eğitim alanındaki faaliyetleri nedeniyle 'Maarif-i Perver' unvanını almıştır."
 },
 {
-    question: "Soru 170: Aşağıdaki okullardan hangisi II. Abdülhamit döneminde açılmıştır?",
+    question: "Aşağıdaki okullardan hangisi II. Abdülhamit döneminde açılmıştır?",
     options: [
         "A) Sanayi-i Nefise Mektebi",
         "B) Mekteb-i Harbiye",
@@ -2040,7 +2040,7 @@ window.tarih_10_sorulari = [
     explanation: "Sanayi-i Nefise Mektebi II. Abdülhamit döneminde açılmıştır."
 },
 {
-    question: "Soru 171: Aşağıdaki eğitim kurumlarından hangisi II. Abdülhamit döneminde kurulmuştur?",
+    question: "Aşağıdaki eğitim kurumlarından hangisi II. Abdülhamit döneminde kurulmuştur?",
     options: [
         "A) Hendese-i Mülkiye",
         "B) Encümen-i Daniş",
@@ -2052,7 +2052,7 @@ window.tarih_10_sorulari = [
     explanation: "Hendese-i Mülkiye II. Abdülhamit döneminde açılan okullardandır."
 },
 {
-    question: "Soru 172: Aşağıdaki okullardan hangisi II. Abdülhamit döneminde açılan kurumlardan biri değildir?",
+    question: "Aşağıdaki okullardan hangisi II. Abdülhamit döneminde açılan kurumlardan biri değildir?",
     options: [
         "A) Hamidiye Ticaret Mektebi",
         "B) Polis Mektebi",
@@ -2064,7 +2064,7 @@ window.tarih_10_sorulari = [
     explanation: "Darülmuallimin Sultan Abdülmecid döneminde açılmıştır."
 },
 {
-    question: "Soru 173: Aşağıdaki ifadelerden hangisi II. Abdülhamit dönemi eğitim politikasıyla ilgilidir?",
+    question: "Aşağıdaki ifadelerden hangisi II. Abdülhamit dönemi eğitim politikasıyla ilgilidir?",
     options: [
         "A) Kız meslek liseleri açılmıştır.",
         "B) Medreseler kapatılmıştır.",
@@ -2076,7 +2076,7 @@ window.tarih_10_sorulari = [
     explanation: "II. Abdülhamit döneminde kız meslek liseleri açılmıştır."
 },
 {
-    question: "Soru 174: KPSS'de sıkça sorulan bilgiye göre adı bir il ile başlayan liselerin büyük bölümü hangi padişah döneminde açılmıştır?",
+    question: "KPSS'de sıkça sorulan bilgiye göre adı bir il ile başlayan liselerin büyük bölümü hangi padişah döneminde açılmıştır?",
     options: [
         "A) II. Mahmut",
         "B) Abdülmecid",
@@ -2088,7 +2088,7 @@ window.tarih_10_sorulari = [
     explanation: "Notunda belirtildiği gibi adı bir il ile başlayan liseler II. Abdülhamit döneminde açılmıştır."
 },
 {
-    question: "Soru 175: II. Abdülhamit döneminde yönetim merkezi aşağıdaki saraylardan hangisine taşınmıştır?",
+    question: "II. Abdülhamit döneminde yönetim merkezi aşağıdaki saraylardan hangisine taşınmıştır?",
     options: [
         "A) Dolmabahçe Sarayı",
         "B) Topkapı Sarayı",
@@ -2100,31 +2100,31 @@ window.tarih_10_sorulari = [
     explanation: "II. Abdülhamit yönetim merkezini Yıldız Sarayı'na taşımıştır."
 },
 {
-    question: "Soru 176: Memleket Sandıkları aşağıdaki kurumlardan hangisinin temelini oluşturmuştur?",
+    question: "Memleket Sandıkları aşağıdaki kurumlardan hangisinin temelini oluşturmuştur?",
     options: [
-        "A) Osmanlı Bankası",
+        "A) Ziraat Bankası",
         "B) Merkez Bankası",
-        "C) Ziraat Bankası",
+        "C) Osmanlı Bankası",
         "D) İş Bankası",
         "E) Emlak Bankası"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 0,
     explanation: "Memleket Sandıkları daha sonra Ziraat Bankası adını almıştır."
 },
 {
-    question: "Soru 177: II. Abdülhamit döneminde yayımlanan gazetelerden biri aşağıdakilerden hangisidir?",
+    question: "II. Abdülhamit döneminde yayımlanan gazetelerden biri aşağıdakilerden hangisidir?",
     options: [
         "A) Takvim-i Vekayi",
         "B) Ceride-i Havadis",
-        "C) Tercüman-ı Hakikat",
+        "C) Tasvir-i Efkar",
         "D) Tercüman-ı Ahval",
-        "E) Tasvir-i Efkar"
+        "E) Tercüman-ı Hakikat"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "Tercüman-ı Hakikat gazetesi II. Abdülhamit döneminde yayımlanmıştır."
 },
 {
-    question: "Soru 178: Ermeni isyanlarını bastırmak amacıyla II. Abdülhamit döneminde kurulan askerî birlik aşağıdakilerden hangisidir?",
+    question: "Ermeni isyanlarını bastırmak amacıyla II. Abdülhamit döneminde kurulan askerî birlik aşağıdakilerden hangisidir?",
     options: [
         "A) Redif Birlikleri",
         "B) Hamidiye Alayları",
@@ -2136,7 +2136,7 @@ window.tarih_10_sorulari = [
     explanation: "Hamidiye Alayları Ermeni isyanlarını bastırmak amacıyla kurulmuştur."
 },
 {
-    question: "Soru 179: II. Abdülhamit döneminde kurulan Jurnal Teşkilatı'nın temel amacı aşağıdakilerden hangisidir?",
+    question: "II. Abdülhamit döneminde kurulan Jurnal Teşkilatı'nın temel amacı aşağıdakilerden hangisidir?",
     options: [
         "A) Vergi toplamak",
         "B) Haberleşme ve istihbarat faaliyetlerini yürütmek",
@@ -2148,7 +2148,7 @@ window.tarih_10_sorulari = [
     explanation: "Jurnal Teşkilatı devletin istihbarat ve haber alma faaliyetlerini yürütmek amacıyla kurulmuştur."
 },
 {
-    question: "Soru 180: Aşağıdakilerden hangisi II. Abdülhamit dönemi gelişmelerinden biridir?",
+    question: "Aşağıdakilerden hangisi II. Abdülhamit dönemi gelişmelerinden biridir?",
     options: [
         "A) Hamidiye Alaylarının kurulması",
         "B) Yeniçeri Ocağının kaldırılması",
@@ -2160,7 +2160,7 @@ window.tarih_10_sorulari = [
     explanation: "Hamidiye Alayları II. Abdülhamit döneminde kurulmuştur."
 },
 {
-    question: "Soru 181: II. Abdülhamit döneminde haberleşmeyi güçlendirmek amacıyla gerçekleştirilen uygulamalardan hangisi doğrudur?",
+    question: "II. Abdülhamit döneminde haberleşmeyi güçlendirmek amacıyla gerçekleştirilen uygulamalardan hangisi doğrudur?",
     options: [
         "A) İlk telgraf hattı bu dönemde çekilmiştir.",
         "B) Büyük bir telgraf ağı kurulmuş ve Telgraf Mektebi açılmıştır.",
@@ -2172,7 +2172,7 @@ window.tarih_10_sorulari = [
     explanation: "II. Abdülhamit döneminde büyük bir telgraf ağı kurulmuş ve Telgraf Mektebi açılmıştır."
 },
 {
-    question: "Soru 182: II. Abdülhamit döneminde açılan Hamidiye Etfal'ın kuruluş amacı aşağıdakilerden hangisidir?",
+    question: "II. Abdülhamit döneminde açılan Hamidiye Etfal'ın kuruluş amacı aşağıdakilerden hangisidir?",
     options: [
         "A) Asker yetiştirmek",
         "B) Çocukların sağlık hizmetlerinden yararlanmasını sağlamak",
@@ -2184,7 +2184,7 @@ window.tarih_10_sorulari = [
     explanation: "Hamidiye Etfal çocuk hastanesi olarak açılmıştır."
 },
 {
-    question: "Soru 183: II. Abdülhamit döneminde sosyal devlet anlayışının göstergesi olarak aşağıdakilerden hangisi gerçekleştirilmiştir?",
+    question: "II. Abdülhamit döneminde sosyal devlet anlayışının göstergesi olarak aşağıdakilerden hangisi gerçekleştirilmiştir?",
     options: [
         "A) Engellilere yönelik kurumlar açılmıştır.",
         "B) Medreseler kapatılmıştır.",
@@ -2196,7 +2196,7 @@ window.tarih_10_sorulari = [
     explanation: "II. Abdülhamit döneminde engellilere yönelik kurumlar açılmıştır."
 },
 {
-    question: "Soru 184: Osmanlı Devleti'nde ilk müze aşağıdaki adlardan hangisiyle açılmıştır?",
+    question: "Osmanlı Devleti'nde ilk müze aşağıdaki adlardan hangisiyle açılmıştır?",
     options: [
         "A) Müze-i Hümayun",
         "B) Asar-ı Atika",
@@ -2208,19 +2208,19 @@ window.tarih_10_sorulari = [
     explanation: "Osmanlı Devleti'nde ilk müze Asar-ı Atika adıyla açılmıştır."
 },
 {
-    question: "Soru 185: Osmanlı Devleti'nde ilk müzenin kurulmasında önemli rol oynayan kişi aşağıdakilerden hangisidir?",
+    question: "Osmanlı Devleti'nde ilk müzenin kurulmasında önemli rol oynayan kişi aşağıdakilerden hangisidir?",
     options: [
         "A) Ahmet Cevdet Paşa",
         "B) Namık Kemal",
-        "C) Osman Hamdi Bey",
-        "D) Mithat Paşa",
+        "C) Mithat Paşa",
+        "D) Osman Hamdi Bey",
         "E) Ziya Gökalp"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 3,
     explanation: "İlk müzenin açılmasında Osman Hamdi Bey önemli rol oynamıştır."
 },
 {
-    question: "Soru 186: Osman Hamdi Bey aşağıdaki eğitim kurumlarından hangisinin açılmasını sağlamıştır?",
+    question: "Osman Hamdi Bey aşağıdaki eğitim kurumlarından hangisinin açılmasını sağlamıştır?",
     options: [
         "A) Darülfünun",
         "B) Sanayi-i Nefise Mektebi",
@@ -2232,19 +2232,19 @@ window.tarih_10_sorulari = [
     explanation: "Sanayi-i Nefise Mektebi Osman Hamdi Bey tarafından açılmıştır."
 },
 {
-    question: "Soru 187: Günümüzde Güzel Sanatlar Fakültesinin temeli kabul edilen okul aşağıdakilerden hangisidir?",
+    question: "Günümüzde Güzel Sanatlar Fakültesinin temeli kabul edilen okul aşağıdakilerden hangisidir?",
     options: [
         "A) Darülfünun",
-        "B) Sanayi-i Nefise Mektebi",
+        "B) Darüşşafaka",
         "C) Hendese-i Mülkiye",
         "D) Mekteb-i Mülkiye",
-        "E) Darüşşafaka"
+        "E) Sanayi-i Nefise Mektebi"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 4,
     explanation: "Sanayi-i Nefise Mektebi günümüz Güzel Sanatlar Fakültesinin temelidir."
 },
 {
-    question: "Soru 188: II. Abdülhamit döneminde başlatılan 3B Projesi'nin mimarı aşağıdakilerden hangisidir?",
+    question: "II. Abdülhamit döneminde başlatılan 3B Projesi'nin mimarı aşağıdakilerden hangisidir?",
     options: [
         "A) İngiltere",
         "B) Fransa",
@@ -2256,7 +2256,7 @@ window.tarih_10_sorulari = [
     explanation: "3B (Berlin-Bizans-Bağdat) Projesi Alman İmparatoru II. Wilhelm tarafından başlatılmıştır."
 },
 {
-    question: "Soru 189: II. Abdülhamit döneminde başlatılan 3B Projesi'nin fikir sahibi aşağıdakilerden hangisidir?",
+    question: "II. Abdülhamit döneminde başlatılan 3B Projesi'nin fikir sahibi aşağıdakilerden hangisidir?",
     options: [
         "A) Bismarck",
         "B) II. Wilhelm",
@@ -2268,7 +2268,7 @@ window.tarih_10_sorulari = [
     explanation: "3B Projesi, Alman İmparatoru II. Wilhelm tarafından başlatılmıştır."
 },
 {
-    question: "Soru 190: Aşağıdaki yapılardan hangisi II. Abdülhamit döneminde inşa edilmiştir?",
+    question: "Aşağıdaki yapılardan hangisi II. Abdülhamit döneminde inşa edilmiştir?",
     options: [
         "A) Haydarpaşa Tren Garı",
         "B) Dolmabahçe Sarayı",
@@ -2280,7 +2280,7 @@ window.tarih_10_sorulari = [
     explanation: "Haydarpaşa Tren Garı II. Abdülhamit döneminde yapılmıştır."
 },
 {
-    question: "Soru 191: Osmanlı Devleti'nde kadınlar tarafından çıkarılan Şükûfezar dergisi hangi padişah döneminde yayımlanmaya başlamıştır?",
+    question: "Osmanlı Devleti'nde kadınlar tarafından çıkarılan Şükûfezar dergisi hangi padişah döneminde yayımlanmaya başlamıştır?",
     options: [
         "A) II. Mahmut",
         "B) Abdülmecid",
@@ -2292,7 +2292,7 @@ window.tarih_10_sorulari = [
     explanation: "Şükûfezar dergisi II. Abdülhamit döneminde yayımlanmaya başlamıştır."
 },
 {
-    question: "Soru 192: Şükûfezar dergisinin en önemli özelliği aşağıdakilerden hangisidir?",
+    question: "Şükûfezar dergisinin en önemli özelliği aşağıdakilerden hangisidir?",
     options: [
         "A) İlk resmî gazete olması",
         "B) İlk mizah dergisi olması",
@@ -2304,7 +2304,7 @@ window.tarih_10_sorulari = [
     explanation: "Şükûfezar kadınlar tarafından çıkarılan önemli bir yayındır."
 },
 {
-    question: "Soru 193: 1895 yılında açılan Darülaceze'nin temel kuruluş amacı aşağıdakilerden hangisidir?",
+    question: "1895 yılında açılan Darülaceze'nin temel kuruluş amacı aşağıdakilerden hangisidir?",
     options: [
         "A) Asker yetiştirmek",
         "B) Kimsesiz ve muhtaç kişilere hizmet vermek",
@@ -2316,7 +2316,7 @@ window.tarih_10_sorulari = [
     explanation: "Darülaceze kimsesiz ve yardıma muhtaç kişiler için kurulmuştur."
 },
 {
-    question: "Soru 194: Aşağıdaki kurumlardan hangisi II. Abdülhamit döneminde çocukların korunmasına yönelik faaliyet göstermiştir?",
+    question: "Aşağıdaki kurumlardan hangisi II. Abdülhamit döneminde çocukların korunmasına yönelik faaliyet göstermiştir?",
     options: [
         "A) Darülhayr-ı Âli ve Himaye-i Etfal",
         "B) Encümen-i Daniş",
@@ -2328,19 +2328,19 @@ window.tarih_10_sorulari = [
     explanation: "Darülhayr-ı Âli ve Himaye-i Etfal çocukların korunmasına yönelik kurumlardır."
 },
 {
-    question: "Soru 195: Osmanlı Devleti'nin iflas ettiğini ilan ettiği kararname aşağıdakilerden hangisidir?",
+    question: "Osmanlı Devleti'nin iflas ettiğini ilan ettiği kararname aşağıdakilerden hangisidir?",
     options: [
-        "A) Gülhane Hatt-ı Hümayunu",
+        "A) Muharrem Kararnamesi",
         "B) Ramazan Kararnamesi",
-        "C) Muharrem Kararnamesi",
+        "C) Gülhane Hatt-ı Hümayunu",
         "D) Islahat Fermanı",
         "E) Sened-i İttifak"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 0,
     explanation: "1881 Muharrem Kararnamesi ile Osmanlı Devleti iflas ettiğini açıklamıştır."
 },
 {
-    question: "Soru 196: Osmanlı Devleti hangi yıl yayımlanan Muharrem Kararnamesi ile iflas ettiğini ilan etmiştir?",
+    question: "Osmanlı Devleti hangi yıl yayımlanan Muharrem Kararnamesi ile iflas ettiğini ilan etmiştir?",
     options: [
         "A) 1876",
         "B) 1878",
@@ -2352,7 +2352,7 @@ window.tarih_10_sorulari = [
     explanation: "Muharrem Kararnamesi 1881 yılında yayımlanmıştır."
 },
 {
-    question: "Soru 197: Muharrem Kararnamesi sonrasında alacaklı devletlerin kurduğu mali denetim kurumu aşağıdakilerden hangisidir?",
+    question: "Muharrem Kararnamesi sonrasında alacaklı devletlerin kurduğu mali denetim kurumu aşağıdakilerden hangisidir?",
     options: [
         "A) Düyun-u Umumiye",
         "B) Bank-ı Osmani",
@@ -2364,7 +2364,7 @@ window.tarih_10_sorulari = [
     explanation: "Muharrem Kararnamesi sonrasında Düyun-u Umumiye kurulmuştur."
 },
 {
-    question: "Soru 198: Düyun-u Umumiye için kullanılan 'devlet içinde devlet' ifadesinin temel nedeni aşağıdakilerden hangisidir?",
+    question: "Düyun-u Umumiye için kullanılan 'devlet içinde devlet' ifadesinin temel nedeni aşağıdakilerden hangisidir?",
     options: [
         "A) Osmanlı ordusunu yönetmesi",
         "B) Osmanlı'nın mali gelirlerini denetlemesi",
@@ -2376,7 +2376,7 @@ window.tarih_10_sorulari = [
     explanation: "Düyun-u Umumiye devlet gelirlerini denetlediği için 'devlet içinde devlet' olarak nitelendirilmiştir."
 },
 {
-    question: "Soru 199: II. Abdülhamit dönemiyle ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+    question: "II. Abdülhamit dönemiyle ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
     options: [
         "A) Hamidiye Etfal - Çocuk hastanesi",
         "B) Asar-ı Atika - İlk müze",
@@ -2388,7 +2388,7 @@ window.tarih_10_sorulari = [
     explanation: "Hamidiye Alayları II. Abdülhamit döneminde Ermeni isyanlarını bastırmak amacıyla kurulmuştur."
 },
 {
-    question: "Soru 200: Aşağıdakilerden hangisi II. Abdülhamit döneminde gerçekleşen gelişmeler arasında yer almaz?",
+    question: "Aşağıdakilerden hangisi II. Abdülhamit döneminde gerçekleşen gelişmeler arasında yer almaz?",
     options: [
         "A) Düyun-u Umumiye'nin kurulması",
         "B) Haydarpaşa Garı'nın yapılması",
@@ -2400,19 +2400,19 @@ window.tarih_10_sorulari = [
     explanation: "Sened-i İttifak II. Mahmut döneminde imzalanmıştır."
 },
 {
-    question: "Soru 201: 1908 yılında İngiltere ile Rusya arasında yapılan ve Osmanlı Devleti'nin paylaşılmasını öngören görüşme aşağıdakilerden hangisidir?",
+    question: "1908 yılında İngiltere ile Rusya arasında yapılan ve Osmanlı Devleti'nin paylaşılmasını öngören görüşme aşağıdakilerden hangisidir?",
     options: [
         "A) Berlin Görüşmesi",
         "B) Londra Konferansı",
-        "C) Reval Görüşmesi",
-        "D) Paris Konferansı",
+        "C) Paris Konferansı",
+        "D) Reval Görüşmesi",
         "E) Tilsit Görüşmesi"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 3,
     explanation: "1908 Reval Görüşmesi'nde İngiltere ve Rusya, Osmanlı Devleti üzerinde anlaşmaya varmışlardır."
 },
 {
-    question: "Soru 202: Reval Görüşmesi'nin ardından II. Meşrutiyet'in yeniden ilan edilmesini isteyen grup aşağıdakilerden hangisidir?",
+    question: "Reval Görüşmesi'nin ardından II. Meşrutiyet'in yeniden ilan edilmesini isteyen grup aşağıdakilerden hangisidir?",
     options: [
         "A) Ayanlar",
         "B) Yeni Osmanlılar",
@@ -2424,7 +2424,7 @@ window.tarih_10_sorulari = [
     explanation: "İttihat ve Terakki mensupları Makedonya ve Selanik'te eylemler yaparak II. Meşrutiyet'in ilanını istemiştir."
 },
 {
-    question: "Soru 203: İttihat ve Terakki mensupları II. Meşrutiyet'in yeniden ilan edilmesi için ağırlıklı olarak aşağıdaki bölgelerden hangilerinde faaliyet göstermiştir?",
+    question: "İttihat ve Terakki mensupları II. Meşrutiyet'in yeniden ilan edilmesi için ağırlıklı olarak aşağıdaki bölgelerden hangilerinde faaliyet göstermiştir?",
     options: [
         "A) Şam ve Bağdat",
         "B) İzmir ve Bursa",
@@ -2436,7 +2436,7 @@ window.tarih_10_sorulari = [
     explanation: "II. Meşrutiyet öncesindeki eylemler Makedonya ve Selanik'te yoğunlaşmıştır."
 },
 {
-    question: "Soru 204: II. Abdülhamit, gelişmeler karşısında aşağıdakilerden hangisini ilan etmek zorunda kalmıştır?",
+    question: "II. Abdülhamit, gelişmeler karşısında aşağıdakilerden hangisini ilan etmek zorunda kalmıştır?",
     options: [
         "A) Tanzimat Fermanı",
         "B) Islahat Fermanı",
@@ -2448,31 +2448,31 @@ window.tarih_10_sorulari = [
     explanation: "İsyanların önüne geçemeyen II. Abdülhamit, 1908 yılında II. Meşrutiyet'i ilan etmiştir."
 },
 {
-    question: "Soru 205: II. Meşrutiyet'in ilan edilmesiyle aşağıdakilerden hangisine yeniden geçilmiştir?",
+    question: "II. Meşrutiyet'in ilan edilmesiyle aşağıdakilerden hangisine yeniden geçilmiştir?",
     options: [
         "A) Mutlak monarşiye",
         "B) Cumhuriyet yönetimine",
-        "C) Anayasal ve parlamenter yönetime",
-        "D) Teokratik yönetime",
+        "C) Teokratik yönetime",
+        "D) Anayasal ve parlamenter yönetime",
         "E) Federatif yönetime"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 3,
     explanation: "II. Meşrutiyet ile anayasal ve parlamenter yönetime yeniden geçilmiştir."
 },
 {
-    question: "Soru 206: İlk basın şehidi olarak kabul edilen gazeteci aşağıdakilerden hangisidir?",
+    question: "İlk basın şehidi olarak kabul edilen gazeteci aşağıdakilerden hangisidir?",
     options: [
-        "A) Şinasi",
+        "A) Hasan Fehmi",
         "B) Namık Kemal",
-        "C) Hasan Fehmi",
+        "C) Şinasi",
         "D) Agah Efendi",
         "E) Ahmet Mithat Efendi"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 0,
     explanation: "Serbesti gazetesi başyazarı Hasan Fehmi ilk basın şehidi olarak kabul edilir."
 },
 {
-    question: "Soru 207: Hasan Fehmi aşağıdaki gazetelerden hangisinin başyazarıdır?",
+    question: "Hasan Fehmi aşağıdaki gazetelerden hangisinin başyazarıdır?",
     options: [
         "A) Ceride-i Havadis",
         "B) Takvim-i Vekayi",
@@ -2484,19 +2484,19 @@ window.tarih_10_sorulari = [
     explanation: "Hasan Fehmi, Serbesti gazetesinin başyazarıdır."
 },
 {
-    question: "Soru 208: Hasan Fehmi'nin öldürülmesinin ardından aşağıdaki olaylardan hangisi yaşanmıştır?",
+    question: "Hasan Fehmi'nin öldürülmesinin ardından aşağıdaki olaylardan hangisi yaşanmıştır?",
     options: [
         "A) Kuleli Vakası",
-        "B) Avcı Taburları İsyanı",
+        "B) Celali İsyanları",
         "C) Kabakçı Mustafa İsyanı",
-        "D) Celali İsyanları",
+        "D) Avcı Taburları İsyanı",
         "E) Patrona Halil İsyanı"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 3,
     explanation: "Hasan Fehmi'nin öldürülmesi sonrasında Avcı Taburları isyan etmiştir."
 },
 {
-    question: "Soru 209: Osmanlı tarihinde '31 Mart Vakası' olarak bilinen olay gerçekte hangi tarihte meydana gelmiştir?",
+    question: "Osmanlı tarihinde '31 Mart Vakası' olarak bilinen olay gerçekte hangi tarihte meydana gelmiştir?",
     options: [
         "A) 23 Temmuz 1908",
         "B) 13 Nisan 1909",
@@ -2508,19 +2508,19 @@ window.tarih_10_sorulari = [
     explanation: "31 Mart Vakası Rumi takvime göre adlandırılmış olup Miladi takvime göre 13 Nisan 1909'da gerçekleşmiştir."
 },
 {
-    question: "Soru 210: 31 Mart Vakası'nı bastırmak amacıyla Selanik'ten gelen ordu aşağıdakilerden hangisidir?",
+    question: "31 Mart Vakası'nı bastırmak amacıyla Selanik'ten gelen ordu aşağıdakilerden hangisidir?",
     options: [
         "A) Nizam-ı Cedid Ordusu",
         "B) Asakir-i Mansure",
-        "C) Hareket Ordusu",
+        "C) Hamidiye Alayları",
         "D) Redif Birlikleri",
-        "E) Hamidiye Alayları"
+        "E) Hareket Ordusu"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "31 Mart Vakası'nı Selanik'ten gelen Hareket Ordusu bastırmıştır."
 },
 {
-    question: "Soru 211: Hareket Ordusu'nun komutanı aşağıdakilerden hangisidir?",
+    question: "Hareket Ordusu'nun komutanı aşağıdakilerden hangisidir?",
     options: [
         "A) Enver Paşa",
         "B) Ali Fethi Bey",
@@ -2532,7 +2532,7 @@ window.tarih_10_sorulari = [
     explanation: "Hareket Ordusu Mahmut Şevket Paşa komutasındadır."
 },
 {
-    question: "Soru 212: Hareket Ordusu'nda kurmay yüzbaşı olarak görev yapan ve bu olayla tarih sahnesine çıkan kişi aşağıdakilerden hangisidir?",
+    question: "Hareket Ordusu'nda kurmay yüzbaşı olarak görev yapan ve bu olayla tarih sahnesine çıkan kişi aşağıdakilerden hangisidir?",
     options: [
         "A) İsmet İnönü",
         "B) Fevzi Çakmak",
@@ -2544,7 +2544,7 @@ window.tarih_10_sorulari = [
     explanation: "Mustafa Kemal, Hareket Ordusu'nda kurmay yüzbaşı olarak görev yapmış ve ilk kez tarih sahnesine çıkmıştır."
 },
 {
-    question: "Soru 213: Aşağıdakilerden hangisi Mustafa Kemal'in 31 Mart Vakası sırasındaki görevlerinden biridir?",
+    question: "Aşağıdakilerden hangisi Mustafa Kemal'in 31 Mart Vakası sırasındaki görevlerinden biridir?",
     options: [
         "A) Hareket Ordusu'nun planını hazırlamak",
         "B) Sadrazamlık yapmak",
@@ -2556,7 +2556,7 @@ window.tarih_10_sorulari = [
     explanation: "Mustafa Kemal Hareket Ordusu'nun planını hazırlamış, adını vermiş ve bildiriyi kaleme almıştır."
 },
 {
-    question: "Soru 214: Hareket Ordusu'nun adını veren ve halka dağıtılan beyannamenin hazırlanmasında görev alan kişi aşağıdakilerden hangisidir?",
+    question: "Hareket Ordusu'nun adını veren ve halka dağıtılan beyannamenin hazırlanmasında görev alan kişi aşağıdakilerden hangisidir?",
     options: [
         "A) Enver Paşa",
         "B) Mahmut Şevket Paşa",
@@ -2568,43 +2568,43 @@ window.tarih_10_sorulari = [
     explanation: "Hareket Ordusu'nun adını ve beyannamesini Mustafa Kemal hazırlamıştır."
 },
 {
-    question: "Soru 215: Osmanlı tarihinde rejimi değiştirmeye yönelik ilk ve tek isyan aşağıdakilerden hangisidir?",
+    question: "Osmanlı tarihinde rejimi değiştirmeye yönelik ilk ve tek isyan aşağıdakilerden hangisidir?",
     options: [
         "A) Patrona Halil İsyanı",
         "B) Celali İsyanları",
-        "C) 31 Mart Vakası",
-        "D) Kabakçı Mustafa İsyanı",
+        "C) Kabakçı Mustafa İsyanı",
+        "D) 31 Mart Vakası",
         "E) Kuleli Vakası"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 3,
     explanation: "31 Mart Vakası, Osmanlı tarihinde rejimi değiştirmeye yönelik ilk ve tek isyan olarak kabul edilir."
 },
 {
-    question: "Soru 216: 31 Mart Vakası'nın ardından II. Abdülhamit'in durumu aşağıdakilerden hangisi olmuştur?",
+    question: "31 Mart Vakası'nın ardından II. Abdülhamit'in durumu aşağıdakilerden hangisi olmuştur?",
     options: [
-        "A) Yetkileri artırılmıştır.",
+        "A) Meclis kararıyla tahttan indirilmiştir.",
         "B) Tahtta kalmaya devam etmiştir.",
-        "C) Meclis kararıyla tahttan indirilmiştir.",
+        "C) Yetkileri artırılmıştır.",
         "D) Sadrazam olmuştur.",
         "E) Cumhurbaşkanı seçilmiştir."
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 0,
     explanation: "31 Mart Vakası sonrasında II. Abdülhamit meclis kararıyla tahttan indirilmiştir."
 },
 {
-    question: "Soru 217: Tahttan indirilen II. Abdülhamit aşağıdaki şehirlerden hangisine sürgün edilmiştir?",
+    question: "Tahttan indirilen II. Abdülhamit aşağıdaki şehirlerden hangisine sürgün edilmiştir?",
     options: [
         "A) Manastır",
         "B) Şam",
-        "C) Selanik",
+        "C) İzmir",
         "D) Sofya",
-        "E) İzmir"
+        "E) Selanik"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "II. Abdülhamit tahttan indirildikten sonra Selanik'e gönderilmiştir."
 },
 {
-    question: "Soru 218: II. Abdülhamit'in yerine tahta geçen padişah aşağıdakilerden hangisidir?",
+    question: "II. Abdülhamit'in yerine tahta geçen padişah aşağıdakilerden hangisidir?",
     options: [
         "A) V. Murat",
         "B) V. Mehmet Reşat",
@@ -2616,7 +2616,7 @@ window.tarih_10_sorulari = [
     explanation: "II. Abdülhamit'in yerine V. Mehmet Reşat tahta geçmiştir."
 },
 {
-    question: "Soru 219: II. Meşrutiyet'in ilanı sırasında aşağıdaki gelişmelerden hangisi yaşanmıştır?",
+    question: "II. Meşrutiyet'in ilanı sırasında aşağıdaki gelişmelerden hangisi yaşanmıştır?",
     options: [
         "A) Bulgaristan bağımsızlığını ilan etmiştir.",
         "B) Kırım Osmanlı'ya katılmıştır.",
@@ -2628,7 +2628,7 @@ window.tarih_10_sorulari = [
     explanation: "II. Meşrutiyet döneminde Bulgaristan bağımsızlığını ilan etmiştir."
 },
 {
-    question: "Soru 220: II. Meşrutiyet'in ilanı sırasında aşağıdakilerden hangisi Osmanlı Devleti'nin karşılaştığı gelişmelerden biri değildir?",
+    question: "II. Meşrutiyet'in ilanı sırasında aşağıdakilerden hangisi Osmanlı Devleti'nin karşılaştığı gelişmelerden biri değildir?",
     options: [
         "A) Girit'in Yunanistan'a bağlanması",
         "B) Bosna-Hersek'in Avusturya-Macaristan tarafından ilhak edilmesi",
@@ -2640,19 +2640,19 @@ window.tarih_10_sorulari = [
     explanation: "Kars'ın Osmanlı Devleti'ne katılması II. Meşrutiyet dönemindeki gelişmeler arasında yer almaz."
 },
 {
-    question: "Soru 221: II. Meşrutiyet'in ilanı sırasında aşağıdaki gelişmelerden hangisi gerçekleşmiştir?",
+    question: "II. Meşrutiyet'in ilanı sırasında aşağıdaki gelişmelerden hangisi gerçekleşmiştir?",
     options: [
         "A) Girit Osmanlı Devleti'ne katılmıştır.",
-        "B) Girit Yunanistan'a bağlanmıştır.",
+        "B) Mısır bağımsız olmuştur.",
         "C) Kıbrıs geri alınmıştır.",
-        "D) Mısır bağımsız olmuştur.",
+        "D) Girit Yunanistan'a bağlanmıştır.",
         "E) Sırbistan Osmanlı'ya bağlanmıştır."
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 3,
     explanation: "II. Meşrutiyet'in ilanı sırasında Girit Yunanistan'a bağlanmıştır."
 },
 {
-    question: "Soru 222: II. Meşrutiyet'in ilanı sırasında aşağıdaki devletlerden hangisi bağımsızlığını ilan etmiştir?",
+    question: "II. Meşrutiyet'in ilanı sırasında aşağıdaki devletlerden hangisi bağımsızlığını ilan etmiştir?",
     options: [
         "A) Sırbistan",
         "B) Karadağ",
@@ -2664,7 +2664,7 @@ window.tarih_10_sorulari = [
     explanation: "II. Meşrutiyet'in ilanı sırasında Bulgaristan bağımsızlığını ilan etmiştir."
 },
 {
-    question: "Soru 223: II. Meşrutiyet'in ilanı sırasında Bosna-Hersek'i ilhak eden devlet aşağıdakilerden hangisidir?",
+    question: "II. Meşrutiyet'in ilanı sırasında Bosna-Hersek'i ilhak eden devlet aşağıdakilerden hangisidir?",
     options: [
         "A) Almanya",
         "B) Rusya",
@@ -2676,43 +2676,43 @@ window.tarih_10_sorulari = [
     explanation: "Bosna-Hersek Avusturya-Macaristan İmparatorluğu tarafından ilhak edilmiştir."
 },
 {
-    question: "Soru 224: II. Meşrutiyet aşağıdakilerden hangisi olarak bir süre kutlanmıştır?",
+    question: "II. Meşrutiyet aşağıdakilerden hangisi olarak bir süre kutlanmıştır?",
     options: [
         "A) Hâkimiyet Bayramı",
         "B) İnkılap Bayramı",
-        "C) Hürriyet Bayramı",
-        "D) Millet Bayramı",
+        "C) Millet Bayramı",
+        "D) Hürriyet Bayramı",
         "E) Meşrutiyet Günü"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 3,
     explanation: "II. Meşrutiyet bir süre Hürriyet Bayramı olarak kutlanmıştır."
 },
 {
-    question: "Soru 225: Kanun-i Esasi'de yapılan 1909 değişiklikleriyle aşağıdakilerden hangisi kabul edilmiştir?",
+    question: "Kanun-i Esasi'de yapılan 1909 değişiklikleriyle aşağıdakilerden hangisi kabul edilmiştir?",
     options: [
         "A) Hükümet padişaha karşı sorumludur.",
-        "B) Hükümet meclise karşı sorumludur.",
+        "B) Padişah meclise karşı sorumludur.",
         "C) Sadrazam halka karşı sorumludur.",
-        "D) Padişah meclise karşı sorumludur.",
+        "D) Hükümet meclise karşı sorumludur.",
         "E) Bakanları halk seçer."
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 3,
     explanation: "1909 değişiklikleriyle hükümet meclise karşı sorumlu hale gelmiştir."
 },
 {
-    question: "Soru 226: 1909 Kanun-i Esasi değişiklikleriyle aşağıdakilerden hangisi mebuslara tanınmıştır?",
+    question: "1909 Kanun-i Esasi değişiklikleriyle aşağıdakilerden hangisi mebuslara tanınmıştır?",
     options: [
-        "A) Padişah seçme",
-        "B) Kanun teklif etme",
+        "A) Kanun teklif etme",
+        "B) Padişah seçme",
         "C) Sadrazam atama",
         "D) Vali belirleme",
         "E) Ayan üyelerini seçme"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 0,
     explanation: "1909 değişiklikleriyle mebuslara kanun teklif etme hakkı verilmiştir."
 },
 {
-    question: "Soru 227: 1909 Kanun-i Esasi değişikliklerine göre padişahın veto yetkisi nasıl düzenlenmiştir?",
+    question: "1909 Kanun-i Esasi değişikliklerine göre padişahın veto yetkisi nasıl düzenlenmiştir?",
     options: [
         "A) Tamamen kaldırılmıştır.",
         "B) Sınırsız hale getirilmiştir.",
@@ -2724,19 +2724,19 @@ window.tarih_10_sorulari = [
     explanation: "1909 değişiklikleriyle padişah yalnızca bir kez veto edebilmiştir."
 },
 {
-    question: "Soru 228: 1909 Kanun-i Esasi değişiklikleriyle aşağıdaki padişah yetkilerinden hangisi sınırlandırılmıştır?",
+    question: "1909 Kanun-i Esasi değişiklikleriyle aşağıdaki padişah yetkilerinden hangisi sınırlandırılmıştır?",
     options: [
         "A) Halifelik",
         "B) Vergi toplama",
-        "C) Meclisi açıp kapatma",
+        "C) Ordu komutanlığı",
         "D) Sadrazam atama",
-        "E) Ordu komutanlığı"
+        "E) Meclisi açıp kapatma"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "Meclisin açılıp kapanması yalnızca padişahın isteğine bağlı olmaktan çıkarılmıştır."
 },
 {
-    question: "Soru 229: 1909 Kanun-i Esasi değişiklikleriyle aşağıdaki uygulamalardan hangisi kaldırılmıştır?",
+    question: "1909 Kanun-i Esasi değişiklikleriyle aşağıdaki uygulamalardan hangisi kaldırılmıştır?",
     options: [
         "A) Müsadere",
         "B) Tımar",
@@ -2748,7 +2748,7 @@ window.tarih_10_sorulari = [
     explanation: "1909 değişiklikleriyle sürgün ve angarya cezası kaldırılmıştır."
 },
 {
-    question: "Soru 230: 1909 Kanun-i Esasi değişiklikleriyle vatandaşlara aşağıdaki haklardan hangisi tanınmıştır?",
+    question: "1909 Kanun-i Esasi değişiklikleriyle vatandaşlara aşağıdaki haklardan hangisi tanınmıştır?",
     options: [
         "A) Padişah seçme",
         "B) Siyasi parti ve dernek kurma",
@@ -2760,7 +2760,7 @@ window.tarih_10_sorulari = [
     explanation: "1909 değişiklikleriyle herkes siyasi parti ve dernek kurabilme hakkını elde etmiştir."
 },
 {
-    question: "Soru 231: Aşağıdakilerden hangisi Osmanlı Devleti'nde kurulan siyasi partilerden biridir?",
+    question: "Aşağıdakilerden hangisi Osmanlı Devleti'nde kurulan siyasi partilerden biridir?",
     options: [
         "A) İttihat ve Terakki",
         "B) Demokrat Parti",
@@ -2772,7 +2772,7 @@ window.tarih_10_sorulari = [
     explanation: "İttihat ve Terakki Osmanlı Devleti döneminde kurulmuş siyasi partidir."
 },
 {
-    question: "Soru 232: Aşağıdaki siyasi partilerden hangisi Osmanlı Devleti döneminde kurulmuştur?",
+    question: "Aşağıdaki siyasi partilerden hangisi Osmanlı Devleti döneminde kurulmuştur?",
     options: [
         "A) Hürriyet ve İtilaf",
         "B) Anavatan Partisi",
@@ -2784,7 +2784,7 @@ window.tarih_10_sorulari = [
     explanation: "Hürriyet ve İtilaf Fırkası Osmanlı Devleti döneminde kurulmuştur."
 },
 {
-    question: "Soru 233: Aşağıdakilerden hangisi Osmanlı Devleti döneminde kurulan siyasi partiler arasında yer alır?",
+    question: "Aşağıdakilerden hangisi Osmanlı Devleti döneminde kurulan siyasi partiler arasında yer alır?",
     options: [
         "A) Osmanlı Sosyalist Fırkası",
         "B) CHP",
@@ -2796,7 +2796,7 @@ window.tarih_10_sorulari = [
     explanation: "Osmanlı Sosyalist Fırkası II. Meşrutiyet döneminde kurulmuştur."
 },
 {
-    question: "Soru 234: Prens Sabahattin'in öncülüğünü yaptığı siyasi parti aşağıdakilerden hangisidir?",
+    question: "Prens Sabahattin'in öncülüğünü yaptığı siyasi parti aşağıdakilerden hangisidir?",
     options: [
         "A) Hürriyet ve İtilaf",
         "B) Ahrar Fırkası",
@@ -2808,7 +2808,7 @@ window.tarih_10_sorulari = [
     explanation: "Prens Sabahattin, Ahrar Fırkası'nın önemli isimlerindendir."
 },
 {
-    question: "Soru 235: Aşağıdakilerden hangisi Osmanlı Devleti döneminde kurulan siyasi partilerden biri değildir?",
+    question: "Aşağıdakilerden hangisi Osmanlı Devleti döneminde kurulan siyasi partilerden biri değildir?",
     options: [
         "A) Ahali Fırkası",
         "B) İttihad-ı Muhammediye",
@@ -2820,43 +2820,43 @@ window.tarih_10_sorulari = [
     explanation: "Cumhuriyet Halk Fırkası Cumhuriyet döneminde kurulmuştur."
 },
 {
-    question: "Soru 236: Osmanlı Devleti'ni dağılmaktan kurtarmayı amaçlayan fikir akımlarından 'İttihad-ı Anasır' olarak da bilinen düşünce aşağıdakilerden hangisidir?",
+    question: "Osmanlı Devleti'ni dağılmaktan kurtarmayı amaçlayan fikir akımlarından 'İttihad-ı Anasır' olarak da bilinen düşünce aşağıdakilerden hangisidir?",
     options: [
         "A) Türkçülük",
-        "B) Osmanlıcılık",
+        "B) Federalizm",
         "C) Batıcılık",
         "D) İslamcılık",
-        "E) Federalizm"
+        "E) Osmanlıcılık"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 4,
     explanation: "Osmanlıcılık, İttihad-ı Anasır olarak da adlandırılır."
 },
 {
-    question: "Soru 237: Osmanlıcılık düşüncesinin temel amacı aşağıdakilerden hangisidir?",
+    question: "Osmanlıcılık düşüncesinin temel amacı aşağıdakilerden hangisidir?",
     options: [
         "A) Türkleri tek bayrak altında toplamak",
-        "B) Din, dil ve ırk ayrımı yapmadan herkesi Osmanlı vatandaşı kabul etmek",
+        "B) Yerel yönetimleri güçlendirmek",
         "C) Halifelik etrafında birleşmek",
-        "D) Yerel yönetimleri güçlendirmek",
+        "D) Din, dil ve ırk ayrımı yapmadan herkesi Osmanlı vatandaşı kabul etmek",
         "E) Avrupa devletleriyle birleşmek"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 3,
     explanation: "Osmanlıcılık; din, dil ve ırk ayrımı yapmadan herkesi Osmanlı vatandaşı kabul etmeyi amaçlamıştır."
 },
 {
-    question: "Soru 238: Osmanlıcılık fikrinin uygulanması amacıyla aşağıdakilerden hangileri ilan edilmiştir?",
+    question: "Osmanlıcılık fikrinin uygulanması amacıyla aşağıdakilerden hangileri ilan edilmiştir?",
     options: [
         "A) Sened-i İttifak ve Kanun-i Esasi",
-        "B) Tanzimat Fermanı, Islahat Fermanı ve I. Meşrutiyet",
+        "B) Kanun-i Esasi ve Muharrem Kararnamesi",
         "C) Mecelle ve Arazi Kanunnamesi",
         "D) Islahat Fermanı ve Mecelle",
-        "E) Kanun-i Esasi ve Muharrem Kararnamesi"
+        "E) Tanzimat Fermanı, Islahat Fermanı ve I. Meşrutiyet"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 4,
     explanation: "Osmanlıcılık doğrultusunda Tanzimat, Islahat ve I. Meşrutiyet ilan edilmiştir."
 },
 {
-    question: "Soru 239: Osmanlıcılık fikri ilk olarak hangi padişah döneminde başlamıştır?",
+    question: "Osmanlıcılık fikri ilk olarak hangi padişah döneminde başlamıştır?",
     options: [
         "A) III. Selim",
         "B) II. Mahmut",
@@ -2868,19 +2868,19 @@ window.tarih_10_sorulari = [
     explanation: "Osmanlıcılık fikri II. Mahmut döneminde başlamıştır."
 },
 {
-    question: "Soru 240: Osmanlıcılık düşüncesinin uygulanamayacağı ilk kez hangi savaş sonrasında anlaşılmıştır?",
+    question: "Osmanlıcılık düşüncesinin uygulanamayacağı ilk kez hangi savaş sonrasında anlaşılmıştır?",
     options: [
         "A) Kırım Savaşı",
         "B) Trablusgarp Savaşı",
-        "C) 93 Harbi",
-        "D) Balkan Savaşları",
+        "C) Balkan Savaşları",
+        "D) 93 Harbi",
         "E) Dömeke Meydan Muharebesi"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 3,
     explanation: "Osmanlıcılık düşüncesinin uygulanamayacağı ilk kez 93 Harbi sonrasında anlaşılmıştır."
 },
 {
-    question: "Soru 241: Osmanlıcılık düşüncesinin uygulanamayacağı ilk kez aşağıdaki gelişmelerden hangisiyle anlaşılmıştır?",
+    question: "Osmanlıcılık düşüncesinin uygulanamayacağı ilk kez aşağıdaki gelişmelerden hangisiyle anlaşılmıştır?",
     options: [
         "A) Kırım Savaşı",
         "B) 93 Harbi",
@@ -2892,31 +2892,31 @@ window.tarih_10_sorulari = [
     explanation: "Osmanlıcılık düşüncesinin uygulanamayacağı ilk kez 93 Harbi sonrasında anlaşılmıştır."
 },
 {
-    question: "Soru 242: Osmanlıcılık düşüncesi aşağıdaki gelişmelerden hangisinden sonra tamamen önemini yitirmiştir?",
+    question: "Osmanlıcılık düşüncesi aşağıdaki gelişmelerden hangisinden sonra tamamen önemini yitirmiştir?",
     options: [
         "A) Bulgaristan'ın bağımsız olması",
         "B) Bosna-Hersek'in ilhakı",
-        "C) Arnavutluk'un elden çıkması",
-        "D) Girit'in Yunanistan'a bağlanması",
+        "C) Girit'in Yunanistan'a bağlanması",
+        "D) Arnavutluk'un elden çıkması",
         "E) Kars'ın kaybedilmesi"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 3,
     explanation: "Osmanlıcılık düşüncesi Arnavutluk'un elden çıkmasıyla tamamen önemini yitirmiştir."
 },
 {
-    question: "Soru 243: Aşağıdakilerden hangisi Osmanlıcılık düşüncesinin savunucuları arasında yer alır?",
+    question: "Aşağıdakilerden hangisi Osmanlıcılık düşüncesinin savunucuları arasında yer alır?",
     options: [
         "A) Yusuf Akçura",
         "B) Ziya Gökalp",
-        "C) Namık Kemal",
-        "D) Abdullah Cevdet",
+        "C) Abdullah Cevdet",
+        "D) Namık Kemal",
         "E) Mehmet Akif Ersoy"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 3,
     explanation: "Namık Kemal, Osmanlıcılık düşüncesinin önemli savunucularındandır."
 },
 {
-    question: "Soru 244: Aşağıdaki isimlerden hangisi Osmanlıcılık fikrinin savunucularından biridir?",
+    question: "Aşağıdaki isimlerden hangisi Osmanlıcılık fikrinin savunucularından biridir?",
     options: [
         "A) Ali Suavi",
         "B) İsmail Gaspıralı",
@@ -2928,19 +2928,19 @@ window.tarih_10_sorulari = [
     explanation: "Ali Suavi, Osmanlıcılık düşüncesinin önemli temsilcilerindendir."
 },
 {
-    question: "Soru 245: Osmanlıcılık düşüncesinin önemini yitirdiği süreçte öne çıkan devlet aşağıdakilerden hangisidir?",
+    question: "Osmanlıcılık düşüncesinin önemini yitirdiği süreçte öne çıkan devlet aşağıdakilerden hangisidir?",
     options: [
         "A) Sırbistan",
         "B) Bulgaristan",
-        "C) Arnavutluk",
-        "D) Romanya",
+        "C) Romanya",
+        "D) Arnavutluk",
         "E) Karadağ"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 3,
     explanation: "Arnavutluk'un elden çıkmasıyla Osmanlıcılık düşüncesi tamamen önemini yitirmiştir."
 },
 {
-    question: "Soru 246: Rusya'nın Panslavizm politikasına tepki olarak ortaya çıkan fikir akımı aşağıdakilerden hangisidir?",
+    question: "Rusya'nın Panslavizm politikasına tepki olarak ortaya çıkan fikir akımı aşağıdakilerden hangisidir?",
     options: [
         "A) Batıcılık",
         "B) Osmanlıcılık",
@@ -2952,31 +2952,31 @@ window.tarih_10_sorulari = [
     explanation: "Türkçülük, Rusya'nın Panslavizm politikasına karşı ortaya çıkmıştır."
 },
 {
-    question: "Soru 247: Türkçülük düşüncesi ilk olarak aşağıdaki ülkelerden hangisinde ortaya çıkmıştır?",
+    question: "Türkçülük düşüncesi ilk olarak aşağıdaki ülkelerden hangisinde ortaya çıkmıştır?",
     options: [
         "A) Osmanlı Devleti",
         "B) Fransa",
-        "C) Rusya",
+        "C) İngiltere",
         "D) Almanya",
-        "E) İngiltere"
+        "E) Rusya"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "Türkçülük düşüncesi ilk olarak Rusya'da ortaya çıkmıştır."
 },
 {
-    question: "Soru 248: Türkçülük düşüncesinin temel amacı aşağıdakilerden hangisidir?",
+    question: "Türkçülük düşüncesinin temel amacı aşağıdakilerden hangisidir?",
     options: [
         "A) Gayrimüslimlere eşit hak vermek",
         "B) Yerel yönetimleri güçlendirmek",
-        "C) Osmanlı içindeki Türkleri tek bayrak altında toplamak",
+        "C) Avrupa hukukunu uygulamak",
         "D) Halifelik etrafında birleşmek",
-        "E) Avrupa hukukunu uygulamak"
+        "E) Osmanlı içindeki Türkleri tek bayrak altında toplamak"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "Türkçülük düşüncesinin amacı Osmanlı içindeki Türkleri tek bayrak altında toplamaktır."
 },
 {
-    question: "Soru 249: Aşağıdakilerden hangisi Türkçülük düşüncesinin temsilcilerinden biri değildir?",
+    question: "Aşağıdakilerden hangisi Türkçülük düşüncesinin temsilcilerinden biri değildir?",
     options: [
         "A) Yusuf Akçura",
         "B) İsmail Gaspıralı",
@@ -2988,7 +2988,7 @@ window.tarih_10_sorulari = [
     explanation: "Abdullah Cevdet Batıcılık düşüncesinin temsilcilerindendir."
 },
 {
-    question: "Soru 250: Türkçülük düşüncesinin önemli temsilcilerinden olan ve 'Üç Tarz-ı Siyaset' eseriyle tanınan kişi aşağıdakilerden hangisidir?",
+    question: "Türkçülük düşüncesinin önemli temsilcilerinden olan ve 'Üç Tarz-ı Siyaset' eseriyle tanınan kişi aşağıdakilerden hangisidir?",
     options: [
         "A) Yusuf Akçura",
         "B) Fuat Köprülü",
@@ -3000,19 +3000,19 @@ window.tarih_10_sorulari = [
     explanation: "Yusuf Akçura, Türkçülük düşüncesinin en önemli isimlerinden biridir."
 },
 {
-    question: "Soru 251: Aşağıdakilerden hangisi Batıcılık (Garpçılık) düşüncesinin temel görüşüdür?",
+    question: "Aşağıdakilerden hangisi Batıcılık (Garpçılık) düşüncesinin temel görüşüdür?",
     options: [
         "A) Halifelik güçlendirilmelidir.",
         "B) Yerel yönetimler güçlendirilmelidir.",
-        "C) Devlet Batılılaşmalıdır.",
-        "D) Türk dünyası birleşmelidir.",
+        "C) Türk dünyası birleşmelidir.",
+        "D) Devlet Batılılaşmalıdır.",
         "E) Azınlıklara ayrıcalık verilmelidir."
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 3,
     explanation: "Batıcılar devletin kurtuluşunun Batılılaşmada olduğunu savunmuşlardır."
 },
 {
-    question: "Soru 252: Batıcılık düşüncesi hangi dönemden itibaren görülmeye başlanmıştır?",
+    question: "Batıcılık düşüncesi hangi dönemden itibaren görülmeye başlanmıştır?",
     options: [
         "A) Kuruluş",
         "B) Yükselme",
@@ -3024,7 +3024,7 @@ window.tarih_10_sorulari = [
     explanation: "Batıcılık düşüncesinin temelleri Lale Devri'nde atılmıştır."
 },
 {
-    question: "Soru 253: 'Ya Batılılaşırız ya mahvoluruz.' sözü aşağıdaki fikir akımlarından hangisini özetlemektedir?",
+    question: "'Ya Batılılaşırız ya mahvoluruz.' sözü aşağıdaki fikir akımlarından hangisini özetlemektedir?",
     options: [
         "A) Osmanlıcılık",
         "B) İslamcılık",
@@ -3036,19 +3036,19 @@ window.tarih_10_sorulari = [
     explanation: "Bu ifade Batıcılık düşüncesini özetlemektedir."
 },
 {
-    question: "Soru 254: Aşağıdakilerden hangisi Batıcılık düşüncesinin temsilcilerinden biridir?",
+    question: "Aşağıdakilerden hangisi Batıcılık düşüncesinin temsilcilerinden biridir?",
     options: [
         "A) Mehmet Akif Ersoy",
-        "B) Celal Nuri",
+        "B) Prens Sabahattin",
         "C) Yusuf Akçura",
         "D) Namık Kemal",
-        "E) Prens Sabahattin"
+        "E) Celal Nuri"
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 4,
     explanation: "Celal Nuri Batıcılık düşüncesinin önemli temsilcilerindendir."
 },
 {
-    question: "Soru 255: Aşağıdaki isimlerden hangisi Batıcılık düşüncesini savunanlar arasında yer alır?",
+    question: "Aşağıdaki isimlerden hangisi Batıcılık düşüncesini savunanlar arasında yer alır?",
     options: [
         "A) Beşir Fuat",
         "B) Said Halim Paşa",
@@ -3060,7 +3060,7 @@ window.tarih_10_sorulari = [
     explanation: "Beşir Fuat Batıcılık düşüncesinin temsilcilerindendir."
 },
 {
-    question: "Soru 256: Aşağıdakilerden hangisi Batıcılık düşüncesinin savunucularından biri değildir?",
+    question: "Aşağıdakilerden hangisi Batıcılık düşüncesinin savunucularından biri değildir?",
     options: [
         "A) Abdullah Cevdet",
         "B) Tevfik Fikret",
@@ -3072,7 +3072,7 @@ window.tarih_10_sorulari = [
     explanation: "Mehmet Akif Ersoy, İslamcılık düşüncesinin önemli temsilcilerindendir."
 },
 {
-    question: "Soru 257: II. Abdülhamit'in dış politikasının temelini oluşturan fikir akımı aşağıdakilerden hangisidir?",
+    question: "II. Abdülhamit'in dış politikasının temelini oluşturan fikir akımı aşağıdakilerden hangisidir?",
     options: [
         "A) Osmanlıcılık",
         "B) Türkçülük",
@@ -3084,7 +3084,7 @@ window.tarih_10_sorulari = [
     explanation: "II. Abdülhamit'in dış politikası İslamcılık (Panislamizm) üzerine kurulmuştur."
 },
 {
-    question: "Soru 258: İslamcılık düşüncesi ilk büyük darbesini aşağıdaki gelişmelerden hangisiyle almıştır?",
+    question: "İslamcılık düşüncesi ilk büyük darbesini aşağıdaki gelişmelerden hangisiyle almıştır?",
     options: [
         "A) Bulgaristan'ın bağımsızlığı",
         "B) Arnavutluk'un elden çıkması",
@@ -3096,19 +3096,19 @@ window.tarih_10_sorulari = [
     explanation: "İslamcılık düşüncesi ilk ciddi darbeyi Arnavutluk'un elden çıkmasıyla almıştır."
 },
 {
-    question: "Soru 259: İslamcılık düşüncesinin önemini tamamen yitirmesinde aşağıdaki gelişmelerden hangisi etkili olmuştur?",
+    question: "İslamcılık düşüncesinin önemini tamamen yitirmesinde aşağıdaki gelişmelerden hangisi etkili olmuştur?",
     options: [
         "A) Balkan Savaşları",
         "B) Trablusgarp Savaşı",
-        "C) Arapların I. Dünya Savaşı'nda İngilizlerle iş birliği yapması",
+        "C) Kırım Savaşı",
         "D) Reval Görüşmesi",
-        "E) Kırım Savaşı"
+        "E) Arapların I. Dünya Savaşı'nda İngilizlerle iş birliği yapması"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "I. Dünya Savaşı'nda Arapların İngilizlerle iş birliği yapması İslamcılık düşüncesini büyük ölçüde etkisiz bırakmıştır."
 },
 {
-    question: "Soru 260: İslamcılık düşüncesi aşağıdaki gelişmelerden hangisiyle tamamen sona ermiştir?",
+    question: "İslamcılık düşüncesi aşağıdaki gelişmelerden hangisiyle tamamen sona ermiştir?",
     options: [
         "A) Saltanatın kaldırılması",
         "B) Cumhuriyet'in ilanı",
@@ -3120,7 +3120,7 @@ window.tarih_10_sorulari = [
     explanation: "3 Mart 1924'te halifeliğin kaldırılmasıyla İslamcılık düşüncesi tamamen sona ermiştir."
 },
 {
-    question: "Soru 261: Osmanlı Devleti'ni dağılmaktan kurtarmayı amaçlayan fikir akımlarından merkezi yönetimin yetkilerinin yerel yönetimlere devredilmesini savunan düşünce aşağıdakilerden hangisidir?",
+    question: "Osmanlı Devleti'ni dağılmaktan kurtarmayı amaçlayan fikir akımlarından merkezi yönetimin yetkilerinin yerel yönetimlere devredilmesini savunan düşünce aşağıdakilerden hangisidir?",
     options: [
         "A) Osmanlıcılık",
         "B) Türkçülük",
@@ -3132,19 +3132,19 @@ window.tarih_10_sorulari = [
     explanation: "Federalizm (Adem-i Merkeziyetçilik), merkezi yönetimin yetkilerinin yerel yönetimlere devredilmesini savunur."
 },
 {
-    question: "Soru 262: Federalizm (Adem-i Merkeziyetçilik) düşüncesinin en önemli savunucusu aşağıdakilerden hangisidir?",
+    question: "Federalizm (Adem-i Merkeziyetçilik) düşüncesinin en önemli savunucusu aşağıdakilerden hangisidir?",
     options: [
         "A) Namık Kemal",
         "B) Yusuf Akçura",
-        "C) Prens Sabahattin",
+        "C) Ziya Gökalp",
         "D) Mehmet Akif Ersoy",
-        "E) Ziya Gökalp"
+        "E) Prens Sabahattin"
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 4,
     explanation: "Federalizm (Adem-i Merkeziyetçilik) düşüncesinin en önemli savunucusu Prens Sabahattin'dir."
 },
 {
-    question: "Soru 263: Aşağıdakilerden hangisi İslamcılık (Panislamizm) düşüncesinin temsilcilerinden biridir?",
+    question: "Aşağıdakilerden hangisi İslamcılık (Panislamizm) düşüncesinin temsilcilerinden biridir?",
     options: [
         "A) Abdullah Cevdet",
         "B) Celal Nuri",
@@ -3156,7 +3156,7 @@ window.tarih_10_sorulari = [
     explanation: "Said Halim Paşa, İslamcılık düşüncesinin önemli temsilcilerindendir."
 },
 {
-    question: "Soru 264: Aşağıdaki isimlerden hangisi İslamcılık düşüncesini savunanlar arasında yer almaz?",
+    question: "Aşağıdaki isimlerden hangisi İslamcılık düşüncesini savunanlar arasında yer almaz?",
     options: [
         "A) Mehmet Akif Ersoy",
         "B) Ahmet Hamdi Akseki",
@@ -3168,7 +3168,7 @@ window.tarih_10_sorulari = [
     explanation: "Beşir Fuat, Batıcılık düşüncesinin temsilcilerindendir."
 },
 {
-    question: "Soru 265: Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+    question: "Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
     options: [
         "A) Yusuf Akçura - Türkçülük",
         "B) Celal Nuri - Batıcılık",
@@ -3180,7 +3180,7 @@ window.tarih_10_sorulari = [
     explanation: "Abdullah Cevdet, Batıcılık düşüncesinin temsilcilerindendir."
 },
 {
-    question: "Soru 266: Aşağıdaki gelişmelerden hangisi Osmanlıcılık düşüncesinin uygulanabilirliğini ortadan kaldıran gelişmelerden biridir?",
+    question: "Aşağıdaki gelişmelerden hangisi Osmanlıcılık düşüncesinin uygulanabilirliğini ortadan kaldıran gelişmelerden biridir?",
     options: [
         "A) Arnavutluk'un Osmanlı Devleti'nden ayrılması",
         "B) Kanun-i Esasi'nin ilanı",
@@ -3192,7 +3192,7 @@ window.tarih_10_sorulari = [
     explanation: "Arnavutluk'un elden çıkmasıyla Osmanlıcılık düşüncesi tamamen önemini yitirmiştir."
 },
 {
-    question: "Soru 267: Aşağıdaki fikir akımlarından hangisi II. Abdülhamit döneminde devletin dış politikasına yön vermiştir?",
+    question: "Aşağıdaki fikir akımlarından hangisi II. Abdülhamit döneminde devletin dış politikasına yön vermiştir?",
     options: [
         "A) Batıcılık",
         "B) Türkçülük",
@@ -3204,7 +3204,7 @@ window.tarih_10_sorulari = [
     explanation: "II. Abdülhamit'in dış politikası İslamcılık (Panislamizm) anlayışı üzerine kurulmuştur."
 },
 {
-    question: "Soru 268: 'Devletin kurtuluşu Batı'nın bilim, teknik ve kurumlarının benimsenmesine bağlıdır.' görüşü aşağıdaki fikir akımlarından hangisine aittir?",
+    question: "'Devletin kurtuluşu Batı'nın bilim, teknik ve kurumlarının benimsenmesine bağlıdır.' görüşü aşağıdaki fikir akımlarından hangisine aittir?",
     options: [
         "A) Osmanlıcılık",
         "B) Batıcılık",
@@ -3216,7 +3216,7 @@ window.tarih_10_sorulari = [
     explanation: "Batıcılık düşüncesi, devletin Batılılaşarak kurtulacağını savunur."
 },
 {
-    question: "Soru 269: Aşağıdaki fikir akımlarından hangisi din, dil ve ırk ayrımı gözetmeksizin bütün tebaanın eşit Osmanlı vatandaşı sayılmasını amaçlamıştır?",
+    question: "Aşağıdaki fikir akımlarından hangisi din, dil ve ırk ayrımı gözetmeksizin bütün tebaanın eşit Osmanlı vatandaşı sayılmasını amaçlamıştır?",
     options: [
         "A) Türkçülük",
         "B) İslamcılık",
@@ -3228,7 +3228,7 @@ window.tarih_10_sorulari = [
     explanation: "Osmanlıcılık, bütün tebaanın ortak Osmanlı kimliği altında birleşmesini hedeflemiştir."
 },
 {
-    question: "Soru 270: Aşağıdakilerden hangisi Osmanlı Devleti'ni dağılmaktan kurtarmaya yönelik fikir akımlarından biri değildir?",
+    question: "Aşağıdakilerden hangisi Osmanlı Devleti'ni dağılmaktan kurtarmaya yönelik fikir akımlarından biri değildir?",
     options: [
         "A) Osmanlıcılık",
         "B) Türkçülük",

@@ -11,6 +11,7 @@ import { Card, ScrollScreen, Badge, PageHeader } from "../ui";
 import { colors, masteryLabel } from "../lib/theme";
 import { AccentCard, PctBadge } from "../kit";
 import { groupCatalogDersler, dersLabel } from "../lib/alan";
+import { konuLabel } from "../lib/konuLabels";
 
 function itemsFromSorular(ders, konu, sorular) {
     return (sorular || []).map(function (q, idx) {
@@ -160,7 +161,7 @@ export function KonuListScreen({ route, navigation }) {
                     >
                         <View style={styles.konuRow}>
                             <View style={{ flex: 1, minWidth: 0, paddingRight: 8 }}>
-                                <Text style={[styles.konuName, isDark && styles.textLight]} numberOfLines={2}>{konu}</Text>
+                                <Text style={[styles.konuName, isDark && styles.textLight]} numberOfLines={2}>{konuLabel(konu)}</Text>
                                 <Text style={styles.konuMeta}>{meta}</Text>
                             </View>
                             {open ? (
@@ -194,7 +195,7 @@ export function KonuHubScreen({ route, navigation }) {
         <ScrollScreen dark={isDark}>
             <PageHeader
                 dark={isDark}
-                title={konu}
+                title={konuLabel(konu)}
                 subtitle={ders}
                 onBack={function () { navigation.goBack(); }}
                 right={null}

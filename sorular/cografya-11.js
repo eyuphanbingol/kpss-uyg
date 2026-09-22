@@ -33,10 +33,10 @@ window.cografya_11_sorulari = [
       "A) Ergene (Edirne)",
       "B) Konya",
       "C) Orta Fırat",
-      "D) Erzurum-Kars",
-      "E) Doğu Karadeniz kıyı şeridi"
+      "D) Doğu Karadeniz kıyı şeridi",
+      "E) Erzurum-Kars"
     ],
-    "correctAnswerIndex": 4,
+    "correctAnswerIndex": 3,
     "explanation": "Ergene, Konya, Orta Fırat ve yüksek olmasına rağmen düz bir yapıya sahip olan Erzurum-Kars bölümleri Türkiye'nin en düz alanlarındandır. Ancak Doğu Karadeniz kıyı şeridi hemen arkasında başlayan Kaçkar Dağları nedeniyle son derece dik ve engebelidir."
   },
   {

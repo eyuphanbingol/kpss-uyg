@@ -8,6 +8,7 @@ import { GhostButton, PrimaryButton, Screen, ScrollScreen, Badge, Tap, ThemeTogg
 import { colors } from "../lib/theme";
 import { questionImages } from "../lib/media";
 import { ZoomableImage } from "../components/ZoomableImage";
+import { konuLabel } from "../lib/konuLabels";
 
 // ============================================================
 // TEST SCREEN
@@ -307,7 +308,7 @@ export default function TestScreen({ route, navigation }) {
                     {item.ders ? (
                         <View style={styles.testMeta}>
                             <Badge type="warning" title={item.ders} />
-                            <Text style={[styles.testKonu, isDark && { color: "#94A3B8" }]}>{item.konu}</Text>
+                            <Text style={[styles.testKonu, isDark && { color: "#94A3B8" }]}>{konuLabel(item.konu)}</Text>
                         </View>
                     ) : null}
 

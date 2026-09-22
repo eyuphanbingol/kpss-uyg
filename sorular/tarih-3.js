@@ -150,10 +150,10 @@ window.tarih_3_sorulari = [
       "A) Sudak, Sinop, Samsun, Antalya ve Alanya'nın alınması",
       "B) Sigortacılık sisteminin başlatılması",
       "C) Yol üzerlerine kervansaraylar yapılması",
-      "D) Kıbrıs ve Venedik ile anlaşıp gümrük vergilerinin düşürülmesi",
-      "E) Gayrimüslimlerden alınan cizyenin kaldırılması"
+      "D) Gayrimüslimlerden alınan cizyenin kaldırılması",
+      "E) Kıbrıs ve Venedik ile anlaşıp gümrük vergilerinin düşürülmesi"
     ],
-    "correctAnswerIndex": 4,
+    "correctAnswerIndex": 3,
     "explanation": "Feth edilen stratejik limanlar, dünyadaki ilk ticari sigortacılık, kervansaray mimarisi ve Avrupalı devletlerle yapılan düşük gümrüklü anlaşmalar ticareti geliştirmek içindir. Ancak cizye vergisinin kaldırılması gibi bir durum söz konusu değildir."
   },
   {
@@ -174,12 +174,12 @@ window.tarih_3_sorulari = [
     "question": "'Han' adı verilen ticari işletmeleri kervansaray ve ribatlardan ayıran temel özellik aşağıdakilerden hangisidir?",
     "options": [
       "A) Sadece askerî amaçlı olmaları",
-      "B) Ücretli olmaları ve şehir merkezinde bulunmaları",
+      "B) Gayrimüslimlere kapalı olmaları",
       "C) Yalnızca kırsalda kurulmaları",
-      "D) Gayrimüslimlere kapalı olmaları",
+      "D) Ücretli olmaları ve şehir merkezinde bulunmaları",
       "E) Üç gün ücretsiz konaklama vermeleri"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Kervansaraylar şehirlerarası yollarda ve ücretsizken; 'Han' adı verilen işletmeler şehir merkezlerinde yer alan, konaklama ve ticari faaliyetlerin ücretli olduğu yerlerdir."
   },
   {
@@ -200,12 +200,12 @@ window.tarih_3_sorulari = [
     "question": "Türkiye Selçuklu Devleti'nin veziri ve baş mimarı olan; Zavardin Han ve Kubadabad Sarayı'nın mimarlığını yapan, taht iddiasında bulununca idam edilen kişi aşağıdakilerden hangisidir?",
     "options": [
       "A) Celaleddin Karatay",
-      "B) Sadettin Köpek",
+      "B) Alaaddin Siyavuş",
       "C) Muineddin Pervane",
-      "D) Alaaddin Siyavuş",
+      "D) Sadettin Köpek",
       "E) Ahi Evran"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "II. Gıyaseddin Keyhüsrev döneminin en güçlü figürü, Kubadabad Sarayı'nın mimarı ve devletin ünlü veziri Sadettin Köpek'tir. Aşırı güçlenip tahtta hak iddia edince idam edilmiştir."
   },
   {
@@ -252,12 +252,12 @@ window.tarih_3_sorulari = [
     "question": "1243 yılının Anadolu'da anıldığı ad aşağıdakilerden hangisidir?",
     "options": [
       "A) Yurttutan Yılı",
-      "B) Baycu Noyan Yılı",
+      "B) Cimri Yılı",
       "C) Fetret Yılı",
-      "D) Cimri Yılı",
+      "D) Baycu Noyan Yılı",
       "E) Baba İshak Yılı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Köse Dağ Savaşı'nda Selçuklu ordusunu bozguna uğratan Moğol komutanı Baycu Noyan'ın Anadolu'da yarattığı büyük tahribat ve katliamlardan ötürü 1243 yılı 'Baycu Noyan Yılı' olarak hafızalara kazınmıştır."
   },
   {
@@ -330,12 +330,12 @@ window.tarih_3_sorulari = [
     "question": "Osmanlı Devleti'ne katılan ilk beylik olan ve bu sayede Osmanlı'nın donanma kurmasını sağlayan beylik aşağıdakilerden hangisidir?",
     "options": [
       "A) Karamanoğulları",
-      "B) Karesi Beyliği",
-      "C) Aydınoğulları",
+      "B) Aydınoğulları",
+      "C) Karesi Beyliği",
       "D) Candaroğulları",
       "E) Saruhanoğulları"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Balıkesir-Çanakkale hattındaki Karesi Beyliği iç taht kavgaları sonucu Osmanlı'ya katılan İLK beyliktir. Karesi'nin denizci gücü, Osmanlı donanmasının ve denizcilik faaliyetlerinin temelini oluşturmuştur."
   },
   {
@@ -356,12 +356,12 @@ window.tarih_3_sorulari = [
     "question": "Osmanlı'ya en son katılan; Yavuz Sultan Selim'in Turnadağ Savaşı ile son verdiği beylik aşağıdakilerden hangisidir?",
     "options": [
       "A) Hamidoğulları",
-      "B) Dulkadiroğulları",
-      "C) Germiyanoğulları",
+      "B) Germiyanoğulları",
+      "C) Dulkadiroğulları",
       "D) Candaroğulları",
       "E) Eşrefoğulları"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Kahramanmaraş-Elbistan merkezli Dulkadiroğulları Beyliği, 1515 Turnadağ Savaşı ile Yavuz Sultan Selim tarafından Osmanlı'ya bağlanmıştır. Bu gelişmeyle Anadolu Türk siyasi birliği kesin olarak sağlanmıştır."
   },
   {
@@ -396,11 +396,11 @@ window.tarih_3_sorulari = [
     "options": [
       "A) Aydın'da kurulmuştur",
       "B) Denizcilikle uğraşmışlardır",
-      "C) Aydınoğlu Mehmet Bey tarafından kurulmuştur",
+      "C) Osmanlı'ya katılan ilk beyliktir",
       "D) Umur Bey ve Cüneyt Bey bilinen hükümdarlarıdır",
-      "E) Osmanlı'ya katılan ilk beyliktir"
+      "E) Aydınoğlu Mehmet Bey tarafından kurulmuştur"
     ],
-    "correctAnswerIndex": 4,
+    "correctAnswerIndex": 2,
     "explanation": "Osmanlı Devleti'ne katılan ilk beylik Aydınoğulları değil, Karesioğulları Beyliği'dir. Aydınoğulları ise Ege'nin en güçlü denizci beyliklerindendir."
   },
   {
@@ -462,10 +462,10 @@ window.tarih_3_sorulari = [
       "A) Saruhanoğulları – Manisa",
       "B) Sahibataoğulları – Afyon",
       "C) Tacettinoğulları – Bafra/Niksar",
-      "D) Pervaneoğulları – Sinop",
-      "E) Aydınoğulları – Muğla"
+      "D) Aydınoğulları – Muğla",
+      "E) Pervaneoğulları – Sinop"
     ],
-    "correctAnswerIndex": 4,
+    "correctAnswerIndex": 3,
     "explanation": "Aydınoğulları Muğla'da değil, Aydın ve İzmir çevresinde kurulmuştur. Muğla'da kurulan beylik ise Menteşeoğulları'dır."
   },
   {
@@ -473,12 +473,12 @@ window.tarih_3_sorulari = [
     "question": "Anadolu Selçuklu Devleti'ndeki divanlarla ilgili aşağıdaki eşleştirmelerden hangisi doğrudur?",
     "options": [
       "A) Divan-ı Âlâ – posta işleri",
-      "B) Divan-ı Pervane – ikta topraklarının dağıtımı",
-      "C) Divan-ı Berid – devlet işlerinin görüşülmesi",
+      "B) Divan-ı Berid – devlet işlerinin görüşülmesi",
+      "C) Divan-ı Pervane – ikta topraklarının dağıtımı",
       "D) Divan-ı Pervane – ordu işleri",
       "E) Divan-ı Berid – ikta dağıtımı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Divan-ı Pervane'nin başındaki görevliye 'Pervane' denir ve ülke topraklarının (özellikle İkta arazilerinin) kayıtlarından ve adil dağıtımından sorumludur. Divan-ı Âlâ genel devlet işlerine bakarken, Divan-ı Berid posta/haberleşme işlerine bakar."
   },
   {
@@ -486,12 +486,12 @@ window.tarih_3_sorulari = [
     "question": "Anadolu Selçuklu hükümdarlık unvanlarıyla ilgili aşağıdakilerden hangisi doğrudur?",
     "options": [
       "A) Büyük Selçuklu unvanlarından tamamen farklıdır",
-      "B) BSD ile aynı unvanlara ilave olarak Keyhüsrev, Keykavus ve Keykubat unvanları kullanılmıştır",
+      "B) Hiçbir unvan kullanılmamıştır",
       "C) Yalnızca 'Han' unvanı kullanılmıştır",
-      "D) Hiçbir unvan kullanılmamıştır",
+      "D) BSD ile aynı unvanlara ilave olarak Keyhüsrev, Keykavus ve Keykubat unvanları kullanılmıştır",
       "E) Sadece Arap kökenli unvanlar kullanılmıştır"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Anadolu Selçuklu Devleti, Büyük Selçuklu geleneksel unvanlarını sürdürmüş; ancak yoğun Fars (İran) kültürü etkileşimi nedeniyle ek olarak tarihte ilk kez Keyhüsrev, Keykavus ve Keykubat gibi unvanları da resmi olarak kullanmışlardır."
   },
   {
@@ -525,12 +525,12 @@ window.tarih_3_sorulari = [
     "question": "'Mantıku't-Tayr' adlı eser aşağıdaki isimlerden hangisine aittir?",
     "options": [
       "A) Hoca Dehhani",
-      "B) Gülşehri",
+      "B) Yunus Emre",
       "C) Âşık Paşa",
-      "D) Yunus Emre",
+      "D) Gülşehri",
       "E) Hacı Paşa"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Kuşların Dili anlamına gelen tasavvufi alegorik bir eser olan Mantıku't-Tayr, Feridüddin Attar'dan esinlenerek ünlü şair Gülşehri tarafından Türkçeye kazandırılmıştır."
   },
   {
@@ -657,10 +657,10 @@ window.tarih_3_sorulari = [
       "A) Yivli Minare – Antalya",
       "B) Gök Medrese – Sivas",
       "C) Cacabey Medresesi – Kırşehir",
-      "D) İnce Minareli Medrese – Konya",
-      "E) Çifte Minareli Medrese – Kayseri"
+      "D) Çifte Minareli Medrese – Kayseri",
+      "E) İnce Minareli Medrese – Konya"
     ],
-    "correctAnswerIndex": 4,
+    "correctAnswerIndex": 3,
     "explanation": "Ünlü Çifte Minareli Medrese Kayseri'de değil, Erzurum ilinde yer almaktadır. Kayseri'de Hunat Hatun ve Koca Hasan yapıları meşhurdur."
   },
   {
@@ -720,12 +720,12 @@ window.tarih_3_sorulari = [
     "question": "Anadolu Selçuklu mimarisinde minarelerin çift (çifte minare) olması öncelikle neyin göstergesidir?",
     "options": [
       "A) Caminin küçük olduğunun",
-      "B) Devletin gücünün",
-      "C) Bölgenin nüfusunun az olduğunun",
+      "B) Bölgenin nüfusunun az olduğunun",
+      "C) Devletin gücünün",
       "D) Eserin Osmanlı'ya ait olduğunun",
       "E) Yapının hastane olduğunun"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Selçuklu mimari felsefesinde dini ve sosyal yapıtlarda çift minare (Çifte Minare) kullanılması, estetik kaygıların ötesinde doğrudan inşa eden devletin ihtişamını, ekonomik kudretini ve siyasi gücünü sembolize eder."
   }
 ];

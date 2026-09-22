@@ -20,10 +20,10 @@ window.cografya_3_sorulari = [
       "A) Kurak ve yarı kurak bölgeler – rüzgârlar",
       "B) Kıyıların şekillenmesi – dalga ve akıntılar",
       "C) Karstik sahalar – yer altı suları",
-      "D) Türkiye'nin genel şekillenmesi – akarsular",
-      "E) Kurak bölgeler – buzullar"
+      "D) Kurak bölgeler – buzullar",
+      "E) Türkiye'nin genel şekillenmesi – akarsular"
     ],
-    "correctAnswerIndex": 4,
+    "correctAnswerIndex": 3,
     "explanation": "Kurak ve yarı kurak bölgelerde nem az olduğu için en etkili dış kuvvet rüzgârlardır; buzullar değildir. Diğer eşleştirmeler tamamen doğrudur."
   },
   {
@@ -86,24 +86,24 @@ window.cografya_3_sorulari = [
     "options": [
       "A) Alp-Himalaya kıvrımının gerçekleşmesi",
       "B) Toroslar ve Kuzey Anadolu Dağları'nın oluşması",
-      "C) Ana fay kuşaklarının ve Ege horst-graben sisteminin oluşması",
+      "C) İstanbul ve Çanakkale Boğazları'nın açılması",
       "D) Tuz, bor, linyit, petrol ve doğal gazın oluşması",
-      "E) İstanbul ve Çanakkale Boğazları'nın açılması"
+      "E) Ana fay kuşaklarının ve Ege horst-graben sisteminin oluşması"
     ],
-    "correctAnswerIndex": 4,
+    "correctAnswerIndex": 2,
     "explanation": "İstanbul ve Çanakkale Boğazları'nın açılması en yakın dönem olan 4. Jeolojik Zaman'da (Kuvaterner) gerçekleşmiştir. Diğer olaylar 3. zamana aittir."
   },
   {
     "id": "8",
     "question": "Karadeniz ve Akdeniz'in oluşum aşamalarıyla ilgili aşağıdaki eşleştirmelerden hangisi doğrudur?",
     "options": [
-      "A) Tersiyer'de deniz – Kuvaterner'de göl olmuştur",
-      "B) Tersiyer'de göl – Kuvaterner'de deniz olmuştur",
+      "A) Tersiyer'de göl – Kuvaterner'de deniz olmuştur",
+      "B) Tersiyer'de deniz – Kuvaterner'de göl olmuştur",
       "C) İkisinde de masif arazidir",
       "D) Paleozoik'te deniz olmuştur",
       "E) Mezozoik'te deniz olmuştur"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Karadeniz ve Akdeniz, 3. Zaman'da (Tersiyer) iç havza/göl özelliği taşırken, 4. Zaman'da (Kuvaterner) boğazların açılmasıyla birbirine bağlanmış ve açık deniz haline gelmiştir."
   },
   {
@@ -125,11 +125,11 @@ window.cografya_3_sorulari = [
     "options": [
       "A) Ortalama yükseltinin fazla olması",
       "B) Sık sık depremlerin yaşanması",
-      "C) Sıcak su kaynaklarının bulunması",
+      "C) Taş kömürü rezervinin çok fazla olması",
       "D) Linyit rezervinin fazla olması",
-      "E) Taş kömürü rezervinin çok fazla olması"
+      "E) Sıcak su kaynaklarının bulunması"
     ],
-    "correctAnswerIndex": 4,
+    "correctAnswerIndex": 2,
     "explanation": "Taş kömürü 1. Jeolojik Zaman'da (Paleozoik) oluşur. Türkiye'de taş kömürünün az olması arazimizin yaşlı değil, tam tersine genç oluşumlu olduğunu destekler."
   },
   {
@@ -137,12 +137,12 @@ window.cografya_3_sorulari = [
     "question": "'Bir ülkede linyit kömürü rezervinin fazla, taş kömürünün ise az olması' bilgisi, o ülkenin arazisi hakkında öncelikle aşağıdakilerden hangisini gösterir?",
     "options": [
       "A) Arazinin yaşlı oluşumlu olduğunu",
-      "B) Arazinin genç oluşumlu olduğunu",
+      "B) Arazinin tamamen masif olduğunu",
       "C) Arazide buzullaşmanın hiç olmadığını",
-      "D) Arazinin tamamen masif olduğunu",
+      "D) Arazinin genç oluşumlu olduğunu",
       "E) Arazide volkanizmanın görülmediğini"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Linyit 3. zamanda oluşmuş yakın dönem kömürüdür. Linyit fazlalığı bir ülkenin jeolojik olarak yakın zamanda şekillendiğini, yani genç oluşumlu olduğunu doğrudan kanıtlar."
   },
   {
@@ -266,12 +266,12 @@ window.cografya_3_sorulari = [
     "question": "Türkiye'nin en genç oluşumlu volkanik dağı ve bulunduğu bölge aşağıdakilerden hangisinde doğru verilmiştir?",
     "options": [
       "A) Erciyes – İç Anadolu",
-      "B) Kula – Ege",
-      "C) Ağrı – Doğu Anadolu",
+      "B) Ağrı – Doğu Anadolu",
+      "C) Kula – Ege",
       "D) Karacadağ – Güneydoğu Anadolu",
       "E) Hasan Dağı – İç Anadolu"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Türkiye'nin en genç volkanik sahası, tarihi kayıtlara 'yanık ülke' olarak geçen Ege Bölgesi Manisa'daki Kula Volkanları'dır."
   },
   {
@@ -414,23 +414,23 @@ window.cografya_3_sorulari = [
       "A) Kaçkar Dağları – kıvrım",
       "B) Bozdağlar – kırık",
       "C) Erciyes – volkanik",
-      "D) Amanos (Nur) Dağları – horst (kırık)",
-      "E) Ağrı Dağı – kıvrım"
+      "D) Ağrı Dağı – kıvrım",
+      "E) Amanos (Nur) Dağları – horst (kırık)"
     ],
-    "correctAnswerIndex": 4,
+    "correctAnswerIndex": 3,
     "explanation": "Ağrı Dağı kıvrım kökenli değil, magma çıkışıyla oluşmuş Türkiye'nin en yüksek volkanik (stratovolkan) dağıdır."
   },
   {
     "id": "31",
     "question": "Aşağıdaki olay–jeolojik zaman eşleştirmelerinden hangisi YANLIŞTIR?",
     "options": [
-      "A) Masif arazilerin oluşumu – Paleozoik",
+      "A) İstanbul ve Çanakkale Boğazları'nın açılması – Tersiyer",
       "B) Tetis Okyanusu'nun oluşumu – Mezozoik",
       "C) Toroslar ve Kuzey Anadolu Dağları'nın kıvrılması – Tersiyer",
       "D) Ege Denizi'nin oluşumu – Kuvaterner",
-      "E) İstanbul ve Çanakkale Boğazları'nın açılması – Tersiyer"
+      "E) Masif arazilerin oluşumu – Paleozoik"
     ],
-    "correctAnswerIndex": 4,
+    "correctAnswerIndex": 0,
     "explanation": "İstanbul ve Çanakkale Boğazları, ria kıyı tipine uygun olarak 4. Jeolojik Zaman olan Kuvaterner'de açılmıştır, Tersiyer'de değil."
   },
   {

@@ -20,14 +20,14 @@ window.vatandas_12_sorulari = [
     },
     {
         question: "Kurtuluş Savaşı’nı ilk kez anlatan “Ateşten Gömlek” filminde oynayan ilk kadın sinema oyuncularımız kimlerdir?",
-        options: ["A) Afife Jale ve Bedia Muvahhit", "B) Bedia Muvahhit ile Neyyire Neyir", "C) Fatma Girik ve Hülya Koçyiğit", "D) Türkan Şoray ve Filiz Akın", "E) Cahide Sonku ve Muhterem Nur"],
-        correctAnswerIndex: 1,
+        options: ["A) Afife Jale ve Bedia Muvahhit", "B) Türkan Şoray ve Filiz Akın", "C) Fatma Girik ve Hülya Koçyiğit", "D) Bedia Muvahhit ile Neyyire Neyir", "E) Cahide Sonku ve Muhterem Nur"],
+        correctAnswerIndex: 3,
         explanation: "İlk kadın oyuncular Bedia Muvahhit ile Neyyire Neyir’dir."
     },
     {
         question: "İlk Türk uçağı aşağıdakilerden hangisidir?",
-        options: ["A) Vecihi K-VI", "B) Mavi Işık", "C) Nuri Demirağ Nu.D.36", "D) Hürkuş", "E) Anka"],
-        correctAnswerIndex: 1,
+        options: ["A) Vecihi K-VI", "B) Anka", "C) Nuri Demirağ Nu.D.36", "D) Hürkuş", "E) Mavi Işık"],
+        correctAnswerIndex: 4,
         explanation: "Çalışma yaprağına göre ilk Türk uçağı Mavi Işık’tır (1979)."
     },
     {
@@ -74,8 +74,8 @@ window.vatandas_12_sorulari = [
     },
     {
         question: "Türkiye’nin ilk özel televizyon kanalı aşağıdakilerden hangisidir?",
-        options: ["A) Atv", "B) Star", "C) Show", "D) Kanal D", "E) Fox"],
-        correctAnswerIndex: 1,
+        options: ["A) Atv", "B) Fox", "C) Show", "D) Kanal D", "E) Star"],
+        correctAnswerIndex: 4,
         explanation: "1990’da test yayınına başlayan Star, ilk özel televizyon kanalıdır."
     },
     {

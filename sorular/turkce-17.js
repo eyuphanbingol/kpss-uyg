@@ -15,66 +15,66 @@ window.turkce_17_sorulari = [
     "question": "Ara yönler nasıl yazılır?",
     "options": [
         "A) Ayrı",
-        "B) Bitişik",
+        "B) Noktalı",
         "C) Kesme ile",
-        "D) Noktalı"
+        "D) Bitişik"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "güneydoğu, kuzeybatı bitişik ve küçük harfle."
 },
 {
     "question": "“Onu ben de tanıyorum.” cümlesinde “de” nasıl yazılır?",
     "options": [
         "A) Bitişik",
-        "B) Ayrı",
+        "B) Büyük harfle",
         "C) Kesme ile",
-        "D) Büyük harfle"
+        "D) Ayrı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Bağlaç de ayrıdır."
 },
 {
     "question": "“Bu sokakta oturuyorum.” cümlesindeki “-da” neden bitişiktir?",
     "options": [
         "A) Bağlaç olduğu için",
-        "B) Hâl eki olduğu için",
+        "B) Yapım eki olduğu için",
         "C) Zamir olduğu için",
-        "D) Yapım eki olduğu için"
+        "D) Hâl eki olduğu için"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Bulunma eki bitişiktir."
 },
 {
     "question": "Bağlaç olan “de” için hangisi doğrudur?",
     "options": [
         "A) Sertleşir.",
-        "B) Ayrı yazılır.",
+        "B) Kesme ile ayrılır.",
         "C) Önceki sözcüğe bitişir.",
-        "D) Kesme ile ayrılır."
+        "D) Ayrı yazılır."
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Ayrı ve yumuşamaz."
 },
 {
     "question": "“Yarınki maç” ifadesindeki “-ki” nasıl yazılır?",
     "options": [
-        "A) Ayrı",
-        "B) Bitişik",
+        "A) Bitişik",
+        "B) Ayrı",
         "C) Kesme ile",
         "D) Tireyle"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Sıfat yapan -ki bitişik."
 },
 {
     "question": "Aşağıdakilerden hangisinde bağlaç olan “ki” doğru yazılmıştır?",
     "options": [
         "A) Senki söz vermiştin.",
-        "B) Sen ki söz vermiştin.",
-        "C) Sen-ki söz vermiştin.",
+        "B) Sen-ki söz vermiştin.",
+        "C) Sen ki söz vermiştin.",
         "D) Sen’ki söz vermiştin."
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Bağlaç ki ayrı."
 },
 {
@@ -91,34 +91,34 @@ window.turkce_17_sorulari = [
 {
     "question": "“23 Nisan 1920” yazımı neden doğrudur?",
     "options": [
-        "A) Ay adı rakamla yazıldığı için",
-        "B) Ay adı yazıyla yazıldığında nokta kullanılmadığı için",
+        "A) Ay adı yazıyla yazıldığında nokta kullanılmadığı için",
+        "B) Ay adı rakamla yazıldığı için",
         "C) Tarihler her zaman ayrı yazıldığı için",
         "D) Özel ad olmadığı için"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Gün rakam, ay yazı, nokta yok."
 },
 {
     "question": "Kuruluş kısaltmalarına gelen ekler nasıl getirilir?",
     "options": [
         "A) Kısaltmanın açılımına göre",
-        "B) Son harfin okunuşuna göre",
-        "C) İlk harfin okunuşuna göre",
+        "B) İlk harfin okunuşuna göre",
+        "C) Son harfin okunuşuna göre",
         "D) Her zaman “-ın” ile"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "TDK’nin (ke’nin)."
 },
 {
     "question": "Aşağıdakilerden hangisi doğrudur?",
     "options": [
-        "A) TDK’nın",
-        "B) TDK’nin",
+        "A) TDK’nin",
+        "B) TDK’nın",
         "C) TDK’ün",
         "D) TDK’yi"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Son harf k → nin."
 },
 {
@@ -158,11 +158,11 @@ window.turkce_17_sorulari = [
     "question": "“mi” soru edatı nasıl yazılır?",
     "options": [
         "A) Önceki sözcüğe bitişik",
-        "B) Sonraki eke bitişik, sözcükten ayrı",
+        "B) Kesme ile",
         "C) Her zaman bitişik",
-        "D) Kesme ile"
+        "D) Sonraki eke bitişik, sözcükten ayrı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "geldi mi, geldi miydi."
 },
 {
@@ -179,12 +179,12 @@ window.turkce_17_sorulari = [
 {
     "question": "İkilemeler nasıl yazılır?",
     "options": [
-        "A) Bitişik",
-        "B) Ayrı",
+        "A) Ayrı",
+        "B) Bitişik",
         "C) Kesme ile",
         "D) Noktalı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "baş başa, yan yana, art arda ayrı."
 },
 {
@@ -234,34 +234,34 @@ window.turkce_17_sorulari = [
 {
     "question": "“Doğu Karadeniz” ifadesinde “Doğu” neden büyük yazılır?",
     "options": [
-        "A) Cümle başı olduğu için",
-        "B) Özel adın başındaki yön adı olduğu için",
+        "A) Özel adın başındaki yön adı olduğu için",
+        "B) Cümle başı olduğu için",
         "C) Kurum adı olduğu için",
         "D) Din adı olduğu için"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Özel adla birleşen yön adları büyük yazılır."
 },
 {
     "question": "Aşağıdakilerden hangisi özel ad örneğidir?",
     "options": [
-        "A) güzel",
-        "B) Ankara",
+        "A) Ankara",
+        "B) güzel",
         "C) hızlı",
         "D) yeni"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Ankara özel addır, büyük harfle başlar."
 },
 {
     "question": "“Sayın Başkan” ifadesinde büyük harf kullanımının nedeni nedir?",
     "options": [
-        "A) Cümle başı",
-        "B) Unvan ve saygı sözcüğü",
+        "A) Unvan ve saygı sözcüğü",
+        "B) Cümle başı",
         "C) Yön adı",
         "D) İkileme"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Unvan ve saygı sözcükleri büyük yazılır."
 },
 {
@@ -279,11 +279,11 @@ window.turkce_17_sorulari = [
     "question": "“Kitapta okudum.” cümlesinde “-ta” neden kullanılmıştır?",
     "options": [
         "A) Bağlaç de sertleştiği için",
-        "B) Hâl eki sert ünsüzden sonra -ta/-te aldığı için",
+        "B) Soru eki olduğu için",
         "C) Ki eki olduğu için",
-        "D) Soru eki olduğu için"
+        "D) Hâl eki sert ünsüzden sonra -ta/-te aldığı için"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "kitap + ta; sert ünsüzden sonra -ta/-te."
 },
 {
@@ -312,33 +312,33 @@ window.turkce_17_sorulari = [
     "question": "Aşağıdakilerden hangisi kalıplaşmış “ki”li sözcüktür?",
     "options": [
         "A) anladım ki",
-        "B) belki",
+        "B) senin ki",
         "C) akşam ki",
-        "D) senin ki"
+        "D) belki"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "belki, mademki, halbuki bitişik kalıplaşmıştır."
 },
 {
     "question": "“23.04.1920” tarih yazımında nokta neden vardır?",
     "options": [
         "A) Ay yazıyla yazıldığı için",
-        "B) Tarih tamamen rakamla yazıldığı için",
-        "C) Özel ad olduğu için",
+        "B) Özel ad olduğu için",
+        "C) Tarih tamamen rakamla yazıldığı için",
         "D) Kısaltma olduğu için"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Sayıyla yazılan tarihlerde nokta kullanılır."
 },
 {
     "question": "“TBMM’de” yazımında ek neden kesmeyle ayrılmıştır?",
     "options": [
         "A) Kurum adı olduğu için",
-        "B) Kısaltmaya ek geldiği için",
+        "B) Sayıya ek geldiği için",
         "C) Özel ada ek geldiği için",
-        "D) Sayıya ek geldiği için"
+        "D) Kısaltmaya ek geldiği için"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Kısaltmaya gelen ek kesmeyle ayrılır."
 },
 {
@@ -356,22 +356,22 @@ window.turkce_17_sorulari = [
     "question": "“Hasta olmak” neden ayrı yazılır?",
     "options": [
         "A) Ses olayı vardır",
-        "B) Kaynaşmamış birleşik fiildir",
-        "C) İkilemedir",
+        "B) İkilemedir",
+        "C) Kaynaşmamış birleşik fiildir",
         "D) Deyimdir"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "hasta olmak kaynaşmamış, ayrı yazılır."
 },
 {
     "question": "Aşağıdakilerden hangisi ikileme olarak ayrı yazılır?",
     "options": [
         "A) paramparça",
-        "B) baş başa",
-        "C) hissetmek",
+        "B) hissetmek",
+        "C) baş başa",
         "D) bilinçaltı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "baş başa, yan yana, art arda ayrı ikilemedir."
 },
 {

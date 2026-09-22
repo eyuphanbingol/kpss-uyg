@@ -63,25 +63,25 @@ window.guncel_4_sorulari = [
 {
     "question": "Buse Tosun'un 2024 Paris Olimpiyatları'nda madalya kazandığı branş aşağıdakilerden hangisidir?",
     "options": [
-        "A) Boks",
-        "B) Güreş",
+        "A) Güreş",
+        "B) Boks",
         "C) Okçuluk",
         "D) Atıcılık",
         "E) Atletizm"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Güreş bronz."
 },
 {
     "question": "Taha Akgül, 2024 Paris Olimpiyatları'nda hangi branşta bronz madalya kazanmıştır?",
     "options": [
-        "A) Boks",
-        "B) Güreş",
+        "A) Güreş",
+        "B) Boks",
         "C) Okçuluk",
         "D) Judo",
         "E) Atletizm"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Güreş bronz."
 },
 {
@@ -101,11 +101,11 @@ window.guncel_4_sorulari = [
     "options": [
         "A) Boks",
         "B) Güreş",
-        "C) Okçuluk",
+        "C) Atletizm",
         "D) Atıcılık",
-        "E) Atletizm"
+        "E) Okçuluk"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 4,
     "explanation": "Okçuluk bronz."
 },
 {
@@ -113,11 +113,11 @@ window.guncel_4_sorulari = [
     "options": [
         "A) Altın",
         "B) Gümüş",
-        "C) Bronz",
+        "C) Beşincilik",
         "D) Dördüncülük",
-        "E) Beşincilik"
+        "E) Bronz"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 4,
     "explanation": "Bronz."
 },
 {
@@ -221,11 +221,11 @@ window.guncel_4_sorulari = [
     "options": [
         "A) Tek bir ülke ev sahipliği yapacaktır.",
         "B) İki ülke ortak ev sahipliğinde düzenlenecektir.",
-        "C) ABD, Meksika ve Kanada ortak ev sahipliği yapacaktır.",
-        "D) Avrupa ülkeleri ortak ev sahipliği yapacaktır.",
+        "C) Avrupa ülkeleri ortak ev sahipliği yapacaktır.",
+        "D) ABD, Meksika ve Kanada ortak ev sahipliği yapacaktır.",
         "E) Turnuva 32 takımla oynanacaktır."
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Üç ülke ortak ev sahibidir."
 },
 {
@@ -268,24 +268,24 @@ window.guncel_4_sorulari = [
     "question": "Birleşmiş Milletler Genel Sekreteri aşağıdakilerden hangisidir?",
     "options": [
         "A) Mark Rutte",
-        "B) António Guterres",
+        "B) Ngozi Okonjo-Iweala",
         "C) Tedros Adhanom Ghebreyesus",
-        "D) Ngozi Okonjo-Iweala",
+        "D) António Guterres",
         "E) Jens Stoltenberg"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "António Guterres."
 },
 {
     "question": "Türkiye'nin Birleşmiş Milletler açısından statüsü aşağıdakilerden hangisidir?",
     "options": [
         "A) Sonradan katılan üye",
-        "B) Kurucu üyeler arasında yer alan ülke",
+        "B) Daimî Güvenlik Konseyi üyesi",
         "C) Gözlemci ülke",
-        "D) Daimî Güvenlik Konseyi üyesi",
+        "D) Kurucu üyeler arasında yer alan ülke",
         "E) Üye olmayan ülke"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Kurucu üyelerdendir."
 },
 {
@@ -328,12 +328,12 @@ window.guncel_4_sorulari = [
     "question": "NATO'nun merkezi nerededir?",
     "options": [
         "A) Paris",
-        "B) Brüksel",
+        "B) Washington D.C.",
         "C) Londra",
         "D) Cenevre",
-        "E) Washington D.C."
+        "E) Brüksel"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 4,
     "explanation": "Brüksel / Belçika."
 },
 {
@@ -401,11 +401,11 @@ window.guncel_4_sorulari = [
     "options": [
         "A) İstanbul'da yapılması",
         "B) İzmir'de yapılması",
-        "C) Ankara'da yapılması",
+        "C) Bursa'da yapılması",
         "D) Antalya'da yapılması",
-        "E) Bursa'da yapılması"
+        "E) Ankara'da yapılması"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 4,
     "explanation": "Ankara."
 },
 {
@@ -413,11 +413,11 @@ window.guncel_4_sorulari = [
     "options": [
         "A) 2023 — İsveç",
         "B) 2024 — Finlandiya",
-        "C) 1952 — Türkiye'nin NATO üyeliği",
+        "C) Genel Sekreter — António Guterres",
         "D) Merkez — Paris",
-        "E) Genel Sekreter — António Guterres"
+        "E) 1952 — Türkiye'nin NATO üyeliği"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 4,
     "explanation": "Türkiye 1952'de katılmıştır."
 },
 {
@@ -437,11 +437,11 @@ window.guncel_4_sorulari = [
     "options": [
         "A) Askerî savunma",
         "B) Petrol üreticileri arasında iş birliği",
-        "C) Eğitim, bilim ve kültür alanlarında uluslararası iş birliği",
-        "D) Uluslararası para politikası",
+        "C) Uluslararası para politikası",
+        "D) Eğitim, bilim ve kültür alanlarında uluslararası iş birliği",
         "E) Uluslararası polis iş birliği"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Eğitim, bilim, kültür."
 },
 {
@@ -449,11 +449,11 @@ window.guncel_4_sorulari = [
     "options": [
         "A) Merkez — New York",
         "B) Merkez — Cenevre",
-        "C) Merkez — Paris",
+        "C) Merkez — Washington D.C.",
         "D) Merkez — Brüksel",
-        "E) Merkez — Washington D.C."
+        "E) Merkez — Paris"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 4,
     "explanation": "Paris."
 },
 {
@@ -473,11 +473,11 @@ window.guncel_4_sorulari = [
     "options": [
         "A) Paris",
         "B) Cenevre",
-        "C) New York",
+        "C) Roma",
         "D) Londra",
-        "E) Roma"
+        "E) New York"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 4,
     "explanation": "New York."
 },
 {
@@ -509,11 +509,11 @@ window.guncel_4_sorulari = [
     "options": [
         "A) Paris",
         "B) New York",
-        "C) Cenevre",
+        "C) Brüksel",
         "D) Roma",
-        "E) Brüksel"
+        "E) Cenevre"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 4,
     "explanation": "Cenevre."
 },
 {
@@ -521,11 +521,11 @@ window.guncel_4_sorulari = [
     "options": [
         "A) António Guterres",
         "B) Mark Rutte",
-        "C) Tedros Adhanom Ghebreyesus",
+        "C) Kristalina Georgieva",
         "D) Ngozi Okonjo-Iweala",
-        "E) Kristalina Georgieva"
+        "E) Tedros Adhanom Ghebreyesus"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 4,
     "explanation": "Tedros Adhanom Ghebreyesus."
 },
 {
@@ -556,12 +556,12 @@ window.guncel_4_sorulari = [
     "question": "IMF'nin temel amaçlarından biri aşağıdakilerden hangisidir?",
     "options": [
         "A) Kültürel mirasın korunması",
-        "B) Uluslararası parasal ve finansal istikrar",
+        "B) Askerî savunma",
         "C) Çocuk haklarının korunması",
-        "D) Askerî savunma",
+        "D) Uluslararası parasal ve finansal istikrar",
         "E) Olimpiyatların düzenlenmesi"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Parasal ve finansal istikrar."
 },
 {
@@ -665,11 +665,11 @@ window.guncel_4_sorulari = [
     "options": [
         "A) Kurucu üye",
         "B) Tam üye",
-        "C) Aday ülke",
-        "D) Gözlemci ülke",
+        "C) Gözlemci ülke",
+        "D) Aday ülke",
         "E) Ortak üye"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Aday ülke."
 },
 {
@@ -701,23 +701,23 @@ window.guncel_4_sorulari = [
     "options": [
         "A) Brüksel",
         "B) Paris",
-        "C) Strazburg",
-        "D) Cenevre",
+        "C) Cenevre",
+        "D) Strazburg",
         "E) Amsterdam"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Strazburg."
 },
 {
     "question": "Aşağıdakilerden hangisi Avrupa Konseyi'nin temel amaçları arasında yer alır?",
     "options": [
         "A) Petrol üretimini düzenlemek",
-        "B) İnsan hakları, demokrasi ve hukukun üstünlüğü",
+        "B) Çocuklara sağlık hizmeti",
         "C) Askerî savunma",
         "D) Uluslararası para politikası",
-        "E) Çocuklara sağlık hizmeti"
+        "E) İnsan hakları, demokrasi ve hukukun üstünlüğü"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 4,
     "explanation": "İnsan hakları, demokrasi, hukukun üstünlüğü."
 },
 {
@@ -833,11 +833,11 @@ window.guncel_4_sorulari = [
     "options": [
         "A) Riyad",
         "B) Mekke",
-        "C) Cidde",
+        "C) Abu Dabi",
         "D) Doha",
-        "E) Abu Dabi"
+        "E) Cidde"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 4,
     "explanation": "Cidde."
 },
 {
@@ -845,11 +845,11 @@ window.guncel_4_sorulari = [
     "options": [
         "A) Gözlemci",
         "B) Aday",
-        "C) Üye",
-        "D) Kurucu olmayan ortak",
+        "C) Kurucu olmayan ortak",
+        "D) Üye",
         "E) Üye değil"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Üyedir."
 },
 {
@@ -976,12 +976,12 @@ window.guncel_4_sorulari = [
     "question": "G20'nin temel niteliği aşağıdakilerden hangisidir?",
     "options": [
         "A) Askerî ittifak",
-        "B) Ekonomik iş birliği platformu",
+        "B) İnsan hakları mahkemesi",
         "C) Kültür örgütü",
-        "D) İnsan hakları mahkemesi",
+        "D) Ekonomik iş birliği platformu",
         "E) Petrol üreticileri örgütü"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Ekonomik iş birliği."
 },
 {
@@ -999,13 +999,13 @@ window.guncel_4_sorulari = [
 {
     "question": "2025 G20 Zirvesi'nin ev sahibi aşağıdakilerden hangisidir?",
     "options": [
-        "A) Brezilya",
-        "B) Güney Afrika",
+        "A) Güney Afrika",
+        "B) Brezilya",
         "C) ABD",
         "D) Hindistan",
         "E) Çin"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Güney Afrika."
 },
 {
@@ -1048,12 +1048,12 @@ window.guncel_4_sorulari = [
     "question": "G7 toplantılarına aşağıdakilerden hangisi katılmaktadır?",
     "options": [
         "A) NATO",
-        "B) Avrupa Birliği",
+        "B) OPEC",
         "C) UNESCO",
         "D) OECD",
-        "E) OPEC"
+        "E) Avrupa Birliği"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 4,
     "explanation": "AB katılır."
 },
 {
@@ -1119,13 +1119,13 @@ window.guncel_4_sorulari = [
 {
     "question": "INTERPOL'ün merkezi aşağıdakilerden hangisidir?",
     "options": [
-        "A) Paris",
-        "B) Lyon",
+        "A) Lyon",
+        "B) Paris",
         "C) Cenevre",
         "D) Brüksel",
         "E) Londra"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Lyon / Fransa."
 },
 {
@@ -1181,11 +1181,11 @@ window.guncel_4_sorulari = [
     "options": [
         "A) İstanbul'da yapılması",
         "B) Ankara'da yapılması",
-        "C) Antalya'da yapılması",
+        "C) Bursa'da yapılması",
         "D) İzmir'de yapılması",
-        "E) Bursa'da yapılması"
+        "E) Antalya'da yapılması"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 4,
     "explanation": "Antalya."
 },
 {
@@ -1252,12 +1252,12 @@ window.guncel_4_sorulari = [
     "question": "Verilen notlara göre 2026 BRICS başkanlığını hangi ülke yürütmektedir?",
     "options": [
         "A) Çin",
-        "B) Hindistan",
+        "B) Güney Afrika",
         "C) Brezilya",
         "D) Rusya",
-        "E) Güney Afrika"
+        "E) Hindistan"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 4,
     "explanation": "Hindistan."
 },
 {

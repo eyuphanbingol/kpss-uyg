@@ -3,45 +3,45 @@ window.turkce_6_sorulari = [
 {
     "question": "En az iki sözcüğün tek bir varlığı karşıladığı söz gruplarına ne denir?",
     "options": [
-        "A) Sıfat grubu",
-        "B) Tamlama",
+        "A) Tamlama",
+        "B) Sıfat grubu",
         "C) Zarf grubu",
         "D) Fiil grubu"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Tamlamada tamlayan ve tamlanan vardır."
 },
 {
     "question": "Tamlamada belirten, genelde başta olan unsura ne denir?",
     "options": [
         "A) Tamlanan",
-        "B) Tamlayan",
+        "B) Özne",
         "C) Yüklem",
-        "D) Özne"
+        "D) Tamlayan"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "kitabın sayfası → kitabın tamlayan."
 },
 {
     "question": "Belirtili ad tamlamasında tamlayan hangi eki alır?",
     "options": [
-        "A) İyelik (-i)",
-        "B) İlgi (-in)",
+        "A) İlgi (-in)",
+        "B) İyelik (-i)",
         "C) Yönelme (-e)",
         "D) Belirtme (-i)"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Tamlayan -in, tamlanan iyelik eki alır."
 },
 {
     "question": "“Kitabın sayfası” hangi tamlama türüdür?",
     "options": [
         "A) Belirtisiz",
-        "B) Belirtili",
-        "C) Takısız",
+        "B) Takısız",
+        "C) Belirtili",
         "D) Zincirleme"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Her iki unsur da ek almış."
 },
 {
@@ -59,11 +59,11 @@ window.turkce_6_sorulari = [
     "question": "Belirtisiz ad tamlamasında tamlayan nasıl kalır?",
     "options": [
         "A) İlgi eki alır",
-        "B) Ek almaz",
-        "C) İyelik eki alır",
+        "B) İyelik eki alır",
+        "C) Ek almaz",
         "D) Çoğul eki alır"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Yalnız tamlanan iyelik eki alır."
 },
 {
@@ -80,45 +80,45 @@ window.turkce_6_sorulari = [
 {
     "question": "“Ne kapağı? → Kitap kapağı.” sorusu hangi tamlama türünü gösterir?",
     "options": [
-        "A) Belirtili",
-        "B) Belirtisiz",
+        "A) Belirtisiz",
+        "B) Belirtili",
         "C) Takısız",
         "D) Sıfat tamlaması"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Belirtisiz tamlamada tamlayan ne? sorusu sorulur."
 },
 {
     "question": "“Çiçekler bahçesi” cümlesi tamlama açısından nasıldır?",
     "options": [
         "A) Yanlış",
-        "B) Doğru; tamlayan çoğul olabilir",
+        "B) Takısız tamlamadır",
         "C) Belirtili tamlamadır",
-        "D) Takısız tamlamadır"
+        "D) Doğru; tamlayan çoğul olabilir"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Tamlayan çoğul olabilir; tamlanan tekil ekli kalır."
 },
 {
     "question": "“Mahalle bakkalının camı” hangi tamlama türüdür?",
     "options": [
-        "A) Belirtisiz",
-        "B) Zincirleme",
+        "A) Zincirleme",
+        "B) Belirtisiz",
         "C) Takısız",
         "D) Sıfat tamlaması"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "En az üç ad iç içe tamlama kurar."
 },
 {
     "question": "Takısız ad tamlamasının özelliği nedir?",
     "options": [
-        "A) Her iki unsur ek alır",
-        "B) Hiçbir unsur ek almaz",
+        "A) Hiçbir unsur ek almaz",
+        "B) Her iki unsur ek alır",
         "C) Yalnız tamlayan ek alır",
         "D) Yalnız tamlanan ek alır"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "İki ad yan yana, ek yok."
 },
 {
@@ -147,44 +147,44 @@ window.turkce_6_sorulari = [
     "question": "“Altın bileklik” ile “Yaşlı adam” karşılaştırmasında doğru olan hangisidir?",
     "options": [
         "A) İkisi de takısız tamlama",
-        "B) Birincisi takısız, ikincisi sıfat tamlaması",
+        "B) Birincisi sıfat, ikincisi takısız",
         "C) İkisi de sıfat tamlaması",
-        "D) Birincisi sıfat, ikincisi takısız"
+        "D) Birincisi takısız, ikincisi sıfat tamlaması"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Madde → takısız; nitelik → sıfat tamlaması."
 },
 {
     "question": "“Tilki adam” hangi tamlama türüdür?",
     "options": [
         "A) Sıfat tamlaması",
-        "B) Takısız (benzerlik)",
+        "B) Belirtisiz",
         "C) Belirtili",
-        "D) Belirtisiz"
+        "D) Takısız (benzerlik)"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Benzeri anlamında takısız tamlama."
 },
 {
     "question": "“Lambası yanıyordu köşkün.” cümlesinde tamlama yapısı nasıldır?",
     "options": [
-        "A) Bozulmuştur",
-        "B) Devrik; tamlama geçerlidir",
+        "A) Devrik; tamlama geçerlidir",
+        "B) Bozulmuştur",
         "C) Takısız tamlamadır",
         "D) Sıfat tamlamasıdır"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Şiirde/vurguda yer değişebilir."
 },
 {
     "question": "“Onun sözü geçer.” cümlesinde tamlayan hangi sözcük türünden olabilir?",
     "options": [
         "A) Yalnız ad",
-        "B) Zamir de olabilir",
+        "B) Edat",
         "C) Yalnız sıfat",
-        "D) Edat"
+        "D) Zamir de olabilir"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Onun kişi zamiri tamlayan olabilir."
 },
 {
@@ -202,22 +202,22 @@ window.turkce_6_sorulari = [
     "question": "“Şiirin ve hikâyenin kuralları.” cümlesinde kaç tamlayan vardır?",
     "options": [
         "A) Bir",
-        "B) İki",
-        "C) Üç",
+        "B) Üç",
+        "C) İki",
         "D) Hiç"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Şiirin ve hikâyenin iki tamlayan; kuralları tek tamlanan."
 },
 {
     "question": "“Çocuklardan bazıları gelmedi.” hangi tamlama yapısıdır?",
     "options": [
-        "A) Belirtisiz",
-        "B) Tamlayan -den almış (çıkma)",
+        "A) Tamlayan -den almış (çıkma)",
+        "B) Belirtisiz",
         "C) Takısız",
         "D) Sıfat tamlaması"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Tamlayan çocuklardan; tamlanan bazıları."
 },
 {
@@ -235,22 +235,22 @@ window.turkce_6_sorulari = [
     "question": "“Bir kış günü” ifadesi cümlede genelde hangi görevdedir?",
     "options": [
         "A) Ad tamlaması",
-        "B) Zarf (ne zaman?)",
+        "B) Yüklem",
         "C) Sıfat",
-        "D) Yüklem"
+        "D) Zarf (ne zaman?)"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Notlarda zarf görevinde örnek verilmiş."
 },
 {
     "question": "“Altın çağ” ifadesi hangi tamlama türüne yakındır?",
     "options": [
         "A) Takısız (madde)",
-        "B) Sıfat tamlaması (mecaz nitelik)",
-        "C) Belirtili",
+        "B) Belirtili",
+        "C) Sıfat tamlaması (mecaz nitelik)",
         "D) Zincirleme"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Altın nitelik bildiriyor; mecazda sıfat tamlaması."
 },
 {
@@ -268,11 +268,11 @@ window.turkce_6_sorulari = [
     "question": "Aşağıdakilerden hangisi belirtili ad tamlamasıdır?",
     "options": [
         "A) Deniz kenarı",
-        "B) Evin kapısı",
+        "B) Yaşlı adam",
         "C) Pamuk yorgan",
-        "D) Yaşlı adam"
+        "D) Evin kapısı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Evin ilgi, kapısı iyelik eki almış."
 },
 {
@@ -301,11 +301,11 @@ window.turkce_6_sorulari = [
     "question": "“Bunun rengi güzel.” cümlesinde “bunun” tamlayan olarak hangi tür zamirdir?",
     "options": [
         "A) Kişi",
-        "B) İşaret",
-        "C) Soru",
+        "B) Soru",
+        "C) İşaret",
         "D) Belgisiz"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Bunun işaret zamiri tamlayandır."
 },
 {
@@ -334,55 +334,55 @@ window.turkce_6_sorulari = [
     "question": "“Kiminin duası kabul olur.” cümlesinde tamlama türü nedir?",
     "options": [
         "A) Belirtisiz",
-        "B) Belirtili",
-        "C) Takısız",
+        "B) Takısız",
+        "C) Belirtili",
         "D) Sıfat tamlaması"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Kiminin ilgi eki almış; belirtili tamlama."
 },
 {
     "question": "Tamlama özeti: belirtili tamlamada hangi ekler görülür?",
     "options": [
         "A) Yalnız iyelik",
-        "B) Tamlayan ilgi + tamlanan iyelik",
-        "C) Hiç ek yok",
+        "B) Hiç ek yok",
+        "C) Tamlayan ilgi + tamlanan iyelik",
         "D) Yalnız ilgi"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "kitabın sayfası modeli."
 },
 {
     "question": "“Öğrencilerden birkaçı konuştu.” cümlesinde tamlanan hangi sözcük türünden türemiştir?",
     "options": [
-        "A) Ad",
-        "B) Belgisiz zamir",
+        "A) Belgisiz zamir",
+        "B) Ad",
         "C) Sıfat",
         "D) Fiil"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Birkaçı belgisiz zamir tamlanan."
 },
 {
     "question": "Aşağıdakilerden hangisi doğrudur?",
     "options": [
         "A) Tamlama en az üç sözcükten oluşur.",
-        "B) Tamlayan her zaman addır veya zamirdir.",
+        "B) Topluluk adı tamlama kuramaz.",
         "C) Takısız tamlamada ek vardır.",
-        "D) Topluluk adı tamlama kuramaz."
+        "D) Tamlayan her zaman addır veya zamirdir."
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Tamlayan ad veya zamir olabilir."
 },
 {
     "question": "“Kurt adam” ifadesi hangi tamlama türüdür?",
     "options": [
         "A) Sıfat tamlaması",
-        "B) Takısız (benzerlik)",
+        "B) Zincirleme",
         "C) Belirtili",
-        "D) Zincirleme"
+        "D) Takısız (benzerlik)"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 3,
     "explanation": "Kurt benzerliği; takısız tamlama."
 }
 ];

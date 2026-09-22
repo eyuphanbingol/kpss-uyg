@@ -77,23 +77,23 @@ window.tarih_22_sorulari = [
     "options": [
         "A) Afife Jale",
         "B) Satı Çırpan",
-        "C) Keriman Halis Ece",
-        "D) Pakize İzzet Tarzi",
+        "C) Pakize İzzet Tarzi",
+        "D) Keriman Halis Ece",
         "E) Sadiye Hanım"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Keriman Halis Ece dünya güzelidir."
 },
 {
     "question": "Kadın doğum uzmanı olarak öne çıkan isim aşağıdakilerden hangisidir?",
     "options": [
         "A) Beyhan Hanım",
-        "B) Pakize İzzet Tarzi",
+        "B) Gül Esin",
         "C) Sabiha Güreyman",
         "D) Safiye Hüseyin Elbi",
-        "E) Gül Esin"
+        "E) Pakize İzzet Tarzi"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 4,
     "explanation": "Pakize İzzet Tarzi kadın doğum uzmanıdır."
 },
 {
@@ -124,12 +124,12 @@ window.tarih_22_sorulari = [
     "question": "İlk kadın muhtar olarak öne çıkan isim aşağıdakilerden hangisidir?",
     "options": [
         "A) Sadiye Hanım",
-        "B) Gül Esin",
+        "B) Tansu Çiller",
         "C) Satı Çırpan",
         "D) Beyhan Hanım",
-        "E) Tansu Çiller"
+        "E) Gül Esin"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 4,
     "explanation": "Gül Esin muhtardır."
 },
 {
@@ -148,12 +148,12 @@ window.tarih_22_sorulari = [
     "question": "Mühendis olarak öne çıkan kadın aşağıdakilerden hangisidir?",
     "options": [
         "A) Sabiha Gökçen",
-        "B) Sabiha Güreyman",
+        "B) Safiye Hüseyin Elbi",
         "C) Beyhan Hanım",
         "D) Pakize İzzet Tarzi",
-        "E) Safiye Hüseyin Elbi"
+        "E) Sabiha Güreyman"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 4,
     "explanation": "Sabiha Güreyman mühendistir."
 },
 {
@@ -184,12 +184,12 @@ window.tarih_22_sorulari = [
     "question": "Türk Beşleri'nin en yaşlı üyesi olup 10. Yıl Marşı ve Lüküs Hayat operetinin bestecisi kimdir?",
     "options": [
         "A) Ahmet Adnan Saygun",
-        "B) Cemal Reşit Rey",
+        "B) Necil Kazım Akses",
         "C) Ulvi Cemal Erkin",
         "D) Hasan Ferit Alnar",
-        "E) Necil Kazım Akses"
+        "E) Cemal Reşit Rey"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 4,
     "explanation": "Cemal Reşit Rey en yaşlı üyedir; 10. Yıl Marşı ve Lüküs Hayat onundur."
 },
 {
@@ -280,12 +280,12 @@ window.tarih_22_sorulari = [
     "question": "Yaban ve Ankara romanlarının yazarı aşağıdakilerden hangisidir?",
     "options": [
         "A) Halide Edip Adıvar",
-        "B) Yakup Kadri Karaosmanoğlu",
+        "B) Falih Rıfkı Atay",
         "C) Kemal Tahir",
         "D) Tarık Buğra",
-        "E) Falih Rıfkı Atay"
+        "E) Yakup Kadri Karaosmanoğlu"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 4,
     "explanation": "Yakup Kadri: Düşmanın Yaktığı Köyler Ahalisine, Yaban, Ankara."
 },
 {
@@ -304,12 +304,12 @@ window.tarih_22_sorulari = [
     "question": "Zeytindağı ve Çankaya eserleri kime aittir?",
     "options": [
         "A) Kâzım Karabekir",
-        "B) Falih Rıfkı Atay",
+        "B) Tarık Buğra",
         "C) Şevket Süreyya Aydemir",
         "D) Kemal Tahir",
-        "E) Tarık Buğra"
+        "E) Falih Rıfkı Atay"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 4,
     "explanation": "Falih Rıfkı Atay: Zeytindağı, Çankaya."
 },
 {
@@ -364,12 +364,12 @@ window.tarih_22_sorulari = [
     "question": "Sınıf Arkadaşım Atatürk eserinin yazarı aşağıdakilerden hangisidir?",
     "options": [
         "A) Kemal Arıburnu",
-        "B) Ali Fuat Cebesoy",
+        "B) Şevket Süreyya Aydemir",
         "C) Kâzım Karabekir",
         "D) Falih Rıfkı Atay",
-        "E) Şevket Süreyya Aydemir"
+        "E) Ali Fuat Cebesoy"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 4,
     "explanation": "Ali Fuat Cebesoy — Sınıf Arkadaşım Atatürk."
 },
 {

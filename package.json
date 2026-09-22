@@ -1,5 +1,11 @@
 {
   "dependencies": {
     "@resvg/resvg-js": "^2.6.2"
+  },
+  "devDependencies": {
+    "@babel/standalone": "7.29.9"
+  },
+  "scripts": {
+    "build:jsx": "node scripts/build-jsx.js"
   }
 }

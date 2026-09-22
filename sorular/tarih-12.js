@@ -4,7 +4,7 @@ window.tarih_12_sorulari = [
     // BÖLÜM 1: MONDROS ATEŞKES ANTLAŞMASI (Soru 1-19)
     // ============================================================
     {
-        question: "Soru 1: Mondros Ateşkes Antlaşması'nın aşağıdaki hükümlerinden hangisi Osmanlı Devleti'nin toprak bütünlüğünü doğrudan tehdit eden ve İtilaf Devletlerine geniş kapsamlı işgal imkânı sağlayan niteliktedir?",
+        question: "Mondros Ateşkes Antlaşması'nın aşağıdaki hükümlerinden hangisi Osmanlı Devleti'nin toprak bütünlüğünü doğrudan tehdit eden ve İtilaf Devletlerine geniş kapsamlı işgal imkânı sağlayan niteliktedir?",
         options: [
             "A) Osmanlı ordusunun terhis edilmesi",
             "B) Toros tünellerinin İtilaf Devletlerince işgal edilmesi",
@@ -16,7 +16,7 @@ window.tarih_12_sorulari = [
         explanation: "Antlaşmanın 7. maddesi, İtilaf Devletlerine güvenliklerini tehdit eden bir durumda herhangi bir stratejik bölgeyi işgal etme yetkisi vermiştir. Bu madde, Anadolu'nun işgale açık hâle gelmesine zemin hazırlamıştır."
     },
     {
-        question: "Soru 2: Mustafa Kemal'in Mondros Ateşkes Antlaşması'nın 7. maddesi için 'beyni ateşten yakan bir zehir' ifadesini kullanmasının temel nedeni aşağıdakilerden hangisidir?",
+        question: "Mustafa Kemal'in Mondros Ateşkes Antlaşması'nın 7. maddesi için 'beyni ateşten yakan bir zehir' ifadesini kullanmasının temel nedeni aşağıdakilerden hangisidir?",
         options: [
             "A) Osmanlı ordusunun tamamen dağıtılmasını öngörmesi",
             "B) İtilaf Devletlerine istedikleri Osmanlı toprağını işgal etme fırsatı vermesi",
@@ -28,7 +28,7 @@ window.tarih_12_sorulari = [
         explanation: "Mustafa Kemal, 7. maddenin İtilaf Devletlerine Anadolu'nun herhangi bir yerini işgal etme fırsatı vermesi nedeniyle bu ifadeyi kullanmıştır. Bu madde, Osmanlı Devleti'nin toprak bütünlüğünü tehdit eden en tehlikeli hükümdür."
     },
     {
-        question: "Soru 3: Mondros Ateşkes Antlaşması'nın 'İtilaf Devletleri, güvenliklerini tehdit eden bir durum ortaya çıkarsa herhangi bir stratejik noktayı işgal edebilecektir.' hükmü aşağıdakilerden hangisine ortam hazırlamıştır?",
+        question: "Mondros Ateşkes Antlaşması'nın 'İtilaf Devletleri, güvenliklerini tehdit eden bir durum ortaya çıkarsa herhangi bir stratejik noktayı işgal edebilecektir.' hükmü aşağıdakilerden hangisine ortam hazırlamıştır?",
         options: [
             "A) Osmanlı Devleti'nin savaş gücünü artırmasına",
             "B) Millî cemiyetlerin faaliyetlerinin sona ermesine",
@@ -40,19 +40,19 @@ window.tarih_12_sorulari = [
         explanation: "Bu madde, İtilaf Devletlerine Anadolu'da istedikleri bölgeyi işgal etme yetkisi vererek Anadolu'nun işgallere açık hâle gelmesine neden olmuştur."
     },
     {
-        question: "Soru 4: Mondros Ateşkes Antlaşması'nda Vilayet-i Sitte'de bir karışıklık çıkması hâlinde bu bölgelerin işgal edilebileceğinin belirtilmesinin temel amacı aşağıdakilerden hangisidir?",
+        question: "Mondros Ateşkes Antlaşması'nda Vilayet-i Sitte'de bir karışıklık çıkması hâlinde bu bölgelerin işgal edilebileceğinin belirtilmesinin temel amacı aşağıdakilerden hangisidir?",
         options: [
-            "A) Anadolu'da bir Ermeni devletinin kurulmasına zemin hazırlamak",
+            "A) Osmanlı Devleti'nin askerî gücünü korumak",
             "B) İtalya'nın Akdeniz'deki etkinliğini artırmak",
             "C) Yunanistan'ın Batı Anadolu'daki hâkimiyetini genişletmek",
-            "D) Osmanlı Devleti'nin askerî gücünü korumak",
+            "D) Anadolu'da bir Ermeni devletinin kurulmasına zemin hazırlamak",
             "E) Boğazların Osmanlı denetiminde kalmasını sağlamak"
         ],
-        correctAnswerIndex: 0,
+        correctAnswerIndex: 3,
         explanation: "Vilayet-i Sitte (Erzurum, Van, Bitlis, Diyarbakır, Harput ve Sivas), Ermeni nüfusun yoğun olduğu iddia edilen bölgelerdir. Bu madde, Doğu Anadolu'da bir Ermeni devleti kurulmasına zemin hazırlamayı amaçlamıştır."
     },
     {
-        question: "Soru 5: Mondros Ateşkes Antlaşması'nın 24. maddesi ile aşağıdakilerden hangisinin gerçekleştirilmesinin amaçlandığı söylenebilir?",
+        question: "Mondros Ateşkes Antlaşması'nın 24. maddesi ile aşağıdakilerden hangisinin gerçekleştirilmesinin amaçlandığı söylenebilir?",
         options: [
             "A) Büyük bir Ermeni devletinin kurulması",
             "B) Büyük bir Yunan devletinin kurulması",
@@ -64,19 +64,19 @@ window.tarih_12_sorulari = [
         explanation: "Antlaşmanın 24. maddesi, Vilayet-i Sitte'de bir karışıklık çıkması durumunda işgal hakkı tanımıştır. Bu, Doğu Anadolu'da büyük bir Ermeni devleti kurulmasına yönelik planların parçasıdır."
     },
     {
-        question: "Soru 6: Aşağıdakilerden hangisi Mondros Ateşkes Antlaşması'nın askerî hükümlerinden biridir?",
+        question: "Aşağıdakilerden hangisi Mondros Ateşkes Antlaşması'nın askerî hükümlerinden biridir?",
         options: [
             "A) Osmanlı Devleti'nin ihraç ettiği enerji ürünlerinin dışarı satılmasının yasaklanması",
-            "B) Osmanlı ordusunun terhis edilmesi",
+            "B) Osmanlı Devleti'nin kapitülasyonları kaldırması",
             "C) Haberleşme araçlarının denetiminin Osmanlı Devleti'ne bırakılması",
-            "D) Osmanlı Devleti'nin kapitülasyonları kaldırması",
+            "D) Osmanlı ordusunun terhis edilmesi",
             "E) Vilayet-i Sitte'de yeni yönetimler kurulması"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Mondros Ateşkes Antlaşması'nın askerî hükümleri arasında Osmanlı ordusunun terhis edilmesi, donanmanın İtilaf Devletlerine teslim edilmesi ve stratejik noktaların işgal edilebilmesi yer alır."
     },
     {
-        question: "Soru 7: Mondros Ateşkes Antlaşması ile aşağıdakilerden hangisinin İtilaf Devletlerinin kontrolüne bırakılması Osmanlı Devleti'nin iletişim ve ulaşım alanındaki bağımsızlığını zedelemiştir?",
+        question: "Mondros Ateşkes Antlaşması ile aşağıdakilerden hangisinin İtilaf Devletlerinin kontrolüne bırakılması Osmanlı Devleti'nin iletişim ve ulaşım alanındaki bağımsızlığını zedelemiştir?",
         options: [
             "A) Yalnızca demir yollarının",
             "B) Yalnızca limanların",
@@ -88,19 +88,19 @@ window.tarih_12_sorulari = [
         explanation: "Antlaşma, haberleşme araçlarının İtilaf Devletlerinin denetimine bırakılmasını öngörmüştür. Bu durum, Osmanlı Devleti'nin iletişim ve ulaşım alanındaki bağımsızlığını zedelemiştir."
     },
     {
-        question: "Soru 8: Mondros Ateşkes Antlaşması sonrasında Osmanlı Devleti'nin elindeki esirlerin serbest bırakılması ve İttifak Devletleri'ne ait asker, subay ve diplomatların sınır dışına çıkarılması aşağıdakilerden hangisinin göstergesidir?",
+        question: "Mondros Ateşkes Antlaşması sonrasında Osmanlı Devleti'nin elindeki esirlerin serbest bırakılması ve İttifak Devletleri'ne ait asker, subay ve diplomatların sınır dışına çıkarılması aşağıdakilerden hangisinin göstergesidir?",
         options: [
             "A) Osmanlı Devleti'nin savaş gücünün artırıldığının",
-            "B) İtilaf Devletlerinin Osmanlı üzerindeki denetimini artırdığının",
+            "B) Saltanatın yetkilerinin genişletildiğinin",
             "C) Osmanlı Devleti'nin toprak kazandığının",
             "D) Millî cemiyetlerin devlet tarafından desteklendiğinin",
-            "E) Saltanatın yetkilerinin genişletildiğinin"
+            "E) İtilaf Devletlerinin Osmanlı üzerindeki denetimini artırdığının"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "Esirlerin serbest bırakılması ve İttifak Devletleri askerlerinin sınır dışı edilmesi, İtilaf Devletlerinin Osmanlı üzerindeki denetimini artırdığını göstermektedir."
     },
     {
-        question: "Soru 9: Mondros Ateşkes Antlaşması sırasında Osmanlı Devleti'ni temsil eden ve antlaşmayı imzalayan kişi aşağıdakilerden hangisidir?",
+        question: "Mondros Ateşkes Antlaşması sırasında Osmanlı Devleti'ni temsil eden ve antlaşmayı imzalayan kişi aşağıdakilerden hangisidir?",
         options: [
             "A) Mustafa Kemal Paşa",
             "B) Ahmet İzzet Paşa",
@@ -112,7 +112,7 @@ window.tarih_12_sorulari = [
         explanation: "Mondros Ateşkes Antlaşması, 30 Ekim 1918'de Osmanlı Devleti adına Bahriye Nazırı Rauf Orbay tarafından imzalanmıştır."
     },
     {
-        question: "Soru 10: Mondros Ateşkes Antlaşması'nın imzalanmasından sonra Rauf Orbay'ın yaptığı değerlendirmede;\n\nI. devletin bağımsızlığının korunduğu,\nII. saltanatın haklarının korunduğu,\nIII. İstanbul'a düşman askerinin çıkmayacağı\n\ndüşüncelerinden hangilerini savunduğu söylenebilir?",
+        question: "Mondros Ateşkes Antlaşması'nın imzalanmasından sonra Rauf Orbay'ın yaptığı değerlendirmede;\n\nI. devletin bağımsızlığının korunduğu,\nII. saltanatın haklarının korunduğu,\nIII. İstanbul'a düşman askerinin çıkmayacağı\n\ndüşüncelerinden hangilerini savunduğu söylenebilir?",
         options: [
             "A) Yalnız I",
             "B) Yalnız II",
@@ -124,7 +124,7 @@ window.tarih_12_sorulari = [
         explanation: "Rauf Orbay, Mondros Ateşkes Antlaşması'nı imzaladıktan sonra devletin bağımsızlığının korunduğunu, saltanat haklarının devam ettiğini ve İstanbul'a düşman askerinin çıkmayacağını savunmuştur. Ancak bu değerlendirmeler gerçekle örtüşmemiştir."
     },
     {
-        question: "Soru 11: Mustafa Kemal'in Mondros sonrasında Ahmet İzzet Paşa'ya gönderdiği mesajlarda İngilizlerin isteklerine sürekli boyun eğilmesinin Anadolu'nun tamamının işgaline yol açabileceğini belirtmesi, onun aşağıdakilerden hangisini önceden gördüğünü gösterir?",
+        question: "Mustafa Kemal'in Mondros sonrasında Ahmet İzzet Paşa'ya gönderdiği mesajlarda İngilizlerin isteklerine sürekli boyun eğilmesinin Anadolu'nun tamamının işgaline yol açabileceğini belirtmesi, onun aşağıdakilerden hangisini önceden gördüğünü gösterir?",
         options: [
             "A) Saltanatın kaldırılacağını",
             "B) İtilaf Devletleri arasında birlik kurulacağını",
@@ -136,7 +136,7 @@ window.tarih_12_sorulari = [
         explanation: "Mustafa Kemal, Mondros'un 7. maddesinin işgallere zemin hazırladığını öngörmüş ve Ahmet İzzet Paşa'yı uyarmıştır. İlerleyen süreçte bu uyarısının haklı çıktığı görülmüştür."
     },
     {
-        question: "Soru 12: Mondros Ateşkes Antlaşması sonrasında Osmanlı Devleti'nin ilk işgale uğrayan toprağı aşağıdakilerden hangisidir?",
+        question: "Mondros Ateşkes Antlaşması sonrasında Osmanlı Devleti'nin ilk işgale uğrayan toprağı aşağıdakilerden hangisidir?",
         options: [
             "A) İzmir",
             "B) Musul",
@@ -148,7 +148,7 @@ window.tarih_12_sorulari = [
         explanation: "Mondros sonrasında Osmanlı Devleti'nin ilk işgale uğrayan toprağı 3 Kasım 1918'de İngilizler tarafından işgal edilen Musul'dur."
     },
     {
-        question: "Soru 13: Anadolu'da Mondros sonrasında gerçekleşen ilk işgal aşağıdakilerden hangisidir?",
+        question: "Anadolu'da Mondros sonrasında gerçekleşen ilk işgal aşağıdakilerden hangisidir?",
         options: [
             "A) İzmir'in Yunanistan tarafından işgali",
             "B) İstanbul'un İtilaf Devletleri tarafından işgali",
@@ -160,19 +160,19 @@ window.tarih_12_sorulari = [
         explanation: "Anadolu'da gerçekleşen ilk işgal, 13 Kasım 1918'de Fransızların Dörtyol'u işgal etmesidir. Bu işgal, Anadolu'daki silahlı direnişin de başlangıcı olmuştur."
     },
     {
-        question: "Soru 14: Dörtyol'da Fransızlara karşı gerçekleştirilen ilk silahlı direniş aşağıdaki kişilerden hangisiyle ilişkilidir?",
+        question: "Dörtyol'da Fransızlara karşı gerçekleştirilen ilk silahlı direniş aşağıdaki kişilerden hangisiyle ilişkilidir?",
         options: [
             "A) Hasan Tahsin",
-            "B) Kara Mehmet Çavuş",
+            "B) Kara Vasif",
             "C) Rauf Orbay",
-            "D) Kara Vasif",
+            "D) Kara Mehmet Çavuş",
             "E) Faik Kaltakkıran"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Dörtyol'da Fransızlara karşı ilk silahlı direnişi Kara Mehmet Çavuş başlatmıştır. Bu, Anadolu'daki ilk silahlı direniş olarak kabul edilir."
     },
     {
-        question: "Soru 15: Mondros sonrasında aşağıdaki bölgelerden hangisinin Yunanistan tarafından işgal edilmesi söz konusu olmuştur?",
+        question: "Mondros sonrasında aşağıdaki bölgelerden hangisinin Yunanistan tarafından işgal edilmesi söz konusu olmuştur?",
         options: [
             "A) İzmir ve çevresi ile Doğu Trakya",
             "B) Konya ve çevresi ile Antalya",
@@ -184,7 +184,7 @@ window.tarih_12_sorulari = [
         explanation: "Yunanistan, Megali İdea hedefi doğrultusunda İzmir ve çevresi ile Doğu Trakya'yı işgal etmiştir."
     },
     {
-        question: "Soru 16: Mondros sonrasında Anadolu'nun güneybatısında Konya'ya kadar uzanan bölgede işgal faaliyetlerinde bulunan devlet aşağıdakilerden hangisidir?",
+        question: "Mondros sonrasında Anadolu'nun güneybatısında Konya'ya kadar uzanan bölgede işgal faaliyetlerinde bulunan devlet aşağıdakilerden hangisidir?",
         options: [
             "A) İngiltere",
             "B) Fransa",
@@ -196,7 +196,7 @@ window.tarih_12_sorulari = [
         explanation: "İtalya, Mondros sonrasında Anadolu'nun güneybatısında Antalya, Konya ve çevresine kadar uzanan bölgede işgal faaliyetlerinde bulunmuştur."
     },
     {
-        question: "Soru 17: Anadolu'nun güneyinde Mondros sonrasında gerçekleşen işgallerle ilgili aşağıdakilerden hangisi doğrudur?",
+        question: "Anadolu'nun güneyinde Mondros sonrasında gerçekleşen işgallerle ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
             "A) Bölge yalnızca İtalya tarafından işgal edilmiştir.",
             "B) Bölge önce Fransa, daha sonra İngiltere tarafından işgal edilmiştir.",
@@ -208,19 +208,19 @@ window.tarih_12_sorulari = [
         explanation: "Anadolu'nun güneyi (Adana, Antep, Maraş, Urfa) önce İngiltere, daha sonra Fransa tarafından işgal edilmiştir. Fransızlar, İngilizlerden devraldıkları bu bölgelerde işgal yönetimi kurmuştur."
     },
     {
-        question: "Soru 18: Yunanistan'ın Millî Mücadele dönemindeki temel hedeflerinden biri aşağıdakilerden hangisidir?",
+        question: "Yunanistan'ın Millî Mücadele dönemindeki temel hedeflerinden biri aşağıdakilerden hangisidir?",
         options: [
             "A) Osmanlı Devleti'nin ekonomik bağımsızlığını sağlamak",
-            "B) Eski Bizans İmparatorluğu'nu yeniden canlandırmak",
+            "B) Boğazları Osmanlı Devleti'ne bırakmak",
             "C) Anadolu'da bir Ermeni devleti kurmak",
-            "D) Boğazları Osmanlı Devleti'ne bırakmak",
+            "D) Eski Bizans İmparatorluğu'nu yeniden canlandırmak",
             "E) Anadolu'da Türk hâkimiyetini güçlendirmek"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Yunanistan'ın temel hedefi, Megali İdea doğrultusunda eski Bizans İmparatorluğu'nu yeniden canlandırarak Batı Anadolu ve Trakya'da hâkimiyet kurmaktı."
     },
     {
-        question: "Soru 19: Yunanistan'ın eski Bizans İmparatorluğu'nu yeniden canlandırma düşüncesini ifade eden kavram aşağıdakilerden hangisidir?",
+        question: "Yunanistan'ın eski Bizans İmparatorluğu'nu yeniden canlandırma düşüncesini ifade eden kavram aşağıdakilerden hangisidir?",
         options: [
             "A) Megali İdea",
             "B) Manda",
@@ -236,19 +236,19 @@ window.tarih_12_sorulari = [
     // BÖLÜM 2: PARİS BARIŞ KONFERANSI (Soru 20-26)
     // ============================================================
     {
-        question: "Soru 20: Paris Barış Konferansı'nın temel amacı aşağıdakilerden hangisidir?",
+        question: "Paris Barış Konferansı'nın temel amacı aşağıdakilerden hangisidir?",
         options: [
             "A) Osmanlı Devleti'ni yeniden savaşa sokmak",
-            "B) Yenen ve yenilen devletler arasındaki barış antlaşmalarını belirlemek",
+            "B) Osmanlı Devleti'nin anayasal düzenini değiştirmek",
             "C) Millî cemiyetleri tek çatı altında birleştirmek",
-            "D) Osmanlı Devleti'nin anayasal düzenini değiştirmek",
+            "D) Yenen ve yenilen devletler arasındaki barış antlaşmalarını belirlemek",
             "E) Anadolu'daki işgalleri sona erdirmek"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Paris Barış Konferansı (1919), I. Dünya Savaşı sonunda yenilen devletlerle yapılacak barış antlaşmalarını belirlemek amacıyla toplanmıştır."
     },
     {
-        question: "Soru 21: Paris Barış Konferansı'nın önemli sonuçlarından biri aşağıdakilerden hangisidir?",
+        question: "Paris Barış Konferansı'nın önemli sonuçlarından biri aşağıdakilerden hangisidir?",
         options: [
             "A) İtilaf Devletleri arasındaki görüş ayrılıklarının ortaya çıkması",
             "B) Osmanlı Devleti'nin savaştan galip çıkması",
@@ -260,7 +260,7 @@ window.tarih_12_sorulari = [
         explanation: "Paris Barış Konferansı'nda İtilaf Devletleri arasında Osmanlı topraklarının paylaşımı konusunda görüş ayrılıkları ortaya çıkmıştır. Bu durum, Millî Mücadele'nin başarısında etkili olmuştur."
     },
     {
-        question: "Soru 22: Paris Barış Konferansı sonucunda kurulan ve uluslararası barışın korunması amacı taşıyan kuruluş aşağıdakilerden hangisidir?",
+        question: "Paris Barış Konferansı sonucunda kurulan ve uluslararası barışın korunması amacı taşıyan kuruluş aşağıdakilerden hangisidir?",
         options: [
             "A) Birleşmiş Milletler",
             "B) Avrupa Konseyi",
@@ -272,7 +272,7 @@ window.tarih_12_sorulari = [
         explanation: "Paris Barış Konferansı sonucunda Milletler Cemiyeti (Cemiyet-i Akvam) kurulmuştur. Ancak ABD, konferans sonunda cemiyete katılmamıştır."
     },
     {
-        question: "Soru 23: Milletler Cemiyeti ile ilgili aşağıdakilerden hangisi doğrudur?",
+        question: "Milletler Cemiyeti ile ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
             "A) ABD kuruluşundan itibaren üyedir.",
             "B) Paris Barış Konferansı sonucunda oluşturulmuştur.",
@@ -284,7 +284,7 @@ window.tarih_12_sorulari = [
         explanation: "Milletler Cemiyeti, Paris Barış Konferansı sonucunda oluşturulmuştur. ABD kuruluşuna katılmamış, cemiyet uluslararası nitelik taşımıştır."
     },
     {
-        question: "Soru 24: I. Dünya Savaşı sonrasında Almanya ile imzalanan barış antlaşması aşağıdakilerden hangisidir?",
+        question: "I. Dünya Savaşı sonrasında Almanya ile imzalanan barış antlaşması aşağıdakilerden hangisidir?",
         options: [
             "A) Trianon",
             "B) Neuilly",
@@ -296,7 +296,7 @@ window.tarih_12_sorulari = [
         explanation: "Almanya ile Versay Antlaşması (28 Haziran 1919) imzalanmıştır. Bu antlaşma, Almanya'ya ağır şartlar getirmiştir."
     },
     {
-        question: "Soru 25: Aşağıdaki devlet-antlaşma eşleştirmelerinden hangisi yanlıştır?",
+        question: "Aşağıdaki devlet-antlaşma eşleştirmelerinden hangisi yanlıştır?",
         options: [
             "A) Almanya — Versay",
             "B) Avusturya — Sen Jermen",
@@ -308,15 +308,15 @@ window.tarih_12_sorulari = [
         explanation: "Trianon Antlaşması Macaristan ile imzalanmıştır. Almanya ile Versay Antlaşması imzalanmıştır."
     },
     {
-        question: "Soru 26: Savaştan yeni çıkan veya yeni kurulan devletlerin yönetimlerinin manda ve himaye sistemiyle düzenlenmesi düşüncesini Paris Barış Konferansı'nda gündeme getiren isim aşağıdakilerden hangisidir?",
+        question: "Savaştan yeni çıkan veya yeni kurulan devletlerin yönetimlerinin manda ve himaye sistemiyle düzenlenmesi düşüncesini Paris Barış Konferansı'nda gündeme getiren isim aşağıdakilerden hangisidir?",
         options: [
             "A) Amiral Bristol",
-            "B) Jan Smuts",
+            "B) Venizelos",
             "C) Amiral Calthorpe",
-            "D) Venizelos",
+            "D) Jan Smuts",
             "E) Rauf Orbay"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Güney Afrikalı devlet adamı Jan Smuts, Paris Barış Konferansı'nda manda ve himaye sistemini gündeme getirmiştir."
     },
 
@@ -324,7 +324,7 @@ window.tarih_12_sorulari = [
     // BÖLÜM 3: İZMİR'İN İŞGALİ VE AMİRAL BRISTOL RAPORU (Soru 27-31)
     // ============================================================
     {
-        question: "Soru 27: İzmir'in Yunanlar tarafından işgaline karşı ilk kurşunu atan kişi aşağıdakilerden hangisidir?",
+        question: "İzmir'in Yunanlar tarafından işgaline karşı ilk kurşunu atan kişi aşağıdakilerden hangisidir?",
         options: [
             "A) Kara Mehmet Çavuş",
             "B) Hasan Tahsin",
@@ -336,7 +336,7 @@ window.tarih_12_sorulari = [
         explanation: "İzmir'in 15 Mayıs 1919'da Yunanistan tarafından işgaline karşı Hasan Tahsin, ilk kurşunu atarak işgale karşı direnişin sembolü olmuştur."
     },
     {
-        question: "Soru 28: Hasan Tahsin'in İzmir'in işgali sırasında ilk kurşunu atması aşağıdakilerden hangisinin göstergesidir?",
+        question: "Hasan Tahsin'in İzmir'in işgali sırasında ilk kurşunu atması aşağıdakilerden hangisinin göstergesidir?",
         options: [
             "A) İşgallere karşı silahlı direnişin başladığının",
             "B) İstanbul Hükûmeti'nin işgalleri kabul ettiğinin",
@@ -348,7 +348,7 @@ window.tarih_12_sorulari = [
         explanation: "Hasan Tahsin'in ilk kurşunu atması, Anadolu'daki işgallere karşı silahlı direnişin başladığını göstermektedir."
     },
     {
-        question: "Soru 29: İzmir'in işgalinin haksız olduğunu ortaya koyan ilk uluslararası rapor aşağıdakilerden hangisidir?",
+        question: "İzmir'in işgalinin haksız olduğunu ortaya koyan ilk uluslararası rapor aşağıdakilerden hangisidir?",
         options: [
             "A) Wilson Raporu",
             "B) Bristol Raporu",
@@ -360,7 +360,7 @@ window.tarih_12_sorulari = [
         explanation: "Amiral Bristol Raporu, İzmir'deki işgalin haksız olduğunu ve Yunan mezalimini uluslararası düzeyde ortaya koyan ilk rapordur."
     },
     {
-        question: "Soru 30: Amiral Bristol Raporu'nun Millî Mücadele açısından önemi aşağıdakilerden hangisidir?",
+        question: "Amiral Bristol Raporu'nun Millî Mücadele açısından önemi aşağıdakilerden hangisidir?",
         options: [
             "A) Osmanlı ordusunun terhis edilmesini sağlaması",
             "B) İzmir işgalinin haklılığını savunması",
@@ -372,7 +372,7 @@ window.tarih_12_sorulari = [
         explanation: "Bristol Raporu, İzmir işgalinin haksızlığını ve Yunan mezalimini belgeleyerek Millî Mücadele'nin haklılığını uluslararası düzeyde ortaya koymuştur."
     },
     {
-        question: "Soru 31: İzmir'in işgali sırasında Yunan askerlerinin 'Zito Venizelos' demesi yönündeki isteğini kabul etmeyen ve bu nedenle şehit edilen Osmanlı subayı aşağıdakilerden hangisidir?",
+        question: "İzmir'in işgali sırasında Yunan askerlerinin 'Zito Venizelos' demesi yönündeki isteğini kabul etmeyen ve bu nedenle şehit edilen Osmanlı subayı aşağıdakilerden hangisidir?",
         options: [
             "A) Süleyman Fethi Bey",
             "B) Kara Vasif",
@@ -388,7 +388,7 @@ window.tarih_12_sorulari = [
     // BÖLÜM 4: YARARLI CEMİYETLER (Soru 32-50)
     // ============================================================
     {
-        question: "Soru 32: Millî varlığa yararlı cemiyetlerin ortak özellikleri arasında aşağıdakilerden hangisi gösterilemez?",
+        question: "Millî varlığa yararlı cemiyetlerin ortak özellikleri arasında aşağıdakilerden hangisi gösterilemez?",
         options: [
             "A) Bölgelerinin Türklüğünü kanıtlamaya çalışmaları",
             "B) Wilson İlkeleri'nin ilgili hükümlerinden yararlanmaya çalışmaları",
@@ -400,7 +400,7 @@ window.tarih_12_sorulari = [
         explanation: "Yararlı cemiyetler işgallere karşı mücadele etmiş, Osmanlı Devleti'nin işgalini desteklememiştir. Bu nedenle bu seçenek yararlı cemiyetlerin özelliği değildir."
     },
     {
-        question: "Soru 33: Millî varlığa yararlı cemiyetlerin daha sonra tek bir çatı altında birleştirilmesiyle oluşan kuruluş aşağıdakilerden hangisidir?",
+        question: "Millî varlığa yararlı cemiyetlerin daha sonra tek bir çatı altında birleştirilmesiyle oluşan kuruluş aşağıdakilerden hangisidir?",
         options: [
             "A) Hürriyet ve İtilaf Fırkası",
             "B) Anadolu ve Rumeli Müdafaa-i Hukuk Cemiyeti",
@@ -412,7 +412,7 @@ window.tarih_12_sorulari = [
         explanation: "Millî varlığa yararlı cemiyetler, Sivas Kongresi'nde Anadolu ve Rumeli Müdafaa-i Hukuk Cemiyeti çatısı altında birleştirilmiştir."
     },
     {
-        question: "Soru 34: İzmir'in Yunanistan tarafından işgal edilmesini önlemek amacıyla faaliyet gösteren cemiyet aşağıdakilerden hangisidir?",
+        question: "İzmir'in Yunanistan tarafından işgal edilmesini önlemek amacıyla faaliyet gösteren cemiyet aşağıdakilerden hangisidir?",
         options: [
             "A) Trabzon Müdafaa-i Hukuk Cemiyeti",
             "B) İzmir Müdafaa-i Hukuk Cemiyeti",
@@ -424,43 +424,43 @@ window.tarih_12_sorulari = [
         explanation: "İzmir Müdafaa-i Hukuk Cemiyeti, İzmir ve çevresinin Yunanistan tarafından işgal edilmesini önlemek amacıyla kurulmuştur."
     },
     {
-        question: "Soru 35: İzmir Müdafaa-i Hukuk Cemiyeti'nin kurulmasında etkili olan kişi aşağıdakilerden hangisidir?",
+        question: "İzmir Müdafaa-i Hukuk Cemiyeti'nin kurulmasında etkili olan kişi aşağıdakilerden hangisidir?",
         options: [
-            "A) Nurettin Paşa",
+            "A) Kara Vasif",
             "B) Raif Hoca",
             "C) Dr. Esat Işık",
-            "D) Kara Vasif",
+            "D) Nurettin Paşa",
             "E) Faik Kaltakkıran"
         ],
-        correctAnswerIndex: 0,
+        correctAnswerIndex: 3,
         explanation: "İzmir Müdafaa-i Hukuk Cemiyeti, Nurettin Paşa önderliğinde kurulmuştur."
     },
     {
-        question: "Soru 36: Aşağıdaki cemiyetlerden hangisinin temel amacı Pontus Rum Devleti'nin kurulmasını engellemektir?",
+        question: "Aşağıdaki cemiyetlerden hangisinin temel amacı Pontus Rum Devleti'nin kurulmasını engellemektir?",
         options: [
             "A) Kilikyalılar",
-            "B) Trabzon Müdafaa-i Hukuk Cemiyeti",
+            "B) İzmir Müdafaa-i Hukuk Cemiyeti",
             "C) Trakya Paşaeli Cemiyeti",
-            "D) İzmir Müdafaa-i Hukuk Cemiyeti",
+            "D) Trabzon Müdafaa-i Hukuk Cemiyeti",
             "E) Millî Kongre Cemiyeti"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Trabzon Müdafaa-i Hukuk Cemiyeti, Karadeniz bölgesinde Pontus Rum Devleti kurulmasını engellemek amacıyla faaliyet göstermiştir."
     },
     {
-        question: "Soru 37: Trabzon Müdafaa-i Hukuk Cemiyeti ile ilgili aşağıdakilerden hangisi doğrudur?",
+        question: "Trabzon Müdafaa-i Hukuk Cemiyeti ile ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
             "A) Ermeni devletinin kurulmasını engellemek amacıyla kurulmuştur.",
-            "B) İstikbal gazetesini çıkarmıştır.",
+            "B) Kurucusu Dr. Esat Işık'tır.",
             "C) Pozantı Kongresi'ni düzenlemiştir.",
-            "D) Kurucusu Dr. Esat Işık'tır.",
+            "D) İstikbal gazetesini çıkarmıştır.",
             "E) İzmir'in işgaline karşı kurulmuştur."
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Trabzon Müdafaa-i Hukuk Cemiyeti, İstikbal gazetesini çıkarmıştır. Cemiyet, Pontus Rum Devleti'ni engellemek amacıyla kurulmuştur."
     },
     {
-        question: "Soru 38: Ermeni Devleti kurulmasını engellemek amacıyla faaliyet gösteren ve Erzurum Kongresi'nin toplanmasında etkili olan cemiyet aşağıdakilerden hangisidir?",
+        question: "Ermeni Devleti kurulmasını engellemek amacıyla faaliyet gösteren ve Erzurum Kongresi'nin toplanmasında etkili olan cemiyet aşağıdakilerden hangisidir?",
         options: [
             "A) Trakya Paşaeli Cemiyeti",
             "B) Vilayat-ı Şarkiyye Müdafaa-i Hukuk Cemiyeti",
@@ -472,7 +472,7 @@ window.tarih_12_sorulari = [
         explanation: "Vilayat-ı Şarkiyye Müdafaa-i Hukuk Cemiyeti, Doğu Anadolu'da Ermeni devleti kurulmasını engellemek amacıyla kurulmuş ve Erzurum Kongresi'nin toplanmasında etkili olmuştur."
     },
     {
-        question: "Soru 39: Vilayat-ı Şarkiyye Müdafaa-i Hukuk Cemiyeti tarafından çıkarılan yayınlar arasında aşağıdakilerden hangisi yer alır?",
+        question: "Vilayat-ı Şarkiyye Müdafaa-i Hukuk Cemiyeti tarafından çıkarılan yayınlar arasında aşağıdakilerden hangisi yer alır?",
         options: [
             "A) İstikbal",
             "B) Feryatname",
@@ -484,7 +484,7 @@ window.tarih_12_sorulari = [
         explanation: "Vilayat-ı Şarkiyye Müdafaa-i Hukuk Cemiyeti, Le Pays adlı gazeteyi yayımlamıştır."
     },
     {
-        question: "Soru 40: Aşağıdakilerden hangisi Vilayat-ı Şarkiyye Müdafaa-i Hukuk Cemiyeti'nin faaliyetleri arasında yer alır?",
+        question: "Aşağıdakilerden hangisi Vilayat-ı Şarkiyye Müdafaa-i Hukuk Cemiyeti'nin faaliyetleri arasında yer alır?",
         options: [
             "A) İzmir'in Yunanistan'a bırakılmasını savunmak",
             "B) Doğu Anadolu'da Ermeni devleti kurulmasını engellemek",
@@ -496,7 +496,7 @@ window.tarih_12_sorulari = [
         explanation: "Vilayat-ı Şarkiyye Cemiyeti'nin temel amacı, Doğu Anadolu'da Ermeni devleti kurulmasını engellemektir."
     },
     {
-        question: "Soru 41: Trakya Paşaeli Cemiyeti'nin temel amacı aşağıdakilerden hangisidir?",
+        question: "Trakya Paşaeli Cemiyeti'nin temel amacı aşağıdakilerden hangisidir?",
         options: [
             "A) Doğu Anadolu'da Ermeni devleti kurulmasını önlemek",
             "B) Adana'nın Fransızlardan alınmasını sağlamak",
@@ -508,7 +508,7 @@ window.tarih_12_sorulari = [
         explanation: "Trakya Paşaeli Cemiyeti, Trakya bölgesinin Yunanistan tarafından ilhak edilmesini engellemek amacıyla kurulmuştur."
     },
     {
-        question: "Soru 42: Trakya Paşaeli Cemiyeti'nin Millî Mücadele dönemindeki faaliyetlerinden biri aşağıdakilerden hangisidir?",
+        question: "Trakya Paşaeli Cemiyeti'nin Millî Mücadele dönemindeki faaliyetlerinden biri aşağıdakilerden hangisidir?",
         options: [
             "A) Paris Barış Konferansı'na heyet göndermek",
             "B) Pozantı Kongresi'ni toplamak",
@@ -520,19 +520,19 @@ window.tarih_12_sorulari = [
         explanation: "Trakya Paşaeli Cemiyeti, Paris Barış Konferansı'na heyet göndererek Trakya'nın Türk toprağı olduğunu savunmuştur."
     },
     {
-        question: "Soru 43: Adana ve çevresinin Ermenilere verilmesini engellemek amacıyla kurulan Kilikyalılar Cemiyeti aşağıdakilerden hangisiyle ilişkilendirilebilir?",
+        question: "Adana ve çevresinin Ermenilere verilmesini engellemek amacıyla kurulan Kilikyalılar Cemiyeti aşağıdakilerden hangisiyle ilişkilendirilebilir?",
         options: [
-            "A) Pozantı Kongresi",
+            "A) Sivas Kongresi",
             "B) Erzurum Kongresi",
             "C) Balıkesir Kongresi",
             "D) Alaşehir Kongresi",
-            "E) Sivas Kongresi"
+            "E) Pozantı Kongresi"
         ],
-        correctAnswerIndex: 0,
+        correctAnswerIndex: 4,
         explanation: "Kilikyalılar Cemiyeti, Pozantı Kongresi'ni düzenleyerek bölgenin Türklüğünü savunmuştur."
     },
     {
-        question: "Soru 44: Kilikyalılar Cemiyeti tarafından kaleme alınan ve cemiyetin faaliyetleriyle ilişkilendirilen eser aşağıdakilerden hangisidir?",
+        question: "Kilikyalılar Cemiyeti tarafından kaleme alınan ve cemiyetin faaliyetleriyle ilişkilendirilen eser aşağıdakilerden hangisidir?",
         options: [
             "A) İstikbal",
             "B) Feryatname",
@@ -544,7 +544,7 @@ window.tarih_12_sorulari = [
         explanation: "Kilikyalılar Cemiyeti, Feryatname adlı eseri kaleme alarak bölgenin Türklüğünü savunmuştur."
     },
     {
-        question: "Soru 45: Aşağıdakilerden hangisi Millî Kongre Cemiyeti ile ilgili doğru bir bilgidir?",
+        question: "Aşağıdakilerden hangisi Millî Kongre Cemiyeti ile ilgili doğru bir bilgidir?",
         options: [
             "A) Kurucusu Nurettin Paşa'dır.",
             "B) Pontus Rum Devleti'nin kurulmasını desteklemiştir.",
@@ -556,19 +556,19 @@ window.tarih_12_sorulari = [
         explanation: "Millî Kongre Cemiyeti, işgalleri basın-yayın yoluyla protesto eden sivil direniş örgütüdür."
     },
     {
-        question: "Soru 46: Dr. Esat Işık'ın hazırladığı raporun Millî Mücadele açısından dikkat çekici özelliği aşağıdakilerden hangisidir?",
+        question: "Dr. Esat Işık'ın hazırladığı raporun Millî Mücadele açısından dikkat çekici özelliği aşağıdakilerden hangisidir?",
         options: [
             "A) Megali İdea kavramını kullanması",
-            "B) Kuvâ-yı Milliye kavramını kullanması",
+            "B) Pontus Devleti'ni savunması",
             "C) Manda sistemini önermesi",
-            "D) Pontus Devleti'ni savunması",
+            "D) Kuvâ-yı Milliye kavramını kullanması",
             "E) İngiliz himayesini istemesi"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Dr. Esat Işık, hazırladığı raporda 'Kuvâ-yı Milliye' (Millî Kuvvetler) kavramını ilk kez kullanmıştır."
     },
     {
-        question: "Soru 47: Karakol Cemiyeti ile ilgili aşağıdakilerden hangisi doğrudur?",
+        question: "Karakol Cemiyeti ile ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
             "A) Kara Vasif ve Kara Kemal tarafından kurulmuştur.",
             "B) Doğu Anadolu'da Ermeni devleti kurulmasını savunmuştur.",
@@ -580,7 +580,7 @@ window.tarih_12_sorulari = [
         explanation: "Karakol Cemiyeti, Kara Vasif ve Kara Kemal tarafından kurulmuş, Anadolu'ya silah ve insan kaçırarak Millî Mücadele'ye destek sağlamıştır."
     },
     {
-        question: "Soru 48: Karakol Cemiyeti'nin Millî Mücadele'ye katkıları arasında aşağıdakilerden hangisi gösterilebilir?",
+        question: "Karakol Cemiyeti'nin Millî Mücadele'ye katkıları arasında aşağıdakilerden hangisi gösterilebilir?",
         options: [
             "A) Anadolu'ya silah ve insan kaçırması",
             "B) Yunanistan'a asker göndermesi",
@@ -592,7 +592,7 @@ window.tarih_12_sorulari = [
         explanation: "Karakol Cemiyeti, İstanbul'dan Anadolu'ya silah, cephane ve gönüllü subay kaçırarak Millî Mücadele'ye önemli katkı sağlamıştır."
     },
     {
-        question: "Soru 49: Kars İslam Şûrası'nın kuruluş amacı aşağıdakilerden hangisidir?",
+        question: "Kars İslam Şûrası'nın kuruluş amacı aşağıdakilerden hangisidir?",
         options: [
             "A) Yunan işgalini önlemek",
             "B) İngilizlerin Kars'ı işgaline karşı koymak",
@@ -604,7 +604,7 @@ window.tarih_12_sorulari = [
         explanation: "Kars İslam Şûrası, Kars ve çevresinin Ermeniler tarafından işgaline karşı direniş örgütü olarak kurulmuştur."
     },
     {
-        question: "Soru 50: Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+        question: "Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
         options: [
             "A) İzmir Müdafaa-i Hukuk — İzmir'in Yunan işgalinden kurtarılması",
             "B) Trabzon Müdafaa-i Hukuk — Pontus Rum Devleti'nin engellenmesi",
@@ -620,19 +620,19 @@ window.tarih_12_sorulari = [
     // BÖLÜM 5: MİLLÎ VARLIĞA ZARARLI CEMİYETLER – AZINLIKLAR (Soru 51-59)
     // ============================================================
     {
-        question: "Soru 51: Megali İdea'nın gerçekleştirilmesi amacıyla faaliyet gösteren Rum cemiyetleri arasında aşağıdakilerden hangisi yer alır?",
+        question: "Megali İdea'nın gerçekleştirilmesi amacıyla faaliyet gösteren Rum cemiyetleri arasında aşağıdakilerden hangisi yer alır?",
         options: [
-            "A) Etniki Eterya",
+            "A) Vilayat-ı Şarkiyye",
             "B) Kilikyalılar",
             "C) Trakya Paşaeli",
-            "D) Vilayat-ı Şarkiyye",
+            "D) Etniki Eterya",
             "E) Millî Kongre"
         ],
-        correctAnswerIndex: 0,
+        correctAnswerIndex: 3,
         explanation: "Etniki Eterya (Eski adı Filiki Eterya), Megali İdea doğrultusunda faaliyet gösteren Rum cemiyetidir."
     },
     {
-        question: "Soru 52: Etniki Eterya ile ilgili aşağıdakilerden hangisi doğrudur?",
+        question: "Etniki Eterya ile ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
             "A) Eski adı Filiki Eterya'dır.",
             "B) Ermeni devleti kurmayı amaçlamıştır.",
@@ -644,7 +644,7 @@ window.tarih_12_sorulari = [
         explanation: "Etniki Eterya, eski adı Filiki Eterya olan ve Megali İdea'yı gerçekleştirmeyi amaçlayan Rum cemiyetidir."
     },
     {
-        question: "Soru 53: Aşağıdakilerden hangisi Rumların Megali İdea doğrultusunda faaliyet gösteren cemiyetlerinden biridir?",
+        question: "Aşağıdakilerden hangisi Rumların Megali İdea doğrultusunda faaliyet gösteren cemiyetlerinden biridir?",
         options: [
             "A) Mavri Mira",
             "B) Taşnak",
@@ -656,19 +656,19 @@ window.tarih_12_sorulari = [
         explanation: "Mavri Mira (Kara Plan), Rumların Megali İdea doğrultusunda faaliyet gösteren cemiyetlerinden biridir."
     },
     {
-        question: "Soru 54: Pontus Rum Cemiyeti'nin temel amacı aşağıdakilerden hangisidir?",
+        question: "Pontus Rum Cemiyeti'nin temel amacı aşağıdakilerden hangisidir?",
         options: [
             "A) İzmir merkezli bir Rum devleti kurmak",
-            "B) Karadeniz kıyılarında Pontus Rum Devleti kurmak",
+            "B) Filistin'de Yahudi Devleti kurmak",
             "C) Doğu Anadolu'da Ermeni Devleti kurmak",
             "D) Güneydoğu Anadolu'da Kürt Devleti kurmak",
-            "E) Filistin'de Yahudi Devleti kurmak"
+            "E) Karadeniz kıyılarında Pontus Rum Devleti kurmak"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 4,
         explanation: "Pontus Rum Cemiyeti, Karadeniz kıyılarında (Trabzon, Samsun, Giresun vb.) Pontus Rum Devleti kurmayı amaçlamıştır."
     },
     {
-        question: "Soru 55: Pontus Rum Cemiyeti ile ilgili aşağıdakilerden hangisi doğrudur?",
+        question: "Pontus Rum Cemiyeti ile ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
             "A) Merzifon Amerikan Koleji'nde gizli faaliyet göstermiştir.",
             "B) İzmir'in işgalini engellemeye çalışmıştır.",
@@ -680,31 +680,31 @@ window.tarih_12_sorulari = [
         explanation: "Pontus Rum Cemiyeti, Merzifon Amerikan Koleji'nde gizli faaliyet göstermiştir."
     },
     {
-        question: "Soru 56: Pontus Rum faaliyetleriyle ilgili aşağıdakilerden hangisi söylenebilir?",
+        question: "Pontus Rum faaliyetleriyle ilgili aşağıdakilerden hangisi söylenebilir?",
         options: [
             "A) Rum çeteleri askerlik görevine gönüllü olarak katılmıştır.",
-            "B) Yunan ve Ruslar adına casusluk faaliyetlerinde bulunmuşlardır.",
+            "B) Anadolu'daki Türk nüfusunu artırmayı amaçlamışlardır.",
             "C) Millî Mücadele'yi desteklemişlerdir.",
-            "D) Anadolu'daki Türk nüfusunu artırmayı amaçlamışlardır.",
+            "D) Yunan ve Ruslar adına casusluk faaliyetlerinde bulunmuşlardır.",
             "E) Osmanlı Devleti'nin toprak bütünlüğünü savunmuşlardır."
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Pontus Rum çeteleri, Yunanistan ve Rusya adına casusluk faaliyetlerinde bulunmuş ve Türk halkına karşı saldırılar gerçekleştirmiştir."
     },
     {
-        question: "Soru 57: Hinçak ve Taşnak cemiyetlerinin ortak amacı aşağıdakilerden hangisidir?",
+        question: "Hinçak ve Taşnak cemiyetlerinin ortak amacı aşağıdakilerden hangisidir?",
         options: [
-            "A) Doğu Anadolu'da Ermeni devleti kurmak",
+            "A) Trakya'da Bulgar hâkimiyeti kurmak",
             "B) Batı Anadolu'da Yunan devleti kurmak",
             "C) Güney Anadolu'da Fransız mandası oluşturmak",
-            "D) Trakya'da Bulgar hâkimiyeti kurmak",
+            "D) Doğu Anadolu'da Ermeni devleti kurmak",
             "E) Filistin'de Yahudi devleti kurmak"
         ],
-        correctAnswerIndex: 0,
+        correctAnswerIndex: 3,
         explanation: "Hinçak ve Taşnak, Ermeni cemiyetleri olup Doğu Anadolu'da bir Ermeni devleti kurmayı amaçlamışlardır."
     },
     {
-        question: "Soru 58: Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+        question: "Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
         options: [
             "A) Hinçak — Cenevre",
             "B) Taşnak — Tiflis",
@@ -716,7 +716,7 @@ window.tarih_12_sorulari = [
         explanation: "Taşnak, Ermeni cemiyetidir ve Filistin ile ilgisi yoktur. Filistin'de Yahudi devleti kurmayı amaçlayan Maccabi Cemiyeti'dir."
     },
     {
-        question: "Soru 59: Filistin bölgesinde bir Yahudi devleti kurmayı amaçlayan cemiyet aşağıdakilerden hangisidir?",
+        question: "Filistin bölgesinde bir Yahudi devleti kurmayı amaçlayan cemiyet aşağıdakilerden hangisidir?",
         options: [
             "A) Mavri Mira",
             "B) Maccabi",
@@ -732,7 +732,7 @@ window.tarih_12_sorulari = [
     // BÖLÜM 6: MİLLÎ VARLIĞA ZARARLI CEMİYETLER – TÜRKLER TARAFINDAN KURULANLAR (Soru 60-70)
     // ============================================================
     {
-        question: "Soru 60: Aşağıdaki cemiyetlerden hangisi Amerikan mandası düşüncesini savunmuştur?",
+        question: "Aşağıdaki cemiyetlerden hangisi Amerikan mandası düşüncesini savunmuştur?",
         options: [
             "A) İngiliz Muhipleri",
             "B) Wilson Prensipleri",
@@ -744,19 +744,19 @@ window.tarih_12_sorulari = [
         explanation: "Wilson Prensipleri Cemiyeti, Amerikan mandasını savunan oluşumdur."
     },
     {
-        question: "Soru 61: Wilson Prensipleri Cemiyeti'nin savunduğu düşünce aşağıdakilerden hangisidir?",
+        question: "Wilson Prensipleri Cemiyeti'nin savunduğu düşünce aşağıdakilerden hangisidir?",
         options: [
             "A) İngiliz himayesine girilmesi",
-            "B) Amerikan mandasının kabul edilmesi",
+            "B) İtalyan mandasının kabul edilmesi",
             "C) Fransız mandasının kabul edilmesi",
-            "D) İtalyan mandasının kabul edilmesi",
+            "D) Amerikan mandasının kabul edilmesi",
             "E) Osmanlı Devleti'nin savaşa yeniden girmesi"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Wilson Prensipleri Cemiyeti, ABD Başkanı Wilson'un ilkelerine dayanarak Amerikan mandasını savunmuştur."
     },
     {
-        question: "Soru 62: Aşağıdakilerden hangisi Wilson Prensipleri Cemiyeti ile ilişkilendirilen kişilerden biridir?",
+        question: "Aşağıdakilerden hangisi Wilson Prensipleri Cemiyeti ile ilişkilendirilen kişilerden biridir?",
         options: [
             "A) Halide Edip Adıvar",
             "B) Kara Kemal",
@@ -768,19 +768,19 @@ window.tarih_12_sorulari = [
         explanation: "Halide Edip Adıvar, Wilson Prensipleri Cemiyeti ile ilişkilendirilen isimlerdendir."
     },
     {
-        question: "Soru 63: İngiliz Muhipleri Cemiyeti'nin temel düşüncesi aşağıdakilerden hangisidir?",
+        question: "İngiliz Muhipleri Cemiyeti'nin temel düşüncesi aşağıdakilerden hangisidir?",
         options: [
-            "A) İngiliz himayesinde kurtuluşun mümkün olduğu",
+            "A) Ermeni devletinin kurulmasının engellenmesi",
             "B) Amerikan mandasının reddedilmesi gerektiği",
             "C) Anadolu'da tam bağımsızlığın hemen sağlanması",
             "D) Yunan işgalinin desteklenmesi",
-            "E) Ermeni devletinin kurulmasının engellenmesi"
+            "E) İngiliz himayesinde kurtuluşun mümkün olduğu"
         ],
-        correctAnswerIndex: 0,
+        correctAnswerIndex: 4,
         explanation: "İngiliz Muhipleri Cemiyeti, İngiltere himayesinde Osmanlı Devleti'nin kurtulacağını savunmuştur."
     },
     {
-        question: "Soru 64: Aşağıdakilerden hangisi İngiliz Muhipleri Cemiyeti ile ilişkilendirilen kişilerden biri değildir?",
+        question: "Aşağıdakilerden hangisi İngiliz Muhipleri Cemiyeti ile ilişkilendirilen kişilerden biri değildir?",
         options: [
             "A) Damat Ferit Paşa",
             "B) Ali Kemal",
@@ -792,7 +792,7 @@ window.tarih_12_sorulari = [
         explanation: "Kara Vasif, Karakol Cemiyeti'nin kurucularındandır ve Millî Mücadele yanlısıdır. İngiliz Muhipleri Cemiyeti ile ilişkisi yoktur."
     },
     {
-        question: "Soru 65: İngiliz Muhipleri Cemiyeti'nin yayın organları arasında aşağıdakilerden hangisi yer alır?",
+        question: "İngiliz Muhipleri Cemiyeti'nin yayın organları arasında aşağıdakilerden hangisi yer alır?",
         options: [
             "A) İstikbal ve Albayrak",
             "B) Alemdar ve Türkçe İstanbul",
@@ -804,19 +804,19 @@ window.tarih_12_sorulari = [
         explanation: "İngiliz Muhipleri Cemiyeti, Alemdar ve Türkçe İstanbul gazetelerini yayın organı olarak kullanmıştır."
     },
     {
-        question: "Soru 66: Aşağıdaki cemiyetlerden hangisi kurtuluşu padişahtan gelen emirlere uymakta görmüştür?",
+        question: "Aşağıdaki cemiyetlerden hangisi kurtuluşu padişahtan gelen emirlere uymakta görmüştür?",
         options: [
-            "A) Teali-i İslam ve Sulh ve Selamet",
+            "A) İzmir Müdafaa-i Hukuk ve Trabzon Müdafaa-i Hukuk",
             "B) Wilson Prensipleri ve İngiliz Muhipleri",
             "C) Kilikyalılar ve Trakya Paşaeli",
             "D) Millî Kongre ve Karakol",
-            "E) İzmir Müdafaa-i Hukuk ve Trabzon Müdafaa-i Hukuk"
+            "E) Teali-i İslam ve Sulh ve Selamet"
         ],
-        correctAnswerIndex: 0,
+        correctAnswerIndex: 4,
         explanation: "Teali-i İslam ve Sulh ve Selamet cemiyetleri, kurtuluşu padişaha bağlı kalıp onun emirlerine uymakta görmüştür."
     },
     {
-        question: "Soru 67: Hürriyet ve İtilaf Fırkası'nın Millî Mücadele dönemindeki tutumu aşağıdakilerden hangisidir?",
+        question: "Hürriyet ve İtilaf Fırkası'nın Millî Mücadele dönemindeki tutumu aşağıdakilerden hangisidir?",
         options: [
             "A) Millî Mücadele'yi desteklemek",
             "B) İttihat ve Terakki'ye karşı olmak ve Millî Mücadele'ye karşı çıkmak",
@@ -828,7 +828,7 @@ window.tarih_12_sorulari = [
         explanation: "Hürriyet ve İtilaf Fırkası, İttihat ve Terakki'ye karşı olan ve Millî Mücadele'ye karşı çıkan siyasi oluşumdur."
     },
     {
-        question: "Soru 68: Güneydoğu Anadolu'da bir Kürt devleti kurmayı amaçlayan cemiyet aşağıdakilerden hangisidir?",
+        question: "Güneydoğu Anadolu'da bir Kürt devleti kurmayı amaçlayan cemiyet aşağıdakilerden hangisidir?",
         options: [
             "A) Kürt Teali Cemiyeti",
             "B) Teali-i İslam Cemiyeti",
@@ -840,19 +840,19 @@ window.tarih_12_sorulari = [
         explanation: "Kürt Teali Cemiyeti, Güneydoğu Anadolu'da bir Kürt devleti kurmayı amaçlayan örgüttür."
     },
     {
-        question: "Soru 69: Askerî Nigehban Cemiyeti'nin Millî Mücadele açısından temel özelliği aşağıdakilerden hangisidir?",
+        question: "Askerî Nigehban Cemiyeti'nin Millî Mücadele açısından temel özelliği aşağıdakilerden hangisidir?",
         options: [
             "A) Millî Mücadele'yi destekleyen askerlerden oluşması",
-            "B) Askerden kaçan subayların oluşturduğu Millî Mücadele karşıtı bir yapı olması",
+            "B) Anadolu'ya silah ve insan göndermesi",
             "C) Yunan işgaline karşı ilk direnişi başlatması",
-            "D) Anadolu'ya silah ve insan göndermesi",
+            "D) Askerden kaçan subayların oluşturduğu Millî Mücadele karşıtı bir yapı olması",
             "E) Doğu Anadolu'nun Türklüğünü kanıtlamaya çalışması"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Askerî Nigehban Cemiyeti, askerden kaçan subayların oluşturduğu ve Millî Mücadele'ye karşı çıkan yapıdır."
     },
     {
-        question: "Soru 70: Aşağıdakilerden hangisi millî varlığa zararlı cemiyetlerin Türkler tarafından kurulanlarından biri değildir?",
+        question: "Aşağıdakilerden hangisi millî varlığa zararlı cemiyetlerin Türkler tarafından kurulanlarından biri değildir?",
         options: [
             "A) Wilson Prensipleri Cemiyeti",
             "B) İngiliz Muhipleri Cemiyeti",
@@ -868,7 +868,7 @@ window.tarih_12_sorulari = [
     // BÖLÜM 7: KARŞILAŞTIRMALI VE ÖSYM TARZI YORUM SORULARI (Soru 71-90)
     // ============================================================
     {
-        question: "Soru 71: Aşağıdaki cemiyetlerden hangisinin amacı diğerlerinden farklıdır?",
+        question: "Aşağıdaki cemiyetlerden hangisinin amacı diğerlerinden farklıdır?",
         options: [
             "A) Mavri Mira",
             "B) Etniki Eterya",
@@ -880,7 +880,7 @@ window.tarih_12_sorulari = [
         explanation: "Mavri Mira, Etniki Eterya ve Pontus Rum Rum amaçlı; Taşnak Ermeni amaçlı cemiyetlerdir. Wilson Prensipleri ise Türkler tarafından kurulan mandacı cemiyettir."
     },
     {
-        question: "Soru 72: Aşağıdaki cemiyetlerden hangisi doğrudan bir bölgenin Türklüğünü savunmak yerine Osmanlı Devleti'nin kurtuluşunu yabancı bir devletin himayesinde görmüştür?",
+        question: "Aşağıdaki cemiyetlerden hangisi doğrudan bir bölgenin Türklüğünü savunmak yerine Osmanlı Devleti'nin kurtuluşunu yabancı bir devletin himayesinde görmüştür?",
         options: [
             "A) Trakya Paşaeli",
             "B) Kilikyalılar",
@@ -892,7 +892,7 @@ window.tarih_12_sorulari = [
         explanation: "Wilson Prensipleri Cemiyeti, bölgesel hakları savunmak yerine Amerikan mandasını savunarak kurtuluşu yabancı himayede görmüştür."
     },
     {
-        question: "Soru 73: Aşağıdaki eşleştirmelerden hangisi diğerlerinden farklı bir amaç taşımaktadır?",
+        question: "Aşağıdaki eşleştirmelerden hangisi diğerlerinden farklı bir amaç taşımaktadır?",
         options: [
             "A) Kilikyalılar — Adana'nın Türklüğünü koruma",
             "B) Trabzon Müdafaa-i Hukuk — Pontus tehlikesini önleme",
@@ -904,19 +904,19 @@ window.tarih_12_sorulari = [
         explanation: "İngiliz Muhipleri, yabancı mandasını savunurken diğer cemiyetler bölgelerinin Türklüğünü savunmaktadır."
     },
     {
-        question: "Soru 74: Aşağıdaki gelişmelerden hangisi işgallere karşı verilen ilk silahlı tepki ile ilişkilidir?",
+        question: "Aşağıdaki gelişmelerden hangisi işgallere karşı verilen ilk silahlı tepki ile ilişkilidir?",
         options: [
             "A) Amiral Bristol Raporu",
-            "B) Hasan Tahsin'in İzmir'de ilk kurşunu atması",
+            "B) Milletler Cemiyeti'nin kurulması",
             "C) Paris Barış Konferansı'nın toplanması",
-            "D) Milletler Cemiyeti'nin kurulması",
+            "D) Hasan Tahsin'in İzmir'de ilk kurşunu atması",
             "E) Anadolu ve Rumeli Müdafaa-i Hukuk Cemiyeti'nin oluşturulması"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "Hasan Tahsin'in 15 Mayıs 1919'da İzmir'de ilk kurşunu atması, işgallere karşı verilen ilk silahlı tepkidir."
     },
     {
-        question: "Soru 75: Aşağıdaki gelişmelerden hangisi işgallere karşı uluslararası alanda haklılığı ortaya koymaya yönelik bir girişimdir?",
+        question: "Aşağıdaki gelişmelerden hangisi işgallere karşı uluslararası alanda haklılığı ortaya koymaya yönelik bir girişimdir?",
         options: [
             "A) Kara Mehmet Çavuş'un ilk kurşunu atması",
             "B) Karakol Cemiyeti'nin silah kaçırması",
@@ -928,7 +928,7 @@ window.tarih_12_sorulari = [
         explanation: "Amiral Bristol Raporu, İzmir işgalinin haksızlığını uluslararası düzeyde belgeleyen diplomatik girişimdir."
     },
     {
-        question: "Soru 76: Aşağıdakilerden hangisi Mondros Ateşkes Antlaşması ile ilgili değildir?",
+        question: "Aşağıdakilerden hangisi Mondros Ateşkes Antlaşması ile ilgili değildir?",
         options: [
             "A) Osmanlı ordusunun terhis edilmesi",
             "B) Boğazların İtilaf Devletlerinin işgaline açılması",
@@ -940,7 +940,7 @@ window.tarih_12_sorulari = [
         explanation: "Mondros, Osmanlı Devleti'nin bağımsızlığını güvence altına almamış, aksine işgallere zemin hazırlamıştır."
     },
     {
-        question: "Soru 77: Aşağıdaki gelişmelerden hangisi diğerlerinden daha çok Anadolu'nun parçalanmasını ve işgallere karşı bölgesel direnişlerin ortaya çıkmasını açıklamaktadır?",
+        question: "Aşağıdaki gelişmelerden hangisi diğerlerinden daha çok Anadolu'nun parçalanmasını ve işgallere karşı bölgesel direnişlerin ortaya çıkmasını açıklamaktadır?",
         options: [
             "A) Paris Barış Konferansı'nın düzenlenmesi",
             "B) Mondros Ateşkes Antlaşması'nın uygulanması",
@@ -952,7 +952,7 @@ window.tarih_12_sorulari = [
         explanation: "Mondros'un uygulanması, Anadolu'nun işgal edilmesine ve bölgesel direnişlerin ortaya çıkmasına neden olmuştur."
     },
     {
-        question: "Soru 78: Bir tarihçi, Millî Mücadele'nin hazırlık döneminde kurulan cemiyetleri incelerken;\n\n* bölgesel hakları savunma,\n* bölgelerin Türklüğünü kanıtlama,\n* Wilson İlkeleri'nden yararlanma,\n* Paris Barış Konferansı'na temsilci gönderme\n\ngibi özelliklerden söz etmektedir.\n\nBu tarihçinin sözünü ettiği cemiyetler aşağıdakilerden hangisidir?",
+        question: "Bir tarihçi, Millî Mücadele'nin hazırlık döneminde kurulan cemiyetleri incelerken;\n\n* bölgesel hakları savunma,\n* bölgelerin Türklüğünü kanıtlama,\n* Wilson İlkeleri'nden yararlanma,\n* Paris Barış Konferansı'na temsilci gönderme\n\ngibi özelliklerden söz etmektedir.\n\nBu tarihçinin sözünü ettiği cemiyetler aşağıdakilerden hangisidir?",
         options: [
             "A) Millî varlığa zararlı cemiyetler",
             "B) Azınlık cemiyetleri",
@@ -964,7 +964,7 @@ window.tarih_12_sorulari = [
         explanation: "Bu özellikler, Türk halkının işgallere karşı kurduğu yararlı cemiyetlerin ortak özellikleridir."
     },
     {
-        question: "Soru 79: Aşağıdaki cemiyetlerden hangisi faaliyet alanı bakımından diğerlerinden farklı bir bölgeyle ilişkilidir?",
+        question: "Aşağıdaki cemiyetlerden hangisi faaliyet alanı bakımından diğerlerinden farklı bir bölgeyle ilişkilidir?",
         options: [
             "A) Kilikyalılar",
             "B) Trakya Paşaeli",
@@ -976,7 +976,7 @@ window.tarih_12_sorulari = [
         explanation: "Trakya Paşaeli Cemiyeti, Trakya bölgesinde faaliyet gösterirken diğerleri Anadolu'nun çeşitli bölgelerinde faaliyet göstermiştir."
     },
     {
-        question: "Soru 80: Aşağıdaki gelişmelerden hangileri Millî Mücadele'nin hazırlık döneminde işgallere karşı Türk halkının tepkisini göstermektedir?\n\nI. Hasan Tahsin'in ilk kurşunu atması\nII. Yararlı cemiyetlerin kurulması\nIII. Karakol Cemiyeti'nin Anadolu'ya silah ve insan göndermesi\nIV. İngiliz Muhipleri Cemiyeti'nin İngiliz mandasını savunması",
+        question: "Aşağıdaki gelişmelerden hangileri Millî Mücadele'nin hazırlık döneminde işgallere karşı Türk halkının tepkisini göstermektedir?\n\nI. Hasan Tahsin'in ilk kurşunu atması\nII. Yararlı cemiyetlerin kurulması\nIII. Karakol Cemiyeti'nin Anadolu'ya silah ve insan göndermesi\nIV. İngiliz Muhipleri Cemiyeti'nin İngiliz mandasını savunması",
         options: [
             "A) I ve II",
             "B) I, II ve III",
@@ -988,7 +988,7 @@ window.tarih_12_sorulari = [
         explanation: "Hasan Tahsin'in ilk kurşunu, yararlı cemiyetlerin kurulması ve Karakol'un silah kaçırması işgallere karşı tepkidir. İngiliz Muhipleri ise işgallere karşı değil, İngiliz mandasını savunmaktadır."
     },
     {
-        question: "Soru 81: Aşağıdaki cemiyetlerden hangisinin amacı ile faaliyet alanı yanlış eşleştirilmiştir?",
+        question: "Aşağıdaki cemiyetlerden hangisinin amacı ile faaliyet alanı yanlış eşleştirilmiştir?",
         options: [
             "A) Kilikyalılar — Adana ve çevresinin Ermenilere verilmesini önlemek",
             "B) Trabzon Müdafaa-i Hukuk — Pontus Rum Devleti'nin kurulmasını önlemek",
@@ -1000,7 +1000,7 @@ window.tarih_12_sorulari = [
         explanation: "İzmir Müdafaa-i Hukuk Cemiyeti, İzmir'in Yunan işgaline karşı kurulmuştur, İngiliz mandasını kabul etmemiştir."
     },
     {
-        question: "Soru 82: Mondros Ateşkes Antlaşması'nın ardından;\n\nI. işgallerin başlaması,\nII. millî cemiyetlerin kurulması,\nIII. azınlık cemiyetlerinin faaliyetlerini artırması,\nIV. yabancı devletlerin manda ve himaye düşüncelerinin gündeme gelmesi\n\ngelişmelerinden hangilerinin ortaya çıktığı söylenebilir?",
+        question: "Mondros Ateşkes Antlaşması'nın ardından;\n\nI. işgallerin başlaması,\nII. millî cemiyetlerin kurulması,\nIII. azınlık cemiyetlerinin faaliyetlerini artırması,\nIV. yabancı devletlerin manda ve himaye düşüncelerinin gündeme gelmesi\n\ngelişmelerinden hangilerinin ortaya çıktığı söylenebilir?",
         options: [
             "A) Yalnız I",
             "B) I ve II",
@@ -1012,7 +1012,7 @@ window.tarih_12_sorulari = [
         explanation: "Mondros sonrasında işgaller başlamış, buna tepki olarak millî cemiyetler kurulmuş, azınlıklar faaliyetlerini artırmış ve manda/himaye tartışmaları gündeme gelmiştir."
     },
     {
-        question: "Soru 83: Aşağıdaki kişi-cemiyet eşleştirmelerinden hangisi yanlıştır?",
+        question: "Aşağıdaki kişi-cemiyet eşleştirmelerinden hangisi yanlıştır?",
         options: [
             "A) Nurettin Paşa — İzmir Müdafaa-i Hukuk",
             "B) Dr. Esat Işık — Millî Kongre",
@@ -1024,7 +1024,7 @@ window.tarih_12_sorulari = [
         explanation: "Hasan Tahsin, Vilayat-ı Şarkiyye ile değil, İzmir'de ilk kurşunu atmasıyla ilişkilidir."
     },
     {
-        question: "Soru 84: Aşağıdaki cemiyetlerden hangisi diğerlerinden farklı olarak yabancı bir devletin himayesini savunmuştur?",
+        question: "Aşağıdaki cemiyetlerden hangisi diğerlerinden farklı olarak yabancı bir devletin himayesini savunmuştur?",
         options: [
             "A) Wilson Prensipleri",
             "B) Trakya Paşaeli",
@@ -1036,7 +1036,7 @@ window.tarih_12_sorulari = [
         explanation: "Wilson Prensipleri Cemiyeti, Amerikan mandasını savunurken diğer cemiyetler bölgesel hakları savunmuştur."
     },
     {
-        question: "Soru 85: Aşağıdaki olaylardan hangisi Millî Mücadele'nin hazırlık dönemindeki gelişmelerin kronolojik sıralaması bakımından en önce gerçekleşmiştir?",
+        question: "Aşağıdaki olaylardan hangisi Millî Mücadele'nin hazırlık dönemindeki gelişmelerin kronolojik sıralaması bakımından en önce gerçekleşmiştir?",
         options: [
             "A) Paris Barış Konferansı'nın toplanması",
             "B) İzmir'in işgali",
@@ -1048,7 +1048,7 @@ window.tarih_12_sorulari = [
         explanation: "Mondros Ateşkes Antlaşması (30 Ekim 1918) en önce gerçekleşmiştir. Ardından Paris Barış Konferansı (Ocak 1919), İzmir işgali (Mayıs 1919) ve Bristol Raporu gelir."
     },
     {
-        question: "Soru 86: Mondros Ateşkes Antlaşması'nın;\n\n* ordunun terhis edilmesi,\n* ulaşım ve haberleşmenin denetlenmesi,\n* stratejik noktaların işgal edilebilmesi\n\ngibi hükümleri birlikte değerlendirildiğinde aşağıdaki sonuçlardan hangisine ulaşılabilir?",
+        question: "Mondros Ateşkes Antlaşması'nın;\n\n* ordunun terhis edilmesi,\n* ulaşım ve haberleşmenin denetlenmesi,\n* stratejik noktaların işgal edilebilmesi\n\ngibi hükümleri birlikte değerlendirildiğinde aşağıdaki sonuçlardan hangisine ulaşılabilir?",
         options: [
             "A) Osmanlı Devleti'nin savunma gücünün zayıflatıldığına",
             "B) Osmanlı Devleti'nin siyasi gücünün artırıldığına",
@@ -1060,7 +1060,7 @@ window.tarih_12_sorulari = [
         explanation: "Bu hükümler, Osmanlı Devleti'nin savunma gücünü zayıflatmayı ve Anadolu'yu işgale açık hâle getirmeyi amaçlamıştır."
     },
     {
-        question: "Soru 87: Aşağıdakilerden hangisi hem Mondros Ateşkes Antlaşması'nın sonuçlarından biri hem de Millî Mücadele'nin başlamasını hızlandıran gelişmelerden biridir?",
+        question: "Aşağıdakilerden hangisi hem Mondros Ateşkes Antlaşması'nın sonuçlarından biri hem de Millî Mücadele'nin başlamasını hızlandıran gelişmelerden biridir?",
         options: [
             "A) Anadolu'nun işgale açık hâle gelmesi",
             "B) Osmanlı Devleti'nin savaşı kazanması",
@@ -1072,7 +1072,7 @@ window.tarih_12_sorulari = [
         explanation: "Mondros'un Anadolu'yu işgale açık hâle getirmesi, hem antlaşmanın bir sonucu hem de Millî Mücadele'nin başlamasını hızlandıran temel gelişmedir."
     },
     {
-        question: "Soru 88: Aşağıdaki cemiyetlerden hangisi diğerlerinden farklı olarak azınlıklar tarafından kurulmuştur?",
+        question: "Aşağıdaki cemiyetlerden hangisi diğerlerinden farklı olarak azınlıklar tarafından kurulmuştur?",
         options: [
             "A) Kilikyalılar",
             "B) Trakya Paşaeli",
@@ -1084,7 +1084,7 @@ window.tarih_12_sorulari = [
         explanation: "Mavri Mira, Rumlar tarafından kurulmuş bir cemiyettir. Diğerleri Türkler tarafından kurulmuştur."
     },
     {
-        question: "Soru 89: Aşağıdaki cemiyetlerden hangileri aynı etnik hedef doğrultusunda faaliyet göstermiştir?",
+        question: "Aşağıdaki cemiyetlerden hangileri aynı etnik hedef doğrultusunda faaliyet göstermiştir?",
         options: [
             "A) Mavri Mira – Etniki Eterya",
             "B) Taşnak – Trakya Paşaeli",
@@ -1096,7 +1096,7 @@ window.tarih_12_sorulari = [
         explanation: "Mavri Mira ve Etniki Eterya, her ikisi de Megali İdea doğrultusunda faaliyet gösteren Rum cemiyetleridir."
     },
     {
-        question: "Soru 90: Millî Mücadele'nin hazırlık döneminde ortaya çıkan cemiyetlerle ilgili aşağıdaki yargılardan hangisine ulaşılabilir?",
+        question: "Millî Mücadele'nin hazırlık döneminde ortaya çıkan cemiyetlerle ilgili aşağıdaki yargılardan hangisine ulaşılabilir?",
         options: [
             "A) Cemiyetlerin tamamı tam bağımsızlığı savunmuştur.",
             "B) Cemiyetlerin tamamı işgalleri desteklemiştir.",

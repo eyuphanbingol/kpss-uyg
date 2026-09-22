@@ -33,19 +33,19 @@ window.vatandas_4_sorulari = [
     {
         question: "Aşağıdakilerden hangisi 1961 Anayasası’nda 1971 ve 1973 yıllarında yapılan değişiklikler arasında yer almaz?",
         options: [
-            "A) Üniversitelerin özerkliği zayıflatılmıştır.",
+            "A) Temel hak ve özgürlüklerin genel sınırlama sebepleri kaldırılmıştır.",
             "B) TRT’nin özerkliği kaldırılmıştır.",
-            "C) Temel hak ve özgürlüklerin genel sınırlama sebepleri kaldırılmıştır.",
+            "C) Üniversitelerin özerkliği zayıflatılmıştır.",
             "D) Askeri Yüksek İdare Mahkemesi ve Devlet Güvenlik Mahkemeleri kurulmuştur.",
             "E) Adalet Bakanının Yüksek Hakimler Kurulunda oy sahibi olarak bulunması sağlanmıştır."
         ],
-        correctAnswerIndex: 2,
+        correctAnswerIndex: 0,
         explanation: "1971–73’te temel haklara genel sınırlama sebebi getirilmiştir; kaldırılmamıştır."
     },
     {
         question: "Bakanlar Kuruluna kanun hükmünde kararname çıkarma yetkisi veren ilk Türk anayasası aşağıdakilerden hangisidir?",
-        options: ["A) 1921 Anayasası", "B) Kanun-ı Esasi", "C) 1961 Anayasası", "D) 1924 Anayasası", "E) 1982 Anayasası"],
-        correctAnswerIndex: 2,
+        options: ["A) 1921 Anayasası", "B) Kanun-ı Esasi", "C) 1924 Anayasası", "D) 1961 Anayasası", "E) 1982 Anayasası"],
+        correctAnswerIndex: 3,
         explanation: "KHK yetkisi 1961 Anayasası’nın 1971 değişikliğiyle Bakanlar Kuruluna tanınmıştır."
     },
     {

@@ -43,13 +43,13 @@ window.cografya_7_sorulari = [
     "id": "4",
     "question": "Çöl tozlarının rüzgârla taşınıp birikmesiyle oluşan; İç Anadolu ve Güneydoğu Anadolu'da görülen biriktirme şekli aşağıdakilerden hangisidir?",
     "options": [
-      "A) Kumul",
-      "B) Lös",
+      "A) Lös",
+      "B) Kumul",
       "C) Moren",
       "D) Traverten",
       "E) Sirk"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 0,
     "explanation": "Rüzgarların kurak bölgelerden taşıyıp biriktirdiği ince boyutlu toz ve mil topraklarına lös denir. Türkiye'de karasallığın ve kuraklığın belirgin olduğu İç Anadolu ve Güneydoğu Anadolu'da yaygındır."
   },
   {
@@ -58,11 +58,11 @@ window.cografya_7_sorulari = [
     "options": [
       "A) Kıyılarda; Marmara, Batı Karadeniz, Ege ve Akdeniz'de yaygındır",
       "B) Kara kumullarına Manisa, Konya, Kayseri ve Iğdır'da rastlanır",
-      "C) Rüzgârın biriktirme şeklidir",
-      "D) Yalnızca deniz kıyılarında oluşur",
+      "C) Yalnızca deniz kıyılarında oluşur",
+      "D) Rüzgârın biriktirme şeklidir",
       "E) Kum tanelerinin rüzgârla taşınıp birikmesiyle oluşur"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 2,
     "explanation": "Kumullar yalnızca deniz kıyılarında oluşmaz. Denizle bağlantısı olmayan, iç kesimlerdeki tamamen kurak ve karasal alanlarda da 'kara kumulları' oluşabilir. Nitekim Manisa, Konya, Kayseri ve Iğdır'da kara kumulları bulunmaktadır."
   }
 ];

@@ -15,13 +15,13 @@ window.vatandas_8_sorulari = [
     {
         question: "Aşağıdakilerden hangisi yerinden yönetimin faydaları arasında yer almaz?",
         options: [
-            "A) Kararlar çabuk alınır.",
+            "A) Hizmetler ülke genelinde yeknesak bir biçimde yürütülür.",
             "B) Bürokrasi ve kırtasiyecilik azalır.",
             "C) Mahalli halkın ihtiyaçları daha çabuk tespit edilir.",
             "D) Demokratik anlayışa uygundur.",
-            "E) Hizmetler ülke genelinde yeknesak bir biçimde yürütülür."
+            "E) Kararlar çabuk alınır."
         ],
-        correctAnswerIndex: 4,
+        correctAnswerIndex: 0,
         explanation: "Yeknesak (tekdüze) hizmet merkezden yönetimin yararıdır; yerinden yönetimin sakıncasıdır."
     },
     {
@@ -32,8 +32,8 @@ window.vatandas_8_sorulari = [
     },
     {
         question: "Aşağıda verilen kuruluşlardan hangisinin kamu tüzel kişiliği yoktur?",
-        options: ["A) Belediyeler", "B) Köyler", "C) Vakıflar Genel Müdürlüğü", "D) Atatürk Kültür, Dil ve Tarih Yüksek Kurumu", "E) Yargı organları"],
-        correctAnswerIndex: 4,
+        options: ["A) Yargı organları", "B) Köyler", "C) Vakıflar Genel Müdürlüğü", "D) Atatürk Kültür, Dil ve Tarih Yüksek Kurumu", "E) Belediyeler"],
+        correctAnswerIndex: 0,
         explanation: "Yargı organları ayrı bir kamu tüzel kişisi olarak örgütlenmez; belediye, köy ve Atatürk Yüksek Kurumu anayasada tüzel kişiliği belirtilen kurumlardır."
     },
     {
