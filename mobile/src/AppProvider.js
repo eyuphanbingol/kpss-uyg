@@ -5,6 +5,7 @@ import { supabase } from "./lib/supabase";
 import { SyncEngine } from "./lib/syncEngine";
 import { StudyPlanner } from "./lib/planner";
 import { filterCatalog } from "./lib/alan";
+import { readCachedCatalog, fetchRemoteCatalog } from "./lib/catalog";
 import { AppState, Platform } from "react-native";
 import * as Linking from "expo-linking";
 import { isRecoveryUrl } from "./lib/authLinks";
