@@ -1,14 +1,25 @@
 import { registerRootComponent } from "expo";
 import React, { useEffect, useState } from "react";
 import { ScrollView, Text, View } from "react-native";
-import * as NativeSplash from "expo-splash-screen";
-import * as SystemUI from "expo-system-ui";
-
-NativeSplash.preventAutoHideAsync().catch(function () {});
-SystemUI.setBackgroundColorAsync("#041C24").catch(function () {});
 
 function showErr(e) {
     return String((e && (e.stack || e.message)) || e);
+}
+
+function safeSplash() {
+    try {
+        return require("expo-splash-screen");
+    } catch (_e) {
+        return null;
+    }
+}
+
+function safeSystemUI() {
+    try {
+        return require("expo-system-ui");
+    } catch (_e) {
+        return null;
+    }
 }
 
 class Guard extends React.Component {
@@ -42,6 +53,15 @@ function Boot() {
     var setErr = _e[1];
 
     useEffect(function () {
+        var Splash = safeSplash();
+        var SystemUI = safeSystemUI();
+        if (Splash && Splash.preventAutoHideAsync) {
+            Splash.preventAutoHideAsync().catch(function () {});
+        }
+        if (SystemUI && SystemUI.setBackgroundColorAsync) {
+            SystemUI.setBackgroundColorAsync("#041C24").catch(function () {});
+        }
+
         var EU = global.ErrorUtils;
         if (EU && EU.setGlobalHandler) {
             EU.setGlobalHandler(function (error) {
@@ -53,14 +73,15 @@ function Boot() {
             setApp(function () { return mod.default; });
         } catch (e) {
             setErr(showErr(e));
-            NativeSplash.hideAsync().catch(function () {});
+            if (Splash && Splash.hideAsync) Splash.hideAsync().catch(function () {});
         }
     }, []);
 
     useEffect(function () {
         if (!App) return;
+        var Splash = safeSplash();
         var t = setTimeout(function () {
-            NativeSplash.hideAsync().catch(function () {});
+            if (Splash && Splash.hideAsync) Splash.hideAsync().catch(function () {});
         }, 50);
         return function () { clearTimeout(t); };
     }, [App]);
