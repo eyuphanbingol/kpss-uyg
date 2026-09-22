@@ -2,6 +2,10 @@ import { registerRootComponent } from "expo";
 import React, { useEffect, useState } from "react";
 import { ScrollView, Text, View } from "react-native";
 import * as NativeSplash from "expo-splash-screen";
+import * as SystemUI from "expo-system-ui";
+
+NativeSplash.preventAutoHideAsync().catch(function () {});
+SystemUI.setBackgroundColorAsync("#041C24").catch(function () {});
 
 function showErr(e) {
     return String((e && (e.stack || e.message)) || e);
@@ -18,7 +22,7 @@ class Guard extends React.Component {
     render() {
         if (!this.state.err) return this.props.children;
         return (
-            <ScrollView style={{ flex: 1, backgroundColor: "#1c1917", padding: 22, paddingTop: 56 }}>
+            <ScrollView style={{ flex: 1, backgroundColor: "#041C24", padding: 22, paddingTop: 56 }}>
                 <Text style={{ color: "#fecaca", fontWeight: "800", fontSize: 20 }}>Atanly çöktü</Text>
                 <Text selectable style={{ color: "#fff", marginTop: 12, fontSize: 13, lineHeight: 20 }}>
                     {showErr(this.state.err)}
@@ -38,7 +42,6 @@ function Boot() {
     var setErr = _e[1];
 
     useEffect(function () {
-        NativeSplash.hideAsync().catch(function () {});
         var EU = global.ErrorUtils;
         if (EU && EU.setGlobalHandler) {
             EU.setGlobalHandler(function (error) {
@@ -50,12 +53,21 @@ function Boot() {
             setApp(function () { return mod.default; });
         } catch (e) {
             setErr(showErr(e));
+            NativeSplash.hideAsync().catch(function () {});
         }
     }, []);
 
+    useEffect(function () {
+        if (!App) return;
+        var t = setTimeout(function () {
+            NativeSplash.hideAsync().catch(function () {});
+        }, 50);
+        return function () { clearTimeout(t); };
+    }, [App]);
+
     if (err) {
         return (
-            <ScrollView style={{ flex: 1, backgroundColor: "#1c1917", padding: 22, paddingTop: 56 }}>
+            <ScrollView style={{ flex: 1, backgroundColor: "#041C24", padding: 22, paddingTop: 56 }}>
                 <Text style={{ color: "#fecaca", fontWeight: "800", fontSize: 20 }}>Açılış hatası</Text>
                 <Text selectable style={{ color: "#fff", marginTop: 12, fontSize: 13, lineHeight: 20 }}>{err}</Text>
                 <Text style={{ color: "#a8a29e", marginTop: 16 }}>Bu yazının ekranını at, düzeltelim.</Text>
