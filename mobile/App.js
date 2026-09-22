@@ -2,7 +2,6 @@ import "react-native-gesture-handler";
 import React, { useEffect } from "react";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaProvider, initialWindowMetrics } from "react-native-safe-area-context";
-import * as NativeSplash from "expo-splash-screen";
 import { Platform, View, StyleSheet, LogBox, Text } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { AppProvider } from "./src/AppProvider";
@@ -48,19 +47,7 @@ export default function App() {
     // Native chrome (nav bar / orientation) after first paint — crashes on some Androids if run immediately.
 
     // ---------- Splash Screen ----------
-    useEffect(function () {
-        // Uygulama hazır olduğunda splash'i gizle
-        var timer = setTimeout(function () {
-            NativeSplash.hideAsync()
-                .catch(function () {
-                    // Splash zaten gizlenmiş olabilir
-                });
-        }, 500);
-
-        return function () {
-            clearTimeout(timer);
-        };
-    }, []);
+    // Native splash, Boot/SplashScreen tarafında gizlenir; burada erken hide yok.
 
     // ---------- Debug Mode ----------
     useEffect(function () {

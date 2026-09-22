@@ -68,7 +68,11 @@
           "backgroundColor": "#041C24",
           "image": "./assets/splash-full.png",
           "imageWidth": 280,
-          "resizeMode": "contain"
+          "resizeMode": "contain",
+          "dark": {
+            "backgroundColor": "#041C24",
+            "image": "./assets/splash-full.png"
+          }
         }
       ]
     ],
