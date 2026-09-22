@@ -240,7 +240,7 @@
         { answer: "Anayasa Mahkemesi", clues: ["15 üye", "Norm denetimi", "Yüce Divan da bakabilir"], choices: ["Anayasa Mahkemesi", "Danıştay", "Yargıtay", "Sayıştay"] },
         { answer: "TBMM", clues: ["Yasama", "Bütçe", "Seçim dönemi 5 yıl"], choices: ["TBMM", "Cumhurbaşkanlığı", "AYM", "Danıştay"] },
         { answer: "Kuvvetler ayrılığı", clues: ["Yasama", "Yürütme", "Yargı"], choices: ["Kuvvetler ayrılığı", "Kuvvetler birliği", "Üniter devlet", "Federasyon"] },
-        { answer: "Laiklik", clues: ["Din ve devlet işleri", "Vicdan özgürlüğü", "Anayasal nitelik"], choices: ["Laiklik", "Milliyetçilik", "Sosyal devlet", "Hukuk devleti"] },
+        { answer: "Laiklik", clues: ["Din ve devlet işleri ayrılır", "Vicdan özgürlüğü", "Anayasal nitelik"], choices: ["Laiklik", "Milliyetçilik", "Sosyal devlet", "Hukuk devleti"] },
         { answer: "Hukuk devleti", clues: ["İdarenin yargı denetimi", "Kanunilik", "Temel haklar güvence"], choices: ["Hukuk devleti", "Polis devleti", "Teokrasi", "Oligarşi"] },
         { answer: "Sosyal devlet", clues: ["Asgari ücret", "Sosyal güvenlik", "Fırsat eşitliği"], choices: ["Sosyal devlet", "Liberal gece bekçisi", "Merkantilizm", "Feodalite"] },
         { answer: "Üniter devlet", clues: ["Tek yasama", "Tek yürütme", "İl sistemi"], choices: ["Üniter devlet", "Federasyon", "Konfederasyon", "Özerk cumhuriyetler"] },

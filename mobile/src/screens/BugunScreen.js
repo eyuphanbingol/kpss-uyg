@@ -47,11 +47,11 @@ export default function BugunScreen({ navigation }) {
     var level = (student.userProfile && student.userProfile.educationLevel) || "lisans";
     var dash = StudyPlanner.studyDashboard ? StudyPlanner.studyDashboard(student) : null;
 
-    var examLine;
-    if (plan.daysLeft == null) examLine = examTrackName(level) + " · sınav tarihi yok";
-    else if (plan.daysLeft < 0) examLine = examTrackName(level) + " tarihi geçti";
-    else if (plan.daysLeft === 0) examLine = examTrackName(level) + " bugün";
-    else examLine = examTrackName(level) + "’ye " + plan.daysLeft + " gün kaldı";
+    var examLine, examSub = "";
+    if (plan.daysLeft == null) { examLine = examTrackName(level) + " · sınav tarihi yok"; examSub = "Ben › Ayarlar’dan sınav tarihini seç."; }
+    else if (plan.daysLeft < 0) { examLine = examTrackName(level) + " geride kaldı"; examSub = "Yeni hedefin için sınav tarihini güncelle."; }
+    else if (plan.daysLeft === 0) { examLine = examTrackName(level) + " bugün"; examSub = "Başarılar! Sakin kal."; }
+    else { examLine = examTrackName(level) + "’ye " + plan.daysLeft + " gün kaldı"; examSub = plan.daysLeft <= 30 ? "Son düzlük: tekrar ve deneme ağırlıklı çalış." : "Her gün not + test; yanlışlar tekrara düşer."; }
 
     var saved = student.userProfile && student.userProfile.studyPlan;
     var todayId = StudentStore.planDayId();
@@ -108,6 +108,7 @@ export default function BugunScreen({ navigation }) {
                     <View style={{ flex: 1, minWidth: 0 }}>
                         <Text style={styles.bannerLabel}>Sınav takvimi</Text>
                         <Text style={styles.bannerText}>{examLine}</Text>
+                        {examSub ? <Text style={styles.bannerSub}>{examSub}</Text> : null}
                     </View>
                     {plan.daysLeft != null && plan.daysLeft > 0 ? (
                         <View style={styles.bannerDays}>
@@ -280,6 +281,7 @@ var styles = StyleSheet.create({
     bannerRow: { flexDirection: "row", alignItems: "center", gap: 10 },
     bannerLabel: { color: "rgba(255,255,255,0.8)", fontSize: 11, fontWeight: "800", textTransform: "uppercase", letterSpacing: 0.8 },
     bannerText: { color: "#fff", fontSize: 18, fontWeight: "800", marginTop: 4 },
+    bannerSub: { color: "rgba(255,255,255,0.78)", fontSize: 12, marginTop: 4, lineHeight: 16 },
     bannerDays: { backgroundColor: "rgba(255,255,255,0.22)", paddingHorizontal: 14, paddingVertical: 8, borderRadius: 16 },
     bannerDaysText: { color: "#fff", fontSize: 13, fontWeight: "800" },
     cardDark: { backgroundColor: colors.navyDeep, borderColor: "#44403c" },

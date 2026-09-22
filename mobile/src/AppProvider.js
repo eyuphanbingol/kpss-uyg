@@ -5,10 +5,11 @@ import { supabase } from "./lib/supabase";
 import { SyncEngine } from "./lib/syncEngine";
 import { StudyPlanner } from "./lib/planner";
 import { filterCatalog } from "./lib/alan";
-import { readCachedCatalog, fetchRemoteCatalog } from "./lib/catalog";
 import { AppState, Platform } from "react-native";
 import * as Linking from "expo-linking";
 import { isRecoveryUrl } from "./lib/authLinks";
+import { fetchRemoteCatalog, readCachedCatalog, looksCatalog } from "./lib/catalog";
+import BUNDLED_CATALOG from "./content/catalog.json";
 
 // ============================================================
 // PLATFORM KONTROLLÜ NETWORK IMPORT
@@ -26,7 +27,9 @@ try {
 // ============================================================
 
 var Ctx = createContext(null);
-var START_CATALOG = { Tarih: { _: {} }, "Coğrafya": { _: {} } };
+// Uygulamayla gelen katalog: internet olmasa da sorular/notlar açılır.
+// (Önceden fetchRemoteCatalog/readCachedCatalog import edilmediği için katalog hiç yüklenmiyordu.)
+var START_CATALOG = looksCatalog(BUNDLED_CATALOG) ? BUNDLED_CATALOG : { Tarih: { _: {} }, "Coğrafya": { _: {} } };
 
 // ============================================================
 // APP PROVIDER
@@ -110,9 +113,11 @@ export function AppProvider(props) {
     var setKpssData = _kd[1];
 
     function pullCatalog() {
-        fetchRemoteCatalog().then(function (data) {
-            if (data) setKpssData(data);
-        }).catch(function () {});
+        try {
+            fetchRemoteCatalog().then(function (data) {
+                if (data) setKpssData(data);
+            }).catch(function () {});
+        } catch (e) {}
     }
 
     // ---------- Network Kontrol ----------
@@ -162,7 +167,8 @@ export function AppProvider(props) {
                 // 1. Local storage'ı hydrate et
                 await hydrateLocalStorage();
                 StudentStore.hydrateFromDisk();
-                var cached = readCachedCatalog();
+                var cached = null;
+                try { cached = readCachedCatalog(); } catch (e) {}
                 if (cached) setKpssData(cached);
 
                 var r = await supabase.auth.getSession();

@@ -1089,18 +1089,15 @@
         return expandRound(shuffle(list).slice(0, take));
     }
 
-    function pickPlaceRound(topicId, n) {
+    // Konunun TÜM hedefleri tek oyunda sorulur (eskiden 6-8'lik parçalara bölünüyordu).
+    function pickPlaceRound(topicId) {
         var list = itemsForTopic(topicId).filter(function (it) {
             return it && !it.mcq && it.id && it.name;
         });
-        var want = n == null ? 7 : n;
-        if (want < 6) want = 6;
-        if (want > 8) want = 8;
-        var take = Math.min(want, list.length);
-        var items = shuffle(list).slice(0, take);
-        var chips = shuffle(items.map(function (it) {
+        var items = shuffle(list);
+        var chips = items.map(function (it) {
             return { id: it.id, name: it.name };
-        }));
+        });
         return { items: items, chips: chips };
     }
 
@@ -1245,7 +1242,15 @@
                 for (j = i + 1; j < pins.length; j++) {
                     var dx = pins[j].x - pins[i].x;
                     var dy = pins[j].y - pins[i].y;
-                    var d = Math.sqrt(dx * dx + dy * dy) || 0.01;
+                    var d = Math.sqrt(dx * dx + dy * dy);
+                    // Aynı noktadaki iki yer (ör. Eskişehir'de asbest ve lüle taşı) yön
+                    // vektörü sıfır olduğu için hiç ayrılmıyordu: sabit bir açıyla açıyoruz.
+                    if (d < 0.001) {
+                        var ang = (i * 2.399963 + j * 0.7);
+                        dx = Math.cos(ang);
+                        dy = Math.sin(ang);
+                        d = 1;
+                    }
                     if (d < minD) {
                         var push = (minD - d) / 2 + 1.2;
                         pins[i].x -= (dx / d) * push;

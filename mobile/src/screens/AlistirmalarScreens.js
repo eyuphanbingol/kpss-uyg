@@ -11,7 +11,6 @@ import { colors } from "../lib/theme";
 import { PencilLine, Map, Shield, Layers, Timer, ChevronRight } from "lucide-react-native";
 import { AccentCard, PctBadge, Hit } from "../kit";
 import { TrMapView } from "../components/TrMapView";
-import { useLandscapeLock } from "../lib/useLandscapeLock";
 import { konuLabel } from "../lib/konuLabels";
 
 var MAP_CARD_IMG = {
@@ -417,135 +416,153 @@ export function MapPlayScreen({ route, navigation }) {
     var isDark = app.dark;
     var win = useWindowDimensions();
     var insets = useSafeAreaInsets();
-    var landReady = useLandscapeLock();
     var meta = MapQuiz.topicMeta(topicId);
     var _seed = useState(0);
     var seed = _seed[0];
     var setSeed = _seed[1];
+    // Konunun tüm hedefleri tek oyunda, karışık sırayla sorulur.
     var round = useMemo(function () {
-        var n = 6 + Math.floor(Math.random() * 3);
-        return MapQuiz.pickPlaceRound ? MapQuiz.pickPlaceRound(topicId, n) : { items: [], chips: [] };
+        return MapQuiz.pickPlaceRound ? MapQuiz.pickPlaceRound(topicId) : { items: [], chips: [] };
     }, [seed, topicId]);
-    var want = useMemo(function () {
-        var m = {};
-        (round.items || []).forEach(function (it) { m[it.id] = true; });
-        return m;
-    }, [round]);
+    var items = round.items || [];
+    var total = items.length;
     var layer = useMemo(function () {
+        var want = {};
+        items.forEach(function (it) { want[it.id] = true; });
         var pins = MapQuiz.topicPinsForPlay ? MapQuiz.topicPinsForPlay(topicId) : ((MapQuiz.topicLayer && MapQuiz.topicLayer(topicId).pins) || []);
         return { pins: pins.filter(function (p) { return want[p.id]; }) };
-    }, [topicId, want]);
+    }, [topicId, items]);
     var glyph = MapQuiz.topicGlyph ? MapQuiz.topicGlyph(topicId) : "📍";
-    var _placed = useState({});
-    var placed = _placed[0];
-    var setPlaced = _placed[1];
-    var _sel = useState(null);
-    var selected = _sel[0];
-    var setSelected = _sel[1];
-    var _miss = useState(0);
-    var misses = _miss[0];
-    var setMisses = _miss[1];
-    var _flash = useState(null);
-    var flash = _flash[0];
-    var setFlash = _flash[1];
-    var _d = useState(false);
-    var done = _d[0];
-    var setDone = _d[1];
-    var total = (round.items || []).length;
+
+    var _idx = useState(0); var idx = _idx[0]; var setIdx = _idx[1];
+    var _solved = useState({}); var solved = _solved[0]; var setSolved = _solved[1];
+    var _shown = useState({}); var shown = _shown[0]; var setShown = _shown[1];
+    var _last = useState(null); var lastId = _last[0]; var setLastId = _last[1];
+    var _miss = useState(0); var misses = _miss[0]; var setMisses = _miss[1];
+    var _flash = useState(null); var flash = _flash[0]; var setFlash = _flash[1];
+    var _d = useState(false); var done = _d[0]; var setDone = _d[1];
+    var target = items[idx] || null;
 
     useEffect(function () {
-        setPlaced({}); setSelected(null); setMisses(0); setFlash(null); setDone(false);
+        setIdx(0); setSolved({}); setShown({}); setLastId(null); setMisses(0); setFlash(null); setDone(false);
     }, [seed, topicId]);
 
-    var playPad = {
-        paddingTop: Math.min(Math.max(insets.top, 12), Math.round(win.height * 0.12)),
-        paddingBottom: Math.min(Math.max(insets.bottom, 10), Math.round(win.height * 0.12)),
-        paddingLeft: Math.min(Math.max(insets.left, 12), Math.round(win.width * 0.12)),
-        paddingRight: Math.min(Math.max(insets.right, 12), Math.round(win.width * 0.12))
-    };
+    function advance(nextSolved) {
+        var i = idx + 1;
+        while (i < total && nextSolved[items[i].id]) i++;
+        setIdx(i);
+        if (i >= total) setTimeout(function () { setDone(true); }, 420);
+    }
 
-    function tryPlace(pinId) {
-        if (!selected || placed[pinId] || placed[selected]) return;
-        if (selected === pinId) {
-            var next = Object.assign({}, placed);
+    function onPin(pinId) {
+        if (!target || done || solved[pinId]) return;
+        if (pinId === target.id) {
+            var next = Object.assign({}, solved);
             next[pinId] = true;
-            setPlaced(next);
-            setSelected(null);
-            if (Object.keys(next).length >= total) setTimeout(function () { setDone(true); }, 420);
+            setSolved(next);
+            setLastId(pinId);
+            advance(next);
             return;
         }
         setMisses(misses + 1);
         setFlash(pinId);
-        setTimeout(function () { setFlash(null); }, 520);
+        setTimeout(function () { setFlash(null); }, 560);
     }
 
+    function reveal() {
+        if (!target || done) return;
+        var next = Object.assign({}, solved);
+        next[target.id] = true;
+        setSolved(next);
+        setShown(Object.assign({}, shown, defineShown(target.id)));
+        setLastId(target.id);
+        setMisses(misses + 1);
+        advance(next);
+    }
+
+    function defineShown(id) {
+        var o = {};
+        o[id] = true;
+        return o;
+    }
+
+    var okCount = Object.keys(solved).filter(function (id) { return !shown[id]; }).length;
+
     if (done) {
+        var pct = total ? Math.round((okCount / total) * 100) : 0;
         return (
-            <Screen dark={isDark} edges={[]} style={{ overflow: "hidden" }}>
-                <ScrollView contentContainerStyle={[playPad, { paddingBottom: Math.max(insets.bottom, 28) }]} keyboardShouldPersistTaps="handled">
-                    <Card style={[styles.result, isDark && styles.cardDark]}>
-                        <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} style={{ marginBottom: 12 }} />
-                        <Text style={[styles.pct, isDark && styles.textLight]}>{total} isim</Text>
-                        <Text style={[styles.meta, isDark && styles.textMuted]}>{misses ? (misses + " yanlış deneme") : "Hepsi ilk denemede"}</Text>
-                        <PrimaryButton title="Tekrar oyna" onPress={function () { setSeed(seed + 1); }} style={{ marginTop: 16 }} />
-                    </Card>
-                </ScrollView>
-            </Screen>
+            <ScrollScreen dark={isDark}>
+                <PageHeader
+                    dark={isDark}
+                    title={meta ? meta.title : "Harita"}
+                    subtitle={okCount + " / " + total + " doğru"}
+                    onBack={function () { navigation.goBack(); }}
+                />
+                <Card style={[styles.result, isDark && styles.cardDark]}>
+                    <Text style={[styles.pct, isDark && styles.textLight]}>%{pct}</Text>
+                    <Text style={[styles.meta, isDark && styles.textMuted]}>
+                        {okCount} doğru · {total - okCount} kaçtı{misses ? (" · " + misses + " yanlış deneme") : ""}
+                    </Text>
+                    <View style={{ marginTop: 14, width: "100%" }}>
+                        {items.map(function (it) {
+                            var ok = solved[it.id] && !shown[it.id];
+                            return (
+                                <View key={it.id} style={styles.resultRow}>
+                                    <Text style={[styles.resultMark, { color: ok ? "#059669" : "#94A3B8" }]}>{ok ? "✓" : "•"}</Text>
+                                    <Text style={[styles.resultName, isDark && styles.textLight]} numberOfLines={1}>{it.name}</Text>
+                                </View>
+                            );
+                        })}
+                    </View>
+                    <PrimaryButton title="Tekrar oyna" onPress={function () { setSeed(seed + 1); }} style={{ marginTop: 16 }} />
+                </Card>
+            </ScrollScreen>
         );
     }
 
     var landscape = win.width > win.height;
-    var left = (round.chips || []).filter(function (c) { return !placed[c.id]; });
-
-    if (!landReady) {
-        return (
-            <Screen dark={isDark} edges={["top"]} style={{ overflow: "hidden" }}>
-                <View style={{ flex: 1, justifyContent: "center", padding: 24 }}>
-                    <Text style={[styles.konuTitle, isDark && styles.textLight]}>Harita</Text>
-                    <Text style={[styles.meta, isDark && styles.textMuted]}>Yataya alınıyor…</Text>
-                </View>
-            </Screen>
-        );
-    }
+    var playPad = {
+        paddingTop: Math.max(insets.top, 8),
+        paddingBottom: Math.max(insets.bottom, 8),
+        paddingLeft: Math.max(insets.left, 10),
+        paddingRight: Math.max(insets.right, 10)
+    };
 
     return (
-        <Screen dark={isDark} style={{ overflow: "hidden", backgroundColor: "#152018" }} edges={[]}>
+        <Screen dark={isDark} style={{ overflow: "hidden", backgroundColor: "#0c3d56" }} edges={[]}>
             <View key={win.width + "x" + win.height} style={[{ flex: 1, minHeight: 0, minWidth: 0, overflow: "hidden" }, playPad]}>
                 <View style={styles.mapAskRow}>
                     <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} style={{ marginBottom: 0 }} />
-                    <Text style={[styles.kicker, { flex: 1, marginBottom: 0, minWidth: 0, color: "#d7c39a" }]} numberOfLines={1}>
-                        {meta ? meta.title : "Harita"} · {Object.keys(placed).length}/{total}
+                    <Text style={[styles.kicker, { flex: 1, marginBottom: 0, minWidth: 0, color: "#d7c39a", textAlign: "right" }]} numberOfLines={1}>
+                        {meta ? meta.title : "Harita"} · {okCount}/{total}
                     </Text>
                 </View>
-                <Text style={[styles.prompt, { marginBottom: 8, marginTop: 8, fontSize: landscape ? 13 : 16, lineHeight: landscape ? 18 : 24, color: "#fff8e8" }]} numberOfLines={2}>
-                    Bu turdaki {total} ismi haritadaki boş pinlere yerleştir
-                </Text>
-                <View style={{ flex: 1, minHeight: 0, minWidth: 0, overflow: "hidden" }}>
+                <View style={styles.mapBar}>
+                    <View style={[styles.mapBarFill, { width: (total ? Math.round((Object.keys(solved).length / total) * 100) : 0) + "%" }]} />
+                </View>
+                <View style={{ flex: 1, minHeight: 0, minWidth: 0, overflow: "hidden", marginTop: 8, borderRadius: 16 }}>
                     <TrMapView
                         mode="play"
                         place
                         pins={layer.pins || []}
                         glyph={glyph}
-                        separate={topicId === "volkanik" ? 20 : (topicId === "kirik" ? 50 : 36)}
-                        placed={placed}
+                        separate={topicId === "volkanik" ? 22 : (topicId === "kirik" ? 50 : 38)}
+                        placed={solved}
+                        shown={shown}
+                        lastId={lastId}
                         flash={flash}
-                        onPin={tryPlace}
+                        onPin={onPin}
                     />
                 </View>
-                <Text style={styles.placeHint}>{selected ? "Haritadaki boş pine dokun" : "İsmi seç, sonra pine bas"}</Text>
-                <View style={styles.chipDock}>
-                    {left.map(function (c) {
-                        var on = selected === c.id;
-                        return (
-                            <Pressable
-                                key={c.id}
-                                onPress={function () { setSelected(on ? null : c.id); }}
-                                style={[styles.placeChip, on && styles.placeChipOn]}
-                            >
-                                <Text style={styles.placeChipTxt}>{c.name}</Text>
-                            </Pressable>
-                        );
-                    })}
+                <View style={styles.askBox}>
+                    <Text style={styles.askKicker}>HARİTADA BUL VE DOKUN</Text>
+                    <Text style={[styles.askName, landscape && { fontSize: 20 }]} numberOfLines={2}>{target ? target.name : ""}</Text>
+                    <View style={styles.askRow}>
+                        <Pressable onPress={reveal} style={styles.askSkip}>
+                            <Text style={styles.askSkipTxt}>Bilmiyorum, göster</Text>
+                        </Pressable>
+                        <Text style={styles.askMeta}>{misses ? (misses + " yanlış") : "Hatasız"}</Text>
+                    </View>
                 </View>
             </View>
         </Screen>
@@ -661,6 +678,21 @@ var styles = StyleSheet.create({
     },
     mapAskCard: { paddingVertical: 10, paddingHorizontal: 12, marginBottom: 0, flexShrink: 0 },
     mapAskRow: { flexDirection: "row", alignItems: "center", gap: 8 },
+    mapBar: { height: 5, borderRadius: 99, backgroundColor: "rgba(255,248,232,0.18)", overflow: "hidden", marginTop: 8 },
+    mapBarFill: { height: 5, borderRadius: 99, backgroundColor: "#F59E0B" },
+    askBox: { paddingTop: 10, alignItems: "center" },
+    askKicker: { fontSize: 10, fontWeight: "800", letterSpacing: 1.4, color: "#d7c39a" },
+    askName: { fontSize: 24, fontWeight: "900", color: "#fff8e8", textAlign: "center", marginTop: 4 },
+    askRow: { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 14, marginTop: 10 },
+    askSkip: {
+        borderWidth: 1, borderColor: "rgba(244,228,180,0.38)", backgroundColor: "rgba(255,248,230,0.08)",
+        paddingVertical: 12, paddingHorizontal: 18, borderRadius: 999, minHeight: 46, justifyContent: "center"
+    },
+    askSkipTxt: { color: "#f4e4b4", fontWeight: "700", fontSize: 14 },
+    askMeta: { color: "#a8a29e", fontSize: 12 },
+    resultRow: { flexDirection: "row", alignItems: "center", gap: 8, paddingVertical: 3 },
+    resultMark: { fontWeight: "900", fontSize: 14, width: 14 },
+    resultName: { fontSize: 14, color: "#334155", flex: 1 },
     prompt: { fontSize: 16, lineHeight: 24, color: colors.text, marginBottom: 12 },
     clozeHint: { fontSize: 11, fontWeight: "800", letterSpacing: 0.8, color: "#8A7A4A", textTransform: "uppercase", marginBottom: 8 },
     clozeStem: { backgroundColor: "#F6F1E4", borderRadius: 16, paddingVertical: 16, paddingHorizontal: 16, paddingLeft: 18, marginBottom: 4, borderWidth: 1, borderColor: "rgba(13,44,77,0.08)", position: "relative" },

@@ -280,7 +280,7 @@ function mapBlock(provs, extra) {
 var MAP_BLOCK_H = 250;
 
 function writePng(file, svg, w) {
-    var png = new Resvg(svg, { fitTo: { mode: "width", value: w || 1080 } }).render().asPng();
+    var png = new Resvg(svg, { fitTo: { mode: "width", value: Math.round((w || 1080) * 1.5) } }).render().asPng();
     var tmp = file + ".tmp";
     fs.writeFileSync(tmp, png);
     try { fs.unlinkSync(file); } catch (e) {}
@@ -320,7 +320,7 @@ function writeWideOvaMap(provs, opts) {
         var common = 'x="' + n.x + '" y="' + n.y + '" text-anchor="' + (n.anchor || "middle") + '" font-family="Segoe UI, Inter, Calibri, sans-serif" font-size="' + fs + '" font-weight="800"';
         var t = '<text ' + common + ' fill="#F4EBDA" stroke="' + inkN + '" stroke-width="' + sw + '" stroke-linejoin="round" paint-order="stroke">' + esc(n.t) + "</text>";
         if (n.sub) {
-            var sub = 'x="' + n.x + '" y="' + (n.y + (n.subDy || 11)) + '" text-anchor="' + (n.anchor || "middle") + '" font-family="Segoe UI, Inter, Calibri, sans-serif" font-size="' + (n.subFs || 6.6) + '" font-weight="700"';
+            var sub = 'x="' + n.x + '" y="' + (n.y + (n.subDy || 11)) + '" text-anchor="' + (n.anchor || "middle") + '" font-family="Segoe UI, Inter, Calibri, sans-serif" font-size="' + (n.subFs || 8.6) + '" font-weight="700"';
             t += '<text ' + sub + ' fill="#F4EBDA" stroke="' + inkN + '" stroke-width="' + Math.max(1.4, sw - 0.3) + '" stroke-linejoin="round" paint-order="stroke">' + esc(n.sub) + "</text>";
         }
         return t;
@@ -383,15 +383,16 @@ function wrapOnMap(text, maxChars) {
 }
 
 function labelFs(n) {
-    if (n > 12) return 9;
-    if (n > 8) return 10;
-    return 11;
+    // Telefonda okunabilsin diye puntolar büyütüldü.
+    if (n > 12) return 12;
+    if (n > 8) return 13;
+    return 14;
 }
 
 function iconPx(n) {
-    if (n > 10) return 16;
-    if (n > 6) return 18;
-    return 20;
+    if (n > 10) return 20;
+    if (n > 6) return 22;
+    return 24;
 }
 
 function textW(p, fs) {
@@ -430,7 +431,7 @@ function nudgeLabels(pts, fs) {
             for (j = i + 1; j < pts.length; j++) {
                 var dx = pts[j].x - pts[i].x;
                 var dy = pts[j].y - pts[i].y;
-                var gapX = (textW(pts[i], fs) + textW(pts[j], fs)) / 2 + 10;
+                var gapX = (textW(pts[i], fs) + textW(pts[j], fs)) / 2 + 14;
                 var gapY = (pts[i].urun || pts[j].urun) ? fs * 4.6 + 28 : fs * 2.4 + 12;
                 var ox = gapX - Math.abs(dx);
                 var oy = gapY - Math.abs(dy);
@@ -459,7 +460,7 @@ function labelsOnMap(pts, fs) {
     var photo = pts.some(function (p) { return p.urun; });
     var offsetLabels = photo || pts.some(function (p) { return p.locked; });
     if (offsetLabels) {
-        var lfs = photo ? 9 : fs;
+        var lfs = photo ? 11 : fs;
         return pts.map(function (p) {
             var lx = (p.pinX != null ? p.pinX : p.x) + (p.ldx || 0);
             var ly = (p.pinY != null ? p.pinY : p.y) + (p.ldy != null ? p.ldy : 52);
@@ -1238,7 +1239,7 @@ function main() {
             { t: "Elmalı", x: 236, y: 360 }
         ];
         var nameSvg = names.map(function (n) {
-            var common = 'x="' + n.x + '" y="' + n.y + '" text-anchor="middle" font-family="Segoe UI, Inter, Calibri, sans-serif" font-size="8.6" font-weight="800"';
+            var common = 'x="' + n.x + '" y="' + n.y + '" text-anchor="middle" font-family="Segoe UI, Inter, Calibri, sans-serif" font-size="11" font-weight="800"';
             return '<text ' + common + ' fill="#F4EBDA" stroke="#12382E" stroke-width="2.4" stroke-linejoin="round" paint-order="stroke">' + esc(n.t) + "</text>";
         }).join("");
         var labelX = 318;

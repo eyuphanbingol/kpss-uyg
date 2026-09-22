@@ -1,4 +1,4 @@
-/** Konu görünen adları. Anahtarlar (catalog/data.js konu adları) ilerlemenin kimliğidir; değiştirilmez. */
+// Konu görünen adları (web: data.js KONU_LABELS ile aynı). Anahtarlar ilerleme kimliğidir, değişmez.
 export var KONU_LABELS = {
     "19.YY Osmanlı Devleti Dağılma Dönemi": "19. Yüzyıl Osmanlı Devleti Dağılma Dönemi",
     "19.YY Osmanlı Devleti Islahatları": "19. Yüzyıl Osmanlı Devleti Islahatları",

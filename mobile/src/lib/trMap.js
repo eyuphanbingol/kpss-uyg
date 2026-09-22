@@ -63,6 +63,8 @@ var CSS = [
     ".place-well-core{fill:rgba(245,158,11,.22);stroke:none;pointer-events:none;}",
     ".place-locked .place-well{stroke:#059669;stroke-dasharray:none;}",
     ".place-locked .place-well-core{fill:rgba(16,185,129,.55);}",
+    ".place-shown .place-well{stroke:#94a3b8;}",
+    ".place-shown .place-well-core{fill:rgba(148,163,184,.45);}",
     ".place-miss .place-well{stroke:#e11d48;}",
     ".place-miss .place-well-core{fill:rgba(225,29,72,.45);}",
     ".map-pin{font-size:14px;font-weight:800;paint-order:stroke;stroke:#fffaf0;stroke-width:4.5px;fill:#0f2a1f;}",
@@ -108,7 +110,9 @@ export function mapDocument(svgText, mode) {
         + "var minD=Number(st.separate)||36;"
         + "var n,i,j;"
         + "for(n=0;n<18;n++){for(i=0;i<placed.length;i++){for(j=i+1;j<placed.length;j++){"
-        + "var dx=placed[j].x-placed[i].x,dy=placed[j].y-placed[i].y,d=Math.sqrt(dx*dx+dy*dy)||0.01;"
+        + "var dx=placed[j].x-placed[i].x,dy=placed[j].y-placed[i].y,d=Math.sqrt(dx*dx+dy*dy);"
+        // Üst üste binen (aynı koordinatlı) iki pin sabit bir açıyla ayrılır.
+        + "if(d<0.001){var ang=i*2.399963+j*0.7;dx=Math.cos(ang);dy=Math.sin(ang);d=1;}"
         + "if(d<minD){var push=(minD-d)/2+0.8;placed[i].x-=(dx/d)*push;placed[i].y-=(dy/d)*push;placed[j].x+=(dx/d)*push;placed[j].y+=(dy/d)*push;}"
         + "}}}"
         + "placed.forEach(function(row){"
@@ -119,7 +123,7 @@ export function mapDocument(svgText, mode) {
         + "wrap.setAttribute('data-x',String(x));wrap.setAttribute('data-y',String(y));"
         + "var locked=!!(st.placed&&st.placed[p.id]);"
         + "var cls=st.place?'topic-mark place-mark':'topic-mark';"
-        + "if(st.place){if(locked)cls+=' place-locked';if(st.flash===p.id)cls+=' place-miss';}"
+        + "if(st.place){if(locked)cls+=' place-locked';if(st.shown&&st.shown[p.id])cls+=' place-shown';if(st.flash===p.id)cls+=' place-miss';}"
         + "else{if(st.cleared&&st.cleared[p.id])cls+=' topic-mark-done';"
         + "if(st.picked&&p.id===st.targetId)cls+=' topic-mark-ok';"
         + "else if(st.picked&&p.id===st.picked)cls+=' topic-mark-bad';}"
@@ -138,7 +142,7 @@ export function mapDocument(svgText, mode) {
         + "ico.setAttribute('dominant-baseline','central');ico.textContent=p.glyph||st.glyph||'📍';"
         + "wrap.appendChild(ico);}"
         + "g.appendChild(wrap);"
-        + "if(st.place&&locked){var t=document.createElementNS('http://www.w3.org/2000/svg','text');"
+        + "if(st.place&&locked&&(!st.lastId||st.lastId===p.id)){var t=document.createElementNS('http://www.w3.org/2000/svg','text');"
         + "t.setAttribute('x',String(x));t.setAttribute('y',String(y-24));"
         + "t.setAttribute('class','map-pin map-pin-ok');t.textContent=p.name||'';lg.appendChild(t);}"
         + "});"
@@ -196,7 +200,14 @@ export function mapDocument(svgText, mode) {
         + "document.addEventListener('click',function(ev){"
         + "if(wrap&&wrap.getAttribute('data-skip-click')){wrap.removeAttribute('data-skip-click');return;}"
         + "if(ev.target&&ev.target.closest&&ev.target.closest('.zoom-tools'))return;"
-        + "var mark=ev.target.closest?ev.target.closest('[data-pin]'):null;"
+        + "var best=null,bestD=1e9;"
+        + "var marks=document.querySelectorAll('[data-pin]');"
+        + "for(var mi=0;mi<marks.length;mi++){var mr=marks[mi].getBoundingClientRect();"
+        + "var mcx=mr.left+mr.width/2,mcy=mr.top+mr.height/2;"
+        + "var md=Math.sqrt((mcx-ev.clientX)*(mcx-ev.clientX)+(mcy-ev.clientY)*(mcy-ev.clientY));"
+        + "var reach=Math.max(28,mr.width*0.62);"
+        + "if(md<=reach&&md<bestD){bestD=md;best=marks[mi];}}"
+        + "var mark=best||(ev.target.closest?ev.target.closest('[data-pin]'):null);"
         + "if(mark){post({type:'pin',id:mark.getAttribute('data-pin')});return;}"
         + "var path=ev.target.closest?ev.target.closest('path'):null;"
         + "var id=path&&path.getAttribute('id');"

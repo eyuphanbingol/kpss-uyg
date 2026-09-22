@@ -67,6 +67,8 @@ export function TrMapView(props) {
                 separate: props.separate || 36,
                 place: !!props.place,
                 placed: props.placed || {},
+                shown: props.shown || {},
+                lastId: props.lastId || null,
                 flash: props.flash || null
             }) + "); true;";
         }
@@ -75,7 +77,7 @@ export function TrMapView(props) {
 
     useEffect(function () {
         inject();
-    }, [mode, props.pins, props.glyph, props.picked, props.targetId, props.cleared, props.labels, props.separate, props.owned, props.pick, props.color, props.place, props.placed, props.flash, html, box.gen, box.w, box.h]);
+    }, [mode, props.pins, props.glyph, props.picked, props.targetId, props.cleared, props.labels, props.separate, props.owned, props.pick, props.color, props.place, props.placed, props.shown, props.lastId, props.flash, html, box.gen, box.w, box.h]);
 
     function onMessage(ev) {
         var data = {};

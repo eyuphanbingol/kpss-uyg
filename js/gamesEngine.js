@@ -465,12 +465,14 @@
         return shuffle(pool).slice(0, n).map(function (card, i) {
             var clues = (card.clues || []).slice(0, 3);
             while (clues.length < 3) clues.push("Notlardaki tanımına göre tahmin et");
+            // Doğru cevap her zaman şıklarda olsun, 4 şıkka kırpılırken de düşmesin.
+            var others = (card.choices || []).filter(function (c) { return fold(c) !== fold(card.answer); });
             return {
                 id: card.id || ("t:" + i),
                 answer: card.answer,
                 clues: clues,
                 topic: card.topic || "KPSS",
-                choices: shuffle(card.choices || [card.answer])
+                choices: shuffle([card.answer].concat(shuffle(others).slice(0, 3)))
             };
         });
     }

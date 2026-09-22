@@ -1648,6 +1648,8 @@
         .place-well-core {
             fill: rgba(255, 236, 179, 0.28);
             pointer-events: none;
+        }
+        .place-mark:not(.place-ok):not(.place-shown) .place-well-core {
             animation: wellPulse 1.8s ease-in-out infinite;
         }
         .place-well-core.is-locked {
@@ -2416,6 +2418,68 @@
         .map-place .place-miss .place-well { stroke: #e11d48; }
         .map-place .place-miss .place-well-core { fill: rgba(225, 29, 72, .45); }
         .map-place .tr-map-wrap .map-pin { fill: #0f2a1f; stroke: #fffaf0; stroke-width: 4.5px; }
+        /* --- "Haritada bul" akışı --- */
+        .map-progress { height: 5px; border-radius: 99px; background: rgba(255, 248, 232, .18); overflow: hidden; margin-top: 8px; }
+        .map-progress > span { display: block; height: 100%; background: linear-gradient(90deg, #f59e0b, #fcd34d); border-radius: 99px; transition: width .25s ease; }
+        .img-zoom {
+            position: fixed; inset: 0; z-index: 80; background: rgba(4, 16, 22, .94);
+            display: flex; align-items: center; justify-content: center; overflow: hidden;
+            padding: env(safe-area-inset-top) 12px env(safe-area-inset-bottom);
+        }
+        .img-zoom-pic {
+            max-width: 100%; max-height: 100%; object-fit: contain; touch-action: none;
+            transition: transform .18s ease; will-change: transform; border-radius: 10px;
+        }
+        .img-zoom-bar {
+            position: absolute; bottom: max(16px, env(safe-area-inset-bottom)); left: 50%; transform: translateX(-50%);
+            display: flex; gap: 10px;
+        }
+        .img-zoom-bar button {
+            background: rgba(255, 248, 230, .92); color: #0f172a; font-weight: 700; font-size: 14px;
+            border: 0; border-radius: 999px; padding: 11px 20px; min-height: 44px;
+        }
+        .note-html img, .q-stem img { cursor: zoom-in; }
+        .map-result-list {
+            list-style: none; margin: 16px 0 0; padding: 0;
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px 12px;
+        }
+        .map-result-list li {
+            display: flex; align-items: baseline; gap: 7px; font-size: 13px; line-height: 1.35;
+            color: #57534e;
+        }
+        .map-result-list li span { font-weight: 900; }
+        .map-result-list li.is-ok { color: #047857; }
+        .map-result-list li.is-ok span { color: #059669; }
+        .map-result-list li.is-miss span { color: #a8a29e; }
+        html.dark .map-result-list li { color: #d6d3d1; }
+        html.dark .map-result-list li.is-ok { color: #6ee7b7; }
+        .map-ask { text-align: center; }
+        .map-ask-kicker {
+            margin: 0; font-size: 11px; font-weight: 800; letter-spacing: .12em;
+            text-transform: uppercase; color: #d7c39a;
+        }
+        .map-ask-name {
+            margin: 4px 0 0; font-size: clamp(20px, 5.4vw, 28px); font-weight: 900; line-height: 1.2;
+            color: #fff8e8; text-wrap: balance;
+        }
+        .map-ask-hint { margin: 6px 0 0; font-size: 13px; color: #cbbda0; line-height: 1.35; }
+        .map-ask-actions {
+            display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 12px; flex-wrap: wrap;
+        }
+        .map-ask-skip {
+            border: 1px solid rgba(244, 228, 180, .38); background: rgba(255, 248, 230, .08);
+            color: #f4e4b4; font-weight: 700; font-size: 13px; padding: 10px 18px; border-radius: 999px;
+            min-height: 44px;
+        }
+        .map-ask-skip:active { background: rgba(255, 248, 230, .18); }
+        .map-ask-meta { font-size: 12px; color: #a8a29e; }
+        .map-place .place-ok .place-well { stroke: #10b981; }
+        .map-place .place-ok .place-well-core { fill: rgba(16, 185, 129, .5); }
+        .map-place .place-shown .place-well { stroke: #94a3b8; }
+        .map-place .place-shown .place-well-core { fill: rgba(148, 163, 184, .45); }
+        .map-place .place-hit .place-well-core { animation: pinPop .45s ease-out; }
+        @keyframes pinPop { 0% { r: 14; opacity: 1; } 100% { r: 30; opacity: 0; } }
+        .map-place .tr-map-wrap .map-pin-done { fill: #44403c; }
         .map-place .map-zoom-tools button { backdrop-filter: blur(6px); }
         html.dark .map-play-root.map-place .tr-map-wrap path,
         html.dark .map-play-root.map-place .tr-map-wrap path.map-stage { fill: #d9ccab !important; }

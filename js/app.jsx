@@ -1119,46 +1119,43 @@ function MapTopics(props) {
 function MapPlay(props) {
     const quiz = window.MapQuiz;
     const meta = quiz ? quiz.topicMeta(props.topicId) : null;
+    // Konunun tüm hedefleri tek oyunda, karışık sırayla sorulur.
     const round = useMemo(function () {
-        if (!quiz) return { items: [], chips: [] };
-        var n = 6 + Math.floor(Math.random() * 3);
-        if (quiz.pickPlaceRound) return quiz.pickPlaceRound(props.topicId, n);
-        var steps = quiz.pickRound(props.topicId, n) || [];
-        var items = steps.filter(function (s) { return s.type === "map" && s.item; }).map(function (s) { return s.item; });
-        var chips = items.map(function (it) { return { id: it.id, name: it.name }; });
-        return { items: items, chips: chips };
+        if (!quiz || !quiz.pickPlaceRound) return { items: [], chips: [] };
+        return quiz.pickPlaceRound(props.topicId);
     }, [props.seed, props.topicId]);
-    const layerRef = useRef({ pins: [] });
-    const [placed, setPlaced] = useState({});
-    const [selected, setSelected] = useState(null);
-    const [flash, setFlash] = useState(null);
+    const total = round.items.length;
+
+    const [idx, setIdx] = useState(0);
+    const [solved, setSolved] = useState({});      // pinId -> "ok" | "shown"
     const [misses, setMisses] = useState(0);
+    const [flash, setFlash] = useState(null);
+    const [hit, setHit] = useState(null);
     const [done, setDone] = useState(false);
     const [svgHtml, setSvgHtml] = useState("");
     const [mapFail, setMapFail] = useState(false);
-    const [drag, setDrag] = useState(null);
+
     const hostRef = useRef(null);
     const stageRef = useRef(null);
     const zoomRef = useRef({ s: 1, x: 0, y: 0 });
-    const placedRef = useRef({});
-    const selectedRef = useRef(null);
-    const dragRef = useRef(null);
+    const solvedRef = useRef({});
+    const targetRef = useRef(null);
     const flashTimer = useRef(null);
-    const skipClickRef = useRef(false);
     const fitKeyRef = useRef("");
-    const total = round.items.length;
+    const lastRef = useRef(null);
+    const target = round.items[idx] || null;
+    targetRef.current = target;
 
     useEffect(function () {
-        setPlaced({});
-        setSelected(null);
-        setFlash(null);
+        setIdx(0);
+        setSolved({});
+        solvedRef.current = {};
         setMisses(0);
+        setFlash(null);
+        setHit(null);
         setDone(false);
-        setDrag(null);
-        placedRef.current = {};
-        selectedRef.current = null;
-        dragRef.current = null;
         zoomRef.current = { s: 1, x: 0, y: 0 };
+        fitKeyRef.current = "";
         if (hostRef.current) hostRef.current.style.transform = "translate(0px, 0px) scale(1)";
     }, [props.seed, props.topicId]);
 
@@ -1175,13 +1172,14 @@ function MapPlay(props) {
                 svg.setAttribute("viewBox", svg.getAttribute("viewBox") || svg.getAttribute("viewbox") || "0 0 1000 422");
                 svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
                 svg.setAttribute("class", "tr-map");
-                svg.setAttribute("aria-label", "Türkiye illeri");
+                svg.setAttribute("aria-label", "Türkiye haritası");
                 setSvgHtml(svg.outerHTML);
             })
             .catch(function () { if (!gone) setMapFail(true); });
         return function () { gone = true; };
     }, []);
 
+    // ---- yakınlaştır / kaydır ----
     useEffect(function () {
         var stage = stageRef.current;
         var canvas = hostRef.current;
@@ -1189,20 +1187,17 @@ function MapPlay(props) {
         var gest = { mode: "", x: 0, y: 0, dist: 0, s0: 1, x0: 0, y0: 0, moved: false };
 
         function apply(s, x, y) {
-            s = Math.max(1, Math.min(4.5, s));
+            s = Math.max(1, Math.min(5, s));
             if (s <= 1.02) { s = 1; x = 0; y = 0; }
             zoomRef.current = { s: s, x: x, y: y };
             canvas.style.transform = "translate(" + x + "px, " + y + "px) scale(" + s + ")";
         }
-
         function pinchDist(touches) {
             var a = touches[0], b = touches[1];
             var dx = a.clientX - b.clientX, dy = a.clientY - b.clientY;
             return Math.sqrt(dx * dx + dy * dy) || 1;
         }
-
         function onTouchStart(e) {
-            if (dragRef.current) return;
             if (e.touches.length === 2) {
                 gest.mode = "pinch";
                 gest.dist = pinchDist(e.touches);
@@ -1210,47 +1205,38 @@ function MapPlay(props) {
                 gest.x0 = zoomRef.current.x;
                 gest.y0 = zoomRef.current.y;
                 gest.moved = true;
-            } else if (e.touches.length === 1 && zoomRef.current.s > 1) {
+            } else if (e.touches.length === 1) {
                 gest.mode = "pan";
                 gest.x = e.touches[0].clientX;
                 gest.y = e.touches[0].clientY;
                 gest.x0 = zoomRef.current.x;
                 gest.y0 = zoomRef.current.y;
                 gest.moved = false;
-            } else {
-                gest.mode = "";
-            }
+            } else gest.mode = "";
         }
-
         function onTouchMove(e) {
-            if (dragRef.current) return;
             if (gest.mode === "pinch" && e.touches.length === 2) {
                 e.preventDefault();
-                var d = pinchDist(e.touches);
-                apply(gest.s0 * (d / gest.dist), gest.x0, gest.y0);
-            } else if (gest.mode === "pan" && e.touches.length === 1) {
+                apply(gest.s0 * (pinchDist(e.touches) / gest.dist), gest.x0, gest.y0);
+            } else if (gest.mode === "pan" && e.touches.length === 1 && zoomRef.current.s > 1) {
                 var dx = e.touches[0].clientX - gest.x;
                 var dy = e.touches[0].clientY - gest.y;
-                if (Math.abs(dx) + Math.abs(dy) > 8) gest.moved = true;
+                if (Math.abs(dx) + Math.abs(dy) > 10) gest.moved = true;
                 if (gest.moved) {
                     e.preventDefault();
                     apply(zoomRef.current.s, gest.x0 + dx, gest.y0 + dy);
                 }
             }
         }
-
         function onTouchEnd() {
             if (gest.moved) stage.setAttribute("data-skip-click", "1");
             gest.mode = "";
         }
-
         function onWheel(e) {
             e.preventDefault();
             var z = zoomRef.current;
-            var next = z.s * (e.deltaY > 0 ? 0.88 : 1.14);
-            apply(next, z.x, z.y);
+            apply(z.s * (e.deltaY > 0 ? 0.88 : 1.14), z.x, z.y);
         }
-
         stage.addEventListener("touchstart", onTouchStart, { passive: true });
         stage.addEventListener("touchmove", onTouchMove, { passive: false });
         stage.addEventListener("touchend", onTouchEnd);
@@ -1266,86 +1252,72 @@ function MapPlay(props) {
 
     function bumpZoom(dir) {
         var z = zoomRef.current;
-        var s = dir === 0 ? 1 : z.s * (dir > 0 ? 1.35 : 0.74);
+        var s = dir === 0 ? 1 : z.s * (dir > 0 ? 1.4 : 0.72);
         var x = dir === 0 ? 0 : z.x;
         var y = dir === 0 ? 0 : z.y;
         if (s <= 1.02) { s = 1; x = 0; y = 0; }
-        s = Math.max(1, Math.min(4.5, s));
+        s = Math.max(1, Math.min(5, s));
         zoomRef.current = { s: s, x: x, y: y };
         if (hostRef.current) hostRef.current.style.transform = "translate(" + x + "px, " + y + "px) scale(" + s + ")";
     }
 
-    function tryPlace(pinId, chipId) {
-        if (!pinId || !chipId || placedRef.current[pinId] || placedRef.current[chipId]) return;
-        if (chipId === pinId) {
-            var next = Object.assign({}, placedRef.current);
-            next[pinId] = true;
-            placedRef.current = next;
-            setPlaced(next);
-            setSelected(null);
-            selectedRef.current = null;
-            if (Object.keys(next).length >= total) {
-                setTimeout(function () { setDone(true); }, 480);
-            }
+    function advance(nextSolved) {
+        var i = idx + 1;
+        while (i < total && nextSolved[round.items[i].id]) i++;
+        if (i >= total) setTimeout(function () { setDone(true); }, 420);
+        setIdx(i);
+    }
+
+    // Dokunulan noktaya en yakın pini seç: üst üste binen hedeflerde yanlış pine gitmesin.
+    function nearestPin(x, y) {
+        var host = hostRef.current;
+        if (!host) return null;
+        var best = null, bestD = Infinity;
+        Array.prototype.forEach.call(host.querySelectorAll("[data-pin]"), function (n) {
+            var ring = n.querySelector(".place-well") || n;
+            var r = ring.getBoundingClientRect();
+            var cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+            var d = Math.sqrt((cx - x) * (cx - x) + (cy - y) * (cy - y));
+            var reach = Math.max(24, r.width * 1.1);
+            if (d <= reach && d < bestD) { bestD = d; best = n.getAttribute("data-pin"); }
+        });
+        return best;
+    }
+
+    function answer(pinId) {
+        var t = targetRef.current;
+        if (!t || done) return;
+        if (solvedRef.current[pinId]) return;
+        if (pinId === t.id) {
+            var next = Object.assign({}, solvedRef.current);
+            next[pinId] = "ok";
+            solvedRef.current = next;
+            lastRef.current = pinId;
+            setSolved(next);
+            setHit(pinId);
+            setTimeout(function () { setHit(null); }, 500);
+            advance(next);
             return;
         }
         setMisses(function (m) { return m + 1; });
         setFlash(pinId);
         if (flashTimer.current) clearTimeout(flashTimer.current);
-        flashTimer.current = setTimeout(function () { setFlash(null); }, 560);
+        flashTimer.current = setTimeout(function () { setFlash(null); }, 620);
     }
 
-    // Bırakılan noktaya en yakın boş pini bul (üst üste binen isabet alanlarında yanlış pine düşmesin).
-    function nearestPinAt(x, y) {
-        var host = hostRef.current;
-        if (!host) return null;
-        var best = null, bestD = Infinity;
-        Array.prototype.forEach.call(host.querySelectorAll("[data-pin]"), function (n) {
-            if (placedRef.current[n.getAttribute("data-pin")]) return;
-            var ring = n.querySelector(".place-well") || n;
-            var r = ring.getBoundingClientRect();
-            var cx = r.left + r.width / 2, cy = r.top + r.height / 2;
-            var d = Math.sqrt((cx - x) * (cx - x) + (cy - y) * (cy - y));
-            var reach = Math.max(26, r.width * 0.95);
-            if (d <= reach && d < bestD) { bestD = d; best = n; }
-        });
-        return best;
+    function reveal() {
+        var t = targetRef.current;
+        if (!t || done) return;
+        var next = Object.assign({}, solvedRef.current);
+        next[t.id] = "shown";
+        solvedRef.current = next;
+        lastRef.current = t.id;
+        setSolved(next);
+        setMisses(function (m) { return m + 1; });
+        advance(next);
     }
 
-    function onChipPointerDown(e, chip) {
-        if (placed[chip.id] || done) return;
-        e.preventDefault();
-        setSelected(chip.id);
-        selectedRef.current = chip.id;
-        dragRef.current = { id: chip.id, name: chip.name, x: e.clientX, y: e.clientY };
-        setDrag({ id: chip.id, name: chip.name, x: e.clientX, y: e.clientY });
-        if (e.currentTarget.setPointerCapture) e.currentTarget.setPointerCapture(e.pointerId);
-    }
-
-    function onChipPointerMove(e) {
-        if (!dragRef.current) return;
-        var next = { id: dragRef.current.id, name: dragRef.current.name, x: e.clientX, y: e.clientY };
-        dragRef.current = next;
-        setDrag(next);
-    }
-
-    function onChipPointerUp(e) {
-        if (!dragRef.current) return;
-        var chipId = dragRef.current.id;
-        var x = e.clientX, y = e.clientY;
-        dragRef.current = null;
-        setDrag(null);
-        var n = nearestPinAt(x, y);
-        if (!n) {
-            var el = document.elementFromPoint(x, y);
-            n = el && el.closest ? el.closest("[data-pin]") : null;
-        }
-        if (n) {
-            skipClickRef.current = true;
-            tryPlace(n.getAttribute("data-pin"), chipId);
-        }
-    }
-
+    // ---- pinleri çiz ----
     useEffect(function () {
         var el = hostRef.current;
         if (!el || !svgHtml || done) return;
@@ -1353,67 +1325,72 @@ function MapPlay(props) {
         if (!svg) return;
         svg.setAttribute("viewBox", "0 0 1000 422");
         svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
-        var paths = el.querySelectorAll("path[id]");
-        Array.prototype.forEach.call(paths, function (p) {
+        Array.prototype.forEach.call(el.querySelectorAll("path[id]"), function (p) {
             p.setAttribute("class", "map-stage");
         });
         var built = (quiz && quiz.topicLayerFromSvg) ? quiz.topicLayerFromSvg(svg, props.topicId) : { pins: [] };
         var want = {};
         round.items.forEach(function (it) { want[it.id] = true; });
         var pins = (built.pins || []).filter(function (p) { return want[p.id]; });
-        layerRef.current = { pins: pins };
-        var oldDots = svg.querySelector("g.topic-dots");
-        if (oldDots) oldDots.remove();
+        var glyph = (quiz && quiz.topicGlyph) ? quiz.topicGlyph(props.topicId) : "📍";
+
+        var old = svg.querySelector("g.topic-dots");
+        if (old) old.remove();
         var oldLabs = svg.querySelector("g.map-float-labels");
         if (oldLabs) oldLabs.remove();
-        var glyph = (quiz && quiz.topicGlyph) ? quiz.topicGlyph(props.topicId) : "📍";
+
         var dots = document.createElementNS("http://www.w3.org/2000/svg", "g");
         dots.setAttribute("class", "topic-dots");
         pins.forEach(function (pin) {
+            var state = solved[pin.id];
             var wrap = document.createElementNS("http://www.w3.org/2000/svg", "g");
             wrap.setAttribute("data-pin", pin.id);
-            var locked = !!placed[pin.id];
-            var bad = flash === pin.id;
-            wrap.setAttribute("class", "topic-mark place-mark" + (locked ? " place-locked" : "") + (bad ? " place-miss" : ""));
+            wrap.setAttribute("class", "topic-mark place-mark"
+                + (state === "ok" ? " place-ok" : "")
+                + (state === "shown" ? " place-shown" : "")
+                + (flash === pin.id ? " place-miss" : "")
+                + (hit === pin.id ? " place-hit" : ""));
             var glow = document.createElementNS("http://www.w3.org/2000/svg", "circle");
             glow.setAttribute("cx", String(pin.x));
             glow.setAttribute("cy", String(pin.y));
-            glow.setAttribute("r", locked ? "16" : "20");
-            glow.setAttribute("class", locked ? "place-well-core is-locked" : "place-well-core");
+            glow.setAttribute("r", state ? "15" : "19");
+            glow.setAttribute("class", "place-well-core" + (state ? " is-locked" : ""));
             var ring = document.createElementNS("http://www.w3.org/2000/svg", "circle");
             ring.setAttribute("cx", String(pin.x));
             ring.setAttribute("cy", String(pin.y));
-            ring.setAttribute("r", "15");
+            ring.setAttribute("r", "14");
             ring.setAttribute("class", "place-well");
-            var hit = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-            hit.setAttribute("cx", String(pin.x));
-            hit.setAttribute("cy", String(pin.y));
-            hit.setAttribute("r", "28");
-            hit.setAttribute("class", "topic-hit");
-            var dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-            dot.setAttribute("cx", String(pin.x));
-            dot.setAttribute("cy", String(pin.y));
-            dot.setAttribute("r", "3.2");
-            dot.setAttribute("class", "place-dot");
+            var hitArea = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            hitArea.setAttribute("cx", String(pin.x));
+            hitArea.setAttribute("cy", String(pin.y));
+            hitArea.setAttribute("r", "26");
+            hitArea.setAttribute("class", "topic-hit");
             wrap.appendChild(glow);
             wrap.appendChild(ring);
-            if (!locked) wrap.appendChild(dot);
-            wrap.appendChild(hit);
-            if (locked) {
+            if (!state) {
+                var dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                dot.setAttribute("cx", String(pin.x));
+                dot.setAttribute("cy", String(pin.y));
+                dot.setAttribute("r", "3.2");
+                dot.setAttribute("class", "place-dot");
+                wrap.appendChild(dot);
+            } else {
                 var ico = document.createElementNS("http://www.w3.org/2000/svg", "text");
                 ico.setAttribute("x", String(pin.x));
                 ico.setAttribute("y", String(pin.y));
                 ico.setAttribute("class", "topic-ico");
                 ico.setAttribute("text-anchor", "middle");
                 ico.setAttribute("dominant-baseline", "central");
-                ico.setAttribute("font-size", "22");
+                ico.setAttribute("font-size", "20");
                 ico.textContent = pin.glyph || glyph;
                 wrap.appendChild(ico);
             }
+            wrap.appendChild(hitArea);
             dots.appendChild(wrap);
         });
         svg.appendChild(dots);
-        // Küçük ekranda turun pinlerine otomatik yakınlaş (bir kez; "Tam" ile tüm harita).
+
+        // ilk açılışta tüm hedeflere yakınlaş (küçük ekranda pinler görünür olsun)
         var fitKey = props.seed + "|" + props.topicId;
         var stageEl = stageRef.current;
         if (fitKeyRef.current !== fitKey && stageEl && pins.length) {
@@ -1421,14 +1398,14 @@ function MapPlay(props) {
             var W = stageEl.clientWidth, H = stageEl.clientHeight;
             if (W > 0 && H > 0) {
                 var k = Math.min(W / 1000, H / 422);
-                var pad = 55;
-                var mnx = Math.min.apply(null, pins.map(function (p) { return p.x; })) - pad;
-                var mxx = Math.max.apply(null, pins.map(function (p) { return p.x; })) + pad;
-                var mny = Math.min.apply(null, pins.map(function (p) { return p.y; })) - pad;
-                var mxy = Math.max.apply(null, pins.map(function (p) { return p.y; })) + pad;
+                var pad = 50;
+                var xs = pins.map(function (p) { return p.x; });
+                var ys = pins.map(function (p) { return p.y; });
+                var mnx = Math.min.apply(null, xs) - pad, mxx = Math.max.apply(null, xs) + pad;
+                var mny = Math.min.apply(null, ys) - pad, mxy = Math.max.apply(null, ys) + pad;
                 var sFit = Math.min(W / ((mxx - mnx) * k), H / ((mxy - mny) * k));
-                var sMax = Math.max(1, 17 / (15 * k));
-                var s = Math.max(1, Math.min(sFit, sMax, 4.5));
+                var sMax = Math.max(1, 16 / (14 * k));
+                var s = Math.max(1, Math.min(sFit, sMax, 3.2));
                 if (s > 1.15) {
                     var bx = (W - 1000 * k) / 2 + k * (mnx + mxx) / 2;
                     var by = (H - 422 * k) / 2 + k * (mny + mxy) / 2;
@@ -1438,35 +1415,37 @@ function MapPlay(props) {
                 }
             }
         }
-        var g = document.createElementNS("http://www.w3.org/2000/svg", "g");
-        g.setAttribute("class", "map-float-labels");
+
+        var labels = document.createElementNS("http://www.w3.org/2000/svg", "g");
+        labels.setAttribute("class", "map-float-labels");
         pins.forEach(function (pin) {
-            if (!placed[pin.id]) return;
+            var state = solved[pin.id];
+            // Ad etiketi yalnız son işaretlenen pinde; hepsi birden yazınca harita okunmuyor.
+            if (!state || pin.id !== lastRef.current) return;
             var t = document.createElementNS("http://www.w3.org/2000/svg", "text");
             t.setAttribute("x", String(pin.x));
-            t.setAttribute("y", String(pin.y - 24));
-            t.setAttribute("class", "map-pin map-pin-ok");
-            t.setAttribute("font-size", "15");
+            t.setAttribute("y", String(pin.y - 22));
+            t.setAttribute("class", "map-pin " + (state === "ok" ? "map-pin-ok" : "map-pin-done"));
+            t.setAttribute("font-size", "14");
             t.textContent = pin.name;
-            g.appendChild(t);
+            labels.appendChild(t);
         });
-        svg.appendChild(g);
+        svg.appendChild(labels);
+
         function onClick(ev) {
-            if (skipClickRef.current) {
-                skipClickRef.current = false;
-                return;
-            }
             if (stageRef.current && stageRef.current.getAttribute("data-skip-click") === "1") {
                 stageRef.current.removeAttribute("data-skip-click");
                 return;
             }
-            var n = nearestPinAt(ev.clientX, ev.clientY) || (ev.target.closest ? ev.target.closest("[data-pin]") : null);
+            var near = nearestPin(ev.clientX, ev.clientY);
+            if (near) { answer(near); return; }
+            var n = ev.target.closest ? ev.target.closest("[data-pin]") : null;
             if (!n) return;
-            tryPlace(n.getAttribute("data-pin"), selectedRef.current);
+            answer(n.getAttribute("data-pin"));
         }
         el.addEventListener("click", onClick);
         return function () { el.removeEventListener("click", onClick); };
-    }, [svgHtml, placed, flash, round, done, props.topicId]);
+    }, [svgHtml, solved, flash, hit, round, done, idx, props.topicId]);
 
     useEffect(function () {
         return function () { if (flashTimer.current) clearTimeout(flashTimer.current); };
@@ -1482,7 +1461,8 @@ function MapPlay(props) {
     }
 
     if (done) {
-        var okN = total;
+        var okN = Object.keys(solved).filter(function (id) { return solved[id] === "ok"; }).length;
+        var pct = total ? Math.round((okN / total) * 100) : 0;
         return (
             <Shell wide>
                 <div className="flex justify-between mb-4">
@@ -1492,14 +1472,25 @@ function MapPlay(props) {
                 <article className="study-card fade-in">
                     <header className="study-card-head">
                         <div>
-                            <p className="study-card-kicker">Tur bitti</p>
+                            <p className="study-card-kicker">Harita bitti</p>
                             <h2 className="study-card-title">{meta ? meta.title : "Harita"}</h2>
                         </div>
                         <div className="note-progress">{okN}/{total}</div>
                     </header>
-                    <div className="study-card-body text-center py-8">
-                        <p className="text-4xl font-black mb-2">{okN} isim</p>
-                        <p className="text-stone-500">{misses ? (misses + " yanlış deneme") : "Hepsi ilk denemede"}</p>
+                    <div className="study-card-body py-6">
+                        <p className="text-4xl font-black mb-1 text-center">%{pct}</p>
+                        <p className="text-stone-500 text-center">{okN} doğru · {total - okN} kaçtı</p>
+                        <p className="text-sm text-stone-400 mt-2 text-center">{misses ? (misses + " yanlış deneme") : "Tek hata yok, tam isabet."}</p>
+                        <ul className="map-result-list">
+                            {round.items.map(function (it) {
+                                var ok = solved[it.id] === "ok";
+                                return (
+                                    <li key={it.id} className={ok ? "is-ok" : "is-miss"}>
+                                        <span aria-hidden="true">{ok ? "✓" : "•"}</span>{it.name}
+                                    </li>
+                                );
+                            })}
+                        </ul>
                     </div>
                     <footer className="study-card-foot">
                         <BackBtn onClick={props.onBack} label="Konular" />
@@ -1510,63 +1501,45 @@ function MapPlay(props) {
         );
     }
 
-    var left = round.chips.filter(function (c) { return !placed[c.id]; });
+    var okCount = Object.keys(solved).filter(function (id) { return solved[id] === "ok"; }).length;
+    var pctBar = total ? Math.round((Object.keys(solved).length / total) * 100) : 0;
     return (
         <div className="map-play-root map-place">
             <header className="map-play-top">
                 <div className="map-play-bar">
                     <BackBtn onClick={props.onBack} label="Konular" />
-                    <div className="note-progress shrink-0">{placedNLabel(placed, total)}</div>
+                    <div className="note-progress shrink-0">{okCount}/{total}</div>
                     <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
                 </div>
                 <p className="map-play-kicker">{meta ? ((meta.hoverImg ? "" : (meta.icon + " ")) + meta.title) : "Harita"}</p>
-                <p className="map-play-prompt">Bu turdaki {total} ismi haritadaki boş pinlere yerleştir</p>
+                <div className="map-progress" aria-hidden="true"><span style={{ width: pctBar + "%" }} /></div>
             </header>
             {!mapFail ? (
                 <div className="map-play-stage tr-map-wrap" ref={stageRef}>
                     <div className="map-relief" aria-hidden="true" />
                     <div className="map-play-canvas" ref={hostRef} dangerouslySetInnerHTML={{ __html: svgHtml }} />
-                    <div className="map-zoom-tools" aria-label="Harita yakınlaştır">
-                        <button type="button" onClick={function () { bumpZoom(1); }}>+</button>
-                        <button type="button" onClick={function () { bumpZoom(-1); }}>−</button>
+                    <div className="map-zoom-tools" aria-label="Haritayı yakınlaştır">
+                        <button type="button" onClick={function () { bumpZoom(1); }} aria-label="Yakınlaştır">+</button>
+                        <button type="button" onClick={function () { bumpZoom(-1); }} aria-label="Uzaklaştır">−</button>
                         <button type="button" className="map-zoom-reset" onClick={function () { bumpZoom(0); }}>Tam</button>
                     </div>
                 </div>
             ) : (
                 <div className="map-play-stage p-4 overflow-auto">
-                    <p className="text-center text-stone-300 py-10">Harita yüklenemedi. Bağlantıyı kontrol edip tekrar dene.</p>
+                    <p className="text-center text-stone-300 py-10">Harita yüklenemedi. Bağlantını kontrol edip tekrar dene.</p>
                 </div>
             )}
-            <footer className="map-play-foot">
-                <p className="map-place-hint">{selected ? "Pin’e bırak veya haritadaki boşluğa dokun" : "İsmi tut, boş pine sürükle"}</p>
-                <div className="map-chip-dock">
-                    {left.map(function (c) {
-                        var on = selected === c.id;
-                        return (
-                            <button
-                                key={c.id}
-                                type="button"
-                                className={"map-chip" + (on ? " is-on" : "")}
-                                onPointerDown={function (e) { onChipPointerDown(e, c); }}
-                                onPointerMove={onChipPointerMove}
-                                onPointerUp={onChipPointerUp}
-                                onPointerCancel={onChipPointerUp}
-                                onClick={function (e) { e.preventDefault(); }}
-                            >{c.name}</button>
-                        );
-                    })}
+            <footer className="map-play-foot map-ask">
+                <p className="map-ask-kicker">Haritada bul ve dokun</p>
+                <p className="map-ask-name">{target ? target.name : ""}</p>
+                {target && target.prompt ? <p className="map-ask-hint">{target.prompt}</p> : null}
+                <div className="map-ask-actions">
+                    <button type="button" className="map-ask-skip" onClick={reveal}>Bilmiyorum, göster</button>
+                    <span className="map-ask-meta">{misses ? (misses + " yanlış") : "Hatasız"}</span>
                 </div>
-                <p className="map-place-meta">{misses ? (misses + " yanlış deneme") : "İlk deneme"}</p>
             </footer>
-            {drag ? (
-                <div className="map-chip-ghost" style={{ left: drag.x + "px", top: drag.y + "px" }}>{drag.name}</div>
-            ) : null}
         </div>
     );
-}
-
-function placedNLabel(placed, total) {
-    return Object.keys(placed || {}).length + "/" + total;
 }
 
 function DersHome(props) {
@@ -2455,6 +2428,74 @@ function packFromKonu(kpssData, ders, konu, packIdx) {
     return packs[i];
 }
 
+// Not/soru görsellerine dokununca tam ekran büyütme (haritalar telefonda okunabilsin).
+function ImageZoom() {
+    const [src, setSrc] = useState(null);
+    const [zoom, setZoom] = useState(1);
+    const dragRef = useRef(null);
+    const imgRef = useRef(null);
+    const posRef = useRef({ x: 0, y: 0 });
+
+    useEffect(function () {
+        function onClick(e) {
+            var img = e.target && e.target.tagName === "IMG" ? e.target : null;
+            if (!img) return;
+            if (!img.closest(".note-html, .q-stem, .study-card-body, .zoomable")) return;
+            if (img.closest("a, button")) return;
+            e.preventDefault();
+            posRef.current = { x: 0, y: 0 };
+            setZoom(1);
+            setSrc(img.currentSrc || img.src);
+        }
+        document.addEventListener("click", onClick);
+        return function () { document.removeEventListener("click", onClick); };
+    }, []);
+
+    useEffect(function () {
+        function onKey(e) { if (e.key === "Escape") setSrc(null); }
+        if (src) document.addEventListener("keydown", onKey);
+        return function () { document.removeEventListener("keydown", onKey); };
+    }, [src]);
+
+    function applyTransform(z, x, y) {
+        posRef.current = { x: x, y: y };
+        if (imgRef.current) imgRef.current.style.transform = "translate(" + x + "px," + y + "px) scale(" + z + ")";
+    }
+
+    function toggleZoom(e) {
+        var next = zoom > 1 ? 1 : 2.4;
+        setZoom(next);
+        applyTransform(next, 0, 0);
+        if (e) e.stopPropagation();
+    }
+
+    function onPointerDown(e) {
+        if (zoom <= 1) return;
+        dragRef.current = { x: e.clientX, y: e.clientY, ox: posRef.current.x, oy: posRef.current.y };
+        if (e.currentTarget.setPointerCapture) e.currentTarget.setPointerCapture(e.pointerId);
+    }
+    function onPointerMove(e) {
+        var d = dragRef.current;
+        if (!d) return;
+        applyTransform(zoom, d.ox + (e.clientX - d.x), d.oy + (e.clientY - d.y));
+    }
+    function onPointerUp() { dragRef.current = null; }
+
+    if (!src) return null;
+    return (
+        <div className="img-zoom" onClick={function () { setSrc(null); }}>
+            <img ref={imgRef} src={src} alt="" className="img-zoom-pic"
+                style={{ transform: "translate(" + posRef.current.x + "px," + posRef.current.y + "px) scale(" + zoom + ")", cursor: zoom > 1 ? "grab" : "zoom-in" }}
+                onClick={toggleZoom}
+                onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={onPointerUp} onPointerCancel={onPointerUp} />
+            <div className="img-zoom-bar">
+                <button type="button" onClick={toggleZoom}>{zoom > 1 ? "Küçült" : "Büyüt"}</button>
+                <button type="button" onClick={function (e) { e.stopPropagation(); setSrc(null); }}>Kapat</button>
+            </div>
+        </div>
+    );
+}
+
 function App() {
     const student = useStudent();
     const isDark = !!(student.profile && student.profile.dark);
@@ -3167,6 +3208,7 @@ function App() {
                 </div>
             ) : null}
             {body}
+            <ImageZoom />
             {!inTest ? <CookieBar /> : null}
             {!inTest ? (
                 <BottomNav nav={nav} streak={plan.streak || 0} onChange={function (id) {

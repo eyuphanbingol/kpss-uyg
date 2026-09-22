@@ -1,0 +1,1186 @@
+/*jsx:babel-7.29.9-react-classic:74030:6f19p3*/
+(function () {
+  const {
+    useEffect,
+    useState,
+    useMemo,
+    useCallback,
+    useRef
+  } = React;
+
+  // ============================================================
+  // YARDIMCI FONKSİYONLAR
+  // ============================================================
+
+  function fmtDate(x) {
+    if (!x) return "—";
+    try {
+      var d = new Date(x);
+      if (isNaN(d.getTime())) return String(x).slice(0, 10);
+      return d.toLocaleDateString("tr-TR", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric"
+      });
+    } catch (e) {
+      return "—";
+    }
+  }
+  function fmtTime(x) {
+    if (!x) return "—";
+    try {
+      var d = new Date(x);
+      if (isNaN(d.getTime())) return String(x).slice(0, 10);
+      return d.toLocaleTimeString("tr-TR", {
+        hour: "2-digit",
+        minute: "2-digit"
+      });
+    } catch (e) {
+      return "—";
+    }
+  }
+  function fmtDateTime(x) {
+    if (!x) return "—";
+    try {
+      var d = new Date(x);
+      if (isNaN(d.getTime())) return String(x).slice(0, 10);
+      return d.toLocaleDateString("tr-TR", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric"
+      }) + " " + d.toLocaleTimeString("tr-TR", {
+        hour: "2-digit",
+        minute: "2-digit"
+      });
+    } catch (e) {
+      return "—";
+    }
+  }
+  function locLabel(loc) {
+    if (!loc) return "—";
+    if (typeof loc === "string") return loc || "—";
+    var city = loc.city || loc.region || "";
+    var country = loc.country || loc.countryCode || "";
+    if (city && country) return city + ", " + country;
+    return city || country || loc.tz || "—";
+  }
+  function eduLabel(id) {
+    if (id === "onlisans") return "Ön lisans";
+    if (id === "ortaogretim") return "Ortaöğretim";
+    if (id === "lisans") return "Lisans";
+    return id || "—";
+  }
+  function trackLabel(id) {
+    var map = {
+      "B": "B Grubu",
+      "A": "A Grubu",
+      "ogretmen": "Öğretmenlik",
+      "dhbt": "DHBT"
+    };
+    return map[id] || id || "—";
+  }
+  function getLevelColor(level) {
+    var map = {
+      "lisans": "bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300",
+      "onlisans": "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300",
+      "ortaogretim": "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300"
+    };
+    return map[level] || "bg-stone-100 text-stone-700 dark:bg-stone-800 dark:text-stone-300";
+  }
+  function parseAnnounceRow(row) {
+    var raw = String(row && row.body || "");
+    var exp = row && row.expires_at;
+    var m = raw.match(/^<!--kpss-exp:([^>]+)-->/);
+    if (m) {
+      exp = exp || m[1];
+      raw = raw.slice(m[0].length);
+    }
+    var ts = exp ? new Date(exp).getTime() : NaN;
+    var live = !exp || isFinite(ts) && ts > Date.now();
+    return {
+      id: row && row.id,
+      text: raw.trim(),
+      expiresAt: exp || null,
+      createdAt: row && row.created_at,
+      published: row && row.published !== false,
+      live: live && row && row.published !== false
+    };
+  }
+  function getStatusBadge(lastStudyAt) {
+    if (!lastStudyAt) return {
+      label: "Hiç çalışmamış",
+      color: "bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300"
+    };
+    var diff = (Date.now() - new Date(lastStudyAt).getTime()) / (1000 * 60 * 60 * 24);
+    if (diff < 1) return {
+      label: "🟢 Bugün aktif",
+      color: "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300"
+    };
+    if (diff < 3) return {
+      label: "🟡 3 gün içinde",
+      color: "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300"
+    };
+    if (diff < 7) return {
+      label: "🟠 7 gün içinde",
+      color: "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300"
+    };
+    return {
+      label: "🔴 7+ gün pasif",
+      color: "bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300"
+    };
+  }
+
+  // ============================================================
+  // ANA BİLEŞEN
+  // ============================================================
+
+  function AdminDashboard(props) {
+    const student = props.student;
+    const [tab, setTab] = useState("ozet");
+    const [rows, setRows] = useState([]);
+    const [kpi, setKpi] = useState(null);
+    const [hard, setHard] = useState([]);
+    const [announce, setAnnounce] = useState("");
+    const [announceHours, setAnnounceHours] = useState("24");
+    const [announceList, setAnnounceList] = useState([]);
+    const [detail, setDetail] = useState(null);
+    const [q, setQ] = useState("");
+    const [filter, setFilter] = useState("all");
+    const [msg, setMsg] = useState("");
+    const [busy, setBusy] = useState(false);
+    const [log, setLog] = useState([]);
+    const [eduReqs, setEduReqs] = useState([]);
+    const [sidebarOpen, setSidebarOpen] = useState(false);
+    const [selectedUserId, setSelectedUserId] = useState(null);
+    const [stats, setStats] = useState(null);
+    const [sortField, setSortField] = useState("last_study_at");
+    const [sortOrder, setSortOrder] = useState("desc");
+    const [page, setPage] = useState(1);
+    const pageSize = 20;
+    const isAdmin = student.userProfile && student.userProfile.role === "admin";
+    const email = student.userProfile && student.userProfile.email || "";
+
+    // ---------- Refs ----------
+    const searchInputRef = useRef(null);
+    const announceRef = useRef(null);
+
+    // ---------- Load Fonksiyonu ----------
+    const load = useCallback(async function () {
+      var sb = window.SupabaseClient && window.SupabaseClient.get();
+      if (!sb) {
+        setMsg("Veritabanı bağlı değil.");
+        return;
+      }
+      setBusy(true);
+      try {
+        // KPI'lar
+        var r = await sb.rpc("admin_kpis");
+        if (r.error) setMsg("Özet: " + (window.trError ? window.trError(r.error) : "yüklenemedi"));else setKpi(r.data);
+
+        // Kullanıcı listesi (konum payload'dan)
+        var listed = false;
+        var rUsers = await sb.functions.invoke("admin-action", {
+          body: {
+            action: "user_list"
+          }
+        });
+        if (!rUsers.error) {
+          var ud = rUsers.data;
+          if (typeof ud === "string") {
+            try {
+              ud = JSON.parse(ud);
+            } catch (e) {
+              ud = null;
+            }
+          }
+          var ulist = [];
+          if (ud && ud.ok === false) ulist = [];else if (Array.isArray(ud)) ulist = ud;else if (ud && Array.isArray(ud.data)) ulist = ud.data;else if (ud && ud.data && Array.isArray(ud.data.data)) ulist = ud.data.data;
+          if (ulist.length) {
+            setRows(ulist);
+            listed = true;
+          }
+        }
+        if (!listed) {
+          var r2 = await sb.rpc("admin_user_list");
+          if (!r2.error && r2.data) {
+            setRows(Array.isArray(r2.data) ? r2.data : []);
+          } else {
+            var r3 = await sb.from("admin_user_directory").select("*").limit(500);
+            if (r3.error) setMsg("Kullanıcı listesi yüklenemedi.");else setRows(r3.data || []);
+          }
+        }
+
+        // Zor konular
+        var r4 = await sb.rpc("admin_hard_topics");
+        if (!r4.error && r4.data) setHard(Array.isArray(r4.data) ? r4.data : []);
+
+        // Eğitim talepleri
+        var r5 = await sb.functions.invoke("admin-action", {
+          body: {
+            action: "list_edu_requests"
+          }
+        });
+        if (!r5.error) {
+          var d = r5.data;
+          if (typeof d === "string") {
+            try {
+              d = JSON.parse(d);
+            } catch (e) {
+              d = null;
+            }
+          }
+          var list = [];
+          if (Array.isArray(d)) list = d;else if (d && Array.isArray(d.data)) list = d.data;else if (d && d.data && Array.isArray(d.data.data)) list = d.data.data;
+          setEduReqs(list);
+        }
+        var r7 = await sb.functions.invoke("admin-action", {
+          body: {
+            action: "list_announcements"
+          }
+        });
+        var alist = [];
+        if (!r7.error) {
+          var ad = r7.data;
+          if (typeof ad === "string") {
+            try {
+              ad = JSON.parse(ad);
+            } catch (e) {
+              ad = null;
+            }
+          }
+          if (Array.isArray(ad)) alist = ad;else if (ad && Array.isArray(ad.data)) alist = ad.data;else if (ad && ad.data && Array.isArray(ad.data.data)) alist = ad.data.data;
+        }
+        if (!alist.length) {
+          var rA = await sb.from("app_announcements").select("id,body,published,created_at,expires_at").order("created_at", {
+            ascending: false
+          }).limit(80);
+          if (rA.error) {
+            rA = await sb.from("app_announcements").select("id,body,published,created_at").order("created_at", {
+              ascending: false
+            }).limit(80);
+          }
+          if (!rA.error) alist = rA.data || [];
+        }
+        setAnnounceList(alist.map(parseAnnounceRow));
+        var r6 = await sb.rpc("admin_stats");
+        if (!r6.error && r6.data) setStats(r6.data);
+      } catch (e) {
+        setMsg("Ağ hatası. Bağlantını kontrol edip tekrar dene.");
+      } finally {
+        setBusy(false);
+      }
+    }, []);
+
+    // ---------- Effect ----------
+    useEffect(function () {
+      if (isAdmin) load();
+    }, [isAdmin, load]);
+
+    // ---------- Action ----------
+    const act = useCallback(async function (name, payload) {
+      var sb = window.SupabaseClient && window.SupabaseClient.get();
+      if (!sb) {
+        setMsg("Sunucu bağlı değil.");
+        return;
+      }
+      setBusy(true);
+      try {
+        var res = await sb.functions.invoke("admin-action", {
+          body: Object.assign({
+            action: name
+          }, payload)
+        });
+        if (res.error) {
+          setMsg(window.trError ? window.trError(res.error, "İşlem başarısız.") : "İşlem başarısız.");
+        } else if (res.data && res.data.ok === false) {
+          setMsg(window.trError ? window.trError(res.data.error, "İşlem başarısız.") : "İşlem başarısız.");
+        } else {
+          setMsg("✅ İşlem başarıyla uygulandı.");
+          setLog(function (L) {
+            return [{
+              t: name,
+              at: new Date().toLocaleTimeString("tr-TR"),
+              detail: payload
+            }].concat(L).slice(0, 20);
+          });
+          if (name === "inspect_user" && res.data) {
+            setDetail(res.data.data || res.data);
+          }
+          if (name === "delete_user") setDetail(null);
+          load();
+        }
+      } catch (e) {
+        setMsg(window.trError ? window.trError(e, "İşlem başarısız.") : "İşlem başarısız.");
+      } finally {
+        setBusy(false);
+      }
+    }, [load]);
+
+    // ---------- Inspect ----------
+    const inspect = useCallback(async function (uid) {
+      await act("inspect_user", {
+        user_id: uid
+      });
+    }, [act]);
+
+    // ---------- Sıralama ----------
+    const sortedRows = useMemo(function () {
+      var sorted = rows.slice();
+      sorted.sort(function (a, b) {
+        var aVal = a[sortField] || "";
+        var bVal = b[sortField] || "";
+        if (sortField === "last_study_at") {
+          var aDate = aVal ? new Date(aVal).getTime() : 0;
+          var bDate = bVal ? new Date(bVal).getTime() : 0;
+          return sortOrder === "desc" ? bDate - aDate : aDate - bDate;
+        }
+        if (typeof aVal === "string") {
+          return sortOrder === "desc" ? bVal.localeCompare(aVal) : aVal.localeCompare(bVal);
+        }
+        return sortOrder === "desc" ? bVal - aVal : aVal - bVal;
+      });
+      return sorted;
+    }, [rows, sortField, sortOrder]);
+
+    // ---------- Filtre ----------
+    const filteredRows = useMemo(function () {
+      return sortedRows.filter(function (u) {
+        var hay = ((u.nickname || "") + (u.email || "") + (u.target_type || "") + (u.education_level || "") + (u.user_id || "") + (u.location || "")).toLowerCase();
+        if (q && hay.indexOf(q.toLowerCase()) < 0) return false;
+        if (filter === "premium" && !u.premium) return false;
+        if (filter === "lisans" && u.education_level !== "lisans") return false;
+        if (filter === "onlisans" && u.education_level !== "onlisans") return false;
+        if (filter === "ortaogretim" && u.education_level !== "ortaogretim") return false;
+        if (filter === "idle7") {
+          if (!u.last_study_at) return true;
+          return Date.now() - new Date(u.last_study_at).getTime() > 7 * 86400000;
+        }
+        if (filter === "active") {
+          if (!u.last_study_at) return false;
+          return Date.now() - new Date(u.last_study_at).getTime() < 1 * 86400000;
+        }
+        return true;
+      });
+    }, [sortedRows, q, filter]);
+
+    // ---------- Sayfalama ----------
+    const paginatedRows = useMemo(function () {
+      var start = (page - 1) * pageSize;
+      var end = start + pageSize;
+      return filteredRows.slice(start, end);
+    }, [filteredRows, page]);
+    const totalPages = useMemo(function () {
+      return Math.ceil(filteredRows.length / pageSize);
+    }, [filteredRows]);
+
+    // ---------- İstatistikler ----------
+    const summaryStats = useMemo(function () {
+      var total = rows.length;
+      var premium = rows.filter(function (u) {
+        return u.premium;
+      }).length;
+      var active = rows.filter(function (u) {
+        if (!u.last_study_at) return false;
+        return Date.now() - new Date(u.last_study_at).getTime() < 1 * 86400000;
+      }).length;
+      var totalQ = rows.reduce(function (sum, u) {
+        return sum + (u.questions_total || 0);
+      }, 0);
+      return {
+        total,
+        premium,
+        active,
+        totalQ,
+        avgQ: total > 0 ? Math.round(totalQ / total) : 0
+      };
+    }, [rows]);
+
+    // ---------- Navigation ----------
+    const nav = [{
+      id: "ozet",
+      t: "📊 Özet",
+      icon: "M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+    }, {
+      id: "talepler",
+      t: "📋 Talepler" + (eduReqs.length ? " (" + eduReqs.length + ")" : ""),
+      icon: "M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+    }, {
+      id: "kullanicilar",
+      t: "👥 Kullanıcılar",
+      icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+    }, {
+      id: "analiz",
+      t: "📈 Analiz",
+      icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+    }, {
+      id: "icerik",
+      t: "📢 Duyuru",
+      icon: "M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"
+    }];
+
+    // ---------- Yetki Kontrol ----------
+    if (!isAdmin) {
+      return /*#__PURE__*/React.createElement("div", {
+        className: "min-h-screen flex items-center justify-center p-8 bg-gradient-to-br from-stone-50 to-stone-100 dark:from-stone-900 dark:to-stone-800"
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "text-center max-w-sm p-8 rounded-3xl glass card-hover"
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "text-6xl mb-4"
+      }, "\uD83D\uDD12"), /*#__PURE__*/React.createElement("h1", {
+        className: "text-2xl font-black gradient-text mb-2"
+      }, "Yetki Yok"), /*#__PURE__*/React.createElement("p", {
+        className: "text-sm text-stone-500 dark:text-stone-400 mb-6"
+      }, "Bu hesap y\xF6netici yetkisine sahip de\u011Fil."), /*#__PURE__*/React.createElement("button", {
+        onClick: props.onSignOut,
+        className: "px-6 py-3 rounded-2xl btn-primary text-white font-semibold"
+      }, "\xC7\u0131k\u0131\u015F Yap")));
+    }
+
+    // ============================================================
+    // RENDER
+    // ============================================================
+
+    return /*#__PURE__*/React.createElement("div", {
+      className: "min-h-screen bg-stone-50 dark:bg-stone-900 text-stone-900 dark:text-stone-50 flex"
+    }, /*#__PURE__*/React.createElement("aside", {
+      className: "hidden md:flex w-64 shrink-0 flex-col border-r border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-950 shadow-lg"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "px-5 py-6 border-b border-stone-200 dark:border-stone-800"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex items-center gap-3"
+    }, window.AtanomLogo ? window.AtanomLogo("h-10 w-10 object-contain") : /*#__PURE__*/React.createElement("img", {
+      src: "icons/atanom.png",
+      alt: "Atanly",
+      className: "h-10 w-10 object-contain"
+    }), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
+      className: "text-sm font-bold gradient-text"
+    }, "Y\xF6netim Paneli"), /*#__PURE__*/React.createElement("p", {
+      className: "text-[10px] text-stone-400 truncate max-w-[140px]"
+    }, email)))), /*#__PURE__*/React.createElement("nav", {
+      className: "px-3 py-4 space-y-1 flex-1"
+    }, nav.map(function (n) {
+      var active = tab === n.id;
+      return /*#__PURE__*/React.createElement("button", {
+        key: n.id,
+        onClick: function () {
+          setTab(n.id);
+          setSidebarOpen(false);
+        },
+        className: "w-full text-left px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 flex items-center gap-3 " + (active ? "bg-indigo-50 dark:bg-indigo-950/30 text-indigo-700 dark:text-indigo-300 shadow-sm" : "text-stone-600 dark:text-stone-400 hover:bg-stone-100 dark:hover:bg-stone-800")
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "text-lg"
+      }, n.t.split(" ")[0]), /*#__PURE__*/React.createElement("span", {
+        className: "flex-1"
+      }, n.t.split(" ").slice(1).join(" ")), n.id === "talepler" && eduReqs.length > 0 && /*#__PURE__*/React.createElement("span", {
+        className: "h-5 w-5 rounded-full bg-rose-500 text-white text-[10px] font-bold flex items-center justify-center"
+      }, eduReqs.length));
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "p-4 border-t border-stone-200 dark:border-stone-800"
+    }, /*#__PURE__*/React.createElement("button", {
+      onClick: props.onSignOut,
+      className: "w-full py-2.5 rounded-xl border border-stone-200 dark:border-stone-700 text-sm font-medium hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors"
+    }, "\uD83D\uDEAA \xC7\u0131k\u0131\u015F"))), /*#__PURE__*/React.createElement("div", {
+      className: "flex-1 min-w-0"
+    }, /*#__PURE__*/React.createElement("header", {
+      className: "md:hidden flex items-center justify-between px-4 py-3 border-b border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-950 sticky top-0 z-10"
+    }, /*#__PURE__*/React.createElement("button", {
+      onClick: function () {
+        setSidebarOpen(!sidebarOpen);
+      },
+      className: "p-2 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800"
+    }, /*#__PURE__*/React.createElement("svg", {
+      className: "w-6 h-6",
+      fill: "none",
+      stroke: "currentColor",
+      viewBox: "0 0 24 24"
+    }, /*#__PURE__*/React.createElement("path", {
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      strokeWidth: 2,
+      d: "M4 6h16M4 12h16M4 18h16"
+    }))), /*#__PURE__*/React.createElement("span", {
+      className: "font-bold gradient-text"
+    }, "Y\xF6netim"), /*#__PURE__*/React.createElement("button", {
+      onClick: props.onSignOut,
+      className: "text-sm font-medium text-stone-500"
+    }, "\xC7\u0131k\u0131\u015F")), sidebarOpen && /*#__PURE__*/React.createElement("div", {
+      className: "md:hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-sm",
+      onClick: function () {
+        setSidebarOpen(false);
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "w-72 h-full bg-white dark:bg-stone-950 shadow-2xl p-4",
+      onClick: function (e) {
+        e.stopPropagation();
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex justify-between items-center mb-6"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "font-bold gradient-text"
+    }, "Y\xF6netim"), /*#__PURE__*/React.createElement("button", {
+      onClick: function () {
+        setSidebarOpen(false);
+      },
+      className: "p-2 rounded-xl hover:bg-stone-100"
+    }, "\u2715")), nav.map(function (n) {
+      var active = tab === n.id;
+      return /*#__PURE__*/React.createElement("button", {
+        key: n.id,
+        onClick: function () {
+          setTab(n.id);
+          setSidebarOpen(false);
+        },
+        className: "w-full text-left px-4 py-3 rounded-xl text-sm font-medium flex items-center gap-3 " + (active ? "bg-indigo-50 dark:bg-indigo-950/30 text-indigo-700" : "hover:bg-stone-100 dark:hover:bg-stone-800")
+      }, /*#__PURE__*/React.createElement("span", null, n.t), n.id === "talepler" && eduReqs.length > 0 && /*#__PURE__*/React.createElement("span", {
+        className: "ml-auto h-5 w-5 rounded-full bg-rose-500 text-white text-[10px] font-bold flex items-center justify-center"
+      }, eduReqs.length));
+    }), /*#__PURE__*/React.createElement("button", {
+      onClick: props.onSignOut,
+      className: "w-full mt-4 py-3 rounded-xl border border-stone-200 text-sm font-medium"
+    }, "\xC7\u0131k\u0131\u015F"))), /*#__PURE__*/React.createElement("div", {
+      className: "md:hidden flex gap-1 px-4 py-3 overflow-x-auto border-b border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-950 sticky top-12 z-10"
+    }, nav.map(function (n) {
+      return /*#__PURE__*/React.createElement("button", {
+        key: n.id,
+        onClick: function () {
+          setTab(n.id);
+        },
+        className: "shrink-0 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors " + (tab === n.id ? "bg-indigo-600 text-white" : "bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-400")
+      }, n.t, n.id === "talepler" && eduReqs.length > 0 && /*#__PURE__*/React.createElement("span", {
+        className: "ml-1 text-[10px] bg-white/30 px-1 rounded"
+      }, eduReqs.length));
+    })), /*#__PURE__*/React.createElement("main", {
+      className: "p-4 md:p-8 max-w-7xl mx-auto"
+    }, msg && /*#__PURE__*/React.createElement("div", {
+      className: "mb-4 p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-200 text-sm flex items-center justify-between"
+    }, /*#__PURE__*/React.createElement("span", null, msg), /*#__PURE__*/React.createElement("button", {
+      onClick: function () {
+        setMsg("");
+      },
+      className: "text-amber-600 hover:text-amber-800"
+    }, "\u2715")), busy && /*#__PURE__*/React.createElement("div", {
+      className: "mb-4 p-4 rounded-2xl bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-800 text-indigo-700 dark:text-indigo-300 text-sm flex items-center gap-3"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "animate-spin h-4 w-4 border-2 border-indigo-600 border-t-transparent rounded-full"
+    }), "\u0130\u015Flem devam ediyor..."), tab === "ozet" && /*#__PURE__*/React.createElement("div", {
+      className: "space-y-6"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex items-center justify-between"
+    }, /*#__PURE__*/React.createElement("h1", {
+      className: "text-2xl md:text-3xl font-black gradient-text"
+    }, "\uD83D\uDCCA Y\xF6netim \xD6zeti"), /*#__PURE__*/React.createElement("button", {
+      onClick: load,
+      disabled: busy,
+      className: "text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:underline"
+    }, "\uD83D\uDD04 Yenile")), /*#__PURE__*/React.createElement("div", {
+      className: "grid grid-cols-2 md:grid-cols-4 gap-3"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "rounded-2xl glass p-5 card-hover"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "text-xs text-stone-400 font-medium uppercase tracking-wider"
+    }, "\uD83D\uDC65 Toplam Kullan\u0131c\u0131"), /*#__PURE__*/React.createElement("p", {
+      className: "text-3xl font-bold gradient-text mt-2"
+    }, kpi ? kpi.users : "—"), /*#__PURE__*/React.createElement("p", {
+      className: "text-xs text-stone-400 mt-1"
+    }, "+", summaryStats.active, " bug\xFCn aktif")), /*#__PURE__*/React.createElement("div", {
+      className: "rounded-2xl glass p-5 card-hover"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "text-xs text-stone-400 font-medium uppercase tracking-wider"
+    }, "\u2B50 Premium"), /*#__PURE__*/React.createElement("p", {
+      className: "text-3xl font-bold text-amber-600 mt-2"
+    }, summaryStats.premium), /*#__PURE__*/React.createElement("p", {
+      className: "text-xs text-stone-400 mt-1"
+    }, "%", rows.length ? Math.round(summaryStats.premium / rows.length * 100) : 0, " d\xF6n\xFC\u015F\xFCm")), /*#__PURE__*/React.createElement("div", {
+      className: "rounded-2xl glass p-5 card-hover"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "text-xs text-stone-400 font-medium uppercase tracking-wider"
+    }, "\uD83D\uDCDD Toplam Soru"), /*#__PURE__*/React.createElement("p", {
+      className: "text-3xl font-bold text-emerald-600 mt-2"
+    }, summaryStats.totalQ), /*#__PURE__*/React.createElement("p", {
+      className: "text-xs text-stone-400 mt-1"
+    }, "\xD8 ", summaryStats.avgQ, " / kullan\u0131c\u0131")), /*#__PURE__*/React.createElement("div", {
+      className: "rounded-2xl glass p-5 card-hover"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "text-xs text-stone-400 font-medium uppercase tracking-wider"
+    }, "\uD83D\uDCC8 Tahmini Ciro"), /*#__PURE__*/React.createElement("p", {
+      className: "text-3xl font-bold text-indigo-600 mt-2"
+    }, summaryStats.premium * 149, " \u20BA"), /*#__PURE__*/React.createElement("p", {
+      className: "text-xs text-stone-400 mt-1"
+    }, "149 \u20BA / ay \xB7 ger\xE7ek \xF6deme yok"))), /*#__PURE__*/React.createElement("div", {
+      className: "grid grid-cols-2 md:grid-cols-4 gap-3"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "rounded-2xl bg-rose-50 dark:bg-rose-950/20 p-4 text-center border border-rose-100 dark:border-rose-800/30"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "text-2xl font-bold text-rose-600"
+    }, rows.filter(function (u) {
+      return !u.last_study_at || Date.now() - new Date(u.last_study_at).getTime() > 7 * 86400000;
+    }).length), /*#__PURE__*/React.createElement("div", {
+      className: "text-xs text-rose-500 mt-0.5"
+    }, "\uD83D\uDD34 Pasif (7+ g\xFCn)")), /*#__PURE__*/React.createElement("div", {
+      className: "rounded-2xl bg-emerald-50 dark:bg-emerald-950/20 p-4 text-center border border-emerald-100 dark:border-emerald-800/30"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "text-2xl font-bold text-emerald-600"
+    }, summaryStats.active), /*#__PURE__*/React.createElement("div", {
+      className: "text-xs text-emerald-500 mt-0.5"
+    }, "\uD83D\uDFE2 Bug\xFCn Aktif")), /*#__PURE__*/React.createElement("div", {
+      className: "rounded-2xl bg-amber-50 dark:bg-amber-950/20 p-4 text-center border border-amber-100 dark:border-amber-800/30"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "text-2xl font-bold text-amber-600"
+    }, eduReqs.length), /*#__PURE__*/React.createElement("div", {
+      className: "text-xs text-amber-500 mt-0.5"
+    }, "\uD83D\uDCCB Bekleyen Talep")), /*#__PURE__*/React.createElement("div", {
+      className: "rounded-2xl bg-indigo-50 dark:bg-indigo-950/20 p-4 text-center border border-indigo-100 dark:border-indigo-800/30"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "text-2xl font-bold text-indigo-600"
+    }, hard.length), /*#__PURE__*/React.createElement("div", {
+      className: "text-xs text-indigo-500 mt-0.5"
+    }, "\uD83D\uDCCA Zor Konu"))), log.length > 0 && /*#__PURE__*/React.createElement("div", {
+      className: "rounded-2xl glass p-5"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "text-xs font-bold uppercase tracking-wider text-stone-400 mb-3"
+    }, "\uD83D\uDCCB \u0130\u015Flem Ge\xE7mi\u015Fi"), /*#__PURE__*/React.createElement("div", {
+      className: "space-y-1 max-h-48 overflow-y-auto"
+    }, log.map(function (x, i) {
+      return /*#__PURE__*/React.createElement("div", {
+        key: i,
+        className: "flex items-center gap-3 text-xs text-stone-500 dark:text-stone-400 py-1 border-b border-stone-100 dark:border-stone-800"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "font-mono text-stone-400"
+      }, x.at), /*#__PURE__*/React.createElement("span", {
+        className: "font-medium text-stone-700 dark:text-stone-300"
+      }, x.t), x.detail && /*#__PURE__*/React.createElement("span", {
+        className: "text-stone-400"
+      }, "\xB7 ", JSON.stringify(x.detail).slice(0, 40)));
+    }))), /*#__PURE__*/React.createElement("p", {
+      className: "text-xs text-stone-400 text-center"
+    }, "\xD6\u011Frenci uygulamas\u0131 bu hesapta a\xE7\u0131lmaz \xB7 v2.0")), tab === "talepler" && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+      className: "flex items-start justify-between gap-3 mb-2"
+    }, /*#__PURE__*/React.createElement("h1", {
+      className: "text-2xl md:text-3xl font-black gradient-text"
+    }, "\uD83D\uDCCB E\u011Fitim De\u011Fi\u015Fiklik Talepleri"), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      disabled: busy,
+      onClick: load,
+      className: "text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:underline shrink-0"
+    }, "\uD83D\uDD04 Yenile")), /*#__PURE__*/React.createElement("p", {
+      className: "text-sm text-stone-500 dark:text-stone-400 mb-6"
+    }, "\xD6\u011Frenci kay\u0131tta se\xE7ti\u011Fi d\xFCzeyi kendi de\u011Fi\u015Ftiremez. Onaylarsan s\u0131nav tarihi de \xD6SYM takvimine \xE7ekilir."), eduReqs.length === 0 ? /*#__PURE__*/React.createElement("div", {
+      className: "rounded-2xl glass p-12 text-center"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "text-4xl mb-3"
+    }, "\u2705"), /*#__PURE__*/React.createElement("p", {
+      className: "text-sm text-stone-400"
+    }, "Bekleyen talep yok.")) : /*#__PURE__*/React.createElement("div", {
+      className: "rounded-2xl glass overflow-hidden"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "overflow-x-auto"
+    }, /*#__PURE__*/React.createElement("table", {
+      className: "w-full text-sm"
+    }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", {
+      className: "text-left text-xs text-stone-400 border-b border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-900/50"
+    }, /*#__PURE__*/React.createElement("th", {
+      className: "font-medium px-4 py-3"
+    }, "Kullan\u0131c\u0131"), /*#__PURE__*/React.createElement("th", {
+      className: "font-medium px-4 py-3"
+    }, "\u015Eu an"), /*#__PURE__*/React.createElement("th", {
+      className: "font-medium px-4 py-3"
+    }, "\u0130stenen"), /*#__PURE__*/React.createElement("th", {
+      className: "font-medium px-4 py-3"
+    }, "Tarih"), /*#__PURE__*/React.createElement("th", {
+      className: "font-medium px-4 py-3 text-right"
+    }, "\u0130\u015Flem"))), /*#__PURE__*/React.createElement("tbody", null, eduReqs.map(function (r) {
+      return /*#__PURE__*/React.createElement("tr", {
+        key: r.user_id,
+        className: "border-b border-stone-100 dark:border-stone-800 last:border-0 hover:bg-stone-50 dark:hover:bg-stone-800/30 transition-colors"
+      }, /*#__PURE__*/React.createElement("td", {
+        className: "px-4 py-3"
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "font-medium"
+      }, r.nickname || "—"), /*#__PURE__*/React.createElement("div", {
+        className: "text-xs text-stone-400 font-mono"
+      }, (r.user_id || "").slice(0, 8), "\u2026")), /*#__PURE__*/React.createElement("td", {
+        className: "px-4 py-3"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "text-xs font-medium px-2 py-0.5 rounded-full " + getLevelColor(r.from)
+      }, eduLabel(r.from))), /*#__PURE__*/React.createElement("td", {
+        className: "px-4 py-3"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "text-xs font-medium px-2 py-0.5 rounded-full " + getLevelColor(r.to)
+      }, eduLabel(r.to))), /*#__PURE__*/React.createElement("td", {
+        className: "px-4 py-3 text-stone-500 text-xs"
+      }, fmtDateTime(r.at)), /*#__PURE__*/React.createElement("td", {
+        className: "px-4 py-3"
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "flex gap-2 justify-end"
+      }, /*#__PURE__*/React.createElement("button", {
+        disabled: busy,
+        onClick: function () {
+          act("approve_edu", {
+            user_id: r.user_id,
+            to: r.to
+          });
+        },
+        className: "text-xs font-semibold px-3 py-1.5 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 transition-colors shadow-sm"
+      }, "\u2705 Onayla"), /*#__PURE__*/React.createElement("button", {
+        disabled: busy,
+        onClick: function () {
+          act("reject_edu", {
+            user_id: r.user_id
+          });
+        },
+        className: "text-xs font-medium px-3 py-1.5 rounded-lg border border-stone-300 dark:border-stone-600 hover:bg-stone-100 dark:hover:bg-stone-700 transition-colors"
+      }, "\u274C Reddet"))));
+    })))))), tab === "kullanicilar" && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4"
+    }, /*#__PURE__*/React.createElement("h1", {
+      className: "text-2xl md:text-3xl font-black gradient-text"
+    }, "\uD83D\uDC65 Kullan\u0131c\u0131lar"), /*#__PURE__*/React.createElement("span", {
+      className: "text-sm text-stone-400 bg-stone-100 dark:bg-stone-800 px-3 py-1 rounded-full"
+    }, filteredRows.length, " kay\u0131t")), /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-col sm:flex-row gap-3 mb-4"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex-1 relative"
+    }, /*#__PURE__*/React.createElement("input", {
+      ref: searchInputRef,
+      value: q,
+      onChange: function (e) {
+        setQ(e.target.value);
+        setPage(1);
+      },
+      placeholder: "\uD83D\uDD0D Ara: ad, konum, e\u011Fitim, email\u2026",
+      className: "w-full px-4 py-3 pl-10 rounded-2xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all"
+    }), /*#__PURE__*/React.createElement("span", {
+      className: "absolute left-3 top-1/2 -translate-y-1/2 text-stone-400"
+    }, "\uD83D\uDD0D")), /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-wrap gap-2"
+    }, [{
+      id: "all",
+      t: "Tümü"
+    }, {
+      id: "premium",
+      t: "⭐ Premium"
+    }, {
+      id: "lisans",
+      t: "🎓 Lisans"
+    }, {
+      id: "onlisans",
+      t: "🎓 Ön Lisans"
+    }, {
+      id: "ortaogretim",
+      t: "🏫 Ortaöğretim"
+    }, {
+      id: "active",
+      t: "🟢 Bugün Aktif"
+    }, {
+      id: "idle7",
+      t: "🔴 Pasif 7+"
+    }].map(function (f) {
+      var active = filter === f.id;
+      return /*#__PURE__*/React.createElement("button", {
+        key: f.id,
+        onClick: function () {
+          setFilter(f.id);
+          setPage(1);
+        },
+        className: "shrink-0 px-3 py-1.5 rounded-lg text-xs font-medium transition-all " + (active ? "bg-indigo-600 text-white shadow-sm" : "bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-400 hover:bg-stone-200 dark:hover:bg-stone-700")
+      }, f.t);
+    }))), /*#__PURE__*/React.createElement("div", {
+      className: "rounded-2xl glass overflow-hidden"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "overflow-x-auto"
+    }, /*#__PURE__*/React.createElement("table", {
+      className: "w-full text-sm"
+    }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", {
+      className: "text-left text-xs text-stone-400 border-b border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-900/50"
+    }, /*#__PURE__*/React.createElement("th", {
+      className: "font-medium px-4 py-3 cursor-pointer hover:text-stone-700",
+      onClick: function () {
+        setSortField("nickname");
+        setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+      }
+    }, "Kullan\u0131c\u0131 ", sortField === "nickname" && (sortOrder === "asc" ? "↑" : "↓")), /*#__PURE__*/React.createElement("th", {
+      className: "font-medium px-4 py-3 cursor-pointer hover:text-stone-700",
+      onClick: function () {
+        setSortField("education_level");
+        setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+      }
+    }, "E\u011Fitim ", sortField === "education_level" && (sortOrder === "asc" ? "↑" : "↓")), /*#__PURE__*/React.createElement("th", {
+      className: "font-medium px-4 py-3 cursor-pointer hover:text-stone-700",
+      onClick: function () {
+        setSortField("location");
+        setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+      }
+    }, "Konum ", sortField === "location" && (sortOrder === "asc" ? "↑" : "↓")), /*#__PURE__*/React.createElement("th", {
+      className: "font-medium px-4 py-3 cursor-pointer hover:text-stone-700",
+      onClick: function () {
+        setSortField("target_type");
+        setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+      }
+    }, "Kulvar ", sortField === "target_type" && (sortOrder === "asc" ? "↑" : "↓")), /*#__PURE__*/React.createElement("th", {
+      className: "font-medium px-4 py-3 cursor-pointer hover:text-stone-700",
+      onClick: function () {
+        setSortField("questions_total");
+        setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+      }
+    }, "Soru ", sortField === "questions_total" && (sortOrder === "asc" ? "↑" : "↓")), /*#__PURE__*/React.createElement("th", {
+      className: "font-medium px-4 py-3 cursor-pointer hover:text-stone-700",
+      onClick: function () {
+        setSortField("last_study_at");
+        setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+      }
+    }, "Son \xC7al\u0131\u015Fma ", sortField === "last_study_at" && (sortOrder === "asc" ? "↑" : "↓")), /*#__PURE__*/React.createElement("th", {
+      className: "font-medium px-4 py-3"
+    }, "Plan"), /*#__PURE__*/React.createElement("th", {
+      className: "font-medium px-4 py-3 text-right"
+    }, "\u0130\u015Flem"))), /*#__PURE__*/React.createElement("tbody", null, paginatedRows.length === 0 ? /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", {
+      colSpan: 8,
+      className: "px-4 py-12 text-center text-stone-400"
+    }, "Kay\u0131t yok veya liste yetkisi eksik.")) : paginatedRows.map(function (u) {
+      var status = getStatusBadge(u.last_study_at);
+      return /*#__PURE__*/React.createElement("tr", {
+        key: u.user_id || u.nickname,
+        className: "border-b border-stone-100 dark:border-stone-800 last:border-0 hover:bg-stone-50 dark:hover:bg-stone-800/30 transition-colors " + (status.label.includes("pasif") ? "bg-rose-50/30 dark:bg-rose-950/10" : "")
+      }, /*#__PURE__*/React.createElement("td", {
+        className: "px-4 py-3"
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "font-medium"
+      }, u.nickname || "—"), /*#__PURE__*/React.createElement("div", {
+        className: "text-xs text-stone-400 font-mono"
+      }, u.email || (u.user_id || "").slice(0, 12))), /*#__PURE__*/React.createElement("td", {
+        className: "px-4 py-3"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "text-[10px] font-medium px-2 py-0.5 rounded-full " + getLevelColor(u.education_level)
+      }, eduLabel(u.education_level))), /*#__PURE__*/React.createElement("td", {
+        className: "px-4 py-3 text-xs text-stone-600 dark:text-stone-400"
+      }, u.location || "—"), /*#__PURE__*/React.createElement("td", {
+        className: "px-4 py-3 text-xs text-stone-600 dark:text-stone-400"
+      }, trackLabel(u.target_type)), /*#__PURE__*/React.createElement("td", {
+        className: "px-4 py-3 font-semibold"
+      }, u.questions_total || 0), /*#__PURE__*/React.createElement("td", {
+        className: "px-4 py-3"
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "text-xs"
+      }, fmtDate(u.last_study_at)), /*#__PURE__*/React.createElement("div", {
+        className: "text-[10px] text-stone-400"
+      }, status.label)), /*#__PURE__*/React.createElement("td", {
+        className: "px-4 py-3"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "text-[10px] font-bold px-2 py-0.5 rounded-full " + (u.premium ? "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300" : "bg-stone-100 text-stone-500 dark:bg-stone-800 dark:text-stone-400")
+      }, u.premium ? "⭐ Premium" : "Ücretsiz")), /*#__PURE__*/React.createElement("td", {
+        className: "px-4 py-3"
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "flex flex-wrap gap-1 justify-end"
+      }, u.premium ? /*#__PURE__*/React.createElement("button", {
+        disabled: busy,
+        onClick: function () {
+          if (!confirm("Bu kullanıcının Premium'u alınsın mı?")) return;
+          act("revoke_premium", {
+            user_id: u.user_id
+          });
+        },
+        className: "text-[10px] font-medium px-2 py-1 rounded-lg bg-stone-100 text-stone-700 dark:bg-stone-800 dark:text-stone-300 hover:bg-stone-200 transition-colors"
+      }, "Premium al") : /*#__PURE__*/React.createElement("button", {
+        disabled: busy,
+        onClick: function () {
+          if (!confirm("Bu kullanıcıya 30 gün Premium verilsin mi?")) return;
+          act("grant_premium", {
+            user_id: u.user_id,
+            days: 30
+          });
+        },
+        className: "text-[10px] font-medium px-2 py-1 rounded-lg bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300 hover:bg-amber-200 transition-colors"
+      }, "+30g \u2B50"), /*#__PURE__*/React.createElement("button", {
+        disabled: busy,
+        onClick: function () {
+          inspect(u.user_id);
+        },
+        className: "text-[10px] font-medium px-2 py-1 rounded-lg bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300 hover:bg-indigo-200 transition-colors"
+      }, "Detay"), /*#__PURE__*/React.createElement("button", {
+        disabled: busy,
+        onClick: function () {
+          if (confirm("Bu kullanıcı engellensin mi?")) act("block", {
+            user_id: u.user_id
+          });
+        },
+        className: "text-[10px] font-medium px-2 py-1 rounded-lg bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300 hover:bg-rose-200 transition-colors"
+      }, "\uD83D\uDEAB"), /*#__PURE__*/React.createElement("button", {
+        disabled: busy,
+        onClick: function () {
+          if (u.user_id === (student.userProfile && student.userProfile.authUserId)) {
+            alert("Kendi hesabını silemezsin.");
+            return;
+          }
+          if (!confirm("Bu kullanıcı kalıcı silinsin mi? Giriş yapamaz, verisi gider.")) return;
+          if (!confirm("Emin misin? Bu geri alınmaz.")) return;
+          act("delete_user", {
+            user_id: u.user_id
+          });
+        },
+        className: "text-[10px] font-medium px-2 py-1 rounded-lg bg-rose-600 text-white hover:bg-rose-700 transition-colors"
+      }, "Sil"))));
+    }))))), totalPages > 1 && /*#__PURE__*/React.createElement("div", {
+      className: "flex items-center justify-between gap-4 mt-4"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "text-xs text-stone-400"
+    }, (page - 1) * pageSize + 1, " - ", Math.min(page * pageSize, filteredRows.length), " / ", filteredRows.length), /*#__PURE__*/React.createElement("div", {
+      className: "flex gap-1"
+    }, /*#__PURE__*/React.createElement("button", {
+      onClick: function () {
+        setPage(Math.max(1, page - 1));
+      },
+      disabled: page === 1,
+      className: "px-3 py-1.5 rounded-lg border border-stone-200 dark:border-stone-700 text-sm disabled:opacity-40 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors"
+    }, "\u2190"), Array.from({
+      length: Math.min(5, totalPages)
+    }, function (_, i) {
+      var p = i + 1;
+      return /*#__PURE__*/React.createElement("button", {
+        key: p,
+        onClick: function () {
+          setPage(p);
+        },
+        className: "px-3 py-1.5 rounded-lg text-sm font-medium transition-colors " + (page === p ? "bg-indigo-600 text-white" : "border border-stone-200 dark:border-stone-700 hover:bg-stone-50 dark:hover:bg-stone-800")
+      }, p);
+    }), /*#__PURE__*/React.createElement("button", {
+      onClick: function () {
+        setPage(Math.min(totalPages, page + 1));
+      },
+      disabled: page === totalPages,
+      className: "px-3 py-1.5 rounded-lg border border-stone-200 dark:border-stone-700 text-sm disabled:opacity-40 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors"
+    }, "\u2192"))), detail && /*#__PURE__*/React.createElement("div", {
+      className: "mt-4 rounded-2xl glass p-5 border-l-4 border-l-indigo-500 slide-up"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex justify-between items-start"
+    }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
+      className: "font-bold text-lg"
+    }, detail.nickname || "—"), /*#__PURE__*/React.createElement("p", {
+      className: "text-sm text-stone-500"
+    }, detail.email || detail.user_id), /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-wrap gap-2 mt-2"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "text-xs bg-indigo-50 dark:bg-indigo-950/30 px-2 py-0.5 rounded-full"
+    }, "\uD83D\uDCDD ", detail.questions_total || detail.counters && detail.counters.questions || 0, " soru"), /*#__PURE__*/React.createElement("span", {
+      className: "text-xs bg-rose-50 dark:bg-rose-950/30 px-2 py-0.5 rounded-full"
+    }, "\u274C ", detail.wrongCount || 0, " yanl\u0131\u015F"), /*#__PURE__*/React.createElement("span", {
+      className: "text-xs bg-emerald-50 dark:bg-emerald-950/30 px-2 py-0.5 rounded-full"
+    }, "\uD83C\uDFAF ", detail.target_type || "—"), /*#__PURE__*/React.createElement("span", {
+      className: "text-xs bg-stone-50 dark:bg-stone-800 px-2 py-0.5 rounded-full"
+    }, "\uD83D\uDCF1 ", detail.platform || "web"), /*#__PURE__*/React.createElement("span", {
+      className: "text-xs bg-teal-50 dark:bg-teal-950/30 px-2 py-0.5 rounded-full"
+    }, "\uD83D\uDCCD ", detail.location || locLabel(detail.userProfile && detail.userProfile.location)))), /*#__PURE__*/React.createElement("button", {
+      onClick: function () {
+        setDetail(null);
+      },
+      className: "text-stone-400 hover:text-stone-600"
+    }, "\u2715")), /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-wrap gap-2 mt-4"
+    }, detail.premium ? /*#__PURE__*/React.createElement("button", {
+      disabled: busy,
+      onClick: function () {
+        if (!confirm("Premium alınsın mı?")) return;
+        act("revoke_premium", {
+          user_id: detail.user_id
+        });
+      },
+      className: "text-xs font-medium px-3 py-1.5 rounded-lg border border-stone-200 dark:border-stone-700"
+    }, "Premium al") : /*#__PURE__*/React.createElement("button", {
+      disabled: busy,
+      onClick: function () {
+        if (!confirm("30 gün Premium verilsin mi?")) return;
+        act("grant_premium", {
+          user_id: detail.user_id,
+          days: 30
+        });
+      },
+      className: "text-xs font-medium px-3 py-1.5 rounded-lg bg-amber-100 text-amber-700"
+    }, "+30g Premium"), /*#__PURE__*/React.createElement("button", {
+      disabled: busy,
+      onClick: function () {
+        if (detail.user_id === (student.userProfile && student.userProfile.authUserId)) {
+          alert("Kendi hesabını silemezsin.");
+          return;
+        }
+        if (!confirm("Kullanıcı kalıcı silinsin mi? Bu geri alınmaz.")) return;
+        act("delete_user", {
+          user_id: detail.user_id
+        });
+      },
+      className: "text-xs font-medium px-3 py-1.5 rounded-lg bg-rose-600 text-white"
+    }, "Kullan\u0131c\u0131y\u0131 sil")))), tab === "analiz" && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", {
+      className: "text-2xl md:text-3xl font-black gradient-text mb-6"
+    }, "\uD83D\uDCC8 Zor Konular"), /*#__PURE__*/React.createElement("p", {
+      className: "text-sm text-stone-500 dark:text-stone-400 mb-4"
+    }, "T\xFCrkiye genelinde yanl\u0131\u015F a\u011F\u0131rl\u0131\u011F\u0131 en y\xFCksek 10 konu."), hard.length === 0 ? /*#__PURE__*/React.createElement("div", {
+      className: "rounded-2xl glass p-12 text-center"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "text-4xl mb-3"
+    }, "\uD83D\uDCCA"), /*#__PURE__*/React.createElement("p", {
+      className: "text-sm text-stone-400"
+    }, "Hen\xFCz yeterli veri yok veya admin_hard_topics SQL\u2019i \xE7al\u0131\u015Ft\u0131r\u0131lmad\u0131.")) : /*#__PURE__*/React.createElement("div", {
+      className: "rounded-2xl glass divide-y divide-stone-100 dark:divide-stone-800"
+    }, hard.map(function (h, i) {
+      var colors = ["#4f46e5", "#7c3aed", "#ec4899", "#f59e0b", "#10b981", "#6366f1", "#8b5cf6", "#d946ef", "#f43f5e", "#0ea5e9"];
+      return /*#__PURE__*/React.createElement("div", {
+        key: i,
+        className: "px-5 py-4 flex items-center justify-between hover:bg-stone-50 dark:hover:bg-stone-800/30 transition-colors"
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "flex items-center gap-4"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "text-xs font-bold text-stone-400 w-6"
+      }, i + 1), /*#__PURE__*/React.createElement("div", {
+        className: "h-8 w-8 rounded-lg flex items-center justify-center text-sm font-bold text-white",
+        style: {
+          background: colors[i % colors.length]
+        }
+      }, h.ders ? h.ders[0] : "?"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+        className: "font-medium"
+      }, h.konu || "—"), /*#__PURE__*/React.createElement("div", {
+        className: "text-xs text-stone-400"
+      }, h.ders || "—"))), /*#__PURE__*/React.createElement("div", {
+        className: "text-right"
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "font-semibold text-rose-600"
+      }, h.wrong_weight || 0), /*#__PURE__*/React.createElement("div", {
+        className: "text-[10px] text-stone-400"
+      }, h.users || 0, " kullan\u0131c\u0131")));
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "grid grid-cols-1 md:grid-cols-3 gap-4 mt-6"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "rounded-2xl glass p-5"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "text-xs text-stone-400 font-medium uppercase tracking-wider"
+    }, "\uD83D\uDCDA Toplam Konu"), /*#__PURE__*/React.createElement("p", {
+      className: "text-2xl font-bold gradient-text mt-1"
+    }, hard.length), /*#__PURE__*/React.createElement("p", {
+      className: "text-xs text-stone-400 mt-1"
+    }, "En \xE7ok yanl\u0131\u015F yap\u0131lan konular")), /*#__PURE__*/React.createElement("div", {
+      className: "rounded-2xl glass p-5"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "text-xs text-stone-400 font-medium uppercase tracking-wider"
+    }, "\uD83C\uDFAF En Zor Ders"), /*#__PURE__*/React.createElement("p", {
+      className: "text-2xl font-bold text-rose-600 mt-1"
+    }, hard.length > 0 ? hard.reduce(function (a, b) {
+      return (a.wrong_weight || 0) > (b.wrong_weight || 0) ? a : b;
+    }).ders || "—" : "—"), /*#__PURE__*/React.createElement("p", {
+      className: "text-xs text-stone-400 mt-1"
+    }, "En y\xFCksek yanl\u0131\u015F a\u011F\u0131rl\u0131\u011F\u0131")), /*#__PURE__*/React.createElement("div", {
+      className: "rounded-2xl glass p-5"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "text-xs text-stone-400 font-medium uppercase tracking-wider"
+    }, "\uD83D\uDC65 Etkilenen Kullan\u0131c\u0131"), /*#__PURE__*/React.createElement("p", {
+      className: "text-2xl font-bold text-indigo-600 mt-1"
+    }, hard.reduce(function (sum, h) {
+      return sum + (h.users || 0);
+    }, 0)), /*#__PURE__*/React.createElement("p", {
+      className: "text-xs text-stone-400 mt-1"
+    }, "Toplam zor konu g\xF6ren")))), tab === "icerik" && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", {
+      className: "text-2xl md:text-3xl font-black gradient-text mb-6"
+    }, "\uD83D\uDCE2 Duyuru"), /*#__PURE__*/React.createElement("p", {
+      className: "text-sm text-stone-500 dark:text-stone-400 mb-4"
+    }, "\xD6\u011Frencilerin \"Bug\xFCn\" ekran\u0131nda g\xF6rece\u011Fi duyuruyu yay\u0131nla."), /*#__PURE__*/React.createElement("div", {
+      className: "rounded-2xl glass p-6"
+    }, /*#__PURE__*/React.createElement("textarea", {
+      ref: announceRef,
+      value: announce,
+      onChange: function (e) {
+        setAnnounce(e.target.value);
+      },
+      rows: 5,
+      className: "w-full px-4 py-3 rounded-2xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 text-sm focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all resize-none",
+      placeholder: "\uD83D\uDCDD Duyuru metnini yaz... \xD6rn: 'Yar\u0131n 14:00'de canl\u0131 deneme var!'"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-col sm:flex-row sm:items-center justify-between gap-3 mt-4"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex items-center gap-2"
+    }, /*#__PURE__*/React.createElement("label", {
+      className: "text-xs text-stone-500 shrink-0"
+    }, "S\xFCre"), /*#__PURE__*/React.createElement("select", {
+      value: announceHours,
+      onChange: function (e) {
+        setAnnounceHours(e.target.value);
+      },
+      className: "px-3 py-2 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 text-sm"
+    }, /*#__PURE__*/React.createElement("option", {
+      value: "1"
+    }, "1 saat"), /*#__PURE__*/React.createElement("option", {
+      value: "3"
+    }, "3 saat"), /*#__PURE__*/React.createElement("option", {
+      value: "6"
+    }, "6 saat"), /*#__PURE__*/React.createElement("option", {
+      value: "12"
+    }, "12 saat"), /*#__PURE__*/React.createElement("option", {
+      value: "24"
+    }, "24 saat"), /*#__PURE__*/React.createElement("option", {
+      value: "48"
+    }, "2 g\xFCn"), /*#__PURE__*/React.createElement("option", {
+      value: "72"
+    }, "3 g\xFCn"), /*#__PURE__*/React.createElement("option", {
+      value: "168"
+    }, "7 g\xFCn"), /*#__PURE__*/React.createElement("option", {
+      value: "0"
+    }, "S\xFCresiz")), /*#__PURE__*/React.createElement("span", {
+      className: "text-xs text-stone-400"
+    }, announce.length, "/500")), /*#__PURE__*/React.createElement("button", {
+      disabled: busy || !announce.trim(),
+      onClick: function () {
+        act("announce", {
+          text: announce,
+          hours: Number(announceHours)
+        });
+        setAnnounce("");
+        if (announceRef.current) announceRef.current.focus();
+      },
+      className: "px-6 py-2.5 rounded-2xl btn-primary text-white font-semibold disabled:opacity-40 transition-all"
+    }, busy ? "⏳ Yayınlanıyor..." : "📢 Yayınla"))), /*#__PURE__*/React.createElement("div", {
+      className: "mt-6"
+    }, /*#__PURE__*/React.createElement("h2", {
+      className: "text-sm font-black uppercase tracking-widest text-stone-400 mb-3"
+    }, "Yay\u0131nlanan duyurular"), !announceList.length ? /*#__PURE__*/React.createElement("p", {
+      className: "text-sm text-stone-400"
+    }, "Hen\xFCz kay\u0131t yok.") : /*#__PURE__*/React.createElement("ul", {
+      className: "space-y-3"
+    }, announceList.map(function (a) {
+      return /*#__PURE__*/React.createElement("li", {
+        key: a.id || a.createdAt,
+        className: "rounded-2xl glass p-4"
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "flex flex-wrap items-start justify-between gap-3"
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "min-w-0 flex-1"
+      }, /*#__PURE__*/React.createElement("p", {
+        className: "text-sm font-semibold leading-snug"
+      }, a.text || "—"), /*#__PURE__*/React.createElement("p", {
+        className: "text-xs text-stone-400 mt-2"
+      }, fmtDateTime(a.createdAt), a.expiresAt ? " · bitiş " + fmtDateTime(a.expiresAt) : " · süresiz")), /*#__PURE__*/React.createElement("div", {
+        className: "flex items-center gap-2 shrink-0"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded-md " + (a.live ? "bg-emerald-100 text-emerald-700" : "bg-stone-200 text-stone-600")
+      }, a.live ? "Yayında" : "Süresi doldu"), /*#__PURE__*/React.createElement("button", {
+        type: "button",
+        disabled: busy || !a.id,
+        onClick: function () {
+          if (!a.id) return;
+          if (window.confirm("Bu duyuru silinsin mi? Bant da kalkar.")) {
+            act("delete_announce", {
+              id: a.id
+            });
+          }
+        },
+        className: "px-3 py-1.5 rounded-xl border border-rose-200 text-rose-700 text-xs font-semibold hover:bg-rose-50 disabled:opacity-40"
+      }, "Sil"))));
+    }))), /*#__PURE__*/React.createElement("div", {
+      className: "mt-6 rounded-2xl glass p-5 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/20 dark:to-purple-950/20 border border-indigo-200 dark:border-indigo-800/30"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 mb-2"
+    }, "\uD83D\uDCA1 \u0130pucu"), /*#__PURE__*/React.createElement("ul", {
+      className: "text-xs text-stone-600 dark:text-stone-400 space-y-1"
+    }, /*#__PURE__*/React.createElement("li", null, "\u2022 Duyuru t\xFCm kullan\u0131c\u0131lara g\xF6nderilir"), /*#__PURE__*/React.createElement("li", null, "\u2022 \"Bug\xFCn\" ekran\u0131n\u0131n \xFCst k\u0131sm\u0131nda g\xF6r\xFCn\xFCr"), /*#__PURE__*/React.createElement("li", null, "\u2022 T\xFCm yay\u0131nlar a\u015Fa\u011F\u0131da durur; vakti gelince sen silersin"), /*#__PURE__*/React.createElement("li", null, "\u2022 S\xFCre dolunca \xF6\u011Frenci band\u0131 kalkar, kay\u0131t panelde kal\u0131r")))))));
+  }
+
+  // ============================================================
+  // EXPORT
+  // ============================================================
+
+  window.KpssComponents = window.KpssComponents || {};
+  window.KpssComponents.AdminDashboard = AdminDashboard;
+})();
