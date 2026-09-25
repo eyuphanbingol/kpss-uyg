@@ -7,11 +7,11 @@ window.cografya_6_sorulari = [
       "A) Peri bacası",
       "B) Dev kazanı",
       "C) Şelale",
-      "D) Kırık bayır",
+      "D) Kırgıbayır (badlands)",
       "E) Kanyon vadi"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "Bitki örtüsünden yoksun kurak yamaçlarda sel sularının aşındırmasıyla oluşan pürüzlü yer şekillerine kırık bayır (badlands) denir. Türkiye'de en çok İç Anadolu ve Güneydoğu Anadolu bölgelerinde görülür."
+    "explanation": "Bitki örtüsünden yoksun kurak yamaçlarda sel sularının aşındırmasıyla oluşan, sık yarıntılarla parçalanmış pürüzlü yer şekillerine kırgıbayır (badlands) denir. Türkiye'de en çok İç Anadolu ve Güneydoğu Anadolu bölgelerinde görülür."
   },
   {
     "id": "2",
@@ -138,7 +138,7 @@ window.cografya_6_sorulari = [
       "B) Kanyon vadi",
       "C) Geniş tabanlı vadi",
       "D) Boğaz vadi",
-      "E) V şekilli vadi"
+      "E) Asimetrik vadi"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Eğimin azaldığı yerlerde akarsuyun derine gücü kalmaz ve yatağını yana doğru aşındırarak genişletir. Tabanında alüvyonlar birikir. Geniş tabanlı vadiler en net ve yaygın olarak Ege Bölgesi'nde görülür."

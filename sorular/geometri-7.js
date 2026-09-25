@@ -46,7 +46,7 @@ window.geometri_7_sorulari = [
         "E) Eksen üzerinde"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "x<0, y>0 → II. bölge."
+    "explanation": "(−3, 5) noktasının apsisi negatif (x < 0), ordinatı pozitiftir (y > 0). Apsisi negatif, ordinatı pozitif olan noktalar analitik düzlemde II. bölgede yer alır."
 },
 {
     "question": "(4, −2) noktası hangi bölgededir?",
@@ -193,7 +193,7 @@ window.geometri_7_sorulari = [
     "explanation": "√(9+16) = 5."
 },
 {
-    "question": "Eğimleri 5 ve 5 olan iki doğrunun birbirine göre durumu nedir?",
+    "question": "Denklemleri y = 5x + 2 ve y = 5x − 3 olan iki doğrunun birbirine göre durumu nedir?",
     "options": [
         "A) Paralel",
         "B) Dik",
@@ -202,7 +202,7 @@ window.geometri_7_sorulari = [
         "E) Belirlenemez"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "m₁ = m₂ → paralel (farklı sabit terimlerde)."
+    "explanation": "Her iki doğrunun eğimi de 5'tir (m₁ = m₂), sabit terimleri ise farklıdır (2 ve −3). Eğimleri eşit, sabit terimleri farklı olan doğruların ortak noktası yoktur; bu doğrular birbirine paraleldir. Sabit terimler eşit olsaydı doğrular çakışık olurdu."
 },
 {
     "question": "Eğimleri 2 ve −1/2 olan iki doğru arasındaki ilişki nedir?",

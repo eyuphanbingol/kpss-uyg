@@ -25,16 +25,16 @@ window.tarih_17_sorulari = [
     "explanation": "Şemsi Efendi Okulu, ilkokulu okuduğu modern özel okuldur."
 },
 {
-    "question": "Mustafa Kemal'in Selanik Mülkiye Rüştiyesinden kısa süre sonra ayrılarak eğitimine Selanik Askerî Rüştiyesinde devam etmesinde aşağıdakilerden hangisinin etkili olduğu söylenebilir?",
+    "question": "Mustafa Kemal, Selanik Mülkiye Rüştiyesindeki öğrenimini kısa süre sonra bırakarak Selanik Askerî Rüştiyesine girmiştir. Bu tercihinde aşağıdakilerden hangisinin etkili olduğu söylenebilir?",
     "options": [
-        "A) Askerî eğitime yönelmesi",
-        "B) Tarih öğretmeni olması",
-        "C) Şam'a atanması",
-        "D) Harp Akademisine başlaması",
-        "E) Sofya'ya gönderilmesi"
+        "A) Askerlik mesleğine ve askerî okul öğrencilerinin üniformasına duyduğu ilgi",
+        "B) Selanik'teki mülkiye okullarının kapatılması",
+        "C) Babasının isteği üzerine ticaretle uğraşmak istemesi",
+        "D) Ailesiyle birlikte İstanbul'a yerleşmesi",
+        "E) Yabancı dil öğrenimine ağırlık vermek istemesi"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Mülkiye Rüştiyesi'nden kısa sonra ayrılıp Askerî Rüştiye'ye geçmesi askerî eğitime yönelişidir."
+    "explanation": "Mustafa Kemal çocukluğundan itibaren askerliğe ve askerî okul öğrencilerinin üniformasına ilgi duymuş; bu isteğiyle Mülkiye Rüştiyesindeki öğrenimini bırakıp Selanik Askerî Rüştiyesinin sınavına girerek bu okula kaydolmuştur. Diğer seçeneklerde belirtilen durumlar yaşanmamıştır."
 },
 {
     "question": "Mustafa Kemal'in siyasi ve askerî hayatında ihtiyaç duyacağı düzen ve disiplin anlayışının ilk temellerinin atıldığı okul aşağıdakilerden hangisidir?",
@@ -193,7 +193,7 @@ window.tarih_17_sorulari = [
     "explanation": "1905'te Şam 5. Ordu'ya kurmay yüzbaşı olarak atanmıştır."
 },
 {
-    "question": "Mustafa Kemal'in tarih sahnesine ilk çıkışı olarak kabul edilen gelişme aşağıdakilerden hangisidir?",
+    "question": "Mustafa Kemal'in ilk siyasi faaliyeti olarak kabul edilen gelişme aşağıdakilerden hangisidir?",
     "options": [
         "A) Trablusgarp Savaşı'na katılması",
         "B) Vatan ve Hürriyet Cemiyetini kurması",
@@ -201,8 +201,8 @@ window.tarih_17_sorulari = [
         "D) Çanakkale Savaşı'nda görev yapması",
         "E) Samsun'a çıkması"
     ],
-    "correctAnswerIndex": 2,
-    "explanation": "31 Mart Vakası'nın bastırılması tarih sahnesine ilk çıkışı sayılır."
+    "correctAnswerIndex": 1,
+    "explanation": "Mustafa Kemal 1905'te Şam'da görev yaparken arkadaşlarıyla birlikte Vatan ve Hürriyet Cemiyeti'ni kurmuştur; bu girişim onun ilk siyasi faaliyeti sayılır. Trablusgarp Savaşı (1911), 31 Mart Vakası (1909), Çanakkale Savaşı (1915) ve Samsun'a çıkışı (1919) daha sonraki yıllara ait görevlerdir."
 },
 {
     "question": "Mustafa Kemal'in 31 Mart Vakası'nın bastırılmasında görev alması aşağıdaki askerî oluşumlardan hangisiyle ilişkilidir?",
@@ -217,16 +217,16 @@ window.tarih_17_sorulari = [
     "explanation": "Hareket Ordusu ile Selanik'ten İstanbul'a gelmiştir."
 },
 {
-    "question": "Mustafa Kemal'in 1909 yılında Selanik'ten İstanbul'a gelerek 31 Mart Vakası'nın bastırılmasında görev aldığı oluşum aşağıdakilerden hangisidir?",
+    "question": "31 Mart Vakası'nı bastırmak üzere 1909'da Selanik'ten İstanbul'a gönderilen Hareket Ordusu'nda Mustafa Kemal'in üstlendiği görev aşağıdakilerden hangisidir?",
     "options": [
-        "A) Müdafaa-i Hukuk Cemiyeti",
-        "B) Vatan ve Hürriyet Cemiyeti",
-        "C) Hareket Ordusu",
-        "D) Teşkilat-ı Mahsusa",
-        "E) Kuvâ-yi Milliye"
+        "A) Ordu komutanlığı",
+        "B) Kurmay başkanlığı",
+        "C) Tümen komutanlığı",
+        "D) Ateşemiliterlik",
+        "E) Kolordu komutanlığı"
     ],
-    "correctAnswerIndex": 2,
-    "explanation": "Oluşum Hareket Ordusu'dur."
+    "correctAnswerIndex": 1,
+    "explanation": "31 Mart Vakası'nı bastırmak için Selanik'te oluşturulan Hareket Ordusu'nun komutanlığını Hüseyin Hüsnü Paşa yapmış, Mustafa Kemal ise bu ordunun kurmay başkanlığı görevini üstlenmiştir. Tümen komutanlığı Çanakkale'deki (19. Tümen), ateşemiliterlik ise 1913'ten itibaren Sofya'daki görevidir."
 },
 {
     "question": "Mustafa Kemal'in 1910 yılında katıldığı Picardi Manevraları aşağıdaki ülkelerden hangisinde gerçekleştirilmiştir?",
@@ -382,7 +382,7 @@ window.tarih_17_sorulari = [
         "E) Kurtuluş Savaşı'ndan önce Hindistan'da askerî görev üstlenmesi"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Hindistan'da askerî görev notlarda yoktur."
+    "explanation": "Mustafa Kemal 1911'de Trablusgarp'ta görev yapmış, 1910'da Fransa'daki Picardie Manevralarına katılmış, 1913-1915 arasında Sofya'da ateşemiliterlik yapmış ve 1915'te Çanakkale'de 19. Tümen Komutanlığında bulunmuştur. Buna karşılık askerlik hayatının hiçbir döneminde Hindistan'da görev üstlenmemiştir."
 },
 {
     "question": "Mustafa Kemal'in 1917 yılında atandığı 7. Ordu, aşağıdaki askerî oluşumlardan hangisine bağlıydı?",
@@ -580,13 +580,13 @@ window.tarih_17_sorulari = [
     "question": "Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
     "options": [
         "A) 1905 – Şam – Vatan ve Hürriyet Cemiyeti",
-        "B) 1909 – Selanik – 31 Mart Vakası",
-        "C) 1910 – Fransa – Picardi Manevraları",
+        "B) 1909 – Selanik – Hareket Ordusu",
+        "C) 1910 – Fransa – Picardie Manevraları",
         "D) 1915 – Çanakkale – Anafartalar Kahramanı",
         "E) 1919 – Sofya – Ateşemiliterlik"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Sofya ateşemiliterliği 1913'tür; 1919 Samsun/Erzurum'dur."
+    "explanation": "Mustafa Kemal Sofya ateşemiliterliğini 1913-1915 yıllarında yapmıştır; 1919'da ise Samsun'a çıkarak Millî Mücadele'yi başlatmıştır. Bu nedenle 1919 ile Sofya ateşemiliterliğinin eşleştirilmesi yanlıştır."
 },
 {
     "question": "Mustafa Kemal'in askerî hayatıyla ilgili;\n\nI. Şam'da Vatan ve Hürriyet Cemiyetini kurmuştur.\nII. Trablusgarp Savaşı'na gazeteci kimliğiyle katılmıştır.\nIII. Çanakkale'deki başarıları nedeniyle Albay olmuştur.\nIV. Mondros Mütarekesi'nden sonra Yıldırım Orduları Grup Komutanlığı görevini üstlenmiştir.\n\nbilgilerinden hangileri doğrudur?",
@@ -598,7 +598,7 @@ window.tarih_17_sorulari = [
         "E) I, II, III ve IV"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Dört bilgi de notlara uygundur."
+    "explanation": "Mustafa Kemal 1905'te Şam'da Vatan ve Hürriyet Cemiyeti'ni kurmuş, 1911'de Trablusgarp'a gazeteci kimliğiyle gitmiş, Çanakkale'deki başarıları üzerine 1 Haziran 1915'te albaylığa yükselmiş, Mondros Ateşkes Anlaşması'ndan sonra 31 Ekim 1918'de Yıldırım Orduları Grup Komutanlığına atanmıştır. Bu nedenle dört bilgi de doğrudur."
 },
 {
     "question": "Mustafa Kemal'in eğitim hayatı ile ilgili aşağıdaki eşleştirmelerden hangisi doğrudur?",
@@ -701,12 +701,12 @@ window.tarih_17_sorulari = [
     "options": [
         "A) Farklı coğrafyalarda askerî görevler üstlenmiştir.",
         "B) I. Dünya Savaşı öncesinde Sofya'da görev yapmıştır.",
-        "C) Trablusgarp'ta fiilen savaşa katılmıştır.",
+        "C) Trablusgarp'ta görev yapmıştır.",
         "D) Çanakkale görevi Sofya görevinden önce gerçekleşmiştir.",
         "E) Şam görevi, Trablusgarp görevinden daha önce gerçekleşmiştir."
     ],
     "correctAnswerIndex": 3,
-    "explanation": "Çanakkale 1915, Sofya 1913; Çanakkale Sofya'dan sonradır. D ulaşılamaz."
+    "explanation": "Verilen bilgilere göre Sofya görevi 1913, Çanakkale görevi 1915 yılındadır; yani Çanakkale görevi Sofya'dan sonra gerçekleşmiştir. Bu nedenle D'deki yargıya ulaşılamaz. Diğer yargılar ise listedeki yıl ve yer bilgileriyle doğrulanabilir."
 },
 {
     "question": "Mustafa Kemal'in doğumundan vefatına kadar verilen aşağıdaki bilgilerden hangisi doğru değildir?",

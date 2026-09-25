@@ -193,16 +193,16 @@ window.geometri_5_sorulari = [
     "explanation": "A=6·8/2=24 veya Heron: u=12, A=√(12·6·4·2)=24."
 },
 {
-    "question": "b=5,c=7,α=60°. Alan? (√3/2)",
+    "question": "Bir üçgende b = 5 birim, c = 7 birim ve bu iki kenar arasındaki açı α = 60° ise üçgenin alanı kaç birimkaredir? (sin 60° = √3/2)",
     "options": [
         "A) (35√3)/4",
         "B) (35√3)/2",
         "C) 35/2",
         "D) 35√3",
-        "E) 17,5√3"
+        "E) (35√3)/8"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "A=½·5·7·√3/2=35√3/4."
+    "explanation": "İki kenar ve aralarındaki açı verildiğinde alan (1/2)·b·c·sin α ile bulunur: (1/2)·5·7·(√3/2) = 35√3/4 birimkare."
 },
 {
     "question": "a=10,h=8. Alan?",

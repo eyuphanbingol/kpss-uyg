@@ -33,7 +33,7 @@ window.cografya_4_sorulari = [
     "question": "Teke ve Taşeli platolarında kıl keçisi yetiştiriciliğinin yaygın olması, öncelikle aşağıdakilerden hangisiyle açıklanır?",
     "options": [
       "A) Geniş çayırların bulunmasıyla",
-      "B) Bol yağış and ormanlık alanlarla",
+      "B) Bol yağış ve ormanlık alanlarla",
       "C) Volkanik toprakların verimliliğiyle",
       "D) Maki bitki örtüsünün varlığıyla",
       "E) Sulu tarımın gelişmiş olmasıyla"
@@ -61,7 +61,7 @@ window.cografya_4_sorulari = [
       "A) Erzurum-Kars platosu – Doğu Anadolu",
       "B) Ardahan platosu – Doğu Anadolu",
       "C) Kapadokya platosu – İç Anadolu",
-      "D) Nevşehir platosu – İç Anadolu",
+      "D) Uzunyayla platosu – İç Anadolu",
       "E) Teke platosu – İç Anadolu volkanik platosu"
     ],
     "correctAnswerIndex": 4,
@@ -128,10 +128,10 @@ window.cografya_4_sorulari = [
     "question": "Türkiye'nin en alçak ve en gelişmiş platosu olarak nitelendirilen plato grubu aşağıdakilerden hangisidir?",
     "options": [
       "A) Karstik platolar",
-      "B) Volkanik platolar",
+      "B) Volkanik (lav örtüsü) platolar",
       "C) Aşınım düzlüğü platoları",
       "D) Tabaka düzlüğü platoları",
-      "E) Lav örtüsü platoları"
+      "E) Kırık (horst-graben) platoları"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Türkiye'nin en alçak, nüfus ve sanayi bakımından en gelişmiş platosu olan Çatalca-Kocaeli, bir aşınım düzlüğü (peneplenleşme aşaması) platosudur."

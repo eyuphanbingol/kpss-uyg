@@ -309,7 +309,7 @@ window.tarih_1_sorulari = [
   {
     id: 22,
     question:
-      "İskit (Saka) ordusunda yer alan ve dünya tarihine 'Amazon' adıyla geçen kadın savaşçı birlikleri, aşağıdaki topluluklardan hangisinin askeri gücüne kanıt olarak gösterilir?",
+      "Dünya tarihine 'Amazon' adıyla geçen kadın savaşçı birlikleri, aşağıdaki topluluklardan hangisinin askerî gücüne kanıt olarak gösterilir?",
     options: [
       "A) Asya Hun Devleti",
       "B) Avarlar",
@@ -450,11 +450,11 @@ window.tarih_1_sorulari = [
   {
     id: 32,
     question:
-      "Mete Han'dan sonra Asya Hun Devleti tahtına geçen ve Çin'in lüks yaşamına karşı koyamayarak devletin zayıflamasında etkili olan hükümdar aşağıdakilerden hangisidir?",
+      "Asya Hun Devleti'nde kardeşi Çiçi ile taht mücadelesine girişen ve Çin'in himayesini kabul ederek devletin ikiye ayrılmasına yol açan hükümdar aşağıdakilerden hangisidir?",
     options: ["A) Çiçi", "B) Uldız", "C) Balamir", "D) Hohanyeh", "E) Tardu"],
     correctAnswerIndex: 3,
     explanation:
-      "Mete Han'dan sonra tahta Hohanyeh geçmiş, onun döneminde devlette iç karışıklıklar başlamıştır.",
+      "Hohanyeh, kardeşi Çiçi ile giriştiği taht mücadelesinde Çin'in himayesini kabul etmiş; Çiçi ise Çin egemenliğini reddederek batıya çekilmiştir. Bu ayrılık Asya Hun Devleti'nin ikiye bölünmesine ve zayıflamasına yol açmıştır.",
   },
   {
     id: 33,
@@ -534,7 +534,13 @@ window.tarih_1_sorulari = [
   {
     id: 38,
     question: "Avrupa Hun Devleti'nin kurucusu aşağıdakilerden hangisidir?",
-    options: ["A) Attila", "B) Uldız", "C) Balamir", "D) Ru", "E) Karaton"],
+    options: [
+    "A) Attila",
+    "B) Uldız",
+    "C) Balamir",
+    "D) Rua",
+    "E) Karaton"
+    ],
     correctAnswerIndex: 2,
     explanation: "Avrupa Hun Devleti'nin kurucusu Balamir'dir.",
   },
@@ -579,12 +585,12 @@ window.tarih_1_sorulari = [
       "A) Bizans, Hunlara bağlı kavimlerle anlaşma yapmayacaktır.",
       "B) Bizans'ın elindeki Hun mültecileri iade edilecektir.",
       "C) Bizans'ın ödediği yıllık vergi iki katına çıkarılacaktır.",
-      "D) Bizans, Hunlarla yaptığı ticarette mevcut kurallara uyacaktır.",
-      "E) Bizans, Hun topraklarına saldırmayacaktır.",
+      "D) Bizans, Hunlara savaş tazminatı ödeyecektir.",
+      "E) Bizans, Hun topraklarına saldırmayacaktır."
     ],
     correctAnswerIndex: 3,
     explanation:
-      "Margos Antlaşması; Bizans'ın Hunlara bağlı kavimlerle anlaşma yapmaması, Hun mültecilerini iade etmesi, yıllık vergiyi artırması ve Hun topraklarına saldırmaması hükümlerini içerir. Ticaret kurallarına uyulacağına dair bir madde bu antlaşmada yer almaz.",
+      "Margos Antlaşması; Bizans'ın Hunlara bağlı kavimlerle anlaşma yapmaması, Hun mültecilerinin iadesi, yıllık verginin iki katına çıkarılması, ticaretin belirlenen sınır kasabalarında sürdürülmesi ve Bizans'ın Hun topraklarına saldırmaması hükümlerini içerir. Savaş tazminatı ödenmesi ise Margos'ta değil, 443'te imzalanan Anatolyus Antlaşması'nda yer alır.",
   },
   {
     id: 43,
@@ -736,7 +742,7 @@ window.tarih_1_sorulari = [
   {
     id: 53,
     question:
-      "Bayan Han döneminde Avarlarla birlikte İstanbul kuşatmasına katılan, daha sonra ikiye ayrılarak farklı coğrafyalarda varlığını sürdüren Türk topluluğu aşağıdakilerden hangisidir?",
+      "Avarlarla birlikte İstanbul kuşatmasına katılan, daha sonra ikiye ayrılarak farklı coğrafyalarda varlığını sürdüren Türk topluluğu aşağıdakilerden hangisidir?",
     options: [
       "A) Peçenekler",
       "B) Kıpçaklar",
@@ -866,11 +872,11 @@ window.tarih_1_sorulari = [
       "B) Deşt-i Kıpçak",
       "C) Türk Cihan Hakimiyeti",
       "D) Nizam-ı Alem",
-      "E) Pax Hazaria",
+      "E) Pax Hazarica"
     ],
     correctAnswerIndex: 4,
     explanation:
-      "Hazarlardaki barış ve hoşgörü ortamına 'Pax Hazaria' (Hazar Barışı) denir.",
+      "Hazarlar döneminde yaşanan dinî hoşgörü, iç barış ve ticarete dayalı refah ortamı 'Pax Hazarica' (Hazar Barışı) olarak adlandırılır.",
   },
   {
     id: 63,
@@ -1050,7 +1056,7 @@ window.tarih_1_sorulari = [
   {
     id: 75,
     question:
-      "Göktürklerin batı kanadını yöneten İstemi Yabgu'nun, Bizans elçilerinin gelişini 'yeryüzünü fethetmenin işareti' sayan sözleri hangi devletle kurulan ilişkilere işaret eder?",
+      "Göktürklerin batı kanadını yöneten İstemi Yabgu'nun, İpek Yolu ticareti yüzünden anlaşmazlığa düştüğü Sasanilere karşı ittifak arayışıyla karşılıklı elçiler gönderdiği devlet aşağıdakilerden hangisidir?",
     options: [
       "A) Çin",
       "B) Sasani",
@@ -1060,7 +1066,7 @@ window.tarih_1_sorulari = [
     ],
     correctAnswerIndex: 3,
     explanation:
-      "İstemi Yabgu'nun bu sözleri Bizans (Roma) elçileriyle kurulan diplomatik ilişkiye yöneliktir.",
+      "İstemi Yabgu, İpek Yolu ticaretinde Sasanilerle anlaşmazlığa düşünce Sasanileri iki yönden kuşatmak amacıyla Bizans (Doğu Roma) ile diplomatik ilişki kurmuş; iki devlet arasında karşılıklı elçiler gidip gelmiştir.",
   },
   {
     id: 76,

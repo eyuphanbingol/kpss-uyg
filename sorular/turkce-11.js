@@ -6,7 +6,8 @@ window.turkce_11_sorulari = [
         "A) Sözcüğün anlamını değiştirmemesi",
         "B) Sözcüğün anlamını veya türünü değiştirmesi",
         "C) Yalnızca çoğul anlamı katması",
-        "D) Sözcüğü yüklem yapması"
+        "D) Sözcüğü soru biçimine sokması",
+        "E) Sözcüğü yüklem yapması"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Yapım eki yeni sözcük türetir; anlam/tür değişir."
@@ -15,23 +16,25 @@ window.turkce_11_sorulari = [
     "question": "Çekim eklerinin temel görevi nedir?",
     "options": [
         "A) Yeni sözcük türetmek",
-        "B) Sözcüğün türünü değiştirmek",
-        "C) Sözcükler arasında anlam ve görev bağı kurmak",
-        "D) Sözcüğü kalıcı ada dönüştürmek"
+        "B) Sözcüğün kökünü değiştirmek",
+        "C) Sözcüğün türünü değiştirmek",
+        "D) Sözcükler arasında anlam ve görev bağı kurmak",
+        "E) Sözcüğü kalıcı ada dönüştürmek"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Çekim eki türetmez; cümlede görev kazandırır."
 },
 {
     "question": "Ekler genel olarak kaça ayrılır?",
     "options": [
-        "A) Üçe: kök, gövde, ek",
-        "B) Dörde: hâl, ilgi, iyelik, çoğul",
-        "C) İkiye: yapım ekleri ve çekim ekleri",
-        "D) Beşe: isim, fiil, sıfat, zarf, zamir"
+        "A) Altıya: ad, sıfat, zarf, zamir, edat, bağlaç",
+        "B) Üçe: kök, gövde, ek",
+        "C) Dörde: hâl, ilgi, iyelik, çoğul",
+        "D) İkiye: yapım ekleri ve çekim ekleri",
+        "E) Beşe: isim, fiil, sıfat, zarf, zamir"
     ],
-    "correctAnswerIndex": 2,
-    "explanation": "Notlarda ekler yapım ve çekim olarak ikiye ayrılır."
+    "correctAnswerIndex": 3,
+    "explanation": "Ekler görevlerine göre yapım ekleri ve çekim ekleri olmak üzere ikiye ayrılır: yapım ekleri yeni sözcük türetir, çekim ekleri sözcüğe cümlede görev kazandırır."
 },
 {
     "question": "“Masayı temiz tutun.” cümlesindeki “-ı” nedir?",
@@ -39,7 +42,8 @@ window.turkce_11_sorulari = [
         "A) Yönelme",
         "B) İlgi",
         "C) Belirtme",
-        "D) İyelik"
+        "D) İyelik",
+        "E) Çoğul eki"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Neyi? masayı → belirtme hâl eki."
@@ -49,8 +53,9 @@ window.turkce_11_sorulari = [
     "options": [
         "A) Yönelme hâl eki",
         "B) Bulunma",
-        "C) Ayrılma",
-        "D) Belirtme"
+        "C) İlgi",
+        "D) Ayrılma",
+        "E) Belirtme"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Nereye? → yönelme (-a/-e)."
@@ -59,11 +64,12 @@ window.turkce_11_sorulari = [
     "question": "“Masada kitap var.” cümlesindeki “-da” nedir?",
     "options": [
         "A) Yapım eki",
-        "B) İyelik eki",
-        "C) İlgi eki",
-        "D) Bulunma hâl eki"
+        "B) Belirtme",
+        "C) İyelik eki",
+        "D) İlgi eki",
+        "E) Bulunma hâl eki"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Nerede? → bulunma (-da/-de/-ta/-te)."
 },
 {
@@ -72,7 +78,8 @@ window.turkce_11_sorulari = [
         "A) Ayrılma hâl eki",
         "B) Yönelme",
         "C) İlgi",
-        "D) Yapım"
+        "D) Yapım",
+        "E) Belirtme"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Nereden? → ayrılma (-dan/-den/-tan/-ten)."
@@ -82,74 +89,81 @@ window.turkce_11_sorulari = [
     "options": [
         "A) İyelik",
         "B) Belirtme",
-        "C) İlgi",
-        "D) Yapım"
+        "C) Bulunma",
+        "D) İlgi",
+        "E) Yapım"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Tamlayan ilgi ekidir (-ın/-in/-un/-ün)."
 },
 {
     "question": "“Suçumuz ne?” sözcüğündeki “-umuz” nedir?",
     "options": [
-        "A) İlgi",
-        "B) Yapım",
-        "C) Çoğul",
-        "D) İyelik"
+        "A) Belirtme",
+        "B) İlgi",
+        "C) Yapım",
+        "D) Çoğul",
+        "E) İyelik"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Bizim suçumuz → iyelik eki."
 },
 {
     "question": "“Kitaplar” sözcüğündeki “-lar” hangi çekim ekidir?",
     "options": [
         "A) İyelik",
-        "B) Soru",
-        "C) Çoğul",
-        "D) Yapım"
+        "B) Belirtme",
+        "C) Soru",
+        "D) Çoğul",
+        "E) Yapım"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Çoğul eki: -lar/-ler."
 },
 {
     "question": "Aşağıdakilerden hangisi isimden isim yapan yapım ekidir?",
     "options": [
         "A) -la",
-        "B) -dır",
-        "C) -ıl",
-        "D) -cı"
+        "B) -gı",
+        "C) -dır",
+        "D) -ıl",
+        "E) -cı"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "yol-cu, göz-lük, su-suz → isimden isim."
 },
 {
     "question": "“Bağla-” sözcüğünde kullanılan yapım eki hangi türdendir?",
     "options": [
-        "A) İsimden fiil",
-        "B) Fiilden isim",
-        "C) İsimden isim",
-        "D) Fiilden fiil"
+        "A) Çekim eki",
+        "B) İsimden fiil",
+        "C) Fiilden isim",
+        "D) İsimden isim",
+        "E) Fiilden fiil"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "bağ + -la → isimden fiil (-la, -lan, -laş)."
 },
 {
     "question": "“Evlenmek” sözcüğündeki “-len” hangi yapım ekidir?",
     "options": [
-        "A) Fiilden fiil",
-        "B) İsimden isim",
-        "C) Fiilden isim",
-        "D) İsimden fiil"
+        "A) Çekim eki",
+        "B) Fiilden fiil",
+        "C) İsimden isim",
+        "D) Fiilden isim",
+        "E) İsimden fiil"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "ev + -len → isimden fiil."
 },
 {
     "question": "“Güzelleşmek” sözcüğündeki “-leş” hangi yapım ekidir?",
     "options": [
         "A) İsimden fiil",
-        "B) Fiilden fiil",
-        "C) Fiilden isim",
-        "D) İsimden isim"
+        "B) Çekim eki",
+        "C) Fiilden fiil",
+        "D) Fiilden isim",
+        "E) İsimden isim"
     ],
     "correctAnswerIndex": 0,
     "explanation": "güzel + -leş → isimden fiil."
@@ -159,8 +173,9 @@ window.turkce_11_sorulari = [
     "options": [
         "A) Fiilden fiil",
         "B) İsimden fiil",
-        "C) Fiilden isim",
-        "D) İsimden isim"
+        "C) Çekim eki",
+        "D) Fiilden isim",
+        "E) İsimden isim"
     ],
     "correctAnswerIndex": 0,
     "explanation": "yaz + -dır → fiilden fiil."
@@ -170,8 +185,9 @@ window.turkce_11_sorulari = [
     "options": [
         "A) İsimden fiil",
         "B) Fiilden fiil",
-        "C) Fiilden isim",
-        "D) İsimden isim"
+        "C) Çekim eki",
+        "D) Fiilden isim",
+        "E) İsimden isim"
     ],
     "correctAnswerIndex": 1,
     "explanation": "at + -ıl → fiilden fiil."
@@ -179,12 +195,13 @@ window.turkce_11_sorulari = [
 {
     "question": "“Görünmek” sözcüğündeki “-ün” hangi yapım ekidir?",
     "options": [
-        "A) Fiilden fiil",
-        "B) İsimden fiil",
-        "C) Fiilden isim",
-        "D) İsimden isim"
+        "A) Çekim eki",
+        "B) Fiilden fiil",
+        "C) İsimden fiil",
+        "D) Fiilden isim",
+        "E) İsimden isim"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "gör + -ün → fiilden fiil (-ın/-in/-un/-ün)."
 },
 {
@@ -192,33 +209,36 @@ window.turkce_11_sorulari = [
     "options": [
         "A) İsimden isim",
         "B) İsimden fiil",
-        "C) Fiilden fiil",
-        "D) Fiilden isim"
+        "C) Çekim eki",
+        "D) Fiilden fiil",
+        "E) Fiilden isim"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "seç- + -im → fiilden isim (-ım, -i, -gı, -ıcı)."
 },
 {
     "question": "“Satıcı” sözcüğündeki “-ıcı” hangi yapım ekidir?",
     "options": [
-        "A) İsimden isim",
-        "B) Fiilden fiil",
-        "C) Fiilden isim",
-        "D) İsimden fiil"
+        "A) Çekim eki",
+        "B) İsimden isim",
+        "C) Fiilden fiil",
+        "D) Fiilden isim",
+        "E) İsimden fiil"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "sat- + -ıcı → fiilden isim."
 },
 {
-    "question": "Türkçede yapım ekleri hangi eklerden önce gelir?",
+    "question": "Bir sözcükte ekler hangi sırayla dizilir?",
     "options": [
-        "A) Çekim eklerinden",
-        "B) Yapım eklerinden",
-        "C) Soru eklerinden",
-        "D) İyelik eklerinden"
+        "A) Kök + yapım eki + çekim eki",
+        "B) Kök + çekim eki + yapım eki",
+        "C) Yapım eki + kök + çekim eki",
+        "D) Çekim eki + kök + yapım eki",
+        "E) Yapım eki + çekim eki + kök"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Sıra: kök + yapım + çekim."
+    "explanation": "Türkçede sözcük kökle başlar; köke önce yapım ekleri, sonra çekim ekleri getirilir. Örnek: göz-lük-çü-ler-den (göz kökü + -lük, -çü yapım ekleri + -ler, -den çekim ekleri)."
 },
 {
     "question": "“Yaşlılar” sözcüğünde hangi sıra vardır?",
@@ -226,7 +246,8 @@ window.turkce_11_sorulari = [
         "A) Çekim + yapım",
         "B) Yapım + çekim",
         "C) Çekim + çekim",
-        "D) Yapım + yapım"
+        "D) Çekim + yapım + çekim",
+        "E) Yapım + yapım"
     ],
     "correctAnswerIndex": 1,
     "explanation": "yaş-lı (yapım) + -lar (çoğul çekim)."
@@ -237,7 +258,8 @@ window.turkce_11_sorulari = [
         "A) Birliktelik",
         "B) Araç",
         "C) Sebep",
-        "D) Görelik"
+        "D) Görelik",
+        "E) Zaman"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Ne ile gittik? trenle → araç anlamı (çekim eki)."
@@ -245,12 +267,13 @@ window.turkce_11_sorulari = [
 {
     "question": "“Ödevi annemle yaptık.” cümlesinde “-le” hangi anlamdadır?",
     "options": [
-        "A) Araç",
-        "B) Durum",
-        "C) Sebep",
-        "D) Birliktelik"
+        "A) Zaman",
+        "B) Araç",
+        "C) Durum",
+        "D) Sebep",
+        "E) Birliktelik"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Kiminle? annemle → birliktelik (çekim eki)."
 },
 {
@@ -258,21 +281,23 @@ window.turkce_11_sorulari = [
     "options": [
         "A) Araç anlamlı çekim eki",
         "B) Birliktelik anlamlı çekim eki",
-        "C) İsimden fiil yapan yapım eki",
-        "D) İlgi eki"
+        "C) Fiilden isim yapan yapım eki",
+        "D) İsimden fiil yapan yapım eki",
+        "E) İlgi eki"
     ],
-    "correctAnswerIndex": 2,
-    "explanation": "güzel + -le- + -ş → isimden fiil yapım eki (dikkat kutusu)."
+    "correctAnswerIndex": 3,
+    "explanation": "“Güzelleşti” sözcüğü güzel + -le- + -ş- + -ti biçiminde çözümlenir; buradaki -le, isim olan “güzel” sözcüğünden fiil türeten yapım ekidir, araç ya da birliktelik bildiren çekim eki değildir."
 },
 {
     "question": "“Evde su var mı?” cümlesindeki “mi” nedir?",
     "options": [
-        "A) Soru eki",
-        "B) Yapım eki",
-        "C) İlgi eki",
-        "D) İyelik eki"
+        "A) Çoğul eki",
+        "B) Soru eki",
+        "C) Yapım eki",
+        "D) İlgi eki",
+        "E) İyelik eki"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "Soru eki: mi, mı, mu, mü."
 },
 {
@@ -280,8 +305,9 @@ window.turkce_11_sorulari = [
     "options": [
         "A) İlki iyelik, ikincisi yapım ekidir.",
         "B) İlki çoğul eki, ikincisi III. çoğul şahıs ekidir.",
-        "C) İkisi de çoğul ekidir.",
-        "D) İkisi de şahıs ekidir."
+        "C) İlki şahıs eki, ikincisi çoğul ekidir.",
+        "D) İkisi de çoğul ekidir.",
+        "E) İkisi de şahıs ekidir."
     ],
     "correctAnswerIndex": 1,
     "explanation": "Çocuklar → isim çoğulu; uyuyorlar → fiil III. çoğul kişi (kritik ayrım)."
@@ -292,7 +318,8 @@ window.turkce_11_sorulari = [
         "A) İyelik",
         "B) Yapım",
         "C) Belirtme hâl",
-        "D) İlgi"
+        "D) Çoğul",
+        "E) İlgi"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Neyi verdi? → belirtme."
@@ -302,8 +329,9 @@ window.turkce_11_sorulari = [
     "options": [
         "A) Belirtme",
         "B) İyelik",
-        "C) Yapım",
-        "D) İlgi"
+        "C) Çoğul",
+        "D) Yapım",
+        "E) İlgi"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Onun kitabı → iyelik eki."
@@ -312,22 +340,24 @@ window.turkce_11_sorulari = [
     "question": "Yapım eki ile çekim eki arasındaki altın kural hangisidir?",
     "options": [
         "A) Her ikisi de sözcüğün türünü değiştirir.",
-        "B) Yapım eki anlam/tür değiştirir; çekim eki değiştirmez.",
-        "C) Çekim eki yapımdan önce gelir.",
-        "D) Yapım eki yalnızca fiillere eklenir."
+        "B) Yapım eki her zaman çekim ekinden sonra gelir.",
+        "C) Yapım eki anlam/tür değiştirir; çekim eki değiştirmez.",
+        "D) Çekim eki yapımdan önce gelir.",
+        "E) Yapım eki yalnızca fiillere eklenir."
     ],
-    "correctAnswerIndex": 1,
-    "explanation": "Notlardaki altın kural."
+    "correctAnswerIndex": 2,
+    "explanation": "Yapım eki, eklendiği sözcüğün anlamını ya da türünü değiştirerek yeni bir sözcük türetir (göz → gözlük); çekim eki yeni sözcük türetmez, sözcüğün cümledeki görevini ve başka sözcüklerle ilişkisini belirler (göz → gözden)."
 },
 {
     "question": "Aşağıdaki hâl eklerinden hangisi yanlış eşleştirilmiştir?",
     "options": [
         "A) Belirtme: -ı/-i/-u/-ü",
-        "B) Yönelme: -a/-e",
-        "C) Bulunma: -da/-de",
-        "D) Ayrılma: -na/-ne"
+        "B) İlgi: -ın/-in",
+        "C) Yönelme: -a/-e",
+        "D) Bulunma: -da/-de",
+        "E) Ayrılma: -na/-ne"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Ayrılma: -dan/-den/-tan/-ten."
 },
 {
@@ -336,7 +366,8 @@ window.turkce_11_sorulari = [
         "A) Fiilden isim",
         "B) Fiilden fiil",
         "C) İsimden fiil",
-        "D) İsimden isim"
+        "D) İsimden isim",
+        "E) Çekim eki"
     ],
     "correctAnswerIndex": 3,
     "explanation": "yaş + -lı → isimden isim (-cı, -lı, -sız, -lık)."
@@ -346,8 +377,9 @@ window.turkce_11_sorulari = [
     "options": [
         "A) İsimden isim",
         "B) İsimden fiil",
-        "C) Fiilden isim",
-        "D) Fiilden fiil"
+        "C) Çekim eki",
+        "D) Fiilden isim",
+        "E) Fiilden fiil"
     ],
     "correctAnswerIndex": 0,
     "explanation": "su + -suz → isimden isim."
@@ -358,7 +390,8 @@ window.turkce_11_sorulari = [
         "A) Fiilden isim",
         "B) İsimden isim",
         "C) İsimden fiil",
-        "D) Fiilden fiil"
+        "D) Çekim eki",
+        "E) Fiilden fiil"
     ],
     "correctAnswerIndex": 1,
     "explanation": "göz + -lük → isimden isim."
@@ -369,7 +402,8 @@ window.turkce_11_sorulari = [
         "A) Evet, her zaman yeni sözcük türetir.",
         "B) Hayır, hiç ek almaz.",
         "C) Evet, tür değiştirir.",
-        "D) Hayır, yalnızca cümlede görev kazandırır."
+        "D) Hayır, yalnızca cümlede görev kazandırır.",
+        "E) Evet, kökü ortadan kaldırır."
     ],
     "correctAnswerIndex": 3,
     "explanation": "Çekim eki anlamı/türü değiştirmez."
@@ -379,10 +413,11 @@ window.turkce_11_sorulari = [
     "options": [
         "A) Ekler yalnızca fiillere gelir.",
         "B) Ekler kök/gövdeye eklenerek yeni anlam veya görev kazandırır.",
-        "C) Ekler yalnızca yapım görevi görür.",
-        "D) Ekler soru cümlesi kurar."
+        "C) Ekler yalnızca çoğul anlamı katar.",
+        "D) Ekler yalnızca yapım görevi görür.",
+        "E) Ekler soru cümlesi kurar."
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Ek: kök/gövdeye eklenen hece."
+    "explanation": "Ek, kök veya gövdeye eklenerek ona yeni bir anlam ya da görev kazandıran ses veya ses topluluğudur; “gel-di-m” örneğindeki -m gibi tek sesten de oluşabilir."
 }
 ];

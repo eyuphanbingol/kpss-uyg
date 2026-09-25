@@ -3,12 +3,13 @@ window.turkce_5_sorulari = [
 {
     "question": "Bir adı niteleyen ya da belirten sözcüklere ne denir?",
     "options": [
-        "A) Zamir",
-        "B) Edat",
-        "C) Zarf",
-        "D) Sıfat (ön ad)"
+        "A) Bağlaç",
+        "B) Zamir",
+        "C) Edat",
+        "D) Zarf",
+        "E) Sıfat (ön ad)"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Sıfat mutlaka bir adı etkiler."
 },
 {
@@ -16,21 +17,23 @@ window.turkce_5_sorulari = [
     "options": [
         "A) Ad",
         "B) Zamir",
-        "C) Sıfat",
-        "D) Zarf"
+        "C) Edat",
+        "D) Sıfat",
+        "E) Zarf"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Elma adını niteliyor."
 },
 {
     "question": "Ada “nasıl?” sorusunu soran sıfat türü hangisidir?",
     "options": [
-        "A) Niteleme sıfatı",
-        "B) Sayı sıfatı",
-        "C) Belirtme sıfatı",
-        "D) Adlaşmış sıfat"
+        "A) Unvan sıfatı",
+        "B) Niteleme sıfatı",
+        "C) Sayı sıfatı",
+        "D) Belirtme sıfatı",
+        "E) Adlaşmış sıfat"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "akıllı öğrenci → nasıl öğrenci? akıllı."
 },
 {
@@ -38,8 +41,9 @@ window.turkce_5_sorulari = [
     "options": [
         "A) Sıra sayı",
         "B) Asıl sayı",
-        "C) Üleştirme sayı",
-        "D) Kesir sayı"
+        "C) Topluluk sayı sıfatı",
+        "D) Üleştirme sayı",
+        "E) Kesir sayı"
     ],
     "correctAnswerIndex": 0,
     "explanation": "-ıncı/-nci ekiyle sıra bildirir."
@@ -48,11 +52,12 @@ window.turkce_5_sorulari = [
     "question": "“Beşer elma” ifadesinde “beşer” hangi sıfat türüdür?",
     "options": [
         "A) Asıl sayı",
-        "B) Sıra sayı",
-        "C) Üleştirme sayı",
-        "D) Kesir sayı"
+        "B) Topluluk sayı sıfatı",
+        "C) Sıra sayı",
+        "D) Üleştirme sayı",
+        "E) Kesir sayı"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "-ar/-er ekiyle paylaştırma bildirir."
 },
 {
@@ -61,9 +66,10 @@ window.turkce_5_sorulari = [
         "A) Asıl sayı",
         "B) Sıra sayı",
         "C) Üleştirme sayı",
-        "D) Kesir sayı"
+        "D) Topluluk sayı sıfatı",
+        "E) Kesir sayı"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Bir bütünün parçasını bildirir."
 },
 {
@@ -72,7 +78,8 @@ window.turkce_5_sorulari = [
         "A) Sıfat",
         "B) Zamir",
         "C) Ad",
-        "D) Zarf"
+        "D) Edat",
+        "E) Zarf"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Kişi adının önünde sayı sıfatıdır."
@@ -81,11 +88,12 @@ window.turkce_5_sorulari = [
     "question": "“Üçü geldi.” cümlesinde “üçü” hangi sözcük türüdür?",
     "options": [
         "A) Sıfat",
-        "B) Ad",
-        "C) Zamir",
-        "D) Edat"
+        "B) Bağlaç",
+        "C) Ad",
+        "D) Zamir",
+        "E) Edat"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Adın yerini tutuyor; zamirdir."
 },
 {
@@ -94,7 +102,8 @@ window.turkce_5_sorulari = [
         "A) Adlaşmış sıfat",
         "B) Zamir",
         "C) Belirtme sıfatı",
-        "D) Niteleme sıfatı"
+        "D) Unvan sıfatı",
+        "E) Niteleme sıfatı"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Aslında çürük meyveler; ad düşmüş, sıfat adlaşmış."
@@ -102,12 +111,13 @@ window.turkce_5_sorulari = [
 {
     "question": "“Kırmızıyı getir, maviyi götür.” cümlesinde “kırmızıyı” hangi sözcük türüdür?",
     "options": [
-        "A) Zamir",
-        "B) Adlaşmış sıfat",
-        "C) Niteleme sıfatı",
-        "D) Ad"
+        "A) Soru sıfatı",
+        "B) Zamir",
+        "C) Adlaşmış sıfat",
+        "D) Niteleme sıfatı",
+        "E) Ad"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Renk sıfatı adlaşmış, ad gibi çekimlenmiş."
 },
 {
@@ -116,7 +126,8 @@ window.turkce_5_sorulari = [
         "A) Küçültme",
         "B) Unvan",
         "C) Pekiştirme",
-        "D) Sayı"
+        "D) Belgisiz",
+        "E) Sayı"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Anlamı güçlendiren pekiştirme sıfatı."
@@ -127,7 +138,8 @@ window.turkce_5_sorulari = [
         "A) Pekiştirme",
         "B) Belirtme",
         "C) Unvan",
-        "D) Küçültme"
+        "D) Küçültme",
+        "E) Soru"
     ],
     "correctAnswerIndex": 3,
     "explanation": "-ımsı ekiyle biraz anlamı katar."
@@ -138,7 +150,8 @@ window.turkce_5_sorulari = [
         "A) Unvan sıfatı",
         "B) Niteleme",
         "C) Belirtme",
-        "D) Sayı"
+        "D) Küçültme",
+        "E) Sayı"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Kişinin adıyla birlikte kullanılan unvan sıfatı."
@@ -148,10 +161,11 @@ window.turkce_5_sorulari = [
     "options": [
         "A) Soru sıfatı",
         "B) Niteleme sıfatı",
-        "C) Belgisiz sıfat",
-        "D) İşaret sıfatı"
+        "C) Unvan sıfatı",
+        "D) Belgisiz sıfat",
+        "E) İşaret sıfatı"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "bu, şu, o, öteki işaret sıfatı örnekleridir."
 },
 {
@@ -160,7 +174,8 @@ window.turkce_5_sorulari = [
         "A) İşaret",
         "B) Soru",
         "C) Belgisiz",
-        "D) Niteleme"
+        "D) Niteleme",
+        "E) Unvan"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Adı soru yoluyla belirtir."
@@ -169,11 +184,12 @@ window.turkce_5_sorulari = [
     "question": "“Birçok kişi geldi.” cümlesinde “birçok” hangi sıfat türüdür?",
     "options": [
         "A) Soru",
-        "B) İşaret",
-        "C) Belgisiz",
-        "D) Niteleme"
+        "B) Unvan",
+        "C) İşaret",
+        "D) Belgisiz",
+        "E) Niteleme"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Adı kesin olmayan biçimde belirtir."
 },
 {
@@ -182,7 +198,8 @@ window.turkce_5_sorulari = [
         "A) -ki ile yapılan sıfat",
         "B) İlgi zamiri",
         "C) Zarf",
-        "D) Edat"
+        "D) Edat",
+        "E) Belgisiz zamir"
     ],
     "correctAnswerIndex": 0,
     "explanation": "-ki eki adı belirterek sıfat yapar."
@@ -193,9 +210,10 @@ window.turkce_5_sorulari = [
         "A) -ki ile yapılan sıfat",
         "B) Edat",
         "C) Belgisiz sıfat",
-        "D) İlgi zamiri"
+        "D) Niteleme sıfatı",
+        "E) İlgi zamiri"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Adın yerini tutuyor; zamirdir, sıfat değil."
 },
 {
@@ -204,7 +222,8 @@ window.turkce_5_sorulari = [
         "A) İşaret zamiri",
         "B) İşaret sıfatı",
         "C) Belgisiz zamir",
-        "D) Soru sıfatı"
+        "D) Soru zamiri",
+        "E) Soru sıfatı"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Olay adının önünde; işaret sıfatı."
@@ -214,10 +233,11 @@ window.turkce_5_sorulari = [
     "options": [
         "A) İşaret sıfatı",
         "B) Soru zamiri",
-        "C) Belgisiz sıfat",
-        "D) İşaret zamiri"
+        "C) Niteleme sıfatı",
+        "D) Belgisiz sıfat",
+        "E) İşaret zamiri"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Yanında ad yok; işaret zamiri."
 },
 {
@@ -226,7 +246,8 @@ window.turkce_5_sorulari = [
         "A) Belgisiz sıfat",
         "B) Belgisiz zamir",
         "C) Soru zamiri",
-        "D) Adlaşmış sıfat"
+        "D) Adlaşmış sıfat",
+        "E) İşaret sıfatı"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Ad düşmüş; belgisiz zamirdir."
@@ -237,9 +258,10 @@ window.turkce_5_sorulari = [
         "A) İkisi de zamirdir.",
         "B) Birincisi sıfat, ikincisi zamir.",
         "C) İkisi de adlaşmış sıfattır.",
-        "D) Birincisi zamir, ikincisi adlaşmış sıfat."
+        "D) Birincisi adlaşmış sıfat, ikincisi zamir.",
+        "E) Birincisi zamir, ikincisi adlaşmış sıfat."
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Onları zamir; çürükleri niteleme sıfatının adlaşması."
 },
 {
@@ -247,8 +269,9 @@ window.turkce_5_sorulari = [
     "options": [
         "A) Addan sonra gelir.",
         "B) Adın önüne gelir.",
-        "C) Yalnız yüklemden önce gelir.",
-        "D) Cümle sonunda gelir."
+        "C) Yalnız özneden sonra gelir.",
+        "D) Yalnız yüklemden önce gelir.",
+        "E) Cümle sonunda gelir."
     ],
     "correctAnswerIndex": 1,
     "explanation": "Sıfat adın önüne gelir kuralı geçerlidir."
@@ -259,7 +282,8 @@ window.turkce_5_sorulari = [
         "A) Güzel",
         "B) Akıllı",
         "C) Bu",
-        "D) Yüksek"
+        "D) Derin",
+        "E) Yüksek"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Bu belirtme (işaret) sıfatıdır."
@@ -268,20 +292,22 @@ window.turkce_5_sorulari = [
     "question": "Aşağıdakilerden hangisi sayı sıfatıdır?",
     "options": [
         "A) Birinci",
-        "B) Biri",
-        "C) Birkaçı",
-        "D) Birisi"
+        "B) Bazı",
+        "C) Biri",
+        "D) Birkaçı",
+        "E) Birisi"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Birinci sıra sayı sıfatıdır; diğerleri zamir."
+    "explanation": "Birinci, varlığın sırasını bildirdiği için sıra sayı sıfatıdır (birinci sınıf). Bazı belgisiz sıfattır (bazı insanlar); biri, birkaçı ve birisi ise bir adın önüne gelmeyip onun yerini tuttuğu için belgisiz zamirdir."
 },
 {
     "question": "“Bir sabah her şey değişmişti.” cümlesinde “bir” hangi sıfat türüdür?",
     "options": [
         "A) Asıl sayı",
         "B) Belgisiz sıfat",
-        "C) Soru sıfatı",
-        "D) Niteleme sıfatı"
+        "C) İşaret sıfatı",
+        "D) Soru sıfatı",
+        "E) Niteleme sıfatı"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Belirsizlik anlamı taşır."
@@ -290,9 +316,10 @@ window.turkce_5_sorulari = [
     "question": "Adlaşmış sıfat hakkında aşağıdakilerden hangisi doğrudur?",
     "options": [
         "A) Ad gibi çekimlenir.",
-        "B) Kök olarak zamirdir.",
-        "C) Kip eki alır.",
-        "D) Yalnız fiilden türer."
+        "B) Çoğul eki alamaz.",
+        "C) Kök olarak zamirdir.",
+        "D) Kip eki alır.",
+        "E) Yalnız fiilden türer."
     ],
     "correctAnswerIndex": 0,
     "explanation": "çürükler, çürüklere gibi ad gibi çekimlenir."
@@ -300,21 +327,23 @@ window.turkce_5_sorulari = [
 {
     "question": "Aşağıdakilerden hangisi yanlıştır?",
     "options": [
-        "A) Sıfatın tek başına anlamı yoktur.",
-        "B) Hangisi soru zamiri olabilir.",
-        "C) Güzel ev sıfat tamlamasıdır.",
-        "D) Kırmızı tek başına sıfattır."
+        "A) Sıfat, tek başına kullanıldığında ad görevi üstlenir.",
+        "B) Sıfatlar adlardan önce gelir.",
+        "C) “Hangisi” soru zamiri olabilir.",
+        "D) “Güzel ev” sıfat tamlamasıdır.",
+        "E) “Kırmızı” tek başına sıfattır."
     ],
-    "correctAnswerIndex": 3,
-    "explanation": "Kırmızı tek başına ne olduğu belirsiz; yanında ad olunca sıfat olur."
+    "correctAnswerIndex": 4,
+    "explanation": "Bir sözcüğün sıfat olabilmesi için bir adın önüne gelip onu nitelemesi ya da belirtmesi gerekir. “Kırmızı” tek başına kullanıldığında ad görevindedir; “kırmızı çanta” örneğinde olduğu gibi bir adın önüne geldiğinde sıfat olur."
 },
 {
     "question": "“Kaç kişi geldi?” cümlesinde “kaç” hangi sözcük türüdür?",
     "options": [
         "A) Soru sıfatı",
-        "B) Soru zamiri",
-        "C) Belgisiz sıfat",
-        "D) Sayı zamiri"
+        "B) İşaret sıfatı",
+        "C) Soru zamiri",
+        "D) Belgisiz sıfat",
+        "E) Sayı zamiri"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Kişi adının önünde soru sıfatı."
@@ -322,12 +351,13 @@ window.turkce_5_sorulari = [
 {
     "question": "“Kaçı geldi?” cümlesinde “kaçı” hangi sözcük türüdür?",
     "options": [
-        "A) Soru sıfatı",
-        "B) Soru zamiri",
-        "C) Belgisiz zamir",
-        "D) Sayı sıfatı"
+        "A) İşaret zamiri",
+        "B) Soru sıfatı",
+        "C) Soru zamiri",
+        "D) Belgisiz zamir",
+        "E) Sayı sıfatı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Ad düşmüş; soru zamiri."
 },
 {
@@ -335,21 +365,23 @@ window.turkce_5_sorulari = [
     "options": [
         "A) Nasıl",
         "B) Ne kadar",
-        "C) İşaret, soru, belirsizlik, aitlik",
-        "D) Ne zaman"
+        "C) İşaret, sayı, belgisiz, soru",
+        "D) Renk ve biçim",
+        "E) Ne zaman"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "İşaret, soru, belgisiz ve -ki ile belirtme."
+    "explanation": "Belirtme sıfatları adı işaret (bu ev), sayı (üç kalem), belirsizlik (bazı günler) ve soru (kaç kişi) yönüyle belirtir. Adın rengini, biçimini, nasıl olduğunu bildirenler ise niteleme sıfatlarıdır."
 },
 {
     "question": "“Masal kitabı” tamlamasında “masal” sözcüğünün türü aşağıdakilerden hangisidir?",
     "options": [
-        "A) Sıfat",
-        "B) Zamir",
-        "C) Ad (isim)",
-        "D) Zarf"
+        "A) Edat",
+        "B) Sıfat",
+        "C) Zamir",
+        "D) Ad (isim)",
+        "E) Zarf"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "“Masal kitabı” belirtisiz ad tamlamasıdır; tamlayan “masal” bir addır. Sıfat olsaydı tamlanan ek almazdı (ör. “kırmızı kitap”)."
 },
 {
@@ -357,11 +389,12 @@ window.turkce_5_sorulari = [
     "options": [
         "A) Yanında ad varsa zamir.",
         "B) Fiilden sonra gelirse zamirdir.",
-        "C) Her zaman sıfattır.",
-        "D) Yanında ad varsa sıfat, yoksa zamir."
+        "C) Sonuna ek alırsa her zaman sıfattır.",
+        "D) Her zaman sıfattır.",
+        "E) Yanında ad varsa sıfat, yoksa zamir."
     ],
-    "correctAnswerIndex": 3,
-    "explanation": "Notlardaki temel ayrım kuralı."
+    "correctAnswerIndex": 4,
+    "explanation": "Sıfatlar bir adın önünde gelip onu niteler ya da belirtir: “Bu kitap ilginç.” cümlesinde “bu” sözcüğü kitap adını belirttiği için sıfattır. Aynı sözcük yanında ad olmadan kullanılıp adın yerini tuttuğunda zamir olur: “Bunu aldım.” Bu nedenle ayrım, sözcüğün yanında bir adın bulunup bulunmamasına göre yapılır."
 },
 {
     "question": "Aşağıdakilerden hangisi pekiştirme sıfatıdır?",
@@ -369,7 +402,8 @@ window.turkce_5_sorulari = [
         "A) Ekşimtırak",
         "B) Masmavi",
         "C) Yeşilimsi",
-        "D) Sekizinci"
+        "D) Sekizinci",
+        "E) Küçücük"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Masmavi pekiştirme; ekşimtırak/yeşilimsi küçültme."
@@ -380,7 +414,8 @@ window.turkce_5_sorulari = [
         "A) Niteleme",
         "B) Unvan sıfatı",
         "C) Belirtme",
-        "D) Sayı"
+        "D) Pekiştirme",
+        "E) Sayı"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Saygı/unvan sıfatı örneği."

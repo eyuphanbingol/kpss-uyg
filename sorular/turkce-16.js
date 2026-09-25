@@ -6,7 +6,8 @@ window.turkce_16_sorulari = [
         "A) Yalnızca yazım kurallarını",
         "B) Sesleri, ses olaylarını ve ses uyumlarını",
         "C) Yalnızca noktalama işaretlerini",
-        "D) Cümle ögelerini"
+        "D) Cümle ögelerini",
+        "E) Yalnızca sözcük türlerini"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Ses bilgisi: ünlü/ünsüz, uyum, ses olayları."
@@ -16,8 +17,9 @@ window.turkce_16_sorulari = [
     "options": [
         "A) 6",
         "B) 8",
-        "C) 10",
-        "D) 21"
+        "C) 29",
+        "D) 10",
+        "E) 21"
     ],
     "correctAnswerIndex": 1,
     "explanation": "a, e, ı, i, o, ö, u, ü → 8 ünlü."
@@ -25,12 +27,13 @@ window.turkce_16_sorulari = [
 {
     "question": "Aşağıdakilerden hangisi kalın ünlüdür?",
     "options": [
-        "A) e",
-        "B) i",
-        "C) ö",
-        "D) a"
+        "A) ü",
+        "B) e",
+        "C) i",
+        "D) ö",
+        "E) a"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Kalın: a, ı, o, u."
 },
 {
@@ -38,21 +41,23 @@ window.turkce_16_sorulari = [
     "options": [
         "A) a",
         "B) ı",
-        "C) e",
-        "D) o"
+        "C) u",
+        "D) e",
+        "E) o"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "İnce: e, i, ö, ü."
 },
 {
     "question": "Aşağıdakilerden hangisi düz ünlüdür?",
     "options": [
-        "A) o",
-        "B) a",
-        "C) u",
-        "D) ö"
+        "A) ü",
+        "B) o",
+        "C) a",
+        "D) u",
+        "E) ö"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Düz: a, e, ı, i."
 },
 {
@@ -60,76 +65,83 @@ window.turkce_16_sorulari = [
     "options": [
         "A) a",
         "B) e",
-        "C) ı",
-        "D) o"
+        "C) i",
+        "D) ı",
+        "E) o"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Yuvarlak: o, ö, u, ü."
 },
 {
     "question": "Aşağıdakilerden hangisi geniş ünlüdür?",
     "options": [
         "A) ı",
-        "B) i",
-        "C) a",
-        "D) u"
+        "B) ü",
+        "C) i",
+        "D) a",
+        "E) u"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Geniş: a, e, o, ö."
 },
 {
     "question": "Aşağıdakilerden hangisi dar ünlüdür?",
     "options": [
-        "A) a",
-        "B) e",
-        "C) ı",
-        "D) o"
+        "A) ö",
+        "B) a",
+        "C) e",
+        "D) ı",
+        "E) o"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Dar: ı, i, u, ü."
 },
 {
     "question": "Türkçede kaç ünsüz vardır?",
     "options": [
-        "A) 8",
-        "B) 15",
-        "C) 21",
-        "D) 29"
+        "A) 24",
+        "B) 8",
+        "C) 15",
+        "D) 21",
+        "E) 29"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "b,c,ç,d,f,g,ğ,h,j,k,l,m,n,p,r,s,ş,t,v,y,z → 21."
 },
 {
     "question": "Aşağıdakilerden hangisi sert süreksiz ünsüzdür?",
     "options": [
-        "A) f",
-        "B) h",
-        "C) p",
-        "D) s"
+        "A) ş",
+        "B) f",
+        "C) h",
+        "D) p",
+        "E) s"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Sert süreksiz: p, ç, t, k."
 },
 {
     "question": "Aşağıdakilerden hangisi yumuşak süreksiz ünsüzdür?",
     "options": [
         "A) p",
-        "B) t",
-        "C) b",
-        "D) k"
+        "B) m",
+        "C) t",
+        "D) b",
+        "E) k"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Yumuşak süreksiz: b, c, d, g."
 },
 {
     "question": "Aşağıdakilerden hangisi sürekli sert ünsüzdür?",
     "options": [
         "A) p",
-        "B) t",
-        "C) k",
-        "D) ş"
+        "B) ç",
+        "C) t",
+        "D) k",
+        "E) ş"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Sürekli sert: f, s, ş, h."
 },
 {
@@ -138,7 +150,8 @@ window.turkce_16_sorulari = [
         "A) Düzlük-yuvarlaklık",
         "B) Hece sayısı",
         "C) Sertlik-yumuşaklık",
-        "D) Kalınlık-incelik"
+        "D) Kalınlık-incelik",
+        "E) Sesli-sessiz ayrımı"
     ],
     "correctAnswerIndex": 3,
     "explanation": "İlk hece kalınsa sonrakiler kalın, ince ise ince."
@@ -146,24 +159,26 @@ window.turkce_16_sorulari = [
 {
     "question": "Aşağıdakilerden hangisi büyük ünlü uyumuna aykırıdır?",
     "options": [
-        "A) Kitaplık",
+        "A) Çocuklar",
         "B) Evler",
         "C) Anne",
-        "D) Kavun"
+        "D) Kavun",
+        "E) Okullar"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "anne, kardeş, elma, hangi, dahi aykırı örneklerden."
+    "explanation": "Anne sözcüğünde kalın ünlü “a” ile ince ünlü “e” bir arada bulunduğu için büyük ünlü uyumuna aykırıdır. Çocuklar, kavun ve okullar yalnızca kalın; evler yalnızca ince ünlü taşıdığı için uyuma uygundur."
 },
 {
     "question": "“-yor” eki alan sözcükler için hangi bilgi doğrudur?",
     "options": [
-        "A) Her zaman büyük ünlü uyumuna uyar.",
-        "B) Büyük ünlü uyumunu bozabilir.",
-        "C) Hiçbir ses olayı oluşturmaz.",
-        "D) Sadece yabancı sözcüklerde kullanılır."
+        "A) Her zaman küçük ünlü uyumuna uyar.",
+        "B) Her zaman büyük ünlü uyumuna uyar.",
+        "C) Büyük ünlü uyumunu bozabilir.",
+        "D) Hiçbir ses olayı oluşturmaz.",
+        "E) Sadece yabancı sözcüklerde kullanılır."
     ],
-    "correctAnswerIndex": 1,
-    "explanation": "geliyor, bakıyor → uyumu bozar."
+    "correctAnswerIndex": 2,
+    "explanation": "“-yor” eki kalınlık-incelik bakımından değişmediği için ince ünlülü sözcüklere geldiğinde büyük ünlü uyumunu bozar: geliyor, seviyor. Kalın ünlülü “bakıyor” ise büyük ünlü uyumuna uyar, yalnızca küçük ünlü uyumunu bozar."
 },
 {
     "question": "Küçük ünlü uyumu hangi özelliklerle ilgilidir?",
@@ -171,7 +186,8 @@ window.turkce_16_sorulari = [
         "A) Kalınlık-incelik",
         "B) Düzlük-yuvarlaklık",
         "C) Sertlik-yumuşaklık",
-        "D) Hece sayısı"
+        "D) Sesli sayısı",
+        "E) Hece sayısı"
     ],
     "correctAnswerIndex": 1,
     "explanation": "ev-ler, okul-lar → düzlük-yuvarlaklık."
@@ -180,22 +196,24 @@ window.turkce_16_sorulari = [
     "question": "Kaynaştırma harfleri hangileridir?",
     "options": [
         "A) p, ç, t, k",
-        "B) y, ş, s, n",
-        "C) b, c, d, g",
-        "D) f, h, l, m"
+        "B) l, r, m, n",
+        "C) y, ş, s, n",
+        "D) b, c, d, g",
+        "E) f, h, l, m"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Kaynaştırma: y, ş, s, n."
 },
 {
     "question": "“Kedisi” sözcüğünde hangi kaynaştırma harfi vardır?",
     "options": [
-        "A) y",
-        "B) s",
-        "C) ş",
-        "D) n"
+        "A) ğ",
+        "B) y",
+        "C) s",
+        "D) ş",
+        "E) n"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "kedi + s + i → s kaynaştırması."
 },
 {
@@ -204,7 +222,8 @@ window.turkce_16_sorulari = [
         "A) s",
         "B) y",
         "C) ş",
-        "D) n"
+        "D) ğ",
+        "E) n"
     ],
     "correctAnswerIndex": 1,
     "explanation": "su + y + a."
@@ -214,10 +233,11 @@ window.turkce_16_sorulari = [
     "options": [
         "A) y",
         "B) s",
-        "C) n",
-        "D) ş"
+        "C) ğ",
+        "D) n",
+        "E) ş"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "o + n + a."
 },
 {
@@ -226,7 +246,8 @@ window.turkce_16_sorulari = [
         "A) y",
         "B) s",
         "C) n",
-        "D) ş"
+        "D) ş",
+        "E) ğ"
     ],
     "correctAnswerIndex": 3,
     "explanation": "iki + ş + er."
@@ -237,7 +258,8 @@ window.turkce_16_sorulari = [
         "A) Ünlü daralması",
         "B) Ünlü düşmesi",
         "C) Ünsüz benzeşmesi",
-        "D) Ünsüz türemesi"
+        "D) Ulama",
+        "E) Ünsüz türemesi"
     ],
     "correctAnswerIndex": 0,
     "explanation": "izle-yor → izliyor (e→i)."
@@ -247,30 +269,33 @@ window.turkce_16_sorulari = [
     "options": [
         "A) Ünsüz yumuşaması",
         "B) Ünlü düşmesi",
-        "C) Ünlü türemesi",
-        "D) Ünsüz benzeşmesi"
+        "C) Ulama",
+        "D) Ünlü türemesi",
+        "E) Ünsüz benzeşmesi"
     ],
-    "correctAnswerIndex": 3,
-    "explanation": "uçak + dan → uçaktan (k→t)."
+    "correctAnswerIndex": 4,
+    "explanation": "Uçak + -dan → uçaktan: sert ünsüz “k” ile biten sözcüğe gelen ekin başındaki yumuşak “d” sesi sertleşerek “t” olmuştur (d → t). Buna ünsüz benzeşmesi (sertleşmesi) denir."
 },
 {
     "question": "“Kitapta” sözcüğünde hangi ses olayı vardır?",
     "options": [
         "A) Ünsüz yumuşaması",
-        "B) Ulama",
-        "C) Ünlü daralması",
-        "D) Ünsüz benzeşmesi"
+        "B) Ünlü düşmesi",
+        "C) Ulama",
+        "D) Ünlü daralması",
+        "E) Ünsüz benzeşmesi"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "kitap + da → kitapta."
 },
 {
     "question": "“Kitabı” sözcüğünde hangi ses olayı vardır?",
     "options": [
         "A) Ünsüz yumuşaması",
-        "B) Ünsüz benzeşmesi",
-        "C) Ünlü düşmesi",
-        "D) Ünsüz düşmesi"
+        "B) Ulama",
+        "C) Ünsüz benzeşmesi",
+        "D) Ünlü düşmesi",
+        "E) Ünsüz düşmesi"
     ],
     "correctAnswerIndex": 0,
     "explanation": "kitap + ı → kitabı (p→b)."
@@ -280,19 +305,21 @@ window.turkce_16_sorulari = [
     "options": [
         "A) Ulama",
         "B) Ünsüz benzeşmesi",
-        "C) Ünlü türemesi",
-        "D) Ünsüz yumuşaması"
+        "C) Ünlü düşmesi",
+        "D) Ünlü türemesi",
+        "E) Ünsüz yumuşaması"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "kalp + im → kalbim (p→b)."
 },
 {
     "question": "“Ufacık” sözcüğünde hangi ses olayı vardır?",
     "options": [
         "A) Ünsüz düşmesi",
-        "B) Ünlü türemesi",
-        "C) Ünsüz türemesi",
-        "D) Ünlü daralması"
+        "B) Ulama",
+        "C) Ünlü türemesi",
+        "D) Ünsüz türemesi",
+        "E) Ünlü daralması"
     ],
     "correctAnswerIndex": 0,
     "explanation": "ufak + cık → ufacık (k düşer)."
@@ -300,12 +327,13 @@ window.turkce_16_sorulari = [
 {
     "question": "“Küçücük” sözcüğünde hangi ses olayı vardır?",
     "options": [
-        "A) Ünsüz düşmesi",
-        "B) Ünlü türemesi",
-        "C) Ünsüz türemesi",
-        "D) Ulama"
+        "A) Ünlü daralması",
+        "B) Ünsüz düşmesi",
+        "C) Ünlü türemesi",
+        "D) Ünsüz türemesi",
+        "E) Ulama"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "küçük + cük → küçücük."
 },
 {
@@ -314,7 +342,8 @@ window.turkce_16_sorulari = [
         "A) Ünsüz türemesi",
         "B) Ünsüz düşmesi",
         "C) Ünlü düşmesi",
-        "D) Ulama"
+        "D) Ulama",
+        "E) Ünlü daralması"
     ],
     "correctAnswerIndex": 0,
     "explanation": "his + etmek → hissetmek."
@@ -323,9 +352,10 @@ window.turkce_16_sorulari = [
     "question": "“Affetmek” sözcüğünde hangi ses olayı vardır?",
     "options": [
         "A) Ünsüz türemesi",
-        "B) Ünsüz düşmesi",
-        "C) Ünlü daralması",
-        "D) Benzeşme"
+        "B) Ulama",
+        "C) Ünsüz düşmesi",
+        "D) Ünlü daralması",
+        "E) Benzeşme"
     ],
     "correctAnswerIndex": 0,
     "explanation": "af + etmek → affetmek."
@@ -334,9 +364,10 @@ window.turkce_16_sorulari = [
     "question": "“Gönlüm” sözcüğünde hangi ses olayı vardır?",
     "options": [
         "A) Ünlü düşmesi",
-        "B) Ünlü türemesi",
-        "C) Ünsüz yumuşaması",
-        "D) Ünsüz türemesi"
+        "B) Ulama",
+        "C) Ünlü türemesi",
+        "D) Ünsüz yumuşaması",
+        "E) Ünsüz türemesi"
     ],
     "correctAnswerIndex": 0,
     "explanation": "gönül + üm → gönlüm."
@@ -344,12 +375,13 @@ window.turkce_16_sorulari = [
 {
     "question": "“Ağzı” sözcüğünde hangi ses olayı vardır?",
     "options": [
-        "A) Ünlü düşmesi",
-        "B) Ünlü türemesi",
-        "C) Ünsüz benzeşmesi",
-        "D) Ulama"
+        "A) Ünsüz türemesi",
+        "B) Ünlü düşmesi",
+        "C) Ünlü türemesi",
+        "D) Ünsüz benzeşmesi",
+        "E) Ulama"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "ağız + ı → ağzı."
 },
 {
@@ -358,7 +390,8 @@ window.turkce_16_sorulari = [
         "A) Ünlü türemesi",
         "B) Ünlü düşmesi",
         "C) Ünsüz düşmesi",
-        "D) Benzeşme"
+        "D) Benzeşme",
+        "E) Ulama"
     ],
     "correctAnswerIndex": 0,
     "explanation": "dar + cık → daracık (a türemesi)."
@@ -367,11 +400,12 @@ window.turkce_16_sorulari = [
     "question": "Sözcük sonundaki ünsüzün sonraki sözcüğün başındaki ünlüyle birleşerek okunmasına ne denir?",
     "options": [
         "A) Daralma",
-        "B) Ulama",
-        "C) Türeme",
-        "D) Benzeşme"
+        "B) Kaynaştırma",
+        "C) Ulama",
+        "D) Türeme",
+        "E) Benzeşme"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Ulama: gel artık, akşam oldu."
 },
 {
@@ -379,10 +413,11 @@ window.turkce_16_sorulari = [
     "options": [
         "A) Kapıdan ağır geçtim.",
         "B) Güzel adam geldi.",
-        "C) Gel, artık.",
-        "D) Uzun ağaçlar vardı."
+        "C) Dört elma aldım.",
+        "D) Gel, artık.",
+        "E) Uzun ağaçlar vardı."
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Noktalama (virgül) ulamayı keser."
 }
 ];

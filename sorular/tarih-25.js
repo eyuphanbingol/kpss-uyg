@@ -7,22 +7,28 @@ window.tarih_25_sorulari = [
         explanation: "Savaş döneminde cumhurbaşkanı İsmet İnönü’dür. Refik Saydam başbakandır."
     },
     {
-        question: "Bu dönemde başbakanlık yapan isimler aşağıdakilerin hangisinde birlikte verilmiştir?",
+        question: "II. Dünya Savaşı yıllarında Türkiye’de başbakanlık yapan isimler aşağıdakilerin hangisinde birlikte verilmiştir?",
         options: ["A) İnönü – Bayar", "B) Refik Saydam – Şükrü Saraçoğlu", "C) Hasan Saka – Menemencioğlu", "D) Çakmak – Orbay", "E) Saraçoğlu – Killigil"],
         correctAnswerIndex: 1,
-        explanation: "Başbakanlar Refik Saydam ve Şükrü Saraçoğlu’dur."
+        explanation: "II. Dünya Savaşı yıllarında başbakanlık görevini 1939-1942 arasında Refik Saydam, 1942-1946 arasında Şükrü Saraçoğlu yürütmüştür."
     },
     {
-        question: "Savaş yıllarında dışişleri bakanlığı yapmayan hangisidir?",
-        options: ["A) Şükrü Saraçoğlu", "B) Numan Menemencioğlu", "C) Hasan Saka", "D) Fevzi Çakmak", "E) Hepsi dışişleri bakanıdır"],
-        correctAnswerIndex: 3,
-        explanation: "Fevzi Çakmak genelkurmaydadır. Dışişleri: Saraçoğlu, Menemencioğlu, Hasan Saka."
+        question: "Aşağıdakilerden hangisi II. Dünya Savaşı yıllarında Türkiye’de dışişleri bakanlığı yapmıştır?",
+        options: [
+        "A) Fevzi Çakmak",
+        "B) Kâzım Orbay",
+        "C) Numan Menemencioğlu",
+        "D) Celâl Bayar",
+        "E) Refik Saydam"
+        ],
+        correctAnswerIndex: 2,
+        explanation: "Savaş yıllarında Türkiye’nin dışişleri bakanlığını Şükrü Saraçoğlu, Numan Menemencioğlu ve Hasan Saka yürütmüştür. Fevzi Çakmak ile Kâzım Orbay Genelkurmay başkanlığı, Celâl Bayar ile Refik Saydam ise başbakanlık görevinde bulunmuştur."
     },
     {
-        question: "Genelkurmay başkanları hangileridir?",
+        question: "II. Dünya Savaşı yıllarında Türkiye’de Genelkurmay başkanlığı yapan isimler aşağıdakilerin hangisinde birlikte verilmiştir?",
         options: ["A) Fevzi Çakmak – Kâzım Orbay", "B) İnönü – Saydam", "C) Hürkuş – Demirağ", "D) Menemencioğlu – Saka", "E) Franco – Yamamoto"],
         correctAnswerIndex: 0,
-        explanation: "Fevzi Çakmak ve Kâzım Orbay genelkurmaydadır."
+        explanation: "Genelkurmay başkanlığını 1944’e kadar Mareşal Fevzi Çakmak, 1944-1946 arasında ise Kâzım Orbay yürütmüştür."
     },
     {
         question: "1939’da Türkiye’nin karşılıklı yardım antlaşması yaptığı devletler hangileridir?",
@@ -62,9 +68,15 @@ window.tarih_25_sorulari = [
     },
     {
         question: "Türkiye’nin yer almadığı halde Türkiye’nin savaşa sokulmasına karar verilen konferans hangisidir?",
-        options: ["A) II. Kahire", "B) Adana", "C) Moskova (Ekim 1943)", "D) Casablanca", "E) Potsdam"],
+        options: [
+        "A) II. Kahire Konferansı",
+        "B) Adana Görüşmeleri",
+        "C) Moskova Konferansı (Ekim 1943)",
+        "D) Münih Konferansı",
+        "E) Potsdam Konferansı"
+        ],
         correctAnswerIndex: 2,
-        explanation: "Ekim 1943 Moskova Konferansı’nda Türkiye yoktu; savaşa sokulmasına karar verildi."
+        explanation: "Ekim 1943’te toplanan Moskova Konferansı’na Türkiye katılmamış; ABD, İngiltere ve SSCB bu konferansta Türkiye’nin savaşa sokulması yönünde karar almıştır. Adana Görüşmeleri ve II. Kahire Konferansı’nda ise Türkiye doğrudan taraf olarak yer almıştır."
     },
     {
         question: "I. Kahire Konferansı’na Türkiye adına kim katılmıştır?",
@@ -110,9 +122,15 @@ window.tarih_25_sorulari = [
     },
     {
         question: "Türkiye’nin Almanya ve Japonya’ya kâğıt üzerinde savaş ilan etmesinin nedeni nedir?",
-        options: ["A) Çakmak Hattı’nı denemek", "B) San Francisco kararları uyarınca BM asil üyeliği", "C) Polonya sendromunu bitirmek", "D) Habeşistan’ı almak", "E) Vichy ile ittifak"],
+        options: [
+        "A) Çakmak Hattı’nı denemek",
+        "B) Yalta kararı gereği San Francisco Konferansı’na katılıp BM’ye kurucu üye olmak",
+        "C) Boğazlar üzerinde yeni egemenlik hakları elde etmek",
+        "D) Habeşistan’ı almak",
+        "E) Vichy Hükümeti ile ittifak kurmak"
+        ],
         correctAnswerIndex: 1,
-        explanation: "BM asil üyeliği için San Francisco uyarınca kâğıt üzerinde savaş ilanı yapılmıştır."
+        explanation: "Yalta Konferansı’nda, 1 Mart 1945’e kadar Mihver Devletleri’ne savaş ilan eden ülkelerin San Francisco Konferansı’na çağrılacağı kararlaştırılmıştı. Türkiye de 23 Şubat 1945’te Almanya ve Japonya’ya kâğıt üzerinde savaş ilan ederek Birleşmiş Milletler’e kurucu üye olma hakkı kazanmıştır."
     },
     {
         question: "Savaş yıllarında Trakya’da kurulan savunma hattı hangisidir?",
@@ -121,10 +139,16 @@ window.tarih_25_sorulari = [
         explanation: "Türkiye Çakmak Hattı’nı kurmuştur."
     },
     {
-        question: "Seferberlikle askere alınan erkek sayısı nota göre yaklaşık kaçtır?",
-        options: ["A) 400 bin", "B) 4 milyon", "C) 40 milyon", "D) 40 bin", "E) 14 milyon"],
+        question: "II. Dünya Savaşı yıllarında Türkiye’de seferberlik kapsamında silah altına alınan erkek sayısı yaklaşık kaçtır?",
+        options: [
+        "A) 100 bin",
+        "B) 1 milyon",
+        "C) 4 milyon",
+        "D) 10 milyon",
+        "E) 15 milyon"
+        ],
         correctAnswerIndex: 1,
-        explanation: "Yaklaşık 4 milyon erkek askere alınmıştır."
+        explanation: "Savaşa girmediği hâlde sürekli seferberlik durumunda kalan ve nüfusu yaklaşık 18 milyon olan Türkiye’de silah altına alınan erkek sayısı yaklaşık 1 milyonu bulmuştur. Üretici nüfusun askere alınması tarımsal üretimi düşürmüş, ekonomik darboğazı derinleştirmiştir."
     },
     {
         question: "Üretim, dağıtım ve tüketimi kontrol altına alan düzenleme hangisidir?",
@@ -139,10 +163,16 @@ window.tarih_25_sorulari = [
         explanation: "1942’de büyük kentlerde karne uygulanmıştır."
     },
     {
-        question: "Savaş yıllarında kurulan kurumlardan hangisi notta yer almaz?",
-        options: ["A) Petrol Ofisi", "B) Et ve Balık Kurumu", "C) Ticaret Ofisi", "D) İaşe Müsteşarlığı", "E) NATO Genel Sekreterliği"],
+        question: "Aşağıdaki kurumlardan hangisi II. Dünya Savaşı yıllarında kurulmamıştır?",
+        options: [
+        "A) Petrol Ofisi",
+        "B) Köy Enstitüleri",
+        "C) Ticaret Ofisi",
+        "D) İaşe Müsteşarlığı",
+        "E) NATO"
+        ],
         correctAnswerIndex: 4,
-        explanation: "NATO savaştan sonra, 1949’dadır. Diğerleri savaş içi iaşe kurumlarıdır."
+        explanation: "Köy Enstitüleri 1940’ta, Petrol Ofisi ve Ticaret Ofisi 1941’de, İaşe Müsteşarlığı 1942’de, yani savaş yıllarında kurulmuştur. NATO ise savaştan sonra, 1949’da kurulmuştur."
     },
     {
         question: "Varlık Vergisi ve Toprak Mahsulleri Vergisi’nin amacı nedir?",
@@ -157,10 +187,16 @@ window.tarih_25_sorulari = [
         explanation: "Varlık Vergisi 15 Mart 1944’te kaldırılmıştır."
     },
     {
-        question: "Savaşın planlı ekonomiye etkisi hangisidir?",
-        options: ["A) I. Beş Yıllık Plan durdu", "B) II. Beş Yıllık Kalkınma Planı uygulanamadı", "C) Marshall Planı 1939’da başladı", "D) NEP Türkiye’de uygulandı", "E) Kolektifleştirme yapıldı"],
+        question: "II. Dünya Savaşı’nın Türkiye’deki planlı ekonomi uygulamalarına etkisi aşağıdakilerden hangisidir?",
+        options: [
+        "A) I. Beş Yıllık Sanayi Planı yarıda bırakıldı",
+        "B) II. Beş Yıllık Sanayi Planı uygulanamadı",
+        "C) Marshall Planı 1939’da başladı",
+        "D) NEP Türkiye’de uygulandı",
+        "E) Tarımda kolektifleştirmeye geçildi"
+        ],
         correctAnswerIndex: 1,
-        explanation: "II. Beş Yıllık Kalkınma Planı savaş nedeniyle uygulanamamıştır."
+        explanation: "1938’de hazırlanan II. Beş Yıllık Sanayi Planı, savaşın başlaması ve kaynakların savunmaya aktarılması nedeniyle uygulanamamıştır. 1934-1938 arasında yürütülen I. Beş Yıllık Sanayi Planı ise başarıyla tamamlanmıştı."
     },
     {
         question: "Savaş döneminde eğitime ilişkin hangisi doğrudur?",
@@ -199,10 +235,16 @@ window.tarih_25_sorulari = [
         explanation: "Nuri Demirağ Millî Kalkınma Partisi’ni kurmuştur."
     },
     {
-        question: "Nuri Demirağ’ın sanayi faaliyetlerinden hangisi notta yer almaz?",
-        options: ["A) İlk Türk sigara kâğıdı", "B) Bursa Merinos", "C) Karabük Demir–Çelik", "D) 1936 seri üretim uçak", "E) İlk Türk denizaltı su bombası"],
+        question: "Nuri Demirağ ile ilgili olarak aşağıdakilerden hangisi söylenemez?",
+        options: [
+        "A) İlk yerli sigara kâğıdını üretmiştir",
+        "B) Demiryolu inşaatlarında müteahhitlik yapmıştır",
+        "C) 1936’da kurduğu fabrikada yerli uçak üretmiştir",
+        "D) İlk yerli paraşütü üretmiştir",
+        "E) İlk Türk denizaltı su bombasını üretmiştir"
+        ],
         correctAnswerIndex: 4,
-        explanation: "Denizaltı su bombası Şakir Zümre’ye aittir."
+        explanation: "Nuri Demirağ; ilk yerli sigara kâğıdını üreten, demiryolu inşaatlarında müteahhitlik yapan ve 1936’da kurduğu uçak fabrikasında yerli uçak ile paraşüt üretimine geçen bir sanayicidir. Denizaltı su bombası üretimi ise dönemin bir diğer sanayicisi Şakir Zümre’ye aittir."
     },
     {
         question: "Türkiye’nin ilk sivil uçuş okulunu 1932’de açan kişi kimdir?",
@@ -262,7 +304,7 @@ window.tarih_25_sorulari = [
         question: "Türkiye’nin savaşa fiilen girmemesine rağmen BM üyesi olabilmesinin yolu hangisidir?",
         options: ["A) Mihver’e katılmak", "B) Almanya ve Japonya’ya kâğıt üzerinde savaş ilanı", "C) Polonya’ya asker göndermek", "D) Maginot’yu aşmak", "E) Stalingrad’a tümen yollamak"],
         correctAnswerIndex: 1,
-        explanation: "San Francisco şartı gereği kâğıt üzerinde savaş ilanı ile asil üyelik yolu açılmıştır."
+        explanation: "Yalta Konferansı’nda alınan karar gereği 1 Mart 1945’e kadar Almanya ve Japonya’ya savaş ilan eden devletler San Francisco Konferansı’na çağrılacaktı. Türkiye de 23 Şubat 1945’te kâğıt üzerinde savaş ilan ederek Birleşmiş Milletler’e kurucu üye olma hakkı elde etmiştir."
     },
     {
         question: "Bazı ürünlerde fiyatın devletçe tespiti uygulamasının adı nedir?",

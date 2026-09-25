@@ -245,7 +245,7 @@ window.tarih_16_sorulari = [
             "E) 1924-1930 yılları arasında görev yapmıştır."
         ],
         correctAnswerIndex: 2,
-        explanation: "Abdülmecit Efendi, 1 Kasım 1922'den 3 Mart 1924'e kadar halifelik görevini sürdürmüştür. Halifelik 3 Mart 1924'te kaldırılmıştır."
+        explanation: "Abdülmecit Efendi, saltanatın kaldırılmasının ardından 18 Kasım 1922'de TBMM tarafından halife seçilmiş ve halifeliğin kaldırıldığı 3 Mart 1924'e kadar bu görevi sürdürmüştür."
     },
 
     // ============================================================
@@ -288,7 +288,7 @@ window.tarih_16_sorulari = [
         explanation: "Mustafa Kemal, Lozan'da kapitülasyonların kaldırılması ve Ermenilere yurt verilmemesi konularında kesinlikle taviz verilmemesini istemiştir."
     },
     {
-        question: "Lozan Konferansı'na ilişkin aşağıdaki devletlerden hangisi verilen listede yer alan katılımcılar arasında değildir?",
+        question: "Aşağıdaki devletlerden hangisi Lozan Konferansı'na taraf devlet olarak katılmamış, konferansı yalnızca gözlemci sıfatıyla izlemiştir?",
         options: [
             "A) Japonya",
             "B) Romanya",
@@ -297,7 +297,7 @@ window.tarih_16_sorulari = [
             "E) İtalya"
         ],
         correctAnswerIndex: 3,
-        explanation: "Amerika Birleşik Devletleri, Lozan Konferansı'na gözlemci olarak katılmıştır. Japonya, Romanya, Yugoslavya ve İtalya ise katılımcı devletler arasındadır."
+        explanation: "Lozan Konferansı'na Türkiye'nin yanı sıra İngiltere, Fransa, İtalya, Japonya, Yunanistan, Romanya ve Yugoslavya taraf devlet olarak katılmıştır. Amerika Birleşik Devletleri ise konferansa taraf olarak değil, gözlemci sıfatıyla katılmıştır."
     },
     {
         question: "Lozan Konferansı'nın ilk aşamasının sonuç alınamadan dağılması ve sonraki süreç dikkate alındığında aşağıdaki tarihlerden hangisinin doğru eşleştirmesi yapılmıştır?",
@@ -321,7 +321,7 @@ window.tarih_16_sorulari = [
             "E) Cumhuriyetin ilan edilmesi"
         ],
         correctAnswerIndex: 0,
-        explanation: "Lozan görüşmelerinin kesintiye uğradığı dönemde (17 Şubat - 4 Mart 1923) İzmir İktisat Kongresi toplanarak Türkiye'nin ekonomik bağımsızlık konusundaki kararlılığı ortaya konmuştur."
+        explanation: "Lozan görüşmeleri 4 Şubat 1923'te kesilmiş, 23 Nisan 1923'te yeniden başlamıştır. Bu kesinti döneminde 17 Şubat - 4 Mart 1923 tarihleri arasında toplanan İzmir İktisat Kongresi, Türkiye'nin ekonomik bağımsızlık konusundaki kararlılığını ortaya koymuştur."
     },
     {
         question: "Aşağıdakilerden hangisi Lozan sürecinde Türkiye'nin siyasal iradesini ortaya koyan gelişmelerden biridir?",
@@ -364,12 +364,12 @@ window.tarih_16_sorulari = [
         options: [
             "A) Kapitülasyonlar",
             "B) Dış borçlar",
-            "C) Nüfus mübadelesi",
+            "C) Savaş tazminatı",
             "D) Gümrük düzenlemeleri",
             "E) Saltanatın kaldırılması"
         ],
         correctAnswerIndex: 4,
-        explanation: "Saltanatın kaldırılması, siyasi bir konudur. Kapitülasyonlar, dış borçlar, nüfus mübadelesi ve gümrük düzenlemeleri ise ekonomik konulardır."
+        explanation: "Kapitülasyonlar, dış borçlar, savaş tazminatı ve gümrük düzenlemeleri Lozan'ın ekonomik nitelikli konularıdır. Saltanatın kaldırılması ise Lozan'da görüşülen bir konu olmayıp TBMM'nin aldığı siyasi bir karardır."
     },
     {
         question: "Lozan Konferansı'nda Türkiye'nin ekonomik bağımsızlığını ilgilendiren aşağıdaki konulardan hangisinin tamamen ortadan kaldırılması kararlaştırılmıştır?",
@@ -528,16 +528,16 @@ window.tarih_16_sorulari = [
     // BÖLÜM 6: İSTANBUL – PATRİKHANE (Soru 43-45)
     // ============================================================
     {
-        question: "Lozan Antlaşması'na göre İtilaf Devletleri'nin İstanbul'u boşaltması için öngörülen süre aşağıdakilerden hangisidir?",
+        question: "Lozan Antlaşması'na ek protokole göre İtilaf Devletleri'nin İstanbul'u boşaltması için öngörülen süre aşağıdakilerden hangisidir?",
         options: [
-            "A) 15 gün",
-            "B) 30 gün",
-            "C) 45 gün",
-            "D) 60 gün",
-            "E) 90 gün"
+            "A) 2 hafta",
+            "B) 4 hafta",
+            "C) 6 hafta",
+            "D) 10 hafta",
+            "E) 12 hafta"
         ],
         correctAnswerIndex: 2,
-        explanation: "Lozan Antlaşması'na göre İtilaf Devletleri, 45 gün içinde İstanbul'u boşaltmayı kabul etmiştir."
+        explanation: "Lozan'a ek protokole göre İtilaf Devletleri, antlaşmanın onaylanmasından itibaren 6 hafta içinde İstanbul'u boşaltacaktı. İşgal kuvvetleri bu hüküm uyarınca 2 Ekim 1923'te İstanbul'dan ayrılmıştır."
     },
     {
         question: "Lozan'da Patrikhane konusunda alınan karar aşağıdakilerden hangisidir?",
@@ -557,11 +557,11 @@ window.tarih_16_sorulari = [
             "A) Lozan'da ele alınan son mesele olmuştur.",
             "B) Patrikhane'nin siyasi yetkileri genişletilmiştir.",
             "C) Görüşmelerin kesilmesine neden olan temel sorun olmuştur.",
-            "D) Taraflar arasında uzlaşılıp yazıya geçirilen ilk mesele olmuştur.",
+            "D) Patrikhane İstanbul'da kalmış, siyasi ve idari yetkileri kaldırılmıştır.",
             "E) Patrikhane'nin Türkiye dışına çıkarılması kesin olarak kararlaştırılmıştır."
         ],
         correctAnswerIndex: 3,
-        explanation: "Patrikhane konusu, Lozan'da taraflar arasında uzlaşılıp yazıya geçirilen ilk mesele olmuştur. Patrikhane İstanbul'da kalacak, siyasi yetkileri olmayacaktır."
+        explanation: "Türk heyeti Patrikhane'nin Türkiye dışına çıkarılmasını istemiş, görüşmeler sonunda Patrikhane İstanbul'da kalmıştır. Ancak siyasi ve idari yetkileri kaldırılarak yalnızca dinî görev yapan bir kurum hâline getirilmiştir."
     },
 
     // ============================================================
@@ -607,13 +607,13 @@ window.tarih_16_sorulari = [
         question: "Lozan'da Ege Adaları'yla ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
             "A) Tüm Ege Adaları Türkiye'ye bırakılmıştır.",
-            "B) Bozcaada ve Gökçeada Türkiye'ye bırakılmış, diğer Ege Adaları Yunanistan'a verilmiştir.",
+            "B) Bozcaada ve Gökçeada Türkiye'ye bırakılmış, On İki Ada İtalya'ya, diğer Ege Adaları Yunanistan'a verilmiştir.",
             "C) Tüm Ege Adaları İtalya'ya bırakılmıştır.",
             "D) Kıbrıs ve Rodos Türkiye'ye bırakılmıştır.",
             "E) Bozcaada ve Gökçeada İtalya'ya bırakılmıştır."
         ],
         correctAnswerIndex: 1,
-        explanation: "Lozan'da Bozcaada ve Gökçeada Türkiye'ye bırakılmış, diğer Ege Adaları (Midilli, Sakız, Sisam vb.) Yunanistan'a verilmiştir."
+        explanation: "Lozan'da Bozcaada ve Gökçeada Türkiye'ye bırakılmış, Rodos ve On İki Ada İtalya'nın elinde kalmış, Midilli, Sakız, Sisam ve Nikarya gibi diğer Ege Adaları ise Yunanistan'a verilmiştir."
     },
     {
         question: "Lozan'da Ege Adaları'nın Yunanistan'a bırakılması hangi koşulla gerçekleştirilmiştir?",
@@ -672,16 +672,16 @@ window.tarih_16_sorulari = [
         explanation: "Lozan'da Boğazların yönetimi bir komisyona bırakılmış, komisyon başkanının Türk olması kabul edilmiştir. Boğazlar askerden arındırılmıştır."
     },
     {
-        question: "Lozan'da oluşturulan Boğazlar Komisyonu'nda aşağıdaki devletlerden hangilerinin yer aldığı kabul edilmiştir?",
+        question: "Lozan Barış Antlaşması ile oluşturulan Boğazlar Komisyonu'nda aşağıdaki devletlerden hangisi yer almamıştır?",
         options: [
-            "A) Sovyet Rusya ve Bulgaristan",
-            "B) İtalya ve Yunanistan",
-            "C) İngiltere ve Fransa",
-            "D) Amerika Birleşik Devletleri ve Japonya",
-            "E) Romanya ve Yugoslavya"
+            "A) Fransa",
+            "B) İtalya",
+            "C) Bulgaristan",
+            "D) Amerika Birleşik Devletleri",
+            "E) Yunanistan"
         ],
-        correctAnswerIndex: 0,
-        explanation: "Lozan'da Boğazlar Komisyonu'nda Sovyet Rusya ve Bulgaristan da yer almıştır. Boğazların uluslararası statüsü bu komisyonla düzenlenmiştir."
+        correctAnswerIndex: 3,
+        explanation: "Boğazlar Komisyonu; başkanlığını Türkiye'nin yaptığı, İngiltere, Fransa, İtalya, Japonya, Bulgaristan, Yunanistan, Romanya, Rusya ve Sırp-Hırvat-Sloven Devleti temsilcilerinden oluşan bir kuruldu. Lozan'a taraf olmayan Amerika Birleşik Devletleri bu komisyonda yer almamıştır."
     },
     {
         question: "Lozan'da Boğazlar Komisyonu ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
@@ -744,24 +744,24 @@ window.tarih_16_sorulari = [
         options: [
             "A) Borçların tamamı Türkiye tarafından üstlenilmiştir.",
             "B) Borçlar tamamen silinmiştir.",
-            "C) Borçlar Osmanlı Devleti'nden ayrılan devletlere yüzölçümleri esas alınarak paylaştırılmıştır.",
+            "C) Borçlar, Osmanlı Devleti'nden ayrılan devletlere bu topraklardan elde edilen gelirler oranında paylaştırılmıştır.",
             "D) Borçların tamamı İngiltere tarafından ödenmiştir.",
             "E) Borçların tamamı Osmanlı hanedanına bırakılmıştır."
         ],
         correctAnswerIndex: 2,
-        explanation: "Lozan'da Osmanlı borçları, Osmanlı'dan ayrılan devletlere yüzölçümleri esas alınarak paylaştırılmıştır. Türkiye, kendi payına düşen borcu ödemeyi kabul etmiştir."
+        explanation: "Lozan'da Osmanlı borçları, Osmanlı Devleti'nden ayrılan devletlere bu devletlere bırakılan topraklardan sağlanan gelirler oranında paylaştırılmıştır. Türkiye kendi payına düşen borcu taksitler hâlinde ödemeyi kabul etmiştir."
     },
     {
         question: "Osmanlı Devleti'nin dış borçlarının Osmanlı'dan ayrılan devletlere dağıtılmasında kullanılan temel ölçüt aşağıdakilerden hangisidir?",
         options: [
             "A) Nüfus",
             "B) Askerî güç",
-            "C) Millî gelir",
+            "C) Ayrılan topraklardan elde edilen gelir",
             "D) Yüzölçümü",
             "E) Etnik yapı"
         ],
-        correctAnswerIndex: 3,
-        explanation: "Osmanlı borçları, Osmanlı'dan ayrılan devletlere yüzölçümü esas alınarak paylaştırılmıştır. Bu, adil bir paylaşım yöntemi olarak kabul edilmiştir."
+        correctAnswerIndex: 2,
+        explanation: "Lozan'da Osmanlı borçları, Osmanlı Devleti'nden ayrılan devletlere bu topraklardan elde edilen gelirler esas alınarak paylaştırılmıştır. Böylece borç yükü, toprakların sağladığı gelirle orantılı biçimde dağıtılmıştır."
     },
 
     // ============================================================
@@ -897,11 +897,11 @@ window.tarih_16_sorulari = [
             "A) Kapitülasyonların kaldırılması",
             "B) Osmanlı dış borçlarının paylaştırılması",
             "C) Gümrük düzenlemelerinin yapılması",
-            "D) Nüfus mübadelesinin karara bağlanması",
+            "D) Savaş tazminatı karşılığında Karaağaç'ın Türkiye'ye bırakılması",
             "E) Musul sorununun çözülmesi"
         ],
         correctAnswerIndex: 4,
-        explanation: "Musul sorunu, Lozan'da çözülememiştir. Ekonomik sonuçlar arasında kapitülasyonlar, dış borçlar, gümrük düzenlemeleri ve nüfus mübadelesi sayılabilir."
+        explanation: "Kapitülasyonların kaldırılması, Osmanlı dış borçlarının paylaştırılması, gümrük düzenlemeleri ve savaş tazminatı karşılığında Karaağaç'ın alınması Lozan'ın ekonomik sonuçlarıdır. Musul sorunu ise Lozan'da çözülememiş, İngiltere ile yapılacak ikili görüşmelere bırakılmıştır."
     },
     {
         question: "Aşağıdaki gelişmelerden hangisi doğrudan ulusal egemenlik anlayışının güçlendirilmesiyle ilişkilidir?",

@@ -348,7 +348,7 @@ window.tarih_10_sorulari = [
     explanation: "Memurların pantolon, ceket ve fes giymesi zorunlu tutulmuştur."
 },
 {
-    question: "Devlet memuru yetiştirmek amacıyla kurulan eğitim kurumu aşağıdakilerden hangisidir?",
+    question: "II. Mahmut Dönemi'nde devlet dairelerine kâtip (memur) yetiştirmek amacıyla açılan eğitim kurumu aşağıdakilerden hangisidir?",
     options: [
         "A) Mekteb-i Harbiye",
         "B) Mekteb-i Tıbbiye",
@@ -357,7 +357,7 @@ window.tarih_10_sorulari = [
         "E) Mekteb-i Mülkiye"
     ],
     correctAnswerIndex: 2,
-    explanation: "Mekteb-i Maarif-i Adliye devlet memuru yetiştirmek amacıyla açılmıştır."
+    explanation: "Mekteb-i Maarif-i Adliye, 1838'de II. Mahmut Dönemi'nde devlet dairelerine kâtip ve memur yetiştirmek amacıyla açılmıştır. Mekteb-i Mülkiye ise 1859'da Sultan Abdülmecid Dönemi'nde kurulmuştur."
 },
 {
     question: "II. Mahmut döneminde Divan-ı Hümayun kaldırılarak yerine aşağıdaki kurumlardan hangisi oluşturulmuştur?",
@@ -432,7 +432,7 @@ window.tarih_10_sorulari = [
     explanation: "Masumiyet karinesi ilkesi ilk kez yazılı hâle getirilmiştir."
 },
 {
-    question: "II. Mahmut döneminde kurulan ilk modern ordulardan biri aşağıdakilerden hangisidir?",
+    question: "II. Mahmut Dönemi'nin başında, Nizam-ı Cedid'in devamı niteliğinde kurulan ve Yeniçerilerin tepkisi üzerine kısa sürede kaldırılan ordu aşağıdakilerden hangisidir?",
     options: [
         "A) Nizam-ı Cedid",
         "B) Sekban-ı Cedid",
@@ -441,7 +441,7 @@ window.tarih_10_sorulari = [
         "E) Asâkir-i Mansûre-i Muhammediye"
     ],
     correctAnswerIndex: 1,
-    explanation: "II. Mahmut döneminde Sekban-ı Cedid kurulmuştur."
+    explanation: "Sekban-ı Cedid, 1808'de Alemdar Mustafa Paşa'nın girişimiyle Nizam-ı Cedid'in devamı olarak kurulmuş, Yeniçerilerin ayaklanması üzerine 1809'da kaldırılmıştır. Asâkir-i Mansûre-i Muhammediye ise Yeniçeri Ocağı'nın kaldırıldığı 1826'da kurulmuştur."
 },
 {
     question: "Yeniçeri Ocağı kaldırılmadan hemen önce oluşturulan askerî teşkilat aşağıdakilerden hangisidir?",
@@ -576,16 +576,16 @@ window.tarih_10_sorulari = [
     explanation: "II. Mahmut döneminde rüştiyeler açılmıştır."
 },
 {
-    question: "II. Mahmut döneminde açılan Mekteb-i Ulûm-ı Edebiyye'nin faaliyet alanı aşağıdakilerden hangisidir?",
+    question: "II. Mahmut Dönemi'nde açılan Mekteb-i Ulûm-ı Edebiyye'nin temel amacı aşağıdakilerden hangisidir?",
     options: [
-        "A) Hukuk",
-        "B) Tıp",
-        "C) Denizcilik",
-        "D) Askerî eğitim",
-        "E) Edebiyat ve kültür"
+        "A) Hâkim ve hukukçu yetiştirmek",
+        "B) Hekim yetiştirmek",
+        "C) Denizci subay yetiştirmek",
+        "D) Kara ordusuna subay yetiştirmek",
+        "E) Devlet dairelerine kâtip (memur) yetiştirmek"
     ],
     correctAnswerIndex: 4,
-    explanation: "Mekteb-i Ulûm-ı Edebiyye eğitim ve kültür alanında açılmıştır."
+    explanation: "Mekteb-i Ulûm-ı Edebiyye, 1838'de Bâbıâli kalemlerine ve devlet dairelerine kâtip yetiştirmek amacıyla açılmış bir memur okuludur. Tıp eğitimi Mekteb-i Tıbbiye'de, askerî eğitim ise Mekteb-i Harbiye'de verilmiştir."
 },
 {
     question: "Bulaşıcı hastalıkların yayılmasını önlemek amacıyla II. Mahmut döneminde aşağıdaki uygulamalardan hangisi başlatılmıştır?",
@@ -672,7 +672,7 @@ window.tarih_10_sorulari = [
     explanation: "Yerli malı kullanımı teşvik edilerek yerli üretim desteklenmek istenmiştir."
 },
 {
-    question: "II. Mahmut döneminde açılan Bakırköy Fabrikası hangi ürünün üretimi amacıyla kurulmuştur?",
+    question: "Sultan Abdülmecid Dönemi'nde Bakırköy'de açılan fabrika hangi ürünün üretimi amacıyla kurulmuştur?",
     options: [
         "A) Silah",
         "B) Kâğıt",
@@ -681,7 +681,7 @@ window.tarih_10_sorulari = [
         "E) Cam"
     ],
     correctAnswerIndex: 2,
-    explanation: "Bakırköy'de bez fabrikası açılmıştır."
+    explanation: "Sultan Abdülmecid Dönemi'nde Hereke ve Zeytinburnu fabrikalarıyla aynı yıllarda açılan Bakırköy Fabrikası, pamuklu dokuma (bez) üretimi amacıyla kurulmuştur."
 },
 {
     question: "Osmanlı tüccarlarının Avrupalı tüccarlarla rekabet edebilmesi amacıyla aşağıdaki uygulamalardan hangisine başvurulmuştur?",
@@ -868,12 +868,12 @@ window.tarih_10_sorulari = [
     options: [
         "A) Askerlik yalnızca Müslümanlara ait olacaktır.",
         "B) Gayrimüslimler tamamen askerlikten çıkarılmıştır.",
-        "C) Askerlik bütün Osmanlı tebaası için zorunlu olacaktır.",
+        "C) Askere alma işlemleri düzene sokulacak ve askerlik hizmeti belirli bir süreyle sınırlandırılacaktır.",
         "D) Askerlik yalnızca gönüllülük esasına dayanacaktır.",
         "E) Ayanlar askerlikten sorumlu olacaktır."
     ],
     correctAnswerIndex: 2,
-    explanation: "Tanzimat Fermanı askerliği bütün tebaa için zorunlu hâle getirmeyi öngörmüştür."
+    explanation: "Tanzimat Fermanı, askere alma usulünün düzenli bir esasa bağlanacağını ve askerlik hizmetinin belirli bir süreyle sınırlandırılacağını öngörmüştür. Gayrimüslimlerin askerlik yükümlülüğü Tanzimat Fermanı'nda yer almaz."
 },
 {
     question: "Tanzimat Fermanı'na göre aşağıdakilerden hangisi yargı güvencesinin bir göstergesidir?",
@@ -1155,13 +1155,13 @@ window.tarih_10_sorulari = [
     question: "Sultan Abdülmecid döneminde Milli Eğitim Bakanlığının temeli kabul edilen kurum aşağıdakilerden hangisidir?",
     options: [
         "A) Encümen-i Daniş",
-        "B) Meclis-i Maarif-i Umumiye Nezareti",
+        "B) Maarif-i Umumiye Nezareti",
         "C) Darülmuallimin",
         "D) Mekteb-i Mülkiye",
         "E) Darülfünun"
     ],
     correctAnswerIndex: 1,
-    explanation: "Meclis-i Maarif-i Umumiye Nezareti günümüz Milli Eğitim Bakanlığının temelidir."
+    explanation: "1857'de kurulan Maarif-i Umumiye Nezareti, eğitim işlerini yürüten ilk bakanlık düzeyindeki teşkilat olup günümüz Millî Eğitim Bakanlığı'nın temeli sayılır."
 },
 {
     question: "Talim ve Terbiye Kurulunun temeli kabul edilen Encümen-i Daniş hangi dönemde kurulmuştur?",
@@ -1203,13 +1203,13 @@ window.tarih_10_sorulari = [
     question: "Osmanlı Devleti'nde ilk demiryolu aşağıdaki hatlardan hangisinde yapılmıştır?",
     options: [
         "A) İstanbul - İzmit",
-        "B) İzmir - Aydın (Turgutlu)",
+        "B) İzmir - Aydın",
         "C) Ankara - Eskişehir",
         "D) Haydarpaşa - Bağdat",
         "E) Edirne - İstanbul"
     ],
     correctAnswerIndex: 1,
-    explanation: "Notuna göre ilk demiryolu İzmir-Aydın (Turgutlu) hattında yapılmıştır."
+    explanation: "Osmanlı Devleti'nde ilk demiryolu hattı, 1856'da yapımına başlanan ve İngiliz sermayesiyle inşa edilen İzmir-Aydın hattıdır."
 },
 {
     question: "Osmanlı Devleti'nde ilk telgraf hattı hangi savaş sırasında çekilmiştir?",
@@ -1218,10 +1218,10 @@ window.tarih_10_sorulari = [
         "B) Trablusgarp Savaşı",
         "C) Kırım Savaşı",
         "D) Balkan Savaşı",
-        "E) Osmanlı-Rus Savaşı (1877-1878)"
+        "E) I. Dünya Savaşı"
     ],
     correctAnswerIndex: 2,
-    explanation: "İlk telgraf hattı Kırım Savaşı sırasında İstanbul-Edirne-Şumnu arasında çekilmiştir."
+    explanation: "Osmanlı Devleti'nde ilk telgraf hattı, Kırım Savaşı sırasında 1855'te İstanbul-Edirne-Şumnu arasında çekilmiştir."
 },
 {
     question: "Kırım Savaşı sırasında çekilen ilk telgraf hattı aşağıdakilerden hangisidir?",
@@ -1236,7 +1236,7 @@ window.tarih_10_sorulari = [
     explanation: "İlk telgraf hattı İstanbul-Edirne-Şumnu arasında kurulmuştur."
 },
 {
-    question: "Vapur taşımacılığı ve deniz ulaşımını düzenlemek amacıyla kurulan kuruluş aşağıdakilerden hangisidir?",
+    question: "İstanbul Boğazı'nda vapurla yolcu taşımacılığı yapmak üzere kurulan şirket aşağıdakilerden hangisidir?",
     options: [
         "A) Fevâid-i Osmaniye",
         "B) Şirket-i Hayriye",
@@ -1245,7 +1245,7 @@ window.tarih_10_sorulari = [
         "E) Feshane"
     ],
     correctAnswerIndex: 1,
-    explanation: "Şirket-i Hayriye vapur taşımacılığını düzenlemek amacıyla kurulmuştur."
+    explanation: "Şirket-i Hayriye, 1851'de İstanbul Boğazı'nda vapurla yolcu taşımacılığı yapmak amacıyla kurulmuştur. Fevâid-i Osmaniye ise devletin uzun mesafeli deniz hatlarını işleten vapur idaresidir."
 },
 {
     question: "Sultan Abdülmecid döneminde çıkarılan Arazi Kanunnamesi aşağıdaki alanlardan hangisiyle ilgilidir?",
@@ -1262,14 +1262,14 @@ window.tarih_10_sorulari = [
 {
     question: "Osmanlı Devleti ilk dış borcunu aşağıdaki devletlerden hangisinden almıştır?",
     options: [
-        "A) Fransa",
+        "A) Hollanda",
         "B) Almanya",
         "C) Rusya",
         "D) İngiltere",
         "E) Avusturya"
     ],
     correctAnswerIndex: 3,
-    explanation: "İlk dış borç İngiltere'den Kırım Savaşı sırasında alınmıştır."
+    explanation: "Osmanlı Devleti ilk dış borcunu 1854'te Kırım Savaşı'nın giderlerini karşılamak amacıyla İngiltere'den (Londra piyasasından) almıştır."
 },
 {
     question: "Osmanlı Devleti'nin ilk dış borç almasının temel nedeni aşağıdakilerden hangisidir?",
@@ -1300,15 +1300,15 @@ window.tarih_10_sorulari = [
     options: [
         "A) Ziraat Bankası",
         "B) Bank-ı Osmani",
-        "C) Osmanlı Bankası",
+        "C) Emniyet Sandığı",
         "D) Bank-ı Dersaadet",
         "E) Memleket Sandıkları"
     ],
     correctAnswerIndex: 3,
-    explanation: "İlk banka Bank-ı Dersaadet olup Galatalı bankerler tarafından kurulmuştur."
+    explanation: "Osmanlı Devleti'nde kurulan ilk banka, 1847'de Galatalı bankerler tarafından açılan Bank-ı Dersaadet'tir (İstanbul Bankası)."
 },
 {
-    question: "Para basma yetkisine sahip olan Bank-ı Osmani aşağıdaki ülkelerden hangisinin bankasıdır?",
+    question: "1856'da kurulan Bank-ı Osmani hangi devletin sermayesiyle açılmıştır?",
     options: [
         "A) İngiltere",
         "B) Rusya",
@@ -1317,7 +1317,7 @@ window.tarih_10_sorulari = [
         "E) Avusturya"
     ],
     correctAnswerIndex: 0,
-    explanation: "Bank-ı Osmani İngiliz sermayeli olup para basma yetkisine sahipti."
+    explanation: "Bank-ı Osmani 1856'da İngiliz sermayesiyle kurulmuştur. 1863'te Fransız sermayesinin de katılmasıyla banka Bank-ı Osmani-i Şahane adını almış ve para basma (emisyon) yetkisi bu kuruma verilmiştir."
 },
 {
     question: "Osmanlı Devleti'nde yayımlanan ilk özel gazete aşağıdakilerden hangisidir?",
@@ -1446,10 +1446,10 @@ window.tarih_10_sorulari = [
         "B) Divan-ı Hümayun",
         "C) Ayan Meclisi",
         "D) Meclis-i Vâlâ",
-        "E) Meclis-i Ahkâm-ı Adliye (Yargıtay)"
+        "E) Meclis-i Mebusan"
     ],
-    correctAnswerIndex: 4,
-    explanation: "Sultan Abdülaziz döneminde Meclis-i Ahkâm-ı Adliye (Yargıtay) kurulmuştur."
+    correctAnswerIndex: 0,
+    explanation: "Sultan Abdülaziz Dönemi'nde 1868'de Meclis-i Vâlâ ikiye ayrılmış; yüksek yargı organı olarak Divan-ı Ahkâm-ı Adliye (Yargıtay'ın temeli), idari yargı ve danışma organı olarak da Şûra-yı Devlet (Danıştay'ın temeli) kurulmuştur."
 },
 {
     question: "Günümüzde Danıştayın temeli kabul edilen kurum aşağıdakilerden hangisidir?",
@@ -1605,7 +1605,7 @@ window.tarih_10_sorulari = [
         "E) Dış politika"
     ],
     correctAnswerIndex: 0,
-    explanation: "Ramazan Kararnamesi mali alanda yayımlanan önemli düzenlemelerden biridir."
+    explanation: "1875'te yayımlanan Ramazan Kararnamesi ile Osmanlı Devleti iç ve dış borçlarının faiz ve anapara ödemelerini yarıya indireceğini duyurmuştur; bu yönüyle kararname mali alanla ilgilidir."
 },
 {
     question: "İlkokul, ortaokul, lise ve üniversite basamaklarını düzenleyen Maarif Nizamnamesi hangi padişah döneminde yayımlanmıştır?",
@@ -1698,10 +1698,10 @@ window.tarih_10_sorulari = [
         "B) Halifeliği kaldırdığı için",
         "C) Islahat Fermanı'nı reddettiği için",
         "D) Yeniçeri Ocağı'nı yeniden kurduğu için",
-        "E) Meşrutiyeti ilan etmediği için"
+        "E) Akıl sağlığı bozulduğu için"
     ],
     correctAnswerIndex: 4,
-    explanation: "V. Murat meşrutiyeti ilan etmediği için şeyhülislam fetvasıyla tahttan indirilmiştir."
+    explanation: "V. Murat, yaklaşık üç aylık saltanatının ardından akıl sağlığının bozulduğu gerekçesiyle şeyhülislam fetvasına dayanılarak tahttan indirilmiş, yerine II. Abdülhamit geçmiştir."
 },
 {
     question: "V. Murat'ın yerine meşrutiyeti ilan edeceğine söz vererek tahta çıkan padişah aşağıdakilerden hangisidir?",
@@ -1908,7 +1908,7 @@ window.tarih_10_sorulari = [
     explanation: "Yasama yetkisi Ayan ve Mebusan Meclislerinden oluşan parlamentoya verilmiştir."
 },
 {
-    question: "1876 Kanun-i Esasi'ne göre yürütme yetkisi aşağıdakilerden hangisine verilmiştir?",
+    question: "1876 Kanun-i Esasi'ye göre yürütme yetkisi padişahla birlikte aşağıdakilerden hangisine verilmiştir?",
     options: [
         "A) Padişah",
         "B) Meclis-i Mebusan",
@@ -1917,7 +1917,7 @@ window.tarih_10_sorulari = [
         "E) Heyet-i Vükela"
     ],
     correctAnswerIndex: 4,
-    explanation: "Kanun-i Esasi'ne göre yürütme yetkisi Heyet-i Vükela'ya aittir."
+    explanation: "1876 Kanun-i Esasi'ye göre yürütme yetkisi, padişah ile başkanlığını sadrazamın yaptığı Heyet-i Vükela'ya (Bakanlar Kurulu) aittir."
 },
 {
     question: "1876 Kanun-i Esasi'ne göre hükümet yaptığı işlerden aşağıdakilerden hangisine karşı sorumludur?",
@@ -1968,16 +1968,16 @@ window.tarih_10_sorulari = [
     explanation: "Kanun-i Esasi padişaha meclisi kapatma yetkisi vermiştir."
 },
 {
-    question: "1876 Kanun-i Esasi'ne göre aşağıdaki cezalardan hangilerini verme yetkisi padişaha aittir?",
+    question: "1876 Kanun-i Esasi'ye göre padişahın, devletin güvenliğini bozduğu belgelerle saptanan kişilere uygulayabildiği yaptırım aşağıdakilerden hangisidir?",
     options: [
-        "A) Kürek ve idam",
-        "B) Para ve hapis",
-        "C) Kürek ve sürgün",
-        "D) Sürgün ve angarya",
-        "E) Para ve sürgün"
+        "A) İdam",
+        "B) Kürek cezası",
+        "C) Sürgün",
+        "D) Müsadere",
+        "E) Para cezası"
     ],
-    correctAnswerIndex: 3,
-    explanation: "Kanun-i Esasi'ye göre padişah sürgün ve angarya cezası verebilirdi."
+    correctAnswerIndex: 2,
+    explanation: "Kanun-i Esasi'nin 113. maddesi, devletin güvenliğini bozduğu güvenilir belgelerle saptanan kişileri ülke dışına sürgün etme yetkisini padişaha tanımıştır. II. Abdülhamit bu maddeye dayanarak Mithat Paşa'yı sürgüne göndermiştir."
 },
 {
     question: "20 Mayıs 1878'de II. Abdülhamit'e karşı gerçekleştirilen başarısız darbe girişimi tarihe hangi adla geçmiştir?",
@@ -2021,11 +2021,11 @@ window.tarih_10_sorulari = [
         "A) Gazi",
         "B) Adli",
         "C) Fatih",
-        "D) Maarif-i Perver",
+        "D) Maarifperver",
         "E) Hakan"
     ],
     correctAnswerIndex: 3,
-    explanation: "II. Abdülhamit eğitim alanındaki faaliyetleri nedeniyle 'Maarif-i Perver' unvanını almıştır."
+    explanation: "II. Abdülhamit, döneminde çok sayıda okul açılması ve eğitim alanındaki çalışmaları nedeniyle 'Maarifperver' (eğitimi seven) unvanıyla anılmıştır."
 },
 {
     question: "Aşağıdaki okullardan hangisi II. Abdülhamit döneminde açılmıştır?",
@@ -2058,10 +2058,10 @@ window.tarih_10_sorulari = [
         "B) Polis Mektebi",
         "C) Gümrük Mektebi",
         "D) Darülmuallimin",
-        "E) Baytar Mektebi"
+        "E) Aşiret Mektebi"
     ],
     correctAnswerIndex: 3,
-    explanation: "Darülmuallimin Sultan Abdülmecid döneminde açılmıştır."
+    explanation: "Darülmuallimin (öğretmen okulu) 1848'de Sultan Abdülmecid Dönemi'nde açılmıştır; diğer okullar ise II. Abdülhamit Dönemi'nde kurulmuştur."
 },
 {
     question: "Aşağıdaki ifadelerden hangisi II. Abdülhamit dönemi eğitim politikasıyla ilgilidir?",
@@ -2076,7 +2076,7 @@ window.tarih_10_sorulari = [
     explanation: "II. Abdülhamit döneminde kız meslek liseleri açılmıştır."
 },
 {
-    question: "KPSS'de sıkça sorulan bilgiye göre adı bir il ile başlayan liselerin büyük bölümü hangi padişah döneminde açılmıştır?",
+    question: "Adı bir il adıyla başlayan liselerin büyük bölümünün temeli hangi padişah döneminde atılmıştır?",
     options: [
         "A) II. Mahmut",
         "B) Abdülmecid",
@@ -2085,7 +2085,7 @@ window.tarih_10_sorulari = [
         "E) V. Mehmet Reşat"
     ],
     correctAnswerIndex: 3,
-    explanation: "Notunda belirtildiği gibi adı bir il ile başlayan liseler II. Abdülhamit döneminde açılmıştır."
+    explanation: "II. Abdülhamit Dönemi'nde taşrada çok sayıda idadi (lise) açılmıştır; bugün adı bir il adıyla başlayan liselerin büyük bölümü bu dönemde kurulan idadilere dayanır."
 },
 {
     question: "II. Abdülhamit döneminde yönetim merkezi aşağıdaki saraylardan hangisine taşınmıştır?",
@@ -2196,7 +2196,7 @@ window.tarih_10_sorulari = [
     explanation: "II. Abdülhamit döneminde engellilere yönelik kurumlar açılmıştır."
 },
 {
-    question: "Osmanlı Devleti'nde ilk müze aşağıdaki adlardan hangisiyle açılmıştır?",
+    question: "Osmanlı Devleti'nde 1846'da Aya İrini'de oluşturulan ilk müze hangi adla açılmıştır?",
     options: [
         "A) Müze-i Hümayun",
         "B) Asar-ı Atika",
@@ -2205,10 +2205,10 @@ window.tarih_10_sorulari = [
         "E) Darüşşafaka"
     ],
     correctAnswerIndex: 1,
-    explanation: "Osmanlı Devleti'nde ilk müze Asar-ı Atika adıyla açılmıştır."
+    explanation: "Osmanlı Devleti'nde ilk müze, 1846'da Aya İrini'de Âsâr-ı Atîka (eski eserler) koleksiyonu adıyla oluşturulmuş, bu koleksiyon 1869'da Müze-i Hümayun adını almıştır."
 },
 {
-    question: "Osmanlı Devleti'nde ilk müzenin kurulmasında önemli rol oynayan kişi aşağıdakilerden hangisidir?",
+    question: "Osmanlı Devleti'nde modern müzeciliğin kurucusu sayılan ve 1881'de Müze-i Hümayun müdürlüğüne getirilen kişi aşağıdakilerden hangisidir?",
     options: [
         "A) Ahmet Cevdet Paşa",
         "B) Namık Kemal",
@@ -2217,7 +2217,7 @@ window.tarih_10_sorulari = [
         "E) Ziya Gökalp"
     ],
     correctAnswerIndex: 3,
-    explanation: "İlk müzenin açılmasında Osman Hamdi Bey önemli rol oynamıştır."
+    explanation: "Osman Hamdi Bey 1881'de Müze-i Hümayun müdürlüğüne getirilmiş, Âsâr-ı Atîka Nizamnamesi ile eski eserlerin yurt dışına çıkarılmasını önlemeye çalışmış ve Sanayi-i Nefise Mektebi'ni kurarak Osmanlı'da modern müzeciliğin kurucusu kabul edilmiştir."
 },
 {
     question: "Osman Hamdi Bey aşağıdaki eğitim kurumlarından hangisinin açılmasını sağlamıştır?",
@@ -2318,17 +2318,17 @@ window.tarih_10_sorulari = [
 {
     question: "Aşağıdaki kurumlardan hangisi II. Abdülhamit döneminde çocukların korunmasına yönelik faaliyet göstermiştir?",
     options: [
-        "A) Darülhayr-ı Âli ve Himaye-i Etfal",
+        "A) Darülhayr-ı Âli",
         "B) Encümen-i Daniş",
         "C) Mekteb-i Mülkiye",
         "D) Şirket-i Hayriye",
         "E) Darülmuallimin"
     ],
     correctAnswerIndex: 0,
-    explanation: "Darülhayr-ı Âli ve Himaye-i Etfal çocukların korunmasına yönelik kurumlardır."
+    explanation: "Darülhayr-ı Âli, 1903'te II. Abdülhamit Dönemi'nde yetim ve kimsesiz çocukların bakımı ile eğitimi amacıyla açılmıştır."
 },
 {
-    question: "Osmanlı Devleti'nin iflas ettiğini ilan ettiği kararname aşağıdakilerden hangisidir?",
+    question: "Osmanlı Devleti'nin dış borçlarının tahsili amacıyla Düyun-u Umumiye İdaresi'nin kurulmasını sağlayan kararname aşağıdakilerden hangisidir?",
     options: [
         "A) Muharrem Kararnamesi",
         "B) Ramazan Kararnamesi",
@@ -2337,10 +2337,10 @@ window.tarih_10_sorulari = [
         "E) Sened-i İttifak"
     ],
     correctAnswerIndex: 0,
-    explanation: "1881 Muharrem Kararnamesi ile Osmanlı Devleti iflas ettiğini açıklamıştır."
+    explanation: "1881'de yayımlanan Muharrem Kararnamesi ile Osmanlı borçları yeniden yapılandırılmış ve borçların tahsili için alacaklı devletlerin temsilcilerinden oluşan Düyun-u Umumiye İdaresi kurulmuştur."
 },
 {
-    question: "Osmanlı Devleti hangi yıl yayımlanan Muharrem Kararnamesi ile iflas ettiğini ilan etmiştir?",
+    question: "Düyun-u Umumiye İdaresi'nin kurulmasını sağlayan Muharrem Kararnamesi hangi yıl yayımlanmıştır?",
     options: [
         "A) 1876",
         "B) 1878",
@@ -2349,7 +2349,7 @@ window.tarih_10_sorulari = [
         "E) 1908"
     ],
     correctAnswerIndex: 2,
-    explanation: "Muharrem Kararnamesi 1881 yılında yayımlanmıştır."
+    explanation: "Muharrem Kararnamesi 1881 yılında yayımlanmış, bu kararnameyle Osmanlı borçları yeniden yapılandırılarak Düyun-u Umumiye İdaresi kurulmuştur."
 },
 {
     question: "Muharrem Kararnamesi sonrasında alacaklı devletlerin kurduğu mali denetim kurumu aşağıdakilerden hangisidir?",
@@ -2436,7 +2436,7 @@ window.tarih_10_sorulari = [
     explanation: "II. Meşrutiyet öncesindeki eylemler Makedonya ve Selanik'te yoğunlaşmıştır."
 },
 {
-    question: "II. Abdülhamit, gelişmeler karşısında aşağıdakilerden hangisini ilan etmek zorunda kalmıştır?",
+    question: "Reval Görüşmesi ve İttihat ve Terakki Cemiyeti'nin baskıları sonucunda II. Abdülhamit 1908'de aşağıdakilerden hangisini ilan etmek zorunda kalmıştır?",
     options: [
         "A) Tanzimat Fermanı",
         "B) Islahat Fermanı",
@@ -2445,7 +2445,7 @@ window.tarih_10_sorulari = [
         "E) Kanun-ı Cedid"
     ],
     correctAnswerIndex: 2,
-    explanation: "İsyanların önüne geçemeyen II. Abdülhamit, 1908 yılında II. Meşrutiyet'i ilan etmiştir."
+    explanation: "Makedonya'daki karışıklıklar ve 1908 Reval Görüşmesi'nin ardından İttihat ve Terakki Cemiyeti'nin baskıları karşısında II. Abdülhamit, 23 Temmuz 1908'de II. Meşrutiyet'i ilan etmek zorunda kalmıştır. Tanzimat Fermanı (1839) ve Islahat Fermanı (1856) Abdülmecit, Sened-i İttifak (1808) ise II. Mahmut Dönemi'nde ilan edilmiştir."
 },
 {
     question: "II. Meşrutiyet'in ilan edilmesiyle aşağıdakilerden hangisine yeniden geçilmiştir?",
@@ -2736,16 +2736,16 @@ window.tarih_10_sorulari = [
     explanation: "Meclisin açılıp kapanması yalnızca padişahın isteğine bağlı olmaktan çıkarılmıştır."
 },
 {
-    question: "1909 Kanun-i Esasi değişiklikleriyle aşağıdaki uygulamalardan hangisi kaldırılmıştır?",
+    question: "1909 yılında Kanun-i Esasi'de yapılan değişikliklerle aşağıdakilerden hangisi kaldırılmıştır?",
     options: [
         "A) Müsadere",
         "B) Tımar",
-        "C) Sürgün ve angarya cezası",
+        "C) Padişahın sürgüne gönderme (nefy) yetkisi",
         "D) Cizye",
         "E) İltizam"
     ],
     correctAnswerIndex: 2,
-    explanation: "1909 değişiklikleriyle sürgün ve angarya cezası kaldırılmıştır."
+    explanation: "1909'da Kanun-i Esasi'de yapılan değişikliklerle padişahın, 113. maddeye dayanarak kişileri yargılamadan sürgüne gönderme (nefy) yetkisi kaldırılmış, böylece padişahın yetkileri sınırlandırılmıştır. Müsadere Tanzimat Fermanı ile yasaklanmış, tımar sistemi Tanzimat Dönemi'nde kaldırılmış, cizye Islahat Fermanı ile kaldırılmış, iltizam ise 1925'te kaldırılmıştır."
 },
 {
     question: "1909 Kanun-i Esasi değişiklikleriyle vatandaşlara aşağıdaki haklardan hangisi tanınmıştır?",
@@ -2928,7 +2928,7 @@ window.tarih_10_sorulari = [
     explanation: "Ali Suavi, Osmanlıcılık düşüncesinin önemli temsilcilerindendir."
 },
 {
-    question: "Osmanlıcılık düşüncesinin önemini yitirdiği süreçte öne çıkan devlet aşağıdakilerden hangisidir?",
+    question: "Osmanlıcılık düşüncesinin tamamen geçerliliğini yitirmesine yol açan ayrılık, aşağıdaki devletlerden hangisinin Osmanlı Devleti'nden ayrılmasıdır?",
     options: [
         "A) Sırbistan",
         "B) Bulgaristan",
@@ -2937,7 +2937,7 @@ window.tarih_10_sorulari = [
         "E) Karadağ"
     ],
     correctAnswerIndex: 3,
-    explanation: "Arnavutluk'un elden çıkmasıyla Osmanlıcılık düşüncesi tamamen önemini yitirmiştir."
+    explanation: "Osmanlıcılık, Osmanlı sınırları içindeki bütün toplulukları ortak bir üst kimlik altında birleştirmeyi amaçlıyordu. Gayrimüslim toplulukların ayrılmasından sonra da bir süre savunulan bu düşünce, 1912'de Arnavutluk'un bağımsızlığını ilan etmesiyle tamamen geçerliliğini yitirmiştir."
 },
 {
     question: "Rusya'nın Panslavizm politikasına tepki olarak ortaya çıkan fikir akımı aşağıdakilerden hangisidir?",
@@ -3012,7 +3012,7 @@ window.tarih_10_sorulari = [
     explanation: "Batıcılar devletin kurtuluşunun Batılılaşmada olduğunu savunmuşlardır."
 },
 {
-    question: "Batıcılık düşüncesi hangi dönemden itibaren görülmeye başlanmıştır?",
+    question: "Osmanlı Devleti'nde Batı'yı örnek alan yenileşme (Batılılaşma) hareketleri aşağıdaki dönemlerden hangisinde başlamıştır?",
     options: [
         "A) Kuruluş",
         "B) Yükselme",
@@ -3021,7 +3021,7 @@ window.tarih_10_sorulari = [
         "E) II. Meşrutiyet"
     ],
     correctAnswerIndex: 2,
-    explanation: "Batıcılık düşüncesinin temelleri Lale Devri'nde atılmıştır."
+    explanation: "Batı'yı örnek alan yenileşme hareketleri Lale Devri'nde (1718-1730) başlamıştır. Bu dönemde Paris ve Viyana'ya geçici elçiler gönderilmiş, ilk Türk matbaası kurulmuş, itfaiye teşkilatı oluşturulmuş ve çiçek aşısı uygulanmıştır. Tanzimat ve II. Meşrutiyet dönemleri ise bu sürecin ilerleyen aşamalarıdır."
 },
 {
     question: "'Ya Batılılaşırız ya mahvoluruz.' sözü aşağıdaki fikir akımlarından hangisini özetlemektedir?",

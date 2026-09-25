@@ -16,13 +16,13 @@ window.guncel_1_sorulari = [
     "question": "2025 yılı aşağıdakilerden hangisi olarak ilan edilmiştir?",
     "options": [
         "A) Aile Yılı",
-        "B) Türkiye Yüzyılı Yılı",
+        "B) Aile ve Nüfus On Yılı",
         "C) Emekliler Yılı",
         "D) Gençlik Yılı",
         "E) Kalkınma Yılı"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "2025 yılı Aile Yılı ilan edilmiştir."
+    "explanation": "2025 yılı Türkiye'de Aile Yılı olarak ilan edilmiştir. 2024 Emekliler Yılı olarak anılmış, 2026-2035 dönemi ise Aile ve Nüfus On Yılı olarak açıklanmıştır."
 },
 {
     "question": "2025 Aile Yılı'nın teması aşağıdakilerden hangisidir?",
@@ -73,7 +73,7 @@ window.guncel_1_sorulari = [
     "explanation": "Faizsiz kredi desteği gündeme gelmiştir."
 },
 {
-    "question": "Verilen notlara göre 2026 yılı için kullanılan ekonomik ifade aşağıdakilerden hangisidir?",
+    "question": "Hazine ve Maliye Bakanı Mehmet Şimşek'in 2026 yılını nitelemek için kullandığı ekonomik ifade aşağıdakilerden hangisidir?",
     "options": [
         "A) Ekonomide Reform Yılı",
         "B) Üretim Yılı",
@@ -82,10 +82,10 @@ window.guncel_1_sorulari = [
         "E) Türkiye Ekonomi Yılı"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "2026: Ekonomide Reform Yılı."
+    "explanation": "Hazine ve Maliye Bakanı Mehmet Şimşek, 2026'yı ekonomide reform yılı olarak nitelendirmiştir. Bu ifade resmî bir yıl ilanı değil, ekonomi politikasına ilişkin bir vurgudur."
 },
 {
-    "question": "2026 yılı ekonomik programında büyüme hedefi yüzde kaç olarak verilmiştir?",
+    "question": "Eylül 2025'te açıklanan Orta Vadeli Program (2026-2028)'da 2026 yılı büyüme hedefi yüzde kaç olarak belirlenmiştir?",
     "options": [
         "A) %2,5",
         "B) %3,2",
@@ -94,7 +94,7 @@ window.guncel_1_sorulari = [
         "E) %5"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "Büyüme hedefi %3,8'dir."
+    "explanation": "Orta Vadeli Program (2026-2028)'da 2026 yılı büyüme hedefi %3,8 olarak belirlenmiştir. Programın sonraki dönem güncellemesinde 2026 büyüme beklentisi aşağı yönlü revize edilmiştir."
 },
 {
     "question": "2026 yılı ihracat hedefi aşağıdakilerden hangisidir?",
@@ -181,7 +181,7 @@ window.guncel_1_sorulari = [
     "explanation": "Yenilenme düzeyi 2,10'dur."
 },
 {
-    "question": "Verilen bilgilere göre Türkiye'de en yüksek doğurganlık oranına sahip il aşağıdakilerden hangisidir?",
+    "question": "2025 yılı TÜİK verilerine göre Türkiye'de toplam doğurganlık hızı en yüksek olan il aşağıdakilerden hangisidir?",
     "options": [
         "A) Ankara",
         "B) Şanlıurfa",
@@ -190,10 +190,10 @@ window.guncel_1_sorulari = [
         "E) İzmir"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "En yüksek doğurganlık Şanlıurfa'dadır."
+    "explanation": "2025 yılı verilerine göre toplam doğurganlık hızı en yüksek olan il yaklaşık 3,15 ile Şanlıurfa'dır; en düşük il ise Bartın'dır."
 },
 {
-    "question": "Türkiye'de en düşük doğurganlık oranına sahip il aşağıdakilerden hangisidir?",
+    "question": "2025 yılı TÜİK verilerine göre toplam doğurganlık hızı en düşük olan il aşağıdakilerden hangisidir?",
     "options": [
         "A) Bayburt",
         "B) Tunceli",
@@ -202,10 +202,10 @@ window.guncel_1_sorulari = [
         "E) Sinop"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "En düşük doğurganlık Bartın'dadır."
+    "explanation": "2025 yılı verilerine göre toplam doğurganlık hızının en düşük olduğu il yaklaşık 1,09 ile Bartın'dır. En düşük doğurganlığa sahip il yıldan yıla değişebildiği için veri yılı belirtilmiştir."
 },
 {
-    "question": "Verilen notlara göre Türkiye'de yaşlı nüfus oranı yaklaşık olarak kaçtır?",
+    "question": "31 Aralık 2025 TÜİK verilerine göre Türkiye'de 65 yaş ve üzeri nüfusun toplam nüfus içindeki oranı yaklaşık olarak kaçtır?",
     "options": [
         "A) %7,1",
         "B) %8,5",
@@ -214,19 +214,19 @@ window.guncel_1_sorulari = [
         "E) %13,5"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "Yaşlı nüfus oranı %11,1'dir."
+    "explanation": "31 Aralık 2025 itibarıyla 65 yaş ve üzeri nüfusun toplam nüfus içindeki payı %11,1'dir. Türkiye'de yaşlı nüfus oranı her yıl artmakta olduğu için bu veri yıl belirtilerek değerlendirilir."
 },
 {
-    "question": "Aşağıdakilerden hangisi Türkiye'nin en kalabalık üç ili sıralamasında yer almaz?",
+    "question": "Aşağıdakilerden hangisi Türkiye'nin en kalabalık üç ili arasında yer alır?",
     "options": [
-        "A) İstanbul",
-        "B) Ankara",
-        "C) İzmir",
-        "D) Bursa",
-        "E) İstanbul, Ankara ve İzmir ilk üçtedir."
+        "A) Bursa",
+        "B) Antalya",
+        "C) Konya",
+        "D) İzmir",
+        "E) Adana"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "İlk üç İstanbul, Ankara, İzmir'dir; Bursa bu sıralamada yoktur."
+    "explanation": "Türkiye'nin nüfusu en fazla olan üç ili sırasıyla İstanbul, Ankara ve İzmir'dir. Bursa dördüncü, Antalya beşinci sıradadır; Konya ve Adana da ilk üçte yer almaz."
 },
 {
     "question": "Verilen bilgilere göre Türkiye'nin en az nüfuslu ili aşağıdakilerden hangisidir?",
@@ -265,16 +265,16 @@ window.guncel_1_sorulari = [
     "explanation": "Sıra: İstanbul, Ankara, İzmir."
 },
 {
-    "question": "Aşağıdakilerden hangisi 2026 ekonomik hedeflerinden biri değildir?",
+    "question": "Orta Vadeli Program (2026-2028)'a göre aşağıdakilerden hangisi 2026 yılı ekonomik hedefleri arasında yer almaz?",
     "options": [
         "A) %3,8 büyüme",
         "B) 282 milyar dolar ihracat",
-        "C) Tek haneli enflasyon hedefi",
+        "C) %16 yıl sonu enflasyonu",
         "D) 300 milyar dolar ihracat",
         "E) Ekonomide reform vurgusu"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "İhracat hedefi 282 milyar dolardır, 300 milyar değildir."
+    "explanation": "Orta Vadeli Program (2026-2028)'da 2026 yılı için büyüme hedefi %3,8, ihracat hedefi 282 milyar dolar, yıl sonu enflasyon hedefi ise %16 olarak belirlenmiştir. Programda 300 milyar dolarlık bir ihracat hedefi yer almaz."
 },
 {
     "question": "Türkiye'nin resmî istatistik kurumu aşağıdakilerden hangisidir?",
@@ -291,14 +291,14 @@ window.guncel_1_sorulari = [
 {
     "question": "Aşağıdaki kurum–görev eşleştirmelerinden hangisi doğrudur?",
     "options": [
-        "A) TÜİK — Para politikasını yürütür.",
-        "B) TCMB — Resmî nüfus istatistiklerini yayımlar.",
-        "C) Hazine ve Maliye Bakanlığı — Nobel ödüllerini açıklar.",
-        "D) Borsa İstanbul — Maliye politikasını belirler.",
-        "E) TÜİK — Türkiye'nin resmî istatistik kurumudur."
+        "A) TÜİK - Para politikasını yürütür.",
+        "B) TCMB - Resmî nüfus istatistiklerini yayımlar.",
+        "C) SPK - Bankaların kuruluş ve faaliyet izinlerini verip denetimini yapar.",
+        "D) Hazine ve Maliye Bakanlığı - Enflasyon oranını hesaplayıp açıklar.",
+        "E) TÜİK - Türkiye'nin resmî istatistik kurumudur."
     ],
     "correctAnswerIndex": 4,
-    "explanation": "TÜİK resmî istatistik kurumudur."
+    "explanation": "TÜİK, Türkiye'nin resmî istatistiklerini üreten ve yayımlayan kurumdur; enflasyon ve nüfus istatistikleri de TÜİK tarafından açıklanır. Para politikasını TCMB yürütür, bankaların izin ve denetim işlemleri BDDK'nin, sermaye piyasalarının düzenlenmesi ise SPK'nin görevidir."
 },
 {
     "question": "Türkiye Cumhuriyet Merkez Bankası'nın kısaltması aşağıdakilerden hangisidir?",
@@ -351,14 +351,14 @@ window.guncel_1_sorulari = [
 {
     "question": "Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
     "options": [
-        "A) 2024 — Emekliler Yılı",
-        "B) 2025 — Aile Yılı",
-        "C) 2025 — Ailemiz Geleceğimiz",
-        "D) 2026 — Ekonomide Reform Yılı",
-        "E) 2025 — Ekonomide Reform Yılı"
+        "A) 2024 - Emekliler Yılı",
+        "B) 2025 - Aile Yılı",
+        "C) 2023 - Cumhuriyet'in 100. Yılı",
+        "D) 2026-2035 - Aile ve Nüfus On Yılı",
+        "E) 2025 - Ekonomide Reform Yılı"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Ekonomide Reform Yılı 2026'dır."
+    "explanation": "2023 Cumhuriyet'in 100. yılı olarak kutlanmış, 2024 Emekliler Yılı, 2025 ise Aile Yılı ilan edilmiştir. 2026-2035 dönemi Aile ve Nüfus On Yılı olarak açıklanmıştır. Ekonomide reform yılı nitelemesi 2025 için değil 2026 için kullanıldığından E yanlıştır."
 },
 {
     "question": "Verilen notlara göre 2026 yılı brüt asgari ücret aşağıdakilerden hangisidir?",
@@ -397,7 +397,7 @@ window.guncel_1_sorulari = [
     "explanation": "Zam oranı %27'dir."
 },
 {
-    "question": "Notlarda verilen 2026 yılı işveren maliyeti aşağıdakilerden hangisidir?",
+    "question": "2026 yılında asgari ücretin işverene aylık maliyeti, 2 puanlık prim indiriminden yararlanan (imalat dışı) bir işyeri için aşağıdakilerden hangisidir?",
     "options": [
         "A) 28.075,50 TL",
         "B) 33.030 TL",
@@ -406,10 +406,10 @@ window.guncel_1_sorulari = [
         "E) 42.075,50 TL"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "İşveren maliyeti 40.214,03 TL'dir."
+    "explanation": "Brüt asgari ücret 33.030 TL olup üzerine işverenin ödediği sosyal güvenlik ve işsizlik sigortası primleri eklenir. 2 puanlık prim indirimi uygulandığında asgari ücretin işverene aylık maliyeti 40.214,03 TL olur."
 },
 {
-    "question": "Aşağıdaki asgari ücret eşleştirmelerinden hangisi doğrudur?",
+    "question": "2026 yılı asgari ücretiyle ilgili aşağıdaki brüt-net eşleştirmelerinden hangisi doğrudur?",
     "options": [
         "A) Brüt: 28.075,50 — Net: 33.030",
         "B) Brüt: 33.030 — Net: 28.075,50",
@@ -418,10 +418,10 @@ window.guncel_1_sorulari = [
         "E) Brüt: 28.075,50 — Net: 40.214,03"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Brüt 33.030, net 28.075,50 TL."
+    "explanation": "2026 yılı için asgari ücret brüt 33.030 TL, bu tutardan sigorta ve işsizlik primleri düşüldükten sonra net 28.075,50 TL olarak belirlenmiştir."
 },
 {
-    "question": "2026 ekonomik hedefleriyle ilgili; I. Büyüme hedefi %3,8'dir. II. İhracat hedefi 282 milyar dolardır. III. Enflasyon hedefi tek hanedir. ifadelerinden hangileri doğrudur?",
+    "question": "Orta Vadeli Program (2026-2028)'da yer alan 2026 yılı hedefleriyle ilgili; I. Büyüme hedefi %3,8'dir. II. İhracat hedefi 282 milyar dolardır. III. Yıl sonu enflasyon hedefi %16'dır. ifadelerinden hangileri doğrudur?",
     "options": [
         "A) Yalnız I",
         "B) Yalnız II",
@@ -430,7 +430,7 @@ window.guncel_1_sorulari = [
         "E) I, II ve III"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Üçü de notlarda yer alır."
+    "explanation": "Orta Vadeli Program (2026-2028)'da 2026 yılı için büyüme hedefi %3,8, ihracat hedefi 282 milyar dolar ve yıl sonu enflasyon hedefi %16 olarak belirlenmiştir; bu nedenle üç öncül de doğrudur."
 },
 {
     "question": "Türkiye'nin 2025 nüfus verileriyle ilgili; I. Toplam nüfus 86.092.168'dir. II. Erkek nüfus kadın nüfustan fazladır. III. Kadın nüfus 43.032.734'tür. ifadelerinden hangileri doğrudur?",
@@ -445,16 +445,16 @@ window.guncel_1_sorulari = [
     "explanation": "Erkek 43.059.434 > kadın 43.032.734; toplam 86.092.168."
 },
 {
-    "question": "Türkiye'nin nüfus yapısıyla ilgili aşağıdakilerden hangisine ulaşılabilir?",
+    "question": "2025 yılı TÜİK verilerine göre Türkiye'nin nüfus yapısıyla ilgili aşağıdaki yargılardan hangisi doğrudur?",
     "options": [
-        "A) Toplam doğurganlık hızının 2,10 olduğu",
-        "B) Nüfusun kendini yenileme düzeyinin 1,42 olduğu",
-        "C) En düşük doğurganlığın Şanlıurfa'da olduğu",
-        "D) En yüksek doğurganlığın Bartın'da olduğu",
-        "E) Toplam doğurganlık hızının 1,42 olduğu"
+        "A) Toplam doğurganlık hızı 2,10'dur.",
+        "B) Nüfusun kendini yenileme düzeyi 1,42'dir.",
+        "C) Doğurganlık hızı en düşük il Şanlıurfa'dır.",
+        "D) Doğurganlık hızı en yüksek il Bartın'dır.",
+        "E) Toplam doğurganlık hızı 1,42'dir."
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Doğurganlık 1,42; yenilenme 2,10; en yüksek Şanlıurfa, en düşük Bartın."
+    "explanation": "2025 yılı verilerine göre Türkiye'de toplam doğurganlık hızı 1,42'dir. Nüfusun kendini yenileyebilmesi için gerekli düzey ise 2,10 olarak kabul edilir. Doğurganlık hızı en yüksek il Şanlıurfa, en düşük il Bartın'dır."
 },
 {
     "question": "Aşağıdaki bilgilerden hangisi Türkiye'nin nüfus politikaları açısından verilen notlarla uyumlu değildir?",

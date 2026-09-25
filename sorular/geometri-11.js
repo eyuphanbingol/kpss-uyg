@@ -25,7 +25,7 @@ window.geometri_11_sorulari = [
     "explanation": "Çevre açı = yay/2 = 30°."
 },
 {
-    "question": "Yarım çember üzerindeki bir çevre açı kaç derecedir?",
+    "question": "Bir çemberde çapı gören çevre açı kaç derecedir?",
     "options": [
         "A) 45°",
         "B) 60°",
@@ -34,7 +34,7 @@ window.geometri_11_sorulari = [
         "E) 180°"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "Çapı gören çevre açı 90°dir."
+    "explanation": "Çevre açının ölçüsü gördüğü yayın ölçüsünün yarısıdır. Çap, çemberi 180°lik iki yaya ayırdığından çapı gören çevre açı 180° : 2 = 90° olur."
 },
 {
     "question": "İki yay ölçüsü 70° ve 110° olan iç açı kaç derecedir?",
@@ -85,7 +85,7 @@ window.geometri_11_sorulari = [
     "explanation": "Teğet, teğet noktasındaki yarıçapa diktir."
 },
 {
-    "question": "P noktasından çizilen kesenlerde PA=3, PB=8, PC=4 ise PD kaç birimdir?",
+    "question": "Çemberin dışındaki P noktasından çizilen iki kesenden biri çemberi A ve B noktalarında (|PA| < |PB|), diğeri C ve D noktalarında (|PC| < |PD|) kesmektedir. |PA| = 3, |PB| = 8 ve |PC| = 4 birim ise |PD| kaç birimdir?",
     "options": [
         "A) 4",
         "B) 5",
@@ -97,7 +97,7 @@ window.geometri_11_sorulari = [
     "explanation": "PA·PB = PC·PD → 24 = 4·PD → PD = 6."
 },
 {
-    "question": "PT=6, PA=4 ise PB kaç birimdir?",
+    "question": "Bir çembere, çemberin dışındaki P noktasından çizilen teğetin değme noktası T'dir. Aynı P noktasından çizilen kesen ise çemberi sırasıyla A ve B noktalarında kesmektedir. |PT| = 6 br ve |PA| = 4 br ise |PB| kaç birimdir?",
     "options": [
         "A) 6",
         "B) 7",
@@ -106,19 +106,19 @@ window.geometri_11_sorulari = [
         "E) 10"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "PT²=PA·PB → 36=4·PB → PB=9."
+    "explanation": "Teğet-kesen bağıntısına göre teğet uzunluğunun karesi, kesenin dış parçası ile tamamının çarpımına eşittir: |PT|² = |PA|·|PB|. Buradan 6² = 4·|PB|, yani 36 = 4·|PB| olur ve |PB| = 9 birim bulunur."
 },
 {
-    "question": "Dış noktadan çizilen iki teğet parçası hakkında hangisi doğrudur?",
+    "question": "Bir çemberin dışındaki P noktasından çembere çizilen iki teğetin, P ile değme noktaları arasında kalan parçaları için aşağıdakilerden hangisi her zaman doğrudur?",
     "options": [
-        "A) Farklı uzunlukta",
-        "B) Eşit uzunlukta",
-        "C) Paralel",
-        "D) Dik",
-        "E) Belirlenemez"
+        "A) Uzunlukları daima farklıdır",
+        "B) Uzunlukları daima eşittir",
+        "C) Biri daima diğerinin iki katıdır",
+        "D) Her biri daima yarıçapa eşittir",
+        "E) Her biri daima P noktasının merkeze olan uzaklığına eşittir"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Dış noktadan çizilen teğet parçaları eşittir."
+    "explanation": "Teğet değme noktasında yarıçapa dik olduğundan, P ile merkez O'nun birleştirilmesiyle oluşan iki dik üçgenin hipotenüsü ortak (|PO|), birer dik kenarı ise yarıçap kadardır; bu iki üçgen eştir. Buna göre teğet parçaları daima eşittir ve uzunlukları √(|PO|² − r²) olur. Bu değer P'nin konumuna göre değiştiğinden yarıçapa ya da |PO|'ya eşit olması gerekmez."
 },
 {
     "question": "Yarıçapı 5 cm olan dairenin alanı kaç cm²'dir?",
@@ -193,7 +193,7 @@ window.geometri_11_sorulari = [
     "explanation": "140/2 = 70°."
 },
 {
-    "question": "Yaylar 50° ve 90° ise iç açı kaç derecedir?",
+    "question": "Bir çemberde kesişen iki kirişin oluşturduğu açının gördüğü yaylar 50° ve 90° ise bu açının ölçüsü kaç derecedir?",
     "options": [
         "A) 60°",
         "B) 65°",
@@ -202,7 +202,7 @@ window.geometri_11_sorulari = [
         "E) 80°"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "(50+90)/2 = 70°."
+    "explanation": "Çemberin içinde kesişen iki kirişin oluşturduğu açının ölçüsü, karşılıklı gördüğü iki yayın ölçüleri toplamının yarısına eşittir: (50° + 90°) : 2 = 70°."
 },
 {
     "question": "Uzak yay 110°, yakın yay 50° ise dış açı kaç derecedir?",
@@ -217,7 +217,7 @@ window.geometri_11_sorulari = [
     "explanation": "(110−50)/2 = 30°."
 },
 {
-    "question": "PA=2, PB=8 ise noktanın gücü kaçtır?",
+    "question": "Bir çemberin dışındaki P noktasından çizilen bir kesen, çemberi A ve B noktalarında kesmektedir. |PA| = 2 birim ve |PB| = 8 birim ise P noktasının çembere göre kuvveti kaçtır?",
     "options": [
         "A) 12",
         "B) 14",
@@ -226,7 +226,7 @@ window.geometri_11_sorulari = [
         "E) 20"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "PA·PB = 2·8 = 16."
+    "explanation": "Bir dış noktanın çembere göre kuvveti, o noktadan çizilen bir kesenin çemberi kestiği iki noktaya olan uzaklıklarının çarpımına eşittir: |PA|·|PB| = 2·8 = 16."
 },
 {
     "question": "Yarıçapı 4 cm, merkez açısı 90° olan daire diliminin alanı kaç cm²'dir?",

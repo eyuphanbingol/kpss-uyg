@@ -49,16 +49,16 @@ window.vatandas_7_sorulari = [
         explanation: "Bir kimse en fazla iki defa Cumhurbaşkanı seçilebilir."
     },
     {
-        question: "“Cumhurbaşkanlığı seçimleri TBMM seçimleriyle 5 yılda bir aynı gün yapılır. Bir kimse hem milletvekilliğine hem de Cumhurbaşkanlığına aday olabilir…” parçasındaki bilgi yanlışı hangi değişiklikle giderilir?",
+        question: "“Cumhurbaşkanlığı seçimleri TBMM seçimleriyle 4 yılda bir aynı gün yapılır. Cumhurbaşkanı seçilen milletvekilinin TBMM üyeliği sona erer…” parçasındaki bilgi yanlışı hangi değişiklikle giderilir?",
         options: [
             "A) Seçimler bir hafta arayla yapılır.",
             "B) Bir kimse hem milletvekilliğine hem Cumhurbaşkanlığına aday olamaz.",
-            "C) Seçimler 4 yılda bir aynı gün yapılır.",
+            "C) Seçimler 5 yılda bir aynı gün yapılır.",
             "D) Adaylık sözlü muvafakata bağlıdır.",
             "E) Cumhurbaşkanı seçilen milletvekilinin TBMM üyeliği devam eder."
         ],
-        correctAnswerIndex: 1,
-        explanation: "Aynı kişi hem milletvekili hem Cumhurbaşkanı adayı gösterilemez."
+        correctAnswerIndex: 2,
+        explanation: "Anayasa’nın 77. maddesine göre Türkiye Büyük Millet Meclisi ve Cumhurbaşkanlığı seçimleri beş yılda bir aynı günde yapılır; bu nedenle parçadaki “4 yılda bir” ifadesi yanlıştır ve “5 yılda bir” olarak düzeltilmelidir. Parçanın ikinci cümlesi doğrudur: Anayasa m.101 uyarınca Cumhurbaşkanı seçilen kişinin TBMM üyeliği sona erer."
     },
     {
         question: "Cumhurbaşkanlığı seçiminin birinci oylamada sonuçlanması için genel oyla yapılan seçimde hangi oy oranı aranır?",

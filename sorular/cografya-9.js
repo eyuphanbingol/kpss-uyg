@@ -21,14 +21,14 @@ window.cografya_9_sorulari = [
       "B) Alçı taşı (jips) – Sivas",
       "C) Alçı taşı (jips) – Ankara/Kayseri",
       "D) Kaya tuzu – Çankırı",
-      "E) Kalker – Çankırı"
+      "E) Granit – Toroslar"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Çankırı, kalker (kireç taşı) ile değil, Türkiye'nin en önemli kaya tuzu yataklarıyla bilinen karstik bir alandır. Kalkerin en yoğun olduğu yer Akdeniz Toroslar kuşağıdır."
+    "explanation": "Granit, suda çözünmeyen bir magmatik kayaçtır; karstlaşma göstermez ve Toroslar'ın yapısında da egemen değildir. Toroslar kalker (kireç taşı), Sivas ile Ankara–Kayseri çevresi alçı taşı (jips), Çankırı ise kaya tuzu karstlaşmasının görüldüğü başlıca alanlardır."
   },
   {
     "id": "3",
-    "question": "Karstik alanlarda yer altına suların kaçtığı, huni biçimli açıklıklara ne ad verilir?",
+    "question": "Karstik alanlarda yüzey sularının yer altına kaybolduğu doğal kuyu ve deliklere ne ad verilir?",
     "options": [
       "A) Dolin",
       "B) Düden",
@@ -37,7 +37,7 @@ window.cografya_9_sorulari = [
       "E) Lapya"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Karstik arazilerde yer üstü sularının veya yağışların yer altına sızdığı, kaybolduğu doğal kuyulara, deliklere düden (yutak veya suçıkan) adı verilir."
+    "explanation": "Karstik arazilerde yer üstü sularının ya da yağış sularının çatlaklardan yer altına sızarak kaybolduğu doğal kuyu ve deliklere düden (yutak, su yutan) denir. Huni ya da çanak biçimli kapalı çukurluklar ise dolin olarak adlandırılır."
   },
   {
     "id": "4",

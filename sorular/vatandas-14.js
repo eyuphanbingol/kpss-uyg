@@ -126,11 +126,11 @@ window.vatandas_14_sorulari = [
             "A) Yokluk",
             "B) Mutlak butlan",
             "C) Nispi butlan",
-            "D) İdam",
-            "E) Genel müsadere"
+            "D) Askıda hükümsüzlük",
+            "E) Kısmi hükümsüzlük"
         ],
-        "correctAnswerIndex": 2,
-        "explanation": "İrade sakatlığı → nispi butlan."
+        "correctAnswerIndex": 1,
+        "explanation": "Sarhoşluk bir irade sakatlığı değil, geçici ayırt etme gücü yoksunluğudur. TMK m.15’e göre ayırt etme gücü bulunmayan kişinin fiilleri hukuki sonuç doğurmaz; bu nedenle sarhoşken yapılan sözleşme kesin hükümsüzdür (mutlak butlan). Nispi butlan ise ayırt etme gücünden geçici yoksunluk içinde yapılan evlenmeye özgü bir yaptırımdır (TMK m.148)."
     },
     {
         "question": "Küçük ile reşit arasında yapılan sözleşmede küçük yönünden durum hangisidir?",
@@ -301,7 +301,7 @@ window.vatandas_14_sorulari = [
         "explanation": "0–12: ceza ehliyeti yoktur."
     },
     {
-        "question": "13–15 yaş için ceza ehliyeti hangisidir?",
+        "question": "12 yaşını doldurmuş, 15 yaşını doldurmamış çocukların ceza sorumluluğu aşağıdakilerden hangisidir?",
         "options": [
             "A) Tam",
             "B) Yok (mutlak)",
@@ -310,10 +310,10 @@ window.vatandas_14_sorulari = [
             "E) Sadece sürgün"
         ],
         "correctAnswerIndex": 2,
-        "explanation": "13–15: indirimli sorumluluk veya yok."
+        "explanation": "TCK m.31/2’ye göre fiili işlediği sırada 12 yaşını doldurmuş, 15 yaşını doldurmamış çocuk, işlediği fiilin hukuki anlam ve sonuçlarını algılayamıyor ya da davranışlarını yönlendirme yeteneği yeterince gelişmemişse ceza sorumluluğu yoktur; bu durumda çocuklara özgü güvenlik tedbirleri uygulanır. Algılama ve yönlendirme yeteneği varsa sorumludur, ancak cezası indirilerek uygulanır."
     },
     {
-        "question": "16–18 yaş için ceza ehliyeti hangisidir?",
+        "question": "15 yaşını doldurmuş, 18 yaşını doldurmamış çocukların ceza sorumluluğu aşağıdakilerden hangisidir?",
         "options": [
             "A) Yok",
             "B) Tam",
@@ -322,7 +322,7 @@ window.vatandas_14_sorulari = [
             "E) Disiplin cezası"
         ],
         "correctAnswerIndex": 2,
-        "explanation": "16–18: sınırlı indirimli."
+        "explanation": "TCK m.31/3 uyarınca 15 yaşını doldurmuş, 18 yaşını doldurmamış kişilerin ceza sorumluluğu vardır; bu yaş grubunda algılama ve yönlendirme yeteneği ayrıca araştırılmaz, yalnızca ceza indirilerek uygulanır (diğer cezalarda üçte bir indirim). Bu nedenle sorumluluk sınırlı indirimlidir."
     },
     {
         "question": "Sağır–dilsizlerde ceza ehliyeti yaş sınırları nasıl uygulanır?",
@@ -349,7 +349,7 @@ window.vatandas_14_sorulari = [
         "explanation": "Kanunilik: vergi kanunla konulur/kaldırılır."
     },
     {
-        "question": "Vergide alt–üst limitleri belirleme yetkisi kime aittir?",
+        "question": "Vergi, resim, harç ve benzeri malî yükümlülüklerin muaflık, istisna, indirim ve oranlarında, kanunun belirttiği aşağı ve yukarı sınırlar içinde değişiklik yapma yetkisi kime verilebilir?",
         "options": [
             "A) Yargıtay",
             "B) Anayasa Mahkemesi",
@@ -358,7 +358,7 @@ window.vatandas_14_sorulari = [
             "E) Doktrin"
         ],
         "correctAnswerIndex": 2,
-        "explanation": "Alt–üst limit CB tarafından belirlenir."
+        "explanation": "Anayasa m.73/4’e göre bu yetki Cumhurbaşkanına verilebilir. Alt ve üst sınırları belirleyen ise kanundur; yani sınırları TBMM çıkardığı kanunla koyar, Cumhurbaşkanı yalnızca bu sınırlar içinde değişiklik yapabilir."
     },
     {
         "question": "Paylaştırıcı adalet vergide neyi ifade eder?",
@@ -409,16 +409,16 @@ window.vatandas_14_sorulari = [
         "explanation": "Ölüm karinesi mülki amir kararıyladır."
     },
     {
-        "question": "Birden fazla kişinin ölümünde ölüm karinesi nasıl işler?",
+        "question": "Birlikte ölen birden fazla kişiden hangisinin önce veya sonra öldüğü ispat edilemezse hukuken ne kabul edilir?",
         "options": [
             "A) Yaşlı önce ölmüş sayılır",
             "B) Genç önce ölmüş sayılır",
             "C) Aynı anda ölmüş sayılır",
-            "D) Mahkeme rastgele sıralar",
-            "E) Hepsi gaipliğe gider"
+            "D) Önce ölen, mirasçıların anlaşmasıyla belirlenir",
+            "E) Her biri hakkında gaiplik kararı verilir"
         ],
         "correctAnswerIndex": 2,
-        "explanation": "Birden fazla ölüm karinesi = aynı anda."
+        "explanation": "TMK m.29/2’deki birlikte ölüm karinesine göre, birden fazla kişiden hangisinin önce veya sonra öldüğü ispat edilemezse bu kişiler aynı anda ölmüş sayılır. Bunun sonucu, söz konusu kişilerin birbirine mirasçı olamamasıdır."
     },
     {
         "question": "Ölüm tehlikesi içinde gaiplik için başvuru süresi nedir?",
@@ -637,16 +637,16 @@ window.vatandas_14_sorulari = [
         "explanation": "Muris = miras bırakan; varis = mirasçı; tereke = malvarlığı."
     },
     {
-        "question": "Borçlar hukukunun ana / temel ilkesi olarak vurgulanan hangisidir?",
+        "question": "Hakların kullanılmasında ve borçların yerine getirilmesinde herkesin uymak zorunda olduğu, Türk Medeni Kanunu’nun 2. maddesinde düzenlenen ilke aşağıdakilerden hangisidir?",
         "options": [
             "A) İvazlık",
             "B) Nisbilik",
-            "C) Dürüstlük (TMK m. 2)",
+            "C) Dürüstlük",
             "D) Takas",
             "E) Tecdit"
         ],
         "correctAnswerIndex": 2,
-        "explanation": "Dürüstlük ilkesi TMK 2 — ana ilke."
+        "explanation": "Türk Medeni Kanunu’nun 2. maddesi “Herkes, haklarını kullanırken ve borçlarını yerine getirirken dürüstlük kurallarına uymak zorundadır.” hükmünü içerir; bu, tüm özel hukuka egemen olan dürüstlük (objektif iyi niyet) ilkesidir. Nisbilik borç ilişkisinin kural olarak yalnızca taraflar arasında hüküm doğurmasını, ivazlık karşılıklılığı anlatır; takas ve tecdit ise borcu sona erdiren sebeplerdendir."
     },
     {
         "question": "“Üçüncü kişi aleyhine borç kurulamaz” ilkesi neyi ifade eder?",
@@ -841,7 +841,7 @@ window.vatandas_14_sorulari = [
         "explanation": "Zaruret hâli."
     },
     {
-        "question": "Doktrin ve içtihat (İBK hariç) kaynak niteliği bakımından nasıldır?",
+        "question": "Doktrin ve içtihat (İBK ile Anayasa Mahkemesi kararları hariç) kaynak niteliği bakımından nasıldır?",
         "options": [
             "A) Asli bağlayıcı",
             "B) Tali; bağlayıcı değildir",
@@ -850,7 +850,7 @@ window.vatandas_14_sorulari = [
             "E) Yalnız yazılı asli"
         ],
         "correctAnswerIndex": 1,
-        "explanation": "Tali kaynaklar bağlayıcı değildir; İBK istisnadır."
+        "explanation": "Bilimsel görüşler (doktrin) ve mahkeme kararları (içtihatlar) hukukun yardımcı (tali) kaynaklarıdır; hâkimi bağlamaz, yalnızca yol gösterir. Bağlayıcılık bakımından istisna, içtihadı birleştirme kararları ile Anayasa Mahkemesi kararlarıdır (Any. m.153)."
     },
     {
         "question": "İçtihadı Birleştirme Kararı (İBK) için hangisi doğrudur?",
@@ -961,16 +961,16 @@ window.vatandas_14_sorulari = [
         "explanation": "Örtülü boşluk: daralt / istisna."
     },
     {
-        "question": "Örf–adet hukuku kaynak niteliği bakımından nasıldır?",
+        "question": "Örf ve âdet hukuku, bağlayıcılığı bakımından hukukun kaynakları arasında nasıl nitelendirilir?",
         "options": [
-            "A) Tali",
-            "B) Asli yazısız",
-            "C) Yalnız doktrin",
-            "D) Bağlayıcı değildir her zaman",
-            "E) CBK"
+            "A) Bağlayıcı olmayan yardımcı (tali) kaynak",
+            "B) Asli (bağlayıcı) yazısız kaynak",
+            "C) Asli (bağlayıcı) yazılı kaynak",
+            "D) Yalnızca doktrinden oluşan kaynak",
+            "E) Yalnızca yargı kararlarından oluşan kaynak"
         ],
         "correctAnswerIndex": 1,
-        "explanation": "Örf–adet = asli yazısız kaynak."
+        "explanation": "Hukukun asli kaynakları bağlayıcıdır. Bunların yazılı olanları Anayasa, kanun, Cumhurbaşkanlığı kararnamesi ve yönetmelik; yazısız olanı ise örf ve âdet hukukudur. Doktrin ile yargı kararları bağlayıcı olmayan yardımcı (tali) kaynaklardır. Türk Medeni Kanunu'nun 1. maddesi uyarınca hâkimin, uygulanabilir bir kanun hükmü bulunmadığında örf ve âdet hukukuna göre karar vermesi bu kaynağın uygulama sırasını gösterir; bağlayıcılığını ortadan kaldırmaz."
     },
     {
         "question": "Yönetmelik normlar hiyerarşisinde hangi grubun örneğidir?",
@@ -1099,10 +1099,10 @@ window.vatandas_14_sorulari = [
             "B) Velayet hakkı",
             "C) Alacak hakkı",
             "D) Rehin hakkı",
-            "E) Kira alacağı"
+            "E) Telif hakkından doğan mali haklar"
         ],
         "correctAnswerIndex": 1,
-        "explanation": "Velayet, nişanlanma ve evlenme gibi aile hukukundan doğan haklar kişiye sıkı sıkıya bağlıdır; başkasına devredilemez ve mirasla geçmez. Mülkiyet, alacak ve rehin hakları ise devredilebilir."
+        "explanation": "Velayet, nişanlanma ve evlenme gibi aile hukukundan doğan haklar kişiye sıkı sıkıya bağlıdır; başkasına devredilemez ve mirasla geçmez. Mülkiyet, alacak, rehin ve telif hakkından doğan mali haklar ise devredilebilen haklardır."
     },
     {
         "question": "Yaptırımın diğer adı hangisidir?",
@@ -1177,16 +1177,16 @@ window.vatandas_14_sorulari = [
         "explanation": "İş Hukuku karma hukuk dallarındandır."
     },
     {
-        "question": "Doğum ve soybağı kayıtlarını içeren kütüğe ne denir?",
+        "question": "Kişinin doğumuna ve soybağına ilişkin kayıtlar aşağıdakilerden hangisinde tutulur?",
         "options": [
-            "A) Doğum kütüğü",
+            "A) Aile kütüğü",
             "B) Tapu kütüğü",
             "C) Ticaret sicili",
-            "D) Sicil-i ahval",
-            "E) Muris defteri"
+            "D) Dernekler kütüğü",
+            "E) Gemi sicili"
         ],
         "correctAnswerIndex": 0,
-        "explanation": "Doğum kütüğü."
+        "explanation": "5490 sayılı Nüfus Hizmetleri Kanunu’na göre kişilerin doğum, soybağı, evlenme, boşanma ve ölüm gibi kişisel durum bilgileri aile kütüklerine işlenir. Tapu kütüğü taşınmazlara, ticaret sicili tacir ve ticari işletmelere, dernekler kütüğü derneklere, gemi sicili ise gemilere ilişkin kayıtları içerir."
     },
     {
         "question": "Dernek için asgari kaç gerçek veya tüzel kişi gerekir?",
@@ -1321,40 +1321,40 @@ window.vatandas_14_sorulari = [
         "explanation": "Kural: zarardan sorumlu tutmak için kusur (kast/ihmal) aranır."
     },
     {
-        "question": "Örf–adet için verilen ticari örnek hangisidir?",
+        "question": "Aşağıdakilerden hangisi hukukun yazısız kaynaklarındandır?",
         "options": [
-            "A) AİHS",
-            "B) GAP",
-            "C) Akkuyu",
-            "D) TANAP",
-            "E) Çağrı usulü"
+            "A) Anayasa",
+            "B) Kanun",
+            "C) Cumhurbaşkanlığı kararnamesi",
+            "D) Yönetmelik",
+            "E) Ticari örf ve âdet"
         ],
         "correctAnswerIndex": 4,
-        "explanation": "Yazısız kaynak örneği: ticari çağrı usulü."
+        "explanation": "Anayasa, kanun, Cumhurbaşkanlığı kararnamesi ve yönetmelik, yetkili organlarca yazılı metin hâlinde konulan yazılı kaynaklardır. Örf ve âdet hukuku ise toplumda uzun süre tekrarlanan, uyulması zorunlu sayılan ve yazıya dökülmemiş kurallardan oluşur; ticaret hayatında yerleşen ticari örf ve âdetler (TTK m.1-2) bu yazısız kaynağın tipik örneğidir."
     },
     {
         "question": "Avrupa İnsan Hakları Sözleşmesi (AİHS) normlar bakımından neye örnektir?",
         "options": [
-            "A) Ususlararası antlaşma",
+            "A) Uluslararası antlaşma",
             "B) Genelge",
             "C) Örf",
             "D) Doktrin",
             "E) Kıyas"
         ],
         "correctAnswerIndex": 0,
-        "explanation": "Ususlararası antlaşmalar kanun hükmündedir; temel hakta çakışmada antlaşma esas alınır."
+        "explanation": "AİHS, Türkiye’nin taraf olduğu bir uluslararası antlaşmadır. Anayasa m.90/5 uyarınca usulüne göre yürürlüğe konulmuş uluslararası antlaşmalar kanun hükmündedir; temel hak ve özgürlüklere ilişkin antlaşmalarla kanunların aynı konuda farklı hüküm içermesi durumunda antlaşma hükümleri esas alınır."
     },
     {
-        "question": "Anayasa Mahkemesi kararları ile İBK için ÖSYM vurgusu hangisidir?",
+        "question": "Anayasa Mahkemesi kararlarının bağlayıcılığı bakımından aşağıdakilerden hangisi doğrudur?",
         "options": [
-            "A) Hiçbir zaman bağlayıcı değildir",
-            "B) Kanun hükmündedir / bağlayıcıdır (asli yazılı)",
-            "C) Yalnız tali kaynaktır",
-            "D) Örf sayılır",
-            "E) Ceza yaptırımıdır"
+            "A) Hiçbir zaman bağlayıcı değildir.",
+            "B) Resmî Gazete’de yayımlanır; yasama, yürütme ve yargı organlarını bağlar.",
+            "C) Yalnızca tali (yardımcı) kaynaktır.",
+            "D) Örf ve âdet kuralı sayılır.",
+            "E) Yalnızca kararı veren mahkemeyi bağlar."
         ],
         "correctAnswerIndex": 1,
-        "explanation": "AYM kararları ve İBK bağlayıcı / kanun hükmünde sayılır."
+        "explanation": "Anayasa’nın 153. maddesine göre Anayasa Mahkemesi kararları Resmî Gazete’de hemen yayımlanır ve yasama, yürütme, yargı organlarını, idare makamlarını, gerçek ve tüzel kişileri bağlar. İptal kararları geriye yürümez; Mahkeme, iptal kararının yürürlüğe gireceği tarihi en çok bir yıl sonrasına erteleyebilir."
     },
     {
         "question": "Kıyasın ceza hukukundaki durumu nedir?",
@@ -1393,7 +1393,7 @@ window.vatandas_14_sorulari = [
         "explanation": "Evlat edinme → yapay hısımlık."
     },
     {
-        "question": "Fiil ehliyetinde “mahsur olmamak” neyi karşılar?",
+        "question": "Fiil ehliyetinde “mahcur olmamak” neyi karşılar?",
         "options": [
             "A) Kısıtlı olmamak",
             "B) Gaiplik",
@@ -1402,19 +1402,19 @@ window.vatandas_14_sorulari = [
             "E) Kıyas"
         ],
         "correctAnswerIndex": 0,
-        "explanation": "Reşit + ayırt etme + kısıtlı/mahsur olmamak."
+        "explanation": "“Mahcur”, hacir (kısıtlılık) altında bulunan kişi demektir. TMK m.10’a göre tam fiil ehliyeti için ergin olmak, ayırt etme gücüne sahip olmak ve kısıtlı olmamak gerekir; dolayısıyla “mahcur olmamak” kısıtlı olmamak anlamına gelir."
     },
     {
-        "question": "Sınırlı ehliyetlilerde eşlerin rızası gereken işlere örnek hangisidir?",
+        "question": "Sınırlı ehliyetli sayılan evli kişilerde, eşin rızasına bağlı olan işleme aşağıdakilerden hangisi örnektir?",
         "options": [
-            "A) Kırmızı ışık",
-            "B) Genel müsadere",
-            "C) İdam",
-            "D) Kıssas",
-            "E) Evlat edinme / mal düzenleme"
+            "A) Günlük alışveriş yapmak",
+            "B) Tek başına vasiyetname düzenlemek",
+            "C) Kendisine yapılan karşılıksız bir bağışlamayı kabul etmek",
+            "D) Meslek veya iş seçmek",
+            "E) Aile konutuyla ilgili tasarrufta bulunmak ya da kefil olmak"
         ],
         "correctAnswerIndex": 4,
-        "explanation": "Eşler bazı işlerde (evlat edinme, mal düzenleme) birbirinin rızası olmadan hareket edemez."
+        "explanation": "Evlilik birliğinde bazı işlemler diğer eşin rızasına bağlıdır: Türk Medeni Kanunu'nun 194. maddesine göre aile konutuyla ilgili tasarruflar, Türk Borçlar Kanunu'nun 584. maddesine göre kefalet sözleşmesi eşin açık rızası olmadan yapılamaz; eşlerden biri de ancak diğerinin rızasıyla tek başına evlat edinebilir. Buna karşılık günlük alışveriş, meslek veya iş seçimi (TMK m.192), vasiyetname düzenlemek ve karşılıksız kazandırmayı kabul etmek eşin rızasını gerektirmez."
     },
     {
         "question": "Haksız fiile örnek hangisidir?",
@@ -1443,14 +1443,14 @@ window.vatandas_14_sorulari = [
     {
         "question": "Kurucu yenilik doğuran hak örneği hangisidir?",
         "options": [
-            "A) İstifa etmek / evlenme teklifini kabul",
+            "A) Ön alım (şufa) hakkını kullanmak / bir öneriyi (icabı) kabul etmek",
             "B) Ayıplı malı değiştirme talebi",
             "C) Fesih",
             "D) Takas",
-            "E) Kıyas"
+            "E) İstifa etmek"
         ],
         "correctAnswerIndex": 0,
-        "explanation": "Kurucu: istifa, teklifi kabul."
+        "explanation": "Kurucu (inşai) yenilik doğuran haklar yeni bir hukuki ilişki kurar: ön alım (şufa), alım (iştira) ve geri alım (vefa) haklarının kullanılması ile bir öneriyi (icabı) kabul ederek sözleşmeyi kurmak bu gruptadır. Ayıplı malın değiştirilmesini isteme mevcut ilişkinin içeriğini değiştiren (değiştirici) bir haktır; fesih, takas ve istifa ise mevcut hukuki ilişkiyi sona erdiren bozucu yenilik doğuran haklardır."
     },
     {
         "question": "Değiştirici yenilik doğuran hak örneği hangisidir?",
@@ -1465,40 +1465,40 @@ window.vatandas_14_sorulari = [
         "explanation": "Değiştirici: ayıplı malı değiştirme talebi."
     },
     {
-        "question": "Meşru müdafaa ile zaruret hali farkı özetle nedir?",
+        "question": "Meşru müdafaa ile zaruret hâli arasındaki temel fark aşağıdakilerden hangisidir?",
         "options": [
-            "A) Aynı şeydir",
-            "B) İkisi de kıyas",
-            "C) İkisi de yalnız vergi",
-            "D) İkisi de İBK",
-            "E) Müdafaa saldırıya orantılı karşı koyma; zaruret tehlikeden korunmak için 3. kişinin malına zarar"
+            "A) Meşru müdafaada üçüncü kişinin malına, zaruret hâlinde ise doğrudan saldırganın kendisine zarar verilir.",
+            "B) Meşru müdafaada orantılılık aranmaz, yalnızca zaruret hâlinde aranır.",
+            "C) Meşru müdafaa yalnızca mala yönelik saldırılara, zaruret hâli yalnızca kişiye yönelik tehlikelere karşı söz konusu olur.",
+            "D) Her ikisinde de zarar gören kişiye hiçbir koşulda tazminat ödenmez.",
+            "E) Meşru müdafaada saldırıya karşı saldırganın kendisine zarar verilir; zaruret hâlinde ise bir tehlikeden korunmak için üçüncü kişinin malına zarar verilir."
         ],
         "correctAnswerIndex": 4,
-        "explanation": "Müdafaa ↔ saldırı; zaruret ↔ üçüncü kişinin malı."
+        "explanation": "Meşru müdafaada (TBK m.63/1) kişi kendisine veya başkasına yönelen haksız bir saldırıyı savmak için saldırganın şahsına ya da mallarına zarar verir ve bu zarardan sorumlu olmaz. Zaruret hâlinde (TBK m.63/2) ise kendisini veya başkasını açık ya da yakın bir zarardan korumak için üçüncü bir kişinin malına zarar verilir; burada hâkim hakkaniyete uygun bir tazminat ödenmesine karar verebilir. Her iki durumda da savunma ya da müdahale, tehlikeyle orantılı olmalıdır."
     },
     {
-        "question": "Kuvvet kullanma ne zaman ceza vermez?",
+        "question": "Hakkın kendi eliyle korunması (kuvvet kullanma) hangi durumda hukuka uygun sayılır?",
         "options": [
-            "A) Her zaman",
-            "B) Yalnız doktrinde",
-            "C) Yalnız idamda",
-            "D) Yalnız örfte",
-            "E) Devlet müdahalesi yetişmezken kendi eşya/şahsı koruma hukuka uygunsa"
+            "A) Her durumda ve sınırsız biçimde hukuka uygundur.",
+            "B) Yalnızca resmî makamların önceden verdiği yazılı izinle hukuka uygun olur.",
+            "C) Yalnızca kamu görevlileri bakımından hukuka uygun olur.",
+            "D) Hiçbir durumda hukuka uygun sayılmaz; kuvvet kullanmak daima haksız fiildir.",
+            "E) Resmî makamların yardımı zamanında sağlanamayacaksa ve hakkın kayba uğramasını önleyecek başka bir yol yoksa, zorunlu olan ölçüde hukuka uygun sayılır."
         ],
         "correctAnswerIndex": 4,
-        "explanation": "Hukuka uygun kuvvet kullanmada ceza verilmez."
+        "explanation": "Türk Borçlar Kanunu'nun 64. maddesine göre hakkını kendi gücüyle korumak durumunda kalan kişi, durum ve koşullara göre o sırada kolluk gücünün yardımını zamanında sağlayamayacaksa ve hakkının kayba uğramasını ya da kullanılmasının önemli ölçüde zorlaşmasını önleyecek başka bir yol yoksa verdiği zarardan sorumlu tutulmaz. Bu bir hukuka uygunluk sebebidir; kuvvet kullanma yalnızca hakkı korumak için zorunlu olan ölçüde meşru sayılır, bu ölçü aşılırsa sorumluluk doğar."
     },
     {
         "question": "Tam kan soy / yarım kan soy ayrımı neye dayanır?",
         "options": [
-            "A) Aynı ortak kök / üvey vb. ebeveyn farkı",
-            "B) Vergiye",
-            "C) İBK’ya",
-            "D) CBK’ya",
-            "E) Kıyasa"
+            "A) Ana ve babanın ikisinin de ortak olması (tam kan) ile yalnızca birinin ortak olması (yarım kan)",
+            "B) Hısımların aynı konutta birlikte yaşayıp yaşamadıkları",
+            "C) Hısımlığın doğumla mı yoksa evlenme yoluyla mı kurulduğu",
+            "D) Hısımlar arasındaki derece sayısının tek mi çift mi olduğu",
+            "E) Hısımlar arasında mirasçılık sıfatının bulunup bulunmadığı"
         ],
         "correctAnswerIndex": 0,
-        "explanation": "Aynı ortak kök = tam kan; üvey vb. = yarım kan."
+        "explanation": "Tam kan hısımlığı, kardeşlerin hem ana hem de baba bakımından ortak olmasını; yarım kan hısımlığı ise yalnızca ana ya da yalnızca baba bakımından ortak olmasını (ana bir veya baba bir kardeşlik) ifade eder. Aralarında hiçbir ortak ebeveyn bulunmayan üvey kardeşler kan hısmı değildir; bu nedenle ayrım üveylik değil, ortak ebeveyn sayısı ölçütüne dayanır."
     },
     {
         "question": "Kayın hısımlığında kan bağı var mıdır?",
@@ -1573,16 +1573,16 @@ window.vatandas_14_sorulari = [
         "explanation": "Yönetmelik: kanunların uygulanmasını sağlar."
     },
     {
-        "question": "CBK için olağan dönem sınırı hangisidir?",
+        "question": "Olağan dönemde Cumhurbaşkanlığı kararnamesiyle düzenlenebilen temel hak ve hürriyet alanı aşağıdakilerden hangisidir?",
         "options": [
-            "A) Sosyal ve ekonomik haklar",
-            "B) Yalnız ceza hukuku",
-            "C) Yalnız idam",
-            "D) Yalnız gaiplik",
-            "E) Yalnız hısımlık"
+            "A) Sosyal ve ekonomik haklar ve ödevler",
+            "B) Kişinin hakları ve ödevleri",
+            "C) Siyasi haklar ve ödevler",
+            "D) Kişi hürriyeti ve güvenliği",
+            "E) Temel hak ve hürriyetlerin tamamı"
         ],
         "correctAnswerIndex": 0,
-        "explanation": "Olağan CBK: sosyal–ekonomik alan."
+        "explanation": "Anayasa'nın 104. maddesinin 17. fıkrasına göre Anayasa'nın ikinci kısmının birinci ve ikinci bölümlerinde yer alan temel haklar, kişi hakları ve ödevleri ile dördüncü bölümde yer alan siyasi haklar ve ödevler Cumhurbaşkanlığı kararnamesiyle düzenlenemez. Bu yasağın dışında kalan üçüncü bölümdeki sosyal ve ekonomik haklar ve ödevler ise kararnameye konu olabilir. Ayrıca Anayasa'da münhasıran kanunla düzenlenmesi öngörülen ve kanunda açıkça düzenlenen konularda da Cumhurbaşkanlığı kararnamesi çıkarılamaz."
     },
     {
         "question": "Meclis İçtüzüğü neyi düzenler?",
@@ -1645,28 +1645,28 @@ window.vatandas_14_sorulari = [
         "explanation": "Borç kaynağı: sebepsiz zenginleşme."
     },
     {
-        "question": "Edim tanımı hangisidir?",
+        "question": "Borçlar hukukunda 'edim' aşağıdakilerden hangisidir?",
         "options": [
-            "A) Yalnız ceza",
-            "B) Yalnız kıyas",
-            "C) Yalnız Anayasa",
-            "D) Yalnız örf",
-            "E) Alacaklının borçludan isteyebileceği / borçlunun yerine getirmekle yükümlü olduğu davranış"
+            "A) Borçlunun malvarlığının tamamı",
+            "B) Alacaklının borçludan aldığı teminat",
+            "C) Borç ilişkisini sona erdiren hukuki olgu",
+            "D) Borç ilişkisinin kaynağını oluşturan sözleşme",
+            "E) Alacaklının borçludan isteyebileceği, borçlunun da yerine getirmekle yükümlü olduğu davranış"
         ],
         "correctAnswerIndex": 4,
-        "explanation": "Edim = borç ilişkisinin konusu davranış."
+        "explanation": "Edim, borç ilişkisinin konusunu oluşturan davranıştır; verme, yapma veya yapmama biçiminde olabilir. Borcun kaynağı olan sözleşme, haksız fiil ve sebepsiz zenginleşme edimin kendisi değil doğuşunun sebebidir; ifa, ibra ve takas gibi olgular ise borcu sona erdiren sebeplerdir. Borçlunun malvarlığı da edim değil, borcun teminatını oluşturan sorumluluk konusudur."
     },
     {
-        "question": "Borçlar hukukunda ana ilke hangisidir?",
+        "question": "Hakların kullanılmasında ve borçların yerine getirilmesinde uyulması gereken temel ilke aşağıdakilerden hangisidir?",
         "options": [
-            "A) Kıssas",
-            "B) Dürüstlük (objektif iyiniyet / TMK m.2)",
-            "C) İdam",
-            "D) Sürgün",
-            "E) Genel müsadere"
+            "A) Sözleşme özgürlüğü",
+            "B) Dürüstlük kuralı (objektif iyi niyet)",
+            "C) Kusursuz sorumluluk",
+            "D) Borç ilişkisinin nispiliği",
+            "E) Sebepsiz zenginleşme"
         ],
         "correctAnswerIndex": 1,
-        "explanation": "Hakların kullanılması ve borçların ifasında ana ilke dürüstlüktür."
+        "explanation": "Türk Medeni Kanunu'nun 2. maddesine göre herkes haklarını kullanırken ve borçlarını yerine getirirken dürüstlük kurallarına uymak zorundadır; bir hakkın açıkça kötüye kullanılmasını hukuk düzeni korumaz. Dürüstlük kuralı kişinin iç dünyasından bağımsız, objektif bir davranış ölçüsüdür. Sözleşme özgürlüğü sözleşmenin kurulmasına ve içeriğine, nispilik ilkesi borç ilişkisinin yalnızca taraflar arasında hüküm doğurmasına ilişkindir; kusursuz sorumluluk ve sebepsiz zenginleşme ise ayrı sorumluluk ve borç kaynaklarıdır."
     },
     {
         "question": "Tek taraflı bağlamazlıkta veli/vasi icazeti ne sağlar?",
@@ -1683,13 +1683,13 @@ window.vatandas_14_sorulari = [
     {
         "question": "Butlan ile yokluk farkı özetle nedir?",
         "options": [
-            "A) Yoklukta kurucu unsur yok; butlanda işlem yapılmıştır ama geçersizdir",
-            "B) Aynıdır",
-            "C) İkisi de yalnız vergi",
-            "D) İkisi de İBK",
-            "E) İkisi de CBK"
+            "A) Yoklukta işlemin kurucu unsuru hiç yoktur; butlanda işlem yapılmıştır ama geçersizdir",
+            "B) Butlanda kurucu unsur yoktur; yoklukta işlem geçerli olarak doğar",
+            "C) Yoklukta işlem baştan geçerlidir, butlanda ise sonradan geçersiz hâle gelir",
+            "D) İkisi de yalnızca taraflarca ileri sürülebilir ve hâkim tarafından resen dikkate alınmaz",
+            "E) Yokluk yalnızca sözleşmelerde, butlan yalnızca tek taraflı işlemlerde söz konusu olur"
         ],
         "correctAnswerIndex": 0,
-        "explanation": "Yokluk ≠ butlan."
+        "explanation": "Yoklukta hukuki işlemin varlığı için aranan kurucu unsur hiç gerçekleşmemiştir; işlem hukuk âleminde hiç doğmamıştır (örneğin evlendirme memuru önünde yapılmayan evlenme). Butlanda (kesin hükümsüzlükte) ise işlem kurucu unsurlarıyla yapılmıştır, ancak tam ehliyetsizlik, emredici hükümlere veya ahlaka aykırılık gibi bir sakatlık nedeniyle baştan itibaren geçersizdir. Kesin hükümsüzlük hâkim tarafından resen göz önünde bulundurulur ve işlem onanarak geçerli hâle getirilemez."
     }
 ];

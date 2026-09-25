@@ -116,12 +116,12 @@ window.cografya_19_sorulari = [
         options: [
             "A) Don olayına hiç dayanıklı olmaması",
             "B) Yalnızca volkanik arazide yetişmesi",
-            "C) Uyuşturucu madde içermesi nedeniyle ekimine izin verilmemesi",
+            "C) Uyuşturucu madde elde edilebildiği için ekiminin devlet izni ve denetimiyle sınırlandırılması",
             "D) Yalnızca sulama ile yetişmesi",
             "E) İklim seçiciliğinin çok yüksek olması"
         ],
         correctAnswerIndex: 2,
-        explanation: "Haşhaş Doğu Karadeniz kıyı kuşağı dışındaki her yerde yetişebilir; ancak uyuşturucu madde içerdiğinden ekimine izin verilmez ve devlet kontrolünde üretilir."
+        explanation: "Haşhaş, iklim seçiciliği düşük bir bitkidir ve Doğu Karadeniz kıyı kuşağı dışında ülkemizin hemen her yerinde yetişebilir. Ancak kapsülünden uyuşturucu madde elde edilebildiği için ekimi serbest bırakılmamış; yalnızca izin verilen illerde, devlet denetiminde yapılacak biçimde sınırlandırılmıştır. Ekim alanının dar olmasının temel nedeni budur."
     },
     {
         question: "Haşhaş fabrikası aşağıdaki yerlerin hangisinde bulunur?",
@@ -172,7 +172,7 @@ window.cografya_19_sorulari = [
         explanation: "Tütünde iklim seçiciliğinden ziyade toprak seçiciliği vardır; yani toprak özellikleri iklimden daha belirleyicidir."
     },
     {
-        question: "I. Tütün önemli bir sanayi bitkisidir.\nII. Tütün üretimi en fazla Ege Bölgesi'ndedir.\nIII. Tütün, suya ihtiyaç duymayan bir üründür.\n\nYukarıdaki bilgilerden hangileri doğrudur?",
+        question: "I. Tütün önemli bir sanayi bitkisidir. II. Tütün üretimi en fazla Ege Bölgesi'ndedir. III. Tütün genellikle sulama yapılmadan yetiştirilir. Yukarıdaki bilgilerden hangileri doğrudur?",
         options: [
             "A) Yalnız I",
             "B) I ve II",
@@ -181,7 +181,7 @@ window.cografya_19_sorulari = [
             "E) I, II ve III"
         ],
         correctAnswerIndex: 4,
-        explanation: "I, II ve III doğrudur; tütün sanayi bitkisidir, üretimi en fazla Ege'dedir ve suya ihtiyaç duymaz."
+        explanation: "I doğrudur; tütün, sigara sanayisinin ham maddesi olan bir sanayi bitkisidir. II doğrudur; üretimin en fazla yapıldığı bölge Ege'dir. III doğrudur; sulama yapıldığında tütünün aroması ve kalitesi düştüğü için genellikle sulama yapılmadan, kuru tarımla yetiştirilir. Bu nedenle üç yargı da doğrudur."
     },
     {
         question: "Tütün üretiminin en fazla gerçekleştiği bölge aşağıdakilerden hangisidir?",
@@ -386,7 +386,7 @@ window.cografya_19_sorulari = [
             "B) Başta Isparta olmak üzere Antalya, Karaman ve Niğde'de yoğun üretilir.",
             "C) Önemli bir ihraç ürünüdür.",
             "D) İklim seçiciliği azdır.",
-            "E) İklim seçiciliği az olduğundan her bölgede yetişebilir."
+            "E) Kış aylarında soğuklama ihtiyacı olan bir meyvedir."
         ],
         correctAnswerIndex: 0,
         explanation: "“Ana üretim alanı Şanlıurfa'dır” ifadesi yanlıştır; elmanın yoğun üretimi Isparta, Antalya, Karaman ve Niğde'dedir. Şanlıurfa elmanın ana üretim ili değildir. Diğer ifadeler doğrudur."
@@ -432,12 +432,12 @@ window.cografya_19_sorulari = [
         options: [
             "A) Tıpta kullanılır.",
             "B) Alkollü içecekler sanayisinde kullanılır.",
-            "C) Üretimi Konya, Göller Yöresi, İç Ege ve Antalya bölümünde yoğundur.",
+            "C) Üretimi Denizli (Çivril), Göller Yöresi, İç Ege ve Antalya bölümünde yoğundur.",
             "D) Burdur'da da üretilir.",
             "E) En fazla Rize çevresinde üretilir."
         ],
         correctAnswerIndex: 4,
-        explanation: "“En fazla Rize çevresinde üretilir” ifadesi yanlıştır; anason Konya, Göller Yöresi, İç Ege, Antalya ve Burdur'da üretilir. Rize anason ili değildir. Diğer ifadeler doğrudur."
+        explanation: "Anason üretimi Denizli (Çivril), Burdur, Göller Yöresi, İç Ege ve Antalya çevresinde yoğunlaşır; tohumu tıpta ve alkollü içecek sanayisinde kullanılır. Rize çevresinin bol yağışlı ve nemli iklimi anason tarımına uygun olmadığından, anasonun en fazla Rize çevresinde üretildiği ifadesi yanlıştır."
     },
     {
         question: "Anasonun kullanım alanları aşağıdakilerin hangisinde birlikte verilmiştir?",
@@ -566,10 +566,10 @@ window.cografya_19_sorulari = [
             "B) Konya",
             "C) Afyon",
             "D) Rize",
-            "E) Hiçbiri — üçünün de jeotermal seracılığı vardır"
+            "E) Denizli"
         ],
         correctAnswerIndex: 3,
-        explanation: "Jeotermal enerji ile seracılık Kırşehir, Konya ve Afyon çevresinde yapılır. Rize bu grupta yer almaz."
+        explanation: "Jeotermal kaynaklarla ısıtılan seralar, yer altı sıcak su potansiyeli yüksek olan Kırşehir, Konya, Afyonkarahisar ve Denizli gibi illerde kurulmuştur. Rize'de bu tür bir jeotermal kaynak bulunmadığından jeotermal enerjiyle seracılık yapılmaz."
     },
     {
         question: "Seracılığın Türkiye'de en gelişmiş olduğu bölge aşağıdakilerden hangisidir?",
@@ -676,12 +676,12 @@ window.cografya_19_sorulari = [
         options: [
             "A) Birinci",
             "B) İkinci",
-            "C) İran'dan sonra üçüncü",
+            "C) Üçüncü",
             "D) Beşinci",
             "E) Onuncu"
         ],
         correctAnswerIndex: 2,
-        explanation: "Antep fıstığında Türkiye, İran'dan sonra dünyada üçüncü sıradadır. Dünya birinciliği incirde geçerlidir."
+        explanation: "Antep fıstığı üretiminde Türkiye, ABD ve İran'ın ardından dünyada üçüncü sıradadır. Türkiye'nin dünya birinciliği ise fındık, incir ve kayısı gibi ürünlerde geçerlidir."
     },
     {
         question: "Antep fıstığının endemik olarak en çok yetiştirildiği yer aşağıdakilerden hangisidir?",
@@ -714,10 +714,10 @@ window.cografya_19_sorulari = [
             "B) Uzun yaz kuraklığı ister.",
             "C) Yetişmesi için yazın bol yağış şarttır.",
             "D) Üretimde Şanlıurfa birinci sıradadır; Adana ve Aydın da önemlidir.",
-            "E) Kısa yetişme dönemine sahiptir."
+            "E) Uzun bir yetişme dönemine ihtiyaç duyar."
         ],
         correctAnswerIndex: 2,
-        explanation: "“Yetişmesi için yazın bol yağış şarttır” ifadesi yanlıştır; pamuk uzun yaz kuraklığı ister, yazın bol yağış istemez. Üretim sulamanın geliştiği yerlerde yapılır. Diğer ifadeler doğrudur."
+        explanation: "Pamuk, yetişme dönemi boyunca yüksek sıcaklık ve sulama isteyen, olgunlaşma döneminde ise uzun yaz kuraklığı isteyen bir bitkidir; yazın bol yağış koza açımını ve lif kalitesini bozduğundan istenmez, bu nedenle C yanlıştır. Pamuk yaklaşık altı aylık uzun bir yetişme dönemine ihtiyaç duyar ve üretimde Şanlıurfa birinci sıradadır; Adana ile Aydın da önemli üretim alanlarıdır."
     },
     {
         question: "Pamuk üretiminde birinci sırada yer alan il aşağıdakilerden hangisidir?",
@@ -740,8 +740,8 @@ window.cografya_19_sorulari = [
             "D) II ve III",
             "E) I, II ve III"
         ],
-        correctAnswerIndex: 4,
-        explanation: "I, II ve III doğrudur; pamuk sulamanın geliştiği yerlerde, uzun yaz kuraklığı isteyen ve kısa yetişme dönemine sahip bir üründür. Üretimde Şanlıurfa birinci sıradadır."
+        correctAnswerIndex: 2,
+        explanation: "I doğrudur; pamuk olgunlaşma döneminde uzun yaz kuraklığı ister. II yanlıştır; pamuk kısa değil, yaklaşık altı aylık uzun bir yetişme dönemine ihtiyaç duyar. III doğrudur; pamuk üretiminde Şanlıurfa birinci sıradadır. Bu nedenle yalnızca I ve III doğrudur."
     },
     {
         question: "Pamuğun önemli üretim merkezleri arasında aşağıdakilerden hangisi yer almaz?",
@@ -750,10 +750,10 @@ window.cografya_19_sorulari = [
             "B) Adana",
             "C) Aydın",
             "D) Rize",
-            "E) Hiçbiri — hepsi pamuk merkezidir"
+            "E) Diyarbakır"
         ],
         correctAnswerIndex: 3,
-        explanation: "Pamukta Şanlıurfa birinci, Adana ve Aydın önemli merkezlerdir. Rize pamuk ili değildir."
+        explanation: "Pamuk üretimi; GAP sulamalarıyla birlikte Güneydoğu Anadolu'da (Şanlıurfa, Diyarbakır), Çukurova'da (Adana) ve Ege'de (Aydın) yoğunlaşmıştır. Rize ise serin ve bol yağışlı iklimiyle çay üretim alanıdır; pamuğun önemli üretim merkezleri arasında yer almaz."
     },
     {
         question: "Pamuğun sulama ile ilişkisini en doğru açıklayan ifade aşağıdakilerden hangisidir?",
@@ -770,14 +770,14 @@ window.cografya_19_sorulari = [
     {
         question: "Kayısı tarımı hakkında aşağıdakilerden hangisi söylenemez?",
         options: [
-            "A) İklim seçiciliği azdır, her bölgede yetişir.",
+            "A) İlkbaharda görülen geç donlardan zarar görebilir.",
             "B) En çok Malatya ve Mersin çevresinde üretilir.",
             "C) Önemli bir ihraç ürünüdür.",
             "D) Türkiye, dünya kayısı üretiminde ilk sıradadır.",
             "E) Yalnızca nemli Karadeniz ikliminde yetişir."
         ],
         correctAnswerIndex: 4,
-        explanation: "Kayısının iklim seçiciliği azdır ve hemen her bölgede yetişir; yoğun üretim Malatya ve Mersin çevresindedir. Türkiye dünya kayısı üretiminde ilk sıradadır. “Yalnızca nemli Karadeniz ikliminde yetişir.” ifadesi yanlıştır."
+        explanation: "Kayısı en çok Malatya ve Mersin çevresinde üretilir, Türkiye dünya kayısı üretiminde ilk sıradadır ve kayısı önemli bir ihraç ürünüdür. Erken çiçeklendiği için ilkbahar geç donlarından zarar görebilir. Nemli ve bol yağışlı Karadeniz iklimi kayısı için uygun olmadığından, yalnızca nemli Karadeniz ikliminde yetiştiği ifadesi yanlıştır."
     },
     {
         question: "Kayısı üretiminde öne çıkan iller aşağıdakilerin hangisinde birlikte verilmiştir?",
@@ -792,7 +792,7 @@ window.cografya_19_sorulari = [
         explanation: "Kayısı en çok Malatya ve Mersin çevresinde üretilir."
     },
     {
-        question: "I. Kayısı iklim seçiciliği az bir üründür.\nII. Kayısı önemli bir ihraç ürünüdür.\nIII. Kayısı en çok Malatya ve Mersin çevresinde üretilir.\n\nYukarıdaki bilgilerden hangileri doğrudur?",
+        question: "I. Kayısı ilkbaharda görülen geç donlardan zarar görebilen bir üründür. II. Kayısı önemli bir ihraç ürünüdür. III. Kayısı en çok Malatya ve Mersin çevresinde üretilir. Yukarıdaki bilgilerden hangileri doğrudur?",
         options: [
             "A) Yalnız I",
             "B) I ve II",
@@ -801,7 +801,7 @@ window.cografya_19_sorulari = [
             "E) I, II ve III"
         ],
         correctAnswerIndex: 4,
-        explanation: "I, II ve III doğrudur; kayısı iklim seçiciliği azdır, Malatya ve Mersin çevresinde yoğun üretilir ve önemli bir ihraç ürünüdür."
+        explanation: "I doğrudur; kayısı erken çiçeklendiğinden ilkbahar geç donlarından zarar görür. II doğrudur; taze ve kuru kayısı Türkiye'nin önemli ihraç ürünlerindendir. III doğrudur; üretim en çok Malatya ve Mersin çevresinde yoğunlaşır. Bu nedenle I, II ve III doğrudur."
     },
 
     // ============================================================
@@ -862,7 +862,7 @@ window.cografya_19_sorulari = [
             "B) Alkol (bira) üretimi için ekilir.",
             "C) Hayvan yemi için ekilir.",
             "D) Yalnızca kış ılıklığı olan kıyılarda yetişir.",
-            "E) Soğuğa dayanıklı tahıllardandır."
+            "E) Kısa yetişme dönemi sayesinde yüksek ve karasal alanlarda da yetiştirilebilir."
         ],
         correctAnswerIndex: 3,
         explanation: "“Yalnızca kış ılıklığı olan kıyılarda yetişir” ifadesi yanlıştır; arpa düşük kış sıcaklıklarına dayanıklıdır, yalnızca ılık kıyılara bağlı değildir. Diğer ifadeler doğrudur."
@@ -980,24 +980,24 @@ window.cografya_19_sorulari = [
         options: [
             "A) Volkanik arazilerde daha iyi yetişir.",
             "B) Sanayide ham madde olarak kullanılır.",
-            "C) En önemli üretim alanı Niğde'dir.",
+            "C) Serin ve nemli koşullarda iyi yetişir.",
             "D) Üretimde birinci sıra Konya'dadır.",
-            "E) Niğde'den sonra Kayseri gelir."
+            "E) Yumrusu nişasta bakımından zengindir."
         ],
         correctAnswerIndex: 3,
-        explanation: "“Üretimde birinci sıra Konya'dadır” ifadesi yanlıştır; patateste en önemli üretim alanı Niğde, ardından Kayseri'dir. Konya birinci sırada değildir. Diğer ifadeler doğrudur."
+        explanation: "Patates serin ve nemli koşullarda, gevşek volkanik topraklarda iyi yetişen, nişastaca zengin yumrusu nedeniyle sanayide ham madde olarak da kullanılan bir üründür. Üretimde birinci sıradaki il Konya değil Niğde'dir; bu nedenle D yanlıştır."
     },
     {
-        question: "Patates üretiminde birinci ve ikinci sıradaki iller aşağıdakilerin hangisinde doğru verilmiştir?",
+        question: "Patates üretiminde birinci sıradaki il aşağıdakilerden hangisidir?",
         options: [
-            "A) Birinci Niğde, ardından Kayseri",
-            "B) Birinci Konya, ikinci Eskişehir",
-            "C) Birinci Şanlıurfa, ikinci Adana",
-            "D) Birinci Aydın, ikinci Manisa",
-            "E) Birinci Isparta, ikinci Burdur"
+            "A) Niğde",
+            "B) Şanlıurfa",
+            "C) Aydın",
+            "D) Rize",
+            "E) Isparta"
         ],
         correctAnswerIndex: 0,
-        explanation: "Patateste en önemli üretim alanı Niğde'dir; ardından Kayseri gelir."
+        explanation: "Patates serin koşullarda ve gevşek, volkanik topraklarda iyi yetişir. Bu koşulları taşıyan Niğde, Türkiye'de patates üretiminde birinci sıradaki ildir; diğer illerin hiçbiri patates üretiminde ilk sırada yer almaz."
     },
     {
         question: "I. Patates volkanik arazilerde daha iyi yetişir.\nII. Patates sanayide ham madde olarak kullanılır.\nIII. Patates üretiminde Konya birinci sıradadır.\n\nYukarıdaki bilgilerden hangileri doğrudur?",
@@ -1029,11 +1029,11 @@ window.cografya_19_sorulari = [
             "A) Yeşil mercimek — kuraklık seven / Yozgat",
             "B) Fasulye — sulama ile yetişir / Konya",
             "C) Nohut — kuraklık seven / Ankara",
-            "D) Fasulye kuraklık seven bir üründür ve en çok Yozgat'ta üretilir.",
-            "E) Yeşil mercimek en çok Yozgat çevresinde üretilir."
+            "D) Fasulye — kuraklık seven / Yozgat",
+            "E) Kırmızı mercimek — kuraklık seven / Şanlıurfa"
         ],
         correctAnswerIndex: 3,
-        explanation: "“Fasulye kuraklık seven bir üründür ve en çok Yozgat'ta üretilir” ifadesi yanlıştır; fasulye sulama ile yetişir ve üretimde Konya başta gelir. Kuraklık seven ve Yozgat'ta öne çıkan yeşil mercimektir. Diğer ifadeler doğrudur."
+        explanation: "Fasulye kuraklığa dayanıklı bir ürün değildir; sulama isteyen bir baklagildir ve üretimde Konya başta gelir. Kuraklık seven ve Yozgat çevresinde öne çıkan ürün yeşil mercimektir. Bu nedenle fasulyeyi kuraklık seven bir ürün olarak Yozgat ile eşleştiren seçenek yanlıştır; diğer eşleştirmeler doğrudur."
     },
     {
         question: "I. Yeşil mercimek kuraklık sever, en çok Yozgat'tadır.\nII. Fasulye sulama ile yetişir, üretimde Konya baştadır.\nIII. Nohut kuraklık sever, üretimde Ankara baştadır.\n\nYukarıdaki bilgilerden hangileri doğrudur?",
@@ -1064,12 +1064,12 @@ window.cografya_19_sorulari = [
         options: [
             "A) GAP ve KOP projeleri ile üretimi artmıştır.",
             "B) Ticarî yağlık mısır üretimi en fazla Çukurova, Konya Ovası ve Şanlıurfa çevresindedir.",
-            "C) Sulama projeleri üretimi desteklemiştir.",
-            "D) Yağlık mısır üretiminde Çukurova öne çıkar.",
+            "C) Hem insan beslenmesinde hem de hayvan yemi olarak kullanılır.",
+            "D) Sulanabilen sıcak alanlarda ikinci ürün olarak da yetiştirilir.",
             "E) Üretimi yalnızca Doğu Karadeniz kıyı kuşağında yoğunlaşır."
         ],
         correctAnswerIndex: 4,
-        explanation: "“Üretimi yalnızca Doğu Karadeniz kıyı kuşağında yoğunlaşır” ifadesi yanlıştır; ticarî yağlık mısır Çukurova, Konya Ovası ve Şanlıurfa çevresinde üretilir. Diğer ifadeler doğrudur."
+        explanation: "Mısır, sulamanın geliştiği Çukurova, Konya Ovası ve Şanlıurfa çevresinde ticarî yağlık mısır olarak üretilir; GAP ve KOP projeleriyle üretimi artmıştır. İnsan beslenmesinde, hayvan yemi ve yağ sanayisinde kullanılır, sıcak ve sulanabilen alanlarda ikinci ürün olarak da ekilir. Bu nedenle üretiminin yalnızca Doğu Karadeniz kıyı kuşağında yoğunlaştığı ifadesi yanlıştır."
     },
     {
         question: "Ticarî yağlık mısır üretiminin öne çıktığı yerler arasında aşağıdakilerden hangisi yer almaz?",
@@ -1078,10 +1078,10 @@ window.cografya_19_sorulari = [
             "B) Konya Ovası",
             "C) Şanlıurfa çevresi",
             "D) Rize çevresi",
-            "E) Hiçbiri — hepsi yağlık mısır merkezidir"
+            "E) Mardin çevresi"
         ],
         correctAnswerIndex: 3,
-        explanation: "Ticarî yağlık mısır üretimi en fazla Çukurova, Konya Ovası ve Şanlıurfa çevresindedir. Rize bu grupta yoktur."
+        explanation: "Ticarî yağlık mısır üretimi, sulamanın geliştiği Çukurova, Konya Ovası, Şanlıurfa ve Mardin çevresinde yoğunlaşır. Rize çevresinde mısır yağışa bağlı olarak geçimlik amaçla ekilir; ticarî yağlık mısır merkezleri arasında yer almaz."
     },
     {
         question: "I. Mısır üretimi GAP ve KOP ile artmıştır.\nII. Yağlık mısır Çukurova, Konya Ovası ve Şanlıurfa'da yoğundur.\nIII. Mısır üretimi nadasın artmasıyla yükselmiştir.\n\nYukarıdaki bilgilerden hangileri doğrudur?",
@@ -1124,7 +1124,7 @@ window.cografya_19_sorulari = [
         explanation: "“Tütün — bol sulama ister” ifadesi yanlıştır; tütün üretimi suya ihtiyaç duymaz. Diğer ifadeler doğrudur."
     },
     {
-        question: "I. İncir üretiminde Türkiye dünya birincisidir.\nII. Antep fıstığında Türkiye İran'dan sonra dünyada üçüncü sıradadır.\nIII. Muz üretimi ülke talebini karşıladığı için ithalat yapılmaz.\n\nYukarıdaki bilgilerden hangileri doğrudur?",
+        question: "I. İncir üretiminde Türkiye dünya birincisidir. II. Antep fıstığı üretiminde Türkiye dünyada ilk üç ülke arasındadır. III. Muz üretimi ülke talebini karşıladığı için ithalat yapılmaz. Yukarıdaki bilgilerden hangileri doğrudur?",
         options: [
             "A) Yalnız I",
             "B) I ve II",
@@ -1133,19 +1133,19 @@ window.cografya_19_sorulari = [
             "E) I, II ve III"
         ],
         correctAnswerIndex: 1,
-        explanation: "I ve II doğrudur. III yanlıştır; yerli muz üretimi talebi karşılamadığı için ithalat da yapılır."
+        explanation: "I doğrudur; incir üretiminde Türkiye dünyada ilk sıradadır. II doğrudur; antep fıstığı üretiminde Türkiye, ABD ve İran ile birlikte dünyanın ilk üç üreticisi arasında yer alır. III yanlıştır; yerli muz üretimi iç talebi karşılamadığından muz ithalatı da yapılmaktadır. Bu nedenle yalnızca I ve II doğrudur."
     },
     {
-        question: "Devirli (periyodik) tarım ürünleri arasında aşağıdakilerden hangisi yer almaz?",
+        question: "Devirli (periyodik) tarım ürünleri arasında aşağıdakilerden hangisi yer alır?",
         options: [
-            "A) Fındık",
-            "B) Zeytin",
-            "C) Buğday",
-            "D) Fındık, zeytin ve antep fıstığı birlikte bu gruptadır.",
-            "E) Antep fıstığı"
+            "A) Buğday",
+            "B) Şeker pancarı",
+            "C) Antep fıstığı",
+            "D) Pamuk",
+            "E) Patates"
         ],
         correctAnswerIndex: 2,
-        explanation: "Fındık, zeytin ve antep fıstığı iki yılda bir iyi ürün veren devirli ürünlerdir. Buğday bu grupta yer almaz."
+        explanation: "Fındık, zeytin ve antep fıstığı gibi çok yıllık ağaç ürünleri bir yıl bol, ertesi yıl az ürün verdiklerinden devirli (periyodik) ürün olarak adlandırılır. Buğday, şeker pancarı, pamuk ve patates ise her yıl yeniden ekilen tek yıllık ürünlerdir ve düzenli ürün verir."
     },
     {
         question: "İklim seçiciliği az olan ürünler arasında aşağıdakilerden hangisi yer almaz?",
@@ -1153,11 +1153,11 @@ window.cografya_19_sorulari = [
             "A) Turunçgiller",
             "B) Elma",
             "C) Kayısı",
-            "D) Üzüm, elma ve kayısı iklim seçiciliği az ürünlerdendir.",
+            "D) Buğday",
             "E) Üzüm"
         ],
         correctAnswerIndex: 0,
-        explanation: "Üzüm, elma ve kayısının iklim seçiciliği azdır. Turunçgiller ise kış ılıklığı ister; bu nedenle iklim seçiciliği az ürünler arasında sayılmaz."
+        explanation: "Üzüm, elma, kayısı ve buğday ülkenin hemen her yerinde yetişebilen, iklim seçiciliği az ürünlerdir. Turunçgiller ise kış ılıklığı ister ve don olaylarından zarar gördüğü için yalnızca kışı ılık geçen kıyılarda yetiştirilebilir; bu nedenle iklim seçiciliği az ürünler arasında sayılmaz."
     },
     {
         question: "Aşağıdaki ürün — kullanım alanı eşleştirmelerinden hangisi yanlıştır?",
@@ -1177,11 +1177,11 @@ window.cografya_19_sorulari = [
             "A) İncir",
             "B) Turunçgiller",
             "C) Arpa",
-            "D) Muz da ılık mikroklima ister.",
-            "E) İncir ve turunçgiller kış ılıklığı ister."
+            "D) Muz",
+            "E) Avokado"
         ],
         correctAnswerIndex: 2,
-        explanation: "İncir ve turunçgiller kış ılıklığı ister; muz da Akdeniz mikroklimasında yetişir. Arpa ise düşük kış sıcaklıklarına dayanıklıdır."
+        explanation: "İncir, turunçgiller, muz ve avokado kış ılıklığı isteyen, don olaylarından zarar gören ürünlerdir. Arpa ise düşük kış sıcaklıklarına dayanıklı bir tahıldır ve kış ılıklığı istemez; bu nedenle bu grupta yer almaz."
     },
     {
         question: "I. Sebzecilik yazın sulama ile taze sebze için yapılır.\nII. Seracılık kışın taze sebze için yapılır.\nIII. Seracılık güneşlenme ister ve en fazla Akdeniz'dedir.\n\nYukarıdaki bilgilerden hangileri doğrudur?",
@@ -1225,11 +1225,11 @@ window.cografya_19_sorulari = [
             "A) Gül",
             "B) Pamuk",
             "C) Yağlık mısır",
-            "D) Antep fıstığı, pamuk ve mısırda öne çıkar.",
+            "D) Kırmızı mercimek",
             "E) Antep fıstığı"
         ],
         correctAnswerIndex: 0,
-        explanation: "Şanlıurfa antep fıstığında endemik merkez, pamukta birinci sıra ve yağlık mısırda öne çıkan yerlerdendir. Gül ise Isparta (Göller Yöresi) ile anılır."
+        explanation: "Şanlıurfa; antep fıstığı, pamuk, yağlık mısır ve kırmızı mercimek üretiminde öne çıkan illerdendir. Gül yetiştiriciliği ise Isparta ve çevresindeki Göller Yöresi ile anılır; Şanlıurfa gülde öne çıkan bir üretim yeri değildir."
     },
     {
         question: "Konya ili aşağıdaki ürünlerden hangisinin başlıca alanı arasında yer almaz?",
@@ -1253,7 +1253,7 @@ window.cografya_19_sorulari = [
             "E) I, II ve III"
         ],
         correctAnswerIndex: 1,
-        explanation: "I ve II doğrudur. III yanlıştır; Aydın'ın monokültür bitkisi incirdir. Çay Doğu Karadeniz ürünüdür."
+        explanation: "I doğrudur; haşhaş işleme fabrikası Afyonkarahisar'ın Bolvadin ilçesindedir. II doğrudur; jeotermal kaynaklardan yararlanılan seracılık Kırşehir, Konya ve Afyon çevresinde de yapılmaktadır. III yanlıştır; çay Akdeniz'in değil, Doğu Karadeniz kıyı kuşağının monokültür ürünüdür."
     },
     {
         question: "Yağlık bitkiler arasında aşağıdakilerden hangisi yer almaz?",
@@ -1354,29 +1354,29 @@ window.cografya_19_sorulari = [
     {
         question: "Aşağıdaki bilgilerden hangisi yanlıştır?",
         options: [
-            "A) Zeytin Güneydoğu'nun batısından Akdeniz, Ege ve Marmara'da yetişir.",
+            "A) Fındık Doğu Karadeniz kıyı kuşağının en önemli ürünüdür.",
             "B) Haşhaş Doğu Karadeniz kıyı kuşağı dışında yetişebilir.",
             "C) Zeytin Doğu Karadeniz kıyı kuşağında yaygın olarak yetişir.",
             "D) Muz Antalya, Mersin, Adana ve Hatay'da üretilir.",
             "E) Turunçgiller mikroklima ile Rize çevresinde de yetişir."
         ],
         correctAnswerIndex: 2,
-        explanation: "“Zeytin Doğu Karadeniz kıyı kuşağında yaygın olarak yetişir” ifadesi yanlıştır; zeytin Doğu Karadeniz'de yaygın değildir. Yayılışı Güneydoğu'nun batısından Akdeniz, Ege ve Marmara'dır. Diğer ifadeler doğrudur."
+        explanation: "Zeytin, kışı ılık geçen Akdeniz iklimi bitkisidir; Akdeniz, Ege ve Güney Marmara kıyıları ile Güneydoğu Anadolu'nun batısında yetiştirilir. Doğu Karadeniz kıyı kuşağı aşırı nemli ve yağışlı olduğundan zeytin burada yaygın değildir; bu nedenle C yanlıştır. Diğer bilgiler doğrudur."
     },
     {
         question: "Aşağıdaki ürün — birinci sıra / öne çıkan yer eşleştirmelerinden hangisi yanlıştır?",
         options: [
             "A) Pamuk — Şanlıurfa",
             "B) Kırmızı mercimek — Güneydoğu Anadolu",
-            "C) Patates — Konya",
+            "C) Çay — Antalya çevresi",
             "D) Buğday — Konya",
             "E) Patates — Niğde"
         ],
         correctAnswerIndex: 2,
-        explanation: "“Patates — Konya” ifadesi yanlıştır; patateste birinci sıra Niğde, ardından Kayseri'dir. Konya patateste birinci değildir. Diğer ifadeler doğrudur."
+        explanation: "Çay, bol yağış ve yüksek nem isteyen bir ürün olduğundan yalnızca Doğu Karadeniz kıyı kuşağında (Rize ve çevresi) yetiştirilir; Antalya çevresi çay üretim alanı değildir. Diğer eşleştirmeler doğrudur."
     },
     {
-        question: "I. Fasulye sulama ile yetişir, üretimde Konya baştadır.\nII. Nohut kuraklık sever, üretimde Ankara baştadır.\nIII. Yeşil mercimek kuraklık sever, en çok Yozgat'tadır.\n\nYukarıdaki bilgilerden hangileri doğrudur?",
+        question: "I. Kırmızı mercimek üretiminde Şanlıurfa ve Mardin çevresi öne çıkar. II. Yeşil mercimek, yağışın az olduğu karasal alanlarda yetiştirilir. III. Baklagiller toprağa azot kazandırarak toprağın verimliliğini artırır. Yukarıdaki bilgilerden hangileri doğrudur?",
         options: [
             "A) Yalnız I",
             "B) I ve II",
@@ -1385,7 +1385,7 @@ window.cografya_19_sorulari = [
             "E) I, II ve III"
         ],
         correctAnswerIndex: 4,
-        explanation: "I, II ve III doğrudur; baklagillerde fasulye Konya, nohut Ankara, yeşil mercimek Yozgat ile eşleşir."
+        explanation: "I doğrudur; kırmızı mercimek üretimi Güneydoğu Anadolu'da, özellikle Şanlıurfa ve Mardin çevresinde yoğunlaşır. II doğrudur; yeşil mercimek kuraklığa dayanıklıdır ve İç Anadolu'nun az yağışlı karasal alanlarında yetiştirilir. III doğrudur; baklagiller kökleriyle ortak yaşayan bakteriler sayesinde toprağa azot bağlar ve toprağın verimini artırır."
     },
     {
         question: "Aşağıdakilerden hangisi hem tahıl hem de yağ bitkisi olarak değerlendirilen ürünle doğrudan ilişkilidir?",
@@ -1400,7 +1400,7 @@ window.cografya_19_sorulari = [
         explanation: "Mısır hem tahıl hem yağ bitkisi olarak kullanılır; ticarî yağlık mısır üretimi Çukurova, Konya Ovası ve Şanlıurfa çevresindedir."
     },
     {
-        question: "Aşağıdaki yargılardan hangisine ulaşılamaz?",
+        question: "Aşağıdaki bilgilerden hangisi yanlıştır?",
         options: [
             "A) İncir Aydın çevresinin monokültür bitkisidir.",
             "B) Antep fıstığı Şanlıurfa çevresinin endemik türüdür.",
@@ -1409,7 +1409,7 @@ window.cografya_19_sorulari = [
             "E) Anason üretimi en fazla Rize'dedir."
         ],
         correctAnswerIndex: 4,
-        explanation: "A, B, C ve D doğrudur. E'ye ulaşılamaz; anason Konya, Göller Yöresi, İç Ege, Antalya ve Burdur'da üretilir. Rize anason ili değildir."
+        explanation: "A, B, C ve D doğrudur. E yanlıştır; anason Denizli (Çivril), Burdur, Antalya ve İç Ege çevresinde üretilir. Rize çevresinin bol yağışlı ve nemli iklimi anason tarımına uygun değildir."
     },
     {
         question: "Sulama projeleriyle üretimi artan ürün ve bu üretimin yoğunlaştığı yerler için aşağıdakilerden hangisi doğrudur?",
@@ -1428,7 +1428,7 @@ window.cografya_19_sorulari = [
         options: [
             "A) Aspir — kısa dönem, kuraklığa dayanıklı, yağ bitkisi",
             "B) Şeker pancarı — çabuk bozulur, tesis yanında üretilir",
-            "C) Pamuk — kısa yetişme dönemi, uzun yaz kuraklığı",
+            "C) Pamuk — uzun yetişme dönemi, olgunlaşmada uzun yaz kuraklığı",
             "D) Patates — volkanik arazi, sanayi ham maddesi",
             "E) Şeker pancarı — Güneydoğu Anadolu'da kuraklık nedeniyle en fazla üretilir"
         ],

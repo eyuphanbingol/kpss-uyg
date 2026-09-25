@@ -61,7 +61,7 @@ window.tarih_7_sorulari = [
         explanation: "Pozitif bilimlerin azaltılması bilimsel gelişmeyi yavaşlatmıştır."
     },
     {
-        question: "Sık padişah değişikliklerinin aşağıdakilerden hangisinin artmasına yol açtığı notta özellikle belirtilmiştir?",
+        question: "Sık padişah değişikliklerinin aşağıdakilerden hangisinin artmasına yol açtığı söylenebilir?",
         options: [
             "A) Tımar gelirleri",
             "B) Cülus bahşişi",
@@ -181,16 +181,16 @@ window.tarih_7_sorulari = [
         explanation: "Podolya ve Kamaniçe Kalesi batıda alınan son toprak parçasıdır."
     },
     {
-    question: "1596 Haçova Meydan Muharebesi'nin ardından aşağıdaki kalelerden hangisi Osmanlı Devleti tarafından alınmamıştır?",
+    question: "Aşağıdaki kalelerden hangisi 1593-1606 Osmanlı-Avusturya Savaşları sırasında Osmanlı Devleti tarafından alınmamıştır?",
     options: [
         "A) Eğri",
         "B) Estergon",
         "C) Kanije",
         "D) Uyvar",
-        "E) Hiçbiri"
+        "E) Yanıkkale"
     ],
     correctAnswerIndex: 3,
-    explanation: "Haçova Meydan Muharebesi sonrasında Eğri, Estergon ve Kanije kaleleri alınmıştır. Uyvar daha sonraki dönemde fethedilmiştir."
+    explanation: "Yanıkkale 1594'te, Eğri 1596'da, Kanije 1600'de, Estergon ise 1605'te alınmıştır. Uyvar Kalesi ise bu savaşlar sırasında değil, 1663'te Köprülü Fazıl Ahmet Paşa tarafından fethedilmiştir."
 },
 {
     question: "'Eğri Fatihi' unvanıyla anılan Osmanlı padişahı aşağıdakilerden hangisidir?",
@@ -405,7 +405,7 @@ window.tarih_7_sorulari = [
         "E) Cülus bahşişi için padişah değişikliklerinin desteklenmesi"
     ],
     correctAnswerIndex: 3,
-    explanation: "Notta tımar sisteminin bozulması genel nedenler arasında yer alsa da İstanbul isyanlarının doğrudan nedeni olarak verilmemiştir."
+    explanation: "Tımar sistemi XVII. yüzyılda kaldırılmamış, yalnızca bozulmuştur; bu nedenle İstanbul isyanlarının nedeni olarak gösterilemez. Yeniçerilerin evlenmesi ve ticaretle uğraşması, devşirme kanununa aykırı asker alınması ve cülus bahşişi için padişah değişikliklerinin desteklenmesi ise bu isyanların başlıca nedenleridir."
 },
 {
     question: "XVII. yüzyılda yaşanan İstanbul isyanları sonucunda aşağıdakilerden hangisi meydana gelmiştir?",
@@ -420,7 +420,7 @@ window.tarih_7_sorulari = [
     explanation: "İstanbul isyanlarının sonunda merkezi otoritenin bozulması devam etmiş, can ve mal güvenliği kalmamıştır."
 },
 {
-    question: "Aşağıdaki olaylardan hangisi İstanbul isyanları kapsamında değerlendirilir?",
+    question: "Aşağıdaki olaylardan hangisi XVII. yüzyıl İstanbul isyanları kapsamında değerlendirilir?",
     options: [
         "A) Büyük Kaçgun",
         "B) II. Osman'ın şehit edilmesi",
@@ -429,7 +429,7 @@ window.tarih_7_sorulari = [
         "E) Celali İsyanları"
     ],
     correctAnswerIndex: 1,
-    explanation: "II. Osman'ın öldürülmesi XVII. yüzyıl İstanbul isyanlarının en önemli olaylarından biridir."
+    explanation: "II. Osman (Genç Osman), 1622'de yeniçerilerin İstanbul'da çıkardığı ayaklanma sonucunda tahttan indirilerek öldürülmüştür. Patrona Halil İsyanı 1730'da, Kabakçı Mustafa İsyanı 1807'de çıkmış; Celali İsyanları ve Büyük Kaçgun ise Anadolu ile ilgilidir."
 },
 {
     question: "IV. Mehmet döneminde yaklaşık 30 devlet adamının öldürüldüğü olay aşağıdakilerden hangisidir?",
@@ -496,12 +496,12 @@ window.tarih_7_sorulari = [
     options: [
         "A) Kalenderoğlu",
         "B) Gürcü Nebi",
-        "C) Karayazı",
+        "C) Karayazıcı",
         "D) Katırcıoğlu",
         "E) Patrona Halil"
     ],
     correctAnswerIndex: 4,
-    explanation: "Patrona Halil İsyanı Lale Devri'nde meydana gelmiştir."
+    explanation: "Kalenderoğlu, Gürcü Nebi, Karayazıcı ve Katırcıoğlu Celali İsyanlarının önderlerindendir. Patrona Halil ise 1730'da Lale Devri'ni sona erdiren İstanbul isyanının lideridir."
 },
 {
     question: "Aşağıdakilerden hangisi tımar sisteminin bozulma nedenlerinden biri değildir?",
@@ -548,10 +548,10 @@ window.tarih_7_sorulari = [
         "E) Taşrada yönetim boşluklarının oluşması"
     ],
     correctAnswerIndex: 3,
-    explanation: "Notta özellikle eyalet isyanlarının Fransız İhtilali'nin yaydığı ulusçuluk hareketiyle ilgisinin olmadığı belirtilmiştir."
+    explanation: "Fransız İhtilali 1789'da gerçekleşmiştir; bu nedenle XVII. yüzyıl eyalet isyanlarında milliyetçilik düşüncesinin etkisi olamaz. Bu isyanlar merkezî otoritenin zayıflaması, taşrada yönetim boşlukları oluşması ve yöneticilerin halka kötü davranması gibi nedenlerden doğmuştur."
 },
 {
-    question: "Genç Osman'ın tahttan indirilmesi üzerine isyan eden Abaza Mehmet Paşa'ya isyanı bastırmak amacıyla hangi görev verilmiştir?",
+    question: "Genç Osman'ın öldürülmesi üzerine ayaklanan Abaza Mehmet Paşa, isyanın sona ermesinin ardından affedilerek aşağıdaki görevlerden hangisine atanmıştır?",
     options: [
         "A) Bağdat Valiliği",
         "B) Erzurum Valiliği",
@@ -559,8 +559,8 @@ window.tarih_7_sorulari = [
         "D) Bosna Valiliği",
         "E) Şam Valiliği"
     ],
-    correctAnswerIndex: 1,
-    explanation: "Abaza Mehmet Paşa'ya Erzurum Valiliği verilerek isyan sona erdirilmiştir."
+    correctAnswerIndex: 3,
+    explanation: "Erzurum Beylerbeyi iken Genç Osman'ın öldürülmesini bahane ederek ayaklanan Abaza Mehmet Paşa, 1628'de Hüsrev Paşa'ya teslim olmuş, IV. Murat tarafından affedilerek Bosna valiliğine atanmış ve isyan böylece sona ermiştir."
 },
 {
     question: "Osmanlı Devleti'nde medrese öğrencilerine verilen ad aşağıdakilerden hangisidir?",
@@ -647,7 +647,7 @@ window.tarih_7_sorulari = [
     explanation: "Tarhuncu Ahmet Paşa devletin ilk denk bütçelerinden biri kabul edilen Tarhuncu Bütçesi'ni hazırlamıştır."
 },
 {
-    question: "Tarhuncu Ahmet Paşa'nın aşağıdaki uygulamalarından hangisi notta yer almaktadır?",
+    question: "Aşağıdakilerden hangisi Tarhuncu Ahmet Paşa'nın uygulamalarından biridir?",
     options: [
         "A) Devlet alacaklarını kişi ve kurumlardan tahsil etmiştir.",
         "B) Yeniçeri Ocağı'nı kaldırmıştır.",
@@ -680,7 +680,7 @@ window.tarih_7_sorulari = [
         "E) II. Mustafa"
     ],
     correctAnswerIndex: 2,
-    explanation: "Notta Genç Osman'ın Osmanlı tarihinde ilk sosyal yönden ıslahat yapan padişah olduğu belirtilmiştir."
+    explanation: "II. Osman (Genç Osman), saray dışından evlenmesi ve ilmiye sınıfının ayrıcalıklarını sınırlaması gibi uygulamalarıyla sosyal alanda ıslahat yapan ilk Osmanlı padişahı kabul edilir."
 },
 {
     question: "Aşağıdakilerden hangisi Genç Osman'ın gerçekleştirdiği veya gerçekleştirmeyi planladığı uygulamalardan biri değildir?",
@@ -754,7 +754,7 @@ window.tarih_7_sorulari = [
     explanation: "Osmanlı tarihinde ilk defa bir şeyhülislam IV. Murat döneminde idam edilmiştir."
 },
 {
-    question: "IV. Murat döneminde devlet yönetimi hakkında risale (layiha) sunan kişiler aşağıdakilerden hangisidir?",
+    question: "XVII. yüzyılda devlet yönetimindeki bozukluklarla ilgili ıslahat layihası (risale) hazırlayan isimler aşağıdakilerden hangisinde birlikte verilmiştir?",
     options: [
         "A) Evliya Çelebi - Nefi",
         "B) Tarhuncu Ahmet Paşa - Koçi Bey",
@@ -763,7 +763,7 @@ window.tarih_7_sorulari = [
         "E) Koçi Bey - Katip Çelebi"
     ],
     correctAnswerIndex: 4,
-    explanation: "Koçi Bey ve Katip Çelebi, IV. Murat'a devletin sorunlarıyla ilgili risaleler sunmuştur."
+    explanation: "Koçi Bey, 1631'de IV. Murat'a sunduğu risalesinde devletin bozulma nedenlerini anlatmış; Katip Çelebi de Düsturü'l-Amel li-Islahi'l-Halel adlı layihasında mali ve idari bozuklukların çözüm yollarını ele almıştır. Nefi ve Veysi şair, Evliya Çelebi seyyah, Tarhuncu Ahmet Paşa ise bütçe çalışmasıyla tanınan sadrazamdır."
 },
 {
     question: "Aşağıdakilerden hangisi IV. Murat döneminde ilk kez uygulamaya konulan yasaklardan biridir?",
@@ -778,7 +778,7 @@ window.tarih_7_sorulari = [
     explanation: "IV. Murat döneminde ilk kez gece sokağa çıkma yasağı uygulanmıştır."
 },
 {
-    question: "IV. Murat döneminde getirilen içki ve tütün yasağının temel amacı aşağıdakilerden hangisidir?",
+    question: "IV. Murat'ın tütün kullanımını yasaklamasının temel gerekçesi aşağıdakilerden hangisidir?",
     options: [
         "A) Vergi gelirlerini artırmak",
         "B) Büyük İstanbul yangınlarını önlemek",
@@ -787,10 +787,10 @@ window.tarih_7_sorulari = [
         "E) Yeniçeri sayısını azaltmak"
     ],
     correctAnswerIndex: 1,
-    explanation: "Notta bu yasakların özellikle Büyük İstanbul yangınlarını önlemek amacıyla uygulandığı belirtilmiştir."
+    explanation: "1633'te Cibali'de çıkan ve İstanbul'un büyük bölümünü yakan yangının tütün içilmesinden kaynaklandığı düşünüldüğü için IV. Murat tütün kullanımını yasaklamıştır."
 },
 {
-    question: "Aşağıdakilerden hangisi notta IV. Murat dönemi önemli isimleri arasında verilmemiştir?",
+    question: "Aşağıdakilerden hangisi IV. Murat dönemi ile ilgili isimlerden biri değildir?",
     options: [
         "A) Evliya Çelebi",
         "B) Katip Çelebi",
@@ -799,7 +799,7 @@ window.tarih_7_sorulari = [
         "E) Piri Reis"
     ],
     correctAnswerIndex: 4,
-    explanation: "Notta Evliya Çelebi, Katip Çelebi, Nefi, Veysi, Koçi Bey ve Azmizade Haleti yer almaktadır."
+    explanation: "Evliya Çelebi, Katip Çelebi, Koçi Bey ve Azmizade Haleti IV. Murat döneminin öne çıkan isimlerindendir. Piri Reis ise XVI. yüzyılda, Kanuni Sultan Süleyman döneminde yaşamış bir denizcidir."
 },
 {
     question: "Osmanlı Devleti'nde veraset sisteminde yapılan son değişiklik olan 'Ekber ve Erşed Sistemi' hangi padişah döneminde uygulanmaya başlanmıştır?",
@@ -814,7 +814,7 @@ window.tarih_7_sorulari = [
     explanation: "Ekber ve Erşed Sistemi I. Ahmet döneminde kabul edilmiştir."
 },
 {
-    question: "Aşağıdakilerden hangisi sancağa çıkma sistemini kaldıran son padişahtır?",
+    question: "Şehzadeliği döneminde sancakta görev yapan son Osmanlı padişahı aşağıdakilerden hangisidir?",
     options: [
         "A) II. Osman",
         "B) I. Ahmet",
@@ -823,7 +823,7 @@ window.tarih_7_sorulari = [
         "E) II. Bayezid"
     ],
     correctAnswerIndex: 2,
-    explanation: "Notta sancağa çıkma sistemini kaldıran ve sancağa çıkan son padişahın III. Mehmet olduğu belirtilmiştir."
+    explanation: "Şehzadelerin sancağa gönderilerek yönetim tecrübesi kazanması uygulaması III. Mehmet ile sona ermiştir. III. Mehmet, şehzadeliğinde Manisa sancağında görev yapan son padişahtır; ondan sonraki padişahlar sancağa çıkmamıştır."
 },
 {
     question: "Kafes usulünün uygulanmaya başlanmasının ardından tahta çıkan ilk Osmanlı padişahı aşağıdakilerden hangisidir?",
@@ -834,8 +834,8 @@ window.tarih_7_sorulari = [
         "D) IV. Murat",
         "E) I. Mustafa"
     ],
-    correctAnswerIndex: 1,
-    explanation: "Notta kafes usulünden sonra tahta çıkan ilk padişahın I. Ahmet olduğu belirtilmiştir."
+    correctAnswerIndex: 4,
+    explanation: "Kafes usulü I. Ahmet döneminde başlamış, kardeşi Mustafa öldürülmeyip sarayda kafes hayatına alınmıştır. Bu usulün uygulanmaya başlamasının ardından tahta çıkan ilk padişah, 1617'de kafesten çıkarılarak tahta geçirilen I. Mustafa olmuştur."
 },
 {
     question: "Köprülü Mehmet Paşa'nın sadrazamlığa gelirken öne sürdüğü durum aşağıdakilerden hangisidir?",
@@ -895,7 +895,7 @@ window.tarih_7_sorulari = [
         "E) Duraklama Dönemi içinde geçici bir yükseliş yaşanmıştır."
     ],
     correctAnswerIndex: 4,
-    explanation: "Notta Köprülüler Dönemi'nin duraklama içerisinde kısa süreli bir yükseliş dönemi yaşattığı belirtilmiştir."
+    explanation: "Köprülüler Dönemi'nde Girit'in fethinin tamamlanması, Uyvar'ın alınması ve maliyenin düzeltilmesi gibi başarılar elde edilmiştir. Bu başarılar Duraklama Dönemi içinde kısa süreli bir toparlanma sağlamış, ancak dönemi sona erdirmemiştir."
 },{
     question: "Aşağıdaki gelişmelerden hangisi Osmanlı Devleti'nin Duraklama Dönemi'ne girmesinde doğrudan etkili olan ekonomik nedenlerden biridir?",
     options: [
@@ -1026,7 +1026,7 @@ window.tarih_7_sorulari = [
         "E) Büyük Kaçgun"
     ],
     correctAnswerIndex: 4,
-    explanation: "Notta bu olayın adı 'Büyük Kaçgun' olarak verilmiştir."
+    explanation: "Celali İsyanları yüzünden can ve mal güvenliği kalmayan Anadolu köylüsü, 1603-1610 yılları arasında topraklarını bırakarak büyük şehirlere göç etmiştir. Bu göç hareketi Büyük Kaçgun olarak adlandırılır."
 },
 {
     question: "Aşağıdakilerden hangisi Celali İsyanlarının sonuçlarından biri değildir?",
@@ -1109,7 +1109,7 @@ window.tarih_7_sorulari = [
         "E) Avrupa'nın Osmanlı himayesine girdiğinin"
     ],
     correctAnswerIndex: 2,
-    explanation: "Notta savaşların uzun sürmesi Duraklama Dönemi'nin özelliklerinden biridir."
+    explanation: "Girit'in fethi 1645'te başlamış, ada ancak 1669'da tamamen alınabilmiştir. Bir adanın fethinin 24 yıl sürmesi, Osmanlı Devleti'nin askeri üstünlüğünü yitirdiğini ve savaşların uzamaya başladığını gösterir."
 },
 {
     question: "Kasr-ı Şirin Antlaşması ile ilgili aşağıdaki bilgilerden hangisi yanlıştır?",
@@ -1136,16 +1136,16 @@ window.tarih_7_sorulari = [
     explanation: "1672 Bucaş Antlaşması ile Osmanlı Devleti batıda en geniş sınırlarına ulaşmıştır."
 },
 {
-    question: "Karlofça Antlaşması sonrasında aşağıdaki devletlerden hangisi Osmanlı Devleti'nden toprak almamıştır?",
+    question: "Karlofça Antlaşması ile aşağıdaki devletlerden hangisi Osmanlı Devleti'nden toprak almıştır?",
     options: [
-        "A) Avusturya",
-        "B) Lehistan",
+        "A) Rusya",
+        "B) Fransa",
         "C) Venedik",
-        "D) Rusya",
-        "E) Hiçbiri"
+        "D) İngiltere",
+        "E) İsveç"
     ],
-    correctAnswerIndex: 3,
-    explanation: "Rusya Azak Kalesi'ni 1700 İstanbul Antlaşması ile almıştır."
+    correctAnswerIndex: 2,
+    explanation: "1699 Karlofça Antlaşması ile Avusturya Macaristan ve Erdel'i, Venedik Mora ile Dalmaçya kıyılarını, Lehistan ise Podolya ve Ukrayna'yı almıştır. Rusya, Azak Kalesi'ni Karlofça ile değil 1700 İstanbul Antlaşması ile elde etmiştir; Fransa, İngiltere ve İsveç ise bu antlaşmayla toprak kazanmamıştır."
 },
 {
     question: "XVII. yüzyıl isyanları dikkate alındığında aşağıdaki eşleştirmelerden hangisi doğrudur?",

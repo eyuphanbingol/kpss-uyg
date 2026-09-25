@@ -205,16 +205,16 @@ window.cografya_1_sorulari = [
     },
 
     {
-        question: "Aynı boylam üzerinde bulunan merkezlerde aşağıdakilerden hangisinin 21 Mart ve 23 Eylül tarihlerinde aynı anda gerçekleşmesi beklenir?",
+        question: "Aynı boylam üzerinde, farklı enlemlerde bulunan iki merkezde 21 Mart ve 23 Eylül tarihlerinde aşağıdakilerden hangisinin aynı olması beklenir?",
         options: [
-            "A) Yerel öğle vaktinin",
-            "B) Güneş'in doğuşunun",
-            "C) Yerel saat başlangıcının",
+            "A) Öğle vakti gölge boyunun",
+            "B) Güneş'in doğuş saatinin",
+            "C) Güneş ışınlarının düşme açısının",
             "D) Yıllık sıcaklık ortalamasının",
             "E) Günlük sıcaklık farkının"
         ],
         correctAnswerIndex: 1,
-        explanation: "Aynı boylamdaki merkezlerde yerel öğle vakti yıl boyunca aynıdır. Ekinoks tarihlerinde gece ve gündüz eşit olduğundan aynı boylamdaki merkezlerde Güneş'in doğuş ve batış saatleri de aynı kabul edilir.",
+        explanation: "Ekinoks tarihlerinde Dünya'nın her yerinde gündüz ve gece 12'şer saat sürdüğünden, aynı boylam üzerindeki merkezlerde Güneş aynı yerel saatte doğar. Gölge boyu, Güneş ışınlarının düşme açısı ve sıcaklık değerleri ise enleme bağlı olarak değiştiğinden bu merkezlerde farklıdır.",
         img: "./src/img/konum_boylam_izmit.png?v=1",
         imgAlt: "Aynı boylamdaki merkezler"
     },
@@ -463,7 +463,7 @@ window.cografya_1_sorulari = [
             "A) Gecelerin uzaması",
             "B) Gündüzlerin gecelerden daha uzun hâle gelmesi",
             "C) Güneş ışınlarının geliş açısının küçülmesi",
-            "D) Kuzeye gidildikçe gündüz süresinin uzaması",
+            "D) Kuzeye gidildikçe gündüz süresinin kısalması",
             "E) 21 Aralık'taki en uzun gecenin yeniden yaşanması"
         ],
         correctAnswerIndex: 1,

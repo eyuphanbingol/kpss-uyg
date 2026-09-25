@@ -181,7 +181,7 @@ window.guncel_3_sorulari = [
     "explanation": "Acemoğlu ekonomi ödülündedir."
 },
 {
-    "question": "Türk asıllı Nobel sahipleri arasında aşağıdakilerden hangileri bulunmaktadır? I. Orhan Pamuk II. Aziz Sancar III. Daron Acemoğlu",
+    "question": "Türkiye doğumlu Nobel ödüllü isimler arasında aşağıdakilerden hangileri bulunmaktadır? I. Orhan Pamuk II. Aziz Sancar III. Daron Acemoğlu",
     "options": [
         "A) Yalnız I",
         "B) Yalnız II",
@@ -190,7 +190,7 @@ window.guncel_3_sorulari = [
         "E) I, II ve III"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Üçü de Türk asıllı Nobel sahibidir."
+    "explanation": "Orhan Pamuk 2006'da Nobel Edebiyat, Aziz Sancar 2015'te Nobel Kimya, Daron Acemoğlu ise 2024'te Nobel Ekonomi Ödülü'nü almıştır; üçü de Türkiye doğumludur."
 },
 {
     "question": "Orhan Pamuk hangi yıl Nobel Ödülü kazanmıştır?",
@@ -304,25 +304,25 @@ window.guncel_3_sorulari = [
     "question": "2026 Oscar Ödülleri'nde En İyi Yönetmen ödülünü kim kazanmıştır?",
     "options": [
         "A) Paul Thomas Anderson",
-        "B) Michael B. Jordan",
-        "C) Sean Penn",
-        "D) Conan O'Brien",
-        "E) László Krasznahorkai"
+        "B) Ryan Coogler",
+        "C) Chloé Zhao",
+        "D) Christopher Nolan",
+        "E) Greta Gerwig"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Paul Thomas Anderson."
+    "explanation": "2026'da düzenlenen Oscar Ödülleri'nde En İyi Yönetmen ödülünü 'One Battle After Another' filmiyle Paul Thomas Anderson kazanmıştır."
 },
 {
     "question": "2026 Oscar Ödülleri'nde En İyi Erkek Oyuncu ödülünü kim kazanmıştır?",
     "options": [
-        "A) Sean Penn",
-        "B) Paul Thomas Anderson",
+        "A) Timothée Chalamet",
+        "B) Leonardo DiCaprio",
         "C) Michael B. Jordan",
-        "D) John Clarke",
-        "E) Peter Howitt"
+        "D) Ethan Hawke",
+        "E) Colman Domingo"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "Michael B. Jordan."
+    "explanation": "2026'da düzenlenen Oscar Ödülleri'nde En İyi Erkek Oyuncu ödülünü 'Sinners' filmindeki performansıyla Michael B. Jordan kazanmıştır."
 },
 {
     "question": "2026 Oscar Ödülleri'nde En İyi Kadın Oyuncu ödülünü kim kazanmıştır?",
@@ -339,26 +339,26 @@ window.guncel_3_sorulari = [
 {
     "question": "2026 Oscar Ödülleri'nde En İyi Yardımcı Erkek Oyuncu ödülü aşağıdakilerden hangisine verilmiştir?",
     "options": [
-        "A) Michael B. Jordan",
-        "B) Paul Thomas Anderson",
+        "A) Benicio del Toro",
+        "B) Stellan Skarsgård",
         "C) Sean Penn",
-        "D) Conan O'Brien",
-        "E) John Martinis"
+        "D) Jacob Elordi",
+        "E) Paul Mescal"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "Sean Penn."
+    "explanation": "2026'da düzenlenen Oscar Ödülleri'nde En İyi Yardımcı Erkek Oyuncu ödülü, 'One Battle After Another' filmindeki rolüyle Sean Penn'e verilmiştir."
 },
 {
     "question": "2026 Oscar Ödülleri'nde En İyi Yardımcı Kadın Oyuncu ödülünü kim kazanmıştır?",
     "options": [
         "A) Jessie Buckley",
         "B) Amy Madigan",
-        "C) María Corina Machado",
-        "D) László Krasznahorkai",
-        "E) Susumu Kitagawa"
+        "C) Emily Blunt",
+        "D) Teyana Taylor",
+        "E) Ariana Grande"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Amy Madigan."
+    "explanation": "2026'da düzenlenen Oscar Ödülleri'nde En İyi Yardımcı Kadın Oyuncu ödülünü 'Weapons' filmindeki performansıyla Amy Madigan kazanmıştır."
 },
 {
     "question": "2026 Oscar Ödülleri'nde En İyi Animasyon ödülünü kazanan yapım aşağıdakilerden hangisidir?",
@@ -385,7 +385,7 @@ window.guncel_3_sorulari = [
     "explanation": "Sentimental Value – Norveç."
 },
 {
-    "question": "Aşağıdakilerden hangisi KPSS açısından takip edilmesi gereken uluslararası kültür-sanat ödüllerinden biri değildir?",
+    "question": "Aşağıdakilerden hangisi bilim, sanat veya basın alanında verilen bir ödül değildir?",
     "options": [
         "A) Nobel",
         "B) Oscar",
@@ -394,7 +394,7 @@ window.guncel_3_sorulari = [
         "E) Çelik Kubbe"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Çelik Kubbe hava savunma projesidir."
+    "explanation": "Nobel bilim, edebiyat ve barış; Oscar sinema; Grammy müzik; Pulitzer ise gazetecilik ve edebiyat alanlarında verilen ödüllerdir. Çelik Kubbe ise bir ödül değil, Türkiye'nin katmanlı hava savunma sistemi projesidir."
 },
 {
     "question": "Aşağıdaki ödül–alan eşleştirmelerinden hangisi yanlıştır?",
@@ -403,10 +403,10 @@ window.guncel_3_sorulari = [
         "B) Oscar — Sinema",
         "C) Grammy — Müzik",
         "D) Pulitzer — Gazetecilik ve edebiyat başta olmak üzere çeşitli alanlar",
-        "E) Oscar — Uluslararası ekonomik kuruluş"
+        "E) Altın Palmiye — Müzik"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Oscar sinema ödülüdür."
+    "explanation": "Altın Palmiye, Cannes Film Festivali'nde verilen bir sinema ödülüdür; müzik alanında verilmez. Diğer eşleştirmeler doğrudur."
 },
 {
     "question": "UNESCO'nun açılımı aşağıdakilerden hangisidir?",
@@ -553,7 +553,7 @@ window.guncel_3_sorulari = [
     "explanation": "2025 Antep İşi."
 },
 {
-    "question": "2024 yılında UNESCO Somut Olmayan Kültürel Miras kapsamında verilen unsurlar aşağıdakilerden hangisidir?",
+    "question": "2024 yılında UNESCO Somut Olmayan Kültürel Miras listeleri kapsamında kayda geçen unsurlar aşağıdakilerin hangisinde birlikte verilmiştir?",
     "options": [
         "A) Antep İşi ve Hüsn-i Hat",
         "B) Geleneksel Gayda/Tulum ve Nevruz",
@@ -562,10 +562,10 @@ window.guncel_3_sorulari = [
         "E) Çini ve Lavaş"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Gayda/Tulum ve Nevruz."
+    "explanation": "2024'te Geleneksel Gayda/Tulum kültürü Temsili Liste'ye kaydedilmiştir. Aynı yıl, ilk kez 2009'da kaydedilen Nevruz'un çok uluslu dosyası genişletilerek yeniden kayda geçmiştir. Türk kahvesi 2013, Ebru 2014, minyatür sanatı 2020, hüsn-i hat ise 2021 yılına aittir."
 },
 {
-    "question": "2023 yılıyla ilgili aşağıdaki eşleştirmelerden hangisi doğrudur?",
+    "question": "Aşağıdakilerden hangisi 2023 yılında UNESCO İnsanlığın Somut Olmayan Kültürel Mirası Temsili Listesi'ne kaydedilmiştir?",
     "options": [
         "A) Antep İşi",
         "B) Türk kahvesi",
@@ -574,7 +574,7 @@ window.guncel_3_sorulari = [
         "E) Kırkpınar"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "2023'te Balaban/Mey vardır."
+    "explanation": "Balaban/Mey yapımcılığı ve icra sanatı, 2023'te Türkiye ile Azerbaycan'ın ortak dosyasıyla Temsili Liste'ye kaydedilmiştir. Türk kahvesi 2013, Kırkpınar Yağlı Güreşleri 2010, hüsn-i hat ise 2021'de listeye girmiştir."
 },
 {
     "question": "Aşağıdakilerden hangisi 2023 yılında verilen UNESCO Somut Olmayan Kültürel Miras unsurlarından biridir?",
@@ -820,13 +820,13 @@ window.guncel_3_sorulari = [
     "question": "Aşağıdaki bilgilerden hangisi yanlıştır?",
     "options": [
         "A) 2025 — Antep İşi",
-        "B) 2024 — Nevruz",
+        "B) 2024 — Geleneksel Gayda/Tulum",
         "C) 2023 — Sedef kakma",
         "D) 2022 — Çay kültürü",
         "E) 2021 — Ebru"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "2021 Hüsn-i Hat; Ebru 2014'tür."
+    "explanation": "Ebru 2014'te UNESCO Temsili Listesi'ne kaydedilmiştir; 2021 yılının unsuru ise hüsn-i hattır. Diğer eşleştirmeler doğrudur."
 },
 {
     "question": "Aşağıdaki UNESCO eşleştirmelerinden hangisi doğrudur?",

@@ -6,7 +6,8 @@ window.turkce_13_sorulari = [
         "A) Özne",
         "B) Yüklem",
         "C) Nesne",
-        "D) Tümleç"
+        "D) Tümleç",
+        "E) Ara söz"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Yüklem yargı bildirir; cümle yüklemsiz olmaz."
@@ -14,34 +15,37 @@ window.turkce_13_sorulari = [
 {
     "question": "“Ali geldi.” cümlesinde “geldi” hangi tür yüklemdir?",
     "options": [
-        "A) Ad yüklem",
-        "B) Sıfat yüklem",
-        "C) Fiilimsi yüklem",
-        "D) Fiil yüklem"
+        "A) Edat yüklem",
+        "B) Ad yüklem",
+        "C) Sıfat yüklem",
+        "D) Fiilimsi yüklem",
+        "E) Fiil yüklem"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "geldi → fiil yüklem."
 },
 {
     "question": "“Hava sıcak.” cümlesinde “sıcak” hangi tür yüklemdir?",
     "options": [
-        "A) Fiil yüklem",
-        "B) Ad yüklem",
-        "C) Zarf yüklem",
-        "D) Edat yüklem"
+        "A) Fiilimsi yüklem",
+        "B) Fiil yüklem",
+        "C) Ad yüklem",
+        "D) Zarf yüklem",
+        "E) Edat yüklem"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "sıcak → ad yüklem (ek fiille yüklem olmuş)."
 },
 {
     "question": "Yüklemin bildirdiği işi yapan temel öge hangisidir?",
     "options": [
-        "A) Nesne",
-        "B) Zarf tümleci",
-        "C) Dolaylı tümleç",
-        "D) Özne"
+        "A) Ara söz",
+        "B) Nesne",
+        "C) Zarf tümleci",
+        "D) Dolaylı tümleç",
+        "E) Özne"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Özne: işi yapan/olan; kim, ne? soruları."
 },
 {
@@ -50,7 +54,8 @@ window.turkce_13_sorulari = [
         "A) Geldi",
         "B) Geldi Ali",
         "C) Ali",
-        "D) Yoktur"
+        "D) Gizli özne (o)",
+        "E) Yoktur"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Kim geldi? Ali → gerçek özne."
@@ -60,30 +65,33 @@ window.turkce_13_sorulari = [
     "options": [
         "A) Siz",
         "B) O",
-        "C) Biz",
-        "D) Onlar"
+        "C) Sen",
+        "D) Biz",
+        "E) Onlar"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "-ler III. çoğul → onlar gizli özne."
 },
 {
     "question": "“Camlar silindi.” cümlesinde “camlar” hangi ögedir?",
     "options": [
-        "A) Gerçek özne",
-        "B) Gizli özne",
-        "C) Sözde özne",
-        "D) Nesne"
+        "A) Ara söz",
+        "B) Gerçek özne",
+        "C) Gizli özne",
+        "D) Sözde özne",
+        "E) Nesne"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Edilgen fiilde işi yapan değil, etkilenen → sözde özne."
 },
 {
     "question": "“Masal anlattı.” cümlesinde “masal” nedir?",
     "options": [
         "A) Belirtisiz nesne",
-        "B) Belirtili nesne",
-        "C) Dolaylı tümleç",
-        "D) Zarf tümleci"
+        "B) Yüklem",
+        "C) Belirtili nesne",
+        "D) Dolaylı tümleç",
+        "E) Zarf tümleci"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Ne anlattı? (ek yok) → belirtisiz nesne."
@@ -94,7 +102,8 @@ window.turkce_13_sorulari = [
         "A) Belirtili nesne",
         "B) Belirtisiz nesne",
         "C) Özne",
-        "D) Zarf tümleci"
+        "D) Zarf tümleci",
+        "E) Ara söz"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Neyi? -ı eki → belirtili nesne."
@@ -105,7 +114,8 @@ window.turkce_13_sorulari = [
         "A) Kim, ne",
         "B) Nasıl, ne zaman",
         "C) Neye, neyde, neyden, kime, kimde, kimden",
-        "D) Neyi, kimi"
+        "D) Neyi, neyle",
+        "E) Neyi, kimi"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Yer tamlayıcısı soruları."
@@ -113,34 +123,37 @@ window.turkce_13_sorulari = [
 {
     "question": "“Kitabı arkadaşıma verdim.” cümlesinde “arkadaşıma” nedir?",
     "options": [
-        "A) Belirtili nesne",
-        "B) Zarf tümleci",
-        "C) Dolaylı tümleç",
-        "D) Özne"
+        "A) Belirtisiz nesne",
+        "B) Belirtili nesne",
+        "C) Zarf tümleci",
+        "D) Dolaylı tümleç",
+        "E) Özne"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Kime verdim? → yönelme, dolaylı tümleç."
 },
 {
     "question": "“Tepelerde kar var.” cümlesinde “tepelerde” nedir?",
     "options": [
         "A) Zarf tümleci",
-        "B) Özne",
-        "C) Nesne",
-        "D) Dolaylı tümleç"
+        "B) Belirtisiz nesne",
+        "C) Özne",
+        "D) Nesne",
+        "E) Dolaylı tümleç"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Nerede? -de → dolaylı tümleç."
 },
 {
     "question": "“Yıllar önce gelmişti.” cümlesinde “yıllar önce” nedir?",
     "options": [
-        "A) Zarf tümleci",
-        "B) Dolaylı tümleç",
-        "C) Belirtili nesne",
-        "D) Özne"
+        "A) Belirtisiz nesne",
+        "B) Zarf tümleci",
+        "C) Dolaylı tümleç",
+        "D) Belirtili nesne",
+        "E) Özne"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "Ne zaman? → zaman zarf tümleci."
 },
 {
@@ -148,10 +161,11 @@ window.turkce_13_sorulari = [
     "options": [
         "A) Kim, ne",
         "B) Nerede, nereye",
-        "C) Neyi, kimi",
-        "D) Ne zaman, nasıl, ne kadar, neden, niçin"
+        "C) Kime, kimden",
+        "D) Neyi, kimi",
+        "E) Ne zaman, nasıl, ne kadar, neden, niçin"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Zaman, durum, miktar, neden zarf tümleçleri."
 },
 {
@@ -159,21 +173,23 @@ window.turkce_13_sorulari = [
     "options": [
         "A) Özne",
         "B) Nesne",
-        "C) Zarf tümleci",
-        "D) Dolaylı tümleç"
+        "C) Ara söz",
+        "D) Zarf tümleci",
+        "E) Dolaylı tümleç"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Neden? → neden zarf tümleci."
 },
 {
     "question": "Edat tümleçleri hangi öge içerisinde değerlendirilir?",
     "options": [
         "A) Özne",
-        "B) Nesne",
-        "C) Zarf tümleci",
-        "D) Dolaylı tümleç"
+        "B) Ara söz",
+        "C) Nesne",
+        "D) Zarf tümleci",
+        "E) Dolaylı tümleç"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Senin için → edat tümleci, zarf tümleci içinde."
 },
 {
@@ -182,7 +198,8 @@ window.turkce_13_sorulari = [
         "A) Zarf tümleci (edat tümleci)",
         "B) Dolaylı tümleç",
         "C) Nesne",
-        "D) Özne"
+        "D) Özne",
+        "E) Belirtisiz nesne"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Edat tümleci → zarf tümleci."
@@ -192,8 +209,9 @@ window.turkce_13_sorulari = [
     "options": [
         "A) Yüklemi",
         "B) Özneyi",
-        "C) Nesneyi",
-        "D) Zarf tümlecini"
+        "C) Dolaylı tümleci",
+        "D) Nesneyi",
+        "E) Zarf tümlecini"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Ali'yi açıklayan ara söz → özne."
@@ -201,54 +219,59 @@ window.turkce_13_sorulari = [
 {
     "question": "“Sanırım, yarın gelecek.” cümlesinde “sanırım” nedir?",
     "options": [
-        "A) Özne",
-        "B) Cümle dışı unsur",
-        "C) Nesne",
-        "D) Yüklem"
+        "A) Dolaylı tümleç",
+        "B) Özne",
+        "C) Cümle dışı unsur",
+        "D) Nesne",
+        "E) Yüklem"
     ],
-    "correctAnswerIndex": 1,
-    "explanation": "Ara bölüm cümle dışı unsur olabilir (dikkat kutusu)."
+    "correctAnswerIndex": 2,
+    "explanation": "“Sanırım” sözü yüklemle doğrudan bağlantılı değildir ve cümlenin temel yargısını kurmaz; ögelere ayırmada hiçbir ögeye girmeyen cümle dışı unsurdur."
 },
 {
     "question": "Tamlama, deyim ve söz öbekleri ögelere ayrılırken nasıl değerlendirilir?",
     "options": [
-        "A) Sözcüklerine ayrılır.",
-        "B) Özne yapılır.",
-        "C) Yükleme dönüştürülür.",
-        "D) Bölünmez."
+        "A) Yalnız deyimler bölünür.",
+        "B) Sözcüklerine ayrılır.",
+        "C) Özne yapılır.",
+        "D) Yükleme dönüştürülür.",
+        "E) Bölünmez."
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Ali'nin kalemi → tek öge; bölünmez."
 },
 {
     "question": "Fiil cümlesinde vurgu genellikle nerededir?",
     "options": [
         "A) Yüklemde",
-        "B) Yüklemden hemen önceki ögede",
-        "C) Cümle başında",
-        "D) Nesnede"
+        "B) Dolaylı tümleçte",
+        "C) Yüklemden hemen önceki ögede",
+        "D) Cümle başında",
+        "E) Nesnede"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Fiil cümlesinde yüklemden önceki öge vurgulanır."
 },
 {
     "question": "“Bu kitabı Ali dün okudu.” cümlesinde vurgu hangi ögededir?",
     "options": [
-        "A) Bu kitabı",
-        "B) Ali",
-        "C) Dün",
-        "D) Okudu"
+        "A) Cümlede vurgu yoktur",
+        "B) Bu kitabı",
+        "C) Ali",
+        "D) Dün",
+        "E) Okudu"
     ],
-    "correctAnswerIndex": 2,
-    "explanation": "Yüklemden hemen önce: dün → vurgulu (kritik kutu)."
+    "correctAnswerIndex": 3,
+    "explanation": "Kurallı cümlede vurgu yükleme en yakın ögededir; burada yüklemden hemen önce gelen “dün” zarf tümleci vurguludur."
 },
 {
     "question": "Ad cümlesinde vurgu nerededir?",
     "options": [
         "A) Yüklemde",
-        "B) Öznededir",
-        "C) Nesnede",
-        "D) Zarf tümlecinde"
+        "B) Ara sözde",
+        "C) Öznededir",
+        "D) Nesnede",
+        "E) Zarf tümlecinde"
     ],
     "correctAnswerIndex": 0,
     "explanation": "En güzel çiçek güldür → vurgu yüklemdedir."
@@ -257,9 +280,10 @@ window.turkce_13_sorulari = [
     "question": "“En güzel çiçek güldür.” cümlesinde vurgu hangi ögededir?",
     "options": [
         "A) Güldür",
-        "B) En güzel çiçek",
-        "C) En",
-        "D) Çiçek"
+        "B) Cümlede vurgu yoktur",
+        "C) En güzel çiçek",
+        "D) En",
+        "E) Çiçek"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Ad cümlesi → vurgu yüklemdedir."
@@ -267,12 +291,13 @@ window.turkce_13_sorulari = [
 {
     "question": "“Ali mi geldi?” cümlesinde “mi” vurguyu nereye taşır?",
     "options": [
-        "A) Yükleme",
-        "B) Zarf tümlecine",
-        "C) Nesneye",
-        "D) Özneye (mi'den önceki ögeye)"
+        "A) Ara söze",
+        "B) Yükleme",
+        "C) Zarf tümlecine",
+        "D) Nesneye",
+        "E) Özneye (mi'den önceki ögeye)"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "mi vurguyu kendinden önceki ögeye çeker → Ali."
 },
 {
@@ -280,8 +305,9 @@ window.turkce_13_sorulari = [
     "options": [
         "A) Ben",
         "B) Sordum",
-        "C) Mi",
-        "D) Soru"
+        "C) Cümlede vurgu yoktur",
+        "D) Mi",
+        "E) Soru"
     ],
     "correctAnswerIndex": 0,
     "explanation": "mi öznenin yanında → Ben vurgulu."
@@ -292,7 +318,8 @@ window.turkce_13_sorulari = [
         "A) Yüklem",
         "B) Özne",
         "C) Nesne",
-        "D) Hece"
+        "D) Hece",
+        "E) Dolaylı tümleç"
     ],
     "correctAnswerIndex": 3,
     "explanation": "Ögeler: yüklem, özne, nesne, dolaylı/zarf tümleci, cümle dışı."
@@ -303,7 +330,8 @@ window.turkce_13_sorulari = [
         "A) Edilgende camlar gerçek öznedir.",
         "B) Gizli özne cümlede görünür.",
         "C) Edilgende camlar sözde öznedir.",
-        "D) Sözde özne işi yapandır."
+        "D) Sözde özne işi yapandır.",
+        "E) Gizli özne sözde öznedir."
     ],
     "correctAnswerIndex": 2,
     "explanation": "Camlar silindi → camlar sözde özne."
@@ -314,7 +342,8 @@ window.turkce_13_sorulari = [
         "A) Belirtili nesneye neyi/kimi? sorulur.",
         "B) Belirtili nesneye ne? sorulur.",
         "C) Belirtisiz nesnede -ı eki vardır.",
-        "D) Belirtili nesneye nereye? sorulur."
+        "D) Belirtisiz nesneye kime? sorulur.",
+        "E) Belirtili nesneye nereye? sorulur."
     ],
     "correctAnswerIndex": 0,
     "explanation": "Neyi/kimi? + belirtme eki → belirtili nesne."
@@ -324,41 +353,45 @@ window.turkce_13_sorulari = [
     "options": [
         "A) Toprağa",
         "B) Tutunmuş",
-        "C) Çiçekler",
-        "D) Toprağa tutunmuş"
+        "C) Cümlede özne yoktur",
+        "D) Çiçekler",
+        "E) Toprağa tutunmuş"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Kim tutunmuş? çiçekler."
 },
 {
     "question": "Cümle dışı unsurlara örnek hangisidir?",
     "options": [
-        "A) Ali geldi.",
-        "B) Sanırım, yarın gelecek.",
-        "C) Kitabı okudum.",
-        "D) Evde oturuyor."
+        "A) Yarın geleceğim.",
+        "B) Ali geldi.",
+        "C) Sanırım, yarın gelecek.",
+        "D) Kitabı okudum.",
+        "E) Evde oturuyor."
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Sanırım → cümle dışı unsur."
 },
 {
     "question": "Ara söz özneyi açıklayabilir. Buna örnek hangisidir?",
     "options": [
         "A) Kitabı okudum.",
-        "B) Ali, öğrencimiz, geldi.",
-        "C) Dün geldim.",
-        "D) Evde bekliyor."
+        "B) Kitabı, romanı, okudum.",
+        "C) Ali, öğrencimiz, geldi.",
+        "D) Dün geldim.",
+        "E) Evde bekliyor."
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Ali, öğrencimiz → ara söz, özneyi açıklar."
 },
 {
     "question": "“Bu konu diğerlerinden daha kolaydır.” cümlesinde vurgu nerededir?",
     "options": [
-        "A) Özdede",
+        "A) Öznede",
         "B) Yüklemde",
         "C) Dolaylı tümleçte",
-        "D) Nesnede"
+        "D) Ara sözde",
+        "E) Nesnede"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Ad cümlesi → vurgu yüklemdedir."
@@ -368,8 +401,9 @@ window.turkce_13_sorulari = [
     "options": [
         "A) Özne",
         "B) Zarf tümleci",
-        "C) Nesne",
-        "D) Yüklem"
+        "C) Ara söz",
+        "D) Nesne",
+        "E) Yüklem"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Ne zaman? → zarf tümleci vurgulu."
@@ -377,12 +411,13 @@ window.turkce_13_sorulari = [
 {
     "question": "Cümlenin ögeleri tanımına göre hangisi doğrudur?",
     "options": [
-        "A) Cümlede anlamı taşıyan, birbirini tamamlayan söz gruplarıdır.",
-        "B) Yalnızca fiil cümlelerinde bulunur.",
-        "C) Hece birimlerinden oluşur.",
-        "D) Yalnızca özne ve yüklemden ibarettir."
+        "A) Yalnızca ad cümlelerinde bulunur.",
+        "B) Cümlede anlamı taşıyan, birbirini tamamlayan söz gruplarıdır.",
+        "C) Yalnızca fiil cümlelerinde bulunur.",
+        "D) Hece birimlerinden oluşur.",
+        "E) Yalnızca özne ve yüklemden ibarettir."
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "Ögeler tanımı."
 }
 ];

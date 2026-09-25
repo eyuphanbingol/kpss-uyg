@@ -13,7 +13,7 @@ window.vatandas_12_sorulari = [
         explanation: "İlk nükleer santral Mersin Akkuyu’dur; ikincisi Sinop’ta planlanır."
     },
     {
-        question: "Türk tarihinde ilk rasathane hangi padişah döneminde İstanbul’da yaptırılmıştır?",
+        question: "Osmanlı Devleti’nde ilk rasathane hangi padişah döneminde İstanbul’da kurulmuştur?",
         options: ["A) Fatih Sultan Mehmet", "B) Yavuz Sultan Selim", "C) III. Murat", "D) Kanuni Sultan Süleyman", "E) II. Mahmut"],
         correctAnswerIndex: 2,
         explanation: "1575’te III. Murat, Tophane’de İstanbul Rasathanesi’ni yaptırmıştır."
@@ -27,8 +27,8 @@ window.vatandas_12_sorulari = [
     {
         question: "İlk Türk uçağı aşağıdakilerden hangisidir?",
         options: ["A) Vecihi K-VI", "B) Anka", "C) Nuri Demirağ Nu.D.36", "D) Hürkuş", "E) Mavi Işık"],
-        correctAnswerIndex: 4,
-        explanation: "Çalışma yaprağına göre ilk Türk uçağı Mavi Işık’tır (1979)."
+        correctAnswerIndex: 0,
+        explanation: "İlk Türk tasarımı ve üretimi uçak, Vecihi Hürkuş’un 1925’te İzmir’de yaptığı ve aynı yıl uçurduğu Vecihi K-VI’dır. Nuri Demirağ’ın Nu.D.36 uçağı 1930’ların sonuna, TUSAŞ’ın Anka ve Hürkuş uçakları ise 2000’li yıllara aittir."
     },
     {
         question: "Türkiye’de milletvekilliğine en çok seçilen ve Türkiye Cumhuriyeti’nin ilk başbakanı olan kişi aşağıdakilerden hangisidir?",
@@ -55,10 +55,10 @@ window.vatandas_12_sorulari = [
         explanation: "İstanbul’da ilk yerli tiyatro topluluğunu Güllü Agop kurmuştur."
     },
     {
-        question: "Dünyada kalorifer sisteminin kurulduğu ilk yapı aşağıdakilerden hangisidir?",
+        question: "Kalorifer (merkezî ısıtma) sistemine sahip ilk Türk sarayı aşağıdakilerden hangisidir?",
         options: ["A) Etnografya Müzesi", "B) İshakpaşa Sarayı", "C) II. Bayezid Külliyesi", "D) Dolmabahçe Sarayı", "E) Selimiye Camii"],
         correctAnswerIndex: 1,
-        explanation: "İshakpaşa Sarayı dünyada kalorifer sisteminin kurulduğu ilk yapı kabul edilir."
+        explanation: "Doğubayazıt’taki İshak Paşa Sarayı (18. yüzyıl), duvar ve döşeme içindeki kanallarla ısıtılan merkezî ısıtma (kalorifer) sistemiyle yapılmış ilk Türk sarayı kabul edilir; sarayda ayrıca gelişmiş bir kanalizasyon sistemi de bulunmaktadır."
     },
     {
         question: "Avrupa kupalarında ilk kez final oynayan ve şampiyon olan takım aşağıdakilerden hangisidir?",

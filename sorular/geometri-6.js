@@ -1,7 +1,7 @@
 // sorular/geometri-6.js - Benzerlik
 window.geometri_6_sorulari = [
 {
-    "question": "ABC ~ DEF, benzerlik oranı k=2. |AB|=5 ise |DE|=?",
+    "question": "ABC üçgeni DEF üçgenine benzerdir ve DEF üçgeninin kenar uzunlukları ABC üçgeninin kenar uzunluklarının 2 katıdır. |AB| = 5 birim ise |DE| kaç birimdir?",
     "options": [
         "A) 8",
         "B) 9",
@@ -10,7 +10,7 @@ window.geometri_6_sorulari = [
         "E) 12"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "DE=5·2=10."
+    "explanation": "|DE| = 2·|AB| = 2·5 = 10 birimdir."
 },
 {
     "question": "Benzer üçgenlerde alan oranı k²=9 ise k=?",
@@ -85,7 +85,7 @@ window.geometri_6_sorulari = [
     "explanation": "k²=25/4 → k=5/2."
 },
 {
-    "question": "AAA benzerliği için kaç açı eşit olmalıdır?",
+    "question": "İki üçgenin benzer olması için en az kaç açısının eşit olması yeterlidir?",
     "options": [
         "A) 1",
         "B) 2",
@@ -94,7 +94,7 @@ window.geometri_6_sorulari = [
         "E) 0"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "İki açı eşitse üçüncü de eşittir → 2 açı yeter (AAA)."
+    "explanation": "Bir üçgenin iç açıları toplamı 180° olduğundan, iki açısı eşit olan iki üçgende üçüncü açılar da zorunlu olarak eşit olur. Bu nedenle benzerlik için iki açının eşitliği (AA kuralı) yeterlidir."
 },
 {
     "question": "Ceva: AD/DB=2, BE/EC=3. CF/FA=? (AD·BE·CF = DB·EC·FA → product=1)",
@@ -109,7 +109,7 @@ window.geometri_6_sorulari = [
     "explanation": "(2)(3)(CF/FA)=1 → CF/FA=1/6."
 },
 {
-    "question": "Ceva: AD=4, DB=6, BE=3, EC=2. CF/FA=?",
+    "question": "ABC üçgeninde D ∈ [AB], E ∈ [BC] ve F ∈ [CA] olmak üzere [AE], [BF] ve [CD] doğru parçaları bir noktada kesişmektedir. |AD| = 4, |DB| = 6, |BE| = 3 ve |EC| = 2 birim ise |CF| / |FA| oranı kaçtır?",
     "options": [
         "A) 1/2",
         "B) 2/3",
@@ -117,8 +117,8 @@ window.geometri_6_sorulari = [
         "D) 4/5",
         "E) 1"
     ],
-    "correctAnswerIndex": 0,
-    "explanation": "(4/6)(3/2)(CF/FA)=1 → (2/3)(3/2)(CF/FA)=1 → CF/FA=1."
+    "correctAnswerIndex": 4,
+    "explanation": "Ceva teoremine göre (|AD|/|DB|)·(|BE|/|EC|)·(|CF|/|FA|) = 1'dir. (4/6)·(3/2)·(|CF|/|FA|) = 1 → (2/3)·(3/2)·(|CF|/|FA|) = 1 → |CF|/|FA| = 1 bulunur."
 },
 {
     "question": "Menelaus: FB=2, FC=6, CD=3, DA=3. AE/EB=?",

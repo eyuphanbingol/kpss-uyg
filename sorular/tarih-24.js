@@ -7,10 +7,16 @@ window.tarih_24_sorulari = [
         explanation: "İtalya’da Kara Gömlekliler, Almanya’da Kahverengi Gömlekliler kullanılır. Gestapo Alman gizli polisidir."
     },
     {
-        question: "İtalya’nın Afrika’da işgal ettiği ülke aşağıdakilerden hangisidir?",
-        options: ["A) Mısır", "B) Cezayir", "C) Habeşistan", "D) Tunus", "E) Libya yalnızca"],
+        question: "1935-1936 yıllarında İtalya’nın işgal ettiği Afrika ülkesi aşağıdakilerden hangisidir?",
+        options: [
+        "A) Mısır",
+        "B) Cezayir",
+        "C) Habeşistan",
+        "D) Tunus",
+        "E) Fas"
+        ],
         correctAnswerIndex: 2,
-        explanation: "Faşist İtalya Habeşistan’ı işgal etmiştir."
+        explanation: "Faşist İtalya 1935’te Habeşistan’a (Etiyopya) saldırmış ve 1936’da ülkeyi işgal ederek topraklarına katmıştır. Milletler Cemiyeti bu işgali engelleyememiş, bu durum cemiyetin etkisizliğini ortaya koymuştur."
     },
     {
         question: "“Sürekli barış ne mümkün ne faydalıdır. Sadece savaş insan enerjisini en yüksek gerilimde tutar.” sözü hangi rejimin ruhunu yansıtır?",
@@ -38,9 +44,15 @@ window.tarih_24_sorulari = [
     },
     {
         question: "Yahudi karşıtlığının kitlesel şiddete dönüştüğü Kristal Gece hangi tarihlerde yaşanmıştır?",
-        options: ["A) 1 Eylül 1939", "B) 10–13 Kasım 1938", "C) 7 Aralık 1941", "D) 6 Haziran 1944", "E) 23 Ağustos 1939"],
+        options: [
+        "A) 1 Eylül 1939",
+        "B) 9–10 Kasım 1938",
+        "C) 7 Aralık 1941",
+        "D) 6 Haziran 1944",
+        "E) 23 Ağustos 1939"
+        ],
         correctAnswerIndex: 1,
-        explanation: "Kristal Gece 10–13 Kasım 1938’dir. 1 Eylül 1939 savaşın başlangıcıdır."
+        explanation: "Kristal Gece (Kristallnacht), 9-10 Kasım 1938 gecesi Almanya ve Avusturya'da Yahudilere ait ev, iş yeri ve sinagoglara yönelik düzenlenen saldırılardır. 1 Eylül 1939 ise Almanya'nın Polonya'ya saldırarak II. Dünya Savaşı'nı başlattığı tarihtir."
     },
     {
         question: "Münih Konferansı’nı toplayan ve yatıştırma politikasını uygulayan devlet aşağıdakilerden hangisidir?",
@@ -61,10 +73,10 @@ window.tarih_24_sorulari = [
         explanation: "Söz, hayat sahası/Lebensraum ideolojisine işaret eder."
     },
     {
-        question: "İspanya’da askerî darbeyle yönetimin ele geçirildiği yıl aşağıdakilerden hangisidir?",
+        question: "İspanya’da Primo de Rivera’nın askerî darbeyle yönetimi ele geçirdiği yıl aşağıdakilerden hangisidir?",
         options: ["A) 1919", "B) 1923", "C) 1936", "D) 1939", "E) 1945"],
         correctAnswerIndex: 1,
-        explanation: "1923 darbesi; 1936 ise iç savaşın başladığı yıldır."
+        explanation: "Miguel Primo de Rivera 1923’te askerî darbeyle yönetime el koymuştur. 1936 İspanya İç Savaşı’nın başladığı, 1939 ise iç savaşın Franco’nun zaferiyle sona erdiği yıldır."
     },
     {
         question: "1936 İspanya İç Savaşı’nı kazanan ve Almanya–İtalya tarafından desteklenen lider kimdir?",
@@ -112,7 +124,7 @@ window.tarih_24_sorulari = [
         question: "Rusya’nın Brest-Litovsk ile kaybettiği toprakları geri almak istemesi hangi savaşın nedenlerindendir?",
         options: ["A) Kırım Savaşı", "B) I. Dünya Savaşı", "C) II. Dünya Savaşı", "D) Kore Savaşı", "E) 93 Harbi"],
         correctAnswerIndex: 2,
-        explanation: "Notlara göre bu talep II. Dünya Savaşı’nın nedenleri arasındadır."
+        explanation: "Rusya, 1918’de imzaladığı Brest-Litovsk Antlaşması ile Polonya, Baltık ülkeleri, Ukrayna ve Besarabya gibi geniş toprakları kaybetmişti. SSCB’nin bu toprakları geri alma isteği yayılmacı politikasının temelini oluşturmuş ve II. Dünya Savaşı’nın nedenleri arasında yer almıştır."
     },
     {
         question: "Müttefik ve Mihver grupları aşağıdakilerin hangisinde doğru verilmiştir?",
@@ -163,10 +175,10 @@ window.tarih_24_sorulari = [
         explanation: "Maginot Hattı aşılarak Fransa düşmüştür."
     },
     {
-        question: "Almanların işgal ettikleri Fransa bölgesinde kurdukları yönetim aşağıdakilerden hangisidir?",
+        question: "Almanya’nın Fransa’yı yenmesinin ardından ülkenin güneyinde kurulan ve Almanya ile iş birliği yapan yönetim aşağıdakilerden hangisidir?",
         options: ["A) Özgür Fransa", "B) Weimar", "C) Vichy Hükümeti", "D) Viyana Kongresi", "E) Geçici BM yönetimi"],
         correctAnswerIndex: 2,
-        explanation: "İşgal Fransası’nda Vichy Hükümeti kurulmuştur."
+        explanation: "Almanya 1940’ta Fransa’yı yenerek ülkenin kuzeyini doğrudan işgal etmiş, güneyde ise Mareşal Petain başkanlığında Almanya ile iş birliği yapan Vichy Hükümeti kurulmuştur. Ülke dışında General de Gaulle öncülüğündeki Özgür Fransa hareketi direnişi sürdürmüştür."
     },
     {
         question: "Almanya’nın İngiltere’ye yönelik hava harekâtının adı nedir?",
@@ -209,12 +221,12 @@ window.tarih_24_sorulari = [
         options: [
             "A) Savaştan sonra toprak kazanılmayacak",
             "B) Uluslar kendi geleceklerini kendileri saptayacak",
-            "C) Mihver kayıtsız şartsız teslim olacak (Casablanca kararı)",
-            "D) Açık denizlerde ticaret serbestliği",
-            "E) Uluslararası işbirliğinin genişletilmesi (BM fikri)"
+            "C) Mihver Devletleri kayıtsız şartsız teslim olacak",
+            "D) Açık denizlerde ticaret serbestliği sağlanacak",
+            "E) Uluslararası iş birliği genişletilecek"
         ],
         correctAnswerIndex: 2,
-        explanation: "Kayıtsız şartsız teslim Casablanca kararıdır; Atlantik Bildirisi’nin maddesi değildir."
+        explanation: "Ağustos 1941’de yayımlanan Atlantik Bildirisi; savaş sonrası toprak kazanılmaması, ulusların kendi geleceklerini kendilerinin belirlemesi, açık denizlerde ticaret serbestliği ve uluslararası iş birliğinin genişletilmesi ilkelerini içerir. Mihver Devletleri’nin kayıtsız şartsız teslim alınması ilkesi ise 1943 Casablanca Konferansı’nda kararlaştırılmıştır."
     },
     {
         question: "Pearl Harbor baskınının tarihi ve Japon komutanı aşağıdakilerin hangisinde doğru verilmiştir?",
@@ -280,19 +292,31 @@ window.tarih_24_sorulari = [
         question: "II. Dünya Savaşı sonunda;\nI. Faşizm ve Nazizm tasfiye edildi.\nII. SSCB ile ABD arasında Soğuk Savaş başladı.\nIII. Yaklaşık 60 milyon insan hayatını kaybetti.\nyargılarından hangileri doğrudur?",
         options: ["A) Yalnız I", "B) I ve II", "C) II ve III", "D) I ve III", "E) I, II ve III"],
         correctAnswerIndex: 4,
-        explanation: "Üç sonuç da notlardaki savaş bilançosuna aittir."
+        explanation: "II. Dünya Savaşı’nın sonunda İtalya’da faşizm, Almanya’da Nazizm tasfiye edilmiş; savaş sonrasında ABD ile SSCB arasındaki kutuplaşma Soğuk Savaş dönemini başlatmış; savaşta yaklaşık 60 milyon insan hayatını kaybetmiştir. Bu nedenle üç yargı da doğrudur."
     },
     {
-        question: "BM fikrini ilk ortaya attığı belirtilen düşünür ile kavramı ilk kez kullanan taraf hangisidir?",
-        options: ["A) Wilson – Milletler Cemiyeti", "B) Farabi – ABD", "C) Marx – SSCB", "D) Monroe – İngiltere", "E) Hitler – Almanya"],
+        question: "“Birleşmiş Milletler” kavramını ilk kez kullanan devlet adamı ile bu kavramın resmen ilk kez yer aldığı belge aşağıdakilerin hangisinde birlikte verilmiştir?",
+        options: [
+        "A) Woodrow Wilson – Wilson İlkeleri",
+        "B) Franklin D. Roosevelt – 1942 Birleşmiş Milletler Bildirisi",
+        "C) Winston Churchill – Atlantik Bildirisi",
+        "D) Josef Stalin – Yalta Konferansı kararları",
+        "E) Harry Truman – Potsdam Konferansı kararları"
+        ],
         correctAnswerIndex: 1,
-        explanation: "Nota göre fikri Farabi ortaya atmış, kavramı ilk kez ABD kullanmıştır."
+        explanation: "“Birleşmiş Milletler” terimini ilk kez ABD Başkanı Franklin D. Roosevelt kullanmış, terim resmen ilk kez 1 Ocak 1942’de imzalanan Birleşmiş Milletler Bildirisi’nde yer almıştır. Örgütün kuruluşu ise 1945 San Francisco Konferansı ile tamamlanmıştır."
     },
     {
         question: "Dünyanın ilk bilgisayarı olarak anılan ENIAC hangi dönemin teknolojik sonucudur?",
-        options: ["A) Sanayi Devrimi", "B) II. Dünya Savaşı sonrası", "C) Coğrafi Keşifler", "D) I. Dünya Savaşı siperleri", "E) Soğuk Savaş’ın 1991’i"],
+        options: [
+        "A) Sanayi Devrimi",
+        "B) II. Dünya Savaşı dönemi",
+        "C) Coğrafi Keşifler",
+        "D) I. Dünya Savaşı",
+        "E) Soğuk Savaş’ın sona erdiği dönem"
+        ],
         correctAnswerIndex: 1,
-        explanation: "ENIAC II. Dünya Savaşı döneminin teknolojik ürünü olarak notta yer alır."
+        explanation: "ENIAC, ABD ordusunun balistik hesaplamaları için 1943-1945 yıllarında, yani II. Dünya Savaşı sırasında geliştirilmiş ve 1946’da tanıtılmıştır. Bu yönüyle savaşın hızlandırdığı teknolojik gelişmelerin bir ürünüdür."
     },
     {
         question: "Nazi Partisi liderlerinin yargılandığı mahkeme hangisidir?",
@@ -302,9 +326,15 @@ window.tarih_24_sorulari = [
     },
     {
         question: "“Tüm insanlığın Magna Cartası” olarak nitelenen belgenin tarihi nedir?",
-        options: ["A) 10 Aralık 1948 İnsan Hakları Evrensel Beyannamesi", "B) 1919 Versailles", "C) 1928 Briand-Kellogg yalnız", "D) 1941 Pearl Harbor bildirisi", "E) 1938 Münih Protokolü"],
+        options: [
+        "A) 10 Aralık 1948 İnsan Hakları Evrensel Beyannamesi",
+        "B) 1919 Versay Antlaşması",
+        "C) 1928 Briand-Kellogg Paktı",
+        "D) 1941 Atlantik Bildirisi",
+        "E) 1938 Münih Konferansı kararları"
+        ],
         correctAnswerIndex: 0,
-        explanation: "10 Aralık 1948 İHEB, tüm insanlığın Magna Cartası olarak notta geçer."
+        explanation: "İnsan Hakları Evrensel Beyannamesi 10 Aralık 1948’de Birleşmiş Milletler Genel Kurulu’nda kabul edilmiştir. Temel hak ve özgürlükleri evrensel ölçekte güvence altına almayı amaçladığı için “tüm insanlığın Magna Cartası” olarak nitelendirilir."
     },
     {
         question: "Savaş sonrasında kurulan devletler arasında hangileri birlikte verilmiştir?",

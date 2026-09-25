@@ -124,11 +124,11 @@ window.cografya_2_sorulari = [
       "A) Çukurova",
       "B) Ergene Havzası",
       "C) Doğu Anadolu",
-      "D) Karadeniz'in kıyı kesimleri",
-      "E) Çukurova Deltası"
+      "D) Marmara kıyılarındaki batık vadiler",
+      "E) Konya Ovası"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "Türkiye'de özellikle Doğu Anadolu'nun genel yükselme gösterdiği kabul edilir. Çukurova, Ergene Havzası ve bazı kıyı alanları ise çöken/alçalan alanlar arasında değerlendirilir."
+    "explanation": "Türkiye'de Doğu Anadolu, epirojenik hareketlerle genel olarak yükselme gösteren alan kabul edilir. Çukurova, Ergene Havzası ve Konya Ovası çöken/alçalan alanlar arasında değerlendirilir; Marmara kıyılarındaki batık vadiler de kıyının alçaldığını gösterir."
   },
 
   {
@@ -279,7 +279,7 @@ window.cografya_2_sorulari = [
 
   {
     "id": "20",
-    "question": "Aşağıdaki göllerden hangisi volkanik oluşum özelliği bakımından diğerlerinden ayrılır?",
+    "question": "Aşağıdaki göllerden hangisinin oluşumunda volkanizmanın etkisi YOKTUR?",
     "options": [
       "A) Nemrut Gölü",
       "B) Meke Gölü",
@@ -288,7 +288,7 @@ window.cografya_2_sorulari = [
       "E) Tuz Gölü"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Nemrut, Meke ve Gölcük volkanik oluşumlarla ilişkilidir. Tuz Gölü'nün oluşumunda ise tektonik ve jeomorfolojik süreçler etkilidir."
+    "explanation": "Nemrut bir kaldera gölü, Meke ve Gölcük maar gölleri, Van Gölü ise Nemrut Dağı'ndan çıkan lavların çukurluğun önünü kapatmasıyla oluşmuş bir volkanik set gölüdür. Tuz Gölü'nün oluşumunda ise volkanizma değil, tektonik çöküntü ve kurak iklim koşulları etkilidir."
   },
 
   {
@@ -339,16 +339,16 @@ window.cografya_2_sorulari = [
 
   {
     "id": "24",
-    "question": "Aşağıdaki volkanik dağlardan hangisi diğerlerinden farklı bir bölgede yer alır?",
+    "question": "Aşağıdaki volkanik dağ – bulunduğu il eşleştirmelerinden hangisi YANLIŞTIR?",
     "options": [
-      "A) Ağrı",
-      "B) Süphan",
-      "C) Tendürek",
-      "D) Nemrut",
-      "E) Erciyes"
+      "A) Erciyes Dağı – Kayseri",
+      "B) Hasan Dağı – Aksaray",
+      "C) Nemrut Dağı – Bitlis",
+      "D) Süphan Dağı – Bitlis",
+      "E) Karacadağ – Kayseri"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Ağrı, Süphan, Tendürek ve Nemrut Doğu Anadolu Bölgesi'nde; Erciyes ise İç Anadolu Bölgesi'nde yer alır.",
+    "explanation": "Karacadağ Kayseri'de değil, Diyarbakır ile Şanlıurfa arasında yer alan bir volkanik kütledir. Erciyes Dağı Kayseri'de, Hasan Dağı Aksaray'da, Nemrut ve Süphan dağları ise Bitlis sınırları içinde bulunur.",
     "img": "./src/img/volkanik_dağlar.png?v=12",
     "imgAlt": "Doğu Anadolu volkanları ve Erciyes"
   },

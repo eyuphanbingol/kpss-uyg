@@ -8,10 +8,10 @@ window.cografya_10_sorulari = [
       "B) Akarsular",
       "C) Rüzgârlar",
       "D) Dağların uzanışı ve epirojenez",
-      "E) Volkanizma tek başına"
+      "E) Gelgit (med-cezir)"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Kıyı şekillenmesinde en temel dış kuvvet dalgalar ve akıntılardır. Ayrıca akarsular, rüzgarlar, dağların uzanış doğrultusu ve epirojenez (kıyı çizgisinin değişmesi) doğrudan veya dolaylı etkilidir. Volkanizma tek başına kıyı şeklini belirleyen genel bir dış kıyı şekillendirici faktör değildir."
+    "explanation": "Türkiye kıyılarını şekillendiren başlıca etkenler dalgalar ve kıyı akıntılarıdır; akarsuların taşıdığı alüvyonlar, rüzgârlar, dağların uzanış doğrultusu ve epirojenik hareketler de kıyı şekillerinin oluşumunda etkilidir. Türkiye'nin kıyıları iç denizlere ve dar boğazlarla okyanuslara bağlanan denizlere baktığından gelgit genliği çok küçüktür; bu nedenle gelgit, kıyı şekillenmesinde etkili bir faktör olarak gösterilemez."
   },
   {
     "id": "2",
@@ -43,14 +43,14 @@ window.cografya_10_sorulari = [
     "id": "4",
     "question": "Falezler ile deniz arasında kalan düzlüklere ne ad verilir ve deltanın bulunduğu yerde bu şekil neden görülmez?",
     "options": [
-      "A) Aşınım platosu; çünkü deltalar biriktirme, falez ise aşındırma alanıdır",
+      "A) Aşınım (abrazyon) platformu; çünkü deltalar biriktirme, falez ise aşındırma alanıdır",
       "B) Kıyı kordonu; çünkü deltalar çok derindir",
       "C) Lagün; çünkü deltalarda tuzluluk fazladır",
       "D) Tombolo; çünkü deltalar ada değildir",
       "E) Plaj; çünkü deltalarda kumsal olmaz"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Falezlerin gerilemesiyle falez ile deniz arasında kalan düzlüklere aşınım platosu denir. Delta ovalarının olduğu yer sığ ve biriktirme alanı iken, falez derin ve dik yamaçlı aşındırma alanıdır; bu nedenle ikisi aynı yerde bulunamaz."
+    "explanation": "Falezlerin gerilemesiyle falez ile deniz arasında kalan düzlüğe aşınım (abrazyon) platformu denir. Delta ovalarının bulunduğu kıyılar sığ ve biriktirme alanı iken falezli kıyılar derin ve dik yamaçlı aşındırma alanlarıdır; bu nedenle ikisi aynı yerde bir arada görülmez."
   },
   {
     "id": "5",
@@ -83,8 +83,8 @@ window.cografya_10_sorulari = [
     "question": "Finike ile Kaş arasında, Teke Yarımadası'nın güneyinde görülen kıyı tipi aşağıdakilerden hangisidir?",
     "options": [
       "A) Ria kıyısı",
-      "B) Boyuna kıyı",
-      "C) Kalanlı kıyı",
+      "B) Limanlı kıyı",
+      "C) Kalanklı kıyı",
       "D) Dalmaçya kıyısı",
       "E) Falezli kıyı"
     ],
@@ -96,9 +96,9 @@ window.cografya_10_sorulari = [
     "question": "Deniz seviyesinin yükselmesi veya kıyı kesimindeki toprakların çökmesiyle, kıyıya dik eski akarsu vadilerinin sular altında kalmasıyla oluşan; İstanbul-Çanakkale Boğazı ve Gökova Körfezi'nin örnek gösterildiği kıyı tipi aşağıdakilerden hangisidir?",
     "options": [
       "A) Dalmaçya kıyısı",
-      "B) Ria kıyı",
-      "C) Kalanlı kıyı",
-      "D) Boyuna kıyı",
+      "B) Ria kıyısı",
+      "C) Kalanklı kıyı",
+      "D) Limanlı kıyı",
       "E) Falez kıyısı"
     ],
     "correctAnswerIndex": 1,
@@ -108,13 +108,13 @@ window.cografya_10_sorulari = [
     "id": "9",
     "question": "Mersin-Silifke kıyılarında görülen, karstik akarsu vadilerinin denizle ilişkili olduğu kıyı tipi aşağıdakilerden hangisidir?",
     "options": [
-      "A) Ria kıyı",
+      "A) Ria kıyısı",
       "B) Dalmaçya kıyısı",
-      "C) Kalanlı kıyı",
-      "D) Boyuna kıyı",
+      "C) Kalanklı kıyı",
+      "D) Limanlı kıyı",
       "E) Falezli kıyı"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "Karstik arazilerdeki akarsu vadilerinin veya kanyonların deniz suları altında kalmasıyla oluşan özel kıyı tipine Kalanlı kıyı tipi denir. Türkiye'de Mersin-Silifke kıyıları bu duruma örnektir."
+    "explanation": "Karstik arazilerdeki akarsu vadilerinin ve kanyonların deniz suları altında kalmasıyla oluşan kıyı tipine kalanklı kıyı denir. Türkiye'de Mersin-Silifke kıyıları bu kıyı tipine örnektir."
   }
 ];

@@ -109,10 +109,10 @@ window.tarih_28_sorulari = [
             "B) 2003 savaş ve yakalanma – 2006 idam",
             "C) 1991 savaş – 2003 idam",
             "D) 2003 idam – 2006 savaş",
-            "E) Hepsi 2003"
+            "E) 1991 savaş – 2006 yakalanma"
         ],
         correctAnswerIndex: 1,
-        explanation: "“II. Körfez Savaşı Saddam’ın idamıyla bitti” yazılmaz. Ebu Garib görüntüleri 2004."
+        explanation: "II. Körfez Savaşı Mart 2003'te başladı; Saddam Hüseyin Aralık 2003'te yakalandı ve 30 Aralık 2006'da idam edildi."
     },
     {
         question: "Bosna Savaşı’nı sona erdiren 1995 antlaşması hangisidir?",
@@ -241,16 +241,16 @@ window.tarih_28_sorulari = [
         explanation: "1993’te Demirel cumhurbaşkanı oldu."
     },
     {
-        question: "1995 seçimlerinden sonra kurulan koalisyon hangisidir?",
+        question: "24 Aralık 1995 genel seçimlerinin ardından kurulan ilk koalisyon hükûmeti aşağıdakilerden hangisidir?",
         options: [
-            "A) Refah + Anavatan + DSP",
-            "B) RP + ANAP",
-            "C) CHP – AP 1961",
-            "D) ANAP tek başına 1995",
-            "E) DYP – CHP Koalisyonu"
+            "A) ANAP + DYP (ANAYOL) – Mesut Yılmaz",
+            "B) RP + DYP (Refahyol) – Necmettin Erbakan",
+            "C) DYP + CHP – Tansu Çiller",
+            "D) DYP + SHP – Süleyman Demirel",
+            "E) DSP + MHP + ANAP – Bülent Ecevit"
         ],
-        correctAnswerIndex: 4,
-        explanation: "Refah + ANAP + DSP üçlüsü yanlıştır. Sonra Refah-Yol: RP + DYP, Erbakan, 1996–1997."
+        correctAnswerIndex: 0,
+        explanation: "24 Aralık 1995 seçimlerinden sonra kurulan ilk koalisyon, Mart 1996'da ANAP ile DYP'nin oluşturduğu ve Mesut Yılmaz'ın başbakanlık yaptığı ANAYOL Hükûmeti'dir. Bu hükûmetin kısa sürede dağılmasının ardından Haziran 1996'da RP ile DYP, Necmettin Erbakan başkanlığında Refahyol Hükûmeti'ni kurmuştur. DYP-CHP koalisyonu ise seçimlerden önceki dönemde görev yapmıştır."
     },
     {
         question: "Refah-Yol Hükümeti’nin ortakları ve başbakanı hangisidir?",
@@ -349,10 +349,10 @@ window.tarih_28_sorulari = [
         explanation: "Irak Savaşı’nda ABD askerlerinin tutuklulara işkence ve kötü muamelesi. Savaş 2003, Saddam idamı 2006."
     },
     {
-        question: "Hoca Ahmet Yesevi Uluslararası Türk-Kazak Üniversitesi hangi yılda anılır?",
+        question: "Hoca Ahmet Yesevi Uluslararası Türk-Kazak Üniversitesi, Türkiye ile Kazakistan arasında imzalanan anlaşmayla hangi yılda uluslararası statü kazanmıştır?",
         options: ["A) 1991", "B) 1992", "C) 1996", "D) 2001", "E) 2019"],
         correctAnswerIndex: 1,
-        explanation: "1992. Kazakistan bağımsızlığı 1991."
+        explanation: "Türkistan'da 1991'de kurulan üniversite, 31 Ekim 1992'de Türkiye ile Kazakistan arasında imzalanan anlaşmayla uluslararası statü kazanmış ve bugünkü adını almıştır."
     },
     {
         question: "I. 1989 Berlin Duvarı\nII. 1990 Litvanya bağımsızlığı\nIII. 1991 SSCB’nin dağılması\nKronolojik sıra hangisidir?",
@@ -385,10 +385,16 @@ window.tarih_28_sorulari = [
         explanation: "Kazakistan Astana, Kırgızistan Bişkek, Türkmenistan Aşkabat, Özbekistan Taşkent."
     },
     {
-        question: "Çekoslovakya’da komünist rejimin barışçıl biçimde sona ermesi hangisidir?",
-        options: ["A) Kadife Devrimi – 1989", "B) Srebrenica – 1995", "C) Çernobil – 1986", "D) 28 Şubat – 1997", "E) Glasnost – 1991"],
+        question: "Çekoslovakya'da komünist rejimin barışçıl biçimde sona erdiği olay ve yılı aşağıdakilerden hangisinde doğru verilmiştir?",
+        options: [
+        "A) Kadife Devrimi – 1989",
+        "B) Srebrenica – 1995",
+        "C) Çernobil – 1986",
+        "D) 28 Şubat – 1997",
+        "E) Glasnost – 1985"
+        ],
         correctAnswerIndex: 0,
-        explanation: "Ayrılma 1993’tür, devrimin kendisi 1989."
+        explanation: "Çekoslovakya'da komünist rejim, 1989'da şiddete başvurulmayan kitlesel gösterilerle sona ermiş ve bu sürece Kadife Devrimi adı verilmiştir. Ülkenin Çekya ve Slovakya olarak ayrılması ise 1993'te gerçekleşmiştir."
     },
     {
         question: "Saddam Hüseyin’in idam yılı hangisidir?",

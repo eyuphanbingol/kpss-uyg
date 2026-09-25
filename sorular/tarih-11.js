@@ -33,11 +33,11 @@ window.tarih_11_sorulari = [
             "A) Çanakkale Boğazı'nın İtalya tarafından abluka altına alınması",
             "B) İngiltere'nin Mısır'ı işgal etmiş olması",
             "C) Osmanlı donanmasının yetersizliği",
-            "D) Bölgeye kara bağlantısının bulunmaması",
+            "D) Trablusgarp halkının Osmanlı yönetimine karşı çıkarak İtalya'yı desteklemesi",
             "E) Osmanlı Devleti'nin askerî imkânlarının sınırlı olması"
         ],
         correctAnswerIndex: 3,
-        explanation: "Trablusgarp'a kara bağlantısı bulunmamaktadır; ancak bu durum düzenli ordu gönderilememesinin nedeni değil, bölgenin coğrafi özelliğidir. Asıl nedenler; İtalya'nın Çanakkale'yi abluka altına alması, İngiltere'nin Mısır'ı işgal etmiş olması, donanmanın yetersizliği ve Osmanlı'nın genel askerî imkânlarının sınırlı olmasıdır."
+        explanation: "Trablusgarp halkı, Senusi hareketi önderliğinde bölgeye giden Osmanlı subaylarıyla birlikte İtalyanlara karşı direnmiştir; dolayısıyla halkın İtalya'yı desteklemesi söz konusu değildir. Düzenli ordu gönderilememesinin gerçek nedenleri, Mısır'ın İngiliz işgalinde olması nedeniyle kara bağlantısının bulunmaması, İtalya'nın denizlerde üstünlük kurarak Çanakkale Boğazı'nı abluka altına alması, Osmanlı donanmasının yetersizliği ve askerî imkânların sınırlı olmasıdır."
     },
     {
         question: "Trablusgarp Savaşı'nda Mustafa Kemal'in kullandığı gazeteci adı ve savaştığı bölge aşağıdakilerden hangisinde doğru verilmiştir?",
@@ -245,7 +245,7 @@ window.tarih_11_sorulari = [
             "E) İstanbul Antlaşması ile Osmanlı'ya bırakılmıştır."
         ],
         correctAnswerIndex: 1,
-        explanation: "Arnavutluk, Osmanlı Devleti'nden ayrılan son Balkan ülkesidir. 1912 yılında Londra Konferansı'nda bağımsızlığı tanınmış ve Osmanlı'nın Balkanlar'daki varlığı fiilen sona ermiştir."
+        explanation: "Arnavutluk, 28 Kasım 1912'de bağımsızlığını ilan ederek Osmanlı Devleti'nden ayrılan son Balkan ülkesi olmuştur; bağımsızlığı Londra görüşmeleri sonunda 1913'te uluslararası alanda tanınmıştır. Böylece Osmanlı Devleti Balkanlar'daki topraklarının büyük bölümünü kaybetmiştir."
     },
     {
         question: "Arnavutluk'un kaybedilmesiyle Osmanlı Devleti'nde aşağıdaki fikir akımlarından hangisinin önem kazandığı söylenebilir?",
@@ -284,7 +284,7 @@ window.tarih_11_sorulari = [
         explanation: "Londra Antlaşması ile Osmanlı-Bulgaristan sınırı Midye-Enez hattı olarak belirlenmiştir. Bu antlaşma ile Edirne ve Kırklareli geçici olarak Bulgaristan'a bırakılmıştır."
     },
     {
-        question: "Aşağıdakilerden hangisi I. Balkan Savaşı sonunda Osmanlı Devleti'nin kaybettiği yerlerden biri değildir?",
+        question: "I. Balkan Savaşı sonunda kaybedilen, ancak II. Balkan Savaşı sonunda Osmanlı Devleti'nin geri aldığı yer aşağıdakilerden hangisidir?",
         options: [
             "A) Arnavutluk",
             "B) Selanik",
@@ -293,7 +293,7 @@ window.tarih_11_sorulari = [
             "E) Edirne"
         ],
         correctAnswerIndex: 4,
-        explanation: "I. Balkan Savaşı sonunda Londra Antlaşması ile Arnavutluk, Selanik, Makedonya ve Batı Trakya kaybedilmiştir. Edirne ise geçici olarak Bulgaristan'a bırakılmış, II. Balkan Savaşı'nda geri alınmıştır."
+        explanation: "I. Balkan Savaşı sonunda imzalanan Londra Antlaşması ile Arnavutluk, Selanik, Makedonya, Batı Trakya ve Edirne elden çıkmıştır. II. Balkan Savaşı'nda Bulgaristan'ın diğer Balkan devletleriyle savaşmasından yararlanan Osmanlı Devleti, Edirne, Kırklareli ve Dimetoka'yı geri almış; bu durum Bulgaristan'la imzalanan İstanbul Antlaşması ile kesinleşmiştir."
     },
     {
         question: "I. Balkan Savaşı sırasında Hamidiye kahramanı olarak ün kazanan Osmanlı subayı aşağıdakilerden hangisidir?",
@@ -512,12 +512,12 @@ window.tarih_11_sorulari = [
         options: [
             "A) ABD – Savaşın seyrini değiştiren devlet",
             "B) Osmanlı Devleti – Savaşın süresini uzatan devlet",
-            "C) Japonya – Savaştan ilk çekilen devlet",
+            "C) Japonya – Uzak Doğu'da Alman sömürgelerini ele geçiren devlet",
             "D) Yunanistan – Savaşa son katılan devlet",
             "E) Bulgaristan – Savaştan ilk çekilen devlet"
         ],
         correctAnswerIndex: 4,
-        explanation: "Bulgaristan savaştan ilk çekilen devlet değildir. Bulgaristan, 1918'de Selanik Ateşkesi'ni imzalamıştır. Savaştan ilk çekilen devlet ise 1917'deki Bolşevik İhtilali sonrası Rusya'dır."
+        explanation: "I. Dünya Savaşı'ndan ilk çekilen devlet, 1917 Bolşevik İhtilali'nin ardından Brest-Litovsk Antlaşması'nı imzalayan Rusya'dır. Bulgaristan ise 1918'de Selanik Ateşkesi'ni imzalayarak ateşkes imzalayan ilk İttifak Devleti olmuştur; bu nedenle E'deki eşleştirme yanlıştır. Japonya savaş boyunca İtilaf Devletleri safında kalmış ve Uzak Doğu'daki Alman sömürgelerini ele geçirmiştir."
     },
 
     // ============================================================
@@ -548,21 +548,21 @@ window.tarih_11_sorulari = [
         explanation: "İngiltere, Osmanlı Devleti'ne kesin askerî destek sözü vermemiş; aksine Osmanlı'nın savaş gemisi siparişlerini geri çekerek Osmanlı'yı Almanya'ya yaklaştırmıştır. Diğer seçenekler Osmanlı'nın savaşa girmesinde etkili olan nedenlerdir."
     },
     {
-        question: "Osmanlı Devleti'nin Almanya ile birlikte savaşa girmesinde Almanya'nın sömürge politikası açısından sahip olmadığı özellik aşağıdakilerden hangisidir?",
+        question: "Almanya'nın Osmanlı Devleti'ni kendi yanında savaşa sokmak istemesinin nedenleri arasında aşağıdakilerden hangisi gösterilemez?",
         options: [
-            "A) Türk ve Müslüman sömürgeye sahip olmaması",
+            "A) Sömürgeleri arasında Müslüman nüfusa sahip bölgelerin bulunmaması",
             "B) Osmanlı Devleti'ni kendi yanında görmek istemesi",
             "C) Osmanlı'nın jeopolitik konumundan yararlanmak istemesi",
             "D) Osmanlı'nın insan gücünden yararlanmak istemesi",
             "E) Osmanlı Devleti'nin sömürgelerini genişletmesini istemesi"
         ],
         correctAnswerIndex: 4,
-        explanation: "Almanya, Osmanlı Devleti'nin sömürgelerini genişletmesini istememiştir. Almanya'nın amacı Osmanlı'ya sömürge kazandırmak değil, kendi savaş stratejisi için Osmanlı'dan yararlanmaktır."
+        explanation: "Almanya; Osmanlı Devleti'nin jeopolitik konumundan, insan gücünden ve halifelik makamının İslam dünyası üzerindeki etkisinden yararlanmak istemiştir. Kendi sömürgelerinde Müslüman nüfus bulunmadığı için ilan edilecek cihattan zarar görmeyecek olması da Almanya'yı bu isteğe yöneltmiştir. Buna karşılık Almanya'nın, Osmanlı Devleti'ne sömürge kazandırmak ya da onun topraklarını genişletmesini sağlamak gibi bir amacı yoktu."
     },
     {
         question: "Osmanlı Devleti'nin I. Dünya Savaşı'na girmesine neden olan gelişme aşağıdakilerden hangisidir?",
         options: [
-            "A) Midilli ve Yavuz'un Rusya'ya saldırması",
+            "A) Rusya'nın Kafkas Cephesi'nde Osmanlı topraklarına saldırması",
             "B) Goeben ve Breslau adlı Alman gemilerinin Osmanlı'ya sığınması ve Rus limanlarının bombalanması",
             "C) İngiltere'nin İstanbul'u işgal etmesi",
             "D) Bulgaristan'ın Osmanlı'ya saldırması",
@@ -636,7 +636,7 @@ window.tarih_11_sorulari = [
         explanation: "Kafkas Cephesi'nin açılmasında; Kars, Ardahan ve Batum'u geri alma, Turancılık idealini gerçekleştirme, Bakü petrollerine ulaşma ve İran üzerinden Hindistan'a ulaşarak İngiltere'yi zor durumda bırakma amaçlarının tümü etkili olmuştur."
     },
     {
-        question: "1915 yılında Enver Paşa'nın yaklaşık 190 bin askerle başlattığı harekât aşağıdakilerden hangisidir?",
+        question: "22 Aralık 1914'te Enver Paşa'nın yaklaşık 190 bin askerle başlattığı harekât aşağıdakilerden hangisidir?",
         options: [
             "A) Kanal Harekâtı",
             "B) Gazze Harekâtı",
@@ -733,7 +733,7 @@ window.tarih_11_sorulari = [
         explanation: "Nuri Paşa, Bakü'yü kurtardığı için 'Bakü Fatihi' unvanını almıştır."
     },
     {
-        question: "I. Dünya Savaşı sonrasında Osmanlı Devleti'nin Kafkasya bölgesinden gönderilen Ermenilerle ilgili çıkardığı uygulama aşağıdakilerden hangisidir?",
+        question: "I. Dünya Savaşı sonunda Osmanlı Devleti'nin, savaş sırasında yerleri değiştirilen Ermenilerle ilgili olarak 1918'de çıkardığı düzenleme aşağıdakilerden hangisidir?",
         options: [
             "A) Sürgün kararnamesi",
             "B) Geri dönüş kararnamesi",
@@ -742,7 +742,7 @@ window.tarih_11_sorulari = [
             "E) İlhak kararnamesi"
         ],
         correctAnswerIndex: 1,
-        explanation: "Osmanlı Devleti, savaş sırasında tehcir edilen Ermenilerin savaş sonrası geri dönüşüne ilişkin kararname çıkarmıştır. Bu, dönemin Osmanlı hükümetinin aldığı önemli kararlardandır."
+        explanation: "Osmanlı Devleti, savaş sırasında Sevk ve İskân Kanunu uyarınca yerleri değiştirilen Ermenilerin eski yerleşim yerlerine dönebilmesi amacıyla 1918 sonunda Geri Dönüş Kararnamesi'ni çıkarmıştır."
     },
 
     // ============================================================
@@ -806,7 +806,7 @@ window.tarih_11_sorulari = [
             "A) Kanal Cephesi'nin devamı niteliğindedir.",
             "B) Rusya'ya karşı açılmıştır.",
             "C) Osmanlı Devleti bu cephede sürekli taarruz hâlinde olmuştur.",
-            "D) Mustafa Kemal'in görev yaptığı son cephedir.",
+            "D) Osmanlı Devleti'nin I. Dünya Savaşı'nda açtığı ilk cephedir.",
             "E) Çanakkale Cephesi'nin devamıdır."
         ],
         correctAnswerIndex: 0,
@@ -885,8 +885,8 @@ window.tarih_11_sorulari = [
             "D) Arıburnu",
             "E) Seddülbahir"
         ],
-        correctAnswerIndex: 0,
-        explanation: "Mustafa Kemal, 10 Ağustos 1915'teki Conk Bayırı Muharebesi'nde 261 Rakımlı Tepe'de bu emri vermiştir."
+        correctAnswerIndex: 1,
+        explanation: "Mustafa Kemal bu emri, 25 Nisan 1915'teki Arıburnu çıkarması sırasında Conk Bayırı'nda vermiştir. 261 Rakımlı Tepe'den çekilen askerlerle karşılaşan Mustafa Kemal, 57. Alay'a düşmanı durdurma emrini burada vermiştir; 261 Rakımlı Tepe ise sözün söylendiği yer değil, askerlerin çekildiği tepedir."
     },
     {
         question: "Çanakkale Cephesi'nin sonuçları arasında aşağıdakilerden hangisi gösterilemez?",
@@ -907,7 +907,7 @@ window.tarih_11_sorulari = [
             "B) Yarbay",
             "C) Albay",
             "D) Tuğgeneral",
-            "E) Mirliva"
+            "E) Ferik"
         ],
         correctAnswerIndex: 2,
         explanation: "Mustafa Kemal, Çanakkale'deki başarılarının ardından 1 Haziran 1915'te albay rütbesine yükseltilmiştir."
@@ -1032,13 +1032,13 @@ window.tarih_11_sorulari = [
         question: "Hicaz-Yemen Cephesi'nin açılmasında aşağıdakilerden hangisi etkili olmuştur?",
         options: [
             "A) Rusya'nın Boğazları ele geçirmek istemesi",
-            "B) İngilizlerin kutsal bölgeleri ve bölgedeki petrol kaynaklarını ele geçirmek istemesi",
+            "B) İngilizlerin kutsal toprakları ele geçirerek Arapları Osmanlı Devleti'ne karşı kışkırtmak istemesi",
             "C) Almanya'nın Hindistan'ı işgal etmek istemesi",
             "D) Fransa'nın Kafkasya'ya ilerlemek istemesi",
             "E) İtalya'nın Trablusgarp'ı savunmak istemesi"
         ],
         correctAnswerIndex: 1,
-        explanation: "İngiltere, Hicaz bölgesindeki kutsal yerleri ve petrol kaynaklarını ele geçirmek amacıyla Hicaz-Yemen Cephesi'ni açmıştır."
+        explanation: "İngiltere, Hicaz ve Yemen'i ele geçirerek hem Kızıldeniz ve Hindistan yolunun güvenliğini sağlamayı hem de kutsal topraklara hâkim olup Arapları Osmanlı Devleti'ne karşı ayaklandırarak halifenin İslam dünyasındaki etkisini kırmayı amaçlamıştır."
     },
     {
         question: "Hicaz-Yemen Cephesi'nde Araplar üzerinde etkili olan İngiliz ajanı aşağıdakilerden hangisidir?",
@@ -1129,19 +1129,19 @@ window.tarih_11_sorulari = [
     // BÖLÜM 12: YARDIM CEPHELERİ (Soru 91-92)
     // ============================================================
     {
-        question: "Osmanlı Devleti'nin I. Dünya Savaşı sırasında müttefiklerine yardım amacıyla savaştığı cepheler arasında aşağıdakilerden hangisi yer almaz?",
+        question: "Osmanlı Devleti'nin I. Dünya Savaşı'nda müttefiklerine yardım amacıyla asker gönderdiği cephe aşağıdakilerden hangisidir?",
         options: [
-            "A) Galiçya",
-            "B) Romanya",
-            "C) Makedonya",
-            "D) Kafkasya",
-            "E) Hiçbiri"
+            "A) Kafkas Cephesi",
+            "B) Kanal Cephesi",
+            "C) Galiçya Cephesi",
+            "D) Çanakkale Cephesi",
+            "E) Hicaz-Yemen Cephesi"
         ],
-        correctAnswerIndex: 3,
-        explanation: "Kafkasya, Osmanlı Devleti'nin kendi topraklarını savunmak ve Kars-Ardahan-Batum'u geri almak amacıyla açtığı cephedir. Galiçya, Romanya ve Makedonya ise müttefiklere yardım cepheleridir."
+        correctAnswerIndex: 2,
+        explanation: "Osmanlı Devleti, I. Dünya Savaşı'nda müttefiklerine yardım amacıyla Galiçya, Romanya ve Makedonya cephelerine asker göndermiştir. Kafkas, Kanal, Çanakkale ve Hicaz-Yemen cepheleri ise Osmanlı Devleti'nin kendi toprakları üzerinde ya da kendi hedefleri doğrultusunda savaştığı cephelerdir."
     },
     {
-        question: "Aşağıdaki cephe-devlet eşleştirmelerinden hangisi doğrudur?",
+        question: "Aşağıdaki cephe - Osmanlı Devleti'nin o cephede karşısında savaştığı devlet eşleştirmelerinden hangisi doğrudur?",
         options: [
             "A) Galiçya – Rusya",
             "B) Romanya – İngiltere",
@@ -1277,16 +1277,16 @@ window.tarih_11_sorulari = [
         explanation: "Bolşevik İhtilali sonrası iktidara gelen Sovyet Rusya, 1917'de gizli antlaşmaları dünya kamuoyuna açıklamıştır."
     },
     {
-        question: "Sovyet Rusya'nın gizli antlaşmaları açıkladığı belge aşağıdakilerden hangisi olarak adlandırılmıştır?",
+        question: "I. Dünya Savaşı sırasında İtilaf Devletleri arasında yapılan gizli antlaşmaları 1917'de kamuoyuna açıklayan devlet aşağıdakilerden hangisidir?",
         options: [
-            "A) Mavi Kitap",
-            "B) Sarı Kitap",
-            "C) Beyaz Kitap",
-            "D) Kırmızı Kitap",
-            "E) Kara Kitap"
+            "A) Sovyet Rusya",
+            "B) ABD",
+            "C) İngiltere",
+            "D) Fransa",
+            "E) İtalya"
         ],
-        correctAnswerIndex: 1,
-        explanation: "Sovyet Rusya'nın gizli antlaşmaları açıkladığı belge 'Sarı Kitap' olarak adlandırılmıştır."
+        correctAnswerIndex: 0,
+        explanation: "Bolşevik İhtilali'nden sonra yönetimi ele geçiren Sovyet Rusya, Çarlık Rusyası'nın da taraf olduğu ve Osmanlı topraklarının paylaşılmasını öngören gizli antlaşmaları 1917'de kamuoyuna açıklamıştır. Sovyet Rusya ayrıca bu antlaşmaları tanımadığını duyurmuştur."
     },
 
     // ============================================================
@@ -1453,7 +1453,7 @@ window.tarih_11_sorulari = [
         explanation: "Japonya, I. Dünya Savaşı'nda İtilaf Devletleri safında yer almış, savaştan toprak ve ekonomik kazançla çıkmıştır."
     },
     {
-        question: "I. Dünya Savaşı sırasında yaklaşık kaç sivilin hayatını kaybettiği belirtilmektedir?",
+        question: "I. Dünya Savaşı'nda cephelerde hayatını kaybeden asker sayısı yaklaşık olarak aşağıdakilerden hangisidir?",
         options: [
             "A) 1 milyon",
             "B) 3 milyon",
@@ -1462,7 +1462,7 @@ window.tarih_11_sorulari = [
             "E) 20 milyon"
         ],
         correctAnswerIndex: 3,
-        explanation: "I. Dünya Savaşı'nda yaklaşık 10 milyon sivil hayatını kaybetmiştir."
+        explanation: "I. Dünya Savaşı'nda cephelerde yaklaşık 10 milyon asker hayatını kaybetmiş, milyonlarca insan da yaralanmış veya sakat kalmıştır. Savaş, o güne kadar görülmemiş büyüklükte can kaybına yol açmasıyla dünya tarihinde bir dönüm noktası olmuştur."
     },
     {
         question: "I. Dünya Savaşı sonrasında kurulan Milletler Cemiyeti'nin temel amacı aşağıdakilerden hangisidir?",
@@ -1523,7 +1523,7 @@ window.tarih_11_sorulari = [
             "B) Faşizm – Mussolini",
             "C) Komünizm – Lenin",
             "D) Liberalizm – Wilson",
-            "E) Sosyalizm – Souchon"
+            "E) Sosyalizm – Mussolini"
         ],
         correctAnswerIndex: 2,
         explanation: "Sovyet Rusya'da Komünizm ideolojisi etkili olmuş ve bu ideolojinin önde gelen lideri Lenin'dir."
@@ -1617,20 +1617,20 @@ window.tarih_11_sorulari = [
             "D) I. Dünya Savaşı",
             "E) Brest-Litovsk Antlaşması"
         ],
-        correctAnswerIndex: 0,
-        explanation: "Uşi Antlaşması (18 Ekim 1912), I. Balkan Savaşı'ndan (8 Ekim 1912) hemen önce imzalanmıştır. Kronolojik sıralama: Uşi (1912) → I. Balkan (1912-1913) → II. Balkan (1913) → I. Dünya Savaşı (1914-1918) → Brest-Litovsk (1918)."
+        correctAnswerIndex: 1,
+        explanation: "I. Balkan Savaşı 8 Ekim 1912'de başlamış, Trablusgarp Savaşı'nı sona erdiren Uşi Antlaşması ise 18 Ekim 1912'de imzalanmıştır. Kronolojik sıralama şöyledir: I. Balkan Savaşı (8 Ekim 1912) → Uşi Antlaşması (18 Ekim 1912) → II. Balkan Savaşı (1913) → I. Dünya Savaşı (1914-1918) → Brest-Litovsk Antlaşması (1918)."
     },
     {
         question: "Aşağıdaki gelişmelerden hangisi diğerlerinden farklı bir savaşla ilgilidir?",
         options: [
-            "A) Bab-ı Ali Baskını",
-            "B) Londra Antlaşması",
+            "A) Bab-ı Âli Baskını",
+            "B) Londra Antlaşması (1913)",
             "C) Midye-Enez Hattı",
             "D) Hamidiye Kahramanı",
             "E) Brest-Litovsk Antlaşması"
         ],
         correctAnswerIndex: 4,
-        explanation: "Bab-ı Ali Baskını, Londra Antlaşması, Midye-Enez Hattı ve Hamidiye Kahramanı I. Balkan Savaşı ile ilgilidir. Brest-Litovsk Antlaşması ise I. Dünya Savaşı ile ilgilidir."
+        explanation: "Bab-ı Âli Baskını, 1913 Londra Antlaşması, Midye-Enez Hattı ve 'Hamidiye Kahramanı' olarak anılan Hüseyin Rauf Bey I. Balkan Savaşı ile ilgilidir. Brest-Litovsk Antlaşması ise I. Dünya Savaşı sırasında Sovyet Rusya ile İttifak Devletleri arasında imzalanmıştır."
     },
     {
         question: "Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
@@ -1669,7 +1669,7 @@ window.tarih_11_sorulari = [
         explanation: "Kutü'l-Amare Zaferi'ni Halil Paşa kazanmıştır. Mustafa Kemal bu zaferde yer almamıştır."
     },
     {
-        question: "Aşağıdaki gelişmelerden hangisi Osmanlı Devleti'nin I. Dünya Savaşı'na girmesinden sonra ortaya çıkan sonuçlardan biri değildir?",
+        question: "Aşağıdakilerden hangisi Osmanlı Devleti'nin I. Dünya Savaşı'na girmesiyle ilgili gelişmelerden biri değildir?",
         options: [
             "A) Kapitülasyonların tek taraflı kaldırılması",
             "B) Boğazların savaş gemilerine kapatılması",
@@ -1678,7 +1678,7 @@ window.tarih_11_sorulari = [
             "E) Osmanlı Devleti'nin Afrika'daki topraklarını geri kazanması"
         ],
         correctAnswerIndex: 4,
-        explanation: "Osmanlı Devleti, I. Dünya Savaşı'nda Afrika'daki topraklarını geri kazanamamıştır. Trablusgarp ve Mısır zaten kaybedilmişti."
+        explanation: "Osmanlı Devleti, savaşa girme sürecinde kapitülasyonları tek taraflı olarak kaldırmış ve Boğazları savaş gemilerine kapatmış, savaşa girdikten sonra da cihat ilan etmiştir. Osmanlı'nın savaşa katılması yeni cepheler açılmasına yol açarak Almanya'nın savaş yükünü hafifletmiştir. Ancak Osmanlı Devleti daha önce kaybettiği Afrika topraklarını geri kazanamamıştır."
     },
     {
         question: "Aşağıdaki antlaşmalardan hangisi Osmanlı Devleti ile İtalya arasındaki mücadeleyle doğrudan ilgilidir?",
@@ -1705,7 +1705,7 @@ window.tarih_11_sorulari = [
         explanation: "McMahon Antlaşması, İngiltere ile Şerif Hüseyin arasında yapılmıştır. Diğer antlaşmalar İtilaf Devletleri arasında yapılan gizli antlaşmalardır."
     },
     {
-        question: "Aşağıdaki olaylardan hangisi Osmanlı Devleti'nin I. Dünya Savaşı'nda başarısız olduğu hâlde savaş sonrasında toprak kazanmasına örnektir?",
+        question: "Osmanlı Devleti'nin I. Dünya Savaşı'nda ağır bir yenilgi aldığı hâlde savaş sürerken toprak kazandığı cephe aşağıdakilerden hangisidir?",
         options: [
             "A) Kafkas Cephesi",
             "B) Çanakkale Cephesi",
@@ -1714,10 +1714,10 @@ window.tarih_11_sorulari = [
             "E) Hicaz-Yemen Cephesi"
         ],
         correctAnswerIndex: 0,
-        explanation: "Kafkas Cephesi'nde Sarıkamış'ta ağır yenilgi alan Osmanlı, Bolşevik İhtilali sonrası Brest-Litovsk ile Elviye-i Selase'yi geri almıştır."
+        explanation: "Kafkas Cephesi'nde Sarıkamış Harekâtı ağır bir yenilgiyle sonuçlanmıştır. Ancak Rusya'da Bolşevik İhtilali'nin ardından imzalanan 3 Mart 1918 tarihli Brest-Litovsk Antlaşması ile Kars, Ardahan ve Batum (Elviye-i Selase) geri alınmış; böylece yenilgi alınan bu cephede savaş devam ederken toprak kazanılmıştır."
     },
     {
-        question: "Aşağıdaki gelişmelerden hangisinin Osmanlı Devleti'nin Anadolu'da Millî Mücadele'nin liderliğini üstlenmesinde Mustafa Kemal açısından önemli bir deneyim oluşturduğu söylenebilir?",
+        question: "Aşağıdaki gelişmelerden hangisinin, Mustafa Kemal'in Millî Mücadele'nin liderliğini üstlenmesinde önemli bir deneyim oluşturduğu söylenebilir?",
         options: [
             "A) Trablusgarp ve Çanakkale'deki başarıları",
             "B) Uşi Antlaşması'nın imzalanması",
@@ -1733,12 +1733,12 @@ window.tarih_11_sorulari = [
         options: [
             "A) Kafkas – Kars, Ardahan ve Batum'u geri almak",
             "B) Kanal – Mısır'ı geri almak",
-            "C) Irak – Musul ve Abadan petrollerini ele geçirmek",
-            "D) Çanakkale – Rusya'ya yardım ulaştırmak",
+            "C) Irak – İngiltere'nin Hindistan ile bağlantısını kesmek",
+            "D) Çanakkale – Boğazları savunmak ve İtilaf Devletleri'nin Rusya'ya ulaşmasını engellemek",
             "E) Hicaz-Yemen – Rusya'nın sıcak denizlere inmesini engellemek"
         ],
         correctAnswerIndex: 4,
-        explanation: "Hicaz-Yemen Cephesi, Rusya'nın sıcak denizlere inmesini engellemek amacıyla değil; İngiltere'nin kutsal bölgeleri ve petrol kaynaklarını ele geçirme girişimine karşı savunma amacıyla açılmıştır."
+        explanation: "Hicaz-Yemen Cephesi Rusya'ya karşı değil, İngiltere'nin kışkırttığı Arap ayaklanmasına karşı oluşmuştur; Osmanlı Devleti'nin buradaki amacı kutsal toprakları elde tutmak ve bölgedeki hâkimiyetini sürdürmektir. Bu nedenle E'deki amaç eşleştirmesi yanlıştır."
     },
     {
         question: "Aşağıdaki gelişmelerden hangisi Osmanlı Devleti'nin Balkanlar'daki siyasi varlığının sona ermesiyle doğrudan ilgilidir?",

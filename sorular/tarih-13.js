@@ -88,7 +88,7 @@ window.tarih_13_sorulari = [
         explanation: "Mustafa Kemal'in Havza'daki faaliyetleri üzerine İstanbul Hükûmeti tarafından geri çağrılması, İstanbul Hükûmeti'nin Anadolu hareketinden rahatsız olduğunu göstermektedir."
     },
     {
-        question: "Amasya Genelgesi'nin Mustafa Kemal'in yanı sıra Ali Fuat Cebesoy, Rauf Orbay, Kazım Karabekir ve Refet Bele gibi isimlerle birlikte yayımlanmasının temel amacı aşağıdakilerden hangisidir?",
+        question: "Amasya Genelgesi'nin Mustafa Kemal'in yanı sıra Ali Fuat Cebesoy, Rauf Orbay ve Refet Bele'nin imzası, Kazım Karabekir ile Mersinli Cemal Paşa'nın telgrafla onayı alınarak yayımlanmasının temel amacı aşağıdakilerden hangisidir?",
         options: [
             "A) Mücadeleyi yalnızca askerî bir hareket hâline getirmek",
             "B) İstanbul Hükûmeti'ni tamamen ortadan kaldırmak",
@@ -97,7 +97,7 @@ window.tarih_13_sorulari = [
             "E) Manda ve himayeyi kabul ettirmek"
         ],
         correctAnswerIndex: 2,
-        explanation: "Amasya Genelgesi'nin birden fazla komutan tarafından imzalanması, Millî Mücadele'yi Mustafa Kemal'in kişisel girişimi olmaktan çıkararak ortak bir karar hâline getirmeyi amaçlamıştır."
+        explanation: "Genelgenin birden çok komutanın imza ve onayıyla yayımlanması, Millî Mücadele'yi Mustafa Kemal'in kişisel girişimi olmaktan çıkararak ortak bir karar hâline getirmeyi amaçlamıştır."
     },
     {
         question: "Amasya Genelgesi'nde yer alan,\n\n> 'Vatanın bütünlüğü, milletin istiklali tehlikededir.'\n\nifadesi ile\n\n> 'İstanbul Hükûmeti üzerine aldığı sorumluluğu yerine getirememektedir.'\n\nifadeleri birlikte değerlendirildiğinde aşağıdakilerden hangisine ulaşılır?",
@@ -114,14 +114,14 @@ window.tarih_13_sorulari = [
     {
         question: "Amasya Genelgesi'nde 'Milletin bağımsızlığını yine milletin azmi ve kararı kurtaracaktır.' kararının yer alması aşağıdakilerden hangisini göstermektedir?",
         options: [
-            "A) Millî egemenlik düşüncesinin ilk kez açıkça ortaya konduğunu",
+            "A) Kurtuluş için yabancı devletlerin desteğinin şart görüldüğünü",
             "B) Millî Mücadele'nin amacı ve yönteminin belirlendiğini",
             "C) Saltanatın kaldırıldığını",
             "D) Cumhuriyet yönetimine geçildiğini",
             "E) Misak-ı Millî'nin kabul edildiğini"
         ],
         correctAnswerIndex: 1,
-        explanation: "Bu ifade, Millî Mücadele'nin amacı ve yöntemini belirlemiştir. Amaç bağımsızlık, yöntem ise milletin azim ve kararıdır. Ancak millî egemenlik düşüncesi burada açıkça ortaya konmamıştır."
+        explanation: "Bu madde Millî Mücadele'nin amacını ve yöntemini birlikte ortaya koymuştur: amaç milletin bağımsızlığı, yöntem ise milletin kendi azim ve kararıdır. Kurtuluşun dış yardımla değil ulusun kendi gücüyle sağlanacağı belirtilmiştir."
     },
     {
         question: "Amasya Genelgesi'nde Erzurum'da Doğu illeri adına bir kongre yapılacağının ve Sivas'ta ulusal bir kongre toplanacağının duyurulması aşağıdakilerden hangisine yöneliktir?",
@@ -157,7 +157,7 @@ window.tarih_13_sorulari = [
             "E) Millî Mücadele'nin ulusal nitelik kazanmasına katkı sağlaması"
         ],
         correctAnswerIndex: 3,
-        explanation: "Amasya Genelgesi manda ve himayeyi kesin olarak reddetmemiştir. Manda ve himayenin kesin reddi Erzurum Kongresi'nde gerçekleşmiştir."
+        explanation: "Amasya Genelgesi'nde manda ve himaye konusu ele alınmamıştır. Manda ve himaye ilk kez Erzurum Kongresi'nde reddedilmiş, Sivas Kongresi'nde ise bir daha gündeme gelmemek üzere kesin olarak reddedilmiştir."
     },
     {
         question: "Mustafa Kemal'in Amasya Genelgesi'nden sonra askerlik görevinden ve 9. Ordu Müfettişliği görevinden istifa etmesi, onun bundan sonraki faaliyetleriyle ilgili aşağıdakilerden hangisini göstermektedir?",
@@ -301,11 +301,11 @@ window.tarih_13_sorulari = [
             "A) İstanbul Hükûmeti'nin Anadolu üzerindeki etkisinin artmasına",
             "B) Osmanlı Devleti'nin savaşa yeniden girmesine",
             "C) Manda ve himayenin kabul edilmesine",
-            "D) TBMM açılıncaya kadar yasama ve yürütme faaliyetlerinin sürdürülmesine",
+            "D) TBMM açılıncaya kadar yürütme görevinin üstlenilmesine",
             "E) İtilaf Devletleri'nin Anadolu'dan çekilmesine"
         ],
         correctAnswerIndex: 3,
-        explanation: "Heyeti Temsiliye, TBMM açılıncaya kadar yasama ve yürütme faaliyetlerini sürdürmüş, Anadolu'daki siyasi boşluğu doldurmuştur."
+        explanation: "Temsil Heyeti, TBMM açılıncaya kadar bir hükûmet gibi çalışarak yürütme görevini üstlenmiş ve Anadolu'daki otorite boşluğunu doldurmuştur. Yasama yetkisi ise 23 Nisan 1920'de açılan TBMM ile kullanılmaya başlanmıştır."
     },
     {
         question: "Kazım Karabekir'in Mustafa Kemal'e, 'Siz bundan evvel olduğu gibi bundan böyle de komutunuzdayız, emrinizdeyim Paşam.' şeklindeki yaklaşımı aşağıdakilerden hangisi açısından önemlidir?",
@@ -468,24 +468,24 @@ window.tarih_13_sorulari = [
         options: [
             "A) İtilaf Devletleri'nin Anadolu'yu terk ettiğini",
             "B) Manda düşüncesinin kabul edildiğini",
-            "C) Dış yardımların tamamen yasaklandığını",
+            "C) Dış devletlerle her türlü ilişkinin yasaklandığını",
             "D) İstanbul Hükûmeti'nin manda yönetimini üstlendiğini",
-            "E) Manda ve himayenin kesin olarak reddedildiğini"
+            "E) Tam bağımsızlık ilkesinin benimsendiğini"
         ],
         correctAnswerIndex: 4,
-        explanation: "Sivas Kongresi'nde manda ve himaye 'bir daha gündeme gelmemek üzere' reddedilmiştir. Bu, manda ve himayenin kesin olarak reddedildiğini gösterir."
+        explanation: "Manda ve himayenin reddedilmesi, hiçbir devletin güdümünü kabul etmeyen, ulusal iradeye dayalı ve tam bağımsız bir devlet kurma iradesinin benimsendiğini gösterir."
     },
     {
         question: "Sivas Kongresi'nden sonra Damat Ferit Paşa Hükûmeti'nin istifa etmesi ve yerine Millî Mücadele'ye daha ılımlı yaklaşan Ali Rıza Paşa Hükûmeti'nin kurulması aşağıdakilerden hangisinin göstergesi olarak değerlendirilmiştir?",
         options: [
             "A) Saltanatın kaldırılmasının",
             "B) İtilaf Devletleri'nin Anadolu'dan çekilmesinin",
-            "C) İstanbul Hükûmeti'nin Temsil Heyeti'ne karşı ilk zaferinin",
+            "C) Temsil Heyeti'nin İstanbul Hükûmeti'ne karşı ilk siyasi zaferinin",
             "D) TBMM'nin açılmasının",
             "E) Misak-ı Millî'nin kabulünün"
         ],
         correctAnswerIndex: 2,
-        explanation: "Damat Ferit Paşa Hükûmeti'nin istifası ve Ali Rıza Paşa Hükûmeti'nin kurulması, Temsil Heyeti'nin siyasi başarısı olarak değerlendirilmiştir."
+        explanation: "Damat Ferit Paşa Hükûmeti'nin istifa etmek zorunda kalması ve yerine Millî Mücadele'ye ılımlı yaklaşan Ali Rıza Paşa Hükûmeti'nin kurulması, Temsil Heyeti'nin İstanbul Hükûmeti'ne karşı kazandığı ilk siyasi başarı olarak değerlendirilir."
     },
 
     // ============================================================
@@ -498,22 +498,22 @@ window.tarih_13_sorulari = [
             "B) Hâkimiyet-i Milliye Ankara'da yayımlanmıştır.",
             "C) Ceride-i Resmiye kanun, tüzük ve genelgelerin yayımlandığı gazetedir.",
             "D) Albayrak, Doğu Anadolu Müdafaa-i Hukuk Cemiyeti'nin gazetesidir.",
-            "E) İleri, Mustafa Kemal'in imzalı yazılarını yayımlayan gazetedir."
+            "E) Peyam-ı Sabah, Millî Mücadele'yi destekleyen bir gazetedir."
         ],
         correctAnswerIndex: 4,
-        explanation: "İleri gazetesi Mustafa Kemal'in imzalı yazılarını yayımlamamıştır. Minber gazetesi Mustafa Kemal ve Ali Fethi Okyar tarafından çıkarılmıştır. İleri ise İstanbul'da çıkan farklı bir gazetedir."
+        explanation: "Ali Kemal'in yazılarıyla tanınan Peyam-ı Sabah, Millî Mücadele'ye karşı yayın yapan gazetelerin başında gelir. Diğer seçeneklerde verilen bilgiler doğrudur."
     },
     {
-        question: "Aşağıdakilerden hangisi Millî Mücadele basın-yayın organları arasında yer alan bilgilerden biri değildir?",
+        question: "Millî Mücadele dönemi basın-yayın organlarıyla ilgili aşağıdaki bilgilerden hangisi yanlıştır?",
         options: [
-            "A) Anadolu Ajansı'nın 6 Nisan 1920'de Halide Edip ve Yunus Nadi tarafından kurulması",
-            "B) Hukuk-u Beşer'in İzmir'de Ahsan Tahsin'in başyazarlığını yaptığı gazete olması",
-            "C) Vakit gazetesinin Ahmet Emin Yalman tarafından çıkarılması",
-            "D) Açıksöz'ün Kastamonu'da Mehmet Akif Ersoy ile ilişkilendirilmesi",
-            "E) Sebülreşad'ın Ali Kemal tarafından çıkarılması"
+            "A) Anadolu Ajansı 6 Nisan 1920'de Halide Edip ve Yunus Nadi tarafından kurulmuştur.",
+            "B) Hukuk-u Beşer, İzmir'de Hasan Tahsin'in başyazarlığını yaptığı gazetedir.",
+            "C) Vakit gazetesi Ahmet Emin Yalman tarafından çıkarılmıştır.",
+            "D) Açıksöz, Kastamonu'da çıkarılan ve Mehmet Akif Ersoy'un yazılarına yer veren gazetedir.",
+            "E) Sebilürreşad, Ali Kemal tarafından çıkarılan dergidir."
         ],
         correctAnswerIndex: 4,
-        explanation: "Sebülreşad, Ali Kemal tarafından değil, Mehmet Akif Ersoy tarafından çıkarılmıştır. Ali Kemal, Peyam-ı Sabah gazetesiyle Millî Mücadele karşıtı yayın yapmıştır."
+        explanation: "Sebilürreşad, Eşref Edip tarafından çıkarılan ve Mehmet Akif Ersoy'un başyazarlığını yaptığı, Millî Mücadele'yi destekleyen bir dergidir. Ali Kemal ise Peyam-ı Sabah gazetesinde Millî Mücadele karşıtı yazılar yazmıştır."
     },
     {
         question: "Aşağıdakilerden hangisi Millî Mücadele karşıtı yayın organlarından biridir?",
@@ -580,7 +580,7 @@ window.tarih_13_sorulari = [
         explanation: "Bu kararlar, Temsil Heyeti'nin siyasi etkinliğinin arttığını ve Millî Mücadele'nin temel ilkelerinin İstanbul Hükûmeti tarafından kabul edildiğini göstermektedir."
     },
     {
-        question: "Amasya Görüşmeleri'nde Osmanlı Mebusan Meclisi'nin Osmanlı Devleti dışında güvenli bir bölgede toplanması kararı alınmıştır.\n\nBu kararın temelinde aşağıdakilerden hangisi bulunmaktadır?",
+        question: "Amasya Görüşmeleri'nde Osmanlı Mebusan Meclisi'nin İstanbul dışında güvenli bir yerde toplanması kararı alınmıştır. Bu kararın temelinde aşağıdakilerden hangisi bulunmaktadır?",
         options: [
             "A) Meclisin güvenli bir ortamda çalışmasını sağlama düşüncesi",
             "B) Saltanatı kaldırma düşüncesi",
@@ -876,12 +876,12 @@ window.tarih_13_sorulari = [
         options: [
             "A) Minber — Mustafa Kemal ve Ali Fethi Okyar",
             "B) Albayrak — Doğu Anadolu Müdafaa-i Hukuk Cemiyeti",
-            "C) Hukuk-u Beşer — Ahsan Tahsin",
+            "C) Hukuk-u Beşer — Hasan Tahsin",
             "D) İkdam — Yakup Kadri Karaosmanoğlu",
             "E) İrade-i Milliye — Ankara'da çıkarılan TBMM'nin yarı resmî yayın organı"
         ],
         correctAnswerIndex: 4,
-        explanation: "İrade-i Milliye, Sivas'ta çıkarılmıştır ve TBMM'nin yarı resmî yayın organı değildir. TBMM'nin yarı resmî yayın organı Hâkimiyet-i Milliye'dir."
+        explanation: "İrade-i Milliye, Sivas Kongresi sonrasında Sivas'ta çıkarılmıştır ve TBMM'nin yarı resmî yayın organı değildir. TBMM'nin yarı resmî yayın organı Ankara'da çıkarılan Hâkimiyet-i Milliye'dir."
     },
     {
         question: "Aşağıdaki gelişmelerden hangisi ile sonuçları arasında doğrudan bir ilişki yoktur?",
@@ -917,7 +917,7 @@ window.tarih_13_sorulari = [
             "E) Havza — Millî bilinci uyandırma"
         ],
         correctAnswerIndex: 4,
-        explanation: "Havza Genelgesi, millî bilinci uyandırmayı amaçlamıştır. Manda ve himayenin kesin reddi Erzurum'da, cemiyetlerin birleştirilmesi Sivas'ta, ilk kez millî sınırlardan söz edilmesi Erzurum'da, Temsil Heyeti'nin oluşturulması ise Erzurum Kongresi sonrasında gerçekleşmiştir."
+        explanation: "Havza Genelgesi millî bilinci uyandırmayı amaçlamıştır. Manda ve himaye ilk kez Erzurum Kongresi'nde reddedilmiş, Sivas Kongresi'nde kesin olarak reddedilmiştir. Cemiyetler Sivas Kongresi'nde tek çatı altında birleştirilmiş, millî sınırlardan ilk kez Erzurum Kongresi'nde söz edilmiş, Temsil Heyeti de Erzurum Kongresi'nde oluşturulmuştur."
     },
     {
         question: "Aşağıdaki gelişmelerden hangisi İstanbul Hükûmeti'nin Millî Mücadele karşısındaki tutumunda değişim yaşandığını göstermektedir?",

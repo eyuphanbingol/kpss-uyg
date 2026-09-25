@@ -6,7 +6,8 @@ window.turkce_15_sorulari = [
         "A) Ad cümlesi",
         "B) Fiil cümlesi",
         "C) Eksilti cümlesi",
-        "D) Devrik cümle"
+        "D) Bağlı cümle",
+        "E) Devrik cümle"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Fiil yüklem → fiil cümlesi."
@@ -17,9 +18,10 @@ window.turkce_15_sorulari = [
         "A) Ad cümlesi",
         "B) Devrik",
         "C) Eksilti",
-        "D) Fiil cümlesi"
+        "D) Bağlı",
+        "E) Fiil cümlesi"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "geldi fiil yüklem."
 },
 {
@@ -28,7 +30,8 @@ window.turkce_15_sorulari = [
         "A) Fiil cümlesi",
         "B) Ad cümlesi",
         "C) Eksilti",
-        "D) Sıralı"
+        "D) Sıralı",
+        "E) Bağlı"
     ],
     "correctAnswerIndex": 1,
     "explanation": "zordur ad soylu yüklem."
@@ -36,12 +39,13 @@ window.turkce_15_sorulari = [
 {
     "question": "“En güzel şey çalışmaktır.” cümlesi neden ad cümlesidir?",
     "options": [
-        "A) Yüklem fiildir.",
-        "B) Özne yoktur.",
-        "C) Fiilimsi yüklem ad soylu kabul edilir.",
-        "D) Devriktir."
+        "A) Soru eki aldığı için.",
+        "B) Yüklem fiildir.",
+        "C) Özne yoktur.",
+        "D) Fiilimsi yüklem ad soylu kabul edilir.",
+        "E) Devriktir."
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "çalışmaktır isim-fiil → ad cümlesi."
 },
 {
@@ -50,7 +54,8 @@ window.turkce_15_sorulari = [
         "A) Devrik",
         "B) Eksilti",
         "C) Kurallı (düz)",
-        "D) Sıralı"
+        "D) Sıralı",
+        "E) Bağlı"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Kurallı cümlede yüklem sondadır."
@@ -61,7 +66,8 @@ window.turkce_15_sorulari = [
         "A) Devrik",
         "B) Eksilti",
         "C) Kurallı",
-        "D) Bağlı"
+        "D) Sıralı",
+        "E) Bağlı"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Yüklem sonda → kurallı."
@@ -72,7 +78,8 @@ window.turkce_15_sorulari = [
         "A) Kurallı",
         "B) Eksilti",
         "C) Devrik",
-        "D) Basit"
+        "D) Basit",
+        "E) Sıralı"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Yüklem başta → devrik."
@@ -80,21 +87,23 @@ window.turkce_15_sorulari = [
 {
     "question": "Yüklemi olmayan cümle türü hangisidir?",
     "options": [
-        "A) Devrik",
-        "B) Sıralı",
-        "C) Bağlı",
-        "D) Eksilti"
+        "A) Kurallı",
+        "B) Devrik",
+        "C) Sıralı",
+        "D) Bağlı",
+        "E) Eksilti"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Eksilti: yüklem yok, ... ile biter."
 },
 {
     "question": "“Oğlan dayıya, kız halaya...” cümlesi nedir?",
     "options": [
         "A) Eksilti",
-        "B) Fiil",
-        "C) Bağlı",
-        "D) Birleşik"
+        "B) Kurallı",
+        "C) Fiil",
+        "D) Bağlı",
+        "E) Birleşik"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Yüklem düşmüştür → eksilti."
@@ -103,9 +112,10 @@ window.turkce_15_sorulari = [
     "question": "“Ali geldi.” cümlesi anlamına göre nedir?",
     "options": [
         "A) Olumlu",
-        "B) Olumsuz",
-        "C) Soru",
-        "D) Emir"
+        "B) Ünlem",
+        "C) Olumsuz",
+        "D) Soru",
+        "E) Emir"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Olumlu cümle."
@@ -113,12 +123,13 @@ window.turkce_15_sorulari = [
 {
     "question": "“Ali gelmedi.” cümlesi anlamına göre nedir?",
     "options": [
-        "A) Olumlu",
-        "B) Ünlem",
-        "C) Soru",
-        "D) Olumsuz"
+        "A) Emir",
+        "B) Olumlu",
+        "C) Ünlem",
+        "D) Soru",
+        "E) Olumsuz"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Olumsuz cümle."
 },
 {
@@ -127,7 +138,8 @@ window.turkce_15_sorulari = [
         "A) Biçimce olumlu, anlamca olumsuz",
         "B) İkisi de olumsuz",
         "C) İkisi de olumlu",
-        "D) Biçimce olumsuz, anlamca olumlu"
+        "D) Biçimce olumsuz, anlamca olumlu",
+        "E) Biçimce soru, anlamca olumlu"
     ],
     "correctAnswerIndex": 3,
     "explanation": "yok yok = her şey var (biçimce olumsuz, anlamca olumlu)."
@@ -135,23 +147,25 @@ window.turkce_15_sorulari = [
 {
     "question": "“İnsan sevdiğini hiç üzer mi?” cümlesi biçimce ve anlamca nasıldır?",
     "options": [
-        "A) Biçimce olumlu, anlamca olumsuz",
-        "B) Biçimce olumsuz, anlamca olumlu",
-        "C) İkisi de olumlu",
-        "D) İkisi de olumsuz"
+        "A) Biçimce soru, anlamca emir",
+        "B) Biçimce olumlu, anlamca olumsuz",
+        "C) Biçimce olumsuz, anlamca olumlu",
+        "D) İkisi de olumlu",
+        "E) İkisi de olumsuz"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "Soru biçiminde ama üzmez anlamı."
 },
 {
     "question": "“Geldi mi?” cümlesi anlamına göre nedir?",
     "options": [
-        "A) Emir",
-        "B) Şart",
-        "C) Ünlem",
-        "D) Soru"
+        "A) Olumsuz",
+        "B) Emir",
+        "C) Şart",
+        "D) Ünlem",
+        "E) Soru"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Soru cümlesi."
 },
 {
@@ -160,7 +174,8 @@ window.turkce_15_sorulari = [
         "A) Emir",
         "B) Ünlem",
         "C) Soru",
-        "D) Olumsuz"
+        "D) Olumsuz",
+        "E) Şart"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Ünlem cümlesi."
@@ -169,9 +184,10 @@ window.turkce_15_sorulari = [
     "question": "“Gel!” cümlesi anlamına göre nedir?",
     "options": [
         "A) Emir",
-        "B) İstek",
-        "C) Şart",
-        "D) Soru"
+        "B) Ünlem",
+        "C) İstek",
+        "D) Şart",
+        "E) Soru"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Emir cümlesi."
@@ -182,7 +198,8 @@ window.turkce_15_sorulari = [
         "A) Emir",
         "B) İstek",
         "C) Şart",
-        "D) Olumsuz"
+        "D) Olumsuz",
+        "E) Ünlem"
     ],
     "correctAnswerIndex": 1,
     "explanation": "İstek cümlesi."
@@ -192,8 +209,9 @@ window.turkce_15_sorulari = [
     "options": [
         "A) Şart",
         "B) Emir",
-        "C) Soru",
-        "D) Ünlem"
+        "C) İstek",
+        "D) Soru",
+        "E) Ünlem"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Şart cümlesi (-se)."
@@ -201,23 +219,25 @@ window.turkce_15_sorulari = [
 {
     "question": "Tek yargılı cümlelere ne denir?",
     "options": [
-        "A) Birleşik",
-        "B) Sıralı",
-        "C) Basit",
-        "D) Bağlı"
+        "A) Ki'li birleşik",
+        "B) Birleşik",
+        "C) Sıralı",
+        "D) Basit",
+        "E) Bağlı"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Basit cümle tek yargılıdır."
 },
 {
     "question": "“Ali geldi.” cümlesi yapısına göre nedir?",
     "options": [
         "A) Birleşik",
-        "B) Sıralı",
-        "C) Basit",
-        "D) Bağlı"
+        "B) Ki'li birleşik",
+        "C) Sıralı",
+        "D) Basit",
+        "E) Bağlı"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Tek yargı → basit."
 },
 {
@@ -226,7 +246,8 @@ window.turkce_15_sorulari = [
         "A) Ki'li",
         "B) Şartlı",
         "C) Girişik birleşik",
-        "D) İç içe"
+        "D) Sıralı",
+        "E) İç içe"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Girişik birleşikte fiilimsi vardır."
@@ -237,20 +258,22 @@ window.turkce_15_sorulari = [
         "A) Ki'li",
         "B) Bağlı",
         "C) Şartlı",
-        "D) Girişik birleşik"
+        "D) Sıralı",
+        "E) Girişik birleşik"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "geldiğini fiilimsi → girişik birleşik."
 },
 {
     "question": "“Anladım ki gelmeyecek.” cümlesi hangi birleşik cümledir?",
     "options": [
         "A) Girişik",
-        "B) Sıralı",
-        "C) Şartlı",
-        "D) Ki'li"
+        "B) Basit",
+        "C) Sıralı",
+        "D) Şartlı",
+        "E) Ki'li"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "ki bağlacı → ki'li birleşik."
 },
 {
@@ -259,7 +282,8 @@ window.turkce_15_sorulari = [
         "A) Şartlı birleşik",
         "B) Ki'li",
         "C) Girişik",
-        "D) Bağlı"
+        "D) Bağlı",
+        "E) Sıralı"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Şart kipiyle bağlanır."
@@ -270,7 +294,8 @@ window.turkce_15_sorulari = [
         "A) Sıralı",
         "B) Bağlı",
         "C) Basit",
-        "D) Eksilti"
+        "D) Ki'li",
+        "E) Eksilti"
     ],
     "correctAnswerIndex": 1,
     "explanation": "ve bağlacı → bağlı cümle."
@@ -279,23 +304,25 @@ window.turkce_15_sorulari = [
     "question": "“Kalktı, yıkandı, giyindi.” cümlesi yapısına göre nedir?",
     "options": [
         "A) Bağlı",
-        "B) Sıralı",
-        "C) Basit",
-        "D) Ki'li"
+        "B) Şartlı birleşik",
+        "C) Sıralı",
+        "D) Basit",
+        "E) Ki'li"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Bağlaçsız virgülle sıralı."
 },
 {
-    "question": "Cümleler kaç ana başlıkta sınıflandırılır?",
+    "question": "Aşağıdakilerden hangisi cümlelerin sınıflandırılmasında kullanılan ölçütlerden biri değildir?",
     "options": [
-        "A) İki",
-        "B) Dört: tür, anlam, yer, yapı",
-        "C) Beş",
-        "D) Altı"
+        "A) Yüklemin türü",
+        "B) Cümlenin anlamı",
+        "C) Yüklemin yeri",
+        "D) Cümlenin yapısı",
+        "E) Cümlenin hece sayısı"
     ],
-    "correctAnswerIndex": 1,
-    "explanation": "Notlardaki dörtlü sınıflama."
+    "correctAnswerIndex": 4,
+    "explanation": "Cümleler yükleminin türüne (fiil cümlesi - isim cümlesi), anlamına (olumlu, olumsuz, soru, ünlem), yükleminin yerine (kurallı, devrik) ve yapısına (basit, birleşik, sıralı, bağlı) göre sınıflandırılır. Hece sayısı bir cümle sınıflandırma ölçütü değildir."
 },
 {
     "question": "Yüklemin türüne göre cümle kaça ayrılır?",
@@ -303,7 +330,8 @@ window.turkce_15_sorulari = [
         "A) Üçe",
         "B) Beşe",
         "C) Dörde",
-        "D) İkiye: fiil ve ad cümlesi"
+        "D) İkiye: fiil ve ad cümlesi",
+        "E) Yediye"
     ],
     "correctAnswerIndex": 3,
     "explanation": "Fiil cümlesi / ad cümlesi."
@@ -314,21 +342,23 @@ window.turkce_15_sorulari = [
         "A) Olumlu, olumsuz, soru",
         "B) Basit, birleşik, bağlı",
         "C) Kurallı, devrik, eksilti",
-        "D) Fiil, ad, fiilimsi"
+        "D) Fiil, ad, fiilimsi",
+        "E) Basit, türemiş, birleşik"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Kurallı / devrik / eksilti."
 },
 {
-    "question": "Anlamına göre cümle türlerinden biri değildir?",
+    "question": "Aşağıdakilerden hangisi anlamına göre cümle türlerinden biri değildir?",
     "options": [
         "A) Soru cümlesi",
         "B) Ünlem cümlesi",
-        "C) Hece cümlesi",
-        "D) Emir cümlesi"
+        "C) Olumsuz cümle",
+        "D) Hece cümlesi",
+        "E) Emir cümlesi"
     ],
-    "correctAnswerIndex": 2,
-    "explanation": "Hece cümlesi diye tür yok."
+    "correctAnswerIndex": 3,
+    "explanation": "Anlamına göre cümleler olumlu, olumsuz, soru, ünlem ve emir cümlesi olarak ayrılır; “hece cümlesi” diye bir cümle türü yoktur."
 },
 {
     "question": "Yapısına göre cümle türlerinden biri hangisidir?",
@@ -336,20 +366,22 @@ window.turkce_15_sorulari = [
         "A) Devrik",
         "B) Fiil cümlesi",
         "C) Olumlu",
-        "D) Girişik birleşik"
+        "D) Ad cümlesi",
+        "E) Girişik birleşik"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Yapı: basit, girişik, ki'li, şartlı, bağlı, sıralı."
 },
 {
     "question": "“Eyvah, yandık!” cümlesi anlamına göre nedir?",
     "options": [
         "A) Emir",
-        "B) Ünlem",
-        "C) Soru",
-        "D) Şart"
+        "B) Olumsuz",
+        "C) Ünlem",
+        "D) Soru",
+        "E) Şart"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Duygu bildiren ünlem."
 },
 {
@@ -358,10 +390,11 @@ window.turkce_15_sorulari = [
         "A) Emir",
         "B) İstek",
         "C) Şart",
-        "D) Soru"
+        "D) Ünlem",
+        "E) Soru"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Emir/istek kipi."
+    "explanation": "“etmeyiniz” emir kipinin 2. çoğul kişi çekimidir; cümle karşıdakine doğrudan buyruk verdiği için anlamına göre emir cümlesidir."
 },
 {
     "question": "“Yarın gidelim.” cümlesi anlamına göre nedir?",
@@ -369,7 +402,8 @@ window.turkce_15_sorulari = [
         "A) Emir",
         "B) İstek",
         "C) Şart",
-        "D) Olumsuz"
+        "D) Ünlem",
+        "E) Olumsuz"
     ],
     "correctAnswerIndex": 1,
     "explanation": "-elim istek."
@@ -377,12 +411,13 @@ window.turkce_15_sorulari = [
 {
     "question": "“Sınavı geçersen hediyen hazır.” cümlesi anlamına göre nedir?",
     "options": [
-        "A) Şart",
-        "B) Emir",
-        "C) Soru",
-        "D) Ünlem"
+        "A) İstek",
+        "B) Şart",
+        "C) Emir",
+        "D) Soru",
+        "E) Ünlem"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "-se şart."
 }
 ];

@@ -49,7 +49,7 @@ window.tarih_15_sorulari = [
             "E) Zonguldak"
         ],
         correctAnswerIndex: 2,
-        explanation: "Gümrü Antlaşması ile Kars, Ardahan ve Oltu Türkiye'ye bırakılmıştır. Batum ise Gürcistan'a bırakılmıştır."
+        explanation: "Gümrü Antlaşması (3 Aralık 1920) ile Ermenistan, Kars ve Sarıkamış çevresini TBMM Hükûmeti'ne bırakmıştır. Batum'un Gürcistan'a bırakılması ise Gümrü'nün değil, 1921 Moskova Antlaşması'nın konusudur."
     },
     {
         question: "Gümrü Antlaşması'nda sınır olarak aşağıdakilerden hangisinin kabul edildiği belirtilmiştir?",
@@ -136,16 +136,16 @@ window.tarih_15_sorulari = [
         explanation: "Gümrü Antlaşması ile Ermenistan, TBMM Hükûmeti'ni tanımış ve Misak-ı Millî'yi kabul etmiştir. Bu, TBMM'nin uluslararası alanda tanınması açısından önemlidir."
     },
     {
-        question: "Aşağıdakilerden hangisi doğu sınırını şekillendiren antlaşmalardan biri değildir?",
+        question: "Aşağıdaki antlaşma – belirlediği sınır eşleştirmelerinden hangisi yanlıştır?",
         options: [
-            "A) Gümrü",
-            "B) Moskova",
-            "C) Kars",
-            "D) Ankara",
-            "E) Hiçbiri"
+            "A) Gümrü Antlaşması – Doğu sınırı",
+            "B) Moskova Antlaşması – Doğu sınırı",
+            "C) Kars Antlaşması – Doğu sınırı",
+            "D) Ankara Antlaşması – Doğu sınırı",
+            "E) Lozan Antlaşması – Batı sınırı"
         ],
         correctAnswerIndex: 3,
-        explanation: "Ankara Antlaşması, Fransa ile yapılmıştır ve doğu sınırını değil, güney sınırını ilgilendirir. Doğu sınırını Gümrü, Moskova ve Kars antlaşmaları şekillendirmiştir."
+        explanation: "20 Ekim 1921 tarihli Ankara Antlaşması Fransa ile imzalanmış ve Türkiye'nin güney sınırını belirlemiştir; doğu sınırıyla ilgisi yoktur. Doğu sınırı Gümrü, Moskova ve Kars antlaşmalarıyla, batı sınırı ise Lozan Barış Antlaşması ile belirlenmiştir."
     },
     {
         question: "Gümrü Antlaşması görüşmeleri sırasında Ermenilerin Sevr Antlaşması'ndaki imzalarını geri almayı kabul etmesi aşağıdakilerden hangisi açısından önemli görülmüştür?",
@@ -257,7 +257,7 @@ window.tarih_15_sorulari = [
             "E) Osmaniye – Şahin Bey"
         ],
         correctAnswerIndex: 4,
-        explanation: "Osmaniye, Tufan Bey ile ilişkilidir. Şahin Bey, Antep savunmasında öne çıkmıştır."
+        explanation: "Şahin Bey, Antep savunmasının önde gelen ismidir ve Osmaniye ile ilişkilendirilmez; bu nedenle E şıkkındaki eşleştirme yanlıştır. Diğer şıklarda verilen şehir-kahraman eşleştirmeleri doğrudur."
     },
     {
         question: "Maraş savunmasında aşağıdaki isimlerden hangileri öne çıkmıştır?",
@@ -537,7 +537,7 @@ window.tarih_15_sorulari = [
             "E) Seferberliğin kaldırılması"
         ],
         correctAnswerIndex: 0,
-        explanation: "Düzenli orduya geçiş aşamalarından biri, Batı Cephesi'nin ikiye ayrılmasıdır. Kuzey ve Güney olarak iki ayrı cephe komutanlığı oluşturulmuştur."
+        explanation: "Düzenli orduya geçiş aşamalarından biri Batı Cephesi'nin ikiye ayrılmasıdır. Bu düzenlemeyle kuzey kesimde Batı Cephesi Komutanlığı'na İsmet Bey, güney kesimde Güney Cephesi Komutanlığı'na Refet Bey getirilmiştir."
     },
 
     // ============================================================
@@ -624,16 +624,16 @@ window.tarih_15_sorulari = [
         explanation: "I. İnönü Savaşı, 6-10 Ocak 1921 tarihleri arasında gerçekleşmiştir. Bu, düzenli ordunun ilk zaferidir."
     },
     {
-        question: "I. İnönü Savaşı'nın Yunan taarruzu olarak kaçıncı Yunan taarruzu olduğu kabul edilmiştir?",
+        question: "TBMM'nin kurduğu düzenli ordunun Yunan kuvvetleri karşısında kazandığı ilk zafer aşağıdakilerden hangisidir?",
         options: [
-            "A) I.",
-            "B) II.",
-            "C) III.",
-            "D) IV.",
-            "E) V."
+            "A) I. İnönü Savaşı",
+            "B) II. İnönü Savaşı",
+            "C) Kütahya-Eskişehir Savaşları",
+            "D) Sakarya Meydan Savaşı",
+            "E) Başkomutanlık Meydan Savaşı"
         ],
         correctAnswerIndex: 0,
-        explanation: "I. İnönü Savaşı, Yunanlıların I. Taarruzu olarak kabul edilmiştir. Yunanlılar, Millî Mücadele'yi sona erdirmek için bu taarruzu başlatmıştır."
+        explanation: "6-10 Ocak 1921'de kazanılan I. İnönü Savaşı, Kuva-yı Milliye'nin tasfiyesiyle oluşturulan düzenli ordunun Yunan kuvvetleri karşısındaki ilk zaferidir. Kütahya-Eskişehir Savaşları ise düzenli ordunun geri çekilmesiyle sonuçlanmıştır."
     },
     {
         question: "Aşağıdakilerden hangisi I. İnönü Savaşı'nın nedenlerinden biri değildir?",
@@ -801,11 +801,11 @@ window.tarih_15_sorulari = [
             "A) Amanullah Han",
             "B) Zahir Şah",
             "C) Nadir Şah",
-            "D) Emanullah Han",
-            "E) Habibullah Han"
+            "D) Habibullah Han",
+            "E) Abdurrahman Han"
         ],
-        correctAnswerIndex: 3,
-        explanation: "Türkiye'yi ziyaret eden ilk Afgan hükümdarı Emanullah Han'dır. (Not: Kaynaklarda Amanullah Han olarak da geçer, ancak doğru isim Emanullah Han'dır.)"
+        correctAnswerIndex: 0,
+        explanation: "Türkiye'yi ziyaret eden ilk Afgan hükümdarı, 1928'de Ankara'ya gelerek Mustafa Kemal ile görüşen Amanullah Han'dır."
     },
 
     // ============================================================
@@ -996,7 +996,7 @@ window.tarih_15_sorulari = [
         explanation: "İstiklal Marşı, 12 Mart 1921'de TBMM tarafından kabul edilmiştir. I. İnönü Zaferi'nin ardından yazılmasına karar verilmiştir."
     },
     {
-        question: "I. İnönü Zaferi'nden sonra aşağıdakilerden hangisinin yazılmasına karar verilmiştir?",
+        question: "I. İnönü Zaferi'nin ardından yazım süreci hızlanan ve 12 Mart 1921'de TBMM'de kabul edilen metin aşağıdakilerden hangisidir?",
         options: [
             "A) Yeni bir anayasa",
             "B) Millî yemin",
@@ -1005,7 +1005,7 @@ window.tarih_15_sorulari = [
             "E) Barış bildirisi"
         ],
         correctAnswerIndex: 3,
-        explanation: "I. İnönü Zaferi'nden sonra bağımsızlık marşı (İstiklal Marşı) yazılmasına karar verilmiştir. Bu kararla Maarif Vekâleti bir yarışma düzenlemiştir."
+        explanation: "Maarif Vekâleti'nin 1920 sonunda açtığı millî marş yarışmasına gönderilen şiirler arasından beğenilen çıkmamış; I. İnönü Zaferi'nin ardından Mehmet Âkif Ersoy'un yarışmaya katılmaya ikna edilmesiyle süreç hızlanmış ve onun kaleme aldığı İstiklal Marşı 12 Mart 1921'de TBMM'de kabul edilmiştir."
     },
     {
         question: "Maarif Vekâletinin açtığı İstiklal Marşı yarışmasına kaç şiir gönderilmiştir?",
@@ -1034,17 +1034,17 @@ window.tarih_15_sorulari = [
     {
         question: "Mehmet Âkif Ersoy'un yarışmada verilen 500 liralık ödülle ilgili tutumu aşağıdakilerden hangisidir?",
         options: [
-            "A) Ödülü kabul edip kendisi kullanmıştır.",
-            "B) Ödülü reddetmiş ve hiçbir şekilde almamıştır.",
-            "C) Ödülü kabul etmeyeceğini belirtmiş, ödülü alması hâlinde Darülmesai'ye bağışlamıştır.",
-            "D) Ödülü Maarif Vekâletine bırakmıştır.",
+            "A) Ödülü kabul edip kendi ihtiyaçları için kullanmıştır.",
+            "B) Ödülü reddetmiş, para Maarif Vekâletine iade edilmiştir.",
+            "C) Ödülü kendisi için kabul etmemiş, Darülmesai'ye bağışlanmasını istemiştir.",
+            "D) Ödülü TBMM'ye bağışlamıştır.",
             "E) Ödülü orduya teslim etmiştir."
         ],
         correctAnswerIndex: 2,
-        explanation: "Mehmet Âkif Ersoy, ödülü kabul etmeyeceğini belirtmiş ve ödülü alması hâlinde Darülmesai'ye (Fakirleri Koruma Kurumu) bağışlamıştır."
+        explanation: "Mehmet Âkif Ersoy, İstiklal Marşı için verilen 500 liralık ödülü kendisi için kabul etmemiş; paranın Darülmesai adlı hayır kurumuna bağışlanmasını istemiştir."
     },
     {
-        question: "İstiklal Marşı yarışmasını talep eden kurum aşağıdakilerden hangisidir?",
+        question: "İstiklal Marşı için düzenlenen millî marş yarışmasını açan kurum aşağıdakilerden hangisidir?",
         options: [
             "A) Maarif Vekâleti",
             "B) Genelkurmay Başkanlığı",
@@ -1053,7 +1053,7 @@ window.tarih_15_sorulari = [
             "E) Dışişleri Bakanlığı"
         ],
         correctAnswerIndex: 0,
-        explanation: "İstiklal Marşı yarışması, Maarif Vekâleti (Millî Eğitim Bakanlığı) tarafından talep edilmiştir. Ancak yarışmayı düzenleyen de Maarif Vekâleti'dir."
+        explanation: "Millî marş yarışması, 1920 sonunda Maarif Vekâleti (Millî Eğitim Bakanlığı) tarafından açılmış ve kazanan şiire 500 lira ödül verileceği duyurulmuştur."
     },
     {
         question: "İstiklal Marşı yarışmasını düzenleyen kurum aşağıdakilerden hangisidir?",
@@ -1065,7 +1065,7 @@ window.tarih_15_sorulari = [
             "E) Millî Savunma Bakanlığı"
         ],
         correctAnswerIndex: 1,
-        explanation: "İstiklal Marşı yarışmasını düzenleyen kurum, Maarif Vekâleti'dir. (Not: Soruda her iki seçenek de aynı kurumu ifade etmektedir.)"
+        explanation: "İstiklal Marşı için açılan yarışmayı Maarif Vekâleti düzenlemiş, yarışmayı kazanan Mehmet Âkif Ersoy'un şiiri 12 Mart 1921'de TBMM'de kabul edilmiştir."
     },
     {
         question: "İstiklal Marşı'nın güftesi kime aittir?",
@@ -1125,7 +1125,7 @@ window.tarih_15_sorulari = [
             "E) 1876 Anayasası"
         ],
         correctAnswerIndex: 3,
-        explanation: "İstiklal Marşı, 1982 Anayasası'nda 'Türk milletinin bağımsızlık sembolü' olarak yer almıştır."
+        explanation: "İstiklal Marşı, 1982 Anayasası'nın 3. maddesinde 'Millî marşı İstiklal Marşı'dır' hükmüyle yer almıştır."
     },
     {
         question: "İstiklal Marşı'nı TBMM'de ilk okuyan kişi aşağıdakilerden hangisidir?",
@@ -1142,14 +1142,14 @@ window.tarih_15_sorulari = [
     {
         question: "İstiklal Marşı ilk defa nerede yayımlanmıştır?",
         options: [
-            "A) Hâkimiyet-i Milliye",
+            "A) Servet-i Fünûn",
             "B) Sebilürreşad",
             "C) İkdam",
             "D) Tasvir-i Efkâr",
             "E) Tercüman-ı Ahval"
         ],
         correctAnswerIndex: 1,
-        explanation: "İstiklal Marşı, ilk defa Sebilürreşad dergisinde yayımlanmıştır. Mehmet Âkif Ersoy, eserini bu dergide yayımlamıştır."
+        explanation: "Mehmet Âkif Ersoy'un yazdığı İstiklal Marşı, TBMM'de kabul edilmeden önce 17 Şubat 1921'de Sebilürreşad dergisinde yayımlanmıştır."
     },
     {
         question: "Mehmet Âkif Ersoy, İstiklal Marşı'nı aşağıdaki yerlerden hangisinde yazmıştır?",
@@ -1201,7 +1201,7 @@ window.tarih_15_sorulari = [
             "E) Yunanistan"
         ],
         correctAnswerIndex: 2,
-        explanation: "TBMM'yi Londra Konferansı'na İtalya davet etmiştir. İtalya, TBMM'nin konferansa katılmasını ve Misak-ı Millî'yi savunmasını istemiştir."
+        explanation: "TBMM'yi Londra Konferansı'na İtalya davet etmiştir; İtilaf Devletleri'nin kararlaştırdığı davet, TBMM'ye İtalya aracılığıyla iletilmiştir."
     },
     {
         question: "Londra Konferansı'na TBMM adına kim katılmıştır?",
@@ -1436,7 +1436,7 @@ window.tarih_15_sorulari = [
         explanation: "Sovyet Rusya, Boğazlar yönetiminin Türkiye'de kalmasını Karadeniz'deki çıkarlarına uygun görmüştür. Boğazların başka bir devletin kontrolünde olmasını istememiştir."
     },
     {
-        question: "Moskova Antlaşması ile TBMM Hükûmeti aşağıdakilerden hangisi tarafından ikinci kez büyük bir devlet olarak tanınmıştır?",
+        question: "TBMM Hükûmeti'ni tanıyan ilk büyük devlet aşağıdakilerden hangisidir?",
         options: [
             "A) İngiltere",
             "B) Fransa",
@@ -1445,7 +1445,7 @@ window.tarih_15_sorulari = [
             "E) Almanya"
         ],
         correctAnswerIndex: 2,
-        explanation: "Moskova Antlaşması ile TBMM Hükûmeti, Sovyet Rusya tarafından ikinci kez büyük bir devlet olarak tanınmıştır. (İlk tanıma Gümrü Antlaşması ile Ermenistan tarafından yapılmıştır.)"
+        explanation: "16 Mart 1921'de imzalanan Moskova Antlaşması ile Sovyet Rusya, TBMM Hükûmeti'ni tanıyan ilk büyük devlet olmuştur. TBMM'yi tanıyan ilk devlet ise Gümrü Antlaşması ile Ermenistan'dır."
     },
 
     // ============================================================
@@ -1461,7 +1461,7 @@ window.tarih_15_sorulari = [
             "E) V. Yunan Taarruzu"
         ],
         correctAnswerIndex: 1,
-        explanation: "II. İnönü Savaşı, Yunanlıların II. Taarruzu olarak kabul edilmiştir. 26-31 Mart 1921 tarihleri arasında gerçekleşmiştir."
+        explanation: "II. İnönü Savaşı, Yunanlıların ikinci taarruzu olarak kabul edilir ve 23 Mart - 1 Nisan 1921 tarihleri arasında gerçekleşmiştir."
     },
     {
         question: "Aşağıdakilerden hangisi II. İnönü Savaşı'nın nedenlerinden biri değildir?",
@@ -1512,16 +1512,16 @@ window.tarih_15_sorulari = [
         explanation: "II. İnönü Savaşı sonrasında Fransa, TBMM'ye ateşkes teklif etmiştir. Bu, Ankara Antlaşması'na giden süreci başlatmıştır."
     },
     {
-        question: "II. İnönü Savaşı sonrasında İngiltere'nin Malta'da bulunan kaç Türk esiri serbest bıraktığı belirtilmiştir?",
+        question: "II. İnönü Savaşı'nın kazanılmasının ardından Malta'da tuttuğu Türk esirlerinden bir bölümünü serbest bırakan devlet aşağıdakilerden hangisidir?",
         options: [
-            "A) 20",
-            "B) 30",
-            "C) 40",
-            "D) 50",
-            "E) 60"
+            "A) İngiltere",
+            "B) Fransa",
+            "C) İtalya",
+            "D) Yunanistan",
+            "E) Sovyet Rusya"
         ],
-        correctAnswerIndex: 2,
-        explanation: "II. İnönü Savaşı sonrasında İngiltere, Malta'da bulunan 40 Türk esirini serbest bırakmıştır."
+        correctAnswerIndex: 0,
+        explanation: "Malta'ya sürülen Türk devlet adamları ve aydınları İngiltere'nin denetiminde tutuluyordu. II. İnönü Zaferi'nden sonra TBMM'nin gücünü kabul etmek zorunda kalan İngiltere, Malta'daki Türk esirlerinden bir bölümünü serbest bırakmıştır."
     },
     {
         question: "II. İnönü Savaşı sonrasında aşağıdaki devletlerden hangisi Zonguldak'tan çekilmiştir?",
@@ -1536,7 +1536,7 @@ window.tarih_15_sorulari = [
         explanation: "II. İnönü Savaşı sonrasında Fransa, Zonguldak'tan çekilmiştir. Bu, Fransa'nın Anadolu'dan çekilme sürecinin başlangıcıdır."
     },
     {
-        question: "II. İnönü Savaşı sonrasında Anadolu'dan çekilmeye başlayan devlet aşağıdakilerden hangisidir?",
+        question: "II. İnönü Savaşı sonrasında işgal altında tuttuğu Antalya ve çevresinden çekilmeye başlayan devlet aşağıdakilerden hangisidir?",
         options: [
             "A) İngiltere",
             "B) Fransa",
@@ -1545,7 +1545,7 @@ window.tarih_15_sorulari = [
             "E) Sovyet Rusya"
         ],
         correctAnswerIndex: 2,
-        explanation: "II. İnönü Savaşı sonrasında İtalya, Anadolu'dan çekilmeye başlamıştır. İtalya, daha sonra Sakarya Zaferi sonrasında tamamen çekilmiştir."
+        explanation: "II. İnönü Zaferi'nden sonra İtalya, işgali altındaki Antalya ve çevresinden askerlerini çekmeye başlamış, bu çekilme Sakarya Zaferi'nden sonra tamamlanmıştır."
     },
     {
         question: "II. İnönü Savaşı sonrasında Batı Cephesi ile ilgili aşağıdakilerden hangisi gerçekleşmiştir?",
@@ -1996,15 +1996,15 @@ window.tarih_15_sorulari = [
         options: [
             "A) 15 gün 15 gece",
             "B) 18 gün 18 gece",
-            "C) 21 gün 21 gece",
+            "C) 22 gün 22 gece",
             "D) 25 gün 25 gece",
             "E) 30 gün 30 gece"
         ],
         correctAnswerIndex: 2,
-        explanation: "Sakarya Meydan Muharebesi, 23 Ağustos – 13 Eylül 1921 tarihleri arasında 21 gün 21 gece sürmüştür."
+        explanation: "Sakarya Meydan Muharebesi, 23 Ağustos - 13 Eylül 1921 tarihleri arasında 22 gün 22 gece sürmüştür."
     },
     {
-        question: "Mustafa Kemal, Sakarya Meydan Muharebesi'ni aşağıdaki savaşlardan hangisinden bile daha önemli görmüştür?",
+        question: "Sakarya Meydan Muharebesi, süresi bakımından aşağıdaki meydan muharebelerinden hangisinden sonra tarihin en uzun süren meydan muharebesi kabul edilir?",
         options: [
             "A) Malazgirt Meydan Muharebesi",
             "B) Mukden Meydan Muharebesi",
@@ -2013,7 +2013,7 @@ window.tarih_15_sorulari = [
             "E) Büyük Taarruz"
         ],
         correctAnswerIndex: 1,
-        explanation: "Mustafa Kemal, Sakarya Meydan Muharebesi'ni 'Mukden Meydan Muharebesi'nden daha önemli' görmüştür. Mukden, Japon-Rus Savaşı'nın dönüm noktasıdır."
+        explanation: "Sakarya Meydan Muharebesi 22 gün 22 gece sürmüştür. Bu süresiyle, Rus-Japon Savaşı'nda yaşanan Mukden Meydan Muharebesi'nden sonra tarihin en uzun süren meydan muharebesi olarak nitelendirilir."
     },
     {
         question: "Sakarya Meydan Muharebesi'nde yaklaşık kaç subay şehit olmuştur?",
@@ -2040,7 +2040,7 @@ window.tarih_15_sorulari = [
         explanation: "Sakarya Meydan Muharebesi'nde yaklaşık 800 subay yaralanmıştır."
     },
     {
-        question: "Sakarya Meydan Muharebesi'nde yaklaşık kaç er şehit olmuştur?",
+        question: "Sakarya Meydan Muharebesi'nde Türk ordusunda yaklaşık kaç asker yaralanmıştır?",
         options: [
             "A) 8.000",
             "B) 12.000",
@@ -2049,7 +2049,7 @@ window.tarih_15_sorulari = [
             "E) 20.000"
         ],
         correctAnswerIndex: 3,
-        explanation: "Sakarya Meydan Muharebesi'nde yaklaşık 18.000 er şehit olmuştur."
+        explanation: "Sakarya Meydan Muharebesi'nde Türk ordusunun kaybı yaklaşık 5.700 şehit ve 18.000'i aşkın yaralı olarak verilir; dolayısıyla yaralı sayısı yaklaşık 18.000'dir."
     },
     {
         question: "Sakarya Zaferi sonrasında Mustafa Kemal'e aşağıdakilerden hangileri verilmiştir?",
@@ -2264,7 +2264,7 @@ window.tarih_15_sorulari = [
         explanation: "Ankara Antlaşması'nı TBMM adına Dışişleri Bakanı Yusuf Kemal Tengirşenk imzalamıştır."
     },
     {
-        question: "Ankara Antlaşması'nda TBMM adına Yusuf Kemal Tengirşenk ile birlikte aşağıdakilerden hangisi imzacı olmuştur?",
+        question: "Ankara Antlaşması'nı Fransa adına aşağıdakilerden hangisi imzalamıştır?",
         options: [
             "A) Franklin Bouillon",
             "B) Tevfik Paşa",
@@ -2324,16 +2324,16 @@ window.tarih_15_sorulari = [
         explanation: "Ankara Antlaşması'na göre Hatay'da resmî dil Türkçe olacak ve özel bir yönetim kurulacaktır."
     },
     {
-        question: "Fransa'nın Suriye'den çekilmesi durumunda Hatay halkının kendi geleceğini nasıl belirlemesi kararlaştırılmıştır?",
+        question: "Ankara Antlaşması'nda İskenderun ve çevresi ile ilgili olarak aşağıdakilerden hangisi kararlaştırılmıştır?",
         options: [
-            "A) TBMM'nin kararıyla",
-            "B) Fransa'nın kararıyla",
-            "C) Halk oylamasıyla",
-            "D) İngiltere'nin kararıyla",
-            "E) Osmanlı Meclisinin kararıyla"
+            "A) Bölgede özel bir yönetim kurulması ve Türkçenin resmî dil sayılması",
+            "B) Bölgenin doğrudan TBMM yönetimine bırakılması",
+            "C) Bölgede hemen halk oylaması yapılması",
+            "D) Bölgenin Milletler Cemiyeti mandasına verilmesi",
+            "E) Bölgenin Yunanistan'a bırakılması"
         ],
-        correctAnswerIndex: 2,
-        explanation: "Ankara Antlaşması'na göre Fransa'nın Suriye'den çekilmesi durumunda Hatay halkı, kendi geleceğini halk oylamasıyla belirleyecektir."
+        correctAnswerIndex: 0,
+        explanation: "20 Ekim 1921 tarihli Ankara Antlaşması ile İskenderun ve çevresi, Fransa'nın manda yönetimindeki Suriye sınırları içinde kalmış; buna karşılık bölgede özel bir yönetim kurulması, Türkçenin resmî dil sayılması ve buradaki Türklerin kültürel haklarının korunması kabul edilmiştir. Hatay'ın Türkiye'ye katılması ise 1939'da gerçekleşmiştir."
     },
     {
         question: "Ankara Antlaşması'nda özel statüye bağlanan Süleyman Şah'ın bulunduğu yer aşağıdakilerden hangisidir?",
@@ -2406,10 +2406,10 @@ window.tarih_15_sorulari = [
             "B) İtalya'nın bıraktığı silahlar",
             "C) Fransa'nın bıraktığı silahlar",
             "D) İngiltere'nin bağışladığı silahlar",
-            "E) Hiçbiri"
+            "E) Sovyet Rusya'dan gelen yardımlar"
         ],
         correctAnswerIndex: 3,
-        explanation: "Büyük Taarruz öncesinde İngiltere'den silah bağışı alınmamıştır. Silahlar Tekâlif-i Milliye, İtalya ve Fransa'dan sağlanmıştır."
+        explanation: "Büyük Taarruz öncesinde ordunun ihtiyaçları Tekâlif-i Milliye Emirleri, Anadolu'yu boşaltan İtalya ile Fransa'nın bıraktığı silahlar ve Sovyet Rusya'dan gelen yardımlarla karşılanmıştır. Yunanistan'ı destekleyen İngiltere'den ise silah yardımı alınmamıştır."
     },
     {
         question: "Büyük Taarruz öncesinde Ankara'da ne kadar süreyle subay okulu açılmıştır?",
@@ -2460,16 +2460,16 @@ window.tarih_15_sorulari = [
         explanation: "Mustafa Kemal'in bu sözü, Büyük Taarruz öncesi hazırlıkların titizlikle yapılması gerektiğini vurgulamaktadır. Eksik hazırlıkla yapılacak taarruz başarısız olacaktır."
     },
     {
-        question: "Büyük Taarruz hangi tarihte ve saat kaçta başlamıştır?",
+        question: "Büyük Taarruz hangi tarihte başlamıştır?",
         options: [
-            "A) 26 Ağustos 1922 – 05.30",
-            "B) 30 Ağustos 1922 – 05.30",
-            "C) 26 Ağustos 1922 – 08.30",
-            "D) 1 Eylül 1922 – 05.30",
-            "E) 30 Ağustos 1922 – 08.00"
+            "A) 26 Ağustos 1922",
+            "B) 30 Ağustos 1922",
+            "C) 1 Eylül 1922",
+            "D) 9 Eylül 1922",
+            "E) 18 Eylül 1922"
         ],
         correctAnswerIndex: 0,
-        explanation: "Büyük Taarruz, 26 Ağustos 1922 sabahı saat 05.30'da başlamıştır. Başlangıç noktası Afyon Kocatepe'dir."
+        explanation: "Büyük Taarruz, 26 Ağustos 1922 sabahı Afyon'daki Kocatepe'den başlatılmış; 30 Ağustos 1922'de Başkomutanlık Meydan Muharebesi ile sonuçlanmış, 9 Eylül 1922'de İzmir'e girilmiştir."
     },
     {
         question: "Büyük Taarruz'un başlangıç noktası aşağıdakilerden hangisidir?",
@@ -2556,16 +2556,16 @@ window.tarih_15_sorulari = [
         explanation: "Büyük Taarruz sonrasında başlayan diplomatik süreç sonucunda 11 Ekim 1922'de Mudanya Ateşkes Antlaşması imzalanmıştır."
     },
     {
-        question: "Yunan işgali sırasında Anadolu ile ilgili aşağıdakilerden hangisi belirtilmiştir?",
+        question: "Yunan işgalinin Batı Anadolu üzerindeki etkisiyle ilgili olarak aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) Büyük ölçüde tahrip edilmiştir.",
-            "B) Hiç zarar görmemiştir.",
-            "C) Ekonomik olarak gelişmiştir.",
-            "D) İşgalden tamamen korunmuştur.",
-            "E) Sanayileşme hızlanmıştır."
+            "A) Geri çekilirken uygulanan yakıp yıkma siyaseti nedeniyle şehir ve kasabalar büyük ölçüde tahrip edilmiştir.",
+            "B) İşgal yalnızca askerî tesislerle sınırlı kalmış, sivil yerleşimlere dokunulmamıştır.",
+            "C) İşgal bölgesinde tarımsal üretim savaş öncesindeki düzeyin üzerine çıkmıştır.",
+            "D) İşgal süresince bölgede geniş çaplı imar ve sanayileşme faaliyetleri yürütülmüştür.",
+            "E) İşgal, Milletler Cemiyeti'nin denetiminde ve yerel halkın rızasıyla yürütülmüştür."
         ],
         correctAnswerIndex: 0,
-        explanation: "Yunan işgali sırasında Anadolu, büyük ölçüde tahrip edilmiştir. Kasabalar yakılmış, insanlar katledilmiş ve ekonomik yıkım yaşanmıştır."
+        explanation: "Yunan ordusu, özellikle Büyük Taarruz sonrasında geri çekilirken yakıp yıkma siyaseti uygulamış; Batı Anadolu'da şehir ve kasabalar yakılmış, tarım alanları ile ulaşım altyapısı tahrip edilmiş ve sivil halk ağır zarar görmüştür."
     },
     {
         question: "Büyük Taarruz sırasında Türk kuvvetleri tarafından esir alınan Yunan komutan aşağıdakilerden hangisidir?",
@@ -2580,23 +2580,23 @@ window.tarih_15_sorulari = [
         explanation: "Büyük Taarruz sırasında Türk kuvvetleri, Yunan Başkomutanı General Trikopis'i esir almıştır."
     },
     {
-        question: "General Trikopis'in esir alınmasıyla ilgili aşağıdakilerden hangisi doğrudur?",
+        question: "Başkomutanlık Meydan Muharebesi'nin kazanılmasının ardından Mareşal rütbesi verilen komutan aşağıdakilerden hangisidir?",
         options: [
-            "A) Fevzi Çakmak bu olaydan sonra ilk kez Mareşal olmuştur.",
-            "B) Kâzım Karabekir Mareşal olmuştur.",
-            "C) Fevzi Çakmak Başkomutanlıktan alınmıştır.",
-            "D) İsmet İnönü Mareşal olmuştur.",
-            "E) Fevzi Çakmak 1921'de Sakarya Zaferi sonrasında zaten Mareşal rütbesine yükseltilmişti."
+            "A) Fevzi Çakmak",
+            "B) İsmet İnönü",
+            "C) Kâzım Karabekir",
+            "D) Ali Fuat Cebesoy",
+            "E) Refet Bele"
         ],
-        correctAnswerIndex: 4,
-        explanation: "Fevzi Çakmak, 1921'de Sakarya Zaferi sonrasında Mareşal rütbesine yükseltilmişti. General Trikopis'in esir alınması bu olayla ilgili değildir."
+        correctAnswerIndex: 0,
+        explanation: "Büyük Taarruz ve Başkomutanlık Meydan Muharebesi'nin kazanılmasının ardından 31 Ağustos 1922'de Genelkurmay Başkanı Fevzi Çakmak'a Mareşal rütbesi verilmiştir. Mustafa Kemal ise Mareşal rütbesi ile Gazi unvanını 19 Eylül 1921'de Sakarya Zaferi sonrasında almıştır."
     },
 
     // ============================================================
     // BÖLÜM 19: ÇANAKKALE BUNALIMI (Soru 211-214)
     // ============================================================
     {
-        question: "Türk birliklerinin Yunan ordusunu yenilgiye uğrattıktan sonra yönünü aşağıdaki bölgedeki mevzilere çevirmesi sonucunda ortaya çıkan diplomatik gerginlik aşağıdakilerden hangisidir?",
+        question: "Türk birliklerinin Yunan ordusunu yenilgiye uğrattıktan sonra yönünü İtilaf Devletleri'nin elindeki mevzilere çevirmesi sonucunda ortaya çıkan diplomatik gerginlik aşağıdakilerden hangisidir?",
         options: [
             "A) Boğazlar Sorunu",
             "B) Kars Bunalımı",
@@ -2605,7 +2605,7 @@ window.tarih_15_sorulari = [
             "E) Batum Bunalımı"
         ],
         correctAnswerIndex: 3,
-        explanation: "Türk ordusunun Çanakkale'deki mevzilere yönelmesi, İngiltere ile Çanakkale Bunalımı'nı ortaya çıkarmıştır."
+        explanation: "Büyük Taarruz'dan sonra Türk ordusunun Çanakkale ve Boğazlar bölgesindeki İngiliz mevzilerine yönelmesi, İngiltere ile savaş tehlikesi doğuran Çanakkale Bunalımı'na yol açmış; gerginlik Mudanya Ateşkesi ile sona ermiştir."
     },
     {
         question: "Çanakkale Bunalımı'nın ortaya çıkmasında aşağıdaki devlet adamlarından hangisinin yayımladığı bildiri etkili olmuştur?",
@@ -2660,7 +2660,7 @@ window.tarih_15_sorulari = [
         explanation: "Türkiye'nin doğu sınırı, 13 Ekim 1921'de imzalanan Kars Antlaşması ile kesin hâlini almıştır."
     },
     {
-        question: "Aşağıdaki antlaşmalardan hangisinde Misak-ı Millî'den verilen tavizlerin ilki ve ikincisi sırasıyla doğru verilmiştir?",
+        question: "Misak-ı Millî'den verilen tavizlerin ilki ve ikincisi aşağıdakilerin hangisinde sırasıyla doğru verilmiştir?",
         options: [
             "A) Batum – Hatay",
             "B) Hatay – Batum",
@@ -2696,7 +2696,7 @@ window.tarih_15_sorulari = [
         explanation: "TBMM Hükûmeti'ni tanıyan ülkeler: Afganistan (1 Mart 1921) → Sovyet Rusya (16 Mart 1921) → Fransa (20 Ekim 1921 – Ankara Antlaşması ile)."
     },
     {
-        question: "Aşağıdaki gelişmelerden hangisi I. İnönü Savaşı sonrasında gerçekleşmemiştir?",
+        question: "Aşağıdakilerden hangisi I. İnönü Savaşı'nın sonuçları arasında gösterilemez?",
         options: [
             "A) İstiklal Marşı'nın kabulü",
             "B) Londra Konferansı'nın toplanması",
@@ -2705,7 +2705,7 @@ window.tarih_15_sorulari = [
             "E) Ankara Antlaşması"
         ],
         correctAnswerIndex: 4,
-        explanation: "Ankara Antlaşması, Sakarya Meydan Muharebesi sonrasında (20 Ekim 1921) imzalanmıştır. Diğerleri I. İnönü Savaşı sonrasında gerçekleşmiştir."
+        explanation: "Ankara Antlaşması (20 Ekim 1921), Sakarya Meydan Muharebesi'nin kazanılmasının sonucunda imzalanmıştır. İstiklal Marşı'nın kabulü, Londra Konferansı'nın toplanması, Afganistan ile Dostluk Antlaşması ve Moskova Antlaşması ise I. İnönü Zaferi'nin sonuçları arasında gösterilir."
     },
     {
         question: "Aşağıdaki savaşlardan hangisi 'son savunma savaşı' olarak nitelendirilmiştir?",
@@ -2722,14 +2722,14 @@ window.tarih_15_sorulari = [
     {
         question: "Aşağıdaki savaş-antlaşma eşleştirmelerinden hangisi yanlıştır?",
         options: [
-            "A) I. İnönü – Moskova",
-            "B) Sakarya – Ankara",
-            "C) Sakarya – Kars",
-            "D) Büyük Taarruz – Mudanya",
-            "E) Gümrü – Doğu Cephesi"
+            "A) I. İnönü - Moskova",
+            "B) Sakarya - Ankara",
+            "C) Sakarya - Kars",
+            "D) Büyük Taarruz - Mudanya",
+            "E) II. İnönü - Gümrü"
         ],
-        correctAnswerIndex: 0,
-        explanation: "Moskova Antlaşması I. İnönü Savaşı'ndan hemen sonra imzalanmıştır ancak doğrudan savaş-antlaşma ilişkisi açısından Sakarya-Ankara, Sakarya-Kars, Büyük Taarruz-Mudanya, Gümrü-Doğu Cephesi daha doğru eşleştirmelerdir. (Not: Bu soruda I. İnönü-Moskova da doğru kabul edilebilir, ancak en yanlış olan bu seçenektir.)"
+        correctAnswerIndex: 4,
+        explanation: "Gümrü Antlaşması (3 Aralık 1920), Doğu Cephesi'nde Ermenistan'a karşı kazanılan başarının sonucudur; II. İnönü Savaşı ile ilgisi yoktur. Diğer eşleştirmeler doğrudur: Moskova Antlaşması I. İnönü, Ankara ve Kars antlaşmaları Sakarya, Mudanya Ateşkesi ise Büyük Taarruz sonrasında imzalanmıştır."
     },
     {
         question: "Aşağıdaki gelişmelerden hangisi Mustafa Kemal'in askerlik mesleğine geri dönmesine neden olmuştur?",
@@ -2798,22 +2798,22 @@ window.tarih_15_sorulari = [
             "B) Pozantı Kongresi",
             "C) Kaç Kaç Olayı",
             "D) Bayrak Olayı",
-            "E) Metristepe Savaşı"
+            "E) Metristepe'nin ele geçirilmesi"
         ],
         correctAnswerIndex: 4,
-        explanation: "Metristepe Savaşı, I. İnönü Savaşı ile ilgilidir. Diğerleri Güney Cephesi'ne aittir."
+        explanation: "Metristepe, Batı Cephesi'nde İnönü Muharebeleri'nin (özellikle II. İnönü Savaşı'nın) geçtiği bir mevkidir; Güney Cephesi ile ilgisi yoktur. Karboğazı Baskını, Pozantı Kongresi, Kaç Kaç Olayı ve Bayrak Olayı ise Adana, Maraş ve Antep çevresinde Fransızlara karşı yürütülen Güney Cephesi mücadelesiyle ilgilidir."
     },
     {
-        question: "Aşağıdaki şehirlerden hangisi kendisine verilen unvan bakımından diğerlerinden farklıdır?",
+        question: "Aşağıdaki şehirlerden hangisine Millî Mücadele'deki direnişi nedeniyle unvan verilmiştir?",
         options: [
-            "A) Antep",
-            "B) Maraş",
-            "C) Urfa",
-            "D) İnebolu",
-            "E) Hepsi"
+            "A) İnebolu",
+            "B) Denizli",
+            "C) Maraş",
+            "D) Kastamonu",
+            "E) Erzurum"
         ],
-        correctAnswerIndex: 3,
-        explanation: "Antep 'Gazi', Maraş 'Kahraman', Urfa 'Şanlı' unvanını almıştır. İnebolu ise 'İstiklal Madalyası' almıştır, unvanı yoktur."
+        correctAnswerIndex: 2,
+        explanation: "Millî Mücadele'deki direnişleri nedeniyle Maraş'a 'Kahraman', Antep'e 'Gazi', Urfa'ya 'Şanlı' unvanı verilmiştir. İnebolu, Denizli, Kastamonu ve Erzurum'a ise bu nitelikte bir unvan verilmemiştir."
     },
     {
         question: "Aşağıdaki kişilerden hangisi Güney Cephesi'ndeki şehir savunmalarında verilen kahramanlar arasında yer almaz?",

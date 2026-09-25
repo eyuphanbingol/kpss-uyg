@@ -34,10 +34,10 @@ window.cografya_7_sorulari = [
       "B) Şahit kaya",
       "C) Tafoni",
       "D) Kumul",
-      "E) Hepsi aşındırma şeklidir"
+      "E) Yardang"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "Mantar kaya, şahit kaya ve tafoni rüzgarın taşıdığı malzemeleri kayalara çarptırarak yaptığı aşındırma şekilleridir. Kumul ise rüzgarın taşıdığı kumları biriktirmesiyle oluşan bir biriktirme şeklidir."
+    "explanation": "Mantar kaya, şahit kaya, tafoni ve yardang rüzgârın taşıdığı taneleri kayalara çarptırarak oluşturduğu aşındırma şekilleridir. Kumul ise rüzgârın taşıdığı kumları biriktirmesiyle oluşan bir biriktirme şeklidir."
   },
   {
     "id": "4",

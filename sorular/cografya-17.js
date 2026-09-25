@@ -61,7 +61,7 @@ window.cografya_17_sorulari = [
         explanation: "Devlet Planlama Teşkilatı (DPT), 1960 yılında kurulmuştur ve 1930-1950 dönemine ait değildir. Karabük Demir-Çelik (1937), dokuma fabrikaları, Sümerbank (1933) ve Sanayi Kredi Bankası bu dönemde kurulmuştur."
     },
     {
-        question: "Türkiye'de sanayileşme çalışmalarının planlı biçimde yürütülmesi amacıyla 1933-1938 yılları arasında I. Beş Yıllık Sanayi Planı uygulanmıştır.\n\nBuna göre aşağıdakilerden hangisi bu planlama döneminin özelliklerinden biri değildir?",
+        question: "Türkiye'de sanayileşme çalışmalarının planlı biçimde yürütülmesi amacıyla 1933'te hazırlanan I. Beş Yıllık Sanayi Planı, 1934-1938 yılları arasında uygulanmıştır. Buna göre aşağıdakilerden hangisi bu planlama döneminin özelliklerinden biri değildir?",
         options: [
             "A) Sanayi yatırımlarının devlet eliyle gerçekleştirilmesi",
             "B) Sanayileşmenin hızlandırılmasının amaçlanması",
@@ -127,10 +127,10 @@ window.cografya_17_sorulari = [
             "B) Merkez Bankası",
             "C) Devlet Planlama Teşkilatı",
             "D) Sanayi Kredi Bankası",
-            "E) Teşvik-i Sanayi Kurumu"
+            "E) Etibank"
         ],
         correctAnswerIndex: 2,
-        explanation: "Devlet Planlama Teşkilatı (DPT), 1960 yılında planlı kalkınma anlayışının bir gereği olarak kurulmuştur. Beş yıllık kalkınma planlarının hazırlanması ve uygulanmasından sorumludur. Sümerbank ve Sanayi Kredi Bankası 1930'lara aittir."
+        explanation: "Devlet Planlama Teşkilatı (DPT), 1960 yılında planlı kalkınma anlayışının bir gereği olarak kurulmuş; beş yıllık kalkınma planlarının hazırlanmasından ve uygulanmasının izlenmesinden sorumlu olmuştur. Sümerbank (1933), Etibank (1935) ve Sanayi Kredi Bankası devletçilik döneminde üretim ve finansman amacıyla kurulan kuruluşlardır; Merkez Bankası ise 1930'da para politikasını yürütmek üzere kurulmuştur."
     },
     {
         question: "Türkiye'de 1960-1980 yılları arasında uygulanan ekonomik politikalarla ilgili aşağıdakilerden hangisi doğrudur?",

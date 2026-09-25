@@ -43,10 +43,10 @@ window.cografya_20_sorulari = [
             "B) Yaylacılık",
             "C) Ahır-besi hayvancılığı",
             "D) Küçükbaş hayvancılık",
-            "E) Ekstansif hayvancılık"
+            "E) Kümes hayvancılığı"
         ],
         correctAnswerIndex: 2,
-        explanation: "Kapalı ortamlarda suni yemle yapılan büyükbaş hayvancılık, ahır-besi hayvancılığıdır. Bu yöntemde iklim koşullarının etkisi sınırlıdır."
+        explanation: "Hayvanların yıl boyunca kapalı ortamlarda tutulup suni yemle beslenmesine dayanan büyükbaş hayvancılık türü ahır-besi hayvancılığıdır. Mera hayvancılığı doğal otlaklara, yaylacılık yaz aylarında yüksek kesimlerdeki otlaklara dayanır; kümes hayvancılığı ise tavuk, hindi gibi kanatlı hayvanları kapsar."
     },
     {
         question: "Mera hayvancılığıyla ilgili aşağıdaki özelliklerden hangisi bu hayvancılık türünün iklim koşullarına bağımlı olmasının temel sonucudur?",
@@ -154,7 +154,7 @@ window.cografya_20_sorulari = [
             "E) Diyarbakır"
         ],
         correctAnswerIndex: 3,
-        explanation: "Türkiye'de koyun sayısının en fazla olduğu il Van'dır. Doğu Anadolu Bölgesi'ndeki geniş mera alanları, koyun yetiştiriciliği için uygundur."
+        explanation: "Verilen iller arasında koyun sayısı bakımından öne çıkan il Van'dır. Doğu Anadolu Bölgesi'ndeki geniş mera alanları ve karasal iklim koşulları, koyun yetiştiriciliğini bu bölgede yaygınlaştırmıştır."
     },
     {
         question: "Kıl keçisi yetiştiriciliğinin Toroslar ve çevresinde yaygın olmasında aşağıdaki özelliklerden hangisinin etkili olduğu söylenebilir?",
@@ -246,11 +246,11 @@ window.cografya_20_sorulari = [
             "A) Ordu",
             "B) Konya",
             "C) Ankara",
-            "D) Mersin",
+            "D) Muğla",
             "E) Van"
         ],
-        correctAnswerIndex: 0,
-        explanation: "Türkiye'de arıcılığın en fazla geliştiği il Ordu'dur. Karadeniz Bölgesi'nin bitki çeşitliliği ve yağışlı iklimi arıcılık için uygundur."
+        correctAnswerIndex: 3,
+        explanation: "Kovan sayısı ve bal üretimi bakımından Türkiye'de ilk sırada yer alan il Muğla'dır; ülke bal üretiminin önemli bölümünü oluşturan çam balı büyük ölçüde bu ilden sağlanır. Ordu, Karadeniz'in bitki çeşitliliği sayesinde arıcılıkta öne çıkan illerdendir, ancak üretimde Muğla'nın gerisinde kalır."
     },
     {
         question: "Aşağıdaki illerden hangisi arıcılık açısından önemli merkezlerden biri olarak gösterilebilir?",
@@ -294,23 +294,23 @@ window.cografya_20_sorulari = [
             "A) Erzurum",
             "B) Ankara",
             "C) Samsun",
-            "D) Diyarbakır",
+            "D) Bursa",
             "E) Isparta"
         ],
         correctAnswerIndex: 3,
-        explanation: "Türkiye'de ipek böcekçiliğinin başlıca üretim merkezi Diyarbakır'dır. Güneydoğu Anadolu Bölgesi'nin ılıman iklimi, ipek böcekçiliği için uygun koşullar sağlar."
+        explanation: "Türkiye'de ipek böcekçiliğinin başlıca merkezi Bursa'dır; Bilecik ve Amasya çevresi de bu faaliyetin sürdürüldüğü yerlerdendir. İpek böceği dut yaprağıyla beslendiğinden üretim, dutluk alanların yaygın olduğu yörelerde toplanmıştır. Erzurum'un yüksek ve soğuk olması dut yetiştiriciliğini sınırlar."
     },
     {
         question: "Kümes hayvancılığının kapalı ortamlarda ve suni yem kullanılarak yapılması aşağıdakilerden hangisine neden olur?",
         options: [
-            "A) İklim koşullarından tamamen bağımsız hâle gelmesine",
+            "A) İklim koşullarına bağımlılığının azalmasına",
             "B) Yalnızca mera alanlarında yapılmasına",
             "C) Doğal bitki örtüsüne bağımlılığının artmasına",
             "D) Sadece kışları ılık bölgelerde yapılmasına",
             "E) Sulak alanlara zorunlu olarak ihtiyaç duymasına"
         ],
         correctAnswerIndex: 0,
-        explanation: "Kümes hayvancılığı kapalı ortamlarda ve suni yem kullanılarak yapıldığı için iklim koşullarından tamamen bağımsız hâle gelir."
+        explanation: "Kapalı ortamlarda ve suni yemle yapılan kümes hayvancılığında üretim, doğal otlaklara ve mevsim koşullarına bağlı olmaktan çıkar; böylece iklim koşullarına bağımlılık büyük ölçüde azalır. Kümeslerin ısıtılması ve havalandırılması gerektiğinden iklimin etkisi tümüyle ortadan kalkmaz."
     },
     {
         question: "Türkiye'de kümes hayvancılığının en fazla geliştiği iller aşağıdakilerden hangisidir?",
@@ -322,7 +322,7 @@ window.cografya_20_sorulari = [
             "E) Ankara – Konya"
         ],
         correctAnswerIndex: 3,
-        explanation: "Türkiye'de kümes hayvancılığı en fazla Manisa ve Balıkesir illerinde gelişmiştir. Bu iller, tavukçuluk ve hindi yetiştiriciliğinde önemli merkezlerdir."
+        explanation: "Verilen iller arasında kümes hayvancılığının en çok geliştiği yer Manisa ve Balıkesir'dir. Büyük tüketim merkezlerine yakınlık ile yem ham maddesi (mısır, buğday) üretiminin yaygın olması, entegre tavukçuluk tesislerinin bu illerde yoğunlaşmasında etkili olmuştur."
     },
     {
         question: "Aşağıdaki hayvancılık faaliyetlerinden hangileri yetiştirme koşulları bakımından birbirine daha fazla benzer?",
@@ -385,7 +385,7 @@ window.cografya_20_sorulari = [
         explanation: "Balık tüketim kültürünün yeterince gelişmemesi, iç talebin sınırlı kalmasına ve balıkçılığın ekonomik öneminin azalmasına neden olur."
     },
     {
-        question: "Aşağıdakilerden hangisi Türkiye'nin iç sularında yetiştirilen veya bulunan balık türlerinden biri olarak verilen notlarda yer almaktadır?",
+        question: "Aşağıdakilerden hangisi Türkiye'nin iç sularında yetiştirilen veya bulunan balık türlerinden biridir?",
         options: [
             "A) Uskumru",
             "B) Hamsi",
@@ -606,11 +606,11 @@ window.cografya_20_sorulari = [
             "A) Alabalık",
             "B) İnci kefali",
             "C) Gümüş balığı",
-            "D) İnci kefali – Van Gölü",
+            "D) Sazan",
             "E) Palamut"
         ],
         correctAnswerIndex: 4,
-        explanation: "Palamut, deniz balığıdır ve iç sularda bulunmaz. Alabalık, inci kefali ve gümüş balığı iç sularda yaşar."
+        explanation: "Palamut bir deniz balığıdır ve iç sularda yaşamaz. Alabalık, inci kefali (Van Gölü), gümüş balığı ve sazan ise göl ve akarsularda bulunan veya yetiştirilen tatlı su türleridir."
     },
     {
         question: "Türkiye'deki hayvancılık faaliyetleriyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",

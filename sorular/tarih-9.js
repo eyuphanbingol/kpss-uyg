@@ -66,10 +66,16 @@ window.tarih_9_sorulari = [
         explanation: "1815 Viyana Kongresi'nde ilk defa Şark Sorunu gündeme gelmiştir."
     },
     {
-        question: "Yunan İsyanına destek olmak için Alexandr İpsilanti tarafından kurulan cemiyet hangisidir?",
-        options: ["A) Etniki Eterya", "B) Filiki Eterya", "C) Megali Idea", "D) Hürriyet Taburları", "E) İttihad-ı Osmani"],
+        question: "Yunan İsyanı'nı örgütleyen ve 1820'den itibaren başına Alexandr İpsilanti'nin geçtiği cemiyet aşağıdakilerden hangisidir?",
+        options: [
+        "A) Etniki Eterya",
+        "B) Filiki Eterya",
+        "C) Megali İdea",
+        "D) Hürriyet Taburları",
+        "E) İttihad-ı Osmani"
+        ],
         correctAnswerIndex: 1,
-        explanation: "Filiki Eterya, Yunan İsyanına destek için İpsilanti tarafından kurulmuştur."
+        explanation: "Filiki Eterya 1814'te Odessa'da kurulan gizli bir Rum cemiyetidir. 1820'de cemiyetin başına geçen Alexandr İpsilanti önderliğinde Yunan İsyanı örgütlenmiştir."
     },
     {
         question: "Yunan isyanına destek için gelen İngiliz şair kimdir?",
@@ -84,10 +90,10 @@ window.tarih_9_sorulari = [
         explanation: "Yunanlılar Eflak ve sonrasında Mora merkezli isyan etmişlerdir."
     },
     {
-        question: "Yunan İsyanının büyümesine neden olan Girit valisi kimdir?",
+        question: "Yunan İsyanı'nın büyümesine ortam hazırlayan Yanya valisi kimdir?",
         options: ["A) Kavalalı Mehmet Ali Paşa", "B) Cezzar Ahmet Paşa", "C) Tepedelenli Ali Paşa", "D) Gazi Osman Paşa", "E) Alemdar Mustafa Paşa"],
         correctAnswerIndex: 2,
-        explanation: "Tepedelenli Ali Paşa, Yunan İsyanının büyümesine neden olan Girit valisidir."
+        explanation: "Yanya valisi Tepedelenli Ali Paşa merkezî otoriteye karşı ayaklanmış, Osmanlı kuvvetlerinin uzun süre bu isyanla uğraşması Yunan İsyanı'nın yayılıp büyümesine ortam hazırlamıştır."
     },
     {
         question: "Osmanlı Devleti Yunan İsyanında hangi valisinden yardım istemek zorunda kalmıştır?",
@@ -111,13 +117,13 @@ window.tarih_9_sorulari = [
         question: "Navarin Baskını'nın doğrudan sonuçlarından biri aşağıdakilerden hangisidir?",
         options: [
             "A) Tanzimat Fermanı ilan edilmiştir",
-            "B) Boğazlar uluslararası hale gelmiştir",
+            "B) Boğazlar uluslararası hâle gelmiştir",
             "C) Sırplar bağımsız olmuştur",
-            "D) Restorasyon Dönemi sona ermiş, 1827–1828 Osmanlı–Rus Savaşı başlamıştır",
+            "D) 1828-1829 Osmanlı-Rus Savaşı başlamıştır",
             "E) Kanun-ı Esasi yürürlüğe girmiştir"
         ],
         correctAnswerIndex: 3,
-        explanation: "Navarin ile Restorasyon Dönemi sona ermiş ve 1827–1828 Osmanlı–Rus Savaşı başlamıştır."
+        explanation: "1827 Navarin'de Osmanlı-Mısır donanmasının yakılması üzerine artan gerginlik, 1828-1829 Osmanlı-Rus Savaşı'na yol açmış; bu savaş 1829 Edirne Antlaşması ile sona ermiştir."
     },
     {
         question: "1829 Edirne Antlaşması'nın sonuçları arasında aşağıdakilerden hangisi yoktur?",
@@ -138,10 +144,16 @@ window.tarih_9_sorulari = [
         explanation: "1829 Edirne ile Yunanlılar bağımsız olmuş; milliyetçilikle ayrılan ilk azınlık onlardır. Sırplar ilk isyan eden ve ilk imtiyaz alan azınlıktır."
     },
     {
-        question: "14 Mayıs 1833 Kütahya Antlaşması ile Kavalalı Mehmet Ali Paşa'ya hangi valiliklerde hak tanınmıştır?",
-        options: ["A) Mora, Girit, Şam, Bağdat", "B) Şam, Girit, Adana, Cidde", "C) Suriye, Irak, Hicaz, Yemen", "D) Trablus, Tunus, Cezayir, Mısır", "E) Adana, Halep, Musul, Trablus"],
+        question: "14 Mayıs 1833 Kütahya Antlaşması ile Kavalalı Mehmet Ali Paşa ve oğlu İbrahim Paşa'ya yönetimi bırakılan yerler aşağıdakilerin hangisinde birlikte verilmiştir?",
+        options: [
+        "A) Mora, Girit, Şam, Bağdat",
+        "B) Mısır, Girit, Şam, Adana",
+        "C) Suriye, Irak, Hicaz, Yemen",
+        "D) Trablus, Tunus, Cezayir, Mısır",
+        "E) Adana, Halep, Musul, Trablus"
+        ],
         correctAnswerIndex: 1,
-        explanation: "Kütahya Antlaşması'nda Kavalalı'ya Şam, Girit, Adana ve Cidde valilikleri tanınmıştır."
+        explanation: "Kütahya Antlaşması ile Mısır, Girit ve Şam (Suriye) valilikleri Kavalalı Mehmet Ali Paşa'ya bırakılmış, Adana'nın yönetimi ise oğlu İbrahim Paşa'ya verilmiştir."
     },
     {
         question: "Kavalalı'nın ordusunun Kütahya'ya kadar gelmesinin nedeni aşağıdakilerden hangisidir?",
@@ -204,7 +216,7 @@ window.tarih_9_sorulari = [
         explanation: "Sanayi İnkılabı etkisiyle ithal malların Osmanlı pazarını doldurması Lonca'yı çökertmiş; bu Balta Limanı sonucudur."
     },
     {
-        question: "1839 Tanzimat Fermanı'nın ilan edilmesinin notlara göre temel nedeni nedir?",
+        question: "1839 Tanzimat Fermanı'nın ilan edilmesinde etkili olan temel dış etken aşağıdakilerden hangisidir?",
         options: [
             "A) 93 Harbi'nde Avrupa'nın desteğini almak",
             "B) Sırp İsyanını bastırmak",
@@ -213,7 +225,7 @@ window.tarih_9_sorulari = [
             "E) Kanun-ı Esasi'yi yürürlüğe koymak"
         ],
         correctAnswerIndex: 3,
-        explanation: "Abdülmecid, Londra Konferansı'nda Mısır Meselesinde etkili olabilmek için Tanzimat'ı ilan etmiştir."
+        explanation: "Abdülmecid, Mısır Meselesi'nin görüşüleceği Londra Konferansı'nda Avrupa devletlerinin desteğini kazanmak ve alınacak kararlarda etkili olabilmek amacıyla Tanzimat Fermanı'nı ilan etmiştir."
     },
     {
         question: "1840 Londra Konferansı'nın sonuçlarından biri aşağıdakilerden hangisidir?",
@@ -228,10 +240,16 @@ window.tarih_9_sorulari = [
         explanation: "Mısır Sorunu büyük devletlerin katılımıyla çözüldü ve Kavalalı'ya verilen yerler geri alındı."
     },
     {
-        question: "Mısır Sorunu'nun iç sorunken dış sorun haline gelmesi notlara göre kaçıncı olaydır?",
-        options: ["A) 1. olay", "B) Son olay", "C) 3. olay", "D) 4. olay", "E) 2. olay"],
-        correctAnswerIndex: 4,
-        explanation: "1840 Londra Konferansı ile Mısır Sorunu dış sorun haline gelmiştir; notta 2. olay olarak işaretlenir."
+        question: "Mısır Sorunu'nun bir iç sorun olmaktan çıkıp uluslararası bir soruna dönüşmesinde etkili olan gelişme aşağıdakilerden hangisidir?",
+        options: [
+        "A) 1833 Kütahya Antlaşması",
+        "B) 1838 Balta Limanı Antlaşması",
+        "C) 1840 Londra Konferansı",
+        "D) 1841 Londra Boğazlar Sözleşmesi",
+        "E) 1827 Navarin Baskını"
+        ],
+        correctAnswerIndex: 2,
+        explanation: "Kavalalı Mehmet Ali Paşa'nın ikinci kez ayaklanması üzerine İngiltere, Rusya, Avusturya ve Prusya'nın katılımıyla toplanan 1840 Londra Konferansı'nda sorun Avrupa devletlerinin müdahalesiyle çözüme bağlanmış, böylece Mısır Sorunu uluslararası bir nitelik kazanmıştır."
     },
     {
         question: "Boğazların ilk kez uluslararası sorun haline geldiği belge hangisidir?",
@@ -258,10 +276,16 @@ window.tarih_9_sorulari = [
         explanation: "Tersane Konferansı ve Rusya isteklerinin reddi 93 Harbi'nin nedenidir, Kırım'ın değil."
     },
     {
-        question: "Kırım Savaşı'nda Osmanlı'nın yanında yer almayan devlet hangisidir?",
-        options: ["A) İngiltere", "B) Fransa", "C) Avusturya", "D) Piyemonte", "E) Rusya"],
-        correctAnswerIndex: 4,
-        explanation: "Osmanlı, İngiltere, Fransa, Avusturya ve Piyemonte Rusya'ya karşı savaşmıştır."
+        question: "Kırım Savaşı'nda Osmanlı Devleti'nin yanında fiilen savaşan devlet aşağıdakilerden hangisidir?",
+        options: [
+        "A) Avusturya",
+        "B) Prusya",
+        "C) Rusya",
+        "D) Piyemonte",
+        "E) Yunanistan"
+        ],
+        correctAnswerIndex: 3,
+        explanation: "Kırım Savaşı'nda (1853-1856) Osmanlı Devleti'nin yanında İngiltere, Fransa ve Piyemonte savaşmıştır. Avusturya ve Prusya savaşa katılmamış, yalnızca 1856 Paris Antlaşması'na taraf olmuştur; Rusya ise karşı taraftadır."
     },
     {
         question: "Kırım Savaşı'nda Osmanlı donanmasının yakıldığı baskın hangisidir?",
@@ -327,7 +351,7 @@ window.tarih_9_sorulari = [
         question: "Osmanlı Devleti'nin ilk kez Avrupa Devleti sayılması hangi antlaşma iledir?",
         options: ["A) Hünkâr İskelesi", "B) Viyana Kongresi", "C) 1856 Paris Antlaşması", "D) Berlin Antlaşması", "E) Londra Boğazlar"],
         correctAnswerIndex: 2,
-        explanation: "Paris'te Osmanlı Avrupa hukukundan yararlanacak ve Avrupa Devleti sayılacaktır; notta ilk kez denir."
+        explanation: "1856 Paris Antlaşması ile Osmanlı Devleti ilk kez bir Avrupa devleti sayılmış ve Avrupa devletler hukukundan yararlanacağı kabul edilmiştir."
     },
     {
         question: "Paris Antlaşması'nda Karadeniz'de donanma ve tersane bulunduramama hükmü için hangi yorum doğrudur?",
@@ -343,9 +367,15 @@ window.tarih_9_sorulari = [
     },
     {
         question: "Kırım Savaşı'nda yer almamasına rağmen 1856 Paris Antlaşması'nda yer alan devlet hangisidir?",
-        options: ["A) Piyemonte", "B) Avusturya", "C) Prusya", "D) İngiltere", "E) Fransa"],
+        options: [
+        "A) Piyemonte",
+        "B) Yunanistan",
+        "C) Prusya",
+        "D) İngiltere",
+        "E) Fransa"
+        ],
         correctAnswerIndex: 2,
-        explanation: "Savaşta yer almayan fakat antlaşmada bulunan devlet Prusya'dır."
+        explanation: "Kırım Savaşı'nda Osmanlı Devleti'nin yanında İngiltere, Fransa ve Piyemonte savaşmıştır. Savaşa fiilen katılmayan Prusya ise 1856 Paris Antlaşması'nı imzalayan devletler arasında yer almıştır."
     },
     {
         question: "Islahat Fermanı hangi antlaşmaya madde olarak eklenmiştir?",
@@ -354,7 +384,7 @@ window.tarih_9_sorulari = [
         explanation: "Islahat Fermanı 1856 Paris Antlaşması'na madde olarak eklenmiştir."
     },
     {
-        question: "1875 Balkan Bunalımı'nın temel nedeni notlara göre nedir?",
+        question: "1875 Balkan Bunalımı'nın temel nedeni aşağıdakilerden hangisidir?",
         options: [
             "A) Balkanlardaki azınlıkların vergi vermek istememeleri ve isyanları",
             "B) Navarin Baskını",
@@ -363,7 +393,7 @@ window.tarih_9_sorulari = [
             "E) Dömeke zaferi"
         ],
         correctAnswerIndex: 0,
-        explanation: "Balkan Bunalımı, azınlıkların vergi vermek istememeleri ve isyan süreçleridir; 1876'da Tersane Konferansı toplanmıştır."
+        explanation: "1875'te ağır vergilerden şikâyet eden Balkanlardaki azınlıkların vergi vermeyi reddedip ayaklanması Balkan Bunalımı'nı başlatmış, bu gelişmeler 1876'da Tersane Konferansı'nın toplanmasına yol açmıştır."
     },
     {
         question: "1876 Tersane Konferansı'nda etkili olabilmek için Osmanlı ne yapmıştır?",
@@ -435,7 +465,7 @@ window.tarih_9_sorulari = [
         question: "Berlin'de Sırbistan, Karadağ ve Romanya'nın bağımsızlığı hangi politikanın sonucu olarak yorumlanır?",
         options: ["A) Denge politikası", "B) Panslavizm", "C) Panislamizm", "D) Restorasyon", "E) Kapitülasyon"],
         correctAnswerIndex: 1,
-        explanation: "Notlara göre bu bağımsızlıklar Panslavizm politikasının sonucudur."
+        explanation: "Rusya'nın Balkanlardaki Slav halkları destekleyip kışkırtma politikası olan Panslavizm, 1877-1878 Osmanlı-Rus Savaşı sonrasında Berlin Antlaşması ile Sırbistan, Karadağ ve Romanya'nın bağımsızlık kazanmasında etkili olmuştur."
     },
     {
         question: "Berlin Antlaşması'nda Rusya'ya bırakılan yerler hangileridir?",
@@ -531,7 +561,7 @@ window.tarih_9_sorulari = [
         question: "II. Meşrutiyet'in ilanı sonrasında kaybedilen yerler hangileridir?",
         options: ["A) Cezayir, Tunus, Mısır", "B) Kıbrıs, Teselya, Adana", "C) Kars, Ardahan, Batum", "D) Bulgaristan, Bosna, Girit", "E) Mora, Eflak, Boğdan"],
         correctAnswerIndex: 3,
-        explanation: "II. Meşrutiyet karşılıklarında Bulgaristan, Bosna ve Girit kaybedilmiştir."
+        explanation: "II. Meşrutiyet'in ilanının ardından yaşanan karışıklıklardan yararlanan Bulgaristan bağımsızlığını ilan etmiş, Avusturya-Macaristan Bosna-Hersek'i ilhak ettiğini açıklamış, Girit ise Yunanistan'a katıldığını duyurmuştur (1908)."
     },
     {
         question: "1909'da rejime karşı çıkan ilk isyan hangisidir?",
@@ -576,19 +606,19 @@ window.tarih_9_sorulari = [
         explanation: "İlk isyan ve ilk imtiyaz Sırplar; Osmanlı'dan milliyetçilikle ayrılan ilk bağımsız azınlık Yunanlılardır."
     },
     {
-        question: "Restorasyon Dönemi'nin başlangıcı ve bitişi notlara göre hangisidir?",
+        question: "Restorasyon Dönemi'nin başlangıcı ve sona erişi aşağıdakilerin hangisinde birlikte verilmiştir?",
         options: [
-            "A) Başlangıç: Tanzimat — Bitiş: Islahat",
-            "B) Başlangıç: Bükreş — Bitiş: Edirne",
-            "C) Başlangıç: Hünkâr İskelesi — Bitiş: Paris",
-            "D) Başlangıç: 1815 Viyana Kongresi — Bitiş: Navarin Baskını",
-            "E) Başlangıç: Berlin — Bitiş: II. Meşrutiyet"
+            "A) Başlangıç: Tanzimat Fermanı - Bitiş: Islahat Fermanı",
+            "B) Başlangıç: Bükreş Antlaşması - Bitiş: Edirne Antlaşması",
+            "C) Başlangıç: Hünkâr İskelesi Antlaşması - Bitiş: Paris Antlaşması",
+            "D) Başlangıç: 1815 Viyana Kongresi - Bitiş: 1830 İhtilalleri",
+            "E) Başlangıç: Berlin Antlaşması - Bitiş: II. Meşrutiyet"
         ],
         correctAnswerIndex: 3,
-        explanation: "Restorasyon Viyana Kongresi ile başlamış, Navarin Baskını ile sona ermiştir."
+        explanation: "Napolyon Savaşları sonrasında Avrupa'da eski düzeni yeniden kurmayı amaçlayan Restorasyon Dönemi 1815 Viyana Kongresi ile başlamış, milliyetçi ve liberal akımların güç kazandığı 1830 İhtilalleri ile sona ermiştir."
     },
     {
-        question: "Aşağıdaki antlaşma–padişah eşleşmelerinden hangisi yanlıştır?",
+        question: "Aşağıdaki belge-padişah eşleştirmelerinden hangisi yanlıştır?",
         options: [
             "A) Hünkâr İskelesi — II. Mahmut",
             "B) Balta Limanı — II. Mahmut",
@@ -597,6 +627,6 @@ window.tarih_9_sorulari = [
             "E) Tanzimat Fermanı — II. Abdülhamid"
         ],
         correctAnswerIndex: 4,
-        explanation: "Tanzimat Fermanı Abdülmecid döneminde (1839) ilan edilmiştir, II. Abdülhamid'de değil."
+        explanation: "Tanzimat Fermanı 1839'da Abdülmecid tarafından ilan edilmiştir; II. Abdülhamid 1876'da tahta çıkmıştır. Diğer eşleştirmeler doğrudur."
     }
 ];

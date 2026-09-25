@@ -37,7 +37,7 @@ window.geometri_3_sorulari = [
     "explanation": "h = 10√3/2 = 5√3 cm."
 },
 {
-    "question": "İkizkenar üçgende eş kenar b=13, taban parçaları m=5, n=4. Yükseklik x kaç birimdir?",
+    "question": "İkizkenar ABC üçgeninde |AB| = |AC| = 13 birimdir. A köşesinden taban [BC] üzerindeki D noktasına çizilen [AD] için |BD| = 5 birim ve |DC| = 4 birim ise x = |AD| kaç birimdir?",
     "options": [
         "A) √129",
         "B) √139",
@@ -46,10 +46,10 @@ window.geometri_3_sorulari = [
         "E) √169"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "x²=169−20=149 → x=√149."
+    "explanation": "Tepe köşeden tabana çizilen kesen için Stewart teoreminin özel hâli geçerlidir: |AD|² = |AB|² − |BD|·|DC| = 13² − 5·4 = 169 − 20 = 149. Buradan x = √149 birim bulunur."
 },
 {
-    "question": "İkizkenar üçgende m(∠B)=55°. m(∠A) kaç derecedir?",
+    "question": "İkizkenar ABC üçgeninde |AB| = |AC| ve m(∠B) = 55° ise m(∠A) kaç derecedir?",
     "options": [
         "A) 55°",
         "B) 60°",
@@ -58,7 +58,7 @@ window.geometri_3_sorulari = [
         "E) 75°"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "m(∠C)=55°, m(∠A)=180−110=70°."
+    "explanation": "|AB| = |AC| olduğundan bu kenarların karşısındaki açılar eştir: m(∠C) = m(∠B) = 55°. Üçgenin iç açıları toplamı 180° olduğundan m(∠A) = 180° − (55° + 55°) = 70° bulunur."
 },
 {
     "question": "Eşkenar üçgenin alanı 9√3 cm² ise bir kenarı kaç cm'dir?",

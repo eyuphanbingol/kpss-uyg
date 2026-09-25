@@ -21,14 +21,14 @@ window.tarih_4_sorulari = [
       "B) Padişah",
       "C) Sultan",
       "D) Hüdavendigar",
-      "E) Kağan"
+      "E) Tegin"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Osmanlı hükümdarları Han, Hakan, Sultan, Padişah, Hüdavendigar, Şah, Bey, Gazi ve Halife gibi unvanları yaygın olarak kullanmışlardır. Ancak İslam öncesi Türk devlet geleneğinde en yüksek hükümdarlık unvanı olan 'Kağan' unvanı, Osmanlı padişahları tarafından resmi bir unvan olarak tercih edilmemiştir."
+    "explanation": "Osmanlı hükümdarları Han, Hakan, Sultan, Padişah, Hüdavendigar, Gazi ve Halife gibi unvanları kullanmışlardır. 'Tegin' ise İslamiyet öncesi Türk devletlerinde hükümdar ailesinin erkek üyeleri için kullanılan bir unvandır ve Osmanlı padişahlarının unvanları arasında yer almaz."
   },
   {
     "id": "3",
-    "question": "Osmanlı Devleti tarihinde ilk 'sultan' unvanını kullanan padişah aşağıdakilerden hangisidir?",
+    "question": "Bursa'da bulunan 1337 tarihli kitabede 'Sultanü'l-guzat' (Gazilerin Sultanı) unvanıyla anılan Osmanlı hükümdarı aşağıdakilerden hangisidir?",
     "options": [
       "A) Osman Bey",
       "B) Orhan Bey",
@@ -37,7 +37,7 @@ window.tarih_4_sorulari = [
       "E) Fatih Sultan Mehmet"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Osmanlı tarihinde 'Sultan' unvanını resmi olarak kullanan ilk padişah Orhan Bey'dir. Nitekim dönemin kaynaklarında ve basılan sikkelerde kendisinden 'Sultanü'l-Guzat' (Gazilerin Sultanı) olarak bahsedilmektedir."
+    "explanation": "Bursa'daki 1337 tarihli kitabede Osmanlı hükümdarı 'Sultanü'l-guzat' (Gazilerin Sultanı) olarak anılmaktadır. 1337 yılı, 1324-1362 arasında hüküm süren Orhan Bey'in saltanat dönemine denk gelir; Osman Bey 1324'te vefat etmiş, I. Murat ise 1362'de tahta çıkmıştır."
   },
   {
     "id": "4",
@@ -80,16 +80,16 @@ window.tarih_4_sorulari = [
   },
   {
     "id": "7",
-    "question": "Herhangi bir devşirmeyi öldürme hakkına sahip olma yetkisi aşağıdaki kavramlardan hangisiyle ifade edilir?",
+    "question": "Padişahın, kul (devşirme) kökenli devlet görevlilerini şer'î mahkeme kararı olmaksızın idam ettirebilme yetkisi aşağıdaki kavramlardan hangisiyle ifade edilir?",
     "options": [
-      "A) Kulluk hakkı",
+      "A) Siyaseten katl",
       "B) Müsadere",
-      "C) Beratname",
+      "C) Berat",
       "D) Yasakname",
       "E) Amanname"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Padişahın, devşirme kökenli devlet görevlileri (kul taifesi) üzerinde doğrudan yargılama yapmadan cezalandırma, canını alma veya mallarına el koyma hakkına 'Kulluk Hakkı' denir. Bu sistem merkezi otoritenin mutlak kalmasını sağlamıştır."
+    "explanation": "Padişahın, kul statüsündeki devlet görevlilerini şer'î mahkeme kararı olmadan, devletin bekası gerekçesiyle idam ettirebilme yetkisine 'siyaseten katl' denir. Müsadere, görevlilerin mallarına hazine adına el konulmasıdır; berat bir göreve atama belgesi, yasakname belirli alanlardaki kuralları düzenleyen ferman, amanname ise güvence verilen kişi veya topluluklara verilen belgedir."
   },
   {
     "id": "8",
@@ -115,24 +115,24 @@ window.tarih_4_sorulari = [
       "E) Sivas"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "Amasya, Manisa (Darü'l-Kütbab), Trabzon, Kütahya, Sivas, Konya ve Kefe (Kırım) önemli şehzade sancaklarındandır. Ancak devletin merkezi ve taht şehri olan 'İstanbul', güvenlik gerekçesiyle ve taht kavgalarına zemin hazırlamamak adına asla bir şehzade sancağı olmamıştır."
+    "explanation": "Amasya, Manisa, Trabzon, Kütahya, Sivas, Konya ve Kefe önemli şehzade sancaklarındandır. Devletin merkezi ve taht şehri olan İstanbul ise güvenlik gerekçesiyle ve taht kavgalarına zemin hazırlamamak için hiçbir zaman şehzade sancağı yapılmamıştır."
   },
   {
     "id": "10",
     "question": "Osmanlı Devleti'nin kuruluş dönemi başkentlerinin kronolojik sırası aşağıdakilerden hangisinde doğru verilmiştir?",
     "options": [
-      "A) Bilecik – Karacahisar – İznik – Bursa – Edirne",
-      "B) Karacahisar – Bilecik – İznik – Bursa – Edirne",
-      "C) Karacahisar – İznik – Bilecik – Edirne – Bursa",
-      "D) Bursa – İznik – Bilecik – Karacahisar – Edirne",
-      "E) İznik – Karacahisar – Bilecik – Bursa – Edirne"
+      "A) Bilecik – Karacahisar – Yenişehir – Bursa – Edirne",
+      "B) Karacahisar – Bilecik – Yenişehir – Bursa – Edirne",
+      "C) Karacahisar – Yenişehir – Bilecik – Edirne – Bursa",
+      "D) Bursa – Yenişehir – Bilecik – Karacahisar – Edirne",
+      "E) Yenişehir – Karacahisar – Bilecik – Bursa – Edirne"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Osmanlı Devleti fetih yönü ve genişleme stratejisine bağlı olarak sırasıyla Karacahisar, Bilecik, İznik, Bursa ve Edirne şehirlerini merkez ve başkent olarak kullanmıştır. En son 1453'te İstanbul başkent yapılmıştır."
+    "explanation": "Osmanlı Beyliği, fetih yönüne bağlı olarak yönetim merkezini sırasıyla Karacahisar, Bilecik, Yenişehir, Bursa ve Edirne'ye taşımıştır. 1453'te İstanbul'un fethiyle başkent İstanbul olmuş ve devletin sonuna kadar böyle kalmıştır."
   },
   {
     "id": "11",
-    "question": "1453'ten devletin sonuna kadar başkent olarak kullanılan İstanbul'un notta geçen diğer adları arasında aşağıdakilerden hangisi YOKTUR?",
+    "question": "Osmanlı döneminde İstanbul için kullanılan adlar arasında aşağıdakilerden hangisi YOKTUR?",
     "options": [
       "A) Konstantiniyye",
       "B) İslambol",
@@ -184,7 +184,7 @@ window.tarih_4_sorulari = [
   },
   {
     "id": "15",
-    "question": "İlk batı tarzı mimarinin (barok) görüldüğü, Ağrı Doğubeyazıt'ta bulunan ilk ısıtmalı saray aşağıdakilerden hangisidir?",
+    "question": "Ağrı'nın Doğubeyazıt ilçesinde bulunan, barok ve rokoko gibi batı tarzı mimari etkilerin görüldüğü ve merkezî ısıtma sistemine sahip olan saray aşağıdakilerden hangisidir?",
     "options": [
       "A) Topkapı Sarayı",
       "B) Dolmabahçe Sarayı",
@@ -193,7 +193,7 @@ window.tarih_4_sorulari = [
       "E) Beylerbeyi Sarayı"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "Ağrı Doğubeyazıt'ta bulunan, bünyesinde Barok ve Rokoko gibi batı tarzı mimari etkileri barındıran ve dünyada ilk merkezi ısıtma (kalorifer) sistemine sahip saray yapısı İshak Paşa Sarayı'dır."
+    "explanation": "İshak Paşa Sarayı 18. yüzyılda Ağrı'nın Doğubeyazıt ilçesinde yapılmıştır. Selçuklu ve Osmanlı mimarisinin yanı sıra barok ve rokoko gibi batı tarzı süsleme özellikleri de taşıyan yapı, kendi döneminde merkezî ısıtma (kalorifer) sistemine sahip olmasıyla dikkat çeker. Topkapı, Dolmabahçe, Yıldız ve Beylerbeyi sarayları ise İstanbul'dadır."
   },
   {
     "id": "16",
@@ -201,12 +201,12 @@ window.tarih_4_sorulari = [
     "options": [
       "A) Padişah ve ailesinin özel yaşam alanıdır",
       "B) Devşirme çocukların eğitim gördüğü okuldur",
-      "C) Dışarıdan gelen elçiler kabul edilmiş, divan toplantıları Babüssaade Kapısı'nda yapılmıştır",
-      "D) Sadrazam ve verzir yetiştiren bölümdür",
+      "C) Elçilerin kabul edildiği, Divan-ı Hümayun toplantılarının Kubbealtı'nda yapıldığı dış bölümdür",
+      "D) Sadrazam ve vezir yetiştiren bölümdür",
       "E) Kız çocuklarının eğitim gördüğü bölümdür"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "Birun, sarayın dış bölümüdür ve burada devlet işleri yürütülür, elçiler kabul edilir, Divan-ı Hümayun toplantıları yapılırdı. Padişahın özel hayatı Harem'de; devşirmelerin eğitimi (okul) ise Enderun'da (iç saray) gerçekleşirdi."
+    "explanation": "Birun, Topkapı Sarayı'nın dış bölümüdür; devlet işlerinin yürütüldüğü, elçilerin kabul edildiği ve Divan-ı Hümayun toplantılarının Kubbealtı'nda yapıldığı kısımdır. Padişah ve ailesinin özel yaşam alanı Harem, devşirmelerin eğitildiği ve üst düzey yöneticilerin yetiştirildiği bölüm ise Enderun'dur."
   },
   {
     "id": "17",
@@ -223,16 +223,16 @@ window.tarih_4_sorulari = [
   },
   {
     "id": "18",
-    "question": "Devlet memuru ihtiyacının II. Mahmut döneminde karşılandığı belirtilen kurum aşağıdakilerden hangisidir?",
+    "question": "Devlet memuru ihtiyacını karşılamak amacıyla II. Mahmut döneminde açılan kurum aşağıdakilerden hangisidir?",
     "options": [
       "A) Enderun",
-      "B) Mekteb-i Marifet-i Adliye",
+      "B) Mekteb-i Maarif-i Adliyye",
       "C) Harem",
       "D) Sahn-ı Seman",
       "E) Darülhadis"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "II. Mahmut döneminde Enderun işlevini yitirmeye başlayınca, modern tarzda devlet memuru ve idareci yetiştirmek amacıyla 'Mekteb-i Marifet-i Adliye' açılmıştır."
+    "explanation": "II. Mahmut döneminde Enderun işlevini yitirmeye başlayınca, modern tarzda devlet memuru ve kâtip yetiştirmek amacıyla Mekteb-i Maarif-i Adliyye açılmıştır. Sahn-ı Seman ve Darülhadis medrese sisteminin eğitim kurumlarıdır; Harem ise sarayın özel yaşam bölümüdür."
   },
   {
     "id": "19",
@@ -290,7 +290,7 @@ window.tarih_4_sorulari = [
     "id": "23",
     "question": "Aşağıdaki divan çeşidi–açıklama eşleştirmelerinden hangisi YANLIŞTIR?",
     "options": [
-      "A) Ayak Divanı – yalnızca hükümdarın bulunduğu olağanüstü divan",
+      "A) Ayak Divanı – olağanüstü durumlarda padişahın başkanlığında, katılanların ayakta durduğu divan",
       "B) Galebe Divanı – elçi ve yabancı konuklar için toplanır",
       "C) İkindi Divanı – Vezir-i Azam önderliğinde kalan sorunlar çözülür",
       "D) Sefer Divanı – sefer sırasında toplanır",
@@ -305,7 +305,7 @@ window.tarih_4_sorulari = [
     "options": [
       "A) Padişahın mührünü taşır",
       "B) Sefere çıktığında 'Serdar-ı Ekrem' unvanını alır",
-      "C) Sefere çıktığında yerine Sadaret Kethüdası bakar",
+      "C) Sefere çıktığında yerine Sadaret Kaymakamı bakar",
       "D) 'Buyruldu' adında emirler verir",
       "E) Atamasını yalnızca şeyhülislam yapar"
     ],
@@ -392,7 +392,7 @@ window.tarih_4_sorulari = [
   },
   {
     "id": "31",
-    "question": "1840 Vilayet Nizamnamesi'nde 'eyalet' biriminin yöneticisi aşağıdakilerden hangisidir?",
+    "question": "1840 yılında yapılan taşra idari düzenlemesinde 'eyalet' biriminin başına getirilen yönetici aşağıdakilerden hangisidir?",
     "options": [
       "A) Vali",
       "B) Beylerbeyi",
@@ -401,7 +401,7 @@ window.tarih_4_sorulari = [
       "E) Kaza müdürü"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "1840 Vilayet Nizamnamesi ile taşra yeniden yapılandırılmış ve en büyük idari birim olan 'Eyalet'lerin başına askeri-mülki bir unvan olan 'Müşir' getirilmiştir."
+    "explanation": "1840'ta yapılan taşra düzenlemesiyle en büyük idari birim olan eyaletlerin başına askerî-mülkî bir unvan olan 'müşir' getirilmiştir. Vilayet Nizamnameleri ise 1864 ve 1871 tarihlidir; bu düzenlemelerle eyalet sisteminden vilayet sistemine geçilmiş ve vilayetlerin başına vali atanmıştır."
   },
   {
     "id": "32",
@@ -548,7 +548,7 @@ window.tarih_4_sorulari = [
   },
   {
     "id": "43",
-    "question": "Tanzimat sonrası ortaya çıkan, miras ve cinayet davalarına bakan mahkeme aşağıdakilerden hangisidir?",
+    "question": "Tanzimat sonrasında kurulan, Müslüman ve gayrimüslimlerin birlikte yargılandığı, ceza ve hukuk davalarına bakan karma nitelikli mahkeme aşağıdakilerden hangisidir?",
     "options": [
       "A) Şer'i mahkeme",
       "B) Cemaat mahkemesi",
@@ -557,11 +557,11 @@ window.tarih_4_sorulari = [
       "E) Ticaret mahkemesi"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "Tanzimat Dönemi'nde ceza ve ticaret alanlarında hukuk sistemini modernleştirmek amacıyla karma nitelikte (Müslüman ve gayrimüslimlerin birlikte yargılandığı) 'Nizamiye Mahkemeleri' kurulmuştur."
+    "explanation": "Tanzimat Dönemi'nde hukuk sistemini modernleştirmek amacıyla, Müslüman ve gayrimüslimlerin birlikte yargılandığı karma nitelikli Nizamiye Mahkemeleri kurulmuş; bu mahkemeler ceza ve hukuk davalarına bakmıştır. Miras (veraset) ve aile hukukuna ilişkin davalar ise Tanzimat'tan sonra da şer'iyye mahkemelerinin görev alanında kalmıştır."
   },
   {
     "id": "44",
-    "question": "Osmanlı Devleti'nde hukuktaki ikiliklerin ortadan kaldırılıp tüm mahkemelerin kaldırılması hangi düzenlemeyle ve hangi yılda gerçekleşmiştir?",
+    "question": "Osmanlı Devleti'nden devralınan hukuk ikiliğinin ortadan kaldırılarak hukuk birliğinin sağlanması aşağıdaki düzenlemelerden hangisiyle gerçekleşmiştir?",
     "options": [
       "A) 1876 Kanun-i Esasi",
       "B) 1926 Medeni Kanun",
@@ -570,7 +570,7 @@ window.tarih_4_sorulari = [
       "E) 1908 II. Meşrutiyet"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Osmanlı'dan kalan şer'i, cemaat ve konsolosluk mahkemeleri gibi çok hukuklu yapı ve hukuktaki ikilikler, Cumhuriyet döneminde 1926 yılında kabul edilen 'Türk Medeni Kanunu' ve peşisıra yapılan hukuki düzenlemelerle tamamen ortadan kaldırılmıştır."
+    "explanation": "Şer'iyye, cemaat ve konsolosluk mahkemelerinin oluşturduğu çok hukuklu yapı Cumhuriyet döneminde aşama aşama tasfiye edilmiştir. 1924'te şer'iyye mahkemeleri kapatılmış, 1926'da kabul edilen Türk Medeni Kanunu ile kişi, aile, miras ve eşya hukukunda tek bir hukuk düzenine geçilerek hukuk birliği sağlanmıştır."
   },
   {
     "id": "45",
@@ -587,7 +587,7 @@ window.tarih_4_sorulari = [
   },
   {
     "id": "46",
-    "question": "Evliliklerin ve bu evliliklerden doğan çocukların mirasçılık durumlarının kaydedildiği deftere ne ad verilir?",
+    "question": "Ölen bir kimsenin geride bıraktığı mal varlığının ve bu malların mirasçılar arasındaki paylaşımının kadı tarafından kaydedildiği deftere ne ad verilir?",
     "options": [
       "A) Mühimme",
       "B) Ruzname",
@@ -596,20 +596,20 @@ window.tarih_4_sorulari = [
       "E) Ceride"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "Ölen bir kimsenin bıraktığı tüm mal varlığının, borçlarının, evlilik kayıtlarının ve mirasçılarının paylarının kadı tarafından kaydedildiği defterlere 'Tereke Defterleri' (Kassam Defterleri) denir."
+    "explanation": "Ölen bir kimsenin bıraktığı taşınır ve taşınmaz malların, borç ve alacaklarının tek tek yazılarak mirasçılar arasındaki paylarının kadı tarafından belirlendiği defterlere tereke (kassam) defterleri denir. Bu defterler aynı zamanda dönemin fiyatları, gelir düzeyi ve gündelik eşyaları hakkında bilgi veren önemli kaynaklardır."
   },
   {
     "id": "47",
-    "question": "Bir mahkeme kararından önce, o bölgenin ileri gelenlerine başvurulan uygulama aşağıdakilerden hangisidir?",
+    "question": "Osmanlı mahkemelerinde duruşmada hazır bulunarak yargılamayı izleyen ve verilen kararı tasdik eden, bölgenin güvenilir ileri gelenlerinden oluşan heyete ne ad verilir?",
     "options": [
-      "A) Şuhudül hale",
+      "A) Şuhûdü'l-hâl",
       "B) Tereke",
       "C) Beratname",
       "D) Adaletname",
       "E) Ruzname"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Mahkemelerde davaları izleyen, jüri veya şahit benzeri bir rol üstlenen, bölgenin güvenilir ve saygın ileri gelenlerinden oluşan heyete 'Şuhudü'l-hal' (hali görenler/tanıklar) denirdi."
+    "explanation": "Osmanlı mahkemelerinde duruşmalarda hazır bulunup yargılamayı izleyen, kararın usulüne uygun verildiğine tanıklık eden ve adları sicile yazılan saygın kişilerden oluşan heyete şuhûdü'l-hâl (hâli görenler) denirdi. Bu heyet yargılamanın açıklığını ve denetimini sağlardı."
   },
   {
     "id": "48",
@@ -665,16 +665,16 @@ window.tarih_4_sorulari = [
   },
   {
     "id": "52",
-    "question": "Hakkaniyet Çemberi'nde adalet etrafında şekillenen unsurların doğru sıralaması aşağıdakilerden hangisidir?",
+    "question": "Osmanlı devlet anlayışının temelini oluşturan Daire-i Adliye (adalet dairesi) düşüncesinde, kanundan başlanarak sıralandığında unsurların doğru dizilişi aşağıdakilerden hangisidir?",
     "options": [
-      "A) Kanun-Ordu-Servet-Millet-Padişah",
-      "B) Padişah-Millet-Servet-Ordu-Kanun",
-      "C) Millet-Ordu-Kanun-Servet-Padişah",
-      "D) Ordu-Kanun-Padişah-Millet-Servet",
-      "E) Servet-Padişah-Kanun-Ordu-Millet"
+      "A) Kanun-Padişah-Ordu-Servet-Millet",
+      "B) Kanun-Ordu-Servet-Millet-Padişah",
+      "C) Kanun-Millet-Servet-Ordu-Padişah",
+      "D) Kanun-Padişah-Servet-Ordu-Millet",
+      "E) Kanun-Servet-Padişah-Millet-Ordu"
     ],
-    "correctAnswerIndex": 1,
-    "explanation": "Osmanlı devlet felsefesinin temelini oluşturan Hakkaniyet Çemberi (Daire-i Adliye) döngüsü şu şekildedir: Adalet dünyayı kurtarır, dünya bir bağdır duvarı devlet, devletin nizamı kanundur, kanunu koruyan padişahtır, padişah ancak milletle (halkla) hükümdar olur, milleti itaat ettiren ordudur, orduyu ayakta tutan servettir, serveti toplayan ise yine adalettir. Bu zincir: Padişah-Millet-Servet-Ordu-Kanun olarak birbirine bağlıdır."
+    "correctAnswerIndex": 0,
+    "explanation": "Daire-i Adliye düşüncesine göre devletin düzenleyicisi kanundur; kanunu ancak padişah ayakta tutar, padişah ancak ordu ile hüküm sürer, orduyu ancak servet (mal) besler, serveti ise üreten ve vergi veren millet (reaya) sağlar; milleti devlete bağlayan da adalettir. Buna göre kanundan başlayan sıralama Kanun-Padişah-Ordu-Servet-Millet biçimindedir."
   },
   {
     "id": "53",
@@ -719,10 +719,10 @@ window.tarih_4_sorulari = [
     "id": "56",
     "question": "Aşağıdaki kurum–günümüzdeki karşılık eşleştirmelerinden hangisi YANLIŞTIR?",
     "options": [
-      "A) Hilal-i Ahter – Yeşilay",
+      "A) Hilal-i Ahdar – Yeşilay",
       "B) Hilal-i Ahmer – Kızılay",
       "C) Himaye-i Etfal – Çocuk Esirgeme Kurumu",
-      "D) Donanma Cemiyeti – donanmayı güçlendirme amaçlı yardım kurumu",
+      "D) Darülmuallimin – öğretmen okulu",
       "E) Darülbedayi – konservatuvar"
     ],
     "correctAnswerIndex": 4,
@@ -839,7 +839,7 @@ window.tarih_4_sorulari = [
       "A) Bedergah (kapıya çıkma)",
       "B) Cerre çıkmak",
       "C) Taşraya çıkma",
-      "D) Çıkma",
+      "D) Mülazemet",
       "E) Bed-i besmele"
     ],
     "correctAnswerIndex": 0,
@@ -912,16 +912,16 @@ window.tarih_4_sorulari = [
   },
   {
     "id": "71",
-    "question": "Aşağıdaki eyalet askeri gruplarından hangisinin görevi 'habercilik'tir?",
+    "question": "Osmanlı Devleti'nde menzil teşkilatı içinde devletin resmî haberlerini bir merkezden diğerine ulaştırmakla görevli kişilere ne ad verilir?",
     "options": [
-      "A) Turnalar",
+      "A) Ulaklar",
       "B) Deliler",
-      "C) Martolalar",
+      "C) Martoloslar",
       "D) Cerahorlar",
       "E) Sakalar"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Osmanlı eyalet ordusunda birlikler arası ve ordu ile merkez arasındaki askeri posta, istihbarat ve habercilik faaliyetlerini yürüten sınıfa 'Turnalar' denirdi."
+    "explanation": "Osmanlı Devleti'nde haberleşme, belirli aralıklarla kurulan menzillere dayanan menzil teşkilatıyla sağlanırdı. Resmî yazı ve emirleri menzilden menzile taşıyan görevlilere ulak denirdi. Deliler sınır boylarında görev yapan öncü hafif süvariler, Martoloslar sınır kalelerinde görevlendirilen yardımcı kuvvetler, Cerahorlar yol ve köprü yapımı gibi geri hizmetlerde çalışan gruplar, Sakalar ise orduya su taşıyan görevlilerdi."
   },
   {
     "id": "72",
@@ -954,13 +954,13 @@ window.tarih_4_sorulari = [
     "question": "Aşağıdaki denizci–eser/özellik eşleştirmelerinden hangisi YANLIŞTIR?",
     "options": [
       "A) Piri Reis – Kitab-ı Bahriye",
-      "B) Seydi Ali Reis – Miratü'l Memalik",
+      "B) Seydi Ali Reis – Miratü'l-Memalik",
       "C) Barbaros Hayrettin Paşa – ünlü Osmanlı denizcisi",
-      "D) Evrenos Gazi – Karesi Beyliği'nden gelen denizci",
-      "E) Kemal Reis – Kitabü Nuhit yazarı"
+      "D) Turgut Reis – Cerbe Deniz Savaşı'na katılan Osmanlı denizcisi",
+      "E) Kemal Reis – Kitabü'l-Muhit'in yazarı"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Kitabü'l Muhit (Okyanus Kitabı) Kemal Reis'in değil, Hint Deniz Seferleri'ne katılan ünlü coğrafyacı ve amiral 'Seydi Ali Reis'in önemli bir coğrafya ve denizcilik eseridir."
+    "explanation": "Kitabü'l-Muhit, Kemal Reis'in değil, Hint Deniz Seferleri'ne katılan Seydi Ali Reis'in eseridir; Hint Okyanusu'ndaki seyir bilgilerini, rüzgârları ve denizcilik hesaplarını içerir. Kemal Reis ise eser vermemiş, XV. yüzyılın sonunda Akdeniz'de görev yapmış bir Osmanlı denizcisidir."
   },
   {
     "id": "75",
@@ -1328,7 +1328,7 @@ window.tarih_4_sorulari = [
   },
   {
     "id": "103",
-    "question": "Kanuni döneminde yaşayan, 'Miratü'l Memalik' ve 'Kitabü Nuhit' adlı eserleri yazan denizci-bilgin aşağıdakilerden hangisidir?",
+    "question": "Kanuni döneminde yaşayan, 'Miratü'l-Memalik' ve 'Kitabü'l-Muhit' adlı eserleri yazan denizci-bilgin aşağıdakilerden hangisidir?",
     "options": [
       "A) Seydi Ali Reis",
       "B) Piri Reis",
@@ -1337,7 +1337,7 @@ window.tarih_4_sorulari = [
       "E) Turgut Reis"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Hint Deniz Seferleri sonrasında yaşadığı maceraları ve ülkeleri 'Miratü'l-Memalik' (Ülkelerin Aynası) adlı ünlü seyahatname eserinde anlatan, aynı zamanda coğrafya uzmanı olan kaptan Seydi Ali Reis'tir."
+    "explanation": "Hint Deniz Seferleri sırasında başından geçenleri ve gezdiği ülkeleri 'Miratü'l-Memalik' (Ülkelerin Aynası) adlı seyahatnamesinde anlatan; Hint Okyanusu'ndaki seyir yolları, rüzgârlar ve denizcilik hesaplarına ilişkin bilgileri ise 'Kitabü'l-Muhit' adlı eserinde toplayan denizci ve coğrafyacı Seydi Ali Reis'tir."
   },
   {
     "id": "104",
@@ -1347,7 +1347,7 @@ window.tarih_4_sorulari = [
       "B) Ebu's-Suud Efendi",
       "C) Yanyalı Esat Efendi",
       "D) Şeyh Hamdullah",
-      "E) Kazasker Mustafa Ahmet"
+      "E) Kazasker Mustafa İzzet Efendi"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Kanuni Sultan Süleyman ve II. Selim dönemlerinde uzun yıllar şeyhülislamlık yapan, kanunların şer'i hukuka uygun hale getirilmesinde büyük rol oynayan ve tefsir çalışmalarıyla tanınan ulema Ebu's-Suud Efendi'dir."
@@ -1367,7 +1367,7 @@ window.tarih_4_sorulari = [
   },
   {
     "id": "106",
-    "question": "'Seyahat yarasılullah' diyerek yola çıkan ve Seyahatname'yi yazan Osmanlı'nın en ünlü seyyahı aşağıdakilerden hangisidir?",
+    "question": "'Seyahat ya Resulallah' diyerek yola çıktığı rivayet edilen ve Seyahatname'yi yazan Osmanlı'nın en ünlü seyyahı aşağıdakilerden hangisidir?",
     "options": [
       "A) Katip Çelebi",
       "B) Piri Reis",
@@ -1393,7 +1393,7 @@ window.tarih_4_sorulari = [
   },
   {
     "id": "108",
-    "question": "Lale Devri'nin en ünlü fikir adamlarından olan; devrin âlimleri tarafından kendisine 'Muallim-i Sani' unvanı verilen kişi aşağıdakilerden hangisidir?",
+    "question": "Lale Devri'nin ünlü âlimlerinden olan; Aristoteles'in eserlerini tercüme edip şerh etmesi nedeniyle kendisine 'Muallim-i Salis' unvanı verilen kişi aşağıdakilerden hangisidir?",
     "options": [
       "A) Yanyalı Esat Efendi",
       "B) Koçi Bey",
@@ -1402,7 +1402,7 @@ window.tarih_4_sorulari = [
       "E) Ahmet Cevdet Paşa"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Lale Devri'nde Aristoteles'in eserlerini Grekçeden Arapçaya tercüme eden, felsefe eğitimi ve mantık alanındaki yetkinliği sebebiyle dönemin bilginlerince Aristo'dan (Muallim-i Evvel) sonra 'İkinci Öğretmen' (Muallim-i Sani) lakabıyla anılan âlim Yanyalı Esat Efendi'dir."
+    "explanation": "Felsefe geleneğinde Aristoteles 'Muallim-i Evvel' (Birinci Öğretmen), Farabi ise 'Muallim-i Sani' (İkinci Öğretmen) olarak anılır. Lale Devri'nde Aristoteles'in fizik ve mantıkla ilgili eserlerini tercüme edip şerh eden Yanyalı Esat Efendi de bu gelenek içinde 'Muallim-i Salis' (Üçüncü Öğretmen) unvanıyla anılmıştır."
   },
   {
     "id": "109",
@@ -1419,7 +1419,7 @@ window.tarih_4_sorulari = [
   },
   {
     "id": "110",
-    "question": "IV. Murat'a devletin gidişatı hakkında 'Koçi Bey Risalesi'ni sunan kişi aşağıdakilerden hangisidir?",
+    "question": "IV. Murat'a sunduğu risalede tımar sisteminin bozulması, ordudaki düzensizlik ve rüşvet gibi konuları ele alarak devletin gidişatını eleştiren devlet adamı aşağıdakilerden hangisidir?",
     "options": [
       "A) Koçi Bey",
       "B) Naima",
@@ -1428,7 +1428,7 @@ window.tarih_4_sorulari = [
       "E) Ahmet Cevdet Paşa"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "17. yüzyılda duraklamanın nedenlerini araştıran ordudaki, tımar sistemindeki ve rüşvetteki yozlaşmaları ele alarak padişah IV. Murat'a ve daha sonra Sultan İbrahim'e ıslahat raporu (Risale) sunan devlet adamı Koçi Bey'dir."
+    "explanation": "17. yüzyılda duraklamanın nedenlerini araştıran Koçi Bey, ordudaki, tımar sistemindeki ve yönetimdeki bozulmaları ele alan risalesini IV. Murat'a sunmuştur."
   },
   {
     "id": "111",
@@ -1441,7 +1441,7 @@ window.tarih_4_sorulari = [
       "E) Koçi Bey"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "18. yüzyılda yaşamış; astronomi, matematik, anatomi ve dini ilimleri sentezleyen, içerisinde ünlü 'Öznelerin Uyumu/Güzelliği' şiirini ve insan uzuvlarından karakter analizi yapan kıyafetname bölümünü barındıran 'Marifetname' eserinin müellifi Erzurumlu İbrahim Hakkı'dır."
+    "explanation": "18. yüzyılda yaşayan; astronomi, matematik, anatomi ve dinî ilimleri bir arada ele alan 'Marifetname'nin yazarı Erzurumlu İbrahim Hakkı'dır. Eserde insanın dış görünüşünden karakterini yorumlayan kıyafetname bölümü ile 'Hak şerleri hayreyler' dizesiyle başlayan ünlü Tefvizname manzumesi de yer alır."
   },
   {
     "id": "112",
@@ -1488,9 +1488,9 @@ window.tarih_4_sorulari = [
     "options": [
       "A) İaşecilik – halkın refahı için yeterli arz-talep dengesinin gözetilmesi",
       "B) Fiskalizm – gelirin en üst, giderin en alt düzeyde tutulması",
-      "C) Merkantalizm – zenginliğin altın ve gümüşle ölçülmesi",
+      "C) Merkantilizm – zenginliğin altın ve gümüşle ölçülmesi",
       "D) Narh sistemi – temel ihtiyaç ürünlerinde fiyat belirleme",
-      "E) Merkantalizm – Osmanlı'ya özgü bir ekonomi politikasıdır"
+      "E) Merkantilizm – Osmanlı'ya özgü bir ekonomi politikasıdır"
     ],
     "correctAnswerIndex": 4,
     "explanation": "Merkantilizm, Osmanlı'ya özgü değil; 16-18. yüzyıllar arasında Avrupa'da ortaya çıkan, bir ülkenin zenginliğini topraktan ziyade sahip olduğu altın ve gümüş gibi değerli maden miktarıyla ölçen korumacı Batı ekonomi politikasıdır."
@@ -1519,16 +1519,16 @@ window.tarih_4_sorulari = [
       "E) Yiğitbaşı – şeyh – kethüda"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Loncada esnafın güvenliğini sağlayan ve disiplini koruyan 'Yiğitbaşı'; loncanın hükümetle ve dış dünya ile ilişkilerini yürüten idari temsilci 'Kethüda' (Esnaf Şeyhi); en tepedeki manevi ve mesleki lider ise 'Şeyh' veya 'Pir'dir."
+    "explanation": "Loncada esnafın haklarını koruyan, üretimi ve disiplini denetleyen görevli 'Yiğitbaşı'; loncanın devletle ve halkla ilişkilerini yürüten idari temsilci 'Kethüda'; teşkilatın başında bulunan manevi ve mesleki lider ise 'Şeyh' ya da 'Pir'dir."
   },
   {
     "id": "118",
     "question": "Aşağıdaki ekonomi terimi–açıklama eşleştirmelerinden hangisi YANLIŞTIR?",
     "options": [
       "A) Derbent Teşkilatı – geçitlerin bakım-onarımını yapar ve vergi toplar",
-      "B) Ehli Hiref – küçük esnafın üye olduğu teşkilat",
-      "C) Menzil Teşkilatı – kervanlar arası haberleşmeyi sağlar",
-      "D) Mekkari Tarifesi – günümüzün kargo/nakliyat şirketi",
+      "B) Ehli Hiref – saray sanatkârlarının oluşturduğu teşkilat",
+      "C) Menzil Teşkilatı – ülke içinde haberleşmeyi sağlar",
+      "D) Mekkari Taifesi – günümüzün kargo/nakliyat şirketi",
       "E) Ehli Hibre – iş yeri açma ruhsatıdır"
     ],
     "correctAnswerIndex": 4,
@@ -1629,7 +1629,7 @@ window.tarih_4_sorulari = [
     "id": "126",
     "question": "Aşağıdaki para birimi–maden/dönem eşleştirmelerinden hangisi YANLIŞTIR?",
     "options": [
-      "A) Akçe (Mangır) – bakır, Osman Bey",
+      "A) Mangır – bakır, Osman Bey",
       "B) Akçe – gümüş, Orhan Bey",
       "C) Sikke-i Hasane (Sultani) – altın, Fatih Sultan Mehmet",
       "D) Kaime – kağıt, Sultan Abdülmecid",
@@ -1672,7 +1672,7 @@ window.tarih_4_sorulari = [
     "B) Bank-ı Osmani – İngiliz bankası, para basma yetkisine sahip",
     "C) Memleket Sandıkları – çiftçiye ucuz kredi vermek amaçlı",
     "D) Ziraat Bankası – 1888'de Memleket Sandıkları'ndan dönüştürülmüştür",
-    "E) İtibar-ı Milli Osmanlı Bankası – İngilizlerin kurduğu banka"
+    "E) İtibar-ı Millî Bankası – İngilizlerin kurduğu banka"
   ],
   "correctAnswerIndex": 4,
   "explanation": "İtibar-ı Milli Bankası, 1917 yılında İttihat ve Terakki tarafından milli sermayeyi desteklemek amacıyla kurulmuştur. İngilizlerin kurduğu banka değildir."
@@ -1684,11 +1684,11 @@ window.tarih_4_sorulari = [
     "A) Bank-ı Dersaadet",
     "B) Bank-ı Osmani",
     "C) Ziraat Bankası",
-    "D) İtibar-ı Milli Osmanlı Bankası",
+    "D) İtibar-ı Millî Bankası",
     "E) Memleket Sandıkları"
   ],
   "correctAnswerIndex": 3,
-  "explanation": "İtibar-ı Milli Osmanlı Bankası, İttihat ve Terakki tarafından kurulmuş, Cumhuriyet döneminde Türkiye İş Bankası ile birleştirilmiştir."
+  "explanation": "İtibar-ı Millî Bankası, 1917'de İttihat ve Terakki öncülüğünde millî sermayeyi güçlendirmek amacıyla kurulmuş, 1927'de Türkiye İş Bankası ile birleştirilmiştir."
 },
 {
   "id": "131",
@@ -1770,7 +1770,7 @@ window.tarih_4_sorulari = [
 },
 {
   "id": "137",
-  "question": "'Kıbletü'l Hattatin' unvanıyla anılan en büyük Osmanlı hattatı aşağıdakilerden hangisidir?",
+  "question": "'Kıbletü'l-küttâb' (yazı yazanların kıblesi) unvanıyla anılan ve Osmanlı hat ekolünün kurucusu sayılan hattat aşağıdakilerden hangisidir?",
   "options": [
     "A) Ahmet Karahisari",
     "B) Şeyh Hamdullah",
@@ -1779,11 +1779,11 @@ window.tarih_4_sorulari = [
     "E) II. Mustafa"
   ],
   "correctAnswerIndex": 1,
-  "explanation": "Şeyh Hamdullah, 'Kıbletü'l Hattatin' unvanıyla tanınan en büyük Osmanlı hattatıdır."
+  "explanation": "Aklâm-ı sitte denilen altı yazı çeşidini Osmanlı zevkine göre yeniden düzenleyerek Osmanlı hat ekolünün temelini atan Şeyh Hamdullah, kendisinden sonra gelen hattatlarca örnek alınmış ve 'Kıbletü'l-küttâb' unvanıyla anılmıştır."
 },
 {
   "id": "138",
-  "question": "Hattatlık yapan padişah aşağıdakilerden hangisidir?",
+  "question": "Hattat Mustafa Rakım Efendi'den ders alan ve yazdığı hat levhaları günümüze ulaşan hattat padişah aşağıdakilerden hangisidir?",
   "options": [
     "A) II. Mahmut",
     "B) II. Mustafa",
@@ -1792,7 +1792,7 @@ window.tarih_4_sorulari = [
     "E) Kanuni Sultan Süleyman"
   ],
   "correctAnswerIndex": 0,
-  "explanation": "II. Mahmut başarılı bir hattat olup eserleri günümüze ulaşmıştır."
+  "explanation": "II. Mahmut, döneminin en büyük hattatlarından Mustafa Rakım Efendi'den celî sülüs meşk etmiş, yazdığı levhalar ve geliştirdiği tuğra biçimi günümüze ulaşmıştır. II. Mustafa ve III. Ahmet de hat sanatıyla uğraşmış padişahlardır; ancak Mustafa Rakım'ın öğrencisi olan II. Mahmut'tur."
 },
 {
   "id": "139",

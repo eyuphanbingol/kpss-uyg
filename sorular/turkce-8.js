@@ -6,7 +6,8 @@ window.turkce_8_sorulari = [
         "A) Bağlaç",
         "B) Zarf",
         "C) Edat (ilgeç)",
-        "D) Ünlem"
+        "D) Ünlem",
+        "E) Zamir"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Edat cümleden çıkarılınca anlam bozulur."
@@ -17,7 +18,8 @@ window.turkce_8_sorulari = [
         "A) Cümleden çıkarılınca anlam bozulur veya değişir.",
         "B) Cümleden çıkarılınca anlam bozulmaz.",
         "C) Her zaman bağlaçtır.",
-        "D) Yalnız fiilden sonra gelir."
+        "D) Yalnız addan önce gelir.",
+        "E) Yalnız fiilden sonra gelir."
     ],
     "correctAnswerIndex": 0,
     "explanation": "Edat anlam taşıyan sözcüklerdendir."
@@ -28,7 +30,8 @@ window.turkce_8_sorulari = [
         "A) Bağlaç",
         "B) Ünlem",
         "C) Zarf",
-        "D) Edat"
+        "D) Edat",
+        "E) Sıfat"
     ],
     "correctAnswerIndex": 3,
     "explanation": "İçin çıkarılırsa anlam bozulur."
@@ -39,9 +42,10 @@ window.turkce_8_sorulari = [
         "A) Yalnız zaman",
         "B) Yalnız seslenme",
         "C) Yalnız karşılaştırma",
-        "D) Amaç, neden veya hakkında"
+        "D) Yalnız benzerlik",
+        "E) Amaç, neden veya hakkında"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Başarılı olmak için / hasta olduğu için / senin için."
 },
 {
@@ -50,7 +54,8 @@ window.turkce_8_sorulari = [
         "A) Edat (karşılaştırma)",
         "B) Bağlaç",
         "C) Ünlem",
-        "D) Zarf"
+        "D) Zarf",
+        "E) Edat (zaman)"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Karşılaştırma edatı."
@@ -61,7 +66,8 @@ window.turkce_8_sorulari = [
         "A) Zaman",
         "B) Karşılaştırma",
         "C) Benzerlik",
-        "D) Bağlaç"
+        "D) Bağlaç",
+        "E) Ünlem"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Zaman edatı olarak kullanılmış."
@@ -72,7 +78,8 @@ window.turkce_8_sorulari = [
         "A) Bağlaç (ve)",
         "B) Zarf",
         "C) Ünlem",
-        "D) Edat (araç)"
+        "D) Edat (araç)",
+        "E) Edat (benzerlik)"
     ],
     "correctAnswerIndex": 3,
     "explanation": "Araç anlamında edat."
@@ -83,7 +90,8 @@ window.turkce_8_sorulari = [
         "A) Bağlaç",
         "B) Edat",
         "C) Zarf",
-        "D) Edat ve bağlaç karışık"
+        "D) Ünlem",
+        "E) Edat ve bağlaç karışık"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Ve anlamında; bağlaç."
@@ -94,20 +102,22 @@ window.turkce_8_sorulari = [
         "A) Cümleden çıkarılınca anlam bozulur.",
         "B) Yalnız duygu bildirir.",
         "C) Her zaman edattır.",
-        "D) Cümleden çıkarılınca temel anlam bozulmaz."
+        "D) Yalnız seslenme bildirir.",
+        "E) Cümleden çıkarılınca temel anlam bozulmaz."
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Ve çıkarılırsa anlam zayıflar ama bozulmaz."
 },
 {
     "question": "“Geldi ama konuşmadı.” cümlesinde “ama” hangi sözcük türüdür?",
     "options": [
         "A) Edat",
-        "B) Bağlaç",
-        "C) Zarf",
-        "D) Ünlem"
+        "B) Sıfat",
+        "C) Bağlaç",
+        "D) Zarf",
+        "E) Ünlem"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "İki yargıyı karşıtlıkla bağlar."
 },
 {
@@ -116,7 +126,8 @@ window.turkce_8_sorulari = [
         "A) Her zaman edat bulur.",
         "B) Ünlem ayırır.",
         "C) Yerine ama geliyorsa edat.",
-        "D) Yerine ve geliyorsa bağlaç."
+        "D) Yerine ve geliyorsa bağlaç.",
+        "E) Yerine sadece geliyorsa bağlaç."
     ],
     "correctAnswerIndex": 3,
     "explanation": "Ve geliyorsa bağlaç; gelmiyorsa edat."
@@ -127,7 +138,8 @@ window.turkce_8_sorulari = [
         "A) Bağlaç",
         "B) Edat (sadece)",
         "C) Ünlem",
-        "D) Zarf"
+        "D) Sıfat",
+        "E) Zarf"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Sana ile ilişki kuruyor; sadece anlamında edat."
@@ -138,7 +150,8 @@ window.turkce_8_sorulari = [
         "A) Edat",
         "B) Zarf",
         "C) Bağlaç (ama)",
-        "D) Ünlem"
+        "D) Sıfat",
+        "E) Ünlem"
     ],
     "correctAnswerIndex": 2,
     "explanation": "İki cümleyi bağlıyor; ama anlamında."
@@ -149,7 +162,8 @@ window.turkce_8_sorulari = [
         "A) Bağlaç (ama)",
         "B) Edat (sadece)",
         "C) Ünlem",
-        "D) Zarf"
+        "D) Zarf",
+        "E) Sıfat"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Sadece anlamında edat."
@@ -160,7 +174,8 @@ window.turkce_8_sorulari = [
         "A) Bağlaç (ama)",
         "B) Edat (sadece)",
         "C) Ünlem",
-        "D) Zarf"
+        "D) Zarf",
+        "E) Sıfat"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Ama anlamında bağlaç."
@@ -170,10 +185,11 @@ window.turkce_8_sorulari = [
     "options": [
         "A) Edat",
         "B) Sıfat",
-        "C) Zarf",
-        "D) Bağlaç"
+        "C) Ünlem",
+        "D) Zarf",
+        "E) Bağlaç"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "İkileme bağlacı."
 },
 {
@@ -181,21 +197,23 @@ window.turkce_8_sorulari = [
     "options": [
         "A) Edat",
         "B) Bağlaç",
-        "C) Ünlem",
-        "D) Zarf"
+        "C) Zamir",
+        "D) Ünlem",
+        "E) Zarf"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Ünlem duygu bildirir."
 },
 {
     "question": "Aşağıdakilerden hangisi duygu ünlemidir?",
     "options": [
         "A) Ey!",
-        "B) Eyvah!",
-        "C) Hey!",
-        "D) Haydi!"
+        "B) Bre!",
+        "C) Eyvah!",
+        "D) Hey!",
+        "E) Haydi!"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Eyvah duygu ünlemi; ey/hey seslenme, haydi buyurma."
 },
 {
@@ -204,7 +222,8 @@ window.turkce_8_sorulari = [
         "A) Ünlem",
         "B) Edat",
         "C) Bağlaç",
-        "D) Zarf"
+        "D) Zarf",
+        "E) Sıfat"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Korku/şaşkınlık duygusu bildirir."
@@ -215,31 +234,34 @@ window.turkce_8_sorulari = [
         "A) Edat",
         "B) Onaylama ünlemi",
         "C) Bağlaç",
-        "D) Sıfat"
+        "D) Seslenme ünlemi",
+        "E) Sıfat"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Onaylama ünlemi."
 },
 {
-    "question": "“Aman verme, kendine dikkat et!” cümlesinde “aman” hangi görevdedir?",
+    "question": "“Aman, dikkat et!” cümlesinde “aman” hangi görevdedir?",
     "options": [
         "A) Ünlem",
-        "B) Edat benzeri (sakın)",
-        "C) Bağlaç",
-        "D) Zarf"
+        "B) Bağlaç",
+        "C) Zamir",
+        "D) Edat",
+        "E) Zarf"
     ],
-    "correctAnswerIndex": 1,
-    "explanation": "Bir sözcüğü etkiliyor; edat gibi."
+    "correctAnswerIndex": 0,
+    "explanation": "“Aman” burada kaygı ve uyarı duygusunu tek başına bildirir; cümlenin ögesi olmayan bir ünlemdir."
 },
 {
     "question": "“Şiirle müzik bir arada güzel.” cümlesinde “ile” hangi sözcük türüdür?",
     "options": [
         "A) Edat",
-        "B) Ünlem",
-        "C) Zarf",
-        "D) Bağlaç"
+        "B) Sıfat",
+        "C) Ünlem",
+        "D) Zarf",
+        "E) Bağlaç"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Ve yerine geçer; bağlaç."
 },
 {
@@ -247,8 +269,9 @@ window.turkce_8_sorulari = [
     "options": [
         "A) Edat (benzerlik)",
         "B) Bağlaç",
-        "C) Ünlem",
-        "D) Zarf"
+        "C) Edat (amaç)",
+        "D) Ünlem",
+        "E) Zarf"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Benzerlik edatı; çıkarılınca anlam bozulur."
@@ -258,19 +281,21 @@ window.turkce_8_sorulari = [
     "options": [
         "A) Bağlaç",
         "B) Zarf",
-        "C) Edat",
-        "D) Ünlem"
+        "C) Sıfat",
+        "D) Edat",
+        "E) Ünlem"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Edat örneklerindendir."
 },
 {
     "question": "Aşağıdakilerden hangisi bağlaçtır?",
     "options": [
         "A) çünkü",
-        "B) için",
-        "C) kadar",
-        "D) göre"
+        "B) rağmen",
+        "C) için",
+        "D) kadar",
+        "E) göre"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Çünkü neden bağlacı; diğerleri edat."
@@ -281,7 +306,8 @@ window.turkce_8_sorulari = [
         "A) ve",
         "B) ama",
         "C) üzere",
-        "D) fakat"
+        "D) çünkü",
+        "E) fakat"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Üzere edat; diğerleri bağlaç."
@@ -289,12 +315,13 @@ window.turkce_8_sorulari = [
 {
     "question": "Edat–bağlaç–ünlem özeti: hangisi doğrudur?",
     "options": [
-        "A) Edat çıkar → anlam bozulmaz.",
-        "B) İle her zaman edattır.",
-        "C) Ünlem her zaman edattır.",
-        "D) Bağlaç çıkar → anlam bozulmaz."
+        "A) Gibi her zaman bağlaçtır.",
+        "B) Edat çıkar → anlam bozulmaz.",
+        "C) İle her zaman edattır.",
+        "D) Ünlem her zaman edattır.",
+        "E) Bağlaç çıkar → anlam bozulmaz."
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Bağlaç çıkarılınca temel anlam korunur."
 },
 {
@@ -303,7 +330,8 @@ window.turkce_8_sorulari = [
         "A) Bağlaç (ama)",
         "B) Ünlem",
         "C) Edat (sadece)",
-        "D) Zarf"
+        "D) Zarf",
+        "E) Sıfat"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Sadece anlamında edat."
@@ -314,7 +342,8 @@ window.turkce_8_sorulari = [
         "A) Kadar bazen edattır.",
         "B) Gibi genelde edattır.",
         "C) Ve her zaman edattır.",
-        "D) İle hem edat hem bağlaç olabilir."
+        "D) İle hem edat hem bağlaç olabilir.",
+        "E) Çünkü bağlaçtır."
     ],
     "correctAnswerIndex": 2,
     "explanation": "Ve bağlaçtır, edat değil."
@@ -323,22 +352,24 @@ window.turkce_8_sorulari = [
     "question": "“Sus!” cümlesinde “sus” hangi ünlem türüne örnektir?",
     "options": [
         "A) Duygu",
-        "B) Buyurma/uyarma",
-        "C) Onaylama",
-        "D) Seslenme"
+        "B) Sevinme",
+        "C) Buyurma/uyarma",
+        "D) Onaylama",
+        "E) Seslenme"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Buyurma/uyarma ünlemi."
 },
 {
     "question": "“Hem çalıştı hem okudu.” cümlesinde “hem...hem” hangi sözcük türüdür?",
     "options": [
-        "A) Edat",
-        "B) Bağlaç",
-        "C) Zarf",
-        "D) Ünlem"
+        "A) Sıfat",
+        "B) Edat",
+        "C) Bağlaç",
+        "D) Zarf",
+        "E) Ünlem"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "İkileme bağlacı."
 },
 {
@@ -346,22 +377,24 @@ window.turkce_8_sorulari = [
     "options": [
         "A) Bağlaç",
         "B) Zarf",
-        "C) Edat",
-        "D) Ünlem"
+        "C) Sıfat",
+        "D) Edat",
+        "E) Ünlem"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Karşılaştırma/uygunluk edatı."
 },
 {
-    "question": "Ünlem ipucu: cümlede tek başına duygu ifade ediyorsa ne olur?",
+    "question": "Cümlede tek başına duygu bildiren sözcükler hangi sözcük türünden sayılır?",
     "options": [
         "A) Edat",
         "B) Bağlaç",
-        "C) Ünlem",
-        "D) Sıfat"
+        "C) Zamir",
+        "D) Ünlem",
+        "E) Sıfat"
     ],
-    "correctAnswerIndex": 2,
-    "explanation": "Notlardaki ünlem ipucu."
+    "correctAnswerIndex": 3,
+    "explanation": "Sevinç, korku, şaşkınlık, acıma gibi duyguları tek başına anlatan sözcükler ünlemdir."
 },
 {
     "question": "“Gelmedi, çünkü hastaydı.” cümlesinde “çünkü” hangi sözcük türüdür?",
@@ -369,20 +402,22 @@ window.turkce_8_sorulari = [
         "A) Edat",
         "B) Bağlaç (neden)",
         "C) Zarf",
-        "D) Ünlem"
+        "D) Sıfat",
+        "E) Ünlem"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Neden bildiren bağlaç."
 },
 {
-    "question": "Aşağıdakilerden hangisi doğrudur?",
+    "question": "Edat, bağlaç ve ünlemle ilgili aşağıdaki bilgilerden hangisi doğrudur?",
     "options": [
-        "A) Ama yerine sadece geliyorsa edattır.",
-        "B) Ama yerine ve geliyorsa bağlaçtır.",
-        "C) Edat yerine ama geliyorsa edattır.",
-        "D) Ünlem çıkarılınca anlam bozulmaz."
+        "A) Edatlar tek başlarına anlamlı değildir, başka sözcüklerle öbek kurduklarında anlam kazanır.",
+        "B) Bağlaçlar cümlede özne görevinde kullanılır.",
+        "C) Ünlemler cümlenin temel ögelerinden biridir.",
+        "D) “ile” sözcüğü her durumda bağlaçtır.",
+        "E) Ünlemler yalnızca fiillerden türetilen sözcüklerdir."
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Ama anlamında bağlaç; sadece anlamında edat."
+    "explanation": "Edatlar (ilgeçler) “gibi, için, kadar” gibi tek başına anlamı olmayan sözcüklerdir; ancak başka sözcüklerle öbek kurduklarında anlam kazanıp cümleye anlam ilgisi katar. Bağlaçlar tek başına öge olamaz, ünlemler cümle dışı unsurdur, “ile” kimi zaman bağlaç kimi zaman edat olarak kullanılır ve ünlemlerin fiilden türemesi zorunlu değildir."
 }
 ];

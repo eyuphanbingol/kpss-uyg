@@ -13,7 +13,7 @@ window.geometri_12_sorulari = [
     "explanation": "V = 20·5 = 100 cm³."
 },
 {
-    "question": "Taban çevresi 24 cm, yüksekliği 5 cm olan prizmanın yanal alanı kaç cm²'dir?",
+    "question": "Taban çevresi 24 cm, yüksekliği 5 cm olan dik prizmanın yanal alanı kaç cm²'dir?",
     "options": [
         "A) 100",
         "B) 110",
@@ -22,7 +22,7 @@ window.geometri_12_sorulari = [
         "E) 140"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "Yanal = 24·5 = 120 cm²."
+    "explanation": "Dik prizmada yanal alan = taban çevresi × yükseklik olduğundan yanal alan 24·5 = 120 cm²'dir."
 },
 {
     "question": "Kenarları 3, 4 ve 12 cm olan dikdörtgenler prizmasının uzay köşegeni kaç cm'dir?",
@@ -178,7 +178,7 @@ window.geometri_12_sorulari = [
         "E) 20√3"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "A = 16√3 cm²."
+    "explanation": "Düzgün dörtyüzlü, kenar uzunluğu a = 4 cm olan 4 eş eşkenar üçgenden oluşur. Bir eşkenar üçgenin alanı a²√3/4 = 16√3/4 = 4√3 cm² olduğundan yüzey alanı 4·4√3 = 16√3 cm² bulunur."
 },
 {
     "question": "Kenarı 6 cm olan düzgün dörtyüzlünün hacmi kaç cm³'tür?",

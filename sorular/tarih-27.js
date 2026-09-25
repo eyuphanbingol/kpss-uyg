@@ -10,7 +10,7 @@ window.tarih_27_sorulari = [
             "E) Bağlantısızların NATO’ya katılması"
         ],
         correctAnswerIndex: 2,
-        explanation: "Detant, iki kutup arasındaki gerilimi düşürme arayışıdır (yaklaşık 1961–1990)."
+        explanation: "Detant, ABD ve SSCB önderliğindeki iki blok arasındaki gerginliğin görüşme ve antlaşmalarla azaltılması arayışıdır. 1962 Küba Krizi’nin ardından belirginleşmiş, 1979’da SSCB’nin Afganistan’ı işgaliyle büyük ölçüde sona ermiştir."
     },
     {
         question: "1961’de Kennedy ile Kruşçev’in görüştüğü yer hangisidir?",
@@ -31,10 +31,10 @@ window.tarih_27_sorulari = [
             "B) ABD ve SSCB arasında stratejik/nükleer silahların sınırlandırılması",
             "C) Çin–ABD barış antlaşmasıdır",
             "D) Kennedy–Kruşçev’in 1961 belgesidir",
-            "E) ABD Senatosu tarafından hiç imzalanmamıştır"
+            "E) ABD Senatosu tarafından onaylanmamıştır"
         ],
         correctAnswerIndex: 1,
-        explanation: "SALT-I 1972’de ABD–SSCB nükleer/stratejik silah sınırlamasıdır."
+        explanation: "SALT-I, 1972’de ABD ile SSCB arasında imzalanan, stratejik ve nükleer silahların sınırlandırılmasını öngören antlaşmadır."
     },
     {
         question: "SALT-II (1979) ile ilgili hangisi en doğrudur?",
@@ -166,7 +166,7 @@ window.tarih_27_sorulari = [
             "E) Varşova Paktı üyeliği"
         ],
         correctAnswerIndex: 2,
-        explanation: "Vietnam sonrası ABD yükünü paylaştırma politikasıdır."
+        explanation: "Temmuz 1969’da açıklanan Nixon Doktrini, Vietnam Savaşı sürerken savunma yükünün müttefiklere devredilmesini (Vietnamlaştırma) ve ABD’nin doğrudan askerî müdahalelerini azaltmasını öngörmüştür."
     },
     {
         question: "1956 Süveyş Krizi için hangisi doğrudur?",
@@ -211,22 +211,28 @@ window.tarih_27_sorulari = [
         explanation: "1980–1988. İrangate / İran-Contra: ABD’nin İran’a gizli silah satışı."
     },
     {
-        question: "I. Körfez Savaşı’nı başlatan gelişme hangisidir?",
+        question: "Çöl Fırtınası Harekâtı’yla sonuçlanan Körfez Savaşı’nı başlatan gelişme aşağıdakilerden hangisidir?",
         options: [
-            "A) İsrail’in Golan’ı alması",
-            "B) Bandung",
-            "C) SALT-I",
-            "D) Irak’ın 1990’da Kuveyt’i işgali",
-            "E) KKTC ilanı"
+            "A) İsrail’in Golan Tepeleri’ni ele geçirmesi",
+            "B) Bandung Konferansı’nın toplanması",
+            "C) SALT-I Antlaşması’nın imzalanması",
+            "D) Irak’ın Kuveyt’i işgal etmesi",
+            "E) KKTC’nin ilan edilmesi"
         ],
         correctAnswerIndex: 3,
-        explanation: "İran–Irak 1980–88; Kuveyt işgali 1990; I. Körfez 1990–1991."
+        explanation: "Irak’ın 2 Ağustos 1990’da Kuveyt’i işgali üzerine BM kararlarıyla oluşturulan koalisyon 1991’de Çöl Fırtınası Harekâtı’nı başlatmış ve Irak Kuveyt’ten çıkarılmıştır."
     },
     {
-        question: "1976’de Ege kıta sahanlığı geriliminde Türkiye’nin araştırma gemisi hangisidir?",
-        options: ["A) Sismik-I", "B) Barbaros", "C) Piri Reis 1960", "D) Nautilus", "E) Vostok-I"],
+        question: "1976’da Ege kıta sahanlığı geriliminde Türkiye’nin Ege’ye gönderdiği araştırma gemisi hangisidir?",
+        options: [
+        "A) Sismik-I",
+        "B) Barbaros",
+        "C) Piri Reis",
+        "D) Nautilus",
+        "E) Vostok-I"
+        ],
         correctAnswerIndex: 0,
-        explanation: "Kıta sahanlığı: karasuları ötesi kaynak hakları. 1976 Sismik-I ve Bern Deklarasyonu."
+        explanation: "Kıta sahanlığı, karasuları ötesindeki deniz yatağı kaynakları üzerindeki hakları ifade eder. 1976’da Türkiye’nin Sismik-I araştırma gemisini Ege’ye göndermesi krize yol açmış, taraflar Bern Deklarasyonu ile görüşme yolunu benimsemiştir."
     },
     {
         question: "TBMM’nin Yunanistan’ın Ege’de karasularını 12 mile çıkarmasını casus belli saydığı yıl hangisidir?",
@@ -244,13 +250,13 @@ window.tarih_27_sorulari = [
             "E) SALT görüşmeleri"
         ],
         correctAnswerIndex: 0,
-        explanation: "FIR = Flight Information Region. ‘Yunanistan tüm uçakları yasakladı’ ifadesi fazla basittir."
+        explanation: "FIR (Flight Information Region) uçuş bilgi bölgesi demektir. Ege’de uçuş bilgi bölgesinin sınırları, bu bölgedeki hava trafiğinin kontrolü ve uçuş planlarının bildirilmesi konusunda Türkiye ile Yunanistan arasında anlaşmazlık yaşanmaktadır."
     },
     {
         question: "Kardak Kayalıkları krizi hangi yıldadır?",
         options: ["A) 1974", "B) 1983", "C) 1995", "D) 1996", "E) 2004"],
         correctAnswerIndex: 3,
-        explanation: "1996, egemenlik meselesi; savaş eşiği. ‘Ada sular altında kalınca bitti’ anlatısı kullanılmaz."
+        explanation: "Kardak Kayalıkları krizi Ocak–Şubat 1996’da Türkiye ile Yunanistan arasında egemenlik sorunu nedeniyle yaşanmış, iki ülke savaşın eşiğinden dönmüştür."
     },
     {
         question: "1960 Kıbrıs Cumhuriyeti’nin garantör devletleri hangileridir?",
@@ -315,14 +321,14 @@ window.tarih_27_sorulari = [
     {
         question: "Cengiz Topel için en doğru KPSS ifadesi hangisidir?",
         options: [
-            "A) Türkiye’nin ilk hava şehididir (mutlak)",
+            "A) Türkiye’nin ilk hava şehididir",
             "B) Annan Planı’nı hazırlamıştır",
             "C) 1974 harekâtının kara komutanıdır",
             "D) KKTC’nin ilk cumhurbaşkanıdır",
             "E) Kıbrıs olaylarında şehit olan ilk Türk jet pilotudur"
         ],
         correctAnswerIndex: 4,
-        explanation: "1964. ‘İlk hava şehidi’ kesin yazılmamalı."
+        explanation: "Cengiz Topel, 1964 Kıbrıs olaylarında Erenköy bölgesindeki harekât sırasında uçağı düşürülerek şehit olan Türk jet pilotudur. Türk havacılığının ilk şehidi o olmadığı için “ilk hava şehidi” nitelemesi doğru değildir."
     },
     {
         question: "15 Temmuz 1974’te Kıbrıs’ta ne olmuştur?",
@@ -475,16 +481,16 @@ window.tarih_27_sorulari = [
         explanation: "Kanlı Noel 1963’tür. 1964 Johnson Mektubu ve Cengiz Topel yılıdır."
     },
     {
-        question: "Aşağıdakilerden hangisi Yumuşama Dönemi’nin ÖSYM ağırlıklı omurgasında DEĞİLDİR?",
+        question: "Aşağıdakilerden hangisi Yumuşama Dönemi’nde yaşanan gelişmelerden biri DEĞİLDİR?",
         options: [
-            "A) Küba Krizi",
-            "B) SALT ve Helsinki",
-            "C) Kıbrıs, Johnson, 1974 harekâtı, ABD ambargosu",
-            "D) Ege sorunları ve Ortadoğu savaşları",
-            "E) Türkiye’deki ilk cep telefonu görüşmesinin dakikası"
+            "A) Küba Füze Krizi’nin yaşanması",
+            "B) SALT-I Antlaşması’nın imzalanması",
+            "C) Helsinki Nihai Senedi’nin kabul edilmesi",
+            "D) Kıbrıs Barış Harekâtı’nın yapılması",
+            "E) Sovyetler Birliği’nin dağılması"
         ],
         correctAnswerIndex: 4,
-        explanation: "İlk cep / ilk bilgisayar düşük önceliktir. Ağırlık: Küba → SALT → Helsinki → Ping-Pong → Kıbrıs hattı → Ege → Ortadoğu."
+        explanation: "Küba Füze Krizi (1962), SALT-I (1972), Helsinki Nihai Senedi (1975) ve Kıbrıs Barış Harekâtı (1974) Yumuşama Dönemi içinde gerçekleşmiştir. Sovyetler Birliği ise 1991’de dağılmış, bu gelişme Yumuşama Dönemi’nden sonra yaşanmıştır."
     },
     {
         question: "Dış Uzay Antlaşması hangi yılda uzayın barışçıl kullanımına yönelik düzenleme getirmiştir?",
@@ -523,16 +529,16 @@ window.tarih_27_sorulari = [
         explanation: "İran–Irak Savaşı döneminde ABD’nin İran’a gizli silah satışı ortaya çıktı."
     },
     {
-        question: "Ayşe tatile çıksın ifadesi ÖSYM açısından nasıl öğrenilmelidir?",
+        question: "“Ayşe tatile çıksın” ifadesi aşağıdakilerden hangisinin parolası olarak kullanılmıştır?",
         options: [
-            "A) Harekâtın hukuki nedeni olarak",
-            "B) Johnson Mektubu’nun son cümlesi olarak",
-            "C) 1974 Kıbrıs Barış Harekâtı parolası olarak",
-            "D) Annan Planı’nın sloganı olarak",
-            "E) Kardak çıkarma emri olarak"
+            "A) Johnson Mektubu’nun gönderilmesi",
+            "B) 1960 askerî müdahalesi",
+            "C) 1974 Kıbrıs Barış Harekâtı",
+            "D) Annan Planı’nın açıklanması",
+            "E) Kardak krizinde yapılan çıkarma"
         ],
         correctAnswerIndex: 2,
-        explanation: "Temel neden Enosis darbesi ve garantörlüktür; parola ayrıntıdır."
+        explanation: "“Ayşe tatile çıksın” ifadesi, 20 Temmuz 1974’te başlatılan Kıbrıs Barış Harekâtı’nın başlama parolasıdır."
     },
     {
         question: "Kış Uykusu filmi için hangisi doğrudur?",
@@ -541,16 +547,22 @@ window.tarih_27_sorulari = [
             "B) Metin Erksan’ındır",
             "C) Yılmaz Güney yönetti",
             "D) 1982 Anayasası’nı konu alır",
-            "E) 2014, Nuri Bilge Ceylan, Altın Palmiye; Yumuşama Dönemi filmi değildir"
+            "E) 2014 yapımıdır, yönetmeni Nuri Bilge Ceylan’dır"
         ],
         correctAnswerIndex: 4,
-        explanation: "Dönem notuna karıştırılmamalı; Türk sineması kutusundadır."
+        explanation: "Kış Uykusu 2014 yapımı bir Nuri Bilge Ceylan filmidir ve aynı yıl Cannes Film Festivali’nde Altın Palmiye kazanmıştır. 1964’te Berlin’de Altın Ayı kazanan film ise Metin Erksan’ın Susuz Yaz’ıdır."
     },
     {
-        question: "Türkiye’nin internete bağlanması ile ilgili ders notu bilgisi hangisidir?",
-        options: ["A) 1968 TRT", "B) 1993 ODTÜ", "C) 1957 Sputnik", "D) 1972 SALT", "E) 1980 darbe"],
+        question: "Türkiye ilk kez hangi yıl ve hangi kurum üzerinden internete bağlanmıştır?",
+        options: [
+        "A) 1968 – TRT",
+        "B) 1993 – ODTÜ",
+        "C) 1986 – Boğaziçi Üniversitesi",
+        "D) 1996 – İTÜ",
+        "E) 2000 – Türk Telekom"
+        ],
         correctAnswerIndex: 1,
-        explanation: "ARPANET internetin öncüsüdür; Türkiye bağlantısı 1993 ODTÜ üzerinden anlatılır."
+        explanation: "Türkiye, 12 Nisan 1993’te ODTÜ’de kurulan bağlantı üzerinden ilk kez internete bağlanmıştır. İnternetin öncüsü ise ABD’de kurulan ARPANET’tir."
     },
     {
         question: "Aşağıdaki kronolojinin doğrusu hangisidir?",

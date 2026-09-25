@@ -97,7 +97,7 @@ window.guncel_4_sorulari = [
     "explanation": "Boks bronz."
 },
 {
-    "question": "Mete Gazoz 2024 Paris Olimpiyatları'nda hangi branşta bronz madalya kazanmıştır?",
+    "question": "Mete Gazoz'un da yer aldığı erkek millî takım, 2024 Paris Olimpiyatları'nda hangi branşta bronz madalya kazanmıştır?",
     "options": [
         "A) Boks",
         "B) Güreş",
@@ -106,7 +106,7 @@ window.guncel_4_sorulari = [
         "E) Okçuluk"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Okçuluk bronz."
+    "explanation": "Erkek okçuluk millî takımı, 2024 Paris Olimpiyatları'nda takım müsabakasında bronz madalya kazanmıştır. Mete Gazoz, 2020 Tokyo Olimpiyatları'nda ise bireysel altın madalya almıştı."
 },
 {
     "question": "Türkiye'nin 2024 Paris Olimpiyatları'ndaki erkekler okçuluk takımı hangi dereceyi elde etmiştir?",
@@ -169,7 +169,7 @@ window.guncel_4_sorulari = [
     "explanation": "ABD, Meksika, Kanada."
 },
 {
-    "question": "2026 FIFA Dünya Kupası hangi tarihler arasında düzenlenecektir?",
+    "question": "2026 FIFA Dünya Kupası hangi tarihler arasında düzenlenmiştir?",
     "options": [
         "A) 1 Haziran – 30 Haziran 2026",
         "B) 11 Haziran – 19 Temmuz 2026",
@@ -178,7 +178,7 @@ window.guncel_4_sorulari = [
         "E) 1 Temmuz – 19 Temmuz 2026"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "11 Haziran – 19 Temmuz 2026."
+    "explanation": "2026 FIFA Dünya Kupası, 11 Haziran – 19 Temmuz 2026 tarihleri arasında ABD, Kanada ve Meksika'nın ev sahipliğinde düzenlenmiştir."
 },
 {
     "question": "2026 FIFA Dünya Kupası'nın önceki turnuvalardan en önemli format farklarından biri aşağıdakilerden hangisidir?",
@@ -193,7 +193,7 @@ window.guncel_4_sorulari = [
     "explanation": "İlk kez 48 takım."
 },
 {
-    "question": "2026 FIFA Dünya Kupası'nda toplam kaç maç oynanacaktır?",
+    "question": "2026 FIFA Dünya Kupası'nda toplam kaç maç oynanmıştır?",
     "options": [
         "A) 64",
         "B) 80",
@@ -202,10 +202,10 @@ window.guncel_4_sorulari = [
         "E) 112"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "104 maç."
+    "explanation": "2026 FIFA Dünya Kupası 48 takımın katılımıyla düzenlenmiş ve turnuvada toplam 104 maç oynanmıştır."
 },
 {
-    "question": "2026 FIFA Dünya Kupası'nda toplam kaç şehir ev sahipliği yapacaktır?",
+    "question": "2026 FIFA Dünya Kupası'na toplam kaç şehir ev sahipliği yapmıştır?",
     "options": [
         "A) 12",
         "B) 14",
@@ -214,31 +214,31 @@ window.guncel_4_sorulari = [
         "E) 20"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "16 şehir."
+    "explanation": "2026 FIFA Dünya Kupası, ABD, Meksika ve Kanada'da yer alan toplam 16 şehirde oynanmıştır. Bu, Dünya Kupası tarihinde bir turnuvaya ev sahipliği yapan en yüksek şehir sayısıdır."
 },
 {
-    "question": "2026 FIFA Dünya Kupası açısından aşağıdakilerden hangisi doğrudur?",
+    "question": "2026 FIFA Dünya Kupası ile ilgili aşağıdakilerden hangisi doğrudur?",
     "options": [
-        "A) Tek bir ülke ev sahipliği yapacaktır.",
-        "B) İki ülke ortak ev sahipliğinde düzenlenecektir.",
-        "C) Avrupa ülkeleri ortak ev sahipliği yapacaktır.",
-        "D) ABD, Meksika ve Kanada ortak ev sahipliği yapacaktır.",
-        "E) Turnuva 32 takımla oynanacaktır."
+        "A) Turnuvaya tek bir ülke ev sahipliği yapmıştır.",
+        "B) Turnuva iki ülkenin ortak ev sahipliğinde düzenlenmiştir.",
+        "C) Turnuvaya yalnızca Avrupa ülkeleri ev sahipliği yapmıştır.",
+        "D) Turnuvaya ABD, Meksika ve Kanada ortak ev sahipliği yapmıştır.",
+        "E) Turnuva 32 takımla oynanmıştır."
     ],
     "correctAnswerIndex": 3,
-    "explanation": "Üç ülke ortak ev sahibidir."
+    "explanation": "2026 FIFA Dünya Kupası, ABD, Meksika ve Kanada'nın ortak ev sahipliğinde düzenlenmiştir; bu nedenle tek ülke, iki ülke ya da Avrupa ülkeleri seçenekleri yanlıştır. Turnuva ayrıca ilk kez 48 takımla oynandığı için 32 takım ifadesi de yanlıştır."
 },
 {
-    "question": "Aşağıdakilerden hangisi 2026 FIFA Dünya Kupası'nın ev sahibi ülkelerinden biri değildir?",
+    "question": "Aşağıdaki ülkelerden hangisi 2026 FIFA Dünya Kupası'nın ev sahibi ülkelerinden biridir?",
     "options": [
-        "A) ABD",
-        "B) Meksika",
-        "C) Kanada",
-        "D) Brezilya",
-        "E) Hepsi aynı kıta bölgesinde değildir."
+        "A) Brezilya",
+        "B) Arjantin",
+        "C) Kolombiya",
+        "D) Kanada",
+        "E) Kosta Rika"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "Brezilya ev sahibi değildir."
+    "explanation": "2026 FIFA Dünya Kupası ABD, Meksika ve Kanada'nın ortak ev sahipliğinde düzenlenmiştir. Brezilya, Arjantin, Kolombiya ve Kosta Rika turnuvanın ev sahipleri arasında yer almamıştır."
 },
 {
     "question": "Birleşmiş Milletler hangi yıl kurulmuştur?",
@@ -265,7 +265,7 @@ window.guncel_4_sorulari = [
     "explanation": "New York."
 },
 {
-    "question": "Birleşmiş Milletler Genel Sekreteri aşağıdakilerden hangisidir?",
+    "question": "2026 yılı itibarıyla Birleşmiş Milletler Genel Sekreteri aşağıdakilerden hangisidir?",
     "options": [
         "A) Mark Rutte",
         "B) Ngozi Okonjo-Iweala",
@@ -274,7 +274,7 @@ window.guncel_4_sorulari = [
         "E) Jens Stoltenberg"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "António Guterres."
+    "explanation": "Portekiz'in eski başbakanı António Guterres, 1 Ocak 2017'den bu yana Birleşmiş Milletler Genel Sekreteridir ve ikinci görev dönemi 31 Aralık 2026'da sona erecektir. Mark Rutte NATO, Ngozi Okonjo-Iweala Dünya Ticaret Örgütü, Tedros Adhanom Ghebreyesus ise Dünya Sağlık Örgütü'nün başındadır; Jens Stoltenberg NATO'nun önceki genel sekreteridir."
 },
 {
     "question": "Türkiye'nin Birleşmiş Milletler açısından statüsü aşağıdakilerden hangisidir?",
@@ -337,7 +337,7 @@ window.guncel_4_sorulari = [
     "explanation": "Brüksel / Belçika."
 },
 {
-    "question": "Verilen notlara göre NATO'nun üye sayısı kaçtır?",
+    "question": "2026 yılı itibarıyla NATO'nun üye sayısı kaçtır?",
     "options": [
         "A) 27",
         "B) 30",
@@ -346,7 +346,7 @@ window.guncel_4_sorulari = [
         "E) 35"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "32 üye."
+    "explanation": "NATO'nun üye sayısı, 2023'te Finlandiya'nın ve 2024'te İsveç'in katılımıyla 32'ye yükselmiştir."
 },
 {
     "question": "NATO'ya 2023 yılında katılan ülke aşağıdakilerden hangisidir?",
@@ -373,7 +373,7 @@ window.guncel_4_sorulari = [
     "explanation": "İsveç 2024."
 },
 {
-    "question": "NATO Genel Sekreteri aşağıdakilerden hangisidir?",
+    "question": "2026 yılı itibarıyla NATO Genel Sekreteri aşağıdakilerden hangisidir?",
     "options": [
         "A) António Guterres",
         "B) Mark Rutte",
@@ -382,7 +382,7 @@ window.guncel_4_sorulari = [
         "E) Ursula von der Leyen"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Mark Rutte."
+    "explanation": "Hollanda'nın eski başbakanı Mark Rutte, 1 Ekim 2024'te Jens Stoltenberg'in yerine NATO Genel Sekreteri olmuştur. António Guterres Birleşmiş Milletler, Tedros Adhanom Ghebreyesus Dünya Sağlık Örgütü, Ngozi Okonjo-Iweala Dünya Ticaret Örgütü, Ursula von der Leyen ise Avrupa Komisyonu başkanıdır."
 },
 {
     "question": "Türkiye NATO'ya hangi yıl katılmıştır?",
@@ -421,7 +421,7 @@ window.guncel_4_sorulari = [
     "explanation": "Türkiye 1952'de katılmıştır."
 },
 {
-    "question": "UNESCO hangi yıl kurulmuştur?",
+    "question": "UNESCO'nun kuruluş sözleşmesi (anayasası) hangi yıl imzalanmıştır?",
     "options": [
         "A) 1944",
         "B) 1945",
@@ -430,7 +430,7 @@ window.guncel_4_sorulari = [
         "E) 1949"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "1945."
+    "explanation": "UNESCO Anayasası 16 Kasım 1945'te Londra'da imzalanmış, gerekli onayların tamamlanmasıyla 4 Kasım 1946'da yürürlüğe girerek örgüt fiilen kurulmuştur. Soruda imza yılı sorulduğu için cevap 1945'tir."
 },
 {
     "question": "UNESCO'nun temel amacı aşağıdakilerden hangisidir?",
@@ -445,16 +445,16 @@ window.guncel_4_sorulari = [
     "explanation": "Eğitim, bilim, kültür."
 },
 {
-    "question": "Aşağıdaki UNESCO bilgileri için hangisi doğrudur?",
+    "question": "UNESCO'nun merkezi aşağıdaki şehirlerden hangisindedir?",
     "options": [
-        "A) Merkez — New York",
-        "B) Merkez — Cenevre",
-        "C) Merkez — Washington D.C.",
-        "D) Merkez — Brüksel",
-        "E) Merkez — Paris"
+        "A) New York",
+        "B) Cenevre",
+        "C) Washington D.C.",
+        "D) Brüksel",
+        "E) Paris"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Paris."
+    "explanation": "UNESCO'nun merkezi Paris'tedir. New York Birleşmiş Milletler Genel Merkezi'nin, Cenevre Dünya Sağlık Örgütü ve Dünya Ticaret Örgütü'nün, Washington D.C. IMF ve Dünya Bankası'nın, Brüksel ise NATO'nun merkezidir."
 },
 {
     "question": "UNICEF hangi yıl kurulmuştur?",
@@ -517,7 +517,7 @@ window.guncel_4_sorulari = [
     "explanation": "Cenevre."
 },
 {
-    "question": "Dünya Sağlık Örgütü Genel Direktörü aşağıdakilerden hangisidir?",
+    "question": "2026 yılı itibarıyla Dünya Sağlık Örgütü Genel Direktörü aşağıdakilerden hangisidir?",
     "options": [
         "A) António Guterres",
         "B) Mark Rutte",
@@ -526,10 +526,10 @@ window.guncel_4_sorulari = [
         "E) Tedros Adhanom Ghebreyesus"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Tedros Adhanom Ghebreyesus."
+    "explanation": "Etiyopyalı Tedros Adhanom Ghebreyesus, 2017'den bu yana Dünya Sağlık Örgütü Genel Direktörüdür; ikinci görev dönemi 2022'de başlamıştır. António Guterres Birleşmiş Milletler, Mark Rutte NATO, Kristalina Georgieva IMF, Ngozi Okonjo-Iweala ise Dünya Ticaret Örgütü'nün başındadır."
 },
 {
-    "question": "IMF hangi yıl kurulmuştur?",
+    "question": "IMF'nin kurulmasına karar verilen Bretton Woods Konferansı hangi yıl düzenlenmiştir?",
     "options": [
         "A) 1939",
         "B) 1944",
@@ -538,7 +538,7 @@ window.guncel_4_sorulari = [
         "E) 1952"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "1944."
+    "explanation": "Bretton Woods Konferansı Temmuz 1944'te ABD'nin New Hampshire eyaletinde toplanmış ve IMF ile Dünya Bankası'nın kurulması bu konferansta kararlaştırılmıştır. IMF'nin ana sözleşmesi 1945 sonunda yürürlüğe girmiş, kurum 1947'de fiilen faaliyete geçmiştir."
 },
 {
     "question": "IMF'nin merkezi nerededir?",
@@ -625,7 +625,7 @@ window.guncel_4_sorulari = [
     "explanation": "Cenevre."
 },
 {
-    "question": "DTÖ Genel Direktörü aşağıdakilerden hangisidir?",
+    "question": "2026 yılı itibarıyla Dünya Ticaret Örgütü (DTÖ) Genel Direktörü aşağıdakilerden hangisidir?",
     "options": [
         "A) Ngozi Okonjo-Iweala",
         "B) Mark Rutte",
@@ -634,7 +634,7 @@ window.guncel_4_sorulari = [
         "E) Ursula von der Leyen"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Ngozi Okonjo-Iweala."
+    "explanation": "Nijeryalı Ngozi Okonjo-Iweala, 2021'den bu yana Dünya Ticaret Örgütü Genel Direktörüdür ve ikinci görev dönemi 2025'te başlamıştır. Mark Rutte NATO, António Guterres Birleşmiş Milletler, Tedros Adhanom Ghebreyesus Dünya Sağlık Örgütü, Ursula von der Leyen ise Avrupa Komisyonu başkanıdır."
 },
 {
     "question": "Avrupa Birliği'nin günümüzdeki kurumsal yapısının temelini oluşturan Maastricht Antlaşması hangi yıl ile ilişkilidir?",
@@ -649,7 +649,7 @@ window.guncel_4_sorulari = [
     "explanation": "1993."
 },
 {
-    "question": "Avrupa Birliği'nin güncel üye sayısı aşağıdakilerden hangisidir?",
+    "question": "2026 yılı itibarıyla Avrupa Birliği'nin üye sayısı aşağıdakilerden hangisidir?",
     "options": [
         "A) 25",
         "B) 27",
@@ -658,7 +658,7 @@ window.guncel_4_sorulari = [
         "E) 32"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "27 üye."
+    "explanation": "Avrupa Birliği, Birleşik Krallık'ın 2020'de üyelikten ayrılmasının ardından 27 üye ülkeden oluşmaktadır; Brexit öncesinde bu sayı 28'di."
 },
 {
     "question": "Türkiye'nin Avrupa Birliği açısından statüsü aşağıdakilerden hangisidir?",
@@ -883,13 +883,13 @@ window.guncel_4_sorulari = [
         "B) Türkmenistan",
         "C) KKTC",
         "D) Özbekistan",
-        "E) Hiçbiri"
+        "E) Tacikistan"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "Özbekistan tam üyedir."
+    "explanation": "Türk Devletleri Teşkilatı'nın tam üyeleri Türkiye, Azerbaycan, Kazakistan, Kırgızistan ve Özbekistan'dır. Macaristan, Türkmenistan ve KKTC gözlemci statüsündedir; Tacikistan ise teşkilatta yer almamaktadır."
 },
 {
-    "question": "Verilen notlara göre Türk Devletleri Teşkilatı'nın tam üyeleri aşağıdakilerden hangisinde doğru verilmiştir?",
+    "question": "Türk Devletleri Teşkilatı'nın tam üyeleri aşağıdakilerden hangisinde birlikte ve doğru verilmiştir?",
     "options": [
         "A) Türkiye – Azerbaycan – Kazakistan – Kırgızistan – Özbekistan",
         "B) Türkiye – Macaristan – Türkmenistan – KKTC – Azerbaycan",
@@ -898,7 +898,7 @@ window.guncel_4_sorulari = [
         "E) Türkiye – Rusya – Kazakistan – Çin – Özbekistan"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "TR, AZ, KZ, KG, UZ."
+    "explanation": "Türk Devletleri Teşkilatı'nın tam üyeleri Türkiye, Azerbaycan, Kazakistan, Kırgızistan ve Özbekistan'dır. Macaristan, Türkmenistan ve KKTC gözlemci statüsünde olup tam üye değildir; İran, Irak, Suriye, Rusya ve Çin ise teşkilata üye değildir."
 },
 {
     "question": "Aşağıdakilerden hangisi Türk Devletleri Teşkilatı'nın gözlemcileri arasında verilmiştir?",
@@ -913,7 +913,7 @@ window.guncel_4_sorulari = [
     "explanation": "Macaristan gözlemcidir."
 },
 {
-    "question": "Aşağıdaki ülkelerden hangisi verilen notlara göre Türk Devletleri Teşkilatı'nda gözlemci statüsündedir?",
+    "question": "Aşağıdaki ülkelerden hangisi Türk Devletleri Teşkilatı'nda gözlemci statüsündedir?",
     "options": [
         "A) Türkmenistan",
         "B) Türkiye",
@@ -922,7 +922,7 @@ window.guncel_4_sorulari = [
         "E) Özbekistan"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Türkmenistan gözlemcidir."
+    "explanation": "Türkmenistan, 2021'de Türk Devletleri Teşkilatı'na gözlemci statüsüyle katılmıştır. Türkiye, Kazakistan, Azerbaycan ve Özbekistan ise teşkilatın tam üyeleridir."
 },
 {
     "question": "Şanghay İşbirliği Örgütü hangi yıl kurulmuştur?",
@@ -1177,7 +1177,7 @@ window.guncel_4_sorulari = [
     "explanation": "2025 Belém / Brezilya."
 },
 {
-    "question": "2026 yılında düzenlenmesi planlanan COP31'in Türkiye açısından önemli özelliği aşağıdakilerden hangisidir?",
+    "question": "2026 yılında düzenlenecek COP31 İklim Zirvesi'ne Türkiye'nin hangi ili ev sahipliği yapacaktır?",
     "options": [
         "A) İstanbul'da yapılması",
         "B) Ankara'da yapılması",
@@ -1186,7 +1186,7 @@ window.guncel_4_sorulari = [
         "E) Antalya'da yapılması"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Antalya."
+    "explanation": "COP31 İklim Zirvesi 9-20 Kasım 2026 tarihlerinde Antalya'da düzenlenecektir. Zirvenin ev sahipliği ve dönem başkanlığı Türkiye'de, müzakere başkanlığı ise Avustralya'dadır."
 },
 {
     "question": "Aşağıdaki COP–yıl–şehir eşleştirmelerinden hangisi yanlıştır?",
@@ -1201,7 +1201,7 @@ window.guncel_4_sorulari = [
     "explanation": "COP28 2023 Dubai'dir."
 },
 {
-    "question": "Aşağıdakilerden hangisi verilen güncel BRICS üyeleri arasında yer almaktadır?",
+    "question": "2026 yılı itibarıyla aşağıdakilerden hangisi BRICS'in tam üyeleri arasında yer almaktadır?",
     "options": [
         "A) Brezilya",
         "B) Türkiye",
@@ -1210,10 +1210,10 @@ window.guncel_4_sorulari = [
         "E) Kanada"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Brezilya kurucu üyedir."
+    "explanation": "Brezilya, BRICS'in kurucu üyelerinden biridir. Türkiye tam üye değil ortak ülke statüsündedir; Japonya, Almanya ve Kanada ise BRICS üyesi değildir."
 },
 {
-    "question": "Aşağıdakilerden hangisi notlarda verilen BRICS üye listesinde yer almamaktadır?",
+    "question": "Aşağıdakilerden hangisi BRICS'in tam üyeleri arasında yer almamaktadır?",
     "options": [
         "A) Mısır",
         "B) Etiyopya",
@@ -1222,10 +1222,10 @@ window.guncel_4_sorulari = [
         "E) Türkiye"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Türkiye BRICS tam üyesi değildir."
+    "explanation": "Mısır, Etiyopya ve İran 2024'te, Endonezya ise 2025'te BRICS'e tam üye olmuştur. Türkiye tam üye değildir; BRICS ile ilişkisi ortak ülke (partner) statüsü düzeyindedir."
 },
 {
-    "question": "Aşağıdakilerden hangisi verilen BRICS üyelerinin tamamını doğru ifade eden gruba örnektir?",
+    "question": "BRICS'in kurucu (asıl) beş üyesi aşağıdakilerden hangisinde birlikte verilmiştir?",
     "options": [
         "A) Brezilya – Rusya – Hindistan – Çin – Güney Afrika",
         "B) ABD – Kanada – Meksika – Çin – Rusya",
@@ -1234,10 +1234,10 @@ window.guncel_4_sorulari = [
         "E) İngiltere – Fransa – Almanya – İtalya – İspanya"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Asıl BRICS beşlisi."
+    "explanation": "BRICS, Brezilya, Rusya, Hindistan ve Çin'in oluşturduğu gruba 2010'da Güney Afrika'nın katılmasıyla bugünkü kurucu beşliye ulaşmıştır. 2024-2025 genişlemesiyle Mısır, Etiyopya, İran, Birleşik Arap Emirlikleri ve Endonezya da tam üye olmuş, Türkiye ise ortak ülke statüsü kazanmıştır."
 },
 {
-    "question": "Verilen notlara göre aşağıdakilerden hangisi BRICS'in genişlemesiyle ilişkilendirilen ülkelerden biri değildir?",
+    "question": "Aşağıdakilerden hangisi BRICS'in genişleme sürecinde adı geçen ülkelerden biri değildir?",
     "options": [
         "A) Mısır",
         "B) Etiyopya",
@@ -1246,10 +1246,10 @@ window.guncel_4_sorulari = [
         "E) İsveç"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "İsveç BRICS üyesi değildir."
+    "explanation": "Mısır, Etiyopya ve İran genişleme kapsamında BRICS'e tam üye olmuş; Suudi Arabistan ise üyeliğe davet edilmekle birlikte katılımını resmîleştirmemiştir. İsveç'in adı BRICS genişleme sürecinde hiç geçmemiştir."
 },
 {
-    "question": "Verilen notlara göre 2026 BRICS başkanlığını hangi ülke yürütmektedir?",
+    "question": "2026 yılında BRICS dönem başkanlığını hangi ülke yürütmektedir?",
     "options": [
         "A) Çin",
         "B) Güney Afrika",
@@ -1258,10 +1258,10 @@ window.guncel_4_sorulari = [
         "E) Hindistan"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Hindistan."
+    "explanation": "2026 BRICS dönem başkanlığı Hindistan'dadır ve 18. BRICS Zirvesi Hindistan'ın ev sahipliğinde düzenlenmektedir. Dönem başkanlığı 2024'te Rusya'da, 2025'te Brezilya'daydı."
 },
 {
-    "question": "Aşağıdakilerden hangisi BRICS açısından verilen notlara göre doğrudur?",
+    "question": "BRICS ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
     "options": [
         "A) 2026 başkanlığı Hindistan'dadır.",
         "B) Türkiye tam üyedir.",
@@ -1270,7 +1270,7 @@ window.guncel_4_sorulari = [
         "E) Sadece beş ülkeden oluşmaktadır."
     ],
     "correctAnswerIndex": 0,
-    "explanation": "2026 başkanlık Hindistan."
+    "explanation": "2026 yılı BRICS dönem başkanlığı Hindistan'dadır. Türkiye tam üye değil ortak ülke statüsündedir; BRICS'in Paris'te bir merkezi yoktur ve örgütün NATO ile herhangi bir kurumsal bağı bulunmamaktadır. 2024-2025 genişlemesinin ardından tam üye sayısı beşi aşmıştır."
 },
 {
     "question": "Aşağıdakilerden hangisi uluslararası kuruluş–merkez eşleştirmesinde yanlıştır?",

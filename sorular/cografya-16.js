@@ -32,12 +32,12 @@ window.cografya_16_sorulari = [
         options: [
             "A) Karain",
             "B) Çatalhöyük",
-            "C) Kültepe",
+            "C) Hacılar",
             "D) Göbeklitepe",
             "E) Çayönü"
         ],
         correctAnswerIndex: 0,
-        explanation: "Karain Mağarası, Anadolu'daki en eski yerleşim yerlerinden biri olup Paleolitik Dönem'e tarihlenen bir mağara yerleşmesidir. Çayönü, Çatalhöyük, Kültepe ve Göbeklitepe ise açık hava yerleşmeleri olup Neolitik ve Kalkolitik Dönem'e aittir. Karain, mağara yerleşmesi olmasıyla diğerlerinden ayrılır."
+        explanation: "Karain Mağarası, Paleolitik Dönem'e tarihlenen bir mağara yerleşmesidir. Çatalhöyük, Hacılar, Göbeklitepe ve Çayönü ise Neolitik Dönem'e ait, açık alanda kurulmuş merkezlerdir. Karain hem dönemi hem de mağara yerleşmesi olması bakımından diğerlerinden ayrılır."
     },
     {
         question: "Anadolu'da yerleşme tarihinin gelişimiyle ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
@@ -80,12 +80,12 @@ window.cografya_16_sorulari = [
         options: [
             "A) Mezra – Doğu Anadolu",
             "B) Kom – Doğu Anadolu",
-            "C) Divan – Batı Karadeniz",
+            "C) Dam – İç Anadolu",
             "D) Dalyan – Doğu Anadolu",
             "E) Ağıl – İç Anadolu"
         ],
         correctAnswerIndex: 3,
-        explanation: "Dalyan, balıkçılık faaliyetleriyle ilişkili olup kıyı bölgelerinde (özellikle Ege ve Akdeniz) görülür. Doğu Anadolu'da yaygın olması beklenmez. Mezra, kom, divan ve ağıl ise tarım ve hayvancılık faaliyetleriyle ilişkili olup daha çok iç ve doğu bölgelerde yaygındır."
+        explanation: "Dalyan, balıkçılık faaliyetleriyle ilişkili olup kıyı bölgelerinde (özellikle Ege ve Akdeniz) görülür; Doğu Anadolu'da yaygın olması beklenmez. Mezra, kom, dam ve ağıl ise tarım ve hayvancılık faaliyetleriyle ilişkili olup iç ve doğu bölgelerde yaygındır."
     },
     {
         question: "Doğu Anadolu'da tarımsal faaliyetlerin yürütüldüğü alanlarda, köyden ayrı küçük yerleşmelerin ortaya çıktığı görülmektedir.\n\nBu yerleşme aşağıdakilerden hangisidir?",
@@ -281,7 +281,7 @@ window.cografya_16_sorulari = [
             "E) Kom"
         ],
         correctAnswerIndex: 0,
-        explanation: "Çiftlikler, geniş tarım arazilerinden yararlanmak amacıyla kurulan tarımsal işletmelerdir. Oba hayvancılık, dalyan balıkçılık, güzle mevsimsel konaklama ve kom ise tarım amaçlıdır."
+        explanation: "Çiftlikler, geniş tarım arazilerinden yararlanmak amacıyla kurulan tarımsal işletmelerdir. Oba hayvancılık, dalyan balıkçılık, güzle mevsimsel konaklama, kom ise hayvancılık amacıyla kurulan köy altı yerleşmeleridir."
     },
     {
         question: "Batı Karadeniz'de birden fazla mahallenin bir araya gelmesiyle oluşan köy altı yerleşmesine aşağıdakilerden hangisi denir?",
@@ -301,11 +301,11 @@ window.cografya_16_sorulari = [
             "A) Divan",
             "B) Mezra",
             "C) Çiftlik",
-            "D) Kom",
+            "D) Mahalle",
             "E) Yayla"
         ],
         correctAnswerIndex: 4,
-        explanation: "Yaylalar, yaz mevsiminde hayvancılık faaliyetleri için çıkılan ve yaz sonunda boşaltılan geçici yerleşmelerdir. Divan, mezra ve kom kalıcı köy altı yerleşmeleridir."
+        explanation: "Yaylalar, yaz mevsiminde hayvan otlatmak amacıyla çıkılan ve yaz sonunda boşaltılan geçici yerleşmelerdir. Divan, mezra, çiftlik ve mahalle ise yıl boyunca oturulan sürekli köy altı yerleşmeleridir."
     },
     {
         question: "Aşağıdakilerden hangisi geçici köy altı yerleşmelerinin ortaya çıkmasında etkili olan faktörlerden biri değildir?",
@@ -348,12 +348,12 @@ window.cografya_16_sorulari = [
         options: [
             "A) Oba → Hayvancılık",
             "B) Yayla → Hayvancılık ve turizm",
-            "C) Dalyan → Balıkçılık",
+            "C) Kom → Balıkçılık",
             "D) Ağıl → Küçükbaş hayvancılık",
             "E) Güzle → Mevsimsel konaklama"
         ],
         correctAnswerIndex: 2,
-        explanation: "Dalyan bir yerleşme türü değil, balıkçılıkta kullanılan bir tuzak/tesis türüdür. Köy altı yerleşmesi olarak değil, balıkçılık aracı olarak değerlendirilmelidir. Diğer eşleştirmeler doğrudur."
+        explanation: "Kom, Doğu Anadolu'da hayvancılık amacıyla kurulan bir köy altı yerleşmesidir; balıkçılıkla ilişkili değildir. Bu nedenle C seçeneğindeki eşleştirme yanlıştır. Diğer eşleştirmeler doğrudur."
     },
     {
         question: "Türkiye'de yerleşmelerin fonksiyonlarıyla ilgili aşağıdakilerden hangisi doğru değildir?",
@@ -488,7 +488,7 @@ window.cografya_16_sorulari = [
         explanation: "Su kaynaklarının sınırlı olduğu alanlarda yerleşmeler su çevresinde toplanır, yani toplu yerleşme görülür. Dağınık yerleşmenin temel nedeni su kaynaklarının sınırlı olması değil, aksine bol ve yaygın su kaynaklarıdır."
     },
     {
-        question: "Karadeniz Bölgesi'nde kırsal yerleşmelerin çoğu zaman dağınık bir görünüm göstermesinde;\n\nI. arazinin engebeli olması,\nII. tarım alanlarının parçalı olması,\nIII. su kaynaklarının fazla olması\n\nfaktörlerinden hangileri etkili olmuştur?",
+        question: "İç Anadolu'da kırsal yerleşmelerin genellikle toplu (küme) bir görünüm göstermesinde; I. arazinin düz ve sade olması, II. su kaynaklarının sınırlı olması, III. tarım alanlarının geniş ve bütün olması faktörlerinden hangileri etkili olmuştur?",
         options: [
             "A) Yalnız I",
             "B) Yalnız II",
@@ -497,7 +497,7 @@ window.cografya_16_sorulari = [
             "E) I, II ve III"
         ],
         correctAnswerIndex: 4,
-        explanation: "Karadeniz Bölgesi'ndeki dağınık yerleşme dokusunda her üç faktör de etkilidir. Engebeli arazi (I), tarım alanlarının parçalı olması (II) ve su kaynaklarının fazla olması (III) yerleşmelerin dağınık olmasına neden olmuştur."
+        explanation: "İç Anadolu'da arazinin düz ve sade olması ile tarım alanlarının geniş ve bütün olması, evlerin bir arada kurulmasını kolaylaştırır. Su kaynaklarının sınırlı olması da nüfusun su bulunan belirli noktalarda toplanmasına yol açar. Bu nedenle her üç faktör de toplu yerleşmede etkilidir."
     },
     {
         question: "Kurak ve yarı kurak bölgelerde su kaynaklarının sınırlı olması nedeniyle insanların yerleşim alanlarını su kaynaklarının çevresinde yoğunlaştırması aşağıdaki yerleşme dokularından hangisinin oluşmasına daha fazla katkı sağlar?",
@@ -524,16 +524,16 @@ window.cografya_16_sorulari = [
         explanation: "Yapı malzemesi seçiminde iklim, bitki örtüsü, jeolojik yapı ve ekonomik faaliyetler etkiliyken, Dünya'nın günlük hareketi (dönme hareketi) yerleşme yapı malzemeleri üzerinde belirleyici bir etkiye sahip değildir."
     },
     {
-        question: "Karadeniz'de ahşap meskenlerin yaygın olmasının temel nedenlerinden biri aşağıdakilerden hangisidir?",
+        question: "İç Anadolu'da kerpiç meskenlerin yaygın olmasının temel nedenlerinden biri aşağıdakilerden hangisidir?",
         options: [
-            "A) Ormanların geniş alan kaplaması",
-            "B) Kuraklığın çok şiddetli olması",
-            "C) Taş malzemenin bulunmaması",
-            "D) Tarım alanlarının geniş olması",
+            "A) Yağışın az olması ve orman varlığının sınırlı olması",
+            "B) Ormanların geniş alan kaplaması",
+            "C) Yer şekillerinin çok engebeli olması",
+            "D) Tarım alanlarının dar olması",
             "E) Deprem riskinin bulunmaması"
         ],
         correctAnswerIndex: 0,
-        explanation: "Karadeniz, Türkiye'nin orman varlığının en fazla olduğu bölgesidir. Ahşap malzemenin bol ve ucuz olması, bölgede ahşap meskenlerin yaygınlaşmasının temel nedenidir."
+        explanation: "İç Anadolu'da karasal iklim nedeniyle yağış azdır ve orman örtüsü sınırlıdır. Bu nedenle yapı malzemesi olarak yörede kolayca bulunan toprak kullanılmış, kerpiç meskenler yaygınlaşmıştır; az yağış kerpicin dayanıklılığını da artırır."
     },
     {
         question: "Kerpiç meskenlerle ilgili aşağıdaki bilgilerden hangisi doğrudur?",

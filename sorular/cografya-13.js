@@ -57,7 +57,7 @@ window.cografya_13_sorulari = [
         question: "Türkiye akarsularının boylarının kısa olmasında aşağıdakilerden hangisi etkili değildir?",
         options: [
             "A) Yer şekilleri",
-            "B) İklim",
+            "B) Dağların uzanış doğrultusu",
             "C) Yarımada olması",
             "D) Ortalama yükseltisi",
             "E) Nüfus yoğunluğu"
@@ -84,7 +84,7 @@ window.cografya_13_sorulari = [
         options: [
             "A) Van Gölü",
             "B) Tuz Gölü",
-            "C) Konya Ovası",
+            "C) Akarçay (Afyon) Havzası",
             "D) Göller Yöresi",
             "E) Karadeniz Havzası"
         ],
@@ -132,7 +132,7 @@ window.cografya_13_sorulari = [
     },
     {
         id: 11,
-        question: "Türkiye'nin en yüksek setli barajı olan Yusufeli Barajı aşağıdaki akarsulardan hangisi üzerinde kurulmuştur?",
+        question: "Türkiye'nin en yüksek gövdeye sahip barajı olan Yusufeli Barajı aşağıdaki akarsulardan hangisi üzerinde kurulmuştur?",
         options: [
             "A) Kızılırmak",
             "B) Çoruh",
@@ -141,7 +141,7 @@ window.cografya_13_sorulari = [
             "E) Yeşilırmak"
         ],
         correctAnswerIndex: 1,
-        explanation: "Yusufeli Barajı Çoruh Nehri üzerindedir."
+        explanation: "Yusufeli Barajı, Çoruh Nehri üzerinde kurulmuş olup gövde yüksekliğiyle Türkiye'nin en yüksek barajıdır ve çift eğrilikli kemer baraj tipindedir."
     },
     {
         id: 12,
@@ -281,7 +281,7 @@ window.cografya_13_sorulari = [
             "B) Seyhan",
             "C) Aksu",
             "D) Ceyhan",
-            "E) Köprüçay"
+            "E) Berdan (Tarsus) Çayı"
         ],
         correctAnswerIndex: 2,
         explanation: "Aksu Çayı kaynağını Göller Yöresi'nden alır ve Antalya'dan Akdeniz'e dökülür."
@@ -344,12 +344,12 @@ window.cografya_13_sorulari = [
         options: [
             "A) Kelkit",
             "B) Murat",
-            "C) Uluçay",
+            "C) Batman Çayı",
             "D) Karasu",
             "E) Bakırçay"
         ],
         correctAnswerIndex: 2,
-        explanation: "Uluçay, Dicle Nehri'nin önemli kollarından biridir."
+        explanation: "Batman Çayı, Dicle Nehri'nin önemli kollarından biridir. Kelkit Yeşilırmak'ın, Murat ve Karasu ise Fırat'ın kollarıdır; Bakırçay Ege Bölgesi'nde denize dökülen ayrı bir akarsudur."
     },
     {
         id: 28,
@@ -372,10 +372,10 @@ window.cografya_13_sorulari = [
             "B) Dicle",
             "C) Zap",
             "D) Sakarya",
-            "E) Hepsi yurt dışına ulaşır."
+            "E) Aras"
         ],
         correctAnswerIndex: 3,
-        explanation: "Sakarya Nehri tamamen Türkiye sınırları içinde akarak Karadeniz'e dökülür."
+        explanation: "Fırat, Dicle, Zap ve Aras kaynağını Türkiye'den alarak ülke sınırları dışına geçer. Sakarya ise kaynağından ağzına kadar Türkiye sınırları içinde akar ve Karadeniz'e dökülür."
     },
     {
         id: 30,
@@ -407,14 +407,14 @@ window.cografya_13_sorulari = [
         id: 32,
         question: "Aşağıdaki akarsulardan hangisi kaynağını yurt dışında almasına rağmen Türkiye'de denize dökülmektedir?",
         options: [
-            "A) Meriç",
-            "B) Asi",
-            "C) Her ikisi",
-            "D) Aras",
-            "E) Kura"
+            "A) Asi",
+            "B) Aras",
+            "C) Kura",
+            "D) Sakarya",
+            "E) Fırat"
         ],
-        correctAnswerIndex: 2,
-        explanation: "Hem Meriç hem de Asi Nehri kaynağını yurt dışında alıp Türkiye'de denize dökülmektedir."
+        correctAnswerIndex: 0,
+        explanation: "Asi Nehri kaynağını Lübnan'dan alır, Suriye üzerinden Türkiye'ye girer ve Hatay'da Akdeniz'e dökülür. Aras, Kura ve Fırat kaynağını Türkiye'den alıp yurt dışına geçer; Sakarya ise tümüyle Türkiye sınırları içinde akar."
     },
     {
         id: 33,
@@ -509,16 +509,16 @@ window.cografya_13_sorulari = [
     },
     {
         id: 40,
-        question: "Türkiye'de KPSS'de akarsular konusunda en sık ölçülen bilgi aşağıdakilerden hangisidir?",
+        question: "Aşağıdaki akarsulardan hangisi kaynağını Türkiye'den alarak Basra Körfezi'ne ulaşır?",
         options: [
-            "A) Akarsu uzunlukları",
-            "B) Debi miktarları",
-            "C) Kaynağının yurt içinde mi yoksa yurt dışında mı olduğu ve döküldüğü yer",
-            "D) Üzerindeki köprü sayısı",
-            "E) Balık türleri"
+            "A) Sakarya",
+            "B) Fırat",
+            "C) Yeşilırmak",
+            "D) Susurluk",
+            "E) Seyhan"
         ],
-        correctAnswerIndex: 2,
-        explanation: "ÖSYM bu konuda özellikle akarsuların kaynaklarının ve döküldükleri yerlerin bilinmesini ölçmektedir."
+        correctAnswerIndex: 1,
+        explanation: "Fırat, Doğu Anadolu'da Karasu ve Murat kollarının birleşmesiyle oluşur; Suriye ve Irak topraklarından geçip Dicle ile birleşerek Şattülarap adıyla Basra Körfezi'ne ulaşır. Sakarya ve Yeşilırmak Karadeniz'e, Susurluk Marmara'ya, Seyhan ise Akdeniz'e dökülür."
     },
         {
         id: 41,
@@ -621,8 +621,8 @@ window.cografya_13_sorulari = [
             "D) Hazar",
             "E) Çıldır"
         ],
-        correctAnswerIndex: 1,
-        explanation: "Türkiye'nin en büyük tatlı su gölü Beyşehir, ikinci büyüğü Kovada Gölü'dür."
+        correctAnswerIndex: 0,
+        explanation: "Türkiye'nin en büyük tatlı su gölü Beyşehir, ikinci büyüğü ise Eğirdir Gölü'dür. Kovada, Sapanca, Hazar ve Çıldır yüzölçümü bakımından bunlardan çok daha küçük göllerdir."
     },
     {
         id: 49,
@@ -678,16 +678,16 @@ window.cografya_13_sorulari = [
     },
     {
         id: 53,
-        question: "Aşağıdaki göllerden hangisi doğal güzelliği nedeniyle önemli turizm merkezlerinden biri değildir?",
+        question: "Aşağıdaki göllerden hangisinin çevresi milli park ya da tabiat parkı olarak koruma altına alınmamıştır?",
         options: [
             "A) Abant",
             "B) Uzungöl",
             "C) Yedigöller",
             "D) Tuz",
-            "E) Hepsi turizm değerine sahiptir."
+            "E) Kovada"
         ],
         correctAnswerIndex: 3,
-        explanation: "Abant, Uzungöl ve Yedigöller turizm açısından öne çıkarken Tuz Gölü bu grupta değerlendirilmez."
+        explanation: "Abant ve Uzungöl tabiat parkı, Yedigöller ve Kovada ise milli park statüsündedir. Tuz Gölü çevresinde böyle bir park statüsü bulunmaz; burası sığ, aşırı tuzlu ve tuz üretimiyle öne çıkan bir göldür."
     },
     {
         id: 54,
@@ -704,29 +704,29 @@ window.cografya_13_sorulari = [
     },
     {
         id: 55,
-        question: "Aşağıdaki göllerden hangisinden hidroelektrik enerji üretilebilmektedir?",
+        question: "Aşağıdaki göllerden hangisinin suyundan hidroelektrik enerji üretilmemektedir?",
         options: [
-            "A) Eğirdir",
+            "A) Kovada",
             "B) Hazar",
             "C) Çıldır",
             "D) Tortum",
-            "E) Hepsi"
+            "E) Tuz"
         ],
         correctAnswerIndex: 4,
-        explanation: "Eğirdir, Hazar, Tortum ve Çıldır göllerinden enerji üretimi yapılmaktadır."
+        explanation: "Kovada, Hazar, Çıldır ve Tortum göllerinin suları, göl ile aşağı çığır arasındaki yükselti farkından yararlanılarak hidroelektrik santrallerde kullanılır. Tuz Gölü ise çok sığdır, yazın büyük ölçüde kurur ve çevresinde yükselti farkı bulunmadığından enerji üretimine elverişli değildir."
     },
     {
         id: 56,
         question: "Aşağıdaki göllerden hangisi karstik kökenlidir?",
         options: [
-            "A) Salda",
+            "A) Kestel",
             "B) Van",
             "C) Meke",
-            "D) Eğirdir",
-            "E) Sapanca"
+            "D) Sapanca",
+            "E) Nemrut"
         ],
         correctAnswerIndex: 0,
-        explanation: "Salda Gölü karstik göller arasında yer alır."
+        explanation: "Kestel Gölü, Toroslar'ın kalkerli arazisinde erime sonucu oluşan çukurlarda (polye) suların birikmesiyle meydana gelmiş karstik bir göldür. Van volkanik set gölü, Meke ve Nemrut krater gölü, Sapanca ise tektonik kökenlidir."
     },
     {
         id: 57,
@@ -773,12 +773,12 @@ window.cografya_13_sorulari = [
         options: [
             "A) Nemrut",
             "B) Meke",
-            "C) Acıgöl",
+            "C) Nazik",
             "D) Van",
             "E) Eğirdir"
         ],
         correctAnswerIndex: 4,
-        explanation: "Eğirdir tektonik kökenlidir. Nemrut, Meke ve Acıgöl volkanik göllerdir."
+        explanation: "Nemrut ve Meke krater çukurlarında oluşmuş volkanik göllerdir; Nazik ve Van ise volkanlardan çıkan lavların çukurların önünü kapatmasıyla meydana gelmiş volkanik set gölleridir. Eğirdir Gölü ise tektonik hareketlerle oluşan çöküntü alanında yer alır."
     },
         {
         id: 61,
@@ -808,16 +808,16 @@ window.cografya_13_sorulari = [
     },
     {
         id: 63,
-        question: "Aşağıdaki göllerden hangisi Bursa il sınırları içerisinde yer alan tektonik göllerden biri değildir?",
+        question: "Aşağıdaki göllerden hangisi Marmara Bölgesi'nde yer alan tektonik göllerden biri değildir?",
         options: [
             "A) İznik",
             "B) Ulubat",
             "C) Manyas",
             "D) Sapanca",
-            "E) Hiçbiri"
+            "E) Burdur"
         ],
-        correctAnswerIndex: 3,
-        explanation: "Sapanca Gölü Sakarya (Adapazarı) ile Kocaeli arasında yer alır."
+        correctAnswerIndex: 4,
+        explanation: "İznik, Ulubat, Manyas ve Sapanca Marmara Bölgesi'ndeki tektonik çöküntü alanlarında oluşmuş göllerdir. Burdur Gölü de tektonik kökenlidir ancak Göller Yöresi'nde, Akdeniz Bölgesi sınırları içinde yer alır."
     },
     {
         id: 64,
@@ -901,14 +901,14 @@ window.cografya_13_sorulari = [
         id: 70,
         question: "Trabzon'da bulunan heyelan set gölü aşağıdakilerden hangisidir?",
         options: [
-            "A) Uzungöl",
+            "A) Tortum",
             "B) Sera",
             "C) Sapanca",
             "D) Abant",
             "E) Zinav"
         ],
         correctAnswerIndex: 1,
-        explanation: "Sera Gölü Trabzon'da bulunan heyelan set gölüdür."
+        explanation: "Sera Gölü, Trabzon'un batısında bir vadi yamacının heyelanla kayarak vadiyi kapatması sonucu oluşmuştur. Tortum Erzurum'da, Abant Bolu'da, Zinav Tokat'ta bulunan heyelan set gölleridir; Sapanca ise tektonik kökenlidir."
     },
     {
         id: 71,
@@ -943,11 +943,11 @@ window.cografya_13_sorulari = [
             "A) Mogan",
             "B) Eymir",
             "C) Gala",
-            "D) Köyceğiz",
+            "D) Marmara (Manisa)",
             "E) Sapanca"
         ],
         correctAnswerIndex: 4,
-        explanation: "Sapanca tektonik göldür."
+        explanation: "Mogan, Eymir, Gala ve Marmara (Manisa) gölleri, akarsuların taşıdığı alüvyonların vadi veya çukur önünü kapatmasıyla oluşmuş alüvyal set gölleridir. Sapanca Gölü ise Kuzey Anadolu Fay Hattı üzerindeki tektonik çöküntüde oluşmuştur."
     },
     {
         id: 74,
@@ -1048,10 +1048,10 @@ window.cografya_13_sorulari = [
             "B) Yağışın fazla olması",
             "C) Akarsularla yoğun beslenmesi",
             "D) Buharlaşmanın fazla olması",
-            "E) Tatlı su girişinin fazla olması"
+            "E) Akdeniz ile su alışverişinin boğazlarla sınırlı olması"
         ],
         correctAnswerIndex: 3,
-        explanation: "Karadeniz'de buharlaşma fazla değildir. Tuzluluğun az olmasının temel nedenleri enlem, bol yağış ve bol akarsudur."
+        explanation: "Karadeniz'de enlemin yüksek, yağışın bol, akarsu girdisinin fazla olması ve tuzlu Akdeniz suyuyla alışverişin boğazlarla sınırlı kalması tuzluluğu düşürür. Buharlaşma ise Karadeniz'de fazla değildir; ayrıca buharlaşmanın artması tuzluluğu düşürmez, tersine yükseltir."
     },
     {
         id: 82,
@@ -1068,16 +1068,16 @@ window.cografya_13_sorulari = [
     },
     {
         id: 83,
-        question: "Türkiye'de balık miktarının en fazla olduğu deniz aşağıdakilerden hangisidir?",
+        question: "Türkiye'de avlanan balık miktarının en fazla olduğu su alanı aşağıdakilerden hangisidir?",
         options: [
-            "A) Marmara",
-            "B) Ege",
+            "A) Marmara Denizi",
+            "B) Ege Denizi",
             "C) Akdeniz",
             "D) Karadeniz",
-            "E) Hiçbiri"
+            "E) İç sular (göller ve akarsular)"
         ],
         correctAnswerIndex: 3,
-        explanation: "Karadeniz'de suların serin, oksijenli ve plankton bakımından zengin olması balık miktarını artırmaktadır."
+        explanation: "Karadeniz'in suları serin, oksijence zengin ve plankton bakımından verimlidir; balıkların üremesine elverişli olduğundan Türkiye'de avlanan balığın büyük bölümü Karadeniz'den elde edilir. İç sulardan elde edilen av miktarı denizlerinkinin çok altındadır."
     },
     {
         id: 84,
@@ -1094,16 +1094,16 @@ window.cografya_13_sorulari = [
     },
     {
         id: 85,
-        question: "Türkiye'de kıyıları en kısa olan deniz aşağıdakilerden hangisidir?",
+        question: "Türkiye'nin denizlerinin kıyı uzunlukları ile ilgili aşağıdaki bilgilerden hangisi doğrudur?",
         options: [
-            "A) Karadeniz",
-            "B) Marmara",
-            "C) Ege",
-            "D) Akdeniz",
-            "E) Van Gölü"
+            "A) En uzun kıyılarımız Karadeniz'dedir.",
+            "B) En kısa kıyılarımız Marmara Denizi'ndedir.",
+            "C) Akdeniz kıyılarımız Ege kıyılarımızdan uzundur.",
+            "D) Marmara kıyılarımız Akdeniz kıyılarımızdan uzundur.",
+            "E) Dört denizdeki kıyı uzunluklarımız birbirine eşittir."
         ],
         correctAnswerIndex: 1,
-        explanation: "Marmara Denizi Türkiye'nin en kısa kıyı uzunluğuna sahip denizidir."
+        explanation: "Türkiye'nin en uzun kıyıları, girintili çıkıntılı yapısı nedeniyle Ege Denizi'nde yer alır; en kısa kıyılar ise bir iç deniz olan Marmara Denizi'ne aittir. Bu nedenle Akdeniz kıyıları Ege'den, Marmara kıyıları da Akdeniz'den uzun değildir."
     },
     {
         id: 86,
@@ -1159,55 +1159,55 @@ window.cografya_13_sorulari = [
     },
     {
         id: 90,
-        question: "Türkiye'de kültür balıkçılığının en gelişmiş olduğu deniz aşağıdakilerden hangisidir?",
+        question: "Türkiye'de kültür (yetiştiricilik) balıkçılığının en çok geliştiği kıyı kesimi aşağıdakilerden hangisidir?",
         options: [
-            "A) Karadeniz",
-            "B) Marmara",
-            "C) Ege",
-            "D) Akdeniz",
-            "E) Hiçbiri"
+            "A) Doğu Karadeniz kıyıları",
+            "B) Trakya'nın Karadeniz kıyıları",
+            "C) Ege kıyıları",
+            "D) Doğu Akdeniz kıyıları",
+            "E) Marmara'nın güney kıyıları"
         ],
         correctAnswerIndex: 2,
-        explanation: "Ege Denizi'nde dalyanlar sayesinde kültür balıkçılığı gelişmiştir."
+        explanation: "Kültür balıkçılığı, korunaklı koy ve körfezlerin çok olduğu ve su sıcaklığının yetiştiriciliğe uygun olduğu Ege kıyılarında (özellikle Muğla ve İzmir çevresinde) yoğunlaşmıştır; çipura ve levrek üretiminin büyük bölümü bu kıyılardan sağlanır."
     },
     {
         id: 91,
-        question: "Kıta sahanlığının en geniş olduğu deniz aşağıdakilerden hangisidir?",
+        question: "Türkiye'de kıta sahanlığının en geniş olduğu kıyı kesimi aşağıdakilerden hangisidir?",
         options: [
-            "A) Karadeniz",
-            "B) Marmara",
-            "C) Ege",
-            "D) Akdeniz",
-            "E) Hiçbiri"
+            "A) Doğu Karadeniz kıyıları",
+            "B) Marmara'nın güney kıyıları",
+            "C) Ege kıyıları",
+            "D) Doğu Akdeniz kıyıları",
+            "E) Batı Karadeniz kıyıları"
         ],
         correctAnswerIndex: 2,
-        explanation: "Ege Denizi'nin kıta sahanlığı geniştir."
+        explanation: "Ege kıyılarında deniz, kıyıdan itibaren uzun mesafe boyunca sığ kalır; bu nedenle kıta sahanlığı en geniş Ege kıyılarımızdadır. Karadeniz ve Akdeniz kıyılarında dağlar kıyıya yakın olduğundan deniz kısa mesafede derinleşir ve kıta sahanlığı dardır."
     },
     {
         id: 92,
-        question: "Koy, körfez, liman ve ada sayısının en fazla olduğu deniz aşağıdakilerden hangisidir?",
+        question: "Koy, körfez ve ada sayısının en fazla olduğu kıyı kesimimiz aşağıdakilerden hangisidir?",
         options: [
-            "A) Marmara",
-            "B) Akdeniz",
-            "C) Karadeniz",
-            "D) Ege",
-            "E) Hazar"
+            "A) Marmara'nın güney kıyıları",
+            "B) Doğu Akdeniz kıyıları",
+            "C) Batı Karadeniz kıyıları",
+            "D) Ege kıyıları",
+            "E) Doğu Karadeniz kıyıları"
         ],
         correctAnswerIndex: 3,
-        explanation: "Ege Denizi girintili çıkıntılı kıyıları nedeniyle koy, körfez ve ada bakımından zengindir."
+        explanation: "Ege kıyılarında dağlar denize dik uzanır ve kırıklar boyunca çöken alanların sular altında kalmasıyla girintili çıkıntılı bir kıyı tipi oluşmuştur; bu nedenle koy, körfez, yarımada ve ada sayısı en fazla Ege kıyılarındadır. Karadeniz ve Doğu Akdeniz'de dağlar kıyıya paralel uzandığından kıyılar az girintilidir."
     },
     {
         id: 93,
-        question: "Balık türü bakımından en zengin denizimiz aşağıdakilerden hangisidir?",
+        question: "Balık türü (çeşidi) bakımından en zengin kıyılarımız aşağıdakilerden hangisidir?",
         options: [
-            "A) Akdeniz",
-            "B) Marmara",
-            "C) Karadeniz",
-            "D) Ege",
-            "E) Van"
+            "A) Akdeniz kıyıları",
+            "B) Marmara kıyıları",
+            "C) Batı Karadeniz kıyıları",
+            "D) Ege kıyıları",
+            "E) Doğu Karadeniz kıyıları"
         ],
         correctAnswerIndex: 0,
-        explanation: "Akdeniz'de balık çeşidi fazla, miktarı ise azdır."
+        explanation: "Akdeniz'in suları sıcak ve tuzludur; Süveyş Kanalı yoluyla gelen türlerle de zenginleştiğinden balık çeşidi en fazla Akdeniz kıyılarımızdadır. Buna karşılık plankton bakımından fakir olduğu için balık miktarı azdır; Karadeniz'de ise tür sayısı az, avlanan miktar fazladır."
     },
     {
         id: 94,
@@ -1253,13 +1253,13 @@ window.cografya_13_sorulari = [
         question: "Karstik kaynaklarla ilgili aşağıdaki bilgilerden hangisi doğrudur?",
         options: [
             "A) Yer altından sıcak çıkar.",
-            "B) Rejimi düzenlidir.",
+            "B) Yalnızca yağış anında akar.",
             "C) Suları kireçlidir.",
             "D) İklimden etkilenmez.",
             "E) İnsan eliyle oluşturulur."
         ],
         correctAnswerIndex: 2,
-        explanation: "Karstik kaynakların suları kireçli ve soğuktur."
+        explanation: "Karstik (voklüz) kaynaklar, kalkerli arazideki çatlak ve mağaralarda biriken yer altı sularının yüzeye çıkmasıyla oluşur. Sular kalkerden geçerken eriyen kireci taşıdığı için kireçlidir ve genellikle soğuktur. Bu kaynaklar doğal yolla oluşur, yağış sonrasında da beslenmeye devam ederek sürekli akar ve iklim koşullarından etkilenir."
     },
     {
         id: 98,
@@ -1553,12 +1553,12 @@ window.cografya_13_sorulari = [
         options: [
             "A) Halomorfik",
             "B) Podzol",
-            "C) Kalsimorfik (Rendzina)",
+            "C) Kalsimorfik",
             "D) Terra Rossa",
-            "E) Step"
+            "E) Kahverengi step toprağı"
         ],
         correctAnswerIndex: 2,
-        explanation: "Kalsimorfik (Rendzina) topraklar Vertisol yani taş doğuran toprak olarak da adlandırılır."
+        explanation: "Vertisol, kireç bakımından zengin ana kayalar üzerinde oluşan kalsimorfik topraklardandır. Killi yapısı nedeniyle kuruyunca derin çatlaklar oluşturur ve nemlenince şişerek alttaki taşları yüzeye çıkardığı için taş doğuran toprak olarak bilinir. Rendzina ise kalsimorfik toprakların ayrı bir türüdür."
     },
         {
         id: 121,
@@ -1796,16 +1796,16 @@ window.cografya_13_sorulari = [
     },
     {
         id: 139,
-        question: "Türkiye'de orman alanı en fazla olan il aşağıdakilerden hangisidir?",
+        question: "Türkiye'de ormanların en geniş yer kapladığı bölge aşağıdakilerden hangisidir?",
         options: [
-            "A) Muğla",
-            "B) Kastamonu",
-            "C) Bursa",
-            "D) Artvin",
-            "E) Antalya"
+            "A) Marmara",
+            "B) Karadeniz",
+            "C) Ege",
+            "D) Akdeniz",
+            "E) İç Anadolu"
         ],
-        correctAnswerIndex: 4,
-        explanation: "Türkiye'de orman varlığı en fazla olan il Antalya'dır."
+        correctAnswerIndex: 1,
+        explanation: "Karadeniz Bölgesi her mevsim yağışlıdır ve dağların kıyıya paralel uzanması nemli havanın yükselip yağış bırakmasını sağlar; bu nedenle ormanların en geniş alan kapladığı bölge Karadeniz'dir. İç Anadolu'da kuraklık, Ege ve Akdeniz'de ise uzun yaz kuraklığı orman alanlarını sınırlandırır."
     },
     {
         id: 140,
@@ -1865,16 +1865,16 @@ window.cografya_13_sorulari = [
         options: [
             "A) Karaçam",
             "B) Ardıç",
-            "C) Katran",
+            "C) Köknar",
             "D) Ladin",
             "E) Sedir"
         ],
         correctAnswerIndex: 3,
-        explanation: "Ladin Karadeniz'e özgü iğne yapraklı bir türdür."
+        explanation: "Toroslar'ın yüksek kesimlerinde karaçam, ardıç, Toros köknarı ve sedir doğal olarak yetişir. Ladin ise bol nem ve serinlik istediğinden yalnızca Doğu Karadeniz'in yüksek kesimlerinde doğal olarak bulunur."
     },
     {
         id: 145,
-        question: "Türkiye'de orman üst sınırının en yüksek olduğu bölge aşağıdakilerden hangisidir?",
+        question: "Aşağıdaki bölgelerden hangisinde ormanların üst sınırı en yüksektedir?",
         options: [
             "A) İç Anadolu",
             "B) Karadeniz",
@@ -1883,7 +1883,7 @@ window.cografya_13_sorulari = [
             "E) Güneydoğu Anadolu"
         ],
         correctAnswerIndex: 2,
-        explanation: "Seçenekler arasında orman üst sınırının en yüksek olduğu bölge Akdeniz'dir; Toroslarda ormanlar yaklaşık 2000–2400 metreye kadar çıkar. Güneyde sıcaklığın yüksek olması orman üst sınırını yükseltir."
+        explanation: "Orman üst sınırı sıcaklığa bağlı olarak güneye doğru yükselir. Verilen bölgeler içinde en güneyde yer alan Akdeniz Bölgesi'nde, Toroslar'da ormanlar yaklaşık 2000-2400 metreye kadar çıkar; Karadeniz ve Marmara'da bu sınır daha alçaktadır. İç Anadolu ve Güneydoğu Anadolu'da ise kuraklık nedeniyle yaygın bir orman örtüsü görülmez."
     },
     {
         id: 146,
@@ -1943,12 +1943,12 @@ window.cografya_13_sorulari = [
         options: [
             "A) Keçiboynuzu",
             "B) Defne",
-            "C) Lavanta",
+            "C) Mersin",
             "D) Ladin",
             "E) Zakkum"
         ],
         correctAnswerIndex: 3,
-        explanation: "Ladin Karadeniz'in iğne yapraklı ağacıdır."
+        explanation: "Keçiboynuzu, defne, mersin ve zakkum; Akdeniz ikliminin kısa boylu, sert ve kalın yapraklı çalılardan oluşan maki topluluğunun elemanlarıdır. Ladin ise Doğu Karadeniz'in yüksek kesimlerinde yetişen iğne yapraklı bir orman ağacıdır."
     },
     {
         id: 151,

@@ -6,7 +6,8 @@ window.turkce_2_sorulari = [
         "A) Amaç-sonuç",
         "B) Karşılaştırma",
         "C) Koşul-sonuç",
-        "D) Neden-sonuç"
+        "D) Neden-sonuç",
+        "E) Benzetme"
     ],
     "correctAnswerIndex": 3,
     "explanation": "Satmak gerekçe (neden), toplu taşıma sonuçtur."
@@ -16,19 +17,21 @@ window.turkce_2_sorulari = [
     "options": [
         "A) Neden-sonuç",
         "B) Varsayım",
-        "C) Koşul-sonuç",
-        "D) Amaç-sonuç"
+        "C) Karşılaştırma",
+        "D) Koşul-sonuç",
+        "E) Amaç-sonuç"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "-mak için amaç bildirir."
 },
 {
     "question": "“Sinemaya gidebilirsin ama önce odanı topla.” cümlesinde hangi ilişki vardır?",
     "options": [
         "A) Koşul-sonuç",
-        "B) Neden-sonuç",
-        "C) Amaç-sonuç",
-        "D) Karşılaştırma"
+        "B) Varsayım",
+        "C) Neden-sonuç",
+        "D) Amaç-sonuç",
+        "E) Karşılaştırma"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Gitme, odayı toplama koşuluna bağlanmıştır."
@@ -37,33 +40,36 @@ window.turkce_2_sorulari = [
     "question": "Aşağıdakilerden hangisi doğrudan anlatımdır?",
     "options": [
         "A) Ayşe bugün çok çalıştığını söyledi.",
-        "B) Ayşe, bugün çok çalıştım, dedi.",
-        "C) Ayşe, “Bugün çok çalıştım.” dedi.",
-        "D) Ayşe’nin çok çalıştığı söylendi."
+        "B) Ayşe, bugün çok çalıştığını belirtti.",
+        "C) Öğretmen, ödevlerin yarın toplanacağını bildirdi.",
+        "D) Ayşe, “Bugün çok çalıştım.” dedi.",
+        "E) Ayşe’nin çok çalıştığı söylendi."
     ],
-    "correctAnswerIndex": 2,
-    "explanation": "Tırnak içinde kişi kendi sözünü aktarır."
+    "correctAnswerIndex": 3,
+    "explanation": "Doğrudan anlatımda söz sahibinin sözü hiç değiştirilmeden, tırnak içinde aktarılır; yalnızca D’de Ayşe’nin sözü olduğu gibi verilmiştir. Diğerlerinde söz, aktaran kişinin cümlesine dönüştürülmüştür."
 },
 {
     "question": "Aşağıdakilerden hangisi dolaylı anlatımdır?",
     "options": [
-        "A) “Bugün çok yoruldum.” dedi.",
-        "B) “Yarın geleceğim.” dedi.",
-        "C) Bugün çok yorulduğunu söyledi.",
-        "D) “Seni bekliyorum.” dedi."
+        "A) “Kapıyı kapat.” diye seslendi.",
+        "B) “Bugün çok yoruldum.” dedi.",
+        "C) “Yarın geleceğim.” dedi.",
+        "D) Bugün çok yorulduğunu söyledi.",
+        "E) “Seni bekliyorum.” dedi."
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Söz, tırnaksız ve -dığını biçiminde aktarılmıştır."
 },
 {
     "question": "“Günde on dakika çalışarak derece yapacaksın(!)” cümlesinde hangi anlatım vardır?",
     "options": [
         "A) Doğrudan",
-        "B) Dolaylı",
-        "C) Kinayeli",
-        "D) Nesnel"
+        "B) Abartma",
+        "C) Dolaylı",
+        "D) Kinayeli",
+        "E) Nesnel"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Ünlem, söze inanılmadığını / alayı (kinaye) gösterir."
 },
 {
@@ -71,8 +77,9 @@ window.turkce_2_sorulari = [
     "options": [
         "A) Nesnel",
         "B) Öznel",
-        "C) Tanım",
-        "D) Saptama"
+        "C) Kesinlik",
+        "D) Tanım",
+        "E) Saptama"
     ],
     "correctAnswerIndex": 1,
     "explanation": "“En güzel” kanıtlanamaz kişisel yargıdır."
@@ -82,19 +89,21 @@ window.turkce_2_sorulari = [
     "options": [
         "A) Öznel",
         "B) Ön yargı",
-        "C) Kinayeli",
-        "D) Nesnel"
+        "C) Olasılık",
+        "D) Kinayeli",
+        "E) Nesnel"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Gözlemle doğrulanabilir bir saptamadır."
 },
 {
     "question": "“Şiir, büyük zekâların rüyalarıdır.” cümlesi hangi kavrama örnektir?",
     "options": [
         "A) Tanım",
-        "B) Eleştiri",
-        "C) Saptama",
-        "D) Öneri"
+        "B) Karşılaştırma",
+        "C) Eleştiri",
+        "D) Saptama",
+        "E) Öneri"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Şiirin ne olduğu bildirilerek tanımlanmıştır."
@@ -103,33 +112,36 @@ window.turkce_2_sorulari = [
     "question": "“Bu kitap, uzun betimlemeleriyle okuyucuyu sıkıyor.” cümlesi hangi türdedir?",
     "options": [
         "A) Öz eleştiri",
-        "B) Eleştiri",
-        "C) Tanım",
-        "D) Tasarı"
+        "B) Varsayım",
+        "C) Eleştiri",
+        "D) Tanım",
+        "E) Tasarı"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Eser üzerine olumsuz/olumlu yargı eleştiridir."
 },
 {
-    "question": "“Düşünmeden konuştuğum için başım dertten kurtulmaz.” cümlesi hangi türdür?",
+    "question": "“Bu yazımda gereksiz ayrıntılara fazla yer verdiğimi kabul ediyorum.” cümlesi hangi türdür?",
     "options": [
         "A) Eleştiri",
         "B) Öz eleştiri",
         "C) Ön yargı",
-        "D) Saptama"
+        "D) Yakınma",
+        "E) Saptama"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Kişi kendi kusurunu dile getirir."
+    "explanation": "Kişi kendi yazısındaki kusuru kendisi belirtip kabul ettiği için cümlede öz eleştiri vardır."
 },
 {
     "question": "Bir sanat eserinin “ne anlattığını” bildiren ifadeler aşağıdakilerden hangisidir?",
     "options": [
         "A) Üslup",
-        "B) Yoğunluk",
-        "C) Özgünlük",
-        "D) İçerik"
+        "B) Biçim",
+        "C) Yoğunluk",
+        "D) Özgünlük",
+        "E) İçerik"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Ne anlatıldığı içeriktir; nasıl anlatıldığı üsluptur."
 },
 {
@@ -138,7 +150,8 @@ window.turkce_2_sorulari = [
         "A) İçerik",
         "B) Konu",
         "C) Üslup",
-        "D) Ana düşünce"
+        "D) Ana düşünce",
+        "E) Tema"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Üslup, anlatım biçimidir."
@@ -149,7 +162,8 @@ window.turkce_2_sorulari = [
         "A) Aşamalı durum",
         "B) Varsayım",
         "C) Yakınma",
-        "D) Sitem"
+        "D) Sitem",
+        "E) Olasılık"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Durum derece derece değişmektedir."
@@ -159,8 +173,9 @@ window.turkce_2_sorulari = [
     "options": [
         "A) Karşılaştırma",
         "B) Tanım",
-        "C) Ön yargı",
-        "D) Öz eleştiri"
+        "C) Varsayım",
+        "D) Ön yargı",
+        "E) Öz eleştiri"
     ],
     "correctAnswerIndex": 0,
     "explanation": "İki yer soğukluk bakımından kıyaslanır."
@@ -168,34 +183,37 @@ window.turkce_2_sorulari = [
 {
     "question": "“Mevlana, asırlar öncesinden asırlar sonrasına seslenmektedir.” cümlesinde hangi özellik vardır?",
     "options": [
-        "A) Ulusallık",
-        "B) Kalıcılık",
-        "C) Yalınlık",
-        "D) Özgünlük"
+        "A) Yoğunluk",
+        "B) Ulusallık",
+        "C) Kalıcılık",
+        "D) Yalınlık",
+        "E) Özgünlük"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Zamanı aşan etki kalıcılıktır."
 },
 {
     "question": "“Klasikler, dili ve sınırları ortadan kaldıran eserlerdir.” cümlesi hangi kavrama örnektir?",
     "options": [
-        "A) Ulusallık",
-        "B) Evrensellik",
-        "C) Özlülük",
-        "D) Açıklık"
+        "A) Yerellik",
+        "B) Ulusallık",
+        "C) Evrensellik",
+        "D) Özlülük",
+        "E) Açıklık"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Sınır aşmak evrenselliktir."
 },
 {
     "question": "“Yaşar Kemal, kendi toprağından beslenen bir yazardır.” cümlesi hangi kavramla ilgilidir?",
     "options": [
-        "A) Evrensellik",
-        "B) Yoğunluk",
-        "C) Kalıcılık",
-        "D) Ulusallık"
+        "A) Özgünlük",
+        "B) Evrensellik",
+        "C) Yoğunluk",
+        "D) Kalıcılık",
+        "E) Ulusallık"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Yerel/ulusal kaynaktan beslenme ulusallıktır."
 },
 {
@@ -204,7 +222,8 @@ window.turkce_2_sorulari = [
         "A) Pişmanlık",
         "B) Varsayım",
         "C) Olasılık",
-        "D) Sitem"
+        "D) Öneri",
+        "E) Sitem"
     ],
     "correctAnswerIndex": 2,
     "explanation": "“olabilir” olasılık bildirir."
@@ -214,8 +233,9 @@ window.turkce_2_sorulari = [
     "options": [
         "A) Pişmanlık",
         "B) Tasarı",
-        "C) Ön yargı",
-        "D) Saptama"
+        "C) Beklenti",
+        "D) Ön yargı",
+        "E) Saptama"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Keşke + geçmiş, pişmanlıktır."

@@ -7,10 +7,10 @@ window.vatandas_11_sorulari = [
         explanation: "AYM bireysel başvuru süresi 30 gündür."
     },
     {
-        question: "Anayasa Mahkemesine bireysel başvuru yolu hangi tarihte hukuk sistemimize girmiştir?",
+        question: "Anayasa Mahkemesine bireysel başvuru yolu hangi yıl yapılan Anayasa değişikliğiyle kabul edilmiştir?",
         options: ["A) 2002", "B) 2005", "C) 2010", "D) 2012", "E) 2017"],
         correctAnswerIndex: 2,
-        explanation: "Bireysel başvuru 2010 Anayasa değişikliğiyle kabul edilmiştir."
+        explanation: "Bireysel başvuru yolu, 2010 yılında kabul edilen Anayasa değişikliğiyle Anayasa'nın 148. maddesine eklenmiştir. Usul ve esasları 6216 sayılı Anayasa Mahkemesinin Kuruluşu ve Yargılama Usulleri Hakkında Kanun'la düzenlenmiş; başvurular fiilen 23 Eylül 2012 tarihinden sonra kesinleşen işlem ve kararlar bakımından yapılabilmeye başlanmıştır."
     },
     {
         question: "Avrupa İnsan Hakları Mahkemesi yargıçlarının görev süresi kaç yıldır?",

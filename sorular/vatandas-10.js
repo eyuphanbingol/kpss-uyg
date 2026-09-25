@@ -67,9 +67,9 @@ window.vatandas_10_sorulari = [
         explanation: "İl idare kurulu valinin başkanlığındaki merkezî taşra organıdır."
     },
     {
-        question: "I. İl genel meclisi  II. İl idare kurulu  III. İl daimi encümeni  IV. Vali\nHangileri il özel idaresinin organları arasında yer alır?",
+        question: "I. İl genel meclisi II. İl idare kurulu III. İl encümeni IV. Vali Hangileri il özel idaresinin organları arasında yer alır?",
         options: ["A) I ve II", "B) I, II ve IV", "C) I, III ve IV", "D) II, III ve IV", "E) I, II, III ve IV"],
         correctAnswerIndex: 2,
-        explanation: "Organlar vali, il genel meclisi ve il daimi encümenidir. İl idare kurulu özel idare organı değildir."
+        explanation: "5302 sayılı İl Özel İdaresi Kanunu'na göre il özel idaresinin organları vali, il genel meclisi ve il encümenidir. İl idare kurulu ise il özel idaresinin değil, valinin başkanlığında çalışan genel idarenin (taşra teşkilatının) bir kuruludur."
     }
 ];

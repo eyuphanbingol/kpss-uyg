@@ -1,15 +1,16 @@
 // sorular/turkce-18.js - Sıkça Yapılan Yazım Yanlışları
 window.turkce_18_sorulari = [
 {
-    "question": "Aşağıdakilerden hangisinin doğru yazımı “açıortay”dır?",
+    "question": "“Açı ortay” biçiminde yanlış yazılan sözcüğün doğru yazımı aşağıdakilerden hangisidir?",
     "options": [
         "A) Açı ortay",
-        "B) Açıyortay",
-        "C) Açı-ortay",
-        "D) Açıortay"
+        "B) Açı ortayı",
+        "C) Açıyortay",
+        "D) Açı-ortay",
+        "E) Açıortay"
     ],
-    "correctAnswerIndex": 3,
-    "explanation": "açıortay bitişik."
+    "correctAnswerIndex": 4,
+    "explanation": "Bu matematik terimi kalıplaşmış birleşik bir sözcüktür ve bitişik yazılır: açıortay. Sözcüğü ayrı, tireli ya da araya ses eklenerek yazmak yanlıştır."
 },
 {
     "question": "“Asvalt” kelimesinin doğru yazımı hangisidir?",
@@ -17,7 +18,8 @@ window.turkce_18_sorulari = [
         "A) Asfalt",
         "B) Asvalt",
         "C) Asfald",
-        "D) Asfal"
+        "D) Asvald",
+        "E) Asfal"
     ],
     "correctAnswerIndex": 0,
     "explanation": "asfalt."
@@ -26,44 +28,48 @@ window.turkce_18_sorulari = [
     "question": "Aşağıdakilerden hangisi doğru yazılmıştır?",
     "options": [
         "A) Akşam üstü",
-        "B) Akşamüstü",
-        "C) Akşam-üstü",
-        "D) Akşam Üstü"
+        "B) Akşamüsdü",
+        "C) Akşamüstü",
+        "D) Akşam-üstü",
+        "E) Akşamüztü"
     ],
-    "correctAnswerIndex": 1,
-    "explanation": "akşamüstü bitişik."
+    "correctAnswerIndex": 2,
+    "explanation": "TDK'ye göre bu sözcük bitişik ve 'akşamüstü' biçiminde yazılır."
 },
 {
-    "question": "“Alçak gönüllü” ifadesinin TDK’ye göre doğru yazımı hangisidir?",
+    "question": "'Gösterişsiz, kibirsiz' anlamına gelen ifadenin TDK'ye göre doğru yazımı aşağıdakilerden hangisidir?",
     "options": [
         "A) Alçak gönüllü",
-        "B) Alçakgönüllü",
-        "C) Alçak-gönüllü",
-        "D) Alçak gönül-lü"
+        "B) Alçakgönülü",
+        "C) Alçakgönüllü",
+        "D) Alçak-gönüllü",
+        "E) Alçak gönül-lü"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "TDK: alçak gönüllü (ayrı)."
+    "explanation": "TDK'ye göre bu ifade ayrı yazılır: alçak gönüllü."
 },
 {
     "question": "“Ard arda” kelimesinin doğru yazımı hangisidir?",
     "options": [
-        "A) Ardarda",
-        "B) Ard-arda",
-        "C) Ardı ardına",
-        "D) Art arda"
+        "A) Artarda",
+        "B) Ardarda",
+        "C) Ard-arda",
+        "D) Ardı ardına",
+        "E) Art arda"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "art arda ayrı."
 },
 {
     "question": "“Başbaşa” kelimesinin doğru yazımı hangisidir?",
     "options": [
-        "A) Baş başa",
-        "B) Başbaşa",
-        "C) Baş-başa",
-        "D) Başbaşaa"
+        "A) Başbaş",
+        "B) Baş başa",
+        "C) Başbaşa",
+        "D) Baş-başa",
+        "E) Başbaşaa"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "baş başa ayrı."
 },
 {
@@ -72,7 +78,8 @@ window.turkce_18_sorulari = [
         "A) Bilinçaltı",
         "B) Bilinç altı",
         "C) Bilinç-altı",
-        "D) Bilinçalt"
+        "D) Bilinçaltu",
+        "E) Bilinçalt"
     ],
     "correctAnswerIndex": 0,
     "explanation": "bilinçaltı bitişik."
@@ -81,9 +88,10 @@ window.turkce_18_sorulari = [
     "question": "“Önyargı” kelimesinin doğru yazımı hangisidir?",
     "options": [
         "A) Ön yargı",
-        "B) Önyargı",
-        "C) Ön-yargı",
-        "D) Ön yargi"
+        "B) Önyargi",
+        "C) Önyargı",
+        "D) Ön-yargı",
+        "E) Ön yargi"
     ],
     "correctAnswerIndex": 0,
     "explanation": "ön yargı ayrı."
@@ -94,7 +102,8 @@ window.turkce_18_sorulari = [
         "A) Önsezi",
         "B) Ön sezi",
         "C) Ön-sezi",
-        "D) Öns ezi"
+        "D) Öns ezi",
+        "E) Önsezü"
     ],
     "correctAnswerIndex": 0,
     "explanation": "önsezi bitişik."
@@ -105,7 +114,8 @@ window.turkce_18_sorulari = [
         "A) Peş peşe",
         "B) Peşpeşe",
         "C) Peş-peşe",
-        "D) Peş peşeye"
+        "D) Peşpeş",
+        "E) Peş peşeye"
     ],
     "correctAnswerIndex": 0,
     "explanation": "peş peşe ayrı."
@@ -115,10 +125,11 @@ window.turkce_18_sorulari = [
     "options": [
         "A) Restaurant",
         "B) Restorant",
-        "C) Restoran",
-        "D) Restourant"
+        "C) Restaran",
+        "D) Restoran",
+        "E) Restourant"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "restoran."
 },
 {
@@ -127,9 +138,10 @@ window.turkce_18_sorulari = [
         "A) Stajer",
         "B) Stajyerh",
         "C) Stajiyer",
-        "D) Stajyer"
+        "D) Stajyeer",
+        "E) Stajyer"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "stajyer."
 },
 {
@@ -138,9 +150,10 @@ window.turkce_18_sorulari = [
         "A) Süpriz",
         "B) Sürprüz",
         "C) Sürpüriz",
-        "D) Sürpriz"
+        "D) Sürpiriz",
+        "E) Sürpriz"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "sürpriz."
 },
 {
@@ -149,7 +162,8 @@ window.turkce_18_sorulari = [
         "A) Tenefüs",
         "B) Tenefüz",
         "C) Teneffuz",
-        "D) Teneffüs"
+        "D) Teneffüs",
+        "E) Tenefüss"
     ],
     "correctAnswerIndex": 3,
     "explanation": "teneffüs."
@@ -160,7 +174,8 @@ window.turkce_18_sorulari = [
         "A) Traş",
         "B) Tıraşş",
         "C) Tıraş",
-        "D) Tıraşh"
+        "D) Tıraz",
+        "E) Tıraşh"
     ],
     "correctAnswerIndex": 2,
     "explanation": "tıraş."
@@ -170,8 +185,9 @@ window.turkce_18_sorulari = [
     "options": [
         "A) Ünvan",
         "B) Unvan",
-        "C) Ünvanı",
-        "D) Unüvan"
+        "C) Ünvann",
+        "D) Ünvanı",
+        "E) Unüvan"
     ],
     "correctAnswerIndex": 1,
     "explanation": "unvan."
@@ -179,23 +195,25 @@ window.turkce_18_sorulari = [
 {
     "question": "“Vaddetmek” kelimesinin doğru biçimi hangisidir?",
     "options": [
-        "A) Vaddetmek",
-        "B) Vadetmek",
-        "C) Vaatetmek",
-        "D) Vaadetmek"
+        "A) Vaddettmek",
+        "B) Vaddetmek",
+        "C) Vadetmek",
+        "D) Vaatetmek",
+        "E) Vaadetmek"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "vadetmek."
 },
 {
     "question": "“İnsiyatif” kelimesinin doğru biçimi hangisidir?",
     "options": [
-        "A) İnsiyatif",
-        "B) İnisiyatif",
-        "C) İnsiyatıf",
-        "D) İnisiyatıf"
+        "A) İnsiyatifh",
+        "B) İnsiyatif",
+        "C) İnisiyatif",
+        "D) İnsiyatıf",
+        "E) İnisiyatıf"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "inisiyatif."
 },
 {
@@ -203,8 +221,9 @@ window.turkce_18_sorulari = [
     "options": [
         "A) Kılavuz",
         "B) Klavuz",
-        "C) Kılavvus",
-        "D) Kilavuz"
+        "C) Kılavus",
+        "D) Kılavvus",
+        "E) Kilavuz"
     ],
     "correctAnswerIndex": 0,
     "explanation": "kılavuz."
@@ -213,22 +232,24 @@ window.turkce_18_sorulari = [
     "question": "Aşağıdakilerden hangisi doğru yazılmıştır?",
     "options": [
         "A) Herhangibir",
-        "B) Her hangi bir",
-        "C) Herhangi bir",
-        "D) Herhangi-bir"
+        "B) Herhangibirr",
+        "C) Her hangi bir",
+        "D) Herhangi bir",
+        "E) Herhangi-bir"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "herhangi bir ayrı."
 },
 {
     "question": "“Baş vurmak” ifadesinin doğru yazımı hangisidir?",
     "options": [
-        "A) Baş vurmak",
-        "B) Baş-vurmak",
-        "C) Başvurmak",
-        "D) Başvur"
+        "A) Başvur-mak",
+        "B) Baş vurmak",
+        "C) Baş-vurmak",
+        "D) Başvurmak",
+        "E) Başvur"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "başvurmak bitişik."
 },
 {
@@ -237,9 +258,10 @@ window.turkce_18_sorulari = [
         "A) His etmek",
         "B) Hiss etmek",
         "C) His-etmek",
-        "D) Hissetmek"
+        "D) Hisetmek",
+        "E) Hissetmek"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "hissetmek bitişik (ses olayı)."
 },
 {
@@ -248,7 +270,8 @@ window.turkce_18_sorulari = [
         "A) Af etmek",
         "B) Affetmek",
         "C) Af-etmek",
-        "D) Affedetmek"
+        "D) Afetmek",
+        "E) Affedetmek"
     ],
     "correctAnswerIndex": 1,
     "explanation": "affetmek bitişik."
@@ -258,8 +281,9 @@ window.turkce_18_sorulari = [
     "options": [
         "A) Reddetmek",
         "B) Red etmek",
-        "C) Red-etmek",
-        "D) Rededetmek"
+        "C) Redetmek",
+        "D) Red-etmek",
+        "E) Rededetmek"
     ],
     "correctAnswerIndex": 0,
     "explanation": "reddetmek bitişik."
@@ -267,12 +291,13 @@ window.turkce_18_sorulari = [
 {
     "question": "“Köpekbalığı” ifadesinin doğru yazımı hangisidir?",
     "options": [
-        "A) Köpekbalığı",
-        "B) Köpek-balığı",
-        "C) Köpek balığı",
-        "D) Köpekbalıgı"
+        "A) Köpek-balıgı",
+        "B) Köpekbalığı",
+        "C) Köpek-balığı",
+        "D) Köpek balığı",
+        "E) Köpekbalıgı"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "köpek balığı ayrı (hayvan adı)."
 },
 {
@@ -280,21 +305,23 @@ window.turkce_18_sorulari = [
     "options": [
         "A) Hastaolmak",
         "B) Hastaolmek",
-        "C) Hasta-olmak",
-        "D) Hasta olmak"
+        "C) Hastaolma",
+        "D) Hasta-olmak",
+        "E) Hasta olmak"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "hasta olmak ayrı (kaynaşmamış)."
 },
 {
     "question": "Aşağıdakilerden hangisi bitişik yazılır?",
     "options": [
         "A) art arda",
-        "B) ön yargı",
-        "C) açıortay",
-        "D) baş başa"
+        "B) peş peşe",
+        "C) ön yargı",
+        "D) açıortay",
+        "E) baş başa"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "açıortay, akşamüstü, bilinçaltı bitişik."
 },
 {
@@ -302,10 +329,11 @@ window.turkce_18_sorulari = [
     "options": [
         "A) bilinçaltı",
         "B) önsezi",
-        "C) art arda",
-        "D) akşamüstü"
+        "C) başvurmak",
+        "D) art arda",
+        "E) akşamüstü"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "art arda, baş başa, peş peşe ayrı."
 },
 {
@@ -314,9 +342,10 @@ window.turkce_18_sorulari = [
         "A) Restorant",
         "B) Restorann",
         "C) Restorantt",
-        "D) Restoran"
+        "D) Restaurantt",
+        "E) Restoran"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "restoran."
 },
 {
@@ -325,7 +354,8 @@ window.turkce_18_sorulari = [
         "A) Stajer",
         "B) Stajyer",
         "C) Stajerh",
-        "D) Stajerer"
+        "D) Staajyer",
+        "E) Stajerer"
     ],
     "correctAnswerIndex": 1,
     "explanation": "stajyer."
@@ -336,7 +366,8 @@ window.turkce_18_sorulari = [
         "A) Süpriz",
         "B) Süprizz",
         "C) Sürpriz",
-        "D) Sürpirz"
+        "D) Sürpirz",
+        "E) Sürprizz"
     ],
     "correctAnswerIndex": 2,
     "explanation": "sürpriz."
@@ -347,7 +378,8 @@ window.turkce_18_sorulari = [
         "A) Teneffüz",
         "B) Tenefüs",
         "C) Teneffüs",
-        "D) Teneffuz"
+        "D) Teneffuz",
+        "E) Tenneffüs"
     ],
     "correctAnswerIndex": 2,
     "explanation": "teneffüs."
@@ -357,8 +389,9 @@ window.turkce_18_sorulari = [
     "options": [
         "A) Traş",
         "B) Tıraş",
-        "C) Tiraş",
-        "D) Traaş"
+        "C) Tıraaş",
+        "D) Tiraş",
+        "E) Traaş"
     ],
     "correctAnswerIndex": 1,
     "explanation": "tıraş."
@@ -369,7 +402,8 @@ window.turkce_18_sorulari = [
         "A) Ünvan",
         "B) Unvan",
         "C) Unvann",
-        "D) Ünvann"
+        "D) Ünvann",
+        "E) Unvvan"
     ],
     "correctAnswerIndex": 1,
     "explanation": "unvan."
@@ -378,11 +412,12 @@ window.turkce_18_sorulari = [
     "question": "“Vaadetmek” yerine hangi biçim doğrudur?",
     "options": [
         "A) Vaadetmek",
-        "B) Vadetmek",
-        "C) Vaad etmek",
-        "D) Vadettmek"
+        "B) Vadetmeek",
+        "C) Vadetmek",
+        "D) Vaad etmek",
+        "E) Vadettmek"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "vadetmek."
 }
 ];

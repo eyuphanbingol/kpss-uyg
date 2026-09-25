@@ -13,7 +13,7 @@ window.guncel_8_sorulari = [
     "explanation": "Van Gölü."
 },
 {
-    "question": "Türkiye'nin en uzun akarsuyu aşağıdakilerden hangisidir?",
+    "question": "Kaynağı ve denize döküldüğü yer Türkiye sınırları içinde olan en uzun akarsu aşağıdakilerden hangisidir?",
     "options": [
         "A) Fırat",
         "B) Kızılırmak",
@@ -22,7 +22,7 @@ window.guncel_8_sorulari = [
         "E) Dicle"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Kızılırmak."
+    "explanation": "Kızılırmak, yaklaşık 1355 km uzunluğuyla hem kaynağı hem de ağzı Türkiye sınırları içinde kalan en uzun akarsudur. Fırat toplam uzunluk bakımından daha uzundur; ancak Türkiye dışına çıkarak Basra Körfezi'ne ulaşır."
 },
 {
     "question": "Türkiye'nin en yüksek dağı aşağıdakilerden hangisidir?",
@@ -91,13 +91,13 @@ window.guncel_8_sorulari = [
         "B) 29",
         "C) 30",
         "D) 81",
-        "E) 16 il + 14 büyükşehir"
+        "E) 32"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "30 büyükşehir."
+    "explanation": "6360 sayılı Kanun'un uygulanmasından sonra Türkiye'deki büyükşehir belediyesi sayısı 30'a ulaşmıştır."
 },
 {
-    "question": "Türkiye'nin son büyükşehirlerinden biri olarak notlarda özellikle verilen il hangisidir?",
+    "question": "6360 sayılı Kanun ile 2012 yılında büyükşehir statüsü verilen iller arasında aşağıdakilerden hangisi yer alır?",
     "options": [
         "A) Bayburt",
         "B) Ordu",
@@ -106,7 +106,7 @@ window.guncel_8_sorulari = [
         "E) Tunceli"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Ordu."
+    "explanation": "6360 sayılı Kanun ile 2012'de büyükşehir statüsü verilen 14 ilden biri Ordu'dur. Bayburt, Bartın, Ardahan ve Tunceli büyükşehir statüsünde değildir."
 },
 {
     "question": "Türkiye'nin ilk millî parkı aşağıdakilerden hangisidir?",
@@ -148,25 +148,25 @@ window.guncel_8_sorulari = [
     "question": "Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
     "options": [
         "A) En büyük göl — Van",
-        "B) En uzun akarsu — Kızılırmak",
+        "B) Tamamı Türkiye sınırları içinde olan en uzun akarsu — Kızılırmak",
         "C) En yüksek dağ — Ağrı",
         "D) İlk millî park — Yozgat Çamlığı",
-        "E) İlk biyosfer rezerv — Yozgat Çamlığı"
+        "E) İlk biyosfer rezerv alanı — Yozgat Çamlığı"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "İlk biyosfer Camili/Macahel'dir."
+    "explanation": "Türkiye'nin ilk biyosfer rezerv alanı Artvin'deki Camili (Macahel) bölgesidir; Yozgat Çamlığı ise Türkiye'nin ilk millî parkıdır. Bu nedenle E'deki eşleştirme yanlıştır."
 },
 {
-    "question": "Alev Alatlı hangi yıl vefat etmiştir ve mesleği nedir?",
+    "question": "Yazar ve düşünür Alev Alatlı hangi yıl vefat etmiştir?",
     "options": [
-        "A) 2024 – yazar",
-        "B) 2023 – müzisyen",
-        "C) 2022 – kraliçe",
-        "D) 2022 – futbolcu",
-        "E) 2024 – astronot"
+        "A) 2024",
+        "B) 2023",
+        "C) 2022",
+        "D) 2021",
+        "E) 2020"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Alev Alatlı, yazar, 2024."
+    "explanation": "Alev Alatlı 2024 yılında vefat etmiştir."
 },
 {
     "question": "Erkin Koray hangi yıl vefat etmiştir?",

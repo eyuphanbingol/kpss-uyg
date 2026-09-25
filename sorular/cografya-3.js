@@ -179,7 +179,7 @@ window.cografya_3_sorulari = [
     "id": "14",
     "question": "Aşağıdaki dağlardan hangisi oluşumuna göre kıvrım dağlar arasında YER ALMAZ?",
     "options": [
-      "A) Yıldız (Istıranca) Dağları",
+      "A) Küre Dağları",
       "B) Canik Dağları",
       "C) Bey Dağları",
       "D) Bozdağlar",
@@ -319,16 +319,16 @@ window.cografya_3_sorulari = [
   },
   {
     "id": "24",
-    "question": "Doğu Anadolu Bölgesi'ndeki Nemrut, Süphan, Tendürek ve Ağrı dağları için verilen kodlamadaki harf sırası aşağıdakilerden hangisidir?",
+    "question": "Van Gölü'nün batısından Ermenistan sınırına doğru, yani güneybatıdan kuzeydoğuya sıralanan volkanik dağların doğru diziliş sırası aşağıdakilerden hangisidir?",
     "options": [
-      "A) N – S – T – A",
-      "B) S – N – A – T",
-      "C) A – T – S – N",
-      "D) N – T – A – S",
-      "E) T – A – N – S"
+      "A) Nemrut – Süphan – Tendürek – Ağrı",
+      "B) Süphan – Nemrut – Ağrı – Tendürek",
+      "C) Ağrı – Tendürek – Süphan – Nemrut",
+      "D) Nemrut – Tendürek – Ağrı – Süphan",
+      "E) Tendürek – Ağrı – Nemrut – Süphan"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Van Gölü'nün batısından kuzeydoğuya Ermenistan sınırına doğru dizilen hat güneyden kuzeye baş harfleriyle NESTA (Nemrut, Süphan, Tendürek, Ağrı) olarak kodlanır.",
+    "explanation": "Van Gölü'nün batı kıyısındaki Nemrut Dağı'ndan kuzeydoğuya doğru gidildiğinde sırasıyla Süphan, Tendürek ve en kuzeydoğuda, Ermenistan sınırına yakın konumdaki Ağrı Dağı yer alır.",
     "img": "./src/img/c3_nesta.png?v=1",
     "imgAlt": "Nemrut, Süphan, Tendürek ve Ağrı sıralaması"
   },
@@ -444,7 +444,7 @@ window.cografya_3_sorulari = [
       "E) Falezlerin yaygın olması"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "Kıyıya paralel uzanan dağlarda kıyı sade ve girintisiz-çıkıntılı olduğu için koy, körfez ve doğal liman sayısı oldukça azdır, çok sayıda olması beklenemez.",
+    "explanation": "Kıyıya paralel uzanan dağların bulunduğu kıyılarda kıyı çizgisi sade ve girintisiz-çıkıntısız olduğu için koy, körfez ve doğal liman sayısı oldukça azdır; bu nedenle çok sayıda doğal liman bulunması beklenmez.",
     "img": "./src/img/c3_paralel_sonuc.png?v=1",
     "imgAlt": "Paralel dağlarda ulaşım ve kıyı"
   }

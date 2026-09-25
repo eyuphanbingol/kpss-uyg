@@ -17,9 +17,15 @@ window.tarih_2_sorulari = [
   {
     "id": 3,
     "question": "3. Aşağıda bazı şehirlere verilen unvanlar eşleştirilmiştir. Bu eşleştirmelerden hangisi yanlıştır?",
-    "options": ["A) Semerkant – Şehirlerin Şahı", "B) Kâşgar – Kâşi (Işıldayan İnci)", "C) Buhara – İslam'ın Roma'sı", "D) Balasagun – Şehirlerin Şahı", "E) Semerkant – kâğıdın Çin dışında ilk üretildiği yer"],
+    "options": [
+    "A) Semerkant – Şehirlerin Şahı",
+    "B) Buhara – İslam’ın Kubbesi (Kubbetü’l-İslam)",
+    "C) Bağdat – Medinetü’s-Selam (Barış Şehri)",
+    "D) Balasagun – Şehirlerin Şahı",
+    "E) Medine – Medinetü’n-Nebi (Peygamber Şehri)"
+    ],
     "correctAnswerIndex": 3,
-    "explanation": "'Şehirlerin Şahı' unvanı Semerkant'a aittir; bu unvan Balasagun için kullanılmaz."
+    "explanation": "“Şehirlerin Şahı” unvanı Semerkant için kullanılır; Karahanlıların merkezi Balasagun için böyle bir unvan kullanılmamıştır. Buhara “İslam’ın Kubbesi”, Bağdat “Medinetü’s-Selam (Barış Şehri)”, Medine ise “Medinetü’n-Nebi (Peygamber Şehri)” olarak anılmıştır."
   },
   {
     "id": 4,
@@ -40,7 +46,7 @@ window.tarih_2_sorulari = [
     "question": "6. Karahanlılar Devleti ile ilgili,\nI. Orta Asya'da kurulan ilk Müslüman Türk devletidir.\nII. Kurucusu Bilge Kül Kadir Han, merkezi Balasagun'dur.\nIII. Yönetici kadrosu ve halkı tamamen Türklerden oluşur.\nyargılarından hangileri doğrudur?",
     "options": ["A) Yalnız I", "B) Yalnız III", "C) I ve II", "D) II ve III", "E) I, II ve III"],
     "correctAnswerIndex": 4,
-    "explanation": "Karahanlılar, Orta Asya'da kurulan ilk Müslüman Türk devletidir. Kurucusu Bilge Kül Kadir Han, merkezi Balasagun'dur. Orta Asya'nın Türk nüfus yoğunluğu nedeniyle hem yönetici kadrosu hem de halkı büyük ölçüde Türklerden oluşmuştur."
+    "explanation": "Karahanlılar, Orta Asya’da kurulan ilk Müslüman Türk devletidir. Kurucusu Bilge Kül Kadir Han, merkezi Balasagun’dur. Kurulduğu bölgenin Türk nüfusa dayanması nedeniyle yönetici kadrosu da halkı da Türklerden oluşmuştur; bu yönüyle halkı ve yöneticileri Türk olan ilk Türk-İslam devletidir. Bu nedenle üç yargı da doğrudur."
   },
   {
     "id": 7,
@@ -52,9 +58,15 @@ window.tarih_2_sorulari = [
   {
     "id": 8,
     "question": "8. Karahanlılarla ilgili olarak aşağıdakilerden hangisi söylenemez?",
-    "options": ["A) Resmî dilleri Farsçadır", "B) 'Ribat' adı verilen kervansarayların ilk örneklerini vermişlerdir", "C) İslamiyet'i resmî din olarak kabul eden ilk büyük Türk-İslam devletidir", "D) Gulam sistemi ilk kez Karahanlılarda başlamıştır", "E) Dünya tarihinin ilk burslu öğrencilik sistemini başlatmışlardır"],
+    "options": [
+    "A) Resmî dilleri Farsçadır",
+    "B) “Ribat” adı verilen kervansarayların ilk örneklerini vermişlerdir",
+    "C) İslamiyet’i resmî din olarak kabul eden ilk büyük Türk-İslam devletidir",
+    "D) Orduları büyük ölçüde Türk boylarından oluşmuştur",
+    "E) Dünya tarihinin ilk burslu öğrencilik sistemini başlatmışlardır"
+    ],
     "correctAnswerIndex": 0,
-    "explanation": "Karahanlılar milli kimliklerini sıkı biçimde korumuş, resmî dil olarak Farsça değil Türkçenin Hakaniye lehçesini kullanmıştır."
+    "explanation": "Karahanlılar millî kimliklerini sıkı biçimde korumuş, resmî dil olarak Farsçayı değil Türkçenin Hakaniye lehçesini kullanmıştır. Bu nedenle “resmî dilleri Farsçadır” yargısı söylenemez."
   },
   {
     "id": 9,
@@ -219,7 +231,7 @@ window.tarih_2_sorulari = [
   },
   {
     "id": 32,
-    "question": "32. 1985'ten bu yana UNESCO Dünya Mirası listesinde yer alan Divriği Ulu Camii'ni inşa eden; 1921 ve 1939 Erzincan depremleri nedeniyle günümüze az eseri kalan beylik aşağıdakilerden hangisidir?",
+    "question": "32. 1985'ten bu yana UNESCO Dünya Mirası listesinde yer alan Divriği Ulu Camii'ni inşa eden; Erzincan ve çevresinde meydana gelen depremler nedeniyle günümüze az sayıda eseri kalan beylik aşağıdakilerden hangisidir?",
     "options": ["A) Saltuklular", "B) Danişmentliler", "C) Mengücekliler", "D) Artuklular", "E) Çaka Devleti"],
     "correctAnswerIndex": 2,
     "explanation": "Divriği Ulu Camii ve Darüşşifası Mengücekliler dönemine aittir. Erzincan merkezli bu beyliğin mimari mirasının büyük kısmı şiddetli depremlerle yıkılmıştır."
@@ -248,9 +260,15 @@ window.tarih_2_sorulari = [
   {
     "id": 36,
     "question": "36. Danişmentliler, Saltuklular, Mengücekliler ve Artukluların ortak özelliği aşağıdakilerden hangisidir?",
-    "options": ["A) Mısır'da kurulmaları", "B) Şii karakterli olmaları", "C) Varlıklarına Anadolu Selçuklu Devleti tarafından son verilmesi", "D) Denizcilikle uğraşmaları", "E) İlhanlılar tarafından yıkılmaları"],
+    "options": [
+    "A) Mısır’da kurulmaları",
+    "B) Şii karakterli olmaları",
+    "C) Malazgirt Savaşı’ndan sonra Anadolu’da kurulmaları",
+    "D) Denizcilikle uğraşmaları",
+    "E) İlhanlılar tarafından yıkılmaları"
+    ],
     "correctAnswerIndex": 2,
-    "explanation": "Bu beyliklerin tamamı Malazgirt sonrasında Anadolu'da kurulmuş birinci dönem beylikleridir ve zamanla Anadolu Selçuklu Devleti (Türkiye Selçukluları) tarafından itaat altına alınmıştır."
+    "explanation": "Danişmentliler, Saltuklular, Mengücekliler ve Artuklular; 1071 Malazgirt Savaşı’ndan sonra Anadolu’da kurulan ve Anadolu’nun Türkleşmesini sağlayan I. dönem Anadolu beylikleridir. Sünni karakterli olan bu beylikler iç bölgelerde kurulduğu için denizcilikle uğraşmamıştır."
   },
   {
     "id": 37,
@@ -507,14 +525,26 @@ window.tarih_2_sorulari = [
   {
     "id": 73,
     "question": "73. Batı dünyasında 'Avicenna' olarak bilinen; 'El-Kanun fi't-Tıp' ve 'Kitabü'ş-Şifa' eserlerini yazan, yüzyıllarca Avrupa üniversitelerinde ders kitabı olarak okutulan hekim aşağıdakilerden hangisidir?",
-    "options": ["A) İbn-i Sina", "B) İbn-i Rüşd", "C) Cabir bin Hayyam", "D) İbn-ü Heysem", "E) İdrisi"],
+    "options": [
+    "A) İbn-i Sina",
+    "B) İbn-i Rüşd",
+    "C) Cabir bin Hayyan",
+    "D) İbn-i Heysem",
+    "E) İdrisi"
+    ],
     "correctAnswerIndex": 0,
     "explanation": "Batı dünyasında 'Avicenna' olarak bilinen, 'El-Kanun fi't-Tıp' adlı eseriyle Avrupa tıp eğitiminde uzun süre temel kaynak olarak kullanılan büyük hekim İbn-i Sina'dır."
   },
   {
     "id": 74,
     "question": "74. Modern kimyanın kurucusu sayılan; deneylerinde hassas terazi kullanan ve 'Kitabü'l-Kimya'yı yazan bilim insanı aşağıdakilerden hangisidir?",
-    "options": ["A) Razi", "B) Cabir bin Hayyam", "C) Harezmî", "D) Biruni", "E) Ömer Hayyam"],
+    "options": [
+    "A) Razi",
+    "B) Cabir bin Hayyan",
+    "C) Harezmî",
+    "D) Biruni",
+    "E) Ömer Hayyam"
+    ],
     "correctAnswerIndex": 1,
     "explanation": "Kimyanın kurucusu kabul edilen, deneylerinde ilk kez hassas terazi kullanan ve nitrik asit ile sülfürik asidi bulan bilim insanı Cabir bin Hayyan'dır."
   },
@@ -528,7 +558,13 @@ window.tarih_2_sorulari = [
   {
     "id": 76,
     "question": "76. Aklı ve akılcılığı ön planda tutan, Aristo'yu Avrupalılara tanıtan ve Batı'da 'Averroes' olarak anılan filozof aşağıdakilerden hangisidir?",
-    "options": ["A) İbn-i Rüşd", "B) Gazali", "C) İbn-i Sina", "D) Cabir bin Hayyam", "E) Razi"],
+    "options": [
+    "A) İbn-i Rüşd",
+    "B) Gazali",
+    "C) İbn-i Sina",
+    "D) Cabir bin Hayyan",
+    "E) Razi"
+    ],
     "correctAnswerIndex": 0,
     "explanation": "Endülüs'te yaşamış, akılcılığı (rasyonalizmi) savunarak Avrupa'da hem aydınlanmayı hem de skolastik felsefenin sorgulanmasını etkileyen İslam filozofu İbn-i Rüşd'dür (Averroes)."
   },
@@ -583,7 +619,7 @@ window.tarih_2_sorulari = [
   },
   {
     "id": 84,
-    "question": "84. Timur döneminde yaşamış; Türkçenin Farsça ve Hintçeden geri kalmadığını kanıtlamak amacıyla eser yazan, Çağatay Türkçesinin en büyük şairi kabul edilen kişi ile eseri aşağıdakilerden hangisinde doğru verilmiştir?",
+    "question": "84. Timurlular döneminde yaşamış; Türkçenin Farsçadan geri kalmadığını kanıtlamak amacıyla eser yazan, Çağatay Türkçesinin en büyük şairi kabul edilen kişi ile eseri aşağıdakilerden hangisinde doğru verilmiştir?",
     "options": ["A) Firdevsi – Şehname", "B) Ali Şir Nevai – Mühakemetü'l-Lügateyn", "C) Yusuf Has Hacip – Kutadgu Bilig", "D) Nizamülmülk – Siyasetname", "E) Utbi – Tarih-i Yemini"],
     "correctAnswerIndex": 1,
     "explanation": "Ali Şir Nevai, Türkçenin kelime zenginliği bakımından Farsçadan geri kalmadığını göstermek amacıyla Mühakemetü'l-Lügateyn adlı eserini kaleme almıştır."
@@ -605,7 +641,13 @@ window.tarih_2_sorulari = [
   {
     "id": 87,
     "question": "87. Aşağıdaki olay–kişi eşleştirmelerinden hangisi yanlıştır?",
-    "options": ["A) Dandanakan Savaşı – Babür Şah", "B) Batınilik propagandası – Hasan Sabbah", "C) Pasinler Savaşı – Gürcü Kralı Liparit", "D) Otrar Faciası – Cengiz Han", "E) Malazgirt Savaşı – Romen Diyojen"],
+    "options": [
+    "A) Dandanakan Savaşı – Babür Şah",
+    "B) Batınilik propagandası – Hasan Sabbah",
+    "C) Pasinler Savaşı – Gürcü komutan Liparit",
+    "D) Otrar Faciası – Cengiz Han",
+    "E) Malazgirt Savaşı – Romen Diyojen"
+    ],
     "correctAnswerIndex": 0,
     "explanation": "1040 Dandanakan Savaşı, Gazneliler (Sultan Mesud) ile Selçuklular (Tuğrul ve Çağrı Bey) arasında yapılmıştır; Babür Şah çok daha sonra yaşamıştır ve bu olayla ilgisi yoktur."
   },
@@ -626,7 +668,13 @@ window.tarih_2_sorulari = [
   {
     "id": 90,
     "question": "90. Aşağıdaki devlet–devleti yıkan güç eşleştirmelerinden hangisi yanlıştır?",
-    "options": ["A) Gazneliler – Gurlular", "B) İhşidiler – Fatımiler", "C) Harzemşahlar – İlhanlılar", "D) Memlükler – İlhanlılar", "E) Karakoyunlular – Akkoyunlular"],
+    "options": [
+    "A) Gazneliler – Gurlular",
+    "B) İhşidiler – Fatımiler",
+    "C) Harzemşahlar – Moğollar",
+    "D) Memlükler – İlhanlılar",
+    "E) Karakoyunlular – Akkoyunlular"
+    ],
     "correctAnswerIndex": 3,
     "explanation": "Memlükler Devleti'ne son veren güç Moğollar (İlhanlılar) değil, 1517 Ridaniye Savaşı ile Osmanlı İmparatorluğu'dur (Yavuz Sultan Selim)."
   },

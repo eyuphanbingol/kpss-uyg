@@ -6,14 +6,14 @@ window.tarih_22_sorulari = [
         "A) Demokratik meşruiyet",
         "B) Demokratik temsil",
         "C) Hukuki kurallara saygı",
-        "D) Saltanatın korunması",
-        "E) Hukuki kurallara saygılı olunması"
+        "D) Kararların tek kişinin iradesiyle alınması",
+        "E) Millî birlik ve beraberliğin sağlanması"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "Meşruiyet, temsil ve hukuka saygı istenmiştir; saltanatın korunması bu talepler arasında yoktur."
+    "explanation": "Mustafa Kemal, Amasya Genelgesi'nden Sivas Kongresi'ne uzanan süreçte kararların meşru bir zeminde, halkın seçtiği temsilcilerin katılımıyla ve hukuk kurallarına uygun biçimde alınmasına, millî birliğin korunmasına özen göstermiştir. Kongrelerde heyetler seçilip kararlar oylanarak alındığından, kararların tek kişinin iradesiyle alınması bu anlayışla bağdaşmaz."
 },
 {
-    "question": "Türkiye'de vatandaşlığın ilk kez tanımlandığı anayasa aşağıdakilerden hangisidir?",
+    "question": "Türk vatandaşlığının ilk kez tanımlandığı Cumhuriyet Dönemi anayasası aşağıdakilerden hangisidir?",
     "options": [
         "A) 1876 Kanun-ı Esasi",
         "B) 1921 Teşkilât-ı Esasiye",
@@ -22,7 +22,7 @@ window.tarih_22_sorulari = [
         "E) 1982 Anayasası"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "1924 Anayasası'nda ilk defa vatandaşlığın tanımı yapılmıştır."
+    "explanation": "1924 Anayasası'nda 'Türkiye ahalisine din ve ırk farkı olmaksızın vatandaşlık itibarıyla Türk denir.' hükmüyle Türk vatandaşlığı ilk kez tanımlanmıştır. 1921 Anayasası'nda vatandaşlığa ilişkin bir tanım yer almaz; 1961 ve 1982 anayasaları ise bu tanımı daha sonra yinelemiştir."
 },
 {
     "question": "Aşağıdaki meslek–isim eşleştirmelerinden hangisi yanlıştır?",
@@ -31,10 +31,10 @@ window.tarih_22_sorulari = [
         "B) Muhtar — Gül Esin",
         "C) Köylü mebus — Satı Çırpan",
         "D) Mühendis — Sabiha Gökçen",
-        "E) Avukat — Beyhan Hanım"
+        "E) Avukat — Süreyya Ağaoğlu"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "Sabiha Gökçen savaş pilotudur; mühendis Sabiha Güreyman'dır."
+    "explanation": "Sabiha Gökçen dünyanın ilk kadın savaş pilotlarındandır; Cumhuriyet'in ilk kadın mühendisi ise Sabiha Güreyman'dır. Bu nedenle 'Mühendis — Sabiha Gökçen' eşleştirmesi yanlıştır."
 },
 {
     "question": "Türkiye'nin ilk kadın savaş pilotu aşağıdakilerden hangisidir?",
@@ -159,14 +159,14 @@ window.tarih_22_sorulari = [
 {
     "question": "Avukat olarak öne çıkan kadın aşağıdakilerden hangisidir?",
     "options": [
-        "A) Beyhan Hanım",
+        "A) Süreyya Ağaoğlu",
         "B) Afife Jale",
         "C) Sadiye Hanım",
         "D) Gül Esin",
         "E) Satı Çırpan"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Beyhan Hanım avukattır."
+    "explanation": "Türkiye'nin ilk kadın avukatı Süreyya Ağaoğlu'dur; hukuk öğrenimini tamamlayarak avukatlık mesleğini icra eden ilk Türk kadınıdır. Afife Jale sahne sanatlarında, Satı Çırpan ve Gül Esin ise siyaset ve yerel yönetim alanında öne çıkmıştır."
 },
 {
     "question": "Türk Beşleri olarak anılan bestecilerden hangisi Yunus Emre Oratoryosu ile tanınır?",
@@ -265,7 +265,7 @@ window.tarih_22_sorulari = [
     "explanation": "Darülbedayi, İstanbul Şehir Tiyatroları olmuştur."
 },
 {
-    "question": "Türk Tiyatroları Genel Müdürü olan sanatçı aşağıdakilerden hangisidir?",
+    "question": "Devlet Tiyatroları Genel Müdürlüğü görevini yürüten sanatçı aşağıdakilerden hangisidir?",
     "options": [
         "A) Afife Jale",
         "B) Muhsin Ertuğrul",
@@ -274,7 +274,7 @@ window.tarih_22_sorulari = [
         "E) Falih Rıfkı Atay"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Muhsin Ertuğrul Türk Tiyatroları Genel Müdürü olmuştur."
+    "explanation": "Türk tiyatrosunun öncü isimlerinden Muhsin Ertuğrul, Devlet Tiyatroları Genel Müdürlüğü görevini yürütmüştür. Afife Jale sahneye çıkan ilk Müslüman Türk kadın oyuncu, Cemal Reşit Rey ve Ulvi Cemal Erkin besteci, Falih Rıfkı Atay ise yazar ve gazetecidir."
 },
 {
     "question": "Yaban ve Ankara romanlarının yazarı aşağıdakilerden hangisidir?",

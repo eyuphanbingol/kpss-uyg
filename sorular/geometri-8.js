@@ -145,7 +145,7 @@ window.geometri_8_sorulari = [
     "explanation": "(5+7)·4/2 = 24 cm²."
 },
 {
-    "question": "Paralel kenarlara komşu iç açıların toplamı kaç derecedir?",
+    "question": "Bir yamukta, paralel olan tabanları birleştiren aynı yan kenara komşu iki iç açının ölçüleri toplamı kaç derecedir?",
     "options": [
         "A) 90°",
         "B) 120°",
@@ -154,7 +154,7 @@ window.geometri_8_sorulari = [
         "E) 360°"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "Yamukta paralel tabanlara komşu açılar bütünler açıdır: 180°."
+    "explanation": "Paralel iki doğru bir kesenle kesildiğinde kesenin aynı tarafında kalan iç açılar bütünlerdir. Yamukta tabanlar paralel, yan kenar ise kesen olduğundan bu iki açının ölçüleri toplamı 180°dir."
 },
 {
     "question": "İkizkenar yamukta köşegenler dik ise alt taban 6, üst taban 14 ise yükseklik kaç cm'dir?",
@@ -189,7 +189,7 @@ window.geometri_8_sorulari = [
         "D) 94",
         "E) 96"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "(9+15)·8/2 = 96 cm²."
 },
 {

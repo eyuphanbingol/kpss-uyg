@@ -41,7 +41,7 @@ window.vatandas_6_sorulari = [
         options: [
             "A) Milletvekillerinin önerdiği metinlere kanun teklifi denir.",
             "B) Kabul edilen kanunlar Cumhurbaşkanınca 15 gün içinde imzalanır ve Resmî Gazete’de yayımlanır.",
-            "C) Özel yürürlük tarihi yoksa kanun Resmî Gazete’de yayımlandığı gün yürürlüğe girer.",
+            "C) Yürürlük tarihi gösterilmeyen kanunlar Resmî Gazete’de yayımlandıktan 45 gün sonra yürürlüğe girer.",
             "D) Meclis geri gönderilen kanunda değişiklik yaparsa Cumhurbaşkanı değiştirilen kanunu tekrar geri gönderebilir.",
             "E) Anayasa Mahkemesinin iptal kararları Resmî Gazete’de yayımlandıktan 30 gün sonra yürürlüğe girer."
         ],
@@ -52,7 +52,7 @@ window.vatandas_6_sorulari = [
         question: "Aşağıdakilerden hangisi TBMM’nin görev ve yetkileri arasında yer almaz?",
         options: [
             "A) Kalkınma planlarını onaylamak",
-            "B) Bütçe ve kesin hesap kanun tasarılarını hazırlamak",
+            "B) Bütçe ve kesin hesap kanun tekliflerini hazırlamak",
             "C) Milletlerarası antlaşmaların onaylanmasını uygun bulmak",
             "D) Üye tamsayısının beşte üç çoğunluğu ile genel ve özel af ilânına karar vermek",
             "E) RTÜK’e üye seçmek"

@@ -43,10 +43,16 @@ window.tarih_23_sorulari = [
     "explanation": "1918 Brest-Litovsk Antlaşması ile Rusya savaştan çekildi."
 },
 {
-    "question": "1918–1921 yıllarında Rusya’da Kızıl Ordu’nun karşısında yer alan güç aşağıdakilerden hangisidir?",
-    "options": ["A) Kızıl Ordu", "B) Basmacılar", "C) Yeşil Ordu", "D) Beyaz Ordu", "E) Korbaşılar"],
+    "question": "Rusya’da 1918–1921 yıllarındaki iç savaşta, Bolşeviklerin Kızıl Ordusu’na karşı çarlık yanlısı güçlerin oluşturduğu ordu aşağıdakilerden hangisidir?",
+    "options": [
+    "A) Kızıl Muhafızlar",
+    "B) Çeka",
+    "C) Yeşil Ordu",
+    "D) Beyaz Ordu",
+    "E) Basmacılar"
+    ],
     "correctAnswerIndex": 3,
-    "explanation": "İç savaşta Beyaz Ordu–Kızıl Ordu çatışması yaklaşık üç yıl sürdü."
+    "explanation": "Rusya İç Savaşı’nda (1918–1921) Bolşeviklerin Kızıl Ordusu ile çarlık yanlısı subayların önderliğindeki Beyaz Ordu karşı karşıya gelmiş, savaş Kızıl Ordu’nun üstünlüğüyle sonuçlanmıştır. Kızıl Muhafızlar ve Çeka Bolşeviklere bağlı yapılardır; Yeşil Ordu köylü çetelerini, Basmacılar ise Türkistan’daki ayaklanmayı ifade eder."
 },
 {
     "question": "1921 NEP uygulamasının özelliği aşağıdakilerden hangisidir?",
@@ -74,9 +80,15 @@ window.tarih_23_sorulari = [
 },
 {
     "question": "SSCB’nin federasyon olarak kurulması ve Stalin’in başa geçmesi yılları hangi seçenekte doğru verilmiştir?",
-    "options": ["A) 1917 – 1918", "B) 1921 – 1922", "C) 1922–1923 ve 1924", "D) 1924 – 1929", "E) 1929 – 1936"],
+    "options": [
+    "A) 1917 – 1918",
+    "B) 1921 – 1922",
+    "C) 1922 – 1924",
+    "D) 1924 – 1929",
+    "E) 1929 – 1936"
+    ],
     "correctAnswerIndex": 2,
-    "explanation": "Ülke 1922–1923’te SSCB adını aldı; 1924’te Stalin başa geçti."
+    "explanation": "SSCB 30 Aralık 1922’de federasyon olarak kurulmuş; Lenin’in 1924’teki ölümünün ardından Stalin yönetimin başına geçmiştir."
 },
 {
     "question": "Stalin döneminde köylü topraklarının birleştirilmesine verilen ad aşağıdakilerden hangisidir?",
@@ -89,12 +101,12 @@ window.tarih_23_sorulari = [
     "options": [
         "A) Yusuf Akçura – İsmail Gaspıralı",
         "B) Enver Paşa – Şeyh Şamil",
-        "C) Mehmet Emin Resulzade – Picasso",
+        "C) Cemaleddin Afgani – Muhammed Abduh",
         "D) Şerif Hüseyin – İbn Suud",
-        "E) Fleming – Steinbeck"
+        "E) Mehmet Akif Ersoy – Said Halim Paşa"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Kongrede Yusuf Akçura ve İsmail Gaspıralı öne çıkar."
+    "explanation": "1905’te toplanan Rusya Müslümanları I. Kongresi’nde Kırımlı İsmail Gaspıralı ile Yusuf Akçura öne çıkan isimlerdir."
 },
 {
     "question": "Ufa Müslümanlarının Duma temsilcisi olan, Basmacı hareketine katılan ve 1925’te Türkiye’ye gelerek İstanbul Üniversitesi’nde görev yapan kişi kimdir?",
@@ -163,7 +175,7 @@ window.tarih_23_sorulari = [
     "explanation": "Abdullah Ürdün’e, Faysal Irak’a tayin edildi."
 },
 {
-    "question": "1936’da Suudi Arabistan’da petrol imtiyazı verilen şirket ve bunun sonucu aşağıdakilerden hangisidir?",
+    "question": "Suudi Arabistan’da petrol imtiyazı alan şirket ve bunun sonucu aşağıdakilerden hangisidir?",
     "options": [
         "A) ARAMCO – ABD etkinliği bölgede arttı",
         "B) BP – İngiltere etkisi azaldı",
@@ -172,7 +184,7 @@ window.tarih_23_sorulari = [
         "E) Gazprom – SSCB petrolü kesti"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "1932 Suudi Arabistan Krallığı; 1936 ARAMCO imtiyazı ABD etkisini artırdı."
+    "explanation": "Suudi Arabistan Krallığı 1932’de kurulmuş, petrol imtiyazı 1933’te ABD’li Standard Oil of California’ya verilmiştir. Bu ortaklık 1944’te ARAMCO adını almış ve ABD’nin bölgedeki etkinliği artmıştır."
 },
 {
     "question": "Filistin sorununun başlangıcı sayılan 1917 belgesi aşağıdakilerden hangisidir?",
@@ -255,14 +267,14 @@ window.tarih_23_sorulari = [
 {
     "question": "1928 Briand–Kellogg Paktı’na göre hangisi doğrudur?",
     "options": [
-        "A) Savunmaya dayanmayan savaş kanun dışı sayılmıştır; Türkiye aynı yıl katılmıştır",
+        "A) Savunmaya dayanmayan savaş kanun dışı sayılmıştır; Türkiye de pakta katılmıştır",
         "B) Türkiye pakta dahil olmamıştır",
         "C) Yalnızca Almanya imzalamıştır",
         "D) Monroe Doktrini’ni iptal etmiştir",
         "E) Basmacı hareketini desteklemiştir"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Paris 1928; aynı yıl SSCB ve Türkiye dahil oldu. Saldırı savaşı yasaklandı."
+    "explanation": "1928’de Paris’te imzalanan Briand–Kellogg Paktı, savunma amacı taşımayan savaşı kanun dışı saymıştır. Türkiye pakta 1929’da katılmıştır."
 },
 {
     "question": "1937’de Guernica kasabasının bombalanmasını tablosuna aktaran kübizm öncüsü kimdir?",

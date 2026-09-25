@@ -16,7 +16,7 @@ window.tarih_12_sorulari = [
         explanation: "Antlaşmanın 7. maddesi, İtilaf Devletlerine güvenliklerini tehdit eden bir durumda herhangi bir stratejik bölgeyi işgal etme yetkisi vermiştir. Bu madde, Anadolu'nun işgale açık hâle gelmesine zemin hazırlamıştır."
     },
     {
-        question: "Mustafa Kemal'in Mondros Ateşkes Antlaşması'nın 7. maddesi için 'beyni ateşten yakan bir zehir' ifadesini kullanmasının temel nedeni aşağıdakilerden hangisidir?",
+        question: "Mustafa Kemal'in Mondros Ateşkes Antlaşması'nın 7. maddesini antlaşmanın en tehlikeli hükmü olarak değerlendirmesinin temel nedeni aşağıdakilerden hangisidir?",
         options: [
             "A) Osmanlı ordusunun tamamen dağıtılmasını öngörmesi",
             "B) İtilaf Devletlerine istedikleri Osmanlı toprağını işgal etme fırsatı vermesi",
@@ -25,7 +25,7 @@ window.tarih_12_sorulari = [
             "E) İttifak Devletleri askerlerinin sınır dışına çıkarılmasını istemesi"
         ],
         correctAnswerIndex: 1,
-        explanation: "Mustafa Kemal, 7. maddenin İtilaf Devletlerine Anadolu'nun herhangi bir yerini işgal etme fırsatı vermesi nedeniyle bu ifadeyi kullanmıştır. Bu madde, Osmanlı Devleti'nin toprak bütünlüğünü tehdit eden en tehlikeli hükümdür."
+        explanation: "Mondros'un 7. maddesi, güvenliklerini tehdit eden bir durum ortaya çıkması hâlinde İtilaf Devletleri'ne herhangi bir stratejik noktayı işgal etme hakkı tanıyordu. Ülkenin her yerinin işgaline hukuki kılıf hazırlayan bu madde, antlaşmanın toprak bütünlüğü açısından en tehlikeli hükmü sayılmıştır."
     },
     {
         question: "Mondros Ateşkes Antlaşması'nın 'İtilaf Devletleri, güvenliklerini tehdit eden bir durum ortaya çıkarsa herhangi bir stratejik noktayı işgal edebilecektir.' hükmü aşağıdakilerden hangisine ortam hazırlamıştır?",
@@ -157,7 +157,7 @@ window.tarih_12_sorulari = [
             "E) Antalya'nın İtalyanlar tarafından işgali"
         ],
         correctAnswerIndex: 2,
-        explanation: "Anadolu'da gerçekleşen ilk işgal, 13 Kasım 1918'de Fransızların Dörtyol'u işgal etmesidir. Bu işgal, Anadolu'daki silahlı direnişin de başlangıcı olmuştur."
+        explanation: "Anadolu'da Mondros Ateşkes Antlaşması sonrasında gerçekleşen ilk işgal, 11 Aralık 1918'de Fransızların Dörtyol'u işgal etmesidir. Bu işgale karşı 19 Aralık 1918'de Kara Mehmet Çavuş ve arkadaşlarının başlattığı direniş, Anadolu'daki ilk silahlı direniş kabul edilir."
     },
     {
         question: "Dörtyol'da Fransızlara karşı gerçekleştirilen ilk silahlı direniş aşağıdaki kişilerden hangisiyle ilişkilidir?",
@@ -448,7 +448,7 @@ window.tarih_12_sorulari = [
         explanation: "Trabzon Müdafaa-i Hukuk Cemiyeti, Karadeniz bölgesinde Pontus Rum Devleti kurulmasını engellemek amacıyla faaliyet göstermiştir."
     },
     {
-        question: "Trabzon Müdafaa-i Hukuk Cemiyeti ile ilgili aşağıdakilerden hangisi doğrudur?",
+        question: "Trabzon Muhafaza-i Hukuk-ı Milliye Cemiyeti ile ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
             "A) Ermeni devletinin kurulmasını engellemek amacıyla kurulmuştur.",
             "B) Kurucusu Dr. Esat Işık'tır.",
@@ -457,7 +457,7 @@ window.tarih_12_sorulari = [
             "E) İzmir'in işgaline karşı kurulmuştur."
         ],
         correctAnswerIndex: 3,
-        explanation: "Trabzon Müdafaa-i Hukuk Cemiyeti, İstikbal gazetesini çıkarmıştır. Cemiyet, Pontus Rum Devleti'ni engellemek amacıyla kurulmuştur."
+        explanation: "Trabzon Muhafaza-i Hukuk-ı Milliye Cemiyeti, bölgede Pontus Rum Devleti kurulmasını engellemek amacıyla kurulmuş ve İstikbal gazetesini çıkarmıştır."
     },
     {
         question: "Ermeni Devleti kurulmasını engellemek amacıyla faaliyet gösteren ve Erzurum Kongresi'nin toplanmasında etkili olan cemiyet aşağıdakilerden hangisidir?",
@@ -595,13 +595,13 @@ window.tarih_12_sorulari = [
         question: "Kars İslam Şûrası'nın kuruluş amacı aşağıdakilerden hangisidir?",
         options: [
             "A) Yunan işgalini önlemek",
-            "B) İngilizlerin Kars'ı işgaline karşı koymak",
+            "B) Kars ve çevresinin Ermeniler tarafından ele geçirilmesini önlemek",
             "C) Fransızların Adana'yı işgalini önlemek",
             "D) Pontus Rum Devleti'nin kurulmasını sağlamak",
             "E) İngiliz mandasını savunmak"
         ],
         correctAnswerIndex: 1,
-        explanation: "Kars İslam Şûrası, Kars ve çevresinin Ermeniler tarafından işgaline karşı direniş örgütü olarak kurulmuştur."
+        explanation: "Mondros Ateşkes Antlaşması'ndan sonra Osmanlı ordusunun bölgeden çekilmesi üzerine kurulan Kars İslam Şûrası, Kars ve çevresinin Ermeniler tarafından ele geçirilmesini önlemek amacıyla faaliyet göstermiştir."
     },
     {
         question: "Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
@@ -634,14 +634,14 @@ window.tarih_12_sorulari = [
     {
         question: "Etniki Eterya ile ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) Eski adı Filiki Eterya'dır.",
+            "A) Rumların Megali İdea doğrultusunda faaliyet gösterdiği bir cemiyettir.",
             "B) Ermeni devleti kurmayı amaçlamıştır.",
             "C) İngiliz mandasını savunmuştur.",
             "D) Doğu Anadolu'da Türk hâkimiyetini savunmuştur.",
             "E) Adana'nın işgalini engellemek amacıyla kurulmuştur."
         ],
         correctAnswerIndex: 0,
-        explanation: "Etniki Eterya, eski adı Filiki Eterya olan ve Megali İdea'yı gerçekleştirmeyi amaçlayan Rum cemiyetidir."
+        explanation: "Etniki Eterya, Rumlar tarafından kurulan ve Megali İdea doğrultusunda eski Bizans topraklarını yeniden ele geçirmeyi amaçlayan bir cemiyettir. Ermeni devleti kurma, manda savunuculuğu veya Adana'nın savunulmasıyla ilgisi yoktur."
     },
     {
         question: "Aşağıdakilerden hangisi Rumların Megali İdea doğrultusunda faaliyet gösteren cemiyetlerinden biridir?",
@@ -653,7 +653,7 @@ window.tarih_12_sorulari = [
             "E) Wilson Prensipleri"
         ],
         correctAnswerIndex: 0,
-        explanation: "Mavri Mira (Kara Plan), Rumların Megali İdea doğrultusunda faaliyet gösteren cemiyetlerinden biridir."
+        explanation: "Mavri Mira (Kara Kader), Rumların Megali İdea doğrultusunda faaliyet gösteren cemiyetlerinden biridir. Taşnak ve Hinçak Ermeni, Kürt Teali ve Wilson Prensipleri ise Rumlarla ilgisi olmayan cemiyetlerdir."
     },
     {
         question: "Pontus Rum Cemiyeti'nin temel amacı aşağıdakilerden hangisidir?",
@@ -868,7 +868,7 @@ window.tarih_12_sorulari = [
     // BÖLÜM 7: KARŞILAŞTIRMALI VE ÖSYM TARZI YORUM SORULARI (Soru 71-90)
     // ============================================================
     {
-        question: "Aşağıdaki cemiyetlerden hangisinin amacı diğerlerinden farklıdır?",
+        question: "Aşağıdaki cemiyetlerden hangisi azınlıklar tarafından kurulmamıştır?",
         options: [
             "A) Mavri Mira",
             "B) Etniki Eterya",
@@ -877,7 +877,7 @@ window.tarih_12_sorulari = [
             "E) Wilson Prensipleri"
         ],
         correctAnswerIndex: 4,
-        explanation: "Mavri Mira, Etniki Eterya ve Pontus Rum Rum amaçlı; Taşnak Ermeni amaçlı cemiyetlerdir. Wilson Prensipleri ise Türkler tarafından kurulan mandacı cemiyettir."
+        explanation: "Mavri Mira, Etniki Eterya ve Pontus Rum cemiyetleri Rumlar, Taşnak ise Ermeniler tarafından kurulmuştur. Wilson Prensipleri Cemiyeti ise Türkler tarafından kurulan ve ABD mandasını savunan bir cemiyettir."
     },
     {
         question: "Aşağıdaki cemiyetlerden hangisi doğrudan bir bölgenin Türklüğünü savunmak yerine Osmanlı Devleti'nin kurtuluşunu yabancı bir devletin himayesinde görmüştür?",
@@ -904,7 +904,7 @@ window.tarih_12_sorulari = [
         explanation: "İngiliz Muhipleri, yabancı mandasını savunurken diğer cemiyetler bölgelerinin Türklüğünü savunmaktadır."
     },
     {
-        question: "Aşağıdaki gelişmelerden hangisi işgallere karşı verilen ilk silahlı tepki ile ilişkilidir?",
+        question: "Aşağıdaki gelişmelerden hangisi İzmir'in Yunan işgaline karşı verilen ilk silahlı tepki ile ilişkilidir?",
         options: [
             "A) Amiral Bristol Raporu",
             "B) Milletler Cemiyeti'nin kurulması",
@@ -913,10 +913,10 @@ window.tarih_12_sorulari = [
             "E) Anadolu ve Rumeli Müdafaa-i Hukuk Cemiyeti'nin oluşturulması"
         ],
         correctAnswerIndex: 3,
-        explanation: "Hasan Tahsin'in 15 Mayıs 1919'da İzmir'de ilk kurşunu atması, işgallere karşı verilen ilk silahlı tepkidir."
+        explanation: "15 Mayıs 1919'da İzmir'in Yunanlılar tarafından işgali sırasında gazeteci Hasan Tahsin'in ilk kurşunu atması, bu işgale karşı verilen ilk silahlı tepkidir. İşgallere karşı ilk silahlı direniş ise 19 Aralık 1918'de Dörtyol'da Fransızlara karşı gösterilmiştir."
     },
     {
-        question: "Aşağıdaki gelişmelerden hangisi işgallere karşı uluslararası alanda haklılığı ortaya koymaya yönelik bir girişimdir?",
+        question: "Aşağıdakilerden hangisi işgallerin haksızlığını uluslararası alanda ortaya koyan bir belgedir?",
         options: [
             "A) Kara Mehmet Çavuş'un ilk kurşunu atması",
             "B) Karakol Cemiyeti'nin silah kaçırması",
@@ -925,7 +925,7 @@ window.tarih_12_sorulari = [
             "E) İngiliz Muhipleri Cemiyeti'nin faaliyetleri"
         ],
         correctAnswerIndex: 2,
-        explanation: "Amiral Bristol Raporu, İzmir işgalinin haksızlığını uluslararası düzeyde belgeleyen diplomatik girişimdir."
+        explanation: "Amiral Bristol Raporu, İzmir'in işgalini incelemek üzere oluşturulan ve ABD'li Amiral Bristol başkanlığında çalışan uluslararası soruşturma komisyonu tarafından hazırlanmıştır. Raporda işgalin haksızlığı belirtilerek Türklerin haklılığı uluslararası alanda ilk kez belgelenmiştir."
     },
     {
         question: "Aşağıdakilerden hangisi Mondros Ateşkes Antlaşması ile ilgili değildir?",

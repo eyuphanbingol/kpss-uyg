@@ -51,14 +51,14 @@ window.geometri_2_sorulari = [
 {
     "question": "Kenarları 7, 8, 12 olan üçgende 12'ye karşı açı hangi türdedir?",
     "options": [
-        "A) Dar",
-        "B) Dik",
-        "C) Eşkenar",
-        "D) Doğru açı",
-        "E) Geniş"
+        "A) Dar açı",
+        "B) Dik açı",
+        "C) Doğru açı",
+        "D) Böyle bir üçgen oluşturulamaz",
+        "E) Geniş açı"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "12²=144; 7²+8²=49+64=113; 144>113 → geniş açılı."
+    "explanation": "7 + 8 = 15 > 12 olduğundan bu üçgen oluşturulabilir. En uzun kenar 12 olduğu için karşısındaki açı üçgenin en büyük açısıdır. 12² = 144 iken 7² + 8² = 49 + 64 = 113'tür. En uzun kenarın karesi diğer iki kenarın kareleri toplamından büyük (144 > 113) olduğundan karşı açı geniş açıdır."
 },
 {
     "question": "Dik üçgende dik kenarlar 9 cm ve 12 cm ise hipotenüs kaç cm'dir?",
@@ -186,11 +186,11 @@ window.geometri_2_sorulari = [
         "A) α",
         "B) β",
         "C) γ",
-        "D) Hepsi eşit",
+        "D) α ile β eşittir",
         "E) Belirlenemez"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "6 en büyük kenar → γ en büyük açı."
+    "explanation": "Bir üçgende en büyük kenarın karşısında en büyük açı bulunur. En uzun kenar 6 birim olduğundan onun karşısındaki γ açısı en büyüktür."
 },
 {
     "question": "ABC üçgeninde a=9, b=5, c=6. İç nokta P'nin B ve C'ye uzaklıkları x,y. a<x+y<b+c eşitsizliğine göre x+y aralığı?",

@@ -1,16 +1,16 @@
 // sorular/tarih-5.js
 window.tarih_5_sorulari = [
     {
-        question: "XIV. yüzyıl başlarında Yakın Doğu'daki devletlerle ilgili,\nI. İlhanlılar 1231'de Harzemşahlara son vermiştir.\nII. İlhanlılar 1243 Köse Dağ Savaşı ile Anadolu Selçuklu Devleti'ni mağlup etmiştir.\nIII. İlhanlılar 1258'de Abbasilere son vermiştir.\nyargılarından hangileri doğrudur?",
+        question: "XIII. yüzyılda Yakın Doğu'da yaşanan gelişmelerle ilgili, I. Moğollar 1231'de Harzemşah Devleti'ne son vermiştir. II. Moğollar 1243 Köse Dağ Savaşı ile Anadolu Selçuklu Devleti'ni mağlup etmiştir. III. İlhanlılar 1258'de Abbasi Devleti'ne son vermiştir. yargılarından hangileri doğrudur?",
         options: ["A) Yalnız I", "B) Yalnız III", "C) I ve II", "D) II ve III", "E) I, II ve III"],
         correctAnswerIndex: 4,
-        explanation: "İlhanlılar 1231'de Harzemşahlara son vermiş, 1243 Köse Dağ'da ASD'yi mağlup etmiş ve 1258'de Abbasilere (ve Batınilik'e) son vermiştir. Üçü de doğrudur."
+        explanation: "1231'de Harzemşah Devleti'ne son veren ve 1243 Köse Dağ Savaşı'nda Anadolu Selçuklu Devleti'ni yenen güç Moğol İmparatorluğu'dur. 1256'da Hülagü tarafından kurulan İlhanlılar ise 1258'de Bağdat'ı ele geçirerek Abbasi Devleti'ne son vermiştir. Bu nedenle üç yargı da doğrudur."
     },
     {
-        question: "Karadeniz'in kuzeyinde Batıhan tarafından kurulan, Rusların güneye inmesini yıllarca engelleyen ve Timur saldırıları sonucunda hanlıklara ayrılan devlet aşağıdakilerden hangisidir?",
+        question: "Karadeniz'in kuzeyinde Batu Han tarafından kurulan, Rusların güneye inmesini yıllarca engelleyen ve Timur'un saldırıları sonucunda hanlıklara ayrılan devlet aşağıdakilerden hangisidir?",
         options: ["A) İlhanlılar", "B) Altın Orda", "C) Memlükler", "D) Trabzon Rum İmparatorluğu", "E) Akkoyunlular"],
         correctAnswerIndex: 1,
-        explanation: "Karadeniz'in kuzeyinde Batıhan tarafından kurulan, Rusları güneyden engelleyen ve Timur saldırılarıyla hanlıklara bölünen devlet Altın Orda'dır."
+        explanation: "Karadeniz'in kuzeyinde Batu Han tarafından kurulan, Rusların güneye inmesini uzun süre engelleyen ve Timur'un saldırılarından sonra hanlıklara bölünen devlet Altın Orda Devleti'dir."
     },
     {
         question: "1250'de Aybek tarafından kurulan, halifeliği 1517'ye kadar koruyan ve bu tarihte Yavuz Sultan Selim'e Ridaniye Savaşı'nda yenilen devlet aşağıdakilerden hangisidir?",
@@ -73,10 +73,16 @@ window.tarih_5_sorulari = [
         explanation: "Bacıyan-ı Rum, Anadolu kadınlarını ifade eder; esnaf ve zanaatkarlar Ahiler'dir. Bu eşleştirme yanlıştır."
     },
     {
-        question: "Osmanlı Devleti'nin kuruluşuna destek veren, Türk savaşçılarını ifade eden grup aşağıdakilerden hangisidir?",
-        options: ["A) Alperenler", "B) Gaziyan-ı Rum", "C) Fakiyan-ı Rum", "D) Bacıyan-ı Rum", "E) Abdalan-ı Rum"],
-        correctAnswerIndex: 0,
-        explanation: "Türk savaşçılarını ifade eden grup Alperenlerdir."
+        question: "Aşıkpaşazade'nin Osmanlı Devleti'nin kuruluşunda etkili olduğunu belirttiği zümrelerden, Anadolu'daki gazi ve savaşçıları ifade eden grup aşağıdakilerden hangisidir?",
+        options: [
+        "A) Ahiyan-ı Rum",
+        "B) Gaziyan-ı Rum",
+        "C) Fakiyan-ı Rum",
+        "D) Bacıyan-ı Rum",
+        "E) Abdalan-ı Rum"
+        ],
+        correctAnswerIndex: 1,
+        explanation: "Gaziyan-ı Rum (alp erenler), Anadolu'daki gazi ve savaşçı zümreyi ifade eder. Ahiyan-ı Rum esnaf ve zanaatkârların ahi teşkilatını, Bacıyan-ı Rum kadınlar teşkilatını, Abdalan-ı Rum ise dervişleri karşılar."
     },
     {
         question: "Osmanlı hakkında ilk tarihi bilgiyi veren 'Menakıbname' ile Osmanlı hakkında günümüze ulaşan Ahmedi'nin eseri aşağıdakilerden hangisinde sırasıyla doğru verilmiştir?",
@@ -109,10 +115,10 @@ window.tarih_5_sorulari = [
         explanation: "Bursa, Osman Bey'in oğlu Orhan Bey tarafından fethedilmiştir. Karacahisar, Bilecik, Yurthisar ve İnegöl ise Osman Bey döneminde alınmıştır."
     },
     {
-        question: "Orhan Bey Dönemi'yle ilgili,\nI. Bursa fethedilip İznik'ten sonra başkent yapılmıştır.\nII. Palekanon Savaşı kazanılarak Kocaeli Yarımadası ele geçirilmiştir.\nIII. Karesi Beyliği alınarak Anadolu Türk siyasi birliği yolunda ilk adım atılmıştır.\nyargılarından hangileri doğrudur?",
+        question: "Orhan Bey Dönemi'yle ilgili, I. Bursa fethedilerek başkent yapılmıştır. II. Palekanon Savaşı kazanılarak Kocaeli Yarımadası ele geçirilmiştir. III. Karesi Beyliği alınarak Anadolu Türk siyasi birliği yolunda ilk adım atılmıştır. yargılarından hangileri doğrudur?",
         options: ["A) Yalnız I", "B) I ve II", "C) I ve III", "D) II ve III", "E) I, II ve III"],
         correctAnswerIndex: 4,
-        explanation: "Orhan Bey döneminde Bursa fethedilip başkent yapılmış, Palekanon zaferiyle Kocaeli Yarımadası alınmış ve Karesi Beyliği'nin alınmasıyla Anadolu Türk siyasi birliği yolunda ilk adım atılmıştır. Üçü de doğrudur."
+        explanation: "Orhan Bey döneminde 1326'da Bursa fethedilerek başkent yapılmış, 1329 Palekanon (Maltepe) Savaşı'yla Bizans yenilerek Kocaeli Yarımadası'nın fethi tamamlanmış, Karesi Beyliği'nin alınmasıyla da Anadolu Türk siyasi birliği yolunda ilk adım atılmıştır. Üç yargı da doğrudur."
     },
     {
         question: "Bizans'ta Kantakuzen ile Yuannis arasındaki taht kavgasında Kantakuzen'e yardım karşılığında Osmanlı'nın eline geçen ve Rumeli'deki ilk toprağı oluşturan kale aşağıdakilerden hangisidir?",
@@ -145,10 +151,16 @@ window.tarih_5_sorulari = [
         explanation: "Savaş esirlerinden ilk defa faydalanma sistemine 'kul sistemi' denir; bu sistem Orhan Bey döneminde başlamıştır."
     },
     {
-        question: "Osmanlı Devleti'nde ilk iskan politikasının uygulandığı yer aşağıdakilerden hangisidir?",
-        options: ["A) Bursa", "B) Çimpe Kalesi", "C) Tekirdağ", "D) Gelibolu", "E) İznik"],
-        correctAnswerIndex: 2,
-        explanation: "Orhan Bey döneminde ilk iskan uygulaması Tekirdağ'da yapılmıştır."
+        question: "Osmanlı Devleti'nde Rumeli'ye yönelik ilk iskân (yerleştirme) politikası hangi padişah döneminde uygulanmaya başlanmıştır?",
+        options: [
+        "A) Osman Bey",
+        "B) Orhan Bey",
+        "C) I. Murat",
+        "D) Yıldırım Bayezid",
+        "E) I. Mehmet"
+        ],
+        correctAnswerIndex: 1,
+        explanation: "Rumeli'ye geçişin ardından Orhan Bey döneminde, Karesi bölgesindeki konargöçer Türkmen aileler fethedilen Rumeli topraklarına yerleştirilmiş; böylece iskân politikası ilk kez uygulanmıştır."
     },
     {
         question: "Rumeli'ye yapılan iskan siyasetinin amaçları arasında aşağıdakilerden hangisi GÖSTERİLEMEZ?",
@@ -241,10 +253,16 @@ window.tarih_5_sorulari = [
         explanation: "Kuşatmaların başarısız olma nedenleri arasında Karamanoğulları isyanları, Niğbolu Savaşı ve Timur'un ilerleyişi sayılır; Bizans donanmasının gücü bir neden olarak belirtilmemiştir."
     },
     {
-        question: "İstanbul kuşatmaları sonucunda Bizans ile Osmanlı arasında yapılan antlaşmaya göre aşağıdakilerden hangisi kararlaştırılmamıştır?",
-        options: ["A) Bizans vergi verecektir", "B) İstanbul'da bir Türk mahallesi kurulacaktır", "C) İstanbul'a bir kadı atanacaktır", "D) İstanbul Osmanlı'ya bırakılacaktır", "E) Antlaşma karşılıklı imzalanacaktır"],
+        question: "Yıldırım Bayezid Dönemi'ndeki İstanbul kuşatmaları sonucunda Bizans ile Osmanlı arasında yapılan antlaşmada aşağıdakilerden hangisi kararlaştırılmamıştır?",
+        options: [
+        "A) Bizans vergi verecektir",
+        "B) İstanbul'da bir Türk mahallesi kurulacaktır",
+        "C) İstanbul'a bir kadı atanacaktır",
+        "D) İstanbul Osmanlı'ya bırakılacaktır",
+        "E) İstanbul'da bir cami yapılacaktır"
+        ],
         correctAnswerIndex: 3,
-        explanation: "Antlaşmaya göre Bizans vergi verecek, İstanbul'da Türk mahallesi kurulacak ve kadı atanacaktır; İstanbul'un doğrudan Osmanlı'ya bırakılması söz konusu değildir."
+        explanation: "Yıldırım Bayezid'in İstanbul kuşatmaları sonunda Bizans ile yapılan antlaşmaya göre Bizans vergi ödeyecek, şehirde bir Türk mahallesi kurulacak, cami yapılacak ve Türklerin davalarına bakacak bir kadı bulunacaktı. Şehrin Osmanlı'ya bırakılması ise antlaşmada yer almamıştır."
     },
     {
         question: "Macar Kralı Sigismund önderliğinde kurulan Haçlı ordusuna karşı Niğbolu Kalesi'ni kahramanca savunan komutan ile bu zafer üzerine Yıldırım Bayezid'e halife tarafından verilen unvan aşağıdakilerden hangisinde doğru verilmiştir?",
@@ -265,16 +283,22 @@ window.tarih_5_sorulari = [
         explanation: "Ankara Savaşı sonucunda Osmanlı Devleti yıkılmamış, Fetret Devri'ne girmiştir. Diğer sonuçlar (siyasi birliğin bozulması, beyliklerin yeniden kurulması, Akkoyunlu'nun güçlenmesi, İstanbul'un gecikmesi) doğrudur."
     },
     {
-        question: "Ankara Savaşı sonrasında Timur tarafından esir alınıp Semerkant'a götürülenler arasında aşağıdakilerden hangisi YER ALMAZ?",
-        options: ["A) Yıldırım Bayezid", "B) Mustafa Çelebi", "C) Maria", "D) Musa Çelebi", "E) Bunların hepsi götürülmüştür"],
-        correctAnswerIndex: 3,
-        explanation: "Notta Semerkant'a götürülenler arasında Yıldırım Bayezid, Mustafa Çelebi ve Maria sayılmıştır; Musa Çelebi bu grupta yer almaz, o Fetret Devri'nde taht kavgasına katılan şehzadelerdendir."
+        question: "Ankara Savaşı sonunda Timur'a esir düşenler arasında aşağıdakilerden hangisi YER ALMAZ?",
+        options: [
+        "A) Yıldırım Bayezid",
+        "B) Mustafa Çelebi",
+        "C) Despina Hatun",
+        "D) Musa Çelebi",
+        "E) Süleyman Çelebi"
+        ],
+        correctAnswerIndex: 4,
+        explanation: "Ankara Savaşı'nda (1402) Yıldırım Bayezid, oğulları Mustafa ve Musa Çelebi ile eşi Despina Hatun Timur'a esir düşmüştür. Süleyman Çelebi ise savaş alanından ayrılarak Edirne'ye geçmiş, esir düşmemiştir."
     },
     {
         question: "Ankara Savaşı sonrasında Fetret Devri'nde taht kavgasına giren şehzadeler arasında aşağıdakilerden hangisi YER ALMAZ?",
         options: ["A) Musa Çelebi", "B) İsa Çelebi", "C) Süleyman Çelebi", "D) Mehmet Çelebi", "E) Mustafa Çelebi"],
         correctAnswerIndex: 4,
-        explanation: "Notta Fetret Devri'nde taht kavgasına girenler Musa, İsa, Süleyman ve Mehmet Çelebi olarak belirtilmiştir (Karesi Beyliği hariç). Mustafa Çelebi ise Timur tarafından Semerkant'a götürülmüştür."
+        explanation: "Fetret Devri'nde (1402-1413) taht mücadelesine Süleyman, İsa, Musa ve Mehmet Çelebi girmiştir. Mustafa Çelebi ise Ankara Savaşı'nda Timur'a esir düştüğü için bu mücadelede yer almamıştır."
     },
     {
         question: "Fetret Devri'ndeki taht kavgalarını kazanarak devleti yeniden birleştiren şehzade aşağıdakilerden hangisidir?",
@@ -295,10 +319,10 @@ window.tarih_5_sorulari = [
         explanation: "Fetret Devri'ni sona erdiren ve bu nedenle Osmanlı'nın ikinci kurucusu sayılan padişah I. Mehmet (Çelebi)'dir."
     },
     {
-        question: "I. Mehmet Dönemi'yle ilgili,\nI. Anadolu Türk siyasi birliğini sağlamak için Menteşe ve Saruhanoğullarına son vermiştir.\nII. Venedik ile ilk defa Çalı Bey Savaşı yapılmıştır.\nIII. İlk dini nitelikli toplumsal ayaklanma olan Şeyh Bedrettin İsyanı çıkmıştır.\nyargılarından hangileri doğrudur?",
+        question: "I. Mehmet Dönemi'yle ilgili, I. Anadolu Türk siyasi birliğini sağlamak için Saruhanoğullarına son verilmiştir. II. Venedik ile ilk defa Çalı Bey Savaşı yapılmıştır. III. İlk dini nitelikli toplumsal ayaklanma olan Şeyh Bedrettin İsyanı çıkmıştır. yargılarından hangileri doğrudur?",
         options: ["A) Yalnız I", "B) I ve II", "C) I ve III", "D) II ve III", "E) I, II ve III"],
         correctAnswerIndex: 4,
-        explanation: "I. Mehmet, Menteşe ve Saruhanoğullarına son vermiş, Venedik ile ilk kez Çalı Bey Savaşı'nı yapmış ve döneminde ilk dini nitelikli ayaklanma olan Şeyh Bedrettin İsyanı çıkmıştır. Üçü de doğrudur."
+        explanation: "I. Mehmet, Fetret Devri'nin ardından Anadolu'da birliği yeniden kurarken Saruhanoğulları Beyliği'ne son vermiş; 1416'da Venedik ile ilk deniz savaşı olan Çalı Bey Savaşı yapılmış ve aynı yıl ilk dinî nitelikli toplumsal ayaklanma olan Şeyh Bedrettin İsyanı çıkmıştır. Üç yargı da doğrudur."
     },
     {
         question: "I. Mehmet döneminde bastırılan, II. Murat döneminde bir kez daha isyan edip Edirne'de yakalanarak idam edilen kişi aşağıdakilerden hangisidir?",
@@ -334,7 +358,7 @@ window.tarih_5_sorulari = [
         question: "2. Kosova Savaşı'nın sonuçları arasında aşağıdakilerden hangisi GÖSTERİLEMEZ?",
         options: ["A) Balkanların kesin Türk yurdu hâline gelmesi", "B) Türklerin 1683'e (II. Viyana'ya) kadar taarruzda kalıp Avrupa'nın savunmaya geçmesi", "C) Anadolu'nun kesin Türk yurdu hâline gelmesi", "D) Haçlıların bir kez daha mağlup edilmesi", "E) Osmanlı ile Haçlılar arasındaki mücadelenin bir süre daha devam etmesi"],
         correctAnswerIndex: 2,
-        explanation: "Anadolu'nun kesin Türk yurdu hâline gelmesi Malazgirt Savaşı'nın sonucudur. 2. Kosova ile Balkanlar kesin Türk yurdu hâline gelmiştir; bu ifade karıştırılmamalıdır."
+        explanation: "II. Kosova Savaşı (1448) ile Balkanlar kesin olarak Türk yurdu hâline gelmiş, Haçlılar bir kez daha yenilmiş ve Avrupa 1683'e kadar savunmada kalmıştır. Anadolu'nun kesin Türk yurdu hâline gelmesi ise 1176 Miryokefalon Savaşı'nın sonucudur; bu nedenle C seçeneği II. Kosova'nın sonuçları arasında gösterilemez."
     },
     {
         question: "2. Kosova Savaşı'nın sonuçlarının, Anadolu Selçuklu tarihindeki hangi savaşın sonuçlarına benzediği belirtilmektedir?",
@@ -349,16 +373,28 @@ window.tarih_5_sorulari = [
         explanation: "Enderun Mektebi ilk kez II. Murat döneminde Edirne'de açılmış; bu kurumu Topkapı Sarayı'na taşıyıp sistemleştiren ise Fatih Sultan Mehmet'tir."
     },
     {
-        question: "Kuruluş dönemi Haçlı savaşlarını kodlayan 'SINAV II' ifadesinde 'A' harfi hangi savaşı temsil eder ve bu savaş kimlerle yapılmıştır?",
-        options: ["A) Ankara Savaşı – Haçlılarla yapılmıştır", "B) Ankara Savaşı – Timur ile yapılmıştır, Haçlı değildir", "C) Varna Savaşı – Haçlılarla yapılmıştır", "D) Niğbolu Savaşı – Timur ile yapılmıştır", "E) Sırpsındığı Savaşı – Timur ile yapılmıştır"],
-        correctAnswerIndex: 1,
-        explanation: "'SINAV II' kodlamasındaki A harfi Ankara Savaşı'nı temsil eder; ancak bu savaş Haçlılarla değil, Timur ile Yıldırım Bayezid arasında yapılmıştır. Bu, kodlamadaki bir istisnadır."
+        question: "Osmanlı Devleti'nin Kuruluş Dönemi'nde yapılan aşağıdaki savaşlardan hangisi Haçlılara karşı yapılmamıştır?",
+        options: [
+        "A) Sırpsındığı Savaşı",
+        "B) I. Kosova Savaşı",
+        "C) Niğbolu Savaşı",
+        "D) Ankara Savaşı",
+        "E) Varna Savaşı"
+        ],
+        correctAnswerIndex: 3,
+        explanation: "Sırpsındığı, I. Kosova, Niğbolu ve Varna savaşları Balkan devletlerinin oluşturduğu Haçlı ordularına karşı yapılmıştır. Ankara Savaşı (1402) ise Yıldırım Bayezid ile Timur arasında yapılmış olup Haçlılarla ilgisi yoktur."
     },
     {
-        question: "'SINAV II' kodlamasına göre aşağıdaki savaş–Haçlı lideri eşleştirmelerinden hangisi YANLIŞTIR?",
-        options: ["A) Sırpsındığı – Layoş", "B) 1. Kosova – Lazar", "C) 2. Kosova – Sigismund", "D) Varna – Hunyadi Yanoş", "E) Niğbolu – Sigismund"],
+        question: "Aşağıdaki savaş – Haçlı ordusunun başındaki lider eşleştirmelerinden hangisi YANLIŞTIR?",
+        options: [
+        "A) Sırpsındığı – Layoş",
+        "B) 1. Kosova – Lazar",
+        "C) 2. Kosova – Sigismund",
+        "D) Varna – Ladislas",
+        "E) Niğbolu – Sigismund"
+        ],
         correctAnswerIndex: 2,
-        explanation: "2. Kosova Savaşı'nın Haçlı lideri Ladislas'tır; Sigismund ise Niğbolu Savaşı'nın Haçlı liderdir. Bu eşleştirme yanlıştır."
+        explanation: "II. Kosova Savaşı'nda (1448) Haçlı ordusunun başında Macar komutan Hunyadi Yanoş bulunuyordu. Sigismund ise Niğbolu Savaşı'nın (1396) Haçlı lideridir; bu nedenle '2. Kosova – Sigismund' eşleştirmesi yanlıştır."
     },
     {
         question: "'SINAV II' kodlamasında yer alan altı savaşın kronolojik sıralaması aşağıdakilerden hangisinde doğru verilmiştir?",

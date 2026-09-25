@@ -28,16 +28,16 @@ window.guncel_2_sorulari = [
     "question": "KAAN'ın ilk uçuşunu gerçekleştirdiği yer aşağıdakilerden hangisidir?",
     "options": [
         "A) Konya Hava Üssü",
-        "B) Akıncı Hava Üssü",
+        "B) Eskişehir Hava Üssü",
         "C) Mürted Hava Meydanı",
         "D) İncirlik Hava Üssü",
         "E) Diyarbakır Hava Üssü"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "Mürted Hava Meydanı."
+    "explanation": "KAAN, 21 Şubat 2024'te Ankara'daki Mürted Hava Meydanı'nda bulunan TUSAŞ tesislerinden ilk uçuşunu gerçekleştirmiştir."
 },
 {
-    "question": "Verilen notlara göre KAAN'ın 2028 sonlarında envantere girmesi planlanmaktadır. Buna göre aşağıdakilerden hangisi KAAN ile ilgili doğru bir bilgidir?",
+    "question": "KAAN'ın 2028'den itibaren kademeli olarak envantere girmesi planlanmaktadır. Buna göre aşağıdakilerden hangisi KAAN ile ilgili doğru bir bilgidir?",
     "options": [
         "A) Türkiye'nin ilk haberleşme uydusudur.",
         "B) Millî ana muharebe tankıdır.",
@@ -46,7 +46,7 @@ window.guncel_2_sorulari = [
         "E) Jet motorlu insansız savaş uçağıdır."
     ],
     "correctAnswerIndex": 3,
-    "explanation": "KAAN millî savaş uçağıdır."
+    "explanation": "KAAN, TUSAŞ tarafından geliştirilen beşinci nesil millî muharip (savaş) uçağı projesidir. Millî ana muharebe tankı ALTAY, katmanlı hava savunma sistemi Çelik Kubbe, jet motorlu insansız savaş uçağı ise KIZILELMA'dır."
 },
 {
     "question": "Baykar tarafından geliştirilen jet motorlu insansız savaş uçağı aşağıdakilerden hangisidir?",
@@ -150,11 +150,11 @@ window.guncel_2_sorulari = [
         "A) KAAN",
         "B) KIZILELMA",
         "C) Çelik Kubbe",
-        "D) TÜRKSAT 6A",
-        "E) Hepsi savunma sanayii ve millî teknoloji kapsamında verilen başlıklar arasında yer almaktadır."
+        "D) ALTAY",
+        "E) TOGG"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Notta hepsi yer alır."
+    "explanation": "KAAN millî savaş uçağı, KIZILELMA insansız savaş uçağı, Çelik Kubbe katmanlı hava savunma sistemi, ALTAY ise millî ana muharebe tankıdır. TOGG bir savunma sanayii projesi değil, Türkiye'nin yerli otomobil projesidir."
 },
 {
     "question": "Türkiye'nin önemli insansız hava araçlarından biri aşağıdakilerden hangisidir?",
@@ -364,13 +364,13 @@ window.guncel_2_sorulari = [
     "question": "Türkiye'nin ilk astronotu aşağıdakilerden hangisidir?",
     "options": [
         "A) Tuva Cihangir Atasever",
-        "B) Mehmet Nuri Ersoy",
-        "C) Aziz Sancar",
-        "D) Cahit Arf",
+        "B) Marcus Wandt",
+        "C) Walter Villadei",
+        "D) Michael López-Alegría",
         "E) Alper Gezeravcı"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Alper Gezeravcı."
+    "explanation": "Alper Gezeravcı, Ocak 2024'teki Axiom-3 (Ax-3) göreviyle Uluslararası Uzay İstasyonu'na giden ilk Türk astronot olmuştur. Tuva Cihangir Atasever ise aynı programın yedek astronotudur ve 2024'te suborbital bir uçuş gerçekleştirmiştir."
 },
 {
     "question": "Alper Gezeravcı hangi misyonla uzaya gitmiştir?",
@@ -565,16 +565,16 @@ window.guncel_2_sorulari = [
     "explanation": "Behçet dermatologdur."
 },
 {
-    "question": "Bir KPSS sorusunda I. KAAN II. KIZILELMA III. Çelik Kubbe IV. TÜRKSAT 6A verilmiştir. Bu projelerden hangileri sırasıyla millî savaş uçağı – insansız savaş uçağı – katmanlı hava savunma sistemi – haberleşme uydusu şeklinde eşleştirilebilir?",
+    "question": "Aşağıda verilen projeler I. Çelik Kubbe II. KAAN III. TÜRKSAT 6A IV. KIZILELMA biçiminde numaralandırılmıştır. Bu projelerin millî savaş uçağı – insansız savaş uçağı – katmanlı hava savunma sistemi – haberleşme uydusu şeklindeki sıralaması aşağıdakilerden hangisidir?",
     "options": [
         "A) I – II – III – IV",
-        "B) I – III – II – IV",
-        "C) II – I – III – IV",
-        "D) III – II – I – IV",
-        "E) IV – I – II – III"
+        "B) II – IV – I – III",
+        "C) II – I – IV – III",
+        "D) IV – II – I – III",
+        "E) I – IV – II – III"
     ],
-    "correctAnswerIndex": 0,
-    "explanation": "Sıra KAAN–KIZILELMA–Çelik Kubbe–TÜRKSAT 6A."
+    "correctAnswerIndex": 1,
+    "explanation": "KAAN (II) millî savaş uçağı, KIZILELMA (IV) jet motorlu insansız savaş uçağı, Çelik Kubbe (I) katmanlı hava savunma sistemi, TÜRKSAT 6A (III) ise haberleşme uydusudur. Buna göre doğru sıralama II – IV – I – III'tür."
 },
 {
     "question": "Aşağıdaki bilgilerden hangisine ulaşılamaz?",
@@ -589,7 +589,7 @@ window.guncel_2_sorulari = [
     "explanation": "KAAN savaş uçağıdır, uzay aracı değildir."
 },
 {
-    "question": "Aşağıdaki dört gelişmeden hangisi diğerlerinden farklı bir alanla ilgilidir?",
+    "question": "Aşağıdaki gelişmelerden hangisi diğerlerinden farklı bir alanla ilgilidir?",
     "options": [
         "A) KAAN",
         "B) KIZILELMA",
@@ -598,6 +598,6 @@ window.guncel_2_sorulari = [
         "E) TÜRKSAT 6A"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "TÜRKSAT 6A haberleşme uydusudur; diğerleri kara/hava savunma sistemleridir."
+    "explanation": "TÜRKSAT 6A bir haberleşme uydusudur; KAAN (millî savaş uçağı), KIZILELMA (insansız savaş uçağı), Çelik Kubbe (katmanlı hava savunma sistemi) ve ALTAY (ana muharebe tankı) ise savunma sanayii projeleridir."
 }
 ];

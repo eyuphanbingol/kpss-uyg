@@ -40,16 +40,16 @@ window.cografya_18_sorulari = [
         explanation: "Nöbetleşe tarım; nadası ve erozyonu azaltır (A, C doğru), ekilen araziyi artırır (B doğru), tarımsal üretim ve verimi artırır (D doğru). E seçeneği yanlıştır; nöbetleşe tarım sulama ihtiyacını tamamen ortadan kaldırmaz."
     },
     {
-        question: "İntansif tarım kapsamında örnek verilen ürünler arasında aşağıdakilerden hangisi yer almaz?",
+        question: "İntansif (yoğun) tarım yapılan ürünler arasında aşağıdakilerden hangisi yer almaz?",
         options: [
             "A) Pamuk",
-            "B) Mısır",
-            "C) Ayçiçeği",
-            "D) Fındık",
-            "E) Hiçbiri — hepsi yer alır"
+            "B) Çeltik",
+            "C) Şeker pancarı",
+            "D) Buğday",
+            "E) Çay"
         ],
         correctAnswerIndex: 3,
-        explanation: "İntansif tarıma örnek olarak pamuk, ayçiçeği ve mısır verilir. Fındık bu grupta değildir; Karadeniz'de ekstansif tarımın devirli ürünüdür."
+        explanation: "İntansif tarım; sulama, gübreleme, ilaçlama ve makine kullanımıyla dar alanlardan yüksek verim alınan tarım biçimidir. Pamuk, çeltik, şeker pancarı ve çay bu yöntemle yetiştirilen ürünlerdendir. Buğday ise ülkemizde daha çok geniş alanlarda, sulama yapılmadan ve nadas uygulanarak, yani ekstansif (kuru) tarımla yetiştirilir."
     },
     {
         question: "Ekstansif tarım ile ilgili aşağıdaki bilgilerden hangisi yanlıştır?",
@@ -137,7 +137,7 @@ window.cografya_18_sorulari = [
             "E) Ürün çeşidinin artması"
         ],
         correctAnswerIndex: 0,
-        explanation: "Sulama 'tarlalar genişler' der, makineleşme ise 'ekilen alanlar genişler' der — yani her iki önlem de ekili alanın genişlemesini sağlar (A). B ve D yalnızca makineleşmeye, C ve E ise yalnızca sulamaya özgü etkilerdir."
+        explanation: "Sulama, su yetersizliği nedeniyle işlenemeyen kurak alanların tarıma açılmasını sağlar; makineleşme ise insan ve hayvan gücüyle işlenemeyen geniş alanların ekilebilmesine imkân verir. Böylece her ikisinin ortak sonucu ekili tarım alanlarının genişlemesidir (A). Kırsalda işsizliğin artması ve ekim-hasat süresinin kısalması yalnızca makineleşmenin; nadas alanlarının azalması ile ürün çeşidinin artması ise yalnızca sulamanın sonucudur."
     },
 
     // ============================================================
@@ -158,14 +158,14 @@ window.cografya_18_sorulari = [
     {
         question: "Aşağıdaki ürün — ürün grubu eşleştirmelerinden hangisi yanlıştır?",
         options: [
-            "A) Zeytin — Meyve",
+            "A) Haşhaş — Tahıl",
             "B) Mercimek — Baklagil",
             "C) Kenevir — Sanayi bitkisi",
             "D) Patates — Yumru bitki",
             "E) Buğday — Tahıl"
         ],
         correctAnswerIndex: 0,
-        explanation: "“Zeytin — Meyve” ifadesi yanlıştır; zeytin yağ bitkileri grubundadır (ayçiçeği, soya, yer fıstığı, zeytin, mısır, kanola), meyve grubunda değildir. Diğer ifadeler doğrudur."
+        explanation: "Haşhaş bir tahıl değildir; tohumundan yağ elde edilen, kapsülü ilaç sanayisinde değerlendirilen bir yağ ve sanayi bitkisidir. Bu nedenle 'Haşhaş — Tahıl' eşleştirmesi yanlıştır. Mercimek baklagil, kenevir sanayi bitkisi, patates yumru bitki, buğday ise tahıl grubunda yer alır."
     },
     {
         question: "I. Kayısı ve üzüm meyve grubundadır.\nII. Mısır hem tahıllar hem yağ bitkileri grubunda yer alır.\nIII. Haşhaş baklagiller grubundadır.\n\nYukarıdaki bilgilerden hangileri doğrudur?",
@@ -208,16 +208,16 @@ window.cografya_18_sorulari = [
         explanation: "“Dünya çay üretiminde Türkiye ilk sıradadır” ifadesi yanlıştır; dünya çay üretiminde Türkiye 5. sıradadır, birinci değildir. Birincilik fındıkta geçerlidir. Diğer ifadeler doğrudur."
     },
     {
-        question: "Kenevir (kendir) ile ilgili verilen bilgilerden hareketle aşağıdaki yargılardan hangisine ulaşılabilir?",
+        question: "Kenevir (kendir) ile ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
             "A) Üretimi tamamen serbest bırakılmıştır.",
             "B) Tohumuna 'çedene' adı verilir.",
             "C) Ekimine en fazla izin verilen bölge Marmara'dır.",
             "D) Yalnızca Kastamonu ilinde yetiştirilmektedir.",
-            "E) Tohumu gıda sanayisinde un olarak kullanılmaktadır."
+            "E) Nemli Karadeniz ikliminde yetişmez."
         ],
         correctAnswerIndex: 1,
-        explanation: "A yanlıştır; kenevir uyuşturucu madde olabildiği için üretim alanları devlet kontrolündedir. B doğrudur; kenevir tohumuna çedene denir. C yanlıştır; ekimine en çok izin verilen bölge Karadeniz'dir. D yanlıştır; Kastamonu, Amasya ve Samsun'da yetişir. E yanlıştır; tohum un olarak kullanılmaz."
+        explanation: "A yanlıştır; kenevirden uyuşturucu madde elde edilebildiği için üretimi serbest değildir, devlet izni ve denetimiyle belirlenen alanlarda yapılır. B doğrudur; kenevir tohumuna halk arasında çedene adı verilir. C yanlıştır; ekimine en çok izin verilen bölge Karadeniz'dir. D yanlıştır; Kastamonu dışında Amasya ve Samsun gibi illerde de yetiştirilir. E yanlıştır; kenevir nemli Karadeniz ikliminde yaygın olarak yetiştirilen bir bitkidir."
     },
     {
         question: "I. Fındık ve çay, yetişme koşulları bakımından nemli Karadeniz iklimine ihtiyaç duyar.\nII. Kenevir üretimi, uyuşturucu madde elde edilebilmesi nedeniyle devlet denetimindedir.\nIII. Çayın yetiştirildiği iller arasında Ordu ve Sakarya da bulunmaktadır.\n\nYukarıdaki bilgilerden hangileri doğrudur?",
@@ -301,23 +301,23 @@ window.cografya_18_sorulari = [
             "A) Rize",
             "B) Kastamonu",
             "C) Adana",
-            "D) Edirne",
+            "D) Trabzon",
             "E) Yalova"
         ],
         correctAnswerIndex: 2,
-        explanation: "Ayçiçeğinin yetiştirildiği iller Tekirdağ, Konya ve Adana'dır; seçenekler arasında yalnızca Adana (C) bu listededir. Rize çay, Kastamonu kenevir, Edirne çeltik/kanola, Yalova ise kivi iliyle ilişkilendirilmiştir."
+        explanation: "Ayçiçeği en çok Trakya'da, ayrıca Konya ve Adana çevresinde yetiştirilir; seçenekler arasında bu merkezlerden yalnızca Adana yer alır. Rize çay, Kastamonu kenevir, Trabzon fındık ve çay, Yalova ise kivi üretimiyle öne çıkan illerimizdendir."
     },
     {
         question: "Kivi ile ilgili aşağıdaki bilgilerden hangisine ulaşılamaz?",
         options: [
-            "A) Tropikal bir bitkidir.",
+            "A) Ilıman ve nemli kıyı kuşağında yetişen subtropikal bir bitkidir.",
             "B) Türkiye kıyılarında denizellik etkisiyle yetişebilmektedir.",
             "C) 1990'lı yıllardan itibaren Karadeniz'de de üretilmeye başlanmıştır.",
             "D) En önemli üretim alanı Ege Bölgesi'dir.",
             "E) Yalova, kivi üretiminde öne çıkan illerdendir."
         ],
         correctAnswerIndex: 3,
-        explanation: "“En önemli üretim alanı Ege Bölgesi'dir” ifadesi yanlıştır; kivinin en önemli üretim alanı Ege değil, Marmara'da Yalova çevresidir. Diğer ifadeler doğrudur."
+        explanation: "Kivi, ılıman ve nemli kıyı iklimini seven subtropikal bir bitkidir; bu nedenle Türkiye'de Marmara (Yalova, Bursa) ve Karadeniz (Ordu, Rize) kıyılarında yetiştirilir. 'En önemli üretim alanı Ege Bölgesi'dir' bilgisine ise ulaşılamaz; Ege kıyıları kivi üretiminin toplandığı alan değildir. Diğer seçeneklerdeki bilgiler doğrudur."
     },
     {
         question: "Keten bitkisi ile ilgili aşağıdaki bilgilerden hangisi yanlıştır?",
@@ -332,7 +332,7 @@ window.cografya_18_sorulari = [
         explanation: "“Türkiye'nin en fazla ihraç ettiği sanayi bitkisidir” ifadesi yanlıştır; keten üretim miktarı azdır ve sınırlı alanda yetişir, en fazla ihraç edilen sanayi bitkisi değildir. Diğer ifadeler doğrudur."
     },
     {
-        question: "Kanola (kolza) hakkında verilen bilgilere göre aşağıdaki yargılardan hangisine ulaşılabilir?",
+        question: "Kanola (kolza) ile ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
             "A) Yağ oranı düşük bir bitkidir.",
             "B) Ülkemizde çok eski zamanlardan beri yoğun şekilde üretilmektedir.",
@@ -341,7 +341,7 @@ window.cografya_18_sorulari = [
             "E) Yumru bitkiler grubunda yer alır."
         ],
         correctAnswerIndex: 2,
-        explanation: "A yanlıştır; kanola 'yağ oranı çok yüksek olan' bir bitkidir. B yanlıştır; 'ülkemizde yeni yeni yoğun üretilmeye başlanan' ifadesi geçer. C doğrudur; kanolaya Trakya'nın Sarı Kızı denir. D yanlıştır; en fazla Trakya'da yetişir. E yanlıştır; kanola yağ bitkisidir, yumru bitki değildir."
+        explanation: "A yanlıştır; kanola yağ oranı yüksek bir yağ bitkisidir. B yanlıştır; ülkemizde yaygın üretimi son yıllarda başlamıştır. C doğrudur; sarı çiçekleriyle kapladığı Trakya tarlaları nedeniyle kanolaya 'Trakya'nın Sarı Kızı' denir. D yanlıştır; en fazla Trakya'da (Marmara Bölgesi) yetiştirilir. E yanlıştır; kanola yumru bitki değil, yağ bitkisidir."
     },
 
     // ============================================================
@@ -390,10 +390,10 @@ window.cografya_18_sorulari = [
             "B) Çeltik",
             "C) Keten",
             "D) Kenevir",
-            "E) Kanola"
+            "E) Antep fıstığı"
         ],
         correctAnswerIndex: 4,
-        explanation: "Samsun ilinin dört ayrı üründe tekrar ettiği görülür: fındık, çeltik, keten ve kenevir — A, B, C, D doğrudur. Kanolanın illeri ise yalnızca Tekirdağ ve Konya'dır; Samsun bu listede yoktur."
+        explanation: "Samsun; fındık, çeltik, keten ve kenevir yetiştirilen illerimizdendir. Antep fıstığı ise yazları sıcak ve kurak geçen karasal iklim isteyen, Güneydoğu Anadolu'da (Gaziantep, Şanlıurfa, Siirt) yetiştirilen bir üründür; yağışlı ve nemli iklimin görüldüğü Samsun'da yetiştirilmez."
     },
     {
         question: "Aşağıdaki bilgilerden hangisi yanlıştır?",

@@ -13,7 +13,7 @@ window.tarih_18_sorulari = [
     "explanation": "II. TBMM 11 Ağustos 1923'te açılmıştır. 23 Nisan 1920 I. TBMM'dir."
 },
 {
-    "question": "II. TBMM'nin başkanlığını aşağıdakilerden hangisi yapmıştır?",
+    "question": "II. TBMM'nin açılış oturumunu en yaşlı üye sıfatıyla yöneten geçici başkan aşağıdakilerden hangisidir?",
     "options": [
         "A) Kazım Karabekir",
         "B) Ali Fethi Okyar",
@@ -22,7 +22,7 @@ window.tarih_18_sorulari = [
         "E) Celâl Bayar"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "II. TBMM başkanı Abdurrahman Şeref Bey'dir."
+    "explanation": "II. TBMM'nin 11 Ağustos 1923'teki açılış oturumu, en yaşlı üye sıfatıyla İstanbul mebusu Abdurrahman Şeref Bey tarafından yönetilmiştir. Meclisin seçilmiş başkanı ise önce Mustafa Kemal Paşa, onun cumhurbaşkanı seçilmesinin ardından Ali Fethi Okyar olmuştur."
 },
 {
     "question": "II. TBMM ile ilgili aşağıdakilerden hangisi doğrudur?",
@@ -31,10 +31,10 @@ window.tarih_18_sorulari = [
         "B) Lozan Antlaşması'nı onaylayan meclistir.",
         "C) Saltanatın kaldırılmasına karar veren meclistir.",
         "D) Sivas Kongresi sonrasında açılmış ilk meclistir.",
-        "E) Cumhuriyet'in ilanından önce kurulmuştur."
+        "E) Cumhuriyet'in ilanından sonra açılmıştır."
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Lozan'ı onaylayan meclis II. TBMM'dir. Saltanat I. TBMM döneminde kaldırılmıştır."
+    "explanation": "Lozan Antlaşması 23 Ağustos 1923'te II. TBMM tarafından onaylanmıştır. Millî Mücadele'yi yürüten ve saltanatı kaldıran meclis I. TBMM'dir. II. TBMM 11 Ağustos 1923'te, yani 29 Ekim 1923'teki Cumhuriyet'in ilanından önce açılmıştır."
 },
 {
     "question": "II. TBMM'nin en önemli özelliklerinden biri aşağıdakilerden hangisidir?",
@@ -270,11 +270,11 @@ window.tarih_18_sorulari = [
         "A) Çift dereceli seçim",
         "B) Tek dereceli seçim",
         "C) Atamalı seçim",
-        "D) Dolaylı temsil",
+        "D) Dar bölge sistemi",
         "E) Nispi temsil"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "TCF tek dereceli seçimi savunmuştur."
+    "explanation": "Terakkiperver Cumhuriyet Fırkası, milletvekillerinin seçmenler tarafından doğrudan belirlendiği tek dereceli seçim sistemini savunmuştur."
 },
 {
     "question": "Terakkiperver Cumhuriyet Fırkası'nın tüzüğünde aşağıdaki ifadelerden hangisine yer verilmiştir?",
@@ -330,11 +330,11 @@ window.tarih_18_sorulari = [
         "A) Piran",
         "B) Hakkâri",
         "C) Menemen",
-        "D) Nasturi",
+        "D) Bitlis",
         "E) Havza"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Başlangıç Piran köyüdür (Dicle / Diyarbakır)."
+    "explanation": "Şeyh Said İsyanı 13 Şubat 1925'te Diyarbakır'ın Piran (bugünkü Dicle) köyünde başlamıştır."
 },
 {
     "question": "Şeyh Said İsyanı'nın Cumhuriyet tarihi açısından önemi aşağıdakilerden hangisidir?",
@@ -534,11 +534,11 @@ window.tarih_18_sorulari = [
         "A) Çift dereceli seçim",
         "B) Tek dereceli seçim",
         "C) Atamalı seçim",
-        "D) Dolaylı seçim",
-        "E) Seçimsiz yönetim"
+        "D) Nispi temsil",
+        "E) Dar bölge sistemi"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "SCF tek dereceli seçimi savunmuştur."
+    "explanation": "Serbest Cumhuriyet Fırkası, milletvekillerinin seçmenler tarafından doğrudan belirlendiği tek dereceli seçim sistemini savunmuştur."
 },
 {
     "question": "Serbest Cumhuriyet Fırkası'nın tüzüğünde aşağıdakilerden hangisine yer verilmiştir?",
@@ -605,12 +605,12 @@ window.tarih_18_sorulari = [
     "options": [
         "A) Yüzbaşı Mustafa Efendi",
         "B) Asteğmen Kubilay",
-        "C) Binbaşı Mustafa Kemal",
+        "C) Yüzbaşı Fahri Bey",
         "D) Teğmen Ali Fuat",
         "E) Albay Refet Bele"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Şehit Asteğmen Kubilay'dır."
+    "explanation": "23 Aralık 1930'daki Menemen Olayı'nda, Derviş Mehmet ve yandaşları tarafından şehit edilen asker Asteğmen Mustafa Fehmi Kubilay'dır."
 },
 {
     "question": "Menemen Olayı sonrasında sanıklar aşağıdaki mahkemelerden hangisinde yargılanmıştır?",
@@ -687,14 +687,14 @@ window.tarih_18_sorulari = [
 {
     "question": "Wagon-Li Olayı aşağıdaki gelişmelerden hangisiyle ilişkilidir?",
     "options": [
-        "A) Bir demiryolu şirketinde Türkçe konuşulması nedeniyle yaşanan işten çıkarma olayı",
+        "A) Yabancı sermayeli bir şirkette Türkçe konuşan bir memurun cezalandırılması üzerine gelişen olaylar",
         "B) Ezanın Türkçe okunmasına yönelik protestolar",
         "C) Cumhuriyet rejimine karşı silahlı ayaklanma",
         "D) Bir siyasi partinin kapatılması",
         "E) Musul sorunu nedeniyle yaşanan diplomatik kriz"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Naci Bey'in Türkçe konuştuğu için işten çıkarılmasıdır."
+    "explanation": "Şubat 1933'te yabancı sermayeli Wagon-Li şirketinin İstanbul bürosunda çalışan Naci Bey, telefonda Türkçe konuştuğu gerekçesiyle müdürü tarafından on beş gün açığa alınarak cezalandırılmış; bu durum öğrencilerin ve kamuoyunun büyük tepkisine yol açmıştır."
 },
 {
     "question": "Wagon-Li Olayı sonrasında düzenlenen kampanya aşağıdakilerden hangisidir?",
@@ -711,14 +711,14 @@ window.tarih_18_sorulari = [
 {
     "question": "\"Vatandaş Türkçe Konuş\" kampanyasını düzenleyenler aşağıdakilerden hangisidir?",
     "options": [
-        "A) İstanbul Üniversitesi öğrencileri",
+        "A) Darülfünun Hukuk Fakültesi öğrencileri",
         "B) TBMM milletvekilleri",
         "C) CHP yöneticileri",
         "D) Türk Dil Kurumu",
         "E) Türk Ocakları"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Kampanyayı İstanbul Üniversitesi öğrencileri düzenlemiştir."
+    "explanation": "Vatandaş Türkçe Konuş kampanyası 1928'de Darülfünun Hukuk Fakültesi öğrencileri tarafından başlatılmıştır. Kampanya, 1933'teki Wagon-Li Olayı'nın ardından yeniden güçlenmiştir."
 },
 {
     "question": "Aşağıdakilerden hangisi Atatürk Dönemi'nde çok partili siyasi hayata geçiş amacıyla yapılan denemelerden biridir?",
@@ -745,7 +745,7 @@ window.tarih_18_sorulari = [
     "explanation": "TCF ve SCF liberal, CHP devletçidir. Cevap I ve III."
 },
 {
-    "question": "Aşağıdaki parti–ekonomik anlayış eşleştirmelerinden hangisi yanlıştır?",
+    "question": "Aşağıdaki parti–görüş eşleştirmelerinden hangisi yanlıştır?",
     "options": [
         "A) CHP – Devletçilik",
         "B) TCF – Liberalizm",
@@ -754,7 +754,7 @@ window.tarih_18_sorulari = [
         "E) TCF – Tek dereceli seçim"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "CHP liberal değil, devletçidir. E seçim sistemidir, ekonomik anlayış değildir; soru parti–ekonomik anlayış der ama anahtar D'dir."
+    "explanation": "Cumhuriyet Halk Fırkası'nın ekonomi anlayışı liberalizm değil devletçiliktir; liberal ekonomiyi savunanlar Terakkiperver Cumhuriyet Fırkası ile Serbest Cumhuriyet Fırkası'dır. Terakkiperver Cumhuriyet Fırkası ayrıca tek dereceli seçimi savunmuştur; bu nedenle yalnızca D'deki eşleştirme yanlıştır."
 },
 {
     "question": "Aşağıdaki gelişmelerden hangisi 1925 yılında gerçekleşmiştir?",

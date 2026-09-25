@@ -90,7 +90,7 @@ window.cografya_27_sorulari = [
             "A) Graben",
             "B) Horst",
             "C) Delta",
-            "D) Morén",
+            "D) Moren (buzultaş)",
             "E) Obruk"
         ],
         "correctAnswerIndex": 1,
@@ -178,7 +178,7 @@ window.cografya_27_sorulari = [
             "E) Biriktirme alanı"
         ],
         "correctAnswerIndex": 2,
-        "explanation": "Falez varsa delta oluşmaz; notlardaki klasik kural."
+        "explanation": "Delta, akarsuyun taşıdığı alüvyonun sığ ve sakin bir kıyıda birikmesiyle oluşur; bunun için bol alüvyon, gelgitin zayıf olduğu sakin bir deniz, akarsuyun denize dökülmesi ve uygun bir biriktirme alanı gereklidir. Dik falezli kıyılar ise derin ve aşınım kıyısı olduğundan biriktirme ortamı sağlamaz."
     },
     {
         "question": "Tektonik (çöküntü) ovalarına örnek hangisidir?",
@@ -186,8 +186,8 @@ window.cografya_27_sorulari = [
             "A) Çarşamba Deltası",
             "B) Bafra Deltası",
             "C) Gediz / Büyük Menderes graben ovaları",
-            "D) Dalga birikim seti",
-            "E) Morén ovası"
+            "D) Kıyı (birikim) ovası",
+            "E) Moren ovası"
         ],
         "correctAnswerIndex": 2,
         "explanation": "Ege graben ovaları tektonik kökenlidir."
@@ -197,12 +197,12 @@ window.cografya_27_sorulari = [
         "options": [
             "A) Rejimleri düzenlidir",
             "B) Engebenin fazla olması nedeniyle hidroelektrik potansiyelleri yüksektir",
-            "C) Hepsi denize dökülür",
-            "D) Hiçbiri baraj yapılamaz",
-            "E) Tümü boyuna (kıyıya paralel) akar"
+            "C) Büyük bölümü ulaşıma elverişlidir",
+            "D) Havzalarının tamamı açık havzadır",
+            "E) Denge profiline ulaştıkları için aşındırma güçleri azdır"
         ],
         "correctAnswerIndex": 1,
-        "explanation": "Eğim/engebe → HES potansiyeli."
+        "explanation": "Türkiye engebeli ve yüksek bir ülke olduğu için akarsuların eğimi, dolayısıyla akış hızı ve hidroelektrik potansiyeli yüksektir. Aynı nedenle akarsular ulaşıma elverişli değildir, aşındırma güçleri fazladır ve yağış rejimine bağlı olarak düzensiz akarlar; Konya ve Van gibi kapalı havzalar da vardır."
     },
     {
         "question": "Akarsu aşındırmasıyla oluşan “V” şekilli vadi için hangisi doğrudur?",
@@ -292,13 +292,13 @@ window.cografya_27_sorulari = [
         "question": "Türkiye kıyılarında fiyort tipinin görülmemesinin nedeni hangisidir?",
         "options": [
             "A) Ege kırıklıdır",
-            "B) Akdeniz’de falez yoktur",
-            "C) Karadeniz’de delta çoktur",
-            "D) Buzul aşındırmasıyla oluşmuş derin körfezler (fiyort) Türkiye’de yoktur",
+            "B) Akdeniz'de falez yoktur",
+            "C) Karadeniz'de delta çoktur",
+            "D) Türkiye'de buzullaşmanın deniz seviyesine kadar inmemiş olması",
             "E) Marmara kapalıdır"
         ],
         "correctAnswerIndex": 3,
-        "explanation": "Fiyort = buzul kökenli; TR’de klasik fiyort yok."
+        "explanation": "Fiyortlar, buzul vadilerinin sular altında kalmasıyla oluşan derin ve dar körfezlerdir. Türkiye Orta Kuşak'ta yer aldığından Buzul Çağı'nda bile buzullaşma yalnızca yüksek dağların doruklarında görülmüş, buzullar deniz seviyesine inmemiştir; bu nedenle kıyılarımızda fiyort oluşmamıştır."
     },
     {
         "question": "Ege kıyılarının girintili–çıkıntılı ve limanlaşmaya elverişli olmasının temel nedeni hangisidir?",
@@ -409,7 +409,7 @@ window.cografya_27_sorulari = [
         "explanation": "Akdeniz = yaz kurak; Karadeniz’de yazlar da yağışlı."
     },
     {
-        "question": "Sert karasal (Erzurum–Kars) ikliminin görüldüğü iller notlara göre hangileridir?",
+        "question": "Sert karasal iklimin en tipik olarak görüldüğü iller aşağıdakilerin hangisinde birlikte verilmiştir?",
         "options": [
             "A) Erzurum–Kars–Ardahan",
             "B) İzmir–Manisa–Aydın",
@@ -418,7 +418,7 @@ window.cografya_27_sorulari = [
             "E) Gaziantep–Kilis–Adıyaman"
         ],
         "correctAnswerIndex": 0,
-        "explanation": "Sadece Erzurum, Kars, Ardahan."
+        "explanation": "Yükseltinin fazla olduğu Erzurum–Kars Bölümü'nde kışlar uzun ve çok soğuk, yazlar kısa ve serin geçer; sert karasal iklim en tipik olarak Erzurum, Kars ve Ardahan'da görülür. Diğer seçeneklerdeki iller Ege, Akdeniz, Marmara ve Güneydoğu Anadolu iklim özellikleri taşır."
     },
     {
         "question": "Yamaç yağışlarının belirgin olduğu bölgeler hangileridir?",
@@ -598,7 +598,7 @@ window.cografya_27_sorulari = [
             "E) Yalnızca fiyortlarda"
         ],
         "correctAnswerIndex": 0,
-        "explanation": "Su + düz arazi → toplu yerleşme."
+        "explanation": "Su kaynaklarının sınırlı olduğu yerlerde nüfus, az sayıdaki su kaynağının çevresinde toplanır; düz ya da az engebeli arazi de evlerin bir arada kurulmasını kolaylaştırır. Bu iki koşul birlikte toplu (küme) kırsal yerleşmeyi yaygınlaştırır."
     },
     {
         "question": "1923 İzmir İktisat Kongresi’nin ruhu hangisine yakındır?",
@@ -637,7 +637,7 @@ window.cografya_27_sorulari = [
         "explanation": "Ekstansif = geniş alan / düşük yoğunluk."
     },
     {
-        "question": "Nadasın azalmasına katkı sağlayan projeler notlara göre hangileridir?",
+        "question": "Nadas alanlarının azalmasına katkı sağlayan sulama projeleri aşağıdakilerden hangisidir?",
         "options": [
             "A) GAP ve KOP (sulama)",
             "B) Yalnızca turizm",
@@ -769,7 +769,7 @@ window.cografya_27_sorulari = [
         "explanation": "Pazar + yem + tesis → batı/gelişmiş alanlar."
     },
     {
-        "question": "Türkiye’de maden çeşitliliğinin en fazla olduğu yer notlara göre hangisidir?",
+        "question": "Türkiye'de maden çeşitliliğinin en fazla olduğu yer aşağıdakilerden hangisidir?",
         "options": [
             "A) Çatalca Platosu",
             "B) Bafra Deltası",
@@ -778,7 +778,7 @@ window.cografya_27_sorulari = [
             "E) İstanbul Boğazı"
         ],
         "correctAnswerIndex": 3,
-        "explanation": "Yukarı Fırat / Elazığ — volkanizma etkisi."
+        "explanation": "Yukarı Fırat Bölümü'nde (Elazığ çevresi) eski masiflere ait metamorfik kayaçlar ile ofiyolitik (magmatik) araziler geniş yer kapladığından krom, bakır ve demir gibi çok sayıda maden bir arada bulunur. Diğer seçeneklerdeki alanlar genç tortul arazilerden oluştuğu için maden çeşitliliği azdır."
     },
     {
         "question": "Bor madeninin başlıca çıkarım/işleme alanları hangileridir?",
@@ -795,14 +795,14 @@ window.cografya_27_sorulari = [
     {
         "question": "Krom çıkarımında öne çıkan yerler hangileridir?",
         "options": [
-            "A) Elazığ (Guleman) ve Fethiye (Köyceğiz)",
+            "A) Elazığ (Guleman) ve Muğla (Fethiye–Köyceğiz)",
             "B) Zonguldak",
             "C) Batman",
             "D) Sinop",
             "E) Edirne"
         ],
         "correctAnswerIndex": 0,
-        "explanation": "Krom: Guleman–Köyceğiz; işleme Elazığ/Antalya."
+        "explanation": "Türkiye'de krom yataklarının en önemlileri Elazığ–Guleman ile Muğla'daki Fethiye–Köyceğiz çevresinde bulunur; krom işleme tesisleri ise Elazığ ve Antalya'dadır. Zonguldak taş kömürü, Batman ise petrol ile öne çıkar."
     },
     {
         "question": "Bakır çıkarım yerlerine örnek hangisidir?",
@@ -853,7 +853,7 @@ window.cografya_27_sorulari = [
         "explanation": "Taş kömürü = Zonguldak havzası."
     },
     {
-        "question": "Türkiye’nin en büyük linyit santrali notlara göre hangisidir?",
+        "question": "Türkiye'nin kurulu gücü en yüksek linyit santrali aşağıdakilerden hangisidir?",
         "options": [
             "A) Soma yalnız",
             "B) Aliağa",
@@ -862,7 +862,7 @@ window.cografya_27_sorulari = [
             "E) Akkuyu"
         ],
         "correctAnswerIndex": 3,
-        "explanation": "Afşin–Elbistan."
+        "explanation": "Kahramanmaraş'taki Afşin–Elbistan havzası Türkiye'nin en büyük linyit rezervine sahiptir ve buradaki termik santraller kurulu güç bakımından ülkenin en büyük linyit santralleridir. Akkuyu bir nükleer santral, Aliağa ise doğal gaz ve petrol ağırlıklı bir santral alanıdır."
     },
     {
         "question": "Türkiye’de ilk petrolün bulunduğu yer hangisidir?",
@@ -889,7 +889,7 @@ window.cografya_27_sorulari = [
         "explanation": "Yüksek ithalat bağımlılığı."
     },
     {
-        "question": "Doğal gazda dışa bağımlılık için notlara göre hangisi doğrudur?",
+        "question": "Türkiye'nin doğal gazda dışa bağımlılığı ile ilgili aşağıdakilerden hangisi doğrudur?",
         "options": [
             "A) Tamamen yerli",
             "B) Yalnızca jeotermaldir",
@@ -898,7 +898,7 @@ window.cografya_27_sorulari = [
             "E) İhtiyacın çok büyük bölümü ithal edilir"
         ],
         "correctAnswerIndex": 4,
-        "explanation": "Doğal gazda bağımlılık çok yüksektir."
+        "explanation": "Türkiye'nin kendi doğal gaz üretimi tüketiminin çok küçük bir bölümünü karşılar; bu nedenle ihtiyacın çok büyük bölümü boru hatları ve LNG yoluyla ithal edilmektedir."
     },
     {
         "question": "Türkiye’nin ilk nükleer güç santrali projesi nerededir?",
@@ -1078,7 +1078,7 @@ window.cografya_27_sorulari = [
             "E) GAP’ta pamuk"
         ],
         "correctAnswerIndex": 3,
-        "explanation": "Karadeniz ters olay / bakı çeldiricisi."
+        "explanation": "Karadeniz'de kuzey yamaçlar denize baktığı için kışın deniz etkisiyle güney yamaçlardan daha ılık olabilir. Bu durum, bakının tek başına belirleyici olmadığını; denizellik gibi etkenlerin de yamaçların sıcaklığını değiştirebildiğini gösterir."
     },
     {
         "question": "Bölge–ürün–şekil bağlarından hangisi doğrudur?",
@@ -1129,16 +1129,16 @@ window.cografya_27_sorulari = [
         "explanation": "Kuzeye gidildikçe (enlem ↑) sıcaklık genelde düşer."
     },
     {
-        "question": "Maden–enerji tuzaklarından hangisi doğrudur?",
+        "question": "Aşağıdaki maden–enerji bilgilerinden hangisi doğrudur?",
         "options": [
-            "A) Bor Zonguldak’tadır",
-            "B) Taş kömürü Eskişehir’dedir",
-            "C) Krom Elazığ–Fethiye’dedir",
-            "D) Petrol ilk kez Rize’de bulunmuştur",
+            "A) Bor Zonguldak'tadır",
+            "B) Taş kömürü Eskişehir'dedir",
+            "C) Krom Elazığ (Guleman) ve Muğla (Fethiye–Köyceğiz) çevresindedir",
+            "D) Petrol ilk kez Rize'de bulunmuştur",
             "E) Doğal gaz tamamen yerlidir"
         ],
         "correctAnswerIndex": 2,
-        "explanation": "Krom Guleman–Köyceğiz."
+        "explanation": "Krom yatakları Elazığ–Guleman ile Muğla'daki Fethiye–Köyceğiz çevresinde toplanmıştır. Bor Balıkesir ve Kütahya çevresinde, taş kömürü ise Zonguldak havzasında bulunur; Türkiye'de petrol ilk kez Batman (Raman) çevresinde çıkarılmıştır ve doğal gazın büyük bölümü ithal edilmektedir."
     },
     {
         "question": "Aşağıdakilerden hangisi GAP illeri arasında gösterilemez?",

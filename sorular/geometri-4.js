@@ -10,10 +10,10 @@ window.geometri_4_sorulari = [
         "E) 8"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "b/c=m/n → 8/12=4/n → n=6."
+    "explanation": "Açıortay teoremine göre |AB|/|AC| = |BN|/|NC| olur. Değerler yerine konduğunda 8/12 = 4/|NC| elde edilir ve buradan |NC| = 6 birim bulunur."
 },
 {
-    "question": "Açıortay teoremi: b=10, c=15, m=4. n=?",
+    "question": "ABC üçgeninde A köşesinden çizilen açıortay [BC] kenarını N noktasında kesmektedir. |AB| = 10 br, |AC| = 15 br ve |BN| = 4 br ise |NC| kaç birimdir?",
     "options": [
         "A) 4",
         "B) 5",
@@ -22,7 +22,7 @@ window.geometri_4_sorulari = [
         "E) 8"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "10/15=4/n → n=6."
+    "explanation": "Açıortay teoremine göre açıortayın karşı kenarda ayırdığı parçaların oranı, bu parçalara komşu kenarların oranına eşittir: |AB|/|AC| = |BN|/|NC|. Buradan 10/15 = 4/|NC| olur ve |NC| = 6 birim bulunur."
 },
 {
     "question": "x²=bc−mn: b=9, c=6, m=3, n=2. x=?",
@@ -61,7 +61,7 @@ window.geometri_4_sorulari = [
     "explanation": "2V_a²=64+36−8=92 → V_a=√46."
 },
 {
-    "question": "Ağırlık merkezi kenarortayı hangi oranda böler?",
+    "question": "Bir üçgende ağırlık merkezi, kenarortayı köşeden başlayarak hangi oranda böler?",
     "options": [
         "A) 1:1",
         "B) 1:2",
@@ -70,7 +70,7 @@ window.geometri_4_sorulari = [
         "E) 3:2"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "G, kenarortayı komşu kenara 2:1 oranında böler."
+    "explanation": "Ağırlık merkezi, her kenarortayı köşeden başlayarak 2:1 oranında böler; köşe ile ağırlık merkezi arasında kalan parça, ağırlık merkezi ile kenarın orta noktası arasında kalan parçanın iki katıdır."
 },
 {
     "question": "b=12, c=8, m=6. n=? (açıortay teoremi)",
@@ -85,16 +85,16 @@ window.geometri_4_sorulari = [
     "explanation": "12/8=6/n → n=4."
 },
 {
-    "question": "x²=bc−mn: b=14, c=7, m=4, n=2. x=?",
+    "question": "x²=bc−mn: b=14, c=7, m=6, n=3. x=?",
     "options": [
-        "A) √90",
-        "B) √92",
-        "C) √94",
-        "D) √96",
-        "E) √98"
+        "A) √80",
+        "B) √84",
+        "C) √88",
+        "D) √92",
+        "E) √96"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "x²=98−8=90 → x=√90=3√10."
+    "explanation": "Verilen bağıntıda değerler yerine konur: x² = 14·7 − 6·3 = 98 − 18 = 80. Buradan x = √80 birim bulunur."
 },
 {
     "question": "Kenarortay b=10, c=8, a=6. V_a kaç birimdir?",
@@ -109,16 +109,16 @@ window.geometri_4_sorulari = [
     "explanation": "2V_a²=100+64−18=146 → V_a=√73."
 },
 {
-    "question": "Dik üçgende 5V_a²=V_b²+V_c² bağıntısı hangi kenarortay içindir?",
+    "question": "Bir ABC üçgeninde a, b, c kenarlarına ait kenarortaylar sırasıyla V_a, V_b ve V_c'dir. 5V_a² = V_b² + V_c² bağıntısı aşağıdaki durumların hangisinde geçerlidir?",
     "options": [
-        "A) Hipotenüse karşı",
-        "B) Dik kenara karşı-1",
-        "C) Dik kenara karşı-2",
-        "D) Hepsi",
-        "E) Hiçbiri"
+        "A) a kenarı hipotenüs olduğunda",
+        "B) b kenarı hipotenüs olduğunda",
+        "C) c kenarı hipotenüs olduğunda",
+        "D) Üçgen eşkenar olduğunda",
+        "E) Üçgen geniş açılı olduğunda"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Dik üçgende hipotenüse karşı kenarortay için 5V_a²=V_b²+V_c²."
+    "explanation": "Kenarortay bağıntılarına göre 4V_b² = 2a² + 2c² − b² ve 4V_c² = 2a² + 2b² − c² olduğundan V_b² + V_c² = (4a² + b² + c²)/4 bulunur. Ayrıca 4V_a² = 2b² + 2c² − a²'dir. 5V_a² = V_b² + V_c² eşitliği düzenlendiğinde 10b² + 10c² − 5a² = 4a² + b² + c², yani 9(b² + c²) = 9a² ve a² = b² + c² elde edilir. Bu da a kenarının hipotenüs, A köşesindeki açının dik açı olması demektir; eşkenar veya geniş açılı üçgende bu eşitlik sağlanmaz."
 },
 {
     "question": "b=6, c=9, m=2. n=?",
@@ -133,28 +133,28 @@ window.geometri_4_sorulari = [
     "explanation": "6/9=2/n → n=3."
 },
 {
-    "question": "x²=bc−mn: b=5, c=20, m=4, n=10. x kaç birimdir?",
+    "question": "x²=bc−mn: b=9, c=6, m=4, n=6. x kaç birimdir?",
     "options": [
-        "A) 2√15",
-        "B) √60",
-        "C) 4√5",
-        "D) √65",
-        "E) √70"
+        "A) √26",
+        "B) √30",
+        "C) √34",
+        "D) √38",
+        "E) √42"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "x²=100−40=60 → x=√60=2√15."
+    "explanation": "Verilen bağıntıda değerler yerine konur: x² = 9·6 − 4·6 = 54 − 24 = 30. Buradan x = √30 birim bulunur."
 },
 {
     "question": "Kenarortay a=8, b=6, c=10. V_a kaç birimdir?",
     "options": [
-        "A) 2√13",
-        "B) √52",
+        "A) √52",
+        "B) √50",
         "C) √54",
         "D) √56",
         "E) √58"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "2V_a²=36+100−32=104 → V_a=√52=2√13."
+    "explanation": "Kenarortay bağıntısı 2V_a² = b² + c² − a²/2 biçimindedir. Değerler yerine konduğunda 2V_a² = 36 + 100 − 32 = 104 olur. Buradan V_a² = 52 ve V_a = √52 birim bulunur."
 },
 {
     "question": "b=15, c=10, m=5. n=?",
@@ -169,16 +169,16 @@ window.geometri_4_sorulari = [
     "explanation": "15/10=5/n → n=10/3."
 },
 {
-    "question": "x²=bc−mn: b=8, c=8, m=3, n=5. x=?",
+    "question": "x²=bc−mn: b=10, c=6, m=5, n=3. x=?",
     "options": [
-        "A) √49",
-        "B) √54",
-        "C) √59",
-        "D) √64",
-        "E) √69"
+        "A) √45",
+        "B) √50",
+        "C) √55",
+        "D) √60",
+        "E) √65"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "x²=64−15=49 → x=7=√49."
+    "explanation": "Verilen bağıntıda değerler yerine konur: x² = 10·6 − 5·3 = 60 − 15 = 45. Buradan x = √45 birim bulunur."
 },
 {
     "question": "Kenarortay b=13, c=9, a=10. V_a kaç birimdir?",
@@ -217,16 +217,16 @@ window.geometri_4_sorulari = [
     "explanation": "7/14=3/n → n=6."
 },
 {
-    "question": "x²=bc−mn: b=11, c=11, m=6, n=5. x kaç birimdir?",
+    "question": "x²=bc−mn: b=12, c=10, m=6, n=5. x kaç birimdir?",
     "options": [
-        "A) √91",
+        "A) √90",
         "B) √96",
         "C) √101",
         "D) √106",
         "E) √111"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "x²=121−30=91 → x=√91."
+    "explanation": "Verilen bağıntıda değerler yerine konur: x² = 12·10 − 6·5 = 120 − 30 = 90. Buradan x = √90 birim bulunur."
 },
 {
     "question": "Kenarortay b=5, c=7, a=8. V_a=?",

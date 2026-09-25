@@ -1,7 +1,7 @@
 // sorular/guncel-6.js - Ilkler Dusunce Resim Muzik
 window.guncel_6_sorulari = [
 {
-    "question": "Türkiye'nin ilk kadın pilotu aşağıdakilerden hangisidir?",
+    "question": "Türkiye'nin ilk kadın savaş pilotu aşağıdakilerden hangisidir?",
     "options": [
         "A) Halide Edip",
         "B) Tansu Çiller",
@@ -10,7 +10,7 @@ window.guncel_6_sorulari = [
         "E) Nene Hatun"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "Sabiha Gökçen."
+    "explanation": "Sabiha Gökçen, 1936'da askerî pilotluk eğitimini tamamlayarak Türkiye'nin ilk kadın savaş pilotu olmuştur. Türkiye'de pilot lisansı alan ilk kadın ise 1933'te Bedriye Tahir Gökmen'dir."
 },
 {
     "question": "Türkiye'nin ilk kadın başbakanı aşağıdakilerden hangisidir?",
@@ -19,10 +19,10 @@ window.guncel_6_sorulari = [
         "B) Tansu Çiller",
         "C) Lale Aytaman",
         "D) Meral Akşener",
-        "E) Tansu Çiller dışındaki isimler bu unvanı taşımaz."
+        "E) Nimet Baş"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Tansu Çiller."
+    "explanation": "Tansu Çiller, 1993-1996 yılları arasında görev yaparak Türkiye'nin ilk ve tek kadın başbakanı olmuştur."
 },
 {
     "question": "Türkiye'nin ilk kadın valisi kimdir ve hangi ilde görev yapmıştır?",
@@ -157,7 +157,7 @@ window.guncel_6_sorulari = [
     "explanation": "İbrahim Çallı."
 },
 {
-    "question": "Paris merkezli sanat hayatıyla tanınan ressam aşağıdakilerden hangisidir?",
+    "question": "Sanat yaşamının büyük bölümünü Paris'te sürdüren ve Fransa'da yaşamını yitiren ressam aşağıdakilerden hangisidir?",
     "options": [
         "A) Itri",
         "B) Osman Hamdi Bey",
@@ -166,7 +166,7 @@ window.guncel_6_sorulari = [
         "E) Fikret Mualla"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Fikret Mualla."
+    "explanation": "Fikret Mualla, 1939'da gittiği Fransa'da sanat yaşamının büyük bölümünü Paris'te sürdürmüş ve 1967'de Fransa'da yaşamını yitirmiştir. Osman Hamdi Bey, Şeker Ahmet Paşa ve İbrahim Çallı Paris'te eğitim görmüş olmakla birlikte sanat yaşamlarını İstanbul'da sürdürmüştür; Itri ise ressam değil, klasik Türk müziği bestecisidir."
 },
 {
     "question": "Türk klasik musikisinin önemli isimlerinden Itri ve Dede Efendi hangi alanla ilişkilidir?",
@@ -207,7 +207,7 @@ window.guncel_6_sorulari = [
 {
     "question": "Aşağıdaki ilkler eşleştirmelerinden hangisi yanlıştır?",
     "options": [
-        "A) İlk kadın pilot — Sabiha Gökçen",
+        "A) İlk kadın savaş pilotu — Sabiha Gökçen",
         "B) İlk kadın başbakan — Tansu Çiller",
         "C) İlk kadın vali — Lale Aytaman",
         "D) İlk Türk astronot — Alper Gezeravcı",
@@ -219,25 +219,25 @@ window.guncel_6_sorulari = [
 {
     "question": "Bedri Rahmi Eyüboğlu aşağıdaki alanlardan hangilerinde eser vermiştir?",
     "options": [
-        "A) Yalnız astronomi",
+        "A) Heykel ve mimarlık",
         "B) Resim ve şiir",
-        "C) Yalnız tıp",
-        "D) Yalnız ekonomi",
-        "E) Yalnız hukuk"
+        "C) Roman ve tiyatro",
+        "D) Minyatür ve hat",
+        "E) Fotoğraf ve sinema"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Resim ve şiir."
+    "explanation": "Bedri Rahmi Eyüboğlu hem ressam hem şairdir; Anadolu halk sanatından beslenen resimlerinin yanı sıra 'Karadut' gibi şiir kitapları yayımlamıştır."
 },
 {
     "question": "Şeker Ahmet Paşa aşağıdakilerden hangisiyle tanınır?",
     "options": [
-        "A) KAAN tasarımı",
-        "B) Nobel kimya ödülü",
-        "C) NATO genel sekreterliği",
-        "D) İlk kadın vali olması",
+        "A) Sanayi-i Nefise Mektebi'ni kurması",
+        "B) 'Kaplumbağa Terbiyecisi' tablosunun ressamı olması",
+        "C) 1914 (Çallı) Kuşağı'nın öncüsü olması",
+        "D) Türk resminde soyut sanatın kurucusu olması",
         "E) Türk resim sanatının öncülerinden olması"
     ],
     "correctAnswerIndex": 4,
-    "explanation": "Resim öncülerindendir."
+    "explanation": "Şeker Ahmet Paşa, Paris'te eğitim gören ve Türk resminde Batılı anlamda yağlıboya resmin öncülerinden sayılan sanatçıdır; 1873'te İstanbul'da ilk resim sergisini düzenlemiştir. Sanayi-i Nefise Mektebi'ni kuran ve 'Kaplumbağa Terbiyecisi'ni yapan ise Osman Hamdi Bey'dir."
 }
 ];

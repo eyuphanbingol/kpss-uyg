@@ -85,16 +85,16 @@ window.geometri_9_sorulari = [
     "explanation": "A = 7² = 49 cm²."
 },
 {
-    "question": "Kenarları 5 birim olan eşkenar dörtgende köşegenler 6 ve 8 ise e²+f² kaçtır?",
+    "question": "Bir kenarının uzunluğu 5 birim olan eşkenar dörtgenin köşegenlerinden biri 6 birim ise diğer köşegeni kaç birimdir?",
     "options": [
-        "A) 96",
-        "B) 98",
-        "C) 100",
-        "D) 102",
-        "E) 104"
+        "A) 6",
+        "B) 7",
+        "C) 8",
+        "D) 9",
+        "E) 10"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "36+64=100=4·25=4a²."
+    "explanation": "Eşkenar dörtgenin köşegenleri birbirini dik olarak ortalar. Verilen köşegenin yarısı 6 : 2 = 3 birimdir. Kenar 5 birim olduğundan oluşan dik üçgende diğer yarım köşegen √(5² − 3²) = 4 birim bulunur; diğer köşegen 2·4 = 8 birimdir."
 },
 {
     "question": "Kenarları 5 birim olan karenin bir köşegeni kaç birimdir?",
@@ -133,16 +133,16 @@ window.geometri_9_sorulari = [
     "explanation": "Komşu açılar bütünler açı: toplam 180°."
 },
 {
-    "question": "Kenarı 13 cm, köşegenleri 10 cm ve 24 cm olan eşkenar dörtgende 10²+24² kaçtır?",
+    "question": "Bir kenarının uzunluğu 13 cm olan eşkenar dörtgenin köşegenlerinden biri 10 cm ise diğer köşegeni kaç cm'dir?",
     "options": [
-        "A) 576",
-        "B) 625",
-        "C) 676",
-        "D) 729",
-        "E) 784"
+        "A) 18",
+        "B) 20",
+        "C) 22",
+        "D) 24",
+        "E) 26"
     ],
-    "correctAnswerIndex": 2,
-    "explanation": "100+576=676=4·169=4·13²."
+    "correctAnswerIndex": 3,
+    "explanation": "Eşkenar dörtgenin köşegenleri birbirini dik ortaladığından yarım köşegenlerden biri 10 : 2 = 5 cm'dir. Kenar 13 cm olduğundan diğer yarım köşegen √(13² − 5²) = 12 cm olur; diğer köşegen 2·12 = 24 cm'dir."
 },
 {
     "question": "Köşegenleri 12 cm ve 5 cm olan deltoidin alanı kaç cm²'dir?",

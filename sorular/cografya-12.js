@@ -32,9 +32,15 @@ window.cografya_12_sorulari = [
     },
     {
         question: "Temmuz ayında Türkiye'nin en sıcak yerinin Güneydoğu Anadolu olmasının nedenleri arasında aşağıdakilerden hangisi GÖSTERİLEMEZ?",
-        options: ["A) Enlem", "B) Karasallık", "C) Sıcak rüzgarlar (Samyeli/Kesişleme)", "D) Yükselti", "E) Nem oranının düşük olması"],
+        options: [
+        "A) Enlem",
+        "B) Karasallık",
+        "C) Sıcak rüzgarlar (Samyeli/Kesişleme)",
+        "D) Yükseltinin fazla olması",
+        "E) Nem oranının düşük olması"
+        ],
         correctAnswerIndex: 3,
-        explanation: "Temmuz ayında Güneydoğu Anadolu'nun en sıcak olmasının nedenleri enlem, karasallık ve sıcak rüzgarlardır (Samyeli/Kesişleme); yükselti bu durumun nedeni değildir."
+        explanation: "Temmuz ayında Güneydoğu Anadolu'nun Türkiye'nin en sıcak yeri olmasında enlemin düşük olması, karasallık, Basra alçak basıncına bağlı sıcak rüzgârlar (samyeli/kesişleme) ve nem oranının azlığı etkilidir. Bölgenin yükseltisi İç ve Doğu Anadolu'ya göre azdır; bu nedenle 'yükseltinin fazla olması' bir neden olarak gösterilemez."
     },
     {
         question: "Temmuz ayında Türkiye'nin en soğuk yeri olan Doğu Anadolu'nun (Erzurum-Kars) bu özelliğinin temel nedeni aşağıdakilerden hangisidir?",
@@ -104,7 +110,13 @@ window.cografya_12_sorulari = [
     },
     {
         question: "Rüzgar frekansı (yönü) ile ilgili aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
-        options: ["A) İstanbul ve Çanakkale Boğazı – güneybatıdan kuzeydoğuya", "B) Ege'nin grabenleri – batıdan doğuya", "C) İç Anadolu – her yönden eşit eser", "D) Karadeniz – kuzeyden eser, dağlar keser", "E) Akdeniz – kuzeyden eser, içeriye ulaşır"],
+        options: [
+        "A) İstanbul ve Çanakkale Boğazı – kuzeydoğudan güneybatıya",
+        "B) Ege'nin grabenleri – batıdan doğuya",
+        "C) İç Anadolu – her yönden eşit eser",
+        "D) Karadeniz – kuzeyden eser, dağlar keser",
+        "E) Akdeniz – kuzeyden eser, içeriye ulaşır"
+        ],
         correctAnswerIndex: 4,
         explanation: "Akdeniz'de rüzgar güneyden eser ve dağlar tarafından kesilerek içeriye ulaşamaz; 'kuzeyden eser, içeriye ulaşır' ifadesi yanlıştır."
     },
@@ -127,10 +139,10 @@ window.cografya_12_sorulari = [
         explanation: "Maksimum nem, havanın sıcaklığına bağlıdır; sıcaklık arttıkça havanın alabileceği nem miktarı da artar. Bu nedenle sıcak ve kurak Güneydoğu Anadolu'da maksimum nem en yüksektir."
     },
     {
-        question: "Havadaki nemin %100'e ulaşması durumunu ifade eden ve en yüksek değerine Karadeniz'de ulaşan nem türü aşağıdakilerden hangisidir?",
+        question: "Havadaki mevcut nem miktarının, o sıcaklıkta havanın taşıyabileceği en fazla nem miktarına oranını yüzde olarak ifade eden ve Türkiye'de en yüksek değerine Karadeniz'de ulaşan nem türü aşağıdakilerden hangisidir?",
         options: ["A) Mutlak nem", "B) Maksimum nem", "C) Bağıl nem", "D) Konveksiyonel nem", "E) Orografik nem"],
         correctAnswerIndex: 2,
-        explanation: "Havadaki nemin %100 olması durumu bağıl nemdir; Türkiye'de en yüksek bağıl nem Karadeniz'de görülür."
+        explanation: "Bağıl (nispi) nem, havadaki mevcut nemin o sıcaklıkta taşınabilecek en fazla neme oranıdır ve yüzde ile gösterilir; oranın %100 olması havanın doyma noktasına ulaştığını gösterir. Türkiye'de deniz etkisi ve bol yağış nedeniyle en yüksek bağıl nem değerleri Karadeniz kıyılarında görülür."
     },
     {
         question: "Yağışın oluşabilmesi için temel şart aşağıdakilerden hangisidir?",
@@ -164,9 +176,15 @@ window.cografya_12_sorulari = [
     },
     {
         question: "Aşağıdakilerden hangisi Türkiye'de en az yağış alan yerler arasında GÖSTERİLEMEZ?",
-        options: ["A) Tuz Gölü çevresi", "B) Iğdır", "C) Çukurova", "D) Rize kıyıları", "E) Ergene Ovası"],
+        options: [
+        "A) Tuz Gölü çevresi",
+        "B) Iğdır",
+        "C) Malatya-Elazığ çevresi",
+        "D) Rize kıyıları",
+        "E) Ergene Ovası"
+        ],
         correctAnswerIndex: 3,
-        explanation: "Rize, Türkiye'nin en çok yağış alan yerlerinden biridir. Tuz Gölü, Iğdır, Çukurova ve Ergene Ovası ise en az yağış alan yerler arasındadır."
+        explanation: "Rize ve çevresi, Türkiye'nin en çok yağış alan yöresidir; bu nedenle en az yağış alan yerler arasında gösterilemez. Tuz Gölü çevresi, Iğdır, Malatya-Elazığ çevresi ve Ergene Ovası ise etraflarındaki yüksek alanların nemli hava kütlelerini engellemesi nedeniyle az yağış alan yerlerdendir."
     },
     {
         question: "Bir merkezde yağışın her ay 50 mm'nin üzerinde olması durumunda, o merkezin yağış rejimi için ne söylenebilir?",
@@ -176,9 +194,15 @@ window.cografya_12_sorulari = [
     },
     {
         question: "Yağışın mevsimlere göre dağılışıyla ilgili aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
-        options: ["A) Afyon'dan Erzurum'a kadar – ilkbahar", "B) Erzurum'dan Trabzon'a kadar – yaz", "C) Trabzon'dan İstanbul'a kadar – sonbahar", "D) İstanbul'dan Diyarbakır'a kadar – yaz", "E) İstanbul'dan Diyarbakır'a kadar – kış"],
-        correctAnswerIndex: 4,
-        explanation: "İstanbul'dan Diyarbakır'a kadar olan hat üzerinde en yağışlı mevsim yazdır; 'kış' seçeneği notla çelişir ve yanlıştır."
+        options: [
+        "A) Afyon'dan Erzurum'a kadar – ilkbahar",
+        "B) Erzurum'dan Trabzon'a kadar – yaz",
+        "C) Trabzon'dan İstanbul'a kadar – sonbahar",
+        "D) İstanbul'dan Diyarbakır'a kadar – yaz",
+        "E) Akdeniz kıyıları – kış"
+        ],
+        correctAnswerIndex: 3,
+        explanation: "İstanbul'dan Diyarbakır'a uzanan hat üzerindeki Ege, Akdeniz ve Güneydoğu Anadolu kesimlerinde yağışlar kışın gezici cephelerle düşer; yaz mevsimi ise Basra alçak basıncının etkisiyle bu kuşağın en kurak dönemidir. Bu nedenle söz konusu hattı yaz yağışlı gösteren D eşleştirmesi yanlıştır."
     },
     {
         question: "Aşağıdaki iklim tipi–en yağışlı mevsim eşleştirmelerinden hangisi YANLIŞTIR?",
@@ -236,7 +260,13 @@ window.cografya_12_sorulari = [
     },
     {
         question: "Artvin'de (Çoruh Vadisi'nde) zeytin yetişmesinin nedeni aşağıdakilerden hangisidir?",
-        options: ["A) Yaz yağışlarının fazla olması", "B) Kışların ılık, yazların kurak geçmesi", "C) Fön rüzgarının etkisi", "D) Deniz seviyesinde bulunması", "E) Bağıl nemin çok yüksek olması"],
+        options: [
+        "A) Yaz yağışlarının fazla olması",
+        "B) Kışların ılık, yazların kurak geçmesi",
+        "C) Kar yağışı ve donlu gün sayısının fazla olması",
+        "D) Deniz seviyesinde bulunması",
+        "E) Bağıl nemin çok yüksek olması"
+        ],
         correctAnswerIndex: 1,
         explanation: "Çoruh Vadisi'nde (Artvin) kışların ılık, yazların kurak geçmesi zeytin yetişmesine imkan sağlamıştır; bu vadi konum itibarıyla Akdeniz iklimine benzer özellik gösterir."
     },

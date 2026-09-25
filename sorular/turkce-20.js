@@ -6,7 +6,8 @@ window.turkce_20_sorulari = [
         "A) Özne eksikliği",
         "B) Tamlama yanlışlığı",
         "C) Çatı uyuşmazlığı",
-        "D) Gereksiz sözcük kullanımı"
+        "D) Gereksiz sözcük kullanımı",
+        "E) Deyim yanlışlığı"
     ],
     "correctAnswerIndex": 3,
     "explanation": "anı = hatıra, biri gereksiz."
@@ -14,12 +15,13 @@ window.turkce_20_sorulari = [
 {
     "question": "“Onunla bu konuda hep karşılıklı tartışırdık.” cümlesindeki bozukluk hangi türdedir?",
     "options": [
-        "A) Gereksiz sözcük",
-        "B) Özne eksikliği",
-        "C) Ek yanlışlığı",
-        "D) Sözcük yanlışlığı"
+        "A) Tamlama yanlışlığı",
+        "B) Gereksiz sözcük",
+        "C) Özne eksikliği",
+        "D) Ek yanlışlığı",
+        "E) Sözcük yanlışlığı"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "tartışmak zaten karşılıklıdır."
 },
 {
@@ -28,7 +30,8 @@ window.turkce_20_sorulari = [
         "A) Anlamca çelişen sözcükler",
         "B) Öge eksikliği",
         "C) Tamlama yanlışlığı",
-        "D) Çatı uyuşmazlığı"
+        "D) Gereksiz sözcük",
+        "E) Çatı uyuşmazlığı"
     ],
     "correctAnswerIndex": 0,
     "explanation": "kesinlikle ile tahmin çelişir."
@@ -36,21 +39,23 @@ window.turkce_20_sorulari = [
 {
     "question": "“Köydeki yaşayan herkes İstanbul’a gider.” cümlesinde hangi bozukluk vardır?",
     "options": [
-        "A) Gereksiz sözcük",
-        "B) Mantık hatası",
-        "C) Sözcük yanlışlığı",
-        "D) Ek yanlışlığı"
+        "A) Çatı uyuşmazlığı",
+        "B) Gereksiz sözcük",
+        "C) Mantık hatası",
+        "D) Sözcük yanlışlığı",
+        "E) Ek yanlışlığı"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "köyde yaşayan / köydeki insanlar."
 },
 {
     "question": "“Birçok değerli bilim insanları katıldı.” cümlesindeki bozukluk nedir?",
     "options": [
         "A) Ek yanlışlığı",
-        "B) Özne eksikliği",
-        "C) Çatı uyuşmazlığı",
-        "D) Sözcük yanlışlığı"
+        "B) Deyim yanlışlığı",
+        "C) Özne eksikliği",
+        "D) Çatı uyuşmazlığı",
+        "E) Sözcük yanlışlığı"
     ],
     "correctAnswerIndex": 0,
     "explanation": "birçok + tekil: bilim insanı."
@@ -61,18 +66,20 @@ window.turkce_20_sorulari = [
         "A) Gereksiz sözcük",
         "B) Ek eksikliği",
         "C) Mantık ve sıralama hatası",
-        "D) Özne-yüklem uyumsuzluğu"
+        "D) Deyim yanlışlığı",
+        "E) Özne-yüklem uyumsuzluğu"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "Önce İngilizce, sonra Türkçe olmalı."
+    "explanation": "“Hatta ... bile” yapısı, kendisinden sonra gelen ögenin daha beklenmedik ya da daha ileri bir durum olmasını gerektirir. Üstelik Romeo ve Juliet özgün dili İngilizce olan bir eserdir; İngilizceye çevrilmesinden söz edilmesi mantık hatasıdır. Doğrusu: “Romeo ve Juliet birçok dile, hatta Türkçeye bile çevrilmiş.”"
 },
 {
     "question": "“Evin bahçesine birkaç gül fidanı ektik.” cümlesinde “ektik” yerine “diktik” denmesi gerektiğinde hangi bozukluk söz konusudur?",
     "options": [
         "A) Sözcüğün yanlış anlamda kullanılması",
         "B) Özne eksikliği",
-        "C) Gereksiz sözcük",
-        "D) Tamlama yanlışlığı"
+        "C) Deyim yanlışlığı",
+        "D) Gereksiz sözcük",
+        "E) Tamlama yanlışlığı"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Fidan dikilir, tohum ekilir."
@@ -83,7 +90,8 @@ window.turkce_20_sorulari = [
         "A) Noktalama",
         "B) Karşılaştırma",
         "C) Şahıs",
-        "D) Öge"
+        "D) Ek yanlışlığı",
+        "E) Öge"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Kimin gitmeyeceği belirsiz."
@@ -94,10 +102,11 @@ window.turkce_20_sorulari = [
         "A) Şahıs",
         "B) Noktalama",
         "C) Karşılaştırma",
-        "D) Ek"
+        "D) Tamlama yanlışlığı",
+        "E) Ek yanlışlığı"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Genç, adama / Genç adama."
+    "explanation": "Virgülün yerine göre cümle iki ayrı anlama gelir: “Genç, adama başından geçenleri anlattı.” (anlatan kişi gençtir) ya da “Genç adama başından geçenleri anlattı.” (dinleyen kişi genç adamdır). Belirsizlik noktalama eksikliğinden kaynaklanır."
 },
 {
     "question": "“O, annesini kardeşinden çok sever.” cümlesindeki belirsizlik hangi yöndedir?",
@@ -105,7 +114,8 @@ window.turkce_20_sorulari = [
         "A) Şahıs",
         "B) Noktalama",
         "C) Karşılaştırma",
-        "D) Deyim"
+        "D) Ek yanlışlığı",
+        "E) Deyim"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Kimi daha çok sevdiği belirsiz."
@@ -113,34 +123,37 @@ window.turkce_20_sorulari = [
 {
     "question": "“Bu işi de ağzına gözüne bulaştırdın.” cümlesindeki bozukluk nedir?",
     "options": [
-        "A) Deyim yanlışlığı",
-        "B) Özne eksikliği",
-        "C) Ek eksikliği",
-        "D) Mantık hatası"
+        "A) Çatı uyuşmazlığı",
+        "B) Deyim yanlışlığı",
+        "C) Özne eksikliği",
+        "D) Ek eksikliği",
+        "E) Mantık hatası"
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "Doğrusu ağzına yüzüne bulaştırmak."
 },
 {
-    "question": "“Ağaç dalıyla gürler.” yerine “Ağaç yaprağıyla gürler.” denmesi hangi bozukluktur?",
+    "question": "“Ağaç dalıyla gürler.” biçimindeki kullanımda görülen anlatım bozukluğu aşağıdakilerden hangisidir?",
     "options": [
-        "A) Atasözü/deyim kalıbı yanlışlığı",
-        "B) Tamlama yanlışlığı",
-        "C) Özne-yüklem uyumsuzluğu",
-        "D) Sözcük gereksizliği"
+        "A) Ek yanlışlığı",
+        "B) Atasözü kalıbının değiştirilmesi",
+        "C) Tamlama yanlışlığı",
+        "D) Özne-yüklem uyumsuzluğu",
+        "E) Sözcük gereksizliği"
     ],
-    "correctAnswerIndex": 0,
-    "explanation": "Deyim kalıbı değiştirilemez."
+    "correctAnswerIndex": 1,
+    "explanation": "Atasözleri kalıplaşmış sözlerdir; sözcükleri değiştirilemez, yerlerine eş anlamlıları getirilemez. Bu sözün doğru biçimi “Ağaç yaprağıyla gürler.”dir."
 },
 {
     "question": "“Çocuk, sessizce sırasına oturdu.” cümlesinde özne-yüklem açısından hangisi doğrudur?",
     "options": [
-        "A) Uyum vardır.",
-        "B) Tekillik-çoğulluk uyuşmazlığı vardır.",
-        "C) Kişi uyuşmazlığı vardır.",
-        "D) Olumluluk uyuşmazlığı vardır."
+        "A) Çatı uyuşmazlığı vardır.",
+        "B) Uyum vardır.",
+        "C) Tekillik-çoğulluk uyuşmazlığı vardır.",
+        "D) Kişi uyuşmazlığı vardır.",
+        "E) Olumluluk uyuşmazlığı vardır."
     ],
-    "correctAnswerIndex": 0,
+    "correctAnswerIndex": 1,
     "explanation": "Tekil özne, tekil yüklem."
 },
 {
@@ -148,8 +161,9 @@ window.turkce_20_sorulari = [
     "options": [
         "A) Yalnızca çoğul",
         "B) Tekil veya çoğul",
-        "C) Yalnızca tekil",
-        "D) Olumsuz"
+        "C) Yalnızca şartlı",
+        "D) Yalnızca tekil",
+        "E) Olumsuz"
     ],
     "correctAnswerIndex": 1,
     "explanation": "İnsan çoğul öznede her iki çekim de olur."
@@ -157,12 +171,13 @@ window.turkce_20_sorulari = [
 {
     "question": "İnsan dışındaki çoğul öznelerde yüklem genellikle nasıl olur?",
     "options": [
-        "A) Çoğul",
-        "B) Tekil",
-        "C) Şartlı",
-        "D) Olumsuz"
+        "A) Soru biçiminde",
+        "B) Çoğul",
+        "C) Tekil",
+        "D) Şartlı",
+        "E) Olumsuz"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Kediler uyudu (uyudular ❌)."
 },
 {
@@ -171,7 +186,8 @@ window.turkce_20_sorulari = [
         "A) Topluluk/belgisiz özne-yüklem uyumsuzluğu",
         "B) Nesne eksikliği",
         "C) Tamlama yanlışlığı",
-        "D) Çatı uyuşmazlığı"
+        "D) Gereksiz sözcük kullanımı",
+        "E) Çatı uyuşmazlığı"
     ],
     "correctAnswerIndex": 0,
     "explanation": "herkes + karşıladı (tekil)."
@@ -182,7 +198,8 @@ window.turkce_20_sorulari = [
         "A) Görevlisin",
         "B) Görevlidir",
         "C) Görevliyiz",
-        "D) Görevliler"
+        "D) Görevlidirler",
+        "E) Görevliler"
     ],
     "correctAnswerIndex": 2,
     "explanation": "ben ve sen → biz."
@@ -193,7 +210,8 @@ window.turkce_20_sorulari = [
         "A) Hiç kimse kitap okudu.",
         "B) Hiç kimse kitap okumadı.",
         "C) Hiç kimse kitap okurlar.",
-        "D) Hiç kimse kitap okumuş."
+        "D) Hiç kimse kitap okumuş.",
+        "E) Hiç kimse kitap okumadılar."
     ],
     "correctAnswerIndex": 1,
     "explanation": "hiç kimse olumsuz yüklem ister."
@@ -202,11 +220,12 @@ window.turkce_20_sorulari = [
     "question": "“Kızın çantası çalındı, polisten yardım istedi.” cümlesindeki bozukluğu gidermek için ne yapılmalıdır?",
     "options": [
         "A) Nesne eklenmeli.",
-        "B) Özne eklenmeli.",
-        "C) Yüklem çıkarılmalı.",
-        "D) Zarf eklenmeli."
+        "B) Tümleç eklenmeli.",
+        "C) Özne eklenmeli.",
+        "D) Yüklem çıkarılmalı.",
+        "E) Zarf eklenmeli."
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "İkinci yüklemin öznesi (kız) belirtilmeli."
 },
 {
@@ -215,21 +234,23 @@ window.turkce_20_sorulari = [
         "A) Özne",
         "B) Nesne",
         "C) Tümleç",
-        "D) Yüklem"
+        "D) Ara söz",
+        "E) Yüklem"
     ],
     "correctAnswerIndex": 2,
     "explanation": "gözü gibi bakmak -e halini ister: torunlarına."
 },
 {
-    "question": "“Birbirine yardım etmek” ifadesindeki bozukluk nedir?",
+    "question": "“Birbirleriyle yardımlaşmak” ifadesindeki bozukluk nedir?",
     "options": [
         "A) Çelişki",
-        "B) Belirsizlik",
-        "C) Ek yanlışlığı",
-        "D) Gereksiz sözcük"
+        "B) Deyim yanlışlığı",
+        "C) Belirsizlik",
+        "D) Ek yanlışlığı",
+        "E) Gereksiz sözcük"
     ],
-    "correctAnswerIndex": 3,
-    "explanation": "yardım etmek zaten birbirine anlamı taşır."
+    "correctAnswerIndex": 4,
+    "explanation": "“Yardımlaşmak” işteş çatılı bir eylemdir ve karşılıklılık anlamını kendi içinde taşır; bu nedenle “birbirleriyle” sözcüğü gereksiz kullanılmıştır."
 },
 {
     "question": "“Yaklaşık 100 kişi tam olarak geldi.” cümlesindeki bozukluk nedir?",
@@ -237,7 +258,8 @@ window.turkce_20_sorulari = [
         "A) Gereksiz sözcük",
         "B) Özne eksikliği",
         "C) Anlamca çelişen sözcükler",
-        "D) Deyim yanlışlığı"
+        "D) Ek yanlışlığı",
+        "E) Deyim yanlışlığı"
     ],
     "correctAnswerIndex": 2,
     "explanation": "yaklaşık ile tam çelişir."
@@ -248,7 +270,8 @@ window.turkce_20_sorulari = [
         "A) Gereksiz sözcük",
         "B) Özne-yüklem uyumsuzluğu",
         "C) Belirsizlik",
-        "D) Ek yanlışlığı"
+        "D) Deyim yanlışlığı",
+        "E) Ek yanlışlığı"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Tekil özne tekil yüklem ister: Ali geldi."
@@ -257,11 +280,12 @@ window.turkce_20_sorulari = [
     "question": "“Kediler uyudular.” cümlesindeki bozukluk nedir?",
     "options": [
         "A) Gereksiz sözcük",
-        "B) Deyim yanlışlığı",
-        "C) Belirsizlik",
-        "D) İnsan dışı çoğul özne-yüklem uyumsuzluğu"
+        "B) Tamlama yanlışlığı",
+        "C) Deyim yanlışlığı",
+        "D) Belirsizlik",
+        "E) İnsan dışı çoğul özne-yüklem uyumsuzluğu"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "İnsan dışı çoğul özne tekil yüklem alır: uyudu."
 },
 {
@@ -270,7 +294,8 @@ window.turkce_20_sorulari = [
         "A) Özne eksikliği",
         "B) Ek yanlışlığı",
         "C) Çelişki",
-        "D) Deyim kalıbı bozulması"
+        "D) Deyim kalıbı bozulması",
+        "E) Gereksiz sözcük"
     ],
     "correctAnswerIndex": 3,
     "explanation": "Doğrusu etekleri zil çalmak."
@@ -279,22 +304,24 @@ window.turkce_20_sorulari = [
     "question": "Anlatım bozukluğu hangi durumda söz konusudur?",
     "options": [
         "A) Cümle uzun olduğunda",
-        "B) Anlamı bozan, belirsizleştiren veya dil bilgisine aykırı kullanımda",
-        "C) Özel ad geçtiğinde",
-        "D) Soru cümlesi olduğunda"
+        "B) Devrik cümle kurulduğunda",
+        "C) Anlamı bozan, belirsizleştiren veya dil bilgisine aykırı kullanımda",
+        "D) Özel ad geçtiğinde",
+        "E) Soru cümlesi olduğunda"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Anlam, belirsizlik veya dil bilgisi ihlali."
 },
 {
     "question": "Anlatım bozuklukları kaç ana grupta incelenir?",
     "options": [
         "A) Bir",
-        "B) Dört",
-        "C) Üç",
-        "D) İki"
+        "B) Beş",
+        "C) Dört",
+        "D) Üç",
+        "E) İki"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Anlama dayalı ve dil bilgisine dayalı."
 },
 {
@@ -303,10 +330,11 @@ window.turkce_20_sorulari = [
         "A) Köydeki yaşayan insanlar",
         "B) Yaşayan köydeki insanlar",
         "C) Köydeki insanlar yaşayan",
-        "D) Köyde yaşayan insanlar"
+        "D) Köyde yaşayan insanlar",
+        "E) Köydekiler yaşayan insanlar"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "Köydeki + yaşayan ikisi de sıfat; biri gereksiz."
+    "explanation": "“Köydeki” sözündeki -ki eki gereksizdir; adı niteleme işini zaten “yaşayan” sıfat-fiili yapmaktadır. Doğrusu “köyde yaşayan insanlar” biçimindedir."
 },
 {
     "question": "“Birçok insanları geldi.” cümlesindeki sorun nedir?",
@@ -314,21 +342,23 @@ window.turkce_20_sorulari = [
         "A) Gereksiz -ları eki",
         "B) Özne eksikliği",
         "C) Deyim yanlışlığı",
-        "D) Noktalama"
+        "D) Noktalama",
+        "E) Çatı uyuşmazlığı"
     ],
     "correctAnswerIndex": 0,
     "explanation": "birçok zaten çokluk bildirir, -ları gereksiz."
 },
 {
-    "question": "“Ali okula gitti, ders çalıştı.” cümlesindeki bozukluk nedir?",
+    "question": "“Ali’nin bisikleti çalındı, hemen karakola gitti.” cümlesindeki bozukluk nedir?",
     "options": [
         "A) Gereksiz sözcük",
         "B) Ortak öge (özne) eksikliği",
         "C) Çelişki",
-        "D) Deyim yanlışlığı"
+        "D) Deyim yanlışlığı",
+        "E) Tamlama yanlışlığı"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "İkinci cümlede özne (Ali/o) belirtilmeli."
+    "explanation": "Birinci yüklemin öznesi “bisikleti”, ikinci yüklemin öznesi ise “Ali”dir. Farklı özneler ortakmış gibi kullanıldığından özne eksikliği vardır. Doğrusu: “Ali’nin bisikleti çalındı, Ali hemen karakola gitti.”"
 },
 {
     "question": "“Genç, adama baktı.” cümlesinde virgül hangi belirsizliği giderir?",
@@ -336,9 +366,10 @@ window.turkce_20_sorulari = [
         "A) Şahıs",
         "B) Özne-yüklem",
         "C) Karşılaştırma",
-        "D) Noktalama/kelime ayrımı"
+        "D) Deyim yanlışlığı",
+        "E) Noktalama/kelime ayrımı"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Genç adama / Genç, adama ayrımı."
 },
 {
@@ -347,7 +378,8 @@ window.turkce_20_sorulari = [
         "A) Yanlış",
         "B) Belirsiz",
         "C) Doğru (insan çoğul özne)",
-        "D) Deyim bozukluğu"
+        "D) Ek yanlışlığı vardır",
+        "E) Deyim bozukluğu"
     ],
     "correctAnswerIndex": 2,
     "explanation": "İnsan çoğul özne çoğul yüklem alabilir."
@@ -358,7 +390,8 @@ window.turkce_20_sorulari = [
         "A) Yanlış",
         "B) Doğru (insan çoğul özne)",
         "C) Belirsiz",
-        "D) Deyim bozukluğu"
+        "D) Ek yanlışlığı vardır",
+        "E) Deyim bozukluğu"
     ],
     "correctAnswerIndex": 1,
     "explanation": "İnsan çoğul özne tekil yüklem de alabilir."
@@ -368,21 +401,23 @@ window.turkce_20_sorulari = [
     "options": [
         "A) Gereksiz sözcük vardır",
         "B) Çelişki vardır",
-        "C) Hiç kimse tekil yüklem + olumsuz yüklem uyar",
-        "D) Deyim bozulmuştur"
+        "C) Devrik cümledir",
+        "D) Hiç kimse tekil yüklem + olumsuz yüklem uyar",
+        "E) Deyim bozulmuştur"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Hiç kimse → tekil; olumsuz yüklem gerekir."
 },
 {
-    "question": "“Ali okula gitti, o ders çalıştı.” cümlesinde “o” hangi bozukluğu giderir?",
+    "question": "“Ayşe’nin arabası bozuldu, o işe otobüsle gitti.” cümlesinde “o” sözcüğü hangi bozukluğu gidermiştir?",
     "options": [
         "A) Gereksiz sözcük",
         "B) Ek yanlışlığı",
-        "C) Çelişki",
-        "D) Ortak öge eksikliği"
+        "C) Deyim yanlışlığı",
+        "D) Çelişki",
+        "E) Ortak öge eksikliği"
     ],
-    "correctAnswerIndex": 3,
-    "explanation": "İkinci cümlede özne tekrarı ortak öge eksikliğini giderir."
+    "correctAnswerIndex": 4,
+    "explanation": "Birinci yüklemin öznesi “arabası”, ikinci yüklemin öznesi ise Ayşe’dir. “O” sözcüğü kullanılmazsa ikinci yüklemin öznesi eksik kalır; bu sözcük söz konusu özne eksikliğini giderir."
 }
 ];

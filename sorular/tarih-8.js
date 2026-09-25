@@ -93,7 +93,7 @@ window.tarih_8_sorulari = [
     },
     {
         id: 8,
-        question: "Osmanlı Devleti'nin Batı'nın üstünlüğünü ilk kez resmen kabul ettiği antlaşma aşağıdakilerden hangisidir?",
+        question: "Osmanlı Devleti'nin Batı'yı örnek alan ıslahat anlayışına yönelmesine ve ardından Lale Devri'nin yaşanmasına ortam hazırlayan antlaşma aşağıdakilerden hangisidir?",
         options: [
             "A) Belgrad",
             "B) Pasarofça",
@@ -102,7 +102,7 @@ window.tarih_8_sorulari = [
             "E) Yaş"
         ],
         correctAnswerIndex: 1,
-        explanation: "1718 Pasarofça Antlaşması ile Osmanlı Devleti Batı'nın üstünlüğünü kabul etmiş ve Lale Devri başlamıştır."
+        explanation: "1718 Pasarofça Antlaşması'ndan sonra Osmanlı Devleti Batı'nın üstünlüğünü kabul ederek Avrupa'yı örnek alan ıslahatlara yönelmiş ve 1718-1730 yılları arasındaki Lale Devri yaşanmıştır. Karlofça (1699) ise Osmanlı'nın Batı karşısında büyük ölçüde toprak kaybettiği ilk antlaşmadır."
     },
     {
         id: 9,
@@ -278,13 +278,13 @@ window.tarih_8_sorulari = [
         question: "Aşağıdakilerden hangisi XVIII. yüzyıl Osmanlı ıslahatlarının genel özelliklerinden biri değildir?",
         options: [
             "A) Hukuk dışında birçok alanda yenilik yapılmıştır.",
-            "B) XVII. yüzyıl ıslahatlarına göre daha kalıcı olmuştur.",
-            "C) Baskı ve şiddet yoluyla benimsetilmeye çalışılmıştır.",
+            "B) Avrupa örnek alınarak yenilikler yapılmıştır.",
+            "C) Islahatlar kişilere bağlı kaldığından sürekli olmamıştır.",
             "D) Yapılan yeniliklere saray, ulema ve asker karşı çıkmıştır.",
             "E) Tüm yenilikler halkın desteğiyle sorunsuz uygulanmıştır."
         ],
         correctAnswerIndex: 4,
-        explanation: "Islahatlar birçok kesimin tepkisiyle karşılaşmıştır."
+        explanation: "XVIII. yüzyıl ıslahatlarında Avrupa örnek alınmış ve hukuk dışındaki birçok alanda yenilik yapılmıştır. Ancak bu ıslahatlar kişilere bağlı kaldığı için sürekli olamamış; saray, ulema ve yeniçerilerin tepkisiyle karşılaşmıştır. Bu nedenle yeniliklerin halkın desteğiyle sorunsuz uygulandığı söylenemez."
     },
     {
         id: 23,
@@ -379,7 +379,7 @@ window.tarih_8_sorulari = [
     },
     {
         id: 30,
-        question: "''Lale Devri'' ifadesini Osmanlı tarihi için ilk kullanan kişi aşağıdakilerden hangisidir?",
+        question: "1913 yılında yayımladığı 'Lâle Devri' adlı eseriyle III. Ahmet Dönemi'nin bu adla anılmasını sağlayan tarihçi aşağıdakilerden hangisidir?",
         options: [
             "A) Ahmet Refik Altınay",
             "B) Namık Kemal",
@@ -387,8 +387,8 @@ window.tarih_8_sorulari = [
             "D) Ziya Gökalp",
             "E) Şinasi"
         ],
-        correctAnswerIndex: 2,
-        explanation: "'Lale Devri' adını ilk kez Yahya Kemal Beyatlı kullanmıştır."
+        correctAnswerIndex: 0,
+        explanation: "III. Ahmet Dönemi'nin (1718-1730) 'Lale Devri' olarak anılması, tarihçi Ahmet Refik Altınay'ın 1913'te yayımladığı 'Lâle Devri' adlı çalışmasıyla yerleşmiştir. Şıklardaki diğer isimler edebiyat ve fikir alanında tanınan kişilerdir; bu adlandırmayla ilgileri yoktur."
     },
     {
         id: 31,
@@ -439,21 +439,21 @@ window.tarih_8_sorulari = [
             "D) Yusuf Agah Efendi",
             "E) Sait Efendi"
         ],
-        correctAnswerIndex: 4,
-        explanation: "Sait Efendi'nin çalışmaları Avrupa'da Turquerie akımının yayılmasına katkı sağlamıştır."
+        correctAnswerIndex: 0,
+        explanation: "Avrupa'da, özellikle Fransa'da Türk modası (Turquerie) akımının yayılmasında 1720-1721'de elçi olarak Paris'e gönderilen Yirmisekiz Mehmet Çelebi'nin ziyareti ve heyetin oradaki törenleri etkili olmuştur. Sait Efendi ise bu heyette babasıyla birlikte bulunmuş, dönüşte İbrahim Müteferrika ile matbaanın kurulmasında rol oynamıştır."
     },
     {
         id: 35,
         question: "Lale Devri'nde ilk kez uygulamaya konulan diplomatik gelişme aşağıdakilerden hangisidir?",
         options: [
             "A) Kalıcı elçilikler",
-            "B) Daimi büyükelçilikler",
+            "B) Kapitülasyonların sürekli hâle getirilmesi",
             "C) Konsolosluk teşkilatı",
             "D) Hariciye Nezareti",
             "E) Geçici elçilikler"
         ],
         correctAnswerIndex: 4,
-        explanation: "Lale Devri'nde ilk kez geçici elçilikler açılmıştır."
+        explanation: "Lale Devri'nde Paris, Viyana ve Moskova gibi merkezlere belirli görevler için geçici (süreli) elçiler gönderilmiştir. Sürekli/daimî elçilikler III. Selim döneminde açılmış, Hariciye Nezareti ise II. Mahmut döneminde kurulmuştur."
     },
     {
         id: 36,
@@ -483,7 +483,7 @@ window.tarih_8_sorulari = [
     },
     {
         id: 38,
-        question: "Lale Devri'nde İran'dan alınarak Osmanlı ülkesinde uygulanmaya başlanan sağlık yeniliği aşağıdakilerden hangisidir?",
+        question: "Lale Devri'nde sağlık alanında uygulanmaya başlanan yenilik aşağıdakilerden hangisidir?",
         options: [
             "A) Kuduz aşısı",
             "B) Kolera aşısı",
@@ -492,7 +492,7 @@ window.tarih_8_sorulari = [
             "E) Çocuk felci aşısı"
         ],
         correctAnswerIndex: 3,
-        explanation: "İran'dan çiçek aşısı getirilerek uygulanmaya başlanmıştır."
+        explanation: "Lale Devri'nde çiçek hastalığına karşı aşılama (çiçek aşısı) uygulanmaya başlanmıştır. Şıklardaki diğer aşılar XIX. ve XX. yüzyıllarda geliştirildiği için bu dönemde uygulanmış olamaz."
     },
     {
         id: 39,
@@ -644,27 +644,27 @@ window.tarih_8_sorulari = [
             "B) Koca Ragıp Paşa",
             "C) Cezayirli Gazi Hasan Paşa",
             "D) Halil Hamit Paşa",
-            "E) Hepsi bu dönemdedir."
+            "E) Muhsinzade Mehmet Paşa"
         ],
         correctAnswerIndex: 3,
-        explanation: "Halil Hamit Paşa daha çok I. Abdülhamit dönemi devlet adamları arasında yer alır."
+        explanation: "Halil Hamit Paşa, I. Abdülhamit döneminde sadrazamlık yapmış bir devlet adamıdır. Koca Ragıp Paşa ve Muhsinzade Mehmet Paşa III. Mustafa'nın sadrazamları, Cezayirli Gazi Hasan Paşa bu dönemin öne çıkan denizcisi, Baron de Tott ise askerî düzenlemelerde görevlendirilen Fransız uzmandır."
     },
     {
         id: 51,
-        question: "1773 yılında açılan ve Osmanlı denizciliğinin modernleşmesinde önemli rol oynayan eğitim kurumu aşağıdakilerden hangisidir?",
+        question: "III. Mustafa döneminde, Baron de Tott'un katkılarıyla tersanede açılan ve Osmanlı'da modern deniz mühendisliği eğitiminin başlangıcı sayılan kurum aşağıdakilerden hangisidir?",
         options: [
             "A) Tersane Hendesehanesi",
-            "B) Mühendishane-i Bahr-i Hümayun",
-            "C) Hendesehane",
+            "B) Mekteb-i Harbiye",
+            "C) Enderun Mektebi",
             "D) Mühendishane-i Berr-i Hümayun",
-            "E) İstihkam Okulu"
+            "E) Mekteb-i Tıbbiye"
         ],
         correctAnswerIndex: 0,
-        explanation: "1773 yılında III. Mustafa döneminde Tersane Hendesehanesi açılmıştır."
+        explanation: "III. Mustafa döneminde donanmanın ihtiyaç duyduğu haritacılık ve gemi inşa bilgisini vermek üzere tersane içinde Tersane Hendesehanesi açılmıştır. Mühendishane-i Berr-i Hümayun III. Selim döneminde kara mühendisliği için, Mekteb-i Tıbbiye ve Mekteb-i Harbiye ise II. Mahmut döneminde kurulmuştur; Enderun ise saray içi eğitim kurumudur."
     },
     {
         id: 52,
-        question: "Devletin gelir sağlamak amacıyla uyguladığı iç borçlanma sistemi olan Eşham Sistemi ilk kez aşağıdaki padişahlardan hangisi döneminde kanunlaştırılmıştır?",
+        question: "Devletin gelir sağlamak amacıyla başvurduğu iç borçlanma yöntemi olan Eşham Sistemi ilk kez aşağıdaki padişahlardan hangisi döneminde uygulanmaya başlanmıştır?",
         options: [
             "A) III. Ahmet",
             "B) I. Mahmut",
@@ -672,8 +672,8 @@ window.tarih_8_sorulari = [
             "D) I. Abdülhamit",
             "E) III. Selim"
         ],
-        correctAnswerIndex: 2,
-        explanation: "Eşham Sistemi III. Mustafa döneminde kanunlaştırılmıştır."
+        correctAnswerIndex: 3,
+        explanation: "Eşham, mukataa gelirlerinin yıllık kârının paylara (sehimlere) bölünerek satılması esasına dayanan iç borçlanma yöntemidir ve ilk kez 1775'te I. Abdülhamit döneminde uygulanmıştır."
     },
     {
         id: 53,
@@ -716,7 +716,7 @@ window.tarih_8_sorulari = [
     },
     {
         id: 56,
-        question: "1775 yılında açılan Mühendishane-i Bahr-i Hümayun'un temel amacı aşağıdakilerden hangisidir?",
+        question: "Mühendishane-i Bahr-i Hümayun'un açılış amacı aşağıdakilerden hangisidir?",
         options: [
             "A) Hukukçu yetiştirmek",
             "B) Deniz subayı ve mühendis yetiştirmek",
@@ -725,7 +725,7 @@ window.tarih_8_sorulari = [
             "E) Sivil bürokrat yetiştirmek"
         ],
         correctAnswerIndex: 1,
-        explanation: "Mühendishane-i Bahr-i Hümayun deniz mühendisleri yetiştirmek amacıyla açılmıştır."
+        explanation: "Mühendishane-i Bahr-i Hümayun, donanmanın ihtiyaç duyduğu deniz subaylarını ve gemi inşası ile haritacılık alanında mühendisleri yetiştirmek amacıyla kurulmuş askerî teknik bir okuldur."
     },
     {
         id: 57,
@@ -863,12 +863,12 @@ window.tarih_8_sorulari = [
         options: [
             "A) Layihalar",
             "B) Islahat Fermanı",
-            "C) Islahat layihaları",
-            "D) Islahat layihelerinin kaldırılması",
+            "C) Kanunname",
+            "D) Adaletname",
             "E) Sefaretname"
         ],
         correctAnswerIndex: 0,
-        explanation: "III. Selim döneminde bilim insanlarından ve devlet adamlarından layihalar (raporlar) istenmiştir."
+        explanation: "III. Selim, tahta çıktıktan sonra devlet adamlarından ve uzmanlardan ülkenin sorunlarını ve çözüm yollarını anlatan raporlar (layihalar) istemiş; Nizam-ı Cedit düzenlemeleri bu layihalar doğrultusunda hazırlanmıştır. Sefaretname elçi raporu, kanunname hukuk derlemesi, adaletname ise halkı haksızlıklara karşı koruyan padişah emridir."
     },
     {
         id: 68,

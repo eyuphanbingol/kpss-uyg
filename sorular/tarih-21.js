@@ -133,7 +133,7 @@ window.tarih_21_sorulari = [
         "explanation": "Dava Lahey Adalet Divanı'na götürülmüş, Türkiye kazanmıştır."
     },
     {
-        "question": "Mustafa Kemal'in Bozkurt-Lotus Davası'nda Türkiye'yi savunan Mahmut Esat Bey'e daha sonra \"Bozkurt\" soyadını vermesi aşağıdaki olaylardan hangisiyle ilişkilidir?",
+        "question": "Adalet Bakanı Mahmut Esat Bey'in, açık denizde bir Türk gemisi ile bir Fransız gemisinin çarpışması sonucu ortaya çıkan ve Lahey'deki Uluslararası Adalet Divanı'nda görülen davada Türkiye'yi savunup davayı kazanması, aşağıdakilerden hangisiyle ilgilidir?",
         "options": [
             "A) Musul Meselesi",
             "B) Bozkurt-Lotus Olayı",
@@ -142,7 +142,7 @@ window.tarih_21_sorulari = [
             "E) Yabancı Okullar Sorunu"
         ],
         "correctAnswerIndex": 1,
-        "explanation": "Mahmut Esat Bozkurt soyadını bu davadan almıştır."
+        "explanation": "Türk Bozkurt gemisi ile Fransız Lotus gemisinin 1926'da açık denizde çarpışması üzerine Fransa, Türkiye'nin yargılama yetkisine itiraz etmiş; 1927'de Lahey Uluslararası Adalet Divanı Türkiye'yi haklı bulmuştur. Davada Türkiye'yi savunan Adalet Bakanı Mahmut Esat Bey, bu başarısı nedeniyle Bozkurt soyadını almıştır."
     },
     {
         "question": "Türk-Yunan nüfus mübadelesi konusunda ortaya çıkan anlaşmazlığın temel nedenlerinden biri aşağıdakilerden hangisidir?",
@@ -352,13 +352,13 @@ window.tarih_21_sorulari = [
         "question": "Aşağıdaki gelişmelerden hangisi diğerlerinden farklı bir bölgeye yönelik güvenlik politikasının ürünüdür?",
         "options": [
             "A) Balkan Antantı",
-            "B) Sadabat Paktı",
+            "B) Yunanistan ile Dostluk Antlaşması'nın imzalanması",
             "C) Montrö Boğazlar Sözleşmesi",
             "D) Balkan devletleriyle iş birliği",
             "E) Batı sınırlarının güvence altına alınması"
         ],
         "correctAnswerIndex": 2,
-        "explanation": "A, D, E batı/Balkan; B doğu-güneydoğu. Montreux Boğazlar rejimine özgüdür."
+        "explanation": "Balkan Antantı, Yunanistan ile imzalanan dostluk antlaşması, Balkan devletleriyle iş birliği ve batı sınırlarının güvence altına alınması Türkiye'nin Balkanlar yönündeki güvenlik politikasının ürünüdür. Montrö Boğazlar Sözleşmesi ise Balkanlara değil, Boğazlar bölgesinin güvenliğine ve statüsüne yöneliktir."
     },
     {
         "question": "1936 yılında Türkiye'nin İtalya'nın yayılmacı politikasına karşı İngiltere öncülüğünde oluşturulan Akdeniz güvenlik sistemine katılması aşağıdakilerden hangisiyle ilişkilidir?",
@@ -382,7 +382,7 @@ window.tarih_21_sorulari = [
             "E) Türkiye – Irak – Bulgaristan – İran"
         ],
         "correctAnswerIndex": 0,
-        "explanation": "Suriye Hatay/sınır sorunları nedeniyle pakta katılmamıştır."
+        "explanation": "Sadabat Paktı 8 Temmuz 1937'de Türkiye, İran, Irak ve Afganistan arasında imzalanmıştır. Suriye o dönemde bağımsız bir devlet olmayıp Fransız mandası altında bulunduğu için pakta taraf olamamıştır."
     },
     {
         "question": "Sadabat Paktı'nın temel amacı aşağıdakilerden hangisidir?",
@@ -442,7 +442,7 @@ window.tarih_21_sorulari = [
             "E) Hatay'ın Irak'a bağlanması"
         ],
         "correctAnswerIndex": 2,
-        "explanation": "Sandler raporu Hatay'ın ayrı statü / Türkiye'ye katılım yönündedir; 1938'de Hatay Cumhuriyeti kurulmuştur."
+        "explanation": "Milletler Cemiyeti raportörü Sandler'in hazırladığı rapor, Hatay'a içişlerinde bağımsız, dışişlerinde Suriye'ye bağlı ayrı bir varlık statüsü tanınmasını öngörmüştür. Böylece Hatay ayrı bir siyasi yapı kazanmış, süreç 1938'de Hatay'da bağımsız bir devletin (Hatay Cumhuriyeti) kurulmasıyla devam etmiştir."
     },
     {
         "question": "Aşağıdaki gelişmelerden hangisinin kronolojik sıralaması doğrudur?\n\nI. Hatay Cumhuriyeti'nin kurulması\nII. Hatay'ın Türkiye'ye katılması\nIII. Hatay'ın statüsünün Milletler Cemiyeti gündemine gelmesi",
@@ -555,14 +555,14 @@ window.tarih_21_sorulari = [
     {
         "question": "Aşağıdaki gelişmelerden hangisi Türkiye'nin batı sınırının güvenliğine yönelik değildir?",
         "options": [
-            "A) Balkan Antantı",
-            "B) Yunanistan ile ilişkilerin geliştirilmesi",
-            "C) Akdeniz Paktı",
-            "D) Sadabat Paktı",
-            "E) Balkan devletleriyle iş birliği"
+            "A) Balkan Antantı'nın imzalanması",
+            "B) Yunanistan ile dostluk ilişkilerinin geliştirilmesi",
+            "C) Yugoslavya ile dostluk antlaşması imzalanması",
+            "D) Sadabat Paktı'nın imzalanması",
+            "E) Romanya ile dostluk antlaşması imzalanması"
         ],
         "correctAnswerIndex": 3,
-        "explanation": "Sadabad doğu ve güneydoğuyadır."
+        "explanation": "Sadabat Paktı 1937'de Türkiye, İran, Irak ve Afganistan arasında imzalanmış olup doğu ve güneydoğu sınırının güvenliğini amaçlar. Diğer seçenekler Balkan devletleriyle kurulan dostluk ve iş birliği girişimleridir; yani Türkiye'nin batı sınırının güvenliğiyle ilgilidir."
     },
     {
         "question": "Aşağıdaki gelişmelerden hangisi Türkiye'nin doğu ve güneydoğu sınırlarının güvenliğine yönelik bir iş birliği girişimidir?",

@@ -109,7 +109,7 @@ window.tarih_19_sorulari = [
     explanation: "TTK millî tarih-kültür bilincidir. Etibank/baraj devletçilik, aşar halkçılık, mahkeme laikliktir."
 },
 {
-    question: "Türk Dil Kurumunun ve Türk Tarih Kurumunun açılmasıyla öncelikle;",
+    question: "Türk Dil Kurumunun ve Türk Tarih Kurumunun açılmasıyla öncelikle aşağıdakilerden hangisinin amaçlandığı söylenebilir?",
     options: [
         "A) ekonomik bağımsızlığın sağlanması",
         "B) millî kültür ve tarih bilincinin geliştirilmesi",
@@ -118,7 +118,7 @@ window.tarih_19_sorulari = [
         "E) siyasal partilerin faaliyetlerinin düzenlenmesi"
     ],
     correctAnswerIndex: 1,
-    explanation: "TDK ve TTK milliyetçiliğin kültürel ayağıdır."
+    explanation: "1931'de Türk Tarih Kurumu, 1932'de Türk Dil Kurumu; Türk tarihini ve Türkçeyi bilimsel yöntemlerle araştırıp geliştirmek üzere kurulmuştur. Bu kurumlar ekonomik, dinî ya da siyasi bir düzenlemeye değil, doğrudan millî kültür ve tarih bilincinin geliştirilmesine yöneliktir."
 },
 {
     question: "Devletçilik ilkesi doğrultusunda yapılan uygulamaların temelinde, özel sektörün yetersiz kaldığı alanlarda devletin ekonomik kalkınmayı hızlandırmak amacıyla üretim ve yatırıma katılması anlayışı bulunmaktadır.\n\nBuna göre aşağıdakilerden hangisi bu anlayışa doğrudan örnek gösterilemez?",
@@ -274,7 +274,7 @@ window.tarih_19_sorulari = [
         "E) İnkılâpçılık"
     ],
     correctAnswerIndex: 1,
-    explanation: "Kongre ve Misak-ı İktisadî devletçilik notunun ilk maddeleridir (ekonomiye devlet yönü)."
+    explanation: "İzmir İktisat Kongresi ve Misak-ı İktisadî kararları, ekonominin millî bir programla düzenlenmesini, devletin ekonomik hayata yön vermesini ve sanayiyi teşvik etmesini öngörür. Bu yönüyle verilen ilkeler arasında en doğrudan devletçilikle ilişkilidir; laiklik, halkçılık, cumhuriyetçilik ve inkılâpçılık ekonomik örgütlenmeyle doğrudan bağlantılı değildir."
 },
 {
     question: "Aşağıdakilerden hangisi devletçilik ile milliyetçilik arasındaki ilişkiyi en iyi açıklayan gelişmelerden biridir?",
@@ -349,15 +349,15 @@ window.tarih_19_sorulari = [
     explanation: "İnkılâpçılık tam tersidir: eskiyi gerektiğinde değiştirmek, çağdaşlaşmaktır."
 },
 {
-    question: "Atatürk Dönemi'nde gerçekleştirilen aşağıdaki gelişmelerden hangisi, devlet yönetimi, toplum yapısı, hukuk, eğitim ve ekonomik hayat gibi farklı alanlarda çağın gereklerine uygun değişiklikler yapılması anlayışını en kapsamlı biçimde yansıtır?",
+    question: "Aşağıdaki inkılâplardan hangisi; hukuk, aile, miras ve mülkiyet ilişkileri ile kadın-erkek eşitliği gibi farklı alanları aynı anda düzenlemesi bakımından en kapsamlı olanıdır?",
     options: [
         "A) Aşar vergisinin kaldırılması",
         "B) Kabotaj Kanunu'nun kabul edilmesi",
-        "C) İnkılâpların gerçekleştirilmesi",
+        "C) Türk Medeni Kanunu'nun kabul edilmesi",
         "D) Merkez Bankasının kurulması",
         "E) Türk Tarih Kurumunun açılması"
     ],
     correctAnswerIndex: 2,
-    explanation: "Çok alana yayılan köklü değişim inkılâpçılığın kendisidir; tek tek kanunlar dar alandır."
+    explanation: "1926'da kabul edilen Türk Medeni Kanunu; evlenme, boşanma, miras, mülkiyet ve velayet gibi konuları düzenlemiş, kadın ile erkeği hukuk önünde eşit duruma getirmiştir. Diğer seçenekler vergi, deniz taşımacılığı, para politikası veya tarih araştırmaları gibi tek bir alanla sınırlıdır."
 }
 ];

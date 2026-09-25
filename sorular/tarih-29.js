@@ -16,7 +16,7 @@ window.tarih_29_sorulari = [
         "question": "“Kut = sınırsız yetki değildir” yargısı hangi gerekçeyle doğrudur?",
         "options": [
             "A) Hükümdar töreye uymak zorundadır",
-            "B) Kurultay padişahı seçer",
+            "B) Kurultay kağanı seçer",
             "C) Veraset yoktur",
             "D) Ordu yoktu",
             "E) Yazılı anayasa vardı"
@@ -628,7 +628,7 @@ window.tarih_29_sorulari = [
         "question": "Seyfiye–İlmiye–Kalemiye eşleştirmesinde hangisi doğrudur?",
         "options": [
             "A) Kalemiye = askerlik",
-            "B) Kalemiye = ordu",
+            "B) Seyfiye = bürokrasi/maliye",
             "C) Seyfiye = matbaa",
             "D) İlmiye = maliye",
             "E) İlmiye = eğitim–hukuk–din"
@@ -637,7 +637,7 @@ window.tarih_29_sorulari = [
         "explanation": "Seyfiye asker/yönetim; İlmiye eğitim/hukuk/din; Kalemiye bürokrasi/maliye."
     },
     {
-        "question": "Dirlik gelir sırası hangisidir?",
+        "question": "Dirliklerin yıllık gelirlerine göre büyükten küçüğe doğru sıralanışı aşağıdakilerden hangisidir?",
         "options": [
             "A) Tımar → Zeamet → Has",
             "B) Has → Tımar → Zeamet",
@@ -646,7 +646,7 @@ window.tarih_29_sorulari = [
             "E) Tımar → Has → Zeamet"
         ],
         "correctAnswerIndex": 3,
-        "explanation": "Has yüksek, tımar daha düşük."
+        "explanation": "Dirlik topraklar yıllık gelirlerine göre has, zeamet ve tımar olarak ayrılır. Geliri en yüksek olan has, en düşük olan ise tımardır; bu nedenle büyükten küçüğe sıralama Has → Zeamet → Tımar biçimindedir."
     },
     {
         "question": "Trablusgarp Savaşı (1911–12) sonunda imzalanan antlaşma hangisidir?",
@@ -955,10 +955,10 @@ window.tarih_29_sorulari = [
             "B) Tersane",
             "C) Kervansaray/ticaret politikası",
             "D) Kösedağ’da Moğolları yenmek",
-            "E) Sinop ile Karadeniz ticaretini güçlendirme"
+            "E) Kırım’daki Suğdak’a sefer düzenlenmesi"
         ],
         "correctAnswerIndex": 3,
-        "explanation": "Kösedağ 1243’te yenilgidir; Keykubad dönemi değildir."
+        "explanation": "Kösedağ Savaşı 1243'te II. Gıyaseddin Keyhüsrev döneminde yaşanmış ve Moğollara yenilgiyle sonuçlanmıştır; bu nedenle I. Alaeddin Keykubad dönemi faaliyetlerinden değildir. Suğdak Seferi, Alanya'nın fethi ve tersane ile kervansaray yatırımları ise Keykubad dönemine aittir."
     },
     {
         "question": "Osmanlı’da Defterdar’ın temel alanı hangisidir?",

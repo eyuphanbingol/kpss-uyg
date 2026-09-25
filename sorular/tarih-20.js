@@ -7,10 +7,10 @@ window.tarih_20_sorulari = [
             "B) I ve II",
             "C) I ve III",
             "D) II ve IV",
-            "E) I, III ve IV"
+            "E) I, II ve III"
         ],
         "correctAnswerIndex": 4,
-        "explanation": "İhtiyaçlardan doğması (I) millî karakteri, ikiliklere son (III) toplumsal bütünleşmeyi, tavandan tabana (IV) uygulamanın toplumun bütününe yayılmasını gösterir. II millî karakter/bütünleşme ile doğrudan bağlanmaz."
+        "explanation": "I, inkılapların Türk milletinin kendi ihtiyaçlarından doğduğunu; II ise dışarıdan alınmış hazır bir ideolojinin taklidi olmadığını göstererek millî karakteri ortaya koyar. III, eğitim, hukuk ve kılık kıyafet gibi alanlardaki ikilikleri ortadan kaldırarak toplumsal bütünleşmeyi sağlar. IV ise yalnızca inkılapların uygulanma yöntemini belirtir; millî karakterin veya toplumsal bütünleşmenin göstergesi değildir."
     },
     {
         "question": "Saltanatın kaldırılmasında aşağıdakilerden hangisinin doğrudan etkili olduğu söylenebilir?",
@@ -394,7 +394,7 @@ window.tarih_20_sorulari = [
             "E) Elifba raporu – kanun – tanıtım"
         ],
         "correctAnswerIndex": 1,
-        "explanation": "29 Mayıs 1928 Elif-Ba raporu, ardından Sarayburnu tanıtımı, 1 Kasım 1928 kanun."
+        "explanation": "Haziran 1928'de kurulan Dil Encümeni yeni alfabeye ilişkin Elifba Raporu'nu hazırlamış, Atatürk 9 Ağustos 1928'de Sarayburnu'nda yeni harfleri halka tanıtmış, Yeni Türk Harflerinin Kabulü Kanunu ise 1 Kasım 1928'de çıkarılmıştır. Buna göre doğru sıralama rapor - tanıtım - kanun biçimindedir."
     },
     {
         "question": "Harf Devrimi'nin sonuçları arasında;\n\nI. okuryazar oranının artması\nII. kitap sayısının artması\nIII. Batı'daki teknik gelişmelerin takibinin kolaylaşması\n\ngelişmelerinden hangileri bulunmaktadır?",
@@ -418,7 +418,7 @@ window.tarih_20_sorulari = [
             "E) Askerî eğitim vermek"
         ],
         "correctAnswerIndex": 1,
-        "explanation": "Millet Mektepleri yeni harfleri öğretmek için 11 Kasım 1928'de açılmıştır."
+        "explanation": "Millet Mektepleri, 11 Kasım 1928 tarihli talimatnameyle kurulmuş ve 1 Ocak 1929'da öğretime başlamıştır. Amacı, yeni Türk harflerini yediden yetmişe halka öğretmek ve okuryazarlığı yaygınlaştırmaktır."
     },
     {
         "question": "Türk Tarih Kurumunun kurulmasının amaçları arasında aşağıdakilerden hangisi yer almaz?",
@@ -493,7 +493,7 @@ window.tarih_20_sorulari = [
         "explanation": "Kongre ekonomik (Misak-ı İktisat) kararlar almıştır, siyasi inkılap kongresi değildir."
     },
     {
-        "question": "İzmir İktisat Kongresi kararlarında;\n\nI. millî bankaların kurulması\nII. devlet temelli yatırımların yapılması\nIII. yerli malların kullanılmasının teşvik edilmesi\nIV. yabancı tekellerin güçlendirilmesi\n\nyaklaşımlarından hangileri benimsenmiştir?",
+        "question": "İzmir İktisat Kongresi kararlarında; I. millî bankaların kurulması II. sanayinin devlet eliyle teşvik edilmesi III. yerli malların kullanılmasının teşvik edilmesi IV. yabancı tekellerin güçlendirilmesi yaklaşımlarından hangileri benimsenmiştir?",
         "options": [
             "A) I ve II",
             "B) I ve III",
@@ -502,7 +502,7 @@ window.tarih_20_sorulari = [
             "E) II, III ve IV"
         ],
         "correctAnswerIndex": 3,
-        "explanation": "Yabancı tekellerden kaçınılmıştır; IV yanlıştır."
+        "explanation": "1923'te toplanan İzmir İktisat Kongresi'nde millî bankaların kurulması, sanayinin devlet eliyle teşvik edilmesi ve yerli malı kullanımının özendirilmesi benimsenmiştir. Buna karşılık yabancı tekellere ve ayrıcalıklara karşı çıkılmıştır; bu nedenle IV. öncül kongre kararlarıyla bağdaşmaz."
     },
     {
         "question": "Aşağıdakilerden hangisi tarım alanında yapılan çalışmalardan biridir?",
@@ -521,12 +521,12 @@ window.tarih_20_sorulari = [
         "options": [
             "A) 1925 – Aşar vergisinin kaldırılması",
             "B) 1933 – Yüksek Ziraat Enstitüsü",
-            "C) 1936 – Tarım Kredi ve Kooperatifi",
+            "C) 1935 – Tarım Kredi Kooperatifleri",
             "D) 1937 – Ziraat kombinaları",
             "E) 1938 – Merkez Bankasının kurulması"
         ],
         "correctAnswerIndex": 4,
-        "explanation": "Merkez Bankası 1930'da kurulmuştur. 1938'de TMO kurulmuştur."
+        "explanation": "Türkiye Cumhuriyet Merkez Bankası 1938'de değil 1930'da kurulmuştur; 1938'de kurulan kurum Toprak Mahsulleri Ofisi'dir. Diğer eşleştirmeler doğru olduğundan yanlış eşleştirme E seçeneğidir."
     },
     {
         "question": "Aşağıdakilerden hangisi ticaret alanında yapılan gelişmelerden biridir?",
@@ -649,7 +649,7 @@ window.tarih_20_sorulari = [
         "explanation": "Rejim ve devlet başkanlığı sorunu Cumhuriyet'in ilanıyla çözülmüştür."
     },
     {
-        "question": "Ankara'nın başkent ilan edilmesiyle ilgili aşağıdaki gelişmelerden hangisinin Cumhuriyetin ilanından önce gerçekleşmiş olması, Cumhuriyetin ilanının hangi sorunlara çözüm getirmeyi amaçladığı konusunda önemlidir?",
+        "question": "Ankara'nın başkent ilan edilmesinin ardından gerçekleştirilen Cumhuriyetin ilanı, öncelikle aşağıdaki alanlardan hangisine ilişkin sorunlara çözüm getirmiştir?",
         "options": [
             "A) Hükûmet ve devlet başkanlığı",
             "B) Eğitim ve kültür",
@@ -658,7 +658,7 @@ window.tarih_20_sorulari = [
             "E) Sağlık ve sosyal politika"
         ],
         "correctAnswerIndex": 0,
-        "explanation": "Başkent sorunu çözülmüş olsa da rejim ve devlet başkanlığı sorunu Cumhuriyet'le çözülmüştür."
+        "explanation": "13 Ekim 1923'te Ankara'nın başkent ilan edilmesiyle devletin merkezi sorunu çözülmüştür. 29 Ekim 1923'te Cumhuriyetin ilanıyla ise devletin rejimi belirlenmiş, cumhurbaşkanlığı makamı oluşturulmuş ve meclis hükûmeti sisteminden kaynaklanan hükûmet kurma bunalımı sona ermiştir."
     },
     {
         "question": "Aşağıdakilerden hangisi Cumhuriyetin ilan edilmesinin doğrudan sonuçlarından biri değildir?",
@@ -846,11 +846,11 @@ window.tarih_20_sorulari = [
             "A) Şapka Kanunu",
             "B) Tekke ve zaviyelerin kapatılması",
             "C) Soyadı Kanunu",
-            "D) Kılık kıyafet düzenlemeleri",
+            "D) Takvim, saat ve ölçü birimlerinde değişiklik",
             "E) Tevhid-i Tedrisat Kanunu"
         ],
         "correctAnswerIndex": 4,
-        "explanation": "Tevhid-i Tedrisat eğitim-kültür alanındadır."
+        "explanation": "Tevhid-i Tedrisat Kanunu (1924) bütün eğitim kurumlarını Maarif Vekâletine bağlayan bir eğitim-öğretim inkılabıdır. Diğer seçenekler kılık kıyafet, tarikat yapıları, soyadı kullanımı ve gündelik hayatın ölçüleriyle ilgili toplumsal alandaki düzenlemelerdir."
     },
     {
         "question": "Maarif Kongresi'nin Kütahya-Eskişehir Muharebeleri devam ederken toplanması aşağıdakilerden hangisini göstermesi bakımından önemlidir?",
@@ -1048,25 +1048,25 @@ window.tarih_20_sorulari = [
         "question": "Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
         "options": [
             "A) 1930 – Merkez Bankası",
-            "B) 1933 – Halk Bankası",
+            "B) 1924 – Türkiye İş Bankası",
             "C) 1935 – Etibank",
             "D) 1935 – MTA",
             "E) 1938 – Sümerbank"
         ],
         "correctAnswerIndex": 4,
-        "explanation": "Sümerbank 1933'te kurulmuştur."
+        "explanation": "Sümerbank 1938'de değil 1933'te kurulmuştur. Türkiye İş Bankası 1924, Merkez Bankası 1930, Etibank ve Maden Tetkik ve Arama Enstitüsü ise 1935 yılında kurulduğundan diğer eşleştirmeler doğrudur."
     },
     {
         "question": "Sümerbank'ın kurulması ile ilgili aşağıdakilerden hangisi doğrudur?",
         "options": [
-            "A) I. Beş Yıllık Kalkınma Planının finansmanında rol üstlenmiştir.",
+            "A) I. Beş Yıllık Sanayi Planı'nın uygulanmasında rol üstlenmiştir.",
             "B) Madenlerin aranması ve satışıyla görevlendirilmiştir.",
             "C) Esnaf ve sanatkârlara kredi vermek amacıyla kurulmuştur.",
             "D) Tarımsal kredi sağlamak amacıyla kurulmuştur.",
             "E) Atatürk döneminde kurulmamıştır."
         ],
         "correctAnswerIndex": 0,
-        "explanation": "Sümerbank I. Plan'ın finansmanıdır. Maden Etibank/MTA, esnaf Halk Bankası'dır."
+        "explanation": "1933'te kurulan Sümerbank, 1934'te uygulanmaya başlanan I. Beş Yıllık Sanayi Planı kapsamındaki dokuma, kâğıt, cam ve demir-çelik gibi fabrikaların kurulup işletilmesinde görev almıştır. Madencilik Etibank ve MTA'nın, esnaf kredileri Halk Bankası'nın, tarımsal krediler ise Ziraat Bankası'nın alanıdır."
     },
     {
         "question": "Etibank ile MTA'nın aynı yıl kurulması aşağıdakilerden hangisiyle daha yakından ilişkilidir?",
@@ -1141,7 +1141,7 @@ window.tarih_20_sorulari = [
         "explanation": "Doğum kontrolü sağlayan ilaç ve araçların ülkeye girişi yasaklanmıştır, teşvik edilmemiştir."
     },
     {
-        "question": "Aşağıdakilerden hangisi demir yolu politikasının temel uygulamalarından biri olarak notta verilen gelişmeler arasında yer almaz?",
+        "question": "Aşağıdakilerden hangisi Atatürk Dönemi'nde yapımı gerçekleştirilen demir yolu hatlarından biri değildir?",
         "options": [
             "A) Ankara-Kayseri hattı",
             "B) Sivas-Erzurum hattı",
@@ -1150,7 +1150,7 @@ window.tarih_20_sorulari = [
             "E) İzmir-Antalya hattı"
         ],
         "correctAnswerIndex": 4,
-        "explanation": "Notta İzmir-Antalya hattı yoktur."
+        "explanation": "Atatürk Dönemi'nde Ankara-Kayseri, Balıkesir-Kütahya ve Malatya-Diyarbakır hatları tamamlanmış, Sivas-Erzurum hattının yapımına da bu dönemde başlanmıştır. Buna karşılık İzmir-Antalya demir yolu hattı inşa edilmemiş, Antalya demir yolu ağına bağlanmamıştır."
     },
     {
         "question": "Hava yolları alanındaki gelişmeler birlikte değerlendirildiğinde aşağıdakilerden hangisi bu alanla doğrudan ilişkilidir?",
@@ -1189,15 +1189,15 @@ window.tarih_20_sorulari = [
         "explanation": "Kabotaj denizcilikte millî egemenlik / milliyetçiliktir, eğitim laikliği değildir."
     },
     {
-        "question": "Aşağıdaki gelişmelerden hangileri birlikte değerlendirildiğinde millîleşme ve laikleşme eğilimlerinin aynı süreçte ilerlediği söylenebilir?\n\nI. Halifeliğin kaldırılması\nII. Tevhid-i Tedrisat Kanunu\nIII. Türk Tarih Kurumunun kurulması\nIV. Türk Dil Kurumunun kurulması\nV. Kabotaj Kanunu",
+        "question": "Aşağıdaki gelişmelerden hangisi Cumhuriyet Dönemi'ndeki millîleşme ya da laikleşme eğilimiyle doğrudan ilişkilendirilemez?",
         "options": [
-            "A) I ve II",
-            "B) II ve III",
-            "C) I, II ve III",
-            "D) I, II, III ve IV",
-            "E) I, II, III, IV ve V"
+            "A) Halifeliğin kaldırılması",
+            "B) Tevhid-i Tedrisat Kanunu'nun kabul edilmesi",
+            "C) Türk Tarih Kurumunun kurulması",
+            "D) Kabotaj Kanunu'nun kabul edilmesi",
+            "E) Aşar vergisinin kaldırılması"
         ],
         "correctAnswerIndex": 4,
-        "explanation": "I–II laikleşme, III–IV millî kültür, V ekonomik millîleşme; hepsi aynı modernleşme sürecindedir."
+        "explanation": "Halifeliğin kaldırılması ve Tevhid-i Tedrisat Kanunu laikleşmeyi, Türk Tarih Kurumunun kurulması kültürel millîleşmeyi, Kabotaj Kanunu ise Türk karasularında taşımacılık hakkının Türk gemilerine tanınmasıyla ekonomik millîleşmeyi gösterir. Aşar vergisinin kaldırılması ise köylünün vergi yükünü hafifleten malî ve sosyal bir düzenlemedir."
     }
 ];

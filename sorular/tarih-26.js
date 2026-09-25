@@ -144,11 +144,11 @@ window.tarih_26_sorulari = [
             "A) COMINFORM ekonomik, COMECON askerî, Varşova siyasi",
             "B) COMINFORM siyasi/ideolojik, COMECON ekonomik, Varşova askerî",
             "C) Üçü de askerî ittifaktır",
-            "D) Hepsi Marshall Planı’nın parçasıdır",
-            "E) COMECON NATO’nun Avrupa koludur"
+            "D) COMINFORM askerî, COMECON siyasi, Varşova ekonomik",
+            "E) COMECON NATO'nun Avrupa koludur"
         ],
         correctAnswerIndex: 1,
-        explanation: "COMINFORM 1947 siyasi; COMECON 1949 ekonomik; Varşova 1955 askerî."
+        explanation: "COMINFORM (1947) siyasi-ideolojik, COMECON (1949) ekonomik, Varşova Paktı (1955) askerî nitelikli Doğu Bloku kuruluşlarıdır."
     },
     {
         question: "COMECON hangi tarihte kurulmuştur?",
@@ -220,7 +220,7 @@ window.tarih_26_sorulari = [
         question: "Türkiye’nin Avrupa Konseyi’ne katıldığı tarih hangisidir?",
         options: ["A) 5 Mayıs 1949", "B) 8 Ağustos 1949", "C) 18 Şubat 1952", "D) 9 Mayıs 1950", "E) 25 Mart 1957"],
         correctAnswerIndex: 1,
-        explanation: "Avrupa Konseyi 5 Mayıs 1949’da kuruldu; Türkiye 8 Ağustos 1949’da katıldı. Konsey siyasi/hukuki iş birliğidir, NATO askerî değildir."
+        explanation: "Avrupa Konseyi 5 Mayıs 1949'da kurulmuş, Türkiye 8 Ağustos 1949'da bu örgüte katılmıştır. Avrupa Konseyi; demokrasi, insan hakları ve hukukun üstünlüğü alanında siyasi ve hukuki iş birliğini amaçlayan bir kuruluştur. NATO ise askerî nitelikli bir savunma örgütüdür."
     },
     {
         question: "9 Mayıs 1950 Schuman Bildirisi neyi önermiştir?",
@@ -296,9 +296,15 @@ window.tarih_26_sorulari = [
     },
     {
         question: "Sahraaltı Afrika’da bağımsızlığını kazanan ilk sömürge ülkesi olarak öne çıkan hangisidir?",
-        options: ["A) Cezayir", "B) Fas", "C) Kenya", "D) Nijerya", "E) Gana (1957)"],
+        options: [
+        "A) Cezayir",
+        "B) Fas",
+        "C) Kenya",
+        "D) Nijerya",
+        "E) Gana"
+        ],
         correctAnswerIndex: 4,
-        explanation: "Gana 1957. 1960 çok sayıda ülkenin bağımsızlığı nedeniyle Afrika Yılı’dır. Cezayir 1962, Kenya 1963."
+        explanation: "Gana, 1957’de bağımsızlığını kazanarak Sahraaltı Afrika’da bağımsız olan ilk sömürge ülke olmuştur. 1960’ta çok sayıda Afrika ülkesi bağımsızlığını kazandığı için bu yıl Afrika Yılı olarak anılır; Cezayir 1962’de, Kenya 1963’te bağımsız olmuştur."
     },
     {
         question: "Afrika Birliği Teşkilatı (OAU) nerede ve ne zaman kurulmuştur?",
@@ -316,7 +322,7 @@ window.tarih_26_sorulari = [
             "E) Lozan"
         ],
         correctAnswerIndex: 2,
-        explanation: "Ardından Kars–Ardahan ve Boğaz üssü talepleri; 8 Ağustos 1946 Sovyet notası. Bu baskı Türkiye’yi Batı Bloku’na yaklaştırdı."
+        explanation: "SSCB, 19 Mart 1945'te 1925 tarihli Türk-Sovyet Dostluk ve Tarafsızlık Antlaşması'nı yenilemeyeceğini bildirmiş; ardından Kars ve Ardahan'ı istemiş, Boğazlarda üs talebinde bulunmuştur. 7 Ağustos 1946 tarihli Sovyet notasıyla Boğazlar rejiminin değiştirilmesi istenmiştir. Bu baskılar Türkiye'yi Batı Bloku'na yaklaştırmıştır."
     },
     {
         question: "I. Türkiye’nin Kore’ye asker göndermesi\nII. SSCB’nin Boğaz ve toprak talepleri\nIII. Marshall ve Truman yardımları\nTürkiye’nin NATO’ya yönelmesinde etkili olanlar hangileridir?",
@@ -394,9 +400,9 @@ window.tarih_26_sorulari = [
         question: "14 Mayıs 1950 seçimleri için hangisi YANLIŞTIR?",
         options: [
             "A) Gizli oy–açık sayım uygulanmıştır",
-            "B) DP iktidara gelmiş, ‘Beyaz Devrim’ olarak da anılmıştır",
+            "B) DP iktidara gelmiş, bu seçim 'Beyaz İhtilal' olarak da anılmıştır",
             "C) Celal Bayar cumhurbaşkanı, Adnan Menderes başbakan olmuştur",
-            "D) CHP’nin uzun tek parti iktidarı sona ermiştir",
+            "D) CHP'nin uzun tek parti iktidarı sona ermiştir",
             "E) Açık oy–gizli sayım ile CHP seçimi kazanmıştır"
         ],
         correctAnswerIndex: 4,
@@ -457,7 +463,7 @@ window.tarih_26_sorulari = [
         explanation: "USS Nautilus 1954’te denize indirildi."
     },
     {
-        question: "Aşağıdakilerden hangisi Avrupa bütünleşmesinin askerî boyutu ile karıştırılmamalıdır?",
+        question: "NATO, Avrupa Konseyi ve AET'nin nitelikleriyle ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
             "A) NATO askerî savunma, Avrupa Konseyi siyasi/hukuki, AET ekonomik bütünleşmedir",
             "B) Üçü de aynı örgütün adlarıdır",
@@ -466,10 +472,10 @@ window.tarih_26_sorulari = [
             "E) NATO 1957’de Roma’da kurulmuştur"
         ],
         correctAnswerIndex: 0,
-        explanation: "ÖSYM klasik ayrımı: Konsey hukuk/demokrasi, NATO savunma, AET/AKÇT ekonomi."
+        explanation: "NATO (1949), Sovyet tehdidine karşı kurulan askerî bir savunma örgütüdür. Avrupa Konseyi (1949) demokrasi, insan hakları ve hukukun üstünlüğü alanında çalışan siyasi-hukuki bir kuruluştur. AET ise 1957 Roma Antlaşması ile ortak pazar hedefiyle kurulan ekonomik bir bütünleşmedir. Bu nedenle üç örgüt farklı amaçlara sahiptir."
     },
     {
-        question: "Batı Avrupa Birliği (17 Mart 1948) kurucu devletleri hangileridir?",
+        question: "Brüksel Antlaşması (17 Mart 1948) ile kurulan Batı Birliği'nin kurucu devletleri hangileridir?",
         options: [
             "A) İngiltere, Fransa, Belçika, Hollanda, Lüksemburg",
             "B) ABD–Kanada–Türkiye",
@@ -478,7 +484,7 @@ window.tarih_26_sorulari = [
             "E) İtalya–Yunanistan–Türkiye"
         ],
         correctAnswerIndex: 0,
-        explanation: "Sovyet tehdidine karşı Batı Avrupa güvenlik iş birliği adımlarındandır."
+        explanation: "17 Mart 1948'de imzalanan Brüksel Antlaşması ile İngiltere, Fransa, Belçika, Hollanda ve Lüksemburg arasında Batı Birliği kurulmuştur. Sovyet tehdidine karşı atılan bu güvenlik iş birliği adımı, 1954'te İtalya ve Federal Almanya'nın katılmasıyla Batı Avrupa Birliği (BAB) adını almıştır."
     },
     {
         question: "Ho Chi Minh ve Vietminh’in 1954’te Fransa’yı yendiği muharebe hangisidir?",
@@ -596,14 +602,26 @@ window.tarih_26_sorulari = [
     },
     {
         question: "1954’te çocuk felci aşısı çalışmalarıyla öne çıkan isim hangisidir?",
-        options: ["A) Jonas Salk", "B) Laika", "C) Jean Monnet", "D) Robert Schuman", "E) Xerox"],
+        options: [
+        "A) Jonas Salk",
+        "B) Alexander Fleming",
+        "C) Jean Monnet",
+        "D) Robert Schuman",
+        "E) Francis Crick"
+        ],
         correctAnswerIndex: 0,
-        explanation: "1954 Salk. 1959 Xerox 914 ticari fotokopi; 1960 ilk çalışan lazer."
+        explanation: "Jonas Salk’ın geliştirdiği çocuk felci (polio) aşısı 1954’te geniş çaplı saha denemelerinden geçmiş, 1955’te güvenli ve etkili ilan edilmiştir. Alexander Fleming penisilinin, Francis Crick ise DNA’nın yapısının keşfiyle tanınır."
     },
     {
         question: "İlk Akdeniz Oyunları nerede düzenlenmiştir?",
-        options: ["A) Atina", "B) Roma", "C) Mısır (1951)", "D) İstanbul", "E) Barcelona"],
+        options: [
+        "A) Atina",
+        "B) Roma",
+        "C) İskenderiye",
+        "D) İstanbul",
+        "E) Barselona"
+        ],
         correctAnswerIndex: 2,
-        explanation: "1951’de Mısır’da. 1955–56’da ilk Avrupa Şampiyon Kulüpler Kupası’nı Real Madrid kazandı."
+        explanation: "İlk Akdeniz Oyunları 1951’de Mısır’ın İskenderiye kentinde düzenlenmiştir."
     }
 ];

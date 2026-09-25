@@ -99,20 +99,26 @@ window.geometri_1_sorulari = [
 {
     "question": "İkizkenar ABC’de |AB| = |AC| ve AH tabana diktir. AH aynı zamanda hangisidir?",
     "options": [
-        "A) Yalnız kenarortay",
-        "B) Yalnız açıortay",
-        "C) Açıortay, kenarortay ve simetri ekseni",
-        "D) Yalnız orta dikme, açıortay değil",
-        "E) Hiçbiri"
+        "A) Yalnız kenarortaydır",
+        "B) Yalnız açıortaydır",
+        "C) Açıortay, kenarortay ve simetri eksenidir",
+        "D) Kenarortay ve simetri eksenidir, ancak açıortay değildir",
+        "E) Açıortay ve simetri eksenidir, ancak kenarortay değildir"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "YAKİ: tepeden tabana inen yükseklik aynı zamanda açıortay, kenarortay ve simetri eksenidir."
+    "explanation": "İkizkenar üçgende tepe köşeden tabana indirilen yükseklik, tabanı iki eş parçaya ayırır ve tepe açısını iki eş açıya böler. Bu nedenle [AH] aynı zamanda kenarortay, açıortay ve üçgenin simetri eksenidir."
 },
 {
-    "question": "ABC’de AH yükseklik, AD açıortay, |AB| = 8 cm, |AC| = 14 cm. |HD| kaç cm’dir?",
-    "options": ["A) 2", "B) 3", "C) 4", "D) 5", "E) 6"],
+    "question": "ABC üçgeninde A köşesinden çizilen [AH] yükseklik, [AD] ise açıortaydır (H, D ∈ [BC]). m(∠B) = 70° ve m(∠C) = 40° ise m(∠HAD) kaç derecedir?",
+    "options": [
+    "A) 10°",
+    "B) 15°",
+    "C) 20°",
+    "D) 25°",
+    "E) 30°"
+    ],
     "correctAnswerIndex": 1,
-    "explanation": "|HD| = |b − c| / 2 = ||AC| − |AB|| / 2 = |14−8|/2 = 3 cm. Bu uzunluk formülüdür; açı formülü değildir."
+    "explanation": "m(∠BAH) = 90° − m(∠B) ve m(∠BAD) = m(∠A)/2 olduğundan m(∠HAD) = |m(∠A)/2 − (90° − m(∠B))| = |m(∠B) − m(∠C)| : 2 elde edilir. Buna göre m(∠HAD) = |70° − 40°| : 2 = 15° bulunur."
 },
 {
     "question": "m(∠A)=70°, m(∠B)=50°. C köşesindeki dış açı kaç derecedir?",

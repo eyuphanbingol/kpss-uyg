@@ -200,7 +200,7 @@ window.tarih_14_sorulari = [
         explanation: "24 Nisan kararlarında, padişah ve halifenin baskıdan kurtulduktan sonra meclisin belirleyeceği esaslar çerçevesinde durumlarının belirleneceği ifade edilmiştir. Bu, TBMM'nin padişah ve halifeyi tamamen reddetmediğini, ancak yetkilerini sınırladığını göstermektedir."
     },
     {
-        question: "24 Nisan 1920 kararlarıyla TBMM'nin yasama yetkisini kendi bünyesinde toplaması aşağıdaki ilkelerden hangisiyle açıklanabilir?",
+        question: "24 Nisan 1920 kararlarıyla TBMM'nin yasama ve yürütme yetkilerini kendi bünyesinde toplaması aşağıdaki ilkelerden hangisiyle açıklanabilir?",
         options: [
             "A) Monarşizm",
             "B) Kuvvetler ayrılığı",
@@ -209,7 +209,7 @@ window.tarih_14_sorulari = [
             "E) Güçler birliği"
         ],
         correctAnswerIndex: 4,
-        explanation: "TBMM'nin yasama yetkisini kendi bünyesinde toplaması, güçler birliği ilkesiyle açıklanabilir. Bu, savaş koşullarında hızlı karar alabilmek içindir."
+        explanation: "Yasama ve yürütme yetkilerinin tek bir organda, yani TBMM'de toplanması güçler birliği ilkesinin uygulanmasıdır. Bu düzenleme, olağanüstü savaş koşullarında hızlı karar alınmasını amaçlamıştır."
     },
 
     // ============================================================
@@ -264,7 +264,7 @@ window.tarih_14_sorulari = [
         explanation: "I. TBMM döneminde Dışişleri (Hariciye) Bakanlığı görevini Bekir Sami Bey yürütmüştür."
     },
     {
-        question: "I. TBMM döneminde Genelkurmay Başkanlığı görevini aşağıdakilerden hangisi yürütmüştür?",
+        question: "I. TBMM döneminde 1921 yılından itibaren Genelkurmay Başkanlığı görevini aşağıdakilerden hangisi yürütmüştür?",
         options: [
             "A) Mustafa Kemal Paşa",
             "B) İsmet İnönü",
@@ -273,7 +273,7 @@ window.tarih_14_sorulari = [
             "E) Rıza Nur"
         ],
         correctAnswerIndex: 2,
-        explanation: "I. TBMM döneminde Genelkurmay Başkanlığı görevini Fevzi Çakmak yürütmüştür. Mustafa Kemal ise Meclis Başkanı ve Başkomutan'dır."
+        explanation: "I. TBMM'nin ilk İcra Vekilleri Heyeti'nde Erkân-ı Harbiye-i Umumiye (Genelkurmay) görevini İsmet Bey üstlenmiş, 1921'den itibaren bu görevi Fevzi Çakmak yürütmüştür. Mustafa Kemal Paşa ise Meclis Başkanı ve Başkomutan'dır."
     },
 
     // ============================================================
@@ -285,7 +285,7 @@ window.tarih_14_sorulari = [
             "A) Müdafaa-i Hukuk",
             "B) Yeşil Ordu",
             "C) Tesanüd",
-            "D) Hal Zümresi",
+            "D) Halk Zümresi",
             "E) Serbest Cumhuriyet Grubu"
         ],
         correctAnswerIndex: 4,
@@ -329,7 +329,7 @@ window.tarih_14_sorulari = [
             "E) Başkomutanlık Kanunu"
         ],
         correctAnswerIndex: 2,
-        explanation: "I. TBMM döneminde çıkarılan ilk kanun, 29 Nisan 1920'de kabul edilen Ağnam Vergisi Kanunu'dur. Bu, meclisin ilk mali düzenlemesidir."
+        explanation: "I. TBMM'nin çıkardığı 1 numaralı kanun, 24 Nisan 1920'de kabul edilen Ağnam Vergisi Kanunu'dur ve meclisin ilk mali düzenlemesidir. Hıyanet-i Vataniye Kanunu ise 29 Nisan 1920'de kabul edilmiştir."
     },
     {
         question: "I. TBMM döneminde asker kaçaklarını önlemek amacıyla aşağıdaki kanunlardan hangisi çıkarılmıştır?",
@@ -346,14 +346,14 @@ window.tarih_14_sorulari = [
     {
         question: "I. TBMM döneminde düzenli ordunun oluşturulması amacıyla çıkarılan düzenlemelerden biri aşağıdakilerden hangisidir?",
         options: [
-            "A) Düzenli Ordu Yasası",
+            "A) Firariler Kanunu",
             "B) Teşkilat-ı Esasiye Kanunu",
             "C) Nisab-ı Müzakere Kanunu",
             "D) Men-i Müskirat Kanunu",
             "E) Hıyanet-i Vataniye Kanunu"
         ],
         correctAnswerIndex: 0,
-        explanation: "I. TBMM döneminde düzenli ordunun oluşturulması amacıyla Düzenli Ordu Yasası çıkarılmıştır. Bu, Kuvayı Milliye'nin yerine düzenli ordunun kurulmasını sağlamıştır."
+        explanation: "Düzenli orduya geçiş sürecinde asker kaçaklarının önlenmesi amacıyla 11 Eylül 1920'de Firariler Kanunu çıkarılmış, bu kanunla İstiklal Mahkemeleri kurularak Kuvâ-yi Milliye birliklerinden düzenli orduya geçiş kolaylaştırılmıştır."
     },
     {
         question: "1921 Anayasası'nın diğer adı aşağıdakilerden hangisidir?",
@@ -456,7 +456,7 @@ window.tarih_14_sorulari = [
         explanation: "Sevr Antlaşması'nın şartları, 18-26 Nisan 1920 tarihlerinde İtalya'nın San Remo kentinde yapılan konferansta belirlenmiştir. Sevr'in kendisi ise Fransa'da imzalanmıştır."
     },
     {
-        question: "San Remo Konferansı'nda Osmanlı Devleti'ni temsil eden Tevfik Paşa'nın Sevr Antlaşması'nı kabul etmemesi üzerine aşağıdaki gelişmelerden hangisi yaşanmıştır?",
+        question: "San Remo Konferansı'nda hazırlanan barış şartlarının Osmanlı heyetine sunulması ve Sadrazam Tevfik Paşa'nın bu şartları kabul etmemesi üzerine aşağıdaki gelişmelerden hangisi yaşanmıştır?",
         options: [
             "A) İstanbul işgalden kurtarılmıştır.",
             "B) Misak-ı Milli ilan edilmiştir.",
@@ -465,7 +465,7 @@ window.tarih_14_sorulari = [
             "E) Lozan Konferansı toplanmıştır."
         ],
         correctAnswerIndex: 3,
-        explanation: "Tevfik Paşa'nın San Remo'da Sevr'i kabul etmemesi üzerine Yunan ordusu, İtilaf Devletleri'nin belirlediği Milne Hattı'nı geçerek Anadolu'daki ilerleyişini hızlandırmıştır."
+        explanation: "San Remo'da belirlenen ağır barış şartları Osmanlı heyetine sunulduğunda Tevfik Paşa bunları kabul etmemiştir. Bunun üzerine İtilaf Devletleri baskıyı artırmış, Yunan ordusu belirlenen Milne Hattı'nı geçerek Anadolu'daki ilerleyişini sürdürmüştür."
     },
     {
         question: "Osmanlı Devleti'nin Sevr Antlaşması'nı imzalamasına karar veren organ aşağıdakilerden hangisidir?",
@@ -490,7 +490,7 @@ window.tarih_14_sorulari = [
             "E) Fevzi Çakmak"
         ],
         correctAnswerIndex: 3,
-        explanation: "Sevr Antlaşması'nı imzalayan Osmanlı temsilcileri arasında Damat Ferit Paşa, Rıza Tevfik, Reşat Halis ve Hadi Paşa bulunur. Rıza Tevfik, bu antlaşmayı imzalayan önemli isimlerdendir."
+        explanation: "Sevr Antlaşması'nı Osmanlı Devleti adına Hadi Paşa, Rıza Tevfik ve Reşat Halis Bey imzalamıştır. Seçeneklerdeki isimler arasında antlaşmanın imzacısı olan tek kişi Rıza Tevfik'tir."
     },
     {
         question: "Sevr Antlaşması'nın aşağıdaki hükümlerinden hangisi Osmanlı Devleti'nin egemenliğini ciddi biçimde sınırlandırmaya yöneliktir?",
@@ -739,14 +739,14 @@ window.tarih_14_sorulari = [
     {
         question: "Aşağıdakilerden hangisi İstanbul Hükümeti ve İtilaf Devletleri'nin desteklediği ayaklanmalar arasında gösterilebilir?",
         options: [
-            "A) Kuvayı İnzibatiye",
-            "B) Çerkez Ethem",
-            "C) Demirci Mehmet Efe",
-            "D) Bolu-Düzce",
-            "E) Ahmet Anzavur"
+            "A) Milli Aşireti Ayaklanması",
+            "B) Çerkez Ethem Ayaklanması",
+            "C) Demirci Mehmet Efe Ayaklanması",
+            "D) Bolu-Düzce Ayaklanması",
+            "E) Haçin Ermeni Ayaklanması"
         ],
         correctAnswerIndex: 3,
-        explanation: "Bolu-Düzce ayaklanması, İstanbul Hükümeti ve İtilaf Devletleri tarafından desteklenen ayaklanmalar arasındadır. Bu ayaklanmalar, TBMM otoritesini zayıflatmayı amaçlamıştır."
+        explanation: "Bolu-Düzce ayaklanmaları, İstanbul Hükümeti ve İtilaf Devletleri'nin kışkırtmasıyla çıkarılmış ve TBMM'nin otoritesini kırmayı amaçlamıştır. Çerkez Ethem ile Demirci Mehmet Efe önce Kuvâ-yi Milliye saflarında yer alıp sonradan TBMM'ye karşı gelmiş, Milli Aşireti ayaklanması Fransızların, Haçin ayaklanması ise Ermenilerin kışkırtmasıyla çıkmıştır."
     },
     {
         question: "Aşağıdakilerden hangisi İstanbul Hükümeti ve İtilaf Devletleri'nin desteklediği ayaklanmalardan biri değildir?",
@@ -761,7 +761,7 @@ window.tarih_14_sorulari = [
         explanation: "Çerkez Ethem, önceden Kuvayı Milliye içinde yer almış, sonradan TBMM'ye karşı çıkmıştır. İstanbul Hükümeti tarafından doğrudan desteklenmemiştir."
     },
     {
-        question: "Aşağıdakilerden hangisi söz konusu ayaklanmalar arasında yer alır?",
+        question: "Aşağıdakilerden hangisi Millî Mücadele Dönemi'nde çıkan ayaklanmaların liderlerinden biridir?",
         options: [
             "A) Kara Fatma",
             "B) Gazi Osman Paşa",
@@ -770,19 +770,19 @@ window.tarih_14_sorulari = [
             "E) Ali Batı"
         ],
         correctAnswerIndex: 4,
-        explanation: "Ali Batı, I. TBMM'ye karşı çıkan ayaklanmacılardan biridir. Diğer seçeneklerdeki isimler Millî Mücadele kahramanlarıdır."
+        explanation: "Ali Batı, Millî Mücadele Dönemi'nde Midyat ve çevresinde ayaklanan aşiret liderlerindendir. Kara Fatma, Şahin Bey ve Sütçü İmam Millî Mücadele kahramanlarıdır; Gazi Osman Paşa ise 1877-1878 Osmanlı-Rus Savaşı'ndaki Plevne savunmasıyla tanınır."
     },
     {
-        question: "Aşağıdakilerden hangisi I. TBMM'ye karşı çıkan ayaklanmalar arasında yer almıştır?",
+        question: "Aşağıdakilerden hangisi I. TBMM'ye karşı çıkan ayaklanmalar arasında yer almaz?",
         options: [
-            "A) Milli Aşireti",
-            "B) Demirci Mehmet Efe",
-            "C) Çerkez Ethem",
-            "D) Kuvayı İnzibatiye",
-            "E) Hepsi"
+            "A) Milli Aşireti Ayaklanması",
+            "B) Demirci Mehmet Efe Ayaklanması",
+            "C) Çerkez Ethem Ayaklanması",
+            "D) Bolu-Düzce Ayaklanması",
+            "E) Şeyh Sait Ayaklanması"
         ],
         correctAnswerIndex: 4,
-        explanation: "Milli Aşireti, Demirci Mehmet Efe, Çerkez Ethem ve Kuvayı İnzibatiye'nin tamamı I. TBMM'ye karşı çıkan ayaklanmalar arasında yer alır."
+        explanation: "Şeyh Sait Ayaklanması 1925'te, Cumhuriyet'in ilanından sonra çıkmıştır; I. TBMM Dönemi ayaklanmalarından değildir. Milli Aşireti, Demirci Mehmet Efe, Çerkez Ethem ve Bolu-Düzce ayaklanmaları ise I. TBMM'ye karşı çıkan ayaklanmalardandır."
     },
     {
         question: "Aşağıdakilerden hangisi I. TBMM'ye karşı çıkan ayaklanmalar arasında yer almaz?",
@@ -842,7 +842,7 @@ window.tarih_14_sorulari = [
             "E) Zile ve Hendek"
         ],
         correctAnswerIndex: 3,
-        explanation: "Haçin ve Zeytun, Ermenilerin çıkardığı ayaklanmalardır. Bu bölgelerde Ermeniler, Doğu Anadolu'da bir Ermeni devleti kurma amacıyla ayaklanmışlardır."
+        explanation: "Haçin (Adana/Saimbeyli) ve Zeytun (Maraş/Süleymanlı) ayaklanmaları Ermeniler tarafından çıkarılmıştır. Bu ayaklanmalarla Çukurova ve çevresinde, yani Kilikya bölgesinde bir Ermeni yönetimi kurulması amaçlanmıştır."
     },
     {
         question: "Azınlıkların çıkardığı ayaklanmaların temel amaçlarından biri aşağıdakilerden hangisidir?",
@@ -1022,7 +1022,7 @@ window.tarih_14_sorulari = [
             "E) Temsil Heyeti"
         ],
         correctAnswerIndex: 2,
-        explanation: "İstiklal Mahkemeleri, 29 Nisan 1920'de TBMM tarafından kurulmuştur. Meclis, olağanüstü yetkilerle donatılmış bu mahkemeleri oluşturmuştur."
+        explanation: "İstiklal Mahkemeleri, asker kaçaklarını ve iç ayaklanmaları önlemek amacıyla 11 Eylül 1920'de TBMM tarafından kurulmuştur. Üyeleri milletvekilleri arasından seçilen bu mahkemeler olağanüstü yetkilerle donatılmıştır."
     },
     {
         question: "İstiklal Mahkemelerinin üyeleri aşağıdakilerden hangisinden seçilmiştir?",
@@ -1037,16 +1037,16 @@ window.tarih_14_sorulari = [
         explanation: "İstiklal Mahkemeleri, TBMM içinden seçilen milletvekillerinden oluşmuştur. Bu, meclisin yargı yetkisini de kullandığını göstermektedir."
     },
     {
-        question: "İstiklal Mahkemelerinde aşağıdaki suçlardan hangilerine bakıldığı söylenebilir?",
+        question: "İstiklal Mahkemelerinin baktığı suçlar arasında aşağıdakilerden hangisi yer almaz?",
         options: [
-            "A) Vatana ihanet ve casusluk",
-            "B) Bozgunculuk ve asker kaçaklığı",
-            "C) Soygun ve asker ailelerine saldırı",
-            "D) Düzenli orduya zarar veren faaliyetler",
-            "E) Hepsi"
+            "A) Vatana ihanet",
+            "B) Casusluk",
+            "C) Asker kaçaklığı",
+            "D) Bozgunculuk ve halkı isyana teşvik",
+            "E) Ticari alacak davaları"
         ],
         correctAnswerIndex: 4,
-        explanation: "İstiklal Mahkemeleri, vatana ihanet, casusluk, bozgunculuk, asker kaçaklığı, soygun, asker ailelerine saldırı ve düzenli orduya zarar veren tüm faaliyetlere bakmıştır."
+        explanation: "İstiklal Mahkemeleri vatana ihanet, casusluk, asker kaçaklığı, bozgunculuk ve orduya zarar verme gibi Millî Mücadele'nin güvenliğini tehdit eden suçlara bakmıştır. Ticari alacak davaları gibi özel hukuk uyuşmazlıkları ise bu mahkemelerin görev alanına girmemiştir."
     },
     {
         question: "İstiklal Mahkemelerinin kararlarının halka duyurulmasının temel amacı aşağıdakilerden hangisidir?",
@@ -1124,13 +1124,13 @@ window.tarih_14_sorulari = [
         question: "İstiklal Mahkemeleri I. TBMM döneminde genel olarak hangi yıllar arasında faaliyet göstermiştir?",
         options: [
             "A) 1919-1921",
-            "B) 1920-1924",
+            "B) 1920-1923",
             "C) 1921-1925",
             "D) 1922-1926",
             "E) 1923-1927"
         ],
         correctAnswerIndex: 1,
-        explanation: "İstiklal Mahkemeleri, I. TBMM döneminde 1920'den 1924'e kadar faaliyet göstermiştir. 1924'te kapatılmış, daha sonra yeniden kurulmuştur."
+        explanation: "İstiklal Mahkemeleri 11 Eylül 1920'de kurulmuş ve I. TBMM Dönemi boyunca, yani 1920-1923 yılları arasında faaliyet göstermiştir. Bu mahkemeler daha sonra 1925-1927 yılları arasında yeniden görev yapmıştır."
     },
     {
         question: "İstiklal Mahkemeleri Cumhuriyet döneminde de aşağıdaki hangi amaçla yeniden faaliyete geçirilmiştir?",
@@ -1157,7 +1157,7 @@ window.tarih_14_sorulari = [
         explanation: "İstiklal Mahkemeleri, Cumhuriyet döneminde rejimi ve inkılapları tehdit eden gelişmeler (İzmir Suikastı vb.) karşısında yeniden görev yapmıştır."
     },
     {
-        question: "İstiklal Mahkemelerinin son önemli görevlerinden biri aşağıdaki olaylardan hangisiyle ilişkilidir?",
+        question: "İstiklal Mahkemelerinin 1926 yılında görüp karara bağladığı, son önemli davalarından biri aşağıdakilerden hangisidir?",
         options: [
             "A) Şeyh Sait İsyanı",
             "B) Menemen Olayı",
@@ -1166,7 +1166,7 @@ window.tarih_14_sorulari = [
             "E) Çerkez Ethem Olayı"
         ],
         correctAnswerIndex: 2,
-        explanation: "İstiklal Mahkemelerinin son önemli görevlerinden biri, 1926'da görülen İzmir Suikastı Davası'dır. Bu dava, Cumhuriyet rejimine karşı girişilen bir suikast girişimine ilişkindir."
+        explanation: "1926'da Mustafa Kemal'e yönelik girişimin ardından açılan İzmir Suikastı Davası, İstiklal Mahkemelerinin gördüğü son önemli davalardandır. Şeyh Sait İsyanı davası 1925'te görülmüş, Menemen Olayı ise 1930'da İstiklal Mahkemelerinde değil sıkıyönetim divanında yargılanmıştır."
     },
 
     // ============================================================
@@ -1221,7 +1221,7 @@ window.tarih_14_sorulari = [
         explanation: "I. TBMM'nin yasama ve yürütme yetkilerini kendisinde toplaması, olağanüstü şartlarda (savaş ve işgal) faaliyet gösterdiğinin kanıtıdır."
     },
     {
-        question: "Aşağıdaki gelişmelerden hangisi doğrudan TBMM'nin iç güvenliği sağlamaya yönelik çalışmalarından biri değildir?",
+        question: "Aşağıdaki gelişmelerden hangisi TBMM'nin iç politikaya yönelik çalışmalarından biri değildir?",
         options: [
             "A) Hıyanet-i Vataniye Kanunu",
             "B) Firariler Kanunu",
@@ -1230,7 +1230,7 @@ window.tarih_14_sorulari = [
             "E) Lozan Barış Antlaşması"
         ],
         correctAnswerIndex: 4,
-        explanation: "Lozan Barış Antlaşması, dış politika ve uluslararası ilişkilerle ilgilidir. Diğer seçenekler iç güvenliğe yönelik düzenlemelerdir."
+        explanation: "Lozan Barış Antlaşması dış politikaya ilişkin bir gelişmedir. Hıyanet-i Vataniye Kanunu, Firariler Kanunu, İstiklal Mahkemeleri ve Anadolu Ajansı ise TBMM'nin iç politikaya yönelik düzenleme ve kurumlarıdır."
     },
     {
         question: "Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
@@ -1331,14 +1331,14 @@ window.tarih_14_sorulari = [
     {
         question: "Aşağıdakilerden hangisi I. TBMM döneminde millî egemenlik anlayışının güçlenmesine doğrudan katkı sağlamıştır?",
         options: [
-            "A) Büyük Millet Meclisi'nin üzerinde bir güç olmadığının kabul edilmesi",
+            "A) İcra Vekilleri Heyeti üyelerinin meclis tarafından seçilmesi",
             "B) Sevr Antlaşması'nın kabul edilmesi",
             "C) İstanbul Hükümeti'nin yetkilerinin artırılması",
             "D) Kapitülasyonların genişletilmesi",
             "E) Saltanatın yetkilerinin artırılması"
         ],
         correctAnswerIndex: 0,
-        explanation: "24 Nisan 1920 kararlarıyla 'Büyük Millet Meclisi'nin üzerinde bir güç yoktur' ilan edilmesi, millî egemenlik anlayışının güçlenmesine doğrudan katkı sağlamıştır."
+        explanation: "1921 Teşkilat-ı Esasiye Kanunu'na göre yürütme görevini üstlenen İcra Vekilleri Heyeti üyelerinin meclis üyeleri arasından ve meclis tarafından seçilmesi, yönetme yetkisinin doğrudan millet temsilcilerine ait olduğunu göstererek millî egemenlik anlayışını güçlendirmiştir."
     },
     {
         question: "Aşağıdaki olaylardan hangisi I. TBMM'nin askerî ve siyasi otoritesini güçlendirmeye yönelik gelişmelerden biri değildir?",

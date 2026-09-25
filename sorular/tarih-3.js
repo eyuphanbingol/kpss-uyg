@@ -111,7 +111,7 @@ window.tarih_3_sorulari = [
       "A) Kardeşi Alaaddin Keykubat'ı Malatya kalesine hapsetmiştir",
       "B) Kıbrıs Krallığı ve Venedik ile ticaret anlaşması yapmıştır",
       "C) Sinop ve Samsun'u almıştır",
-      "D) Antalya'yı almıştır",
+      "D) Antalya'da çıkan isyanı bastırarak şehri yeniden almıştır",
       "E) Harzemşahlarla Yassıçemen Savaşı'nı yapmıştır"
     ],
     "correctAnswerIndex": 4,
@@ -119,7 +119,7 @@ window.tarih_3_sorulari = [
   },
   {
     "id": "10",
-    "question": "Anadolu Selçuklu Devleti'nin en parlak dönemini yaşadığı; Sudak limanının ve Kolonai'nin (Alanya) alındığı, Moğol tehlikesine karşı Sivas, Erzincan, Tokat ve Erzurum'da surların güçlendirildiği hükümdar aşağıdakilerden hangisidir?",
+    "question": "Anadolu Selçuklu Devleti'nin en parlak dönemini yaşadığı; Sudak limanının ve Kalonoros'un (Alanya) alındığı, Moğol tehlikesine karşı Sivas, Erzincan, Tokat ve Erzurum'da surların güçlendirildiği hükümdar aşağıdakilerden hangisidir?",
     "options": [
       "A) I. Gıyaseddin Keyhüsrev",
       "B) I. İzzettin Keykavus",
@@ -184,20 +184,20 @@ window.tarih_3_sorulari = [
   },
   {
     "id": "15",
-    "question": "Türkiye Selçuklularının Karadeniz ve Akdeniz ticaretini geliştirmek için aldığı limanlar arasında aşağıdakilerden hangisi Karadeniz'de yer alır?",
+    "question": "Türkiye Selçuklularının Karadeniz ticaretini geliştirmek amacıyla aldığı, Anadolu kıyısında yer alan liman şehri aşağıdakilerden hangisidir?",
     "options": [
       "A) Antalya",
       "B) Alanya",
       "C) Sinop",
       "D) Sudak (Kırım)",
-      "E) Antalya and Alanya"
+      "E) Mersin"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "Antalya ve Alanya Akdeniz limanlarıdır. Sudak, Karadeniz'in kuzeyinde (Kırım'da) yer alır. Anadolu kıyısında Karadeniz ticaretini canlandırmak için fethedilen liman şehri ise Sinop'tur (ve Samsun)."
+    "explanation": "Antalya, Alanya ve Mersin Akdeniz kıyısındadır. Sudak da bir Karadeniz limanıdır; ancak Anadolu kıyısında değil, Karadeniz'in kuzeyinde Kırım Yarımadası'nda bulunur. Türkiye Selçuklularının 1214'te alarak Karadeniz ticaretini canlandırdığı Anadolu kıyısındaki liman Sinop'tur."
   },
   {
     "id": "16",
-    "question": "Türkiye Selçuklu Devleti'nin veziri ve baş mimarı olan; Zavardin Han ve Kubadabad Sarayı'nın mimarlığını yapan, taht iddiasında bulununca idam edilen kişi aşağıdakilerden hangisidir?",
+    "question": "Türkiye Selçuklu Devleti'nin veziri ve baş mimarı olan; Zazadin Hanı ve Kubadabad Sarayı'nın mimarlığını yapan, taht iddiasında bulununca idam edilen kişi aşağıdakilerden hangisidir?",
     "options": [
       "A) Celaleddin Karatay",
       "B) Alaaddin Siyavuş",
@@ -249,16 +249,16 @@ window.tarih_3_sorulari = [
   },
   {
     "id": "20",
-    "question": "1243 yılının Anadolu'da anıldığı ad aşağıdakilerden hangisidir?",
+    "question": "1243 yılında Kösedağ Savaşı'nda Anadolu Selçuklu ordusunu bozguna uğratan Moğol komutanı aşağıdakilerden hangisidir?",
     "options": [
-      "A) Yurttutan Yılı",
-      "B) Cimri Yılı",
-      "C) Fetret Yılı",
-      "D) Baycu Noyan Yılı",
-      "E) Baba İshak Yılı"
+      "A) Baycu Noyan",
+      "B) Cebe Noyan",
+      "C) Subutay",
+      "D) Hülagü Han",
+      "E) Timur"
     ],
-    "correctAnswerIndex": 3,
-    "explanation": "Köse Dağ Savaşı'nda Selçuklu ordusunu bozguna uğratan Moğol komutanı Baycu Noyan'ın Anadolu'da yarattığı büyük tahribat ve katliamlardan ötürü 1243 yılı 'Baycu Noyan Yılı' olarak hafızalara kazınmıştır."
+    "correctAnswerIndex": 0,
+    "explanation": "1243 yılında yapılan Kösedağ Savaşı'nda Anadolu Selçuklu ordusu, Moğol komutanı Baycu Noyan karşısında ağır bir yenilgi almış ve Anadolu Moğol egemenliğine girmiştir. Cebe Noyan ile Subutay Cengiz Han dönemi komutanlarıdır; Hülagü Han 1256'da İlhanlı Devleti'ni kurmuş, Timur ise 1402'de Ankara Savaşı'nı yapmıştır."
   },
   {
     "id": "21",
@@ -541,7 +541,7 @@ window.tarih_3_sorulari = [
       "B) Âşık Paşa",
       "C) Hoca Dehhani",
       "D) Muhyiddin Arabi",
-      "E) Rağibendi"
+      "E) Râvendî"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Anadolu Selçuklu Devleti sarayında hükümdarlara sunulan ve dönemin olaylarını şiirsel bir dille anlatan Selçuklu Şehnamesi'nin yazarı ünlü divan şairi Hoca Dehhani'dir."
@@ -550,14 +550,14 @@ window.tarih_3_sorulari = [
     "id": "43",
     "question": "Ahilik Teşkilatı ile ilgili aşağıdakilerden hangisi doğrudur?",
     "options": [
-      "A) Asıl adı Muhammed bin Ahmed el-Hoyi olan Ahi Evran tarafından kurulmuştur",
+      "A) Asıl adı Mahmud bin Ahmed el-Hoyi olan Ahi Evran tarafından kurulmuştur",
       "B) Temeli I. Alaeddin Keykubat tarafından atılmıştır",
       "C) Gayrimüslimler de teşkilata alınmıştır",
       "D) Yalnızca askerî amaçlı kurulmuştur",
       "E) Merkezi yalnızca İstanbul'dur"
     ],
     "correctAnswerIndex": 0,
-    "explanation": "Ahilik esnaf örgütlenmesi, asıl adı Muhammed bin Ahmed el-Hoyi olan Ahi Evran liderliğinde kurulmuştur. Temelleri I. Gıyaseddin döneminde atılmıştır ve teşkilata gayrimüslimler kesinlikle alınmaz."
+    "explanation": "Ahilik esnaf ve zanaatkâr teşkilatı, asıl adı Şeyh Nasirüddin Mahmud bin Ahmed el-Hoyi olan Ahi Evran öncülüğünde kurulmuştur. Teşkilatın temelleri I. Alaeddin Keykubat değil I. Gıyaseddin Keyhüsrev döneminde atılmış, üyelik Müslüman esnafla sınırlı tutulmuş, teşkilat askerî değil meslekî, ekonomik ve ahlaki amaçlar taşımış ve Anadolu'nun pek çok şehrinde örgütlenmiştir."
   },
   {
     "id": "44",
@@ -661,7 +661,7 @@ window.tarih_3_sorulari = [
       "E) İnce Minareli Medrese – Konya"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "Ünlü Çifte Minareli Medrese Kayseri'de değil, Erzurum ilinde yer almaktadır. Kayseri'de Hunat Hatun ve Koca Hasan yapıları meşhurdur."
+    "explanation": "Çifte Minareli Medrese Kayseri'de değil Erzurum'dadır; aynı adı taşıyan bir medrese Sivas'ta da bulunur. Kayseri'deki ünlü Selçuklu yapıları ise Hunat Hatun Külliyesi ve Gevher Nesibe Şifahanesi'dir."
   },
   {
     "id": "52",
@@ -674,7 +674,7 @@ window.tarih_3_sorulari = [
       "E) Kırşehir Cacabey Medresesi"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "Erzurum'daki Yakutiye Medresesi ve Afyon'daki Sultan Dağı Medresesi, coğrafi eleme notunda belirtildiği üzere Selçuklu'ya değil, Moğol kökenli İlhanlılar Devleti'ne ait eserlerdir."
+    "explanation": "Erzurum'daki Yakutiye Medresesi, Anadolu'da İlhanlı hâkimiyetinin sürdüğü dönemde 1310 yılında yaptırılmıştır; bu nedenle bir Anadolu Selçuklu eseri değildir. Diğer seçeneklerde verilen Konya İnce Minareli Medrese, Sivas Gök Medrese, Antalya Yivli Minare ve Kırşehir Cacabey Medresesi XIII. yüzyıl Anadolu Selçuklu eserleridir."
   },
   {
     "id": "53",
@@ -700,11 +700,11 @@ window.tarih_3_sorulari = [
       "E) Artuklular"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "İstisnai eser notumuzda da vurgulandığı üzere, Afyon'daki Sultan Dağı Medresesi ile Erzurum'daki meşhur Yakutiye Medresesi, Moğolların Anadolu'yu tahrip ettiği dönemde İlhanlılar tarafından inşa edilmiştir."
+    "explanation": "Afyonkarahisar'daki Sultan Dağı Medresesi ile Erzurum'daki Yakutiye Medresesi, Anadolu Selçuklu Devleti'nin çöküşünün ardından Anadolu'da hâkimiyet kuran İlhanlılar döneminde inşa edilmiştir. Bu yüzden her iki yapı da Selçuklu değil İlhanlı eseri sayılır."
   },
   {
     "id": "55",
-    "question": "Türkiye'de bir eserin hangi devlete ait olduğunu belirlerken izlenmesi gereken mantığa göre, İstanbul, Bursa ve Edirne'deki eserler öncelikle hangi devlete ait kabul edilir?",
+    "question": "İstanbul, Bursa ve Edirne'de bulunan Türk-İslam eserleri öncelikle aşağıdaki devletlerden hangisine ait kabul edilir?",
     "options": [
       "A) Anadolu Selçuklu Devleti",
       "B) Danişmentliler",
@@ -713,7 +713,7 @@ window.tarih_3_sorulari = [
       "E) Artuklular"
     ],
     "correctAnswerIndex": 2,
-    "explanation": "Hayat kurtaran eleme taktiğimize göre; İstanbul, Bursa, Edirne, Tekirdağ ve Kırklareli gibi şehirler Selçuklu döneminde Türk toprağı değildi. Bu illerdeki tüm İslami-Türk eserleri istisnasız Osmanlı Devleti'ne aittir."
+    "explanation": "İstanbul, Bursa ve Edirne; Anadolu Selçuklu, Danişmentli, Artuklu ve İlhanlı dönemlerinde Türk hâkimiyetinde değildi. Bu şehirler sırasıyla Bursa 1326, Edirne 1361 ve İstanbul 1453'te Osmanlı Devleti tarafından fethedilmiştir. Bu nedenle buralardaki Türk-İslam eserleri Osmanlı dönemine aittir."
   },
   {
     "id": "56",

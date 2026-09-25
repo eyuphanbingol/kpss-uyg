@@ -2,15 +2,21 @@
 window.tarih_6_sorulari = [
     {
         question: "Fatih Sultan Mehmet ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
-        options: ["A) 7 dil bilmektedir", "B) 'Avni' mahlasıyla şiirler yazmıştır", "C) Kanun Hükümdarı unvanını almıştır", "D) Yer adlarını Arapçaya çevirmiştir", "E) 'Muhibbi' mahlasıyla şiirler yazmıştır"],
+        options: [
+        "A) 7 dil bilmektedir",
+        "B) 'Avni' mahlasıyla şiirler yazmıştır",
+        "C) Kanun Hükümdarı unvanını almıştır",
+        "D) Batlamyus'un dünya haritasını yeniden çizdirip üzerindeki yer adlarını Arapçaya çevirtmiştir",
+        "E) 'Muhibbi' mahlasıyla şiirler yazmıştır"
+        ],
         correctAnswerIndex: 4,
-        explanation: "'Muhibbi' mahlası Kanuni Sultan Süleyman'a aittir; Fatih'in mahlası 'Avni'dir. Bu ifade yanlıştır."
+        explanation: "'Muhibbi' mahlası Kanuni Sultan Süleyman'a aittir; Fatih Sultan Mehmet şiirlerini 'Avni' mahlasıyla yazmıştır. Bu nedenle yanlış olan ifade E seçeneğidir."
     },
     {
         question: "İstanbul'un fethinin nedenleri arasında aşağıdakilerden hangisi GÖSTERİLEMEZ?",
         options: ["A) Anadolu-Rumeli arasında toprak bütünlüğü sağlamak", "B) Boğazlara ve İpek Yolu'na hakim olmak", "C) Bizans'ın Anadolu beylikleriyle iş birliği yapması", "D) Bizans'ın Haçlı seferlerine neden olup şehzadeleri kışkırtması", "E) Bizans donanmasının Osmanlı'dan güçlü olması"],
         correctAnswerIndex: 4,
-        explanation: "Notta belirtilen fetih nedenleri arasında Bizans donanmasının gücü yer almaz; toprak bütünlüğü, boğazlar/İpek Yolu, Bizans'ın beyliklerle iş birliği, Haçlı kışkırtmaları, bilim-kültür merkezi olması ve hadis fetih nedenleridir."
+        explanation: "İstanbul'un fethinin nedenleri arasında Anadolu ile Rumeli toprakları arasında bütünlük sağlamak, Boğazlara ve ticaret yollarına hâkim olmak, Bizans'ın Anadolu beylikleriyle iş birliği yapması ve şehzadeleri kışkırtarak Haçlı seferlerine yol açması sayılır. Bizans donanması ise bu dönemde zayıf durumdaydı; bu durum fethin bir nedeni değil, Osmanlı'nın işini kolaylaştıran bir etkendir."
     },
     {
         question: "İstanbul'un bir bilim ve kültür merkezi olması ile Hz. Muhammed'in bu şehrin fethiyle ilgili hadisi, fetih nedenleri arasında hangi tür bir gerekçeye örnektir?",
@@ -37,7 +43,7 @@ window.tarih_6_sorulari = [
         explanation: "Boğazkesen (Rumeli Hisarı) Osmanlı'nın yaptığı bir yapıdır, Bizans'ın önlemi değildir. Grejova, silahlandırma, Haliç zinciri, kilise birleşimi ve Avrupa'dan yardım istemesi Bizans'ın önlemleridir."
     },
     {
-        question: "Fetih öncesi Bizanslı yüksek dereceli din ve devlet adamı Grandük Notaras'ın 'İstanbul'da kardinal külahı görmektense Osmanlı'nın sarığını görmeyi tercih ederim' sözü, Bizans içindeki hangi durumu yansıtır?",
+        question: "Fetih öncesinde Bizanslı üst düzey devlet adamı Grandük Notaras'ın 'İstanbul'da kardinal külahı görmektense Osmanlı'nın sarığını görmeyi tercih ederim' sözü, Bizans içindeki hangi durumu yansıtır?",
         options: ["A) Bizans halkının Osmanlı'ya karşı birleşik direnişini", "B) Bizans ordusunun güçlü olduğunu", "C) Katolik-Ortodoks birleşmesine duyulan tepkiyi ve Osmanlı yönetimine razı olma eğilimini", "D) Osmanlı'nın Bizans'tan yardım istediğini", "E) Bizans'ın Osmanlı ile ittifak kurduğunu"],
         correctAnswerIndex: 2,
         explanation: "Bu söz, Bizans içindeki bazı kesimlerin Katolik kilisesiyle birleşmeye (ve Batı'nın Ortodoksluğa müdahalesine) tepki duyduğunu, Osmanlı yönetimini bu duruma tercih ettiklerini gösterir."
@@ -67,16 +73,22 @@ window.tarih_6_sorulari = [
         explanation: "'Feth-i Mübin' ifadesi 'Parlak Zafer' anlamına gelir."
     },
     {
-        question: "Fatih Sultan Mehmet'in fetihleriyle ilgili olarak aşağıdakilerden hangisi doğrudur?",
-        options: ["A) Fatih toplam 10 ülke fethetmiştir", "B) Fatih toplam 17 ülke fethetmiştir", "C) Fatih hiç ülke fethetmemiştir", "D) Fatih sadece Anadolu'da fetih yapmıştır", "E) Fatih sadece denizlerde fetih yapmıştır"],
-        correctAnswerIndex: 1,
-        explanation: "Fatih Sultan Mehmet döneminde toplam 17 ülke fethetmiştir."
+        question: "Fatih Sultan Mehmet Dönemi'ndeki fetihlerle ilgili aşağıdakilerden hangisi doğrudur?",
+        options: [
+        "A) Bizans İmparatorluğu'na son verilmiş, Trabzon Rum İmparatorluğu da ortadan kaldırılmıştır",
+        "B) Anadolu'da hiçbir Türk beyliğine son verilmemiştir",
+        "C) Kırım'ın Osmanlı egemenliğine girmesi sağlanamamıştır",
+        "D) Fetihler yalnızca karada yapılmış, denizlerde ilerleme olmamıştır",
+        "E) Balkanlarda hiçbir toprak kazanılmamıştır"
+        ],
+        correctAnswerIndex: 0,
+        explanation: "Fatih Sultan Mehmet 1453'te İstanbul'u alarak Bizans İmparatorluğu'na, 1461'de de Trabzon Rum İmparatorluğu'na son vermiştir. Bu dönemde ayrıca Karamanoğulları Beyliği ortadan kaldırılmış, 1475'te Kırım Osmanlı egemenliğine alınmış, Ege adaları ile Mora, Sırbistan, Bosna ve Eflak gibi Balkan toprakları fethedilmiştir."
     },
     {
         question: "Fatih Sultan Mehmet döneminde Anadolu'da yapılan fetihlerle ilgili aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
         options: ["A) Candaroğulları – Sinop ve Samsun", "B) Karamanoğulları – Konya ve Karaman", "C) Cenevizliler – Amasra", "D) Trabzon Rum İmparatorluğu – tamamen son verildi", "E) Dulkadiroğulları – tamamen son verildi"],
         correctAnswerIndex: 4,
-        explanation: "Dulkadiroğullarına Fatih değil, Yavuz Sultan Selim'in oğlu döneminde (1522, Şehsuvaroğlu Ali Bey sonrası) tam anlamıyla son verilmiştir; Fatih dönemi fetihleri arasında Dulkadiroğulları'na son verilmesi yer almaz."
+        explanation: "Dulkadiroğulları Beyliği'ne 1515 Turnadağ Savaşı ile Yavuz Sultan Selim döneminde son verilmiştir; bu olay Fatih dönemi Anadolu fetihleri arasında yer almaz. Fatih döneminde Sinop ve Samsun alınarak Candaroğulları'na, Konya ve Karaman'ın fethiyle Karamanoğulları'na son verilmiş, Amasra Cenevizlilerden alınmış ve 1461'de Trabzon Rum İmparatorluğu ortadan kaldırılmıştır."
     },
     {
         question: "Trabzon Rum İmparatorluğu'na son verilmesinin en önemli sonucu aşağıdakilerden hangisidir?",
@@ -98,9 +110,15 @@ window.tarih_6_sorulari = [
     },
     {
         question: "Fatih Sultan Mehmet'e, karada ve denizde birçok yer fethetmesinden dolayı verilen unvan aşağıdakilerden hangisidir?",
-        options: ["A) Kayser-i Rum", "B) Sultan-ı İklim-i Rum", "C) Hadimü'l-Harameyn", "D) Sultan'ul Bahreyn ve Hakan'ul Berreyn", "E) Kanun Sultanı"],
+        options: [
+        "A) Kayser-i Rum",
+        "B) Sultan-ı İklim-i Rum",
+        "C) Hadimü'l-Harameyn",
+        "D) Sultanü'l-Berreyn ve Hâkanü'l-Bahreyn",
+        "E) Kanun Sultanı"
+        ],
         correctAnswerIndex: 3,
-        explanation: "Karada ve denizde birçok yer fethetmesi nedeniyle Fatih'e 'Sultan'ul Bahreyn ve Hakan'ul Berreyn' (İki denizin ve iki karanın sultanı) unvanı verilmiştir."
+        explanation: "Karada ve denizde birçok yer fethetmesi nedeniyle Fatih Sultan Mehmet'e 'Sultanü'l-Berreyn ve Hâkanü'l-Bahreyn' (iki karanın sultanı, iki denizin hakanı) unvanı verilmiştir. Kayser-i Rum unvanı İstanbul'un fethiyle Roma mirasına sahip çıkılmasını, Hadimü'l-Harameyn unvanı ise Yavuz Sultan Selim ile birlikte kutsal toprakların hizmetkârlığını ifade eder."
     },
     {
         question: "Fatih Sultan Mehmet döneminde İtalya'da fethedilen ve kısa süre elde tutulan yer aşağıdakilerden hangisidir?",
@@ -115,10 +133,16 @@ window.tarih_6_sorulari = [
         explanation: "1473'te Erzincan'da Akkoyunlularla yapılan ve kazanılan, Doğu Anadolu'yu Osmanlı'ya katan savaş Otlukbeli Savaşı'dır."
     },
     {
-        question: "Fatih döneminde Hicaz su yolları sorunu nedeniyle ilişkilerin gerildiği devletler arasında aşağıdakilerden hangisi YER ALMAZ?",
-        options: ["A) Karamanoğulları", "B) Dulkadiroğulları", "C) Memlükler", "D) Akkoyunlular", "E) —"],
-        correctAnswerIndex: 3,
-        explanation: "Hicaz su yolları sorunuyla ilişkileri gerilenler Karamanoğulları, Dulkadiroğulları ve Memlüklerdir; Akkoyunlularla yaşanan gerginlik ise Otlukbeli Savaşı ile ilgilidir, su yolları sorunuyla değil."
+        question: "Fatih Sultan Mehmet döneminde Osmanlı-Memlük ilişkilerinin bozulmasının nedenleri arasında aşağıdakilerden hangisi YER ALMAZ?",
+        options: [
+        "A) Memlüklerin Karamanoğulları'nı Osmanlı'ya karşı desteklemesi",
+        "B) Mekke ve Medine su yollarının onarımı konusunda anlaşmazlık çıkması",
+        "C) Hindistan'dan Fatih'e gönderilen hediyelere Memlüklerin el koyması",
+        "D) Dulkadiroğulları Beyliği üzerinde nüfuz mücadelesi yaşanması",
+        "E) Memlüklerin Otlukbeli Savaşı'nda Akkoyunlular safında yer alması"
+        ],
+        correctAnswerIndex: 4,
+        explanation: "Fatih döneminde Osmanlı-Memlük ilişkileri; Memlüklerin Karamanoğulları'nı desteklemesi, Mekke ve Medine su yollarının onarımı meselesinde çıkan anlaşmazlık, Hindistan'dan Fatih'e gönderilen hediyelere el konulması ve Dulkadiroğulları üzerindeki nüfuz mücadelesi nedeniyle bozulmuştur. 1473'teki Otlukbeli Savaşı ise Osmanlı Devleti ile Akkoyunlular arasında yapılmıştır; Memlükler bu savaşta taraf olmamıştır."
     },
     {
         question: "Fatih Sultan Mehmet dönemindeki gelişmelerle ilgili aşağıdakilerden hangisi YANLIŞTIR?",
@@ -223,10 +247,16 @@ window.tarih_6_sorulari = [
         explanation: "Halifeliğin Osmanlı'nın eline geçmesi, dine dayalı yönetim anlayışı olan teokratik devlet anlayışını güçlendirmiştir."
     },
     {
-        question: "Ridaniye Savaşı devam ederken Avrupa'da yaşanan önemli gelişme aşağıdakilerden hangisidir?",
-        options: ["A) Rönesans", "B) Reform", "C) Fransız İhtilali", "D) Sanayi Devrimi", "E) Coğrafi Keşifler'in başlaması"],
+        question: "Yavuz Sultan Selim'in Mısır Seferi'ni tamamladığı 1517 yılında Avrupa'da başlayan gelişme aşağıdakilerden hangisidir?",
+        options: [
+        "A) Yüzyıl Savaşları'nın başlaması",
+        "B) Reform hareketinin başlaması",
+        "C) Fransız İhtilali'nin çıkması",
+        "D) Sanayi Devrimi'nin başlaması",
+        "E) Coğrafi Keşifler'in başlaması"
+        ],
         correctAnswerIndex: 1,
-        explanation: "Ridaniye Savaşı sürerken Avrupa'da Reform hareketi yaşanmıştır."
+        explanation: "Yavuz Sultan Selim, 22 Ocak 1517'deki Ridaniye Savaşı ile Memlük Devleti'ne son vererek Mısır Seferi'ni tamamlamıştır. Aynı yılın 31 Ekim'inde Martin Luther'in 95 maddelik tezlerini yayımlamasıyla Avrupa'da Reform hareketi başlamıştır. Yüzyıl Savaşları 1337'de, Coğrafi Keşifler 15. yüzyılın sonlarında başlamış; Fransız İhtilali 1789'da çıkmış, Sanayi Devrimi ise 18. yüzyılda ortaya çıkmıştır."
     },
     {
         question: "Yavuz Sultan Selim'e Mekke ve Medine'nin hizmetkârı anlamında verilen unvan aşağıdakilerden hangisidir?",
@@ -248,9 +278,15 @@ window.tarih_6_sorulari = [
     },
     {
         question: "Kanuni'nin tahtının ilk yıllarında uğraştığı isyanlar arasında aşağıdakilerden hangisi GÖSTERİLEMEZ?",
-        options: ["A) Canbardi İsyanı (Mısır)", "B) Gazali İsyanı (Mısır)", "C) Baba Zünnun İsyanı", "D) Kalender Çelebi İsyanı", "E) Şah Kulu İsyanı"],
+        options: [
+        "A) Canberdi Gazali İsyanı (Şam)",
+        "B) Ahmet Paşa İsyanı (Mısır)",
+        "C) Baba Zünnun İsyanı",
+        "D) Kalender Çelebi İsyanı",
+        "E) Şah Kulu İsyanı"
+        ],
         correctAnswerIndex: 4,
-        explanation: "Şah Kulu İsyanı, II. Bayezid dönemine aittir; Kanuni'nin ilk yıllarındaki isyanlar arasında Canbardi, Gazali, Ahmet Paşa (Mısır), Baba Zünnun ve Kalender Çelebi isyanları sayılır."
+        explanation: "Kanuni'nin tahta çıktığı ilk yıllarda Şam'da Canberdi Gazali, Mısır'da Hain Ahmet Paşa, Anadolu'da ise Baba Zünnun ve Kalender Çelebi isyanları çıkmıştır. Şah Kulu İsyanı ise 1511'de II. Bayezid döneminde meydana gelmiş olduğundan Kanuni'nin ilk yıllarındaki isyanlar arasında gösterilemez."
     },
     {
         question: "Mohaç Meydan Muharebesi ile ilgili aşağıdakilerden hangisi doğrudur?",
@@ -260,9 +296,15 @@ window.tarih_6_sorulari = [
     },
     {
         question: "Viyana Kuşatması'nın başarısız olmasının nedenleri arasında aşağıdakilerden hangisi GÖSTERİLEMEZ?",
-        options: ["A) Ağır topların götürülememesi", "B) Olumsuz hava koşulları", "C) Kışın erken bastırması", "D) Osmanlı donanmasının yenilmesi", "E) —"],
+        options: [
+        "A) Ağır topların götürülememesi",
+        "B) Olumsuz hava koşulları",
+        "C) Kışın erken bastırması",
+        "D) Osmanlı donanmasının yenilmesi",
+        "E) Şehri savunanların güçlü bir direniş göstermesi"
+        ],
         correctAnswerIndex: 3,
-        explanation: "Viyana Kuşatması karada yapılan bir kuşatmadır; başarısızlık nedenleri ağır topların götürülememesi ve hava koşullarıdır. Donanmanın yenilgisi bu kuşatmayla ilgili değildir."
+        explanation: "Viyana Kuşatması karada yapılan bir kuşatmadır. Başarısızlıkta ağır kuşatma toplarının yağmur ve çamur yüzünden getirilememesi, olumsuz hava koşulları, kışın erken bastırması ve savunmanın güçlü direnişi etkili olmuştur. Osmanlı donanmasının yenilmesi ise bu kuşatmayla ilgili bir neden değildir."
     },
     {
         question: "Alman Seferi'nde Osmanlı ordusunun karşısına çıkamayan Avrupalı komutan/hükümdar aşağıdakilerden hangisidir?",
@@ -290,9 +332,15 @@ window.tarih_6_sorulari = [
     },
     {
         question: "Hint Deniz Seferleri'nde Osmanlı Devleti'nin yeteri kadar başarılı olamamasının nedenleri arasında aşağıdakilerden hangisi GÖSTERİLEMEZ?",
-        options: ["A) Okyanusa dayalı gemilerin olmaması", "B) Denizcilerin bölgeyi yeterince bilmemesi", "C) Seferlere gereken önemin verilmemesi", "D) Osmanlı donanmasının hiç bulunmaması", "E) —"],
+        options: [
+        "A) Okyanusa dayanıklı gemilerin bulunmaması",
+        "B) Denizcilerin bölgeyi yeterince bilmemesi",
+        "C) Seferlere gereken önemin verilmemesi",
+        "D) Osmanlı Devleti'nin hiç donanmasının bulunmaması",
+        "E) Portekiz donanmasının bölgedeki üstünlüğü"
+        ],
         correctAnswerIndex: 3,
-        explanation: "Osmanlı'nın bir donanması olmasına rağmen okyanus koşullarına uygun gemilerin eksikliği, bölge bilgisizliği ve seferlere yeterli önemin verilmemesi başarısızlığın nedenleridir; 'donanmanın hiç bulunmaması' doğru değildir."
+        explanation: "Osmanlı Devleti'nin güçlü bir donanması vardı; ancak bu donanma okyanus koşullarına dayanıklı gemilerden oluşmuyordu. Bölgenin yeterince tanınmaması, seferlere gereken önemin verilmemesi ve Portekizlilerin bölgedeki deniz üstünlüğü başarısızlığın nedenleridir. Donanmanın hiç bulunmaması ise söz konusu değildir."
     },
     {
         question: "Trablusgarp'ın alınmasının ardından buranın beyliğine getirilen Osmanlı denizcisi aşağıdakilerden hangisidir?",
@@ -361,10 +409,10 @@ window.tarih_6_sorulari = [
         explanation: "Osmanlı donanması tarihte dört kez yakılmıştır: İnebahtı, Çeşme, Navarin ve Sinop."
     },
     {
-        question: "Sokullu Mehmet Paşa'nın İnebahtı yenilgisi üzerine söylediği rivayet edilen 'Biz Kıbrıs'ı alarak kolunuzu kestik, siz İnebahtı'da saçımızı kestiniz...' sözüyle vurgulamak istediği nedir?",
+        question: "Sokullu Mehmet Paşa'nın İnebahtı yenilgisi üzerine Venedik elçisine söylediği rivayet edilen 'Biz Kıbrıs'ı alarak sizin kolunuzu kestik; siz ise donanmamızı yakmakla sakalımızı tıraş ettiniz.' sözüyle vurgulamak istediği aşağıdakilerden hangisidir?",
         options: ["A) Kıbrıs'ın önemsiz olduğu", "B) Kıbrıs'ın kalıcı bir kazanç, donanma kaybının ise telafi edilebilir olduğu", "C) Osmanlı'nın artık deniz gücü kalmadığı", "D) Venedik'in çok güçlü olduğu", "E) Barışın imkânsız olduğu"],
         correctAnswerIndex: 1,
-        explanation: "Sokullu, kalıcı bir toprak kazancı olan Kıbrıs'ın (kesilen kol) telafi edilemeyeceğini, ancak donanmanın (kesilen sakal) yeniden ve daha güçlü inşa edilebileceğini vurgulamıştır."
+        explanation: "Sokullu bu benzetmeyle, kalıcı bir toprak kazancı olan Kıbrıs'ın (kesilen kol) geri alınamayacağını, yakılan donanmanın (tıraş edilen sakal) ise yeniden ve daha güçlü biçimde inşa edilebileceğini anlatmak istemiştir. Nitekim Osmanlı donanması kısa sürede yeniden kurulmuştur."
     },
     {
         question: "Ordunun başında sefere çıkma geleneğini ilk terk eden; İstanbul'da doğup İstanbul'da ölen Osmanlı padişahı aşağıdakilerden hangisidir?",
@@ -373,10 +421,10 @@ window.tarih_6_sorulari = [
         explanation: "Ordunun başında sefere çıkma geleneğini ilk terk eden, İstanbul'da doğup İstanbul'da ölen padişah II. Selim'dir."
     },
     {
-        question: "1576'da Osmanlı egemenliği altına giren Kuzey Afrika ülkesi aşağıdakilerden hangisidir?",
+        question: "1578'de yapılan Vadi's-Seyl (Üç Krallar) Savaşı'ndan sonra Osmanlı himayesine giren Kuzey Afrika ülkesi aşağıdakilerden hangisidir?",
         options: ["A) Cezayir", "B) Tunus", "C) Fas", "D) Trablusgarp", "E) Mısır"],
         correctAnswerIndex: 2,
-        explanation: "1576'da Fas, Osmanlı Devleti'nin egemenliği altına girmiştir."
+        explanation: "1578'de Fas topraklarında yapılan Vadi's-Seyl (Üç Krallar) Savaşı'nda Portekiz ordusu ağır bir yenilgiye uğratılmış, bu gelişmenin ardından Fas Osmanlı himayesine girmiştir. Cezayir 1533'te Barbaros Hayreddin Paşa'nın Osmanlı hizmetine girmesiyle, Trablusgarp 1551'de, Tunus ise 1574'te Osmanlı egemenliğine alınmış; Mısır 1517'de Yavuz Sultan Selim tarafından fethedilmiştir."
     },
     {
         question: "İran ile yapılan Meşaleler Savaşı sonucunda imzalanan ve Osmanlı Devleti'nin Doğu'da en geniş sınırlarına ulaşmasını sağlayan antlaşma aşağıdakilerden hangisidir?",
@@ -392,9 +440,15 @@ window.tarih_6_sorulari = [
     },
     {
         question: "Don-Volga ırmaklarını birleştirme projesinin gerçekleştirilememesinin nedenleri arasında aşağıdakilerden hangisi GÖSTERİLEMEZ?",
-        options: ["A) Mimar Sinan'ın vefat etmesi", "B) Kırım Hanlarının isteksiz davranması", "C) Rus saldırıları", "D) Osmanlı hazinesinin tamamen boşalmış olması", "E) —"],
+        options: [
+        "A) Bölgenin merkeze çok uzak olması",
+        "B) Kırım Hanlarının isteksiz davranması",
+        "C) Rus saldırıları",
+        "D) Osmanlı hazinesinin tamamen boşalmış olması",
+        "E) Olumsuz iklim ve arazi koşulları"
+        ],
         correctAnswerIndex: 3,
-        explanation: "Projenin gerçekleşememe nedenleri arasında Mimar Sinan'ın vefatı, Kırım Hanlarının isteksizliği ve Rus saldırıları sayılır; hazinenin tamamen boşalması bir neden olarak belirtilmemiştir."
+        explanation: "1569'da başlatılan Don-Volga Kanalı projesi; bölgenin merkeze çok uzak olması, ağır iklim ve arazi koşulları, Kırım Hanlarının projeye isteksiz yaklaşması ve Rus saldırıları nedeniyle tamamlanamamıştır. Osmanlı hazinesinin tamamen boşalmış olması bu dönem için geçerli bir neden değildir."
     },
     {
         question: "Kızıldeniz ile Akdeniz'i birleştirerek Osmanlı'yı Hindistan'a kısa yoldan ulaştırmayı ve Baharat Yolu'na işlerlik kazandırmayı amaçlayan proje aşağıdakilerden hangisidir?",
@@ -403,10 +457,16 @@ window.tarih_6_sorulari = [
         explanation: "Kızıldeniz-Akdeniz'i birleştirme ve Baharat Yolu'na işlerlik kazandırma amacı Süveyş Kanalı Projesi'ne aittir."
     },
     {
-        question: "Süveyş Kanalı'nı, Sokullu'nun projesinden çok sonra gerçekte açan devletler aşağıdakilerden hangisidir?",
-        options: ["A) İngiltere ve Fransa", "B) Osmanlı ve İran", "C) Rusya ve Almanya", "D) İspanya ve Portekiz", "E) Venedik ve Ceneviz"],
+        question: "Sokullu Mehmet Paşa'nın tasarladığı Süveyş Kanalı projesini yaklaşık üç yüzyıl sonra fiilen gerçekleştiren devlet aşağıdakilerden hangisidir?",
+        options: [
+        "A) Fransa",
+        "B) İngiltere",
+        "C) Rusya",
+        "D) İspanya",
+        "E) Portekiz"
+        ],
         correctAnswerIndex: 0,
-        explanation: "Süveyş Kanalı, Sokullu'nun projesinden çok sonra İngiltere ve Fransa tarafından açılmıştır."
+        explanation: "Sokullu Mehmet Paşa'nın 16. yüzyılda tasarladığı Süveyş Kanalı projesi, 1859-1869 yılları arasında Ferdinand de Lesseps öncülüğündeki Fransız şirketi tarafından hayata geçirilmiştir. İngiltere kanalın yapımına baştan karşı çıkmış, kanal hisselerinin bir bölümünü ancak 1875'te, yani kanal açıldıktan sonra satın almıştır."
     },
     {
         question: "Akdeniz ile Karadeniz'i birleştirerek Karadeniz'e ikinci bir çıkış açmayı ve tersanelerin kereste ihtiyacını karşılamayı amaçlayan proje aşağıdakilerden hangisidir?",

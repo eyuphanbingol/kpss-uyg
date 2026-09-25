@@ -205,10 +205,10 @@ window.cografya_14_sorulari = [
             "B) Asi",
             "C) Gediz",
             "D) Meriç",
-            "E) Meriç Nehri"
+            "E) Bartın Çayı"
         ],
         correctAnswerIndex: 0,
-        explanation: "Taşkınlarıyla öne çıkan akarsular Meriç, Asi ve Gediz'dir. Zap Suyu bu grupta yer almaz."
+        explanation: "Taşkınlarıyla sıkça anılan akarsular arasında Meriç, Asi, Gediz ve Bartın Çayı yer alır. Zap Suyu ise dar ve derin vadiler içinde akan, taşkınlarıyla öne çıkmayan bir akarsudur."
     },    {
         id: 16,
         question: "Aşağıdakilerden hangisi Türkiye'de çığ riskinin en yüksek olduğu illerden biri değildir?",
@@ -354,13 +354,13 @@ window.cografya_14_sorulari = [
         question: "Saros Körfezi'nin Türkiye'nin en temiz körfezi olmasının temel nedeni aşağıdakilerden hangisidir?",
         options: [
             "A) Gelgit genliğinin fazla olması",
-            "B) Kendi kendini temizleyebilmesi",
+            "B) Güçlü akıntıları sayesinde su sirkülasyonunun yüksek olması",
             "C) Tatlı su kaynaklarının fazla olması",
             "D) Tuzluluk oranının düşük olması",
             "E) Nüfusunun az olması"
         ],
         correctAnswerIndex: 1,
-        explanation: "Saros Körfezi güçlü akıntıları sayesinde kendi kendini temizleyebilmektedir."
+        explanation: "Saros Körfezi'nde güçlü akıntılar suyun sürekli yenilenmesini sağlar. Yüksek su sirkülasyonu kirleticilerin körfezde birikmesini engellediği için körfez temiz kalır."
     },
 
     {
@@ -419,16 +419,16 @@ window.cografya_14_sorulari = [
         explanation: "Samandere Şelalesi Düzce il sınırları içerisindedir."
     },    {
         id: 31,
-        question: "Türkiye'nin tabiatı koruma alanı olarak ilan edilen yer aşağıdakilerden hangisidir?",
+        question: "Aşağıdakilerden hangisi tabiatı koruma alanı olarak ilan edilmiştir?",
         options: [
             "A) Belgrad Ormanı",
             "B) Hacıosman Ormanı",
             "C) Yedigöller",
-            "D) Kazdağı",
+            "D) Uludağ",
             "E) Küre Dağları"
         ],
         correctAnswerIndex: 1,
-        explanation: "Türkiye'nin tabiatı koruma alanı olarak öne çıkan yer Hacıosman Ormanı'dır."
+        explanation: "Samsun'daki Hacıosman Ormanı, subasar (longoz) orman özelliğini korumak amacıyla tabiatı koruma alanı ilan edilmiştir. Yedigöller, Uludağ ve Küre Dağları milli park, Belgrad Ormanı ise mesire ve muhafaza ormanı statüsündedir."
     },
 
     {
