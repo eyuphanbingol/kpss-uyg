@@ -1,6 +1,6 @@
 export var TR_MAP_URLS = [
-    "https://www.atanly.com/svg/tr.svg?v=3",
-    "https://kpss-uyg.vercel.app/svg/tr.svg?v=3"
+    "https://www.atanly.com/svg/tr.svg?v=4",
+    "https://kpss-uyg.vercel.app/svg/tr.svg?v=4"
 ];
 
 var svgCache = "";
