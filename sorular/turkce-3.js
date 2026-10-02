@@ -5,21 +5,23 @@ window.turkce_3_sorulari = [
     "options": [
         "A) Tartışmacı",
         "B) Betimleyici",
-        "C) Öyküleyici",
-        "D) Açıklayıcı"
+        "C) Emredici",
+        "D) Öyküleyici",
+        "E) Açıklayıcı"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Açıklayıcı anlatım öğretmeyi / bilgi vermeyi amaçlar."
 },
 {
     "question": "Bir düşüncenin yanlışlığını gösterip başka bir düşünceyi savunan anlatım hangisidir?",
     "options": [
-        "A) Açıklayıcı",
-        "B) Betimleyici",
-        "C) Tartışmacı",
-        "D) Öyküleyici"
+        "A) Söyleşmeye bağlı",
+        "B) Açıklayıcı",
+        "C) Betimleyici",
+        "D) Tartışmacı",
+        "E) Öyküleyici"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Tartışmacı anlatımda sav ve çürütme vardır."
 },
 {
@@ -28,7 +30,8 @@ window.turkce_3_sorulari = [
         "A) Betimleyici",
         "B) Açıklayıcı",
         "C) Tartışmacı",
-        "D) Öyküleyici"
+        "D) Öyküleyici",
+        "E) Kanıtlayıcı"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Betimleme gözlemleri canlandırır."
@@ -38,8 +41,9 @@ window.turkce_3_sorulari = [
     "options": [
         "A) Açıklayıcı",
         "B) Öyküleyici",
-        "C) Tartışmacı",
-        "D) Betimleyici"
+        "C) Emredici",
+        "D) Tartışmacı",
+        "E) Betimleyici"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Öyküleme olay, kahraman, yer ve zaman ister."
@@ -50,9 +54,10 @@ window.turkce_3_sorulari = [
         "A) Örnekleme",
         "B) Tanık gösterme",
         "C) Benzetme",
-        "D) Tanımlama"
+        "D) Karşılaştırma",
+        "E) Tanımlama"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Korkunun ne olduğu tanımlanmıştır."
 },
 {
@@ -61,7 +66,8 @@ window.turkce_3_sorulari = [
         "A) Karşılaştırma",
         "B) Örneklendirme",
         "C) Tanık gösterme",
-        "D) Açıklama"
+        "D) Tanımlama",
+        "E) Açıklama"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Kıyas karşılaştırma yoludur."
@@ -71,8 +77,9 @@ window.turkce_3_sorulari = [
     "options": [
         "A) Benzetme",
         "B) Örneklendirme",
-        "C) Tanımlama",
-        "D) Tanık gösterme"
+        "C) Sayısal verilerden yararlanma",
+        "D) Tanımlama",
+        "E) Tanık gösterme"
     ],
     "correctAnswerIndex": 1,
     "explanation": "“Mesela” örneklemeyi işaret eder."
@@ -83,7 +90,8 @@ window.turkce_3_sorulari = [
         "A) Karşılaştırma",
         "B) Benzetme",
         "C) Sayısal veri",
-        "D) Tanımlama"
+        "D) Tanımlama",
+        "E) Tanık gösterme"
     ],
     "correctAnswerIndex": 1,
     "explanation": "“gibidir” benzetme ilgecidir."
@@ -91,21 +99,23 @@ window.turkce_3_sorulari = [
 {
     "question": "Bir düşünceyi desteklemek amacıyla uzman kişinin görüşüne yer verilmesine ne denir?",
     "options": [
-        "A) Örneklendirme",
-        "B) Betimleme",
-        "C) Karşılaştırma",
-        "D) Tanık gösterme"
+        "A) Tanımlama",
+        "B) Örneklendirme",
+        "C) Betimleme",
+        "D) Karşılaştırma",
+        "E) Tanık gösterme"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Otorite görüşü tanık göstermedir."
 },
 {
     "question": "“Türkiye’nin nüfusu 79 milyon 814 bin 871 olmuştur.” ifadesinde hangi yöntem vardır?",
     "options": [
         "A) Sayısal verilerden yararlanma",
-        "B) Tanımlama",
-        "C) Benzetme",
-        "D) Tanık gösterme"
+        "B) Karşılaştırma",
+        "C) Tanımlama",
+        "D) Benzetme",
+        "E) Tanık gösterme"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Kesin sayı, sayısal veridir."
@@ -114,9 +124,10 @@ window.turkce_3_sorulari = [
     "question": "Paragrafın açıklanıp geliştirilebilecek genel ve bağımsız yargılarının bulunduğu bölüm hangisidir?",
     "options": [
         "A) Giriş",
-        "B) Gelişme",
-        "C) Sonuç",
-        "D) Ara bölüm"
+        "B) Başlık",
+        "C) Gelişme",
+        "D) Sonuç",
+        "E) Ara bölüm"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Giriş cümlesi bağımsız ve geneldir."
@@ -127,7 +138,8 @@ window.turkce_3_sorulari = [
         "A) Giriş",
         "B) Sonuç",
         "C) Gelişme",
-        "D) Başlık"
+        "D) Ana düşünce",
+        "E) Başlık"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Gelişme bölümü konuyu açar."
@@ -136,44 +148,48 @@ window.turkce_3_sorulari = [
     "question": "Konunun özetlenip sonuca bağlandığı bölüm hangisidir?",
     "options": [
         "A) Giriş",
-        "B) Gelişme",
-        "C) Sonuç",
-        "D) Yardımcı düşünce"
+        "B) Konu",
+        "C) Gelişme",
+        "D) Sonuç",
+        "E) Yardımcı düşünce"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Sonuç özetler ve bağlar."
 },
 {
     "question": "Paragraftaki anlam bütünlüğünü bozan cümleye ne ad verilir?",
     "options": [
         "A) Ana düşünce",
-        "B) Sonuç",
-        "C) Yardımcı düşünce",
-        "D) Akışı bozan cümle"
+        "B) Giriş cümlesi",
+        "C) Sonuç",
+        "D) Yardımcı düşünce",
+        "E) Akışı bozan cümle"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Konu dışına çıkan cümle akışı bozar."
 },
 {
     "question": "Paragraf ikiye bölünürken temel olarak neye dikkat edilir?",
     "options": [
         "A) Cümle uzunluğuna",
-        "B) Noktalama işaretlerine",
-        "C) Ana düşüncenin veya yönün değişmesine",
-        "D) Sözcük sayısına"
+        "B) Paragraftaki örnek sayısına",
+        "C) Noktalama işaretlerine",
+        "D) Ana düşüncenin veya yönün değişmesine",
+        "E) Sözcük sayısına"
     ],
-    "correctAnswerIndex": 2,
+    "correctAnswerIndex": 3,
     "explanation": "Yön veya ana düşünce değişince iki paragraf olur."
 },
 {
     "question": "“Yazar ne anlatıyor?” sorusu paragrafta hangi unsuru buldurur?",
     "options": [
         "A) Ana düşünce",
-        "B) Konu",
-        "C) Başlık",
-        "D) Yardımcı düşünce"
+        "B) Sonuç",
+        "C) Konu",
+        "D) Başlık",
+        "E) Yardımcı düşünce"
     ],
-    "correctAnswerIndex": 1,
+    "correctAnswerIndex": 2,
     "explanation": "Ne anlatıldığı konudur."
 },
 {
@@ -181,10 +197,11 @@ window.turkce_3_sorulari = [
     "options": [
         "A) Sonuç",
         "B) Ana düşünce",
-        "C) Yardımcı düşünce",
-        "D) Başlık"
+        "C) Anahtar cümle",
+        "D) Yardımcı düşünce",
+        "E) Başlık"
     ],
-    "correctAnswerIndex": 3,
+    "correctAnswerIndex": 4,
     "explanation": "Başlık konuyu kısa adlandırır."
 },
 {
@@ -193,7 +210,8 @@ window.turkce_3_sorulari = [
         "A) Konu",
         "B) Başlık",
         "C) Ana düşünce",
-        "D) Yardımcı düşünce"
+        "D) Yardımcı düşünce",
+        "E) Üslup"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Ana düşünce iletilmek istenen yargıdır."
@@ -204,7 +222,8 @@ window.turkce_3_sorulari = [
         "A) Yardımcı düşünce",
         "B) Başlık",
         "C) Konu",
-        "D) Sonuç"
+        "D) Anahtar sözcük",
+        "E) Sonuç"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Yardımcı düşünceler ana fikri taşır."
@@ -214,8 +233,9 @@ window.turkce_3_sorulari = [
     "options": [
         "A) Ana düşünce",
         "B) Yardımcı düşünce",
-        "C) Başlık",
-        "D) Konu"
+        "C) Anlatım biçimi",
+        "D) Başlık",
+        "E) Konu"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Bu kalıplar yardımcı düşünce / çıkarım sorularına aittir."
