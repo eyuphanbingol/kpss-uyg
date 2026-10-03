@@ -370,6 +370,10 @@ window.getKpssData = function () {
             "Genel Tekrar 2": {
                 notlar: window.vatandas_15_notlari || [],
                 sorular: window.vatandas_15_sorulari || []
+            },
+            "Genel Tekrar 3": {
+                notlar: window.vatandas_16_notlari || [],
+                sorular: window.vatandas_16_sorulari || []
             }
         },
          "Güncel Bilgiler": {
