@@ -378,6 +378,10 @@ window.getKpssData = function () {
             "Genel Tekrar 4": {
                 notlar: window.vatandas_17_notlari || [],
                 sorular: window.vatandas_17_sorulari || []
+            },
+            "Genel Tekrar 5": {
+                notlar: window.vatandas_18_notlari || [],
+                sorular: window.vatandas_18_sorulari || []
             }
         },
          "Güncel Bilgiler": {
