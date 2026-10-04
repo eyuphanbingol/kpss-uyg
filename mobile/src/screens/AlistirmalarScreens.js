@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useMemo, useState } from "react";
+import React, { memo, useEffect, useMemo, useRef, useState } from "react";
 import { Image, Pressable, ScrollView, Text, View, StyleSheet, useWindowDimensions } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useApp } from "../AppProvider";
@@ -471,16 +471,39 @@ export function MapPlayScreen({ route, navigation }) {
     var _flash = useState(null); var flash = _flash[0]; var setFlash = _flash[1];
     var _d = useState(false); var done = _d[0]; var setDone = _d[1];
     var target = items[idx] || null;
+    var flashTimer = useRef(null);
+    var doneTimer = useRef(null);
+
+    function clearTimers() {
+        if (flashTimer.current) clearTimeout(flashTimer.current);
+        if (doneTimer.current) clearTimeout(doneTimer.current);
+        flashTimer.current = null;
+        doneTimer.current = null;
+    }
 
     useEffect(function () {
+        clearTimers();
         setIdx(0); setSolved({}); setShown({}); setLastId(null); setMisses(0); setFlash(null); setDone(false);
     }, [seed, topicId]);
+
+    // ekrandan çıkınca bekleyen zamanlayıcılar kapanmış bileşene dokunmasın
+    useEffect(function () { return clearTimers; }, []);
+
+    // son işaretlenen yerin illeri haritada vurgulanır
+    var hl = useMemo(function () {
+        var pin = null;
+        (layer.pins || []).forEach(function (p) { if (p.id === lastId) pin = p; });
+        return pin ? (pin.codes || []) : [];
+    }, [layer, lastId]);
 
     function advance(nextSolved) {
         var i = idx + 1;
         while (i < total && nextSolved[items[i].id]) i++;
         setIdx(i);
-        if (i >= total) setTimeout(function () { setDone(true); }, 420);
+        if (i >= total) {
+            if (doneTimer.current) clearTimeout(doneTimer.current);
+            doneTimer.current = setTimeout(function () { doneTimer.current = null; setDone(true); }, 420);
+        }
     }
 
     function onPin(pinId) {
@@ -493,9 +516,10 @@ export function MapPlayScreen({ route, navigation }) {
             advance(next);
             return;
         }
-        setMisses(misses + 1);
+        setMisses(function (m) { return m + 1; });
         setFlash(pinId);
-        setTimeout(function () { setFlash(null); }, 560);
+        if (flashTimer.current) clearTimeout(flashTimer.current);
+        flashTimer.current = setTimeout(function () { flashTimer.current = null; setFlash(null); }, 560);
     }
 
     function reveal() {
@@ -505,7 +529,7 @@ export function MapPlayScreen({ route, navigation }) {
         setSolved(next);
         setShown(Object.assign({}, shown, defineShown(target.id)));
         setLastId(target.id);
-        setMisses(misses + 1);
+        setMisses(function (m) { return m + 1; });
         advance(next);
     }
 
@@ -559,7 +583,7 @@ export function MapPlayScreen({ route, navigation }) {
 
     return (
         <Screen dark={isDark} style={{ overflow: "hidden", backgroundColor: "#0c3d56" }} edges={[]}>
-            <View key={win.width + "x" + win.height} style={[{ flex: 1, minHeight: 0, minWidth: 0, overflow: "hidden" }, playPad]}>
+            <View style={[{ flex: 1, minHeight: 0, minWidth: 0, overflow: "hidden" }, playPad]}>
                 <View style={styles.mapAskRow}>
                     <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} style={{ marginBottom: 0 }} />
                     <Text style={[styles.kicker, { flex: 1, marginBottom: 0, minWidth: 0, color: "#d7c39a", textAlign: "right" }]} numberOfLines={1}>
@@ -575,11 +599,11 @@ export function MapPlayScreen({ route, navigation }) {
                         place
                         pins={layer.pins || []}
                         glyph={glyph}
-                        separate={topicId === "volkanik" ? 22 : (topicId === "kirik" ? 50 : 38)}
                         placed={solved}
                         shown={shown}
                         lastId={lastId}
                         flash={flash}
+                        hl={hl}
                         onPin={onPin}
                     />
                 </View>

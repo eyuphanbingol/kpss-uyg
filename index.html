@@ -411,7 +411,7 @@
     <script defer src="js/planner.js?v=22"></script>
     <script defer src="js/alan.js?v=6"></script>
     <script defer src="js/clozeEngine.js?v=11"></script>
-    <script defer src="js/mapQuiz.js?v=31"></script>
+    <script defer src="js/mapQuiz.js?v=32"></script>
     <script defer src="js/gamesBank.js?v=10"></script>
     <script defer src="js/gamesEngine.js?v=17"></script>
     <script defer src="js/scoreEngine.js?v=8"></script>
@@ -2491,6 +2491,31 @@
         .map-place .map-zoom-tools button { backdrop-filter: blur(6px); }
         html.dark .map-play-root.map-place .tr-map-wrap path,
         html.dark .map-play-root.map-place .tr-map-wrap path.map-stage { fill: #d9ccab !important; }
+        /* ---- Harita oyunu v3: gerçek konumlu pinler, cevabın illeri vurgulu ---- */
+        .map-place .place-well { stroke: #f59e0b; stroke-width: 2; vector-effect: non-scaling-stroke; }
+        .map-place .place-well-core { fill: rgba(245, 158, 11, .2); }
+        .map-place .place-mark:not(.place-ok):not(.place-shown) .place-well-core { animation: wellPulse3 1.8s ease-in-out infinite; }
+        @keyframes wellPulse3 { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
+        .map-place .place-dot { fill: #7c2d12; stroke: #fffaf0; stroke-width: 1; pointer-events: none; }
+        .map-place .place-dot.is-shown { fill: #f8fafc; stroke: none; }
+        .map-place .place-ok .place-well { stroke: #047857; }
+        .map-place .place-ok .place-well-core,
+        .map-place .place-well-core.is-locked { fill: #10b981; opacity: 1; animation: none; }
+        .map-place .place-shown .place-well { stroke: #64748b; }
+        .map-place .place-shown .place-well-core { fill: #94a3b8; opacity: 1; animation: none; }
+        .map-place .place-check { fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; pointer-events: none; }
+        .map-place .place-leader { stroke: rgba(66, 44, 14, .8); stroke-width: 1.1; vector-effect: non-scaling-stroke; pointer-events: none; }
+        .map-place .place-anchor { fill: #7c2d12; stroke: #fffaf0; stroke-width: .8; pointer-events: none; }
+        .map-place .place-ok .place-anchor { fill: #047857; }
+        .map-place .place-hit .place-well-core { animation: pinPop3 .45s ease-out; transform-box: fill-box; transform-origin: center; }
+        @keyframes pinPop3 { 0% { transform: scale(1); } 45% { transform: scale(1.6); } 100% { transform: scale(1); } }
+        .map-play-root.map-place .tr-map-wrap path.map-hl {
+            fill: #a7dcbc !important;
+            stroke: #047857 !important;
+            stroke-width: 1.2 !important;
+        }
+        html.dark .map-play-root.map-place .tr-map-wrap path.map-hl { fill: #84cfa6 !important; }
+        .map-place .tr-map-wrap .map-pin { font-size: 13px; }
         .conquer-stage.tr-map-wrap {
             background:
                 radial-gradient(ellipse 75% 65% at 50% 42%, rgba(70, 150, 190, .38), transparent 72%),
@@ -2584,7 +2609,7 @@
     <script>
         // js/app.jsx derlenmiş hâliyle önbellekten açılır (bkz. js/jsxLoader.js). Değişince ?v= artır.
         document.addEventListener("DOMContentLoaded", function () {
-            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=134");
+            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=135");
         });
     </script>
     <script>

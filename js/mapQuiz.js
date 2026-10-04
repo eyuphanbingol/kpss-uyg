@@ -65,12 +65,15 @@
     };
 
     var ITEM_LL = {
+        "En çok yağış: Antalya (Toros yamaçları)": [30.6, 37.0],
+        "Rafineri: Batman": [41.14, 37.88],
+        "BTK hattı (Kars–Gürcistan)": [43.1, 41.1],
         "Abant Gölü": [31.28, 40.6],
         "Acıpayam Ovası": [29.35, 37.42],
         "Adıyaman Platosu": [38.28, 37.76],
         "Afşin-Elbistan (linyit)": [37, 38.25],
         "Ağrı Dağı": [44.3, 39.7],
-        "Akkuyu NGS": [33.54, 36.14],
+        "Akkuyu NGS": [33.53, 36.18],
         "Akşehir Gölü": [31.4, 38.48],
         "Akyaka (Ermenistan, kapalı)": [43.4, 40.75],
         "Alaçatı RES": [26.38, 38.28],
@@ -93,7 +96,7 @@
         "Asfaltit: Silopi": [42.47, 37.25],
         "Asi": [36.2, 36.25],
         "Atatürk HES": [38.32, 37.58],
-        "Ayçiçeği": [27.51, 40.98],
+        "Ayçiçeği": [27.3, 41.15],
         "Ayçiçek yağı": [27, 41.2],
         "Aydın Dağları": [27.95, 37.95],
         "BAF (Batı Anadolu / Ege grabenleri)": [27.8, 38.2],
@@ -106,7 +109,7 @@
         "Bakır: Murgul": [41.55, 41.27],
         "Bakırçay": [27.05, 39.05],
         "Bakırçay Ovası": [27.1, 39.05],
-        "Barit: Alanya": [32, 36.54],
+        "Barit: Alanya": [32.05, 36.6],
         "Batı Toroslar karstı": [30.5, 36.9],
         "Belen Geçidi": [36.22, 36.48],
         "Beydağları": [30.12, 36.7],
@@ -117,12 +120,12 @@
         "Bitlis Masifi": [42.11, 38.4],
         "Boksit işleme: Seydişehir": [31.85, 37.42],
         "Boksit: Akseki": [31.79, 37.05],
-        "Bolkar Dağları": [34.35, 37.4],
+        "Bolkar Dağları": [34.62, 37.42],
         "Bolu Dağı Geçidi": [31.45, 40.7],
         "Bolu Ovası": [31.61, 40.73],
         "Bor: Balıkesir–Eskişehir–Kütahya–Bursa": [29.5, 39.5],
-        "Boyuna kıyı (Akdeniz)": [30.71, 36.8],
-        "Boyuna kıyı (Karadeniz)": [40.5, 41.05],
+        "Boyuna kıyı (Akdeniz)": [30.55, 36.9],
+        "Boyuna kıyı (Karadeniz)": [40.5, 40.98],
         "Bozdağlar": [28.05, 38.32],
         "Bozok Platosu": [35.2, 39.7],
         "BTC (Bakü–Tiflis–Ceyhan)": [35.8, 36.85],
@@ -133,12 +136,11 @@
         "Büyük Menderes": [27.3, 37.55],
         "Büyük Menderes Ovası": [27.85, 37.8],
         "Büyükçekmece": [28.55, 41.02],
-        "Canbaz (BTK / Gürcistan)": [42.85, 41.2],
         "Canik Dağları": [36.8, 40.85],
         "Cankurtaran Geçidi": [41.45, 41.25],
         "Ceyhan": [35.82, 36.85],
         "Ceylanpınar Ovası": [40.05, 36.85],
-        "Cıva: Karaburun": [26.53, 38.64],
+        "Cıva: Karaburun": [26.5, 38.64],
         "Cide Limanı (dar hinterland)": [33, 41.89],
         "Cihanbeyli Platosu": [32.8, 38.65],
         "Cilo / Buzul Dağları": [44, 37.5],
@@ -156,12 +158,12 @@
         "Çıldır Gölü": [43.23, 41.05],
         "Çoruh": [41.5, 41.45],
         "Çoruh Vadisi (zeytin)": [41.7, 41.1],
-        "Çubuk Geçidi": [30.55, 37.15],
+        "Çubuk Geçidi": [30.6, 37.25],
         "Çukurova": [35.4, 36.85],
         "Çukurova Deltası": [35.4, 36.78],
         "DAF (Doğu Anadolu Fayı)": [38.5, 38.2],
         "Dalmaçya kıyı (Kaş–Finike)": [29.6, 36.3],
-        "Datça hurması": [27.69, 36.73],
+        "Datça hurması": [27.85, 36.78],
         "Demir-çelik: Ereğli": [31.45, 41.28],
         "Demir-çelik: İskenderun": [36.17, 36.59],
         "Demir-çelik: Karabük": [32.63, 41.2],
@@ -171,9 +173,9 @@
         "Develi Ovası": [35.49, 38.39],
         "Dicle": [40.55, 37.9],
         "Dikili Deltası": [26.9, 39.08],
-        "Doğu Karadeniz kıyısı": [40.2, 41.05],
+        "Doğu Karadeniz kıyısı": [39.9, 40.9],
         "Doğu Karadeniz ormanı": [40.8, 40.9],
-        "Dörtyol Ovası": [36.15, 36.84],
+        "Dörtyol Ovası": [36.25, 36.86],
         "Düzce Ovası": [31.16, 40.84],
         "Eber Gölü": [31.15, 38.65],
         "Ecevit Geçidi": [33.78, 41.7],
@@ -186,8 +188,7 @@
         "En çok yağış: Hakkâri": [43.74, 37.57],
         "En çok yağış: Menteşe": [28.2, 37.15],
         "En çok yağış: Rize–Hopa": [41.2, 41.25],
-        "En çok yağış: Yıldız Dağları": [27.5, 41.75],
-        "Endemik yoğunluğu (Teke–Taşeli)": [31.5, 36.6],
+        "Endemik yoğunluğu (Teke–Taşeli)": [32.0, 36.75],
         "Enine kıyı (Ege)": [27.2, 38.2],
         "Erbaa Ovası": [36.57, 40.67],
         "Erciyes Dağı": [35.45, 38.53],
@@ -200,12 +201,11 @@
         "Fındık": [37.88, 40.98],
         "Fırat": [38.25, 37],
         "Fosfat: Mazıdağı": [40.48, 37.48],
-        "GAP kargo havalimanı": [38.9, 37.1],
         "Gaziantep Platosu": [37.38, 37.2],
         "Gaziantep ve çevresi": [37.38, 37.07],
         "Gediz": [27.1, 38.6],
         "Gediz Ovası": [27.55, 38.7],
-        "Gemi: Tuzla / Pendik": [29.3, 40.82],
+        "Gemi: Tuzla / Pendik": [29.2, 40.9],
         "Germencik JES": [27.6, 37.87],
         "GES: Karapınar": [33.55, 37.72],
         "Geyik Dağları": [32.2, 36.85],
@@ -213,17 +213,16 @@
         "Giresun (demiryolu yok)": [38.39, 40.91],
         "Giresun Dağları": [38.4, 40.55],
         "Göksu": [33.93, 36.38],
-        "Gölcük (Isparta)": [30.48, 37.72],
+        "Gölcük (Isparta)": [30.53, 37.74],
         "Göller Yöresi": [30.55, 37.76],
         "Göllüdağ": [34.55, 38.26],
         "Gül": [30.55, 37.76],
         "Gülek Boğazı": [34.8, 37.28],
         "Gürbulak Sınır Kapısı": [44.3, 39.42],
-        "Gürlek Geçidi": [36.8, 37.7],
         "Habur Sınır Kapısı": [42.45, 37.25],
         "Hakkâri (demiryolu yok)": [43.74, 37.57],
         "Hakkâri Bölümü": [43.74, 37.57],
-        "Halı-kilim: Hereke": [29.62, 40.78],
+        "Halı-kilim: Hereke": [29.63, 40.8],
         "Halomorfik (tuzlu)": [34.03, 38.37],
         "Harran Ovası": [39.05, 36.86],
         "Hasan Dağı": [34.17, 38.13],
@@ -231,7 +230,7 @@
         "Haşhaş": [30.53, 38.76],
         "Haymana Platosu": [32.5, 39.43],
         "Hazar Gölü": [39.42, 38.48],
-        "Hopa Limanı (dar hinterland)": [41.4, 41.39],
+        "Hopa Limanı (dar hinterland)": [41.45, 41.36],
         "Iğdır Havzası": [44.04, 39.92],
         "Iğdır mikroklima (pamuk)": [44.04, 39.92],
         "Ilgaz Dağları": [33.65, 41.05],
@@ -252,9 +251,9 @@
         "KAF (Kuzey Anadolu Fayı)": [36.5, 40.7],
         "Kâğıt: Aksu": [38.5, 40.8],
         "Kâğıt: Taşköprü": [34.21, 41.51],
-        "Kahverengi orman toprağı": [32.5, 41.4],
-        "Kalanklı (karstik) kıyı": [34.2, 36.4],
-        "Kanola": [27.51, 40.98],
+        "Kahverengi orman toprağı": [33.5, 41.45],
+        "Kalanklı (karstik) kıyı": [34.2, 36.58],
+        "Kanola": [27.3, 41.15],
         "Kapadokya": [34.83, 38.67],
         "Kapıköy (İran)": [44.25, 38.2],
         "Kapıkule (demiryolu / BG)": [26.48, 41.71],
@@ -262,7 +261,7 @@
         "Karacadağ": [39.83, 37.75],
         "Karacadağ (Konya)": [33.77, 37.73],
         "Karadağ": [33.18, 37.4],
-        "Karakaya HES": [39, 38.4],
+        "Karakaya HES": [39.1, 38.25],
         "Karapınar GES": [33.55, 37.72],
         "Kasnak meşesi": [30.8, 37.85],
         "Kastamonu (demiryolu yok)": [33.78, 41.38],
@@ -275,23 +274,23 @@
         "Kenevir": [33.78, 41.38],
         "Kerkük–Yumurtalık (Adana)": [35.8, 36.85],
         "Kestane / bozkır toprağı": [32.8, 38.8],
-        "Kestel Ovası": [30.25, 37.55],
+        "Kestel Ovası": [30.55, 37.45],
         "Kıl keçisi": [33.5, 36.6],
         "Kırmızı mercimek": [39.5, 37.4],
         "Kırşehir Masifi": [34.16, 39.15],
         "Kıyı Ege": [27.2, 38.2],
-        "Kızılırmak": [36.1, 41.55],
+        "Kızılırmak": [35.98, 41.65],
         "Kızılırmak → Bafra": [35.9, 41.57],
         "Kocaeli Limanı (geniş hinterland)": [29.92, 40.77],
         "Konya Ovası": [32.49, 37.87],
-        "Kop Geçidi": [40.2, 40.05],
+        "Kop Geçidi": [40.48, 40.03],
         "Korkuteli Ovası": [30.2, 37.07],
         "Koyun": [43.41, 38.5],
         "Kozlu (taşkömürü)": [31.75, 41.43],
         "Köroğlu Dağları": [31.8, 40.55],
         "Köyceğiz Gölü": [28.65, 36.9],
         "Kralkızı HES": [40.55, 38.35],
-        "Krom: Guleman": [39.9, 38.45],
+        "Krom: Guleman": [39.75, 38.55],
         "Krom: Köyceğiz": [28.69, 36.97],
         "Kula volkanları": [28.65, 38.55],
         "Kura": [43, 41.2],
@@ -315,7 +314,7 @@
         "Mardin-Midyat Eşiği": [41.05, 37.45],
         "Mavi Akım (Samsun)": [36.33, 41.29],
         "Meke Gölü": [33.64, 37.68],
-        "Melendiz Dağı": [34.63, 38.37],
+        "Melendiz Dağı": [34.6, 38.08],
         "Menemen Deltası": [27.07, 38.58],
         "Menteşe Dağları": [28.2, 37.15],
         "Menteşe Yöresi": [28.2, 37.15],
@@ -328,11 +327,11 @@
         "Muğla (demiryolu yok)": [28.37, 37.22],
         "Muğla Ovaları": [28.37, 37.22],
         "Muş Ovası": [41.49, 38.74],
-        "Muz": [32.5, 36.15],
-        "Nemrut Dağı (volkan)": [42.02, 38.62],
-        "Nemrut Krater Gölü": [42.02, 38.62],
+        "Muz": [32.6, 36.15],
+        "Nemrut Dağı (volkan)": [42.23, 38.65],
+        "Nemrut Krater Gölü": [42.23, 38.65],
         "Nevşehir (demiryolu yok)": [34.71, 38.62],
-        "NGS: Akkuyu": [33.54, 36.14],
+        "NGS: Akkuyu": [33.53, 36.18],
         "Niksar Ovası": [36.9, 40.53],
         "Nur (Amanos) Dağları": [36.25, 36.75],
         "Nusaybin (Suriye demiryolu)": [41.22, 37.07],
@@ -343,25 +342,24 @@
         "Ovaakça DGKÇS": [29.15, 40.25],
         "Ovit Geçidi": [40.8, 40.62],
         "Pamuk": [38.79, 37.17],
-        "Pamuklu dokuma": [30.5, 37.5],
+        "Pamuklu dokuma": [29.09, 37.78],
         "Pasinler Ovası": [41.68, 39.98],
         "Patates": [34.68, 37.97],
-        "Petro-kimya (hammadde)": [41.14, 37.88],
         "Petrol: Batman": [41.14, 37.88],
         "Podzol": [32, 41.5],
         "Regosol (Kapadokya)": [34.83, 38.67],
         "Ria kıyı (Boğazlar)": [29.1, 40.95],
-        "Ria kıyı (Gökova / Menteşe)": [28.2, 37],
+        "Ria kıyı (Gökova / Menteşe)": [28.3, 37.08],
         "Rize (demiryolu yok)": [40.52, 41.02],
         "Rize mikroklima (turunçgil)": [40.52, 41.02],
         "Rüzgâr: Alaçatı": [26.38, 38.28],
         "Safranbolu Ovası": [32.69, 41.25],
-        "Sakarya": [30.4, 41.12],
+        "Sakarya": [30.6, 41.05],
         "Salda Gölü": [29.68, 37.55],
         "Samsun Limanı (geniş hinterland)": [36.33, 41.29],
         "Sapanca Gölü": [30.26, 40.72],
         "Sarayköy JES": [28.93, 37.92],
-        "Saruhan-Menteşe masifi": [27.8, 38.2],
+        "Saruhan-Menteşe masifi": [28.1, 38.5],
         "Savunma": [33.51, 39.85],
         "Selçuk Deltası": [27.37, 37.95],
         "Seramik": [29.98, 39.42],
@@ -382,31 +380,31 @@
         "Şeker (pancar)": [32.49, 37.87],
         "Şeker pancarı": [32.49, 37.87],
         "Şırnak (demiryolu yok)": [42.45, 37.52],
-        "Tahtalı Dağları": [36.3, 38.2],
+        "Tahtalı Dağları": [36.45, 38.5],
         "TANAP güzergâhı": [35, 39.5],
-        "Taşeli karstik alanları": [33.2, 36.55],
-        "Taşeli Platosu": [33.2, 36.55],
+        "Taşeli karstik alanları": [33.0, 36.75],
+        "Taşeli Platosu": [33.0, 36.75],
         "Taşkömürü: Kozlu": [31.75, 41.43],
         "Tefenni Ovası": [29.78, 37.32],
         "Teke Platosu": [29.9, 36.85],
         "Teke Yarımadası": [29.9, 36.5],
-        "Teke–Taşeli": [31.5, 36.6],
+        "Teke–Taşeli": [32.0, 36.75],
         "Tendürek Dağı": [43.87, 39.35],
         "Terkos (Durusu)": [28.55, 41.32],
         "Terra Rossa": [30.71, 36.9],
         "Tiftik keçisi (Ankara keçisi)": [32.85, 39.93],
-        "Tortum Gölü": [41.55, 40.65],
+        "Tortum Gölü": [41.62, 40.6],
         "Toryum: Sivrihisar": [31.53, 39.45],
         "Trabzon (demiryolu yok)": [39.72, 41],
         "Trabzon Limanı (İran transiti)": [39.72, 41],
         "Trabzon Limanı (transit)": [39.72, 41],
         "Trona: Beypazarı–Kazan": [31.92, 40.17],
-        "Turunçgil": [34.8, 36.8],
+        "Turunçgil": [34.55, 36.88],
         "Tuz Gölü": [33.4, 38.75],
         "Tuz Gölü çevresi (kuraklık)": [33.4, 38.75],
         "Tuz Gölü güneyi (Konya-Karaman)": [33.2, 37.8],
         "Tuz Gölü kapalı havzası": [33.4, 38.75],
-        "TürkAkım (Kıyıköy / Trakya)": [28.1, 41.65],
+        "TürkAkım (Kıyıköy / Trakya)": [28.05, 41.6],
         "Tütün": [27.43, 38.61],
         "Uçak": [32.85, 39.93],
         "Uranyum: Sorgun": [35.18, 39.81],
@@ -426,7 +424,7 @@
         "YHT: Sivas": [37.02, 39.75],
         "Yıldız Dağları": [27.5, 41.75],
         "Yıldız Dağları (seyrek)": [27.5, 41.75],
-        "Yunt Dağları": [27.2, 38.9],
+        "Yunt Dağları": [27.45, 38.85],
         "Yusufeli HES": [41.55, 40.82],
         "Yüksekova": [44.28, 37.57],
         "Zeytin": [27.4, 38.5],
@@ -614,16 +612,16 @@
         ["Canik Dağları", "Samsun-Ordu"],
         ["Giresun Dağları", "Giresun"],
         ["Kaçkar Dağları", "Rize-Artvin"]
-    ].forEach(function (r) { ITEMS.push(F("kivrim", r[0], r[1], { follow: r[0] === "Kaçkar Dağları" ? { q: "Kıvrım dağlarının en yüksek kesimi hangisidir?", choices: ["Yıldız", "Küre", "Kaçkar", "Beydağları"], answer: "Kaçkar" } : null })); });
+    ].forEach(function (r) { ITEMS.push(F("kivrim", r[0], r[1], { follow: r[0] === "Kaçkar Dağları" ? { q: "Kuzey Anadolu Dağları'nın en yüksek kesimi hangisidir?", choices: ["Yıldız", "Küre", "Kaçkar", "Ilgaz"], answer: "Kaçkar" } : null })); });
 
     [
         ["Beydağları", "Antalya", { prompt: "Batı Toroslar'daki Beydağları'nı bul." }],
         ["Geyik Dağları", "Antalya-Konya", { prompt: "Batı Toroslar'daki Geyik Dağları'nı bul." }],
         ["Bolkar Dağları", "Niğde-Mersin", null],
-        ["Aladağlar (Demirkazık)", "Niğde-Adana-Kayseri", { follow: { q: "Kıvrım dağlarının en yüksek noktası hangisidir?", choices: ["Ağrı Dağı", "Demirkazık / Aladağlar", "Kaçkar", "Cilo"], answer: "Demirkazık / Aladağlar" } }],
+        ["Aladağlar (Demirkazık)", "Niğde-Adana-Kayseri", { follow: { q: "Orta Toroslar'ın en yüksek noktası hangisidir?", choices: ["Uludoruk", "Demirkazık", "Kaçkar", "Erciyes"], answer: "Demirkazık" } }],
         ["Tahtalı Dağları", "Kayseri-Kahramanmaraş", { prompt: "Doğu Toroslar'daki Tahtalı Dağları'nı bul." }],
         ["Binboğa Dağları", "Kahramanmaraş-Kayseri", null],
-        ["Cilo / Buzul Dağları", "Hakkâri", { follow: { q: "Doğu Toroslar'ın buzullaşma görülen yüksek kesimi?", choices: ["Beydağları", "Cilo / Buzul Dağları", "Küre", "Madra"], answer: "Cilo / Buzul Dağları" } }]
+        ["Cilo / Buzul Dağları", "Hakkâri", { follow: { q: "Kıvrım dağlarının en yüksek noktası (Uludoruk, 4135 m) hangi dağlardadır?", choices: ["Aladağlar", "Cilo / Buzul Dağları", "Kaçkar", "Bolkar"], answer: "Cilo / Buzul Dağları" } }]
     ].forEach(function (r) { ITEMS.push(F("kivrim", r[0], r[1], r[2] || {})); });
 
     [
@@ -637,13 +635,13 @@
         ["Mardin Eşik Masifi", "Mardin"]
     ].forEach(function (r) { ITEMS.push(F("masif", r[0], r[1], r[0] === "Kırşehir Masifi" ? { follow: { q: "Masif arazilerde deprem riski nasıldır?", choices: ["Çok yüksek", "Az", "Sadece tsunami", "Sadece heyelan"], answer: "Az" } } : {})); });
 
-    ITEMS.push(F("fay", "KAF (Kuzey Anadolu Fayı)", "Düzce-Bolu-Erzincan-Erzurum", { prompt: "Kuzey Anadolu Fayı'nın geçtiği bir ili bul (Düzce, Bolu, Erzincan, Erzurum…)." }));
-    ITEMS.push(F("fay", "DAF (Doğu Anadolu Fayı)", "Hatay-Kahramanmaraş-Malatya-Elazığ-Bingöl", { prompt: "Doğu Anadolu Fayı'nın geçtiği bir ili bul." }));
+    ITEMS.push(F("fay", "KAF (Kuzey Anadolu Fayı)", "Kocaeli-Sakarya-Düzce-Bolu-Çankırı-Çorum-Amasya-Tokat-Erzincan-Bingöl", { prompt: "Kuzey Anadolu Fayı'nın geçtiği bir ili bul (Kocaeli, Sakarya, Düzce, Bolu, Tokat, Erzincan…)." }));
+    ITEMS.push(F("fay", "DAF (Doğu Anadolu Fayı)", "Hatay-Osmaniye-Kahramanmaraş-Adıyaman-Malatya-Elazığ-Bingöl", { prompt: "Doğu Anadolu Fayı'nın geçtiği bir ili bul." }));
     ITEMS.push(F("fay", "BAF (Batı Anadolu / Ege grabenleri)", "İzmir-Manisa-Aydın", { prompt: "Batı Anadolu fay/graben sisteminin geçtiği Ege ilini bul." }));
 
     [
         ["Tuz Gölü güneyi (Konya-Karaman)", "Konya-Karaman", { prompt: "Deprem riski az: Tuz Gölü güneyi / Konya–Karaman'ı bul." }],
-        ["Taşeli Platosu", "Mersin-Antalya", { prompt: "Deprem riski az karstik Taşeli'yi bul." }],
+        ["Taşeli Platosu", "Mersin-Antalya-Karaman", { prompt: "Deprem riski az karstik Taşeli'yi bul." }],
         ["Ergene Havzası", "Edirne-Tekirdağ", { prompt: "Deprem riski az Ergene Havzası'nı bul." }],
         ["Mardin Eşik Masifi", "Mardin", { prompt: "Güneydoğu'nun güneyi / Mardin eşiği (risk az) alanını bul." }],
         ["Sinop çevresi", "Sinop", { prompt: "Deprem riski az Sinop çevresini bul." }],
@@ -651,7 +649,7 @@
     ].forEach(function (r) { ITEMS.push(F("deprem-az", r[0], r[1], r[2])); });
 
     ITEMS.push(F("plato-karst", "Teke Platosu", "Antalya", { follow: { q: "Teke–Taşeli'nin tarım/nüfus özelliği?", choices: ["Çok yoğun nüfus", "Seyrek nüfus, kıl keçisi", "Çeltik ambarı", "Çay monokültürü"], answer: "Seyrek nüfus, kıl keçisi" } }));
-    ITEMS.push(F("plato-karst", "Taşeli Platosu", "Mersin-Antalya", { prompt: "Karstik Taşeli Platosu'nu bul." }));
+    ITEMS.push(F("plato-karst", "Taşeli Platosu", "Mersin-Antalya-Karaman", { prompt: "Karstik Taşeli Platosu'nu bul." }));
 
     ITEMS.push(F("plato-volkan", "Erzurum-Kars Platosu", "Erzurum-Kars", { follow: { q: "Bu platonun hayvancılık tipi?", choices: ["Küçükbaş ağırlıklı", "Büyükbaş / mera", "Sadece kümes", "Sera"], answer: "Büyükbaş / mera" } }));
     ITEMS.push(F("plato-volkan", "Ardahan Platosu", "Ardahan", { prompt: "Lav platosu Ardahan'ı bul (çernozyum, soğuk, yüksek)." }));
@@ -703,7 +701,7 @@
 
     [
         ["Teke Yarımadası", "Antalya", { prompt: "Karstik Teke Yarımadası'nı bul." }],
-        ["Taşeli karstik alanları", "Mersin-Antalya", { prompt: "Taşeli karstik kuşağını bul." }],
+        ["Taşeli karstik alanları", "Mersin-Antalya-Karaman", { prompt: "Taşeli karstik kuşağını bul." }],
         ["Göller Yöresi", "Isparta-Burdur", { prompt: "Karstın yaygın olduğu Göller Yöresi'ni bul." }],
         ["Batı Toroslar karstı", "Antalya", { prompt: "Batı Toroslar karstik topografyasını bul." }],
         ["Silifke karstik kıyı", "Mersin", { prompt: "Kalanklı/karstik kıyı (Silifke) alanını bul." }]
@@ -726,7 +724,7 @@
 
     [
         ["Van Gölü", "Van", { follow: { q: "Türkiye'nin en büyük gölü?", choices: ["Tuz Gölü", "Van Gölü", "Beyşehir", "Eğirdir"], answer: "Van Gölü" } }],
-        ["Tuz Gölü", "Aksaray-Konya", { follow: { q: "En büyük 2. göl hangisidir?", choices: ["Beyşehir", "Tuz Gölü", "Eğirdir", "İznik"], answer: "Tuz Gölü" } }],
+        ["Tuz Gölü", "Aksaray-Konya-Ankara", { follow: { q: "En büyük 2. göl hangisidir?", choices: ["Beyşehir", "Tuz Gölü", "Eğirdir", "İznik"], answer: "Tuz Gölü" } }],
         ["Beyşehir Gölü", "Konya", { follow: { q: "En büyük tatlı su gölü?", choices: ["Van", "Tuz", "Beyşehir", "İznik"], answer: "Beyşehir" } }],
         ["Eğirdir Gölü", "Isparta", { follow: { q: "Beyşehir ve Eğirdir'in oluşumu?", choices: ["Sadece karstik", "Tektonik + karstik", "Sadece volkanik", "Lagün"], answer: "Tektonik + karstik" } }],
         ["İznik Gölü", "Bursa"], ["Sapanca Gölü", "Sakarya"], ["Manyas (Kuş) Gölü", "Balıkesir"],
@@ -741,7 +739,7 @@
         ["Küçükçekmece", "İstanbul"], ["Terkos (Durusu)", "İstanbul"]
     ].forEach(function (r) { ITEMS.push(F("goller", r[0], r[1], r[2] || {})); });
 
-    ITEMS.push(F("havza", "Tuz Gölü kapalı havzası", "Aksaray-Konya", { prompt: "İç Anadolu kapalı havzasını (Tuz Gölü) bul." }));
+    ITEMS.push(F("havza", "Tuz Gölü kapalı havzası", "Aksaray-Konya-Ankara", { prompt: "İç Anadolu kapalı havzasını (Tuz Gölü) bul." }));
     ITEMS.push(F("havza", "Van Gölü havzası", "Van", { prompt: "Doğu Anadolu kapalı göl havzasını bul.", follow: { q: "Van Gölü'nün oluşumu?", choices: ["Sadece karstik", "Tektonik + volkanik set", "Sadece heyelan", "Lagün"], answer: "Tektonik + volkanik set" } }));
     ITEMS.push(F("havza", "Iğdır Havzası", "Iğdır", { prompt: "Kurak Iğdır Havzası'nı bul (en az yağış / pamuk mikrokliması)." }));
 
@@ -763,11 +761,10 @@
         ["Kop Geçidi", "Bayburt-Erzurum", null],
         ["Ovit Geçidi", "Rize-Erzurum", { prompt: "Rize–Erzurum Ovit Geçidi'ni bul. (Cankurtaran Artvin'dedir.)" }],
         ["Cankurtaran Geçidi", "Artvin", { prompt: "Artvin'deki Cankurtaran Geçidi'ni bul." }],
-        ["Çubuk Geçidi", "Antalya-Isparta", { prompt: "Antalya'yı Göller Yöresi'ne bağlayan Çubuk Geçidi'ni bul." }],
+        ["Çubuk Geçidi", "Antalya-Burdur", { prompt: "Antalya'yı Göller Yöresi'ne (Burdur) bağlayan Çubuk Geçidi'ni bul." }],
         ["Sertavul Geçidi", "Karaman-Mersin", { prompt: "Silifke'yi Konya'ya bağlayan Sertavul'u bul." }],
         ["Gülek Boğazı", "Adana-Mersin", { prompt: "Çukurova'yı İç Anadolu'ya bağlayan Gülek'i bul." }],
         ["Belen Geçidi", "Hatay", { prompt: "Amanoslar üzerindeki Belen Geçidi'ni bul." }],
-        ["Gürlek Geçidi", "Kahramanmaraş", { prompt: "Akdeniz geçitlerinden Gürlek'i (ÇSGB) bul." }],
         ["Geyve Boğazı", "Sakarya", { prompt: "Marmara'daki Geyve Boğazı'nı bul." }],
         ["Bolu Dağı Geçidi", "Bolu", { prompt: "Marmara–Batı Karadeniz Bolu Dağı Geçidi'ni bul." }]
     ].forEach(function (r) { ITEMS.push(F("gecit", r[0], r[1], r[2] || {})); });
@@ -776,8 +773,8 @@
         ["En çok yağış: Rize–Hopa", "Rize", { follow: { q: "Türkiye'de en çok yağış alan yerlerden biri?", choices: ["Tuz Gölü çevresi", "Rize–Hopa", "Iğdır", "Konya"], answer: "Rize–Hopa" } }],
         ["En çok yağış: Hakkâri", "Hakkâri", null],
         ["En çok yağış: Menteşe", "Muğla", null],
-        ["En çok yağış: Yıldız Dağları", "Kırklareli", null],
-        ["En az yağış: Tuz Gölü çevresi", "Aksaray-Konya", { follow: { q: "En az yağış alan yerlerden biri?", choices: ["Rize", "Muğla", "Tuz Gölü çevresi", "Hakkâri"], answer: "Tuz Gölü çevresi" } }],
+        ["En çok yağış: Antalya (Toros yamaçları)", "Antalya", null],
+        ["En az yağış: Tuz Gölü çevresi", "Aksaray-Konya-Ankara", { follow: { q: "En az yağış alan yerlerden biri?", choices: ["Rize", "Muğla", "Tuz Gölü çevresi", "Hakkâri"], answer: "Tuz Gölü çevresi" } }],
         ["En az yağış: Iğdır Havzası", "Iğdır", null],
         ["En az yağış: GD'nin güneyi", "Şanlıurfa-Mardin", null]
     ].forEach(function (r) { ITEMS.push(F("yagis", r[0], r[1], r[2] || {})); });
@@ -818,11 +815,11 @@
         ["Fındık", "Ordu-Samsun-Düzce-Giresun-Sakarya", { prompt: "Fındıkta 1. Karadeniz, 2. Marmara. Kuşağı bul." }],
         ["Zeytin", "Manisa-İzmir", { follow: { q: "Zeytin üretiminde en fazla öne çıkan iller?", choices: ["Manisa ve İzmir", "Rize ve Trabzon", "Kars ve Ağrı", "Van ve Hakkâri"], answer: "Manisa ve İzmir" } }],
         ["Turunçgil", "Antalya-Mersin-Adana-Hatay", null],
-        ["Muz", "Mersin-Antalya-Adana-Hatay", { prompt: "Muz mikrokliması: Antalya, Mersin, Adana, Hatay." }],
+        ["Muz", "Mersin-Antalya", { prompt: "Muz: Anamur–Bozyazı (Mersin) ve Alanya–Gazipaşa (Antalya)." }],
         ["İncir", "Aydın", { prompt: "Aydın incirini bul (monokültür; dünya 1.)." }],
         ["Kayısı", "Malatya-Mersin", { prompt: "Kayısıda Malatya ve Mersin öne çıkar." }],
         ["Pamuk", "Şanlıurfa-Adana-Aydın", { follow: { q: "Pamuk üretiminde birinci il?", choices: ["Rize", "Şanlıurfa", "Kars", "Zonguldak"], answer: "Şanlıurfa" } }],
-        ["Mısır", "Adana-Konya-Şanlıurfa", { prompt: "Yağlık mısır: Çukurova, Konya Ovası, Şanlıurfa." }],
+        ["Mısır", "Adana-Konya-Şanlıurfa", { prompt: "Mısırda Çukurova (Adana), Konya Ovası ve Şanlıurfa öne çıkar." }],
         ["Şeker pancarı", "Konya-Eskişehir-Kayseri", { prompt: "Şeker pancarı (fabrika yanı): Konya, Eskişehir, Kayseri." }],
         ["Çeltik", "Edirne-Samsun-Balıkesir", { follow: { q: "Çeltikte en fazla üretim nerededir?", choices: ["Meriç (Edirne) boyları", "Rize yaylaları", "Van Gölü", "Tuz Gölü"], answer: "Meriç (Edirne) boyları" } }],
         ["Haşhaş", "Afyonkarahisar-Denizli", { prompt: "Kontrollü haşhaş; fabrika Bolvadin (Afyon)." }],
@@ -852,13 +849,13 @@
     ].forEach(function (r) { ITEMS.push(F("hayvan", r[0], r[1], r[2])); });
 
     [
-        ["Yıldız Dağları (seyrek)", "Kırklareli", { follow: { q: "Yıldız Dağları'nda nüfusun seyrek olmasının nedeni?", choices: ["Sanayi yokluğu değil; engebe", "Sadece turizm", "Okyanus iklimi", "Petrol yok"], answer: "Sanayi yokluğu değil; engebe" } }],
+        ["Yıldız Dağları (seyrek)", "Kırklareli", { follow: { q: "Yıldız Dağları'nda nüfusun seyrek olmasının başlıca nedeni?", choices: ["Engebe ve orman örtüsü", "Kuraklık", "Aşırı sıcaklık", "Geniş tarım alanları"], answer: "Engebe ve orman örtüsü" } }],
         ["Biga–Gelibolu", "Çanakkale", { prompt: "Ulaşıma sapa Biga–Gelibolu'yu bul." }],
         ["Menteşe Yöresi", "Muğla", { prompt: "Engebeli seyrek nüfus: Menteşe'yi bul." }],
         ["Teke–Taşeli", "Antalya-Mersin", { prompt: "Karst + engebe nedeniyle seyrek nüfusu bul." }],
         ["Hakkâri Bölümü", "Hakkâri", { prompt: "Yükselti/engebe nedeniyle seyrek nüfusu bul." }],
         ["Sivas ve çevresi", "Sivas", { prompt: "İç kesimde seyrek nüfus: Sivas çevresini bul." }],
-        ["Tuz Gölü çevresi (kuraklık)", "Aksaray", { prompt: "Kuraklık nedeniyle seyrek nüfus: Tuz Gölü çevresini bul." }]
+        ["Tuz Gölü çevresi (kuraklık)", "Aksaray-Konya-Ankara", { prompt: "Kuraklık nedeniyle seyrek nüfus: Tuz Gölü çevresini bul." }]
     ].forEach(function (r) { ITEMS.push(F("nufus-seyrek", r[0], r[1], r[2])); });
 
     [
@@ -935,7 +932,7 @@
         ["Kâğıt: Taşköprü", "Kastamonu"],
         ["Seramik", "Kütahya"],
         ["Pamuklu dokuma", "Adana-İzmir-Denizli"],
-        ["Petro-kimya (hammadde)", "Batman", { follow: { q: "Hammaddeye bağlı tek petro-kimya tesisi nerededir?", choices: ["İstanbul", "Batman", "Rize", "Kayseri"], answer: "Batman" } }],
+        ["Rafineri: Batman", "Batman", { prompt: "Ham petrol üretim alanında kurulan Batman rafinerisini bul.", follow: { q: "Ham petrolün çıkarıldığı alanda kurulan rafineri hangisidir?", choices: ["İzmit", "Aliağa", "Kırıkkale", "Batman"], answer: "Batman" } }],
         ["Şeker (pancar)", "Konya", { prompt: "Şeker fabrikalarının yoğun olduğu Orta Anadolu ilini bul." }],
         ["Mobilya", "Kayseri"],
         ["İlaç", "İstanbul-Tekirdağ"],
@@ -948,7 +945,7 @@
 
     [
         ["BTC (Bakü–Tiflis–Ceyhan)", "Adana-Hatay", { prompt: "BTC'nin deniz terminali Ceyhan/İskenderun yöresini bul." }],
-        ["TANAP güzergâhı", "Ardahan-Kars-Erzincan-Ankara-Eskişehir-Çanakkale", { prompt: "TANAP'ın geçtiği bir ili bul." }],
+        ["TANAP güzergâhı", "Ardahan-Kars-Erzurum-Bayburt-Gümüşhane-Giresun-Erzincan-Sivas-Yozgat-Kırşehir-Kırıkkale-Ankara-Eskişehir-Bilecik-Kütahya-Bursa-Balıkesir-Çanakkale-Edirne", { prompt: "TANAP'ın geçtiği bir ili bul." }],
         ["Mavi Akım (Samsun)", "Samsun", { prompt: "Mavi Akım'ın karaya çıktığı Samsun'u bul." }],
         ["TürkAkım (Kıyıköy / Trakya)", "Kırklareli-Tekirdağ", { prompt: "TürkAkım'ın Trakya girişini bul." }],
         ["Kerkük–Yumurtalık (Adana)", "Adana", { prompt: "Irak petrolünün Akdeniz çıkışını (Yumurtalık/Ceyhan yöresi) bul." }],
@@ -991,11 +988,10 @@
         ["YHT: Karaman", "Karaman"],
         ["Kapıkule (demiryolu / BG)", "Edirne", { follow: { q: "Bulgaristan demiryolu kapısı?", choices: ["Kapıköy", "Kapıkule", "Akyaka", "Canbaz"], answer: "Kapıkule" } }],
         ["Uzunköprü (demiryolu / GR)", "Edirne"],
-        ["Canbaz (BTK / Gürcistan)", "Ardahan-Kars"],
+        ["BTK hattı (Kars–Gürcistan)", "Kars-Ardahan", { prompt: "Bakü–Tiflis–Kars demiryolunun Gürcistan'a geçtiği yöreyi bul." }],
         ["Kapıköy (İran)", "Van"],
         ["Akyaka (Ermenistan, kapalı)", "Kars"],
-        ["Nusaybin (Suriye demiryolu)", "Mardin"],
-        ["GAP kargo havalimanı", "Şanlıurfa"]
+        ["Nusaybin (Suriye demiryolu)", "Mardin"]
     ].forEach(function (r) { ITEMS.push(F("yht", r[0], r[1], r[2] || {})); });
 
     ITEMS.forEach(function (it, i) { it.id = "m" + i; });
@@ -1234,17 +1230,22 @@
 
     function countFor(topicId) { return itemsForTopic(topicId).length; }
 
-    function separatePins(pins, minD) {
-        minD = minD || 44;
+    // Pinler gerçek konumlarında kalır (ax/ay). Yalnızca birbirine çok yakın olanların
+    // işareti (x/y) biraz yana alınır; çizimde gerçek noktaya ince bir çizgiyle bağlanır.
+    var PIN_GAP = 22;
+
+    function layoutPins(pins, minD) {
+        minD = minD || 24;
         var n, i, j;
-        for (n = 0; n < 28; n++) {
+        pins.forEach(function (p) { p.ax = p.x; p.ay = p.y; });
+        for (n = 0; n < 80; n++) {
+            var moved = false;
             for (i = 0; i < pins.length; i++) {
                 for (j = i + 1; j < pins.length; j++) {
                     var dx = pins[j].x - pins[i].x;
                     var dy = pins[j].y - pins[i].y;
                     var d = Math.sqrt(dx * dx + dy * dy);
-                    // Aynı noktadaki iki yer (ör. Eskişehir'de asbest ve lüle taşı) yön
-                    // vektörü sıfır olduğu için hiç ayrılmıyordu: sabit bir açıyla açıyoruz.
+                    // Aynı noktadaki iki yer sabit bir açıyla ayrılır.
                     if (d < 0.001) {
                         var ang = (i * 2.399963 + j * 0.7);
                         dx = Math.cos(ang);
@@ -1252,18 +1253,27 @@
                         d = 1;
                     }
                     if (d < minD) {
-                        var push = (minD - d) / 2 + 1.2;
+                        var push = (minD - d) / 2 + 0.3;
                         pins[i].x -= (dx / d) * push;
                         pins[i].y -= (dy / d) * push;
                         pins[j].x += (dx / d) * push;
                         pins[j].y += (dy / d) * push;
+                        moved = true;
                     }
                 }
             }
+            // gereğinden fazla uzaklaşmasın: her tur gerçek konuma biraz geri çek
+            pins.forEach(function (p) {
+                p.x += (p.ax - p.x) * 0.08;
+                p.y += (p.ay - p.y) * 0.08;
+            });
+            if (!moved && n > 4) break;
         }
         pins.forEach(function (p) {
-            p.x = Math.max(18, Math.min(982, p.x));
-            p.y = Math.max(18, Math.min(404, p.y));
+            p.x = Math.max(12, Math.min(988, p.x));
+            p.y = Math.max(12, Math.min(410, p.y));
+            var ox = p.x - p.ax, oy = p.y - p.ay;
+            p.off = Math.sqrt(ox * ox + oy * oy) > 2.5;
         });
         return pins;
     }
@@ -1317,37 +1327,26 @@
         };
     }
 
+    function pinOf(it) {
+        return {
+            id: it.id,
+            name: it.name,
+            x: it.x,
+            y: it.y,
+            codes: resolveCodes(it).slice(),
+            glyph: it.glyph || itemGlyph(it)
+        };
+    }
+
     function topicLayerFromSvg(svg, topicId) {
-        var list = itemsForTopic(topicId);
-        var pins = list.map(function (it) {
-            return {
-                id: it.id,
-                name: it.name,
-                x: it.x,
-                y: it.y,
-                glyph: it.glyph || itemGlyph(it)
-            };
-        });
-        if (topicId !== "volkanik") separatePins(pins, 36);
-        else separatePins(pins, 18);
+        var pins = layoutPins(itemsForTopic(topicId).map(pinOf), PIN_GAP);
         return { pins: pins, viewBox: "0 0 1000 422", glyph: topicGlyph(topicId) };
     }
 
     function topicPinsForPlay(topicId) {
-        return itemsForTopic(topicId).map(function (it) {
-            return {
-                id: it.id,
-                name: it.name,
-                glyph: it.glyph || itemGlyph(it),
-                x: it.x,
-                y: it.y,
-                code: (it.codes && it.codes[0]) || null,
-                ox: 0,
-                oy: 0,
-                hasOff: false,
-                fanI: 0,
-                fanN: 1
-            };
+        return layoutPins(itemsForTopic(topicId).map(pinOf), PIN_GAP).map(function (p) {
+            p.code = p.codes[0] || null;
+            return p;
         });
     }
 
@@ -1373,6 +1372,7 @@
         topicLayer: topicLayer,
         topicLayerFromSvg: topicLayerFromSvg,
         topicPinsForPlay: topicPinsForPlay,
+        layoutPins: layoutPins,
         topicGlyph: topicGlyph,
         itemGlyph: itemGlyph
     };

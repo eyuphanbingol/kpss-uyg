@@ -1325,67 +1325,56 @@ function MapPlay(props) {
         if (!svg) return;
         svg.setAttribute("viewBox", "0 0 1000 422");
         svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
-        Array.prototype.forEach.call(el.querySelectorAll("path[id]"), function (p) {
-            p.setAttribute("class", "map-stage");
-        });
         var built = (quiz && quiz.topicLayerFromSvg) ? quiz.topicLayerFromSvg(svg, props.topicId) : { pins: [] };
         var want = {};
         round.items.forEach(function (it) { want[it.id] = true; });
         var pins = (built.pins || []).filter(function (p) { return want[p.id]; });
-        var glyph = (quiz && quiz.topicGlyph) ? quiz.topicGlyph(props.topicId) : "📍";
-
         var old = svg.querySelector("g.topic-dots");
         if (old) old.remove();
         var oldLabs = svg.querySelector("g.map-float-labels");
         if (oldLabs) oldLabs.remove();
 
-        var dots = document.createElementNS("http://www.w3.org/2000/svg", "g");
-        dots.setAttribute("class", "topic-dots");
+        // Son işaretlenen yerin illeri haritada vurgulanır: cevabın gerçek alanı görülsün.
+        var lastPin = null;
+        pins.forEach(function (p) { if (p.id === lastRef.current && solved[p.id]) lastPin = p; });
+        var hl = {};
+        (lastPin && lastPin.codes || []).forEach(function (c) { hl[c] = true; });
+        Array.prototype.forEach.call(el.querySelectorAll("path[id]"), function (pth) {
+            pth.setAttribute("class", hl[pth.getAttribute("id")] ? "map-stage map-hl" : "map-stage");
+        });
+
+        var NS = "http://www.w3.org/2000/svg";
+        function mk(tag, attrs) {
+            var n = document.createElementNS(NS, tag);
+            Object.keys(attrs).forEach(function (k) { n.setAttribute(k, String(attrs[k])); });
+            return n;
+        }
+        var dots = mk("g", { "class": "topic-dots" });
         pins.forEach(function (pin) {
             var state = solved[pin.id];
-            var wrap = document.createElementNS("http://www.w3.org/2000/svg", "g");
-            wrap.setAttribute("data-pin", pin.id);
-            wrap.setAttribute("class", "topic-mark place-mark"
-                + (state === "ok" ? " place-ok" : "")
-                + (state === "shown" ? " place-shown" : "")
-                + (flash === pin.id ? " place-miss" : "")
-                + (hit === pin.id ? " place-hit" : ""));
-            var glow = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-            glow.setAttribute("cx", String(pin.x));
-            glow.setAttribute("cy", String(pin.y));
-            glow.setAttribute("r", state ? "15" : "19");
-            glow.setAttribute("class", "place-well-core" + (state ? " is-locked" : ""));
-            var ring = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-            ring.setAttribute("cx", String(pin.x));
-            ring.setAttribute("cy", String(pin.y));
-            ring.setAttribute("r", "14");
-            ring.setAttribute("class", "place-well");
-            var hitArea = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-            hitArea.setAttribute("cx", String(pin.x));
-            hitArea.setAttribute("cy", String(pin.y));
-            hitArea.setAttribute("r", "26");
-            hitArea.setAttribute("class", "topic-hit");
-            wrap.appendChild(glow);
-            wrap.appendChild(ring);
-            if (!state) {
-                var dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-                dot.setAttribute("cx", String(pin.x));
-                dot.setAttribute("cy", String(pin.y));
-                dot.setAttribute("r", "3.2");
-                dot.setAttribute("class", "place-dot");
-                wrap.appendChild(dot);
-            } else {
-                var ico = document.createElementNS("http://www.w3.org/2000/svg", "text");
-                ico.setAttribute("x", String(pin.x));
-                ico.setAttribute("y", String(pin.y));
-                ico.setAttribute("class", "topic-ico");
-                ico.setAttribute("text-anchor", "middle");
-                ico.setAttribute("dominant-baseline", "central");
-                ico.setAttribute("font-size", "20");
-                ico.textContent = pin.glyph || glyph;
-                wrap.appendChild(ico);
+            var wrap = mk("g", {
+                "data-pin": pin.id,
+                "class": "topic-mark place-mark"
+                    + (state === "ok" ? " place-ok" : "")
+                    + (state === "shown" ? " place-shown" : "")
+                    + (flash === pin.id ? " place-miss" : "")
+                    + (hit === pin.id ? " place-hit" : "")
+            });
+            // işaret yana alındıysa gerçek noktaya bağla
+            if (pin.off) {
+                wrap.appendChild(mk("line", { x1: pin.ax, y1: pin.ay, x2: pin.x, y2: pin.y, "class": "place-leader" }));
+                wrap.appendChild(mk("circle", { cx: pin.ax, cy: pin.ay, r: 2.2, "class": "place-anchor" }));
             }
-            wrap.appendChild(hitArea);
+            wrap.appendChild(mk("circle", { cx: pin.x, cy: pin.y, r: state ? 10 : 13, "class": "place-well-core" + (state ? " is-locked" : "") }));
+            wrap.appendChild(mk("circle", { cx: pin.x, cy: pin.y, r: 9, "class": "place-well" }));
+            if (state === "ok") {
+                wrap.appendChild(mk("path", { d: "M" + (pin.x - 4) + " " + (pin.y + 0.2) + " l2.8 2.9 l5.4 -6", "class": "place-check" }));
+            } else if (state === "shown") {
+                wrap.appendChild(mk("circle", { cx: pin.x, cy: pin.y, r: 2.6, "class": "place-dot is-shown" }));
+            } else {
+                wrap.appendChild(mk("circle", { cx: pin.x, cy: pin.y, r: 2.6, "class": "place-dot" }));
+            }
+            wrap.appendChild(mk("circle", { cx: pin.x, cy: pin.y, r: 20, "class": "topic-hit" }));
             dots.appendChild(wrap);
         });
         svg.appendChild(dots);
@@ -1399,8 +1388,8 @@ function MapPlay(props) {
             if (W > 0 && H > 0) {
                 var k = Math.min(W / 1000, H / 422);
                 var pad = 50;
-                var xs = pins.map(function (p) { return p.x; });
-                var ys = pins.map(function (p) { return p.y; });
+                var xs = pins.map(function (p) { return p.x; }).concat(pins.map(function (p) { return p.ax; }));
+                var ys = pins.map(function (p) { return p.y; }).concat(pins.map(function (p) { return p.ay; }));
                 var mnx = Math.min.apply(null, xs) - pad, mxx = Math.max.apply(null, xs) + pad;
                 var mny = Math.min.apply(null, ys) - pad, mxy = Math.max.apply(null, ys) + pad;
                 var sFit = Math.min(W / ((mxx - mnx) * k), H / ((mxy - mny) * k));
@@ -1424,7 +1413,7 @@ function MapPlay(props) {
             if (!state || pin.id !== lastRef.current) return;
             var t = document.createElementNS("http://www.w3.org/2000/svg", "text");
             t.setAttribute("x", String(pin.x));
-            t.setAttribute("y", String(pin.y - 22));
+            t.setAttribute("y", String(pin.y - 16));
             t.setAttribute("class", "map-pin " + (state === "ok" ? "map-pin-ok" : "map-pin-done"));
             t.setAttribute("font-size", "14");
             t.textContent = pin.name;

@@ -1,94 +1,82 @@
-import React, { useEffect, useRef, useState } from "react";
-import { ActivityIndicator, AppState, Dimensions, StyleSheet, Text, View } from "react-native";
+import React, { useEffect, useMemo, useRef, useState } from "react";
+import { AppState, StyleSheet, View } from "react-native";
 import { WebView } from "react-native-webview";
-import { loadTrSvg, mapDocument } from "../lib/trMap";
-import { colors } from "../lib/theme";
+import { mapDocument } from "../lib/trMap";
+import { TR_SVG } from "../lib/trSvgData";
 
+// Türkiye haritası tek bir WebView'da çizilir. WebView yalnız bir kez kurulur:
+// boyut değişince ya da uygulama arka plandan dönünce yeniden yüklenmez, durum yeniden
+// gönderilir. Sistem WebView sürecini kapatırsa (bellek baskısı) kendiliğinden yeniden açılır.
 export function TrMapView(props) {
     var mode = props.mode || "play";
-    var [html, setHtml] = useState("");
-    var [fail, setFail] = useState(false);
-    var [box, setBox] = useState({ w: 0, h: 0, gen: 0 });
+    var html = useMemo(function () { return mapDocument(TR_SVG, mode); }, [mode]);
+    var [sized, setSized] = useState(false);
+    var [reloadKey, setReloadKey] = useState(0);
     var ready = useRef(false);
     var webRef = useRef(null);
-    var boxRef = useRef(box);
-    boxRef.current = box;
+    var boxRef = useRef({ w: 0, h: 0 });
+    var propsRef = useRef(props);
+    propsRef.current = props;
 
-    useEffect(function () {
-        var gone = false;
-        loadTrSvg().then(function (txt) {
-            if (gone) return;
-            setHtml(mapDocument(txt, mode));
-            setFail(false);
-        }).catch(function () {
-            if (!gone) setFail(true);
-        });
-        return function () { gone = true; ready.current = false; };
-    }, [mode]);
-
-    useEffect(function () {
-        function resetSize() {
-            ready.current = false;
-            setBox(function (prev) {
-                return { w: 0, h: 0, gen: prev.gen + 1 };
-            });
+    function stateScript() {
+        var p = propsRef.current;
+        if (mode === "conquer") {
+            return "window.setConquer && window.setConquer(" + JSON.stringify({
+                owned: p.owned || {},
+                pick: p.pick || null,
+                color: p.color || "#127880"
+            }) + "); true;";
         }
-        var dimSub = Dimensions.addEventListener("change", resetSize);
-        var prevApp = AppState.currentState;
-        var appSub = AppState.addEventListener("change", function (next) {
-            var wasBg = String(prevApp) === "inactive" || String(prevApp) === "background";
-            prevApp = next;
-            if (wasBg && next === "active") resetSize();
-        });
-        return function () {
-            if (dimSub && dimSub.remove) dimSub.remove();
-            appSub.remove();
-        };
-    }, []);
+        return "window.setPlay && window.setPlay(" + JSON.stringify({
+            pins: p.pins || [],
+            glyph: p.glyph || "📍",
+            picked: p.picked || null,
+            targetId: p.targetId || null,
+            cleared: p.cleared || {},
+            labels: p.labels || [],
+            separate: p.separate || 36,
+            place: !!p.place,
+            placed: p.placed || {},
+            shown: p.shown || {},
+            lastId: p.lastId || null,
+            flash: p.flash || null,
+            hl: p.hl || []
+        }) + "); true;";
+    }
 
-    function inject() {
+    function run(js) {
         var wv = webRef.current;
         if (!wv || !ready.current) return;
-        var js;
-        if (mode === "conquer") {
-            js = "window.setConquer && window.setConquer(" + JSON.stringify({
-                owned: props.owned || {},
-                pick: props.pick || null,
-                color: props.color || "#127880"
-            }) + "); true;";
-        } else {
-            js = "window.setPlay && window.setPlay(" + JSON.stringify({
-                pins: props.pins || [],
-                glyph: props.glyph || "📍",
-                picked: props.picked || null,
-                targetId: props.targetId || null,
-                cleared: props.cleared || {},
-                labels: props.labels || [],
-                separate: props.separate || 36,
-                place: !!props.place,
-                placed: props.placed || {},
-                shown: props.shown || {},
-                lastId: props.lastId || null,
-                flash: props.flash || null
-            }) + "); true;";
-        }
         wv.injectJavaScript(js);
     }
 
     useEffect(function () {
-        inject();
-    }, [mode, props.pins, props.glyph, props.picked, props.targetId, props.cleared, props.labels, props.separate, props.owned, props.pick, props.color, props.place, props.placed, props.shown, props.lastId, props.flash, html, box.gen, box.w, box.h]);
+        run(stateScript());
+    }, [mode, props.pins, props.glyph, props.picked, props.targetId, props.cleared, props.labels, props.separate, props.owned, props.pick, props.color, props.place, props.placed, props.shown, props.lastId, props.flash, props.hl]);
+
+    useEffect(function () {
+        var sub = AppState.addEventListener("change", function (next) {
+            if (next === "active") run(stateScript() + " window.relayout && window.relayout(); true;");
+        });
+        return function () { sub.remove(); };
+    }, [mode]);
 
     function onMessage(ev) {
         var data = {};
         try { data = JSON.parse(ev.nativeEvent.data || "{}"); } catch (e) { return; }
         if (data.type === "ready") {
             ready.current = true;
-            inject();
+            run(stateScript());
             return;
         }
-        if (data.type === "pin" && props.onPin && !props.locked) props.onPin(data.id);
-        if (data.type === "province" && props.onProvince && !props.locked) props.onProvince(data.id);
+        var p = propsRef.current;
+        if (data.type === "pin" && p.onPin && !p.locked) p.onPin(data.id);
+        if (data.type === "province" && p.onProvince && !p.locked) p.onProvince(data.id);
+    }
+
+    function restart() {
+        ready.current = false;
+        setReloadKey(function (k) { return k + 1; });
     }
 
     var boxStyle = [
@@ -96,23 +84,6 @@ export function TrMapView(props) {
         props.height ? { height: props.height } : { flex: 1 },
         props.style
     ];
-
-    if (fail) {
-        return (
-            <View style={[boxStyle, styles.fail]}>
-                <Text style={styles.failText}>Türkiye haritası yüklenemedi. İnterneti kontrol et.</Text>
-            </View>
-        );
-    }
-    if (!html) {
-        return (
-            <View style={[boxStyle, styles.fail]}>
-                <ActivityIndicator color={colors.teal} />
-            </View>
-        );
-    }
-
-    var sized = box.w > 8 && box.h > 8;
 
     return (
         <View
@@ -123,17 +94,22 @@ export function TrMapView(props) {
                 var h = Math.round(n.height);
                 var cur = boxRef.current;
                 if (Math.abs(w - cur.w) < 2 && Math.abs(h - cur.h) < 2) return;
-                ready.current = false;
-                setBox({ w: w, h: h, gen: cur.gen + 1 });
+                boxRef.current = { w: w, h: h };
+                if (w > 8 && h > 8) {
+                    if (!sized) setSized(true);
+                    else run("window.relayout && window.relayout(); true;");
+                }
             }}
         >
             {sized ? (
                 <WebView
-                    key={"map-" + box.gen + "-" + box.w + "x" + box.h}
+                    key={"map-" + mode + "-" + reloadKey}
                     ref={webRef}
                     originWhitelist={["*"]}
                     source={{ html: html, baseUrl: "https://www.atanly.com/" }}
                     onMessage={onMessage}
+                    onContentProcessDidTerminate={restart}
+                    onRenderProcessGone={restart}
                     style={styles.web}
                     scrollEnabled={false}
                     nestedScrollEnabled={false}
@@ -159,23 +135,13 @@ var styles = StyleSheet.create({
         maxWidth: "100%",
         minWidth: 0,
         minHeight: 0,
-        backgroundColor: "#152018",
+        backgroundColor: "#0c3d56",
         borderRadius: 16,
         overflow: "hidden",
         marginTop: 4
     },
     web: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: "#152018"
-    },
-    fail: {
-        alignItems: "center",
-        justifyContent: "center",
-        padding: 16
-    },
-    failText: {
-        color: colors.muted,
-        fontWeight: "600",
-        textAlign: "center"
+        backgroundColor: "#0c3d56"
     }
 });

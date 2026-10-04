@@ -6,6 +6,8 @@
     "@babel/standalone": "7.29.9"
   },
   "scripts": {
-    "build:jsx": "node scripts/build-jsx.js"
+    "build:jsx": "node scripts/build-jsx.js",
+    "check:map": "node scripts/check-map-pins.js",
+    "sync:map": "node scripts/sync-map-data.js"
   }
 }
