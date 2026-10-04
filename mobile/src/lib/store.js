@@ -49,6 +49,7 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             authUserId: null,
             email: "",
             deletionRequestedAt: null,
+            progressResetAt: null,
             location: null
         };
     }
@@ -774,6 +775,34 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
         return { ok: true };
     }
 
+    var RESET_KEEP_USER = ["educationLevel", "targetType", "nickname", "role", "platform", "kvkkConsent", "kvkkAt",
+        "premium", "premiumUntil", "referralCode", "referredBy", "experiments", "blocked", "authUserId", "email",
+        "deletionRequestedAt", "educationChangeRequest", "location"];
+
+    // Profil sıfırlama: hesap, ayarlar ve notlar kalır; çalışma geçmişi temizlenir.
+    function buildResetState() {
+        var prev = clone(state);
+        var next = defaultState();
+        var up = prev.userProfile || {};
+        RESET_KEEP_USER.forEach(function (k) {
+            if (up[k] !== undefined) next.userProfile[k] = up[k];
+        });
+        next.userProfile.progressResetAt = nowIso();
+        var p = prev.profile || {};
+        var dates = (global.KpssConfig && global.KpssConfig.examDateByLevel) || {};
+        next.profile.name = p.name || "";
+        next.profile.dark = !!p.dark;
+        next.profile.tabLeaveWarn = p.tabLeaveWarn !== false;
+        next.profile.dailyMinutes = Number(p.dailyMinutes) || next.profile.dailyMinutes;
+        next.profile.dailyQuestions = Number(p.dailyQuestions) || next.profile.dailyQuestions;
+        next.profile.examDate = dates[next.userProfile.educationLevel] || next.profile.examDate;
+        next.reviewNotebook = prev.reviewNotebook || [];
+        next.billing = prev.billing || next.billing;
+        next.consent = prev.consent || next.consent;
+        if (prev.games && prev.games.conquerColor) next.games.conquerColor = prev.games.conquerColor;
+        return migrate(next);
+    }
+
     global.StudentStore = {
         KEY: KEY,
         INTERVALS: INTERVALS,
@@ -786,6 +815,7 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
         masteryFromPct: masteryFromPct,
         topicMasteryScore: topicMasteryScore,
         migrate: migrate,
+        buildResetState: buildResetState,
         isPremium: isPremium,
         premiumOfferEnabled: premiumOfferEnabled,
         flagOn: flagOn,

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Alert, Linking, Text, TextInput, View, StyleSheet } from "react-native";
+import { Alert, Linking, Modal, Text, TextInput, View, StyleSheet } from "react-native";
 import { useApp } from "../AppProvider";
 import { StudentStore } from "../lib/store";
 import { SyncEngine } from "../lib/syncEngine";
@@ -49,6 +49,11 @@ export default function BenScreen({ navigation }) {
     var refCode = _ref[0];
     var setRefCode = _ref[1];
     
+    var _reset = useState(false);
+    var resetOpen = _reset[0];
+    var setResetOpen = _reset[1];
+    var examPassed = !!(st.profile.examDate && st.profile.examDate < StudentStore.todayStr());
+
     var eduReq = up.educationChangeRequest;
     var showKulvar = needsKulvar(totQ === 0 && editing && draftEdu ? draftEdu : up.educationLevel);
 
@@ -311,6 +316,19 @@ export default function BenScreen({ navigation }) {
             </Card>
 
             {/* Actions */}
+            {examPassed ? (
+                <Card dark={isDark} onPress={function () { setResetOpen(true); }}>
+                    <Text style={[styles.toolName, isDark && styles.textLight]}>Sınavın bitti mi? Yeni döneme başla</Text>
+                    <Text style={[styles.toolDesc, isDark && styles.textMuted]}>Çalışma geçmişini sıfırla, hesabın ve notların kalsın.</Text>
+                </Card>
+            ) : (
+                <GhostButton
+                    title="Profili Sıfırla"
+                    onPress={function () { setResetOpen(true); }}
+                    style={styles.dangerBtn}
+                />
+            )}
+            <ResetProfileModal visible={resetOpen} isDark={isDark} onClose={function () { setResetOpen(false); }} />
             <GhostButton 
                 title="Veri Silme Talebi" 
                 onPress={function () {
@@ -370,6 +388,83 @@ function InfoRow({ label, value, isDark }) {
             <Text style={[styles.infoLabel, isDark && styles.textMuted]}>{label}</Text>
             <Text style={[styles.infoValue, isDark && styles.textLight]}>{value}</Text>
         </View>
+    );
+}
+
+function ResetProfileModal(props) {
+    var isDark = props.isDark;
+    var _typed = useState("");
+    var typed = _typed[0];
+    var setTyped = _typed[1];
+    var _busy = useState(false);
+    var busy = _busy[0];
+    var setBusy = _busy[1];
+    var _err = useState("");
+    var err = _err[0];
+    var setErr = _err[1];
+    var ok = typed.trim().toLocaleUpperCase("tr-TR") === "SIFIRLA";
+
+    function close() {
+        if (busy) return;
+        setTyped("");
+        setErr("");
+        props.onClose();
+    }
+
+    function run() {
+        if (!ok || busy) return;
+        setBusy(true);
+        setErr("");
+        SyncEngine.resetProgress().then(function (r) {
+            setBusy(false);
+            if (r && r.ok) {
+                setTyped("");
+                props.onClose();
+                return;
+            }
+            setErr(r && (r.reason === "offline" || r.reason === "anon")
+                ? "İnternet bağlantısı ya da oturum yok. Verilerin silinmedi, tekrar dene."
+                : "Sıfırlama tamamlanamadı, verilerin silinmedi. Biraz sonra tekrar dene.");
+        });
+    }
+
+    return (
+        <Modal visible={props.visible} transparent animationType="fade" onRequestClose={close}>
+            <View style={styles.resetOverlay}>
+                <View style={[styles.resetCard, isDark && { backgroundColor: colors.navyDeep }]}>
+                    <Text style={[styles.resetTitle, isDark && styles.textLight]}>Profili sıfırla</Text>
+                    <Text style={styles.resetWarn}>Bunu geri alamazsın.</Text>
+                    <Text style={styles.resetLabel}>SİLİNECEK</Text>
+                    <Text style={[styles.resetBody, isDark && styles.textMuted]}>
+                        Çözdüğün sorular, netler ve deneme geçmişi, konu ilerlemesi, eksikler ve tekrar listesi, seri, rozetler, oyun rekorları, haftalık program ve Türkiye sıralamasındaki yerin.
+                    </Text>
+                    <Text style={styles.resetLabel}>KALACAK</Text>
+                    <Text style={[styles.resetBody, isDark && styles.textMuted]}>
+                        Hesabın ve e-postan, adın, eğitim düzeyin, premium üyeliğin, davet kodun, Notlarım ve görünüm ayarların.
+                    </Text>
+                    <Text style={[styles.resetBody, isDark && styles.textMuted]}>
+                        Sonra yeni sınav tarihini seçip sıfırdan başlarsın. Onaylamak için SIFIRLA yaz:
+                    </Text>
+                    <TextInput
+                        value={typed}
+                        onChangeText={setTyped}
+                        placeholder="SIFIRLA"
+                        placeholderTextColor={colors.muted}
+                        autoCapitalize="characters"
+                        autoCorrect={false}
+                        editable={!busy}
+                        style={[styles.input, isDark && styles.inputDark]}
+                    />
+                    {err ? <Text style={styles.resetErr}>{err}</Text> : null}
+                    <View style={styles.resetActions}>
+                        <Tap onPress={run} disabled={!ok || busy} style={[styles.resetBtn, (!ok || busy) && { opacity: 0.4 }]}>
+                            <Text style={styles.resetBtnTxt}>{busy ? "Sıfırlanıyor…" : "Profili sıfırla"}</Text>
+                        </Tap>
+                        <GhostButton title="Vazgeç" onPress={close} disabled={busy} style={{ marginTop: 0 }} />
+                    </View>
+                </View>
+            </View>
+        </Modal>
     );
 }
 
@@ -676,6 +771,67 @@ var styles = StyleSheet.create({
     dangerBtn: {
         borderColor: colors.rose + "40",
         marginTop: 4,
+    },
+
+    // ---------- Reset ----------
+    resetOverlay: {
+        flex: 1,
+        backgroundColor: "rgba(0,0,0,0.45)",
+        justifyContent: "center",
+        padding: 16,
+    },
+    resetCard: {
+        backgroundColor: "#fff",
+        borderRadius: 24,
+        padding: 20,
+    },
+    resetTitle: {
+        fontSize: 20,
+        fontWeight: "800",
+        color: colors.text,
+    },
+    resetWarn: {
+        fontSize: 14,
+        fontWeight: "700",
+        color: colors.rose,
+        marginTop: 4,
+        marginBottom: 12,
+    },
+    resetLabel: {
+        fontSize: 11,
+        fontWeight: "700",
+        letterSpacing: 1,
+        color: colors.muted,
+        marginBottom: 2,
+    },
+    resetBody: {
+        fontSize: 13,
+        lineHeight: 19,
+        color: colors.stone,
+        marginBottom: 10,
+    },
+    resetErr: {
+        fontSize: 13,
+        color: colors.rose,
+        marginTop: 8,
+    },
+    resetActions: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 8,
+        marginTop: 12,
+    },
+    resetBtn: {
+        flex: 1,
+        backgroundColor: colors.rose,
+        borderRadius: 12,
+        paddingVertical: 13,
+        alignItems: "center",
+    },
+    resetBtnTxt: {
+        color: "#fff",
+        fontSize: 14,
+        fontWeight: "700",
     },
 
     // ---------- Footer ----------

@@ -221,7 +221,7 @@ function Onboarding(props) {
     var profile = (props.student && props.student.profile) || {};
     var up = (props.student && props.student.userProfile) || {};
     var dates = (window.KpssConfig && window.KpssConfig.examDateByLevel) || {};
-    const [name, setName] = useState("");
+    const [name, setName] = useState(profile.name || "");
     const [level, setLevel] = useState(up.educationLevel || "lisans");
     const [target, setTarget] = useState(up.targetType || "B");
     const [examDate, setExamDate] = useState(profile.examDate || dates[up.educationLevel || "lisans"] || "2026-09-06");
@@ -2200,6 +2200,54 @@ function fmtExam(iso) {
     return iso;
 }
 
+function ResetProfileModal(props) {
+    const [typed, setTyped] = useState("");
+    const [busy, setBusy] = useState(false);
+    const [err, setErr] = useState("");
+    const ok = typed.trim().toLocaleUpperCase("tr-TR") === "SIFIRLA";
+    function run() {
+        if (!ok || busy) return;
+        if (!window.SyncEngine || !window.SyncEngine.resetProgress) {
+            setErr("Sıfırlama şu an kullanılamıyor. Verilerin silinmedi.");
+            return;
+        }
+        setBusy(true);
+        setErr("");
+        window.SyncEngine.resetProgress().then(function (r) {
+            if (r && r.ok) {
+                if (props.onClose) props.onClose();
+                return;
+            }
+            setBusy(false);
+            setErr(r && (r.reason === "offline" || r.reason === "anon")
+                ? "İnternet bağlantısı ya da oturum yok. Verilerin silinmedi, tekrar dene."
+                : "Sıfırlama tamamlanamadı, verilerin silinmedi. Biraz sonra tekrar dene.");
+        });
+    }
+    return (
+        <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-end sm:items-center justify-center p-4" onClick={function () { if (!busy && props.onClose) props.onClose(); }}>
+            <div className="w-full max-w-md max-h-[90vh] overflow-y-auto bg-white dark:bg-stone-900 rounded-3xl p-6 shadow-2xl fade-in" onClick={function (e) { e.stopPropagation(); }}>
+                <h2 className="text-xl font-black text-stone-900 dark:text-white mb-1">Profili sıfırla</h2>
+                <p className="text-sm font-bold text-rose-600 mb-4">Bunu geri alamazsın.</p>
+                <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-1">Silinecek</p>
+                <p className="text-sm text-stone-600 dark:text-stone-300 mb-3 leading-relaxed">Çözdüğün sorular, netler ve deneme geçmişi, konu ilerlemesi, eksikler ve tekrar listesi, seri, rozetler, oyun rekorları, haftalık program ve Türkiye sıralamasındaki yerin.</p>
+                <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-1">Kalacak</p>
+                <p className="text-sm text-stone-600 dark:text-stone-300 mb-4 leading-relaxed">Hesabın ve e-postan, adın, eğitim düzeyin, premium üyeliğin, davet kodun, Notlarım ve görünüm ayarların.</p>
+                <p className="text-sm text-stone-500 mb-2">Sonra yeni sınav tarihini seçip sıfırdan başlarsın. Onaylamak için <b>SIFIRLA</b> yaz:</p>
+                <input value={typed} onChange={function (e) { setTyped(e.target.value); }} placeholder="SIFIRLA" autoCapitalize="characters" autoComplete="off" disabled={busy}
+                    className="w-full mb-3 px-4 py-3 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-800 font-semibold tracking-wider" />
+                {err ? <p className="text-sm text-rose-600 mb-3">{err}</p> : null}
+                <div className="flex gap-2">
+                    <button type="button" disabled={!ok || busy} onClick={run} className="flex-1 py-3 rounded-xl bg-rose-600 text-white text-sm font-bold disabled:opacity-40">
+                        {busy ? "Sıfırlanıyor…" : "Profili sıfırla"}
+                    </button>
+                    <button type="button" disabled={busy} onClick={function () { if (props.onClose) props.onClose(); }} className="px-4 py-3 rounded-xl border-2 border-stone-200 dark:border-stone-700 text-sm font-medium">Vazgeç</button>
+                </div>
+            </div>
+        </div>
+    );
+}
+
 function Ben(props) {
     const st = props.student;
     let totQ = 0, totC = 0;
@@ -2215,6 +2263,8 @@ function Ben(props) {
     const [draftName, setDraftName] = useState("");
     const [draftTrack, setDraftTrack] = useState("B");
     const [draftEdu, setDraftEdu] = useState("");
+    const [resetOpen, setResetOpen] = useState(false);
+    const examPassed = !!(st.profile.examDate && st.profile.examDate < StudentStore.todayStr());
     const eduReq = up.educationChangeRequest;
     const showKulvar = needsKulvar(totQ === 0 && editing && draftEdu ? draftEdu : up.educationLevel);
 
@@ -2391,6 +2441,15 @@ function Ben(props) {
             {isAdmin ? (
                 <button onClick={function () { props.onAdmin && props.onAdmin(); }} className="w-full mb-3 p-3.5 rounded-2xl glass text-left card-hover font-medium">Yönetim</button>
             ) : null}
+            {examPassed ? (
+                <button type="button" onClick={function () { setResetOpen(true); }} className="w-full mb-3 p-3.5 rounded-2xl glass text-left card-hover">
+                    <span className="font-medium block">Sınavın bitti mi? Yeni döneme başla</span>
+                    <span className="text-xs text-stone-400 font-normal mt-0.5 block">Çalışma geçmişini sıfırla, hesabın ve notların kalsın.</span>
+                </button>
+            ) : (
+                <button type="button" onClick={function () { setResetOpen(true); }} className="w-full mb-1 p-3.5 rounded-2xl text-sm text-stone-400">Profili sıfırla</button>
+            )}
+            {resetOpen ? <ResetProfileModal onClose={function () { setResetOpen(false); }} /> : null}
             <button onClick={function () {
                 if (confirm("Hesap silme talebi kaydedilir. Destek onayından sonra veri silinir.")) StudentStore.requestDeletion();
             }} className="w-full mb-3 p-3.5 rounded-2xl text-sm text-stone-400">Veri silme talebi</button>

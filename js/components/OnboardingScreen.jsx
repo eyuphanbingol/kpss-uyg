@@ -61,7 +61,7 @@
         var profile = student.profile || {};
         
         // ---------- State ----------
-        const [name, setName] = useState("");
+        const [name, setName] = useState(profile.name || "");
         const [level, setLevel] = useState((student.userProfile && student.userProfile.educationLevel) || "lisans");
         const [target, setTarget] = useState((student.userProfile && student.userProfile.targetType) || "B");
         const [examDate, setExamDate] = useState(profile.examDate || dates[level] || "2026-09-06");

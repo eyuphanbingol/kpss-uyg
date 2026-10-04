@@ -20,7 +20,7 @@ export default function OnboardingScreen() {
     var up = student.userProfile || {};
 
     // ---------- State ----------
-    var _name = useState("");
+    var _name = useState(profile.name || "");
     var name = _name[0];
     var setName = _name[1];
 

@@ -176,6 +176,9 @@
         var up = Object.assign({}, (remote && remote.userProfile) || {}, (settingsSrc && settingsSrc.userProfile) || {});
         var plan = pickStudyPlan(local, remote);
         up.studyPlan = plan;
+        var resetAt = maxIso((local && local.userProfile && local.userProfile.progressResetAt) || "",
+            (remote && remote.userProfile && remote.userProfile.progressResetAt) || "");
+        up.progressResetAt = resetAt || null;
         if (plan && plan.ready && global.StudentStore && global.StudentStore.studyPlanWeekHours) {
             up.weeklyHours = global.StudentStore.studyPlanWeekHours(global.StudentStore.cloneStudyPlan(plan));
         }
@@ -256,6 +259,7 @@
 
     function looksOnboarded(payload, row) {
         if (payload && payload.profile && payload.profile.onboarded) return true;
+        if (payload && payload.userProfile && payload.userProfile.progressResetAt) return false;
         if (payload && payload.userProfile && payload.userProfile.kvkkConsent && payload.profile && String(payload.profile.name || "").trim()) return true;
         return false;
     }
@@ -327,6 +331,19 @@
             var dbRole = remoteRow.data && remoteRow.data.role;
             var remoteOwner = remote && remote.userProfile && remote.userProfile.authUserId;
             if (remoteOwner && remoteOwner !== uid) remote = null;
+            var localResetAt = (local.userProfile && local.userProfile.progressResetAt) || "";
+            var remoteResetAt = (remote && remote.userProfile && remote.userProfile.progressResetAt) || "";
+            if (remote && remoteResetAt > localResetAt) {
+                // Profil başka cihazda sıfırlandı: bu cihazdaki eski ilerleme geri birleşmesin.
+                var fenced = JSON.parse(JSON.stringify(remote));
+                fenced.userProfile.authUserId = uid;
+                fenced.userProfile.email = email || fenced.userProfile.email;
+                global.StudentStore.replaceState(fenced, { quiet: true });
+                global.StudentStore.notify();
+                local = global.StudentStore.getState();
+            } else if (remote && localResetAt > remoteResetAt) {
+                remote = null;
+            }
             var emptyLocal = global.StudentStore.isEmptyProgress(local);
             var localOn = !!(local.profile && local.profile.onboarded);
             var remoteOn = !!(remote && remote.profile && remote.profile.onboarded);
@@ -435,6 +452,43 @@
         }
     }
 
+    async function resetProgress() {
+        var sb = global.SupabaseClient && global.SupabaseClient.get();
+        if (!sb) return { ok: false, reason: "offline" };
+        var sessionRes = await sb.auth.getSession();
+        var session = sessionRes && sessionRes.data && sessionRes.data.session;
+        if (!session) return { ok: false, reason: "anon" };
+        if (timer) { clearTimeout(timer); timer = null; }
+        for (var n = 0; syncing && n < 60; n++) {
+            await new Promise(function (r) { setTimeout(r, 150); });
+        }
+        if (syncing) return { ok: false, reason: "busy" };
+        syncing = true;
+        try {
+            var uid = session.user.id;
+            if (global.StudentStore.bindToUser) global.StudentStore.bindToUser(uid, session.user.email || "");
+            var next = global.StudentStore.buildResetState();
+            next.updatedAt = global.StudentStore.nowIso();
+            var lb = await sb.from("leaderboard_weekly").delete().eq("user_id", uid);
+            if (lb.error) throw lb.error;
+            var res = await sb.from("student_states").upsert({
+                user_id: uid,
+                payload: sanitizeOutgoingPayload(next),
+                updated_at: next.updatedAt,
+                last_study_at: null,
+                questions_total: 0
+            });
+            if (res.error) throw res.error;
+            global.StudentStore.replaceState(next, { quiet: true });
+            global.StudentStore.notify();
+            return { ok: true };
+        } catch (e) {
+            return { ok: false, reason: String(e && e.message || e) };
+        } finally {
+            syncing = false;
+        }
+    }
+
     function weekStart() {
         var d = new Date();
         var day = d.getDay();
@@ -462,6 +516,7 @@
     global.SyncEngine = {
         mergePayload: mergePayload,
         sync: pullPush,
+        resetProgress: resetProgress,
         schedule: schedule,
         weekStart: weekStart,
         ensureLocation: ensureLocation

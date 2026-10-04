@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:180353:8cq0j3*/
+/*jsx:babel-7.29.9-react-classic:184766:1lgqsiw*/
 const {
   useState,
   useEffect,
@@ -519,7 +519,7 @@ function Onboarding(props) {
   var profile = props.student && props.student.profile || {};
   var up = props.student && props.student.userProfile || {};
   var dates = window.KpssConfig && window.KpssConfig.examDateByLevel || {};
-  const [name, setName] = useState("");
+  const [name, setName] = useState(profile.name || "");
   const [level, setLevel] = useState(up.educationLevel || "lisans");
   const [target, setTarget] = useState(up.targetType || "B");
   const [examDate, setExamDate] = useState(profile.examDate || dates[up.educationLevel || "lisans"] || "2026-09-06");
@@ -3100,6 +3100,80 @@ function fmtExam(iso) {
   if (p.length === 3) return p[2] + "." + p[1] + "." + p[0];
   return iso;
 }
+function ResetProfileModal(props) {
+  const [typed, setTyped] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [err, setErr] = useState("");
+  const ok = typed.trim().toLocaleUpperCase("tr-TR") === "SIFIRLA";
+  function run() {
+    if (!ok || busy) return;
+    if (!window.SyncEngine || !window.SyncEngine.resetProgress) {
+      setErr("Sıfırlama şu an kullanılamıyor. Verilerin silinmedi.");
+      return;
+    }
+    setBusy(true);
+    setErr("");
+    window.SyncEngine.resetProgress().then(function (r) {
+      if (r && r.ok) {
+        if (props.onClose) props.onClose();
+        return;
+      }
+      setBusy(false);
+      setErr(r && (r.reason === "offline" || r.reason === "anon") ? "İnternet bağlantısı ya da oturum yok. Verilerin silinmedi, tekrar dene." : "Sıfırlama tamamlanamadı, verilerin silinmedi. Biraz sonra tekrar dene.");
+    });
+  }
+  return /*#__PURE__*/React.createElement("div", {
+    className: "fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-end sm:items-center justify-center p-4",
+    onClick: function () {
+      if (!busy && props.onClose) props.onClose();
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "w-full max-w-md max-h-[90vh] overflow-y-auto bg-white dark:bg-stone-900 rounded-3xl p-6 shadow-2xl fade-in",
+    onClick: function (e) {
+      e.stopPropagation();
+    }
+  }, /*#__PURE__*/React.createElement("h2", {
+    className: "text-xl font-black text-stone-900 dark:text-white mb-1"
+  }, "Profili s\u0131f\u0131rla"), /*#__PURE__*/React.createElement("p", {
+    className: "text-sm font-bold text-rose-600 mb-4"
+  }, "Bunu geri alamazs\u0131n."), /*#__PURE__*/React.createElement("p", {
+    className: "text-xs font-bold uppercase tracking-wider text-stone-400 mb-1"
+  }, "Silinecek"), /*#__PURE__*/React.createElement("p", {
+    className: "text-sm text-stone-600 dark:text-stone-300 mb-3 leading-relaxed"
+  }, "\xC7\xF6zd\xFC\u011F\xFCn sorular, netler ve deneme ge\xE7mi\u015Fi, konu ilerlemesi, eksikler ve tekrar listesi, seri, rozetler, oyun rekorlar\u0131, haftal\u0131k program ve T\xFCrkiye s\u0131ralamas\u0131ndaki yerin."), /*#__PURE__*/React.createElement("p", {
+    className: "text-xs font-bold uppercase tracking-wider text-stone-400 mb-1"
+  }, "Kalacak"), /*#__PURE__*/React.createElement("p", {
+    className: "text-sm text-stone-600 dark:text-stone-300 mb-4 leading-relaxed"
+  }, "Hesab\u0131n ve e-postan, ad\u0131n, e\u011Fitim d\xFCzeyin, premium \xFCyeli\u011Fin, davet kodun, Notlar\u0131m ve g\xF6r\xFCn\xFCm ayarlar\u0131n."), /*#__PURE__*/React.createElement("p", {
+    className: "text-sm text-stone-500 mb-2"
+  }, "Sonra yeni s\u0131nav tarihini se\xE7ip s\u0131f\u0131rdan ba\u015Flars\u0131n. Onaylamak i\xE7in ", /*#__PURE__*/React.createElement("b", null, "SIFIRLA"), " yaz:"), /*#__PURE__*/React.createElement("input", {
+    value: typed,
+    onChange: function (e) {
+      setTyped(e.target.value);
+    },
+    placeholder: "SIFIRLA",
+    autoCapitalize: "characters",
+    autoComplete: "off",
+    disabled: busy,
+    className: "w-full mb-3 px-4 py-3 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-800 font-semibold tracking-wider"
+  }), err ? /*#__PURE__*/React.createElement("p", {
+    className: "text-sm text-rose-600 mb-3"
+  }, err) : null, /*#__PURE__*/React.createElement("div", {
+    className: "flex gap-2"
+  }, /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    disabled: !ok || busy,
+    onClick: run,
+    className: "flex-1 py-3 rounded-xl bg-rose-600 text-white text-sm font-bold disabled:opacity-40"
+  }, busy ? "Sıfırlanıyor…" : "Profili sıfırla"), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    disabled: busy,
+    onClick: function () {
+      if (props.onClose) props.onClose();
+    },
+    className: "px-4 py-3 rounded-xl border-2 border-stone-200 dark:border-stone-700 text-sm font-medium"
+  }, "Vazge\xE7"))));
+}
 function Ben(props) {
   const st = props.student;
   let totQ = 0,
@@ -3116,6 +3190,8 @@ function Ben(props) {
   const [draftName, setDraftName] = useState("");
   const [draftTrack, setDraftTrack] = useState("B");
   const [draftEdu, setDraftEdu] = useState("");
+  const [resetOpen, setResetOpen] = useState(false);
+  const examPassed = !!(st.profile.examDate && st.profile.examDate < StudentStore.todayStr());
   const eduReq = up.educationChangeRequest;
   const showKulvar = needsKulvar(totQ === 0 && editing && draftEdu ? draftEdu : up.educationLevel);
   function startSettingsEdit() {
@@ -3381,7 +3457,27 @@ function Ben(props) {
       props.onAdmin && props.onAdmin();
     },
     className: "w-full mb-3 p-3.5 rounded-2xl glass text-left card-hover font-medium"
-  }, "Y\xF6netim") : null, /*#__PURE__*/React.createElement("button", {
+  }, "Y\xF6netim") : null, examPassed ? /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: function () {
+      setResetOpen(true);
+    },
+    className: "w-full mb-3 p-3.5 rounded-2xl glass text-left card-hover"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "font-medium block"
+  }, "S\u0131nav\u0131n bitti mi? Yeni d\xF6neme ba\u015Fla"), /*#__PURE__*/React.createElement("span", {
+    className: "text-xs text-stone-400 font-normal mt-0.5 block"
+  }, "\xC7al\u0131\u015Fma ge\xE7mi\u015Fini s\u0131f\u0131rla, hesab\u0131n ve notlar\u0131n kals\u0131n.")) : /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: function () {
+      setResetOpen(true);
+    },
+    className: "w-full mb-1 p-3.5 rounded-2xl text-sm text-stone-400"
+  }, "Profili s\u0131f\u0131rla"), resetOpen ? /*#__PURE__*/React.createElement(ResetProfileModal, {
+    onClose: function () {
+      setResetOpen(false);
+    }
+  }) : null, /*#__PURE__*/React.createElement("button", {
     onClick: function () {
       if (confirm("Hesap silme talebi kaydedilir. Destek onayından sonra veri silinir.")) StudentStore.requestDeletion();
     },
