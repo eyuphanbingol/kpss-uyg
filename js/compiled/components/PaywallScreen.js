@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:20705:q177j4*/
+/*jsx:babel-7.29.9-react-classic:20691:1y0h491*/
 (function () {
   const {
     useState,
@@ -150,7 +150,7 @@
     // ============================================================
 
     return /*#__PURE__*/React.createElement("div", {
-      className: "max-w-3xl mx-auto px-4 py-6 pb-10"
+      className: "app-page py-6 pb-10"
     }, /*#__PURE__*/React.createElement("div", {
       className: "flex justify-between items-center mb-6 slide-up"
     }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", {

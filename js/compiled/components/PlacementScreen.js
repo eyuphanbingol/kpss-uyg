@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:21051:1cm009o*/
+/*jsx:babel-7.29.9-react-classic:21037:15mxth1*/
 (function () {
   const {
     useEffect,
@@ -169,7 +169,7 @@
     // ============================================================
 
     return /*#__PURE__*/React.createElement("div", {
-      className: "max-w-3xl mx-auto px-4 py-6 pb-10"
+      className: "app-page py-6 pb-10"
     }, /*#__PURE__*/React.createElement("div", {
       className: "flex justify-between items-center mb-6 slide-up"
     }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", {

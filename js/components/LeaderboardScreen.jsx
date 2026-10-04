@@ -143,7 +143,7 @@
         // ============================================================
 
         return (
-            <div className="max-w-2xl mx-auto px-4 py-6 pb-24 relative">
+            <div className="app-page py-6 pb-24 relative">
                 {/* Header */}
                 <div className="flex justify-between items-center mb-4 slide-up">
                     <div>
@@ -303,7 +303,7 @@
                 {/* ===== MY RANK (Sticky Bottom) ===== */}
                 {!loading && list.length > 0 && myIdx >= 0 && (
                     <div className="fixed bottom-0 left-0 right-0 z-40 px-4 py-4 bg-white dark:bg-stone-900 border-t border-stone-200 dark:border-stone-700 shadow-lg">
-                        <div className="max-w-2xl mx-auto flex items-center justify-between">
+                        <div className="app-page flex items-center justify-between">
                             <div className="flex items-center gap-3">
                                 <div className="h-10 w-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-white font-bold text-sm">
                                     {meInitials || "?"}
@@ -324,7 +324,7 @@
                 {/* ===== MY RANK (Not in list) ===== */}
                 {!loading && list.length > 0 && myIdx < 0 && me && (
                     <div className="fixed bottom-0 left-0 right-0 z-40 px-4 py-4 bg-white dark:bg-stone-900 border-t border-stone-200 dark:border-stone-700 shadow-lg">
-                        <div className="max-w-2xl mx-auto flex items-center justify-between">
+                        <div className="app-page flex items-center justify-between">
                             <div className="flex items-center gap-3">
                                 <div className="h-10 w-10 rounded-full bg-stone-200 dark:bg-stone-700 flex items-center justify-center text-stone-500 font-bold text-sm">
                                     {meInitials || "?"}

@@ -187,7 +187,7 @@
         var field = "w-full px-4 py-3 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 focus:border-teal-600 focus:ring-4 focus:ring-teal-600/10 outline-none";
 
         return (
-            <div className="mx-auto max-w-2xl px-3 sm:px-5 pt-6 pb-10">
+            <div className="app-page pt-6 pb-10">
                 <div className="flex justify-between items-start mb-6 gap-3">
                     <div>
                         <h1 className="text-2xl md:text-3xl font-display font-black tracking-tight gradient-text">Tekrar defteri</h1>

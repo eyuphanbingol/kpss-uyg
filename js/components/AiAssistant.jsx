@@ -226,7 +226,7 @@
 
         // ---------- Render ----------
         return (
-            <div className="max-w-2xl mx-auto pb-10 px-4">
+            <div className="app-page pb-10">
                 {/* Header */}
                 <div className="flex justify-between items-center mb-6 slide-up">
                     <div>

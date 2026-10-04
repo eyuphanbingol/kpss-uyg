@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:184463:1hmqk7z*/
+/*jsx:babel-7.29.9-react-classic:184349:1kw4iyg*/
 const {
   useState,
   useEffect,
@@ -383,7 +383,7 @@ function CookieBar() {
 }
 function Shell(props) {
   return /*#__PURE__*/React.createElement("div", {
-    className: "mx-auto px-3 sm:px-5 pt-6 sm:pt-10 overflow-x-hidden " + (props.wide ? "max-w-4xl" : "max-w-2xl")
+    className: "app-page pt-6 sm:pt-10 overflow-x-hidden"
   }, props.children, props.padBottom === false ? null : /*#__PURE__*/React.createElement("div", {
     "aria-hidden": "true",
     style: {
@@ -483,7 +483,7 @@ function BottomNav(props) {
       paddingBottom: "max(8px, env(safe-area-inset-bottom))"
     }
   }, /*#__PURE__*/React.createElement("div", {
-    className: "max-w-2xl mx-auto grid grid-cols-5 px-0.5 pt-1 min-w-0"
+    className: "app-page grid grid-cols-5 pt-1 min-w-0"
   }, tabs.map(function (tab) {
     const on = props.nav === tab.id;
     return /*#__PURE__*/React.createElement("button", {
@@ -1678,7 +1678,7 @@ function MapTopics(props) {
     }, /*#__PURE__*/React.createElement("h2", {
       className: "text-sm font-black uppercase tracking-widest text-stone-400 mb-2"
     }, g.icon, " ", g.title), /*#__PURE__*/React.createElement("div", {
-      className: "grid grid-cols-1 sm:grid-cols-2 gap-2"
+      className: "wide-grid is-tight"
     }, g.kids.map(function (k) {
       var n = quiz ? quiz.countFor(k.id) : 0;
       var hoverImg = k.hoverImg;
@@ -2349,7 +2349,7 @@ function DersHome(props) {
     }, g.title ? /*#__PURE__*/React.createElement("p", {
       className: "text-xs font-bold uppercase tracking-wider text-stone-400 mb-3"
     }, g.title) : null, /*#__PURE__*/React.createElement("div", {
-      className: "space-y-3"
+      className: "wide-grid"
     }, cards));
   })), function () {
     var edu = props.student && props.student.userProfile && props.student.userProfile.educationLevel;
@@ -2366,7 +2366,7 @@ function DersHome(props) {
     }, /*#__PURE__*/React.createElement("p", {
       className: "text-xs font-bold uppercase tracking-wider text-stone-400 mb-4 flex items-center gap-2"
     }, /*#__PURE__*/React.createElement("span", null, "\uD83D\uDE80"), " Kulvar\u0131n di\u011Fer mod\xFClleri"), /*#__PURE__*/React.createElement("div", {
-      className: "space-y-3"
+      className: "wide-grid"
     }, mods.map(function (m) {
       return /*#__PURE__*/React.createElement("div", {
         key: m.id,
@@ -2406,7 +2406,7 @@ function KonuList(props) {
   }, dersTitle), /*#__PURE__*/React.createElement("p", {
     className: "text-zinc-500 text-sm"
   }, "S\u0131rayla ilerle. Konunun t\xFCm testleri bitince sonraki a\xE7\u0131l\u0131r."))), /*#__PURE__*/React.createElement("div", {
-    className: "space-y-3"
+    className: "wide-grid"
   }, konular.map(function (konu, idx) {
     const kd = props.kpssData[ders][konu] || {};
     const stored = topics[konu];
@@ -2948,7 +2948,7 @@ function Eksikler(props) {
     }, /*#__PURE__*/React.createElement("h2", {
       className: "font-black mb-2 " + t.text
     }, t.icon, " ", ders), /*#__PURE__*/React.createElement("div", {
-      className: "space-y-1.5"
+      className: "wide-grid is-tight"
     }, byDers[ders].map(function (r) {
       const tp = StudentStore.getTopic(r.ders, r.konu);
       const kd = {
@@ -4619,7 +4619,7 @@ function App() {
     return /*#__PURE__*/React.createElement("div", {
       className: "min-h-screen app-shell"
     }, /*#__PURE__*/React.createElement("div", {
-      className: "mx-auto max-w-3xl px-4 pt-5",
+      className: "app-page pt-5",
       style: {
         paddingBottom: "2rem"
       }
@@ -4660,7 +4660,7 @@ function App() {
       paddingTop: "env(safe-area-inset-top, 0px)"
     }
   }, /*#__PURE__*/React.createElement("div", {
-    className: "max-w-2xl mx-auto px-4 py-2.5 flex items-start gap-3"
+    className: "app-page py-2.5 flex items-start gap-3"
   }, /*#__PURE__*/React.createElement("span", {
     className: "duyuru-badge shrink-0 mt-0.5 text-[10px] font-black uppercase tracking-widest bg-white text-indigo-700 px-2 py-1 rounded-md"
   }, "Duyuru"), /*#__PURE__*/React.createElement("p", {

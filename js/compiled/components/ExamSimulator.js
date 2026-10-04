@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:36801:1c7fsc0*/
+/*jsx:babel-7.29.9-react-classic:36745:1i8opqf*/
 (function () {
   const {
     useEffect,
@@ -235,7 +235,7 @@
 
     if (!items.length) {
       return /*#__PURE__*/React.createElement("div", {
-        className: "max-w-2xl mx-auto px-4 py-12 text-center"
+        className: "app-page py-12 text-center"
       }, /*#__PURE__*/React.createElement("div", {
         className: "text-6xl mb-4"
       }, "\uD83D\uDCDD"), /*#__PURE__*/React.createElement("h2", {
@@ -259,7 +259,7 @@
       }).length;
       var capped = !premium && weekExams >= (window.KpssConfig && window.KpssConfig.freeWeeklyExams || 2);
       return /*#__PURE__*/React.createElement("div", {
-        className: "max-w-2xl mx-auto px-4 py-8 pb-10"
+        className: "app-page py-8 pb-10"
       }, /*#__PURE__*/React.createElement("div", {
         className: "flex justify-between items-center mb-6"
       }, /*#__PURE__*/React.createElement(BackBtn, {
@@ -334,7 +334,7 @@
       var level = pct >= 85 ? "🌟 Mükemmel" : pct >= 70 ? "✅ İyi" : pct >= 50 ? "📈 Orta" : "📉 Gelişmeli";
       var levelColor = pct >= 85 ? "text-emerald-600" : pct >= 70 ? "text-indigo-600" : pct >= 50 ? "text-amber-600" : "text-rose-600";
       return /*#__PURE__*/React.createElement("div", {
-        className: "max-w-2xl mx-auto px-4 py-8 pb-10"
+        className: "app-page py-8 pb-10"
       }, /*#__PURE__*/React.createElement("div", {
         className: "flex justify-between items-center mb-6"
       }, /*#__PURE__*/React.createElement("h1", {
@@ -488,7 +488,7 @@
       }, idx + 1);
     }))) : null;
     return /*#__PURE__*/React.createElement("div", {
-      className: "max-w-5xl mx-auto px-4 py-4 pb-10"
+      className: "app-page py-4 pb-10"
     }, leaves > 0 && /*#__PURE__*/React.createElement("div", {
       className: "rounded-2xl p-4 mb-4 flex items-center justify-between " + (leaves >= 3 ? "bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800 text-rose-700 dark:text-rose-300" : "bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 text-amber-700 dark:text-amber-300")
     }, /*#__PURE__*/React.createElement("div", {

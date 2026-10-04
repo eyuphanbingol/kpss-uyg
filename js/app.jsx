@@ -117,7 +117,7 @@ function CookieBar() {
 
 function Shell(props) {
     return (
-        <div className={"mx-auto px-3 sm:px-5 pt-6 sm:pt-10 overflow-x-hidden " + (props.wide ? "max-w-4xl" : "max-w-2xl")}>
+        <div className="app-page pt-6 sm:pt-10 overflow-x-hidden">
             {props.children}
             {props.padBottom === false ? null : (
                 <div aria-hidden="true" style={{ height: "calc(var(--app-tabbar-h) + 1.5rem)" }} />
@@ -190,7 +190,7 @@ function BottomNav(props) {
     ];
     return (
         <nav className="app-tabbar fixed bottom-0 inset-x-0 z-40 nav-glass" style={{ paddingBottom: "max(8px, env(safe-area-inset-bottom))" }}>
-            <div className="max-w-2xl mx-auto grid grid-cols-5 px-0.5 pt-1 min-w-0">
+            <div className="app-page grid grid-cols-5 pt-1 min-w-0">
                 {tabs.map(function (tab) {
                     const on = props.nav === tab.id;
                     return (
@@ -1095,7 +1095,7 @@ function MapTopics(props) {
                 return (
                     <div key={g.id} className="mb-6">
                         <h2 className="text-sm font-black uppercase tracking-widest text-stone-400 mb-2">{g.icon} {g.title}</h2>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <div className="wide-grid is-tight">
                             {g.kids.map(function (k) {
                                 var n = quiz ? quiz.countFor(k.id) : 0;
                                 var hoverImg = k.hoverImg;
@@ -1573,7 +1573,7 @@ function DersHome(props) {
                             {g.title ? (
                                 <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-3">{g.title}</p>
                             ) : null}
-                            <div className="space-y-3">{cards}</div>
+                            <div className="wide-grid">{cards}</div>
                         </section>
                     );
                 })}
@@ -1591,7 +1591,7 @@ function DersHome(props) {
                         <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-4 flex items-center gap-2">
                             <span>🚀</span> Kulvarın diğer modülleri
                         </p>
-                        <div className="space-y-3">
+                        <div className="wide-grid">
                             {mods.map(function (m) {
                                 return (
                                     <div key={m.id} className="p-5 rounded-3xl glass card-hover flex items-center justify-between">
@@ -1630,7 +1630,7 @@ function KonuList(props) {
                     <p className="text-zinc-500 text-sm">Sırayla ilerle. Konunun tüm testleri bitince sonraki açılır.</p>
                 </div>
             </div>
-            <div className="space-y-3">
+            <div className="wide-grid">
                 {konular.map(function (konu, idx) {
                     const kd = props.kpssData[ders][konu] || {};
                     const stored = topics[konu];
@@ -2033,7 +2033,7 @@ function Eksikler(props) {
                 return (
                     <div key={ders} className="mb-6">
                         <h2 className={"font-black mb-2 " + t.text}>{t.icon} {ders}</h2>
-                        <div className="space-y-1.5">
+                        <div className="wide-grid is-tight">
                             {byDers[ders].map(function (r) {
                                 const tp = StudentStore.getTopic(r.ders, r.konu);
                                 const kd = {
@@ -3222,7 +3222,7 @@ function App() {
     if (extra && extra !== "onboarding" && extra !== "auth") {
         return (
             <div className="min-h-screen app-shell">
-                <div className="mx-auto max-w-3xl px-4 pt-5" style={{ paddingBottom: "2rem" }}>
+                <div className="app-page pt-5" style={{ paddingBottom: "2rem" }}>
                     <div className="mb-3"><BackBtn onClick={closeTool} label="Geri" /></div>
                     {lazyErr ? (
                         <div className="p-4 rounded-2xl panel text-sm">
@@ -3249,7 +3249,7 @@ function App() {
         <div className="app-shell">
             {announce && !inTest && !inMapPlay && !inDrillGame ? (
                 <div className="sticky top-0 z-50 duyuru-bar text-white shadow-lg" style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
-                    <div className="max-w-2xl mx-auto px-4 py-2.5 flex items-start gap-3">
+                    <div className="app-page py-2.5 flex items-start gap-3">
                         <span className="duyuru-badge shrink-0 mt-0.5 text-[10px] font-black uppercase tracking-widest bg-white text-indigo-700 px-2 py-1 rounded-md">Duyuru</span>
                         <p className="text-sm font-semibold leading-snug flex-1">{announce}</p>
                     </div>

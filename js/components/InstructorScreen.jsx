@@ -166,7 +166,7 @@
         // ============================================================
 
         return (
-            <div className="max-w-3xl mx-auto px-4 pb-10">
+            <div className="app-page pb-10">
                 {/* Header */}
                 <div className="flex justify-between items-center mb-6 slide-up">
                     <div>

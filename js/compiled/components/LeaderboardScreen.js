@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:19222:3spybg*/
+/*jsx:babel-7.29.9-react-classic:19190:i3nz9k*/
 (function () {
   const {
     useEffect,
@@ -176,7 +176,7 @@
     // ============================================================
 
     return /*#__PURE__*/React.createElement("div", {
-      className: "max-w-2xl mx-auto px-4 py-6 pb-24 relative"
+      className: "app-page py-6 pb-24 relative"
     }, /*#__PURE__*/React.createElement("div", {
       className: "flex justify-between items-center mb-4 slide-up"
     }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", {
@@ -303,7 +303,7 @@
     }))), !loading && list.length > 0 && myIdx >= 0 && /*#__PURE__*/React.createElement("div", {
       className: "fixed bottom-0 left-0 right-0 z-40 px-4 py-4 bg-white dark:bg-stone-900 border-t border-stone-200 dark:border-stone-700 shadow-lg"
     }, /*#__PURE__*/React.createElement("div", {
-      className: "max-w-2xl mx-auto flex items-center justify-between"
+      className: "app-page flex items-center justify-between"
     }, /*#__PURE__*/React.createElement("div", {
       className: "flex items-center gap-3"
     }, /*#__PURE__*/React.createElement("div", {
@@ -321,7 +321,7 @@
     }, myRankData.score)))), !loading && list.length > 0 && myIdx < 0 && me && /*#__PURE__*/React.createElement("div", {
       className: "fixed bottom-0 left-0 right-0 z-40 px-4 py-4 bg-white dark:bg-stone-900 border-t border-stone-200 dark:border-stone-700 shadow-lg"
     }, /*#__PURE__*/React.createElement("div", {
-      className: "max-w-2xl mx-auto flex items-center justify-between"
+      className: "app-page flex items-center justify-between"
     }, /*#__PURE__*/React.createElement("div", {
       className: "flex items-center gap-3"
     }, /*#__PURE__*/React.createElement("div", {

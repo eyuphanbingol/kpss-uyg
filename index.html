@@ -1596,6 +1596,22 @@
             max-height: 46vh;
             overflow: auto;
         }
+        /* Sayfalar ekranı boydan boya kaplar; kenar boşluğu ekran genişliğiyle büyür. */
+        .app-page {
+            width: 100%;
+            max-width: none;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: clamp(12px, 3.2vw, 64px);
+            padding-right: clamp(12px, 3.2vw, 64px);
+        }
+        /* Dar ekranda tek sütun liste, geniş ekranda kendiliğinden sütunlara bölünür. */
+        .wide-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: .75rem; }
+        .wide-grid.is-tight { gap: .375rem; }
+        @media (min-width: 1024px) {
+            .wide-grid { grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 1rem; }
+            .wide-grid.is-tight { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: .5rem .75rem; }
+        }
         .map-play-root.map-place {
             background: #152018;
         }
@@ -2378,17 +2394,11 @@
             .map-chip, .map-chip-ghost { font-size: 12px; padding: 7px 12px; }
             .conquer-mapstat-title { font-size: 14px; }
         }
-        @media (min-width: 768px) {
-            .map-play-root:not(.map-place) {
-                left: max(0px, calc((100% - 42rem) / 2));
-                width: min(100%, 42rem);
-                max-width: 42rem;
-            }
-            .map-play-root.map-place {
-                left: 0;
-                width: 100%;
-                max-width: none;
-            }
+        .map-play-root,
+        .map-play-root.map-place {
+            left: 0;
+            width: 100%;
+            max-width: none;
         }
 
         /* ---- Harita oyunu v2: gerçek deniz/göl zemini, net pinler ---- */
@@ -2609,7 +2619,7 @@
     <script>
         // js/app.jsx derlenmiş hâliyle önbellekten açılır (bkz. js/jsxLoader.js). Değişince ?v= artır.
         document.addEventListener("DOMContentLoaded", function () {
-            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=135");
+            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=136");
         });
     </script>
     <script>

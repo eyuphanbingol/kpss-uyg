@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:24929:137khhm*/
+/*jsx:babel-7.29.9-react-classic:24915:1jev364*/
 (function () {
   const {
     useMemo,
@@ -245,7 +245,7 @@
 
     // ---------- Render ----------
     return /*#__PURE__*/React.createElement("div", {
-      className: "max-w-2xl mx-auto pb-10 px-4"
+      className: "app-page pb-10"
     }, /*#__PURE__*/React.createElement("div", {
       className: "flex justify-between items-center mb-6 slide-up"
     }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", {

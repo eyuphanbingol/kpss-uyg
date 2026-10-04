@@ -126,7 +126,7 @@
         // ============================================================
 
         return (
-            <div className="max-w-2xl mx-auto px-4 py-6 pb-10">
+            <div className="app-page py-6 pb-10">
                 {/* Header */}
                 <div className="flex justify-between items-center mb-6 slide-up">
                     <div>

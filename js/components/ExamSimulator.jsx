@@ -230,7 +230,7 @@
 
         if (!items.length) {
             return (
-                <div className="max-w-2xl mx-auto px-4 py-12 text-center">
+                <div className="app-page py-12 text-center">
                     <div className="text-6xl mb-4">📝</div>
                     <h2 className="text-xl font-bold text-stone-600 dark:text-stone-300 mb-2">Soru Bulunamadı</h2>
                     <p className="text-sm text-stone-400 mb-6">Deneme için yeterli soru yüklenmemiş.</p>
@@ -253,7 +253,7 @@
             var capped = !premium && weekExams >= ((window.KpssConfig && window.KpssConfig.freeWeeklyExams) || 2);
 
             return (
-                <div className="max-w-2xl mx-auto px-4 py-8 pb-10">
+                <div className="app-page py-8 pb-10">
                     {/* Header */}
                     <div className="flex justify-between items-center mb-6">
                         <BackBtn onClick={props.onBack} label="Geri" />
@@ -344,7 +344,7 @@
             var levelColor = pct >= 85 ? "text-emerald-600" : pct >= 70 ? "text-indigo-600" : pct >= 50 ? "text-amber-600" : "text-rose-600";
 
             return (
-                <div className="max-w-2xl mx-auto px-4 py-8 pb-10">
+                <div className="app-page py-8 pb-10">
                     {/* Header */}
                     <div className="flex justify-between items-center mb-6">
                         <h1 className="text-2xl font-black gradient-text">📊 Deneme Sonucu</h1>
@@ -499,7 +499,7 @@
         ) : null;
 
         return (
-            <div className="max-w-5xl mx-auto px-4 py-4 pb-10">
+            <div className="app-page py-4 pb-10">
                 {/* Tab Warning Banner */}
                 {leaves > 0 && (
                     <div className={"rounded-2xl p-4 mb-4 flex items-center justify-between " + 
