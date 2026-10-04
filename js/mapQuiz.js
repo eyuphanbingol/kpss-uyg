@@ -440,74 +440,74 @@
         {
             id: "yer", title: "Yer şekilleri · jeoloji", icon: "🗻",
             kids: [
-                { id: "volkanik", title: "Volkanik dağlar", icon: "🌋", hoverImg: "img/map/volkan-hover.png" },
-                { id: "volkanik-arazi", title: "Volkanik araziler", icon: "🌋", hoverImg: "img/map/volkan-hover.png" },
-                { id: "kirik", title: "Kırık dağlar (horst–graben)", icon: "⛰️", hoverImg: "img/map/kirik-kivrim.png" },
-                { id: "kivrim", title: "Kıvrım dağları", icon: "🏔️", hoverImg: "img/map/kirik-kivrim.png" },
-                { id: "masif", title: "Masif araziler", icon: "🪨", hoverImg: "img/map/masif.png" },
-                { id: "fay", title: "Fay hatları (KAF·DAF·BAF)", icon: "⚡", hoverImg: "img/map/fay.png" },
-                { id: "deprem-az", title: "Deprem riski az alanlar", icon: "🟢", hoverImg: "img/map/deprem-az.png" }
+                { id: "volkanik", title: "Volkanik dağlar", icon: "🌋", hoverImg: "img/map/kart/volkanik.svg" },
+                { id: "volkanik-arazi", title: "Volkanik araziler", icon: "🌋", hoverImg: "img/map/kart/volkanik-arazi.svg" },
+                { id: "kirik", title: "Kırık dağlar (horst–graben)", icon: "⛰️", hoverImg: "img/map/kart/kirik.svg" },
+                { id: "kivrim", title: "Kıvrım dağları", icon: "🏔️", hoverImg: "img/map/kart/kivrim.svg" },
+                { id: "masif", title: "Masif araziler", icon: "🪨", hoverImg: "img/map/kart/masif.svg" },
+                { id: "fay", title: "Fay hatları (KAF·DAF·BAF)", icon: "⚡", hoverImg: "img/map/kart/fay.svg" },
+                { id: "deprem-az", title: "Deprem riski az alanlar", icon: "🟢", hoverImg: "img/map/kart/deprem-az.svg" }
             ]
         },
         {
             id: "plato", title: "Platolar", icon: "🏜️",
             kids: [
-                { id: "plato-karst", title: "Karstik platolar", icon: "🪨", hoverImg: "img/map/plato-karst.png" },
-                { id: "plato-volkan", title: "Volkanik / lav platoları", icon: "🌋", hoverImg: "img/map/volkan-hover.png" },
-                { id: "plato-asinim", title: "Aşınım düzlüğü platoları", icon: "🟩", hoverImg: "img/map/plato-asinim.png" },
-                { id: "plato-tabaka", title: "Tabaka düzlüğü platoları", icon: "🏜️", hoverImg: "img/map/plato-tabaka.png" }
+                { id: "plato-karst", title: "Karstik platolar", icon: "🪨", hoverImg: "img/map/kart/plato-karst.svg" },
+                { id: "plato-volkan", title: "Volkanik / lav platoları", icon: "🌋", hoverImg: "img/map/kart/plato-volkan.svg" },
+                { id: "plato-asinim", title: "Aşınım düzlüğü platoları", icon: "🟩", hoverImg: "img/map/kart/plato-asinim.svg" },
+                { id: "plato-tabaka", title: "Tabaka düzlüğü platoları", icon: "🏜️", hoverImg: "img/map/kart/plato-tabaka.svg" }
             ]
         },
         {
             id: "ova", title: "Ovalar", icon: "🌾",
             kids: [
-                { id: "delta", title: "Delta ovaları", icon: "🌊", hoverImg: "img/map/delta.png" },
-                { id: "ova-karst", title: "Karstik ovalar (TAKKEM)", icon: "🪨" },
-                { id: "ova-tektonik", title: "Tektonik ovalar", icon: "🌾" },
-                { id: "ova-volkan", title: "Volkanik ovalar", icon: "🌋", hoverImg: "img/map/volkan-hover.png" },
-                { id: "ova-asinim", title: "Aşınım / dağ eteği ovaları", icon: "🌾" }
+                { id: "delta", title: "Delta ovaları", icon: "🌊", hoverImg: "img/map/kart/delta.svg" },
+                { id: "ova-karst", title: "Karstik ovalar (TAKKEM)", icon: "🪨", hoverImg: "img/map/kart/ova-karst.svg" },
+                { id: "ova-tektonik", title: "Tektonik ovalar", icon: "🌾", hoverImg: "img/map/kart/ova-tektonik.svg" },
+                { id: "ova-volkan", title: "Volkanik ovalar", icon: "🌋", hoverImg: "img/map/kart/ova-volkan.svg" },
+                { id: "ova-asinim", title: "Aşınım / dağ eteği ovaları", icon: "🌾", hoverImg: "img/map/kart/ova-asinim.svg" }
             ]
         },
         {
             id: "karst-g", title: "Karstik arazi", icon: "🪨",
             kids: [
-                { id: "karst", title: "Karstik topografya", icon: "🪨" }
+                { id: "karst", title: "Karstik topografya", icon: "🪨", hoverImg: "img/map/kart/karst.svg" }
             ]
         },
         {
             id: "su", title: "Sular · kıyılar · geçitler", icon: "💧",
             kids: [
-                { id: "akarsu", title: "Akarsular", icon: "💧" },
-                { id: "goller", title: "Göller", icon: "🏞️" },
-                { id: "havza", title: "Kapalı havzalar", icon: "🌊" },
-                { id: "kiyi", title: "Kıyı tipleri", icon: "🏖️" },
-                { id: "gecit", title: "Geçitler ve boğazlar", icon: "🏔️" }
+                { id: "akarsu", title: "Akarsular", icon: "💧", hoverImg: "img/map/kart/akarsu.svg" },
+                { id: "goller", title: "Göller", icon: "🏞️", hoverImg: "img/map/kart/goller.svg" },
+                { id: "havza", title: "Kapalı havzalar", icon: "🌊", hoverImg: "img/map/kart/havza.svg" },
+                { id: "kiyi", title: "Kıyı tipleri", icon: "🏖️", hoverImg: "img/map/kart/kiyi.svg" },
+                { id: "gecit", title: "Geçitler ve boğazlar", icon: "🏔️", hoverImg: "img/map/kart/gecit.svg" }
             ]
         },
         {
             id: "iklim", title: "İklim · bitki · toprak", icon: "🌱",
             kids: [
-                { id: "yagis", title: "Yağış dağılımı", icon: "🌧️" },
-                { id: "mikro", title: "Mikroklima alanları", icon: "🌡️" },
-                { id: "bitki", title: "Bitki örtüsü · relikt", icon: "🌿" },
-                { id: "toprak", title: "Toprak tipleri", icon: "🟤" },
-                { id: "tarim", title: "Tarım ürünleri", icon: "🌾" },
-                { id: "hayvan", title: "Hayvancılık", icon: "🐄" }
+                { id: "yagis", title: "Yağış dağılımı", icon: "🌧️", hoverImg: "img/map/kart/yagis.svg" },
+                { id: "mikro", title: "Mikroklima alanları", icon: "🌡️", hoverImg: "img/map/kart/mikro.svg" },
+                { id: "bitki", title: "Bitki örtüsü · relikt", icon: "🌿", hoverImg: "img/map/kart/bitki.svg" },
+                { id: "toprak", title: "Toprak tipleri", icon: "🟤", hoverImg: "img/map/kart/toprak.svg" },
+                { id: "tarim", title: "Tarım ürünleri", icon: "🌾", hoverImg: "img/map/kart/tarim.svg" },
+                { id: "hayvan", title: "Hayvancılık", icon: "🐄", hoverImg: "img/map/kart/hayvan.svg" }
             ]
         },
         {
             id: "beseri", title: "Nüfus · ulaşım · ekonomi", icon: "🏙️",
             kids: [
-                { id: "nufus-seyrek", title: "Seyrek nüfuslu alanlar", icon: "🏕️" },
-                { id: "nufus-yogun", title: "Yoğun nüfuslu alanlar", icon: "🏙️" },
-                { id: "demiryolu", title: "Demiryolu olmayan yerler", icon: "🚫" },
-                { id: "liman", title: "Limanlar ve hinterland", icon: "⚓" },
-                { id: "maden", title: "Madenler", icon: "⛏️" },
-                { id: "sanayi", title: "Sanayi tesisleri", icon: "🏭" },
-                { id: "boru", title: "Enerji boru hatları", icon: "🛢️" },
-                { id: "hes", title: "HES, santral ve enerji", icon: "⚡" },
-                { id: "transit", title: "Transit ticaret yolları", icon: "🚛" },
-                { id: "yht", title: "YHT ve demiryolu kapıları", icon: "🚄" }
+                { id: "nufus-seyrek", title: "Seyrek nüfuslu alanlar", icon: "🏕️", hoverImg: "img/map/kart/nufus-seyrek.svg" },
+                { id: "nufus-yogun", title: "Yoğun nüfuslu alanlar", icon: "🏙️", hoverImg: "img/map/kart/nufus-yogun.svg" },
+                { id: "demiryolu", title: "Demiryolu olmayan yerler", icon: "🚫", hoverImg: "img/map/kart/demiryolu.svg" },
+                { id: "liman", title: "Limanlar ve hinterland", icon: "⚓", hoverImg: "img/map/kart/liman.svg" },
+                { id: "maden", title: "Madenler", icon: "⛏️", hoverImg: "img/map/kart/maden.svg" },
+                { id: "sanayi", title: "Sanayi tesisleri", icon: "🏭", hoverImg: "img/map/kart/sanayi.svg" },
+                { id: "boru", title: "Enerji boru hatları", icon: "🛢️", hoverImg: "img/map/kart/boru.svg" },
+                { id: "hes", title: "HES, santral ve enerji", icon: "⚡", hoverImg: "img/map/kart/hes.svg" },
+                { id: "transit", title: "Transit ticaret yolları", icon: "🚛", hoverImg: "img/map/kart/transit.svg" },
+                { id: "yht", title: "YHT ve demiryolu kapıları", icon: "🚄", hoverImg: "img/map/kart/yht.svg" }
             ]
         }
     ];
