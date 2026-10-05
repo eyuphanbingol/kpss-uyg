@@ -1,7 +1,7 @@
 // sorular/geometri-1.js - Üçgende Açılar
 window.geometri_1_sorulari = [
 {
-    "question": "ABC üçgeninde m(∠A)=48° ve m(∠B)=67° ise m(∠C) kaç derecedir?",
+    "question": "ABC üçgeninde m(A)=48° ve m(B)=67° ise m(C) kaç derecedir?",
     "options": ["A) 55°", "B) 65°", "C) 75°", "D) 85°", "E) 95°"],
     "correctAnswerIndex": 1,
     "explanation": "İç açılar toplamı 180°: 180−48−67 = 65°."
@@ -13,28 +13,28 @@ window.geometri_1_sorulari = [
     "explanation": "Dış açı teoremi: α = x + y (komşu olmayan iki iç açı). 38+52 = 90°."
 },
 {
-    "question": "ABC üçgeninde m(∠B)=58°, m(∠C)=72°. A’dan inen yükseklik [AH] ile açıortay [AD] arasındaki m(∠HAD) kaç derecedir?",
+    "question": "ABC üçgeninde m(B)=58°, m(C)=72°. A’dan inen yükseklik [AH] ile açıortay [AD] arasındaki m(HAD) kaç derecedir?",
     "options": ["A) 5°", "B) 7°", "C) 9°", "D) 11°", "E) 13°"],
     "correctAnswerIndex": 1,
-    "explanation": "m(∠HAD) = |m(∠B) − m(∠C)| / 2 = |58−72|/2 = 7°."
+    "explanation": "m(HAD) = |m(B) − m(C)| / 2 = |58−72|/2 = 7°."
 },
 {
-    "question": "ABC üçgeninde iki iç açıortayın iç teğet çember merkezinde oluşturduğu açı x; m(∠A)=44° ise x kaç derecedir?",
+    "question": "ABC üçgeninde iki iç açıortayın iç teğet çember merkezinde oluşturduğu açı x; m(A)=44° ise x kaç derecedir?",
     "options": ["A) 102°", "B) 112°", "C) 122°", "D) 132°", "E) 142°"],
     "correctAnswerIndex": 1,
-    "explanation": "x = 90° + m(∠A)/2 = 90 + 22 = 112°."
+    "explanation": "x = 90° + m(A)/2 = 90 + 22 = 112°."
 },
 {
-    "question": "ABC üçgeninde iki dış açıortayın kesişimiyle oluşan açı x; m(∠A)=56° ise x kaç derecedir?",
+    "question": "ABC üçgeninde iki dış açıortayın kesişimiyle oluşan açı x; m(A)=56° ise x kaç derecedir?",
     "options": ["A) 52°", "B) 56°", "C) 62°", "D) 72°", "E) 82°"],
     "correctAnswerIndex": 2,
-    "explanation": "x = 90° − m(∠A)/2 = 90 − 28 = 62°."
+    "explanation": "x = 90° − m(A)/2 = 90 − 28 = 62°."
 },
 {
-    "question": "ABC üçgeninde bir iç açıortay ile bir dış açıortayın kesişimiyle oluşan açı x; m(∠A)=68° ise x kaç derecedir?",
+    "question": "ABC üçgeninde bir iç açıortay ile bir dış açıortayın kesişimiyle oluşan açı x; m(A)=68° ise x kaç derecedir?",
     "options": ["A) 28°", "B) 32°", "C) 34°", "D) 36°", "E) 38°"],
     "correctAnswerIndex": 2,
-    "explanation": "x = m(∠A)/2 = 68/2 = 34°."
+    "explanation": "x = m(A)/2 = 68/2 = 34°."
 },
 {
     "question": "Dik üçgende hipotenüs |BC|=18 cm ve D, [BC]’nin orta noktasıdır. Hipotenüse ait kenarortay |AD| kaç cm’dir?",
@@ -55,7 +55,7 @@ window.geometri_1_sorulari = [
     "explanation": "Bumerang kuralı: α = x + y + z = 25+35+40 = 100°."
 },
 {
-    "question": "ABC üçgeninde m(∠A)=55°, m(∠B)=65°. C köşesindeki dış açı kaç derecedir?",
+    "question": "ABC üçgeninde m(A)=55°, m(B)=65°. C köşesindeki dış açı kaç derecedir?",
     "options": ["A) 110°", "B) 115°", "C) 120°", "D) 125°", "E) 130°"],
     "correctAnswerIndex": 2,
     "explanation": "C’deki dış açı, komşu olmayan iç açılar A ve B’nin toplamıdır: 55+65 = 120°. (İç C = 60°, dış = 180−60 = 120°.)"
@@ -67,25 +67,25 @@ window.geometri_1_sorulari = [
     "explanation": "Her köşede bir dış açı alınır; toplam 360°."
 },
 {
-    "question": "m(∠B)=47°, m(∠C)=63°. A’dan [AH] yüksekliği ile [AD] açıortayı arasındaki açı kaç derecedir?",
+    "question": "m(B)=47°, m(C)=63°. A’dan [AH] yüksekliği ile [AD] açıortayı arasındaki açı kaç derecedir?",
     "options": ["A) 6°", "B) 7°", "C) 8°", "D) 9°", "E) 10°"],
     "correctAnswerIndex": 2,
-    "explanation": "m(∠HAD) = |47−63|/2 = 8°."
+    "explanation": "m(HAD) = |47−63|/2 = 8°."
 },
 {
-    "question": "m(∠A)=80°. İki iç açıortayın iç teğet merkezinde kestiği açı x kaç derecedir?",
+    "question": "m(A)=80°. İki iç açıortayın iç teğet merkezinde kestiği açı x kaç derecedir?",
     "options": ["A) 120°", "B) 125°", "C) 130°", "D) 135°", "E) 140°"],
     "correctAnswerIndex": 2,
     "explanation": "x = 90 + 80/2 = 130°."
 },
 {
-    "question": "m(∠A)=100°. İki dış açıortayın kesişim açısı x kaç derecedir?",
+    "question": "m(A)=100°. İki dış açıortayın kesişim açısı x kaç derecedir?",
     "options": ["A) 30°", "B) 35°", "C) 40°", "D) 45°", "E) 50°"],
     "correctAnswerIndex": 2,
     "explanation": "x = 90 − 100/2 = 40°."
 },
 {
-    "question": "m(∠A)=54°. Bir iç + bir dış açıortay kesişim açısı x kaç derecedir?",
+    "question": "m(A)=54°. Bir iç + bir dış açıortay kesişim açısı x kaç derecedir?",
     "options": ["A) 24°", "B) 26°", "C) 27°", "D) 28°", "E) 29°"],
     "correctAnswerIndex": 2,
     "explanation": "x = 54/2 = 27°."
@@ -109,7 +109,7 @@ window.geometri_1_sorulari = [
     "explanation": "İkizkenar üçgende tepe köşeden tabana indirilen yükseklik, tabanı iki eş parçaya ayırır ve tepe açısını iki eş açıya böler. Bu nedenle [AH] aynı zamanda kenarortay, açıortay ve üçgenin simetri eksenidir."
 },
 {
-    "question": "ABC üçgeninde A köşesinden çizilen [AH] yükseklik, [AD] ise açıortaydır (H, D ∈ [BC]). m(∠B) = 70° ve m(∠C) = 40° ise m(∠HAD) kaç derecedir?",
+    "question": "ABC üçgeninde A köşesinden çizilen [AH] yükseklik, [AD] ise açıortaydır (H, D ∈ [BC]). m(B) = 70° ve m(C) = 40° ise m(HAD) kaç derecedir?",
     "options": [
     "A) 10°",
     "B) 15°",
@@ -118,10 +118,10 @@ window.geometri_1_sorulari = [
     "E) 30°"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "m(∠BAH) = 90° − m(∠B) ve m(∠BAD) = m(∠A)/2 olduğundan m(∠HAD) = |m(∠A)/2 − (90° − m(∠B))| = |m(∠B) − m(∠C)| : 2 elde edilir. Buna göre m(∠HAD) = |70° − 40°| : 2 = 15° bulunur."
+    "explanation": "m(BAH) = 90° − m(B) ve m(BAD) = m(A)/2 olduğundan m(HAD) = |m(A)/2 − (90° − m(B))| = |m(B) − m(C)| : 2 elde edilir. Buna göre m(HAD) = |70° − 40°| : 2 = 15° bulunur."
 },
 {
-    "question": "m(∠A)=70°, m(∠B)=50°. C köşesindeki dış açı kaç derecedir?",
+    "question": "m(A)=70°, m(B)=50°. C köşesindeki dış açı kaç derecedir?",
     "options": ["A) 110°", "B) 115°", "C) 120°", "D) 125°", "E) 130°"],
     "correctAnswerIndex": 2,
     "explanation": "Dış açı = komşu olmayan iç açılar: 70+50 = 120°."

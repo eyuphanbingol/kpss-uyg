@@ -8,6 +8,7 @@ window.geometri_1_notlari = [
         </span>
     </div>
     <div class="space-y-2 mb-3 text-[13px] leading-relaxed">
+        <div class="rounded-xl border border-stone-200 dark:border-stone-700 bg-white/80 dark:bg-stone-900/40 px-3 py-2">Gösterim: <b>m(A)</b>, A açısının ölçüsüdür. <b>m(BAC)</b>, köşesi ortadaki harf (A) olan BAC açısının ölçüsüdür.</div>
         <div class="rounded-xl border border-stone-200 dark:border-stone-700 bg-white/80 dark:bg-stone-900/40 px-3 py-2">Bir üçgenin iç açıları toplamı <b>180°</b>dir.</div>
         <div class="rounded-xl border border-stone-200 dark:border-stone-700 bg-white/80 dark:bg-stone-900/40 px-3 py-2">Bir üçgenin dış açıları toplamı <b>360°</b>dir.</div>
         <div class="rounded-xl border border-stone-200 dark:border-stone-700 bg-white/80 dark:bg-stone-900/40 px-3 py-2">Bir üçgenin bir dış açısının ölçüsü, kendisine <b>komşu olmayan</b> iki iç açının ölçüleri toplamına eşittir: <b>α = x + y</b>.</div>
@@ -69,11 +70,11 @@ window.geometri_1_notlari = [
         </span>
     </div>
     <div class="space-y-2 mb-3 text-[13px] leading-relaxed">
-        <div class="rounded-xl border border-stone-200 dark:border-stone-700 bg-white/80 dark:bg-stone-900/40 px-3 py-2">Bir üçgende aynı köşeden çıkan yükseklik [AH] ile açıortay [AD] arasındaki açı: <b>m(∠HAD) = |m(∠B) − m(∠C)| / 2</b>.</div>
+        <div class="rounded-xl border border-stone-200 dark:border-stone-700 bg-white/80 dark:bg-stone-900/40 px-3 py-2">Bir üçgende aynı köşeden çıkan yükseklik [AH] ile açıortay [AD] arasındaki açı: <b>m(HAD) = |m(B) − m(C)| / 2</b>.</div>
         <div class="rounded-xl border border-stone-200 dark:border-stone-700 bg-white/80 dark:bg-stone-900/40 px-3 py-2">İç açıortay tabanı komşu kenarlar oranında böler: <b>|BD| / |DC| = c / b</b> (b = |AC|, c = |AB|).</div>
-        <div class="rounded-xl border border-stone-200 dark:border-stone-700 bg-white/80 dark:bg-stone-900/40 px-3 py-2">İki iç açıortayın oluşturduğu açı (iç teğet çember merkezindeki açı): <b>x = 90° + m(∠A)/2</b>.</div>
-        <div class="rounded-xl border border-stone-200 dark:border-stone-700 bg-white/80 dark:bg-stone-900/40 px-3 py-2">İki dış açıortayın kesişimiyle oluşan açı: <b>x = 90° − m(∠A)/2</b>.</div>
-        <div class="rounded-xl border border-stone-200 dark:border-stone-700 bg-white/80 dark:bg-stone-900/40 px-3 py-2">Bir iç açıortay ile bir dış açıortayın kesişimiyle oluşan açı: <b>x = m(∠A)/2</b>.</div>
+        <div class="rounded-xl border border-stone-200 dark:border-stone-700 bg-white/80 dark:bg-stone-900/40 px-3 py-2">İki iç açıortayın oluşturduğu açı (iç teğet çember merkezindeki açı): <b>x = 90° + m(A)/2</b>.</div>
+        <div class="rounded-xl border border-stone-200 dark:border-stone-700 bg-white/80 dark:bg-stone-900/40 px-3 py-2">İki dış açıortayın kesişimiyle oluşan açı: <b>x = 90° − m(A)/2</b>.</div>
+        <div class="rounded-xl border border-stone-200 dark:border-stone-700 bg-white/80 dark:bg-stone-900/40 px-3 py-2">Bir iç açıortay ile bir dış açıortayın kesişimiyle oluşan açı: <b>x = m(A)/2</b>.</div>
     </div>
     <svg viewBox="0 0 320 226" class="geo-fig w-full max-w-[380px] mx-auto my-3" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Yükseklik ile açıortay arasındaki açı">
         <rect x="1" y="1" width="318" height="224" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
@@ -94,7 +95,7 @@ window.geometri_1_notlari = [
         <text x="303.4" y="175" text-anchor="middle" font-size="14" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-weight="700" fill="#0f172a">C</text>
         <text x="86" y="186.7" text-anchor="middle" font-size="13" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-weight="700" fill="#0f172a">H</text>
         <text x="128.9" y="186.7" text-anchor="middle" font-size="13" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-weight="700" fill="#0f172a">D</text>
-        <text x="160" y="216.7" text-anchor="middle" font-size="13" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-weight="700" fill="#dc2626">x = |m(∠B) − m(∠C)| / 2</text>
+        <text x="160" y="216.7" text-anchor="middle" font-size="13" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-weight="700" fill="#dc2626">x = |m(B) − m(C)| / 2</text>
     </svg>
     <div class="rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 p-3 mb-3 text-[12px] leading-relaxed">Açıortay–yükseklik bağıntısı: aynı tepeden inen yükseklik ile açıortay arasındaki açı, diğer iki taban açısının farkının yarısına eşittir. Aynı tepeden inen açıortayın ayağı D, her zaman yüksekliğin ayağı H ile kenarortayın ayağı arasında kalır.</div>
     `,

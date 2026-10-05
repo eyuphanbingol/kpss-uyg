@@ -1,7 +1,7 @@
 // sorular/geometri-3.js - İkizkenar ve Eşkenar
 window.geometri_3_sorulari = [
 {
-    "question": "İkizkenar ABC üçgeninde |AB|=|AC|, m(∠A)=40°. Taban açılarından biri kaç derecedir?",
+    "question": "İkizkenar ABC üçgeninde |AB|=|AC|, m(A)=40°. Taban açılarından biri kaç derecedir?",
     "options": [
         "A) 60°",
         "B) 65°",
@@ -49,7 +49,7 @@ window.geometri_3_sorulari = [
     "explanation": "Tepe köşeden tabana çizilen kesen için Stewart teoreminin özel hâli geçerlidir: |AD|² = |AB|² − |BD|·|DC| = 13² − 5·4 = 169 − 20 = 149. Buradan x = √149 birim bulunur."
 },
 {
-    "question": "İkizkenar ABC üçgeninde |AB| = |AC| ve m(∠B) = 55° ise m(∠A) kaç derecedir?",
+    "question": "İkizkenar ABC üçgeninde |AB| = |AC| ve m(B) = 55° ise m(A) kaç derecedir?",
     "options": [
         "A) 55°",
         "B) 60°",
@@ -58,7 +58,7 @@ window.geometri_3_sorulari = [
         "E) 75°"
     ],
     "correctAnswerIndex": 3,
-    "explanation": "|AB| = |AC| olduğundan bu kenarların karşısındaki açılar eştir: m(∠C) = m(∠B) = 55°. Üçgenin iç açıları toplamı 180° olduğundan m(∠A) = 180° − (55° + 55°) = 70° bulunur."
+    "explanation": "|AB| = |AC| olduğundan bu kenarların karşısındaki açılar eştir: m(C) = m(B) = 55°. Üçgenin iç açıları toplamı 180° olduğundan m(A) = 180° − (55° + 55°) = 70° bulunur."
 },
 {
     "question": "Eşkenar üçgenin alanı 9√3 cm² ise bir kenarı kaç cm'dir?",
@@ -205,7 +205,7 @@ window.geometri_3_sorulari = [
     "explanation": "a√3/2=9√3 → a=18 cm."
 },
 {
-    "question": "İkizkenar ABC, m(∠B)=m(∠C)=65°. m(∠A)?",
+    "question": "İkizkenar ABC, m(B)=m(C)=65°. m(A)?",
     "options": [
         "A) 40°",
         "B) 45°",

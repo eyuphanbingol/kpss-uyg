@@ -269,7 +269,7 @@ def g1_yukseklik_aciortay():
     F.vlabel(C, "C", G)
     F.text((H[0], H[1] + 16), "H")
     F.text((D[0], D[1] + 16), "D")
-    F.caption("x = |m(∠B) − m(∠C)| / 2", y=212, color=RED)
+    F.caption("x = |m(B) − m(C)| / 2", y=212, color=RED)
     return F
 
 
