@@ -348,227 +348,494 @@ function restDayCopy() {
     return msgs[i];
 }
 
-function StudyProgram(props) {
-    const kpssData = props.kpssData || {};
-    const dersKeys = Object.keys(kpssData);
-    const saved = (props.student.userProfile && props.student.userProfile.studyPlan) || null;
-    const ready = !!(saved && saved.ready);
-    const [open, setOpen] = useState(!ready);
-    const [draft, setDraft] = useState(function () { return StudentStore.cloneStudyPlan(saved); });
-    const [editDay, setEditDay] = useState(function () { return StudentStore.planDayId(); });
-    const [burst, setBurst] = useState(0);
-    const dragIdx = useRef(null);
-    const days = StudentStore.WEEK_DAYS;
-    const todayId = StudentStore.planDayId();
-    const live = ready ? StudentStore.cloneStudyPlan(saved) : null;
-    const today = live && live.days[todayId];
-    const checks = (StudentStore.planChecksToday && StudentStore.planChecksToday()) || {};
-    const todaySlots = (today && today.on ? (today.slots || []) : []).filter(function (s) { return kpssData[s.ders]; });
-    const goalH = StudentStore.daySlotHours({ slots: todaySlots });
-    const doneH = todaySlots.reduce(function (sum, s) { return sum + (checks[s.ders] ? Number(s.hours) || 0 : 0); }, 0);
-    const pct = goalH > 0 ? Math.round((doneH / goalH) * 100) : 0;
-    const workToday = ready && today && today.on && todaySlots.length;
+// ---------- Akıllı KPSS programı (motor: js/smartPlan.js) ----------
 
-    function patchDay(id, fn) {
-        setDraft(function (prev) {
-            var next = StudentStore.cloneStudyPlan(prev);
-            next.days[id] = Object.assign({ on: false, slots: [] }, next.days[id]);
-            fn(next.days[id]);
-            return next;
-        });
-    }
+var PLAN_ICON = { not: "📖", test: "🎯", tekrar: "🔁", zayif: "🩹", genel: "🧭", deneme: "📝" };
 
-    function addSlot(dayId, ders) {
-        if (!ders) return;
-        patchDay(dayId, function (day) {
-            day.on = true;
-            var hit = null;
-            day.slots.forEach(function (s) { if (s.ders === ders) hit = s; });
-            if (!hit) day.slots.push({ ders: ders, hours: 1 });
-        });
-    }
+function planSettingsOf(student) {
+    return (student.userProfile && student.userProfile.smartPlan) || null;
+}
 
-    function moveSlot(dayId, from, to) {
-        if (from == null || to == null || from === to) return;
-        patchDay(dayId, function (day) {
-            var slots = (day.slots || []).slice();
-            if (from < 0 || from >= slots.length || to < 0 || to >= slots.length) return;
-            var item = slots.splice(from, 1)[0];
-            slots.splice(to, 0, item);
-            day.slots = slots;
-        });
-    }
+function savePlanSettings(next) {
+    StudentStore.updateUserProfile({ smartPlan: next });
+}
 
-    function toggleDone(ders) {
-        var was = !!checks[ders];
-        StudentStore.togglePlanSlot(ders);
-        if (!was) setBurst(function (n) { return n + 1; });
-    }
+function planTaskLabel(x) {
+    var SP = window.SmartPlan;
+    var t = SP.taskTitle(x);
+    if (x.kind === "deneme") return t;
+    return t + " · " + x.ders + (x.konu ? " / " + kLabel(x.konu) : "");
+}
 
-    var ed = draft.days[editDay] || { on: false, slots: [] };
-    var used = {};
-    (ed.slots || []).forEach(function (s) { used[s.ders] = true; });
-    var leftover = dersKeys.filter(function (k) { return !used[k]; });
+// Görevi başlat: ilgili not / konu / deneme ekranını aç.
+function runPlanTask(x, props) {
+    if (x.kind === "not") props.onKonu(x.ders, x.konu, "notes");
+    else if (x.kind === "test" || x.kind === "tekrar" || x.kind === "zayif") props.onKonu(x.ders, x.konu, "hub");
+    else if (x.kind === "genel") props.onDers(x.ders);
+    else if (x.kind === "deneme" && props.onExam) props.onExam();
+}
 
+function PlanTaskRow(props) {
+    var x = props.item;
+    var SP = window.SmartPlan;
     return (
-        <div className="mb-6 slide-up">
-            {burst ? <Confetti key={burst} /> : null}
-            <div className="plan-card">
-                <div className="plan-head">
-                    <div>
-                        <p className="plan-kicker">📅 Bugünün hedefi</p>
-                        {!open ? (
-                            workToday ? (
-                                <p className="plan-lead">{formatHours(doneH)} / {formatHours(goalH)} tamamlandı</p>
-                            ) : ready ? (
-                                <p className="plan-lead">Dinlenme günü</p>
-                            ) : (
-                                <p className="plan-lead">Her güne ders ve saat yaz.</p>
-                            )
-                        ) : (
-                            <p className="plan-lead">Günü seç, dersleri sırala, kaydet.</p>
-                        )}
+        <li className={"plan-row" + (x.done ? " is-done" : "")}>
+            <button type="button" className="plan-check" aria-pressed={!!x.done}
+                aria-label={(x.done ? "Tamamlandı işaretini kaldır: " : "Tamamlandı olarak işaretle: ") + planTaskLabel(x)}
+                onClick={function () { props.onToggle(x); }}>
+                {x.done ? "✓" : ""}
+            </button>
+            <span className="plan-row-ico" aria-hidden="true">{PLAN_ICON[x.kind] || "•"}</span>
+            <span className="min-w-0 flex-1">
+                <span className="block text-sm font-semibold leading-snug">{planTaskLabel(x)}</span>
+                <span className="block text-xs text-stone-500">{SP.fmtMin(x.minutes)}{x.part ? " · parça" : ""}{x.kind === "zayif" && x.pct != null ? " · son net %" + x.pct : ""}</span>
+            </span>
+            {!x.done && props.onStart ? (
+                <button type="button" className="plan-start" onClick={function () { props.onStart(x); }}>Başla</button>
+            ) : null}
+        </li>
+    );
+}
+
+function PlanPhaseBar(props) {
+    var plan = props.plan;
+    var SP = window.SmartPlan;
+    var total = plan.days.length || 1;
+    var seg = { ogrenme: 0, pekistirme: 0, son: 0 };
+    plan.days.forEach(function (d) { seg[d.phase] += 1; });
+    var startOf = {};
+    plan.days.forEach(function (d) { if (!startOf[d.phase]) startOf[d.phase] = d.date; });
+    return (
+        <div>
+            <div className="plan-phases" role="img" aria-label="Dönemler">
+                {["ogrenme", "pekistirme", "son"].map(function (k) {
+                    if (!seg[k]) return null;
+                    return <span key={k} style={{ width: (seg[k] / total * 100) + "%", background: SP.PHASES[k].color }} />;
+                })}
+            </div>
+            <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-xs text-stone-500">
+                {["ogrenme", "pekistirme", "son"].map(function (k) {
+                    if (!seg[k]) return null;
+                    return (
+                        <span key={k} className="inline-flex items-center gap-1.5">
+                            <span className="h-2.5 w-2.5 rounded-full" style={{ background: SP.PHASES[k].color }} />
+                            {SP.PHASES[k].label} · {SP.fmtDate(startOf[k])}’ten {seg[k]} gün
+                        </span>
+                    );
+                })}
+            </div>
+        </div>
+    );
+}
+
+function SmartPlanCard(props) {
+    var SP = window.SmartPlan;
+    var settings = planSettingsOf(props.student);
+    var plan = useMemo(function () {
+        if (!SP || !settings) return null;
+        return SP.generate(props.kpssData, props.student, settings);
+    }, [props.kpssData, props.student, settings]);
+    const [missed, setMissed] = useState(0);
+
+    // dün planlanıp yapılmayanlar: bir kez göster, sonra bugünün listesini "görüldü" olarak kaydet
+    useEffect(function () {
+        if (!SP || !plan || !plan.ok) return;
+        var m = SP.missedSince(settings, plan);
+        if (m.changed) {
+            if (m.missed) setMissed(m.missed);
+            savePlanSettings(Object.assign({}, settings, { seen: m.seen }));
+        }
+    }, [plan && plan.today, plan && plan.ok]);
+
+    if (!SP) return null;
+    if (!settings) {
+        return (
+            <section className="plan-hero rounded-3xl p-6 mb-4 slide-up">
+                <p className="text-xs font-bold uppercase tracking-wider opacity-80">Akıllı KPSS programı</p>
+                <h2 className="text-xl sm:text-2xl font-black mt-1 leading-snug">Sınavına kadar her gün hangi konuyu çalışacağını 1 dakikada çıkar.</h2>
+                <p className="text-sm opacity-85 mt-2 max-w-2xl">Sınav tarihin, boş saatlerin ve zayıf derslerine göre konu konu takvim. Bir gün kaçırırsan program kendini yeniden dağıtır.</p>
+                <button type="button" onClick={props.onWizard} className="plan-hero-btn mt-4">Programımı oluştur</button>
+            </section>
+        );
+    }
+    if (!plan || !plan.ok) {
+        return (
+            <section className="rounded-3xl glass p-5 mb-4">
+                <p className="text-xs font-bold uppercase tracking-wider text-stone-400">Akıllı KPSS programı</p>
+                <p className="font-semibold mt-1">{plan ? plan.reason : "Program hesaplanamadı."}</p>
+                <button type="button" className="quick-chip is-primary mt-3" onClick={props.onWizard}>Programı güncelle</button>
+            </section>
+        );
+    }
+    var list = SP.todayList(plan, settings);
+    var doneMin = 0, allMin = 0;
+    list.forEach(function (x) { allMin += x.minutes; if (x.done) doneMin += x.minutes; });
+    var phase = plan.days[0] ? plan.days[0].phase : "ogrenme";
+    function toggle(x) {
+        var cur = planSettingsOf(StudentStore.getState()) || settings;
+        savePlanSettings(x.done ? SP.unmarkDone(cur, x) : SP.markDone(cur, x));
+    }
+    return (
+        <section className="rounded-3xl glass p-5 sm:p-6 mb-4 slide-up" aria-labelledby="plan-title">
+            <div className="flex flex-wrap items-start justify-between gap-3">
+                <div className="min-w-0">
+                    <p className="text-xs font-bold uppercase tracking-wider" style={{ color: SP.PHASES[phase].color }}>
+                        {SP.PHASES[phase].label} dönemi · sınava {plan.daysLeft} gün
+                    </p>
+                    <h2 id="plan-title" className="text-lg font-bold mt-0.5">Bugünkü programın</h2>
+                </div>
+                <div className="flex gap-2">
+                    <button type="button" className="quick-chip" onClick={props.onCalendar}>📅 Takvim</button>
+                    <button type="button" className="quick-chip" onClick={props.onWizard}>Düzenle</button>
+                </div>
+            </div>
+            {missed ? (
+                <p className="plan-note mt-3" role="status">Dünden kalan {missed} görev programa yeniden dağıtıldı. Sıkıntı yok, devam.</p>
+            ) : null}
+            {!plan.fits ? (
+                <p className="plan-warn mt-3">Bu tempoyla konular sınavdan önce bitmiyor ({SP.fmtMin(plan.behindMin)} eksik). {plan.needWeekMin ? "Haftada " + SP.fmtMin(plan.needWeekMin) + " ayırabilirsen yetişir." : "Haftaya çalışma günü eklemen gerekiyor."}</p>
+            ) : null}
+            {list.length ? (
+                <>
+                    <div className="flex items-center justify-between text-xs text-stone-500 mt-4 mb-1.5">
+                        <span>{SP.fmtMin(doneMin)} / {SP.fmtMin(allMin)} tamam</span>
+                        <span>{list.filter(function (x) { return x.done; }).length}/{list.length} görev</span>
                     </div>
-                    <button type="button" onClick={function () {
-                        setDraft(StudentStore.cloneStudyPlan(saved));
-                        setEditDay(todayId);
-                        setOpen(!open);
-                    }} className="plan-edit">
-                        {open ? "Kapat" : (ready ? "Düzenle" : "Oluştur")}
-                    </button>
+                    <div className="h-2 rounded-full bg-stone-200 dark:bg-stone-700 overflow-hidden">
+                        <div className="h-full rounded-full bg-gradient-to-r from-teal-500 to-emerald-500" style={{ width: (allMin ? doneMin / allMin * 100 : 0) + "%", transition: "width .3s" }} />
+                    </div>
+                    <ul className="mt-3 space-y-2">
+                        {list.map(function (x, i) {
+                            return <PlanTaskRow key={x.id + (x.done ? "-d" : "") + i} item={x} onToggle={toggle} onStart={function (t) { runPlanTask(t, props); }} />;
+                        })}
+                    </ul>
+                </>
+            ) : (
+                <p className="text-sm text-stone-500 mt-3">Bugün programda dinlenme günü. Yarın {plan.days[1] && plan.days[1].items.length ? plan.days[1].items.length + " görev" : "da boş"}.</p>
+            )}
+        </section>
+    );
+}
+
+function PlanWizard(props) {
+    var SP = window.SmartPlan;
+    var dersler = Object.keys(props.kpssData || {});
+    var cur = planSettingsOf(props.student);
+    const [step, setStep] = useState(0);
+    const [s, setS] = useState(function () {
+        var base = cur ? SP.normSettings(cur) : SP.defaultSettings(props.student);
+        // eski haftalık programdan saatleri al
+        var old = props.student.userProfile && props.student.userProfile.studyPlan;
+        if (!cur && old && old.ready && old.days) {
+            var ids = ["pzt", "sal", "car", "per", "cum", "cmt", "paz"];
+            base.hours = ids.map(function (id) {
+                var d = old.days[id];
+                return d && d.on ? (StudentStore.daySlotHours ? StudentStore.daySlotHours(d) : 0) : 0;
+            });
+        }
+        return base;
+    });
+    var preview = useMemo(function () {
+        return step === 3 ? SP.generate(props.kpssData, props.student, s) : null;
+    }, [step, s]);
+    var weekH = s.hours.reduce(function (a, h) { return a + h; }, 0);
+    function setHour(i, v) {
+        var h = s.hours.slice();
+        h[i] = Math.max(0, Math.min(12, Math.round(v * 2) / 2));
+        setS(Object.assign({}, s, { hours: h }));
+    }
+    function preset(arr) { setS(Object.assign({}, s, { hours: arr })); }
+    function toggleWeak(d) {
+        var w = s.weak.indexOf(d) >= 0 ? s.weak.filter(function (x) { return x !== d; }) : s.weak.concat([d]);
+        setS(Object.assign({}, s, { weak: w }));
+    }
+    function save() {
+        var next = Object.assign({}, s, { createdAt: (cur && cur.createdAt) || new Date().toISOString(), seen: null });
+        StudentStore.updateUserProfile({ smartPlan: next, studyPlan: SP.legacyStudyPlan(next) });
+        if (s.examDate) StudentStore.updateProfile({ examDate: s.examDate });
+        props.onDone();
+    }
+    var canNext = step === 0 ? (s.examDate && s.examDate > SP.todayIso()) : step === 1 ? weekH > 0 : true;
+    var steps = ["Sınav tarihi", "Boş saatler", "Zayıf dersler", "Önizleme"];
+    return (
+        <div className="fixed inset-0 z-[70] bg-black/45 backdrop-blur-sm flex items-end sm:items-center justify-center p-3 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="wiz-title">
+            <div className="w-full max-w-xl max-h-[92vh] overflow-y-auto bg-white dark:bg-stone-900 rounded-3xl p-5 sm:p-7 shadow-2xl fade-in">
+                <div className="flex items-center justify-between gap-3">
+                    <p className="text-xs font-bold uppercase tracking-wider text-teal-700 dark:text-teal-300">Adım {step + 1} / 4 · {steps[step]}</p>
+                    <button type="button" className="text-sm text-stone-500 px-2 py-1" onClick={props.onClose} aria-label="Kapat">✕</button>
+                </div>
+                <div className="flex gap-1.5 mt-2 mb-5" aria-hidden="true">
+                    {steps.map(function (_t, i) { return <span key={i} className={"h-1.5 flex-1 rounded-full " + (i <= step ? "bg-teal-600" : "bg-stone-200 dark:bg-stone-700")} />; })}
                 </div>
 
-                {!open && workToday ? (
+                {step === 0 ? (
                     <div>
-                        <div className="plan-meter">
-                            <div className="plan-bar"><span style={{ width: Math.min(100, pct) + "%" }} /></div>
-                            <span className="plan-pct">%{pct}</span>
+                        <h2 id="wiz-title" className="text-xl font-black">Sınavın ne zaman?</h2>
+                        <p className="text-sm text-stone-500 mt-1">ÖSYM takvimindeki sınav gününü seç. Program bu güne kadar gün gün hazırlanır.</p>
+                        <input type="date" value={s.examDate} min={SP.addDays(SP.todayIso(), 7)}
+                            onChange={function (e) { setS(Object.assign({}, s, { examDate: e.target.value })); }}
+                            className="w-full mt-4 px-4 py-3 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800 text-base" />
+                        {s.examDate && s.examDate > SP.todayIso() ? (
+                            <p className="text-sm font-semibold text-teal-700 dark:text-teal-300 mt-3">Sınava {SP.diffDays(SP.todayIso(), s.examDate)} gün var.</p>
+                        ) : <p className="text-xs text-stone-500 mt-3">Tarih henüz açıklanmadıysa tahmini bir tarih seç; sonra değiştirebilirsin.</p>}
+                    </div>
+                ) : null}
+
+                {step === 1 ? (
+                    <div>
+                        <h2 id="wiz-title" className="text-xl font-black">Hangi gün kaç saat çalışabilirsin?</h2>
+                        <p className="text-sm text-stone-500 mt-1">Gerçekçi ol: program sürdürülebilir olursa işe yarar. Haftalık toplam: <b>{weekH} saat</b></p>
+                        <div className="flex flex-wrap gap-2 mt-3">
+                            <button type="button" className="quick-chip" onClick={function () { preset([1, 1, 1, 1, 1, 2, 0]); }}>Hafif (7 sa)</button>
+                            <button type="button" className="quick-chip" onClick={function () { preset([2, 2, 2, 2, 2, 4, 0]); }}>Dengeli (14 sa)</button>
+                            <button type="button" className="quick-chip" onClick={function () { preset([3, 3, 3, 3, 3, 5, 3]); }}>Yoğun (23 sa)</button>
+                            <button type="button" className="quick-chip" onClick={function () { preset([0, 0, 0, 0, 0, 5, 5]); }}>Hafta sonu (10 sa)</button>
                         </div>
-                        <p className="plan-sub">Bugünkü hedef · {todaySlots.map(function (s) { return formatHours(s.hours) + " " + s.ders; }).join(" · ")}</p>
-                        <div className="plan-tasks">
-                            {todaySlots.map(function (s, i) {
-                                var th = dersAccent(s.ders);
-                                var done = !!checks[s.ders];
-                                var next = !done && todaySlots.slice(0, i).every(function (x) { return checks[x.ders]; });
-                                var st = done ? "Tamamlandı" : (next ? "Sıradaki" : "Bekliyor");
+                        <ul className="mt-4 space-y-2">
+                            {SP.DAY_FULL.map(function (d, i) {
                                 return (
-                                    <div key={s.ders} className={"plan-task" + (done ? " is-done" : "") + (next ? " is-next" : "")} style={{ borderLeftColor: th.accent, background: done ? th.pastel : undefined }}>
-                                        <button type="button" className={"plan-check" + (done ? " on" : "")} aria-label={s.ders + " tamamla"}
-                                            onClick={function () { toggleDone(s.ders); }}>
-                                            {done ? "✓" : ""}
-                                        </button>
-                                        <button type="button" className="plan-task-main" onClick={function () { props.onDers && props.onDers(s.ders); }}>
-                                            <span className="plan-ico">{th.icon}</span>
-                                            <span className="plan-ders">{s.ders}</span>
-                                            <span className="plan-hrs">{formatHours(s.hours)}</span>
-                                            <span className="plan-st">{st}</span>
-                                        </button>
-                                    </div>
+                                    <li key={d} className="flex items-center gap-3">
+                                        <span className="w-24 text-sm font-semibold">{d}</span>
+                                        <button type="button" className="step-btn" aria-label={d + " yarım saat azalt"} onClick={function () { setHour(i, s.hours[i] - 0.5); }}>−</button>
+                                        <span className="w-16 text-center font-stat font-bold" aria-live="polite">{s.hours[i] ? s.hours[i] + " sa" : "boş"}</span>
+                                        <button type="button" className="step-btn" aria-label={d + " yarım saat artır"} onClick={function () { setHour(i, s.hours[i] + 0.5); }}>+</button>
+                                    </li>
                                 );
+                            })}
+                        </ul>
+                    </div>
+                ) : null}
+
+                {step === 2 ? (
+                    <div>
+                        <h2 id="wiz-title" className="text-xl font-black">Hangi derslerde zorlanıyorsun?</h2>
+                        <p className="text-sm text-stone-500 mt-1">Seçtiğin derslere daha çok zaman ayrılır. Hiçbirini seçmeden de geçebilirsin; dağılım ÖSYM soru sayılarına göre yapılır.</p>
+                        <div className="flex flex-wrap gap-2 mt-4">
+                            {dersler.map(function (d) {
+                                var on = s.weak.indexOf(d) >= 0;
+                                return <button key={d} type="button" aria-pressed={on} className={"quick-chip" + (on ? " is-primary" : "")} onClick={function () { toggleWeak(d); }}>{on ? "✓ " : ""}{d}</button>;
                             })}
                         </div>
                     </div>
                 ) : null}
 
-                {!open && ready && !workToday ? (
-                    <div className="plan-rest">
-                        <p className="plan-rest-t">{restDayCopy()}</p>
-                    </div>
-                ) : null}
-
-                {open ? (
-                    <div className="plan-editor">
-                        <div className="plan-presets">
-                            {[
-                                { id: "yogun", t: "Yoğun program" },
-                                { id: "hafif", t: "Hafif program" },
-                                { id: "haftasonu", t: "Sadece hafta sonu" }
-                            ].map(function (p) {
-                                return (
-                                    <button key={p.id} type="button" className="plan-preset" onClick={function () {
-                                        setDraft(StudentStore.applyPlanPreset(p.id, dersKeys));
-                                    }}>{p.t}</button>
-                                );
-                            })}
-                        </div>
-                        <div className="plan-strip">
-                            {days.map(function (w) {
-                                var d = draft.days[w.id];
-                                var on = d && d.on;
-                                var sel = editDay === w.id;
-                                return (
-                                    <button key={w.id} type="button" className={"plan-chip" + (sel ? " sel" : "") + (on ? " on" : "") + (w.id === todayId ? " today" : "")}
-                                        onClick={function () { setEditDay(w.id); }}>
-                                        <span>{w.short}</span>
-                                        <em>{on && d.slots.length ? formatHours(StudentStore.daySlotHours(d)) : "—"}</em>
-                                    </button>
-                                );
-                            })}
-                        </div>
-                        <div className="plan-day-sheet">
-                            <label className="plan-day-toggle">
-                                <input type="checkbox" checked={!!ed.on} onChange={function (e) { patchDay(editDay, function (day) { day.on = e.target.checked; }); }} />
-                                <span>{(days.filter(function (w) { return w.id === editDay; })[0] || {}).full || editDay}</span>
-                                {ed.on && ed.slots.length ? <small>toplam {formatHours(StudentStore.daySlotHours(ed))}</small> : <small>dinlenme</small>}
-                            </label>
-                            {ed.on ? (
-                                <div className="plan-slots">
-                                    {(ed.slots || []).map(function (s, si) {
-                                        var th = dersAccent(s.ders);
-                                        return (
-                                            <div key={s.ders} className="plan-slot" style={{ borderLeftColor: th.accent, background: th.pastel }}
-                                                draggable="true"
-                                                onDragStart={function () { dragIdx.current = si; }}
-                                                onDragOver={function (e) { e.preventDefault(); }}
-                                                onDrop={function (e) { e.preventDefault(); moveSlot(editDay, dragIdx.current, si); dragIdx.current = null; }}>
-                                                <span className="plan-grip" title="Sürükle" aria-hidden="true">⋮⋮</span>
-                                                <span className="plan-ico">{th.icon}</span>
-                                                <span className="plan-slot-name">{s.ders}</span>
-                                                <select value={String(s.hours)} onChange={function (e) {
-                                                    var h = Number(e.target.value);
-                                                    patchDay(editDay, function (day) { day.slots[si].hours = h; });
-                                                }}>
-                                                    {hourOptions().map(function (h) {
-                                                        return <option key={h} value={h}>{formatHours(h)}</option>;
-                                                    })}
-                                                </select>
-                                                <button type="button" className="plan-x" onClick={function () {
-                                                    patchDay(editDay, function (day) {
-                                                        day.slots = day.slots.filter(function (x) { return x.ders !== s.ders; });
-                                                    });
-                                                }}>✕</button>
-                                            </div>
-                                        );
-                                    })}
-                                    {leftover.length ? (
-                                        <select key={leftover.join("|")} defaultValue="" onChange={function (e) {
-                                            addSlot(editDay, e.target.value);
-                                        }} className="plan-add">
-                                            <option value="" disabled>+ Ders ekle</option>
-                                            {leftover.map(function (k) {
-                                                return <option key={k} value={k}>{dersAccent(k).icon} {k}</option>;
-                                            })}
-                                        </select>
-                                    ) : (dersKeys.length ? null : <p className="text-xs text-stone-400">Ders listesi henüz yok.</p>)}
+                {step === 3 && preview ? (
+                    <div>
+                        <h2 id="wiz-title" className="text-xl font-black">Programın hazır</h2>
+                        {preview.ok ? (
+                            <>
+                                <div className="grid grid-cols-3 gap-2 mt-4 text-center">
+                                    <div className="rounded-2xl bg-stone-100 dark:bg-stone-800 p-3"><div className="font-stat text-xl font-bold">{preview.daysLeft}</div><div className="text-[11px] text-stone-500">gün</div></div>
+                                    <div className="rounded-2xl bg-stone-100 dark:bg-stone-800 p-3"><div className="font-stat text-xl font-bold">{SP.fmtMin(preview.weekMin)}</div><div className="text-[11px] text-stone-500">haftada</div></div>
+                                    <div className="rounded-2xl bg-stone-100 dark:bg-stone-800 p-3"><div className="font-stat text-xl font-bold">{SP.fmtMin(preview.learnTotal)}</div><div className="text-[11px] text-stone-500">konu çalışması</div></div>
                                 </div>
-                            ) : (
-                                <p className="plan-rest-mini">Bu gün kapalı. Açınca ders ekleyebilirsin.</p>
-                            )}
-                        </div>
-                        <button type="button" onClick={function () {
-                            StudentStore.saveStudyPlan(draft);
-                            setOpen(false);
-                        }} className="w-full py-3.5 rounded-2xl btn-primary text-white font-bold text-sm">
-                            Programı kaydet
-                        </button>
+                                <div className="mt-4"><PlanPhaseBar plan={preview} /></div>
+                                {preview.fits ? (
+                                    <p className="plan-ok mt-4">Yetişiyor: konular {SP.fmtDate(preview.learnDoneOn || preview.finalStart)} civarı biter, sonrası tekrar ve deneme.</p>
+                                ) : (
+                                    <p className="plan-warn mt-4">Bu saatlerle konular son döneme kadar bitmiyor ({SP.fmtMin(preview.behindMin)} eksik). {preview.needWeekMin ? "Haftada en az " + SP.fmtMin(preview.needWeekMin) + " öneririz" : "Haftaya çalışma günü eklemeni öneririz"}; yine de kaydedebilirsin.</p>
+                                )}
+                                <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mt-5 mb-2">İlk gün</p>
+                                <ul className="space-y-1.5">
+                                    {(preview.days.find(function (d) { return d.items.length; }) || { items: [] }).items.map(function (x, i) {
+                                        return <li key={i} className="text-sm flex gap-2"><span aria-hidden="true">{PLAN_ICON[x.kind]}</span><span className="min-w-0">{planTaskLabel(x)} <span className="text-stone-500">· {SP.fmtMin(x.minutes)}</span></span></li>;
+                                    })}
+                                </ul>
+                            </>
+                        ) : <p className="plan-warn mt-4">{preview.reason}</p>}
                     </div>
                 ) : null}
+
+                <div className="flex justify-between gap-3 mt-7">
+                    <button type="button" className="quick-chip" onClick={function () { if (step) setStep(step - 1); else props.onClose(); }}>{step ? "← Geri" : "Vazgeç"}</button>
+                    {step < 3 ? (
+                        <button type="button" className="quick-chip is-primary" disabled={!canNext} onClick={function () { setStep(step + 1); }}>Devam →</button>
+                    ) : (
+                        <button type="button" className="quick-chip is-primary" disabled={!preview || !preview.ok} onClick={save}>Programı kaydet</button>
+                    )}
+                </div>
             </div>
         </div>
     );
 }
 
 var DASH_COLORS = ["#4f46e5", "#7c3aed", "#ec4899", "#f59e0b", "#10b981", "#6366f1"];
+
+// Paylaşım görseli (1080x1350): bu haftanın programı ve dönemler.
+function drawPlanImage(plan, name) {
+    var SP = window.SmartPlan;
+    var W = 1080, H = 1350;
+    var c = document.createElement("canvas");
+    c.width = W; c.height = H;
+    var g = c.getContext("2d");
+    var bg = g.createLinearGradient(0, 0, W, H);
+    bg.addColorStop(0, "#0D2C4D"); bg.addColorStop(1, "#14607a");
+    g.fillStyle = bg; g.fillRect(0, 0, W, H);
+    function text(t, x, y, size, weight, color, align) {
+        g.font = (weight || 700) + " " + size + "px Inter, Manrope, system-ui, sans-serif";
+        g.fillStyle = color || "#fff"; g.textAlign = align || "left"; g.fillText(t, x, y);
+    }
+    function fit(t, max, size, weight) {
+        g.font = (weight || 600) + " " + size + "px Inter, system-ui, sans-serif";
+        if (g.measureText(t).width <= max) return t;
+        while (t.length > 4 && g.measureText(t + "…").width > max) t = t.slice(0, -1);
+        return t + "…";
+    }
+    text("KPSS PROGRAMIM", 72, 120, 30, 800, "#5eead4");
+    text(name ? name : "Akıllı çalışma takvimi", 72, 186, 58, 900);
+    text("Sınava " + plan.daysLeft + " gün · haftada " + SP.fmtMin(plan.weekMin), 72, 246, 34, 600, "rgba(255,255,255,.85)");
+    // dönem çubuğu
+    var seg = { ogrenme: 0, pekistirme: 0, son: 0 }, total = plan.days.length || 1, x = 72;
+    plan.days.forEach(function (d) { seg[d.phase]++; });
+    ["ogrenme", "pekistirme", "son"].forEach(function (k) {
+        var w = (W - 144) * seg[k] / total;
+        if (w > 0) { g.fillStyle = SP.PHASES[k].color; g.fillRect(x, 292, w, 22); x += w; }
+    });
+    var lx = 72;
+    var shortLabel = { ogrenme: "Öğrenme", pekistirme: "Pekiştirme", son: "Son dönem" };
+    ["ogrenme", "pekistirme", "son"].forEach(function (k) {
+        if (!seg[k]) return;
+        var lbl = shortLabel[k] + " " + seg[k] + " gün";
+        g.fillStyle = SP.PHASES[k].color; g.beginPath(); g.arc(lx + 9, 352, 9, 0, Math.PI * 2); g.fill();
+        text(lbl, lx + 26, 362, 26, 600, "rgba(255,255,255,.85)");
+        g.font = "600 26px Inter, Manrope, system-ui, sans-serif";
+        lx += 26 + g.measureText(lbl).width + 34;
+    });
+    // haftalık kart
+    g.fillStyle = "rgba(255,255,255,.96)";
+    var top = 410, bh = 800;
+    g.beginPath(); if (g.roundRect) g.roundRect(48, top, W - 96, bh, 36); else g.rect(48, top, W - 96, bh); g.fill();
+    text("Bu hafta", 96, top + 76, 36, 800, "#0D2C4D");
+    var rowH = (bh - 120) / 7;
+    plan.days.slice(0, 7).forEach(function (d, i) {
+        var y = top + 120 + i * rowH;
+        if (i) { g.fillStyle = "#e7e5e4"; g.fillRect(96, y - 8, W - 192, 2); }
+        text(SP.DAY_SHORT[d.weekday] + " " + SP.fmtDate(d.date), 96, y + 40, 28, 800, "#0f172a");
+        var items = d.items.slice(0, 2).map(function (it) {
+            return SP.taskTitle(it) + (it.ders ? " · " + it.ders : "");
+        });
+        if (!items.length) items = ["Dinlenme"];
+        items.forEach(function (t, j) { text(fit(t, 600, 25, 600), 340, y + 28 + j * 34, 25, 600, j ? "#57534e" : "#0f766e"); });
+        if (d.items.length) text(SP.fmtMin(d.minutes), W - 96, y + 40, 26, 700, "#78716c", "right");
+    });
+    text("atanly.com · Kendi programını 1 dakikada oluştur", W / 2, H - 56, 30, 700, "rgba(255,255,255,.9)", "center");
+    return c;
+}
+
+function PlanCalendar(props) {
+    var SP = window.SmartPlan;
+    var settings = planSettingsOf(props.student);
+    var plan = useMemo(function () { return settings ? SP.generate(props.kpssData, props.student, settings) : null; }, [props.kpssData, props.student, settings]);
+    const [weeks, setWeeks] = useState(4);
+    const [msg, setMsg] = useState("");
+    if (!plan || !plan.ok) {
+        return (
+            <Shell>
+                <BackBtn onClick={props.onBack} label="Bugün" />
+                <p className="mt-8 text-stone-500">{plan ? plan.reason : "Önce programını oluştur."}</p>
+            </Shell>
+        );
+    }
+    // günleri haftalara böl (Pazartesi başlangıçlı)
+    var groups = [];
+    plan.days.forEach(function (d) {
+        if (!groups.length || d.weekday === 0) groups.push([]);
+        groups[groups.length - 1].push(d);
+    });
+    var shown = groups.slice(0, weeks);
+    var doneIds = {};
+    SP.doneOn(settings, plan.today).forEach(function (x) { doneIds[x.id] = true; });
+
+    function print() {
+        setWeeks(groups.length);
+        setTimeout(function () { window.print(); }, 350);
+    }
+    function shareImage() {
+        var c = drawPlanImage(plan, props.student.profile && props.student.profile.name);
+        c.toBlob(function (blob) {
+            if (!blob) return;
+            var file = typeof File !== "undefined" ? new File([blob], "kpss-programim.png", { type: "image/png" }) : null;
+            if (file && navigator.canShare && navigator.canShare({ files: [file] })) {
+                navigator.share({ files: [file], title: "KPSS programım", text: "Kendi programını oluştur: https://www.atanly.com" }).catch(function () {});
+                return;
+            }
+            var a = document.createElement("a");
+            a.href = URL.createObjectURL(blob);
+            a.download = "kpss-programim.png";
+            document.body.appendChild(a); a.click(); a.remove();
+            setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
+            setMsg("Görsel indirildi: kpss-programim.png");
+        }, "image/png");
+    }
+    return (
+        <Shell>
+            <div className="flex justify-between items-center mb-4 gap-3 no-print">
+                <BackBtn onClick={props.onBack} label="Bugün" />
+                <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
+            </div>
+            <header className="mb-5">
+                <h1 className="text-3xl font-display font-black tracking-tight gradient-text">KPSS programım</h1>
+                <p className="text-sm text-stone-500 mt-1">
+                    {(props.student.profile && props.student.profile.name) ? props.student.profile.name + " · " : ""}
+                    Sınav {SP.fmtDate(plan.exam)} · {plan.daysLeft} gün · haftada {SP.fmtMin(plan.weekMin)}
+                </p>
+                <div className="mt-4"><PlanPhaseBar plan={plan} /></div>
+                {!plan.fits ? <p className="plan-warn mt-3">Bu tempoyla {SP.fmtMin(plan.behindMin)} konu çalışması son döneme yetişmiyor. {plan.needWeekMin ? "Haftada " + SP.fmtMin(plan.needWeekMin) + " önerilir." : "Haftaya çalışma günü eklemen önerilir."}</p> : null}
+                <div className="flex flex-wrap gap-2 mt-4 no-print">
+                    <button type="button" className="quick-chip is-primary" onClick={print}>🖨 Yazdır / PDF</button>
+                    <button type="button" className="quick-chip" onClick={shareImage}>📤 Paylaşım görseli</button>
+                    <button type="button" className="quick-chip" onClick={props.onWizard}>Düzenle</button>
+                </div>
+                {msg ? <p className="text-xs text-emerald-700 mt-2 no-print" role="status">{msg}</p> : null}
+            </header>
+            <div className="space-y-6">
+                {shown.map(function (g, gi) {
+                    var mins = g.reduce(function (a, d) { return a + d.minutes; }, 0);
+                    return (
+                        <section key={gi} className="plan-week">
+                            <h2 className="text-sm font-bold text-stone-500 mb-2">
+                                {SP.fmtDate(g[0].date)} – {SP.fmtDate(g[g.length - 1].date)} · {SP.fmtMin(mins)}
+                            </h2>
+                            <div className="plan-week-grid">
+                                {g.map(function (d) {
+                                    var isToday = d.date === plan.today;
+                                    return (
+                                        <article key={d.date} className={"plan-day" + (isToday ? " is-today" : "")} style={{ borderTopColor: SP.PHASES[d.phase].color }}>
+                                            <p className="plan-day-head">
+                                                <b>{SP.DAY_SHORT[d.weekday]} {SP.fmtDate(d.date)}</b>
+                                                {isToday ? <span className="plan-today-pill">bugün</span> : null}
+                                            </p>
+                                            {d.items.length ? (
+                                                <ul className="space-y-1.5">
+                                                    {d.items.map(function (x, i) {
+                                                        return (
+                                                            <li key={i} className={"plan-day-item" + (isToday && doneIds[x.id] ? " is-done" : "")}>
+                                                                <span aria-hidden="true">{PLAN_ICON[x.kind]}</span>
+                                                                <span className="min-w-0">
+                                                                    <span className="block font-semibold">{SP.taskTitle(x)}</span>
+                                                                    <span className="block text-stone-500">{x.ders ? x.ders + (x.konu ? " / " + kLabel(x.konu) : "") + " · " : ""}{SP.fmtMin(x.minutes)}</span>
+                                                                </span>
+                                                            </li>
+                                                        );
+                                                    })}
+                                                </ul>
+                                            ) : <p className="text-xs text-stone-400">Dinlenme</p>}
+                                        </article>
+                                    );
+                                })}
+                            </div>
+                        </section>
+                    );
+                })}
+            </div>
+            {weeks < groups.length ? (
+                <div className="text-center mt-6 no-print">
+                    <button type="button" className="quick-chip" onClick={function () { setWeeks(weeks + 8); }}>Sonraki 8 haftayı göster ({groups.length - weeks} hafta kaldı)</button>
+                </div>
+            ) : null}
+        </Shell>
+    );
+}
 
 function StudyDash(props) {
     const d = StudyPlanner.studyDashboard ? StudyPlanner.studyDashboard(props.student) : null;
@@ -1016,6 +1283,17 @@ function WeakTopics(props) {
 
 function Bugun(props) {
     const plan = props.plan;
+    const [wizard, setWizard] = useState(false);
+    const [calendar, setCalendar] = useState(false);
+    if (calendar) {
+        return (
+            <>
+                <PlanCalendar student={props.student} kpssData={props.kpssData} isDark={props.isDark} toggleDark={props.toggleDark}
+                    onBack={function () { setCalendar(false); }} onWizard={function () { setWizard(true); }} />
+                {wizard ? <PlanWizard student={props.student} kpssData={props.kpssData} onClose={function () { setWizard(false); }} onDone={function () { setWizard(false); }} /> : null}
+            </>
+        );
+    }
     const name = props.student.profile.name;
     const level = (props.student.userProfile && props.student.userProfile.educationLevel) || "lisans";
     const track = examTrackName(level);
@@ -1056,8 +1334,9 @@ function Bugun(props) {
 
             <div className="dash-split">
                 <div className="min-w-0">
+                    <SmartPlanCard student={props.student} kpssData={props.kpssData} onKonu={props.onKonu} onDers={props.onDers} onExam={props.onExam}
+                        onWizard={function () { setWizard(true); }} onCalendar={function () { setCalendar(true); }} />
                     <NextSteps plan={plan} onKonu={props.onKonu} onReview={props.onReview} onWrong={props.onWrong} onMixed={props.onMixed} />
-                    <StudyProgram student={props.student} kpssData={props.kpssData} onDers={props.onDers} />
                 </div>
                 <div className="min-w-0 space-y-4">
                     <div className="tool-pair">
@@ -1068,6 +1347,7 @@ function Bugun(props) {
                     <StudyDash student={props.student} onDers={props.onDers} />
                 </div>
             </div>
+            {wizard ? <PlanWizard student={props.student} kpssData={props.kpssData} onClose={function () { setWizard(false); }} onDone={function () { setWizard(false); }} /> : null}
         </Shell>
     );
 }
@@ -3402,7 +3682,8 @@ function App() {
             }}
             onReview={function () { startSession(plan.due.slice(0, 30), { mode: "review" }); }}
             onWrong={function () { startSession(plan.wrong.slice(0, 30), { mode: "wrong" }); }}
-            onMixed={function () { startSession(StudyPlanner.mixedQuiz(kpssData, null, 10), { mode: "mixed" }); }} />;
+            onMixed={function () { startSession(StudyPlanner.mixedQuiz(kpssData, null, 10), { mode: "mixed" }); }}
+            onExam={function () { setLazyCmp(null); setLazyErr(""); setExtra("exam"); }} />;
     } else if (nav === "eksikler") {
         body = <Eksikler plan={plan} isDark={isDark} toggleDark={toggleDark}
             onReview={function () { startSession(plan.due.slice(0, 30), { mode: "review" }); }}

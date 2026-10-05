@@ -179,10 +179,29 @@ import { StudentStore } from "./store";
         return out;
     }
 
+    // Akıllı program: ayarlar yeni olan taraftan; aynı programsa iki cihazda işaretlenenler birleşir.
+    function mergeSmartPlan(local, remote, settingsSrc) {
+        var L = local && local.userProfile ? local.userProfile.smartPlan : null;
+        var R = remote && remote.userProfile ? remote.userProfile.smartPlan : null;
+        var base = settingsSrc === local ? (L || R) : (R || L);
+        var other = base === L ? R : L;
+        if (!base || !other || typeof base !== "object" || typeof other !== "object") return base || null;
+        if (!base.createdAt || base.createdAt !== other.createdAt) return base;
+        var out = Object.assign({}, base);
+        out.done = Object.assign({}, other.done || {}, base.done || {});
+        out.prog = Object.assign({}, other.prog || {});
+        Object.keys(base.prog || {}).forEach(function (k) {
+            out.prog[k] = Math.max(Number(out.prog[k]) || 0, Number(base.prog[k]) || 0);
+        });
+        return out;
+    }
+
     function mergeUserProfile(local, remote, settingsSrc) {
         var up = Object.assign({}, (remote && remote.userProfile) || {}, (settingsSrc && settingsSrc.userProfile) || {});
         var plan = pickStudyPlan(local, remote);
         up.studyPlan = plan;
+        var smart = mergeSmartPlan(local, remote, settingsSrc);
+        if (smart) up.smartPlan = smart;
         var resetAt = maxIso((local && local.userProfile && local.userProfile.progressResetAt) || "",
             (remote && remote.userProfile && remote.userProfile.progressResetAt) || "");
         up.progressResetAt = resetAt || null;

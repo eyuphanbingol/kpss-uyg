@@ -1,7 +1,8 @@
 /**
- * Harita oyunu verisinin tek kaynağı js/mapQuiz.js ve svg/tr.svg'dir. Bu betik mobil kopyaları
- * ondan üretir; elle düzenleme iki tarafın ayrışmasına yol açıyordu.
+ * Web ile mobilin paylaştığı saf JS modüllerinin tek kaynağı js/ altındadır. Bu betik mobil
+ * kopyaları ondan üretir; elle düzenleme iki tarafın ayrışmasına yol açıyordu.
  *   mobile/src/lib/mapQuiz.js   <- js/mapQuiz.js
+ *   mobile/src/lib/smartPlan.js <- js/smartPlan.js
  *   mobile/src/lib/trSvgData.js <- svg/tr.svg (uygulamaya gömülü; açılışta internetten indirilmez)
  *   node scripts/sync-map-data.js          -> mobil dosyaları yazar
  *   node scripts/sync-map-data.js --check  -> farklıysa hata verir (yazmaz)
@@ -10,7 +11,6 @@ var fs = require("fs");
 var path = require("path");
 
 var root = path.join(__dirname, "..");
-var webPath = path.join(root, "js", "mapQuiz.js");
 var mobPath = path.join(root, "mobile", "src", "lib", "mapQuiz.js");
 var svgPath = path.join(root, "svg", "tr.svg");
 var svgOutPath = path.join(root, "mobile", "src", "lib", "trSvgData.js");
@@ -29,21 +29,30 @@ function buildSvg() {
         "export var TR_SVG = " + JSON.stringify(txt) + ";\n";
 }
 
-function build() {
-    var src = fs.readFileSync(webPath, "utf8").replace(/\r\n?/g, "\n");
+// "(function (global) { ... global.<Name> = api; ... })(...)" biçimli bir web modülünü
+// ES modülüne çevirir: "export const <Name> = api;"
+function buildModule(file, name, transform) {
+    var src = fs.readFileSync(path.join(root, file), "utf8").replace(/\r\n?/g, "\n");
     var head = "(function (global) {\n";
-    var tailRe = /\n    global\.MapQuiz = api;\n    if \(typeof module !== "undefined" && module\.exports\) module\.exports = api;\n\}\)\(typeof window !== "undefined" \? window : globalThis\);\s*$/;
+    var tailRe = new RegExp("\\n    global\\." + name + " = api;\\n    if \\(typeof module !== \"undefined\" && module\\.exports\\) module\\.exports = api;\\n\\}\\)\\(typeof window !== \"undefined\" \\? window : globalThis\\);\\s*$");
     if (src.indexOf(head) !== 0 || !tailRe.test(src)) {
-        throw new Error("js/mapQuiz.js sarmalayıcısı beklenen biçimde değil");
+        throw new Error(file + " sarmalayıcısı beklenen biçimde değil");
     }
     var body = src.slice(head.length).replace(tailRe, "\n");
-    // mobilde kart görselleri require() anahtarıyla seçilir: "img/map/kart/<id>.svg" -> "<id>"
-    body = body.replace(/hoverImg: "img\/map\/kart\/([a-z0-9-]+)\.svg"/g, 'hoverImg: "$1"');
-    return "// Bu dosya scripts/sync-map-data.js ile js/mapQuiz.js'ten üretilir. Elle düzenleme.\n" +
-        body + "export const MapQuiz = api;\n";
+    if (transform) body = transform(body);
+    return "// Bu dosya scripts/sync-map-data.js ile " + file + "'ten üretilir. Elle düzenleme.\n" +
+        body + "export const " + name + " = api;\n";
 }
 
-var outputs = [[mobPath, build()], [svgOutPath, buildSvg()]];
+function build() {
+    // mobilde kart görselleri require() anahtarıyla seçilir: "img/map/kart/<id>.svg" -> "<id>"
+    return buildModule("js/mapQuiz.js", "MapQuiz", function (body) {
+        return body.replace(/hoverImg: "img\/map\/kart\/([a-z0-9-]+)\.svg"/g, 'hoverImg: "$1"');
+    });
+}
+
+var planOutPath = path.join(root, "mobile", "src", "lib", "smartPlan.js");
+var outputs = [[mobPath, build()], [planOutPath, buildModule("js/smartPlan.js", "SmartPlan")], [svgOutPath, buildSvg()]];
 if (process.argv.indexOf("--check") >= 0) {
     var stale = outputs.filter(function (o) {
         var cur = fs.existsSync(o[0]) ? fs.readFileSync(o[0], "utf8").replace(/\r\n?/g, "\n") : "";

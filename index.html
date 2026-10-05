@@ -409,6 +409,7 @@
     <script defer src="js/trError.js?v=2"></script>
     <script defer src="js/store.js?v=49"></script>
     <script defer src="js/planner.js?v=22"></script>
+    <script defer src="js/smartPlan.js?v=1"></script>
     <script defer src="js/alan.js?v=6"></script>
     <script defer src="js/clozeEngine.js?v=11"></script>
     <script defer src="js/mapQuiz.js?v=32"></script>
@@ -420,7 +421,7 @@
     <script defer src="js/shareCard.js?v=19"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.86.0/dist/umd/supabase.js"></script>
     <script defer src="js/supabaseClient.js?v=20"></script>
-    <script defer src="js/syncEngine.js?v=37"></script>
+    <script defer src="js/syncEngine.js?v=38"></script>
     <script defer src="js/jsxLoader.js?v=95"></script>
     <script defer src="js/icons.js?v=18"></script>
 
@@ -1031,102 +1032,53 @@
             background: linear-gradient(180deg, #1D8A99, #C5A059);
         }
 
-        .plan-card {
-            border-radius: 1.5rem; padding: 18px 18px 16px;
-            background: #fff; border: 1px solid rgba(13, 44, 77, 0.08);
-            box-shadow: 0 20px 44px -24px rgba(4, 28, 36, 0.45);
+        /* ---- Akıllı KPSS programı ---- */
+        .plan-hero { background: linear-gradient(135deg, #0D2C4D, #14607a 60%, #0f766e); color: #fff; box-shadow: 0 24px 50px -26px rgba(4, 28, 36, .6); }
+        .plan-hero-btn { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 20px; border-radius: 999px; background: #fff; color: #0D2C4D; font-weight: 800; font-size: 14px; }
+        .plan-hero-btn:hover { background: #f0fdfa; }
+        .plan-row { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 14px; border: 1px solid rgba(28, 25, 23, .08); background: rgba(255, 255, 255, .7); }
+        .plan-row.is-done { opacity: .6; }
+        .plan-row.is-done .font-semibold { text-decoration: line-through; }
+        .plan-check { width: 28px; height: 28px; border-radius: 999px; border: 2px solid #d6d3d1; background: #fff; font-weight: 900; color: #fff; flex-shrink: 0; display: grid; place-items: center; }
+        .plan-check:hover { border-color: #059669; }
+        .plan-check[aria-pressed="true"] { background: #059669; border-color: #059669; }
+        .plan-row-ico { font-size: 18px; width: 24px; text-align: center; flex-shrink: 0; }
+        .plan-start { flex-shrink: 0; font-size: 12px; font-weight: 800; padding: 6px 12px; border-radius: 999px; background: #0D2C4D; color: #fff; }
+        .plan-start:hover { background: #14607a; }
+        .plan-note, .plan-ok, .plan-warn { font-size: 13px; font-weight: 600; line-height: 1.45; padding: 10px 12px; border-radius: 12px; }
+        .plan-note { background: #eef2ff; color: #3730a3; }
+        .plan-ok { background: #ecfdf5; color: #065f46; }
+        .plan-warn { background: #fff7ed; color: #9a3412; }
+        .plan-phases { display: flex; height: 10px; border-radius: 99px; overflow: hidden; background: #e7e5e4; }
+        .plan-phases > span { display: block; height: 100%; }
+        .plan-week-grid { display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }
+        @media (min-width: 1280px) { .plan-week-grid { grid-template-columns: repeat(7, minmax(0, 1fr)); } }
+        .plan-day { border-radius: 14px; padding: 10px; background: #fff; border: 1px solid rgba(28, 25, 23, .08); border-top: 4px solid #0f766e; font-size: 12px; break-inside: avoid; }
+        .plan-day.is-today { box-shadow: 0 0 0 2px rgba(15, 118, 110, .35); }
+        .plan-day-head { display: flex; align-items: center; justify-content: space-between; gap: 6px; margin: 0 0 8px; font-size: 12px; }
+        .plan-today-pill { font-size: 10px; font-weight: 800; padding: 2px 8px; border-radius: 999px; background: #0f766e; color: #fff; }
+        .plan-day-item { display: flex; gap: 6px; line-height: 1.35; }
+        .plan-day-item.is-done { opacity: .5; text-decoration: line-through; }
+        html.dark .plan-row { background: rgba(41, 37, 36, .7); border-color: rgba(255, 255, 255, .08); }
+        html.dark .plan-check { background: #292524; border-color: #57534e; }
+        html.dark .plan-day { background: #1c1917; border-color: #44403c; }
+        html.dark .plan-phases { background: #44403c; }
+        html.dark .plan-note { background: rgba(79, 70, 229, .18); color: #c7d2fe; }
+        html.dark .plan-ok { background: rgba(5, 150, 105, .18); color: #a7f3d0; }
+        html.dark .plan-warn { background: rgba(194, 65, 12, .2); color: #fed7aa; }
+        @media print {
+            @page { margin: 12mm; }
+            html, body, .app-bg, .app-shell { background: #fff !important; color: #000 !important; }
+            html.dark .plan-day { background: #fff; border-color: #d6d3d1; color: #000; }
+            .app-tabbar, .nav-glass, .no-print, .cookie-bar { display: none !important; }
+            .app-shell.has-nav { padding-left: 0 !important; }
+            .gradient-text { -webkit-text-fill-color: #0D2C4D !important; color: #0D2C4D !important; background: none !important; }
+            .plan-week { break-inside: avoid; }
+            .plan-week-grid { grid-template-columns: repeat(7, minmax(0, 1fr)) !important; gap: 4px; }
+            .plan-day { padding: 6px; font-size: 9px; box-shadow: none !important; }
+            .plan-day-head { font-size: 9px; }
+            .plan-phases, .plan-phases > span, .plan-day { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
         }
-        .plan-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
-        .plan-kicker {
-            margin: 0; font-size: 11px; font-weight: 800; letter-spacing: 0.12em;
-            text-transform: uppercase; color: #8A7A4A;
-        }
-        .plan-lead { margin: 6px 0 0; font-size: 15px; font-weight: 800; color: #0d2c4d; }
-        .plan-edit { font-size: 13px; font-weight: 800; color: #127880; flex-shrink: 0; }
-        .plan-meter { display: flex; align-items: center; gap: 10px; margin: 14px 0 6px; }
-        .plan-bar { flex: 1; height: 10px; border-radius: 99px; background: #e7e5e4; overflow: hidden; }
-        .plan-bar > span { display: block; height: 100%; background: linear-gradient(90deg, #127880, #C5A059); border-radius: 99px; }
-        .plan-pct { font-size: 13px; font-weight: 900; color: #127880; min-width: 2.4rem; text-align: right; }
-        .plan-sub { margin: 0 0 12px; font-size: 12px; color: #78716c; font-weight: 600; line-height: 1.4; }
-        .plan-tasks { display: grid; gap: 8px; }
-        .plan-task {
-            display: flex; align-items: center; gap: 8px;
-            border-radius: 16px; border: 1px solid #e7e5e4; border-left: 4px solid #127880;
-            background: #fafaf9; padding: 8px 8px 8px 6px;
-        }
-        .plan-task.is-done { opacity: 0.92; }
-        .plan-task.is-next { box-shadow: 0 0 0 2px rgba(18, 120, 128, 0.18); }
-        .plan-check {
-            width: 28px; height: 28px; border-radius: 999px; border: 2px solid #d6d3d1;
-            background: #fff; font-weight: 900; color: #fff; flex-shrink: 0;
-        }
-        .plan-check.on { background: #059669; border-color: #059669; }
-        .plan-task-main {
-            flex: 1; min-width: 0; display: flex; align-items: center; gap: 8px;
-            text-align: left; background: transparent; padding: 4px 4px;
-        }
-        .plan-ico { font-size: 16px; }
-        .plan-ders { font-weight: 800; font-size: 14px; color: #1c1917; }
-        .plan-hrs { margin-left: auto; font-size: 12px; font-weight: 800; color: #57534e; white-space: nowrap; }
-        .plan-st { font-size: 10px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: #a8a29e; }
-        .plan-task.is-done .plan-st { color: #059669; }
-        .plan-task.is-next .plan-st { color: #127880; }
-        .plan-rest {
-            margin-top: 14px; padding: 14px; border-radius: 16px;
-            background: linear-gradient(135deg, #fff7ed, #ecfeff);
-            border: 1px solid #fed7aa;
-        }
-        .plan-rest-t { margin: 0; font-size: 14px; font-weight: 700; line-height: 1.45; color: #44403c; }
-        .plan-editor { margin-top: 14px; display: grid; gap: 12px; }
-        .plan-presets { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 2px; }
-        .plan-preset {
-            flex: 0 0 auto; font-size: 12px; font-weight: 800; padding: 8px 12px;
-            border-radius: 999px; border: 1px solid #e7e5e4; background: #f5f5f4; color: #44403c;
-        }
-        .plan-strip { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; -webkit-overflow-scrolling: touch; }
-        .plan-chip {
-            flex: 0 0 auto; min-width: 52px; border-radius: 14px; padding: 8px 8px 6px;
-            border: 1px solid #e7e5e4; background: #fafaf9; text-align: center;
-        }
-        .plan-chip span { display: block; font-size: 12px; font-weight: 800; color: #44403c; }
-        .plan-chip em { display: block; font-style: normal; font-size: 10px; font-weight: 700; color: #a8a29e; margin-top: 2px; }
-        .plan-chip.on { background: #ecfdf5; border-color: #a7f3d0; }
-        .plan-chip.sel { border-color: #127880; box-shadow: 0 0 0 2px rgba(18,120,128,.18); background: #fff; }
-        .plan-chip.today span { color: #127880; }
-        .plan-day-sheet {
-            border-radius: 18px; padding: 14px; background: #f6f1e4; border: 1px solid rgba(13,44,77,.08);
-        }
-        .plan-day-toggle { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 15px; }
-        .plan-day-toggle small { margin-left: auto; font-weight: 700; color: #78716c; font-size: 12px; }
-        .plan-slots { display: grid; gap: 8px; margin-top: 12px; }
-        .plan-slot {
-            display: flex; align-items: center; gap: 8px; padding: 8px 10px;
-            border-radius: 14px; border: 1px solid rgba(13,44,77,.08); border-left: 4px solid #127880;
-        }
-        .plan-grip { cursor: grab; color: #a8a29e; font-weight: 900; letter-spacing: -2px; user-select: none; }
-        .plan-slot-name { flex: 1; min-width: 0; font-weight: 800; font-size: 14px; }
-        .plan-slot select {
-            font-size: 12px; font-weight: 700; padding: 4px 6px; border-radius: 8px;
-            border: 1px solid #e7e5e4; background: #fff;
-        }
-        .plan-x { color: #a8a29e; font-weight: 800; padding: 0 4px; }
-        .plan-x:hover { color: #e11d48; }
-        .plan-add {
-            width: 100%; font-size: 13px; font-weight: 700; padding: 10px 12px;
-            border-radius: 14px; border: 1px dashed #a8a29e; background: transparent;
-        }
-        .plan-rest-mini { margin: 12px 0 0; font-size: 13px; color: #78716c; }
-        html.dark .plan-card { background: #1c1917; border-color: #44403c; }
-        html.dark .plan-lead { color: #F6F1E4; }
-        html.dark .plan-ders, html.dark .plan-slot-name { color: #fafaf9; }
-        html.dark .plan-bar { background: #44403c; }
-        html.dark .plan-chip, html.dark .plan-preset { background: #292524; border-color: #44403c; }
-        html.dark .plan-chip span, html.dark .plan-preset { color: #e7e5e4; }
-        html.dark .plan-day-sheet { background: #141a18; }
-        html.dark .plan-rest { background: #1c1917; border-color: #44403c; }
-        html.dark .plan-rest-t { color: #e7e5e4; }
-        html.dark .plan-task { background: #292524; border-color: #44403c; }
-        html.dark .plan-hrs { color: #d6d3d1; }
 
         .study-card {
             border-radius: 1.5rem;
@@ -2711,7 +2663,7 @@
     <script>
         // js/app.jsx derlenmiş hâliyle önbellekten açılır (bkz. js/jsxLoader.js). Değişince ?v= artır.
         document.addEventListener("DOMContentLoaded", function () {
-            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=138");
+            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=139");
         });
     </script>
     <script>

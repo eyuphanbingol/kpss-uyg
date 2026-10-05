@@ -51,7 +51,9 @@ export function Tap(props) {
     return (
         <Pressable
             accessible={true}
-            accessibilityRole="button"
+            accessibilityRole={props.accessibilityRole || "button"}
+            accessibilityLabel={props.accessibilityLabel}
+            accessibilityState={props.accessibilityState}
             android_ripple={{ color: "rgba(0,0,0,0.05)" }}
             disabled={props.disabled}
             hitSlop={props.hitSlop}

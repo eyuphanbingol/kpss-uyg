@@ -3,22 +3,13 @@ import { Text, View, StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useApp } from "../AppProvider";
 import { StudyPlanner } from "../lib/planner";
-import { StudentStore } from "../lib/store";
 import { go } from "../nav";
 import { Card, ScrollScreen, PageHeader, Tap } from "../ui";
 import { colors, examTrackName } from "../lib/theme";
 import { DailyGoal, FocusTimer, NextSteps, WeakTopics, WeekBars } from "../components/BugunTools";
+import { SmartPlanCard } from "../components/SmartPlan";
 
 var DASH_COLORS = ["#0F172A", "#D97706", "#64748B", "#94A3B8", "#CBD5E1", "#1E293B"];
-var DERS_ACCENT = { "Tarih": "#ea580c", "Coğrafya": "#059669", "Türkçe": "#2563eb", "Vatandaşlık": "#7c3aed", "Güncel Bilgiler": "#db2777", "Geometri": "#0d9488" };
-
-function fmtH(n) {
-    var x = Number(n) || 0;
-    if (x === 1) return "1 saat";
-    if (x === 0.5) return "30 dk";
-    if (x % 1 === 0.5) return Math.floor(x) + ",5 saat";
-    return x + " saat";
-}
 
 function Spark({ values, color }) {
     var max = 1;
@@ -51,25 +42,6 @@ export default function BugunScreen({ navigation }) {
     else if (plan.daysLeft < 0) { examLine = examTrackName(level) + " geride kaldı"; examSub = "Yeni hedefin için sınav tarihini güncelle."; }
     else if (plan.daysLeft === 0) { examLine = examTrackName(level) + " bugün"; examSub = "Başarılar! Sakin kal."; }
     else { examLine = examTrackName(level) + "’ye " + plan.daysLeft + " gün kaldı"; examSub = plan.daysLeft <= 30 ? "Son düzlük: tekrar ve deneme ağırlıklı çalış." : "Her gün not + test; yanlışlar tekrara düşer."; }
-
-    var saved = student.userProfile && student.userProfile.studyPlan;
-    var todayId = StudentStore.planDayId();
-    var today = saved && saved.ready && saved.days && saved.days[todayId];
-    var isPlanReady = !!(saved && saved.ready);
-    var todaySlots = (today && today.on ? (today.slots || []) : []).filter(Boolean);
-    var checks = (StudentStore.planChecksToday && StudentStore.planChecksToday()) || {};
-    var goalH = StudentStore.daySlotHours ? StudentStore.daySlotHours({ slots: todaySlots }) : 0;
-    var doneH = 0;
-    todaySlots.forEach(function (s) { if (checks[s.ders]) doneH += Number(s.hours) || 0; });
-    var pct = goalH > 0 ? Math.round((doneH / goalH) * 100) : 0;
-    var workToday = !!(isPlanReady && today && today.on && todaySlots.length);
-    var restMsgs = [
-        "Bugün dinlenme günü ☕ Zihnini şarj et, yarın maratona devam!",
-        "Mola da programın parçası. Bugün toparlan, yarın daha keskin olursun.",
-        "Serbest gün. Kısa yürüyüş, su, erken uyku — yarın bloklara tam güç."
-    ];
-    var restText = restMsgs[new Date().getDate() % restMsgs.length];
-    var goalLine = todaySlots.map(function (s) { return fmtH(s.hours) + " " + s.ders; }).join(" · ");
 
     var weekMin = (dash && dash.weekMin) || [0, 0, 0, 0, 0, 0, 0];
     var weeks = (dash && dash.weeks) || [];
@@ -121,51 +93,7 @@ export default function BugunScreen({ navigation }) {
             <NextSteps navigation={navigation} plan={plan} kpssData={app.kpssData} dark={isDark} />
 
             <View style={{ height: 10 }} />
-            <Card dark={isDark}>
-                <View style={styles.cardHeader}>
-                    <Text style={[styles.cardTitle, isDark && styles.textMuted]}>Bugünün hedefi</Text>
-                    <Tap onPress={function () { go(navigation, "Program"); }}>
-                        <Text style={styles.cardAction}>{isPlanReady ? "Düzenle" : "Oluştur"}</Text>
-                    </Tap>
-                </View>
-                {workToday ? (
-                    <View>
-                        <View style={styles.meterRow}>
-                            <Text style={[styles.planText, { flex: 1, marginBottom: 0 }, isDark && styles.textLight]}>
-                                {fmtH(doneH)} / {fmtH(goalH)} tamamlandı
-                            </Text>
-                            <Text style={styles.pctLabel}>{pct}%</Text>
-                        </View>
-                        <View style={[styles.progressBar, { marginTop: 8, marginBottom: 10 }]}>
-                            <View style={[styles.progressFill, { width: Math.min(100, pct) + "%", backgroundColor: "#D97706" }]} />
-                        </View>
-                        <Text style={[styles.goalLine, isDark && styles.textMuted]}>Bugünkü hedef · {goalLine}</Text>
-                        {todaySlots.map(function (s, i) {
-                            var done = !!checks[s.ders];
-                            var next = !done && todaySlots.slice(0, i).every(function (x) { return checks[x.ders]; });
-                            var st = done ? "Tamamlandı" : (next ? "Sıradaki" : "Bekliyor");
-                            return (
-                                <View key={s.ders} style={[styles.taskRow, isDark && styles.taskRowDark, { borderLeftColor: DERS_ACCENT[s.ders] || "#D97706" }, done && { backgroundColor: "#FEF3C7" }]}>
-                                    <Tap onPress={function () { StudentStore.togglePlanSlot(s.ders); }} style={[styles.taskCheck, done && styles.taskCheckOn]}>
-                                        <Text style={styles.taskCheckText}>{done ? "✓" : ""}</Text>
-                                    </Tap>
-                                    <Tap onPress={function () { go(navigation, "KonuList", { ders: s.ders }); }} style={styles.taskMain}>
-                                        <Text style={[styles.taskName, isDark && styles.textLight]} numberOfLines={1}>{s.ders}</Text>
-                                        <Text style={[styles.taskHrs, isDark && styles.textMuted]}>{s.hours === 0.5 ? "30 dk" : (s.hours + " sa")}</Text>
-                                        <View style={[styles.stPill, done ? styles.stDone : (next ? styles.stNext : styles.stWait)]}>
-                                            <Text style={[styles.stTxt, done ? styles.stDoneTxt : (next ? styles.stNextTxt : styles.stWaitTxt)]}>{st}</Text>
-                                        </View>
-                                    </Tap>
-                                </View>
-                            );
-                        })}
-                    </View>
-                ) : (
-                    <Text style={[styles.planText, isDark && styles.textLight]}>
-                        {isPlanReady ? restText : "Her güne ders ve saat yaz."}
-                    </Text>
-                )}
-            </Card>
+            <SmartPlanCard navigation={navigation} student={student} kpssData={app.kpssData} dark={isDark} />
 
             <View style={{ marginTop: 10 }}><DailyGoal student={student} dark={isDark} /></View>
             <View style={{ marginTop: 10 }}><FocusTimer kpssData={app.kpssData} dark={isDark} /></View>

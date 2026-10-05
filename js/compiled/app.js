@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:207485:flfh2o*/
+/*jsx:babel-7.29.9-react-classic:225060:1iy4yyr*/
 const {
   useState,
   useEffect,
@@ -691,305 +691,728 @@ function restDayCopy() {
   var i = new Date().getDate() % msgs.length;
   return msgs[i];
 }
-function StudyProgram(props) {
-  const kpssData = props.kpssData || {};
-  const dersKeys = Object.keys(kpssData);
-  const saved = props.student.userProfile && props.student.userProfile.studyPlan || null;
-  const ready = !!(saved && saved.ready);
-  const [open, setOpen] = useState(!ready);
-  const [draft, setDraft] = useState(function () {
-    return StudentStore.cloneStudyPlan(saved);
+
+// ---------- Akıllı KPSS programı (motor: js/smartPlan.js) ----------
+
+var PLAN_ICON = {
+  not: "📖",
+  test: "🎯",
+  tekrar: "🔁",
+  zayif: "🩹",
+  genel: "🧭",
+  deneme: "📝"
+};
+function planSettingsOf(student) {
+  return student.userProfile && student.userProfile.smartPlan || null;
+}
+function savePlanSettings(next) {
+  StudentStore.updateUserProfile({
+    smartPlan: next
   });
-  const [editDay, setEditDay] = useState(function () {
-    return StudentStore.planDayId();
-  });
-  const [burst, setBurst] = useState(0);
-  const dragIdx = useRef(null);
-  const days = StudentStore.WEEK_DAYS;
-  const todayId = StudentStore.planDayId();
-  const live = ready ? StudentStore.cloneStudyPlan(saved) : null;
-  const today = live && live.days[todayId];
-  const checks = StudentStore.planChecksToday && StudentStore.planChecksToday() || {};
-  const todaySlots = (today && today.on ? today.slots || [] : []).filter(function (s) {
-    return kpssData[s.ders];
-  });
-  const goalH = StudentStore.daySlotHours({
-    slots: todaySlots
-  });
-  const doneH = todaySlots.reduce(function (sum, s) {
-    return sum + (checks[s.ders] ? Number(s.hours) || 0 : 0);
-  }, 0);
-  const pct = goalH > 0 ? Math.round(doneH / goalH * 100) : 0;
-  const workToday = ready && today && today.on && todaySlots.length;
-  function patchDay(id, fn) {
-    setDraft(function (prev) {
-      var next = StudentStore.cloneStudyPlan(prev);
-      next.days[id] = Object.assign({
-        on: false,
-        slots: []
-      }, next.days[id]);
-      fn(next.days[id]);
-      return next;
-    });
-  }
-  function addSlot(dayId, ders) {
-    if (!ders) return;
-    patchDay(dayId, function (day) {
-      day.on = true;
-      var hit = null;
-      day.slots.forEach(function (s) {
-        if (s.ders === ders) hit = s;
-      });
-      if (!hit) day.slots.push({
-        ders: ders,
-        hours: 1
-      });
-    });
-  }
-  function moveSlot(dayId, from, to) {
-    if (from == null || to == null || from === to) return;
-    patchDay(dayId, function (day) {
-      var slots = (day.slots || []).slice();
-      if (from < 0 || from >= slots.length || to < 0 || to >= slots.length) return;
-      var item = slots.splice(from, 1)[0];
-      slots.splice(to, 0, item);
-      day.slots = slots;
-    });
-  }
-  function toggleDone(ders) {
-    var was = !!checks[ders];
-    StudentStore.togglePlanSlot(ders);
-    if (!was) setBurst(function (n) {
-      return n + 1;
-    });
-  }
-  var ed = draft.days[editDay] || {
-    on: false,
-    slots: []
-  };
-  var used = {};
-  (ed.slots || []).forEach(function (s) {
-    used[s.ders] = true;
-  });
-  var leftover = dersKeys.filter(function (k) {
-    return !used[k];
-  });
-  return /*#__PURE__*/React.createElement("div", {
-    className: "mb-6 slide-up"
-  }, burst ? /*#__PURE__*/React.createElement(Confetti, {
-    key: burst
-  }) : null, /*#__PURE__*/React.createElement("div", {
-    className: "plan-card"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "plan-head"
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
-    className: "plan-kicker"
-  }, "\uD83D\uDCC5 Bug\xFCn\xFCn hedefi"), !open ? workToday ? /*#__PURE__*/React.createElement("p", {
-    className: "plan-lead"
-  }, formatHours(doneH), " / ", formatHours(goalH), " tamamland\u0131") : ready ? /*#__PURE__*/React.createElement("p", {
-    className: "plan-lead"
-  }, "Dinlenme g\xFCn\xFC") : /*#__PURE__*/React.createElement("p", {
-    className: "plan-lead"
-  }, "Her g\xFCne ders ve saat yaz.") : /*#__PURE__*/React.createElement("p", {
-    className: "plan-lead"
-  }, "G\xFCn\xFC se\xE7, dersleri s\u0131rala, kaydet.")), /*#__PURE__*/React.createElement("button", {
+}
+function planTaskLabel(x) {
+  var SP = window.SmartPlan;
+  var t = SP.taskTitle(x);
+  if (x.kind === "deneme") return t;
+  return t + " · " + x.ders + (x.konu ? " / " + kLabel(x.konu) : "");
+}
+
+// Görevi başlat: ilgili not / konu / deneme ekranını aç.
+function runPlanTask(x, props) {
+  if (x.kind === "not") props.onKonu(x.ders, x.konu, "notes");else if (x.kind === "test" || x.kind === "tekrar" || x.kind === "zayif") props.onKonu(x.ders, x.konu, "hub");else if (x.kind === "genel") props.onDers(x.ders);else if (x.kind === "deneme" && props.onExam) props.onExam();
+}
+function PlanTaskRow(props) {
+  var x = props.item;
+  var SP = window.SmartPlan;
+  return /*#__PURE__*/React.createElement("li", {
+    className: "plan-row" + (x.done ? " is-done" : "")
+  }, /*#__PURE__*/React.createElement("button", {
     type: "button",
+    className: "plan-check",
+    "aria-pressed": !!x.done,
+    "aria-label": (x.done ? "Tamamlandı işaretini kaldır: " : "Tamamlandı olarak işaretle: ") + planTaskLabel(x),
     onClick: function () {
-      setDraft(StudentStore.cloneStudyPlan(saved));
-      setEditDay(todayId);
-      setOpen(!open);
-    },
-    className: "plan-edit"
-  }, open ? "Kapat" : ready ? "Düzenle" : "Oluştur")), !open && workToday ? /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
-    className: "plan-meter"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "plan-bar"
+      props.onToggle(x);
+    }
+  }, x.done ? "✓" : ""), /*#__PURE__*/React.createElement("span", {
+    className: "plan-row-ico",
+    "aria-hidden": "true"
+  }, PLAN_ICON[x.kind] || "•"), /*#__PURE__*/React.createElement("span", {
+    className: "min-w-0 flex-1"
   }, /*#__PURE__*/React.createElement("span", {
-    style: {
-      width: Math.min(100, pct) + "%"
+    className: "block text-sm font-semibold leading-snug"
+  }, planTaskLabel(x)), /*#__PURE__*/React.createElement("span", {
+    className: "block text-xs text-stone-500"
+  }, SP.fmtMin(x.minutes), x.part ? " · parça" : "", x.kind === "zayif" && x.pct != null ? " · son net %" + x.pct : "")), !x.done && props.onStart ? /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "plan-start",
+    onClick: function () {
+      props.onStart(x);
     }
-  })), /*#__PURE__*/React.createElement("span", {
-    className: "plan-pct"
-  }, "%", pct)), /*#__PURE__*/React.createElement("p", {
-    className: "plan-sub"
-  }, "Bug\xFCnk\xFC hedef \xB7 ", todaySlots.map(function (s) {
-    return formatHours(s.hours) + " " + s.ders;
-  }).join(" · ")), /*#__PURE__*/React.createElement("div", {
-    className: "plan-tasks"
-  }, todaySlots.map(function (s, i) {
-    var th = dersAccent(s.ders);
-    var done = !!checks[s.ders];
-    var next = !done && todaySlots.slice(0, i).every(function (x) {
-      return checks[x.ders];
-    });
-    var st = done ? "Tamamlandı" : next ? "Sıradaki" : "Bekliyor";
-    return /*#__PURE__*/React.createElement("div", {
-      key: s.ders,
-      className: "plan-task" + (done ? " is-done" : "") + (next ? " is-next" : ""),
+  }, "Ba\u015Fla") : null);
+}
+function PlanPhaseBar(props) {
+  var plan = props.plan;
+  var SP = window.SmartPlan;
+  var total = plan.days.length || 1;
+  var seg = {
+    ogrenme: 0,
+    pekistirme: 0,
+    son: 0
+  };
+  plan.days.forEach(function (d) {
+    seg[d.phase] += 1;
+  });
+  var startOf = {};
+  plan.days.forEach(function (d) {
+    if (!startOf[d.phase]) startOf[d.phase] = d.date;
+  });
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "plan-phases",
+    role: "img",
+    "aria-label": "D\xF6nemler"
+  }, ["ogrenme", "pekistirme", "son"].map(function (k) {
+    if (!seg[k]) return null;
+    return /*#__PURE__*/React.createElement("span", {
+      key: k,
       style: {
-        borderLeftColor: th.accent,
-        background: done ? th.pastel : undefined
+        width: seg[k] / total * 100 + "%",
+        background: SP.PHASES[k].color
       }
-    }, /*#__PURE__*/React.createElement("button", {
-      type: "button",
-      className: "plan-check" + (done ? " on" : ""),
-      "aria-label": s.ders + " tamamla",
-      onClick: function () {
-        toggleDone(s.ders);
-      }
-    }, done ? "✓" : ""), /*#__PURE__*/React.createElement("button", {
-      type: "button",
-      className: "plan-task-main",
-      onClick: function () {
-        props.onDers && props.onDers(s.ders);
-      }
+    });
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "flex flex-wrap gap-x-4 gap-y-1 mt-2 text-xs text-stone-500"
+  }, ["ogrenme", "pekistirme", "son"].map(function (k) {
+    if (!seg[k]) return null;
+    return /*#__PURE__*/React.createElement("span", {
+      key: k,
+      className: "inline-flex items-center gap-1.5"
     }, /*#__PURE__*/React.createElement("span", {
-      className: "plan-ico"
-    }, th.icon), /*#__PURE__*/React.createElement("span", {
-      className: "plan-ders"
-    }, s.ders), /*#__PURE__*/React.createElement("span", {
-      className: "plan-hrs"
-    }, formatHours(s.hours)), /*#__PURE__*/React.createElement("span", {
-      className: "plan-st"
-    }, st)));
-  }))) : null, !open && ready && !workToday ? /*#__PURE__*/React.createElement("div", {
-    className: "plan-rest"
-  }, /*#__PURE__*/React.createElement("p", {
-    className: "plan-rest-t"
-  }, restDayCopy())) : null, open ? /*#__PURE__*/React.createElement("div", {
-    className: "plan-editor"
+      className: "h-2.5 w-2.5 rounded-full",
+      style: {
+        background: SP.PHASES[k].color
+      }
+    }), SP.PHASES[k].label, " \xB7 ", SP.fmtDate(startOf[k]), "\u2019ten ", seg[k], " g\xFCn");
+  })));
+}
+function SmartPlanCard(props) {
+  var SP = window.SmartPlan;
+  var settings = planSettingsOf(props.student);
+  var plan = useMemo(function () {
+    if (!SP || !settings) return null;
+    return SP.generate(props.kpssData, props.student, settings);
+  }, [props.kpssData, props.student, settings]);
+  const [missed, setMissed] = useState(0);
+
+  // dün planlanıp yapılmayanlar: bir kez göster, sonra bugünün listesini "görüldü" olarak kaydet
+  useEffect(function () {
+    if (!SP || !plan || !plan.ok) return;
+    var m = SP.missedSince(settings, plan);
+    if (m.changed) {
+      if (m.missed) setMissed(m.missed);
+      savePlanSettings(Object.assign({}, settings, {
+        seen: m.seen
+      }));
+    }
+  }, [plan && plan.today, plan && plan.ok]);
+  if (!SP) return null;
+  if (!settings) {
+    return /*#__PURE__*/React.createElement("section", {
+      className: "plan-hero rounded-3xl p-6 mb-4 slide-up"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "text-xs font-bold uppercase tracking-wider opacity-80"
+    }, "Ak\u0131ll\u0131 KPSS program\u0131"), /*#__PURE__*/React.createElement("h2", {
+      className: "text-xl sm:text-2xl font-black mt-1 leading-snug"
+    }, "S\u0131nav\u0131na kadar her g\xFCn hangi konuyu \xE7al\u0131\u015Faca\u011F\u0131n\u0131 1 dakikada \xE7\u0131kar."), /*#__PURE__*/React.createElement("p", {
+      className: "text-sm opacity-85 mt-2 max-w-2xl"
+    }, "S\u0131nav tarihin, bo\u015F saatlerin ve zay\u0131f derslerine g\xF6re konu konu takvim. Bir g\xFCn ka\xE7\u0131r\u0131rsan program kendini yeniden da\u011F\u0131t\u0131r."), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      onClick: props.onWizard,
+      className: "plan-hero-btn mt-4"
+    }, "Program\u0131m\u0131 olu\u015Ftur"));
+  }
+  if (!plan || !plan.ok) {
+    return /*#__PURE__*/React.createElement("section", {
+      className: "rounded-3xl glass p-5 mb-4"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "text-xs font-bold uppercase tracking-wider text-stone-400"
+    }, "Ak\u0131ll\u0131 KPSS program\u0131"), /*#__PURE__*/React.createElement("p", {
+      className: "font-semibold mt-1"
+    }, plan ? plan.reason : "Program hesaplanamadı."), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "quick-chip is-primary mt-3",
+      onClick: props.onWizard
+    }, "Program\u0131 g\xFCncelle"));
+  }
+  var list = SP.todayList(plan, settings);
+  var doneMin = 0,
+    allMin = 0;
+  list.forEach(function (x) {
+    allMin += x.minutes;
+    if (x.done) doneMin += x.minutes;
+  });
+  var phase = plan.days[0] ? plan.days[0].phase : "ogrenme";
+  function toggle(x) {
+    var cur = planSettingsOf(StudentStore.getState()) || settings;
+    savePlanSettings(x.done ? SP.unmarkDone(cur, x) : SP.markDone(cur, x));
+  }
+  return /*#__PURE__*/React.createElement("section", {
+    className: "rounded-3xl glass p-5 sm:p-6 mb-4 slide-up",
+    "aria-labelledby": "plan-title"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "plan-presets"
-  }, [{
-    id: "yogun",
-    t: "Yoğun program"
-  }, {
-    id: "hafif",
-    t: "Hafif program"
-  }, {
-    id: "haftasonu",
-    t: "Sadece hafta sonu"
-  }].map(function (p) {
-    return /*#__PURE__*/React.createElement("button", {
-      key: p.id,
-      type: "button",
-      className: "plan-preset",
-      onClick: function () {
-        setDraft(StudentStore.applyPlanPreset(p.id, dersKeys));
+    className: "flex flex-wrap items-start justify-between gap-3"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "min-w-0"
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "text-xs font-bold uppercase tracking-wider",
+    style: {
+      color: SP.PHASES[phase].color
+    }
+  }, SP.PHASES[phase].label, " d\xF6nemi \xB7 s\u0131nava ", plan.daysLeft, " g\xFCn"), /*#__PURE__*/React.createElement("h2", {
+    id: "plan-title",
+    className: "text-lg font-bold mt-0.5"
+  }, "Bug\xFCnk\xFC program\u0131n")), /*#__PURE__*/React.createElement("div", {
+    className: "flex gap-2"
+  }, /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "quick-chip",
+    onClick: props.onCalendar
+  }, "\uD83D\uDCC5 Takvim"), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "quick-chip",
+    onClick: props.onWizard
+  }, "D\xFCzenle"))), missed ? /*#__PURE__*/React.createElement("p", {
+    className: "plan-note mt-3",
+    role: "status"
+  }, "D\xFCnden kalan ", missed, " g\xF6rev programa yeniden da\u011F\u0131t\u0131ld\u0131. S\u0131k\u0131nt\u0131 yok, devam.") : null, !plan.fits ? /*#__PURE__*/React.createElement("p", {
+    className: "plan-warn mt-3"
+  }, "Bu tempoyla konular s\u0131navdan \xF6nce bitmiyor (", SP.fmtMin(plan.behindMin), " eksik). ", plan.needWeekMin ? "Haftada " + SP.fmtMin(plan.needWeekMin) + " ayırabilirsen yetişir." : "Haftaya çalışma günü eklemen gerekiyor.") : null, list.length ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center justify-between text-xs text-stone-500 mt-4 mb-1.5"
+  }, /*#__PURE__*/React.createElement("span", null, SP.fmtMin(doneMin), " / ", SP.fmtMin(allMin), " tamam"), /*#__PURE__*/React.createElement("span", null, list.filter(function (x) {
+    return x.done;
+  }).length, "/", list.length, " g\xF6rev")), /*#__PURE__*/React.createElement("div", {
+    className: "h-2 rounded-full bg-stone-200 dark:bg-stone-700 overflow-hidden"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "h-full rounded-full bg-gradient-to-r from-teal-500 to-emerald-500",
+    style: {
+      width: (allMin ? doneMin / allMin * 100 : 0) + "%",
+      transition: "width .3s"
+    }
+  })), /*#__PURE__*/React.createElement("ul", {
+    className: "mt-3 space-y-2"
+  }, list.map(function (x, i) {
+    return /*#__PURE__*/React.createElement(PlanTaskRow, {
+      key: x.id + (x.done ? "-d" : "") + i,
+      item: x,
+      onToggle: toggle,
+      onStart: function (t) {
+        runPlanTask(t, props);
       }
-    }, p.t);
-  })), /*#__PURE__*/React.createElement("div", {
-    className: "plan-strip"
-  }, days.map(function (w) {
-    var d = draft.days[w.id];
-    var on = d && d.on;
-    var sel = editDay === w.id;
-    return /*#__PURE__*/React.createElement("button", {
-      key: w.id,
-      type: "button",
-      className: "plan-chip" + (sel ? " sel" : "") + (on ? " on" : "") + (w.id === todayId ? " today" : ""),
-      onClick: function () {
-        setEditDay(w.id);
-      }
-    }, /*#__PURE__*/React.createElement("span", null, w.short), /*#__PURE__*/React.createElement("em", null, on && d.slots.length ? formatHours(StudentStore.daySlotHours(d)) : "—"));
-  })), /*#__PURE__*/React.createElement("div", {
-    className: "plan-day-sheet"
-  }, /*#__PURE__*/React.createElement("label", {
-    className: "plan-day-toggle"
-  }, /*#__PURE__*/React.createElement("input", {
-    type: "checkbox",
-    checked: !!ed.on,
-    onChange: function (e) {
-      patchDay(editDay, function (day) {
-        day.on = e.target.checked;
+    });
+  }))) : /*#__PURE__*/React.createElement("p", {
+    className: "text-sm text-stone-500 mt-3"
+  }, "Bug\xFCn programda dinlenme g\xFCn\xFC. Yar\u0131n ", plan.days[1] && plan.days[1].items.length ? plan.days[1].items.length + " görev" : "da boş", "."));
+}
+function PlanWizard(props) {
+  var SP = window.SmartPlan;
+  var dersler = Object.keys(props.kpssData || {});
+  var cur = planSettingsOf(props.student);
+  const [step, setStep] = useState(0);
+  const [s, setS] = useState(function () {
+    var base = cur ? SP.normSettings(cur) : SP.defaultSettings(props.student);
+    // eski haftalık programdan saatleri al
+    var old = props.student.userProfile && props.student.userProfile.studyPlan;
+    if (!cur && old && old.ready && old.days) {
+      var ids = ["pzt", "sal", "car", "per", "cum", "cmt", "paz"];
+      base.hours = ids.map(function (id) {
+        var d = old.days[id];
+        return d && d.on ? StudentStore.daySlotHours ? StudentStore.daySlotHours(d) : 0 : 0;
       });
     }
-  }), /*#__PURE__*/React.createElement("span", null, (days.filter(function (w) {
-    return w.id === editDay;
-  })[0] || {}).full || editDay), ed.on && ed.slots.length ? /*#__PURE__*/React.createElement("small", null, "toplam ", formatHours(StudentStore.daySlotHours(ed))) : /*#__PURE__*/React.createElement("small", null, "dinlenme")), ed.on ? /*#__PURE__*/React.createElement("div", {
-    className: "plan-slots"
-  }, (ed.slots || []).map(function (s, si) {
-    var th = dersAccent(s.ders);
-    return /*#__PURE__*/React.createElement("div", {
-      key: s.ders,
-      className: "plan-slot",
-      style: {
-        borderLeftColor: th.accent,
-        background: th.pastel
-      },
-      draggable: "true",
-      onDragStart: function () {
-        dragIdx.current = si;
-      },
-      onDragOver: function (e) {
-        e.preventDefault();
-      },
-      onDrop: function (e) {
-        e.preventDefault();
-        moveSlot(editDay, dragIdx.current, si);
-        dragIdx.current = null;
-      }
-    }, /*#__PURE__*/React.createElement("span", {
-      className: "plan-grip",
-      title: "S\xFCr\xFCkle",
-      "aria-hidden": "true"
-    }, "\u22EE\u22EE"), /*#__PURE__*/React.createElement("span", {
-      className: "plan-ico"
-    }, th.icon), /*#__PURE__*/React.createElement("span", {
-      className: "plan-slot-name"
-    }, s.ders), /*#__PURE__*/React.createElement("select", {
-      value: String(s.hours),
-      onChange: function (e) {
-        var h = Number(e.target.value);
-        patchDay(editDay, function (day) {
-          day.slots[si].hours = h;
-        });
-      }
-    }, hourOptions().map(function (h) {
-      return /*#__PURE__*/React.createElement("option", {
-        key: h,
-        value: h
-      }, formatHours(h));
-    })), /*#__PURE__*/React.createElement("button", {
-      type: "button",
-      className: "plan-x",
-      onClick: function () {
-        patchDay(editDay, function (day) {
-          day.slots = day.slots.filter(function (x) {
-            return x.ders !== s.ders;
-          });
-        });
-      }
-    }, "\u2715"));
-  }), leftover.length ? /*#__PURE__*/React.createElement("select", {
-    key: leftover.join("|"),
-    defaultValue: "",
-    onChange: function (e) {
-      addSlot(editDay, e.target.value);
-    },
-    className: "plan-add"
-  }, /*#__PURE__*/React.createElement("option", {
-    value: "",
-    disabled: true
-  }, "+ Ders ekle"), leftover.map(function (k) {
-    return /*#__PURE__*/React.createElement("option", {
-      key: k,
-      value: k
-    }, dersAccent(k).icon, " ", k);
-  })) : dersKeys.length ? null : /*#__PURE__*/React.createElement("p", {
-    className: "text-xs text-stone-400"
-  }, "Ders listesi hen\xFCz yok.")) : /*#__PURE__*/React.createElement("p", {
-    className: "plan-rest-mini"
-  }, "Bu g\xFCn kapal\u0131. A\xE7\u0131nca ders ekleyebilirsin.")), /*#__PURE__*/React.createElement("button", {
+    return base;
+  });
+  var preview = useMemo(function () {
+    return step === 3 ? SP.generate(props.kpssData, props.student, s) : null;
+  }, [step, s]);
+  var weekH = s.hours.reduce(function (a, h) {
+    return a + h;
+  }, 0);
+  function setHour(i, v) {
+    var h = s.hours.slice();
+    h[i] = Math.max(0, Math.min(12, Math.round(v * 2) / 2));
+    setS(Object.assign({}, s, {
+      hours: h
+    }));
+  }
+  function preset(arr) {
+    setS(Object.assign({}, s, {
+      hours: arr
+    }));
+  }
+  function toggleWeak(d) {
+    var w = s.weak.indexOf(d) >= 0 ? s.weak.filter(function (x) {
+      return x !== d;
+    }) : s.weak.concat([d]);
+    setS(Object.assign({}, s, {
+      weak: w
+    }));
+  }
+  function save() {
+    var next = Object.assign({}, s, {
+      createdAt: cur && cur.createdAt || new Date().toISOString(),
+      seen: null
+    });
+    StudentStore.updateUserProfile({
+      smartPlan: next,
+      studyPlan: SP.legacyStudyPlan(next)
+    });
+    if (s.examDate) StudentStore.updateProfile({
+      examDate: s.examDate
+    });
+    props.onDone();
+  }
+  var canNext = step === 0 ? s.examDate && s.examDate > SP.todayIso() : step === 1 ? weekH > 0 : true;
+  var steps = ["Sınav tarihi", "Boş saatler", "Zayıf dersler", "Önizleme"];
+  return /*#__PURE__*/React.createElement("div", {
+    className: "fixed inset-0 z-[70] bg-black/45 backdrop-blur-sm flex items-end sm:items-center justify-center p-3 sm:p-6",
+    role: "dialog",
+    "aria-modal": "true",
+    "aria-labelledby": "wiz-title"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "w-full max-w-xl max-h-[92vh] overflow-y-auto bg-white dark:bg-stone-900 rounded-3xl p-5 sm:p-7 shadow-2xl fade-in"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center justify-between gap-3"
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "text-xs font-bold uppercase tracking-wider text-teal-700 dark:text-teal-300"
+  }, "Ad\u0131m ", step + 1, " / 4 \xB7 ", steps[step]), /*#__PURE__*/React.createElement("button", {
     type: "button",
-    onClick: function () {
-      StudentStore.saveStudyPlan(draft);
-      setOpen(false);
+    className: "text-sm text-stone-500 px-2 py-1",
+    onClick: props.onClose,
+    "aria-label": "Kapat"
+  }, "\u2715")), /*#__PURE__*/React.createElement("div", {
+    className: "flex gap-1.5 mt-2 mb-5",
+    "aria-hidden": "true"
+  }, steps.map(function (_t, i) {
+    return /*#__PURE__*/React.createElement("span", {
+      key: i,
+      className: "h-1.5 flex-1 rounded-full " + (i <= step ? "bg-teal-600" : "bg-stone-200 dark:bg-stone-700")
+    });
+  })), step === 0 ? /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
+    id: "wiz-title",
+    className: "text-xl font-black"
+  }, "S\u0131nav\u0131n ne zaman?"), /*#__PURE__*/React.createElement("p", {
+    className: "text-sm text-stone-500 mt-1"
+  }, "\xD6SYM takvimindeki s\u0131nav g\xFCn\xFCn\xFC se\xE7. Program bu g\xFCne kadar g\xFCn g\xFCn haz\u0131rlan\u0131r."), /*#__PURE__*/React.createElement("input", {
+    type: "date",
+    value: s.examDate,
+    min: SP.addDays(SP.todayIso(), 7),
+    onChange: function (e) {
+      setS(Object.assign({}, s, {
+        examDate: e.target.value
+      }));
     },
-    className: "w-full py-3.5 rounded-2xl btn-primary text-white font-bold text-sm"
-  }, "Program\u0131 kaydet")) : null));
+    className: "w-full mt-4 px-4 py-3 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800 text-base"
+  }), s.examDate && s.examDate > SP.todayIso() ? /*#__PURE__*/React.createElement("p", {
+    className: "text-sm font-semibold text-teal-700 dark:text-teal-300 mt-3"
+  }, "S\u0131nava ", SP.diffDays(SP.todayIso(), s.examDate), " g\xFCn var.") : /*#__PURE__*/React.createElement("p", {
+    className: "text-xs text-stone-500 mt-3"
+  }, "Tarih hen\xFCz a\xE7\u0131klanmad\u0131ysa tahmini bir tarih se\xE7; sonra de\u011Fi\u015Ftirebilirsin.")) : null, step === 1 ? /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
+    id: "wiz-title",
+    className: "text-xl font-black"
+  }, "Hangi g\xFCn ka\xE7 saat \xE7al\u0131\u015Fabilirsin?"), /*#__PURE__*/React.createElement("p", {
+    className: "text-sm text-stone-500 mt-1"
+  }, "Ger\xE7ek\xE7i ol: program s\xFCrd\xFCr\xFClebilir olursa i\u015Fe yarar. Haftal\u0131k toplam: ", /*#__PURE__*/React.createElement("b", null, weekH, " saat")), /*#__PURE__*/React.createElement("div", {
+    className: "flex flex-wrap gap-2 mt-3"
+  }, /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "quick-chip",
+    onClick: function () {
+      preset([1, 1, 1, 1, 1, 2, 0]);
+    }
+  }, "Hafif (7 sa)"), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "quick-chip",
+    onClick: function () {
+      preset([2, 2, 2, 2, 2, 4, 0]);
+    }
+  }, "Dengeli (14 sa)"), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "quick-chip",
+    onClick: function () {
+      preset([3, 3, 3, 3, 3, 5, 3]);
+    }
+  }, "Yo\u011Fun (23 sa)"), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "quick-chip",
+    onClick: function () {
+      preset([0, 0, 0, 0, 0, 5, 5]);
+    }
+  }, "Hafta sonu (10 sa)")), /*#__PURE__*/React.createElement("ul", {
+    className: "mt-4 space-y-2"
+  }, SP.DAY_FULL.map(function (d, i) {
+    return /*#__PURE__*/React.createElement("li", {
+      key: d,
+      className: "flex items-center gap-3"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "w-24 text-sm font-semibold"
+    }, d), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "step-btn",
+      "aria-label": d + " yarım saat azalt",
+      onClick: function () {
+        setHour(i, s.hours[i] - 0.5);
+      }
+    }, "\u2212"), /*#__PURE__*/React.createElement("span", {
+      className: "w-16 text-center font-stat font-bold",
+      "aria-live": "polite"
+    }, s.hours[i] ? s.hours[i] + " sa" : "boş"), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "step-btn",
+      "aria-label": d + " yarım saat artır",
+      onClick: function () {
+        setHour(i, s.hours[i] + 0.5);
+      }
+    }, "+"));
+  }))) : null, step === 2 ? /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
+    id: "wiz-title",
+    className: "text-xl font-black"
+  }, "Hangi derslerde zorlan\u0131yorsun?"), /*#__PURE__*/React.createElement("p", {
+    className: "text-sm text-stone-500 mt-1"
+  }, "Se\xE7ti\u011Fin derslere daha \xE7ok zaman ayr\u0131l\u0131r. Hi\xE7birini se\xE7meden de ge\xE7ebilirsin; da\u011F\u0131l\u0131m \xD6SYM soru say\u0131lar\u0131na g\xF6re yap\u0131l\u0131r."), /*#__PURE__*/React.createElement("div", {
+    className: "flex flex-wrap gap-2 mt-4"
+  }, dersler.map(function (d) {
+    var on = s.weak.indexOf(d) >= 0;
+    return /*#__PURE__*/React.createElement("button", {
+      key: d,
+      type: "button",
+      "aria-pressed": on,
+      className: "quick-chip" + (on ? " is-primary" : ""),
+      onClick: function () {
+        toggleWeak(d);
+      }
+    }, on ? "✓ " : "", d);
+  }))) : null, step === 3 && preview ? /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
+    id: "wiz-title",
+    className: "text-xl font-black"
+  }, "Program\u0131n haz\u0131r"), preview.ok ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
+    className: "grid grid-cols-3 gap-2 mt-4 text-center"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "rounded-2xl bg-stone-100 dark:bg-stone-800 p-3"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "font-stat text-xl font-bold"
+  }, preview.daysLeft), /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] text-stone-500"
+  }, "g\xFCn")), /*#__PURE__*/React.createElement("div", {
+    className: "rounded-2xl bg-stone-100 dark:bg-stone-800 p-3"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "font-stat text-xl font-bold"
+  }, SP.fmtMin(preview.weekMin)), /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] text-stone-500"
+  }, "haftada")), /*#__PURE__*/React.createElement("div", {
+    className: "rounded-2xl bg-stone-100 dark:bg-stone-800 p-3"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "font-stat text-xl font-bold"
+  }, SP.fmtMin(preview.learnTotal)), /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] text-stone-500"
+  }, "konu \xE7al\u0131\u015Fmas\u0131"))), /*#__PURE__*/React.createElement("div", {
+    className: "mt-4"
+  }, /*#__PURE__*/React.createElement(PlanPhaseBar, {
+    plan: preview
+  })), preview.fits ? /*#__PURE__*/React.createElement("p", {
+    className: "plan-ok mt-4"
+  }, "Yeti\u015Fiyor: konular ", SP.fmtDate(preview.learnDoneOn || preview.finalStart), " civar\u0131 biter, sonras\u0131 tekrar ve deneme.") : /*#__PURE__*/React.createElement("p", {
+    className: "plan-warn mt-4"
+  }, "Bu saatlerle konular son d\xF6neme kadar bitmiyor (", SP.fmtMin(preview.behindMin), " eksik). ", preview.needWeekMin ? "Haftada en az " + SP.fmtMin(preview.needWeekMin) + " öneririz" : "Haftaya çalışma günü eklemeni öneririz", "; yine de kaydedebilirsin."), /*#__PURE__*/React.createElement("p", {
+    className: "text-xs font-bold uppercase tracking-wider text-stone-400 mt-5 mb-2"
+  }, "\u0130lk g\xFCn"), /*#__PURE__*/React.createElement("ul", {
+    className: "space-y-1.5"
+  }, (preview.days.find(function (d) {
+    return d.items.length;
+  }) || {
+    items: []
+  }).items.map(function (x, i) {
+    return /*#__PURE__*/React.createElement("li", {
+      key: i,
+      className: "text-sm flex gap-2"
+    }, /*#__PURE__*/React.createElement("span", {
+      "aria-hidden": "true"
+    }, PLAN_ICON[x.kind]), /*#__PURE__*/React.createElement("span", {
+      className: "min-w-0"
+    }, planTaskLabel(x), " ", /*#__PURE__*/React.createElement("span", {
+      className: "text-stone-500"
+    }, "\xB7 ", SP.fmtMin(x.minutes))));
+  }))) : /*#__PURE__*/React.createElement("p", {
+    className: "plan-warn mt-4"
+  }, preview.reason)) : null, /*#__PURE__*/React.createElement("div", {
+    className: "flex justify-between gap-3 mt-7"
+  }, /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "quick-chip",
+    onClick: function () {
+      if (step) setStep(step - 1);else props.onClose();
+    }
+  }, step ? "← Geri" : "Vazgeç"), step < 3 ? /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "quick-chip is-primary",
+    disabled: !canNext,
+    onClick: function () {
+      setStep(step + 1);
+    }
+  }, "Devam \u2192") : /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "quick-chip is-primary",
+    disabled: !preview || !preview.ok,
+    onClick: save
+  }, "Program\u0131 kaydet"))));
 }
 var DASH_COLORS = ["#4f46e5", "#7c3aed", "#ec4899", "#f59e0b", "#10b981", "#6366f1"];
+
+// Paylaşım görseli (1080x1350): bu haftanın programı ve dönemler.
+function drawPlanImage(plan, name) {
+  var SP = window.SmartPlan;
+  var W = 1080,
+    H = 1350;
+  var c = document.createElement("canvas");
+  c.width = W;
+  c.height = H;
+  var g = c.getContext("2d");
+  var bg = g.createLinearGradient(0, 0, W, H);
+  bg.addColorStop(0, "#0D2C4D");
+  bg.addColorStop(1, "#14607a");
+  g.fillStyle = bg;
+  g.fillRect(0, 0, W, H);
+  function text(t, x, y, size, weight, color, align) {
+    g.font = (weight || 700) + " " + size + "px Inter, Manrope, system-ui, sans-serif";
+    g.fillStyle = color || "#fff";
+    g.textAlign = align || "left";
+    g.fillText(t, x, y);
+  }
+  function fit(t, max, size, weight) {
+    g.font = (weight || 600) + " " + size + "px Inter, system-ui, sans-serif";
+    if (g.measureText(t).width <= max) return t;
+    while (t.length > 4 && g.measureText(t + "…").width > max) t = t.slice(0, -1);
+    return t + "…";
+  }
+  text("KPSS PROGRAMIM", 72, 120, 30, 800, "#5eead4");
+  text(name ? name : "Akıllı çalışma takvimi", 72, 186, 58, 900);
+  text("Sınava " + plan.daysLeft + " gün · haftada " + SP.fmtMin(plan.weekMin), 72, 246, 34, 600, "rgba(255,255,255,.85)");
+  // dönem çubuğu
+  var seg = {
+      ogrenme: 0,
+      pekistirme: 0,
+      son: 0
+    },
+    total = plan.days.length || 1,
+    x = 72;
+  plan.days.forEach(function (d) {
+    seg[d.phase]++;
+  });
+  ["ogrenme", "pekistirme", "son"].forEach(function (k) {
+    var w = (W - 144) * seg[k] / total;
+    if (w > 0) {
+      g.fillStyle = SP.PHASES[k].color;
+      g.fillRect(x, 292, w, 22);
+      x += w;
+    }
+  });
+  var lx = 72;
+  var shortLabel = {
+    ogrenme: "Öğrenme",
+    pekistirme: "Pekiştirme",
+    son: "Son dönem"
+  };
+  ["ogrenme", "pekistirme", "son"].forEach(function (k) {
+    if (!seg[k]) return;
+    var lbl = shortLabel[k] + " " + seg[k] + " gün";
+    g.fillStyle = SP.PHASES[k].color;
+    g.beginPath();
+    g.arc(lx + 9, 352, 9, 0, Math.PI * 2);
+    g.fill();
+    text(lbl, lx + 26, 362, 26, 600, "rgba(255,255,255,.85)");
+    g.font = "600 26px Inter, Manrope, system-ui, sans-serif";
+    lx += 26 + g.measureText(lbl).width + 34;
+  });
+  // haftalık kart
+  g.fillStyle = "rgba(255,255,255,.96)";
+  var top = 410,
+    bh = 800;
+  g.beginPath();
+  if (g.roundRect) g.roundRect(48, top, W - 96, bh, 36);else g.rect(48, top, W - 96, bh);
+  g.fill();
+  text("Bu hafta", 96, top + 76, 36, 800, "#0D2C4D");
+  var rowH = (bh - 120) / 7;
+  plan.days.slice(0, 7).forEach(function (d, i) {
+    var y = top + 120 + i * rowH;
+    if (i) {
+      g.fillStyle = "#e7e5e4";
+      g.fillRect(96, y - 8, W - 192, 2);
+    }
+    text(SP.DAY_SHORT[d.weekday] + " " + SP.fmtDate(d.date), 96, y + 40, 28, 800, "#0f172a");
+    var items = d.items.slice(0, 2).map(function (it) {
+      return SP.taskTitle(it) + (it.ders ? " · " + it.ders : "");
+    });
+    if (!items.length) items = ["Dinlenme"];
+    items.forEach(function (t, j) {
+      text(fit(t, 600, 25, 600), 340, y + 28 + j * 34, 25, 600, j ? "#57534e" : "#0f766e");
+    });
+    if (d.items.length) text(SP.fmtMin(d.minutes), W - 96, y + 40, 26, 700, "#78716c", "right");
+  });
+  text("atanly.com · Kendi programını 1 dakikada oluştur", W / 2, H - 56, 30, 700, "rgba(255,255,255,.9)", "center");
+  return c;
+}
+function PlanCalendar(props) {
+  var SP = window.SmartPlan;
+  var settings = planSettingsOf(props.student);
+  var plan = useMemo(function () {
+    return settings ? SP.generate(props.kpssData, props.student, settings) : null;
+  }, [props.kpssData, props.student, settings]);
+  const [weeks, setWeeks] = useState(4);
+  const [msg, setMsg] = useState("");
+  if (!plan || !plan.ok) {
+    return /*#__PURE__*/React.createElement(Shell, null, /*#__PURE__*/React.createElement(BackBtn, {
+      onClick: props.onBack,
+      label: "Bug\xFCn"
+    }), /*#__PURE__*/React.createElement("p", {
+      className: "mt-8 text-stone-500"
+    }, plan ? plan.reason : "Önce programını oluştur."));
+  }
+  // günleri haftalara böl (Pazartesi başlangıçlı)
+  var groups = [];
+  plan.days.forEach(function (d) {
+    if (!groups.length || d.weekday === 0) groups.push([]);
+    groups[groups.length - 1].push(d);
+  });
+  var shown = groups.slice(0, weeks);
+  var doneIds = {};
+  SP.doneOn(settings, plan.today).forEach(function (x) {
+    doneIds[x.id] = true;
+  });
+  function print() {
+    setWeeks(groups.length);
+    setTimeout(function () {
+      window.print();
+    }, 350);
+  }
+  function shareImage() {
+    var c = drawPlanImage(plan, props.student.profile && props.student.profile.name);
+    c.toBlob(function (blob) {
+      if (!blob) return;
+      var file = typeof File !== "undefined" ? new File([blob], "kpss-programim.png", {
+        type: "image/png"
+      }) : null;
+      if (file && navigator.canShare && navigator.canShare({
+        files: [file]
+      })) {
+        navigator.share({
+          files: [file],
+          title: "KPSS programım",
+          text: "Kendi programını oluştur: https://www.atanly.com"
+        }).catch(function () {});
+        return;
+      }
+      var a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "kpss-programim.png";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(function () {
+        URL.revokeObjectURL(a.href);
+      }, 4000);
+      setMsg("Görsel indirildi: kpss-programim.png");
+    }, "image/png");
+  }
+  return /*#__PURE__*/React.createElement(Shell, null, /*#__PURE__*/React.createElement("div", {
+    className: "flex justify-between items-center mb-4 gap-3 no-print"
+  }, /*#__PURE__*/React.createElement(BackBtn, {
+    onClick: props.onBack,
+    label: "Bug\xFCn"
+  }), /*#__PURE__*/React.createElement(ThemeBtn, {
+    isDark: props.isDark,
+    onClick: props.toggleDark
+  })), /*#__PURE__*/React.createElement("header", {
+    className: "mb-5"
+  }, /*#__PURE__*/React.createElement("h1", {
+    className: "text-3xl font-display font-black tracking-tight gradient-text"
+  }, "KPSS program\u0131m"), /*#__PURE__*/React.createElement("p", {
+    className: "text-sm text-stone-500 mt-1"
+  }, props.student.profile && props.student.profile.name ? props.student.profile.name + " · " : "", "S\u0131nav ", SP.fmtDate(plan.exam), " \xB7 ", plan.daysLeft, " g\xFCn \xB7 haftada ", SP.fmtMin(plan.weekMin)), /*#__PURE__*/React.createElement("div", {
+    className: "mt-4"
+  }, /*#__PURE__*/React.createElement(PlanPhaseBar, {
+    plan: plan
+  })), !plan.fits ? /*#__PURE__*/React.createElement("p", {
+    className: "plan-warn mt-3"
+  }, "Bu tempoyla ", SP.fmtMin(plan.behindMin), " konu \xE7al\u0131\u015Fmas\u0131 son d\xF6neme yeti\u015Fmiyor. ", plan.needWeekMin ? "Haftada " + SP.fmtMin(plan.needWeekMin) + " önerilir." : "Haftaya çalışma günü eklemen önerilir.") : null, /*#__PURE__*/React.createElement("div", {
+    className: "flex flex-wrap gap-2 mt-4 no-print"
+  }, /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "quick-chip is-primary",
+    onClick: print
+  }, "\uD83D\uDDA8 Yazd\u0131r / PDF"), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "quick-chip",
+    onClick: shareImage
+  }, "\uD83D\uDCE4 Payla\u015F\u0131m g\xF6rseli"), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "quick-chip",
+    onClick: props.onWizard
+  }, "D\xFCzenle")), msg ? /*#__PURE__*/React.createElement("p", {
+    className: "text-xs text-emerald-700 mt-2 no-print",
+    role: "status"
+  }, msg) : null), /*#__PURE__*/React.createElement("div", {
+    className: "space-y-6"
+  }, shown.map(function (g, gi) {
+    var mins = g.reduce(function (a, d) {
+      return a + d.minutes;
+    }, 0);
+    return /*#__PURE__*/React.createElement("section", {
+      key: gi,
+      className: "plan-week"
+    }, /*#__PURE__*/React.createElement("h2", {
+      className: "text-sm font-bold text-stone-500 mb-2"
+    }, SP.fmtDate(g[0].date), " \u2013 ", SP.fmtDate(g[g.length - 1].date), " \xB7 ", SP.fmtMin(mins)), /*#__PURE__*/React.createElement("div", {
+      className: "plan-week-grid"
+    }, g.map(function (d) {
+      var isToday = d.date === plan.today;
+      return /*#__PURE__*/React.createElement("article", {
+        key: d.date,
+        className: "plan-day" + (isToday ? " is-today" : ""),
+        style: {
+          borderTopColor: SP.PHASES[d.phase].color
+        }
+      }, /*#__PURE__*/React.createElement("p", {
+        className: "plan-day-head"
+      }, /*#__PURE__*/React.createElement("b", null, SP.DAY_SHORT[d.weekday], " ", SP.fmtDate(d.date)), isToday ? /*#__PURE__*/React.createElement("span", {
+        className: "plan-today-pill"
+      }, "bug\xFCn") : null), d.items.length ? /*#__PURE__*/React.createElement("ul", {
+        className: "space-y-1.5"
+      }, d.items.map(function (x, i) {
+        return /*#__PURE__*/React.createElement("li", {
+          key: i,
+          className: "plan-day-item" + (isToday && doneIds[x.id] ? " is-done" : "")
+        }, /*#__PURE__*/React.createElement("span", {
+          "aria-hidden": "true"
+        }, PLAN_ICON[x.kind]), /*#__PURE__*/React.createElement("span", {
+          className: "min-w-0"
+        }, /*#__PURE__*/React.createElement("span", {
+          className: "block font-semibold"
+        }, SP.taskTitle(x)), /*#__PURE__*/React.createElement("span", {
+          className: "block text-stone-500"
+        }, x.ders ? x.ders + (x.konu ? " / " + kLabel(x.konu) : "") + " · " : "", SP.fmtMin(x.minutes))));
+      })) : /*#__PURE__*/React.createElement("p", {
+        className: "text-xs text-stone-400"
+      }, "Dinlenme"));
+    })));
+  })), weeks < groups.length ? /*#__PURE__*/React.createElement("div", {
+    className: "text-center mt-6 no-print"
+  }, /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "quick-chip",
+    onClick: function () {
+      setWeeks(weeks + 8);
+    }
+  }, "Sonraki 8 haftay\u0131 g\xF6ster (", groups.length - weeks, " hafta kald\u0131)")) : null);
+}
 function StudyDash(props) {
   const d = StudyPlanner.studyDashboard ? StudyPlanner.studyDashboard(props.student) : null;
   const [pickDay, setPickDay] = useState(null);
@@ -1691,6 +2114,31 @@ function WeakTopics(props) {
 }
 function Bugun(props) {
   const plan = props.plan;
+  const [wizard, setWizard] = useState(false);
+  const [calendar, setCalendar] = useState(false);
+  if (calendar) {
+    return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(PlanCalendar, {
+      student: props.student,
+      kpssData: props.kpssData,
+      isDark: props.isDark,
+      toggleDark: props.toggleDark,
+      onBack: function () {
+        setCalendar(false);
+      },
+      onWizard: function () {
+        setWizard(true);
+      }
+    }), wizard ? /*#__PURE__*/React.createElement(PlanWizard, {
+      student: props.student,
+      kpssData: props.kpssData,
+      onClose: function () {
+        setWizard(false);
+      },
+      onDone: function () {
+        setWizard(false);
+      }
+    }) : null);
+  }
   const name = props.student.profile.name;
   const level = props.student.userProfile && props.student.userProfile.educationLevel || "lisans";
   const track = examTrackName(level);
@@ -1744,16 +2192,24 @@ function Bugun(props) {
     className: "dash-split"
   }, /*#__PURE__*/React.createElement("div", {
     className: "min-w-0"
-  }, /*#__PURE__*/React.createElement(NextSteps, {
+  }, /*#__PURE__*/React.createElement(SmartPlanCard, {
+    student: props.student,
+    kpssData: props.kpssData,
+    onKonu: props.onKonu,
+    onDers: props.onDers,
+    onExam: props.onExam,
+    onWizard: function () {
+      setWizard(true);
+    },
+    onCalendar: function () {
+      setCalendar(true);
+    }
+  }), /*#__PURE__*/React.createElement(NextSteps, {
     plan: plan,
     onKonu: props.onKonu,
     onReview: props.onReview,
     onWrong: props.onWrong,
     onMixed: props.onMixed
-  }), /*#__PURE__*/React.createElement(StudyProgram, {
-    student: props.student,
-    kpssData: props.kpssData,
-    onDers: props.onDers
   })), /*#__PURE__*/React.createElement("div", {
     className: "min-w-0 space-y-4"
   }, /*#__PURE__*/React.createElement("div", {
@@ -1768,7 +2224,16 @@ function Bugun(props) {
   }), /*#__PURE__*/React.createElement(StudyDash, {
     student: props.student,
     onDers: props.onDers
-  }))));
+  }))), wizard ? /*#__PURE__*/React.createElement(PlanWizard, {
+    student: props.student,
+    kpssData: props.kpssData,
+    onClose: function () {
+      setWizard(false);
+    },
+    onDone: function () {
+      setWizard(false);
+    }
+  }) : null);
 }
 function AlistirmalarHome(props) {
   return /*#__PURE__*/React.createElement(Shell, null, /*#__PURE__*/React.createElement("div", {
@@ -4869,6 +5334,11 @@ function App() {
         startSession(StudyPlanner.mixedQuiz(kpssData, null, 10), {
           mode: "mixed"
         });
+      },
+      onExam: function () {
+        setLazyCmp(null);
+        setLazyErr("");
+        setExtra("exam");
       }
     });
   } else if (nav === "eksikler") {
