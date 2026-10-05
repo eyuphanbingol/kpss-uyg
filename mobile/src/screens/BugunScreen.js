@@ -7,10 +7,9 @@ import { StudentStore } from "../lib/store";
 import { go } from "../nav";
 import { Card, ScrollScreen, PageHeader, Tap } from "../ui";
 import { colors, examTrackName } from "../lib/theme";
+import { DailyGoal, FocusTimer, NextSteps, WeakTopics, WeekBars } from "../components/BugunTools";
 
 var DASH_COLORS = ["#0F172A", "#D97706", "#64748B", "#94A3B8", "#CBD5E1", "#1E293B"];
-var WEEK_BAR = ["#CBD5E1", "#94A3B8", "#64748B", "#D97706", "#F59E0B", "#FCD34D", "#E2E8F0"];
-var DAY_NAMES = ["Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz"];
 var DERS_ACCENT = { "Tarih": "#ea580c", "Coğrafya": "#059669", "Türkçe": "#2563eb", "Vatandaşlık": "#7c3aed", "Güncel Bilgiler": "#db2777", "Geometri": "#0d9488" };
 
 function fmtH(n) {
@@ -72,9 +71,7 @@ export default function BugunScreen({ navigation }) {
     var restText = restMsgs[new Date().getDate() % restMsgs.length];
     var goalLine = todaySlots.map(function (s) { return fmtH(s.hours) + " " + s.ders; }).join(" · ");
 
-    var weekMax = 1;
     var weekMin = (dash && dash.weekMin) || [0, 0, 0, 0, 0, 0, 0];
-    weekMin.forEach(function (v) { if (v > weekMax) weekMax = v; });
     var weeks = (dash && dash.weeks) || [];
     var trendVals = weeks.map(function (w) { return w.minutes || 0; });
     var weekGoalPct = dash && dash.plannedWeek ? Math.min(100, Math.round((dash.actualWeekH / dash.plannedWeek) * 100)) : (dash && dash.actualWeekH ? 100 : 0);
@@ -85,6 +82,9 @@ export default function BugunScreen({ navigation }) {
         ? (Math.round((dash.longest.minutes / 60) * 10) / 10 + " saat")
         : "—";
     var dersList = (dash && dash.dersList) || [];
+    var lastW = trendVals[trendVals.length - 1] || 0;
+    var prevW = trendVals[trendVals.length - 2] || 0;
+    var trendLine = "Bu hafta " + lastW + " dk" + (prevW ? " · geçen haftaya göre " + (lastW >= prevW ? "+" : "") + Math.round(((lastW - prevW) / prevW) * 100) + "%" : "");
     var dersSum = (dash && dash.dersSum) || 0;
 
     return (
@@ -118,6 +118,9 @@ export default function BugunScreen({ navigation }) {
                 </View>
             </LinearGradient>
 
+            <NextSteps navigation={navigation} plan={plan} kpssData={app.kpssData} dark={isDark} />
+
+            <View style={{ height: 10 }} />
             <Card dark={isDark}>
                 <View style={styles.cardHeader}>
                     <Text style={[styles.cardTitle, isDark && styles.textMuted]}>Bugünün hedefi</Text>
@@ -164,6 +167,10 @@ export default function BugunScreen({ navigation }) {
                 )}
             </Card>
 
+            <View style={{ marginTop: 10 }}><DailyGoal student={student} dark={isDark} /></View>
+            <View style={{ marginTop: 10 }}><FocusTimer kpssData={app.kpssData} dark={isDark} /></View>
+            <View style={{ marginTop: 10 }}><WeakTopics navigation={navigation} plan={plan} dark={isDark} /></View>
+
             <View style={styles.secHead}>
                 <Text style={[styles.cardTitle, isDark && styles.textMuted]}>İstatistikler</Text>
                 <View style={[styles.secLine, isDark && { backgroundColor: "#44403c" }]} />
@@ -209,6 +216,7 @@ export default function BugunScreen({ navigation }) {
 
                     <Card dark={isDark} style={{ marginTop: 10 }}>
                         <Text style={[styles.chartTitle, isDark && styles.textLight]}>Haftalık trend</Text>
+                        <Text style={[styles.kpiLab, { marginTop: 0, marginBottom: 6 }]}>{trendLine}</Text>
                         <Spark values={trendVals} color="#CBD5E1" />
                         <View style={styles.sparkLabs}>
                             <Text style={[styles.kpiLab, { marginTop: 0 }]}>8 hafta önce</Text>
@@ -218,17 +226,7 @@ export default function BugunScreen({ navigation }) {
 
                     <Card dark={isDark} style={{ marginTop: 10 }}>
                         <Text style={[styles.chartTitle, isDark && styles.textLight]}>Bu hafta</Text>
-                        <View style={styles.weekBars}>
-                            {weekMin.map(function (m, i) {
-                                var h = Math.max(8, Math.round((m / weekMax) * 96));
-                                return (
-                                    <View key={i} style={styles.weekCol}>
-                                        <View style={[styles.weekBar, { height: h, backgroundColor: WEEK_BAR[i % WEEK_BAR.length] }]} />
-                                        <Text style={[styles.weekLab, isDark && styles.textMuted]}>{DAY_NAMES[i]}</Text>
-                                    </View>
-                                );
-                            })}
-                        </View>
+                        <WeekBars student={student} weekMin={weekMin} dark={isDark} />
                     </Card>
 
                     <Card dark={isDark} style={{ marginTop: 10 }}>
@@ -245,14 +243,14 @@ export default function BugunScreen({ navigation }) {
                                 {dersList.slice(0, 5).map(function (x, i) {
                                     var p = Math.round((x.v / dersSum) * 100);
                                     return (
-                                        <View key={x.ders} style={styles.dersRow}>
+                                        <Tap key={x.ders} onPress={function () { go(navigation, "KonuList", { ders: x.ders }); }} style={styles.dersRow}>
                                             <View style={[styles.dersDot, { backgroundColor: DASH_COLORS[i % DASH_COLORS.length] }]} />
                                             <Text style={[styles.dersName, isDark && styles.textLight]} numberOfLines={1}>{x.ders}</Text>
                                             <Text style={styles.dersPct}>{p}%</Text>
                                             <View style={[styles.miniBar, isDark && { backgroundColor: "#292524" }]}>
                                                 <View style={{ width: p + "%", height: 6, borderRadius: 99, backgroundColor: DASH_COLORS[i % DASH_COLORS.length] }} />
                                             </View>
-                                        </View>
+                                        </Tap>
                                     );
                                 })}
                             </View>
