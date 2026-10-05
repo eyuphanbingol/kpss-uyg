@@ -263,7 +263,7 @@ export function KonuHubScreen({ route, navigation }) {
                                 <View style={styles.hubNoteRow}>
                                     <View style={styles.hubIco}><FileText size={18} color="#0F172A" /></View>
                                     <View style={{ flex: 1, minWidth: 0 }}>
-                                        <Text style={[styles.hubTestTitle, isDark && styles.textLight]}>Test {p.no}</Text>
+                                        <Text style={[styles.hubTestTitle, isDark && styles.textLight]}>Test {p.no}{p.sekilli ? " · Şekilli sorular" : ""}</Text>
                                         <Text style={[styles.hubTestDesc, isDark && styles.textMuted]}>
                                             {packDone ? "Çözüldü" : (packOpen ? (p.items.length + " soru") : ("Önce Test " + (p.no - 1) + "’i bitir"))}
                                         </Text>

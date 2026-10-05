@@ -241,3 +241,65 @@ window.geometri_5_sorulari = [
     "explanation": "A=780/26=30."
 }
 ];
+// >>> şekilli sorular: scripts/build_geo_questions.py üretir, elle düzenleme
+window.geometri_5_sorulari.push({
+    "question": "Şekilde ABC bir üçgen, D ∈ [BC], [AH] ⊥ [BC], |AH| = 7 birim ve |DC| = 8 birimdir.\nBuna göre, ADC üçgeninin alanı kaç birimkaredir?",
+    "options": [
+        "A) 24",
+        "B) 28",
+        "C) 32",
+        "D) 36",
+        "E) 42"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "ADC üçgeninin [DC] tabanına ait yüksekliği |AH| = 7'dir. Alan = 8·7/2 = 28 birimkare.",
+    "img": "img/geometri/soru-5-1.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_5_sorulari.push({
+    "question": "Şekilde ABC bir üçgen, |AB| = 8 birim, |AC| = 10 birim ve m(BAC) = 30°'dir.\nBuna göre, ABC üçgeninin alanı kaç birimkaredir?",
+    "options": [
+        "A) 12",
+        "B) 14",
+        "C) 16",
+        "D) 18",
+        "E) 20"
+    ],
+    "correctAnswerIndex": 4,
+    "explanation": "Alan = (1/2)·|AB|·|AC|·sin A = (1/2)·8·10·(1/2) = 20 birimkare.",
+    "img": "img/geometri/soru-5-2.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_5_sorulari.push({
+    "question": "Şekildeki ABC üçgeninde |AB| = 13 birim, |BC| = 14 birim ve |AC| = 15 birimdir.\nBuna göre, ABC üçgeninin alanı kaç birimkaredir?",
+    "options": [
+        "A) 72",
+        "B) 76",
+        "C) 80",
+        "D) 84",
+        "E) 88"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "u = (13 + 14 + 15)/2 = 21. Heron: Alan = √(21·8·7·6) = √7056 = 84 birimkare.",
+    "img": "img/geometri/soru-5-3.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_5_sorulari.push({
+    "question": "Şekildeki ABC dik üçgeninde [AB] ⊥ [AC], |AB| = 6 birim ve |AC| = 8 birimdir. O merkezli çember üçgenin kenarlarına içten teğettir.\nBuna göre, çemberin yarıçapı kaç birimdir?",
+    "options": [
+        "A) 2",
+        "B) 2,5",
+        "C) 3",
+        "D) 3,5",
+        "E) 4"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "|BC| = 10. Alan = 24, u = 12. r = Alan/u = 24/12 = 2 birim. (Dik üçgende r = (6 + 8 − 10)/2 = 2.)",
+    "img": "img/geometri/soru-5-4.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+// <<< şekilli sorular

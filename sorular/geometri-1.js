@@ -133,3 +133,65 @@ window.geometri_1_sorulari = [
     "explanation": "Beş köşeli yıldızda a+b+c+d+e = 180°."
 }
 ];
+// >>> şekilli sorular: scripts/build_geo_questions.py üretir, elle düzenleme
+window.geometri_1_sorulari.push({
+    "question": "Şekilde ABC bir üçgen, B, C ve D noktaları doğrusaldır.\nm(BAC) = x + 20°, m(ABC) = 2x ve m(ACD) = 110° olduğuna göre, x kaç derecedir?",
+    "options": [
+        "A) 30°",
+        "B) 35°",
+        "C) 40°",
+        "D) 45°",
+        "E) 50°"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Dış açı, kendisine komşu olmayan iki iç açının toplamıdır: (x + 20) + 2x = 110 → 3x = 90 → x = 30°.",
+    "img": "img/geometri/soru-1-1.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_1_sorulari.push({
+    "question": "Şekildeki ABCD içbükey dörtgeninde m(DAB) = 25°, m(ABC) = 40° ve m(BCD) = 30°'dir.\nBuna göre, m(ADC) = x kaç derecedir?",
+    "options": [
+        "A) 85°",
+        "B) 90°",
+        "C) 95°",
+        "D) 100°",
+        "E) 105°"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "İçbükey dörtgende (bumerang) göbek açısı, uçlardaki üç açının toplamıdır: x = 25 + 40 + 30 = 95°.",
+    "img": "img/geometri/soru-1-2.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_1_sorulari.push({
+    "question": "Şekilde ABC bir üçgen, [BE] ve [CE] sırasıyla B ve C açılarının açıortaylarıdır.\nm(BAC) = 64° olduğuna göre, m(BEC) = x kaç derecedir?",
+    "options": [
+        "A) 112°",
+        "B) 116°",
+        "C) 118°",
+        "D) 122°",
+        "E) 126°"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "İki iç açıortayın kesişiminde oluşan açı: x = 90° + m(A)/2 = 90 + 32 = 122°.",
+    "img": "img/geometri/soru-1-3.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_1_sorulari.push({
+    "question": "Şekilde ABC bir üçgen, [AH] ⊥ [BC] ve [AD], A açısının açıortayıdır.\nm(ABC) = 72° ve m(ACB) = 36° olduğuna göre, m(HAD) = x kaç derecedir?",
+    "options": [
+        "A) 10°",
+        "B) 12°",
+        "C) 14°",
+        "D) 16°",
+        "E) 18°"
+    ],
+    "correctAnswerIndex": 4,
+    "explanation": "m(A) = 180 − 72 − 36 = 72°, m(DAC) = 36°. AHC dik üçgeninde m(HAC) = 90 − 36 = 54°. x = 54 − 36 = 18°. (Kısa yol: x = (72 − 36)/2 = 18°.)",
+    "img": "img/geometri/soru-1-4.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+// <<< şekilli sorular

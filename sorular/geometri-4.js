@@ -241,3 +241,65 @@ window.geometri_4_sorulari = [
     "explanation": "2V_a²=25+49−32=42 → V_a=√21."
 }
 ];
+// >>> şekilli sorular: scripts/build_geo_questions.py üretir, elle düzenleme
+window.geometri_4_sorulari.push({
+    "question": "Şekilde ABC bir üçgen, [AD] A açısının açıortayı, |AB| = 6 birim, |AC| = 9 birim ve |BC| = 10 birimdir.\nBuna göre, |BD| = x kaç birimdir?",
+    "options": [
+        "A) 2",
+        "B) 2,5",
+        "C) 3",
+        "D) 3,5",
+        "E) 4"
+    ],
+    "correctAnswerIndex": 4,
+    "explanation": "İç açıortay teoremi: |BD|/|DC| = |AB|/|AC| = 6/9 = 2/3. |BC| = 10 → |BD| = 10·2/5 = 4.",
+    "img": "img/geometri/soru-4-1.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_4_sorulari.push({
+    "question": "Şekilde ABC bir üçgen, [AD] A açısının açıortayı, |AB| = 6 birim, |AC| = 9 birim, |BD| = 4 birim ve |DC| = 6 birimdir.\nBuna göre, |AD| = x kaç birimdir?",
+    "options": [
+        "A) 2√6",
+        "B) √26",
+        "C) 2√7",
+        "D) √30",
+        "E) 4√2"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "Açıortay uzunluğu: x² = |AB|·|AC| − |BD|·|DC| = 54 − 24 = 30 → x = √30.",
+    "img": "img/geometri/soru-4-2.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_4_sorulari.push({
+    "question": "Şekildeki ABC dik üçgeninde [AB] ⊥ [AC], [AD] kenarortay ve G noktası ABC üçgeninin ağırlık merkezidir.\n|BC| = 18 birim olduğuna göre, |AG| kaç birimdir?",
+    "options": [
+        "A) 3",
+        "B) 6",
+        "C) 8",
+        "D) 9",
+        "E) 12"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Dik üçgende hipotenüse ait kenarortay hipotenüsün yarısıdır: |AD| = 9. Ağırlık merkezi kenarortayı 2:1 böler: |AG| = 9·2/3 = 6.",
+    "img": "img/geometri/soru-4-3.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_4_sorulari.push({
+    "question": "Şekilde ABC bir üçgen, [AD] kenarortay, |AB| = 5 birim, |AC| = 7 birim ve |BC| = 8 birimdir.\nBuna göre, |AD| = x kaç birimdir?",
+    "options": [
+        "A) √21",
+        "B) √23",
+        "C) 5",
+        "D) √26",
+        "E) 3√3"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Kenarortay bağıntısı: 4x² = 2·7² + 2·5² − 8² = 98 + 50 − 64 = 84 → x² = 21 → x = √21.",
+    "img": "img/geometri/soru-4-4.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+// <<< şekilli sorular

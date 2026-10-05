@@ -9,6 +9,8 @@ import { trError } from "../lib/trError";
 import taban from "../content/tabanPuanlar.json";
 import { Card, PrimaryButton, ScrollScreen, Badge, PageHeader } from "../ui";
 import { colors } from "../lib/theme";
+import { questionImages } from "../lib/media";
+import { ZoomableImage } from "../components/ZoomableImage";
 
 function stripChoicePrefix(opt) {
     return String(opt || "").replace(/^[A-Ea-e][\s\)\.:\-]+\s*/, "").trim();
@@ -351,6 +353,9 @@ export function AiScreen({ navigation }) {
                         <Text style={[styles.aiQuestion, isDark && styles.textLight]}>
                             {item.q.question}
                         </Text>
+                        {questionImages(item.q).map(function (uri, gi) {
+                            return <View key={uri + gi} style={{ marginTop: 10 }}><ZoomableImage uri={uri} dark={isDark} /></View>;
+                        })}
                     </View>
                     <View style={styles.aiCorrect}>
                         <Text style={styles.aiCorrectLabel}>✅ Doğru Cevap</Text>

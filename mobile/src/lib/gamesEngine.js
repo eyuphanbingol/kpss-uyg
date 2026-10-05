@@ -113,6 +113,8 @@ import { GamesBank } from "./gamesBank";
         Object.keys(kpssData || {}).forEach(function (ders) {
             Object.keys(kpssData[ders] || {}).forEach(function (konu) {
                 ((kpssData[ders][konu] && kpssData[ders][konu].sorular) || []).forEach(function (q) {
+                    // görselli sorular oyunlarda görselsiz anlamsız kalır
+                    if (!q || q.img || q.imgs) return;
                     fn(ders, konu, q);
                 });
             });

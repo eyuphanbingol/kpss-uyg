@@ -241,3 +241,65 @@ window.geometri_8_sorulari = [
     "explanation": "(7+13)·6/2 = 60 cm²."
 }
 ];
+// >>> şekilli sorular: scripts/build_geo_questions.py üretir, elle düzenleme
+window.geometri_8_sorulari.push({
+    "question": "Şekildeki ABCD yamuğunda [AB] ∥ [DC], E ve F bulundukları kenarların orta noktalarıdır.\n|AB| = 14 birim ve |DC| = 8 birim olduğuna göre, |EF| = x kaç birimdir?",
+    "options": [
+        "A) 7",
+        "B) 8",
+        "C) 9",
+        "D) 10",
+        "E) 11"
+    ],
+    "correctAnswerIndex": 4,
+    "explanation": "Yamukta orta taban, tabanların aritmetik ortalamasıdır: x = (14 + 8)/2 = 11.",
+    "img": "img/geometri/soru-8-1.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_8_sorulari.push({
+    "question": "Şekildeki ABCD yamuğunda [AB] ∥ [DC], [DH] ⊥ [AB], |AB| = 12 birim, |DC| = 6 birim ve |DH| = 5 birimdir.\nBuna göre, ABCD yamuğunun alanı kaç birimkaredir?",
+    "options": [
+        "A) 45",
+        "B) 48",
+        "C) 54",
+        "D) 60",
+        "E) 90"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Yamuğun alanı = (taban toplamı)·yükseklik/2 = (12 + 6)·5/2 = 45 birimkare.",
+    "img": "img/geometri/soru-8-2.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_8_sorulari.push({
+    "question": "Şekildeki ABCD dörtgeninde köşegenler birbirine diktir.\n|AB| = 5 birim, |BC| = 4√5 birim ve |CD| = 10 birim olduğuna göre, |AD| = x kaç birimdir?",
+    "options": [
+        "A) √30",
+        "B) 3√5",
+        "C) 4√3",
+        "D) 7",
+        "E) 2√13"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Köşegenleri dik dörtgende karşılıklı kenarların kareleri toplamı eşittir: 5² + 10² = (4√5)² + x² → 125 = 80 + x² → x = √45 = 3√5.",
+    "img": "img/geometri/soru-8-3.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_8_sorulari.push({
+    "question": "Şekildeki ABCD dörtgeninde m(DAB) = x + 20°, m(ABC) = 2x, m(BCD) = 100° ve [DA] ⊥ [DC]'dir.\nBuna göre, x kaç derecedir?",
+    "options": [
+        "A) 35°",
+        "B) 40°",
+        "C) 45°",
+        "D) 50°",
+        "E) 55°"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "Dörtgenin iç açıları toplamı 360°: (x + 20) + 2x + 100 + 90 = 360 → 3x = 150 → x = 50°.",
+    "img": "img/geometri/soru-8-4.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+// <<< şekilli sorular

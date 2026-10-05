@@ -241,3 +241,65 @@ window.geometri_6_sorulari = [
     "explanation": "4·(5/2)=10."
 }
 ];
+// >>> şekilli sorular: scripts/build_geo_questions.py üretir, elle düzenleme
+window.geometri_6_sorulari.push({
+    "question": "Şekilde ABC bir üçgen, [DE] ∥ [BC], |AD| = 4 birim, |DB| = 6 birim ve |DE| = 6 birimdir.\nBuna göre, |BC| = x kaç birimdir?",
+    "options": [
+        "A) 12",
+        "B) 13,5",
+        "C) 15",
+        "D) 16",
+        "E) 18"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "ADE ∼ ABC: |AD|/|AB| = |DE|/|BC| → 4/10 = 6/x → x = 15.",
+    "img": "img/geometri/soru-6-1.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_6_sorulari.push({
+    "question": "Şekilde ABC bir üçgen, [DE] ∥ [BC], |AD| = 2 birim ve |DB| = 4 birimdir. ADE üçgeninin alanı 5 birimkaredir.\nBuna göre, DBCE dörtgeninin alanı kaç birimkaredir?",
+    "options": [
+        "A) 36",
+        "B) 40",
+        "C) 44",
+        "D) 45",
+        "E) 48"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Benzerlik oranı |AD|/|AB| = 2/6 = 1/3, alanlar oranı 1/9. A(ABC) = 45. A(DBCE) = 45 − 5 = 40 birimkare.",
+    "img": "img/geometri/soru-6-2.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_6_sorulari.push({
+    "question": "Şekilde d₁ ∥ d₂ ∥ d₃ doğruları iki kesenle kesilmiştir. Kesenlerden biri üzerinde ayrılan parçalar 4 ve 6 birim, diğeri üzerinde 6 ve x birimdir.\nBuna göre, x kaçtır?",
+    "options": [
+        "A) 9",
+        "B) 10",
+        "C) 12",
+        "D) 14",
+        "E) 15"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Thales teoremi: 4/6 = 6/x → x = 9.",
+    "img": "img/geometri/soru-6-3.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_6_sorulari.push({
+    "question": "Şekilde [AB] ∥ [DC], [AC] ile [BD] doğru parçaları E noktasında kesişmektedir.\n|AB| = 6 birim, |DC| = 9 birim ve |AE| = 4 birim olduğuna göre, |EC| = x kaç birimdir?",
+    "options": [
+        "A) 2",
+        "B) 3",
+        "C) 4",
+        "D) 5",
+        "E) 6"
+    ],
+    "correctAnswerIndex": 4,
+    "explanation": "ABE ∼ CDE (kelebek benzerliği): |AE|/|EC| = |AB|/|DC| → 4/x = 6/9 → x = 6.",
+    "img": "img/geometri/soru-6-4.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+// <<< şekilli sorular

@@ -65,6 +65,10 @@ var htmlTagsDark = {
     h5: { fontSize: 13, fontWeight: "700", color: "#94A3B8", margin: 0 },
 };
 
+// Geometride formüllerdeki küçük harfler (a, b, x) büyütülmez.
+var htmlTagsPlain = Object.assign({}, htmlTags, { h4: Object.assign({}, htmlTags.h4, { textTransform: "none", letterSpacing: 0.1 }) });
+var htmlTagsDarkPlain = Object.assign({}, htmlTagsDark, { h4: Object.assign({}, htmlTagsDark.h4, { textTransform: "none", letterSpacing: 0.1 }) });
+
 var ignored = ["width", "minWidth", "maxWidth", "height", "flex", "flexDirection", "flexGrow", "flexShrink", "flexBasis", "position", "left", "right", "top", "bottom", "display", "color", "backgroundColor"];
 
 function wrapHtml(html) {
@@ -77,7 +81,7 @@ var NoteRich = memo(function NoteRich(props) {
         <RenderHTML
             contentWidth={CONTENT_W}
             source={{ html: wrapHtml(props.html), baseUrl: "https://www.atanly.com/" }}
-            tagsStyles={props.dark ? htmlTagsDark : htmlTags}
+            tagsStyles={props.plain ? (props.dark ? htmlTagsDarkPlain : htmlTagsPlain) : (props.dark ? htmlTagsDark : htmlTags)}
             ignoredStyles={ignored}
             baseStyle={{ fontSize: 15, lineHeight: 22, color: ink }}
             defaultTextProps={{ selectable: false, style: { color: ink } }}
@@ -97,7 +101,7 @@ var BadgeRow = memo(function BadgeRow(props) {
 var HeadingRow = memo(function HeadingRow(props) {
     return (
         <View style={styles.heading}>
-            <NoteRich html={"<h4>" + props.html + "</h4>"} dark={props.dark} />
+            <NoteRich html={"<h4>" + props.html + "</h4>"} dark={props.dark} plain={props.plain} />
         </View>
     );
 });
@@ -222,14 +226,14 @@ export default function NotesScreen({ route, navigation }) {
 
     var renderItem = useCallback(function ({ item }) {
         if (item.type === "title") return <BadgeRow html={item.html} dark={isDark} />;
-        if (item.type === "heading") return <HeadingRow html={item.html} dark={isDark} />;
+        if (item.type === "heading") return <HeadingRow html={item.html} dark={isDark} plain={ders === "Geometri"} />;
         if (item.type === "kicker") return <KickerRow html={item.html} dark={isDark} />;
         if (item.type === "badge") return <BadgeRow html={item.html} dark={isDark} />;
         if (item.type === "img") return <ImgCard src={item.src} dark={isDark} />;
         if (item.type === "svg") return <SvgCard xml={item.xml} dark={isDark} />;
         if (item.type === "table") return <TableCard html={item.html} dark={isDark} />;
         return <ItemCard html={item.html} dark={isDark} />;
-    }, [isDark]);
+    }, [isDark, ders]);
 
     var keyExtractor = useCallback(function (item, i) {
         return item.type + "-" + i;

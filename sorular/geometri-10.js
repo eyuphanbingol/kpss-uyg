@@ -241,3 +241,65 @@ window.geometri_10_sorulari = [
     "explanation": "(3√3/2)·36 = 54√3 cm²."
 }
 ];
+// >>> şekilli sorular: scripts/build_geo_questions.py üretir, elle düzenleme
+window.geometri_10_sorulari.push({
+    "question": "Şekildeki ABCDEF düzgün altıgeninin bir kenarı 4 birimdir.\nBuna göre, altıgenin alanı kaç birimkaredir?",
+    "options": [
+        "A) 6√3",
+        "B) 8√3",
+        "C) 12√3",
+        "D) 16√3",
+        "E) 24√3"
+    ],
+    "correctAnswerIndex": 4,
+    "explanation": "Düzgün altıgen 6 eşkenar üçgenden oluşur: 6·(4²√3/4) = 6·4√3 = 24√3 birimkare.",
+    "img": "img/geometri/soru-10-1.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_10_sorulari.push({
+    "question": "Şekildeki ABCDE düzgün beşgeninde [AC] köşegeni çizilmiştir.\nBuna göre, m(BAC) = x kaç derecedir?",
+    "options": [
+        "A) 30°",
+        "B) 36°",
+        "C) 42°",
+        "D) 54°",
+        "E) 72°"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Düzgün beşgenin bir iç açısı (5 − 2)·180/5 = 108°. ABC ikizkenar üçgen: x = (180 − 108)/2 = 36°.",
+    "img": "img/geometri/soru-10-2.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_10_sorulari.push({
+    "question": "Şekildeki ABCDEFGH düzgün sekizgeninde [AC] köşegeni çizilmiştir.\nBuna göre, m(ACB) = x kaç derecedir?",
+    "options": [
+        "A) 15°",
+        "B) 18°",
+        "C) 20°",
+        "D) 22,5°",
+        "E) 30°"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "Düzgün sekizgenin bir iç açısı (8 − 2)·180/8 = 135°. ABC ikizkenar üçgen: x = (180 − 135)/2 = 22,5°.",
+    "img": "img/geometri/soru-10-3.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_10_sorulari.push({
+    "question": "Şekildeki ABCDEF düzgün altıgeninin bir kenarı 6 birimdir.\nBuna göre, |AC| = x kaç birimdir?",
+    "options": [
+        "A) 6",
+        "B) 6√2",
+        "C) 9",
+        "D) 10",
+        "E) 6√3"
+    ],
+    "correctAnswerIndex": 4,
+    "explanation": "m(ABC) = 120°, |AB| = |BC| = 6. Kosinüs teoremi ya da 30°-60°-90° üçgeni ile |AC| = 6√3.",
+    "img": "img/geometri/soru-10-4.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+// <<< şekilli sorular

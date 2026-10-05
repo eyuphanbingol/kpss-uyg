@@ -391,30 +391,30 @@
     <script defer src="sorular/guncel-6.js?v=6"></script>
     <script defer src="sorular/guncel-7.js?v=6"></script>
     <script defer src="sorular/guncel-8.js?v=6"></script>
-    <script defer src="sorular/geometri-1.js?v=4"></script>
-    <script defer src="sorular/geometri-2.js?v=3"></script>
-    <script defer src="sorular/geometri-3.js?v=3"></script>
-    <script defer src="sorular/geometri-4.js?v=3"></script>
-    <script defer src="sorular/geometri-5.js?v=3"></script>
-    <script defer src="sorular/geometri-6.js?v=3"></script>
-    <script defer src="sorular/geometri-7.js?v=3"></script>
-    <script defer src="sorular/geometri-8.js?v=3"></script>
-    <script defer src="sorular/geometri-9.js?v=3"></script>
-    <script defer src="sorular/geometri-10.js?v=2"></script>
-    <script defer src="sorular/geometri-11.js?v=3"></script>
-    <script defer src="sorular/geometri-12.js?v=3"></script>
+    <script defer src="sorular/geometri-1.js?v=5"></script>
+    <script defer src="sorular/geometri-2.js?v=4"></script>
+    <script defer src="sorular/geometri-3.js?v=4"></script>
+    <script defer src="sorular/geometri-4.js?v=4"></script>
+    <script defer src="sorular/geometri-5.js?v=4"></script>
+    <script defer src="sorular/geometri-6.js?v=4"></script>
+    <script defer src="sorular/geometri-7.js?v=4"></script>
+    <script defer src="sorular/geometri-8.js?v=4"></script>
+    <script defer src="sorular/geometri-9.js?v=4"></script>
+    <script defer src="sorular/geometri-10.js?v=3"></script>
+    <script defer src="sorular/geometri-11.js?v=4"></script>
+    <script defer src="sorular/geometri-12.js?v=4"></script>
 
     <script defer src="data.js?v=37"></script>
     <script defer src="js/config.js?v=27"></script>
     <script defer src="js/trError.js?v=2"></script>
-    <script defer src="js/store.js?v=49"></script>
+    <script defer src="js/store.js?v=50"></script>
     <script defer src="js/planner.js?v=22"></script>
     <script defer src="js/smartPlan.js?v=1"></script>
     <script defer src="js/alan.js?v=6"></script>
     <script defer src="js/clozeEngine.js?v=11"></script>
     <script defer src="js/mapQuiz.js?v=32"></script>
     <script defer src="js/gamesBank.js?v=10"></script>
-    <script defer src="js/gamesEngine.js?v=17"></script>
+    <script defer src="js/gamesEngine.js?v=18"></script>
     <script defer src="js/scoreEngine.js?v=8"></script>
     <script defer src="js/paymentClient.js?v=15"></script>
     <script defer src="js/notificationEngine.js?v=9"></script>
@@ -1033,6 +1033,10 @@
         }
 
         /* ---- Konu notlarındaki geometri şekilleri ---- */
+        /* geometride formüller (a, b, x, α…) büyük harfe çevrilmez: a ile A farklı şeydir */
+        .note-html.note-math h4, .note-html.note-math .note-sub { text-transform: none !important; letter-spacing: 0.01em; font-size: 13px !important; }
+        /* geometri soru şekilleri: masaüstünde dev görünmesin */
+        img[src*="img/geometri/"] { max-width: 460px; margin-left: auto; margin-right: auto; display: block; background: #fff !important; }
         svg.geo-fig, .study-card-body svg.geo-fig { display: block; width: 100%; max-width: 420px !important; height: auto; margin: 0.75rem auto !important; }
         /* ---- Akıllı KPSS programı ---- */
         .plan-hero { background: linear-gradient(135deg, #0D2C4D, #14607a 60%, #0f766e); color: #fff; box-shadow: 0 24px 50px -26px rgba(4, 28, 36, .6); }
@@ -2665,7 +2669,7 @@
     <script>
         // js/app.jsx derlenmiş hâliyle önbellekten açılır (bkz. js/jsxLoader.js). Değişince ?v= artır.
         document.addEventListener("DOMContentLoaded", function () {
-            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=139");
+            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=140");
         });
     </script>
     <script>

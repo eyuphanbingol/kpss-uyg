@@ -241,3 +241,65 @@ window.geometri_11_sorulari = [
     "explanation": "π·16·90/360 = 4π cm²."
 }
 ];
+// >>> şekilli sorular: scripts/build_geo_questions.py üretir, elle düzenleme
+window.geometri_11_sorulari.push({
+    "question": "Şekilde O merkezli çemberde A, B ve C noktaları çember üzerindedir.\nm(AOB) = 110° olduğuna göre, m(ACB) = x kaç derecedir?",
+    "options": [
+        "A) 55°",
+        "B) 60°",
+        "C) 65°",
+        "D) 70°",
+        "E) 75°"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Aynı yayı gören çevre açı, merkez açının yarısıdır: x = 110/2 = 55°.",
+    "img": "img/geometri/soru-11-1.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_11_sorulari.push({
+    "question": "Şekilde [AB], O merkezli çemberin çapı ve C noktası çember üzerindedir.\nm(CAB) = 32° olduğuna göre, m(ABC) = x kaç derecedir?",
+    "options": [
+        "A) 48°",
+        "B) 52°",
+        "C) 56°",
+        "D) 58°",
+        "E) 64°"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "Çapı gören çevre açı 90°'dir: m(ACB) = 90°. x = 180 − 90 − 32 = 58°.",
+    "img": "img/geometri/soru-11-2.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_11_sorulari.push({
+    "question": "Şekilde P noktasından çizilen iki kesen çemberi A, B ve C, D noktalarında kesmektedir.\n|PA| = 4 birim, |AB| = 5 birim ve |PC| = 3 birim olduğuna göre, |CD| = x kaç birimdir?",
+    "options": [
+        "A) 7",
+        "B) 8",
+        "C) 9",
+        "D) 10",
+        "E) 12"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Noktanın çembere göre kuvveti: |PA|·|PB| = |PC|·|PD| → 4·9 = 3·(3 + x) → 3 + x = 12 → x = 9.",
+    "img": "img/geometri/soru-11-3.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_11_sorulari.push({
+    "question": "Şekilde [PT, çembere T noktasında teğettir. P, A ve B noktaları doğrusaldır.\n|PA| = 4 birim ve |AB| = 12 birim olduğuna göre, |PT| = x kaç birimdir?",
+    "options": [
+        "A) 4",
+        "B) 5",
+        "C) 6",
+        "D) 7",
+        "E) 8"
+    ],
+    "correctAnswerIndex": 4,
+    "explanation": "Teğet-kesen bağıntısı: x² = |PA|·|PB| = 4·16 = 64 → x = 8.",
+    "img": "img/geometri/soru-11-4.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+// <<< şekilli sorular

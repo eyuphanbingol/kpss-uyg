@@ -2331,7 +2331,7 @@ function KonuHub(props) {
                                 <button key={p.no} disabled={!packOpen} onClick={function () { if (packOpen) props.onTest(pi); }}
                                     className={"group text-left p-6 border rounded-3xl " + (packDone ? "bg-emerald-50 dark:bg-emerald-950/40 border-emerald-200" : (packOpen ? "bg-stone-50 dark:bg-stone-900 border-stone-300 card-hover" : "bg-stone-50 dark:bg-stone-900 border-stone-200 opacity-45"))}>
                                     <div className={"h-12 w-12 rounded-2xl flex items-center justify-center text-white font-black mb-3 " + (packDone ? "bg-emerald-500" : "bg-gradient-to-br from-indigo-600 to-purple-600")}>{packDone ? "✓" : p.no}</div>
-                                    <h3 className="text-lg font-bold text-stone-900 dark:text-stone-50 mb-1">Test {p.no}</h3>
+                                    <h3 className="text-lg font-bold text-stone-900 dark:text-stone-50 mb-1">Test {p.no}{p.sekilli ? " · Şekilli sorular" : ""}</h3>
                                     <p className="text-sm text-stone-500">{packDone ? "Çözüldü" : (packOpen ? (p.items.length + " soru") : ("Önce Test " + (p.no - 1) + "’i bitir"))}</p>
                                 </button>
                             );
@@ -2430,7 +2430,7 @@ function NotesView(props) {
                         </div>
                         <div className="note-progress">{idx + 1}/{notlar.length}</div>
                     </header>
-                    <div key={idx} className="study-card-body note-html text-[16px] leading-relaxed" dangerouslySetInnerHTML={{ __html: shapeNoteHtml(notlar[idx]) }} />
+                    <div key={idx} className={"study-card-body note-html text-[16px] leading-relaxed" + (props.ders === "Geometri" ? " note-math" : "")} dangerouslySetInnerHTML={{ __html: shapeNoteHtml(notlar[idx]) }} />
                     <footer className="study-card-foot">
                         <button disabled={idx === 0} onClick={function () { props.onIndex(idx - 1); }}
                             className={"back-btn " + (idx === 0 ? "opacity-30 pointer-events-none" : "")}>
@@ -2620,6 +2620,7 @@ function ResultView(props) {
                                 return (
                                     <div key={i} className="p-4 rounded-xl bg-slate-50 dark:bg-slate-700/30 border text-left">
                                         <p className="text-sm font-semibold whitespace-pre-line">{w.question}</p>
+                                        {SoruGorsel(w)}
                                         <p className="text-xs mt-2 text-emerald-600 font-bold">Doğru: {w.dogru}</p>
                                         {w.ders ? (
                                             <button type="button" onClick={function () { StudentStore.toggleReviewBook(w.ders, w.konu, w.id); }}
@@ -3594,7 +3595,7 @@ function App() {
             setScore(scoreRef.current);
         }
             else setWrongList(function (w) {
-            return w.concat([{ question: item.q.question, dogru: stripChoicePrefix(item.q.options[item.q.correctAnswerIndex]), ders: item.ders, konu: item.konu, id: item.id }]);
+            return w.concat([{ question: item.q.question, img: item.q.img, imgs: item.q.imgs, imgAlt: item.q.imgAlt, dogru: stripChoicePrefix(item.q.options[item.q.correctAnswerIndex]), ders: item.ders, konu: item.konu, id: item.id }]);
         });
     }
 

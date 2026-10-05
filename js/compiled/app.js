@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:225060:1iy4yyr*/
+/*jsx:babel-7.29.9-react-classic:225266:17lk4wo*/
 const {
   useState,
   useEffect,
@@ -3527,7 +3527,7 @@ function KonuHub(props) {
       className: "h-12 w-12 rounded-2xl flex items-center justify-center text-white font-black mb-3 " + (packDone ? "bg-emerald-500" : "bg-gradient-to-br from-indigo-600 to-purple-600")
     }, packDone ? "✓" : p.no), /*#__PURE__*/React.createElement("h3", {
       className: "text-lg font-bold text-stone-900 dark:text-stone-50 mb-1"
-    }, "Test ", p.no), /*#__PURE__*/React.createElement("p", {
+    }, "Test ", p.no, p.sekilli ? " · Şekilli sorular" : ""), /*#__PURE__*/React.createElement("p", {
       className: "text-sm text-stone-500"
     }, packDone ? "Çözüldü" : packOpen ? p.items.length + " soru" : "Önce Test " + (p.no - 1) + "’i bitir"));
   }))) : /*#__PURE__*/React.createElement("p", {
@@ -3633,7 +3633,7 @@ function NotesView(props) {
     className: "note-progress"
   }, idx + 1, "/", notlar.length)), /*#__PURE__*/React.createElement("div", {
     key: idx,
-    className: "study-card-body note-html text-[16px] leading-relaxed",
+    className: "study-card-body note-html text-[16px] leading-relaxed" + (props.ders === "Geometri" ? " note-math" : ""),
     dangerouslySetInnerHTML: {
       __html: shapeNoteHtml(notlar[idx])
     }
@@ -3919,7 +3919,7 @@ function ResultView(props) {
       className: "p-4 rounded-xl bg-slate-50 dark:bg-slate-700/30 border text-left"
     }, /*#__PURE__*/React.createElement("p", {
       className: "text-sm font-semibold whitespace-pre-line"
-    }, w.question), /*#__PURE__*/React.createElement("p", {
+    }, w.question), SoruGorsel(w), /*#__PURE__*/React.createElement("p", {
       className: "text-xs mt-2 text-emerald-600 font-bold"
     }, "Do\u011Fru: ", w.dogru), w.ders ? /*#__PURE__*/React.createElement("button", {
       type: "button",
@@ -5190,6 +5190,9 @@ function App() {
     } else setWrongList(function (w) {
       return w.concat([{
         question: item.q.question,
+        img: item.q.img,
+        imgs: item.q.imgs,
+        imgAlt: item.q.imgAlt,
         dogru: stripChoicePrefix(item.q.options[item.q.correctAnswerIndex]),
         ders: item.ders,
         konu: item.konu,

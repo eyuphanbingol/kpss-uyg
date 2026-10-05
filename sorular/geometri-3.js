@@ -241,3 +241,65 @@ window.geometri_3_sorulari = [
     "explanation": "x²=289−40=249 → x=√249."
 }
 ];
+// >>> şekilli sorular: scripts/build_geo_questions.py üretir, elle düzenleme
+window.geometri_3_sorulari.push({
+    "question": "Şekilde ABC bir üçgen, D ∈ [AC], |AB| = |AC| ve |BD| = |BC|'dir.\nm(BAC) = 36° olduğuna göre, m(ABD) = x kaç derecedir?",
+    "options": [
+        "A) 24°",
+        "B) 30°",
+        "C) 36°",
+        "D) 42°",
+        "E) 48°"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "|AB| = |AC| → m(B) = m(C) = 72°. |BD| = |BC| → m(BDC) = 72° → m(DBC) = 36°. x = 72 − 36 = 36°.",
+    "img": "img/geometri/soru-3-1.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_3_sorulari.push({
+    "question": "Şekildeki ABC eşkenar üçgeninin bir kenarı 8 birimdir.\nBuna göre, ABC üçgeninin alanı kaç birimkaredir?",
+    "options": [
+        "A) 16√3",
+        "B) 24√3",
+        "C) 32√3",
+        "D) 48√3",
+        "E) 64"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Eşkenar üçgenin alanı a²√3/4 = 64√3/4 = 16√3 birimkaredir.",
+    "img": "img/geometri/soru-3-2.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_3_sorulari.push({
+    "question": "Şekilde ABC bir üçgen, D ∈ [BC], |AB| = |AC| = 10 birim, |BD| = 3 birim ve |DC| = 12 birimdir.\nBuna göre, |AD| = x kaç birimdir?",
+    "options": [
+        "A) 4",
+        "B) 5",
+        "C) 6",
+        "D) 7",
+        "E) 8"
+    ],
+    "correctAnswerIndex": 4,
+    "explanation": "İkizkenar üçgende tabana çizilen doğru parçası için x² = b² − m·n = 100 − 36 = 64 → x = 8.",
+    "img": "img/geometri/soru-3-3.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_3_sorulari.push({
+    "question": "Şekilde ABC bir üçgen, D ∈ [BC], |AB| = |AC| ve |AD| = |DC|'dir.\nm(BAD) = 69° olduğuna göre, m(ABC) = x kaç derecedir?",
+    "options": [
+        "A) 35°",
+        "B) 37°",
+        "C) 39°",
+        "D) 41°",
+        "E) 43°"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "m(B) = m(C) = x ve |AD| = |DC| → m(DAC) = x. m(A) = 180 − 2x = 69 + x → 3x = 111 → x = 37°.",
+    "img": "img/geometri/soru-3-4.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+// <<< şekilli sorular

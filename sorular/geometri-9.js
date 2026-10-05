@@ -241,3 +241,65 @@ window.geometri_9_sorulari = [
     "explanation": "36+f²=100 → f²=64 → f=8."
 }
 ];
+// >>> şekilli sorular: scripts/build_geo_questions.py üretir, elle düzenleme
+window.geometri_9_sorulari.push({
+    "question": "Şekildeki ABCD paralelkenarında [AE], A açısının açıortayı ve E ∈ [DC]'dir.\n|AD| = 7 birim ve |AB| = 12 birim olduğuna göre, |EC| = x kaç birimdir?",
+    "options": [
+        "A) 5",
+        "B) 6",
+        "C) 7",
+        "D) 8",
+        "E) 9"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "[AB] ∥ [DC] olduğundan m(DEA) = m(EAB) = m(DAE). ADE ikizkenar: |DE| = |AD| = 7. |DC| = 12 → x = 12 − 7 = 5.",
+    "img": "img/geometri/soru-9-1.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_9_sorulari.push({
+    "question": "Şekildeki ABCD eşkenar dörtgeninde köşegen uzunlukları |AC| = 16 birim ve |BD| = 12 birimdir.\nBuna göre, ABCD eşkenar dörtgeninin çevresi kaç birimdir?",
+    "options": [
+        "A) 24",
+        "B) 28",
+        "C) 32",
+        "D) 36",
+        "E) 40"
+    ],
+    "correctAnswerIndex": 4,
+    "explanation": "Eşkenar dörtgende köşegenler birbirini dik ortalar: kenar = √(8² + 6²) = 10. Çevre = 4·10 = 40 birim.",
+    "img": "img/geometri/soru-9-2.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_9_sorulari.push({
+    "question": "Şekildeki ABCD dikdörtgeninde |AB| = 15 birim ve |BC| = 8 birimdir.\nBuna göre, |AC| = x kaç birimdir?",
+    "options": [
+        "A) 15",
+        "B) 16",
+        "C) 17",
+        "D) 18",
+        "E) 19"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "ABC dik üçgeninde x² = 15² + 8² = 289 → x = 17.",
+    "img": "img/geometri/soru-9-3.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_9_sorulari.push({
+    "question": "Şekildeki ABCD deltoidinde |AB| = |AD| = 5 birim, |CB| = |CD| = 4√5 birim ve |BD| = 8 birimdir.\nBuna göre, ABCD deltoidinin alanı kaç birimkaredir?",
+    "options": [
+        "A) 36",
+        "B) 38",
+        "C) 40",
+        "D) 44",
+        "E) 48"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "Köşegenler diktir ve [AC], [BD]'yi ortalar: |BO| = 4. |AO| = √(25 − 16) = 3, |OC| = √(80 − 16) = 8. |AC| = 11. Alan = 11·8/2 = 44 birimkare.",
+    "img": "img/geometri/soru-9-4.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+// <<< şekilli sorular

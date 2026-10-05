@@ -958,11 +958,19 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
         isEmptyProgress: isEmptyProgress,
         topicTestPacks: function (items) {
             var size = 25;
-            var list = items || [];
+            var all = items || [];
+            // şekilli sorular (sekilli: true) konunun sonunda ayrı test olur; böylece eski
+            // testlerin numarası ve tamamlanma kaydı değişmez, yeni sorular yeni test olarak açılır
+            function isShape(x) { var q = x && x.q ? x.q : x; return !!(q && q.sekilli); }
+            var list = all.filter(function (x) { return !isShape(x); });
+            var shapes = all.filter(isShape);
             var out = [];
             var i;
             for (i = 0; i < list.length; i += size) {
                 out.push({ no: out.length + 1, items: list.slice(i, i + size) });
+            }
+            for (i = 0; i < shapes.length; i += size) {
+                out.push({ no: out.length + 1, items: shapes.slice(i, i + size), sekilli: true });
             }
             return out;
         },

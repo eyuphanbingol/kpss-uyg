@@ -241,3 +241,65 @@ window.geometri_12_sorulari = [
     "explanation": "V = (1/3)·45·4 = 60 cm³."
 }
 ];
+// >>> şekilli sorular: scripts/build_geo_questions.py üretir, elle düzenleme
+window.geometri_12_sorulari.push({
+    "question": "Şekildeki dikdörtgenler prizmasının ayrıt uzunlukları 12, 4 ve 3 birimdir.\nBuna göre, prizmanın [AK] cisim köşegeninin uzunluğu kaç birimdir?",
+    "options": [
+        "A) 12",
+        "B) 13",
+        "C) 14",
+        "D) 15",
+        "E) 16"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Cisim köşegeni = √(12² + 4² + 3²) = √(144 + 16 + 9) = √169 = 13 birim.",
+    "img": "img/geometri/soru-12-1.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_12_sorulari.push({
+    "question": "Şekildeki dik dairesel silindirin taban yarıçapı 3 birim, yüksekliği 8 birimdir.\nBuna göre, silindirin hacmi kaç birimküptür?",
+    "options": [
+        "A) 48π",
+        "B) 60π",
+        "C) 72π",
+        "D) 96π",
+        "E) 144π"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Silindirin hacmi = πr²h = π·9·8 = 72π birimküp.",
+    "img": "img/geometri/soru-12-2.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_12_sorulari.push({
+    "question": "Şekildeki dik dairesel koninin yüksekliği 8 birim, taban yarıçapı 6 birimdir.\nBuna göre, koninin yanal alanı kaç birimkaredir?",
+    "options": [
+        "A) 60π",
+        "B) 64π",
+        "C) 80π",
+        "D) 96π",
+        "E) 100π"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Ana doğru ℓ = √(6² + 8²) = 10. Yanal alan = π·r·ℓ = π·6·10 = 60π birimkare.",
+    "img": "img/geometri/soru-12-3.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_12_sorulari.push({
+    "question": "Şekilde bir ayrıtı 6 birim olan küpün içine, küpün tüm yüzlerine teğet olan bir küre yerleştirilmiştir.\nBuna göre, kürenin hacmi kaç birimküptür?",
+    "options": [
+        "A) 27π",
+        "B) 32π",
+        "C) 36π",
+        "D) 48π",
+        "E) 72π"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Kürenin çapı küpün ayrıtına eşittir: r = 3. Hacim = (4/3)πr³ = (4/3)·π·27 = 36π birimküp.",
+    "img": "img/geometri/soru-12-4.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+// <<< şekilli sorular

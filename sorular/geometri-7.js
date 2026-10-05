@@ -241,3 +241,65 @@ window.geometri_7_sorulari = [
     "explanation": "tan α = |0−1|/(1+0) = 1."
 }
 ];
+// >>> şekilli sorular: scripts/build_geo_questions.py üretir, elle düzenleme
+window.geometri_7_sorulari.push({
+    "question": "Şekildeki dik koordinat düzleminde A(1, 2) ve B(7, 10) noktaları verilmiştir.\nBuna göre, |AB| kaç birimdir?",
+    "options": [
+        "A) 10",
+        "B) 11",
+        "C) 12",
+        "D) 13",
+        "E) 14"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "|AB| = √[(7 − 1)² + (10 − 2)²] = √(36 + 64) = √100 = 10 birim.",
+    "img": "img/geometri/soru-7-1.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_7_sorulari.push({
+    "question": "Şekildeki d doğrusu x eksenini 4 noktasında, y eksenini 3 noktasında kesmektedir.\nBuna göre, d doğrusunun denklemi aşağıdakilerden hangisidir?",
+    "options": [
+        "A) 4x + 3y = 12",
+        "B) 3x − 4y = 12",
+        "C) 3x + 4y = 12",
+        "D) 4x − 3y = 12",
+        "E) 3x + 4y = 7"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Eksenleri kesen form: x/4 + y/3 = 1. Her iki taraf 12 ile çarpılırsa 3x + 4y = 12.",
+    "img": "img/geometri/soru-7-2.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_7_sorulari.push({
+    "question": "Şekilde 2x + 3y = 12 doğrusu ile koordinat eksenleri arasında kalan bölge taranmıştır.\nBuna göre, taralı bölgenin alanı kaç birimkaredir?",
+    "options": [
+        "A) 6",
+        "B) 8",
+        "C) 10",
+        "D) 12",
+        "E) 24"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "x = 0 → y = 4; y = 0 → x = 6. Taralı bölge dik kenarları 6 ve 4 olan dik üçgendir: Alan = 6·4/2 = 12 birimkare.",
+    "img": "img/geometri/soru-7-3.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_7_sorulari.push({
+    "question": "Şekildeki dik koordinat düzleminde M noktası [AB] doğru parçasının orta noktasıdır.\nA(−2, 5) ve B(6, −1) olduğuna göre, M noktasının koordinatları aşağıdakilerden hangisidir?",
+    "options": [
+        "A) (1, 2)",
+        "B) (2, 2)",
+        "C) (2, 3)",
+        "D) (4, 2)",
+        "E) (4, 3)"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Orta nokta: ((−2 + 6)/2, (5 + (−1))/2) = (2, 2).",
+    "img": "img/geometri/soru-7-4.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+// <<< şekilli sorular

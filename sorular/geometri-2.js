@@ -241,3 +241,65 @@ window.geometri_2_sorulari = [
     "explanation": "1<x<19 → x=2,...,18 → 17 değer."
 }
 ];
+// >>> şekilli sorular: scripts/build_geo_questions.py üretir, elle düzenleme
+window.geometri_2_sorulari.push({
+    "question": "Şekilde ABC bir dik üçgen, [AB] ⊥ [BC], D ∈ [BC]'dir.\n|AD| = 13 birim, |BD| = 5 birim ve |DC| = 11 birim olduğuna göre, |AC| = x kaç birimdir?",
+    "options": [
+        "A) 14",
+        "B) 16",
+        "C) 17",
+        "D) 18",
+        "E) 20"
+    ],
+    "correctAnswerIndex": 4,
+    "explanation": "ABD üçgeninde |AB|² = 13² − 5² = 144 → |AB| = 12. |BC| = 16. ABC'de x² = 12² + 16² = 400 → x = 20.",
+    "img": "img/geometri/soru-2-1.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_2_sorulari.push({
+    "question": "Şekildeki ABC dik üçgeninde [AB] ⊥ [BC], m(ACB) = 30° ve |AC| = 14 birimdir.\nBuna göre, |BC| = x kaç birimdir?",
+    "options": [
+        "A) 7√2",
+        "B) 7√3",
+        "C) 14",
+        "D) 7√6",
+        "E) 14√3"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "30°-60°-90° üçgeninde 30°'nin karşısı hipotenüsün yarısıdır: |AB| = 7. 60°'nin karşısı |AB|·√3 = 7√3.",
+    "img": "img/geometri/soru-2-2.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_2_sorulari.push({
+    "question": "Şekildeki ABC dik üçgeninde [AB] ⊥ [AC], [AH] ⊥ [BC]'dir.\n|BH| = 4 birim ve |HC| = 9 birim olduğuna göre, |AH| = x kaç birimdir?",
+    "options": [
+        "A) 3",
+        "B) 4",
+        "C) 5",
+        "D) 6",
+        "E) 8"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "Öklid bağıntısı: x² = |BH|·|HC| = 4·9 = 36 → x = 6.",
+    "img": "img/geometri/soru-2-3.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+window.geometri_2_sorulari.push({
+    "question": "Şekilde ABC bir üçgen, [AH] ⊥ [BC], m(ABC) = 45°, m(ACB) = 30° ve |AH| = 6 birimdir.\nBuna göre, |BC| kaç birimdir?",
+    "options": [
+        "A) 6 + 6√3",
+        "B) 6 + 6√2",
+        "C) 12",
+        "D) 12 + 6√3",
+        "E) 6√6"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "ABH ikizkenar dik üçgen: |BH| = 6. AHC 30°-60°-90° üçgeni: |HC| = 6√3. |BC| = 6 + 6√3.",
+    "img": "img/geometri/soru-2-4.png?v=1",
+    "imgAlt": "Soru şekli",
+    "sekilli": true
+});
+// <<< şekilli sorular
