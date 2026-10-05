@@ -14,7 +14,9 @@ run supabase/patch-privilege-lock.sql
 # 1. aşama sürümü kurulu bir veritabanına güncel yamayı uygulamak da çalışmalı
 git show f424260:supabase/patch-live-exam.sql > "${TMPDIR:-/tmp}/live-exam-phase1.sql"
 run "${TMPDIR:-/tmp}/live-exam-phase1.sql"
-run supabase/patch-live-exam.sql
-run supabase/patch-live-exam.sql   # iki kez çalıştırmak güvenli olmalı
+# kullanıcı SQL Editor'da parçaları sırayla çalıştırır: testler de parçalarla kurar
+node scripts/split-live-sql.js --check
+for f in $(ls supabase/canli-deneme/*.sql | sort -V); do run "$f"; done
+for f in $(ls supabase/canli-deneme/*.sql | sort -V); do run "$f"; done   # iki kez çalıştırmak güvenli olmalı
 psql -v ON_ERROR_STOP=1 -d $DB -f supabase/tests/live-exam-test.sql 2>&1 | grep -E "ok  |GEÇTİ|BAŞARISIZ|ERROR|HATA" || true
 psql -d $DB -Atc "select 1" >/dev/null
