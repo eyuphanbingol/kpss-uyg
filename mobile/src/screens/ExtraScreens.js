@@ -3,7 +3,6 @@ import { Text, View, StyleSheet } from "react-native";
 import { useApp } from "../AppProvider";
 import { ScoreEngine } from "../lib/scoreEngine";
 import { StudentStore } from "../lib/store";
-import { StudyPlanner } from "../lib/planner";
 import { supabase } from "../lib/supabase";
 import { trError } from "../lib/trError";
 import taban from "../content/tabanPuanlar.json";
@@ -381,50 +380,6 @@ export function AiScreen({ navigation }) {
                     {wrong.length - 1} soru daha yanlış defterinde
                 </Text>
             )}
-        </ScrollScreen>
-    );
-}
-
-// ============================================================
-// LIVE SCREEN
-// ============================================================
-
-export function LiveScreen({ navigation }) {
-    var app = useApp();
-    var isDark = app.dark;
-
-    return (
-        <ScrollScreen dark={isDark}>
-            {/* Back */}
-            <PageHeader dark={isDark} title="Canlı Deneme" subtitle="Cumartesi 21:00 ortak saat" onBack={function () { navigation.goBack(); }} right={null} />
-
-            <Card style={[styles.liveCard, isDark && styles.cardDark]}>
-                <View style={styles.liveHeader}>
-                    <View style={styles.liveDot} />
-                    <Text style={[styles.liveStatus, isDark && styles.textMuted]}>
-                        Hazırlanıyor
-                    </Text>
-                </View>
-                <Text style={[styles.liveTitle, isDark && styles.textLight]}>
-                    🚀 Cumartesi 21:00
-                </Text>
-                <Text style={[styles.liveDesc, isDark && styles.textMuted]}>
-                    Her hafta aynı saatte, herkesle birlikte.
-                    Kaçırdıysan şimdi de çözebilirsin.
-                </Text>
-            </Card>
-
-            <PrimaryButton 
-                title="Şimdi Denemeyi Çöz" 
-                onPress={function () {
-                    var items = StudyPlanner.mixedQuiz(
-                        app.kpssData, 
-                        ["Tarih", "Coğrafya", "Türkçe", "Vatandaşlık", "Güncel Bilgiler"], 
-                        40
-                    );
-                    navigation.navigate("Test", { mode: "exam", items: items, seconds: 40 * 60 });
-                }} 
-            />
         </ScrollScreen>
     );
 }
@@ -834,40 +789,6 @@ var styles = StyleSheet.create({
         color: colors.muted,
         fontSize: 12,
         marginTop: 8,
-    },
-
-    // ---------- Live ----------
-    liveCard: {
-        padding: 18,
-        marginBottom: 16,
-    },
-    liveHeader: {
-        flexDirection: "row",
-        alignItems: "center",
-        gap: 8,
-        marginBottom: 8,
-    },
-    liveDot: {
-        width: 8,
-        height: 8,
-        borderRadius: 4,
-        backgroundColor: colors.amber,
-    },
-    liveStatus: {
-        color: colors.muted,
-        fontSize: 12,
-        fontWeight: "500",
-    },
-    liveTitle: {
-        fontSize: 20,
-        fontWeight: "700",
-        color: colors.text,
-        marginBottom: 4,
-    },
-    liveDesc: {
-        color: colors.muted,
-        fontSize: 13,
-        lineHeight: 18,
     },
 
     // ---------- Paywall ----------

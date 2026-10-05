@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:74030:6f19p3*/
+/*jsx:babel-7.29.9-react-classic:74987:1x8sg1l*/
 (function () {
   const {
     useEffect,
@@ -416,6 +416,10 @@
       id: "icerik",
       t: "📢 Duyuru",
       icon: "M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"
+    }, {
+      id: "deneme",
+      t: "🕒 Canlı Deneme",
+      icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
     }];
 
     // ---------- Yetki Kontrol ----------
@@ -1073,7 +1077,7 @@
       return sum + (h.users || 0);
     }, 0)), /*#__PURE__*/React.createElement("p", {
       className: "text-xs text-stone-400 mt-1"
-    }, "Toplam zor konu g\xF6ren")))), tab === "icerik" && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", {
+    }, "Toplam zor konu g\xF6ren")))), tab === "deneme" && /*#__PURE__*/React.createElement(LiveAdminHost, null), tab === "icerik" && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", {
       className: "text-2xl md:text-3xl font-black gradient-text mb-6"
     }, "\uD83D\uDCE2 Duyuru"), /*#__PURE__*/React.createElement("p", {
       className: "text-sm text-stone-500 dark:text-stone-400 mb-4"
@@ -1181,6 +1185,27 @@
   // EXPORT
   // ============================================================
 
+  // Canlı deneme yönetimi ayrı dosyada; sekme açılınca yüklenir.
+  function LiveAdminHost() {
+    const [Cmp, setCmp] = React.useState(function () {
+      return window.KpssComponents && window.KpssComponents.LiveExamAdmin || null;
+    });
+    const [err, setErr] = React.useState("");
+    React.useEffect(function () {
+      if (Cmp || !window.JsxLoader) return;
+      window.JsxLoader.load("LiveExamAdmin", "js/components/LiveExamAdmin.jsx").then(function (C) {
+        if (C) setCmp(function () {
+          return C;
+        });else setErr("Yüklenemedi.");
+      }).catch(function (e) {
+        setErr(String(e && e.message || e));
+      });
+    }, []);
+    if (err) return /*#__PURE__*/React.createElement("p", {
+      className: "text-rose-600"
+    }, err);
+    return Cmp ? /*#__PURE__*/React.createElement(Cmp, null) : /*#__PURE__*/React.createElement("p", null, "Y\xFCkleniyor\u2026");
+  }
   window.KpssComponents = window.KpssComponents || {};
   window.KpssComponents.AdminDashboard = AdminDashboard;
 })();

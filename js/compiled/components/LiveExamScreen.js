@@ -1,316 +1,1180 @@
-/*jsx:babel-7.29.9-react-classic:15294:6oj32h*/
+/*jsx:babel-7.29.9-react-classic:49372:n41foa*/
 (function () {
   const {
     useState,
     useEffect,
-    useMemo
+    useMemo,
+    useRef,
+    useCallback
   } = React;
   var BackBtn = window.KpssBackBtn;
+  var L = window.LiveExam;
+  var C = window.LiveClient;
 
   // ============================================================
-  // YARDIMCI FONKSİYONLAR
+  // Canlı deneme: sınav, toplu görünüm (optik form), sonuç raporu, arşiv, gelişim
+  // Sunucu kuralları supabase/patch-live-exam.sql; ortak motor js/liveExam.js
   // ============================================================
 
-  function nextSaturday21() {
-    var d = new Date();
-    var day = d.getDay();
-    var add = (6 - day + 7) % 7;
-    if (add === 0 && (d.getHours() > 21 || d.getHours() === 21 && d.getMinutes() > 0)) add = 7;
-    d.setDate(d.getDate() + add);
-    d.setHours(21, 0, 0, 0);
-    return d;
+  function konuName(k) {
+    return window.konuLabel ? window.konuLabel(k) : String(k || "").trim();
   }
-  function formatCountdown(ms) {
-    if (ms < 0) ms = 0;
-    var seconds = Math.floor(ms / 1000);
-    var days = Math.floor(seconds / 86400);
-    seconds %= 86400;
-    var hours = Math.floor(seconds / 3600);
-    seconds %= 3600;
-    var minutes = Math.floor(seconds / 60);
-    seconds %= 60;
-    if (days > 0) return days + "g " + hours + "s " + minutes + "dk";
-    if (hours > 0) return hours + "s " + minutes + "dk " + seconds + "sn";
-    if (minutes > 0) return minutes + "dk " + seconds + "sn";
-    return seconds + "sn";
+  function hasContent(kpssData, ders, konu) {
+    var kd = kpssData && kpssData[ders] && kpssData[ders][konu];
+    return !!(kd && ((kd.notlar || []).length || (kd.sorular || []).length));
   }
-  function getCountdownColor(ms) {
-    if (ms < 3600000) return "text-rose-500 animate-pulse"; // < 1 saat
-    if (ms < 86400000) return "text-amber-500"; // < 1 gün
-    return "text-indigo-600 dark:text-indigo-400";
+  function pct(x) {
+    return x == null ? "–" : String(Math.round(Number(x) * 10) / 10).replace(".", ",");
   }
-  function getPhase(ms) {
-    if (ms <= 0) return {
-      label: "🚀 Canlı Yayında!",
-      color: "bg-emerald-500"
-    };
-    if (ms < 3600000) return {
-      label: "⏰ Çok Yakında!",
-      color: "bg-rose-500 animate-pulse"
-    };
-    if (ms < 86400000) return {
-      label: "📅 Yarın!",
-      color: "bg-amber-500"
-    };
-    if (ms < 172800000) return {
-      label: "📅 2 Gün Kaldı",
-      color: "bg-indigo-500"
-    };
-    return {
-      label: "📅 Hazırlanıyor",
-      color: "bg-stone-400"
-    };
+  function Panel(props) {
+    return /*#__PURE__*/React.createElement("section", {
+      className: "rounded-3xl glass p-5 sm:p-6 " + (props.className || ""),
+      "aria-label": props.label
+    }, props.children);
   }
-  function getTimeUntilNext(ms) {
-    if (ms < 0) return "🔴 Şimdi!";
-    var hours = Math.floor(ms / 3600000);
-    if (hours > 48) return Math.floor(hours / 24) + " gün sonra";
-    if (hours > 24) return "1 gün " + (hours - 24) + " saat sonra";
-    return hours + " saat " + Math.floor(ms % 3600000 / 60000) + " dk sonra";
+  function Kicker(props) {
+    return /*#__PURE__*/React.createElement("p", {
+      className: "text-xs font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400"
+    }, props.children);
   }
-  function getParticipants(count) {
-    if (count >= 1000) return "1.000+";
-    if (count >= 100) return "100+";
-    if (count >= 10) return "10+";
-    return count;
+  function Stat(props) {
+    return /*#__PURE__*/React.createElement("div", {
+      className: "rounded-2xl bg-white/70 dark:bg-stone-800/60 border border-stone-200/70 dark:border-stone-700 p-3 text-center"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "font-stat font-black " + (props.big ? "text-3xl" : "text-xl")
+    }, props.value), /*#__PURE__*/React.createElement("div", {
+      className: "text-[11px] text-stone-500 mt-0.5"
+    }, props.label));
+  }
+  function KonuLink(props) {
+    var label = props.ders + " / " + konuName(props.konu);
+    if (props.onKonu && hasContent(props.kpssData, props.ders, props.konu)) {
+      return /*#__PURE__*/React.createElement("button", {
+        type: "button",
+        className: "text-left font-semibold text-teal-700 dark:text-teal-300 hover:underline",
+        onClick: function () {
+          props.onKonu(props.ders, props.konu);
+        }
+      }, label, " \u2192");
+    }
+    return /*#__PURE__*/React.createElement("span", {
+      className: "font-semibold"
+    }, label, " ", /*#__PURE__*/React.createElement("span", {
+      className: "text-[11px] font-normal text-stone-400"
+    }, "(konu anlat\u0131m\u0131 yak\u0131nda)"));
+  }
+
+  // ============================================================
+  // OPTİK FORM GÖRÜNÜMÜ (120 cevap tek ekranda; kâğıt formla aynı dil)
+  // ============================================================
+  function OpticGrid(props) {
+    var answers = props.answers || {};
+    function block(from, to, title) {
+      var rows = [];
+      for (var no = from; no <= to; no++) rows.push(no);
+      return /*#__PURE__*/React.createElement("div", {
+        className: "optic-block"
+      }, /*#__PURE__*/React.createElement("p", {
+        className: "optic-title"
+      }, title), /*#__PURE__*/React.createElement("div", {
+        className: "optic-cols"
+      }, [0, 1, 2].map(function (col) {
+        return /*#__PURE__*/React.createElement("div", {
+          key: col,
+          className: "optic-col"
+        }, rows.slice(col * 20, col * 20 + 20).map(function (n) {
+          var a = answers[n] && answers[n].c;
+          var correct = props.key_ && props.key_[n];
+          return /*#__PURE__*/React.createElement("div", {
+            key: n,
+            className: "optic-row" + (props.current === n ? " is-current" : "")
+          }, /*#__PURE__*/React.createElement("button", {
+            type: "button",
+            className: "optic-no",
+            onClick: function () {
+              props.onJump && props.onJump(n);
+            },
+            "aria-label": "Soru " + n + "'e git"
+          }, n), L.LETTERS.map(function (l) {
+            var on = a === l;
+            var cls = "optic-bubble" + (on ? " is-on" : "");
+            if (correct) {
+              if (l === correct) cls += " is-key";
+              if (on && l !== correct) cls += " is-wrong";
+            }
+            return /*#__PURE__*/React.createElement("button", {
+              key: l,
+              type: "button",
+              className: cls,
+              disabled: !props.onPick,
+              "aria-label": "Soru " + n + " " + l + (on ? " (işaretli)" : ""),
+              onClick: function () {
+                props.onPick && props.onPick(n, on ? null : l);
+              }
+            }, l);
+          }));
+        }));
+      })));
+    }
+    var filled = Object.keys(answers).filter(function (k) {
+      return answers[k] && answers[k].c;
+    }).length;
+    return /*#__PURE__*/React.createElement("div", {
+      className: "optic-sheet",
+      role: "group",
+      "aria-label": "Optik form g\xF6r\xFCn\xFCm\xFC"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "optic-head"
+    }, /*#__PURE__*/React.createElement("span", null, "ATANLY \xB7 CANLI DENEME \xB7 OPT\u0130K FORM"), /*#__PURE__*/React.createElement("span", null, filled, " / 120 i\u015Faretli")), block(1, 60, "GENEL YETENEK (1–60)"), block(61, 120, "GENEL KÜLTÜR (61–120)"));
+  }
+
+  // ============================================================
+  // SINAV
+  // ============================================================
+  function ExamRunner(props) {
+    var examId = props.examId;
+    const [stage, setStage] = useState("enter"); // enter | loading | run | ended | error
+    const [err, setErr] = useState(null);
+    const [exam, setExam] = useState(null);
+    const [qs, setQs] = useState([]);
+    const [idx, setIdx] = useState(0);
+    const [grid, setGrid] = useState(false);
+    const [, setTick] = useState(0);
+    const [sync, setSync] = useState({
+      pending: 0
+    });
+    const [fatal, setFatal] = useState(null);
+    const [confirmEnd, setConfirmEnd] = useState(false);
+    var clockRef = useRef(null);
+    var queueRef = useRef(null);
+    var seenAt = useRef(0);
+    var dev = useMemo(function () {
+      return C.deviceId();
+    }, []);
+    function onQueueState(s) {
+      setSync(s);
+      if (s && s.error && s.error.fatal) setFatal(s.error);
+    }
+
+    // giriş: sunucudan anahtar, kalan süre ve kayıtlı cevaplar
+    useEffect(function () {
+      var alive = true;
+      function start(data, offline) {
+        var clock = L.createClock(offline ? Date.now() + (data.offset || 0) : data.now);
+        clockRef.current = clock;
+        if (!offline) C.rememberEntry(examId, data, data.now - Date.now());
+        var q = C.makeQueue(examId, onQueueState);
+        if (!offline) q.seed(data.answers || []);
+        queueRef.current = q;
+        setExam(data.exam);
+        setStage("loading");
+        return C.openBooklet(examId, data.key, data.sha).then(function (bk) {
+          if (!alive) return;
+          setQs(bk.questions || []);
+          setStage("run");
+          q.flush();
+        });
+      }
+      C.rpc("live_enter", {
+        p_exam: examId,
+        p_device: dev
+      }).then(function (data) {
+        if (!alive) return;
+        if (data && data.error) {
+          setErr({
+            code: data.error,
+            message: data.message
+          });
+          setStage("error");
+          return;
+        }
+        return start(data, false);
+      }).catch(function (e) {
+        if (!alive) return;
+        var saved = e.network ? C.recallEntry(examId) : null;
+        if (saved && saved.key) return start(saved, true);
+        setErr(e);
+        setStage("error");
+      });
+      return function () {
+        alive = false;
+        if (queueRef.current) queueRef.current.stop();
+      };
+    }, [examId]);
+
+    // saniyelik saat + dakikalık sunucu eşitlemesi
+    useEffect(function () {
+      if (stage !== "run") return;
+      var t = setInterval(function () {
+        setTick(function (x) {
+          return x + 1;
+        });
+      }, 1000);
+      var s = setInterval(function () {
+        C.rpc("live_now").then(function (r) {
+          if (r && clockRef.current) clockRef.current.sync(r.now);
+        }).catch(function () {});
+      }, 60000);
+      function online() {
+        if (queueRef.current) queueRef.current.flush();
+      }
+      window.addEventListener("online", online);
+      return function () {
+        clearInterval(t);
+        clearInterval(s);
+        window.removeEventListener("online", online);
+      };
+    }, [stage]);
+    var now = clockRef.current ? clockRef.current.now() : 0;
+    var endsAt = exam ? L.ms(exam.ends_at) : 0;
+    var left = endsAt - now;
+
+    // süre bitti: bekleyenleri gönder, sonuca geç
+    useEffect(function () {
+      if (stage === "run" && exam && left <= 0) {
+        setStage("ended");
+        recordTime();
+        var q = queueRef.current;
+        (q ? q.flush() : Promise.resolve()).then(function () {
+          setTimeout(function () {
+            props.onResult(examId);
+          }, 1500);
+        });
+      }
+    });
+    var cur = qs[idx];
+    // soru başına süre
+    function recordTime() {
+      var q = queueRef.current;
+      if (!q || !cur || !seenAt.current) return;
+      var spent = Date.now() - seenAt.current;
+      seenAt.current = Date.now();
+      if (spent > 500) q.addTime(cur.no, q.ms(cur.no) + spent);
+    }
+    useEffect(function () {
+      seenAt.current = Date.now();
+    }, [idx, stage]);
+    function pick(no, letter) {
+      var q = queueRef.current;
+      if (!q || fatal || stage !== "run") return;
+      recordTime();
+      q.set(no, letter, q.ms(no));
+      setTick(function (x) {
+        return x + 1;
+      });
+    }
+    function go(i) {
+      recordTime();
+      setIdx(Math.max(0, Math.min(qs.length - 1, i)));
+    }
+    function jumpTo(no) {
+      var i = qs.findIndex(function (q) {
+        return q.no === no;
+      });
+      if (i >= 0) {
+        go(i);
+        setGrid(false);
+      }
+    }
+
+    // klavye: A–E, ← →
+    useEffect(function () {
+      if (stage !== "run") return;
+      function onKey(e) {
+        if (e.target && /input|textarea|select/i.test(e.target.tagName)) return;
+        var k = (e.key || "").toUpperCase();
+        if (cur && L.LETTERS.indexOf(k) >= 0) {
+          e.preventDefault();
+          pick(cur.no, queueRef.current.get(cur.no) === k ? null : k);
+        } else if (e.key === "ArrowRight") {
+          e.preventDefault();
+          go(idx + 1);
+        } else if (e.key === "ArrowLeft") {
+          e.preventDefault();
+          go(idx - 1);
+        }
+      }
+      window.addEventListener("keydown", onKey);
+      return function () {
+        window.removeEventListener("keydown", onKey);
+      };
+    });
+    function submitNow() {
+      recordTime();
+      var q = queueRef.current;
+      (q ? q.flush() : Promise.resolve()).then(function () {
+        return C.rpc("live_submit", {
+          p_exam: examId,
+          p_device: dev
+        });
+      }).then(function () {
+        setConfirmEnd(false);
+        props.onSubmitted && props.onSubmitted();
+      }).catch(function (e) {
+        setConfirmEnd(false);
+        setErr(e);
+      });
+    }
+    if (stage === "error") {
+      var msg = err && err.message || "Sınava girilemedi.";
+      return /*#__PURE__*/React.createElement(Panel, {
+        label: "S\u0131nava girilemedi"
+      }, /*#__PURE__*/React.createElement("h2", {
+        className: "text-xl font-black"
+      }, "S\u0131nava girilemedi"), /*#__PURE__*/React.createElement("p", {
+        className: "mt-2 text-stone-600 dark:text-stone-300"
+      }, msg), /*#__PURE__*/React.createElement("button", {
+        type: "button",
+        className: "quick-chip mt-4",
+        onClick: props.onBack
+      }, "Geri d\xF6n"));
+    }
+    if (stage === "enter" || stage === "loading") {
+      return /*#__PURE__*/React.createElement(Panel, {
+        label: "S\u0131nav haz\u0131rlan\u0131yor"
+      }, /*#__PURE__*/React.createElement("p", {
+        className: "font-semibold"
+      }, stage === "enter" ? "Sunucuya bağlanılıyor…" : "Soru kitapçığı açılıyor…"), /*#__PURE__*/React.createElement("p", {
+        className: "text-sm text-stone-500 mt-1"
+      }, "S\xFCren sunucu saatine g\xF6re i\u015Fler; bu ekran\u0131 kapatsan da cevaplar\u0131n kay\u0131tl\u0131d\u0131r."));
+    }
+    if (stage === "ended") {
+      return /*#__PURE__*/React.createElement(Panel, {
+        label: "S\xFCre doldu"
+      }, /*#__PURE__*/React.createElement("h2", {
+        className: "text-2xl font-black"
+      }, "S\xFCre doldu"), /*#__PURE__*/React.createElement("p", {
+        className: "mt-2 text-stone-600 dark:text-stone-300"
+      }, "Cevaplar\u0131n g\xF6nderiliyor, sonu\xE7 ekran\u0131 a\xE7\u0131l\u0131yor\u2026"), sync.pending ? /*#__PURE__*/React.createElement("p", {
+        className: "mt-2 text-sm font-semibold text-amber-700"
+      }, sync.pending, " cevap g\xF6nderilmeyi bekliyor. \u0130nternetin geri gelince 12:27'ye kadar g\xF6nderilir.") : null);
+    }
+    var answers = queueRef.current ? queueRef.current.all() : {};
+    var answered = Object.keys(answers).filter(function (k) {
+      return answers[k] && answers[k].c;
+    }).length;
+    var blank = qs.length - answered;
+    var mine = cur && queueRef.current ? queueRef.current.get(cur.no) : null;
+    var warn = left < 10 * 60000;
+    var syncText = fatal ? "Kayıt durdu" : sync.pending ? sync.ok === false ? "Çevrimdışı · " + sync.pending + " cevap bekliyor" : "Kaydediliyor…" : "Tüm cevaplar kaydedildi";
+    return /*#__PURE__*/React.createElement("div", {
+      className: "live-exam",
+      "aria-live": "off"
+    }, /*#__PURE__*/React.createElement("header", {
+      className: "live-bar"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "min-w-0"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "text-[11px] font-bold uppercase tracking-wider opacity-70 truncate"
+    }, exam && exam.title), /*#__PURE__*/React.createElement("p", {
+      className: "text-xs font-semibold " + (fatal ? "text-rose-600" : sync.pending ? "text-amber-700 dark:text-amber-300" : "text-emerald-700 dark:text-emerald-300"),
+      role: "status"
+    }, syncText)), /*#__PURE__*/React.createElement("div", {
+      className: "live-timer font-stat " + (warn ? "is-warn" : ""),
+      role: "timer",
+      "aria-label": "Kalan süre " + L.fmtTimer(left)
+    }, L.fmtTimer(left))), fatal ? /*#__PURE__*/React.createElement("div", {
+      className: "plan-warn mt-3",
+      role: "alert"
+    }, fatal.code === "device_replaced" ? "Sınav başka bir cihazda açıldı; bu cihazda cevap kaydedilmiyor. Devam etmek için o cihazı kullan ya da bu sayfayı yenile (cihaz değişikliği hakkından düşer)." : fatal.code === "locked" ? "Cihaz değişim sınırı aşıldığı için sınavın kilitlendi. Yönetici ile iletişime geç." : fatal.message || "Cevaplar kaydedilemiyor.") : null, /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-wrap items-center gap-2 mt-3"
+    }, /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "quick-chip" + (grid ? " is-primary" : ""),
+      "aria-pressed": grid,
+      onClick: function () {
+        recordTime();
+        setGrid(!grid);
+      }
+    }, "\u25A6 Toplu g\xF6r\xFCn\xFCm"), /*#__PURE__*/React.createElement("span", {
+      className: "text-xs text-stone-500"
+    }, answered, " i\u015Faretli \xB7 ", blank, " bo\u015F"), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "quick-chip ml-auto",
+      onClick: function () {
+        setConfirmEnd(true);
+      }
+    }, "S\u0131nav\u0131 bitir")), grid ? /*#__PURE__*/React.createElement("div", {
+      className: "mt-4"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "text-xs text-stone-500 mb-2"
+    }, "Kayd\u0131rma hatas\u0131 var m\u0131 kontrol et; numaraya dokunarak o soruya git. Baloncu\u011Fa dokunarak da i\u015Faretleyebilirsin."), /*#__PURE__*/React.createElement(OpticGrid, {
+      answers: answers,
+      current: cur && cur.no,
+      onJump: jumpTo,
+      onPick: fatal ? null : pick
+    })) : cur ? /*#__PURE__*/React.createElement("div", {
+      className: "test-split mt-4"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "test-split-q"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "q-stem p-4 sm:p-7 rounded-3xl relative overflow-hidden"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "q-stem-bar absolute top-0 left-0 w-1.5 h-full"
+    }), /*#__PURE__*/React.createElement("p", {
+      className: "text-xs font-bold text-stone-500 mb-2 pl-2"
+    }, "Soru ", cur.no, " / 120 \xB7 ", L.BOLUM[cur.bolum], " \xB7 ", cur.ders), /*#__PURE__*/React.createElement("h3", {
+      className: "text-lg font-bold leading-relaxed whitespace-pre-line text-stone-900 pl-2"
+    }, cur.stem), cur.image ? /*#__PURE__*/React.createElement("img", {
+      src: cur.image,
+      alt: "Soru \u015Fekli",
+      className: "live-img mt-4"
+    }) : null)), /*#__PURE__*/React.createElement("div", {
+      className: "test-split-a"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "space-y-3",
+      role: "radiogroup",
+      "aria-label": "Soru " + cur.no + " şıkları"
+    }, (cur.options || []).map(function (opt, i) {
+      var l = L.LETTERS[i];
+      var on = mine === l;
+      return /*#__PURE__*/React.createElement("button", {
+        key: l,
+        type: "button",
+        role: "radio",
+        "aria-checked": on,
+        className: "w-full text-left p-4 sm:p-5 rounded-2xl border-2 font-semibold flex items-center gap-3 option-btn " + (on ? "bg-[#0D2C4D] border-[#0D2C4D] text-white" : "bg-white dark:bg-stone-900 border-stone-200 dark:border-stone-700"),
+        onClick: function () {
+          pick(cur.no, on ? null : l);
+        }
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "live-letter " + (on ? "is-on" : "")
+      }, l), /*#__PURE__*/React.createElement("span", {
+        className: "min-w-0"
+      }, opt));
+    })), /*#__PURE__*/React.createElement("p", {
+      className: "kbd-hint mt-3",
+      "aria-hidden": "true"
+    }, /*#__PURE__*/React.createElement("kbd", null, "A"), "\u2013", /*#__PURE__*/React.createElement("kbd", null, "E"), " i\u015Faretle \xB7 ayn\u0131 \u015F\u0131kka tekrar bas\u0131nca silinir \xB7 ", /*#__PURE__*/React.createElement("kbd", null, "\u2190"), " ", /*#__PURE__*/React.createElement("kbd", null, "\u2192"), " ge\xE7"), /*#__PURE__*/React.createElement("div", {
+      className: "flex justify-between gap-3 mt-4"
+    }, /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "quick-chip",
+      disabled: idx === 0,
+      onClick: function () {
+        go(idx - 1);
+      }
+    }, "\u2190 \xD6nceki"), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "quick-chip is-primary",
+      disabled: idx >= qs.length - 1,
+      onClick: function () {
+        go(idx + 1);
+      }
+    }, "Sonraki \u2192")))) : null, confirmEnd ? /*#__PURE__*/React.createElement("div", {
+      className: "fixed inset-0 z-[70] bg-black/45 flex items-end sm:items-center justify-center p-3",
+      role: "dialog",
+      "aria-modal": "true",
+      "aria-labelledby": "end-title"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "w-full max-w-md bg-white dark:bg-stone-900 rounded-3xl p-6 shadow-2xl"
+    }, /*#__PURE__*/React.createElement("h2", {
+      id: "end-title",
+      className: "text-xl font-black"
+    }, "K\xE2\u011F\u0131d\u0131n\u0131 teslim et?"), /*#__PURE__*/React.createElement("p", {
+      className: "text-sm text-stone-600 dark:text-stone-300 mt-2"
+    }, blank ? blank + " soru boş. " : "", "Teslim ettikten sonra cevaplar\u0131n de\u011Fi\u015Ftirilemez. Sonucun ve \xE7\xF6z\xFCmler s\u0131nav bitince (", exam && L.fmtClock(L.ms(exam.ends_at)), ") a\xE7\u0131l\u0131r."), /*#__PURE__*/React.createElement("div", {
+      className: "flex justify-end gap-2 mt-5"
+    }, /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "quick-chip",
+      onClick: function () {
+        setConfirmEnd(false);
+      }
+    }, "Vazge\xE7"), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "quick-chip is-primary",
+      onClick: submitNow
+    }, "Teslim et")))) : null);
+  }
+
+  // ============================================================
+  // SONUÇ RAPORU
+  // ============================================================
+  function ResultReport(props) {
+    var examId = props.examId;
+    const [data, setData] = useState(null);
+    const [review, setReview] = useState(null);
+    const [images, setImages] = useState({});
+    const [err, setErr] = useState(null);
+    const [filter, setFilter] = useState("yanlis");
+    const [openQ, setOpenQ] = useState(null);
+    const [attempt, setAttempt] = useState(0);
+    useEffect(function () {
+      var alive = true;
+      C.flushPending(examId).then(function () {
+        return C.rpc("live_result", {
+          p_exam: examId
+        });
+      }).catch(function (e) {
+        // saat farkı: bitişten birkaç saniye önce istenmişse kısa süre sonra yeniden dene
+        if (e.code === "not_yet" && attempt < 6 && alive) {
+          setTimeout(function () {
+            if (alive) setAttempt(attempt + 1);
+          }, 5000);
+          return null;
+        }
+        throw e;
+      }).then(function (r) {
+        if (!r) return;
+        if (!alive) return;
+        setData(r);
+        if (r && r.result && window.StudentStore && StudentStore.applyLiveExamGaps) {
+          StudentStore.applyLiveExamGaps(examId, {
+            title: r.exam.title,
+            at: r.exam.starts_at
+          }, L.gaps(r.result));
+        }
+        return C.rpc("live_review", {
+          p_exam: examId
+        }).then(function (rv) {
+          if (!alive) return;
+          setReview(rv);
+          var withImg = (rv.questions || []).some(function (q) {
+            return q.image;
+          });
+          if (withImg && rv.key) {
+            C.openBooklet(examId, rv.key, rv.sha).then(function (bk) {
+              var m = {};
+              (bk.questions || []).forEach(function (q) {
+                if (q.image) m[q.no] = q.image;
+              });
+              if (alive) setImages(m);
+            }).catch(function () {});
+          }
+        });
+      }).catch(function (e) {
+        if (alive) setErr(e);
+      });
+      return function () {
+        alive = false;
+      };
+    }, [examId, attempt]);
+    if (err) return /*#__PURE__*/React.createElement(Panel, {
+      label: "Sonu\xE7"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "font-semibold"
+    }, err.message), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "quick-chip mt-3",
+      onClick: props.onBack
+    }, "Geri"));
+    if (!data) return /*#__PURE__*/React.createElement(Panel, {
+      label: "Sonu\xE7"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "font-semibold"
+    }, "Sonucun hesaplan\u0131yor\u2026"));
+    var r = data.result || {};
+    var exam = data.exam;
+    var coh = data.cohort;
+    var finalized = exam.finalized;
+    var dersRows = L.dersRows(r, coh);
+    var konuRows = L.konuRows(r, coh);
+    var weak = L.weakest(r, 3);
+    var qs = review && review.questions || [];
+    var shown = qs.filter(function (q) {
+      if (filter === "yanlis") return q.mine && q.mine !== q.answer;
+      if (filter === "bos") return !q.mine;
+      if (filter === "dogru") return q.mine === q.answer;
+      return true;
+    });
+    var keyMap = {},
+      ansMap = {};
+    qs.forEach(function (q) {
+      keyMap[q.no] = q.answer;
+      ansMap[q.no] = {
+        c: q.mine
+      };
+    });
+    var byDers = {};
+    konuRows.forEach(function (k) {
+      (byDers[k.ders] = byDers[k.ders] || []).push(k);
+    });
+    var timed = qs.filter(function (q) {
+      return q.ms > 0;
+    });
+    return /*#__PURE__*/React.createElement("div", {
+      className: "space-y-4"
+    }, /*#__PURE__*/React.createElement("header", null, /*#__PURE__*/React.createElement(Kicker, null, L.TRACKS[exam.track], " \xB7 ", L.fmtDate(L.ms(exam.starts_at)), " \xB7 ", r.mode === "paper" ? "kâğıtta çözüldü" : "cihazda çözüldü"), /*#__PURE__*/React.createElement("h1", {
+      className: "text-3xl font-display font-black tracking-tight gradient-text mt-1"
+    }, exam.title)), /*#__PURE__*/React.createElement(Panel, {
+      label: "\xD6zet"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "grid grid-cols-2 sm:grid-cols-4 gap-2"
+    }, /*#__PURE__*/React.createElement(Stat, {
+      big: true,
+      value: L.fmtNet(r.net),
+      label: "net"
+    }), /*#__PURE__*/React.createElement(Stat, {
+      value: r.correct + " / " + r.wrong + " / " + r.blank,
+      label: "do\u011Fru / yanl\u0131\u015F / bo\u015F"
+    }), /*#__PURE__*/React.createElement(Stat, {
+      value: finalized && r.rank ? r.rank + " / " + r.participants : "–",
+      label: finalized ? "sıralama" : "sıralama " + L.fmtClock(L.ms(exam.ranking_at)) + "'ta"
+    }), /*#__PURE__*/React.createElement(Stat, {
+      value: finalized && r.top_pct != null ? "%" + pct(r.top_pct) : "–",
+      label: "y\xFCzdelik dilim (ilk)"
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "grid grid-cols-2 gap-2 mt-2"
+    }, /*#__PURE__*/React.createElement(Stat, {
+      value: L.fmtNet(r.gy_net),
+      label: "Genel Yetenek net" + (coh ? " · ort. " + L.fmtNet(coh.avg_gy) : "")
+    }), /*#__PURE__*/React.createElement(Stat, {
+      value: L.fmtNet(r.gk_net),
+      label: "Genel Kültür net" + (coh ? " · ort. " + L.fmtNet(coh.avg_gk) : "")
+    })), !finalized ? /*#__PURE__*/React.createElement("p", {
+      className: "plan-note mt-3"
+    }, "Genel s\u0131ralama ve kat\u0131lan ortalamalar\u0131 ", L.fmtClock(L.ms(exam.ranking_at)), "'ta kesinle\u015Fir; k\xE2\u011F\u0131tta \xE7\xF6zenlerin okutmas\u0131 o saate kadar s\xFCrer.") : null), weak.length ? /*#__PURE__*/React.createElement(Panel, {
+      label: "En zay\u0131f konular"
+    }, /*#__PURE__*/React.createElement(Kicker, null, "En zay\u0131f 3 konun \xB7 Eksikler'e eklendi"), /*#__PURE__*/React.createElement("ul", {
+      className: "mt-3 space-y-2"
+    }, weak.map(function (w) {
+      return /*#__PURE__*/React.createElement("li", {
+        key: w.key,
+        className: "flex flex-wrap items-center justify-between gap-2 text-sm"
+      }, /*#__PURE__*/React.createElement(KonuLink, {
+        ders: w.ders,
+        konu: w.konu,
+        kpssData: props.kpssData,
+        onKonu: props.onKonu
+      }), /*#__PURE__*/React.createElement("span", {
+        className: "text-stone-500"
+      }, w.c, "/", w.n, " do\u011Fru", w.avgC != null ? " · katılan ort. " + L.fmtNet(w.avgC) : ""));
+    }))) : null, /*#__PURE__*/React.createElement(Panel, {
+      label: "Ders baz\u0131nda"
+    }, /*#__PURE__*/React.createElement(Kicker, null, "Ders baz\u0131nda net"), /*#__PURE__*/React.createElement("table", {
+      className: "w-full text-sm mt-3"
+    }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", {
+      className: "text-left text-xs text-stone-500"
+    }, /*#__PURE__*/React.createElement("th", {
+      className: "py-1"
+    }, "Ders"), /*#__PURE__*/React.createElement("th", null, "D"), /*#__PURE__*/React.createElement("th", null, "Y"), /*#__PURE__*/React.createElement("th", null, "B"), /*#__PURE__*/React.createElement("th", null, "Net"), /*#__PURE__*/React.createElement("th", null, "Kat\u0131lan ort."))), /*#__PURE__*/React.createElement("tbody", null, dersRows.map(function (d) {
+      return /*#__PURE__*/React.createElement("tr", {
+        key: d.ders,
+        className: "border-t border-stone-200/70 dark:border-stone-700"
+      }, /*#__PURE__*/React.createElement("td", {
+        className: "py-1.5 font-semibold"
+      }, d.ders), /*#__PURE__*/React.createElement("td", null, d.c), /*#__PURE__*/React.createElement("td", null, d.w), /*#__PURE__*/React.createElement("td", null, d.b), /*#__PURE__*/React.createElement("td", {
+        className: "font-bold"
+      }, L.fmtNet(d.net)), /*#__PURE__*/React.createElement("td", null, d.avgNet == null ? "–" : L.fmtNet(d.avgNet)));
+    })))), /*#__PURE__*/React.createElement(Panel, {
+      label: "Konu baz\u0131nda"
+    }, /*#__PURE__*/React.createElement(Kicker, null, "Konu baz\u0131nda"), Object.keys(byDers).map(function (d) {
+      return /*#__PURE__*/React.createElement("div", {
+        key: d,
+        className: "mt-3"
+      }, /*#__PURE__*/React.createElement("p", {
+        className: "font-bold text-sm"
+      }, d), /*#__PURE__*/React.createElement("ul", {
+        className: "mt-1 space-y-1"
+      }, byDers[d].map(function (k) {
+        return /*#__PURE__*/React.createElement("li", {
+          key: k.key,
+          className: "flex flex-wrap items-baseline justify-between gap-x-3 text-sm py-1 border-b border-stone-200/60 dark:border-stone-700/60"
+        }, /*#__PURE__*/React.createElement("span", {
+          className: "min-w-0"
+        }, konuName(k.konu)), /*#__PURE__*/React.createElement("span", {
+          className: "text-stone-600 dark:text-stone-300"
+        }, /*#__PURE__*/React.createElement("b", null, k.c, "/", k.n), k.avgC != null ? " — katılan ortalaması " + L.fmtNet(k.avgC) : ""));
+      })));
+    })), review && review.most_wrong && review.most_wrong.length ? /*#__PURE__*/React.createElement(Panel, {
+      label: "En \xE7ok yanl\u0131\u015F yap\u0131lan sorular"
+    }, /*#__PURE__*/React.createElement(Kicker, null, "Kat\u0131lanlar\u0131n en \xE7ok yanl\u0131\u015F yapt\u0131\u011F\u0131 10 soru"), /*#__PURE__*/React.createElement("ol", {
+      className: "mt-3 space-y-1 text-sm"
+    }, review.most_wrong.map(function (m) {
+      var q = qs.find(function (x) {
+        return x.no === m.no;
+      });
+      var miss = q && q.mine !== q.answer;
+      return /*#__PURE__*/React.createElement("li", {
+        key: m.no
+      }, /*#__PURE__*/React.createElement("button", {
+        type: "button",
+        className: "text-left hover:underline",
+        onClick: function () {
+          setFilter("hepsi");
+          setOpenQ(m.no);
+        }
+      }, "Soru ", m.no, " \xB7 ", m.ders, " / ", konuName(m.konu), " \u2014 %", pct(m.wrong_pct), " yanl\u0131\u015F", miss ? " · sen de kaçırdın" : ""));
+    }))) : null, /*#__PURE__*/React.createElement(Panel, {
+      label: "Optik form"
+    }, /*#__PURE__*/React.createElement(Kicker, null, "Optik form \xB7 ye\u015Fil: do\u011Fru cevap, k\u0131rm\u0131z\u0131: yanl\u0131\u015F i\u015Faretin"), /*#__PURE__*/React.createElement("div", {
+      className: "mt-3"
+    }, /*#__PURE__*/React.createElement(OpticGrid, {
+      answers: ansMap,
+      key_: keyMap,
+      onJump: function (n) {
+        setFilter("hepsi");
+        setOpenQ(n);
+      }
+    }))), /*#__PURE__*/React.createElement(Panel, {
+      label: "Soru soru \xE7\xF6z\xFCmler"
+    }, /*#__PURE__*/React.createElement(Kicker, null, "Soru soru \xE7\xF6z\xFCmler", timed.length ? " · harcadığın süre" : ""), /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-wrap gap-2 mt-3"
+    }, [["yanlis", "Yanlışlar"], ["bos", "Boşlar"], ["dogru", "Doğrular"], ["hepsi", "Tümü"]].map(function (f) {
+      return /*#__PURE__*/React.createElement("button", {
+        key: f[0],
+        type: "button",
+        className: "quick-chip" + (filter === f[0] ? " is-primary" : ""),
+        "aria-pressed": filter === f[0],
+        onClick: function () {
+          setFilter(f[0]);
+        }
+      }, f[1]);
+    })), /*#__PURE__*/React.createElement("ul", {
+      className: "mt-3 space-y-2"
+    }, shown.map(function (q) {
+      var open = openQ === q.no;
+      var state = !q.mine ? "boş" : q.mine === q.answer ? "doğru" : "yanlış";
+      var tot = q.stat ? q.stat.correct + q.stat.wrong + q.stat.blank : 0;
+      return /*#__PURE__*/React.createElement("li", {
+        key: q.no,
+        className: "rounded-2xl border border-stone-200 dark:border-stone-700 bg-white/70 dark:bg-stone-900/50"
+      }, /*#__PURE__*/React.createElement("button", {
+        type: "button",
+        className: "w-full text-left p-3 flex items-center gap-3",
+        "aria-expanded": open,
+        onClick: function () {
+          setOpenQ(open ? null : q.no);
+        }
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "live-state " + (state === "doğru" ? "is-ok" : state === "yanlış" ? "is-bad" : "")
+      }, q.no), /*#__PURE__*/React.createElement("span", {
+        className: "min-w-0 flex-1 text-sm"
+      }, /*#__PURE__*/React.createElement("b", null, q.ders), " / ", konuName(q.konu), " ", /*#__PURE__*/React.createElement("span", {
+        className: "text-stone-500"
+      }, "\xB7 ", state, q.mine ? " (" + q.mine + ")" : "", " \xB7 do\u011Fru ", q.answer))), open ? /*#__PURE__*/React.createElement("div", {
+        className: "px-4 pb-4 text-sm"
+      }, /*#__PURE__*/React.createElement("p", {
+        className: "whitespace-pre-line font-semibold leading-relaxed"
+      }, q.stem), images[q.no] ? /*#__PURE__*/React.createElement("img", {
+        src: images[q.no],
+        alt: "Soru \u015Fekli",
+        className: "live-img mt-3"
+      }) : null, /*#__PURE__*/React.createElement("ul", {
+        className: "mt-3 space-y-1"
+      }, (q.options || []).map(function (o, i) {
+        var l = L.LETTERS[i];
+        var cls = l === q.answer ? "bg-emerald-50 dark:bg-emerald-950/40 border-emerald-300" : l === q.mine ? "bg-rose-50 dark:bg-rose-950/40 border-rose-300" : "border-stone-200 dark:border-stone-700";
+        return /*#__PURE__*/React.createElement("li", {
+          key: l,
+          className: "rounded-xl border px-3 py-2 " + cls
+        }, /*#__PURE__*/React.createElement("b", null, l, ")"), " ", o, l === q.answer ? " ✓" : "", l === q.mine && l !== q.answer ? " ✗ senin cevabın" : "");
+      })), q.explanation ? /*#__PURE__*/React.createElement("p", {
+        className: "mt-3 p-3 rounded-xl bg-amber-50 dark:bg-amber-950/30 whitespace-pre-line"
+      }, /*#__PURE__*/React.createElement("b", null, "\xC7\xF6z\xFCm:"), " ", q.explanation) : null, /*#__PURE__*/React.createElement("p", {
+        className: "mt-2 text-xs text-stone-500"
+      }, q.ms ? "Bu soruda " + Math.max(1, Math.round(q.ms / 1000)) + " sn harcadın" + (q.stat && q.stat.avg_ms ? " (ortalama " + Math.round(q.stat.avg_ms / 1000) + " sn)" : "") + ". " : "", tot ? "Katılanların %" + pct(100 * q.stat.correct / tot) + "'i doğru yaptı." : ""), /*#__PURE__*/React.createElement("div", {
+        className: "mt-2"
+      }, /*#__PURE__*/React.createElement(KonuLink, {
+        ders: q.ders,
+        konu: q.konu,
+        kpssData: props.kpssData,
+        onKonu: props.onKonu
+      }))) : null);
+    }), !shown.length ? /*#__PURE__*/React.createElement("li", {
+      className: "text-sm text-stone-500"
+    }, "Bu filtrede soru yok.") : null)));
+  }
+
+  // ============================================================
+  // ARŞİV: Denemelerim
+  // ============================================================
+  function Archive(props) {
+    const [list, setList] = useState(null);
+    const [err, setErr] = useState(null);
+    useEffect(function () {
+      C.rpc("live_history").then(setList).catch(setErr);
+    }, []);
+    if (err) return /*#__PURE__*/React.createElement(Panel, {
+      label: "Denemelerim"
+    }, /*#__PURE__*/React.createElement("p", null, err.message));
+    if (!list) return /*#__PURE__*/React.createElement(Panel, {
+      label: "Denemelerim"
+    }, /*#__PURE__*/React.createElement("p", null, "Y\xFCkleniyor\u2026"));
+    return /*#__PURE__*/React.createElement("div", {
+      className: "space-y-4"
+    }, /*#__PURE__*/React.createElement("h1", {
+      className: "text-3xl font-display font-black tracking-tight gradient-text"
+    }, "Denemelerim"), !list.length ? /*#__PURE__*/React.createElement(Panel, {
+      label: "Bo\u015F"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "text-stone-600 dark:text-stone-300"
+    }, "Hen\xFCz kat\u0131ld\u0131\u011F\u0131n bir canl\u0131 deneme yok. Her pazar 10:15'te!")) : /*#__PURE__*/React.createElement("ul", {
+      className: "space-y-2"
+    }, list.map(function (h) {
+      return /*#__PURE__*/React.createElement("li", {
+        key: h.exam_id
+      }, /*#__PURE__*/React.createElement("button", {
+        type: "button",
+        className: "w-full text-left rounded-2xl glass p-4 card-hover flex flex-wrap items-center gap-x-4 gap-y-1",
+        onClick: function () {
+          props.onOpen(h.exam_id);
+        }
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "min-w-0 flex-1"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "block font-bold"
+      }, h.title), /*#__PURE__*/React.createElement("span", {
+        className: "block text-xs text-stone-500"
+      }, L.fmtDate(L.ms(h.starts_at)), " \xB7 ", L.TRACKS[h.track], " \xB7 ", h.mode === "paper" ? "kâğıt" : "cihaz")), /*#__PURE__*/React.createElement("span", {
+        className: "font-stat text-xl font-black"
+      }, L.fmtNet(h.net), " ", /*#__PURE__*/React.createElement("span", {
+        className: "text-xs font-semibold text-stone-500"
+      }, "net")), /*#__PURE__*/React.createElement("span", {
+        className: "text-sm text-stone-600 dark:text-stone-300"
+      }, h.rank ? h.rank + ". / " + h.participants + " · ilk %" + pct(h.top_pct) : "sıralama bekleniyor")));
+    })));
+  }
+
+  // ============================================================
+  // GELİŞİM
+  // ============================================================
+  var SERIES = [{
+    key: "net",
+    label: "Toplam",
+    light: "#2a78d6",
+    dark: "#3987e5"
+  }, {
+    key: "gy",
+    label: "Genel Yetenek",
+    light: "#eb6834",
+    dark: "#d95926"
+  }, {
+    key: "gk",
+    label: "Genel Kültür",
+    light: "#1baf7a",
+    dark: "#199e70"
+  }];
+  function LineChart(props) {
+    var pts = props.points;
+    var dark = props.dark;
+    const [hover, setHover] = useState(null);
+    var W = 640,
+      H = 240,
+      padL = 40,
+      padR = 70,
+      padT = 14,
+      padB = 30;
+    var max = props.max != null ? props.max : 120;
+    var min = 0;
+    var n = pts.length;
+    function x(i) {
+      return padL + (n <= 1 ? (W - padL - padR) / 2 : i * (W - padL - padR) / (n - 1));
+    }
+    function y(v) {
+      return padT + (H - padT - padB) * (1 - (v - min) / (max - min || 1));
+    }
+    var ticks = [0, max / 4, max / 2, 3 * max / 4, max];
+    var ink = dark ? "#c3c2b7" : "#52514e";
+    var grid = dark ? "rgba(255,255,255,.08)" : "rgba(0,0,0,.07)";
+    return /*#__PURE__*/React.createElement("div", {
+      className: "relative"
+    }, /*#__PURE__*/React.createElement("svg", {
+      viewBox: "0 0 " + W + " " + H,
+      className: "w-full h-auto",
+      role: "img",
+      "aria-label": props.label,
+      onMouseLeave: function () {
+        setHover(null);
+      }
+    }, ticks.map(function (t) {
+      return /*#__PURE__*/React.createElement("g", {
+        key: t
+      }, /*#__PURE__*/React.createElement("line", {
+        x1: padL,
+        x2: W - padR,
+        y1: y(t),
+        y2: y(t),
+        stroke: grid,
+        strokeWidth: "1"
+      }), /*#__PURE__*/React.createElement("text", {
+        x: padL - 6,
+        y: y(t) + 4,
+        textAnchor: "end",
+        fontSize: "11",
+        fill: ink
+      }, Math.round(t)));
+    }), pts.map(function (p, i) {
+      return /*#__PURE__*/React.createElement("text", {
+        key: i,
+        x: x(i),
+        y: H - 10,
+        textAnchor: "middle",
+        fontSize: "11",
+        fill: ink
+      }, p.label);
+    }), props.series.map(function (s) {
+      var col = dark ? s.dark : s.light;
+      var d = pts.map(function (p, i) {
+        return (i ? "L" : "M") + x(i) + " " + y(p[s.key]);
+      }).join(" ");
+      var last = pts[pts.length - 1];
+      return /*#__PURE__*/React.createElement("g", {
+        key: s.key
+      }, /*#__PURE__*/React.createElement("path", {
+        d: d,
+        fill: "none",
+        stroke: col,
+        strokeWidth: "2",
+        strokeLinejoin: "round",
+        strokeLinecap: "round"
+      }), pts.map(function (p, i) {
+        return /*#__PURE__*/React.createElement("circle", {
+          key: i,
+          cx: x(i),
+          cy: y(p[s.key]),
+          r: "4",
+          fill: col,
+          stroke: dark ? "#1c1917" : "#fff",
+          strokeWidth: "2"
+        });
+      }), last ? /*#__PURE__*/React.createElement("text", {
+        x: x(n - 1) + 8,
+        y: y(last[s.key]) + 4,
+        fontSize: "11",
+        fontWeight: "700",
+        fill: ink
+      }, s.label, " ", L.fmtNet(last[s.key])) : null);
+    }), pts.map(function (p, i) {
+      var w = n <= 1 ? 80 : (W - padL - padR) / (n - 1);
+      return /*#__PURE__*/React.createElement("rect", {
+        key: i,
+        x: x(i) - w / 2,
+        y: padT,
+        width: w,
+        height: H - padT - padB,
+        fill: "transparent",
+        onMouseEnter: function () {
+          setHover(i);
+        },
+        onFocus: function () {
+          setHover(i);
+        },
+        tabIndex: "0"
+      });
+    }), hover != null ? /*#__PURE__*/React.createElement("line", {
+      x1: x(hover),
+      x2: x(hover),
+      y1: padT,
+      y2: H - padB,
+      stroke: ink,
+      strokeDasharray: "3 3"
+    }) : null), hover != null ? /*#__PURE__*/React.createElement("div", {
+      className: "absolute top-2 left-2 rounded-xl bg-white dark:bg-stone-800 shadow-lg border border-stone-200 dark:border-stone-700 px-3 py-2 text-xs"
+    }, /*#__PURE__*/React.createElement("b", null, pts[hover].title), " \xB7 ", pts[hover].label, props.series.map(function (s) {
+      return /*#__PURE__*/React.createElement("div", {
+        key: s.key
+      }, s.label, ": ", /*#__PURE__*/React.createElement("b", null, L.fmtNet(pts[hover][s.key])));
+    })) : null);
+  }
+  function Progress(props) {
+    const [list, setList] = useState(null);
+    const [err, setErr] = useState(null);
+    useEffect(function () {
+      C.rpc("live_history").then(setList).catch(setErr);
+    }, []);
+    if (err) return /*#__PURE__*/React.createElement(Panel, {
+      label: "Geli\u015Fim"
+    }, /*#__PURE__*/React.createElement("p", null, err.message));
+    if (!list) return /*#__PURE__*/React.createElement(Panel, {
+      label: "Geli\u015Fim"
+    }, /*#__PURE__*/React.createElement("p", null, "Y\xFCkleniyor\u2026"));
+    var p = L.progress(list);
+    var dark = document.documentElement.classList.contains("dark");
+    var ranked = p.points.filter(function (x) {
+      return x.top_pct != null;
+    });
+    return /*#__PURE__*/React.createElement("div", {
+      className: "space-y-4"
+    }, /*#__PURE__*/React.createElement("h1", {
+      className: "text-3xl font-display font-black tracking-tight gradient-text"
+    }, "Geli\u015Fimim"), !p.points.length ? /*#__PURE__*/React.createElement(Panel, {
+      label: "Bo\u015F"
+    }, /*#__PURE__*/React.createElement("p", null, "\u0130lk canl\u0131 denemenden sonra geli\u015Fimin burada g\xF6r\xFCnecek.")) : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
+      className: "grid grid-cols-3 gap-2"
+    }, /*#__PURE__*/React.createElement(Stat, {
+      big: true,
+      value: p.streak,
+      label: "hafta \xFCst \xFCste kat\u0131l\u0131m"
+    }), /*#__PURE__*/React.createElement(Stat, {
+      value: L.fmtNet(p.points[p.points.length - 1].net),
+      label: "son net"
+    }), /*#__PURE__*/React.createElement(Stat, {
+      value: p.points.length,
+      label: "deneme"
+    })), /*#__PURE__*/React.createElement(Panel, {
+      label: "Net grafi\u011Fi"
+    }, /*#__PURE__*/React.createElement(Kicker, null, "Deneme deneme net"), /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-wrap gap-x-4 gap-y-1 mt-2 text-xs",
+      "aria-hidden": "true"
+    }, SERIES.map(function (s) {
+      return /*#__PURE__*/React.createElement("span", {
+        key: s.key,
+        className: "inline-flex items-center gap-1.5"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "h-2.5 w-2.5 rounded-full",
+        style: {
+          background: dark ? s.dark : s.light
+        }
+      }), s.label);
+    })), /*#__PURE__*/React.createElement(LineChart, {
+      points: p.points,
+      series: SERIES,
+      dark: dark,
+      max: 120,
+      label: "Deneme deneme toplam, Genel Yetenek ve Genel K\xFClt\xFCr neti"
+    }), /*#__PURE__*/React.createElement("table", {
+      className: "w-full text-xs mt-3"
+    }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", {
+      className: "text-left text-stone-500"
+    }, /*#__PURE__*/React.createElement("th", null, "Deneme"), /*#__PURE__*/React.createElement("th", null, "Toplam"), /*#__PURE__*/React.createElement("th", null, "GY"), /*#__PURE__*/React.createElement("th", null, "GK"), /*#__PURE__*/React.createElement("th", null, "S\u0131ra"), /*#__PURE__*/React.createElement("th", null, "\u0130lk %"))), /*#__PURE__*/React.createElement("tbody", null, p.points.map(function (x) {
+      return /*#__PURE__*/React.createElement("tr", {
+        key: x.exam_id,
+        className: "border-t border-stone-200/70 dark:border-stone-700"
+      }, /*#__PURE__*/React.createElement("td", {
+        className: "py-1"
+      }, x.label), /*#__PURE__*/React.createElement("td", null, L.fmtNet(x.net)), /*#__PURE__*/React.createElement("td", null, L.fmtNet(x.gy)), /*#__PURE__*/React.createElement("td", null, L.fmtNet(x.gk)), /*#__PURE__*/React.createElement("td", null, x.rank ? x.rank + "/" + x.participants : "–"), /*#__PURE__*/React.createElement("td", null, x.top_pct != null ? pct(x.top_pct) : "–"));
+    })))), ranked.length ? /*#__PURE__*/React.createElement(Panel, {
+      label: "Y\xFCzdelik dilim"
+    }, /*#__PURE__*/React.createElement(Kicker, null, "Y\xFCzdelik dilim (k\xFC\xE7\xFCk say\u0131 daha iyi)"), /*#__PURE__*/React.createElement("p", {
+      className: "mt-2 text-sm"
+    }, ranked.map(function (x) {
+      return "ilk %" + pct(x.top_pct);
+    }).join(" → "))) : null, /*#__PURE__*/React.createElement(Panel, {
+      label: "Ders baz\u0131nda geli\u015Fim"
+    }, /*#__PURE__*/React.createElement(Kicker, null, "Ders baz\u0131nda net"), /*#__PURE__*/React.createElement("ul", {
+      className: "mt-2 space-y-1 text-sm"
+    }, Object.keys(p.ders).map(function (d) {
+      return /*#__PURE__*/React.createElement("li", {
+        key: d
+      }, /*#__PURE__*/React.createElement("b", null, d, ":"), " ", p.ders[d].map(function (x) {
+        return L.fmtNet(x.net);
+      }).join(" → "));
+    }))), /*#__PURE__*/React.createElement("div", {
+      className: "grid sm:grid-cols-2 gap-4"
+    }, /*#__PURE__*/React.createElement(Panel, {
+      label: "En \xE7ok ilerledi\u011Fin konular"
+    }, /*#__PURE__*/React.createElement(Kicker, null, "En \xE7ok ilerledi\u011Fin 3 konu"), /*#__PURE__*/React.createElement("ul", {
+      className: "mt-2 space-y-1 text-sm"
+    }, p.improved.length ? p.improved.map(function (k) {
+      return /*#__PURE__*/React.createElement("li", {
+        key: k.ders + k.konu
+      }, /*#__PURE__*/React.createElement(KonuLink, {
+        ders: k.ders,
+        konu: k.konu,
+        kpssData: props.kpssData,
+        onKonu: props.onKonu
+      }), " ", /*#__PURE__*/React.createElement("span", {
+        className: "text-stone-500"
+      }, "%", Math.round(k.from * 100), " \u2192 %", Math.round(k.to * 100)));
+    }) : /*#__PURE__*/React.createElement("li", {
+      className: "text-stone-500"
+    }, "\u0130ki denemeden sonra g\xF6r\xFCn\xFCr."))), /*#__PURE__*/React.createElement(Panel, {
+      label: "H\xE2l\xE2 tak\u0131ld\u0131\u011F\u0131n konular"
+    }, /*#__PURE__*/React.createElement(Kicker, null, "H\xE2l\xE2 tak\u0131ld\u0131\u011F\u0131n 3 konu"), /*#__PURE__*/React.createElement("ul", {
+      className: "mt-2 space-y-1 text-sm"
+    }, p.stuck.length ? p.stuck.map(function (k) {
+      return /*#__PURE__*/React.createElement("li", {
+        key: k.ders + k.konu
+      }, /*#__PURE__*/React.createElement(KonuLink, {
+        ders: k.ders,
+        konu: k.konu,
+        kpssData: props.kpssData,
+        onKonu: props.onKonu
+      }), " ", /*#__PURE__*/React.createElement("span", {
+        className: "text-stone-500"
+      }, "son: %", Math.round(k.to * 100)));
+    }) : /*#__PURE__*/React.createElement("li", {
+      className: "text-stone-500"
+    }, "Tak\u0131ld\u0131\u011F\u0131n konu yok."))))));
   }
 
   // ============================================================
   // ANA BİLEŞEN
   // ============================================================
-
   function LiveExamScreen(props) {
-    var targetTime = nextSaturday21();
-    var [now, setNow] = useState(Date.now());
-    var [participants, setParticipants] = useState(42);
-    var [isLive, setIsLive] = useState(false);
-    var [countdownEnded, setCountdownEnded] = useState(false);
-
-    // ---------- Countdown Timer ----------
-    useEffect(function () {
-      var interval = setInterval(function () {
-        var current = Date.now();
-        setNow(current);
-        var diff = targetTime.getTime() - current;
-        if (diff <= 0) {
-          setIsLive(true);
-          setCountdownEnded(true);
-        } else {
-          setIsLive(false);
-        }
-      }, 1000);
-      return function () {
-        clearInterval(interval);
-      };
-    }, [targetTime]);
-
-    // ---------- Simüle Katılımcı ----------
-    useEffect(function () {
-      var interval = setInterval(function () {
-        if (isLive) {
-          setParticipants(function (prev) {
-            var increase = Math.floor(Math.random() * 3) + 1;
-            return Math.min(999, prev + increase);
-          });
-        } else {
-          setParticipants(function (prev) {
-            var change = Math.floor(Math.random() * 3) - 1;
-            return Math.max(10, prev + change);
-          });
-        }
-      }, 3000);
-      return function () {
-        clearInterval(interval);
-      };
-    }, [isLive]);
-
-    // ---------- Hesaplamalar ----------
-    var diff = targetTime.getTime() - now;
-    var countdown = formatCountdown(diff);
-    var color = getCountdownColor(diff);
-    var phase = getPhase(diff);
-    var timeUntil = getTimeUntilNext(diff);
-    var participantCount = getParticipants(participants);
-    var dayName = ["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"][targetTime.getDay()];
-
-    // ---------- Saat dilimi ----------
-    var timeStr = targetTime.toLocaleTimeString("tr-TR", {
-      hour: "2-digit",
-      minute: "2-digit"
-    });
-    var dateStr = targetTime.toLocaleDateString("tr-TR", {
-      day: "2-digit",
-      month: "2-digit",
-      year: "numeric"
-    });
-
-    // ============================================================
-    // RENDER
-    // ============================================================
-
-    return /*#__PURE__*/React.createElement("div", {
-      className: "app-page py-6 pb-10"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "flex justify-between items-center mb-6 slide-up"
-    }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", {
-      className: "text-2xl md:text-3xl font-black gradient-text"
-    }, "\uD83D\uDE80 Canl\u0131 Deneme"), /*#__PURE__*/React.createElement("p", {
-      className: "text-sm text-stone-400 mt-0.5"
-    }, "Her hafta ayn\u0131 saatte, herkesle birlikte")), /*#__PURE__*/React.createElement(BackBtn, {
-      onClick: props.onBack,
-      label: "Geri"
-    })), /*#__PURE__*/React.createElement("p", {
-      className: "text-xs text-stone-400 dark:text-stone-500 mb-5"
-    }, "\uD83D\uDCCA Ger\xE7ek s\u0131nav atmosferi \xB7 Haftal\u0131k etkinlik \xB7 GY-GK denemesi"), /*#__PURE__*/React.createElement("div", {
-      className: "rounded-3xl glass p-6 card-hover relative overflow-hidden"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "flex items-center justify-between mb-4"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "flex items-center gap-2"
-    }, /*#__PURE__*/React.createElement("span", {
-      className: "h-2.5 w-2.5 rounded-full " + (isLive ? "bg-emerald-500 animate-pulse" : "bg-stone-400")
-    }), /*#__PURE__*/React.createElement("span", {
-      className: "text-xs font-medium text-stone-500 dark:text-stone-400"
-    }, isLive ? "🟢 Canlı Yayında!" : "⏳ Bekleniyor")), /*#__PURE__*/React.createElement("span", {
-      className: "text-[10px] font-bold px-2.5 py-0.5 rounded-full " + (isLive ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300" : "bg-stone-100 text-stone-500 dark:bg-stone-800 dark:text-stone-400")
-    }, isLive ? "🔴 LİVE" : "YAKINDA")), /*#__PURE__*/React.createElement("div", {
-      className: "mb-4"
-    }, /*#__PURE__*/React.createElement("span", {
-      className: "inline-block px-3 py-1.5 rounded-full text-xs font-bold text-white " + phase.color
-    }, phase.label)), /*#__PURE__*/React.createElement("div", {
-      className: "text-center py-4"
-    }, /*#__PURE__*/React.createElement("p", {
-      className: "text-sm text-stone-400 dark:text-stone-500"
-    }, isLive ? "Deneme başladı!" : "Kalan Süre"), /*#__PURE__*/React.createElement("div", {
-      className: "font-stat text-5xl md:text-6xl font-bold mt-1 " + color
-    }, isLive ? "🔴 ŞİMDİ" : countdown), !isLive && /*#__PURE__*/React.createElement("p", {
-      className: "text-xs text-stone-400 mt-2"
-    }, dateStr, " \xB7 ", dayName, " ", timeStr, "'de ba\u015Fl\u0131yor")), /*#__PURE__*/React.createElement("div", {
-      className: "flex items-center justify-center gap-2 mt-2 text-sm text-stone-500 dark:text-stone-400"
-    }, /*#__PURE__*/React.createElement("span", {
-      className: "text-lg"
-    }, "\uD83D\uDC65"), /*#__PURE__*/React.createElement("span", null, participantCount, " kat\u0131l\u0131mc\u0131"), isLive && /*#__PURE__*/React.createElement("span", {
-      className: "text-[10px] text-emerald-500 animate-pulse"
-    }, "+ canl\u0131")), /*#__PURE__*/React.createElement("div", {
-      className: "grid grid-cols-2 gap-3 mt-5 pt-5 border-t border-stone-200 dark:border-stone-700"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "text-center"
-    }, /*#__PURE__*/React.createElement("p", {
-      className: "text-[10px] text-stone-400 uppercase tracking-wider"
-    }, "\uD83D\uDCC5 G\xFCn"), /*#__PURE__*/React.createElement("p", {
-      className: "text-sm font-semibold"
-    }, dayName)), /*#__PURE__*/React.createElement("div", {
-      className: "text-center"
-    }, /*#__PURE__*/React.createElement("p", {
-      className: "text-[10px] text-stone-400 uppercase tracking-wider"
-    }, "\u23F0 Saat"), /*#__PURE__*/React.createElement("p", {
-      className: "text-sm font-semibold"
-    }, timeStr)), /*#__PURE__*/React.createElement("div", {
-      className: "text-center"
-    }, /*#__PURE__*/React.createElement("p", {
-      className: "text-[10px] text-stone-400 uppercase tracking-wider"
-    }, "\uD83D\uDCDD Soru"), /*#__PURE__*/React.createElement("p", {
-      className: "text-sm font-semibold"
-    }, "40")), /*#__PURE__*/React.createElement("div", {
-      className: "text-center"
-    }, /*#__PURE__*/React.createElement("p", {
-      className: "text-[10px] text-stone-400 uppercase tracking-wider"
-    }, "\u23F1\uFE0F S\xFCre"), /*#__PURE__*/React.createElement("p", {
-      className: "text-sm font-semibold"
-    }, "40 dk")))), /*#__PURE__*/React.createElement("div", {
-      className: "mt-5 rounded-3xl glass p-5"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "flex items-center gap-2 mb-3"
-    }, /*#__PURE__*/React.createElement("span", {
-      className: "text-lg"
-    }, "\uD83D\uDCA1"), /*#__PURE__*/React.createElement("p", {
-      className: "text-sm font-semibold"
-    }, "Nas\u0131l \xC7al\u0131\u015F\u0131r?")), /*#__PURE__*/React.createElement("ul", {
-      className: "space-y-2 text-xs text-stone-500 dark:text-stone-400"
-    }, /*#__PURE__*/React.createElement("li", {
-      className: "flex items-start gap-2"
-    }, /*#__PURE__*/React.createElement("span", {
-      className: "text-indigo-500"
-    }, "\u2022"), "Her hafta ", /*#__PURE__*/React.createElement("strong", {
-      className: "text-stone-700 dark:text-stone-300"
-    }, "Cumartesi 21:00"), "'de canl\u0131 deneme d\xFCzenlenir"), /*#__PURE__*/React.createElement("li", {
-      className: "flex items-start gap-2"
-    }, /*#__PURE__*/React.createElement("span", {
-      className: "text-indigo-500"
-    }, "\u2022"), "Herkes ayn\u0131 anda ba\u015Flar, ayn\u0131 s\xFCrede \xE7\xF6zer"), /*#__PURE__*/React.createElement("li", {
-      className: "flex items-start gap-2"
-    }, /*#__PURE__*/React.createElement("span", {
-      className: "text-indigo-500"
-    }, "\u2022"), "Sonu\xE7lar an\u0131nda liderlik tablosuna eklenir"), /*#__PURE__*/React.createElement("li", {
-      className: "flex items-start gap-2"
-    }, /*#__PURE__*/React.createElement("span", {
-      className: "text-indigo-500"
-    }, "\u2022"), "Ka\xE7\u0131rd\u0131ysan ", /*#__PURE__*/React.createElement("strong", {
-      className: "text-stone-700 dark:text-stone-300"
-    }, "\"\u015Eimdi \xC7\xF6z\""), " ile tek ba\u015F\u0131na da \xE7\xF6zebilirsin"))), /*#__PURE__*/React.createElement("div", {
-      className: "mt-5 space-y-3"
-    }, isLive && /*#__PURE__*/React.createElement("button", {
+    var init = props.liveView || {
+      view: "home"
+    };
+    const [view, setView] = useState(init.view || "home");
+    const [examId, setExamId] = useState(init.examId || null);
+    const [submitted, setSubmitted] = useState(false);
+    var Card = window.KpssLiveCard;
+    function open(v, id) {
+      setView(v);
+      if (id) setExamId(id);
+      window.scrollTo(0, 0);
+    }
+    var nav = /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-wrap gap-2 mb-4"
+    }, /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "quick-chip" + (view === "home" ? " is-primary" : ""),
       onClick: function () {
-        if (props.onStartExam) props.onStartExam();
-      },
-      className: "w-full py-4 rounded-2xl btn-primary text-white font-bold text-lg shadow-lg shadow-indigo-500/20 hover:scale-[1.02] transition-all animate-pulse"
-    }, "\uD83D\uDE80 Canl\u0131 Denemeye Kat\u0131l!"), /*#__PURE__*/React.createElement("button", {
+        open("home");
+      }
+    }, "Canl\u0131 deneme"), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "quick-chip" + (view === "archive" ? " is-primary" : ""),
       onClick: function () {
-        if (props.onStartExam) props.onStartExam();else if (props.onClose) props.onClose();
-      },
-      className: "w-full py-3.5 rounded-2xl border-2 border-stone-200 dark:border-stone-700 font-medium hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors"
-    }, isLive ? "📝 Tek Başına Dene" : "📝 Şimdi Denemeyi Çöz"), !isLive && /*#__PURE__*/React.createElement("p", {
-      className: "text-center text-[10px] text-stone-400"
-    }, "\u23F3 Bir sonraki canl\u0131 denemeye ", timeUntil)), /*#__PURE__*/React.createElement("div", {
-      className: "mt-6 rounded-3xl glass p-5"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "flex items-center justify-between mb-3"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "flex items-center gap-2"
-    }, /*#__PURE__*/React.createElement("span", {
-      className: "text-lg"
-    }, "\uD83D\uDCCA"), /*#__PURE__*/React.createElement("p", {
-      className: "text-sm font-semibold"
-    }, "\xD6nceki Denemeler")), /*#__PURE__*/React.createElement("span", {
-      className: "text-[10px] text-stone-400"
-    }, "Son 3")), /*#__PURE__*/React.createElement("div", {
-      className: "space-y-2"
-    }, [{
-      date: "20.09.2025",
-      participants: 87,
-      avg: 68
-    }, {
-      date: "13.09.2025",
-      participants: 73,
-      avg: 62
-    }, {
-      date: "06.09.2025",
-      participants: 65,
-      avg: 58
-    }].map(function (exam, idx) {
-      return /*#__PURE__*/React.createElement("div", {
-        key: idx,
-        className: "flex items-center justify-between py-2 border-b border-stone-100 dark:border-stone-800 last:border-0"
-      }, /*#__PURE__*/React.createElement("div", {
-        className: "flex items-center gap-3"
-      }, /*#__PURE__*/React.createElement("span", {
-        className: "text-xs text-stone-400"
-      }, idx + 1), /*#__PURE__*/React.createElement("span", {
-        className: "text-xs font-medium"
-      }, exam.date)), /*#__PURE__*/React.createElement("div", {
-        className: "flex items-center gap-4 text-xs text-stone-400"
-      }, /*#__PURE__*/React.createElement("span", null, "\uD83D\uDC65 ", exam.participants), /*#__PURE__*/React.createElement("span", {
-        className: "font-medium text-indigo-600"
-      }, "%", exam.avg)));
-    }))), /*#__PURE__*/React.createElement("div", {
-      className: "mt-6 text-center text-[10px] text-stone-400"
-    }, /*#__PURE__*/React.createElement("p", null, "\uD83D\uDCCC Saatler yerel saat dilimine g\xF6redir \xB7 Kat\u0131l\u0131m \xFCcretsizdir")));
+        open("archive");
+      }
+    }, "Denemelerim"), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "quick-chip" + (view === "progress" ? " is-primary" : ""),
+      onClick: function () {
+        open("progress");
+      }
+    }, "Geli\u015Fimim"));
+    if (view === "exam" && examId && !submitted) {
+      return /*#__PURE__*/React.createElement(ExamRunner, {
+        examId: examId,
+        onBack: function () {
+          open("home");
+        },
+        onResult: function (id) {
+          open("result", id);
+        },
+        onSubmitted: function () {
+          setSubmitted(true);
+          open("home");
+        }
+      });
+    }
+    return /*#__PURE__*/React.createElement("div", null, nav, view === "home" ? /*#__PURE__*/React.createElement("div", {
+      className: "space-y-4"
+    }, /*#__PURE__*/React.createElement("h1", {
+      className: "text-3xl font-display font-black tracking-tight gradient-text"
+    }, "Canl\u0131 deneme"), Card ? /*#__PURE__*/React.createElement(Card, {
+      student: props.student,
+      kpssData: props.kpssData,
+      onKonu: props.onKonu,
+      full: true,
+      onOpen: function (v, id) {
+        open(v, id);
+      }
+    }) : null, /*#__PURE__*/React.createElement(Panel, {
+      label: "Nas\u0131l i\u015Fler?"
+    }, /*#__PURE__*/React.createElement(Kicker, null, "Nas\u0131l i\u015Fler?"), /*#__PURE__*/React.createElement("ul", {
+      className: "mt-2 space-y-1.5 text-sm text-stone-700 dark:text-stone-300 list-disc pl-5"
+    }, /*#__PURE__*/React.createElement("li", null, "Hafta i\xE7i kay\u0131t ol. Kay\u0131t pazar 10:00'da kapan\u0131r."), /*#__PURE__*/React.createElement("li", null, "10:00'da soru kitap\xE7\u0131\u011F\u0131 \u015Fifreli olarak cihaz\u0131na iner; 10:15'te kilidi a\xE7\u0131l\u0131r ve herkes ayn\u0131 anda ba\u015Flar."), /*#__PURE__*/React.createElement("li", null, "S\u0131nava 10:45'e kadar girebilirsin; biti\u015F herkes i\xE7in 12:25. Ge\xE7 giren ek s\xFCre almaz."), /*#__PURE__*/React.createElement("li", null, "Her cevap an\u0131nda kaydedilir. \u0130nternet giderse \xE7\xF6zmeye devam et; ba\u011Flant\u0131 gelince g\xF6nderilir."), /*#__PURE__*/React.createElement("li", null, "S\u0131nav tek cihazda a\xE7\u0131k kal\u0131r. \u015Earj\u0131n biterse ba\u015Fka cihazdan devam edebilirsin (en fazla 2 de\u011Fi\u015Fim)."), /*#__PURE__*/React.createElement("li", null, "12:25'te kendi sonucun ve \xE7\xF6z\xFCmlerin a\xE7\u0131l\u0131r; s\u0131ralama ve kat\u0131lan ortalamalar\u0131 12:40'ta kesinle\u015Fir."), /*#__PURE__*/React.createElement("li", null, "Yanl\u0131\u015F ve bo\u015F b\u0131rakt\u0131\u011F\u0131n konular Eksikler'e d\xFC\u015Fer.")))) : null, view === "result" && examId ? /*#__PURE__*/React.createElement(ResultReport, {
+      examId: examId,
+      kpssData: props.kpssData,
+      onKonu: props.onKonu,
+      onBack: function () {
+        open("home");
+      }
+    }) : null, view === "archive" ? /*#__PURE__*/React.createElement(Archive, {
+      onOpen: function (id) {
+        open("result", id);
+      }
+    }) : null, view === "progress" ? /*#__PURE__*/React.createElement(Progress, {
+      kpssData: props.kpssData,
+      onKonu: props.onKonu
+    }) : null);
   }
-
-  // ============================================================
-  // EXPORT
-  // ============================================================
-
   window.KpssComponents = window.KpssComponents || {};
   window.KpssComponents.LiveExamScreen = LiveExamScreen;
+  window.KpssComponents.LiveOpticGrid = OpticGrid;
 })();

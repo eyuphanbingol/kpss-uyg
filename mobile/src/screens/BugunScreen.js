@@ -8,6 +8,7 @@ import { Card, ScrollScreen, PageHeader, Tap } from "../ui";
 import { colors, examTrackName } from "../lib/theme";
 import { DailyGoal, FocusTimer, NextSteps, WeakTopics, WeekBars } from "../components/BugunTools";
 import { SmartPlanCard } from "../components/SmartPlan";
+import { LiveExamCard } from "../components/LiveExamCard";
 
 var DASH_COLORS = ["#0F172A", "#D97706", "#64748B", "#94A3B8", "#CBD5E1", "#1E293B"];
 
@@ -93,6 +94,7 @@ export default function BugunScreen({ navigation }) {
             <NextSteps navigation={navigation} plan={plan} kpssData={app.kpssData} dark={isDark} />
 
             <View style={{ height: 10 }} />
+            <LiveExamCard navigation={navigation} student={student} kpssData={app.kpssData} dark={isDark} />
             <SmartPlanCard navigation={navigation} student={student} kpssData={app.kpssData} dark={isDark} />
 
             <View style={{ marginTop: 10 }}><DailyGoal student={student} dark={isDark} /></View>

@@ -404,13 +404,15 @@
     <script defer src="sorular/geometri-11.js?v=4"></script>
     <script defer src="sorular/geometri-12.js?v=4"></script>
 
-    <script defer src="data.js?v=37"></script>
+    <script defer src="data.js?v=38"></script>
     <script defer src="js/config.js?v=27"></script>
     <script defer src="js/trError.js?v=2"></script>
-    <script defer src="js/store.js?v=50"></script>
+    <script defer src="js/store.js?v=51"></script>
     <script defer src="js/planner.js?v=22"></script>
     <script defer src="js/smartPlan.js?v=1"></script>
-    <script defer src="js/alan.js?v=6"></script>
+    <script defer src="js/liveExam.js?v=1"></script>
+    <script defer src="js/liveClient.js?v=1"></script>
+    <script defer src="js/alan.js?v=7"></script>
     <script defer src="js/clozeEngine.js?v=11"></script>
     <script defer src="js/mapQuiz.js?v=32"></script>
     <script defer src="js/gamesBank.js?v=10"></script>
@@ -421,7 +423,7 @@
     <script defer src="js/shareCard.js?v=19"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.86.0/dist/umd/supabase.js"></script>
     <script defer src="js/supabaseClient.js?v=20"></script>
-    <script defer src="js/syncEngine.js?v=38"></script>
+    <script defer src="js/syncEngine.js?v=39"></script>
     <script defer src="js/jsxLoader.js?v=95"></script>
     <script defer src="js/icons.js?v=18"></script>
 
@@ -1032,6 +1034,42 @@
             background: linear-gradient(180deg, #1D8A99, #C5A059);
         }
 
+        /* ---- Canlı deneme ---- */
+        .live-bar { position: sticky; top: 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+            padding: 10px 14px; border-radius: 18px; background: rgba(255,255,255,.92); border: 1px solid rgba(28,25,23,.1);
+            box-shadow: 0 10px 24px -18px rgba(13,44,77,.5); backdrop-filter: blur(8px); }
+        html.dark .live-bar { background: rgba(28,25,23,.92); border-color: rgba(255,255,255,.1); }
+        .live-timer { font-size: 26px; font-weight: 900; letter-spacing: -.02em; color: #0D2C4D; font-variant-numeric: tabular-nums; }
+        html.dark .live-timer { color: #f5f5f4; }
+        .live-timer.is-warn { color: #b91c1c; }
+        .live-letter { width: 32px; height: 32px; border-radius: 999px; border: 2px solid #1c1917; display: inline-grid; place-items: center;
+            font-weight: 800; flex-shrink: 0; color: #1c1917; background: #fff; }
+        .live-letter.is-on { background: #fff; color: #0D2C4D; border-color: #fff; }
+        html.dark .live-letter:not(.is-on) { border-color: #d6d3d1; color: #f5f5f4; background: transparent; }
+        .live-img { display: block; max-width: 460px; width: 100%; height: auto; margin-left: auto; margin-right: auto; background: #fff; border-radius: 14px; }
+        .live-state { width: 34px; height: 34px; border-radius: 10px; display: inline-grid; place-items: center; font-weight: 800; font-size: 13px;
+            background: #e7e5e4; color: #44403c; flex-shrink: 0; }
+        .live-state.is-ok { background: #d1fae5; color: #065f46; }
+        .live-state.is-bad { background: #ffe4e6; color: #9f1239; }
+        /* optik form görünümü: kâğıt formla aynı dil (siyah-beyaz, yuvarlak baloncuk) */
+        .optic-sheet { background: #fff; color: #111827; border: 2px solid #111827; border-radius: 6px; padding: 14px; }
+        .optic-head { display: flex; justify-content: space-between; gap: 8px; font-size: 11px; font-weight: 800; letter-spacing: .08em; border-bottom: 2px solid #111827; padding-bottom: 8px; }
+        .optic-block { margin-top: 12px; }
+        .optic-title { font-size: 11px; font-weight: 800; letter-spacing: .1em; margin: 0 0 6px; }
+        .optic-cols { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+        .optic-col { flex: 1 1 210px; min-width: 210px; }
+        .optic-row { display: flex; align-items: center; gap: 5px; padding: 2px 4px; border-radius: 6px; }
+        .optic-row:nth-child(5n) { border-bottom: 1px dashed #9ca3af; }
+        .optic-row.is-current { background: #fef3c7; }
+        .optic-no { width: 30px; text-align: right; font-size: 12px; font-weight: 800; color: #111827; padding-right: 4px; }
+        .optic-no:hover { text-decoration: underline; }
+        .optic-bubble { width: 26px; height: 26px; border-radius: 999px; border: 1.5px solid #111827; background: #fff; color: #111827;
+            font-size: 11px; font-weight: 700; display: inline-grid; place-items: center; }
+        .optic-bubble:disabled { cursor: default; }
+        .optic-bubble.is-on { background: #111827; color: #fff; }
+        .optic-bubble.is-key { box-shadow: 0 0 0 3px #10b981; }
+        .optic-bubble.is-wrong { background: #e11d48; border-color: #e11d48; color: #fff; }
+        @media print { .live-bar { position: static; } }
         /* ---- Konu notlarındaki geometri şekilleri ---- */
         /* geometride formüller (a, b, x, α…) büyük harfe çevrilmez: a ile A farklı şeydir */
         .note-html.note-math h4, .note-html.note-math .note-sub { text-transform: none !important; letter-spacing: 0.01em; font-size: 13px !important; }
@@ -2669,7 +2707,7 @@
     <script>
         // js/app.jsx derlenmiş hâliyle önbellekten açılır (bkz. js/jsxLoader.js). Değişince ?v= artır.
         document.addEventListener("DOMContentLoaded", function () {
-            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=140");
+            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=141");
         });
     </script>
     <script>

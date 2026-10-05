@@ -1281,6 +1281,255 @@ function WeakTopics(props) {
     );
 }
 
+// ---------- Canlı deneme kartı (Bugün ve Canlı deneme ekranı) ----------
+// Aşamalar sunucu saatine göre: js/liveExam.js phase(); kurallar supabase/patch-live-exam.sql
+function liveKonuHasContent(kpssData, ders, konu) {
+    var kd = kpssData && kpssData[ders] && kpssData[ders][konu];
+    return !!(kd && (((kd.notlar || []).length) || ((kd.sorular || []).length)));
+}
+
+function LiveExamCard(props) {
+    var L = window.LiveExam, C = window.LiveClient;
+    var track = C ? C.trackOf(props.student) : "lisans";
+    const [dash, setDash] = useState(null);
+    const [err, setErr] = useState(null);
+    const [busy, setBusy] = useState(false);
+    const [msg, setMsg] = useState("");
+    const [booklet, setBooklet] = useState("");
+    const [, setTick] = useState(0);
+    var clockRef = useRef(null);
+    var lastPhase = useRef("");
+    var fetchedResult = useRef({});
+
+    function load() {
+        if (!C) return Promise.resolve();
+        return C.rpc("live_dashboard", { p_track: track }).then(function (d) {
+            clockRef.current = L.createClock(d.now);
+            setDash(d);
+            setErr(null);
+        }).catch(function (e) { setErr(e); });
+    }
+    useEffect(function () {
+        if (!C || !L) return;
+        load();
+        var t = setInterval(load, 60000);
+        var s = setInterval(function () { setTick(function (x) { return x + 1; }); }, 1000);
+        return function () { clearInterval(t); clearInterval(s); };
+    }, [track]);
+
+    var now = clockRef.current ? clockRef.current.now() : Date.now();
+    var ph = dash ? L.phase(dash, now) : "loading";
+    var e = dash && dash.exam;
+    var last = dash && dash.last_result;
+
+    // aşama değişince (10:00, 10:15, 12:25 …) panoyu yenile
+    useEffect(function () {
+        if (lastPhase.current && lastPhase.current !== ph && ph !== "loading") load();
+        lastPhase.current = ph;
+    }, [ph]);
+
+    // 10:00'dan itibaren kitapçığı önceden indir (şifreli; 10:15'te açılır)
+    useEffect(function () {
+        if (!e || !C) return;
+        if (["about_to_start", "can_enter", "in_progress"].indexOf(ph) < 0) return;
+        if (C.hasBooklet(e.id)) { setBooklet("ok"); return; }
+        setBooklet("loading");
+        C.fetchBooklet(e.id).then(function () { setBooklet("ok"); }, function () { setBooklet("fail"); });
+    }, [ph, e && e.id]);
+
+    // sınav bitti: bekleyen cevapları gönder, sonucu hesaplat
+    useEffect(function () {
+        if (!e || !C || !dash.attempt) return;
+        if (ph !== "ended" && ph !== "ranking") return;
+        if (last && last.exam_id === e.id) return;
+        if (fetchedResult.current[e.id]) return;
+        fetchedResult.current[e.id] = true;
+        C.flushPending(e.id).then(function () { return C.rpc("live_result", { p_exam: e.id }); })
+            .then(load, function () { fetchedResult.current[e.id] = false; });
+    }, [ph, e && e.id]);
+
+    // yanlış/boş konular Eksikler'e
+    useEffect(function () {
+        if (last && last.by_konu && window.StudentStore && StudentStore.applyLiveExamGaps) {
+            StudentStore.applyLiveExamGaps(last.exam_id, { title: last.title, at: last.starts_at }, L.gaps(last));
+        }
+    }, [last && last.exam_id]);
+
+    if (!L || !C) return null;
+    if (!dash) {
+        if (err) return null;
+        return <section className="rounded-3xl glass p-5 mb-4 live-card" aria-busy="true"><p className="text-sm text-stone-500">Canlı deneme yükleniyor…</p></section>;
+    }
+
+    function act(name, args, done) {
+        setBusy(true); setMsg("");
+        C.rpc(name, args).then(function (r) { setBusy(false); if (done) done(r); load(); })
+            .catch(function (x) { setBusy(false); setMsg(x.message); });
+    }
+    function register() { act("live_register", { p_exam: e.id }, function (r) { setMsg(r && r.status === "waitlist" ? "Kontenjan dolu; yedek listesine alındın." : "Kaydın alındı."); }); }
+    function unregister() { if (window.confirm("Kaydını silmek istiyor musun?")) act("live_unregister", { p_exam: e.id }); }
+    function enter() { props.onOpen && props.onOpen("exam", e.id); }
+
+    var startT = e ? L.ms(e.starts_at) : 0;
+    var title = e ? e.title : "Canlı deneme";
+    var when = e ? L.fmtDay(startT, true) + " " + L.fmtClock(startT) : "";
+
+    function ResultBlock(p) {
+        var r = p.r;
+        var weak = L.weakest(r, 3);
+        return (
+            <div>
+                <p className="text-xs font-bold uppercase tracking-wider text-teal-700 dark:text-teal-300">Son deneme sonucun · {L.fmtDay(L.ms(r.starts_at))}</p>
+                <h2 className="text-lg font-bold mt-0.5">{r.title}</h2>
+                <div className="flex flex-wrap items-end gap-x-6 gap-y-2 mt-3">
+                    <div><span className="font-stat text-4xl font-black">{L.fmtNet(r.net)}</span> <span className="text-sm text-stone-500">net</span></div>
+                    <div className="text-sm text-stone-600 dark:text-stone-300">{r.correct} doğru · {r.wrong} yanlış · {r.blank} boş</div>
+                    <div className="text-sm font-semibold">
+                        {r.finalized && r.rank ? r.rank + ". / " + r.participants + " kişi · ilk %" + String(r.top_pct).replace(".", ",")
+                            : "Sıralama " + L.fmtClock(L.ms(r.ranking_at)) + "'ta açıklanır"}
+                    </div>
+                </div>
+                {weak.length ? (
+                    <div className="mt-3">
+                        <p className="text-xs text-stone-500 mb-1">En zayıf 3 konun (Eksikler'e eklendi):</p>
+                        <ul className="space-y-1">
+                            {weak.map(function (w) {
+                                var can = liveKonuHasContent(props.kpssData, w.ders, w.konu) && props.onKonu;
+                                return (
+                                    <li key={w.key} className="text-sm flex flex-wrap justify-between gap-2">
+                                        {can ? <button type="button" className="font-semibold text-teal-700 dark:text-teal-300 hover:underline text-left" onClick={function () { props.onKonu(w.ders, w.konu); }}>{w.ders} / {kLabel(w.konu)} →</button>
+                                            : <span className="font-semibold">{w.ders} / {kLabel(w.konu)}</span>}
+                                        <span className="text-stone-500">{w.c}/{w.n}</span>
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </div>
+                ) : null}
+                <div className="flex flex-wrap gap-2 mt-4">
+                    <button type="button" className="quick-chip is-primary" onClick={function () { props.onOpen && props.onOpen("result", r.exam_id); }}>Tüm raporu gör</button>
+                    <button type="button" className="quick-chip" onClick={function () { props.onOpen && props.onOpen("archive"); }}>Denemelerim</button>
+                </div>
+            </div>
+        );
+    }
+
+    var body = null;
+    var showResult = last && ["ended", "ranking", "none", "reg_open", "registered", "waitlist", "reg_closed", "over_unregistered", "missed_live"].indexOf(ph) >= 0;
+    var missedNewer = dash.missed && (!last || L.ms(dash.missed.starts_at) > L.ms(last.starts_at));
+
+    if (ph === "loading") body = null;
+    else if (ph === "about_to_start") {
+        body = (
+            <div>
+                <p className="text-xs font-bold uppercase tracking-wider text-amber-700 dark:text-amber-300">Sınav başlamak üzere</p>
+                <h2 className="text-lg font-bold mt-0.5">{title}</h2>
+                <p className="mt-2 font-stat text-3xl font-black" role="timer">{L.fmtLeft(startT - now)}</p>
+                <p className="text-sm text-stone-600 dark:text-stone-300 mt-1">
+                    {booklet === "ok" ? "✓ Soru kitapçığı şifreli olarak cihazına indi; 10:15'te açılacak." : booklet === "fail" ? "Kitapçık indirilemedi; internetini kontrol et, tekrar denenecek." : "Soru kitapçığı cihazına iniyor…"}
+                </p>
+                <button type="button" className="quick-chip is-primary mt-3" disabled>Sınava gir (10:15'te açılır)</button>
+            </div>
+        );
+    } else if (ph === "can_enter" || ph === "in_progress") {
+        body = (
+            <div>
+                <p className="text-xs font-bold uppercase tracking-wider text-rose-700 dark:text-rose-300">● Sınav devam ediyor</p>
+                <h2 className="text-lg font-bold mt-0.5">{title}</h2>
+                <p className="text-sm text-stone-600 dark:text-stone-300 mt-1">
+                    Bitişe {L.fmtLeft(L.ms(e.ends_at) - now)} kaldı{ph === "can_enter" ? " · giriş " + L.fmtClock(L.ms(e.entry_closes_at)) + "'te kapanır" : ""}.
+                </p>
+                <button type="button" className="quick-chip is-primary mt-3" onClick={enter}>{ph === "in_progress" ? "Kaldığın yerden devam et" : "Sınava gir"}</button>
+            </div>
+        );
+    } else if (ph === "entry_closed") {
+        body = <div><p className="font-bold">Sınava giriş {L.fmtClock(L.ms(e.entry_closes_at))}'te kapandı.</p><p className="text-sm text-stone-500 mt-1">Sonraki denemeye kayıt hafta içi açılacak.</p></div>;
+    } else if (ph === "submitted") {
+        body = <div><p className="font-bold">Kâğıdını teslim ettin.</p><p className="text-sm text-stone-500 mt-1">Sonucun ve çözümler {L.fmtClock(L.ms(e.ends_at))}'te açılır.</p></div>;
+    } else if (ph === "locked") {
+        body = <div><p className="font-bold text-rose-700">Sınavın kilitlendi.</p><p className="text-sm text-stone-500 mt-1">Cihaz değişim sınırı aşıldı. Yönetici ile iletişime geç.</p></div>;
+    } else if ((ph === "ended" || ph === "ranking") && !(last && last.exam_id === e.id)) {
+        body = <div><p className="font-bold">Sınav bitti.</p><p className="text-sm text-stone-500 mt-1">Sonucun hesaplanıyor…</p></div>;
+    } else if (showResult) {
+        body = <ResultBlock r={last} />;
+    } else if (missedNewer || ph === "missed_live" || ph === "over_unregistered") {
+        body = <div><p className="font-bold">Bu haftaki denemeye katılmadın.</p><p className="text-sm text-stone-500 mt-1">Genel sonuçlar açıklandığında burada görünür; bir sonrakine kayıt ol.</p></div>;
+    }
+
+    // kayıt bölümü (sonuç kartının altında da görünür)
+    var regBlock = null;
+    if (ph === "reg_open") {
+        regBlock = (
+            <div className={body ? "mt-4 pt-4 border-t border-stone-200/70 dark:border-stone-700" : ""}>
+                <p className="text-xs font-bold uppercase tracking-wider text-indigo-700 dark:text-indigo-300">Canlı deneme · {L.TRACKS[e.track]}</p>
+                <h2 className="text-lg font-bold mt-0.5">{when}'te canlı deneme</h2>
+                <p className="text-sm text-stone-600 dark:text-stone-300 mt-1">120 soru · 130 dakika · herkes aynı anda · başlamaya {L.fmtLeft(startT - now)}{dash.registered_count ? " · " + dash.registered_count + " kayıtlı" : ""}{e.capacity ? " / " + e.capacity : ""}</p>
+                <button type="button" className="quick-chip is-primary mt-3" disabled={busy} onClick={register}>Kayıt ol</button>
+            </div>
+        );
+    } else if (ph === "registered" || ph === "waitlist") {
+        regBlock = (
+            <div className={body ? "mt-4 pt-4 border-t border-stone-200/70 dark:border-stone-700" : ""}>
+                <p className="text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-300">{ph === "waitlist" ? "Yedek listesindesin" : "✓ Kayıtlısın"}</p>
+                <h2 className="text-lg font-bold mt-0.5">{when} · {title}</h2>
+                <p className="text-sm text-stone-600 dark:text-stone-300 mt-1">
+                    {ph === "waitlist" ? "Sıran: " + ((dash.registration && dash.registration.waitlist_pos) || "?") + ". Yer açılırsa otomatik kaydedilirsin. " : ""}
+                    Başlamaya {L.fmtLeft(startT - now)}.
+                </p>
+                {ph === "registered" ? (
+                    <ul className="text-xs text-stone-500 mt-2 space-y-0.5 list-disc pl-4">
+                        <li>Kayıt pazar {L.fmtClock(L.ms(e.reg_closes_at))}'da kapanır; kitapçık o saatte cihazına iner.</li>
+                        <li>130 dakikalık sessiz bir zaman ayır; müsvedde kâğıt ve kalem hazırla.</li>
+                        <li>Sınava {L.fmtClock(L.ms(e.entry_closes_at))}'e kadar girebilirsin; geç giren ek süre almaz.</li>
+                    </ul>
+                ) : null}
+                <button type="button" className="quick-chip mt-3" disabled={busy} onClick={unregister}>Kaydımı sil</button>
+            </div>
+        );
+    } else if (ph === "reg_closed") {
+        regBlock = body ? null : <div><p className="font-bold">Bu haftanın kaydı kapandı.</p><p className="text-sm text-stone-500 mt-1">Sınav {when}'te başlıyor; sonraki denemeye kayıt hafta içi açılır.</p></div>;
+    } else if (ph === "none" && !body) {
+        regBlock = <div><p className="text-xs font-bold uppercase tracking-wider text-stone-500">Canlı deneme</p><p className="font-bold mt-1">Sıradaki canlı deneme yakında duyurulacak.</p><p className="text-sm text-stone-500 mt-1">Her pazar 10:15'te herkes aynı anda çözer, ortak sıralama çıkar.</p></div>;
+    }
+
+    return (
+        <section className="rounded-3xl glass p-5 sm:p-6 mb-4 slide-up live-card" aria-label="Canlı deneme">
+            {dash.cancelled ? <p className="plan-warn mb-3">{dash.cancelled.title} iptal edildi{dash.cancelled.cancel_reason ? ": " + dash.cancelled.cancel_reason : "."}</p> : null}
+            {body}
+            {regBlock}
+            {msg ? <p className="text-sm mt-2 text-stone-600 dark:text-stone-300" role="status">{msg}</p> : null}
+            {!props.full ? (
+                <button type="button" className="text-xs font-semibold text-stone-500 hover:underline mt-3" onClick={function () { props.onOpen && props.onOpen("home"); }}>Canlı deneme sayfası →</button>
+            ) : null}
+        </section>
+    );
+}
+window.KpssLiveCard = LiveExamCard;
+
+// Eksikler: son canlı denemeden gelen konular
+function LiveGaps(props) {
+    var g = props.student && props.student.userProfile && props.student.userProfile.liveGaps;
+    if (!g || !g.items || !g.items.length) return null;
+    return (
+        <section className="rounded-3xl glass p-5 mb-6" aria-label="Canlı denemeden eksikler">
+            <p className="text-xs font-bold uppercase tracking-wider text-rose-700 dark:text-rose-300">Canlı denemeden · {g.title}</p>
+            <h2 className="text-lg font-bold mt-0.5">Yanlış ve boş bıraktığın konular</h2>
+            <ul className="mt-3 space-y-1.5">
+                {g.items.slice(0, 12).map(function (it) {
+                    var can = liveKonuHasContent(props.kpssData, it.ders, it.konu);
+                    return (
+                        <li key={it.ders + "|" + it.konu} className="flex flex-wrap items-center justify-between gap-2 text-sm">
+                            {can ? <button type="button" className="font-semibold text-left text-teal-700 dark:text-teal-300 hover:underline" onClick={function () { props.onKonu(it.ders, it.konu); }}>{it.ders} / {kLabel(it.konu)} →</button>
+                                : <span className="font-semibold">{it.ders} / {kLabel(it.konu)} <span className="text-[11px] font-normal text-stone-400">(konu anlatımı yakında)</span></span>}
+                            <span className="text-stone-500">{it.w} yanlış · {it.b} boş</span>
+                        </li>
+                    );
+                })}
+            </ul>
+        </section>
+    );
+}
+
 function Bugun(props) {
     const plan = props.plan;
     const [wizard, setWizard] = useState(false);
@@ -1334,6 +1583,7 @@ function Bugun(props) {
 
             <div className="dash-split">
                 <div className="min-w-0">
+                    <LiveExamCard student={props.student} kpssData={props.kpssData} onKonu={function (d, k) { props.onKonu(d, k, "hub"); }} onOpen={props.onLive} />
                     <SmartPlanCard student={props.student} kpssData={props.kpssData} onKonu={props.onKonu} onDers={props.onDers} onExam={props.onExam}
                         onWizard={function () { setWizard(true); }} onCalendar={function () { setCalendar(true); }} />
                     <NextSteps plan={plan} onKonu={props.onKonu} onReview={props.onReview} onWrong={props.onWrong} onMixed={props.onMixed} />
@@ -2681,6 +2931,7 @@ function Eksikler(props) {
                     <span className="text-xs font-normal opacity-80 mt-1 block">Çözdüğün soru defterden düşer. Konu kilidini açmaz.</span>
                 </button>
             </div>
+            <LiveGaps student={props.student} kpssData={props.kpssData} onKonu={props.onKonu} />
             <button onClick={function () { props.onNotebook && props.onNotebook(); }}
                 className="w-full mb-6 p-4 rounded-2xl glass text-left card-hover">
                 <span className="font-semibold block">Tekrar defteri</span>
@@ -3220,6 +3471,7 @@ function App() {
     }, [kpssData, student]);
 
     const [extra, setExtra] = useState(null);
+    const [liveView, setLiveView] = useState({ view: "home" });
     const [LazyCmp, setLazyCmp] = useState(null);
     const [authReady, setAuthReady] = useState(false);
     const [authSession, setAuthSession] = useState(null);
@@ -3273,7 +3525,7 @@ function App() {
 
     useEffect(function () {
         if (!extra || extra === "onboarding") return;
-        if (extra === "instructor" || extra === "admin" || extra === "exam" || extra === "live") {
+        if (extra === "instructor" || extra === "admin" || extra === "exam") {
             setExtra(null);
             return;
         }
@@ -3610,6 +3862,12 @@ function App() {
         setViewMode("hub");
     }
 
+    function openLive(view, examId) {
+        setLiveView({ view: view || "home", examId: examId || null });
+        setLazyCmp(null); setLazyErr("");
+        setExtra("live");
+    }
+
     function openKonu(ders, konu) {
         setNav("dersler");
         setSelectedDers(ders);
@@ -3684,9 +3942,10 @@ function App() {
             onReview={function () { startSession(plan.due.slice(0, 30), { mode: "review" }); }}
             onWrong={function () { startSession(plan.wrong.slice(0, 30), { mode: "wrong" }); }}
             onMixed={function () { startSession(StudyPlanner.mixedQuiz(kpssData, null, 10), { mode: "mixed" }); }}
-            onExam={function () { setLazyCmp(null); setLazyErr(""); setExtra("exam"); }} />;
+            onExam={function () { startSession(StudyPlanner.mixedQuiz(kpssData, null, 40), { mode: "mixed" }); }}
+            onLive={openLive} />;
     } else if (nav === "eksikler") {
-        body = <Eksikler plan={plan} isDark={isDark} toggleDark={toggleDark}
+        body = <Eksikler plan={plan} isDark={isDark} toggleDark={toggleDark} student={student} kpssData={kpssData} onKonu={openKonu}
             onReview={function () { startSession(plan.due.slice(0, 30), { mode: "review" }); }}
             onWrong={function () { startSession(plan.wrong.slice(0, 30), { mode: "wrong" }); }}
             onNotebook={function () { setExtra("notebook"); }} />;
@@ -3885,7 +4144,9 @@ function App() {
         onClose: closeTool,
         onDone: function () { closeTool(); if (window.SyncEngine) window.SyncEngine.sync(); },
         onOpen: function (id) { setLazyCmp(null); setLazyErr(""); setExtra(id); },
-        onStartExam: function () { setLazyCmp(null); setLazyErr(""); setExtra("exam"); }
+        onStartExam: function () { setLazyCmp(null); setLazyErr(""); setExtra("exam"); },
+        liveView: liveView,
+        onKonu: function (d, k) { closeTool(); openKonu(d, k); }
     };
 
     if (extra && extra !== "onboarding" && extra !== "auth") {

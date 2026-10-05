@@ -15,7 +15,8 @@ import BenScreen from "./screens/BenScreen";
 import NotesScreen from "./screens/NotesScreen";
 import TestScreen from "./screens/TestScreen";
 import ReviewNotebookScreen from "./screens/ReviewNotebookScreen";
-import { AiScreen, HeatScreen, LeaderboardScreen, LiveScreen, PaywallScreen, PlacementScreen } from "./screens/ExtraScreens";
+import { AiScreen, HeatScreen, LeaderboardScreen, PaywallScreen, PlacementScreen } from "./screens/ExtraScreens";
+import { LiveHomeScreen, LiveExamScreen, LiveResultScreen, LiveArchiveScreen } from "./screens/LiveExamScreens";
 import { Clock, BookOpen, PencilLine, BarChart3, User } from "lucide-react-native";
 import { StatusBar } from "expo-status-bar";
 import { colors } from "./lib/theme";
@@ -173,7 +174,10 @@ export default function MainStack() {
                 <Stack.Screen name="Leaderboard" component={LeaderboardScreen} />
                 <Stack.Screen name="Heat" component={HeatScreen} />
                 <Stack.Screen name="Ai" component={AiScreen} />
-                <Stack.Screen name="Live" component={LiveScreen} />
+                <Stack.Screen name="Live" component={LiveHomeScreen} />
+                <Stack.Screen name="LiveExam" component={LiveExamScreen} options={{ gestureEnabled: false }} />
+                <Stack.Screen name="LiveResult" component={LiveResultScreen} />
+                <Stack.Screen name="LiveArchive" component={LiveArchiveScreen} />
                 <Stack.Screen name="Paywall" component={PaywallScreen} />
             </Stack.Navigator>
         </NavigationContainer>

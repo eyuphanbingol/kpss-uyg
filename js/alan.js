@@ -36,9 +36,16 @@
         var src = data || {}, out = {};
         Object.keys(src).forEach(function (d) {
             if (isAlanDers(d) || isOgretmenDers(d)) return;
+            if (!hasContent(src[d])) return; // içeriği olmayan ders (ör. henüz boş Matematik) gösterilmez
             out[d] = src[d];
         });
         return out;
+    }
+    function hasContent(ders) {
+        return Object.keys(ders || {}).some(function (k) {
+            var kd = ders[k];
+            return kd && (((kd.notlar || []).length) || ((kd.sorular || []).length));
+        });
     }
     function dersLabel(ders) {
         return String(ders || "").replace(/^AGS\s+/, "").replace(/^ÖABT\s+/, "");

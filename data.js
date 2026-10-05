@@ -467,6 +467,35 @@ window.getKpssData = function () {
                 notlar: window.geometri_12_notlari || [],
                 sorular: window.geometri_12_sorulari || []
             }
+        },
+        // Matematik: konu anahtarları canlı deneme raporu ve Eksikler için. İçerik (not/soru)
+        // eklenene kadar ders listelerinde görünmez (Alan.filterCatalog boş dersi eler).
+        "Matematik": {
+            "Temel Kavramlar": { notlar: [], sorular: [] },
+            "Sayı Basamakları": { notlar: [], sorular: [] },
+            "Bölme ve Bölünebilme": { notlar: [], sorular: [] },
+            "Asal Çarpanlar, EBOB ve EKOK": { notlar: [], sorular: [] },
+            "Rasyonel Sayılar": { notlar: [], sorular: [] },
+            "Ondalık Sayılar": { notlar: [], sorular: [] },
+            "Basit Eşitsizlikler": { notlar: [], sorular: [] },
+            "Mutlak Değer": { notlar: [], sorular: [] },
+            "Üslü Sayılar": { notlar: [], sorular: [] },
+            "Köklü Sayılar": { notlar: [], sorular: [] },
+            "Çarpanlara Ayırma": { notlar: [], sorular: [] },
+            "Oran ve Orantı": { notlar: [], sorular: [] },
+            "Denklem Çözme": { notlar: [], sorular: [] },
+            "Sayı ve Kesir Problemleri": { notlar: [], sorular: [] },
+            "Yaş Problemleri": { notlar: [], sorular: [] },
+            "Yüzde, Kâr ve Zarar Problemleri": { notlar: [], sorular: [] },
+            "Karışım Problemleri": { notlar: [], sorular: [] },
+            "Hareket Problemleri": { notlar: [], sorular: [] },
+            "İşçi ve Havuz Problemleri": { notlar: [], sorular: [] },
+            "Kümeler": { notlar: [], sorular: [] },
+            "Fonksiyonlar": { notlar: [], sorular: [] },
+            "İşlem ve Modüler Aritmetik": { notlar: [], sorular: [] },
+            "Permütasyon, Kombinasyon ve Olasılık": { notlar: [], sorular: [] },
+            "Tablo ve Grafik Yorumlama": { notlar: [], sorular: [] },
+            "Sayısal Mantık": { notlar: [], sorular: [] }
         }
 
     };

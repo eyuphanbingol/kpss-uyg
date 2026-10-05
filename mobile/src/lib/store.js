@@ -1134,6 +1134,38 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             emit();
         },
         getTopic: getTopic,
+        // Canlı deneme: yanlış/boş konular Eksikler'e düşer (her deneme bir kez işlenir).
+        applyLiveExamGaps: function (examId, meta, gaps) {
+            if (!examId || !Array.isArray(gaps)) return false;
+            var up = state.userProfile;
+            var applied = Array.isArray(up.liveApplied) ? up.liveApplied.slice() : [];
+            var fresh = applied.indexOf(examId) < 0;
+            if (fresh) {
+                gaps.forEach(function (g) {
+                    if (!g || !g.ders || !g.konu) return;
+                    var t = ensureTopic(g.ders, g.konu);
+                    t.wrongWeight = Math.min(12, (t.wrongWeight || 0) + Math.min(3, (g.w || 0) + (g.b || 0)));
+                    t.updatedAt = nowIso();
+                });
+                applied.push(examId);
+                up.liveApplied = applied.slice(-40);
+            }
+            var cur = up.liveGaps;
+            var changed = fresh;
+            if (fresh || !cur || cur.examId !== examId) {
+                if (!cur || !cur.at || !meta || !meta.at || meta.at >= cur.at) {
+                    up.liveGaps = {
+                        examId: examId,
+                        title: (meta && meta.title) || "Canlı deneme",
+                        at: (meta && meta.at) || nowIso(),
+                        items: gaps.slice(0, 40).map(function (g) { return { ders: g.ders, konu: g.konu, w: g.w || 0, b: g.b || 0, n: g.n || 0 }; })
+                    };
+                    changed = true;
+                }
+            }
+            if (changed) emit();
+            return fresh;
+        },
         solvedClozeIds: function (ders, konu) {
             return solvedClozeOf(getTopic(ders, konu));
         },

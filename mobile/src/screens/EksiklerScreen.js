@@ -7,6 +7,32 @@ import { ScrollScreen, Badge, Tap, PageHeader, ThemeToggle } from "../ui";
 import { colors } from "../lib/theme";
 import { AccentCard, PctBadge } from "../kit";
 import { konuLabel } from "../lib/konuLabels";
+import { liveKonuHasContent } from "../components/LiveExamCard";
+
+// Son canlı denemede yanlış/boş bırakılan konular (store.applyLiveExamGaps yazar).
+function LiveGaps({ navigation, student, kpssData, dark }) {
+    var g = student && student.userProfile && student.userProfile.liveGaps;
+    if (!g || !g.items || !g.items.length) return null;
+    return (
+        <View style={[styles.liveBox, dark && styles.actionBtnDark]} accessibilityLabel="Canlı denemeden eksikler">
+            <Text style={[styles.liveKicker, dark && { color: "#FDA4AF" }]}>CANLI DENEMEDEN · {g.title}</Text>
+            <Text style={[styles.actionBtnTitle, dark && styles.textLight]}>Yanlış ve boş bıraktığın konular</Text>
+            {g.items.slice(0, 12).map(function (it) {
+                var can = liveKonuHasContent(kpssData, it.ders, it.konu);
+                return (
+                    <Tap key={it.ders + "|" + it.konu} disabled={!can}
+                        onPress={function () { go(navigation, "KonuHub", { ders: it.ders, konu: it.konu }); }}
+                        style={styles.liveRow}>
+                        <Text style={[styles.liveName, can ? styles.liveLink : (dark && styles.textLight)]} numberOfLines={2}>
+                            {it.ders} / {konuLabel(it.konu)}{can ? " →" : " (konu anlatımı yakında)"}
+                        </Text>
+                        <Text style={[styles.liveCount, dark && styles.textMuted]}>{it.w} yanlış · {it.b} boş</Text>
+                    </Tap>
+                );
+            })}
+        </View>
+    );
+}
 
 // ============================================================
 // EKSIKLER SCREEN
@@ -92,6 +118,8 @@ export default function EksiklerScreen({ navigation }) {
                 </Tap>
             </View>
 
+            <LiveGaps navigation={navigation} student={app.student} kpssData={app.kpssData} dark={isDark} />
+
             <Tap
                 onPress={function () { go(navigation, "ReviewNotebook"); }}
                 style={[styles.notebookBtn, isDark && styles.actionBtnDark]}
@@ -165,6 +193,12 @@ export default function EksiklerScreen({ navigation }) {
 // ============================================================
 
 var styles = StyleSheet.create({
+    liveBox: { marginBottom: 16, padding: 14, borderRadius: 16, backgroundColor: "#FFFFFF", borderWidth: 1, borderColor: "#E7E5E4", gap: 6 },
+    liveKicker: { fontSize: 11, fontWeight: "800", color: "#BE123C", letterSpacing: 0.5 },
+    liveRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 8, paddingVertical: 6 },
+    liveName: { flex: 1, fontSize: 14, fontWeight: "600", color: "#1C1917" },
+    liveLink: { color: "#0F766E" },
+    liveCount: { fontSize: 12, color: "#78716C" },
     // ---------- Text Helpers ----------
     textLight: {
         color: "#fff",

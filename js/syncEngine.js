@@ -195,6 +195,14 @@
         up.studyPlan = plan;
         var smart = mergeSmartPlan(local, remote, settingsSrc);
         if (smart) up.smartPlan = smart;
+        // canlı deneme: işlenmiş denemeler iki cihazda birleşir (eksikler iki kez sayılmasın)
+        var la = ((local && local.userProfile && local.userProfile.liveApplied) || [])
+            .concat((remote && remote.userProfile && remote.userProfile.liveApplied) || []);
+        if (la.length) up.liveApplied = mergeIdList(la, []).slice(-40);
+        // son denemeden gelen eksikler: iki taraftan daha yeni deneme kalır
+        var lg = local && local.userProfile && local.userProfile.liveGaps;
+        var rg = remote && remote.userProfile && remote.userProfile.liveGaps;
+        if (lg || rg) up.liveGaps = (!rg || (lg && String(lg.at || "") >= String(rg.at || ""))) ? lg : rg;
         var resetAt = maxIso((local && local.userProfile && local.userProfile.progressResetAt) || "",
             (remote && remote.userProfile && remote.userProfile.progressResetAt) || "");
         up.progressResetAt = resetAt || null;
