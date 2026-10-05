@@ -1671,6 +1671,39 @@
             .ben-cols { columns: 2; column-gap: 1.5rem; }
             .ben-cols > * { break-inside: avoid; }
         }
+        /* ---- Bugün araçları ---- */
+        .next-step { background: rgba(255, 255, 255, .7); border: 1px solid rgba(28, 25, 23, .07); color: #1c1917; }
+        .next-step:hover { border-color: rgba(13, 148, 136, .45); transform: translateY(-1px); box-shadow: 0 8px 22px -12px rgba(13, 44, 77, .35); }
+        .next-step.is-first { background: linear-gradient(135deg, #0D2C4D, #14607a); color: #fff; border-color: transparent; }
+        .next-step-ico { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; font-size: 20px; background: rgba(13, 148, 136, .1); }
+        .next-step.is-first .next-step-ico { background: rgba(255, 255, 255, .14); }
+        .next-step-go { font-size: 13px; font-weight: 800; color: #0f766e; }
+        .next-step.is-first .next-step-go { background: #fff; color: #0D2C4D; padding: 8px 14px; border-radius: 999px; }
+        html.dark .next-step { background: rgba(41, 37, 36, .7); border-color: rgba(255, 255, 255, .07); color: #f5f5f4; }
+        html.dark .next-step-go { color: #5eead4; }
+        .quick-chip {
+            display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 8px 14px;
+            border-radius: 999px; font-size: 13px; font-weight: 700; color: #1c1917;
+            background: #fff; border: 1px solid rgba(28, 25, 23, .12); transition: background .15s, border-color .15s;
+        }
+        .quick-chip:hover:not(:disabled) { border-color: #0f766e; background: #f0fdfa; }
+        .quick-chip:disabled { opacity: .45; cursor: not-allowed; }
+        .quick-chip.is-primary { background: #0D2C4D; color: #fff; border-color: #0D2C4D; }
+        .quick-chip.is-primary:hover:not(:disabled) { background: #14607a; }
+        html.dark .quick-chip { background: #292524; color: #f5f5f4; border-color: rgba(255, 255, 255, .12); }
+        html.dark .quick-chip.is-primary { background: #14607a; border-color: #14607a; }
+        .step-btn {
+            width: 32px; height: 32px; border-radius: 10px; font-weight: 800; font-size: 16px; line-height: 1;
+            background: #fff; border: 1px solid rgba(28, 25, 23, .14); color: #1c1917;
+        }
+        .step-btn:hover { border-color: #4f46e5; color: #4f46e5; }
+        html.dark .step-btn { background: #292524; color: #f5f5f4; border-color: rgba(255, 255, 255, .14); }
+        .weak-row, .ders-row { transition: background .15s; }
+        .weak-row:hover, .ders-row:hover { background: rgba(13, 148, 136, .07); }
+        .week-bar { border-radius: 10px; padding-top: 4px; }
+        .week-bar:hover > span:first-child { filter: brightness(.92); }
+        .tool-pair { display: grid; gap: 1rem; }
+        @media (min-width: 1600px) { .tool-pair { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
         .map-play-root.map-place {
             background: #152018;
         }
@@ -2678,7 +2711,7 @@
     <script>
         // js/app.jsx derlenmiş hâliyle önbellekten açılır (bkz. js/jsxLoader.js). Değişince ?v= artır.
         document.addEventListener("DOMContentLoaded", function () {
-            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=137");
+            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=138");
         });
     </script>
     <script>

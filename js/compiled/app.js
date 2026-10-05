@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:187895:12x77oe*/
+/*jsx:babel-7.29.9-react-classic:207485:flfh2o*/
 const {
   useState,
   useEffect,
@@ -992,6 +992,8 @@ function StudyProgram(props) {
 var DASH_COLORS = ["#4f46e5", "#7c3aed", "#ec4899", "#f59e0b", "#10b981", "#6366f1"];
 function StudyDash(props) {
   const d = StudyPlanner.studyDashboard ? StudyPlanner.studyDashboard(props.student) : null;
+  const [pickDay, setPickDay] = useState(null);
+  const [hoverWeek, setHoverWeek] = useState(null);
   if (!d) return /*#__PURE__*/React.createElement("div", {
     className: "rounded-2xl glass p-6 text-center text-stone-400 text-sm slide-up"
   }, "\xC7al\u0131\u015Fmaya ba\u015Flay\u0131nca istatistikler burada g\xF6r\xFCnecek.");
@@ -1015,6 +1017,28 @@ function StudyDash(props) {
   var todayPct = todayGoal ? Math.min(100, Math.round(todayH / todayGoal * 100)) : todayH ? 100 : 0;
   var rec = d.longest.minutes ? Math.round(d.longest.minutes / 60 * 10) / 10 + " saat" : "—";
   var dayNames = ["Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz"];
+  var dayFull = ["Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"];
+  // bu haftanın günleri (Pzt başlangıçlı) ve her günün soru / doğru sayısı
+  var todayIso = StudentStore.todayStr();
+  var todayIdx = (new Date(todayIso + "T12:00:00").getDay() + 6) % 7;
+  var weekIso = dayNames.map(function (_n, i) {
+    return StudentStore.addDays(todayIso, i - todayIdx);
+  });
+  var weekQ = weekIso.map(function (iso) {
+    var x = (props.student.sessions || {})[iso] || {};
+    return {
+      q: x.questions || 0,
+      c: x.correct || 0
+    };
+  });
+  var selDay = pickDay == null ? todayIdx : pickDay;
+  var lastW = d.weeks[d.weeks.length - 1] || {
+    minutes: 0
+  };
+  var prevW = d.weeks[d.weeks.length - 2] || {
+    minutes: 0
+  };
+  var wDelta = prevW.minutes ? Math.round((lastW.minutes - prevW.minutes) / prevW.minutes * 100) : null;
   var circ = 2 * Math.PI * 28;
   var donutEls = [];
   var donutOff = 0;
@@ -1086,11 +1110,18 @@ function StudyDash(props) {
     }
   }))), /*#__PURE__*/React.createElement("div", {
     className: "rounded-2xl glass p-5 card-hover"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-baseline justify-between gap-2 mb-3"
   }, /*#__PURE__*/React.createElement("p", {
-    className: "text-sm font-semibold mb-3"
-  }, "\uD83D\uDCC8 Haftal\u0131k trend"), /*#__PURE__*/React.createElement("svg", {
+    className: "text-sm font-semibold"
+  }, "\uD83D\uDCC8 Haftal\u0131k trend"), /*#__PURE__*/React.createElement("span", {
+    className: "text-xs text-stone-500"
+  }, hoverWeek != null ? d.weeks[hoverWeek].label + " haftası: " + d.weeks[hoverWeek].minutes + " dk" : wDelta == null ? "Bu hafta " + lastW.minutes + " dk" : "Bu hafta " + lastW.minutes + " dk · geçen haftaya göre " + (wDelta >= 0 ? "+" : "") + wDelta + "%")), /*#__PURE__*/React.createElement("svg", {
     viewBox: "0 0 236 86",
-    className: "w-full h-24"
+    className: "w-full h-24",
+    onMouseLeave: function () {
+      setHoverWeek(null);
+    }
   }, /*#__PURE__*/React.createElement("polyline", {
     fill: "rgba(79,70,229,0.12)",
     points: area
@@ -1101,6 +1132,35 @@ function StudyDash(props) {
     points: pts,
     strokeLinecap: "round",
     strokeLinejoin: "round"
+  }), d.weeks.map(function (w, i) {
+    var x = 8 + i / Math.max(1, d.weeks.length - 1) * 220;
+    var y = 78 - w.minutes / trendMax * 64;
+    var on = hoverWeek === i;
+    return /*#__PURE__*/React.createElement("g", {
+      key: i,
+      onMouseEnter: function () {
+        setHoverWeek(i);
+      },
+      onClick: function () {
+        setHoverWeek(i);
+      },
+      style: {
+        cursor: "pointer"
+      }
+    }, /*#__PURE__*/React.createElement("rect", {
+      x: x - 13,
+      y: "0",
+      width: "26",
+      height: "86",
+      fill: "transparent"
+    }), /*#__PURE__*/React.createElement("circle", {
+      cx: x,
+      cy: y,
+      r: on ? 4.5 : 2.6,
+      fill: on ? "#4f46e5" : "#fff",
+      stroke: "#4f46e5",
+      strokeWidth: "1.6"
+    }), /*#__PURE__*/React.createElement("title", null, w.label + " haftası: " + w.minutes + " dk"));
   })), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between text-[10px] text-stone-400 -mt-1"
   }, /*#__PURE__*/React.createElement("span", null, "8 hafta \xF6nce"), /*#__PURE__*/React.createElement("span", null, "bu hafta"))), /*#__PURE__*/React.createElement("div", {
@@ -1108,23 +1168,35 @@ function StudyDash(props) {
   }, /*#__PURE__*/React.createElement("p", {
     className: "text-sm font-semibold mb-3"
   }, "\uD83D\uDCC5 Bu hafta"), /*#__PURE__*/React.createElement("div", {
-    className: "flex items-end gap-1.5 h-28"
+    className: "flex items-end gap-1.5 h-28",
+    role: "group",
+    "aria-label": "Bu haftan\u0131n g\xFCnleri"
   }, d.weekMin.map(function (m, i) {
     var h = Math.max(6, Math.round(m / weekMax * 92));
-    var colors = ["#4f46e5", "#7c3aed", "#6366f1", "#8b5cf6", "#a78bfa", "#c084fc", "#ddd6fe"];
-    return /*#__PURE__*/React.createElement("div", {
+    var on = i === selDay;
+    var future = i > todayIdx;
+    return /*#__PURE__*/React.createElement("button", {
       key: i,
-      className: "flex-1 flex flex-col items-center justify-end h-full"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "w-full rounded-t-lg transition-all duration-300",
+      type: "button",
+      onClick: function () {
+        setPickDay(i);
+      },
+      "aria-pressed": on,
+      "aria-label": dayFull[i] + ": " + m + " dakika, " + weekQ[i].q + " soru",
+      className: "week-bar flex-1 flex flex-col items-center justify-end h-full"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "block w-full rounded-t-lg transition-all duration-300",
       style: {
         height: h + "%",
-        background: colors[i % colors.length]
+        background: on ? "#4f46e5" : future ? "#e7e5e4" : "#a5b4fc"
       }
     }), /*#__PURE__*/React.createElement("span", {
-      className: "text-[10px] text-stone-400 mt-1.5 font-medium"
+      className: "text-[10px] mt-1.5 " + (i === todayIdx ? "font-black text-indigo-600" : "font-medium text-stone-400")
     }, dayNames[i]));
-  }))), /*#__PURE__*/React.createElement("div", {
+  })), /*#__PURE__*/React.createElement("p", {
+    className: "text-xs text-stone-600 dark:text-stone-300 mt-3",
+    "aria-live": "polite"
+  }, /*#__PURE__*/React.createElement("b", null, dayFull[selDay], selDay === todayIdx ? " (bugün)" : "", ":"), " ", d.weekMin[selDay], " dk \xB7 ", weekQ[selDay].q, " soru", weekQ[selDay].q ? " · %" + Math.round(weekQ[selDay].c / weekQ[selDay].q * 100) + " doğru" : "")), /*#__PURE__*/React.createElement("div", {
     className: "rounded-2xl glass p-5 card-hover"
   }, /*#__PURE__*/React.createElement("p", {
     className: "text-sm font-semibold mb-3"
@@ -1160,9 +1232,14 @@ function StudyDash(props) {
     className: "min-w-0 space-y-1.5 flex-1"
   }, d.dersList.slice(0, 5).map(function (x, i) {
     var pct = Math.round(x.v / d.dersSum * 100);
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React.createElement("button", {
       key: x.ders,
-      className: "flex items-center gap-2"
+      type: "button",
+      title: x.ders + " sayfasını aç",
+      onClick: function () {
+        if (props.onDers) props.onDers(x.ders);
+      },
+      className: "ders-row w-full text-left flex items-center gap-2 rounded-lg px-1.5 py-1"
     }, /*#__PURE__*/React.createElement("span", {
       className: "h-2.5 w-2.5 rounded-full shrink-0",
       style: {
@@ -1172,10 +1249,10 @@ function StudyDash(props) {
       className: "text-xs truncate flex-1"
     }, x.ders), /*#__PURE__*/React.createElement("span", {
       className: "text-xs font-bold text-stone-400"
-    }, pct, "%"), /*#__PURE__*/React.createElement("div", {
+    }, pct, "%"), /*#__PURE__*/React.createElement("span", {
       className: "w-12 h-1.5 rounded-full bg-stone-200 dark:bg-stone-700 overflow-hidden"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "h-full rounded-full",
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "block h-full rounded-full",
       style: {
         width: pct + "%",
         background: DASH_COLORS[i % DASH_COLORS.length]
@@ -1184,6 +1261,433 @@ function StudyDash(props) {
   }))) : /*#__PURE__*/React.createElement("p", {
     className: "text-sm text-stone-400"
   }, "Ders saati birikince pasta dolacak.")));
+}
+
+// ---------- Bugün: etkileşimli çalışma araçları ----------
+
+var TASK_ICON = {
+  notes: "📖",
+  test: "🎯",
+  review: "🔁",
+  wrong: "🩹"
+};
+function NextSteps(props) {
+  var plan = props.plan;
+  var tasks = plan.tasks || [];
+  function run(t) {
+    if (t.kind === "notes") props.onKonu(t.ders, t.konu, "notes");else if (t.kind === "test") props.onKonu(t.ders, t.konu, "hub");else if (t.kind === "review") props.onReview();else if (t.kind === "wrong") props.onWrong();
+  }
+  return /*#__PURE__*/React.createElement("section", {
+    className: "rounded-3xl glass p-5 sm:p-6 mb-4 slide-up",
+    "aria-labelledby": "next-steps-title"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-start justify-between gap-3 mb-1"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "min-w-0"
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "text-xs font-bold uppercase tracking-wider text-teal-700 dark:text-teal-300"
+  }, "\u015Eimdi ne \xE7al\u0131\u015Fay\u0131m?"), /*#__PURE__*/React.createElement("h2", {
+    id: "next-steps-title",
+    className: "text-lg font-bold text-stone-900 dark:text-stone-100 mt-0.5 leading-snug"
+  }, plan.coach))), tasks.length ? /*#__PURE__*/React.createElement("ol", {
+    className: "mt-4 space-y-2"
+  }, tasks.map(function (t, i) {
+    return /*#__PURE__*/React.createElement("li", {
+      key: t.id
+    }, /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      onClick: function () {
+        run(t);
+      },
+      className: "next-step w-full text-left rounded-2xl p-3.5 sm:p-4 flex items-center gap-3 transition-all " + (i === 0 ? "is-first" : "")
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "next-step-ico shrink-0",
+      "aria-hidden": "true"
+    }, TASK_ICON[t.kind] || "•"), /*#__PURE__*/React.createElement("span", {
+      className: "min-w-0 flex-1"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "block font-semibold text-[15px] leading-snug"
+    }, t.title, /*#__PURE__*/React.createElement("span", {
+      className: "font-normal opacity-70"
+    }, " \xB7 ", t.detail)), /*#__PURE__*/React.createElement("span", {
+      className: "block text-xs mt-0.5 opacity-70 leading-snug"
+    }, t.why)), /*#__PURE__*/React.createElement("span", {
+      className: "next-step-go shrink-0",
+      "aria-hidden": "true"
+    }, i === 0 ? "Başla" : "→")));
+  })) : /*#__PURE__*/React.createElement("p", {
+    className: "text-sm text-stone-500 mt-3"
+  }, "Bekleyen g\xF6rev yok. Kar\u0131\u015F\u0131k soruyla tempoyu koru."), /*#__PURE__*/React.createElement("div", {
+    className: "flex flex-wrap gap-2 mt-4"
+  }, /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: props.onMixed,
+    className: "quick-chip"
+  }, "\uD83C\uDFB2 Kar\u0131\u015F\u0131k 10 soru"), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: props.onReview,
+    disabled: !plan.due.length,
+    className: "quick-chip"
+  }, "\uD83D\uDD01 Tekrar (", plan.due.length, ")"), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: props.onWrong,
+    disabled: !plan.wrong.length,
+    className: "quick-chip"
+  }, "\uD83E\uDE79 Yanl\u0131\u015Flar (", plan.wrong.length, ")")));
+}
+function DailyGoal(props) {
+  var student = props.student;
+  var sess = (student.sessions || {})[StudentStore.todayStr()] || {};
+  var goal = Number(student.profile && student.profile.dailyQuestions) || 25;
+  var done = sess.questions || 0;
+  var correct = sess.correct || 0;
+  var minutes = sess.minutes || 0;
+  var pct = Math.min(1, done / goal);
+  var R = 42;
+  var C = 2 * Math.PI * R;
+  function setGoal(v) {
+    v = Math.max(5, Math.min(300, v));
+    if (v !== goal) StudentStore.updateProfile({
+      dailyQuestions: v
+    });
+  }
+  var left = Math.max(0, goal - done);
+  return /*#__PURE__*/React.createElement("section", {
+    className: "rounded-3xl glass p-5 flex items-center gap-5",
+    "aria-label": "G\xFCnl\xFCk soru hedefi"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "relative shrink-0",
+    style: {
+      width: 104,
+      height: 104
+    }
+  }, /*#__PURE__*/React.createElement("svg", {
+    viewBox: "0 0 104 104",
+    width: "104",
+    height: "104",
+    role: "img",
+    "aria-label": done + " / " + goal + " soru"
+  }, /*#__PURE__*/React.createElement("circle", {
+    cx: "52",
+    cy: "52",
+    r: R,
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: "10",
+    className: "text-stone-200 dark:text-stone-700"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: "52",
+    cy: "52",
+    r: R,
+    fill: "none",
+    stroke: pct >= 1 ? "#059669" : "#4f46e5",
+    strokeWidth: "10",
+    strokeLinecap: "round",
+    strokeDasharray: C * pct + " " + C,
+    transform: "rotate(-90 52 52)",
+    style: {
+      transition: "stroke-dasharray .5s ease"
+    }
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "absolute inset-0 flex flex-col items-center justify-center"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "font-stat text-2xl font-bold leading-none"
+  }, done), /*#__PURE__*/React.createElement("span", {
+    className: "text-[11px] text-stone-400 mt-0.5"
+  }, "/ ", goal, " soru"))), /*#__PURE__*/React.createElement("div", {
+    className: "min-w-0 flex-1"
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "text-xs font-bold uppercase tracking-wider text-stone-400"
+  }, "G\xFCnl\xFCk hedef"), /*#__PURE__*/React.createElement("p", {
+    className: "font-semibold mt-0.5"
+  }, left ? "Hedefe " + left + " soru kaldı" : "Bugünkü hedef tamam 🎉"), /*#__PURE__*/React.createElement("p", {
+    className: "text-xs text-stone-500 mt-1"
+  }, correct, " do\u011Fru", done ? " (%" + Math.round(correct / done * 100) + ")" : "", " \xB7 ", minutes, " dk \xE7al\u0131\u015Fma"), /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-2 mt-3"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "text-xs text-stone-500"
+  }, "Hedef"), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "step-btn",
+    "aria-label": "Hedefi 5 azalt",
+    onClick: function () {
+      setGoal(goal - 5);
+    }
+  }, "\u2212"), /*#__PURE__*/React.createElement("span", {
+    className: "font-stat font-bold w-8 text-center",
+    "aria-live": "polite"
+  }, goal), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "step-btn",
+    "aria-label": "Hedefi 5 art\u0131r",
+    onClick: function () {
+      setGoal(goal + 5);
+    }
+  }, "+"))));
+}
+var FOCUS_KEY = "kpss-focus-timer";
+function readFocus() {
+  try {
+    return JSON.parse(localStorage.getItem(FOCUS_KEY) || "null");
+  } catch (e) {
+    return null;
+  }
+}
+function writeFocus(v) {
+  try {
+    if (v) localStorage.setItem(FOCUS_KEY, JSON.stringify(v));else localStorage.removeItem(FOCUS_KEY);
+  } catch (e) {}
+}
+function focusElapsed(f, now) {
+  if (!f) return 0;
+  return (f.acc || 0) + (f.runningSince ? Math.max(0, now - f.runningSince) : 0);
+}
+function chime() {
+  try {
+    var Ctx = window.AudioContext || window.webkitAudioContext;
+    if (!Ctx) return;
+    var ctx = new Ctx();
+    [0, 0.22, 0.44].forEach(function (t, i) {
+      var o = ctx.createOscillator(),
+        g = ctx.createGain();
+      o.frequency.value = [660, 880, 990][i];
+      g.gain.setValueAtTime(0.0001, ctx.currentTime + t);
+      g.gain.exponentialRampToValueAtTime(0.25, ctx.currentTime + t + 0.02);
+      g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + t + 0.35);
+      o.connect(g);
+      g.connect(ctx.destination);
+      o.start(ctx.currentTime + t);
+      o.stop(ctx.currentTime + t + 0.4);
+    });
+  } catch (e) {}
+}
+
+// Pomodoro: süre bitince ya da erken bitirince dakikalar istatistiğe "oturum" olarak yazılır.
+// Durum localStorage'da tutulur; başka sayfaya geçip dönünce sayaç kaldığı yerden sürer.
+function FocusTimer(props) {
+  const [f, setF] = useState(readFocus);
+  const [now, setNow] = useState(Date.now());
+  const [ders, setDers] = useState((readFocus() || {}).ders || "");
+  const [msg, setMsg] = useState("");
+  var dersler = Object.keys(props.kpssData || {});
+  var durMs = f ? f.minutes * 60000 : 0;
+  var el = focusElapsed(f, now);
+  var leftMs = f ? Math.max(0, durMs - el) : 0;
+  function record(ms, auto) {
+    var mins = Math.round(ms / 60000);
+    if (mins >= 1) {
+      StudentStore.addSessionStats({
+        minutes: mins,
+        seans: true,
+        ders: f && f.ders || null
+      });
+      setMsg((auto ? "Süre doldu! " : "") + mins + " dk çalışma kaydedildi.");
+    } else {
+      setMsg("1 dakikadan kısa oturum kaydedilmedi.");
+    }
+    writeFocus(null);
+    setF(null);
+  }
+  useEffect(function () {
+    if (!f || !f.runningSince) return;
+    var id = setInterval(function () {
+      setNow(Date.now());
+    }, 1000);
+    return function () {
+      clearInterval(id);
+    };
+  }, [f]);
+  useEffect(function () {
+    if (f && f.runningSince && leftMs <= 0) {
+      chime();
+      if (window.NotificationEngine && window.NotificationEngine.showLocal) {
+        try {
+          window.NotificationEngine.showLocal("Atanly", "Odak süresi bitti. Kısa bir mola ver.");
+        } catch (e) {}
+      }
+      record(durMs, true);
+    }
+  }, [leftMs, f]);
+
+  // sekme başlığında kalan süre
+  useEffect(function () {
+    var base = document.title.replace(/^\(\d+:\d\d\) /, "");
+    if (f && f.runningSince) {
+      var m = Math.floor(leftMs / 60000),
+        s = Math.floor(leftMs % 60000 / 1000);
+      document.title = "(" + m + ":" + String(s).padStart(2, "0") + ") " + base;
+    } else document.title = base;
+    return function () {
+      document.title = document.title.replace(/^\(\d+:\d\d\) /, "");
+    };
+  }, [leftMs, f]);
+  function start(minutes) {
+    var next = {
+      minutes: minutes,
+      acc: 0,
+      runningSince: Date.now(),
+      ders: ders || null
+    };
+    writeFocus(next);
+    setF(next);
+    setNow(Date.now());
+    setMsg("");
+  }
+  function pause() {
+    var t = Date.now();
+    var next = Object.assign({}, f, {
+      acc: focusElapsed(f, t),
+      runningSince: null
+    });
+    writeFocus(next);
+    setF(next);
+    setNow(t);
+  }
+  function resume() {
+    var next = Object.assign({}, f, {
+      runningSince: Date.now()
+    });
+    writeFocus(next);
+    setF(next);
+    setNow(Date.now());
+  }
+  var mm = Math.floor(leftMs / 60000),
+    ss = Math.floor(leftMs % 60000 / 1000);
+  var pct = f ? Math.min(1, el / durMs) : 0;
+  return /*#__PURE__*/React.createElement("section", {
+    className: "rounded-3xl glass p-5",
+    "aria-label": "Odak sayac\u0131"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center justify-between gap-3"
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "text-xs font-bold uppercase tracking-wider text-stone-400"
+  }, "\u23F1 Odak sayac\u0131"), f ? /*#__PURE__*/React.createElement("span", {
+    className: "text-xs text-stone-500"
+  }, f.ders ? f.ders + " · " : "", f.minutes, " dk") : null), f ? /*#__PURE__*/React.createElement("div", {
+    className: "mt-3"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "font-stat text-4xl font-bold tracking-tight",
+    "aria-live": "off"
+  }, mm, ":", String(ss).padStart(2, "0")), /*#__PURE__*/React.createElement("div", {
+    className: "h-2 rounded-full bg-stone-200 dark:bg-stone-700 overflow-hidden mt-3"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "h-full rounded-full bg-gradient-to-r from-teal-500 to-emerald-500",
+    style: {
+      width: pct * 100 + "%",
+      transition: "width 1s linear"
+    }
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "flex flex-wrap gap-2 mt-4"
+  }, f.runningSince ? /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "quick-chip",
+    onClick: pause
+  }, "\u23F8 Duraklat") : /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "quick-chip is-primary",
+    onClick: resume
+  }, "\u25B6 Devam et"), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "quick-chip",
+    onClick: function () {
+      record(focusElapsed(f, Date.now()), false);
+    }
+  }, "\u2713 Bitir ve kaydet"), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "quick-chip",
+    onClick: function () {
+      writeFocus(null);
+      setF(null);
+      setMsg("Oturum iptal edildi.");
+    }
+  }, "Vazge\xE7"))) : /*#__PURE__*/React.createElement("div", {
+    className: "mt-3"
+  }, /*#__PURE__*/React.createElement("label", {
+    className: "text-xs text-stone-500 block mb-1",
+    htmlFor: "focus-ders"
+  }, "Ders (iste\u011Fe ba\u011Fl\u0131)"), /*#__PURE__*/React.createElement("select", {
+    id: "focus-ders",
+    value: ders,
+    onChange: function (e) {
+      setDers(e.target.value);
+    },
+    className: "w-full px-3 py-2 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 text-sm"
+  }, /*#__PURE__*/React.createElement("option", {
+    value: ""
+  }, "Ders se\xE7meden"), dersler.map(function (d) {
+    return /*#__PURE__*/React.createElement("option", {
+      key: d,
+      value: d
+    }, d);
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "flex flex-wrap gap-2 mt-3"
+  }, [25, 45, 60].map(function (m) {
+    return /*#__PURE__*/React.createElement("button", {
+      key: m,
+      type: "button",
+      className: "quick-chip" + (m === 25 ? " is-primary" : ""),
+      onClick: function () {
+        start(m);
+      }
+    }, "\u25B6 ", m, " dk");
+  })), /*#__PURE__*/React.createElement("p", {
+    className: "text-xs text-stone-500 mt-3"
+  }, "S\xFCre dolunca \xE7al\u0131\u015Fma dakikan ve oturumun istatistiklere eklenir.")), msg ? /*#__PURE__*/React.createElement("p", {
+    className: "text-xs text-emerald-700 dark:text-emerald-300 mt-3",
+    role: "status"
+  }, msg) : null);
+}
+function WeakTopics(props) {
+  // Önce net düşük (%85 altı) test edilmiş konular; hiç test yoksa sıradaki başlanmamış konular.
+  var rows = (props.plan.rows || []).filter(function (r) {
+    return r.soruSayisi > 0;
+  });
+  var tested = rows.filter(function (r) {
+    return r.lastPct != null && r.lastPct < 85;
+  }).sort(function (a, b) {
+    return a.lastPct - b.lastPct;
+  });
+  var list = tested.length ? tested.slice(0, 5) : rows.filter(function (r) {
+    return r.lastPct == null;
+  }).slice(0, 3);
+  if (!list.length) return null;
+  return /*#__PURE__*/React.createElement("section", {
+    className: "rounded-3xl glass p-5",
+    "aria-labelledby": "weak-title"
+  }, /*#__PURE__*/React.createElement("p", {
+    id: "weak-title",
+    className: "text-xs font-bold uppercase tracking-wider text-stone-400 mb-3"
+  }, tested.length ? "🎯 Önce bunları güçlendir" : "🎯 Sıradaki konular"), /*#__PURE__*/React.createElement("ul", {
+    className: "space-y-2"
+  }, list.map(function (r) {
+    var pct = r.lastPct;
+    var col = pct == null ? "#a8a29e" : pct < 50 ? "#e11d48" : pct < 75 ? "#d97706" : "#059669";
+    return /*#__PURE__*/React.createElement("li", {
+      key: r.ders + "|" + r.konu
+    }, /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      onClick: function () {
+        props.onKonu(r.ders, r.konu, "hub");
+      },
+      className: "weak-row w-full text-left rounded-2xl p-3 flex items-center gap-3"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "min-w-0 flex-1"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "block text-sm font-semibold truncate"
+    }, kLabel(r.konu)), /*#__PURE__*/React.createElement("span", {
+      className: "block text-xs text-stone-500"
+    }, r.ders, " \xB7 ", pct == null ? "henüz test yok" : "son net %" + pct), /*#__PURE__*/React.createElement("span", {
+      className: "block h-1.5 rounded-full bg-stone-200 dark:bg-stone-700 overflow-hidden mt-1.5"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "block h-full rounded-full",
+      style: {
+        width: (pct == null ? 4 : Math.max(4, pct)) + "%",
+        background: col
+      }
+    }))), /*#__PURE__*/React.createElement("span", {
+      className: "text-xs font-bold text-teal-700 dark:text-teal-300 shrink-0"
+    }, "\xC7al\u0131\u015F \u2192")));
+  })));
 }
 function Bugun(props) {
   const plan = props.plan;
@@ -1240,14 +1744,30 @@ function Bugun(props) {
     className: "dash-split"
   }, /*#__PURE__*/React.createElement("div", {
     className: "min-w-0"
-  }, /*#__PURE__*/React.createElement(StudyProgram, {
+  }, /*#__PURE__*/React.createElement(NextSteps, {
+    plan: plan,
+    onKonu: props.onKonu,
+    onReview: props.onReview,
+    onWrong: props.onWrong,
+    onMixed: props.onMixed
+  }), /*#__PURE__*/React.createElement(StudyProgram, {
     student: props.student,
     kpssData: props.kpssData,
     onDers: props.onDers
   })), /*#__PURE__*/React.createElement("div", {
-    className: "min-w-0"
-  }, /*#__PURE__*/React.createElement(StudyDash, {
+    className: "min-w-0 space-y-4"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "tool-pair"
+  }, /*#__PURE__*/React.createElement(DailyGoal, {
     student: props.student
+  }), /*#__PURE__*/React.createElement(FocusTimer, {
+    kpssData: props.kpssData
+  })), /*#__PURE__*/React.createElement(WeakTopics, {
+    plan: plan,
+    onKonu: props.onKonu
+  }), /*#__PURE__*/React.createElement(StudyDash, {
+    student: props.student,
+    onDers: props.onDers
   }))));
 }
 function AlistirmalarHome(props) {
@@ -4327,6 +4847,28 @@ function App() {
         setNav("dersler");
         setSelectedDers(d);
         setSelectedKonu(null);
+      },
+      onKonu: function (d, k, mode) {
+        setNav("dersler");
+        setSelectedDers(d);
+        setSelectedKonu(k);
+        setViewMode(mode === "notes" ? "notlar" : "hub");
+        setNoteIndex(StudentStore.getTopic(d, k).noteIndex || 0);
+      },
+      onReview: function () {
+        startSession(plan.due.slice(0, 30), {
+          mode: "review"
+        });
+      },
+      onWrong: function () {
+        startSession(plan.wrong.slice(0, 30), {
+          mode: "wrong"
+        });
+      },
+      onMixed: function () {
+        startSession(StudyPlanner.mixedQuiz(kpssData, null, 10), {
+          mode: "mixed"
+        });
       }
     });
   } else if (nav === "eksikler") {

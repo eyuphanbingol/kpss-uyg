@@ -572,6 +572,8 @@ var DASH_COLORS = ["#4f46e5", "#7c3aed", "#ec4899", "#f59e0b", "#10b981", "#6366
 
 function StudyDash(props) {
     const d = StudyPlanner.studyDashboard ? StudyPlanner.studyDashboard(props.student) : null;
+    const [pickDay, setPickDay] = useState(null);
+    const [hoverWeek, setHoverWeek] = useState(null);
     if (!d) return (
         <div className="rounded-2xl glass p-6 text-center text-stone-400 text-sm slide-up">
             Çalışmaya başlayınca istatistikler burada görünecek.
@@ -594,6 +596,16 @@ function StudyDash(props) {
     var todayPct = todayGoal ? Math.min(100, Math.round((todayH / todayGoal) * 100)) : (todayH ? 100 : 0);
     var rec = d.longest.minutes ? (Math.round((d.longest.minutes / 60) * 10) / 10 + " saat") : "—";
     var dayNames = ["Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz"];
+    var dayFull = ["Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"];
+    // bu haftanın günleri (Pzt başlangıçlı) ve her günün soru / doğru sayısı
+    var todayIso = StudentStore.todayStr();
+    var todayIdx = (new Date(todayIso + "T12:00:00").getDay() + 6) % 7;
+    var weekIso = dayNames.map(function (_n, i) { return StudentStore.addDays(todayIso, i - todayIdx); });
+    var weekQ = weekIso.map(function (iso) { var x = (props.student.sessions || {})[iso] || {}; return { q: x.questions || 0, c: x.correct || 0 }; });
+    var selDay = pickDay == null ? todayIdx : pickDay;
+    var lastW = d.weeks[d.weeks.length - 1] || { minutes: 0 };
+    var prevW = d.weeks[d.weeks.length - 2] || { minutes: 0 };
+    var wDelta = prevW.minutes ? Math.round(((lastW.minutes - prevW.minutes) / prevW.minutes) * 100) : null;
     var circ = 2 * Math.PI * 28;
     var donutEls = [];
     var donutOff = 0;
@@ -643,10 +655,29 @@ function StudyDash(props) {
             </div>
 
             <div className="rounded-2xl glass p-5 card-hover">
-                <p className="text-sm font-semibold mb-3">📈 Haftalık trend</p>
-                <svg viewBox="0 0 236 86" className="w-full h-24">
+                <div className="flex items-baseline justify-between gap-2 mb-3">
+                    <p className="text-sm font-semibold">📈 Haftalık trend</p>
+                    <span className="text-xs text-stone-500">
+                        {hoverWeek != null
+                            ? (d.weeks[hoverWeek].label + " haftası: " + d.weeks[hoverWeek].minutes + " dk")
+                            : (wDelta == null ? ("Bu hafta " + lastW.minutes + " dk") : ("Bu hafta " + lastW.minutes + " dk · geçen haftaya göre " + (wDelta >= 0 ? "+" : "") + wDelta + "%"))}
+                    </span>
+                </div>
+                <svg viewBox="0 0 236 86" className="w-full h-24" onMouseLeave={function () { setHoverWeek(null); }}>
                     <polyline fill="rgba(79,70,229,0.12)" points={area} />
                     <polyline fill="none" stroke="#4f46e5" strokeWidth="2.5" points={pts} strokeLinecap="round" strokeLinejoin="round" />
+                    {d.weeks.map(function (w, i) {
+                        var x = 8 + (i / Math.max(1, d.weeks.length - 1)) * 220;
+                        var y = 78 - (w.minutes / trendMax) * 64;
+                        var on = hoverWeek === i;
+                        return (
+                            <g key={i} onMouseEnter={function () { setHoverWeek(i); }} onClick={function () { setHoverWeek(i); }} style={{ cursor: "pointer" }}>
+                                <rect x={x - 13} y="0" width="26" height="86" fill="transparent" />
+                                <circle cx={x} cy={y} r={on ? 4.5 : 2.6} fill={on ? "#4f46e5" : "#fff"} stroke="#4f46e5" strokeWidth="1.6" />
+                                <title>{w.label + " haftası: " + w.minutes + " dk"}</title>
+                            </g>
+                        );
+                    })}
                 </svg>
                 <div className="flex justify-between text-[10px] text-stone-400 -mt-1">
                     <span>8 hafta önce</span>
@@ -656,18 +687,27 @@ function StudyDash(props) {
 
             <div className="rounded-2xl glass p-5 card-hover">
                 <p className="text-sm font-semibold mb-3">📅 Bu hafta</p>
-                <div className="flex items-end gap-1.5 h-28">
+                <div className="flex items-end gap-1.5 h-28" role="group" aria-label="Bu haftanın günleri">
                     {d.weekMin.map(function (m, i) {
                         var h = Math.max(6, Math.round((m / weekMax) * 92));
-                        var colors = ["#4f46e5", "#7c3aed", "#6366f1", "#8b5cf6", "#a78bfa", "#c084fc", "#ddd6fe"];
+                        var on = i === selDay;
+                        var future = i > todayIdx;
                         return (
-                            <div key={i} className="flex-1 flex flex-col items-center justify-end h-full">
-                                <div className="w-full rounded-t-lg transition-all duration-300" style={{ height: h + "%", background: colors[i % colors.length] }} />
-                                <span className="text-[10px] text-stone-400 mt-1.5 font-medium">{dayNames[i]}</span>
-                            </div>
+                            <button key={i} type="button" onClick={function () { setPickDay(i); }} aria-pressed={on}
+                                aria-label={dayFull[i] + ": " + m + " dakika, " + weekQ[i].q + " soru"}
+                                className="week-bar flex-1 flex flex-col items-center justify-end h-full">
+                                <span className="block w-full rounded-t-lg transition-all duration-300"
+                                    style={{ height: h + "%", background: on ? "#4f46e5" : (future ? "#e7e5e4" : "#a5b4fc") }} />
+                                <span className={"text-[10px] mt-1.5 " + (i === todayIdx ? "font-black text-indigo-600" : "font-medium text-stone-400")}>{dayNames[i]}</span>
+                            </button>
                         );
                     })}
                 </div>
+                <p className="text-xs text-stone-600 dark:text-stone-300 mt-3" aria-live="polite">
+                    <b>{dayFull[selDay]}{selDay === todayIdx ? " (bugün)" : ""}:</b>{" "}
+                    {d.weekMin[selDay]} dk · {weekQ[selDay].q} soru
+                    {weekQ[selDay].q ? (" · %" + Math.round((weekQ[selDay].c / weekQ[selDay].q) * 100) + " doğru") : ""}
+                </p>
             </div>
 
             <div className="rounded-2xl glass p-5 card-hover">
@@ -688,14 +728,16 @@ function StudyDash(props) {
                             {d.dersList.slice(0, 5).map(function (x, i) {
                                 var pct = Math.round((x.v / d.dersSum) * 100);
                                 return (
-                                    <div key={x.ders} className="flex items-center gap-2">
+                                    <button key={x.ders} type="button" title={x.ders + " sayfasını aç"}
+                                        onClick={function () { if (props.onDers) props.onDers(x.ders); }}
+                                        className="ders-row w-full text-left flex items-center gap-2 rounded-lg px-1.5 py-1">
                                         <span className="h-2.5 w-2.5 rounded-full shrink-0" style={{ background: DASH_COLORS[i % DASH_COLORS.length] }} />
                                         <span className="text-xs truncate flex-1">{x.ders}</span>
                                         <span className="text-xs font-bold text-stone-400">{pct}%</span>
-                                        <div className="w-12 h-1.5 rounded-full bg-stone-200 dark:bg-stone-700 overflow-hidden">
-                                            <div className="h-full rounded-full" style={{ width: pct + "%", background: DASH_COLORS[i % DASH_COLORS.length] }} />
-                                        </div>
-                                    </div>
+                                        <span className="w-12 h-1.5 rounded-full bg-stone-200 dark:bg-stone-700 overflow-hidden">
+                                            <span className="block h-full rounded-full" style={{ width: pct + "%", background: DASH_COLORS[i % DASH_COLORS.length] }} />
+                                        </span>
+                                    </button>
                                 );
                             })}
                         </div>
@@ -705,6 +747,270 @@ function StudyDash(props) {
                 )}
             </div>
         </div>
+    );
+}
+
+// ---------- Bugün: etkileşimli çalışma araçları ----------
+
+var TASK_ICON = { notes: "📖", test: "🎯", review: "🔁", wrong: "🩹" };
+
+function NextSteps(props) {
+    var plan = props.plan;
+    var tasks = plan.tasks || [];
+    function run(t) {
+        if (t.kind === "notes") props.onKonu(t.ders, t.konu, "notes");
+        else if (t.kind === "test") props.onKonu(t.ders, t.konu, "hub");
+        else if (t.kind === "review") props.onReview();
+        else if (t.kind === "wrong") props.onWrong();
+    }
+    return (
+        <section className="rounded-3xl glass p-5 sm:p-6 mb-4 slide-up" aria-labelledby="next-steps-title">
+            <div className="flex items-start justify-between gap-3 mb-1">
+                <div className="min-w-0">
+                    <p className="text-xs font-bold uppercase tracking-wider text-teal-700 dark:text-teal-300">Şimdi ne çalışayım?</p>
+                    <h2 id="next-steps-title" className="text-lg font-bold text-stone-900 dark:text-stone-100 mt-0.5 leading-snug">{plan.coach}</h2>
+                </div>
+            </div>
+            {tasks.length ? (
+                <ol className="mt-4 space-y-2">
+                    {tasks.map(function (t, i) {
+                        return (
+                            <li key={t.id}>
+                                <button type="button" onClick={function () { run(t); }}
+                                    className={"next-step w-full text-left rounded-2xl p-3.5 sm:p-4 flex items-center gap-3 transition-all " + (i === 0 ? "is-first" : "")}>
+                                    <span className="next-step-ico shrink-0" aria-hidden="true">{TASK_ICON[t.kind] || "•"}</span>
+                                    <span className="min-w-0 flex-1">
+                                        <span className="block font-semibold text-[15px] leading-snug">{t.title}<span className="font-normal opacity-70"> · {t.detail}</span></span>
+                                        <span className="block text-xs mt-0.5 opacity-70 leading-snug">{t.why}</span>
+                                    </span>
+                                    <span className="next-step-go shrink-0" aria-hidden="true">{i === 0 ? "Başla" : "→"}</span>
+                                </button>
+                            </li>
+                        );
+                    })}
+                </ol>
+            ) : (
+                <p className="text-sm text-stone-500 mt-3">Bekleyen görev yok. Karışık soruyla tempoyu koru.</p>
+            )}
+            <div className="flex flex-wrap gap-2 mt-4">
+                <button type="button" onClick={props.onMixed} className="quick-chip">🎲 Karışık 10 soru</button>
+                <button type="button" onClick={props.onReview} disabled={!plan.due.length} className="quick-chip">🔁 Tekrar ({plan.due.length})</button>
+                <button type="button" onClick={props.onWrong} disabled={!plan.wrong.length} className="quick-chip">🩹 Yanlışlar ({plan.wrong.length})</button>
+            </div>
+        </section>
+    );
+}
+
+function DailyGoal(props) {
+    var student = props.student;
+    var sess = (student.sessions || {})[StudentStore.todayStr()] || {};
+    var goal = Number(student.profile && student.profile.dailyQuestions) || 25;
+    var done = sess.questions || 0;
+    var correct = sess.correct || 0;
+    var minutes = sess.minutes || 0;
+    var pct = Math.min(1, done / goal);
+    var R = 42;
+    var C = 2 * Math.PI * R;
+    function setGoal(v) {
+        v = Math.max(5, Math.min(300, v));
+        if (v !== goal) StudentStore.updateProfile({ dailyQuestions: v });
+    }
+    var left = Math.max(0, goal - done);
+    return (
+        <section className="rounded-3xl glass p-5 flex items-center gap-5" aria-label="Günlük soru hedefi">
+            <div className="relative shrink-0" style={{ width: 104, height: 104 }}>
+                <svg viewBox="0 0 104 104" width="104" height="104" role="img" aria-label={done + " / " + goal + " soru"}>
+                    <circle cx="52" cy="52" r={R} fill="none" stroke="currentColor" strokeWidth="10" className="text-stone-200 dark:text-stone-700" />
+                    <circle cx="52" cy="52" r={R} fill="none" stroke={pct >= 1 ? "#059669" : "#4f46e5"} strokeWidth="10" strokeLinecap="round"
+                        strokeDasharray={(C * pct) + " " + C} transform="rotate(-90 52 52)" style={{ transition: "stroke-dasharray .5s ease" }} />
+                </svg>
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                    <span className="font-stat text-2xl font-bold leading-none">{done}</span>
+                    <span className="text-[11px] text-stone-400 mt-0.5">/ {goal} soru</span>
+                </div>
+            </div>
+            <div className="min-w-0 flex-1">
+                <p className="text-xs font-bold uppercase tracking-wider text-stone-400">Günlük hedef</p>
+                <p className="font-semibold mt-0.5">{left ? ("Hedefe " + left + " soru kaldı") : "Bugünkü hedef tamam 🎉"}</p>
+                <p className="text-xs text-stone-500 mt-1">{correct} doğru{done ? " (%" + Math.round((correct / done) * 100) + ")" : ""} · {minutes} dk çalışma</p>
+                <div className="flex items-center gap-2 mt-3">
+                    <span className="text-xs text-stone-500">Hedef</span>
+                    <button type="button" className="step-btn" aria-label="Hedefi 5 azalt" onClick={function () { setGoal(goal - 5); }}>−</button>
+                    <span className="font-stat font-bold w-8 text-center" aria-live="polite">{goal}</span>
+                    <button type="button" className="step-btn" aria-label="Hedefi 5 artır" onClick={function () { setGoal(goal + 5); }}>+</button>
+                </div>
+            </div>
+        </section>
+    );
+}
+
+var FOCUS_KEY = "kpss-focus-timer";
+function readFocus() {
+    try { return JSON.parse(localStorage.getItem(FOCUS_KEY) || "null"); } catch (e) { return null; }
+}
+function writeFocus(v) {
+    try { if (v) localStorage.setItem(FOCUS_KEY, JSON.stringify(v)); else localStorage.removeItem(FOCUS_KEY); } catch (e) {}
+}
+function focusElapsed(f, now) {
+    if (!f) return 0;
+    return (f.acc || 0) + (f.runningSince ? Math.max(0, now - f.runningSince) : 0);
+}
+function chime() {
+    try {
+        var Ctx = window.AudioContext || window.webkitAudioContext;
+        if (!Ctx) return;
+        var ctx = new Ctx();
+        [0, 0.22, 0.44].forEach(function (t, i) {
+            var o = ctx.createOscillator(), g = ctx.createGain();
+            o.frequency.value = [660, 880, 990][i];
+            g.gain.setValueAtTime(0.0001, ctx.currentTime + t);
+            g.gain.exponentialRampToValueAtTime(0.25, ctx.currentTime + t + 0.02);
+            g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + t + 0.35);
+            o.connect(g); g.connect(ctx.destination);
+            o.start(ctx.currentTime + t); o.stop(ctx.currentTime + t + 0.4);
+        });
+    } catch (e) {}
+}
+
+// Pomodoro: süre bitince ya da erken bitirince dakikalar istatistiğe "oturum" olarak yazılır.
+// Durum localStorage'da tutulur; başka sayfaya geçip dönünce sayaç kaldığı yerden sürer.
+function FocusTimer(props) {
+    const [f, setF] = useState(readFocus);
+    const [now, setNow] = useState(Date.now());
+    const [ders, setDers] = useState((readFocus() || {}).ders || "");
+    const [msg, setMsg] = useState("");
+    var dersler = Object.keys(props.kpssData || {});
+    var durMs = f ? f.minutes * 60000 : 0;
+    var el = focusElapsed(f, now);
+    var leftMs = f ? Math.max(0, durMs - el) : 0;
+
+    function record(ms, auto) {
+        var mins = Math.round(ms / 60000);
+        if (mins >= 1) {
+            StudentStore.addSessionStats({ minutes: mins, seans: true, ders: (f && f.ders) || null });
+            setMsg((auto ? "Süre doldu! " : "") + mins + " dk çalışma kaydedildi.");
+        } else {
+            setMsg("1 dakikadan kısa oturum kaydedilmedi.");
+        }
+        writeFocus(null);
+        setF(null);
+    }
+
+    useEffect(function () {
+        if (!f || !f.runningSince) return;
+        var id = setInterval(function () { setNow(Date.now()); }, 1000);
+        return function () { clearInterval(id); };
+    }, [f]);
+
+    useEffect(function () {
+        if (f && f.runningSince && leftMs <= 0) {
+            chime();
+            if (window.NotificationEngine && window.NotificationEngine.showLocal) {
+                try { window.NotificationEngine.showLocal("Atanly", "Odak süresi bitti. Kısa bir mola ver."); } catch (e) {}
+            }
+            record(durMs, true);
+        }
+    }, [leftMs, f]);
+
+    // sekme başlığında kalan süre
+    useEffect(function () {
+        var base = document.title.replace(/^\(\d+:\d\d\) /, "");
+        if (f && f.runningSince) {
+            var m = Math.floor(leftMs / 60000), s = Math.floor((leftMs % 60000) / 1000);
+            document.title = "(" + m + ":" + String(s).padStart(2, "0") + ") " + base;
+        } else document.title = base;
+        return function () { document.title = document.title.replace(/^\(\d+:\d\d\) /, ""); };
+    }, [leftMs, f]);
+
+    function start(minutes) {
+        var next = { minutes: minutes, acc: 0, runningSince: Date.now(), ders: ders || null };
+        writeFocus(next); setF(next); setNow(Date.now()); setMsg("");
+    }
+    function pause() {
+        var t = Date.now();
+        var next = Object.assign({}, f, { acc: focusElapsed(f, t), runningSince: null });
+        writeFocus(next); setF(next); setNow(t);
+    }
+    function resume() {
+        var next = Object.assign({}, f, { runningSince: Date.now() });
+        writeFocus(next); setF(next); setNow(Date.now());
+    }
+
+    var mm = Math.floor(leftMs / 60000), ss = Math.floor((leftMs % 60000) / 1000);
+    var pct = f ? Math.min(1, el / durMs) : 0;
+    return (
+        <section className="rounded-3xl glass p-5" aria-label="Odak sayacı">
+            <div className="flex items-center justify-between gap-3">
+                <p className="text-xs font-bold uppercase tracking-wider text-stone-400">⏱ Odak sayacı</p>
+                {f ? <span className="text-xs text-stone-500">{f.ders ? f.ders + " · " : ""}{f.minutes} dk</span> : null}
+            </div>
+            {f ? (
+                <div className="mt-3">
+                    <div className="font-stat text-4xl font-bold tracking-tight" aria-live="off">{mm}:{String(ss).padStart(2, "0")}</div>
+                    <div className="h-2 rounded-full bg-stone-200 dark:bg-stone-700 overflow-hidden mt-3">
+                        <div className="h-full rounded-full bg-gradient-to-r from-teal-500 to-emerald-500" style={{ width: (pct * 100) + "%", transition: "width 1s linear" }} />
+                    </div>
+                    <div className="flex flex-wrap gap-2 mt-4">
+                        {f.runningSince
+                            ? <button type="button" className="quick-chip" onClick={pause}>⏸ Duraklat</button>
+                            : <button type="button" className="quick-chip is-primary" onClick={resume}>▶ Devam et</button>}
+                        <button type="button" className="quick-chip" onClick={function () { record(focusElapsed(f, Date.now()), false); }}>✓ Bitir ve kaydet</button>
+                        <button type="button" className="quick-chip" onClick={function () { writeFocus(null); setF(null); setMsg("Oturum iptal edildi."); }}>Vazgeç</button>
+                    </div>
+                </div>
+            ) : (
+                <div className="mt-3">
+                    <label className="text-xs text-stone-500 block mb-1" htmlFor="focus-ders">Ders (isteğe bağlı)</label>
+                    <select id="focus-ders" value={ders} onChange={function (e) { setDers(e.target.value); }}
+                        className="w-full px-3 py-2 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 text-sm">
+                        <option value="">Ders seçmeden</option>
+                        {dersler.map(function (d) { return <option key={d} value={d}>{d}</option>; })}
+                    </select>
+                    <div className="flex flex-wrap gap-2 mt-3">
+                        {[25, 45, 60].map(function (m) {
+                            return <button key={m} type="button" className={"quick-chip" + (m === 25 ? " is-primary" : "")} onClick={function () { start(m); }}>▶ {m} dk</button>;
+                        })}
+                    </div>
+                    <p className="text-xs text-stone-500 mt-3">Süre dolunca çalışma dakikan ve oturumun istatistiklere eklenir.</p>
+                </div>
+            )}
+            {msg ? <p className="text-xs text-emerald-700 dark:text-emerald-300 mt-3" role="status">{msg}</p> : null}
+        </section>
+    );
+}
+
+function WeakTopics(props) {
+    // Önce net düşük (%85 altı) test edilmiş konular; hiç test yoksa sıradaki başlanmamış konular.
+    var rows = (props.plan.rows || []).filter(function (r) { return r.soruSayisi > 0; });
+    var tested = rows.filter(function (r) { return r.lastPct != null && r.lastPct < 85; })
+        .sort(function (a, b) { return a.lastPct - b.lastPct; });
+    var list = tested.length ? tested.slice(0, 5) : rows.filter(function (r) { return r.lastPct == null; }).slice(0, 3);
+    if (!list.length) return null;
+    return (
+        <section className="rounded-3xl glass p-5" aria-labelledby="weak-title">
+            <p id="weak-title" className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-3">{tested.length ? "🎯 Önce bunları güçlendir" : "🎯 Sıradaki konular"}</p>
+            <ul className="space-y-2">
+                {list.map(function (r) {
+                    var pct = r.lastPct;
+                    var col = pct == null ? "#a8a29e" : pct < 50 ? "#e11d48" : pct < 75 ? "#d97706" : "#059669";
+                    return (
+                        <li key={r.ders + "|" + r.konu}>
+                            <button type="button" onClick={function () { props.onKonu(r.ders, r.konu, "hub"); }}
+                                className="weak-row w-full text-left rounded-2xl p-3 flex items-center gap-3">
+                                <span className="min-w-0 flex-1">
+                                    <span className="block text-sm font-semibold truncate">{kLabel(r.konu)}</span>
+                                    <span className="block text-xs text-stone-500">{r.ders} · {pct == null ? "henüz test yok" : "son net %" + pct}</span>
+                                    <span className="block h-1.5 rounded-full bg-stone-200 dark:bg-stone-700 overflow-hidden mt-1.5">
+                                        <span className="block h-full rounded-full" style={{ width: (pct == null ? 4 : Math.max(4, pct)) + "%", background: col }} />
+                                    </span>
+                                </span>
+                                <span className="text-xs font-bold text-teal-700 dark:text-teal-300 shrink-0">Çalış →</span>
+                            </button>
+                        </li>
+                    );
+                })}
+            </ul>
+        </section>
     );
 }
 
@@ -749,8 +1055,18 @@ function Bugun(props) {
             </div>
 
             <div className="dash-split">
-                <div className="min-w-0"><StudyProgram student={props.student} kpssData={props.kpssData} onDers={props.onDers} /></div>
-                <div className="min-w-0"><StudyDash student={props.student} /></div>
+                <div className="min-w-0">
+                    <NextSteps plan={plan} onKonu={props.onKonu} onReview={props.onReview} onWrong={props.onWrong} onMixed={props.onMixed} />
+                    <StudyProgram student={props.student} kpssData={props.kpssData} onDers={props.onDers} />
+                </div>
+                <div className="min-w-0 space-y-4">
+                    <div className="tool-pair">
+                        <DailyGoal student={props.student} />
+                        <FocusTimer kpssData={props.kpssData} />
+                    </div>
+                    <WeakTopics plan={plan} onKonu={props.onKonu} />
+                    <StudyDash student={props.student} onDers={props.onDers} />
+                </div>
             </div>
         </Shell>
     );
@@ -3078,7 +3394,15 @@ function App() {
         );
     } else if (nav === "bugun") {
         body = <Bugun student={student} plan={plan} kpssData={kpssData} isDark={isDark} toggleDark={toggleDark}
-            onDers={function (d) { setNav("dersler"); setSelectedDers(d); setSelectedKonu(null); }} />;
+            onDers={function (d) { setNav("dersler"); setSelectedDers(d); setSelectedKonu(null); }}
+            onKonu={function (d, k, mode) {
+                setNav("dersler"); setSelectedDers(d); setSelectedKonu(k);
+                setViewMode(mode === "notes" ? "notlar" : "hub");
+                setNoteIndex(StudentStore.getTopic(d, k).noteIndex || 0);
+            }}
+            onReview={function () { startSession(plan.due.slice(0, 30), { mode: "review" }); }}
+            onWrong={function () { startSession(plan.wrong.slice(0, 30), { mode: "wrong" }); }}
+            onMixed={function () { startSession(StudyPlanner.mixedQuiz(kpssData, null, 10), { mode: "mixed" }); }} />;
     } else if (nav === "eksikler") {
         body = <Eksikler plan={plan} isDark={isDark} toggleDark={toggleDark}
             onReview={function () { startSession(plan.due.slice(0, 30), { mode: "review" }); }}
