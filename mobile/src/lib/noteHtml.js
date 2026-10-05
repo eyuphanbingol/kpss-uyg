@@ -87,7 +87,13 @@ function flushGap(gap, blocks) {
 }
 
 function parseNoteBlocks(raw) {
-    var s = normalizeNoteHtml(raw);
+    // Şekiller (<svg>) ayrı blok olur; normalize etmeden önce ayrılır ki öznitelikleri bozulmasın.
+    var svgs = [];
+    var src = String(raw || "").replace(/<svg\b[\s\S]*?<\/svg>/gi, function (x) {
+        svgs.push(x);
+        return "<p>@@SVG" + (svgs.length - 1) + "@@</p>";
+    });
+    var s = normalizeNoteHtml(src);
     s = s.replace(/<\/?div[^>]*>/gi, "\n");
     var blocks = [];
     var re = /<(h[1-6]|p|ul|ol|table|blockquote)(\s[^>]*)?>([\s\S]*?)<\/\1>|<img\b[^>]*>/gi;
@@ -96,6 +102,11 @@ function parseNoteBlocks(raw) {
     while ((m = re.exec(s))) {
         flushGap(s.slice(last, m.index), blocks);
         last = m.index + m[0].length;
+        var svgMark = /^<p>@@SVG(\d+)@@<\/p>$/.exec(m[0]);
+        if (svgMark) {
+            blocks.push({ type: "svg", xml: svgs[Number(svgMark[1])] });
+            continue;
+        }
         if (m[0].slice(0, 4).toLowerCase() === "<img") {
             var src0 = imgSrc(m[0]);
             if (src0) blocks.push({ type: "img", src: src0 });

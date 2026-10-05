@@ -1,6 +1,7 @@
 import React, { memo, useCallback, useEffect, useMemo, useState } from "react";
 import { Dimensions, FlatList, Pressable, Text, View, StyleSheet } from "react-native";
 import RenderHTML from "react-native-render-html";
+import { SvgXml } from "react-native-svg";
 import { ChevronLeft, ChevronRight, Moon, Sun } from "lucide-react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useApp } from "../AppProvider";
@@ -144,6 +145,25 @@ var ImgCard = memo(function ImgCard(props) {
     );
 });
 
+// Konu notlarındaki şekiller (geometri vb.): viewBox oranı korunarak çizilir.
+var SvgCard = memo(function SvgCard(props) {
+    var xml = String(props.xml || "")
+        .replace(/\s(?:class|role|aria-[a-z]+)="[^"]*"/gi, "")
+        .replace(/\sfont-family="[^"]*"/gi, "");
+    var vb = /viewBox="\s*[\d.]+\s+[\d.]+\s+([\d.]+)\s+([\d.]+)\s*"/i.exec(xml);
+    var vw = vb ? Number(vb[1]) : 320;
+    var vh = vb ? Number(vb[2]) : 200;
+    var w = Math.min(CONTENT_W + CARD_PAD, 380);
+    return (
+        <View style={[styles.itemCard, props.dark && styles.itemCardDark, styles.imgCard]}>
+            <View style={styles.accent} />
+            <View style={styles.imgBody}>
+                <SvgXml xml={xml} width={w} height={Math.round(w * vh / vw)} />
+            </View>
+        </View>
+    );
+});
+
 export default function NotesScreen({ route, navigation }) {
     var ders = route.params.ders;
     var konu = route.params.konu;
@@ -206,6 +226,7 @@ export default function NotesScreen({ route, navigation }) {
         if (item.type === "kicker") return <KickerRow html={item.html} dark={isDark} />;
         if (item.type === "badge") return <BadgeRow html={item.html} dark={isDark} />;
         if (item.type === "img") return <ImgCard src={item.src} dark={isDark} />;
+        if (item.type === "svg") return <SvgCard xml={item.xml} dark={isDark} />;
         if (item.type === "table") return <TableCard html={item.html} dark={isDark} />;
         return <ItemCard html={item.html} dark={isDark} />;
     }, [isDark]);
