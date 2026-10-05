@@ -101,7 +101,7 @@ function CookieBar() {
     var seen = student.consent && student.consent.bannerSeen;
     if (seen) return null;
     return (
-        <div className="fixed left-3 right-3 z-[60] rounded-2xl bg-stone-900 text-stone-100 p-4 shadow-2xl text-sm" style={{ bottom: "calc(var(--app-tabbar-h) + 12px)" }}>
+        <div className="cookie-bar fixed left-3 right-3 z-[60] rounded-2xl bg-stone-900 text-stone-100 p-4 shadow-2xl text-sm" style={{ bottom: "calc(var(--app-tabbar-h) + 12px)" }}>
             <p className="text-xs leading-relaxed mb-3">
                 Giriş ve ilerleme için zorunlu çerez / yerel depolama kullanılır. Reklam ağı yok.{" "}
                 <a className="underline text-teal-300" href="yasal/cerez.html">Çerez politikası</a>
@@ -113,6 +113,13 @@ function CookieBar() {
             }}>Tamam</button>
         </div>
     );
+}
+
+// Klavye kısayolları yazı yazılan alanda tetiklenmesin.
+function isTypingTarget(el) {
+    if (!el) return false;
+    var tag = el.tagName || "";
+    return tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || !!el.isContentEditable;
 }
 
 function Shell(props) {
@@ -189,12 +196,17 @@ function BottomNav(props) {
         { id: "ben", label: "Ben", icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" }
     ];
     return (
-        <nav className="app-tabbar fixed bottom-0 inset-x-0 z-40 nav-glass" style={{ paddingBottom: "max(8px, env(safe-area-inset-bottom))" }}>
-            <div className="app-page grid grid-cols-5 pt-1 min-w-0">
+        <nav className="app-tabbar fixed bottom-0 inset-x-0 z-40 nav-glass" aria-label="Ana menü" style={{ paddingBottom: "max(8px, env(safe-area-inset-bottom))" }}>
+            <div className="tabbar-brand" aria-hidden="true">
+                {window.AtanomLogo ? window.AtanomLogo("h-9 w-9 object-contain") : null}
+                <span>Atanly</span>
+            </div>
+            <div className="tabbar-list app-page grid grid-cols-5 pt-1 min-w-0">
                 {tabs.map(function (tab) {
                     const on = props.nav === tab.id;
                     return (
-                        <button key={tab.id} onClick={function () { props.onChange(tab.id); }}
+                        <button key={tab.id} type="button" onClick={function () { props.onChange(tab.id); }}
+                            aria-current={on ? "page" : undefined}
                             className={"relative flex flex-col items-center gap-0.5 py-2 rounded-2xl text-[10px] leading-tight font-medium transition-all duration-200 " +
                                 (on ? "text-indigo-600 bg-indigo-50/60 dark:bg-indigo-900/20" : "text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200")}>
                             <span className="relative">
@@ -212,6 +224,11 @@ function BottomNav(props) {
                         </button>
                     );
                 })}
+            </div>
+            <div className="tabbar-keys kbd-hint" aria-hidden="true">
+                <span><kbd>A</kbd>–<kbd>E</kbd> şık seç</span>
+                <span><kbd>Enter</kbd> sonraki soru</span>
+                <span><kbd>←</kbd><kbd>→</kbd> not çevir</span>
             </div>
         </nav>
     );
@@ -731,9 +748,10 @@ function Bugun(props) {
                 </div>
             </div>
 
-            <StudyProgram student={props.student} kpssData={props.kpssData} onDers={props.onDers} />
-
-            <StudyDash student={props.student} />
+            <div className="dash-split">
+                <div className="min-w-0"><StudyProgram student={props.student} kpssData={props.kpssData} onDers={props.onDers} /></div>
+                <div className="min-w-0"><StudyDash student={props.student} /></div>
+            </div>
         </Shell>
     );
 }
@@ -1791,6 +1809,16 @@ function shapeNoteHtml(html) {
 function NotesView(props) {
     const notlar = props.notlar || [];
     const idx = props.index;
+    // ← / → ile sayfa çevir (yazı alanındayken devre dışı)
+    useEffect(function () {
+        function onKey(e) {
+            if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey || isTypingTarget(e.target)) return;
+            if (e.key === "ArrowLeft" && idx > 0) { e.preventDefault(); props.onIndex(idx - 1); }
+            else if (e.key === "ArrowRight" && idx < notlar.length - 1) { e.preventDefault(); props.onIndex(idx + 1); }
+        }
+        document.addEventListener("keydown", onKey);
+        return function () { document.removeEventListener("keydown", onKey); };
+    }, [idx, notlar.length, props.onIndex]);
     return (
         <Shell wide={true}>
             <div className="flex justify-between items-center mb-4 gap-3">
@@ -1831,6 +1859,7 @@ function NotesView(props) {
                             </button>
                         )}
                     </footer>
+                    <p className="kbd-hint study-card-keys" aria-hidden="true"><span><kbd>←</kbd> önceki</span><span><kbd>→</kbd> sonraki</span></p>
                 </article>
             ) : (
                 <div className="text-center py-16 bg-white dark:bg-slate-800 rounded-3xl border border-dashed">Bu konu için henüz not yok.</div>
@@ -1852,6 +1881,27 @@ function TestView(props) {
     const tCls = !timed ? "" : (tLeft <= 60 ? "text-coral-500" : tLeft <= 300 ? "text-amber-500" : "text-navy-600");
     const nextRef = useRef(null);
     useEffect(function () { if (props.answered) revealSoon(nextRef); }, [props.answered, qIndex]);
+    // Klavye: A–E ya da 1–5 şık seçer; cevaptan sonra Enter / → sonraki soru.
+    useEffect(function () {
+        function onKey(e) {
+            if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey || isTypingTarget(e.target)) return;
+            var n = (soru.options || []).length;
+            if (!props.answered) {
+                var k = String(e.key || "").toLocaleLowerCase("tr-TR");
+                var i = "abcde".indexOf(k);
+                if (i < 0) i = "12345".indexOf(k);
+                if (k && i >= 0 && i < n) { e.preventDefault(); props.onAnswer(i); }
+                return;
+            }
+            // odaktaki düğmede Enter zaten tıklama üretir; iki kez ilerlemesin
+            if (e.key === "ArrowRight" || (e.key === "Enter" && !(e.target && e.target.tagName === "BUTTON"))) {
+                e.preventDefault();
+                props.onNext();
+            }
+        }
+        document.addEventListener("keydown", onKey);
+        return function () { document.removeEventListener("keydown", onKey); };
+    }, [props.answered, props.onAnswer, props.onNext, qIndex, soru]);
     return (
         <Shell>
             <div className="flex justify-between items-center text-sm font-bold text-slate-500 mb-4 gap-2">
@@ -1865,11 +1915,20 @@ function TestView(props) {
                 <div className="h-2.5 rounded-full" style={{ width: progress + "%", background: "linear-gradient(90deg, #0D2C4D, #1D8A99, #C5A059)" }} />
             </div>
             {item.ders ? <p className="text-xs font-bold text-slate-400 mb-3">{item.ders} · {kLabel(item.konu)}</p> : null}
+            <div className="test-split">
+            <div className="test-split-q">
             <div className="q-stem p-4 sm:p-8 rounded-3xl mb-6 relative overflow-hidden fade-in">
                 <div className="q-stem-bar absolute top-0 left-0 w-1.5 h-full"></div>
                 <h3 className="text-lg font-bold leading-relaxed whitespace-pre-line text-stone-900 pl-2">{soru.question}</h3>
                 {SoruGorsel(soru)}
             </div>
+            <p className="kbd-hint" aria-hidden="true">
+                {props.answered
+                    ? <span><kbd>Enter</kbd> ya da <kbd>→</kbd> sonraki soru</span>
+                    : <span><kbd>A</kbd>–<kbd>{String.fromCharCode(64 + Math.max(1, (soru.options || []).length))}</kbd> ya da <kbd>1</kbd>–<kbd>{Math.max(1, (soru.options || []).length)}</kbd> ile şık seç</span>}
+            </p>
+            </div>
+            <div className="test-split-a">
             <div className="space-y-3">
                 {(soru.options || []).map(function (opt, i) {
                     let cls = "w-full text-left p-4 sm:p-5 rounded-2xl border-2 font-semibold transition-all flex items-center gap-3 sm:gap-4 option-btn ";
@@ -1912,6 +1971,8 @@ function TestView(props) {
                     </button>
                 </div>
             ) : <div className="h-8" />}
+            </div>
+            </div>
         </Shell>
     );
 }
@@ -2299,6 +2360,7 @@ function Ben(props) {
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
+            <div className="ben-cols">
             <div className="grid grid-cols-2 gap-2 mb-6">
                 <div className="p-4 rounded-2xl glass card-hover"><div className="text-xl font-semibold gradient-text">{totQ}</div><div className="text-xs text-stone-400 mt-1">Toplam soru</div></div>
                 <div className="p-4 rounded-2xl glass card-hover"><div className="text-xl font-semibold gradient-text">%{overall}</div><div className="text-xs text-stone-400 mt-1">Net</div></div>
@@ -2456,6 +2518,7 @@ function Ben(props) {
                 <a className="underline" href="yasal/basvuru.html">KVKK başvuru</a>
             </div>
             <button onClick={function () { props.onSignOut && props.onSignOut(); }} className="w-full p-3.5 rounded-2xl border-2 border-stone-200 dark:border-stone-700 font-medium">Çıkış</button>
+            </div>
         </Shell>
     );
 }
@@ -3246,7 +3309,7 @@ function App() {
     }
 
     return (
-        <div className="app-shell">
+        <div className={"app-shell" + (!inTest ? " has-nav" : "")}>
             {announce && !inTest && !inMapPlay && !inDrillGame ? (
                 <div className="sticky top-0 z-50 duyuru-bar text-white shadow-lg" style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
                     <div className="app-page py-2.5 flex items-start gap-3">

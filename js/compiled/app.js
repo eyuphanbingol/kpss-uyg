@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:184349:1kw4iyg*/
+/*jsx:babel-7.29.9-react-classic:187895:12x77oe*/
 const {
   useState,
   useEffect,
@@ -357,7 +357,7 @@ function CookieBar() {
   var seen = student.consent && student.consent.bannerSeen;
   if (seen) return null;
   return /*#__PURE__*/React.createElement("div", {
-    className: "fixed left-3 right-3 z-[60] rounded-2xl bg-stone-900 text-stone-100 p-4 shadow-2xl text-sm",
+    className: "cookie-bar fixed left-3 right-3 z-[60] rounded-2xl bg-stone-900 text-stone-100 p-4 shadow-2xl text-sm",
     style: {
       bottom: "calc(var(--app-tabbar-h) + 12px)"
     }
@@ -380,6 +380,13 @@ function CookieBar() {
       });
     }
   }, "Tamam"));
+}
+
+// Klavye kısayolları yazı yazılan alanda tetiklenmesin.
+function isTypingTarget(el) {
+  if (!el) return false;
+  var tag = el.tagName || "";
+  return tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || !!el.isContentEditable;
 }
 function Shell(props) {
   return /*#__PURE__*/React.createElement("div", {
@@ -479,18 +486,24 @@ function BottomNav(props) {
   }];
   return /*#__PURE__*/React.createElement("nav", {
     className: "app-tabbar fixed bottom-0 inset-x-0 z-40 nav-glass",
+    "aria-label": "Ana men\xFC",
     style: {
       paddingBottom: "max(8px, env(safe-area-inset-bottom))"
     }
   }, /*#__PURE__*/React.createElement("div", {
-    className: "app-page grid grid-cols-5 pt-1 min-w-0"
+    className: "tabbar-brand",
+    "aria-hidden": "true"
+  }, window.AtanomLogo ? window.AtanomLogo("h-9 w-9 object-contain") : null, /*#__PURE__*/React.createElement("span", null, "Atanly")), /*#__PURE__*/React.createElement("div", {
+    className: "tabbar-list app-page grid grid-cols-5 pt-1 min-w-0"
   }, tabs.map(function (tab) {
     const on = props.nav === tab.id;
     return /*#__PURE__*/React.createElement("button", {
       key: tab.id,
+      type: "button",
       onClick: function () {
         props.onChange(tab.id);
       },
+      "aria-current": on ? "page" : undefined,
       className: "relative flex flex-col items-center gap-0.5 py-2 rounded-2xl text-[10px] leading-tight font-medium transition-all duration-200 " + (on ? "text-indigo-600 bg-indigo-50/60 dark:bg-indigo-900/20" : "text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200")
     }, /*#__PURE__*/React.createElement("span", {
       className: "relative"
@@ -513,7 +526,10 @@ function BottomNav(props) {
     })) : null), /*#__PURE__*/React.createElement("span", {
       className: "label"
     }, tab.label));
-  })));
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "tabbar-keys kbd-hint",
+    "aria-hidden": "true"
+  }, /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("kbd", null, "A"), "\u2013", /*#__PURE__*/React.createElement("kbd", null, "E"), " \u015F\u0131k se\xE7"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("kbd", null, "Enter"), " sonraki soru"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("kbd", null, "\u2190"), /*#__PURE__*/React.createElement("kbd", null, "\u2192"), " not \xE7evir")));
 }
 function Onboarding(props) {
   var profile = props.student && props.student.profile || {};
@@ -1220,13 +1236,19 @@ function Bugun(props) {
     className: "exam-hero-count shrink-0" + (plan.daysLeft <= 30 ? " is-soon" : "")
   }, /*#__PURE__*/React.createElement("span", {
     className: "font-stat"
-  }, plan.daysLeft), /*#__PURE__*/React.createElement("small", null, "g\xFCn")) : null)), /*#__PURE__*/React.createElement(StudyProgram, {
+  }, plan.daysLeft), /*#__PURE__*/React.createElement("small", null, "g\xFCn")) : null)), /*#__PURE__*/React.createElement("div", {
+    className: "dash-split"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "min-w-0"
+  }, /*#__PURE__*/React.createElement(StudyProgram, {
     student: props.student,
     kpssData: props.kpssData,
     onDers: props.onDers
-  }), /*#__PURE__*/React.createElement(StudyDash, {
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "min-w-0"
+  }, /*#__PURE__*/React.createElement(StudyDash, {
     student: props.student
-  }));
+  }))));
 }
 function AlistirmalarHome(props) {
   return /*#__PURE__*/React.createElement(Shell, null, /*#__PURE__*/React.createElement("div", {
@@ -2585,6 +2607,23 @@ function shapeNoteHtml(html) {
 function NotesView(props) {
   const notlar = props.notlar || [];
   const idx = props.index;
+  // ← / → ile sayfa çevir (yazı alanındayken devre dışı)
+  useEffect(function () {
+    function onKey(e) {
+      if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey || isTypingTarget(e.target)) return;
+      if (e.key === "ArrowLeft" && idx > 0) {
+        e.preventDefault();
+        props.onIndex(idx - 1);
+      } else if (e.key === "ArrowRight" && idx < notlar.length - 1) {
+        e.preventDefault();
+        props.onIndex(idx + 1);
+      }
+    }
+    document.addEventListener("keydown", onKey);
+    return function () {
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [idx, notlar.length, props.onIndex]);
   return /*#__PURE__*/React.createElement(Shell, {
     wide: true
   }, /*#__PURE__*/React.createElement("div", {
@@ -2653,7 +2692,10 @@ function NotesView(props) {
     strokeLinejoin: "round",
     strokeWidth: 2.25,
     d: "M9 5l7 7-7 7"
-  }))))) : /*#__PURE__*/React.createElement("div", {
+  })))), /*#__PURE__*/React.createElement("p", {
+    className: "kbd-hint study-card-keys",
+    "aria-hidden": "true"
+  }, /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("kbd", null, "\u2190"), " \xF6nceki"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("kbd", null, "\u2192"), " sonraki"))) : /*#__PURE__*/React.createElement("div", {
     className: "text-center py-16 bg-white dark:bg-slate-800 rounded-3xl border border-dashed"
   }, "Bu konu i\xE7in hen\xFCz not yok."));
 }
@@ -2679,6 +2721,32 @@ function TestView(props) {
   useEffect(function () {
     if (props.answered) revealSoon(nextRef);
   }, [props.answered, qIndex]);
+  // Klavye: A–E ya da 1–5 şık seçer; cevaptan sonra Enter / → sonraki soru.
+  useEffect(function () {
+    function onKey(e) {
+      if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey || isTypingTarget(e.target)) return;
+      var n = (soru.options || []).length;
+      if (!props.answered) {
+        var k = String(e.key || "").toLocaleLowerCase("tr-TR");
+        var i = "abcde".indexOf(k);
+        if (i < 0) i = "12345".indexOf(k);
+        if (k && i >= 0 && i < n) {
+          e.preventDefault();
+          props.onAnswer(i);
+        }
+        return;
+      }
+      // odaktaki düğmede Enter zaten tıklama üretir; iki kez ilerlemesin
+      if (e.key === "ArrowRight" || e.key === "Enter" && !(e.target && e.target.tagName === "BUTTON")) {
+        e.preventDefault();
+        props.onNext();
+      }
+    }
+    document.addEventListener("keydown", onKey);
+    return function () {
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [props.answered, props.onAnswer, props.onNext, qIndex, soru]);
   return /*#__PURE__*/React.createElement(Shell, null, /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between items-center text-sm font-bold text-slate-500 mb-4 gap-2"
   }, /*#__PURE__*/React.createElement("button", {
@@ -2699,12 +2767,21 @@ function TestView(props) {
   })), item.ders ? /*#__PURE__*/React.createElement("p", {
     className: "text-xs font-bold text-slate-400 mb-3"
   }, item.ders, " \xB7 ", kLabel(item.konu)) : null, /*#__PURE__*/React.createElement("div", {
+    className: "test-split"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "test-split-q"
+  }, /*#__PURE__*/React.createElement("div", {
     className: "q-stem p-4 sm:p-8 rounded-3xl mb-6 relative overflow-hidden fade-in"
   }, /*#__PURE__*/React.createElement("div", {
     className: "q-stem-bar absolute top-0 left-0 w-1.5 h-full"
   }), /*#__PURE__*/React.createElement("h3", {
     className: "text-lg font-bold leading-relaxed whitespace-pre-line text-stone-900 pl-2"
-  }, soru.question), SoruGorsel(soru)), /*#__PURE__*/React.createElement("div", {
+  }, soru.question), SoruGorsel(soru)), /*#__PURE__*/React.createElement("p", {
+    className: "kbd-hint",
+    "aria-hidden": "true"
+  }, props.answered ? /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("kbd", null, "Enter"), " ya da ", /*#__PURE__*/React.createElement("kbd", null, "\u2192"), " sonraki soru") : /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("kbd", null, "A"), "\u2013", /*#__PURE__*/React.createElement("kbd", null, String.fromCharCode(64 + Math.max(1, (soru.options || []).length))), " ya da ", /*#__PURE__*/React.createElement("kbd", null, "1"), "\u2013", /*#__PURE__*/React.createElement("kbd", null, Math.max(1, (soru.options || []).length)), " ile \u015F\u0131k se\xE7"))), /*#__PURE__*/React.createElement("div", {
+    className: "test-split-a"
+  }, /*#__PURE__*/React.createElement("div", {
     className: "space-y-3"
   }, (soru.options || []).map(function (opt, i) {
     let cls = "w-full text-left p-4 sm:p-5 rounded-2xl border-2 font-semibold transition-all flex items-center gap-3 sm:gap-4 option-btn ";
@@ -2776,7 +2853,7 @@ function TestView(props) {
     className: "w-full btn-primary text-white p-5 rounded-2xl font-semibold"
   }, qIndex + 1 === items.length ? "Sonuçları gör" : "Sonraki soru")) : /*#__PURE__*/React.createElement("div", {
     className: "h-8"
-  }));
+  }))));
 }
 function ResultView(props) {
   const total = props.session.items.length;
@@ -3292,6 +3369,8 @@ function Ben(props) {
     isDark: props.isDark,
     onClick: props.toggleDark
   })), /*#__PURE__*/React.createElement("div", {
+    className: "ben-cols"
+  }, /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-2 gap-2 mb-6"
   }, /*#__PURE__*/React.createElement("div", {
     className: "p-4 rounded-2xl glass card-hover"
@@ -3548,7 +3627,7 @@ function Ben(props) {
       props.onSignOut && props.onSignOut();
     },
     className: "w-full p-3.5 rounded-2xl border-2 border-stone-200 dark:border-stone-700 font-medium"
-  }, "\xC7\u0131k\u0131\u015F"));
+  }, "\xC7\u0131k\u0131\u015F")));
 }
 function toItemsFromKonu(kpssData, ders, konu) {
   const sorular = ((kpssData[ders] || {})[konu] || {}).sorular || [];
@@ -4653,7 +4732,7 @@ function App() {
     }, "Y\xFCkleniyor\u2026")));
   }
   return /*#__PURE__*/React.createElement("div", {
-    className: "app-shell"
+    className: "app-shell" + (!inTest ? " has-nav" : "")
   }, announce && !inTest && !inMapPlay && !inDrillGame ? /*#__PURE__*/React.createElement("div", {
     className: "sticky top-0 z-50 duyuru-bar text-white shadow-lg",
     style: {

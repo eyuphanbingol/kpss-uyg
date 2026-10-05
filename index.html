@@ -1612,6 +1612,65 @@
             .wide-grid { grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 1rem; }
             .wide-grid.is-tight { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: .5rem .75rem; }
         }
+        /* ---- Masaüstü kullanılabilirlik ---- */
+        .app-tabbar .tabbar-brand,
+        .app-tabbar .tabbar-keys { display: none; }
+        .kbd-hint { display: none; }
+        /* klavye ipuçları yalnız fare/klavye kullanan cihazlarda */
+        @media (hover: hover) and (pointer: fine) {
+            .kbd-hint {
+                display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px;
+                margin: 0 0 12px; font-size: 12px; color: #78716c;
+            }
+            .study-card-keys { margin: 0; padding: 0 20px 14px; justify-content: flex-end; }
+        }
+        .kbd-hint kbd {
+            display: inline-block; min-width: 1.5em; text-align: center;
+            font: 600 11px/1.4 Inter, system-ui, sans-serif; padding: 1px 6px; margin: 0 1px;
+            border: 1px solid #d6d3d1; border-bottom-width: 2px; border-radius: 6px;
+            background: #fff; color: #44403c;
+        }
+        html.dark .kbd-hint { color: #a8a29e; }
+        html.dark .kbd-hint kbd { background: #292524; border-color: #44403c; color: #e7e5e4; }
+        .note-html p, .note-html li { max-width: 80ch; }
+        @media (min-width: 1024px) {
+            .app-shell.has-nav { --side-w: 15rem; --app-tabbar-h: 0px; padding-left: var(--side-w); }
+            .app-shell.has-nav .map-play-root { left: var(--side-w); }
+            .app-shell.has-nav .cookie-bar { left: calc(var(--side-w) + 12px); bottom: 12px !important; }
+            .app-tabbar {
+                top: 0 !important; bottom: 0 !important; left: 0 !important; right: auto !important;
+                width: var(--side-w, 15rem);
+                display: flex; flex-direction: column; gap: 6px;
+                padding: 22px 12px 18px !important;
+                border-top: 0; border-right: 1px solid rgba(28, 25, 23, .07);
+                box-shadow: 6px 0 30px rgba(0, 0, 0, .04);
+                overflow-y: auto;
+            }
+            html.dark .app-tabbar { border-right-color: rgba(255, 255, 255, .06); }
+            .app-tabbar .tabbar-brand {
+                display: flex; align-items: center; gap: 10px;
+                padding: 0 10px 18px; font-weight: 900; font-size: 18px; letter-spacing: -.01em; color: #0D2C4D;
+            }
+            html.dark .app-tabbar .tabbar-brand { color: #f5f5f4; }
+            .app-tabbar .tabbar-list { display: flex !important; flex-direction: column; gap: 4px; padding: 0 !important; width: 100%; }
+            .app-tabbar .tabbar-list button {
+                flex-direction: row !important; justify-content: flex-start; gap: 12px !important;
+                padding: 11px 14px !important; font-size: 14.5px !important; border-radius: 12px; width: 100%;
+            }
+            .app-tabbar .tabbar-list button[aria-current="page"] { font-weight: 700; box-shadow: inset 3px 0 0 #4f46e5; }
+            .app-tabbar .tabbar-list button span.label { padding: 0; }
+            .app-tabbar .tabbar-keys {
+                display: flex; flex-direction: column; align-items: flex-start; gap: 6px;
+                margin: auto 0 0; padding: 14px 10px 0; border-top: 1px solid rgba(28, 25, 23, .07);
+            }
+        }
+        @media (min-width: 1280px) {
+            .test-split { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 2rem; align-items: start; }
+            .test-split-q { position: sticky; top: 1.5rem; }
+            .dash-split { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 1.5rem; align-items: start; }
+            .ben-cols { columns: 2; column-gap: 1.5rem; }
+            .ben-cols > * { break-inside: avoid; }
+        }
         .map-play-root.map-place {
             background: #152018;
         }
@@ -2619,7 +2678,7 @@
     <script>
         // js/app.jsx derlenmiş hâliyle önbellekten açılır (bkz. js/jsxLoader.js). Değişince ?v= artır.
         document.addEventListener("DOMContentLoaded", function () {
-            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=136");
+            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=137");
         });
     </script>
     <script>
