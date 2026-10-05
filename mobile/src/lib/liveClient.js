@@ -146,8 +146,52 @@ export function rememberEntry(examId, data, clockOffset) {
 }
 export function recallEntry(examId) { return getJson("kpss-live-entry-" + examId); }
 
+// ---------- kâğıtta çözme ----------
+// Oturumdaki kullanıcı (karekod ve filigran için)
+export function whoami(student) {
+    var up = (student && student.userProfile) || {};
+    var fallback = { id: up.authUserId || null, email: up.email || "" };
+    if (!supabase || !supabase.auth) return Promise.resolve(fallback);
+    return supabase.auth.getUser().then(function (r) {
+        var u = r && r.data && r.data.user;
+        return u ? { id: u.id, email: u.email || fallback.email } : fallback;
+    }, function () { return fallback; });
+}
+export function pdfInfo(student, exam, who) {
+    var t = L.ms(exam.starts_at), prof = (student && student.profile) || {}, up = (student && student.userProfile) || {};
+    return {
+        name: prof.name || up.nickname || "Öğrenci", email: who.email || "", title: exam.title,
+        track: exam.track, trackLabel: "KPSS " + (L.TRACKS[exam.track] || ""), date: L.fmtDay(t, true) + " " + L.fmtClock(t),
+        examId: exam.id, userId: who.id
+    };
+}
+export function fileDay(exam) { return new Date(L.ms(exam.starts_at) + 3 * 3600000).toISOString().slice(0, 10); }
+export function enterPaper(examId) {
+    return rpc("live_enter", { p_exam: examId, p_device: deviceId(), p_mode: "paper" }).then(function (d) {
+        if (d && d.error) throw Object.assign(new Error(d.message), { code: d.error });
+        rememberEntry(examId, d, 0);
+        return d;
+    });
+}
+// Kitapçık PDF'i için çözülmüş kitapçık + bilgi
+export function bookletJob(student, exam) {
+    var ent = recallEntry(exam.id);
+    return (ent && ent.key ? Promise.resolve(ent) : enterPaper(exam.id)).then(function (d) {
+        return Promise.all([openBooklet(exam.id, d.key, d.sha), whoami(student)]);
+    }).then(function (r) {
+        return { type: "bookletPdf", booklet: r[0], info: pdfInfo(student, exam, r[1]), name: "atanly-kitapcik-" + fileDay(exam) + ".pdf" };
+    });
+}
+export function formJob(student, exam) {
+    return whoami(student).then(function (who) {
+        if (!who.id) throw new Error("Oturum bilgisi alınamadı; yeniden giriş yap.");
+        return { type: "formPdf", info: pdfInfo(student, exam, who), name: "atanly-optik-form-" + fileDay(exam) + ".pdf" };
+    });
+}
+
 export var LiveClient = {
     rpc: rpc, trackOf: trackOf, fetchBooklet: fetchBooklet, hasBooklet: hasBooklet, openBooklet: openBooklet,
     deviceId: deviceId, makeQueue: makeQueue, pendingCount: pendingCount, flushPending: flushPending,
-    rememberEntry: rememberEntry, recallEntry: recallEntry
+    rememberEntry: rememberEntry, recallEntry: recallEntry,
+    whoami: whoami, pdfInfo: pdfInfo, enterPaper: enterPaper, bookletJob: bookletJob, formJob: formJob
 };

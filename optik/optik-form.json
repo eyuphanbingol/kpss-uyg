@@ -1,0 +1,36 @@
+{
+  "_aciklama": "Optik formun TEK ayar kaynağı (birimler mm, A4 dikey). Formu çizen (optik/omr.js drawForm) ve okuyan (read) aynı değerleri kullanır. Bir değeri değiştirince 'version'ı artır; eski sürüm formlar karekoddaki sürümle ayırt edilir.",
+  "version": 1,
+  "page": { "w": 210, "h": 297 },
+  "marker": {
+    "size": 10,
+    "centers": [[13, 13], [197, 13], [197, 284], [13, 284]]
+  },
+  "orient": { "x": 22, "y": 10, "size": 6 },
+  "qr": { "x": 167, "y": 22, "size": 30 },
+  "header": { "x": 22, "y": 22, "w": 140 },
+  "bubble": { "d": 5.0, "pitchX": 7.0, "pitchY": 6.4, "stroke": 0.3 },
+  "label": { "w": 9 },
+  "letters": "ABCDE",
+  "columns": [
+    { "x": 12, "y": 72, "from": 1, "count": 30 },
+    { "x": 59, "y": 72, "from": 31, "count": 30 },
+    { "x": 108, "y": 72, "from": 61, "count": 30 },
+    { "x": 155, "y": 72, "from": 91, "count": 30 }
+  ],
+  "blocks": [
+    { "id": "GY", "title": "GENEL YETENEK · 1–60", "x": 12, "w": 89, "y": 62 },
+    { "id": "GK", "title": "GENEL KÜLTÜR · 61–120", "x": 108, "w": 89, "y": 62 }
+  ],
+  "divider": { "x": 104.5, "y1": 61, "y2": 266 },
+  "anchor": { "w": 14, "h": 2, "top": 68.5, "bottom": 266.5, "search": 8 },
+  "groupEvery": 5,
+  "footerY": 271,
+  "read": {
+    "maxSide": 2000,
+    "inner": 0.6,
+    "ringIn": 1.4,
+    "ringOut": 1.7,
+    "track": 1.25
+  }
+}

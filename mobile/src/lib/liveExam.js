@@ -96,12 +96,16 @@
         if (!registered) return t < ms(e.ends_at) ? "reg_closed" : "over_unregistered";
         if (t < ms(e.starts_at)) return "about_to_start";
         if (att && att.locked) return "locked";
+        // kâğıtta çözen: cevaplar optik formla, bitişten sonra okutma süresi (optic_until) içinde gelir
+        var paper = !!(att && att.mode === "paper");
         if (t < ms(e.ends_at)) {
+            if (paper) return att.submitted ? "paper_submitted" : "paper_solving";
             if (att && att.submitted) return "submitted";
             if (att) return "in_progress";
             return t < ms(e.entry_closes_at) ? "can_enter" : "entry_closed";
         }
         if (!att) return "missed_live";
+        if (paper && !att.submitted) return t < ms(e.optic_until || e.ranking_at) ? "optic_window" : "optic_missed";
         return t < ms(e.ranking_at) ? "ended" : "ranking";
     }
 
@@ -592,6 +596,24 @@
         return { points: points, ders: ders, improved: improved, stuck: stuck, streak: list.length ? streak : 0 };
     }
 
+    // ---------------------------------------------------------------
+    // optik cevap metni: "ACE-B..." (A–E, boş için -). Elle girişte boşluk/virgül yok sayılır.
+    // ---------------------------------------------------------------
+    function answerText(arr) {
+        return arr.map(function (a) { return a || "-"; }).join("");
+    }
+    function parseAnswerText(text, n) {
+        var clean = String(text || "").toUpperCase().replace(/[\s,;.]/g, "").replace(/[_*–—]/g, "-");
+        var out = [], bad = [], i;
+        for (i = 0; i < clean.length; i++) {
+            var ch = clean.charAt(i);
+            if (LETTERS.indexOf(ch) >= 0) out.push(ch);
+            else if (ch === "-") out.push(null);
+            else if (bad.indexOf(ch) < 0) bad.push(ch);
+        }
+        return { answers: out.slice(0, n), count: out.length, bad: bad, complete: out.length === n && !bad.length, extra: Math.max(0, out.length - n) };
+    }
+
     var api = {
         TRACKS: TRACKS,
         BOLUM: BOLUM,
@@ -624,7 +646,9 @@
         dersRows: dersRows,
         weakest: weakest,
         gaps: gaps,
-        progress: progress
+        progress: progress,
+        answerText: answerText,
+        parseAnswerText: parseAnswerText
     };
 
 export const LiveExam = api;

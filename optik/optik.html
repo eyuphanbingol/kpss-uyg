@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Optik formunu okut</title>
+<!--
+  Atanly · optik okuma ve PDF sayfası (TEK parça). Web'de canlı deneme ekranına iframe olarak,
+  mobilde WebView'a gömülür (mobile/src/lib/optikHtml.js bu dosyadan üretilir: node scripts/sync-map-data.js).
+  Komutlar: ebeveynden { type: "scan" | "reset" | "formPdf" | "bookletPdf", ... } (postMessage ya da window.optikCmd)
+  Cevaplar: { type: "ready" | "result" | "fail" | "pdf" | "error", ... } (ReactNativeWebView.postMessage ya da parent.postMessage)
+-->
+<style>
+  :root { --bg: #f8fafc; --card: #ffffff; --ink: #0f172a; --muted: #64748b; --line: #e2e8f0; --brand: #0d2c4d; --teal: #0f766e; --warn: #b45309; --bad: #be123c; }
+  :root[data-theme="dark"] { --bg: #0c0a09; --card: #1c1917; --ink: #f5f5f4; --muted: #a8a29e; --line: #44403c; --brand: #f5f5f4; --teal: #2dd4bf; --warn: #fbbf24; --bad: #fb7185; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+  body { padding: 14px 16px 20px; }
+  h1 { font-size: 18px; margin: 0 0 4px; }
+  p { margin: 0; }
+  .muted { color: var(--muted); font-size: 13px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 14px; margin-top: 12px; }
+  ol { margin: 8px 0 0; padding-left: 20px; font-size: 13.5px; }
+  ol li { margin: 2px 0; }
+  .btns { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+  label.btn, button.btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 46px; padding: 0 16px; border-radius: 999px; font-weight: 700; font-size: 15px; cursor: pointer; border: 1px solid var(--line); background: var(--card); color: var(--ink); }
+  label.btn.primary { background: var(--brand); color: var(--bg); border-color: var(--brand); flex: 1 1 auto; }
+  input[type=file] { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+  .status { margin-top: 12px; font-weight: 600; }
+  .status.bad { color: var(--bad); }
+  .status.ok { color: var(--teal); }
+  .spin { display: inline-block; width: 16px; height: 16px; border: 2px solid var(--line); border-top-color: var(--teal); border-radius: 50%; animation: s 0.8s linear infinite; vertical-align: -3px; margin-right: 6px; }
+  @keyframes s { to { transform: rotate(360deg); } }
+  canvas#pv { display: block; width: 100%; height: auto; margin-top: 12px; border-radius: 12px; border: 1px solid var(--line); }
+  .hidden { display: none !important; }
+  body.worker { padding: 0; }
+</style>
+</head>
+<body>
+<div id="scan">
+  <h1>Optik formunu okut</h1>
+  <p class="muted">Fotoğraftan cevapların okunur; göndermeden önce hepsini kontrol edip onaylayacaksın.</p>
+  <div class="card">
+    <strong>İyi bir fotoğraf için</strong>
+    <ol>
+      <li>Formu düz, koyu olmayan bir zemine koy.</li>
+      <li>Dört köşedeki siyah karelerin hepsi kadrajda olsun.</li>
+      <li>Telefonu formun tam üstünde tut; gölge düşürme.</li>
+      <li>Işık bol olsun; flaş parlama yapıyorsa kapat.</li>
+    </ol>
+    <div class="btns">
+      <label class="btn primary" for="cam">📷 Fotoğraf çek</label>
+      <label class="btn" for="gal">🖼 Galeriden seç</label>
+    </div>
+    <input id="cam" type="file" accept="image/*" capture="environment">
+    <input id="gal" type="file" accept="image/*">
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+    <canvas id="pv" class="hidden" aria-label="Okunan formun önizlemesi"></canvas>
+  </div>
+</div>
+
+<script src="vendor/qrcode.min.js?v=1"></script>
+<script src="vendor/jsQR.min.js?v=1"></script>
+<script src="omr.js?v=1"></script>
+<script src="pdf.js?v=1"></script>
+<script>
+(function () {
+    "use strict";
+    var O = window.KpssOmr, P = window.KpssPdf;
+    var qs = location.search || "";
+    // mobil WebView'da adres yok: mod ve tema önceden window.OPTIK_MODE / OPTIK_THEME ile verilir
+    var mode = window.OPTIK_MODE || (/mode=worker/.test(qs) ? "worker" : "scan");
+    var theme = window.OPTIK_THEME || (/theme=dark/.test(qs) ? "dark" : "light");
+    var expect = null; // { exam, user } — karekod bu kişiye ait mi?
+    document.documentElement.setAttribute("data-theme", theme);
+    if (mode === "worker") { document.body.className = "worker"; document.getElementById("scan").className = "hidden"; }
+
+    function post(msg) {
+        if (window.ReactNativeWebView) window.ReactNativeWebView.postMessage(JSON.stringify(msg));
+        else if (window.parent && window.parent !== window) window.parent.postMessage(msg, location.origin === "null" ? "*" : location.origin);
+    }
+    var statusEl = document.getElementById("status"), pv = document.getElementById("pv");
+    function status(text, kind, busy) {
+        statusEl.className = "status" + (kind ? " " + kind : "");
+        statusEl.innerHTML = (busy ? '<span class="spin"></span>' : "") + text;
+    }
+
+    // ---------- okuma ----------
+    function loadFile(file) {
+        return new Promise(function (resolve, reject) {
+            var url = URL.createObjectURL(file), img = new Image();
+            img.onload = function () { resolve({ img: img, url: url }); };
+            img.onerror = function () { URL.revokeObjectURL(url); reject(new Error("Fotoğraf açılamadı.")); };
+            img.src = url;
+        });
+    }
+    function onFile(e) {
+        var file = e.target.files && e.target.files[0];
+        e.target.value = "";
+        if (!file) return;
+        pv.className = "hidden";
+        status("Fotoğraf okunuyor…", "", true);
+        loadFile(file).then(function (o) {
+            setTimeout(function () { process(o.img); URL.revokeObjectURL(o.url); }, 30);
+        }).catch(function (err) {
+            status(err.message, "bad");
+            post({ type: "fail", code: "image", message: err.message });
+        });
+    }
+    function process(img) {
+        var max = (O.layout().read && O.layout().read.maxSide) || 2000;
+        var k = Math.min(1, max / Math.max(img.naturalWidth, img.naturalHeight));
+        var w = Math.round(img.naturalWidth * k), h = Math.round(img.naturalHeight * k);
+        var c = document.createElement("canvas");
+        c.width = w; c.height = h;
+        var ctx = c.getContext("2d");
+        ctx.drawImage(img, 0, 0, w, h);
+        var res;
+        try {
+            res = O.read(O.toGray(ctx.getImageData(0, 0, w, h).data, w, h), { jsQR: window.jsQR });
+        } catch (err) {
+            res = { ok: false, code: "error", message: "Okuma sırasında hata: " + err.message };
+        }
+        if (!res.ok) {
+            status(res.message, "bad");
+            post({ type: "fail", code: res.code, message: res.message, detail: { size: [w, h], found: res.detail && res.detail.found } });
+            return;
+        }
+        var info = res.qrInfo;
+        if (info && expect && (info.exam !== expect.exam || info.user !== expect.user)) {
+            var msg = info.user !== expect.user ? "Bu optik form sana ait değil (karekod başka bir kullanıcıya ait)." : "Bu optik form bu denemeye ait değil.";
+            status(msg, "bad");
+            post({ type: "fail", code: "wrong_form", message: msg });
+            return;
+        }
+        var preview = drawPreview(c, res);
+        status("Okundu: " + res.counts.answered + " cevap" + (res.counts.uncertain ? " · " + res.counts.uncertain + " kararsız" : "") +
+            (res.counts.double ? " · " + res.counts.double + " çift işaret" : "") + ". Kontrol ekranına geçiliyor…", "ok");
+        post({
+            type: "result", answers: res.answers, flags: res.flags, counts: res.counts, warnings: res.warnings,
+            qr: info ? info.canonical : null, qrOk: !!info, preview: preview, ms: res.ms, rotation: res.rotation
+        });
+    }
+    function drawPreview(src, res) {
+        var W = Math.min(720, src.width), k = W / src.width;
+        pv.width = W; pv.height = Math.round(src.height * k);
+        var ctx = pv.getContext("2d");
+        ctx.drawImage(src, 0, 0, pv.width, pv.height);
+        var R = O.layout().bubble.d / 2;
+        res.centers.forEach(function (row, i) {
+            var a = res.answers[i], f = res.flags[i];
+            row.forEach(function (c, li) {
+                var mark = a === O.LETTERS[li];
+                if (!mark && !f) return;
+                if (!mark && f === "uncertain" && res.dark[i][li] < res.stats.Tlo) return;
+                var p = O.applyH(res.H, c[0], c[1]), q = O.applyH(res.H, c[0] + R, c[1]);
+                var r = Math.max(3, Math.hypot(q[0] - p[0], q[1] - p[1]) * k * 1.15);
+                ctx.lineWidth = Math.max(1.5, r / 3.5);
+                ctx.strokeStyle = f === "double" ? "#e11d48" : f === "uncertain" ? "#f59e0b" : "#10b981";
+                ctx.beginPath(); ctx.arc(p[0] * k, p[1] * k, r, 0, Math.PI * 2); ctx.stroke();
+            });
+        });
+        pv.className = "";
+        return pv.toDataURL("image/jpeg", 0.7);
+    }
+    document.getElementById("cam").addEventListener("change", onFile);
+    document.getElementById("gal").addEventListener("change", onFile);
+
+    // ---------- komutlar ----------
+    function cmd(m) {
+        if (!m || typeof m !== "object") return;
+        try {
+            if (m.type === "scan") { expect = m.expect || null; return; }
+            if (m.type === "reset") { status(""); pv.className = "hidden"; return; }
+            if (m.type === "formPdf") {
+                var f = P.formPdf(m.info);
+                post({ type: "pdf", id: m.id, name: m.name || "optik-form.pdf", b64: P.bytesToB64(f) });
+                return;
+            }
+            if (m.type === "bookletPdf") {
+                P.bookletPdf(m.booklet, m.info, function (p) { post({ type: "progress", id: m.id, p: p }); }).then(function (b) {
+                    post({ type: "pdf", id: m.id, name: m.name || "soru-kitapcigi.pdf", b64: P.bytesToB64(b) });
+                }).catch(function (err) { post({ type: "error", id: m.id, message: err.message }); });
+            }
+        } catch (err) {
+            post({ type: "error", id: m.id, message: err.message });
+        }
+    }
+    window.optikCmd = cmd;
+    window.addEventListener("message", function (e) {
+        if (window.ReactNativeWebView) return; // mobilde komutlar optikCmd ile gelir
+        if (e.origin !== location.origin && location.origin !== "null") return;
+        cmd(e.data);
+    });
+
+    var ready = window.OPTIK_FORM ? Promise.resolve(window.OPTIK_FORM)
+        : fetch("optik-form.json?v=1", { cache: "no-cache" }).then(function (r) { return r.json(); });
+    ready.then(function (j) {
+        O.setLayout(j);
+        post({ type: "ready", mode: mode });
+    }).catch(function (err) {
+        status("Optik form ayarı yüklenemedi: " + err.message, "bad");
+        post({ type: "error", message: err.message });
+    });
+})();
+</script>
+</body>
+</html>

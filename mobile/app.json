@@ -24,6 +24,10 @@
         "image": "./assets/splash-full.png",
         "resizeMode": "contain",
         "backgroundColor": "#041C24"
+      },
+      "infoPlist": {
+        "NSCameraUsageDescription": "Canlı denemede optik formunun fotoğrafını çekip cevaplarını okumak için kamerayı kullanırız.",
+        "NSPhotoLibraryUsageDescription": "Canlı denemede optik formunun fotoğrafını galeriden seçebilmen için kullanılır."
       }
     },
     "android": {
@@ -58,6 +62,9 @@
             }
           ]
         }
+      ],
+      "permissions": [
+        "android.permission.CAMERA"
       ]
     },
     "web": {

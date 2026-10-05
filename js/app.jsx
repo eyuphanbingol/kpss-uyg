@@ -1331,7 +1331,7 @@ function LiveExamCard(props) {
     // 10:00'dan itibaren kitapçığı önceden indir (şifreli; 10:15'te açılır)
     useEffect(function () {
         if (!e || !C) return;
-        if (["about_to_start", "can_enter", "in_progress"].indexOf(ph) < 0) return;
+        if (["about_to_start", "can_enter", "in_progress", "paper_solving"].indexOf(ph) < 0) return;
         if (C.hasBooklet(e.id)) { setBooklet("ok"); return; }
         setBooklet("loading");
         C.fetchBooklet(e.id).then(function () { setBooklet("ok"); }, function () { setBooklet("fail"); });
@@ -1369,6 +1369,30 @@ function LiveExamCard(props) {
     function register() { act("live_register", { p_exam: e.id }, function (r) { setMsg(r && r.status === "waitlist" ? "Kontenjan dolu; yedek listesine alındın." : "Kaydın alındı."); }); }
     function unregister() { if (window.confirm("Kaydını silmek istiyor musun?")) act("live_unregister", { p_exam: e.id }); }
     function enter() { props.onOpen && props.onOpen("exam", e.id); }
+    // kâğıtta çözme: optik form ve filigranlı kitapçık PDF'i, optik okutma
+    function pdfJob(label, job, done) {
+        setBusy(true); setMsg(label);
+        job(function (p) { setMsg(label.replace("…", "") + " %" + Math.round(p * 100) + "…"); }).then(function () {
+            setBusy(false); setMsg(done); load();
+        }).catch(function (x) { setBusy(false); setMsg(x.message || "PDF hazırlanamadı."); load(); });
+    }
+    function printForm() {
+        pdfJob("Optik formun hazırlanıyor…", function () { return C.formPdf(props.student, e); },
+            "Optik formun indirildi. Yazdırırken ‘Sayfaya sığdır’ı kapat, ölçek %100 olsun.");
+    }
+    function getBooklet() {
+        pdfJob("Soru kitapçığın hazırlanıyor…", function (pr) { return C.bookletPdf(props.student, e, pr); },
+            "Kitapçığın indirildi. İşaretlemeyi optik forma yap; bitince \"Optiğimi okut\".");
+    }
+    function choosePaper() {
+        if (!window.confirm("Kâğıtta çözmeyi seçersen bu sınavı cihazda çözemezsin.\n\nKitapçığı yazdırıp cevaplarını optik forma işaretleyeceksin; sonra formun fotoğrafını çekip okutacaksın (en geç " +
+            L.fmtClock(L.ms(e.optic_until || e.ranking_at)) + "). Devam edilsin mi?")) return;
+        setBusy(true); setMsg("Kâğıt modunda giriş yapılıyor…");
+        C.enterPaper(e.id).then(function () { setBusy(false); getBooklet(); })
+            .catch(function (x) { setBusy(false); setMsg(x.message); load(); });
+    }
+    function openOptic() { props.onOpen && props.onOpen("optic", e.id); }
+    var opticUntil = e ? L.ms(e.optic_until || e.ranking_at) : 0;
 
     var startT = e ? L.ms(e.starts_at) : 0;
     var title = e ? e.title : "Canlı deneme";
@@ -1428,7 +1452,10 @@ function LiveExamCard(props) {
                 <p className="text-sm text-stone-600 dark:text-stone-300 mt-1">
                     {booklet === "ok" ? "✓ Soru kitapçığı şifreli olarak cihazına indi; 10:15'te açılacak." : booklet === "fail" ? "Kitapçık indirilemedi; internetini kontrol et, tekrar denenecek." : "Soru kitapçığı cihazına iniyor…"}
                 </p>
-                <button type="button" className="quick-chip is-primary mt-3" disabled>Sınava gir (10:15'te açılır)</button>
+                <div className="flex flex-wrap gap-2 mt-3">
+                    <button type="button" className="quick-chip is-primary" disabled>Sınava gir (10:15'te açılır)</button>
+                    <button type="button" className="quick-chip" disabled={busy} onClick={printForm}>🖨 Optik formunu indir</button>
+                </div>
             </div>
         );
     } else if (ph === "can_enter" || ph === "in_progress") {
@@ -1439,9 +1466,44 @@ function LiveExamCard(props) {
                 <p className="text-sm text-stone-600 dark:text-stone-300 mt-1">
                     Bitişe {L.fmtLeft(L.ms(e.ends_at) - now)} kaldı{ph === "can_enter" ? " · giriş " + L.fmtClock(L.ms(e.entry_closes_at)) + "'te kapanır" : ""}.
                 </p>
-                <button type="button" className="quick-chip is-primary mt-3" onClick={enter}>{ph === "in_progress" ? "Kaldığın yerden devam et" : "Sınava gir"}</button>
+                <div className="flex flex-wrap gap-2 mt-3">
+                    <button type="button" className="quick-chip is-primary" onClick={enter}>{ph === "in_progress" ? "Kaldığın yerden devam et" : "Cihazda çöz"}</button>
+                    {ph === "can_enter" ? <button type="button" className="quick-chip" disabled={busy} onClick={choosePaper}>🖨 Kâğıtta çöz</button> : null}
+                </div>
+                {ph === "can_enter" ? <p className="text-xs text-stone-500 mt-2">Kâğıtta çözersen kitapçık PDF olarak iner; cevaplarını optik forma işaretleyip sonra fotoğrafını okutursun.</p> : null}
             </div>
         );
+    } else if (ph === "paper_solving") {
+        body = (
+            <div>
+                <p className="text-xs font-bold uppercase tracking-wider text-rose-700 dark:text-rose-300">● Sınav devam ediyor · kâğıtta çözüyorsun</p>
+                <h2 className="text-lg font-bold mt-0.5">{title}</h2>
+                <p className="text-sm text-stone-600 dark:text-stone-300 mt-1">
+                    Bitişe {L.fmtLeft(L.ms(e.ends_at) - now)} kaldı. Bitirince optik formunun fotoğrafını çekip okut; okutma {L.fmtClock(opticUntil)}'ta kapanır.
+                </p>
+                <div className="flex flex-wrap gap-2 mt-3">
+                    <button type="button" className="quick-chip is-primary" onClick={openOptic}>📷 Optiğimi okut</button>
+                    <button type="button" className="quick-chip" disabled={busy} onClick={getBooklet}>Kitapçığı indir</button>
+                    <button type="button" className="quick-chip" disabled={busy} onClick={printForm}>Optik formu indir</button>
+                </div>
+            </div>
+        );
+    } else if (ph === "paper_submitted") {
+        body = <div><p className="font-bold">Optik formun gönderildi.</p><p className="text-sm text-stone-500 mt-1">Cevapların artık değişmez. Sonucun ve çözümler {L.fmtClock(L.ms(e.ends_at))}'te açılır.</p></div>;
+    } else if (ph === "optic_window") {
+        body = (
+            <div>
+                <p className="text-xs font-bold uppercase tracking-wider text-amber-700 dark:text-amber-300">Sınav bitti · optiğini okut</p>
+                <h2 className="text-lg font-bold mt-0.5">{title}</h2>
+                <p className="mt-2 font-stat text-3xl font-black" role="timer">{L.fmtLeft(opticUntil - now)}</p>
+                <p className="text-sm text-stone-600 dark:text-stone-300 mt-1">Optik okutma {L.fmtClock(opticUntil)}'ta kapanır. Okutmazsan bu denemede sonucun olmaz.</p>
+                <div className="flex flex-wrap gap-2 mt-3">
+                    <button type="button" className="quick-chip is-primary" onClick={openOptic}>📷 Optiğimi okut</button>
+                </div>
+            </div>
+        );
+    } else if (ph === "optic_missed") {
+        body = <div><p className="font-bold">Optik formun gelmedi.</p><p className="text-sm text-stone-500 mt-1">Okutma süresi {L.fmtClock(opticUntil)}'ta doldu; bu denemede sonucun yok. Sorun yaşadıysan yönetici ile iletişime geç.</p></div>;
     } else if (ph === "entry_closed") {
         body = <div><p className="font-bold">Sınava giriş {L.fmtClock(L.ms(e.entry_closes_at))}'te kapandı.</p><p className="text-sm text-stone-500 mt-1">Sonraki denemeye kayıt hafta içi açılacak.</p></div>;
     } else if (ph === "submitted") {
@@ -1452,6 +1514,8 @@ function LiveExamCard(props) {
         body = <div><p className="font-bold">Sınav bitti.</p><p className="text-sm text-stone-500 mt-1">Sonucun hesaplanıyor…</p></div>;
     } else if (showResult) {
         body = <ResultBlock r={last} />;
+    } else if (missedNewer && dash.missed_no_optic) {
+        body = <div><p className="font-bold">Optik formun gelmediği için bu denemede sonucun yok.</p><p className="text-sm text-stone-500 mt-1">Bir sonrakinde okutma süresini kaçırma: sınav bitişinden sonra 15 dakika.</p></div>;
     } else if (missedNewer || ph === "missed_live" || ph === "over_unregistered") {
         body = <div><p className="font-bold">Bu haftaki denemeye katılmadın.</p><p className="text-sm text-stone-500 mt-1">Genel sonuçlar açıklandığında burada görünür; bir sonrakine kayıt ol.</p></div>;
     }
@@ -1481,9 +1545,13 @@ function LiveExamCard(props) {
                         <li>Kayıt pazar {L.fmtClock(L.ms(e.reg_closes_at))}'da kapanır; kitapçık o saatte cihazına iner.</li>
                         <li>130 dakikalık sessiz bir zaman ayır; müsvedde kâğıt ve kalem hazırla.</li>
                         <li>Sınava {L.fmtClock(L.ms(e.entry_closes_at))}'e kadar girebilirsin; geç giren ek süre almaz.</li>
+                        <li>Kâğıtta çözeceksen optik formunu şimdiden yazdır (‘Sayfaya sığdır’ kapalı, %100 ölçek).</li>
                     </ul>
                 ) : null}
-                <button type="button" className="quick-chip mt-3" disabled={busy} onClick={unregister}>Kaydımı sil</button>
+                <div className="flex flex-wrap gap-2 mt-3">
+                    {ph === "registered" ? <button type="button" className="quick-chip" disabled={busy} onClick={printForm}>🖨 Optik formunu indir</button> : null}
+                    <button type="button" className="quick-chip" disabled={busy} onClick={unregister}>Kaydımı sil</button>
+                </div>
             </div>
         );
     } else if (ph === "reg_closed") {

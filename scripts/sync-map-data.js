@@ -5,6 +5,7 @@
  *   mobile/src/lib/smartPlan.js <- js/smartPlan.js
  *   mobile/src/lib/liveExam.js  <- js/liveExam.js
  *   mobile/src/lib/trSvgData.js <- svg/tr.svg (uygulamaya gömülü; açılışta internetten indirilmez)
+ *   mobile/src/lib/optikHtml.js <- optik/optik.html + betikleri + optik-form.json (tek parça; WebView çevrimdışı çalışır)
  *   node scripts/sync-map-data.js          -> mobil dosyaları yazar
  *   node scripts/sync-map-data.js --check  -> farklıysa hata verir (yazmaz)
  */
@@ -55,10 +56,29 @@ function build() {
     });
 }
 
+// Optik okuma sayfası: web'de optik/optik.html olarak açılır; mobilde aynı sayfa betikleri ve
+// form ayarı içine gömülü tek bir HTML olarak WebView'a verilir.
+function buildOptikHtml() {
+    var dir = path.join(root, "optik");
+    var html = fs.readFileSync(path.join(dir, "optik.html"), "utf8").replace(/\r\n?/g, "\n");
+    var form = JSON.parse(fs.readFileSync(path.join(dir, "optik-form.json"), "utf8"));
+    var n = 0;
+    html = html.replace(/<script src="([^"?]+)(\?v=\d+)?"><\/script>/g, function (m, file) {
+        n++;
+        var js = fs.readFileSync(path.join(dir, file), "utf8").replace(/\r\n?/g, "\n").replace(/<\/script/gi, "<\\/script");
+        return "<script>\n" + js + "\n</script>";
+    });
+    if (n !== 4) throw new Error("optik.html: 4 betik bekleniyordu, " + n + " bulundu");
+    html = html.replace("<script>", "<script>window.OPTIK_FORM = " + JSON.stringify(form) + ";</script>\n<script>");
+    return "// Bu dosya scripts/sync-map-data.js ile optik/optik.html'den üretilir. Elle düzenleme.\n" +
+        "export var OPTIK_HTML = " + JSON.stringify(html) + ";\n";
+}
+
 var planOutPath = path.join(root, "mobile", "src", "lib", "smartPlan.js");
 var liveOutPath = path.join(root, "mobile", "src", "lib", "liveExam.js");
 var outputs = [[mobPath, build()], [planOutPath, buildModule("js/smartPlan.js", "SmartPlan")],
-    [liveOutPath, buildModule("js/liveExam.js", "LiveExam")], [svgOutPath, buildSvg()]];
+    [liveOutPath, buildModule("js/liveExam.js", "LiveExam")], [svgOutPath, buildSvg()],
+    [path.join(root, "mobile", "src", "lib", "optikHtml.js"), buildOptikHtml()]];
 if (process.argv.indexOf("--check") >= 0) {
     var stale = outputs.filter(function (o) {
         var cur = fs.existsSync(o[0]) ? fs.readFileSync(o[0], "utf8").replace(/\r\n?/g, "\n") : "";

@@ -410,8 +410,8 @@
     <script defer src="js/store.js?v=51"></script>
     <script defer src="js/planner.js?v=22"></script>
     <script defer src="js/smartPlan.js?v=1"></script>
-    <script defer src="js/liveExam.js?v=1"></script>
-    <script defer src="js/liveClient.js?v=1"></script>
+    <script defer src="js/liveExam.js?v=2"></script>
+    <script defer src="js/liveClient.js?v=2"></script>
     <script defer src="js/alan.js?v=7"></script>
     <script defer src="js/clozeEngine.js?v=11"></script>
     <script defer src="js/mapQuiz.js?v=32"></script>
@@ -1069,6 +1069,12 @@
         .optic-bubble.is-on { background: #111827; color: #fff; }
         .optic-bubble.is-key { box-shadow: 0 0 0 3px #10b981; }
         .optic-bubble.is-wrong { background: #e11d48; border-color: #e11d48; color: #fff; }
+        .optic-row.is-flag-uncertain { background: #fef3c7; box-shadow: inset 3px 0 0 #d97706; }
+        .optic-row.is-flag-double { background: #ffe4e6; box-shadow: inset 3px 0 0 #e11d48; }
+        .optic-legend { display: inline-block; width: 14px; height: 14px; border-radius: 4px; vertical-align: -2px; margin-right: 4px; }
+        .optic-legend.is-uncertain { background: #fef3c7; box-shadow: inset 3px 0 0 #d97706; border: 1px solid #d97706; }
+        .optic-legend.is-double { background: #ffe4e6; box-shadow: inset 3px 0 0 #e11d48; border: 1px solid #e11d48; }
+        .optic-frame { display: block; width: 100%; height: min(78vh, 900px); min-height: 560px; border: 0; border-radius: 24px; background: transparent; }
         @media print { .live-bar { position: static; } }
         /* ---- Konu notlarındaki geometri şekilleri ---- */
         /* geometride formüller (a, b, x, α…) büyük harfe çevrilmez: a ile A farklı şeydir */
@@ -2707,7 +2713,7 @@
     <script>
         // js/app.jsx derlenmiş hâliyle önbellekten açılır (bkz. js/jsxLoader.js). Değişince ?v= artır.
         document.addEventListener("DOMContentLoaded", function () {
-            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=141");
+            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=142");
         });
     </script>
     <script>

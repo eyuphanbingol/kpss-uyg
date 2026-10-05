@@ -142,6 +142,70 @@
         );
     }
 
+    // Kâğıtta çözenler: optik okutma durumu, okuma sorunları ve kayıtlı elle giriş
+    var EVENT = { device_switch: "cihaz değişti", locked: "KİLİTLENDİ", admin_extend: "süre uzatıldı", admin_cancel: "iptal edildi", admin_unlock: "kilit açıldı",
+        finalize: "kesinleşti", optic_fail: "optik okunamadı", optic_wrong_form: "başkasının formu", optic_submit: "optik gönderildi", admin_paper: "yönetici elle girdi" };
+    var SRC = { optic: "kamera", manual: "elle (öğrenci)", admin: "elle (yönetici)" };
+    function PaperBox(props) {
+        var rows = props.rows || [];
+        const [editing, setEditing] = useState(null);
+        const [text, setText] = useState("");
+        const [note, setNote] = useState("");
+        const [busy, setBusy] = useState(false);
+        const [msg, setMsg] = useState("");
+        var parsed = L.parseAnswerText(text, 120);
+        function save(r) {
+            if (!window.confirm(r.nickname + " için " + parsed.count + " cevap kaydedilsin mi?\n\nBu işlem denetim kaydına yazılır" +
+                (props.finalized ? " ve sıralama yeniden hesaplanır" : "") + ". Kaydedilen kâğıt bir daha değiştirilemez.")) return;
+            setBusy(true); setMsg("");
+            C.rpc("live_admin_paper", { p_exam: props.examId, p_user: r.user_id, p_answers: L.answerText(parsed.answers), p_note: note })
+                .then(function (x) { setBusy(false); setEditing(null); setText(""); setNote(""); setMsg(r.nickname + ": kaydedildi" + (x && x.reranked ? ", sıralama yeniden hesaplandı." : ".")); props.onDone(); })
+                .catch(function (x) { setBusy(false); setMsg(x.message); });
+        }
+        var trouble = rows.filter(function (r) { return !r.submitted && r.fails; }).length;
+        return (
+            <Box title={"Kâğıtta çözenler (" + rows.length + ")" + (trouble ? " · " + trouble + " kişi okutmada sorun yaşıyor" : "")}>
+                {msg ? <p className="text-sm mb-2" role="status">{msg}</p> : null}
+                <div className="overflow-x-auto">
+                    <table className="w-full text-sm">
+                        <thead><tr className="text-left text-xs text-stone-500"><th className="py-1 pr-3">Öğrenci</th><th className="pr-3">Durum</th><th className="pr-3">Okuma hatası</th><th></th></tr></thead>
+                        <tbody>
+                            {rows.map(function (r) {
+                                var st = r.submitted ? "✓ gönderdi · " + (SRC[r.source] || r.source || "") : r.close_reason === "no_optic" ? "okutmadı (süre doldu)" : "bekleniyor";
+                                return (
+                                    <tr key={r.user_id} className={"border-t border-stone-200 dark:border-stone-700 " + (!r.submitted && r.fails ? "bg-amber-50 dark:bg-amber-900/20" : "")}>
+                                        <td className="py-1.5 pr-3 font-semibold">{r.nickname || r.user_id.slice(0, 8)}</td>
+                                        <td className="pr-3">{st}</td>
+                                        <td className="pr-3">{r.fails ? r.fails + " kez" + (r.last_fail && r.last_fail.code ? " (" + r.last_fail.code + ")" : "") : "–"}</td>
+                                        <td className="text-right">{!r.submitted ? <Btn onClick={function () { setEditing(r.user_id); setText(""); setNote(""); }}>Elle gir</Btn> : null}</td>
+                                    </tr>
+                                );
+                            })}
+                        </tbody>
+                    </table>
+                </div>
+                {editing ? (function () {
+                    var r = rows.filter(function (x) { return x.user_id === editing; })[0];
+                    if (!r) return null;
+                    return (
+                        <div className="mt-3 p-3 rounded-xl border border-stone-300 dark:border-stone-600">
+                            <p className="text-sm font-semibold">{r.nickname} için cevaplar (1–120 sırayla, boş için -)</p>
+                            <textarea rows={4} className="w-full mt-2 p-2 rounded-lg border font-mono text-sm uppercase tracking-widest" value={text}
+                                onChange={function (e) { setText(e.target.value); }} aria-label="Cevaplar" spellCheck="false" />
+                            <p className={"text-xs mt-1 " + (parsed.complete ? "text-emerald-700" : "text-rose-700")}>{parsed.count} / 120{parsed.bad.length ? " · geçersiz: " + parsed.bad.join(" ") : ""}{parsed.extra ? " · " + parsed.extra + " fazla" : ""}</p>
+                            <input className="w-full mt-2 px-2 py-1.5 rounded-lg border text-sm" placeholder="Neden? (ör. kamera okumadı, öğrencinin gönderdiği fotoğraftan girildi)" value={note}
+                                onChange={function (e) { setNote(e.target.value); }} aria-label="Düzeltme nedeni" />
+                            <div className="flex gap-2 mt-2">
+                                <Btn primary disabled={busy || !parsed.complete || note.trim().length < 3} onClick={function () { save(r); }}>Kaydet</Btn>
+                                <Btn onClick={function () { setEditing(null); }}>Vazgeç</Btn>
+                            </div>
+                        </div>
+                    );
+                })() : null}
+            </Box>
+        );
+    }
+
     function Detail(props) {
         var id = props.id;
         const [exam, setExam] = useState(null);
@@ -196,12 +260,16 @@
                     </div>
                 </Box>
                 {canEdit ? <Upload exam={exam} onDone={load} /> : null}
+                {mon && mon.paper && mon.paper.length && (exam.status === "scheduled" || exam.status === "finished") ? (
+                    <PaperBox rows={mon.paper} examId={id} finalized={!!exam.finalized_at} onDone={load} />
+                ) : null}
 
                 {exam.status === "scheduled" ? (
                     <Box title={live ? "● Canlı izleme" : "Durum"}>
                         {mon ? (
-                            <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 text-center text-sm">
-                                {[["Kayıtlı", mon.registered], ["Yedek", mon.waitlist], ["Giren", mon.entered], ["Aktif", mon.active], ["Teslim", mon.submitted], ["Kilitli", mon.locked]].map(function (x) {
+                            <div className="grid grid-cols-4 sm:grid-cols-8 gap-2 text-center text-sm">
+                                {[["Kayıtlı", mon.registered], ["Yedek", mon.waitlist], ["Giren", mon.entered], ["Aktif", mon.active], ["Teslim", mon.submitted], ["Kilitli", mon.locked],
+                          ["Kâğıtta", mon.paper_entered || 0], ["Optik gelen", mon.paper_submitted || 0]].map(function (x) {
                                     return <div key={x[0]} className="rounded-xl bg-white/70 dark:bg-stone-800 p-2"><div className="text-xl font-black">{x[1]}</div><div className="text-[11px] text-stone-500">{x[0]}</div></div>;
                                 })}
                             </div>
@@ -218,7 +286,7 @@
                         {mon && mon.events && mon.events.length ? (
                             <details className="mt-3"><summary className="text-sm font-semibold cursor-pointer">Olaylar ({mon.events.length})</summary>
                                 <ul className="text-xs mt-2 space-y-0.5 max-h-56 overflow-auto">
-                                    {mon.events.map(function (ev, i) { return <li key={i}>{L.fmtClock(L.ms(ev.at))} · {ev.kind === "device_switch" ? "cihaz değişti" : ev.kind === "locked" ? "KİLİTLENDİ" : ev.kind} · {ev.nickname || ""} {ev.detail && ev.detail.switches ? "(" + ev.detail.switches + ")" : ""}</li>; })}
+                                    {mon.events.map(function (ev, i) { return <li key={i}>{L.fmtClock(L.ms(ev.at))} · {EVENT[ev.kind] || ev.kind} · {ev.nickname || ""} {ev.detail && ev.detail.switches ? "(" + ev.detail.switches + ")" : ""}{ev.detail && ev.detail.code ? " (" + ev.detail.code + ")" : ""}</li>; })}
                                 </ul>
                             </details>
                         ) : null}
@@ -241,12 +309,12 @@
                 <Box title={"Kayıtlar (" + regs.length + ")"}>
                     <div className="max-h-80 overflow-auto">
                         <table className="w-full text-sm">
-                            <thead><tr className="text-left text-xs text-stone-500"><th>Takma ad</th><th>Durum</th><th>Girdi</th><th>Cevap</th><th>Net</th><th></th></tr></thead>
+                            <thead><tr className="text-left text-xs text-stone-500"><th>Takma ad</th><th>Durum</th><th>Biçim</th><th>Girdi</th><th>Cevap</th><th>Net</th><th></th></tr></thead>
                             <tbody>
                                 {regs.map(function (r) {
                                     return (
                                         <tr key={r.user_id} className="border-t border-stone-200 dark:border-stone-700">
-                                            <td className="py-1">{r.nickname}</td><td>{r.status}{r.locked ? " · kilitli" : ""}</td><td>{r.entered ? "✓" + (r.switches ? " (" + r.switches + " değişim)" : "") : ""}</td>
+                                            <td className="py-1">{r.nickname}</td><td>{r.status}{r.locked ? " · kilitli" : ""}</td><td>{r.entered ? (r.mode === "paper" ? "kâğıt" : "cihaz") : ""}</td><td>{r.entered ? "✓" + (r.switches ? " (" + r.switches + " değişim)" : "") : ""}</td>
                                             <td>{r.answered || ""}</td><td>{r.net != null ? L.fmtNet(r.net) : ""}</td>
                                             <td className="text-right">{canEdit ? (r.status === "blocked"
                                                 ? <button type="button" className="text-xs underline" onClick={function () { run("live_admin_set_registration", { p_exam: id, p_user: r.user_id, p_status: "registered" }); }}>engeli kaldır</button>

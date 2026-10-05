@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:23138:9kxwy*/
+/*jsx:babel-7.29.9-react-classic:28862:30r2nb*/
 (function () {
   const {
     useState,
@@ -287,6 +287,137 @@
       onClick: upload
     }, "Sorular\u0131 ve kitap\xE7\u0131\u011F\u0131 y\xFCkle")));
   }
+
+  // Kâğıtta çözenler: optik okutma durumu, okuma sorunları ve kayıtlı elle giriş
+  var EVENT = {
+    device_switch: "cihaz değişti",
+    locked: "KİLİTLENDİ",
+    admin_extend: "süre uzatıldı",
+    admin_cancel: "iptal edildi",
+    admin_unlock: "kilit açıldı",
+    finalize: "kesinleşti",
+    optic_fail: "optik okunamadı",
+    optic_wrong_form: "başkasının formu",
+    optic_submit: "optik gönderildi",
+    admin_paper: "yönetici elle girdi"
+  };
+  var SRC = {
+    optic: "kamera",
+    manual: "elle (öğrenci)",
+    admin: "elle (yönetici)"
+  };
+  function PaperBox(props) {
+    var rows = props.rows || [];
+    const [editing, setEditing] = useState(null);
+    const [text, setText] = useState("");
+    const [note, setNote] = useState("");
+    const [busy, setBusy] = useState(false);
+    const [msg, setMsg] = useState("");
+    var parsed = L.parseAnswerText(text, 120);
+    function save(r) {
+      if (!window.confirm(r.nickname + " için " + parsed.count + " cevap kaydedilsin mi?\n\nBu işlem denetim kaydına yazılır" + (props.finalized ? " ve sıralama yeniden hesaplanır" : "") + ". Kaydedilen kâğıt bir daha değiştirilemez.")) return;
+      setBusy(true);
+      setMsg("");
+      C.rpc("live_admin_paper", {
+        p_exam: props.examId,
+        p_user: r.user_id,
+        p_answers: L.answerText(parsed.answers),
+        p_note: note
+      }).then(function (x) {
+        setBusy(false);
+        setEditing(null);
+        setText("");
+        setNote("");
+        setMsg(r.nickname + ": kaydedildi" + (x && x.reranked ? ", sıralama yeniden hesaplandı." : "."));
+        props.onDone();
+      }).catch(function (x) {
+        setBusy(false);
+        setMsg(x.message);
+      });
+    }
+    var trouble = rows.filter(function (r) {
+      return !r.submitted && r.fails;
+    }).length;
+    return /*#__PURE__*/React.createElement(Box, {
+      title: "Kâğıtta çözenler (" + rows.length + ")" + (trouble ? " · " + trouble + " kişi okutmada sorun yaşıyor" : "")
+    }, msg ? /*#__PURE__*/React.createElement("p", {
+      className: "text-sm mb-2",
+      role: "status"
+    }, msg) : null, /*#__PURE__*/React.createElement("div", {
+      className: "overflow-x-auto"
+    }, /*#__PURE__*/React.createElement("table", {
+      className: "w-full text-sm"
+    }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", {
+      className: "text-left text-xs text-stone-500"
+    }, /*#__PURE__*/React.createElement("th", {
+      className: "py-1 pr-3"
+    }, "\xD6\u011Frenci"), /*#__PURE__*/React.createElement("th", {
+      className: "pr-3"
+    }, "Durum"), /*#__PURE__*/React.createElement("th", {
+      className: "pr-3"
+    }, "Okuma hatas\u0131"), /*#__PURE__*/React.createElement("th", null))), /*#__PURE__*/React.createElement("tbody", null, rows.map(function (r) {
+      var st = r.submitted ? "✓ gönderdi · " + (SRC[r.source] || r.source || "") : r.close_reason === "no_optic" ? "okutmadı (süre doldu)" : "bekleniyor";
+      return /*#__PURE__*/React.createElement("tr", {
+        key: r.user_id,
+        className: "border-t border-stone-200 dark:border-stone-700 " + (!r.submitted && r.fails ? "bg-amber-50 dark:bg-amber-900/20" : "")
+      }, /*#__PURE__*/React.createElement("td", {
+        className: "py-1.5 pr-3 font-semibold"
+      }, r.nickname || r.user_id.slice(0, 8)), /*#__PURE__*/React.createElement("td", {
+        className: "pr-3"
+      }, st), /*#__PURE__*/React.createElement("td", {
+        className: "pr-3"
+      }, r.fails ? r.fails + " kez" + (r.last_fail && r.last_fail.code ? " (" + r.last_fail.code + ")" : "") : "–"), /*#__PURE__*/React.createElement("td", {
+        className: "text-right"
+      }, !r.submitted ? /*#__PURE__*/React.createElement(Btn, {
+        onClick: function () {
+          setEditing(r.user_id);
+          setText("");
+          setNote("");
+        }
+      }, "Elle gir") : null));
+    })))), editing ? function () {
+      var r = rows.filter(function (x) {
+        return x.user_id === editing;
+      })[0];
+      if (!r) return null;
+      return /*#__PURE__*/React.createElement("div", {
+        className: "mt-3 p-3 rounded-xl border border-stone-300 dark:border-stone-600"
+      }, /*#__PURE__*/React.createElement("p", {
+        className: "text-sm font-semibold"
+      }, r.nickname, " i\xE7in cevaplar (1\u2013120 s\u0131rayla, bo\u015F i\xE7in -)"), /*#__PURE__*/React.createElement("textarea", {
+        rows: 4,
+        className: "w-full mt-2 p-2 rounded-lg border font-mono text-sm uppercase tracking-widest",
+        value: text,
+        onChange: function (e) {
+          setText(e.target.value);
+        },
+        "aria-label": "Cevaplar",
+        spellCheck: "false"
+      }), /*#__PURE__*/React.createElement("p", {
+        className: "text-xs mt-1 " + (parsed.complete ? "text-emerald-700" : "text-rose-700")
+      }, parsed.count, " / 120", parsed.bad.length ? " · geçersiz: " + parsed.bad.join(" ") : "", parsed.extra ? " · " + parsed.extra + " fazla" : ""), /*#__PURE__*/React.createElement("input", {
+        className: "w-full mt-2 px-2 py-1.5 rounded-lg border text-sm",
+        placeholder: "Neden? (\xF6r. kamera okumad\u0131, \xF6\u011Frencinin g\xF6nderdi\u011Fi foto\u011Fraftan girildi)",
+        value: note,
+        onChange: function (e) {
+          setNote(e.target.value);
+        },
+        "aria-label": "D\xFCzeltme nedeni"
+      }), /*#__PURE__*/React.createElement("div", {
+        className: "flex gap-2 mt-2"
+      }, /*#__PURE__*/React.createElement(Btn, {
+        primary: true,
+        disabled: busy || !parsed.complete || note.trim().length < 3,
+        onClick: function () {
+          save(r);
+        }
+      }, "Kaydet"), /*#__PURE__*/React.createElement(Btn, {
+        onClick: function () {
+          setEditing(null);
+        }
+      }, "Vazge\xE7")));
+    }() : null);
+  }
   function Detail(props) {
     var id = props.id;
     const [exam, setExam] = useState(null);
@@ -373,11 +504,16 @@
     }, "Tasla\u011F\u0131 kald\u0131r") : null)), canEdit ? /*#__PURE__*/React.createElement(Upload, {
       exam: exam,
       onDone: load
+    }) : null, mon && mon.paper && mon.paper.length && (exam.status === "scheduled" || exam.status === "finished") ? /*#__PURE__*/React.createElement(PaperBox, {
+      rows: mon.paper,
+      examId: id,
+      finalized: !!exam.finalized_at,
+      onDone: load
     }) : null, exam.status === "scheduled" ? /*#__PURE__*/React.createElement(Box, {
       title: live ? "● Canlı izleme" : "Durum"
     }, mon ? /*#__PURE__*/React.createElement("div", {
-      className: "grid grid-cols-3 sm:grid-cols-6 gap-2 text-center text-sm"
-    }, [["Kayıtlı", mon.registered], ["Yedek", mon.waitlist], ["Giren", mon.entered], ["Aktif", mon.active], ["Teslim", mon.submitted], ["Kilitli", mon.locked]].map(function (x) {
+      className: "grid grid-cols-4 sm:grid-cols-8 gap-2 text-center text-sm"
+    }, [["Kayıtlı", mon.registered], ["Yedek", mon.waitlist], ["Giren", mon.entered], ["Aktif", mon.active], ["Teslim", mon.submitted], ["Kilitli", mon.locked], ["Kâğıtta", mon.paper_entered || 0], ["Optik gelen", mon.paper_submitted || 0]].map(function (x) {
       return /*#__PURE__*/React.createElement("div", {
         key: x[0],
         className: "rounded-xl bg-white/70 dark:bg-stone-800 p-2"
@@ -413,7 +549,7 @@
     }, mon.events.map(function (ev, i) {
       return /*#__PURE__*/React.createElement("li", {
         key: i
-      }, L.fmtClock(L.ms(ev.at)), " \xB7 ", ev.kind === "device_switch" ? "cihaz değişti" : ev.kind === "locked" ? "KİLİTLENDİ" : ev.kind, " \xB7 ", ev.nickname || "", " ", ev.detail && ev.detail.switches ? "(" + ev.detail.switches + ")" : "");
+      }, L.fmtClock(L.ms(ev.at)), " \xB7 ", EVENT[ev.kind] || ev.kind, " \xB7 ", ev.nickname || "", " ", ev.detail && ev.detail.switches ? "(" + ev.detail.switches + ")" : "", ev.detail && ev.detail.code ? " (" + ev.detail.code + ")" : "");
     }))) : null, /*#__PURE__*/React.createElement("div", {
       className: "mt-4 pt-3 border-t border-stone-200 dark:border-stone-700"
     }, /*#__PURE__*/React.createElement("p", {
@@ -456,13 +592,13 @@
       className: "w-full text-sm"
     }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", {
       className: "text-left text-xs text-stone-500"
-    }, /*#__PURE__*/React.createElement("th", null, "Takma ad"), /*#__PURE__*/React.createElement("th", null, "Durum"), /*#__PURE__*/React.createElement("th", null, "Girdi"), /*#__PURE__*/React.createElement("th", null, "Cevap"), /*#__PURE__*/React.createElement("th", null, "Net"), /*#__PURE__*/React.createElement("th", null))), /*#__PURE__*/React.createElement("tbody", null, regs.map(function (r) {
+    }, /*#__PURE__*/React.createElement("th", null, "Takma ad"), /*#__PURE__*/React.createElement("th", null, "Durum"), /*#__PURE__*/React.createElement("th", null, "Bi\xE7im"), /*#__PURE__*/React.createElement("th", null, "Girdi"), /*#__PURE__*/React.createElement("th", null, "Cevap"), /*#__PURE__*/React.createElement("th", null, "Net"), /*#__PURE__*/React.createElement("th", null))), /*#__PURE__*/React.createElement("tbody", null, regs.map(function (r) {
       return /*#__PURE__*/React.createElement("tr", {
         key: r.user_id,
         className: "border-t border-stone-200 dark:border-stone-700"
       }, /*#__PURE__*/React.createElement("td", {
         className: "py-1"
-      }, r.nickname), /*#__PURE__*/React.createElement("td", null, r.status, r.locked ? " · kilitli" : ""), /*#__PURE__*/React.createElement("td", null, r.entered ? "✓" + (r.switches ? " (" + r.switches + " değişim)" : "") : ""), /*#__PURE__*/React.createElement("td", null, r.answered || ""), /*#__PURE__*/React.createElement("td", null, r.net != null ? L.fmtNet(r.net) : ""), /*#__PURE__*/React.createElement("td", {
+      }, r.nickname), /*#__PURE__*/React.createElement("td", null, r.status, r.locked ? " · kilitli" : ""), /*#__PURE__*/React.createElement("td", null, r.entered ? r.mode === "paper" ? "kâğıt" : "cihaz" : ""), /*#__PURE__*/React.createElement("td", null, r.entered ? "✓" + (r.switches ? " (" + r.switches + " değişim)" : "") : ""), /*#__PURE__*/React.createElement("td", null, r.answered || ""), /*#__PURE__*/React.createElement("td", null, r.net != null ? L.fmtNet(r.net) : ""), /*#__PURE__*/React.createElement("td", {
         className: "text-right"
       }, canEdit ? r.status === "blocked" ? /*#__PURE__*/React.createElement("button", {
         type: "button",

@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:241468:1g16gya*/
+/*jsx:babel-7.29.9-react-classic:246781:1yvuvuj*/
 const {
   useState,
   useEffect,
@@ -2172,7 +2172,7 @@ function LiveExamCard(props) {
   // 10:00'dan itibaren kitapçığı önceden indir (şifreli; 10:15'te açılır)
   useEffect(function () {
     if (!e || !C) return;
-    if (["about_to_start", "can_enter", "in_progress"].indexOf(ph) < 0) return;
+    if (["about_to_start", "can_enter", "in_progress", "paper_solving"].indexOf(ph) < 0) return;
     if (C.hasBooklet(e.id)) {
       setBooklet("ok");
       return;
@@ -2247,6 +2247,49 @@ function LiveExamCard(props) {
   function enter() {
     props.onOpen && props.onOpen("exam", e.id);
   }
+  // kâğıtta çözme: optik form ve filigranlı kitapçık PDF'i, optik okutma
+  function pdfJob(label, job, done) {
+    setBusy(true);
+    setMsg(label);
+    job(function (p) {
+      setMsg(label.replace("…", "") + " %" + Math.round(p * 100) + "…");
+    }).then(function () {
+      setBusy(false);
+      setMsg(done);
+      load();
+    }).catch(function (x) {
+      setBusy(false);
+      setMsg(x.message || "PDF hazırlanamadı.");
+      load();
+    });
+  }
+  function printForm() {
+    pdfJob("Optik formun hazırlanıyor…", function () {
+      return C.formPdf(props.student, e);
+    }, "Optik formun indirildi. Yazdırırken ‘Sayfaya sığdır’ı kapat, ölçek %100 olsun.");
+  }
+  function getBooklet() {
+    pdfJob("Soru kitapçığın hazırlanıyor…", function (pr) {
+      return C.bookletPdf(props.student, e, pr);
+    }, "Kitapçığın indirildi. İşaretlemeyi optik forma yap; bitince \"Optiğimi okut\".");
+  }
+  function choosePaper() {
+    if (!window.confirm("Kâğıtta çözmeyi seçersen bu sınavı cihazda çözemezsin.\n\nKitapçığı yazdırıp cevaplarını optik forma işaretleyeceksin; sonra formun fotoğrafını çekip okutacaksın (en geç " + L.fmtClock(L.ms(e.optic_until || e.ranking_at)) + "). Devam edilsin mi?")) return;
+    setBusy(true);
+    setMsg("Kâğıt modunda giriş yapılıyor…");
+    C.enterPaper(e.id).then(function () {
+      setBusy(false);
+      getBooklet();
+    }).catch(function (x) {
+      setBusy(false);
+      setMsg(x.message);
+      load();
+    });
+  }
+  function openOptic() {
+    props.onOpen && props.onOpen("optic", e.id);
+  }
+  var opticUntil = e ? L.ms(e.optic_until || e.ranking_at) : 0;
   var startT = e ? L.ms(e.starts_at) : 0;
   var title = e ? e.title : "Canlı deneme";
   var when = e ? L.fmtDay(startT, true) + " " + L.fmtClock(startT) : "";
@@ -2318,11 +2361,18 @@ function LiveExamCard(props) {
       role: "timer"
     }, L.fmtLeft(startT - now)), /*#__PURE__*/React.createElement("p", {
       className: "text-sm text-stone-600 dark:text-stone-300 mt-1"
-    }, booklet === "ok" ? "✓ Soru kitapçığı şifreli olarak cihazına indi; 10:15'te açılacak." : booklet === "fail" ? "Kitapçık indirilemedi; internetini kontrol et, tekrar denenecek." : "Soru kitapçığı cihazına iniyor…"), /*#__PURE__*/React.createElement("button", {
+    }, booklet === "ok" ? "✓ Soru kitapçığı şifreli olarak cihazına indi; 10:15'te açılacak." : booklet === "fail" ? "Kitapçık indirilemedi; internetini kontrol et, tekrar denenecek." : "Soru kitapçığı cihazına iniyor…"), /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-wrap gap-2 mt-3"
+    }, /*#__PURE__*/React.createElement("button", {
       type: "button",
-      className: "quick-chip is-primary mt-3",
+      className: "quick-chip is-primary",
       disabled: true
-    }, "S\u0131nava gir (10:15'te a\xE7\u0131l\u0131r)"));
+    }, "S\u0131nava gir (10:15'te a\xE7\u0131l\u0131r)"), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "quick-chip",
+      disabled: busy,
+      onClick: printForm
+    }, "\uD83D\uDDA8 Optik formunu indir")));
   } else if (ph === "can_enter" || ph === "in_progress") {
     body = /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
       className: "text-xs font-bold uppercase tracking-wider text-rose-700 dark:text-rose-300"
@@ -2330,11 +2380,73 @@ function LiveExamCard(props) {
       className: "text-lg font-bold mt-0.5"
     }, title), /*#__PURE__*/React.createElement("p", {
       className: "text-sm text-stone-600 dark:text-stone-300 mt-1"
-    }, "Biti\u015Fe ", L.fmtLeft(L.ms(e.ends_at) - now), " kald\u0131", ph === "can_enter" ? " · giriş " + L.fmtClock(L.ms(e.entry_closes_at)) + "'te kapanır" : "", "."), /*#__PURE__*/React.createElement("button", {
+    }, "Biti\u015Fe ", L.fmtLeft(L.ms(e.ends_at) - now), " kald\u0131", ph === "can_enter" ? " · giriş " + L.fmtClock(L.ms(e.entry_closes_at)) + "'te kapanır" : "", "."), /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-wrap gap-2 mt-3"
+    }, /*#__PURE__*/React.createElement("button", {
       type: "button",
-      className: "quick-chip is-primary mt-3",
+      className: "quick-chip is-primary",
       onClick: enter
-    }, ph === "in_progress" ? "Kaldığın yerden devam et" : "Sınava gir"));
+    }, ph === "in_progress" ? "Kaldığın yerden devam et" : "Cihazda çöz"), ph === "can_enter" ? /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "quick-chip",
+      disabled: busy,
+      onClick: choosePaper
+    }, "\uD83D\uDDA8 K\xE2\u011F\u0131tta \xE7\xF6z") : null), ph === "can_enter" ? /*#__PURE__*/React.createElement("p", {
+      className: "text-xs text-stone-500 mt-2"
+    }, "K\xE2\u011F\u0131tta \xE7\xF6zersen kitap\xE7\u0131k PDF olarak iner; cevaplar\u0131n\u0131 optik forma i\u015Faretleyip sonra foto\u011Fraf\u0131n\u0131 okutursun.") : null);
+  } else if (ph === "paper_solving") {
+    body = /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
+      className: "text-xs font-bold uppercase tracking-wider text-rose-700 dark:text-rose-300"
+    }, "\u25CF S\u0131nav devam ediyor \xB7 k\xE2\u011F\u0131tta \xE7\xF6z\xFCyorsun"), /*#__PURE__*/React.createElement("h2", {
+      className: "text-lg font-bold mt-0.5"
+    }, title), /*#__PURE__*/React.createElement("p", {
+      className: "text-sm text-stone-600 dark:text-stone-300 mt-1"
+    }, "Biti\u015Fe ", L.fmtLeft(L.ms(e.ends_at) - now), " kald\u0131. Bitirince optik formunun foto\u011Fraf\u0131n\u0131 \xE7ekip okut; okutma ", L.fmtClock(opticUntil), "'ta kapan\u0131r."), /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-wrap gap-2 mt-3"
+    }, /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "quick-chip is-primary",
+      onClick: openOptic
+    }, "\uD83D\uDCF7 Opti\u011Fimi okut"), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "quick-chip",
+      disabled: busy,
+      onClick: getBooklet
+    }, "Kitap\xE7\u0131\u011F\u0131 indir"), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "quick-chip",
+      disabled: busy,
+      onClick: printForm
+    }, "Optik formu indir")));
+  } else if (ph === "paper_submitted") {
+    body = /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
+      className: "font-bold"
+    }, "Optik formun g\xF6nderildi."), /*#__PURE__*/React.createElement("p", {
+      className: "text-sm text-stone-500 mt-1"
+    }, "Cevaplar\u0131n art\u0131k de\u011Fi\u015Fmez. Sonucun ve \xE7\xF6z\xFCmler ", L.fmtClock(L.ms(e.ends_at)), "'te a\xE7\u0131l\u0131r."));
+  } else if (ph === "optic_window") {
+    body = /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
+      className: "text-xs font-bold uppercase tracking-wider text-amber-700 dark:text-amber-300"
+    }, "S\u0131nav bitti \xB7 opti\u011Fini okut"), /*#__PURE__*/React.createElement("h2", {
+      className: "text-lg font-bold mt-0.5"
+    }, title), /*#__PURE__*/React.createElement("p", {
+      className: "mt-2 font-stat text-3xl font-black",
+      role: "timer"
+    }, L.fmtLeft(opticUntil - now)), /*#__PURE__*/React.createElement("p", {
+      className: "text-sm text-stone-600 dark:text-stone-300 mt-1"
+    }, "Optik okutma ", L.fmtClock(opticUntil), "'ta kapan\u0131r. Okutmazsan bu denemede sonucun olmaz."), /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-wrap gap-2 mt-3"
+    }, /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "quick-chip is-primary",
+      onClick: openOptic
+    }, "\uD83D\uDCF7 Opti\u011Fimi okut")));
+  } else if (ph === "optic_missed") {
+    body = /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
+      className: "font-bold"
+    }, "Optik formun gelmedi."), /*#__PURE__*/React.createElement("p", {
+      className: "text-sm text-stone-500 mt-1"
+    }, "Okutma s\xFCresi ", L.fmtClock(opticUntil), "'ta doldu; bu denemede sonucun yok. Sorun ya\u015Fad\u0131ysan y\xF6netici ile ileti\u015Fime ge\xE7."));
   } else if (ph === "entry_closed") {
     body = /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
       className: "font-bold"
@@ -2363,6 +2475,12 @@ function LiveExamCard(props) {
     body = /*#__PURE__*/React.createElement(ResultBlock, {
       r: last
     });
+  } else if (missedNewer && dash.missed_no_optic) {
+    body = /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
+      className: "font-bold"
+    }, "Optik formun gelmedi\u011Fi i\xE7in bu denemede sonucun yok."), /*#__PURE__*/React.createElement("p", {
+      className: "text-sm text-stone-500 mt-1"
+    }, "Bir sonrakinde okutma s\xFCresini ka\xE7\u0131rma: s\u0131nav biti\u015Finden sonra 15 dakika."));
   } else if (missedNewer || ph === "missed_live" || ph === "over_unregistered") {
     body = /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
       className: "font-bold"
@@ -2399,12 +2517,19 @@ function LiveExamCard(props) {
       className: "text-sm text-stone-600 dark:text-stone-300 mt-1"
     }, ph === "waitlist" ? "Sıran: " + (dash.registration && dash.registration.waitlist_pos || "?") + ". Yer açılırsa otomatik kaydedilirsin. " : "", "Ba\u015Flamaya ", L.fmtLeft(startT - now), "."), ph === "registered" ? /*#__PURE__*/React.createElement("ul", {
       className: "text-xs text-stone-500 mt-2 space-y-0.5 list-disc pl-4"
-    }, /*#__PURE__*/React.createElement("li", null, "Kay\u0131t pazar ", L.fmtClock(L.ms(e.reg_closes_at)), "'da kapan\u0131r; kitap\xE7\u0131k o saatte cihaz\u0131na iner."), /*#__PURE__*/React.createElement("li", null, "130 dakikal\u0131k sessiz bir zaman ay\u0131r; m\xFCsvedde k\xE2\u011F\u0131t ve kalem haz\u0131rla."), /*#__PURE__*/React.createElement("li", null, "S\u0131nava ", L.fmtClock(L.ms(e.entry_closes_at)), "'e kadar girebilirsin; ge\xE7 giren ek s\xFCre almaz.")) : null, /*#__PURE__*/React.createElement("button", {
+    }, /*#__PURE__*/React.createElement("li", null, "Kay\u0131t pazar ", L.fmtClock(L.ms(e.reg_closes_at)), "'da kapan\u0131r; kitap\xE7\u0131k o saatte cihaz\u0131na iner."), /*#__PURE__*/React.createElement("li", null, "130 dakikal\u0131k sessiz bir zaman ay\u0131r; m\xFCsvedde k\xE2\u011F\u0131t ve kalem haz\u0131rla."), /*#__PURE__*/React.createElement("li", null, "S\u0131nava ", L.fmtClock(L.ms(e.entry_closes_at)), "'e kadar girebilirsin; ge\xE7 giren ek s\xFCre almaz."), /*#__PURE__*/React.createElement("li", null, "K\xE2\u011F\u0131tta \xE7\xF6zeceksen optik formunu \u015Fimdiden yazd\u0131r (\u2018Sayfaya s\u0131\u011Fd\u0131r\u2019 kapal\u0131, %100 \xF6l\xE7ek).")) : null, /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-wrap gap-2 mt-3"
+    }, ph === "registered" ? /*#__PURE__*/React.createElement("button", {
       type: "button",
-      className: "quick-chip mt-3",
+      className: "quick-chip",
+      disabled: busy,
+      onClick: printForm
+    }, "\uD83D\uDDA8 Optik formunu indir") : null, /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "quick-chip",
       disabled: busy,
       onClick: unregister
-    }, "Kayd\u0131m\u0131 sil"));
+    }, "Kayd\u0131m\u0131 sil")));
   } else if (ph === "reg_closed") {
     regBlock = body ? null : /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
       className: "font-bold"

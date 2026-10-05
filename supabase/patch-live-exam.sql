@@ -1,6 +1,7 @@
 -- ============================================================
--- CANLI DENEME SINAVI (1. aşama)
--- SQL Editor'da bir kez çalıştır. Tekrar çalıştırmak güvenlidir (idempotent).
+-- CANLI DENEME SINAVI (1. ve 2. aşama)
+-- SQL Editor'da çalıştır. Tekrar çalıştırmak güvenlidir (idempotent); 1. aşamayı
+-- daha önce kurduysan bu dosyanın tamamını yeniden çalıştırman yeterli.
 --
 -- İlkeler
 --  * Saat yalnızca sunucudan: her kural live_clock() (= now()) ile denetlenir.
@@ -8,6 +9,8 @@
 --  * Hiçbir satır silinmez: DELETE / TRUNCATE tetikleyiciyle engellenir. Taslak deneme
 --    yalnızca yumuşak silinir (deleted_at).
 --  * Doğru cevaplar ve çözümler, kullanıcının kâğıdı kapanmadan ve sınav bitmeden asla dönmez.
+--  * Kâğıtta çözen (mode = 'paper') cevaplarını optik formu okutarak 12:25–12:40 arasında
+--    (ranking_at) bir kez gönderir; göndermeyenin sonucu olmaz, çözümleri açılmaz.
 -- ============================================================
 
 create extension if not exists pgcrypto;
@@ -83,6 +86,8 @@ create table if not exists public.live_attempts (
   close_reason text,
   primary key (exam_id, user_id)
 );
+alter table public.live_attempts add column if not exists mode text not null default 'device'
+  check (mode in ('device', 'paper'));
 
 create table if not exists public.live_answers (
   exam_id uuid not null references public.live_exams(id),
@@ -210,7 +215,8 @@ returns json language sql stable as $$
     'reg_closes_at', e.reg_closes_at, 'starts_at', e.starts_at, 'entry_closes_at', e.entry_closes_at,
     'ends_at', e.ends_at, 'late_sync_until', e.late_sync_until, 'ranking_at', e.ranking_at,
     'capacity', e.capacity, 'question_count', e.question_count, 'extra_minutes', e.extra_minutes,
-    'finalized', e.finalized_at is not null, 'cancel_reason', e.cancel_reason)
+    'finalized', e.finalized_at is not null, 'cancel_reason', e.cancel_reason,
+    'optic_until', e.ranking_at)
 $$;
 
 -- Bir kullanıcının sonucunu hesaplar (sınav kesinleşmeden önce tekrar hesaplanabilir).
@@ -228,6 +234,7 @@ begin
   end if;
   select coalesce(reg.nickname, 'Öğrenci'), coalesce(reg.mode, 'device') into nick, md
     from public.live_registrations reg where reg.exam_id = p_exam and reg.user_id = p_user;
+  select coalesce(t.mode, md) into md from public.live_attempts t where t.exam_id = p_exam and t.user_id = p_user;
 
   with qa as (
     select q.no, q.bolum, q.ders, q.konu, q.answer, a.choice,
@@ -269,9 +276,18 @@ end;
 $$;
 
 -- Kâğıdı kapat: bundan sonra cevap değişmez, sonuç hesaplanır.
+-- Kâğıtta çözüp optik formunu göndermeyenin kâğıdı sonuçsuz kapanır ('no_optic').
 create or replace function public.live_close_attempt(p_exam uuid, p_user uuid, p_reason text)
 returns void language plpgsql security definer set search_path = public as $$
+declare att public.live_attempts;
 begin
+  select * into att from public.live_attempts where exam_id = p_exam and user_id = p_user;
+  if att.exam_id is null then return; end if;
+  if att.mode = 'paper' and att.submitted_at is null then
+    update public.live_attempts set closed_at = public.live_clock(), close_reason = 'no_optic'
+     where exam_id = p_exam and user_id = p_user and closed_at is null;
+    return;
+  end if;
   update public.live_attempts set closed_at = public.live_clock(), close_reason = p_reason,
          submitted_at = coalesce(submitted_at, public.live_clock())
    where exam_id = p_exam and user_id = p_user and closed_at is null;
@@ -295,10 +311,25 @@ begin
     perform public.live_close_attempt(p_exam, rec.user_id, 'auto');
   end loop;
   for rec in select t.user_id from public.live_attempts t
-           where t.exam_id = p_exam and not exists (select 1 from public.live_results r where r.exam_id = p_exam and r.user_id = t.user_id) loop
+           where t.exam_id = p_exam and not (t.mode = 'paper' and t.submitted_at is null)
+             and not exists (select 1 from public.live_results r where r.exam_id = p_exam and r.user_id = t.user_id) loop
     perform public.live_compute_result(p_exam, rec.user_id);
   end loop;
 
+  perform public.live_rank(p_exam);
+  select participants into n from public.live_cohort where exam_id = p_exam;
+  update public.live_exams set finalized_at = public.live_clock(), status = 'finished', updated_at = public.live_clock()
+   where id = p_exam;
+  insert into public.live_events (exam_id, kind, detail) values (p_exam, 'finalize', json_build_object('participants', n)::jsonb);
+end;
+$$;
+
+-- Sıralama, kohort ve soru istatistikleri. Kesinleşmede, ayrıca yöneticinin kayıtlı
+-- elle düzeltmesinden sonra yeniden çalışır.
+create or replace function public.live_rank(p_exam uuid)
+returns void language plpgsql security definer set search_path = public as $$
+declare n int;
+begin
   select count(*) into n from public.live_results where exam_id = p_exam;
   update public.live_results r set rank = x.rk, participants = n,
          top_pct = round(100.0 * x.rk / greatest(n, 1), 1)
@@ -344,10 +375,6 @@ begin
   group by q.exam_id, q.no, q.answer
   on conflict (exam_id, no) do update set correct = excluded.correct, wrong = excluded.wrong, blank = excluded.blank,
     choices = excluded.choices, avg_ms = excluded.avg_ms;
-
-  update public.live_exams set finalized_at = public.live_clock(), status = 'finished', updated_at = public.live_clock()
-   where id = p_exam;
-  insert into public.live_events (exam_id, kind, detail) values (p_exam, 'finalize', json_build_object('participants', n)::jsonb);
 end;
 $$;
 
@@ -358,7 +385,9 @@ declare a record; x record;
 begin
   for a in select t.exam_id, t.user_id from public.live_attempts t
            join public.live_exams e on e.id = t.exam_id
-           where t.closed_at is null and e.status = 'scheduled' and public.live_clock() > e.late_sync_until loop
+           where t.closed_at is null and e.status = 'scheduled'
+             and ((t.mode = 'device' and public.live_clock() > e.late_sync_until)
+               or (t.mode = 'paper' and public.live_clock() >= e.ranking_at)) loop
     perform public.live_close_attempt(a.exam_id, a.user_id, 'auto');
   end loop;
   for x in select id from public.live_exams
@@ -435,7 +464,7 @@ begin
     'registration', case when reg.exam_id is null then null else json_build_object('status', reg.status, 'mode', reg.mode, 'waitlist_pos', waitpos) end,
     'attempt', case when att.exam_id is null then null else json_build_object(
         'entered_at', att.entered_at, 'closed', att.closed_at is not null, 'submitted', att.submitted_at is not null,
-        'locked', att.locked, 'switches', att.switches) end,
+        'locked', att.locked, 'switches', att.switches, 'mode', att.mode, 'close_reason', att.close_reason) end,
     'last_result', case when last_res.exam_id is null then null else json_build_object(
         'exam_id', last_res.exam_id, 'title', last_res.title, 'track', last_res.track, 'starts_at', last_res.starts_at,
         'net', last_res.net, 'gy_net', last_res.gy_net, 'gk_net', last_res.gk_net,
@@ -443,7 +472,9 @@ begin
         'rank', last_res.rank, 'participants', last_res.participants, 'top_pct', last_res.top_pct,
         'ranking_at', last_res.ranking_at, 'finalized', last_res.finalized_at is not null,
         'by_konu', last_res.by_konu) end,
-    'missed', case when missed.id is null then null else public.live_exam_json(missed) end
+    'missed', case when missed.id is null then null else public.live_exam_json(missed) end,
+    'missed_no_optic', missed.id is not null and exists (select 1 from public.live_attempts t
+        where t.exam_id = missed.id and t.user_id = uid and t.mode = 'paper' and t.submitted_at is null)
   );
 end;
 $$;
@@ -530,16 +561,21 @@ end;
 $$;
 
 -- Sınava gir (ya da kaldığın yerden devam et). Çözme anahtarını ve kayıtlı cevapları döndürür.
-create or replace function public.live_enter(p_exam uuid, p_device text)
+-- p_mode: 'device' (cihazda çöz) ya da 'paper' (kitapçığı yazdır, optik formu okut). İlk girişte
+-- seçilir, sonra değişmez. Kâğıt modunda cihaz kilidi yoktur: cevaplar akmaz, optik bir kez gönderilir.
+drop function if exists public.live_enter(uuid, text);
+create or replace function public.live_enter(p_exam uuid, p_device text, p_mode text default 'device')
 returns json language plpgsql security definer set search_path = public as $$
 declare
   uid uuid := public.live_require_user();
   e public.live_exams;
   att public.live_attempts;
   t timestamptz := public.live_clock();
+  md text := coalesce(nullif(p_mode, ''), 'device');
   ans json;
 begin
   if coalesce(length(p_device), 0) < 8 or length(p_device) > 80 then perform public.live_err('bad_device', 'Geçersiz cihaz.'); end if;
+  if md not in ('device', 'paper') then perform public.live_err('bad_input', 'Geçersiz çözme biçimi.'); end if;
   select * into e from public.live_exams where id = p_exam;
   if e.id is null or e.deleted_at is not null then perform public.live_err('not_found', 'Deneme bulunamadı.'); end if;
   if e.status = 'cancelled' then perform public.live_err('cancelled', 'Bu deneme iptal edildi.'); end if;
@@ -553,13 +589,21 @@ begin
   select * into att from public.live_attempts where exam_id = p_exam and user_id = uid for update;
   if att.exam_id is null then
     if t >= e.entry_closes_at then perform public.live_err('entry_closed', 'Sınava giriş 10:45''te kapandı.'); end if;
-    insert into public.live_attempts (exam_id, user_id, device_id, entered_at, last_seen_at)
-    values (p_exam, uid, p_device, t, t) returning * into att;
-    insert into public.live_events (exam_id, user_id, kind) values (p_exam, uid, 'enter');
+    insert into public.live_attempts (exam_id, user_id, device_id, mode, entered_at, last_seen_at)
+    values (p_exam, uid, p_device, md, t, t) returning * into att;
+    update public.live_registrations set mode = md, updated_at = t where exam_id = p_exam and user_id = uid;
+    insert into public.live_events (exam_id, user_id, kind, detail) values (p_exam, uid, 'enter', json_build_object('mode', md)::jsonb);
   else
     if att.locked then perform public.live_err('locked', 'Sınavın kilitlendi. Yönetici ile iletişime geç.'); end if;
     if att.submitted_at is not null then perform public.live_err('submitted', 'Kâğıdını teslim ettin.'); end if;
-    if att.device_id <> p_device then
+    if att.mode <> md then
+      perform public.live_err('mode_locked', case when att.mode = 'paper'
+        then 'Kâğıtta çözmeyi seçtin; cevaplarını optik formunu okutarak gönder.'
+        else 'Sınava cihazda başladın; cihazda devam et.' end);
+    end if;
+    if att.mode = 'paper' then
+      update public.live_attempts set last_seen_at = t where exam_id = p_exam and user_id = uid;
+    elsif att.device_id <> p_device then
       if att.switches >= 2 then
         update public.live_attempts set locked = true where exam_id = p_exam and user_id = uid;
         insert into public.live_events (exam_id, user_id, kind, detail)
@@ -580,7 +624,7 @@ begin
     'now', (extract(epoch from t) * 1000)::bigint,
     'exam', public.live_exam_json(e),
     'key', e.booklet_key, 'sha', e.booklet_sha, 'path', e.booklet_path,
-    'answers', ans, 'switches', att.switches);
+    'answers', ans, 'switches', att.switches, 'mode', att.mode);
 end;
 $$;
 
@@ -603,6 +647,7 @@ begin
   select * into att from public.live_attempts where exam_id = p_exam and user_id = uid for update;
   if att.exam_id is null then perform public.live_err('not_entered', 'Sınava girmedin.'); end if;
   if att.locked then perform public.live_err('locked', 'Sınavın kilitlendi.'); end if;
+  if att.mode = 'paper' then perform public.live_err('paper_mode', 'Kâğıtta çözüyorsun; cevaplarını optik formla gönder.'); end if;
   if att.device_id <> p_device then perform public.live_err('device_replaced', 'Sınav başka bir cihazda açıldı.'); end if;
   if att.submitted_at is not null or att.closed_at is not null then perform public.live_err('submitted', 'Kâğıdın teslim edildi; cevaplar değişmez.'); end if;
   if t > e.late_sync_until or e.status <> 'scheduled' then perform public.live_err('ended', 'Sınav sona erdi.'); end if;
@@ -632,6 +677,7 @@ declare
 begin
   select * into att from public.live_attempts where exam_id = p_exam and user_id = uid for update;
   if att.exam_id is null then perform public.live_err('not_entered', 'Sınava girmedin.'); end if;
+  if att.mode = 'paper' then perform public.live_err('paper_mode', 'Kâğıtta çözüyorsun; cevaplarını optik formla gönder.'); end if;
   if att.device_id <> p_device then perform public.live_err('device_replaced', 'Sınav başka bir cihazda açıldı.'); end if;
   update public.live_attempts set submitted_at = coalesce(submitted_at, public.live_clock())
    where exam_id = p_exam and user_id = uid;
@@ -657,6 +703,10 @@ begin
   select * into att from public.live_attempts where exam_id = p_exam and user_id = uid;
   if att.exam_id is null then perform public.live_err('not_participant', 'Bu denemeye katılmadın.'); end if;
   if public.live_clock() < e.ends_at then perform public.live_err('not_yet', 'Sonuçlar sınav bitince açılır.'); end if;
+  if att.mode = 'paper' and att.submitted_at is null then
+    if att.closed_at is null then perform public.live_err('optic_pending', 'Sonucun için önce optik formunu okut.'); end if;
+    perform public.live_err('no_optic', 'Optik formun gönderilmediği için bu denemede sonucun yok.');
+  end if;
   if att.closed_at is null then perform public.live_close_attempt(p_exam, uid, 'result'); end if;
   select * into res from public.live_results where exam_id = p_exam and user_id = uid;
   select * into e from public.live_exams where id = p_exam;
@@ -682,6 +732,9 @@ begin
   if e.id is null or e.deleted_at is not null then perform public.live_err('not_found', 'Deneme bulunamadı.'); end if;
   select * into att from public.live_attempts where exam_id = p_exam and user_id = uid;
   if att.exam_id is null then perform public.live_err('not_participant', 'Bu denemeye katılmadın.'); end if;
+  if att.mode = 'paper' and att.submitted_at is null then
+    perform public.live_err('no_optic', 'Çözümler optik formunu gönderdikten sonra açılır.');
+  end if;
   if public.live_clock() < e.ends_at or att.closed_at is null then
     perform public.live_err('not_yet', 'Çözümler kâğıdın kapandıktan sonra açılır.');
   end if;
@@ -704,6 +757,75 @@ begin
         from public.live_question_stats s join public.live_questions q on q.exam_id = s.exam_id and q.no = s.no
         where s.exam_id = p_exam order by 4 desc, s.no limit 10) x) end
   );
+end;
+$$;
+
+-- Kâğıtta çözenin optik gönderimi (kamera okuması ya da elle giriş, kullanıcı onayından sonra).
+-- p_answers: soru sırasıyla 'A'..'E' ya da boş için '-' (ör. 'ACEB-D...'), tam question_count karakter.
+-- p_meta: {source: 'optic'|'manual', qr: 'ATN|1|<deneme>|<kullanıcı>|<kulvar>', flagged, double, uncertain, ...}
+-- Gönderilen kâğıt bir daha değiştirilemez.
+create or replace function public.live_submit_optic(p_exam uuid, p_answers text, p_meta jsonb default '{}'::jsonb)
+returns json language plpgsql security definer set search_path = public as $$
+declare
+  uid uuid := public.live_require_user();
+  e public.live_exams;
+  att public.live_attempts;
+  t timestamptz := public.live_clock();
+  src text := case when p_meta->>'source' = 'manual' then 'manual' else 'optic' end;
+  qr text := nullif(p_meta->>'qr', '');
+  i int;
+  ch text;
+begin
+  select * into e from public.live_exams where id = p_exam;
+  if e.id is null or e.deleted_at is not null then perform public.live_err('not_found', 'Deneme bulunamadı.'); end if;
+  if e.status = 'cancelled' then perform public.live_err('cancelled', 'Bu deneme iptal edildi.'); end if;
+  select * into att from public.live_attempts where exam_id = p_exam and user_id = uid for update;
+  if att.exam_id is null then
+    perform public.live_err('not_entered', 'Kâğıtta çözmek için sınav saatinde "Kâğıtta çöz" ile giriş yapmalısın.');
+  end if;
+  if att.mode <> 'paper' then perform public.live_err('device_mode', 'Bu sınavı cihazda çözüyorsun; optik gönderilemez.'); end if;
+  if att.locked then perform public.live_err('locked', 'Sınavın kilitlendi. Yönetici ile iletişime geç.'); end if;
+  if att.submitted_at is not null then perform public.live_err('submitted', 'Optik formun zaten gönderildi; değiştirilemez.'); end if;
+  if att.closed_at is not null or e.status <> 'scheduled' or t >= e.ranking_at then
+    perform public.live_err('optic_closed', 'Optik okutma süresi doldu.');
+  end if;
+  if t < e.starts_at then perform public.live_err('too_early', 'Sınav henüz başlamadı.'); end if;
+  if p_answers is null or length(p_answers) <> e.question_count or p_answers !~ '^[A-E-]+$' then
+    perform public.live_err('bad_input', format('%s cevap bekleniyordu (A–E ya da boş için -).', e.question_count));
+  end if;
+  if qr is not null and (split_part(qr, '|', 1) <> 'ATN' or split_part(qr, '|', 3) <> p_exam::text or split_part(qr, '|', 4) <> uid::text) then
+    perform public.live_err('wrong_form', 'Bu optik form sana ya da bu denemeye ait değil.');
+  end if;
+  for i in 1 .. e.question_count loop
+    ch := nullif(substr(p_answers, i, 1), '-');
+    insert into public.live_answers (exam_id, user_id, no, choice, ms, source, updated_at)
+    values (p_exam, uid, i, ch, 0, src, t)
+    on conflict (exam_id, user_id, no) do update set choice = excluded.choice, source = excluded.source, updated_at = excluded.updated_at;
+  end loop;
+  update public.live_attempts set submitted_at = t, last_seen_at = t where exam_id = p_exam and user_id = uid;
+  perform public.live_close_attempt(p_exam, uid, src);
+  insert into public.live_events (exam_id, user_id, kind, detail)
+  values (p_exam, uid, 'optic_submit', jsonb_build_object('source', src, 'qr', qr is not null,
+          'blank', length(p_answers) - length(replace(p_answers, '-', '')),
+          'flagged', p_meta->'flagged', 'double', p_meta->'double', 'uncertain', p_meta->'uncertain', 'edited', p_meta->'edited'));
+  return json_build_object('submitted', true, 'results_at', greatest(e.ends_at, t), 'ranking_at', e.ranking_at);
+end;
+$$;
+
+-- Okuma sorunu kaydı (yönetici "okutmada sorun yaşayanlar" listesinde görür). Kişi başı en fazla 40 kayıt.
+create or replace function public.live_optic_report(p_exam uuid, p_kind text, p_detail jsonb default '{}'::jsonb)
+returns json language plpgsql security definer set search_path = public as $$
+declare uid uuid := public.live_require_user(); n int;
+begin
+  if p_kind not in ('fail', 'manual_open', 'wrong_form') then perform public.live_err('bad_input', 'Geçersiz kayıt.'); end if;
+  if not exists (select 1 from public.live_attempts where exam_id = p_exam and user_id = uid) then
+    return json_build_object('ok', false);
+  end if;
+  select count(*) into n from public.live_events where exam_id = p_exam and user_id = uid and kind like 'optic_%';
+  if n >= 40 then return json_build_object('ok', false); end if;
+  insert into public.live_events (exam_id, user_id, kind, detail)
+  values (p_exam, uid, 'optic_' || p_kind, case when length(coalesce(p_detail, '{}'::jsonb)::text) > 1500 then '{}'::jsonb else coalesce(p_detail, '{}'::jsonb) end);
+  return json_build_object('ok', true);
 end;
 $$;
 
@@ -931,7 +1053,7 @@ returns json language plpgsql security definer set search_path = public as $$
 begin
   perform public.live_require_admin();
   return (select coalesce(json_agg(json_build_object('user_id', r.user_id, 'nickname', r.nickname, 'status', r.status,
-            'mode', r.mode, 'created_at', r.created_at,
+            'mode', coalesce(a.mode, r.mode), 'created_at', r.created_at, 'submitted', a.submitted_at is not null,
             'entered', a.entered_at is not null, 'switches', coalesce(a.switches, 0), 'locked', coalesce(a.locked, false),
             'answered', (select count(*) from public.live_answers x where x.exam_id = r.exam_id and x.user_id = r.user_id and x.choice is not null),
             'net', (select net from public.live_results x where x.exam_id = r.exam_id and x.user_id = r.user_id))
@@ -968,13 +1090,25 @@ begin
     'active', (select count(*) from public.live_attempts where exam_id = p_exam and closed_at is null and submitted_at is null and last_seen_at > t - interval '3 minutes'),
     'submitted', (select count(*) from public.live_attempts where exam_id = p_exam and submitted_at is not null),
     'locked', (select count(*) from public.live_attempts where exam_id = p_exam and locked),
+    'paper_entered', (select count(*) from public.live_attempts where exam_id = p_exam and mode = 'paper'),
+    'paper_submitted', (select count(*) from public.live_attempts where exam_id = p_exam and mode = 'paper' and submitted_at is not null),
+    'paper', (select coalesce(json_agg(json_build_object('user_id', a.user_id,
+                 'nickname', (select nickname from public.live_registrations r where r.exam_id = p_exam and r.user_id = a.user_id),
+                 'entered_at', a.entered_at, 'submitted', a.submitted_at is not null, 'close_reason', a.close_reason,
+                 'source', (select max(x.source) from public.live_answers x where x.exam_id = p_exam and x.user_id = a.user_id),
+                 'fails', (select count(*) from public.live_events v where v.exam_id = p_exam and v.user_id = a.user_id and v.kind in ('optic_fail', 'optic_wrong_form')),
+                 'last_fail', (select v.detail from public.live_events v where v.exam_id = p_exam and v.user_id = a.user_id
+                                 and v.kind in ('optic_fail', 'optic_wrong_form') order by v.at desc limit 1))
+               order by a.submitted_at is not null, a.entered_at), '[]'::json)
+              from public.live_attempts a where a.exam_id = p_exam and a.mode = 'paper'),
     'avg_answered', (select round(avg(c), 1) from (select count(*) filter (where choice is not null) as c
                       from public.live_answers where exam_id = p_exam group by user_id) z),
     'events', (select coalesce(json_agg(json_build_object('at', ev.at, 'kind', ev.kind, 'user_id', ev.user_id,
                  'nickname', (select nickname from public.live_registrations r where r.exam_id = p_exam and r.user_id = ev.user_id),
                  'detail', ev.detail) order by ev.at desc), '[]'::json)
                from (select * from public.live_events where exam_id = p_exam
-                     and kind in ('device_switch', 'locked', 'admin_extend', 'admin_cancel', 'admin_unlock', 'finalize')
+                     and kind in ('device_switch', 'locked', 'admin_extend', 'admin_cancel', 'admin_unlock', 'finalize',
+                                  'optic_fail', 'optic_wrong_form', 'optic_submit', 'admin_paper')
                      order by at desc limit 60) ev));
 end;
 $$;
@@ -1022,6 +1156,42 @@ begin
 end;
 $$;
 
+-- Okutmada sorun yaşayan kâğıt katılımcısı için elle giriş (kayıtlı). Yalnızca optiğini
+-- GÖNDERMEMİŞ kâğıt katılımcısı için; gönderilmiş kâğıt değişmez. Sıralama kesinleşmişse yeniden hesaplanır.
+create or replace function public.live_admin_paper(p_exam uuid, p_user uuid, p_answers text, p_note text)
+returns json language plpgsql security definer set search_path = public as $$
+declare
+  uid uuid := public.live_require_admin();
+  e public.live_exams;
+  att public.live_attempts;
+  t timestamptz := public.live_clock();
+  i int;
+begin
+  select * into e from public.live_exams where id = p_exam for update;
+  if e.id is null or e.deleted_at is not null or e.status = 'cancelled' then perform public.live_err('not_found', 'Deneme bulunamadı.'); end if;
+  if t < e.starts_at then perform public.live_err('too_early', 'Sınav henüz başlamadı.'); end if;
+  select * into att from public.live_attempts where exam_id = p_exam and user_id = p_user for update;
+  if att.exam_id is null or att.mode <> 'paper' then perform public.live_err('not_paper', 'Bu kullanıcı kâğıtta çözmüyor.'); end if;
+  if att.submitted_at is not null then perform public.live_err('submitted', 'Kullanıcının optiği gönderilmiş; gönderilen kâğıt değişmez.'); end if;
+  if coalesce(length(trim(p_note)), 0) < 3 then perform public.live_err('bad_input', 'Düzeltme nedeni yaz.'); end if;
+  if p_answers is null or length(p_answers) <> e.question_count or p_answers !~ '^[A-E-]+$' then
+    perform public.live_err('bad_input', format('%s cevap bekleniyordu (A–E ya da boş için -).', e.question_count));
+  end if;
+  for i in 1 .. e.question_count loop
+    insert into public.live_answers (exam_id, user_id, no, choice, ms, source, updated_at)
+    values (p_exam, p_user, i, nullif(substr(p_answers, i, 1), '-'), 0, 'admin', t)
+    on conflict (exam_id, user_id, no) do update set choice = excluded.choice, source = excluded.source, updated_at = excluded.updated_at;
+  end loop;
+  update public.live_attempts set submitted_at = t, closed_at = coalesce(closed_at, t), close_reason = 'admin', last_seen_at = t
+   where exam_id = p_exam and user_id = p_user;
+  perform public.live_compute_result(p_exam, p_user);
+  if e.finalized_at is not null then perform public.live_rank(p_exam); end if;
+  insert into public.live_events (exam_id, user_id, kind, detail)
+  values (p_exam, p_user, 'admin_paper', json_build_object('by', uid, 'note', left(p_note, 300), 'reranked', e.finalized_at is not null)::jsonb);
+  return json_build_object('ok', true, 'reranked', e.finalized_at is not null);
+end;
+$$;
+
 -- Sınav sonrası soru istatistiği (hangi şık kaç kişi).
 create or replace function public.live_admin_stats(p_exam uuid)
 returns json language plpgsql security definer set search_path = public as $$
@@ -1042,7 +1212,8 @@ declare f text;
 begin
   foreach f in array array[
     'live_now()', 'live_dashboard(text)', 'live_register(uuid)', 'live_unregister(uuid)', 'live_booklet(uuid)',
-    'live_enter(uuid, text)', 'live_save(uuid, text, jsonb)', 'live_submit(uuid, text)', 'live_result(uuid)',
+    'live_enter(uuid, text, text)', 'live_save(uuid, text, jsonb)',
+    'live_submit_optic(uuid, text, jsonb)', 'live_optic_report(uuid, text, jsonb)', 'live_admin_paper(uuid, uuid, text, text)', 'live_submit(uuid, text)', 'live_result(uuid)',
     'live_review(uuid)', 'live_history()', 'live_public_summary(uuid)',
     'live_admin_save_exam(jsonb)', 'live_admin_set_questions(uuid, jsonb)', 'live_admin_set_booklet(uuid, text, text, text)',
     'live_admin_publish(uuid)', 'live_admin_discard_draft(uuid)', 'live_admin_list()', 'live_admin_registrations(uuid)',
@@ -1052,7 +1223,7 @@ begin
     execute format('grant execute on function public.%s to authenticated', f);
   end loop;
   foreach f in array array[
-    'live_compute_result(uuid, uuid)', 'live_close_attempt(uuid, uuid, text)', 'live_finalize(uuid)', 'live_tick()',
+    'live_compute_result(uuid, uuid)', 'live_close_attempt(uuid, uuid, text)', 'live_finalize(uuid)', 'live_rank(uuid)', 'live_tick()',
     'live_is_admin()', 'live_require_admin()', 'live_default_times(date)'] loop
     execute format('revoke all on function public.%s from public, anon, authenticated', f);
   end loop;

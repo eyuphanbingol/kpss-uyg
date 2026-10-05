@@ -149,6 +149,101 @@
     }
     function recallEntry(examId) { return getJson("kpss-live-entry-" + examId); }
 
+    // ---------- optik sayfası: PDF üretimi gizli bir iframe'de (mobilde aynı sayfa WebView'da) ----------
+    var OPTIK_URL = "optik/optik.html?v=1";
+    var worker = null, waiters = {}, seq = 0;
+    function onOptikMessage(e) {
+        if (!worker || e.source !== worker.frame.contentWindow) return;
+        var m = e.data || {};
+        if (m.type === "ready") { worker.ok(); return; }
+        var w = m.id && waiters[m.id];
+        if (!w) return;
+        if (m.type === "progress") { if (w.onProgress) w.onProgress(m.p); return; }
+        delete waiters[m.id];
+        if (m.type === "pdf") w.resolve(m);
+        else w.reject(new Error(m.message || "PDF hazırlanamadı."));
+    }
+    function optikWorker() {
+        if (worker) return worker.ready;
+        var f = document.createElement("iframe");
+        f.src = OPTIK_URL + "&mode=worker";
+        f.title = "Optik PDF hazırlayıcı";
+        f.setAttribute("aria-hidden", "true");
+        f.tabIndex = -1;
+        f.style.cssText = "position:fixed;left:-9999px;top:0;width:10px;height:10px;border:0;opacity:0;pointer-events:none";
+        worker = { frame: f };
+        worker.ready = new Promise(function (resolve, reject) {
+            worker.ok = resolve;
+            setTimeout(function () { reject(new Error("Optik sayfası yüklenemedi; internetini kontrol et.")); }, 30000);
+        });
+        worker.ready.catch(function () { if (worker && worker.frame.parentNode) worker.frame.parentNode.removeChild(worker.frame); worker = null; });
+        global.addEventListener("message", onOptikMessage);
+        document.body.appendChild(f);
+        return worker.ready;
+    }
+    function optik(cmd, onProgress) {
+        return optikWorker().then(function () {
+            return new Promise(function (resolve, reject) {
+                var id = "c" + (++seq);
+                waiters[id] = { resolve: resolve, reject: reject, onProgress: onProgress };
+                worker.frame.contentWindow.postMessage(Object.assign({ id: id }, cmd), global.location.origin);
+            });
+        });
+    }
+    function downloadPdf(b64, name) {
+        var bin = atob(b64), bytes = new Uint8Array(bin.length), i;
+        for (i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+        var url = URL.createObjectURL(new Blob([bytes], { type: "application/pdf" }));
+        var a = document.createElement("a");
+        a.href = url; a.download = name; a.rel = "noopener";
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(function () { URL.revokeObjectURL(url); }, 60000);
+    }
+    // Oturumdaki kullanıcı (karekod ve filigran için)
+    function whoami(student) {
+        var up = (student && student.userProfile) || {};
+        var fallback = { id: up.authUserId || null, email: up.email || "" };
+        var c = sb();
+        if (!c || !c.auth || !c.auth.getUser) return Promise.resolve(fallback);
+        return c.auth.getUser().then(function (r) {
+            var u = r && r.data && r.data.user;
+            return u ? { id: u.id, email: u.email || fallback.email } : fallback;
+        }, function () { return fallback; });
+    }
+    function pdfInfo(student, exam, who) {
+        var t = L.ms(exam.starts_at), prof = (student && student.profile) || {}, up = (student && student.userProfile) || {};
+        return {
+            name: prof.name || up.nickname || "Öğrenci", email: who.email || "", title: exam.title,
+            track: exam.track, trackLabel: "KPSS " + (L.TRACKS[exam.track] || ""), date: L.fmtDay(t, true) + " " + L.fmtClock(t),
+            examId: exam.id, userId: who.id
+        };
+    }
+    function fileDay(exam) { return new Date(L.ms(exam.starts_at) + 3 * 3600000).toISOString().slice(0, 10); }
+    // Kişiye özel optik form (karekodda deneme ve kullanıcı kimliği)
+    function formPdf(student, exam) {
+        return whoami(student).then(function (who) {
+            if (!who.id) throw new Error("Oturum bilgisi alınamadı; yeniden giriş yap.");
+            return optik({ type: "formPdf", info: pdfInfo(student, exam, who), name: "atanly-optik-form-" + fileDay(exam) + ".pdf" });
+        }).then(function (m) { downloadPdf(m.b64, m.name); });
+    }
+    // Kâğıtta çöz: sınava kâğıt modunda gir (anahtar 10:15'te gelir)
+    function enterPaper(examId) {
+        return rpc("live_enter", { p_exam: examId, p_device: deviceId(), p_mode: "paper" }).then(function (d) {
+            if (d && d.error) throw Object.assign(new Error(d.message), { code: d.error });
+            rememberEntry(examId, d, 0);
+            return d;
+        });
+    }
+    // Filigranlı soru kitapçığı (ad ve e-posta her sayfada)
+    function bookletPdf(student, exam, onProgress) {
+        var ent = recallEntry(exam.id);
+        return (ent && ent.key ? Promise.resolve(ent) : enterPaper(exam.id)).then(function (d) {
+            return Promise.all([openBooklet(exam.id, d.key, d.sha), whoami(student)]);
+        }).then(function (r) {
+            return optik({ type: "bookletPdf", booklet: r[0], info: pdfInfo(student, exam, r[1]), name: "atanly-kitapcik-" + fileDay(exam) + ".pdf" }, onProgress);
+        }).then(function (m) { downloadPdf(m.b64, m.name); });
+    }
+
     global.LiveClient = {
         rpc: rpc,
         sb: sb,
@@ -163,6 +258,11 @@
         rememberEntry: rememberEntry,
         recallEntry: recallEntry,
         getJson: getJson,
-        setJson: setJson
+        setJson: setJson,
+        OPTIK_URL: OPTIK_URL,
+        whoami: whoami,
+        formPdf: formPdf,
+        enterPaper: enterPaper,
+        bookletPdf: bookletPdf
     };
 })(typeof window !== "undefined" ? window : globalThis);

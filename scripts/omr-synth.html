@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="tr">
+<head><meta charset="utf-8"><title>Optik okuma · sentetik test</title></head>
+<body>
+<script src="../optik/vendor/qrcode.min.js"></script>
+<script src="../optik/vendor/jsQR.min.js"></script>
+<script src="../optik/omr.js"></script>
+<script src="omr-synth.js"></script>
+<script>
+  window.ready = fetch("../optik/optik-form.json").then(function (r) { return r.json(); }).then(function (j) { KpssOmr.setLayout(j); return true; });
+</script>
+</body>
+</html>

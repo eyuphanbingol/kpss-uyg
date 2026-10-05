@@ -56,8 +56,10 @@
                                     {rows.slice(col * 20, col * 20 + 20).map(function (n) {
                                         var a = answers[n] && answers[n].c;
                                         var correct = props.key_ && props.key_[n];
+                                        var flag = props.flags && props.flags[n];
                                         return (
-                                            <div key={n} className={"optic-row" + (props.current === n ? " is-current" : "")}>
+                                            <div key={n} className={"optic-row" + (props.current === n ? " is-current" : "") + (flag ? " is-flag-" + flag : "")}
+                                                title={flag === "double" ? "Çift işaret: boş sayılır, düzelt" : flag === "uncertain" ? "Kararsız okuma: kontrol et" : undefined}>
                                                 <button type="button" className="optic-no" onClick={function () { props.onJump && props.onJump(n); }} aria-label={"Soru " + n + "'e git"}>{n}</button>
                                                 {L.LETTERS.map(function (l) {
                                                     var on = a === l;
@@ -68,7 +70,7 @@
                                                     }
                                                     return (
                                                         <button key={l} type="button" className={cls} disabled={!props.onPick}
-                                                            aria-label={"Soru " + n + " " + l + (on ? " (işaretli)" : "")}
+                                                            aria-label={"Soru " + n + " " + l + (on ? " (işaretli)" : "") + (flag === "double" ? ", çift işaret" : flag === "uncertain" ? ", kararsız okuma" : "")}
                                                             onClick={function () { props.onPick && props.onPick(n, on ? null : l); }}>{l}</button>
                                                     );
                                                 })}
@@ -86,7 +88,7 @@
         return (
             <div className="optic-sheet" role="group" aria-label="Optik form görünümü">
                 <div className="optic-head">
-                    <span>ATANLY · CANLI DENEME · OPTİK FORM</span>
+                    <span>{props.head || "ATANLY · CANLI DENEME · OPTİK FORM"}</span>
                     <span>{filled} / 120 işaretli</span>
                 </div>
                 {block(1, 60, "GENEL YETENEK (1–60)")}
@@ -732,6 +734,199 @@
     // ============================================================
     // ANA BİLEŞEN
     // ============================================================
+    // ============================================================
+    // OPTİK OKUTMA (kâğıtta çözenler): fotoğraf → okuma → onay ızgarası → gönder
+    // Okuma optik/optik.html içinde yapılır (mobilde aynı sayfa WebView'da).
+    // ============================================================
+    function OpticScan(props) {
+        var examId = props.examId;
+        const [dash, setDash] = useState(null);
+        const [me, setMe] = useState(null);
+        const [stage, setStage] = useState("scan");
+        const [read, setRead] = useState(null);
+        const [ans, setAns] = useState({});
+        const [flags, setFlags] = useState({});
+        const [source, setSource] = useState("optic");
+        const [edited, setEdited] = useState(0);
+        const [manual, setManual] = useState("");
+        const [fails, setFails] = useState(0);
+        const [err, setErr] = useState("");
+        const [busy, setBusy] = useState(false);
+        const [, setTick] = useState(0);
+        var frameRef = useRef(null), clockRef = useRef(null), meRef = useRef(null);
+        var dark = document.documentElement.classList.contains("dark");
+
+        function load() {
+            return C.rpc("live_dashboard", { p_track: C.trackOf(props.student) }).then(function (d) {
+                clockRef.current = L.createClock(d.now);
+                setDash(d);
+            }).catch(function (x) { setErr(x.message); });
+        }
+        useEffect(function () {
+            load();
+            C.whoami(props.student).then(function (w) { meRef.current = w; setMe(w); sendExpect(); });
+            var t = setInterval(function () { setTick(function (x) { return x + 1; }); }, 1000);
+            return function () { clearInterval(t); };
+        }, [examId]);
+
+        function sendExpect() {
+            var f = frameRef.current;
+            if (f && f.contentWindow && meRef.current) f.contentWindow.postMessage({ type: "scan", expect: { exam: examId, user: meRef.current.id } }, window.location.origin);
+        }
+        useEffect(function () {
+            function onMsg(e) {
+                var f = frameRef.current;
+                if (!f || e.source !== f.contentWindow) return;
+                var m = e.data || {};
+                if (m.type === "ready") sendExpect();
+                else if (m.type === "result") {
+                    var a = {}, fl = {};
+                    m.answers.forEach(function (x, i) { a[i + 1] = { c: x }; if (m.flags[i]) fl[i + 1] = m.flags[i]; });
+                    setRead(m); setAns(a); setFlags(fl); setSource("optic"); setEdited(0); setErr("");
+                    setTimeout(function () { setStage("confirm"); window.scrollTo(0, 0); }, 600);
+                } else if (m.type === "fail") {
+                    setFails(function (x) { return x + 1; });
+                    C.rpc("live_optic_report", { p_exam: examId, p_kind: m.code === "wrong_form" ? "wrong_form" : "fail",
+                        p_detail: { code: m.code, size: m.detail && m.detail.size } }).catch(function () {});
+                }
+            }
+            window.addEventListener("message", onMsg);
+            return function () { window.removeEventListener("message", onMsg); };
+        }, [examId]);
+
+        var now = clockRef.current ? clockRef.current.now() : Date.now();
+        var exam = dash && dash.exam && dash.exam.id === examId ? dash.exam : null;
+        var att = dash && dash.attempt;
+        var until = exam ? L.ms(exam.optic_until || exam.ranking_at) : 0;
+        var header = (
+            <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+                <button type="button" className="quick-chip" onClick={props.onBack}>← Canlı deneme</button>
+                {exam && now < until ? <span className="text-sm font-semibold" role="timer">Okutma {L.fmtClock(until)}'ta kapanır · {L.fmtLeft(until - now)}</span> : null}
+            </div>
+        );
+        if (!dash) return <div>{header}<Panel label="Yükleniyor"><p className="text-sm text-stone-500">{err || "Yükleniyor…"}</p></Panel></div>;
+        var blocker = null;
+        if (!exam || !att) blocker = "Bu denemede kâğıt modunda giriş kaydın yok.";
+        else if (att.mode !== "paper") blocker = "Bu sınavı cihazda çözüyorsun; optik okutma kâğıtta çözenler içindir.";
+        else if (att.submitted && stage !== "sent") blocker = "Optik formun zaten gönderildi; cevapların değişmez.";
+        else if (now >= until && stage !== "sent") blocker = "Optik okutma süresi " + L.fmtClock(until) + "'ta doldu.";
+        if (blocker) return <div>{header}<Panel label="Optik okutma"><p className="font-semibold">{blocker}</p></Panel></div>;
+
+        function pick(no, letter) {
+            setAns(function (a) { var b = Object.assign({}, a); b[no] = { c: letter }; return b; });
+            setFlags(function (f) { if (!f[no]) return f; var g = Object.assign({}, f); delete g[no]; return g; });
+            setEdited(function (x) { return x + 1; });
+        }
+        var list = [];
+        for (var i = 1; i <= 120; i++) list.push(ans[i] && ans[i].c ? ans[i].c : null);
+        var answered = list.filter(Boolean).length;
+        var flaggedNos = Object.keys(flags).map(Number).sort(function (a, b) { return a - b; });
+        var doubles = flaggedNos.filter(function (n) { return flags[n] === "double"; });
+
+        function submit() {
+            var msg = answered + " cevap, " + (120 - answered) + " boş gönderilecek.";
+            if (flaggedNos.length) msg += "\n\nKontrol etmediğin " + flaggedNos.length + " satır var: " + flaggedNos.slice(0, 12).join(", ") + (flaggedNos.length > 12 ? "…" : "") +
+                (doubles.length ? "\nÇift işaretli satırlar boş gönderilir." : "");
+            msg += "\n\nGönderdikten sonra cevapların değiştirilemez. Onaylıyor musun?";
+            if (!window.confirm(msg)) return;
+            setBusy(true); setErr("");
+            C.rpc("live_submit_optic", { p_exam: examId, p_answers: L.answerText(list), p_meta: {
+                source: source, qr: source === "optic" && read ? read.qr : null,
+                flagged: flaggedNos.length, double: doubles.length, uncertain: flaggedNos.length - doubles.length, edited: edited
+            } }).then(function () { setBusy(false); setStage("sent"); load(); })
+                .catch(function (x) { setBusy(false); setErr(x.message); });
+        }
+
+        if (stage === "sent") {
+            var open = exam && now >= L.ms(exam.ends_at);
+            return (
+                <div>{header}
+                    <Panel label="Gönderildi">
+                        <p className="text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-300">✓ Optik formun gönderildi</p>
+                        <p className="mt-2 text-sm text-stone-600 dark:text-stone-300">{answered} cevap kaydedildi. Cevapların artık değişmez.
+                            {open ? " Sonucun ve çözümlerin açıldı; sıralama " + L.fmtClock(L.ms(exam.ranking_at)) + "'ta kesinleşir." : " Sonucun ve çözümler " + L.fmtClock(L.ms(exam.ends_at)) + "'te açılır."}</p>
+                        {open ? <button type="button" className="quick-chip is-primary mt-3" onClick={function () { props.onResult(examId); }}>Sonucumu gör</button> : null}
+                    </Panel>
+                </div>
+            );
+        }
+
+        if (stage === "manual") {
+            var parsed = L.parseAnswerText(manual, 120);
+            return (
+                <div>{header}
+                    <Panel label="Elle giriş">
+                        <Kicker>Cevaplarını elle gir</Kicker>
+                        <p className="text-sm text-stone-600 dark:text-stone-300 mt-1">Optik formundaki cevapları 1'den 120'ye sırayla yaz. Boş bıraktığın sorular için <b>-</b> yaz. Boşluk ve virgüller yok sayılır.</p>
+                        <textarea className="w-full mt-3 rounded-2xl border border-stone-300 dark:border-stone-600 bg-white dark:bg-stone-900 p-3 font-mono text-sm tracking-widest uppercase"
+                            rows={5} value={manual} onChange={function (ev) { setManual(ev.target.value); }} placeholder="ACEBD-A…" aria-label="Cevaplar (A–E, boş için -)" spellCheck="false" autoCapitalize="characters" />
+                        <p className={"text-sm mt-1 " + (parsed.bad.length || parsed.extra ? "text-rose-700 dark:text-rose-300" : "text-stone-500")} role="status">
+                            {parsed.count} / 120 cevap{parsed.bad.length ? " · geçersiz karakter: " + parsed.bad.join(" ") : ""}{parsed.extra ? " · " + parsed.extra + " fazla" : ""}
+                        </p>
+                        <div className="flex flex-wrap gap-2 mt-3">
+                            <button type="button" className="quick-chip is-primary" disabled={!parsed.complete} onClick={function () {
+                                var a = {};
+                                parsed.answers.forEach(function (x, j) { a[j + 1] = { c: x }; });
+                                setAns(a); setFlags({}); setSource("manual"); setEdited(0); setStage("confirm"); window.scrollTo(0, 0);
+                                C.rpc("live_optic_report", { p_exam: examId, p_kind: "manual_open", p_detail: {} }).catch(function () {});
+                            }}>Kontrol ekranına geç</button>
+                            <button type="button" className="quick-chip" onClick={function () { setStage("scan"); }}>Fotoğrafla okut</button>
+                        </div>
+                    </Panel>
+                </div>
+            );
+        }
+
+        if (stage === "confirm") {
+            return (
+                <div>{header}
+                    <Panel label="Okunan cevapları kontrol et" className="mb-4">
+                        <Kicker>{source === "manual" ? "Elle girdiğin cevaplar" : "Okunan cevaplarını kontrol et"}</Kicker>
+                        <h2 className="text-lg font-bold mt-1">{answered} cevap · {120 - answered} boş{flaggedNos.length ? " · " + flaggedNos.length + " satırı kontrol et" : ""}</h2>
+                        {source === "optic" && read ? (
+                            <div className="mt-2 text-sm space-y-1">
+                                <p className={read.qrOk ? "text-emerald-700 dark:text-emerald-300" : "text-amber-700 dark:text-amber-300"}>
+                                    {read.qrOk ? "✓ Karekod okundu: form sana ve bu denemeye ait." : "⚠ Karekod okunamadı; formun sana ait olduğundan emin ol."}</p>
+                                {(read.warnings || []).filter(function (w) { return !/Karekod/.test(w); }).map(function (w) { return <p key={w} className="text-amber-700 dark:text-amber-300">⚠ {w}</p>; })}
+                            </div>
+                        ) : null}
+                        <ul className="mt-3 text-sm text-stone-600 dark:text-stone-300 space-y-1">
+                            <li><span className="optic-legend is-uncertain" aria-hidden="true"></span> Sarı satır: okuma kararsız (silinmiş iz ya da açık işaret). En olası cevap seçili; kontrol et.</li>
+                            <li><span className="optic-legend is-double" aria-hidden="true"></span> Kırmızı satır: çift işaret. Düzeltmezsen boş gönderilir.</li>
+                            <li>Bir baloncuğa dokunarak cevabı değiştir; işaretli baloncuğa yeniden dokunursan boş olur.</li>
+                        </ul>
+                        {source === "optic" && read && read.preview ? (
+                            <details className="mt-3">
+                                <summary className="text-sm font-semibold cursor-pointer">Fotoğraftaki okumayı göster</summary>
+                                <img src={read.preview} alt="Okunan optik form; yeşil: okunan, sarı: kararsız, kırmızı: çift işaret" className="mt-2 rounded-2xl border border-stone-200 dark:border-stone-700 max-h-[520px] w-auto" />
+                            </details>
+                        ) : null}
+                    </Panel>
+                    <OpticGrid answers={ans} flags={flags} onPick={busy ? null : pick} head={source === "manual" ? "ELLE GİRİŞ · KONTROL" : "OKUNAN OPTİK FORM · KONTROL"} />
+                    {err ? <p className="plan-warn mt-3" role="alert">{err}</p> : null}
+                    <div className="flex flex-wrap gap-2 mt-4">
+                        <button type="button" className="quick-chip is-primary" disabled={busy} onClick={submit}>{busy ? "Gönderiliyor…" : "Onaylıyorum, gönder"}</button>
+                        <button type="button" className="quick-chip" disabled={busy} onClick={function () { setStage("scan"); setRead(null); }}>Yeniden çek</button>
+                        <button type="button" className="quick-chip" disabled={busy} onClick={function () { setManual(L.answerText(list)); setStage("manual"); }}>Elle düzenle</button>
+                    </div>
+                </div>
+            );
+        }
+
+        return (
+            <div>{header}
+                <iframe ref={frameRef} src={C.OPTIK_URL + "&mode=scan&theme=" + (dark ? "dark" : "light")} title="Optik formunu okut"
+                    className="optic-frame" onLoad={sendExpect} />
+                {fails ? (
+                    <Panel label="Okuma olmuyor mu?" className="mt-3">
+                        <p className="text-sm text-stone-600 dark:text-stone-300">Fotoğraf {fails} kez okunamadı. İpuçlarını deneyebilir ya da cevaplarını elle girebilirsin.</p>
+                        <button type="button" className="quick-chip mt-2" onClick={function () { setStage("manual"); }}>Cevapları elle gir</button>
+                    </Panel>
+                ) : <p className="text-xs text-stone-500 mt-2">Kamera okumuyor mu? <button type="button" className="underline font-semibold" onClick={function () { setStage("manual"); }}>Cevapları elle gir</button></p>}
+            </div>
+        );
+    }
+
     function LiveExamScreen(props) {
         var init = props.liveView || { view: "home" };
         const [view, setView] = useState(init.view || "home");
@@ -748,6 +943,9 @@
             </div>
         );
 
+        if (view === "optic" && examId) {
+            return <OpticScan examId={examId} student={props.student} onBack={function () { open("home"); }} onResult={function (id) { open("result", id); }} />;
+        }
         if (view === "exam" && examId && !submitted) {
             return <ExamRunner examId={examId} onBack={function () { open("home"); }}
                 onResult={function (id) { open("result", id); }}
@@ -770,6 +968,7 @@
                                 <li>Sınav tek cihazda açık kalır. Şarjın biterse başka cihazdan devam edebilirsin (en fazla 2 değişim).</li>
                                 <li>12:25'te kendi sonucun ve çözümlerin açılır; sıralama ve katılan ortalamaları 12:40'ta kesinleşir.</li>
                                 <li>Yanlış ve boş bıraktığın konular Eksikler'e düşer.</li>
+                                <li>Kâğıtta da çözebilirsin: 10:15'te "Kâğıtta çöz" ile kitapçık PDF olarak iner, cevaplarını optik forma işaretlersin. Sınav bitince 15 dakika içinde formun fotoğrafını çekip okutursun; okunan cevapları kontrol edip onaylamadan hiçbir şey gönderilmez.</li>
                             </ul>
                         </Panel>
                     </div>

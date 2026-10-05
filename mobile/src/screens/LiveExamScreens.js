@@ -1,5 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Alert, AppState, Image, StyleSheet, Text, View } from "react-native";
+import { Alert, AppState, Image, StyleSheet, Text, TextInput, View } from "react-native";
+import { WebView } from "react-native-webview";
+import { OPTIK_HTML } from "../lib/optikHtml";
 import Svg, { Circle, Line, Path, Text as SvgText } from "react-native-svg";
 import { useApp } from "../AppProvider";
 import { LiveExam as L } from "../lib/liveExam";
@@ -39,7 +41,7 @@ function KonuLink({ navigation, kpssData, ders, konu, dark }) {
 function pct(x) { return x == null ? "–" : String(Math.round(Number(x) * 10) / 10).replace(".", ","); }
 
 // ---------- Optik form görünümü ----------
-function OpticGrid({ answers, current, onJump, onPick, keyMap }) {
+function OpticGrid({ answers, current, onJump, onPick, keyMap, flags, head }) {
     function block(from, to, title) {
         var rows = [];
         for (var n = from; n <= to; n++) rows.push(n);
@@ -49,8 +51,9 @@ function OpticGrid({ answers, current, onJump, onPick, keyMap }) {
                 {rows.map(function (n) {
                     var a = answers[n] && answers[n].c;
                     var key = keyMap && keyMap[n];
+                    var flag = flags && flags[n];
                     return (
-                        <View key={n} style={[st.opRow, current === n && st.opRowCur, n % 5 === 0 && st.opRowSep]}>
+                        <View key={n} style={[st.opRow, current === n && st.opRowCur, n % 5 === 0 && st.opRowSep, flag === "uncertain" && st.opFlagU, flag === "double" && st.opFlagD]}>
                             <Tap onPress={function () { onJump && onJump(n); }} style={st.opNoWrap} accessibilityLabel={"Soru " + n + "'e git"}>
                                 <Text style={st.opNo}>{n}</Text>
                             </Tap>
@@ -58,7 +61,7 @@ function OpticGrid({ answers, current, onJump, onPick, keyMap }) {
                                 var on = a === l;
                                 return (
                                     <Tap key={l} disabled={!onPick} onPress={function () { onPick && onPick(n, on ? null : l); }}
-                                        accessibilityLabel={"Soru " + n + " " + l + (on ? " işaretli" : "")}
+                                        accessibilityLabel={"Soru " + n + " " + l + (on ? " işaretli" : "") + (flag === "double" ? ", çift işaret" : flag === "uncertain" ? ", kararsız okuma" : "")}
                                         style={[st.bub, on && st.bubOn, key && l === key && st.bubKey, key && on && l !== key && st.bubWrong]}>
                                         <Text style={[st.bubTxt, on && { color: "#fff" }]}>{l}</Text>
                                     </Tap>
@@ -73,7 +76,7 @@ function OpticGrid({ answers, current, onJump, onPick, keyMap }) {
     var filled = Object.keys(answers).filter(function (k) { return answers[k] && answers[k].c; }).length;
     return (
         <View style={st.sheet}>
-            <View style={st.sheetHead}><Text style={st.sheetHeadTxt}>ATANLY · OPTİK FORM</Text><Text style={st.sheetHeadTxt}>{filled} / 120</Text></View>
+            <View style={st.sheetHead}><Text style={st.sheetHeadTxt}>{head || "ATANLY · OPTİK FORM"}</Text><Text style={st.sheetHeadTxt}>{filled} / 120</Text></View>
             {block(1, 60, "GENEL YETENEK (1–60)")}
             {block(61, 120, "GENEL KÜLTÜR (61–120)")}
         </View>
@@ -500,6 +503,191 @@ function NetChart({ points, dark }) {
     );
 }
 
+// ============================================================
+// OPTİK OKUTMA (kâğıtta çözenler): fotoğraf → okuma → onay ızgarası → gönder
+// Çekim ve okuma optik/optik.html'in aynısında (WebView); onay ve gönderim burada.
+// ============================================================
+export function LiveOpticScreen({ navigation, route }) {
+    var app = useApp();
+    var dark = app.dark;
+    var examId = route.params && route.params.examId;
+    var [dash, setDash] = useState(null);
+    var [me, setMe] = useState(null);
+    var [stage, setStage] = useState("scan");
+    var [read, setRead] = useState(null);
+    var [ans, setAns] = useState({});
+    var [flags, setFlags] = useState({});
+    var [source, setSource] = useState("optic");
+    var [edited, setEdited] = useState(0);
+    var [manual, setManual] = useState("");
+    var [fails, setFails] = useState(0);
+    var [err, setErr] = useState("");
+    var [busy, setBusy] = useState(false);
+    var [, setTick] = useState(0);
+    var webRef = useRef(null), clockRef = useRef(null), meRef = useRef(null);
+
+    function load() {
+        return C.rpc("live_dashboard", { p_track: C.trackOf(app.student) }).then(function (d) {
+            clockRef.current = L.createClock(d.now);
+            setDash(d);
+        }).catch(function (x) { setErr(x.message); });
+    }
+    useEffect(function () {
+        load();
+        C.whoami(app.student).then(function (w) { meRef.current = w; setMe(w); sendExpect(); });
+        var t = setInterval(function () { setTick(function (x) { return x + 1; }); }, 1000);
+        return function () { clearInterval(t); };
+    }, [examId]);
+    function sendExpect() {
+        if (webRef.current && meRef.current) {
+            webRef.current.injectJavaScript("window.optikCmd && window.optikCmd(" + JSON.stringify({ type: "scan", expect: { exam: examId, user: meRef.current.id } }) + "); true;");
+        }
+    }
+    function onMessage(e) {
+        var m;
+        try { m = JSON.parse(e.nativeEvent.data); } catch (x) { return; }
+        if (m.type === "ready") sendExpect();
+        else if (m.type === "result") {
+            var a = {}, fl = {};
+            m.answers.forEach(function (x, i) { a[i + 1] = { c: x }; if (m.flags[i]) fl[i + 1] = m.flags[i]; });
+            setRead(m); setAns(a); setFlags(fl); setSource("optic"); setEdited(0); setErr("");
+            setTimeout(function () { setStage("confirm"); }, 600);
+        } else if (m.type === "fail") {
+            setFails(function (x) { return x + 1; });
+            C.rpc("live_optic_report", { p_exam: examId, p_kind: m.code === "wrong_form" ? "wrong_form" : "fail",
+                p_detail: { code: m.code, size: m.detail && m.detail.size } }).catch(function () {});
+        }
+    }
+
+    var now = clockRef.current ? clockRef.current.now() : Date.now();
+    var exam = dash && dash.exam && dash.exam.id === examId ? dash.exam : null;
+    var att = dash && dash.attempt;
+    var until = exam ? L.ms(exam.optic_until || exam.ranking_at) : 0;
+    var head = <PageHeader dark={dark} title="Optiğimi okut" subtitle={exam && now < until ? "Okutma " + L.fmtClock(until) + "'ta kapanır · " + L.fmtLeft(until - now) : null} onBack={function () { navigation.goBack(); }} right={null} />;
+
+    if (!dash) return <ScrollScreen dark={dark}>{head}<Card dark={dark}><Text style={[cs.body, dark && cs.lightMuted]}>{err || "Yükleniyor…"}</Text></Card></ScrollScreen>;
+    var blocker = null;
+    if (!exam || !att) blocker = "Bu denemede kâğıt modunda giriş kaydın yok.";
+    else if (att.mode !== "paper") blocker = "Bu sınavı cihazda çözüyorsun; optik okutma kâğıtta çözenler içindir.";
+    else if (att.submitted && stage !== "sent") blocker = "Optik formun zaten gönderildi; cevapların değişmez.";
+    else if (now >= until && stage !== "sent") blocker = "Optik okutma süresi " + L.fmtClock(until) + "'ta doldu.";
+    if (blocker) return <ScrollScreen dark={dark}>{head}<Card dark={dark}><Text style={[cs.title, dark && cs.light]}>{blocker}</Text></Card></ScrollScreen>;
+
+    function pick(no, letter) {
+        setAns(function (a) { var b = Object.assign({}, a); b[no] = { c: letter }; return b; });
+        setFlags(function (f) { if (!f[no]) return f; var g = Object.assign({}, f); delete g[no]; return g; });
+        setEdited(function (x) { return x + 1; });
+    }
+    var list = [];
+    for (var i = 1; i <= 120; i++) list.push(ans[i] && ans[i].c ? ans[i].c : null);
+    var answered = list.filter(Boolean).length;
+    var flaggedNos = Object.keys(flags).map(Number).sort(function (a, b) { return a - b; });
+    var doubles = flaggedNos.filter(function (n) { return flags[n] === "double"; });
+
+    function submit() {
+        var msg = answered + " cevap, " + (120 - answered) + " boş gönderilecek.";
+        if (flaggedNos.length) msg += "\n\nKontrol etmediğin " + flaggedNos.length + " satır var: " + flaggedNos.slice(0, 12).join(", ") + (flaggedNos.length > 12 ? "…" : "") +
+            (doubles.length ? "\nÇift işaretli satırlar boş gönderilir." : "");
+        msg += "\n\nGönderdikten sonra cevapların değiştirilemez.";
+        Alert.alert("Onaylıyor musun?", msg, [
+            { text: "Vazgeç", style: "cancel" },
+            { text: "Onaylıyorum, gönder", onPress: function () {
+                setBusy(true); setErr("");
+                C.rpc("live_submit_optic", { p_exam: examId, p_answers: L.answerText(list), p_meta: {
+                    source: source, qr: source === "optic" && read ? read.qr : null,
+                    flagged: flaggedNos.length, double: doubles.length, uncertain: flaggedNos.length - doubles.length, edited: edited
+                } }).then(function () { setBusy(false); setStage("sent"); load(); })
+                    .catch(function (x) { setBusy(false); setErr(x.message); });
+            } }
+        ]);
+    }
+
+    if (stage === "sent") {
+        var open = exam && now >= L.ms(exam.ends_at);
+        return (
+            <ScrollScreen dark={dark}>{head}
+                <Card dark={dark}>
+                    <Text style={[cs.kicker, { color: "#047857" }]}>✓ OPTİK FORMUN GÖNDERİLDİ</Text>
+                    <Text style={[cs.body, dark && cs.lightMuted]}>{answered} cevap kaydedildi. Cevapların artık değişmez.{open ? " Sonucun ve çözümlerin açıldı." : " Sonucun ve çözümler " + L.fmtClock(L.ms(exam.ends_at)) + "'te açılır."}</Text>
+                    {open ? <View style={cs.btns}><Chip primary label="Sonucumu gör" onPress={function () { navigation.replace("LiveResult", { examId: examId }); }} /></View> : null}
+                </Card>
+            </ScrollScreen>
+        );
+    }
+
+    if (stage === "manual") {
+        var parsed = L.parseAnswerText(manual, 120);
+        return (
+            <ScrollScreen dark={dark}>{head}
+                <Card dark={dark}>
+                    <Text style={cs.kicker}>CEVAPLARINI ELLE GİR</Text>
+                    <Text style={[cs.body, dark && cs.lightMuted]}>Optik formundaki cevapları 1'den 120'ye sırayla yaz. Boş bıraktığın sorular için - yaz. Boşluk ve virgüller yok sayılır.</Text>
+                    <TextInput value={manual} onChangeText={setManual} multiline autoCapitalize="characters" autoCorrect={false} spellCheck={false}
+                        placeholder="ACEBD-A…" placeholderTextColor="#a8a29e" accessibilityLabel="Cevaplar (A–E, boş için -)"
+                        style={[st.manual, dark && st.manualDark]} />
+                    <Text style={[cs.muted, (parsed.bad.length || parsed.extra) && { color: "#be123c" }]} accessibilityLiveRegion="polite">
+                        {parsed.count} / 120 cevap{parsed.bad.length ? " · geçersiz karakter: " + parsed.bad.join(" ") : ""}{parsed.extra ? " · " + parsed.extra + " fazla" : ""}
+                    </Text>
+                    <View style={cs.btns}>
+                        <Chip primary disabled={!parsed.complete} label="Kontrol ekranına geç" onPress={function () {
+                            var a = {};
+                            parsed.answers.forEach(function (x, j) { a[j + 1] = { c: x }; });
+                            setAns(a); setFlags({}); setSource("manual"); setEdited(0); setStage("confirm");
+                            C.rpc("live_optic_report", { p_exam: examId, p_kind: "manual_open", p_detail: {} }).catch(function () {});
+                        }} />
+                        <Chip dark={dark} label="Fotoğrafla okut" onPress={function () { setStage("scan"); }} />
+                    </View>
+                </Card>
+            </ScrollScreen>
+        );
+    }
+
+    if (stage === "confirm") {
+        return (
+            <ScrollScreen dark={dark}>{head}
+                <Card dark={dark}>
+                    <Text style={cs.kicker}>{source === "manual" ? "ELLE GİRDİĞİN CEVAPLAR" : "OKUNAN CEVAPLARINI KONTROL ET"}</Text>
+                    <Text style={[cs.title, dark && cs.light]}>{answered} cevap · {120 - answered} boş{flaggedNos.length ? " · " + flaggedNos.length + " satırı kontrol et" : ""}</Text>
+                    {source === "optic" && read ? (
+                        <Text style={[cs.body, { color: read.qrOk ? "#047857" : "#b45309" }]}>{read.qrOk ? "✓ Karekod okundu: form sana ve bu denemeye ait." : "⚠ Karekod okunamadı; formun sana ait olduğundan emin ol."}</Text>
+                    ) : null}
+                    {source === "optic" && read ? (read.warnings || []).filter(function (w) { return !/Karekod/.test(w); }).map(function (w) {
+                        return <Text key={w} style={[cs.body, { color: "#b45309" }]}>⚠ {w}</Text>;
+                    }) : null}
+                    <Text style={[cs.body, dark && cs.lightMuted]}>Sarı satır: okuma kararsız; en olası cevap seçili, kontrol et.{"\n"}Kırmızı satır: çift işaret; düzeltmezsen boş gönderilir.{"\n"}Baloncuğa dokunarak cevabı değiştir.</Text>
+                    {source === "optic" && read && read.preview ? (
+                        <Image source={{ uri: read.preview }} style={st.preview} resizeMode="contain" accessibilityLabel="Okunan optik form: yeşil okunan, sarı kararsız, kırmızı çift işaret" />
+                    ) : null}
+                </Card>
+                <View style={{ marginTop: 12 }}>
+                    <OpticGrid answers={ans} flags={flags} onPick={busy ? null : pick} head={source === "manual" ? "ELLE GİRİŞ · KONTROL" : "OKUNAN FORM · KONTROL"} />
+                </View>
+                {err ? <Text style={cs.warn}>{err}</Text> : null}
+                <View style={[cs.btns, { marginBottom: 24 }]}>
+                    <Chip primary disabled={busy} label={busy ? "Gönderiliyor…" : "Onaylıyorum, gönder"} onPress={submit} />
+                    <Chip dark={dark} disabled={busy} label="Yeniden çek" onPress={function () { setStage("scan"); setRead(null); }} />
+                    <Chip dark={dark} disabled={busy} label="Elle düzenle" onPress={function () { setManual(L.answerText(list)); setStage("manual"); }} />
+                </View>
+            </ScrollScreen>
+        );
+    }
+
+    return (
+        <View style={{ flex: 1, backgroundColor: dark ? "#0c0a09" : "#F8FAFC" }}>
+            <View style={{ paddingHorizontal: 16, paddingTop: 8 }}>{head}</View>
+            <WebView ref={webRef} style={{ flex: 1, backgroundColor: "transparent" }} originWhitelist={["*"]}
+                source={{ html: OPTIK_HTML, baseUrl: "https://www.atanly.com/optik/" }}
+                injectedJavaScriptBeforeContentLoaded={"window.OPTIK_MODE = 'scan'; window.OPTIK_THEME = '" + (dark ? "dark" : "light") + "'; true;"}
+                onMessage={onMessage} javaScriptEnabled domStorageEnabled allowFileAccess mediaCapturePermissionGrantType="grant"
+                onContentProcessDidTerminate={function () { if (webRef.current) webRef.current.reload(); }} />
+            <View style={{ padding: 16 }}>
+                {fails ? <Text style={[cs.body, dark && cs.lightMuted]}>Fotoğraf {fails} kez okunamadı. İpuçlarını deneyebilir ya da cevaplarını elle girebilirsin.</Text> : null}
+                <View style={cs.btns}><Chip dark={dark} label="Cevapları elle gir" onPress={function () { setStage("manual"); }} /></View>
+            </View>
+        </View>
+    );
+}
+
 export function LiveArchiveScreen({ navigation, route }) {
     var app = useApp();
     var dark = app.dark;
@@ -604,6 +792,11 @@ var st = StyleSheet.create({
     opTitle: { fontSize: 10, fontWeight: "800", letterSpacing: 1, color: "#111827", marginBottom: 4 },
     opRow: { flexDirection: "row", alignItems: "center", gap: 6, paddingVertical: 3, paddingHorizontal: 2, borderRadius: 6 },
     opRowCur: { backgroundColor: "#fef3c7" },
+    manual: { marginTop: 10, minHeight: 110, borderWidth: 1, borderColor: "#d6d3d1", borderRadius: 14, padding: 12, fontSize: 15, letterSpacing: 2, color: "#0f172a", backgroundColor: "#fff", textAlignVertical: "top", fontFamily: "monospace" },
+    manualDark: { backgroundColor: "#1c1917", borderColor: "#44403c", color: "#f5f5f4" },
+    preview: { width: "100%", height: 320, marginTop: 10, borderRadius: 12, backgroundColor: "#e7e5e4" },
+    opFlagU: { backgroundColor: "#fef3c7", borderLeftWidth: 3, borderLeftColor: "#d97706" },
+    opFlagD: { backgroundColor: "#ffe4e6", borderLeftWidth: 3, borderLeftColor: "#e11d48" },
     opRowSep: { borderBottomWidth: 1, borderBottomColor: "#9ca3af", borderStyle: "dashed" },
     opNoWrap: { width: 34, alignItems: "flex-end", paddingRight: 4 },
     opNo: { fontSize: 13, fontWeight: "800", color: "#111827" },

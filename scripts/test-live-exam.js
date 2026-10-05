@@ -58,7 +58,25 @@ Promise.resolve().then(function () {
     ok(P(131, reg, {}) === "ended", "12:26 bitti");
     ok(P(146, reg, {}) === "ranking", "12:41 sıralama");
     ok(P(131, reg) === "missed_live", "kayıtlı ama girmedi");
+    // kâğıtta çözme
+    var pap = { mode: "paper" };
+    ok(P(20, reg, pap) === "paper_solving", "kâğıtta çözüyor");
+    ok(P(60, reg, { mode: "paper", submitted: true }) === "paper_submitted", "optiği erken gönderdi");
+    ok(P(131, reg, pap) === "optic_window", "12:26 optik okutma penceresi");
+    ok(P(146, reg, pap) === "optic_missed", "12:41 okutmadı");
+    ok(P(131, reg, { mode: "paper", submitted: true }) === "ended", "okuttu: sonuç");
+    ok(L.phase({ exam: Object.assign({ optic_until: "2026-10-11T12:45:00+03:00" }, ex), registration: reg, attempt: pap }, base + 146 * 60000) === "optic_window",
+        "uzatılmış okutma süresi optic_until'dan okunur");
     ok(L.fmtClock(base) === "10:15" && L.fmtDay(base, true) === "11 Ekim Pazar", "İstanbul saati");
+
+    // optik cevap metni (elle giriş)
+    var m = L.parseAnswerText("ace bd-- a,b;c\nE", 12);
+    ok(L.answerText(m.answers) === "ACEBD--ABCE" && !m.complete && m.count === 11, "elle giriş: boşluk/virgül atlanır, - boş");
+    var m2 = L.parseAnswerText("ABCDE-".repeat(20), 120);
+    ok(m2.complete && m2.answers[5] === null && m2.answers[6] === "A", "120 karakter tam");
+    var m3 = L.parseAnswerText("ABX", 120);
+    ok(!m3.complete && m3.bad.join("") === "X", "geçersiz harf bildirilir");
+    ok(L.parseAnswerText("A".repeat(121), 120).extra === 1, "fazla cevap bildirilir");
 
     // doğrulayıcı
     var doc = require("../docs/canli-deneme-ornek.json");

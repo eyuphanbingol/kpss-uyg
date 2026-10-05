@@ -229,5 +229,98 @@ set role authenticated;
 select t_as('00000000-0000-4000-8000-000000000002', '2026-10-14 10:00+03');
 select t_ok((live_dashboard('lisans')->'cancelled'->>'cancel_reason') = 'Test iptali', 'kayıtlıya iptal nedeni gösterilir');
 
+-- ---------- 11. kâğıtta çözme ve optik gönderimi (2. aşama) ----------
+select t_as('00000000-0000-4000-8000-0000000000a1', '2026-10-19 09:00+03');
+select set_config('t.exam3', (live_admin_save_exam('{"title":"Deneme 3","day":"2026-10-25"}')->>'id'), false);
+select live_admin_set_questions(current_setting('t.exam3')::uuid,
+  (select jsonb_agg(jsonb_build_object('no', g, 'bolum', case when g <= 60 then 'GY' else 'GK' end, 'ders', 'Tarih', 'konu', 'Atatürk İlkeleri',
+     'stem', 'Soru ' || g, 'options', jsonb_build_array('a','b','c','d','e'), 'answer', 'B')) from generate_series(1, 120) g));
+select live_admin_set_booklet(current_setting('t.exam3')::uuid, 'booklets/' || current_setting('t.exam3') || '.bin', repeat('ef', 32), 'sha');
+select live_admin_publish(current_setting('t.exam3')::uuid);
+select t_ok((live_dashboard('lisans')->'exam'->>'optic_until')::timestamptz = '2026-10-25 12:40+03', 'optik okutma 12:40''a kadar');
+select t_as('00000000-0000-4000-8000-000000000001', '2026-10-20 10:00+03'); select live_register(current_setting('t.exam3')::uuid);
+select t_as('00000000-0000-4000-8000-000000000002', '2026-10-20 10:00+03'); select live_register(current_setting('t.exam3')::uuid);
+select t_as('00000000-0000-4000-8000-000000000003', '2026-10-20 10:00+03'); select live_register(current_setting('t.exam3')::uuid);
+select t_as('00000000-0000-4000-8000-000000000004', '2026-10-20 10:00+03'); select live_register(current_setting('t.exam3')::uuid);
+
+select t_as('00000000-0000-4000-8000-000000000001', '2026-10-25 10:20+03');
+select t_ok(live_enter(current_setting('t.exam3')::uuid, 'paper-one-pc', 'paper')->>'key' = repeat('ef', 32), 'kâğıt girişi: kitapçık anahtarı verilir');
+select t_ok(live_dashboard('lisans')->'attempt'->>'mode' = 'paper', 'pano kâğıt modunu bilir');
+select t_err($$select live_save(current_setting('t.exam3')::uuid, 'paper-one-pc', '[{"no":1,"c":"A"}]')$$, 'paper_mode', 'kâğıtta çözen cihazdan cevap yollayamaz');
+select t_err($$select live_submit(current_setting('t.exam3')::uuid, 'paper-one-pc')$$, 'paper_mode', 'kâğıtta çözen cihaz teslimi yapamaz');
+select t_err($$select live_enter(current_setting('t.exam3')::uuid, 'paper-one-pc', 'device')$$, 'mode_locked', 'kâğıttan cihaza geçilemez');
+select t_ok((live_enter(current_setting('t.exam3')::uuid, 'paper-one-phone', 'paper')->>'switches')::int = 0, 'kâğıt modunda başka cihaz (telefon) kilit saymaz');
+select t_as('00000000-0000-4000-8000-000000000004', '2026-10-25 10:21+03');
+select live_enter(current_setting('t.exam3')::uuid, 'device-four-y');
+select t_err($$select live_enter(current_setting('t.exam3')::uuid, 'device-four-y', 'paper')$$, 'mode_locked', 'cihazdan kâğıda geçilemez');
+select live_save(current_setting('t.exam3')::uuid, 'device-four-y',
+  (select jsonb_agg(jsonb_build_object('no', g, 'c', case when g <= 50 then 'B' else 'C' end)) from generate_series(1, 120) g));
+select t_err($$select live_submit_optic(current_setting('t.exam3')::uuid, repeat('B', 120))$$, 'device_mode', 'cihazda çözen optik gönderemez');
+select t_as('00000000-0000-4000-8000-000000000002', '2026-10-25 10:22+03');
+select live_enter(current_setting('t.exam3')::uuid, 'paper-two-pc', 'paper');
+select t_as('00000000-0000-4000-8000-000000000003', '2026-10-25 10:23+03');
+select live_enter(current_setting('t.exam3')::uuid, 'paper-three-pc', 'paper');
+
+-- u1 optik: 100 doğru, 10 yanlış, 10 boş
+select t_as('00000000-0000-4000-8000-000000000001', '2026-10-25 11:30+03');
+select t_err($$select live_submit_optic(current_setting('t.exam3')::uuid, repeat('B', 119))$$, 'bad_input', '119 cevap reddedilir');
+select t_err($$select live_submit_optic(current_setting('t.exam3')::uuid, repeat('B', 119) || 'X')$$, 'bad_input', 'geçersiz harf reddedilir');
+select t_err($$select live_submit_optic(current_setting('t.exam3')::uuid, repeat('B', 120),
+  jsonb_build_object('qr', 'ATN|1|' || current_setting('t.exam3') || '|00000000-0000-4000-8000-000000000002|lisans'))$$, 'wrong_form', 'başkasının formu reddedilir');
+select t_ok((live_submit_optic(current_setting('t.exam3')::uuid, repeat('B', 100) || repeat('A', 10) || repeat('-', 10),
+  jsonb_build_object('source', 'optic', 'qr', 'ATN|1|' || current_setting('t.exam3') || '|00000000-0000-4000-8000-000000000001|lisans',
+                     'uncertain', 2, 'double', 0))->>'submitted')::boolean, 'u1 optiği gönderildi');
+select t_err($$select live_submit_optic(current_setting('t.exam3')::uuid, repeat('B', 120))$$, 'submitted', 'gönderilen kâğıt değişmez');
+select t_err($$select live_result(current_setting('t.exam3')::uuid)$$, 'not_yet', 'erken gönderen bile 12:25 öncesi sonuç görmez');
+select t_err($$select live_review(current_setting('t.exam3')::uuid)$$, 'not_yet', 'erken gönderen 12:25 öncesi çözüm görmez');
+select t_as('00000000-0000-4000-8000-000000000001', '2026-10-25 12:26+03');
+select t_ok((live_result(current_setting('t.exam3')::uuid)->'result'->>'net')::numeric = 97.5, 'u1 kâğıt sonucu 97,5');
+select t_ok(live_result(current_setting('t.exam3')::uuid)->'result'->>'mode' = 'paper', 'sonuçta çözme biçimi: kâğıt');
+select t_ok(json_array_length(live_review(current_setting('t.exam3')::uuid)->'questions') = 120, 'onaylayan kâğıt katılımcısı çözümleri görür');
+reset role;
+select t_ok((select count(*) from live_answers where exam_id = current_setting('t.exam3')::uuid
+  and user_id = '00000000-0000-4000-8000-000000000001' and source = 'optic') = 120, 'cevap kaynağı: optik');
+set role authenticated;
+-- u2 okutmadı: 12:25–12:40 arası sonuç yerine "optiğini okut"
+select t_as('00000000-0000-4000-8000-000000000002', '2026-10-25 12:30+03');
+select t_err($$select live_result(current_setting('t.exam3')::uuid)$$, 'optic_pending', 'okutmayana sonuç yerine optik hatırlatması');
+select t_err($$select live_review(current_setting('t.exam3')::uuid)$$, 'no_optic', 'okutmayan çözümleri göremez');
+select t_ok((live_optic_report(current_setting('t.exam3')::uuid, 'fail', '{"code":"markers"}')->>'ok')::boolean, 'okuma hatası kaydedildi');
+select t_err($$select live_optic_report(current_setting('t.exam3')::uuid, 'hack', '{}')$$, 'bad_input', 'geçersiz kayıt türü');
+select t_as('00000000-0000-4000-8000-0000000000a1', '2026-10-25 12:31+03');
+select t_ok(json_array_length(live_admin_monitor(current_setting('t.exam3')::uuid)->'paper') = 3, 'admin kâğıt katılımcılarını görür');
+select t_ok((select (x->>'fails')::int from json_array_elements(live_admin_monitor(current_setting('t.exam3')::uuid)->'paper') x
+             where x->>'user_id' = '00000000-0000-4000-8000-000000000002') = 1, 'admin okutma sorununu görür');
+select t_err($$select live_admin_paper(current_setting('t.exam3')::uuid, '00000000-0000-4000-8000-000000000001', repeat('B', 120), 'deneme')$$,
+  'submitted', 'gönderilmiş kâğıdı admin bile değiştiremez');
+select t_err($$select live_admin_paper(current_setting('t.exam3')::uuid, '00000000-0000-4000-8000-000000000004', repeat('B', 120), 'deneme')$$,
+  'not_paper', 'cihazda çözen için elle giriş yok');
+-- 12:40: okutma kapanır
+select t_as('00000000-0000-4000-8000-000000000003', '2026-10-25 12:40+03');
+select t_err($$select live_submit_optic(current_setting('t.exam3')::uuid, repeat('B', 120))$$, 'optic_closed', '12:40''ta okutma kapanır');
+select t_as('00000000-0000-4000-8000-000000000002', '2026-10-25 12:41+03');
+select t_err($$select live_result(current_setting('t.exam3')::uuid)$$, 'no_optic', 'okutmayanın sonucu yok');
+select t_ok((live_public_summary(current_setting('t.exam3')::uuid)->>'participants')::int = 2, 'sıralamada 2 kişi (okutmayanlar yok)');
+select t_ok((live_dashboard('lisans')->>'missed_no_optic')::boolean, 'okutmayana "optiğin gelmedi" kartı');
+-- admin elle giriş (kayıtlı) sonrası sıralama yeniden
+select t_as('00000000-0000-4000-8000-000000000003', '2026-10-25 12:50+03');
+select t_err($$select live_admin_paper(current_setting('t.exam3')::uuid, '00000000-0000-4000-8000-000000000003', repeat('B', 120), 'kendim')$$,
+  'forbidden', 'öğrenci elle giriş yapamaz');
+select t_err($$select live_rank(current_setting('t.exam3')::uuid)$$, 'permission denied', 'öğrenci sıralamayı yeniden hesaplatamaz');
+select t_as('00000000-0000-4000-8000-0000000000a1', '2026-10-25 12:50+03');
+select t_err($$select live_admin_paper(current_setting('t.exam3')::uuid, '00000000-0000-4000-8000-000000000003', repeat('B', 120), '')$$,
+  'bad_input', 'elle girişte neden zorunlu');
+select t_ok((live_admin_paper(current_setting('t.exam3')::uuid, '00000000-0000-4000-8000-000000000003', repeat('B', 110) || repeat('-', 10),
+  'Kamera okumadı, form fotoğrafından girildi')->>'reranked')::boolean, 'admin elle girdi, sıralama yeniden hesaplandı');
+select t_as('00000000-0000-4000-8000-000000000003', '2026-10-25 12:51+03');
+select t_ok((live_result(current_setting('t.exam3')::uuid)->'result'->>'rank')::int = 1, 'u3 elle girişle 1. sırada (110 net)');
+select t_ok((live_result(current_setting('t.exam3')::uuid)->'cohort'->>'participants')::int = 3, 'kohort 3 kişiye güncellendi');
+select t_as('00000000-0000-4000-8000-000000000001', '2026-10-25 12:52+03');
+select t_ok((live_result(current_setting('t.exam3')::uuid)->'result'->>'rank')::int = 2, 'u1 sırası 2''ye kaydı');
+reset role;
+select t_ok((select count(*) from live_events where exam_id = current_setting('t.exam3')::uuid and kind = 'admin_paper') = 1, 'elle giriş denetim kaydında');
+select t_ok((select close_reason from live_attempts where exam_id = current_setting('t.exam3')::uuid
+  and user_id = '00000000-0000-4000-8000-000000000002') = 'no_optic', 'u2 kâğıdı sonuçsuz kapandı');
+
 reset role;
 select 'TÜM TESTLER GEÇTİ';

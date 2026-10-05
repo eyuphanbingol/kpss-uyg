@@ -6,6 +6,7 @@ import { StudentStore } from "../lib/store";
 import { konuLabel } from "../lib/konuLabels";
 import { go } from "../nav";
 import { Card, Tap } from "../ui";
+import { useOptikPdf, sharePdf } from "./OptikWorker";
 
 // Canlı deneme kartı: Bugün sekmesinde ve Canlı deneme sayfasında. Web karşılığı app.jsx LiveExamCard.
 // Aşama sunucu saatine göre (lib/liveExam.js phase).
@@ -34,6 +35,7 @@ export function LiveExamCard({ navigation, student, kpssData, dark, full }) {
     var clockRef = useRef(null);
     var lastPhase = useRef("");
     var fetched = useRef({});
+    var [pdfHost, runPdf] = useOptikPdf();
 
     function load() {
         return C.rpc("live_dashboard", { p_track: track }).then(function (d) {
@@ -59,7 +61,7 @@ export function LiveExamCard({ navigation, student, kpssData, dark, full }) {
     }, [ph]);
 
     useEffect(function () {
-        if (!e || ["about_to_start", "can_enter", "in_progress"].indexOf(ph) < 0) return;
+        if (!e || ["about_to_start", "can_enter", "in_progress", "paper_solving"].indexOf(ph) < 0) return;
         if (C.hasBooklet(e.id)) { setBooklet("ok"); return; }
         setBooklet("loading");
         C.fetchBooklet(e.id).then(function () { setBooklet("ok"); }, function () { setBooklet("fail"); });
@@ -93,6 +95,36 @@ export function LiveExamCard({ navigation, student, kpssData, dark, full }) {
             { text: "Sil", style: "destructive", onPress: function () { act("live_unregister", { p_exam: e.id }); } }
         ]);
     }
+    // kâğıtta çözme: PDF'ler gizli WebView'da hazırlanır, paylaşım menüsüyle açılır
+    function pdfJob(label, makeCmd, done) {
+        setBusy(true); setMsg(label);
+        makeCmd().then(function (cmd) {
+            return runPdf(cmd, function (p) { setMsg(label.replace("…", "") + " %" + Math.round(p * 100) + "…"); });
+        }).then(function (m) { return sharePdf(m.b64, m.name); }).then(function () {
+            setBusy(false); setMsg(done); load();
+        }).catch(function (x) { setBusy(false); setMsg(x.message || "PDF hazırlanamadı."); load(); });
+    }
+    function printForm() {
+        pdfJob("Optik formun hazırlanıyor…", function () { return C.formJob(student, e); },
+            "Optik formun hazır. Yazdırırken ‘Sayfaya sığdır’ı kapat, ölçek %100 olsun.");
+    }
+    function getBooklet() {
+        pdfJob("Soru kitapçığın hazırlanıyor…", function () { return C.bookletJob(student, e); },
+            "Kitapçığın hazır. İşaretlemeyi optik forma yap; bitince \"Optiğimi okut\".");
+    }
+    function choosePaper() {
+        Alert.alert("Kâğıtta çöz", "Kâğıtta çözmeyi seçersen bu sınavı cihazda çözemezsin. Kitapçığı yazdırıp cevaplarını optik forma işaretleyeceksin; sonra formun fotoğrafını çekip okutacaksın (en geç " +
+            L.fmtClock(opticUntil) + ").", [
+            { text: "Vazgeç", style: "cancel" },
+            { text: "Kâğıtta çöz", onPress: function () {
+                setBusy(true); setMsg("Kâğıt modunda giriş yapılıyor…");
+                C.enterPaper(e.id).then(function () { setBusy(false); getBooklet(); })
+                    .catch(function (x) { setBusy(false); setMsg(x.message); load(); });
+            } }
+        ]);
+    }
+    function openOptic() { go(navigation, "LiveOptic", { examId: e.id }); }
+    var opticUntil = e ? L.ms(e.optic_until || e.ranking_at) : 0;
     var startT = e ? L.ms(e.starts_at) : 0;
     var when = e ? L.fmtDay(startT, true) + " " + L.fmtClock(startT) : "";
     var title = e ? e.title : "Canlı deneme";
@@ -145,7 +177,10 @@ export function LiveExamCard({ navigation, student, kpssData, dark, full }) {
                 <Text style={[s.body, dark && s.lightMuted]}>
                     {booklet === "ok" ? "✓ Soru kitapçığı şifreli olarak cihazına indi; 10:15'te açılacak." : booklet === "fail" ? "Kitapçık indirilemedi; internetini kontrol et." : "Soru kitapçığı cihazına iniyor…"}
                 </Text>
-                <View style={s.btns}><Btn primary disabled label="Sınava gir (10:15'te açılır)" /></View>
+                <View style={s.btns}>
+                    <Btn primary disabled label="Sınava gir (10:15'te açılır)" />
+                    <Btn dark={dark} disabled={busy} label="🖨 Optik formunu indir" onPress={printForm} />
+                </View>
             </View>
         );
     } else if (ph === "can_enter" || ph === "in_progress") {
@@ -154,9 +189,40 @@ export function LiveExamCard({ navigation, student, kpssData, dark, full }) {
                 <Text style={[s.kicker, { color: "#be123c" }]}>● SINAV DEVAM EDİYOR</Text>
                 <Text style={[s.title, dark && s.light]}>{title}</Text>
                 <Text style={[s.body, dark && s.lightMuted]}>Bitişe {L.fmtLeft(L.ms(e.ends_at) - now)} kaldı{ph === "can_enter" ? " · giriş " + L.fmtClock(L.ms(e.entry_closes_at)) + "'te kapanır" : ""}.</Text>
-                <View style={s.btns}><Btn primary label={ph === "in_progress" ? "Kaldığın yerden devam et" : "Sınava gir"} onPress={function () { go(navigation, "LiveExam", { examId: e.id }); }} /></View>
+                <View style={s.btns}>
+                    <Btn primary label={ph === "in_progress" ? "Kaldığın yerden devam et" : "Cihazda çöz"} onPress={function () { go(navigation, "LiveExam", { examId: e.id }); }} />
+                    {ph === "can_enter" ? <Btn dark={dark} disabled={busy} label="🖨 Kâğıtta çöz" onPress={choosePaper} /> : null}
+                </View>
+                {ph === "can_enter" ? <Text style={[s.muted, { marginTop: 8 }]}>Kâğıtta çözersen kitapçık PDF olarak iner; cevaplarını optik forma işaretleyip sonra fotoğrafını okutursun.</Text> : null}
             </View>
         );
+    } else if (ph === "paper_solving") {
+        body = (
+            <View>
+                <Text style={[s.kicker, { color: "#be123c" }]}>● SINAV DEVAM EDİYOR · KÂĞITTA ÇÖZÜYORSUN</Text>
+                <Text style={[s.title, dark && s.light]}>{title}</Text>
+                <Text style={[s.body, dark && s.lightMuted]}>Bitişe {L.fmtLeft(L.ms(e.ends_at) - now)} kaldı. Bitirince optik formunun fotoğrafını çekip okut; okutma {L.fmtClock(opticUntil)}'ta kapanır.</Text>
+                <View style={s.btns}>
+                    <Btn primary label="📷 Optiğimi okut" onPress={openOptic} />
+                    <Btn dark={dark} disabled={busy} label="Kitapçığı indir" onPress={getBooklet} />
+                    <Btn dark={dark} disabled={busy} label="Optik formu indir" onPress={printForm} />
+                </View>
+            </View>
+        );
+    } else if (ph === "paper_submitted") {
+        body = <View><Text style={[s.title, dark && s.light]}>Optik formun gönderildi.</Text><Text style={s.muted}>Cevapların artık değişmez. Sonucun ve çözümler {L.fmtClock(L.ms(e.ends_at))}'te açılır.</Text></View>;
+    } else if (ph === "optic_window") {
+        body = (
+            <View>
+                <Text style={[s.kicker, { color: "#b45309" }]}>SINAV BİTTİ · OPTİĞİNİ OKUT</Text>
+                <Text style={[s.title, dark && s.light]}>{title}</Text>
+                <Text style={[s.big, dark && s.light]}>{L.fmtLeft(opticUntil - now)}</Text>
+                <Text style={[s.body, dark && s.lightMuted]}>Optik okutma {L.fmtClock(opticUntil)}'ta kapanır. Okutmazsan bu denemede sonucun olmaz.</Text>
+                <View style={s.btns}><Btn primary label="📷 Optiğimi okut" onPress={openOptic} /></View>
+            </View>
+        );
+    } else if (ph === "optic_missed") {
+        body = <View><Text style={[s.title, dark && s.light]}>Optik formun gelmedi.</Text><Text style={s.muted}>Okutma süresi {L.fmtClock(opticUntil)}'ta doldu; bu denemede sonucun yok.</Text></View>;
     } else if (ph === "entry_closed") {
         body = <Text style={[s.title, dark && s.light]}>Sınava giriş {L.fmtClock(L.ms(e.entry_closes_at))}'te kapandı.</Text>;
     } else if (ph === "submitted") {
@@ -167,6 +233,8 @@ export function LiveExamCard({ navigation, student, kpssData, dark, full }) {
         body = <View><Text style={[s.title, dark && s.light]}>Sınav bitti.</Text><Text style={s.muted}>Sonucun hesaplanıyor…</Text></View>;
     } else if (showResult) {
         body = <Result r={last} />;
+    } else if (missedNewer && dash.missed_no_optic) {
+        body = <View><Text style={[s.title, dark && s.light]}>Optik formun gelmediği için bu denemede sonucun yok.</Text><Text style={s.muted}>Bir sonrakinde okutma süresini kaçırma: sınav bitişinden sonra 15 dakika.</Text></View>;
     } else if (missedNewer || ph === "missed_live" || ph === "over_unregistered") {
         body = <View><Text style={[s.title, dark && s.light]}>Bu haftaki denemeye katılmadın.</Text><Text style={s.muted}>Bir sonrakine kayıt ol; genel sonuçlar açıklandığında burada görünür.</Text></View>;
     }
@@ -188,9 +256,12 @@ export function LiveExamCard({ navigation, student, kpssData, dark, full }) {
                 <Text style={[s.title, dark && s.light]}>{when} · {title}</Text>
                 <Text style={[s.body, dark && s.lightMuted]}>{ph === "waitlist" ? "Sıran: " + ((dash.registration && dash.registration.waitlist_pos) || "?") + ". " : ""}Başlamaya {L.fmtLeft(startT - now)}.</Text>
                 {ph === "registered" ? (
-                    <Text style={[s.muted, { marginTop: 6, lineHeight: 18 }]}>• Kayıt pazar {L.fmtClock(L.ms(e.reg_closes_at))}'da kapanır; kitapçık o saatte iner.{"\n"}• 130 dakikalık sessiz bir zaman ayır, müsvedde hazırla.{"\n"}• Sınava {L.fmtClock(L.ms(e.entry_closes_at))}'e kadar girebilirsin.</Text>
+                    <Text style={[s.muted, { marginTop: 6, lineHeight: 18 }]}>• Kayıt pazar {L.fmtClock(L.ms(e.reg_closes_at))}'da kapanır; kitapçık o saatte iner.{"\n"}• 130 dakikalık sessiz bir zaman ayır, müsvedde hazırla.{"\n"}• Sınava {L.fmtClock(L.ms(e.entry_closes_at))}'e kadar girebilirsin.{"\n"}• Kâğıtta çözeceksen optik formunu şimdiden yazdır (%100 ölçek).</Text>
                 ) : null}
-                <View style={s.btns}><Btn dark={dark} disabled={busy} label="Kaydımı sil" onPress={unregister} /></View>
+                <View style={s.btns}>
+                    {ph === "registered" ? <Btn dark={dark} disabled={busy} label="🖨 Optik formunu indir" onPress={printForm} /> : null}
+                    <Btn dark={dark} disabled={busy} label="Kaydımı sil" onPress={unregister} />
+                </View>
             </View>
         );
     } else if (ph === "reg_closed" && !body) {
@@ -204,7 +275,8 @@ export function LiveExamCard({ navigation, student, kpssData, dark, full }) {
             {dash.cancelled ? <Text style={s.warn}>{dash.cancelled.title} iptal edildi{dash.cancelled.cancel_reason ? ": " + dash.cancelled.cancel_reason : "."}</Text> : null}
             {body}
             {reg}
-            {msg ? <Text style={[s.body, dark && s.lightMuted]}>{msg}</Text> : null}
+            {msg ? <Text style={[s.body, dark && s.lightMuted]} accessibilityLiveRegion="polite">{msg}</Text> : null}
+            {pdfHost}
             {!full ? (
                 <Tap onPress={function () { go(navigation, "Live"); }} style={{ marginTop: 10 }}>
                     <Text style={s.more}>Canlı deneme sayfası →</Text>
