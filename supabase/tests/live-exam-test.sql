@@ -322,5 +322,61 @@ select t_ok((select count(*) from live_events where exam_id = current_setting('t
 select t_ok((select close_reason from live_attempts where exam_id = current_setting('t.exam3')::uuid
   and user_id = '00000000-0000-4000-8000-000000000002') = 'no_optic', 'u2 kâğıdı sonuçsuz kapandı');
 
+-- ---------- 12. kulvarlar ve kohort analizi (3. aşama) ----------
+select t_as('00000000-0000-4000-8000-0000000000a1', '2026-10-26 09:00+03');
+select set_config('t.exam4', (live_admin_save_exam('{"title":"Lisans 4","day":"2026-11-01","track":"lisans"}')->>'id'), false);
+select set_config('t.exam5', (live_admin_save_exam('{"title":"Önlisans 1","day":"2026-11-01","track":"onlisans"}')->>'id'), false);
+select live_admin_set_questions(current_setting('t.exam' || x)::uuid,
+  (select jsonb_agg(jsonb_build_object('no', g, 'bolum', case when g <= 60 then 'GY' else 'GK' end, 'ders', case when g <= 60 then 'Türkçe' else 'Tarih' end,
+     'konu', 'Konu', 'stem', 'Soru ' || g, 'options', jsonb_build_array('a','b','c','d','e'), 'answer', 'B')) from generate_series(1, 120) g))
+  from (values ('4'), ('5')) v(x);
+select live_admin_set_booklet(current_setting('t.exam' || x)::uuid, 'booklets/' || current_setting('t.exam' || x) || '.bin', repeat('12', 32), 'sha') from (values ('4'), ('5')) v(x);
+select t_ok(live_admin_publish(current_setting('t.exam5')::uuid)->>'track' = 'onlisans', 'önlisans denemesi yayınlandı');
+reset role;
+select t_ok((select status from live_exams where id = current_setting('t.exam3')::uuid) = 'finished', 'başka kulvarın yayını lisans denemesini arşive atmaz');
+set role authenticated;
+select t_as('00000000-0000-4000-8000-0000000000a1', '2026-10-26 09:01+03');
+select live_admin_publish(current_setting('t.exam4')::uuid);
+reset role;
+select t_ok((select status from live_exams where id = current_setting('t.exam3')::uuid) = 'archived', 'aynı kulvarın yeni denemesi eskisini arşive atar');
+set role authenticated;
+select t_as('00000000-0000-4000-8000-000000000001', '2026-10-27 10:00+03');
+select t_ok(live_dashboard('lisans')->'exam'->>'id' = current_setting('t.exam4'), 'lisans öğrencisi lisans denemesini görür');
+select t_ok(live_dashboard('onlisans')->'exam'->>'id' = current_setting('t.exam5'), 'önlisans öğrencisi önlisans denemesini görür');
+select t_ok(live_dashboard('ortaogretim')->>'exam' is null, 'ortaöğretimde deneme yok');
+
+-- dört kişi lisans denemesinde: 100, 99, 97, 96 doğru (yanlış yok, gerisi boş)
+select t_as(u, '2026-10-27 10:00+03'), live_register(current_setting('t.exam4')::uuid)
+  from (values ('00000000-0000-4000-8000-000000000001'), ('00000000-0000-4000-8000-000000000002'),
+               ('00000000-0000-4000-8000-000000000003'), ('00000000-0000-4000-8000-000000000004')) v(u);
+select t_as(u, '2026-11-01 10:20+03'), live_enter(current_setting('t.exam4')::uuid, 'dev-' || right(u, 4) || '-four'),
+       live_save(current_setting('t.exam4')::uuid, 'dev-' || right(u, 4) || '-four',
+         (select jsonb_agg(jsonb_build_object('no', g, 'c', case when g <= k then 'B' else null end, 'ms', case when g <= 60 then 20000 else 40000 end))
+          from generate_series(1, 120) g))
+  from (values ('00000000-0000-4000-8000-000000000001', 100), ('00000000-0000-4000-8000-000000000002', 99),
+               ('00000000-0000-4000-8000-000000000003', 97), ('00000000-0000-4000-8000-000000000004', 96)) v(u, k);
+select t_as('00000000-0000-4000-8000-000000000001', '2026-11-01 12:30+03');
+select t_ok((live_result(current_setting('t.exam4')::uuid)->>'peers') is null, 'kesinleşmeden benzer seviye yok');
+select t_as('00000000-0000-4000-8000-000000000001', '2026-11-01 12:41+03');
+select set_config('t.r', live_result(current_setting('t.exam4')::uuid)::text, false);
+select t_ok((current_setting('t.r')::json->'peers'->>'n')::int = 3 and (current_setting('t.r')::json->'peers'->>'net')::numeric = 97.33,
+  'benzer seviye (±5 net): 3 kişi, ortalama 97,33');
+select t_ok((current_setting('t.r')::json->'peers'->'by_ders'->>'Türkçe')::numeric = 60, 'benzer seviyenin ders netleri');
+select t_ok((select sum((x->>1)::int) from json_array_elements(current_setting('t.r')::json->'cohort'->'analysis'->'hist') x) = 4, 'dağılım: 4 kişi');
+select t_ok((current_setting('t.r')::json->'cohort'->'analysis'->'pct'->>'p50')::numeric = 98, 'medyan net 98');
+select t_ok((current_setting('t.r')::json->'cohort'->'analysis'->>'top10_n')::int = 1 and (current_setting('t.r')::json->'cohort'->'analysis'->>'top10_net')::numeric = 100, 'ilk %10: 1 kişi, 100 net');
+select t_ok((current_setting('t.r')::json->'cohort'->'analysis'->'by_mode'->'device'->>'n')::int = 4, 'cihaz/kâğıt karşılaştırması');
+select t_ok((current_setting('t.r')::json->'cohort'->'analysis'->'time_by_ders'->>'Tarih')::int = 40000, 'ders başına ortalama süre');
+select t_ok((live_history()->0->>'cohort_avg')::numeric = 98, 'geçmişte katılan ortalaması');
+select t_ok((live_history()->0->>'cohort_p50')::numeric = 98, 'geçmişte medyan');
+-- yalnızca 2 benzer: benzer seviye gizli (kişisel sonuç sızmasın)
+select t_as('00000000-0000-4000-8000-000000000003', '2026-11-01 12:42+03');
+select t_ok((live_result(current_setting('t.exam4')::uuid)->'peers'->>'n')::int = 3, 'u3 için de 3 benzer');
+select t_err($$select live_admin_trends('lisans')$$, 'forbidden', 'öğrenci kohort karşılaştırmasını göremez');
+select t_as('00000000-0000-4000-8000-0000000000a1', '2026-11-01 13:00+03');
+select t_ok(json_array_length(live_admin_trends('lisans')) >= 2, 'yönetici: lisans denemeleri yan yana');
+select t_ok((select x->>'id' from json_array_elements(live_admin_trends('lisans')) x order by x->>'starts_at' desc limit 1) = current_setting('t.exam4'), 'en yeni deneme sonda');
+select t_ok(json_array_length(live_admin_trends('onlisans')) = 1 and (live_admin_trends('onlisans')->0->>'participants')::int = 0, 'önlisans: katılımcısız deneme de kesinleşir (0 kişi)');
+
 reset role;
 select 'TÜM TESTLER GEÇTİ';

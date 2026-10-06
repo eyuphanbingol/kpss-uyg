@@ -1,6 +1,7 @@
 /**
  * Örnek canlı deneme dosyası üretir: docs/canli-deneme-ornek.json
- *   node scripts/make-sample-live-exam.js
+ *   node scripts/make-sample-live-exam.js                     (lisans)
+ *   node scripts/make-sample-live-exam.js --kulvar=onlisans    (docs/canli-deneme-ornek-onlisans.json)
  * Türkçe, Geometri ve Genel Kültür soruları katalogdan (data.js konu anahtarlarıyla) alınır;
  * Matematik soruları burada yazılıdır ve cevapları hesaplanarak denetlenir.
  * Dağılım lisans KPSS: Türkçe 30, Matematik 22, Geometri 8 | Tarih 27, Coğrafya 18, Vatandaşlık 9, Güncel 6.
@@ -95,11 +96,16 @@ if (sekilli) {
 
 var sorular = gy.map(function (q, i) { return Object.assign({ no: i + 1, bolum: "GY" }, q); })
     .concat(gk.map(function (q, i) { return Object.assign({ no: 61 + i, bolum: "GK" }, q); }));
-var doc = { kulvar: "lisans", baslik: "Örnek Canlı Deneme", sorular: sorular.map(function (q) {
+// --kulvar=onlisans|ortaogretim: aynı soruları başka kulvar için (docs/canli-deneme-ornek-<kulvar>.json)
+var kulvarArg = (process.argv.find(function (a) { return a.indexOf("--kulvar=") === 0; }) || "").slice(9) || "lisans";
+if (["lisans", "onlisans", "ortaogretim"].indexOf(kulvarArg) < 0) { console.error("kulvar: lisans, onlisans ya da ortaogretim"); process.exit(1); }
+var KULVAR_ADI = { lisans: "", onlisans: " · Önlisans", ortaogretim: " · Ortaöğretim" };
+var doc = { kulvar: kulvarArg, baslik: "Örnek Canlı Deneme" + KULVAR_ADI[kulvarArg], sorular: sorular.map(function (q) {
     var o = { no: q.no, bolum: q.bolum, ders: q.ders, konu: q.konu, metin: q.metin, siklar: q.siklar, dogru: q.dogru, cozum: q.cozum };
     if (q.gorsel) o.gorsel = q.gorsel;
     return o;
 }) };
 fs.mkdirSync(path.join(root, "docs"), { recursive: true });
-fs.writeFileSync(path.join(root, "docs", "canli-deneme-ornek.json"), JSON.stringify(doc, null, 2) + "\n");
-console.log("docs/canli-deneme-ornek.json: " + sorular.length + " soru");
+var outName = kulvarArg === "lisans" ? "canli-deneme-ornek.json" : "canli-deneme-ornek-" + kulvarArg + ".json";
+fs.writeFileSync(path.join(root, "docs", outName), JSON.stringify(doc, null, 2) + "\n");
+console.log("docs/" + outName + ": " + sorular.length + " soru");

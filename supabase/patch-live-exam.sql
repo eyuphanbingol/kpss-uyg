@@ -1,5 +1,5 @@
 -- ============================================================
--- CANLI DENEME SINAVI (1. ve 2. aşama)
+-- CANLI DENEME SINAVI (1., 2. ve 3. aşama)
 -- SQL Editor'da çalıştır. Tekrar çalıştırmak güvenlidir (idempotent); 1. aşamayı
 -- daha önce kurduysan bu dosyanın tamamını yeniden çalıştırman yeterli.
 --
@@ -131,6 +131,9 @@ create table if not exists public.live_cohort (
   top jsonb not null default '[]'::jsonb,
   computed_at timestamptz not null default now()
 );
+
+-- 3. aşama: kohort analizi (net dağılımı, yüzdelikler, ilk %10, cihaz/kâğıt, ders başına süre)
+alter table public.live_cohort add column if not exists analysis jsonb not null default '{}'::jsonb;
 
 create table if not exists public.live_question_stats (
   exam_id uuid not null references public.live_exams(id),
@@ -375,6 +378,33 @@ begin
   group by q.exam_id, q.no, q.answer
   on conflict (exam_id, no) do update set correct = excluded.correct, wrong = excluded.wrong, blank = excluded.blank,
     choices = excluded.choices, avg_ms = excluded.avg_ms;
+
+  -- Derin analiz: dağılım (5 netlik dilimler), yüzdelikler, ilk %10'un ders netleri,
+  -- cihaz/kâğıt karşılaştırması ve ders başına ortalama süre (yalnızca cihazda çözenler).
+  update public.live_cohort c set analysis = jsonb_build_object(
+    'hist', (select coalesce(jsonb_agg(jsonb_build_array(h.b, h.cnt) order by h.b), '[]'::jsonb) from (
+        select (floor(net / 5) * 5)::int as b, count(*)::int as cnt from public.live_results where exam_id = p_exam group by 1) h),
+    'pct', (select jsonb_build_object(
+        'p25', round(percentile_cont(0.25) within group (order by net)::numeric, 2),
+        'p50', round(percentile_cont(0.5) within group (order by net)::numeric, 2),
+        'p75', round(percentile_cont(0.75) within group (order by net)::numeric, 2),
+        'p90', round(percentile_cont(0.9) within group (order by net)::numeric, 2),
+        'min', min(net), 'max', max(net)) from public.live_results where exam_id = p_exam),
+    'top10_n', (select count(*) from public.live_results where exam_id = p_exam and rank <= greatest(1, ceil(n * 0.1))),
+    'top10_net', (select round(avg(net), 2) from public.live_results where exam_id = p_exam and rank <= greatest(1, ceil(n * 0.1))),
+    'top10', (select coalesce(jsonb_object_agg(t.k, t.v), '{}'::jsonb) from (
+        select d.key as k, round(avg((d.value->>'net')::numeric), 2) as v
+        from public.live_results r cross join lateral jsonb_each(r.by_ders) d
+        where r.exam_id = p_exam and r.rank <= greatest(1, ceil(n * 0.1)) group by d.key) t),
+    'by_mode', (select coalesce(jsonb_object_agg(m.mode, jsonb_build_object('n', m.cnt, 'avg_net', m.av)), '{}'::jsonb) from (
+        select mode, count(*)::int as cnt, round(avg(net), 2) as av from public.live_results where exam_id = p_exam group by mode) m),
+    'time_by_ders', (select coalesce(jsonb_object_agg(t.ders, t.ms), '{}'::jsonb) from (
+        select q.ders, round(avg(a.ms))::int as ms
+        from public.live_answers a
+        join public.live_questions q on q.exam_id = a.exam_id and q.no = a.no
+        join public.live_results r on r.exam_id = a.exam_id and r.user_id = a.user_id and r.mode = 'device'
+        where a.exam_id = p_exam and a.ms > 0 and a.choice is not null group by q.ders) t))
+  where c.exam_id = p_exam;
 end;
 $$;
 
@@ -695,6 +725,7 @@ declare
   att public.live_attempts;
   res public.live_results;
   coh public.live_cohort;
+  peers json;
 begin
   perform public.live_tick();
   select * into e from public.live_exams where id = p_exam;
@@ -710,12 +741,24 @@ begin
   if att.closed_at is null then perform public.live_close_attempt(p_exam, uid, 'result'); end if;
   select * into res from public.live_results where exam_id = p_exam and user_id = uid;
   select * into e from public.live_exams where id = p_exam;
-  if e.finalized_at is not null then select * into coh from public.live_cohort where exam_id = p_exam; end if;
+  if e.finalized_at is not null then
+    select * into coh from public.live_cohort where exam_id = p_exam;
+    -- benzer seviyedekiler: netin ±5 içindeki diğer katılımcılar (en az 3 kişi; tek kişinin sonucu sızmasın)
+    select case when count(*) >= 3 then json_build_object('n', count(*), 'net', round(avg(r.net), 2),
+             'by_ders', (select coalesce(json_object_agg(t.k, t.v), '{}'::json) from (
+                select d.key as k, round(avg((d.value->>'net')::numeric), 2) as v
+                from public.live_results r2 cross join lateral jsonb_each(r2.by_ders) d
+                where r2.exam_id = p_exam and r2.user_id <> uid and abs(r2.net - res.net) <= 5 group by d.key) t))
+           else null end
+      into peers
+      from public.live_results r where r.exam_id = p_exam and r.user_id <> uid and abs(r.net - res.net) <= 5;
+  end if;
   return json_build_object(
     'exam', public.live_exam_json(e),
     'now', (extract(epoch from public.live_clock()) * 1000)::bigint,
     'result', row_to_json(res),
-    'cohort', case when coh.exam_id is null then null else row_to_json(coh) end);
+    'cohort', case when coh.exam_id is null then null else row_to_json(coh) end,
+    'peers', peers);
 end;
 $$;
 
@@ -840,8 +883,11 @@ begin
       'mode', r.mode, 'net', r.net, 'gy_net', r.gy_net, 'gk_net', r.gk_net,
       'correct', r.correct, 'wrong', r.wrong, 'blank', r.blank,
       'rank', r.rank, 'participants', r.participants, 'top_pct', r.top_pct,
-      'by_ders', r.by_ders, 'by_konu', r.by_konu) order by e.starts_at desc), '[]'::json)
+      'by_ders', r.by_ders, 'by_konu', r.by_konu,
+      'cohort_avg', c.avg_net, 'cohort_gy', c.avg_gy, 'cohort_gk', c.avg_gk, 'cohort_p50', c.analysis->'pct'->'p50',
+      'cohort_by_ders', c.by_ders) order by e.starts_at desc), '[]'::json)
     from public.live_results r join public.live_exams e on e.id = r.exam_id
+    left join public.live_cohort c on c.exam_id = e.id
     where r.user_id = uid and e.deleted_at is null and e.status <> 'cancelled');
 end;
 $$;
@@ -1192,6 +1238,22 @@ begin
 end;
 $$;
 
+-- Kohort karşılaştırması: bir kulvarın kesinleşmiş denemeleri yan yana (katılım, ortalama,
+-- yüzdelikler, ilk %10, cihaz/kâğıt, ders ortalamaları).
+create or replace function public.live_admin_trends(p_track text)
+returns json language plpgsql security definer set search_path = public as $$
+begin
+  perform public.live_require_admin();
+  return (select coalesce(json_agg(json_build_object(
+      'id', e.id, 'title', e.title, 'track', e.track, 'starts_at', e.starts_at, 'status', e.status,
+      'registered', (select count(*) from public.live_registrations r where r.exam_id = e.id and r.status = 'registered'),
+      'participants', c.participants, 'avg_net', c.avg_net, 'avg_gy', c.avg_gy, 'avg_gk', c.avg_gk,
+      'by_ders', c.by_ders, 'analysis', c.analysis) order by e.starts_at), '[]'::json)
+    from public.live_exams e join public.live_cohort c on c.exam_id = e.id
+    where e.track = p_track and e.deleted_at is null and e.status <> 'cancelled' and e.finalized_at is not null);
+end;
+$$;
+
 -- Sınav sonrası soru istatistiği (hangi şık kaç kişi).
 create or replace function public.live_admin_stats(p_exam uuid)
 returns json language plpgsql security definer set search_path = public as $$
@@ -1218,7 +1280,7 @@ begin
     'live_admin_save_exam(jsonb)', 'live_admin_set_questions(uuid, jsonb)', 'live_admin_set_booklet(uuid, text, text, text)',
     'live_admin_publish(uuid)', 'live_admin_discard_draft(uuid)', 'live_admin_list()', 'live_admin_registrations(uuid)',
     'live_admin_set_registration(uuid, uuid, text)', 'live_admin_monitor(uuid)', 'live_admin_extend(uuid, int)',
-    'live_admin_cancel(uuid, text)', 'live_admin_unlock(uuid, uuid)', 'live_admin_stats(uuid)'] loop
+    'live_admin_cancel(uuid, text)', 'live_admin_unlock(uuid, uuid)', 'live_admin_stats(uuid)', 'live_admin_trends(text)'] loop
     execute format('revoke all on function public.%s from public, anon', f);
     execute format('grant execute on function public.%s to authenticated', f);
   end loop;

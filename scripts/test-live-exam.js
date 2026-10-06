@@ -69,6 +69,25 @@ Promise.resolve().then(function () {
         "uzatılmış okutma süresi optic_until'dan okunur");
     ok(L.fmtClock(base) === "10:15" && L.fmtDay(base, true) === "11 Ekim Pazar", "İstanbul saati");
 
+    // derin analiz
+    var coh = { by_ders: { Tarih: { net: 10 } }, analysis: { hist: [[90, 1], [100, 2]], top10: { Tarih: 20 }, time_by_ders: { Tarih: 40000 } } };
+    var hr = L.histRows(coh, 81.5);
+    ok(hr.length === 5 && hr[0].mine && hr[0].n === 0 && hr[4].n === 2, "dağılım: boş dilimler doldurulur, benim dilimim işaretli");
+    ok(L.beatPct({ rank: 2, participants: 5 }) === 75 && L.beatPct({ rank: 1, participants: 1 }) === null, "katılanların %75'inden yüksek");
+    var dc = L.dersCompare({ by_ders: { Tarih: { c: 12, w: 0, b: 0, n: 27, net: 12 } } }, coh, { by_ders: { Tarih: 14 } });
+    ok(dc[0].avgNet === 10 && dc[0].top10 === 20 && dc[0].peers === 14 && dc[0].gapTop === -8, "ders: ortalama, ilk %10, benzer seviye");
+    var aq = [{ no: 1, ders: "Tarih", konu: "k", answer: "B", mine: "A", ms: 90000, stat: { correct: 8, wrong: 1, blank: 1, avg_ms: 40000 } },
+        { no: 2, ders: "Tarih", konu: "k", answer: "B", mine: "B", ms: 30000, stat: { correct: 2, wrong: 5, blank: 3, avg_ms: 30000 } },
+        { no: 3, ders: "Tarih", konu: "k", answer: "C", mine: null, ms: 0, stat: { correct: 6, wrong: 3, blank: 1 } }];
+    var em = L.easyMisses(aq);
+    ok(em.length === 1 && em[0].no === 1 && em[0].pct === 80, "kolay ama kaçırılan: %80'in yaptığı soru (%60 eşik altı hariç)");
+    var tr = L.timeRows(aq, coh);
+    ok(tr.rows[0].mine === 60000 && tr.rows[0].avg === 40000 && tr.slow.length === 1 && tr.slow[0].no === 1, "süre: ders ortalaması ve uzun sürüp kaçırılan");
+    ok(L.trUpper("Önlisans · 11 Ekim") === "ÖNLİSANS · 11 EKİM" && L.trUpper("ılık") === "ILIK", "Türkçe büyük harf");
+    ok(L.fmtSec(65000) === "1 dk 5 sn" && L.fmtSec(60000) === "1 dk" && L.fmtSec(9000) === "9 sn", "süre biçimi");
+    var pr = L.progress([{ exam_id: "a", starts_at: "2026-10-11T10:15:00+03:00", net: 50, gy_net: 25, gk_net: 25, cohort_avg: 40, cohort_by_ders: { Tarih: { net: 5 } }, by_ders: { Tarih: { net: 7 } } }]);
+    ok(pr.points[0].diff === 10 && pr.ders.Tarih[0].avg === 5, "gelişim: ortalamaya göre fark");
+
     // optik cevap metni (elle giriş)
     var m = L.parseAnswerText("ace bd-- a,b;c\nE", 12);
     ok(L.answerText(m.answers) === "ACEBD--ABCE" && !m.complete && m.count === 11, "elle giriş: boşluk/virgül atlanır, - boş");

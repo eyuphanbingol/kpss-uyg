@@ -1,6 +1,54 @@
--- CANLI DENEME · PARÇA 7 / 8
--- Supabase SQL Editor'da 1'den 8'e SIRAYLA çalıştır (her parçayı ayrı ayrı: yapıştır → Run).
+-- CANLI DENEME · PARÇA 7 / 9
+-- Supabase SQL Editor'da 1'den 9'e SIRAYLA çalıştır (her parçayı ayrı ayrı: yapıştır → Run).
 -- Bu dosya scripts/split-live-sql.js ile supabase/patch-live-exam.sql'den üretilir. Elle düzenleme.
+
+-- Deneme oluştur / güncelle (yalnızca başlamamış denemeler).
+create or replace function public.live_admin_save_exam(p jsonb)
+returns json language plpgsql security definer set search_path = public as $$
+declare
+  uid uuid := public.live_require_admin();
+  e public.live_exams;
+  d json;
+  vid uuid := nullif(p->>'id', '')::uuid;
+begin
+  if p ? 'day' then
+    d := public.live_default_times((p->>'day')::date);
+    p := p || jsonb_build_object('reg_closes_at', d->>'reg_closes_at', 'starts_at', d->>'starts_at',
+           'entry_closes_at', d->>'entry_closes_at', 'ends_at', d->>'ends_at',
+           'late_sync_until', d->>'late_sync_until', 'ranking_at', d->>'ranking_at');
+  end if;
+  if vid is null then
+    insert into public.live_exams (track, title, reg_closes_at, starts_at, entry_closes_at, ends_at, late_sync_until, ranking_at,
+                                   capacity, created_by, created_at, updated_at)
+    values (coalesce(p->>'track', 'lisans'), coalesce(nullif(p->>'title', ''), 'Canlı Deneme'),
+            (p->>'reg_closes_at')::timestamptz, (p->>'starts_at')::timestamptz, (p->>'entry_closes_at')::timestamptz,
+            (p->>'ends_at')::timestamptz, (p->>'late_sync_until')::timestamptz, (p->>'ranking_at')::timestamptz,
+            nullif(p->>'capacity', '')::int, uid, public.live_clock(), public.live_clock())
+    returning * into e;
+    insert into public.live_events (exam_id, user_id, kind) values (e.id, uid, 'admin_create');
+  else
+    select * into e from public.live_exams where id = vid for update;
+    if e.id is null or e.deleted_at is not null then perform public.live_err('not_found', 'Deneme bulunamadı.'); end if;
+    if public.live_clock() >= e.starts_at and e.status = 'scheduled' then
+      perform public.live_err('started', 'Başlamış denemenin saatleri buradan değiştirilemez; süre uzatmayı kullan.');
+    end if;
+    if e.status not in ('draft', 'scheduled') then perform public.live_err('locked', 'Bitmiş deneme değiştirilemez.'); end if;
+    update public.live_exams set
+      title = coalesce(nullif(p->>'title', ''), title),
+      reg_closes_at = coalesce((p->>'reg_closes_at')::timestamptz, reg_closes_at),
+      starts_at = coalesce((p->>'starts_at')::timestamptz, starts_at),
+      entry_closes_at = coalesce((p->>'entry_closes_at')::timestamptz, entry_closes_at),
+      ends_at = coalesce((p->>'ends_at')::timestamptz, ends_at),
+      late_sync_until = coalesce((p->>'late_sync_until')::timestamptz, late_sync_until),
+      ranking_at = coalesce((p->>'ranking_at')::timestamptz, ranking_at),
+      capacity = case when p ? 'capacity' then nullif(p->>'capacity', '')::int else capacity end,
+      updated_at = public.live_clock()
+    where id = vid returning * into e;
+    insert into public.live_events (exam_id, user_id, kind, detail) values (e.id, uid, 'admin_update', p);
+  end if;
+  return public.live_exam_json(e);
+end;
+$$;
 
 -- Soruları yükle (başlamadan önce). İstemci tarafı doğrulamanın sunucudaki kopyası.
 create or replace function public.live_admin_set_questions(p_exam uuid, p_questions jsonb)
@@ -127,54 +175,5 @@ begin
     from public.live_registrations r
     left join public.live_attempts a on a.exam_id = r.exam_id and a.user_id = r.user_id
     where r.exam_id = p_exam);
-end;
-$$;
-
-create or replace function public.live_admin_set_registration(p_exam uuid, p_user uuid, p_status text)
-returns json language plpgsql security definer set search_path = public as $$
-declare uid uuid := public.live_require_admin();
-begin
-  if p_status not in ('registered', 'waitlist', 'cancelled', 'blocked') then perform public.live_err('bad_input', 'Geçersiz durum.'); end if;
-  update public.live_registrations set status = p_status, updated_at = public.live_clock() where exam_id = p_exam and user_id = p_user;
-  insert into public.live_events (exam_id, user_id, kind, detail)
-  values (p_exam, p_user, 'admin_registration', json_build_object('status', p_status, 'by', uid)::jsonb);
-  return json_build_object('ok', true);
-end;
-$$;
-
--- Canlı izleme: katılımcı sayıları ve olaylar.
-create or replace function public.live_admin_monitor(p_exam uuid)
-returns json language plpgsql security definer set search_path = public as $$
-declare t timestamptz := public.live_clock();
-begin
-  perform public.live_require_admin();
-  return json_build_object(
-    'now', (extract(epoch from t) * 1000)::bigint,
-    'registered', (select count(*) from public.live_registrations where exam_id = p_exam and status = 'registered'),
-    'waitlist', (select count(*) from public.live_registrations where exam_id = p_exam and status = 'waitlist'),
-    'entered', (select count(*) from public.live_attempts where exam_id = p_exam),
-    'active', (select count(*) from public.live_attempts where exam_id = p_exam and closed_at is null and submitted_at is null and last_seen_at > t - interval '3 minutes'),
-    'submitted', (select count(*) from public.live_attempts where exam_id = p_exam and submitted_at is not null),
-    'locked', (select count(*) from public.live_attempts where exam_id = p_exam and locked),
-    'paper_entered', (select count(*) from public.live_attempts where exam_id = p_exam and mode = 'paper'),
-    'paper_submitted', (select count(*) from public.live_attempts where exam_id = p_exam and mode = 'paper' and submitted_at is not null),
-    'paper', (select coalesce(json_agg(json_build_object('user_id', a.user_id,
-                 'nickname', (select nickname from public.live_registrations r where r.exam_id = p_exam and r.user_id = a.user_id),
-                 'entered_at', a.entered_at, 'submitted', a.submitted_at is not null, 'close_reason', a.close_reason,
-                 'source', (select max(x.source) from public.live_answers x where x.exam_id = p_exam and x.user_id = a.user_id),
-                 'fails', (select count(*) from public.live_events v where v.exam_id = p_exam and v.user_id = a.user_id and v.kind in ('optic_fail', 'optic_wrong_form')),
-                 'last_fail', (select v.detail from public.live_events v where v.exam_id = p_exam and v.user_id = a.user_id
-                                 and v.kind in ('optic_fail', 'optic_wrong_form') order by v.at desc limit 1))
-               order by a.submitted_at is not null, a.entered_at), '[]'::json)
-              from public.live_attempts a where a.exam_id = p_exam and a.mode = 'paper'),
-    'avg_answered', (select round(avg(c), 1) from (select count(*) filter (where choice is not null) as c
-                      from public.live_answers where exam_id = p_exam group by user_id) z),
-    'events', (select coalesce(json_agg(json_build_object('at', ev.at, 'kind', ev.kind, 'user_id', ev.user_id,
-                 'nickname', (select nickname from public.live_registrations r where r.exam_id = p_exam and r.user_id = ev.user_id),
-                 'detail', ev.detail) order by ev.at desc), '[]'::json)
-               from (select * from public.live_events where exam_id = p_exam
-                     and kind in ('device_switch', 'locked', 'admin_extend', 'admin_cancel', 'admin_unlock', 'finalize',
-                                  'optic_fail', 'optic_wrong_form', 'optic_submit', 'admin_paper')
-                     order by at desc limit 60) ev));
 end;
 $$;

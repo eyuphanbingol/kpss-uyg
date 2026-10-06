@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Alert, AppState, Image, StyleSheet, Text, TextInput, View } from "react-native";
 import { WebView } from "react-native-webview";
 import { OPTIK_HTML } from "../lib/optikHtml";
-import Svg, { Circle, Line, Path, Text as SvgText } from "react-native-svg";
+import Svg, { Circle, Line, Path, Rect, Text as SvgText } from "react-native-svg";
 import { useApp } from "../AppProvider";
 import { LiveExam as L } from "../lib/liveExam";
 import { LiveClient as C } from "../lib/liveClient";
@@ -346,8 +346,11 @@ export function LiveResultScreen({ navigation, route }) {
     var coh = data.cohort;
     var fin = exam.finalized;
     var weak = L.weakest(r, 3);
-    var ders = L.dersRows(r, coh);
+    var ders = L.dersCompare(r, coh, data.peers);
     var konu = L.konuRows(r, coh);
+    var an = (coh && coh.analysis) || {};
+    var hist = fin ? L.histRows(coh, r.net) : [];
+    var beat = fin ? L.beatPct(r) : null;
     var qs = (review && review.questions) || [];
     var shown = qs.filter(function (q) {
         if (filter === "yanlis") return q.mine && q.mine !== q.answer;
@@ -357,11 +360,14 @@ export function LiveResultScreen({ navigation, route }) {
     });
     var keyMap = {}, ansMap = {};
     qs.forEach(function (q) { keyMap[q.no] = q.answer; ansMap[q.no] = { c: q.mine }; });
+    var easy = L.easyMisses(qs).slice(0, 8);
+    var tm = L.timeRows(qs, coh);
+    var modes = an.by_mode || {};
 
     return (
         <ScrollScreen dark={dark}>
             {header}
-            <Text style={cs.kicker}>{L.TRACKS[exam.track].toUpperCase()} · {L.fmtDate(L.ms(exam.starts_at)).toUpperCase()} · {r.mode === "paper" ? "KÂĞIT" : "CİHAZ"}</Text>
+            <Text style={cs.kicker}>{L.trUpper(L.TRACKS[exam.track])} · {L.trUpper(L.fmtDate(L.ms(exam.starts_at)))} · {r.mode === "paper" ? "KÂĞIT" : "CİHAZ"}</Text>
             <Text style={[cs.title, dark && cs.light, { marginBottom: 8 }]}>{exam.title}</Text>
             <View style={st.stats}>
                 <Stat big dark={dark} value={L.fmtNet(r.net)} label="net" />
@@ -375,6 +381,17 @@ export function LiveResultScreen({ navigation, route }) {
                 <Stat dark={dark} value={L.fmtNet(r.gy_net)} label={"GY net" + (coh ? " · ort. " + L.fmtNet(coh.avg_gy) : "")} />
                 <Stat dark={dark} value={L.fmtNet(r.gk_net)} label={"GK net" + (coh ? " · ort. " + L.fmtNet(coh.avg_gk) : "")} />
             </View>
+
+            {fin && hist.length ? (
+                <Card dark={dark} style={{ marginTop: 10 }}>
+                    <Text style={cs.kicker}>KATILANLAR ARASINDA</Text>
+                    <Text style={[cs.title, dark && cs.light]}>{beat != null ? "Senden düşük net yapanların oranı: %" + beat : "Sıralaman " + r.rank + " / " + r.participants + "."}</Text>
+                    {an.pct ? <Text style={[cs.body, dark && cs.lightMuted]}>Medyan {L.fmtNet(an.pct.p50)} · ilk %25 sınırı {L.fmtNet(an.pct.p75)} · ilk %10 sınırı {L.fmtNet(an.pct.p90)} net.{an.top10_net != null ? " İlk %10'un ortalaması " + L.fmtNet(an.top10_net) + "." : ""}</Text> : null}
+                    <NetHist rows={hist} dark={dark} />
+                    <Text style={cs.muted}>{hist.filter(function (h) { return h.n || h.mine; }).map(function (h) { return h.from + "–" + h.to + ": " + h.n + (h.mine ? " (sen)" : ""); }).join(" · ")}</Text>
+                    {modes.device && modes.paper ? <Text style={[cs.muted, { marginTop: 4 }]}>Cihazda çözenler ort. {L.fmtNet(modes.device.avg_net)} ({modes.device.n}) · kâğıtta {L.fmtNet(modes.paper.avg_net)} ({modes.paper.n})</Text> : null}
+                </Card>
+            ) : null}
 
             {weak.length ? (
                 <Card dark={dark} style={{ marginTop: 10 }}>
@@ -396,11 +413,52 @@ export function LiveResultScreen({ navigation, route }) {
                     return (
                         <View key={d.ders} style={st.lineRow}>
                             <Text style={[st.konu, dark && cs.light, { flex: 1 }]}>{d.ders}</Text>
-                            <Text style={[cs.body, dark && cs.lightMuted, { marginTop: 0 }]}>{d.c}D {d.w}Y {d.b}B · <Text style={{ fontWeight: "800" }}>{L.fmtNet(d.net)}</Text>{d.avgNet != null ? " · ort. " + L.fmtNet(d.avgNet) : ""}</Text>
+                            <Text style={[cs.body, dark && cs.lightMuted, { marginTop: 0, textAlign: "right" }]}>{d.c}D {d.w}Y {d.b}B · <Text style={{ fontWeight: "800" }}>{L.fmtNet(d.net)}</Text>{d.avgNet != null ? " · ort. " + L.fmtNet(d.avgNet) : ""}
+                                {d.top10 != null || d.peers != null ? "\n" + (d.top10 != null ? "ilk %10 " + L.fmtNet(d.top10) : "") + (d.peers != null ? (d.top10 != null ? " · " : "") + "benzer " + L.fmtNet(d.peers) : "") : ""}</Text>
                         </View>
                     );
                 })}
+                {data.peers || an.top10_n ? <Text style={[cs.muted, { marginTop: 6 }]}>{data.peers ? "Benzer: netin ±5 içindeki " + data.peers.n + " kişinin ortalaması. " : ""}{an.top10_n ? "İlk %10: en yüksek " + an.top10_n + " kişinin ortalaması." : ""}</Text> : null}
             </Card>
+
+            {easy.length ? (
+                <Card dark={dark} style={{ marginTop: 10 }}>
+                    <Text style={cs.kicker}>ÇOĞUNLUĞUN YAPTIĞI, SENİN KAÇIRDIĞIN SORULAR</Text>
+                    <Text style={[cs.body, dark && cs.lightMuted]}>En hızlı puan kazanacağın yer burası.</Text>
+                    {easy.map(function (q) {
+                        return (
+                            <Tap key={q.no} onPress={function () { setFilter("hepsi"); setOpenQ(q.no); }} style={st.lineRow}>
+                                <Text style={[cs.body, dark && cs.lightMuted, { marginTop: 0, flex: 1 }]}>Soru {q.no} · {q.ders} / {konuLabel(q.konu)}</Text>
+                                <Text style={cs.muted}>doğru oranı %{q.pct} · {q.mine ? "sen " + q.mine : "boş"}</Text>
+                            </Tap>
+                        );
+                    })}
+                </Card>
+            ) : null}
+
+            {tm.rows.length ? (
+                <Card dark={dark} style={{ marginTop: 10 }}>
+                    <Text style={cs.kicker}>SORU BAŞINA SÜRE</Text>
+                    {tm.rows.map(function (t) {
+                        var note = t.ratio == null ? "" : t.ratio > 1.25 ? " · yavaş" : t.ratio < 0.75 ? " · hızlı" : "";
+                        return (
+                            <View key={t.ders} style={st.lineRow}>
+                                <Text style={[st.konu, dark && cs.light, { flex: 1 }]}>{t.ders}</Text>
+                                <Text style={[cs.body, dark && cs.lightMuted, { marginTop: 0 }]}>sen {L.fmtSec(t.mine)} · ort. {L.fmtSec(t.avg)}{note}</Text>
+                            </View>
+                        );
+                    })}
+                    {tm.slow.length ? <Text style={[cs.kicker, { marginTop: 10 }]}>UZUN SÜRÜP KAÇIRDIKLARIN</Text> : null}
+                    {tm.slow.map(function (q) {
+                        return (
+                            <Tap key={q.no} onPress={function () { setFilter("hepsi"); setOpenQ(q.no); }} style={st.lineRow}>
+                                <Text style={[cs.body, dark && cs.lightMuted, { marginTop: 0, flex: 1 }]}>Soru {q.no} · {q.ders}</Text>
+                                <Text style={cs.muted}>{L.fmtSec(q.ms)} (ort. {L.fmtSec(q.avg)})</Text>
+                            </Tap>
+                        );
+                    })}
+                </Card>
+            ) : null}
 
             <Card dark={dark} style={{ marginTop: 10 }}>
                 <Text style={cs.kicker}>KONU BAZINDA</Text>
@@ -459,7 +517,7 @@ export function LiveResultScreen({ navigation, route }) {
                                     })}
                                     {q.explanation ? <Text style={st.expl}>Çözüm: {q.explanation}</Text> : null}
                                     <Text style={[cs.muted, { marginTop: 6 }]}>
-                                        {q.ms ? "Bu soruda " + Math.max(1, Math.round(q.ms / 1000)) + " sn harcadın. " : ""}{tot ? "Katılanların %" + pct(100 * q.stat.correct / tot) + "'i doğru yaptı." : ""}
+                                        {q.ms ? "Bu soruda " + Math.max(1, Math.round(q.ms / 1000)) + " sn harcadın. " : ""}{tot ? "Katılanlarda doğru oranı %" + pct(100 * q.stat.correct / tot) + "." : ""}
                                     </Text>
                                     <View style={{ marginTop: 6 }}><KonuLink navigation={navigation} kpssData={app.kpssData} ders={q.ders} konu={q.konu} dark={dark} /></View>
                                 </View>
@@ -479,7 +537,38 @@ var SERIES = [
     { key: "gy", label: "Genel Yetenek", light: "#eb6834", dark: "#d95926" },
     { key: "gk", label: "Genel Kültür", light: "#1baf7a", dark: "#199e70" }
 ];
-function NetChart({ points, dark }) {
+var VS = [
+    { key: "net", label: "Sen", light: "#2a78d6", dark: "#3987e5" },
+    { key: "avg", label: "Katılan ort.", light: "#eb6834", dark: "#d95926" }
+];
+// Net dağılımı (5 netlik dilimler); senin dilimin turuncu ve "Sen" etiketli
+function NetHist({ rows, dark }) {
+    var W = 340, H = 170, padL = 24, padR = 6, padT = 18, padB = 22;
+    var max = Math.max.apply(null, rows.map(function (r) { return r.n; }).concat([1]));
+    var bw = (W - padL - padR) / rows.length, every = Math.ceil(rows.length / 6);
+    function y(v) { return padT + (H - padT - padB) * (1 - v / max); }
+    var ink = dark ? "#c3c2b7" : "#52514e";
+    return (
+        <Svg width="100%" height={H} viewBox={"0 0 " + W + " " + H} accessibilityLabel="Net dağılımı; senin dilimin işaretli">
+            {[0, max].map(function (t) {
+                return [<Line key={"l" + t} x1={padL} x2={W - padR} y1={y(t)} y2={y(t)} stroke={dark ? "rgba(255,255,255,.08)" : "rgba(0,0,0,.07)"} strokeWidth="1" />,
+                    <SvgText key={"t" + t} x={padL - 4} y={y(t) + 4} fontSize="10" fill={ink} textAnchor="end">{t}</SvgText>];
+            })}
+            {rows.map(function (r, i) {
+                var x = padL + i * bw + 1, w = Math.max(2, bw - 2), top = y(r.n);
+                var col = r.mine ? (dark ? "#d95926" : "#eb6834") : (dark ? "#3987e5" : "#2a78d6");
+                return [
+                    r.n ? <Rect key={"b" + i} x={x} y={top} width={w} height={H - padB - top} rx="3" fill={col} /> : null,
+                    r.mine ? <SvgText key={"m" + i} x={x + w / 2} y={(r.n ? top : H - padB) - 5} fontSize="10" fontWeight="700" fill={ink} textAnchor="middle">Sen</SvgText> : null,
+                    i % every === 0 ? <SvgText key={"x" + i} x={x} y={H - 6} fontSize="9" fill={ink}>{r.from}</SvgText> : null
+                ];
+            })}
+        </Svg>
+    );
+}
+
+function NetChart({ points, dark, series }) {
+    var SER = series || SERIES;
     var W = 340, H = 200, padL = 30, padR = 12, padT = 10, padB = 24, max = 120;
     var n = points.length;
     function x(i) { return padL + (n <= 1 ? (W - padL - padR) / 2 : i * (W - padL - padR) / (n - 1)); }
@@ -492,7 +581,7 @@ function NetChart({ points, dark }) {
                     <SvgText key={"t" + t} x={padL - 4} y={y(t) + 4} fontSize="10" fill={ink} textAnchor="end">{t}</SvgText>];
             })}
             {points.map(function (p, i) { return <SvgText key={"x" + i} x={x(i)} y={H - 6} fontSize="10" fill={ink} textAnchor="middle">{p.label}</SvgText>; })}
-            {SERIES.map(function (s) {
+            {SER.map(function (s) {
                 var col = dark ? s.dark : s.light;
                 var d = points.map(function (p, i) { return (i ? "L" : "M") + x(i) + " " + y(p[s.key]); }).join(" ");
                 return [<Path key={"p" + s.key} d={d} stroke={col} strokeWidth="2" fill="none" />].concat(points.map(function (p, i) {
@@ -695,7 +784,11 @@ export function LiveArchiveScreen({ navigation, route }) {
     var [list, setList] = useState(null);
     var [err, setErr] = useState(null);
     useEffect(function () { C.rpc("live_history").then(setList).catch(setErr); }, []);
-    var p = list ? L.progress(list) : null;
+    // gelişim yalnızca şimdiki kulvardaki denemelerden
+    var track = C.trackOf(app.student);
+    var mineList = list ? list.filter(function (h) { return h.track === track; }) : null;
+    var p = mineList && mineList.length ? L.progress(mineList) : null;
+    var vsAvg = p ? p.points.filter(function (x) { return x.avg != null; }) : [];
     return (
         <ScrollScreen dark={dark}>
             <PageHeader dark={dark} title={tab === "list" ? "Denemelerim" : "Gelişimim"} onBack={function () { navigation.goBack(); }} right={null} />
@@ -715,6 +808,10 @@ export function LiveArchiveScreen({ navigation, route }) {
                     </Card>
                 );
             }) : null}
+            {list && list.length && tab === "progress" && list.length !== mineList.length ? (
+                <Text style={[cs.muted, { marginBottom: 8 }]}>{L.TRACKS[track]} kulvarındaki denemelerin gösteriliyor; diğer kulvardakiler Denemelerim'de.</Text>
+            ) : null}
+            {list && list.length && tab === "progress" && !p ? <Card dark={dark}><Text style={[cs.body, dark && cs.lightMuted]}>{L.TRACKS[track]} kulvarında henüz denemen yok.</Text></Card> : null}
             {list && list.length && tab === "progress" && p ? (
                 <View>
                     <View style={st.stats}>
@@ -733,10 +830,25 @@ export function LiveArchiveScreen({ navigation, route }) {
                             return <Text key={x.exam_id} style={cs.muted}>{x.label}: toplam {L.fmtNet(x.net)} · GY {L.fmtNet(x.gy)} · GK {L.fmtNet(x.gk)}{x.top_pct != null ? " · ilk %" + pct(x.top_pct) : ""}</Text>;
                         })}
                     </Card>
+                    {vsAvg.length ? (
+                        <Card dark={dark} style={{ marginTop: 10 }}>
+                            <Text style={cs.kicker}>KATILANLARA GÖRE</Text>
+                            <Text style={[cs.body, dark && cs.lightMuted]}>Son denemede katılan ortalamasının {vsAvg[vsAvg.length - 1].diff >= 0 ? L.fmtNet(vsAvg[vsAvg.length - 1].diff) + " net üstündesin." : L.fmtNet(-vsAvg[vsAvg.length - 1].diff) + " net altındasın."}</Text>
+                            <View style={[cs.btns, { marginTop: 6 }]}>
+                                {VS.map(function (s) {
+                                    return <View key={s.key} style={{ flexDirection: "row", alignItems: "center", gap: 6 }}><View style={{ width: 10, height: 10, borderRadius: 5, backgroundColor: dark ? s.dark : s.light }} /><Text style={cs.muted}>{s.label}</Text></View>;
+                                })}
+                            </View>
+                            <NetChart points={vsAvg} dark={dark} series={VS} />
+                            {vsAvg.map(function (x) {
+                                return <Text key={x.exam_id} style={cs.muted}>{x.label}: sen {L.fmtNet(x.net)} · ort. {L.fmtNet(x.avg)}{x.p50 != null ? " · medyan " + L.fmtNet(x.p50) : ""} · fark {(x.diff >= 0 ? "+" : "") + L.fmtNet(x.diff)}</Text>;
+                            })}
+                        </Card>
+                    ) : null}
                     <Card dark={dark} style={{ marginTop: 10 }}>
                         <Text style={cs.kicker}>DERS BAZINDA</Text>
                         {Object.keys(p.ders).map(function (d) {
-                            return <Text key={d} style={[cs.body, dark && cs.lightMuted]}><Text style={{ fontWeight: "800" }}>{d}:</Text> {p.ders[d].map(function (x) { return L.fmtNet(x.net); }).join(" → ")}</Text>;
+                            return <Text key={d} style={[cs.body, dark && cs.lightMuted]}><Text style={{ fontWeight: "800" }}>{d}:</Text> {p.ders[d].map(function (x) { return L.fmtNet(x.net) + (x.avg != null ? " (ort. " + L.fmtNet(x.avg) + ")" : ""); }).join(" → ")}</Text>;
                         })}
                     </Card>
                     <Card dark={dark} style={{ marginTop: 10 }}>

@@ -533,7 +533,7 @@
     function dersRows(result, cohort) {
         var mine = (result && result.by_ders) || {};
         var avg = (cohort && cohort.by_ders) || {};
-        var order = LISANS_PLAN.map(function (p) { return p.ders; });
+        var order = DERS_ORDER;
         return Object.keys(mine).map(function (d) {
             var m = mine[d], a = avg[d];
             return { ders: d, c: m.c, w: m.w, b: m.b, n: m.n, net: Number(m.net), avgNet: a ? Number(a.net) : null };
@@ -562,13 +562,16 @@
             return {
                 exam_id: h.exam_id, t: ms(h.starts_at), label: fmtDay(ms(h.starts_at)), title: h.title,
                 net: Number(h.net), gy: Number(h.gy_net), gk: Number(h.gk_net),
-                rank: h.rank, participants: h.participants, top_pct: h.top_pct == null ? null : Number(h.top_pct)
+                rank: h.rank, participants: h.participants, top_pct: h.top_pct == null ? null : Number(h.top_pct),
+                avg: h.cohort_avg == null ? null : Number(h.cohort_avg), p50: h.cohort_p50 == null ? null : Number(h.cohort_p50),
+                diff: h.cohort_avg == null ? null : Math.round((Number(h.net) - Number(h.cohort_avg)) * 100) / 100
             };
         });
         var ders = {};
         list.forEach(function (h, i) {
             Object.keys(h.by_ders || {}).forEach(function (d) {
-                (ders[d] = ders[d] || []).push({ i: i, net: Number(h.by_ders[d].net) });
+                var a = h.cohort_by_ders && h.cohort_by_ders[d];
+                (ders[d] = ders[d] || []).push({ i: i, net: Number(h.by_ders[d].net), avg: a ? Number(a.net) : null });
             });
         });
         var konu = {};
@@ -594,6 +597,86 @@
             else break;
         }
         return { points: points, ders: ders, improved: improved, stuck: stuck, streak: list.length ? streak : 0 };
+    }
+
+    // ---------------------------------------------------------------
+    // Derin analiz (3. aşama): kohortla karşılaştırma
+    // ---------------------------------------------------------------
+    var DERS_ORDER = ["Türkçe", "Matematik", "Geometri", "Tarih", "Coğrafya", "Vatandaşlık", "Güncel Bilgiler"];
+    function analysisOf(cohort) { return (cohort && cohort.analysis) || {}; }
+
+    // Net dağılımı: 5 netlik dilimler, aradaki boş dilimler de (grafik kesintisiz olsun)
+    function histRows(cohort, myNet) {
+        var h = analysisOf(cohort).hist || [];
+        if (!h.length) return [];
+        var map = {}, lo = Infinity, hi = -Infinity;
+        h.forEach(function (x) { map[x[0]] = x[1]; lo = Math.min(lo, x[0]); hi = Math.max(hi, x[0]); });
+        var mine = myNet == null ? null : Math.floor(Number(myNet) / 5) * 5, out = [], b;
+        if (mine != null) { lo = Math.min(lo, mine); hi = Math.max(hi, mine); }
+        for (b = lo; b <= hi; b += 5) out.push({ from: b, to: b + 5, n: map[b] || 0, mine: b === mine });
+        return out;
+    }
+    // Katılanların yüzde kaçından yüksek net (eşitler sayılmaz)
+    function beatPct(result) {
+        if (!result || !result.rank || !result.participants) return null;
+        if (result.participants < 2) return null;
+        return Math.round(100 * (result.participants - result.rank) / (result.participants - 1));
+    }
+    // Ders karşılaştırması: sen · katılan ort. · ilk %10 · benzer seviye (±5 net)
+    function dersCompare(result, cohort, peers) {
+        var top = analysisOf(cohort).top10 || {}, pb = (peers && peers.by_ders) || {};
+        return dersRows(result, cohort).map(function (r) {
+            return Object.assign({}, r, {
+                top10: top[r.ders] == null ? null : Number(top[r.ders]),
+                peers: pb[r.ders] == null ? null : Number(pb[r.ders]),
+                gapTop: top[r.ders] == null ? null : Math.round((r.net - Number(top[r.ders])) * 100) / 100
+            });
+        });
+    }
+    // Katılanların çoğunun doğru yaptığı ama senin kaçırdığın sorular (en kolaydan)
+    function easyMisses(questions, minPct) {
+        var lim = minPct == null ? 0.7 : minPct;
+        return (questions || []).filter(function (q) {
+            var st = q.stat;
+            if (!st || q.mine === q.answer) return false;
+            var tot = st.correct + st.wrong + st.blank;
+            return tot >= 3 && st.correct / tot >= lim;
+        }).map(function (q) {
+            var tot = q.stat.correct + q.stat.wrong + q.stat.blank;
+            return { no: q.no, ders: q.ders, konu: q.konu, mine: q.mine || null, answer: q.answer, pct: Math.round(100 * q.stat.correct / tot) };
+        }).sort(function (a, b) { return b.pct - a.pct || a.no - b.no; });
+    }
+    // Ders başına soru süresi: sen (cevapladığın sorular) ve katılan ortalaması (cihazda çözenler)
+    function timeRows(questions, cohort) {
+        var avg = analysisOf(cohort).time_by_ders || {}, mine = {};
+        (questions || []).forEach(function (q) {
+            if (!q.ms || !q.mine) return;
+            var m = mine[q.ders] = mine[q.ders] || { sum: 0, n: 0 };
+            m.sum += q.ms; m.n++;
+        });
+        var rows = Object.keys(mine).map(function (d) {
+            var me = Math.round(mine[d].sum / mine[d].n), a = avg[d] == null ? null : Number(avg[d]);
+            return { ders: d, mine: me, avg: a, n: mine[d].n, ratio: a ? me / a : null };
+        });
+        rows.sort(function (x, y) {
+            var ix = DERS_ORDER.indexOf(x.ders), iy = DERS_ORDER.indexOf(y.ders);
+            return (ix < 0 ? 99 : ix) - (iy < 0 ? 99 : iy);
+        });
+        // uzun sürüp yine de yanlış/boş kalan sorular (ortalamanın 1,5 katı)
+        var slow = (questions || []).filter(function (q) {
+            return q.ms && q.mine !== q.answer && q.stat && q.stat.avg_ms && q.ms >= 1.5 * q.stat.avg_ms && q.ms >= 30000;
+        }).map(function (q) { return { no: q.no, ders: q.ders, konu: q.konu, ms: q.ms, avg: q.stat.avg_ms }; })
+            .sort(function (a, b) { return (b.ms - b.avg) - (a.ms - a.avg); }).slice(0, 5);
+        return { rows: rows, slow: slow };
+    }
+    // Türkçe büyük harf (i → İ, ı → I); toUpperCase() i'yi I yapar ("ÖNLISANS" gibi)
+    function trUpper(str) {
+        return String(str == null ? "" : str).replace(/i/g, "İ").replace(/ı/g, "I").toUpperCase();
+    }
+    function fmtSec(msv) {
+        if (msv == null) return "–";
+        var s = Math.round(msv / 1000);
+        return s < 60 ? s + " sn" : (Math.floor(s / 60) + " dk " + (s % 60 ? (s % 60) + " sn" : "")).trim();
     }
 
     // ---------------------------------------------------------------
@@ -648,7 +731,15 @@
         gaps: gaps,
         progress: progress,
         answerText: answerText,
-        parseAnswerText: parseAnswerText
+        parseAnswerText: parseAnswerText,
+        DERS_ORDER: DERS_ORDER,
+        histRows: histRows,
+        beatPct: beatPct,
+        dersCompare: dersCompare,
+        easyMisses: easyMisses,
+        timeRows: timeRows,
+        fmtSec: fmtSec,
+        trUpper: trUpper
     };
 
 export const LiveExam = api;

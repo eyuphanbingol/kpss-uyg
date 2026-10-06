@@ -133,7 +133,7 @@ export function LiveExamCard({ navigation, student, kpssData, dark, full }) {
         var weak = L.weakest(r, 3);
         return (
             <View>
-                <Text style={[s.kicker, { color: "#0f766e" }]}>SON DENEME SONUCUN · {L.fmtDay(L.ms(r.starts_at)).toUpperCase()}</Text>
+                <Text style={[s.kicker, { color: "#0f766e" }]}>SON DENEME SONUCUN · {L.trUpper(L.fmtDay(L.ms(r.starts_at)))}</Text>
                 <Text style={[s.title, dark && s.light]}>{r.title}</Text>
                 <View style={s.rowWrap}>
                     <Text style={[s.big, dark && s.light]}>{L.fmtNet(r.net)} <Text style={s.muted}>net</Text></Text>
@@ -243,7 +243,7 @@ export function LiveExamCard({ navigation, student, kpssData, dark, full }) {
     if (ph === "reg_open") {
         reg = (
             <View style={body ? s.sep : null}>
-                <Text style={[s.kicker, { color: "#4338ca" }]}>CANLI DENEME · {L.TRACKS[e.track].toUpperCase()}</Text>
+                <Text style={[s.kicker, { color: "#4338ca" }]}>CANLI DENEME · {L.trUpper(L.TRACKS[e.track])}</Text>
                 <Text style={[s.title, dark && s.light]}>{when}'te canlı deneme</Text>
                 <Text style={[s.body, dark && s.lightMuted]}>120 soru · 130 dakika · herkes aynı anda · başlamaya {L.fmtLeft(startT - now)}{dash.registered_count ? " · " + dash.registered_count + " kayıtlı" : ""}</Text>
                 <View style={s.btns}><Btn primary disabled={busy} label="Kayıt ol" onPress={register} /></View>

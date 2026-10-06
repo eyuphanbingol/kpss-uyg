@@ -1,9 +1,9 @@
--- CANLI DENEME · PARÇA 1 / 8
--- Supabase SQL Editor'da 1'den 8'e SIRAYLA çalıştır (her parçayı ayrı ayrı: yapıştır → Run).
+-- CANLI DENEME · PARÇA 1 / 9
+-- Supabase SQL Editor'da 1'den 9'e SIRAYLA çalıştır (her parçayı ayrı ayrı: yapıştır → Run).
 -- Bu dosya scripts/split-live-sql.js ile supabase/patch-live-exam.sql'den üretilir. Elle düzenleme.
 
 -- ============================================================
--- CANLI DENEME SINAVI (1. ve 2. aşama)
+-- CANLI DENEME SINAVI (1., 2. ve 3. aşama)
 -- SQL Editor'da çalıştır. Tekrar çalıştırmak güvenlidir (idempotent); 1. aşamayı
 -- daha önce kurduysan bu dosyanın tamamını yeniden çalıştırman yeterli.
 --
@@ -135,6 +135,9 @@ create table if not exists public.live_cohort (
   top jsonb not null default '[]'::jsonb,
   computed_at timestamptz not null default now()
 );
+
+-- 3. aşama: kohort analizi (net dağılımı, yüzdelikler, ilk %10, cihaz/kâğıt, ders başına süre)
+alter table public.live_cohort add column if not exists analysis jsonb not null default '{}'::jsonb;
 
 create table if not exists public.live_question_stats (
   exam_id uuid not null references public.live_exams(id),

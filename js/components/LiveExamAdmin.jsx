@@ -37,18 +37,22 @@
         const [title, setTitle] = useState("Atanly Canlı Deneme");
         const [day, setDay] = useState(nextSunday());
         const [cap, setCap] = useState("");
+        const [track, setTrack] = useState(props.track || "lisans");
         const [busy, setBusy] = useState(false);
         const [err, setErr] = useState("");
         var notSunday = new Date(day + "T12:00:00Z").getUTCDay() !== 0;
         function save() {
             setBusy(true); setErr("");
-            C.rpc("live_admin_save_exam", { p: { title: title, day: day, track: "lisans", capacity: cap ? Number(cap) : "" } })
+            C.rpc("live_admin_save_exam", { p: { title: title, day: day, track: track, capacity: cap ? Number(cap) : "" } })
                 .then(function (e) { setBusy(false); props.onCreated(e.id); })
                 .catch(function (x) { setBusy(false); setErr(x.message); });
         }
         return (
-            <Box title="Yeni canlı deneme (lisans)">
-                <div className="grid sm:grid-cols-3 gap-3">
+            <Box title="Yeni canlı deneme">
+                <div className="grid sm:grid-cols-4 gap-3">
+                    <label className="text-sm">Kulvar<select className="mt-1 w-full px-3 py-2 rounded-xl border" value={track} onChange={function (e) { setTrack(e.target.value); }}>
+                        {Object.keys(L.TRACKS).map(function (k) { return <option key={k} value={k}>{L.TRACKS[k]}</option>; })}
+                    </select></label>
                     <label className="text-sm">Başlık<input className="mt-1 w-full px-3 py-2 rounded-xl border" value={title} onChange={function (e) { setTitle(e.target.value); }} /></label>
                     <label className="text-sm">Sınav günü<input type="date" className="mt-1 w-full px-3 py-2 rounded-xl border" value={day} onChange={function (e) { setDay(e.target.value); }} /></label>
                     <label className="text-sm">Kontenjan (boş = sınırsız)<input type="number" min="1" className="mt-1 w-full px-3 py-2 rounded-xl border" value={cap} onChange={function (e) { setCap(e.target.value); }} /></label>
@@ -72,7 +76,12 @@
             if (!d) return;
             var imgs = {};
             Object.keys(f).forEach(function (k) { imgs[k] = true; });
-            setCheck(L.validateUpload(d, window.getKpssData ? window.getKpssData() : {}, window.KONU_LABELS || {}, imgs));
+            var v = L.validateUpload(d, window.getKpssData ? window.getKpssData() : {}, window.KONU_LABELS || {}, imgs);
+            if (v.exam && v.exam.track !== exam.track) {
+                v.ok = false;
+                v.errors.unshift("Dosyanın kulvarı '" + (L.TRACKS[v.exam.track] || v.exam.track) + "', bu deneme ise " + L.TRACKS[exam.track] + " kulvarı için. Dosyadaki \"kulvar\" alanını düzelt ya da doğru denemeyi seç.");
+            }
+            setCheck(v);
         }
         function onJson(e) {
             var f = e.target.files && e.target.files[0];
@@ -245,6 +254,7 @@
                     <Btn onClick={props.onBack}>← Liste</Btn>
                     <h1 className="text-2xl font-black">{exam.title}</h1>
                     <span className="text-xs px-2 py-1 rounded-full bg-stone-200 dark:bg-stone-700">{STATUS[exam.status]}</span>
+                    <span className="text-xs px-2 py-1 rounded-full border border-stone-300 dark:border-stone-600">{L.TRACKS[exam.track]}</span>
                 </div>
                 {err ? <p className="text-sm text-rose-600">{err}</p> : null}
                 <Box title="Takvim">
@@ -354,30 +364,120 @@
         );
     }
 
+    // Kohort karşılaştırması: bir kulvarın kesinleşmiş denemeleri yan yana
+    function Trends(props) {
+        const [track, setTrack] = useState(props.track);
+        const [rows, setRows] = useState(null);
+        const [err, setErr] = useState("");
+        useEffect(function () {
+            setRows(null);
+            C.rpc("live_admin_trends", { p_track: track }).then(setRows).catch(function (x) { setErr(x.message); });
+        }, [track]);
+        var dersler = [];
+        (rows || []).forEach(function (r) { Object.keys(r.by_ders || {}).forEach(function (d) { if (dersler.indexOf(d) < 0) dersler.push(d); }); });
+        dersler.sort(function (a, b) { var ia = L.DERS_ORDER.indexOf(a), ib = L.DERS_ORDER.indexOf(b); return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib); });
+        function n(v) { return v == null ? "–" : L.fmtNet(v); }
+        var dark = document.documentElement.classList.contains("dark");
+        return (
+            <div className="space-y-4">
+                <div className="flex flex-wrap items-center gap-3">
+                    <Btn onClick={props.onBack}>← Liste</Btn>
+                    <h1 className="text-2xl font-black">Denemeleri karşılaştır</h1>
+                </div>
+                <div className="flex flex-wrap gap-2" role="group" aria-label="Kulvar filtresi">
+                    {Object.keys(L.TRACKS).map(function (k) { return <Btn key={k} primary={track === k} onClick={function () { setTrack(k); }}>{L.TRACKS[k]}</Btn>; })}
+                </div>
+                {err ? <p className="text-sm text-rose-600">{err}</p> : null}
+                <Box title={"Katılım ve net · " + L.TRACKS[track]}>
+                    {!rows ? "Yükleniyor…" : !rows.length ? "Bu kulvarda kesinleşmiş deneme yok." : (
+                        <div className="overflow-x-auto">
+                            <table className="w-full text-sm">
+                                <thead><tr className="text-left text-xs text-stone-500">
+                                    <th className="py-1 pr-3">Deneme</th><th className="pr-3">Kayıt → katılım</th><th className="pr-3 min-w-[180px]">Ortalama net</th>
+                                    <th className="pr-3">Medyan</th><th className="pr-3">İlk %10 sınırı</th><th className="pr-3">İlk %10 ort.</th><th className="pr-3">Cihaz / kâğıt ort.</th>
+                                </tr></thead>
+                                <tbody>{rows.map(function (r) {
+                                    var a = r.analysis || {}, pc = a.pct || {}, m = a.by_mode || {};
+                                    var w = Math.max(0, Math.min(100, (Number(r.avg_net) || 0) / 120 * 100));
+                                    return (
+                                        <tr key={r.id} className="border-t border-stone-200 dark:border-stone-700">
+                                            <td className="py-1.5 pr-3"><b>{r.title}</b><span className="block text-xs text-stone-500">{L.fmtDate(L.ms(r.starts_at))}</span></td>
+                                            <td className="pr-3">{r.registered} → {r.participants}</td>
+                                            <td className="pr-3">
+                                                <span className="inline-flex items-center gap-2 w-full">
+                                                    <span className="h-2 rounded-full" style={{ width: w + "%", minWidth: 4, maxWidth: 120, background: dark ? "#3987e5" : "#2a78d6" }} aria-hidden="true" />
+                                                    <b>{n(r.avg_net)}</b>
+                                                </span>
+                                            </td>
+                                            <td className="pr-3">{n(pc.p50)}</td><td className="pr-3">{n(pc.p90)}</td><td className="pr-3">{n(a.top10_net)}</td>
+                                            <td className="pr-3">{m.device ? n(m.device.avg_net) + " (" + m.device.n + ")" : "–"} / {m.paper ? n(m.paper.avg_net) + " (" + m.paper.n + ")" : "–"}</td>
+                                        </tr>
+                                    );
+                                })}</tbody>
+                            </table>
+                        </div>
+                    )}
+                </Box>
+                {rows && rows.length ? (
+                    <Box title="Ders ortalamaları (katılan ortalaması · ilk %10)">
+                        <div className="overflow-x-auto">
+                            <table className="w-full text-sm">
+                                <thead><tr className="text-left text-xs text-stone-500"><th className="py-1 pr-3">Ders</th>{rows.map(function (r) { return <th key={r.id} className="pr-3">{L.fmtDay(L.ms(r.starts_at))}</th>; })}</tr></thead>
+                                <tbody>{dersler.map(function (d) {
+                                    return (
+                                        <tr key={d} className="border-t border-stone-200 dark:border-stone-700">
+                                            <td className="py-1.5 pr-3 font-semibold">{d}</td>
+                                            {rows.map(function (r) {
+                                                var a = r.by_ders && r.by_ders[d], t = r.analysis && r.analysis.top10 && r.analysis.top10[d];
+                                                return <td key={r.id} className="pr-3">{a ? n(a.net) : "–"}<span className="text-xs text-stone-500">{t != null ? " · " + n(t) : ""}</span></td>;
+                                            })}
+                                        </tr>
+                                    );
+                                })}</tbody>
+                            </table>
+                        </div>
+                        <p className="text-xs text-stone-500 mt-2">Bir dersin ortalaması haftadan haftaya belirgin düşüyorsa o derste sorular zorlaşmış ya da konu eksikleri birikmiş olabilir; soru istatistiklerinden kontrol et.</p>
+                    </Box>
+                ) : null}
+            </div>
+        );
+    }
+
     function LiveExamAdmin() {
         const [list, setList] = useState(null);
         const [err, setErr] = useState("");
         const [mode, setMode] = useState("list");
         const [sel, setSel] = useState(null);
+        const [track, setTrack] = useState("");
         function load() { C.rpc("live_admin_list").then(setList).catch(function (x) { setErr(x.message); }); }
         useEffect(load, []);
         if (mode === "detail" && sel) return <Detail id={sel} onBack={function () { setMode("list"); load(); }} />;
+        if (mode === "trends") return <Trends track={track || "lisans"} onBack={function () { setMode("list"); }} />;
+        var shown = (list || []).filter(function (e) { return !track || e.track === track; });
         return (
             <div className="space-y-4">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                     <h1 className="text-2xl md:text-3xl font-black gradient-text">🕒 Canlı Deneme</h1>
-                    <Btn primary onClick={function () { setMode("create"); }}>Yeni deneme</Btn>
+                    <div className="flex gap-2">
+                        <Btn onClick={function () { setMode("trends"); }}>📊 Denemeleri karşılaştır</Btn>
+                        <Btn primary onClick={function () { setMode("create"); }}>Yeni deneme</Btn>
+                    </div>
                 </div>
                 {err ? <p className="text-sm text-rose-600">{err} (supabase/patch-live-exam.sql çalıştırıldı mı?)</p> : null}
-                {mode === "create" ? <CreateForm onCancel={function () { setMode("list"); }} onCreated={function (id) { setSel(id); setMode("detail"); }} /> : null}
+                <div className="flex flex-wrap gap-2" role="group" aria-label="Kulvar filtresi">
+                    {[["", "Tümü"]].concat(Object.keys(L.TRACKS).map(function (k) { return [k, L.TRACKS[k]]; })).map(function (t) {
+                        return <Btn key={t[0]} primary={track === t[0]} onClick={function () { setTrack(t[0]); }}>{t[1]}</Btn>;
+                    })}
+                </div>
+                {mode === "create" ? <CreateForm track={track || "lisans"} onCancel={function () { setMode("list"); }} onCreated={function (id) { setSel(id); setMode("detail"); }} /> : null}
                 <Box title="Denemeler">
-                    {!list ? "Yükleniyor…" : !list.length ? "Henüz deneme yok." : (
+                    {!list ? "Yükleniyor…" : !shown.length ? "Henüz deneme yok." : (
                         <ul className="space-y-2">
-                            {list.map(function (e) {
+                            {shown.map(function (e) {
                                 return (
                                     <li key={e.id}>
                                         <button type="button" className="w-full text-left rounded-xl border border-stone-200 dark:border-stone-700 p-3 hover:bg-white/60 dark:hover:bg-stone-800/60" onClick={function () { setSel(e.id); setMode("detail"); }}>
-                                            <span className="font-bold">{e.title}</span> <span className="text-xs px-2 py-0.5 rounded-full bg-stone-200 dark:bg-stone-700 ml-1">{STATUS[e.status]}</span>
+                                            <span className="font-bold">{e.title}</span> <span className="text-xs px-2 py-0.5 rounded-full bg-stone-200 dark:bg-stone-700 ml-1">{STATUS[e.status]}</span> <span className="text-xs px-2 py-0.5 rounded-full border border-stone-300 dark:border-stone-600 ml-1">{L.TRACKS[e.track]}</span>
                                             <span className="block text-xs text-stone-500 mt-0.5">{dt(e.starts_at)} · {e.registered} kayıtlı{e.waitlist ? " · " + e.waitlist + " yedek" : ""} · {e.questions}/120 soru{e.participants ? " · " + e.participants + " katılımcı · ort. net " + L.fmtNet(e.avg_net) : ""}</span>
                                         </button>
                                     </li>

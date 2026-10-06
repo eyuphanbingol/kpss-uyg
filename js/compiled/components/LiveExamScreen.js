@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:64025:u2evdz*/
+/*jsx:babel-7.29.9-react-classic:75810:13ix9wr*/
 (function () {
   const {
     useState,
@@ -493,6 +493,109 @@
   // ============================================================
   // SONUÇ RAPORU
   // ============================================================
+  // Net dağılımı: 5 netlik dilimler; senin dilimin turuncu ve "Sen" etiketli (renk tek başına değil)
+  var C_BLUE = {
+      light: "#2a78d6",
+      dark: "#3987e5"
+    },
+    C_ORANGE = {
+      light: "#eb6834",
+      dark: "#d95926"
+    };
+  function NetHistogram(props) {
+    var rows = props.rows,
+      dark = props.dark;
+    const [hover, setHover] = useState(null);
+    var W = 640,
+      H = 200,
+      padL = 34,
+      padR = 10,
+      padT = 22,
+      padB = 28;
+    var max = Math.max.apply(null, rows.map(function (r) {
+      return r.n;
+    }).concat([1]));
+    var bw = (W - padL - padR) / rows.length;
+    function y(v) {
+      return padT + (H - padT - padB) * (1 - v / max);
+    }
+    var ink = dark ? "#c3c2b7" : "#52514e",
+      grid = dark ? "rgba(255,255,255,.08)" : "rgba(0,0,0,.07)";
+    var every = Math.ceil(rows.length / 10);
+    var ticks = max <= 4 ? Array.from({
+      length: max + 1
+    }, function (_, i) {
+      return i;
+    }) : [0, Math.round(max / 2), max];
+    return /*#__PURE__*/React.createElement("div", {
+      className: "relative"
+    }, /*#__PURE__*/React.createElement("svg", {
+      viewBox: "0 0 " + W + " " + H,
+      className: "w-full h-auto",
+      role: "img",
+      "aria-label": props.label,
+      onMouseLeave: function () {
+        setHover(null);
+      }
+    }, ticks.map(function (t) {
+      return /*#__PURE__*/React.createElement("g", {
+        key: t
+      }, /*#__PURE__*/React.createElement("line", {
+        x1: padL,
+        x2: W - padR,
+        y1: y(t),
+        y2: y(t),
+        stroke: grid
+      }), /*#__PURE__*/React.createElement("text", {
+        x: padL - 6,
+        y: y(t) + 4,
+        textAnchor: "end",
+        fontSize: "11",
+        fill: ink
+      }, t));
+    }), rows.map(function (r, i) {
+      var x = padL + i * bw + 1,
+        w = Math.max(2, bw - 2),
+        top = y(r.n),
+        col = r.mine ? dark ? C_ORANGE.dark : C_ORANGE.light : dark ? C_BLUE.dark : C_BLUE.light;
+      var h = H - padB - top;
+      return /*#__PURE__*/React.createElement("g", {
+        key: r.from
+      }, r.n ? /*#__PURE__*/React.createElement("path", {
+        d: "M" + x + " " + (H - padB) + " V" + (top + 4) + " Q" + x + " " + top + " " + (x + 4) + " " + top + " H" + (x + w - 4) + " Q" + (x + w) + " " + top + " " + (x + w) + " " + (top + 4) + " V" + (H - padB) + " Z",
+        fill: col,
+        opacity: hover == null || hover === i ? 1 : 0.55
+      }) : null, r.mine ? /*#__PURE__*/React.createElement("text", {
+        x: x + w / 2,
+        y: (r.n ? top : H - padB) - 6,
+        textAnchor: "middle",
+        fontSize: "11",
+        fontWeight: "700",
+        fill: ink
+      }, "Sen") : null, i % every === 0 ? /*#__PURE__*/React.createElement("text", {
+        x: x,
+        y: H - 10,
+        fontSize: "10",
+        fill: ink
+      }, r.from) : null, /*#__PURE__*/React.createElement("rect", {
+        x: x - 1,
+        y: padT,
+        width: bw,
+        height: H - padT - padB,
+        fill: "transparent",
+        tabIndex: "0",
+        onMouseEnter: function () {
+          setHover(i);
+        },
+        onFocus: function () {
+          setHover(i);
+        },
+        "aria-label": r.from + "–" + r.to + " net: " + r.n + " kişi"
+      }));
+    })), hover != null ? /*#__PURE__*/React.createElement("div", {
+      className: "absolute top-0 right-2 rounded-xl bg-white dark:bg-stone-800 shadow-lg border border-stone-200 dark:border-stone-700 px-3 py-2 text-xs"
+    }, /*#__PURE__*/React.createElement("b", null, rows[hover].from, "\u2013", rows[hover].to, " net"), ": ", rows[hover].n, " ki\u015Fi", rows[hover].mine ? " · sen buradasın" : "") : null);
+  }
   function ResultReport(props) {
     var examId = props.examId;
     const [data, setData] = useState(null);
@@ -570,7 +673,13 @@
     var exam = data.exam;
     var coh = data.cohort;
     var finalized = exam.finalized;
-    var dersRows = L.dersRows(r, coh);
+    var dersRows = L.dersCompare(r, coh, data.peers);
+    var hasTop = dersRows.some(function (d) {
+        return d.top10 != null;
+      }),
+      hasPeers = !!data.peers;
+    var an = coh && coh.analysis || {};
+    var dark = document.documentElement.classList.contains("dark");
     var konuRows = L.konuRows(r, coh);
     var weak = L.weakest(r, 3);
     var qs = review && review.questions || [];
@@ -595,6 +704,21 @@
     var timed = qs.filter(function (q) {
       return q.ms > 0;
     });
+    var hist = finalized ? L.histRows(coh, r.net) : [];
+    var beat = finalized ? L.beatPct(r) : null;
+    var easy = L.easyMisses(qs).slice(0, 8);
+    var tm = L.timeRows(qs, coh);
+    var modes = an.by_mode || {};
+    function jump(no) {
+      setFilter("hepsi");
+      setOpenQ(no);
+      setTimeout(function () {
+        var el = document.getElementById("lq-" + no);
+        if (el) el.scrollIntoView({
+          block: "center"
+        });
+      }, 50);
+    }
     return /*#__PURE__*/React.createElement("div", {
       className: "space-y-4"
     }, /*#__PURE__*/React.createElement("header", null, /*#__PURE__*/React.createElement(Kicker, null, L.TRACKS[exam.track], " \xB7 ", L.fmtDate(L.ms(exam.starts_at)), " \xB7 ", r.mode === "paper" ? "kâğıtta çözüldü" : "cihazda çözüldü"), /*#__PURE__*/React.createElement("h1", {
@@ -626,7 +750,33 @@
       label: "Genel Kültür net" + (coh ? " · ort. " + L.fmtNet(coh.avg_gk) : "")
     })), !finalized ? /*#__PURE__*/React.createElement("p", {
       className: "plan-note mt-3"
-    }, "Genel s\u0131ralama ve kat\u0131lan ortalamalar\u0131 ", L.fmtClock(L.ms(exam.ranking_at)), "'ta kesinle\u015Fir; k\xE2\u011F\u0131tta \xE7\xF6zenlerin okutmas\u0131 o saate kadar s\xFCrer.") : null), weak.length ? /*#__PURE__*/React.createElement(Panel, {
+    }, "Genel s\u0131ralama ve kat\u0131lan ortalamalar\u0131 ", L.fmtClock(L.ms(exam.ranking_at)), "'ta kesinle\u015Fir; k\xE2\u011F\u0131tta \xE7\xF6zenlerin okutmas\u0131 o saate kadar s\xFCrer.") : null), finalized && hist.length ? /*#__PURE__*/React.createElement(Panel, {
+      label: "Kat\u0131lanlar aras\u0131nda"
+    }, /*#__PURE__*/React.createElement(Kicker, null, "Kat\u0131lanlar aras\u0131nda \xB7 net da\u011F\u0131l\u0131m\u0131"), /*#__PURE__*/React.createElement("p", {
+      className: "text-lg font-bold mt-1"
+    }, beat != null ? "Senden düşük net yapanların oranı: %" + beat : "Sıralaman " + r.rank + " / " + r.participants + "."), /*#__PURE__*/React.createElement("p", {
+      className: "text-sm text-stone-600 dark:text-stone-300 mt-1"
+    }, an.pct ? "Medyan " + L.fmtNet(an.pct.p50) + " · ilk %25'in sınırı " + L.fmtNet(an.pct.p75) + " · ilk %10'un sınırı " + L.fmtNet(an.pct.p90) + " net." : "", an.top10_net != null ? " İlk %10'un ortalaması " + L.fmtNet(an.top10_net) + " net." : ""), /*#__PURE__*/React.createElement("div", {
+      className: "mt-3 max-w-2xl"
+    }, /*#__PURE__*/React.createElement(NetHistogram, {
+      rows: hist,
+      dark: dark,
+      label: "Net dağılımı: " + r.participants + " katılımcı, 5 netlik dilimler; senin dilimin işaretli"
+    })), /*#__PURE__*/React.createElement("details", {
+      className: "mt-2 text-xs"
+    }, /*#__PURE__*/React.createElement("summary", {
+      className: "cursor-pointer font-semibold"
+    }, "Tablo olarak g\xF6ster"), /*#__PURE__*/React.createElement("table", {
+      className: "mt-2"
+    }, /*#__PURE__*/React.createElement("tbody", null, hist.map(function (h) {
+      return /*#__PURE__*/React.createElement("tr", {
+        key: h.from
+      }, /*#__PURE__*/React.createElement("td", {
+        className: "pr-4"
+      }, h.from, "\u2013", h.to, " net"), /*#__PURE__*/React.createElement("td", null, h.n, " ki\u015Fi", h.mine ? " ← sen" : ""));
+    })))), modes.device && modes.paper ? /*#__PURE__*/React.createElement("p", {
+      className: "text-xs text-stone-500 mt-2"
+    }, "Cihazda \xE7\xF6zenler (", modes.device.n, " ki\u015Fi) ortalamas\u0131 ", L.fmtNet(modes.device.avg_net), " \xB7 k\xE2\u011F\u0131tta \xE7\xF6zenler (", modes.paper.n, " ki\u015Fi) ", L.fmtNet(modes.paper.avg_net), " net.") : null) : null, weak.length ? /*#__PURE__*/React.createElement(Panel, {
       label: "En zay\u0131f konular"
     }, /*#__PURE__*/React.createElement(Kicker, null, "En zay\u0131f 3 konun \xB7 Eksikler'e eklendi"), /*#__PURE__*/React.createElement("ul", {
       className: "mt-3 space-y-2"
@@ -650,7 +800,7 @@
       className: "text-left text-xs text-stone-500"
     }, /*#__PURE__*/React.createElement("th", {
       className: "py-1"
-    }, "Ders"), /*#__PURE__*/React.createElement("th", null, "D"), /*#__PURE__*/React.createElement("th", null, "Y"), /*#__PURE__*/React.createElement("th", null, "B"), /*#__PURE__*/React.createElement("th", null, "Net"), /*#__PURE__*/React.createElement("th", null, "Kat\u0131lan ort."))), /*#__PURE__*/React.createElement("tbody", null, dersRows.map(function (d) {
+    }, "Ders"), /*#__PURE__*/React.createElement("th", null, "D"), /*#__PURE__*/React.createElement("th", null, "Y"), /*#__PURE__*/React.createElement("th", null, "B"), /*#__PURE__*/React.createElement("th", null, "Net"), /*#__PURE__*/React.createElement("th", null, "Kat\u0131lan ort."), hasTop ? /*#__PURE__*/React.createElement("th", null, "\u0130lk %10") : null, hasPeers ? /*#__PURE__*/React.createElement("th", null, "Benzer seviye") : null)), /*#__PURE__*/React.createElement("tbody", null, dersRows.map(function (d) {
       return /*#__PURE__*/React.createElement("tr", {
         key: d.ders,
         className: "border-t border-stone-200/70 dark:border-stone-700"
@@ -658,8 +808,60 @@
         className: "py-1.5 font-semibold"
       }, d.ders), /*#__PURE__*/React.createElement("td", null, d.c), /*#__PURE__*/React.createElement("td", null, d.w), /*#__PURE__*/React.createElement("td", null, d.b), /*#__PURE__*/React.createElement("td", {
         className: "font-bold"
-      }, L.fmtNet(d.net)), /*#__PURE__*/React.createElement("td", null, d.avgNet == null ? "–" : L.fmtNet(d.avgNet)));
-    })))), /*#__PURE__*/React.createElement(Panel, {
+      }, L.fmtNet(d.net)), /*#__PURE__*/React.createElement("td", null, d.avgNet == null ? "–" : L.fmtNet(d.avgNet)), hasTop ? /*#__PURE__*/React.createElement("td", null, d.top10 == null ? "–" : L.fmtNet(d.top10)) : null, hasPeers ? /*#__PURE__*/React.createElement("td", null, d.peers == null ? "–" : L.fmtNet(d.peers)) : null);
+    })))), hasPeers || hasTop ? /*#__PURE__*/React.createElement("p", {
+      className: "text-xs text-stone-500 -mt-2 px-2"
+    }, hasPeers ? "Benzer seviye: netin ±5 içinde kalan " + data.peers.n + " katılımcının ortalaması. " : "", hasTop ? "İlk %10: en yüksek net yapan " + an.top10_n + " kişinin ortalaması." : "") : null, easy.length ? /*#__PURE__*/React.createElement(Panel, {
+      label: "\xC7o\u011Funlu\u011Fun yapt\u0131\u011F\u0131 ama senin ka\xE7\u0131rd\u0131\u011F\u0131n sorular"
+    }, /*#__PURE__*/React.createElement(Kicker, null, "\xC7o\u011Funlu\u011Fun yapt\u0131\u011F\u0131, senin ka\xE7\u0131rd\u0131\u011F\u0131n sorular"), /*#__PURE__*/React.createElement("p", {
+      className: "text-sm text-stone-600 dark:text-stone-300 mt-1"
+    }, "Bu sorular kat\u0131lanlar\u0131n \xE7o\u011Fu i\xE7in kolayd\u0131; en h\u0131zl\u0131 puan kazanaca\u011F\u0131n yer buras\u0131."), /*#__PURE__*/React.createElement("ul", {
+      className: "mt-2 space-y-1 text-sm"
+    }, easy.map(function (q) {
+      return /*#__PURE__*/React.createElement("li", {
+        key: q.no
+      }, /*#__PURE__*/React.createElement("button", {
+        type: "button",
+        className: "text-left hover:underline",
+        onClick: function () {
+          jump(q.no);
+        }
+      }, "Soru ", q.no, " \xB7 ", q.ders, " / ", konuName(q.konu), " \u2014 kat\u0131lanlarda do\u011Fru oran\u0131 %", q.pct, " \xB7 ", q.mine ? "senin cevabın " + q.mine : "boş bıraktın"));
+    }))) : null, tm.rows.length ? /*#__PURE__*/React.createElement(Panel, {
+      label: "S\xFCre"
+    }, /*#__PURE__*/React.createElement(Kicker, null, "Soru ba\u015F\u0131na s\xFCre"), /*#__PURE__*/React.createElement("table", {
+      className: "w-full text-sm mt-2"
+    }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", {
+      className: "text-left text-xs text-stone-500"
+    }, /*#__PURE__*/React.createElement("th", {
+      className: "py-1"
+    }, "Ders"), /*#__PURE__*/React.createElement("th", null, "Sen"), /*#__PURE__*/React.createElement("th", null, "Kat\u0131lan ort."), /*#__PURE__*/React.createElement("th", null))), /*#__PURE__*/React.createElement("tbody", null, tm.rows.map(function (t) {
+      var note = t.ratio == null ? "" : t.ratio > 1.25 ? "yavaş" : t.ratio < 0.75 ? "hızlı" : "";
+      return /*#__PURE__*/React.createElement("tr", {
+        key: t.ders,
+        className: "border-t border-stone-200/70 dark:border-stone-700"
+      }, /*#__PURE__*/React.createElement("td", {
+        className: "py-1.5 font-semibold"
+      }, t.ders), /*#__PURE__*/React.createElement("td", null, L.fmtSec(t.mine)), /*#__PURE__*/React.createElement("td", null, L.fmtSec(t.avg)), /*#__PURE__*/React.createElement("td", {
+        className: "text-xs text-stone-500"
+      }, note));
+    }))), tm.slow.length ? /*#__PURE__*/React.createElement("div", {
+      className: "mt-3"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "text-sm font-semibold"
+    }, "Uzun s\xFCr\xFCp yine de ka\xE7\u0131rd\u0131\u011F\u0131n sorular"), /*#__PURE__*/React.createElement("ul", {
+      className: "mt-1 space-y-1 text-sm"
+    }, tm.slow.map(function (q) {
+      return /*#__PURE__*/React.createElement("li", {
+        key: q.no
+      }, /*#__PURE__*/React.createElement("button", {
+        type: "button",
+        className: "text-left hover:underline",
+        onClick: function () {
+          jump(q.no);
+        }
+      }, "Soru ", q.no, " \xB7 ", q.ders, " \u2014 ", L.fmtSec(q.ms), " (ortalama ", L.fmtSec(q.avg), ")"));
+    }))) : null) : null, /*#__PURE__*/React.createElement(Panel, {
       label: "Konu baz\u0131nda"
     }, /*#__PURE__*/React.createElement(Kicker, null, "Konu baz\u0131nda"), Object.keys(byDers).map(function (d) {
       return /*#__PURE__*/React.createElement("div", {
@@ -731,6 +933,7 @@
       var tot = q.stat ? q.stat.correct + q.stat.wrong + q.stat.blank : 0;
       return /*#__PURE__*/React.createElement("li", {
         key: q.no,
+        id: "lq-" + q.no,
         className: "rounded-2xl border border-stone-200 dark:border-stone-700 bg-white/70 dark:bg-stone-900/50"
       }, /*#__PURE__*/React.createElement("button", {
         type: "button",
@@ -766,7 +969,7 @@
         className: "mt-3 p-3 rounded-xl bg-amber-50 dark:bg-amber-950/30 whitespace-pre-line"
       }, /*#__PURE__*/React.createElement("b", null, "\xC7\xF6z\xFCm:"), " ", q.explanation) : null, /*#__PURE__*/React.createElement("p", {
         className: "mt-2 text-xs text-stone-500"
-      }, q.ms ? "Bu soruda " + Math.max(1, Math.round(q.ms / 1000)) + " sn harcadın" + (q.stat && q.stat.avg_ms ? " (ortalama " + Math.round(q.stat.avg_ms / 1000) + " sn)" : "") + ". " : "", tot ? "Katılanların %" + pct(100 * q.stat.correct / tot) + "'i doğru yaptı." : ""), /*#__PURE__*/React.createElement("div", {
+      }, q.ms ? "Bu soruda " + Math.max(1, Math.round(q.ms / 1000)) + " sn harcadın" + (q.stat && q.stat.avg_ms ? " (ortalama " + Math.round(q.stat.avg_ms / 1000) + " sn)" : "") + ". " : "", tot ? "Katılanlarda doğru oranı %" + pct(100 * q.stat.correct / tot) + "." : ""), /*#__PURE__*/React.createElement("div", {
         className: "mt-2"
       }, /*#__PURE__*/React.createElement(KonuLink, {
         ders: q.ders,
@@ -847,6 +1050,17 @@
     label: "Genel Kültür",
     light: "#1baf7a",
     dark: "#199e70"
+  }];
+  var VS = [{
+    key: "net",
+    label: "Sen",
+    light: "#2a78d6",
+    dark: "#3987e5"
+  }, {
+    key: "avg",
+    label: "Katılan ort.",
+    light: "#eb6834",
+    dark: "#d95926"
   }];
   function LineChart(props) {
     var pts = props.points;
@@ -982,7 +1196,16 @@
     if (!list) return /*#__PURE__*/React.createElement(Panel, {
       label: "Geli\u015Fim"
     }, /*#__PURE__*/React.createElement("p", null, "Y\xFCkleniyor\u2026"));
-    var p = L.progress(list);
+    // kulvar değiştirdiysen gelişim yalnızca şimdiki kulvarındaki denemelerden hesaplanır
+    var track = C.trackOf(props.student);
+    var mine = list.filter(function (h) {
+      return h.track === track;
+    });
+    var otherTracks = list.length - mine.length;
+    var p = L.progress(mine);
+    var vsAvg = p.points.filter(function (x) {
+      return x.avg != null;
+    });
     var dark = document.documentElement.classList.contains("dark");
     var ranked = p.points.filter(function (x) {
       return x.top_pct != null;
@@ -991,7 +1214,9 @@
       className: "space-y-4"
     }, /*#__PURE__*/React.createElement("h1", {
       className: "text-3xl font-display font-black tracking-tight gradient-text"
-    }, "Geli\u015Fimim"), !p.points.length ? /*#__PURE__*/React.createElement(Panel, {
+    }, "Geli\u015Fimim"), otherTracks ? /*#__PURE__*/React.createElement("p", {
+      className: "plan-note"
+    }, L.TRACKS[track], " kulvar\u0131ndaki denemelerin g\xF6steriliyor; ba\u015Fka kulvardaki ", otherTracks, " deneme Denemelerim'de duruyor.") : null, !p.points.length ? /*#__PURE__*/React.createElement(Panel, {
       label: "Bo\u015F"
     }, /*#__PURE__*/React.createElement("p", null, "\u0130lk canl\u0131 denemenden sonra geli\u015Fimin burada g\xF6r\xFCnecek.")) : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
       className: "grid grid-cols-3 gap-2"
@@ -1037,7 +1262,41 @@
       }, /*#__PURE__*/React.createElement("td", {
         className: "py-1"
       }, x.label), /*#__PURE__*/React.createElement("td", null, L.fmtNet(x.net)), /*#__PURE__*/React.createElement("td", null, L.fmtNet(x.gy)), /*#__PURE__*/React.createElement("td", null, L.fmtNet(x.gk)), /*#__PURE__*/React.createElement("td", null, x.rank ? x.rank + "/" + x.participants : "–"), /*#__PURE__*/React.createElement("td", null, x.top_pct != null ? pct(x.top_pct) : "–"));
-    })))), ranked.length ? /*#__PURE__*/React.createElement(Panel, {
+    })))), vsAvg.length ? /*#__PURE__*/React.createElement(Panel, {
+      label: "Kat\u0131lanlara g\xF6re"
+    }, /*#__PURE__*/React.createElement(Kicker, null, "Kat\u0131lanlara g\xF6re"), /*#__PURE__*/React.createElement("p", {
+      className: "text-sm text-stone-600 dark:text-stone-300 mt-1"
+    }, "Son denemede kat\u0131lan ortalamas\u0131n\u0131n ", vsAvg[vsAvg.length - 1].diff >= 0 ? L.fmtNet(vsAvg[vsAvg.length - 1].diff) + " net üstündesin" : L.fmtNet(-vsAvg[vsAvg.length - 1].diff) + " net altındasın", "."), /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-wrap gap-x-4 gap-y-1 mt-2 text-xs",
+      "aria-hidden": "true"
+    }, VS.map(function (s) {
+      return /*#__PURE__*/React.createElement("span", {
+        key: s.key,
+        className: "inline-flex items-center gap-1.5"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "h-2.5 w-2.5 rounded-full",
+        style: {
+          background: dark ? s.dark : s.light
+        }
+      }), s.label);
+    })), /*#__PURE__*/React.createElement(LineChart, {
+      points: vsAvg,
+      series: VS,
+      dark: dark,
+      max: 120,
+      label: "Deneme deneme senin netin ve kat\u0131lanlar\u0131n ortalamas\u0131"
+    }), /*#__PURE__*/React.createElement("table", {
+      className: "w-full text-xs mt-3"
+    }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", {
+      className: "text-left text-stone-500"
+    }, /*#__PURE__*/React.createElement("th", null, "Deneme"), /*#__PURE__*/React.createElement("th", null, "Sen"), /*#__PURE__*/React.createElement("th", null, "Kat\u0131lan ort."), /*#__PURE__*/React.createElement("th", null, "Medyan"), /*#__PURE__*/React.createElement("th", null, "Fark"))), /*#__PURE__*/React.createElement("tbody", null, vsAvg.map(function (x) {
+      return /*#__PURE__*/React.createElement("tr", {
+        key: x.exam_id,
+        className: "border-t border-stone-200/70 dark:border-stone-700"
+      }, /*#__PURE__*/React.createElement("td", {
+        className: "py-1"
+      }, x.label), /*#__PURE__*/React.createElement("td", null, L.fmtNet(x.net)), /*#__PURE__*/React.createElement("td", null, L.fmtNet(x.avg)), /*#__PURE__*/React.createElement("td", null, x.p50 == null ? "–" : L.fmtNet(x.p50)), /*#__PURE__*/React.createElement("td", null, (x.diff >= 0 ? "+" : "") + L.fmtNet(x.diff)));
+    })))) : null, ranked.length ? /*#__PURE__*/React.createElement(Panel, {
       label: "Y\xFCzdelik dilim"
     }, /*#__PURE__*/React.createElement(Kicker, null, "Y\xFCzdelik dilim (k\xFC\xE7\xFCk say\u0131 daha iyi)"), /*#__PURE__*/React.createElement("p", {
       className: "mt-2 text-sm"
@@ -1051,7 +1310,7 @@
       return /*#__PURE__*/React.createElement("li", {
         key: d
       }, /*#__PURE__*/React.createElement("b", null, d, ":"), " ", p.ders[d].map(function (x) {
-        return L.fmtNet(x.net);
+        return L.fmtNet(x.net) + (x.avg != null ? " (ort. " + L.fmtNet(x.avg) + ")" : "");
       }).join(" → "));
     }))), /*#__PURE__*/React.createElement("div", {
       className: "grid sm:grid-cols-2 gap-4"
@@ -1528,6 +1787,7 @@
         open("result", id);
       }
     }) : null, view === "progress" ? /*#__PURE__*/React.createElement(Progress, {
+      student: props.student,
       kpssData: props.kpssData,
       onKonu: props.onKonu
     }) : null);

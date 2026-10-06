@@ -351,6 +351,46 @@
     // ============================================================
     // SONUÇ RAPORU
     // ============================================================
+    // Net dağılımı: 5 netlik dilimler; senin dilimin turuncu ve "Sen" etiketli (renk tek başına değil)
+    var C_BLUE = { light: "#2a78d6", dark: "#3987e5" }, C_ORANGE = { light: "#eb6834", dark: "#d95926" };
+    function NetHistogram(props) {
+        var rows = props.rows, dark = props.dark;
+        const [hover, setHover] = useState(null);
+        var W = 640, H = 200, padL = 34, padR = 10, padT = 22, padB = 28;
+        var max = Math.max.apply(null, rows.map(function (r) { return r.n; }).concat([1]));
+        var bw = (W - padL - padR) / rows.length;
+        function y(v) { return padT + (H - padT - padB) * (1 - v / max); }
+        var ink = dark ? "#c3c2b7" : "#52514e", grid = dark ? "rgba(255,255,255,.08)" : "rgba(0,0,0,.07)";
+        var every = Math.ceil(rows.length / 10);
+        var ticks = max <= 4 ? Array.from({ length: max + 1 }, function (_, i) { return i; }) : [0, Math.round(max / 2), max];
+        return (
+            <div className="relative">
+                <svg viewBox={"0 0 " + W + " " + H} className="w-full h-auto" role="img" aria-label={props.label} onMouseLeave={function () { setHover(null); }}>
+                    {ticks.map(function (t) { return <g key={t}><line x1={padL} x2={W - padR} y1={y(t)} y2={y(t)} stroke={grid} /><text x={padL - 6} y={y(t) + 4} textAnchor="end" fontSize="11" fill={ink}>{t}</text></g>; })}
+                    {rows.map(function (r, i) {
+                        var x = padL + i * bw + 1, w = Math.max(2, bw - 2), top = y(r.n), col = r.mine ? (dark ? C_ORANGE.dark : C_ORANGE.light) : (dark ? C_BLUE.dark : C_BLUE.light);
+                        var h = H - padB - top;
+                        return (
+                            <g key={r.from}>
+                                {r.n ? <path d={"M" + x + " " + (H - padB) + " V" + (top + 4) + " Q" + x + " " + top + " " + (x + 4) + " " + top + " H" + (x + w - 4) + " Q" + (x + w) + " " + top + " " + (x + w) + " " + (top + 4) + " V" + (H - padB) + " Z"}
+                                    fill={col} opacity={hover == null || hover === i ? 1 : 0.55} /> : null}
+                                {r.mine ? <text x={x + w / 2} y={(r.n ? top : H - padB) - 6} textAnchor="middle" fontSize="11" fontWeight="700" fill={ink}>Sen</text> : null}
+                                {i % every === 0 ? <text x={x} y={H - 10} fontSize="10" fill={ink}>{r.from}</text> : null}
+                                <rect x={x - 1} y={padT} width={bw} height={H - padT - padB} fill="transparent" tabIndex="0"
+                                    onMouseEnter={function () { setHover(i); }} onFocus={function () { setHover(i); }} aria-label={r.from + "–" + r.to + " net: " + r.n + " kişi"} />
+                            </g>
+                        );
+                    })}
+                </svg>
+                {hover != null ? (
+                    <div className="absolute top-0 right-2 rounded-xl bg-white dark:bg-stone-800 shadow-lg border border-stone-200 dark:border-stone-700 px-3 py-2 text-xs">
+                        <b>{rows[hover].from}–{rows[hover].to} net</b>: {rows[hover].n} kişi{rows[hover].mine ? " · sen buradasın" : ""}
+                    </div>
+                ) : null}
+            </div>
+        );
+    }
+
     function ResultReport(props) {
         var examId = props.examId;
         const [data, setData] = useState(null);
@@ -402,7 +442,10 @@
         var exam = data.exam;
         var coh = data.cohort;
         var finalized = exam.finalized;
-        var dersRows = L.dersRows(r, coh);
+        var dersRows = L.dersCompare(r, coh, data.peers);
+        var hasTop = dersRows.some(function (d) { return d.top10 != null; }), hasPeers = !!data.peers;
+        var an = (coh && coh.analysis) || {};
+        var dark = document.documentElement.classList.contains("dark");
         var konuRows = L.konuRows(r, coh);
         var weak = L.weakest(r, 3);
         var qs = (review && review.questions) || [];
@@ -417,6 +460,12 @@
         var byDers = {};
         konuRows.forEach(function (k) { (byDers[k.ders] = byDers[k.ders] || []).push(k); });
         var timed = qs.filter(function (q) { return q.ms > 0; });
+        var hist = finalized ? L.histRows(coh, r.net) : [];
+        var beat = finalized ? L.beatPct(r) : null;
+        var easy = L.easyMisses(qs).slice(0, 8);
+        var tm = L.timeRows(qs, coh);
+        var modes = an.by_mode || {};
+        function jump(no) { setFilter("hepsi"); setOpenQ(no); setTimeout(function () { var el = document.getElementById("lq-" + no); if (el) el.scrollIntoView({ block: "center" }); }, 50); }
 
         return (
             <div className="space-y-4">
@@ -439,6 +488,25 @@
                     {!finalized ? <p className="plan-note mt-3">Genel sıralama ve katılan ortalamaları {L.fmtClock(L.ms(exam.ranking_at))}'ta kesinleşir; kâğıtta çözenlerin okutması o saate kadar sürer.</p> : null}
                 </Panel>
 
+                {finalized && hist.length ? (
+                    <Panel label="Katılanlar arasında">
+                        <Kicker>Katılanlar arasında · net dağılımı</Kicker>
+                        <p className="text-lg font-bold mt-1">{beat != null ? "Senden düşük net yapanların oranı: %" + beat : "Sıralaman " + r.rank + " / " + r.participants + "."}</p>
+                        <p className="text-sm text-stone-600 dark:text-stone-300 mt-1">
+                            {an.pct ? "Medyan " + L.fmtNet(an.pct.p50) + " · ilk %25'in sınırı " + L.fmtNet(an.pct.p75) + " · ilk %10'un sınırı " + L.fmtNet(an.pct.p90) + " net." : ""}
+                            {an.top10_net != null ? " İlk %10'un ortalaması " + L.fmtNet(an.top10_net) + " net." : ""}
+                        </p>
+                        <div className="mt-3 max-w-2xl"><NetHistogram rows={hist} dark={dark} label={"Net dağılımı: " + r.participants + " katılımcı, 5 netlik dilimler; senin dilimin işaretli"} /></div>
+                        <details className="mt-2 text-xs">
+                            <summary className="cursor-pointer font-semibold">Tablo olarak göster</summary>
+                            <table className="mt-2"><tbody>{hist.map(function (h) { return <tr key={h.from}><td className="pr-4">{h.from}–{h.to} net</td><td>{h.n} kişi{h.mine ? " ← sen" : ""}</td></tr>; })}</tbody></table>
+                        </details>
+                        {modes.device && modes.paper ? (
+                            <p className="text-xs text-stone-500 mt-2">Cihazda çözenler ({modes.device.n} kişi) ortalaması {L.fmtNet(modes.device.avg_net)} · kâğıtta çözenler ({modes.paper.n} kişi) {L.fmtNet(modes.paper.avg_net)} net.</p>
+                        ) : null}
+                    </Panel>
+                ) : null}
+
                 {weak.length ? (
                     <Panel label="En zayıf konular">
                         <Kicker>En zayıf 3 konun · Eksikler'e eklendi</Kicker>
@@ -458,19 +526,64 @@
                 <Panel label="Ders bazında">
                     <Kicker>Ders bazında net</Kicker>
                     <table className="w-full text-sm mt-3">
-                        <thead><tr className="text-left text-xs text-stone-500"><th className="py-1">Ders</th><th>D</th><th>Y</th><th>B</th><th>Net</th><th>Katılan ort.</th></tr></thead>
+                        <thead><tr className="text-left text-xs text-stone-500"><th className="py-1">Ders</th><th>D</th><th>Y</th><th>B</th><th>Net</th><th>Katılan ort.</th>{hasTop ? <th>İlk %10</th> : null}{hasPeers ? <th>Benzer seviye</th> : null}</tr></thead>
                         <tbody>
                             {dersRows.map(function (d) {
                                 return (
                                     <tr key={d.ders} className="border-t border-stone-200/70 dark:border-stone-700">
                                         <td className="py-1.5 font-semibold">{d.ders}</td><td>{d.c}</td><td>{d.w}</td><td>{d.b}</td>
                                         <td className="font-bold">{L.fmtNet(d.net)}</td><td>{d.avgNet == null ? "–" : L.fmtNet(d.avgNet)}</td>
+                                        {hasTop ? <td>{d.top10 == null ? "–" : L.fmtNet(d.top10)}</td> : null}
+                                        {hasPeers ? <td>{d.peers == null ? "–" : L.fmtNet(d.peers)}</td> : null}
                                     </tr>
                                 );
                             })}
                         </tbody>
                     </table>
                 </Panel>
+
+                {hasPeers || hasTop ? (
+                    <p className="text-xs text-stone-500 -mt-2 px-2">{hasPeers ? "Benzer seviye: netin ±5 içinde kalan " + data.peers.n + " katılımcının ortalaması. " : ""}{hasTop ? "İlk %10: en yüksek net yapan " + an.top10_n + " kişinin ortalaması." : ""}</p>
+                ) : null}
+
+                {easy.length ? (
+                    <Panel label="Çoğunluğun yaptığı ama senin kaçırdığın sorular">
+                        <Kicker>Çoğunluğun yaptığı, senin kaçırdığın sorular</Kicker>
+                        <p className="text-sm text-stone-600 dark:text-stone-300 mt-1">Bu sorular katılanların çoğu için kolaydı; en hızlı puan kazanacağın yer burası.</p>
+                        <ul className="mt-2 space-y-1 text-sm">
+                            {easy.map(function (q) {
+                                return (
+                                    <li key={q.no}>
+                                        <button type="button" className="text-left hover:underline" onClick={function () { jump(q.no); }}>
+                                            Soru {q.no} · {q.ders} / {konuName(q.konu)} — katılanlarda doğru oranı %{q.pct} · {q.mine ? "senin cevabın " + q.mine : "boş bıraktın"}
+                                        </button>
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </Panel>
+                ) : null}
+
+                {tm.rows.length ? (
+                    <Panel label="Süre">
+                        <Kicker>Soru başına süre</Kicker>
+                        <table className="w-full text-sm mt-2">
+                            <thead><tr className="text-left text-xs text-stone-500"><th className="py-1">Ders</th><th>Sen</th><th>Katılan ort.</th><th></th></tr></thead>
+                            <tbody>{tm.rows.map(function (t) {
+                                var note = t.ratio == null ? "" : t.ratio > 1.25 ? "yavaş" : t.ratio < 0.75 ? "hızlı" : "";
+                                return <tr key={t.ders} className="border-t border-stone-200/70 dark:border-stone-700"><td className="py-1.5 font-semibold">{t.ders}</td><td>{L.fmtSec(t.mine)}</td><td>{L.fmtSec(t.avg)}</td><td className="text-xs text-stone-500">{note}</td></tr>;
+                            })}</tbody>
+                        </table>
+                        {tm.slow.length ? (
+                            <div className="mt-3">
+                                <p className="text-sm font-semibold">Uzun sürüp yine de kaçırdığın sorular</p>
+                                <ul className="mt-1 space-y-1 text-sm">{tm.slow.map(function (q) {
+                                    return <li key={q.no}><button type="button" className="text-left hover:underline" onClick={function () { jump(q.no); }}>Soru {q.no} · {q.ders} — {L.fmtSec(q.ms)} (ortalama {L.fmtSec(q.avg)})</button></li>;
+                                })}</ul>
+                            </div>
+                        ) : null}
+                    </Panel>
+                ) : null}
 
                 <Panel label="Konu bazında">
                     <Kicker>Konu bazında</Kicker>
@@ -532,7 +645,7 @@
                             var state = !q.mine ? "boş" : (q.mine === q.answer ? "doğru" : "yanlış");
                             var tot = q.stat ? (q.stat.correct + q.stat.wrong + q.stat.blank) : 0;
                             return (
-                                <li key={q.no} className="rounded-2xl border border-stone-200 dark:border-stone-700 bg-white/70 dark:bg-stone-900/50">
+                                <li key={q.no} id={"lq-" + q.no} className="rounded-2xl border border-stone-200 dark:border-stone-700 bg-white/70 dark:bg-stone-900/50">
                                     <button type="button" className="w-full text-left p-3 flex items-center gap-3" aria-expanded={open} onClick={function () { setOpenQ(open ? null : q.no); }}>
                                         <span className={"live-state " + (state === "doğru" ? "is-ok" : state === "yanlış" ? "is-bad" : "")}>{q.no}</span>
                                         <span className="min-w-0 flex-1 text-sm"><b>{q.ders}</b> / {konuName(q.konu)} <span className="text-stone-500">· {state}{q.mine ? " (" + q.mine + ")" : ""} · doğru {q.answer}</span></span>
@@ -551,7 +664,7 @@
                                             {q.explanation ? <p className="mt-3 p-3 rounded-xl bg-amber-50 dark:bg-amber-950/30 whitespace-pre-line"><b>Çözüm:</b> {q.explanation}</p> : null}
                                             <p className="mt-2 text-xs text-stone-500">
                                                 {q.ms ? "Bu soruda " + Math.max(1, Math.round(q.ms / 1000)) + " sn harcadın" + (q.stat && q.stat.avg_ms ? " (ortalama " + Math.round(q.stat.avg_ms / 1000) + " sn)" : "") + ". " : ""}
-                                                {tot ? "Katılanların %" + pct(100 * q.stat.correct / tot) + "'i doğru yaptı." : ""}
+                                                {tot ? "Katılanlarda doğru oranı %" + pct(100 * q.stat.correct / tot) + "." : ""}
                                             </p>
                                             <div className="mt-2"><KonuLink ders={q.ders} konu={q.konu} kpssData={props.kpssData} onKonu={props.onKonu} /></div>
                                         </div>
@@ -610,6 +723,10 @@
         { key: "gy", label: "Genel Yetenek", light: "#eb6834", dark: "#d95926" },
         { key: "gk", label: "Genel Kültür", light: "#1baf7a", dark: "#199e70" }
     ];
+    var VS = [
+        { key: "net", label: "Sen", light: "#2a78d6", dark: "#3987e5" },
+        { key: "avg", label: "Katılan ort.", light: "#eb6834", dark: "#d95926" }
+    ];
     function LineChart(props) {
         var pts = props.points;
         var dark = props.dark;
@@ -667,12 +784,18 @@
         useEffect(function () { C.rpc("live_history").then(setList).catch(setErr); }, []);
         if (err) return <Panel label="Gelişim"><p>{err.message}</p></Panel>;
         if (!list) return <Panel label="Gelişim"><p>Yükleniyor…</p></Panel>;
-        var p = L.progress(list);
+        // kulvar değiştirdiysen gelişim yalnızca şimdiki kulvarındaki denemelerden hesaplanır
+        var track = C.trackOf(props.student);
+        var mine = list.filter(function (h) { return h.track === track; });
+        var otherTracks = list.length - mine.length;
+        var p = L.progress(mine);
+        var vsAvg = p.points.filter(function (x) { return x.avg != null; });
         var dark = document.documentElement.classList.contains("dark");
         var ranked = p.points.filter(function (x) { return x.top_pct != null; });
         return (
             <div className="space-y-4">
                 <h1 className="text-3xl font-display font-black tracking-tight gradient-text">Gelişimim</h1>
+                {otherTracks ? <p className="plan-note">{L.TRACKS[track]} kulvarındaki denemelerin gösteriliyor; başka kulvardaki {otherTracks} deneme Denemelerim'de duruyor.</p> : null}
                 {!p.points.length ? <Panel label="Boş"><p>İlk canlı denemenden sonra gelişimin burada görünecek.</p></Panel> : (
                     <>
                         <div className="grid grid-cols-3 gap-2">
@@ -693,6 +816,24 @@
                                 })}</tbody>
                             </table>
                         </Panel>
+                        {vsAvg.length ? (
+                            <Panel label="Katılanlara göre">
+                                <Kicker>Katılanlara göre</Kicker>
+                                <p className="text-sm text-stone-600 dark:text-stone-300 mt-1">
+                                    Son denemede katılan ortalamasının {vsAvg[vsAvg.length - 1].diff >= 0 ? L.fmtNet(vsAvg[vsAvg.length - 1].diff) + " net üstündesin" : L.fmtNet(-vsAvg[vsAvg.length - 1].diff) + " net altındasın"}.
+                                </p>
+                                <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-xs" aria-hidden="true">
+                                    {VS.map(function (s) { return <span key={s.key} className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-full" style={{ background: dark ? s.dark : s.light }} />{s.label}</span>; })}
+                                </div>
+                                <LineChart points={vsAvg} series={VS} dark={dark} max={120} label="Deneme deneme senin netin ve katılanların ortalaması" />
+                                <table className="w-full text-xs mt-3">
+                                    <thead><tr className="text-left text-stone-500"><th>Deneme</th><th>Sen</th><th>Katılan ort.</th><th>Medyan</th><th>Fark</th></tr></thead>
+                                    <tbody>{vsAvg.map(function (x) {
+                                        return <tr key={x.exam_id} className="border-t border-stone-200/70 dark:border-stone-700"><td className="py-1">{x.label}</td><td>{L.fmtNet(x.net)}</td><td>{L.fmtNet(x.avg)}</td><td>{x.p50 == null ? "–" : L.fmtNet(x.p50)}</td><td>{(x.diff >= 0 ? "+" : "") + L.fmtNet(x.diff)}</td></tr>;
+                                    })}</tbody>
+                                </table>
+                            </Panel>
+                        ) : null}
                         {ranked.length ? (
                             <Panel label="Yüzdelik dilim">
                                 <Kicker>Yüzdelik dilim (küçük sayı daha iyi)</Kicker>
@@ -703,7 +844,7 @@
                             <Kicker>Ders bazında net</Kicker>
                             <ul className="mt-2 space-y-1 text-sm">
                                 {Object.keys(p.ders).map(function (d) {
-                                    return <li key={d}><b>{d}:</b> {p.ders[d].map(function (x) { return L.fmtNet(x.net); }).join(" → ")}</li>;
+                                    return <li key={d}><b>{d}:</b> {p.ders[d].map(function (x) { return L.fmtNet(x.net) + (x.avg != null ? " (ort. " + L.fmtNet(x.avg) + ")" : ""); }).join(" → ")}</li>;
                                 })}
                             </ul>
                         </Panel>
@@ -975,7 +1116,7 @@
                 ) : null}
                 {view === "result" && examId ? <ResultReport examId={examId} kpssData={props.kpssData} onKonu={props.onKonu} onBack={function () { open("home"); }} /> : null}
                 {view === "archive" ? <Archive onOpen={function (id) { open("result", id); }} /> : null}
-                {view === "progress" ? <Progress kpssData={props.kpssData} onKonu={props.onKonu} /> : null}
+                {view === "progress" ? <Progress student={props.student} kpssData={props.kpssData} onKonu={props.onKonu} /> : null}
             </div>
         );
     }

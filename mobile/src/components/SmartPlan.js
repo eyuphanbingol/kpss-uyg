@@ -155,7 +155,7 @@ export function SmartPlanCard({ navigation, student, kpssData, dark }) {
     var tomorrow = plan.days[1] && plan.days[1].items.length;
     return (
         <Card dark={dark}>
-            <Text style={[s.kicker, { color: SP.PHASES[phase].color }]}>{SP.PHASES[phase].label.toUpperCase()} DÖNEMİ · SINAVA {plan.daysLeft} GÜN</Text>
+            <Text style={[s.kicker, { color: SP.PHASES[phase].color }]}>{SP.PHASES[phase].label.replace(/i/g, "İ").replace(/ı/g, "I").toUpperCase()} DÖNEMİ · SINAVA {plan.daysLeft} GÜN</Text>
             <Text style={[s.title, dark && s.light]}>Bugünkü programın</Text>
             <View style={s.chips}>
                 <Tap onPress={function () { go(navigation, "Program", { mode: "calendar" }); }} style={[s.chip, dark && s.chipDark]}>

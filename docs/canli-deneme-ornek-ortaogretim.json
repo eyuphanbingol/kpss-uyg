@@ -1,0 +1,1927 @@
+{
+  "kulvar": "ortaogretim",
+  "baslik": "Örnek Canlı Deneme · Ortaöğretim",
+  "sorular": [
+    {
+      "no": 1,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Fiilde Çatı",
+      "metin": "“Gidecek.” fiili nedir?",
+      "siklar": [
+        "Geçişli",
+        "Geçişsiz",
+        "Dönüşlü",
+        "Ettirgen",
+        "Oldurgan"
+      ],
+      "dogru": "B",
+      "cozum": "gitmek nesne almaz → geçişsiz."
+    },
+    {
+      "no": 2,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Anlatım Bozuklukları",
+      "metin": "Anlatım bozuklukları kaç ana grupta incelenir?",
+      "siklar": [
+        "Bir",
+        "Beş",
+        "Dört",
+        "Üç",
+        "İki"
+      ],
+      "dogru": "E",
+      "cozum": "Anlama dayalı ve dil bilgisine dayalı."
+    },
+    {
+      "no": 3,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Paragraf",
+      "metin": "Yazarın okuyucuya vermek istediği mesaja ne denir?",
+      "siklar": [
+        "Konu",
+        "Başlık",
+        "Ana düşünce",
+        "Yardımcı düşünce",
+        "Üslup"
+      ],
+      "dogru": "C",
+      "cozum": "Ana düşünce iletilmek istenen yargıdır."
+    },
+    {
+      "no": 4,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Ses Bilgisi",
+      "metin": "Küçük ünlü uyumu hangi özelliklerle ilgilidir?",
+      "siklar": [
+        "Kalınlık-incelik",
+        "Düzlük-yuvarlaklık",
+        "Sertlik-yumuşaklık",
+        "Sesli sayısı",
+        "Hece sayısı"
+      ],
+      "dogru": "B",
+      "cozum": "ev-ler, okul-lar → düzlük-yuvarlaklık."
+    },
+    {
+      "no": 5,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Sıkça Yapılan Yazım Yanlışları",
+      "metin": "Aşağıdakilerden hangisi doğru yazılmıştır?",
+      "siklar": [
+        "Restaurant",
+        "Restorant",
+        "Restaran",
+        "Restoran",
+        "Restourant"
+      ],
+      "dogru": "D",
+      "cozum": "restoran."
+    },
+    {
+      "no": 6,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Noktalama İşaretleri",
+      "metin": "Sözün bitmediğini göstermek için hangi işaret kullanılır?",
+      "siklar": [
+        "Nokta",
+        "Ünlem",
+        "Kesme",
+        "Virgül",
+        "Üç nokta"
+      ],
+      "dogru": "E",
+      "cozum": "Bilmiyorum ki..."
+    },
+    {
+      "no": 7,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Eylemsi",
+      "metin": "“Sakın gülme!” cümlesinde “gülme” hangi türüdür?",
+      "siklar": [
+        "İsim-fiil",
+        "Kalıcı ad",
+        "Sıfat-fiil",
+        "Zarf-fiil",
+        "Çekimli fiil (olumsuz emir)"
+      ],
+      "dogru": "E",
+      "cozum": "Emir kipinin 2. tekil kişi çekiminde ayrı bir kip ya da kişi eki bulunmaz; “gülme”, gül- fiiline olumsuzluk eki -me getirilerek kurulmuş olumsuz emir çekimidir. Bu yüzden eylemsi değil, çekimli fiildir."
+    },
+    {
+      "no": 8,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Cümlede Anlam",
+      "metin": "“Arabamı sattığım için toplu taşıma kullanıyorum.” cümlesinde hangi anlam ilişkisi vardır?",
+      "siklar": [
+        "Amaç-sonuç",
+        "Karşılaştırma",
+        "Koşul-sonuç",
+        "Neden-sonuç",
+        "Benzetme"
+      ],
+      "dogru": "D",
+      "cozum": "Satmak gerekçe (neden), toplu taşıma sonuçtur."
+    },
+    {
+      "no": 9,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Cümle Türleri",
+      "metin": "“Geldi mi?” cümlesi anlamına göre nedir?",
+      "siklar": [
+        "Olumsuz",
+        "Emir",
+        "Şart",
+        "Ünlem",
+        "Soru"
+      ],
+      "dogru": "E",
+      "cozum": "Soru cümlesi."
+    },
+    {
+      "no": 10,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Tamlamalar",
+      "metin": "“Ne kapağı? → Kitap kapağı.” sorusu hangi tamlama türünü gösterir?",
+      "siklar": [
+        "Zincirleme",
+        "Belirtisiz",
+        "Belirtili",
+        "Takısız",
+        "Sıfat tamlaması"
+      ],
+      "dogru": "B",
+      "cozum": "Belirtisiz tamlamada tamlayan ne? sorusu sorulur."
+    },
+    {
+      "no": 11,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "İsim – Zamir",
+      "metin": "Beş duyudan en az biriyle algılanabilen ad türü hangisidir?",
+      "siklar": [
+        "Soyut ad",
+        "Somut ad",
+        "Özel ad",
+        "Çoğul ad",
+        "Topluluk adı"
+      ],
+      "dogru": "B",
+      "cozum": "masa, rüzgâr, koku, ışık somut ad örnekleridir."
+    },
+    {
+      "no": 12,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Ekler",
+      "metin": "“Bağla-” sözcüğünde kullanılan yapım eki hangi türdendir?",
+      "siklar": [
+        "Çekim eki",
+        "İsimden fiil",
+        "Fiilden isim",
+        "İsimden isim",
+        "Fiilden fiil"
+      ],
+      "dogru": "B",
+      "cozum": "bağ + -la → isimden fiil (-la, -lan, -laş)."
+    },
+    {
+      "no": 13,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Zarf",
+      "metin": "“Pek güzel” ifadesinde “pek” hangi zarf türüdür?",
+      "siklar": [
+        "Durum",
+        "Zaman",
+        "Yer-yön",
+        "Miktar",
+        "Soru"
+      ],
+      "dogru": "D",
+      "cozum": "Ne kadar? sorusuna cevap."
+    },
+    {
+      "no": 14,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Edat – Bağlaç – Ünlem",
+      "metin": "Edat için altın kural nedir?",
+      "siklar": [
+        "Cümleden çıkarılınca anlam bozulur veya değişir.",
+        "Cümleden çıkarılınca anlam bozulmaz.",
+        "Her zaman bağlaçtır.",
+        "Yalnız addan önce gelir.",
+        "Yalnız fiilden sonra gelir."
+      ],
+      "dogru": "A",
+      "cozum": "Edat anlam taşıyan sözcüklerdendir."
+    },
+    {
+      "no": 15,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Sözcükte Anlam",
+      "metin": "“Bire bin katmak” aşağıdakilerden hangisidir?",
+      "siklar": [
+        "Atasözü",
+        "Dolaylama",
+        "İkileme",
+        "Deyim",
+        "Özdeyiş"
+      ],
+      "dogru": "D",
+      "cozum": "Kalıplaşmış söz öbeği deyimdir."
+    },
+    {
+      "no": 16,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Sıfat",
+      "metin": "Adı işaret yoluyla belirten sıfat türü hangisidir?",
+      "siklar": [
+        "Soru sıfatı",
+        "Niteleme sıfatı",
+        "Unvan sıfatı",
+        "Belgisiz sıfat",
+        "İşaret sıfatı"
+      ],
+      "dogru": "E",
+      "cozum": "bu, şu, o, öteki işaret sıfatı örnekleridir."
+    },
+    {
+      "no": 17,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Fiil",
+      "metin": "“Geldim” fiilinde “-m” eki ne bildirir?",
+      "siklar": [
+        "II. çoğul kişi",
+        "II. tekil kişi",
+        "I. tekil kişi",
+        "III. çoğul",
+        "Emir"
+      ],
+      "dogru": "C",
+      "cozum": "Gel-dim → I. tekil kişi."
+    },
+    {
+      "no": 18,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Yazım Kuralları",
+      "metin": "“Doğu Karadeniz” ifadesinde “Doğu” neden büyük yazılır?",
+      "siklar": [
+        "Özel adın başındaki yön adı olduğu için",
+        "Sayı adı olduğu için",
+        "Cümle başı olduğu için",
+        "Kurum adı olduğu için",
+        "Din adı olduğu için"
+      ],
+      "dogru": "A",
+      "cozum": "Özel adla birleşen yön adları büyük yazılır."
+    },
+    {
+      "no": 19,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Cümlenin Ögeleri",
+      "metin": "“Masal anlattı.” cümlesinde “masal” nedir?",
+      "siklar": [
+        "Belirtisiz nesne",
+        "Yüklem",
+        "Belirtili nesne",
+        "Dolaylı tümleç",
+        "Zarf tümleci"
+      ],
+      "dogru": "A",
+      "cozum": "Ne anlattı? (ek yok) → belirtisiz nesne."
+    },
+    {
+      "no": 20,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Sözcükte Yapı",
+      "metin": "“Hasta olmak” neden ayrı yazılır?",
+      "siklar": [
+        "Yabancı kökenli olduğu için",
+        "Ses olayı olmadığı için",
+        "Ses olayı olduğu için",
+        "Deyim olduğu için",
+        "Fiilimsi olduğu için"
+      ],
+      "dogru": "B",
+      "cozum": "“Hasta olmak”ta sözcükler kendi anlamlarını korur ve birleşirken ses düşmesi ya da ses türemesi gibi bir ses olayı görülmez; bu nedenle ayrı yazılır."
+    },
+    {
+      "no": 21,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Fiilde Çatı",
+      "metin": "İşteş fiiller hangi ek ile yapılır?",
+      "siklar": [
+        "-ş",
+        "-n",
+        "-t",
+        "-dır",
+        "-ıl"
+      ],
+      "dogru": "A",
+      "cozum": "İşteş: -ş eki."
+    },
+    {
+      "no": 22,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Anlatım Bozuklukları",
+      "metin": "“Evin bahçesine birkaç gül fidanı ektik.” cümlesinde “ektik” yerine “diktik” denmesi gerektiğinde hangi bozukluk söz konusudur?",
+      "siklar": [
+        "Sözcüğün yanlış anlamda kullanılması",
+        "Özne eksikliği",
+        "Deyim yanlışlığı",
+        "Gereksiz sözcük",
+        "Tamlama yanlışlığı"
+      ],
+      "dogru": "A",
+      "cozum": "Fidan dikilir, tohum ekilir."
+    },
+    {
+      "no": 23,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Paragraf",
+      "metin": "“Türkiye’nin nüfusu 79 milyon 814 bin 871 olmuştur.” ifadesinde hangi yöntem vardır?",
+      "siklar": [
+        "Sayısal verilerden yararlanma",
+        "Karşılaştırma",
+        "Tanımlama",
+        "Benzetme",
+        "Tanık gösterme"
+      ],
+      "dogru": "A",
+      "cozum": "Kesin sayı, sayısal veridir."
+    },
+    {
+      "no": 24,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Ses Bilgisi",
+      "metin": "“-yor” eki alan sözcükler için hangi bilgi doğrudur?",
+      "siklar": [
+        "Her zaman küçük ünlü uyumuna uyar.",
+        "Her zaman büyük ünlü uyumuna uyar.",
+        "Büyük ünlü uyumunu bozabilir.",
+        "Hiçbir ses olayı oluşturmaz.",
+        "Sadece yabancı sözcüklerde kullanılır."
+      ],
+      "dogru": "C",
+      "cozum": "“-yor” eki kalınlık-incelik bakımından değişmediği için ince ünlülü sözcüklere geldiğinde büyük ünlü uyumunu bozar: geliyor, seviyor. Kalın ünlülü “bakıyor” ise büyük ünlü uyumuna uyar, yalnızca küçük ünlü uyumunu bozar."
+    },
+    {
+      "no": 25,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Sıkça Yapılan Yazım Yanlışları",
+      "metin": "“Köpekbalığı” ifadesinin doğru yazımı hangisidir?",
+      "siklar": [
+        "Köpek-balıgı",
+        "Köpekbalığı",
+        "Köpek-balığı",
+        "Köpek balığı",
+        "Köpekbalıgı"
+      ],
+      "dogru": "D",
+      "cozum": "köpek balığı ayrı (hayvan adı)."
+    },
+    {
+      "no": 26,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Noktalama İşaretleri",
+      "metin": "Tamamlanmış cümlelerin sonunda hangi noktalama işareti kullanılır?",
+      "siklar": [
+        "Virgül",
+        "Noktalı virgül",
+        "Ünlem",
+        "İki nokta",
+        "Nokta"
+      ],
+      "dogru": "E",
+      "cozum": "Cümle sonu nokta."
+    },
+    {
+      "no": 27,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Eylemsi",
+      "metin": "Aşağıdakilerden hangisi isim-fiil değildir?",
+      "siklar": [
+        "Yazmak",
+        "Yazma",
+        "Okumak",
+        "Yazış",
+        "Yazarak"
+      ],
+      "dogru": "E",
+      "cozum": "Yazarak zarf-fiildir."
+    },
+    {
+      "no": 28,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Cümlede Anlam",
+      "metin": "“Hasta, günden güne kötüleşiyor.” cümlesi hangi anlam özelliğini taşır?",
+      "siklar": [
+        "Aşamalı durum",
+        "Varsayım",
+        "Yakınma",
+        "Sitem",
+        "Olasılık"
+      ],
+      "dogru": "A",
+      "cozum": "Durum derece derece değişmektedir."
+    },
+    {
+      "no": 29,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Cümle Türleri",
+      "metin": "Yüklemin yerine göre cümle türleri hangileridir?",
+      "siklar": [
+        "Olumlu, olumsuz, soru",
+        "Basit, birleşik, bağlı",
+        "Kurallı, devrik, eksilti",
+        "Fiil, ad, fiilimsi",
+        "Basit, türemiş, birleşik"
+      ],
+      "dogru": "C",
+      "cozum": "Kurallı / devrik / eksilti."
+    },
+    {
+      "no": 30,
+      "bolum": "GY",
+      "ders": "Türkçe",
+      "konu": "Tamlamalar",
+      "metin": "“Çelik tencere” hangi anlam ilişkisiyle kurulmuştur?",
+      "siklar": [
+        "Yer",
+        "Benzeri",
+        "Nitelik",
+        "Yapıldığı madde",
+        "Sahiplik"
+      ],
+      "dogru": "D",
+      "cozum": "Çelikten yapılmış; takısız tamlama."
+    },
+    {
+      "no": 31,
+      "bolum": "GY",
+      "ders": "Matematik",
+      "konu": "Temel Kavramlar",
+      "metin": "a, b ve c ardışık tek sayılardır (a < b < c). a + b + c = 63 olduğuna göre, c kaçtır?",
+      "siklar": [
+        "19",
+        "21",
+        "23",
+        "25",
+        "27"
+      ],
+      "dogru": "C",
+      "cozum": "a + (a + 2) + (a + 4) = 63 → 3a = 57 → a = 19, c = 23."
+    },
+    {
+      "no": 32,
+      "bolum": "GY",
+      "ders": "Matematik",
+      "konu": "Sayı Basamakları",
+      "metin": "İki basamaklı AB ve BA sayıları için AB + BA = 121 olduğuna göre, A + B kaçtır?",
+      "siklar": [
+        "9",
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "dogru": "C",
+      "cozum": "AB + BA = 11(A + B) = 121 → A + B = 11."
+    },
+    {
+      "no": 33,
+      "bolum": "GY",
+      "ders": "Matematik",
+      "konu": "Bölme ve Bölünebilme",
+      "metin": "Bir A doğal sayısının 12 ile bölümünden kalan 7'dir. Buna göre, 3A sayısının 12 ile bölümünden kalan kaçtır?",
+      "siklar": [
+        "3",
+        "5",
+        "7",
+        "9",
+        "11"
+      ],
+      "dogru": "D",
+      "cozum": "3A ≡ 3·7 = 21 ≡ 9 (mod 12)."
+    },
+    {
+      "no": 34,
+      "bolum": "GY",
+      "ders": "Matematik",
+      "konu": "Asal Çarpanlar, EBOB ve EKOK",
+      "metin": "12 ve 18 sayılarının en küçük ortak katı kaçtır?",
+      "siklar": [
+        "24",
+        "36",
+        "48",
+        "72",
+        "216"
+      ],
+      "dogru": "B",
+      "cozum": "12 = 2²·3, 18 = 2·3² → EKOK = 2²·3² = 36."
+    },
+    {
+      "no": 35,
+      "bolum": "GY",
+      "ders": "Matematik",
+      "konu": "Rasyonel Sayılar",
+      "metin": "(1/2 + 1/3) : (1/6) işleminin sonucu kaçtır?",
+      "siklar": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "dogru": "D",
+      "cozum": "1/2 + 1/3 = 5/6. (5/6) : (1/6) = 5."
+    },
+    {
+      "no": 36,
+      "bolum": "GY",
+      "ders": "Matematik",
+      "konu": "Ondalık Sayılar",
+      "metin": "0,25 · 0,4 işleminin sonucu kaçtır?",
+      "siklar": [
+        "0,01",
+        "0,1",
+        "1",
+        "0,001",
+        "10"
+      ],
+      "dogru": "B",
+      "cozum": "0,25 · 0,4 = 0,100 = 0,1."
+    },
+    {
+      "no": 37,
+      "bolum": "GY",
+      "ders": "Matematik",
+      "konu": "Basit Eşitsizlikler",
+      "metin": "−2 < x < 5 eşitsizliğini sağlayan kaç tane x tam sayısı vardır?",
+      "siklar": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "4"
+      ],
+      "dogru": "B",
+      "cozum": "x ∈ {−1, 0, 1, 2, 3, 4} → 6 tane."
+    },
+    {
+      "no": 38,
+      "bolum": "GY",
+      "ders": "Matematik",
+      "konu": "Mutlak Değer",
+      "metin": "|x − 3| = 5 denklemini sağlayan x değerlerinin toplamı kaçtır?",
+      "siklar": [
+        "2",
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "dogru": "C",
+      "cozum": "x − 3 = 5 → x = 8; x − 3 = −5 → x = −2. Toplam 6."
+    },
+    {
+      "no": 39,
+      "bolum": "GY",
+      "ders": "Matematik",
+      "konu": "Üslü Sayılar",
+      "metin": "(2⁵ · 4²) / 8² işleminin sonucu kaçtır?",
+      "siklar": [
+        "2",
+        "4",
+        "8",
+        "16",
+        "32"
+      ],
+      "dogru": "C",
+      "cozum": "2⁵ · 2⁴ / 2⁶ = 2³ = 8."
+    },
+    {
+      "no": 40,
+      "bolum": "GY",
+      "ders": "Matematik",
+      "konu": "Köklü Sayılar",
+      "metin": "√12 + √27 işleminin sonucu kaçtır?",
+      "siklar": [
+        "3√3",
+        "4√3",
+        "5√3",
+        "6√3",
+        "√39"
+      ],
+      "dogru": "C",
+      "cozum": "√12 = 2√3, √27 = 3√3 → 5√3."
+    },
+    {
+      "no": 41,
+      "bolum": "GY",
+      "ders": "Matematik",
+      "konu": "Çarpanlara Ayırma",
+      "metin": "x² − y² = 45 ve x − y = 5 olduğuna göre, x + y kaçtır?",
+      "siklar": [
+        "5",
+        "7",
+        "9",
+        "11",
+        "15"
+      ],
+      "dogru": "C",
+      "cozum": "x² − y² = (x − y)(x + y) → 45 = 5(x + y) → x + y = 9."
+    },
+    {
+      "no": 42,
+      "bolum": "GY",
+      "ders": "Matematik",
+      "konu": "Oran ve Orantı",
+      "metin": "a / b = 3 / 5 ve a + b = 40 olduğuna göre, b kaçtır?",
+      "siklar": [
+        "15",
+        "20",
+        "24",
+        "25",
+        "30"
+      ],
+      "dogru": "D",
+      "cozum": "a = 3k, b = 5k → 8k = 40 → k = 5, b = 25."
+    },
+    {
+      "no": 43,
+      "bolum": "GY",
+      "ders": "Matematik",
+      "konu": "Denklem Çözme",
+      "metin": "3x − 7 = 2x + 5 denklemini sağlayan x değeri kaçtır?",
+      "siklar": [
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "dogru": "C",
+      "cozum": "3x − 2x = 5 + 7 → x = 12."
+    },
+    {
+      "no": 44,
+      "bolum": "GY",
+      "ders": "Matematik",
+      "konu": "Sayı ve Kesir Problemleri",
+      "metin": "Bir sayının 2/3'ünün 12 fazlası 36'dır. Bu sayı kaçtır?",
+      "siklar": [
+        "24",
+        "30",
+        "32",
+        "36",
+        "40"
+      ],
+      "dogru": "D",
+      "cozum": "(2/3)x + 12 = 36 → (2/3)x = 24 → x = 36."
+    },
+    {
+      "no": 45,
+      "bolum": "GY",
+      "ders": "Matematik",
+      "konu": "Yaş Problemleri",
+      "metin": "Ali 12, babası 40 yaşındadır. Kaç yıl sonra babanın yaşı Ali'nin yaşının 3 katı olur?",
+      "siklar": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "dogru": "B",
+      "cozum": "40 + x = 3(12 + x) → 40 + x = 36 + 3x → x = 2."
+    },
+    {
+      "no": 46,
+      "bolum": "GY",
+      "ders": "Matematik",
+      "konu": "Yüzde, Kâr ve Zarar Problemleri",
+      "metin": "80 TL'ye alınan bir ürün %25 kârla satılırsa satış fiyatı kaç TL olur?",
+      "siklar": [
+        "90",
+        "95",
+        "100",
+        "105",
+        "120"
+      ],
+      "dogru": "C",
+      "cozum": "80 · 1,25 = 100 TL."
+    },
+    {
+      "no": 47,
+      "bolum": "GY",
+      "ders": "Matematik",
+      "konu": "Yüzde, Kâr ve Zarar Problemleri",
+      "metin": "Fiyatı önce %20 artırılıp sonra %20 indirilen bir ürünün son fiyatı, ilk fiyatına göre yüzde kaç azalmıştır?",
+      "siklar": [
+        "0",
+        "2",
+        "4",
+        "5",
+        "8"
+      ],
+      "dogru": "C",
+      "cozum": "1,2 · 0,8 = 0,96 → %4 azalma."
+    },
+    {
+      "no": 48,
+      "bolum": "GY",
+      "ders": "Matematik",
+      "konu": "Karışım Problemleri",
+      "metin": "%20'si tuz olan 40 gram tuzlu suya 10 gram tuz ekleniyor. Yeni karışımın yüzde kaçı tuzdur?",
+      "siklar": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "40"
+      ],
+      "dogru": "D",
+      "cozum": "Tuz: 8 + 10 = 18 g, toplam 50 g → %36."
+    },
+    {
+      "no": 49,
+      "bolum": "GY",
+      "ders": "Matematik",
+      "konu": "Hareket Problemleri",
+      "metin": "Saatte 60 km hızla giden bir araç 150 km yolu kaç saatte alır?",
+      "siklar": [
+        "2",
+        "2,5",
+        "3",
+        "3,5",
+        "4"
+      ],
+      "dogru": "B",
+      "cozum": "Süre = yol / hız = 150 / 60 = 2,5 saat."
+    },
+    {
+      "no": 50,
+      "bolum": "GY",
+      "ders": "Matematik",
+      "konu": "İşçi ve Havuz Problemleri",
+      "metin": "Bir işi A tek başına 6 günde, B tek başına 12 günde bitiriyor. İkisi birlikte bu işi kaç günde bitirir?",
+      "siklar": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "9"
+      ],
+      "dogru": "B",
+      "cozum": "1/6 + 1/12 = 3/12 = 1/4 → 4 gün."
+    },
+    {
+      "no": 51,
+      "bolum": "GY",
+      "ders": "Matematik",
+      "konu": "Kümeler",
+      "metin": "s(A) = 12, s(B) = 15 ve s(A ∩ B) = 5 olduğuna göre, s(A ∪ B) kaçtır?",
+      "siklar": [
+        "17",
+        "20",
+        "22",
+        "25",
+        "27"
+      ],
+      "dogru": "C",
+      "cozum": "s(A ∪ B) = 12 + 15 − 5 = 22."
+    },
+    {
+      "no": 52,
+      "bolum": "GY",
+      "ders": "Matematik",
+      "konu": "Permütasyon, Kombinasyon ve Olasılık",
+      "metin": "Bir torbada 3 kırmızı ve 5 mavi top vardır. Rastgele çekilen bir topun kırmızı olma olasılığı kaçtır?",
+      "siklar": [
+        "1/8",
+        "3/8",
+        "1/2",
+        "5/8",
+        "3/5"
+      ],
+      "dogru": "B",
+      "cozum": "Kırmızı / toplam = 3 / 8."
+    },
+    {
+      "no": 53,
+      "bolum": "GY",
+      "ders": "Geometri",
+      "konu": "Üçgende Alan",
+      "metin": "Kenarları 5, 5, 6 olan üçgenin alanı kaç cm²'dir?",
+      "siklar": [
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "dogru": "C",
+      "cozum": "u=8; A=√(8·3·3·2)=√144=12."
+    },
+    {
+      "no": 54,
+      "bolum": "GY",
+      "ders": "Geometri",
+      "konu": "Açıortay ve Kenarortay",
+      "metin": "ABC üçgeninde AN açıortayı. |AB|=8, |AC|=12, |BN|=4. |NC|=?",
+      "siklar": [
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "dogru": "C",
+      "cozum": "Açıortay teoremine göre |AB|/|AC| = |BN|/|NC| olur. Değerler yerine konduğunda 8/12 = 4/|NC| elde edilir ve buradan |NC| = 6 birim bulunur."
+    },
+    {
+      "no": 55,
+      "bolum": "GY",
+      "ders": "Geometri",
+      "konu": "Dörtgenler ve Yamuk",
+      "metin": "Tabanları 9 cm ve 15 cm, yüksekliği 8 cm olan yamuğun alanı kaç cm²'dir?",
+      "siklar": [
+        "88",
+        "90",
+        "92",
+        "94",
+        "96"
+      ],
+      "dogru": "E",
+      "cozum": "(9+15)·8/2 = 96 cm²."
+    },
+    {
+      "no": 56,
+      "bolum": "GY",
+      "ders": "Geometri",
+      "konu": "Analitik Geometri (Doğru)",
+      "metin": "(0, 0) noktasının 3x + 4y − 10 = 0 doğrusuna uzaklığı kaç birimdir?",
+      "siklar": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "dogru": "B",
+      "cozum": "h = |0+0−10|/√(9+16) = 10/5 = 2."
+    },
+    {
+      "no": 57,
+      "bolum": "GY",
+      "ders": "Geometri",
+      "konu": "Katı Cisimler",
+      "metin": "Kenarı 4 cm olan düzgün dörtyüzlünün yüzey alanı kaç cm²'dir?",
+      "siklar": [
+        "12√3",
+        "14√3",
+        "16√3",
+        "18√3",
+        "20√3"
+      ],
+      "dogru": "C",
+      "cozum": "Düzgün dörtyüzlü, kenar uzunluğu a = 4 cm olan 4 eş eşkenar üçgenden oluşur. Bir eşkenar üçgenin alanı a²√3/4 = 16√3/4 = 4√3 cm² olduğundan yüzey alanı 4·4√3 = 16√3 cm² bulunur."
+    },
+    {
+      "no": 58,
+      "bolum": "GY",
+      "ders": "Geometri",
+      "konu": "İkizkenar ve Eşkenar Üçgen",
+      "metin": "İkizkenar ABC üçgeninde |AB|=|AC|, m(A)=40°. Taban açılarından biri kaç derecedir?",
+      "siklar": [
+        "60°",
+        "65°",
+        "70°",
+        "75°",
+        "80°"
+      ],
+      "dogru": "C",
+      "cozum": "Taban açıları = (180−40)/2 = 70°."
+    },
+    {
+      "no": 59,
+      "bolum": "GY",
+      "ders": "Geometri",
+      "konu": "Paralelkenar ve Özel Dörtgenler",
+      "metin": "Kenarları 4 ve 5 birim olan paralelkenarda e²+f²=2(a²+b²) bağıntısına göre e²+f² kaçtır?",
+      "siklar": [
+        "72",
+        "78",
+        "82",
+        "86",
+        "90"
+      ],
+      "dogru": "C",
+      "cozum": "2(16+25)=2·41=82."
+    },
+    {
+      "no": 60,
+      "bolum": "GY",
+      "ders": "Geometri",
+      "konu": "Üçgende Açılar",
+      "metin": "Şekilde ABC bir üçgen, B, C ve D noktaları doğrusaldır.\nm(BAC) = x + 20°, m(ABC) = 2x ve m(ACD) = 110° olduğuna göre, x kaç derecedir?",
+      "siklar": [
+        "30°",
+        "35°",
+        "40°",
+        "45°",
+        "50°"
+      ],
+      "dogru": "A",
+      "cozum": "Dış açı, kendisine komşu olmayan iki iç açının toplamıdır: (x + 20) + 2x = 110 → 3x = 90 → x = 30°.",
+      "gorsel": "soru-60.png"
+    },
+    {
+      "no": 61,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "İslamiyet Öncesi Türk Tarihi",
+      "metin": "Tuna Bulgar Devleti'ni kuran ve Hristiyanlığın kabulünden önceki dönemde hüküm süren lider aşağıdakilerden hangisidir?",
+      "siklar": [
+        "Asparuh Han",
+        "Boris Han",
+        "Almış Han",
+        "Kubrat Han",
+        "Simon Çar"
+      ],
+      "dogru": "A",
+      "cozum": "Tuna Bulgarlarını Asparuh Han kurmuştur."
+    },
+    {
+      "no": 62,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "İlk Türk-İslam Devletleri",
+      "metin": "4. Emevilerin Arap olmayan Müslümanları ikinci sınıf vatandaş olarak gördüğü, Arap milliyetçiliğine dayalı ayrımcı politikasını ifade eden kavram aşağıdakilerden hangisidir?",
+      "siklar": [
+        "Mevali",
+        "Cizye",
+        "Zımmi",
+        "Tımar",
+        "Haraç"
+      ],
+      "dogru": "A",
+      "cozum": "Emevilerin, Arap olmayan Müslümanları (özellikle Türkleri ve İranlıları) ikinci sınıf gören politikasına 'mevali' politikası denir."
+    },
+    {
+      "no": 63,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Milli Mücadele Diplomatik Dönem",
+      "metin": "İsmet İnönü'nün Lozan Konferansı'ndaki tutumunu yansıtan aşağıdaki ifadelerden hangisi Millî Mücadele'nin dayandığı temel anlayışla doğrudan ilişkilidir?",
+      "siklar": [
+        "'Yurtta sulh, cihanda sulh.'",
+        "'Hayatta en hakiki mürşit ilimdir.'",
+        "'Egemenlik kayıtsız şartsız milletindir.'",
+        "'Ne mutlu Türküm diyene.'",
+        "'Biz buraya Mondros'tan değil, Mudanya'dan geldik.'"
+      ],
+      "dogru": "E",
+      "cozum": "İsmet İnönü'nün 'Biz buraya Mondros'tan değil, Mudanya'dan geldik.' sözü, Millî Mücadele'nin askerî zaferle sonuçlandığını ve Türkiye'nin güçlü bir konumdan müzakere ettiğini vurgulamaktadır."
+    },
+    {
+      "no": 64,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "II. Dünya Savaşı",
+      "metin": "Birleşmiş Milletler’in kurulduğu konferans ve Türkiye’nin statüsü aşağıdakilerin hangisinde doğrudur?",
+      "siklar": [
+        "Yalta – gözlemci",
+        "Quebec – işgal kuvveti",
+        "Potsdam – mağlup",
+        "Casablanca – mihver",
+        "San Francisco – kurucu üye"
+      ],
+      "dogru": "E",
+      "cozum": "San Francisco’da BM kurulmuş, Türkiye kurucu üye olmuştur."
+    },
+    {
+      "no": 65,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Atatürk Dönemi Türk Dış Politikası",
+      "metin": "Hatay Cumhuriyeti'nin ilk başbakanı aşağıdakilerden hangisidir?",
+      "siklar": [
+        "Tayfur Sökmen",
+        "Abdurrahman Melek",
+        "Mahmut Esat Bozkurt",
+        "Ali Fethi Okyar",
+        "Yusuf Kemal Tengirşenk"
+      ],
+      "dogru": "B",
+      "cozum": "İlk başbakan Abdurrahman Melek'tir."
+    },
+    {
+      "no": 66,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Milli Mücadeler Hazırlık Dönemi",
+      "metin": "Aşağıdakilerden hangisi Millî Mücadele dönemindeki basın-yayın faaliyetleriyle ilgili yanlıştır?",
+      "siklar": [
+        "İrade-i Milliye Sivas'ta çıkarılmıştır.",
+        "Hâkimiyet-i Milliye Ankara'da yayımlanmıştır.",
+        "Ceride-i Resmiye kanun, tüzük ve genelgelerin yayımlandığı gazetedir.",
+        "Albayrak, Doğu Anadolu Müdafaa-i Hukuk Cemiyeti'nin gazetesidir.",
+        "Peyam-ı Sabah, Millî Mücadele'yi destekleyen bir gazetedir."
+      ],
+      "dogru": "E",
+      "cozum": "Ali Kemal'in yazılarıyla tanınan Peyam-ı Sabah, Millî Mücadele'ye karşı yayın yapan gazetelerin başında gelir. Diğer seçeneklerde verilen bilgiler doğrudur."
+    },
+    {
+      "no": 67,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Osmanlı Devleti Kuruluş Dönemi",
+      "metin": "İskan politikasıyla ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+      "siklar": [
+        "Genellikle gönüllülük esasına göre yapılmıştır",
+        "İskana tabi tutulanların ihtiyaçları devlet tarafından karşılanmıştır",
+        "İskana tabi olanlara toprak verilmiştir",
+        "İskana tabi olanlardan vergi alınmıştır",
+        "İskana tabi olanların eski yurtlarına dönmesi belli süre yasaklanmıştır"
+      ],
+      "dogru": "D",
+      "cozum": "İskana tabi tutulanlardan vergi alınmamıştır; bu onları teşvik etmek için sağlanan bir kolaylıktır. Bu ifade yanlıştır."
+    },
+    {
+      "no": 68,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "19.YY Osmanlı Devleti Islahatları",
+      "metin": "Osmanlı Devleti'nde yayımlanan ilk özel gazete aşağıdakilerden hangisidir?",
+      "siklar": [
+        "Ceride-i Havadis",
+        "Takvim-i Vekayi",
+        "Tercüman-ı Hakikat",
+        "Tasvir-i Efkâr",
+        "Tercüman-ı Ahvâl"
+      ],
+      "dogru": "E",
+      "cozum": "İlk özel gazete Tercüman-ı Ahvâl'dir."
+    },
+    {
+      "no": 69,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Milli Mücadeele Muharabeler Dönemi:",
+      "metin": "Mustafa Kemal'in 'Yarım hazırlıkla, yarım tedbirle yapılacak taarruz hiç taarruz etmemekten daha kötüdür.' sözü aşağıdaki süreçlerden hangisiyle ilgilidir?",
+      "siklar": [
+        "Gümrü Antlaşması",
+        "Büyük Taarruz öncesi hazırlıklar",
+        "Londra Konferansı",
+        "Ankara Antlaşması",
+        "Kars Antlaşması"
+      ],
+      "dogru": "B",
+      "cozum": "Mustafa Kemal'in bu sözü, Büyük Taarruz öncesi hazırlıkların titizlikle yapılması gerektiğini vurgulamaktadır. Eksik hazırlıkla yapılacak taarruz başarısız olacaktır."
+    },
+    {
+      "no": 70,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Osmanlı Devleti Gerileme Dönemi",
+      "metin": "XVIII. yüzyılda Avrupa devletlerinin dış politikalarında, amaçlarına ulaşabilmek için her türlü yöntemi meşru gören anlayış aşağıdakilerden hangisidir?",
+      "siklar": [
+        "Merkantilizm",
+        "Makyavelizm",
+        "Hümanizm",
+        "Rasyonalizm",
+        "Liberalizm"
+      ],
+      "dogru": "B",
+      "cozum": "Makyavelizm, devlet çıkarları doğrultusunda her türlü yöntemin kullanılabileceğini savunan siyaset anlayışıdır."
+    },
+    {
+      "no": 71,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Yumuşama Dönemi",
+      "metin": "Enosis ve EOKA için hangisi doğrudur?",
+      "siklar": [
+        "Enosis Kıbrıs’ın Yunanistan’a bağlanması; EOKA bunu savunan Rum örgütüdür",
+        "Enosis Kıbrıs’ın Türkiye’ye bağlanmasıdır",
+        "TMT Enosis örgütüdür",
+        "EOKA Türk Mukavemet Teşkilatı’dır",
+        "Enosis 1983 Annan Planı’dır"
+      ],
+      "dogru": "A",
+      "cozum": "TMT, Türk toplumunun savunma örgütüdür."
+    },
+    {
+      "no": 72,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "I. TBMM Dönemi ve Gelişmeleri",
+      "metin": "I. TBMM döneminde 1921 yılından itibaren Genelkurmay Başkanlığı görevini aşağıdakilerden hangisi yürütmüştür?",
+      "siklar": [
+        "Mustafa Kemal Paşa",
+        "İsmet İnönü",
+        "Fevzi Çakmak",
+        "Bekir Sami Bey",
+        "Rıza Nur"
+      ],
+      "dogru": "C",
+      "cozum": "I. TBMM'nin ilk İcra Vekilleri Heyeti'nde Erkân-ı Harbiye-i Umumiye (Genelkurmay) görevini İsmet Bey üstlenmiş, 1921'den itibaren bu görevi Fevzi Çakmak yürütmüştür. Mustafa Kemal Paşa ise Meclis Başkanı ve Başkomutan'dır."
+    },
+    {
+      "no": 73,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Atatürk'ün Hayatı",
+      "metin": "Mustafa Kemal'in İstanbul Harp Akademisinden mezun olduktan sonraki ilk görev yeri aşağıdakilerden hangisidir?",
+      "siklar": [
+        "5. Ordu – Şam",
+        "3. Ordu – Selanik",
+        "7. Ordu – Halep",
+        "Yıldırım Orduları – Filistin",
+        "19. Tümen – Çanakkale"
+      ],
+      "dogru": "A",
+      "cozum": "İlk görev yeri 5. Ordu (Şam)'dır."
+    },
+    {
+      "no": 74,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "XX. Yüzyıl Başlarında Dünya",
+      "metin": "Basmacı sözcüğünün anlamı ve hareketin başladığı kent hangi seçenekte doğru verilmiştir?",
+      "siklar": [
+        "Göçmen – Bakü",
+        "Öğrenci – Ufa",
+        "Çiftçi – Semerkant",
+        "Tüccar – Buhara",
+        "Baskın yapan, hücum eden – Hokand"
+      ],
+      "dogru": "E",
+      "cozum": "Basmacı: baskın yapan. Hareket Hokand’da başladı."
+    },
+    {
+      "no": 75,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Küreselleşen Dünya",
+      "metin": "24 Aralık 1995 genel seçimlerinin ardından kurulan ilk koalisyon hükûmeti aşağıdakilerden hangisidir?",
+      "siklar": [
+        "ANAP + DYP (ANAYOL) – Mesut Yılmaz",
+        "RP + DYP (Refahyol) – Necmettin Erbakan",
+        "DYP + CHP – Tansu Çiller",
+        "DYP + SHP – Süleyman Demirel",
+        "DSP + MHP + ANAP – Bülent Ecevit"
+      ],
+      "dogru": "A",
+      "cozum": "24 Aralık 1995 seçimlerinden sonra kurulan ilk koalisyon, Mart 1996'da ANAP ile DYP'nin oluşturduğu ve Mesut Yılmaz'ın başbakanlık yaptığı ANAYOL Hükûmeti'dir. Bu hükûmetin kısa sürede dağılmasının ardından Haziran 1996'da RP ile DYP, Necmettin Erbakan başkanlığında Refahyol Hükûmeti'ni kurmuştur. DYP-CHP koalisyonu ise seçimlerden önceki dönemde görev yapmıştır."
+    },
+    {
+      "no": 76,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Mondros Ateşkes Antlaşması ve Cemiyetler",
+      "metin": "Mondros Ateşkes Antlaşması sırasında Osmanlı Devleti'ni temsil eden ve antlaşmayı imzalayan kişi aşağıdakilerden hangisidir?",
+      "siklar": [
+        "Mustafa Kemal Paşa",
+        "Ahmet İzzet Paşa",
+        "Rauf Orbay",
+        "İsmet İnönü",
+        "Fevzi Çakmak"
+      ],
+      "dogru": "C",
+      "cozum": "Mondros Ateşkes Antlaşması, 30 Ekim 1918'de Osmanlı Devleti adına Bahriye Nazırı Rauf Orbay tarafından imzalanmıştır."
+    },
+    {
+      "no": 77,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Osmanlı Kültür ve Medeniyeti",
+      "metin": "Topkapı Sarayı'nın 'Birun' (dış) kısmıyla ilgili aşağıdakilerden hangisi doğrudur?",
+      "siklar": [
+        "Padişah ve ailesinin özel yaşam alanıdır",
+        "Devşirme çocukların eğitim gördüğü okuldur",
+        "Elçilerin kabul edildiği, Divan-ı Hümayun toplantılarının Kubbealtı'nda yapıldığı dış bölümdür",
+        "Sadrazam ve vezir yetiştiren bölümdür",
+        "Kız çocuklarının eğitim gördüğü bölümdür"
+      ],
+      "dogru": "C",
+      "cozum": "Birun, Topkapı Sarayı'nın dış bölümüdür; devlet işlerinin yürütüldüğü, elçilerin kabul edildiği ve Divan-ı Hümayun toplantılarının Kubbealtı'nda yapıldığı kısımdır. Padişah ve ailesinin özel yaşam alanı Harem, devşirmelerin eğitildiği ve üst düzey yöneticilerin yetiştirildiği bölüm ise Enderun'dur."
+    },
+    {
+      "no": 78,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Soğuk Savaş Dönemi",
+      "metin": "Dörtlü Takrir’in tarihi ve imzacıları için hangisi doğrudur?",
+      "siklar": [
+        "7 Ocak 1946 – İnönü ve Peker",
+        "7 Haziran 1945 – Bayar, Menderes, Koraltan, Köprülü",
+        "14 Mayıs 1950 – Demirağ ve Bayar",
+        "12 Temmuz 1947 – yalnızca Menderes",
+        "18 Temmuz 1945 – dört general"
+      ],
+      "dogru": "B",
+      "cozum": "CHP içi muhalefetin adımıdır. DP 7 Ocak 1946’da kuruldu; genel başkan Celal Bayar."
+    },
+    {
+      "no": 79,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Genel Tekrar",
+      "metin": "Cemiyetlerin birleştirildiği ulusal kongre hangisidir?",
+      "siklar": [
+        "Erzurum",
+        "İzmir",
+        "Amasya",
+        "Sivas",
+        "Trabzon"
+      ],
+      "dogru": "D",
+      "cozum": "Anadolu ve Rumeli Müdafaa-i Hukuk."
+    },
+    {
+      "no": 80,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "II. Dünya Savaşı'nda Türkiye",
+      "metin": "Nuri Demirağ ile ilgili olarak aşağıdakilerden hangisi söylenemez?",
+      "siklar": [
+        "İlk yerli sigara kâğıdını üretmiştir",
+        "Demiryolu inşaatlarında müteahhitlik yapmıştır",
+        "1936’da kurduğu fabrikada yerli uçak üretmiştir",
+        "İlk yerli paraşütü üretmiştir",
+        "İlk Türk denizaltı su bombasını üretmiştir"
+      ],
+      "dogru": "E",
+      "cozum": "Nuri Demirağ; ilk yerli sigara kâğıdını üreten, demiryolu inşaatlarında müteahhitlik yapan ve 1936’da kurduğu uçak fabrikasında yerli uçak ile paraşüt üretimine geçen bir sanayicidir. Denizaltı su bombası üretimi ise dönemin bir diğer sanayicisi Şakir Zümre’ye aittir."
+    },
+    {
+      "no": 81,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "19.YY Osmanlı Devleti Dağılma Dönemi",
+      "metin": "Şıpka Kahramanı olarak bilinen kişi kimdir?",
+      "siklar": [
+        "Gazi Osman Paşa",
+        "Nene Hatun",
+        "Tepedelenli Ali Paşa",
+        "Gazi Ahmet Muhtar Paşa",
+        "Süleyman Hüsnü Paşa"
+      ],
+      "dogru": "E",
+      "cozum": "Şıpka Kahramanı Süleyman Hüsnü Paşa'dır."
+    },
+    {
+      "no": 82,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Cumhuriyet Dönemi Kültür ve Medeniyeti",
+      "metin": "Kanunu Batı müziğiyle buluşturan, viyolonsel ve kanun konçertoları yazan sanatçı kimdir?",
+      "siklar": [
+        "Necil Kazım Akses",
+        "Ulvi Cemal Erkin",
+        "Hasan Ferit Alnar",
+        "Cemal Reşit Rey",
+        "Ahmet Adnan Saygun"
+      ],
+      "dogru": "C",
+      "cozum": "Hasan Ferit Alnar kanun ve Batı müziğini birleştirmiştir."
+    },
+    {
+      "no": 83,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Atatürk Dönemi İç Politikalar ve Gelişmeler",
+      "metin": "Serbest Cumhuriyet Fırkası'nın kurulmasında aşağıdakilerden hangisinin etkili olduğu söylenemez?",
+      "siklar": [
+        "Siyasi rekabet eksikliği",
+        "Eleştiri ve denetim ihtiyacı",
+        "1929 Dünya Ekonomik Bunalımı",
+        "Yeni ekonomik fikirlere duyulan ihtiyaç",
+        "Saltanat yönetimine geri dönme isteği"
+      ],
+      "dogru": "E",
+      "cozum": "Saltanata dönüş kuruluş nedeni değildir."
+    },
+    {
+      "no": 84,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Osmanlı Devleti Yükselme Dönemi",
+      "metin": "Sokullu Mehmet Paşa'nın tasarladığı Süveyş Kanalı projesini yaklaşık üç yüzyıl sonra fiilen gerçekleştiren devlet aşağıdakilerden hangisidir?",
+      "siklar": [
+        "Fransa",
+        "İngiltere",
+        "Rusya",
+        "İspanya",
+        "Portekiz"
+      ],
+      "dogru": "A",
+      "cozum": "Sokullu Mehmet Paşa'nın 16. yüzyılda tasarladığı Süveyş Kanalı projesi, 1859-1869 yılları arasında Ferdinand de Lesseps öncülüğündeki Fransız şirketi tarafından hayata geçirilmiştir. İngiltere kanalın yapımına baştan karşı çıkmış, kanal hisselerinin bir bölümünü ancak 1875'te, yani kanal açıldıktan sonra satın almıştır."
+    },
+    {
+      "no": 85,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Anadolu Selçuklu Devleti",
+      "metin": "II. Kılıçarslan Dönemi'yle ilgili;\nI. Ankara Meliki Şahinşah isyanı bastırılmıştır.\nII. Danişmentlilere son verilmiştir.\nIII. Bizans'a karşı Miryokefalon Savaşı kazanılmıştır.\nyargılarından hangileri doğrudur?",
+      "siklar": [
+        "Yalnız III",
+        "I ve II",
+        "I ve III",
+        "II ve III",
+        "I, II ve III"
+      ],
+      "dogru": "E",
+      "cozum": "II. Kılıçarslan dönemi oldukça hareketlidir. Ankara Meliki Şahinşah'ın isyanı bastırılmış, Anadolu'nun güçlü beyliklerinden Danişmentlilere son verilerek Türk birliği adımı atılmış ve Bizans'a karşı efsanevi Miryokefalon zaferi kazanılmıştır."
+    },
+    {
+      "no": 86,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Atatürk İlkeleri",
+      "metin": "İnkılâpçılık ilkesi, yalnızca belirli bir alanda değişiklik yapılmasını değil, toplumun çağın gereklerine uygun hâle getirilmesini ve gerekli görülen eski kurumların yerine yeni kurumların oluşturulmasını esas alır.\n\nBuna göre aşağıdakilerden hangisi bu anlayışın en açık örneklerinden biridir?",
+      "siklar": [
+        "Aşar vergisinin kaldırılması",
+        "Darülfünun yerine İstanbul Üniversitesinin kurulması",
+        "Kabotaj Kanunu'nun kabul edilmesi",
+        "Etibankın kurulması",
+        "Türk Tarih Kurumunun açılması"
+      ],
+      "dogru": "B",
+      "cozum": "Eski kurumun yerine yenisinin kurulması inkılâpçılığın tanımıdır (Darülfünun → İstanbul Üniversitesi)."
+    },
+    {
+      "no": 87,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Atatürk İnkılapları",
+      "metin": "Tekke, zaviye ve türbelerin kapatılmasında;\n\nI. din istismarını önlemek\nII. laikleşmeyi sağlamak\nIII. rejim karşıtı faaliyetleri önlemek\nIV. eğitimde birlik sağlamak\n\namaçlarından hangileri etkili olmuştur?",
+      "siklar": [
+        "I ve II",
+        "II ve III",
+        "I, II ve III",
+        "II, III ve IV",
+        "I, II, III ve IV"
+      ],
+      "dogru": "C",
+      "cozum": "Eğitimde birlik Tevhid-i Tedrisat'ın amacıdır (IV değil)."
+    },
+    {
+      "no": 88,
+      "bolum": "GK",
+      "ders": "Coğrafya",
+      "konu": "Türkiyenin İklimi",
+      "metin": "Aşağıdaki iklim tipi–en yağışlı mevsim eşleştirmelerinden hangisi YANLIŞTIR?",
+      "siklar": [
+        "Akdeniz iklimi – kış",
+        "İç Anadolu – ilkbahar",
+        "Karadeniz – sonbahar",
+        "Erzurum – yaz",
+        "Akdeniz iklimi – yaz"
+      ],
+      "dogru": "E",
+      "cozum": "Akdeniz ikliminde en yağışlı mevsim kıştır; yaz mevsimi bu iklimde en kurak dönemdir. Bu eşleştirme yanlıştır."
+    },
+    {
+      "no": 89,
+      "bolum": "GK",
+      "ders": "Coğrafya",
+      "konu": "Türkiyenini Ekonomik Coğrafyası (TARIM-2)",
+      "metin": "I. Patates volkanik arazilerde daha iyi yetişir.\nII. Patates sanayide ham madde olarak kullanılır.\nIII. Patates üretiminde Konya birinci sıradadır.\n\nYukarıdaki bilgilerden hangileri doğrudur?",
+      "siklar": [
+        "Yalnız I",
+        "I ve II",
+        "II ve III",
+        "I ve III",
+        "I, II ve III"
+      ],
+      "dogru": "B",
+      "cozum": "I ve II doğrudur. III yanlıştır; patateste birinci sıra Niğde, ardından Kayseri'dir. Konya birinci değildir."
+    },
+    {
+      "no": 90,
+      "bolum": "GK",
+      "ders": "Coğrafya",
+      "konu": "Türkiyenin Su Toprak ve Bitki Varlığı",
+      "metin": "Aşağıdakilerden hangisi volkanik set gölü değildir?",
+      "siklar": [
+        "Van",
+        "Erçek",
+        "Nazik",
+        "Balık",
+        "Tortum"
+      ],
+      "dogru": "E",
+      "cozum": "Tortum Gölü heyelan set gölüdür."
+    },
+    {
+      "no": 91,
+      "bolum": "GK",
+      "ders": "Coğrafya",
+      "konu": "Türkiye'nin Coğrafi Konumu",
+      "metin": "Türkiye'nin maden kaynaklarıyla ilgili aşağıdaki değerlendirmelerden hangisi doğrudur?",
+      "siklar": [
+        "Maden çeşidi az, rezerv miktarı fazladır.",
+        "Maden çeşidi fazla, birçok madenin rezervi sınırlıdır.",
+        "Madenler yalnızca volkanik arazilerde bulunur.",
+        "Madenlerin dağılışında enlem temel belirleyicidir.",
+        "Maden yatakları ülkenin yalnızca doğusunda yoğunlaşmıştır."
+      ],
+      "dogru": "B",
+      "cozum": "Türkiye jeolojik çeşitliliği nedeniyle maden çeşidi bakımından zengindir. Ancak birçok maden yatağının rezervi dünya ölçeğinde sınırlıdır."
+    },
+    {
+      "no": 92,
+      "bolum": "GK",
+      "ders": "Coğrafya",
+      "konu": "Türkiyenini Ekonomik Coğrafyası (SANAYİ)",
+      "metin": "İran'dan gelen ticari yüklerin Gürbulak'tan Türkiye'ye girerek Trabzon Limanı'na ulaştırılmasının temel amacı aşağıdakilerden hangisidir?",
+      "siklar": [
+        "Türkiye'nin petrol ihtiyacını karşılamak",
+        "Türkiye'nin iç kesimlerine tarım ürünü taşımak",
+        "Avrupa ülkelerinden İran'a kara yoluyla ulaşmak",
+        "İran'ın Karadeniz ve dünya pazarlarına ulaşmasını kolaylaştırmak",
+        "Karadeniz'deki balıkçılık faaliyetlerini geliştirmek"
+      ],
+      "dogru": "D",
+      "cozum": "Amaç İran yükünü Karadeniz üzerinden dünya pazarlarına aktarmaktır."
+    },
+    {
+      "no": 93,
+      "bolum": "GK",
+      "ders": "Coğrafya",
+      "konu": "İç Kuvvetler",
+      "metin": "Türkiye'nin jeolojik yapısı ve yer şekillerinin oluşumunda etkili olan iç kuvvetlerle ilgili aşağıdakilerden hangisi doğrudur?",
+      "siklar": [
+        "Türkiye'de dağ oluşumu hareketleri tamamen günümüzde sona ermiştir.",
+        "Türkiye'nin kıvrım dağları Alp-Himalaya orojenik kuşağı içerisinde yer alır.",
+        "Türkiye'deki bütün dağlar kırılma sonucunda oluşmuştur.",
+        "Epirojenez yalnızca kıyı bölgelerinde etkili olmuştur.",
+        "Volkanizma Türkiye'nin yer şekillerinin oluşumunda etkili olmamıştır."
+      ],
+      "dogru": "B",
+      "cozum": "Türkiye, Alp-Himalaya orojenik kuşağında bulunduğu için kıvrım dağları bu sistem içerisinde yer alır. Ayrıca Türkiye'de kırılma, volkanizma ve epirojenez de etkili olmuştur."
+    },
+    {
+      "no": 94,
+      "bolum": "GK",
+      "ders": "Coğrafya",
+      "konu": "Rüzgar Şekilleri",
+      "metin": "Kumullarla ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+      "siklar": [
+        "Kıyılarda; Marmara, Batı Karadeniz, Ege ve Akdeniz'de yaygındır",
+        "Kara kumullarına Manisa, Konya, Kayseri ve Iğdır'da rastlanır",
+        "Yalnızca deniz kıyılarında oluşur",
+        "Rüzgârın biriktirme şeklidir",
+        "Kum tanelerinin rüzgârla taşınıp birikmesiyle oluşur"
+      ],
+      "dogru": "C",
+      "cozum": "Kumullar yalnızca deniz kıyılarında oluşmaz. Denizle bağlantısı olmayan, iç kesimlerdeki tamamen kurak ve karasal alanlarda da 'kara kumulları' oluşabilir. Nitekim Manisa, Konya, Kayseri ve Iğdır'da kara kumulları bulunmaktadır."
+    },
+    {
+      "no": 95,
+      "bolum": "GK",
+      "ders": "Coğrafya",
+      "konu": "Dış Kuvvetler",
+      "metin": "Antalya çevresinde uzanan Bey Dağları ile Akdeniz ardında uzanan Geyik Dağları'nın oluşumuna göre türü aşağıdakilerden hangisidir?",
+      "siklar": [
+        "Kırık dağlar",
+        "Volkanik dağlar",
+        "Kıvrım dağlar",
+        "Masif araziler",
+        "Maar kökenli dağlar"
+      ],
+      "dogru": "C",
+      "cozum": "Bey Dağları ve Geyik Dağları, Akdeniz Bölgesi boyunca uzanan Toros Dağ silsilesinin birer parçası olan kıvrım dağlarıdır."
+    },
+    {
+      "no": 96,
+      "bolum": "GK",
+      "ders": "Coğrafya",
+      "konu": "Kıyı Şekilleri",
+      "metin": "Dalga biriktirme şekilleriyle ilgili;\nI. Kıyı oku tamamen kapanırsa kıyı kordonu oluşur.\nII. Kıyı kordonunun kapattığı su kütlesine lagün (deniz kulağı) denir.\nIII. Bir adanın karaya bağlanmış hâline tombolo (saplı ada) denir.\nyargılarından hangileri doğrudur?",
+      "siklar": [
+        "Yalnız I",
+        "I ve II",
+        "I ve III",
+        "II ve III",
+        "I, II ve III"
+      ],
+      "dogru": "E",
+      "cozum": "Öncüllerde verilen tüm tanımlar dalga biriktirme şekillerine aittir ve hepsi coğrafi olarak tamamen doğrudur."
+    },
+    {
+      "no": 97,
+      "bolum": "GK",
+      "ders": "Coğrafya",
+      "konu": "Türkiyenini Ekonomik Coğrafyası (MADENLER)",
+      "metin": "Bakırın Samsun'da işlenmesinde aşağıdaki faktörlerden hangisinin etkili olduğu belirtilmektedir?",
+      "siklar": [
+        "Ham madde rezervlerinin fazla olması",
+        "Ulaşım avantajı",
+        "Taş kömürü yataklarının bulunması",
+        "Volkanik arazilerin yaygınlığı",
+        "Pazardan uzak olması"
+      ],
+      "dogru": "B",
+      "cozum": "Samsun'daki bakır işleme ulaşım avantajına bağlanır."
+    },
+    {
+      "no": 98,
+      "bolum": "GK",
+      "ders": "Coğrafya",
+      "konu": "Türkiyenin Platoları",
+      "metin": "Karstik platolarda (Teke, Taşeli) nüfusun az ve tarımın gelişmemiş olmasının temel nedeni aşağıdakilerden hangisidir?",
+      "siklar": [
+        "Yağışın hiç olmaması",
+        "Karstik arazinin tarıma elverişsiz, engebeli ve geçirimli yapısı",
+        "Sürekli buzullarla kaplı olması",
+        "Volkanik toprakların verimsizliği",
+        "Deniz seviyesinin altında bulunması"
+      ],
+      "dogru": "B",
+      "cozum": "Kalkerli (kireç taşlı) karstik arazi suyu sünger gibi yer altına çeker (geçirimlidir). Yüzey sularının kıtlığı, engebeli topografya ve kimyasal çözünmeli toprak yapısı tarımı kısıtlamış, bu da nüfusun buralara yerleşmesini engellemiştir."
+    },
+    {
+      "no": 99,
+      "bolum": "GK",
+      "ders": "Coğrafya",
+      "konu": "Harita Bilgisi ve Engebe",
+      "metin": "Haritalarda izohips (eş yükselti) eğrileriyle ilgili aşağıdakilerden hangisi doğrudur?",
+      "siklar": [
+        "İzohipsler sıklaştıkça eğim azalır",
+        "İzohipsler seyrekleştikçe eğim artar",
+        "İzohipsler sıklaştıkça eğim artar",
+        "İzohips eğrileri yalnızca ovalarda çizilir",
+        "İzohipsler renklerle hiçbir ilgisi olmayan çizgilerdir"
+      ],
+      "dogru": "C",
+      "cozum": "İzohips (eş yükselti) eğrilerinin birbirine yaklaştığı, yani sıklaştığı yerlerde eğim artar. Seyrekleştiği yerlerde ise eğim azalır."
+    },
+    {
+      "no": 100,
+      "bolum": "GK",
+      "ders": "Coğrafya",
+      "konu": "Karstik Şekiller",
+      "metin": "Aşağıdaki mağara–il eşleştirmelerinden hangisi YANLIŞTIR?",
+      "siklar": [
+        "Karain – Antalya",
+        "Karaca – Gümüşhane",
+        "Yarımburgaz – İstanbul",
+        "Ballıca – Tokat",
+        "Damlataş – Gümüşhane"
+      ],
+      "dogru": "E",
+      "cozum": "Damlataş Mağarası Gümüşhane'de değil, Antalya'nın Alanya ilçesinde yer almaktadır. Gümüşhane'de bulunan ünlü mağara ise Karaca Mağarası'dır."
+    },
+    {
+      "no": 101,
+      "bolum": "GK",
+      "ders": "Coğrafya",
+      "konu": "Akarsu Vadileri ve Şelaleler",
+      "metin": "Eğim kırıklığının olduğu yerlerde oluşan ve döküldüğü yerde 'dev kazanı' adı verilen çukurluğu meydana getiren yer şekli aşağıdakilerden hangisidir?",
+      "siklar": [
+        "Peri bacası",
+        "Şelale (çağlayan)",
+        "Peneplen",
+        "Menderes",
+        "Sirk"
+      ],
+      "dogru": "B",
+      "cozum": "Eğim kırıklığının olduğu yerlerde akarsuların yüksekten dökülmesiyle şelaleler oluşur. Şelalenin döküldüğü yerde suyun gücüyle açılan çukurluğa ise dev kazanı adı verilir."
+    },
+    {
+      "no": 102,
+      "bolum": "GK",
+      "ders": "Coğrafya",
+      "konu": "Türkiyenini Ekonomik Coğrafyası (ENERJİ KAYNAKLARI)",
+      "metin": "Bir öğrenci Türkiye'nin enerji kaynaklarını çalışırken şu bilgileri not etmiştir:\nI. Türkiye'nin ilk rüzgâr santrali Çeşme-Alaçatı'dadır.\nII. Türkiye'nin en büyük GES'i Karapınar'dadır.\nIII. Türkiye'nin ilk nükleer enerji santrali Sinop'tadır.\nIV. Türkiye'nin ilk petrolü Batman'da bulunmuştur.\nBu bilgilerden hangileri doğrudur?",
+      "siklar": [
+        "I ve II",
+        "I ve III",
+        "II ve III",
+        "I, II ve IV",
+        "II, III ve IV"
+      ],
+      "dogru": "D",
+      "cozum": "I, II ve IV doğrudur. İlk NGS Sinop değil Mersin-Akkuyu'dur."
+    },
+    {
+      "no": 103,
+      "bolum": "GK",
+      "ders": "Coğrafya",
+      "konu": "Türkiyenin Ovaları",
+      "metin": "Karstik ovalar (gölovalar) ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+      "siklar": [
+        "Batı Toroslar kuşağında yaygındır",
+        "Kalker, jips ve dolomit gibi eriyebilen kayaçların bulunduğu alanlarda oluşur",
+        "Akdeniz ve Güney Ege'de görülür",
+        "Tabanı son derece verimli alüvyal topraklarla kaplıdır",
+        "Eriyebilen kayaçların çözünmesiyle meydana gelir"
+      ],
+      "dogru": "D",
+      "cozum": "Karstik ovaların tabanı kireçli ve geçirimliliği yüksek verimsiz karstik malzemelerle kaplıdır. Verimli alüvyal toprak tabanı karstik ovaların değil, delta ovalarının bir özelliğidir."
+    },
+    {
+      "no": 104,
+      "bolum": "GK",
+      "ders": "Coğrafya",
+      "konu": "Genel Tekrar",
+      "metin": "Türkiye’de nüfusun en yoğun olduğu kuşak hangisidir?",
+      "siklar": [
+        "Doğu Anadolu’nun tamamı",
+        "Yalnızca Toroslar",
+        "Yalnızca Erzurum–Kars",
+        "Yalnızca İç Anadolu stepı",
+        "İstanbul–Bursa ve batı kıyı/sanayi kuşakları"
+      ],
+      "dogru": "E",
+      "cozum": "Sanayi–ticaret–ulaşım → batı yoğunluğu."
+    },
+    {
+      "no": 105,
+      "bolum": "GK",
+      "ders": "Coğrafya",
+      "konu": "Türkiyenin Beşeri Coğrafyası",
+      "metin": "Türkiye'de sokağa çıkma yasağı uygulanarak evlerde yapılan son nüfus sayımı hangi yıla aittir?",
+      "siklar": [
+        "1927",
+        "2000",
+        "1965",
+        "1980",
+        "2007"
+      ],
+      "dogru": "B",
+      "cozum": "2000 yılı, sokağa çıkma yasağı uygulanarak evde yapılan son nüfus sayımı olarak bilinmektedir. 2007 yılından itibaren ise bu yöntemden vazgeçilerek adrese dayalı nüfus kayıt sistemine geçilmiştir."
+    },
+    {
+      "no": 106,
+      "bolum": "GK",
+      "ders": "Vatandaşlık",
+      "konu": "İdare Hukuku",
+      "metin": "Aşağıda verilen kuruluşlardan hangisinin kamu tüzel kişiliği yoktur?",
+      "siklar": [
+        "Yargı organları",
+        "Köyler",
+        "Vakıflar Genel Müdürlüğü",
+        "Atatürk Kültür, Dil ve Tarih Yüksek Kurumu",
+        "Belediyeler"
+      ],
+      "dogru": "A",
+      "cozum": "Yargı organları ayrı bir kamu tüzel kişisi olarak örgütlenmez; belediye, köy ve Atatürk Yüksek Kurumu anayasada tüzel kişiliği belirtilen kurumlardır."
+    },
+    {
+      "no": 107,
+      "bolum": "GK",
+      "ders": "Vatandaşlık",
+      "konu": "Genel Kültür - Ulusal Gelişmeler",
+      "metin": "Osmanlı Devleti’nde ilk rasathane hangi padişah döneminde İstanbul’da kurulmuştur?",
+      "siklar": [
+        "Fatih Sultan Mehmet",
+        "Yavuz Sultan Selim",
+        "III. Murat",
+        "Kanuni Sultan Süleyman",
+        "II. Mahmut"
+      ],
+      "dogru": "C",
+      "cozum": "1575’te III. Murat, Tophane’de İstanbul Rasathanesi’ni yaptırmıştır."
+    },
+    {
+      "no": 108,
+      "bolum": "GK",
+      "ders": "Vatandaşlık",
+      "konu": "Toplumsal Düzen ve Hukuk Kavramları",
+      "metin": "Aşağıdaki kavramlardan hangisi “bir ülkede belli bir zamanda yürürlükte olan hukuk” anlamına gelmektedir?",
+      "siklar": [
+        "Gelenek",
+        "Pozitif hukuk",
+        "Cebri hukuk",
+        "Kamu hukuku",
+        "Özel hukuk"
+      ],
+      "dogru": "B",
+      "cozum": "Pozitif (müspet) hukuk, belirli dönemde ülkede yürürlükteki yazılı ve yazısız kuralların tümüdür."
+    },
+    {
+      "no": 109,
+      "bolum": "GK",
+      "ders": "Vatandaşlık",
+      "konu": "Hak Kavramı",
+      "metin": "Kullanıldıklarında yeni bir hukuki durum yaratmayan haklara ne ad verilir?",
+      "siklar": [
+        "Devredilebilen haklar",
+        "Kurucu yenilik doğuran haklar",
+        "Değiştirici yenilik doğuran haklar",
+        "Alelade haklar",
+        "Bozucu yenilik doğuran haklar"
+      ],
+      "dogru": "D",
+      "cozum": "Alelade (yenilik doğurmayan) haklar kullanılınca yeni hukuki durum yaratmaz."
+    },
+    {
+      "no": 110,
+      "bolum": "GK",
+      "ders": "Vatandaşlık",
+      "konu": "1982 Anayasası - Yürütme",
+      "metin": "Cumhurbaşkanlığı seçiminin birinci oylamada sonuçlanması için genel oyla yapılan seçimde hangi oy oranı aranır?",
+      "siklar": [
+        "3/5 oy çoğunluğu",
+        "2/3 oy çoğunluğu",
+        "3/4 oy çoğunluğu",
+        "Salt çoğunluk",
+        "4/5 oy çoğunluğu"
+      ],
+      "dogru": "D",
+      "cozum": "Birinci turda geçerli oyların salt çoğunluğu gerekir."
+    },
+    {
+      "no": 111,
+      "bolum": "GK",
+      "ders": "Vatandaşlık",
+      "konu": "Türk Anayasa Tarihi",
+      "metin": "Milli egemenlik ilkesine yer veren ilk Türk anayasası aşağıdakilerden hangisidir?",
+      "siklar": [
+        "1924 Anayasası",
+        "Kanun-i Esasi",
+        "1961 Anayasası",
+        "1921 Anayasası",
+        "1982 Anayasası"
+      ],
+      "dogru": "D",
+      "cozum": "Milli egemenlikten ilk kez 1921 Anayasası bahsetmiştir."
+    },
+    {
+      "no": 112,
+      "bolum": "GK",
+      "ders": "Vatandaşlık",
+      "konu": "Borçlar, Ticaret ve Devletler Özel Hukuku",
+      "metin": "Tarafların bir hukuki sonuç elde etmek için karşılıklı ve birbirine uygun irade açıklamasında bulunmaları ile meydana gelen borçlar hukuku müessesesi aşağıdakilerden hangisidir?",
+      "siklar": [
+        "Gabin",
+        "Sözleşme",
+        "Edim",
+        "Tereke",
+        "İcap"
+      ],
+      "dogru": "B",
+      "cozum": "Sözleşme, karşılıklı ve birbirine uygun irade beyanıyla (icap + kabul) kurulur."
+    },
+    {
+      "no": 113,
+      "bolum": "GK",
+      "ders": "Vatandaşlık",
+      "konu": "Türkiye'nin İdari Yapısı",
+      "metin": "1982 Anayasası’na göre yerel yönetimlerin özellikleri arasında aşağıdakilerden hangisi yer almaz?",
+      "siklar": [
+        "Yerinden yönetim ilkesine dayanan özerk kuruluşlardır.",
+        "Kamu tüzel kişilikleri vardır.",
+        "Karar organları seçimle iş başına gelir.",
+        "Karar organlarının her türlü faaliyetine karşı yargı yolu kapalıdır.",
+        "Genel yönetimin idari vesayet yetkisi vardır."
+      ],
+      "dogru": "D",
+      "cozum": "Yerel yönetim işlemlerine karşı yargı yolu açıktır."
+    },
+    {
+      "no": 114,
+      "bolum": "GK",
+      "ders": "Vatandaşlık",
+      "konu": "Devlet Memurları (657)",
+      "metin": "657 sayılı Kanun’a göre “adaylık” ile ilgili olarak aşağıdakilerden hangisinde bir bilgi yanlışlığı vardır?",
+      "siklar": [
+        "Adaylık süresi 1 yıldan az olamaz.",
+        "Adaylık süresi 2 yıldan fazla olamaz.",
+        "Adaylıkta başka kurumlara nakil yapılamaz.",
+        "Adaylıkta uyarma veya kınama alanların disiplin amiri teklifi ve atamaya yetkili amir onayı ile ilişikleri kesilir.",
+        "Sağlık hariç ilişiği kesilenler 3 yıl süreyle devlet memurluğuna alınmaz."
+      ],
+      "dogru": "D",
+      "cozum": "Uyarma veya kınama tek başına adayın ilişiğinin kesilmesi sebebi değildir; notlarda adaylık 1–2 yıl ve nakil yasağı vurgulanır."
+    },
+    {
+      "no": 115,
+      "bolum": "GK",
+      "ders": "Güncel Bilgiler",
+      "konu": "Coğrafya, Millî Parklar ve Vefatlar",
+      "metin": "II. Elizabeth hangi yıl vefat etmiştir?",
+      "siklar": [
+        "2022",
+        "2023",
+        "2024",
+        "2021",
+        "2020"
+      ],
+      "dogru": "A",
+      "cozum": "2022."
+    },
+    {
+      "no": 116,
+      "bolum": "GK",
+      "ders": "Güncel Bilgiler",
+      "konu": "Spor, Kuruluşlar ve Zirveler",
+      "metin": "Dünya Ticaret Örgütü (WTO) hangi yıl kurulmuştur?",
+      "siklar": [
+        "1944",
+        "1945",
+        "1961",
+        "1991",
+        "1995"
+      ],
+      "dogru": "E",
+      "cozum": "1995."
+    },
+    {
+      "no": 117,
+      "bolum": "GK",
+      "ders": "Güncel Bilgiler",
+      "konu": "Türkiye Gündemi, Ekonomi ve Nüfus",
+      "metin": "Aşağıdakilerden hangisi Türkiye'nin maliye ve kamu finansmanı politikalarında temel kurumlardan biridir?",
+      "siklar": [
+        "Hazine ve Maliye Bakanlığı",
+        "TÜİK",
+        "UNESCO",
+        "NATO",
+        "Borsa İstanbul"
+      ],
+      "dogru": "A",
+      "cozum": "Hazine ve Maliye Bakanlığı."
+    },
+    {
+      "no": 118,
+      "bolum": "GK",
+      "ders": "Güncel Bilgiler",
+      "konu": "Savunma, Bilim ve Uzay",
+      "metin": "Aşağıdakilerden hangisi Türkiye'nin savunma sanayii alanındaki önemli başlıklarından biri değildir?",
+      "siklar": [
+        "KAAN",
+        "KIZILELMA",
+        "Çelik Kubbe",
+        "ALTAY",
+        "TOGG"
+      ],
+      "dogru": "E",
+      "cozum": "KAAN millî savaş uçağı, KIZILELMA insansız savaş uçağı, Çelik Kubbe katmanlı hava savunma sistemi, ALTAY ise millî ana muharebe tankıdır. TOGG bir savunma sanayii projesi değil, Türkiye'nin yerli otomobil projesidir."
+    },
+    {
+      "no": 119,
+      "bolum": "GK",
+      "ders": "Güncel Bilgiler",
+      "konu": "İlkler, Düşünce, Resim ve Müzik",
+      "metin": "Türkiye'nin ilk kadın valisi kimdir ve hangi ilde görev yapmıştır?",
+      "siklar": [
+        "Halide Edip – İzmir",
+        "Sabiha Gökçen – Ankara",
+        "Tansu Çiller – İstanbul",
+        "Lale Aytaman – Muğla",
+        "Lale Aytaman – İstanbul"
+      ],
+      "dogru": "D",
+      "cozum": "Lale Aytaman, Muğla."
+    },
+    {
+      "no": 120,
+      "bolum": "GK",
+      "ders": "Güncel Bilgiler",
+      "konu": "Nobel, Oscar ve UNESCO",
+      "metin": "2026 Oscar Ödülleri'nde En İyi Erkek Oyuncu ödülünü kim kazanmıştır?",
+      "siklar": [
+        "Timothée Chalamet",
+        "Leonardo DiCaprio",
+        "Michael B. Jordan",
+        "Ethan Hawke",
+        "Colman Domingo"
+      ],
+      "dogru": "C",
+      "cozum": "2026'da düzenlenen Oscar Ödülleri'nde En İyi Erkek Oyuncu ödülünü 'Sinners' filmindeki performansıyla Michael B. Jordan kazanmıştır."
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:28862:30r2nb*/
+/*jsx:babel-7.29.9-react-classic:36783:hl4mxh*/
 (function () {
   const {
     useState,
@@ -60,6 +60,7 @@
     const [title, setTitle] = useState("Atanly Canlı Deneme");
     const [day, setDay] = useState(nextSunday());
     const [cap, setCap] = useState("");
+    const [track, setTrack] = useState(props.track || "lisans");
     const [busy, setBusy] = useState(false);
     const [err, setErr] = useState("");
     var notSunday = new Date(day + "T12:00:00Z").getUTCDay() !== 0;
@@ -70,7 +71,7 @@
         p: {
           title: title,
           day: day,
-          track: "lisans",
+          track: track,
           capacity: cap ? Number(cap) : ""
         }
       }).then(function (e) {
@@ -82,10 +83,23 @@
       });
     }
     return /*#__PURE__*/React.createElement(Box, {
-      title: "Yeni canl\u0131 deneme (lisans)"
+      title: "Yeni canl\u0131 deneme"
     }, /*#__PURE__*/React.createElement("div", {
-      className: "grid sm:grid-cols-3 gap-3"
+      className: "grid sm:grid-cols-4 gap-3"
     }, /*#__PURE__*/React.createElement("label", {
+      className: "text-sm"
+    }, "Kulvar", /*#__PURE__*/React.createElement("select", {
+      className: "mt-1 w-full px-3 py-2 rounded-xl border",
+      value: track,
+      onChange: function (e) {
+        setTrack(e.target.value);
+      }
+    }, Object.keys(L.TRACKS).map(function (k) {
+      return /*#__PURE__*/React.createElement("option", {
+        key: k,
+        value: k
+      }, L.TRACKS[k]);
+    }))), /*#__PURE__*/React.createElement("label", {
       className: "text-sm"
     }, "Ba\u015Fl\u0131k", /*#__PURE__*/React.createElement("input", {
       className: "mt-1 w-full px-3 py-2 rounded-xl border",
@@ -141,7 +155,12 @@
       Object.keys(f).forEach(function (k) {
         imgs[k] = true;
       });
-      setCheck(L.validateUpload(d, window.getKpssData ? window.getKpssData() : {}, window.KONU_LABELS || {}, imgs));
+      var v = L.validateUpload(d, window.getKpssData ? window.getKpssData() : {}, window.KONU_LABELS || {}, imgs);
+      if (v.exam && v.exam.track !== exam.track) {
+        v.ok = false;
+        v.errors.unshift("Dosyanın kulvarı '" + (L.TRACKS[v.exam.track] || v.exam.track) + "', bu deneme ise " + L.TRACKS[exam.track] + " kulvarı için. Dosyadaki \"kulvar\" alanını düzelt ya da doğru denemeyi seç.");
+      }
+      setCheck(v);
     }
     function onJson(e) {
       var f = e.target.files && e.target.files[0];
@@ -478,7 +497,9 @@
       className: "text-2xl font-black"
     }, exam.title), /*#__PURE__*/React.createElement("span", {
       className: "text-xs px-2 py-1 rounded-full bg-stone-200 dark:bg-stone-700"
-    }, STATUS[exam.status])), err ? /*#__PURE__*/React.createElement("p", {
+    }, STATUS[exam.status]), /*#__PURE__*/React.createElement("span", {
+      className: "text-xs px-2 py-1 rounded-full border border-stone-300 dark:border-stone-600"
+    }, L.TRACKS[exam.track])), err ? /*#__PURE__*/React.createElement("p", {
       className: "text-sm text-rose-600"
     }, err) : null, /*#__PURE__*/React.createElement(Box, {
       title: "Takvim"
@@ -651,11 +672,156 @@
       }), /*#__PURE__*/React.createElement("td", null, q.blank || 0), /*#__PURE__*/React.createElement("td", null, q.avg_ms ? Math.round(q.avg_ms / 1000) : ""));
     }))))) : null);
   }
+
+  // Kohort karşılaştırması: bir kulvarın kesinleşmiş denemeleri yan yana
+  function Trends(props) {
+    const [track, setTrack] = useState(props.track);
+    const [rows, setRows] = useState(null);
+    const [err, setErr] = useState("");
+    useEffect(function () {
+      setRows(null);
+      C.rpc("live_admin_trends", {
+        p_track: track
+      }).then(setRows).catch(function (x) {
+        setErr(x.message);
+      });
+    }, [track]);
+    var dersler = [];
+    (rows || []).forEach(function (r) {
+      Object.keys(r.by_ders || {}).forEach(function (d) {
+        if (dersler.indexOf(d) < 0) dersler.push(d);
+      });
+    });
+    dersler.sort(function (a, b) {
+      var ia = L.DERS_ORDER.indexOf(a),
+        ib = L.DERS_ORDER.indexOf(b);
+      return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
+    });
+    function n(v) {
+      return v == null ? "–" : L.fmtNet(v);
+    }
+    var dark = document.documentElement.classList.contains("dark");
+    return /*#__PURE__*/React.createElement("div", {
+      className: "space-y-4"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-wrap items-center gap-3"
+    }, /*#__PURE__*/React.createElement(Btn, {
+      onClick: props.onBack
+    }, "\u2190 Liste"), /*#__PURE__*/React.createElement("h1", {
+      className: "text-2xl font-black"
+    }, "Denemeleri kar\u015F\u0131la\u015Ft\u0131r")), /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-wrap gap-2",
+      role: "group",
+      "aria-label": "Kulvar filtresi"
+    }, Object.keys(L.TRACKS).map(function (k) {
+      return /*#__PURE__*/React.createElement(Btn, {
+        key: k,
+        primary: track === k,
+        onClick: function () {
+          setTrack(k);
+        }
+      }, L.TRACKS[k]);
+    })), err ? /*#__PURE__*/React.createElement("p", {
+      className: "text-sm text-rose-600"
+    }, err) : null, /*#__PURE__*/React.createElement(Box, {
+      title: "Katılım ve net · " + L.TRACKS[track]
+    }, !rows ? "Yükleniyor…" : !rows.length ? "Bu kulvarda kesinleşmiş deneme yok." : /*#__PURE__*/React.createElement("div", {
+      className: "overflow-x-auto"
+    }, /*#__PURE__*/React.createElement("table", {
+      className: "w-full text-sm"
+    }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", {
+      className: "text-left text-xs text-stone-500"
+    }, /*#__PURE__*/React.createElement("th", {
+      className: "py-1 pr-3"
+    }, "Deneme"), /*#__PURE__*/React.createElement("th", {
+      className: "pr-3"
+    }, "Kay\u0131t \u2192 kat\u0131l\u0131m"), /*#__PURE__*/React.createElement("th", {
+      className: "pr-3 min-w-[180px]"
+    }, "Ortalama net"), /*#__PURE__*/React.createElement("th", {
+      className: "pr-3"
+    }, "Medyan"), /*#__PURE__*/React.createElement("th", {
+      className: "pr-3"
+    }, "\u0130lk %10 s\u0131n\u0131r\u0131"), /*#__PURE__*/React.createElement("th", {
+      className: "pr-3"
+    }, "\u0130lk %10 ort."), /*#__PURE__*/React.createElement("th", {
+      className: "pr-3"
+    }, "Cihaz / k\xE2\u011F\u0131t ort."))), /*#__PURE__*/React.createElement("tbody", null, rows.map(function (r) {
+      var a = r.analysis || {},
+        pc = a.pct || {},
+        m = a.by_mode || {};
+      var w = Math.max(0, Math.min(100, (Number(r.avg_net) || 0) / 120 * 100));
+      return /*#__PURE__*/React.createElement("tr", {
+        key: r.id,
+        className: "border-t border-stone-200 dark:border-stone-700"
+      }, /*#__PURE__*/React.createElement("td", {
+        className: "py-1.5 pr-3"
+      }, /*#__PURE__*/React.createElement("b", null, r.title), /*#__PURE__*/React.createElement("span", {
+        className: "block text-xs text-stone-500"
+      }, L.fmtDate(L.ms(r.starts_at)))), /*#__PURE__*/React.createElement("td", {
+        className: "pr-3"
+      }, r.registered, " \u2192 ", r.participants), /*#__PURE__*/React.createElement("td", {
+        className: "pr-3"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "inline-flex items-center gap-2 w-full"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "h-2 rounded-full",
+        style: {
+          width: w + "%",
+          minWidth: 4,
+          maxWidth: 120,
+          background: dark ? "#3987e5" : "#2a78d6"
+        },
+        "aria-hidden": "true"
+      }), /*#__PURE__*/React.createElement("b", null, n(r.avg_net)))), /*#__PURE__*/React.createElement("td", {
+        className: "pr-3"
+      }, n(pc.p50)), /*#__PURE__*/React.createElement("td", {
+        className: "pr-3"
+      }, n(pc.p90)), /*#__PURE__*/React.createElement("td", {
+        className: "pr-3"
+      }, n(a.top10_net)), /*#__PURE__*/React.createElement("td", {
+        className: "pr-3"
+      }, m.device ? n(m.device.avg_net) + " (" + m.device.n + ")" : "–", " / ", m.paper ? n(m.paper.avg_net) + " (" + m.paper.n + ")" : "–"));
+    }))))), rows && rows.length ? /*#__PURE__*/React.createElement(Box, {
+      title: "Ders ortalamalar\u0131 (kat\u0131lan ortalamas\u0131 \xB7 ilk %10)"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "overflow-x-auto"
+    }, /*#__PURE__*/React.createElement("table", {
+      className: "w-full text-sm"
+    }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", {
+      className: "text-left text-xs text-stone-500"
+    }, /*#__PURE__*/React.createElement("th", {
+      className: "py-1 pr-3"
+    }, "Ders"), rows.map(function (r) {
+      return /*#__PURE__*/React.createElement("th", {
+        key: r.id,
+        className: "pr-3"
+      }, L.fmtDay(L.ms(r.starts_at)));
+    }))), /*#__PURE__*/React.createElement("tbody", null, dersler.map(function (d) {
+      return /*#__PURE__*/React.createElement("tr", {
+        key: d,
+        className: "border-t border-stone-200 dark:border-stone-700"
+      }, /*#__PURE__*/React.createElement("td", {
+        className: "py-1.5 pr-3 font-semibold"
+      }, d), rows.map(function (r) {
+        var a = r.by_ders && r.by_ders[d],
+          t = r.analysis && r.analysis.top10 && r.analysis.top10[d];
+        return /*#__PURE__*/React.createElement("td", {
+          key: r.id,
+          className: "pr-3"
+        }, a ? n(a.net) : "–", /*#__PURE__*/React.createElement("span", {
+          className: "text-xs text-stone-500"
+        }, t != null ? " · " + n(t) : ""));
+      }));
+    })))), /*#__PURE__*/React.createElement("p", {
+      className: "text-xs text-stone-500 mt-2"
+    }, "Bir dersin ortalamas\u0131 haftadan haftaya belirgin d\xFC\u015F\xFCyorsa o derste sorular zorla\u015Fm\u0131\u015F ya da konu eksikleri birikmi\u015F olabilir; soru istatistiklerinden kontrol et.")) : null);
+  }
   function LiveExamAdmin() {
     const [list, setList] = useState(null);
     const [err, setErr] = useState("");
     const [mode, setMode] = useState("list");
     const [sel, setSel] = useState(null);
+    const [track, setTrack] = useState("");
     function load() {
       C.rpc("live_admin_list").then(setList).catch(function (x) {
         setErr(x.message);
@@ -669,20 +835,50 @@
         load();
       }
     });
+    if (mode === "trends") return /*#__PURE__*/React.createElement(Trends, {
+      track: track || "lisans",
+      onBack: function () {
+        setMode("list");
+      }
+    });
+    var shown = (list || []).filter(function (e) {
+      return !track || e.track === track;
+    });
     return /*#__PURE__*/React.createElement("div", {
       className: "space-y-4"
     }, /*#__PURE__*/React.createElement("div", {
       className: "flex flex-wrap items-center justify-between gap-3"
     }, /*#__PURE__*/React.createElement("h1", {
       className: "text-2xl md:text-3xl font-black gradient-text"
-    }, "\uD83D\uDD52 Canl\u0131 Deneme"), /*#__PURE__*/React.createElement(Btn, {
+    }, "\uD83D\uDD52 Canl\u0131 Deneme"), /*#__PURE__*/React.createElement("div", {
+      className: "flex gap-2"
+    }, /*#__PURE__*/React.createElement(Btn, {
+      onClick: function () {
+        setMode("trends");
+      }
+    }, "\uD83D\uDCCA Denemeleri kar\u015F\u0131la\u015Ft\u0131r"), /*#__PURE__*/React.createElement(Btn, {
       primary: true,
       onClick: function () {
         setMode("create");
       }
-    }, "Yeni deneme")), err ? /*#__PURE__*/React.createElement("p", {
+    }, "Yeni deneme"))), err ? /*#__PURE__*/React.createElement("p", {
       className: "text-sm text-rose-600"
-    }, err, " (supabase/patch-live-exam.sql \xE7al\u0131\u015Ft\u0131r\u0131ld\u0131 m\u0131?)") : null, mode === "create" ? /*#__PURE__*/React.createElement(CreateForm, {
+    }, err, " (supabase/patch-live-exam.sql \xE7al\u0131\u015Ft\u0131r\u0131ld\u0131 m\u0131?)") : null, /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-wrap gap-2",
+      role: "group",
+      "aria-label": "Kulvar filtresi"
+    }, [["", "Tümü"]].concat(Object.keys(L.TRACKS).map(function (k) {
+      return [k, L.TRACKS[k]];
+    })).map(function (t) {
+      return /*#__PURE__*/React.createElement(Btn, {
+        key: t[0],
+        primary: track === t[0],
+        onClick: function () {
+          setTrack(t[0]);
+        }
+      }, t[1]);
+    })), mode === "create" ? /*#__PURE__*/React.createElement(CreateForm, {
+      track: track || "lisans",
       onCancel: function () {
         setMode("list");
       },
@@ -692,9 +888,9 @@
       }
     }) : null, /*#__PURE__*/React.createElement(Box, {
       title: "Denemeler"
-    }, !list ? "Yükleniyor…" : !list.length ? "Henüz deneme yok." : /*#__PURE__*/React.createElement("ul", {
+    }, !list ? "Yükleniyor…" : !shown.length ? "Henüz deneme yok." : /*#__PURE__*/React.createElement("ul", {
       className: "space-y-2"
-    }, list.map(function (e) {
+    }, shown.map(function (e) {
       return /*#__PURE__*/React.createElement("li", {
         key: e.id
       }, /*#__PURE__*/React.createElement("button", {
@@ -708,7 +904,9 @@
         className: "font-bold"
       }, e.title), " ", /*#__PURE__*/React.createElement("span", {
         className: "text-xs px-2 py-0.5 rounded-full bg-stone-200 dark:bg-stone-700 ml-1"
-      }, STATUS[e.status]), /*#__PURE__*/React.createElement("span", {
+      }, STATUS[e.status]), " ", /*#__PURE__*/React.createElement("span", {
+        className: "text-xs px-2 py-0.5 rounded-full border border-stone-300 dark:border-stone-600 ml-1"
+      }, L.TRACKS[e.track]), /*#__PURE__*/React.createElement("span", {
         className: "block text-xs text-stone-500 mt-0.5"
       }, dt(e.starts_at), " \xB7 ", e.registered, " kay\u0131tl\u0131", e.waitlist ? " · " + e.waitlist + " yedek" : "", " \xB7 ", e.questions, "/120 soru", e.participants ? " · " + e.participants + " katılımcı · ort. net " + L.fmtNet(e.avg_net) : "")));
     })), /*#__PURE__*/React.createElement("p", {

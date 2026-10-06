@@ -1,6 +1,79 @@
--- CANLI DENEME · PARÇA 4 / 8
--- Supabase SQL Editor'da 1'den 8'e SIRAYLA çalıştır (her parçayı ayrı ayrı: yapıştır → Run).
+-- CANLI DENEME · PARÇA 4 / 9
+-- Supabase SQL Editor'da 1'den 9'e SIRAYLA çalıştır (her parçayı ayrı ayrı: yapıştır → Run).
 -- Bu dosya scripts/split-live-sql.js ile supabase/patch-live-exam.sql'den üretilir. Elle düzenleme.
+
+-- Bugün kartı ve canlı deneme ekranının tek çağrısı.
+create or replace function public.live_dashboard(p_track text default 'lisans')
+returns json language plpgsql security definer set search_path = public as $$
+declare
+  uid uuid := auth.uid();
+  cur public.live_exams;
+  reg public.live_registrations;
+  att public.live_attempts;
+  last_res record;
+  missed public.live_exams;
+  canc public.live_exams;
+  waitpos int;
+  regcount int;
+begin
+  perform public.live_tick();
+  -- güncel deneme: henüz kesinleşmemiş, silinmemiş, en yakın planlı deneme
+  select * into cur from public.live_exams
+   where track = p_track and status = 'scheduled' and deleted_at is null
+   order by starts_at asc limit 1;
+  if uid is not null and cur.id is not null then
+    select * into reg from public.live_registrations where exam_id = cur.id and user_id = uid;
+    select * into att from public.live_attempts where exam_id = cur.id and user_id = uid;
+    if reg.status = 'waitlist' then
+      select count(*) + 1 into waitpos from public.live_registrations
+       where exam_id = cur.id and status = 'waitlist' and created_at < reg.created_at;
+    end if;
+  end if;
+  if cur.id is not null then
+    select count(*) into regcount from public.live_registrations where exam_id = cur.id and status = 'registered';
+  end if;
+  -- en son sonucum
+  if uid is not null then
+    select r.*, e.title, e.track, e.starts_at, e.ranking_at, e.finalized_at, e.status as exam_status
+      into last_res
+      from public.live_results r join public.live_exams e on e.id = r.exam_id
+     where r.user_id = uid and e.deleted_at is null and e.status <> 'cancelled'
+     order by e.starts_at desc limit 1;
+    -- katılmadığım en son kesinleşmiş deneme (son sonucumdan yeniyse)
+    select e.* into missed from public.live_exams e
+     where e.track = p_track and e.finalized_at is not null and e.deleted_at is null and e.status <> 'cancelled'
+       and not exists (select 1 from public.live_results r where r.exam_id = e.id and r.user_id = uid)
+       and (last_res.exam_id is null or e.starts_at > last_res.starts_at)
+     order by e.starts_at desc limit 1;
+    -- son bir haftada iptal edilen ve kayıtlı olduğum deneme
+    select e.* into canc from public.live_exams e
+      join public.live_registrations r on r.exam_id = e.id and r.user_id = uid and r.status = 'registered'
+     where e.track = p_track and e.status = 'cancelled' and e.deleted_at is null
+       and e.updated_at > public.live_clock() - interval '7 days'
+     order by e.updated_at desc limit 1;
+  end if;
+  return json_build_object(
+    'now', (extract(epoch from public.live_clock()) * 1000)::bigint,
+    'exam', case when cur.id is null then null else public.live_exam_json(cur) end,
+    'cancelled', case when canc.id is null then null else public.live_exam_json(canc) end,
+    'registered_count', regcount,
+    'registration', case when reg.exam_id is null then null else json_build_object('status', reg.status, 'mode', reg.mode, 'waitlist_pos', waitpos) end,
+    'attempt', case when att.exam_id is null then null else json_build_object(
+        'entered_at', att.entered_at, 'closed', att.closed_at is not null, 'submitted', att.submitted_at is not null,
+        'locked', att.locked, 'switches', att.switches, 'mode', att.mode, 'close_reason', att.close_reason) end,
+    'last_result', case when last_res.exam_id is null then null else json_build_object(
+        'exam_id', last_res.exam_id, 'title', last_res.title, 'track', last_res.track, 'starts_at', last_res.starts_at,
+        'net', last_res.net, 'gy_net', last_res.gy_net, 'gk_net', last_res.gk_net,
+        'correct', last_res.correct, 'wrong', last_res.wrong, 'blank', last_res.blank,
+        'rank', last_res.rank, 'participants', last_res.participants, 'top_pct', last_res.top_pct,
+        'ranking_at', last_res.ranking_at, 'finalized', last_res.finalized_at is not null,
+        'by_konu', last_res.by_konu) end,
+    'missed', case when missed.id is null then null else public.live_exam_json(missed) end,
+    'missed_no_optic', missed.id is not null and exists (select 1 from public.live_attempts t
+        where t.exam_id = missed.id and t.user_id = uid and t.mode = 'paper' and t.submitted_at is null)
+  );
+end;
+$$;
 
 create or replace function public.live_register(p_exam uuid)
 returns json language plpgsql security definer set search_path = public as $$
@@ -87,66 +160,3 @@ $$;
 -- p_mode: 'device' (cihazda çöz) ya da 'paper' (kitapçığı yazdır, optik formu okut). İlk girişte
 -- seçilir, sonra değişmez. Kâğıt modunda cihaz kilidi yoktur: cevaplar akmaz, optik bir kez gönderilir.
 drop function if exists public.live_enter(uuid, text);
-create or replace function public.live_enter(p_exam uuid, p_device text, p_mode text default 'device')
-returns json language plpgsql security definer set search_path = public as $$
-declare
-  uid uuid := public.live_require_user();
-  e public.live_exams;
-  att public.live_attempts;
-  t timestamptz := public.live_clock();
-  md text := coalesce(nullif(p_mode, ''), 'device');
-  ans json;
-begin
-  if coalesce(length(p_device), 0) < 8 or length(p_device) > 80 then perform public.live_err('bad_device', 'Geçersiz cihaz.'); end if;
-  if md not in ('device', 'paper') then perform public.live_err('bad_input', 'Geçersiz çözme biçimi.'); end if;
-  select * into e from public.live_exams where id = p_exam;
-  if e.id is null or e.deleted_at is not null then perform public.live_err('not_found', 'Deneme bulunamadı.'); end if;
-  if e.status = 'cancelled' then perform public.live_err('cancelled', 'Bu deneme iptal edildi.'); end if;
-  if e.status <> 'scheduled' then perform public.live_err('ended', 'Sınav sona erdi.'); end if;
-  if not exists (select 1 from public.live_registrations where exam_id = p_exam and user_id = uid and status = 'registered') then
-    perform public.live_err('not_registered', 'Bu denemeye kayıtlı değilsin.');
-  end if;
-  if t < e.starts_at then perform public.live_err('too_early', 'Sınav henüz başlamadı.'); end if;
-  if t >= e.ends_at then perform public.live_err('ended', 'Sınav sona erdi.'); end if;
-
-  select * into att from public.live_attempts where exam_id = p_exam and user_id = uid for update;
-  if att.exam_id is null then
-    if t >= e.entry_closes_at then perform public.live_err('entry_closed', 'Sınava giriş 10:45''te kapandı.'); end if;
-    insert into public.live_attempts (exam_id, user_id, device_id, mode, entered_at, last_seen_at)
-    values (p_exam, uid, p_device, md, t, t) returning * into att;
-    update public.live_registrations set mode = md, updated_at = t where exam_id = p_exam and user_id = uid;
-    insert into public.live_events (exam_id, user_id, kind, detail) values (p_exam, uid, 'enter', json_build_object('mode', md)::jsonb);
-  else
-    if att.locked then perform public.live_err('locked', 'Sınavın kilitlendi. Yönetici ile iletişime geç.'); end if;
-    if att.submitted_at is not null then perform public.live_err('submitted', 'Kâğıdını teslim ettin.'); end if;
-    if att.mode <> md then
-      perform public.live_err('mode_locked', case when att.mode = 'paper'
-        then 'Kâğıtta çözmeyi seçtin; cevaplarını optik formunu okutarak gönder.'
-        else 'Sınava cihazda başladın; cihazda devam et.' end);
-    end if;
-    if att.mode = 'paper' then
-      update public.live_attempts set last_seen_at = t where exam_id = p_exam and user_id = uid;
-    elsif att.device_id <> p_device then
-      if att.switches >= 2 then
-        update public.live_attempts set locked = true where exam_id = p_exam and user_id = uid;
-        insert into public.live_events (exam_id, user_id, kind, detail)
-        values (p_exam, uid, 'locked', json_build_object('switches', att.switches + 1)::jsonb);
-        return json_build_object('error', 'locked', 'message', 'Üçüncü cihaz değişimi: sınavın kilitlendi. Yönetici ile iletişime geç.');
-      end if;
-      update public.live_attempts set device_id = p_device, switches = switches + 1, last_seen_at = t
-       where exam_id = p_exam and user_id = uid returning * into att;
-      insert into public.live_events (exam_id, user_id, kind, detail)
-      values (p_exam, uid, 'device_switch', json_build_object('switches', att.switches)::jsonb);
-    else
-      update public.live_attempts set last_seen_at = t where exam_id = p_exam and user_id = uid;
-    end if;
-  end if;
-  select coalesce(json_agg(json_build_object('no', no, 'c', choice, 'ms', ms) order by no), '[]'::json) into ans
-    from public.live_answers where exam_id = p_exam and user_id = uid;
-  return json_build_object(
-    'now', (extract(epoch from t) * 1000)::bigint,
-    'exam', public.live_exam_json(e),
-    'key', e.booklet_key, 'sha', e.booklet_sha, 'path', e.booklet_path,
-    'answers', ans, 'switches', att.switches, 'mode', att.mode);
-end;
-$$;
