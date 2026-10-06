@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:36783:hl4mxh*/
+/*jsx:babel-7.29.9-react-classic:39041:wptbux*/
 (function () {
   const {
     useState,
@@ -280,7 +280,7 @@
       className: "mt-3 text-sm"
     }, check.ok ? /*#__PURE__*/React.createElement("p", {
       className: "text-emerald-700 font-semibold"
-    }, "\u2713 Ge\xE7erli: 120 soru, 60/60, t\xFCm konular data.js'te var.") : /*#__PURE__*/React.createElement("p", {
+    }, "\u2713 Ge\xE7erli: 120 soru, KPSS da\u011F\u0131l\u0131m\u0131na uygun, t\xFCm konular data.js'te var.") : /*#__PURE__*/React.createElement("p", {
       className: "text-rose-700 font-semibold"
     }, check.errors.length, " hata \u2014 y\xFCkleme reddedildi:"), /*#__PURE__*/React.createElement("ul", {
       className: "mt-1 max-h-64 overflow-auto space-y-0.5"
@@ -294,7 +294,41 @@
         key: "w" + i,
         className: "text-amber-700"
       }, "\u2022 ", x);
-    }))) : null, err ? /*#__PURE__*/React.createElement("p", {
+    })), check.distribution ? /*#__PURE__*/React.createElement("details", {
+      className: "mt-2",
+      open: !check.ok
+    }, /*#__PURE__*/React.createElement("summary", {
+      className: "font-semibold cursor-pointer"
+    }, "Soru da\u011F\u0131l\u0131m\u0131"), /*#__PURE__*/React.createElement("div", {
+      className: "grid sm:grid-cols-2 gap-4 mt-2 items-start"
+    }, /*#__PURE__*/React.createElement("table", {
+      className: "text-sm"
+    }, /*#__PURE__*/React.createElement("tbody", null, check.distribution.tests.map(function (t) {
+      var ok = t.count === t.n;
+      return /*#__PURE__*/React.createElement("tr", {
+        key: t.key
+      }, /*#__PURE__*/React.createElement("td", {
+        className: "pr-3 py-0.5"
+      }, t.label, /*#__PURE__*/React.createElement("span", {
+        className: "block text-[11px] text-stone-500"
+      }, t.from, "\u2013", t.to, ". sorular", t.parts ? " · " + t.parts.map(function (p) {
+        return p.ders + " " + p.count;
+      }).join(" + ") : "")), /*#__PURE__*/React.createElement("td", {
+        className: "font-bold " + (ok ? "text-emerald-700" : "text-rose-700")
+      }, ok ? "✓ " : "✗ ", t.count, " / ", t.n));
+    }))), /*#__PURE__*/React.createElement("table", {
+      className: "text-sm"
+    }, /*#__PURE__*/React.createElement("tbody", null, check.distribution.groups.map(function (g) {
+      return /*#__PURE__*/React.createElement("tr", {
+        key: g.ders + g.ad
+      }, /*#__PURE__*/React.createElement("td", {
+        className: "pr-3 py-0.5"
+      }, g.ders, " \xB7 ", g.ad, /*#__PURE__*/React.createElement("span", {
+        className: "block text-[11px] text-stone-500"
+      }, "🔥".repeat(g.w))), /*#__PURE__*/React.createElement("td", {
+        className: "font-bold " + (g.count ? "" : g.w >= 4 ? "text-amber-700" : "text-stone-500")
+      }, g.count, " soru"));
+    }))))) : null) : null, err ? /*#__PURE__*/React.createElement("p", {
       className: "text-sm text-rose-600 mt-2"
     }, err) : null, busy ? /*#__PURE__*/React.createElement("p", {
       className: "text-sm mt-2"

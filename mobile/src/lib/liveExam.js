@@ -24,6 +24,32 @@
         { ders: "Vatandaşlık", bolum: "GK", n: 9 },
         { ders: "Güncel Bilgiler", bolum: "GK", n: 6 }
     ];
+    // KPSS GY-GK soru dağılımı ve sırası (üç kulvar için aynı). Matematik testi geometriyi de içerir.
+    var EXAM_PLAN = [
+        { key: "Türkçe", label: "Türkçe", dersler: ["Türkçe"], bolum: "GY", n: 30, from: 1, to: 30 },
+        { key: "Matematik", label: "Matematik (geometri dahil)", dersler: ["Matematik", "Geometri"], bolum: "GY", n: 30, from: 31, to: 60 },
+        { key: "Tarih", label: "Tarih", dersler: ["Tarih"], bolum: "GK", n: 27, from: 61, to: 87 },
+        { key: "Coğrafya", label: "Coğrafya", dersler: ["Coğrafya"], bolum: "GK", n: 18, from: 88, to: 105 },
+        { key: "Vatandaşlık", label: "Vatandaşlık", dersler: ["Vatandaşlık"], bolum: "GK", n: 9, from: 106, to: 114 },
+        { key: "Güncel Bilgiler", label: "Güncel Bilgiler", dersler: ["Güncel Bilgiler"], bolum: "GK", n: 6, from: 115, to: 120 }
+    ];
+    // Sık sorulan konu grupları (w: önem, 5 en yüksek). Anahtarlar data.js'teki konu adlarıdır.
+    // w >= 4 olan bir gruptan hiç soru yoksa yüklemede uyarı verilir.
+    var KONU_GROUPS = [
+        { ders: "Tarih", ad: "Millî Mücadele", w: 5, konular: ["Milli Mücadeler Hazırlık Dönemi", "I. TBMM Dönemi ve Gelişmeleri", "Milli Mücadeele Muharabeler Dönemi:", "Milli Mücadele Diplomatik Dönem", "Mondros Ateşkes Antlaşması ve Cemiyetler"] },
+        { ders: "Tarih", ad: "Atatürk İlke ve İnkılapları", w: 5, konular: ["Atatürk İlkeleri", "Atatürk İnkılapları", "Atatürk Dönemi İç Politikalar ve Gelişmeler"] },
+        { ders: "Tarih", ad: "Osmanlı Devleti", w: 4, konular: ["Osmanlı Devleti Kuruluş Dönemi", "Osmanlı Devleti Yükselme Dönemi", "Osmanlı Devleti Duraksama Dönemi", "Osmanlı Devleti Gerileme Dönemi", "19.YY Osmanlı Devleti Dağılma Dönemi", "19.YY Osmanlı Devleti Islahatları", "Osmanlı Kültür ve Medeniyeti"] },
+        { ders: "Tarih", ad: "XX. Yüzyılda Osmanlı", w: 4, konular: ["20.YY Başlarında Osmanlı Devleti "] },
+        { ders: "Tarih", ad: "Atatürk Dönemi Dış Politika", w: 3, konular: ["Atatürk Dönemi Türk Dış Politikası"] },
+        { ders: "Tarih", ad: "İslamiyet Öncesi ve İlk Türk-İslam", w: 2, konular: ["İslamiyet Öncesi Türk Tarihi", "İlk Türk-İslam Devletleri", "Anadolu Selçuklu Devleti"] },
+        { ders: "Tarih", ad: "Çağdaş Türk ve Dünya Tarihi", w: 2, konular: ["XX. Yüzyıl Başlarında Dünya", "II. Dünya Savaşı", "II. Dünya Savaşı'nda Türkiye", "Soğuk Savaş Dönemi", "Yumuşama Dönemi", "Küreselleşen Dünya"] },
+        { ders: "Geometri", ad: "Üçgenler", w: 5, konular: ["Üçgende Açılar", "Açı-Kenar ve Dik Üçgen", "İkizkenar ve Eşkenar Üçgen", "Açıortay ve Kenarortay", "Üçgende Alan", "Üçgenlerde Benzerlik"] },
+        { ders: "Geometri", ad: "Dörtgenler", w: 4, konular: ["Dörtgenler ve Yamuk", "Paralelkenar ve Özel Dörtgenler"] },
+        { ders: "Geometri", ad: "Çember ve Daire", w: 4, konular: ["Çember ve Daire"] },
+        { ders: "Geometri", ad: "Çokgenler", w: 3, konular: ["Çokgenler"] },
+        { ders: "Geometri", ad: "Analitik Geometri", w: 3, konular: ["Analitik Geometri (Doğru)"] },
+        { ders: "Geometri", ad: "Katı Cisimler", w: 2, konular: ["Katı Cisimler"] }
+    ];
     var LETTERS = ["A", "B", "C", "D", "E"];
 
     // ---------------------------------------------------------------
@@ -498,12 +524,56 @@
             });
         });
         if (list.length === 120 && (nGY !== 60 || nGK !== 60)) errors.push("Genel Yetenek " + nGY + ", Genel Kültür " + nGK + " soru: 60/60 olmalı.");
+        var dist = distribution(out);
+        if (list.length === 120) {
+            dist.tests.forEach(function (t) {
+                if (t.count !== t.n) errors.push(t.label + ": " + t.count + " soru var, KPSS'de " + t.n + " olmalı.");
+            });
+            var misplaced = dist.misplaced;
+            misplaced.slice(0, 5).forEach(function (m) {
+                warnings.push("Soru " + m.no + " " + m.ders + ": KPSS sırasında " + m.from + "–" + m.to + ". sorular " + m.test + " testidir.");
+            });
+            if (misplaced.length > 5) warnings.push("Sırası KPSS'ye uymayan " + (misplaced.length - 5) + " soru daha var.");
+            dist.groups.forEach(function (g) {
+                if (g.w >= 4 && g.count === 0 && dist.byDers[g.ders]) {
+                    warnings.push(g.ders + ": '" + g.ad + "' konularından hiç soru yok (KPSS'de en sık sorulanlardan).");
+                }
+            });
+        }
         for (var i = 1; i <= 120 && list.length === 120; i++) if (!seen[i]) errors.push("Soru " + i + " eksik.");
         out.sort(function (a, b) { return a.no - b.no; });
         return {
             ok: errors.length === 0, errors: errors, warnings: warnings,
-            exam: { track: track, title: doc.baslik || "Canlı Deneme" }, questions: out
+            exam: { track: track, title: doc.baslik || "Canlı Deneme" }, questions: out, distribution: dist
         };
+    }
+
+    // Dağılım özeti: testler (KPSS planına göre), ders ve konu grupları, yerinde olmayan sorular
+    function distribution(questions) {
+        var byDers = {}, byKonu = {};
+        questions.forEach(function (q) {
+            byDers[q.ders] = (byDers[q.ders] || 0) + 1;
+            var k = q.ders + "|" + q.konu;
+            byKonu[k] = (byKonu[k] || 0) + 1;
+        });
+        var tests = EXAM_PLAN.map(function (t) {
+            var c = t.dersler.reduce(function (s, d) { return s + (byDers[d] || 0); }, 0);
+            return { key: t.key, label: t.label, n: t.n, count: c, from: t.from, to: t.to,
+                parts: t.dersler.length > 1 ? t.dersler.map(function (d) { return { ders: d, count: byDers[d] || 0 }; }) : null };
+        });
+        var groups = KONU_GROUPS.map(function (g) {
+            var c = g.konular.reduce(function (s, k) { return s + (byKonu[g.ders + "|" + k] || 0); }, 0);
+            return { ders: g.ders, ad: g.ad, w: g.w, count: c };
+        });
+        var misplaced = [];
+        questions.forEach(function (q) {
+            var t = EXAM_PLAN.filter(function (p) { return p.dersler.indexOf(q.ders) >= 0; })[0];
+            if (t && (q.no < t.from || q.no > t.to)) {
+                var at = EXAM_PLAN.filter(function (p) { return q.no >= p.from && q.no <= p.to; })[0];
+                misplaced.push({ no: q.no, ders: q.ders, test: at ? at.label : "?", from: at ? at.from : 0, to: at ? at.to : 0 });
+            }
+        });
+        return { tests: tests, groups: groups, byDers: byDers, byKonu: byKonu, misplaced: misplaced };
     }
 
     // ---------------------------------------------------------------
@@ -701,6 +771,9 @@
         TRACKS: TRACKS,
         BOLUM: BOLUM,
         LISANS_PLAN: LISANS_PLAN,
+        EXAM_PLAN: EXAM_PLAN,
+        KONU_GROUPS: KONU_GROUPS,
+        distribution: distribution,
         LETTERS: LETTERS,
         createClock: createClock,
         ms: ms,

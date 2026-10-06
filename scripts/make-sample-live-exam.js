@@ -4,12 +4,18 @@
  *   node scripts/make-sample-live-exam.js --kulvar=onlisans    (docs/canli-deneme-ornek-onlisans.json)
  * Türkçe, Geometri ve Genel Kültür soruları katalogdan (data.js konu anahtarlarıyla) alınır;
  * Matematik soruları burada yazılıdır ve cevapları hesaplanarak denetlenir.
- * Dağılım lisans KPSS: Türkçe 30, Matematik 22, Geometri 8 | Tarih 27, Coğrafya 18, Vatandaşlık 9, Güncel 6.
+ * Dağılım (KPSS, üç kulvar): Türkçe 30, Matematik 30 (22 + geometri 8) | Tarih 27, Coğrafya 18, Vatandaşlık 9, Güncel 6.
+ * Sık sorulan konu gruplarından (js/liveExam.js KONU_GROUPS, önem >= 4) en az birer soru seçilir.
  */
 var fs = require("fs");
 var path = require("path");
 var root = path.join(__dirname, "..");
 var cat = require(path.join(root, "catalog.json"));
+var LiveExam = require(path.join(root, "js", "liveExam.js"));
+// KPSS'de en sık sorulan konu gruplarından (önem >= 4) en az birer soru gelsin
+function mustFor(ders) {
+    return LiveExam.KONU_GROUPS.filter(function (g) { return g.ders === ders && g.w >= 4; }).map(function (g) { return g.konular; });
+}
 
 // tekrarlanabilir rastgelelik
 var seed = 20261011;
@@ -33,6 +39,13 @@ function fromCatalog(ders, n, opts) {
     pool.forEach(function (p) { (byKonu[p.konu] = byKonu[p.konu] || []).push(p); });
     Object.keys(byKonu).forEach(function (k) { byKonu[k].sort(function () { return rnd() - 0.5; }); });
     var order = Object.keys(byKonu).sort(function () { return rnd() - 0.5; });
+    // önce önemli grupların her birinden bir konu, sonra diğerleri
+    var first = [];
+    (opts.must || []).forEach(function (grp) {
+        var k = grp.filter(function (x) { return byKonu[x] && byKonu[x].length && first.indexOf(x) < 0; })[0];
+        if (k) first.push(k);
+    });
+    order = first.concat(order.filter(function (k) { return first.indexOf(k) < 0; }));
     var out = [], idx = 0;
     while (out.length < n) {
         var k = order[idx % order.length];
@@ -80,8 +93,8 @@ var mat = [
 ];
 if (mat.length !== 22) throw new Error("Matematik 22 soru olmalı: " + mat.length);
 
-var gy = fromCatalog("Türkçe", 30).concat(mat).concat(fromCatalog("Geometri", 8, { only: function (q) { return !q.sekilli; } }));
-var gk = fromCatalog("Tarih", 27).concat(fromCatalog("Coğrafya", 18)).concat(fromCatalog("Vatandaşlık", 9)).concat(fromCatalog("Güncel Bilgiler", 6));
+var gy = fromCatalog("Türkçe", 30).concat(mat).concat(fromCatalog("Geometri", 8, { only: function (q) { return !q.sekilli; }, must: mustFor("Geometri") }));
+var gk = fromCatalog("Tarih", 27, { must: mustFor("Tarih") }).concat(fromCatalog("Coğrafya", 18)).concat(fromCatalog("Vatandaşlık", 9)).concat(fromCatalog("Güncel Bilgiler", 6));
 
 // Bir şekilli soru örneği: görsel alanı nasıl kullanılır
 var geoKonu = "Üçgende Açılar";

@@ -108,6 +108,21 @@ Promise.resolve().then(function () {
     bad.sorular[5].dogru = "F";
     bad.sorular[6].no = bad.sorular[7].no;
     bad.sorular.pop();
+    // KPSS dağılımı: Tarih sorusunu Coğrafya yap → iki test de tutmaz
+    var d2 = JSON.parse(JSON.stringify(doc));
+    var t1 = d2.sorular.filter(function (q) { return q.ders === "Tarih"; })[0];
+    t1.ders = "Coğrafya"; t1.konu = "İç Kuvvetler";
+    var vd = L.validateUpload(d2, cat, {}, { "soru-60.png": true });
+    ok(!vd.ok && vd.errors.some(function (e) { return /Tarih: 26 soru var, KPSS'de 27/.test(e); }) &&
+        vd.errors.some(function (e) { return /Coğrafya: 19 soru var/.test(e); }), "ders dağılımı tutmayan dosya reddedilir");
+    ok(vd.warnings.some(function (e) { return new RegExp("Soru " + t1.no + " Coğrafya: KPSS sırasında 61–87").test(e); }), "yanlış sıradaki soru uyarısı");
+    var vs = L.validateUpload(doc, cat, {}, { "soru-60.png": true });
+    ok(vs.ok && !vs.warnings.some(function (w) { return /hiç soru yok/.test(w); }), "örnek dosya: dağılım ve önemli konular tamam");
+    var m3 = vs.distribution.tests.filter(function (t) { return t.key === "Matematik"; })[0];
+    ok(m3.count === 30 && m3.parts[0].count + m3.parts[1].count === 30, "Matematik testi geometriyle 30");
+    var d3 = JSON.parse(JSON.stringify(doc));
+    d3.sorular.forEach(function (q) { if (q.ders === "Geometri") q.konu = "Katı Cisimler"; });
+    ok(L.validateUpload(d3, cat, {}, { "soru-60.png": true }).warnings.some(function (w) { return /'Üçgenler' konularından hiç soru yok/.test(w); }), "önemli konu grubu eksikse uyarı");
     var vb = L.validateUpload(bad, cat, {}, null);
     ok(!vb.ok, "bozuk dosya reddedilir");
     ok(vb.errors.some(function (x) { return /Bunu mu demek istedin: 'Atatürk İlkeleri'/.test(x); }), "konu önerisi");

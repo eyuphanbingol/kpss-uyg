@@ -136,12 +136,40 @@
                 </div>
                 {check ? (
                     <div className="mt-3 text-sm">
-                        {check.ok ? <p className="text-emerald-700 font-semibold">✓ Geçerli: 120 soru, 60/60, tüm konular data.js'te var.</p>
+                        {check.ok ? <p className="text-emerald-700 font-semibold">✓ Geçerli: 120 soru, KPSS dağılımına uygun, tüm konular data.js'te var.</p>
                             : <p className="text-rose-700 font-semibold">{check.errors.length} hata — yükleme reddedildi:</p>}
                         <ul className="mt-1 max-h-64 overflow-auto space-y-0.5">
                             {check.errors.map(function (x, i) { return <li key={"e" + i} className="text-rose-700">• {x}</li>; })}
                             {check.warnings.map(function (x, i) { return <li key={"w" + i} className="text-amber-700">• {x}</li>; })}
                         </ul>
+                        {check.distribution ? (
+                            <details className="mt-2" open={!check.ok}>
+                                <summary className="font-semibold cursor-pointer">Soru dağılımı</summary>
+                                <div className="grid sm:grid-cols-2 gap-4 mt-2 items-start">
+                                    <table className="text-sm"><tbody>
+                                        {check.distribution.tests.map(function (t) {
+                                            var ok = t.count === t.n;
+                                            return (
+                                                <tr key={t.key}>
+                                                    <td className="pr-3 py-0.5">{t.label}<span className="block text-[11px] text-stone-500">{t.from}–{t.to}. sorular{t.parts ? " · " + t.parts.map(function (p) { return p.ders + " " + p.count; }).join(" + ") : ""}</span></td>
+                                                    <td className={"font-bold " + (ok ? "text-emerald-700" : "text-rose-700")}>{ok ? "✓ " : "✗ "}{t.count} / {t.n}</td>
+                                                </tr>
+                                            );
+                                        })}
+                                    </tbody></table>
+                                    <table className="text-sm"><tbody>
+                                        {check.distribution.groups.map(function (g) {
+                                            return (
+                                                <tr key={g.ders + g.ad}>
+                                                    <td className="pr-3 py-0.5">{g.ders} · {g.ad}<span className="block text-[11px] text-stone-500">{"🔥".repeat(g.w)}</span></td>
+                                                    <td className={"font-bold " + (g.count ? "" : g.w >= 4 ? "text-amber-700" : "text-stone-500")}>{g.count} soru</td>
+                                                </tr>
+                                            );
+                                        })}
+                                    </tbody></table>
+                                </div>
+                            </details>
+                        ) : null}
                     </div>
                 ) : null}
                 {err ? <p className="text-sm text-rose-600 mt-2">{err}</p> : null}

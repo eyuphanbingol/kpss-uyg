@@ -29,6 +29,6 @@ if (!r.ok) {
     console.log("\n" + r.errors.length + " hata: dosya yüklenemez.");
     process.exit(1);
 }
-var by = {};
-r.questions.forEach(function (q) { by[q.ders] = (by[q.ders] || 0) + 1; });
-console.log("Geçerli: " + r.questions.length + " soru (" + Object.keys(by).map(function (d) { return d + " " + by[d]; }).join(", ") + ").");
+console.log("Geçerli: " + r.questions.length + " soru · " + r.distribution.tests.map(function (t) {
+    return t.label + " " + t.count + (t.parts ? " (" + t.parts.map(function (p) { return p.ders + " " + p.count; }).join(" + ") + ")" : "");
+}).join(", ") + ".");

@@ -838,36 +838,20 @@
       "no": 53,
       "bolum": "GY",
       "ders": "Geometri",
-      "konu": "Üçgende Alan",
-      "metin": "Kenarları 5, 5, 6 olan üçgenin alanı kaç cm²'dir?",
+      "konu": "Üçgende Açılar",
+      "metin": "m(A)=80°. İki iç açıortayın iç teğet merkezinde kestiği açı x kaç derecedir?",
       "siklar": [
-        "10",
-        "11",
-        "12",
-        "13",
-        "14"
+        "120°",
+        "125°",
+        "130°",
+        "135°",
+        "140°"
       ],
       "dogru": "C",
-      "cozum": "u=8; A=√(8·3·3·2)=√144=12."
+      "cozum": "x = 90 + 80/2 = 130°."
     },
     {
       "no": 54,
-      "bolum": "GY",
-      "ders": "Geometri",
-      "konu": "Açıortay ve Kenarortay",
-      "metin": "ABC üçgeninde AN açıortayı. |AB|=8, |AC|=12, |BN|=4. |NC|=?",
-      "siklar": [
-        "4",
-        "5",
-        "6",
-        "7",
-        "8"
-      ],
-      "dogru": "C",
-      "cozum": "Açıortay teoremine göre |AB|/|AC| = |BN|/|NC| olur. Değerler yerine konduğunda 8/12 = 4/|NC| elde edilir ve buradan |NC| = 6 birim bulunur."
-    },
-    {
-      "no": 55,
       "bolum": "GY",
       "ders": "Geometri",
       "konu": "Dörtgenler ve Yamuk",
@@ -883,7 +867,55 @@
       "cozum": "(9+15)·8/2 = 96 cm²."
     },
     {
+      "no": 55,
+      "bolum": "GY",
+      "ders": "Geometri",
+      "konu": "Çember ve Daire",
+      "metin": "Yarıçapı 4 cm, merkez açısı 90° olan daire diliminin alanı kaç cm²'dir?",
+      "siklar": [
+        "2π",
+        "3π",
+        "4π",
+        "5π",
+        "6π"
+      ],
+      "dogru": "C",
+      "cozum": "π·16·90/360 = 4π cm²."
+    },
+    {
       "no": 56,
+      "bolum": "GY",
+      "ders": "Geometri",
+      "konu": "Üçgende Alan",
+      "metin": "Kenarları 5, 5, 6 olan üçgenin alanı kaç cm²'dir?",
+      "siklar": [
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "dogru": "C",
+      "cozum": "u=8; A=√(8·3·3·2)=√144=12."
+    },
+    {
+      "no": 57,
+      "bolum": "GY",
+      "ders": "Geometri",
+      "konu": "Açıortay ve Kenarortay",
+      "metin": "ABC üçgeninde AN açıortayı. |AB|=8, |AC|=12, |BN|=4. |NC|=?",
+      "siklar": [
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "dogru": "C",
+      "cozum": "Açıortay teoremine göre |AB|/|AC| = |BN|/|NC| olur. Değerler yerine konduğunda 8/12 = 4/|NC| elde edilir ve buradan |NC| = 6 birim bulunur."
+    },
+    {
+      "no": 58,
       "bolum": "GY",
       "ders": "Geometri",
       "konu": "Analitik Geometri (Doğru)",
@@ -899,7 +931,7 @@
       "cozum": "h = |0+0−10|/√(9+16) = 10/5 = 2."
     },
     {
-      "no": 57,
+      "no": 59,
       "bolum": "GY",
       "ders": "Geometri",
       "konu": "Katı Cisimler",
@@ -913,38 +945,6 @@
       ],
       "dogru": "C",
       "cozum": "Düzgün dörtyüzlü, kenar uzunluğu a = 4 cm olan 4 eş eşkenar üçgenden oluşur. Bir eşkenar üçgenin alanı a²√3/4 = 16√3/4 = 4√3 cm² olduğundan yüzey alanı 4·4√3 = 16√3 cm² bulunur."
-    },
-    {
-      "no": 58,
-      "bolum": "GY",
-      "ders": "Geometri",
-      "konu": "İkizkenar ve Eşkenar Üçgen",
-      "metin": "İkizkenar ABC üçgeninde |AB|=|AC|, m(A)=40°. Taban açılarından biri kaç derecedir?",
-      "siklar": [
-        "60°",
-        "65°",
-        "70°",
-        "75°",
-        "80°"
-      ],
-      "dogru": "C",
-      "cozum": "Taban açıları = (180−40)/2 = 70°."
-    },
-    {
-      "no": 59,
-      "bolum": "GY",
-      "ders": "Geometri",
-      "konu": "Paralelkenar ve Özel Dörtgenler",
-      "metin": "Kenarları 4 ve 5 birim olan paralelkenarda e²+f²=2(a²+b²) bağıntısına göre e²+f² kaçtır?",
-      "siklar": [
-        "72",
-        "78",
-        "82",
-        "86",
-        "90"
-      ],
-      "dogru": "C",
-      "cozum": "2(16+25)=2·41=82."
     },
     {
       "no": 60,
@@ -967,86 +967,6 @@
       "no": 61,
       "bolum": "GK",
       "ders": "Tarih",
-      "konu": "İslamiyet Öncesi Türk Tarihi",
-      "metin": "Tuna Bulgar Devleti'ni kuran ve Hristiyanlığın kabulünden önceki dönemde hüküm süren lider aşağıdakilerden hangisidir?",
-      "siklar": [
-        "Asparuh Han",
-        "Boris Han",
-        "Almış Han",
-        "Kubrat Han",
-        "Simon Çar"
-      ],
-      "dogru": "A",
-      "cozum": "Tuna Bulgarlarını Asparuh Han kurmuştur."
-    },
-    {
-      "no": 62,
-      "bolum": "GK",
-      "ders": "Tarih",
-      "konu": "İlk Türk-İslam Devletleri",
-      "metin": "4. Emevilerin Arap olmayan Müslümanları ikinci sınıf vatandaş olarak gördüğü, Arap milliyetçiliğine dayalı ayrımcı politikasını ifade eden kavram aşağıdakilerden hangisidir?",
-      "siklar": [
-        "Mevali",
-        "Cizye",
-        "Zımmi",
-        "Tımar",
-        "Haraç"
-      ],
-      "dogru": "A",
-      "cozum": "Emevilerin, Arap olmayan Müslümanları (özellikle Türkleri ve İranlıları) ikinci sınıf gören politikasına 'mevali' politikası denir."
-    },
-    {
-      "no": 63,
-      "bolum": "GK",
-      "ders": "Tarih",
-      "konu": "Milli Mücadele Diplomatik Dönem",
-      "metin": "İsmet İnönü'nün Lozan Konferansı'ndaki tutumunu yansıtan aşağıdaki ifadelerden hangisi Millî Mücadele'nin dayandığı temel anlayışla doğrudan ilişkilidir?",
-      "siklar": [
-        "'Yurtta sulh, cihanda sulh.'",
-        "'Hayatta en hakiki mürşit ilimdir.'",
-        "'Egemenlik kayıtsız şartsız milletindir.'",
-        "'Ne mutlu Türküm diyene.'",
-        "'Biz buraya Mondros'tan değil, Mudanya'dan geldik.'"
-      ],
-      "dogru": "E",
-      "cozum": "İsmet İnönü'nün 'Biz buraya Mondros'tan değil, Mudanya'dan geldik.' sözü, Millî Mücadele'nin askerî zaferle sonuçlandığını ve Türkiye'nin güçlü bir konumdan müzakere ettiğini vurgulamaktadır."
-    },
-    {
-      "no": 64,
-      "bolum": "GK",
-      "ders": "Tarih",
-      "konu": "II. Dünya Savaşı",
-      "metin": "Birleşmiş Milletler’in kurulduğu konferans ve Türkiye’nin statüsü aşağıdakilerin hangisinde doğrudur?",
-      "siklar": [
-        "Yalta – gözlemci",
-        "Quebec – işgal kuvveti",
-        "Potsdam – mağlup",
-        "Casablanca – mihver",
-        "San Francisco – kurucu üye"
-      ],
-      "dogru": "E",
-      "cozum": "San Francisco’da BM kurulmuş, Türkiye kurucu üye olmuştur."
-    },
-    {
-      "no": 65,
-      "bolum": "GK",
-      "ders": "Tarih",
-      "konu": "Atatürk Dönemi Türk Dış Politikası",
-      "metin": "Hatay Cumhuriyeti'nin ilk başbakanı aşağıdakilerden hangisidir?",
-      "siklar": [
-        "Tayfur Sökmen",
-        "Abdurrahman Melek",
-        "Mahmut Esat Bozkurt",
-        "Ali Fethi Okyar",
-        "Yusuf Kemal Tengirşenk"
-      ],
-      "dogru": "B",
-      "cozum": "İlk başbakan Abdurrahman Melek'tir."
-    },
-    {
-      "no": 66,
-      "bolum": "GK",
-      "ders": "Tarih",
       "konu": "Milli Mücadeler Hazırlık Dönemi",
       "metin": "Aşağıdakilerden hangisi Millî Mücadele dönemindeki basın-yayın faaliyetleriyle ilgili yanlıştır?",
       "siklar": [
@@ -1060,311 +980,7 @@
       "cozum": "Ali Kemal'in yazılarıyla tanınan Peyam-ı Sabah, Millî Mücadele'ye karşı yayın yapan gazetelerin başında gelir. Diğer seçeneklerde verilen bilgiler doğrudur."
     },
     {
-      "no": 67,
-      "bolum": "GK",
-      "ders": "Tarih",
-      "konu": "Osmanlı Devleti Kuruluş Dönemi",
-      "metin": "İskan politikasıyla ilgili aşağıdakilerden hangisi YANLIŞTIR?",
-      "siklar": [
-        "Genellikle gönüllülük esasına göre yapılmıştır",
-        "İskana tabi tutulanların ihtiyaçları devlet tarafından karşılanmıştır",
-        "İskana tabi olanlara toprak verilmiştir",
-        "İskana tabi olanlardan vergi alınmıştır",
-        "İskana tabi olanların eski yurtlarına dönmesi belli süre yasaklanmıştır"
-      ],
-      "dogru": "D",
-      "cozum": "İskana tabi tutulanlardan vergi alınmamıştır; bu onları teşvik etmek için sağlanan bir kolaylıktır. Bu ifade yanlıştır."
-    },
-    {
-      "no": 68,
-      "bolum": "GK",
-      "ders": "Tarih",
-      "konu": "19.YY Osmanlı Devleti Islahatları",
-      "metin": "Osmanlı Devleti'nde yayımlanan ilk özel gazete aşağıdakilerden hangisidir?",
-      "siklar": [
-        "Ceride-i Havadis",
-        "Takvim-i Vekayi",
-        "Tercüman-ı Hakikat",
-        "Tasvir-i Efkâr",
-        "Tercüman-ı Ahvâl"
-      ],
-      "dogru": "E",
-      "cozum": "İlk özel gazete Tercüman-ı Ahvâl'dir."
-    },
-    {
-      "no": 69,
-      "bolum": "GK",
-      "ders": "Tarih",
-      "konu": "Milli Mücadeele Muharabeler Dönemi:",
-      "metin": "Mustafa Kemal'in 'Yarım hazırlıkla, yarım tedbirle yapılacak taarruz hiç taarruz etmemekten daha kötüdür.' sözü aşağıdaki süreçlerden hangisiyle ilgilidir?",
-      "siklar": [
-        "Gümrü Antlaşması",
-        "Büyük Taarruz öncesi hazırlıklar",
-        "Londra Konferansı",
-        "Ankara Antlaşması",
-        "Kars Antlaşması"
-      ],
-      "dogru": "B",
-      "cozum": "Mustafa Kemal'in bu sözü, Büyük Taarruz öncesi hazırlıkların titizlikle yapılması gerektiğini vurgulamaktadır. Eksik hazırlıkla yapılacak taarruz başarısız olacaktır."
-    },
-    {
-      "no": 70,
-      "bolum": "GK",
-      "ders": "Tarih",
-      "konu": "Osmanlı Devleti Gerileme Dönemi",
-      "metin": "XVIII. yüzyılda Avrupa devletlerinin dış politikalarında, amaçlarına ulaşabilmek için her türlü yöntemi meşru gören anlayış aşağıdakilerden hangisidir?",
-      "siklar": [
-        "Merkantilizm",
-        "Makyavelizm",
-        "Hümanizm",
-        "Rasyonalizm",
-        "Liberalizm"
-      ],
-      "dogru": "B",
-      "cozum": "Makyavelizm, devlet çıkarları doğrultusunda her türlü yöntemin kullanılabileceğini savunan siyaset anlayışıdır."
-    },
-    {
-      "no": 71,
-      "bolum": "GK",
-      "ders": "Tarih",
-      "konu": "Yumuşama Dönemi",
-      "metin": "Enosis ve EOKA için hangisi doğrudur?",
-      "siklar": [
-        "Enosis Kıbrıs’ın Yunanistan’a bağlanması; EOKA bunu savunan Rum örgütüdür",
-        "Enosis Kıbrıs’ın Türkiye’ye bağlanmasıdır",
-        "TMT Enosis örgütüdür",
-        "EOKA Türk Mukavemet Teşkilatı’dır",
-        "Enosis 1983 Annan Planı’dır"
-      ],
-      "dogru": "A",
-      "cozum": "TMT, Türk toplumunun savunma örgütüdür."
-    },
-    {
-      "no": 72,
-      "bolum": "GK",
-      "ders": "Tarih",
-      "konu": "I. TBMM Dönemi ve Gelişmeleri",
-      "metin": "I. TBMM döneminde 1921 yılından itibaren Genelkurmay Başkanlığı görevini aşağıdakilerden hangisi yürütmüştür?",
-      "siklar": [
-        "Mustafa Kemal Paşa",
-        "İsmet İnönü",
-        "Fevzi Çakmak",
-        "Bekir Sami Bey",
-        "Rıza Nur"
-      ],
-      "dogru": "C",
-      "cozum": "I. TBMM'nin ilk İcra Vekilleri Heyeti'nde Erkân-ı Harbiye-i Umumiye (Genelkurmay) görevini İsmet Bey üstlenmiş, 1921'den itibaren bu görevi Fevzi Çakmak yürütmüştür. Mustafa Kemal Paşa ise Meclis Başkanı ve Başkomutan'dır."
-    },
-    {
-      "no": 73,
-      "bolum": "GK",
-      "ders": "Tarih",
-      "konu": "Atatürk'ün Hayatı",
-      "metin": "Mustafa Kemal'in İstanbul Harp Akademisinden mezun olduktan sonraki ilk görev yeri aşağıdakilerden hangisidir?",
-      "siklar": [
-        "5. Ordu – Şam",
-        "3. Ordu – Selanik",
-        "7. Ordu – Halep",
-        "Yıldırım Orduları – Filistin",
-        "19. Tümen – Çanakkale"
-      ],
-      "dogru": "A",
-      "cozum": "İlk görev yeri 5. Ordu (Şam)'dır."
-    },
-    {
-      "no": 74,
-      "bolum": "GK",
-      "ders": "Tarih",
-      "konu": "XX. Yüzyıl Başlarında Dünya",
-      "metin": "Basmacı sözcüğünün anlamı ve hareketin başladığı kent hangi seçenekte doğru verilmiştir?",
-      "siklar": [
-        "Göçmen – Bakü",
-        "Öğrenci – Ufa",
-        "Çiftçi – Semerkant",
-        "Tüccar – Buhara",
-        "Baskın yapan, hücum eden – Hokand"
-      ],
-      "dogru": "E",
-      "cozum": "Basmacı: baskın yapan. Hareket Hokand’da başladı."
-    },
-    {
-      "no": 75,
-      "bolum": "GK",
-      "ders": "Tarih",
-      "konu": "Küreselleşen Dünya",
-      "metin": "24 Aralık 1995 genel seçimlerinin ardından kurulan ilk koalisyon hükûmeti aşağıdakilerden hangisidir?",
-      "siklar": [
-        "ANAP + DYP (ANAYOL) – Mesut Yılmaz",
-        "RP + DYP (Refahyol) – Necmettin Erbakan",
-        "DYP + CHP – Tansu Çiller",
-        "DYP + SHP – Süleyman Demirel",
-        "DSP + MHP + ANAP – Bülent Ecevit"
-      ],
-      "dogru": "A",
-      "cozum": "24 Aralık 1995 seçimlerinden sonra kurulan ilk koalisyon, Mart 1996'da ANAP ile DYP'nin oluşturduğu ve Mesut Yılmaz'ın başbakanlık yaptığı ANAYOL Hükûmeti'dir. Bu hükûmetin kısa sürede dağılmasının ardından Haziran 1996'da RP ile DYP, Necmettin Erbakan başkanlığında Refahyol Hükûmeti'ni kurmuştur. DYP-CHP koalisyonu ise seçimlerden önceki dönemde görev yapmıştır."
-    },
-    {
-      "no": 76,
-      "bolum": "GK",
-      "ders": "Tarih",
-      "konu": "Mondros Ateşkes Antlaşması ve Cemiyetler",
-      "metin": "Mondros Ateşkes Antlaşması sırasında Osmanlı Devleti'ni temsil eden ve antlaşmayı imzalayan kişi aşağıdakilerden hangisidir?",
-      "siklar": [
-        "Mustafa Kemal Paşa",
-        "Ahmet İzzet Paşa",
-        "Rauf Orbay",
-        "İsmet İnönü",
-        "Fevzi Çakmak"
-      ],
-      "dogru": "C",
-      "cozum": "Mondros Ateşkes Antlaşması, 30 Ekim 1918'de Osmanlı Devleti adına Bahriye Nazırı Rauf Orbay tarafından imzalanmıştır."
-    },
-    {
-      "no": 77,
-      "bolum": "GK",
-      "ders": "Tarih",
-      "konu": "Osmanlı Kültür ve Medeniyeti",
-      "metin": "Topkapı Sarayı'nın 'Birun' (dış) kısmıyla ilgili aşağıdakilerden hangisi doğrudur?",
-      "siklar": [
-        "Padişah ve ailesinin özel yaşam alanıdır",
-        "Devşirme çocukların eğitim gördüğü okuldur",
-        "Elçilerin kabul edildiği, Divan-ı Hümayun toplantılarının Kubbealtı'nda yapıldığı dış bölümdür",
-        "Sadrazam ve vezir yetiştiren bölümdür",
-        "Kız çocuklarının eğitim gördüğü bölümdür"
-      ],
-      "dogru": "C",
-      "cozum": "Birun, Topkapı Sarayı'nın dış bölümüdür; devlet işlerinin yürütüldüğü, elçilerin kabul edildiği ve Divan-ı Hümayun toplantılarının Kubbealtı'nda yapıldığı kısımdır. Padişah ve ailesinin özel yaşam alanı Harem, devşirmelerin eğitildiği ve üst düzey yöneticilerin yetiştirildiği bölüm ise Enderun'dur."
-    },
-    {
-      "no": 78,
-      "bolum": "GK",
-      "ders": "Tarih",
-      "konu": "Soğuk Savaş Dönemi",
-      "metin": "Dörtlü Takrir’in tarihi ve imzacıları için hangisi doğrudur?",
-      "siklar": [
-        "7 Ocak 1946 – İnönü ve Peker",
-        "7 Haziran 1945 – Bayar, Menderes, Koraltan, Köprülü",
-        "14 Mayıs 1950 – Demirağ ve Bayar",
-        "12 Temmuz 1947 – yalnızca Menderes",
-        "18 Temmuz 1945 – dört general"
-      ],
-      "dogru": "B",
-      "cozum": "CHP içi muhalefetin adımıdır. DP 7 Ocak 1946’da kuruldu; genel başkan Celal Bayar."
-    },
-    {
-      "no": 79,
-      "bolum": "GK",
-      "ders": "Tarih",
-      "konu": "Genel Tekrar",
-      "metin": "Cemiyetlerin birleştirildiği ulusal kongre hangisidir?",
-      "siklar": [
-        "Erzurum",
-        "İzmir",
-        "Amasya",
-        "Sivas",
-        "Trabzon"
-      ],
-      "dogru": "D",
-      "cozum": "Anadolu ve Rumeli Müdafaa-i Hukuk."
-    },
-    {
-      "no": 80,
-      "bolum": "GK",
-      "ders": "Tarih",
-      "konu": "II. Dünya Savaşı'nda Türkiye",
-      "metin": "Nuri Demirağ ile ilgili olarak aşağıdakilerden hangisi söylenemez?",
-      "siklar": [
-        "İlk yerli sigara kâğıdını üretmiştir",
-        "Demiryolu inşaatlarında müteahhitlik yapmıştır",
-        "1936’da kurduğu fabrikada yerli uçak üretmiştir",
-        "İlk yerli paraşütü üretmiştir",
-        "İlk Türk denizaltı su bombasını üretmiştir"
-      ],
-      "dogru": "E",
-      "cozum": "Nuri Demirağ; ilk yerli sigara kâğıdını üreten, demiryolu inşaatlarında müteahhitlik yapan ve 1936’da kurduğu uçak fabrikasında yerli uçak ile paraşüt üretimine geçen bir sanayicidir. Denizaltı su bombası üretimi ise dönemin bir diğer sanayicisi Şakir Zümre’ye aittir."
-    },
-    {
-      "no": 81,
-      "bolum": "GK",
-      "ders": "Tarih",
-      "konu": "19.YY Osmanlı Devleti Dağılma Dönemi",
-      "metin": "Şıpka Kahramanı olarak bilinen kişi kimdir?",
-      "siklar": [
-        "Gazi Osman Paşa",
-        "Nene Hatun",
-        "Tepedelenli Ali Paşa",
-        "Gazi Ahmet Muhtar Paşa",
-        "Süleyman Hüsnü Paşa"
-      ],
-      "dogru": "E",
-      "cozum": "Şıpka Kahramanı Süleyman Hüsnü Paşa'dır."
-    },
-    {
-      "no": 82,
-      "bolum": "GK",
-      "ders": "Tarih",
-      "konu": "Cumhuriyet Dönemi Kültür ve Medeniyeti",
-      "metin": "Kanunu Batı müziğiyle buluşturan, viyolonsel ve kanun konçertoları yazan sanatçı kimdir?",
-      "siklar": [
-        "Necil Kazım Akses",
-        "Ulvi Cemal Erkin",
-        "Hasan Ferit Alnar",
-        "Cemal Reşit Rey",
-        "Ahmet Adnan Saygun"
-      ],
-      "dogru": "C",
-      "cozum": "Hasan Ferit Alnar kanun ve Batı müziğini birleştirmiştir."
-    },
-    {
-      "no": 83,
-      "bolum": "GK",
-      "ders": "Tarih",
-      "konu": "Atatürk Dönemi İç Politikalar ve Gelişmeler",
-      "metin": "Serbest Cumhuriyet Fırkası'nın kurulmasında aşağıdakilerden hangisinin etkili olduğu söylenemez?",
-      "siklar": [
-        "Siyasi rekabet eksikliği",
-        "Eleştiri ve denetim ihtiyacı",
-        "1929 Dünya Ekonomik Bunalımı",
-        "Yeni ekonomik fikirlere duyulan ihtiyaç",
-        "Saltanat yönetimine geri dönme isteği"
-      ],
-      "dogru": "E",
-      "cozum": "Saltanata dönüş kuruluş nedeni değildir."
-    },
-    {
-      "no": 84,
-      "bolum": "GK",
-      "ders": "Tarih",
-      "konu": "Osmanlı Devleti Yükselme Dönemi",
-      "metin": "Sokullu Mehmet Paşa'nın tasarladığı Süveyş Kanalı projesini yaklaşık üç yüzyıl sonra fiilen gerçekleştiren devlet aşağıdakilerden hangisidir?",
-      "siklar": [
-        "Fransa",
-        "İngiltere",
-        "Rusya",
-        "İspanya",
-        "Portekiz"
-      ],
-      "dogru": "A",
-      "cozum": "Sokullu Mehmet Paşa'nın 16. yüzyılda tasarladığı Süveyş Kanalı projesi, 1859-1869 yılları arasında Ferdinand de Lesseps öncülüğündeki Fransız şirketi tarafından hayata geçirilmiştir. İngiltere kanalın yapımına baştan karşı çıkmış, kanal hisselerinin bir bölümünü ancak 1875'te, yani kanal açıldıktan sonra satın almıştır."
-    },
-    {
-      "no": 85,
-      "bolum": "GK",
-      "ders": "Tarih",
-      "konu": "Anadolu Selçuklu Devleti",
-      "metin": "II. Kılıçarslan Dönemi'yle ilgili;\nI. Ankara Meliki Şahinşah isyanı bastırılmıştır.\nII. Danişmentlilere son verilmiştir.\nIII. Bizans'a karşı Miryokefalon Savaşı kazanılmıştır.\nyargılarından hangileri doğrudur?",
-      "siklar": [
-        "Yalnız III",
-        "I ve II",
-        "I ve III",
-        "II ve III",
-        "I, II ve III"
-      ],
-      "dogru": "E",
-      "cozum": "II. Kılıçarslan dönemi oldukça hareketlidir. Ankara Meliki Şahinşah'ın isyanı bastırılmış, Anadolu'nun güçlü beyliklerinden Danişmentlilere son verilerek Türk birliği adımı atılmış ve Bizans'a karşı efsanevi Miryokefalon zaferi kazanılmıştır."
-    },
-    {
-      "no": 86,
+      "no": 62,
       "bolum": "GK",
       "ders": "Tarih",
       "konu": "Atatürk İlkeleri",
@@ -1380,20 +996,404 @@
       "cozum": "Eski kurumun yerine yenisinin kurulması inkılâpçılığın tanımıdır (Darülfünun → İstanbul Üniversitesi)."
     },
     {
+      "no": 63,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Osmanlı Devleti Kuruluş Dönemi",
+      "metin": "İskan politikasıyla ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+      "siklar": [
+        "Genellikle gönüllülük esasına göre yapılmıştır",
+        "İskana tabi tutulanların ihtiyaçları devlet tarafından karşılanmıştır",
+        "İskana tabi olanlara toprak verilmiştir",
+        "İskana tabi olanlardan vergi alınmıştır",
+        "İskana tabi olanların eski yurtlarına dönmesi belli süre yasaklanmıştır"
+      ],
+      "dogru": "D",
+      "cozum": "İskana tabi tutulanlardan vergi alınmamıştır; bu onları teşvik etmek için sağlanan bir kolaylıktır. Bu ifade yanlıştır."
+    },
+    {
+      "no": 64,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "20.YY Başlarında Osmanlı Devleti ",
+      "metin": "Aşağıdakilerden hangisi Trablusgarp Savaşı'nda Osmanlı Devleti adına görev yapan gönüllü subaylardan biri değildir?",
+      "siklar": [
+        "Enver Paşa",
+        "Mustafa Kemal",
+        "Nuri Conker",
+        "Fuat Bulca",
+        "Cevat Çobanlı"
+      ],
+      "dogru": "E",
+      "cozum": "Trablusgarp Savaşı'nda Enver Paşa (Tüccar Hamdi adıyla), Mustafa Kemal (Gazeteci Şerif Bey adıyla), Nuri Conker ve Fuat Bulca görev almıştır. Cevat Çobanlı ise Çanakkale Cephesi'ndeki başarılarıyla tanınır."
+    },
+    {
+      "no": 65,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "İslamiyet Öncesi Türk Tarihi",
+      "metin": "Tuna Bulgar Devleti'ni kuran ve Hristiyanlığın kabulünden önceki dönemde hüküm süren lider aşağıdakilerden hangisidir?",
+      "siklar": [
+        "Asparuh Han",
+        "Boris Han",
+        "Almış Han",
+        "Kubrat Han",
+        "Simon Çar"
+      ],
+      "dogru": "A",
+      "cozum": "Tuna Bulgarlarını Asparuh Han kurmuştur."
+    },
+    {
+      "no": 66,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "İlk Türk-İslam Devletleri",
+      "metin": "4. Emevilerin Arap olmayan Müslümanları ikinci sınıf vatandaş olarak gördüğü, Arap milliyetçiliğine dayalı ayrımcı politikasını ifade eden kavram aşağıdakilerden hangisidir?",
+      "siklar": [
+        "Mevali",
+        "Cizye",
+        "Zımmi",
+        "Tımar",
+        "Haraç"
+      ],
+      "dogru": "A",
+      "cozum": "Emevilerin, Arap olmayan Müslümanları (özellikle Türkleri ve İranlıları) ikinci sınıf gören politikasına 'mevali' politikası denir."
+    },
+    {
+      "no": 67,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Milli Mücadele Diplomatik Dönem",
+      "metin": "İsmet İnönü'nün Lozan Konferansı'ndaki tutumunu yansıtan aşağıdaki ifadelerden hangisi Millî Mücadele'nin dayandığı temel anlayışla doğrudan ilişkilidir?",
+      "siklar": [
+        "'Yurtta sulh, cihanda sulh.'",
+        "'Hayatta en hakiki mürşit ilimdir.'",
+        "'Egemenlik kayıtsız şartsız milletindir.'",
+        "'Ne mutlu Türküm diyene.'",
+        "'Biz buraya Mondros'tan değil, Mudanya'dan geldik.'"
+      ],
+      "dogru": "E",
+      "cozum": "İsmet İnönü'nün 'Biz buraya Mondros'tan değil, Mudanya'dan geldik.' sözü, Millî Mücadele'nin askerî zaferle sonuçlandığını ve Türkiye'nin güçlü bir konumdan müzakere ettiğini vurgulamaktadır."
+    },
+    {
+      "no": 68,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "II. Dünya Savaşı",
+      "metin": "Birleşmiş Milletler’in kurulduğu konferans ve Türkiye’nin statüsü aşağıdakilerin hangisinde doğrudur?",
+      "siklar": [
+        "Yalta – gözlemci",
+        "Quebec – işgal kuvveti",
+        "Potsdam – mağlup",
+        "Casablanca – mihver",
+        "San Francisco – kurucu üye"
+      ],
+      "dogru": "E",
+      "cozum": "San Francisco’da BM kurulmuş, Türkiye kurucu üye olmuştur."
+    },
+    {
+      "no": 69,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Atatürk Dönemi Türk Dış Politikası",
+      "metin": "Hatay Cumhuriyeti'nin ilk başbakanı aşağıdakilerden hangisidir?",
+      "siklar": [
+        "Tayfur Sökmen",
+        "Abdurrahman Melek",
+        "Mahmut Esat Bozkurt",
+        "Ali Fethi Okyar",
+        "Yusuf Kemal Tengirşenk"
+      ],
+      "dogru": "B",
+      "cozum": "İlk başbakan Abdurrahman Melek'tir."
+    },
+    {
+      "no": 70,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "19.YY Osmanlı Devleti Islahatları",
+      "metin": "Osmanlı Devleti'nde yayımlanan ilk özel gazete aşağıdakilerden hangisidir?",
+      "siklar": [
+        "Ceride-i Havadis",
+        "Takvim-i Vekayi",
+        "Tercüman-ı Hakikat",
+        "Tasvir-i Efkâr",
+        "Tercüman-ı Ahvâl"
+      ],
+      "dogru": "E",
+      "cozum": "İlk özel gazete Tercüman-ı Ahvâl'dir."
+    },
+    {
+      "no": 71,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Milli Mücadeele Muharabeler Dönemi:",
+      "metin": "Mustafa Kemal'in 'Yarım hazırlıkla, yarım tedbirle yapılacak taarruz hiç taarruz etmemekten daha kötüdür.' sözü aşağıdaki süreçlerden hangisiyle ilgilidir?",
+      "siklar": [
+        "Gümrü Antlaşması",
+        "Büyük Taarruz öncesi hazırlıklar",
+        "Londra Konferansı",
+        "Ankara Antlaşması",
+        "Kars Antlaşması"
+      ],
+      "dogru": "B",
+      "cozum": "Mustafa Kemal'in bu sözü, Büyük Taarruz öncesi hazırlıkların titizlikle yapılması gerektiğini vurgulamaktadır. Eksik hazırlıkla yapılacak taarruz başarısız olacaktır."
+    },
+    {
+      "no": 72,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Osmanlı Devleti Gerileme Dönemi",
+      "metin": "XVIII. yüzyılda Avrupa devletlerinin dış politikalarında, amaçlarına ulaşabilmek için her türlü yöntemi meşru gören anlayış aşağıdakilerden hangisidir?",
+      "siklar": [
+        "Merkantilizm",
+        "Makyavelizm",
+        "Hümanizm",
+        "Rasyonalizm",
+        "Liberalizm"
+      ],
+      "dogru": "B",
+      "cozum": "Makyavelizm, devlet çıkarları doğrultusunda her türlü yöntemin kullanılabileceğini savunan siyaset anlayışıdır."
+    },
+    {
+      "no": 73,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Yumuşama Dönemi",
+      "metin": "Enosis ve EOKA için hangisi doğrudur?",
+      "siklar": [
+        "Enosis Kıbrıs’ın Yunanistan’a bağlanması; EOKA bunu savunan Rum örgütüdür",
+        "Enosis Kıbrıs’ın Türkiye’ye bağlanmasıdır",
+        "TMT Enosis örgütüdür",
+        "EOKA Türk Mukavemet Teşkilatı’dır",
+        "Enosis 1983 Annan Planı’dır"
+      ],
+      "dogru": "A",
+      "cozum": "TMT, Türk toplumunun savunma örgütüdür."
+    },
+    {
+      "no": 74,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "I. TBMM Dönemi ve Gelişmeleri",
+      "metin": "I. TBMM döneminde 1921 yılından itibaren Genelkurmay Başkanlığı görevini aşağıdakilerden hangisi yürütmüştür?",
+      "siklar": [
+        "Mustafa Kemal Paşa",
+        "İsmet İnönü",
+        "Fevzi Çakmak",
+        "Bekir Sami Bey",
+        "Rıza Nur"
+      ],
+      "dogru": "C",
+      "cozum": "I. TBMM'nin ilk İcra Vekilleri Heyeti'nde Erkân-ı Harbiye-i Umumiye (Genelkurmay) görevini İsmet Bey üstlenmiş, 1921'den itibaren bu görevi Fevzi Çakmak yürütmüştür. Mustafa Kemal Paşa ise Meclis Başkanı ve Başkomutan'dır."
+    },
+    {
+      "no": 75,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Atatürk'ün Hayatı",
+      "metin": "Mustafa Kemal'in İstanbul Harp Akademisinden mezun olduktan sonraki ilk görev yeri aşağıdakilerden hangisidir?",
+      "siklar": [
+        "5. Ordu – Şam",
+        "3. Ordu – Selanik",
+        "7. Ordu – Halep",
+        "Yıldırım Orduları – Filistin",
+        "19. Tümen – Çanakkale"
+      ],
+      "dogru": "A",
+      "cozum": "İlk görev yeri 5. Ordu (Şam)'dır."
+    },
+    {
+      "no": 76,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "XX. Yüzyıl Başlarında Dünya",
+      "metin": "Basmacı sözcüğünün anlamı ve hareketin başladığı kent hangi seçenekte doğru verilmiştir?",
+      "siklar": [
+        "Göçmen – Bakü",
+        "Öğrenci – Ufa",
+        "Çiftçi – Semerkant",
+        "Tüccar – Buhara",
+        "Baskın yapan, hücum eden – Hokand"
+      ],
+      "dogru": "E",
+      "cozum": "Basmacı: baskın yapan. Hareket Hokand’da başladı."
+    },
+    {
+      "no": 77,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Küreselleşen Dünya",
+      "metin": "24 Aralık 1995 genel seçimlerinin ardından kurulan ilk koalisyon hükûmeti aşağıdakilerden hangisidir?",
+      "siklar": [
+        "ANAP + DYP (ANAYOL) – Mesut Yılmaz",
+        "RP + DYP (Refahyol) – Necmettin Erbakan",
+        "DYP + CHP – Tansu Çiller",
+        "DYP + SHP – Süleyman Demirel",
+        "DSP + MHP + ANAP – Bülent Ecevit"
+      ],
+      "dogru": "A",
+      "cozum": "24 Aralık 1995 seçimlerinden sonra kurulan ilk koalisyon, Mart 1996'da ANAP ile DYP'nin oluşturduğu ve Mesut Yılmaz'ın başbakanlık yaptığı ANAYOL Hükûmeti'dir. Bu hükûmetin kısa sürede dağılmasının ardından Haziran 1996'da RP ile DYP, Necmettin Erbakan başkanlığında Refahyol Hükûmeti'ni kurmuştur. DYP-CHP koalisyonu ise seçimlerden önceki dönemde görev yapmıştır."
+    },
+    {
+      "no": 78,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Mondros Ateşkes Antlaşması ve Cemiyetler",
+      "metin": "Mondros Ateşkes Antlaşması sırasında Osmanlı Devleti'ni temsil eden ve antlaşmayı imzalayan kişi aşağıdakilerden hangisidir?",
+      "siklar": [
+        "Mustafa Kemal Paşa",
+        "Ahmet İzzet Paşa",
+        "Rauf Orbay",
+        "İsmet İnönü",
+        "Fevzi Çakmak"
+      ],
+      "dogru": "C",
+      "cozum": "Mondros Ateşkes Antlaşması, 30 Ekim 1918'de Osmanlı Devleti adına Bahriye Nazırı Rauf Orbay tarafından imzalanmıştır."
+    },
+    {
+      "no": 79,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Osmanlı Kültür ve Medeniyeti",
+      "metin": "Topkapı Sarayı'nın 'Birun' (dış) kısmıyla ilgili aşağıdakilerden hangisi doğrudur?",
+      "siklar": [
+        "Padişah ve ailesinin özel yaşam alanıdır",
+        "Devşirme çocukların eğitim gördüğü okuldur",
+        "Elçilerin kabul edildiği, Divan-ı Hümayun toplantılarının Kubbealtı'nda yapıldığı dış bölümdür",
+        "Sadrazam ve vezir yetiştiren bölümdür",
+        "Kız çocuklarının eğitim gördüğü bölümdür"
+      ],
+      "dogru": "C",
+      "cozum": "Birun, Topkapı Sarayı'nın dış bölümüdür; devlet işlerinin yürütüldüğü, elçilerin kabul edildiği ve Divan-ı Hümayun toplantılarının Kubbealtı'nda yapıldığı kısımdır. Padişah ve ailesinin özel yaşam alanı Harem, devşirmelerin eğitildiği ve üst düzey yöneticilerin yetiştirildiği bölüm ise Enderun'dur."
+    },
+    {
+      "no": 80,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Soğuk Savaş Dönemi",
+      "metin": "Dörtlü Takrir’in tarihi ve imzacıları için hangisi doğrudur?",
+      "siklar": [
+        "7 Ocak 1946 – İnönü ve Peker",
+        "7 Haziran 1945 – Bayar, Menderes, Koraltan, Köprülü",
+        "14 Mayıs 1950 – Demirağ ve Bayar",
+        "12 Temmuz 1947 – yalnızca Menderes",
+        "18 Temmuz 1945 – dört general"
+      ],
+      "dogru": "B",
+      "cozum": "CHP içi muhalefetin adımıdır. DP 7 Ocak 1946’da kuruldu; genel başkan Celal Bayar."
+    },
+    {
+      "no": 81,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Genel Tekrar",
+      "metin": "Cemiyetlerin birleştirildiği ulusal kongre hangisidir?",
+      "siklar": [
+        "Erzurum",
+        "İzmir",
+        "Amasya",
+        "Sivas",
+        "Trabzon"
+      ],
+      "dogru": "D",
+      "cozum": "Anadolu ve Rumeli Müdafaa-i Hukuk."
+    },
+    {
+      "no": 82,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "II. Dünya Savaşı'nda Türkiye",
+      "metin": "Nuri Demirağ ile ilgili olarak aşağıdakilerden hangisi söylenemez?",
+      "siklar": [
+        "İlk yerli sigara kâğıdını üretmiştir",
+        "Demiryolu inşaatlarında müteahhitlik yapmıştır",
+        "1936’da kurduğu fabrikada yerli uçak üretmiştir",
+        "İlk yerli paraşütü üretmiştir",
+        "İlk Türk denizaltı su bombasını üretmiştir"
+      ],
+      "dogru": "E",
+      "cozum": "Nuri Demirağ; ilk yerli sigara kâğıdını üreten, demiryolu inşaatlarında müteahhitlik yapan ve 1936’da kurduğu uçak fabrikasında yerli uçak ile paraşüt üretimine geçen bir sanayicidir. Denizaltı su bombası üretimi ise dönemin bir diğer sanayicisi Şakir Zümre’ye aittir."
+    },
+    {
+      "no": 83,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "19.YY Osmanlı Devleti Dağılma Dönemi",
+      "metin": "Şıpka Kahramanı olarak bilinen kişi kimdir?",
+      "siklar": [
+        "Gazi Osman Paşa",
+        "Nene Hatun",
+        "Tepedelenli Ali Paşa",
+        "Gazi Ahmet Muhtar Paşa",
+        "Süleyman Hüsnü Paşa"
+      ],
+      "dogru": "E",
+      "cozum": "Şıpka Kahramanı Süleyman Hüsnü Paşa'dır."
+    },
+    {
+      "no": 84,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Cumhuriyet Dönemi Kültür ve Medeniyeti",
+      "metin": "Kanunu Batı müziğiyle buluşturan, viyolonsel ve kanun konçertoları yazan sanatçı kimdir?",
+      "siklar": [
+        "Necil Kazım Akses",
+        "Ulvi Cemal Erkin",
+        "Hasan Ferit Alnar",
+        "Cemal Reşit Rey",
+        "Ahmet Adnan Saygun"
+      ],
+      "dogru": "C",
+      "cozum": "Hasan Ferit Alnar kanun ve Batı müziğini birleştirmiştir."
+    },
+    {
+      "no": 85,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Atatürk Dönemi İç Politikalar ve Gelişmeler",
+      "metin": "Serbest Cumhuriyet Fırkası'nın kurulmasında aşağıdakilerden hangisinin etkili olduğu söylenemez?",
+      "siklar": [
+        "Siyasi rekabet eksikliği",
+        "Eleştiri ve denetim ihtiyacı",
+        "1929 Dünya Ekonomik Bunalımı",
+        "Yeni ekonomik fikirlere duyulan ihtiyaç",
+        "Saltanat yönetimine geri dönme isteği"
+      ],
+      "dogru": "E",
+      "cozum": "Saltanata dönüş kuruluş nedeni değildir."
+    },
+    {
+      "no": 86,
+      "bolum": "GK",
+      "ders": "Tarih",
+      "konu": "Osmanlı Devleti Yükselme Dönemi",
+      "metin": "Sokullu Mehmet Paşa'nın tasarladığı Süveyş Kanalı projesini yaklaşık üç yüzyıl sonra fiilen gerçekleştiren devlet aşağıdakilerden hangisidir?",
+      "siklar": [
+        "Fransa",
+        "İngiltere",
+        "Rusya",
+        "İspanya",
+        "Portekiz"
+      ],
+      "dogru": "A",
+      "cozum": "Sokullu Mehmet Paşa'nın 16. yüzyılda tasarladığı Süveyş Kanalı projesi, 1859-1869 yılları arasında Ferdinand de Lesseps öncülüğündeki Fransız şirketi tarafından hayata geçirilmiştir. İngiltere kanalın yapımına baştan karşı çıkmış, kanal hisselerinin bir bölümünü ancak 1875'te, yani kanal açıldıktan sonra satın almıştır."
+    },
+    {
       "no": 87,
       "bolum": "GK",
       "ders": "Tarih",
-      "konu": "Atatürk İnkılapları",
-      "metin": "Tekke, zaviye ve türbelerin kapatılmasında;\n\nI. din istismarını önlemek\nII. laikleşmeyi sağlamak\nIII. rejim karşıtı faaliyetleri önlemek\nIV. eğitimde birlik sağlamak\n\namaçlarından hangileri etkili olmuştur?",
+      "konu": "Anadolu Selçuklu Devleti",
+      "metin": "II. Kılıçarslan Dönemi'yle ilgili;\nI. Ankara Meliki Şahinşah isyanı bastırılmıştır.\nII. Danişmentlilere son verilmiştir.\nIII. Bizans'a karşı Miryokefalon Savaşı kazanılmıştır.\nyargılarından hangileri doğrudur?",
       "siklar": [
+        "Yalnız III",
         "I ve II",
+        "I ve III",
         "II ve III",
-        "I, II ve III",
-        "II, III ve IV",
-        "I, II, III ve IV"
+        "I, II ve III"
       ],
-      "dogru": "C",
-      "cozum": "Eğitimde birlik Tevhid-i Tedrisat'ın amacıdır (IV değil)."
+      "dogru": "E",
+      "cozum": "II. Kılıçarslan dönemi oldukça hareketlidir. Ankara Meliki Şahinşah'ın isyanı bastırılmış, Anadolu'nun güçlü beyliklerinden Danişmentlilere son verilerek Türk birliği adımı atılmış ve Bizans'a karşı efsanevi Miryokefalon zaferi kazanılmıştır."
     },
     {
       "no": 88,
