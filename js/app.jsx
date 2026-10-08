@@ -1334,7 +1334,7 @@ function LiveExamCard(props) {
         if (["about_to_start", "can_enter", "in_progress", "paper_solving"].indexOf(ph) < 0) return;
         if (C.hasBooklet(e.id)) { setBooklet("ok"); return; }
         setBooklet("loading");
-        C.fetchBooklet(e.id).then(function () { setBooklet("ok"); }, function () { setBooklet("fail"); });
+        C.fetchBooklet(e.id, e.booklet_sha ? { sha: e.booklet_sha } : null).then(function () { setBooklet("ok"); }, function () { setBooklet("fail"); });
     }, [ph, e && e.id]);
 
     // sınav bitti: bekleyen cevapları gönder, sonucu hesaplat
@@ -1384,15 +1384,28 @@ function LiveExamCard(props) {
         pdfJob("Soru kitapçığın hazırlanıyor…", function (pr) { return C.bookletPdf(props.student, e, pr); },
             "Kitapçığın indirildi. İşaretlemeyi optik forma yap; bitince \"Optiğimi okut\".");
     }
+    // Kâğıt seti: tek PDF (1. sayfa kişiye özel optik form + soru kitapçığı); kayıt olunca açılır
+    function getKit() {
+        pdfJob("Kitapçığın ve optik formun hazırlanıyor…", function (pr) { return C.kitPdf(props.student, e, pr); },
+            "İndirildi: 1. sayfa optik formun, sonrası soru kitapçığı. Yazdırırken ‘Sayfaya sığdır’ı kapat, ölçek %100 olsun.");
+    }
     function choosePaper() {
         if (!window.confirm("Kâğıtta çözmeyi seçersen bu sınavı cihazda çözemezsin.\n\nKitapçığı yazdırıp cevaplarını optik forma işaretleyeceksin; sonra formun fotoğrafını çekip okutacaksın (en geç " +
             L.fmtClock(L.ms(e.optic_until || e.ranking_at)) + "). Devam edilsin mi?")) return;
         setBusy(true); setMsg("Kâğıt modunda giriş yapılıyor…");
-        C.enterPaper(e.id).then(function () { setBusy(false); getBooklet(); })
+        C.enterPaper(e.id).then(function () {
+            setBusy(false);
+            // kitapçığın güncel hâli zaten indirildiyse yeniden indirme
+            if (C.kitFresh(e)) { setMsg("Kâğıt modundasın. Kitapçığın ve optik formun zaten sende; bitince \"Optiğimi okut\"."); load(); }
+            else getKit();
+        })
             .catch(function (x) { setBusy(false); setMsg(x.message); load(); });
     }
     function openOptic() { props.onOpen && props.onOpen("optic", e.id); }
     var opticUntil = e ? L.ms(e.optic_until || e.ranking_at) : 0;
+    // kâğıt seti açık mı (kayıt olunca indirilebilir) ve daha önce indirilen güncel mi
+    var kitOpen = !!(e && e.has_booklet && (e.early_kit !== false || now >= L.ms(e.reg_closes_at)));
+    var kitState = e && C.kitInfo(e.id) ? (C.kitFresh(e) ? "fresh" : "stale") : "none";
 
     var startT = e ? L.ms(e.starts_at) : 0;
     var title = e ? e.title : "Canlı deneme";
@@ -1454,7 +1467,8 @@ function LiveExamCard(props) {
                 </p>
                 <div className="flex flex-wrap gap-2 mt-3">
                     <button type="button" className="quick-chip is-primary" disabled>Sınava gir (10:15'te açılır)</button>
-                    <button type="button" className="quick-chip" disabled={busy} onClick={printForm}>🖨 Optik formunu indir</button>
+                    {e.has_booklet ? <button type="button" className="quick-chip" disabled={busy} onClick={getKit}>📄 Kitapçık + optik form (PDF)</button>
+                        : <button type="button" className="quick-chip" disabled={busy} onClick={printForm}>🖨 Optik formunu indir</button>}
                 </div>
             </div>
         );
@@ -1542,14 +1556,18 @@ function LiveExamCard(props) {
                 </p>
                 {ph === "registered" ? (
                     <ul className="text-xs text-stone-500 mt-2 space-y-0.5 list-disc pl-4">
-                        <li>Kayıt pazar {L.fmtClock(L.ms(e.reg_closes_at))}'da kapanır; kitapçık o saatte cihazına iner.</li>
+                        <li>Cihazda çözeceksen: kitapçık pazar {L.fmtClock(L.ms(e.reg_closes_at))}'da cihazına iner, sınav {L.fmtClock(startT)}'te açılır.</li>
+                        {kitOpen ? <li>Kâğıtta çözeceksen: soru kitapçığını ve optik formunu <b>şimdi</b> tek PDF olarak indirip yazdırabilirsin (1. sayfa optik form; ‘Sayfaya sığdır’ kapalı, %100 ölçek).</li>
+                            : <li>Kâğıtta çözeceksen optik formunu şimdiden yazdır (‘Sayfaya sığdır’ kapalı, %100 ölçek){e.early_kit !== false ? "; kitapçık hazırlanınca buradan indirebileceksin." : "."}</li>}
+                        <li>Sınav günü {L.fmtClock(startT)}–{L.fmtClock(L.ms(e.entry_closes_at))} arası "Kâğıtta çöz"e basıp, bitince optiğini {L.fmtClock(opticUntil)}'a kadar okut.</li>
                         <li>130 dakikalık sessiz bir zaman ayır; müsvedde kâğıt ve kalem hazırla.</li>
-                        <li>Sınava {L.fmtClock(L.ms(e.entry_closes_at))}'e kadar girebilirsin; geç giren ek süre almaz.</li>
-                        <li>Kâğıtta çözeceksen optik formunu şimdiden yazdır (‘Sayfaya sığdır’ kapalı, %100 ölçek).</li>
                     </ul>
                 ) : null}
+                {ph === "registered" && kitState === "stale" ? <p className="plan-warn mt-2">Soru kitapçığı güncellendi; yazdırdığın eski olabilir. Yeniden indir.</p> : null}
+                {ph === "registered" && kitState === "fresh" ? <p className="text-xs text-emerald-700 dark:text-emerald-300 mt-2">✓ Kitapçığın ve optik formun indirildi ({L.fmtDay(C.kitInfo(e.id).at)} {L.fmtClock(C.kitInfo(e.id).at)}).</p> : null}
                 <div className="flex flex-wrap gap-2 mt-3">
-                    {ph === "registered" ? <button type="button" className="quick-chip" disabled={busy} onClick={printForm}>🖨 Optik formunu indir</button> : null}
+                    {ph === "registered" && kitOpen ? <button type="button" className={"quick-chip" + (kitState === "fresh" ? "" : " is-primary")} disabled={busy} onClick={getKit}>📄 {kitState === "stale" ? "Güncel kitapçığı indir" : kitState === "fresh" ? "Yeniden indir" : "Kitapçık + optik form (PDF)"}</button> : null}
+                    {ph === "registered" && !kitOpen ? <button type="button" className="quick-chip" disabled={busy} onClick={printForm}>🖨 Optik formunu indir</button> : null}
                     <button type="button" className="quick-chip" disabled={busy} onClick={unregister}>Kaydımı sil</button>
                 </div>
             </div>

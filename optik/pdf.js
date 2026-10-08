@@ -84,14 +84,17 @@
     // ---------------------------------------------------------------
     // optik form PDF'i (tek sayfa)
     // ---------------------------------------------------------------
-    function formPdf(info) {
+    function formPage(info) {
         var Omr = global.KpssOmr, s = 9.45; // ≈240 dpi
         var pg = newPage(s);
         Omr.drawForm(pg.ctx, {
             pxPerMm: s, name: info.name, track: info.trackLabel, title: info.title, date: info.date,
             qrText: Omr.qrPayload(info.examId, info.userId, info.track), qrcode: global.qrcode
         });
-        return makePdf([canvasPage(pg.canvas, 0.92)], { title: "Optik form · " + (info.title || "") });
+        return canvasPage(pg.canvas, 0.92);
+    }
+    function formPdf(info) {
+        return makePdf([formPage(info)], { title: "Optik form · " + (info.title || "") });
     }
 
     // ---------------------------------------------------------------
@@ -276,6 +279,17 @@
     }
 
     function bookletPdf(booklet, info, onProgress) {
+        return bookletPages(booklet, info, onProgress).then(function (pages) {
+            return makePdf(pages, { title: "Soru kitapçığı · " + (info.title || ""), author: info.name });
+        });
+    }
+    // Kâğıt seti: 1. sayfa kişiye özel optik form, ardından soru kitapçığı (tek dosya, A4, %100 ölçek)
+    function kitPdf(booklet, info, onProgress) {
+        return bookletPages(booklet, info, onProgress).then(function (pages) {
+            return makePdf([formPage(info)].concat(pages), { title: "Kitapçık ve optik form · " + (info.title || ""), author: info.name });
+        });
+    }
+    function bookletPages(booklet, info, onProgress) {
         var qs = booklet.questions || [];
         return Promise.all(qs.map(function (q) { return loadImage(q.image); })).then(function (imgs) {
             var pages = [], pg = null, col = 0, y = 0, pageNo = 0;
@@ -336,10 +350,10 @@
                 if (onProgress && qi % 10 === 9) onProgress((qi + 1) / qs.length);
             });
             pages.push(canvasPage(pg.canvas, 0.86));
-            return makePdf(pages, { title: "Soru kitapçığı · " + (info.title || ""), author: info.name });
+            return pages;
         });
     }
 
-    var api = { makePdf: makePdf, formPdf: formPdf, bookletPdf: bookletPdf, b64ToBytes: b64ToBytes, bytesToB64: bytesToB64 };
+    var api = { makePdf: makePdf, formPdf: formPdf, bookletPdf: bookletPdf, kitPdf: kitPdf, b64ToBytes: b64ToBytes, bytesToB64: bytesToB64 };
     global.KpssPdf = api;
 })(typeof window !== "undefined" ? window : globalThis);

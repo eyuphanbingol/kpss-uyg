@@ -79,21 +79,29 @@
     }
 
     // Şifreli kitapçığı indir (önbellekte varsa oradan). Dönen: Uint8Array
+    // Önbellek kitapçık sürümüne (sha) bağlı: yönetici soruları değiştirirse yenisi iner.
+    // info verilirse ({path, sha}: live_kit / live_enter) sunucuya ayrıca sorulmaz.
     var memo = {};
-    function fetchBooklet(examId) {
-        if (memo[examId]) return Promise.resolve(memo[examId]);
+    function fetchBooklet(examId, info) {
+        var want = info && info.sha;
+        var m = memo[examId];
+        if (m && (!want || m.sha === want)) return Promise.resolve(m.bytes);
         return idbGet("bk:" + examId).then(function (cached) {
-            if (cached) { memo[examId] = new Uint8Array(cached); return memo[examId]; }
-            return rpc("live_booklet", { p_exam: examId }).then(function (info) {
+            var meta = getJson("kpss-live-bk-" + examId);
+            if (cached && (!want || (meta && meta.sha === want))) {
+                memo[examId] = { bytes: new Uint8Array(cached), sha: meta && meta.sha };
+                return memo[examId].bytes;
+            }
+            return (info && info.path ? Promise.resolve(info) : rpc("live_booklet", { p_exam: examId })).then(function (inf) {
                 var c = sb();
-                return c.storage.from("live-exam").download(info.path).then(function (r) {
+                return c.storage.from("live-exam").download(inf.path).then(function (r) {
                     if (r.error || !r.data) throw Object.assign(new Error("Kitapçık indirilemedi."), { code: "download", network: true });
                     return r.data.arrayBuffer();
                 }).then(function (buf) {
-                    memo[examId] = new Uint8Array(buf);
+                    memo[examId] = { bytes: new Uint8Array(buf), sha: inf.sha };
                     idbSet("bk:" + examId, buf);
-                    setJson("kpss-live-bk-" + examId, { sha: info.sha, at: Date.now() });
-                    return memo[examId];
+                    setJson("kpss-live-bk-" + examId, { sha: inf.sha, at: Date.now() });
+                    return memo[examId].bytes;
                 });
             });
         });
@@ -104,13 +112,14 @@
 
     // Kitapçığı aç: indir + çöz. Dönen: {questions:[...]}
     var opened = {};
-    function openBooklet(examId, keyHex, sha) {
-        if (opened[examId]) return Promise.resolve(opened[examId]);
-        return fetchBooklet(examId).then(function (bytes) {
+    function openBooklet(examId, keyHex, sha, path) {
+        var k = examId + ":" + (sha || "");
+        if (opened[k]) return Promise.resolve(opened[k]);
+        return fetchBooklet(examId, sha ? { sha: sha, path: path } : null).then(function (bytes) {
             return L.decryptBooklet(bytes, keyHex, sha);
         }).then(function (txt) {
-            opened[examId] = JSON.parse(txt);
-            return opened[examId];
+            opened[k] = JSON.parse(txt);
+            return opened[k];
         });
     }
 
@@ -150,7 +159,7 @@
     function recallEntry(examId) { return getJson("kpss-live-entry-" + examId); }
 
     // ---------- optik sayfası: PDF üretimi gizli bir iframe'de (mobilde aynı sayfa WebView'da) ----------
-    var OPTIK_URL = "optik/optik.html?v=3";
+    var OPTIK_URL = "optik/optik.html?v=4";
     var worker = null, waiters = {}, seq = 0;
     function onOptikMessage(e) {
         if (!worker || e.source !== worker.frame.contentWindow) return;
@@ -238,10 +247,24 @@
     function bookletPdf(student, exam, onProgress) {
         var ent = recallEntry(exam.id);
         return (ent && ent.key ? Promise.resolve(ent) : enterPaper(exam.id)).then(function (d) {
-            return Promise.all([openBooklet(exam.id, d.key, d.sha), whoami(student)]);
+            return Promise.all([openBooklet(exam.id, d.key, d.sha, d.path), whoami(student)]);
         }).then(function (r) {
             return optik({ type: "bookletPdf", booklet: r[0], info: pdfInfo(student, exam, r[1]), name: "atanly-kitapcik-" + fileDay(exam) + ".pdf" }, onProgress);
         }).then(function (m) { downloadPdf(m.b64, m.name); });
+    }
+
+    // Kâğıt seti: kayıtlı kişi, kayıt olduğu andan itibaren tek PDF'te optik formu + soru kitapçığını indirir
+    function kitKey(examId) { return "kpss-live-kit-" + examId; }
+    function kitInfo(examId) { return getJson(kitKey(examId)); }
+    // Son indirilen kitapçık yayındakiyle aynı mı? (yönetici soruları değiştirdiyse false)
+    function kitFresh(exam) { var k = kitInfo(exam.id); return !!(k && exam.booklet_sha && k.sha === exam.booklet_sha); }
+    function kitPdf(student, exam, onProgress) {
+        return rpc("live_kit", { p_exam: exam.id }).then(function (d) {
+            return Promise.all([openBooklet(exam.id, d.key, d.sha, d.path), whoami(student), d]);
+        }).then(function (r) {
+            return optik({ type: "kitPdf", booklet: r[0], info: pdfInfo(student, exam, r[1]), name: "atanly-kitapcik-ve-optik-" + fileDay(exam) + ".pdf" }, onProgress)
+                .then(function (m) { downloadPdf(m.b64, m.name); setJson(kitKey(exam.id), { sha: r[2].sha, at: Date.now() }); });
+        });
     }
 
     global.LiveClient = {
@@ -263,6 +286,9 @@
         whoami: whoami,
         formPdf: formPdf,
         enterPaper: enterPaper,
-        bookletPdf: bookletPdf
+        bookletPdf: bookletPdf,
+        kitPdf: kitPdf,
+        kitInfo: kitInfo,
+        kitFresh: kitFresh
     };
 })(typeof window !== "undefined" ? window : globalThis);

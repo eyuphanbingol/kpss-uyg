@@ -7,7 +7,7 @@
 <!--
   Atanly · optik okuma ve PDF sayfası (TEK parça). Web'de canlı deneme ekranına iframe olarak,
   mobilde WebView'a gömülür (mobile/src/lib/optikHtml.js bu dosyadan üretilir: node scripts/sync-map-data.js).
-  Komutlar: ebeveynden { type: "scan" | "reset" | "formPdf" | "bookletPdf", ... } (postMessage ya da window.optikCmd)
+  Komutlar: ebeveynden { type: "scan" | "reset" | "formPdf" | "bookletPdf" | "kitPdf", ... } (postMessage ya da window.optikCmd)
   Cevaplar: { type: "ready" | "result" | "fail" | "pdf" | "error", ... } (ReactNativeWebView.postMessage ya da parent.postMessage)
 -->
 <style>
@@ -63,7 +63,7 @@
 <script src="vendor/jsQR.min.js?v=1"></script>
 <script src="omr.js?v=1"></script>
 <script src="../js/liveExam.js?v=6"></script>
-<script src="pdf.js?v=3"></script>
+<script src="pdf.js?v=4"></script>
 <script>
 (function () {
     "use strict";
@@ -178,8 +178,8 @@
                 post({ type: "pdf", id: m.id, name: m.name || "optik-form.pdf", b64: P.bytesToB64(f) });
                 return;
             }
-            if (m.type === "bookletPdf") {
-                P.bookletPdf(m.booklet, m.info, function (p) { post({ type: "progress", id: m.id, p: p }); }).then(function (b) {
+            if (m.type === "bookletPdf" || m.type === "kitPdf") {
+                (m.type === "kitPdf" ? P.kitPdf : P.bookletPdf)(m.booklet, m.info, function (p) { post({ type: "progress", id: m.id, p: p }); }).then(function (b) {
                     post({ type: "pdf", id: m.id, name: m.name || "soru-kitapcigi.pdf", b64: P.bytesToB64(b) });
                 }).catch(function (err) { post({ type: "error", id: m.id, message: err.message }); });
             }

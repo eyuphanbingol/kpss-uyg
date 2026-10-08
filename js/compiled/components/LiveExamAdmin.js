@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:123179:ejp5jx*/
+/*jsx:babel-7.29.9-react-classic:125494:ipom55*/
 (function () {
   const {
     useState,
@@ -1500,7 +1500,10 @@
       onClick: function () {
         setConfirm(true);
       }
-    }, busy || "Kaydet" + (nDirty ? " (" + nDirty + ")" : "")) : null)), draft ? /*#__PURE__*/React.createElement("div", {
+    }, busy || "Kaydet" + (nDirty ? " (" + nDirty + ")" : "")) : null)), editable && data.kit_downloads ? /*#__PURE__*/React.createElement("div", {
+      className: "rounded-2xl border border-amber-300 bg-amber-50 dark:bg-amber-950/30 p-3 text-sm",
+      role: "status"
+    }, "\u26A0 ", /*#__PURE__*/React.createElement("b", null, data.kit_downloads, " ki\u015Fi"), " kitap\xE7\u0131\u011F\u0131 PDF olarak indirdi", data.kit_stale ? " (" + data.kit_stale + " kişi eski sürümde)" : "", ". Kaydedersen kartlar\u0131nda \"kitap\xE7\u0131k g\xFCncellendi, yeniden indir\" uyar\u0131s\u0131 \xE7\u0131kar; yazd\u0131rd\u0131klar\u0131 eski kalabilir.") : null, draft ? /*#__PURE__*/React.createElement("div", {
       className: "rounded-2xl border border-amber-300 bg-amber-50 dark:bg-amber-950/30 p-4 text-sm",
       role: "status"
     }, /*#__PURE__*/React.createElement("p", {
@@ -2273,7 +2276,7 @@
       }, "Y\xFCklenmedi")
     }, /*#__PURE__*/React.createElement("p", {
       className: "text-xs text-stone-500 mt-1"
-    }, "Anahtar 10:15'te s\u0131nava girene verilir")), /*#__PURE__*/React.createElement(Fact, {
+    }, exam.early_kit !== false ? "Kayıt olan hemen PDF indirebilir" : "Cihaza " + L.fmtClock(L.ms(exam.reg_closes_at)) + "'da iner", exam.kit_downloads ? " · " + exam.kit_downloads + " kişi indirdi" : "")), /*#__PURE__*/React.createElement(Fact, {
       label: "Kay\u0131t",
       value: /*#__PURE__*/React.createElement("span", null, exam.registered, exam.capacity ? /*#__PURE__*/React.createElement("span", {
         className: "text-stone-400 text-base"
@@ -2290,7 +2293,26 @@
       value: mins0 + " dk"
     }, /*#__PURE__*/React.createElement("p", {
       className: "text-xs text-stone-500 mt-1"
-    }, exam.extra_minutes ? exam.extra_minutes + " dk uzatıldı" : "Giriş 10:45'te kapanır"))), exam.questions ? /*#__PURE__*/React.createElement(Box, {
+    }, exam.extra_minutes ? exam.extra_minutes + " dk uzatıldı" : "Giriş 10:45'te kapanır"))), exam.status === "draft" || exam.status === "scheduled" ? /*#__PURE__*/React.createElement(Box, {
+      title: "Kitap\xE7\u0131k ve optik form (PDF)",
+      sub: exam.early_kit !== false ? "Açık: kayıt olan öğrenci soru kitapçığını ve kişiye özel optik formunu tek PDF olarak hemen indirebilir (adı ve e-postası filigranlı). Sorular sınavdan önce görülebilir." : "Kapalı: kitapçık eskisi gibi pazar " + L.fmtClock(L.ms(exam.reg_closes_at)) + "'da açılır; sorular sınavdan önce görünmez.",
+      actions: /*#__PURE__*/React.createElement(Btn, {
+        onClick: function () {
+          var on = exam.early_kit === false;
+          run("live_admin_set_early_kit", {
+            p_exam: id,
+            p_on: on
+          }, on ? "Kayıt olanlar kitapçığı hemen indirebilsin mi? Sorular sınavdan önce görülebilir." : "Erken indirme kapatılsın mı? Daha önce indirenlerin PDF'i onlarda kalır.");
+        }
+      }, exam.early_kit !== false ? "Erken indirmeyi kapat" : "Kayıt olunca indirilebilsin")
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-wrap items-center gap-2 text-sm"
+    }, /*#__PURE__*/React.createElement(Pill, {
+      tone: exam.early_kit !== false ? "emerald" : "stone",
+      dot: true
+    }, exam.early_kit !== false ? "Kayıt olunca açık" : "Pazar " + L.fmtClock(L.ms(exam.reg_closes_at)) + "'da"), /*#__PURE__*/React.createElement("span", {
+      className: "text-stone-600 dark:text-stone-300"
+    }, exam.kit_downloads ? exam.kit_downloads + " kişi indirdi" : "Henüz indiren yok", !exam.has_booklet ? " · kitapçık yüklenince açılır" : ""))) : null, exam.questions ? /*#__PURE__*/React.createElement(Box, {
       title: "Sorular (" + exam.questions + ")",
       sub: canEdit ? "Kayıt " + dt(exam.reg_closes_at) + "'da kapanana kadar soruları, cevap anahtarını ve görselleri düzenleyebilirsin." : "Kayıt kapandı; sorular yalnızca görüntülenebilir.",
       actions: /*#__PURE__*/React.createElement(Btn, {

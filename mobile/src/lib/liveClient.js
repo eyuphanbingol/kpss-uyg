@@ -64,14 +64,16 @@ function fromB64(s) {
 // Şifreli kitapçık: AsyncStorage'da 400 KB'lık parçalar halinde (Android satır sınırı).
 var CHUNK = 400 * 1024;
 var memo = {};
-function saveChunks(examId, bytes) {
+function saveChunks(examId, bytes, sha) {
     var n = Math.ceil(bytes.length / CHUNK), i;
     for (i = 0; i < n; i++) store.setItem("kpss-live-bk-" + examId + "-" + i, toB64(bytes.subarray(i * CHUNK, (i + 1) * CHUNK)));
-    setJson("kpss-live-bk-" + examId, { n: n, len: bytes.length, at: Date.now() });
+    setJson("kpss-live-bk-" + examId, { n: n, len: bytes.length, sha: sha || null, at: Date.now() });
 }
-function loadChunks(examId) {
+// want: istenen kitapçık sürümü (sha); önbellekteki farklıysa kullanılmaz
+function loadChunks(examId, want) {
     var meta = getJson("kpss-live-bk-" + examId);
     if (!meta || !meta.n) return null;
+    if (want && meta.sha !== want) return null;
     var out = new Uint8Array(meta.len), o = 0, i;
     for (i = 0; i < meta.n; i++) {
         var part = store.getItem("kpss-live-bk-" + examId + "-" + i);
@@ -82,11 +84,14 @@ function loadChunks(examId) {
     return o === meta.len ? out : null;
 }
 
-export function fetchBooklet(examId) {
-    if (memo[examId]) return Promise.resolve(memo[examId]);
-    var cached = loadChunks(examId);
-    if (cached) { memo[examId] = cached; return Promise.resolve(cached); }
-    return rpc("live_booklet", { p_exam: examId }).then(function (info) {
+// Şifreli kitapçığı indir (önbellek kitapçık sürümüne bağlı: yönetici soruları değiştirirse yenisi iner).
+// info verilirse ({path, sha}: live_kit / live_enter) sunucuya ayrıca sorulmaz.
+export function fetchBooklet(examId, inf) {
+    var want = inf && inf.sha, m = memo[examId];
+    if (m && (!want || m.sha === want)) return Promise.resolve(m.bytes);
+    var cached = loadChunks(examId, want);
+    if (cached) { memo[examId] = { bytes: cached, sha: want || (getJson("kpss-live-bk-" + examId) || {}).sha }; return Promise.resolve(cached); }
+    return (inf && inf.path ? Promise.resolve(inf) : rpc("live_booklet", { p_exam: examId })).then(function (info) {
         return supabase.storage.from("live-exam").createSignedUrl(info.path, 120).then(function (r) {
             if (r.error || !r.data) throw Object.assign(new Error("Kitapçık indirilemedi."), { code: "download", network: true });
             return fetch(r.data.signedUrl);
@@ -94,9 +99,9 @@ export function fetchBooklet(examId) {
             if (!res.ok) throw Object.assign(new Error("Kitapçık indirilemedi."), { code: "download", network: true });
             return res.arrayBuffer();
         }).then(function (buf) {
-            memo[examId] = new Uint8Array(buf);
-            saveChunks(examId, memo[examId]);
-            return memo[examId];
+            memo[examId] = { bytes: new Uint8Array(buf), sha: info.sha };
+            saveChunks(examId, memo[examId].bytes, info.sha);
+            return memo[examId].bytes;
         });
     });
 }
@@ -105,13 +110,14 @@ export function hasBooklet(examId) {
 }
 
 var opened = {};
-export function openBooklet(examId, keyHex, sha) {
-    if (opened[examId]) return Promise.resolve(opened[examId]);
-    return fetchBooklet(examId).then(function (bytes) {
+export function openBooklet(examId, keyHex, sha, path) {
+    var k = examId + ":" + (sha || "");
+    if (opened[k]) return Promise.resolve(opened[k]);
+    return fetchBooklet(examId, sha ? { sha: sha, path: path } : null).then(function (bytes) {
         return L.decryptBooklet(bytes, keyHex, sha);
     }).then(function (txt) {
-        opened[examId] = JSON.parse(txt);
-        return opened[examId];
+        opened[k] = JSON.parse(txt);
+        return opened[k];
     });
 }
 
@@ -177,7 +183,7 @@ export function enterPaper(examId) {
 export function bookletJob(student, exam) {
     var ent = recallEntry(exam.id);
     return (ent && ent.key ? Promise.resolve(ent) : enterPaper(exam.id)).then(function (d) {
-        return Promise.all([openBooklet(exam.id, d.key, d.sha), whoami(student)]);
+        return Promise.all([openBooklet(exam.id, d.key, d.sha, d.path), whoami(student)]);
     }).then(function (r) {
         return { type: "bookletPdf", booklet: r[0], info: pdfInfo(student, exam, r[1]), name: "atanly-kitapcik-" + fileDay(exam) + ".pdf" };
     });
@@ -189,9 +195,26 @@ export function formJob(student, exam) {
     });
 }
 
+// Kâğıt seti: kayıtlı kişi, kayıt olduğu andan itibaren tek PDF'te optik formu + soru kitapçığını alır
+function kitKey(examId) { return "kpss-live-kit-" + examId; }
+export function kitInfo(examId) { return getJson(kitKey(examId)); }
+// Son indirilen kitapçık yayındakiyle aynı mı? (yönetici soruları değiştirdiyse false)
+export function kitFresh(exam) { var k = kitInfo(exam.id); return !!(k && exam.booklet_sha && k.sha === exam.booklet_sha); }
+export function kitJob(student, exam) {
+    return rpc("live_kit", { p_exam: exam.id }).then(function (d) {
+        return Promise.all([openBooklet(exam.id, d.key, d.sha, d.path), whoami(student), d]);
+    }).then(function (r) {
+        return {
+            type: "kitPdf", booklet: r[0], info: pdfInfo(student, exam, r[1]), name: "atanly-kitapcik-ve-optik-" + fileDay(exam) + ".pdf",
+            onShared: function () { setJson(kitKey(exam.id), { sha: r[2].sha, at: Date.now() }); }
+        };
+    });
+}
+
 export var LiveClient = {
     rpc: rpc, trackOf: trackOf, fetchBooklet: fetchBooklet, hasBooklet: hasBooklet, openBooklet: openBooklet,
     deviceId: deviceId, makeQueue: makeQueue, pendingCount: pendingCount, flushPending: flushPending,
     rememberEntry: rememberEntry, recallEntry: recallEntry,
-    whoami: whoami, pdfInfo: pdfInfo, enterPaper: enterPaper, bookletJob: bookletJob, formJob: formJob
+    whoami: whoami, pdfInfo: pdfInfo, enterPaper: enterPaper, bookletJob: bookletJob, formJob: formJob,
+    kitJob: kitJob, kitInfo: kitInfo, kitFresh: kitFresh
 };

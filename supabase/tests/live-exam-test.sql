@@ -85,6 +85,8 @@ select t_ok((live_admin_set_questions(current_setting('t.exam')::uuid,
 select t_err($$select live_admin_publish(current_setting('t.exam')::uuid)$$, 'incomplete', 'kitapçıksız yayınlanmaz');
 select live_admin_set_booklet(current_setting('t.exam')::uuid, 'booklets/' || current_setting('t.exam') || '.bin', repeat('ab', 32), 'sha');
 select t_ok(live_admin_publish(current_setting('t.exam')::uuid)->>'status' = 'scheduled', 'yayınlandı');
+-- bu denemede erken kitapçık kapalı: kitapçık eskisi gibi pazar 10:00'da iner (açık hâli 14. bölümde)
+select live_admin_set_early_kit(current_setting('t.exam')::uuid, false);
 
 -- ---------- 2. kayıt, kontenjan, yedek ----------
 select t_as('00000000-0000-4000-8000-000000000001', '2026-10-08 20:00+03');
@@ -388,6 +390,43 @@ select t_ok(not (live_admin_questions(current_setting('t.exam4')::uuid)->>'edita
 select set_config('t.exam6', (live_admin_save_exam('{"title":"Düzenleme","day":"2026-11-08","track":"ortaogretim"}')->>'id'), false);
 select t_ok((live_admin_questions(current_setting('t.exam6')::uuid)->>'editable')::boolean, 'kayıt kapanmadan düzenlenebilir');
 select t_ok(json_array_length(live_admin_questions(current_setting('t.exam6')::uuid)->'questions') = 0 and live_admin_questions(current_setting('t.exam6')::uuid)->>'booklet' is null, 'boş taslak');
+
+
+-- ---------- 14. kayıt olana kitapçık (PDF + optik) ----------
+select live_admin_set_questions(current_setting('t.exam6')::uuid,
+  (select jsonb_agg(jsonb_build_object('no', g, 'bolum', case when g <= 60 then 'GY' else 'GK' end, 'ders', 'Tarih', 'konu', 'Atatürk İlkeleri',
+     'stem', 'Soru ' || g, 'options', jsonb_build_array('a','b','c','d','e'), 'answer', 'C')) from generate_series(1, 120) g));
+select live_admin_set_booklet(current_setting('t.exam6')::uuid, 'booklets/' || current_setting('t.exam6') || '.bin', repeat('ef', 32), 'sha6a');
+select live_admin_publish(current_setting('t.exam6')::uuid);
+select t_ok((live_admin_list()->0->>'early_kit')::boolean, 'erken kitapçık varsayılan açık');
+select t_as('00000000-0000-4000-8000-000000000005', '2026-11-02 12:00+03');
+select t_err($$select live_kit(current_setting('t.exam6')::uuid)$$, 'not_registered', 'kayıtsız kitapçık alamaz');
+select t_ok(not live_can_read_object('booklets/' || current_setting('t.exam6') || '.bin'), 'kayıtsız dosyayı okuyamaz');
+select live_register(current_setting('t.exam6')::uuid);
+select t_ok(live_kit(current_setting('t.exam6')::uuid)->>'key' = repeat('ef', 32), 'kayıt olunca hemen kitapçık anahtarı');
+select t_ok(live_can_read_object('booklets/' || current_setting('t.exam6') || '.bin'), 'kayıt olunca dosya okunur (pazardan önce)');
+select t_ok((live_dashboard('ortaogretim')->'exam'->>'early_kit')::boolean and (live_dashboard('ortaogretim')->'exam'->>'has_booklet')::boolean
+  and live_dashboard('ortaogretim')->'exam'->>'booklet_sha' = 'sha6a', 'kartta erken kitapçık bilgisi ve sürümü');
+select live_kit(current_setting('t.exam6')::uuid);
+reset role;
+select t_ok((select count(*) from live_events where exam_id = current_setting('t.exam6')::uuid and kind = 'kit_download') = 1, 'aynı kitapçık iki kez sayılmaz');
+set role authenticated;
+-- yönetici soruları değiştirirse eski kitapçıkta kalan sayılır
+select t_as('00000000-0000-4000-8000-0000000000a1', '2026-11-03 12:00+03');
+select live_admin_set_booklet(current_setting('t.exam6')::uuid, 'booklets/' || current_setting('t.exam6') || '.bin', repeat('ef', 32), 'sha6b');
+select t_ok((live_admin_questions(current_setting('t.exam6')::uuid)->>'kit_downloads')::int = 1 and (live_admin_questions(current_setting('t.exam6')::uuid)->>'kit_stale')::int = 1, 'yönetici: 1 kişi eski kitapçıkta');
+select t_ok((live_admin_list()->0->>'kit_downloads')::int = 1, 'listede indiren sayısı');
+-- kapatılınca eskisi gibi 10:00
+select t_ok(not (live_admin_set_early_kit(current_setting('t.exam6')::uuid, false)->>'early_kit')::boolean, 'yönetici erken kitapçığı kapatır');
+select t_as('00000000-0000-4000-8000-000000000005', '2026-11-03 12:00+03');
+select t_err($$select live_kit(current_setting('t.exam6')::uuid)$$, 'too_early', 'kapalıyken kayıt kapanmadan kitapçık yok');
+select t_ok(not live_can_read_object('booklets/' || current_setting('t.exam6') || '.bin'), 'kapalıyken dosya da okunmaz');
+select t_as('00000000-0000-4000-8000-000000000005', '2026-11-08 10:01+03');
+select t_ok(live_kit(current_setting('t.exam6')::uuid)->>'sha' = 'sha6b', 'kapalıyken 10:00 sonrası yeni kitapçık');
+select t_as('00000000-0000-4000-8000-000000000005', '2026-11-08 12:30+03');
+select t_err($$select live_kit(current_setting('t.exam6')::uuid)$$, 'ended', 'sınav bitince kitapçık verilmez');
+select t_as('00000000-0000-4000-8000-000000000005', '2026-11-03 12:00+03');
+select t_err($$select live_admin_set_early_kit(current_setting('t.exam6')::uuid, true)$$, 'forbidden', 'öğrenci ayarı değiştiremez');
 
 reset role;
 select 'TÜM TESTLER GEÇTİ';

@@ -6,6 +6,11 @@
  *   node scripts/split-live-sql.js          -> parçaları yazar
  *   node scripts/split-live-sql.js --check  -> parçalar güncel değilse hata verir
  */
+// Sayıya yönelme eki: 9'a, 10'a, 8'e, 12'ye …
+function yonelme(n) {
+    var son = { 0: "a", 1: "e", 2: "ye", 3: "e", 4: "e", 5: "e", 6: "ya", 7: "ye", 8: "e", 9: "a" }, onlar = { 1: "a", 2: "ye", 3: "a", 4: "a", 5: "ye", 6: "a", 7: "e", 8: "e", 9: "a" };
+    return "'" + (n % 10 ? son[n % 10] : onlar[Math.floor(n / 10) % 10]);
+}
 var fs = require("fs");
 var path = require("path");
 var root = path.join(__dirname, "..");
@@ -34,7 +39,7 @@ if (buf.length) parts.push(buf.join("\n"));
 
 var files = parts.map(function (p, i) {
     var head = "-- CANLI DENEME · PARÇA " + (i + 1) + " / " + parts.length + "\n" +
-        "-- Supabase SQL Editor'da 1'den " + parts.length + "'e SIRAYLA çalıştır (her parçayı ayrı ayrı: yapıştır → Run).\n" +
+        "-- Supabase SQL Editor'da 1'den " + parts.length + yonelme(parts.length) + " SIRAYLA çalıştır (her parçayı ayrı ayrı: yapıştır → Run).\n" +
         "-- Bu dosya scripts/split-live-sql.js ile supabase/patch-live-exam.sql'den üretilir. Elle düzenleme.\n\n";
     return [path.join(outDir, (i + 1) + ".sql"), head + p.replace(/^\n+/, "").replace(/\n*$/, "\n")];
 });

@@ -33,15 +33,27 @@ function richSeg(x, i, ts) {
 function rich(text, ts) {
     return L.richParse(text).map(function (x, i) { return richSeg(x, i, ts); });
 }
-// Alt alta kesir: pay, çizgi, payda (iç metin aynı yazı stilinde, biraz küçük)
+// Alt alta kesir: pay, çizgi, payda (iç metin aynı yazı stilinde, biraz küçük; içindeki kökler de çizgili)
 function Frac(props) {
     var base = StyleSheet.flatten(props.ts) || {}, size = base.fontSize || 16, color = base.color || "#1c1917";
     var inner = { fontSize: size * 0.85, color: color, fontWeight: base.fontWeight, lineHeight: size * 1.1 };
     return (
         <View style={{ alignItems: "center", marginHorizontal: 3, marginVertical: 2 }}>
-            <Text style={inner}>{rich(props.f[0], inner)}</Text>
+            <RichBlock text={props.f[0]} style={inner} />
             <View style={{ alignSelf: "stretch", height: 1.5, backgroundColor: color, marginVertical: 1 }} />
-            <Text style={inner}>{rich(props.f[1], inner)}</Text>
+            <RichBlock text={props.f[1]} style={inner} />
+        </View>
+    );
+}
+// Üstü çizgili kök: √ işareti + üstünde çizgi olan kutu
+function Sqrt(props) {
+    var base = StyleSheet.flatten(props.ts) || {}, size = base.fontSize || 16, color = base.color || "#1c1917";
+    return (
+        <View style={{ flexDirection: "row", alignItems: "flex-end" }}>
+            <Text style={[props.ts, { marginRight: -0.5 }]}>√</Text>
+            <View style={{ borderTopWidth: Math.max(1, size * 0.08), borderTopColor: color, marginTop: size * 0.12, paddingHorizontal: 1 }}>
+                <RichBlock text={props.r} style={props.ts} />
+            </View>
         </View>
     );
 }
@@ -49,13 +61,15 @@ function Frac(props) {
 // (RN'de metin içine gömülü View satır yüksekliğini büyütmediği için).
 function RichBlock(props) {
     var ts = props.style, parts = L.richParse(props.text);
-    if (!parts.some(function (x) { return x.f; })) return <Text style={ts}>{rich(props.text, ts)}</Text>;
+    if (!parts.some(function (x) { return x.f || x.r != null; })) return <Text style={ts}>{rich(props.text, ts)}</Text>;
     var base = StyleSheet.flatten(ts) || {}, gap = (base.fontSize || 16) * 0.3, items = [];
     // kelime başına kenar boşluğu ve flex uygulanmasın; dış boşluk kapsayıcıya geçer
     var wts = [ts, { margin: 0, marginTop: 0, marginBottom: 0, flex: 0 }];
     ts = wts;
     function push(el) { items.push({ el: el, sp: false }); }
     parts.forEach(function (x, i) {
+        if (x.f) { push(<Frac f={x.f} ts={ts} />); return; }
+        if (x.r != null) { push(<Sqrt r={x.r} ts={ts} />); return; }
         if (x.t == null) { push(<Text style={ts}>{richSeg(x, 0, ts)}</Text>); return; }
         var chunks = String(x.t).split(/(\s+)/);
         chunks.forEach(function (c, j) {

@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:246781:1yvuvuj*/
+/*jsx:babel-7.29.9-react-classic:249040:gfbzfl*/
 const {
   useState,
   useEffect,
@@ -2178,7 +2178,9 @@ function LiveExamCard(props) {
       return;
     }
     setBooklet("loading");
-    C.fetchBooklet(e.id).then(function () {
+    C.fetchBooklet(e.id, e.booklet_sha ? {
+      sha: e.booklet_sha
+    } : null).then(function () {
       setBooklet("ok");
     }, function () {
       setBooklet("fail");
@@ -2273,13 +2275,23 @@ function LiveExamCard(props) {
       return C.bookletPdf(props.student, e, pr);
     }, "Kitapçığın indirildi. İşaretlemeyi optik forma yap; bitince \"Optiğimi okut\".");
   }
+  // Kâğıt seti: tek PDF (1. sayfa kişiye özel optik form + soru kitapçığı); kayıt olunca açılır
+  function getKit() {
+    pdfJob("Kitapçığın ve optik formun hazırlanıyor…", function (pr) {
+      return C.kitPdf(props.student, e, pr);
+    }, "İndirildi: 1. sayfa optik formun, sonrası soru kitapçığı. Yazdırırken ‘Sayfaya sığdır’ı kapat, ölçek %100 olsun.");
+  }
   function choosePaper() {
     if (!window.confirm("Kâğıtta çözmeyi seçersen bu sınavı cihazda çözemezsin.\n\nKitapçığı yazdırıp cevaplarını optik forma işaretleyeceksin; sonra formun fotoğrafını çekip okutacaksın (en geç " + L.fmtClock(L.ms(e.optic_until || e.ranking_at)) + "). Devam edilsin mi?")) return;
     setBusy(true);
     setMsg("Kâğıt modunda giriş yapılıyor…");
     C.enterPaper(e.id).then(function () {
       setBusy(false);
-      getBooklet();
+      // kitapçığın güncel hâli zaten indirildiyse yeniden indirme
+      if (C.kitFresh(e)) {
+        setMsg("Kâğıt modundasın. Kitapçığın ve optik formun zaten sende; bitince \"Optiğimi okut\".");
+        load();
+      } else getKit();
     }).catch(function (x) {
       setBusy(false);
       setMsg(x.message);
@@ -2290,6 +2302,9 @@ function LiveExamCard(props) {
     props.onOpen && props.onOpen("optic", e.id);
   }
   var opticUntil = e ? L.ms(e.optic_until || e.ranking_at) : 0;
+  // kâğıt seti açık mı (kayıt olunca indirilebilir) ve daha önce indirilen güncel mi
+  var kitOpen = !!(e && e.has_booklet && (e.early_kit !== false || now >= L.ms(e.reg_closes_at)));
+  var kitState = e && C.kitInfo(e.id) ? C.kitFresh(e) ? "fresh" : "stale" : "none";
   var startT = e ? L.ms(e.starts_at) : 0;
   var title = e ? e.title : "Canlı deneme";
   var when = e ? L.fmtDay(startT, true) + " " + L.fmtClock(startT) : "";
@@ -2367,7 +2382,12 @@ function LiveExamCard(props) {
       type: "button",
       className: "quick-chip is-primary",
       disabled: true
-    }, "S\u0131nava gir (10:15'te a\xE7\u0131l\u0131r)"), /*#__PURE__*/React.createElement("button", {
+    }, "S\u0131nava gir (10:15'te a\xE7\u0131l\u0131r)"), e.has_booklet ? /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "quick-chip",
+      disabled: busy,
+      onClick: getKit
+    }, "\uD83D\uDCC4 Kitap\xE7\u0131k + optik form (PDF)") : /*#__PURE__*/React.createElement("button", {
       type: "button",
       className: "quick-chip",
       disabled: busy,
@@ -2517,9 +2537,18 @@ function LiveExamCard(props) {
       className: "text-sm text-stone-600 dark:text-stone-300 mt-1"
     }, ph === "waitlist" ? "Sıran: " + (dash.registration && dash.registration.waitlist_pos || "?") + ". Yer açılırsa otomatik kaydedilirsin. " : "", "Ba\u015Flamaya ", L.fmtLeft(startT - now), "."), ph === "registered" ? /*#__PURE__*/React.createElement("ul", {
       className: "text-xs text-stone-500 mt-2 space-y-0.5 list-disc pl-4"
-    }, /*#__PURE__*/React.createElement("li", null, "Kay\u0131t pazar ", L.fmtClock(L.ms(e.reg_closes_at)), "'da kapan\u0131r; kitap\xE7\u0131k o saatte cihaz\u0131na iner."), /*#__PURE__*/React.createElement("li", null, "130 dakikal\u0131k sessiz bir zaman ay\u0131r; m\xFCsvedde k\xE2\u011F\u0131t ve kalem haz\u0131rla."), /*#__PURE__*/React.createElement("li", null, "S\u0131nava ", L.fmtClock(L.ms(e.entry_closes_at)), "'e kadar girebilirsin; ge\xE7 giren ek s\xFCre almaz."), /*#__PURE__*/React.createElement("li", null, "K\xE2\u011F\u0131tta \xE7\xF6zeceksen optik formunu \u015Fimdiden yazd\u0131r (\u2018Sayfaya s\u0131\u011Fd\u0131r\u2019 kapal\u0131, %100 \xF6l\xE7ek).")) : null, /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React.createElement("li", null, "Cihazda \xE7\xF6zeceksen: kitap\xE7\u0131k pazar ", L.fmtClock(L.ms(e.reg_closes_at)), "'da cihaz\u0131na iner, s\u0131nav ", L.fmtClock(startT), "'te a\xE7\u0131l\u0131r."), kitOpen ? /*#__PURE__*/React.createElement("li", null, "K\xE2\u011F\u0131tta \xE7\xF6zeceksen: soru kitap\xE7\u0131\u011F\u0131n\u0131 ve optik formunu ", /*#__PURE__*/React.createElement("b", null, "\u015Fimdi"), " tek PDF olarak indirip yazd\u0131rabilirsin (1. sayfa optik form; \u2018Sayfaya s\u0131\u011Fd\u0131r\u2019 kapal\u0131, %100 \xF6l\xE7ek).") : /*#__PURE__*/React.createElement("li", null, "K\xE2\u011F\u0131tta \xE7\xF6zeceksen optik formunu \u015Fimdiden yazd\u0131r (\u2018Sayfaya s\u0131\u011Fd\u0131r\u2019 kapal\u0131, %100 \xF6l\xE7ek)", e.early_kit !== false ? "; kitapçık hazırlanınca buradan indirebileceksin." : "."), /*#__PURE__*/React.createElement("li", null, "S\u0131nav g\xFCn\xFC ", L.fmtClock(startT), "\u2013", L.fmtClock(L.ms(e.entry_closes_at)), " aras\u0131 \"K\xE2\u011F\u0131tta \xE7\xF6z\"e bas\u0131p, bitince opti\u011Fini ", L.fmtClock(opticUntil), "'a kadar okut."), /*#__PURE__*/React.createElement("li", null, "130 dakikal\u0131k sessiz bir zaman ay\u0131r; m\xFCsvedde k\xE2\u011F\u0131t ve kalem haz\u0131rla.")) : null, ph === "registered" && kitState === "stale" ? /*#__PURE__*/React.createElement("p", {
+      className: "plan-warn mt-2"
+    }, "Soru kitap\xE7\u0131\u011F\u0131 g\xFCncellendi; yazd\u0131rd\u0131\u011F\u0131n eski olabilir. Yeniden indir.") : null, ph === "registered" && kitState === "fresh" ? /*#__PURE__*/React.createElement("p", {
+      className: "text-xs text-emerald-700 dark:text-emerald-300 mt-2"
+    }, "\u2713 Kitap\xE7\u0131\u011F\u0131n ve optik formun indirildi (", L.fmtDay(C.kitInfo(e.id).at), " ", L.fmtClock(C.kitInfo(e.id).at), ").") : null, /*#__PURE__*/React.createElement("div", {
       className: "flex flex-wrap gap-2 mt-3"
-    }, ph === "registered" ? /*#__PURE__*/React.createElement("button", {
+    }, ph === "registered" && kitOpen ? /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "quick-chip" + (kitState === "fresh" ? "" : " is-primary"),
+      disabled: busy,
+      onClick: getKit
+    }, "\uD83D\uDCC4 ", kitState === "stale" ? "Güncel kitapçığı indir" : kitState === "fresh" ? "Yeniden indir" : "Kitapçık + optik form (PDF)") : null, ph === "registered" && !kitOpen ? /*#__PURE__*/React.createElement("button", {
       type: "button",
       className: "quick-chip",
       disabled: busy,

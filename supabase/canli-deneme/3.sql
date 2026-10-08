@@ -1,5 +1,5 @@
--- CANLI DENEME · PARÇA 3 / 9
--- Supabase SQL Editor'da 1'den 9'e SIRAYLA çalıştır (her parçayı ayrı ayrı: yapıştır → Run).
+-- CANLI DENEME · PARÇA 3 / 10
+-- Supabase SQL Editor'da 1'den 10'a SIRAYLA çalıştır (her parçayı ayrı ayrı: yapıştır → Run).
 -- Bu dosya scripts/split-live-sql.js ile supabase/patch-live-exam.sql'den üretilir. Elle düzenleme.
 
 -- Sıralama, kohort ve soru istatistikleri. Kesinleşmede, ayrıca yöneticinin kayıtlı

@@ -1350,6 +1350,10 @@ begin
     'editable', e.status in ('draft', 'scheduled') and public.live_clock() < e.reg_closes_at,
     'booklet', case when e.booklet_path is null then null
                     else json_build_object('path', e.booklet_path, 'key', e.booklet_key, 'sha', e.booklet_sha) end,
+    'kit_downloads', (select count(distinct v.user_id) from public.live_events v where v.exam_id = p_exam and v.kind = 'kit_download'),
+    'kit_stale', (select count(distinct v.user_id) from public.live_events v where v.exam_id = p_exam and v.kind = 'kit_download'
+                    and not exists (select 1 from public.live_events w where w.exam_id = p_exam and w.user_id = v.user_id
+                                      and w.kind = 'kit_download' and w.detail->>'sha' = e.booklet_sha)),
     'questions', (select coalesce(json_agg(json_build_object(
         'no', q.no, 'bolum', q.bolum, 'ders', q.ders, 'konu', q.konu, 'stem', q.stem, 'options', q.options,
         'answer', q.answer, 'explanation', q.explanation, 'image', q.image) order by q.no), '[]'::json)
@@ -1358,3 +1362,102 @@ end;
 $$;
 revoke all on function public.live_admin_questions(uuid) from public, anon;
 grant execute on function public.live_admin_questions(uuid) to authenticated;
+
+-- ============================================================
+-- Kayıt olana kitapçık: kayıtlı kullanıcı, kayıt olduğu andan itibaren soru kitapçığını
+-- (filigranlı PDF) ve optik formunu indirebilir. Deneme başına kapatılabilir (early_kit = false
+-- → eskisi gibi kitapçık pazar 10:00'da iner). Not: açıkken sorular sınavdan önce görülebilir.
+-- ============================================================
+alter table public.live_exams add column if not exists early_kit boolean not null default true;
+
+create or replace function public.live_exam_json(e public.live_exams)
+returns json language sql stable as $$
+  select json_build_object(
+    'id', e.id, 'track', e.track, 'title', e.title, 'status', e.status,
+    'reg_closes_at', e.reg_closes_at, 'starts_at', e.starts_at, 'entry_closes_at', e.entry_closes_at,
+    'ends_at', e.ends_at, 'late_sync_until', e.late_sync_until, 'ranking_at', e.ranking_at,
+    'capacity', e.capacity, 'question_count', e.question_count, 'extra_minutes', e.extra_minutes,
+    'finalized', e.finalized_at is not null, 'cancel_reason', e.cancel_reason,
+    'optic_until', e.ranking_at, 'early_kit', e.early_kit, 'has_booklet', e.booklet_path is not null,
+    'booklet_sha', e.booklet_sha)
+$$;
+
+-- Kitapçık dosyası: kayıtlı kullanıcı; early_kit kapalıysa kayıt kapandıktan sonra.
+create or replace function public.live_can_read_object(p_name text)
+returns boolean language plpgsql stable security definer set search_path = public as $$
+declare eid uuid;
+begin
+  if p_name !~ '^booklets/[0-9a-f-]{36}\.bin$' then return false; end if;
+  eid := substring(p_name from 'booklets/([0-9a-f-]{36})\.bin')::uuid;
+  if public.live_is_admin() then return true; end if;
+  return exists (select 1 from public.live_exams e join public.live_registrations r on r.exam_id = e.id
+                 where e.id = eid and e.deleted_at is null and r.user_id = auth.uid() and r.status = 'registered'
+                   and (e.early_kit or public.live_clock() >= e.reg_closes_at));
+end;
+$$;
+revoke all on function public.live_can_read_object(text) from public, anon;
+grant execute on function public.live_can_read_object(text) to authenticated;
+
+-- Kâğıt seti: kitapçık yolu + anahtar (PDF'i öğrencinin cihazı üretir, adı ve e-postası filigranlı).
+-- Her indirme kaydedilir; yönetici soruları sonradan değiştirirse kaç kişinin eski kitapçıkta kaldığını görür.
+create or replace function public.live_kit(p_exam uuid)
+returns json language plpgsql security definer set search_path = public as $$
+declare
+  uid uuid := public.live_require_user();
+  e public.live_exams;
+  t timestamptz := public.live_clock();
+begin
+  select * into e from public.live_exams where id = p_exam;
+  if e.id is null or e.deleted_at is not null then perform public.live_err('not_found', 'Deneme bulunamadı.'); end if;
+  if e.status = 'cancelled' then perform public.live_err('cancelled', 'Bu deneme iptal edildi.'); end if;
+  if e.status <> 'scheduled' or t >= e.ends_at then perform public.live_err('ended', 'Sınav sona erdi.'); end if;
+  if not exists (select 1 from public.live_registrations where exam_id = p_exam and user_id = uid and status = 'registered') then
+    perform public.live_err('not_registered', 'Kitapçığı indirmek için denemeye kayıtlı olmalısın.');
+  end if;
+  if not e.early_kit and t < e.reg_closes_at then
+    perform public.live_err('too_early', format('Kitapçık %s''da açılır.', to_char(e.reg_closes_at at time zone 'Europe/Istanbul', 'HH24:MI')));
+  end if;
+  if e.booklet_path is null then perform public.live_err('no_booklet', 'Kitapçık henüz hazır değil; biraz sonra tekrar dene.'); end if;
+  if not exists (select 1 from public.live_events where exam_id = p_exam and user_id = uid and kind = 'kit_download' and detail->>'sha' = e.booklet_sha) then
+    insert into public.live_events (exam_id, user_id, kind, detail) values (p_exam, uid, 'kit_download', jsonb_build_object('sha', e.booklet_sha));
+  end if;
+  return json_build_object('path', e.booklet_path, 'key', e.booklet_key, 'sha', e.booklet_sha, 'exam', public.live_exam_json(e));
+end;
+$$;
+revoke all on function public.live_kit(uuid) from public, anon;
+grant execute on function public.live_kit(uuid) to authenticated;
+
+-- Yönetici: erken kitapçığı aç / kapat
+create or replace function public.live_admin_set_early_kit(p_exam uuid, p_on boolean)
+returns json language plpgsql security definer set search_path = public as $$
+declare uid uuid := public.live_require_admin(); e public.live_exams;
+begin
+  update public.live_exams set early_kit = coalesce(p_on, true), updated_at = public.live_clock()
+   where id = p_exam and deleted_at is null and status in ('draft', 'scheduled') returning * into e;
+  if e.id is null then perform public.live_err('locked', 'Bu denemede değiştirilemez.'); end if;
+  insert into public.live_events (exam_id, user_id, kind, detail) values (p_exam, uid, 'admin_early_kit', jsonb_build_object('on', e.early_kit));
+  return public.live_exam_json(e);
+end;
+$$;
+revoke all on function public.live_admin_set_early_kit(uuid, boolean) from public, anon;
+grant execute on function public.live_admin_set_early_kit(uuid, boolean) to authenticated;
+
+-- Yönetici listesi: + erken kitapçık ayarı ve indiren kişi sayısı
+create or replace function public.live_admin_list()
+returns json language plpgsql security definer set search_path = public as $$
+begin
+  perform public.live_require_admin();
+  perform public.live_tick();
+  return (select coalesce(json_agg(x order by x.starts_at desc), '[]'::json) from (
+    select e.id, e.track, e.title, e.status, e.starts_at, e.reg_closes_at, e.ends_at, e.ranking_at, e.capacity,
+           e.extra_minutes, e.booklet_path is not null as has_booklet, e.finalized_at, e.early_kit,
+           (select count(*) from public.live_questions q where q.exam_id = e.id) as questions,
+           (select count(*) from public.live_registrations r where r.exam_id = e.id and r.status = 'registered') as registered,
+           (select count(*) from public.live_registrations r where r.exam_id = e.id and r.status = 'waitlist') as waitlist,
+           (select count(*) from public.live_attempts a where a.exam_id = e.id) as entered,
+           (select count(distinct v.user_id) from public.live_events v where v.exam_id = e.id and v.kind = 'kit_download') as kit_downloads,
+           (select participants from public.live_cohort c where c.exam_id = e.id) as participants,
+           (select avg_net from public.live_cohort c where c.exam_id = e.id) as avg_net
+    from public.live_exams e where e.deleted_at is null) x);
+end;
+$$;

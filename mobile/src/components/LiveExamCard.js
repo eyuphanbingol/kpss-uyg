@@ -62,9 +62,9 @@ export function LiveExamCard({ navigation, student, kpssData, dark, full }) {
 
     useEffect(function () {
         if (!e || ["about_to_start", "can_enter", "in_progress", "paper_solving"].indexOf(ph) < 0) return;
-        if (C.hasBooklet(e.id)) { setBooklet("ok"); return; }
         setBooklet("loading");
-        C.fetchBooklet(e.id).then(function () { setBooklet("ok"); }, function () { setBooklet("fail"); });
+        // önbellekteki kitapçık yayındaki sürümle aynıysa ağa çıkmaz
+        C.fetchBooklet(e.id, e.booklet_sha ? { sha: e.booklet_sha } : null).then(function () { setBooklet("ok"); }, function () { setBooklet("fail"); });
     }, [ph, e && e.id]);
 
     useEffect(function () {
@@ -98,9 +98,12 @@ export function LiveExamCard({ navigation, student, kpssData, dark, full }) {
     // kâğıtta çözme: PDF'ler gizli WebView'da hazırlanır, paylaşım menüsüyle açılır
     function pdfJob(label, makeCmd, done) {
         setBusy(true); setMsg(label);
+        var cmdRef = {};
         makeCmd().then(function (cmd) {
+            cmdRef = cmd;
             return runPdf(cmd, function (p) { setMsg(label.replace("…", "") + " %" + Math.round(p * 100) + "…"); });
         }).then(function (m) { return sharePdf(m.b64, m.name); }).then(function () {
+            if (cmdRef.onShared) cmdRef.onShared();
             setBusy(false); setMsg(done); load();
         }).catch(function (x) { setBusy(false); setMsg(x.message || "PDF hazırlanamadı."); load(); });
     }
@@ -112,19 +115,32 @@ export function LiveExamCard({ navigation, student, kpssData, dark, full }) {
         pdfJob("Soru kitapçığın hazırlanıyor…", function () { return C.bookletJob(student, e); },
             "Kitapçığın hazır. İşaretlemeyi optik forma yap; bitince \"Optiğimi okut\".");
     }
+    // Kâğıt seti: tek PDF (1. sayfa kişiye özel optik form + soru kitapçığı); kayıt olunca açılır
+    function getKit() {
+        pdfJob("Kitapçığın ve optik formun hazırlanıyor…", function () { return C.kitJob(student, e); },
+            "Hazır: 1. sayfa optik formun, sonrası soru kitapçığı. Yazdırırken ‘Sayfaya sığdır’ı kapat, ölçek %100 olsun.");
+    }
     function choosePaper() {
         Alert.alert("Kâğıtta çöz", "Kâğıtta çözmeyi seçersen bu sınavı cihazda çözemezsin. Kitapçığı yazdırıp cevaplarını optik forma işaretleyeceksin; sonra formun fotoğrafını çekip okutacaksın (en geç " +
             L.fmtClock(opticUntil) + ").", [
             { text: "Vazgeç", style: "cancel" },
             { text: "Kâğıtta çöz", onPress: function () {
                 setBusy(true); setMsg("Kâğıt modunda giriş yapılıyor…");
-                C.enterPaper(e.id).then(function () { setBusy(false); getBooklet(); })
+                C.enterPaper(e.id).then(function () {
+                    setBusy(false);
+                    // kitapçığın güncel hâli zaten indirildiyse yeniden indirme
+                    if (C.kitFresh(e)) { setMsg("Kâğıt modundasın. Kitapçığın ve optik formun zaten sende; bitince \"Optiğimi okut\"."); load(); }
+                    else getKit();
+                })
                     .catch(function (x) { setBusy(false); setMsg(x.message); load(); });
             } }
         ]);
     }
     function openOptic() { go(navigation, "LiveOptic", { examId: e.id }); }
     var opticUntil = e ? L.ms(e.optic_until || e.ranking_at) : 0;
+    // kâğıt seti açık mı (kayıt olunca indirilebilir) ve daha önce indirilen güncel mi
+    var kitOpen = !!(e && e.has_booklet && (e.early_kit !== false || now >= L.ms(e.reg_closes_at)));
+    var kitState = e && C.kitInfo(e.id) ? (C.kitFresh(e) ? "fresh" : "stale") : "none";
     var startT = e ? L.ms(e.starts_at) : 0;
     var when = e ? L.fmtDay(startT, true) + " " + L.fmtClock(startT) : "";
     var title = e ? e.title : "Canlı deneme";
@@ -179,7 +195,8 @@ export function LiveExamCard({ navigation, student, kpssData, dark, full }) {
                 </Text>
                 <View style={s.btns}>
                     <Btn primary disabled label="Sınava gir (10:15'te açılır)" />
-                    <Btn dark={dark} disabled={busy} label="🖨 Optik formunu indir" onPress={printForm} />
+                    {e.has_booklet ? <Btn dark={dark} disabled={busy} label="📄 Kitapçık + optik form (PDF)" onPress={getKit} />
+                        : <Btn dark={dark} disabled={busy} label="🖨 Optik formunu indir" onPress={printForm} />}
                 </View>
             </View>
         );
@@ -256,10 +273,13 @@ export function LiveExamCard({ navigation, student, kpssData, dark, full }) {
                 <Text style={[s.title, dark && s.light]}>{when} · {title}</Text>
                 <Text style={[s.body, dark && s.lightMuted]}>{ph === "waitlist" ? "Sıran: " + ((dash.registration && dash.registration.waitlist_pos) || "?") + ". " : ""}Başlamaya {L.fmtLeft(startT - now)}.</Text>
                 {ph === "registered" ? (
-                    <Text style={[s.muted, { marginTop: 6, lineHeight: 18 }]}>• Kayıt pazar {L.fmtClock(L.ms(e.reg_closes_at))}'da kapanır; kitapçık o saatte iner.{"\n"}• 130 dakikalık sessiz bir zaman ayır, müsvedde hazırla.{"\n"}• Sınava {L.fmtClock(L.ms(e.entry_closes_at))}'e kadar girebilirsin.{"\n"}• Kâğıtta çözeceksen optik formunu şimdiden yazdır (%100 ölçek).</Text>
+                    <Text style={[s.muted, { marginTop: 6, lineHeight: 18 }]}>• Cihazda çözeceksen kitapçık pazar {L.fmtClock(L.ms(e.reg_closes_at))}'da cihazına iner, sınav {L.fmtClock(startT)}'te açılır.{"\n"}• {kitOpen ? "Kâğıtta çözeceksen soru kitapçığını ve optik formunu şimdi tek PDF olarak indirip yazdırabilirsin (1. sayfa optik form, %100 ölçek)." : "Kâğıtta çözeceksen optik formunu şimdiden yazdır (%100 ölçek)" + (e.early_kit !== false ? "; kitapçık hazırlanınca buradan indirebileceksin." : ".")}{"\n"}• Sınav günü {L.fmtClock(startT)}–{L.fmtClock(L.ms(e.entry_closes_at))} arası "Kâğıtta çöz"e bas, bitince optiğini {L.fmtClock(opticUntil)}'a kadar okut.{"\n"}• 130 dakikalık sessiz bir zaman ayır, müsvedde hazırla.</Text>
                 ) : null}
+                {ph === "registered" && kitState === "stale" ? <Text style={[s.warn, { marginTop: 8, marginBottom: 0 }]}>Soru kitapçığı güncellendi; yazdırdığın eski olabilir. Yeniden indir.</Text> : null}
+                {ph === "registered" && kitState === "fresh" ? <Text style={[s.muted, { marginTop: 6, color: "#047857" }]}>✓ Kitapçığın ve optik formun indirildi ({L.fmtDay(C.kitInfo(e.id).at)} {L.fmtClock(C.kitInfo(e.id).at)}).</Text> : null}
                 <View style={s.btns}>
-                    {ph === "registered" ? <Btn dark={dark} disabled={busy} label="🖨 Optik formunu indir" onPress={printForm} /> : null}
+                    {ph === "registered" && kitOpen ? <Btn primary={kitState !== "fresh"} dark={dark} disabled={busy} label={"📄 " + (kitState === "stale" ? "Güncel kitapçığı indir" : kitState === "fresh" ? "Yeniden indir" : "Kitapçık + optik form (PDF)")} onPress={getKit} /> : null}
+                    {ph === "registered" && !kitOpen ? <Btn dark={dark} disabled={busy} label="🖨 Optik formunu indir" onPress={printForm} /> : null}
                     <Btn dark={dark} disabled={busy} label="Kaydımı sil" onPress={unregister} />
                 </View>
             </View>

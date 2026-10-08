@@ -755,6 +755,11 @@
                     </div>
                 </div>
 
+                {editable && data.kit_downloads ? (
+                    <div className="rounded-2xl border border-amber-300 bg-amber-50 dark:bg-amber-950/30 p-3 text-sm" role="status">
+                        ⚠ <b>{data.kit_downloads} kişi</b> kitapçığı PDF olarak indirdi{data.kit_stale ? " (" + data.kit_stale + " kişi eski sürümde)" : ""}. Kaydedersen kartlarında "kitapçık güncellendi, yeniden indir" uyarısı çıkar; yazdırdıkları eski kalabilir.
+                    </div>
+                ) : null}
                 {draft ? (
                     <div className="rounded-2xl border border-amber-300 bg-amber-50 dark:bg-amber-950/30 p-4 text-sm" role="status">
                         <p className="font-semibold">Bu tarayıcıda kaydedilmemiş bir taslak var: {draft.qs.length} soru ({L.fmtDay(draft.at, true)} {L.fmtClock(draft.at)}).</p>
@@ -1117,13 +1122,29 @@
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
                     <Fact label="Sorular" value={<span>{exam.questions}<span className="text-stone-400 text-base">/120</span></span>}><div className="mt-2"><Meter value={exam.questions} max={120} done={exam.questions === 120} /></div></Fact>
                     <Fact label="Kitapçık" value={exam.has_booklet ? <span className="text-emerald-700 dark:text-emerald-300">Şifreli · yüklendi</span> : <span className="text-stone-400">Yüklenmedi</span>}>
-                        <p className="text-xs text-stone-500 mt-1">Anahtar 10:15'te sınava girene verilir</p>
+                        <p className="text-xs text-stone-500 mt-1">{exam.early_kit !== false ? "Kayıt olan hemen PDF indirebilir" : "Cihaza " + L.fmtClock(L.ms(exam.reg_closes_at)) + "'da iner"}{exam.kit_downloads ? " · " + exam.kit_downloads + " kişi indirdi" : ""}</p>
                     </Fact>
                     <Fact label="Kayıt" value={<span>{exam.registered}{exam.capacity ? <span className="text-stone-400 text-base">/{exam.capacity}</span> : null}</span>}>
                         {exam.capacity ? <div className="mt-2"><Meter value={exam.registered} max={exam.capacity} /></div> : <p className="text-xs text-stone-500 mt-1">Kontenjan sınırsız{exam.waitlist ? " · " + exam.waitlist + " yedek" : ""}</p>}
                     </Fact>
                     <Fact label="Süre" value={(mins0) + " dk"}><p className="text-xs text-stone-500 mt-1">{exam.extra_minutes ? exam.extra_minutes + " dk uzatıldı" : "Giriş 10:45'te kapanır"}</p></Fact>
                 </div>
+
+                {exam.status === "draft" || exam.status === "scheduled" ? (
+                    <Box title="Kitapçık ve optik form (PDF)"
+                        sub={exam.early_kit !== false
+                            ? "Açık: kayıt olan öğrenci soru kitapçığını ve kişiye özel optik formunu tek PDF olarak hemen indirebilir (adı ve e-postası filigranlı). Sorular sınavdan önce görülebilir."
+                            : "Kapalı: kitapçık eskisi gibi pazar " + L.fmtClock(L.ms(exam.reg_closes_at)) + "'da açılır; sorular sınavdan önce görünmez."}
+                        actions={<Btn onClick={function () {
+                            var on = exam.early_kit === false;
+                            run("live_admin_set_early_kit", { p_exam: id, p_on: on }, on ? "Kayıt olanlar kitapçığı hemen indirebilsin mi? Sorular sınavdan önce görülebilir." : "Erken indirme kapatılsın mı? Daha önce indirenlerin PDF'i onlarda kalır.");
+                        }}>{exam.early_kit !== false ? "Erken indirmeyi kapat" : "Kayıt olunca indirilebilsin"}</Btn>}>
+                        <div className="flex flex-wrap items-center gap-2 text-sm">
+                            <Pill tone={exam.early_kit !== false ? "emerald" : "stone"} dot>{exam.early_kit !== false ? "Kayıt olunca açık" : "Pazar " + L.fmtClock(L.ms(exam.reg_closes_at)) + "'da"}</Pill>
+                            <span className="text-stone-600 dark:text-stone-300">{exam.kit_downloads ? exam.kit_downloads + " kişi indirdi" : "Henüz indiren yok"}{!exam.has_booklet ? " · kitapçık yüklenince açılır" : ""}</span>
+                        </div>
+                    </Box>
+                ) : null}
 
                 {exam.questions ? (
                     <Box title={"Sorular (" + exam.questions + ")"}

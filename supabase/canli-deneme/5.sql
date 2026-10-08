@@ -1,5 +1,5 @@
--- CANLI DENEME · PARÇA 5 / 9
--- Supabase SQL Editor'da 1'den 9'e SIRAYLA çalıştır (her parçayı ayrı ayrı: yapıştır → Run).
+-- CANLI DENEME · PARÇA 5 / 10
+-- Supabase SQL Editor'da 1'den 10'a SIRAYLA çalıştır (her parçayı ayrı ayrı: yapıştır → Run).
 -- Bu dosya scripts/split-live-sql.js ile supabase/patch-live-exam.sql'den üretilir. Elle düzenleme.
 
 create or replace function public.live_enter(p_exam uuid, p_device text, p_mode text default 'device')
