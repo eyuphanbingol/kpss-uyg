@@ -474,8 +474,43 @@
     // __söz__ altı çizili · __söz__(II) altı çizili + altında numara (ÖSYM'deki gibi) · **söz** kalın.
     // Boşluk için kullanılan ______ (yalnız alt çizgi) biçim sayılmaz.
     var RICH_RE = /__(?![_\s])([^\n]*?[^_\s])__(?!_)(?:\((I{1,3}|IV|VI{0,3}|IX|X|\d{1,2})\))?|\*\*(?![*\s])([^\n]*?[^*\s])\*\*(?!\*)/g;
-    function richParse(text) {
-        var s = String(text == null ? "" : text), out = [], last = 0, m;
+    // ---------- matematik: \frac{pay}{payda} kesir (alt alta) · \sqrt{x} ve √15 kök · x^{2} / x^2 üs · a_{1} alt indis ----------
+    // Süslü parantez içi iç içe olabilir; parça {f:[pay,payda]} | {r:kök} | {sp:üs} | {sb:indis} olur (içleri yine biçimli metin).
+    function readGroup(s, i, open, close) {
+        var depth = 0;
+        for (var j = i; j < s.length; j++) {
+            var c = s.charAt(j);
+            if (c === open) depth++;
+            else if (c === close && --depth === 0) return { body: s.slice(i + 1, j), end: j + 1 };
+        }
+        return null;
+    }
+    function mathSplit(s) {
+        var out = [], last = 0, i = 0, g, g2, mm;
+        while (i < s.length) {
+            var c = s.charAt(i), seg = null, end = i;
+            if (c === "\\" && s.substr(i, 6) === "\\frac{" && (g = readGroup(s, i + 5, "{", "}")) && s.charAt(g.end) === "{" && (g2 = readGroup(s, g.end, "{", "}"))) {
+                seg = { f: [g.body, g2.body] }; end = g2.end;
+            } else if (c === "\\" && s.substr(i, 6) === "\\sqrt{" && (g = readGroup(s, i + 5, "{", "}"))) {
+                seg = { r: g.body }; end = g.end;
+            } else if (c === "√") {
+                if (s.charAt(i + 1) === "(" && (g = readGroup(s, i + 1, "(", ")"))) { seg = { r: g.body }; end = g.end; }
+                else if ((mm = /^(\d+(?:[.,]\d+)?|[a-zA-Z](?![a-zA-ZçğıöşüÇĞİÖŞÜ]))/.exec(s.slice(i + 1)))) { seg = { r: mm[1] }; end = i + 1 + mm[1].length; }
+            } else if (c === "^" && i > 0) {
+                if (s.charAt(i + 1) === "{" && (g = readGroup(s, i + 1, "{", "}"))) { seg = { sp: g.body }; end = g.end; }
+                else if ((mm = /^(-?\d+|[a-zA-Z])/.exec(s.slice(i + 1)))) { seg = { sp: mm[1] }; end = i + 1 + mm[1].length; }
+            } else if (c === "_" && s.charAt(i + 1) === "{" && s.charAt(i - 1) !== "_" && (g = readGroup(s, i + 1, "{", "}"))) {
+                seg = { sb: g.body }; end = g.end;
+            }
+            if (seg) { if (i > last) out.push({ t: s.slice(last, i) }); out.push(seg); last = i = end; }
+            else i++;
+        }
+        if (last < s.length) out.push({ t: s.slice(last) });
+        return out;
+    }
+    function isMath(x) { return x.f || x.r != null || x.sp != null || x.sb != null; }
+    function styleSplit(s) {
+        var out = [], last = 0, m;
         RICH_RE.lastIndex = 0;
         while ((m = RICH_RE.exec(s))) {
             // ______ gibi uzun çizginin ortasından başlayan eşleşme biçim değildir
@@ -488,17 +523,45 @@
         if (last < s.length) out.push({ t: s.slice(last) });
         return out;
     }
+    // Soru metnini parçalara ayır: {t} düz · {t,u[,m]} altı çizili (numaralı) · {t,b} kalın · {f}/{r}/{sp}/{sb} matematik
+    function richParse(text) {
+        var out = [];
+        // JSON'da tek ters bölüyle yazılmış \frac → "\f" (form feed) + "rac{" olur; geri çevir
+        mathSplit(String(text == null ? "" : text).replace(/\f(rac\{)/g, "\\f$1")).forEach(function (seg) {
+            if (seg.t == null) out.push(seg);
+            else styleSplit(seg.t).forEach(function (x) { out.push(x); });
+        });
+        return out;
+    }
     // Biçimsiz düz metin (arama, ekran okuyucu, CSV): numaralı sözler "söz (II)" olur
     function richPlain(text) {
-        return richParse(text).map(function (x) { return x.t + (x.m ? " (" + x.m + ")" : ""); }).join("");
+        return richParse(text).map(function (x) {
+            if (x.f) return "(" + richPlain(x.f[0]) + ")/(" + richPlain(x.f[1]) + ")";
+            if (x.r != null) { var r = richPlain(x.r); return /^[\w.,]+$/.test(r) ? "√" + r : "√(" + r + ")"; }
+            if (x.sp != null) return "^" + richPlain(x.sp);
+            if (x.sb != null) return "_" + richPlain(x.sb);
+            return x.t + (x.m ? " (" + x.m + ")" : "");
+        }).join("");
     }
     // Kapanmamış işaretler (yazım hatası olabilir)
     function richIssues(text) {
-        var rest = richParse(text).filter(function (x) { return !x.u && !x.b; }).map(function (x) { return x.t; }).join("\n");
-        var out = [];
+        var parts = richParse(text), out = [];
+        var rest = parts.filter(function (x) { return x.t != null && !x.u && !x.b; }).map(function (x) { return x.t; }).join("\n");
+        if (/\\(frac|sqrt)/.test(rest)) out.push("hatalı \\frac ya da \\sqrt (süslü parantezleri kontrol et)");
+        parts.forEach(function (x) {
+            [].concat(x.f || [], x.r != null ? [x.r] : [], x.sp != null ? [x.sp] : [], x.sb != null ? [x.sb] : []).forEach(function (inner) {
+                richIssues(inner).forEach(function (m) { if (out.indexOf(m) < 0) out.push(m); });
+            });
+        });
         if (/(^|[^_])__(?=[^_\s])|[^_\s]__(?!_)/.test(rest)) out.push("kapanmamış __ (altı çizili)");
         if (/\*\*(?=[^\s*])|[^\s*]\*\*/.test(rest)) out.push("kapanmamış ** (kalın)");
         return out;
+    }
+
+    // Yükleme dosyasını oku: yapay zekâ JSON'da \frac / \sqrt'ı tek ters bölüyle yazarsa
+    // (\f form feed olur, \s geçersizdir) önce çift ters bölüye çevir.
+    function parseUploadJson(txt) {
+        return JSON.parse(String(txt).replace(/^\uFEFF/, "").replace(/(^|[^\\])\\(frac|sqrt)(?=\{)/g, "$1\\\\$2"));
     }
 
     function validateUpload(doc, catalog, labels, images) {
@@ -847,6 +910,7 @@
         timeRows: timeRows,
         fmtSec: fmtSec,
         richParse: richParse,
+        parseUploadJson: parseUploadJson,
         richPlain: richPlain,
         richIssues: richIssues,
         trUpper: trUpper

@@ -68,7 +68,7 @@ function buildOptikHtml() {
         var js = fs.readFileSync(path.join(dir, file), "utf8").replace(/\r\n?/g, "\n").replace(/<\/script/gi, "<\\/script");
         return "<script>\n" + js + "\n</script>";
     });
-    if (n !== 4) throw new Error("optik.html: 4 betik bekleniyordu, " + n + " bulundu");
+    if (n !== 5) throw new Error("optik.html: 5 betik bekleniyordu, " + n + " bulundu");
     html = html.replace("<script>", "<script>window.OPTIK_FORM = " + JSON.stringify(form) + ";</script>\n<script>");
     return "// Bu dosya scripts/sync-map-data.js ile optik/optik.html'den üretilir. Elle düzenleme.\n" +
         "export var OPTIK_HTML = " + JSON.stringify(html) + ";\n";

@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:76421:cd3orf*/
+/*jsx:babel-7.29.9-react-classic:76995:qd1db7*/
 (function () {
   const {
     useState,
@@ -11,9 +11,40 @@
   var L = window.LiveExam;
   var C = window.LiveClient;
 
-  // Soru metni biçimi (L.richParse): __söz__ altı çizili, __söz__(II) altında numara, **söz** kalın
+  // Soru metni biçimi (L.richParse): __söz__ altı çizili, __söz__(II) altında numara, **söz** kalın,
+  // \frac{pay}{payda} alt alta kesir, \sqrt{x} / √15 kök, x^{2} üs, a_{1} alt indis
   function Rich(props) {
     return L.richParse(props.text).map(function (x, i) {
+      if (x.f) return /*#__PURE__*/React.createElement("span", {
+        key: i,
+        className: "live-frac"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "live-frac-n"
+      }, /*#__PURE__*/React.createElement(Rich, {
+        text: x.f[0]
+      })), /*#__PURE__*/React.createElement("span", {
+        className: "live-frac-d"
+      }, /*#__PURE__*/React.createElement(Rich, {
+        text: x.f[1]
+      })));
+      if (x.r != null) return /*#__PURE__*/React.createElement("span", {
+        key: i,
+        className: "live-sqrt"
+      }, "\u221A", /*#__PURE__*/React.createElement("span", {
+        className: "live-sqrt-in"
+      }, /*#__PURE__*/React.createElement(Rich, {
+        text: x.r
+      })));
+      if (x.sp != null) return /*#__PURE__*/React.createElement("sup", {
+        key: i
+      }, /*#__PURE__*/React.createElement(Rich, {
+        text: x.sp
+      }));
+      if (x.sb != null) return /*#__PURE__*/React.createElement("sub", {
+        key: i
+      }, /*#__PURE__*/React.createElement(Rich, {
+        text: x.sb
+      }));
       if (x.b) return /*#__PURE__*/React.createElement("b", {
         key: i
       }, x.t);

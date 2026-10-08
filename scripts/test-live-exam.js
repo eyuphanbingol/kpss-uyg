@@ -164,6 +164,13 @@ Promise.resolve().then(function () {
     ok(rp.length === 7 && rp[1].u && rp[1].m === "I" && rp[3].m === "II" && rp[5].b && rp[6].t.indexOf("______") >= 0, "biçim: altı çizili + numara + kalın, boşluk çizgisi korunur");
     ok(L.richPlain("a __b__(IV) **c**") === "a b (IV) c", "biçim: düz metin");
     ok(L.richIssues("x ______ y").length === 0 && L.richIssues("a __b c").length === 1 && L.richIssues("3 ** 2").length === 0, "biçim: kapanmamış işaret uyarısı");
+    var mp = L.richParse("\\frac{2(2√5 − √15)}{4 − 2√3} + x^2 + a_{1} + \\sqrt{\\frac{1}{4}}");
+    ok(mp[0].f && mp[0].f[0] === "2(2√5 − √15)" && mp[0].f[1] === "4 − 2√3" && mp[2].sp === "2" && mp[4].sb === "1" && mp[6].r === "\\frac{1}{4}", "matematik: kesir, üs, indis, iç içe kök");
+    ok(L.richParse("√15 ve √(a+b)").filter(function (x) { return x.r != null; }).map(function (x) { return x.r; }).join("|") === "15|a+b", "matematik: √ kendiliğinden kök");
+    ok(L.richPlain("\\frac{1}{2} √3") === "(1)/(2) √3" && L.richIssues("\\frac{1}{2").length === 1 && L.richIssues("\\frac{1}{__a}").length === 1, "matematik: düz metin ve hatalı süslü parantez uyarısı");
+    var pj = L.parseUploadJson('{"a":"\\frac{1}{2} \\sqrt{3} \\\\frac{3}{4}"}');
+    ok(L.richParse(pj.a).filter(function (x) { return x.f || x.r != null; }).length === 3, "yükleme: tek ters bölülü \\frac / \\sqrt JSON'u bozmaz");
+    ok(L.richParse("\f" + "rac{1}{2}")[0].f, "form feed'e dönmüş \\frac yine kesir");
     var bad3 = JSON.parse(JSON.stringify(require("../docs/canli-deneme-ornek.json")));
     bad3.sorular[0].metin = "Kapanmamış __altı çizili";
     ok(L.validateUpload(bad3, cat, {}, null).warnings.some(function (w) { return /Soru 1: soru metninde kapanmamış __/.test(w); }), "doğrulayıcı: kapanmamış biçim uyarısı");

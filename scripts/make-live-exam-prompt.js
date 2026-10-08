@@ -62,6 +62,13 @@ var prompt = [
     "- Boşluk doldurma çizgisi için \"......\" ya da \"______\" kullanabilirsin; bunlar biçim sayılmaz.",
     "- Bu işaretleri başka amaçla kullanma ve her açılan işareti aynı satırda kapat.",
     "",
+    "## Matematik yazımı (kesirler alt alta görünür)",
+    "- Kesir: \\frac{pay}{payda}  — ör. \"\\frac{2(2√5 − √15 − √10)}{4 − 2√3 − 2√2} işleminin sonucu kaçtır?\". \"a / b\" ya da \"(a)/(b)\" YAZMA.",
+    "  JSON içinde ters bölü iki kez yazılır: \"\\\\frac{1}{2}\" (JSON kuralı).",
+    "- Karekök: √15 ya da √(a + b) yaz (üstü çizgili gösterilir); uzun ifadede \\sqrt{…} de kullanılabilir.",
+    "- Üs: x^2, 2^{10}, a^{n+1}  (tek karakter/sayıda süslü parantez gerekmez). Alt indis: a_{1}.",
+    "- Şıklarda da aynı yazım geçerli (ör. \"\\frac{3}{4}\", \"2√3\").",
+    "",
     "## Konu adları (ders → kullanabileceğin konu değerleri; başka değer KULLANMA)",
     "Not: Bazı adlarda yazım hatası ya da sonda boşluk var (ör. \"20.YY Başlarında Osmanlı Devleti \"); onları da AYNEN kopyala.",
     "Türkçe'de sözel mantık ve paragrafta yapı/anlatım teknikleri soruları \"Paragraf\" konusuna yazılır.",
@@ -85,7 +92,7 @@ var prompt = [
     "3. Her \"konu\", o dersin listesinde birebir var.",
     "4. Her soruda 5 şık ve A–E doğru cevap var.",
     "5. \"gorsel\" yalnızca görselli sorularda var, adı \"soru-<no>.png\" biçiminde ve yanında \"gorsel_tarifi\" var.",
-    "6. Altı çizili / numaralı / kalın sözler __söz__, __söz__(I), **söz** biçiminde ve her işaret kapanmış.",
+    "6. Altı çizili / numaralı / kalın sözler __söz__, __söz__(I), **söz** biçiminde ve her işaret kapanmış; kesirler \\frac{…}{…} biçiminde.",
     "7. Çıktı yalnızca JSON; başında ya da sonunda tek bir kelime bile yok."
 ].join("\n");
 
@@ -105,6 +112,10 @@ var md = [
     "## Altı çizili ve numaralı sözler",
     "Soru metninde `__söz__` altı çizili, `__söz__(II)` altı çizili ve altında numara, `**söz**` kalın görünür (sınav ekranı, mobil, PDF kitapçık).",
     "Yükledikten sonra da yönetici panelindeki soru editöründe sözü seçip **Altını çiz / Numaralı / Kalın** düğmeleriyle (Ctrl+U, Ctrl+Shift+U, Ctrl+B) ekleyebilirsin.",
+    "",
+    "## Kesir, kök ve üs",
+    "`\\frac{pay}{payda}` kesri alt alta, `√15` / `\\sqrt{x}` kökü üstü çizgili, `x^2` / `x^{10}` üssü yukarıda gösterir.",
+    "Editörde `(a+b) / (c−d)` gibi bir ifadeyi seçip **Kesir**'e basarsan kendiliğinden `\\frac{a+b}{c−d}` olur.",
     "",
     "## Prompt",
     "",

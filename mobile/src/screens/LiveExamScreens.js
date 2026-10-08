@@ -12,19 +12,70 @@ import { go } from "../nav";
 import { Card, PageHeader, ScrollScreen, Tap } from "../ui";
 import { LiveExamCard, liveKonuHasContent, s as cs } from "../components/LiveExamCard";
 
-// Soru metni biçimi (L.richParse): __söz__ altı çizili, __söz__(II) numaralı, **söz** kalın.
+// Soru metni biçimi (L.richParse): __söz__ altı çizili, __söz__(II) numaralı, **söz** kalın,
+// \frac{pay}{payda} alt alta kesir, \sqrt{x} / √15 kök, x^{2} üs, a_{1} alt indis.
 // React Native'de numara sözün altına konamadığı için hemen yanında küçük ve kalın gösterilir.
-function rich(text) {
-    return L.richParse(text).map(function (x, i) {
-        if (x.b) return <Text key={i} style={{ fontWeight: "800" }}>{x.t}</Text>;
-        if (!x.u) return x.t;
-        return (
-            <Text key={i}>
-                <Text style={{ textDecorationLine: "underline" }}>{x.t}</Text>
-                {x.m ? <Text style={{ fontSize: 11, fontWeight: "900" }}>{"\u2009(" + x.m + ")"}</Text> : null}
-            </Text>
-        );
+function richSeg(x, i, ts) {
+    var base = StyleSheet.flatten(ts) || {}, size = base.fontSize || 16;
+    if (x.f) return <Frac key={i} f={x.f} ts={ts} />;
+    // RN'de üst çizgi yok: basit kök √15, karmaşık kök √(a+b) olarak yazılır
+    if (x.r != null) return /^[\w.,]+$/.test(x.r) ? <Text key={i}>√{x.r}</Text> : <Text key={i}>√({rich(x.r, ts)})</Text>;
+    if (x.sp != null || x.sb != null) return <Text key={i} style={{ fontSize: size * 0.68 }}>{rich(x.sp != null ? x.sp : x.sb, ts)}</Text>;
+    if (x.b) return <Text key={i} style={{ fontWeight: "800" }}>{x.t}</Text>;
+    if (!x.u) return x.t;
+    return (
+        <Text key={i}>
+            <Text style={{ textDecorationLine: "underline" }}>{x.t}</Text>
+            {x.m ? <Text style={{ fontSize: 11, fontWeight: "900" }}>{"\u2009(" + x.m + ")"}</Text> : null}
+        </Text>
+    );
+}
+function rich(text, ts) {
+    return L.richParse(text).map(function (x, i) { return richSeg(x, i, ts); });
+}
+// Alt alta kesir: pay, çizgi, payda (iç metin aynı yazı stilinde, biraz küçük)
+function Frac(props) {
+    var base = StyleSheet.flatten(props.ts) || {}, size = base.fontSize || 16, color = base.color || "#1c1917";
+    var inner = { fontSize: size * 0.85, color: color, fontWeight: base.fontWeight, lineHeight: size * 1.1 };
+    return (
+        <View style={{ alignItems: "center", marginHorizontal: 3, marginVertical: 2 }}>
+            <Text style={inner}>{rich(props.f[0], inner)}</Text>
+            <View style={{ alignSelf: "stretch", height: 1.5, backgroundColor: color, marginVertical: 1 }} />
+            <Text style={inner}>{rich(props.f[1], inner)}</Text>
+        </View>
+    );
+}
+// Metin bloğu: kesir yoksa tek Text; varsa sözcükler ve kesirler sarmalanan bir satır düzeninde dizilir
+// (RN'de metin içine gömülü View satır yüksekliğini büyütmediği için).
+function RichBlock(props) {
+    var ts = props.style, parts = L.richParse(props.text);
+    if (!parts.some(function (x) { return x.f; })) return <Text style={ts}>{rich(props.text, ts)}</Text>;
+    var base = StyleSheet.flatten(ts) || {}, gap = (base.fontSize || 16) * 0.3, items = [];
+    // kelime başına kenar boşluğu ve flex uygulanmasın; dış boşluk kapsayıcıya geçer
+    var wts = [ts, { margin: 0, marginTop: 0, marginBottom: 0, flex: 0 }];
+    ts = wts;
+    function push(el) { items.push({ el: el, sp: false }); }
+    parts.forEach(function (x, i) {
+        if (x.t == null) { push(<Text style={ts}>{richSeg(x, 0, ts)}</Text>); return; }
+        var chunks = String(x.t).split(/(\s+)/);
+        chunks.forEach(function (c, j) {
+            if (!c) return;
+            if (/^\s+$/.test(c)) {
+                if (items.length) items[items.length - 1].sp = true;
+                if (c.indexOf("\n") >= 0) items.push({ br: true });
+                return;
+            }
+            var last = x.m && chunks.slice(j + 1).every(function (r) { return !r.trim(); });
+            push(<Text style={ts}>{richSeg({ t: c, u: x.u, b: x.b, m: last ? x.m : undefined }, 0, ts)}</Text>);
+        });
     });
+    return (
+        <View style={[{ flexDirection: "row", flexWrap: "wrap", alignItems: "center", flexShrink: 1, marginTop: base.marginTop || 0 }, props.box]}>
+            {items.map(function (it, k) {
+                return it.br ? <View key={k} style={{ width: "100%", height: 0 }} /> : <View key={k} style={{ marginRight: it.sp ? gap : 0 }}>{it.el}</View>;
+            })}
+        </View>
+    );
 }
 
 // Canlı deneme ekranları (mobil). Web karşılığı js/components/LiveExamScreen.jsx.
@@ -291,7 +342,7 @@ export function LiveExamScreen({ navigation, route }) {
                 <View style={{ marginTop: 10 }}>
                     <Card dark={dark}>
                         <Text style={cs.muted}>Soru {cur.no} / 120 · {L.BOLUM[cur.bolum]} · {cur.ders}</Text>
-                        <Text style={[st.stem, dark && cs.light]}>{rich(cur.stem)}</Text>
+                        <RichBlock text={cur.stem} style={[st.stem, dark && cs.light]} />
                         {cur.image ? <Image source={{ uri: cur.image }} style={st.img} resizeMode="contain" accessibilityLabel="Soru şekli" /> : null}
                     </Card>
                     {(cur.options || []).map(function (o, i) {
@@ -301,7 +352,7 @@ export function LiveExamScreen({ navigation, route }) {
                             <Tap key={l} onPress={function () { pick(cur.no, on ? null : l); }} accessibilityRole="radio" accessibilityState={{ checked: on }}
                                 style={[st.opt, dark && st.optDark, on && st.optOn]}>
                                 <View style={[st.letter, on && st.letterOn]}><Text style={[st.letterTxt, on && { color: "#0D2C4D" }]}>{l}</Text></View>
-                                <Text style={[st.optTxt, (dark || on) && cs.light]}>{rich(o)}</Text>
+                                <RichBlock text={o} style={[st.optTxt, (dark || on) && cs.light]} box={{ flex: 1 }} />
                             </Tap>
                         );
                     })}
@@ -524,13 +575,13 @@ export function LiveResultScreen({ navigation, route }) {
                             </Tap>
                             {open ? (
                                 <View style={{ marginTop: 8 }}>
-                                    <Text style={[st.stem, dark && cs.light]}>{rich(q.stem)}</Text>
+                                    <RichBlock text={q.stem} style={[st.stem, dark && cs.light]} />
                                     {images[q.no] ? <Image source={{ uri: images[q.no] }} style={st.img} resizeMode="contain" /> : null}
                                     {(q.options || []).map(function (o, i) {
                                         var l = L.LETTERS[i];
-                                        return <Text key={l} style={[st.revOpt, l === q.answer && st.revOk, l === q.mine && l !== q.answer && st.revBad]}>{l}) {rich(o)}{l === q.answer ? " ✓" : ""}{l === q.mine && l !== q.answer ? " ✗ senin cevabın" : ""}</Text>;
+                                        return <Text key={l} style={[st.revOpt, l === q.answer && st.revOk, l === q.mine && l !== q.answer && st.revBad]}>{l}) {rich(o, st.revOpt)}{l === q.answer ? " ✓" : ""}{l === q.mine && l !== q.answer ? " ✗ senin cevabın" : ""}</Text>;
                                     })}
-                                    {q.explanation ? <Text style={st.expl}>Çözüm: {rich(q.explanation)}</Text> : null}
+                                    {q.explanation ? <Text style={st.expl}>Çözüm: {rich(q.explanation, st.expl)}</Text> : null}
                                     <Text style={[cs.muted, { marginTop: 6 }]}>
                                         {q.ms ? "Bu soruda " + Math.max(1, Math.round(q.ms / 1000)) + " sn harcadın. " : ""}{tot ? "Katılanlarda doğru oranı %" + pct(100 * q.stat.correct / tot) + "." : ""}
                                     </Text>

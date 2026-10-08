@@ -11,7 +11,7 @@ var root = path.join(__dirname, "..");
 var file = process.argv[2];
 if (!file) { console.error("Kullanım: node scripts/validate-live-exam.js <dosya.json> [görsel-klasörü]"); process.exit(2); }
 var doc;
-try { doc = JSON.parse(fs.readFileSync(file, "utf8")); } catch (e) { console.error("JSON okunamadı: " + e.message); process.exit(1); }
+try { doc = L.parseUploadJson(fs.readFileSync(file, "utf8")); } catch (e) { console.error("JSON okunamadı: " + e.message); process.exit(1); }
 var imgDir = process.argv[3] || path.join(path.dirname(file), "canli-deneme-gorseller");
 var images = {};
 if (fs.existsSync(imgDir)) fs.readdirSync(imgDir).forEach(function (f) { images[f] = true; });

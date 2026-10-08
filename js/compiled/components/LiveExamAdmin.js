@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:119900:1w4igbe*/
+/*jsx:babel-7.29.9-react-classic:123179:ejp5jx*/
 (function () {
   const {
     useState,
@@ -368,7 +368,7 @@
       readFile(f).then(function (txt) {
         var d;
         try {
-          d = JSON.parse(txt);
+          d = L.parseUploadJson(txt);
         } catch (x) {
           setCheck({
             ok: false,
@@ -741,7 +741,61 @@
       return w + "(" + ROMAN[Math.min(i++, 9)] + ")";
     });
   }
+  // "a / b" ifadesini en dıştaki / işaretinden böl; bir tarafı baştan sona saran parantezi at
+  function unwrapParen(t) {
+    t = t.trim();
+    if (t.charAt(0) !== "(" || t.charAt(t.length - 1) !== ")") return t;
+    var d = 0;
+    for (var i = 0; i < t.length; i++) {
+      if (t.charAt(i) === "(") d++;else if (t.charAt(i) === ")" && --d === 0 && i < t.length - 1) return t; // ilk parantez sonda kapanmıyor
+    }
+    return t.slice(1, -1).trim();
+  }
+  function splitSlash(t) {
+    var d = 0;
+    for (var i = 0; i < t.length; i++) {
+      var c = t.charAt(i);
+      if (c === "(" || c === "{" || c === "[") d++;else if (c === ")" || c === "}" || c === "]") d--;else if (c === "/" && d === 0) return [unwrapParen(t.slice(0, i)), unwrapParen(t.slice(i + 1))];
+    }
+    return null;
+  }
+  function applyMath(value, a, b, kind) {
+    var before = value.slice(0, a),
+      core = value.slice(a, b).trim(),
+      ins,
+      s0,
+      s1;
+    if (kind === "frac") {
+      var parts = core ? splitSlash(core) : null;
+      var n = parts ? parts[0] : core || "pay",
+        d = parts ? parts[1] : "payda";
+      ins = "\\frac{" + n + "}{" + d + "}";
+      // seçim yoksa "pay", payda yoksa "payda" seçili gelsin ki hemen yazılsın; ikisi de varsa imleç sona
+      if (!core) {
+        s0 = before.length + 6;
+        s1 = s0 + n.length;
+      } else if (!parts) {
+        s0 = before.length + 6 + n.length + 2;
+        s1 = s0 + d.length;
+      } else {
+        s0 = s1 = before.length + ins.length;
+      }
+    } else if (kind === "sqrt") {
+      ins = "\\sqrt{" + (core || "x") + "}";
+      s0 = before.length + 6;
+      s1 = s0 + (core || "x").length;
+    } else {
+      ins = "^{" + (core || "2") + "}";
+      s0 = before.length + 2;
+      s1 = s0 + (core || "2").length;
+    }
+    return {
+      value: before + ins + value.slice(b),
+      sel: [s0, s1]
+    };
+  }
   function applyFormat(value, a, b, kind) {
+    if (kind === "frac" || kind === "sqrt" || kind === "sup") return applyMath(value, a, b, kind);
     var before = value.slice(0, a),
       sel = value.slice(a, b),
       after = value.slice(b);
@@ -827,12 +881,70 @@
       label: "Bi\xE7imi kald\u0131r",
       title: "Se\xE7ili yerdeki bi\xE7imi kald\u0131r"
     }, "\u2715 Bi\xE7imi kald\u0131r"), /*#__PURE__*/React.createElement("span", {
+      className: "w-px h-6 bg-stone-300 dark:bg-stone-600 mx-0.5",
+      "aria-hidden": "true"
+    }), /*#__PURE__*/React.createElement(B, {
+      kind: "frac",
+      label: "Kesir",
+      title: "Kesir (alt alta). \u0130pucu: '(a+b) / (c\u2212d)' yaz\u0131p se\xE7ersen kesre \xE7evirir"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "live-frac text-[10px] font-black"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "live-frac-n"
+    }, "a"), /*#__PURE__*/React.createElement("span", {
+      className: "live-frac-d"
+    }, "b")), "Kesir"), /*#__PURE__*/React.createElement(B, {
+      kind: "sqrt",
+      label: "K\xF6k",
+      title: "Karek\xF6k (\xFCst\xFC \xE7izgili)"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "live-sqrt font-black"
+    }, "\u221A", /*#__PURE__*/React.createElement("span", {
+      className: "live-sqrt-in"
+    }, "x")), "K\xF6k"), /*#__PURE__*/React.createElement(B, {
+      kind: "sup",
+      label: "\xDCs",
+      title: "\xDCs (x\xB2)"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "font-black"
+    }, "x", /*#__PURE__*/React.createElement("sup", null, "2")), "\xDCs"), /*#__PURE__*/React.createElement("span", {
       className: "text-[11px] text-stone-500"
     }, props.hint));
   }
-  // Soru metni biçimi (L.richParse): __söz__ altı çizili, __söz__(II) altında numara, **söz** kalın
+  // Soru metni biçimi (L.richParse): __söz__ altı çizili, __söz__(II) altında numara, **söz** kalın,
+  // \frac{pay}{payda} alt alta kesir, \sqrt{x} / √15 kök, x^{2} üs, a_{1} alt indis
   function Rich(props) {
     return L.richParse(props.text).map(function (x, i) {
+      if (x.f) return /*#__PURE__*/React.createElement("span", {
+        key: i,
+        className: "live-frac"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "live-frac-n"
+      }, /*#__PURE__*/React.createElement(Rich, {
+        text: x.f[0]
+      })), /*#__PURE__*/React.createElement("span", {
+        className: "live-frac-d"
+      }, /*#__PURE__*/React.createElement(Rich, {
+        text: x.f[1]
+      })));
+      if (x.r != null) return /*#__PURE__*/React.createElement("span", {
+        key: i,
+        className: "live-sqrt"
+      }, "\u221A", /*#__PURE__*/React.createElement("span", {
+        className: "live-sqrt-in"
+      }, /*#__PURE__*/React.createElement(Rich, {
+        text: x.r
+      })));
+      if (x.sp != null) return /*#__PURE__*/React.createElement("sup", {
+        key: i
+      }, /*#__PURE__*/React.createElement(Rich, {
+        text: x.sp
+      }));
+      if (x.sb != null) return /*#__PURE__*/React.createElement("sub", {
+        key: i
+      }, /*#__PURE__*/React.createElement(Rich, {
+        text: x.sb
+      }));
       if (x.b) return /*#__PURE__*/React.createElement("b", {
         key: i
       }, x.t);

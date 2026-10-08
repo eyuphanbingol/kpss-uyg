@@ -4,9 +4,14 @@
     var L = window.LiveExam;
     var C = window.LiveClient;
 
-    // Soru metni biçimi (L.richParse): __söz__ altı çizili, __söz__(II) altında numara, **söz** kalın
+    // Soru metni biçimi (L.richParse): __söz__ altı çizili, __söz__(II) altında numara, **söz** kalın,
+    // \frac{pay}{payda} alt alta kesir, \sqrt{x} / √15 kök, x^{2} üs, a_{1} alt indis
     function Rich(props) {
         return L.richParse(props.text).map(function (x, i) {
+            if (x.f) return <span key={i} className="live-frac"><span className="live-frac-n"><Rich text={x.f[0]} /></span><span className="live-frac-d"><Rich text={x.f[1]} /></span></span>;
+            if (x.r != null) return <span key={i} className="live-sqrt">√<span className="live-sqrt-in"><Rich text={x.r} /></span></span>;
+            if (x.sp != null) return <sup key={i}><Rich text={x.sp} /></sup>;
+            if (x.sb != null) return <sub key={i}><Rich text={x.sb} /></sub>;
             if (x.b) return <b key={i}>{x.t}</b>;
             if (!x.u) return <React.Fragment key={i}>{x.t}</React.Fragment>;
             if (!x.m) return <u key={i} className="live-u">{x.t}</u>;

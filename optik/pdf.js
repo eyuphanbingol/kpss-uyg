@@ -109,55 +109,64 @@
             im.src = src;
         });
     }
-    // Soru metni biçimi (js/liveExam.js richParse ile aynı kural): __söz__ altı çizili,
-    // __söz__(II) altı çizili + altında numara, **söz** kalın. ______ boşluk çizgisi düz kalır.
-    var RICH_RE = /__(?![_\s])([^\n]*?[^_\s])__(?!_)(?:\((I{1,3}|IV|VI{0,3}|IX|X|\d{1,2})\))?|\*\*(?![*\s])([^\n]*?[^*\s])\*\*(?!\*)/g;
+    // Biçimli soru metni (kural js/liveExam.js richParse'ta; optik.html onu da yükler):
+    // __altı çizili__, __numaralı__(II), **kalın**, \frac{pay}{payda}, \sqrt{x} / √15, x^{2}, a_{1}.
     function richParse(text) {
-        var s = String(text == null ? "" : text), out = [], last = 0, m;
-        RICH_RE.lastIndex = 0;
-        while ((m = RICH_RE.exec(s))) {
-            if (m.index > last && s.charAt(m.index - 1) === s.charAt(m.index)) { RICH_RE.lastIndex = m.index + 1; continue; }
-            if (m.index > last) out.push({ t: s.slice(last, m.index) });
-            if (m[1] != null) out.push(m[2] ? { t: m[1], u: true, m: m[2] } : { t: m[1], u: true });
-            else out.push({ t: m[3], b: true });
-            last = RICH_RE.lastIndex;
-        }
-        if (last < s.length) out.push({ t: s.slice(last) });
-        return out;
+        var LE = global.LiveExam;
+        return LE && LE.richParse ? LE.richParse(text) : [{ t: String(text == null ? "" : text) }];
     }
-    // Biçimli metni satırlara böl: her satır { items:[{t,x,w,u,b,seg}], marks:[{m,x0,x1}] }
+    function plain(text) { var LE = global.LiveExam; return LE && LE.richPlain ? LE.richPlain(text) : String(text); }
+    // Biçimli metni satırlara böl. Satır: { items:[…], marks:[{m,x0,x1}], up, down } (up/down: kesir için üst/alt pay, mm)
     function richWrap(ctx, text, maxW, size) {
         var lines = [], cur = null, segLast = {};
-        var segs = richParse(text);
-        function font(b) { return (b ? "bold " : "") + size + "px " + FONT; }
-        function newLine() { cur = { items: [], marks: [], x: 0, pendSp: null }; lines.push(cur); }
+        function font(b, k) { return (b ? "bold " : "") + (size * (k || 1)) + "px " + FONT; }
+        function newLine() { cur = { items: [], marks: [], x: 0, pendSp: false, up: 0, down: 0 }; lines.push(cur); }
+        function place(it) {
+            var lead = cur.items.length && cur.pendSp ? spW : 0;
+            if (cur.items.length && cur.x + lead + it.w > maxW) { newLine(); lead = 0; }
+            it.x = cur.x + lead; it.gap = lead;
+            cur.items.push(it); cur.x = it.x + it.w; cur.pendSp = false;
+            if (it.kind === "frac") { cur.up = Math.max(cur.up, size * 0.75); cur.down = Math.max(cur.down, size * 0.85); }
+            if (it.kind === "sup") cur.up = Math.max(cur.up, size * 0.15);
+        }
         newLine();
         ctx.font = font(false);
         var spW = ctx.measureText(" ").width;
-        segs.forEach(function (sg, si) {
+        richParse(text).forEach(function (sg, si) {
+            if (sg.f) {
+                ctx.font = font(false, 0.85);
+                var n = plain(sg.f[0]), d = plain(sg.f[1]);
+                place({ kind: "frac", n: n, d: d, w: Math.max(ctx.measureText(n).width, ctx.measureText(d).width) + size * 0.5 });
+                return;
+            }
+            if (sg.r != null) {
+                ctx.font = font(false);
+                var r = plain(sg.r);
+                place({ kind: "sqrt", t: r, sw: ctx.measureText("√").width, w: ctx.measureText("√").width + ctx.measureText(r).width + size * 0.1 });
+                return;
+            }
+            if (sg.sp != null || sg.sb != null) {
+                ctx.font = font(false, 0.68);
+                var tt = plain(sg.sp != null ? sg.sp : sg.sb);
+                place({ kind: sg.sp != null ? "sup" : "sub", t: tt, w: ctx.measureText(tt).width + size * 0.05 });
+                return;
+            }
             String(sg.t).split(/(\n|[ \t]+)/).forEach(function (part) {
                 if (!part) return;
                 if (part === "\n") { newLine(); return; }
-                if (/^[ \t]+$/.test(part)) { if (cur.items.length) cur.pendSp = { u: sg.u, seg: si }; return; }
+                if (/^[ \t]+$/.test(part)) { if (cur.items.length) cur.pendSp = true; return; }
                 ctx.font = font(sg.b);
                 var w = ctx.measureText(part).width;
-                var lead = cur.items.length ? (cur.pendSp ? spW : 0) : 0;
-                if (cur.items.length && cur.x + lead + w > maxW) { newLine(); lead = 0; }
                 // tek kelime sütundan genişse harf harf böl
-                if (!cur.items.length && w > maxW) {
+                if (w > maxW) {
                     var piece = "";
                     for (var i = 0; i < part.length; i++) {
-                        if (ctx.measureText(piece + part[i]).width > maxW && piece) {
-                            cur.items.push({ t: piece, x: 0, w: ctx.measureText(piece).width, u: sg.u, b: sg.b, seg: si });
-                            newLine(); piece = "";
-                        }
+                        if (ctx.measureText(piece + part[i]).width > maxW && piece) { place({ t: piece, w: ctx.measureText(piece).width, u: sg.u, b: sg.b, seg: si }); newLine(); piece = ""; }
                         piece += part[i];
                     }
                     part = piece; w = ctx.measureText(part).width;
                 }
-                var x = cur.x + lead;
-                cur.items.push({ t: part, x: x, w: w, u: sg.u, b: sg.b, seg: si, gap: lead });
-                cur.x = x + w; cur.pendSp = null;
+                place({ t: part, w: w, u: sg.u, b: sg.b, seg: si });
                 if (sg.m) segLast[si] = { line: cur, m: sg.m };
             });
         });
@@ -168,13 +177,37 @@
         return lines;
     }
     function drawRich(ctx, line, x, base, size) {
+        var thin = Math.max(0.2, size * 0.065);
         line.items.forEach(function (it, i) {
+            if (it.kind === "frac") {
+                ctx.save();
+                ctx.font = (size * 0.85) + "px " + FONT;
+                ctx.textAlign = "center";
+                var cx = x + it.x + it.w / 2, bar = base - size * 0.3;
+                ctx.fillText(it.n, cx, bar - size * 0.22);
+                ctx.fillRect(x + it.x + size * 0.1, bar, it.w - size * 0.2, thin);
+                ctx.fillText(it.d, cx, bar + size * 0.82);
+                ctx.restore();
+                return;
+            }
+            if (it.kind === "sqrt") {
+                ctx.font = size + "px " + FONT;
+                ctx.fillText("√", x + it.x, base);
+                ctx.fillText(it.t, x + it.x + it.sw + size * 0.05, base);
+                ctx.fillRect(x + it.x + it.sw * 0.85, base - size * 0.82, it.w - it.sw * 0.85, thin);
+                return;
+            }
+            if (it.kind === "sup" || it.kind === "sub") {
+                ctx.font = (size * 0.68) + "px " + FONT;
+                ctx.fillText(it.t, x + it.x, it.kind === "sup" ? base - size * 0.42 : base + size * 0.22);
+                return;
+            }
             ctx.font = (it.b ? "bold " : "") + size + "px " + FONT;
             ctx.fillText(it.t, x + it.x, base);
             if (it.u) {
                 var prev = line.items[i - 1], x0 = it.x;
                 if (prev && prev.u && prev.seg === it.seg) x0 = prev.x + prev.w; // sözler arası boşluğun da altı çizili
-                ctx.fillRect(x + x0, base + size * 0.2, it.x + it.w - x0, Math.max(0.2, size * 0.065));
+                ctx.fillRect(x + x0, base + size * 0.2, it.x + it.w - x0, thin);
             }
         });
         line.marks.forEach(function (mk) {
@@ -221,12 +254,14 @@
         ctx.restore();
     }
 
+    // Satır yüksekliği: kesirli satır üstten/alttan, numaralı satır alttan açılır
+    function lineH(line) { return BK.lead + line.up + Math.max(line.down, line.marks.length ? 1.9 : 0); }
     // Soru → çizim parçaları (satırlar ve görsel); yükseklikleri mm.
     function layoutQuestion(ctx, q, colW, img) {
         var items = [], indent = 7;
         ctx.font = BK.font + "px " + FONT;
         var stem = richWrap(ctx, q.stem, colW - indent, BK.font);
-        stem.forEach(function (line, i) { items.push({ kind: "rich", line: line, x: indent, h: BK.lead + (line.marks.length ? 1.9 : 0), no: i === 0 ? q.no : null }); });
+        stem.forEach(function (line, i) { items.push({ kind: "rich", line: line, x: indent, h: lineH(line), no: i === 0 ? q.no : null }); });
         if (img) {
             var w = Math.min(colW - indent, img.width / 6), h = w * img.height / img.width;
             if (h > 75) { h = 75; w = h * img.width / img.height; }
@@ -235,7 +270,7 @@
         (q.options || []).forEach(function (o, i) {
             var L = "ABCDE".charAt(i);
             var lines = richWrap(ctx, String(o), colW - indent - 6, BK.font);
-            lines.forEach(function (line, j) { items.push({ kind: "rich", line: line, x: indent + 6, h: BK.lead + (line.marks.length ? 1.9 : 0), letter: j === 0 ? L : null }); });
+            lines.forEach(function (line, j) { items.push({ kind: "rich", line: line, x: indent + 6, h: lineH(line), letter: j === 0 ? L : null }); });
         });
         return items;
     }
@@ -289,9 +324,10 @@
                     if (it.kind === "img") {
                         ctx.drawImage(it.img, x + it.x, y + 0.5, it.w, it.h - 2.5);
                     } else {
-                        if (it.no != null) { ctx.font = "bold " + BK.font + "px " + FONT; ctx.fillText(it.no + ".", x, y + BK.font); }
-                        if (it.letter) { ctx.font = "bold " + BK.font + "px " + FONT; ctx.fillText(it.letter + ")", x + it.x - 6, y + BK.font); }
-                        if (it.kind === "rich") drawRich(ctx, it.line, x + it.x, y + BK.font, BK.font);
+                        var up = it.kind === "rich" ? it.line.up : 0;
+                        if (it.no != null) { ctx.font = "bold " + BK.font + "px " + FONT; ctx.fillText(it.no + ".", x, y + up + BK.font); }
+                        if (it.letter) { ctx.font = "bold " + BK.font + "px " + FONT; ctx.fillText(it.letter + ")", x + it.x - 6, y + up + BK.font); }
+                        if (it.kind === "rich") drawRich(ctx, it.line, x + it.x, y + up + BK.font, BK.font);
                         else { ctx.font = BK.font + "px " + FONT; ctx.fillText(it.text, x + it.x, y + BK.font); }
                     }
                     y += it.h;

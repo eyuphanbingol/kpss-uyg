@@ -195,7 +195,7 @@
             setDocName(f.name);
             readFile(f).then(function (txt) {
                 var d;
-                try { d = JSON.parse(txt); } catch (x) { setCheck({ ok: false, errors: ["JSON okunamadı: " + x.message], warnings: [] }); return; }
+                try { d = L.parseUploadJson(txt); } catch (x) { setCheck({ ok: false, errors: ["JSON okunamadı: " + x.message], warnings: [] }); return; }
                 setDoc(d); validate(d, files);
             });
         }
@@ -377,7 +377,46 @@
     var MARK_RE = /(__(?![_\s])[^\n]*?[^_\s]__)\((?:I{1,3}|IV|VI{0,3}|IX|X)\)/g;
     // Numaralı sözleri metindeki sırasına göre I, II, III… diye yeniden numarala
     function renumber(text) { var i = 0; return String(text).replace(MARK_RE, function (all, w) { return w + "(" + ROMAN[Math.min(i++, 9)] + ")"; }); }
+    // "a / b" ifadesini en dıştaki / işaretinden böl; bir tarafı baştan sona saran parantezi at
+    function unwrapParen(t) {
+        t = t.trim();
+        if (t.charAt(0) !== "(" || t.charAt(t.length - 1) !== ")") return t;
+        var d = 0;
+        for (var i = 0; i < t.length; i++) {
+            if (t.charAt(i) === "(") d++;
+            else if (t.charAt(i) === ")" && --d === 0 && i < t.length - 1) return t; // ilk parantez sonda kapanmıyor
+        }
+        return t.slice(1, -1).trim();
+    }
+    function splitSlash(t) {
+        var d = 0;
+        for (var i = 0; i < t.length; i++) {
+            var c = t.charAt(i);
+            if (c === "(" || c === "{" || c === "[") d++;
+            else if (c === ")" || c === "}" || c === "]") d--;
+            else if (c === "/" && d === 0) return [unwrapParen(t.slice(0, i)), unwrapParen(t.slice(i + 1))];
+        }
+        return null;
+    }
+    function applyMath(value, a, b, kind) {
+        var before = value.slice(0, a), core = value.slice(a, b).trim(), ins, s0, s1;
+        if (kind === "frac") {
+            var parts = core ? splitSlash(core) : null;
+            var n = parts ? parts[0] : (core || "pay"), d = parts ? parts[1] : "payda";
+            ins = "\\frac{" + n + "}{" + d + "}";
+            // seçim yoksa "pay", payda yoksa "payda" seçili gelsin ki hemen yazılsın; ikisi de varsa imleç sona
+            if (!core) { s0 = before.length + 6; s1 = s0 + n.length; }
+            else if (!parts) { s0 = before.length + 6 + n.length + 2; s1 = s0 + d.length; }
+            else { s0 = s1 = before.length + ins.length; }
+        } else if (kind === "sqrt") {
+            ins = "\\sqrt{" + (core || "x") + "}"; s0 = before.length + 6; s1 = s0 + (core || "x").length;
+        } else {
+            ins = "^{" + (core || "2") + "}"; s0 = before.length + 2; s1 = s0 + (core || "2").length;
+        }
+        return { value: before + ins + value.slice(b), sel: [s0, s1] };
+    }
     function applyFormat(value, a, b, kind) {
+        if (kind === "frac" || kind === "sqrt" || kind === "sup") return applyMath(value, a, b, kind);
         var before = value.slice(0, a), sel = value.slice(a, b), after = value.slice(b);
         if (kind === "clear") {
             var m1 = /(__|\*\*)$/.exec(before), m2 = /^(__(?:\((?:I{1,3}|IV|VI{0,3}|IX|X|\d{1,2})\))?|\*\*)/.exec(after);
@@ -407,13 +446,22 @@
                 <B kind="mark" label="Numaralı altı çizili" title="Altı çizili + numara (Ctrl+Shift+U)"><span className="live-mark font-black"><u>A</u><span className="live-num">I</span></span>Numaralı</B>
                 <B kind="b" label="Kalın" title="Kalın (Ctrl+B)"><b className="font-black">B</b>Kalın</B>
                 <B kind="clear" label="Biçimi kaldır" title="Seçili yerdeki biçimi kaldır">✕ Biçimi kaldır</B>
+                <span className="w-px h-6 bg-stone-300 dark:bg-stone-600 mx-0.5" aria-hidden="true"></span>
+                <B kind="frac" label="Kesir" title="Kesir (alt alta). İpucu: '(a+b) / (c−d)' yazıp seçersen kesre çevirir"><span className="live-frac text-[10px] font-black"><span className="live-frac-n">a</span><span className="live-frac-d">b</span></span>Kesir</B>
+                <B kind="sqrt" label="Kök" title="Karekök (üstü çizgili)"><span className="live-sqrt font-black">√<span className="live-sqrt-in">x</span></span>Kök</B>
+                <B kind="sup" label="Üs" title="Üs (x²)"><span className="font-black">x<sup>2</sup></span>Üs</B>
                 <span className="text-[11px] text-stone-500">{props.hint}</span>
             </div>
         );
     }
-    // Soru metni biçimi (L.richParse): __söz__ altı çizili, __söz__(II) altında numara, **söz** kalın
+    // Soru metni biçimi (L.richParse): __söz__ altı çizili, __söz__(II) altında numara, **söz** kalın,
+    // \frac{pay}{payda} alt alta kesir, \sqrt{x} / √15 kök, x^{2} üs, a_{1} alt indis
     function Rich(props) {
         return L.richParse(props.text).map(function (x, i) {
+            if (x.f) return <span key={i} className="live-frac"><span className="live-frac-n"><Rich text={x.f[0]} /></span><span className="live-frac-d"><Rich text={x.f[1]} /></span></span>;
+            if (x.r != null) return <span key={i} className="live-sqrt">√<span className="live-sqrt-in"><Rich text={x.r} /></span></span>;
+            if (x.sp != null) return <sup key={i}><Rich text={x.sp} /></sup>;
+            if (x.sb != null) return <sub key={i}><Rich text={x.sb} /></sub>;
             if (x.b) return <b key={i}>{x.t}</b>;
             if (!x.u) return <React.Fragment key={i}>{x.t}</React.Fragment>;
             if (!x.m) return <u key={i} className="live-u">{x.t}</u>;
