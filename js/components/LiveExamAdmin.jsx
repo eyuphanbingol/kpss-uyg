@@ -359,9 +359,66 @@
             el.style.height = Math.max(el.scrollHeight + 2, props.min || 72) + "px";
         }, [props.value]);
         // line: tek satırlık alan gibi davranır (Enter yeni satır açmaz) ama uzun metinde büyür
-        return <textarea ref={ref} rows={1} lang="tr" aria-label={props.label} className={(props.line ? "flex-1 min-w-0 px-3 py-2" : "mt-1 w-full p-3") + " rounded-xl border leading-relaxed resize-none disabled:opacity-80 " + (props.className || "")}
-            disabled={props.disabled} value={props.value} onChange={function (e) { props.onChange(props.line ? e.target.value.replace(/\n/g, " ") : e.target.value); }}
-            onKeyDown={props.line ? function (e) { if (e.key === "Enter") e.preventDefault(); } : undefined} />;
+        return <textarea ref={function (el) { ref.current = el; if (props.tref) props.tref(el); }} rows={1} lang="tr" aria-label={props.label}
+            className={(props.line ? "flex-1 min-w-0 px-3 py-2" : "mt-1 w-full p-3") + " rounded-xl border leading-relaxed resize-none disabled:opacity-80 " + (props.className || "")}
+            disabled={props.disabled} value={props.value} onFocus={props.onFocus}
+            onChange={function (e) { props.onChange(props.line ? e.target.value.replace(/\n/g, " ") : e.target.value); }}
+            onKeyDown={function (e) {
+                if (props.line && e.key === "Enter") { e.preventDefault(); return; }
+                if (props.onFormatKey && (e.ctrlKey || e.metaKey) && !e.altKey) {
+                    var k = String(e.key).toLowerCase();
+                    if (k === "u") { e.preventDefault(); props.onFormatKey(e.shiftKey ? "mark" : "u", e.target); }
+                    else if (k === "b") { e.preventDefault(); props.onFormatKey("b", e.target); }
+                }
+            }} />;
+    }
+    // ---------- biçim araç çubuğu: seçili sözü __altı çizili__, __numaralı__(II), **kalın** yap ----------
+    var ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
+    var MARK_RE = /(__(?![_\s])[^\n]*?[^_\s]__)\((?:I{1,3}|IV|VI{0,3}|IX|X)\)/g;
+    // Numaralı sözleri metindeki sırasına göre I, II, III… diye yeniden numarala
+    function renumber(text) { var i = 0; return String(text).replace(MARK_RE, function (all, w) { return w + "(" + ROMAN[Math.min(i++, 9)] + ")"; }); }
+    function applyFormat(value, a, b, kind) {
+        var before = value.slice(0, a), sel = value.slice(a, b), after = value.slice(b);
+        if (kind === "clear") {
+            var m1 = /(__|\*\*)$/.exec(before), m2 = /^(__(?:\((?:I{1,3}|IV|VI{0,3}|IX|X|\d{1,2})\))?|\*\*)/.exec(after);
+            if (m1 && m2 && m1[1].charAt(0) === m2[1].charAt(0)) { before = before.slice(0, -m1[1].length); after = after.slice(m2[1].length); }
+            var plain = L.richParse(sel).map(function (x) { return x.t; }).join("");
+            var v0 = before + plain + after, r0 = renumber(v0), s0 = renumber(before).length;
+            return { value: r0, sel: [s0, s0 + plain.length] };
+        }
+        // seçimin kenarındaki boşluklar biçimin dışında kalsın
+        var lead = /^\s*/.exec(sel)[0], core = sel.slice(lead.length), trail = /\s*$/.exec(core)[0];
+        core = core.slice(0, core.length - trail.length);
+        if (!core) core = kind === "b" ? "kalın" : "söz";
+        var open = kind === "b" ? "**" : "__", close = kind === "b" ? "**" : "__" + (kind === "mark" ? "(I)" : "");
+        var pre = before + lead + open, v = pre + core + close + trail + after;
+        if (kind === "mark") { v = renumber(v); pre = renumber(pre); }
+        return { value: v, sel: [pre.length, pre.length + core.length] };
+    }
+    function FmtBar(props) {
+        function B(p) {
+            return <button type="button" title={p.title} aria-label={p.label} disabled={props.disabled}
+                onMouseDown={function (e) { e.preventDefault(); }} onClick={function () { props.onFormat(p.kind); }}
+                className="h-8 px-2.5 rounded-lg border border-stone-300 dark:border-stone-600 bg-white/70 dark:bg-stone-900/40 text-xs font-semibold inline-flex items-center gap-1.5 hover:border-indigo-400 disabled:opacity-40">{p.children}</button>;
+        }
+        return (
+            <div className="flex flex-wrap items-center gap-1.5" role="toolbar" aria-label="Metin biçimi">
+                <B kind="u" label="Altını çiz" title="Altını çiz (Ctrl+U)"><span className="underline underline-offset-2 font-black">A</span>Altını çiz</B>
+                <B kind="mark" label="Numaralı altı çizili" title="Altı çizili + numara (Ctrl+Shift+U)"><span className="live-mark font-black"><u>A</u><span className="live-num">I</span></span>Numaralı</B>
+                <B kind="b" label="Kalın" title="Kalın (Ctrl+B)"><b className="font-black">B</b>Kalın</B>
+                <B kind="clear" label="Biçimi kaldır" title="Seçili yerdeki biçimi kaldır">✕ Biçimi kaldır</B>
+                <span className="text-[11px] text-stone-500">{props.hint}</span>
+            </div>
+        );
+    }
+    // Soru metni biçimi (L.richParse): __söz__ altı çizili, __söz__(II) altında numara, **söz** kalın
+    function Rich(props) {
+        return L.richParse(props.text).map(function (x, i) {
+            if (x.b) return <b key={i}>{x.t}</b>;
+            if (!x.u) return <React.Fragment key={i}>{x.t}</React.Fragment>;
+            if (!x.m) return <u key={i} className="live-u">{x.t}</u>;
+            return <span key={i} className="live-mark"><u className="live-u">{x.t}</u><span className="live-num">{x.m}</span></span>;
+        });
     }
     // Öğrencinin sınav ekranında göreceği hâl (LiveExamScreen ile aynı sınıflar)
     function Preview(props) {
@@ -371,7 +428,7 @@
                 <div className="q-stem p-4 sm:p-6 rounded-3xl relative overflow-hidden">
                     <div className="q-stem-bar absolute top-0 left-0 w-1.5 h-full"></div>
                     <p className="text-xs font-bold text-stone-500 mb-2 pl-2">Soru {x.no} / 120 · {L.BOLUM[x.bolum]} · {x.ders}</p>
-                    <h3 className="text-base font-bold leading-relaxed whitespace-pre-line text-stone-900 pl-2">{x.metin || "…"}</h3>
+                    <h3 className="text-base font-bold leading-relaxed whitespace-pre-line text-stone-900 pl-2">{x.metin ? <Rich text={x.metin} /> : "…"}</h3>
                     {props.img ? <img src={props.img} alt={"Soru " + x.no + " önizleme görseli"} className="live-img mt-4" /> : null}
                 </div>
                 <div className="space-y-2 mt-3">
@@ -380,13 +437,13 @@
                         return (
                             <div key={l} className={"p-3 rounded-2xl border-2 font-semibold flex items-center gap-3 text-sm " + (ok ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30" : "bg-white dark:bg-stone-900 border-stone-200 dark:border-stone-700")}>
                                 <span className="live-letter shrink-0">{l}</span>
-                                <span className="min-w-0">{x.siklar[i] || <i className="text-rose-600">boş</i>}</span>
+                                <span className="min-w-0">{x.siklar[i] ? <Rich text={x.siklar[i]} /> : <i className="text-rose-600">boş</i>}</span>
                                 {ok ? <span className="ml-auto text-emerald-700 dark:text-emerald-300 text-xs shrink-0">✓ doğru</span> : null}
                             </div>
                         );
                     })}
                 </div>
-                {props.reveal && x.cozum ? <p className="mt-3 p-3 rounded-xl bg-amber-50 dark:bg-amber-950/30 whitespace-pre-line text-sm"><b>Çözüm:</b> {x.cozum}</p> : null}
+                {props.reveal && x.cozum ? <p className="mt-3 p-3 rounded-xl bg-amber-50 dark:bg-amber-950/30 whitespace-pre-line text-sm"><b>Çözüm:</b> <Rich text={x.cozum} /></p> : null}
             </div>
         );
     }
@@ -417,6 +474,7 @@
         const [drag, setDrag] = useState(false);
         const [navOpen, setNavOpen] = useState(false); // telefonda soru haritası
         var fileRef = React.useRef(null), paneRef = React.useRef(null);
+        var fieldRef = React.useRef(null), metinEl = React.useRef(null); // biçim araç çubuğunun uygulanacağı alan
         // soru değişince düzenleme paneli başa dönsün; ızgarada seçili kutu görünür kalsın
         useEffect(function () {
             if (paneRef.current) paneRef.current.scrollTop = 0;
@@ -529,6 +587,19 @@
         function setOption(no, i, v) {
             var s2 = byNo[no].siklar.slice(); s2[i] = v;
             patch(no, { siklar: s2 });
+        }
+        // Biçim: son odaklanan alana (soru metni, şık ya da çözüm) uygula
+        function focusField(field) { return function (e) { fieldRef.current = { el: e.target, field: field, no: cur }; }; }
+        function format(kind, el0) {
+            var f = fieldRef.current, el = el0 || (f && f.no === cur && f.el && document.body.contains(f.el) ? f.el : metinEl.current);
+            if (!el || !editable) return;
+            var field = el === metinEl.current ? "metin" : (f && f.el === el ? f.field : "metin");
+            var r = applyFormat(el.value, el.selectionStart, el.selectionEnd, kind);
+            if (r.value === el.value) return;
+            if (field === "metin") patch(cur, { metin: r.value });
+            else if (field === "cozum") patch(cur, { cozum: r.value });
+            else setOption(cur, field, r.value);
+            requestAnimationFrame(function () { try { el.focus(); el.setSelectionRange(r.sel[0], r.sel[1]); } catch (e) {} });
         }
         function setImage(no, file) {
             if (!editable || !file) return;
@@ -739,8 +810,10 @@
                                 </select>
                             </label>
                         </div>
+                        {editable ? <FmtBar onFormat={function (k) { format(k); }} hint="Sözü seç, düğmeye bas · şık ve çözümde de çalışır" /> : null}
                         <label className="block text-sm">Soru metni <span className="text-xs text-stone-500">(öncüller için yeni satır)</span>
-                            <AutoText min={110} disabled={!editable} value={x.metin} onChange={function (v) { patch(x.no, { metin: v }); }} />
+                            <AutoText min={110} disabled={!editable} value={x.metin} onChange={function (v) { patch(x.no, { metin: v }); }}
+                                tref={function (el) { metinEl.current = el; }} onFocus={focusField("metin")} onFormatKey={format} />
                         </label>
                         <fieldset className="text-sm">
                             <legend className="mb-1">Şıklar{editable ? <span className="text-xs text-stone-500"> · harfe tıkla ya da A–E'ye bas: doğru cevap</span> : null}</legend>
@@ -752,13 +825,13 @@
                                             onClick={function () { patch(x.no, { dogru: l }); }}
                                             className={"w-9 h-9 shrink-0 rounded-full border-2 font-black " + (on ? "bg-emerald-600 border-emerald-600 text-white" : "border-stone-300 dark:border-stone-600 hover:border-emerald-500")}>{l}</button>
                                         <AutoText line min={40} className={on ? "border-emerald-500" : ""} disabled={!editable} value={x.siklar[i] || ""}
-                                            onChange={function (v) { setOption(x.no, i, v); }} label={"Şık " + l} />
+                                            onChange={function (v) { setOption(x.no, i, v); }} label={"Şık " + l} onFocus={focusField(i)} onFormatKey={format} />
                                     </div>
                                 );
                             })}
                         </fieldset>
                         <label className="block text-sm">Çözüm
-                            <AutoText min={72} disabled={!editable} value={x.cozum} onChange={function (v) { patch(x.no, { cozum: v }); }} />
+                            <AutoText min={72} disabled={!editable} value={x.cozum} onChange={function (v) { patch(x.no, { cozum: v }); }} onFocus={focusField("cozum")} onFormatKey={format} />
                         </label>
                         <div className="text-sm">
                             <p className="mb-1">Görsel{x.gorsel ? <span className="text-stone-500"> · {x.gorsel}{img ? " · " + (dataUrlKb(img) || "<1") + " KB" : ""}</span> : null}</p>

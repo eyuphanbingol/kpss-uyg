@@ -109,29 +109,83 @@
             im.src = src;
         });
     }
-    function wrap(ctx, text, maxW) {
-        var out = [];
-        String(text || "").split(/\n/).forEach(function (para) {
-            var words = para.split(/\s+/).filter(Boolean), line = "";
-            if (!words.length) { out.push(""); return; }
-            words.forEach(function (w) {
-                var t = line ? line + " " + w : w;
-                if (ctx.measureText(t).width <= maxW || !line) {
-                    // tek kelime sütundan genişse harf harf böl
-                    if (!line && ctx.measureText(w).width > maxW) {
-                        var part = "";
-                        for (var i = 0; i < w.length; i++) {
-                            if (ctx.measureText(part + w[i]).width > maxW) { out.push(part); part = ""; }
-                            part += w[i];
-                        }
-                        line = part;
-                    } else line = t;
-                } else { out.push(line); line = w; }
-            });
-            out.push(line);
-        });
+    // Soru metni biçimi (js/liveExam.js richParse ile aynı kural): __söz__ altı çizili,
+    // __söz__(II) altı çizili + altında numara, **söz** kalın. ______ boşluk çizgisi düz kalır.
+    var RICH_RE = /__(?![_\s])([^\n]*?[^_\s])__(?!_)(?:\((I{1,3}|IV|VI{0,3}|IX|X|\d{1,2})\))?|\*\*(?![*\s])([^\n]*?[^*\s])\*\*(?!\*)/g;
+    function richParse(text) {
+        var s = String(text == null ? "" : text), out = [], last = 0, m;
+        RICH_RE.lastIndex = 0;
+        while ((m = RICH_RE.exec(s))) {
+            if (m.index > last && s.charAt(m.index - 1) === s.charAt(m.index)) { RICH_RE.lastIndex = m.index + 1; continue; }
+            if (m.index > last) out.push({ t: s.slice(last, m.index) });
+            if (m[1] != null) out.push(m[2] ? { t: m[1], u: true, m: m[2] } : { t: m[1], u: true });
+            else out.push({ t: m[3], b: true });
+            last = RICH_RE.lastIndex;
+        }
+        if (last < s.length) out.push({ t: s.slice(last) });
         return out;
     }
+    // Biçimli metni satırlara böl: her satır { items:[{t,x,w,u,b,seg}], marks:[{m,x0,x1}] }
+    function richWrap(ctx, text, maxW, size) {
+        var lines = [], cur = null, segLast = {};
+        var segs = richParse(text);
+        function font(b) { return (b ? "bold " : "") + size + "px " + FONT; }
+        function newLine() { cur = { items: [], marks: [], x: 0, pendSp: null }; lines.push(cur); }
+        newLine();
+        ctx.font = font(false);
+        var spW = ctx.measureText(" ").width;
+        segs.forEach(function (sg, si) {
+            String(sg.t).split(/(\n|[ \t]+)/).forEach(function (part) {
+                if (!part) return;
+                if (part === "\n") { newLine(); return; }
+                if (/^[ \t]+$/.test(part)) { if (cur.items.length) cur.pendSp = { u: sg.u, seg: si }; return; }
+                ctx.font = font(sg.b);
+                var w = ctx.measureText(part).width;
+                var lead = cur.items.length ? (cur.pendSp ? spW : 0) : 0;
+                if (cur.items.length && cur.x + lead + w > maxW) { newLine(); lead = 0; }
+                // tek kelime sütundan genişse harf harf böl
+                if (!cur.items.length && w > maxW) {
+                    var piece = "";
+                    for (var i = 0; i < part.length; i++) {
+                        if (ctx.measureText(piece + part[i]).width > maxW && piece) {
+                            cur.items.push({ t: piece, x: 0, w: ctx.measureText(piece).width, u: sg.u, b: sg.b, seg: si });
+                            newLine(); piece = "";
+                        }
+                        piece += part[i];
+                    }
+                    part = piece; w = ctx.measureText(part).width;
+                }
+                var x = cur.x + lead;
+                cur.items.push({ t: part, x: x, w: w, u: sg.u, b: sg.b, seg: si, gap: lead });
+                cur.x = x + w; cur.pendSp = null;
+                if (sg.m) segLast[si] = { line: cur, m: sg.m };
+            });
+        });
+        Object.keys(segLast).forEach(function (si) {
+            var L0 = segLast[si].line, its = L0.items.filter(function (it) { return it.seg === Number(si); });
+            L0.marks.push({ m: segLast[si].m, x0: its[0].x, x1: its[its.length - 1].x + its[its.length - 1].w });
+        });
+        return lines;
+    }
+    function drawRich(ctx, line, x, base, size) {
+        line.items.forEach(function (it, i) {
+            ctx.font = (it.b ? "bold " : "") + size + "px " + FONT;
+            ctx.fillText(it.t, x + it.x, base);
+            if (it.u) {
+                var prev = line.items[i - 1], x0 = it.x;
+                if (prev && prev.u && prev.seg === it.seg) x0 = prev.x + prev.w; // sözler arası boşluğun da altı çizili
+                ctx.fillRect(x + x0, base + size * 0.2, it.x + it.w - x0, Math.max(0.2, size * 0.065));
+            }
+        });
+        line.marks.forEach(function (mk) {
+            ctx.save();
+            ctx.font = "bold " + (size * 0.68) + "px " + FONT;
+            ctx.textAlign = "center";
+            ctx.fillText(mk.m, x + (mk.x0 + mk.x1) / 2, base + size * 0.88);
+            ctx.restore();
+        });
+    }
+
     function watermark(ctx, text) {
         ctx.save();
         ctx.fillStyle = "rgba(0,0,0,0.075)";
@@ -171,8 +225,8 @@
     function layoutQuestion(ctx, q, colW, img) {
         var items = [], indent = 7;
         ctx.font = BK.font + "px " + FONT;
-        var stem = wrap(ctx, q.stem, colW - indent);
-        stem.forEach(function (line, i) { items.push({ kind: "text", text: line, x: indent, h: BK.lead, no: i === 0 ? q.no : null }); });
+        var stem = richWrap(ctx, q.stem, colW - indent, BK.font);
+        stem.forEach(function (line, i) { items.push({ kind: "rich", line: line, x: indent, h: BK.lead + (line.marks.length ? 1.9 : 0), no: i === 0 ? q.no : null }); });
         if (img) {
             var w = Math.min(colW - indent, img.width / 6), h = w * img.height / img.width;
             if (h > 75) { h = 75; w = h * img.width / img.height; }
@@ -180,8 +234,8 @@
         }
         (q.options || []).forEach(function (o, i) {
             var L = "ABCDE".charAt(i);
-            var lines = wrap(ctx, String(o), colW - indent - 6);
-            lines.forEach(function (line, j) { items.push({ kind: "text", text: line, x: indent + 6, h: BK.lead, letter: j === 0 ? L : null }); });
+            var lines = richWrap(ctx, String(o), colW - indent - 6, BK.font);
+            lines.forEach(function (line, j) { items.push({ kind: "rich", line: line, x: indent + 6, h: BK.lead + (line.marks.length ? 1.9 : 0), letter: j === 0 ? L : null }); });
         });
         return items;
     }
@@ -237,8 +291,8 @@
                     } else {
                         if (it.no != null) { ctx.font = "bold " + BK.font + "px " + FONT; ctx.fillText(it.no + ".", x, y + BK.font); }
                         if (it.letter) { ctx.font = "bold " + BK.font + "px " + FONT; ctx.fillText(it.letter + ")", x + it.x - 6, y + BK.font); }
-                        ctx.font = BK.font + "px " + FONT;
-                        ctx.fillText(it.text, x + it.x, y + BK.font);
+                        if (it.kind === "rich") drawRich(ctx, it.line, x + it.x, y + BK.font, BK.font);
+                        else { ctx.font = BK.font + "px " + FONT; ctx.fillText(it.text, x + it.x, y + BK.font); }
                     }
                     y += it.h;
                 });

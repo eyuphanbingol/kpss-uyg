@@ -4,6 +4,16 @@
     var L = window.LiveExam;
     var C = window.LiveClient;
 
+    // Soru metni biçimi (L.richParse): __söz__ altı çizili, __söz__(II) altında numara, **söz** kalın
+    function Rich(props) {
+        return L.richParse(props.text).map(function (x, i) {
+            if (x.b) return <b key={i}>{x.t}</b>;
+            if (!x.u) return <React.Fragment key={i}>{x.t}</React.Fragment>;
+            if (!x.m) return <u key={i} className="live-u">{x.t}</u>;
+            return <span key={i} className="live-mark"><u className="live-u">{x.t}</u><span className="live-num">{x.m}</span></span>;
+        });
+    }
+
     // ============================================================
     // Canlı deneme: sınav, toplu görünüm (optik form), sonuç raporu, arşiv, gelişim
     // Sunucu kuralları supabase/patch-live-exam.sql; ortak motor js/liveExam.js
@@ -304,7 +314,7 @@
                             <div className="q-stem p-4 sm:p-7 rounded-3xl relative overflow-hidden">
                                 <div className="q-stem-bar absolute top-0 left-0 w-1.5 h-full"></div>
                                 <p className="text-xs font-bold text-stone-500 mb-2 pl-2">Soru {cur.no} / 120 · {L.BOLUM[cur.bolum]} · {cur.ders}</p>
-                                <h3 className="text-lg font-bold leading-relaxed whitespace-pre-line text-stone-900 pl-2">{cur.stem}</h3>
+                                <h3 className="text-lg font-bold leading-relaxed whitespace-pre-line text-stone-900 pl-2"><Rich text={cur.stem} /></h3>
                                 {cur.image ? <img src={cur.image} alt="Soru şekli" className="live-img mt-4" /> : null}
                             </div>
                         </div>
@@ -318,7 +328,7 @@
                                             className={"w-full text-left p-4 sm:p-5 rounded-2xl border-2 font-semibold flex items-center gap-3 option-btn " + (on ? "bg-[#0D2C4D] border-[#0D2C4D] text-white" : "bg-white dark:bg-stone-900 border-stone-200 dark:border-stone-700")}
                                             onClick={function () { pick(cur.no, on ? null : l); }}>
                                             <span className={"live-letter " + (on ? "is-on" : "")}>{l}</span>
-                                            <span className="min-w-0">{opt}</span>
+                                            <span className="min-w-0"><Rich text={opt} /></span>
                                         </button>
                                     );
                                 })}
@@ -652,16 +662,16 @@
                                     </button>
                                     {open ? (
                                         <div className="px-4 pb-4 text-sm">
-                                            <p className="whitespace-pre-line font-semibold leading-relaxed">{q.stem}</p>
+                                            <p className="whitespace-pre-line font-semibold leading-relaxed"><Rich text={q.stem} /></p>
                                             {images[q.no] ? <img src={images[q.no]} alt="Soru şekli" className="live-img mt-3" /> : null}
                                             <ul className="mt-3 space-y-1">
                                                 {(q.options || []).map(function (o, i) {
                                                     var l = L.LETTERS[i];
                                                     var cls = l === q.answer ? "bg-emerald-50 dark:bg-emerald-950/40 border-emerald-300" : (l === q.mine ? "bg-rose-50 dark:bg-rose-950/40 border-rose-300" : "border-stone-200 dark:border-stone-700");
-                                                    return <li key={l} className={"rounded-xl border px-3 py-2 " + cls}><b>{l})</b> {o}{l === q.answer ? " ✓" : ""}{l === q.mine && l !== q.answer ? " ✗ senin cevabın" : ""}</li>;
+                                                    return <li key={l} className={"rounded-xl border px-3 py-2 " + cls}><b>{l})</b> <Rich text={o} />{l === q.answer ? " ✓" : ""}{l === q.mine && l !== q.answer ? " ✗ senin cevabın" : ""}</li>;
                                                 })}
                                             </ul>
-                                            {q.explanation ? <p className="mt-3 p-3 rounded-xl bg-amber-50 dark:bg-amber-950/30 whitespace-pre-line"><b>Çözüm:</b> {q.explanation}</p> : null}
+                                            {q.explanation ? <p className="mt-3 p-3 rounded-xl bg-amber-50 dark:bg-amber-950/30 whitespace-pre-line"><b>Çözüm:</b> <Rich text={q.explanation} /></p> : null}
                                             <p className="mt-2 text-xs text-stone-500">
                                                 {q.ms ? "Bu soruda " + Math.max(1, Math.round(q.ms / 1000)) + " sn harcadın" + (q.stat && q.stat.avg_ms ? " (ortalama " + Math.round(q.stat.avg_ms / 1000) + " sn)" : "") + ". " : ""}
                                                 {tot ? "Katılanlarda doğru oranı %" + pct(100 * q.stat.correct / tot) + "." : ""}

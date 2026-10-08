@@ -12,6 +12,21 @@ import { go } from "../nav";
 import { Card, PageHeader, ScrollScreen, Tap } from "../ui";
 import { LiveExamCard, liveKonuHasContent, s as cs } from "../components/LiveExamCard";
 
+// Soru metni biçimi (L.richParse): __söz__ altı çizili, __söz__(II) numaralı, **söz** kalın.
+// React Native'de numara sözün altına konamadığı için hemen yanında küçük ve kalın gösterilir.
+function rich(text) {
+    return L.richParse(text).map(function (x, i) {
+        if (x.b) return <Text key={i} style={{ fontWeight: "800" }}>{x.t}</Text>;
+        if (!x.u) return x.t;
+        return (
+            <Text key={i}>
+                <Text style={{ textDecorationLine: "underline" }}>{x.t}</Text>
+                {x.m ? <Text style={{ fontSize: 11, fontWeight: "900" }}>{"\u2009(" + x.m + ")"}</Text> : null}
+            </Text>
+        );
+    });
+}
+
 // Canlı deneme ekranları (mobil). Web karşılığı js/components/LiveExamScreen.jsx.
 
 function Chip({ label, onPress, primary, dark, disabled, selected }) {
@@ -276,7 +291,7 @@ export function LiveExamScreen({ navigation, route }) {
                 <View style={{ marginTop: 10 }}>
                     <Card dark={dark}>
                         <Text style={cs.muted}>Soru {cur.no} / 120 · {L.BOLUM[cur.bolum]} · {cur.ders}</Text>
-                        <Text style={[st.stem, dark && cs.light]}>{cur.stem}</Text>
+                        <Text style={[st.stem, dark && cs.light]}>{rich(cur.stem)}</Text>
                         {cur.image ? <Image source={{ uri: cur.image }} style={st.img} resizeMode="contain" accessibilityLabel="Soru şekli" /> : null}
                     </Card>
                     {(cur.options || []).map(function (o, i) {
@@ -286,7 +301,7 @@ export function LiveExamScreen({ navigation, route }) {
                             <Tap key={l} onPress={function () { pick(cur.no, on ? null : l); }} accessibilityRole="radio" accessibilityState={{ checked: on }}
                                 style={[st.opt, dark && st.optDark, on && st.optOn]}>
                                 <View style={[st.letter, on && st.letterOn]}><Text style={[st.letterTxt, on && { color: "#0D2C4D" }]}>{l}</Text></View>
-                                <Text style={[st.optTxt, (dark || on) && cs.light]}>{o}</Text>
+                                <Text style={[st.optTxt, (dark || on) && cs.light]}>{rich(o)}</Text>
                             </Tap>
                         );
                     })}
@@ -509,13 +524,13 @@ export function LiveResultScreen({ navigation, route }) {
                             </Tap>
                             {open ? (
                                 <View style={{ marginTop: 8 }}>
-                                    <Text style={[st.stem, dark && cs.light]}>{q.stem}</Text>
+                                    <Text style={[st.stem, dark && cs.light]}>{rich(q.stem)}</Text>
                                     {images[q.no] ? <Image source={{ uri: images[q.no] }} style={st.img} resizeMode="contain" /> : null}
                                     {(q.options || []).map(function (o, i) {
                                         var l = L.LETTERS[i];
-                                        return <Text key={l} style={[st.revOpt, l === q.answer && st.revOk, l === q.mine && l !== q.answer && st.revBad]}>{l}) {o}{l === q.answer ? " ✓" : ""}{l === q.mine && l !== q.answer ? " ✗ senin cevabın" : ""}</Text>;
+                                        return <Text key={l} style={[st.revOpt, l === q.answer && st.revOk, l === q.mine && l !== q.answer && st.revBad]}>{l}) {rich(o)}{l === q.answer ? " ✓" : ""}{l === q.mine && l !== q.answer ? " ✗ senin cevabın" : ""}</Text>;
                                     })}
-                                    {q.explanation ? <Text style={st.expl}>Çözüm: {q.explanation}</Text> : null}
+                                    {q.explanation ? <Text style={st.expl}>Çözüm: {rich(q.explanation)}</Text> : null}
                                     <Text style={[cs.muted, { marginTop: 6 }]}>
                                         {q.ms ? "Bu soruda " + Math.max(1, Math.round(q.ms / 1000)) + " sn harcadın. " : ""}{tot ? "Katılanlarda doğru oranı %" + pct(100 * q.stat.correct / tot) + "." : ""}
                                     </Text>

@@ -10,6 +10,10 @@ Bu dosya `node scripts/make-live-exam-prompt.js` ile üretilir; konu adları dat
 4. Yönetici paneli → 🕒 Canlı Deneme → denemeyi aç → "Soru dosyası" alanına JSON'u, "Görseller" alanına tüm görselleri **birlikte** seç.
    Hata ya da eksik görsel varsa panel tek tek gösterir; "✓ Geçerli" görünce "Soruları ve kitapçığı yükle".
 
+## Altı çizili ve numaralı sözler
+Soru metninde `__söz__` altı çizili, `__söz__(II)` altı çizili ve altında numara, `**söz**` kalın görünür (sınav ekranı, mobil, PDF kitapçık).
+Yükledikten sonra da yönetici panelindeki soru editöründe sözü seçip **Altını çiz / Numaralı / Kalın** düğmeleriyle (Ctrl+U, Ctrl+Shift+U, Ctrl+B) ekleyebilirsin.
+
 ## Prompt
 
 ````text
@@ -51,6 +55,15 @@ kurallara HARFİYEN uyan tek bir JSON dosyasına dönüştür. Çıktı yalnızc
   üzerinde yazılı, x ile gösterilen açı ABC açısı"). Grafik ve tablolarda tüm sayıları ve eksen adlarını yaz.
 - Metin şekle "Şekilde…", "Yukarıdaki grafiğe göre…" diye atıf yapabilir; şıklar yine metin olmalı.
 - Basit tablolar görsel yerine metne de yazılabilir (satırları "\n" ile ayır).
+
+## Altı çizili, numaralı ve kalın sözler (metin, siklar ve cozum alanlarında)
+- Altı çizili söz: __söz__  (iki alt çizgi arasında; ör. "bu __sözcük__ mecaz anlamdadır")
+- Altı çizili ve altında numara olan söz (ÖSYM'deki I, II, III…): __söz__(I)  — numara kapanan alt çizgiye BİTİŞİK, parantez içinde
+  ör. "Alacahöyük __Çorumʼun__(I) Alaca ilçesinin kuzeybatısında, __bugün__(II) Horamözü denen köyün yerinde…"
+  Şıklar o zaman yalnızca numaradır: ["I", "II", "III", "IV", "V"]. Numaralar metindeki sırayla I'den başlasın.
+- Kalın söz: **söz**  (ör. "Aşağıdakilerden hangisi **değildir**?" sorularında olumsuzluğu vurgulamak için)
+- Boşluk doldurma çizgisi için "......" ya da "______" kullanabilirsin; bunlar biçim sayılmaz.
+- Bu işaretleri başka amaçla kullanma ve her açılan işareti aynı satırda kapat.
 
 ## Konu adları (ders → kullanabileceğin konu değerleri; başka değer KULLANMA)
 Not: Bazı adlarda yazım hatası ya da sonda boşluk var (ör. "20.YY Başlarında Osmanlı Devleti "); onları da AYNEN kopyala.
@@ -235,5 +248,6 @@ Türkçe'de sözel mantık ve paragrafta yapı/anlatım teknikleri soruları "Pa
 3. Her "konu", o dersin listesinde birebir var.
 4. Her soruda 5 şık ve A–E doğru cevap var.
 5. "gorsel" yalnızca görselli sorularda var, adı "soru-<no>.png" biçiminde ve yanında "gorsel_tarifi" var.
-6. Çıktı yalnızca JSON; başında ya da sonunda tek bir kelime bile yok.
+6. Altı çizili / numaralı / kalın sözler __söz__, __söz__(I), **söz** biçiminde ve her işaret kapanmış.
+7. Çıktı yalnızca JSON; başında ya da sonunda tek bir kelime bile yok.
 ````

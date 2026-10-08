@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:114147:10pxbh6*/
+/*jsx:babel-7.29.9-react-classic:119900:1w4igbe*/
 (function () {
   const {
     useState,
@@ -699,19 +699,158 @@
     }, [props.value]);
     // line: tek satırlık alan gibi davranır (Enter yeni satır açmaz) ama uzun metinde büyür
     return /*#__PURE__*/React.createElement("textarea", {
-      ref: ref,
+      ref: function (el) {
+        ref.current = el;
+        if (props.tref) props.tref(el);
+      },
       rows: 1,
       lang: "tr",
       "aria-label": props.label,
       className: (props.line ? "flex-1 min-w-0 px-3 py-2" : "mt-1 w-full p-3") + " rounded-xl border leading-relaxed resize-none disabled:opacity-80 " + (props.className || ""),
       disabled: props.disabled,
       value: props.value,
+      onFocus: props.onFocus,
       onChange: function (e) {
         props.onChange(props.line ? e.target.value.replace(/\n/g, " ") : e.target.value);
       },
-      onKeyDown: props.line ? function (e) {
-        if (e.key === "Enter") e.preventDefault();
-      } : undefined
+      onKeyDown: function (e) {
+        if (props.line && e.key === "Enter") {
+          e.preventDefault();
+          return;
+        }
+        if (props.onFormatKey && (e.ctrlKey || e.metaKey) && !e.altKey) {
+          var k = String(e.key).toLowerCase();
+          if (k === "u") {
+            e.preventDefault();
+            props.onFormatKey(e.shiftKey ? "mark" : "u", e.target);
+          } else if (k === "b") {
+            e.preventDefault();
+            props.onFormatKey("b", e.target);
+          }
+        }
+      }
+    });
+  }
+  // ---------- biçim araç çubuğu: seçili sözü __altı çizili__, __numaralı__(II), **kalın** yap ----------
+  var ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
+  var MARK_RE = /(__(?![_\s])[^\n]*?[^_\s]__)\((?:I{1,3}|IV|VI{0,3}|IX|X)\)/g;
+  // Numaralı sözleri metindeki sırasına göre I, II, III… diye yeniden numarala
+  function renumber(text) {
+    var i = 0;
+    return String(text).replace(MARK_RE, function (all, w) {
+      return w + "(" + ROMAN[Math.min(i++, 9)] + ")";
+    });
+  }
+  function applyFormat(value, a, b, kind) {
+    var before = value.slice(0, a),
+      sel = value.slice(a, b),
+      after = value.slice(b);
+    if (kind === "clear") {
+      var m1 = /(__|\*\*)$/.exec(before),
+        m2 = /^(__(?:\((?:I{1,3}|IV|VI{0,3}|IX|X|\d{1,2})\))?|\*\*)/.exec(after);
+      if (m1 && m2 && m1[1].charAt(0) === m2[1].charAt(0)) {
+        before = before.slice(0, -m1[1].length);
+        after = after.slice(m2[1].length);
+      }
+      var plain = L.richParse(sel).map(function (x) {
+        return x.t;
+      }).join("");
+      var v0 = before + plain + after,
+        r0 = renumber(v0),
+        s0 = renumber(before).length;
+      return {
+        value: r0,
+        sel: [s0, s0 + plain.length]
+      };
+    }
+    // seçimin kenarındaki boşluklar biçimin dışında kalsın
+    var lead = /^\s*/.exec(sel)[0],
+      core = sel.slice(lead.length),
+      trail = /\s*$/.exec(core)[0];
+    core = core.slice(0, core.length - trail.length);
+    if (!core) core = kind === "b" ? "kalın" : "söz";
+    var open = kind === "b" ? "**" : "__",
+      close = kind === "b" ? "**" : "__" + (kind === "mark" ? "(I)" : "");
+    var pre = before + lead + open,
+      v = pre + core + close + trail + after;
+    if (kind === "mark") {
+      v = renumber(v);
+      pre = renumber(pre);
+    }
+    return {
+      value: v,
+      sel: [pre.length, pre.length + core.length]
+    };
+  }
+  function FmtBar(props) {
+    function B(p) {
+      return /*#__PURE__*/React.createElement("button", {
+        type: "button",
+        title: p.title,
+        "aria-label": p.label,
+        disabled: props.disabled,
+        onMouseDown: function (e) {
+          e.preventDefault();
+        },
+        onClick: function () {
+          props.onFormat(p.kind);
+        },
+        className: "h-8 px-2.5 rounded-lg border border-stone-300 dark:border-stone-600 bg-white/70 dark:bg-stone-900/40 text-xs font-semibold inline-flex items-center gap-1.5 hover:border-indigo-400 disabled:opacity-40"
+      }, p.children);
+    }
+    return /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-wrap items-center gap-1.5",
+      role: "toolbar",
+      "aria-label": "Metin bi\xE7imi"
+    }, /*#__PURE__*/React.createElement(B, {
+      kind: "u",
+      label: "Alt\u0131n\u0131 \xE7iz",
+      title: "Alt\u0131n\u0131 \xE7iz (Ctrl+U)"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "underline underline-offset-2 font-black"
+    }, "A"), "Alt\u0131n\u0131 \xE7iz"), /*#__PURE__*/React.createElement(B, {
+      kind: "mark",
+      label: "Numaral\u0131 alt\u0131 \xE7izili",
+      title: "Alt\u0131 \xE7izili + numara (Ctrl+Shift+U)"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "live-mark font-black"
+    }, /*#__PURE__*/React.createElement("u", null, "A"), /*#__PURE__*/React.createElement("span", {
+      className: "live-num"
+    }, "I")), "Numaral\u0131"), /*#__PURE__*/React.createElement(B, {
+      kind: "b",
+      label: "Kal\u0131n",
+      title: "Kal\u0131n (Ctrl+B)"
+    }, /*#__PURE__*/React.createElement("b", {
+      className: "font-black"
+    }, "B"), "Kal\u0131n"), /*#__PURE__*/React.createElement(B, {
+      kind: "clear",
+      label: "Bi\xE7imi kald\u0131r",
+      title: "Se\xE7ili yerdeki bi\xE7imi kald\u0131r"
+    }, "\u2715 Bi\xE7imi kald\u0131r"), /*#__PURE__*/React.createElement("span", {
+      className: "text-[11px] text-stone-500"
+    }, props.hint));
+  }
+  // Soru metni biçimi (L.richParse): __söz__ altı çizili, __söz__(II) altında numara, **söz** kalın
+  function Rich(props) {
+    return L.richParse(props.text).map(function (x, i) {
+      if (x.b) return /*#__PURE__*/React.createElement("b", {
+        key: i
+      }, x.t);
+      if (!x.u) return /*#__PURE__*/React.createElement(React.Fragment, {
+        key: i
+      }, x.t);
+      if (!x.m) return /*#__PURE__*/React.createElement("u", {
+        key: i,
+        className: "live-u"
+      }, x.t);
+      return /*#__PURE__*/React.createElement("span", {
+        key: i,
+        className: "live-mark"
+      }, /*#__PURE__*/React.createElement("u", {
+        className: "live-u"
+      }, x.t), /*#__PURE__*/React.createElement("span", {
+        className: "live-num"
+      }, x.m));
     });
   }
   // Öğrencinin sınav ekranında göreceği hâl (LiveExamScreen ile aynı sınıflar)
@@ -725,7 +864,9 @@
       className: "text-xs font-bold text-stone-500 mb-2 pl-2"
     }, "Soru ", x.no, " / 120 \xB7 ", L.BOLUM[x.bolum], " \xB7 ", x.ders), /*#__PURE__*/React.createElement("h3", {
       className: "text-base font-bold leading-relaxed whitespace-pre-line text-stone-900 pl-2"
-    }, x.metin || "…"), props.img ? /*#__PURE__*/React.createElement("img", {
+    }, x.metin ? /*#__PURE__*/React.createElement(Rich, {
+      text: x.metin
+    }) : "…"), props.img ? /*#__PURE__*/React.createElement("img", {
       src: props.img,
       alt: "Soru " + x.no + " önizleme görseli",
       className: "live-img mt-4"
@@ -740,14 +881,18 @@
         className: "live-letter shrink-0"
       }, l), /*#__PURE__*/React.createElement("span", {
         className: "min-w-0"
-      }, x.siklar[i] || /*#__PURE__*/React.createElement("i", {
+      }, x.siklar[i] ? /*#__PURE__*/React.createElement(Rich, {
+        text: x.siklar[i]
+      }) : /*#__PURE__*/React.createElement("i", {
         className: "text-rose-600"
       }, "bo\u015F")), ok ? /*#__PURE__*/React.createElement("span", {
         className: "ml-auto text-emerald-700 dark:text-emerald-300 text-xs shrink-0"
       }, "\u2713 do\u011Fru") : null);
     })), props.reveal && x.cozum ? /*#__PURE__*/React.createElement("p", {
       className: "mt-3 p-3 rounded-xl bg-amber-50 dark:bg-amber-950/30 whitespace-pre-line text-sm"
-    }, /*#__PURE__*/React.createElement("b", null, "\xC7\xF6z\xFCm:"), " ", x.cozum) : null);
+    }, /*#__PURE__*/React.createElement("b", null, "\xC7\xF6z\xFCm:"), " ", /*#__PURE__*/React.createElement(Rich, {
+      text: x.cozum
+    })) : null);
   }
   function Chip(props) {
     return /*#__PURE__*/React.createElement("button", {
@@ -781,6 +926,8 @@
     const [navOpen, setNavOpen] = useState(false); // telefonda soru haritası
     var fileRef = React.useRef(null),
       paneRef = React.useRef(null);
+    var fieldRef = React.useRef(null),
+      metinEl = React.useRef(null); // biçim araç çubuğunun uygulanacağı alan
     // soru değişince düzenleme paneli başa dönsün; ızgarada seçili kutu görünür kalsın
     useEffect(function () {
       if (paneRef.current) paneRef.current.scrollTop = 0;
@@ -997,6 +1144,35 @@
       s2[i] = v;
       patch(no, {
         siklar: s2
+      });
+    }
+    // Biçim: son odaklanan alana (soru metni, şık ya da çözüm) uygula
+    function focusField(field) {
+      return function (e) {
+        fieldRef.current = {
+          el: e.target,
+          field: field,
+          no: cur
+        };
+      };
+    }
+    function format(kind, el0) {
+      var f = fieldRef.current,
+        el = el0 || (f && f.no === cur && f.el && document.body.contains(f.el) ? f.el : metinEl.current);
+      if (!el || !editable) return;
+      var field = el === metinEl.current ? "metin" : f && f.el === el ? f.field : "metin";
+      var r = applyFormat(el.value, el.selectionStart, el.selectionEnd, kind);
+      if (r.value === el.value) return;
+      if (field === "metin") patch(cur, {
+        metin: r.value
+      });else if (field === "cozum") patch(cur, {
+        cozum: r.value
+      });else setOption(cur, field, r.value);
+      requestAnimationFrame(function () {
+        try {
+          el.focus();
+          el.setSelectionRange(r.sel[0], r.sel[1]);
+        } catch (e) {}
       });
     }
     function setImage(no, file) {
@@ -1424,7 +1600,12 @@
         key: k,
         value: k
       }, kLabel(k));
-    })))), /*#__PURE__*/React.createElement("label", {
+    })))), editable ? /*#__PURE__*/React.createElement(FmtBar, {
+      onFormat: function (k) {
+        format(k);
+      },
+      hint: "S\xF6z\xFC se\xE7, d\xFC\u011Fmeye bas \xB7 \u015F\u0131k ve \xE7\xF6z\xFCmde de \xE7al\u0131\u015F\u0131r"
+    }) : null, /*#__PURE__*/React.createElement("label", {
       className: "block text-sm"
     }, "Soru metni ", /*#__PURE__*/React.createElement("span", {
       className: "text-xs text-stone-500"
@@ -1436,7 +1617,12 @@
         patch(x.no, {
           metin: v
         });
-      }
+      },
+      tref: function (el) {
+        metinEl.current = el;
+      },
+      onFocus: focusField("metin"),
+      onFormatKey: format
     })), /*#__PURE__*/React.createElement("fieldset", {
       className: "text-sm"
     }, /*#__PURE__*/React.createElement("legend", {
@@ -1469,7 +1655,9 @@
         onChange: function (v) {
           setOption(x.no, i, v);
         },
-        label: "Şık " + l
+        label: "Şık " + l,
+        onFocus: focusField(i),
+        onFormatKey: format
       }));
     })), /*#__PURE__*/React.createElement("label", {
       className: "block text-sm"
@@ -1481,7 +1669,9 @@
         patch(x.no, {
           cozum: v
         });
-      }
+      },
+      onFocus: focusField("cozum"),
+      onFormatKey: format
     })), /*#__PURE__*/React.createElement("div", {
       className: "text-sm"
     }, /*#__PURE__*/React.createElement("p", {

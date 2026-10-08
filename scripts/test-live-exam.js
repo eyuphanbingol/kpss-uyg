@@ -159,5 +159,13 @@ Promise.resolve().then(function () {
     var p = L.progress(hist);
     ok(p.streak === 2 && p.points[1].net === 70 && p.improved[0].konu === "A", "gelişim ve seri");
     ok(L.fmtNet(97.5) === "97,5" && L.fmtNet(3.25) === "3,25" && L.fmtNet(70) === "70", "net biçimi");
+    // soru metni biçimi (altı çizili, numaralı, kalın)
+    var rp = L.richParse("Alaca __Çorumʼun__(I) ilçesi, __bugün__(II) **köy**; boşluk ______ kalır");
+    ok(rp.length === 7 && rp[1].u && rp[1].m === "I" && rp[3].m === "II" && rp[5].b && rp[6].t.indexOf("______") >= 0, "biçim: altı çizili + numara + kalın, boşluk çizgisi korunur");
+    ok(L.richPlain("a __b__(IV) **c**") === "a b (IV) c", "biçim: düz metin");
+    ok(L.richIssues("x ______ y").length === 0 && L.richIssues("a __b c").length === 1 && L.richIssues("3 ** 2").length === 0, "biçim: kapanmamış işaret uyarısı");
+    var bad3 = JSON.parse(JSON.stringify(require("../docs/canli-deneme-ornek.json")));
+    bad3.sorular[0].metin = "Kapanmamış __altı çizili";
+    ok(L.validateUpload(bad3, cat, {}, null).warnings.some(function (w) { return /Soru 1: soru metninde kapanmamış __/.test(w); }), "doğrulayıcı: kapanmamış biçim uyarısı");
     console.log(n + " test geçti.");
 }).catch(function (e) { console.error("BAŞARISIZ:", e.message); process.exit(1); });

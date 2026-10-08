@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:75810:13ix9wr*/
+/*jsx:babel-7.29.9-react-classic:76421:cd3orf*/
 (function () {
   const {
     useState,
@@ -10,6 +10,30 @@
   var BackBtn = window.KpssBackBtn;
   var L = window.LiveExam;
   var C = window.LiveClient;
+
+  // Soru metni biçimi (L.richParse): __söz__ altı çizili, __söz__(II) altında numara, **söz** kalın
+  function Rich(props) {
+    return L.richParse(props.text).map(function (x, i) {
+      if (x.b) return /*#__PURE__*/React.createElement("b", {
+        key: i
+      }, x.t);
+      if (!x.u) return /*#__PURE__*/React.createElement(React.Fragment, {
+        key: i
+      }, x.t);
+      if (!x.m) return /*#__PURE__*/React.createElement("u", {
+        key: i,
+        className: "live-u"
+      }, x.t);
+      return /*#__PURE__*/React.createElement("span", {
+        key: i,
+        className: "live-mark"
+      }, /*#__PURE__*/React.createElement("u", {
+        className: "live-u"
+      }, x.t), /*#__PURE__*/React.createElement("span", {
+        className: "live-num"
+      }, x.m));
+    });
+  }
 
   // ============================================================
   // Canlı deneme: sınav, toplu görünüm (optik form), sonuç raporu, arşiv, gelişim
@@ -417,7 +441,9 @@
       className: "text-xs font-bold text-stone-500 mb-2 pl-2"
     }, "Soru ", cur.no, " / 120 \xB7 ", L.BOLUM[cur.bolum], " \xB7 ", cur.ders), /*#__PURE__*/React.createElement("h3", {
       className: "text-lg font-bold leading-relaxed whitespace-pre-line text-stone-900 pl-2"
-    }, cur.stem), cur.image ? /*#__PURE__*/React.createElement("img", {
+    }, /*#__PURE__*/React.createElement(Rich, {
+      text: cur.stem
+    })), cur.image ? /*#__PURE__*/React.createElement("img", {
       src: cur.image,
       alt: "Soru \u015Fekli",
       className: "live-img mt-4"
@@ -443,7 +469,9 @@
         className: "live-letter " + (on ? "is-on" : "")
       }, l), /*#__PURE__*/React.createElement("span", {
         className: "min-w-0"
-      }, opt));
+      }, /*#__PURE__*/React.createElement(Rich, {
+        text: opt
+      })));
     })), /*#__PURE__*/React.createElement("p", {
       className: "kbd-hint mt-3",
       "aria-hidden": "true"
@@ -952,7 +980,9 @@
         className: "px-4 pb-4 text-sm"
       }, /*#__PURE__*/React.createElement("p", {
         className: "whitespace-pre-line font-semibold leading-relaxed"
-      }, q.stem), images[q.no] ? /*#__PURE__*/React.createElement("img", {
+      }, /*#__PURE__*/React.createElement(Rich, {
+        text: q.stem
+      })), images[q.no] ? /*#__PURE__*/React.createElement("img", {
         src: images[q.no],
         alt: "Soru \u015Fekli",
         className: "live-img mt-3"
@@ -964,10 +994,14 @@
         return /*#__PURE__*/React.createElement("li", {
           key: l,
           className: "rounded-xl border px-3 py-2 " + cls
-        }, /*#__PURE__*/React.createElement("b", null, l, ")"), " ", o, l === q.answer ? " ✓" : "", l === q.mine && l !== q.answer ? " ✗ senin cevabın" : "");
+        }, /*#__PURE__*/React.createElement("b", null, l, ")"), " ", /*#__PURE__*/React.createElement(Rich, {
+          text: o
+        }), l === q.answer ? " ✓" : "", l === q.mine && l !== q.answer ? " ✗ senin cevabın" : "");
       })), q.explanation ? /*#__PURE__*/React.createElement("p", {
         className: "mt-3 p-3 rounded-xl bg-amber-50 dark:bg-amber-950/30 whitespace-pre-line"
-      }, /*#__PURE__*/React.createElement("b", null, "\xC7\xF6z\xFCm:"), " ", q.explanation) : null, /*#__PURE__*/React.createElement("p", {
+      }, /*#__PURE__*/React.createElement("b", null, "\xC7\xF6z\xFCm:"), " ", /*#__PURE__*/React.createElement(Rich, {
+        text: q.explanation
+      })) : null, /*#__PURE__*/React.createElement("p", {
         className: "mt-2 text-xs text-stone-500"
       }, q.ms ? "Bu soruda " + Math.max(1, Math.round(q.ms / 1000)) + " sn harcadın" + (q.stat && q.stat.avg_ms ? " (ortalama " + Math.round(q.stat.avg_ms / 1000) + " sn)" : "") + ". " : "", tot ? "Katılanlarda doğru oranı %" + pct(100 * q.stat.correct / tot) + "." : ""), /*#__PURE__*/React.createElement("div", {
         className: "mt-2"

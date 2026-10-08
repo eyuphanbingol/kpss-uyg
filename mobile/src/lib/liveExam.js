@@ -470,6 +470,37 @@
      * images: {dosyaAdı: true|dataUrl} yüklenen görseller
      * Dönen: {ok, errors[], warnings[], exam, questions[]}
      */
+    // ---------- soru metni biçimi ----------
+    // __söz__ altı çizili · __söz__(II) altı çizili + altında numara (ÖSYM'deki gibi) · **söz** kalın.
+    // Boşluk için kullanılan ______ (yalnız alt çizgi) biçim sayılmaz.
+    var RICH_RE = /__(?![_\s])([^\n]*?[^_\s])__(?!_)(?:\((I{1,3}|IV|VI{0,3}|IX|X|\d{1,2})\))?|\*\*(?![*\s])([^\n]*?[^*\s])\*\*(?!\*)/g;
+    function richParse(text) {
+        var s = String(text == null ? "" : text), out = [], last = 0, m;
+        RICH_RE.lastIndex = 0;
+        while ((m = RICH_RE.exec(s))) {
+            // ______ gibi uzun çizginin ortasından başlayan eşleşme biçim değildir
+            if (m.index > last && s.charAt(m.index - 1) === s.charAt(m.index)) { RICH_RE.lastIndex = m.index + 1; continue; }
+            if (m.index > last) out.push({ t: s.slice(last, m.index) });
+            if (m[1] != null) out.push(m[2] ? { t: m[1], u: true, m: m[2] } : { t: m[1], u: true });
+            else out.push({ t: m[3], b: true });
+            last = RICH_RE.lastIndex;
+        }
+        if (last < s.length) out.push({ t: s.slice(last) });
+        return out;
+    }
+    // Biçimsiz düz metin (arama, ekran okuyucu, CSV): numaralı sözler "söz (II)" olur
+    function richPlain(text) {
+        return richParse(text).map(function (x) { return x.t + (x.m ? " (" + x.m + ")" : ""); }).join("");
+    }
+    // Kapanmamış işaretler (yazım hatası olabilir)
+    function richIssues(text) {
+        var rest = richParse(text).filter(function (x) { return !x.u && !x.b; }).map(function (x) { return x.t; }).join("\n");
+        var out = [];
+        if (/(^|[^_])__(?=[^_\s])|[^_\s]__(?!_)/.test(rest)) out.push("kapanmamış __ (altı çizili)");
+        if (/\*\*(?=[^\s*])|[^\s*]\*\*/.test(rest)) out.push("kapanmamış ** (kalın)");
+        return out;
+    }
+
     function validateUpload(doc, catalog, labels, images) {
         var errors = [], warnings = [];
         var out = [];
@@ -516,6 +547,9 @@
             var dogru = String(q.dogru || "").trim().toUpperCase();
             if (LETTERS.indexOf(dogru) < 0) errors.push(tag + ": doğru cevap A–E olmalı.");
             if (!q.cozum || !String(q.cozum).trim()) warnings.push(tag + ": çözüm/açıklama boş.");
+            [["soru metninde", q.metin]].concat((Array.isArray(q.siklar) ? q.siklar : []).map(function (x, i) { return [LETTERS[i] + " şıkkında", x]; }), [["çözümde", q.cozum]]).forEach(function (f) {
+                richIssues(f[1]).forEach(function (iss) { warnings.push(tag + ": " + f[0] + " " + iss + " işareti var."); });
+            });
             if (q.gorsel && images && !images[q.gorsel]) errors.push(tag + ": görsel '" + q.gorsel + "' yüklenmedi.");
             out.push({
                 no: no, bolum: bolum, ders: ders, konu: q.konu, stem: String(q.metin || ""),
@@ -812,6 +846,9 @@
         easyMisses: easyMisses,
         timeRows: timeRows,
         fmtSec: fmtSec,
+        richParse: richParse,
+        richPlain: richPlain,
+        richIssues: richIssues,
         trUpper: trUpper
     };
 
