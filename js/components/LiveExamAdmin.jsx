@@ -41,7 +41,7 @@
     }
     function Btn(props) {
         return <button type="button" disabled={props.disabled} onClick={props.onClick} title={props.title}
-            className={"inline-flex items-center justify-center gap-1.5 rounded-xl font-semibold transition disabled:opacity-40 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-stone-900 " +
+            className={"inline-flex items-center justify-center gap-1.5 rounded-xl font-semibold whitespace-nowrap transition disabled:opacity-40 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-stone-900 " +
                 (props.small ? "px-3 py-1.5 text-xs " : "px-4 py-2 text-sm ") +
                 (props.danger ? "bg-rose-600 text-white hover:bg-rose-700 shadow-sm"
                     : props.primary ? "bg-indigo-600 text-white hover:bg-indigo-700 shadow-sm shadow-indigo-600/20"
@@ -415,6 +415,7 @@
         const [draftWarn, setDraftWarn] = useState("");
         const [confirm, setConfirm] = useState(false);
         const [drag, setDrag] = useState(false);
+        const [navOpen, setNavOpen] = useState(false); // telefonda soru haritası
         var fileRef = React.useRef(null), paneRef = React.useRef(null);
         // soru değişince düzenleme paneli başa dönsün; ızgarada seçili kutu görünür kalsın
         useEffect(function () {
@@ -619,7 +620,7 @@
         var keyChanges = summary.filter(function (s) { return s.ch.some(function (c) { return c.key; }); }).length;
 
         return (
-            <div className="space-y-4">
+            <div className="space-y-4 pb-20 lg:pb-0">
                 <div className="rounded-2xl glass p-3 flex flex-wrap items-center gap-2 shadow-sm">
                     <Btn onClick={props.onBack}>← Deneme</Btn>
                     <div className="min-w-0">
@@ -667,6 +668,11 @@
                             <Chip on={flag === "image"} onClick={function () { setFlag("image"); }}>Görselli {nImg}</Chip>
                         </div>
                         {(needle && !/^\d+$/.test(needle)) || flag !== "all" ? <p className="text-xs text-stone-500" role="status">{nMatch} soru eşleşti · ←/→ yalnızca bunlarda gezer</p> : null}
+                        <button type="button" className="lg:hidden w-full flex items-center justify-between rounded-xl border border-stone-300 dark:border-stone-600 px-3 py-2 text-sm font-semibold"
+                            aria-expanded={navOpen} onClick={function () { setNavOpen(!navOpen); }}>
+                            <span>Soru haritası · {cur}/120</span><span aria-hidden="true">{navOpen ? "▴" : "▾"}</span>
+                        </button>
+                        <div className={(navOpen ? "" : "hidden ") + "lg:block space-y-3"}>
                         {L.EXAM_PLAN.map(function (t) {
                             var nos = [];
                             for (var n = t.from; n <= t.to; n++) nos.push(n);
@@ -680,7 +686,7 @@
                                             var e = issues.by[n] && issues.by[n].errors.length, on = n === x.no;
                                             var label = "Soru " + n + (dirty[n] ? ", değişti" : "") + (e ? ", hatalı" : "") + (s.gorsel ? ", görselli" : "");
                                             return (
-                                                <button key={n} type="button" onClick={function () { setCur(n); }} aria-current={on ? "true" : undefined} aria-label={label} title={label}
+                                                <button key={n} type="button" onClick={function () { setCur(n); setNavOpen(false); }} aria-current={on ? "true" : undefined} aria-label={label} title={label}
                                                     className={"relative h-8 rounded-lg text-xs font-bold border " +
                                                         (on ? "bg-indigo-600 text-white border-indigo-600" : e ? "bg-rose-50 text-rose-800 border-rose-400 dark:bg-rose-950/40 dark:text-rose-200" : dirty[n] ? "bg-indigo-50 text-indigo-800 border-indigo-400 dark:bg-indigo-950/40 dark:text-indigo-200" : "border-stone-200 dark:border-stone-700") +
                                                         (match[n] || on ? "" : " opacity-25")}>
@@ -697,7 +703,8 @@
                             <span className="inline-block w-2.5 h-2.5 rounded border border-indigo-400 bg-indigo-50 mx-1 align-middle"></span>değişti ·
                             <span className="inline-block w-2.5 h-2.5 rounded border border-rose-400 bg-rose-50 mx-1 align-middle"></span>hatalı
                         </p>
-                        <p className="text-[11px] text-stone-500 leading-snug"><kbd>←</kbd> <kbd>→</kbd> soru değiştir (yazarken <kbd>Alt</kbd>+<kbd>↑</kbd>/<kbd>↓</kbd>) · <kbd>A</kbd>–<kbd>E</kbd> doğru cevap · <kbd>Ctrl</kbd>+<kbd>S</kbd> kaydet · <kbd>Ctrl</kbd>+<kbd>V</kbd> görsel yapıştır</p>
+                        </div>
+                        <p className="hidden lg:block text-[11px] text-stone-500 leading-snug"><kbd>←</kbd> <kbd>→</kbd> soru değiştir (yazarken <kbd>Alt</kbd>+<kbd>↑</kbd>/<kbd>↓</kbd>) · <kbd>A</kbd>–<kbd>E</kbd> doğru cevap · <kbd>Ctrl</kbd>+<kbd>S</kbd> kaydet · <kbd>Ctrl</kbd>+<kbd>V</kbd> görsel yapıştır</p>
                     </aside>
 
                     <section ref={paneRef} className="rounded-2xl glass p-4 sm:p-5 space-y-4 min-w-0 xl:h-full xl:overflow-auto" aria-label={"Soru " + x.no + " düzenleme"}>
@@ -705,7 +712,7 @@
                             <h2 className="text-2xl font-black">Soru {x.no}</h2>
                             <span className="text-sm text-stone-500">{tst.key} testi · {x.no - tst.from + 1}/{tst.n}</span>
                             {dirty[x.no] ? <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-200">✎ değişti</span> : null}
-                            <div className="ml-auto flex gap-2">
+                            <div className="ml-auto hidden lg:flex gap-2">
                                 <Btn disabled={poolPos === 0 || (poolPos < 0 && !shownNos.some(function (n) { return n < x.no; }))} onClick={function () { step(-1); }}>← Önceki</Btn>
                                 <Btn disabled={poolPos === shownNos.length - 1 || (poolPos < 0 && !shownNos.some(function (n) { return n > x.no; }))} onClick={function () { step(1); }}>Sonraki →</Btn>
                             </div>
@@ -784,9 +791,19 @@
                     </aside>
                 </div>
 
+                <div className="lg:hidden fixed bottom-0 inset-x-0 z-40 border-t border-stone-200 dark:border-stone-700 bg-white/95 dark:bg-stone-900/95 backdrop-blur px-3 pt-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] flex items-center gap-2">
+                    <button type="button" className="w-11 h-11 rounded-xl border border-stone-300 dark:border-stone-600 text-lg disabled:opacity-30" aria-label="Önceki soru" disabled={poolPos === 0} onClick={function () { step(-1); }}>←</button>
+                    <div className="flex-1 min-w-0 text-center text-sm">
+                        <b>Soru {x.no}</b><span className="text-stone-500"> · doğru {x.dogru}</span>
+                        {nDirty ? <span className="block text-[11px] text-indigo-700 dark:text-indigo-300">{nDirty} kaydedilmemiş değişiklik</span> : null}
+                    </div>
+                    <button type="button" className="w-11 h-11 rounded-xl border border-stone-300 dark:border-stone-600 text-lg disabled:opacity-30" aria-label="Sonraki soru" disabled={poolPos === shownNos.length - 1} onClick={function () { step(1); }}>→</button>
+                    {editable ? <button type="button" className="h-11 px-4 rounded-xl bg-indigo-600 text-white text-sm font-semibold disabled:opacity-40" disabled={!canSave} onClick={function () { setConfirm(true); }}>{busy ? "…" : "Kaydet"}</button> : null}
+                </div>
+
                 {confirm ? (
-                    <div className="fixed inset-0 z-[70] bg-black/45 flex items-center justify-center p-3" role="dialog" aria-modal="true" aria-labelledby="qe-save-title">
-                        <div className="w-full max-w-2xl max-h-[85vh] flex flex-col bg-white dark:bg-stone-900 rounded-3xl p-6 shadow-2xl">
+                    <div className="fixed inset-0 z-[70] bg-black/45 flex items-end sm:items-center justify-center p-3" role="dialog" aria-modal="true" aria-labelledby="qe-save-title">
+                        <div className="w-full max-w-2xl max-h-[85vh] flex flex-col bg-white dark:bg-stone-900 rounded-3xl p-5 sm:p-6 shadow-2xl">
                             <h2 id="qe-save-title" className="text-xl font-black">{nDirty} soru kaydedilsin mi?</h2>
                             <p className="text-sm text-stone-600 dark:text-stone-300 mt-1">Sorular kaydedilir, kitapçık yeniden şifrelenip yüklenir. Kayıt {dt(exam.reg_closes_at)}'da kapanınca sorular kilitlenir.</p>
                             {keyChanges ? <p className="text-sm mt-2 p-2 rounded-xl bg-amber-50 text-amber-900 dark:bg-amber-950/40 dark:text-amber-200">⚠ {keyChanges} sorunun doğru cevabı değişiyor; cevap anahtarını bir kez daha kontrol et.</p> : null}
@@ -843,7 +860,7 @@
                 {msg ? <p className="text-sm mb-2" role="status">{msg}</p> : null}
                 <div className="overflow-x-auto -mx-2">
                     <table className="w-full text-sm">
-                        <thead><tr className="text-left text-[11px] uppercase tracking-wider text-stone-500"><th className="py-2 px-2 font-semibold">Öğrenci</th><th className="px-2 font-semibold">Durum</th><th className="px-2 font-semibold">Okuma hatası</th><th className="px-2"><span className="sr-only">İşlem</span></th></tr></thead>
+                        <thead><tr className="text-left text-[11px] uppercase tracking-wider text-stone-500"><th className="py-2 px-2 font-semibold">Öğrenci</th><th className="px-2 font-semibold">Durum</th><th className="px-2 font-semibold whitespace-nowrap">Okuma hatası</th><th className="px-2"><span className="sr-only">İşlem</span></th></tr></thead>
                         <tbody>
                             {rows.map(function (r) {
                                 var st = r.submitted ? ["✓ Gönderdi · " + (SRC[r.source] || r.source || ""), "emerald"] : r.close_reason === "no_optic" ? ["Okutmadı (süre doldu)", "rose"] : ["Bekleniyor", "stone"];
@@ -885,17 +902,17 @@
     function Stat(props) {
         var zero = !props.value;
         return (
-            <div className={"rounded-2xl p-3 border " + (props.alert && !zero ? "border-rose-300 bg-rose-50 dark:bg-rose-950/30 dark:border-rose-800" : "border-stone-200 dark:border-stone-700 bg-white/70 dark:bg-stone-900/40")}>
-                <p className={"text-2xl font-black tabular-nums " + (zero ? "text-stone-300 dark:text-stone-600" : props.alert ? "text-rose-700 dark:text-rose-300" : "")}>{props.alert && !zero ? "⚠ " : ""}{props.value || 0}</p>
-                <p className="text-xs text-stone-500 mt-0.5">{props.label}</p>
+            <div className={"rounded-2xl p-2.5 sm:p-3 border min-w-0 " + (props.alert && !zero ? "border-rose-300 bg-rose-50 dark:bg-rose-950/30 dark:border-rose-800" : "border-stone-200 dark:border-stone-700 bg-white/70 dark:bg-stone-900/40")}>
+                <p className={"text-xl sm:text-2xl font-black tabular-nums " + (zero ? "text-stone-300 dark:text-stone-600" : props.alert ? "text-rose-700 dark:text-rose-300" : "")}>{props.alert && !zero ? "⚠ " : ""}{props.value || 0}</p>
+                <p className="text-[11px] sm:text-xs text-stone-500 mt-0.5 leading-tight">{props.label}</p>
             </div>
         );
     }
     function Fact(props) {
         return (
-            <div className="rounded-2xl p-4 border border-stone-200 dark:border-stone-700 bg-white/70 dark:bg-stone-900/40">
+            <div className="rounded-2xl p-3 sm:p-4 border border-stone-200 dark:border-stone-700 bg-white/70 dark:bg-stone-900/40 min-w-0">
                 <p className="text-[11px] uppercase tracking-wider font-semibold text-stone-500">{props.label}</p>
-                <p className="text-lg font-black mt-0.5">{props.value}</p>
+                <p className="text-base sm:text-lg font-black mt-0.5 leading-snug">{props.value}</p>
                 {props.children}
             </div>
         );
@@ -1013,14 +1030,14 @@
                 {exam.status === "scheduled" ? (
                     <Box title={live ? <span className="inline-flex items-center gap-2">Canlı izleme <Pill tone="rose" dot pulse>canlı</Pill></span> : "Durum"} sub={"15 sn'de bir yenilenir · son güncelleme " + (loadedAt ? L.fmtClock(loadedAt) : "–") + (live ? "" : " · sınav başlayınca giriş ve teslimler burada akar")}>
                         {mon ? (
-                            <div className="grid gap-4 lg:grid-cols-[2fr_4fr_2fr]">
+                            <div className="grid grid-cols-2 gap-x-3 gap-y-4 lg:grid-cols-[2fr_4fr_2fr] lg:gap-4">
                                 {[["Kayıt", [["Kayıtlı", mon.registered], ["Yedek", mon.waitlist]]],
                                   ["Sınav", [["Giren", mon.entered], ["Aktif", mon.active], ["Teslim", mon.submitted], ["Kilitli", mon.locked, true]]],
                                   ["Kâğıt", [["Kâğıtta", mon.paper_entered || 0], ["Optik gelen", mon.paper_submitted || 0]]]].map(function (g) {
                                     return (
-                                        <div key={g[0]}>
+                                        <div key={g[0]} className={g[1].length === 4 ? "col-span-2 order-last lg:order-none lg:col-span-1" : ""}>
                                             <p className="text-[11px] uppercase tracking-wider font-semibold text-stone-500 mb-2">{g[0]}</p>
-                                            <div className={"grid gap-2 " + (g[1].length === 4 ? "grid-cols-2 sm:grid-cols-4" : "grid-cols-2")}>
+                                            <div className={"grid gap-2 " + (g[1].length === 4 ? "grid-cols-4" : "grid-cols-2")}>
                                                 {g[1].map(function (x) { return <Stat key={x[0]} label={x[0]} value={x[1]} alert={x[2]} />; })}
                                             </div>
                                         </div>
@@ -1057,10 +1074,34 @@
 
                 <Box title={"Kayıtlar (" + regs.length + ")"}
                     actions={regs.length ? [
-                        <input key="f" className="px-3 py-1.5 rounded-xl border text-sm w-44" placeholder="Öğrenci ara" aria-label="Kayıtlarda ara" value={find} onChange={function (e) { setFind(e.target.value); }} />,
+                        <input key="f" className="px-3 py-1.5 rounded-xl border text-sm w-full sm:w-44 flex-1 sm:flex-none" placeholder="Öğrenci ara" aria-label="Kayıtlarda ara" value={find} onChange={function (e) { setFind(e.target.value); }} />,
                         <Btn key="c" small onClick={exportCsv}>CSV indir</Btn>] : null}>
                     {!regs.length ? <p className="text-sm text-stone-500">Henüz kayıt yok. Deneme yayınlanınca öğrenciler Bugün ekranındaki karttan kaydolur.</p> : (
-                        <div className="max-h-[28rem] overflow-auto -mx-2">
+                        <div>
+                        <ul className="sm:hidden divide-y divide-stone-100 dark:divide-stone-800 -mx-1">
+                            {regRows.map(function (r) {
+                                var st = REG[r.status] || [r.status, "stone"];
+                                return (
+                                    <li key={r.user_id} className="py-3 px-1 flex items-center gap-3">
+                                        <span className="w-9 h-9 rounded-full bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-200 grid place-items-center text-xs font-black shrink-0" aria-hidden="true">{initials(r.nickname)}</span>
+                                        <div className="min-w-0 flex-1">
+                                            <p className="font-semibold truncate">{r.nickname}</p>
+                                            <p className="text-xs text-stone-500 mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-1">
+                                                <Pill tone={st[1]}>{st[0]}</Pill>{r.locked ? <Pill tone="rose">Kilitli</Pill> : null}
+                                                {r.entered ? <span>{r.mode === "paper" ? "🖨 Kâğıt" : "📱 Cihaz"}{r.switches ? " · " + r.switches + " değişim" : ""}</span> : null}
+                                                {r.answered ? <span>{r.answered} cevap</span> : null}
+                                                {r.net != null ? <span className="font-semibold text-stone-700 dark:text-stone-200">{L.fmtNet(r.net)} net</span> : null}
+                                            </p>
+                                        </div>
+                                        {canEdit ? (r.status === "blocked"
+                                            ? <Btn small onClick={function () { run("live_admin_set_registration", { p_exam: id, p_user: r.user_id, p_status: "registered" }); }}>Engeli kaldır</Btn>
+                                            : <Btn small dangerGhost onClick={function () { run("live_admin_set_registration", { p_exam: id, p_user: r.user_id, p_status: "blocked" }, r.nickname + " engellensin mi?"); }}>Engelle</Btn>) : null}
+                                    </li>
+                                );
+                            })}
+                            {!regRows.length ? <li className="py-4 text-sm text-stone-500">"{find}" ile eşleşen öğrenci yok.</li> : null}
+                        </ul>
+                        <div className="hidden sm:block max-h-[28rem] overflow-auto -mx-2">
                             <table className="w-full text-sm">
                                 <thead className="sticky top-0 bg-white/95 dark:bg-stone-900/95 backdrop-blur">
                                     <tr className="text-left text-[11px] uppercase tracking-wider text-stone-500">
@@ -1093,6 +1134,7 @@
                                     {!regRows.length ? <tr><td colSpan={7} className="py-4 px-2 text-sm text-stone-500">"{find}" ile eşleşen öğrenci yok.</td></tr> : null}
                                 </tbody>
                             </table>
+                        </div>
                         </div>
                     )}
                 </Box>
