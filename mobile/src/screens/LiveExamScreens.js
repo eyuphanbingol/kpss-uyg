@@ -356,8 +356,8 @@ export function LiveExamScreen({ navigation, route }) {
                 <View style={{ marginTop: 10 }}>
                     <Card dark={dark}>
                         <Text style={cs.muted}>Soru {cur.no} / 120 · {L.BOLUM[cur.bolum]} · {cur.ders}</Text>
-                        <RichBlock text={cur.stem} style={[st.stem, dark && cs.light]} />
                         {cur.image ? <Image source={{ uri: cur.image }} style={st.img} resizeMode="contain" accessibilityLabel="Soru şekli" /> : null}
+                        <RichBlock text={L.stemText(cur.stem, cur.no)} style={[st.stem, dark && cs.light]} />
                     </Card>
                     {(cur.options || []).map(function (o, i) {
                         var l = L.LETTERS[i];
@@ -589,8 +589,8 @@ export function LiveResultScreen({ navigation, route }) {
                             </Tap>
                             {open ? (
                                 <View style={{ marginTop: 8 }}>
-                                    <RichBlock text={q.stem} style={[st.stem, dark && cs.light]} />
                                     {images[q.no] ? <Image source={{ uri: images[q.no] }} style={st.img} resizeMode="contain" /> : null}
+                                    <RichBlock text={L.stemText(q.stem, q.no)} style={[st.stem, dark && cs.light]} />
                                     {(q.options || []).map(function (o, i) {
                                         var l = L.LETTERS[i];
                                         return <Text key={l} style={[st.revOpt, l === q.answer && st.revOk, l === q.mine && l !== q.answer && st.revBad]}>{l}) {rich(o, st.revOpt)}{l === q.answer ? " ✓" : ""}{l === q.mine && l !== q.answer ? " ✗ senin cevabın" : ""}</Text>;

@@ -319,8 +319,8 @@
                             <div className="q-stem p-4 sm:p-7 rounded-3xl relative overflow-hidden">
                                 <div className="q-stem-bar absolute top-0 left-0 w-1.5 h-full"></div>
                                 <p className="text-xs font-bold text-stone-500 mb-2 pl-2">Soru {cur.no} / 120 · {L.BOLUM[cur.bolum]} · {cur.ders}</p>
-                                <h3 className="text-lg font-bold leading-relaxed whitespace-pre-line text-stone-900 pl-2"><Rich text={cur.stem} /></h3>
-                                {cur.image ? <img src={cur.image} alt="Soru şekli" className="live-img mt-4" /> : null}
+                                {cur.image ? <img src={cur.image} alt="Soru şekli" className="live-img mb-4" /> : null}
+                                <h3 className="text-lg font-bold leading-relaxed whitespace-pre-line text-stone-900 pl-2"><Rich text={L.stemText(cur.stem, cur.no)} /></h3>
                             </div>
                         </div>
                         <div className="test-split-a">
@@ -667,8 +667,8 @@
                                     </button>
                                     {open ? (
                                         <div className="px-4 pb-4 text-sm">
-                                            <p className="whitespace-pre-line font-semibold leading-relaxed"><Rich text={q.stem} /></p>
-                                            {images[q.no] ? <img src={images[q.no]} alt="Soru şekli" className="live-img mt-3" /> : null}
+                                            {images[q.no] ? <img src={images[q.no]} alt="Soru şekli" className="live-img mb-3" /> : null}
+                                            <p className="whitespace-pre-line font-semibold leading-relaxed"><Rich text={L.stemText(q.stem, q.no)} /></p>
                                             <ul className="mt-3 space-y-1">
                                                 {(q.options || []).map(function (o, i) {
                                                     var l = L.LETTERS[i];

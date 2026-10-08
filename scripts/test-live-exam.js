@@ -171,6 +171,10 @@ Promise.resolve().then(function () {
     var pj = L.parseUploadJson('{"a":"\\frac{1}{2} \\sqrt{3} \\\\frac{3}{4}"}');
     ok(L.richParse(pj.a).filter(function (x) { return x.f || x.r != null; }).length === 3, "yükleme: tek ters bölülü \\frac / \\sqrt JSON'u bozmaz");
     ok(L.richParse("\f" + "rac{1}{2}")[0].f, "form feed'e dönmüş \\frac yine kesir");
+    ok(L.stemText("59. A K O merkezli", 59) === "A K O merkezli" && L.stemText("Soru 59) x", 59) === "x" && L.stemText("59.5 kaç", 59) === "59.5 kaç" && L.stemText("12. y", 59) === "12. y", "soru metninin başındaki kendi numarası atılır (ondalık sayıya dokunulmaz)");
+    var nd = JSON.parse(JSON.stringify(require("../docs/canli-deneme-ornek.json")));
+    nd.sorular[4].metin = "5. " + nd.sorular[4].metin;
+    ok(L.validateUpload(nd, cat, {}, null).questions[4].stem.indexOf("5. ") !== 0, "yüklemede baştaki numara temizlenir");
     var bad3 = JSON.parse(JSON.stringify(require("../docs/canli-deneme-ornek.json")));
     bad3.sorular[0].metin = "Kapanmamış __altı çizili";
     ok(L.validateUpload(bad3, cat, {}, null).warnings.some(function (w) { return /Soru 1: soru metninde kapanmamış __/.test(w); }), "doğrulayıcı: kapanmamış biçim uyarısı");

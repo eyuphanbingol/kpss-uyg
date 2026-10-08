@@ -476,8 +476,8 @@
                 <div className="q-stem p-4 sm:p-6 rounded-3xl relative overflow-hidden">
                     <div className="q-stem-bar absolute top-0 left-0 w-1.5 h-full"></div>
                     <p className="text-xs font-bold text-stone-500 mb-2 pl-2">Soru {x.no} / 120 · {L.BOLUM[x.bolum]} · {x.ders}</p>
-                    <h3 className="text-base font-bold leading-relaxed whitespace-pre-line text-stone-900 pl-2">{x.metin ? <Rich text={x.metin} /> : "…"}</h3>
-                    {props.img ? <img src={props.img} alt={"Soru " + x.no + " önizleme görseli"} className="live-img mt-4" /> : null}
+                    {props.img ? <img src={props.img} alt={"Soru " + x.no + " önizleme görseli"} className="live-img mb-4" /> : null}
+                    <h3 className="text-base font-bold leading-relaxed whitespace-pre-line text-stone-900 pl-2">{x.metin ? <Rich text={L.stemText(x.metin, x.no)} /> : "…"}</h3>
                 </div>
                 <div className="space-y-2 mt-3">
                     {L.LETTERS.map(function (l, i) {
@@ -587,6 +587,7 @@
             return { by: m, general: general };
         }, [check]);
         var nDirty = Object.keys(dirty).length;
+        var numbered = list.filter(function (q0) { return L.stemText(q0.metin, q0.no) !== q0.metin; });
         var nErr = Object.keys(issues.by).filter(function (k) { return issues.by[k].errors.length; }).length;
         var nImg = list.filter(function (x) { return x.gorsel; }).length;
         var canSave = editable && nDirty > 0 && check && check.ok && !busy;
@@ -755,6 +756,15 @@
                     </div>
                 </div>
 
+                {editable && numbered.length ? (
+                    <div className="rounded-2xl border border-amber-300 bg-amber-50 dark:bg-amber-950/30 p-3 text-sm flex flex-wrap items-center gap-3" role="status">
+                        <span className="flex-1 min-w-[220px]">{numbered.length} sorunun metni kendi numarasıyla başlıyor (ör. "{numbered[0].no}. …"); kitapçıkta numara iki kez görünür.</span>
+                        <Btn small onClick={function () {
+                            setList(function (cl) { return cl.map(function (q0) { return Object.assign({}, q0, { metin: L.stemText(q0.metin, q0.no) }); }); });
+                            setMsg(numbered.length + " sorudan baştaki numara silindi; kaydetmeyi unutma.");
+                        }}>Numaraları temizle</Btn>
+                    </div>
+                ) : null}
                 {editable && data.kit_downloads ? (
                     <div className="rounded-2xl border border-amber-300 bg-amber-50 dark:bg-amber-950/30 p-3 text-sm" role="status">
                         ⚠ <b>{data.kit_downloads} kişi</b> kitapçığı PDF olarak indirdi{data.kit_stale ? " (" + data.kit_stale + " kişi eski sürümde)" : ""}. Kaydedersen kartlarında "kitapçık güncellendi, yeniden indir" uyarısı çıkar; yazdırdıkları eski kalabilir.

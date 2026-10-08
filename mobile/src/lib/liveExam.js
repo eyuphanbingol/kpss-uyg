@@ -558,6 +558,16 @@
         return out;
     }
 
+    // Soru metninin başına yanlışlıkla yazılmış soru numarasını at ("59. …", "Soru 59) …"):
+    // numara kitapçıkta ve ekranda zaten yazılıyor. Yalnızca o sorunun kendi numarası silinir.
+    function stemText(stem, no) {
+        var s = String(stem == null ? "" : stem);
+        if (no == null) return s;
+        var re = new RegExp("^\\s*(?:soru\\s*)?" + Number(no) + "\\s*[.):\\-–](?!\\d)\\s*", "i");
+        for (var i = 0; i < 3 && re.test(s); i++) s = s.replace(re, ""); // "59. 59. …" gibi tekrarlar
+        return s;
+    }
+
     // Yükleme dosyasını oku: yapay zekâ JSON'da \frac / \sqrt'ı tek ters bölüyle yazarsa
     // (\f form feed olur, \s geçersizdir) önce çift ters bölüye çevir.
     function parseUploadJson(txt) {
@@ -615,7 +625,7 @@
             });
             if (q.gorsel && images && !images[q.gorsel]) errors.push(tag + ": görsel '" + q.gorsel + "' yüklenmedi.");
             out.push({
-                no: no, bolum: bolum, ders: ders, konu: q.konu, stem: String(q.metin || ""),
+                no: no, bolum: bolum, ders: ders, konu: q.konu, stem: stemText(q.metin, no),
                 options: (q.siklar || []).map(function (s) { return String(s == null ? "" : s).replace(/^[A-E][\)\.]\s*/, ""); }),
                 answer: dogru, explanation: String(q.cozum || ""), image: q.gorsel || null
             });
@@ -910,6 +920,7 @@
         timeRows: timeRows,
         fmtSec: fmtSec,
         richParse: richParse,
+        stemText: stemText,
         parseUploadJson: parseUploadJson,
         richPlain: richPlain,
         richIssues: richIssues,

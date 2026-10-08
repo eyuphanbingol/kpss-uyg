@@ -159,7 +159,7 @@
     function recallEntry(examId) { return getJson("kpss-live-entry-" + examId); }
 
     // ---------- optik sayfası: PDF üretimi gizli bir iframe'de (mobilde aynı sayfa WebView'da) ----------
-    var OPTIK_URL = "optik/optik.html?v=4";
+    var OPTIK_URL = "optik/optik.html?v=5";
     var worker = null, waiters = {}, seq = 0;
     function onOptikMessage(e) {
         if (!worker || e.source !== worker.frame.contentWindow) return;

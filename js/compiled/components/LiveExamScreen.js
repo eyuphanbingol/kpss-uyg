@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:76995:qd1db7*/
+/*jsx:babel-7.29.9-react-classic:77033:1ug4l1y*/
 (function () {
   const {
     useState,
@@ -470,15 +470,15 @@
       className: "q-stem-bar absolute top-0 left-0 w-1.5 h-full"
     }), /*#__PURE__*/React.createElement("p", {
       className: "text-xs font-bold text-stone-500 mb-2 pl-2"
-    }, "Soru ", cur.no, " / 120 \xB7 ", L.BOLUM[cur.bolum], " \xB7 ", cur.ders), /*#__PURE__*/React.createElement("h3", {
-      className: "text-lg font-bold leading-relaxed whitespace-pre-line text-stone-900 pl-2"
-    }, /*#__PURE__*/React.createElement(Rich, {
-      text: cur.stem
-    })), cur.image ? /*#__PURE__*/React.createElement("img", {
+    }, "Soru ", cur.no, " / 120 \xB7 ", L.BOLUM[cur.bolum], " \xB7 ", cur.ders), cur.image ? /*#__PURE__*/React.createElement("img", {
       src: cur.image,
       alt: "Soru \u015Fekli",
-      className: "live-img mt-4"
-    }) : null)), /*#__PURE__*/React.createElement("div", {
+      className: "live-img mb-4"
+    }) : null, /*#__PURE__*/React.createElement("h3", {
+      className: "text-lg font-bold leading-relaxed whitespace-pre-line text-stone-900 pl-2"
+    }, /*#__PURE__*/React.createElement(Rich, {
+      text: L.stemText(cur.stem, cur.no)
+    })))), /*#__PURE__*/React.createElement("div", {
       className: "test-split-a"
     }, /*#__PURE__*/React.createElement("div", {
       className: "space-y-3",
@@ -1009,15 +1009,15 @@
         className: "text-stone-500"
       }, "\xB7 ", state, q.mine ? " (" + q.mine + ")" : "", " \xB7 do\u011Fru ", q.answer))), open ? /*#__PURE__*/React.createElement("div", {
         className: "px-4 pb-4 text-sm"
-      }, /*#__PURE__*/React.createElement("p", {
-        className: "whitespace-pre-line font-semibold leading-relaxed"
-      }, /*#__PURE__*/React.createElement(Rich, {
-        text: q.stem
-      })), images[q.no] ? /*#__PURE__*/React.createElement("img", {
+      }, images[q.no] ? /*#__PURE__*/React.createElement("img", {
         src: images[q.no],
         alt: "Soru \u015Fekli",
-        className: "live-img mt-3"
-      }) : null, /*#__PURE__*/React.createElement("ul", {
+        className: "live-img mb-3"
+      }) : null, /*#__PURE__*/React.createElement("p", {
+        className: "whitespace-pre-line font-semibold leading-relaxed"
+      }, /*#__PURE__*/React.createElement(Rich, {
+        text: L.stemText(q.stem, q.no)
+      })), /*#__PURE__*/React.createElement("ul", {
         className: "mt-3 space-y-1"
       }, (q.options || []).map(function (o, i) {
         var l = L.LETTERS[i];

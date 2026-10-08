@@ -263,13 +263,15 @@
     function layoutQuestion(ctx, q, colW, img) {
         var items = [], indent = 7;
         ctx.font = BK.font + "px " + FONT;
-        var stem = richWrap(ctx, q.stem, colW - indent, BK.font);
-        stem.forEach(function (line, i) { items.push({ kind: "rich", line: line, x: indent, h: lineH(line), no: i === 0 ? q.no : null }); });
+        var LE = global.LiveExam;
+        var stem = richWrap(ctx, LE && LE.stemText ? LE.stemText(q.stem, q.no) : q.stem, colW - indent, BK.font);
+        // görselli soruda önce görsel (numara yanında), altında soru metni
         if (img) {
             var w = Math.min(colW - indent, img.width / 6), h = w * img.height / img.width;
             if (h > 75) { h = 75; w = h * img.width / img.height; }
-            items.push({ kind: "img", img: img, x: indent, w: w, h: h + 2.5 });
+            items.push({ kind: "img", img: img, x: indent, w: w, h: h + 2.5, no: q.no });
         }
+        stem.forEach(function (line, i) { items.push({ kind: "rich", line: line, x: indent, h: lineH(line), no: i === 0 && !img ? q.no : null }); });
         (q.options || []).forEach(function (o, i) {
             var L = "ABCDE".charAt(i);
             var lines = richWrap(ctx, String(o), colW - indent - 6, BK.font);
@@ -336,6 +338,7 @@
                     ctx.textAlign = "left";
                     ctx.textBaseline = "alphabetic";
                     if (it.kind === "img") {
+                        if (it.no != null) { ctx.font = "bold " + BK.font + "px " + FONT; ctx.fillText(it.no + ".", x, y + BK.font); }
                         ctx.drawImage(it.img, x + it.x, y + 0.5, it.w, it.h - 2.5);
                     } else {
                         var up = it.kind === "rich" ? it.line.up : 0;

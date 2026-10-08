@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:125494:ipom55*/
+/*jsx:babel-7.29.9-react-classic:126457:cxzbi0*/
 (function () {
   const {
     useState,
@@ -974,15 +974,15 @@
       className: "q-stem-bar absolute top-0 left-0 w-1.5 h-full"
     }), /*#__PURE__*/React.createElement("p", {
       className: "text-xs font-bold text-stone-500 mb-2 pl-2"
-    }, "Soru ", x.no, " / 120 \xB7 ", L.BOLUM[x.bolum], " \xB7 ", x.ders), /*#__PURE__*/React.createElement("h3", {
-      className: "text-base font-bold leading-relaxed whitespace-pre-line text-stone-900 pl-2"
-    }, x.metin ? /*#__PURE__*/React.createElement(Rich, {
-      text: x.metin
-    }) : "…"), props.img ? /*#__PURE__*/React.createElement("img", {
+    }, "Soru ", x.no, " / 120 \xB7 ", L.BOLUM[x.bolum], " \xB7 ", x.ders), props.img ? /*#__PURE__*/React.createElement("img", {
       src: props.img,
       alt: "Soru " + x.no + " önizleme görseli",
-      className: "live-img mt-4"
-    }) : null), /*#__PURE__*/React.createElement("div", {
+      className: "live-img mb-4"
+    }) : null, /*#__PURE__*/React.createElement("h3", {
+      className: "text-base font-bold leading-relaxed whitespace-pre-line text-stone-900 pl-2"
+    }, x.metin ? /*#__PURE__*/React.createElement(Rich, {
+      text: L.stemText(x.metin, x.no)
+    }) : "…")), /*#__PURE__*/React.createElement("div", {
       className: "space-y-2 mt-3"
     }, L.LETTERS.map(function (l, i) {
       var ok = props.reveal && x.dogru === l;
@@ -1165,6 +1165,9 @@
       };
     }, [check]);
     var nDirty = Object.keys(dirty).length;
+    var numbered = list.filter(function (q0) {
+      return L.stemText(q0.metin, q0.no) !== q0.metin;
+    });
     var nErr = Object.keys(issues.by).filter(function (k) {
       return issues.by[k].errors.length;
     }).length;
@@ -1500,7 +1503,24 @@
       onClick: function () {
         setConfirm(true);
       }
-    }, busy || "Kaydet" + (nDirty ? " (" + nDirty + ")" : "")) : null)), editable && data.kit_downloads ? /*#__PURE__*/React.createElement("div", {
+    }, busy || "Kaydet" + (nDirty ? " (" + nDirty + ")" : "")) : null)), editable && numbered.length ? /*#__PURE__*/React.createElement("div", {
+      className: "rounded-2xl border border-amber-300 bg-amber-50 dark:bg-amber-950/30 p-3 text-sm flex flex-wrap items-center gap-3",
+      role: "status"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "flex-1 min-w-[220px]"
+    }, numbered.length, " sorunun metni kendi numaras\u0131yla ba\u015Fl\u0131yor (\xF6r. \"", numbered[0].no, ". \u2026\"); kitap\xE7\u0131kta numara iki kez g\xF6r\xFCn\xFCr."), /*#__PURE__*/React.createElement(Btn, {
+      small: true,
+      onClick: function () {
+        setList(function (cl) {
+          return cl.map(function (q0) {
+            return Object.assign({}, q0, {
+              metin: L.stemText(q0.metin, q0.no)
+            });
+          });
+        });
+        setMsg(numbered.length + " sorudan baştaki numara silindi; kaydetmeyi unutma.");
+      }
+    }, "Numaralar\u0131 temizle")) : null, editable && data.kit_downloads ? /*#__PURE__*/React.createElement("div", {
       className: "rounded-2xl border border-amber-300 bg-amber-50 dark:bg-amber-950/30 p-3 text-sm",
       role: "status"
     }, "\u26A0 ", /*#__PURE__*/React.createElement("b", null, data.kit_downloads, " ki\u015Fi"), " kitap\xE7\u0131\u011F\u0131 PDF olarak indirdi", data.kit_stale ? " (" + data.kit_stale + " kişi eski sürümde)" : "", ". Kaydedersen kartlar\u0131nda \"kitap\xE7\u0131k g\xFCncellendi, yeniden indir\" uyar\u0131s\u0131 \xE7\u0131kar; yazd\u0131rd\u0131klar\u0131 eski kalabilir.") : null, draft ? /*#__PURE__*/React.createElement("div", {
