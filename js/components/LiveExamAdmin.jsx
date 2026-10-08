@@ -65,6 +65,26 @@
         );
     }
 
+    // Soruları kaydet ve kitapçığı (görseller gömülü) yeniden şifreleyip yükle. qs: doğrulanmış sorular,
+    // imgs: { dosyaAdı: dataURL }. Kayıt kapanana (10:00) kadar çalışır; sunucu sonrasını reddeder.
+    function saveQuestions(exam, qs, imgs, step) {
+        step("Sorular kaydediliyor…");
+        return C.rpc("live_admin_set_questions", { p_exam: exam.id, p_questions: qs }).then(function (r) {
+            if (r && r.ok === false) throw new Error((r.errors || []).join(" "));
+            step("Kitapçık şifreleniyor…");
+            var used = {};
+            qs.forEach(function (q) { if (q.image && imgs[q.image]) used[q.image] = imgs[q.image]; });
+            var enc = L.encryptBooklet(L.bookletText({ title: exam.title, track: exam.track }, qs, used));
+            var path = "booklets/" + exam.id + ".bin";
+            step("Şifreli kitapçık yükleniyor (" + Math.round(enc.bytes.length / 1024) + " KB)…");
+            return C.sb().storage.from("live-exam").upload(path, new Blob([enc.bytes], { type: "application/octet-stream" }), { upsert: true, contentType: "application/octet-stream" })
+                .then(function (r2) {
+                    if (r2.error) throw new Error("Storage: " + r2.error.message);
+                    return C.rpc("live_admin_set_booklet", { p_exam: exam.id, p_path: path, p_key: enc.keyHex, p_sha: enc.sha });
+                });
+        });
+    }
+
     function Upload(props) {
         var exam = props.exam;
         const [doc, setDoc] = useState(null);
@@ -101,34 +121,22 @@
             if (!check || !check.ok) return;
             setErr(""); setBusy("Sorular kaydediliyor…");
             var qs = check.questions;
-            C.rpc("live_admin_set_questions", { p_exam: exam.id, p_questions: qs }).then(function (r) {
-                if (r && r.ok === false) throw new Error((r.errors || []).join(" "));
-                // dosyadaki başlık denemenin adı olur
-                if (doc && doc.baslik && doc.baslik !== exam.title) {
-                    return C.rpc("live_admin_save_exam", { p: { id: exam.id, title: doc.baslik } }).then(function () { exam = Object.assign({}, exam, { title: doc.baslik }); });
-                }
-            }).then(function () {
-                setBusy("Görseller hazırlanıyor…");
-                var names = Object.keys(files).filter(function (n) { return qs.some(function (q) { return q.image === n; }); });
-                return Promise.all(names.map(function (n) { return readFile(files[n], true).then(function (u) { return [n, u]; }); }));
-            }).then(function (pairs) {
-                var imgs = {};
-                pairs.forEach(function (p) { imgs[p[0]] = p[1]; });
-                setBusy("Kitapçık şifreleniyor…");
-                var enc = L.encryptBooklet(L.bookletText({ title: exam.title, track: exam.track }, qs, imgs));
-                var path = "booklets/" + exam.id + ".bin";
-                setBusy("Şifreli kitapçık yükleniyor (" + Math.round(enc.bytes.length / 1024) + " KB)…");
-                return C.sb().storage.from("live-exam").upload(path, new Blob([enc.bytes], { type: "application/octet-stream" }), { upsert: true, contentType: "application/octet-stream" })
-                    .then(function (r) {
-                        if (r.error) throw new Error("Storage: " + r.error.message);
-                        return C.rpc("live_admin_set_booklet", { p_exam: exam.id, p_path: path, p_key: enc.keyHex, p_sha: enc.sha });
-                    });
-            }).then(function () { setBusy(""); props.onDone(); })
+            var title = doc && doc.baslik && doc.baslik !== exam.title ? doc.baslik : null;
+            (title ? C.rpc("live_admin_save_exam", { p: { id: exam.id, title: title } }).then(function () { exam = Object.assign({}, exam, { title: title }); }) : Promise.resolve())
+                .then(function () {
+                    setBusy("Görseller hazırlanıyor…");
+                    var names = Object.keys(files).filter(function (n) { return qs.some(function (q) { return q.image === n; }); });
+                    return Promise.all(names.map(function (n) { return readFile(files[n], true).then(function (u) { return [n, u]; }); }));
+                }).then(function (pairs) {
+                    var imgs = {};
+                    pairs.forEach(function (p) { imgs[p[0]] = p[1]; });
+                    return saveQuestions(exam, qs, imgs, setBusy);
+                }).then(function () { setBusy(""); props.onDone(); })
                 .catch(function (x) { setBusy(""); setErr(x.message); });
         }
         var nImg = Object.keys(files).length;
         return (
-            <Box title="Soru dosyası ve görseller">
+            <Box title={props.replace ? "Tüm soruları yeni dosyayla değiştir" : "Soru dosyası ve görseller"}>
                 <p className="text-xs text-stone-500 mb-3">Biçim: docs/canli-deneme-ornek.json · Görselleri dosyadaki "gorsel" adlarıyla seç. Kitapçık senin tarayıcında şifrelenir; anahtar yalnızca 10:15'te sınava girene verilir.</p>
                 <div className="flex flex-wrap gap-4 text-sm">
                     <label>Soru dosyası (.json) <input type="file" accept="application/json,.json" onChange={onJson} className="block mt-1" /></label>
@@ -176,6 +184,223 @@
                 {busy ? <p className="text-sm mt-2">{busy}</p> : null}
                 <div className="mt-3"><Btn primary disabled={!check || !check.ok || !!busy} onClick={upload}>Soruları ve kitapçığı yükle</Btn></div>
             </Box>
+        );
+    }
+
+    // ============================================================
+    // SORU DÜZENLEYİCİ: yüklenen soruları gör, düzelt, görseli değiştir (kayıt kapanana kadar)
+    // ============================================================
+    var GY_DERS = ["Türkçe", "Matematik", "Geometri"], GK_DERS = ["Tarih", "Coğrafya", "Vatandaşlık", "Güncel Bilgiler"];
+    function catalog() { return window.getKpssData ? window.getKpssData() : {}; }
+    function konuKeys(ders) { return Object.keys(catalog()[ders] || {}).filter(function (k) { return k !== "_"; }); }
+    function kLabel(k) { return window.konuLabel ? window.konuLabel(k) : String(k).trim(); }
+    function toDoc(q) {
+        return { no: q.no, bolum: q.bolum, ders: q.ders, konu: q.konu, metin: q.stem, siklar: (q.options || []).slice(),
+            dogru: q.answer, cozum: q.explanation || "", gorsel: q.image || undefined };
+    }
+    function downloadText(name, text, type) {
+        var url = URL.createObjectURL(new Blob([text], { type: type || "application/json" }));
+        var a = document.createElement("a");
+        a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(function () { URL.revokeObjectURL(url); }, 30000);
+    }
+
+    function QuestionEditor(props) {
+        var exam = props.exam;
+        const [data, setData] = useState(null);
+        const [list, setList] = useState([]);
+        const [imgs, setImgs] = useState({});
+        const [dirty, setDirty] = useState({});
+        const [open, setOpen] = useState(null);
+        const [ders, setDers] = useState("");
+        const [q, setQ] = useState("");
+        const [busy, setBusy] = useState("");
+        const [msg, setMsg] = useState("");
+        const [err, setErr] = useState("");
+        const [imgNote, setImgNote] = useState("");
+
+        function load() {
+            setErr("");
+            return C.rpc("live_admin_questions", { p_exam: exam.id }).then(function (d) {
+                setData(d);
+                setList((d.questions || []).map(toDoc));
+                setDirty({});
+                if (!d.booklet) { setImgs({}); return; }
+                setImgNote("Görseller kitapçıktan açılıyor…");
+                return C.sb().storage.from("live-exam").download(d.booklet.path).then(function (r) {
+                    if (r.error || !r.data) throw new Error("Kitapçık indirilemedi.");
+                    return r.data.arrayBuffer();
+                }).then(function (buf) {
+                    return L.decryptBooklet(new Uint8Array(buf), d.booklet.key, d.booklet.sha);
+                }).then(function (txt) {
+                    var bk = JSON.parse(txt), byNo = {}, map = {};
+                    (bk.questions || []).forEach(function (x) { if (x.image) byNo[x.no] = x.image; });
+                    (d.questions || []).forEach(function (x) { if (x.image && byNo[x.no]) map[x.image] = byNo[x.no]; });
+                    setImgs(map); setImgNote("");
+                }).catch(function (x) { setImgNote("Görseller açılamadı: " + x.message + " (görselli soruları kaydetmeden önce görseli yeniden seç)."); });
+            }).catch(function (x) { setErr(x.message); });
+        }
+        useEffect(function () { load(); }, [exam.id]);
+
+        if (!data) return <Box title="Sorular">{err || "Yükleniyor…"}</Box>;
+        var editable = data.editable;
+        var presence = {};
+        Object.keys(imgs).forEach(function (k) { presence[k] = true; });
+        var check = list.length ? L.validateUpload({ kulvar: exam.track, baslik: exam.title, sorular: list }, catalog(), window.KONU_LABELS || {}, presence) : null;
+        var nDirty = Object.keys(dirty).length;
+
+        function patch(no, f) {
+            setList(function (cur) { return cur.map(function (x) { return x.no === no ? Object.assign({}, x, f) : x; }); });
+            setDirty(function (d) { var e = Object.assign({}, d); e[no] = true; return e; });
+            setMsg("");
+        }
+        function setOption(no, i, v) {
+            var cur = list.filter(function (x) { return x.no === no; })[0];
+            var s2 = cur.siklar.slice(); s2[i] = v;
+            patch(no, { siklar: s2 });
+        }
+        function pickImage(no, file) {
+            if (!file) return;
+            if (file.size > 1024 * 1024) { setMsg("Görsel 1 MB'tan büyük; küçültüp yeniden seç (önerilen ~300 KB)."); return; }
+            var cur = list.filter(function (x) { return x.no === no; })[0];
+            var ext = (file.type === "image/jpeg" ? "jpg" : file.type === "image/webp" ? "webp" : file.type === "image/svg+xml" ? "svg" : "png");
+            var name = cur.gorsel || ("soru-" + no + "." + ext);
+            readFile(file, true).then(function (url) {
+                setImgs(function (m) { var n = Object.assign({}, m); n[name] = url; return n; });
+                patch(no, { gorsel: name });
+            });
+        }
+        function save() {
+            if (!check || !check.ok) return;
+            if (!window.confirm(nDirty + " soru değişti. Sorular kaydedilsin ve kitapçık yeniden şifrelensin mi?\n\nKayıt pazar " + L.fmtClock(L.ms(exam.reg_closes_at)) + "'da kapanınca sorular kilitlenir.")) return;
+            setErr(""); setMsg("");
+            saveQuestions(exam, check.questions, imgs, setBusy).then(function () {
+                setBusy(""); setMsg("✓ Kaydedildi; kitapçık yeniden şifrelendi."); props.onSaved && props.onSaved(); return load();
+            }).catch(function (x) { setBusy(""); setErr(x.message); });
+        }
+        function exportJson() {
+            downloadText("deneme-" + exam.id.slice(0, 8) + ".json", JSON.stringify({ kulvar: exam.track, baslik: exam.title, sorular: list }, null, 2));
+        }
+        var needle = q.trim().toLocaleLowerCase("tr");
+        var shown = list.filter(function (x) {
+            if (ders && x.ders !== ders) return false;
+            if (!needle) return true;
+            if (/^\d+$/.test(needle)) return String(x.no) === needle;
+            return (x.metin + " " + x.konu + " " + x.siklar.join(" ")).toLocaleLowerCase("tr").indexOf(needle) >= 0;
+        });
+        var errNos = {};
+        if (check) check.errors.forEach(function (e) { var m = /^Soru (\d+)/.exec(e); if (m) errNos[m[1]] = true; });
+
+        return (
+            <div className="space-y-4">
+                <div className="flex flex-wrap items-center gap-3">
+                    <Btn onClick={props.onBack}>← Deneme</Btn>
+                    <h1 className="text-2xl font-black">Sorular · {exam.title}</h1>
+                    <span className="text-xs px-2 py-1 rounded-full border border-stone-300 dark:border-stone-600">{L.TRACKS[exam.track]}</span>
+                </div>
+                <Box title={editable ? "Düzenleme açık" : "Yalnızca görüntüleme"}>
+                    <p className="text-sm text-stone-600 dark:text-stone-300">
+                        {editable ? "Kayıt " + dt(exam.reg_closes_at) + "'da kapanana kadar soruları, şıkları, doğru cevabı, çözümü, konuyu ve görselleri değiştirebilirsin. Kaydedince kitapçık yeniden şifrelenir."
+                            : "Kayıt kapandığı için sorular kilitli (öğrencilerin kitapçığı indirildi). Görüntüleyebilir ve JSON olarak indirebilirsin."}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-3">
+                        {editable ? <Btn primary disabled={!nDirty || !check || !check.ok || !!busy} onClick={save}>{busy || ("Değişiklikleri kaydet" + (nDirty ? " (" + nDirty + ")" : ""))}</Btn> : null}
+                        {editable && nDirty ? <Btn disabled={!!busy} onClick={function () { if (window.confirm("Kaydedilmemiş değişiklikler silinsin mi?")) load(); }}>Değişiklikleri geri al</Btn> : null}
+                        <Btn onClick={exportJson}>JSON indir</Btn>
+                    </div>
+                    {msg ? <p className="text-sm mt-2" role="status">{msg}</p> : null}
+                    {err ? <p className="text-sm text-rose-600 mt-2" role="alert">{err}</p> : null}
+                    {imgNote ? <p className="text-sm text-amber-700 mt-2">{imgNote}</p> : null}
+                    {check && !check.ok ? (
+                        <ul className="mt-2 text-sm max-h-40 overflow-auto">
+                            {check.errors.map(function (e, i) { return <li key={i} className="text-rose-700">• {e}</li>; })}
+                        </ul>
+                    ) : null}
+                </Box>
+                <div className="flex flex-wrap items-center gap-2">
+                    {[""].concat(GY_DERS, GK_DERS).map(function (d) {
+                        var n = d ? list.filter(function (x) { return x.ders === d; }).length : list.length;
+                        return <Btn key={d || "all"} primary={ders === d} onClick={function () { setDers(d); }}>{(d || "Tümü") + " (" + n + ")"}</Btn>;
+                    })}
+                    <input className="px-3 py-2 rounded-xl border text-sm min-w-[220px]" placeholder="Soru no ya da metinde ara" value={q}
+                        onChange={function (e) { setQ(e.target.value); }} aria-label="Sorularda ara" />
+                </div>
+                <ul className="space-y-2">
+                    {shown.map(function (x) {
+                        var isOpen = open === x.no, img = x.gorsel ? imgs[x.gorsel] : null;
+                        return (
+                            <li key={x.no} className={"rounded-2xl border " + (errNos[x.no] ? "border-rose-400" : dirty[x.no] ? "border-indigo-400" : "border-stone-200 dark:border-stone-700") + " bg-white/70 dark:bg-stone-900/50"}>
+                                <button type="button" className="w-full text-left p-3 flex items-start gap-3" aria-expanded={isOpen} onClick={function () { setOpen(isOpen ? null : x.no); }}>
+                                    <span className="font-black w-9 shrink-0">{x.no}</span>
+                                    <span className="min-w-0 flex-1 text-sm">
+                                        <b>{x.ders}</b> / {kLabel(x.konu)}{x.gorsel ? " · 🖼" : ""}{dirty[x.no] ? " · ✎ değişti" : ""}{errNos[x.no] ? " · ⚠ hata" : ""}
+                                        <span className="block text-stone-600 dark:text-stone-300 truncate">{x.metin}</span>
+                                    </span>
+                                    <span className="text-xs font-bold shrink-0">Doğru: {x.dogru}</span>
+                                </button>
+                                {isOpen ? (
+                                    <div className="px-3 pb-4 space-y-3 text-sm">
+                                        <div className="grid sm:grid-cols-2 gap-3">
+                                            <label>Ders
+                                                <select className="mt-1 w-full px-3 py-2 rounded-xl border" disabled={!editable} value={x.ders}
+                                                    onChange={function (e) { var nd = e.target.value; patch(x.no, { ders: nd, konu: konuKeys(nd)[0] || "" }); }}>
+                                                    {(x.bolum === "GY" ? GY_DERS : GK_DERS).map(function (d) { return <option key={d} value={d}>{d}</option>; })}
+                                                </select>
+                                            </label>
+                                            <label>Konu
+                                                <select className="mt-1 w-full px-3 py-2 rounded-xl border" disabled={!editable} value={x.konu}
+                                                    onChange={function (e) { patch(x.no, { konu: e.target.value }); }}>
+                                                    {konuKeys(x.ders).indexOf(x.konu) < 0 ? <option value={x.konu}>{x.konu} (data.js'te yok)</option> : null}
+                                                    {konuKeys(x.ders).map(function (k) { return <option key={k} value={k}>{kLabel(k)}</option>; })}
+                                                </select>
+                                            </label>
+                                        </div>
+                                        <label className="block">Soru metni <span className="text-xs text-stone-500">(öncüller için yeni satır)</span>
+                                            <textarea rows={5} className="mt-1 w-full p-2 rounded-xl border" disabled={!editable} value={x.metin}
+                                                onChange={function (e) { patch(x.no, { metin: e.target.value }); }} />
+                                        </label>
+                                        <fieldset>
+                                            <legend className="mb-1">{editable ? "Şıklar · doğru cevabı seç" : "Şıklar"}</legend>
+                                            {L.LETTERS.map(function (l, i) {
+                                                return (
+                                                    <div key={l} className="flex items-center gap-2 mt-1">
+                                                        <label className="flex items-center gap-1 font-bold w-12">
+                                                            <input type="radio" name={"dogru-" + x.no} disabled={!editable} checked={x.dogru === l}
+                                                                onChange={function () { patch(x.no, { dogru: l }); }} aria-label={l + " doğru cevap"} />{l}
+                                                        </label>
+                                                        <input className="flex-1 px-3 py-1.5 rounded-lg border" disabled={!editable} value={x.siklar[i] || ""}
+                                                            onChange={function (e) { setOption(x.no, i, e.target.value); }} aria-label={"Şık " + l} />
+                                                    </div>
+                                                );
+                                            })}
+                                        </fieldset>
+                                        <label className="block">Çözüm
+                                            <textarea rows={3} className="mt-1 w-full p-2 rounded-xl border" disabled={!editable} value={x.cozum}
+                                                onChange={function (e) { patch(x.no, { cozum: e.target.value }); }} />
+                                        </label>
+                                        <div>
+                                            <p>Görsel{x.gorsel ? ": " + x.gorsel : " yok"}</p>
+                                            {img ? <img src={img} alt={"Soru " + x.no + " görseli"} className="mt-1 max-h-72 rounded-xl border bg-white" /> : null}
+                                            {x.gorsel && !img ? <p className="text-amber-700">Bu görsel elde yok; kaydetmeden önce yeniden seç.</p> : null}
+                                            {editable ? (
+                                                <div className="flex flex-wrap items-center gap-2 mt-2">
+                                                    <label className="px-4 py-2 rounded-xl text-sm font-semibold border border-stone-300 dark:border-stone-600 cursor-pointer">
+                                                        {x.gorsel ? "Görseli değiştir" : "Görsel ekle"}
+                                                        <input type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml" className="sr-only"
+                                                            onChange={function (e) { pickImage(x.no, e.target.files && e.target.files[0]); e.target.value = ""; }} />
+                                                    </label>
+                                                    {x.gorsel ? <Btn onClick={function () { patch(x.no, { gorsel: undefined }); }}>Görseli kaldır</Btn> : null}
+                                                    {img ? <a className="underline" href={img} download={x.gorsel}>İndir</a> : null}
+                                                </div>
+                                            ) : null}
+                                        </div>
+                                    </div>
+                                ) : null}
+                            </li>
+                        );
+                    })}
+                </ul>
+            </div>
         );
     }
 
@@ -251,6 +476,7 @@
         const [stats, setStats] = useState(null);
         const [err, setErr] = useState("");
         const [mins, setMins] = useState("10");
+        const [editQs, setEditQs] = useState(false);
 
         function load() {
             return C.rpc("live_admin_list").then(function (list) {
@@ -273,6 +499,7 @@
             C.rpc(name, args).then(load).catch(function (x) { setErr(x.message); });
         }
         if (!exam) return <Box title="Deneme">{err || "Yükleniyor…"}</Box>;
+        if (editQs) return <QuestionEditor exam={exam} onBack={function () { setEditQs(false); load(); }} onSaved={load} />;
         var live = exam.status === "scheduled" && Date.now() >= L.ms(exam.starts_at) - 3600000 && Date.now() < L.ms(exam.ends_at);
         var canEdit = (exam.status === "draft" || exam.status === "scheduled") && Date.now() < L.ms(exam.reg_closes_at);
         var lockedRegs = regs.filter(function (r) { return r.locked; });
@@ -297,7 +524,13 @@
                         {exam.status === "draft" ? <Btn onClick={function () { run("live_admin_discard_draft", { p_exam: id }, "Taslak kaldırılsın mı? (Yayınlanmış denemeler asla silinemez.)"); props.onBack(); }}>Taslağı kaldır</Btn> : null}
                     </div>
                 </Box>
-                {canEdit ? <Upload exam={exam} onDone={load} /> : null}
+                {exam.questions ? (
+                    <Box title={"Sorular (" + exam.questions + ")"}>
+                        <p className="text-sm text-stone-600 dark:text-stone-300">{canEdit ? "Yüklediğin soruları tek tek görüp düzeltebilir, görselleri değiştirebilirsin." : "Kayıt kapandı; sorular yalnızca görüntülenebilir."}</p>
+                        <div className="mt-3"><Btn primary onClick={function () { setEditQs(true); }}>{canEdit ? "Soruları görüntüle / düzenle" : "Soruları görüntüle"}</Btn></div>
+                    </Box>
+                ) : null}
+                {canEdit ? <Upload exam={exam} onDone={load} replace={!!exam.questions} /> : null}
                 {mon && mon.paper && mon.paper.length && (exam.status === "scheduled" || exam.status === "finished") ? (
                     <PaperBox rows={mon.paper} examId={id} finalized={!!exam.finalized_at} onDone={load} />
                 ) : null}
@@ -499,9 +732,14 @@
                 </div>
                 {mode === "create" ? <CreateForm track={track || "lisans"} onCancel={function () { setMode("list"); }} onCreated={function (id) { setSel(id); setMode("detail"); }} /> : null}
                 <Box title="Denemeler">
-                    {!list ? "Yükleniyor…" : !shown.length ? "Henüz deneme yok." : (
+                    {!list ? "Yükleniyor…" : !shown.length ? "Henüz deneme yok." : (track ? [track] : Object.keys(L.TRACKS)).map(function (tk) {
+                        var items = shown.filter(function (e) { return e.track === tk; });
+                        if (!items.length) return null;
+                        return (
+                        <div key={tk} className="mb-4">
+                        <h3 className="text-sm font-black uppercase tracking-wide text-stone-500 mb-2">{L.TRACKS[tk]} ({items.length})</h3>
                         <ul className="space-y-2">
-                            {shown.map(function (e) {
+                            {items.map(function (e) {
                                 return (
                                     <li key={e.id}>
                                         <button type="button" className="w-full text-left rounded-xl border border-stone-200 dark:border-stone-700 p-3 hover:bg-white/60 dark:hover:bg-stone-800/60" onClick={function () { setSel(e.id); setMode("detail"); }}>
@@ -512,7 +750,9 @@
                                 );
                             })}
                         </ul>
-                    )}
+                        </div>
+                        );
+                    })}
                     <p className="text-xs text-stone-500 mt-3">Yayınlanmış, bitmiş ve arşivdeki denemeler silinemez (veritabanı da silmeyi reddeder). Yalnızca taslak kaldırılabilir.</p>
                 </Box>
             </div>

@@ -378,5 +378,16 @@ select t_ok(json_array_length(live_admin_trends('lisans')) >= 2, 'yönetici: lis
 select t_ok((select x->>'id' from json_array_elements(live_admin_trends('lisans')) x order by x->>'starts_at' desc limit 1) = current_setting('t.exam4'), 'en yeni deneme sonda');
 select t_ok(json_array_length(live_admin_trends('onlisans')) = 1 and (live_admin_trends('onlisans')->0->>'participants')::int = 0, 'önlisans: katılımcısız deneme de kesinleşir (0 kişi)');
 
+-- ---------- 13. yönetici soru görüntüleme / düzenleme ----------
+select t_as('00000000-0000-4000-8000-000000000001', '2026-11-01 13:10+03');
+select t_err($$select live_admin_questions(current_setting('t.exam4')::uuid)$$, 'forbidden', 'öğrenci soruları ve anahtarı göremez');
+select t_as('00000000-0000-4000-8000-0000000000a1', '2026-11-01 13:10+03');
+select t_ok(json_array_length(live_admin_questions(current_setting('t.exam4')::uuid)->'questions') = 120, 'yönetici 120 soruyu görür');
+select t_ok((live_admin_questions(current_setting('t.exam4')::uuid)->'booklet'->>'key') = repeat('12', 32), 'yönetici kitapçık anahtarını alır (görseller için)');
+select t_ok(not (live_admin_questions(current_setting('t.exam4')::uuid)->>'editable')::boolean, 'bitmiş deneme düzenlenemez');
+select set_config('t.exam6', (live_admin_save_exam('{"title":"Düzenleme","day":"2026-11-08","track":"ortaogretim"}')->>'id'), false);
+select t_ok((live_admin_questions(current_setting('t.exam6')::uuid)->>'editable')::boolean, 'kayıt kapanmadan düzenlenebilir');
+select t_ok(json_array_length(live_admin_questions(current_setting('t.exam6')::uuid)->'questions') = 0 and live_admin_questions(current_setting('t.exam6')::uuid)->>'booklet' is null, 'boş taslak');
+
 reset role;
 select 'TÜM TESTLER GEÇTİ';

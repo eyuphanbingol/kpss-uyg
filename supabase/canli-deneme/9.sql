@@ -68,3 +68,27 @@ begin
     perform cron.schedule('live-exam-tick', '* * * * *', 'select public.live_tick()');
   end if;
 end $$;
+
+-- ---------- Yönetici: yüklenen soruları görüntüle / düzenle ----------
+-- Sorular, kitapçık anahtarıyla birlikte (görseller şifreli kitapçıkta; yöneticinin tarayıcısı açar).
+-- Düzenleme kayıt kapanana (10:00) kadar: kaydetme live_admin_set_questions + live_admin_set_booklet ile.
+create or replace function public.live_admin_questions(p_exam uuid)
+returns json language plpgsql security definer set search_path = public as $$
+declare e public.live_exams;
+begin
+  perform public.live_require_admin();
+  select * into e from public.live_exams where id = p_exam;
+  if e.id is null or e.deleted_at is not null then perform public.live_err('not_found', 'Deneme bulunamadı.'); end if;
+  return json_build_object(
+    'exam', public.live_exam_json(e),
+    'editable', e.status in ('draft', 'scheduled') and public.live_clock() < e.reg_closes_at,
+    'booklet', case when e.booklet_path is null then null
+                    else json_build_object('path', e.booklet_path, 'key', e.booklet_key, 'sha', e.booklet_sha) end,
+    'questions', (select coalesce(json_agg(json_build_object(
+        'no', q.no, 'bolum', q.bolum, 'ders', q.ders, 'konu', q.konu, 'stem', q.stem, 'options', q.options,
+        'answer', q.answer, 'explanation', q.explanation, 'image', q.image) order by q.no), '[]'::json)
+      from public.live_questions q where q.exam_id = p_exam));
+end;
+$$;
+revoke all on function public.live_admin_questions(uuid) from public, anon;
+grant execute on function public.live_admin_questions(uuid) to authenticated;
