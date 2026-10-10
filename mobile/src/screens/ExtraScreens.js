@@ -1,111 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Text, View, StyleSheet } from "react-native";
 import { useApp } from "../AppProvider";
-import { ScoreEngine } from "../lib/scoreEngine";
 import { StudentStore } from "../lib/store";
 import { supabase } from "../lib/supabase";
 import { trError } from "../lib/trError";
-import taban from "../content/tabanPuanlar.json";
 import { Card, PrimaryButton, ScrollScreen, Badge, PageHeader } from "../ui";
 import { colors } from "../lib/theme";
 import { questionImages } from "../lib/media";
 import { ZoomableImage } from "../components/ZoomableImage";
 export { HeatScreen } from "./HeatScreen";
+export { PlacementScreen } from "./PlacementScreen";
 
 function stripChoicePrefix(opt) {
     return String(opt || "").replace(/^[A-Ea-e][\s\)\.:\-]+\s*/, "").trim();
-}
-
-// ============================================================
-// PLACEMENT SCREEN
-// ============================================================
-
-export function PlacementScreen({ navigation }) {
-    var app = useApp();
-    var isDark = app.dark;
-    var est = ScoreEngine.estimate(app.student);
-    var level = (app.student.userProfile && app.student.userProfile.educationLevel) || "lisans";
-    var rows = (taban.rows || []).filter(function (r) { return r.level === level; });
-    var matches = ScoreEngine.matchPlacement(est.score, rows);
-    var isPremium = StudentStore.isPremium();
-    
-    if (!isPremium) matches = matches.slice(0, 3);
-
-    return (
-        <ScrollScreen dark={isDark}>
-            <PageHeader dark={isDark} title="Puan / Tercih" subtitle="Tahmini puan ve kurum eşleşmesi" onBack={function () { navigation.goBack(); }} right={null} />
-
-            {/* Score */}
-            <View style={[styles.scoreContainer, isDark && styles.scoreContainerDark]}>
-                <Text style={styles.scoreLabel}>Tahmini Puan</Text>
-                <Text style={[styles.scoreValue, isDark && styles.textLight]}>{est.score}</Text>
-                <Text style={[styles.scoreNote, isDark && styles.textMuted]}>{est.note}</Text>
-            </View>
-
-            {/* Matches */}
-            {matches.length > 0 ? (
-                <View>
-                    <Text style={[styles.matchesLabel, isDark && styles.textMuted]}>
-                        Eşleşen Kurumlar ({matches.length})
-                    </Text>
-                    {matches.map(function (r, i) {
-                        var diff = Number(est.score) - Number(r.taban);
-                        var isSafe = diff >= 4;
-                        var isBorder = diff >= 0 && diff < 4;
-                        
-                        return (
-                            <Card key={i} style={[
-                                styles.matchCard,
-                                isSafe && styles.matchCardSafe,
-                                isBorder && styles.matchCardBorder,
-                                isDark && styles.cardDark
-                            ]}>
-                                <View style={styles.matchRow}>
-                                    <View style={styles.matchInfo}>
-                                        <Text style={[styles.matchName, isDark && styles.textLight]}>
-                                            {r.kurum}
-                                        </Text>
-                                        <Text style={[styles.matchDetail, isDark && styles.textMuted]}>
-                                            {r.unvan} · {r.il}
-                                        </Text>
-                                    </View>
-                                    <View style={styles.matchRight}>
-                                        <Text style={[styles.matchTaban, isDark && styles.textMuted]}>
-                                            {r.taban}
-                                        </Text>
-                                        <Badge 
-                                            type={isSafe ? "success" : isBorder ? "warning" : "danger"}
-                                            title={isSafe ? "✅ Güvenli" : isBorder ? "⚠️ Sınırda" : "❌ Riskli"}
-                                        />
-                                    </View>
-                                </View>
-                            </Card>
-                        );
-                    })}
-                </View>
-            ) : (
-                <Card style={[styles.emptyCard, isDark && styles.cardDark]}>
-                    <Text style={[styles.emptyText, isDark && styles.textMuted]}>
-                        Bu skor için eşleşen kurum bulunamadı.
-                    </Text>
-                </Card>
-            )}
-
-            {/* Premium Upgrade */}
-            {!isPremium && matches.length >= 3 && (
-                <PrimaryButton 
-                    title="Tüm Liste için Premium" 
-                    onPress={function () { navigation.navigate("Paywall"); }} 
-                    style={styles.upgradeBtn}
-                />
-            )}
-
-            {/* Note */}
-            <Text style={[styles.footerNote, isDark && styles.textMuted]}>
-                {taban.note}
-            </Text>
-        </ScrollScreen>
-    );
 }
 
 // ============================================================
@@ -371,118 +278,6 @@ var styles = StyleSheet.create({
     cardDark: {
         backgroundColor: colors.navyDeep,
         borderColor: colors.muted,
-    },
-
-    // ---------- Back ----------
-    backText: {
-        color: colors.muted,
-        fontWeight: "600",
-        fontSize: 13,
-        marginBottom: 4,
-    },
-
-    // ---------- Header ----------
-    header: {
-        marginVertical: 8,
-    },
-    title: {
-        fontSize: 24,
-        fontWeight: "700",
-        color: colors.navy,
-    },
-    subtitle: {
-        color: colors.muted,
-        fontSize: 13,
-        marginTop: 2,
-    },
-
-    // ---------- Placement ----------
-    scoreContainer: {
-        backgroundColor: colors.indigo + "10",
-        borderRadius: 16,
-        padding: 18,
-        marginBottom: 16,
-        alignItems: "center",
-        borderWidth: 1,
-        borderColor: colors.indigo + "30",
-    },
-    scoreContainerDark: {
-        backgroundColor: colors.navyDeep,
-        borderColor: colors.muted,
-    },
-    scoreLabel: {
-        fontSize: 12,
-        fontWeight: "600",
-        color: colors.muted,
-        textTransform: "uppercase",
-        letterSpacing: 0.5,
-    },
-    scoreValue: {
-        fontSize: 48,
-        fontWeight: "800",
-        color: colors.indigo,
-        marginTop: 4,
-    },
-    scoreNote: {
-        color: colors.muted,
-        fontSize: 13,
-        marginTop: 4,
-        textAlign: "center",
-    },
-    matchesLabel: {
-        fontSize: 12,
-        fontWeight: "600",
-        color: colors.muted,
-        marginBottom: 8,
-        textTransform: "uppercase",
-        letterSpacing: 0.5,
-    },
-    matchCard: {
-        marginBottom: 6,
-    },
-    matchCardSafe: {
-        borderColor: colors.emerald,
-        borderWidth: 1,
-    },
-    matchCardBorder: {
-        borderColor: colors.amber,
-        borderWidth: 1,
-    },
-    matchRow: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-    },
-    matchInfo: {
-        flex: 1,
-        paddingRight: 8,
-    },
-    matchName: {
-        fontWeight: "700",
-        fontSize: 14,
-        color: colors.text,
-    },
-    matchDetail: {
-        color: colors.muted,
-        fontSize: 12,
-        marginTop: 1,
-    },
-    matchRight: {
-        alignItems: "flex-end",
-        gap: 4,
-    },
-    matchTaban: {
-        color: colors.muted,
-        fontSize: 12,
-    },
-    upgradeBtn: {
-        marginTop: 8,
-    },
-    footerNote: {
-        fontSize: 11,
-        color: colors.muted,
-        marginTop: 8,
-        textAlign: "center",
     },
 
     // ---------- Leaderboard ----------

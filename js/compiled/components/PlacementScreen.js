@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:21037:15mxth1*/
+/*jsx:babel-7.29.9-react-classic:21143:1d82syl*/
 (function () {
   const {
     useEffect,
@@ -312,7 +312,8 @@
       var safe = diff >= 4;
       var status = getStatusBadge(diff);
       var diffEmoji = getDiffEmoji(diff);
-      var displayDiff = diff >= 0 ? "+" + diff : diff;
+      var diffR = Math.round(diff * 100) / 100;
+      var displayDiff = (diffR >= 0 ? "+" : "") + String(diffR).replace(".", ",");
       return /*#__PURE__*/React.createElement("div", {
         key: i,
         className: "rounded-2xl glass p-4 card-hover transition-all duration-200 border-l-4 " + (safe ? "border-l-emerald-500" : diff >= 0 ? "border-l-amber-500" : "border-l-rose-500")

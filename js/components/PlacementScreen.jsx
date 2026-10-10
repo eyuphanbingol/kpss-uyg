@@ -302,7 +302,8 @@
                                     var safe = diff >= 4;
                                     var status = getStatusBadge(diff);
                                     var diffEmoji = getDiffEmoji(diff);
-                                    var displayDiff = diff >= 0 ? "+" + diff : diff;
+                                    var diffR = Math.round(diff * 100) / 100;
+                                    var displayDiff = (diffR >= 0 ? "+" : "") + String(diffR).replace(".", ",");
 
                                     return (
                                         <div 
