@@ -2126,6 +2126,8 @@ function MapPlay(props) {
             return Math.sqrt(dx * dx + dy * dy) || 1;
         }
         function onTouchStart(e) {
+            // Parmağın gerçek noktası: tarayıcı dokunuşu komşu öğeye kaydırabiliyor (touch adjustment)
+            if (e.touches.length === 1) stage.__lastTouch = { x: e.touches[0].clientX, y: e.touches[0].clientY, t: Date.now() };
             if (e.touches.length === 2) {
                 gest.mode = "pinch";
                 gest.dist = pinchDist(e.touches);
@@ -2157,7 +2159,8 @@ function MapPlay(props) {
             }
         }
         function onTouchEnd() {
-            if (gest.moved) stage.setAttribute("data-skip-click", "1");
+            // Kaydırmanın hemen ardından gelebilecek tıklama yok sayılır; kalıcı işaret sonraki gerçek dokunuşu yutuyordu
+            if (gest.moved) stage.__skipClickUntil = Date.now() + 150;
             gest.mode = "";
         }
         function onWheel(e) {
@@ -2350,11 +2353,12 @@ function MapPlay(props) {
         svg.appendChild(labels);
 
         function onClick(ev) {
-            if (stageRef.current && stageRef.current.getAttribute("data-skip-click") === "1") {
-                stageRef.current.removeAttribute("data-skip-click");
-                return;
-            }
-            var near = nearestPin(ev.clientX, ev.clientY);
+            var st = stageRef.current;
+            if (st && Date.now() < (st.__skipClickUntil || 0)) { st.__skipClickUntil = 0; return; }
+            var px = ev.clientX, py = ev.clientY, lt = st && st.__lastTouch;
+            if (lt && Date.now() - lt.t < 1000) { px = lt.x; py = lt.y; }
+            if (st) st.__lastTouch = null;
+            var near = nearestPin(px, py);
             if (near) { answer(near); return; }
             var n = ev.target.closest ? ev.target.closest("[data-pin]") : null;
             if (!n) return;

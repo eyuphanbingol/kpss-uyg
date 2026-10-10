@@ -7,6 +7,17 @@
     function ge() { return window.GamesEngine; }
     function store() { return window.StudentStore; }
 
+    // Noktadaki il: göl, etiket gibi üstteki öğelerin altındaki il yolunu da bulur
+    function provinceAt(x, y) {
+        var list = document.elementsFromPoint ? document.elementsFromPoint(x, y) : [document.elementFromPoint(x, y)];
+        for (var i = 0; i < list.length; i++) {
+            var pth = list[i] && list[i].closest ? list[i].closest("path") : null;
+            var pid = pth && pth.getAttribute("id");
+            if (pid && /^TR\d{2}$/.test(pid)) return pid;
+        }
+        return null;
+    }
+
     function useMapZoom(hostRef, stageRef, svgHtml, mapFail, locked) {
         var zoomRef = useRef({ s: 1, x: 0, y: 0 });
         useEffect(function () {
@@ -26,6 +37,8 @@
                 return Math.sqrt(dx * dx + dy * dy) || 1;
             }
             function onTouchStart(e) {
+                // Parmağın gerçek noktası: tarayıcı dokunuşu komşu ile kaydırabiliyor (touch adjustment)
+                if (e.touches.length === 1) stage.__lastTouch = { x: e.touches[0].clientX, y: e.touches[0].clientY, t: Date.now() };
                 if (e.touches.length === 2) {
                     gest.mode = "pinch";
                     gest.dist = pinchDist(e.touches);
@@ -57,7 +70,8 @@
                 }
             }
             function onTouchEnd() {
-                if (gest.moved) stage.setAttribute("data-skip-click", "1");
+                // Kaydırmanın hemen ardından gelebilecek tıklama yok sayılır; kalıcı işaret sonraki gerçek dokunuşu yutuyordu
+                if (gest.moved) stage.__skipClickUntil = Date.now() + 150;
                 gest.mode = "";
             }
             function onWheel(e) {
@@ -146,13 +160,12 @@
         function onStageClick(e) {
             var stage = stageRef.current;
             if (quiz) return;
-            if (stage && stage.getAttribute("data-skip-click")) {
-                stage.removeAttribute("data-skip-click");
-                return;
-            }
-            var path = e.target && e.target.closest ? e.target.closest("path") : null;
-            var id = path && path.getAttribute("id");
-            if (!id || !/^TR\d{2}$/.test(id)) return;
+            if (stage && Date.now() < (stage.__skipClickUntil || 0)) { stage.__skipClickUntil = 0; return; }
+            var px = e.clientX, py = e.clientY, lt = stage && stage.__lastTouch;
+            if (lt && Date.now() - lt.t < 1000) { px = lt.x; py = lt.y; }
+            if (stage) stage.__lastTouch = null;
+            var id = provinceAt(px, py);
+            if (!id) return;
             if (owned[id]) {
                 setToast((engine && engine.nameOf(id)) + " zaten fethedildi");
                 setTimeout(function () { setToast(""); }, 1400);
