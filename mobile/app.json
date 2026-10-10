@@ -3,7 +3,7 @@
     "name": "Atanly",
     "slug": "eyphn",
     "scheme": "atanly",
-    "version": "1.0.11",
+    "version": "1.0.12",
     "platforms": [
       "ios",
       "android"
@@ -28,6 +28,9 @@
       "infoPlist": {
         "NSCameraUsageDescription": "Canlı denemede optik formunun fotoğrafını çekip cevaplarını okumak için kamerayı kullanırız.",
         "NSPhotoLibraryUsageDescription": "Canlı denemede optik formunun fotoğrafını galeriden seçebilmen için kullanılır."
+      },
+      "config": {
+        "usesNonExemptEncryption": false
       }
     },
     "android": {
