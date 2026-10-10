@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:75300:1mri36v*/
+/*jsx:babel-7.29.9-react-classic:75367:h5qjiv*/
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 (function () {
   const {
@@ -943,7 +943,7 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
             setStep(1);
             setPass("");
             setTouched({});
-            setMsg("Bu e-postayla zaten bir Atanly hesabı var. Giriş yap; şifreni hatırlamıyorsan “Şifremi unuttum”a dokun.");
+            setMsg("Bu e-postayla zaten bir Atanly hesabı var. Daha önce Google ile girdiysen “Google ile devam et”e dokun; şifreyle girmek için “Şifremi unuttum”dan şifre belirleyebilirsin.");
           } else {
             setSentTo(email.trim());
             setResendIn(60);

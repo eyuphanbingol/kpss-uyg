@@ -213,7 +213,7 @@ export default function AuthScreen() {
                 if (!up.data.session && Array.isArray(ids) && ids.length === 0) {
                     // Supabase kayıtlı e-postada hata vermez ve mail de göndermez; kullanıcıya söyle
                     switchMode("in"); setPass("");
-                    setMsg("Bu e-postayla zaten bir Atanly hesabı var. Giriş yap; şifreni hatırlamıyorsan “Şifremi unuttum”a dokun.");
+                    setMsg("Bu e-postayla zaten bir Atanly hesabı var. Daha önce Google ile girdiysen “Google ile devam et”e dokun; şifreyle girmek için “Şifremi unuttum”dan şifre belirleyebilirsin.");
                     setBusy(false);
                     return;
                 }
