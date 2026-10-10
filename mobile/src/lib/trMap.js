@@ -61,6 +61,14 @@ var CSS = [
     ".place-leader{stroke:rgba(66,44,14,.8);stroke-width:1.1;vector-effect:non-scaling-stroke;pointer-events:none;}",
     ".place-anchor{fill:#7c2d12;stroke:#fffaf0;stroke-width:.8;pointer-events:none;}",
     ".place-locked .place-anchor{fill:#047857;}",
+    // Çizgi hedefler (boru hatları); polyline kullanılır, il çizimindeki path kuralları değmez
+    ".place-line-casing{fill:none;stroke:rgba(66,44,14,.5);stroke-width:7;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none;}",
+    ".place-line{fill:none;stroke:#f59e0b;stroke-width:3.5;stroke-dasharray:9 6;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none;}",
+    ".place-line-end{fill:#7c2d12;stroke:#fffaf0;stroke-width:1;pointer-events:none;}",
+    ".place-locked .place-line{stroke:#059669;stroke-dasharray:none;}",
+    ".place-locked .place-line-end{fill:#047857;}",
+    ".place-shown .place-line{stroke:#94a3b8;stroke-dasharray:none;}",
+    ".place-miss .place-line{stroke:#e11d48;stroke-dasharray:none;}",
     ".map-pin{font-size:13px;font-weight:800;paint-order:stroke;stroke:#fffaf0;stroke-width:4px;fill:#0f2a1f;pointer-events:none;}",
     ".map-pin-ok{fill:#064e3b;}",
     ".map-pin-bad{fill:#9f1239;}",
@@ -113,8 +121,24 @@ var paths=s.querySelectorAll("path[id^='TR']");
 for(var pi=0;pi<paths.length;pi++){paths[pi].classList.toggle('map-hl',!!hl[paths[pi].getAttribute('id')]);}
 var g=mk('g',{'class':'topic-dots'});
 var lg=mk('g',{'class':'map-float-labels'});
-var placed=[],legacy=false;
+var placed=[],legacy=false,linePts=[];
+// Çizgiler önce çizilir (noktaların altında kalır)
 (st.pins||[]).forEach(function(p){
+if(!p.line)return;
+var pts=p.line.map(function(q){linePts.push({p:p,x:q[0],y:q[1],ax:q[0],ay:q[1]});return q[0]+','+q[1];}).join(' ');
+var locked=!!(st.placed&&st.placed[p.id]),shown=!!(st.shown&&st.shown[p.id]);
+var cls='topic-mark place-mark place-line-mark';if(locked)cls+=' place-locked';if(shown)cls+=' place-shown';if(st.flash===p.id)cls+=' place-miss';
+var w=mk('g',{'data-pin':p.id,'data-line':pts,'class':cls});
+w.appendChild(mk('polyline',{points:pts,'class':'place-line-casing'}));
+w.appendChild(mk('polyline',{points:pts,'class':'place-line'}));
+var e0=p.line[0],e1=p.line[p.line.length-1];
+w.appendChild(mk('circle',{cx:e0[0],cy:e0[1],r:3,'class':'place-line-end'}));
+w.appendChild(mk('circle',{cx:e1[0],cy:e1[1],r:3,'class':'place-line-end'}));
+g.appendChild(w);
+if(locked&&st.lastId===p.id){var lt=mk('text',{x:p.x,y:Number(p.y)-12,'class':'map-pin map-pin-ok','text-anchor':'middle'});lt.textContent=p.label||p.name||'';lg.appendChild(lt);}
+});
+(st.pins||[]).forEach(function(p){
+if(p.line)return;
 var x=Number(p.x)||0,y=Number(p.y)||0;
 if(!(x>0&&y>0)&&p.code){var c=centerOf(s.querySelector("[id='"+String(p.code)+"']"));if(c){x=c.x;y=c.y;}}
 var hasA=p.ax!=null&&p.ay!=null;if(!hasA)legacy=true;
@@ -144,7 +168,7 @@ var ico=mk('text',{x:x,y:y,'class':'topic-ico','text-anchor':'middle','dominant-
 ico.textContent=p.glyph||st.glyph||'📍';w.appendChild(ico);}
 w.appendChild(mk('circle',{cx:x,cy:y,r:20,'class':'topic-hit'}));
 g.appendChild(w);
-if(st.place&&locked&&st.lastId===p.id){var t=mk('text',{x:x,y:y-16,'class':'map-pin map-pin-ok','text-anchor':'middle'});t.textContent=p.name||'';lg.appendChild(t);}
+if(st.place&&locked&&st.lastId===p.id){var t=mk('text',{x:x,y:y-16,'class':'map-pin map-pin-ok','text-anchor':'middle'});t.textContent=p.label||p.name||'';lg.appendChild(t);}
 });
 (st.labels||[]).forEach(function(row){
 var x=row.x,y=row.y;
@@ -152,7 +176,7 @@ if(row.id){var mark=s.querySelector("[data-pin='"+row.id+"']");if(mark){x=mark.g
 var t=mk('text',{x:x,y:Number(y)-18,'class':'map-pin map-pin-'+(row.kind||'done'),'text-anchor':'middle'});
 t.textContent=row.text||'';lg.appendChild(t);
 });
-if(st.place&&placed.length)fitTo(placed,false);
+if(st.place&&(placed.length||linePts.length))fitTo(placed.concat(linePts),false);
 s.appendChild(g);s.appendChild(lg);
 };
 // Kap boyutu değişince (döndürme, bölünmüş ekran) haritayı yeniden sığdır; WebView yeniden kurulmaz.
@@ -203,16 +227,26 @@ if(ev.target&&ev.target.closest&&ev.target.closest('.zoom-tools'))return;
 var px=ev.clientX,py=ev.clientY;
 if(lastTouch&&Date.now()-lastTouch.t<1000){px=lastTouch.x;py=lastTouch.y;}
 lastTouch=null;
-var best=null,bestD=1e9;
+var best=null,bestD=1e9,targetLine=null;
 var marks=document.querySelectorAll('[data-pin]');
+var sv=document.querySelector('svg'),ctm=sv&&sv.getScreenCTM?sv.getScreenCTM():null,spt=ctm?sv.createSVGPoint():null;
 for(var mi=0;mi<marks.length;mi++){
+var raw=marks[mi].getAttribute('data-line');
+// Çizgi: parmağın çizgiye ekran pikseli cinsinden uzaklığı; aynı yoldan geçen hatlarda sorulan hat öncelikli
+if(raw&&spt){var lp=raw.split(' ').map(function(q){var c=q.split(',');spt.x=Number(c[0]);spt.y=Number(c[1]);var r=spt.matrixTransform(ctm);return[r.x,r.y];});
+var ld=1e9;for(var li=1;li<lp.length;li++){var ax=lp[li-1][0],ay=lp[li-1][1],dx=lp[li][0]-ax,dy=lp[li][1]-ay,len=dx*dx+dy*dy;
+var tt=len?Math.max(0,Math.min(1,((px-ax)*dx+(py-ay)*dy)/len)):0;var ex=ax+dx*tt-px,ey=ay+dy*tt-py;ld=Math.min(ld,Math.sqrt(ex*ex+ey*ey));}
+var lid=marks[mi].getAttribute('data-pin');
+if(ld<=22&&lastPlay&&lastPlay.targetId===lid&&!(lastPlay.placed&&lastPlay.placed[lid]))targetLine=marks[mi];
+if(ld<=22&&ld<bestD){bestD=ld;best=marks[mi];}
+continue;}
 var well=marks[mi].querySelector('.place-well')||marks[mi].querySelector('.topic-hit')||marks[mi];
 var mr=well.getBoundingClientRect();
 var mcx=mr.left+mr.width/2,mcy=mr.top+mr.height/2;
 var md=Math.sqrt((mcx-px)*(mcx-px)+(mcy-py)*(mcy-py));
 var reach=Math.max(26,mr.width*1.1);
 if(md<=reach&&md<bestD){bestD=md;best=marks[mi];}}
-var mark=best||(ev.target.closest?ev.target.closest('[data-pin]'):null);
+var mark=targetLine||best||(ev.target.closest?ev.target.closest('[data-pin]'):null);
 if(mark){post({type:'pin',id:mark.getAttribute('data-pin')});return;}
 var id=provinceAt(px,py);
 if(id)post({type:'province',id:id});

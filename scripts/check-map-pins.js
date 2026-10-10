@@ -74,6 +74,26 @@ Q.ITEMS.forEach(function (it) {
     } else if (!it.mcq) {
         errors.push(it.topic + " / " + it.name + ": cevap ili yok (yer adı tanınmadı)");
     }
+    // Çizgi hedef: güzergâhın geçtiği iller ile cevap illeri birebir aynı olmalı
+    if (it.path) {
+        var crossed = {};
+        for (var si = 0; si < it.path.length - 1; si++) {
+            var pa = it.path[si], pb = it.path[si + 1];
+            var steps = Math.ceil(Math.hypot(pb[0] - pa[0], pb[1] - pa[1]) / 0.7);
+            for (var k = 0; k <= steps; k++) {
+                var c = provinceAt(pa[0] + (pb[0] - pa[0]) * k / steps, pa[1] + (pb[1] - pa[1]) * k / steps);
+                if (c) crossed[c] = true;
+            }
+        }
+        var want = {};
+        it.codes.forEach(function (c) { want[c] = true; });
+        Object.keys(crossed).forEach(function (c) {
+            if (!want[c]) errors.push(it.topic + " / " + it.name + ": çizgi " + Q.nameOf(c) + " ilinden geçiyor ama cevapta yok");
+        });
+        it.codes.forEach(function (c) {
+            if (!crossed[c]) errors.push(it.topic + " / " + it.name + ": cevaptaki " + Q.nameOf(c) + " çizginin üstünde değil");
+        });
+    }
     var f = it.follow;
     if (f) {
         if (!f.q || !Array.isArray(f.choices) || f.choices.indexOf(f.answer) < 0) {

@@ -680,6 +680,34 @@ SCENES.yht = function (s) {
     for (var p = 60; p < W; p += 160) s.add('<rect x="' + p + '" y="186" width="3" height="46" fill="#64748b"/>');
 };
 
+SCENES["demiryolu-kapi"] = function (s) {
+    sky(s, "#8cc3ea", "#f3efe3");
+    cloud(s, 760, 70, 0.8);
+    peak(s, 160, 120, 280, 200, "#7d8f7a", "#eef2ee", "#6c7e69");
+    peak(s, 820, 110, 300, 210, "#7d8f7a", "#eef2ee", "#6c7e69");
+    s.add('<polygon points="0,290 960,290 960,400 0,400" fill="#9bb07a"/>');
+    // ray yatağı ve raylar (perspektif)
+    s.add('<polygon points="330,400 630,400 520,290 440,290" fill="#a39684"/>');
+    for (var i = 0; i < 12; i++) {
+        var t = i / 12;
+        var y = 400 - t * 110;
+        var x0 = 330 + t * 110;
+        var x1 = 630 - t * 110;
+        s.add('<line x1="' + f(x0) + '" y1="' + f(y) + '" x2="' + f(x1) + '" y2="' + f(y) + '" stroke="#6b4b33" stroke-width="' + f(7 - t * 5) + '"/>');
+    }
+    s.add('<line x1="380" y1="400" x2="462" y2="290" stroke="#8a8f96" stroke-width="5"/><line x1="580" y1="400" x2="498" y2="290" stroke="#8a8f96" stroke-width="5"/>');
+    // sınır kapısı kemeri
+    s.add('<g><rect x="360" y="170" width="26" height="130" fill="#e5e1d8"/><rect x="574" y="170" width="26" height="130" fill="#e5e1d8"/>' +
+        '<rect x="346" y="150" width="268" height="34" rx="4" fill="#1e3a5f"/><rect x="356" y="160" width="248" height="4" fill="#f8fafc" opacity="0.8"/><rect x="356" y="170" width="150" height="4" fill="#f8fafc" opacity="0.8"/></g>');
+    // bayraklar
+    s.add('<g><rect x="300" y="110" width="4" height="190" fill="#475569"/><rect x="304" y="112" width="52" height="34" fill="#e30a17"/><circle cx="324" cy="129" r="9" fill="#ffffff"/><circle cx="327" cy="129" r="7.4" fill="#e30a17"/><polygon points="337,129 331,126.2 333,131.8 333,126.2 331,131.8" fill="#ffffff"/></g>');
+    s.add('<g><rect x="656" y="110" width="4" height="190" fill="#475569"/><rect x="660" y="112" width="52" height="11" fill="#ffffff"/><rect x="660" y="123" width="52" height="12" fill="#2f8f4e"/><rect x="660" y="135" width="52" height="11" fill="#d62612"/></g>');
+    // bariyer
+    s.add('<g transform="translate(610,284)"><rect x="-4" y="-4" width="8" height="20" fill="#555"/><rect x="0" y="-8" width="120" height="8" fill="#ffffff"/><rect x="20" y="-8" width="20" height="8" fill="#e11d48"/><rect x="60" y="-8" width="20" height="8" fill="#e11d48"/><rect x="100" y="-8" width="20" height="8" fill="#e11d48"/></g>');
+    // yaklaşan lokomotif
+    s.add('<g transform="translate(480,262)"><rect x="-26" y="-34" width="52" height="34" rx="6" fill="#c2410c"/><rect x="-18" y="-28" width="36" height="12" rx="2" fill="#1e293b"/><circle cx="-14" cy="-8" r="4" fill="#fde68a"/><circle cx="14" cy="-8" r="4" fill="#fde68a"/><rect x="-26" y="-4" width="52" height="6" fill="#334155"/></g>');
+};
+
 // Kartlar çok geniş ve alçak (≈6:1); her sahnenin görünmesi gereken 240 px'lik bandının üst kenarı.
 var BAND = 240;
 var BAND_TOP = {
@@ -689,7 +717,7 @@ var BAND_TOP = {
     karst: 150, akarsu: 160, goller: 80, havza: 140, kiyi: 150, gecit: 90,
     yagis: 90, mikro: 160, bitki: 160, toprak: 110, tarim: 150, hayvan: 160,
     "nufus-seyrek": 150, "nufus-yogun": 110, demiryolu: 150, liman: 90, maden: 150, sanayi: 110,
-    boru: 150, hes: 120, transit: 150, yht: 100
+    boru: 150, hes: 120, transit: 150, yht: 100, "demiryolu-kapi": 92
 };
 
 // ---------- çıktı ----------

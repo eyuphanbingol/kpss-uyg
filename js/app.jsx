@@ -2082,6 +2082,7 @@ function MapPlay(props) {
         setFlash(null);
         setHit(null);
         setDone(false);
+        lastRef.current = null;
         zoomRef.current = { s: 1, x: 0, y: 0 };
         fitKeyRef.current = "";
         if (hostRef.current) hostRef.current.style.transform = "translate(0px, 0px) scale(1)";
@@ -2199,20 +2200,49 @@ function MapPlay(props) {
         setIdx(i);
     }
 
-    // Dokunulan noktaya en yakın pini seç: üst üste binen hedeflerde yanlış pine gitmesin.
+    // Dokunulan noktaya en yakın hedefi seç: üst üste binen hedeflerde yanlış pine gitmesin.
+    // Çizgilerde (boru hatları) parmağın çizgiye ekran pikseli cinsinden uzaklığı ölçülür; birden çok
+    // hat aynı yoldan geçiyorsa (ör. Ardahan'da BTC/BTE/TANAP) sorulan hat dokunuşa yetişiyorsa o seçilir.
     function nearestPin(x, y) {
         var host = hostRef.current;
         if (!host) return null;
-        var best = null, bestD = Infinity;
+        var svg = host.querySelector("svg");
+        var ctm = svg && svg.getScreenCTM ? svg.getScreenCTM() : null;
+        var pt = ctm ? svg.createSVGPoint() : null;
+        function toScreen(px, py) {
+            pt.x = px; pt.y = py;
+            var q = pt.matrixTransform(ctm);
+            return [q.x, q.y];
+        }
+        function segDist(a, b) {
+            var dx = b[0] - a[0], dy = b[1] - a[1];
+            var len = dx * dx + dy * dy;
+            var t = len ? Math.max(0, Math.min(1, ((x - a[0]) * dx + (y - a[1]) * dy) / len)) : 0;
+            var cx = a[0] + dx * t - x, cy = a[1] + dy * t - y;
+            return Math.sqrt(cx * cx + cy * cy);
+        }
+        var t = targetRef.current;
+        var best = null, bestD = Infinity, targetLineHit = false;
         Array.prototype.forEach.call(host.querySelectorAll("[data-pin]"), function (n) {
-            var ring = n.querySelector(".place-well") || n;
-            var r = ring.getBoundingClientRect();
-            var cx = r.left + r.width / 2, cy = r.top + r.height / 2;
-            var d = Math.sqrt((cx - x) * (cx - x) + (cy - y) * (cy - y));
-            var reach = Math.max(24, r.width * 1.1);
-            if (d <= reach && d < bestD) { bestD = d; best = n.getAttribute("data-pin"); }
+            var id = n.getAttribute("data-pin");
+            var raw = n.getAttribute("data-line");
+            var d, reach;
+            if (raw && pt) {
+                var pts = raw.split(" ").map(function (p) { var c = p.split(","); return toScreen(Number(c[0]), Number(c[1])); });
+                d = Infinity;
+                for (var i = 1; i < pts.length; i++) d = Math.min(d, segDist(pts[i - 1], pts[i]));
+                reach = 22;
+                if (d <= reach && t && id === t.id && !solvedRef.current[id]) targetLineHit = true;
+            } else {
+                var ring = n.querySelector(".place-well") || n;
+                var r = ring.getBoundingClientRect();
+                var cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+                d = Math.sqrt((cx - x) * (cx - x) + (cy - y) * (cy - y));
+                reach = Math.max(24, r.width * 1.1);
+            }
+            if (d <= reach && d < bestD) { bestD = d; best = id; }
         });
-        return best;
+        return targetLineHit ? t.id : best;
     }
 
     function answer(pinId) {
@@ -2281,8 +2311,28 @@ function MapPlay(props) {
             return n;
         }
         var dots = mk("g", { "class": "topic-dots" });
-        pins.forEach(function (pin) {
+        // Önce çizgiler, üstüne noktalar (çizgi noktaların dokunuşunu örtmesin)
+        pins.slice().sort(function (a, b) { return (b.line ? 1 : 0) - (a.line ? 1 : 0); }).forEach(function (pin) {
             var state = solved[pin.id];
+            if (pin.line) {
+                var pts = pin.line.map(function (q) { return q[0] + "," + q[1]; }).join(" ");
+                var lw = mk("g", {
+                    "data-pin": pin.id,
+                    "data-line": pts,
+                    "class": "topic-mark place-mark place-line-mark"
+                        + (state === "ok" ? " place-ok" : "")
+                        + (state === "shown" ? " place-shown" : "")
+                        + (flash === pin.id ? " place-miss" : "")
+                        + (hit === pin.id ? " place-hit" : "")
+                });
+                lw.appendChild(mk("polyline", { points: pts, "class": "place-line-casing" }));
+                lw.appendChild(mk("polyline", { points: pts, "class": "place-line" }));
+                var a0 = pin.line[0], a1 = pin.line[pin.line.length - 1];
+                lw.appendChild(mk("circle", { cx: a0[0], cy: a0[1], r: 3, "class": "place-line-end" }));
+                lw.appendChild(mk("circle", { cx: a1[0], cy: a1[1], r: 3, "class": "place-line-end" }));
+                dots.appendChild(lw);
+                return;
+            }
             var wrap = mk("g", {
                 "data-pin": pin.id,
                 "class": "topic-mark place-mark"
@@ -2321,6 +2371,7 @@ function MapPlay(props) {
                 var pad = 50;
                 var xs = pins.map(function (p) { return p.x; }).concat(pins.map(function (p) { return p.ax; }));
                 var ys = pins.map(function (p) { return p.y; }).concat(pins.map(function (p) { return p.ay; }));
+                pins.forEach(function (p) { (p.line || []).forEach(function (q) { xs.push(q[0]); ys.push(q[1]); }); });
                 var mnx = Math.min.apply(null, xs) - pad, mxx = Math.max.apply(null, xs) + pad;
                 var mny = Math.min.apply(null, ys) - pad, mxy = Math.max.apply(null, ys) + pad;
                 var sFit = Math.min(W / ((mxx - mnx) * k), H / ((mxy - mny) * k));
@@ -2347,7 +2398,7 @@ function MapPlay(props) {
             t.setAttribute("y", String(pin.y - 16));
             t.setAttribute("class", "map-pin " + (state === "ok" ? "map-pin-ok" : "map-pin-done"));
             t.setAttribute("font-size", "14");
-            t.textContent = pin.name;
+            t.textContent = pin.label || pin.name;
             labels.appendChild(t);
         });
         svg.appendChild(labels);
@@ -2423,6 +2474,11 @@ function MapPlay(props) {
     }
 
     var okCount = Object.keys(solved).filter(function (id) { return solved[id] === "ok"; }).length;
+    // Son işaretlenen hedef: nerede olduğu (il adı) cevap kutusunda yazılır.
+    var lastItem = null;
+    if (lastRef.current && solved[lastRef.current]) {
+        round.items.forEach(function (it) { if (it.id === lastRef.current) lastItem = it; });
+    }
     var pctBar = total ? Math.round((Object.keys(solved).length / total) * 100) : 0;
     return (
         <div className="map-play-root map-place">
@@ -2451,7 +2507,15 @@ function MapPlay(props) {
                 </div>
             )}
             <footer className="map-play-foot map-ask">
-                <p className="map-ask-kicker">Haritada bul ve dokun</p>
+                {lastItem ? (
+                    <p className={"map-ask-found " + (solved[lastItem.id] === "ok" ? "is-ok" : "is-shown")} aria-live="polite">
+                        <span aria-hidden="true">{solved[lastItem.id] === "ok" ? "✓" : "•"}</span>
+                        <b>{lastItem.name}</b>
+                        <span className="map-ask-found-arrow" aria-hidden="true">→</span>
+                        <span>{quiz.placeLabel ? quiz.placeLabel(lastItem) : ""}</span>
+                    </p>
+                ) : null}
+                <p className="map-ask-kicker">{target && target.line ? "Haritada hattı bul, çizgiye dokun" : "Haritada bul ve dokun"}</p>
                 <p className="map-ask-name">{target ? target.name : ""}</p>
                 {target && target.prompt ? <p className="map-ask-hint">{target.prompt}</p> : null}
                 <div className="map-ask-actions">

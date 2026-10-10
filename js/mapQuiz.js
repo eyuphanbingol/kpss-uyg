@@ -431,7 +431,27 @@
         "Zeytinyağı": [27.5, 38],
         "Zımpara: Aydın–Alanya": [28.5, 37.5],
         "Zigana Geçidi": [39.4, 40.65],
-        "Zonguldak masifi": [31.79, 41.46]
+        "Zonguldak masifi": [31.79, 41.46],
+        "YHT: Ankara Garı": [32.85, 39.94],
+        "YHT: Polatlı": [32.15, 39.58],
+        "YHT: Eskişehir": [30.52, 39.78],
+        "YHT: Bozüyük": [30.04, 39.91],
+        "YHT: Bilecik": [29.98, 40.14],
+        "YHT: Arifiye (Sakarya)": [30.37, 40.71],
+        "YHT: İzmit": [29.92, 40.77],
+        "YHT: Gebze": [29.43, 40.8],
+        "YHT: Pendik–Halkalı (İstanbul)": [29.2, 40.94],
+        "YHT: Kırıkkale": [33.52, 39.85],
+        "YHT: Yerköy": [34.47, 39.64],
+        "YHT: Yozgat": [34.8, 39.82],
+        "YHT: Akdağmadeni": [35.88, 39.66],
+        "Kapıkule (Bulgaristan)": [26.48, 41.71],
+        "Uzunköprü (Yunanistan)": [26.69, 41.27],
+        "Doğu Kapı (Ermenistan, kapalı)": [43.4, 40.75],
+        "BTK hattı (Gürcistan)": [43.1, 41.1],
+        "Nusaybin (Suriye)": [41.22, 37.07],
+        "Çobanbey (Suriye)": [37.2, 36.7],
+        "İslahiye (Suriye)": [36.63, 37.03]
     };
 
     var TREE = [
@@ -505,7 +525,8 @@
                 { id: "boru", title: "Enerji boru hatları", icon: "🛢️", hoverImg: "img/map/kart/boru.svg" },
                 { id: "hes", title: "HES, santral ve enerji", icon: "⚡", hoverImg: "img/map/kart/hes.svg" },
                 { id: "transit", title: "Transit ticaret yolları", icon: "🚛", hoverImg: "img/map/kart/transit.svg" },
-                { id: "yht", title: "YHT ve demiryolu kapıları", icon: "🚄", hoverImg: "img/map/kart/yht.svg" }
+                { id: "yht", title: "Yüksek hızlı tren (YHT) durakları", icon: "🚄", hoverImg: "img/map/kart/yht.svg" },
+                { id: "demiryolu-kapi", title: "Demiryolu sınır kapıları", icon: "🛤️", hoverImg: "img/map/kart/demiryolu-kapi.svg" }
             ]
         }
     ];
@@ -571,7 +592,8 @@
             follow: extra.follow || null,
             mcq: extra.mcq || false,
             choices: extra.choices || null,
-            answer: extra.answer || null
+            answer: extra.answer || null,
+            line: extra.line || null
         };
     }
 
@@ -866,7 +888,9 @@
         ["Gaziantep ve çevresi", "Gaziantep", null]
     ].forEach(function (r) { ITEMS.push(F("nufus-yogun", r[0], r[1], r[2] || {})); });
 
-    ["Antalya", "Muğla", "Sinop", "Trabzon", "Giresun", "Rize", "Ordu", "Çanakkale", "Hakkâri", "Şırnak", "Kastamonu", "Nevşehir"].forEach(function (il) {
+    // Demiryolu bağlantısı olmayan 23 il (BTK hattı Ardahan'dan, Kilis ve Adıyaman'dan da hat geçer).
+    ["Antalya", "Muğla", "Çanakkale", "Yalova", "Bolu", "Düzce", "Bartın", "Kastamonu", "Sinop", "Ordu", "Giresun", "Trabzon",
+        "Rize", "Artvin", "Gümüşhane", "Bayburt", "Iğdır", "Hakkâri", "Şırnak", "Tunceli", "Kırşehir", "Nevşehir", "Aksaray"].forEach(function (il) {
         var extra = { prompt: il + " ilini bul. ÖSYM: buraya demiryolu ile ulaşılamaz." };
         if (il === "Antalya") extra.follow = { q: "Hangisi demiryolu bağlantısı olmayan kıyı kentlerindendir?", choices: ["İzmir", "Samsun", "Antalya", "Mersin"], answer: "Antalya" };
         ITEMS.push(F("demiryolu", il + " (demiryolu yok)", il, extra));
@@ -943,13 +967,18 @@
         ["Gemi: Tuzla / Pendik", "İstanbul"]
     ].forEach(function (r) { ITEMS.push(F("sanayi", r[0], r[1], r[2] || {})); });
 
+    // Boru hatları çizgi olarak sorulur: line = [boylam, enlem] güzergâh noktaları; geçtiği iller
+    // çizgi il sınırlarıyla kesiştirilerek bulundu (scripts/check-map-pins.js aynı kontrolü yapar).
     [
-        ["BTC (Bakü–Tiflis–Ceyhan)", "Adana-Hatay", { prompt: "BTC'nin deniz terminali Ceyhan/İskenderun yöresini bul." }],
-        ["TANAP güzergâhı", "Ardahan-Kars-Erzurum-Bayburt-Gümüşhane-Giresun-Erzincan-Sivas-Yozgat-Kırşehir-Kırıkkale-Ankara-Eskişehir-Bilecik-Kütahya-Bursa-Balıkesir-Çanakkale-Edirne", { prompt: "TANAP'ın geçtiği bir ili bul." }],
-        ["Mavi Akım (Samsun)", "Samsun", { prompt: "Mavi Akım'ın karaya çıktığı Samsun'u bul." }],
-        ["TürkAkım (Kıyıköy / Trakya)", "Kırklareli-Tekirdağ", { prompt: "TürkAkım'ın Trakya girişini bul." }],
-        ["Kerkük–Yumurtalık (Adana)", "Adana", { prompt: "Irak petrolünün Akdeniz çıkışını (Yumurtalık/Ceyhan yöresi) bul." }],
-        ["BTE (Bakü–Tiflis–Erzurum)", "Erzurum", { prompt: "Azerbaycan gazının Erzurum hattını bul." }]
+        ["Bakü–Tiflis–Ceyhan (BTC)", "Ardahan-Kars-Erzurum-Erzincan-Sivas-Kayseri-Adana-Kahramanmaraş-Osmaniye", { prompt: "Azerbaycan ham petrolünü Akdeniz'e taşıyan BTC hattının çizgisine dokun.", follow: { q: "BTC boru hattının Akdeniz'e ulaştığı Ceyhan terminali hangi ildedir?", choices: ["Mersin", "Adana", "Hatay", "Osmaniye"], answer: "Adana" }, line: [[42.8,41.5], [42.72,41.12], [42.95,40.62], [42.2,40.12], [41.27,39.86], [40.3,39.66], [39.5,39.68], [38.6,39.42], [37.6,39.05], [36.9,38.75], [36.45,38.45], [36.6,38], [36.9,37.6], [36.3,37.2], [36.1,37.08], [35.9,36.98], [35.83,36.9]] }],
+        ["Bakü–Tiflis–Erzurum (BTE)", "Ardahan-Erzurum", { prompt: "Şahdeniz doğal gazını Erzurum'a getiren BTE hattının çizgisine dokun.", line: [[42.68,41.53], [42.62,41.18], [42.35,40.78], [41.95,40.38], [41.27,39.97]] }],
+        ["TANAP", "Ardahan-Kars-Erzurum-Bayburt-Gümüşhane-Giresun-Sivas-Yozgat-Kırşehir-Kırıkkale-Ankara-Eskişehir-Bilecik-Kütahya-Bursa-Balıkesir-Çanakkale-Edirne", { prompt: "Azerbaycan gazını Ardahan'dan Edirne'ye taşıyan TANAP'ın çizgisine dokun.", follow: { q: "TANAP, Avrupa'ya giden TAP hattına hangi ilde bağlanır?", choices: ["Kırklareli", "Edirne", "Tekirdağ", "Çanakkale"], answer: "Edirne" }, line: [[42.58,41.47], [42.52,41.05], [42.78,40.72], [42,40.32], [41.1,40.08], [40.25,40.24], [39.5,40.32], [38.4,40.27], [37.3,39.97], [36.2,39.75], [35,39.55], [34.1,39.3], [33.55,39.62], [32.6,39.52], [31.6,39.58], [30.6,39.66], [29.9,39.72], [29,39.98], [28,40.03], [27.1,40.18], [26.65,40.4], [26.5,40.75], [26.38,40.93]] }],
+        ["Mavi Akım", "Samsun-Amasya-Çorum-Kırıkkale-Ankara", { prompt: "Rus gazını Karadeniz'in altından Samsun'a, oradan Ankara'ya getiren Mavi Akım'a dokun.", follow: { q: "Mavi Akım doğal gaz hattı Karadeniz'den hangi ilde karaya çıkar?", choices: ["Kırklareli", "Samsun", "Sinop", "Trabzon"], answer: "Samsun" }, line: [[36.25,42.05], [36.33,41.32], [35.6,40.9], [34.95,40.5], [34.2,40.1], [33.5,39.92], [32.85,39.9]] }],
+        ["TürkAkım", "Kırklareli", { prompt: "Rus gazını Kıyıköy'den Trakya'ya getiren TürkAkım'a dokun.", follow: { q: "TürkAkım'ın karaya çıktığı Kıyıköy hangi ildedir?", choices: ["Tekirdağ", "Kırklareli", "İstanbul", "Edirne"], answer: "Kırklareli" }, line: [[28.9,41.85], [28.06,41.63], [27.6,41.45], [27.35,41.4], [27.05,41.75], [26.98,41.95]] }],
+        ["Kerkük–Yumurtalık", "Şırnak-Mardin-Şanlıurfa-Gaziantep-Osmaniye-Hatay-Adana", { prompt: "Irak ham petrolünü Yumurtalık'a taşıyan hattın çizgisine dokun.", follow: { q: "Kerkük–Yumurtalık boru hattıyla Türkiye'ye taşınan kaynak hangisidir?", choices: ["Doğal gaz", "Ham petrol", "Sıvılaştırılmış gaz (LNG)", "Taş kömürü"], answer: "Ham petrol" }, line: [[42.4,37.12], [41.6,37.12], [40.6,37.15], [39.5,37.1], [38.8,37.07], [37.9,37], [37.3,37.12], [36.6,37.12], [36.15,37], [35.95,36.9], [35.79,36.8]] }],
+        ["Batman–Dörtyol", "Batman-Diyarbakır-Şanlıurfa-Gaziantep-Osmaniye-Hatay", { prompt: "Yerli ham petrolü Batman'dan Dörtyol'a taşıyan hattın çizgisine dokun.", follow: { q: "Batman–Dörtyol boru hattının Akdeniz kıyısındaki ucu hangi ildedir?", choices: ["Adana", "Hatay", "Mersin", "Osmaniye"], answer: "Hatay" }, line: [[41.13,37.88], [40.2,37.8], [39.3,37.75], [38,37.25], [37.4,37.18], [36.75,37.07], [36.35,36.97], [36.22,36.85]] }],
+        ["İran–Türkiye (Tebriz–Erzurum–Ankara)", "Ağrı-Erzurum-Erzincan-Sivas-Kayseri-Yozgat-Nevşehir-Kırşehir-Kırıkkale-Ankara", { prompt: "İran doğal gazını Doğubayazıt'tan Ankara'ya getiren hattın çizgisine dokun.", follow: { q: "İran doğal gaz hattı Türkiye'ye hangi ilden girer?", choices: ["Van", "Ağrı", "Hakkâri", "Iğdır"], answer: "Ağrı" }, line: [[44.25,39.5], [43.1,39.72], [42,39.82], [41.27,39.92], [40,39.62], [38.8,39.5], [37.4,39.62], [37,39.72], [36.2,39.25], [35.48,38.8], [34.9,39.2], [34.2,39.42], [33.6,39.58], [32.85,39.86]] }],
+        ["Rusya–Türkiye Batı Hattı", "Kırklareli-Tekirdağ-İstanbul-Kocaeli-Bursa-Bilecik-Eskişehir-Ankara", { prompt: "Rus gazını Bulgaristan üzerinden Malkoçlar'dan getiren Batı Hattı'na dokun.", line: [[26.92,41.98], [27.35,41.42], [28,41.1], [28.7,41.02], [29.3,40.9], [29.9,40.77], [29.4,40.42], [29.9,40.12], [30.6,39.82], [31.6,39.78], [32.85,39.95]] }]
     ].forEach(function (r) { ITEMS.push(F("boru", r[0], r[1], r[2])); });
 
     [
@@ -981,18 +1010,38 @@
         ["Kapıkule Sınır Kapısı", "Edirne", { prompt: "Avrupa çıkışlı Kapıkule'yi (Edirne) bul." }]
     ].forEach(function (r) { ITEMS.push(F("transit", r[0], r[1], r[2] || {})); });
 
+    // Hizmetteki YHT / hızlı tren durakları: Ankara–Eskişehir (2009), Ankara–Konya (2011),
+    // Ankara–İstanbul (2014), Konya–Karaman (2022), Ankara–Sivas (2023).
     [
-        ["İlk YHT: Ankara–Eskişehir", "Ankara-Eskişehir", { follow: { q: "İlk YHT hattı hangisidir?", choices: ["Ankara–Erzurum", "Ankara–Eskişehir", "İzmir–Aydın", "Konya–Karaman"], answer: "Ankara–Eskişehir" } }],
-        ["YHT: Konya", "Konya"],
-        ["YHT: Sivas", "Sivas"],
-        ["YHT: Karaman", "Karaman"],
-        ["Kapıkule (demiryolu / BG)", "Edirne", { follow: { q: "Bulgaristan demiryolu kapısı?", choices: ["Kapıköy", "Kapıkule", "Akyaka", "Canbaz"], answer: "Kapıkule" } }],
-        ["Uzunköprü (demiryolu / GR)", "Edirne"],
-        ["BTK hattı (Kars–Gürcistan)", "Kars-Ardahan", { prompt: "Bakü–Tiflis–Kars demiryolunun Gürcistan'a geçtiği yöreyi bul." }],
-        ["Kapıköy (İran)", "Van"],
-        ["Akyaka (Ermenistan, kapalı)", "Kars"],
-        ["Nusaybin (Suriye demiryolu)", "Mardin"]
+        ["YHT: Ankara Garı", "Ankara", { prompt: "Bütün YHT hatlarının buluştuğu Ankara Garı'nı bul." }],
+        ["YHT: Polatlı", "Ankara", { prompt: "Ankara–Eskişehir ve Ankara–Konya hatlarının ayrıldığı Polatlı'yı bul." }],
+        ["YHT: Eskişehir", "Eskişehir", { follow: { q: "Türkiye'de hizmete giren ilk YHT hattı hangisidir?", choices: ["Ankara–Konya", "Ankara–Eskişehir", "Ankara–Sivas", "Konya–Karaman"], answer: "Ankara–Eskişehir" } }],
+        ["YHT: Bozüyük", "Bilecik"],
+        ["YHT: Bilecik", "Bilecik"],
+        ["YHT: Arifiye (Sakarya)", "Sakarya"],
+        ["YHT: İzmit", "Kocaeli"],
+        ["YHT: Gebze", "Kocaeli"],
+        ["YHT: Pendik–Halkalı (İstanbul)", "İstanbul", { follow: { q: "Ankara–İstanbul YHT hattı aşağıdaki illerden hangisinden geçmez?", choices: ["Bilecik", "Sakarya", "Kocaeli", "Bursa"], answer: "Bursa" } }],
+        ["YHT: Konya", "Konya", { follow: { q: "Ankara–Konya YHT hattı hangi yıl hizmete girmiştir?", choices: ["2009", "2011", "2014", "2023"], answer: "2011" } }],
+        ["YHT: Karaman", "Karaman", { prompt: "Konya–Karaman hızlı treninin son durağı Karaman'ı bul." }],
+        ["YHT: Kırıkkale", "Kırıkkale"],
+        ["YHT: Yerköy", "Yozgat"],
+        ["YHT: Yozgat", "Yozgat"],
+        ["YHT: Akdağmadeni", "Yozgat"],
+        ["YHT: Sivas", "Sivas", { follow: { q: "Ankara–Sivas YHT hattı aşağıdaki illerden hangisinden geçmez?", choices: ["Kırıkkale", "Yozgat", "Sivas", "Kayseri"], answer: "Kayseri" } }]
     ].forEach(function (r) { ITEMS.push(F("yht", r[0], r[1], r[2] || {})); });
+
+    // Demiryolu sınır kapıları
+    [
+        ["Kapıkule (Bulgaristan)", "Edirne", { follow: { q: "Bulgaristan'a açılan demiryolu sınır kapısı hangisidir?", choices: ["Kapıköy", "Kapıkule", "Uzunköprü", "Doğu Kapı"], answer: "Kapıkule" } }],
+        ["Uzunköprü (Yunanistan)", "Edirne", { follow: { q: "Yunanistan'a açılan demiryolu sınır kapısı hangisidir?", choices: ["Kapıkule", "Uzunköprü", "İpsala", "Pazarkule"], answer: "Uzunköprü" } }],
+        ["Doğu Kapı (Ermenistan, kapalı)", "Kars", { prompt: "Kars'taki, kapalı Ermenistan demiryolu kapısı Doğu Kapı'yı (Akyaka) bul." }],
+        ["BTK hattı (Gürcistan)", "Kars-Ardahan", { prompt: "Bakü–Tiflis–Kars demiryolunun Gürcistan'a geçtiği yöreyi bul.", follow: { q: "Bakü–Tiflis–Kars demiryolu Türkiye'yi doğrudan hangi ülkeye bağlar?", choices: ["Ermenistan", "Gürcistan", "İran", "Nahçıvan"], answer: "Gürcistan" } }],
+        ["Kapıköy (İran)", "Van", { follow: { q: "İran'a açılan demiryolu sınır kapısı hangisidir?", choices: ["Gürbulak", "Kapıköy", "Esendere", "Habur"], answer: "Kapıköy" } }],
+        ["Nusaybin (Suriye)", "Mardin"],
+        ["Çobanbey (Suriye)", "Kilis"],
+        ["İslahiye (Suriye)", "Gaziantep"]
+    ].forEach(function (r) { ITEMS.push(F("demiryolu-kapi", r[0], r[1], r[2] || {})); });
 
     ITEMS.forEach(function (it, i) { it.id = "m" + i; });
 
@@ -1007,7 +1056,34 @@
         };
     }
 
+    // Çizgi hedefler (boru hatları): güzergâh SVG koordinatına çevrilir; işaret noktası çizginin
+    // uzunluk bakımından ortasıdır (etiket ve ilk yakınlaştırma için).
+    function midOf(pts) {
+        var total = 0, i;
+        for (i = 1; i < pts.length; i++) total += Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]);
+        var half = total / 2;
+        for (i = 1; i < pts.length; i++) {
+            var d = Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]);
+            if (half <= d && d > 0) {
+                var t = half / d;
+                return { x: pts[i - 1][0] + (pts[i][0] - pts[i - 1][0]) * t, y: pts[i - 1][1] + (pts[i][1] - pts[i - 1][1]) * t };
+            }
+            half -= d;
+        }
+        return { x: pts[0][0], y: pts[0][1] };
+    }
+
     ITEMS.forEach(function (it) {
+        if (it.line && it.line.length > 1) {
+            it.path = it.line.map(function (ll) {
+                var q = project(ll[0], ll[1]);
+                return [Math.round(q.x * 10) / 10, Math.round(q.y * 10) / 10];
+            });
+            var mid = midOf(it.path);
+            it.x = mid.x;
+            it.y = mid.y;
+            return;
+        }
         var ll = ITEM_LL[it.name];
         if (!ll && it.codes && it.codes[0]) ll = PROVINCE_LL[it.codes[0]];
         if (!ll) ll = [35.2, 39.0];
@@ -1047,6 +1123,31 @@
     function answerLabel(item) {
         if (item.codes && item.codes.length) return item.codes.map(nameOf).join(" / ");
         return (REGION_LABEL[item.region] || item.region || "") + " bölgesi";
+    }
+
+    // Doğru bilinen (ya da gösterilen) hedefin nerede olduğu: "Sivas · İç Anadolu Bölgesi".
+    // Çizgilerde geçtiği iller sırayla yazılır; birden çok ilde ise iller yan yana.
+    function placeLabel(item) {
+        if (!item) return "";
+        var codes = resolveCodes(item);
+        if (!codes.length) return answerLabel(item);
+        var names = codes.map(nameOf);
+        if (item.line) return names.join(" – ");
+        var regions = [];
+        codes.forEach(function (c) {
+            var r = REGION_LABEL[regionOfCode(c)];
+            if (r && regions.indexOf(r) < 0) regions.push(r);
+        });
+        return names.join(" / ") + (regions.length === 1 ? " · " + regions[0] + " Bölgesi" : "");
+    }
+
+    // Haritadaki kısa etiket: tek ilde "Divriği · Sivas", çizgide yalnız ad.
+    function mapLabel(item) {
+        if (!item) return "";
+        var codes = resolveCodes(item);
+        if (item.line || codes.length !== 1) return item.name;
+        var il = nameOf(codes[0]);
+        return fold(item.name).indexOf(fold(il)) >= 0 ? item.name : (item.name + " · " + il);
     }
 
     function focusCodes(topicId) {
@@ -1219,6 +1320,7 @@
         if (t === "hes") return "⚡";
         if (t === "transit") return "🚛";
         if (t === "yht") return "🚄";
+        if (t === "demiryolu-kapi") return "🛤️";
         if (t === "demiryolu") return "🚫";
         if (t === "nufus-seyrek") return "🏕️";
         if (t === "nufus-yogun") return "🏙️";
@@ -1238,6 +1340,9 @@
         minD = minD || 24;
         var n, i, j;
         pins.forEach(function (p) { p.ax = p.x; p.ay = p.y; });
+        // Çizgiler yerinde kalır; yalnız noktasal işaretler birbirinden ayrılır.
+        var all = pins;
+        pins = pins.filter(function (p) { return !p.line; });
         for (n = 0; n < 80; n++) {
             var moved = false;
             for (i = 0; i < pins.length; i++) {
@@ -1275,7 +1380,7 @@
             var ox = p.x - p.ax, oy = p.y - p.ay;
             p.off = Math.sqrt(ox * ox + oy * oy) > 2.5;
         });
-        return pins;
+        return all;
     }
 
     function jitterPins(pins) {
@@ -1328,14 +1433,17 @@
     }
 
     function pinOf(it) {
-        return {
+        var p = {
             id: it.id,
             name: it.name,
             x: it.x,
             y: it.y,
             codes: resolveCodes(it).slice(),
-            glyph: it.glyph || itemGlyph(it)
+            glyph: it.glyph || itemGlyph(it),
+            label: mapLabel(it)
         };
+        if (it.path) p.line = it.path;
+        return p;
     }
 
     function topicLayerFromSvg(svg, topicId) {
@@ -1366,6 +1474,8 @@
         focusCodes: focusCodes,
         nameOf: nameOf,
         answerLabel: answerLabel,
+        placeLabel: placeLabel,
+        mapLabel: mapLabel,
         tapChoices: tapChoices,
         isTapCorrect: isTapCorrect,
         countFor: countFor,

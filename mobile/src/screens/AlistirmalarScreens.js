@@ -51,7 +51,8 @@ var MAP_CARD_IMG = {
     boru: require("../../assets/map/boru.png"),
     hes: require("../../assets/map/hes.png"),
     transit: require("../../assets/map/transit.png"),
-    yht: require("../../assets/map/yht.png")
+    yht: require("../../assets/map/yht.png"),
+    "demiryolu-kapi": require("../../assets/map/demiryolu-kapi.png")
 };
 
 export function AlistirmalarHomeScreen({ navigation }) {
@@ -540,6 +541,9 @@ export function MapPlayScreen({ route, navigation }) {
     }
 
     var okCount = Object.keys(solved).filter(function (id) { return !shown[id]; }).length;
+    // Son işaretlenen hedef: nerede olduğu (il adı) cevap kutusunda yazılır.
+    var lastItem = null;
+    if (lastId && solved[lastId]) items.forEach(function (it) { if (it.id === lastId) lastItem = it; });
 
     if (done) {
         var pct = total ? Math.round((okCount / total) * 100) : 0;
@@ -602,14 +606,27 @@ export function MapPlayScreen({ route, navigation }) {
                         placed={solved}
                         shown={shown}
                         lastId={lastId}
+                        targetId={target ? target.id : null}
                         flash={flash}
                         hl={hl}
                         onPin={onPin}
                     />
                 </View>
                 <View style={styles.askBox}>
-                    <Text style={styles.askKicker}>HARİTADA BUL VE DOKUN</Text>
+                    {lastItem ? (
+                        <View style={[styles.found, shown[lastItem.id] && styles.foundShown]} accessibilityLiveRegion="polite">
+                            <Text style={[styles.foundTxt, shown[lastItem.id] && styles.foundTxtShown]} numberOfLines={2}>
+                                {shown[lastItem.id] ? "• " : "✓ "}
+                                <Text style={styles.foundName}>{lastItem.name}</Text>
+                                {"  →  " + (MapQuiz.placeLabel ? MapQuiz.placeLabel(lastItem) : "")}
+                            </Text>
+                        </View>
+                    ) : null}
+                    <Text style={styles.askKicker}>{target && target.line ? "HATTI BUL, ÇİZGİYE DOKUN" : "HARİTADA BUL VE DOKUN"}</Text>
                     <Text style={[styles.askName, landscape && { fontSize: 20 }]} numberOfLines={2}>{target ? target.name : ""}</Text>
+                    {target && target.line && !landscape && target.prompt ? (
+                        <Text style={styles.askHint} numberOfLines={2}>{target.prompt}</Text>
+                    ) : null}
                     <View style={styles.askRow}>
                         <Pressable onPress={reveal} style={styles.askSkip}>
                             <Text style={styles.askSkipTxt}>Bilmiyorum, göster</Text>
@@ -735,6 +752,12 @@ var styles = StyleSheet.create({
     mapBarFill: { height: 5, borderRadius: 99, backgroundColor: "#F59E0B" },
     askBox: { paddingTop: 10, alignItems: "center" },
     askKicker: { fontSize: 10, fontWeight: "800", letterSpacing: 1.4, color: "#d7c39a" },
+    askHint: { fontSize: 12, lineHeight: 16, color: "#cbbda0", textAlign: "center", marginTop: 4 },
+    found: { alignSelf: "stretch", marginBottom: 8, paddingVertical: 6, paddingHorizontal: 12, borderRadius: 12, backgroundColor: "rgba(16,185,129,0.16)" },
+    foundShown: { backgroundColor: "rgba(148,163,184,0.16)" },
+    foundTxt: { fontSize: 13, lineHeight: 18, color: "#d1fae5", textAlign: "center" },
+    foundTxtShown: { color: "#e2e8f0" },
+    foundName: { fontWeight: "800", color: "#fff8e8" },
     askName: { fontSize: 24, fontWeight: "900", color: "#fff8e8", textAlign: "center", marginTop: 4 },
     askRow: { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 14, marginTop: 10 },
     askSkip: {
