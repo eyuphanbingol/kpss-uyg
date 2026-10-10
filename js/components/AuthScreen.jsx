@@ -660,12 +660,18 @@
 
         async function submit() {
             if (!sb) { setMsg("Sunucu bağlı değil."); return; }
-            if (!email || !validateEmail(email)) { setMsg("Geçerli bir e-posta adresi girin."); return; }
-            if (!validatePassword(pass)) { setMsg("Şifre en az 6 karakter olmalı."); return; }
+            // Düğme hiç kilitlenmez: eksik alan tıklayınca işaretlenir ve oraya odaklanılır.
+            var badEmail = !email || !validateEmail(email), badPass = !validatePassword(pass), badKvkk = mode === "up" && !kvkk;
+            if (badEmail || badPass || badKvkk) {
+                setTouched(function (t) { return Object.assign({}, t, { email: true, pass: true, kvkk: mode === "up" }); });
+                setMsg("");
+                var firstBad = badEmail ? (mode === "up" ? "au-mail" : "login-email") : badPass ? (mode === "up" ? "au-pass" : "login-pass") : "au-kvkk";
+                setTimeout(function () { var el = document.getElementById(firstBad); if (el) el.focus(); }, 0);
+                return;
+            }
 
             if (mode === "up") {
                 if (!name.trim()) { setMsg("Adınızı yazın."); return; }
-                if (!kvkk) { setMsg("Devam etmek için sözleşme ve KVKK onayını işaretle."); return; }
                 savePending();
             }
 
@@ -807,8 +813,9 @@
         const [kvkk, setKvkk] = useState(false);
         function touch(k) { setTouched(function (t) { var n = Object.assign({}, t); n[k] = true; return n; }); }
         function capsCheck(e) { if (e && e.getModifierState) setCaps(e.getModifierState("CapsLock")); }
-        var emailErr = touched.email && email && !validateEmail(email.trim()) ? "E-posta adresi eksik ya da hatalı görünüyor." : "";
-        var passErr = touched.pass && pass && !validatePassword(pass) ? "Şifre en az 6 karakter olmalı." : "";
+        var emailErr = !touched.email ? "" : !email.trim() ? "E-posta adresini yaz." : !validateEmail(email.trim()) ? "E-posta adresi eksik ya da hatalı görünüyor." : "";
+        var passErr = !touched.pass ? "" : !pass ? "Şifreni yaz." : !validatePassword(pass) ? "Şifre en az 6 karakter olmalı." : "";
+        var kvkkErr = touched.kvkk && !kvkk;
         var nameErr = touched.name && !name.trim() ? "Adını yaz; liderlik tablosunda bu görünür." : "";
         var mailFix = suggestEmail(email);
         var okMsg = /✅|tamam|gönderildi|güncellendi/i.test(msg || "");
@@ -952,7 +959,7 @@
                                     })}
                                 </div>
                             </fieldset>
-                            {primaryBtn("Devam et", "", !name.trim(), function () { if (!name.trim()) { touch("name"); return; } goAfterEducation(); })}
+                            {primaryBtn("Devam et", "", false, function () { if (!name.trim()) { touch("name"); return; } goAfterEducation(); })}
                         </div>
                     ) : step === 2 ? (
                         <div className="space-y-4">
@@ -990,19 +997,19 @@
                                     </AuthField>
                                 </div>
                             </details>
-                            <label className="flex items-start gap-3 cursor-pointer select-none rounded-2xl p-3 -mx-1 hover:bg-slate-50 dark:hover:bg-stone-800/60">
+                            <label className={"flex items-start gap-3 cursor-pointer select-none rounded-2xl p-3 -mx-1 border transition-colors " + (kvkkErr ? "border-rose-300 bg-rose-50 dark:bg-rose-950/30 dark:border-rose-800" : "border-transparent hover:bg-slate-50 dark:hover:bg-stone-800/60")}>
                                 <input type="checkbox" id="au-kvkk" checked={kvkk} onChange={function (e) { setKvkk(e.target.checked); }}
-                                    className="mt-0.5 w-5 h-5 shrink-0 rounded-md accent-[#0D2C4D] cursor-pointer" aria-describedby="au-kvkk-hint" />
+                                    className="mt-0.5 w-5 h-5 shrink-0 rounded-md accent-[#0D2C4D] cursor-pointer" aria-describedby="au-kvkk-hint" aria-invalid={kvkkErr || undefined} />
                                 <span className="text-[12.5px] text-slate-500 dark:text-stone-400 leading-relaxed">
                                     <a className="atn-link" href="yasal/kullanim.html" target="_blank" rel="noopener">Kullanım Koşulları</a> ve{" "}
                                     <a className="atn-link" href="yasal/uyelik.html" target="_blank" rel="noopener">Üyelik Sözleşmesi</a>'ni kabul ediyorum; ilerleme verilerimin{" "}
                                     <a className="atn-link" href="yasal/aydinlatma.html" target="_blank" rel="noopener">KVKK Aydınlatma Metni</a>'ne göre hesabımda saklanmasına izin veriyorum.
-                                    {!kvkk ? <span id="au-kvkk-hint" className="block mt-1 text-[11.5px] text-slate-400">Devam etmek için onay kutusunu işaretle.</span> : null}
+                                    {!kvkk ? <span id="au-kvkk-hint" role={kvkkErr ? "alert" : undefined} className={"block mt-1 text-[11.5px] " + (kvkkErr ? "text-rose-600 dark:text-rose-400 font-semibold" : "text-slate-400")}>Devam etmek için onay kutusunu işaretle.</span> : null}
                                 </span>
                             </label>
                             <div className="flex gap-2">
                                 <button type="button" className="atn-btn-ghost !w-auto px-5" aria-label="Geri" onClick={function () { setStep(level === "lisans" && false ? 2 : 1); }}><AuthIcon name="back" />Geri</button>
-                                <div className="flex-1">{primaryBtn("Hesabı oluştur", "Hesap oluşturuluyor…", busy || !kvkk || !validateEmail(email) || !validatePassword(pass), submit)}</div>
+                                <div className="flex-1">{primaryBtn("Hesabı oluştur", "Hesap oluşturuluyor…", busy, submit)}</div>
                             </div>
                             {orLine()}
                             {googleBtn("Google ile kayıt ol")}
@@ -1021,7 +1028,7 @@
                     <input type="checkbox" checked={rememberMe} onChange={function (e) { setRememberMe(e.target.checked); }} className="h-[18px] w-[18px] rounded border-slate-300 text-teal-700 focus:ring-teal-600" />
                     Bu cihazda oturumum açık kalsın
                 </label>
-                {primaryBtn("Giriş yap", "Giriş yapılıyor…", busy || !kvkk || !validateEmail(email) || !validatePassword(pass), submit)}
+                {primaryBtn("Giriş yap", "Giriş yapılıyor…", busy, submit)}
                 {orLine()}
                 {googleBtn("Google ile devam et")}
             </div>

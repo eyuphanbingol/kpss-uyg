@@ -1680,7 +1680,8 @@
         }
         /* ---- Masaüstü kullanılabilirlik ---- */
         .app-tabbar .tabbar-brand,
-        .app-tabbar .tabbar-keys { display: none; }
+        .app-tabbar .tabbar-keys,
+        .app-tabbar .tabbar-account { display: none; }
         .kbd-hint { display: none; }
         /* klavye ipuçları yalnız fare/klavye kullanan cihazlarda */
         @media (hover: hover) and (pointer: fine) {
@@ -1725,9 +1726,25 @@
             }
             .app-tabbar .tabbar-list button[aria-current="page"] { font-weight: 700; box-shadow: inset 3px 0 0 #4f46e5; }
             .app-tabbar .tabbar-list button span.label { padding: 0; }
+            /* Hesap + çıkış: her sekmede sol menünün altında */
+            .app-tabbar .tabbar-account {
+                display: flex; align-items: center; gap: 10px; margin: auto 0 0; padding: 10px;
+                border: 1px solid var(--m-line, #E2E8F0); border-radius: 14px; background: var(--m-card, #fff);
+            }
+            .tabbar-account .acc-av { width: 34px; height: 34px; border-radius: 10px; flex-shrink: 0; display: grid; place-items: center;
+                background: #FEF3C7; color: #B45309; font-weight: 800; font-size: 14px; }
+            html.dark .tabbar-account .acc-av { background: rgba(217, 119, 6, .16); color: #FBBF24; }
+            .tabbar-account .acc-txt { min-width: 0; flex: 1; line-height: 1.25; }
+            .tabbar-account .acc-name { display: block; font-size: 13px; font-weight: 700; color: var(--m-ink, #0F172A); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+            .tabbar-account .acc-mail { display: block; font-size: 11.5px; color: var(--m-muted, #64748B); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+            .tabbar-account .acc-out { flex-shrink: 0; width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center;
+                color: var(--m-muted, #64748B); transition: background .15s, color .15s; }
+            .tabbar-account .acc-out:hover { background: #FFE4E6; color: #BE123C; }
+            html.dark .tabbar-account .acc-out:hover { background: rgba(225, 29, 72, .16); color: #FB7185; }
+            .tabbar-account .acc-out:focus-visible { outline: 3px solid rgba(18, 120, 128, .45); outline-offset: 2px; }
             .app-tabbar .tabbar-keys {
                 display: flex; flex-direction: column; align-items: flex-start; gap: 6px;
-                margin: auto 0 0; padding: 14px 10px 0; border-top: 1px solid rgba(28, 25, 23, .07);
+                margin: 10px 0 0; padding: 14px 10px 0; border-top: 1px solid rgba(28, 25, 23, .07);
             }
         }
         @media (min-width: 1280px) {
@@ -2835,7 +2852,7 @@
     <script>
         // js/app.jsx derlenmiş hâliyle önbellekten açılır (bkz. js/jsxLoader.js). Değişince ?v= artır.
         document.addEventListener("DOMContentLoaded", function () {
-            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=147");
+            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=148");
         });
     </script>
     <script>

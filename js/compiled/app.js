@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:252124:w5zd61*/
+/*jsx:babel-7.29.9-react-classic:253824:k9jfer*/
 const {
   useState,
   useEffect,
@@ -584,7 +584,44 @@ function BottomNav(props) {
     })) : null), /*#__PURE__*/React.createElement("span", {
       className: "label"
     }, tab.label));
-  })), /*#__PURE__*/React.createElement("div", {
+  })), props.onSignOut ? /*#__PURE__*/React.createElement("div", {
+    className: "tabbar-account"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "acc-av",
+    "aria-hidden": "true"
+  }, ((props.name || props.email || "?").trim().charAt(0) || "?").toLocaleUpperCase("tr-TR")), /*#__PURE__*/React.createElement("span", {
+    className: "acc-txt"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "acc-name"
+  }, props.name || "Hesabım"), props.email ? /*#__PURE__*/React.createElement("span", {
+    className: "acc-mail",
+    title: props.email
+  }, props.email) : null), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "acc-out",
+    onClick: props.onSignOut,
+    "aria-label": "\xC7\u0131k\u0131\u015F yap",
+    title: "\xC7\u0131k\u0131\u015F yap"
+  }, /*#__PURE__*/React.createElement("svg", {
+    width: "18",
+    height: "18",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    "aria-hidden": "true"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+  }), /*#__PURE__*/React.createElement("polyline", {
+    points: "16 17 21 12 16 7"
+  }), /*#__PURE__*/React.createElement("line", {
+    x1: "21",
+    y1: "12",
+    x2: "9",
+    y2: "12"
+  })))) : null, /*#__PURE__*/React.createElement("div", {
     className: "tabbar-keys kbd-hint",
     "aria-hidden": "true"
   }, /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("kbd", null, "A"), "\u2013", /*#__PURE__*/React.createElement("kbd", null, "E"), " \u015F\u0131k se\xE7"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("kbd", null, "Enter"), " sonraki soru"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("kbd", null, "\u2190"), /*#__PURE__*/React.createElement("kbd", null, "\u2192"), " not \xE7evir")));
@@ -5682,6 +5719,7 @@ function App() {
   const [nav, setNav] = useState("bugun");
   const [selectedDers, setSelectedDers] = useState(null);
   const [denemeOpen, setDenemeOpen] = useState(false);
+  const [navOutOpen, setNavOutOpen] = useState(false);
   const [selectedKonu, setSelectedKonu] = useState(null);
   const [drillKind, setDrillKind] = useState(null);
   const [drillMapTopic, setDrillMapTopic] = useState(null);
@@ -6481,9 +6519,23 @@ function App() {
     className: "duyuru-badge shrink-0 mt-0.5 text-[10px] font-black uppercase tracking-widest bg-white text-indigo-700 px-2 py-1 rounded-md"
   }, "Duyuru"), /*#__PURE__*/React.createElement("p", {
     className: "text-sm font-semibold leading-snug flex-1"
-  }, announce))) : null, body, /*#__PURE__*/React.createElement(ImageZoom, null), !inTest ? /*#__PURE__*/React.createElement(CookieBar, null) : null, !inTest ? /*#__PURE__*/React.createElement(BottomNav, {
+  }, announce))) : null, body, /*#__PURE__*/React.createElement(ImageZoom, null), !inTest ? /*#__PURE__*/React.createElement(CookieBar, null) : null, !inTest ? /*#__PURE__*/React.createElement(React.Fragment, null, navOutOpen ? /*#__PURE__*/React.createElement(SignOutDialog, {
+    email: authSession && authSession.user && authSession.user.email || "",
+    onClose: function () {
+      setNavOutOpen(false);
+    },
+    onConfirm: function () {
+      setNavOutOpen(false);
+      doSignOut();
+    }
+  }) : null, /*#__PURE__*/React.createElement(BottomNav, {
     nav: nav,
     streak: plan.streak || 0,
+    name: student.profile && student.profile.name || "",
+    email: authSession && authSession.user && authSession.user.email || "",
+    onSignOut: authSession ? function () {
+      setNavOutOpen(true);
+    } : null,
     onChange: function (id) {
       setNav(id);
       setDenemeOpen(false);
@@ -6509,6 +6561,6 @@ function App() {
         setDrillKonu(null);
       }
     }
-  }) : null);
+  })) : null);
 }
 ReactDOM.createRoot(document.getElementById("root")).render(/*#__PURE__*/React.createElement(App, null));

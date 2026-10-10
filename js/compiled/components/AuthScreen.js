@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:68288:1oi58l9*/
+/*jsx:babel-7.29.9-react-classic:68969:gualds*/
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 (function () {
   const {
@@ -853,21 +853,29 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
         setMsg("Sunucu bağlı değil.");
         return;
       }
-      if (!email || !validateEmail(email)) {
-        setMsg("Geçerli bir e-posta adresi girin.");
-        return;
-      }
-      if (!validatePassword(pass)) {
-        setMsg("Şifre en az 6 karakter olmalı.");
+      // Düğme hiç kilitlenmez: eksik alan tıklayınca işaretlenir ve oraya odaklanılır.
+      var badEmail = !email || !validateEmail(email),
+        badPass = !validatePassword(pass),
+        badKvkk = mode === "up" && !kvkk;
+      if (badEmail || badPass || badKvkk) {
+        setTouched(function (t) {
+          return Object.assign({}, t, {
+            email: true,
+            pass: true,
+            kvkk: mode === "up"
+          });
+        });
+        setMsg("");
+        var firstBad = badEmail ? mode === "up" ? "au-mail" : "login-email" : badPass ? mode === "up" ? "au-pass" : "login-pass" : "au-kvkk";
+        setTimeout(function () {
+          var el = document.getElementById(firstBad);
+          if (el) el.focus();
+        }, 0);
         return;
       }
       if (mode === "up") {
         if (!name.trim()) {
           setMsg("Adınızı yazın.");
-          return;
-        }
-        if (!kvkk) {
-          setMsg("Devam etmek için sözleşme ve KVKK onayını işaretle.");
           return;
         }
         savePending();
@@ -1016,8 +1024,9 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
     function capsCheck(e) {
       if (e && e.getModifierState) setCaps(e.getModifierState("CapsLock"));
     }
-    var emailErr = touched.email && email && !validateEmail(email.trim()) ? "E-posta adresi eksik ya da hatalı görünüyor." : "";
-    var passErr = touched.pass && pass && !validatePassword(pass) ? "Şifre en az 6 karakter olmalı." : "";
+    var emailErr = !touched.email ? "" : !email.trim() ? "E-posta adresini yaz." : !validateEmail(email.trim()) ? "E-posta adresi eksik ya da hatalı görünüyor." : "";
+    var passErr = !touched.pass ? "" : !pass ? "Şifreni yaz." : !validatePassword(pass) ? "Şifre en az 6 karakter olmalı." : "";
+    var kvkkErr = touched.kvkk && !kvkk;
     var nameErr = touched.name && !name.trim() ? "Adını yaz; liderlik tablosunda bu görünür." : "";
     var mailFix = suggestEmail(email);
     var okMsg = /✅|tamam|gönderildi|güncellendi/i.test(msg || "");
@@ -1262,7 +1271,7 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
           size: 12,
           sw: 3
         }) : null));
-      }))), primaryBtn("Devam et", "", !name.trim(), function () {
+      }))), primaryBtn("Devam et", "", false, function () {
         if (!name.trim()) {
           touch("name");
           return;
@@ -1354,7 +1363,7 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
           autoCapitalize: "characters"
         }));
       }))), /*#__PURE__*/React.createElement("label", {
-        className: "flex items-start gap-3 cursor-pointer select-none rounded-2xl p-3 -mx-1 hover:bg-slate-50 dark:hover:bg-stone-800/60"
+        className: "flex items-start gap-3 cursor-pointer select-none rounded-2xl p-3 -mx-1 border transition-colors " + (kvkkErr ? "border-rose-300 bg-rose-50 dark:bg-rose-950/30 dark:border-rose-800" : "border-transparent hover:bg-slate-50 dark:hover:bg-stone-800/60")
       }, /*#__PURE__*/React.createElement("input", {
         type: "checkbox",
         id: "au-kvkk",
@@ -1363,7 +1372,8 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
           setKvkk(e.target.checked);
         },
         className: "mt-0.5 w-5 h-5 shrink-0 rounded-md accent-[#0D2C4D] cursor-pointer",
-        "aria-describedby": "au-kvkk-hint"
+        "aria-describedby": "au-kvkk-hint",
+        "aria-invalid": kvkkErr || undefined
       }), /*#__PURE__*/React.createElement("span", {
         className: "text-[12.5px] text-slate-500 dark:text-stone-400 leading-relaxed"
       }, /*#__PURE__*/React.createElement("a", {
@@ -1383,7 +1393,8 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
         rel: "noopener"
       }, "KVKK Ayd\u0131nlatma Metni"), "'ne g\xF6re hesab\u0131mda saklanmas\u0131na izin veriyorum.", !kvkk ? /*#__PURE__*/React.createElement("span", {
         id: "au-kvkk-hint",
-        className: "block mt-1 text-[11.5px] text-slate-400"
+        role: kvkkErr ? "alert" : undefined,
+        className: "block mt-1 text-[11.5px] " + (kvkkErr ? "text-rose-600 dark:text-rose-400 font-semibold" : "text-slate-400")
       }, "Devam etmek i\xE7in onay kutusunu i\u015Faretle.") : null)), /*#__PURE__*/React.createElement("div", {
         className: "flex gap-2"
       }, /*#__PURE__*/React.createElement("button", {
@@ -1397,7 +1408,7 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
         name: "back"
       }), "Geri"), /*#__PURE__*/React.createElement("div", {
         className: "flex-1"
-      }, primaryBtn("Hesabı oluştur", "Hesap oluşturuluyor…", busy || !kvkk || !validateEmail(email) || !validatePassword(pass), submit))), orLine(), googleBtn("Google ile kayıt ol")));
+      }, primaryBtn("Hesabı oluştur", "Hesap oluşturuluyor…", busy, submit))), orLine(), googleBtn("Google ile kayıt ol")));
     }
 
     // ---------- GİRİŞ ----------
@@ -1413,7 +1424,7 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
         setRememberMe(e.target.checked);
       },
       className: "h-[18px] w-[18px] rounded border-slate-300 text-teal-700 focus:ring-teal-600"
-    }), "Bu cihazda oturumum a\xE7\u0131k kals\u0131n"), primaryBtn("Giriş yap", "Giriş yapılıyor…", busy || !kvkk || !validateEmail(email) || !validatePassword(pass), submit), orLine(), googleBtn("Google ile devam et")) : null;
+    }), "Bu cihazda oturumum a\xE7\u0131k kals\u0131n"), primaryBtn("Giriş yap", "Giriş yapılıyor…", busy, submit), orLine(), googleBtn("Google ile devam et")) : null;
 
     // ---------- MESAJ ----------
     var notice = msg ? /*#__PURE__*/React.createElement("div", {

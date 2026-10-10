@@ -178,7 +178,7 @@ export default function AuthScreen() {
         }
         if (mode === "up") {
             if (!name.trim()) { setMsg("Adınızı yazın."); return; }
-            if (!kvkk) { setMsg("Devam etmek için onay kutusunu işaretleyin."); return; }
+            if (!kvkk) { touch("kvkk"); setMsg(""); return; }
             savePending();
         }
         setBusy(true);
@@ -591,17 +591,18 @@ export default function AuthScreen() {
                                                     error={passErr} onBlur={function () { touch("pass"); }} extra={<Strength value={pass} />} />
                                                 <Field dark={dark} label="Davet kodu (isteğe bağlı)" value={refCode} onChangeText={function (v) { setRefCode(v.toUpperCase()); }}
                                                     autoCapitalize="characters" placeholder="KPSS-ABCD12" icon={<Gift size={18} color={iconC} />} />
-                                                <Tap onPress={function () { setKvkk(!kvkk); }} style={ns.consent} accessibilityRole="checkbox" accessibilityState={{ checked: kvkk }}>
-                                                    <View style={[ns.box, kvkk && ns.boxOn]}>{kvkk ? <Check size={14} color="#fff" strokeWidth={3} /> : null}</View>
+                                                <Tap onPress={function () { setKvkk(!kvkk); }} style={[ns.consent, touched.kvkk && !kvkk && ns.consentErr]} accessibilityRole="checkbox" accessibilityState={{ checked: kvkk }}>
+                                                    <View style={[ns.box, kvkk && ns.boxOn, touched.kvkk && !kvkk && { borderColor: "#E11D48" }]}>{kvkk ? <Check size={14} color="#fff" strokeWidth={3} /> : null}</View>
                                                     <Text style={[ns.consentTxt, { color: muted }]}>
                                                         <Text style={{ color: ink, fontWeight: "600" }}>Kullanım Koşulları</Text> ve <Text style={{ color: ink, fontWeight: "600" }}>Üyelik Sözleşmesi</Text>'ni kabul ediyorum; ilerleme verilerimin KVKK Aydınlatma Metni'ne göre hesabımda saklanmasına izin veriyorum.
                                                     </Text>
                                                 </Tap>
+                                                {touched.kvkk && !kvkk ? <Text style={ns.consentErrTxt} accessibilityLiveRegion="polite">Devam etmek için onay kutusunu işaretle.</Text> : null}
                                                 <View style={ns.row}>
                                                     <Tap onPress={function () { setStep(needsKulvar(level) ? 2 : 1); }} style={[ns.backBtn, dark && ns.backBtnDark]} accessibilityLabel="Geri">
                                                         <ChevronLeft size={20} color={ink} />
                                                     </Tap>
-                                                    <View style={{ flex: 1 }}><PrimaryButton title="Hesabı oluştur" onPress={submit} busy={busy} disabled={busy || !kvkk} /></View>
+                                                    <View style={{ flex: 1 }}><PrimaryButton title="Hesabı oluştur" onPress={submit} busy={busy} disabled={busy} /></View>
                                                 </View>
                                                 <OrLine />
                                                 <GoogleButton onPress={google} busy={googleBusy} disabled={busy} />
@@ -684,6 +685,8 @@ var ns = StyleSheet.create({
     consent: { flexDirection: "row", gap: 12, alignItems: "flex-start", marginBottom: 18, marginTop: 2 },
     box: { width: 22, height: 22, borderRadius: 7, borderWidth: 2, borderColor: "#CBD5E1", alignItems: "center", justifyContent: "center", marginTop: 1 },
     boxOn: { backgroundColor: "#0D2C4D", borderColor: "#0D2C4D" },
+    consentErr: { borderWidth: 1, borderColor: "#FDA4AF", backgroundColor: "rgba(225,29,72,0.06)", borderRadius: 14, padding: 10, marginHorizontal: -4 },
+    consentErrTxt: { color: "#E11D48", fontSize: 12.5, fontWeight: "600", marginTop: -10, marginBottom: 14 },
     consentTxt: { flex: 1, fontSize: 12.5, lineHeight: 18 },
     foot: { fontSize: 12, textAlign: "center", marginTop: 18 },
 });

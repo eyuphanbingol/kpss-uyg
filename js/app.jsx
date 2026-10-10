@@ -260,6 +260,18 @@ function BottomNav(props) {
                     );
                 })}
             </div>
+            {props.onSignOut ? (
+                <div className="tabbar-account">
+                    <span className="acc-av" aria-hidden="true">{((props.name || props.email || "?").trim().charAt(0) || "?").toLocaleUpperCase("tr-TR")}</span>
+                    <span className="acc-txt">
+                        <span className="acc-name">{props.name || "Hesabım"}</span>
+                        {props.email ? <span className="acc-mail" title={props.email}>{props.email}</span> : null}
+                    </span>
+                    <button type="button" className="acc-out" onClick={props.onSignOut} aria-label="Çıkış yap" title="Çıkış yap">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" /><polyline points="16 17 21 12 16 7" /><line x1="21" y1="12" x2="9" y2="12" /></svg>
+                    </button>
+                </div>
+            ) : null}
             <div className="tabbar-keys kbd-hint" aria-hidden="true">
                 <span><kbd>A</kbd>–<kbd>E</kbd> şık seç</span>
                 <span><kbd>Enter</kbd> sonraki soru</span>
@@ -3819,6 +3831,7 @@ function App() {
     const [nav, setNav] = useState("bugun");
     const [selectedDers, setSelectedDers] = useState(null);
     const [denemeOpen, setDenemeOpen] = useState(false);
+    const [navOutOpen, setNavOutOpen] = useState(false);
     const [selectedKonu, setSelectedKonu] = useState(null);
     const [drillKind, setDrillKind] = useState(null);
     const [drillMapTopic, setDrillMapTopic] = useState(null);
@@ -4314,7 +4327,15 @@ function App() {
             <ImageZoom />
             {!inTest ? <CookieBar /> : null}
             {!inTest ? (
-                <BottomNav nav={nav} streak={plan.streak || 0} onChange={function (id) {
+                <>
+                {navOutOpen ? <SignOutDialog email={(authSession && authSession.user && authSession.user.email) || ""}
+                    onClose={function () { setNavOutOpen(false); }}
+                    onConfirm={function () { setNavOutOpen(false); doSignOut(); }} /> : null}
+                <BottomNav nav={nav} streak={plan.streak || 0}
+                    name={(student.profile && student.profile.name) || ""}
+                    email={(authSession && authSession.user && authSession.user.email) || ""}
+                    onSignOut={authSession ? function () { setNavOutOpen(true); } : null}
+                    onChange={function (id) {
                     setNav(id);
                     setDenemeOpen(false);
                     if (id !== "dersler") { setSelectedDers(null); setSelectedKonu(null); setViewMode("hub"); }
@@ -4322,6 +4343,7 @@ function App() {
                     if (id !== "alistirmalar") { setDrillKind(null); setDrillMapTopic(null); setDrillDers(null); setDrillKonu(null); }
                     if (id === "alistirmalar") { setDrillKind(null); setDrillMapTopic(null); setDrillDers(null); setDrillKonu(null); }
                 }} />
+                </>
             ) : null}
         </div>
     );
