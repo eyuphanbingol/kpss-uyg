@@ -455,6 +455,60 @@
             background: linear-gradient(135deg, #03151b 0%, #082f38 50%, #0d5c66 100%);
         }
 
+        /* ===== GİRİŞ / KAYIT (premium; mobil tasarım diliyle: lacivert, teal, altın) ===== */
+        .atn-auth { background: #F8FAFC; color: #0F172A; }
+        html.dark .atn-auth { background: #0C0A09; color: #F5F5F4; }
+        .atn-brand { background:
+            radial-gradient(900px 520px at 12% -10%, rgba(29,138,153,.45), transparent 60%),
+            radial-gradient(700px 500px at 110% 110%, rgba(197,160,89,.22), transparent 60%),
+            linear-gradient(160deg, #041C24 0%, #0D2C4D 55%, #0E4A5A 100%); }
+        .atn-brand-grid { position: absolute; inset: 0; opacity: .08; pointer-events: none;
+            background-image: linear-gradient(rgba(255,255,255,.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.6) 1px, transparent 1px);
+            background-size: 44px 44px; mask-image: radial-gradient(ellipse at 30% 30%, #000 30%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse at 30% 30%, #000 30%, transparent 75%); }
+        .atn-field { width: 100%; height: 52px; border-radius: 14px; border: 1px solid #E2E8F0; background: #fff; color: #0F172A;
+            padding: 0 14px 0 44px; font-size: 15px; transition: border-color .15s, box-shadow .15s, background .15s; outline: none; }
+        .atn-field::placeholder { color: #94A3B8; }
+        .atn-field:focus, .atn-field:focus-visible { outline: none !important; }
+        .atn-field:hover { border-color: #CBD5E1; }
+        .atn-field:focus { border-color: #127880; box-shadow: 0 0 0 4px rgba(18,120,128,.14); }
+        .atn-field[aria-invalid="true"] { border-color: #E11D48; box-shadow: 0 0 0 4px rgba(225,29,72,.10); }
+        .atn-field.no-icon { padding-left: 14px; }
+        html.dark .atn-field { background: #1C1917; border-color: #44403C; color: #F5F5F4; }
+        html.dark .atn-field:focus { border-color: #2DD4BF; box-shadow: 0 0 0 4px rgba(45,212,191,.15); }
+        .atn-btn { position: relative; width: 100%; min-height: 54px; border-radius: 16px; font-weight: 700; font-size: 16px; color: #fff;
+            background: linear-gradient(135deg, #0D2C4D 0%, #14607A 60%, #1D8A99 100%);
+            box-shadow: 0 10px 24px -10px rgba(13,44,77,.55); transition: transform .12s, box-shadow .2s, opacity .2s, filter .2s; }
+        .atn-btn:hover:not(:disabled) { filter: brightness(1.06); box-shadow: 0 14px 28px -10px rgba(13,44,77,.6); }
+        .atn-btn:active:not(:disabled) { transform: translateY(1px) scale(.995); }
+        .atn-btn:disabled { opacity: .45; cursor: not-allowed; box-shadow: none; }
+        .atn-btn[aria-busy="true"]:disabled { opacity: .85; cursor: progress; }
+        .atn-btn:focus-visible, .atn-btn-ghost:focus-visible, .atn-seg button:focus-visible, .atn-link:focus-visible { outline: 3px solid rgba(18,120,128,.45); outline-offset: 2px; }
+        .atn-btn-ghost { width: 100%; min-height: 52px; border-radius: 16px; border: 1px solid #E2E8F0; background: #fff; color: #0F172A; font-weight: 600; font-size: 15px;
+            display: inline-flex; align-items: center; justify-content: center; gap: 10px; transition: background .15s, border-color .15s; }
+        .atn-btn-ghost:hover:not(:disabled) { background: #F8FAFC; border-color: #CBD5E1; }
+        html.dark .atn-btn-ghost { background: #1C1917; border-color: #44403C; color: #F5F5F4; }
+        .atn-seg { position: relative; display: grid; grid-template-columns: 1fr 1fr; padding: 4px; border-radius: 14px; background: #EEF2F6; }
+        html.dark .atn-seg { background: #292524; }
+        .atn-seg-thumb { position: absolute; top: 4px; bottom: 4px; width: calc(50% - 4px); border-radius: 11px; background: #fff;
+            box-shadow: 0 1px 2px rgba(15,23,42,.08), 0 4px 12px -4px rgba(15,23,42,.12); transition: transform .25s cubic-bezier(.2,.8,.2,1); }
+        html.dark .atn-seg-thumb { background: #44403C; }
+        .atn-seg button { position: relative; z-index: 1; height: 40px; border-radius: 11px; font-weight: 700; font-size: 14px; color: #64748B; transition: color .2s; }
+        .atn-seg button[aria-selected="true"] { color: #0F172A; }
+        html.dark .atn-seg button[aria-selected="true"] { color: #fff; }
+        .atn-link { color: #127880; font-weight: 600; border-radius: 6px; }
+        .atn-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+        html.dark .atn-link { color: #5EEAD4; }
+        .atn-option { width: 100%; text-align: left; display: flex; align-items: center; gap: 12px; padding: 14px; border-radius: 16px;
+            border: 1px solid #E2E8F0; background: #fff; transition: border-color .15s, box-shadow .15s, background .15s; }
+        .atn-option:hover { border-color: #CBD5E1; }
+        .atn-option[aria-checked="true"] { border-color: #127880; background: #F0FDFA; box-shadow: 0 0 0 3px rgba(18,120,128,.12); }
+        html.dark .atn-option { background: #1C1917; border-color: #44403C; }
+        html.dark .atn-option[aria-checked="true"] { background: rgba(20,184,166,.08); border-color: #2DD4BF; }
+        @keyframes atnSpin { to { transform: rotate(360deg); } }
+        .atn-spin { width: 18px; height: 18px; border-radius: 999px; border: 2px solid rgba(255,255,255,.35); border-top-color: #fff; animation: atnSpin .8s linear infinite; }
+        @keyframes atnIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+        .atn-in { animation: atnIn .28s ease-out both; }
+        @media (prefers-reduced-motion: reduce) { .atn-in, .atn-seg-thumb, .atn-btn { animation: none !important; transition: none !important; } }
         .brand-backdrop {
             background: linear-gradient(135deg, #041C24 0%, #0A3842 48%, #127880 100%);
         }
@@ -2723,7 +2777,7 @@
     <script>
         // js/app.jsx derlenmiş hâliyle önbellekten açılır (bkz. js/jsxLoader.js). Değişince ?v= artır.
         document.addEventListener("DOMContentLoaded", function () {
-            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=143");
+            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=144");
         });
     </script>
     <script>

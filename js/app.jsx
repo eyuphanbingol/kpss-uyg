@@ -3232,6 +3232,51 @@ function ResetProfileModal(props) {
     );
 }
 
+// Çıkış onayı: önce bekleyen ilerleme buluta yazılır (en çok 4 sn), sonra oturum kapanır.
+// Mobil karşılığı: mobile/src/screens/BenScreen.js içindeki çıkış sayfası.
+function SignOutDialog(props) {
+    const [busy, setBusy] = useState(false);
+    const okRef = useRef(null);
+    useEffect(function () {
+        if (okRef.current) okRef.current.focus();
+        function onKey(e) { if (e.key === "Escape" && !busy) props.onClose(); }
+        window.addEventListener("keydown", onKey);
+        return function () { window.removeEventListener("keydown", onKey); };
+    }, [busy]);
+    function go() {
+        if (busy) return;
+        setBusy(true);
+        var done = false;
+        var finish = function () { if (done) return; done = true; props.onConfirm(); };
+        setTimeout(finish, 4000);
+        try {
+            if (window.SyncEngine && window.SyncEngine.sync) window.SyncEngine.sync().then(finish, finish);
+            else finish();
+        } catch (_e) { finish(); }
+    }
+    return (
+        <div className="fixed inset-0 z-[80] bg-slate-900/50 backdrop-blur-sm flex items-end sm:items-center justify-center p-3 sm:p-6"
+            role="dialog" aria-modal="true" aria-labelledby="out-title" aria-describedby="out-desc"
+            onClick={function (e) { if (e.target === e.currentTarget && !busy) props.onClose(); }}>
+            <div className="atn-in w-full max-w-sm bg-white dark:bg-stone-900 rounded-3xl p-6 shadow-2xl border border-slate-200 dark:border-stone-700">
+                <div className="w-12 h-12 rounded-2xl bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 flex items-center justify-center" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" /><polyline points="16 17 21 12 16 7" /><line x1="21" y1="12" x2="9" y2="12" /></svg>
+                </div>
+                <h2 id="out-title" className="mt-4 text-xl font-bold text-slate-900 dark:text-stone-100">Çıkış yapılsın mı?</h2>
+                <p id="out-desc" className="mt-1.5 text-sm text-slate-500 dark:text-stone-400 leading-relaxed">
+                    İlerlemen hesabına kaydedilir; {props.email ? <b className="font-semibold text-slate-700 dark:text-stone-200">{props.email}</b> : "aynı hesapla"} {props.email ? "ile " : ""}yeniden giriş yaptığında kaldığın yerden devam edersin.
+                </p>
+                <div className="mt-6 grid grid-cols-2 gap-2.5">
+                    <button type="button" onClick={props.onClose} disabled={busy} className="atn-btn-ghost">Vazgeç</button>
+                    <button type="button" ref={okRef} onClick={go} disabled={busy} aria-busy={busy} className="atn-btn">
+                        <span className="inline-flex items-center justify-center gap-2">{busy ? <span className="atn-spin" aria-hidden="true" /> : null}{busy ? "Kaydediliyor" : "Çıkış yap"}</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
+}
+
 function Ben(props) {
     const st = props.student;
     let totQ = 0, totC = 0;
@@ -3248,6 +3293,7 @@ function Ben(props) {
     const [draftTrack, setDraftTrack] = useState("B");
     const [draftEdu, setDraftEdu] = useState("");
     const [resetOpen, setResetOpen] = useState(false);
+    const [outOpen, setOutOpen] = useState(false);
     const examPassed = !!(st.profile.examDate && st.profile.examDate < StudentStore.todayStr());
     const eduReq = up.educationChangeRequest;
     const showKulvar = needsKulvar(totQ === 0 && editing && draftEdu ? draftEdu : up.educationLevel);
@@ -3451,8 +3497,11 @@ function Ben(props) {
                 <span>·</span>
                 <a className="underline" href="yasal/basvuru.html">KVKK başvuru</a>
             </div>
-            <button onClick={function () { props.onSignOut && props.onSignOut(); }} className="w-full p-3.5 rounded-2xl border-2 border-stone-200 dark:border-stone-700 font-medium">Çıkış</button>
+            <button onClick={function () { setOutOpen(true); }} className="w-full p-3.5 rounded-2xl border-2 border-stone-200 dark:border-stone-700 font-medium">Çıkış</button>
             </div>
+            {outOpen ? <SignOutDialog email={(props.authSession && props.authSession.user && props.authSession.user.email) || ""}
+                onClose={function () { setOutOpen(false); }}
+                onConfirm={function () { props.onSignOut && props.onSignOut(); }} /> : null}
         </Shell>
     );
 }
@@ -4036,7 +4085,7 @@ function App() {
             onWrong={function () { startSession(plan.wrong.slice(0, 30), { mode: "wrong" }); }}
             onNotebook={function () { setExtra("notebook"); }} />;
     } else if (nav === "ben") {
-        body = <Ben student={student} isDark={isDark} toggleDark={toggleDark}
+        body = <Ben student={student} isDark={isDark} toggleDark={toggleDark} authSession={authSession}
             onOpen={function (id) { setExtra(id); }}
             onAdmin={function () { setExtra("admin"); }}
             onSignOut={doSignOut} />;
@@ -4157,6 +4206,8 @@ function App() {
             ? React.createElement(AuthCmp, {
                 gate: true,
                 recovery: pwRecovery,
+                isDark: isDark,
+                toggleDark: toggleDark,
                 onPasswordUpdated: function () {
                     if (window.SupabaseClient && window.SupabaseClient.clearRecovery) window.SupabaseClient.clearRecovery();
                     setPwRecovery(false);

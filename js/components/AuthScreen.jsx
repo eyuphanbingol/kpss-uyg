@@ -264,6 +264,165 @@
     }
 
     // ============================================================
+    // GÖRSEL YARDIMCILAR (giriş / kayıt): çizgi simgeler, alan, e-posta önerisi, şifre gücü
+    // ============================================================
+    var ICONS = {
+        mail: "M4 6h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm0 1 8 6 8-6",
+        lock: "M7 11V8a5 5 0 0 1 10 0v3M6 11h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1zm6 4v2",
+        user: "M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm-7 8a7 7 0 0 1 14 0",
+        eye: "M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12zm10 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6z",
+        eyeOff: "M3 3l18 18M10.6 5.1A10.4 10.4 0 0 1 12 5c6.5 0 10 7 10 7a17.6 17.6 0 0 1-3.2 4.1M6.6 6.6C3.9 8.4 2 12 2 12s3.5 7 10 7a9.9 9.9 0 0 0 5.4-1.6M9.9 9.9a3 3 0 0 0 4.2 4.2",
+        cal: "M7 3v3m10-3v3M4 8h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z",
+        gift: "M4 11h16v9H4zM3 7h18v4H3zM12 7v13M12 7c-1.5-3-5-3-5-1s3 1 5 1zm0 0c1.5-3 5-3 5-1s-3 1-5 1z",
+        check: "M5 12.5l4.2 4.2L19 7",
+        alert: "M12 8v5m0 3.5v.01M10.3 3.9 2.6 17.2A2 2 0 0 0 4.3 20h15.4a2 2 0 0 0 1.7-2.8L13.7 3.9a2 2 0 0 0-3.4 0z",
+        ok: "M22 11.1V12a10 10 0 1 1-5.9-9.1M22 4 12 14.01l-3-3",
+        back: "M15 18l-6-6 6-6",
+        cap: "M2 9l10-5 10 5-10 5zm4 2.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5M22 9v5",
+        key: "M15 7a4 4 0 1 1-3.5 6L5 19.5V22H2v-3l6.5-6.5A4 4 0 0 1 15 7zm1.5-1.5h.01"
+    };
+    function AuthIcon(props) {
+        return (
+            <svg viewBox="0 0 24 24" width={props.size || 18} height={props.size || 18} fill="none" stroke="currentColor" strokeWidth={props.sw || 1.8}
+                strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className={props.className}>
+                <path d={ICONS[props.name]} />
+            </svg>
+        );
+    }
+    function AuthThemeBtn(props) {
+        return (
+            <button type="button" onClick={props.onClick} aria-label={props.dark ? "Gündüz moduna geç" : "Gece moduna geç"}
+                className={"h-10 w-10 grid place-items-center rounded-xl transition " + (props.onBrand ? "bg-white/10 ring-1 ring-white/20 text-white hover:bg-white/15" : "ring-1 ring-slate-200 dark:ring-stone-700 text-slate-600 dark:text-amber-300 hover:bg-white dark:hover:bg-stone-800")}>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d={props.dark ? "M12 3v2m0 14v2M5.6 5.6l1.4 1.4m10 10 1.4 1.4M3 12h2m14 0h2M5.6 18.4 7 17m10-10 1.4-1.4M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" : "M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"} />
+                </svg>
+            </button>
+        );
+    }
+    function GoogleMark() {
+        return (
+            <svg className="w-5 h-5" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+            </svg>
+        );
+    }
+    // Etiketli alan: soldaki simge, sağdaki ek (göz düğmesi), altında ipucu ya da hata
+    function AuthField(props) {
+        var hintId = props.id + "-hint";
+        var hasNote = !!(props.error || props.hint || props.extra);
+        return (
+            <div>
+                <div className="flex items-baseline justify-between mb-1.5">
+                    <label htmlFor={props.id} className="text-[13px] font-semibold text-slate-700 dark:text-stone-200">{props.label}{props.optional ? <span className="font-normal text-slate-400"> · isteğe bağlı</span> : null}</label>
+                    {props.aside || null}
+                </div>
+                <div className="relative">
+                    {props.icon ? <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-stone-500 pointer-events-none"><AuthIcon name={props.icon} /></span> : null}
+                    {props.children({ "aria-invalid": props.error ? "true" : "false", "aria-describedby": hasNote ? hintId : undefined, className: "atn-field" + (props.icon ? "" : " no-icon") + (props.trailing ? " pr-12" : "") })}
+                    {props.trailing || null}
+                </div>
+                {hasNote ? (
+                    <div id={hintId} className="mt-1.5 space-y-1" aria-live="polite">
+                        {props.error ? <p className="text-[12.5px] text-rose-600 dark:text-rose-400 flex items-center gap-1.5"><AuthIcon name="alert" size={14} />{props.error}</p> : null}
+                        {!props.error && props.hint ? <p className="text-[12.5px] text-slate-500 dark:text-stone-400">{props.hint}</p> : null}
+                        {props.extra || null}
+                    </div>
+                ) : null}
+            </div>
+        );
+    }
+    // Sık yapılan e-posta alan adı yazım hataları: gmial.com → gmail.com
+    var MAIL_DOMAINS = ["gmail.com", "hotmail.com", "outlook.com", "yahoo.com", "icloud.com", "yandex.com", "live.com", "msn.com", "windowslive.com", "hotmail.com.tr", "outlook.com.tr"];
+    function lev(a, b) {
+        var d = [], i, j;
+        for (i = 0; i <= a.length; i++) { d[i] = [i]; }
+        for (j = 1; j <= b.length; j++) d[0][j] = j;
+        for (i = 1; i <= a.length; i++) for (j = 1; j <= b.length; j++) {
+            d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+        }
+        return d[a.length][b.length];
+    }
+    function suggestEmail(email) {
+        var m = /^([^@\s]+)@([^@\s]+)$/.exec(String(email || "").trim());
+        if (!m) return null;
+        var dom = m[2].toLowerCase();
+        if (MAIL_DOMAINS.indexOf(dom) >= 0) return null;
+        var best = null, bd = 3;
+        MAIL_DOMAINS.forEach(function (c) { var x = lev(dom, c); if (x < bd) { bd = x; best = c; } });
+        return best && bd > 0 && bd <= 2 ? m[1] + "@" + best : null;
+    }
+    // Şifre gücü: 0–4 ve kurallar
+    function passRules(p) {
+        p = String(p || "");
+        return [
+            { ok: p.length >= 8, t: "En az 8 karakter" },
+            { ok: /\d/.test(p) && /[a-zçğıöşü]/i.test(p), t: "Harf ve rakam" },
+            { ok: /[A-ZÇĞİÖŞÜ]/.test(p) && /[a-zçğıöşü]/.test(p), t: "Büyük ve küçük harf" }
+        ];
+    }
+    function passScore(p) {
+        if (!p) return 0;
+        if (p.length < 6) return 1;
+        var n = passRules(p).filter(function (r) { return r.ok; }).length;
+        return Math.max(1, Math.min(4, n + (p.length >= 12 ? 1 : 0)));
+    }
+    var SCORE_TXT = ["", "Zayıf", "İdare eder", "İyi", "Güçlü"];
+    var SCORE_CLR = ["bg-slate-200", "bg-rose-500", "bg-amber-500", "bg-teal-500", "bg-emerald-600"];
+    function StrengthMeter(props) {
+        var sc = passScore(props.value), rules = passRules(props.value);
+        return (
+            <div className="mt-2">
+                <div className="flex gap-1.5" aria-hidden="true">
+                    {[1, 2, 3, 4].map(function (i) { return <span key={i} className={"h-1.5 flex-1 rounded-full transition-colors " + (sc >= i ? SCORE_CLR[sc] : "bg-slate-200 dark:bg-stone-700")}></span>; })}
+                </div>
+                <p className="sr-only" aria-live="polite">{props.value ? "Şifre gücü: " + SCORE_TXT[sc] : ""}</p>
+                <div className="flex flex-wrap gap-x-3 gap-y-1 mt-2">
+                    {rules.map(function (r) {
+                        return <span key={r.t} className={"text-[12px] inline-flex items-center gap-1 " + (r.ok ? "text-emerald-700 dark:text-emerald-400" : "text-slate-400")}>
+                            <AuthIcon name="check" size={13} sw={2.4} />{r.t}</span>;
+                    })}
+                    {props.value ? <span className="text-[12px] font-semibold ml-auto text-slate-600 dark:text-stone-300">{SCORE_TXT[sc]}</span> : null}
+                </div>
+            </div>
+        );
+    }
+    // Sol marka paneli (masaüstü) ve üst marka bandı (telefon)
+    function BrandPanel(props) {
+        var points = [
+            ["Konu konu not, test ve aralıklı tekrar", "Kilitli ilerleme; zayıf konu öne çekilir, yanlışlar deftere düşer."],
+            ["Her pazar Türkiye geneli canlı deneme", "Herkes aynı anda çözer; sıralama, net dağılımı ve konu analizi."],
+            ["Sınav tarihine göre akıllı program", "Boş saatlerine göre günlük plan; kaçırırsan kendini yeniden dağıtır."]
+        ];
+        return (
+            <aside className="atn-brand relative hidden lg:flex flex-col justify-between p-12 xl:p-16 text-white overflow-hidden">
+                <div className="atn-brand-grid" aria-hidden="true"></div>
+                <div className="relative flex items-center gap-3">
+                    {window.AtanomLogo ? window.AtanomLogo("h-11 w-11 object-contain") : <img src="icons/atanom.png" alt="" className="h-11 w-11 object-contain" />}
+                    <span className="text-xl font-bold tracking-tight">Atanly</span>
+                </div>
+                <div className="relative max-w-md">
+                    <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-[#E8C987]">KPSS · GY-GK</p>
+                    <h2 className="text-4xl xl:text-[44px] font-bold leading-[1.1] tracking-tight mt-3">Atamaya giden<br />çalışma odası.</h2>
+                    <ul className="mt-10 space-y-6">
+                        {points.map(function (p) {
+                            return (
+                                <li key={p[0]} className="flex gap-4">
+                                    <span className="mt-0.5 h-7 w-7 shrink-0 rounded-full bg-white/10 ring-1 ring-white/20 grid place-items-center text-[#E8C987]"><AuthIcon name="check" size={15} sw={2.4} /></span>
+                                    <span><span className="block font-semibold">{p[0]}</span><span className="block text-sm text-white/65 mt-0.5 leading-relaxed">{p[1]}</span></span>
+                                </li>
+                            );
+                        })}
+                    </ul>
+                </div>
+                <p className="relative text-sm text-white/55">Lisans · Ön lisans · Ortaöğretim</p>
+            </aside>
+        );
+    }
+
+    // ============================================================
     // ANA BİLEŞEN
     // ============================================================
 
@@ -506,6 +665,7 @@
 
             if (mode === "up") {
                 if (!name.trim()) { setMsg("Adınızı yazın."); return; }
+                if (!kvkk) { setMsg("Devam etmek için sözleşme ve KVKK onayını işaretle."); return; }
                 savePending();
             }
 
@@ -640,533 +800,328 @@
         }
 
         // ============================================================
-        // SIGNUP FORM
+        // GÖRÜNÜM (premium): etkileşim durumu
         // ============================================================
+        const [touched, setTouched] = useState({});
+        const [caps, setCaps] = useState(false);
+        const [kvkk, setKvkk] = useState(false);
+        function touch(k) { setTouched(function (t) { var n = Object.assign({}, t); n[k] = true; return n; }); }
+        function capsCheck(e) { if (e && e.getModifierState) setCaps(e.getModifierState("CapsLock")); }
+        var emailErr = touched.email && email && !validateEmail(email.trim()) ? "E-posta adresi eksik ya da hatalı görünüyor." : "";
+        var passErr = touched.pass && pass && !validatePassword(pass) ? "Şifre en az 6 karakter olmalı." : "";
+        var nameErr = touched.name && !name.trim() ? "Adını yaz; liderlik tablosunda bu görünür." : "";
+        var mailFix = suggestEmail(email);
+        var okMsg = /✅|tamam|gönderildi|güncellendi/i.test(msg || "");
+        var cleanMsg = String(msg || "").replace(/^✅\s*/, "");
 
+        async function forgot() {
+            if (!email || !validateEmail(email)) {
+                touch("email");
+                setMsg("Şifre sıfırlama bağlantısı için önce e-posta adresini yaz.");
+                if (emailRef.current) emailRef.current.focus();
+                return;
+            }
+            if (!sb) { setMsg("Sunucu bağlı değil."); return; }
+            if (Date.now() < loginLockUntil) { setMsg(loginLockedMsg()); return; }
+            setBusy(true);
+            setMsg("");
+            try {
+                if (window.SupabaseClient && window.SupabaseClient.clearRecoveryFlag) window.SupabaseClient.clearRecoveryFlag();
+                await sb.auth.resetPasswordForEmail(email.trim(), { redirectTo: window.location.origin + "/auth/reset" });
+                loginFails += 1;
+                if (loginFails >= 5) loginLockUntil = Date.now() + 60000;
+                setMsg("Hesap varsa şifre sıfırlama bağlantısı gönderildi. Spam klasörüne de bak.");
+            } catch (e) {
+                var em = window.trError ? window.trError(e, "") : "";
+                if (/çok sık|bağlantı|sunucu|zaman aşımı/i.test(em)) setMsg(em);
+                else setMsg("Hesap varsa şifre sıfırlama bağlantısı gönderildi. Spam klasörüne de bak.");
+            }
+            setBusy(false);
+        }
+
+        function emailInput(id, autoFocusRef) {
+            return (
+                <AuthField id={id} label="E-posta" icon="mail" error={emailErr}
+                    extra={mailFix ? (
+                        <p className="text-[12.5px] text-slate-600 dark:text-stone-300">
+                            Bunu mu demek istedin: <button type="button" className="atn-link" onClick={function () { setEmail(mailFix); }}>{mailFix}</button>?
+                        </p>
+                    ) : null}>
+                    {function (a) {
+                        return <input {...a} id={id} ref={autoFocusRef} type="email" inputMode="email" autoComplete="email" autoCapitalize="none" spellCheck="false"
+                            value={email} onChange={function (e) { setEmail(e.target.value); }} onBlur={function () { touch("email"); }}
+                            onKeyDown={handleKeyDown} placeholder="ad@ornek.com" />;
+                    }}
+                </AuthField>
+            );
+        }
+        function passInput(id, isNew) {
+            return (
+                <AuthField id={id} label="Şifre" icon="lock" error={passErr}
+                    aside={!isNew ? <button type="button" className="atn-link text-[13px]" onClick={forgot} disabled={busy}>Şifremi unuttum</button> : null}
+                    extra={(
+                        <div>
+                            {caps ? <p className="text-[12.5px] text-amber-700 dark:text-amber-400 flex items-center gap-1.5"><AuthIcon name="alert" size={14} />Caps Lock açık</p> : null}
+                            {isNew ? <StrengthMeter value={pass} /> : null}
+                        </div>
+                    )}
+                    trailing={(
+                        <button type="button" onClick={function () { setShowPassword(!showPassword); }}
+                            aria-label={showPassword ? "Şifreyi gizle" : "Şifreyi göster"} aria-pressed={showPassword}
+                            className="absolute right-2 top-1/2 -translate-y-1/2 h-9 w-9 grid place-items-center rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-100 dark:hover:bg-stone-800 dark:hover:text-white">
+                            <AuthIcon name={showPassword ? "eyeOff" : "eye"} />
+                        </button>
+                    )}>
+                    {function (a) {
+                        return <input {...a} id={id} ref={passRef} type={showPassword ? "text" : "password"} autoComplete={isNew ? "new-password" : "current-password"}
+                            value={pass} onChange={function (e) { setPass(e.target.value); }} onBlur={function () { touch("pass"); }}
+                            onKeyDown={function (e) { capsCheck(e); handleKeyDown(e); }} onKeyUp={capsCheck}
+                            placeholder={isNew ? "En az 6 karakter" : "Şifren"} />;
+                    }}
+                </AuthField>
+            );
+        }
+        function primaryBtn(label, busyLabel, disabled, onClick) {
+            return (
+                <button type="button" className="atn-btn inline-flex items-center justify-center gap-2.5" disabled={disabled} onClick={onClick} aria-busy={busy}>
+                    {busy ? <span className="atn-spin" aria-hidden="true"></span> : null}
+                    {busy ? busyLabel : label}
+                </button>
+            );
+        }
+        function orLine() {
+            return (
+                <div className="flex items-center gap-3 my-1" aria-hidden="true">
+                    <span className="h-px flex-1 bg-slate-200 dark:bg-stone-700"></span>
+                    <span className="text-[12px] text-slate-400">veya</span>
+                    <span className="h-px flex-1 bg-slate-200 dark:bg-stone-700"></span>
+                </div>
+            );
+        }
+        function googleBtn(label) {
+            return <button type="button" disabled={busy} onClick={google} className="atn-btn-ghost disabled:opacity-50"><GoogleMark />{label}</button>;
+        }
+
+        // ---------- KAYIT ----------
         var signup = null;
         if (mode === "up") {
+            var stepNo = step === 3 ? 2 : 1;
             signup = (
-                <div className="slide-step">
-                    <StepIndicator current={step === 1 ? 1 : 2} total={2} />
+                <div className="space-y-5 atn-in" key={"up-" + step}>
+                    <ol className="flex items-center gap-3 text-[12.5px] font-semibold" aria-label="Kayıt adımları">
+                        {[["1", "Seni tanıyalım"], ["2", "Hesabın"]].map(function (s2, i) {
+                            var on = stepNo === i + 1, done = stepNo > i + 1;
+                            return (
+                                <li key={s2[0]} className={"flex items-center gap-2 " + (i ? "flex-1 justify-end" : "flex-1")} aria-current={on ? "step" : undefined}>
+                                    <span className={"h-6 w-6 rounded-full grid place-items-center text-[11px] " + (done ? "bg-emerald-600 text-white" : on ? "bg-[#0D2C4D] text-white dark:bg-teal-500" : "bg-slate-200 text-slate-500 dark:bg-stone-700")}>
+                                        {done ? <AuthIcon name="check" size={13} sw={2.6} /> : s2[0]}
+                                    </span>
+                                    <span className={on ? "text-slate-900 dark:text-white" : "text-slate-400"}>{s2[1]}</span>
+                                    {i === 0 ? <span className="h-px flex-1 bg-slate-200 dark:bg-stone-700 ml-1"></span> : null}
+                                </li>
+                            );
+                        })}
+                    </ol>
 
-                    {/* Step 1: Name & Education */}
-                    {step === 1 && (
-                        <div className="space-y-4">
-                            <div>
-                                <label className="text-sm font-medium text-stone-600 dark:text-stone-300 block mb-1.5" htmlFor="au-name">
-                                    👤 Adınız
-                                </label>
-                                <input 
-                                    id="au-name" 
-                                    ref={nameRef}
-                                    value={name} 
-                                    onChange={function (e) { setName(e.target.value); }} 
-                                    onKeyDown={handleKeyDown}
-                                    className={field} 
-                                    placeholder="Adını yaz"
-                                    autoComplete="given-name"
-                                />
-                            </div>
-
-                            <div>
-                                <p className="text-sm font-medium text-stone-600 dark:text-stone-300 mb-2">🎯 Eğitim Düzeyiniz</p>
-                                <div className="space-y-2">
+                    {step === 1 ? (
+                        <div className="space-y-5">
+                            <AuthField id="au-name" label="Adın" icon="user" error={nameErr} hint="Liderlik tablosunda ve sertifikalarda görünür.">
+                                {function (a) {
+                                    return <input {...a} id="au-name" ref={nameRef} value={name} onChange={function (e) { setName(e.target.value); }}
+                                        onBlur={function () { touch("name"); }} onKeyDown={handleKeyDown} placeholder="Adın" autoComplete="given-name" />;
+                                }}
+                            </AuthField>
+                            <fieldset>
+                                <legend className="text-[13px] font-semibold text-slate-700 dark:text-stone-200 mb-2">Hangi KPSS'ye hazırlanıyorsun?</legend>
+                                <div className="space-y-2" role="radiogroup" aria-label="Eğitim düzeyi">
                                     {levels.map(function (x) {
                                         var isActive = level === x.id;
                                         return (
-                                            <button 
-                                                key={x.id} 
-                                                type="button" 
-                                                onClick={function () {
-                                                    setLevel(x.id);
-                                                    if (dates[x.id]) setExamDate(dates[x.id]);
-                                                }} 
-                                                className={cardCls(isActive, false)}
-                                            >
-                                                <div className="flex items-center justify-between">
-                                                    <div>
-                                                        <div className="font-display font-semibold text-base text-stone-800 dark:text-stone-100">{x.t}</div>
-                                                        <div className="text-sm text-stone-500 mt-0.5">{x.d}</div>
-                                                    </div>
-                                                    {isActive && (
-                                                        <span className="text-indigo-600 text-xl">✓</span>
-                                                    )}
-                                                </div>
+                                            <button key={x.id} type="button" role="radio" aria-checked={isActive} className="atn-option"
+                                                onClick={function () { setLevel(x.id); if (dates[x.id]) setExamDate(dates[x.id]); }}>
+                                                <span className={"h-10 w-10 rounded-xl grid place-items-center shrink-0 " + (isActive ? "bg-[#0D2C4D] text-white dark:bg-teal-500" : "bg-amber-50 text-amber-700 dark:bg-stone-800 dark:text-amber-300")}><AuthIcon name="cap" size={20} /></span>
+                                                <span className="flex-1 min-w-0">
+                                                    <span className="block font-semibold text-[15px] text-slate-900 dark:text-white">{x.t}</span>
+                                                    <span className="block text-[13px] text-slate-500 dark:text-stone-400 mt-0.5">{x.d}</span>
+                                                </span>
+                                                <span className={"h-5 w-5 rounded-full border-2 grid place-items-center shrink-0 " + (isActive ? "border-teal-600 bg-teal-600 text-white" : "border-slate-300 dark:border-stone-600")}>
+                                                    {isActive ? <AuthIcon name="check" size={12} sw={3} /> : null}
+                                                </span>
                                             </button>
                                         );
                                     })}
                                 </div>
-                            </div>
-
-                            <button 
-                                type="button" 
-                                disabled={!name.trim()} 
-                                onClick={function () { goAfterEducation(); }}
-                                className="w-full py-3.5 rounded-2xl btn-primary text-white font-semibold disabled:opacity-40 transition-all"
-                            >
-                                Devam →
-                            </button>
+                            </fieldset>
+                            {primaryBtn("Devam et", "", !name.trim(), function () { if (!name.trim()) { touch("name"); return; } goAfterEducation(); })}
                         </div>
-                    )}
-
-                    {/* Step 2: Target */}
-                    {step === 2 && (
+                    ) : step === 2 ? (
                         <div className="space-y-4">
-                            <div>
-                                <p className="text-sm font-medium text-stone-600 dark:text-stone-300 mb-2">🎯 Hedef Türünüz</p>
-                                <div className="space-y-2">
-                                    {targets.map(function (x) {
-                                        var on = target === x.id;
-                                        return (
-                                            <button 
-                                                key={x.id} 
-                                                type="button" 
-                                                onClick={function () {
-                                                    setTarget(x.id);
-                                                    if (!x.ready) {
-                                                        var n = Object.assign({}, interest);
-                                                        n[x.id] = true;
-                                                        setInterest(n);
-                                                    }
-                                                }} 
-                                                className={cardCls(on, !x.ready)}
-                                            >
-                                                <div className="flex items-start justify-between gap-3">
-                                                    <div className="flex-1">
-                                                        <div className="flex items-center gap-2 font-display font-semibold text-stone-800 dark:text-stone-100">
-                                                            <span className="text-lg">{x.icon === "book" ? "📖" : x.icon === "scale" ? "⚖️" : x.icon === "cap" ? "🎓" : "📚"}</span>
-                                                            {x.t}
-                                                        </div>
-                                                        <div className="text-sm text-stone-500 mt-0.5">{x.d}</div>
-                                                    </div>
-                                                    {!x.ready ? (
-                                                        <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300 shrink-0">
-                                                            ⏳ Yakında
-                                                        </span>
-                                                    ) : on ? (
-                                                        <span className="text-indigo-600 text-xl shrink-0">✓</span>
-                                                    ) : null}
-                                                </div>
-                                            </button>
-                                        );
-                                    })}
-                                </div>
+                            <div className="space-y-2" role="radiogroup" aria-label="Hedef">
+                                {targets.map(function (x) {
+                                    var on = target === x.id;
+                                    return (
+                                        <button key={x.id} type="button" role="radio" aria-checked={on} className={"atn-option" + (x.ready ? "" : " opacity-60")}
+                                            onClick={function () { setTarget(x.id); if (!x.ready) { var n2 = Object.assign({}, interest); n2[x.id] = true; setInterest(n2); } }}>
+                                            <span className="flex-1"><span className="block font-semibold text-slate-900 dark:text-white">{x.t}</span><span className="block text-[13px] text-slate-500 mt-0.5">{x.d}</span></span>
+                                            {!x.ready ? <span className="text-[11px] font-bold px-2 py-1 rounded-full bg-amber-100 text-amber-800">Yakında</span> : null}
+                                        </button>
+                                    );
+                                })}
                             </div>
-
-                            <div className="flex items-center gap-2">
-                                {React.createElement(window.KpssBackBtn, { onClick: function () { setStep(1); }, label: "Geri" })}
-                                <button 
-                                    type="button" 
-                                    onClick={function () { setStep(3); setMsg(""); }} 
-                                    className="flex-1 py-3.5 rounded-2xl btn-primary text-white font-semibold"
-                                >
-                                    Devam →
-                                </button>
+                            <div className="flex gap-2">
+                                <button type="button" className="atn-btn-ghost !w-auto px-5" onClick={function () { setStep(1); }}><AuthIcon name="back" />Geri</button>
+                                <div className="flex-1">{primaryBtn("Devam et", "", false, function () { setStep(3); setMsg(""); })}</div>
                             </div>
                         </div>
-                    )}
-
-                    {/* Step 3: Account */}
-                    {step === 3 && (
-                        <div className="space-y-4">
-                            <div className="rounded-2xl bg-indigo-50/50 dark:bg-indigo-950/20 p-4 border border-indigo-100 dark:border-indigo-800/30">
-                                <p className="text-sm text-indigo-700 dark:text-indigo-300">
-                                    📌 <strong>GY-GK</strong> not, test ve oyun hazır.
-                                </p>
-                            </div>
-
-                            <div>
-                                <label className="text-sm font-medium text-stone-600 dark:text-stone-300 block mb-1.5" htmlFor="au-mail">
-                                    📧 E-posta
-                                </label>
-                                <input 
-                                    id="au-mail" 
-                                    ref={emailRef}
-                                    type="email" 
-                                    autoComplete="email" 
-                                    value={email} 
-                                    onChange={function (e) { setEmail(e.target.value); }} 
-                                    onKeyDown={handleKeyDown}
-                                    className={field} 
-                                    placeholder="ornek@email.com"
-                                />
-                            </div>
-
-                            <div>
-                                <label className="text-sm font-medium text-stone-600 dark:text-stone-300 block mb-1.5" htmlFor="au-pass">
-                                    🔒 Şifre
-                                </label>
-                                <div className="relative">
-                                    <input 
-                                        id="au-pass" 
-                                        ref={passRef}
-                                        type={showPassword ? "text" : "password"} 
-                                        autoComplete="new-password" 
-                                        value={pass} 
-                                        onChange={function (e) { setPass(e.target.value); }} 
-                                        onKeyDown={handleKeyDown}
-                                        className={field + " pr-12"} 
-                                        placeholder="En az 6 karakter"
-                                    />
-                                    <button 
-                                        type="button" 
-                                        onClick={function () { setShowPassword(!showPassword); }}
-                                        className="absolute right-3 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-600 transition-colors"
-                                    >
-                                        {showPassword ? "👁️" : "👁️‍🗨️"}
-                                    </button>
+                    ) : (
+                        <div className="space-y-5">
+                            {emailInput("au-mail", emailRef)}
+                            {passInput("au-pass", true)}
+                            <details className="group rounded-2xl border border-slate-200 dark:border-stone-700 bg-white dark:bg-stone-900 open:pb-4">
+                                <summary className="cursor-pointer list-none px-4 py-3 flex items-center justify-between text-[13.5px] font-semibold text-slate-700 dark:text-stone-200">
+                                    <span>Sınav tarihi ve davet kodu</span><span className="text-slate-400 text-[12px] font-normal">{formatDate(examDate)}{refCode ? " · kod: " + refCode : ""}</span>
+                                </summary>
+                                <div className="px-4 space-y-4">
+                                    <AuthField id="au-date" label="Sınav tarihi" icon="cal" hint="Programın bu tarihe göre kurulur; sonradan Ben › Ayarlar'dan değiştirebilirsin.">
+                                        {function (a) { return <input {...a} id="au-date" type="date" value={examDate} onChange={function (e) { setExamDate(e.target.value); }} />; }}
+                                    </AuthField>
+                                    <AuthField id="au-ref" label="Davet kodu" optional icon="gift">
+                                        {function (a) { return <input {...a} id="au-ref" value={refCode} onChange={function (e) { setRefCode(e.target.value.toUpperCase()); }} placeholder="KPSS-ABCD12" autoCapitalize="characters" />; }}
+                                    </AuthField>
                                 </div>
-                                <div className="mt-1.5 flex items-center gap-2">
-                                    <div className="flex-1 h-1 rounded-full bg-stone-200 dark:bg-stone-700 overflow-hidden">
-                                        <div className={"h-full transition-all duration-300 " + passStrength.bg} 
-                                             style={{ width: pass ? Math.min(100, (pass.length / 10) * 100) + "%" : "0%" }} />
-                                    </div>
-                                    <span className={"text-[10px] font-medium " + passStrength.color}>
-                                        {passStrength.label}
-                                    </span>
-                                </div>
+                            </details>
+                            <label className="flex items-start gap-3 cursor-pointer select-none rounded-2xl p-3 -mx-1 hover:bg-slate-50 dark:hover:bg-stone-800/60">
+                                <input type="checkbox" id="au-kvkk" checked={kvkk} onChange={function (e) { setKvkk(e.target.checked); }}
+                                    className="mt-0.5 w-5 h-5 shrink-0 rounded-md accent-[#0D2C4D] cursor-pointer" aria-describedby="au-kvkk-hint" />
+                                <span className="text-[12.5px] text-slate-500 dark:text-stone-400 leading-relaxed">
+                                    <a className="atn-link" href="yasal/kullanim.html" target="_blank" rel="noopener">Kullanım Koşulları</a> ve{" "}
+                                    <a className="atn-link" href="yasal/uyelik.html" target="_blank" rel="noopener">Üyelik Sözleşmesi</a>'ni kabul ediyorum; ilerleme verilerimin{" "}
+                                    <a className="atn-link" href="yasal/aydinlatma.html" target="_blank" rel="noopener">KVKK Aydınlatma Metni</a>'ne göre hesabımda saklanmasına izin veriyorum.
+                                    {!kvkk ? <span id="au-kvkk-hint" className="block mt-1 text-[11.5px] text-slate-400">Devam etmek için onay kutusunu işaretle.</span> : null}
+                                </span>
+                            </label>
+                            <div className="flex gap-2">
+                                <button type="button" className="atn-btn-ghost !w-auto px-5" aria-label="Geri" onClick={function () { setStep(level === "lisans" && false ? 2 : 1); }}><AuthIcon name="back" />Geri</button>
+                                <div className="flex-1">{primaryBtn("Hesabı oluştur", "Hesap oluşturuluyor…", busy || !kvkk || !validateEmail(email) || !validatePassword(pass), submit)}</div>
                             </div>
-
-                            <div>
-                                <label className="text-sm font-medium text-stone-600 dark:text-stone-300 block mb-1.5" htmlFor="au-date">
-                                    📅 Sınav Tarihi
-                                </label>
-                                <input 
-                                    id="au-date" 
-                                    type="date" 
-                                    value={examDate} 
-                                    onChange={function (e) { setExamDate(e.target.value); }} 
-                                    className={field}
-                                />
-                            </div>
-
-                            <div>
-                                <label className="text-sm font-medium text-stone-600 dark:text-stone-300 block mb-1.5" htmlFor="au-ref">
-                                    🔑 Davet Kodu <span className="text-xs text-stone-400 font-normal">(opsiyonel)</span>
-                                </label>
-                                <input 
-                                    id="au-ref" 
-                                    value={refCode} 
-                                    onChange={function (e) { setRefCode(e.target.value); }} 
-                                    className={field} 
-                                    placeholder="Örn: KPSS-ABCD12"
-                                />
-                            </div>
-
-                            <p className="text-[11px] text-stone-500 leading-relaxed">
-                                Hesap oluşturarak{" "}
-                                <a className="text-teal-700 font-semibold underline" href="yasal/kullanim.html" target="_blank" rel="noopener">Kullanım Koşulları</a>
-                                {" "}ile{" "}
-                                <a className="text-teal-700 font-semibold underline" href="yasal/uyelik.html" target="_blank" rel="noopener">Üyelik Sözleşmesi</a>
-                                {"'ni kabul etmiş olursunuz. Kişisel verileriniz hakkında "}
-                                <a className="text-teal-700 font-semibold underline" href="yasal/aydinlatma.html" target="_blank" rel="noopener">KVKK Aydınlatma Metni</a>
-                                {"'ni inceleyebilirsiniz. "}
-                                <a className="underline" href="yasal/gizlilik.html" target="_blank" rel="noopener">Gizlilik</a>
-                                {" · "}
-                                <a className="underline" href="yasal/cerez.html" target="_blank" rel="noopener">Çerezler</a>
-                            </p>
-
-                            <div className="flex items-center gap-2">
-                                {React.createElement(window.KpssBackBtn, { onClick: function () { setStep(level === "lisans" ? 2 : 1); }, label: "Geri" })}
-                                <button 
-                                    type="button" 
-                                    disabled={busy || !validateEmail(email) || !validatePassword(pass)} 
-                                    onClick={submit} 
-                                    className="flex-1 py-3.5 rounded-2xl btn-primary text-white font-semibold disabled:opacity-40 transition-all"
-                                >
-                                    {busy ? "⏳" : "🚀 Kayıt Ol"}
-                                </button>
-                            </div>
+                            {orLine()}
+                            {googleBtn("Google ile kayıt ol")}
                         </div>
                     )}
                 </div>
             );
         }
 
-        // ============================================================
-        // LOGIN FORM
-        // ============================================================
-
+        // ---------- GİRİŞ ----------
         var loginForm = mode === "in" ? (
-            <div className="space-y-4">
-                <div>
-                    <label className="text-sm font-medium text-stone-600 dark:text-stone-300 block mb-1.5" htmlFor="login-email">
-                        📧 E-posta
-                    </label>
-                    <input 
-                        id="login-email" 
-                        ref={emailRef}
-                        type="email" 
-                        autoComplete="email" 
-                        value={email} 
-                        onChange={function (e) { setEmail(e.target.value); }} 
-                        onKeyDown={handleKeyDown}
-                        className={field} 
-                        placeholder="ornek@email.com"
-                    />
-                </div>
-
-                <div>
-                    <label className="text-sm font-medium text-stone-600 dark:text-stone-300 block mb-1.5" htmlFor="login-pass">
-                        🔒 Şifre
-                    </label>
-                    <div className="relative">
-                        <input 
-                            id="login-pass" 
-                            ref={passRef}
-                            type={showPassword ? "text" : "password"} 
-                            autoComplete="current-password" 
-                            value={pass} 
-                            onChange={function (e) { setPass(e.target.value); }} 
-                            onKeyDown={handleKeyDown}
-                            className={field + " pr-12"} 
-                            placeholder="••••••••"
-                        />
-                        <button 
-                            type="button" 
-                            onClick={function () { setShowPassword(!showPassword); }}
-                            className="absolute right-3 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-600 transition-colors"
-                        >
-                            {showPassword ? "👁️" : "👁️‍🗨️"}
-                        </button>
-                    </div>
-                </div>
-
-                <div className="flex items-center justify-between">
-                    <label className="flex items-center gap-2 text-sm text-stone-500 cursor-pointer">
-                        <input 
-                            type="checkbox" 
-                            checked={rememberMe} 
-                            onChange={function (e) { setRememberMe(e.target.checked); }} 
-                            className="w-4 h-4 rounded border-stone-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        Beni Hatırla
-                    </label>
-                    <button 
-                        type="button" 
-                        className="text-sm text-indigo-600 dark:text-indigo-400 hover:underline"
-                        onClick={async function () {
-                            if (!email || !validateEmail(email)) {
-                                setMsg("Şifre sıfırlama için e-posta adresinizi girin.");
-                                if (emailRef.current) emailRef.current.focus();
-                                return;
-                            }
-                            if (!sb) { setMsg("Sunucu bağlı değil."); return; }
-                            if (Date.now() < loginLockUntil) { setMsg(loginLockedMsg()); return; }
-                            setBusy(true);
-                            setMsg("");
-                            try {
-                                if (window.SupabaseClient && window.SupabaseClient.clearRecoveryFlag) {
-                                    window.SupabaseClient.clearRecoveryFlag();
-                                }
-                                var resetTo = window.location.origin + "/auth/reset";
-                                await sb.auth.resetPasswordForEmail(email.trim(), {
-                                    redirectTo: resetTo
-                                });
-                                loginFails += 1;
-                                if (loginFails >= 5) {
-                                    loginLockUntil = Date.now() + 60000;
-                                }
-                                setMsg("Hesap varsa şifre sıfırlama bağlantısı gönderildi. Spam klasörüne de bak.");
-                            } catch (e) {
-                                var em = window.trError ? window.trError(e, "") : "";
-                                if (/çok sık|bağlantı|sunucu|zaman aşımı/i.test(em)) setMsg(em);
-                                else setMsg("Hesap varsa şifre sıfırlama bağlantısı gönderildi. Spam klasörüne de bak.");
-                            }
-                            setBusy(false);
-                        }}
-                    >
-                        Şifremi Unuttum
-                    </button>
-                </div>
-
-                <button 
-                    disabled={busy || !validateEmail(email) || !validatePassword(pass)} 
-                    onClick={submit} 
-                    className="w-full py-3.5 rounded-2xl btn-primary text-white font-semibold disabled:opacity-40 transition-all"
-                >
-                    {busy ? "⏳" : "🔓 Giriş Yap"}
-                </button>
-
-                <div className="relative my-3">
-                    <div className="absolute inset-0 flex items-center">
-                        <div className="w-full border-t border-stone-200 dark:border-stone-700"></div>
-                    </div>
-                    <div className="relative flex justify-center text-xs">
-                        <span className="px-3 bg-white dark:bg-stone-900 text-stone-400">veya</span>
-                    </div>
-                </div>
-
-                <button 
-                    type="button" 
-                    disabled={busy} 
-                    onClick={google}
-                    className="w-full py-3.5 rounded-2xl btn-google font-semibold text-sm flex items-center justify-center gap-3 disabled:opacity-50"
-                >
-                    <svg className="w-5 h-5" viewBox="0 0 24 24">
-                        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                    </svg>
-                    Google ile Devam
-                </button>
-                <p className="text-[11px] text-stone-500 text-center">İlk kez Google ile gelince ad ve eğitim sorulur.</p>
+            <div className="space-y-5 atn-in" key="in">
+                {emailInput("login-email", emailRef)}
+                {passInput("login-pass", false)}
+                <label className="flex items-center gap-2.5 text-[13.5px] text-slate-600 dark:text-stone-300 cursor-pointer select-none w-fit">
+                    <input type="checkbox" checked={rememberMe} onChange={function (e) { setRememberMe(e.target.checked); }} className="h-[18px] w-[18px] rounded border-slate-300 text-teal-700 focus:ring-teal-600" />
+                    Bu cihazda oturumum açık kalsın
+                </label>
+                {primaryBtn("Giriş yap", "Giriş yapılıyor…", busy || !kvkk || !validateEmail(email) || !validatePassword(pass), submit)}
+                {orLine()}
+                {googleBtn("Google ile devam et")}
             </div>
         ) : null;
 
-        // ============================================================
-        // MAIN RENDER
-        // ============================================================
+        // ---------- MESAJ ----------
+        var notice = msg ? (
+            <div role={okMsg ? "status" : "alert"} className={"mt-5 p-4 rounded-2xl text-[13.5px] flex items-start gap-3 atn-in " +
+                (okMsg ? "bg-emerald-50 text-emerald-800 ring-1 ring-emerald-200 dark:bg-emerald-950/30 dark:text-emerald-200 dark:ring-emerald-900"
+                    : "bg-rose-50 text-rose-800 ring-1 ring-rose-200 dark:bg-rose-950/30 dark:text-rose-200 dark:ring-rose-900")}>
+                <span className="shrink-0 mt-0.5"><AuthIcon name={okMsg ? "ok" : "alert"} /></span>
+                <span className="whitespace-pre-line leading-relaxed">{cleanMsg}</span>
+            </div>
+        ) : null;
+
+        // ---------- ŞİFRE YENİLEME ----------
+        var recoveryForm = recovery ? (
+            <div className="space-y-5 atn-in">
+                <AuthField id="rec-pass" label="Yeni şifre" icon="lock" extra={<StrengthMeter value={newPass} />}>
+                    {function (a) { return <input {...a} id="rec-pass" type={showPassword ? "text" : "password"} value={newPass} onChange={function (e) { setNewPass(e.target.value); }} placeholder="En az 6 karakter" autoComplete="new-password" />; }}
+                </AuthField>
+                <AuthField id="rec-pass2" label="Yeni şifre (tekrar)" icon="lock" error={newPass2 && newPass2 !== newPass ? "Şifreler eşleşmiyor." : ""}>
+                    {function (a) { return <input {...a} id="rec-pass2" type={showPassword ? "text" : "password"} value={newPass2} onChange={function (e) { setNewPass2(e.target.value); }} placeholder="Şifreni tekrar yaz" autoComplete="new-password" />; }}
+                </AuthField>
+                <label className="flex items-center gap-2.5 text-[13.5px] text-slate-600 dark:text-stone-300 cursor-pointer w-fit">
+                    <input type="checkbox" checked={showPassword} onChange={function (e) { setShowPassword(e.target.checked); }} className="h-[18px] w-[18px] rounded border-slate-300 text-teal-700" />Şifreyi göster
+                </label>
+                {primaryBtn(recReady ? "Şifreyi kaydet" : "Bağlantı doğrulanıyor…", "Kaydediliyor…", busy || !recReady, saveNewPassword)}
+                <button type="button" className="w-full text-[13.5px] atn-link py-2" onClick={function () {
+                    if (window.SupabaseClient && window.SupabaseClient.clearRecovery) window.SupabaseClient.clearRecovery();
+                    setRecovery(false); setRecReady(false);
+                    if (props.onRecoveryFailed) props.onRecoveryFailed();
+                }}>Girişe dön</button>
+            </div>
+        ) : null;
 
         var form = (
             <div className={props.gate ? "" : "p-6 sm:p-8"}>
-                {recovery ? (
-                    <div className="space-y-4">
-                        <p className="text-sm text-stone-500">Yeni şifreni yaz. En az 6 karakter.</p>
-                        <div>
-                            <label className="text-sm font-medium text-stone-600 dark:text-stone-300 block mb-1.5">Yeni şifre</label>
-                            <input type={showPassword ? "text" : "password"} value={newPass} onChange={function (e) { setNewPass(e.target.value); }} className={field} placeholder="••••••••" autoComplete="new-password" />
-                        </div>
-                        <div>
-                            <label className="text-sm font-medium text-stone-600 dark:text-stone-300 block mb-1.5">Yeni şifre (tekrar)</label>
-                            <input type={showPassword ? "text" : "password"} value={newPass2} onChange={function (e) { setNewPass2(e.target.value); }} className={field} placeholder="••••••••" autoComplete="new-password" />
-                        </div>
-                        <label className="flex items-center gap-2 text-sm text-stone-500 cursor-pointer">
-                            <input type="checkbox" checked={showPassword} onChange={function (e) { setShowPassword(e.target.checked); }} className="w-4 h-4 rounded border-stone-300 text-indigo-600" />
-                            Şifreyi göster
-                        </label>
-                        <button type="button" disabled={busy || !recReady} onClick={saveNewPassword} className="w-full py-3.5 rounded-2xl btn-primary text-white font-semibold disabled:opacity-40">
-                            {busy ? "⏳" : (recReady ? "Şifreyi kaydet" : "Bağlantı doğrulanıyor…")}
-                        </button>
-                        <button type="button" className="w-full text-sm text-stone-500" onClick={function () {
-                            if (window.SupabaseClient && window.SupabaseClient.clearRecovery) window.SupabaseClient.clearRecovery();
-                            setRecovery(false);
-                            setRecReady(false);
-                            if (props.onRecoveryFailed) props.onRecoveryFailed();
-                        }}>Girişe dön</button>
-                    </div>
-                ) : (
+                {recovery ? recoveryForm : (
                     <div>
-                {/* Mode Toggle */}
-                <div className="flex p-1.5 rounded-2xl bg-stone-100 dark:bg-stone-800 mb-6">
-                    <button 
-                        type="button" 
-                        onClick={function () { setMode("in"); setMsg(""); setStep(1); setPass(""); }}
-                        className={"flex-1 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 " + 
-                            (mode === "in" 
-                                ? "bg-white dark:bg-stone-900 shadow-md text-indigo-600 dark:text-indigo-400" 
-                                : "text-stone-500 hover:text-stone-700 dark:hover:text-stone-300")}
-                    >
-                        🔐 Giriş
-                    </button>
-                    <button 
-                        type="button" 
-                        onClick={function () { setMode("up"); setMsg(""); setStep(1); setPass(""); }}
-                        className={"flex-1 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 " + 
-                            (mode === "up" 
-                                ? "bg-white dark:bg-stone-900 shadow-md text-indigo-600 dark:text-indigo-400" 
-                                : "text-stone-500 hover:text-stone-700 dark:hover:text-stone-300")}
-                    >
-                        📝 Kayıt
-                    </button>
-                </div>
-
-                {signup}
-                {loginForm}
-
-                {mode === "up" && step === 3 && (
-                    <div className="mt-3">
-                        <div className="relative my-3">
-                            <div className="absolute inset-0 flex items-center">
-                                <div className="w-full border-t border-stone-200 dark:border-stone-700"></div>
-                            </div>
-                            <div className="relative flex justify-center text-xs">
-                                <span className="px-3 bg-white dark:bg-stone-900 text-stone-400">veya</span>
-                            </div>
+                        <div className="atn-seg mb-7" role="tablist" aria-label="Giriş ya da kayıt">
+                            <span className="atn-seg-thumb" style={{ transform: mode === "up" ? "translateX(100%)" : "none" }} aria-hidden="true"></span>
+                            <button type="button" role="tab" aria-selected={mode === "in"} onClick={function () { setMode("in"); setMsg(""); setStep(1); setPass(""); setTouched({}); }}>Giriş yap</button>
+                            <button type="button" role="tab" aria-selected={mode === "up"} onClick={function () { setMode("up"); setMsg(""); setStep(1); setPass(""); setTouched({}); }}>Kayıt ol</button>
                         </div>
-                        <button 
-                            type="button" 
-                            disabled={busy} 
-                            onClick={google}
-                            className="w-full py-3.5 rounded-2xl btn-google font-semibold text-sm flex items-center justify-center gap-3 disabled:opacity-50"
-                        >
-                            <svg className="w-5 h-5" viewBox="0 0 24 24">
-                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                            </svg>
-                            Google ile Kayıt Ol
-                        </button>
+                        {signup}
+                        {loginForm}
                     </div>
                 )}
-                    </div>
-                )}
-
-                {msg && (
-                    <div className={"mt-4 p-4 rounded-2xl text-sm flex items-start gap-3 " + 
-                        (msg.includes("✅") || msg.includes("tamam") 
-                            ? "bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300" 
-                            : "bg-rose-50 dark:bg-rose-950/20 border border-rose-200 dark:border-rose-800 text-rose-700 dark:text-rose-300")}
-                    >
-                        <span className="text-lg shrink-0">{msg.includes("✅") || msg.includes("tamam") ? "✅" : "⚠️"}</span>
-                        <span className="whitespace-pre-line">{msg}</span>
-                    </div>
-                )}
+                {notice}
             </div>
         );
-
-        // ============================================================
-        // GATE MODE (Full Page)
-        // ============================================================
 
         if (!props.gate) return form;
 
         if (showLand && !recovery) {
-            return (
-                <LandingPage
-                    onLogin={function () { goAuth("in"); }}
-                    onSignup={function () { goAuth("up"); }}
-                />
-            );
+            return <LandingPage onLogin={function () { goAuth("in"); }} onSignup={function () { goAuth("up"); }} />;
         }
 
+        var heading = recovery ? "Yeni şifreni belirle" : mode === "up" ? "Hesabını oluştur" : "Tekrar hoş geldin";
+        var sub = recovery ? "Maildeki bağlantı seni buraya getirdi. Yeni şifren en az 6 karakter olsun."
+            : mode === "up" ? "Ücretsiz. İki kısa adım; kart bilgisi istenmez."
+            : "Kaldığın yerden devam et: programın, notların ve yanlış defterin seni bekliyor.";
         return (
-            <div className="brand-backdrop min-h-screen flex items-center justify-center px-6 py-12 relative overflow-hidden">
-                <div className="brand-glow" aria-hidden="true"></div>
-                <div className="brand-ring brand-ring-outer" aria-hidden="true"></div>
-                <div className="brand-ring brand-ring-inner" aria-hidden="true"></div>
-                <div className="relative z-10 w-full max-w-md bg-white dark:bg-stone-900 rounded-[28px] shadow-2xl p-6 sm:p-8 text-stone-800 fade-in">
-                    <div className="text-center mb-6">
-                        {window.AtanomLogo
-                            ? window.AtanomLogo("h-24 w-24 mx-auto mb-3 object-contain drop-shadow-sm")
-                            : <img src="icons/atanom.png" alt="Atanly" className="h-24 w-24 mx-auto mb-3 object-contain" />}
-                        <h1 className="text-2xl md:text-3xl font-black gradient-text">Atanly</h1>
-                        <p className="text-sm text-stone-500 mt-1">
-                            {recovery
-                                ? "Maildeki bağlantı seni buraya getirdi"
-                                : (mode === "up"
-                                ? "Hedefine doğru ilk adımı at"
-                                : "Kaldığın yerden devam et")}
-                        </p>
+            <div className="atn-auth min-h-screen lg:grid lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)]">
+                <BrandPanel />
+                <main className="min-h-screen flex flex-col">
+                    {/* telefon: üst marka bandı */}
+                    <div className="atn-brand lg:hidden relative overflow-hidden text-white px-5 pt-6 pb-16">
+                        <div className="atn-brand-grid" aria-hidden="true"></div>
+                        <div className="relative flex items-center justify-between">
+                            <button type="button" onClick={goLand} className="flex items-center gap-2.5" aria-label="Atanly ana sayfa">
+                                {window.AtanomLogo ? window.AtanomLogo("h-9 w-9 object-contain") : <img src="icons/atanom.png" alt="" className="h-9 w-9 object-contain" />}
+                                <span className="text-lg font-bold tracking-tight">Atanly</span>
+                            </button>
+                            {props.toggleDark ? <AuthThemeBtn dark={props.isDark} onClick={props.toggleDark} onBrand /> : null}
+                        </div>
+                        <p className="relative mt-6 text-[12px] font-bold uppercase tracking-[0.16em] text-[#E8C987]">KPSS · GY-GK</p>
+                        <p className="relative text-2xl font-bold leading-tight mt-1.5">Atamaya giden çalışma odası.</p>
                     </div>
-
-                    {form}
-                    <p className="text-[10px] text-center text-stone-400 mt-4 leading-relaxed">
-                        <a className="underline" href="yasal/aydinlatma.html">KVKK Aydınlatma</a>
-                        {" · "}
-                        <a className="underline" href="yasal/kullanim.html">Kullanım</a>
-                        {" · "}
-                        <a className="underline" href="yasal/uyelik.html">Üyelik</a>
-                        {" · "}
-                        <a className="underline" href="yasal/gizlilik.html">Gizlilik</a>
-                        {" · "}
-                        <a className="underline" href="yasal/cerez.html">Çerez</a>
-                        {" · "}
-                        <a className="underline" href="yasal/basvuru.html">KVKK başvuru</a>
-                    </p>
-                </div>
+                    <div className="flex-1 flex justify-center lg:items-center px-4 sm:px-8 -mt-10 lg:mt-0 pb-10 lg:py-12">
+                        <div className="w-full max-w-[440px] bg-white dark:bg-stone-900 lg:bg-transparent lg:dark:bg-transparent rounded-[28px] lg:rounded-none shadow-[0_20px_50px_-20px_rgba(15,23,42,.35)] lg:shadow-none ring-1 ring-slate-200/70 dark:ring-stone-800 lg:ring-0 p-6 sm:p-8 lg:p-0 relative">
+                            <div className="hidden lg:flex items-center justify-between mb-10">
+                                <button type="button" onClick={goLand} className="atn-link text-[13.5px] inline-flex items-center gap-1"><AuthIcon name="back" size={16} />Ana sayfa</button>
+                                {props.toggleDark ? <AuthThemeBtn dark={props.isDark} onClick={props.toggleDark} /> : null}
+                            </div>
+                            <h1 className="text-[26px] sm:text-[30px] font-bold tracking-tight text-slate-900 dark:text-white">{heading}</h1>
+                            <p className="text-[14.5px] text-slate-500 dark:text-stone-400 mt-1.5 mb-7 leading-relaxed">{sub}</p>
+                            {form}
+                            <p className="text-[11.5px] text-center text-slate-400 mt-8 leading-relaxed">
+                                <a className="hover:underline" href="yasal/aydinlatma.html">KVKK Aydınlatma</a>{" · "}
+                                <a className="hover:underline" href="yasal/kullanim.html">Kullanım</a>{" · "}
+                                <a className="hover:underline" href="yasal/uyelik.html">Üyelik</a>{" · "}
+                                <a className="hover:underline" href="yasal/gizlilik.html">Gizlilik</a>{" · "}
+                                <a className="hover:underline" href="yasal/cerez.html">Çerez</a>{" · "}
+                                <a className="hover:underline" href="yasal/basvuru.html">KVKK başvuru</a>
+                            </p>
+                        </div>
+                    </div>
+                </main>
             </div>
         );
     }

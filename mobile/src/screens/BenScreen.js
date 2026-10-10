@@ -5,7 +5,8 @@ import { StudentStore } from "../lib/store";
 import { SyncEngine } from "../lib/syncEngine";
 import { supabase } from "../lib/supabase";
 import { go } from "../nav";
-import { Card, GhostButton, PrimaryButton, ScrollScreen, Badge, Tap, PageHeader, ThemeToggle } from "../ui";
+import { Card, GhostButton, PrimaryButton, ScrollScreen, Badge, Tap, PageHeader, ThemeToggle, BottomSheet } from "../ui";
+import { LogOut } from "lucide-react-native";
 import { colors, eduLabel, fmtExam, needsKulvar, getScoreLabel, trackLabel } from "../lib/theme";
 import { KpssConfig } from "../lib/config";
 
@@ -29,6 +30,26 @@ export default function BenScreen({ navigation }) {
     var up = st.userProfile || {};
 
     // ---------- State ----------
+    var _out = useState(false);
+    var outOpen = _out[0], setOutOpen = _out[1];
+    var _outBusy = useState(false);
+    var outBusy = _outBusy[0], setOutBusy = _outBusy[1];
+    var email = (app.session && app.session.user && app.session.user.email) || "";
+
+    // Çıkış: bekleyen ilerleme önce buluta yazılır (en çok 4 sn), sonra oturum kapanır.
+    // Web karşılığı: js/app.jsx içindeki SignOutDialog.
+    function confirmSignOut() {
+        if (outBusy) return;
+        setOutBusy(true);
+        var done = false;
+        var finish = function () { if (done) return; done = true; setOutOpen(false); app.signOut(); };
+        setTimeout(finish, 4000);
+        try {
+            if (SyncEngine && SyncEngine.sync) Promise.resolve(SyncEngine.sync()).then(finish, finish);
+            else finish();
+        } catch (_e) { finish(); }
+    }
+
     var _edit = useState(false);
     var editing = _edit[0];
     var setEditing = _edit[1];
@@ -345,9 +366,21 @@ export default function BenScreen({ navigation }) {
             />
             <GhostButton 
                 title="Çıkış Yap" 
-                onPress={app.signOut} 
+                onPress={function () { setOutOpen(true); }} 
                 style={[styles.dangerBtn, { marginTop: 8 }]} 
             />
+            <BottomSheet visible={outOpen} onClose={function () { if (!outBusy) setOutOpen(false); }}
+                style={isDark ? { backgroundColor: "#292524" } : null}>
+                <View style={styles.outIcon}><LogOut size={22} color="#B45309" strokeWidth={2} /></View>
+                <Text style={[styles.outTitle, isDark && { color: "#F5F5F4" }]} accessibilityRole="header">Çıkış yapılsın mı?</Text>
+                <Text style={[styles.outDesc, isDark && { color: "#A8A29E" }]}>
+                    İlerlemen hesabına kaydedilir; {email ? <Text style={{ fontWeight: "700", color: isDark ? "#E7E5E4" : "#334155" }}>{email}</Text> : "aynı hesapla"}{email ? " ile" : ""} yeniden giriş yaptığında kaldığın yerden devam edersin.
+                </Text>
+                <View style={styles.outRow}>
+                    <View style={{ flex: 1 }}><GhostButton title="Vazgeç" disabled={outBusy} onPress={function () { setOutOpen(false); }} /></View>
+                    <View style={{ flex: 1 }}><PrimaryButton title={outBusy ? "Kaydediliyor" : "Çıkış yap"} busy={outBusy} onPress={confirmSignOut} /></View>
+                </View>
+            </BottomSheet>
 
             {/* Footer */}
             <View style={styles.legalRow}>
@@ -473,6 +506,10 @@ function ResetProfileModal(props) {
 // ============================================================
 
 var styles = StyleSheet.create({
+    outIcon: { width: 48, height: 48, borderRadius: 16, backgroundColor: "#FEF3C7", alignItems: "center", justifyContent: "center", marginTop: 4 },
+    outTitle: { fontSize: 20, fontWeight: "700", color: "#0F172A", marginTop: 14 },
+    outDesc: { fontSize: 14, lineHeight: 21, color: "#64748B", marginTop: 6 },
+    outRow: { flexDirection: "row", gap: 10, marginTop: 22, marginBottom: 4 },
     // ---------- Text Helpers ----------
     textLight: {
         color: "#fff",

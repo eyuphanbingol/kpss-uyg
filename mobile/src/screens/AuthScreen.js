@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Image, Text, View, StyleSheet, ActivityIndicator, ScrollView } from "react-native";
+import { Animated, Image, Text, View, StyleSheet, ActivityIndicator, ScrollView } from "react-native";
+import { AlertCircle, Check, CheckCircle2, ChevronLeft, Gift, GraduationCap, Lock, Mail, User } from "lucide-react-native";
+import { SCORE_CLR, SCORE_TXT, passRules, passScore, suggestEmail, validEmail } from "../lib/authHints";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Svg, { Path } from "react-native-svg";
 import * as WebBrowser from "expo-web-browser";
@@ -12,7 +14,7 @@ import { sessionStorageShim } from "../lib/storage";
 import { SITE } from "../lib/media";
 import { parseAuthUrl } from "../lib/authLinks";
 import { useApp } from "../AppProvider";
-import { Chip, Field, PrimaryButton, Tap, ThemeToggle } from "../ui";
+import { Field, PrimaryButton, Tap, ThemeToggle } from "../ui";
 import { needsKulvar } from "../lib/theme";
 import { BrandBackdrop } from "./SplashScreen";
 import { StatusBar } from "expo-status-bar";
@@ -46,7 +48,7 @@ function GoogleButton({ onPress, busy, disabled }) {
             ) : (
                 <View style={styles.googleBtnContent}>
                     <GoogleMark />
-                    <Text style={styles.googleBtnText}>Google ile Devam</Text>
+                    <Text style={styles.googleBtnText}>Google ile devam et</Text>
                 </View>
             )}
         </Tap>
@@ -339,44 +341,122 @@ export default function AuthScreen() {
     }
 
     // ---------- Step Indicator ----------
-    function StepIndicator() {
-        var total = needsKulvar(level) ? 3 : 2;
+    // ---------- görünüm durumu ----------
+    var _touched = useState({});
+    var touched = _touched[0];
+    var setTouched = _touched[1];
+    function touch(k) { setTouched(function (t) { var n = Object.assign({}, t); n[k] = true; return n; }); }
+    var thumb = useRef(new Animated.Value(0)).current;
+    var _segW = useState(0);
+    var segW = _segW[0];
+    var setSegW = _segW[1];
+    useEffect(function () {
+        Animated.spring(thumb, { toValue: mode === "up" ? 1 : 0, useNativeDriver: true, speed: 18, bounciness: 4 }).start();
+    }, [mode]);
+
+    var dark = !!app.isDark;
+    var ink = dark ? "#F5F5F4" : "#0F172A";
+    var muted = dark ? "#A8A29E" : "#64748B";
+    var iconC = dark ? "#78716C" : "#94A3B8";
+    var emailErr = touched.email && email && !validEmail(email) ? "E-posta adresi eksik ya da hatalı görünüyor." : "";
+    var passErr = touched.pass && pass && pass.length < 6 ? "Şifre en az 6 karakter olmalı." : "";
+    var nameErr = touched.name && !name.trim() ? "Adını yaz; liderlik tablosunda bu görünür." : "";
+    var mailFix = suggestEmail(email);
+    var okMsg = /gönderildi|doğrula|güncellendi/i.test(msg || "");
+    var totalSteps = needsKulvar(level) ? 3 : 2;
+    var stepLabels = totalSteps === 3 ? ["Seni tanıyalım", "Kulvar", "Hesabın"] : ["Seni tanıyalım", "Hesabın"];
+    var stepIdx = totalSteps === 3 ? step : (step === 3 ? 2 : 1);
+
+    function switchMode(m) {
+        setMode(m); setForgot(false); setStep(1); setMsg(""); setTouched({});
+    }
+
+    function MailFix() {
+        if (!mailFix) return null;
         return (
-            <View style={styles.stepContainer}>
-                {Array.from({ length: total }, function (_, i) {
-                    var idx = i + 1;
-                    var isActive = idx === step;
-                    var isPast = idx < step;
-                    return (
-                        <View key={idx} style={styles.stepWrapper}>
-                            <View style={[
-                                styles.stepDot,
-                                isActive && styles.stepDotActive,
-                                isPast && styles.stepDotPast,
-                            ]}>
-                                {isPast ? (
-                                    <Text style={styles.stepDotCheck}>✓</Text>
-                                ) : (
-                                    <Text style={[
-                                        styles.stepDotText,
-                                        isActive && styles.stepDotTextActive,
-                                    ]}>
-                                        {idx}
-                                    </Text>
-                                )}
+            <Tap onPress={function () { setEmail(mailFix); }} accessibilityLabel={"E-postayı " + mailFix + " olarak düzelt"} style={ns.fix}>
+                <Text style={[ns.fixTxt, { color: muted }]}>Bunu mu demek istedin: <Text style={ns.fixLink}>{mailFix}</Text>?</Text>
+            </Tap>
+        );
+    }
+    function Strength(props) {
+        var sc = passScore(props.value), rules = passRules(props.value);
+        return (
+            <View style={{ marginTop: 8 }} accessible accessibilityLabel={props.value ? "Şifre gücü: " + SCORE_TXT[sc] : "Şifre gücü"}>
+                <View style={ns.meter}>
+                    {[1, 2, 3, 4].map(function (i) {
+                        return <View key={i} style={[ns.meterSeg, { backgroundColor: sc >= i ? SCORE_CLR[sc] : (dark ? "#44403C" : "#E2E8F0") }]} />;
+                    })}
+                </View>
+                <View style={ns.rules}>
+                    {rules.map(function (r) {
+                        return (
+                            <View key={r.t} style={ns.rule}>
+                                <Check size={13} color={r.ok ? "#047857" : iconC} strokeWidth={2.6} />
+                                <Text style={[ns.ruleTxt, { color: r.ok ? "#047857" : iconC }]}>{r.t}</Text>
                             </View>
-                            {idx < total && (
-                                <View style={[
-                                    styles.stepLine,
-                                    isPast && styles.stepLinePast,
-                                ]} />
-                            )}
+                        );
+                    })}
+                    {props.value ? <Text style={[ns.scoreTxt, { color: ink }]}>{SCORE_TXT[sc]}</Text> : null}
+                </View>
+            </View>
+        );
+    }
+    function Notice() {
+        if (!msg) return null;
+        return (
+            <View style={[ns.notice, okMsg ? ns.noticeOk : ns.noticeErr]} accessibilityLiveRegion="polite" accessibilityRole="alert">
+                {okMsg ? <CheckCircle2 size={18} color="#047857" /> : <AlertCircle size={18} color="#BE123C" />}
+                <Text style={[ns.noticeTxt, { color: okMsg ? "#065F46" : "#9F1239" }]}>{msg}</Text>
+            </View>
+        );
+    }
+    function OrLine() {
+        return (
+            <View style={ns.or}>
+                <View style={[ns.orLine, dark && { backgroundColor: "#44403C" }]} />
+                <Text style={[ns.orTxt, { color: muted }]}>veya</Text>
+                <View style={[ns.orLine, dark && { backgroundColor: "#44403C" }]} />
+            </View>
+        );
+    }
+    function Steps() {
+        return (
+            <View style={ns.steps} accessibilityRole="progressbar" accessibilityLabel={"Adım " + stepIdx + " / " + totalSteps + ": " + stepLabels[stepIdx - 1]}>
+                {stepLabels.map(function (t, i) {
+                    var on = stepIdx === i + 1, done = stepIdx > i + 1;
+                    return (
+                        <View key={t} style={[ns.stepItem, i < stepLabels.length - 1 && { flex: 1 }]}>
+                            <View style={[ns.stepDot, done && ns.stepDone, on && ns.stepOn]}>
+                                {done ? <Check size={12} color="#fff" strokeWidth={3} /> : <Text style={[ns.stepNo, (on || done) && { color: "#fff" }]}>{i + 1}</Text>}
+                            </View>
+                            {on ? <Text style={[ns.stepTxt, { color: ink }]} numberOfLines={1}>{t}</Text> : null}
+                            {i < stepLabels.length - 1 ? <View style={[ns.stepLine, dark && { backgroundColor: "#44403C" }, done && { backgroundColor: "#047857" }]} /> : null}
                         </View>
                     );
                 })}
             </View>
         );
     }
+    function Option(props) {
+        return (
+            <Tap onPress={props.onPress} accessibilityRole="radio" accessibilityState={{ checked: props.on }}
+                style={[ns.option, dark && ns.optionDark, props.on && ns.optionOn, props.on && dark && { backgroundColor: "rgba(20,184,166,0.08)", borderColor: "#2DD4BF" }]}>
+                <View style={[ns.optIcon, props.on && ns.optIconOn]}><GraduationCap size={20} color={props.on ? "#fff" : "#B45309"} /></View>
+                <View style={{ flex: 1, minWidth: 0 }}>
+                    <Text style={[ns.optTitle, { color: ink }]}>{props.title}</Text>
+                    {props.sub ? <Text style={[ns.optSub, { color: muted }]}>{props.sub}</Text> : null}
+                </View>
+                <View style={[ns.radio, props.on && ns.radioOn]}>{props.on ? <Check size={12} color="#fff" strokeWidth={3} /> : null}</View>
+            </Tap>
+        );
+    }
+
+    var heading = recovering ? "Yeni şifreni belirle" : forgot ? "Şifreni sıfırla" : mode === "up" ? "Hesabını oluştur" : "Tekrar hoş geldin";
+    var sub = recovering ? "Maildeki bağlantı seni buraya getirdi. Yeni şifren en az 6 karakter olsun."
+        : forgot ? "E-postanı yaz; şifre sıfırlama bağlantısını gönderelim."
+        : mode === "up" ? "Ücretsiz. Kısa birkaç adım; kart bilgisi istenmez."
+        : "Programın, notların ve yanlış defterin seni bekliyor.";
 
     // ============================================================
     // RENDER
@@ -386,266 +466,155 @@ export default function AuthScreen() {
         <BrandBackdrop>
             <StatusBar style="light" />
             <SafeAreaView style={styles.safeArea} edges={["top", "bottom"]}>
-                <View style={styles.topBar}>
-                    <ThemeToggle />
+                <View style={ns.top}>
+                    <View style={ns.brandRow}>
+                        <Image source={require("../../assets/atanom.png")} style={ns.logo} accessibilityIgnoresInvertColors />
+                        <Text style={ns.brandName}>Atanly</Text>
+                    </View>
+                    <ThemeToggle dark={dark} />
                 </View>
-                <View style={styles.brand}>
-                    <Image source={require("../../assets/atanom.png")} style={styles.logo} />
-                    <Text style={styles.title}>Atanly</Text>
-                    <Text style={styles.subtitle}>
-                        {recovering ? "Yeni şifreni belirle" : (mode === "in" ? "Kaldığın yerden devam et" : "Hedefine doğru ilk adım")}
-                    </Text>
+                <View style={ns.hero}>
+                    <Text style={ns.kicker}>KPSS · GY-GK</Text>
+                    <Text style={ns.heroTitle}>Atamaya giden çalışma odası.</Text>
                 </View>
-                <View style={styles.sheet}>
+                <View style={[styles.sheet, dark && ns.sheetDark]}>
                     <ScrollView
-                        contentContainerStyle={styles.sheetInner}
+                        contentContainerStyle={ns.sheetInner}
                         keyboardShouldPersistTaps="handled"
                         keyboardDismissMode="on-drag"
                         automaticallyAdjustKeyboardInsets
                         showsVerticalScrollIndicator={false}
                     >
+                        <Text style={[ns.h1, { color: ink }]} accessibilityRole="header">{heading}</Text>
+                        <Text style={[ns.sub, { color: muted }]}>{sub}</Text>
+
                         {recovering ? (
                             <View>
-                                <Field
-                                    label="Yeni şifre"
-                                    value={newPass}
-                                    onChangeText={setNewPass}
-                                    placeholder="En az 6 karakter"
-                                    secure
-                                />
-                                <Field
-                                    label="Yeni şifre (tekrar)"
-                                    value={newPass2}
-                                    onChangeText={setNewPass2}
-                                    placeholder="Aynısını yaz"
-                                    secure
-                                />
-                                <PrimaryButton
-                                    title="Şifreyi kaydet"
-                                    onPress={saveNewPassword}
-                                    busy={busy}
-                                    disabled={busy}
-                                />
-                                <Tap
-                                    onPress={function () { if (app.cancelRecovery) app.cancelRecovery(); }}
-                                    style={styles.forgotBtn}
-                                >
-                                    <Text style={styles.forgotText}>Girişe dön</Text>
+                                <Field dark={dark} label="Yeni şifre" value={newPass} onChangeText={setNewPass} placeholder="En az 6 karakter" secure
+                                    icon={<Lock size={18} color={iconC} />} autoComplete="password-new" textContentType="newPassword" extra={<Strength value={newPass} />} />
+                                <Field dark={dark} label="Yeni şifre (tekrar)" value={newPass2} onChangeText={setNewPass2} placeholder="Şifreni tekrar yaz" secure
+                                    icon={<Lock size={18} color={iconC} />} error={newPass2 && newPass2 !== newPass ? "Şifreler eşleşmiyor." : ""} />
+                                <PrimaryButton title="Şifreyi kaydet" onPress={saveNewPassword} busy={busy} disabled={busy} />
+                                <Tap onPress={function () { if (app.cancelRecovery) app.cancelRecovery(); }} style={ns.linkBtn}>
+                                    <Text style={ns.link}>Girişe dön</Text>
                                 </Tap>
-                                {msg ? <Text style={styles.msgText}>{msg}</Text> : null}
+                                <Notice />
                             </View>
                         ) : (
-                        <View>
-                        <View style={styles.toggleContainer}>
-                            <Tap
-                                onPress={function () { setMode("in"); setForgot(false); setMsg(""); }}
-                                style={[styles.toggleBtn, mode === "in" && styles.toggleBtnActive]}
-                            >
-                                <Text style={[styles.toggleText, mode === "in" && styles.toggleTextActive]}>Giriş</Text>
-                            </Tap>
-                            <Tap
-                                onPress={function () { setMode("up"); setStep(1); setMsg(""); }}
-                                style={[styles.toggleBtn, mode === "up" && styles.toggleBtnActive]}
-                            >
-                                <Text style={[styles.toggleText, mode === "up" && styles.toggleTextActive]}>Kayıt</Text>
-                            </Tap>
-                        </View>
+                            <View>
+                                {!forgot ? (
+                                    <View style={[ns.seg, dark && ns.segDark]} accessibilityRole="tablist" onLayout={function (e) { setSegW(e.nativeEvent.layout.width); }}>
+                                        {segW ? (
+                                            <Animated.View pointerEvents="none" style={[ns.segThumb, dark && ns.segThumbDark, { width: (segW - 8) / 2, transform: [{ translateX: thumb.interpolate({ inputRange: [0, 1], outputRange: [0, (segW - 8) / 2] }) }] }]} />
+                                        ) : null}
+                                        {[["in", "Giriş yap"], ["up", "Kayıt ol"]].map(function (t) {
+                                            var on = mode === t[0];
+                                            return (
+                                                <Tap key={t[0]} onPress={function () { switchMode(t[0]); }} accessibilityRole="tab" accessibilityState={{ selected: on }} style={ns.segBtn}>
+                                                    <Text style={[ns.segTxt, on && { color: ink }]}>{t[1]}</Text>
+                                                </Tap>
+                                            );
+                                        })}
+                                    </View>
+                                ) : null}
 
-                            {mode === "in" && (
-                                <View>
-                                    <Field
-                                        label="E-posta"
-                                        ref={emailRef}
-                                        value={email}
-                                        onChangeText={setEmail}
-                                        placeholder="ornek@email.com"
-                                        keyboardType="email-address"
-                                        autoCapitalize="none"
-                                        returnKeyType={forgot ? "send" : "next"}
-                                        onSubmitEditing={function () { if (forgot) submit(); else passRef.current && passRef.current.focus(); }}
-                                    />
-                                    {!forgot && (
-                                        <Field
-                                            label="Şifre"
-                                            ref={passRef}
-                                            value={pass}
-                                            onChangeText={setPass}
-                                            placeholder="••••••••"
-                                            secure
-                                            returnKeyType="done"
-                                            onSubmitEditing={submit}
-                                        />
-                                    )}
-                                    <Tap
-                                        onPress={function () { setForgot(!forgot); setMsg(""); }}
-                                        style={styles.forgotBtn}
-                                    >
-                                        <Text style={styles.forgotText}>
-                                            {forgot ? "Girişe dön" : "Şifremi unuttum"}
-                                        </Text>
-                                    </Tap>
-
-                                    <PrimaryButton
-                                        title={forgot ? "Mail gönder" : "Giriş yap"}
-                                        onPress={submit}
-                                        busy={busy}
-                                        disabled={busy}
-                                    />
-
-                                    {!forgot ? (
-                                        <View>
-                                            <Text style={styles.orText}>veya</Text>
-                                            <GoogleButton
-                                                onPress={google}
-                                                busy={googleBusy}
-                                                disabled={busy}
-                                            />
-                                        </View>
-                                    ) : null}
-                                </View>
-                            )}
-
-                            {mode === "up" && (
-                                <View>
-                                    <StepIndicator />
-
-                                    {step === 1 && (
-                                        <View>
-                                            <Field
-                                                label="Adın"
-                                                ref={nameRef}
-                                                value={name}
-                                                onChangeText={setName}
-                                                placeholder="Adını yaz"
-                                                autoCapitalize="words"
-                                                hint="Bu isim liderlik tablosunda görünecek"
-                                                returnKeyType="next"
-                                                onSubmitEditing={goAfterEdu}
-                                            />
-                                            <Text style={styles.sectionLabel}>Eğitim düzeyin</Text>
-                                            <View style={styles.chipRow}>
-                                                <Chip
-                                                    title="Lisans"
-                                                    sub="4 yıllık"
-                                                    on={level === "lisans"}
-                                                    onPress={function () { pickLevel("lisans"); }}
-                                                />
-                                                <Chip
-                                                    title="Ön lisans"
-                                                    sub="2 yıllık"
-                                                    on={level === "onlisans"}
-                                                    onPress={function () { pickLevel("onlisans"); }}
-                                                />
-                                                <Chip
-                                                    title="Ortaöğretim"
-                                                    sub="Lise"
-                                                    on={level === "ortaogretim"}
-                                                    onPress={function () { pickLevel("ortaogretim"); }}
-                                                />
-                                            </View>
-                                            <PrimaryButton title="Devam" onPress={goAfterEdu} />
-                                        </View>
-                                    )}
-
-                                    {step === 2 && (
-                                        <View>
-                                            <Text style={styles.sectionLabel}>Kulvar</Text>
-                                            <View style={styles.targetGrid}>
-                                                {KpssConfig.targetTypes.map(function (x) {
-                                                    return (
-                                                        <View key={x.id} style={styles.targetItem}>
-                                                            <Chip
-                                                                title={x.t}
-                                                                on={target === x.id}
-                                                                onPress={function () { setTarget(x.id); setMsg(""); }}
-                                                            />
-                                                        </View>
-                                                    );
-                                                })}
-                                            </View>
-                                            <PrimaryButton title="Devam" onPress={function () { setStep(3); setMsg(""); }} />
-                                        </View>
-                                    )}
-
-                                    {step === 3 && (
-                                        <View>
-                                            <Tap
-                                                onPress={function () { setKvkk(!kvkk); }}
-                                                style={styles.kvkkContainer}
-                                            >
-                                                <View style={[
-                                                    styles.kvkkCheck,
-                                                    kvkk && styles.kvkkCheckActive,
-                                                ]}>
-                                                    {kvkk && <Text style={styles.kvkkCheckText}>✓</Text>}
-                                                </View>
-                                                <Text style={styles.kvkkText}>
-                                                    İlerleme verilerimin hesabımda saklanmasına izin veriyorum.
-                                                </Text>
+                                {mode === "in" && (
+                                    <View>
+                                        <Field dark={dark} label="E-posta" ref={emailRef} value={email} onChangeText={setEmail} placeholder="ad@ornek.com"
+                                            keyboardType="email-address" autoCapitalize="none" autoComplete="email" textContentType="emailAddress"
+                                            icon={<Mail size={18} color={iconC} />} error={emailErr} onBlur={function () { touch("email"); }} extra={<MailFix />}
+                                            returnKeyType={forgot ? "send" : "next"} blurOnSubmit={false}
+                                            onSubmitEditing={function () { if (forgot) submit(); else passRef.current && passRef.current.focus(); }} />
+                                        {!forgot ? (
+                                            <Field dark={dark} label="Şifre" ref={passRef} value={pass} onChangeText={setPass} placeholder="Şifren" secure
+                                                autoComplete="password" textContentType="password" icon={<Lock size={18} color={iconC} />}
+                                                error={passErr} onBlur={function () { touch("pass"); }} returnKeyType="go" onSubmitEditing={submit}
+                                                aside={<Tap onPress={function () { setForgot(true); setMsg(""); }} hitSlop={8}><Text style={ns.link}>Şifremi unuttum</Text></Tap>} />
+                                        ) : null}
+                                        <PrimaryButton title={forgot ? "Sıfırlama bağlantısı gönder" : "Giriş yap"} onPress={submit} busy={busy} disabled={busy} />
+                                        {forgot ? (
+                                            <Tap onPress={function () { setForgot(false); setMsg(""); }} style={ns.linkBtn}>
+                                                <Text style={ns.link}>Girişe dön</Text>
                                             </Tap>
+                                        ) : (
+                                            <View>
+                                                <OrLine />
+                                                <GoogleButton onPress={google} busy={googleBusy} disabled={busy} />
+                                            </View>
+                                        )}
+                                    </View>
+                                )}
 
-                                            <Field
-                                                label="Davet kodu (isteğe bağlı)"
-                                                value={refCode}
-                                                onChangeText={setRefCode}
-                                                autoCapitalize="characters"
-                                                placeholder="Örn: KPSS-ABCD12"
-                                            />
-                                            <Field
-                                                label="E-posta"
-                                                value={email}
-                                                onChangeText={setEmail}
-                                                keyboardType="email-address"
-                                                autoCapitalize="none"
-                                            />
-                                            <Field
-                                                label="Şifre"
-                                                value={pass}
-                                                onChangeText={setPass}
-                                                placeholder="En az 6 karakter"
-                                                secure
-                                            />
+                                {mode === "up" && (
+                                    <View>
+                                        <Steps />
+                                        {step === 1 && (
+                                            <View>
+                                                <Field dark={dark} label="Adın" ref={nameRef} value={name} onChangeText={setName} placeholder="Adın" autoCapitalize="words"
+                                                    autoComplete="name-given" textContentType="givenName" icon={<User size={18} color={iconC} />}
+                                                    error={nameErr} onBlur={function () { touch("name"); }} hint="Liderlik tablosunda bu isim görünür."
+                                                    returnKeyType="next" onSubmitEditing={goAfterEdu} />
+                                                <Text style={[ns.legend, { color: ink }]}>Hangi KPSS'ye hazırlanıyorsun?</Text>
+                                                <View accessibilityRole="radiogroup" style={{ gap: 8, marginBottom: 18 }}>
+                                                    <Option title="Lisans" sub="4 yıllık üniversite mezunları" on={level === "lisans"} onPress={function () { pickLevel("lisans"); }} />
+                                                    <Option title="Ön lisans" sub="2 yıllık önlisans mezunları" on={level === "onlisans"} onPress={function () { pickLevel("onlisans"); }} />
+                                                    <Option title="Ortaöğretim" sub="Lise ve dengi okul mezunları" on={level === "ortaogretim"} onPress={function () { pickLevel("ortaogretim"); }} />
+                                                </View>
+                                                <PrimaryButton title="Devam et" onPress={function () { if (!name.trim()) { touch("name"); return; } goAfterEdu(); }} />
+                                            </View>
+                                        )}
 
-                                            <PrimaryButton
-                                                title="Kayıt ol"
-                                                onPress={submit}
-                                                busy={busy}
-                                                disabled={busy}
-                                            />
+                                        {step === 2 && (
+                                            <View>
+                                                <Text style={[ns.legend, { color: ink }]}>Kulvarın</Text>
+                                                <View accessibilityRole="radiogroup" style={{ gap: 8, marginBottom: 18 }}>
+                                                    {KpssConfig.targetTypes.map(function (x) {
+                                                        return <Option key={x.id} title={x.t} sub={x.d} on={target === x.id} onPress={function () { setTarget(x.id); setMsg(""); }} />;
+                                                    })}
+                                                </View>
+                                                <View style={ns.row}>
+                                                    <Tap onPress={function () { setStep(1); }} style={[ns.backBtn, dark && ns.backBtnDark]} accessibilityLabel="Geri">
+                                                        <ChevronLeft size={20} color={ink} />
+                                                    </Tap>
+                                                    <View style={{ flex: 1 }}><PrimaryButton title="Devam et" onPress={function () { setStep(3); setMsg(""); }} /></View>
+                                                </View>
+                                            </View>
+                                        )}
 
-                                            <Text style={styles.orText}>veya</Text>
+                                        {step === 3 && (
+                                            <View>
+                                                <Field dark={dark} label="E-posta" value={email} onChangeText={setEmail} placeholder="ad@ornek.com" keyboardType="email-address" autoCapitalize="none"
+                                                    autoComplete="email" textContentType="emailAddress" icon={<Mail size={18} color={iconC} />}
+                                                    error={emailErr} onBlur={function () { touch("email"); }} extra={<MailFix />} returnKeyType="next" />
+                                                <Field dark={dark} label="Şifre" value={pass} onChangeText={setPass} placeholder="En az 6 karakter" secure
+                                                    autoComplete="password-new" textContentType="newPassword" icon={<Lock size={18} color={iconC} />}
+                                                    error={passErr} onBlur={function () { touch("pass"); }} extra={<Strength value={pass} />} />
+                                                <Field dark={dark} label="Davet kodu (isteğe bağlı)" value={refCode} onChangeText={function (v) { setRefCode(v.toUpperCase()); }}
+                                                    autoCapitalize="characters" placeholder="KPSS-ABCD12" icon={<Gift size={18} color={iconC} />} />
+                                                <Tap onPress={function () { setKvkk(!kvkk); }} style={ns.consent} accessibilityRole="checkbox" accessibilityState={{ checked: kvkk }}>
+                                                    <View style={[ns.box, kvkk && ns.boxOn]}>{kvkk ? <Check size={14} color="#fff" strokeWidth={3} /> : null}</View>
+                                                    <Text style={[ns.consentTxt, { color: muted }]}>
+                                                        <Text style={{ color: ink, fontWeight: "600" }}>Kullanım Koşulları</Text> ve <Text style={{ color: ink, fontWeight: "600" }}>Üyelik Sözleşmesi</Text>'ni kabul ediyorum; ilerleme verilerimin KVKK Aydınlatma Metni'ne göre hesabımda saklanmasına izin veriyorum.
+                                                    </Text>
+                                                </Tap>
+                                                <View style={ns.row}>
+                                                    <Tap onPress={function () { setStep(needsKulvar(level) ? 2 : 1); }} style={[ns.backBtn, dark && ns.backBtnDark]} accessibilityLabel="Geri">
+                                                        <ChevronLeft size={20} color={ink} />
+                                                    </Tap>
+                                                    <View style={{ flex: 1 }}><PrimaryButton title="Hesabı oluştur" onPress={submit} busy={busy} disabled={busy || !kvkk} /></View>
+                                                </View>
+                                                <OrLine />
+                                                <GoogleButton onPress={google} busy={googleBusy} disabled={busy} />
+                                            </View>
+                                        )}
+                                    </View>
+                                )}
 
-                                            <GoogleButton
-                                                onPress={google}
-                                                busy={googleBusy}
-                                                disabled={busy}
-                                            />
-                                        </View>
-                                    )}
-                                </View>
-                            )}
-
-                            {msg ? (
-                                <View style={[
-                                    styles.msgContainer,
-                                    (msg.indexOf("gönderildi") >= 0 || msg.indexOf("doğrula") >= 0) && styles.msgSuccess,
-                                ]}>
-                                    <Text style={[
-                                        styles.msgText,
-                                        (msg.indexOf("gönderildi") >= 0 || msg.indexOf("doğrula") >= 0) && styles.msgTextSuccess,
-                                    ]}>
-                                        {msg}
-                                    </Text>
-                                </View>
-                            ) : null}
-
-                            <Text style={styles.footerText}>
-                                {mode === "in"
-                                    ? "İlk kez Google ile gelince ad, eğitim ve kulvar sorulur."
-                                    : "Hesabın var mı? Giriş yap’a dokun."
-                                }
-                            </Text>
-                        </View>
+                                <Notice />
+                                <Text style={[ns.foot, { color: muted }]}>
+                                    {mode === "in" ? "İlk kez Google ile gelince ad, eğitim ve kulvar sorulur." : "Zaten hesabın var mı? Üstten \"Giriş yap\"a dokun."}
+                                </Text>
+                            </View>
                         )}
                     </ScrollView>
                 </View>
@@ -653,6 +622,71 @@ export default function AuthScreen() {
         </BrandBackdrop>
     );
 }
+
+var ns = StyleSheet.create({
+    top: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: 20, paddingTop: 6 },
+    brandRow: { flexDirection: "row", alignItems: "center", gap: 10 },
+    logo: { width: 38, height: 38 },
+    brandName: { color: "#fff", fontSize: 19, fontWeight: "800", letterSpacing: -0.2 },
+    hero: { paddingHorizontal: 20, paddingTop: 18, paddingBottom: 22 },
+    kicker: { color: "#E8C987", fontSize: 11.5, fontWeight: "800", letterSpacing: 1.8 },
+    heroTitle: { color: "#fff", fontSize: 24, fontWeight: "800", letterSpacing: -0.4, marginTop: 6, lineHeight: 30 },
+    sheetDark: { backgroundColor: "#1C1917", borderColor: "rgba(68,64,60,0.6)" },
+    sheetInner: { paddingHorizontal: 22, paddingTop: 26, paddingBottom: 40 },
+    h1: { fontSize: 26, fontWeight: "800", letterSpacing: -0.5 },
+    sub: { fontSize: 14.5, lineHeight: 21, marginTop: 6, marginBottom: 22 },
+    seg: { flexDirection: "row", padding: 4, borderRadius: 14, backgroundColor: "#EEF2F6", marginBottom: 22, position: "relative" },
+    segDark: { backgroundColor: "#292524" },
+    segThumb: { position: "absolute", top: 4, bottom: 4, left: 4, borderRadius: 11, backgroundColor: "#fff",
+        shadowColor: "#0F172A", shadowOpacity: 0.1, shadowRadius: 8, shadowOffset: { width: 0, height: 2 }, elevation: 2 },
+    segThumbDark: { backgroundColor: "#44403C" },
+    segBtn: { flex: 1, height: 42, alignItems: "center", justifyContent: "center", borderRadius: 11 },
+    segTxt: { fontSize: 14.5, fontWeight: "700", color: "#64748B" },
+    link: { color: "#127880", fontWeight: "700", fontSize: 13.5 },
+    linkBtn: { alignSelf: "center", paddingVertical: 14, paddingHorizontal: 12 },
+    fix: { marginTop: 6, alignSelf: "flex-start" },
+    fixTxt: { fontSize: 13 },
+    fixLink: { color: "#127880", fontWeight: "700" },
+    meter: { flexDirection: "row", gap: 6 },
+    meterSeg: { flex: 1, height: 5, borderRadius: 3 },
+    rules: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", columnGap: 12, rowGap: 4, marginTop: 8 },
+    rule: { flexDirection: "row", alignItems: "center", gap: 4 },
+    ruleTxt: { fontSize: 12 },
+    scoreTxt: { marginLeft: "auto", fontSize: 12, fontWeight: "700" },
+    notice: { flexDirection: "row", gap: 10, padding: 14, borderRadius: 16, marginTop: 18, alignItems: "flex-start" },
+    noticeOk: { backgroundColor: "#ECFDF5", borderWidth: 1, borderColor: "#A7F3D0" },
+    noticeErr: { backgroundColor: "#FFF1F2", borderWidth: 1, borderColor: "#FECDD3" },
+    noticeTxt: { flex: 1, fontSize: 13.5, lineHeight: 19 },
+    or: { flexDirection: "row", alignItems: "center", gap: 12, marginVertical: 16 },
+    orLine: { flex: 1, height: 1, backgroundColor: "#E2E8F0" },
+    orTxt: { fontSize: 12 },
+    steps: { flexDirection: "row", alignItems: "center", marginBottom: 20 },
+    stepItem: { flexDirection: "row", alignItems: "center", gap: 8 },
+    stepDot: { width: 26, height: 26, borderRadius: 13, backgroundColor: "#E2E8F0", alignItems: "center", justifyContent: "center" },
+    stepOn: { backgroundColor: "#0D2C4D" },
+    stepDone: { backgroundColor: "#047857" },
+    stepNo: { fontSize: 12, fontWeight: "800", color: "#64748B" },
+    stepTxt: { fontSize: 13, fontWeight: "700", maxWidth: 130 },
+    stepLine: { flex: 1, height: 2, borderRadius: 1, backgroundColor: "#E2E8F0", marginHorizontal: 8 },
+    legend: { fontSize: 13.5, fontWeight: "700", marginBottom: 10 },
+    option: { flexDirection: "row", alignItems: "center", gap: 12, padding: 14, borderRadius: 16, borderWidth: 1, borderColor: "#E2E8F0", backgroundColor: "#fff" },
+    optionDark: { backgroundColor: "#1C1917", borderColor: "#44403C" },
+    optionOn: { borderColor: "#127880", backgroundColor: "#F0FDFA" },
+    optIcon: { width: 40, height: 40, borderRadius: 12, backgroundColor: "#FEF3C7", alignItems: "center", justifyContent: "center" },
+    optIconOn: { backgroundColor: "#0D2C4D" },
+    optTitle: { fontSize: 15, fontWeight: "700" },
+    optSub: { fontSize: 12.5, marginTop: 2 },
+    radio: { width: 22, height: 22, borderRadius: 11, borderWidth: 2, borderColor: "#CBD5E1", alignItems: "center", justifyContent: "center" },
+    radioOn: { borderColor: "#127880", backgroundColor: "#127880" },
+    row: { flexDirection: "row", gap: 10, alignItems: "stretch" },
+    backBtn: { width: 56, borderRadius: 16, borderWidth: 1, borderColor: "#E2E8F0", backgroundColor: "#fff", alignItems: "center", justifyContent: "center" },
+    backBtnDark: { backgroundColor: "#1C1917", borderColor: "#44403C" },
+    consent: { flexDirection: "row", gap: 12, alignItems: "flex-start", marginBottom: 18, marginTop: 2 },
+    box: { width: 22, height: 22, borderRadius: 7, borderWidth: 2, borderColor: "#CBD5E1", alignItems: "center", justifyContent: "center", marginTop: 1 },
+    boxOn: { backgroundColor: "#0D2C4D", borderColor: "#0D2C4D" },
+    consentTxt: { flex: 1, fontSize: 12.5, lineHeight: 18 },
+    foot: { fontSize: 12, textAlign: "center", marginTop: 18 },
+});
 
 var styles = StyleSheet.create({
     safeArea: {

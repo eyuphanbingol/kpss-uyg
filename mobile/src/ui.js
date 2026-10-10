@@ -293,10 +293,14 @@ export var Field = React.forwardRef(function Field(props, ref) {
 
     return (
         <View style={[{ marginBottom: 16 }, props.containerStyle]}>
-            {props.label ? (
-                <Text style={[styles.label, props.labelStyle]}>{props.label}</Text>
+            {props.label || props.aside ? (
+                <View style={styles.labelRow}>
+                    {props.label ? <Text style={[styles.label, { marginBottom: 0 }, props.dark && { color: "#A8A29E" }, props.labelStyle]}>{props.label}</Text> : <View />}
+                    {props.aside || null}
+                </View>
             ) : null}
             <View style={styles.inputWrap}>
+                {props.icon ? <View style={styles.fieldIcon} pointerEvents="none">{props.icon}</View> : null}
                 <TextInput
                     ref={ref}
                     value={props.value}
@@ -311,12 +315,19 @@ export var Field = React.forwardRef(function Field(props, ref) {
                     numberOfLines={props.numberOfLines || 1}
                     onSubmitEditing={props.onSubmitEditing}
                     returnKeyType={props.returnKeyType}
+                    accessibilityLabel={props.accessibilityLabel || props.label}
+                    autoComplete={props.autoComplete}
+                    textContentType={props.textContentType}
+                    blurOnSubmit={props.blurOnSubmit}
                     onFocus={function () { setFocused(true); props.onFocus && props.onFocus(); }}
                     onBlur={function () { setFocused(false); props.onBlur && props.onBlur(); }}
                     style={[
                         styles.input,
                         props.secure && styles.inputWithEye,
+                        props.icon && styles.inputWithIcon,
+                        props.dark && styles.inputDark,
                         focused && styles.inputFocused,
+                        focused && props.dark && { backgroundColor: "#292524" },
                         props.error && styles.inputError,
                         props.multiline && { minHeight: 80, textAlignVertical: "top" },
                         props.style,
@@ -333,16 +344,17 @@ export var Field = React.forwardRef(function Field(props, ref) {
                         style={styles.eyeBtn}
                         hitSlop={6}
                     >
-                        {secure ? <Glyph ch="⊘" size={16} color="#64748B" /> : <Glyph ch="◉" size={16} color="#0F172A" />}
+                        {secure ? <Glyph ch="⊘" size={16} color={props.dark ? "#A8A29E" : "#64748B"} /> : <Glyph ch="◉" size={16} color={props.dark ? "#F5F5F4" : "#0F172A"} />}
                     </Pressable>
                 ) : null}
             </View>
             {props.error ? (
                 <Text style={[styles.errorText, props.errorStyle]}>{props.error}</Text>
             ) : null}
-            {props.hint ? (
+            {props.hint && !props.error ? (
                 <Text style={[styles.hint, props.hintStyle]}>{props.hint}</Text>
             ) : null}
+            {props.extra || null}
         </View>
     );
 });
@@ -942,8 +954,30 @@ var styles = StyleSheet.create({
         color: "#0F172A",
         minHeight: 52,
     },
+    inputDark: {
+        backgroundColor: "#1C1917",
+        borderColor: "#44403C",
+        color: "#F5F5F4",
+    },
     inputWithEye: {
         paddingRight: 48,
+    },
+    inputWithIcon: {
+        paddingLeft: 44,
+    },
+    fieldIcon: {
+        position: "absolute",
+        left: 14,
+        top: 0,
+        bottom: 0,
+        justifyContent: "center",
+        zIndex: 1,
+    },
+    labelRow: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        marginBottom: 6,
     },
     eyeBtn: {
         position: "absolute",
