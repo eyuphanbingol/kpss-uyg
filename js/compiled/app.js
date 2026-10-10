@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:264563:wbz27g*/
+/*jsx:babel-7.29.9-react-classic:265012:1xpdii3*/
 const {
   useState,
   useEffect,
@@ -5794,6 +5794,13 @@ function App() {
       setLazyErr(window.trError && window.trError(e, "Araç yüklenemedi.") || "Araç yüklenemedi.");
     });
   }, [extra]);
+
+  // Bulut eşitlemesi bitti, profil hâlâ kurulmadıysa kayıtta seçilenleri (user_metadata) uygula
+  function applySignupMeta(user) {
+    if (window.StudentStore && window.StudentStore.consumeSignupMetadata && window.StudentStore.consumeSignupMetadata(user)) {
+      if (window.SyncEngine && window.SyncEngine.sync) window.SyncEngine.sync().catch(function () {});
+    }
+  }
   useEffect(function () {
     var sb = window.SupabaseClient && window.SupabaseClient.get && window.SupabaseClient.get();
     if (!sb) {
@@ -5819,6 +5826,7 @@ function App() {
         var st0 = window.StudentStore && window.StudentStore.getState && window.StudentStore.getState();
         if (st0 && st0.profile && st0.profile.onboarded) setProfileHydrated(true);
         var done0 = function () {
+          applySignupMeta(sess.user);
           setProfileHydrated(true);
         };
         if (window.SyncEngine && window.SyncEngine.ensureLocation) window.SyncEngine.ensureLocation();
@@ -5862,6 +5870,7 @@ function App() {
       var st1 = window.StudentStore && window.StudentStore.getState && window.StudentStore.getState();
       if (st1 && st1.profile && st1.profile.onboarded) setProfileHydrated(true);
       var done1 = function () {
+        applySignupMeta(sess.user);
         setProfileHydrated(true);
       };
       if (window.SyncEngine && window.SyncEngine.ensureLocation) window.SyncEngine.ensureLocation();

@@ -134,7 +134,7 @@
         global.KpssComponents = global.KpssComponents || {};
         if (global.KpssComponents[name]) return Promise.resolve(global.KpssComponents[name]);
         if (cache[name]) return cache[name];
-        var url = new URL(path, window.location.href).href.replace(/(\?.*)?$/, "") + "?v=98";
+        var url = new URL(path, window.location.href).href.replace(/(\?.*)?$/, "") + "?v=99";
         var file = path.replace(/\?.*$/, "");
         var pre = fetchPrebuilt(file);
         cache[name] = fetchText(url).then(function (src) {

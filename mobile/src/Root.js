@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Text, View, StyleSheet } from "react-native";
 import { useApp } from "./AppProvider";
 import OnboardingScreen from "./screens/OnboardingScreen";
 import SplashScreen from "./screens/SplashScreen";
 import AuthScreen from "./screens/AuthScreen";
+import IntroScreen, { INTRO_KEY } from "./screens/IntroScreen";
+import { localStorageShim } from "./lib/storage";
 import MainStack from "./MainStack";
 import { colors } from "./lib/theme";
 import { GhostButton, Screen } from "./ui";
@@ -11,8 +13,15 @@ import { GhostButton, Screen } from "./ui";
 function Gate() {
     var app = useApp();
     var isDark = app.isDark;
+    var _intro = useState(false);
+    var introDone = _intro[0];
+    var setIntroDone = _intro[1];
 
     if (!app.bootReady) return <SplashScreen />;
+    // İlk kurulumda (oturum yokken) giriş ekranından önce bir kez tanıtım sayfaları
+    if (!app.session && !app.recovering && !introDone && localStorageShim.getItem(INTRO_KEY) !== "1") {
+        return <IntroScreen onDone={function () { localStorageShim.setItem(INTRO_KEY, "1"); setIntroDone(true); }} />;
+    }
     if (app.recovering || !app.session) return <AuthScreen />;
 
     if (app.student.userProfile && app.student.userProfile.blocked) {

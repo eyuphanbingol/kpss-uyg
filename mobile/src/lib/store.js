@@ -1040,6 +1040,31 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
                 persistQuiet();
             }
         },
+        // E-posta onayı başka tarayıcıda/uygulamada yapılınca sessionStorage boş kalır;
+        // kayıtta seçilen ad ve kulvar Supabase user_metadata'da durur. Bulut eşitlemesinden
+        // SONRA çağrılır ki eski hesabın buluttaki profili ezilmesin.
+        consumeSignupMetadata: function (user) {
+            if (state.profile.onboarded) return false;
+            var m = (user && user.user_metadata) || {};
+            var name = String(m.full_name || "").trim();
+            var level = m.education_level;
+            if (!name || ["lisans", "onlisans", "ortaogretim"].indexOf(level) < 0) return false;
+            var dates = (KpssConfig && KpssConfig.examDateByLevel) || {};
+            var target = level === "lisans" && ["A", "B", "ogretmen", "dhbt"].indexOf(m.target_type) >= 0 ? m.target_type : "B";
+            global.StudentStore.completeOnboarding({
+                name: name,
+                nickname: name,
+                examDate: m.exam_date || dates[level] || state.profile.examDate,
+                dailyMinutes: 45,
+                dailyQuestions: 25,
+                educationLevel: level,
+                targetType: target,
+                kvkkConsent: true,
+                weeklyHours: 7,
+                referredBy: String(m.referred_by || "").slice(0, 16)
+            });
+            return true;
+        },
         bindToUser: function (uid, email) {
             var prev = state.userProfile && state.userProfile.authUserId;
             if (prev && prev === uid) {

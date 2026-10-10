@@ -3809,6 +3809,13 @@ function App() {
         });
     }, [extra]);
 
+    // Bulut eşitlemesi bitti, profil hâlâ kurulmadıysa kayıtta seçilenleri (user_metadata) uygula
+    function applySignupMeta(user) {
+        if (window.StudentStore && window.StudentStore.consumeSignupMetadata && window.StudentStore.consumeSignupMetadata(user)) {
+            if (window.SyncEngine && window.SyncEngine.sync) window.SyncEngine.sync().catch(function () {});
+        }
+    }
+
     useEffect(function () {
         var sb = window.SupabaseClient && window.SupabaseClient.get && window.SupabaseClient.get();
         if (!sb) { setAuthReady(true); return; }
@@ -3830,7 +3837,7 @@ function App() {
                 }
                 var st0 = window.StudentStore && window.StudentStore.getState && window.StudentStore.getState();
                 if (st0 && st0.profile && st0.profile.onboarded) setProfileHydrated(true);
-                var done0 = function () { setProfileHydrated(true); };
+                var done0 = function () { applySignupMeta(sess.user); setProfileHydrated(true); };
                 if (window.SyncEngine && window.SyncEngine.ensureLocation) window.SyncEngine.ensureLocation();
                 if (window.SyncEngine && window.SyncEngine.sync) window.SyncEngine.sync().then(done0).catch(done0);
                 else done0();
@@ -3870,7 +3877,7 @@ function App() {
             }
             var st1 = window.StudentStore && window.StudentStore.getState && window.StudentStore.getState();
             if (st1 && st1.profile && st1.profile.onboarded) setProfileHydrated(true);
-            var done1 = function () { setProfileHydrated(true); };
+            var done1 = function () { applySignupMeta(sess.user); setProfileHydrated(true); };
             if (window.SyncEngine && window.SyncEngine.ensureLocation) window.SyncEngine.ensureLocation();
             if (window.SyncEngine && window.SyncEngine.sync) window.SyncEngine.sync().then(done1).catch(done1);
             else done1();

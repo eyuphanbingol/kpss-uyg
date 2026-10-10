@@ -87,7 +87,14 @@ export function AppProvider(props) {
         });
     }
 
-    function hydrateAfterAuth(allowWait) {
+    // Bulut eşitlemesi bitti, profil hâlâ kurulmadıysa kayıtta seçilenleri (user_metadata) uygula
+    function applySignupMeta(user) {
+        if (user && StudentStore.consumeSignupMetadata && StudentStore.consumeSignupMetadata(user)) {
+            SyncEngine.sync().catch(function () {});
+        }
+    }
+
+    function hydrateAfterAuth(allowWait, user) {
         var st = StudentStore.getState();
         if (st.profile && st.profile.onboarded) {
             setProfileHydrated(true);
@@ -105,7 +112,8 @@ export function AppProvider(props) {
         if (allowWait) {
             hydrateTimerRef.current = setTimeout(done, 2500);
         }
-        SyncEngine.sync().then(done).catch(done);
+        var finish = function () { applySignupMeta(user); done(); };
+        SyncEngine.sync().then(finish).catch(finish);
         if (!allowWait) done();
     }
     var _kd = useState(START_CATALOG);
@@ -179,7 +187,7 @@ export function AppProvider(props) {
                 if (sess) {
                     StudentStore.bindToUser(sess.user.id, sess.user.email);
                     StudentStore.consumeSignupIfNeeded(sess.user);
-                    hydrateAfterAuth(true);
+                    hydrateAfterAuth(true, sess.user);
                     if (SyncEngine.ensureLocation) SyncEngine.ensureLocation();
                 }
 
@@ -224,7 +232,7 @@ export function AppProvider(props) {
             StudentStore.consumeSignupIfNeeded(sess.user);
             setSession(sess);
             if (recoveringRef.current) return;
-            hydrateAfterAuth(true);
+            hydrateAfterAuth(true, sess.user);
         });
 
         return function () {

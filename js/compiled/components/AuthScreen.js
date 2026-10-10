@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:81172:14j4x46*/
+/*jsx:babel-7.29.9-react-classic:81263:1g4gswz*/
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 (function () {
   const {
@@ -1024,7 +1024,7 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
           name: name,
           educationLevel: level,
           examDate: examDate,
-          targetType: "B",
+          targetType: target,
           referredBy: refCode,
           moduleInterest: Object.keys(interest).filter(function (k) {
             return interest[k];
@@ -1129,7 +1129,8 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
               full_name: name.trim(),
               education_level: level,
               exam_date: examDate,
-              target_type: target
+              target_type: target,
+              referred_by: String(refCode || "").trim().slice(0, 16)
             }
           }
         }) : await sb.auth.signInWithPassword({

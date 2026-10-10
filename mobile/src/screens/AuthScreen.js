@@ -154,7 +154,7 @@ export default function AuthScreen() {
             name: name,
             educationLevel: level,
             examDate: examDate,
-            targetType: "B",
+            targetType: level === "lisans" ? target : "B",
             referredBy: refCode
         }));
     }
@@ -204,7 +204,8 @@ export default function AuthScreen() {
                             full_name: name.trim(),
                             education_level: level,
                             exam_date: examDate,
-                            target_type: level === "lisans" ? target : "B"
+                            target_type: level === "lisans" ? target : "B",
+                            referred_by: String(refCode || "").trim().slice(0, 16)
                         }
                     }
                 });

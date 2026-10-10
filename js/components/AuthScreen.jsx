@@ -717,7 +717,7 @@
                     name: name,
                     educationLevel: level,
                     examDate: examDate,
-                    targetType: "B",
+                    targetType: target,
                     referredBy: refCode,
                     moduleInterest: Object.keys(interest).filter(function (k) { return interest[k]; })
                 }));
@@ -799,7 +799,8 @@
                                 full_name: name.trim(),
                                 education_level: level,
                                 exam_date: examDate,
-                                target_type: target
+                                target_type: target,
+                                referred_by: String(refCode || "").trim().slice(0, 16)
                             }
                         }
                     })
