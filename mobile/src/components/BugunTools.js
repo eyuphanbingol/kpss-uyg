@@ -64,6 +64,7 @@ export function NextSteps({ navigation, plan, kpssData, dark }) {
             }) : <Text style={[s.muted, { marginTop: 10 }]}>Bekleyen görev yok. Karışık soruyla tempoyu koru.</Text>}
             <View style={s.chips}>
                 <Chip dark={dark} label="🎲 Karışık 10 soru" onPress={function () { startMixed(navigation, kpssData); }} />
+                <Chip dark={dark} label="📝 Deneme" onPress={function () { go(navigation, "Deneme"); }} />
                 <Chip dark={dark} label={"🔁 Tekrar (" + plan.due.length + ")"} disabled={!plan.due.length} onPress={function () { startReview(navigation, plan); }} />
                 <Chip dark={dark} label={"🩹 Yanlışlar (" + plan.wrong.length + ")"} disabled={!plan.wrong.length} onPress={function () { startWrong(navigation, plan); }} />
             </View>

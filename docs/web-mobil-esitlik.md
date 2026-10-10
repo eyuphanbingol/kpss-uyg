@@ -28,7 +28,7 @@ Eksikler ekranı mobildeki gibi ilerleme çubuğu, ders başına sayaç ve tıkl
 ### Yalnız web'de → mobile eklenecek
 | Özellik | Yer | Durum |
 |---|---|---|
-| Deneme sınavı (40 soru · 40 dk · optik kâğıt · ders bazında sonuç) | Dersler/Bugün | ⏳ mobilde ekran yazılı ama menüye bağlı değil |
+| Deneme ekranı (ders seçimi, soru sayısı, süre; tam deneme 40 soru · 40 dk, haftalık kota) | Bugün → "Deneme" | ✅ iki tarafta da ekran yazılıydı ama açılmıyordu; ikisi de Bugün'e bağlandı, web tam denemesi mobildeki gibi kaydedilir |
 | Net kartını indir/paylaş (test sonucu görseli) | Test sonucu | ⏳ |
 | Program: yazdır / PDF | Akıllı program | ⏳ |
 | Isı haritası ayrıntıları (aktif gün, günlük ortalama, güçlü ders, fark) | Isı haritası | ⏳ |

@@ -1096,6 +1096,7 @@ function NextSteps(props) {
             )}
             <div className="flex flex-wrap gap-2 mt-4">
                 <button type="button" onClick={props.onMixed} className="quick-chip">🎲 Karışık 10 soru</button>
+                {props.onDeneme ? <button type="button" onClick={props.onDeneme} className="quick-chip">📝 Deneme</button> : null}
                 <button type="button" onClick={props.onReview} disabled={!plan.due.length} className="quick-chip">🔁 Tekrar ({plan.due.length})</button>
                 <button type="button" onClick={props.onWrong} disabled={!plan.wrong.length} className="quick-chip">🩹 Yanlışlar ({plan.wrong.length})</button>
             </div>
@@ -1707,7 +1708,7 @@ function Bugun(props) {
                     <LiveExamCard student={props.student} kpssData={props.kpssData} onKonu={function (d, k) { props.onKonu(d, k, "hub"); }} onOpen={props.onLive} />
                     <SmartPlanCard student={props.student} kpssData={props.kpssData} onKonu={props.onKonu} onDers={props.onDers} onExam={props.onExam}
                         onWizard={function () { setWizard(true); }} onCalendar={function () { setCalendar(true); }} />
-                    <NextSteps plan={plan} onKonu={props.onKonu} onReview={props.onReview} onWrong={props.onWrong} onMixed={props.onMixed} />
+                    <NextSteps plan={plan} onKonu={props.onKonu} onReview={props.onReview} onWrong={props.onWrong} onMixed={props.onMixed} onDeneme={props.onDeneme} />
                 </div>
                 <div className="min-w-0 space-y-4">
                     <div className="tool-pair">
@@ -3092,6 +3093,7 @@ function DenemeSetup(props) {
     ];
     return (
         <Shell>
+            {props.onBack ? <div className="mb-4"><BackBtn onClick={props.onBack} label="Bugün" /></div> : null}
             <div className="flex justify-between items-start mb-6">
                 <div className="slide-up">
                     <h1 className="m-title">Deneme</h1>
@@ -3105,20 +3107,22 @@ function DenemeSetup(props) {
                     <p className="text-xs font-bold uppercase tracking-wider text-stone-400">Dersler</p>
                     <p className="text-xs text-stone-400">{chosen.length}/{dersler.length} seçili · {pool} soru</p>
                 </div>
-                <div className="grid grid-cols-1 gap-2">
+                <div className="divide-y" style={{ borderColor: "var(--m-line)" }}>
                     {dersler.map(function (d) {
                         var t = themeFor(d, props.isDark);
                         var on = !!sel[d];
                         var sc = stats[d] || { soruSayisi: 0, konuSayisi: 0 };
                         return (
-                            <button type="button" key={d} onClick={function () { toggle(d); }}
-                                className={"w-full flex items-center gap-3 p-3 rounded-xl text-left border-2 transition-all " + (on ? "bg-indigo-600 text-white border-indigo-600 shadow-lg shadow-indigo-500/20" : "bg-stone-50 dark:bg-stone-900 border-stone-200 dark:border-stone-800")}>
-                                <span className={"h-10 w-10 rounded-xl flex items-center justify-center text-lg shrink-0 " + (on ? "bg-white/15" : "bg-white dark:bg-stone-800")}>{t.icon}</span>
+                            <button type="button" key={d} onClick={function () { toggle(d); }} role="checkbox" aria-checked={on}
+                                className="w-full flex items-center gap-3 py-3 text-left" style={{ borderColor: "var(--m-line)" }}>
+                                <span className="text-xl w-8 text-center shrink-0" aria-hidden="true">{t.icon}</span>
                                 <span className="min-w-0 flex-1">
-                                    <span className="font-medium block">{d}</span>
-                                    <span className={"text-xs block mt-0.5 " + (on ? "text-white/70" : "text-zinc-400")}>{sc.konuSayisi} konu · {sc.soruSayisi} soru</span>
+                                    <span className="font-semibold block" style={{ color: "var(--m-ink)" }}>{d}</span>
+                                    <span className="text-xs block mt-0.5" style={{ color: "var(--m-muted)" }}>{sc.konuSayisi} konu · {sc.soruSayisi} soru</span>
                                 </span>
-                                <span className={"h-5 w-5 rounded-full border flex items-center justify-center text-[10px] shrink-0 " + (on ? "border-white bg-white text-indigo-600" : "border-stone-300 text-transparent")}>✓</span>
+                                <span className={"h-6 w-6 rounded-full border-2 flex items-center justify-center shrink-0 transition " + (on ? "bg-indigo-600 border-indigo-600 text-white" : "border-slate-300 dark:border-slate-600 text-transparent")}>
+                                    <LineIcon name="check" size={14} sw={3} />
+                                </span>
                             </button>
                         );
                     })}
@@ -3163,7 +3167,7 @@ function DenemeSetup(props) {
             {props.onFullExam ? (
                 <button type="button" onClick={props.onFullExam} className="mt-3 w-full p-4 rounded-2xl glass text-left card-hover">
                     <span className="font-semibold block">Tam deneme</span>
-                    <span className="text-xs text-zinc-400 font-normal mt-0.5 block">40 soru, 40 dakika, optik kâğıt. Sınav temposu.</span>
+                    <span className="text-xs text-zinc-400 font-normal mt-0.5 block">40 soru · 40 dakika · Sınav temposu</span>
                 </button>
             ) : null}
         </Shell>
@@ -3869,6 +3873,7 @@ function App() {
 
     const [nav, setNav] = useState("bugun");
     const [selectedDers, setSelectedDers] = useState(null);
+    const [denemeOpen, setDenemeOpen] = useState(false);
     const [selectedKonu, setSelectedKonu] = useState(null);
     const [drillKind, setDrillKind] = useState(null);
     const [drillMapTopic, setDrillMapTopic] = useState(null);
@@ -3962,6 +3967,22 @@ function App() {
         setSession(next);
     }
 
+    // Tam deneme: 5 ders, 40 soru, 40 dakika. Ücretsizde haftalık kota (mobil: components/SmartPlan.js startPlanExam).
+    function startFullExam() {
+        var cfg = window.KpssConfig || {};
+        if (!(StudentStore.isPremium && StudentStore.isPremium())) {
+            var ws = window.SyncEngine && window.SyncEngine.weekStart ? window.SyncEngine.weekStart() : "";
+            var weekExams = (student.examAttempts || []).filter(function (a) { return a.at && a.at.slice(0, 10) >= ws; }).length;
+            if (weekExams >= (cfg.freeWeeklyExams || 2)) {
+                if (cfg.premiumEnabled && confirm("Ücretsiz haftalık tam deneme kotan doldu. Premium'u incelemek ister misin?")) setExtra("paywall");
+                else if (!cfg.premiumEnabled) alert("Ücretsiz haftalık tam deneme kotan doldu. Bugün karışık test çözebilirsin.");
+                return;
+            }
+        }
+        var items = StudyPlanner.mixedQuiz(kpssData, ["Tarih", "Coğrafya", "Türkçe", "Vatandaşlık", "Güncel Bilgiler"], 40);
+        startSession(items, { mode: "exam", seconds: 40 * 60 });
+    }
+
     function finishSession() {
         if (finishedRef.current) return;
         finishedRef.current = true;
@@ -3975,6 +3996,10 @@ function App() {
             StudentStore.recordTestResult(sess.ders, sess.konu, { correct: scoreRef.current, total: sess.items.length, minutes: elapsedMin, testNo: sess.testNo });
         } else if (elapsedMin) {
             StudentStore.addSessionStats({ minutes: elapsedMin, seans: true, ders: sess.ders || null });
+        }
+        if (sess.mode === "exam" && StudentStore.recordExamAttempt) {
+            var usedSec = Math.round((Date.now() - (startedAt.current || Date.now())) / 1000);
+            StudentStore.recordExamAttempt({ total: sess.items.length, correct: scoreRef.current, secondsUsed: Math.min(usedSec, 40 * 60) });
         }
         setFinished(true);
     }
@@ -4065,6 +4090,7 @@ function App() {
                 breakdown={StudyPlanner.breakdownByTopic(answerLog)}
                 onRetry={function () {
                     if (session.mode === "wrong") startSession(plan.wrong.slice(0, 30), { mode: "wrong" });
+                    else if (session.mode === "exam") startFullExam();
                     else startSession(session.items, { mode: session.mode, ders: session.ders, konu: session.konu, seconds: null, testNo: session.testNo });
                 }}
                 onHome={closeStudy}
@@ -4087,8 +4113,15 @@ function App() {
             onReview={function () { startSession(plan.due.slice(0, 30), { mode: "review" }); }}
             onWrong={function () { startSession(plan.wrong.slice(0, 30), { mode: "wrong" }); }}
             onMixed={function () { startSession(StudyPlanner.mixedQuiz(kpssData, null, 10), { mode: "mixed" }); }}
-            onExam={function () { startSession(StudyPlanner.mixedQuiz(kpssData, null, 40), { mode: "mixed" }); }}
+            onExam={startFullExam}
+            onDeneme={function () { setDenemeOpen(true); }}
             onLive={openLive} />;
+        if (denemeOpen) {
+            body = <DenemeSetup kpssData={kpssData} isDark={isDark} toggleDark={toggleDark}
+                onBack={function () { setDenemeOpen(false); }}
+                onStart={function (items, seconds) { startSession(items, { mode: "mixed", seconds: seconds || null }); }}
+                onFullExam={startFullExam} />;
+        }
     } else if (nav === "eksikler") {
         body = <Eksikler plan={plan} isDark={isDark} toggleDark={toggleDark} student={student} kpssData={kpssData} onKonu={openKonu}
             onReview={function () { startSession(plan.due.slice(0, 30), { mode: "review" }); }}
@@ -4338,6 +4371,7 @@ function App() {
             {!inTest ? (
                 <BottomNav nav={nav} streak={plan.streak || 0} onChange={function (id) {
                     setNav(id);
+                    setDenemeOpen(false);
                     if (id !== "dersler") { setSelectedDers(null); setSelectedKonu(null); setViewMode("hub"); }
                     if (id === "dersler") { setSelectedDers(null); setSelectedKonu(null); }
                     if (id !== "alistirmalar") { setDrillKind(null); setDrillMapTopic(null); setDrillDers(null); setDrillKonu(null); }

@@ -15,6 +15,7 @@ import BenScreen from "./screens/BenScreen";
 import NotesScreen from "./screens/NotesScreen";
 import TestScreen from "./screens/TestScreen";
 import ReviewNotebookScreen from "./screens/ReviewNotebookScreen";
+import DenemeScreen from "./screens/DenemeScreen";
 import { AiScreen, HeatScreen, LeaderboardScreen, PaywallScreen, PlacementScreen } from "./screens/ExtraScreens";
 import { LiveHomeScreen, LiveExamScreen, LiveResultScreen, LiveArchiveScreen, LiveOpticScreen } from "./screens/LiveExamScreens";
 import { Clock, BookOpen, PencilLine, BarChart3, User } from "lucide-react-native";
@@ -169,6 +170,7 @@ export default function MainStack() {
                 <Stack.Screen name="PanicPlay" component={PanicPlayScreen} />
                 <Stack.Screen name="Notes" component={NotesScreen} />
                 <Stack.Screen name="Test" component={TestScreen} />
+                <Stack.Screen name="Deneme" component={DenemeScreen} />
                 <Stack.Screen name="ReviewNotebook" component={ReviewNotebookScreen} />
                 <Stack.Screen name="Placement" component={PlacementScreen} />
                 <Stack.Screen name="Leaderboard" component={LeaderboardScreen} />

@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:252975:g1o66i*/
+/*jsx:babel-7.29.9-react-classic:255143:587xdz*/
 const {
   useState,
   useEffect,
@@ -1804,7 +1804,11 @@ function NextSteps(props) {
     type: "button",
     onClick: props.onMixed,
     className: "quick-chip"
-  }, "\uD83C\uDFB2 Kar\u0131\u015F\u0131k 10 soru"), /*#__PURE__*/React.createElement("button", {
+  }, "\uD83C\uDFB2 Kar\u0131\u015F\u0131k 10 soru"), props.onDeneme ? /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: props.onDeneme,
+    className: "quick-chip"
+  }, "\uD83D\uDCDD Deneme") : null, /*#__PURE__*/React.createElement("button", {
     type: "button",
     onClick: props.onReview,
     disabled: !plan.due.length,
@@ -2787,7 +2791,8 @@ function Bugun(props) {
     onKonu: props.onKonu,
     onReview: props.onReview,
     onWrong: props.onWrong,
-    onMixed: props.onMixed
+    onMixed: props.onMixed,
+    onDeneme: props.onDeneme
   })), /*#__PURE__*/React.createElement("div", {
     className: "min-w-0 space-y-4"
   }, /*#__PURE__*/React.createElement("div", {
@@ -4653,7 +4658,12 @@ function DenemeSetup(props) {
     v: 40,
     t: "40 dk"
   }];
-  return /*#__PURE__*/React.createElement(Shell, null, /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/React.createElement(Shell, null, props.onBack ? /*#__PURE__*/React.createElement("div", {
+    className: "mb-4"
+  }, /*#__PURE__*/React.createElement(BackBtn, {
+    onClick: props.onBack,
+    label: "Bug\xFCn"
+  })) : null, /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between items-start mb-6"
   }, /*#__PURE__*/React.createElement("div", {
     className: "slide-up"
@@ -4673,7 +4683,10 @@ function DenemeSetup(props) {
   }, "Dersler"), /*#__PURE__*/React.createElement("p", {
     className: "text-xs text-stone-400"
   }, chosen.length, "/", dersler.length, " se\xE7ili \xB7 ", pool, " soru")), /*#__PURE__*/React.createElement("div", {
-    className: "grid grid-cols-1 gap-2"
+    className: "divide-y",
+    style: {
+      borderColor: "var(--m-line)"
+    }
   }, dersler.map(function (d) {
     var t = themeFor(d, props.isDark);
     var on = !!sel[d];
@@ -4687,18 +4700,34 @@ function DenemeSetup(props) {
       onClick: function () {
         toggle(d);
       },
-      className: "w-full flex items-center gap-3 p-3 rounded-xl text-left border-2 transition-all " + (on ? "bg-indigo-600 text-white border-indigo-600 shadow-lg shadow-indigo-500/20" : "bg-stone-50 dark:bg-stone-900 border-stone-200 dark:border-stone-800")
+      role: "checkbox",
+      "aria-checked": on,
+      className: "w-full flex items-center gap-3 py-3 text-left",
+      style: {
+        borderColor: "var(--m-line)"
+      }
     }, /*#__PURE__*/React.createElement("span", {
-      className: "h-10 w-10 rounded-xl flex items-center justify-center text-lg shrink-0 " + (on ? "bg-white/15" : "bg-white dark:bg-stone-800")
+      className: "text-xl w-8 text-center shrink-0",
+      "aria-hidden": "true"
     }, t.icon), /*#__PURE__*/React.createElement("span", {
       className: "min-w-0 flex-1"
     }, /*#__PURE__*/React.createElement("span", {
-      className: "font-medium block"
+      className: "font-semibold block",
+      style: {
+        color: "var(--m-ink)"
+      }
     }, d), /*#__PURE__*/React.createElement("span", {
-      className: "text-xs block mt-0.5 " + (on ? "text-white/70" : "text-zinc-400")
+      className: "text-xs block mt-0.5",
+      style: {
+        color: "var(--m-muted)"
+      }
     }, sc.konuSayisi, " konu \xB7 ", sc.soruSayisi, " soru")), /*#__PURE__*/React.createElement("span", {
-      className: "h-5 w-5 rounded-full border flex items-center justify-center text-[10px] shrink-0 " + (on ? "border-white bg-white text-indigo-600" : "border-stone-300 text-transparent")
-    }, "\u2713"));
+      className: "h-6 w-6 rounded-full border-2 flex items-center justify-center shrink-0 transition " + (on ? "bg-indigo-600 border-indigo-600 text-white" : "border-slate-300 dark:border-slate-600 text-transparent")
+    }, /*#__PURE__*/React.createElement(LineIcon, {
+      name: "check",
+      size: 14,
+      sw: 3
+    })));
   }))), /*#__PURE__*/React.createElement("div", {
     className: "rounded-3xl glass p-5 mb-4 card-hover"
   }, /*#__PURE__*/React.createElement("p", {
@@ -4766,7 +4795,7 @@ function DenemeSetup(props) {
     className: "font-semibold block"
   }, "Tam deneme"), /*#__PURE__*/React.createElement("span", {
     className: "text-xs text-zinc-400 font-normal mt-0.5 block"
-  }, "40 soru, 40 dakika, optik k\xE2\u011F\u0131t. S\u0131nav temposu.")) : null);
+  }, "40 soru \xB7 40 dakika \xB7 S\u0131nav temposu")) : null);
 }
 function eduLabel(id) {
   if (id === "onlisans") return "Ön lisans";
@@ -5740,6 +5769,7 @@ function App() {
   }, [authSession]);
   const [nav, setNav] = useState("bugun");
   const [selectedDers, setSelectedDers] = useState(null);
+  const [denemeOpen, setDenemeOpen] = useState(false);
   const [selectedKonu, setSelectedKonu] = useState(null);
   const [drillKind, setDrillKind] = useState(null);
   const [drillMapTopic, setDrillMapTopic] = useState(null);
@@ -5849,6 +5879,26 @@ function App() {
     sessionRef.current = next;
     setSession(next);
   }
+
+  // Tam deneme: 5 ders, 40 soru, 40 dakika. Ücretsizde haftalık kota (mobil: components/SmartPlan.js startPlanExam).
+  function startFullExam() {
+    var cfg = window.KpssConfig || {};
+    if (!(StudentStore.isPremium && StudentStore.isPremium())) {
+      var ws = window.SyncEngine && window.SyncEngine.weekStart ? window.SyncEngine.weekStart() : "";
+      var weekExams = (student.examAttempts || []).filter(function (a) {
+        return a.at && a.at.slice(0, 10) >= ws;
+      }).length;
+      if (weekExams >= (cfg.freeWeeklyExams || 2)) {
+        if (cfg.premiumEnabled && confirm("Ücretsiz haftalık tam deneme kotan doldu. Premium'u incelemek ister misin?")) setExtra("paywall");else if (!cfg.premiumEnabled) alert("Ücretsiz haftalık tam deneme kotan doldu. Bugün karışık test çözebilirsin.");
+        return;
+      }
+    }
+    var items = StudyPlanner.mixedQuiz(kpssData, ["Tarih", "Coğrafya", "Türkçe", "Vatandaşlık", "Güncel Bilgiler"], 40);
+    startSession(items, {
+      mode: "exam",
+      seconds: 40 * 60
+    });
+  }
   function finishSession() {
     if (finishedRef.current) return;
     finishedRef.current = true;
@@ -5870,6 +5920,14 @@ function App() {
         minutes: elapsedMin,
         seans: true,
         ders: sess.ders || null
+      });
+    }
+    if (sess.mode === "exam" && StudentStore.recordExamAttempt) {
+      var usedSec = Math.round((Date.now() - (startedAt.current || Date.now())) / 1000);
+      StudentStore.recordExamAttempt({
+        total: sess.items.length,
+        correct: scoreRef.current,
+        secondsUsed: Math.min(usedSec, 40 * 60)
       });
     }
     setFinished(true);
@@ -6003,7 +6061,7 @@ function App() {
       onRetry: function () {
         if (session.mode === "wrong") startSession(plan.wrong.slice(0, 30), {
           mode: "wrong"
-        });else startSession(session.items, {
+        });else if (session.mode === "exam") startFullExam();else startSession(session.items, {
           mode: session.mode,
           ders: session.ders,
           konu: session.konu,
@@ -6062,13 +6120,29 @@ function App() {
           mode: "mixed"
         });
       },
-      onExam: function () {
-        startSession(StudyPlanner.mixedQuiz(kpssData, null, 40), {
-          mode: "mixed"
-        });
+      onExam: startFullExam,
+      onDeneme: function () {
+        setDenemeOpen(true);
       },
       onLive: openLive
     });
+    if (denemeOpen) {
+      body = /*#__PURE__*/React.createElement(DenemeSetup, {
+        kpssData: kpssData,
+        isDark: isDark,
+        toggleDark: toggleDark,
+        onBack: function () {
+          setDenemeOpen(false);
+        },
+        onStart: function (items, seconds) {
+          startSession(items, {
+            mode: "mixed",
+            seconds: seconds || null
+          });
+        },
+        onFullExam: startFullExam
+      });
+    }
   } else if (nav === "eksikler") {
     body = /*#__PURE__*/React.createElement(Eksikler, {
       plan: plan,
@@ -6500,6 +6574,7 @@ function App() {
     streak: plan.streak || 0,
     onChange: function (id) {
       setNav(id);
+      setDenemeOpen(false);
       if (id !== "dersler") {
         setSelectedDers(null);
         setSelectedKonu(null);

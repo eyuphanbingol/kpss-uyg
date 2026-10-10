@@ -94,6 +94,7 @@ export default function DenemeScreen({ navigation }) {
                 dark={isDark}
                 title="Deneme"
                 subtitle="Karışık pratik veya tam kitapçık"
+                onBack={function () { navigation.goBack(); }}
                 right={!isPremium ? <Badge type="warning" title="Ücretsiz" /> : null}
             />
 
