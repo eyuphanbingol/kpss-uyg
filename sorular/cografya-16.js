@@ -421,7 +421,7 @@ window.cografya_16_sorulari = [
             "A) Maden kaynaklarının işletilmesi",
             "B) Tarımsal ürünlerin pazarlanması",
             "C) Kamu kurumlarının ve yönetim birimlerinin yoğunlaşması",
-            "D) Üniversitelerin fazla olması",
+            "D) Yükseköğretim kurumlarının fazla olması",
             "E) Turizm faaliyetlerinin gelişmesi"
         ],
         correctAnswerIndex: 2,
@@ -442,11 +442,11 @@ window.cografya_16_sorulari = [
     {
         question: "Aşağıdakilerden hangisi Türkiye'deki büyükşehir belediyesi uygulamasıyla ilgili verilen bilgiler arasında yer alır?",
         options: [
-            "A) Büyükşehir belediyesi için nüfusun 750 bini geçmesi esas alınır.",
-            "B) Büyükşehir belediyesi yalnızca kırsal yerleşmelere uygulanır.",
-            "C) Büyükşehir statüsü için yerleşmenin sanayi kenti olması zorunludur.",
-            "D) Nüfusu 50 binin altında olan her yerleşme büyükşehir olur.",
-            "E) Büyükşehir kavramı yalnızca turizm kentleri için kullanılır."
+            "A) İl nüfusunun 750 bini geçmesi esas alınır.",
+            "B) İl nüfusunun 250 bini geçmesi yeterlidir.",
+            "C) İlin sanayi kenti niteliği taşıması zorunludur.",
+            "D) Kentin en az bir üniversiteye sahip olması gerekir.",
+            "E) Kıyı kenti olması temel ölçüttür."
         ],
         correctAnswerIndex: 0,
         explanation: "Türkiye'de büyükşehir belediyesi kurulabilmesi için yerleşmenin nüfusunun 750.000'i geçmesi gerekmektedir. Diğer seçeneklerdeki ifadeler yanlıştır."
@@ -562,11 +562,11 @@ window.cografya_16_sorulari = [
     {
         question: "Akdeniz Bölgesi'nde bazı yörelerde taş meskenlerin yaygın olmasında aşağıdakilerden hangisi etkili olmuştur?",
         options: [
-            "A) Karstik arazilerin bulunması",
-            "B) Ormanların tamamen yok olması",
-            "C) Kuraklığın hiç görülmemesi",
-            "D) Tarım alanlarının çok geniş olması",
-            "E) Akarsuların bulunmaması"
+            "A) Karstik arazilerin geniş yer kaplaması",
+            "B) Orman alanlarının büyük ölçüde tahrip edilmesi",
+            "C) Yaz kuraklığının belirgin olması",
+            "D) Tarım alanlarının geniş yer kaplaması",
+            "E) Kerpiç yapımına uygun toprakların az olması"
         ],
         correctAnswerIndex: 0,
         explanation: "Akdeniz Bölgesi'nde karstik araziler (kalker, traverten vb.) yaygındır. Bu kayaçların bol olması, bölgede taş malzemenin kolayca temin edilmesini sağlamış ve taş meskenlerin yaygınlaşmasına neden olmuştur."
@@ -574,11 +574,11 @@ window.cografya_16_sorulari = [
     {
         question: "Hımış evler; taş, ahşap ve kerpiç gibi farklı yapı malzemelerinin birlikte kullanılmasıyla oluşturulur.\n\nBuna göre hımış evlerle ilgili aşağıdakilerden hangisi söylenebilir?",
         options: [
-            "A) Yalnızca taş malzemeden yapılırlar.",
-            "B) Yalnızca Karadeniz'de görülürler.",
+            "A) Yalnızca yontulmuş taş kullanılarak yapılırlar.",
+            "B) En yaygın oldukları yer Doğu Karadeniz kıyılarıdır.",
             "C) Farklı yapı malzemelerinin birlikte kullanıldığı meskenlerdir.",
-            "D) Sadece kurak bölgelerde yapılırlar.",
-            "E) Depreme karşı dayanıksız oldukları için tercih edilmezler."
+            "D) Kurak bölgelerin sıcak yazlarına uygun kerpiç yapılardır.",
+            "E) Volkanik tüf oyularak yapılan meskenlerdir."
         ],
         correctAnswerIndex: 2,
         explanation: "Hımış evler, ahşap iskelet sistemi üzerine taş, kerpiç veya tuğla dolgu malzemesinin kullanıldığı, farklı yapı malzemelerinin bir arada kullanıldığı geleneksel mesken tipidir. Safranbolu ve Beypazarı'nda yaygındır."

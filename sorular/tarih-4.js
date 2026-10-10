@@ -199,11 +199,11 @@ window.tarih_4_sorulari = [
     "id": "16",
     "question": "Topkapı Sarayı'nın 'Birun' (dış) kısmıyla ilgili aşağıdakilerden hangisi doğrudur?",
     "options": [
-      "A) Padişah ve ailesinin özel yaşam alanıdır",
-      "B) Devşirme çocukların eğitim gördüğü okuldur",
-      "C) Elçilerin kabul edildiği, Divan-ı Hümayun toplantılarının Kubbealtı'nda yapıldığı dış bölümdür",
-      "D) Sadrazam ve vezir yetiştiren bölümdür",
-      "E) Kız çocuklarının eğitim gördüğü bölümdür"
+      "A) Padişah ve ailesinin özel yaşam alanıdır.",
+      "B) Devşirmelerin eğitim gördüğü Enderun'dur.",
+      "C) Elçilerin kabul edildiği, divanın toplandığı dış bölümdür.",
+      "D) Hazine ve kilerin bulunduğu iç bölümdür.",
+      "E) Saray kadınlarının eğitim gördüğü bölümdür."
     ],
     "correctAnswerIndex": 2,
     "explanation": "Birun, Topkapı Sarayı'nın dış bölümüdür; devlet işlerinin yürütüldüğü, elçilerin kabul edildiği ve Divan-ı Hümayun toplantılarının Kubbealtı'nda yapıldığı kısımdır. Padişah ve ailesinin özel yaşam alanı Harem, devşirmelerin eğitildiği ve üst düzey yöneticilerin yetiştirildiği bölüm ise Enderun'dur."
@@ -852,8 +852,8 @@ window.tarih_4_sorulari = [
       "A) Sağ ve Sol Ulufeciler",
       "B) Sağ ve Sol Garipler",
       "C) Silahtarlar ve Sipahiler",
-      "D) Yalnızca Silahtarlar",
-      "E) Yalnızca Sipahiler"
+      "D) Silahtarlar ve Ulufeciler",
+      "E) Sipahiler ve Garipler"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Kapıkulu Süvarileri (Altı Bölük Halkı) içinde Silahtarlar ve Sipahiler, savaş esnasında doğrudan padişahın çadırını (otağ-ı hümayunu) çepeçevre sararak korumakla mükelleftiler."
@@ -865,8 +865,8 @@ window.tarih_4_sorulari = [
       "A) Silahtarlar ve Sipahiler",
       "B) Sağ ve Sol Ulufeciler",
       "C) Sağ ve Sol Garipler",
-      "D) Sadece Sipahiler",
-      "E) Sadece Garipler"
+      "D) Sağ Ulufeciler ve Sağ Garipler",
+      "E) Silahtarlar ve Sol Garipler"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Kapıkulu atlı asker sınıflarından olan 'Sağ ve Sol Ulufeciler'in ordu içerisindeki temel görevi, devletin bağımsızlık sembolü olan saltanat sancaklarını savaş meydanında korumaktır."
@@ -1044,11 +1044,11 @@ window.tarih_4_sorulari = [
     "id": "81",
     "question": "Dirlik sisteminde gelir aralıkları ve alıcıları en doğru şekilde eşleştirilmiş seçenek hangisidir?",
     "options": [
-      "A) Tımar (3.000-20.000 akçe) – sipahiler; Zeamet (20.000-100.000 akçe) – orta düzey görevliler; Has (100.000+ akçe) – padişah/vezir/beylerbeyi",
-      "B) Has – sipahiler; Zeamet – padişah; Tımar – vezirler",
-      "C) Tımar – padişah; Has – sipahiler; Zeamet – vezirler",
-      "D) Has ve Zeamet aynı gelir aralığındadır",
-      "E) Tımar en büyük dirliktir"
+      "A) Tımar – sipahiler; zeamet – orta düzey yöneticiler; has – padişah, vezir ve beylerbeyi",
+      "B) Has – sipahiler; zeamet – padişah; tımar – vezirler",
+      "C) Tımar – padişah; has – sipahiler; zeamet – vezirler",
+      "D) Zeamet – sipahiler; tımar – sancakbeyleri; has – kadılar",
+      "E) Tımar – beylerbeyleri; zeamet – sipahiler; has – subaşılar"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Dirlik sistemi gelirine göre üçe ayrılır: Has (100.000+ akçe, üst düzey), Zeamet (20.000 - 100.000 akçe, kadı, subaşı gibi orta düzey) ve Tımar (3.000 - 20.000 akçe, tımarlı sipahiler). A seçeneğinde bu hiyerarşi kusursuz verilmiştir."
@@ -1799,10 +1799,10 @@ window.tarih_4_sorulari = [
   "question": "Minyatür sanatıyla uğraşan kişilere verilen ad ile bu sanat dalının ünlü temsilcileri aşağıdakilerin hangisinde doğru verilmiştir?",
   "options": [
     "A) Müzehhip – Levni, Nakkaş Osman",
-    "B) Musavvir/Nakkaş – Levni, Nakkaş Osman, Matrakçı Nasuh",
+    "B) Nakkaş (musavvir) – Levni, Matrakçı Nasuh",
     "C) Hattat – Levni, Matrakçı Nasuh",
-    "D) Müzehhip – Kara Mehmet",
-    "E) Nakkaş – yalnızca Kara Mehmet"
+    "D) Müzehhip – Kara Memi",
+    "E) Hattat – Şeyh Hamdullah, Kara Memi"
   ],
   "correctAnswerIndex": 1,
   "explanation": "Minyatür sanatçılarına Musavvir veya Nakkaş denir. Levni, Nakkaş Osman ve Matrakçı Nasuh bu sanatın önemli temsilcileridir."

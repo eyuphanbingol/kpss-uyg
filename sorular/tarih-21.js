@@ -303,11 +303,11 @@ window.tarih_21_sorulari = [
     {
         "question": "Lozan Barış Antlaşması'nda Boğazlarla ilgili oluşturulan düzenlemenin Türkiye'nin egemenlik anlayışı açısından yetersiz görülmesinin temel nedeni aşağıdakilerden hangisidir?",
         "options": [
-            "A) Boğazların tamamen İngiltere'ye bırakılması",
-            "B) Boğazların bir komisyon tarafından yönetilmesi ve askerî açıdan sınırlandırılması",
-            "C) Boğazların Sovyetler Birliği'ne verilmesi",
-            "D) Boğazlardan hiçbir ticari geminin geçememesi",
-            "E) Türkiye'nin Boğazlardan gelir elde etmesinin yasaklanması"
+            "A) Boğazların İngiltere'nin denetimine bırakılması",
+            "B) Boğazların bir komisyonca yönetilmesi ve askerden arındırılması",
+            "C) Boğazlar için Sovyetlere özel haklar tanınması",
+            "D) Boğazlardan ticaret gemilerinin geçişinin yasaklanması",
+            "E) Boğazlardan alınan geçiş ücretinin paylaştırılması"
         ],
         "correctAnswerIndex": 1,
         "explanation": "Lozan'da Boğazlar Komisyonu ve askersizleştirme egemenliği kısıtlamıştır."
@@ -327,9 +327,9 @@ window.tarih_21_sorulari = [
     {
         "question": "Montrö Boğazlar Sözleşmesi'nin imzalanmasını kolaylaştıran uluslararası gelişmeler arasında aşağıdakilerden hangisi gösterilebilir?",
         "options": [
-            "A) Avrupa'da güvenlik ortamının bozulması ve devletlerin silahlanmaya yönelmesi",
-            "B) Balkan Antantı'nın sona ermesi",
-            "C) Osmanlı Devleti'nin yeniden kurulması",
+            "A) Avrupa'da güvenliğin bozulması ve silahlanma yarışı",
+            "B) Balkan Antantı'nın dağılması",
+            "C) Musul sorununun çözülmesi",
             "D) Milletler Cemiyeti'nin dağılması",
             "E) Hatay'ın Türkiye'ye katılması"
         ],
@@ -435,11 +435,11 @@ window.tarih_21_sorulari = [
     {
         "question": "Hatay'ın statüsünün belirlenmesi sürecinde hazırlanan Sandler Raporu'nun temel sonucu aşağıdakilerden hangisidir?",
         "options": [
-            "A) Hatay'ın doğrudan Fransa'ya bırakılması",
+            "A) Hatay'ın Fransa'ya bırakılması",
             "B) Hatay'ın Suriye'ye kesin olarak bağlanması",
-            "C) Hatay'ın ayrı bir siyasi yapıya sahip olması gerektiğinin kabul edilmesi",
-            "D) Hatay'ın Yunanistan'a verilmesi",
-            "E) Hatay'ın Irak'a bağlanması"
+            "C) Hatay'ın ayrı bir siyasi varlık olarak kabul edilmesi",
+            "D) Hatay'ın Türkiye'ye katılması",
+            "E) Hatay'ın Milletler Cemiyeti yönetimine verilmesi"
         ],
         "correctAnswerIndex": 2,
         "explanation": "Milletler Cemiyeti raportörü Sandler'in hazırladığı rapor, Hatay'a içişlerinde bağımsız, dışişlerinde Suriye'ye bağlı ayrı bir varlık statüsü tanınmasını öngörmüştür. Böylece Hatay ayrı bir siyasi yapı kazanmış, süreç 1938'de Hatay'da bağımsız bir devletin (Hatay Cumhuriyeti) kurulmasıyla devam etmiştir."
@@ -579,11 +579,11 @@ window.tarih_21_sorulari = [
     {
         "question": "Atatürk Dönemi Türk dış politikasındaki gelişmeler dikkate alındığında aşağıdakilerden hangisine ulaşılabilir?",
         "options": [
-            "A) Türkiye bütün dış sorunlarını askerî yöntemlerle çözmüştür.",
-            "B) Türkiye, bağımsızlığını korurken bölgesel ve uluslararası barışa katkıda bulunmaya çalışmıştır.",
-            "C) Türkiye, Batılı devletlerle bütün ilişkilerini kesmiştir.",
-            "D) Türkiye, Misak-ı Millî hedeflerinden tamamen vazgeçmiştir.",
-            "E) Türkiye, komşu devletlerin iç işlerine müdahale etmiştir."
+            "A) Türkiye dış sorunlarını askerî yöntemlerle çözmüştür.",
+            "B) Türkiye bağımsızlığını korurken bölgesel barışa katkı sağlamaya çalışmıştır.",
+            "C) Türkiye Batılı devletlerle ilişkilerini kesmiştir.",
+            "D) Türkiye Misak-ı Millî hedeflerinden vazgeçmiştir.",
+            "E) Türkiye uluslararası örgütlerin dışında kalmıştır."
         ],
         "correctAnswerIndex": 1,
         "explanation": "Diplomatik çözüm, paktlar ve MC üyeliği bu yargıyı destekler."
@@ -591,11 +591,11 @@ window.tarih_21_sorulari = [
     {
         "question": "Aşağıdaki gelişmelerden hangisi Atatürk Dönemi Türk dış politikasının \"barışçı, gerçekçi ve millî çıkarları esas alan\" niteliğini en kapsamlı biçimde ortaya koymaktadır?",
         "options": [
-            "A) Yabancı okulların faaliyetlerine izin verilmesi",
-            "B) Musul'un Türkiye'ye katılması için askerî harekât yapılması",
-            "C) Balkan Antantı, Sadabat Paktı ve Montrö gibi girişimlerle güvenliğin diplomatik yollarla güçlendirilmesi",
-            "D) Türkiye'nin bütün uluslararası kuruluşlardan uzak durması",
-            "E) Komşu devletlerle ekonomik ilişkilerin kesilmesi"
+            "A) Yabancı okulların denetim altına alınması",
+            "B) Musul için askerî harekât yapılması",
+            "C) Balkan Antantı, Sadabat Paktı ve Montrö ile güvenliğin diplomasiyle sağlanması",
+            "D) Milletler Cemiyeti'ne katılmaktan kaçınılması",
+            "E) Komşularla ticari ilişkilerin kesilmesi"
         ],
         "correctAnswerIndex": 2,
         "explanation": "Paktlar ve Montreux barışçı-gerçekçi-millî çıkar çizgisinin en kapsamlı örneğidir."

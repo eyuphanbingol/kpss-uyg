@@ -8,9 +8,9 @@ window.tarih_12_sorulari = [
         options: [
             "A) Osmanlı ordusunun terhis edilmesi",
             "B) Toros tünellerinin İtilaf Devletlerince işgal edilmesi",
-            "C) İtilaf Devletlerinin güvenliklerini tehdit eden bir durum ortaya çıktığında herhangi bir stratejik bölgeyi işgal edebilmesi",
-            "D) Osmanlı Devleti'nin elindeki savaş esirlerini serbest bırakması",
-            "E) Haberleşme araçlarının İtilaf Devletlerinin denetimine bırakılması"
+            "C) Güvenliklerini tehdit eden bir durumda herhangi bir stratejik yeri işgal edebilmeleri",
+            "D) Osmanlı'nın elindeki savaş esirlerini serbest bırakması",
+            "E) Haberleşme araçlarının İtilaf denetimine bırakılması"
         ],
         correctAnswerIndex: 2,
         explanation: "Antlaşmanın 7. maddesi, İtilaf Devletlerine güvenliklerini tehdit eden bir durumda herhangi bir stratejik bölgeyi işgal etme yetkisi vermiştir. Bu madde, Anadolu'nun işgale açık hâle gelmesine zemin hazırlamıştır."
@@ -78,11 +78,11 @@ window.tarih_12_sorulari = [
     {
         question: "Mondros Ateşkes Antlaşması ile aşağıdakilerden hangisinin İtilaf Devletlerinin kontrolüne bırakılması Osmanlı Devleti'nin iletişim ve ulaşım alanındaki bağımsızlığını zedelemiştir?",
         options: [
-            "A) Yalnızca demir yollarının",
-            "B) Yalnızca limanların",
+            "A) Ordunun terhis edilmesinin",
+            "B) Savaş gemilerinin teslim edilmesinin",
             "C) Ulaşım ve haberleşme araçlarının",
-            "D) Yalnızca telgrafhanelerin",
-            "E) Yalnızca posta teşkilatının"
+            "D) Savaş esirlerinin serbest bırakılmasının",
+            "E) Kafkasya'daki askerlerin geri çekilmesinin"
         ],
         correctAnswerIndex: 2,
         explanation: "Antlaşma, haberleşme araçlarının İtilaf Devletlerinin denetimine bırakılmasını öngörmüştür. Bu durum, Osmanlı Devleti'nin iletişim ve ulaşım alanındaki bağımsızlığını zedelemiştir."

@@ -687,11 +687,11 @@ window.tarih_18_sorulari = [
 {
     "question": "Wagon-Li Olayı aşağıdaki gelişmelerden hangisiyle ilişkilidir?",
     "options": [
-        "A) Yabancı sermayeli bir şirkette Türkçe konuşan bir memurun cezalandırılması üzerine gelişen olaylar",
+        "A) Yabancı bir şirkette Türkçe konuşan memurun işten çıkarılması",
         "B) Ezanın Türkçe okunmasına yönelik protestolar",
-        "C) Cumhuriyet rejimine karşı silahlı ayaklanma",
+        "C) Cumhuriyete karşı silahlı bir ayaklanma",
         "D) Bir siyasi partinin kapatılması",
-        "E) Musul sorunu nedeniyle yaşanan diplomatik kriz"
+        "E) Musul sorunu nedeniyle yaşanan kriz"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Şubat 1933'te yabancı sermayeli Wagon-Li şirketinin İstanbul bürosunda çalışan Naci Bey, telefonda Türkçe konuştuğu gerekçesiyle müdürü tarafından on beş gün açığa alınarak cezalandırılmış; bu durum öğrencilerin ve kamuoyunun büyük tepkisine yol açmıştır."

@@ -30,11 +30,11 @@ window.tarih_3_sorulari = [
     "id": "3",
     "question": "I. Kılıçarslan Dönemi'yle ilgili aşağıdakilerden hangisi doğrudur?",
     "options": [
-      "A) Miryokefalon Savaşı kazanılmıştır",
-      "B) Haçlı Seferi sonrasında İznik kaybedilmiş, Dorylaion sonrası merkez Konya'ya taşınmıştır",
-      "C) Danişmentlilere son verilmiştir",
-      "D) Anadolu'dan ilk kez 'Türkiye' diye bahsedilmiştir",
-      "E) Sudak limanı alınmıştır"
+      "A) Miryokefalon Savaşı kazanılmıştır.",
+      "B) I. Haçlı Seferi'nde İznik kaybedilmiş, merkez Konya'ya taşınmıştır.",
+      "C) Danişmentlilere son verilmiştir.",
+      "D) Anadolu'dan ilk kez 'Türkiye' diye bahsedilmiştir.",
+      "E) Sudak limanı alınmıştır."
     ],
     "correctAnswerIndex": 1,
     "explanation": "I. Kılıçarslan döneminde I. Haçlı Seferi patlak vermiş ve ilk başkent İznik kaybedilmiştir. Bunun üzerine Dorylaion (Eskişehir) Savaşı'nın ardından devletin merkezi daha güvenli olan Konya'ya taşınmıştır."
@@ -134,11 +134,11 @@ window.tarih_3_sorulari = [
     "id": "11",
     "question": "1230 yılında Harzemşahlarla yapılan Yassıçemen Savaşı ile ilgili aşağıdakilerden hangisi doğrudur?",
     "options": [
-      "A) Anadolu Selçuklu Devleti yenilmiştir",
-      "B) Kazanılmış olsa da İlhanlılar (Moğollar) ile karşı karşıya gelinmesine yol açmıştır",
-      "C) Bu savaşla ASD kurulmuştur",
-      "D) Bizans'a karşı yapılmıştır",
-      "E) Bu savaşla Anadolu kesin Türk yurdu olmuştur"
+      "A) Anadolu Selçuklu Devleti yenilmiştir.",
+      "B) Kazanılmış, ancak Moğollarla doğrudan komşu olunmuştur.",
+      "C) Haçlılara karşı yapılmıştır.",
+      "D) Eyyubilere karşı yapılmıştır.",
+      "E) Anadolu'nun kapıları bu savaşla Türklere açılmıştır."
     ],
     "correctAnswerIndex": 1,
     "explanation": "Yassıçemen Savaşı'nı Selçuklu kazanmış ve Harzemşahlar yıkılma sürecine girmiştir. Ancak Harzemşahların ortadan kalkmasıyla, Selçuklu ile Moğollar (İlhanlılar) arasındaki tampon bölge yok olmuş ve iki güç doğrudan karşı karşıya gelmiştir."
@@ -173,11 +173,11 @@ window.tarih_3_sorulari = [
     "id": "14",
     "question": "'Han' adı verilen ticari işletmeleri kervansaray ve ribatlardan ayıran temel özellik aşağıdakilerden hangisidir?",
     "options": [
-      "A) Sadece askerî amaçlı olmaları",
-      "B) Gayrimüslimlere kapalı olmaları",
-      "C) Yalnızca kırsalda kurulmaları",
+      "A) Askerî amaçlı yapılar olmaları",
+      "B) Yalnızca Müslüman tüccarlara açık olmaları",
+      "C) Kervan yolları üzerinde kurulmaları",
       "D) Ücretli olmaları ve şehir merkezinde bulunmaları",
-      "E) Üç gün ücretsiz konaklama vermeleri"
+      "E) Üç gün ücretsiz konaklama sağlamaları"
     ],
     "correctAnswerIndex": 3,
     "explanation": "Kervansaraylar şehirlerarası yollarda ve ücretsizken; 'Han' adı verilen işletmeler şehir merkezlerinde yer alan, konaklama ve ticari faaliyetlerin ücretli olduğu yerlerdir."
@@ -225,11 +225,11 @@ window.tarih_3_sorulari = [
     "id": "18",
     "question": "1243 Köse Dağ Savaşı ile ilgili aşağıdakilerden hangisi doğrudur?",
     "options": [
-      "A) Bizans ile Konya'da yapılmıştır",
-      "B) İlhanlılar (Moğollar) ile Sivas'ta yapılmış, savaşı kaybeden Gıyaseddin Keyhüsrev Tokat'a çekilmiştir",
-      "C) Harzemşahlarla yapılmış ve kazanılmıştır",
-      "D) Haçlılarla Eskişehir'de yapılmıştır",
-      "E) Danişmentlilerle yapılmıştır"
+      "A) Bizans'a karşı yapılmış ve kazanılmıştır.",
+      "B) Moğollara karşı yapılmış, kaybedilince Anadolu Moğol egemenliğine girmiştir.",
+      "C) Harzemşahlara karşı yapılmış ve kazanılmıştır.",
+      "D) Haçlılara karşı yapılmış, Konya kaybedilmiştir.",
+      "E) Danişmentlilere karşı yapılmış, siyasi birlik sağlanmıştır."
     ],
     "correctAnswerIndex": 1,
     "explanation": "1243 Köse Dağ Savaşı, Moğol kökenli İlhanlı Devleti ile Selçuklu arasında Sivas'ta yapılmıştır. Ağır yenilgi alan II. Gıyaseddin Keyhüsrev Tokat'a çekilmek zorunda kalmıştır."
@@ -485,11 +485,11 @@ window.tarih_3_sorulari = [
     "id": "38",
     "question": "Anadolu Selçuklu hükümdarlık unvanlarıyla ilgili aşağıdakilerden hangisi doğrudur?",
     "options": [
-      "A) Büyük Selçuklu unvanlarından tamamen farklıdır",
-      "B) Hiçbir unvan kullanılmamıştır",
-      "C) Yalnızca 'Han' unvanı kullanılmıştır",
-      "D) BSD ile aynı unvanlara ilave olarak Keyhüsrev, Keykavus ve Keykubat unvanları kullanılmıştır",
-      "E) Sadece Arap kökenli unvanlar kullanılmıştır"
+      "A) Büyük Selçuklu unvanlarından tümüyle farklı unvanlar kullanılmıştır.",
+      "B) Yalnızca 'Han' ve 'Kağan' unvanları kullanılmıştır.",
+      "C) Abbasi halifesinin verdiği unvanlar kullanılmamıştır.",
+      "D) Büyük Selçuklu unvanlarına ek olarak Keyhüsrev, Keykavus, Keykubat adları kullanılmıştır.",
+      "E) Bizans'tan alınan 'Basileus' unvanı kullanılmıştır."
     ],
     "correctAnswerIndex": 3,
     "explanation": "Anadolu Selçuklu Devleti, Büyük Selçuklu geleneksel unvanlarını sürdürmüş; ancak yoğun Fars (İran) kültürü etkileşimi nedeniyle ek olarak tarihte ilk kez Keyhüsrev, Keykavus ve Keykubat gibi unvanları da resmi olarak kullanmışlardır."
@@ -550,11 +550,11 @@ window.tarih_3_sorulari = [
     "id": "43",
     "question": "Ahilik Teşkilatı ile ilgili aşağıdakilerden hangisi doğrudur?",
     "options": [
-      "A) Asıl adı Mahmud bin Ahmed el-Hoyi olan Ahi Evran tarafından kurulmuştur",
-      "B) Temeli I. Alaeddin Keykubat tarafından atılmıştır",
-      "C) Gayrimüslimler de teşkilata alınmıştır",
-      "D) Yalnızca askerî amaçlı kurulmuştur",
-      "E) Merkezi yalnızca İstanbul'dur"
+      "A) Ahi Evran (Mahmud bin Ahmed el-Hoyi) tarafından kurulmuştur.",
+      "B) Temeli I. Alaeddin Keykubat tarafından atılmıştır.",
+      "C) Gayrimüslimler de teşkilata alınmıştır.",
+      "D) Askerî amaçla kurulmuş bir teşkilattır.",
+      "E) Teşkilatın merkezi Konya'dır."
     ],
     "correctAnswerIndex": 0,
     "explanation": "Ahilik esnaf ve zanaatkâr teşkilatı, asıl adı Şeyh Nasirüddin Mahmud bin Ahmed el-Hoyi olan Ahi Evran öncülüğünde kurulmuştur. Teşkilatın temelleri I. Alaeddin Keykubat değil I. Gıyaseddin Keyhüsrev döneminde atılmış, üyelik Müslüman esnafla sınırlı tutulmuş, teşkilat askerî değil meslekî, ekonomik ve ahlaki amaçlar taşımış ve Anadolu'nun pek çok şehrinde örgütlenmiştir."

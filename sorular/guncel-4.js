@@ -27,11 +27,11 @@ window.guncel_4_sorulari = [
 {
     "question": "Yusuf Dikeç ve Şevval İlayda Tarhan, 2024 Paris Olimpiyatları'nda hangi branşta gümüş madalya kazanmıştır?",
     "options": [
-        "A) Okçuluk",
-        "B) Boks",
-        "C) Güreş",
+        "A) 10 metre havalı tüfek karma takım",
+        "B) Trap karma takım",
+        "C) 25 metre tabanca karma takım",
         "D) 10 metre havalı tabanca karma takım",
-        "E) Atletizm"
+        "E) Skeet karma takım"
     ],
     "correctAnswerIndex": 3,
     "explanation": "10 m havalı tabanca karma."
@@ -325,7 +325,7 @@ window.guncel_4_sorulari = [
     "explanation": "1949."
 },
 {
-    "question": "NATO'nun merkezi nerededir?",
+    "question": "NATO'nun merkezi aşağıdaki şehirlerden hangisindedir?",
     "options": [
         "A) Paris",
         "B) Washington D.C.",
@@ -483,11 +483,11 @@ window.guncel_4_sorulari = [
 {
     "question": "UNICEF'in temel çalışma alanlarından biri aşağıdakilerden hangisidir?",
     "options": [
-        "A) Petrol üretimi",
+        "A) Küresel salgın hastalıklarla mücadele",
         "B) Çocuk hakları ve çocukların korunması",
-        "C) Askerî ittifaklar",
-        "D) Uluslararası ticaret",
-        "E) Para politikası"
+        "C) Mültecilerin korunması ve iskânı",
+        "D) Eğitim, bilim ve kültür mirasının korunması",
+        "E) Gıda güvenliği ve tarımsal kalkınma"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Çocuk hakları."
@@ -505,7 +505,7 @@ window.guncel_4_sorulari = [
     "explanation": "1948."
 },
 {
-    "question": "WHO'nun merkezi aşağıdakilerden hangisidir?",
+    "question": "Dünya Sağlık Örgütü'nün (WHO) merkezi aşağıdaki şehirlerden hangisindedir?",
     "options": [
         "A) Paris",
         "B) New York",
@@ -541,7 +541,7 @@ window.guncel_4_sorulari = [
     "explanation": "Bretton Woods Konferansı Temmuz 1944'te ABD'nin New Hampshire eyaletinde toplanmış ve IMF ile Dünya Bankası'nın kurulması bu konferansta kararlaştırılmıştır. IMF'nin ana sözleşmesi 1945 sonunda yürürlüğe girmiş, kurum 1947'de fiilen faaliyete geçmiştir."
 },
 {
-    "question": "IMF'nin merkezi nerededir?",
+    "question": "Uluslararası Para Fonu'nun (IMF) merkezi aşağıdaki şehirlerden hangisindedir?",
     "options": [
         "A) New York",
         "B) Paris",
@@ -613,7 +613,7 @@ window.guncel_4_sorulari = [
     "explanation": "1995."
 },
 {
-    "question": "DTÖ'nün merkezi nerededir?",
+    "question": "Dünya Ticaret Örgütü'nün (DTÖ) merkezi aşağıdaki şehirlerden hangisindedir?",
     "options": [
         "A) Paris",
         "B) Cenevre",
@@ -711,11 +711,11 @@ window.guncel_4_sorulari = [
 {
     "question": "Aşağıdakilerden hangisi Avrupa Konseyi'nin temel amaçları arasında yer alır?",
     "options": [
-        "A) Petrol üretimini düzenlemek",
-        "B) Çocuklara sağlık hizmeti",
-        "C) Askerî savunma",
-        "D) Uluslararası para politikası",
-        "E) İnsan hakları, demokrasi ve hukukun üstünlüğü"
+        "A) Üye ülkeler arasında gümrük birliği kurmak",
+        "B) Ortak savunma ve askerî iş birliği sağlamak",
+        "C) Ortak para birimi ve para politikası oluşturmak",
+        "D) Enerji piyasalarını düzenlemek",
+        "E) İnsan hakları, demokrasi ve hukukun üstünlüğünü korumak"
     ],
     "correctAnswerIndex": 4,
     "explanation": "İnsan hakları, demokrasi, hukukun üstünlüğü."
@@ -757,7 +757,7 @@ window.guncel_4_sorulari = [
     "explanation": "1961."
 },
 {
-    "question": "OECD'nin merkezi nerededir?",
+    "question": "OECD'nin merkezi aşağıdaki şehirlerden hangisindedir?",
     "options": [
         "A) Paris",
         "B) Cenevre",

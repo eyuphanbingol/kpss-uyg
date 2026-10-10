@@ -745,10 +745,10 @@ window.tarih_8_sorulari = [
         question: "I. Abdülhamit'in ulufe ile ilgili yaptığı düzenleme aşağıdakilerden hangisidir?",
         options: [
             "A) Ulufe alma hakkının alınıp satılmasını yasaklamıştır.",
-            "B) Ulufeyi yabancılara vermiştir.",
-            "C) Ulufeyi tamamen kaldırmıştır.",
+            "B) Ulufeyi yalnızca savaş zamanında ödemiştir.",
+            "C) Ulufeyi kaldırarak dirlik vermiştir.",
             "D) Ulufeyi yalnızca sipahilere vermiştir.",
-            "E) Ulufeyi vergiye bağlamıştır."
+            "E) Ulufe ödemelerini iltizama bağlamıştır."
         ],
         correctAnswerIndex: 0,
         explanation: "Ulufe kaldırılmamış, ulufe alma hakkının alınıp satılması yasaklanmıştır."
@@ -759,9 +759,9 @@ window.tarih_8_sorulari = [
         options: [
             "A) Din adamı yetiştirmek",
             "B) Maliye görevlisi yetiştirmek",
-            "C) Diplomatik personel yetiştirmek",
+            "C) Deniz subayı yetiştirmek",
             "D) Tercüman yetiştirmek",
-            "E) Kale ve istihkam konusunda uzman asker yetiştirmek"
+            "E) Kale ve istihkâm uzmanı asker yetiştirmek"
         ],
         correctAnswerIndex: 4,
         explanation: "İstihkam Okulu askerî mühendislik ve tahkimat alanında personel yetiştirmek amacıyla açılmıştır."
@@ -771,10 +771,10 @@ window.tarih_8_sorulari = [
         question: "Aşağıdaki yargılardan hangisi XVIII. yüzyıl askerî ıslahatlarının gelişim sürecini doğru özetlemektedir?",
         options: [
             "A) Lale Devri'nde başlayan askerî yenilikler III. Selim döneminde sona ermiştir.",
-            "B) Batı tarzı ilk askerî ıslahat I. Mahmut döneminde başlamış, sonraki padişahlar tarafından geliştirilmiştir.",
-            "C) Askerî yenilikler yalnızca III. Selim döneminde yapılmıştır.",
-            "D) XVIII. yüzyılda askerî alanda hiçbir yabancı uzmandan yararlanılmamıştır.",
-            "E) Tüm askerî okullar aynı padişah döneminde açılmıştır."
+            "B) Batı tarzı ilk askerî ıslahat I. Mahmut döneminde başlamış, sonraki padişahlarca geliştirilmiştir.",
+            "C) Askerî yenilikler III. Selim döneminde başlamıştır.",
+            "D) XVIII. yüzyılda askerî alanda yabancı uzmanlardan yararlanılmamıştır.",
+            "E) Askerî okulların tamamı II. Mahmut döneminde açılmıştır."
         ],
         correctAnswerIndex: 1,
         explanation: "Batı tarzı askerî ıslahatlar I. Mahmut döneminde başlamış, III. Mustafa ve I. Abdülhamit dönemlerinde geliştirilmiştir."
@@ -783,11 +783,11 @@ window.tarih_8_sorulari = [
         id: 61,
         question: "III. Selim döneminde gerçekleştirilen ıslahatların genel olarak 'Nizam-ı Cedid' adıyla anılmasının temel nedeni aşağıdakilerden hangisidir?",
         options: [
-            "A) Yalnızca askerî alanda uygulanması",
+            "A) Askerî alanla sınırlı kalması",
             "B) Tüm yeniliklerin ortak bir program altında yürütülmesi",
             "C) Avrupa devletlerinin isteğiyle hazırlanması",
-            "D) İlk kez anayasal düzene geçilmesi",
-            "E) Sadece eğitim alanını kapsaması"
+            "D) Anayasal düzene geçilmesi",
+            "E) Halkın katılımıyla hazırlanması"
         ],
         correctAnswerIndex: 1,
         explanation: "III. Selim dönemindeki tüm yenilikler Nizam-ı Cedid adı altında yürütülmüştür."
@@ -913,11 +913,11 @@ window.tarih_8_sorulari = [
         id: 71,
         question: "III. Selim döneminde kurulan Matbaa-i Âmire'nin özelliği aşağıdakilerden hangisidir?",
         options: [
-            "A) İlk özel matbaa olması",
+            "A) İlk Türk matbaası olması",
             "B) İlk yabancı matbaa olması",
             "C) Devlet matbaası olması",
-            "D) Sadece dinî eser basması",
-            "E) Yalnızca askerî eserler basması"
+            "D) Gazete basımı için kurulması",
+            "E) Özel girişimle kurulması"
         ],
         correctAnswerIndex: 2,
         explanation: "Matbaa-i Âmire Osmanlı Devleti'nin devlet matbaasıdır."

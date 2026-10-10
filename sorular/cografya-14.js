@@ -187,11 +187,11 @@ window.cografya_14_sorulari = [
         id: 14,
         question: "Aşağıdakilerden hangisi sel ile taşkın arasındaki temel farkı doğru açıklamaktadır?",
         options: [
-            "A) Sel yalnızca kar erimeleriyle oluşur.",
-            "B) Taşkın yalnızca kıyılarda görülür.",
-            "C) Taşkın yalnızca baraj yıkılması sonucu oluşur.",
-            "D) Sel sadece yaz aylarında oluşur.",
-            "E) Sel ani sağanaklarla, taşkın ise eğimin az olduğu alanlarda meydana gelir."
+            "A) Sel, kar erimesiyle; taşkın, ani sağanaklarla oluşur.",
+            "B) Taşkın daha çok dik yamaçlı dar vadilerde görülür.",
+            "C) Sel, akarsuyun yavaşça yükselmesiyle günler içinde gelişir.",
+            "D) Taşkın yalnızca baraj ve set yıkılmalarıyla ortaya çıkar.",
+            "E) Sel ani sağanaklarla, taşkın eğimin az olduğu alanlarda oluşur."
         ],
         correctAnswerIndex: 4,
         explanation: "Sel ani yağışlarla oluşurken taşkınlar daha çok eğimin az olduğu alanlarda akarsuların yatağından taşmasıyla meydana gelir."
@@ -229,9 +229,9 @@ window.cografya_14_sorulari = [
         options: [
             "A) Yaz kuraklığının uzun sürmesi",
             "B) Üst üste yağan karların eğimli yamaçlarda birikmesi",
-            "C) Akarsu vadilerinin geniş olması",
-            "D) Delta ovalarının yaygın olması",
-            "E) Yer altı sularının fazla olması"
+            "C) Akarsu vadilerinin geniş ve düz olması",
+            "D) Bitki örtüsünün sık olduğu yamaçların fazlalığı",
+            "E) Kış sıcaklıklarının yıl boyunca dengeli olması"
         ],
         correctAnswerIndex: 1,
         explanation: "Çığ; üst üste yağan karların eğim boyunca aşağıya doğru hareket etmesiyle oluşur."
@@ -354,10 +354,10 @@ window.cografya_14_sorulari = [
         question: "Saros Körfezi'nin Türkiye'nin en temiz körfezi olmasının temel nedeni aşağıdakilerden hangisidir?",
         options: [
             "A) Gelgit genliğinin fazla olması",
-            "B) Güçlü akıntıları sayesinde su sirkülasyonunun yüksek olması",
-            "C) Tatlı su kaynaklarının fazla olması",
-            "D) Tuzluluk oranının düşük olması",
-            "E) Nüfusunun az olması"
+            "B) Güçlü akıntılarla su sirkülasyonunun yüksek olması",
+            "C) Körfeze dökülen akarsuların fazla olması",
+            "D) Tuzluluk oranının çevre denizlerden düşük olması",
+            "E) Kıyı kesiminde kumsalların geniş yer kaplaması"
         ],
         correctAnswerIndex: 1,
         explanation: "Saros Körfezi'nde güçlü akıntılar suyun sürekli yenilenmesini sağlar. Yüksek su sirkülasyonu kirleticilerin körfezde birikmesini engellediği için körfez temiz kalır."

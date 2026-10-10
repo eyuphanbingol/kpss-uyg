@@ -316,9 +316,9 @@ window.guncel_1_sorulari = [
     "question": "Aşağıdakilerden hangisi Türkiye'nin maliye ve kamu finansmanı politikalarında temel kurumlardan biridir?",
     "options": [
         "A) Hazine ve Maliye Bakanlığı",
-        "B) TÜİK",
-        "C) UNESCO",
-        "D) NATO",
+        "B) Türkiye İstatistik Kurumu",
+        "C) Sermaye Piyasası Kurulu",
+        "D) Rekabet Kurumu",
         "E) Borsa İstanbul"
     ],
     "correctAnswerIndex": 0,

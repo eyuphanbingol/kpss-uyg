@@ -152,7 +152,7 @@ window.tarih_24_sorulari = [
     },
     {
         question: "II. Dünya Savaşı’nın fiilen başladığı olay aşağıdakilerden hangisidir?",
-        options: ["A) Pearl Harbor", "B) Almanya’nın 1 Eylül’de Polonya’ya saldırması", "C) Barbarossa", "D) Normandiya", "E) Hiroşima"],
+        options: ["A) Japonya'nın Pearl Harbor'a saldırması", "B) Almanya'nın Polonya'ya saldırması", "C) Almanya'nın SSCB'ye saldırması", "D) Almanya'nın Avusturya'yı ilhak etmesi", "E) Almanya'nın Çekoslovakya'yı işgal etmesi"],
         correctAnswerIndex: 1,
         explanation: "1 Eylül 1939 Polonya saldırısı savaşın başlangıcı kabul edilir."
     },
@@ -193,8 +193,8 @@ window.tarih_24_sorulari = [
         explanation: "Barbarossa Harekâtı 1941’de SSCB’ye yöneliktir."
     },
     {
-        question: "Barbarossa’da Almanya’nın petrol hedefi aşağıdakilerden hangisidir?",
-        options: ["A) Kafkaslar üzerinden İran’a geçerek petrol kaynaklarını ele geçirmek", "B) Texas kuyularını bombalamak", "C) Kuzey Denizi’ni kapatmak", "D) Sibirya altınını almak", "E) Süveyş’i İngiltere’ye bırakmak"],
+        question: "Barbarossa Harekâtı'nda Almanya'nın petrol ile ilgili hedefi aşağıdakilerden hangisidir?",
+        options: ["A) Kafkasya'daki petrol kaynaklarını ele geçirmek", "B) Kuzey Afrika petrolünü ele geçirmek", "C) Baltık Denizi ticaretini kapatmak", "D) Sibirya'daki kömür yataklarını almak", "E) Süveyş Kanalı'nı denetim altına almak"],
         correctAnswerIndex: 0,
         explanation: "Amaç Kafkas–İran hattındaki petroldür. Maykop bölgesi de düşmüştür."
     },

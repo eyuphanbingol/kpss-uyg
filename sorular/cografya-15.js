@@ -52,9 +52,9 @@ window.cografya_15_sorulari = [
         question: "2007 yılından itibaren Türkiye'de adrese dayalı nüfus kayıt sistemine geçilmesinin sonucu aşağıdakilerden hangisidir?",
         options: [
             "A) Nüfus sayımları beşer yıllık aralıklarla yapılmaya başlanmıştır.",
-            "B) Nüfus sayımı uygulaması tamamen sona ermiştir.",
-            "C) Sayımlar yalnızca kırsal kesimde uygulanmaya başlanmıştır.",
-            "D) Sokağa çıkma yasağı zorunlu hâle getirilmiştir.",
+            "B) Sayımlar yalnızca örneklem yoluyla yapılmaya başlanmıştır.",
+            "C) Sayım gününde sokağa çıkma yasağı uygulaması başlamıştır.",
+            "D) Nüfus bilgileri yalnızca on yılda bir güncellenir hâle gelmiştir.",
             "E) Nüfus sayımları her yıl düzenli olarak yapılır hâle gelmiştir."
         ],
         correctAnswerIndex: 4,
@@ -171,11 +171,11 @@ window.cografya_15_sorulari = [
     {
         question: "1980-2005 yılları arasında Türkiye'de uygulanan nüfus politikalarıyla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
         options: [
-            "A) Öncelik, nüfus artış hızını artırmaya verilmiştir.",
-            "B) Kadınların iş hayatına katılımı sınırlandırılmıştır.",
-            "C) Kentleşme süreci tamamen durdurulmuştur.",
-            "D) Doğum kontrolü yeniden yasaklanmıştır.",
-            "E) Öncelik, nüfusun nitelik yönünden (eğitim, sağlık, beslenme, barınma) geliştirilmesine verilmiştir."
+            "A) Öncelik, nüfus artış hızını yükseltmeye verilmiştir.",
+            "B) Doğumları teşvik eden ödüllü politikalar uygulanmıştır.",
+            "C) Göç yoluyla nüfusun artırılması hedeflenmiştir.",
+            "D) Nüfus planlaması uygulamaları tamamen kaldırılmıştır.",
+            "E) Öncelik, nüfusun eğitim, sağlık ve beslenme yönünden niteliğine verilmiştir."
         ],
         correctAnswerIndex: 4,
         explanation: "1980-2005 döneminde amaç, nüfusun sayısını artırmak veya azaltmak değil; eğitim, beslenme, barınma ve sağlık koşullarını iyileştirerek nüfusun niteliğini yükseltmektir. Bu dönemde kadının iş hayatına katılımı artmış (sınırlanmamış), kentleşme de hızlanarak devam etmiştir."
@@ -315,11 +315,11 @@ window.cografya_15_sorulari = [
     {
         question: "Yaş bağımlılık oranıyla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
         options: [
-            "A) Bu oran, 0-14 yaş ile 65 yaş üstü nüfus toplamının çalışma çağı nüfusuna oranını ifade eder.",
-            "B) Bu oran, yalnızca 65 yaş üstü nüfusun çalışma çağı nüfusuna oranını ifade eder.",
-            "C) Bu oran, çalışma çağındaki nüfusun toplam nüfusa oranını ifade eder.",
-            "D) Bu oranın en yüksek olduğu il Sinop'tur.",
-            "E) Bu oran yalnızca kentsel nüfus için hesaplanır."
+            "A) 0-14 ile 65+ yaş nüfus toplamının çalışma çağı nüfusuna oranıdır.",
+            "B) 65 yaş ve üstü nüfusun çalışma çağı nüfusuna oranıdır.",
+            "C) Çalışma çağındaki nüfusun toplam nüfusa oranıdır.",
+            "D) Türkiye'de en yüksek olduğu il Sinop'tur.",
+            "E) Yalnızca kentsel nüfus esas alınarak hesaplanır."
         ],
         correctAnswerIndex: 0,
         explanation: "Yaş bağımlılık oranı, çalışma çağı dışında kalan 0-14 yaş ile 65 yaş ve üzeri nüfus toplamının 15-64 yaş çalışma çağı nüfusuna bölünmesiyle bulunur; bu nedenle A doğrudur. Oran yalnızca yaşlı nüfusu kapsamaz, çalışma çağındaki nüfusun toplam nüfus içindeki payını göstermez ve kent-kır ayrımı yapılmaksızın tüm nüfus için hesaplanır. Türkiye'de bu oranın en yüksek olduğu il, çocuk nüfusun fazlalığı nedeniyle Sinop değil Şanlıurfa'dır."

@@ -140,11 +140,11 @@ window.cografya_5_sorulari = [
     "id": "11",
     "question": "Türkiye'de tektonik ovaların en yaygın ova türü olmasının temel nedeni aşağıdakilerden hangisidir?",
     "options": [
-      "A) Kıyılarının çok uzun olması",
-      "B) Volkanik dağların fazla olması",
-      "C) Genç oluşumlu olması ve çok sayıda kırık (fay) hattı bulundurması",
+      "A) Kıyılarının uzun ve girintili olması",
+      "B) Volkanik dağların geniş yer kaplaması",
+      "C) Genç oluşumlu olması ve çok sayıda fay hattı bulundurması",
       "D) Karstik arazinin yaygın olması",
-      "E) Buzullaşmanın çok görülmesi"
+      "E) Akarsuların büyük bölümünün delta oluşturması"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Türkiye jeolojik olarak yakın zamanda (3. ve 4. zaman) şekillenen genç bir ülkedir. Bu yüzden KAF, DAF ve BAF gibi aktif, büyük kırık ve fay hatları barındırır. Çöküntü alanları çok olduğundan tektonik ovalar en yaygın türdür."

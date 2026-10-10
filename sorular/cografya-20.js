@@ -232,9 +232,9 @@ window.cografya_20_sorulari = [
         question: "Türkiye'de arıcılığın gelişmesi için uygun koşulların bir arada bulunduğu yerlerde aşağıdakilerden hangisinin etkisinin daha fazla olması beklenir?",
         options: [
             "A) Bitki çeşitliliğinin fazla olması",
-            "B) Tarım alanlarının tamamen sulanması",
+            "B) Tarım alanlarının büyük bölümünün sulanması",
             "C) Sanayi tesislerinin yoğunlaşması",
-            "D) Kış sıcaklıklarının sürekli sıfırın altında olması",
+            "D) Kışların uzun ve sert geçmesi",
             "E) Düzlük alanların geniş yer kaplaması"
         ],
         correctAnswerIndex: 0,
@@ -304,10 +304,10 @@ window.cografya_20_sorulari = [
         question: "Kümes hayvancılığının kapalı ortamlarda ve suni yem kullanılarak yapılması aşağıdakilerden hangisine neden olur?",
         options: [
             "A) İklim koşullarına bağımlılığının azalmasına",
-            "B) Yalnızca mera alanlarında yapılmasına",
+            "B) Mera alanlarına bağımlılığının artmasına",
             "C) Doğal bitki örtüsüne bağımlılığının artmasına",
-            "D) Sadece kışları ılık bölgelerde yapılmasına",
-            "E) Sulak alanlara zorunlu olarak ihtiyaç duymasına"
+            "D) Kışları ılık bölgelerde yoğunlaşmasına",
+            "E) Göçebe hayvancılığın yaygınlaşmasına"
         ],
         correctAnswerIndex: 0,
         explanation: "Kapalı ortamlarda ve suni yemle yapılan kümes hayvancılığında üretim, doğal otlaklara ve mevsim koşullarına bağlı olmaktan çıkar; böylece iklim koşullarına bağımlılık büyük ölçüde azalır. Kümeslerin ısıtılması ve havalandırılması gerektiğinden iklimin etkisi tümüyle ortadan kalkmaz."
@@ -365,9 +365,9 @@ window.cografya_20_sorulari = [
         options: [
             "A) Balık işleme ve paketleme sanayisinin",
             "B) Mera hayvancılığının",
-            "C) Dut üretiminin",
-            "D) Yem bitkilerinin",
-            "E) Kümes alanlarının"
+            "C) Kıyı balıkçılığında kullanılan geleneksel yöntemlerin",
+            "D) Yem bitkisi tarımının",
+            "E) Avlanma yasaklarının kaldırılmasının"
         ],
         correctAnswerIndex: 0,
         explanation: "Balıkçılığın ekonomik değerinin artırılması için balık işleme ve paketleme sanayisinin geliştirilmesi gereklidir. Bu sayede avlanan balıklar daha yüksek katma değerle pazarlanabilir."

@@ -19,9 +19,9 @@ window.cografya_10_sorulari = [
     "options": [
       "A) Dik yamaçlarda biriktirme, sığ kıyılarda aşındırma olur",
       "B) Dik yamaçlarda aşındırma, sığ kıyılarda biriktirme olur",
-      "C) Her ikisinde de yalnızca aşındırma olur",
-      "D) Her ikisinde de yalnızca biriktirme olur",
-      "E) Dalgalar yalnızca sığ kıyılarda etkilidir"
+      "C) Her iki kıyı tipinde de aşındırma baskındır",
+      "D) Her iki kıyı tipinde de biriktirme baskındır",
+      "E) Dalga etkisi kıyının eğiminden bağımsızdır"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Dalga şekillendirmesinin genel kuralı şudur: Dağların dik indiği derin kıyılarda dalgalar çarparak aşındırma (falez) yapar, deniz derinliğinin az olduğu sığ kıyılarda ise enerjisini kaybederek taşıdığı malzemeyi biriktirir (plaj, kıyı oku)."
@@ -30,11 +30,11 @@ window.cografya_10_sorulari = [
     "id": "3",
     "question": "Aşağıdaki dalga aşındırma şekli–bölge eşleştirmelerinden hangisi doğrudur?",
     "options": [
-      "A) Falez (yalıyar) – Doğu ve Batı Karadeniz, Antalya-Yıldız Dağları kıyıları",
-      "B) Falez – yalnızca Ege kıyıları",
-      "C) Aşınım platosu – yalnızca Marmara kıyıları",
-      "D) Falez – delta ovalarının bulunduğu her yer",
-      "E) Aşınım platosu – yalnızca Doğu Anadolu"
+      "A) Falez – Doğu ve Batı Karadeniz ile Antalya kıyıları",
+      "B) Falez – Çukurova ve Bafra delta kıyıları",
+      "C) Kıyı oku – Doğu Karadeniz'in dik yamaçlı kıyıları",
+      "D) Tombolo – Teke Yarımadası'nın falezli kıyıları",
+      "E) Lagün – Antalya'nın yalıyarlı kıyıları"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Dağların kıyıya paralel ve yakın uzandığı Doğu Karadeniz, Batı Karadeniz, Antalya kıyıları ve Marmara Bölgesi'ndeki Yıldız Dağları kıyıları falez (yalıyar) oluşumunun en yaygın ve doğru eşleştirildiği alanlardır."
@@ -43,11 +43,11 @@ window.cografya_10_sorulari = [
     "id": "4",
     "question": "Falezler ile deniz arasında kalan düzlüklere ne ad verilir ve deltanın bulunduğu yerde bu şekil neden görülmez?",
     "options": [
-      "A) Aşınım (abrazyon) platformu; çünkü deltalar biriktirme, falez ise aşındırma alanıdır",
-      "B) Kıyı kordonu; çünkü deltalar çok derindir",
-      "C) Lagün; çünkü deltalarda tuzluluk fazladır",
-      "D) Tombolo; çünkü deltalar ada değildir",
-      "E) Plaj; çünkü deltalarda kumsal olmaz"
+      "A) Aşınım platformu; deltalar biriktirme, falezler aşındırma alanıdır",
+      "B) Kıyı kordonu; deltalarda dalga enerjisi çok yüksektir",
+      "C) Lagün; deltalarda kıyı çizgisi sürekli geriler",
+      "D) Tombolo; deltalarda adalar kara ile birleşmez",
+      "E) Kıyı oku; deltalarda akıntılar malzemeyi uzaklaştırır"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Falezlerin gerilemesiyle falez ile deniz arasında kalan düzlüğe aşınım (abrazyon) platformu denir. Delta ovalarının bulunduğu kıyılar sığ ve biriktirme alanı iken falezli kıyılar derin ve dik yamaçlı aşındırma alanlarıdır; bu nedenle ikisi aynı yerde bir arada görülmez."

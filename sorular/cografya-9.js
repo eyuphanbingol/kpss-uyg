@@ -4,11 +4,11 @@ window.cografya_9_sorulari = [
     "id": "1",
     "question": "Karstik arazi tanımı ve Türkiye'deki en belirgin karstik şekilleri oluşturan kayaçla ilgili aşağıdakilerden hangisi doğrudur?",
     "options": [
-      "A) Karstik arazi, su içinde erimeyen sert kayaçlardan oluşur; en belirgin kayaç granittir",
-      "B) Karstik arazi yalnızca volkanik kayaçlardan oluşur",
-      "C) Karstik arazi, su içinde eriyebilen kayaçlardan oluşur; Akdeniz'de en belirgin kayaç kalkerdir (kireçtaşı)",
-      "D) Karstik şekiller yalnızca Doğu Anadolu'da görülür",
-      "E) Karstik arazi tamamen alüvyal kökenlidir"
+      "A) Suda erimeyen kayaçlarda oluşur; en belirgin kayaç granittir",
+      "B) Volkanik kayaçlarda oluşur; en belirgin kayaç bazalttır",
+      "C) Suda eriyebilen kayaçlarda oluşur; Akdeniz'de belirgin kayaç kalkerdir",
+      "D) Metamorfik kayaçlarda oluşur; en belirgin kayaç mermerdir",
+      "E) Alüvyal dolgularda oluşur; en belirgin kayaç kumtaşıdır"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Karstik araziler, suyla temas ettiğinde kolayca eriyebilen kimyasal tortul kayaçlardan oluşur. Türkiye'de en yaygın ve belirgin karstik yer şekillerini oluşturan kayaç kalkerdir (kireç taşı) ve en çok Akdeniz Bölgesi'nde (Toroslar) bulunur."

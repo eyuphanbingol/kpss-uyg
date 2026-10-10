@@ -615,11 +615,11 @@ window.tarih_17_sorulari = [
 {
     "question": "Mustafa Kemal'in eğitim hayatı ve askerî hayatı birlikte değerlendirildiğinde aşağıdakilerden hangisine ulaşılabilir?",
     "options": [
-        "A) Farklı öğretmen ve okulların etkisiyle askerî eğitimin yanında tarih ve edebiyata da ilgi geliştirmiştir.",
-        "B) Tarih ve edebiyata ilgisi yalnızca askerlik hayatından sonra ortaya çıkmıştır.",
+        "A) Farklı öğretmen ve okulların etkisiyle tarih ve edebiyata da ilgi duymuştur.",
+        "B) Tarih ve edebiyata ilgisi askerlik hayatından sonra başlamıştır.",
         "C) Eğitim hayatının tamamı askerî okullarda geçmiştir.",
         "D) Askerî eğitime İstanbul'da başlamıştır.",
-        "E) Öğrenim hayatını yalnızca Selanik'te sürdürmüştür."
+        "E) Öğrenimini yalnızca Selanik'te sürdürmüştür."
     ],
     "correctAnswerIndex": 0,
     "explanation": "Mahalle/Şemsi sivil; Manastır'da tarih-edebiyat; askerî rüştiye Selanik'tedir."

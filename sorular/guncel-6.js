@@ -49,7 +49,7 @@ window.guncel_6_sorulari = [
     "explanation": "El-Kanun fi't-Tıb."
 },
 {
-    "question": "Farabi'nin eseri aşağıdakilerden hangisidir?",
+    "question": "Aşağıdaki eserlerden hangisi Farabi'ye aittir?",
     "options": [
         "A) Divanü Lügati't-Türk",
         "B) El-Kanun fi't-Tıb",
@@ -135,11 +135,11 @@ window.guncel_6_sorulari = [
 {
     "question": "Osman Hamdi Bey aşağıdaki kurumlardan hangisinin kurucularındandır?",
     "options": [
-        "A) TÜİK ve TCMB",
-        "B) Arkeoloji Müzesi ve Sanayi-i Nefise Mektebi",
-        "C) NATO ve UNESCO",
-        "D) TEKNOFEST ve TOGG",
-        "E) Borsa İstanbul"
+        "A) Darülfünun ve Darüşşafaka",
+        "B) İstanbul Arkeoloji Müzesi ve Sanayi-i Nefise Mektebi",
+        "C) Darülbedayi ve Darülelhan",
+        "D) Mekteb-i Mülkiye ve Mekteb-i Harbiye",
+        "E) Türk Tarih Kurumu ve Türk Dil Kurumu"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Arkeoloji Müzesi ve Sanayi-i Nefise."
@@ -193,13 +193,13 @@ window.guncel_6_sorulari = [
     "explanation": "Âşık Veysel."
 },
 {
-    "question": "Bozkırın Tezenesi unvanı kime aittir?",
+    "question": "\"Bozkırın Tezenesi\" olarak anılan sanatçı aşağıdakilerden hangisidir?",
     "options": [
-        "A) Itri",
+        "A) Âşık Mahzuni Şerif",
         "B) Âşık Veysel",
         "C) Neşet Ertaş",
-        "D) Dede Efendi",
-        "E) Osman Hamdi"
+        "D) Âşık Daimi",
+        "E) Muharrem Ertaş"
     ],
     "correctAnswerIndex": 2,
     "explanation": "Neşet Ertaş."

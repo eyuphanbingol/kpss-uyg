@@ -49,13 +49,13 @@ window.tarih_25_sorulari = [
         explanation: "Barbarossa ile Alman baskısı Türkiye üzerinden SSCB’ye kaymış, baskı azalmıştır."
     },
     {
-        question: "Polonya sendromu neyi ifade eder?",
+        question: "“Polonya sendromu” kavramı aşağıdakilerden hangisini ifade eder?",
         options: [
-            "A) Polonya’nın hem Rusya hem Almanya tarafından işgaline benzer bir durumun Türkiye’de yaşanma kaygısı",
-            "B) Polonya’nın Danzig limanını Türkiye’ye bırakması",
-            "C) Türkiye’nin Polonya’ya asker göndermesi",
-            "D) Münih’te Polonya’nın paylaşılması",
-            "E) Struma’nın Polonya bandıralı olması"
+            "A) Türkiye'nin Polonya gibi Almanya ile SSCB arasında paylaşılma kaygısı",
+            "B) Türkiye'nin Polonya'ya askerî yardım göndermesi",
+            "C) Polonya'dan Türkiye'ye sığınan askerler",
+            "D) Türkiye'nin Mihver'e katılma eğilimi",
+            "E) Türkiye'nin Boğazları kapatma kararı"
         ],
         correctAnswerIndex: 0,
         explanation: "Polonya sendromu, iki cepheden işgal korkusunun Türkiye’de yarattığı bunalımdır."
@@ -97,13 +97,13 @@ window.tarih_25_sorulari = [
         explanation: "II. Kahire’ye İsmet İnönü katılmıştır."
     },
     {
-        question: "II. Kahire’de İnönü’nün savaşa ilişkin tutumu hangisidir?",
+        question: "II. Kahire Konferansı'nda İsmet İnönü'nün savaşa ilişkin tutumu aşağıdakilerden hangisidir?",
         options: [
-            "A) Koşulsuz derhâl savaş ilanı",
-            "B) Boğazları SSCB’ye bırakmak",
-            "C) Mihver yanında savaşa girmek",
-            "D) Konferansı terk etmek",
-            "E) İhtiyaç duyulan silah ve malzeme karşılanırsa savaşa prensipte katılmayı kabul"
+            "A) Koşulsuz ve derhâl savaşa girme",
+            "B) Boğazların SSCB ile ortak savunulması",
+            "C) Mihver yanında savaşa girme",
+            "D) Tarafsızlıktan hiçbir koşulda vazgeçmeme",
+            "E) Silah ve malzeme ihtiyacı karşılanırsa savaşa prensipte katılma"
         ],
         correctAnswerIndex: 4,
         explanation: "İnönü, silah ve malzeme karşılanırsa prensipte katılmayı kabul etmiştir."
@@ -115,8 +115,8 @@ window.tarih_25_sorulari = [
         explanation: "İhtiyaç tespiti çalışmaları sonuca ulaşmamıştır."
     },
     {
-        question: "Adana, Moskova, I. Kahire, Tahran ve II. Kahire görüşmelerinin ortak konusu nedir?",
-        options: ["A) Varlık Vergisi", "B) Köy Enstitüleri", "C) Türkiye’nin savaşa girmesi", "D) Struma", "E) ENIAC"],
+        question: "Adana, Moskova, I. Kahire, Tahran ve II. Kahire görüşmelerinin ortak konusu aşağıdakilerden hangisidir?",
+        options: ["A) Boğazların statüsünün değiştirilmesi", "B) Hatay sorununun çözümü", "C) Türkiye'nin savaşa girmesi", "D) Türkiye'nin NATO'ya katılması", "E) Musul sorununun çözümü"],
         correctAnswerIndex: 2,
         explanation: "Bu beş görüşmede Türkiye’nin savaşa girmesi konuşulmuştur."
     },
@@ -175,8 +175,8 @@ window.tarih_25_sorulari = [
         explanation: "Köy Enstitüleri 1940’ta, Petrol Ofisi ve Ticaret Ofisi 1941’de, İaşe Müsteşarlığı 1942’de, yani savaş yıllarında kurulmuştur. NATO ise savaştan sonra, 1949’da kurulmuştur."
     },
     {
-        question: "Varlık Vergisi ve Toprak Mahsulleri Vergisi’nin amacı nedir?",
-        options: ["A) Savaşı fırsata çeviren işletmelerin haksız kazancını kesmek", "B) Köy Enstitüsü açmak", "C) BM aidatı ödemek", "D) Pearl Harbor’ı finanse etmek", "E) Maginot’yu onarmak"],
+        question: "Varlık Vergisi ile Toprak Mahsulleri Vergisi'nin ortak amacı aşağıdakilerden hangisidir?",
+        options: ["A) Savaş ekonomisini finanse etmek ve haksız kazancı önlemek", "B) Köy Enstitülerinin giderlerini karşılamak", "C) Dış borçları kapatmak", "D) Kamu işletmelerini özelleştirmek", "E) Tarımda makineleşmeyi hızlandırmak"],
         correctAnswerIndex: 0,
         explanation: "Amaç spekülatif/haksız kazancı önlemektir."
     },
@@ -199,8 +199,8 @@ window.tarih_25_sorulari = [
         explanation: "1938’de hazırlanan II. Beş Yıllık Sanayi Planı, savaşın başlaması ve kaynakların savunmaya aktarılması nedeniyle uygulanamamıştır. 1934-1938 arasında yürütülen I. Beş Yıllık Sanayi Planı ise başarıyla tamamlanmıştı."
     },
     {
-        question: "Savaş döneminde eğitime ilişkin hangisi doğrudur?",
-        options: ["A) Tüm okullar kapatıldı", "B) Medreseler yeniden açıldı", "C) Üniversiteler Mihver’e devredildi", "D) Harf İnkılabı geri alındı", "E) Eğitim ve kültüre pay ayrılmaya devam etti; Köy Enstitüleri kuruldu"],
+        question: "II. Dünya Savaşı yıllarında Türkiye'de eğitimle ilgili aşağıdakilerden hangisi doğrudur?",
+        options: ["A) Okullar savaş boyunca kapatılmıştır.", "B) Medreseler yeniden açılmıştır.", "C) Karma eğitime son verilmiştir.", "D) Yabancı okullar denetim dışı bırakılmıştır.", "E) Köy Enstitüleri kurularak eğitime yatırım sürdürülmüştür."],
         correctAnswerIndex: 4,
         explanation: "Pay ayrılmaya devam etmiş, Köy Enstitüleri kurulmuştur."
     },
@@ -217,13 +217,13 @@ window.tarih_25_sorulari = [
         explanation: "Garip: Orhan Veli, Oktay Rifat, Melih Cevdet Anday."
     },
     {
-        question: "Struma gemisi ile ilgili hangisi doğrudur?",
+        question: "Struma gemisi ile ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) Nazilerden kaçan Yahudileri Filistin’e götürmek üzere gelirken İstanbul açıklarında batırılmıştır",
-            "B) Türk donanmasının amiral gemisidir",
-            "C) Pearl Harbor’a katılmıştır",
-            "D) Adana Görüşmeleri’nde imzalanmıştır",
-            "E) Karabük’e demir taşımıştır"
+            "A) Nazilerden kaçan Yahudileri taşırken İstanbul açıklarında batmıştır.",
+            "B) Türk donanmasının amiral gemisidir.",
+            "C) Boğazları geçmeye çalışan Alman savaş gemisidir.",
+            "D) Türkiye'ye silah taşıyan İngiliz gemisidir.",
+            "E) Kıbrıs'a asker taşıyan Türk gemisidir."
         ],
         correctAnswerIndex: 0,
         explanation: "Struma, mülteci Yahudileri taşırken İstanbul açıklarında batırılmıştır."
@@ -277,8 +277,8 @@ window.tarih_25_sorulari = [
         explanation: "Amerikan yardımları nedeniyle fabrikası kapanmış, soba üretimine başlamıştır."
     },
     {
-        question: "“Bakü Fatihi” unvanı kime verilmiştir?",
-        options: ["A) Nuri Killigil (Nuri Paşa)", "B) Enver Paşa", "C) Fevzi Çakmak", "D) Vecihi Hürkuş", "E) İsmet İnönü"],
+        question: "“Bakü Fatihi” olarak anılan komutan aşağıdakilerden hangisidir?",
+        options: ["A) Nuri Paşa (Killigil)", "B) Enver Paşa", "C) Kâzım Karabekir", "D) Halil Paşa (Kut)", "E) Vehip Paşa"],
         correctAnswerIndex: 0,
         explanation: "Enver’in kardeşi Nuri Paşa, Kafkas İslam Ordusu’yla Azerbaycan’ı kurtardığı için Bakü Fatihi anılır."
     },
@@ -301,8 +301,8 @@ window.tarih_25_sorulari = [
         explanation: "Orhan Veli Garip şairidir; Çakmak Hattı Fevzi Çakmak ile anılır."
     },
     {
-        question: "Türkiye’nin savaşa fiilen girmemesine rağmen BM üyesi olabilmesinin yolu hangisidir?",
-        options: ["A) Mihver’e katılmak", "B) Almanya ve Japonya’ya kâğıt üzerinde savaş ilanı", "C) Polonya’ya asker göndermek", "D) Maginot’yu aşmak", "E) Stalingrad’a tümen yollamak"],
+        question: "Türkiye'nin II. Dünya Savaşı'na fiilen girmeden Birleşmiş Milletler'in kurucu üyesi olabilmesini sağlayan gelişme aşağıdakilerden hangisidir?",
+        options: ["A) Mihver'e katılması", "B) Almanya ve Japonya'ya sembolik olarak savaş ilan etmesi", "C) Boğazları Müttefiklere açması", "D) SSCB ile saldırmazlık antlaşması imzalaması", "E) Kore'ye asker göndermesi"],
         correctAnswerIndex: 1,
         explanation: "Yalta Konferansı’nda alınan karar gereği 1 Mart 1945’e kadar Almanya ve Japonya’ya savaş ilan eden devletler San Francisco Konferansı’na çağrılacaktı. Türkiye de 23 Şubat 1945’te kâğıt üzerinde savaş ilan ederek Birleşmiş Milletler’e kurucu üye olma hakkı elde etmiştir."
     },

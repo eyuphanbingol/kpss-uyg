@@ -90,10 +90,10 @@ window.tarih_13_sorulari = [
     {
         question: "Amasya Genelgesi'nin Mustafa Kemal'in yanı sıra Ali Fuat Cebesoy, Rauf Orbay ve Refet Bele'nin imzası, Kazım Karabekir ile Mersinli Cemal Paşa'nın telgrafla onayı alınarak yayımlanmasının temel amacı aşağıdakilerden hangisidir?",
         options: [
-            "A) Mücadeleyi yalnızca askerî bir hareket hâline getirmek",
-            "B) İstanbul Hükûmeti'ni tamamen ortadan kaldırmak",
+            "A) Mücadeleyi askerî bir harekete dönüştürmek",
+            "B) İstanbul Hükûmeti'ni devirmek",
             "C) Millî Mücadele'yi Mustafa Kemal'in kişisel girişimi olmaktan çıkarmak",
-            "D) Erzurum Kongresi'ni iptal etmek",
+            "D) Kongrelere katılımı askerlerle sınırlamak",
             "E) Manda ve himayeyi kabul ettirmek"
         ],
         correctAnswerIndex: 2,
@@ -214,11 +214,11 @@ window.tarih_13_sorulari = [
     {
         question: "Erzurum Kongresi'nin toplanış bakımından bölgesel, alınan kararlar bakımından ulusal olması aşağıdakilerden hangisiyle açıklanabilir?",
         options: [
-            "A) Kongreye yalnızca askerlerin katılmasıyla",
-            "B) Kongrede bütün vatanı ilgilendiren kararların alınmasıyla",
-            "C) Kongrenin İstanbul'da yapılmasıyla",
-            "D) Kongrede yalnızca Doğu Anadolu'nun sorunlarının görüşülmesiyle",
-            "E) Kongrenin İstanbul Hükûmeti tarafından düzenlenmesiyle"
+            "A) Kongreye askerlerin de katılmasıyla",
+            "B) Kongrede bütün vatanı ilgilendiren kararlar alınmasıyla",
+            "C) Kongrenin İstanbul Hükûmeti'nin izniyle toplanmasıyla",
+            "D) Kongrede Doğu Anadolu'nun sorunlarının görüşülmesiyle",
+            "E) Kongre kararlarının Temsil Heyeti'nce uygulanmasıyla"
         ],
         correctAnswerIndex: 1,
         explanation: "Erzurum Kongresi, Doğu illeri adına toplanmasına rağmen bütün vatanı ilgilendiren kararlar almıştır. Bu nedenle toplanışı bölgesel, kararları ulusaldır."
@@ -284,12 +284,12 @@ window.tarih_13_sorulari = [
         explanation: "Bu karar, azınlık meselesinin millî çıkarlar doğrultusunda ele alındığını göstermektedir. Azınlıklara verilecek ayrıcalıkların sınırlandırılması, ülke bütünlüğünün korunması amacına yöneliktir."
     },
     {
-        question: "Erzurum Kongresi'nde Osmanlı Mebusan Meclisi'nin açılması ve hükûmetin bu yolla denetlenmesi kararının temel hedefi aşağıdakilerden hangisidir?",
+        question: "Erzurum Kongresi'nde Mebusan Meclisi'nin hemen toplanmasının istenmesinin temel amacı aşağıdakilerden hangisidir?",
         options: [
-            "A) Damat Ferit Paşa Hükûmeti'nin faaliyetlerini denetlemek",
+            "A) İstanbul Hükûmeti'nin faaliyetlerini millet adına denetlemek",
             "B) TBMM'yi hemen açmak",
             "C) Saltanatı kaldırmak",
-            "D) Batı Cephesi'ni kapatmak",
+            "D) Manda yönetimini kabul ettirmek",
             "E) İstanbul'u işgalden kurtarmak"
         ],
         correctAnswerIndex: 0,
@@ -395,9 +395,9 @@ window.tarih_13_sorulari = [
         question: "Alaşehir Kongresi'nde Batı Anadolu'da devam eden direnişin gözden geçirilmesinin yanında Paris Barış Konferansı'nda Yunan zulümlerini inceleyen komisyona raporlar hazırlama amacının bulunması aşağıdakilerden hangisini göstermektedir?",
         options: [
             "A) Düzenli ordunun kurulduğunu",
-            "B) İstanbul Hükûmeti'nin tamamen reddedildiğini",
+            "B) İstanbul Hükûmeti ile tüm bağların koparıldığını",
             "C) Manda ve himayenin kabul edildiğini",
-            "D) Askerî mücadelenin yanı sıra diplomatik kamuoyu oluşturma çabasının bulunduğunu",
+            "D) Askerî mücadelenin yanında diplomatik destek de arandığını",
             "E) Misak-ı Millî'nin ilan edildiğini"
         ],
         correctAnswerIndex: 3,
@@ -454,8 +454,8 @@ window.tarih_13_sorulari = [
     {
         question: "Sivas Kongresi'nde Ali Fuat Cebesoy'un Batı Cephesi Komutanlığına atanması aşağıdakilerden hangisinin göstergesidir?",
         options: [
-            "A) Düzenli ordunun tamamen kaldırılmasının",
-            "B) Temsil Heyeti'nin yasama yetkisini tamamen kaybetmesinin",
+            "A) Düzenli ordunun kurulmasının",
+            "B) Temsil Heyeti'nin yasama yetkisi kazanmasının",
             "C) İstanbul Hükûmeti'nin Temsil Heyeti'ni resmen tanımasının",
             "D) Temsil Heyeti'nin ilk kez yürütme yetkisini kullanmasının",
             "E) Manda ve himayenin kabul edilmesinin"
@@ -558,10 +558,10 @@ window.tarih_13_sorulari = [
     {
         question: "Amasya Görüşmeleri'nde alınan kararlardan biri aşağıdakilerden hangisidir?",
         options: [
-            "A) Anadolu ve Rumeli Müdafaa-i Hukuk Cemiyeti'nin İstanbul tarafından resmen tanınması",
+            "A) Anadolu ve Rumeli Müdafaa-i Hukuk Cemiyeti'nin İstanbul'ca tanınması",
             "B) Manda ve himayenin kabul edilmesi",
-            "C) İstanbul Hükûmeti'nin Temsil Heyeti'ni feshetmesi",
-            "D) Batı Cephesi'nin kaldırılması",
+            "C) Temsil Heyeti'nin dağıtılması",
+            "D) Mebusan Meclisi'nin Ankara'da toplanması",
             "E) Saltanatın kaldırılması"
         ],
         correctAnswerIndex: 0,
@@ -698,10 +698,10 @@ window.tarih_13_sorulari = [
     {
         question: "Misak-ı Millî'de İstanbul ve Marmara Denizi'nin güvenliği sağlandığı takdirde boğazların ticarete açılmasının kabul edilmesi aşağıdakilerden hangisiyle ilgilidir?",
         options: [
-            "A) Boğazların ekonomik kullanımına ilişkin düzenleme",
-            "B) Azınlıkların siyasi hakları",
-            "C) Arapların geleceği",
-            "D) Dış borçların paylaşımı",
+            "A) Boğazlar sorunu",
+            "B) Azınlıkların hakları",
+            "C) Arap topraklarının geleceği",
+            "D) Dış borçlar",
             "E) Batı Trakya'nın geleceği"
         ],
         correctAnswerIndex: 0,
@@ -924,7 +924,7 @@ window.tarih_13_sorulari = [
         options: [
             "A) Mustafa Kemal'in Samsun'a gönderilmesi",
             "B) Havza Genelgesi'nin yayımlanması",
-            "C) Damat Ferit Paşa Hükûmeti'nin istifa ederek yerine Ali Rıza Paşa Hükûmeti'nin kurulması",
+            "C) Damat Ferit'in istifasıyla Ali Rıza Paşa Hükûmeti'nin kurulması",
             "D) Balıkesir Kongresi'nin yapılması",
             "E) Alaşehir Kongresi'nin yapılması"
         ],

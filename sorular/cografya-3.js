@@ -137,10 +137,10 @@ window.cografya_3_sorulari = [
     "question": "'Bir ülkede linyit kömürü rezervinin fazla, taş kömürünün ise az olması' bilgisi, o ülkenin arazisi hakkında öncelikle aşağıdakilerden hangisini gösterir?",
     "options": [
       "A) Arazinin yaşlı oluşumlu olduğunu",
-      "B) Arazinin tamamen masif olduğunu",
-      "C) Arazide buzullaşmanın hiç olmadığını",
+      "B) Arazinin büyük ölçüde masiflerden oluştuğunu",
+      "C) Arazide buzul aşındırmasının yaygın olduğunu",
       "D) Arazinin genç oluşumlu olduğunu",
-      "E) Arazide volkanizmanın görülmediğini"
+      "E) Arazide volkanizmanın yaygın olduğunu"
     ],
     "correctAnswerIndex": 3,
     "explanation": "Linyit 3. zamanda oluşmuş yakın dönem kömürüdür. Linyit fazlalığı bir ülkenin jeolojik olarak yakın zamanda şekillendiğini, yani genç oluşumlu olduğunu doğrudan kanıtlar."
@@ -291,11 +291,11 @@ window.cografya_3_sorulari = [
     "id": "22",
     "question": "'Karacadağ' adı iki ayrı bölgede yer alan volkanik dağ için kullanılır. Bu dağların bulunduğu iller aşağıdakilerden hangisinde doğru verilmiştir?",
     "options": [
-      "A) Konya (İç Anadolu) ve Diyarbakır-Şanlıurfa (GDA)",
-      "B) Kayseri ve Niğde",
-      "C) Manisa ve İzmir",
-      "D) Bitlis ve Van",
-      "E) Karaman ve Aksaray"
+      "A) Konya ile Diyarbakır-Şanlıurfa",
+      "B) Kayseri ile Niğde",
+      "C) Manisa ile İzmir",
+      "D) Bitlis ile Van",
+      "E) Karaman ile Aksaray"
     ],
     "correctAnswerIndex": 0,
     "explanation": "Türkiye'de iki farklı coğrafi bölgede Karacadağ adında volkan vardır: Biri İç Anadolu'da (Konya), diğeri Güneydoğu Anadolu'da (Diyarbakır-Şanlıurfa arası) yer alır.",

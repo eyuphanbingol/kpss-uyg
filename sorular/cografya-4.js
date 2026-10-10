@@ -210,9 +210,9 @@ window.cografya_4_sorulari = [
     "question": "'En yüksek plato' ile 'en alçak ve en gelişmiş plato' aşağıdakilerden hangisinde sırasıyla doğru verilmiştir?",
     "options": [
       "A) Teke – Bozok",
-      "B) Erzurum-Kars-Ardahan – Çatalca-Kocaeli",
-      "C) Kapadokya – Taşeli",
-      "D) Obruk – Perşembe",
+      "B) Erzurum-Kars – Çatalca-Kocaeli",
+      "C) Ardahan – Taşeli",
+      "D) Obruk – Haymana",
       "E) Haymana – Erzurum-Kars"
     ],
     "correctAnswerIndex": 1,
@@ -254,11 +254,11 @@ window.cografya_4_sorulari = [
     "id": "19",
     "question": "Karstik platolarda (Teke, Taşeli) nüfusun az ve tarımın gelişmemiş olmasının temel nedeni aşağıdakilerden hangisidir?",
     "options": [
-      "A) Yağışın hiç olmaması",
-      "B) Karstik arazinin tarıma elverişsiz, engebeli ve geçirimli yapısı",
-      "C) Sürekli buzullarla kaplı olması",
-      "D) Volkanik toprakların verimsizliği",
-      "E) Deniz seviyesinin altında bulunması"
+      "A) Yıllık yağış miktarının çok az olması",
+      "B) Karstik arazinin engebeli ve geçirimli olması",
+      "C) Kışların uzun ve sert geçmesi",
+      "D) Volkanik toprakların verimsiz olması",
+      "E) Akarsu ağının çok sık olması"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Kalkerli (kireç taşlı) karstik arazi suyu sünger gibi yer altına çeker (geçirimlidir). Yüzey sularının kıtlığı, engebeli topografya ve kimyasal çözünmeli toprak yapısı tarımı kısıtlamış, bu da nüfusun buralara yerleşmesini engellemiştir."

@@ -301,7 +301,7 @@ window.tarih_22_sorulari = [
     "explanation": "Halide Edip Adıvar'ındır."
 },
 {
-    "question": "Zeytindağı ve Çankaya eserleri kime aittir?",
+    "question": "“Zeytindağı” ve “Çankaya” adlı eserlerin yazarı aşağıdakilerden hangisidir?",
     "options": [
         "A) Kâzım Karabekir",
         "B) Tarık Buğra",
@@ -349,7 +349,7 @@ window.tarih_22_sorulari = [
     "explanation": "Kemal Tahir — Yorgun Savaşçı."
 },
 {
-    "question": "Küçük Ağa ve Osmancık eserleri kime aittir?",
+    "question": "“Küçük Ağa” ve “Osmancık” adlı eserlerin yazarı aşağıdakilerden hangisidir?",
     "options": [
         "A) Kemal Tahir",
         "B) Tarık Buğra",

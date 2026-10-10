@@ -139,9 +139,9 @@ window.tarih_11_sorulari = [
         question: "Uşi Antlaşması'nın aşağıdaki hükümlerinden hangisi Osmanlı Devleti'nin Trablusgarp üzerindeki kültürel etkisini sürdürme isteğini göstermektedir?",
         options: [
             "A) Trablusgarp'ın İtalya'ya bırakılması",
-            "B) Rodos'un geçici olarak İtalya'ya bırakılması",
-            "C) Trablusgarp halkının dinî ve kültürel açıdan Osmanlı Devleti'ne bağlı kalması",
-            "D) Düyun-u Umumiye'ye ödeme yapılması",
+            "B) On İki Ada'nın geçici olarak İtalya'ya bırakılması",
+            "C) Trablusgarp halkının dinî yönden halifeye bağlı kalması",
+            "D) İtalya'nın Osmanlı borçlarının bir kısmını üstlenmesi",
             "E) Kapitülasyonların kaldırılması"
         ],
         correctAnswerIndex: 2,
@@ -150,11 +150,11 @@ window.tarih_11_sorulari = [
     {
         question: "Trablusgarp'ta İtalyanlara karşı savaşan Arap direnişçilerle ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) Sadece Osmanlı subayları mücadele etmiştir.",
-            "B) Şeyh Ahmet Şerifî Hazretleri ve daha sonra Ömer Muhtar önderliğinde direniş sürmüştür.",
-            "C) Direnişi doğrudan Enver Paşa yönetmiştir.",
+            "A) Direnişi yalnızca Osmanlı subayları sürdürmüştür.",
+            "B) Şeyh Ahmet Şerif ve Ömer Muhtar önderliğinde sürmüştür.",
+            "C) Direnişi Enver Paşa sonuna kadar yerinde yönetmiştir.",
             "D) Direniş Uşi Antlaşması'ndan önce sona ermiştir.",
-            "E) Ömer Muhtar Balkan Savaşları'nda görev yapmıştır."
+            "E) Direniş Mısır'daki İngiliz yönetimince desteklenmiştir."
         ],
         correctAnswerIndex: 1,
         explanation: "Trablusgarp'ta İtalyanlara karşı direniş önce Şeyh Ahmet Şerifî Hazretleri, ardından Ömer Muhtar önderliğinde devam etmiştir. Direniş Uşi Antlaşması'ndan sonra da sürmüştür."
@@ -314,11 +314,11 @@ window.tarih_11_sorulari = [
     {
         question: "II. Balkan Savaşı'nın temel nedeni aşağıdakilerden hangisidir?",
         options: [
-            "A) Osmanlı Devleti'nin Balkanlardan çekilmesi",
-            "B) Bulgaristan'ın I. Balkan Savaşı'nda diğer devletlere göre fazla toprak kazanması",
-            "C) Rusya'nın Balkanlardan çekilmesi",
-            "D) Arnavutluk'un bağımsız olması",
-            "E) İtalya'nın Balkanlara saldırması"
+            "A) Osmanlı Devleti'nin Edirne'yi geri alma isteği",
+            "B) Bulgaristan'ın I. Balkan Savaşı'nda en fazla toprağı alması",
+            "C) Arnavutluk'un bağımsızlığını ilan etmesi",
+            "D) Yunanistan'ın Girit'i ilhak etmesi",
+            "E) Rusya'nın Balkanlardan çekilmesi"
         ],
         correctAnswerIndex: 1,
         explanation: "II. Balkan Savaşı, I. Balkan Savaşı'nda en fazla toprağı alan Bulgaristan'a karşı diğer Balkan devletlerinin ittifak kurması sonucu çıkmıştır. Bulgaristan'ın Makedonya üzerindeki aşırı talepleri savaşın temel nedenidir."
@@ -1031,11 +1031,11 @@ window.tarih_11_sorulari = [
     {
         question: "Hicaz-Yemen Cephesi'nin açılmasında aşağıdakilerden hangisi etkili olmuştur?",
         options: [
-            "A) Rusya'nın Boğazları ele geçirmek istemesi",
-            "B) İngilizlerin kutsal toprakları ele geçirerek Arapları Osmanlı Devleti'ne karşı kışkırtmak istemesi",
-            "C) Almanya'nın Hindistan'ı işgal etmek istemesi",
-            "D) Fransa'nın Kafkasya'ya ilerlemek istemesi",
-            "E) İtalya'nın Trablusgarp'ı savunmak istemesi"
+            "A) Rusya'nın Boğazlar'ı ele geçirmek istemesi",
+            "B) İngiltere'nin kutsal yerleri ele geçirip Arapları kışkırtmak istemesi",
+            "C) Almanya'nın Süveyş Kanalı'nı denetlemek istemesi",
+            "D) Osmanlı'nın Mısır'ı geri almak istemesi",
+            "E) İtalya'nın Yemen'e çıkarma yapması"
         ],
         correctAnswerIndex: 1,
         explanation: "İngiltere, Hicaz ve Yemen'i ele geçirerek hem Kızıldeniz ve Hindistan yolunun güvenliğini sağlamayı hem de kutsal topraklara hâkim olup Arapları Osmanlı Devleti'ne karşı ayaklandırarak halifenin İslam dünyasındaki etkisini kırmayı amaçlamıştır."
@@ -1467,11 +1467,11 @@ window.tarih_11_sorulari = [
     {
         question: "I. Dünya Savaşı sonrasında kurulan Milletler Cemiyeti'nin temel amacı aşağıdakilerden hangisidir?",
         options: [
-            "A) Sömürgeciliği yaymak",
-            "B) Uluslararası sorunların barışçı yollarla çözülmesini sağlamak",
-            "C) Almanya'yı yeniden silahlandırmak",
-            "D) Osmanlı Devleti'ni güçlendirmek",
-            "E) Avrupa'da monarşileri korumak"
+            "A) Galip devletlerin sömürgeleri paylaşmasını sağlamak",
+            "B) Uluslararası sorunları barışçı yollarla çözmek",
+            "C) Ortak bir askerî savunma ittifakı kurmak",
+            "D) Avrupa'da ekonomik birlik oluşturmak",
+            "E) Monarşik yönetimleri korumak"
         ],
         correctAnswerIndex: 1,
         explanation: "Milletler Cemiyeti, I. Dünya Savaşı sonrasında uluslararası sorunların barışçı yollarla çözülmesi amacıyla kurulmuştur."
@@ -1492,10 +1492,10 @@ window.tarih_11_sorulari = [
         question: "I. Dünya Savaşı sırasında kullanılan yeni savaş yöntemlerinden biri aşağıdakilerden hangisidir?",
         options: [
             "A) Kimyasal silahların kullanılması",
-            "B) Ateşli silahların tamamen kaldırılması",
-            "C) Savaş gemilerinin kullanılmaması",
-            "D) Hava gücünün tamamen devre dışı bırakılması",
-            "E) Tankların yasaklanması"
+            "B) Atlı süvari birliklerinin ilk kez kullanılması",
+            "C) Barutlu ateşli silahların ilk kez kullanılması",
+            "D) Kale kuşatmalarında mancınık kullanılması",
+            "E) Yelkenli savaş gemilerinin kullanılması"
         ],
         correctAnswerIndex: 0,
         explanation: "I. Dünya Savaşı'nda kimyasal silahlar (hardal gazı vb.) ilk kez kullanılmıştır."

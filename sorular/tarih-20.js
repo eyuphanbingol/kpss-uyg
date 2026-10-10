@@ -15,11 +15,11 @@ window.tarih_20_sorulari = [
     {
         "question": "Saltanatın kaldırılmasında aşağıdakilerden hangisinin doğrudan etkili olduğu söylenebilir?",
         "options": [
-            "A) Ekonomik bağımsızlığın sağlanmak istenmesi",
-            "B) Lozan görüşmelerine Osmanlı Hükûmeti'nin de katılmasının önlenmek istenmesi",
-            "C) Eğitimde birliğin sağlanmak istenmesi",
-            "D) Kadınlara siyasi hak verilmesi",
-            "E) Medreselerin kapatılması"
+            "A) Halifeliğin kaldırılmak istenmesi",
+            "B) Lozan'a Osmanlı Hükûmeti'nin de çağrılmasının önlenmek istenmesi",
+            "C) Cumhuriyetin ilan edilmek istenmesi",
+            "D) Çok partili hayata geçilmek istenmesi",
+            "E) Kapitülasyonların kaldırılmak istenmesi"
         ],
         "correctAnswerIndex": 1,
         "explanation": "Osmanlı'nın Lozan'a daveti karmaşa çıkaracağı için saltanat kaldırılarak tek temsilci TBMM olmuştur."
@@ -327,11 +327,11 @@ window.tarih_20_sorulari = [
     {
         "question": "Tevhid-i Tedrisat Kanunu ile aşağıdakilerden hangisi gerçekleştirilmiştir?",
         "options": [
-            "A) Üniversiteler kaldırılmıştır.",
-            "B) Yabancı okullar tamamen kapatılmıştır.",
-            "C) Tüm eğitim ve öğretim kurumları Millî Eğitim Bakanlığına bağlanmıştır.",
+            "A) Üniversiteler kapatılmıştır.",
+            "B) Yabancı okullar tümüyle kapatılmıştır.",
+            "C) Tüm eğitim kurumları Maarif Vekâletine bağlanmıştır.",
             "D) Eğitim kurumları vakıflara bırakılmıştır.",
-            "E) Medreselerin yetkileri artırılmıştır."
+            "E) Karma eğitime geçilmiştir."
         ],
         "correctAnswerIndex": 2,
         "explanation": "Tüm eğitim kurumları MEB'e bağlanmıştır; yabancı okullar kapatılmamış, denetim artmıştır."
@@ -675,11 +675,11 @@ window.tarih_20_sorulari = [
     {
         "question": "Meclis hükûmeti sisteminde yürütme organının oluşumu ile kabine sistemindeki oluşum karşılaştırıldığında aşağıdakilerden hangisi doğrudur?",
         "options": [
-            "A) Her iki sistemde de bakanları doğrudan cumhurbaşkanı belirler.",
-            "B) Meclis hükûmeti sisteminde bakanlar meclis içinden seçilirken kabine sisteminde başbakan belirleyici olmuştur.",
-            "C) Kabine sisteminde yasama yetkisi tamamen hükûmete devredilmiştir.",
+            "A) Her iki sistemde de bakanları doğrudan cumhurbaşkanı belirlemiştir.",
+            "B) Meclis hükûmetinde bakanları meclis, kabine sisteminde başbakan belirlemiştir.",
+            "C) Kabine sisteminde yasama yetkisi hükûmete devredilmiştir.",
             "D) Meclis hükûmeti sisteminde başbakan yürütmenin başıdır.",
-            "E) Kabine sisteminde TBMM'nin yasama yetkisi kaldırılmıştır."
+            "E) Kabine sisteminde bakanları padişah atamıştır."
         ],
         "correctAnswerIndex": 1,
         "explanation": "Meclis hükûmetinde bakanlar meclisten seçilir; kabinede başbakan belirler, cumhurbaşkanı onaylar."
@@ -855,11 +855,11 @@ window.tarih_20_sorulari = [
     {
         "question": "Maarif Kongresi'nin Kütahya-Eskişehir Muharebeleri devam ederken toplanması aşağıdakilerden hangisini göstermesi bakımından önemlidir?",
         "options": [
-            "A) Askerî mücadele devam ederken eğitim politikalarının da planlandığını",
-            "B) Savaşın tamamen sona erdiğini",
+            "A) Askerî mücadele sürerken eğitimin de planlandığını",
+            "B) Savaşın sona erdiğini",
             "C) Cumhuriyetin ilan edildiğini",
             "D) Eğitimde birliğin tamamlandığını",
-            "E) Üniversite reformunun gerçekleştirildiğini"
+            "E) Yabancı okulların kapatıldığını"
         ],
         "correctAnswerIndex": 0,
         "explanation": "Savaş sürerken millî eğitim konuşulmuştur."
@@ -916,10 +916,10 @@ window.tarih_20_sorulari = [
         "question": "Medreselerin kapatılması ve Tevhid-i Tedrisat Kanunu birlikte değerlendirildiğinde aşağıdaki sonuçlardan hangisine ulaşılabilir?",
         "options": [
             "A) Eğitimde çok başlılık güçlendirilmiştir.",
-            "B) Yabancı okullar tamamen bağımsız hâle getirilmiştir.",
+            "B) Yabancı okullar denetim dışı bırakılmıştır.",
             "C) Eğitim sistemi laik ve millî bir yapıya yöneltilmiştir.",
-            "D) Dinî eğitim tamamen yasaklanmıştır.",
-            "E) Yükseköğretim kurumları kaldırılmıştır."
+            "D) Eğitim vakıflara bırakılmıştır.",
+            "E) Yükseköğretim kurumları kapatılmıştır."
         ],
         "correctAnswerIndex": 2,
         "explanation": "İkilik kalkmış, laik ve millî eğitim güçlenmiştir. İmam hatip ve ilahiyat amaçlanmıştır."
@@ -1107,11 +1107,11 @@ window.tarih_20_sorulari = [
     {
         "question": "Sağlık alanındaki düzenlemelerin temel hedefi aşağıdakilerden hangisidir?",
         "options": [
-            "A) Yalnızca şehirlerde sağlık hizmetlerini yaygınlaştırmak",
+            "A) Sağlık hizmetlerini büyük kentlerle sınırlı tutmak",
             "B) Halkın sağlıklı ve dinamik bir yapıya sahip olmasını sağlamak",
-            "C) Özel hastaneleri devlet hastanelerinin yerine geçirmek",
-            "D) Sağlık hizmetlerini yalnızca askerî personele sunmak",
-            "E) Eğitim kurumlarını sağlık kuruluşlarına dönüştürmek"
+            "C) Sağlık hizmetlerini özel sektöre devretmek",
+            "D) Sağlık hizmetlerini askerî personele öncelikli sunmak",
+            "E) Hekim yetiştirmeyi yurt dışına bırakmak"
         ],
         "correctAnswerIndex": 1,
         "explanation": "Halkın sağlıklı ve dinamik yapıya sahip olması hedeflenmiş, köylere kadar hizmet götürülmüştür."

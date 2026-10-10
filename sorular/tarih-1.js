@@ -67,9 +67,9 @@ window.tarih_1_sorulari = [
     options: [
       "A) Türemek",
       "B) Miğfer",
-      "C) Kanun, nizam sahibi, töreli",
+      "C) Töreli, nizam sahibi",
       "D) Olgunluk çağı",
-      "E) Serbest dolaşan",
+      "E) Güçlü, kuvvetli",
     ],
     correctAnswerIndex: 2,
     explanation:

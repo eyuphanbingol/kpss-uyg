@@ -312,13 +312,13 @@ window.tarih_9_sorulari = [
         explanation: "Kırım Savaşı'nda Selimiye Kışlasında Florence Nightingale modern hemşireliğin kurucusu olarak ortaya çıkmıştır."
     },
     {
-        question: "1856 Islahat Fermanı neden ilan edilmiştir?",
+        question: "1856 Islahat Fermanı'nın ilan edilmesinin temel amacı aşağıdakilerden hangisidir?",
         options: [
-            "A) Tersane Konferansı'nda etkili olmak için",
-            "B) Paris Barış Konferansı kararlarında etkili olabilmek için gayrimüslimlere yeni haklar vermek",
-            "C) Navarin'i protesto etmek için",
-            "D) II. Meşrutiyet'i ilan etmek için",
-            "E) Balta Limanı'nı kaldırmak için"
+            "A) Tersane Konferansı'nda etkili olmak",
+            "B) Paris Konferansı'nda Avrupa'nın müdahalesini önlemek",
+            "C) Navarin olayına tepki göstermek",
+            "D) Meşrutiyet yönetimine geçmek",
+            "E) Balta Limanı Antlaşması'nı kaldırmak"
         ],
         correctAnswerIndex: 1,
         explanation: "Islahat Fermanı, Paris Barış Konferansı'nda etkili olmak amacıyla gayrimüslimlere yeni haklar verilerek ilan edilmiştir."
@@ -438,7 +438,7 @@ window.tarih_9_sorulari = [
         explanation: "Balkan Cephesi'nde Plevne Müdafii Gazi Osman Paşa'dır."
     },
     {
-        question: "Şıpka Kahramanı olarak bilinen kişi kimdir?",
+        question: "“Şıpka Kahramanı” olarak bilinen komutan aşağıdakilerden hangisidir?",
         options: ["A) Gazi Osman Paşa", "B) Nene Hatun", "C) Tepedelenli Ali Paşa", "D) Gazi Ahmet Muhtar Paşa", "E) Süleyman Hüsnü Paşa"],
         correctAnswerIndex: 4,
         explanation: "Şıpka Kahramanı Süleyman Hüsnü Paşa'dır."
@@ -510,13 +510,13 @@ window.tarih_9_sorulari = [
         explanation: "İngiltere vazgeçince Osmanlı Almanya ile yakınlaşmıştır."
     },
     {
-        question: "1878 Halepa Fermanı nedir?",
+        question: "1878 Halepa Fermanı ile ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) Sırplara bağımsızlık belgesi",
-            "B) Mısır'a özerklik veren belgedir",
-            "C) Ermenilere toprak veren belgedir",
-            "D) Giritli Rumlara özerklik verilen belgedir",
-            "E) Kanun-ı Esasi'nin diğer adıdır"
+            "A) Sırbistan'ın bağımsızlığını tanıyan belgedir.",
+            "B) Mısır'a özerklik veren belgedir.",
+            "C) Ermenilere ıslahat vaat eden belgedir.",
+            "D) Giritli Rumlara özerklik veren belgedir.",
+            "E) Kanun-i Esasi'nin yürürlüğünü durduran belgedir."
         ],
         correctAnswerIndex: 3,
         explanation: "Halepa Fermanı, II. Abdülhamid döneminde Giritli Rumlara özerklik verilen belgedir."

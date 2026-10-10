@@ -3,11 +3,11 @@ window.vatandas_14_sorulari = [
     {
         "question": "Hukuk kuralları için aşağıdakilerden hangisi doğrudur?",
         "options": [
-            "A) Yalnızca ahlaki yaptırım içerir",
-            "B) Kamu gücü tarafından desteklenir ve uyulması zorunludur",
-            "C) Sadece kişiler arası ilişkileri düzenler, devletle ilişkileri düzenlemez",
-            "D) Geçici ve somut kurallardır",
-            "E) Yalnızca yazılı olabilir"
+            "A) Yalnızca manevi yaptırım içerir",
+            "B) Kamu gücüyle desteklenir ve uyulması zorunludur",
+            "C) Yalnızca kişiler arası ilişkileri düzenler",
+            "D) Belirli bir olaya yönelik somut kurallardır",
+            "E) Yalnızca yazılı kaynaklardan doğar"
         ],
         "correctAnswerIndex": 1,
         "explanation": "Hukuk kuralları kamu gücüyle desteklenir; kişiler arası ve devletle ilişkileri düzenler; uyma zorunludur."
@@ -25,25 +25,25 @@ window.vatandas_14_sorulari = [
         "explanation": "Toplumsal eşitlik mutlak değildir; hukuk adalet amacı güder ama mutlak eşitlik vaat etmez."
     },
     {
-        "question": "Hukuk kurallarıyla sağlananlar arasında hangisi vardır?",
+        "question": "Hukuk kurallarıyla sağlanması amaçlanan değerler aşağıdakilerin hangisinde birlikte verilmiştir?",
         "options": [
-            "A) Mutlak eşitlik",
+            "A) Mutlak toplumsal eşitlik ve refah",
             "B) Adalet, özgürlük, düzen ve barış",
-            "C) Yalnızca ekonomik büyüme",
-            "D) Sadece dini birlik",
-            "E) Yaptırımsız düzen"
+            "C) Ekonomik büyüme ve kalkınma",
+            "D) İnanç birliği ve ahlaki olgunluk",
+            "E) Görgü ve nezaket kurallarının korunması"
         ],
         "correctAnswerIndex": 1,
         "explanation": "Adalet, özgürlük, düzen ve barış; eşitlik ise mutlak değildir."
     },
     {
-        "question": "“Maddi yaptırım yalnızca hukukta vardır” yargısı neden doğrudur?",
+        "question": "“Maddi yaptırım yalnızca hukuk kurallarında bulunur.” yargısının gerekçesi aşağıdakilerden hangisidir?",
         "options": [
-            "A) Din de maddi yaptırım uygular",
-            "B) Ahlak maddi yaptırım uygular",
-            "C) Hukuk kamu gücüyle desteklenen maddi tepki içerir; din/ahlak/görgü manevidir",
-            "D) Örf maddi yaptırımdır",
-            "E) Görgü kuralları hapis öngörür"
+            "A) Din kuralları da kamu gücüyle uygulanan yaptırım içerir.",
+            "B) Ahlak kurallarına uymayanlara para cezası verilir.",
+            "C) Hukukun yaptırımı kamu gücüyle uygulanır; din, ahlak ve görgünün yaptırımı manevidir.",
+            "D) Örf ve âdet kuralları kamu gücüyle desteklenir.",
+            "E) Görgü kurallarına uyulmaması hapis cezası gerektirir."
         ],
         "correctAnswerIndex": 2,
         "explanation": "Maddi yaptırım hukukun ayırt edici özelliğidir; diğer sosyal kurallar manevi yaptırım uygular."
@@ -73,13 +73,13 @@ window.vatandas_14_sorulari = [
         "explanation": "TR’de hapis + para. İdam, genel müsadere, kıssas, sürgün yoktur."
     },
     {
-        "question": "Disiplin cezası hakkında hangisi doğrudur?",
+        "question": "Disiplin cezası ile ilgili aşağıdakilerden hangisi doğrudur?",
         "options": [
-            "A) TCK’da düzenlenmiştir",
-            "B) İBK ile konulur",
-            "C) Yalnızca Anayasa’da vardır",
-            "D) 657 sayılı Kanun’da vardır; TCK’da yoktur",
-            "E) Örf-adetle belirlenir"
+            "A) Türk Ceza Kanunu'nda düzenlenmiştir.",
+            "B) İçtihadı birleştirme kararlarıyla konulur.",
+            "C) Yalnızca mahkeme kararıyla verilebilir.",
+            "D) 657 sayılı Kanun'da düzenlenmiştir; TCK'da yer almaz.",
+            "E) Örf ve âdet hukukuna dayanır."
         ],
         "correctAnswerIndex": 3,
         "explanation": "Disiplin cezası 657’de vardır; TCK’da yoktur."
@@ -133,13 +133,13 @@ window.vatandas_14_sorulari = [
         "explanation": "Sarhoşluk bir irade sakatlığı değil, geçici ayırt etme gücü yoksunluğudur. TMK m.15’e göre ayırt etme gücü bulunmayan kişinin fiilleri hukuki sonuç doğurmaz; bu nedenle sarhoşken yapılan sözleşme kesin hükümsüzdür (mutlak butlan). Nispi butlan ise ayırt etme gücünden geçici yoksunluk içinde yapılan evlenmeye özgü bir yaptırımdır (TMK m.148)."
     },
     {
-        "question": "Küçük ile reşit arasında yapılan sözleşmede küçük yönünden durum hangisidir?",
+        "question": "Ayırt etme gücüne sahip bir küçük ile ergin bir kişi arasında yasal temsilcinin onayı olmadan yapılan sözleşme, küçük açısından aşağıdakilerden hangisidir?",
         "options": [
-            "A) Mutlak butlan",
-            "B) Yokluk",
-            "C) Tek taraflı bağlamazlık; veli icazeti ile bağlar",
-            "D) Otomatik geçerli",
-            "E) Nispi butlan zorunlu"
+            "A) Kesin hükümsüzdür (mutlak butlan).",
+            "B) Hukuken hiç doğmamış sayılır (yokluk).",
+            "C) Topal işlemdir; yasal temsilcinin onayıyla küçüğü de bağlar.",
+            "D) Kurulduğu anda iki tarafı da bağlar.",
+            "E) Yalnızca hâkim kararıyla geçerli hâle gelir."
         ],
         "correctAnswerIndex": 2,
         "explanation": "Tek taraflı bağlamazlık; veli icazeti ile bağlayıcı hâle gelir."
@@ -169,25 +169,25 @@ window.vatandas_14_sorulari = [
         "explanation": "Mevzu hukuk = yazılı yürürlükteki."
     },
     {
-        "question": "“Olması gereken hukuk” hangisidir?",
+        "question": "“Olması gereken hukuk” olarak tanımlanan hukuk aşağıdakilerden hangisidir?",
         "options": [
-            "A) Pozitif",
-            "B) Mevzu",
-            "C) Tabii / ideal / doğal",
-            "D) Tarihi",
-            "E) İBK"
+            "A) Pozitif hukuk",
+            "B) Mevzu hukuk",
+            "C) Tabii (doğal) hukuk",
+            "D) Tarihî hukuk",
+            "E) Örf ve âdet hukuku"
         ],
         "correctAnswerIndex": 2,
         "explanation": "Tabii/ideal/doğal hukuk = olması gereken."
     },
     {
-        "question": "Yürürlükten kalkmış hukuka ne denir?",
+        "question": "Geçmişte uygulanmış ancak yürürlükten kalkmış hukuk kurallarının bütününe ne ad verilir?",
         "options": [
-            "A) Pozitif",
-            "B) Mevzu",
-            "C) Tabii",
-            "D) Tarihi hukuk",
-            "E) Asli"
+            "A) Pozitif hukuk",
+            "B) Mevzu hukuk",
+            "C) Tabii hukuk",
+            "D) Tarihî hukuk",
+            "E) Örf ve âdet hukuku"
         ],
         "correctAnswerIndex": 3,
         "explanation": "Tarihi hukuk = kalkmış hukuk."
@@ -231,11 +231,11 @@ window.vatandas_14_sorulari = [
     {
         "question": "Aşağıdakilerden hangisi kamu hukuku dalıdır?",
         "options": [
-            "A) Ticaret",
-            "B) Borçlar",
-            "C) Medeni",
-            "D) Vergi",
-            "E) Devletler özel"
+            "A) Ticaret hukuku",
+            "B) Borçlar hukuku",
+            "C) Medeni hukuk",
+            "D) Vergi hukuku",
+            "E) Devletler özel hukuku"
         ],
         "correctAnswerIndex": 3,
         "explanation": "Vergi hukuku kamu hukukudur."
@@ -289,13 +289,13 @@ window.vatandas_14_sorulari = [
         "explanation": "İcra–İflas kamu hukuku dallarındandır."
     },
     {
-        "question": "0–12 yaş grubunda ceza ehliyeti nasıldır?",
+        "question": "Türk Ceza Kanunu'na göre fiili işlediği sırada 12 yaşını doldurmamış çocukların ceza sorumluluğu ile ilgili aşağıdakilerden hangisi doğrudur?",
         "options": [
-            "A) Tam",
-            "B) Sınırlı indirimli",
-            "C) İndirimli veya yok",
-            "D) Yok",
-            "E) Yalnız para cezası"
+            "A) Tam ceza sorumluluğu vardır.",
+            "B) Cezası üçte bir oranında indirilir.",
+            "C) Algılama ve yönlendirme yeteneğine göre indirimli ceza verilir.",
+            "D) Ceza sorumluluğu yoktur; yalnızca güvenlik tedbiri uygulanabilir.",
+            "E) Yalnızca adli para cezası verilebilir."
         ],
         "correctAnswerIndex": 3,
         "explanation": "0–12: ceza ehliyeti yoktur."
@@ -325,13 +325,13 @@ window.vatandas_14_sorulari = [
         "explanation": "TCK m.31/3 uyarınca 15 yaşını doldurmuş, 18 yaşını doldurmamış kişilerin ceza sorumluluğu vardır; bu yaş grubunda algılama ve yönlendirme yeteneği ayrıca araştırılmaz, yalnızca ceza indirilerek uygulanır (diğer cezalarda üçte bir indirim). Bu nedenle sorumluluk sınırlı indirimlidir."
     },
     {
-        "question": "Sağır–dilsizlerde ceza ehliyeti yaş sınırları nasıl uygulanır?",
+        "question": "Türk Ceza Kanunu'na göre çocukların ceza sorumluluğuna ilişkin yaş sınırları sağır ve dilsizler bakımından nasıl uygulanır?",
         "options": [
-            "A) −3 yaş",
-            "B) Hiç uygulanmaz",
-            "C) Değişmez",
-            "D) Yalnızca 18’e sabitlenir",
-            "E) +3 yaş"
+            "A) Yaş sınırları üçer yıl düşürülerek uygulanır.",
+            "B) Yaş sınırları aynen uygulanır.",
+            "C) Ceza sorumluluğu hiçbir yaşta yoktur.",
+            "D) Yaş sınırları ikişer yıl artırılarak uygulanır.",
+            "E) Yaş sınırları üçer yıl artırılarak (15, 18, 21) uygulanır."
         ],
         "correctAnswerIndex": 4,
         "explanation": "Sağır–dilsiz: +3 yaş."
@@ -361,31 +361,31 @@ window.vatandas_14_sorulari = [
         "explanation": "Anayasa m.73/4’e göre bu yetki Cumhurbaşkanına verilebilir. Alt ve üst sınırları belirleyen ise kanundur; yani sınırları TBMM çıkardığı kanunla koyar, Cumhurbaşkanı yalnızca bu sınırlar içinde değişiklik yapabilir."
     },
     {
-        "question": "Paylaştırıcı adalet vergide neyi ifade eder?",
+        "question": "Vergilendirmede “paylaştırıcı adalet” aşağıdakilerden hangisini ifade eder?",
         "options": [
-            "A) Yüksek gelire yüksek vergi",
-            "B) Herkesten aynı tutar",
-            "C) Vergisizlik",
-            "D) Yalnızca dolaylı vergi",
-            "E) CBK ile vergi koyma"
+            "A) Mali gücü yüksek olandan daha fazla vergi alınmasını",
+            "B) Herkesten eşit tutarda vergi alınmasını",
+            "C) Verginin ancak kanunla konulabilmesini",
+            "D) Vergi kanunlarının geriye yürümemesini",
+            "E) Vergi yükünün dolaylı vergilere dayanmasını"
         ],
         "correctAnswerIndex": 0,
         "explanation": "Yüksek gelire yüksek vergi = paylaştırıcı adalet."
     },
     {
-        "question": "Gerçek kişilik ne zaman başlar?",
+        "question": "Türk Medeni Kanunu'na göre gerçek kişilik aşağıdakilerden hangisiyle başlar?",
         "options": [
-            "A) Ana rahmine düşmeyle kesin olarak",
-            "B) Nüfus cüzdanıyla",
-            "C) 18 yaşında",
+            "A) Ana rahmine düşmekle",
+            "B) Nüfus kütüğüne tescil edilmekle",
+            "C) Ergin olmakla",
             "D) Tam ve sağ doğumla",
-            "E) Mahkeme kararıyla"
+            "E) Ayırt etme gücü kazanmakla"
         ],
         "correctAnswerIndex": 3,
         "explanation": "Gerçek kişilik tam ve sağ doğumla başlar. (Hak ehliyeti ana rahmine düşmeyle — sağ tam doğum şartıyla.)"
     },
     {
-        "question": "Ölüm bildirimi kaç gün içinde yapılmalıdır?",
+        "question": "Nüfus Hizmetleri Kanunu'na göre ölüm olayının kaç gün içinde bildirilmesi gerekir?",
         "options": [
             "A) 3",
             "B) 5",
@@ -507,29 +507,29 @@ window.vatandas_14_sorulari = [
     {
         "question": "Hak ehliyeti ne zaman başlar?",
         "options": [
-            "A) 18 yaşında",
-            "B) Fiil ehliyetiyle aynı anda zorunlu",
-            "C) Evlilikle",
-            "D) Mahkeme tesciliyle",
-            "E) Ana rahmine düşmeyle (sağ ve tam doğum şartıyla)"
+            "A) Ergin olmakla",
+            "B) Fiil ehliyetiyle birlikte",
+            "C) Evlenmekle",
+            "D) Nüfusa tescille",
+            "E) Ana rahmine düşmekle (sağ doğum şartıyla)"
         ],
         "correctAnswerIndex": 4,
         "explanation": "Hak ehliyeti ana rahmine düşmeyle; sağ tam doğum şarttır."
     },
     {
-        "question": "Fiil ehliyetinin koşulları hangisidir?",
+        "question": "Fiil ehliyetine sahip olabilmenin koşulları aşağıdakilerin hangisinde birlikte verilmiştir?",
         "options": [
-            "A) Reşit + ayırt etme + kısıtlı olmamak",
-            "B) Yalnız yaş",
-            "C) Yalnız ayırt etme",
-            "D) Yalnız nüfus kaydı",
-            "E) Yalnız evlilik"
+            "A) Ergin olmak, ayırt etme gücüne sahip olmak, kısıtlı olmamak",
+            "B) Ergin olmak ve evli olmak",
+            "C) Ayırt etme gücüne sahip olmak ve nüfusa kayıtlı olmak",
+            "D) Sağ doğmak ve ergin olmak",
+            "E) Ayırt etme gücüne sahip olmak ve kısıtlı olmamak"
         ],
         "correctAnswerIndex": 0,
         "explanation": "Reşit, ayırt etme gücü, kısıtlı olmamak."
     },
     {
-        "question": "Kaza-i rüşt için asgari yaş nedir?",
+        "question": "Mahkeme kararıyla ergin kılınabilmek (kazai rüşt) için doldurulması gereken en küçük yaş kaçtır?",
         "options": [
             "A) 12",
             "B) 14",
@@ -589,25 +589,25 @@ window.vatandas_14_sorulari = [
         "explanation": "Kefalet / bağış / vakıf yasaktır."
     },
     {
-        "question": "Tüzel kişide hak ehliyeti ne zaman başlar?",
+        "question": "Tüzel kişilerde hak ehliyeti ne zaman başlar?",
         "options": [
-            "A) Kuruluşla",
-            "B) Organ seçimiyle",
-            "C) 18 yıl sonra",
-            "D) Mahkeme onayı zorunlu her zaman",
-            "E) İlk sözleşme ile"
+            "A) Kuruluşla (tüzel kişilik kazanılmasıyla)",
+            "B) Zorunlu organlar oluşturulduğunda",
+            "C) Faaliyete başlandığında",
+            "D) Kuruluştan bir yıl sonra",
+            "E) İlk hukuki işlem yapıldığında"
         ],
         "correctAnswerIndex": 0,
         "explanation": "Tüzel hak ehliyeti kuruluşla; fiil ehliyeti zorunlu organlarla."
     },
     {
-        "question": "Hısımlık türleri hangileridir?",
+        "question": "Türk Medeni Kanunu'na göre hısımlık türleri aşağıdakilerin hangisinde birlikte verilmiştir?",
         "options": [
-            "A) Yalnız kan",
-            "B) Kan, kayın, yapay",
-            "C) Yalnız kayın",
-            "D) Yalnız yapay",
-            "E) Yalnız sözleşmesel"
+            "A) Kan ve kayın hısımlığı",
+            "B) Kan, kayın ve evlatlık (yapay) hısımlığı",
+            "C) Kan ve evlatlık hısımlığı",
+            "D) Kayın ve evlatlık hısımlığı",
+            "E) Kan, kayın ve sözleşmeden doğan hısımlık"
         ],
         "correctAnswerIndex": 1,
         "explanation": "Kan, kayın, yapay hısımlık."
@@ -625,13 +625,13 @@ window.vatandas_14_sorulari = [
         "explanation": "Kişi koruma kurumları: velayet, vesayet, kayyum."
     },
     {
-        "question": "Miras bırakan kişiye ne denir?",
+        "question": "Mirasını bırakan kişiyi ifade eden kavram aşağıdakilerden hangisidir?",
         "options": [
             "A) Muris",
-            "B) Varis",
+            "B) Mirasçı (varis)",
             "C) Tereke",
-            "D) Alacaklı",
-            "E) Kayyum"
+            "D) Vasi",
+            "E) Kayyım"
         ],
         "correctAnswerIndex": 0,
         "explanation": "Muris = miras bırakan; varis = mirasçı; tereke = malvarlığı."
@@ -673,37 +673,37 @@ window.vatandas_14_sorulari = [
         "explanation": "Borçlunun ikametgâhında ödeme; para/parça hariç."
     },
     {
-        "question": "Borç doğuran sebepler arasında hangisi vardır?",
+        "question": "Borcun kaynakları aşağıdakilerin hangisinde birlikte verilmiştir?",
         "options": [
             "A) Hukuki işlem, haksız fiil, sebepsiz zenginleşme",
-            "B) Yalnız kanun",
-            "C) Yalnız İBK",
-            "D) Yalnız örf",
-            "E) Yalnız genelge"
+            "B) Sözleşme, örf ve âdet, içtihat",
+            "C) Haksız fiil, kanun, doktrin",
+            "D) Sözleşme, takas, ibra",
+            "E) Sebepsiz zenginleşme, tecdit, ifa"
         ],
         "correctAnswerIndex": 0,
         "explanation": "Üç kaynak: hukuki işlem, haksız fiil, sebepsiz zenginleşme."
     },
     {
-        "question": "Edim nedir?",
+        "question": "Borçlar hukukunda “edim” aşağıdakilerden hangisini ifade eder?",
         "options": [
-            "A) Yalnız para",
-            "B) Borç ilişkisinin konusu olan davranış (verme/yapma/yapmama)",
-            "C) Yalnız mahkeme kararı",
-            "D) Vergi türü",
-            "E) Ceza"
+            "A) Alacaklının borçluya tanıdığı ödeme süresini",
+            "B) Borçlunun yapmakla yükümlü olduğu davranışı (verme, yapma, yapmama)",
+            "C) Borcun ödenmemesi hâlinde ödenecek cezai şartı",
+            "D) Borçlunun ifadan kaçınma hakkını (def'i)",
+            "E) Borç ilişkisinin sona ermesini"
         ],
         "correctAnswerIndex": 1,
         "explanation": "Edim = borç konusu davranış."
     },
     {
-        "question": "Zamanaşımı hakkında ÖSYM’nin sık sorduğu doğru yargı hangisidir?",
+        "question": "Zamanaşımı ile ilgili aşağıdakilerden hangisi doğrudur?",
         "options": [
-            "A) Borcu tamamen sona erdirir",
-            "B) Borcu eksik borca dönüştürür; def’i ileri sürülebilir",
-            "C) Alacağı artırır",
-            "D) Otomatik ifa sayılır",
-            "E) İbra demektir"
+            "A) Borcu sona erdirir; alacak tümüyle ortadan kalkar.",
+            "B) Borcu eksik borca dönüştürür; borçlu def'i olarak ileri sürebilir.",
+            "C) Hâkim tarafından kendiliğinden dikkate alınır.",
+            "D) Alacaklının alacağından vazgeçmesi anlamına gelir.",
+            "E) Borcun yenilenmesi sonucunu doğurur."
         ],
         "correctAnswerIndex": 1,
         "explanation": "Zamanaşımı borcu bitirmez; eksik borç + def’i."
@@ -721,37 +721,37 @@ window.vatandas_14_sorulari = [
         "explanation": "Kıyas sona erme sebebi değildir."
     },
     {
-        "question": "İbra ne demektir?",
+        "question": "Alacaklının alacağından borçlunun da kabulüyle vazgeçmesine ne ad verilir?",
         "options": [
-            "A) Yenileme",
+            "A) Tecdit",
             "B) Birleşme",
             "C) Takas",
-            "D) Alacaklının alacaktan vazgeçmesi",
-            "E) İmkânsızlık"
+            "D) İbra",
+            "E) İfa imkânsızlığı"
         ],
         "correctAnswerIndex": 3,
         "explanation": "İbra = vazgeçme."
     },
     {
-        "question": "Tecdit ne demektir?",
+        "question": "Borçlar hukukunda “tecdit” aşağıdakilerden hangisini ifade eder?",
         "options": [
-            "A) Yenileme",
-            "B) Takas",
-            "C) İfa",
-            "D) Def’i",
-            "E) Butlan"
+            "A) Mevcut borcun yeni bir borçla değiştirilerek sona erdirilmesini (yenileme)",
+            "B) Karşılıklı borçların birbirinden düşülmesini",
+            "C) Borcun gereği gibi yerine getirilmesini",
+            "D) Borçlunun ifadan kaçınma hakkını",
+            "E) Hukuki işlemin baştan itibaren geçersiz olmasını"
         ],
         "correctAnswerIndex": 0,
         "explanation": "Tecdit = yenileme."
     },
     {
-        "question": "Nisbilik ilkesi neyi ifade eder?",
+        "question": "Borç ilişkilerinde “nisbilik ilkesi” aşağıdakilerden hangisini ifade eder?",
         "options": [
-            "A) Borç ilişkisi kural olarak yalnız tarafları bağlar",
-            "B) Hak herkese karşıdır",
-            "C) Herkes eşit vergi verir",
-            "D) Kıyas serbesttir",
-            "E) İBK bağlayıcı değildir"
+            "A) Borç ilişkisinin kural olarak yalnızca tarafları bağlamasını",
+            "B) Hakkın herkese karşı ileri sürülebilmesini",
+            "C) Tarafların sözleşmenin şeklini serbestçe seçmesini",
+            "D) Tarafların sözleşmenin içeriğini serbestçe belirlemesini",
+            "E) Borcun alacaklının tek taraflı iradesiyle doğmasını"
         ],
         "correctAnswerIndex": 0,
         "explanation": "Nisbilik: ilişki taraflar arasındadır."
@@ -781,13 +781,13 @@ window.vatandas_14_sorulari = [
         "explanation": "Alacak = nispi hak."
     },
     {
-        "question": "Yenilik doğuran hakların türleri hangileridir?",
+        "question": "Yenilik doğuran hakların türleri aşağıdakilerin hangisinde birlikte verilmiştir?",
         "options": [
-            "A) Yalnız kurucu",
+            "A) Mutlak, nisbi, kişilik",
             "B) Kurucu, değiştirici, bozucu",
-            "C) Yalnız bozucu",
-            "D) Yalnız alelade",
-            "E) Yalnız kişilik"
+            "C) Kamu, özel, karma",
+            "D) Asli, tali, yardımcı",
+            "E) Kurucu, koruyucu, düzenleyici"
         ],
         "correctAnswerIndex": 1,
         "explanation": "Kurucu / değiştirici / bozucu."
@@ -853,13 +853,13 @@ window.vatandas_14_sorulari = [
         "explanation": "Bilimsel görüşler (doktrin) ve mahkeme kararları (içtihatlar) hukukun yardımcı (tali) kaynaklarıdır; hâkimi bağlamaz, yalnızca yol gösterir. Bağlayıcılık bakımından istisna, içtihadı birleştirme kararları ile Anayasa Mahkemesi kararlarıdır (Any. m.153)."
     },
     {
-        "question": "İçtihadı Birleştirme Kararı (İBK) için hangisi doğrudur?",
+        "question": "İçtihadı birleştirme kararları ile ilgili aşağıdakilerden hangisi doğrudur?",
         "options": [
-            "A) Bağlayıcı değildir",
-            "B) Ceza kıyasıdır",
-            "C) Yalnız doktrindir",
-            "D) Genelgeye eşittir",
-            "E) Bağlayıcı yazılı asli kaynaktır"
+            "A) Bağlayıcı olmayan yardımcı kaynaktır.",
+            "B) Yazısız asli kaynaktır.",
+            "C) Yalnızca kararı veren daireyi bağlar.",
+            "D) Yürütmenin düzenleyici işlemidir.",
+            "E) Bağlayıcı yazılı asli kaynaktır."
         ],
         "correctAnswerIndex": 4,
         "explanation": "İBK bağlayıcı yazılı asli kaynaktır."
@@ -877,49 +877,49 @@ window.vatandas_14_sorulari = [
         "explanation": "Temel haklarda çakışmada antlaşma önceliklidir."
     },
     {
-        "question": "Olağan CBK’ların alanı hangisidir?",
+        "question": "Olağan dönemde Cumhurbaşkanlığı kararnamesiyle düzenlenebilecek alan aşağıdakilerden hangisidir?",
         "options": [
-            "A) Yalnız ceza",
-            "B) Sosyal–ekonomik alan",
-            "C) Yalnız yargı",
-            "D) Yalnız seçim",
-            "E) Yalnız idam"
+            "A) Temel haklar ve ödevler",
+            "B) Sosyal ve ekonomik haklar ve ödevler",
+            "C) Kişi hakları ve ödevleri",
+            "D) Siyasi haklar ve ödevler",
+            "E) Kanunda açıkça düzenlenen konular"
         ],
         "correctAnswerIndex": 1,
         "explanation": "Olağan CBK: sosyal–ekonomik."
     },
     {
-        "question": "Kıyas hakkında hangisi doğrudur?",
+        "question": "Kıyas ile ilgili aşağıdakilerden hangisi doğrudur?",
         "options": [
-            "A) Kaynak değil, yorum yöntemidir; cezada yasaktır",
-            "B) Asli yazılı kaynaktır",
-            "C) Cezada serbesttir",
-            "D) İBK’dır",
-            "E) Vergi koyar"
+            "A) Hukuk kaynağı değil, yorum yöntemidir; ceza hukukunda yasaktır.",
+            "B) Asli yazılı hukuk kaynağıdır.",
+            "C) Ceza hukukunda sanık aleyhine uygulanabilir.",
+            "D) İçtihadı birleştirme kararıyla zorunlu hâle gelir.",
+            "E) Vergi hukukunda yeni vergi koymak için kullanılabilir."
         ],
         "correctAnswerIndex": 0,
         "explanation": "Kıyas kaynak değildir; ceza hukukunda yasaktır."
     },
     {
-        "question": "Hukuk boşluğunda hâkim ne yapar?",
+        "question": "Hukuk boşluğu bulunan bir uyuşmazlıkta hâkim aşağıdakilerden hangisini yapar?",
         "options": [
-            "A) O olay için hukuk yaratır",
-            "B) Davayı reddeder",
-            "C) Genel kanun koyar",
-            "D) İBK çıkarır",
-            "E) Vergi koyar"
+            "A) Yalnızca önündeki olay için hukuk yaratır.",
+            "B) Kanun boşluğu gerekçesiyle davayı reddeder.",
+            "C) Herkesi bağlayan genel bir kural koyar.",
+            "D) Konuyu içtihadı birleştirme kararı için Yargıtay'a gönderir.",
+            "E) Kanun çıkarılması için durumu TBMM'ye bildirir."
         ],
         "correctAnswerIndex": 0,
         "explanation": "Hâkim yalnız o olay için hukuk yaratır."
     },
     {
-        "question": "Kanun boşluğunda sıra hangisidir?",
+        "question": "Türk Medeni Kanunu'na göre kanun boşluğu bulunan bir uyuşmazlıkta hâkim nasıl karar verir?",
         "options": [
-            "A) Doğrudan kıyas",
-            "B) Davayı düşürme",
-            "C) Doğrudan ceza",
-            "D) Doğrudan genelge",
-            "E) Önce örf–adet; yoksa hukuk boşluğu yolu"
+            "A) Doğrudan doktrine göre karar verir.",
+            "B) Davayı kanun çıkıncaya kadar ertelemek zorundadır.",
+            "C) Örf ve âdete bakmadan kendi koyacağı kurala göre karar verir.",
+            "D) Önce Yargıtay içtihatlarına, yoksa doktrine göre karar verir.",
+            "E) Önce örf ve âdete; o da yoksa kanun koyucu olsaydı koyacağı kurala göre karar verir."
         ],
         "correctAnswerIndex": 4,
         "explanation": "Kanun boşluğu → örf-adet → yoksa hukuk boşluğu."
@@ -949,13 +949,13 @@ window.vatandas_14_sorulari = [
         "explanation": "Bilinçsiz = kanun boşluğu yolu."
     },
     {
-        "question": "Örtülü boşlukta yaklaşım hangisidir?",
+        "question": "Örtülü (gizli) kanun boşluğunda hâkimin yaklaşımı aşağıdakilerden hangisidir?",
         "options": [
-            "A) Kuralı genişletme zorunlu",
-            "B) Kuralı daraltma / istisna tanıma",
-            "C) İdam",
-            "D) Zamanaşımı silme",
-            "E) İBK iptali"
+            "A) Kuralı genişleterek benzer olaylara uygular.",
+            "B) Kuralı daraltarak istisna tanır.",
+            "C) Kuralı lafzına bağlı kalarak olduğu gibi uygular.",
+            "D) Önce örf ve âdet kuralına başvurur.",
+            "E) Durumu yasama organına bildirerek davayı erteler."
         ],
         "correctAnswerIndex": 1,
         "explanation": "Örtülü boşluk: daralt / istisna."
@@ -973,13 +973,13 @@ window.vatandas_14_sorulari = [
         "explanation": "Hukukun asli kaynakları bağlayıcıdır. Bunların yazılı olanları Anayasa, kanun, Cumhurbaşkanlığı kararnamesi ve yönetmelik; yazısız olanı ise örf ve âdet hukukudur. Doktrin ile yargı kararları bağlayıcı olmayan yardımcı (tali) kaynaklardır. Türk Medeni Kanunu'nun 1. maddesi uyarınca hâkimin, uygulanabilir bir kanun hükmü bulunmadığında örf ve âdet hukukuna göre karar vermesi bu kaynağın uygulama sırasını gösterir; bağlayıcılığını ortadan kaldırmaz."
     },
     {
-        "question": "Yönetmelik normlar hiyerarşisinde hangi grubun örneğidir?",
+        "question": "Yönetmelik, normlar hiyerarşisinde aşağıdakilerden hangisi olarak yer alır?",
         "options": [
-            "A) Anayasa",
-            "B) Tereke",
-            "C) İBK zorunlu üstü",
-            "D) Tabii hukuk",
-            "E) Yürütmenin düzenleyici işlemi / alt norm"
+            "A) Anayasal norm",
+            "B) Kanun hükmünde norm",
+            "C) Yazısız asli kaynak",
+            "D) Bağlayıcı olmayan yardımcı kaynak",
+            "E) Yürütmenin düzenleyici işlemi (alt düzey norm)"
         ],
         "correctAnswerIndex": 4,
         "explanation": "Yönetmelik alt düzey düzenleyici normdur."
@@ -1021,13 +1021,13 @@ window.vatandas_14_sorulari = [
         "explanation": "Kıyas bir borçlar ilkesi değildir."
     },
     {
-        "question": "“Pozitif hukuk = mevzu hukuk” ifadesi neden yanlıştır?",
+        "question": "“Pozitif hukuk ile mevzu hukuk aynı anlamdadır.” yargısının yanlış olmasının nedeni aşağıdakilerden hangisidir?",
         "options": [
-            "A) İkisi de yazısızdır",
-            "B) Tarihi hukuku kapsar",
-            "C) Mevzu daha geniştir",
-            "D) Pozitif yazılı+yazısız; mevzu yalnızca yazılıdır",
-            "E) İkisi de tabii hukuktur"
+            "A) İkisi de yalnızca yazısız kuralları kapsar.",
+            "B) Pozitif hukuk yürürlükten kalkmış kuralları da kapsar.",
+            "C) Mevzu hukuk pozitif hukuktan daha geniştir.",
+            "D) Pozitif hukuk yazılı ve yazısız, mevzu hukuk yalnızca yazılı kuralları kapsar.",
+            "E) İkisi de olması gereken hukuku ifade eder."
         ],
         "correctAnswerIndex": 3,
         "explanation": "Klasik çeldirici: pozitif ≠ mevzu."
@@ -1069,13 +1069,13 @@ window.vatandas_14_sorulari = [
         "explanation": "Kamu tüzel: devlet, il özel idare."
     },
     {
-        "question": "Kusursuz imkânsızlık borcu nasıl etkiler?",
+        "question": "Borçlunun kusuru olmadan ifanın imkânsız hâle gelmesi borcu nasıl etkiler?",
         "options": [
-            "A) Borcu artırır",
-            "B) Kıyastır",
-            "C) Eksik borç yapmaz hiç",
-            "D) İBK sayılır",
-            "E) Sona erme sebeplerinden biridir"
+            "A) Borçluyu tazminat ödemekle yükümlü kılar.",
+            "B) Borcu eksik borca dönüştürür.",
+            "C) Borcun ifa süresini kendiliğinden uzatır.",
+            "D) Borcu yenileme (tecdit) sonucunu doğurur.",
+            "E) Borcu sona erdiren sebeplerden biridir."
         ],
         "correctAnswerIndex": 4,
         "explanation": "Kusursuz imkânsızlık sona erme sebebidir."
@@ -1105,10 +1105,10 @@ window.vatandas_14_sorulari = [
         "explanation": "Velayet, nişanlanma ve evlenme gibi aile hukukundan doğan haklar kişiye sıkı sıkıya bağlıdır; başkasına devredilemez ve mirasla geçmez. Mülkiyet, alacak, rehin ve telif hakkından doğan mali haklar ise devredilebilen haklardır."
     },
     {
-        "question": "Yaptırımın diğer adı hangisidir?",
+        "question": "Hukuk kurallarına uyulmaması hâlinde uygulanan tepkiyi ifade eden kavram aşağıdakilerden hangisidir?",
         "options": [
-            "A) Doktrin",
-            "B) Tereke",
+            "A) İçtihat",
+            "B) Def'i",
             "C) Kıyas",
             "D) İvaz",
             "E) Müeyyide"
@@ -1117,13 +1117,13 @@ window.vatandas_14_sorulari = [
         "explanation": "Yaptırım = müeyyide."
     },
     {
-        "question": "Maddi yaptırım nerede bulunur?",
+        "question": "Maddi yaptırım aşağıdaki sosyal düzen kurallarından hangisinde bulunur?",
         "options": [
-            "A) Yalnız ahlakta",
-            "B) Yalnız dinde",
-            "C) Sadece hukuk kurallarında",
-            "D) Yalnız görgüde",
-            "E) Yalnız örfte"
+            "A) Ahlak kuralları",
+            "B) Din kuralları",
+            "C) Hukuk kuralları",
+            "D) Görgü kuralları",
+            "E) Gelenek kuralları"
         ],
         "correctAnswerIndex": 2,
         "explanation": "Maddi yaptırım yalnızca hukuk kurallarındadır."
@@ -1201,25 +1201,25 @@ window.vatandas_14_sorulari = [
         "explanation": "En az 7 gerçek veya tüzel kişi; kazanç paylaşma amacı yok."
     },
     {
-        "question": "Kısıtlanma nedir?",
+        "question": "Kısıtlanma ile ilgili aşağıdakilerden hangisi doğrudur?",
         "options": [
-            "A) Kendiliğinden erginlik",
-            "B) Mahkeme kararıyla koruma altına alma",
-            "C) Gaiplik",
-            "D) İbra",
-            "E) Takas"
+            "A) Belirli yaşa gelen herkes için kendiliğinden gerçekleşir.",
+            "B) Ergin bir kişinin mahkeme kararıyla vesayet altına alınmasıdır.",
+            "C) Ölüm tehlikesi içinde kaybolan kişi için verilen karardır.",
+            "D) Alacaklının alacağından vazgeçmesidir.",
+            "E) Küçüğün mahkeme kararıyla ergin kılınmasıdır."
         ],
         "correctAnswerIndex": 1,
         "explanation": "İşlerini göremeyecek / korunmaya muhtaç / güvenlik tehdidi oluşturan kişiler mahkeme kararıyla kısıtlanır."
     },
     {
-        "question": "Yan soy üçüncü derece hısımlar arasında hangisi vardır?",
+        "question": "Aşağıdakilerden hangisi yan soydan üçüncü derece kan hısımlarıdır?",
         "options": [
-            "A) Anne",
-            "B) Çocuk",
-            "C) Amca / hala / dayı / teyze / yeğen",
-            "D) Torun",
-            "E) Eş"
+            "A) Kardeş",
+            "B) Torun",
+            "C) Amca, hala, dayı, teyze ve yeğen",
+            "D) Kuzen",
+            "E) Büyükanne ve büyükbaba"
         ],
         "correctAnswerIndex": 2,
         "explanation": "3° yan soy: yeğen, amca, hala, dayı, teyze."
@@ -1237,13 +1237,13 @@ window.vatandas_14_sorulari = [
         "explanation": "4° yan soy: yeğen çocukları, kuzenler."
     },
     {
-        "question": "Aile hukukunun konularından hangisi doğrudur?",
+        "question": "Aile hukukunun konuları aşağıdakilerin hangisinde birlikte verilmiştir?",
         "options": [
-            "A) Evlenme, nişanlanma, evlat edinme, nafaka, velayet, vesayet",
-            "B) Yalnız vergi",
-            "C) Yalnız ceza",
-            "D) Yalnız CBK",
-            "E) Yalnız İBK"
+            "A) Nişanlanma, evlenme, evlat edinme, velayet ve vesayet",
+            "B) Miras, vasiyet ve tereke",
+            "C) Sözleşme, haksız fiil ve sebepsiz zenginleşme",
+            "D) Mülkiyet, zilyetlik ve ipotek",
+            "E) Gaiplik, hak ehliyeti ve yerleşim yeri"
         ],
         "correctAnswerIndex": 0,
         "explanation": "Aile hukuku bu konuları kapsar."
@@ -1285,37 +1285,37 @@ window.vatandas_14_sorulari = [
         "explanation": "Telif, mülkiyet, alacak → mal varlığı hakları."
     },
     {
-        "question": "Şirkette yöneticilik yetkisini kullanmak hangi hak türüne örnektir?",
+        "question": "Bir şirkette yöneticilik yetkisinin kullanılması aşağıdaki hak türlerinden hangisine örnektir?",
         "options": [
-            "A) Bozucu yenilik doğuran",
-            "B) Alelade (yenilik doğurmayan) / yönetim hakkı",
-            "C) Mutlak butlan",
-            "D) Gaiplik",
-            "E) Kıssas"
+            "A) Bozucu yenilik doğuran hak",
+            "B) Yönetim hakkı",
+            "C) Mutlak hak",
+            "D) Kişilik hakkı",
+            "E) Kurucu yenilik doğuran hak"
         ],
         "correctAnswerIndex": 1,
         "explanation": "Yönetim hakkı alelade hak örneğidir."
     },
     {
-        "question": "İvazlık (karşılıklılık) ne demektir?",
+        "question": "Hukuki işlemlerde “ivazlık” aşağıdakilerden hangisini ifade eder?",
         "options": [
-            "A) İşlemlerin kural olarak karşılık (edim) içermesi",
-            "B) Borcun zamanaşımına uğraması",
-            "C) Hâkimin hukuk yaratması",
-            "D) Örf-adet",
-            "E) İBK"
+            "A) Bir edime karşılık başka bir edimin bulunmasını",
+            "B) Borcun zamanaşımına uğramasını",
+            "C) İşlemin belli bir şekle bağlı olmasını",
+            "D) İşlemin tek tarafın iradesiyle kurulmasını",
+            "E) Borcun yenilenerek sona ermesini"
         ],
         "correctAnswerIndex": 0,
         "explanation": "Satışta mal ↔ para gibi karşılıklılık."
     },
     {
-        "question": "Kusurlu sorumlulukta ne aranır?",
+        "question": "Kusur sorumluluğunda bir kişinin zarardan sorumlu tutulabilmesi için aşağıdakilerden hangisi aranır?",
         "options": [
-            "A) Yalnız mücbir sebep",
-            "B) Yalnız kıyas",
-            "C) Yalnız gaiplik",
-            "D) Yalnız doktrin",
-            "E) Kast veya ihmal şeklinde kusur"
+            "A) Mücbir sebebin varlığı",
+            "B) Zarar görenin kusurlu olması",
+            "C) Tehlikeli bir faaliyetin bulunması",
+            "D) Zarar verenle sözleşme ilişkisi",
+            "E) Kast veya ihmal biçiminde kusur"
         ],
         "correctAnswerIndex": 4,
         "explanation": "Kural: zarardan sorumlu tutmak için kusur (kast/ihmal) aranır."
@@ -1347,23 +1347,23 @@ window.vatandas_14_sorulari = [
     {
         "question": "Anayasa Mahkemesi kararlarının bağlayıcılığı bakımından aşağıdakilerden hangisi doğrudur?",
         "options": [
-            "A) Hiçbir zaman bağlayıcı değildir.",
-            "B) Resmî Gazete’de yayımlanır; yasama, yürütme ve yargı organlarını bağlar.",
-            "C) Yalnızca tali (yardımcı) kaynaktır.",
-            "D) Örf ve âdet kuralı sayılır.",
-            "E) Yalnızca kararı veren mahkemeyi bağlar."
+            "A) Yalnızca davanın taraflarını bağlar.",
+            "B) Resmî Gazete'de yayımlanır; yasama, yürütme ve yargı organlarını bağlar.",
+            "C) Yalnızca yardımcı (tali) kaynaktır.",
+            "D) Resmî Gazete'de yayımlanmaz, yalnızca ilgililere tebliğ edilir.",
+            "E) Yalnızca yargı organlarını bağlar."
         ],
         "correctAnswerIndex": 1,
         "explanation": "Anayasa’nın 153. maddesine göre Anayasa Mahkemesi kararları Resmî Gazete’de hemen yayımlanır ve yasama, yürütme, yargı organlarını, idare makamlarını, gerçek ve tüzel kişileri bağlar. İptal kararları geriye yürümez; Mahkeme, iptal kararının yürürlüğe gireceği tarihi en çok bir yıl sonrasına erteleyebilir."
     },
     {
-        "question": "Kıyasın ceza hukukundaki durumu nedir?",
+        "question": "Kıyasın ceza hukukundaki durumu aşağıdakilerden hangisidir?",
         "options": [
-            "A) Serbest ve zorunlu",
-            "B) Yasak (kanunilik)",
-            "C) İBK ile zorunlu",
-            "D) Örf ile zorunlu",
-            "E) Yalnız AİHS’te serbest"
+            "A) Sanık lehine de aleyhine de serbesttir.",
+            "B) Yasaktır (suçta ve cezada kanunilik ilkesi).",
+            "C) Yargıtay kararıyla zorunlu hâle gelir.",
+            "D) Hâkimin takdirine bırakılmıştır.",
+            "E) Kanun boşluğu varsa zorunludur."
         ],
         "correctAnswerIndex": 1,
         "explanation": "Ceza hukukunda kıyas yasaktır; elektrik→doğalgaz örneği tuzaktır."
@@ -1381,13 +1381,13 @@ window.vatandas_14_sorulari = [
         "explanation": "Hukuk yaratma ↔ hukuk boşluğu eşleşir."
     },
     {
-        "question": "Evlat edinme ile oluşan hısımlığa ne denir?",
+        "question": "Evlat edinme yoluyla kurulan hısımlığa ne ad verilir?",
         "options": [
-            "A) Kan bağı",
-            "B) Kayın",
-            "C) Yapay hısımlık",
-            "D) Muris",
-            "E) Tereke"
+            "A) Kan hısımlığı",
+            "B) Kayın hısımlığı",
+            "C) Evlatlık (yapay) hısımlık",
+            "D) Yan soy hısımlığı",
+            "E) Üst soy hısımlığı"
         ],
         "correctAnswerIndex": 2,
         "explanation": "Evlat edinme → yapay hısımlık."
@@ -1417,49 +1417,49 @@ window.vatandas_14_sorulari = [
         "explanation": "Evlilik birliğinde bazı işlemler diğer eşin rızasına bağlıdır: Türk Medeni Kanunu'nun 194. maddesine göre aile konutuyla ilgili tasarruflar, Türk Borçlar Kanunu'nun 584. maddesine göre kefalet sözleşmesi eşin açık rızası olmadan yapılamaz; eşlerden biri de ancak diğerinin rızasıyla tek başına evlat edinebilir. Buna karşılık günlük alışveriş, meslek veya iş seçimi (TMK m.192), vasiyetname düzenlemek ve karşılıksız kazandırmayı kabul etmek eşin rızasını gerektirmez."
     },
     {
-        "question": "Haksız fiile örnek hangisidir?",
+        "question": "Aşağıdakilerden hangisi haksız fiile örnektir?",
         "options": [
-            "A) Arabayı çizmek gibi hukuka aykırı zarar",
-            "B) Sözleşme imzalamak",
-            "C) Vasiyetname",
-            "D) İstifa",
-            "E) İbra"
+            "A) Park hâlindeki bir aracın kasten çizilmesi",
+            "B) Bir satış sözleşmesinin imzalanması",
+            "C) Vasiyetname düzenlenmesi",
+            "D) İşten istifa edilmesi",
+            "E) Alacaktan vazgeçilmesi (ibra)"
         ],
         "correctAnswerIndex": 0,
         "explanation": "Haksız fiil: hukuka aykırı zarar verici eylem."
     },
     {
-        "question": "Yenilik doğuran bozucu hak örneği hangisidir?",
+        "question": "Aşağıdakilerden hangisi bozucu yenilik doğuran hakkın kullanılmasına örnektir?",
         "options": [
-            "A) Velayet kullanmak",
-            "B) Genelge yayınlamak",
-            "C) Yönetim hakkı",
-            "D) Doktrin okumak",
-            "E) Sözleşmeyi feshetmek / boşanma davası açmak"
+            "A) Velayet hakkının kullanılması",
+            "B) Bir öneriyi (icabı) kabul etmek",
+            "C) Ayıplı malın değiştirilmesini istemek",
+            "D) Ön alım (şufa) hakkını kullanmak",
+            "E) Sözleşmeyi feshetmek"
         ],
         "correctAnswerIndex": 4,
         "explanation": "Bozucu: fesih, boşanma."
     },
     {
-        "question": "Kurucu yenilik doğuran hak örneği hangisidir?",
+        "question": "Aşağıdakilerden hangisi kurucu yenilik doğuran hakkın kullanılmasına örnektir?",
         "options": [
-            "A) Ön alım (şufa) hakkını kullanmak / bir öneriyi (icabı) kabul etmek",
-            "B) Ayıplı malı değiştirme talebi",
-            "C) Fesih",
-            "D) Takas",
-            "E) İstifa etmek"
+            "A) Ön alım (şufa) hakkını kullanmak",
+            "B) Ayıplı malın değiştirilmesini istemek",
+            "C) Sözleşmeyi feshetmek",
+            "D) Takas beyanında bulunmak",
+            "E) İşten istifa etmek"
         ],
         "correctAnswerIndex": 0,
         "explanation": "Kurucu (inşai) yenilik doğuran haklar yeni bir hukuki ilişki kurar: ön alım (şufa), alım (iştira) ve geri alım (vefa) haklarının kullanılması ile bir öneriyi (icabı) kabul ederek sözleşmeyi kurmak bu gruptadır. Ayıplı malın değiştirilmesini isteme mevcut ilişkinin içeriğini değiştiren (değiştirici) bir haktır; fesih, takas ve istifa ise mevcut hukuki ilişkiyi sona erdiren bozucu yenilik doğuran haklardır."
     },
     {
-        "question": "Değiştirici yenilik doğuran hak örneği hangisidir?",
+        "question": "Aşağıdakilerden hangisi değiştirici yenilik doğuran hakkın kullanılmasına örnektir?",
         "options": [
-            "A) Ayıplı malı sağlamıyla değiştirmeyi talep",
-            "B) İstifa",
-            "C) Boşanma",
-            "D) İdam",
-            "E) Gaiplik"
+            "A) Ayıplı malın ayıpsız benzeriyle değiştirilmesini istemek",
+            "B) İşten istifa etmek",
+            "C) Boşanma davası açmak",
+            "D) Ön alım hakkını kullanmak",
+            "E) Bir öneriyi kabul etmek"
         ],
         "correctAnswerIndex": 0,
         "explanation": "Değiştirici: ayıplı malı değiştirme talebi."
@@ -1467,11 +1467,11 @@ window.vatandas_14_sorulari = [
     {
         "question": "Meşru müdafaa ile zaruret hâli arasındaki temel fark aşağıdakilerden hangisidir?",
         "options": [
-            "A) Meşru müdafaada üçüncü kişinin malına, zaruret hâlinde ise doğrudan saldırganın kendisine zarar verilir.",
+            "A) Meşru müdafaada üçüncü kişinin malına, zaruret hâlinde saldırgana zarar verilir.",
             "B) Meşru müdafaada orantılılık aranmaz, yalnızca zaruret hâlinde aranır.",
-            "C) Meşru müdafaa yalnızca mala yönelik saldırılara, zaruret hâli yalnızca kişiye yönelik tehlikelere karşı söz konusu olur.",
-            "D) Her ikisinde de zarar gören kişiye hiçbir koşulda tazminat ödenmez.",
-            "E) Meşru müdafaada saldırıya karşı saldırganın kendisine zarar verilir; zaruret hâlinde ise bir tehlikeden korunmak için üçüncü kişinin malına zarar verilir."
+            "C) Meşru müdafaa yalnızca mala, zaruret hâli yalnızca kişiye yönelik tehlikede söz konusudur.",
+            "D) Her iki durumda da zarar görene hiçbir koşulda tazminat ödenmez.",
+            "E) Meşru müdafaada saldırgana, zaruret hâlinde tehlikeden korunmak için üçüncü kişinin malına zarar verilir."
         ],
         "correctAnswerIndex": 4,
         "explanation": "Meşru müdafaada (TBK m.63/1) kişi kendisine veya başkasına yönelen haksız bir saldırıyı savmak için saldırganın şahsına ya da mallarına zarar verir ve bu zarardan sorumlu olmaz. Zaruret hâlinde (TBK m.63/2) ise kendisini veya başkasını açık ya da yakın bir zarardan korumak için üçüncü bir kişinin malına zarar verilir; burada hâkim hakkaniyete uygun bir tazminat ödenmesine karar verebilir. Her iki durumda da savunma ya da müdahale, tehlikeyle orantılı olmalıdır."
@@ -1479,11 +1479,11 @@ window.vatandas_14_sorulari = [
     {
         "question": "Hakkın kendi eliyle korunması (kuvvet kullanma) hangi durumda hukuka uygun sayılır?",
         "options": [
-            "A) Her durumda ve sınırsız biçimde hukuka uygundur.",
-            "B) Yalnızca resmî makamların önceden verdiği yazılı izinle hukuka uygun olur.",
-            "C) Yalnızca kamu görevlileri bakımından hukuka uygun olur.",
-            "D) Hiçbir durumda hukuka uygun sayılmaz; kuvvet kullanmak daima haksız fiildir.",
-            "E) Resmî makamların yardımı zamanında sağlanamayacaksa ve hakkın kayba uğramasını önleyecek başka bir yol yoksa, zorunlu olan ölçüde hukuka uygun sayılır."
+            "A) Hak sahibinin istediği her durumda ve ölçüde hukuka uygundur.",
+            "B) Resmî makamlardan önceden yazılı izin alınmışsa hukuka uygundur.",
+            "C) Yalnızca kamu görevlileri bakımından hukuka uygundur.",
+            "D) Hiçbir durumda hukuka uygun sayılmaz; daima haksız fiildir.",
+            "E) Resmî yardım zamanında sağlanamıyor ve başka yol yoksa, zorunlu ölçüde hukuka uygundur."
         ],
         "correctAnswerIndex": 4,
         "explanation": "Türk Borçlar Kanunu'nun 64. maddesine göre hakkını kendi gücüyle korumak durumunda kalan kişi, durum ve koşullara göre o sırada kolluk gücünün yardımını zamanında sağlayamayacaksa ve hakkının kayba uğramasını ya da kullanılmasının önemli ölçüde zorlaşmasını önleyecek başka bir yol yoksa verdiği zarardan sorumlu tutulmaz. Bu bir hukuka uygunluk sebebidir; kuvvet kullanma yalnızca hakkı korumak için zorunlu olan ölçüde meşru sayılır, bu ölçü aşılırsa sorumluluk doğar."
@@ -1501,25 +1501,25 @@ window.vatandas_14_sorulari = [
         "explanation": "Tam kan hısımlığı, kardeşlerin hem ana hem de baba bakımından ortak olmasını; yarım kan hısımlığı ise yalnızca ana ya da yalnızca baba bakımından ortak olmasını (ana bir veya baba bir kardeşlik) ifade eder. Aralarında hiçbir ortak ebeveyn bulunmayan üvey kardeşler kan hısmı değildir; bu nedenle ayrım üveylik değil, ortak ebeveyn sayısı ölçütüne dayanır."
     },
     {
-        "question": "Kayın hısımlığında kan bağı var mıdır?",
+        "question": "Kayın hısımlığı ile ilgili aşağıdakilerden hangisi doğrudur?",
         "options": [
-            "A) Yoktur; evlenmeyle kazanılır",
-            "B) Vardır",
-            "C) Yalnız 4° vardır",
-            "D) Yalnız amcada vardır",
-            "E) Yalnız kuzenlerde vardır"
+            "A) Kan bağı yoktur; evlenmeyle kurulur.",
+            "B) Kan bağına dayanır.",
+            "C) Yalnızca dördüncü dereceye kadar kan bağı içerir.",
+            "D) Evliliğin sona ermesiyle kendiliğinden ortadan kalkar.",
+            "E) Evlat edinmeyle kurulur."
         ],
         "correctAnswerIndex": 0,
         "explanation": "Kayın hısımlığında kan bağı yoktur."
     },
     {
-        "question": "Tüzel kişide fiil ehliyeti ne zaman başlar?",
+        "question": "Tüzel kişilerde fiil ehliyeti ne zaman başlar?",
         "options": [
-            "A) Ana rahmine düşmeyle",
-            "B) Takas ile",
-            "C) Gaiplikle",
-            "D) İbra ile",
-            "E) Zorunlu organlar kurulduktan sonra"
+            "A) Kuruluş başvurusu yapıldığında",
+            "B) Kuruluştan bir yıl sonra",
+            "C) Faaliyete başlandığında",
+            "D) İlk hukuki işlem yapıldığında",
+            "E) Kanuna ve kuruluş belgesine göre zorunlu organlar oluşturulduğunda"
         ],
         "correctAnswerIndex": 4,
         "explanation": "Hak ehliyeti kuruluşla; fiil ehliiyeti zorunlu organlarla."
@@ -1549,25 +1549,25 @@ window.vatandas_14_sorulari = [
         "explanation": "Yorumlayıcı hukuk kuralı."
     },
     {
-        "question": "Genelge normlar hiyerarşisinde nasıl konumlanır?",
+        "question": "Genelge, normlar hiyerarşisinde nasıl konumlanır?",
         "options": [
-            "A) Anayasadan üstün",
-            "B) Örf’tür",
-            "C) İBK’dır",
-            "D) Üst makamın alt makama uygulama talimatı; alt basamak",
-            "E) Kıyastır"
+            "A) Kanunlarla aynı düzeydedir.",
+            "B) Yazısız asli kaynaktır.",
+            "C) Bağlayıcı içtihat niteliğindedir.",
+            "D) Üst makamın alt makamlara uygulama talimatıdır; hiyerarşinin alt basamağındadır.",
+            "E) Yönetmeliklerden üstün bir düzenleyici işlemdir."
         ],
         "correctAnswerIndex": 3,
         "explanation": "Genelge: uygulama talimatı."
     },
     {
-        "question": "Yönetmeliğe örnek hangisidir?",
+        "question": "Aşağıdakilerden hangisi yönetmeliğe örnektir?",
         "options": [
             "A) 1982 Anayasası",
-            "B) Çağrı usulü",
-            "C) AİHS",
-            "D) Üniversite sınav/devam yönetmeliği",
-            "E) Kıyas"
+            "B) Türkiye Büyük Millet Meclisi İçtüzüğü",
+            "C) Avrupa İnsan Hakları Sözleşmesi",
+            "D) Yükseköğretim kurumlarının sınav yönetmeliği",
+            "E) Türk Medeni Kanunu"
         ],
         "correctAnswerIndex": 3,
         "explanation": "Yönetmelik: kanunların uygulanmasını sağlar."
@@ -1585,61 +1585,61 @@ window.vatandas_14_sorulari = [
         "explanation": "Anayasa'nın 104. maddesinin 17. fıkrasına göre Anayasa'nın ikinci kısmının birinci ve ikinci bölümlerinde yer alan temel haklar, kişi hakları ve ödevleri ile dördüncü bölümde yer alan siyasi haklar ve ödevler Cumhurbaşkanlığı kararnamesiyle düzenlenemez. Bu yasağın dışında kalan üçüncü bölümdeki sosyal ve ekonomik haklar ve ödevler ise kararnameye konu olabilir. Ayrıca Anayasa'da münhasıran kanunla düzenlenmesi öngörülen ve kanunda açıkça düzenlenen konularda da Cumhurbaşkanlığı kararnamesi çıkarılamaz."
     },
     {
-        "question": "Meclis İçtüzüğü neyi düzenler?",
+        "question": "TBMM İçtüzüğü aşağıdakilerden hangisini düzenler?",
         "options": [
             "A) Vergi oranlarını",
-            "B) TBMM’nin iç çalışma düzenini ve organlarını",
-            "C) Gaipliği",
-            "D) Dernek üye sayısını",
-            "E) Kıssası"
+            "B) TBMM'nin çalışma düzenini ve iç işleyişini",
+            "C) Seçim kanunlarını",
+            "D) Bakanlıkların teşkilat yapısını",
+            "E) Yargı organlarının görev alanını"
         ],
         "correctAnswerIndex": 1,
         "explanation": "Meclis İçtüzüğü = TBMM iç düzeni."
     },
     {
-        "question": "Hakim örf–adette de kural bulamazsa ne olur?",
+        "question": "Kanun boşluğunda hâkim örf ve âdet hukukunda da uygulanacak bir kural bulamazsa ne yapar?",
         "options": [
-            "A) Davayı reddeder ve susar",
-            "B) Genelge yazar",
-            "C) İdam verir",
-            "D) Kıyas zorunlu cezada",
-            "E) Durum hukuk boşluğuna dönüşür; hukuk yaratır"
+            "A) Davayı kural bulunamadığı gerekçesiyle reddeder.",
+            "B) Konuyu genelgeyle düzenlenmesi için idareye gönderir.",
+            "C) Davayı kanun çıkıncaya kadar erteler.",
+            "D) Kıyas yoluyla ceza hükmü kurar.",
+            "E) Kanun koyucu olsaydı koyacağı kurala göre o olay için karar verir."
         ],
         "correctAnswerIndex": 4,
         "explanation": "Kanun boşluğu → örf; örf yoksa hukuk boşluğu → hukuk yaratma."
     },
     {
-        "question": "Kural içi (bilinçli) boşlukta kanun koyucu ne yapmıştır?",
+        "question": "Kural içi (bilinçli) boşlukta kanun koyucunun tutumu aşağıdakilerden hangisidir?",
         "options": [
-            "A) Hiçbir şey bırakmamıştır",
-            "B) Gaipliği kaldırmıştır",
-            "C) İdam koymuştur",
-            "D) Kıyası yasaklamıştır",
-            "E) Detayı bilerek hâkimin takdirine bırakmıştır"
+            "A) Konuyu hiç öngörmemiştir.",
+            "B) Konuyu örf ve âdete bırakmıştır.",
+            "C) Konuyu yönetmeliğe bırakmıştır.",
+            "D) Konuda kıyası yasaklamıştır.",
+            "E) Ayrıntıyı bilerek hâkimin takdirine bırakmıştır."
         ],
         "correctAnswerIndex": 4,
         "explanation": "Bilinçli boşluk → takdir yetkisi."
     },
     {
-        "question": "Örtülü boşlukta hâkim ne yapar?",
+        "question": "Örtülü boşlukta hâkim aşağıdakilerden hangisini yapar?",
         "options": [
-            "A) Kanunu yok sayar",
-            "B) Kuralın kapsamını daraltır / istisna uygular; kelimeye körü körüne bağlı kalmaz",
-            "C) İdam uygular",
-            "D) CBK çıkarır",
-            "E) Dernek kurar"
+            "A) Kanunu uygulamaz ve davayı reddeder.",
+            "B) Kuralın kapsamını daraltır, istisna tanır.",
+            "C) Kuralı lafzına bağlı kalarak uygular.",
+            "D) Durumu Anayasa Mahkemesine götürür.",
+            "E) Örf ve âdet kuralına göre karar verir."
         ],
         "correctAnswerIndex": 1,
         "explanation": "Örtülü boşluk: olaya uyarlama."
     },
     {
-        "question": "Sebepsiz zenginleşme nedir?",
+        "question": "Sebepsiz zenginleşme aşağıdakilerden hangisini ifade eder?",
         "options": [
-            "A) Geçerli sebeple zenginleşme",
-            "B) Yalnız ibra",
-            "C) Yalnız ifa",
-            "D) Hukuken geçerli sebep olmadan başkası aleyhine zenginleşme",
-            "E) Yalnız takas"
+            "A) Geçerli bir sözleşmeye dayanarak zenginleşmeyi",
+            "B) Alacaklının alacağından vazgeçmesini",
+            "C) Borcun gereği gibi ifa edilmesini",
+            "D) Haklı bir sebep olmadan başkasının malvarlığından zenginleşmeyi",
+            "E) Karşılıklı borçların birbirinden düşülmesini"
         ],
         "correctAnswerIndex": 3,
         "explanation": "Borç kaynağı: sebepsiz zenginleşme."
@@ -1669,19 +1669,19 @@ window.vatandas_14_sorulari = [
         "explanation": "Türk Medeni Kanunu'nun 2. maddesine göre herkes haklarını kullanırken ve borçlarını yerine getirirken dürüstlük kurallarına uymak zorundadır; bir hakkın açıkça kötüye kullanılmasını hukuk düzeni korumaz. Dürüstlük kuralı kişinin iç dünyasından bağımsız, objektif bir davranış ölçüsüdür. Sözleşme özgürlüğü sözleşmenin kurulmasına ve içeriğine, nispilik ilkesi borç ilişkisinin yalnızca taraflar arasında hüküm doğurmasına ilişkindir; kusursuz sorumluluk ve sebepsiz zenginleşme ise ayrı sorumluluk ve borç kaynaklarıdır."
     },
     {
-        "question": "Tek taraflı bağlamazlıkta veli/vasi icazeti ne sağlar?",
+        "question": "Topal (tek taraflı bağlamaz) işlemde veli ya da vasinin onayı (icazeti) hangi sonucu doğurur?",
         "options": [
-            "A) İşlemi yok eder",
-            "B) Hukuki işlemi her iki tarafı da bağlar hale getirir",
-            "C) İdam getirir",
-            "D) Gaiplik yaratır",
-            "E) Kıyas zorunlu kılar"
+            "A) İşlemi baştan itibaren hükümsüz kılar.",
+            "B) İşlemi her iki tarafı da bağlar hâle getirir.",
+            "C) İşlemi yalnızca karşı taraf için bağlayıcı yapar.",
+            "D) İşlemin mahkemece iptalini zorunlu kılar.",
+            "E) İşlemi yenileme (tecdit) sonucunu doğurur."
         ],
         "correctAnswerIndex": 1,
         "explanation": "İcazet ile işlem her iki tarafı bağlar."
     },
     {
-        "question": "Butlan ile yokluk farkı özetle nedir?",
+        "question": "Butlan ile yokluk arasındaki fark aşağıdakilerin hangisinde doğru verilmiştir?",
         "options": [
             "A) Yoklukta işlemin kurucu unsuru hiç yoktur; butlanda işlem yapılmıştır ama geçersizdir",
             "B) Butlanda kurucu unsur yoktur; yoklukta işlem geçerli olarak doğar",

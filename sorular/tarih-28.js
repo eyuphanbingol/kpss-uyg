@@ -1,7 +1,7 @@
 // sorular/tarih-28.js — KÜRESELLEŞEN DÜNYA (1991–2001)
 window.tarih_28_sorulari = [
     {
-        question: "Berlin Duvarı’nın yıkıldığı yıl hangisidir?",
+        question: "Berlin Duvarı hangi yıl yıkılmıştır?",
         options: ["A) 1986", "B) 1989", "C) 1990", "D) 1991", "E) 1993"],
         correctAnswerIndex: 1,
         explanation: "1989’da Berlin Duvarı yıkıldı. SSCB 1991’de dağıldı; Soğuk Savaş sona erdi."
@@ -43,36 +43,36 @@ window.tarih_28_sorulari = [
         explanation: "FKÖ 1964. Arafat Yürütme Komitesi başkanlığını 1969’da aldı. I. İntifada 1987, Filistin bağımsızlık ilanı 1988."
     },
     {
-        question: "Kara Eylül (1970) ile Münih Olimpiyatları (1972) için hangisi doğrudur?",
+        question: "Kara Eylül (1970) ile Münih Olimpiyatları saldırısı (1972) arasındaki ilişkiyle ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) İkisi de 1972’dir",
-            "B) Kara Eylül Çernobil’dir",
-            "C) Kara Eylül Ürdün’deki çatışmalardır; Münih, Kara Eylül örgütünün İsrailli sporcuları rehin almasıyla bağlantılıdır",
-            "D) Münih 1970’tir",
-            "E) İkisi de İntifada’dır"
+            "A) İkisi de 1972'de yaşanmıştır.",
+            "B) Kara Eylül, Lübnan iç savaşının başlangıcıdır.",
+            "C) Kara Eylül Ürdün'deki çatışmalardır; Münih saldırısını aynı adı taşıyan örgüt yapmıştır.",
+            "D) Münih saldırısı 1970'te gerçekleşmiştir.",
+            "E) İkisi de I. İntifada'nın parçasıdır."
         ],
         correctAnswerIndex: 2,
         explanation: "Kara Eylül 1970 Ürdün; Münih 1972. Karıştırılmamalıdır."
     },
     {
-        question: "I. İntifada nedir ve hangi yılda başlamıştır?",
+        question: "I. İntifada ve başladığı yıl aşağıdakilerin hangisinde doğru verilmiştir?",
         options: [
-            "A) 1964 – FKÖ’nün kuruluşu",
+            "A) 1964 – FKÖ'nün kuruluşu",
             "B) 1987 – Filistinlilerin İsrail işgaline karşı ayaklanması",
-            "C) 1988 – Balfour",
-            "D) 1972 – Münih",
-            "E) 1991 – Körfez"
+            "C) 1973 – Yom Kippur Savaşı",
+            "D) 1982 – İsrail'in Lübnan'a girmesi",
+            "E) 2000 – Mescid-i Aksa olayları"
         ],
         correctAnswerIndex: 1,
         explanation: "1988’de Filistin Devleti bağımsızlığını ilan etti."
     },
     {
-        question: "Çernobil Faciası için hangisi doğrudur?",
+        question: "Çernobil nükleer kazasının yılı ve yeri aşağıdakilerin hangisinde doğru verilmiştir?",
         options: [
             "A) 1989 – Çekoslovakya",
-            "B) 1986 – Ukrayna – Pripyat – SSCB dönemi",
-            "C) 1991 – Rusya – Moskova",
-            "D) 1986 – Litvanya",
+            "B) 1986 – Ukrayna (SSCB)",
+            "C) 1991 – Rusya",
+            "D) 1979 – ABD",
             "E) 1993 – Slovakya"
         ],
         correctAnswerIndex: 1,
@@ -139,8 +139,8 @@ window.tarih_28_sorulari = [
         explanation: "1997 Kyoto’da sera gazı / küresel ısınma. Türkiye 2009’da taraf oldu."
     },
     {
-        question: "Hocalı Katliamı hangi yılda ve hangi sorun bağlamındadır?",
-        options: ["A) 1995 – Bosna", "B) 1992 – Karabağ / Azerbaycan–Ermenistan", "C) 1970 – Ürdün", "D) 1986 – Çernobil", "E) 2003 – Irak"],
+        question: "Hocalı Katliamı'nın yılı ve ilgili olduğu sorun aşağıdakilerin hangisinde doğru verilmiştir?",
+        options: ["A) 1995 – Bosna Savaşı", "B) 1992 – Dağlık Karabağ sorunu", "C) 1970 – Kara Eylül", "D) 1993 – Çeçenistan Savaşı", "E) 2003 – Irak Savaşı"],
         correctAnswerIndex: 1,
         explanation: "Karabağ sorunu Azerbaycan–Ermenistan arasındadır."
     },
@@ -151,8 +151,8 @@ window.tarih_28_sorulari = [
         explanation: "Türkiye–Azerbaycan. Ebulfez Elçibey Azerbaycan Halk Cephesi lideridir."
     },
     {
-        question: "Bakü-Tiflis-Ceyhan (BTC) neyin taşımasında önemlidir?",
-        options: ["A) Azerbaycan petrolünün Türkiye üzerinden dünya pazarlarına", "B) Doğal gazın yalnızca Rusya’ya", "C) Uranyumun Pripyat’a", "D) Buğdayın Bosna’ya", "E) Sera gazının Kyoto’ya"],
+        question: "Bakü–Tiflis–Ceyhan (BTC) boru hattının önemi aşağıdakilerden hangisidir?",
+        options: ["A) Azerbaycan petrolünü Türkiye üzerinden dünya pazarlarına ulaştırması", "B) Rus doğal gazını Türkiye'ye taşıması", "C) İran doğal gazını Avrupa'ya ulaştırması", "D) Irak petrolünü Akdeniz'e taşıması", "E) Türkmen doğal gazını Hazar'ın altından taşıması"],
         correctAnswerIndex: 0,
         explanation: "Önemli petrol boru hattıdır."
     },
@@ -169,13 +169,13 @@ window.tarih_28_sorulari = [
         explanation: "Kırgızistan: 1991, Bişkek, Askar Akayev ilk CB."
     },
     {
-        question: "Türkmenistan için hangisi daha doğrudur?",
+        question: "Türkmenistan ile ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) Dünyada kesin en çok doğalgaz rezervine sahip ülkedir",
-            "B) Başkenti Taşkent’tir",
-            "C) Nüfusu en fazla Türk Cumhuriyeti’dir",
-            "D) Doğal gaz rezervleri açısından zengin Türk Cumhuriyetlerindendir; başkent Aşkabat, ilk CB Niyazov’dur",
-            "E) 1990’da Litvanya’dan ayrılmıştır"
+            "A) Başkenti Bişkek'tir.",
+            "B) Başkenti Taşkent'tir.",
+            "C) Nüfusu en fazla olan Türk cumhuriyetidir.",
+            "D) Doğal gaz rezervi zengin olup başkenti Aşkabat'tır.",
+            "E) İlk cumhurbaşkanı Nursultan Nazarbayev'dir."
         ],
         correctAnswerIndex: 3,
         explanation: "Nüfusu en fazla Özbekistan’dır (Taşkent, İslam Kerimov)."
@@ -193,20 +193,20 @@ window.tarih_28_sorulari = [
         explanation: "DP iktidarına son verildi. MGK 12 Eylül 1980’dir."
     },
     {
-        question: "Türkiye’nin ilk koalisyon hükümeti hangisidir?",
-        options: ["A) Refah-Yol 1996", "B) 1961 CHP-AP, başbakan İnönü", "C) ANAP 1983", "D) DYP-CHP 1950", "E) AP 1965"],
+        question: "Türkiye'nin ilk koalisyon hükûmeti aşağıdakilerden hangisidir?",
+        options: ["A) 1996 Refahyol hükûmeti", "B) 1961 CHP-AP hükûmeti (Başbakan İsmet İnönü)", "C) 1974 CHP-MSP hükûmeti", "D) 1975 I. Milliyetçi Cephe hükûmeti", "E) 1991 DYP-SHP hükûmeti"],
         correctAnswerIndex: 1,
         explanation: "1961 seçimleri sonrası."
     },
     {
-        question: "1965 seçimleri sonrası başbakan kimdir?",
-        options: ["A) İsmet İnönü", "B) Nihat Erim", "C) Turgut Özal", "D) Süleyman Demirel", "E) Tansu Çiller"],
+        question: "1965 genel seçimlerinden sonra başbakan olan siyasetçi aşağıdakilerden hangisidir?",
+        options: ["A) İsmet İnönü", "B) Suat Hayri Ürgüplü", "C) Adnan Menderes", "D) Süleyman Demirel", "E) Bülent Ecevit"],
         correctAnswerIndex: 3,
         explanation: "Adalet Partisi tek başına iktidara geldi."
     },
     {
-        question: "12 Mart 1971 için doğru ifade hangisidir?",
-        options: ["A) Askerî darbe", "B) Postmodern darbe", "C) Muhtıra; Nihat Erim başbakan oldu", "D) ANAP iktidarı", "E) Millî Güvenlik Konseyi kuruldu"],
+        question: "12 Mart 1971 ile ilgili aşağıdakilerden hangisi doğrudur?",
+        options: ["A) Ordu yönetime doğrudan el koymuştur.", "B) Postmodern müdahale olarak anılır.", "C) Muhtıra verilmiş, Nihat Erim başbakan olmuştur.", "D) Millî Birlik Komitesi kurulmuştur.", "E) Millî Güvenlik Konseyi kurulmuştur."],
         correctAnswerIndex: 2,
         explanation: "TSK hükümete muhtıra verdi. Nihat Erim 1980’de suikastla öldürülen ilk eski başbakan olarak bilinir."
     },
@@ -259,14 +259,14 @@ window.tarih_28_sorulari = [
         explanation: "1996–1997. 28 Şubat 1997 postmodern müdahale; Erbakan başbakanlıktan ayrıldı."
     },
     {
-        question: "28 Şubat 1997 süreci nasıl adlandırılır?",
-        options: ["A) 12 Mart Muhtırası", "B) Çöl Fırtınası", "C) 27 Mayıs darbesi", "D) Kadife Devrim", "E) Postmodern darbe / postmodern müdahale"],
+        question: "28 Şubat 1997 süreci aşağıdakilerden hangisiyle adlandırılır?",
+        options: ["A) Muhtıra", "B) Askerî darbe", "C) Millî Birlik hareketi", "D) E-muhtıra", "E) Postmodern darbe"],
         correctAnswerIndex: 4,
         explanation: "Refah-Yol üzerinde askerî ve bürokratik baskı."
     },
     {
         question: "İlk renkli Türk filmi olarak kabul edilen eser hangisidir?",
-        options: ["A) Yol – 1982", "B) Halıcı Kız – 1953 – Muhsin Ertuğrul", "C) Üç Maymun – 2008", "D) Susuz Yaz – 1964", "E) Star 1 – 1990"],
+        options: ["A) Susuz Yaz", "B) Halıcı Kız", "C) Leblebici Horhor Ağa", "D) Ankara Postası", "E) Aysel: Bataklı Damın Kızı"],
         correctAnswerIndex: 1,
         explanation: "Yönetmen Muhsin Ertuğrul."
     },
@@ -277,13 +277,13 @@ window.tarih_28_sorulari = [
         explanation: "Star Box değil, Star 1."
     },
     {
-        question: "Türkiye’nin Eurovision birinciliği hangisidir?",
+        question: "Türkiye'nin Eurovision Şarkı Yarışması'nda birinci olduğu yıl ve sanatçı aşağıdakilerin hangisinde doğru verilmiştir?",
         options: [
-            "A) 2006 Orhan Pamuk",
-            "B) 2003 Sertab Erener – Everyway That I Can",
-            "C) 2008 Üç Maymun",
-            "D) 1990 Star 1",
-            "E) 1984 renkli TV"
+            "A) 1997 – Şebnem Paker",
+            "B) 2003 – Sertab Erener",
+            "C) 2004 – Athena",
+            "D) 2010 – maNga",
+            "E) 1986 – Klips ve Onlar"
         ],
         correctAnswerIndex: 1,
         explanation: "2003, birinci."
@@ -307,13 +307,13 @@ window.tarih_28_sorulari = [
         explanation: "FKÖ 1964 kuruldu; Arafat başkanlığı 1969."
     },
     {
-        question: "1917 Balfour Deklarasyonu neyi ifade eder?",
+        question: "1917 Balfour Deklarasyonu aşağıdakilerden hangisini ifade eder?",
         options: [
-            "A) İsrail’in BM’ye üyeliği",
-            "B) Dayton",
-            "C) FKÖ’nün kuruluşu",
-            "D) İntifada",
-            "E) İngiltere’nin Filistin’de Yahudiler için bir yurt kurulmasını desteklemesi"
+            "A) İsrail'in BM'ye üye olmasını",
+            "B) Filistin'in BM tarafından bölünmesini",
+            "C) FKÖ'nün kuruluşunu",
+            "D) Arapların bağımsızlığının tanınmasını",
+            "E) İngiltere'nin Filistin'de bir Yahudi yurdu kurulmasını desteklemesini"
         ],
         correctAnswerIndex: 4,
         explanation: "İsrail kuruluşu 1948’dir."
@@ -397,7 +397,7 @@ window.tarih_28_sorulari = [
         explanation: "Çekoslovakya'da komünist rejim, 1989'da şiddete başvurulmayan kitlesel gösterilerle sona ermiş ve bu sürece Kadife Devrimi adı verilmiştir. Ülkenin Çekya ve Slovakya olarak ayrılması ise 1993'te gerçekleşmiştir."
     },
     {
-        question: "Saddam Hüseyin’in idam yılı hangisidir?",
+        question: "Saddam Hüseyin hangi yıl idam edilmiştir?",
         options: ["A) 1991", "B) 2003", "C) 2004", "D) 2006", "E) 1990"],
         correctAnswerIndex: 3,
         explanation: "Yakalanma 2003, idam 2006."
@@ -427,13 +427,13 @@ window.tarih_28_sorulari = [
         explanation: "İngiltere’nin Yahudi yurdu desteği."
     },
     {
-        question: "Aşağıdakilerden hangisi ÖSYM ezberinde “ilk” ile ilgili doğru eşleştirmedir?",
+        question: "Aşağıdaki “ilk”lerle ilgili eşleştirmelerden hangisi doğrudur?",
         options: [
-            "A) SSCB’den ilk ayrılan Azerbaycan",
-            "B) İlk bağımsız Türk Cumhuriyeti Litvanya",
-            "C) SSCB’den ilk ayrılan Litvanya; ilk bağımsız Türk Cumhuriyeti Azerbaycan",
-            "D) İlk koalisyon 1983 ANAP",
-            "E) İlk kadın başbakan 1961"
+            "A) SSCB'den ilk ayrılan cumhuriyet – Azerbaycan",
+            "B) İlk bağımsızlığını ilan eden Türk cumhuriyeti – Kazakistan",
+            "C) SSCB'den ilk ayrılan cumhuriyet – Litvanya",
+            "D) Türkiye'nin ilk koalisyon hükûmeti – 1983",
+            "E) Türkiye'nin ilk kadın başbakanı – 1983"
         ],
         correctAnswerIndex: 2,
         explanation: "Litvanya 1990, Azerbaycan 1991. İlk koalisyon 1961; ilk kadın başbakan Çiller 1993."

@@ -25,11 +25,11 @@ window.tarih_29_sorulari = [
         "explanation": "Kut yetki verir ama töre sınırlar."
     },
     {
-        "question": "Yazılı olmayan hukuk kurallarının adı nedir?",
+        "question": "Türk devletlerinde yazılı olmayan hukuk kurallarına ne ad verilir?",
         "options": [
-            "A) Divan",
-            "B) Tımar",
-            "C) İkta",
+            "A) Yasa",
+            "B) Kurultay",
+            "C) Ülüş",
             "D) Töre",
             "E) Kanunname"
         ],
@@ -145,7 +145,7 @@ window.tarih_29_sorulari = [
         "explanation": "Karahanlılar."
     },
     {
-        "question": "Kutadgu Bilig’in yazarı kimdir?",
+        "question": "Kutadgu Bilig'in yazarı aşağıdakilerden hangisidir?",
         "options": [
             "A) Kaşgarlı Mahmut",
             "B) Edip Ahmet Yükneki",
@@ -157,7 +157,7 @@ window.tarih_29_sorulari = [
         "explanation": "Yusuf Has Hacip — siyasetname."
     },
     {
-        "question": "Divanü Lügati’t-Türk’ün yazarı kimdir?",
+        "question": "Divanü Lügati't-Türk'ün yazarı aşağıdakilerden hangisidir?",
         "options": [
             "A) Yusuf Has Hacip",
             "B) Nizamülmülk",
@@ -181,7 +181,7 @@ window.tarih_29_sorulari = [
         "explanation": "Edip Ahmet Yükneki — ahlak."
     },
     {
-        "question": "Divan-ı Hikmet’in yazarı kimdir?",
+        "question": "Divan-ı Hikmet'in yazarı aşağıdakilerden hangisidir?",
         "options": [
             "A) Ahmet Yesevi",
             "B) Yusuf Has Hacip",
@@ -217,7 +217,7 @@ window.tarih_29_sorulari = [
         "explanation": "Tuğrul Bey dönemi — Gazneliler."
     },
     {
-        "question": "1071 Malazgirt Zaferi’nin komutanı kimdir?",
+        "question": "1071 Malazgirt Zaferi'ni kazanan Selçuklu hükümdarı aşağıdakilerden hangisidir?",
         "options": [
             "A) Tuğrul Bey",
             "B) Alp Arslan",
@@ -241,25 +241,25 @@ window.tarih_29_sorulari = [
         "explanation": "Nizamülmülk — Büyük Selçuklu."
     },
     {
-        "question": "İkta sistemi için hangisi doğrudur?",
+        "question": "İkta sistemi ile ilgili aşağıdakilerden hangisi doğrudur?",
         "options": [
-            "A) Özel mülkiyettir",
-            "B) Osmanlı’da yoktur",
-            "C) Vergi geliri görevliye bırakılır, görevli asker besler",
-            "D) Yalnızca ticaret içindir",
-            "E) Halife mülküdür"
+            "A) Toprağın mülkiyeti iktadara geçer.",
+            "B) Osmanlı tımar sistemi bu sistemden etkilenmemiştir.",
+            "C) Toprağın vergi geliri görevliye bırakılır, görevli asker besler.",
+            "D) Yalnızca ticaret erbabına verilir.",
+            "E) Halifenin özel mülkü sayılır."
         ],
         "correctAnswerIndex": 2,
         "explanation": "İkta ≠ özel mülkiyet; tımarın öncülü."
     },
     {
-        "question": "Atabey’in temel görevi nedir?",
+        "question": "Türk-İslam devletlerinde atabeyin temel görevi aşağıdakilerden hangisidir?",
         "options": [
-            "A) Ordu komutanlığı",
-            "B) Vergi toplamak",
-            "C) Halife seçmek",
-            "D) Şehzade eğitimi ve devlet yönetimini öğretmek",
-            "E) Donanma kurmak"
+            "A) Ordunun başkomutanlığını yapmak",
+            "B) Vergileri toplamak",
+            "C) Halife ile ilişkileri yürütmek",
+            "D) Şehzadeyi eğitip yönetime hazırlamak",
+            "E) Divana başkanlık etmek"
         ],
         "correctAnswerIndex": 3,
         "explanation": "Şehzade eğitimi; bazı Atabeyler sonra bağımsızlaşabilmiştir."
@@ -313,13 +313,13 @@ window.tarih_29_sorulari = [
         "explanation": "1243 — Moğollar; II. Beylikler süreci."
     },
     {
-        "question": "Kösedağ Savaşı’nın sonucu hangisidir?",
+        "question": "Kösedağ Savaşı'nın (1243) sonucu aşağıdakilerden hangisidir?",
         "options": [
-            "A) Bizans yıkıldı",
-            "B) Anadolu Selçuklu güçlendi",
-            "C) Moğol baskısı arttı ve II. Beylikler süreci başladı",
-            "D) Haçlılar yenildi",
-            "E) İstanbul alındı"
+            "A) Anadolu'nun kapıları Türklere açılmıştır.",
+            "B) Anadolu Selçuklu Devleti en güçlü dönemine ulaşmıştır.",
+            "C) Anadolu'da Moğol egemenliği başlamış, II. Beylikler Dönemi'ne zemin hazırlanmıştır.",
+            "D) Haçlı seferleri sona ermiştir.",
+            "E) Bizans'ın Anadolu'daki varlığı sona ermiştir."
         ],
         "correctAnswerIndex": 2,
         "explanation": "Anadolu Selçuklu zayıfladı → Moğol/İlhanlı baskısı → II. Beylikler."
@@ -349,7 +349,7 @@ window.tarih_29_sorulari = [
         "explanation": "Danişmentliler."
     },
     {
-        "question": "İlk Türk denizcisi olarak bilinen kimdir?",
+        "question": "İlk Türk denizcisi olarak kabul edilen kişi aşağıdakilerden hangisidir?",
         "options": [
             "A) Barbaros",
             "B) Oruç Reis",
@@ -373,13 +373,13 @@ window.tarih_29_sorulari = [
         "explanation": "1308."
     },
     {
-        "question": "Kervansarayların temel işlevi nedir?",
+        "question": "Kervansarayların temel işlevi aşağıdakilerden hangisidir?",
         "options": [
-            "A) Eğitim",
-            "B) Sağlık",
+            "A) Eğitim ve öğretim",
+            "B) Hasta tedavisi",
             "C) Ticaret ve konaklama",
-            "D) Anıt mezar",
-            "E) Askerlik"
+            "D) Askerî savunma",
+            "E) Dinî eğitim"
         ],
         "correctAnswerIndex": 2,
         "explanation": "Ticaret yollarında konaklama/güvenlik."
@@ -421,24 +421,24 @@ window.tarih_29_sorulari = [
         "explanation": "I. Murat — Edirne başkent."
     },
     {
-        "question": "Ankara Savaşı (1402) sonucu ne olmuştur?",
+        "question": "Ankara Savaşı'nın (1402) Osmanlı Devleti açısından sonucu aşağıdakilerden hangisidir?",
         "options": [
-            "A) İstanbul fethedildi",
-            "B) Yeniçeri kaldırıldı",
-            "C) Lale Devri başladı",
-            "D) Fetret Devri başladı",
-            "E) Halifelik alındı"
+            "A) İstanbul kuşatması başarıya ulaşmıştır.",
+            "B) Anadolu Türk birliği tamamlanmıştır.",
+            "C) Balkanlardaki toprakların tamamı kaybedilmiştir.",
+            "D) Fetret Devri başlamıştır.",
+            "E) Halifelik Osmanlı'ya geçmiştir."
         ],
         "correctAnswerIndex": 3,
         "explanation": "Yıldırım, Timur’a yenildi → Fetret."
     },
     {
-        "question": "Fetret Devri’ni sona erdiren padişah kimdir?",
+        "question": "Fetret Devri'ni sona erdiren Osmanlı padişahı aşağıdakilerden hangisidir?",
         "options": [
-            "A) Yıldırım",
+            "A) Yıldırım Bayezid",
             "B) Çelebi Mehmet",
             "C) II. Murat",
-            "D) Fatih",
+            "D) Fatih Sultan Mehmet",
             "E) II. Bayezid"
         ],
         "correctAnswerIndex": 1,
@@ -457,12 +457,12 @@ window.tarih_29_sorulari = [
         "explanation": "1453 — Fatih."
     },
     {
-        "question": "Çaldıran Savaşı (1514) kime karşıdır?",
+        "question": "Çaldıran Savaşı (1514) hangi devlete karşı yapılmıştır?",
         "options": [
             "A) Memlükler",
-            "B) Portekiz",
-            "C) Haçlılar",
-            "D) Bizans",
+            "B) Akkoyunlular",
+            "C) Dulkadiroğulları",
+            "D) Karamanoğulları",
             "E) Safeviler"
         ],
         "correctAnswerIndex": 4,
@@ -481,25 +481,25 @@ window.tarih_29_sorulari = [
         "explanation": "1516–1517 Memlüklerin yıkılışı."
     },
     {
-        "question": "Preveze Deniz Savaşı (1538) ile ilgili doğru ifade hangisidir?",
+        "question": "Preveze Deniz Savaşı (1538) ile ilgili aşağıdakilerden hangisi doğrudur?",
         "options": [
-            "A) Barbaros komutasında Akdeniz’de Osmanlı üstünlüğü",
-            "B) Timur yenildi",
-            "C) Yeniçeri kaldırıldı",
-            "D) Kırım bağımsız oldu",
-            "E) NATO’ya girildi"
+            "A) Barbaros komutasında Akdeniz'de Osmanlı üstünlüğü sağlanmıştır.",
+            "B) Osmanlı donanması ağır bir yenilgi almıştır.",
+            "C) Kıbrıs Osmanlı'ya katılmıştır.",
+            "D) Rodos fethedilmiştir.",
+            "E) Hint Okyanusu'nda Portekiz üstünlüğü kırılmıştır."
         ],
         "correctAnswerIndex": 0,
         "explanation": "Kanuni dönemi — Barbaros."
     },
     {
-        "question": "1535’te Fransa’ya kapitülasyon verilmesinin amaçlarından biri nedir?",
+        "question": "1535'te Fransa'ya kapitülasyon verilmesinin amaçlarından biri aşağıdakilerden hangisidir?",
         "options": [
-            "A) Habsburglar’a karşı Fransa’yı yanında tutmak",
-            "B) Halifeliği almak",
-            "C) Yeniçeri kurmak",
-            "D) Matbaa getirmek",
-            "E) Musul’u almak"
+            "A) Habsburglara karşı Fransa'yı yanında tutmak",
+            "B) Venedik ile ittifak kurmak",
+            "C) Halifeliği güçlendirmek",
+            "D) Matbaanın Osmanlı'ya getirilmesini sağlamak",
+            "E) Akdeniz'de Fransız donanmasını etkisizleştirmek"
         ],
         "correctAnswerIndex": 0,
         "explanation": "Kanuni — siyasi denge."
@@ -541,13 +541,13 @@ window.tarih_29_sorulari = [
         "explanation": "Lale Devri."
     },
     {
-        "question": "Küçük Kaynarca (1774) için hangisi doğrudur?",
+        "question": "Küçük Kaynarca Antlaşması (1774) ile ilgili aşağıdakilerden hangisi doğrudur?",
         "options": [
-            "A) Kırım bağımsız oldu",
-            "B) İstanbul alındı",
-            "C) Yeniçeri kuruldu",
-            "D) Cumhuriyet ilan edildi",
-            "E) Montrö imzalandı"
+            "A) Kırım bağımsız olmuştur.",
+            "B) Kırım Rusya'ya ilhak edilmiştir.",
+            "C) Mora Venedik'e bırakılmıştır.",
+            "D) Osmanlı ilk kez toprak kaybetmiştir.",
+            "E) Rusya'ya tanınan kapitülasyonlar kaldırılmıştır."
         ],
         "correctAnswerIndex": 0,
         "explanation": "Rusya’nın Ortodokslar üzerinde etki arayışı da bu süreçle anılır."
@@ -673,13 +673,13 @@ window.tarih_29_sorulari = [
         "explanation": "Gazeteci Şerif kimliğiyle Trablusgarp."
     },
     {
-        "question": "I. Balkan Savaşı ile II. Balkan Savaşı için doğru karşılaştırma hangisidir?",
+        "question": "I. ve II. Balkan Savaşları ile ilgili aşağıdaki karşılaştırmalardan hangisi doğrudur?",
         "options": [
-            "A) İkisinde de Edirne kaybedildi",
-            "B) I. Balkan büyük kayıp; II. Balkan’da Edirne geri alındı",
-            "C) II. Balkan’da İstanbul kaybedildi",
-            "D) I. Balkan’da zafer",
-            "E) Fark yoktur"
+            "A) İki savaşta da Edirne kaybedilmiştir.",
+            "B) I. Balkan'da büyük toprak kaybedilmiş, II. Balkan'da Edirne geri alınmıştır.",
+            "C) II. Balkan Savaşı'nda İstanbul kuşatılmıştır.",
+            "D) I. Balkan Savaşı Osmanlı zaferiyle sonuçlanmıştır.",
+            "E) II. Balkan Savaşı'nda Selanik geri alınmıştır."
         ],
         "correctAnswerIndex": 1,
         "explanation": "Klasik ezber."
@@ -757,13 +757,13 @@ window.tarih_29_sorulari = [
         "explanation": "Doğu Cephesi — Ermeniler."
     },
     {
-        "question": "Batı Cephesi savaş sırası hangisidir?",
+        "question": "Batı Cephesi'ndeki savaşların kronolojik sırası aşağıdakilerden hangisidir?",
         "options": [
-            "A) Sakarya → I. İnönü → Büyük Taarruz",
+            "A) I. İnönü → Sakarya → II. İnönü → Kütahya-Eskişehir → Büyük Taarruz",
             "B) I. İnönü → II. İnönü → Kütahya-Eskişehir → Sakarya → Büyük Taarruz",
-            "C) Büyük Taarruz → Sakarya → İnönü",
-            "D) II. İnönü → I. İnönü → Sakarya",
-            "E) Kütahya → I. İnönü → Sakarya"
+            "C) I. İnönü → Kütahya-Eskişehir → II. İnönü → Sakarya → Büyük Taarruz",
+            "D) II. İnönü → I. İnönü → Sakarya → Kütahya-Eskişehir → Büyük Taarruz",
+            "E) Kütahya-Eskişehir → I. İnönü → II. İnönü → Sakarya → Büyük Taarruz"
         ],
         "correctAnswerIndex": 1,
         "explanation": "Kesin ezber sırası."
@@ -865,13 +865,13 @@ window.tarih_29_sorulari = [
         "explanation": "İran Sadabat’tadır (1937)."
     },
     {
-        "question": "Sadabat Paktı (1937) üyeleri hangileridir?",
+        "question": "Sadabat Paktı'nın (1937) üyeleri aşağıdakilerin hangisinde doğru verilmiştir?",
         "options": [
-            "A) TR–Yunanistan–Romanya–Yugoslavya",
-            "B) TR–Almanya–İtalya",
-            "C) TR–İngiltere–Fransa",
-            "D) TR–SSCB–ABD",
-            "E) TR–İran–Irak–Afganistan"
+            "A) Türkiye, Yunanistan, Romanya, Yugoslavya",
+            "B) Türkiye, İran, Irak, Pakistan",
+            "C) Türkiye, İngiltere, Fransa",
+            "D) Türkiye, İran, Afganistan, Pakistan",
+            "E) Türkiye, İran, Irak, Afganistan"
         ],
         "correctAnswerIndex": 4,
         "explanation": "Doğu sınırlarında güvenlik."
@@ -925,13 +925,13 @@ window.tarih_29_sorulari = [
         "explanation": "Lale Devri Pasarofça (1718) ile başlar; Karlofça 1699’dur."
     },
     {
-        "question": "Aşağıdakilerden hangisi “Malazgirt = Anadolu’nun tamamı hemen Türk oldu” yargısını çürütür?",
+        "question": "Aşağıdakilerden hangisi “Malazgirt Zaferi'yle Anadolu hemen tümüyle Türkleşmiştir.” yargısını çürütür?",
         "options": [
-            "A) Kapılar açıldı ama Türkleşme süreçtir",
-            "B) 1071’de İstanbul alındı",
-            "C) Kösedağ 1071’dir",
-            "D) Selçuklu kurulmadı",
-            "E) Bizans kazandı"
+            "A) Malazgirt'ten sonra Türkleşmenin uzun bir süreç içinde gerçekleşmesi",
+            "B) Malazgirt'ten önce Anadolu'ya akınlar yapılmış olması",
+            "C) Savaşta Bizans imparatorunun esir alınması",
+            "D) Savaşta Peçenek ve Uzların saf değiştirmesi",
+            "E) Savaştan sonra Bizans ile antlaşma imzalanması"
         ],
         "correctAnswerIndex": 0,
         "explanation": "Klasik çeldirici."

@@ -5,11 +5,11 @@ window.cografya_2_sorulari = [
     "id": "1",
     "question": "Türkiye'nin jeolojik yapısı ve yer şekillerinin oluşumunda etkili olan iç kuvvetlerle ilgili aşağıdakilerden hangisi doğrudur?",
     "options": [
-      "A) Türkiye'de dağ oluşumu hareketleri tamamen günümüzde sona ermiştir.",
+      "A) Türkiye'de dağ oluşumu hareketleri günümüzde sona ermiştir.",
       "B) Türkiye'nin kıvrım dağları Alp-Himalaya orojenik kuşağı içerisinde yer alır.",
-      "C) Türkiye'deki bütün dağlar kırılma sonucunda oluşmuştur.",
+      "C) Türkiye'deki dağların büyük bölümü kırılma sonucunda oluşmuştur.",
       "D) Epirojenez yalnızca kıyı bölgelerinde etkili olmuştur.",
-      "E) Volkanizma Türkiye'nin yer şekillerinin oluşumunda etkili olmamıştır."
+      "E) Volkanizma Türkiye'nin yalnız batısında etkili olmuştur."
     ],
     "correctAnswerIndex": 1,
     "explanation": "Türkiye, Alp-Himalaya orojenik kuşağında bulunduğu için kıvrım dağları bu sistem içerisinde yer alır. Ayrıca Türkiye'de kırılma, volkanizma ve epirojenez de etkili olmuştur."
@@ -80,8 +80,8 @@ window.cografya_2_sorulari = [
     "question": "Epirojenez ile ilgili aşağıdaki bilgilerden hangisi doğrudur?",
     "options": [
       "A) Dar alanlarda gerçekleşen kıvrılma hareketidir.",
-      "B) Sadece volkanik dağların oluşumunda etkilidir.",
-      "C) Yalnızca fayların kırılması sonucunda meydana gelir.",
+      "B) Volkanik dağların oluşumunu sağlayan harekettir.",
+      "C) Fayların kırılması sonucunda meydana gelir.",
       "D) Yer kabuğunun geniş alanlı yükselip alçalmasıdır.",
       "E) Magmanın yeryüzüne çıkmasıyla gerçekleşir."
     ],
@@ -151,9 +151,9 @@ window.cografya_2_sorulari = [
     "options": [
       "A) Magmanın yer altında katılaşması yüzey volkanizmasıdır.",
       "B) Magmanın yeryüzüne çıkmadan derinlerde katılaşması derinlik volkanizmasıdır.",
-      "C) Volkanik faaliyetler yalnızca genç kıvrım dağlarında görülür.",
+      "C) Volkanik faaliyetler en çok masif arazilerde görülür.",
       "D) Batolitler yüzeyde oluşan volkanik çukurlardır.",
-      "E) Kraterler yalnızca akarsuların aşındırmasıyla oluşur."
+      "E) Kraterler, lavın yüzeyde yayılmasıyla oluşan düzlüklerdir."
     ],
     "correctAnswerIndex": 1,
     "explanation": "Magmanın yerin derinliklerinde soğuyup katılaşması derinlik volkanizması olarak adlandırılır. Batolit bu sürecin oluşturduğu derinlik kayaçlarından biridir."
@@ -359,9 +359,9 @@ window.cografya_2_sorulari = [
     "options": [
       "A) Kuzey Anadolu Fay Zonu genel olarak doğu-batı doğrultusunda uzanır.",
       "B) Doğu Anadolu Fay Zonu Ege Denizi'nden başlayarak kuzeye uzanır.",
-      "C) Batı Anadolu'daki faylanma yalnızca sıkışma hareketleriyle oluşmuştur.",
-      "D) Kuzey Anadolu Fay Zonu yalnızca Güneydoğu Anadolu'da görülür.",
-      "E) Doğu Anadolu Fay Zonu'nun Türkiye'deki uzanışı Karadeniz kıyılarını takip eder."
+      "C) Batı Anadolu'daki faylanma sıkışma hareketleriyle oluşmuştur.",
+      "D) Kuzey Anadolu Fay Zonu Güneydoğu Anadolu'yu boydan boya geçer.",
+      "E) Doğu Anadolu Fay Zonu Karadeniz kıyılarına paralel uzanır."
     ],
     "correctAnswerIndex": 0,
     "explanation": "Kuzey Anadolu Fay Zonu, Türkiye'nin kuzey kesimlerinde genel olarak doğu-batı doğrultusunda uzanan önemli bir aktif fay sistemidir.",
@@ -449,11 +449,11 @@ window.cografya_2_sorulari = [
     "id": "31",
     "question": "Türkiye'nin tektonik yapısıyla ilgili aşağıdaki yargılardan hangisine ulaşılabilir?",
     "options": [
-      "A) Türkiye'de yalnızca kıvrılma hareketleri etkili olmuştur.",
-      "B) Türkiye'de aktif fayların bulunması tektonik hareketliliğin devam ettiğini gösterir.",
-      "C) Türkiye'nin bütün dağları volkanik kökenlidir.",
-      "D) Batı Anadolu'daki yer şekilleri yalnızca akarsular tarafından oluşturulmuştur.",
-      "E) Türkiye'de epirojenik hareketler hiçbir dönemde görülmemiştir."
+      "A) Türkiye'de yer şekillerini yalnız kıvrılma hareketleri biçimlendirmiştir.",
+      "B) Türkiye'de aktif fayların bulunması tektonik hareketliliğin sürdüğünü gösterir.",
+      "C) Türkiye'deki dağların büyük bölümü volkanik kökenlidir.",
+      "D) Batı Anadolu'daki horst-graben sistemi akarsu aşındırmasıyla oluşmuştur.",
+      "E) Türkiye'de epirojenik hareketler Kuaterner'de etkili olmamıştır."
     ],
     "correctAnswerIndex": 1,
     "explanation": "Türkiye'de Kuzey Anadolu, Doğu Anadolu ve Batı Anadolu'daki aktif fay sistemlerinin bulunması, ülkenin tektonik açıdan hareketli olduğunu gösterir."

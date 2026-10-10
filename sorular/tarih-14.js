@@ -190,11 +190,11 @@ window.tarih_14_sorulari = [
     {
         question: "24 Nisan kararlarında padişah ve halifenin durumuyla ilgili olarak aşağıdakilerden hangisi ifade edilmiştir?",
         options: [
-            "A) Hemen görevden alınmaları",
+            "A) Padişahın görevden alınması",
             "B) Halifeliğin kaldırılması",
-            "C) Padişahlığın kaldırılması",
-            "D) Baskıdan kurtulduktan sonra meclisin belirleyeceği esaslar çerçevesinde durumlarının belirlenmesi",
-            "E) İstanbul Hükümeti'ne bırakılmaları"
+            "C) Saltanatın kaldırılması",
+            "D) Durumlarının, baskıdan kurtulunca meclisçe belirlenmesi",
+            "E) Yetkilerinin Temsil Heyeti'ne devredilmesi"
         ],
         correctAnswerIndex: 3,
         explanation: "24 Nisan kararlarında, padişah ve halifenin baskıdan kurtulduktan sonra meclisin belirleyeceği esaslar çerçevesinde durumlarının belirleneceği ifade edilmiştir. Bu, TBMM'nin padişah ve halifeyi tamamen reddetmediğini, ancak yetkilerini sınırladığını göstermektedir."
@@ -397,8 +397,8 @@ window.tarih_14_sorulari = [
             "A) Saltanatı güçlendirmek",
             "B) Kapitülasyonları kaldırmak",
             "C) Çok partili hayata geçmek",
-            "D) Asker kaçaklarını önlemek ve TBMM otoritesini sağlamak",
-            "E) Halifeliği güçlendirmek"
+            "D) Firarları önlemek ve TBMM otoritesini sağlamak",
+            "E) İstanbul Hükûmeti'yle uzlaşmak"
         ],
         correctAnswerIndex: 3,
         explanation: "İstiklal Mahkemeleri, asker kaçaklarını önlemek, düzenli ordunun kurulmasını sağlamak ve TBMM otoritesini pekiştirmek amacıyla kurulmuştur."
@@ -459,9 +459,9 @@ window.tarih_14_sorulari = [
         question: "San Remo Konferansı'nda hazırlanan barış şartlarının Osmanlı heyetine sunulması ve Sadrazam Tevfik Paşa'nın bu şartları kabul etmemesi üzerine aşağıdaki gelişmelerden hangisi yaşanmıştır?",
         options: [
             "A) İstanbul işgalden kurtarılmıştır.",
-            "B) Misak-ı Milli ilan edilmiştir.",
-            "C) TBMM kapatılmıştır.",
-            "D) Yunan ordusu Milne Hattı'nı geçerek Anadolu'daki ilerleyişini sürdürmüştür.",
+            "B) Misak-ı Millî ilan edilmiştir.",
+            "C) Mebusan Meclisi yeniden açılmıştır.",
+            "D) Yunan ordusu Milne Hattı'nı geçerek ilerlemiştir.",
             "E) Lozan Konferansı toplanmıştır."
         ],
         correctAnswerIndex: 3,
@@ -603,11 +603,11 @@ window.tarih_14_sorulari = [
     {
         question: "Sevr Antlaşması'nda Osmanlı ordusuyla ilgili aşağıdakilerden hangisi öngörülmüştür?",
         options: [
-            "A) Ordunun modern silahlarla güçlendirilmesi",
-            "B) Ordunun sınırlandırılması ve ağır silahlara sahip olmasının engellenmesi",
+            "A) Ordunun modern silahlarla donatılması",
+            "B) Ordunun sınırlandırılması ve ağır silahlarının alınması",
             "C) Zorunlu askerliğin genişletilmesi",
             "D) Donanmanın güçlendirilmesi",
-            "E) Osmanlı ordusunun TBMM'ye bağlanması"
+            "E) Ordunun TBMM'ye bağlanması"
         ],
         correctAnswerIndex: 1,
         explanation: "Sevr Antlaşması, Osmanlı ordusunu sınırlandırmış ve ağır silahlara sahip olmasını engellemiştir. Bu, Osmanlı'nın askerî gücünü zayıflatmayı amaçlamıştır."
@@ -663,11 +663,11 @@ window.tarih_14_sorulari = [
     {
         question: "Aşağıdakilerden hangisi Sevr Antlaşması ile Lozan Barış Antlaşması arasındaki ilişkiyi doğru açıklamaktadır?",
         options: [
-            "A) Sevr yürürlüğe girmiş, Lozan bunu değiştirmiştir.",
-            "B) Sevr'in uygulanamaması sonucunda Millî Mücadele sonrasında Lozan imzalanmıştır.",
+            "A) Sevr yürürlüğe girmiş, Lozan onu değiştirmiştir.",
+            "B) Sevr uygulanamamış, Millî Mücadele sonunda Lozan imzalanmıştır.",
             "C) Lozan, Sevr'den önce imzalanmıştır.",
-            "D) Sevr TBMM tarafından imzalanmıştır.",
-            "E) Lozan Osmanlı Devleti tarafından imzalanmıştır."
+            "D) Sevr, TBMM tarafından onaylanmıştır.",
+            "E) Lozan'ı Osmanlı Hükûmeti imzalamıştır."
         ],
         correctAnswerIndex: 1,
         explanation: "Sevr uygulanamamış, Millî Mücadele'nin başarısı sonucunda Lozan Barış Antlaşması imzalanmıştır. Lozan, Sevr'in yerine geçen antlaşmadır."
@@ -1004,10 +1004,10 @@ window.tarih_14_sorulari = [
         question: "İstiklal Mahkemelerinin kurulmasının temel amaçlarından biri aşağıdakilerden hangisidir?",
         options: [
             "A) Düzenli ordunun kurulmasını ve devamlılığını sağlamak",
-            "B) Osmanlı Devleti'ni yeniden kurmak",
+            "B) Osmanlı yönetimini yeniden güçlendirmek",
             "C) Sevr Antlaşması'nı uygulamak",
             "D) Saltanat sistemini güçlendirmek",
-            "E) Çok partili hayata geçmek"
+            "E) Çok partili hayata geçişi hızlandırmak"
         ],
         correctAnswerIndex: 0,
         explanation: "İstiklal Mahkemeleri, düzenli ordunun kurulmasını ve devamlılığını sağlamak, asker kaçaklarını önlemek ve TBMM otoritesini güçlendirmek amacıyla kurulmuştur."
@@ -1199,10 +1199,10 @@ window.tarih_14_sorulari = [
     {
         question: "Aşağıdakilerden hangisi I. TBMM'nin millî egemenlik anlayışını yansıtan uygulamalardan biridir?",
         options: [
-            "A) Sevr'in kabul edilmesi",
+            "A) Sevr Antlaşması'nın kabul edilmesi",
             "B) Saltanatın güçlendirilmesi",
-            "C) İstanbul Hükümeti'nin yetkilerinin artırılması",
-            "D) Büyük Millet Meclisi'nin üzerinde başka bir güç bulunmadığının ilan edilmesi",
+            "C) İstanbul Hükûmeti'nin yetkilerinin artırılması",
+            "D) Meclisin üstünde bir güç bulunmadığının ilanı",
             "E) Kapitülasyonların genişletilmesi"
         ],
         correctAnswerIndex: 3,
@@ -1356,10 +1356,10 @@ window.tarih_14_sorulari = [
         question: "Aşağıdaki ifadelerden hangisi I. TBMM dönemiyle ilgili doğru bir değerlendirmedir?",
         options: [
             "A) Meclis yalnızca yasama faaliyetinde bulunmuştur.",
-            "B) Yürütme yetkisi tamamen İstanbul Hükümeti'ne bırakılmıştır.",
+            "B) Yürütme yetkisi İstanbul Hükûmeti'ne bırakılmıştır.",
             "C) Yasama ve yürütme yetkileri mecliste toplanmıştır.",
             "D) Meclis padişaha bağlı olarak çalışmıştır.",
-            "E) İtilaf Devletleri'nin denetiminde faaliyet göstermiştir."
+            "E) Meclis kuvvetler ayrılığı ilkesine göre çalışmıştır."
         ],
         correctAnswerIndex: 2,
         explanation: "I. TBMM, güçler birliği ilkesi gereği yasama ve yürütme yetkilerini kendi bünyesinde toplamıştır. Meclis, aynı zamanda yargı yetkisini de İstiklal Mahkemeleri aracılığıyla kullanmıştır."

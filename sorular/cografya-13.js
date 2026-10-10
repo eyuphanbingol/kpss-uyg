@@ -44,10 +44,10 @@ window.cografya_13_sorulari = [
         question: "Türkiye akarsularının ulaşım ve taşımacılığa uygun olmamasında aşağıdakilerden hangisi daha etkili olmuştur?",
         options: [
             "A) Rejimlerinin düzensiz ve eğimlerinin fazla olması",
-            "B) Açık havzada yer almaları",
-            "C) Delta oluşturmaları",
-            "D) Çok sayıda kola ayrılmaları",
-            "E) Sulama amacıyla kullanılmaları"
+            "B) Büyük bölümünün açık havzalarda yer alması",
+            "C) Ağız kesimlerinde delta oluşturmaları",
+            "D) Çok sayıda kola ayrılarak debilerinin dağılması",
+            "E) Kaynaklarının yüksek dağlık alanlarda bulunması"
         ],
         correctAnswerIndex: 0,
         explanation: "Yüksek eğim ve düzensiz rejim ulaşımı zorlaştırmaktadır."
@@ -1395,11 +1395,11 @@ window.cografya_13_sorulari = [
         id: 108,
         question: "Podzol topraklarının Türkiye'de yaygın görüldüğü alan aşağıdakilerden hangisidir?",
         options: [
-            "A) Antalya çevresi",
-            "B) Erzurum-Kars",
-            "C) Doğu Karadeniz ve Zonguldak",
-            "D) Konya Ovası",
-            "E) Trakya"
+            "A) Antalya ve Teke Yarımadası",
+            "B) Erzurum-Kars Platosu",
+            "C) Doğu Karadeniz ve Zonguldak çevresi",
+            "D) Konya Ovası ve Tuz Gölü çevresi",
+            "E) Trakya ve Ergene Havzası"
         ],
         correctAnswerIndex: 2,
         explanation: "Podzol toprakları Doğu Karadeniz ve Zonguldak çevresinde görülür."
@@ -1512,10 +1512,10 @@ window.cografya_13_sorulari = [
         id: 117,
         question: "Kestane rengi step toprakları ile ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) Tuz ve kireç fazladır.",
-            "B) Yıkanma hiç görülmez.",
-            "C) Demir oksitçe zengindir.",
-            "D) Sadece Karadeniz'de görülür.",
+            "A) Tuz ve kireç oranı yüksektir.",
+            "B) Demir oksit nedeniyle kırmızı renklidir.",
+            "C) Akdeniz kıyı kuşağında yaygındır.",
+            "D) Asitli ve humusça fakir topraklardır.",
             "E) Yıkanma daha fazladır."
         ],
         correctAnswerIndex: 4,

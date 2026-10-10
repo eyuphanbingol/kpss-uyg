@@ -2,11 +2,11 @@ window.tarih_10_sorulari = [
 {
     question: "XIX. yüzyıl Osmanlı ıslahatlarının genel özelliklerinden biri aşağıdakilerden hangisidir?",
     options: [
-        "A) Islahatlarda yalnızca Osmanlı gelenekleri esas alınmıştır.",
-        "B) Demokratikleşme düşüncesinden uzak durulmuştur.",
-        "C) Islahatlar yalnızca askerî alanla sınırlı kalmıştır.",
-        "D) Halk yönetime tamamen kapatılmıştır.",
-        "E) Avrupa örnek alınarak hemen her alanda düzenlemeler yapılmıştır."
+        "A) Islahatlarda Osmanlı gelenekleri esas alınmıştır.",
+        "B) Islahatlar halkın isteği ve öncülüğüyle yapılmıştır.",
+        "C) Islahatlar askerî alanla sınırlı kalmıştır.",
+        "D) Islahatlar dış baskılardan bağımsız yürütülmüştür.",
+        "E) Avrupa örnek alınarak hemen her alanda düzenleme yapılmıştır."
     ],
     correctAnswerIndex: 4,
     explanation: "XIX. yüzyıl ıslahatlarında Avrupa örnek alınmış ve hemen her alanda düzenlemeler yapılmıştır."
@@ -86,11 +86,11 @@ window.tarih_10_sorulari = [
 {
     question: "Sened-i İttifak'a göre ayanlar aşağıdaki görevlerden hangisini üstlenmiştir?",
     options: [
-        "A) Kanun yapma",
-        "B) Padişah seçme",
-        "C) Merkezi otoriteyi kabul ederek asker ve vergi konusunda devlete yardım etme",
-        "D) Şeyhülislamı belirleme",
-        "E) Yeniçeri Ocağını yönetme"
+        "A) Kanun yapma yetkisini padişahla paylaşmayı",
+        "B) Yeni padişahı belirlemeye katılmayı",
+        "C) Merkezî otoriteyi tanıyıp asker ve vergi toplamada yardımcı olmayı",
+        "D) Taşrada yargı yetkisini kadılardan devralmayı",
+        "E) Bölgelerindeki gümrük gelirlerini toplamayı"
     ],
     correctAnswerIndex: 2,
     explanation: "Ayanlar merkezi otoriteyi kabul edecek, asker ve vergi toplamada devlete yardımcı olacaktı."
@@ -134,11 +134,11 @@ window.tarih_10_sorulari = [
 {
     question: "Sened-i İttifak'ın Osmanlı siyasi tarihi açısından en önemli sonucu aşağıdakilerden hangisidir?",
     options: [
-        "A) Meşrutiyetin ilan edilmesi",
-        "B) Halifeliğin kaldırılması",
-        "C) İlk anayasanın hazırlanması",
-        "D) Cumhuriyetin ilan edilmesi",
-        "E) Padişahın mutlak otoritesinin ilk kez sınırlandırılması"
+        "A) Meşrutiyet yönetimine geçilmesi",
+        "B) Ayanlığın tümüyle kaldırılması",
+        "C) Ayanların Divan-ı Hümayun'a katılması",
+        "D) Merkezî otoritenin güçlenmesi",
+        "E) Padişahın mutlak otoritesinin ilk kez sınırlanması"
     ],
     correctAnswerIndex: 4,
     explanation: "Sened-i İttifak ile padişahın mutlak otoritesi ilk kez sınırlandırılmıştır."
@@ -315,10 +315,10 @@ window.tarih_10_sorulari = [
     question: "II. Mahmut'un memurlara maaş bağlamasının temel amacı aşağıdakilerden hangisidir?",
     options: [
         "A) Memurluğu düzenli bir devlet görevi hâline getirmek",
-        "B) Yeniçeri Ocağını güçlendirmek",
-        "C) Vergi gelirlerini azaltmak",
-        "D) Tımar sistemini canlandırmak",
-        "E) Ayanlığı güçlendirmek"
+        "B) Yeniçeri Ocağının etkisini artırmak",
+        "C) Taşradaki ayanların gücünü artırmak",
+        "D) Tımar sistemini yeniden canlandırmak",
+        "E) Vakıf gelirlerini merkezîleştirmek"
     ],
     correctAnswerIndex: 0,
     explanation: "Memurlara maaş bağlanarak devlet memurluğu düzenli bir meslek hâline getirilmiştir."
@@ -410,11 +410,11 @@ window.tarih_10_sorulari = [
 {
     question: "II. Mahmut'un 'Adli' unvanıyla anılmasının temel nedeni aşağıdakilerden hangisidir?",
     options: [
-        "A) Çok sayıda savaş kazanması",
-        "B) Denizciliği geliştirmesi",
-        "C) Adalete önem vermesi ve yeni kanunlar hazırlatması",
-        "D) İlk meşrutiyeti ilan etmesi",
-        "E) İlk anayasayı hazırlaması"
+        "A) Sınırları en geniş noktaya ulaştırması",
+        "B) Donanmayı yeniden kurması",
+        "C) Adalete önem vermesi ve kanunlar hazırlatması",
+        "D) Meşrutiyet yönetimine geçmesi",
+        "E) Ayanların gücünü artırması"
     ],
     correctAnswerIndex: 2,
     explanation: "II. Mahmut adalete önem vermesi ve yeni kanun-tüzükler hazırlatması nedeniyle 'Adli' unvanını almıştır."
@@ -638,11 +638,11 @@ window.tarih_10_sorulari = [
 {
     question: "II. Mahmut'un 'Ben tebamdan Müslüman'ı camide, Hristiyan'ı kilisede, Musevi'yi havrada fark ederim...' sözü aşağıdaki anlayışlardan hangisini yansıtmaktadır?",
     options: [
-        "A) Irk üstünlüğü",
+        "A) Merkeziyetçi yönetim anlayışı",
         "B) Dinî ayrımcılık",
         "C) Tebaa arasında eşitlik anlayışı",
-        "D) Panslavizm",
-        "E) Turancılık"
+        "D) Ümmetçilik anlayışı",
+        "E) Türkçülük anlayışı"
     ],
     correctAnswerIndex: 2,
     explanation: "Bu söz, din ayrımı yapılmaksızın tüm tebaanın eşit görülmesi anlayışını ifade etmektedir."
@@ -722,11 +722,11 @@ window.tarih_10_sorulari = [
 {
     question: "Tanzimat Fermanı'nın ilan edilmesinde aşağıdakilerden hangisinin etkili olduğu söylenebilir?",
     options: [
-        "A) 93 Harbi'nde alınan yenilgi",
-        "B) Londra Konferansı kararlarında etkili olma isteği",
-        "C) I. Dünya Savaşı'nın başlaması",
-        "D) Berlin Antlaşması hükümleri",
-        "E) Reval Görüşmeleri"
+        "A) Navarin'de yakılan donanmanın yerine yenisini kurma isteği",
+        "B) Mısır sorununda Avrupa devletlerinin desteğini kazanma isteği",
+        "C) Kırım Savaşı'nda Avrupa'nın yardımını alma isteği",
+        "D) Paris Antlaşması hükümlerini yerine getirme isteği",
+        "E) Berlin Antlaşması'nın ıslahat maddelerini uygulama isteği"
     ],
     correctAnswerIndex: 1,
     explanation: "Tanzimat Fermanı'nın ilan edilme nedenlerinden biri Londra Konferansı kararlarında etkili olabilmek ve Mısır meselesinde Avrupa'nın desteğini kazanmaktı."
@@ -842,11 +842,11 @@ window.tarih_10_sorulari = [
 {
     question: "Tanzimat Fermanı'na göre aşağıdakilerden hangisi devlet güvencesi altına alınmıştır?",
     options: [
-        "A) Yalnızca Müslümanların can güvenliği",
-        "B) Yalnızca ayanların hakları",
-        "C) Sadece askerlerin hakları",
-        "D) Yalnızca devlet memurlarının hakları",
-        "E) Müslüman ve Hristiyan tebaanın can, mal ve namus güvenliği"
+        "A) Yalnızca Müslüman tebaanın can ve mal güvenliği",
+        "B) Ayanların toprak üzerindeki hakları",
+        "C) Gayrimüslimlerin mecliste temsil hakkı",
+        "D) Devlet memurlarının görev güvencesi",
+        "E) Tüm tebaanın can, mal ve namus güvenliği"
     ],
     correctAnswerIndex: 4,
     explanation: "Ferman ile Müslüman ve Hristiyan tebaanın can, mal, ırz ve namus güvenliği güvence altına alınmıştır."
@@ -855,9 +855,9 @@ window.tarih_10_sorulari = [
     question: "Tanzimat Fermanı'na göre vergiler hangi ilkeye göre alınacaktır?",
     options: [
         "A) Din esasına göre",
-        "B) Soyluluk durumuna göre",
-        "C) Yalnızca gayrimüslimlerden",
-        "D) Yalnızca Müslümanlardan",
+        "B) Herkesten eşit miktarda",
+        "C) Mültezimlerin belirleyeceği oranda",
+        "D) Ayanların takdirine göre",
         "E) Herkesin gücü oranında"
     ],
     correctAnswerIndex: 4,
@@ -866,11 +866,11 @@ window.tarih_10_sorulari = [
 {
     question: "Tanzimat Fermanı'na göre askerlikle ilgili aşağıdaki hükümlerden hangisi kabul edilmiştir?",
     options: [
-        "A) Askerlik yalnızca Müslümanlara ait olacaktır.",
-        "B) Gayrimüslimler tamamen askerlikten çıkarılmıştır.",
-        "C) Askere alma işlemleri düzene sokulacak ve askerlik hizmeti belirli bir süreyle sınırlandırılacaktır.",
-        "D) Askerlik yalnızca gönüllülük esasına dayanacaktır.",
-        "E) Ayanlar askerlikten sorumlu olacaktır."
+        "A) Askerlik ömür boyu sürecek bir görev olacaktır.",
+        "B) Gayrimüslimler bedel ödemeden askere alınacaktır.",
+        "C) Askere alma düzene sokulacak, askerlik süresi sınırlanacaktır.",
+        "D) Askerlik gönüllülük esasına dayanacaktır.",
+        "E) Asker toplama görevi ayanlara devredilecektir."
     ],
     correctAnswerIndex: 2,
     explanation: "Tanzimat Fermanı, askere alma usulünün düzenli bir esasa bağlanacağını ve askerlik hizmetinin belirli bir süreyle sınırlandırılacağını öngörmüştür. Gayrimüslimlerin askerlik yükümlülüğü Tanzimat Fermanı'nda yer almaz."
@@ -938,11 +938,11 @@ window.tarih_10_sorulari = [
 {
     question: "Tanzimat Fermanı'nın ilan edilmesinde etkili olan temel düşünce aşağıdakilerden hangisidir?",
     options: [
-        "A) Osmanlı Devleti'nde din ve ırk ayrımı yapmadan birlik oluşturmak",
-        "B) Türkleri tek çatı altında toplamak",
-        "C) Halifelik etrafında birleşmek",
+        "A) Din ve ırk ayrımı yapmadan Osmanlı birliğini sağlamak",
+        "B) Türkleri tek bayrak altında toplamak",
+        "C) Halifelik etrafında Müslümanları birleştirmek",
         "D) Yerel yönetimleri güçlendirmek",
-        "E) Avrupa'dan tamamen kopmak"
+        "E) Padişahın yetkilerini meclisle paylaşmak"
     ],
     correctAnswerIndex: 0,
     explanation: "Osmanlıcılık düşüncesi din ve ırk ayrımı gözetmeden bütün Osmanlı vatandaşlarını bir arada tutmayı amaçlamıştır."
@@ -1022,11 +1022,11 @@ window.tarih_10_sorulari = [
 {
     question: "Islahat Fermanı'na göre aşağıdakilerden hangisi tüm Osmanlı tebaasına açık hâle getirilmiştir?",
     options: [
-        "A) Yalnızca askerlik",
-        "B) Yalnızca devlet memurluğu",
+        "A) Yalnızca askerî okullar",
+        "B) Şeyhülislamlık makamı",
         "C) Devlet hizmetleri, askerlik ve okullar",
-        "D) Yalnızca medreseler",
-        "E) Yalnızca mahkemeler"
+        "D) Medreseler ve şer'i mahkemeler",
+        "E) Sadrazamlık ve vezirlik"
     ],
     correctAnswerIndex: 2,
     explanation: "Devlet hizmetleri, askerlik ve okullar tüm tebaaya açılmıştır."
@@ -1070,10 +1070,10 @@ window.tarih_10_sorulari = [
 {
     question: "Islahat Fermanı'na göre mahkemelerle ilgili aşağıdakilerden hangisi kabul edilmiştir?",
     options: [
-        "A) Gizli yapılacaktır.",
-        "B) Sadece Müslümanlar katılacaktır.",
-        "C) Sadece askerler yargılanacaktır.",
-        "D) Herkese açık olacak ve keyfi cezalar verilmeyecektir.",
+        "A) Yargılamalar gizli yapılacaktır.",
+        "B) Davalar yalnız şer'i hukuka göre görülecektir.",
+        "C) Yargılama kadıların takdirine bırakılacaktır.",
+        "D) Herkese açık olacak, keyfî cezalar verilmeyecektir.",
         "E) Şer'i mahkemeler kaldırılacaktır."
     ],
     correctAnswerIndex: 3,
@@ -1094,11 +1094,11 @@ window.tarih_10_sorulari = [
 {
     question: "Islahat Fermanı'na göre aşağıdakilerden hangisi yasaklanmıştır?",
     options: [
-        "A) Yabancı ticareti",
-        "B) Demiryolu yapılması",
-        "C) Vakıf kurulması",
-        "D) Gayrimüslimleri aşağılayıcı ifadeler kullanılması",
-        "E) Gazete çıkarılması"
+        "A) Yabancıların mülk edinmesi",
+        "B) Demiryolu yapımında yabancı sermaye kullanılması",
+        "C) Gayrimüslimlerin okul açması",
+        "D) Gayrimüslimler için aşağılayıcı ifadeler kullanılması",
+        "E) Gayrimüslimlerin ibadethanelerini onarması"
     ],
     correctAnswerIndex: 3,
     explanation: "Gayrimüslimleri aşağılayıcı ifadelerin kullanılması yasaklanmıştır."
@@ -1131,10 +1131,10 @@ window.tarih_10_sorulari = [
     question: "Islahat Fermanı'na göre vergi konusunda aşağıdakilerden hangisi amaçlanmıştır?",
     options: [
         "A) Gayrimüslimlerden vergi alınmaması",
-        "B) Sadece Müslümanların vergi vermesi",
-        "C) Tüm Osmanlı tebaasının aynı vergileri ödemesi",
-        "D) Vergilerin kaldırılması",
-        "E) Vergilerin yalnızca ayanlar tarafından toplanması"
+        "B) Cizyenin artırılarak sürdürülmesi",
+        "C) Tüm tebaanın aynı vergileri ödemesi",
+        "D) Vergilerin ayni olarak toplanması",
+        "E) Vergilerin ayanlar aracılığıyla toplanması"
     ],
     correctAnswerIndex: 2,
     explanation: "İltizamın kaldırılmasıyla tüm Osmanlı tebaasının aynı vergileri ödemesi amaçlanmıştır."
@@ -1190,11 +1190,11 @@ window.tarih_10_sorulari = [
 {
     question: "Aşağıdaki teşkilatlardan hangisi Sultan Abdülmecid döneminde kurulmuştur?",
     options: [
-        "A) Jandarma, polis ve posta teşkilatları",
-        "B) Hamidiye Alayları",
-        "C) Düyun-u Umumiye",
-        "D) Hareket Ordusu",
-        "E) Ayan Meclisi"
+        "A) Posta ve polis teşkilatları",
+        "B) Hamidiye Alayları ve aşiret mektepleri",
+        "C) Düyun-u Umumiye ve Reji İdaresi",
+        "D) Asakir-i Mansure ve Redif birlikleri",
+        "E) Hareket Ordusu ve Teşkilat-ı Mahsusa"
     ],
     correctAnswerIndex: 0,
     explanation: "Jandarma, polis ve posta teşkilatları Sultan Abdülmecid döneminde kurulmuştur."
@@ -1527,10 +1527,10 @@ window.tarih_10_sorulari = [
     question: "Sultan Abdülaziz döneminde kurulan Nizamiye Mahkemelerinin kuruluş amacı aşağıdakilerden hangisidir?",
     options: [
         "A) Askerî davalara bakmak",
-        "B) Modern hukuk anlayışına uygun yargılama yapmak",
-        "C) Vakıf işlerini yürütmek",
-        "D) Vergi toplamak",
-        "E) Medrese eğitimini düzenlemek"
+        "B) Batılı hukuk anlayışına uygun yargılama yapmak",
+        "C) Gayrimüslimlerin dinî davalarına bakmak",
+        "D) Vakıf ve miras davalarına bakmak",
+        "E) Yabancıların ticari davalarına bakmak"
     ],
     correctAnswerIndex: 1,
     explanation: "Nizamiye Mahkemeleri modern hukuk sistemine uygun yargılama yapmak amacıyla kurulmuştur."
@@ -1812,7 +1812,7 @@ window.tarih_10_sorulari = [
     explanation: "Mebusan Meclisi üyeleri halk tarafından seçilmiştir."
 },
 {
-    question: "Mebusan Meclisi kaç yılda bir seçilmiştir?",
+    question: "1876 Kanun-i Esasi'ye göre Meclis-i Mebusan üyeleri kaç yıllığına seçilirdi?",
     options: [
         "A) 2",
         "B) 3",
@@ -1862,11 +1862,11 @@ window.tarih_10_sorulari = [
 {
     question: "1876 Kanun-i Esasi'ne göre Osmanlı Devleti'nde hükümdarlık aşağıdakilerden hangisine göre belirlenmiştir?",
     options: [
-        "A) Halk oylaması",
-        "B) Meclis seçimi",
-        "C) Şeyhülislamın seçimi",
-        "D) Sadrazamın önerisi",
-        "E) Osmanoğulları soyunun en büyük erkek üyesi"
+        "A) Halk oylamasıyla",
+        "B) Meclis-i Mebusan'ın seçimiyle",
+        "C) Şeyhülislamın fetvasıyla",
+        "D) Padişahın en büyük oğlu olmasıyla",
+        "E) Hanedanın en yaşlı erkek üyesi olmasıyla"
     ],
     correctAnswerIndex: 4,
     explanation: "Kanun-i Esasi'ne göre padişahlık Osmanoğulları hanedanının en büyük erkek üyesine aitti."
@@ -2163,10 +2163,10 @@ window.tarih_10_sorulari = [
     question: "II. Abdülhamit döneminde haberleşmeyi güçlendirmek amacıyla gerçekleştirilen uygulamalardan hangisi doğrudur?",
     options: [
         "A) İlk telgraf hattı bu dönemde çekilmiştir.",
-        "B) Büyük bir telgraf ağı kurulmuş ve Telgraf Mektebi açılmıştır.",
-        "C) Telgraf tamamen yasaklanmıştır.",
-        "D) Haberleşmede yalnızca posta teşkilatı kullanılmıştır.",
-        "E) Telefon ilk kez yaygınlaştırılmıştır."
+        "B) Telgraf ağı genişletilmiş ve Telgraf Mektebi açılmıştır.",
+        "C) Posta teşkilatı ilk kez bu dönemde kurulmuştur.",
+        "D) Telgraf kullanımı sansür nedeniyle yasaklanmıştır.",
+        "E) Telefon ilk kez bu dönemde yaygınlaştırılmıştır."
     ],
     correctAnswerIndex: 1,
     explanation: "II. Abdülhamit döneminde büyük bir telgraf ağı kurulmuş ve Telgraf Mektebi açılmıştır."
@@ -2174,9 +2174,9 @@ window.tarih_10_sorulari = [
 {
     question: "II. Abdülhamit döneminde açılan Hamidiye Etfal'ın kuruluş amacı aşağıdakilerden hangisidir?",
     options: [
-        "A) Asker yetiştirmek",
-        "B) Çocukların sağlık hizmetlerinden yararlanmasını sağlamak",
-        "C) Öğretmen yetiştirmek",
+        "A) Askerî hekim yetiştirmek",
+        "B) Çocuklara sağlık hizmeti vermek",
+        "C) Kız öğretmen yetiştirmek",
         "D) Yetim çocuklara barınma sağlamak",
         "E) Sanat eğitimi vermek"
     ],
@@ -2306,11 +2306,11 @@ window.tarih_10_sorulari = [
 {
     question: "1895 yılında açılan Darülaceze'nin temel kuruluş amacı aşağıdakilerden hangisidir?",
     options: [
-        "A) Asker yetiştirmek",
-        "B) Kimsesiz ve muhtaç kişilere hizmet vermek",
+        "A) Askerî hekim yetiştirmek",
+        "B) Kimsesiz ve muhtaç kişilere bakmak",
         "C) Öğretmen yetiştirmek",
-        "D) Diplomat yetiştirmek",
-        "E) Esnaf yetiştirmek"
+        "D) Çocuklara sağlık hizmeti vermek",
+        "E) Esnafa kredi sağlamak"
     ],
     correctAnswerIndex: 1,
     explanation: "Darülaceze kimsesiz ve yardıma muhtaç kişiler için kurulmuştur."
@@ -2739,10 +2739,10 @@ window.tarih_10_sorulari = [
     question: "1909 yılında Kanun-i Esasi'de yapılan değişikliklerle aşağıdakilerden hangisi kaldırılmıştır?",
     options: [
         "A) Müsadere",
-        "B) Tımar",
-        "C) Padişahın sürgüne gönderme (nefy) yetkisi",
-        "D) Cizye",
-        "E) İltizam"
+        "B) Tımar sistemi",
+        "C) Padişahın sürgün (nefy) yetkisi",
+        "D) Cizye vergisi",
+        "E) İltizam usulü"
     ],
     correctAnswerIndex: 2,
     explanation: "1909'da Kanun-i Esasi'de yapılan değişikliklerle padişahın, 113. maddeye dayanarak kişileri yargılamadan sürgüne gönderme (nefy) yetkisi kaldırılmış, böylece padişahın yetkileri sınırlandırılmıştır. Müsadere Tanzimat Fermanı ile yasaklanmış, tımar sistemi Tanzimat Dönemi'nde kaldırılmış, cizye Islahat Fermanı ile kaldırılmış, iltizam ise 1925'te kaldırılmıştır."
@@ -2750,11 +2750,11 @@ window.tarih_10_sorulari = [
 {
     question: "1909 Kanun-i Esasi değişiklikleriyle vatandaşlara aşağıdaki haklardan hangisi tanınmıştır?",
     options: [
-        "A) Padişah seçme",
-        "B) Siyasi parti ve dernek kurma",
-        "C) Vergi vermeme",
-        "D) Askerlik yapmama",
-        "E) Sadrazam seçme"
+        "A) Padişahı seçme hakkı",
+        "B) Siyasi parti ve dernek kurma hakkı",
+        "C) Vergiden muafiyet hakkı",
+        "D) Askerlikten muafiyet hakkı",
+        "E) Sadrazamı seçme hakkı"
     ],
     correctAnswerIndex: 1,
     explanation: "1909 değişiklikleriyle herkes siyasi parti ve dernek kurabilme hakkını elde etmiştir."
@@ -2835,10 +2835,10 @@ window.tarih_10_sorulari = [
     question: "Osmanlıcılık düşüncesinin temel amacı aşağıdakilerden hangisidir?",
     options: [
         "A) Türkleri tek bayrak altında toplamak",
-        "B) Yerel yönetimleri güçlendirmek",
-        "C) Halifelik etrafında birleşmek",
-        "D) Din, dil ve ırk ayrımı yapmadan herkesi Osmanlı vatandaşı kabul etmek",
-        "E) Avrupa devletleriyle birleşmek"
+        "B) Yerel yönetimlere geniş yetki vermek",
+        "C) Halifelik etrafında Müslümanları birleştirmek",
+        "D) Ayrım gözetmeksizin herkesi Osmanlı kabul etmek",
+        "E) Batı'yı her alanda örnek almak"
     ],
     correctAnswerIndex: 3,
     explanation: "Osmanlıcılık; din, dil ve ırk ayrımı yapmadan herkesi Osmanlı vatandaşı kabul etmeyi amaçlamıştır."
@@ -2966,11 +2966,11 @@ window.tarih_10_sorulari = [
 {
     question: "Türkçülük düşüncesinin temel amacı aşağıdakilerden hangisidir?",
     options: [
-        "A) Gayrimüslimlere eşit hak vermek",
-        "B) Yerel yönetimleri güçlendirmek",
-        "C) Avrupa hukukunu uygulamak",
-        "D) Halifelik etrafında birleşmek",
-        "E) Osmanlı içindeki Türkleri tek bayrak altında toplamak"
+        "A) Gayrimüslimlere eşit haklar tanımak",
+        "B) Yerel yönetimlere geniş yetki vermek",
+        "C) Batı'yı her alanda örnek almak",
+        "D) Halifelik etrafında Müslümanları birleştirmek",
+        "E) Türkleri tek bayrak altında toplamak"
     ],
     correctAnswerIndex: 4,
     explanation: "Türkçülük düşüncesinin amacı Osmanlı içindeki Türkleri tek bayrak altında toplamaktır."
@@ -3098,11 +3098,11 @@ window.tarih_10_sorulari = [
 {
     question: "İslamcılık düşüncesinin önemini tamamen yitirmesinde aşağıdaki gelişmelerden hangisi etkili olmuştur?",
     options: [
-        "A) Balkan Savaşları",
-        "B) Trablusgarp Savaşı",
-        "C) Kırım Savaşı",
-        "D) Reval Görüşmesi",
-        "E) Arapların I. Dünya Savaşı'nda İngilizlerle iş birliği yapması"
+        "A) Islahat Fermanı'nın ilan edilmesi",
+        "B) Trablusgarp'ın kaybedilmesi",
+        "C) Kırım Savaşı'nın sonuçları",
+        "D) Balkan Savaşları'nda gayrimüslimlerin ayrılması",
+        "E) I. Dünya Savaşı'nda Arapların İngilizlerle iş birliği"
     ],
     correctAnswerIndex: 4,
     explanation: "I. Dünya Savaşı'nda Arapların İngilizlerle iş birliği yapması İslamcılık düşüncesini büyük ölçüde etkisiz bırakmıştır."

@@ -6,11 +6,11 @@ window.tarih_16_sorulari = [
     {
         question: "Mudanya Ateşkes Antlaşması ile ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) Antlaşmada TBMM Hükûmeti'ni Rauf Orbay temsil etmiştir.",
-            "B) Yunanistan, görüşmelere doğrudan kendi delegeleriyle katılmıştır.",
-            "C) TBMM Hükûmeti adına İsmet İnönü'nün gösterdiği başarı, Lozan'da başdelege olarak görevlendirilmesinde etkili olmuştur.",
-            "D) Görüşmelerde Yunanistan'ı Fransa temsil etmiştir.",
-            "E) Antlaşma, Millî Mücadele'nin diplomasi safhasını sona erdirmiştir."
+            "A) TBMM Hükûmeti'ni Rauf Orbay temsil etmiştir.",
+            "B) Yunanistan görüşmelere masada doğrudan katılmıştır.",
+            "C) İsmet Paşa'nın buradaki başarısı Lozan'a başdelege seçilmesinde etkili olmuştur.",
+            "D) Antlaşmayı TBMM adına Fevzi Paşa imzalamıştır.",
+            "E) Antlaşma Millî Mücadele'nin diplomasi safhasını bitirmiştir."
         ],
         correctAnswerIndex: 2,
         explanation: "İsmet İnönü, Mudanya Ateşkes Antlaşması'ndaki başarılı diplomatik performansı sayesinde Lozan Konferansı'nda Türkiye'yi temsil eden başdelege olarak görevlendirilmiştir. Yunanistan görüşmelere doğrudan katılmamış, Mudanya açıklarında gemide bekletilmiştir."
@@ -607,10 +607,10 @@ window.tarih_16_sorulari = [
         question: "Lozan'da Ege Adaları'yla ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
             "A) Tüm Ege Adaları Türkiye'ye bırakılmıştır.",
-            "B) Bozcaada ve Gökçeada Türkiye'ye bırakılmış, On İki Ada İtalya'ya, diğer Ege Adaları Yunanistan'a verilmiştir.",
-            "C) Tüm Ege Adaları İtalya'ya bırakılmıştır.",
-            "D) Kıbrıs ve Rodos Türkiye'ye bırakılmıştır.",
-            "E) Bozcaada ve Gökçeada İtalya'ya bırakılmıştır."
+            "B) Gökçeada ve Bozcaada Türkiye'ye, On İki Ada İtalya'ya, diğerleri Yunanistan'a verilmiştir.",
+            "C) Gökçeada ve Bozcaada Yunanistan'a, On İki Ada Türkiye'ye bırakılmıştır.",
+            "D) On İki Ada Yunanistan'a, Gökçeada ve Bozcaada İtalya'ya verilmiştir.",
+            "E) Adaların tamamı İtalya'ya bırakılmıştır."
         ],
         correctAnswerIndex: 1,
         explanation: "Lozan'da Bozcaada ve Gökçeada Türkiye'ye bırakılmış, Rodos ve On İki Ada İtalya'nın elinde kalmış, Midilli, Sakız, Sisam ve Nikarya gibi diğer Ege Adaları ise Yunanistan'a verilmiştir."
@@ -662,11 +662,11 @@ window.tarih_16_sorulari = [
     {
         question: "Lozan Antlaşması'nda Boğazlarla ilgili aşağıdaki düzenlemelerden hangisi doğrudur?",
         options: [
-            "A) Boğazların yönetimi tamamen Türkiye'ye bırakılmıştır.",
-            "B) Boğazlar tamamen Sovyet Rusya'nın yönetimine verilmiştir.",
-            "C) Boğazların yönetimi bir komisyona bırakılmış ve komisyon başkanının Türk olması kabul edilmiştir.",
-            "D) Boğazlar Yunanistan'a bırakılmıştır.",
-            "E) Boğazlar tamamen İngiltere'nin denetimine bırakılmıştır."
+            "A) Boğazların yönetimi doğrudan Türkiye'ye bırakılmıştır.",
+            "B) Boğazlar Karadeniz devletlerinin ortak yönetimine verilmiştir.",
+            "C) Boğazlar, başkanı Türk olan uluslararası bir komisyona bırakılmıştır.",
+            "D) Boğazlar İngiltere'nin denetimine bırakılmıştır.",
+            "E) Boğazlar konusu ileride yapılacak bir konferansa bırakılmıştır."
         ],
         correctAnswerIndex: 2,
         explanation: "Lozan'da Boğazların yönetimi bir komisyona bırakılmış, komisyon başkanının Türk olması kabul edilmiştir. Boğazlar askerden arındırılmıştır."
@@ -742,11 +742,11 @@ window.tarih_16_sorulari = [
     {
         question: "Lozan'da Osmanlı Devleti'nin dış borçlarıyla ilgili aşağıdaki kararlardan hangisi alınmıştır?",
         options: [
-            "A) Borçların tamamı Türkiye tarafından üstlenilmiştir.",
-            "B) Borçlar tamamen silinmiştir.",
-            "C) Borçlar, Osmanlı Devleti'nden ayrılan devletlere bu topraklardan elde edilen gelirler oranında paylaştırılmıştır.",
-            "D) Borçların tamamı İngiltere tarafından ödenmiştir.",
-            "E) Borçların tamamı Osmanlı hanedanına bırakılmıştır."
+            "A) Borçların tamamını Türkiye üstlenmiştir.",
+            "B) Borçlar tümüyle silinmiştir.",
+            "C) Borçlar, ayrılan devletler arasında o topraklardan elde edilen gelire göre paylaştırılmıştır.",
+            "D) Borçlar nüfus oranına göre paylaştırılmıştır.",
+            "E) Borçlar yüzölçümü oranına göre paylaştırılmıştır."
         ],
         correctAnswerIndex: 2,
         explanation: "Lozan'da Osmanlı borçları, Osmanlı Devleti'nden ayrılan devletlere bu devletlere bırakılan topraklardan sağlanan gelirler oranında paylaştırılmıştır. Türkiye kendi payına düşen borcu taksitler hâlinde ödemeyi kabul etmiştir."
@@ -794,11 +794,11 @@ window.tarih_16_sorulari = [
     {
         question: "Lozan'daki nüfus mübadelesi kapsamında yer değiştirmeye tabi tutulan gruplarla ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) İstanbul Rumları ve Batı Trakya Türkleri zorunlu olarak yer değiştirmiştir.",
-            "B) Trakya Türkleri ve İstanbul Rumları hariç diğer bölgelerdeki Türk ve Rumların yer değiştirmesi öngörülmüştür.",
-            "C) Sadece İstanbul Rumlarının Türkiye dışına çıkarılması kararlaştırılmıştır.",
+            "A) İstanbul Rumları ve Batı Trakya Türkleri de zorunlu olarak yer değiştirmiştir.",
+            "B) İstanbul Rumları ve Batı Trakya Türkleri dışındakilerin yer değiştirmesi öngörülmüştür.",
+            "C) Yalnızca İstanbul Rumlarının Türkiye'den çıkarılması kararlaştırılmıştır.",
             "D) Yalnızca Batı Trakya Türklerinin Türkiye'ye getirilmesi kararlaştırılmıştır.",
-            "E) Mübadelenin yalnızca ekonomik nedenlerle yapılması kararlaştırılmıştır."
+            "E) Mübadele gönüllülük esasına bağlanmıştır."
         ],
         correctAnswerIndex: 1,
         explanation: "Nüfus mübadelesi kapsamında, Batı Trakya Türkleri ve İstanbul Rumları hariç, Anadolu Rumları ile Balkanlar'daki Türkler zorunlu göçe tabi tutulmuştur."

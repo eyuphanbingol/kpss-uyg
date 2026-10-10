@@ -3,11 +3,11 @@ window.cografya_17_sorulari = [
     {
         question: "Türkiye Cumhuriyeti'nin kuruluş yıllarında ekonomik yapının oluşturulmasına yönelik önemli adımlardan biri, 17 Şubat 1923'te gerçekleştirilen İzmir İktisat Kongresi'dir.\n\nBuna göre İzmir İktisat Kongresi'nde benimsenen ekonomik anlayış aşağıdakilerden hangisiyle en doğru biçimde açıklanabilir?",
         options: [
-            "A) Ekonomik faaliyetlerin tamamen devlet tarafından yürütülmesine dayalı devletçi anlayış",
-            "B) Dış ticaretin sınırlandırıldığı kapalı ekonomi anlayışı",
+            "A) Ekonomik faaliyetlerin devlet eliyle planlanıp yürütüldüğü devletçi anlayış",
+            "B) Dış ticaretin kotalarla sınırlandırıldığı ithal ikameci anlayış",
             "C) Serbest piyasa esaslarına dayanan millî ve liberal ekonomi anlayışı",
-            "D) Yabancı sermayenin tüm ekonomik faaliyetlerden dışlandığı sosyalist ekonomi anlayışı",
-            "E) Ekonominin yalnızca tarımsal üretime dayandırıldığı geleneksel ekonomi anlayışı"
+            "D) Üretim araçlarının kamulaştırıldığı sosyalist ekonomi anlayışı",
+            "E) Yabancı sermayenin ülkeden tümüyle çıkarıldığı korumacı anlayış"
         ],
         correctAnswerIndex: 2,
         explanation: "İzmir İktisat Kongresi'nde serbest piyasa esaslarına dayanan millî ve liberal ekonomi anlayışı benimsenmiştir. Kongrede özel girişimin desteklenmesi, yerli sanayinin kurulması ve ekonomik bağımsızlığın sağlanması hedeflenmiştir. Devletçi anlayış ise 1930'lu yıllarda ön plana çıkmıştır."
@@ -28,10 +28,10 @@ window.cografya_17_sorulari = [
         question: "1923-1929 döneminde Türkiye ekonomisinin liberal bir anlayışla şekillendirilmesinde aşağıdakilerden hangisinin etkili olduğu söylenebilir?",
         options: [
             "A) Özel girişimin ve serbest piyasa koşullarının desteklenmesi",
-            "B) Tüm sanayi kuruluşlarının devlet tarafından işletilmesi",
-            "C) Dış ticaretin tamamen devlet kontrolüne alınması",
-            "D) Ekonomik faaliyetlerin planlı ekonomi modeline göre yürütülmesi",
-            "E) Yatırımların yalnızca kamu kuruluşları tarafından gerçekleştirilmesi"
+            "B) Sanayi kuruluşlarının devlet tarafından kurulup işletilmesi",
+            "C) Dış ticaretin devlet tekeline alınması",
+            "D) Beş yıllık kalkınma planlarının uygulanması",
+            "E) Yatırımların kamu iktisadi teşekküllerine bırakılması"
         ],
         correctAnswerIndex: 0,
         explanation: "1923-1929 liberal döneminde özel girişim ve serbest piyasa koşulları desteklenmiştir. Devletin ekonomideki rolü sınırlı tutulmuş, özel sektörün gelişmesi teşvik edilmiştir. Devletçilik ve planlı ekonomi 1930'larda başlamıştır."
@@ -99,11 +99,11 @@ window.cografya_17_sorulari = [
     {
         question: "Türkiye'de 1950-1960 yılları arasında ekonomik politikalar açısından önceki dönemden farklı bir yaklaşım benimsenmiştir.\n\nBu dönemin temel özelliği aşağıdakilerden hangisidir?",
         options: [
-            "A) Planlı ekonomiye geçilmesi",
-            "B) Devletçilik politikasının tamamen güçlendirilmesi",
-            "C) Dış ticaretin büyük ölçüde sınırlandırılması",
+            "A) Beş yıllık kalkınma planlarına geçilmesi",
+            "B) Devletçilik ilkesinin ekonomide ağırlık kazanması",
+            "C) Dış ticaretin kotalarla sınırlandırılması",
             "D) İkinci liberal ekonomi döneminin başlaması",
-            "E) Sanayi yatırımlarının tamamen durdurulması"
+            "E) İthal ikameci sanayileşme modelinin benimsenmesi"
         ],
         correctAnswerIndex: 3,
         explanation: "1950-1960 dönemi, Demokrat Parti'nin iktidara gelmesiyle birlikte ikinci liberal ekonomi dönemi olarak bilinir. Devletçilik politikası terk edilmiş, özel girişim teşvik edilmiş ve dışa açık politika izlenmiştir."
@@ -112,10 +112,10 @@ window.cografya_17_sorulari = [
         question: "1950-1960 döneminde Türkiye'de uygulanan ekonomik politikalar sonucunda büyük yatırımlar gerçekleştirilmiş; ancak zamanla dış ticaret açıkları da ortaya çıkmaya başlamıştır.\n\nBu durum aşağıdakilerden hangisinin bu dönemin ekonomik özelliklerinden biri olduğunu gösterir?",
         options: [
             "A) İkinci liberal ekonomi döneminin yaşanması",
-            "B) Ekonominin tamamen tarıma dayandırılması",
-            "C) Dış ticaretin yasaklanması",
+            "B) Planlı kalkınma döneminin başlaması",
+            "C) Kapalı ekonomi modelinin uygulanması",
             "D) Devletçi ekonomik modelin yeniden kurulması",
-            "E) Ekonomik faaliyetlerin yalnızca kamu tarafından yürütülmesi"
+            "E) İhracata dayalı büyüme modeline geçilmesi"
         ],
         correctAnswerIndex: 0,
         explanation: "1950-1960 döneminde liberal politikaların uygulanmasıyla özel sektör yatırımları artmış, ancak ithalatın da artması dış ticaret açıklarına yol açmıştır. Bu durum, ikinci liberal ekonomi döneminin karakteristik özelliğidir."
@@ -135,11 +135,11 @@ window.cografya_17_sorulari = [
     {
         question: "Türkiye'de 1960-1980 yılları arasında uygulanan ekonomik politikalarla ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) Liberal ekonomiye tamamen geçilmiştir.",
-            "B) Dışa kapalı ekonomik yapı ve planlı kalkınma anlayışı sürdürülmüştür.",
-            "C) Devletin ekonomideki rolü tamamen ortadan kaldırılmıştır.",
-            "D) Ekonomik faaliyetler yalnızca tarım sektörüne dayandırılmıştır.",
-            "E) Dış ticarette tamamen serbestleşme sağlanmıştır."
+            "A) Liberal ekonomi modeli tümüyle benimsenmiştir.",
+            "B) Dışa kapalı yapı ve planlı kalkınma anlayışı sürdürülmüştür.",
+            "C) Kamu iktisadi teşekküllerinin büyük bölümü özelleştirilmiştir.",
+            "D) İhracata dayalı büyüme modeline geçilmiştir.",
+            "E) Kambiyo rejimi serbestleştirilip dış ticaret liberalleştirilmiştir."
         ],
         correctAnswerIndex: 1,
         explanation: "1960-1980 döneminde planlı kalkınma anlayışı ve dışa kapalı (ithal ikameci) ekonomi modeli uygulanmıştır. DPT öncülüğünde beş yıllık kalkınma planları hazırlanmış, devlet ekonomide aktif rol üstlenmeye devam etmiştir."

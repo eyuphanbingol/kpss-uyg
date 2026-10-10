@@ -54,7 +54,7 @@ window.cografya_19_sorulari = [
     {
         question: "Üzüm tarımı hakkında aşağıdakilerden hangisi söylenemez?",
         options: [
-            "A) Yalnızca ılık kış isteyen, iklim seçiciliği yüksek bir üründür.",
+            "A) İklim seçiciliği yüksek, ılık kış isteyen bir üründür.",
             "B) İklim seçiciliği azdır.",
             "C) Kuru ve yaş olarak tüketilir.",
             "D) Volkanik arazileri sever.",
@@ -90,11 +90,11 @@ window.cografya_19_sorulari = [
     {
         question: "Üzümün iklim seçiciliğinin az olmasıyla ilgili olarak aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) Düşük kış sıcaklıklarına dayanıklı olduğu için geniş bir alanda yetişebilir.",
-            "B) Yalnızca Akdeniz kıyılarında yetişebilir.",
-            "C) Yalnızca nemli Karadeniz ikliminde yetişir.",
-            "D) Kış ılıklığı olmadan hiçbir yerde yetişemez.",
-            "E) Üretimi yalnızca seralarda yapılabilir."
+            "A) Düşük kış sıcaklıklarına dayanıklı olduğundan geniş alanda yetişir.",
+            "B) Kış ılıklığı istediği için kıyı kuşağıyla sınırlı kalır.",
+            "C) Bol yağış istediği için nemli kıyılarda yoğunlaşır.",
+            "D) Toprak seçiciliği yüksek olduğundan dar alanda yetişir.",
+            "E) Uzun ve sıcak yaz istediği için güney kıyılarla sınırlıdır."
         ],
         correctAnswerIndex: 0,
         explanation: "Üzüm düşük kış sıcaklıklarına dayanıklıdır; bu nedenle iklim seçiciliği azdır ve geniş alanlarda yetişebilir."
@@ -114,10 +114,10 @@ window.cografya_19_sorulari = [
     {
         question: "Haşhaşın Doğu Karadeniz kıyı kuşağı dışında yetişebilmesine rağmen ekiminin sınırlı olmasının temel nedeni aşağıdakilerden hangisidir?",
         options: [
-            "A) Don olayına hiç dayanıklı olmaması",
-            "B) Yalnızca volkanik arazide yetişmesi",
-            "C) Uyuşturucu madde elde edilebildiği için ekiminin devlet izni ve denetimiyle sınırlandırılması",
-            "D) Yalnızca sulama ile yetişmesi",
+            "A) Don olaylarına karşı dayanıksız olması",
+            "B) Yalnız volkanik topraklarda verim vermesi",
+            "C) Ekiminin devlet izni ve denetimiyle sınırlandırılması",
+            "D) Yetişme döneminde bol sulama gerektirmesi",
             "E) İklim seçiciliğinin çok yüksek olması"
         ],
         correctAnswerIndex: 2,
@@ -126,11 +126,11 @@ window.cografya_19_sorulari = [
     {
         question: "Haşhaş fabrikası aşağıdaki yerlerin hangisinde bulunur?",
         options: [
-            "A) Aydın",
-            "B) Isparta",
-            "C) Manisa",
-            "D) Afyonkarahisar'ın Bolvadin ilçesi",
-            "E) Adana"
+            "A) Aydın (Nazilli)",
+            "B) Isparta (Eğirdir)",
+            "C) Manisa (Turgutlu)",
+            "D) Afyonkarahisar (Bolvadin)",
+            "E) Adana (Ceyhan)"
         ],
         correctAnswerIndex: 3,
         explanation: "Haşhaş fabrikası Afyonkarahisar'ın Bolvadin ilçesindedir."
@@ -162,11 +162,11 @@ window.cografya_19_sorulari = [
     {
         question: "Tütünün iklimden çok toprak seçiciliği göstermesiyle ilgili olarak aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) Toprak özellikleri, iklim koşullarından daha belirleyicidir.",
-            "B) Yalnızca nemli Karadeniz ikliminde yetişir.",
-            "C) Yalnızca kış ılıklığı olan yerlerde yetişir.",
-            "D) Üretimi tamamen iklim koşullarına bağlıdır.",
-            "E) Toprak türü tütün kalitesini etkilemez."
+            "A) Toprak özellikleri iklim koşullarından daha belirleyicidir.",
+            "B) Bol yağış istediği için nemli kıyılarda yoğunlaşır.",
+            "C) Kış ılıklığı istediği için kıyı kuşağıyla sınırlıdır.",
+            "D) Yetiştiği alanı belirleyen temel etken iklimdir.",
+            "E) Toprak türü ürünün kalitesini etkilemez."
         ],
         correctAnswerIndex: 0,
         explanation: "Tütünde iklim seçiciliğinden ziyade toprak seçiciliği vardır; yani toprak özellikleri iklimden daha belirleyicidir."
@@ -208,13 +208,13 @@ window.cografya_19_sorulari = [
         explanation: "“En fazla üretim İç Anadolu'da yapılır” ifadesi yanlıştır; incir Aydın çevresinin monokültür bitkisidir, İç Anadolu'nun değil. Diğer ifadeler doğrudur."
     },
     {
-        question: "İncirin Aydın çevresinde monokültür bitkisi olması ne anlama gelir?",
+        question: "İncirin Aydın çevresinde monokültür bitkisi olması aşağıdakilerden hangisini ifade eder?",
         options: [
-            "A) Bölge tarımının büyük ölçüde tek ürüne dayanması",
-            "B) Bölgede birçok ürünün eşit oranda ekilmesi",
-            "C) Üretimin yalnızca seralarda yapılması",
-            "D) Ürünün hiç ihraç edilmemesi",
-            "E) Yalnızca ikinci ürün olarak ekilmesi"
+            "A) Yöre tarımının büyük ölçüde tek ürüne dayandığını",
+            "B) Yörede birçok ürünün eşit oranda ekildiğini",
+            "C) Ürünün yöreye özgü endemik bir tür olduğunu",
+            "D) Ürünün iki yılda bir bol verim verdiğini",
+            "E) Ürünün ikinci ürün olarak ekildiğini"
         ],
         correctAnswerIndex: 0,
         explanation: "Monokültür, bir yörede tarımın büyük ölçüde tek ürüne dayanmasıdır. İncir, Aydın çevresinin monokültür bitkisidir."
@@ -323,10 +323,10 @@ window.cografya_19_sorulari = [
         question: "Türkiye'de muz ithalatının yapılmasının temel nedeni aşağıdakilerden hangisidir?",
         options: [
             "A) Yerli üretimin talebi karşılamaması",
-            "B) Muzun hiçbir yerde yetişmemesi",
-            "C) Muzun sanayi bitkisi olmaması",
-            "D) Muzun yalnızca kuru olarak tüketilmesi",
-            "E) Muzun iklim seçiciliğinin hiç olmaması"
+            "B) Muzun yalnız seralarda yetiştirilebilmesi",
+            "C) Muzun sanayi bitkisi olarak kullanılması",
+            "D) Yerli muzun dış pazarda talep görmemesi",
+            "E) Muz tarımının devlet iznine bağlı olması"
         ],
         correctAnswerIndex: 0,
         explanation: "Muz Akdeniz mikroklima alanlarında üretilir; ancak yerli üretim talebi karşılamadığı için ithalat da yapılır."
@@ -358,11 +358,11 @@ window.cografya_19_sorulari = [
     {
         question: "Yer fıstığının Akdeniz'de ikinci ürün olarak ekilmesinin özelliği aşağıdakilerden hangisidir?",
         options: [
-            "A) Kışın nadasa bırakılması",
-            "B) Devlet kontrolünde ekilmesi",
-            "C) Yalnızca serada üretilmesi",
-            "D) Yaz sezonunda ekilmesi",
-            "E) Yalnızca kuru olarak tüketilmesi"
+            "A) Kışın ekilip ilkbaharda hasat edilmesi",
+            "B) Ekiminin devlet iznine bağlı olması",
+            "C) Sera ortamında yetiştirilmesi",
+            "D) Yaz döneminde ekilmesi",
+            "E) Nadasa bırakılan tarlalarda ekilmesi"
         ],
         correctAnswerIndex: 3,
         explanation: "Yer fıstığı genellikle Akdeniz'de ikinci ürün olarak yaz sezonunda ekilir."
@@ -418,11 +418,11 @@ window.cografya_19_sorulari = [
     {
         question: "Elmanın her bölgede yetişebilmesinin temel nedeni aşağıdakilerden hangisidir?",
         options: [
-            "A) Yalnızca tropikal iklim istemesi",
-            "B) Yalnızca kış ılıklığı istemesi",
+            "A) Bol yağış istemesi",
+            "B) Kış ılıklığı istemesi",
             "C) İklim seçiciliğinin az olması",
-            "D) Devlet kontrolünde ekilmesi",
-            "E) Yalnızca jeotermal enerji ile yetişmesi"
+            "D) Toprak seçiciliğinin yüksek olması",
+            "E) Yetişme döneminin kısa olması"
         ],
         correctAnswerIndex: 2,
         explanation: "Elma iklim seçiciliği az olduğundan her bölgede yetişebilir."
@@ -527,10 +527,10 @@ window.cografya_19_sorulari = [
         question: "Sebzeciliğin geliştiği yöreler aşağıdakilerin hangisinde birlikte verilmiştir?",
         options: [
             "A) Doğu Karadeniz, Doğu Anadolu ve İç Anadolu",
-            "B) Yalnızca Güneydoğu Anadolu",
+            "B) Güneydoğu Anadolu, Erzurum-Kars ve Ardahan",
             "C) Akdeniz, Ege ve Güney Marmara",
-            "D) Yalnızca Trakya",
-            "E) Kırşehir, Konya ve Afyon"
+            "D) Trakya, Batı Karadeniz ve Yukarı Fırat",
+            "E) Kırşehir, Konya ve Afyonkarahisar"
         ],
         correctAnswerIndex: 2,
         explanation: "Sebzecilik Akdeniz, Ege ve Güney Marmara'da gelişmiştir. Kırşehir, Konya ve Afyon jeotermal seracılık alanlarıdır."
@@ -640,8 +640,8 @@ window.cografya_19_sorulari = [
         options: [
             "A) Kırmızı mercimek — Yozgat / Yeşil mercimek — Güneydoğu Anadolu",
             "B) Kırmızı mercimek — Güneydoğu Anadolu / Yeşil mercimek — Yozgat",
-            "C) Her ikisi de yalnızca Konya",
-            "D) Her ikisi de yalnızca Rize",
+            "C) Kırmızı mercimek — Konya / Yeşil mercimek — Çukurova",
+            "D) Kırmızı mercimek — Trakya / Yeşil mercimek — Ege",
             "E) Kırmızı mercimek — Niğde / Yeşil mercimek — Aydın"
         ],
         correctAnswerIndex: 1,
@@ -663,10 +663,10 @@ window.cografya_19_sorulari = [
         question: "Antep fıstığı, fındık ve zeytinin ortak özelliği aşağıdakilerden hangisidir?",
         options: [
             "A) Devirli (periyodik) verim vermeleri",
-            "B) Üçünün de yalnızca İç Anadolu'da yetişmesi",
-            "C) Üçünün de tahıl grubunda yer alması",
-            "D) Üretimin tamamen seralarda yapılması",
-            "E) Üçünün de suya hiç ihtiyaç duymayan sanayi bitkisi olması"
+            "B) Kış ılıklığı isteyen ürünler olmaları",
+            "C) Monokültür olarak yetiştirilmeleri",
+            "D) İklim seçiciliklerinin az olması",
+            "E) Ekimlerinin devlet iznine bağlı olması"
         ],
         correctAnswerIndex: 0,
         explanation: "Antep fıstığı, fındık ve zeytin iki yılda bir iyi ürün veren devirli (periyodik) tarım ürünleri grubundadır."
@@ -758,11 +758,11 @@ window.cografya_19_sorulari = [
     {
         question: "Pamuğun sulama ile ilişkisini en doğru açıklayan ifade aşağıdakilerden hangisidir?",
         options: [
-            "A) Pamuk hiç su istemez.",
-            "B) Dünya üzerinde sulamanın geliştiği yerlerde üretimi yapılır.",
-            "C) Yalnızca yağışlı Doğu Karadeniz'de yetişir.",
-            "D) Üretimi nadasa bağlıdır.",
-            "E) Yalnızca jeotermal seralarda üretilir."
+            "A) Yağışın bol olduğu nemli kıyılarda yetiştirilir.",
+            "B) Sulamanın geliştiği yerlerde üretimi yapılır.",
+            "C) Kışı sert geçen yüksek platolarda yetiştirilir.",
+            "D) Kuru tarım yöntemiyle nadasa bırakılarak ekilir.",
+            "E) Volkanik arazilerde sulamasız yetiştirilir."
         ],
         correctAnswerIndex: 1,
         explanation: "Pamuk, sulamanın geliştiği yerlerde üretilen, uzun yaz kuraklığı isteyen kısa yetişme dönemli bir üründür."
@@ -846,11 +846,11 @@ window.cografya_19_sorulari = [
     {
         question: "Buğdayın sanayideki yeri ile ilgili olarak aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) Yalnızca kozmetikte kullanılır.",
-            "B) Başta un ve makarna olmak üzere birçok sanayi kolunun ham maddesidir.",
-            "C) Yalnızca gülyağı üretiminde kullanılır.",
-            "D) Alkollü içecekler sanayisinin tek hammaddesidir.",
-            "E) Sanayide kullanılmaz, yalnızca taze olarak tüketilir."
+            "A) Esas olarak yem sanayisinin ham maddesidir.",
+            "B) Un ve makarna başta olmak üzere birçok sanayi kolunun ham maddesidir.",
+            "C) Daha çok bitkisel yağ sanayisinde kullanılır.",
+            "D) Bira sanayisinin temel ham maddesidir.",
+            "E) Sanayide işlenmeden tüketilen bir üründür."
         ],
         correctAnswerIndex: 1,
         explanation: "Buğday başta un ve makarna olmak üzere birçok sanayi kolunun ham maddesidir."
@@ -906,11 +906,11 @@ window.cografya_19_sorulari = [
     {
         question: "Şeker pancarının üretim tesisi yanında yetiştirilmesinin nedeni aşağıdakilerden hangisidir?",
         options: [
-            "A) İklim seçiciliğinin hiç olmaması",
-            "B) Devlet kontrolünde uyuşturucu içermesi",
-            "C) Yalnızca volkanik arazide yetişmesi",
+            "A) İklim seçiciliğinin az olması",
+            "B) Ekiminin devlet iznine bağlı olması",
+            "C) Volkanik arazide verimli olması",
             "D) Kısa sürede bozulan bir tarım ürünü olması",
-            "E) İhraç edilememesi"
+            "E) İhracatının sınırlı olması"
         ],
         correctAnswerIndex: 3,
         explanation: "Şeker pancarı kısa sürede bozulduğu için üretim tesisi yanında olmak zorundadır."
@@ -1051,10 +1051,10 @@ window.cografya_19_sorulari = [
         question: "Kuraklık seven baklagiller ile sulama isteyen baklagil aşağıdakilerin hangisinde doğru ayrılmıştır?",
         options: [
             "A) Kuraklık seven: fasulye / Sulama isteyen: nohut ve yeşil mercimek",
-            "B) Üçü de yalnızca nemli Karadeniz'de yetişir.",
-            "C) Üçü de yalnızca sulama ile yetişir.",
+            "B) Kuraklık seven: fasulye ve nohut / Sulama isteyen: yeşil mercimek",
+            "C) Kuraklık seven: yeşil mercimek / Sulama isteyen: nohut ve fasulye",
             "D) Kuraklık seven: nohut ve yeşil mercimek / Sulama isteyen: fasulye",
-            "E) Kuraklık seven: yalnızca fasulye / Sulama isteyen: kırmızı mercimek"
+            "E) Kuraklık seven: nohut / Sulama isteyen: fasulye ve yeşil mercimek"
         ],
         correctAnswerIndex: 3,
         explanation: "Nohut ve yeşil mercimek kuraklık seven ürünlerdir. Fasulye ise sulama ile yetişir."
@@ -1343,10 +1343,10 @@ window.cografya_19_sorulari = [
         question: "Volkanik arazileri seven ürünler arasında aşağıdakilerden hangisi yer alır?",
         options: [
             "A) Üzüm ve patates",
-            "B) Yalnızca kırmızı mercimek",
-            "C) Yalnızca çay",
-            "D) Yalnızca muz",
-            "E) Yalnızca anason"
+            "B) Çay ve fındık",
+            "C) Muz ve turunçgil",
+            "D) Pamuk ve çeltik",
+            "E) Anason ve gül"
         ],
         correctAnswerIndex: 0,
         explanation: "Üzüm volkanik arazileri sever. Patates de volkanik arazilerde daha iyi yetişir."
@@ -1390,10 +1390,10 @@ window.cografya_19_sorulari = [
     {
         question: "Aşağıdakilerden hangisi hem tahıl hem de yağ bitkisi olarak değerlendirilen ürünle doğrudan ilişkilidir?",
         options: [
-            "A) Kırmızı mercimek",
-            "B) Gülün Isparta'da yetişmesi",
-            "C) İncirin Aydın monokültürü",
-            "D) Yağlık mısırın Çukurova, Konya Ovası ve Şanlıurfa'da üretilmesi",
+            "A) Kırmızı mercimeğin Güneydoğu Anadolu'da üretilmesi",
+            "B) Yağ gülünün Isparta'da yetiştirilmesi",
+            "C) Ayçiçeğinin Trakya'da yoğunlaşması",
+            "D) Yağlık mısırın Çukurova, Konya ve Şanlıurfa'da üretilmesi",
             "E) Arpanın bira ve yem için ekilmesi"
         ],
         correctAnswerIndex: 3,

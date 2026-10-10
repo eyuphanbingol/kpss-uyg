@@ -9,11 +9,11 @@ window.tarih_23_sorulari = [
 {
     "question": "Monroe Doktrini’ne göre ABD’nin temel yaklaşımı aşağıdakilerden hangisidir?",
     "options": [
-        "A) Avrupa ittifaklarına asker göndermek",
-        "B) Japonya’ya savaş açmak",
-        "C) Osmanlı topraklarını paylaşmak",
-        "D) Milletler Cemiyeti’ni kurmak",
-        "E) Kendi kıtasına Avrupa saldırısı olmadığı sürece Avrupa’nın iç işlerine karışmamak"
+        "A) Avrupa ittifaklarına doğrudan katılmak",
+        "B) Pasifik'te sömürge edinmek",
+        "C) Milletler Cemiyeti'nin liderliğini üstlenmek",
+        "D) Avrupa sömürgeleriyle ortak savunma yapmak",
+        "E) Amerika kıtasına karışılmadıkça Avrupa işlerine karışmamak"
     ],
     "correctAnswerIndex": 4,
     "explanation": "Yalnızlık politikası: ABD kıtasına saldırı yoksa Avrupa iç işlerine karışmaz."
@@ -121,7 +121,7 @@ window.tarih_23_sorulari = [
         "B) Öğrenci – Ufa",
         "C) Çiftçi – Semerkant",
         "D) Tüccar – Buhara",
-        "E) Baskın yapan, hücum eden – Hokand"
+        "E) Baskın yapan – Hokand"
     ],
     "correctAnswerIndex": 4,
     "explanation": "Basmacı: baskın yapan. Hareket Hokand’da başladı."
@@ -135,11 +135,11 @@ window.tarih_23_sorulari = [
 {
     "question": "28 Mayıs 1918’de Azerbaycan Halk Cumhuriyeti’ni kuran lider ve bu cumhuriyeti resmi tanıyan ilk devlet hangi seçenektedir?",
     "options": [
-        "A) Stalin – SSCB",
+        "A) Neriman Nerimanov – Sovyet Rusya",
         "B) Mehmet Emin Resulzade – Osmanlı Devleti",
-        "C) Lenin – İngiltere",
-        "D) Şerif Hüseyin – Fransa",
-        "E) Gaspıralı – ABD"
+        "C) Fethali Han Hoyski – İran",
+        "D) Mehmet Emin Resulzade – Almanya",
+        "E) Ali Merdan Topçubaşı – İngiltere"
     ],
     "correctAnswerIndex": 1,
     "explanation": "Resulzade kurdu; Türk tarihinin cumhuriyetle yönetilen ilk devleti. İlk tanıyan Osmanlı’dır."
@@ -253,25 +253,25 @@ window.tarih_23_sorulari = [
     "explanation": "10 Ocak 1920, merkez Cenevre (Cemiyet-i Akvam). Türkiye sonradan üyedir."
 },
 {
-    "question": "Locarno Antlaşması (1925) ile ilgili hangisi doğrudur?",
+    "question": "Locarno Antlaşması (1925) ile ilgili aşağıdakilerden hangisi doğrudur?",
     "options": [
-        "A) Türkiye imzacıdır",
-        "B) Almanya dışlanmaktan çıkarılarak uluslararası iş birliğine alındı",
-        "C) I. Dünya Savaşı’nı başlattı",
-        "D) SSCB’yi kurdu",
-        "E) Filistin’i Osmanlı’ya iade etti"
+        "A) Türkiye de antlaşmaya taraf olmuştur.",
+        "B) Almanya uluslararası iş birliğine dahil edilmiştir.",
+        "C) Almanya'nın doğu sınırları güvence altına alınmıştır.",
+        "D) SSCB Milletler Cemiyeti'ne alınmıştır.",
+        "E) Ren bölgesi Fransa'ya bırakılmıştır."
     ],
     "correctAnswerIndex": 1,
     "explanation": "Türkiye Locarno’da yoktur. Almanya kısa sonra Milletler Cemiyeti’ne üye oldu."
 },
 {
-    "question": "1928 Briand–Kellogg Paktı’na göre hangisi doğrudur?",
+    "question": "1928 Briand–Kellogg Paktı ile ilgili aşağıdakilerden hangisi doğrudur?",
     "options": [
-        "A) Savunmaya dayanmayan savaş kanun dışı sayılmıştır; Türkiye de pakta katılmıştır",
-        "B) Türkiye pakta dahil olmamıştır",
-        "C) Yalnızca Almanya imzalamıştır",
-        "D) Monroe Doktrini’ni iptal etmiştir",
-        "E) Basmacı hareketini desteklemiştir"
+        "A) Savaş millî politika aracı olmaktan çıkarılmış; Türkiye de katılmıştır.",
+        "B) Türkiye pakta katılmamıştır.",
+        "C) Pakta yalnızca Avrupa devletleri katılabilmiştir.",
+        "D) Saldırgan devletlere askerî yaptırım öngörmüştür.",
+        "E) Milletler Cemiyeti'nin yerine kurulmuştur."
     ],
     "correctAnswerIndex": 0,
     "explanation": "1928’de Paris’te imzalanan Briand–Kellogg Paktı, savunma amacı taşımayan savaşı kanun dışı saymıştır. Türkiye pakta 1929’da katılmıştır."
@@ -289,8 +289,8 @@ window.tarih_23_sorulari = [
     "explanation": "Alexander Fleming penisilini buldu. Pasteur tuzak şıktır."
 },
 {
-    "question": "Gazap Üzümleri adlı eserin yazarı kimdir?",
-    "options": ["A) Picasso", "B) Marx", "C) Charlie Chaplin", "D) John Steinbeck", "E) Halide Edip"],
+    "question": "“Gazap Üzümleri” adlı eserin yazarı aşağıdakilerden hangisidir?",
+    "options": ["A) Ernest Hemingway", "B) William Faulkner", "C) Mark Twain", "D) John Steinbeck", "E) Jack London"],
     "correctAnswerIndex": 3,
     "explanation": "John Steinbeck — Gazap Üzümleri."
 },

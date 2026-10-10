@@ -20,7 +20,7 @@ window.tarih_6_sorulari = [
     },
     {
         question: "İstanbul'un bir bilim ve kültür merkezi olması ile Hz. Muhammed'in bu şehrin fethiyle ilgili hadisi, fetih nedenleri arasında hangi tür bir gerekçeye örnektir?",
-        options: ["A) Yalnızca ekonomik gerekçe", "B) Kültürel ve dinî-manevi gerekçe", "C) Yalnızca askerî gerekçe", "D) Yalnızca siyasi gerekçe", "E) Coğrafi gerekçe"],
+        options: ["A) Ekonomik gerekçe", "B) Kültürel ve dinî-manevi gerekçe", "C) Askerî gerekçe", "D) Siyasi gerekçe", "E) Coğrafi gerekçe"],
         correctAnswerIndex: 1,
         explanation: "İstanbul'un bilim-kültür merkezi olması kültürel bir gerekçe, Hz. Muhammed'in hadisi ise dinî-manevi bir gerekçedir; ikisi birlikte fetih motivasyonunun manevi-kültürel boyutunu oluşturur."
     },
@@ -32,7 +32,7 @@ window.tarih_6_sorulari = [
     },
     {
         question: "Fetih öncesi Anadolu bey ve Avrupa devletleriyle saldırmazlık antlaşmaları yapılmasının temel amacı aşağıdakilerden hangisidir?",
-        options: ["A) Bizans'a yardım göndermek", "B) Ticaret gelirlerini artırmak", "C) Kuşatma sırasında olası bir ittifakı ve arkadan saldırıyı önlemek", "D) Balkanlardaki fetihleri durdurmak", "E) İpek Yolu'nu kapatmak"],
+        options: ["A) Bizans'ın ticaret yollarını kesmek", "B) Ticaret gelirlerini artırmak", "C) Kuşatmada olası bir ittifakı ve arkadan saldırıyı önlemek", "D) Balkanlardaki fetihleri hızlandırmak", "E) Karadeniz ticaretini denetim altına almak"],
         correctAnswerIndex: 2,
         explanation: "Bu antlaşmaların amacı, kuşatma sırasında çevredeki güçlerin Bizans'a yardım etmesini veya Osmanlı'ya arkadan saldırmasını önlemektir."
     },
@@ -44,7 +44,7 @@ window.tarih_6_sorulari = [
     },
     {
         question: "Fetih öncesinde Bizanslı üst düzey devlet adamı Grandük Notaras'ın 'İstanbul'da kardinal külahı görmektense Osmanlı'nın sarığını görmeyi tercih ederim' sözü, Bizans içindeki hangi durumu yansıtır?",
-        options: ["A) Bizans halkının Osmanlı'ya karşı birleşik direnişini", "B) Bizans ordusunun güçlü olduğunu", "C) Katolik-Ortodoks birleşmesine duyulan tepkiyi ve Osmanlı yönetimine razı olma eğilimini", "D) Osmanlı'nın Bizans'tan yardım istediğini", "E) Bizans'ın Osmanlı ile ittifak kurduğunu"],
+        options: ["A) Bizans halkının Osmanlı'ya karşı birleştiğini", "B) Bizans ordusunun güçlü olduğunu", "C) Katolik birliğine tepkiyi ve Osmanlı yönetimine razı olma eğilimini", "D) Bizans halkının Papalıkla birleşmeyi desteklediğini", "E) Bizans'ın Osmanlı ile ittifak kurduğunu"],
         correctAnswerIndex: 2,
         explanation: "Bu söz, Bizans içindeki bazı kesimlerin Katolik kilisesiyle birleşmeye (ve Batı'nın Ortodoksluğa müdahalesine) tepki duyduğunu, Osmanlı yönetimini bu duruma tercih ettiklerini gösterir."
     },
@@ -75,11 +75,11 @@ window.tarih_6_sorulari = [
     {
         question: "Fatih Sultan Mehmet Dönemi'ndeki fetihlerle ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
-        "A) Bizans İmparatorluğu'na son verilmiş, Trabzon Rum İmparatorluğu da ortadan kaldırılmıştır",
-        "B) Anadolu'da hiçbir Türk beyliğine son verilmemiştir",
-        "C) Kırım'ın Osmanlı egemenliğine girmesi sağlanamamıştır",
-        "D) Fetihler yalnızca karada yapılmış, denizlerde ilerleme olmamıştır",
-        "E) Balkanlarda hiçbir toprak kazanılmamıştır"
+        "A) Bizans'a son verilmiş, Trabzon Rum İmparatorluğu da ortadan kaldırılmıştır.",
+        "B) Anadolu'daki Türk beyliklerine karşı sefer düzenlenmemiştir.",
+        "C) Kırım'ın Osmanlı egemenliğine girmesi sağlanamamıştır.",
+        "D) Denizlerde herhangi bir fetih yapılmamıştır.",
+        "E) Balkanlarda yeni toprak kazanılmamıştır."
         ],
         correctAnswerIndex: 0,
         explanation: "Fatih Sultan Mehmet 1453'te İstanbul'u alarak Bizans İmparatorluğu'na, 1461'de de Trabzon Rum İmparatorluğu'na son vermiştir. Bu dönemde ayrıca Karamanoğulları Beyliği ortadan kaldırılmış, 1475'te Kırım Osmanlı egemenliğine alınmış, Ege adaları ile Mora, Sırbistan, Bosna ve Eflak gibi Balkan toprakları fethedilmiştir."
@@ -206,7 +206,7 @@ window.tarih_6_sorulari = [
     },
     {
         question: "Yavuz Sultan Selim'in '8 yıla 80 yıllık iş sığdırmış padişah' olarak nitelendirilmesinin nedeni aşağıdakilerden hangisidir?",
-        options: ["A) Uzun süre tahtta kalmasıdır", "B) Hiç sefere çıkmamasıdır", "C) Kısa saltanat süresine rağmen çok büyük işler başarmasıdır", "D) Sadece Anadolu'da fetih yapmasıdır", "E) Yalnızca ekonomik reformlar yapmasıdır"],
+        options: ["A) Uzun süre tahtta kalması", "B) Seferlerinin büyük bölümünü Batı'ya düzenlemesi", "C) Kısa saltanatına rağmen çok büyük başarılar kazanması", "D) Fetihlerini Anadolu ile sınırlı tutması", "E) Divan teşkilatını yeniden düzenlemesi"],
         correctAnswerIndex: 2,
         explanation: "Yavuz Sultan Selim yalnızca 8 yıl tahtta kalmasına rağmen Çaldıran, Turnadağ, Mercidabık ve Ridaniye gibi büyük başarılar elde ettiği için bu şekilde nitelendirilmiştir."
     },
@@ -386,7 +386,7 @@ window.tarih_6_sorulari = [
     },
     {
         question: "Sokullu Mehmet Paşa ile ilgili aşağıdakilerden hangisi doğrudur?",
-        options: ["A) Kanuni, II. Selim ve III. Murat dönemlerinde sadrazamlık yapmıştır", "B) Sadece Kanuni döneminde sadrazamlık yapmıştır", "C) Sadece II. Selim döneminde sadrazamlık yapmıştır", "D) Yavuz döneminde sadrazamlık yapmıştır", "E) Sadece III. Murat döneminde sadrazamlık yapmıştır"],
+        options: ["A) Kanuni, II. Selim ve III. Murat dönemlerinde sadrazamlık yapmıştır.", "B) Yalnızca Kanuni döneminde sadrazamlık yapmıştır.", "C) Yavuz ve Kanuni dönemlerinde sadrazamlık yapmıştır.", "D) II. Selim ve III. Murat dönemlerinde kaptan-ı deryalık yapmıştır.", "E) III. Murat ve III. Mehmet dönemlerinde sadrazamlık yapmıştır."],
         correctAnswerIndex: 0,
         explanation: "Sokullu Mehmet Paşa, Kanuni, II. Selim ve III. Murat dönemlerinde sadrazamlık yapmıştır."
     },
@@ -410,7 +410,7 @@ window.tarih_6_sorulari = [
     },
     {
         question: "Sokullu Mehmet Paşa'nın İnebahtı yenilgisi üzerine Venedik elçisine söylediği rivayet edilen 'Biz Kıbrıs'ı alarak sizin kolunuzu kestik; siz ise donanmamızı yakmakla sakalımızı tıraş ettiniz.' sözüyle vurgulamak istediği aşağıdakilerden hangisidir?",
-        options: ["A) Kıbrıs'ın önemsiz olduğu", "B) Kıbrıs'ın kalıcı bir kazanç, donanma kaybının ise telafi edilebilir olduğu", "C) Osmanlı'nın artık deniz gücü kalmadığı", "D) Venedik'in çok güçlü olduğu", "E) Barışın imkânsız olduğu"],
+        options: ["A) Kıbrıs'ın önemsiz bir kazanç olduğu", "B) Kıbrıs'ın kalıcı, donanma kaybının ise telafi edilebilir olduğu", "C) Osmanlı'nın deniz gücünün sona erdiği", "D) Venedik'in Akdeniz'e hâkim olduğu", "E) Barışın artık imkânsız olduğu"],
         correctAnswerIndex: 1,
         explanation: "Sokullu bu benzetmeyle, kalıcı bir toprak kazancı olan Kıbrıs'ın (kesilen kol) geri alınamayacağını, yakılan donanmanın (tıraş edilen sakal) ise yeniden ve daha güçlü biçimde inşa edilebileceğini anlatmak istemiştir. Nitekim Osmanlı donanması kısa sürede yeniden kurulmuştur."
     },
@@ -476,7 +476,7 @@ window.tarih_6_sorulari = [
     },
     {
         question: "Sokullu Mehmet Paşa'nın üç büyük projesi (Don-Volga, Süveyş Kanalı, Marmara-Karadeniz) değerlendirildiğinde, bu projelerin ortak amacı aşağıdakilerden hangisidir?",
-        options: ["A) Yalnızca askeri zafer kazanmak", "B) Yalnızca dinî amaçlar gütmek", "C) Ticaret yollarını ve stratejik bağlantıları güçlendirerek Osmanlı'nın gücünü artırmak", "D) Avrupa ile barış yapmak", "E) Yalnızca yeni topraklar fethetmek"],
+        options: ["A) Avrupa'ya karşı askerî üstünlük kazanmak", "B) İç isyanları bastırmak", "C) Ticaret yollarını ve stratejik bağlantıları güçlendirmek", "D) Avrupa ile kalıcı barış sağlamak", "E) Yeni topraklar fethetmek"],
         correctAnswerIndex: 2,
         explanation: "Üç proje de (İpek Yolu, Baharat Yolu, Karadeniz'e ikinci çıkış ve kereste teminini hedeflemesi bakımından) ticaret yollarını ve stratejik bağlantıları güçlendirerek Osmanlı'nın gücünü artırmayı amaçlamıştır."
     }

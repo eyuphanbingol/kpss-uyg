@@ -118,7 +118,7 @@ window.cografya_18_sorulari = [
     {
         question: "Aşağıdakilerden hangisi tarımı destekleyen kuruluşlar arasında yer almaz?",
         options: [
-            "A) Türkiye Petrolleri Anonim Ortaklığı (TPAO)",
+            "A) Türkiye Petrolleri Anonim Ortaklığı",
             "B) Toprak Mahsulleri Ofisi",
             "C) Pankobirlik",
             "D) Çukobirlik",
@@ -210,10 +210,10 @@ window.cografya_18_sorulari = [
     {
         question: "Kenevir (kendir) ile ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) Üretimi tamamen serbest bırakılmıştır.",
+            "A) Üretimi izin alınmadan serbestçe yapılabilir.",
             "B) Tohumuna 'çedene' adı verilir.",
             "C) Ekimine en fazla izin verilen bölge Marmara'dır.",
-            "D) Yalnızca Kastamonu ilinde yetiştirilmektedir.",
+            "D) Yalnızca Ege Bölgesi'nde ekimine izin verilir.",
             "E) Nemli Karadeniz ikliminde yetişmez."
         ],
         correctAnswerIndex: 1,

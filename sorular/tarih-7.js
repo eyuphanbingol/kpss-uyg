@@ -269,9 +269,9 @@ window.tarih_7_sorulari = [
     options: [
         "A) Mora",
         "B) Podolya",
-        "C) Temeşvar hariç tüm Macaristan",
+        "C) Temeşvar dışında Macaristan",
         "D) Azak",
-        "E) Girit"
+        "E) Dalmaçya kıyıları"
     ],
     correctAnswerIndex: 2,
     explanation: "Karlofça Antlaşması ile Temeşvar hariç tüm Macaristan Avusturya'ya bırakılmıştır."

@@ -123,11 +123,11 @@ window.guncel_2_sorulari = [
 {
     "question": "TÜRKSAT 6A'nın Türkiye açısından önemi aşağıdakilerden hangisidir?",
     "options": [
-        "A) Türkiye'nin ilk savaş uçağı olması",
-        "B) Türkiye'nin ilk hava savunma sistemi olması",
-        "C) Türkiye'nin ilk astronotunu taşıması",
-        "D) Türkiye'nin haberleşme uydusu üretebilen ülkeler arasına girmesine katkı sağlaması",
-        "E) Türkiye'nin ilk ana muharebe tankı olması"
+        "A) Türkiye'nin ilk yer gözlem uydusu olması",
+        "B) Türkiye'nin yörüngeye kendi roketiyle fırlattığı ilk uydu olması",
+        "C) Türkiye'nin ilk astronotunu Uluslararası Uzay İstasyonu'na taşıması",
+        "D) Türkiye'nin haberleşme uydusu üretebilen ülkeler arasına girmesini sağlaması",
+        "E) Türkiye'nin ilk askerî keşif uydusu olması"
     ],
     "correctAnswerIndex": 3,
     "explanation": "Haberleşme uydusu üretebilen ülkeler arasına giriştir."
@@ -303,11 +303,11 @@ window.guncel_2_sorulari = [
 {
     "question": "Gazi Yaşargil aşağıdaki alanlardan hangisiyle özdeşleşmiştir?",
     "options": [
-        "A) Ekonomi",
-        "B) Matematik",
-        "C) Astronomi",
-        "D) Kimya",
-        "E) Beyin cerrahisi ve mikronöroşirürji"
+        "A) Kalp-damar cerrahisi",
+        "B) Organ nakli",
+        "C) Göz cerrahisi",
+        "D) Plastik cerrahi",
+        "E) Beyin cerrahisi (mikronöroşirürji)"
     ],
     "correctAnswerIndex": 4,
     "explanation": "Beyin cerrahisi."

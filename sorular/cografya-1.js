@@ -84,11 +84,11 @@ window.cografya_1_sorulari = [
     {
         question: "Türkiye'nin matematik konumu dikkate alındığında aşağıdakilerden hangisi yanlıştır?",
         options: [
-            "A) Güneş ışınları hiçbir zaman dik açıyla gelmez.",
-            "B) Öğle vakti gölge boyu hiçbir zaman sıfır olmaz.",
+            "A) Güneş ışınları yıl boyunca hiçbir noktaya dik açıyla gelmez.",
+            "B) Öğle vakti cisimlerin gölge boyu yıl boyunca sıfır olmaz.",
             "C) Güneyden kuzeye gidildikçe çizgisel hız azalır.",
             "D) 21 Haziran'da gece süresi yılın en uzun değerine ulaşır.",
-            "E) Güney yamaçlar bakı etkisinden daha fazla yararlanır."
+            "E) Güneye bakan yamaçlar bakı etkisinden daha fazla yararlanır."
         ],
         correctAnswerIndex: 3,
         explanation: "Türkiye Kuzey Yarım Küre'de bulunduğu için 21 Haziran'da en uzun gündüz, en kısa gece yaşanır."
@@ -382,9 +382,9 @@ window.cografya_1_sorulari = [
     {
         question: "Türkiye'de maden çeşitliliğinin fazla olmasında aşağıdakilerden hangisinin etkili olduğu söylenebilir?",
         options: [
-            "A) Tek tip kayaç yapısının bulunmasının",
-            "B) Madenlerin yalnızca fay hatları üzerinde bulunmasının",
-            "C) Ülkenin yalnızca genç arazilerden oluşmasının",
+            "A) Kayaç yapısının büyük ölçüde tek düze olmasının",
+            "B) Maden yataklarının fay hatları boyunca toplanmasının",
+            "C) Arazilerin büyük bölümünün III. zamanda oluşmasının",
             "D) Jeolojik yapının ve oluşum dönemlerinin çeşitlilik göstermesinin",
             "E) Matematik konumun maden dağılışını belirlemesinin"
         ],
@@ -486,11 +486,11 @@ window.cografya_1_sorulari = [
     {
         question: "21 Aralık tarihinde Türkiye'de en uzun gece yaşanmaktadır.\n\nBu tarihten sonra gerçekleşecek değişim aşağıdakilerden hangisidir?",
         options: [
-            "A) Gündüz süreleri kısalmaya devam eder.",
-            "B) Geceler uzamaya devam eder.",
+            "A) Gündüz süreleri kısalmaya devam eder ve en kısa değerine 21 Mart'ta ulaşır.",
+            "B) Geceler uzamaya devam eder ve 21 Mart'ta gece-gündüz eşitlenir.",
             "C) Gündüz süreleri uzamaya başlar ancak 21 Mart'a kadar gecelerden kısadır.",
-            "D) Kuzeye gidildikçe gündüz süresi uzar.",
-            "E) Gölge boyları yıl boyunca sürekli uzar."
+            "D) Gündüz süreleri uzamaya başlar ve hemen gecelerden uzun hâle gelir.",
+            "E) Öğle vakti gölge boyları 21 Haziran'a kadar uzamayı sürdürür."
         ],
         correctAnswerIndex: 2,
         explanation: "21 Aralık'tan sonra Türkiye'de gündüzler uzamaya başlar. Ancak 21 Mart'a kadar geceler gündüzlerden daha uzundur."
@@ -527,11 +527,11 @@ window.cografya_1_sorulari = [
     {
         question: "Türkiye'nin maden kaynaklarıyla ilgili aşağıdaki değerlendirmelerden hangisi doğrudur?",
         options: [
-            "A) Maden çeşidi az, rezerv miktarı fazladır.",
+            "A) Maden çeşidi az, birçok madenin rezervi fazladır.",
             "B) Maden çeşidi fazla, birçok madenin rezervi sınırlıdır.",
-            "C) Madenler yalnızca volkanik arazilerde bulunur.",
+            "C) Maden yatakları büyük ölçüde volkanik arazilerde toplanmıştır.",
             "D) Madenlerin dağılışında enlem temel belirleyicidir.",
-            "E) Maden yatakları ülkenin yalnızca doğusunda yoğunlaşmıştır."
+            "E) Maden yatakları büyük ölçüde ülkenin doğusunda yoğunlaşmıştır."
         ],
         correctAnswerIndex: 1,
         explanation: "Türkiye jeolojik çeşitliliği nedeniyle maden çeşidi bakımından zengindir. Ancak birçok maden yatağının rezervi dünya ölçeğinde sınırlıdır."
@@ -665,8 +665,8 @@ window.cografya_1_sorulari = [
     {
         question: "Türkiye'nin matematik konumu ve bakı koşulları dikkate alındığında aşağıdakilerden hangisi yanlıştır?",
         options: [
-            "A) Güneş ışınları Türkiye'ye hiçbir zaman dik açıyla gelmez.",
-            "B) Öğle vakti gölge boyu hiçbir zaman sıfır olmaz.",
+            "A) Güneş ışınları Türkiye'ye yıl boyunca dik açıyla gelmez.",
+            "B) Öğle vakti gölge boyu yıl boyunca sıfır olmaz.",
             "C) Güney yamaçlar kuzey yamaçlara göre daha fazla güneşlenir.",
             "D) Kuzeyden güneye gidildikçe Güneş ışınlarının geliş açısı genel olarak büyür.",
             "E) Kuzey yamaçlar yıl boyunca bakı etkisi nedeniyle daha fazla ısınır."

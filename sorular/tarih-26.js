@@ -15,23 +15,23 @@ window.tarih_26_sorulari = [
     {
         question: "Soğuk Savaş’ın temel özelliği aşağıdakilerden hangisidir?",
         options: [
-            "A) ABD ile SSCB’nin Avrupa’da topyekûn savaşa girmesi",
+            "A) ABD ile SSCB'nin Avrupa'da doğrudan savaşması",
             "B) Nükleer silahların yasaklanması",
-            "C) Yalnızca ekonomik rekabet",
-            "D) BM’nin lağvedilmesi",
-            "E) Doğrudan büyük savaş yerine vekâlet savaşları, ittifaklar, propaganda ve silahlanma"
+            "C) Rekabetin yalnızca ekonomik alanda sürmesi",
+            "D) Birleşmiş Milletler'in dağıtılması",
+            "E) Doğrudan savaş yerine vekâlet savaşları, bloklaşma ve silahlanma"
         ],
         correctAnswerIndex: 4,
         explanation: "Süper güçler doğrudan topyekûn savaşa girmeden vekâlet, yardım, ittifak, propaganda, silah ve uzay yarışı üzerinden mücadele etmiştir."
     },
     {
-        question: "Bağlantısızlar Hareketi için hangisi doğrudur?",
+        question: "Bağlantısızlar Hareketi ile ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) Doğu Bloku’nun resmi siyasi örgütüdür",
-            "B) SSCB yanlısı devletler topluluğudur",
-            "C) İki bloktan birine katılmamaya çalışan üçüncü yol niteliğindedir",
-            "D) NATO’nun Asya koludur",
-            "E) COMINFORM’un devamıdır"
+            "A) Doğu Bloku'nun siyasi örgütüdür.",
+            "B) SSCB'nin askerî ittifakıdır.",
+            "C) Bloklardan birine katılmamayı amaçlayan bir harekettir.",
+            "D) NATO'nun Asya'daki uzantısıdır.",
+            "E) Avrupa ekonomik bütünleşmesinin ilk adımıdır."
         ],
         correctAnswerIndex: 2,
         explanation: "Bağlantısızlar SSCB yanlısı değildir; iki kutup arasında bağımsız hareket etmeyi amaçlar."
@@ -73,13 +73,13 @@ window.tarih_26_sorulari = [
         explanation: "Taslak nüfuz paylaşımıdır; hukuken tüm Doğu Avrupa’yı kesin paylaşan bağlayıcı antlaşma gibi görülmemelidir."
     },
     {
-        question: "Berlin Ablukası (1948–1949) sonrası Almanya’da ortaya çıkan devletler hangileridir?",
+        question: "Berlin Ablukası'ndan (1948–1949) sonra Almanya'da kurulan devletler aşağıdakilerin hangisinde doğru verilmiştir?",
         options: [
             "A) Federal Almanya ve Demokratik Alman Cumhuriyeti",
-            "B) Yalnız Federal Almanya",
-            "C) Avusturya ve Prusya",
-            "D) Weimar ve Bonn",
-            "E) Yalnız Doğu Almanya"
+            "B) Weimar Cumhuriyeti ve Prusya",
+            "C) Avusturya ve Bavyera",
+            "D) Saar Cumhuriyeti ve Federal Almanya",
+            "E) Batı Berlin ve Doğu Prusya"
         ],
         correctAnswerIndex: 0,
         explanation: "1949’da Batı’da Federal Almanya (Bonn), Doğu’da Demokratik Alman Cumhuriyeti kuruldu. Abluka ikiye ayrılmayı hızlandırdı."
@@ -91,13 +91,13 @@ window.tarih_26_sorulari = [
         explanation: "SSCB kara ve demiryolunu kesince ABD ve Batılılar Berlin Hava Köprüsü’nü kullandı."
     },
     {
-        question: "Baruch Planı (1946) neyi amaçlamıştır?",
+        question: "Baruch Planı (1946) aşağıdakilerden hangisini amaçlamıştır?",
         options: [
-            "A) NATO’nun kurulmasını",
-            "B) Varşova Paktı’nın feshedilmesini",
-            "C) Marshall yardımının kesilmesini",
-            "D) Çin’in BM’ye alınmasını",
-            "E) Atom enerjisinin uluslararası denetimini ve nükleer yayılmanın önlenmesini"
+            "A) NATO'nun kurulmasını",
+            "B) Avrupa'nın ekonomik kalkınmasını",
+            "C) Almanya'nın silahsızlandırılmasını",
+            "D) Çin'in BM'ye alınmasını",
+            "E) Atom enerjisinin uluslararası denetimini"
         ],
         correctAnswerIndex: 4,
         explanation: "SSCB planı ABD üstünlüğünü koruyacağı gerekçesiyle kabul etmedi; silahlanma yarışı derinleşti."
@@ -181,13 +181,13 @@ window.tarih_26_sorulari = [
         explanation: "İmre Nagy’nin tarafsızlık/NATO’ya yaklaşma arayışı Sovyetlerce kabul edilmedi."
     },
     {
-        question: "Prag Baharı (1968) ile ilgili hangisi doğrudur?",
+        question: "Prag Baharı (1968) ile ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) Mao’nun Çin’deki reformudur",
-            "B) 1956’da gerçekleşmiştir",
-            "C) NATO Çekoslovakya’yı işgal etti",
-            "D) Dubček’in insancıl sosyalizm reformları Sovyet/Varşova müdahalesiyle sona erdi",
-            "E) Yalnız ekonomik bir yardım paketidir"
+            "A) Mao'nun Çin'deki kültür devrimidir.",
+            "B) 1956 Macaristan ayaklanmasının diğer adıdır.",
+            "C) NATO'nun Çekoslovakya'ya müdahalesiyle bitmiştir.",
+            "D) Dubček'in reformları Varşova Paktı müdahalesiyle sona ermiştir.",
+            "E) Polonya'da Dayanışma Sendikası'nın kurulmasıdır."
         ],
         correctAnswerIndex: 3,
         explanation: "1968, Alexander Dubček, insancıl sosyalizm; Ağustos 1968 müdahalesi."
@@ -199,13 +199,13 @@ window.tarih_26_sorulari = [
         explanation: "Türkiye 100, Yunanistan 300 milyon dolar. Truman = askerî/siyasi yardım ve çevreleme."
     },
     {
-        question: "Marshall Planı ile Truman Doktrini farkı için hangisi doğrudur?",
+        question: "Marshall Planı ile Truman Doktrini arasındaki farkla ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) İkisi de yalnızca Orta Doğu’ya yöneliktir",
-            "B) Truman yalnızca tarım kredisi verir",
-            "C) Marshall NATO’nun askerî koludur",
-            "D) Truman daha çok askerî/siyasi, Marshall ekonomik yardımdır",
-            "E) Marshall SSCB tarafından uygulanmıştır"
+            "A) İkisi de Orta Doğu'ya yönelik askerî yardımdır.",
+            "B) Truman Doktrini tarımsal kredi öngörür.",
+            "C) Marshall Planı NATO'nun askerî koludur.",
+            "D) Truman askerî-siyasi, Marshall ekonomik yardım içerir.",
+            "E) Marshall Planı Doğu Bloku'na da uygulanmıştır."
         ],
         correctAnswerIndex: 3,
         explanation: "Marshall Avrupa ekonomisini ayağa kaldırmak ve komünizmi ekonomik yoldan sınırlamak içindir; OEEC koordinasyon sağlar. SSCB Molotov Planı’nı geliştirdi."
@@ -223,13 +223,13 @@ window.tarih_26_sorulari = [
         explanation: "Avrupa Konseyi 5 Mayıs 1949'da kurulmuş, Türkiye 8 Ağustos 1949'da bu örgüte katılmıştır. Avrupa Konseyi; demokrasi, insan hakları ve hukukun üstünlüğü alanında siyasi ve hukuki iş birliğini amaçlayan bir kuruluştur. NATO ise askerî nitelikli bir savunma örgütüdür."
     },
     {
-        question: "9 Mayıs 1950 Schuman Bildirisi neyi önermiştir?",
+        question: "9 Mayıs 1950 tarihli Schuman Bildirisi aşağıdakilerden hangisini önermiştir?",
         options: [
-            "A) NATO’nun genişlemesini",
-            "B) Süveyş’in millîleştirilmesini",
-            "C) Varşova Paktı’nı",
-            "D) Fransa ve Batı Almanya kömür-çeliğinin ortak otorite altında toplanmasını",
-            "E) Bağdat Paktı’nı"
+            "A) NATO'nun genişlemesini",
+            "B) Ortak bir Avrupa ordusu kurulmasını",
+            "C) Avrupa Konseyi'nin kurulmasını",
+            "D) Fransa ve Almanya'nın kömür-çeliğini ortak otoriteye bağlamayı",
+            "E) Ortak para birimine geçilmesini"
         ],
         correctAnswerIndex: 3,
         explanation: "9 Mayıs Avrupa Günü olarak da anılır. 18 Nisan 1951 AKÇT; kurucu altı: Fransa, B. Almanya, İtalya, Belçika, Hollanda, Lüksemburg. Jean Monnet öncülerden."
@@ -247,8 +247,8 @@ window.tarih_26_sorulari = [
         explanation: "Zincir: 1897 Herzl/Basel → 1917 Balfour → 29 Kasım 1947 BM Taksim → 14 Mayıs 1948 İsrail → 1948–49 I. Arap–İsrail Savaşı."
     },
     {
-        question: "29 Kasım 1947 BM Taksim Planı’nda Kudüs için öngörülen statü hangisidir?",
-        options: ["A) Tamamen İsrail’e", "B) Tamamen Ürdün’e", "C) Uluslararası statü", "D) SSCB mandası", "E) Osmanlı vilayeti"],
+        question: "29 Kasım 1947 tarihli BM Filistin Taksim Planı'nda Kudüs için öngörülen statü aşağıdakilerden hangisidir?",
+        options: ["A) İsrail'e bırakılması", "B) Ürdün'e bırakılması", "C) Uluslararası statüye bağlanması", "D) Filistin Arap devletine bırakılması", "E) İngiliz mandasında kalması"],
         correctAnswerIndex: 2,
         explanation: "Plan Yahudi ve Arap devletleri ile Kudüs’e uluslararası statü öngördü. Savaş sonrası Batı Kudüs İsrail, Doğu Ürdün kontrolüne geçti."
     },
@@ -313,13 +313,13 @@ window.tarih_26_sorulari = [
         explanation: "25 Mayıs 1963, Etiyopya’nın Addis Ababa kenti."
     },
     {
-        question: "SSCB’nin 19 Mart 1945’te yenilemeyeceğini bildirdiği belge hangisidir?",
+        question: "SSCB'nin 19 Mart 1945'te yenilemeyeceğini bildirdiği antlaşma aşağıdakilerden hangisidir?",
         options: [
-            "A) Montreux Boğazlar Sözleşmesi",
-            "B) Balkan Paktı",
+            "A) Montrö Boğazlar Sözleşmesi",
+            "B) Balkan Antantı",
             "C) 1925 Türk–Sovyet Dostluk ve Tarafsızlık Antlaşması",
-            "D) Sadabad Paktı",
-            "E) Lozan"
+            "D) Sadabat Paktı",
+            "E) 1921 Moskova Antlaşması"
         ],
         correctAnswerIndex: 2,
         explanation: "SSCB, 19 Mart 1945'te 1925 tarihli Türk-Sovyet Dostluk ve Tarafsızlık Antlaşması'nı yenilemeyeceğini bildirmiş; ardından Kars ve Ardahan'ı istemiş, Boğazlarda üs talebinde bulunmuştur. 7 Ağustos 1946 tarihli Sovyet notasıyla Boğazlar rejiminin değiştirilmesi istenmiştir. Bu baskılar Türkiye'yi Batı Bloku'na yaklaştırmıştır."
@@ -337,13 +337,13 @@ window.tarih_26_sorulari = [
         explanation: "28 Şubat 1953 Türkiye–Yunanistan–Yugoslavya dostluk antlaşması; 9 Ağustos 1954 Balkan Paktı. Kıbrıs sorunu ve Tito–SSCB yakınlaşması paktı zayıflattı."
     },
     {
-        question: "Bağdat Paktı → CENTO dönüşümü için doğru sıra hangisidir?",
+        question: "Bağdat Paktı'nın CENTO'ya dönüşme süreci aşağıdakilerin hangisinde doğru verilmiştir?",
         options: [
-            "A) 1959 pakt kuruldu, 1955 CENTO oldu",
-            "B) 1955 Bağdat Paktı, 1959 Irak ayrıldı, 1959 adı CENTO oldu",
-            "C) 1952 NATO, 1954 CENTO, 1955 Bağdat",
-            "D) 1958 CENTO, 1959 Bağdat",
-            "E) 1979 Bağdat, 1955 CENTO"
+            "A) 1955'te CENTO kurulmuş, 1959'da Bağdat Paktı adını almıştır.",
+            "B) 1955'te Bağdat Paktı kurulmuş, 1959'da Irak ayrılınca CENTO adını almıştır.",
+            "C) 1952'de Bağdat Paktı kurulmuş, 1955'te CENTO adını almıştır.",
+            "D) 1958'de CENTO kurulmuş, 1959'da Bağdat Paktı'na katılmıştır.",
+            "E) 1955'te Bağdat Paktı kurulmuş, 1979'da CENTO adını almıştır."
         ],
         correctAnswerIndex: 1,
         explanation: "24 Şubat 1955 Türkiye–Irak temeli; 1958 Irak darbesi; 24 Mart 1959 Irak çekildi; 18 Ağustos 1959 CENTO, merkez Ankara. ABD tam üye değildi. 1979’da sona erdi."
@@ -409,13 +409,13 @@ window.tarih_26_sorulari = [
         explanation: "Açık oy–gizli sayım 1946’ya aittir. 1950’de iktidar seçimle el değiştirmiştir."
     },
     {
-        question: "Demokrat Parti’nin 1950–1957 seçim performansı için hangisi doğrudur?",
+        question: "Demokrat Parti'nin 1950–1957 arasındaki seçim sonuçlarıyla ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) 1950’de kaybetti, 1954’te kazandı",
-            "B) 1957’de iktidardan düştü",
-            "C) Üç seçimi de CHP kazandı",
-            "D) 1950’de iktidara geldi, 1954’te oyunu artırdı, 1957’de oy kaybetmesine rağmen iktidarda kaldı",
-            "E) Yalnız 1954’te seçime girdi"
+            "A) 1950'de kaybetmiş, 1954'te kazanmıştır.",
+            "B) 1957'de iktidardan düşmüştür.",
+            "C) Üç seçimi de CHP kazanmıştır.",
+            "D) 1950'de iktidara gelmiş, 1954'te oyunu artırmış, 1957'de oy kaybetse de iktidarda kalmıştır.",
+            "E) 1954'te oy kaybetmiş, 1957'de oyunu artırmıştır."
         ],
         correctAnswerIndex: 3,
         explanation: "1957’de ekonomik sorunlar ve gerilim nedeniyle seçimler öne alındı; CHP oyunu artırdı ancak DP iktidarını korudu."
@@ -427,25 +427,25 @@ window.tarih_26_sorulari = [
         explanation: "Türk lirasının değeri düşürüldü. Kaynaklardaki 1947 ifadesi yanlıştır. DPT 1960’tadır."
     },
     {
-        question: "DP dönemi ekonomisinin ilk yılları için hangisi daha doğrudur?",
+        question: "Demokrat Parti döneminin ilk yıllarındaki ekonomi ile ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) Tarım, makineleşme, dış yardım ve altyapı; sonraki yıllarda dış açık ve enflasyon",
-            "B) Yalnız ağır sanayi ve kapalı ekonomi",
-            "C) COMECON üyeliği",
-            "D) Altın standardına dönüş",
-            "E) Toprak reformunun tamamlanması"
+            "A) Tarımda makineleşme, dış yardım ve altyapı yatırımları öne çıkmıştır.",
+            "B) Ağır sanayiye dayalı kapalı ekonomi uygulanmıştır.",
+            "C) Planlı ekonomiye geçilmiştir.",
+            "D) Dış ticaret devlet tekeline alınmıştır.",
+            "E) Toprak reformu tamamlanmıştır."
         ],
         correctAnswerIndex: 0,
         explanation: "1948 OEEC; 1958 istikrar arayışı. 1960 sonrası planlı kalkınma / DPT."
     },
     {
-        question: "Uzay yarışı kronolojisi hangisinde doğru verilmiştir?",
+        question: "Uzay yarışındaki gelişmelerin kronolojik sırası aşağıdakilerin hangisinde doğru verilmiştir?",
         options: [
-            "A) Sputnik I (1957) → Sputnik II/Laika → Explorer I ve NASA (1958) → Luna 2 (1959)",
-            "B) NASA – Luna 2 – Sputnik I",
-            "C) Explorer I – Sputnik I – Laika",
-            "D) Luna 2 – Sputnik I – NASA",
-            "E) 1960 Sputnik – 1957 lazer"
+            "A) Sputnik I → Laika (Sputnik II) → Explorer I ve NASA → Luna 2",
+            "B) NASA → Luna 2 → Sputnik I → Explorer I",
+            "C) Explorer I → Sputnik I → Laika → NASA",
+            "D) Luna 2 → Sputnik I → NASA → Laika",
+            "E) Sputnik I → Luna 2 → Laika → NASA"
         ],
         correctAnswerIndex: 0,
         explanation: "Sputnik I 1957; Laika Sputnik II ile; ABD Explorer I ve NASA 1958; Luna 2 Ay’a ulaşan ilk insan yapımı araç (1959)."
@@ -465,11 +465,11 @@ window.tarih_26_sorulari = [
     {
         question: "NATO, Avrupa Konseyi ve AET'nin nitelikleriyle ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) NATO askerî savunma, Avrupa Konseyi siyasi/hukuki, AET ekonomik bütünleşmedir",
-            "B) Üçü de aynı örgütün adlarıdır",
-            "C) AET Varşova’nın koludur",
-            "D) Avrupa Konseyi nükleer silah üretir",
-            "E) NATO 1957’de Roma’da kurulmuştur"
+            "A) NATO askerî, Avrupa Konseyi siyasi-hukuki, AET ekonomik nitelikli örgütlerdir.",
+            "B) Üçü de askerî savunma örgütüdür.",
+            "C) AET askerî, NATO ekonomik nitelikli örgütlerdir.",
+            "D) Avrupa Konseyi ekonomik, AET hukuki nitelikli örgütlerdir.",
+            "E) NATO 1957 Roma Antlaşması'yla kurulmuştur."
         ],
         correctAnswerIndex: 0,
         explanation: "NATO (1949), Sovyet tehdidine karşı kurulan askerî bir savunma örgütüdür. Avrupa Konseyi (1949) demokrasi, insan hakları ve hukukun üstünlüğü alanında çalışan siyasi-hukuki bir kuruluştur. AET ise 1957 Roma Antlaşması ile ortak pazar hedefiyle kurulan ekonomik bir bütünleşmedir. Bu nedenle üç örgüt farklı amaçlara sahiptir."
@@ -478,10 +478,10 @@ window.tarih_26_sorulari = [
         question: "Brüksel Antlaşması (17 Mart 1948) ile kurulan Batı Birliği'nin kurucu devletleri hangileridir?",
         options: [
             "A) İngiltere, Fransa, Belçika, Hollanda, Lüksemburg",
-            "B) ABD–Kanada–Türkiye",
-            "C) SSCB ve uydu devletler",
-            "D) Yalnız Benelüks",
-            "E) İtalya–Yunanistan–Türkiye"
+            "B) ABD, Kanada, İngiltere, Fransa, İtalya",
+            "C) Fransa, Almanya, İtalya, Belçika, Hollanda",
+            "D) İngiltere, Fransa, İtalya, Yunanistan, Türkiye",
+            "E) Belçika, Hollanda, Lüksemburg, Danimarka, Norveç"
         ],
         correctAnswerIndex: 0,
         explanation: "17 Mart 1948'de imzalanan Brüksel Antlaşması ile İngiltere, Fransa, Belçika, Hollanda ve Lüksemburg arasında Batı Birliği kurulmuştur. Sovyet tehdidine karşı atılan bu güvenlik iş birliği adımı, 1954'te İtalya ve Federal Almanya'nın katılmasıyla Batı Avrupa Birliği (BAB) adını almıştır."
@@ -523,13 +523,13 @@ window.tarih_26_sorulari = [
         explanation: "19 Mayıs 1945’te İnönü çok partili hayata geçiş mesajı vermişti."
     },
     {
-        question: "1950’ler Türkiye kültür hayatı için hangisi örnek verilebilir?",
+        question: "1950'li yıllarda Türk kültür ve sanat hayatıyla ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) Yalnız Divan şiiri resmi dil oldu",
-            "B) İkinci Yeni ve Hisarcılar; Zeki Müren, Müzeyyen Senar; Lütfi Akad / Hollywood etkisi",
-            "C) COMECON kültür bakanlığı kuruldu",
-            "D) Caz yasaklandı",
-            "E) Köyden kente göç durdu"
+            "A) Divan şiiri yeniden canlanmıştır.",
+            "B) İkinci Yeni şiiri ve Hisarcılar öne çıkmıştır.",
+            "C) Garip akımı ilk kez ortaya çıkmıştır.",
+            "D) Servet-i Fünun edebiyatı gelişmiştir.",
+            "E) Köyden kente göç durmuştur."
         ],
         correctAnswerIndex: 1,
         explanation: "Tarımda makineleşme göçü hızlandırdı; Batı müziği ve yaşam tarzı etkisi arttı."
@@ -541,49 +541,49 @@ window.tarih_26_sorulari = [
         explanation: "1942 Chicago Pile-1; 1945’te ABD atom bombalarını kullandı."
     },
     {
-        question: "COMECON’un Marshall Planı ile ilişkisi hangisidir?",
+        question: "COMECON ile Marshall Planı arasındaki ilişki aşağıdakilerden hangisidir?",
         options: [
-            "A) Marshall’ın Avrupa’daki uygulama koludur",
-            "B) Türkiye’nin OEEC’deki adıdır",
-            "C) Doğu Bloku’nun ekonomik örgütlenmesi / Marshall’a karşı cevap niteliğindedir",
-            "D) NATO’nun bütçe komisyonudur",
-            "E) AET’nin ilk adıdır"
+            "A) Marshall Planı'nın Doğu Avrupa'daki uygulama koludur.",
+            "B) OEEC'nin Doğu Avrupa şubesidir.",
+            "C) Doğu Bloku'nun Marshall Planı'na karşı kurduğu ekonomik örgüttür.",
+            "D) NATO'ya karşı kurulan askerî örgüttür.",
+            "E) AET'nin ilk adıdır."
         ],
         correctAnswerIndex: 2,
         explanation: "Başlangıç üyeleri SSCB, Bulgaristan, Çekoslovakya, Macaristan, Polonya, Romanya; sonra DAC, Arnavutluk, Küba, Moğolistan vb."
     },
     {
-        question: "COMINFORM’un kuruluş amacı hangisidir?",
+        question: "COMINFORM'un kuruluş amacı aşağıdakilerden hangisidir?",
         options: [
-            "A) Ortak nükleer silah üretmek",
-            "B) SEATO’yu desteklemek",
+            "A) Doğu Bloku ülkelerinin ortak savunmasını sağlamak",
+            "B) Doğu Bloku'nda ekonomik iş birliğini sağlamak",
             "C) Gümrük birliği kurmak",
-            "D) İsrail’i tanımak",
-            "E) Komünist partiler arasında siyasal/ideolojik koordinasyon"
+            "D) Nükleer silah üretimini denetlemek",
+            "E) Komünist partiler arasında ideolojik eşgüdüm sağlamak"
         ],
         correctAnswerIndex: 4,
         explanation: "5 Ekim 1947, SSCB öncülüğünde; Marshall’a karşı siyasi-ideolojik örgütlenmeyi güçlendirdi."
     },
     {
-        question: "Küba Devrimi’nin Soğuk Savaş açısından önemi nedir?",
+        question: "Küba Devrimi'nin Soğuk Savaş açısından önemi aşağıdakilerden hangisidir?",
         options: [
-            "A) ABD’nin Avrupa’daki ilk üssüdür",
-            "B) Çin’in Latin Amerika’yı işgali",
-            "C) NATO’nun Havana’da kurulması",
-            "D) SSCB’nin Batı Yarım Küre’deki önemli müttefikini oluşturması",
-            "E) Bağlantısızların dağılması"
+            "A) ABD'nin Karayipler'deki etkisini artırmıştır.",
+            "B) Çin'in Latin Amerika'ya yayılmasını sağlamıştır.",
+            "C) Varşova Paktı'nın kurulmasına yol açmıştır.",
+            "D) SSCB'ye Batı Yarım Küre'de önemli bir müttefik kazandırmıştır.",
+            "E) Monroe Doktrini'nin ilanına yol açmıştır."
         ],
         correctAnswerIndex: 3,
         explanation: "Castro önderliğindeki rejim Moskova ile yakınlaştı."
     },
     {
-        question: "Türkiye Marshall Planı ve OEEC ile ilgili hangisi doğrudur?",
+        question: "Türkiye'nin Marshall Planı ve OEEC ile ilişkisi hakkında aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) Yardımı reddetmiştir",
-            "B) COMECON üyesi olmuştur",
-            "C) Yalnızca 1960’ta katılmıştır",
-            "D) 1948’den itibaren Marshall kapsamında yardım almış, OEEC’ye katılmıştır",
-            "E) Planı Stalin önermiştir"
+            "A) Marshall yardımını reddetmiştir.",
+            "B) COMECON üyesi olmuştur.",
+            "C) Yardımdan yalnızca 1960'tan sonra yararlanmıştır.",
+            "D) 1948'den itibaren Marshall yardımı almış, OEEC'ye katılmıştır.",
+            "E) Yardımı yalnızca askerî alanda kullanmıştır."
         ],
         correctAnswerIndex: 3,
         explanation: "Yardımlar tarım, ulaştırma, altyapı ve kalkınmada etkili oldu."
@@ -613,7 +613,7 @@ window.tarih_26_sorulari = [
         explanation: "Jonas Salk’ın geliştirdiği çocuk felci (polio) aşısı 1954’te geniş çaplı saha denemelerinden geçmiş, 1955’te güvenli ve etkili ilan edilmiştir. Alexander Fleming penisilinin, Francis Crick ise DNA’nın yapısının keşfiyle tanınır."
     },
     {
-        question: "İlk Akdeniz Oyunları nerede düzenlenmiştir?",
+        question: "İlk Akdeniz Oyunları aşağıdaki şehirlerden hangisinde düzenlenmiştir?",
         options: [
         "A) Atina",
         "B) Roma",

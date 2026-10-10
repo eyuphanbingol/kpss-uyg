@@ -7,8 +7,8 @@ window.cografya_11_sorulari = [
       "A) İzohipsler sıklaştıkça eğim azalır",
       "B) İzohipsler seyrekleştikçe eğim artar",
       "C) İzohipsler sıklaştıkça eğim artar",
-      "D) İzohips eğrileri yalnızca ovalarda çizilir",
-      "E) İzohipsler renklerle hiçbir ilgisi olmayan çizgilerdir"
+      "D) İzohipsler birbirini keserek tepeleri gösterir",
+      "E) İç içe kapalı eğrilerde yükselti merkeze doğru azalır"
     ],
     "correctAnswerIndex": 2,
     "explanation": "İzohips (eş yükselti) eğrilerinin birbirine yaklaştığı, yani sıklaştığı yerlerde eğim artar. Seyrekleştiği yerlerde ise eğim azalır."
@@ -30,11 +30,11 @@ window.cografya_11_sorulari = [
     "id": "50",
     "question": "Aşağıdakilerden hangisi Türkiye'nin en düz bölümleri arasında GÖSTERİLEMEZ?",
     "options": [
-      "A) Ergene (Edirne)",
-      "B) Konya",
-      "C) Orta Fırat",
+      "A) Ergene Bölümü",
+      "B) Konya Bölümü",
+      "C) Orta Fırat Bölümü",
       "D) Doğu Karadeniz kıyı şeridi",
-      "E) Erzurum-Kars"
+      "E) Erzurum-Kars Bölümü"
     ],
     "correctAnswerIndex": 3,
     "explanation": "Ergene, Konya, Orta Fırat ve yüksek olmasına rağmen düz bir yapıya sahip olan Erzurum-Kars bölümleri Türkiye'nin en düz alanlarındandır. Ancak Doğu Karadeniz kıyı şeridi hemen arkasında başlayan Kaçkar Dağları nedeniyle son derece dik ve engebelidir."

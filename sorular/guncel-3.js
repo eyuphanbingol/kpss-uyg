@@ -277,7 +277,7 @@ window.guncel_3_sorulari = [
     "explanation": "Dolby Theatre."
 },
 {
-    "question": "98. Akademi Ödülleri'nin sunucusu kimdir?",
+    "question": "98. Akademi (Oscar) Ödülleri töreninin sunuculuğunu aşağıdakilerden hangisi yapmıştır?",
     "options": [
         "A) Jimmy Kimmel",
         "B) Conan O'Brien",
@@ -421,7 +421,7 @@ window.guncel_3_sorulari = [
     "explanation": "UNESCO BM eğitim-bilim-kültür örgütüdür."
 },
 {
-    "question": "UNESCO'nun merkezi nerededir?",
+    "question": "UNESCO'nun merkezi aşağıdaki şehirlerden hangisindedir?",
     "options": [
         "A) Cenevre",
         "B) New York",
@@ -831,11 +831,11 @@ window.guncel_3_sorulari = [
 {
     "question": "Aşağıdaki UNESCO eşleştirmelerinden hangisi doğrudur?",
     "options": [
-        "A) 2010 — Kırkpınar yağlı güreşleri",
-        "B) 2011 — Türk kahvesi",
-        "C) 2012 — Keşkek",
-        "D) 2013 — Mesir Macunu",
-        "E) 2014 — Çini"
+        "A) 2010 — Kırkpınar Yağlı Güreşleri",
+        "B) 2011 — Türk Kahvesi Kültürü",
+        "C) 2012 — Keşkek Geleneği",
+        "D) 2013 — Mesir Macunu Festivali",
+        "E) 2014 — Geleneksel Çinicilik"
     ],
     "correctAnswerIndex": 0,
     "explanation": "2010 Kırkpınar'dır."

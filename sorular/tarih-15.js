@@ -67,8 +67,8 @@ window.tarih_15_sorulari = [
         question: "Gümrü Antlaşması ile Ermenilerin aşağıdakilerden hangisini kabul ettiği belirtilmiştir?",
         options: [
             "A) Sevr Antlaşması'nın bütün hükümlerini",
-            "B) Misak-ı Millî'den vazgeçmeyi",
-            "C) Sevr Antlaşması'ndaki isteklerinden vazgeçmeyi ve Misak-ı Millî'yi tanımayı",
+            "B) Kars ve Ardahan'ın kendisine bırakılmasını",
+            "C) Sevr'deki isteklerinden vazgeçmeyi",
             "D) Kapitülasyonların yeniden uygulanmasını",
             "E) Batum'un Türkiye'ye bırakılmasını"
         ],
@@ -126,11 +126,11 @@ window.tarih_15_sorulari = [
     {
         question: "Gümrü Antlaşması ile ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) Ermenistan TBMM Hükûmeti'ni tanımış ve Misak-ı Millî'yi kabul etmiştir.",
+            "A) Ermenistan, TBMM Hükûmeti'ni ve Misak-ı Millî'yi tanımıştır.",
             "B) Fransa TBMM Hükûmeti'ni tanımıştır.",
             "C) Sovyet Rusya Misak-ı Millî'yi tanımıştır.",
             "D) Yunanistan Anadolu'dan çekilmiştir.",
-            "E) İngiltere Sevr'i geçersiz saymıştır."
+            "E) Gürcistan Batum'u Türkiye'ye bırakmıştır."
         ],
         correctAnswerIndex: 0,
         explanation: "Gümrü Antlaşması ile Ermenistan, TBMM Hükûmeti'ni tanımış ve Misak-ı Millî'yi kabul etmiştir. Bu, TBMM'nin uluslararası alanda tanınması açısından önemlidir."
@@ -150,11 +150,11 @@ window.tarih_15_sorulari = [
     {
         question: "Gümrü Antlaşması görüşmeleri sırasında Ermenilerin Sevr Antlaşması'ndaki imzalarını geri almayı kabul etmesi aşağıdakilerden hangisi açısından önemli görülmüştür?",
         options: [
-            "A) Misak-ı Millî'nin kaldırılması",
+            "A) Doğu Cephesi'nde Ermenistan'ın toprak kazanması",
             "B) Batı Cephesi'nin kapatılması",
-            "C) Saltanatın güçlendirilmesi",
-            "D) Kapitülasyonların genişletilmesi",
-            "E) Sevr gibi uğursuz bir antlaşmanın geçersiz hâle getirilmesi"
+            "C) Kapitülasyonların kaldırılması",
+            "D) Sovyet Rusya ile ittifak kurulması",
+            "E) Sevr Antlaşması'nın geçersizliğinin kabul edilmesi"
         ],
         correctAnswerIndex: 4,
         explanation: "Ermenilerin Sevr'deki imzalarını geri alması, Sevr Antlaşması'nın geçersiz hâle gelmesi açısından önemli bir adım olmuştur. Bu, TBMM'nin Sevr'e karşı kazandığı diplomatik bir zaferdir."
@@ -407,10 +407,10 @@ window.tarih_15_sorulari = [
         question: "Çakmakçı Sait'in şehit edilmesinden sonra Sütçü İmam'ın gerçekleştirdiği eylem aşağıdakilerden hangisidir?",
         options: [
             "A) Fransız askerlerinden birini öldürüp diğerini yaralaması",
-            "B) Kaleye Türk bayrağını dikmesi",
-            "C) Fransızlarla antlaşma yapması",
-            "D) Maraş'ı terk etmesi",
-            "E) Düzenli orduya katılması"
+            "B) Kaleden Fransız bayrağını indirmesi",
+            "C) Kuvâ-yı Millîye birliklerini Maraş'a çağırması",
+            "D) Fransız komutanını esir alması",
+            "E) Antep savunmasına katılması"
         ],
         correctAnswerIndex: 0,
         explanation: "Sütçü İmam, Çakmakçı Sait'in şehit edilmesinden sonra Fransız askerlerinden birini öldürmüş, diğerini yaralamıştır. Bu olay, Maraş'taki silahlı direnişin başlangıcıdır."
@@ -442,11 +442,11 @@ window.tarih_15_sorulari = [
     {
         question: "'Bayrak Olayı' sonrasında cuma hutbesinde hangi düşünce dile getirilmiştir?",
         options: [
-            "A) Savaşın sona ermesi gerektiği",
-            "B) Hürriyet yoksa ve İslam sancağı dalgalanmıyorsa namaz kılmanın caiz olmadığı",
+            "A) Savaşın sona erdirilmesi gerektiği",
+            "B) Hürriyet ve İslam sancağı yoksa cuma namazı kılınamayacağı",
             "C) Fransızlarla iş birliği yapılması gerektiği",
-            "D) TBMM'nin kapatılması gerektiği",
-            "E) Sevr Antlaşması'nın kabul edilmesi gerektiği"
+            "D) Halkın şehri terk etmesi gerektiği",
+            "E) İstanbul Hükûmeti'ne bağlı kalınması gerektiği"
         ],
         correctAnswerIndex: 1,
         explanation: "Bayrak Olayı sonrasında cuma hutbesinde, 'Hürriyet yoksa ve İslam sancağı dalgalanmıyorsa namaz kılmanın caiz olmadığı' düşüncesi dile getirilmiştir."
@@ -571,10 +571,10 @@ window.tarih_15_sorulari = [
         question: "Gediz Taarruzu'ndaki başarısızlık sonrasında Ali Fuat Cebesoy ile ilgili aşağıdakilerden hangisi gerçekleşmiştir?",
         options: [
             "A) Doğu Cephesi Komutanlığına getirilmiştir.",
-            "B) Başkomutan olmuştur.",
-            "C) Batı Cephesi Komutanlığından alınarak Moskova'ya büyükelçi gönderilmiştir.",
+            "B) Genelkurmay Başkanı olmuştur.",
+            "C) Görevden alınarak Moskova Büyükelçiliğine atanmıştır.",
             "D) Maarif Vekili olmuştur.",
-            "E) Dışişleri Bakanı olmuştur."
+            "E) Güney Cephesi Komutanlığına atanmıştır."
         ],
         correctAnswerIndex: 2,
         explanation: "Gediz Taarruzu'nun başarısız olması üzerine Ali Fuat Cebesoy, Batı Cephesi Komutanlığı'ndan alınmış ve Moskova'ya büyükelçi olarak gönderilmiştir."
@@ -911,7 +911,7 @@ window.tarih_15_sorulari = [
         question: "1921 Anayasası'nda yapılan ilk değişiklik aşağıdakilerden hangisidir?",
         options: [
             "A) Halifeliğin kaldırılması",
-            "B) Cumhuriyetin ilan edilmesiyle 'Devletin şekli hükûmeti Cumhuriyettir.' hükmünün eklenmesi",
+            "B) Devletin şekli hükûmetinin Cumhuriyet olduğu hükmünün eklenmesi",
             "C) Saltanatın kaldırılması",
             "D) Laiklik ilkesinin eklenmesi",
             "E) Kadınlara seçme hakkı verilmesi"
@@ -958,11 +958,11 @@ window.tarih_15_sorulari = [
     {
         question: "1921 Anayasası'na göre milletvekilleriyle ilgili aşağıdakilerden hangisi doğrudur?",
         options: [
-            "A) Yalnızca kendisini seçen ilin vekilidir.",
-            "B) Yalnızca Ankara'nın vekilidir.",
+            "A) Seçildiği ilin vekilidir.",
+            "B) Kendisine oy veren seçmenlerin vekilidir.",
             "C) Her biri bütün milletin vekilidir.",
             "D) Padişahın vekilidir.",
-            "E) Yalnızca TBMM'nin vekilidir."
+            "E) Mensup olduğu grubun vekilidir."
         ],
         correctAnswerIndex: 2,
         explanation: "1921 Anayasası'na göre milletvekilleri, kendisini seçen ilin değil, bütün milletin vekilidir. Bu, temsilde millî birliği sağlama amacı taşır."
@@ -1068,7 +1068,7 @@ window.tarih_15_sorulari = [
         explanation: "İstiklal Marşı için açılan yarışmayı Maarif Vekâleti düzenlemiş, yarışmayı kazanan Mehmet Âkif Ersoy'un şiiri 12 Mart 1921'de TBMM'de kabul edilmiştir."
     },
     {
-        question: "İstiklal Marşı'nın güftesi kime aittir?",
+        question: "İstiklal Marşı'nın şairi aşağıdakilerden hangisidir?",
         options: [
             "A) Osman Zeki Üngör",
             "B) Ali Rıfat Çağatay",
@@ -1230,9 +1230,9 @@ window.tarih_15_sorulari = [
     {
         question: "Londra Konferansı sırasında Tevfik Paşa'nın 'Bu milletin hakiki temsilcisi TBMM'dir.' diyerek sözü TBMM temsilcisine bırakması aşağıdakilerden hangisini göstermektedir?",
         options: [
-            "A) Osmanlı Hükûmeti'nin TBMM'yi milletin gerçek temsilcisi olarak kabul ettiğini",
+            "A) Osmanlı Hükûmeti'nin TBMM'yi milletin gerçek temsilcisi saydığını",
             "B) TBMM'nin konferanstan çekildiğini",
-            "C) Osmanlı Devleti'nin savaşa devam ettiğini",
+            "C) İtilaf Devletlerinin TBMM'yi tanımadığını",
             "D) Sevr Antlaşması'nın kabul edildiğini",
             "E) Saltanatın kaldırıldığını"
         ],
@@ -1242,11 +1242,11 @@ window.tarih_15_sorulari = [
     {
         question: "TBMM'nin Londra Konferansı'na katılmasının amaçlarından biri aşağıdakilerden hangisidir?",
         options: [
-            "A) Misak-ı Millî'yi tüm dünyaya duyurmak ve resmî olarak tanınmak",
-            "B) Yunanistan'ı konferansa almamak",
-            "C) Osmanlı Devleti'ni yeniden kurmak",
-            "D) Sevr Antlaşması'nı kabul etmek",
-            "E) İtalya'ya savaş ilan etmek"
+            "A) Misak-ı Millî'yi dünyaya duyurmak ve tanınmak",
+            "B) Yunanistan'ın konferansa katılmasını önlemek",
+            "C) Osmanlı Hükûmeti'yle birleşmek",
+            "D) Sevr Antlaşması'nı yumuşatarak kabul etmek",
+            "E) İtalya ile ittifak kurmak"
         ],
         correctAnswerIndex: 0,
         explanation: "TBMM'nin Londra Konferansı'na katılmasının amaçlarından biri, Misak-ı Millî'yi tüm dünyaya duyurmak ve TBMM'yi uluslararası alanda resmî olarak tanıtmaktır."
@@ -1254,11 +1254,11 @@ window.tarih_15_sorulari = [
     {
         question: "TBMM'nin Londra Konferansı'na katılmasının bir diğer amacı aşağıdakilerden hangisidir?",
         options: [
-            "A) 'Türkler barıştan kaçıyor.' propagandasının önüne geçmek",
-            "B) Yunanistan'ı desteklemek",
+            "A) 'Türkler barıştan kaçıyor' propagandasını boşa çıkarmak",
+            "B) Yunanistan'la ittifak kurmak",
             "C) Sevr'i yürürlüğe koymak",
             "D) Kapitülasyonları genişletmek",
-            "E) Saltanatı güçlendirmek"
+            "E) Osmanlı Hükûmeti'ni güçlendirmek"
         ],
         correctAnswerIndex: 0,
         explanation: "TBMM'nin Londra Konferansı'na katılmasının bir diğer amacı, 'Türkler barıştan kaçıyor.' propagandasının önüne geçmektir. Barışçıl bir tutum sergilenmiştir."
@@ -1367,10 +1367,10 @@ window.tarih_15_sorulari = [
         question: "Moskova Antlaşması'nda kapitülasyonlarla ilgili aşağıdakilerden hangisi kararlaştırılmıştır?",
         options: [
             "A) Genişletilmesi",
-            "B) Korunması",
-            "C) Sovyet Rusya'nın kaldıracağını kabul etmesi",
-            "D) İngiltere'ye devredilmesi",
-            "E) Fransa'ya verilmesi"
+            "B) Yalnızca ticari alanda sürdürülmesi",
+            "C) Sovyet Rusya'nın kaldırılmasını kabul etmesi",
+            "D) Milletler Cemiyeti'ne havale edilmesi",
+            "E) Lozan'da görüşülmesi"
         ],
         correctAnswerIndex: 2,
         explanation: "Moskova Antlaşması'nda, Sovyet Rusya kapitülasyonları kaldıracağını kabul etmiştir. Kapitülasyonlardan vazgeçen ilk büyük devlet Sovyet Rusya'dır."
@@ -1417,8 +1417,8 @@ window.tarih_15_sorulari = [
             "A) TBMM'de",
             "B) Paris Konferansı'nda",
             "C) Londra Konferansı'nda",
-            "D) Karadeniz'e kıyısı olan devletlerin temsilcilerinin katıldığı bir konferansta",
-            "E) Ankara'da yapılacak ikili görüşmelerde"
+            "D) Karadeniz'e kıyısı olan devletlerin konferansında",
+            "E) Milletler Cemiyeti'nde"
         ],
         correctAnswerIndex: 3,
         explanation: "Moskova Antlaşması'na göre Boğazlar konusu, Karadeniz'e kıyısı olan devletlerin temsilcilerinin katıldığı bir konferansta ele alınacaktır."
@@ -1490,8 +1490,8 @@ window.tarih_15_sorulari = [
     {
         question: "II. İnönü Savaşı sonunda Mustafa Kemal'in İsmet Bey'e gönderdiği telgrafta vurguladığı temel düşünce aşağıdakilerden hangisidir?",
         options: [
-            "A) Yalnızca düşmanın yenildiği",
-            "B) Ordunun dağıtılması gerektiği",
+            "A) Düşmanın kesin olarak yenildiği",
+            "B) Ordunun yeniden düzenlenmesi gerektiği",
             "C) Savaşın kaybedildiği",
             "D) Batı Cephesi'nin kapatıldığı",
             "E) Düşmanla birlikte milletin makûs talihinin de yenildiği"
@@ -1639,9 +1639,9 @@ window.tarih_15_sorulari = [
         question: "Türk ordusunun Sakarya Nehri'nin doğusuna çekilmesinin temel amacı aşağıdakilerden hangisidir?",
         options: [
             "A) Ankara'yı boşaltmak",
-            "B) Ordunun daha fazla zayiat vermesini önlemek",
-            "C) Yunan ordusuna katılmak",
-            "D) Güney Cephesi'ni kapatmak",
+            "B) Ordunun daha fazla kayıp vermesini önlemek",
+            "C) Güney Cephesi'ne asker kaydırmak",
+            "D) Doğu Cephesi'ni desteklemek",
             "E) İstanbul'a çekilmek"
         ],
         correctAnswerIndex: 1,
@@ -1698,11 +1698,11 @@ window.tarih_15_sorulari = [
     {
         question: "Mustafa Kemal'in düşman ordusu ile Türk ordusu arasına mesafe koyma düşüncesinin temel amacı aşağıdakilerden hangisidir?",
         options: [
-            "A) Düşmanla birleşmek",
+            "A) Düşmanı Ankara önlerinde kuşatmak",
             "B) İstanbul'a ulaşmak",
             "C) Ankara'yı terk etmek",
-            "D) Ordunun düzenlenmesini ve kuvvetlenmesini sağlamak",
-            "E) Doğu Cephesi'ni kapatmak"
+            "D) Ordunun düzenlenip güçlenmesini sağlamak",
+            "E) Doğu Cephesi'ne asker kaydırmak"
         ],
         correctAnswerIndex: 3,
         explanation: "Mustafa Kemal, düşman ile Türk ordusu arasına mesafe koyarak ordunun düzenlenmesini, yeniden yapılanmasını ve kuvvetlenmesini sağlamayı amaçlamıştır."
@@ -1883,10 +1883,10 @@ window.tarih_15_sorulari = [
         question: "Tekâlif-i Milliye Emirleri ile elde edilen yardımların kullanım alanları aşağıdakilerin hangisinde doğru verilmiştir?",
         options: [
             "A) Tamamı I. İnönü Savaşı'nda",
-            "B) Tamamı Mudanya'da",
+            "B) Tamamı Kütahya-Eskişehir'de",
             "C) Tamamı Doğu Cephesi'nde",
-            "D) Tamamı II. İnönü Savaşı'nda",
-            "E) Bir kısmı Sakarya Meydan Muharebesi'nde, diğer kısmı Büyük Taarruz'da"
+            "D) Bir kısmı II. İnönü'de, diğer kısmı Sakarya'da",
+            "E) Bir kısmı Sakarya'da, diğer kısmı Büyük Taarruz'da"
         ],
         correctAnswerIndex: 4,
         explanation: "Tekâlif-i Milliye Emirleri ile elde edilen yardımlar, bir kısmı Sakarya Meydan Muharebesi'nde, diğer kısmı ise Büyük Taarruz'da kullanılmıştır."
@@ -2291,10 +2291,10 @@ window.tarih_15_sorulari = [
         question: "Ankara Antlaşması ile Hatay hangi bölgeye bırakılmıştır?",
         options: [
             "A) Türkiye'ye",
-            "B) Gürcistan'a",
-            "C) Ermenistan'a",
+            "B) Bağımsız bir devlete",
+            "C) İngiliz mandasındaki Irak'a",
             "D) Fransız mandasındaki Suriye'ye",
-            "E) İngiltere'ye"
+            "E) Milletler Cemiyeti yönetimine"
         ],
         correctAnswerIndex: 3,
         explanation: "Ankara Antlaşması ile Hatay, Fransız mandasındaki Suriye'ye bırakılmıştır. Bu, Misak-ı Millî'den ikinci tavizdir."
@@ -2339,10 +2339,10 @@ window.tarih_15_sorulari = [
         question: "Ankara Antlaşması'nda özel statüye bağlanan Süleyman Şah'ın bulunduğu yer aşağıdakilerden hangisidir?",
         options: [
             "A) Kars Kalesi",
-            "B) Caber Kalesi'ndeki Türk Mezarı",
+            "B) Caber Kalesi",
             "C) Antep Kalesi",
             "D) Maraş Kalesi",
-            "E) Çıldır Kalesi"
+            "E) Halep Kalesi"
         ],
         correctAnswerIndex: 1,
         explanation: "Ankara Antlaşması'nda Süleyman Şah'ın mezarı olan Caber Kalesi özel statüye bağlanmıştır. Günümüzde bu toprak parçası Türkiye sınırları içinde sayılmaktadır."
@@ -2352,9 +2352,9 @@ window.tarih_15_sorulari = [
         options: [
             "A) Fransa'nın mülkiyetinde",
             "B) Suriye'nin mülkiyetinde",
-            "C) Türkiye'nin mülkiyetinde ve Türk toprağı sayılacak şekilde",
-            "D) İngiltere'nin mülkiyetinde",
-            "E) Uluslararası komisyonun mülkiyetinde"
+            "C) Türkiye'nin mülkiyetinde (Türk toprağı)",
+            "D) Milletler Cemiyeti'nin denetiminde",
+            "E) Ortak Türk-Fransız yönetiminde"
         ],
         correctAnswerIndex: 2,
         explanation: "Ankara Antlaşması ile Caber Kalesi'ndeki Türk Mezarı, Türkiye'nin mülkiyetinde ve Türk toprağı sayılacak şekilde belirlenmiştir."
@@ -2451,10 +2451,10 @@ window.tarih_15_sorulari = [
         question: "Mustafa Kemal'in 'Yarım hazırlıkla, yarım tedbirle yapılacak taarruz hiç taarruz etmemekten daha kötüdür.' sözü aşağıdaki süreçlerden hangisiyle ilgilidir?",
         options: [
             "A) Gümrü Antlaşması",
-            "B) Büyük Taarruz öncesi hazırlıklar",
+            "B) Büyük Taarruz öncesi",
             "C) Londra Konferansı",
-            "D) Ankara Antlaşması",
-            "E) Kars Antlaşması"
+            "D) Sakarya Savaşı öncesi",
+            "E) II. İnönü Savaşı"
         ],
         correctAnswerIndex: 1,
         explanation: "Mustafa Kemal'in bu sözü, Büyük Taarruz öncesi hazırlıkların titizlikle yapılması gerektiğini vurgulamaktadır. Eksik hazırlıkla yapılacak taarruz başarısız olacaktır."
@@ -2634,11 +2634,11 @@ window.tarih_15_sorulari = [
     {
         question: "Çanakkale Bunalımı'nın temel nedeni aşağıdakilerden hangisidir?",
         options: [
-            "A) Türk birliklerinin Yunan ordusunu yendikten sonra Çanakkale'deki mevzilere yönelmesi",
+            "A) Türk birliklerinin Çanakkale'deki tarafsız bölgeye yönelmesi",
             "B) TBMM'nin Sevr'i kabul etmesi",
-            "C) Fransa'nın Güney Cephesi'ni açması",
-            "D) Sovyet Rusya'nın Batum'u alması",
-            "E) İngiltere'nin Anadolu'dan çekilmesi"
+            "C) Fransa'nın Güney Cephesi'nde yeniden saldırması",
+            "D) Sovyet Rusya'nın Boğazlar üzerinde hak istemesi",
+            "E) Yunanistan'ın Ege Adaları'nı işgal etmesi"
         ],
         correctAnswerIndex: 0,
         explanation: "Çanakkale Bunalımı, Türk birliklerinin Yunan ordusunu yenilgiye uğrattıktan sonra Çanakkale'deki İngiliz mevzilerine yönelmesi sonucu ortaya çıkmıştır."
@@ -2736,7 +2736,7 @@ window.tarih_15_sorulari = [
         options: [
             "A) I. İnönü Savaşı",
             "B) II. İnönü Savaşı",
-            "C) Kütahya-Eskişehir Muharebeleri sonrasında Başkomutanlık Kanunu'nun çıkarılması",
+            "C) Başkomutanlık Kanunu'nun çıkarılması",
             "D) Sakarya Zaferi",
             "E) Büyük Taarruz"
         ],

@@ -50,7 +50,7 @@ window.cografya_12_sorulari = [
     },
     {
         question: "İzoterm (eş sıcaklık) haritalarıyla ilgili aşağıdakilerden hangisi doğrudur?",
-        options: ["A) Gerçek sıcaklık değerleriyle çizilir", "B) Aynı sıcaklığa sahip noktalar birleştirilerek çizilir ve indirgenmiş sıcaklığa dayanır", "C) Yalnızca yükseltiye göre çizilir", "D) Yalnızca kış mevsimi için geçerlidir", "E) Yükselti ile doğrudan ilişkilidir"],
+        options: ["A) Gerçek sıcaklık değerleri kullanılarak çizilir", "B) Aynı sıcaklıktaki noktalar indirgenmiş değerlerle birleştirilerek çizilir", "C) Yükselti farklarını göstermek amacıyla çizilir", "D) Aynı basınç değerindeki noktalar birleştirilerek çizilir", "E) Yükseltinin sıcaklığa etkisini doğrudan yansıtır"],
         correctAnswerIndex: 1,
         explanation: "İzoterm haritaları, aynı sıcaklığa sahip noktaların birleştirilmesiyle çizilir ve indirgenmiş sıcaklık değerlerine dayanır; yükselti ile ilgisi yoktur."
     },
@@ -68,7 +68,7 @@ window.cografya_12_sorulari = [
     },
     {
         question: "Basra termik alçak basıncının Türkiye üzerindeki etkisiyle ilgili aşağıdakilerden hangisi doğrudur?",
-        options: ["A) Soğuk ve kuru hava getirir", "B) Sibirya basıncıyla aynı etkiyi yapar", "C) Yalnızca kış mevsiminde etkilidir", "D) Muson iklimine bağlı çamur yağışı getirir", "E) Türkiye'yi tamamen kurak yapar"],
+        options: ["A) Kışın soğuk ve kuru hava dalgalarına yol açar", "B) Yazın Karadeniz kıyılarında bol yağış bıraktırır", "C) Kış aylarında Akdeniz'de ılık ve yağışlı hava getirir", "D) Muson iklimine bağlı çamur yağışı getirir", "E) Sonbaharda Ege kıyılarında fırtınalara neden olur"],
         correctAnswerIndex: 3,
         explanation: "Basra termik alçak basıncı, muson iklimine bağlı olarak Türkiye'ye 'çamur yağışı' adı verilen özel bir yağış türü getirir."
     },
@@ -134,7 +134,7 @@ window.cografya_12_sorulari = [
     },
     {
         question: "Mutlak nemin deniz kıyılarında (Akdeniz'de), maksimum nemin ise iç kesimlerde (Güneydoğu Anadolu'da) en yüksek olmasıyla ilgili aşağıdakilerden hangisi söylenebilir?",
-        options: ["A) Mutlak nem sıcaklıkla ilgisizdir", "B) Maksimum nem sıcaklık arttıkça artar, bu yüzden sıcak iç kesimlerde fazladır", "C) Mutlak nem yalnızca iç kesimlerde görülür", "D) Maksimum nem yalnızca kıyılarda görülür", "E) İkisi de aynı bölgelerde en yüksektir"],
+        options: ["A) Mutlak nem sıcaklıktan bağımsız olarak denizden uzaklaştıkça artar", "B) Maksimum nem sıcaklıkla artar; bu yüzden sıcak iç kesimlerde fazladır", "C) Mutlak nem, havanın taşıyabileceği en fazla nemi ifade eder", "D) Maksimum nem, deniz kıyısında su yüzeyine yakınlık nedeniyle artar", "E) İki nem türü de yükseltiyle aynı oranda artar"],
         correctAnswerIndex: 1,
         explanation: "Maksimum nem, havanın sıcaklığına bağlıdır; sıcaklık arttıkça havanın alabileceği nem miktarı da artar. Bu nedenle sıcak ve kurak Güneydoğu Anadolu'da maksimum nem en yüksektir."
     },
@@ -236,13 +236,13 @@ window.cografya_12_sorulari = [
     },
     {
         question: "Karasal iklimin oluşma nedeni aşağıdakilerden hangisidir?",
-        options: ["A) Denize yakın olma ve dağların kıyıya dik uzanması", "B) Yalnızca enlem etkisi", "C) Yalnızca yükseltinin fazla olması", "D) Denizden uzaklık ve dağların kıyıya paralel uzanması nedeniyle denizel etkinin iç kesimlere sokulamaması", "E) Muson rüzgarlarının etkisi"],
+        options: ["A) Denize yakınlık ve dağların kıyıya dik uzanması", "B) Enlemin yüksek, Güneş ışınlarının geliş açısının küçük olması", "C) Yükseltinin fazla, bakı etkisinin az olması", "D) Denizden uzaklık ve kıyıya paralel dağların denizel etkiyi engellemesi", "E) Muson rüzgârlarının iç kesimlere kadar sokulması"],
         correctAnswerIndex: 3,
         explanation: "Karasal iklim, denizden uzaklık ve dağların kıyıya paralel uzanması nedeniyle denizel etkinin iç kesimlere sokulamamasından kaynaklanır."
     },
     {
         question: "Karasal iklimin görüldüğünün kanıtı olarak gösterilen bitki örtüsü ve bu iklimin görüldüğü yerler aşağıdakilerden hangisinde doğru verilmiştir?",
-        options: ["A) Maki – Akdeniz kıyıları", "B) Bozkır (step) – Ergene, İç Anadolu, İç Ege, Doğu ve Güneydoğu Anadolu", "C) Çayır – yalnızca Erzurum-Kars", "D) Orman – Karadeniz kıyıları", "E) Tundra – Doğu Anadolu geneli"],
+        options: ["A) Maki – Akdeniz ve Ege kıyıları", "B) Bozkır (step) – İç Anadolu, İç Ege, Doğu ve Güneydoğu Anadolu", "C) Çayır – Doğu Karadeniz kıyı kuşağı", "D) Orman – İç Anadolu ve Ergene", "E) Psödomaki – Doğu Anadolu platoları"],
         correctAnswerIndex: 1,
         explanation: "Karasal iklimin kanıtı bozkır (step) bitki örtüsüdür; bu iklim Ergene (Edirne), İç Anadolu, İç Ege, Doğu Anadolu (Erzurum-Kars) ve Güneydoğu Anadolu'da görülür."
     },

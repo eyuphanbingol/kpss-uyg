@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 """Build sorular/vatandas-14.js — Vatandaşlık Genel Tekrar 1 (80–100 ÖSYM MCQ)."""
+# UYARI: Çıktı dosyası (sorular/…) sonradan elle ÖSYM tarzına göre düzeltildi ve şık sırası bu betiktekinden
+# farklı. Bu betiği yeniden çalıştırmak düzeltmeleri siler; soruları doğrudan sorular/ altındaki dosyada düzenle.
 from pathlib import Path
 import json
 
