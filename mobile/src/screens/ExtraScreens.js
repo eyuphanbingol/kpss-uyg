@@ -10,6 +10,7 @@ import { Card, PrimaryButton, ScrollScreen, Badge, PageHeader } from "../ui";
 import { colors } from "../lib/theme";
 import { questionImages } from "../lib/media";
 import { ZoomableImage } from "../components/ZoomableImage";
+export { HeatScreen } from "./HeatScreen";
 
 function stripChoicePrefix(opt) {
     return String(opt || "").replace(/^[A-Ea-e][\s\)\.:\-]+\s*/, "").trim();
@@ -220,102 +221,6 @@ export function LeaderboardScreen({ navigation }) {
                     </Text>
                 </Card>
             )}
-        </ScrollScreen>
-    );
-}
-
-// ============================================================
-// HEAT SCREEN
-// ============================================================
-
-export function HeatScreen({ navigation }) {
-    var app = useApp();
-    var isDark = app.dark;
-    var sessions = app.student.sessions || {};
-    var today = StudentStore.todayStr();
-    var cells = [];
-    var i;
-    for (i = 34; i >= 0; i--) {
-        var iso = StudentStore.addDays(today, -i);
-        cells.push({ iso: iso, q: (sessions[iso] && sessions[iso].questions) || 0 });
-    }
-
-    var maxQ = Math.max(1, ...cells.map(function (c) { return c.q; }));
-
-    function getHeatColor(q) {
-        if (q === 0) return "#F5F5F4";
-        var ratio = q / maxQ;
-        if (ratio < 0.25) return "#FED7AA";
-        if (ratio < 0.5) return "#FB923C";
-        if (ratio < 0.75) return "#EA580C";
-        return "#C2410C";
-    }
-
-    var totalQ = cells.reduce(function (sum, c) { return sum + c.q; }, 0);
-    var activeDays = cells.filter(function (c) { return c.q > 0; }).length;
-
-    return (
-        <ScrollScreen dark={isDark}>
-            {/* Back */}
-            <PageHeader dark={isDark} title="Isı Haritası" subtitle="30 günlük çalışma tempon" onBack={function () { navigation.goBack(); }} right={null} />
-
-            {/* Stats */}
-            <View style={styles.heatStats}>
-                <View style={styles.heatStat}>
-                    <Text style={[styles.heatStatValue, isDark && styles.textLight]}>
-                        {activeDays}
-                    </Text>
-                    <Text style={[styles.heatStatLabel, isDark && styles.textMuted]}>
-                        Aktif Gün
-                    </Text>
-                </View>
-                <View style={styles.heatStatDivider} />
-                <View style={styles.heatStat}>
-                    <Text style={[styles.heatStatValue, isDark && styles.textLight]}>
-                        {totalQ}
-                    </Text>
-                    <Text style={[styles.heatStatLabel, isDark && styles.textMuted]}>
-                        Toplam Soru
-                    </Text>
-                </View>
-                <View style={styles.heatStatDivider} />
-                <View style={styles.heatStat}>
-                    <Text style={[styles.heatStatValue, isDark && styles.textLight]}>
-                        {activeDays > 0 ? Math.round(totalQ / activeDays) : 0}
-                    </Text>
-                    <Text style={[styles.heatStatLabel, isDark && styles.textMuted]}>
-                        Günlük Ort.
-                    </Text>
-                </View>
-            </View>
-
-            {/* Heatmap Grid */}
-            <Card style={[styles.heatCard, isDark && styles.cardDark]}>
-                <View style={styles.heatGrid}>
-                    {cells.map(function (c) {
-                        return (
-                            <View 
-                                key={c.iso} 
-                                style={[
-                                    styles.heatCell,
-                                    { backgroundColor: getHeatColor(c.q) }
-                                ]} 
-                            />
-                        );
-                    })}
-                </View>
-                <View style={styles.heatLegend}>
-                    <Text style={[styles.heatLegendText, isDark && styles.textMuted]}>Az</Text>
-                    <View style={styles.heatLegendBar}>
-                        <View style={[styles.heatLegendDot, { backgroundColor: "#F5F5F4" }]} />
-                        <View style={[styles.heatLegendDot, { backgroundColor: "#FED7AA" }]} />
-                        <View style={[styles.heatLegendDot, { backgroundColor: "#FB923C" }]} />
-                        <View style={[styles.heatLegendDot, { backgroundColor: "#EA580C" }]} />
-                        <View style={[styles.heatLegendDot, { backgroundColor: "#C2410C" }]} />
-                    </View>
-                    <Text style={[styles.heatLegendText, isDark && styles.textMuted]}>Çok</Text>
-                </View>
-            </Card>
         </ScrollScreen>
     );
 }
@@ -674,66 +579,6 @@ var styles = StyleSheet.create({
         fontWeight: "700",
         fontSize: 14,
         color: colors.text,
-    },
-
-    // ---------- Heat ----------
-    heatStats: {
-        flexDirection: "row",
-        alignItems: "center",
-        marginBottom: 12,
-    },
-    heatStat: {
-        flex: 1,
-        alignItems: "center",
-    },
-    heatStatValue: {
-        fontSize: 20,
-        fontWeight: "700",
-        color: colors.text,
-    },
-    heatStatLabel: {
-        color: colors.muted,
-        fontSize: 11,
-        marginTop: 2,
-    },
-    heatStatDivider: {
-        width: 1,
-        height: 32,
-        backgroundColor: colors.border,
-    },
-    heatCard: {
-        padding: 12,
-    },
-    heatGrid: {
-        flexDirection: "row",
-        flexWrap: "wrap",
-        justifyContent: "center",
-    },
-    heatCell: {
-        width: 18,
-        height: 18,
-        margin: 2,
-        borderRadius: 4,
-    },
-    heatLegend: {
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "center",
-        marginTop: 10,
-        gap: 6,
-    },
-    heatLegendText: {
-        fontSize: 10,
-        color: colors.muted,
-    },
-    heatLegendBar: {
-        flexDirection: "row",
-        gap: 3,
-    },
-    heatLegendDot: {
-        width: 14,
-        height: 14,
-        borderRadius: 4,
     },
 
     // ---------- AI ----------

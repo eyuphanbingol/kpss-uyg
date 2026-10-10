@@ -31,7 +31,7 @@ Eksikler ekranı mobildeki gibi ilerleme çubuğu, ders başına sayaç ve tıkl
 | Deneme ekranı (ders seçimi, soru sayısı, süre; tam deneme 40 soru · 40 dk, haftalık kota) | Bugün → "Deneme" | ✅ iki tarafta da ekran yazılıydı ama açılmıyordu; ikisi de Bugün'e bağlandı, web tam denemesi mobildeki gibi kaydedilir |
 | Net kartını indir/paylaş (test sonucu görseli) | Test sonucu | ✅ mobilde paylaşım menüsüyle; çizim ortak (`js/shareCard.js` → gizli WebView) |
 | Program görseli paylaş | Akıllı program | ✅ aynı çizim (`SmartPlan.imageModel` + `ShareCard.drawPlan`); web'de ayrıca tarayıcıdan yazdır/PDF |
-| Isı haritası ayrıntıları (aktif gün, günlük ortalama, güçlü ders, fark) | Isı haritası | ⏳ |
+| Isı haritası ayrıntıları (çalışma saati, gün ayrıntısı, haftalık özet, ders analizi sekmesi) | Isı haritası | ✅ mobil `screens/HeatScreen.js` web `Heatmap30.jsx` ile aynı hesap |
 | Akıllı tercih (puana göre kurum eşleşmesi, arama) | Seviye/puan ekranı | ⏳ |
 | Yapay zekâ: "neden yanlış yaptım" notu, rastgele soru | Yapay zekâ | ⏳ |
 | Hatırlatma izni (bildirim) | Ben | ➖ mobilde yerel bildirim paketi yok (yeni native bağımlılık gerekir) |
