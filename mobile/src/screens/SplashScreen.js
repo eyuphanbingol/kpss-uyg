@@ -39,14 +39,16 @@ function LoaderBar() {
     );
 }
 
-function LoaderVideo() {
+// iOS'ta video katmanı bazen kutusundan büyük çiziliyor (sağda/altta taşan ikinci logo):
+// boyut açıkça verilir, dıştaki kutu da taşanı kırpar.
+function LoaderVideo(props) {
     var player = useVideoPlayer(VIDEO, function (p) {
         p.loop = true;
         p.muted = true;
         p.audioMixingMode = "mixWithOthers"; // açık müziği durdurmasın
         p.play();
     });
-    return <VideoView player={player} style={StyleSheet.absoluteFill} contentFit="cover" nativeControls={false} allowsPictureInPicture={false} />;
+    return <VideoView player={player} style={{ position: "absolute", left: 0, top: 0, width: props.size, height: props.size }} contentFit="contain" surfaceType="textureView" nativeControls={false} allowsPictureInPicture={false} />;
 }
 
 export default function SplashScreen() {
@@ -60,9 +62,9 @@ export default function SplashScreen() {
         <View style={[styles.fill, { backgroundColor: BG }]} accessibilityRole="progressbar" accessibilityLabel="İşleminiz devam ediyor, lütfen bekleyin">
             <StatusBar style="light" />
             <View style={styles.center}>
-                <View style={{ width: size, height: size }}>
+                <View style={{ width: size, height: size, overflow: "hidden", borderRadius: size / 2 }}>
                     <Image source={POSTER} style={StyleSheet.absoluteFill} resizeMode="cover" />
-                    {still ? null : <LoaderVideo />}
+                    {still ? null : <LoaderVideo size={size} />}
                     <Svg style={StyleSheet.absoluteFill} width={size} height={size} pointerEvents="none">
                         <Defs>
                             <RadialGradient id="fade" cx="50%" cy="50%" r="50%">
