@@ -2798,6 +2798,15 @@
                 padding-right: max(16px, calc((100% - 42rem) / 2));
             }
         }
+        /* Oyun ekranları (harita, Fethet, Tabu, Son 30 saniye) masaüstünde sol menünün yanına sığar.
+           Yukarıdaki "width: 100%" kuralları sol menü varken ekranı menü genişliği kadar taşırıyordu. */
+        @media (min-width: 1024px) {
+            .app-shell.has-nav .map-play-root,
+            .app-shell.has-nav .map-play-root.map-place,
+            .app-shell.has-nav .map-play-root.conquer-root {
+                left: var(--side-w); right: 0; width: auto; max-width: none;
+            }
+        }
         /* ===== MOBİL TASARIM DİLİ =====
            Kaynak: mobile/src/lib/theme.js, mobile/src/ui.js, mobile/src/kit.js.
            Web, mobil uygulamayla aynı zemin, kart, başlık ve simge kutusunu kullanır. */
