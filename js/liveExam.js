@@ -623,7 +623,8 @@
             [["soru metninde", q.metin]].concat((Array.isArray(q.siklar) ? q.siklar : []).map(function (x, i) { return [LETTERS[i] + " şıkkında", x]; }), [["çözümde", q.cozum]]).forEach(function (f) {
                 richIssues(f[1]).forEach(function (iss) { warnings.push(tag + ": " + f[0] + " " + iss + " işareti var."); });
             });
-            if (q.gorsel && images && !images[q.gorsel]) errors.push(tag + ": görsel '" + q.gorsel + "' yüklenmedi.");
+            // görsel eksikse yükleme durmaz: sonradan "Soruları görüntüle / düzenle"den eklenir
+            if (q.gorsel && images && !images[q.gorsel]) warnings.push(tag + ": görsel '" + q.gorsel + "' henüz eklenmedi (yükledikten sonra soru editöründen ekleyebilirsin).");
             out.push({
                 no: no, bolum: bolum, ders: ders, konu: q.konu, stem: stemText(q.metin, no),
                 options: (q.siklar || []).map(function (s) { return String(s == null ? "" : s).replace(/^[A-E][\)\.]\s*/, ""); }),

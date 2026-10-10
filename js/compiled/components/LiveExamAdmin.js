@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:126457:cxzbi0*/
+/*jsx:babel-7.29.9-react-classic:128687:v54ujb*/
 (function () {
   const {
     useState,
@@ -333,6 +333,16 @@
       });
     });
   }
+
+  // Görseli seçilmemiş soru numaraları (yüklemeyi durdurmaz)
+  function missingImgs(check) {
+    return (check.warnings || []).filter(function (w) {
+      return /görsel '.*' henüz eklenmedi/.test(w);
+    }).map(function (w) {
+      var m = /^Soru (\d+)/.exec(w);
+      return m ? m[1] : "?";
+    });
+  }
   function BareBox(props) {
     return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h3", {
       className: "font-bold"
@@ -522,7 +532,9 @@
       }, "🔥".repeat(g.w))), /*#__PURE__*/React.createElement("td", {
         className: "font-bold " + (g.count ? "" : g.w >= 4 ? "text-amber-700" : "text-stone-500")
       }, g.count, " soru"));
-    }))))) : null) : null, err ? /*#__PURE__*/React.createElement("p", {
+    }))))) : null) : null, check && check.ok && missingImgs(check).length ? /*#__PURE__*/React.createElement("p", {
+      className: "text-sm mt-2 p-2.5 rounded-xl bg-amber-50 text-amber-900 dark:bg-amber-950/40 dark:text-amber-200"
+    }, "\uD83D\uDDBC ", missingImgs(check).length, " sorunun g\xF6rseli se\xE7ilmedi (", missingImgs(check).slice(0, 8).join(", "), missingImgs(check).length > 8 ? "…" : "", "). Sorun de\u011Fil: y\xFCkle, sonra \"Sorular\u0131 g\xF6r\xFCnt\xFCle / d\xFCzenle\"den her soruya g\xF6rselini ekle.") : null, err ? /*#__PURE__*/React.createElement("p", {
       className: "text-sm text-rose-600 mt-2"
     }, err) : null, busy ? /*#__PURE__*/React.createElement("p", {
       className: "text-sm mt-2"
@@ -1174,6 +1186,12 @@
     var nImg = list.filter(function (x) {
       return x.gorsel;
     }).length;
+    // görseller kitapçıktan açılırken hepsi "eksik" görünmesin
+    var imgsLoading = imgNote === "Görseller kitapçıktan açılıyor…";
+    var noImg = function (x) {
+      return !imgsLoading && x.gorsel && !imgs[x.gorsel];
+    };
+    var nNoImg = list.filter(noImg).length;
     var canSave = editable && nDirty > 0 && check && check.ok && !busy;
 
     // taslağı yaz (kısa gecikmeyle)
@@ -1222,6 +1240,7 @@
       if (flag === "dirty" && !dirty[x.no]) return;
       if (flag === "error" && !(issues.by[x.no] && issues.by[x.no].errors.length)) return;
       if (flag === "image" && !x.gorsel) return;
+      if (flag === "noimg" && !noImg(x)) return;
       if (needle && !/^\d+$/.test(needle) && (x.metin + " " + kLabel(x.konu) + " " + x.siklar.join(" ") + " " + x.cozum).toLocaleLowerCase("tr").indexOf(needle) < 0) return;
       match[x.no] = true;
     });
@@ -1503,7 +1522,19 @@
       onClick: function () {
         setConfirm(true);
       }
-    }, busy || "Kaydet" + (nDirty ? " (" + nDirty + ")" : "")) : null)), editable && numbered.length ? /*#__PURE__*/React.createElement("div", {
+    }, busy || "Kaydet" + (nDirty ? " (" + nDirty + ")" : "")) : null)), nNoImg ? /*#__PURE__*/React.createElement("div", {
+      className: "rounded-2xl border border-amber-300 bg-amber-50 dark:bg-amber-950/30 p-3 text-sm flex flex-wrap items-center gap-3",
+      role: "status"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "flex-1 min-w-[220px]"
+    }, "\uD83D\uDDBC ", nNoImg, " sorunun g\xF6rseli hen\xFCz eklenmedi. Soruyu a\xE7\u0131p g\xF6rseli s\xFCr\xFCkle-b\u0131rak, Ctrl+V ile yap\u0131\u015Ft\u0131r ya da \"G\xF6rsel se\xE7\"; sonra kaydet."), /*#__PURE__*/React.createElement(Btn, {
+      small: true,
+      onClick: function () {
+        setFlag("noimg");
+        var first = list.filter(noImg)[0];
+        if (first) setCur(first.no);
+      }
+    }, "Eksikleri g\xF6ster")) : null, editable && numbered.length ? /*#__PURE__*/React.createElement("div", {
       className: "rounded-2xl border border-amber-300 bg-amber-50 dark:bg-amber-950/30 p-3 text-sm flex flex-wrap items-center gap-3",
       role: "status"
     }, /*#__PURE__*/React.createElement("span", {
@@ -1596,7 +1627,12 @@
       onClick: function () {
         setFlag("image");
       }
-    }, "G\xF6rselli ", nImg)), needle && !/^\d+$/.test(needle) || flag !== "all" ? /*#__PURE__*/React.createElement("p", {
+    }, "G\xF6rselli ", nImg), nNoImg ? /*#__PURE__*/React.createElement(Chip, {
+      on: flag === "noimg",
+      onClick: function () {
+        setFlag("noimg");
+      }
+    }, "G\xF6rseli eksik ", nNoImg) : null), needle && !/^\d+$/.test(needle) || flag !== "all" ? /*#__PURE__*/React.createElement("p", {
       className: "text-xs text-stone-500",
       role: "status"
     }, nMatch, " soru e\u015Fle\u015Fti \xB7 \u2190/\u2192 yaln\u0131zca bunlarda gezer") : null, /*#__PURE__*/React.createElement("button", {
@@ -1629,7 +1665,7 @@
         }, n);
         var e = issues.by[n] && issues.by[n].errors.length,
           on = n === x.no;
-        var label = "Soru " + n + (dirty[n] ? ", değişti" : "") + (e ? ", hatalı" : "") + (s.gorsel ? ", görselli" : "");
+        var label = "Soru " + n + (dirty[n] ? ", değişti" : "") + (e ? ", hatalı" : "") + (s.gorsel ? noImg(s) ? ", görseli eksik" : ", görselli" : "");
         return /*#__PURE__*/React.createElement("button", {
           key: n,
           type: "button",
@@ -1642,7 +1678,7 @@
           title: label,
           className: "relative h-8 rounded-lg text-xs font-bold border " + (on ? "bg-indigo-600 text-white border-indigo-600" : e ? "bg-rose-50 text-rose-800 border-rose-400 dark:bg-rose-950/40 dark:text-rose-200" : dirty[n] ? "bg-indigo-50 text-indigo-800 border-indigo-400 dark:bg-indigo-950/40 dark:text-indigo-200" : "border-stone-200 dark:border-stone-700") + (match[n] || on ? "" : " opacity-25")
         }, n, s.gorsel ? /*#__PURE__*/React.createElement("span", {
-          className: "absolute top-0.5 right-0.5 w-1.5 h-1.5 rounded-full bg-sky-500",
+          className: "absolute top-0.5 right-0.5 w-1.5 h-1.5 rounded-full " + (noImg(s) ? "bg-amber-500 ring-2 ring-amber-200" : "bg-sky-500"),
           "aria-hidden": "true"
         }) : null);
       })));
@@ -1651,6 +1687,8 @@
     }, /*#__PURE__*/React.createElement("span", {
       className: "inline-block w-2 h-2 rounded-full bg-sky-500 mr-1"
     }), "g\xF6rselli \xB7", /*#__PURE__*/React.createElement("span", {
+      className: "inline-block w-2 h-2 rounded-full bg-amber-500 mx-1"
+    }), "g\xF6rseli eksik \xB7", /*#__PURE__*/React.createElement("span", {
       className: "inline-block w-2.5 h-2.5 rounded border border-indigo-400 bg-indigo-50 mx-1 align-middle"
     }), "de\u011Fi\u015Fti \xB7", /*#__PURE__*/React.createElement("span", {
       className: "inline-block w-2.5 h-2.5 rounded border border-rose-400 bg-rose-50 mx-1 align-middle"
@@ -1834,8 +1872,8 @@
       alt: "Soru " + x.no + " görseli",
       className: "max-h-72 mx-auto rounded-xl border bg-white"
     }) : null, x.gorsel && !img ? /*#__PURE__*/React.createElement("p", {
-      className: "text-amber-700"
-    }, "Bu g\xF6rsel elde yok; kaydetmeden \xF6nce yeniden se\xE7.") : null, !x.gorsel ? /*#__PURE__*/React.createElement("p", {
+      className: "text-amber-700 dark:text-amber-300 text-center py-2"
+    }, "\uD83D\uDDBC \"", x.gorsel, "\" g\xF6rseli hen\xFCz eklenmedi. ", editable ? "Sürükleyip bırak, Ctrl+V ile yapıştır ya da Görsel seç." : "") : null, !x.gorsel ? /*#__PURE__*/React.createElement("p", {
       className: "text-stone-500 text-center py-3"
     }, editable ? "Görsel yok. Sürükleyip bırak, Ctrl+V ile yapıştır ya da seç." : "Görsel yok.") : null, /*#__PURE__*/React.createElement("div", {
       className: "flex flex-wrap items-center justify-center gap-2 mt-2"

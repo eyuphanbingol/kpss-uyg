@@ -167,6 +167,11 @@
         });
     }
 
+    // Görseli seçilmemiş soru numaraları (yüklemeyi durdurmaz)
+    function missingImgs(check) {
+        return (check.warnings || []).filter(function (w) { return /görsel '.*' henüz eklenmedi/.test(w); })
+            .map(function (w) { var m = /^Soru (\d+)/.exec(w); return m ? m[1] : "?"; });
+    }
     function BareBox(props) {
         return <div><h3 className="font-bold">{props.title}</h3>{props.sub ? <p className="text-xs text-stone-500 mt-0.5 mb-3">{props.sub}</p> : null}{props.children}</div>;
     }
@@ -275,6 +280,11 @@
                             </details>
                         ) : null}
                     </div>
+                ) : null}
+                {check && check.ok && missingImgs(check).length ? (
+                    <p className="text-sm mt-2 p-2.5 rounded-xl bg-amber-50 text-amber-900 dark:bg-amber-950/40 dark:text-amber-200">
+                        🖼 {missingImgs(check).length} sorunun görseli seçilmedi ({missingImgs(check).slice(0, 8).join(", ")}{missingImgs(check).length > 8 ? "…" : ""}). Sorun değil: yükle, sonra "Soruları görüntüle / düzenle"den her soruya görselini ekle.
+                    </p>
                 ) : null}
                 {err ? <p className="text-sm text-rose-600 mt-2">{err}</p> : null}
                 {busy ? <p className="text-sm mt-2">{busy}</p> : null}
@@ -590,6 +600,10 @@
         var numbered = list.filter(function (q0) { return L.stemText(q0.metin, q0.no) !== q0.metin; });
         var nErr = Object.keys(issues.by).filter(function (k) { return issues.by[k].errors.length; }).length;
         var nImg = list.filter(function (x) { return x.gorsel; }).length;
+        // görseller kitapçıktan açılırken hepsi "eksik" görünmesin
+        var imgsLoading = imgNote === "Görseller kitapçıktan açılıyor…";
+        var noImg = function (x) { return !imgsLoading && x.gorsel && !imgs[x.gorsel]; };
+        var nNoImg = list.filter(noImg).length;
         var canSave = editable && nDirty > 0 && check && check.ok && !busy;
 
         // taslağı yaz (kısa gecikmeyle)
@@ -616,6 +630,7 @@
             if (flag === "dirty" && !dirty[x.no]) return;
             if (flag === "error" && !(issues.by[x.no] && issues.by[x.no].errors.length)) return;
             if (flag === "image" && !x.gorsel) return;
+            if (flag === "noimg" && !noImg(x)) return;
             if (needle && !/^\d+$/.test(needle) && (x.metin + " " + kLabel(x.konu) + " " + x.siklar.join(" ") + " " + x.cozum).toLocaleLowerCase("tr").indexOf(needle) < 0) return;
             match[x.no] = true;
         });
@@ -756,6 +771,12 @@
                     </div>
                 </div>
 
+                {nNoImg ? (
+                    <div className="rounded-2xl border border-amber-300 bg-amber-50 dark:bg-amber-950/30 p-3 text-sm flex flex-wrap items-center gap-3" role="status">
+                        <span className="flex-1 min-w-[220px]">🖼 {nNoImg} sorunun görseli henüz eklenmedi. Soruyu açıp görseli sürükle-bırak, Ctrl+V ile yapıştır ya da "Görsel seç"; sonra kaydet.</span>
+                        <Btn small onClick={function () { setFlag("noimg"); var first = list.filter(noImg)[0]; if (first) setCur(first.no); }}>Eksikleri göster</Btn>
+                    </div>
+                ) : null}
                 {editable && numbered.length ? (
                     <div className="rounded-2xl border border-amber-300 bg-amber-50 dark:bg-amber-950/30 p-3 text-sm flex flex-wrap items-center gap-3" role="status">
                         <span className="flex-1 min-w-[220px]">{numbered.length} sorunun metni kendi numarasıyla başlıyor (ör. "{numbered[0].no}. …"); kitapçıkta numara iki kez görünür.</span>
@@ -800,6 +821,7 @@
                             <Chip on={flag === "dirty"} onClick={function () { setFlag("dirty"); }}>Değişen {nDirty}</Chip>
                             <Chip on={flag === "error"} onClick={function () { setFlag("error"); }}>Hatalı {nErr}</Chip>
                             <Chip on={flag === "image"} onClick={function () { setFlag("image"); }}>Görselli {nImg}</Chip>
+                            {nNoImg ? <Chip on={flag === "noimg"} onClick={function () { setFlag("noimg"); }}>Görseli eksik {nNoImg}</Chip> : null}
                         </div>
                         {(needle && !/^\d+$/.test(needle)) || flag !== "all" ? <p className="text-xs text-stone-500" role="status">{nMatch} soru eşleşti · ←/→ yalnızca bunlarda gezer</p> : null}
                         <button type="button" className="lg:hidden w-full flex items-center justify-between rounded-xl border border-stone-300 dark:border-stone-600 px-3 py-2 text-sm font-semibold"
@@ -818,13 +840,13 @@
                                             var s = byNo[n];
                                             if (!s) return <span key={n} className="h-8 rounded-lg border border-dashed border-stone-300 text-[10px] grid place-items-center text-stone-400">{n}</span>;
                                             var e = issues.by[n] && issues.by[n].errors.length, on = n === x.no;
-                                            var label = "Soru " + n + (dirty[n] ? ", değişti" : "") + (e ? ", hatalı" : "") + (s.gorsel ? ", görselli" : "");
+                                            var label = "Soru " + n + (dirty[n] ? ", değişti" : "") + (e ? ", hatalı" : "") + (s.gorsel ? (noImg(s) ? ", görseli eksik" : ", görselli") : "");
                                             return (
                                                 <button key={n} type="button" onClick={function () { setCur(n); setNavOpen(false); }} aria-current={on ? "true" : undefined} aria-label={label} title={label}
                                                     className={"relative h-8 rounded-lg text-xs font-bold border " +
                                                         (on ? "bg-indigo-600 text-white border-indigo-600" : e ? "bg-rose-50 text-rose-800 border-rose-400 dark:bg-rose-950/40 dark:text-rose-200" : dirty[n] ? "bg-indigo-50 text-indigo-800 border-indigo-400 dark:bg-indigo-950/40 dark:text-indigo-200" : "border-stone-200 dark:border-stone-700") +
                                                         (match[n] || on ? "" : " opacity-25")}>
-                                                    {n}{s.gorsel ? <span className="absolute top-0.5 right-0.5 w-1.5 h-1.5 rounded-full bg-sky-500" aria-hidden="true"></span> : null}
+                                                    {n}{s.gorsel ? <span className={"absolute top-0.5 right-0.5 w-1.5 h-1.5 rounded-full " + (noImg(s) ? "bg-amber-500 ring-2 ring-amber-200" : "bg-sky-500")} aria-hidden="true"></span> : null}
                                                 </button>
                                             );
                                         })}
@@ -834,6 +856,7 @@
                         })}
                         <p className="text-[11px] text-stone-500 leading-snug">
                             <span className="inline-block w-2 h-2 rounded-full bg-sky-500 mr-1"></span>görselli ·
+                            <span className="inline-block w-2 h-2 rounded-full bg-amber-500 mx-1"></span>görseli eksik ·
                             <span className="inline-block w-2.5 h-2.5 rounded border border-indigo-400 bg-indigo-50 mx-1 align-middle"></span>değişti ·
                             <span className="inline-block w-2.5 h-2.5 rounded border border-rose-400 bg-rose-50 mx-1 align-middle"></span>hatalı
                         </p>
@@ -903,7 +926,7 @@
                                 onDragLeave={function () { setDrag(false); }}
                                 onDrop={function (e) { if (!editable) return; e.preventDefault(); setDrag(false); setImage(x.no, e.dataTransfer.files && e.dataTransfer.files[0]); }}>
                                 {img ? <img src={img} alt={"Soru " + x.no + " görseli"} className="max-h-72 mx-auto rounded-xl border bg-white" /> : null}
-                                {x.gorsel && !img ? <p className="text-amber-700">Bu görsel elde yok; kaydetmeden önce yeniden seç.</p> : null}
+                                {x.gorsel && !img ? <p className="text-amber-700 dark:text-amber-300 text-center py-2">🖼 "{x.gorsel}" görseli henüz eklenmedi. {editable ? "Sürükleyip bırak, Ctrl+V ile yapıştır ya da Görsel seç." : ""}</p> : null}
                                 {!x.gorsel ? <p className="text-stone-500 text-center py-3">{editable ? "Görsel yok. Sürükleyip bırak, Ctrl+V ile yapıştır ya da seç." : "Görsel yok."}</p> : null}
                                 <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
                                     {editable ? <Btn onClick={function () { fileRef.current && fileRef.current.click(); }}>{x.gorsel ? "Görseli değiştir" : "Görsel seç"}</Btn> : null}

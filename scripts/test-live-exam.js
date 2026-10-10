@@ -175,6 +175,8 @@ Promise.resolve().then(function () {
     var nd = JSON.parse(JSON.stringify(require("../docs/canli-deneme-ornek.json")));
     nd.sorular[4].metin = "5. " + nd.sorular[4].metin;
     ok(L.validateUpload(nd, cat, {}, null).questions[4].stem.indexOf("5. ") !== 0, "yüklemede baştaki numara temizlenir");
+    var vi = L.validateUpload(require("../docs/canli-deneme-ornek.json"), cat, {}, {});
+    ok(vi.ok && vi.warnings.some(function (w) { return /görsel 'soru-60\.png' henüz eklenmedi/.test(w); }), "görseli seçilmemiş dosya yine yüklenir (uyarı verir)");
     var bad3 = JSON.parse(JSON.stringify(require("../docs/canli-deneme-ornek.json")));
     bad3.sorular[0].metin = "Kapanmamış __altı çizili";
     ok(L.validateUpload(bad3, cat, {}, null).warnings.some(function (w) { return /Soru 1: soru metninde kapanmamış __/.test(w); }), "doğrulayıcı: kapanmamış biçim uyarısı");
