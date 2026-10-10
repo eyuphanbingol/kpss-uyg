@@ -33,7 +33,7 @@ Eksikler ekranı mobildeki gibi ilerleme çubuğu, ders başına sayaç ve tıkl
 | Program görseli paylaş | Akıllı program | ✅ aynı çizim (`SmartPlan.imageModel` + `ShareCard.drawPlan`); web'de ayrıca tarayıcıdan yazdır/PDF |
 | Isı haritası ayrıntıları (çalışma saati, gün ayrıntısı, haftalık özet, ders analizi sekmesi) | Isı haritası | ✅ mobil `screens/HeatScreen.js` web `Heatmap30.jsx` ile aynı hesap |
 | Tercih: arama, güvenli/sınırda/riskli filtresi, sıralama, GY/GK net, puan farkı | Puan / Tercih | ✅ mobil `screens/PlacementScreen.js`; puan farkındaki ondalık taşması iki tarafta düzeltildi |
-| Yapay zekâ: "neden yanlış yaptım" notu, rastgele soru | Yapay zekâ | ⏳ |
+| Soru asistanı: soru havuzu, önceki/sonraki/rastgele/karışık, şıkları gizle, "neden yanlış yaptım" notu, açıklama | Yapay zekâ | ✅ mobil `screens/AiScreen.js`; web çıktısındaki çıplak `**` işaretleri kaldırıldı |
 | Hatırlatma izni (bildirim) | Ben | ➖ mobilde yerel bildirim paketi yok (yeni native bağımlılık gerekir) |
 | Yönetim paneli | Ben → Yönetim | ➖ web'de (telefon tarayıcısında da çalışır) |
 

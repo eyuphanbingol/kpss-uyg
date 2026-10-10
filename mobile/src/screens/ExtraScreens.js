@@ -4,16 +4,11 @@ import { useApp } from "../AppProvider";
 import { StudentStore } from "../lib/store";
 import { supabase } from "../lib/supabase";
 import { trError } from "../lib/trError";
-import { Card, PrimaryButton, ScrollScreen, Badge, PageHeader } from "../ui";
+import { Card, PrimaryButton, ScrollScreen, PageHeader } from "../ui";
 import { colors } from "../lib/theme";
-import { questionImages } from "../lib/media";
-import { ZoomableImage } from "../components/ZoomableImage";
 export { HeatScreen } from "./HeatScreen";
 export { PlacementScreen } from "./PlacementScreen";
-
-function stripChoicePrefix(opt) {
-    return String(opt || "").replace(/^[A-Ea-e][\s\)\.:\-]+\s*/, "").trim();
-}
+export { AiScreen } from "./AiScreen";
 
 // ============================================================
 // LEADERBOARD SCREEN
@@ -127,70 +122,6 @@ export function LeaderboardScreen({ navigation }) {
                         Henüz sıralama verisi yok.
                     </Text>
                 </Card>
-            )}
-        </ScrollScreen>
-    );
-}
-
-// ============================================================
-// AI SCREEN
-// ============================================================
-
-export function AiScreen({ navigation }) {
-    var app = useApp();
-    var isDark = app.dark;
-    var wrong = app.plan.wrong || [];
-    var item = wrong[0];
-
-    return (
-        <ScrollScreen dark={isDark}>
-            {/* Back */}
-            <PageHeader dark={isDark} title="Soru Asistanı" subtitle="Yanlışlarını analiz et" onBack={function () { navigation.goBack(); }} right={null} />
-
-            {!item ? (
-                <Card style={[styles.emptyCard, isDark && styles.cardDark]}>
-                    <Text style={styles.emptyIcon}>🧠</Text>
-                    <Text style={[styles.emptyTitle, isDark && styles.textLight]}>
-                        Yanlış Defteri Boş
-                    </Text>
-                    <Text style={[styles.emptyDesc, isDark && styles.textMuted]}>
-                        Önce soru çöz, yanlışlarını analiz edelim.
-                    </Text>
-                </Card>
-            ) : (
-                <Card style={[isDark && styles.cardDark]}>
-                    <View style={styles.aiHeader}>
-                        <Badge type="warning" title="Yanlış Soru" />
-                        <Text style={[styles.aiQuestion, isDark && styles.textLight]}>
-                            {item.q.question}
-                        </Text>
-                        {questionImages(item.q).map(function (uri, gi) {
-                            return <View key={uri + gi} style={{ marginTop: 10 }}><ZoomableImage uri={uri} dark={isDark} /></View>;
-                        })}
-                    </View>
-                    <View style={styles.aiCorrect}>
-                        <Text style={styles.aiCorrectLabel}>✅ Doğru Cevap</Text>
-                        <Text style={[styles.aiCorrectValue, isDark && styles.textLight]}>
-                            {stripChoicePrefix(item.q.options[item.q.correctAnswerIndex])}
-                        </Text>
-                    </View>
-                    {item.q.explanation && (
-                        <View style={styles.aiExplanation}>
-                            <Text style={[styles.aiExplanationLabel, isDark && styles.textMuted]}>
-                                💡 Çözüm Notu
-                            </Text>
-                            <Text style={[styles.aiExplanationText, isDark && styles.textLight]}>
-                                {item.q.explanation}
-                            </Text>
-                        </View>
-                    )}
-                </Card>
-            )}
-
-            {wrong.length > 1 && (
-                <Text style={[styles.aiCount, isDark && styles.textMuted]}>
-                    {wrong.length - 1} soru daha yanlış defterinde
-                </Text>
             )}
         </ScrollScreen>
     );
@@ -376,61 +307,6 @@ var styles = StyleSheet.create({
         color: colors.text,
     },
 
-    // ---------- AI ----------
-    aiHeader: {
-        marginBottom: 12,
-    },
-    aiQuestion: {
-        fontSize: 16,
-        fontWeight: "600",
-        color: colors.text,
-        marginTop: 8,
-        lineHeight: 22,
-    },
-    aiCorrect: {
-        backgroundColor: colors.emerald + "10",
-        padding: 12,
-        borderRadius: 10,
-        borderWidth: 1,
-        borderColor: colors.emerald + "30",
-        marginBottom: 12,
-    },
-    aiCorrectLabel: {
-        fontSize: 11,
-        fontWeight: "600",
-        color: colors.muted,
-    },
-    aiCorrectValue: {
-        fontSize: 15,
-        fontWeight: "700",
-        color: colors.emerald,
-        marginTop: 2,
-    },
-    aiExplanation: {
-        backgroundColor: colors.indigo + "08",
-        padding: 12,
-        borderRadius: 10,
-        borderWidth: 1,
-        borderColor: colors.indigo + "20",
-    },
-    aiExplanationLabel: {
-        fontSize: 11,
-        fontWeight: "600",
-        color: colors.muted,
-    },
-    aiExplanationText: {
-        fontSize: 14,
-        color: colors.text,
-        marginTop: 4,
-        lineHeight: 20,
-    },
-    aiCount: {
-        textAlign: "center",
-        color: colors.muted,
-        fontSize: 12,
-        marginTop: 8,
-    },
-
     // ---------- Paywall ----------
     premiumActiveCard: {
         alignItems: "center",
@@ -488,22 +364,6 @@ var styles = StyleSheet.create({
         alignItems: "center",
         paddingVertical: 32,
         paddingHorizontal: 20,
-    },
-    emptyIcon: {
-        fontSize: 40,
-        marginBottom: 12,
-    },
-    emptyTitle: {
-        fontSize: 17,
-        fontWeight: "700",
-        color: colors.text,
-        textAlign: "center",
-    },
-    emptyDesc: {
-        fontSize: 13,
-        color: colors.muted,
-        textAlign: "center",
-        marginTop: 4,
     },
     emptyText: {
         color: colors.muted,

@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:24915:1jev364*/
+/*jsx:babel-7.29.9-react-classic:24922:1sr1etc*/
 (function () {
   const {
     useMemo,
@@ -143,12 +143,12 @@
       if (userQuestion) {
         fullText += "❓ " + userQuestion + "\n\n";
       }
-      fullText += "✅ **Doğru Cevap:** " + dogruLetter + ") " + dogru + "\n\n";
-      fullText += "📖 **Çözüm Notu:**\n" + (exp || "Bu soru için kayıtlı bir çözüm notu bulunmuyor.");
+      fullText += "✅ Doğru cevap: " + dogruLetter + ") " + stripChoicePrefix(dogru) + "\n\n";
+      fullText += "📖 Çözüm notu:\n" + (exp || "Bu soru için kayıtlı bir çözüm notu bulunmuyor.");
 
       // Çözüm notu yoksa öneri ekle
       if (!exp) {
-        fullText += "\n\n💡 **Öneri:**\n• Konu tekrarı yapmayı dene\n• Benzer soruları çöz\n• Yanlışlarını defterine not et";
+        fullText += "\n\n💡 Öneri:\n• Konu tekrarı yapmayı dene\n• Benzer soruları çöz\n• Yanlışlarını defterine not et";
       }
 
       // Yavaş yazma efekti
