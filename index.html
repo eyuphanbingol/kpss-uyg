@@ -121,253 +121,274 @@
     <link rel="stylesheet" href="css/tailwind.css?v=3">
 
     <script>
-        // Soru ve not dosyaları (aşağıdaki data-kc etiketleri) async iner: tanıtım/giriş ekranı onları beklemez.
+        // Soru ve not dosyaları (≈2 MB). Ziyaretçide tanıtım sayfası açıldıktan SONRA, daha önce giriş yapmış
+        // kullanıcıda hemen inmeye başlar; böylece yavaş bağlantıda tanıtım sayfası içeriği beklemez.
         // Hepsi inince KpssContent hazır olur; giriş yapmış kullanıcı ekranı o zaman açılır (js/app.jsx).
+        // Bir soru/not dosyası değişince aşağıdaki ?v= numarasını artır.
         window.KpssContent = (function () {
-            var total = -1, done = 0, ready = false, fns = [];
-            function fire() {
-                if (ready || total < 0 || done < total) return;
+            var FILES = [
+            "notlar/tarih-1-not.js?v=3",
+            "notlar/tarih-2-not.js?v=3",
+            "notlar/tarih-3-not.js?v=3",
+            "notlar/tarih-4-not.js?v=4",
+            "notlar/tarih-5-not.js?v=3",
+            "notlar/tarih-6-not.js?v=3",
+            "notlar/tarih-7-not.js?v=3",
+            "notlar/tarih-8-not.js?v=3",
+            "notlar/tarih-9-not.js?v=4",
+            "notlar/tarih-10-not.js?v=3",
+            "notlar/tarih-11-not.js?v=3",
+            "notlar/tarih-12-not.js?v=3",
+            "notlar/tarih-13-not.js?v=3",
+            "notlar/tarih-14-not.js?v=3",
+            "notlar/tarih-15-not.js?v=3",
+            "notlar/tarih-16-not.js?v=1",
+            "notlar/tarih-17-not.js?v=1",
+            "notlar/tarih-18-not.js?v=1",
+            "notlar/tarih-19-not.js?v=1",
+            "notlar/tarih-20-not.js?v=1",
+            "notlar/tarih-21-not.js?v=1",
+            "notlar/tarih-22-not.js?v=1",
+            "notlar/tarih-23-not.js?v=1",
+            "notlar/tarih-24-not.js?v=1",
+            "notlar/tarih-25-not.js?v=1",
+            "notlar/tarih-26-not.js?v=2",
+            "notlar/tarih-27-not.js?v=2",
+            "notlar/tarih-28-not.js?v=1",
+            "notlar/tarih-29-not.js?v=1",
+            "notlar/cografya-1-not.js?v=12",
+            "notlar/cografya-2-not.js?v=19",
+            "notlar/cografya-3-not.js?v=19",
+            "notlar/cografya-4-not.js?v=10",
+            "notlar/cografya-5-not.js?v=16",
+            "notlar/cografya-6-not.js?v=4",
+            "notlar/cografya-7-not.js?v=3",
+            "notlar/cografya-8-not.js?v=3",
+            "notlar/cografya-9-not.js?v=3",
+            "notlar/cografya-10-not.js?v=3",
+            "notlar/cografya-11-not.js?v=3",
+            "notlar/cografya-12-not.js?v=6",
+            "notlar/cografya-13-not.js?v=3",
+            "notlar/cografya-14-not.js?v=9",
+            "notlar/cografya-15-not.js?v=10",
+            "notlar/cografya-16-not.js?v=3",
+            "notlar/cografya-17-not.js?v=3",
+            "notlar/cografya-18-not.js?v=18",
+            "notlar/cografya-19-not.js?v=37",
+            "notlar/cografya-20-not.js?v=1",
+            "notlar/cografya-21-not.js?v=32",
+            "notlar/cografya-22-not.js?v=1",
+            "notlar/cografya-23-not.js?v=1",
+            "notlar/cografya-24-not.js?v=1",
+            "notlar/cografya-25-not.js?v=2",
+            "notlar/cografya-26-not.js?v=1",
+            "notlar/cografya-27-not.js?v=2",
+            "notlar/vatandas-1-not.js?v=4",
+            "notlar/vatandas-2-not.js?v=2",
+            "notlar/vatandas-3-not.js?v=1",
+            "notlar/vatandas-4-not.js?v=1",
+            "notlar/vatandas-5-not.js?v=1",
+            "notlar/vatandas-6-not.js?v=1",
+            "notlar/vatandas-7-not.js?v=1",
+            "notlar/vatandas-8-not.js?v=1",
+            "notlar/vatandas-9-not.js?v=1",
+            "notlar/vatandas-10-not.js?v=1",
+            "notlar/vatandas-11-not.js?v=1",
+            "notlar/vatandas-12-not.js?v=1",
+            "notlar/vatandas-13-not.js?v=1",
+            "notlar/vatandas-14-not.js?v=3",
+            "notlar/vatandas-15-not.js?v=1",
+            "notlar/vatandas-16-not.js?v=1",
+            "notlar/vatandas-17-not.js?v=1",
+            "notlar/vatandas-18-not.js?v=1",
+            "notlar/turkce-1-not.js?v=1",
+            "notlar/turkce-2-not.js?v=1",
+            "notlar/turkce-3-not.js?v=1",
+            "notlar/turkce-4-not.js?v=2",
+            "notlar/turkce-5-not.js?v=2",
+            "notlar/turkce-6-not.js?v=2",
+            "notlar/turkce-7-not.js?v=2",
+            "notlar/turkce-8-not.js?v=2",
+            "notlar/turkce-9-not.js?v=2",
+            "notlar/turkce-10-not.js?v=2",
+            "notlar/turkce-11-not.js?v=2",
+            "notlar/turkce-12-not.js?v=2",
+            "notlar/turkce-13-not.js?v=2",
+            "notlar/turkce-14-not.js?v=2",
+            "notlar/turkce-15-not.js?v=2",
+            "notlar/turkce-16-not.js?v=2",
+            "notlar/turkce-17-not.js?v=2",
+            "notlar/turkce-18-not.js?v=2",
+            "notlar/turkce-19-not.js?v=2",
+            "notlar/turkce-20-not.js?v=2",
+            "notlar/guncel-1-not.js?v=4",
+            "notlar/guncel-2-not.js?v=4",
+            "notlar/guncel-3-not.js?v=4",
+            "notlar/guncel-4-not.js?v=4",
+            "notlar/guncel-5-not.js?v=4",
+            "notlar/guncel-6-not.js?v=4",
+            "notlar/guncel-7-not.js?v=4",
+            "notlar/guncel-8-not.js?v=4",
+            "notlar/geometri-1-not.js?v=4",
+            "notlar/geometri-2-not.js?v=2",
+            "notlar/geometri-3-not.js?v=2",
+            "notlar/geometri-4-not.js?v=2",
+            "notlar/geometri-5-not.js?v=2",
+            "notlar/geometri-6-not.js?v=2",
+            "notlar/geometri-7-not.js?v=2",
+            "notlar/geometri-8-not.js?v=2",
+            "notlar/geometri-9-not.js?v=2",
+            "notlar/geometri-10-not.js?v=2",
+            "notlar/geometri-11-not.js?v=2",
+            "notlar/geometri-12-not.js?v=2",
+            "sorular/tarih-1.js?v=4",
+            "sorular/tarih-2.js?v=4",
+            "sorular/tarih-3.js?v=4",
+            "sorular/tarih-4.js?v=5",
+            "sorular/tarih-5.js?v=3",
+            "sorular/tarih-6.js?v=4",
+            "sorular/tarih-7.js?v=4",
+            "sorular/tarih-8.js?v=4",
+            "sorular/tarih-9.js?v=5",
+            "sorular/tarih-10.js?v=4",
+            "sorular/tarih-11.js?v=4",
+            "sorular/tarih-12.js?v=4",
+            "sorular/tarih-13.js?v=4",
+            "sorular/tarih-14.js?v=4",
+            "sorular/tarih-15.js?v=4",
+            "sorular/tarih-16.js?v=4",
+            "sorular/tarih-17.js?v=4",
+            "sorular/tarih-18.js?v=4",
+            "sorular/tarih-19.js?v=3",
+            "sorular/tarih-20.js?v=4",
+            "sorular/tarih-21.js?v=4",
+            "sorular/tarih-22.js?v=4",
+            "sorular/tarih-23.js?v=4",
+            "sorular/tarih-24.js?v=4",
+            "sorular/tarih-25.js?v=4",
+            "sorular/tarih-26.js?v=4",
+            "sorular/tarih-27.js?v=4",
+            "sorular/tarih-28.js?v=4",
+            "sorular/tarih-29.js?v=5",
+            "sorular/cografya-1.js?v=5",
+            "sorular/cografya-2.js?v=8",
+            "sorular/cografya-3.js?v=5",
+            "sorular/cografya-4.js?v=4",
+            "sorular/cografya-5.js?v=5",
+            "sorular/cografya-6.js?v=4",
+            "sorular/cografya-7.js?v=3",
+            "sorular/cografya-8.js?v=3",
+            "sorular/cografya-9.js?v=4",
+            "sorular/cografya-10.js?v=4",
+            "sorular/cografya-11.js?v=4",
+            "sorular/cografya-12.js?v=4",
+            "sorular/cografya-13.js?v=4",
+            "sorular/cografya-14.js?v=4",
+            "sorular/cografya-15.js?v=4",
+            "sorular/cografya-16.js?v=4",
+            "sorular/cografya-17.js?v=4",
+            "sorular/cografya-18.js?v=4",
+            "sorular/cografya-19.js?v=4",
+            "sorular/cografya-20.js?v=4",
+            "sorular/cografya-21.js?v=4",
+            "sorular/cografya-22.js?v=4",
+            "sorular/cografya-23.js?v=4",
+            "sorular/cografya-24.js?v=4",
+            "sorular/cografya-25.js?v=4",
+            "sorular/cografya-26.js?v=4",
+            "sorular/cografya-27.js?v=4",
+            "sorular/vatandas-1.js?v=4",
+            "sorular/vatandas-2.js?v=4",
+            "sorular/vatandas-3.js?v=3",
+            "sorular/vatandas-4.js?v=3",
+            "sorular/vatandas-5.js?v=3",
+            "sorular/vatandas-6.js?v=3",
+            "sorular/vatandas-7.js?v=3",
+            "sorular/vatandas-8.js?v=3",
+            "sorular/vatandas-9.js?v=3",
+            "sorular/vatandas-10.js?v=3",
+            "sorular/vatandas-11.js?v=3",
+            "sorular/vatandas-12.js?v=3",
+            "sorular/vatandas-13.js?v=3",
+            "sorular/vatandas-14.js?v=5",
+            "sorular/vatandas-15.js?v=1",
+            "sorular/vatandas-16.js?v=1",
+            "sorular/vatandas-17.js?v=1",
+            "sorular/vatandas-18.js?v=1",
+            "sorular/turkce-1.js?v=3",
+            "sorular/turkce-2.js?v=3",
+            "sorular/turkce-3.js?v=4",
+            "sorular/turkce-4.js?v=4",
+            "sorular/turkce-5.js?v=4",
+            "sorular/turkce-6.js?v=4",
+            "sorular/turkce-7.js?v=4",
+            "sorular/turkce-8.js?v=4",
+            "sorular/turkce-9.js?v=4",
+            "sorular/turkce-10.js?v=4",
+            "sorular/turkce-11.js?v=4",
+            "sorular/turkce-12.js?v=4",
+            "sorular/turkce-13.js?v=4",
+            "sorular/turkce-14.js?v=4",
+            "sorular/turkce-15.js?v=4",
+            "sorular/turkce-16.js?v=4",
+            "sorular/turkce-17.js?v=4",
+            "sorular/turkce-18.js?v=4",
+            "sorular/turkce-19.js?v=4",
+            "sorular/turkce-20.js?v=4",
+            "sorular/guncel-1.js?v=7",
+            "sorular/guncel-2.js?v=7",
+            "sorular/guncel-3.js?v=7",
+            "sorular/guncel-4.js?v=7",
+            "sorular/guncel-5.js?v=6",
+            "sorular/guncel-6.js?v=7",
+            "sorular/guncel-7.js?v=6",
+            "sorular/guncel-8.js?v=6",
+            "sorular/geometri-1.js?v=6",
+            "sorular/geometri-2.js?v=4",
+            "sorular/geometri-3.js?v=5",
+            "sorular/geometri-4.js?v=4",
+            "sorular/geometri-5.js?v=4",
+            "sorular/geometri-6.js?v=4",
+            "sorular/geometri-7.js?v=4",
+            "sorular/geometri-8.js?v=4",
+            "sorular/geometri-9.js?v=4",
+            "sorular/geometri-10.js?v=3",
+            "sorular/geometri-11.js?v=4",
+            "sorular/geometri-12.js?v=4"
+            ];
+            var done = 0, started = false, ready = false, fns = [];
+            function finish() {
+                if (ready) return;
                 ready = true;
                 fns.splice(0).forEach(function (f) { try { f(); } catch (e) { console.error(e); } });
             }
-            window.addEventListener("load", function () { total = 0; fire(); });   // async betikler load'dan önce biter
+            function hit() { done++; if (done >= FILES.length) finish(); }
+            function start() {
+                if (started) return;
+                started = true;
+                FILES.forEach(function (src) {
+                    var el = document.createElement("script");
+                    el.src = src; el.async = true; el.onload = hit; el.onerror = hit;
+                    document.head.appendChild(el);
+                });
+                setTimeout(finish, 60000);   // bir dosya takılırsa kullanıcı sonsuza dek beklemesin
+            }
+            var returning = false;
+            try {
+                for (var i = 0; i < localStorage.length; i++) {
+                    var k = localStorage.key(i) || "";
+                    if (/^sb-.*-auth-token$/.test(k) || k === "kpss-student-active") { returning = true; break; }
+                }
+            } catch (e) { returning = true; }
+            if (returning) start();
+            else window.addEventListener("load", function () { setTimeout(start, 200); });
             return {
-                hit: function () { done++; fire(); },
-                expect: function (n) { total = n; fire(); },
+                start: start,
                 isReady: function () { return ready; },
-                onReady: function (f) { if (ready) f(); else fns.push(f); }
+                onReady: function (f) { start(); if (ready) f(); else fns.push(f); }
             };
         })();
     </script>
-    <script async data-kc src="notlar/tarih-1-not.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-2-not.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-3-not.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-4-not.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-5-not.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-6-not.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-7-not.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-8-not.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-9-not.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-10-not.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-11-not.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-12-not.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-13-not.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-14-not.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-15-not.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-16-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-17-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-18-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-19-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-20-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-21-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-22-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-23-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-24-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-25-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-26-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-27-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-28-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/tarih-29-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-1-not.js?v=12" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-2-not.js?v=19" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-3-not.js?v=19" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-4-not.js?v=10" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-5-not.js?v=16" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-6-not.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-7-not.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-8-not.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-9-not.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-10-not.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-11-not.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-12-not.js?v=6" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-13-not.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-14-not.js?v=9" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-15-not.js?v=10" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-16-not.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-17-not.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-18-not.js?v=18" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-19-not.js?v=37" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-20-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-21-not.js?v=32" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-22-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-23-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-24-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-25-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-26-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/cografya-27-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/vatandas-1-not.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/vatandas-2-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/vatandas-3-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/vatandas-4-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/vatandas-5-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/vatandas-6-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/vatandas-7-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/vatandas-8-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/vatandas-9-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/vatandas-10-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/vatandas-11-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/vatandas-12-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/vatandas-13-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/vatandas-14-not.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/vatandas-15-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/vatandas-16-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/vatandas-17-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/vatandas-18-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/turkce-1-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/turkce-2-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/turkce-3-not.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/turkce-4-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/turkce-5-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/turkce-6-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/turkce-7-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/turkce-8-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/turkce-9-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/turkce-10-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/turkce-11-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/turkce-12-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/turkce-13-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/turkce-14-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/turkce-15-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/turkce-16-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/turkce-17-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/turkce-18-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/turkce-19-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/turkce-20-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/guncel-1-not.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/guncel-2-not.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/guncel-3-not.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/guncel-4-not.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/guncel-5-not.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/guncel-6-not.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/guncel-7-not.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/guncel-8-not.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/geometri-1-not.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/geometri-2-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/geometri-3-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/geometri-4-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/geometri-5-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/geometri-6-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/geometri-7-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/geometri-8-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/geometri-9-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/geometri-10-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/geometri-11-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="notlar/geometri-12-not.js?v=2" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-1.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-2.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-3.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-4.js?v=5" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-5.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-6.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-7.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-8.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-9.js?v=5" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-10.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-11.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-12.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-13.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-14.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-15.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-16.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-17.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-18.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-19.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-20.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-21.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-22.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-23.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-24.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-25.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-26.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-27.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-28.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/tarih-29.js?v=5" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-1.js?v=5" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-2.js?v=8" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-3.js?v=5" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-4.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-5.js?v=5" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-6.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-7.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-8.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-9.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-10.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-11.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-12.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-13.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-14.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-15.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-16.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-17.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-18.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-19.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-20.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-21.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-22.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-23.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-24.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-25.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-26.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/cografya-27.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/vatandas-1.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/vatandas-2.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/vatandas-3.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/vatandas-4.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/vatandas-5.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/vatandas-6.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/vatandas-7.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/vatandas-8.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/vatandas-9.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/vatandas-10.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/vatandas-11.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/vatandas-12.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/vatandas-13.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/vatandas-14.js?v=5" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/vatandas-15.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/vatandas-16.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/vatandas-17.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/vatandas-18.js?v=1" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/turkce-1.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/turkce-2.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/turkce-3.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/turkce-4.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/turkce-5.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/turkce-6.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/turkce-7.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/turkce-8.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/turkce-9.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/turkce-10.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/turkce-11.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/turkce-12.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/turkce-13.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/turkce-14.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/turkce-15.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/turkce-16.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/turkce-17.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/turkce-18.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/turkce-19.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/turkce-20.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/guncel-1.js?v=7" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/guncel-2.js?v=7" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/guncel-3.js?v=7" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/guncel-4.js?v=7" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/guncel-5.js?v=6" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/guncel-6.js?v=7" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/guncel-7.js?v=6" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/guncel-8.js?v=6" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/geometri-1.js?v=6" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/geometri-2.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/geometri-3.js?v=5" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/geometri-4.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/geometri-5.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/geometri-6.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/geometri-7.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/geometri-8.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/geometri-9.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/geometri-10.js?v=3" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/geometri-11.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script async data-kc src="sorular/geometri-12.js?v=4" onload="KpssContent.hit()" onerror="KpssContent.hit()"></script>
-    <script>KpssContent.expect(document.querySelectorAll("script[data-kc]").length);</script>
 
     <script defer src="data.js?v=38"></script>
     <script defer src="js/config.js?v=27"></script>
