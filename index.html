@@ -118,7 +118,7 @@
     <script defer src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
 
     <!-- Önceden derlenmiş stiller (npm run build:css; kaynak: tailwind.config.js) -->
-    <link rel="stylesheet" href="css/tailwind.css?v=2">
+    <link rel="stylesheet" href="css/tailwind.css?v=3">
 
     <script defer src="notlar/tarih-1-not.js?v=3"></script>
     <script defer src="notlar/tarih-2-not.js?v=3"></script>
@@ -369,7 +369,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.86.0/dist/umd/supabase.js"></script>
     <script defer src="js/supabaseClient.js?v=21"></script>
     <script defer src="js/syncEngine.js?v=39"></script>
-    <script defer src="js/jsxLoader.js?v=100"></script>
+    <script defer src="js/jsxLoader.js?v=101"></script>
     <script defer src="js/icons.js?v=18"></script>
 
     <style>
@@ -625,6 +625,39 @@
             background: linear-gradient(135deg, #F2D58A, #C5A059); box-shadow: 0 12px 26px -10px rgba(197,160,89,.7); }
         .lp-sunday .lp-sub { margin-bottom: 0; }
         .lp-sunday-btn { min-height: 48px; }
+
+        .lp-rep { display: grid; gap: 16px; }
+        @media (min-width: 1024px) { .lp-rep { grid-template-columns: 340px 1fr; gap: 22px; align-items: start; } }
+        .lp-rep-tabs { display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 -16px; padding: 2px 16px 6px; scrollbar-width: none; }
+        .lp-rep-tabs::-webkit-scrollbar { display: none; }
+        @media (min-width: 1024px) { .lp-rep-tabs { flex-direction: column; overflow: visible; margin: 0; padding: 0; } }
+        .lp-rep-tab { flex: 0 0 auto; scroll-snap-align: start; display: flex; gap: 12px; align-items: center; text-align: left; padding: 10px 14px 10px 10px;
+            border-radius: 16px; color: #fff; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.10); transition: background .2s, border-color .2s, transform .2s; }
+        .lp-rep-tab:hover { border-color: rgba(232,201,135,.32); }
+        .lp-rep-tab:focus-visible { outline: 2px solid #E8C987; outline-offset: 2px; }
+        .lp-rep-tab b { display: block; font-size: 14.5px; font-weight: 700; white-space: nowrap; }
+        .lp-rep-tab small { display: none; margin-top: 4px; font-size: 13px; line-height: 1.5; color: rgba(226,232,240,.66); }
+        .lp-rep-tab.is-on { background: linear-gradient(120deg, rgba(197,160,89,.20), rgba(29,138,153,.12)); border-color: rgba(232,201,135,.55); }
+        @media (min-width: 1024px) {
+            .lp-rep-tab { align-items: flex-start; padding: 16px; }
+            .lp-rep-tab b { white-space: normal; }
+            .lp-rep-tab.is-on small { display: block; }
+            .lp-rep-tab.is-on { transform: translateX(4px); }
+        }
+        .lp-rep-desc { margin: -4px 0 0; font-size: 14px; line-height: 1.55; color: rgba(226,232,240,.72); }
+        @media (min-width: 1024px) { .lp-rep-desc { display: none; } .lp-rep-frame { grid-column: 2; grid-row: 1; } }
+        .lp-rep-frame { margin: 0; border-radius: 20px; overflow: hidden; background: #F8FAFC; border: 1px solid rgba(255,255,255,.14);
+            box-shadow: 0 40px 80px -36px rgba(0,0,0,.75), 0 0 0 6px rgba(255,255,255,.03); }
+        .lp-rep-bar { display: flex; align-items: center; gap: 6px; padding: 10px 14px; background: #E9EEF3; border-bottom: 1px solid #DCE3EA; }
+        .lp-rep-bar i { width: 10px; height: 10px; border-radius: 99px; background: #CBD5E1; }
+        .lp-rep-bar i:nth-child(1) { background: #F87171; } .lp-rep-bar i:nth-child(2) { background: #FBBF24; } .lp-rep-bar i:nth-child(3) { background: #34D399; }
+        .lp-rep-bar span { margin-left: 8px; font-size: 12px; font-weight: 600; color: #64748B; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .lp-rep-frame picture { display: block; animation: lpRepIn .35s ease both; }
+        .lp-rep-frame img { display: block; width: 100%; height: auto; }
+        @media (min-width: 640px) { .lp-rep-frame img { aspect-ratio: 1280 / 745; object-fit: contain; object-position: top center; background: #F8FAFC; } }
+        .lp-rep-frame figcaption { padding: 10px 14px; font-size: 12px; color: #64748B; background: #F1F5F9; border-top: 1px solid #E2E8F0; }
+        @keyframes lpRepIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+        @media (prefers-reduced-motion: reduce) { .lp-rep-frame picture { animation: none; } .lp-rep-tab.is-on { transform: none; } }
 
         .lp-steps { display: grid; gap: 14px; margin-top: 30px; counter-reset: lp; }
         @media (min-width: 768px) { .lp-steps { grid-template-columns: repeat(3, 1fr); gap: 18px; } }

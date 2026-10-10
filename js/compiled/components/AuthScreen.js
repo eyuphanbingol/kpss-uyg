@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:81263:1g4gswz*/
+/*jsx:babel-7.29.9-react-classic:84638:pnfc3z*/
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 (function () {
   const {
@@ -71,7 +71,10 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
     shield: "M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6z",
     check: "M20 6 9 17l-5-5",
     arrow: "M5 12h14M13 6l6 6-6 6",
-    phone: "M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM11 18h2"
+    phone: "M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM11 18h2",
+    chart: "M4 20V11M10 20V5M16 20v-8M21 20H3",
+    list: "M9 6h12M9 12h12M9 18h12M4 6h.01M4 12h.01M4 18h.01",
+    trend: "M3 17l6-6 4 4 8-8M15 7h6v6"
   };
   function LpIcon(props) {
     return /*#__PURE__*/React.createElement("svg", {
@@ -142,6 +145,28 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
       t: "Son 30 saniye",
       d: "Süre daralır, şıklar döner. Sınav temposuna en yakın tekrar."
     }];
+    var reports = [{
+      i: "chart",
+      img: "rapor-ozet",
+      t: "Net ve sıralama",
+      d: "Netin, sıralaman, yüzdelik dilimin ve tüm katılımcıların net dağılımında nerede durduğun."
+    }, {
+      i: "target",
+      img: "rapor-ders",
+      t: "Ders ve konu analizi",
+      d: "Ders ders doğru, yanlış, boş; katılan ortalaması, ilk %10 ve senin seviyendekilerle karşılaştırma. En zayıf 3 konu Eksikler'e düşer."
+    }, {
+      i: "list",
+      img: "rapor-cozum",
+      t: "Soru soru çözüm",
+      d: "Yanlış yaptığın her soru: senin cevabın, doğrusu, çözümü, harcadığın süre ve katılanların kaçta kaçının bildiği."
+    }, {
+      i: "trend",
+      img: "rapor-gelisim",
+      t: "Gelişimin",
+      d: "Deneme deneme toplam, Genel Yetenek ve Genel Kültür netin; sıran ve yüzdelik dilimin nasıl değişti."
+    }];
+    const [rep, setRep] = useState(0);
     var steps = [{
       t: "Kulvarını seç",
       d: "Lisans, ön lisans veya ortaöğretim. Google ya da e-postayla gir; ilerleme hesabına yazılır."
@@ -353,6 +378,64 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
       onClick: props.onSignup,
       className: "lp-btn-gold lp-sunday-btn"
     }, "Kat\u0131l"))), /*#__PURE__*/React.createElement("section", {
+      id: "deneme-raporu",
+      className: "lp-wrap lp-sec",
+      "aria-labelledby": "rapor-title"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "lp-kicker"
+    }, "Deneme raporun"), /*#__PURE__*/React.createElement("h2", {
+      id: "rapor-title",
+      className: "lp-h2"
+    }, "Pazar ak\u015Fam\u0131 her \u015Fey \xF6n\xFCnde."), /*#__PURE__*/React.createElement("p", {
+      className: "lp-sub"
+    }, "S\u0131nav biter, rapor gelir: ka\xE7 net yapt\u0131\u011F\u0131n, T\xFCrkiye genelinde ka\xE7\u0131nc\u0131 oldu\u011Fun, hangi konuda soru ka\xE7\u0131rd\u0131\u011F\u0131n ve neden."), /*#__PURE__*/React.createElement("div", {
+      className: "lp-rep"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "lp-rep-tabs",
+      role: "tablist",
+      "aria-label": "Rapor b\xF6l\xFCmleri"
+    }, reports.map(function (x, k) {
+      var on = k === rep;
+      return /*#__PURE__*/React.createElement("button", {
+        key: x.img,
+        type: "button",
+        role: "tab",
+        id: "rep-tab-" + k,
+        "aria-selected": on,
+        "aria-controls": "rep-panel",
+        className: "lp-rep-tab" + (on ? " is-on" : ""),
+        onClick: function () {
+          setRep(k);
+        }
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "lp-ico lp-ico-sm"
+      }, /*#__PURE__*/React.createElement(LpIcon, {
+        name: x.i,
+        size: 18
+      })), /*#__PURE__*/React.createElement("span", {
+        className: "min-w-0"
+      }, /*#__PURE__*/React.createElement("b", null, x.t), /*#__PURE__*/React.createElement("small", null, x.d)));
+    })), /*#__PURE__*/React.createElement("p", {
+      className: "lp-rep-desc",
+      "aria-live": "polite"
+    }, reports[rep].d), /*#__PURE__*/React.createElement("figure", {
+      id: "rep-panel",
+      role: "tabpanel",
+      "aria-labelledby": "rep-tab-" + rep,
+      className: "lp-rep-frame"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "lp-rep-bar",
+      "aria-hidden": "true"
+    }, /*#__PURE__*/React.createElement("i", null), /*#__PURE__*/React.createElement("i", null), /*#__PURE__*/React.createElement("i", null), /*#__PURE__*/React.createElement("span", null, "atanly \xB7 Pazar Denemesi raporu")), /*#__PURE__*/React.createElement("picture", {
+      key: reports[rep].img
+    }, /*#__PURE__*/React.createElement("source", {
+      media: "(max-width: 639px)",
+      srcSet: "img/landing/" + reports[rep].img + "-m.webp?v=1"
+    }), /*#__PURE__*/React.createElement("img", {
+      src: "img/landing/" + reports[rep].img + ".webp?v=1",
+      alt: reports[rep].t + " — örnek deneme raporu",
+      loading: "lazy"
+    })), /*#__PURE__*/React.createElement("figcaption", null, "\xD6rnek rapor \xB7 uygulaman\u0131n ger\xE7ek ekran\u0131")))), /*#__PURE__*/React.createElement("section", {
       className: "lp-wrap lp-sec"
     }, /*#__PURE__*/React.createElement("p", {
       className: "lp-kicker"

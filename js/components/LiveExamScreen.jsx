@@ -368,18 +368,34 @@
     // ============================================================
     // Net dağılımı: 5 netlik dilimler; senin dilimin turuncu ve "Sen" etiketli (renk tek başına değil)
     var C_BLUE = { light: "#2a78d6", dark: "#3987e5" }, C_ORANGE = { light: "#eb6834", dark: "#d95926" };
+    // Grafik genişliği kutunun gerçek genişliği: geniş ekranda yazılar büyüyüp taşmasın
+    function useBoxWidth(fallback) {
+        const ref = useRef(null);
+        const [w, setW] = useState(fallback);
+        useEffect(function () {
+            var el = ref.current;
+            if (!el) return;
+            function read() { var cw = Math.round(el.clientWidth); if (cw > 0) setW(Math.max(300, cw)); }
+            read();
+            if (typeof ResizeObserver === "undefined") { window.addEventListener("resize", read); return function () { window.removeEventListener("resize", read); }; }
+            var ro = new ResizeObserver(read); ro.observe(el);
+            return function () { ro.disconnect(); };
+        }, []);
+        return [ref, w];
+    }
     function NetHistogram(props) {
         var rows = props.rows, dark = props.dark;
         const [hover, setHover] = useState(null);
-        var W = 640, H = 200, padL = 34, padR = 10, padT = 22, padB = 28;
+        const [boxRef, W] = useBoxWidth(640);
+        var H = 220, padL = 34, padR = 10, padT = 22, padB = 28;
         var max = Math.max.apply(null, rows.map(function (r) { return r.n; }).concat([1]));
         var bw = (W - padL - padR) / rows.length;
         function y(v) { return padT + (H - padT - padB) * (1 - v / max); }
         var ink = dark ? "#c3c2b7" : "#52514e", grid = dark ? "rgba(255,255,255,.08)" : "rgba(0,0,0,.07)";
-        var every = Math.ceil(rows.length / 10);
+        var every = Math.ceil(rows.length / Math.max(4, Math.floor(W / 64)));
         var ticks = max <= 4 ? Array.from({ length: max + 1 }, function (_, i) { return i; }) : [0, Math.round(max / 2), max];
         return (
-            <div className="relative">
+            <div className="relative" ref={boxRef}>
                 <svg viewBox={"0 0 " + W + " " + H} className="w-full h-auto" role="img" aria-label={props.label} onMouseLeave={function () { setHover(null); }}>
                     {ticks.map(function (t) { return <g key={t}><line x1={padL} x2={W - padR} y1={y(t)} y2={y(t)} stroke={grid} /><text x={padL - 6} y={y(t) + 4} textAnchor="end" fontSize="11" fill={ink}>{t}</text></g>; })}
                     {rows.map(function (r, i) {
@@ -540,13 +556,14 @@
 
                 <Panel label="Ders bazında">
                     <Kicker>Ders bazında net</Kicker>
-                    <table className="w-full text-sm mt-3">
-                        <thead><tr className="text-left text-xs text-stone-500"><th className="py-1">Ders</th><th>D</th><th>Y</th><th>B</th><th>Net</th><th>Katılan ort.</th>{hasTop ? <th>İlk %10</th> : null}{hasPeers ? <th>Benzer seviye</th> : null}</tr></thead>
+                    <div className="overflow-x-auto -mx-1 mt-3">
+                    <table className="w-full text-[12.5px] sm:text-sm tabular-nums [&_th]:px-1 sm:[&_th]:px-1.5 [&_td]:px-1 sm:[&_td]:px-1.5 [&_th:first-child]:pl-1 [&_td:first-child]:pl-1">
+                        <thead><tr className="text-xs text-stone-500 align-bottom"><th className="py-1 text-left">Ders</th><th className="text-right">D</th><th className="text-right">Y</th><th className="text-right">B</th><th className="text-right">Net</th><th className="text-right">Katılan ort.</th>{hasTop ? <th className="text-right">İlk %10</th> : null}{hasPeers ? <th className="text-right">Benzer<span className="hidden sm:inline"> seviye</span></th> : null}</tr></thead>
                         <tbody>
                             {dersRows.map(function (d) {
                                 return (
-                                    <tr key={d.ders} className="border-t border-stone-200/70 dark:border-stone-700">
-                                        <td className="py-1.5 font-semibold">{d.ders}</td><td>{d.c}</td><td>{d.w}</td><td>{d.b}</td>
+                                    <tr key={d.ders} className="border-t border-stone-200/70 dark:border-stone-700 text-right">
+                                        <td className="py-1.5 font-semibold text-left">{d.ders}</td><td>{d.c}</td><td>{d.w}</td><td>{d.b}</td>
                                         <td className="font-bold">{L.fmtNet(d.net)}</td><td>{d.avgNet == null ? "–" : L.fmtNet(d.avgNet)}</td>
                                         {hasTop ? <td>{d.top10 == null ? "–" : L.fmtNet(d.top10)}</td> : null}
                                         {hasPeers ? <td>{d.peers == null ? "–" : L.fmtNet(d.peers)}</td> : null}
@@ -555,6 +572,7 @@
                             })}
                         </tbody>
                     </table>
+                    </div>
                 </Panel>
 
                 {hasPeers || hasTop ? (
@@ -746,7 +764,8 @@
         var pts = props.points;
         var dark = props.dark;
         const [hover, setHover] = useState(null);
-        var W = 640, H = 240, padL = 40, padR = 70, padT = 14, padB = 30;
+        const [boxRef, W] = useBoxWidth(640);
+        var H = 260, padL = 40, padR = 118, padT = 14, padB = 30;
         var max = props.max != null ? props.max : 120;
         var min = 0;
         var n = pts.length;
@@ -755,9 +774,16 @@
         var ticks = [0, max / 4, max / 2, (3 * max) / 4, max];
         var ink = dark ? "#c3c2b7" : "#52514e";
         var grid = dark ? "rgba(255,255,255,.08)" : "rgba(0,0,0,.07)";
+        // Son nokta etiketleri üst üste binmesin: en az 14 px aralık
+        var endY = {};
+        var lastPt = pts[pts.length - 1];
+        if (lastPt) {
+            var order = props.series.map(function (s) { return { k: s.key, y: y(lastPt[s.key]) + 4 }; }).sort(function (a, b) { return a.y - b.y; });
+            order.forEach(function (o, i) { if (i && o.y - order[i - 1].y < 14) o.y = order[i - 1].y + 14; endY[o.k] = o.y; });
+        }
         return (
-            <div className="relative">
-                <svg viewBox={"0 0 " + W + " " + H} className="w-full h-auto" role="img" aria-label={props.label}
+            <div className="relative" ref={boxRef}>
+                <svg viewBox={"0 0 " + W + " " + H} width="100%" height={H} role="img" aria-label={props.label}
                     onMouseLeave={function () { setHover(null); }}>
                     {ticks.map(function (t) {
                         return <g key={t}><line x1={padL} x2={W - padR} y1={y(t)} y2={y(t)} stroke={grid} strokeWidth="1" /><text x={padL - 6} y={y(t) + 4} textAnchor="end" fontSize="11" fill={ink}>{Math.round(t)}</text></g>;
@@ -773,7 +799,7 @@
                             <g key={s.key}>
                                 <path d={d} fill="none" stroke={col} strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
                                 {pts.map(function (p, i) { return <circle key={i} cx={x(i)} cy={y(p[s.key])} r="4" fill={col} stroke={dark ? "#1c1917" : "#fff"} strokeWidth="2" />; })}
-                                {last ? <text x={x(n - 1) + 8} y={y(last[s.key]) + 4} fontSize="11" fontWeight="700" fill={ink}>{s.label} {L.fmtNet(last[s.key])}</text> : null}
+                                {last ? <text x={x(n - 1) + 8} y={endY[s.key]} fontSize="11" fontWeight="700" fill={ink}>{s.label} {L.fmtNet(last[s.key])}</text> : null}
                             </g>
                         );
                     })}

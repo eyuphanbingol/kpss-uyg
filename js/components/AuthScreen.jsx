@@ -61,7 +61,10 @@
         shield: "M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6z",
         check: "M20 6 9 17l-5-5",
         arrow: "M5 12h14M13 6l6 6-6 6",
-        phone: "M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM11 18h2"
+        phone: "M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM11 18h2",
+        chart: "M4 20V11M10 20V5M16 20v-8M21 20H3",
+        list: "M9 6h12M9 12h12M9 18h12M4 6h.01M4 12h.01M4 18h.01",
+        trend: "M3 17l6-6 4 4 8-8M15 7h6v6"
     };
     function LpIcon(props) {
         return (
@@ -93,6 +96,13 @@
             { i: "target", img: "img/landing/kavram.webp?v=3", t: "Tabu", d: "Az ipucuyla kavramı yakala; ipucu açtıkça puan düşer." },
             { i: "bolt", timer: true, t: "Son 30 saniye", d: "Süre daralır, şıklar döner. Sınav temposuna en yakın tekrar." }
         ];
+        var reports = [
+            { i: "chart", img: "rapor-ozet", t: "Net ve sıralama", d: "Netin, sıralaman, yüzdelik dilimin ve tüm katılımcıların net dağılımında nerede durduğun." },
+            { i: "target", img: "rapor-ders", t: "Ders ve konu analizi", d: "Ders ders doğru, yanlış, boş; katılan ortalaması, ilk %10 ve senin seviyendekilerle karşılaştırma. En zayıf 3 konu Eksikler'e düşer." },
+            { i: "list", img: "rapor-cozum", t: "Soru soru çözüm", d: "Yanlış yaptığın her soru: senin cevabın, doğrusu, çözümü, harcadığın süre ve katılanların kaçta kaçının bildiği." },
+            { i: "trend", img: "rapor-gelisim", t: "Gelişimin", d: "Deneme deneme toplam, Genel Yetenek ve Genel Kültür netin; sıran ve yüzdelik dilimin nasıl değişti." }
+        ];
+        const [rep, setRep] = useState(0);
         var steps = [
             { t: "Kulvarını seç", d: "Lisans, ön lisans veya ortaöğretim. Google ya da e-postayla gir; ilerleme hesabına yazılır." },
             { t: "Programı takip et", d: "Notu bitir, testi aç. Zayıf konu ve yanlışların ertesi günün planına girer." },
@@ -215,6 +225,35 @@
                                 <p className="lp-sub mb-0">Herkes aynı anda çözer. Sıralama, net dağılımı ve konu analizi Pazar akşamı hazır. Hafta boyu not, test ve oyunlarla ısın.</p>
                             </div>
                             <button type="button" onClick={props.onSignup} className="lp-btn-gold lp-sunday-btn">Katıl</button>
+                        </div>
+                    </section>
+
+                    <section id="deneme-raporu" className="lp-wrap lp-sec" aria-labelledby="rapor-title">
+                        <p className="lp-kicker">Deneme raporun</p>
+                        <h2 id="rapor-title" className="lp-h2">Pazar akşamı her şey önünde.</h2>
+                        <p className="lp-sub">Sınav biter, rapor gelir: kaç net yaptığın, Türkiye genelinde kaçıncı olduğun, hangi konuda soru kaçırdığın ve neden.</p>
+                        <div className="lp-rep">
+                            <div className="lp-rep-tabs" role="tablist" aria-label="Rapor bölümleri">
+                                {reports.map(function (x, k) {
+                                    var on = k === rep;
+                                    return (
+                                        <button key={x.img} type="button" role="tab" id={"rep-tab-" + k} aria-selected={on} aria-controls="rep-panel"
+                                            className={"lp-rep-tab" + (on ? " is-on" : "")} onClick={function () { setRep(k); }}>
+                                            <span className="lp-ico lp-ico-sm"><LpIcon name={x.i} size={18} /></span>
+                                            <span className="min-w-0"><b>{x.t}</b><small>{x.d}</small></span>
+                                        </button>
+                                    );
+                                })}
+                            </div>
+                            <p className="lp-rep-desc" aria-live="polite">{reports[rep].d}</p>
+                            <figure id="rep-panel" role="tabpanel" aria-labelledby={"rep-tab-" + rep} className="lp-rep-frame">
+                                <div className="lp-rep-bar" aria-hidden="true"><i></i><i></i><i></i><span>atanly · Pazar Denemesi raporu</span></div>
+                                <picture key={reports[rep].img}>
+                                    <source media="(max-width: 639px)" srcSet={"img/landing/" + reports[rep].img + "-m.webp?v=1"} />
+                                    <img src={"img/landing/" + reports[rep].img + ".webp?v=1"} alt={reports[rep].t + " — örnek deneme raporu"} loading="lazy" />
+                                </picture>
+                                <figcaption>Örnek rapor · uygulamanın gerçek ekranı</figcaption>
+                            </figure>
                         </div>
                     </section>
 

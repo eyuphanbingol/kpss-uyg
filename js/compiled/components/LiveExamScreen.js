@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:77033:1ug4l1y*/
+/*jsx:babel-7.29.9-react-classic:78817:x8gy0f*/
 (function () {
   const {
     useState,
@@ -561,12 +561,38 @@
       light: "#eb6834",
       dark: "#d95926"
     };
+  // Grafik genişliği kutunun gerçek genişliği: geniş ekranda yazılar büyüyüp taşmasın
+  function useBoxWidth(fallback) {
+    const ref = useRef(null);
+    const [w, setW] = useState(fallback);
+    useEffect(function () {
+      var el = ref.current;
+      if (!el) return;
+      function read() {
+        var cw = Math.round(el.clientWidth);
+        if (cw > 0) setW(Math.max(300, cw));
+      }
+      read();
+      if (typeof ResizeObserver === "undefined") {
+        window.addEventListener("resize", read);
+        return function () {
+          window.removeEventListener("resize", read);
+        };
+      }
+      var ro = new ResizeObserver(read);
+      ro.observe(el);
+      return function () {
+        ro.disconnect();
+      };
+    }, []);
+    return [ref, w];
+  }
   function NetHistogram(props) {
     var rows = props.rows,
       dark = props.dark;
     const [hover, setHover] = useState(null);
-    var W = 640,
-      H = 200,
+    const [boxRef, W] = useBoxWidth(640);
+    var H = 220,
       padL = 34,
       padR = 10,
       padT = 22,
@@ -580,14 +606,15 @@
     }
     var ink = dark ? "#c3c2b7" : "#52514e",
       grid = dark ? "rgba(255,255,255,.08)" : "rgba(0,0,0,.07)";
-    var every = Math.ceil(rows.length / 10);
+    var every = Math.ceil(rows.length / Math.max(4, Math.floor(W / 64)));
     var ticks = max <= 4 ? Array.from({
       length: max + 1
     }, function (_, i) {
       return i;
     }) : [0, Math.round(max / 2), max];
     return /*#__PURE__*/React.createElement("div", {
-      className: "relative"
+      className: "relative",
+      ref: boxRef
     }, /*#__PURE__*/React.createElement("svg", {
       viewBox: "0 0 " + W + " " + H,
       className: "w-full h-auto",
@@ -853,22 +880,40 @@
       }, w.c, "/", w.n, " do\u011Fru", w.avgC != null ? " · katılan ort. " + L.fmtNet(w.avgC) : ""));
     }))) : null, /*#__PURE__*/React.createElement(Panel, {
       label: "Ders baz\u0131nda"
-    }, /*#__PURE__*/React.createElement(Kicker, null, "Ders baz\u0131nda net"), /*#__PURE__*/React.createElement("table", {
-      className: "w-full text-sm mt-3"
+    }, /*#__PURE__*/React.createElement(Kicker, null, "Ders baz\u0131nda net"), /*#__PURE__*/React.createElement("div", {
+      className: "overflow-x-auto -mx-1 mt-3"
+    }, /*#__PURE__*/React.createElement("table", {
+      className: "w-full text-[12.5px] sm:text-sm tabular-nums [&_th]:px-1 sm:[&_th]:px-1.5 [&_td]:px-1 sm:[&_td]:px-1.5 [&_th:first-child]:pl-1 [&_td:first-child]:pl-1"
     }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", {
-      className: "text-left text-xs text-stone-500"
+      className: "text-xs text-stone-500 align-bottom"
     }, /*#__PURE__*/React.createElement("th", {
-      className: "py-1"
-    }, "Ders"), /*#__PURE__*/React.createElement("th", null, "D"), /*#__PURE__*/React.createElement("th", null, "Y"), /*#__PURE__*/React.createElement("th", null, "B"), /*#__PURE__*/React.createElement("th", null, "Net"), /*#__PURE__*/React.createElement("th", null, "Kat\u0131lan ort."), hasTop ? /*#__PURE__*/React.createElement("th", null, "\u0130lk %10") : null, hasPeers ? /*#__PURE__*/React.createElement("th", null, "Benzer seviye") : null)), /*#__PURE__*/React.createElement("tbody", null, dersRows.map(function (d) {
+      className: "py-1 text-left"
+    }, "Ders"), /*#__PURE__*/React.createElement("th", {
+      className: "text-right"
+    }, "D"), /*#__PURE__*/React.createElement("th", {
+      className: "text-right"
+    }, "Y"), /*#__PURE__*/React.createElement("th", {
+      className: "text-right"
+    }, "B"), /*#__PURE__*/React.createElement("th", {
+      className: "text-right"
+    }, "Net"), /*#__PURE__*/React.createElement("th", {
+      className: "text-right"
+    }, "Kat\u0131lan ort."), hasTop ? /*#__PURE__*/React.createElement("th", {
+      className: "text-right"
+    }, "\u0130lk %10") : null, hasPeers ? /*#__PURE__*/React.createElement("th", {
+      className: "text-right"
+    }, "Benzer", /*#__PURE__*/React.createElement("span", {
+      className: "hidden sm:inline"
+    }, " seviye")) : null)), /*#__PURE__*/React.createElement("tbody", null, dersRows.map(function (d) {
       return /*#__PURE__*/React.createElement("tr", {
         key: d.ders,
-        className: "border-t border-stone-200/70 dark:border-stone-700"
+        className: "border-t border-stone-200/70 dark:border-stone-700 text-right"
       }, /*#__PURE__*/React.createElement("td", {
-        className: "py-1.5 font-semibold"
+        className: "py-1.5 font-semibold text-left"
       }, d.ders), /*#__PURE__*/React.createElement("td", null, d.c), /*#__PURE__*/React.createElement("td", null, d.w), /*#__PURE__*/React.createElement("td", null, d.b), /*#__PURE__*/React.createElement("td", {
         className: "font-bold"
       }, L.fmtNet(d.net)), /*#__PURE__*/React.createElement("td", null, d.avgNet == null ? "–" : L.fmtNet(d.avgNet)), hasTop ? /*#__PURE__*/React.createElement("td", null, d.top10 == null ? "–" : L.fmtNet(d.top10)) : null, hasPeers ? /*#__PURE__*/React.createElement("td", null, d.peers == null ? "–" : L.fmtNet(d.peers)) : null);
-    })))), hasPeers || hasTop ? /*#__PURE__*/React.createElement("p", {
+    }))))), hasPeers || hasTop ? /*#__PURE__*/React.createElement("p", {
       className: "text-xs text-stone-500 -mt-2 px-2"
     }, hasPeers ? "Benzer seviye: netin ±5 içinde kalan " + data.peers.n + " katılımcının ortalaması. " : "", hasTop ? "İlk %10: en yüksek net yapan " + an.top10_n + " kişinin ortalaması." : "") : null, easy.length ? /*#__PURE__*/React.createElement(Panel, {
       label: "\xC7o\u011Funlu\u011Fun yapt\u0131\u011F\u0131 ama senin ka\xE7\u0131rd\u0131\u011F\u0131n sorular"
@@ -1131,10 +1176,10 @@
     var pts = props.points;
     var dark = props.dark;
     const [hover, setHover] = useState(null);
-    var W = 640,
-      H = 240,
+    const [boxRef, W] = useBoxWidth(640);
+    var H = 260,
       padL = 40,
-      padR = 70,
+      padR = 118,
       padT = 14,
       padB = 30;
     var max = props.max != null ? props.max : 120;
@@ -1149,11 +1194,30 @@
     var ticks = [0, max / 4, max / 2, 3 * max / 4, max];
     var ink = dark ? "#c3c2b7" : "#52514e";
     var grid = dark ? "rgba(255,255,255,.08)" : "rgba(0,0,0,.07)";
+    // Son nokta etiketleri üst üste binmesin: en az 14 px aralık
+    var endY = {};
+    var lastPt = pts[pts.length - 1];
+    if (lastPt) {
+      var order = props.series.map(function (s) {
+        return {
+          k: s.key,
+          y: y(lastPt[s.key]) + 4
+        };
+      }).sort(function (a, b) {
+        return a.y - b.y;
+      });
+      order.forEach(function (o, i) {
+        if (i && o.y - order[i - 1].y < 14) o.y = order[i - 1].y + 14;
+        endY[o.k] = o.y;
+      });
+    }
     return /*#__PURE__*/React.createElement("div", {
-      className: "relative"
+      className: "relative",
+      ref: boxRef
     }, /*#__PURE__*/React.createElement("svg", {
       viewBox: "0 0 " + W + " " + H,
-      className: "w-full h-auto",
+      width: "100%",
+      height: H,
       role: "img",
       "aria-label": props.label,
       onMouseLeave: function () {
@@ -1212,7 +1276,7 @@
         });
       }), last ? /*#__PURE__*/React.createElement("text", {
         x: x(n - 1) + 8,
-        y: y(last[s.key]) + 4,
+        y: endY[s.key],
         fontSize: "11",
         fontWeight: "700",
         fill: ink
