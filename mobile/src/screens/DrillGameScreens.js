@@ -170,14 +170,22 @@ export function TabuPlayScreen({ navigation }) {
     var seedState = useState(0);
     var seed = seedState[0];
     var setSeed = seedState[1];
+    // Deste yalnız turun başında (seed) kurulur. Kart "görüldü" işaretlenince öğrenci verisi ve onunla
+    // birlikte app.kpssData yeniden üretiliyor; desteye bağlı olursa her işaretleme yeni deste → yeni kart →
+    // yeni işaretleme döngüsü oluşuyordu ("Maximum update depth exceeded").
+    var dataRef = useRef(app.kpssData);
+    dataRef.current = app.kpssData;
+    var studentRef = useRef(app.student);
+    studentRef.current = app.student;
+    var hasData = !!app.kpssData;
     var deck = useMemo(function () {
         try {
-            var seen = ((app.student && app.student.games) || {}).tabuSeen || {};
-            return GamesEngine.tabuDeck(12, app.kpssData, seen) || [];
+            var seen = ((studentRef.current && studentRef.current.games) || {}).tabuSeen || {};
+            return GamesEngine.tabuDeck(12, dataRef.current, seen) || [];
         } catch (e) {
             return [];
         }
-    }, [seed, app.kpssData]);
+    }, [seed, hasData]);
     var iState = useState(0);
     var i = iState[0];
     var setI = iState[1];
@@ -297,13 +305,16 @@ export function PanicPlayScreen({ navigation }) {
     var seedState = useState(0);
     var seed = seedState[0];
     var setSeed = seedState[1];
+    // Panik destesi de tur başında kurulur; öğrenci verisi değişince oyun ortasında yeniden karılmaz.
+    var panicDataRef = useRef(app.kpssData);
+    panicDataRef.current = app.kpssData;
     var deck = useMemo(function () {
         try {
-            return GamesEngine.panicDeck(app.kpssData) || [];
+            return GamesEngine.panicDeck(panicDataRef.current) || [];
         } catch (e) {
             return [];
         }
-    }, [seed, app.kpssData]);
+    }, [seed, !!app.kpssData]);
     var iState = useState(0);
     var i = iState[0];
     var setI = iState[1];

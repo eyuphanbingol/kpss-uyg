@@ -48,201 +48,292 @@
         }
     }
 
+    // Tanıtım sayfası ikonları (24x24, çizgi)
+    var LP_ICONS = {
+        book: "M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5zM4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5",
+        repeat: "M17 2l4 4-4 4M3 11V9a3 3 0 0 1 3-3h15M7 22l-4-4 4-4M21 13v2a3 3 0 0 1-3 3H3",
+        calendar: "M7 3v3M17 3v3M4 8h16M5 5h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zM8 12h3v3H8z",
+        map: "M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14",
+        flag: "M5 21V4M5 4h11l-2 4 2 4H5",
+        bolt: "M13 2 4 14h7l-1 8 9-12h-7z",
+        target: "M12 2a10 10 0 1 0 10 10M12 6a6 6 0 1 0 6 6M12 10a2 2 0 1 0 2 2M22 2l-8 8",
+        trophy: "M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM7 6H4a3 3 0 0 0 3 4M17 6h3a3 3 0 0 1-3 4",
+        shield: "M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6z",
+        check: "M20 6 9 17l-5-5",
+        arrow: "M5 12h14M13 6l6 6-6 6",
+        phone: "M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM11 18h2"
+    };
+    function LpIcon(props) {
+        return (
+            <svg viewBox="0 0 24 24" width={props.size || 20} height={props.size || 20} fill="none" stroke="currentColor" strokeWidth={props.sw || 1.8}
+                strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className={props.className}>
+                <path d={LP_ICONS[props.name]} />
+            </svg>
+        );
+    }
+
     function LandingPage(props) {
         var logo = window.AtanomLogo
-            ? window.AtanomLogo("h-14 w-14 object-contain")
-            : <img src="icons/atanom.png?v=18" alt="Atanly" className="h-14 w-14 object-contain" />;
+            ? window.AtanomLogo("h-10 w-10 object-contain")
+            : <img src="icons/atanom.png?v=18" alt="" className="h-10 w-10 object-contain" />;
+        var stats = [
+            { n: "5.800+", t: "ÖSYM tarzı soru" },
+            { n: "1.200+", t: "konu notu" },
+            { n: "390+", t: "harita hedefi" },
+            { n: "7", t: "ders · GY-GK" }
+        ];
+        var feats = [
+            { i: "book", t: "Konu konu not", d: "Tarih, coğrafya, Türkçe, vatandaşlık, güncel. PDF yığını yok: her konu kendi notuyla açılır, sırayı atlayamazsın." },
+            { i: "repeat", t: "Test ve aralıklı tekrar", d: "Paketler kilitli ilerler. Yanlışın deftere düşer; zayıf konu öne çekilir, unutma eğrisine göre geri gelir." },
+            { i: "calendar", t: "Günlük program", d: "Sınav tarihine göre tempo, günlük soru hedefi ve 30 günlük ısı haritası. Bugün ne çalışacağını uygulama söyler." }
+        ];
+        var games = [
+            { i: "flag", img: "img/landing/fethet.png?v=1", t: "Türkiye'yi Fethet", d: "İlleri soruyla boya, bölge bölge ilerle. Coğrafyayı ezber değil yer olarak öğren." },
+            { i: "map", img: "img/landing/harita.png?v=1", t: "KPSS haritaları", d: "Dağlar, ovalar, madenler, YHT, boru hatları. Noktayı ya da hattı haritada bul." },
+            { i: "target", img: "img/landing/kavram.png?v=1", t: "Tabu", d: "Az ipucuyla kavramı yakala; ipucu açtıkça puan düşer." },
+            { i: "bolt", timer: true, t: "Son 30 saniye", d: "Süre daralır, şıklar döner. Sınav temposuna en yakın tekrar." }
+        ];
+        var steps = [
+            { t: "Kulvarını seç", d: "Lisans, ön lisans veya ortaöğretim. Google ya da e-postayla gir; ilerleme hesabına yazılır." },
+            { t: "Programı takip et", d: "Notu bitir, testi aç. Zayıf konu ve yanlışların ertesi günün planına girer." },
+            { t: "Oyunla pekiştir", d: "Harita ve tempo oyunları aynı bankadan beslenir. Mola verdiğin an da çalışmaya sayılır." }
+        ];
         var shots = [
             { src: "img/landing/hedef.png?v=1", t: "Bugünün hedefi" },
             { src: "img/landing/istatistik.png?v=1", t: "İstatistikler" },
-            { src: "img/landing/hafta.png?v=1", t: "Bu hafta · ders dağılımı" },
-            { src: "img/landing/tarih.png?v=1", t: "Tarih konuları" },
+            { src: "img/landing/hafta.png?v=1", t: "Haftalık ders dağılımı" },
+            { src: "img/landing/tarih.png?v=1", t: "Konu listesi" },
             { src: "img/landing/eksikler.png?v=1", t: "Eksikler" },
-            { src: "img/landing/harita.png?v=1", t: "Harita oyunu" },
-            { src: "img/landing/fethet.png?v=1", t: "Türkiye'yi Fethet" },
-            { src: "img/landing/kavram.png?v=1", t: "Kavram · az ipucu" }
+            { src: "img/landing/fethet.png?v=1", t: "Türkiye'yi Fethet" }
         ];
-        var feats = [
-            { t: "Konu konu not", d: "Tarih, coğrafya, Türkçe, vatandaşlık, güncel. PDF yığını yok: her konu kendi notuyla açılır, sırayı atlayamazsın." },
-            { t: "Test ve aralıklı tekrar", d: "Paketler kilitli ilerler. Yanlışın deftere düşer; sistem zayıf konuyu öne çeker, unutma eğrisine göre geri getirir." },
-            { t: "Günlük program", d: "Sınav tarihine göre tempo, günlük soru hedefi, 30 günlük ısı haritası. Bugün ne çalışacağını uygulama söyler." }
+        var faq = [
+            ["Atanly nedir?", "KPSS GY-GK için not, test, aralıklı tekrar ve oyunları tek programda toplayan çalışma uygulaması. Lisans, ön lisans ve ortaöğretim için."],
+            ["Ücretsiz mi?", "Evet. Hesap açmak ücretsiz, kart bilgisi istenmez. Google veya e-posta ile girersin."],
+            ["Hangi dersler var?", "Tarih, coğrafya, Türkçe, vatandaşlık, güncel bilgiler ve geometri."],
+            ["Telefonda kullanabilir miyim?", "Evet. Tarayıcıdan tam Atanly açılır; iPhone ve Android uygulamaları da aynı hesapla çalışır, ilerlemen cihazlar arasında eşitlenir."],
+            ["Her Pazar Türkiye geneli nedir?", "Pazar günleri herkesin aynı anda çözdüğü deneme: sıralama, net dağılımı ve konu analizi."]
         ];
-        var games = [
-            { t: "Fetih haritası", d: "Türkiye illerini soruyla boya. Bölge bölge ilerle, coğrafyayı ezber değil yer olarak öğren." },
-            { t: "KPSS haritaları", d: "Fiziki, iklim, nüfus, maden, ulaşım. Konuyu seç, noktayı haritada işaretle." },
-            { t: "Tabu", d: "Yasaklı kelimelere takılmadan tanımı yakala. Vatandaşlık ve güncel için tempo." },
-            { t: "Panik ve boşluk", d: "Süre daralır, şıklar döner. Boşluk doldurma ile cümleyi tamamla — sınav stiline yakın." }
-        ];
-        var steps = [
-            { n: "1", t: "Kulvarını seç", d: "Lisans, ön lisans veya ortaöğretim. Google veya e-posta. İlerleme hesabına yazılır." },
-            { n: "2", t: "Programı takip et", d: "Notu bitir, testi aç. Zayıf konu ve yanlışlar ertesi günün planına girer." },
-            { n: "3", t: "Oyunla pekiştir", d: "Harita ve tempo oyunları aynı bankadan beslenir. Eğlence ayrı uygulama değil; aynı Atanly." }
-        ];
+        function go(id) {
+            var el = document.getElementById(id);
+            if (el && el.scrollIntoView) el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
         return (
-            <div className="land-page text-stone-100">
-                <header className="land-nav">
-                    <div className="land-nav-inner">
-                        <div className="flex items-center gap-2.5 min-w-0">
+            <div className="lp text-white">
+                <div className="lp-glow" aria-hidden="true"></div>
+                <div className="lp-gridbg" aria-hidden="true"></div>
+
+                <header className="lp-nav">
+                    <div className="lp-nav-in">
+                        <a href="/" className="flex items-center gap-2.5 min-w-0" aria-label="Atanly ana sayfa" onClick={function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
                             {logo}
-                            <span className="font-display font-extrabold text-lg tracking-tight truncate">Atanly</span>
-                        </div>
+                            <span className="text-[19px] font-bold tracking-tight">Atanly</span>
+                        </a>
+                        <nav className="lp-links" aria-label="Sayfa bölümleri">
+                            <button type="button" onClick={function () { go("ozellikler"); }}>Özellikler</button>
+                            <button type="button" onClick={function () { go("oyunlar"); }}>Oyunlar</button>
+                            <button type="button" onClick={function () { go("sss"); }}>Sık sorulanlar</button>
+                        </nav>
                         <div className="flex items-center gap-2 shrink-0">
-                            <button type="button" onClick={props.onLogin} className="px-3.5 py-2 rounded-xl text-sm font-semibold text-gold-100/90 hover:bg-white/10">
-                                Giriş yap
-                            </button>
-                            <button type="button" onClick={props.onSignup} className="px-3.5 py-2 rounded-xl text-sm font-bold bg-gold-500 text-stone-900 hover:bg-gold-400">
-                                Ücretsiz başla
-                            </button>
+                            <button type="button" onClick={props.onLogin} className="lp-btn-text">Giriş yap</button>
+                            <button type="button" onClick={props.onSignup} className="lp-btn-gold lp-btn-sm">Ücretsiz başla</button>
                         </div>
                     </div>
                 </header>
 
-                <section className="land-hero">
-                    <p className="land-kicker mb-4">KPSS GY-GK · Türkiye geneli</p>
-                    <h1 className="font-display font-extrabold text-[2.05rem] sm:text-[3.15rem] leading-[1.08] max-w-3xl">
-                        Atamaya giden<br />çalışma odası.
-                    </h1>
-                    <p className="mt-5 text-[15px] sm:text-lg text-white/75 max-w-2xl leading-relaxed">
-                        Atanly, dağınık kaynakları tek programa bağlar. Notu oku, kilidi aç, testi çöz, yanlışını tekrar et, haritada pekiştir. Lisans / ön lisans / ortaöğretim — aynı sistem, senin sınav takvimine göre.
-                    </p>
-                    <div className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md">
-                        <button type="button" onClick={props.onSignup} className="flex-1 py-3.5 rounded-2xl font-bold bg-gold-500 text-stone-900 text-[15px] hover:bg-gold-400">
-                            Ücretsiz hesap aç
-                        </button>
-                        <button type="button" onClick={props.onLogin} className="flex-1 py-3.5 rounded-2xl font-semibold border border-white/25 bg-white/5 hover:bg-white/10 text-[15px]">
-                            Giriş yap
-                        </button>
-                    </div>
-                    <p className="mt-4 text-xs text-white/45">Google ile de girebilirsin. Kart yok. İlerlemen yalnız senin.</p>
-                </section>
-
-                <section className="land-wide">
-                    <div className="land-sun">
-                        <p className="land-kicker mb-2">Yakında</p>
-                        <p className="font-display font-extrabold text-xl sm:text-2xl leading-snug">Her Pazar, Türkiye geneli.</p>
-                        <p className="text-sm text-white/70 mt-2 leading-relaxed">
-                            Haftanın kilidi Pazar: aynı anda Türkiye çapında tempo. Sıralama ve ortak saat yakında açılır — şimdilik not, test ve oyunlarla ısın, Pazar geldiğinde hazır ol.
-                        </p>
-                    </div>
-                </section>
-
-                <section className="land-grid">
-                    {feats.map(function (f) {
-                        return (
-                            <article key={f.t} className="land-card">
-                                <h2 className="font-display font-bold text-lg text-white mb-2">{f.t}</h2>
-                                <p className="text-sm text-white/65 leading-relaxed">{f.d}</p>
-                            </article>
-                        );
-                    })}
-                </section>
-
-                <section className="land-wide">
-                    <h2 className="font-display font-bold text-xl mb-2">Sistem, program gibi çalışır</h2>
-                    <p className="text-sm text-white/60 mb-5 max-w-2xl leading-relaxed">
-                        Rastgele soru çözmek değil. Konu kilitleri, günlük hedef, zayıf konu öne çekme, yanlış defteri, 30 günlük ısı. Bugün ne yapacağını sen aramazsın; Atanly sıraya koyar.
-                    </p>
-                    <ol className="space-y-4">
-                        {steps.map(function (s) {
-                            return (
-                                <li key={s.n} className="flex gap-4">
-                                    <span className="land-stepnum">{s.n}</span>
-                                    <div>
-                                        <p className="font-semibold">{s.t}</p>
-                                        <p className="text-sm text-white/60 mt-0.5 leading-relaxed">{s.d}</p>
-                                    </div>
-                                </li>
-                            );
-                        })}
-                    </ol>
-                </section>
-
-                <section className="land-wide">
-                    <h2 className="font-display font-bold text-xl mb-2">Oyunlar da bankanın içinde</h2>
-                    <p className="text-sm text-white/60 mb-5 max-w-2xl leading-relaxed">
-                        Ayrı bir eğlence uygulaması yok. Fetih, harita, tabu, panik — hepsi GY-GK konularından üretilir. Mola verdiğin an da çalışmaya sayılır.
-                    </p>
-                    <div className="land-game">
-                        {games.map(function (g) {
-                            return (
-                                <article key={g.t} className="land-card">
-                                    <h3 className="font-display font-bold text-white mb-1.5">{g.t}</h3>
-                                    <p className="text-sm text-white/65 leading-relaxed">{g.d}</p>
-                                </article>
-                            );
-                        })}
-                    </div>
-                </section>
-
-                <section className="land-wide">
-                    <h2 className="font-display font-bold text-xl mb-4">Uygulamadan</h2>
-                    <div className="land-shots">
-                        {shots.map(function (s) {
-                            return (
-                                <figure key={s.src} className="land-shot">
-                                    <img src={s.src} alt={s.t} width="900" height="700" loading="lazy" />
-                                    <figcaption>{s.t}</figcaption>
-                                </figure>
-                            );
-                        })}
-                    </div>
-                </section>
-
-                <section className="land-wide land-faq" aria-labelledby="sss-title">
-                    <h2 id="sss-title" className="font-display font-bold text-xl mb-4">Sık sorulanlar</h2>
-                    <details>
-                        <summary>Atanly nedir?</summary>
-                        <p>KPSS GY-GK not, test, tekrar ve oyun. Lisans, ön lisans, ortaöğretim.</p>
-                    </details>
-                    <details>
-                        <summary>Ücretsiz mi?</summary>
-                        <p>Evet. Hesap ücretsiz. Kart yok. Google veya e-posta ile girersin.</p>
-                    </details>
-                    <details>
-                        <summary>Hangi dersler açık?</summary>
-                        <p>Tarih, coğrafya, Türkçe, vatandaşlık, güncel, geometri.</p>
-                    </details>
-                    <details>
-                        <summary>App Store ve Play Store?</summary>
-                        <p>Yakında. Şimdi tarayıcıdan tam Atanly. Aynı hesap uygulamaya taşınacak.</p>
-                    </details>
-                    <details>
-                        <summary>Her Pazar Türkiye geneli nedir?</summary>
-                        <p>Yakında: Pazar günü Türkiye çapında ortak tempo ve sıralama. Şimdilik not, test ve oyunla ısın.</p>
-                    </details>
-                </section>
-
-                <section className="land-wide">
-                    <div className="land-cta">
-                        <p className="land-kicker mb-3">Mobil</p>
-                        <p className="font-display font-extrabold text-2xl mb-2">{"Yakında App Store ve Play Store'da."}</p>
-                        <p className="text-sm text-white/65 mb-5 leading-relaxed">
-                            Şimdilik tarayıcıdan tam Atanly. iPhone ve Android uygulamaları yolda — aynı hesap, aynı ilerleme.
-                        </p>
-                        <div className="land-store mb-6">
-                            <div className="land-store-btn" aria-label="App Store yakında">
-                                <svg width="22" height="26" viewBox="0 0 22 26" fill="currentColor" aria-hidden="true"><path d="M18.1 13.6c0-3.2 2.6-4.7 2.7-4.8-1.5-2.2-3.8-2.5-4.6-2.5-1.9-.2-3.8 1.2-4.8 1.2-1 0-2.6-1.1-4.3-1.1-2.2 0-4.3 1.3-5.4 3.3-2.3 4-0.6 9.9 1.7 13.1 1.1 1.6 2.4 3.3 4.1 3.3 1.6-.1 2.2-1.1 4.2-1.1s2.5 1.1 4.3 1c1.8 0 2.9-1.6 4-3.2 1.2-1.8 1.7-3.5 1.7-3.6-.1 0-3.4-1.3-3.4-5.1zM15.2 4.3c.9-1.1 1.5-2.6 1.3-4.1-1.3.1-2.9.9-3.8 2-.8.9-1.6 2.4-1.4 3.8 1.5.1 3-.8 3.9-1.7z"/></svg>
-                                <span><small>Yakında</small><b>App Store</b></span>
+                <main>
+                    <section className="lp-hero">
+                        <div className="lp-hero-copy">
+                            <span className="lp-pill"><span className="lp-dot" aria-hidden="true"></span>KPSS GY-GK · Türkiye geneli</span>
+                            <h1 className="lp-h1">Atamaya giden <span className="lp-gold-text">çalışma odası.</span></h1>
+                            <p className="lp-lead">
+                                Dağınık kaynakları tek programa bağlar. Notu oku, kilidi aç, testi çöz, yanlışını tekrar et, haritada pekiştir — senin sınav takvimine göre.
+                            </p>
+                            <div className="lp-cta-row">
+                                <button type="button" onClick={props.onSignup} className="lp-btn-gold">
+                                    Ücretsiz hesap aç <LpIcon name="arrow" size={18} sw={2.2} />
+                                </button>
+                                <button type="button" onClick={props.onLogin} className="lp-btn-glass">Giriş yap</button>
                             </div>
-                            <div className="land-store-btn" aria-label="Google Play yakında">
-                                <svg width="20" height="22" viewBox="0 0 20 22" aria-hidden="true"><path fill="#F5EBC7" d="M1.2 1.1c-.5.3-.8.8-.8 1.4v17c0 .6.3 1.1.8 1.4l14.6-9.9L1.2 1.1z"/><path fill="#C9A227" d="M16.8 12.3L3.8 21.1 18.6 13c.8-.5.8-1.6 0-2.1l-1.8 1.4z"/></svg>
-                                <span><small>Yakında</small><b>Google Play</b></span>
+                            <ul className="lp-trust">
+                                <li><LpIcon name="check" size={15} sw={2.6} />Ücretsiz</li>
+                                <li><LpIcon name="check" size={15} sw={2.6} />Kart gerekmez</li>
+                                <li><LpIcon name="check" size={15} sw={2.6} />Web, iPhone ve Android</li>
+                            </ul>
+                        </div>
+                        <div className="lp-hero-art" aria-hidden="true">
+                            <div className="lp-device">
+                                <div className="lp-device-bar"><span></span><span></span><span></span></div>
+                                <img src="img/landing/hedef.png?v=1" alt="" width="826" height="506" />
+                            </div>
+                            <div className="lp-float lp-float-a">
+                                <span className="lp-float-ico"><LpIcon name="target" size={18} /></span>
+                                <span><b>Bugünün hedefi</b><small>25 soru · 45 dk</small></span>
+                            </div>
+                            <div className="lp-float lp-float-b">
+                                <span className="lp-float-ico lp-float-ico-gold"><LpIcon name="trophy" size={18} /></span>
+                                <span><b>Pazar denemesi</b><small>Türkiye geneli sıralama</small></span>
                             </div>
                         </div>
-                        <button type="button" onClick={props.onSignup} className="w-full sm:w-auto px-8 py-3.5 rounded-2xl font-bold bg-gold-500 text-stone-900">
-                            {"Web'de şimdi başla"}
-                        </button>
+                    </section>
+
+                    <section className="lp-wrap">
+                        <dl className="lp-stats">
+                            {stats.map(function (x) {
+                                return (
+                                    <div key={x.t} className="lp-stat">
+                                        <dt>{x.t}</dt>
+                                        <dd>{x.n}</dd>
+                                    </div>
+                                );
+                            })}
+                        </dl>
+                    </section>
+
+                    <section id="ozellikler" className="lp-wrap lp-sec">
+                        <p className="lp-kicker">Sistem</p>
+                        <h2 className="lp-h2">Rastgele soru değil, program.</h2>
+                        <p className="lp-sub">Konu kilitleri, günlük hedef, zayıf konu öne çekme, yanlış defteri. Bugün ne yapacağını sen aramazsın; Atanly sıraya koyar.</p>
+                        <div className="lp-grid3">
+                            {feats.map(function (f) {
+                                return (
+                                    <article key={f.t} className="lp-card">
+                                        <span className="lp-ico"><LpIcon name={f.i} size={22} /></span>
+                                        <h3>{f.t}</h3>
+                                        <p>{f.d}</p>
+                                    </article>
+                                );
+                            })}
+                        </div>
+                    </section>
+
+                    <section className="lp-wrap lp-sec">
+                        <div className="lp-sunday">
+                            <div className="lp-sunday-ico"><LpIcon name="trophy" size={26} /></div>
+                            <div className="min-w-0">
+                                <p className="lp-kicker">Her Pazar</p>
+                                <h2 className="lp-h3">Türkiye geneli canlı deneme.</h2>
+                                <p className="lp-sub mb-0">Herkes aynı anda çözer. Sıralama, net dağılımı ve konu analizi Pazar akşamı hazır. Hafta boyu not, test ve oyunlarla ısın.</p>
+                            </div>
+                            <button type="button" onClick={props.onSignup} className="lp-btn-gold lp-sunday-btn">Katıl</button>
+                        </div>
+                    </section>
+
+                    <section className="lp-wrap lp-sec">
+                        <p className="lp-kicker">Nasıl çalışır</p>
+                        <h2 className="lp-h2">Üç adımda başla.</h2>
+                        <ol className="lp-steps">
+                            {steps.map(function (st, k) {
+                                return (
+                                    <li key={st.t} className="lp-step">
+                                        <span className="lp-step-n">{k + 1}</span>
+                                        <h3>{st.t}</h3>
+                                        <p>{st.d}</p>
+                                    </li>
+                                );
+                            })}
+                        </ol>
+                    </section>
+
+                    <section id="oyunlar" className="lp-wrap lp-sec">
+                        <p className="lp-kicker">Oyunlar</p>
+                        <h2 className="lp-h2">Oyunlar da bankanın içinde.</h2>
+                        <p className="lp-sub">Ayrı bir eğlence uygulaması yok. Hepsi GY-GK konularından üretilir; mola da çalışmaya sayılır.</p>
+                        <div className="lp-games">
+                            {games.map(function (g) {
+                                return (
+                                    <article key={g.t} className="lp-game">
+                                        {g.timer ? (
+                                            <div className="lp-game-img lp-timer" aria-hidden="true">
+                                                <span className="lp-timer-ring"><b>0:30</b><small>+2 · doğru</small></span>
+                                            </div>
+                                        ) : (
+                                            <div className="lp-game-img"><img src={g.img} alt="" loading="lazy" /></div>
+                                        )}
+                                        <div className="lp-game-body">
+                                            <span className="lp-ico lp-ico-sm"><LpIcon name={g.i} size={18} /></span>
+                                            <div>
+                                                <h3>{g.t}</h3>
+                                                <p>{g.d}</p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                );
+                            })}
+                        </div>
+                    </section>
+
+                    <section className="lp-sec">
+                        <div className="lp-wrap">
+                            <p className="lp-kicker">Uygulamadan</p>
+                            <h2 className="lp-h2">Gördüğün, çalıştığın şey.</h2>
+                        </div>
+                        <div className="lp-shots" tabIndex={0} aria-label="Uygulama ekran görüntüleri">
+                            {shots.map(function (x) {
+                                return (
+                                    <figure key={x.src} className="lp-shot">
+                                        <img src={x.src} alt={x.t} loading="lazy" />
+                                        <figcaption>{x.t}</figcaption>
+                                    </figure>
+                                );
+                            })}
+                        </div>
+                    </section>
+
+                    <section id="sss" className="lp-wrap lp-sec" aria-labelledby="sss-title">
+                        <p className="lp-kicker">Sık sorulanlar</p>
+                        <h2 id="sss-title" className="lp-h2">Aklındakiler.</h2>
+                        <div className="lp-faq">
+                            {faq.map(function (f) {
+                                return (
+                                    <details key={f[0]}>
+                                        <summary>{f[0]}</summary>
+                                        <p>{f[1]}</p>
+                                    </details>
+                                );
+                            })}
+                        </div>
+                    </section>
+
+                    <section className="lp-wrap lp-sec">
+                        <div className="lp-final">
+                            <div className="lp-final-glow" aria-hidden="true"></div>
+                            <h2 className="lp-h2 relative">Bugün başla, Pazar'a hazır ol.</h2>
+                            <p className="lp-sub relative">Ücretsiz hesap aç; programın, notların ve oyunların hemen hazır. Aynı hesap telefonda da çalışır.</p>
+                            <div className="lp-cta-row relative justify-center">
+                                <button type="button" onClick={props.onSignup} className="lp-btn-gold">
+                                    Ücretsiz hesap aç <LpIcon name="arrow" size={18} sw={2.2} />
+                                </button>
+                                <button type="button" onClick={props.onLogin} className="lp-btn-glass">Giriş yap</button>
+                            </div>
+                            <div className="lp-store relative">
+                                <span className="lp-store-btn">
+                                    <svg width="18" height="21" viewBox="0 0 22 26" fill="currentColor" aria-hidden="true"><path d="M18.1 13.6c0-3.2 2.6-4.7 2.7-4.8-1.5-2.2-3.8-2.5-4.6-2.5-1.9-.2-3.8 1.2-4.8 1.2-1 0-2.6-1.1-4.3-1.1-2.2 0-4.3 1.3-5.4 3.3-2.3 4-0.6 9.9 1.7 13.1 1.1 1.6 2.4 3.3 4.1 3.3 1.6-.1 2.2-1.1 4.2-1.1s2.5 1.1 4.3 1c1.8 0 2.9-1.6 4-3.2 1.2-1.8 1.7-3.5 1.7-3.6-.1 0-3.4-1.3-3.4-5.1zM15.2 4.3c.9-1.1 1.5-2.6 1.3-4.1-1.3.1-2.9.9-3.8 2-.8.9-1.6 2.4-1.4 3.8 1.5.1 3-.8 3.9-1.7z"/></svg>
+                                    <span><small>iPhone</small><b>App Store</b></span>
+                                </span>
+                                <span className="lp-store-btn">
+                                    <svg width="17" height="19" viewBox="0 0 20 22" aria-hidden="true"><path fill="#F5EBC7" d="M1.2 1.1c-.5.3-.8.8-.8 1.4v17c0 .6.3 1.1.8 1.4l14.6-9.9L1.2 1.1z"/><path fill="#C9A227" d="M16.8 12.3L3.8 21.1 18.6 13c.8-.5.8-1.6 0-2.1l-1.8 1.4z"/></svg>
+                                    <span><small>Android</small><b>Google Play</b></span>
+                                </span>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+
+                <footer className="lp-foot">
+                    <div className="lp-wrap lp-foot-in">
+                        <div className="flex items-center gap-2">
+                            {window.AtanomLogo ? window.AtanomLogo("h-7 w-7 object-contain") : null}
+                            <span className="font-semibold">Atanly</span>
+                            <span className="text-white/40">· KPSS çalışma odası</span>
+                        </div>
+                        <nav className="lp-legal" aria-label="Yasal">
+                            <a href="yasal/aydinlatma.html">KVKK</a>
+                            <a href="yasal/kullanim.html">Kullanım</a>
+                            <a href="yasal/gizlilik.html">Gizlilik</a>
+                            <a href="yasal/cerez.html">Çerez</a>
+                        </nav>
                     </div>
-                    <p className="text-[10px] text-center text-white/35 mt-8 leading-relaxed">
-                        <a className="underline" href="yasal/aydinlatma.html">KVKK</a>
-                        {" · "}
-                        <a className="underline" href="yasal/kullanim.html">Kullanım</a>
-                        {" · "}
-                        <a className="underline" href="yasal/gizlilik.html">Gizlilik</a>
-                        {" · "}
-                        <a className="underline" href="yasal/cerez.html">Çerez</a>
-                    </p>
-                </section>
+                </footer>
             </div>
         );
     }

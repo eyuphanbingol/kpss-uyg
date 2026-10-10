@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:75367:h5qjiv*/
+/*jsx:babel-7.29.9-react-classic:81073:1bmje40*/
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 (function () {
   const {
@@ -57,12 +57,101 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
       };
     }
   }
+
+  // Tanıtım sayfası ikonları (24x24, çizgi)
+  var LP_ICONS = {
+    book: "M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5zM4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5",
+    repeat: "M17 2l4 4-4 4M3 11V9a3 3 0 0 1 3-3h15M7 22l-4-4 4-4M21 13v2a3 3 0 0 1-3 3H3",
+    calendar: "M7 3v3M17 3v3M4 8h16M5 5h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zM8 12h3v3H8z",
+    map: "M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14",
+    flag: "M5 21V4M5 4h11l-2 4 2 4H5",
+    bolt: "M13 2 4 14h7l-1 8 9-12h-7z",
+    target: "M12 2a10 10 0 1 0 10 10M12 6a6 6 0 1 0 6 6M12 10a2 2 0 1 0 2 2M22 2l-8 8",
+    trophy: "M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM7 6H4a3 3 0 0 0 3 4M17 6h3a3 3 0 0 1-3 4",
+    shield: "M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6z",
+    check: "M20 6 9 17l-5-5",
+    arrow: "M5 12h14M13 6l6 6-6 6",
+    phone: "M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM11 18h2"
+  };
+  function LpIcon(props) {
+    return /*#__PURE__*/React.createElement("svg", {
+      viewBox: "0 0 24 24",
+      width: props.size || 20,
+      height: props.size || 20,
+      fill: "none",
+      stroke: "currentColor",
+      strokeWidth: props.sw || 1.8,
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      "aria-hidden": "true",
+      className: props.className
+    }, /*#__PURE__*/React.createElement("path", {
+      d: LP_ICONS[props.name]
+    }));
+  }
   function LandingPage(props) {
-    var logo = window.AtanomLogo ? window.AtanomLogo("h-14 w-14 object-contain") : /*#__PURE__*/React.createElement("img", {
+    var logo = window.AtanomLogo ? window.AtanomLogo("h-10 w-10 object-contain") : /*#__PURE__*/React.createElement("img", {
       src: "icons/atanom.png?v=18",
-      alt: "Atanly",
-      className: "h-14 w-14 object-contain"
+      alt: "",
+      className: "h-10 w-10 object-contain"
     });
+    var stats = [{
+      n: "5.800+",
+      t: "ÖSYM tarzı soru"
+    }, {
+      n: "1.200+",
+      t: "konu notu"
+    }, {
+      n: "390+",
+      t: "harita hedefi"
+    }, {
+      n: "7",
+      t: "ders · GY-GK"
+    }];
+    var feats = [{
+      i: "book",
+      t: "Konu konu not",
+      d: "Tarih, coğrafya, Türkçe, vatandaşlık, güncel. PDF yığını yok: her konu kendi notuyla açılır, sırayı atlayamazsın."
+    }, {
+      i: "repeat",
+      t: "Test ve aralıklı tekrar",
+      d: "Paketler kilitli ilerler. Yanlışın deftere düşer; zayıf konu öne çekilir, unutma eğrisine göre geri gelir."
+    }, {
+      i: "calendar",
+      t: "Günlük program",
+      d: "Sınav tarihine göre tempo, günlük soru hedefi ve 30 günlük ısı haritası. Bugün ne çalışacağını uygulama söyler."
+    }];
+    var games = [{
+      i: "flag",
+      img: "img/landing/fethet.png?v=1",
+      t: "Türkiye'yi Fethet",
+      d: "İlleri soruyla boya, bölge bölge ilerle. Coğrafyayı ezber değil yer olarak öğren."
+    }, {
+      i: "map",
+      img: "img/landing/harita.png?v=1",
+      t: "KPSS haritaları",
+      d: "Dağlar, ovalar, madenler, YHT, boru hatları. Noktayı ya da hattı haritada bul."
+    }, {
+      i: "target",
+      img: "img/landing/kavram.png?v=1",
+      t: "Tabu",
+      d: "Az ipucuyla kavramı yakala; ipucu açtıkça puan düşer."
+    }, {
+      i: "bolt",
+      timer: true,
+      t: "Son 30 saniye",
+      d: "Süre daralır, şıklar döner. Sınav temposuna en yakın tekrar."
+    }];
+    var steps = [{
+      t: "Kulvarını seç",
+      d: "Lisans, ön lisans veya ortaöğretim. Google ya da e-postayla gir; ilerleme hesabına yazılır."
+    }, {
+      t: "Programı takip et",
+      d: "Notu bitir, testi aç. Zayıf konu ve yanlışların ertesi günün planına girer."
+    }, {
+      t: "Oyunla pekiştir",
+      d: "Harita ve tempo oyunları aynı bankadan beslenir. Mola verdiğin an da çalışmaya sayılır."
+    }];
     var shots = [{
       src: "img/landing/hedef.png?v=1",
       t: "Bugünün hedefi"
@@ -71,208 +160,325 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
       t: "İstatistikler"
     }, {
       src: "img/landing/hafta.png?v=1",
-      t: "Bu hafta · ders dağılımı"
+      t: "Haftalık ders dağılımı"
     }, {
       src: "img/landing/tarih.png?v=1",
-      t: "Tarih konuları"
+      t: "Konu listesi"
     }, {
       src: "img/landing/eksikler.png?v=1",
       t: "Eksikler"
     }, {
-      src: "img/landing/harita.png?v=1",
-      t: "Harita oyunu"
-    }, {
       src: "img/landing/fethet.png?v=1",
       t: "Türkiye'yi Fethet"
-    }, {
-      src: "img/landing/kavram.png?v=1",
-      t: "Kavram · az ipucu"
     }];
-    var feats = [{
-      t: "Konu konu not",
-      d: "Tarih, coğrafya, Türkçe, vatandaşlık, güncel. PDF yığını yok: her konu kendi notuyla açılır, sırayı atlayamazsın."
-    }, {
-      t: "Test ve aralıklı tekrar",
-      d: "Paketler kilitli ilerler. Yanlışın deftere düşer; sistem zayıf konuyu öne çeker, unutma eğrisine göre geri getirir."
-    }, {
-      t: "Günlük program",
-      d: "Sınav tarihine göre tempo, günlük soru hedefi, 30 günlük ısı haritası. Bugün ne çalışacağını uygulama söyler."
-    }];
-    var games = [{
-      t: "Fetih haritası",
-      d: "Türkiye illerini soruyla boya. Bölge bölge ilerle, coğrafyayı ezber değil yer olarak öğren."
-    }, {
-      t: "KPSS haritaları",
-      d: "Fiziki, iklim, nüfus, maden, ulaşım. Konuyu seç, noktayı haritada işaretle."
-    }, {
-      t: "Tabu",
-      d: "Yasaklı kelimelere takılmadan tanımı yakala. Vatandaşlık ve güncel için tempo."
-    }, {
-      t: "Panik ve boşluk",
-      d: "Süre daralır, şıklar döner. Boşluk doldurma ile cümleyi tamamla — sınav stiline yakın."
-    }];
-    var steps = [{
-      n: "1",
-      t: "Kulvarını seç",
-      d: "Lisans, ön lisans veya ortaöğretim. Google veya e-posta. İlerleme hesabına yazılır."
-    }, {
-      n: "2",
-      t: "Programı takip et",
-      d: "Notu bitir, testi aç. Zayıf konu ve yanlışlar ertesi günün planına girer."
-    }, {
-      n: "3",
-      t: "Oyunla pekiştir",
-      d: "Harita ve tempo oyunları aynı bankadan beslenir. Eğlence ayrı uygulama değil; aynı Atanly."
-    }];
+    var faq = [["Atanly nedir?", "KPSS GY-GK için not, test, aralıklı tekrar ve oyunları tek programda toplayan çalışma uygulaması. Lisans, ön lisans ve ortaöğretim için."], ["Ücretsiz mi?", "Evet. Hesap açmak ücretsiz, kart bilgisi istenmez. Google veya e-posta ile girersin."], ["Hangi dersler var?", "Tarih, coğrafya, Türkçe, vatandaşlık, güncel bilgiler ve geometri."], ["Telefonda kullanabilir miyim?", "Evet. Tarayıcıdan tam Atanly açılır; iPhone ve Android uygulamaları da aynı hesapla çalışır, ilerlemen cihazlar arasında eşitlenir."], ["Her Pazar Türkiye geneli nedir?", "Pazar günleri herkesin aynı anda çözdüğü deneme: sıralama, net dağılımı ve konu analizi."]];
+    function go(id) {
+      var el = document.getElementById(id);
+      if (el && el.scrollIntoView) el.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
     return /*#__PURE__*/React.createElement("div", {
-      className: "land-page text-stone-100"
-    }, /*#__PURE__*/React.createElement("header", {
-      className: "land-nav"
+      className: "lp text-white"
     }, /*#__PURE__*/React.createElement("div", {
-      className: "land-nav-inner"
+      className: "lp-glow",
+      "aria-hidden": "true"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "lp-gridbg",
+      "aria-hidden": "true"
+    }), /*#__PURE__*/React.createElement("header", {
+      className: "lp-nav"
     }, /*#__PURE__*/React.createElement("div", {
-      className: "flex items-center gap-2.5 min-w-0"
+      className: "lp-nav-in"
+    }, /*#__PURE__*/React.createElement("a", {
+      href: "/",
+      className: "flex items-center gap-2.5 min-w-0",
+      "aria-label": "Atanly ana sayfa",
+      onClick: function (e) {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      }
     }, logo, /*#__PURE__*/React.createElement("span", {
-      className: "font-display font-extrabold text-lg tracking-tight truncate"
-    }, "Atanly")), /*#__PURE__*/React.createElement("div", {
+      className: "text-[19px] font-bold tracking-tight"
+    }, "Atanly")), /*#__PURE__*/React.createElement("nav", {
+      className: "lp-links",
+      "aria-label": "Sayfa b\xF6l\xFCmleri"
+    }, /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      onClick: function () {
+        go("ozellikler");
+      }
+    }, "\xD6zellikler"), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      onClick: function () {
+        go("oyunlar");
+      }
+    }, "Oyunlar"), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      onClick: function () {
+        go("sss");
+      }
+    }, "S\u0131k sorulanlar")), /*#__PURE__*/React.createElement("div", {
       className: "flex items-center gap-2 shrink-0"
     }, /*#__PURE__*/React.createElement("button", {
       type: "button",
       onClick: props.onLogin,
-      className: "px-3.5 py-2 rounded-xl text-sm font-semibold text-gold-100/90 hover:bg-white/10"
+      className: "lp-btn-text"
     }, "Giri\u015F yap"), /*#__PURE__*/React.createElement("button", {
       type: "button",
       onClick: props.onSignup,
-      className: "px-3.5 py-2 rounded-xl text-sm font-bold bg-gold-500 text-stone-900 hover:bg-gold-400"
-    }, "\xDCcretsiz ba\u015Fla")))), /*#__PURE__*/React.createElement("section", {
-      className: "land-hero"
-    }, /*#__PURE__*/React.createElement("p", {
-      className: "land-kicker mb-4"
-    }, "KPSS GY-GK \xB7 T\xFCrkiye geneli"), /*#__PURE__*/React.createElement("h1", {
-      className: "font-display font-extrabold text-[2.05rem] sm:text-[3.15rem] leading-[1.08] max-w-3xl"
-    }, "Atamaya giden", /*#__PURE__*/React.createElement("br", null), "\xE7al\u0131\u015Fma odas\u0131."), /*#__PURE__*/React.createElement("p", {
-      className: "mt-5 text-[15px] sm:text-lg text-white/75 max-w-2xl leading-relaxed"
-    }, "Atanly, da\u011F\u0131n\u0131k kaynaklar\u0131 tek programa ba\u011Flar. Notu oku, kilidi a\xE7, testi \xE7\xF6z, yanl\u0131\u015F\u0131n\u0131 tekrar et, haritada peki\u015Ftir. Lisans / \xF6n lisans / orta\xF6\u011Fretim \u2014 ayn\u0131 sistem, senin s\u0131nav takvimine g\xF6re."), /*#__PURE__*/React.createElement("div", {
-      className: "mt-8 flex flex-col sm:flex-row gap-3 max-w-md"
+      className: "lp-btn-gold lp-btn-sm"
+    }, "\xDCcretsiz ba\u015Fla")))), /*#__PURE__*/React.createElement("main", null, /*#__PURE__*/React.createElement("section", {
+      className: "lp-hero"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "lp-hero-copy"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "lp-pill"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "lp-dot",
+      "aria-hidden": "true"
+    }), "KPSS GY-GK \xB7 T\xFCrkiye geneli"), /*#__PURE__*/React.createElement("h1", {
+      className: "lp-h1"
+    }, "Atamaya giden ", /*#__PURE__*/React.createElement("span", {
+      className: "lp-gold-text"
+    }, "\xE7al\u0131\u015Fma odas\u0131.")), /*#__PURE__*/React.createElement("p", {
+      className: "lp-lead"
+    }, "Da\u011F\u0131n\u0131k kaynaklar\u0131 tek programa ba\u011Flar. Notu oku, kilidi a\xE7, testi \xE7\xF6z, yanl\u0131\u015F\u0131n\u0131 tekrar et, haritada peki\u015Ftir \u2014 senin s\u0131nav takvimine g\xF6re."), /*#__PURE__*/React.createElement("div", {
+      className: "lp-cta-row"
     }, /*#__PURE__*/React.createElement("button", {
       type: "button",
       onClick: props.onSignup,
-      className: "flex-1 py-3.5 rounded-2xl font-bold bg-gold-500 text-stone-900 text-[15px] hover:bg-gold-400"
-    }, "\xDCcretsiz hesap a\xE7"), /*#__PURE__*/React.createElement("button", {
+      className: "lp-btn-gold"
+    }, "\xDCcretsiz hesap a\xE7 ", /*#__PURE__*/React.createElement(LpIcon, {
+      name: "arrow",
+      size: 18,
+      sw: 2.2
+    })), /*#__PURE__*/React.createElement("button", {
       type: "button",
       onClick: props.onLogin,
-      className: "flex-1 py-3.5 rounded-2xl font-semibold border border-white/25 bg-white/5 hover:bg-white/10 text-[15px]"
-    }, "Giri\u015F yap")), /*#__PURE__*/React.createElement("p", {
-      className: "mt-4 text-xs text-white/45"
-    }, "Google ile de girebilirsin. Kart yok. \u0130lerlemen yaln\u0131z senin.")), /*#__PURE__*/React.createElement("section", {
-      className: "land-wide"
+      className: "lp-btn-glass"
+    }, "Giri\u015F yap")), /*#__PURE__*/React.createElement("ul", {
+      className: "lp-trust"
+    }, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(LpIcon, {
+      name: "check",
+      size: 15,
+      sw: 2.6
+    }), "\xDCcretsiz"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(LpIcon, {
+      name: "check",
+      size: 15,
+      sw: 2.6
+    }), "Kart gerekmez"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(LpIcon, {
+      name: "check",
+      size: 15,
+      sw: 2.6
+    }), "Web, iPhone ve Android"))), /*#__PURE__*/React.createElement("div", {
+      className: "lp-hero-art",
+      "aria-hidden": "true"
     }, /*#__PURE__*/React.createElement("div", {
-      className: "land-sun"
+      className: "lp-device"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "lp-device-bar"
+    }, /*#__PURE__*/React.createElement("span", null), /*#__PURE__*/React.createElement("span", null), /*#__PURE__*/React.createElement("span", null)), /*#__PURE__*/React.createElement("img", {
+      src: "img/landing/hedef.png?v=1",
+      alt: "",
+      width: "826",
+      height: "506"
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "lp-float lp-float-a"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "lp-float-ico"
+    }, /*#__PURE__*/React.createElement(LpIcon, {
+      name: "target",
+      size: 18
+    })), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("b", null, "Bug\xFCn\xFCn hedefi"), /*#__PURE__*/React.createElement("small", null, "25 soru \xB7 45 dk"))), /*#__PURE__*/React.createElement("div", {
+      className: "lp-float lp-float-b"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "lp-float-ico lp-float-ico-gold"
+    }, /*#__PURE__*/React.createElement(LpIcon, {
+      name: "trophy",
+      size: 18
+    })), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("b", null, "Pazar denemesi"), /*#__PURE__*/React.createElement("small", null, "T\xFCrkiye geneli s\u0131ralama"))))), /*#__PURE__*/React.createElement("section", {
+      className: "lp-wrap"
+    }, /*#__PURE__*/React.createElement("dl", {
+      className: "lp-stats"
+    }, stats.map(function (x) {
+      return /*#__PURE__*/React.createElement("div", {
+        key: x.t,
+        className: "lp-stat"
+      }, /*#__PURE__*/React.createElement("dt", null, x.t), /*#__PURE__*/React.createElement("dd", null, x.n));
+    }))), /*#__PURE__*/React.createElement("section", {
+      id: "ozellikler",
+      className: "lp-wrap lp-sec"
     }, /*#__PURE__*/React.createElement("p", {
-      className: "land-kicker mb-2"
-    }, "Yak\u0131nda"), /*#__PURE__*/React.createElement("p", {
-      className: "font-display font-extrabold text-xl sm:text-2xl leading-snug"
-    }, "Her Pazar, T\xFCrkiye geneli."), /*#__PURE__*/React.createElement("p", {
-      className: "text-sm text-white/70 mt-2 leading-relaxed"
-    }, "Haftan\u0131n kilidi Pazar: ayn\u0131 anda T\xFCrkiye \xE7ap\u0131nda tempo. S\u0131ralama ve ortak saat yak\u0131nda a\xE7\u0131l\u0131r \u2014 \u015Fimdilik not, test ve oyunlarla \u0131s\u0131n, Pazar geldi\u011Finde haz\u0131r ol."))), /*#__PURE__*/React.createElement("section", {
-      className: "land-grid"
+      className: "lp-kicker"
+    }, "Sistem"), /*#__PURE__*/React.createElement("h2", {
+      className: "lp-h2"
+    }, "Rastgele soru de\u011Fil, program."), /*#__PURE__*/React.createElement("p", {
+      className: "lp-sub"
+    }, "Konu kilitleri, g\xFCnl\xFCk hedef, zay\u0131f konu \xF6ne \xE7ekme, yanl\u0131\u015F defteri. Bug\xFCn ne yapaca\u011F\u0131n\u0131 sen aramazs\u0131n; Atanly s\u0131raya koyar."), /*#__PURE__*/React.createElement("div", {
+      className: "lp-grid3"
     }, feats.map(function (f) {
       return /*#__PURE__*/React.createElement("article", {
         key: f.t,
-        className: "land-card"
-      }, /*#__PURE__*/React.createElement("h2", {
-        className: "font-display font-bold text-lg text-white mb-2"
-      }, f.t), /*#__PURE__*/React.createElement("p", {
-        className: "text-sm text-white/65 leading-relaxed"
-      }, f.d));
-    })), /*#__PURE__*/React.createElement("section", {
-      className: "land-wide"
-    }, /*#__PURE__*/React.createElement("h2", {
-      className: "font-display font-bold text-xl mb-2"
-    }, "Sistem, program gibi \xE7al\u0131\u015F\u0131r"), /*#__PURE__*/React.createElement("p", {
-      className: "text-sm text-white/60 mb-5 max-w-2xl leading-relaxed"
-    }, "Rastgele soru \xE7\xF6zmek de\u011Fil. Konu kilitleri, g\xFCnl\xFCk hedef, zay\u0131f konu \xF6ne \xE7ekme, yanl\u0131\u015F defteri, 30 g\xFCnl\xFCk \u0131s\u0131. Bug\xFCn ne yapaca\u011F\u0131n\u0131 sen aramazs\u0131n; Atanly s\u0131raya koyar."), /*#__PURE__*/React.createElement("ol", {
-      className: "space-y-4"
-    }, steps.map(function (s) {
-      return /*#__PURE__*/React.createElement("li", {
-        key: s.n,
-        className: "flex gap-4"
+        className: "lp-card"
       }, /*#__PURE__*/React.createElement("span", {
-        className: "land-stepnum"
-      }, s.n), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
-        className: "font-semibold"
-      }, s.t), /*#__PURE__*/React.createElement("p", {
-        className: "text-sm text-white/60 mt-0.5 leading-relaxed"
-      }, s.d)));
+        className: "lp-ico"
+      }, /*#__PURE__*/React.createElement(LpIcon, {
+        name: f.i,
+        size: 22
+      })), /*#__PURE__*/React.createElement("h3", null, f.t), /*#__PURE__*/React.createElement("p", null, f.d));
     }))), /*#__PURE__*/React.createElement("section", {
-      className: "land-wide"
-    }, /*#__PURE__*/React.createElement("h2", {
-      className: "font-display font-bold text-xl mb-2"
-    }, "Oyunlar da bankan\u0131n i\xE7inde"), /*#__PURE__*/React.createElement("p", {
-      className: "text-sm text-white/60 mb-5 max-w-2xl leading-relaxed"
-    }, "Ayr\u0131 bir e\u011Flence uygulamas\u0131 yok. Fetih, harita, tabu, panik \u2014 hepsi GY-GK konular\u0131ndan \xFCretilir. Mola verdi\u011Fin an da \xE7al\u0131\u015Fmaya say\u0131l\u0131r."), /*#__PURE__*/React.createElement("div", {
-      className: "land-game"
+      className: "lp-wrap lp-sec"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "lp-sunday"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "lp-sunday-ico"
+    }, /*#__PURE__*/React.createElement(LpIcon, {
+      name: "trophy",
+      size: 26
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "min-w-0"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "lp-kicker"
+    }, "Her Pazar"), /*#__PURE__*/React.createElement("h2", {
+      className: "lp-h3"
+    }, "T\xFCrkiye geneli canl\u0131 deneme."), /*#__PURE__*/React.createElement("p", {
+      className: "lp-sub mb-0"
+    }, "Herkes ayn\u0131 anda \xE7\xF6zer. S\u0131ralama, net da\u011F\u0131l\u0131m\u0131 ve konu analizi Pazar ak\u015Fam\u0131 haz\u0131r. Hafta boyu not, test ve oyunlarla \u0131s\u0131n.")), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      onClick: props.onSignup,
+      className: "lp-btn-gold lp-sunday-btn"
+    }, "Kat\u0131l"))), /*#__PURE__*/React.createElement("section", {
+      className: "lp-wrap lp-sec"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "lp-kicker"
+    }, "Nas\u0131l \xE7al\u0131\u015F\u0131r"), /*#__PURE__*/React.createElement("h2", {
+      className: "lp-h2"
+    }, "\xDC\xE7 ad\u0131mda ba\u015Fla."), /*#__PURE__*/React.createElement("ol", {
+      className: "lp-steps"
+    }, steps.map(function (st, k) {
+      return /*#__PURE__*/React.createElement("li", {
+        key: st.t,
+        className: "lp-step"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "lp-step-n"
+      }, k + 1), /*#__PURE__*/React.createElement("h3", null, st.t), /*#__PURE__*/React.createElement("p", null, st.d));
+    }))), /*#__PURE__*/React.createElement("section", {
+      id: "oyunlar",
+      className: "lp-wrap lp-sec"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "lp-kicker"
+    }, "Oyunlar"), /*#__PURE__*/React.createElement("h2", {
+      className: "lp-h2"
+    }, "Oyunlar da bankan\u0131n i\xE7inde."), /*#__PURE__*/React.createElement("p", {
+      className: "lp-sub"
+    }, "Ayr\u0131 bir e\u011Flence uygulamas\u0131 yok. Hepsi GY-GK konular\u0131ndan \xFCretilir; mola da \xE7al\u0131\u015Fmaya say\u0131l\u0131r."), /*#__PURE__*/React.createElement("div", {
+      className: "lp-games"
     }, games.map(function (g) {
       return /*#__PURE__*/React.createElement("article", {
         key: g.t,
-        className: "land-card"
-      }, /*#__PURE__*/React.createElement("h3", {
-        className: "font-display font-bold text-white mb-1.5"
-      }, g.t), /*#__PURE__*/React.createElement("p", {
-        className: "text-sm text-white/65 leading-relaxed"
-      }, g.d));
-    }))), /*#__PURE__*/React.createElement("section", {
-      className: "land-wide"
-    }, /*#__PURE__*/React.createElement("h2", {
-      className: "font-display font-bold text-xl mb-4"
-    }, "Uygulamadan"), /*#__PURE__*/React.createElement("div", {
-      className: "land-shots"
-    }, shots.map(function (s) {
-      return /*#__PURE__*/React.createElement("figure", {
-        key: s.src,
-        className: "land-shot"
+        className: "lp-game"
+      }, g.timer ? /*#__PURE__*/React.createElement("div", {
+        className: "lp-game-img lp-timer",
+        "aria-hidden": "true"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "lp-timer-ring"
+      }, /*#__PURE__*/React.createElement("b", null, "0:30"), /*#__PURE__*/React.createElement("small", null, "+2 \xB7 do\u011Fru"))) : /*#__PURE__*/React.createElement("div", {
+        className: "lp-game-img"
       }, /*#__PURE__*/React.createElement("img", {
-        src: s.src,
-        alt: s.t,
-        width: "900",
-        height: "700",
+        src: g.img,
+        alt: "",
         loading: "lazy"
-      }), /*#__PURE__*/React.createElement("figcaption", null, s.t));
+      })), /*#__PURE__*/React.createElement("div", {
+        className: "lp-game-body"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "lp-ico lp-ico-sm"
+      }, /*#__PURE__*/React.createElement(LpIcon, {
+        name: g.i,
+        size: 18
+      })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h3", null, g.t), /*#__PURE__*/React.createElement("p", null, g.d))));
     }))), /*#__PURE__*/React.createElement("section", {
-      className: "land-wide land-faq",
-      "aria-labelledby": "sss-title"
-    }, /*#__PURE__*/React.createElement("h2", {
-      id: "sss-title",
-      className: "font-display font-bold text-xl mb-4"
-    }, "S\u0131k sorulanlar"), /*#__PURE__*/React.createElement("details", null, /*#__PURE__*/React.createElement("summary", null, "Atanly nedir?"), /*#__PURE__*/React.createElement("p", null, "KPSS GY-GK not, test, tekrar ve oyun. Lisans, \xF6n lisans, orta\xF6\u011Fretim.")), /*#__PURE__*/React.createElement("details", null, /*#__PURE__*/React.createElement("summary", null, "\xDCcretsiz mi?"), /*#__PURE__*/React.createElement("p", null, "Evet. Hesap \xFCcretsiz. Kart yok. Google veya e-posta ile girersin.")), /*#__PURE__*/React.createElement("details", null, /*#__PURE__*/React.createElement("summary", null, "Hangi dersler a\xE7\u0131k?"), /*#__PURE__*/React.createElement("p", null, "Tarih, co\u011Frafya, T\xFCrk\xE7e, vatanda\u015Fl\u0131k, g\xFCncel, geometri.")), /*#__PURE__*/React.createElement("details", null, /*#__PURE__*/React.createElement("summary", null, "App Store ve Play Store?"), /*#__PURE__*/React.createElement("p", null, "Yak\u0131nda. \u015Eimdi taray\u0131c\u0131dan tam Atanly. Ayn\u0131 hesap uygulamaya ta\u015F\u0131nacak.")), /*#__PURE__*/React.createElement("details", null, /*#__PURE__*/React.createElement("summary", null, "Her Pazar T\xFCrkiye geneli nedir?"), /*#__PURE__*/React.createElement("p", null, "Yak\u0131nda: Pazar g\xFCn\xFC T\xFCrkiye \xE7ap\u0131nda ortak tempo ve s\u0131ralama. \u015Eimdilik not, test ve oyunla \u0131s\u0131n."))), /*#__PURE__*/React.createElement("section", {
-      className: "land-wide"
+      className: "lp-sec"
     }, /*#__PURE__*/React.createElement("div", {
-      className: "land-cta"
+      className: "lp-wrap"
     }, /*#__PURE__*/React.createElement("p", {
-      className: "land-kicker mb-3"
-    }, "Mobil"), /*#__PURE__*/React.createElement("p", {
-      className: "font-display font-extrabold text-2xl mb-2"
-    }, "Yakında App Store ve Play Store'da."), /*#__PURE__*/React.createElement("p", {
-      className: "text-sm text-white/65 mb-5 leading-relaxed"
-    }, "\u015Eimdilik taray\u0131c\u0131dan tam Atanly. iPhone ve Android uygulamalar\u0131 yolda \u2014 ayn\u0131 hesap, ayn\u0131 ilerleme."), /*#__PURE__*/React.createElement("div", {
-      className: "land-store mb-6"
+      className: "lp-kicker"
+    }, "Uygulamadan"), /*#__PURE__*/React.createElement("h2", {
+      className: "lp-h2"
+    }, "G\xF6rd\xFC\u011F\xFCn, \xE7al\u0131\u015Ft\u0131\u011F\u0131n \u015Fey.")), /*#__PURE__*/React.createElement("div", {
+      className: "lp-shots",
+      tabIndex: 0,
+      "aria-label": "Uygulama ekran g\xF6r\xFCnt\xFCleri"
+    }, shots.map(function (x) {
+      return /*#__PURE__*/React.createElement("figure", {
+        key: x.src,
+        className: "lp-shot"
+      }, /*#__PURE__*/React.createElement("img", {
+        src: x.src,
+        alt: x.t,
+        loading: "lazy"
+      }), /*#__PURE__*/React.createElement("figcaption", null, x.t));
+    }))), /*#__PURE__*/React.createElement("section", {
+      id: "sss",
+      className: "lp-wrap lp-sec",
+      "aria-labelledby": "sss-title"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "lp-kicker"
+    }, "S\u0131k sorulanlar"), /*#__PURE__*/React.createElement("h2", {
+      id: "sss-title",
+      className: "lp-h2"
+    }, "Akl\u0131ndakiler."), /*#__PURE__*/React.createElement("div", {
+      className: "lp-faq"
+    }, faq.map(function (f) {
+      return /*#__PURE__*/React.createElement("details", {
+        key: f[0]
+      }, /*#__PURE__*/React.createElement("summary", null, f[0]), /*#__PURE__*/React.createElement("p", null, f[1]));
+    }))), /*#__PURE__*/React.createElement("section", {
+      className: "lp-wrap lp-sec"
     }, /*#__PURE__*/React.createElement("div", {
-      className: "land-store-btn",
-      "aria-label": "App Store yak\u0131nda"
+      className: "lp-final"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "lp-final-glow",
+      "aria-hidden": "true"
+    }), /*#__PURE__*/React.createElement("h2", {
+      className: "lp-h2 relative"
+    }, "Bug\xFCn ba\u015Fla, Pazar'a haz\u0131r ol."), /*#__PURE__*/React.createElement("p", {
+      className: "lp-sub relative"
+    }, "\xDCcretsiz hesap a\xE7; program\u0131n, notlar\u0131n ve oyunlar\u0131n hemen haz\u0131r. Ayn\u0131 hesap telefonda da \xE7al\u0131\u015F\u0131r."), /*#__PURE__*/React.createElement("div", {
+      className: "lp-cta-row relative justify-center"
+    }, /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      onClick: props.onSignup,
+      className: "lp-btn-gold"
+    }, "\xDCcretsiz hesap a\xE7 ", /*#__PURE__*/React.createElement(LpIcon, {
+      name: "arrow",
+      size: 18,
+      sw: 2.2
+    })), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      onClick: props.onLogin,
+      className: "lp-btn-glass"
+    }, "Giri\u015F yap")), /*#__PURE__*/React.createElement("div", {
+      className: "lp-store relative"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "lp-store-btn"
     }, /*#__PURE__*/React.createElement("svg", {
-      width: "22",
-      height: "26",
+      width: "18",
+      height: "21",
       viewBox: "0 0 22 26",
       fill: "currentColor",
       "aria-hidden": "true"
     }, /*#__PURE__*/React.createElement("path", {
       d: "M18.1 13.6c0-3.2 2.6-4.7 2.7-4.8-1.5-2.2-3.8-2.5-4.6-2.5-1.9-.2-3.8 1.2-4.8 1.2-1 0-2.6-1.1-4.3-1.1-2.2 0-4.3 1.3-5.4 3.3-2.3 4-0.6 9.9 1.7 13.1 1.1 1.6 2.4 3.3 4.1 3.3 1.6-.1 2.2-1.1 4.2-1.1s2.5 1.1 4.3 1c1.8 0 2.9-1.6 4-3.2 1.2-1.8 1.7-3.5 1.7-3.6-.1 0-3.4-1.3-3.4-5.1zM15.2 4.3c.9-1.1 1.5-2.6 1.3-4.1-1.3.1-2.9.9-3.8 2-.8.9-1.6 2.4-1.4 3.8 1.5.1 3-.8 3.9-1.7z"
-    })), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("small", null, "Yak\u0131nda"), /*#__PURE__*/React.createElement("b", null, "App Store"))), /*#__PURE__*/React.createElement("div", {
-      className: "land-store-btn",
-      "aria-label": "Google Play yak\u0131nda"
+    })), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("small", null, "iPhone"), /*#__PURE__*/React.createElement("b", null, "App Store"))), /*#__PURE__*/React.createElement("span", {
+      className: "lp-store-btn"
     }, /*#__PURE__*/React.createElement("svg", {
-      width: "20",
-      height: "22",
+      width: "17",
+      height: "19",
       viewBox: "0 0 20 22",
       "aria-hidden": "true"
     }, /*#__PURE__*/React.createElement("path", {
@@ -281,25 +487,28 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
     }), /*#__PURE__*/React.createElement("path", {
       fill: "#C9A227",
       d: "M16.8 12.3L3.8 21.1 18.6 13c.8-.5.8-1.6 0-2.1l-1.8 1.4z"
-    })), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("small", null, "Yak\u0131nda"), /*#__PURE__*/React.createElement("b", null, "Google Play")))), /*#__PURE__*/React.createElement("button", {
-      type: "button",
-      onClick: props.onSignup,
-      className: "w-full sm:w-auto px-8 py-3.5 rounded-2xl font-bold bg-gold-500 text-stone-900"
-    }, "Web'de şimdi başla")), /*#__PURE__*/React.createElement("p", {
-      className: "text-[10px] text-center text-white/35 mt-8 leading-relaxed"
+    })), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("small", null, "Android"), /*#__PURE__*/React.createElement("b", null, "Google Play"))))))), /*#__PURE__*/React.createElement("footer", {
+      className: "lp-foot"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "lp-wrap lp-foot-in"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex items-center gap-2"
+    }, window.AtanomLogo ? window.AtanomLogo("h-7 w-7 object-contain") : null, /*#__PURE__*/React.createElement("span", {
+      className: "font-semibold"
+    }, "Atanly"), /*#__PURE__*/React.createElement("span", {
+      className: "text-white/40"
+    }, "\xB7 KPSS \xE7al\u0131\u015Fma odas\u0131")), /*#__PURE__*/React.createElement("nav", {
+      className: "lp-legal",
+      "aria-label": "Yasal"
     }, /*#__PURE__*/React.createElement("a", {
-      className: "underline",
       href: "yasal/aydinlatma.html"
-    }, "KVKK"), " · ", /*#__PURE__*/React.createElement("a", {
-      className: "underline",
+    }, "KVKK"), /*#__PURE__*/React.createElement("a", {
       href: "yasal/kullanim.html"
-    }, "Kullan\u0131m"), " · ", /*#__PURE__*/React.createElement("a", {
-      className: "underline",
+    }, "Kullan\u0131m"), /*#__PURE__*/React.createElement("a", {
       href: "yasal/gizlilik.html"
-    }, "Gizlilik"), " · ", /*#__PURE__*/React.createElement("a", {
-      className: "underline",
+    }, "Gizlilik"), /*#__PURE__*/React.createElement("a", {
       href: "yasal/cerez.html"
-    }, "\xC7erez"))));
+    }, "\xC7erez")))));
   }
   function getStrengthLabel(pass) {
     if (!pass) return {

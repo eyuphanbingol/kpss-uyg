@@ -317,6 +317,15 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
         return out;
     }
 
+    // Mobil Tabu'daki sonsuz döngü (2026-10) gösterilmeyen kartları da "görüldü" işaretliyordu. Bu tarihten
+    // önceki görülen-kart listesi bir kez temizlenir. Sabit tarih senkronda yeni sıfırlama sayılır; her cihaz
+    // aynı değeri yazdığı için cihazlar arasında gidip gelmez.
+    var TABU_REPAIR_AT = "2026-10-10T00:00:00.000Z";
+    function tabuNeedsRepair(g) {
+        var at = typeof g.tabuSeenResetAt === "string" ? g.tabuSeenResetAt : "";
+        return at < TABU_REPAIR_AT && isObj(g.tabuSeen) && Object.keys(g.tabuSeen).length > 0;
+    }
+
     function migrateGames(g) {
         var base = defaultGames();
         if (!isObj(g)) return base;
@@ -334,9 +343,9 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             panicBest: Math.max(0, Number(g.panicBest) || 0),
             tabuBest: Math.max(0, Number(g.tabuBest) || 0),
             kodlamaBest: Math.max(0, Number(g.kodlamaBest) || 0),
-            tabuSeen: seenMap(g.tabuSeen),
+            tabuSeen: tabuNeedsRepair(g) ? {} : seenMap(g.tabuSeen),
             kodlamaSeen: seenMap(g.kodlamaSeen),
-            tabuSeenResetAt: typeof g.tabuSeenResetAt === "string" ? g.tabuSeenResetAt : "",
+            tabuSeenResetAt: tabuNeedsRepair(g) ? TABU_REPAIR_AT : (typeof g.tabuSeenResetAt === "string" ? g.tabuSeenResetAt : ""),
             kodlamaSeenResetAt: typeof g.kodlamaSeenResetAt === "string" ? g.kodlamaSeenResetAt : ""
         };
     }
