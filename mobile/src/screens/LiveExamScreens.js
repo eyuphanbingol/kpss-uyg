@@ -11,6 +11,7 @@ import { konuLabel } from "../lib/konuLabels";
 import { go } from "../nav";
 import { Card, PageHeader, ScrollScreen, Tap } from "../ui";
 import { LiveExamCard, liveKonuHasContent, s as cs } from "../components/LiveExamCard";
+import { inlineOnly } from "../lib/webGuard";
 
 // Soru metni biçimi (L.richParse): __söz__ altı çizili, __söz__(II) numaralı, **söz** kalın,
 // \frac{pay}{payda} alt alta kesir, \sqrt{x} / √15 kök, x^{2} üs, a_{1} alt indis.
@@ -844,7 +845,7 @@ export function LiveOpticScreen({ navigation, route }) {
     return (
         <View style={{ flex: 1, backgroundColor: dark ? "#0c0a09" : "#F8FAFC" }}>
             <View style={{ paddingHorizontal: 16, paddingTop: 8 }}>{head}</View>
-            <WebView ref={webRef} style={{ flex: 1, backgroundColor: "transparent" }} originWhitelist={["*"]}
+            <WebView ref={webRef} style={{ flex: 1, backgroundColor: "transparent" }} originWhitelist={["*"]} onShouldStartLoadWithRequest={inlineOnly}
                 source={{ html: OPTIK_HTML, baseUrl: "https://www.atanly.com/optik/" }}
                 injectedJavaScriptBeforeContentLoaded={"window.OPTIK_MODE = 'scan'; window.OPTIK_THEME = '" + (dark ? "dark" : "light") + "'; true;"}
                 onMessage={onMessage} javaScriptEnabled domStorageEnabled allowFileAccess mediaCapturePermissionGrantType="grant"

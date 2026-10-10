@@ -5,6 +5,7 @@ import * as FileSystem from "expo-file-system/legacy";
 import * as Sharing from "expo-sharing";
 import { CARD_HTML } from "../lib/cardHtml";
 import { StudentStore } from "../lib/store";
+import { inlineOnly } from "../lib/webGuard";
 
 // Paylaşım görselleri (net kartı, program görseli): web'deki js/shareCard.js gizli bir
 // WebView'da çalışır, PNG'yi base64 olarak döndürür. OptikWorker ile aynı düzen.
@@ -49,7 +50,7 @@ export function useCardImage() {
     }
     var host = active ? (
         <View style={{ position: "absolute", width: 2, height: 2, opacity: 0, left: -10, top: 0 }} pointerEvents="none">
-            <WebView ref={web} originWhitelist={["*"]} source={{ html: CARD_HTML, baseUrl: "https://www.atanly.com/" }}
+            <WebView ref={web} originWhitelist={["*"]} onShouldStartLoadWithRequest={inlineOnly} source={{ html: CARD_HTML, baseUrl: "https://www.atanly.com/" }}
                 onMessage={onMessage} javaScriptEnabled
                 onContentProcessDidTerminate={function () { ready.current = false; if (web.current) web.current.reload(); }}
                 onRenderProcessGone={function () { ready.current = false; return true; }} />

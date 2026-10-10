@@ -183,8 +183,9 @@ export default function AuthScreen() {
             setMsg(fr.error ? trError(fr.error, "Mail gönderilemedi.") : "Sıfırlama maili gönderildi. Linke basınca yeni şifreni yaz.");
             return;
         }
-        if (!pass || pass.length < 6) {
-            setMsg("Şifre en az 6 karakter olmalı.");
+        var minPass = mode === "up" ? 8 : 6;   // yeni şifre 8; girişte eski 6-7 karakterli şifreler de geçer
+        if (!pass || pass.length < minPass) {
+            setMsg("Şifre en az " + minPass + " karakter olmalı.");
             return;
         }
         if (mode === "up") {
@@ -291,8 +292,8 @@ export default function AuthScreen() {
     }, [recovering]);
 
     async function saveNewPassword() {
-        if (!newPass || newPass.length < 6) {
-            setMsg("Yeni şifre en az 6 karakter olmalı.");
+        if (!newPass || newPass.length < 8) {
+            setMsg("Yeni şifre en az 8 karakter olmalı.");
             return;
         }
         if (newPass !== newPass2) {
@@ -387,7 +388,7 @@ export default function AuthScreen() {
     var muted = dark ? "#A8A29E" : "#64748B";
     var iconC = dark ? "#78716C" : "#94A3B8";
     var emailErr = touched.email && email && !validEmail(email) ? "E-posta adresi eksik ya da hatalı görünüyor." : "";
-    var passErr = touched.pass && pass && pass.length < 6 ? "Şifre en az 6 karakter olmalı." : "";
+    var passErr = touched.pass && pass && pass.length < (mode === "up" ? 8 : 6) ? "Şifre en az " + (mode === "up" ? 8 : 6) + " karakter olmalı." : "";
     var nameErr = touched.name && !name.trim() ? "Adını yaz; liderlik tablosunda bu görünür." : "";
     var mailFix = suggestEmail(email);
     var okMsg = /gönderildi|doğrula|güncellendi/i.test(msg || "");
@@ -501,7 +502,7 @@ export default function AuthScreen() {
         : /yandex/.test(mailHost) ? ["Yandex Mail'i aç", "https://mail.yandex.com.tr"] : null;
 
     var heading = recovering ? "Yeni şifreni belirle" : sentTo ? "Mailini kontrol et" : forgot ? "Şifreni sıfırla" : mode === "up" ? "Hesabını oluştur" : "Tekrar hoş geldin";
-    var sub = recovering ? "Maildeki bağlantı seni buraya getirdi. Yeni şifren en az 6 karakter olsun."
+    var sub = recovering ? "Maildeki bağlantı seni buraya getirdi. Yeni şifren en az 8 karakter olsun."
         : sentTo ? "Hesabın hazır; açmak için tek adım kaldı."
         : forgot ? "E-postanı yaz; şifre sıfırlama bağlantısını gönderelim."
         : mode === "up" ? "Ücretsiz. Kısa birkaç adım; kart bilgisi istenmez."
@@ -540,7 +541,7 @@ export default function AuthScreen() {
 
                         {recovering ? (
                             <View>
-                                <Field dark={dark} label="Yeni şifre" value={newPass} onChangeText={setNewPass} placeholder="En az 6 karakter" secure
+                                <Field dark={dark} label="Yeni şifre" value={newPass} onChangeText={setNewPass} placeholder="En az 8 karakter" secure
                                     icon={<Lock size={18} color={iconC} />} autoComplete="password-new" textContentType="newPassword" extra={<Strength value={newPass} />} />
                                 <Field dark={dark} label="Yeni şifre (tekrar)" value={newPass2} onChangeText={setNewPass2} placeholder="Şifreni tekrar yaz" secure
                                     icon={<Lock size={18} color={iconC} />} error={newPass2 && newPass2 !== newPass ? "Şifreler eşleşmiyor." : ""} />
@@ -659,7 +660,7 @@ export default function AuthScreen() {
                                                 <Field dark={dark} label="E-posta" value={email} onChangeText={setEmail} placeholder="ad@ornek.com" keyboardType="email-address" autoCapitalize="none"
                                                     autoComplete="email" textContentType="emailAddress" icon={<Mail size={18} color={iconC} />}
                                                     error={emailErr} onBlur={function () { touch("email"); }} extra={<MailFix />} returnKeyType="next" />
-                                                <Field dark={dark} label="Şifre" value={pass} onChangeText={setPass} placeholder="En az 6 karakter" secure
+                                                <Field dark={dark} label="Şifre" value={pass} onChangeText={setPass} placeholder={mode === "up" ? "En az 8 karakter" : "Şifren"} secure
                                                     autoComplete="password-new" textContentType="newPassword" icon={<Lock size={18} color={iconC} />}
                                                     error={passErr} onBlur={function () { touch("pass"); }} extra={<Strength value={pass} />} />
                                                 <Field dark={dark} label="Davet kodu (isteğe bağlı)" value={refCode} onChangeText={function (v) { setRefCode(v.toUpperCase()); }}

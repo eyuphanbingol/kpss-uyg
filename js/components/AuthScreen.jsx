@@ -10,8 +10,9 @@
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
 
-    function validatePassword(pass) {
-        return pass.length >= 6;
+    // Yeni şifre (kayıt, sıfırlama) en az 8; girişte eski 6-7 karakterli şifreler de kabul edilir.
+    function validatePassword(pass, isNew) {
+        return pass.length >= (isNew ? 8 : 6);
     }
 
     var loginFails = 0;
@@ -379,7 +380,7 @@
 
     function getStrengthLabel(pass) {
         if (!pass) return { label: "Şifre gir", color: "text-stone-400", bg: "bg-stone-200" };
-        if (pass.length < 6) return { label: "Zayıf (6+ karakter)", color: "text-rose-500", bg: "bg-rose-500" };
+        if (pass.length < 8) return { label: "Zayıf (8+ karakter)", color: "text-rose-500", bg: "bg-rose-500" };
         if (pass.length < 10) return { label: "Orta", color: "text-amber-500", bg: "bg-amber-500" };
         return { label: "Güçlü ✅", color: "text-emerald-500", bg: "bg-emerald-500" };
     }
@@ -496,7 +497,7 @@
     }
     function passScore(p) {
         if (!p) return 0;
-        if (p.length < 6) return 1;
+        if (p.length < 8) return 1;
         var n = passRules(p).filter(function (r) { return r.ok; }).length;
         return Math.max(1, Math.min(4, n + (p.length >= 12 ? 1 : 0)));
     }
@@ -778,7 +779,7 @@
         // ---------- Submit ----------
         async function saveNewPassword() {
             if (!sb) { setMsg("Sunucu bağlı değil."); return; }
-            if (!validatePassword(newPass)) { setMsg("Yeni şifre en az 6 karakter olmalı."); return; }
+            if (!validatePassword(newPass, true)) { setMsg("Yeni şifre en az 8 karakter olmalı."); return; }
             if (newPass !== newPass2) { setMsg("Şifreler eşleşmiyor."); return; }
             setBusy(true);
             setMsg("");
@@ -806,7 +807,7 @@
         async function submit() {
             if (!sb) { setMsg("Sunucu bağlı değil."); return; }
             // Düğme hiç kilitlenmez: eksik alan tıklayınca işaretlenir ve oraya odaklanılır.
-            var badEmail = !email || !validateEmail(email), badPass = !validatePassword(pass), badKvkk = mode === "up" && !kvkk;
+            var badEmail = !email || !validateEmail(email), badPass = !validatePassword(pass, mode === "up"), badKvkk = mode === "up" && !kvkk;
             if (badEmail || badPass || badKvkk) {
                 setTouched(function (t) { return Object.assign({}, t, { email: true, pass: true, kvkk: mode === "up" }); });
                 setMsg("");
@@ -995,7 +996,7 @@
         function touch(k) { setTouched(function (t) { var n = Object.assign({}, t); n[k] = true; return n; }); }
         function capsCheck(e) { if (e && e.getModifierState) setCaps(e.getModifierState("CapsLock")); }
         var emailErr = !touched.email ? "" : !email.trim() ? "E-posta adresini yaz." : !validateEmail(email.trim()) ? "E-posta adresi eksik ya da hatalı görünüyor." : "";
-        var passErr = !touched.pass ? "" : !pass ? "Şifreni yaz." : !validatePassword(pass) ? "Şifre en az 6 karakter olmalı." : "";
+        var passErr = !touched.pass ? "" : !pass ? "Şifreni yaz." : !validatePassword(pass, mode === "up") ? "Şifre en az " + (mode === "up" ? 8 : 6) + " karakter olmalı." : "";
         var kvkkErr = touched.kvkk && !kvkk;
         var nameErr = touched.name && !name.trim() ? "Adını yaz; liderlik tablosunda bu görünür." : "";
         var mailFix = suggestEmail(email);
@@ -1064,7 +1065,7 @@
                         return <input {...a} id={id} ref={passRef} type={showPassword ? "text" : "password"} autoComplete={isNew ? "new-password" : "current-password"}
                             value={pass} onChange={function (e) { setPass(e.target.value); }} onBlur={function () { touch("pass"); }}
                             onKeyDown={function (e) { capsCheck(e); handleKeyDown(e); }} onKeyUp={capsCheck}
-                            placeholder={isNew ? "En az 6 karakter" : "Şifren"} />;
+                            placeholder={isNew ? "En az 8 karakter" : "Şifren"} />;
                     }}
                 </AuthField>
             );
@@ -1229,7 +1230,7 @@
         var recoveryForm = recovery ? (
             <div className="space-y-5 atn-in">
                 <AuthField id="rec-pass" label="Yeni şifre" icon="lock" extra={<StrengthMeter value={newPass} />}>
-                    {function (a) { return <input {...a} id="rec-pass" type={showPassword ? "text" : "password"} value={newPass} onChange={function (e) { setNewPass(e.target.value); }} placeholder="En az 6 karakter" autoComplete="new-password" />; }}
+                    {function (a) { return <input {...a} id="rec-pass" type={showPassword ? "text" : "password"} value={newPass} onChange={function (e) { setNewPass(e.target.value); }} placeholder="En az 8 karakter" autoComplete="new-password" />; }}
                 </AuthField>
                 <AuthField id="rec-pass2" label="Yeni şifre (tekrar)" icon="lock" error={newPass2 && newPass2 !== newPass ? "Şifreler eşleşmiyor." : ""}>
                     {function (a) { return <input {...a} id="rec-pass2" type={showPassword ? "text" : "password"} value={newPass2} onChange={function (e) { setNewPass2(e.target.value); }} placeholder="Şifreni tekrar yaz" autoComplete="new-password" />; }}
@@ -1301,7 +1302,7 @@
         }
 
         var heading = recovery ? "Yeni şifreni belirle" : sentTo ? "Mailini kontrol et" : mode === "up" ? "Hesabını oluştur" : "Tekrar hoş geldin";
-        var sub = recovery ? "Maildeki bağlantı seni buraya getirdi. Yeni şifren en az 6 karakter olsun."
+        var sub = recovery ? "Maildeki bağlantı seni buraya getirdi. Yeni şifren en az 8 karakter olsun."
             : sentTo ? "Hesabın hazır; açmak için tek adım kaldı."
             : mode === "up" ? "Ücretsiz. İki kısa adım; kart bilgisi istenmez."
             : "Kaldığın yerden devam et: programın, notların ve yanlış defterin seni bekliyor.";

@@ -1,64 +1,212 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/auth/callback", "destination": "/auth/callback.html" },
-    { "source": "/auth/reset", "destination": "/auth/reset.html" }
+    {
+      "source": "/auth/callback",
+      "destination": "/auth/callback.html"
+    },
+    {
+      "source": "/auth/reset",
+      "destination": "/auth/reset.html"
+    }
   ],
   "headers": [
     {
       "source": "/catalog.json",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=60, must-revalidate" },
-        { "key": "Access-Control-Allow-Origin", "value": "*" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=60, must-revalidate"
+        }
       ]
     },
     {
       "source": "/sw.js",
       "headers": [
-        { "key": "Cache-Control", "value": "no-cache" }
+        {
+          "key": "Cache-Control",
+          "value": "no-cache"
+        }
       ]
     },
     {
       "source": "/(sorular|notlar)/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, stale-while-revalidate=604800" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, stale-while-revalidate=604800"
+        }
       ]
     },
     {
       "source": "/(src/img|img|icons|svg)/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=2592000" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, stale-while-revalidate=2592000"
+        }
       ]
     },
     {
       "source": "/((?!optik/).*)",
       "headers": [
-        { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains; preload" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), payment=()" },
-        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin-allow-popups" },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=()"
+        },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin-allow-popups"
+        },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://cdn.tailwindcss.com https://cdn.jsdelivr.net https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; connect-src 'self' https://*.supabase.co wss://*.supabase.co https://unpkg.com https://cdn.jsdelivr.net https://www.google.com https://accounts.google.com; frame-src 'self' https://accounts.google.com https://*.supabase.co https://www.google.com; worker-src 'self' blob:; upgrade-insecure-requests"
+          "value": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://cdn.jsdelivr.net https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; connect-src 'self' https://*.supabase.co wss://*.supabase.co https://unpkg.com https://cdn.jsdelivr.net https://www.google.com https://accounts.google.com; frame-src 'self' https://accounts.google.com https://*.supabase.co https://www.google.com; worker-src 'self' blob:; upgrade-insecure-requests"
+        },
+        {
+          "key": "X-Permitted-Cross-Domain-Policies",
+          "value": "none"
         }
       ]
     },
     {
       "source": "/optik/(.*)",
       "headers": [
-        { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains; preload" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), payment=()" },
-        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin-allow-popups" },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=()"
+        },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin-allow-popups"
+        },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://cdn.tailwindcss.com https://cdn.jsdelivr.net https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; connect-src 'self' https://*.supabase.co wss://*.supabase.co https://unpkg.com https://cdn.jsdelivr.net https://www.google.com https://accounts.google.com; frame-src 'none'; worker-src 'self' blob:; upgrade-insecure-requests"
+          "value": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://cdn.jsdelivr.net https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; connect-src 'self' https://*.supabase.co wss://*.supabase.co https://unpkg.com https://cdn.jsdelivr.net https://www.google.com https://accounts.google.com; frame-src 'none'; worker-src 'self' blob:; upgrade-insecure-requests"
+        },
+        {
+          "key": "X-Permitted-Cross-Domain-Policies",
+          "value": "none"
         }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/supabase/:path*",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/scripts/:path*",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/docs/:path*",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/mobile/:path*",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/.cursor/:path*",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/.git/:path*",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/.github/:path*",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/node_modules/:path*",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/.vercel/:path*",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/.expo/:path*",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/tmp-geo/:path*",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/.env",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/.env.:any",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/.gitignore",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/.vercelignore",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/tailwind.config.js",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/README.md",
+      "destination": "/",
+      "permanent": false
     }
   ]
 }

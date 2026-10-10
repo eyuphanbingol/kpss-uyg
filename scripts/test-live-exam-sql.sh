@@ -18,5 +18,6 @@ run "${TMPDIR:-/tmp}/live-exam-phase1.sql"
 node scripts/split-live-sql.js --check
 for f in $(ls supabase/canli-deneme/*.sql | sort -V); do run "$f"; done
 for f in $(ls supabase/canli-deneme/*.sql | sort -V); do run "$f"; done   # iki kez çalıştırmak güvenli olmalı
+run supabase/patch-security-2026-10.sql   # güvenlik yaması canlı deneme akışını bozmamalı
 psql -v ON_ERROR_STOP=1 -d $DB -f supabase/tests/live-exam-test.sql 2>&1 | grep -E "ok  |GEÇTİ|BAŞARISIZ|ERROR|HATA" || true
 psql -d $DB -Atc "select 1" >/dev/null

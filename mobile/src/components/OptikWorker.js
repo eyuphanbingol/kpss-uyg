@@ -4,6 +4,7 @@ import { WebView } from "react-native-webview";
 import * as FileSystem from "expo-file-system/legacy";
 import * as Sharing from "expo-sharing";
 import { OPTIK_HTML } from "../lib/optikHtml";
+import { inlineOnly } from "../lib/webGuard";
 
 // Optik form ve soru kitapçığı PDF'i: web'deki optik/optik.html'in aynısı gizli bir WebView'da
 // çalışır (canvas → JPEG → PDF). Bitince dosya paylaşım menüsüyle açılır (yazdır, kaydet, gönder).
@@ -49,7 +50,7 @@ export function useOptikPdf() {
     }
     var host = active ? (
         <View style={{ position: "absolute", width: 2, height: 2, opacity: 0, left: -10, top: 0 }} pointerEvents="none">
-            <WebView ref={web} originWhitelist={["*"]} source={{ html: OPTIK_HTML, baseUrl: "https://www.atanly.com/optik/" }}
+            <WebView ref={web} originWhitelist={["*"]} onShouldStartLoadWithRequest={inlineOnly} source={{ html: OPTIK_HTML, baseUrl: "https://www.atanly.com/optik/" }}
                 injectedJavaScriptBeforeContentLoaded={"window.OPTIK_MODE = 'worker'; true;"}
                 onMessage={onMessage} javaScriptEnabled domStorageEnabled
                 onContentProcessDidTerminate={function () { ready.current = false; if (web.current) web.current.reload(); }}

@@ -1,0 +1,27 @@
+# Yayına YALNIZCA sitenin çalışması için gereken dosyalar çıkar (izin listesi).
+# Veritabanı şeması, sunucu fonksiyonları, yönetim betikleri, mobil kaynak, belgeler
+# ve araç ayarları sunucuya hiç yüklenmez; böylece adres tahminiyle okunamaz.
+# Yeni bir klasör siteden yüklenecekse buraya "!klasor" satırı eklenmeli.
+/*
+!/index.html
+!/js
+!/css
+!/sorular
+!/notlar
+!/img
+!/icons
+!/svg
+!/src
+!/data
+!/yasal
+!/optik
+!/auth
+!/catalog.json
+!/data.js
+!/manifest.json
+!/sw.js
+!/robots.txt
+!/sitemap.xml
+!/vercel.json
+!/package.json
+!/package-lock.json

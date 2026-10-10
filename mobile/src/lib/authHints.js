@@ -40,7 +40,7 @@ export function passRules(p) {
 // 0 boş · 1 zayıf · 2 idare eder · 3 iyi · 4 güçlü
 export function passScore(p) {
     if (!p) return 0;
-    if (p.length < 6) return 1;
+    if (p.length < 8) return 1;
     var n = passRules(p).filter(function (r) { return r.ok; }).length;
     return Math.max(1, Math.min(4, n + (p.length >= 12 ? 1 : 0)));
 }

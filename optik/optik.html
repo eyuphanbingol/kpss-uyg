@@ -83,7 +83,9 @@
     var statusEl = document.getElementById("status"), pv = document.getElementById("pv");
     function status(text, kind, busy) {
         statusEl.className = "status" + (kind ? " " + kind : "");
-        statusEl.innerHTML = (busy ? '<span class="spin"></span>' : "") + text;
+        statusEl.textContent = "";
+        if (busy) { var sp = document.createElement("span"); sp.className = "spin"; statusEl.appendChild(sp); }
+        statusEl.appendChild(document.createTextNode(String(text == null ? "" : text)));
     }
 
     // ---------- okuma ----------

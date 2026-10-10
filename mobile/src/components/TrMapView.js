@@ -3,6 +3,7 @@ import { AppState, StyleSheet, View } from "react-native";
 import { WebView } from "react-native-webview";
 import { mapDocument } from "../lib/trMap";
 import { TR_SVG } from "../lib/trSvgData";
+import { inlineOnly } from "../lib/webGuard";
 
 // Türkiye haritası tek bir WebView'da çizilir. WebView yalnız bir kez kurulur:
 // boyut değişince ya da uygulama arka plandan dönünce yeniden yüklenmez, durum yeniden
@@ -105,7 +106,7 @@ export function TrMapView(props) {
                 <WebView
                     key={"map-" + mode + "-" + reloadKey}
                     ref={webRef}
-                    originWhitelist={["*"]}
+                    originWhitelist={["*"]} onShouldStartLoadWithRequest={inlineOnly}
                     source={{ html: html, baseUrl: "https://www.atanly.com/" }}
                     onMessage={onMessage}
                     onContentProcessDidTerminate={restart}

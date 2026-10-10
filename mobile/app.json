@@ -68,7 +68,8 @@
       ],
       "permissions": [
         "android.permission.CAMERA"
-      ]
+      ],
+      "allowBackup": false
     },
     "web": {
       "favicon": "./assets/favicon.png",

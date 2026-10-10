@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:84638:pnfc3z*/
+/*jsx:babel-7.29.9-react-classic:84825:1enmpge*/
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 (function () {
   const {
@@ -18,8 +18,10 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
   function validateEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
-  function validatePassword(pass) {
-    return pass.length >= 6;
+
+  // Yeni şifre (kayıt, sıfırlama) en az 8; girişte eski 6-7 karakterli şifreler de kabul edilir.
+  function validatePassword(pass, isNew) {
+    return pass.length >= (isNew ? 8 : 6);
   }
   var loginFails = 0;
   var loginLockUntil = 0;
@@ -599,8 +601,8 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
       color: "text-stone-400",
       bg: "bg-stone-200"
     };
-    if (pass.length < 6) return {
-      label: "Zayıf (6+ karakter)",
+    if (pass.length < 8) return {
+      label: "Zayıf (8+ karakter)",
       color: "text-rose-500",
       bg: "bg-rose-500"
     };
@@ -779,7 +781,7 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
   }
   function passScore(p) {
     if (!p) return 0;
-    if (p.length < 6) return 1;
+    if (p.length < 8) return 1;
     var n = passRules(p).filter(function (r) {
       return r.ok;
     }).length;
@@ -1134,8 +1136,8 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
         setMsg("Sunucu bağlı değil.");
         return;
       }
-      if (!validatePassword(newPass)) {
-        setMsg("Yeni şifre en az 6 karakter olmalı.");
+      if (!validatePassword(newPass, true)) {
+        setMsg("Yeni şifre en az 8 karakter olmalı.");
         return;
       }
       if (newPass !== newPass2) {
@@ -1172,7 +1174,7 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
       }
       // Düğme hiç kilitlenmez: eksik alan tıklayınca işaretlenir ve oraya odaklanılır.
       var badEmail = !email || !validateEmail(email),
-        badPass = !validatePassword(pass),
+        badPass = !validatePassword(pass, mode === "up"),
         badKvkk = mode === "up" && !kvkk;
       if (badEmail || badPass || badKvkk) {
         setTouched(function (t) {
@@ -1403,7 +1405,7 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
       if (e && e.getModifierState) setCaps(e.getModifierState("CapsLock"));
     }
     var emailErr = !touched.email ? "" : !email.trim() ? "E-posta adresini yaz." : !validateEmail(email.trim()) ? "E-posta adresi eksik ya da hatalı görünüyor." : "";
-    var passErr = !touched.pass ? "" : !pass ? "Şifreni yaz." : !validatePassword(pass) ? "Şifre en az 6 karakter olmalı." : "";
+    var passErr = !touched.pass ? "" : !pass ? "Şifreni yaz." : !validatePassword(pass, mode === "up") ? "Şifre en az " + (mode === "up" ? 8 : 6) + " karakter olmalı." : "";
     var kvkkErr = touched.kvkk && !kvkk;
     var nameErr = touched.name && !name.trim() ? "Adını yaz; liderlik tablosunda bu görünür." : "";
     var mailFix = suggestEmail(email);
@@ -1525,7 +1527,7 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
             handleKeyDown(e);
           },
           onKeyUp: capsCheck,
-          placeholder: isNew ? "En az 6 karakter" : "Şifren"
+          placeholder: isNew ? "En az 8 karakter" : "Şifren"
         }));
       });
     }
@@ -1835,7 +1837,7 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
         onChange: function (e) {
           setNewPass(e.target.value);
         },
-        placeholder: "En az 6 karakter",
+        placeholder: "En az 8 karakter",
         autoComplete: "new-password"
       }));
     }), /*#__PURE__*/React.createElement(AuthField, {
@@ -1983,7 +1985,7 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
       });
     }
     var heading = recovery ? "Yeni şifreni belirle" : sentTo ? "Mailini kontrol et" : mode === "up" ? "Hesabını oluştur" : "Tekrar hoş geldin";
-    var sub = recovery ? "Maildeki bağlantı seni buraya getirdi. Yeni şifren en az 6 karakter olsun." : sentTo ? "Hesabın hazır; açmak için tek adım kaldı." : mode === "up" ? "Ücretsiz. İki kısa adım; kart bilgisi istenmez." : "Kaldığın yerden devam et: programın, notların ve yanlış defterin seni bekliyor.";
+    var sub = recovery ? "Maildeki bağlantı seni buraya getirdi. Yeni şifren en az 8 karakter olsun." : sentTo ? "Hesabın hazır; açmak için tek adım kaldı." : mode === "up" ? "Ücretsiz. İki kısa adım; kart bilgisi istenmez." : "Kaldığın yerden devam et: programın, notların ve yanlış defterin seni bekliyor.";
     return /*#__PURE__*/React.createElement("div", {
       className: "atn-auth min-h-screen lg:grid lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)]"
     }, /*#__PURE__*/React.createElement(BrandPanel, null), /*#__PURE__*/React.createElement("main", {

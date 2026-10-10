@@ -2749,10 +2749,24 @@ function promoteNoteHeadings(root) {
     });
 }
 
+// Not HTML'i depodan gelir; yine de olası bir içerik hatasına karşı çalıştırılabilir her şey ayıklanır.
+function stripUnsafeHtml(html) {
+    var tpl = document.createElement("template");
+    tpl.innerHTML = String(html || "");   // template içeriği çalıştırılmaz, resimler yüklenmez
+    Array.prototype.slice.call(tpl.content.querySelectorAll("script,iframe,object,embed,link,meta,base,form,style")).forEach(function (el) { el.remove(); });
+    Array.prototype.slice.call(tpl.content.querySelectorAll("*")).forEach(function (el) {
+        Array.prototype.slice.call(el.attributes).forEach(function (at) {
+            var n = at.name.toLowerCase();
+            if (n.indexOf("on") === 0 || ((n === "href" || n === "src" || n === "xlink:href" || n === "action") && /^\s*(javascript|vbscript|data:text)/i.test(at.value))) el.removeAttribute(at.name);
+        });
+    });
+    return tpl.innerHTML;
+}
+
 function shapeNoteHtml(html) {
     if (typeof document === "undefined") return html;
     var root = document.createElement("div");
-    root.innerHTML = String(html || "");
+    root.innerHTML = stripUnsafeHtml(html);
     promoteNoteHeadings(root);
     Array.prototype.slice.call(root.children).forEach(function (el) {
         var tag = el.tagName;
