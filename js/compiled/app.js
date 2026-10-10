@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:254441:1c3ciu*/
+/*jsx:babel-7.29.9-react-classic:260256:bdo9ro*/
 const {
   useState,
   useEffect,
@@ -4961,6 +4961,133 @@ function SignOutDialog(props) {
     "aria-hidden": "true"
   }) : null, busy ? "Kaydediliyor" : "Çıkış yap")))));
 }
+
+// Hesabı kalıcı olarak sil (supabase/patch-account-delete.sql → delete_my_account).
+// Yanlışlıkla silinmesin diye "SİL" yazdırılır. Mobil karşılığı: mobile/src/screens/BenScreen.js.
+function DeleteAccountDialog(props) {
+  const [word, setWord] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [err, setErr] = useState("");
+  const inputRef = useRef(null);
+  const ok = word.trim().toLocaleUpperCase("tr-TR") === "SİL";
+  useEffect(function () {
+    if (inputRef.current) inputRef.current.focus();
+    function onKey(e) {
+      if (e.key === "Escape" && !busy) props.onClose();
+    }
+    window.addEventListener("keydown", onKey);
+    return function () {
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [busy]);
+  async function go() {
+    if (!ok || busy) return;
+    var sb = window.SupabaseClient && window.SupabaseClient.get && window.SupabaseClient.get();
+    if (!sb) {
+      setErr("Sunucuya bağlanılamadı. İnternetini kontrol edip tekrar dene.");
+      return;
+    }
+    setBusy(true);
+    setErr("");
+    try {
+      var r = await sb.rpc("delete_my_account");
+      if (r.error) {
+        var m = String(r.error.message || "") + " " + String(r.error.code || "");
+        setErr(/admin_account/.test(m) ? "Yönetici hesabı uygulamadan silinemez." : /PGRST202|Could not find the function/i.test(m) ? "Hesap silme şu an kullanılamıyor. Biraz sonra tekrar dene." : window.trError ? window.trError(r.error, "Hesap silinemedi.") : "Hesap silinemedi.");
+        setBusy(false);
+        return;
+      }
+      props.onDeleted();
+    } catch (e) {
+      setErr(window.trError ? window.trError(e, "Hesap silinemedi.") : "Hesap silinemedi.");
+      setBusy(false);
+    }
+  }
+  return /*#__PURE__*/React.createElement("div", {
+    className: "fixed inset-0 z-[80] bg-slate-900/55 backdrop-blur-sm flex items-end sm:items-center justify-center p-3 sm:p-6",
+    role: "dialog",
+    "aria-modal": "true",
+    "aria-labelledby": "del-title",
+    "aria-describedby": "del-desc",
+    onClick: function (e) {
+      if (e.target === e.currentTarget && !busy) props.onClose();
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "atn-in w-full max-w-md bg-white dark:bg-stone-900 rounded-3xl p-6 shadow-2xl border border-slate-200 dark:border-stone-700"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "w-12 h-12 rounded-2xl bg-rose-100 dark:bg-rose-900/40 text-rose-700 dark:text-rose-300 flex items-center justify-center",
+    "aria-hidden": "true"
+  }, /*#__PURE__*/React.createElement("svg", {
+    width: "22",
+    height: "22",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M3 6h18"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M8 6V4h8v2"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M19 6l-1 14H6L5 6"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M10 11v6M14 11v6"
+  }))), /*#__PURE__*/React.createElement("h2", {
+    id: "del-title",
+    className: "mt-4 text-xl font-bold text-slate-900 dark:text-stone-100"
+  }, "Hesab\u0131n kal\u0131c\u0131 olarak silinsin mi?"), /*#__PURE__*/React.createElement("div", {
+    id: "del-desc",
+    className: "mt-2 text-sm text-slate-600 dark:text-stone-300 leading-relaxed"
+  }, props.email ? /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("b", {
+    className: "text-slate-800 dark:text-stone-100 break-all"
+  }, props.email), " hesab\u0131 ve \u015Funlar silinir:") : /*#__PURE__*/React.createElement("p", null, "Hesab\u0131n ve \u015Funlar silinir:"), /*#__PURE__*/React.createElement("ul", {
+    className: "mt-2 space-y-1 list-disc pl-5"
+  }, /*#__PURE__*/React.createElement("li", null, "\xC7al\u0131\u015Fma ge\xE7mi\u015Fin, notlar\u0131n, yanl\u0131\u015F ve tekrar defterin"), /*#__PURE__*/React.createElement("li", null, "Program\u0131n, rozetlerin ve s\u0131ralama kay\u0131tlar\u0131n"), /*#__PURE__*/React.createElement("li", null, "Canl\u0131 deneme kay\u0131tlar\u0131n ve sonu\xE7lar\u0131n")), /*#__PURE__*/React.createElement("p", {
+    className: "mt-2 font-semibold text-rose-700 dark:text-rose-300"
+  }, "Bu i\u015Flem geri al\u0131namaz.")), /*#__PURE__*/React.createElement("label", {
+    htmlFor: "del-word",
+    className: "block mt-5 text-[13px] font-semibold text-slate-700 dark:text-stone-200"
+  }, "Onaylamak i\xE7in ", /*#__PURE__*/React.createElement("b", null, "S\u0130L"), " yaz"), /*#__PURE__*/React.createElement("input", {
+    id: "del-word",
+    ref: inputRef,
+    value: word,
+    onChange: function (e) {
+      setWord(e.target.value);
+      setErr("");
+    },
+    onKeyDown: function (e) {
+      if (e.key === "Enter") go();
+    },
+    autoComplete: "off",
+    autoCapitalize: "characters",
+    spellCheck: false,
+    className: "atn-field mt-1.5 !pl-4",
+    placeholder: "S\u0130L",
+    "aria-invalid": err ? true : undefined,
+    disabled: busy
+  }), err ? /*#__PURE__*/React.createElement("p", {
+    role: "alert",
+    className: "mt-2 text-[13px] font-semibold text-rose-600 dark:text-rose-400"
+  }, err) : null, /*#__PURE__*/React.createElement("div", {
+    className: "mt-6 grid grid-cols-2 gap-2.5"
+  }, /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: props.onClose,
+    disabled: busy,
+    className: "atn-btn-ghost"
+  }, "Vazge\xE7"), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: go,
+    disabled: !ok || busy,
+    "aria-busy": busy,
+    className: "min-h-[52px] rounded-2xl font-bold text-white bg-rose-600 hover:bg-rose-700 disabled:opacity-40 disabled:cursor-not-allowed transition inline-flex items-center justify-center gap-2"
+  }, busy ? /*#__PURE__*/React.createElement("span", {
+    className: "atn-spin",
+    "aria-hidden": "true"
+  }) : null, busy ? "Siliniyor" : "Hesabımı sil"))));
+}
 function Ben(props) {
   const st = props.student;
   let totQ = 0,
@@ -4979,6 +5106,7 @@ function Ben(props) {
   const [draftEdu, setDraftEdu] = useState("");
   const [resetOpen, setResetOpen] = useState(false);
   const [outOpen, setOutOpen] = useState(false);
+  const [delOpen, setDelOpen] = useState(false);
   const examPassed = !!(st.profile.examDate && st.profile.examDate < StudentStore.todayStr());
   const eduReq = up.educationChangeRequest;
   const showKulvar = needsKulvar(totQ === 0 && editing && draftEdu ? draftEdu : up.educationLevel);
@@ -5292,11 +5420,21 @@ function Ben(props) {
       setResetOpen(false);
     }
   }) : null, /*#__PURE__*/React.createElement("button", {
+    type: "button",
     onClick: function () {
-      if (confirm("Hesap silme talebi kaydedilir. Destek onayından sonra veri silinir.")) StudentStore.requestDeletion();
+      setDelOpen(true);
     },
-    className: "w-full mb-3 p-3.5 rounded-2xl text-sm text-stone-400"
-  }, "Veri silme talebi"), /*#__PURE__*/React.createElement("div", {
+    className: "w-full mb-3 p-3.5 rounded-2xl text-sm text-rose-500 hover:bg-rose-50 dark:hover:bg-rose-950/30"
+  }, "Hesab\u0131m\u0131 sil"), delOpen ? /*#__PURE__*/React.createElement(DeleteAccountDialog, {
+    email: props.authSession && props.authSession.user && props.authSession.user.email || "",
+    onClose: function () {
+      setDelOpen(false);
+    },
+    onDeleted: function () {
+      setDelOpen(false);
+      props.onAccountDeleted && props.onAccountDeleted();
+    }
+  }) : null, /*#__PURE__*/React.createElement("div", {
     className: "text-[11px] text-stone-400 text-center leading-relaxed mb-3 space-x-1"
   }, /*#__PURE__*/React.createElement("a", {
     className: "underline",
@@ -6154,7 +6292,15 @@ function App() {
       onAdmin: function () {
         setExtra("admin");
       },
-      onSignOut: doSignOut
+      onSignOut: doSignOut,
+      onAccountDeleted: function () {
+        var uid = authSession && authSession.user && authSession.user.id;
+        if (StudentStore.forgetUser) StudentStore.forgetUser(uid);
+        doSignOut();
+        setTimeout(function () {
+          alert("Hesabın ve verilerin silindi. Atanly'yi kullandığın için teşekkürler.");
+        }, 300);
+      }
     });
   } else if (nav === "alistirmalar") {
     var drillData = drillDers && drillKonu && kpssData[drillDers] ? kpssData[drillDers][drillKonu] || {} : {};

@@ -5,8 +5,9 @@ import { StudentStore } from "../lib/store";
 import { SyncEngine } from "../lib/syncEngine";
 import { supabase } from "../lib/supabase";
 import { go } from "../nav";
-import { Card, GhostButton, PrimaryButton, ScrollScreen, Badge, Tap, PageHeader, ThemeToggle, BottomSheet } from "../ui";
-import { LogOut } from "lucide-react-native";
+import { Card, DangerButton, Field, GhostButton, PrimaryButton, ScrollScreen, Badge, Tap, PageHeader, ThemeToggle, BottomSheet } from "../ui";
+import { trError } from "../lib/trError";
+import { LogOut, Trash2 } from "lucide-react-native";
 import { colors, eduLabel, fmtExam, needsKulvar, getScoreLabel, trackLabel } from "../lib/theme";
 import { KpssConfig } from "../lib/config";
 
@@ -48,6 +49,40 @@ export default function BenScreen({ navigation }) {
             if (SyncEngine && SyncEngine.sync) Promise.resolve(SyncEngine.sync()).then(finish, finish);
             else finish();
         } catch (_e) { finish(); }
+    }
+
+    // Hesabı kalıcı sil (supabase delete_my_account). Web karşılığı: js/app.jsx DeleteAccountDialog.
+    var _del = useState(false);
+    var delOpen = _del[0], setDelOpen = _del[1];
+    var _delWord = useState("");
+    var delWord = _delWord[0], setDelWord = _delWord[1];
+    var _delBusy = useState(false);
+    var delBusy = _delBusy[0], setDelBusy = _delBusy[1];
+    var _delErr = useState("");
+    var delErr = _delErr[0], setDelErr = _delErr[1];
+    var delOk = delWord.trim().toLocaleUpperCase("tr-TR") === "SİL";
+    async function deleteAccount() {
+        if (!delOk || delBusy) return;
+        setDelBusy(true); setDelErr("");
+        try {
+            var r = await supabase.rpc("delete_my_account");
+            if (r.error) {
+                var m = String(r.error.message || "") + " " + String(r.error.code || "");
+                setDelErr(/admin_account/.test(m) ? "Yönetici hesabı uygulamadan silinemez."
+                    : /PGRST202|Could not find the function/i.test(m) ? "Hesap silme şu an kullanılamıyor. Biraz sonra tekrar dene."
+                    : trError(r.error, "Hesap silinemedi."));
+                setDelBusy(false);
+                return;
+            }
+            var uid = app.session && app.session.user && app.session.user.id;
+            setDelOpen(false);
+            if (StudentStore.forgetUser) StudentStore.forgetUser(uid);
+            app.signOut();
+            Alert.alert("Hesabın silindi", "Hesabın ve verilerin silindi. Atanly'yi kullandığın için teşekkürler.");
+        } catch (e) {
+            setDelErr(trError(e, "Hesap silinemedi."));
+            setDelBusy(false);
+        }
     }
 
     var _edit = useState(false);
@@ -351,19 +386,26 @@ export default function BenScreen({ navigation }) {
             )}
             <ResetProfileModal visible={resetOpen} isDark={isDark} onClose={function () { setResetOpen(false); }} />
             <GhostButton 
-                title="Veri Silme Talebi" 
-                onPress={function () {
-                    Alert.alert(
-                        "Veri Silme Talebi",
-                        "Hesap silme talebi kaydedilir. Destek onayından sonra verileriniz silinir.",
-                        [
-                            { text: "Vazgeç", style: "cancel" },
-                            { text: "Talep Et", style: "destructive", onPress: function () { StudentStore.requestDeletion(); } }
-                        ]
-                    );
-                }} 
+                title="Hesabımı Sil" 
+                onPress={function () { setDelWord(""); setDelErr(""); setDelOpen(true); }} 
                 style={styles.dangerBtn}
+                textStyle={{ color: "#E11D48" }}
             />
+            <BottomSheet visible={delOpen} onClose={function () { if (!delBusy) setDelOpen(false); }}
+                style={isDark ? { backgroundColor: "#292524" } : null}>
+                <View style={[styles.outIcon, { backgroundColor: "#FFE4E6" }]}><Trash2 size={22} color="#BE123C" strokeWidth={2} /></View>
+                <Text style={[styles.outTitle, isDark && { color: "#F5F5F4" }]} accessibilityRole="header">Hesabın kalıcı olarak silinsin mi?</Text>
+                <Text style={[styles.outDesc, isDark && { color: "#A8A29E" }]}>
+                    {email ? <Text style={{ fontWeight: "700", color: isDark ? "#E7E5E4" : "#334155" }}>{email}</Text> : "Hesabın"}{email ? " hesabı" : ""} ile çalışma geçmişin, notların, yanlış ve tekrar defterin, programın, rozetlerin ve canlı deneme sonuçların silinir.
+                </Text>
+                <Text style={[styles.outDesc, { color: "#BE123C", fontWeight: "700" }]}>Bu işlem geri alınamaz.</Text>
+                <Field dark={isDark} label="Onaylamak için SİL yaz" value={delWord} onChangeText={function (v) { setDelWord(v); setDelErr(""); }}
+                    placeholder="SİL" autoCapitalize="characters" error={delErr} containerStyle={{ marginTop: 14, marginBottom: 0 }} />
+                <View style={styles.outRow}>
+                    <View style={{ flex: 1 }}><GhostButton title="Vazgeç" disabled={delBusy} onPress={function () { setDelOpen(false); }} /></View>
+                    <View style={{ flex: 1 }}><DangerButton title="Hesabımı sil" busy={delBusy} disabled={!delOk || delBusy} onPress={deleteAccount} /></View>
+                </View>
+            </BottomSheet>
             <GhostButton 
                 title="Çıkış Yap" 
                 onPress={function () { setOutOpen(true); }} 

@@ -1343,6 +1343,13 @@
             state = defaultState();
             emit();
         },
+        // Hesap silindikten sonra bu cihazdaki kopyayı da kaldır (supabase delete_my_account)
+        forgetUser: function (uid) {
+            try { if (uid) localStorage.removeItem(storageKey(uid)); } catch (e) {}
+            try { localStorage.removeItem(ACTIVE_KEY); } catch (e) {}
+            state = defaultState();
+            listeners.forEach(function (fn) { fn(clone(state)); });
+        },
         requestDeletion: function () {
             state.userProfile.deletionRequestedAt = nowIso();
             emit();

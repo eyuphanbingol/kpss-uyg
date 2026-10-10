@@ -171,12 +171,3 @@ begin
     execute format('revoke all on public.%I from public, anon, authenticated', t);
   end loop;
 end $$;
-
--- ---------- silme yasak ----------
-create or replace function public.live_no_delete()
-returns trigger language plpgsql as $$
-begin
-  raise exception 'Canlı deneme verisi silinemez (%). Gerekirse yumuşak silme kullan.', TG_TABLE_NAME
-    using errcode = 'P0001';
-end;
-$$;

@@ -3262,6 +3262,76 @@ function SignOutDialog(props) {
     );
 }
 
+// Hesabı kalıcı olarak sil (supabase/patch-account-delete.sql → delete_my_account).
+// Yanlışlıkla silinmesin diye "SİL" yazdırılır. Mobil karşılığı: mobile/src/screens/BenScreen.js.
+function DeleteAccountDialog(props) {
+    const [word, setWord] = useState("");
+    const [busy, setBusy] = useState(false);
+    const [err, setErr] = useState("");
+    const inputRef = useRef(null);
+    const ok = word.trim().toLocaleUpperCase("tr-TR") === "SİL";
+    useEffect(function () {
+        if (inputRef.current) inputRef.current.focus();
+        function onKey(e) { if (e.key === "Escape" && !busy) props.onClose(); }
+        window.addEventListener("keydown", onKey);
+        return function () { window.removeEventListener("keydown", onKey); };
+    }, [busy]);
+    async function go() {
+        if (!ok || busy) return;
+        var sb = window.SupabaseClient && window.SupabaseClient.get && window.SupabaseClient.get();
+        if (!sb) { setErr("Sunucuya bağlanılamadı. İnternetini kontrol edip tekrar dene."); return; }
+        setBusy(true); setErr("");
+        try {
+            var r = await sb.rpc("delete_my_account");
+            if (r.error) {
+                var m = String(r.error.message || "") + " " + String(r.error.code || "");
+                setErr(/admin_account/.test(m) ? "Yönetici hesabı uygulamadan silinemez."
+                    : /PGRST202|Could not find the function/i.test(m) ? "Hesap silme şu an kullanılamıyor. Biraz sonra tekrar dene."
+                    : (window.trError ? window.trError(r.error, "Hesap silinemedi.") : "Hesap silinemedi."));
+                setBusy(false);
+                return;
+            }
+            props.onDeleted();
+        } catch (e) {
+            setErr(window.trError ? window.trError(e, "Hesap silinemedi.") : "Hesap silinemedi.");
+            setBusy(false);
+        }
+    }
+    return (
+        <div className="fixed inset-0 z-[80] bg-slate-900/55 backdrop-blur-sm flex items-end sm:items-center justify-center p-3 sm:p-6"
+            role="dialog" aria-modal="true" aria-labelledby="del-title" aria-describedby="del-desc"
+            onClick={function (e) { if (e.target === e.currentTarget && !busy) props.onClose(); }}>
+            <div className="atn-in w-full max-w-md bg-white dark:bg-stone-900 rounded-3xl p-6 shadow-2xl border border-slate-200 dark:border-stone-700">
+                <div className="w-12 h-12 rounded-2xl bg-rose-100 dark:bg-rose-900/40 text-rose-700 dark:text-rose-300 flex items-center justify-center" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 6h18" /><path d="M8 6V4h8v2" /><path d="M19 6l-1 14H6L5 6" /><path d="M10 11v6M14 11v6" /></svg>
+                </div>
+                <h2 id="del-title" className="mt-4 text-xl font-bold text-slate-900 dark:text-stone-100">Hesabın kalıcı olarak silinsin mi?</h2>
+                <div id="del-desc" className="mt-2 text-sm text-slate-600 dark:text-stone-300 leading-relaxed">
+                    {props.email ? <p><b className="text-slate-800 dark:text-stone-100 break-all">{props.email}</b> hesabı ve şunlar silinir:</p> : <p>Hesabın ve şunlar silinir:</p>}
+                    <ul className="mt-2 space-y-1 list-disc pl-5">
+                        <li>Çalışma geçmişin, notların, yanlış ve tekrar defterin</li>
+                        <li>Programın, rozetlerin ve sıralama kayıtların</li>
+                        <li>Canlı deneme kayıtların ve sonuçların</li>
+                    </ul>
+                    <p className="mt-2 font-semibold text-rose-700 dark:text-rose-300">Bu işlem geri alınamaz.</p>
+                </div>
+                <label htmlFor="del-word" className="block mt-5 text-[13px] font-semibold text-slate-700 dark:text-stone-200">Onaylamak için <b>SİL</b> yaz</label>
+                <input id="del-word" ref={inputRef} value={word} onChange={function (e) { setWord(e.target.value); setErr(""); }}
+                    onKeyDown={function (e) { if (e.key === "Enter") go(); }} autoComplete="off" autoCapitalize="characters" spellCheck={false}
+                    className="atn-field mt-1.5 !pl-4" placeholder="SİL" aria-invalid={err ? true : undefined} disabled={busy} />
+                {err ? <p role="alert" className="mt-2 text-[13px] font-semibold text-rose-600 dark:text-rose-400">{err}</p> : null}
+                <div className="mt-6 grid grid-cols-2 gap-2.5">
+                    <button type="button" onClick={props.onClose} disabled={busy} className="atn-btn-ghost">Vazgeç</button>
+                    <button type="button" onClick={go} disabled={!ok || busy} aria-busy={busy}
+                        className="min-h-[52px] rounded-2xl font-bold text-white bg-rose-600 hover:bg-rose-700 disabled:opacity-40 disabled:cursor-not-allowed transition inline-flex items-center justify-center gap-2">
+                        {busy ? <span className="atn-spin" aria-hidden="true" /> : null}{busy ? "Siliniyor" : "Hesabımı sil"}
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
+}
+
 function Ben(props) {
     const st = props.student;
     let totQ = 0, totC = 0;
@@ -3279,6 +3349,7 @@ function Ben(props) {
     const [draftEdu, setDraftEdu] = useState("");
     const [resetOpen, setResetOpen] = useState(false);
     const [outOpen, setOutOpen] = useState(false);
+    const [delOpen, setDelOpen] = useState(false);
     const examPassed = !!(st.profile.examDate && st.profile.examDate < StudentStore.todayStr());
     const eduReq = up.educationChangeRequest;
     const showKulvar = needsKulvar(totQ === 0 && editing && draftEdu ? draftEdu : up.educationLevel);
@@ -3467,9 +3538,10 @@ function Ben(props) {
                 <button type="button" onClick={function () { setResetOpen(true); }} className="w-full mb-1 p-3.5 rounded-2xl text-sm text-stone-400">Profili sıfırla</button>
             )}
             {resetOpen ? <ResetProfileModal onClose={function () { setResetOpen(false); }} /> : null}
-            <button onClick={function () {
-                if (confirm("Hesap silme talebi kaydedilir. Destek onayından sonra veri silinir.")) StudentStore.requestDeletion();
-            }} className="w-full mb-3 p-3.5 rounded-2xl text-sm text-stone-400">Veri silme talebi</button>
+            <button type="button" onClick={function () { setDelOpen(true); }} className="w-full mb-3 p-3.5 rounded-2xl text-sm text-rose-500 hover:bg-rose-50 dark:hover:bg-rose-950/30">Hesabımı sil</button>
+            {delOpen ? <DeleteAccountDialog email={(props.authSession && props.authSession.user && props.authSession.user.email) || ""}
+                onClose={function () { setDelOpen(false); }}
+                onDeleted={function () { setDelOpen(false); props.onAccountDeleted && props.onAccountDeleted(); }} /> : null}
             <div className="text-[11px] text-stone-400 text-center leading-relaxed mb-3 space-x-1">
                 <a className="underline" href="yasal/aydinlatma.html">KVKK Aydınlatma</a>
                 <span>·</span>
@@ -4104,7 +4176,13 @@ function App() {
         body = <Ben student={student} isDark={isDark} toggleDark={toggleDark} authSession={authSession}
             onOpen={function (id) { setExtra(id); }}
             onAdmin={function () { setExtra("admin"); }}
-            onSignOut={doSignOut} />;
+            onSignOut={doSignOut}
+            onAccountDeleted={function () {
+                var uid = authSession && authSession.user && authSession.user.id;
+                if (StudentStore.forgetUser) StudentStore.forgetUser(uid);
+                doSignOut();
+                setTimeout(function () { alert("Hesabın ve verilerin silindi. Atanly'yi kullandığın için teşekkürler."); }, 300);
+            }} />;
     } else if (nav === "alistirmalar") {
         var drillData = (drillDers && drillKonu && kpssData[drillDers]) ? (kpssData[drillDers][drillKonu] || {}) : {};
         if (!drillKind) {

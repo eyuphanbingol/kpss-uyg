@@ -2,6 +2,21 @@
 -- Supabase SQL Editor'da 1'den 10'a SIRAYLA çalıştır (her parçayı ayrı ayrı: yapıştır → Run).
 -- Bu dosya scripts/split-live-sql.js ile supabase/patch-live-exam.sql'den üretilir. Elle düzenleme.
 
+-- ---------- silme yasak ----------
+-- Tek istisna: hesap silinirken o kullanıcının kendi satırları (supabase/patch-account-delete.sql,
+-- on_auth_user_deleted bu işlem içinde atanly.user_purge = 'on' yapar). Kullanıcılar bu tablolara
+-- doğrudan yazamadığı için bayrak dışarıdan kullanılamaz.
+create or replace function public.live_no_delete()
+returns trigger language plpgsql as $$
+begin
+  if TG_OP = 'DELETE' and coalesce(current_setting('atanly.user_purge', true), '') = 'on' then
+    return old;
+  end if;
+  raise exception 'Canlı deneme verisi silinemez (%). Gerekirse yumuşak silme kullan.', TG_TABLE_NAME
+    using errcode = 'P0001';
+end;
+$$;
+
 do $$
 declare t text;
 begin
