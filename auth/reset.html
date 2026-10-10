@@ -11,14 +11,25 @@
 <body>
     <p>Şifre sıfırlama açılıyor…</p>
     <script>
+        // Maildeki şifre sıfırlama bağlantısı buraya gelir (…/auth/reset?token_hash=…&type=recovery).
+        // Telefonda önce uygulama denenir; uygulama açıldıysa sayfa gizlenir ve tarayıcı ayrıca
+        // doğrulama yapmaz (tek kullanımlık bağlantı iki kez harcanmasın). Bilgisayarda doğrudan siteye gider.
         (function () {
             var q = location.search || "";
             var h = location.hash || "";
             if (!/[?&]reset=/.test(q)) q = (q ? q + "&reset=1" : "?reset=1");
-            try { location.replace("atanly://reset" + q + h); } catch (e) {}
+            var web = function () { location.replace("/" + q + h); };
+            if (!/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) { web(); return; }
+            var left = false;
+            document.addEventListener("visibilitychange", function () { if (document.hidden) left = true; });
+            try { location.href = "atanly://reset" + q + h; } catch (e) {}
             setTimeout(function () {
-                location.replace("/" + q + h);
-            }, 700);
+                if (left || document.hidden) {
+                    document.body.innerHTML = "<p>Atanly uygulamasında yeni şifreni belirleyebilirsin.</p>";
+                    return;
+                }
+                web();
+            }, 1200);
         })();
     </script>
 </body>

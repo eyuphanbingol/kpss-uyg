@@ -61,6 +61,28 @@ Ad yoksa "Merhaba," yazar.
 - Redirect URLs: `https://www.atanly.com/auth/callback`, `https://www.atanly.com/auth/reset`,
   `https://www.atanly.com/**`, `atanly://auth/callback`, `atanly://reset`
 
+## Bağlantılar neden atanly.com'a gidiyor
+
+Kayıt onayı ve şifre sıfırlama maillerindeki düğme `https://www.atanly.com/auth/callback?token_hash=…`
+ve `https://www.atanly.com/auth/reset?token_hash=…` adresine gider (Supabase adresine değil):
+
+- Gönderen alan adı ile bağlantı alan adı aynı olur; Outlook/Gmail farklı alan adına giden
+  bağlantıyı oltalama şüphesi sayıp maili gereksiz klasörüne atabilir.
+- Bağlantı başka cihazda da çalışır (sıfırlamayı telefonda isteyip maili bilgisayarda açmak gibi).
+
+Telefonda sayfa önce uygulamayı açar; uygulama yoksa siteye geçer. Doğrulama web'de
+`js/supabaseClient.js`, mobilde `mobile/src/AppProvider.js` içinde `verifyOtp` ile yapılır.
+
+## Gereksiz (spam) klasörüne düşerse
+
+- Yeni alan adlarının itibarı sıfırdan başlar; ilk günlerde Outlook/Hotmail bazı mailleri gereksiz
+  klasörüne atabilir. Gelen maili "Gereksiz değil" olarak işaretlemek ve gönderen adresini kişilere
+  eklemek itibarı hızlandırır.
+- Resend → Domains → atanly.com: DKIM ve SPF kayıtlarının yeşil (Verified) olduğunu kontrol et.
+- DMARC kaydı (`_dmarc` TXT `v=DMARC1; p=none;`) ekli olsun.
+- Gereksiz klasöründeki maillerde Outlook resimleri (logo) güvenlik için gösterilmez; mail gelen
+  kutusuna geçince logo görünür.
+
 ## 4. Dene
 
 Uygulamada "Şifremi unuttum" ile kendine mail gönder. Gönderen `Atanly <noreply@atanly.com>`, içerik

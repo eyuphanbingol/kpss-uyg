@@ -215,6 +215,13 @@ export default function AuthScreen() {
         setBusy(false);
     }
 
+    // Maildeki bağlantı doğrulanamadıysa (AppProvider) nedenini göster
+    useEffect(function () {
+        if (!app.authLinkError) return;
+        setMsg(app.authLinkError);
+        if (app.clearAuthLinkError) app.clearAuthLinkError();
+    }, [app.authLinkError]);
+
     async function sessionFromAuthUrl(url) {
         if (!url) return false;
         var p = parseAuthUrl(url);

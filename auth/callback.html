@@ -11,21 +11,37 @@
 <body>
     <p>Giriş tamamlanıyor…</p>
     <script>
+        // Kayıt onayı (…/auth/callback?token_hash=…&type=email), şifre sıfırlama ve uygulamadan
+        // Google girişi dönüşleri buraya gelir. Telefonda önce uygulama denenir; uygulama açıldıysa
+        // tarayıcı ayrıca doğrulama yapmaz (tek kullanımlık bağlantı iki kez harcanmasın).
         (function () {
             var q = location.search || "";
             var h = location.hash || "";
             var blob = q + h;
+            var mobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
             var recovery = /type=recovery/i.test(blob) || /[?&]reset=/.test(blob);
+            var emailLink = /[?&#]token_hash=/.test(blob);
+            var left = false;
+            document.addEventListener("visibilitychange", function () { if (document.hidden) left = true; });
+            function openApp(path, then) {
+                try { location.href = "atanly://" + path + q + h; } catch (e) {}
+                setTimeout(function () { if (left || document.hidden) return; then(); }, 1200);
+            }
             if (recovery) {
                 if (!/[?&]reset=/.test(q)) q = (q ? q + "&reset=1" : "?reset=1");
-                try { location.replace("atanly://reset" + q + h); } catch (e) {}
-                setTimeout(function () { location.replace("/" + q + h); }, 700);
+                var webReset = function () { location.replace("/" + q + h); };
+                if (!mobile) webReset(); else openApp("reset", webReset);
                 return;
             }
-            try { location.replace("atanly://auth/callback" + q + h); } catch (e) {}
-            setTimeout(function () {
+            if (emailLink) {
+                // Site bağlantıyı doğrular ve oturumu açar (js/supabaseClient.js confirmFromUrl)
+                var webConfirm = function () { location.replace("/" + q + h); };
+                if (!mobile) webConfirm(); else openApp("auth/callback", webConfirm);
+                return;
+            }
+            openApp("auth/callback", function () {
                 document.body.innerHTML = "<p>Giriş tamam. Atanly uygulamasına dönebilirsin.</p>";
-            }, 900);
+            });
         })();
     </script>
 </body>

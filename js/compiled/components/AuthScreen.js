@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:68969:gualds*/
+/*jsx:babel-7.29.9-react-classic:69815:iapioo*/
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 (function () {
   const {
@@ -588,6 +588,30 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
     const [mode, setMode] = useState("in");
     const [step, setStep] = useState(1);
     const [msg, setMsg] = useState("");
+    // Maildeki onay bağlantısı doğrulanamadıysa nedenini göster (doğrulama birkaç saniye sürebilir)
+    useEffect(function () {
+      var n = 0;
+      var t = setInterval(function () {
+        var m = window.SupabaseClient && window.SupabaseClient.takeLinkError && window.SupabaseClient.takeLinkError();
+        if (m) {
+          // Tanıtım sayfasındaysa mesajın görüneceği giriş ekranına geç
+          setMode("in");
+          setShowLand(false);
+          setMsg(m);
+          clearInterval(t);
+          try {
+            window.history.pushState({
+              atanlyView: "auth",
+              atanlyMode: "in"
+            }, "", window.location.pathname + window.location.search);
+          } catch (e) {}
+        }
+        if (++n > 20) clearInterval(t);
+      }, 500);
+      return function () {
+        clearInterval(t);
+      };
+    }, []);
     const [busy, setBusy] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
     const [rememberMe, setRememberMe] = useState(false);

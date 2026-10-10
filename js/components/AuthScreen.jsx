@@ -441,6 +441,20 @@
         const [mode, setMode] = useState("in");
         const [step, setStep] = useState(1);
         const [msg, setMsg] = useState("");
+        // Maildeki onay bağlantısı doğrulanamadıysa nedenini göster (doğrulama birkaç saniye sürebilir)
+        useEffect(function () {
+            var n = 0;
+            var t = setInterval(function () {
+                var m = window.SupabaseClient && window.SupabaseClient.takeLinkError && window.SupabaseClient.takeLinkError();
+                if (m) {
+                    // Tanıtım sayfasındaysa mesajın görüneceği giriş ekranına geç
+                    setMode("in"); setShowLand(false); setMsg(m); clearInterval(t);
+                    try { window.history.pushState({ atanlyView: "auth", atanlyMode: "in" }, "", window.location.pathname + window.location.search); } catch (e) {}
+                }
+                if (++n > 20) clearInterval(t);
+            }, 500);
+            return function () { clearInterval(t); };
+        }, []);
         const [busy, setBusy] = useState(false);
         const [showPassword, setShowPassword] = useState(false);
         const [rememberMe, setRememberMe] = useState(false);

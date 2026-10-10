@@ -4,25 +4,30 @@
 // Her dosyanın içeriği Supabase panelinde Authentication → Emails → Templates'e yapıştırılır.
 // Konu satırları ve kurulum adımları: supabase/email-templates/README.md
 // Şablon değişkenleri Supabase'in Go şablonlarıdır: {{ .ConfirmationURL }}, {{ .Token }}, {{ .Email }},
-// {{ .NewEmail }}, {{ .Data.full_name }} (kayıtta gönderilen ad).
+// {{ .NewEmail }}, {{ .TokenHash }}, {{ .Data.full_name }} (kayıtta gönderilen ad).
+// Kayıt onayı ve şifre sıfırlama bağlantıları atanly.com üzerinden gider (gönderen alan adıyla aynı:
+// spam filtreleri farklı alan adına giden bağlantıyı şüpheli sayar; ayrıca bağlantı başka cihazda da açılır).
+// auth/callback.html ve auth/reset.html bağlantıyı uygulamaya ya da siteye iletir; doğrulama
+// js/supabaseClient.js (web) ve mobile/src/AppProvider.js (mobil) içinde verifyOtp ile yapılır.
 var fs = require("fs");
 var path = require("path");
 
 var root = path.join(__dirname, "..");
 var outDir = path.join(root, "supabase", "email-templates");
 var SITE = "https://www.atanly.com";
-var LOGO = SITE + "/icons/atanom.png?v=18";
+var LOGO = SITE + "/icons/atanom.png";
 
 var GREET = '{{ if .Data.full_name }}Merhaba {{ .Data.full_name }},{{ else }}Merhaba,{{ end }}';
 
 function layout(o) {
+    var url = o.link || "{{ .ConfirmationURL }}";
     var button = o.cta ? (
         '<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:28px 0 8px">' +
         '<tr><td style="border-radius:14px;background:#0D2C4D;background-image:linear-gradient(135deg,#0D2C4D,#14607A 60%,#1D8A99)">' +
-        '<a href="{{ .ConfirmationURL }}" target="_blank" style="display:inline-block;padding:15px 30px;font:700 16px/1 Arial,Helvetica,sans-serif;color:#FFFFFF;text-decoration:none;border-radius:14px">' + o.cta + '</a>' +
+        '<a href="' + url + '" target="_blank" style="display:inline-block;padding:15px 30px;font:700 16px/1 Arial,Helvetica,sans-serif;color:#FFFFFF;text-decoration:none;border-radius:14px">' + o.cta + '</a>' +
         '</td></tr></table>' +
         '<p style="margin:18px 0 0;font:13px/1.6 Arial,Helvetica,sans-serif;color:#64748B">Düğme çalışmazsa bu bağlantıyı tarayıcına yapıştır:<br>' +
-        '<a href="{{ .ConfirmationURL }}" style="color:#127880;word-break:break-all">{{ .ConfirmationURL }}</a></p>'
+        '<a href="' + url + '" style="color:#127880;word-break:break-all">' + url + '</a></p>'
     ) : "";
     var code = o.code ? (
         '<div style="margin:26px 0 8px;padding:18px;border-radius:14px;background:#F1F5F9;text-align:center;font:800 30px/1 \'Courier New\',monospace;letter-spacing:8px;color:#0D2C4D">{{ .Token }}</div>'
@@ -37,7 +42,7 @@ function layout(o) {
         // Başlık bandı
         '<tr><td style="background:#0D2C4D;border-radius:20px 20px 0 0;padding:26px 32px">' +
         '<table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>' +
-        '<td style="vertical-align:middle"><img src="' + LOGO + '" width="52" height="42" alt="Atanly" style="display:block;border:0"></td>' +
+        '<td style="vertical-align:middle"><img src="' + LOGO + '" width="52" height="42" alt="" style="display:block;border:0;outline:none;text-decoration:none"></td>' +
         '<td style="vertical-align:middle;padding-left:12px;font:800 22px/1 Arial,Helvetica,sans-serif;color:#FFFFFF;letter-spacing:.2px">Atanly' +
         '<div style="margin-top:6px;font:700 11px/1 Arial,Helvetica,sans-serif;color:#E7CF8F;letter-spacing:1.5px">KPSS · ATAMAYA GİDEN YOL</div></td>' +
         '</tr></table></td></tr>\n' +
@@ -66,6 +71,7 @@ var TEMPLATES = [
         body: ["Hesabını oluşturduk. Son bir adım kaldı: aşağıdaki düğmeye dokunarak e-posta adresini onayla.",
             "Onaydan sonra ilerlemen, programın ve yanlış defterin bu hesapta saklanır; web'de ve telefonda aynı yerden devam edersin."],
         cta: "Hesabımı onayla",
+        link: SITE + "/auth/callback?token_hash={{ .TokenHash }}&type=email",
         note: "Bu kaydı sen yapmadıysan bu e-postayı yok sayabilirsin; onaylanmayan hesap kullanılamaz."
     },
     {
@@ -74,6 +80,7 @@ var TEMPLATES = [
         heading: "Şifreni sıfırla",
         body: ["Hesabın için şifre sıfırlama isteği aldık. Yeni şifreni belirlemek için aşağıdaki düğmeye dokun."],
         cta: "Yeni şifre belirle",
+        link: SITE + "/auth/reset?token_hash={{ .TokenHash }}&type=recovery",
         note: "Bu isteği sen yapmadıysan bu e-postayı yok say; şifren değişmez. Bağlantı kısa bir süre sonra geçersiz olur."
     },
     {

@@ -7,7 +7,7 @@ import { StudyPlanner } from "./lib/planner";
 import { filterCatalog } from "./lib/alan";
 import { AppState, Platform } from "react-native";
 import * as Linking from "expo-linking";
-import { isRecoveryUrl } from "./lib/authLinks";
+import { parseAuthUrl } from "./lib/authLinks";
 import { fetchRemoteCatalog, readCachedCatalog, looksCatalog } from "./lib/catalog";
 import BUNDLED_CATALOG from "./content/catalog.json";
 
@@ -237,10 +237,28 @@ export function AppProvider(props) {
         };
     }, []);
 
+    // Maildeki bağlantılar: atanly://reset?token_hash=…&type=recovery ve
+    // atanly://auth/callback?token_hash=…&type=email (supabase/email-templates). Bağlantı burada bir kez
+    // doğrulanır; oturum onAuthStateChange ile gelir. Hata olursa giriş ekranı authLinkError'u gösterir.
+    var seenTokensRef = useRef({});
+    var _linkErr = useState("");
+    var authLinkError = _linkErr[0];
+    var setAuthLinkError = _linkErr[1];
+
     useEffect(function () {
         function handleUrl(url) {
             if (!url) return;
-            if (isRecoveryUrl(url)) beginRecovery();
+            var p = parseAuthUrl(url);
+            if (p.isRecovery) beginRecovery();
+            var th = p.params.token_hash;
+            if (!th || seenTokensRef.current[th]) return;
+            seenTokensRef.current[th] = true;
+            var type = p.isRecovery ? "recovery" : (!p.type || p.type === "signup" ? "email" : p.type);
+            supabase.auth.verifyOtp({ token_hash: th, type: type }).then(function (r) {
+                if (r && r.error) setAuthLinkError("Bu bağlantı geçersiz ya da süresi dolmuş. Giriş yapmayı dene; olmazsa yeni bağlantı iste.");
+            }, function () {
+                setAuthLinkError("Bağlantı doğrulanamadı. İnternet bağlantını kontrol edip tekrar dene.");
+            });
         }
         Linking.getInitialURL().then(handleUrl).catch(function () {});
         var sub = Linking.addEventListener("url", function (ev) {
@@ -289,6 +307,8 @@ export function AppProvider(props) {
         finishRecovery: finishRecovery,
         cancelRecovery: cancelRecovery,
         signOut: signOut,
+        authLinkError: authLinkError,
+        clearAuthLinkError: function () { setAuthLinkError(""); },
         dark: !!(student.profile && student.profile.dark),
         isDark: !!(student.profile && student.profile.dark),
         isConnected: isConnected,

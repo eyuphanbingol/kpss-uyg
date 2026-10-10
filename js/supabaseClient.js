@@ -5,6 +5,7 @@
     var capturedSearch = String(window.location.search || "");
     var capturedHash = String(window.location.hash || "");
     var recoverInflight = null;
+    var linkError = "";
 
     function sleep(ms) {
         return new Promise(function (resolve) { setTimeout(resolve, ms); });
@@ -147,6 +148,28 @@
         };
     }
 
+    // Kayıt onayı / e-posta bağlantısı: maildeki bağlantı atanly.com/auth/callback?token_hash=…&type=email
+    // biçimindedir (supabase/email-templates). Burada doğrulanır; başarılıysa oturum açılır.
+    var CONFIRM_TYPES = { email: 1, signup: 1, magiclink: 1, invite: 1, email_change: 1 };
+    function confirmFromUrl(sb) {
+        var q = paramsFrom(capturedSearch, capturedHash);
+        var th = q.get("token_hash");
+        var type = String(q.get("type") || "").toLowerCase();
+        if (!th || !CONFIRM_TYPES[type]) return;
+        sb.auth.verifyOtp({ token_hash: th, type: type === "signup" ? "email" : type }).then(function (r) {
+            if (r && r.error) linkError = "Bu bağlantı geçersiz ya da süresi dolmuş. Giriş yapmayı dene; olmazsa yeni bağlantı iste.";
+        }, function () {
+            linkError = "Bağlantı doğrulanamadı. İnternet bağlantını kontrol edip tekrar dene.";
+        }).then(function () {
+            try {
+                var u = new URL(window.location.href);
+                ["token_hash", "type", "confirm"].forEach(function (k) { u.searchParams.delete(k); });
+                history.replaceState({}, "", u.pathname + (u.search || "") + u.hash);
+            } catch (e) {}
+            capturedSearch = ""; capturedHash = "";
+        });
+    }
+
     function getClient() {
         if (client) return client;
         var c = creds();
@@ -174,6 +197,7 @@
                 }
             });
             if (recoveryFromUrl()) establishRecoverySession();
+            else confirmFromUrl(client);
         } catch (e) {
             client = null;
         }
@@ -187,6 +211,8 @@
         markRecovery: markRecovery,
         clearRecovery: clearRecovery,
         clearRecoveryFlag: clearRecoveryFlag,
-        establishRecoverySession: establishRecoverySession
+        establishRecoverySession: establishRecoverySession,
+        // Maildeki bağlantı doğrulanamadıysa giriş ekranında gösterilecek mesaj (bir kez okunur)
+        takeLinkError: function () { var m = linkError; linkError = ""; return m; }
     };
 })(window);
