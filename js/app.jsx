@@ -71,10 +71,10 @@ function themeFor(ders, isDark) {
 }
 
 function masteryLabel(m) {
-    if (m === "iyi") return { text: "İyi", cls: "bg-emerald-50 text-emerald-600" };
-    if (m === "orta") return { text: "Orta", cls: "bg-amber-50 text-amber-600" };
-    if (m === "zayif") return { text: "Zayıf", cls: "bg-coral-50 text-coral-600" };
-    return { text: "Yeni", cls: "bg-stone-100 text-stone-500" };
+    if (m === "iyi") return { text: "İyi", cls: "bg-emerald-50 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300" };
+    if (m === "orta") return { text: "Orta", cls: "bg-amber-50 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300" };
+    if (m === "zayif") return { text: "Zayıf", cls: "bg-coral-50 text-coral-600 dark:bg-rose-900/30 dark:text-rose-300" };
+    return { text: "Yeni", cls: "bg-stone-100 text-stone-600 dark:bg-stone-800 dark:text-stone-300" };
 }
 
 // Tam ekran yükleme: logo animasyonu (img/loader). index.html'deki ilk ekranla aynı görünüm.
@@ -258,7 +258,7 @@ function BottomNav(props) {
                         <button key={tab.id} type="button" onClick={function () { props.onChange(tab.id); }}
                             aria-current={on ? "page" : undefined}
                             className={"relative flex flex-col items-center gap-0.5 py-2 rounded-2xl text-[10px] leading-tight font-medium transition-all duration-200 " +
-                                (on ? "text-indigo-600 bg-indigo-50/60 dark:bg-indigo-900/20" : "text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200")}>
+                                (on ? "text-indigo-600 bg-indigo-50/60 dark:bg-indigo-900/20 dark:text-indigo-300" : "text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200")}>
                             <span className="relative">
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={on ? 2.2 : 1.7}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d={tab.icon} />
@@ -342,7 +342,7 @@ function Onboarding(props) {
                     </div>
                 ) : null}
                 <label className="block text-xs font-bold text-stone-500 mb-1">Sınav tarihi</label>
-                <input type="date" value={examDate} onChange={function (e) { setExamDate(e.target.value); }}
+                <input type="date" aria-label="Sınav tarihi" value={examDate} onChange={function (e) { setExamDate(e.target.value); }}
                     className="w-full mb-4 px-4 py-3 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-800 font-medium" />
                 <p className="text-[11px] text-stone-500 leading-relaxed mb-5">
                     Başla diyerek <a className="underline font-semibold" href="yasal/kullanim.html" target="_blank" rel="noopener">Kullanım Koşulları</a> ve <a className="underline font-semibold" href="yasal/uyelik.html" target="_blank" rel="noopener">Üyelik Sözleşmesi</a>{"'ni kabul etmiş olursunuz. "}<a className="underline" href="yasal/aydinlatma.html" target="_blank" rel="noopener">KVKK Aydınlatma</a>
@@ -634,7 +634,7 @@ function PlanWizard(props) {
                     <div>
                         <h2 id="wiz-title" className="text-xl font-black">Sınavın ne zaman?</h2>
                         <p className="text-sm text-stone-500 mt-1">ÖSYM takvimindeki sınav gününü seç. Program bu güne kadar gün gün hazırlanır.</p>
-                        <input type="date" value={s.examDate} min={SP.addDays(SP.todayIso(), 7)}
+                        <input type="date" aria-label="Sınav tarihi" value={s.examDate} min={SP.addDays(SP.todayIso(), 7)}
                             onChange={function (e) { setS(Object.assign({}, s, { examDate: e.target.value })); }}
                             className="w-full mt-4 px-4 py-3 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800 text-base" />
                         {s.examDate && s.examDate > SP.todayIso() ? (
@@ -3194,7 +3194,7 @@ function DenemeSetup(props) {
                         );
                     })}
                 </div>
-                <input type="range" min="5" max="50" step="5" value={n} onChange={function (e) { setN(Number(e.target.value)); }} className="w-full accent-indigo-600" />
+                <input type="range" aria-label="Soru sayısı" min="5" max="50" step="5" value={n} onChange={function (e) { setN(Number(e.target.value)); }} className="w-full h-8 accent-indigo-600" />
             </div>
 
             <div className="rounded-3xl glass p-5 mb-5 card-hover">
@@ -3488,7 +3488,7 @@ function Ben(props) {
                 <div className="flex items-center justify-between mb-1">
                     <p className="text-xs font-bold uppercase tracking-wider text-stone-400">Ayarlar</p>
                     {!editing ? (
-                        <button type="button" onClick={startSettingsEdit} className="text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline">Düzenle</button>
+                        <button type="button" onClick={startSettingsEdit} className="text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline py-2 px-2 -my-2 -mr-2">Düzenle</button>
                     ) : null}
                 </div>
                 {eduReq && eduReq.status === "pending" && eduReq.to !== up.educationLevel ? (
@@ -3515,7 +3515,7 @@ function Ben(props) {
                 ) : (
                     <div className="mt-3 space-y-3">
                         <label className="text-sm text-stone-500">Ad</label>
-                        <input value={draftName} onChange={function (e) { setDraftName(e.target.value); }} className={field} />
+                        <input aria-label="Ad" value={draftName} onChange={function (e) { setDraftName(e.target.value); }} className={field} />
                         <label className="text-sm text-stone-500">Eğitim</label>
                         {totQ === 0 ? (
                             <div>
@@ -3573,7 +3573,7 @@ function Ben(props) {
                 <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-1">Davet</p>
                 <p className="text-xs text-stone-400 mt-1">Davet kodun: <b>{StudentStore.ensureReferralCode ? StudentStore.ensureReferralCode() : (up.referralCode || "—")}</b></p>
                 <label className="text-xs text-stone-400 mt-2 block">Arkadaş kodu</label>
-                <input defaultValue={up.referredBy || ""} onBlur={function (e) {
+                <input aria-label="Arkadaş kodu" defaultValue={up.referredBy || ""} onBlur={function (e) {
                     if (window.PaymentClient) window.PaymentClient.applyReferral(e.target.value);
                 }} className={field + " mt-1"} />
             </div>
@@ -3624,18 +3624,18 @@ function Ben(props) {
             {delOpen ? <DeleteAccountDialog email={(props.authSession && props.authSession.user && props.authSession.user.email) || ""}
                 onClose={function () { setDelOpen(false); }}
                 onDeleted={function () { setDelOpen(false); props.onAccountDeleted && props.onAccountDeleted(); }} /> : null}
-            <div className="text-[11px] text-stone-400 text-center leading-relaxed mb-3 space-x-1">
-                <a className="underline" href="yasal/aydinlatma.html">KVKK Aydınlatma</a>
+            <div className="text-[11px] text-stone-400 text-center leading-relaxed mb-3 flex flex-wrap justify-center items-center gap-x-1">
+                <a className="underline inline-block py-2 px-1" href="yasal/aydinlatma.html">KVKK Aydınlatma</a>
                 <span>·</span>
-                <a className="underline" href="yasal/kullanim.html">Kullanım</a>
+                <a className="underline inline-block py-2 px-1" href="yasal/kullanim.html">Kullanım</a>
                 <span>·</span>
-                <a className="underline" href="yasal/uyelik.html">Üyelik</a>
+                <a className="underline inline-block py-2 px-1" href="yasal/uyelik.html">Üyelik</a>
                 <span>·</span>
-                <a className="underline" href="yasal/gizlilik.html">Gizlilik</a>
+                <a className="underline inline-block py-2 px-1" href="yasal/gizlilik.html">Gizlilik</a>
                 <span>·</span>
-                <a className="underline" href="yasal/cerez.html">Çerez</a>
+                <a className="underline inline-block py-2 px-1" href="yasal/cerez.html">Çerez</a>
                 <span>·</span>
-                <a className="underline" href="yasal/basvuru.html">KVKK başvuru</a>
+                <a className="underline inline-block py-2 px-1" href="yasal/basvuru.html">KVKK başvuru</a>
             </div>
             <button onClick={function () { setOutOpen(true); }} className="w-full p-3.5 rounded-2xl border-2 border-stone-200 dark:border-stone-700 font-medium">Çıkış</button>
             </div>
@@ -3734,9 +3734,15 @@ function App() {
     const student = useStudent();
     const isDark = !!(student.profile && student.profile.dark);
     // window.kpssData her okunuşta yeni nesne üretir; bir kez al ki plan/filtre her render'da baştan hesaplanmasın.
+    // Soru/not dosyaları async iner (index.html KpssContent); hazır olunca veri bir kez daha okunur.
+    const [contentReady, setContentReady] = useState(function () { return !window.KpssContent || window.KpssContent.isReady(); });
+    useEffect(function () {
+        if (contentReady || !window.KpssContent) return;
+        window.KpssContent.onReady(function () { setContentReady(true); });
+    }, []);
     const rawData = useMemo(function () {
         return (typeof window !== "undefined" && window.kpssData) ? window.kpssData : {};
-    }, []);
+    }, [contentReady]);
     const kpssData = useMemo(function () {
         var ac = window.AlanCatalog;
         return (ac && ac.filterCatalog) ? ac.filterCatalog(rawData, student) : rawData;
@@ -4404,7 +4410,7 @@ function App() {
             })
             : <BrandLoad />;
     }
-    if (!roleChecked) {
+    if (!roleChecked || !contentReady) {
         return <BrandLoad />;
     }
     var isAdminUser = student.userProfile && student.userProfile.role === "admin";

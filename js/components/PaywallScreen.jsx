@@ -103,8 +103,8 @@
                     cardCvv: cardCvv
                 });
 
-                if (r.error) {
-                    setError(window.trError ? window.trError(r, "Ödeme sırasında bir hata oluştu.") : "Ödeme sırasında bir hata oluştu.");
+                if (r.error || r.ok === false) {
+                    setError(r.message || (window.trError ? window.trError(r, "Ödeme sırasında bir hata oluştu.") : "Ödeme sırasında bir hata oluştu."));
                 } else {
                     if (props.onDone) props.onDone();
                 }
@@ -242,6 +242,11 @@
                                 <button 
                                     onClick={function (e) { 
                                         e.stopPropagation(); 
+                                        if (plan.id === "premium" && mock) {
+                                            // Ödeme altyapısı bağlanana kadar kart bilgisi hiç istenmez
+                                            setError("Online ödeme çok yakında açılıyor. Şimdilik tüm temel özellikler ücretsiz; davet koduyla premium gün de kazanabilirsin.");
+                                            return;
+                                        }
                                         if (plan.id === "premium") {
                                             setShowCardForm(true);
                                             setTimeout(function () {
@@ -261,6 +266,12 @@
                         );
                     })}
                 </div>
+
+                {!showCardForm && error ? (
+                    <div role="status" className="rounded-2xl p-4 bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-200 text-sm">
+                        {error}
+                    </div>
+                ) : null}
 
                 {/* ===== CARD FORM ===== */}
                 {showCardForm && (
@@ -353,7 +364,7 @@
 
                         {mock && (
                             <div className="mt-3 text-center text-[10px] text-stone-400">
-                                🧪 Test modu: Gerçek ödeme yapılmaz. 4242 4242 4242 4242 ile test edebilirsin.
+                                🧪 Test modu: gerçek ödeme yapılmaz, kart bilgisi hiçbir yere gönderilmez.
                             </div>
                         )}
                     </div>

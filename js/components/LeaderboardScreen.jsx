@@ -10,7 +10,7 @@
         n = String(n || "?").trim();
         if (n.includes(" ")) {
             var parts = n.split(" ");
-            return (parts[0]?.[0] || "?").toUpperCase() + (parts[1]?.[0] || "").toUpperCase();
+            return ((parts[0] && parts[0][0]) || "?").toUpperCase() + ((parts[1] && parts[1][0]) || "").toUpperCase();
         }
         return (n.slice(0, 1) || "?").toUpperCase();
     }

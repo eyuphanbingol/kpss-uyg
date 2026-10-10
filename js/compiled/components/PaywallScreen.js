@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:20691:1y0h491*/
+/*jsx:babel-7.29.9-react-classic:21493:xa14e5*/
 (function () {
   const {
     useState,
@@ -98,8 +98,8 @@
           cardExpiry: cardExpiry,
           cardCvv: cardCvv
         });
-        if (r.error) {
-          setError(window.trError ? window.trError(r, "Ödeme sırasında bir hata oluştu.") : "Ödeme sırasında bir hata oluştu.");
+        if (r.error || r.ok === false) {
+          setError(r.message || (window.trError ? window.trError(r, "Ödeme sırasında bir hata oluştu.") : "Ödeme sırasında bir hata oluştu."));
         } else {
           if (props.onDone) props.onDone();
         }
@@ -200,6 +200,11 @@
       })), /*#__PURE__*/React.createElement("button", {
         onClick: function (e) {
           e.stopPropagation();
+          if (plan.id === "premium" && mock) {
+            // Ödeme altyapısı bağlanana kadar kart bilgisi hiç istenmez
+            setError("Online ödeme çok yakında açılıyor. Şimdilik tüm temel özellikler ücretsiz; davet koduyla premium gün de kazanabilirsin.");
+            return;
+          }
           if (plan.id === "premium") {
             setShowCardForm(true);
             setTimeout(function () {
@@ -209,7 +214,10 @@
         },
         className: "w-full mt-5 py-3 rounded-2xl font-semibold transition-all duration-200 " + (isPremium ? "btn-primary text-white hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-indigo-500/20" : "border-2 border-stone-200 dark:border-stone-700 text-stone-600 dark:text-stone-400 hover:bg-stone-50 dark:hover:bg-stone-800")
       }, plan.id === "premium" ? "🚀 " + plan.cta : plan.cta));
-    })), showCardForm && /*#__PURE__*/React.createElement("div", {
+    })), !showCardForm && error ? /*#__PURE__*/React.createElement("div", {
+      role: "status",
+      className: "rounded-2xl p-4 bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-200 text-sm"
+    }, error) : null, showCardForm && /*#__PURE__*/React.createElement("div", {
       className: "rounded-3xl glass p-6 slide-up"
     }, /*#__PURE__*/React.createElement("div", {
       className: "flex items-center justify-between mb-4"
@@ -275,7 +283,7 @@
       className: "flex-1 py-3 rounded-xl btn-primary text-white font-semibold disabled:opacity-40 transition-all hover:scale-[1.02] active:scale-[0.98]"
     }, busy ? "⏳ İşleniyor..." : "💳 Ödemeyi Tamamla"))), mock && /*#__PURE__*/React.createElement("div", {
       className: "mt-3 text-center text-[10px] text-stone-400"
-    }, "\uD83E\uDDEA Test modu: Ger\xE7ek \xF6deme yap\u0131lmaz. 4242 4242 4242 4242 ile test edebilirsin.")), /*#__PURE__*/React.createElement("div", {
+    }, "\uD83E\uDDEA Test modu: ger\xE7ek \xF6deme yap\u0131lmaz, kart bilgisi hi\xE7bir yere g\xF6nderilmez.")), /*#__PURE__*/React.createElement("div", {
       className: "mt-6 rounded-3xl glass p-5"
     }, /*#__PURE__*/React.createElement("p", {
       className: "text-sm font-semibold mb-3"

@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:30018:6a2l71*/
+/*jsx:babel-7.29.9-react-classic:30030:1n750tn*/
 (function () {
   const {
     useState,
@@ -333,7 +333,7 @@
       var weekDays = week.filter(function (c) {
         return c.q > 0 || c.min > 0;
       }).length;
-      var weekNum = getWeekNumber(new Date(week[0]?.iso || today));
+      var weekNum = getWeekNumber(new Date(week[0] && week[0].iso || today));
       return /*#__PURE__*/React.createElement("div", {
         key: wi,
         className: "rounded-2xl glass p-3 text-center card-hover"

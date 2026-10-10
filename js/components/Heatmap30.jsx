@@ -316,7 +316,7 @@
                                 var weekQ = week.reduce(function (sum, c) { return sum + c.q; }, 0);
                                 var weekMin = week.reduce(function (sum, c) { return sum + c.min; }, 0);
                                 var weekDays = week.filter(function (c) { return c.q > 0 || c.min > 0; }).length;
-                                var weekNum = getWeekNumber(new Date(week[0]?.iso || today));
+                                var weekNum = getWeekNumber(new Date((week[0] && week[0].iso) || today));
                                 
                                 return (
                                     <div key={wi} className="rounded-2xl glass p-3 text-center card-hover">

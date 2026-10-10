@@ -6,6 +6,13 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
     var KEY = "kpss-student-v1";
     var ACTIVE_KEY = "kpss-student-active";
     var INTERVALS = [1, 3, 7, 14, 30];
+    function cleanText(s, max) {
+        return String(s == null ? "" : s)
+            .replace(/<[^>]*>/g, "")
+            .replace(/[\u0000-\u001f\u007f]/g, "")
+            .trim()
+            .slice(0, max || 80);
+    }
     var listeners = [];
     var SCHEMA_VERSION = 2;
 
@@ -950,13 +957,9 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             });
             if (hit) emit();
         },
-        grantMockPremium: function (days) {
-            var d = new Date();
-            d.setDate(d.getDate() + (days || 7));
-            state.userProfile.premium = true;
-            state.userProfile.premiumUntil = d.toISOString();
-            state.billing.plan = "premium_mock";
-            emit();
+        // Premium yalnızca sunucudan gelir (web ile aynı); istemci kendine veremez.
+        grantMockPremium: function () {
+            return false;
         },
         getState: function () { return clone(state); },
         subscribe: function (fn) {
@@ -1098,14 +1101,14 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
         },
         completeOnboarding: function (p) {
             state.profile.onboarded = true;
-            state.profile.name = (p.name || "").trim();
+            state.profile.name = cleanText(p.name, 60);
             state.profile.examDate = p.examDate || state.profile.examDate;
             state.profile.dailyMinutes = Number(p.dailyMinutes) || 45;
             state.profile.dailyQuestions = Number(p.dailyQuestions) || 25;
             Object.assign(state.userProfile, {
                 educationLevel: p.educationLevel || state.userProfile.educationLevel,
                 targetType: p.targetType || state.userProfile.targetType,
-                nickname: String(p.nickname || state.userProfile.nickname || state.profile.name || "ogrenci").trim().slice(0, 40),
+                nickname: cleanText(p.nickname || state.userProfile.nickname || state.profile.name || "ogrenci", 40),
                 kvkkConsent: !!p.kvkkConsent,
                 kvkkAt: p.kvkkConsent ? nowIso() : state.userProfile.kvkkAt,
                 weeklyHours: Number(p.weeklyHours) || state.userProfile.weeklyHours,
@@ -1116,12 +1119,22 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             emit();
         },
         updateProfile: function (patch) {
-            Object.assign(state.profile, patch);
+            var p = Object.assign({}, patch || {});
+            if (p.name != null) p.name = cleanText(p.name, 60);
+            Object.assign(state.profile, p);
             emit();
         },
         updateUserProfile: function (patch) {
             var p = Object.assign({}, patch || {});
             delete p.educationLevel;
+            delete p.role;
+            delete p.premium;
+            delete p.premiumUntil;
+            delete p.blocked;
+            delete p.authUserId;
+            delete p.billing;
+            if (p.nickname) p.nickname = cleanText(p.nickname, 40);
+            if (p.referredBy) p.referredBy = cleanText(p.referredBy, 16);
             Object.assign(state.userProfile, p);
             emit();
         },

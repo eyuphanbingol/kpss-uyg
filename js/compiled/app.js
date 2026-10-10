@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:265913:1tsly7x*/
+/*jsx:babel-7.29.9-react-classic:266856:1c3ihbj*/
 const {
   useState,
   useEffect,
@@ -307,19 +307,19 @@ function themeFor(ders, isDark) {
 function masteryLabel(m) {
   if (m === "iyi") return {
     text: "İyi",
-    cls: "bg-emerald-50 text-emerald-600"
+    cls: "bg-emerald-50 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300"
   };
   if (m === "orta") return {
     text: "Orta",
-    cls: "bg-amber-50 text-amber-600"
+    cls: "bg-amber-50 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300"
   };
   if (m === "zayif") return {
     text: "Zayıf",
-    cls: "bg-coral-50 text-coral-600"
+    cls: "bg-coral-50 text-coral-600 dark:bg-rose-900/30 dark:text-rose-300"
   };
   return {
     text: "Yeni",
-    cls: "bg-stone-100 text-stone-500"
+    cls: "bg-stone-100 text-stone-600 dark:bg-stone-800 dark:text-stone-300"
   };
 }
 
@@ -589,7 +589,7 @@ function BottomNav(props) {
         props.onChange(tab.id);
       },
       "aria-current": on ? "page" : undefined,
-      className: "relative flex flex-col items-center gap-0.5 py-2 rounded-2xl text-[10px] leading-tight font-medium transition-all duration-200 " + (on ? "text-indigo-600 bg-indigo-50/60 dark:bg-indigo-900/20" : "text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200")
+      className: "relative flex flex-col items-center gap-0.5 py-2 rounded-2xl text-[10px] leading-tight font-medium transition-all duration-200 " + (on ? "text-indigo-600 bg-indigo-50/60 dark:bg-indigo-900/20 dark:text-indigo-300" : "text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200")
     }, /*#__PURE__*/React.createElement("span", {
       className: "relative"
     }, /*#__PURE__*/React.createElement("svg", {
@@ -736,6 +736,7 @@ function Onboarding(props) {
     className: "block text-xs font-bold text-stone-500 mb-1"
   }, "S\u0131nav tarihi"), /*#__PURE__*/React.createElement("input", {
     type: "date",
+    "aria-label": "S\u0131nav tarihi",
     value: examDate,
     onChange: function (e) {
       setExamDate(e.target.value);
@@ -1126,6 +1127,7 @@ function PlanWizard(props) {
     className: "text-sm text-stone-500 mt-1"
   }, "\xD6SYM takvimindeki s\u0131nav g\xFCn\xFCn\xFC se\xE7. Program bu g\xFCne kadar g\xFCn g\xFCn haz\u0131rlan\u0131r."), /*#__PURE__*/React.createElement("input", {
     type: "date",
+    "aria-label": "S\u0131nav tarihi",
     value: s.examDate,
     min: SP.addDays(SP.todayIso(), 7),
     onChange: function (e) {
@@ -4850,6 +4852,7 @@ function DenemeSetup(props) {
     }, x);
   })), /*#__PURE__*/React.createElement("input", {
     type: "range",
+    "aria-label": "Soru say\u0131s\u0131",
     min: "5",
     max: "50",
     step: "5",
@@ -4857,7 +4860,7 @@ function DenemeSetup(props) {
     onChange: function (e) {
       setN(Number(e.target.value));
     },
-    className: "w-full accent-indigo-600"
+    className: "w-full h-8 accent-indigo-600"
   })), /*#__PURE__*/React.createElement("div", {
     className: "rounded-3xl glass p-5 mb-5 card-hover"
   }, /*#__PURE__*/React.createElement("p", {
@@ -5342,7 +5345,7 @@ function Ben(props) {
   }, "Ayarlar"), !editing ? /*#__PURE__*/React.createElement("button", {
     type: "button",
     onClick: startSettingsEdit,
-    className: "text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline"
+    className: "text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline py-2 px-2 -my-2 -mr-2"
   }, "D\xFCzenle") : null), eduReq && eduReq.status === "pending" && eduReq.to !== up.educationLevel ? /*#__PURE__*/React.createElement("p", {
     className: "text-sm text-amber-800 bg-amber-50 rounded-xl px-3 py-2 mt-3"
   }, "E\u011Fitim de\u011Fi\u015Fikli\u011Fi onay bekliyor: ", eduLabel(eduReq.to)) : null, eduReq && eduReq.status === "rejected" && editing ? /*#__PURE__*/React.createElement("p", {
@@ -5375,6 +5378,7 @@ function Ben(props) {
   }, /*#__PURE__*/React.createElement("label", {
     className: "text-sm text-stone-500"
   }, "Ad"), /*#__PURE__*/React.createElement("input", {
+    "aria-label": "Ad",
     value: draftName,
     onChange: function (e) {
       setDraftName(e.target.value);
@@ -5476,6 +5480,7 @@ function Ben(props) {
   }, "Davet kodun: ", /*#__PURE__*/React.createElement("b", null, StudentStore.ensureReferralCode ? StudentStore.ensureReferralCode() : up.referralCode || "—")), /*#__PURE__*/React.createElement("label", {
     className: "text-xs text-stone-400 mt-2 block"
   }, "Arkada\u015F kodu"), /*#__PURE__*/React.createElement("input", {
+    "aria-label": "Arkada\u015F kodu",
     defaultValue: up.referredBy || "",
     onBlur: function (e) {
       if (window.PaymentClient) window.PaymentClient.applyReferral(e.target.value);
@@ -5562,24 +5567,24 @@ function Ben(props) {
       props.onAccountDeleted && props.onAccountDeleted();
     }
   }) : null, /*#__PURE__*/React.createElement("div", {
-    className: "text-[11px] text-stone-400 text-center leading-relaxed mb-3 space-x-1"
+    className: "text-[11px] text-stone-400 text-center leading-relaxed mb-3 flex flex-wrap justify-center items-center gap-x-1"
   }, /*#__PURE__*/React.createElement("a", {
-    className: "underline",
+    className: "underline inline-block py-2 px-1",
     href: "yasal/aydinlatma.html"
   }, "KVKK Ayd\u0131nlatma"), /*#__PURE__*/React.createElement("span", null, "\xB7"), /*#__PURE__*/React.createElement("a", {
-    className: "underline",
+    className: "underline inline-block py-2 px-1",
     href: "yasal/kullanim.html"
   }, "Kullan\u0131m"), /*#__PURE__*/React.createElement("span", null, "\xB7"), /*#__PURE__*/React.createElement("a", {
-    className: "underline",
+    className: "underline inline-block py-2 px-1",
     href: "yasal/uyelik.html"
   }, "\xDCyelik"), /*#__PURE__*/React.createElement("span", null, "\xB7"), /*#__PURE__*/React.createElement("a", {
-    className: "underline",
+    className: "underline inline-block py-2 px-1",
     href: "yasal/gizlilik.html"
   }, "Gizlilik"), /*#__PURE__*/React.createElement("span", null, "\xB7"), /*#__PURE__*/React.createElement("a", {
-    className: "underline",
+    className: "underline inline-block py-2 px-1",
     href: "yasal/cerez.html"
   }, "\xC7erez"), /*#__PURE__*/React.createElement("span", null, "\xB7"), /*#__PURE__*/React.createElement("a", {
-    className: "underline",
+    className: "underline inline-block py-2 px-1",
     href: "yasal/basvuru.html"
   }, "KVKK ba\u015Fvuru")), /*#__PURE__*/React.createElement("button", {
     onClick: function () {
@@ -5723,9 +5728,19 @@ function App() {
   const student = useStudent();
   const isDark = !!(student.profile && student.profile.dark);
   // window.kpssData her okunuşta yeni nesne üretir; bir kez al ki plan/filtre her render'da baştan hesaplanmasın.
+  // Soru/not dosyaları async iner (index.html KpssContent); hazır olunca veri bir kez daha okunur.
+  const [contentReady, setContentReady] = useState(function () {
+    return !window.KpssContent || window.KpssContent.isReady();
+  });
+  useEffect(function () {
+    if (contentReady || !window.KpssContent) return;
+    window.KpssContent.onReady(function () {
+      setContentReady(true);
+    });
+  }, []);
   const rawData = useMemo(function () {
     return typeof window !== "undefined" && window.kpssData ? window.kpssData : {};
-  }, []);
+  }, [contentReady]);
   const kpssData = useMemo(function () {
     var ac = window.AlanCatalog;
     return ac && ac.filterCatalog ? ac.filterCatalog(rawData, student) : rawData;
@@ -6687,7 +6702,7 @@ function App() {
       }
     }) : /*#__PURE__*/React.createElement(BrandLoad, null);
   }
-  if (!roleChecked) {
+  if (!roleChecked || !contentReady) {
     return /*#__PURE__*/React.createElement(BrandLoad, null);
   }
   var isAdminUser = student.userProfile && student.userProfile.role === "admin";

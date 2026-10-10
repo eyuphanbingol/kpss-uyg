@@ -176,15 +176,13 @@ export function PaywallScreen({ navigation }) {
                             ✅ Reklamsız çalışma
                         </Text>
                     </View>
-                    <PrimaryButton 
-                        title="7 Günlük Deneme Aç" 
-                        onPress={function () {
-                            StudentStore.grantMockPremium(7);
-                            navigation.goBack();
-                        }} 
+                    <PrimaryButton
+                        title="Online ödeme çok yakında"
+                        disabled
+                        onPress={function () {}}
                     />
                     <Text style={[styles.premiumNote, isDark && styles.textMuted]}>
-                        💳 Ödeme şimdilik test modunda
+                        Şimdilik tüm temel özellikler ücretsiz; davet koduyla premium gün kazanabilirsin.
                     </Text>
                 </Card>
             )}
