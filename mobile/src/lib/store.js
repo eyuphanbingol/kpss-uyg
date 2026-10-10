@@ -473,23 +473,29 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
         return state;
     }
 
-    function persistQuiet() {
+    function persistQuiet(json) {
         state.updatedAt = nowIso();
         var uid = state.userProfile && state.userProfile.authUserId;
         if (!uid) return;
-        localStorage.setItem(storageKey(uid), JSON.stringify(state));
+        localStorage.setItem(storageKey(uid), json || JSON.stringify(state));
         localStorage.setItem(ACTIVE_KEY, uid);
     }
 
+    // Kayıt ve dinleyicilere kopya tek JSON çevirisiyle (≈300 KB durum; telefonda her cevapta çalışır)
     function persist() {
-        persistQuiet();
-        listeners.forEach(function (fn) { fn(clone(state)); });
+        state.updatedAt = nowIso();
+        var json = JSON.stringify(state);
+        persistQuiet(json);
+        listeners.forEach(function (fn) { fn(JSON.parse(json)); });
         if (globalThis.SyncEngine && typeof globalThis.SyncEngine.schedule === "function") {
             globalThis.SyncEngine.schedule();
         }
     }
 
+    // batch() içindeyken birden çok değişiklik tek kayıt + tek bildirimle biter
+    var batchDepth = 0, batchDirty = false;
     function emit() {
+        if (batchDepth) { batchDirty = true; return; }
         persist();
     }
 
@@ -1200,6 +1206,13 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             t.masteryScore = topicMasteryScore(t);
             t.updatedAt = nowIso();
             emit();
+        },
+        batch: function (fn) {
+            batchDepth++;
+            try { return fn(); } finally {
+                batchDepth--;
+                if (!batchDepth && batchDirty) { batchDirty = false; persist(); }
+            }
         },
         recordAnswer: function (meta) {
             var rec = recordAnswer(meta);

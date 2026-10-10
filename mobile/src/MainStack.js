@@ -106,6 +106,9 @@ function Tabs() {
                 screenOptions={{
                     headerShown: false,
                     lazy: true,
+                    // Görünmeyen sekme, görünür olana kadar yeniden çizilmez (test çözerken arkadaki
+                    // Bugün / Eksikler / Ben her cevapta baştan çizilmesin)
+                    freezeOnBlur: true,
                     sceneContainerStyle: {
                         backgroundColor: isDark ? colors.bgDark : colors.bg,
                     },
@@ -130,6 +133,7 @@ export default function MainStack() {
     var { isDark } = useApp();
     var stackOptions = {
         headerShown: false,
+        freezeOnBlur: true,
         animation: "slide_from_right",
         animationDuration: 140,
         presentation: "card",

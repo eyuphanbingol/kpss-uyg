@@ -118,6 +118,7 @@ export default function TestScreen({ route, navigation }) {
 
     // ---------- Finish ----------
     function finish() {
+        flushPending();
         if (finishedRef.current) return;
         finishedRef.current = true;
         var elapsedMin = Math.max(0, Math.round((Date.now() - startedAt.current) / 60000));
@@ -148,32 +149,49 @@ export default function TestScreen({ route, navigation }) {
     }
 
     // ---------- Answer ----------
+    // Şık rengi hemen görünsün: kayıt (≈300 KB durum + plan hesabı) bir sonraki kareye ertelenir.
+    // "Sonraki" ve bitişte bekleyen kayıt önce yazılır.
+    var pendingRef = useRef(null);
+    function flushPending() {
+        var fn = pendingRef.current;
+        pendingRef.current = null;
+        if (fn) fn();
+    }
+    // Ekrandan çıkılırsa (geri) bekleyen cevap kaybolmasın
+    useEffect(function () { return function () { flushPending(); }; }, []);
     function onAnswer(i) {
         if (answered || done) return;
         var item = items[qIndex];
         var ok = i === item.q.correctAnswerIndex;
         setPicked(i);
         setAnswered(true);
-        StudentStore.recordAnswer({ 
-            ders: item.ders, 
-            konu: item.konu, 
-            id: item.id, 
-            correct: ok,
-            fromWrongBook: mode === "wrong",
-            fromReview: mode === "review"
-        });
-        StudentStore.addSessionStats({ 
-            questions: 1, 
-            correct: ok ? 1 : 0 
-        });
         if (ok) {
             scoreRef.current += 1;
             setScore(scoreRef.current);
         }
+        flushPending();
+        pendingRef.current = function () {
+            StudentStore.batch(function () {
+                StudentStore.recordAnswer({
+                    ders: item.ders,
+                    konu: item.konu,
+                    id: item.id,
+                    correct: ok,
+                    fromWrongBook: mode === "wrong",
+                    fromReview: mode === "review"
+                });
+                StudentStore.addSessionStats({
+                    questions: 1,
+                    correct: ok ? 1 : 0
+                });
+            });
+        };
+        requestAnimationFrame(function () { setTimeout(flushPending, 0); });
     }
 
     // ---------- Next ----------
     function next() {
+        flushPending();
         if (qIndex + 1 < items.length) {
             setQIndex(qIndex + 1);
             setPicked(null);

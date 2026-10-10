@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useMemo, useState, useRef } from "react";
+import React, { createContext, useContext, useDeferredValue, useEffect, useMemo, useState, useRef } from "react";
 import { StudentStore } from "./lib/store";
 import { hydrateLocalStorage } from "./lib/storage";
 import { supabase } from "./lib/supabase";
@@ -112,10 +112,11 @@ export function AppProvider(props) {
     var kpssData = _kd[0];
     var setKpssData = _kd[1];
 
+    var remoteCatalogRef = useRef(false);
     function pullCatalog() {
         try {
             fetchRemoteCatalog().then(function (data) {
-                if (data) setKpssData(data);
+                if (data) { remoteCatalogRef.current = true; setKpssData(data); }
             }).catch(function () {});
         } catch (e) {}
     }
@@ -167,9 +168,8 @@ export function AppProvider(props) {
                 // 1. Local storage'ı hydrate et
                 await hydrateLocalStorage();
                 StudentStore.hydrateFromDisk();
-                var cached = null;
-                try { cached = readCachedCatalog(); } catch (e) {}
-                if (cached) setKpssData(cached);
+                // Cihazdaki güncel katalog (dosya); ilk açılışı bekletmesin diye arka planda
+                readCachedCatalog().then(function (cached) { if (cached && !cancelled && !remoteCatalogRef.current) setKpssData(cached); }).catch(function () {});
 
                 var r = await supabase.auth.getSession();
                 var sess = r.data && r.data.session;
@@ -285,13 +285,16 @@ export function AppProvider(props) {
         return filterCatalog(kpssData, student);
     }, [kpssData, student]);
 
+    // Plan hesabı (tüm katalog) düşük öncelikli: dokunuşlara cevap bunu beklemez
+    var planStudent = useDeferredValue(student);
+    var planData = useDeferredValue(visibleData);
     var plan = useMemo(function () {
         try {
-            return StudyPlanner.buildPlan(visibleData, student);
+            return StudyPlanner.buildPlan(planData, planStudent);
         } catch (e) {
             return { rows: [], due: [], wrong: [], streak: 0 };
         }
-    }, [student, visibleData]);
+    }, [planStudent, planData]);
 
     // ---------- Context Value ----------
     var value = {

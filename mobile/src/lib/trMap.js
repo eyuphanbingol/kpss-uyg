@@ -30,8 +30,10 @@ var CSS = [
     ".canvas{position:relative;z-index:1;width:100%;height:100%;transform-origin:center center;}",
     ".canvas.moving{will-change:transform;}",
     "svg{width:100%;height:100%;max-width:100%;max-height:100%;display:block;}",
-    ".zoom-tools{position:absolute;right:8px;bottom:8px;z-index:6;display:flex;flex-direction:column;gap:6px;}",
-    ".zoom-tools button{width:40px;height:40px;border-radius:12px;border:1px solid rgba(13,44,77,.12);background:rgba(255,255,255,.94);font-size:20px;font-weight:800;line-height:1;color:#0f172a;box-shadow:0 6px 16px rgba(4,28,36,.12);}",
+    // Yatay sıra: haritanın sağ alt köşesi sınır dışı (Irak/Suriye) boşluğa denk gelir; dikey sütun
+    // yatay ekranda Hakkari–Van'ı, yakınlaşınca da güneydoğudaki pinleri kapatıyordu.
+    ".zoom-tools{position:absolute;right:8px;bottom:8px;z-index:6;display:flex;flex-direction:row;gap:6px;}",
+    ".zoom-tools button{width:38px;height:38px;border-radius:12px;border:1px solid rgba(13,44,77,.12);background:rgba(255,255,255,.94);font-size:20px;font-weight:800;line-height:1;color:#0f172a;box-shadow:0 6px 16px rgba(4,28,36,.12);}",
     ".zoom-tools .zreset{width:auto;padding:0 10px;font-size:12px;letter-spacing:.04em;text-transform:uppercase;}",
     "path{fill:#f2e6c6!important;stroke:rgba(112,88,52,.55)!important;stroke-width:.8!important;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none;}",
     "path.map-hl{fill:#a7dcbc!important;stroke:#047857!important;stroke-width:1.2!important;}",
@@ -78,7 +80,10 @@ var z={s:1,x:0,y:0};
 var lastPlay=null;
 function mk(tag,attrs){var n=document.createElementNS(NS,tag);for(var k in attrs){n.setAttribute(k,String(attrs[k]));}return n;}
 function applyZ(s,x,y){s=Math.max(1,Math.min(6,s));if(s<=1.02){s=1;x=0;y=0;}z={s:s,x:x,y:y};
-if(canvas)canvas.style.transform='translate('+x+'px,'+y+'px) scale('+s+')';}
+if(!canvas||zRaf)return;zRaf=requestAnimationFrame(function(){zRaf=0;canvas.style.transform='translate('+z.x+'px,'+z.y+'px) scale('+z.s+')';});}
+var zRaf=0;
+// Tıklamada konum ölçülmeden önce bekleyen dönüşüm uygulanır (yanlış pin seçilmesin)
+function flushZ(){if(!zRaf)return;cancelAnimationFrame(zRaf);zRaf=0;if(canvas)canvas.style.transform='translate('+z.x+'px,'+z.y+'px) scale('+z.s+')';}
 function centerOf(path){try{var b=path.getBBox();if(b.width>1&&b.height>1)return{x:b.x+b.width/2,y:b.y+b.height/2};}catch(e){}return null;}
 // Eski sürüm (tek konumlu) pinler için: birbirine binenleri iterek ayırır.
 function separate(placed,minD){var n,i,j;for(n=0;n<18;n++){for(i=0;i<placed.length;i++){for(j=i+1;j<placed.length;j++){
@@ -93,8 +98,10 @@ window.__fitKey=fk;
 var k=Math.min(W/1000,H/422),pad=40;
 var xs=[],ys=[];placed.forEach(function(r){xs.push(r.x,r.ax);ys.push(r.y,r.ay);});
 var mnx=Math.min.apply(null,xs)-pad,mxx=Math.max.apply(null,xs)+pad,mny=Math.min.apply(null,ys)-pad,mxy=Math.max.apply(null,ys)+pad;
-var sf=Math.min(W/((mxx-mnx)*k),H/((mxy-mny)*k)),sm=Math.max(1,17/(11*k)),sc=Math.max(1,Math.min(sf,sm,4.5));
-if(sc>1.15){var bx=(W-1000*k)/2+k*(mnx+mxx)/2,by=(H-422*k)/2+k*(mny+mxy)/2;applyZ(sc,-sc*(bx-W/2),-sc*(by-H/2));}
+// Alttaki yakınlaştırma düğmeleri için RB piksellik bant boş bırakılır (pin düğmenin altına düşmesin)
+var RB=52;
+var sf=Math.min(W/((mxx-mnx)*k),(H-RB)/((mxy-mny)*k)),sm=Math.max(1,17/(11*k)),sc=Math.max(1,Math.min(sf,sm,4.5));
+if(sc>1.15){var bx=(W-1000*k)/2+k*(mnx+mxx)/2,by=(H-422*k)/2+k*(mny+mxy)/2;applyZ(sc,-sc*(bx-W/2),-sc*(by-H/2)-RB/2);}
 else applyZ(1,0,0);}
 window.setPlay=function(st){
 var s=document.querySelector('svg');if(!s)return;
@@ -162,6 +169,7 @@ function pinchDist(t){var a=t[0],b=t[1],dx=a.clientX-b.clientX,dy=a.clientY-b.cl
 function bumpZ(dir){applyZ(dir===0?1:z.s*(dir>0?1.4:0.72),dir===0?0:z.x,dir===0?0:z.y);}
 if(wrap&&canvas){
 wrap.addEventListener('touchstart',function(e){
+if(e.touches.length===1)lastTouch={x:e.touches[0].clientX,y:e.touches[0].clientY,t:Date.now()};
 canvas.classList.add('moving');
 if(e.touches.length===2){gest.mode='pinch';gest.dist=pinchDist(e.touches);gest.s0=z.s;gest.x0=z.x;gest.y0=z.y;gest.moved=true;}
 else if(e.touches.length===1&&z.s>1){gest.mode='pan';gest.x=e.touches[0].clientX;gest.y=e.touches[0].clientY;gest.x0=z.x;gest.y0=z.y;gest.moved=false;}
@@ -172,7 +180,10 @@ if(gest.mode==='pinch'&&e.touches.length===2){e.preventDefault();applyZ(gest.s0*
 else if(gest.mode==='pan'&&e.touches.length===1){var dx=e.touches[0].clientX-gest.x,dy=e.touches[0].clientY-gest.y;
 if(Math.abs(dx)+Math.abs(dy)>8)gest.moved=true;if(gest.moved){e.preventDefault();applyZ(z.s,gest.x0+dx,gest.y0+dy);}}
 },{passive:false});
-function endGest(e){if(gest.moved)wrap.setAttribute('data-skip-click','1');if(!e||!e.touches||!e.touches.length){gest.mode='';canvas.classList.remove('moving');}}
+// Sürükleme/yakınlaştırma bitince hemen ardından gelebilecek tıklama yok sayılır; yalnızca kısa bir süre.
+// (Eskiden işaret kalıcıydı: kaydırma tıklama üretmediğinde kullanıcının sonraki ilk dokunuşu yutuluyordu.)
+var skipClickUntil=0;
+function endGest(e){if(gest.moved)skipClickUntil=Date.now()+150;if(!e||!e.touches||!e.touches.length){gest.mode='';canvas.classList.remove('moving');}}
 wrap.addEventListener('touchend',endGest);
 wrap.addEventListener('touchcancel',endGest);
 }
@@ -180,23 +191,31 @@ var zp=document.getElementById('zplus'),zm=document.getElementById('zminus'),zr=
 if(zp)zp.onclick=function(e){e.stopPropagation();bumpZ(1);};
 if(zm)zm.onclick=function(e){e.stopPropagation();bumpZ(-1);};
 if(zr)zr.onclick=function(e){e.stopPropagation();bumpZ(0);};
+// Dokunuşta tarayıcı tıklamayı yakındaki başka bir öğeye kaydırabiliyor ("touch adjustment");
+// küçük illerde komşu il seçiliyordu. Parmağın gerçekten değdiği nokta kullanılır ve il, o noktadaki
+// öğe yığınında (göl, etiket vb. altında) aranır.
+var lastTouch=null;
+function provinceAt(x,y){var list=document.elementsFromPoint?document.elementsFromPoint(x,y):[document.elementFromPoint(x,y)];
+for(var i=0;i<list.length;i++){var el=list[i];var pth=el&&el.closest?el.closest('path'):null;var pid=pth&&pth.getAttribute('id');if(pid&&/^TR\d{2}$/.test(pid))return pid;}return null;}
 document.addEventListener('click',function(ev){
-if(wrap&&wrap.getAttribute('data-skip-click')){wrap.removeAttribute('data-skip-click');return;}
+flushZ();if(Date.now()<skipClickUntil){skipClickUntil=0;return;}
 if(ev.target&&ev.target.closest&&ev.target.closest('.zoom-tools'))return;
+var px=ev.clientX,py=ev.clientY;
+if(lastTouch&&Date.now()-lastTouch.t<1000){px=lastTouch.x;py=lastTouch.y;}
+lastTouch=null;
 var best=null,bestD=1e9;
 var marks=document.querySelectorAll('[data-pin]');
 for(var mi=0;mi<marks.length;mi++){
 var well=marks[mi].querySelector('.place-well')||marks[mi].querySelector('.topic-hit')||marks[mi];
 var mr=well.getBoundingClientRect();
 var mcx=mr.left+mr.width/2,mcy=mr.top+mr.height/2;
-var md=Math.sqrt((mcx-ev.clientX)*(mcx-ev.clientX)+(mcy-ev.clientY)*(mcy-ev.clientY));
+var md=Math.sqrt((mcx-px)*(mcx-px)+(mcy-py)*(mcy-py));
 var reach=Math.max(26,mr.width*1.1);
 if(md<=reach&&md<bestD){bestD=md;best=marks[mi];}}
 var mark=best||(ev.target.closest?ev.target.closest('[data-pin]'):null);
 if(mark){post({type:'pin',id:mark.getAttribute('data-pin')});return;}
-var path=ev.target.closest?ev.target.closest('path'):null;
-var id=path&&path.getAttribute('id');
-if(id&&/^TR\d{2}$/.test(id))post({type:'province',id:id});
+var id=provinceAt(px,py);
+if(id)post({type:'province',id:id});
 });
 post({type:'ready'});
 `;
