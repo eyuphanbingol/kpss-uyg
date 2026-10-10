@@ -3,13 +3,15 @@
     "@resvg/resvg-js": "^2.6.2"
   },
   "devDependencies": {
-    "@babel/standalone": "7.29.9"
+    "@babel/standalone": "7.29.9",
+    "tailwindcss": "3.4.17"
   },
   "scripts": {
-    "build:jsx": "node scripts/build-jsx.js",
+    "build:jsx": "node scripts/build-jsx.js && node scripts/build-css.js",
     "check:map": "node scripts/check-map-pins.js",
     "sync:map": "node scripts/sync-map-data.js",
     "test:live": "node scripts/test-live-exam.js && node scripts/test-omr.js",
-    "test:omr-synthetic": "node scripts/test-omr-synthetic.js"
+    "test:omr-synthetic": "node scripts/test-omr-synthetic.js",
+    "build:css": "node scripts/build-css.js"
   }
 }
