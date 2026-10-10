@@ -509,6 +509,33 @@
         @keyframes atnIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
         .atn-in { animation: atnIn .28s ease-out both; }
         @media (prefers-reduced-motion: reduce) { .atn-in, .atn-seg-thumb, .atn-btn { animation: none !important; transition: none !important; } }
+        /* ===== YÜKLEME EKRANI: logo animasyonu (img/loader) ===== */
+        .atn-loader {
+            min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+            padding: 24px 16px 48px; text-align: center; color: #E2E8F0;
+            background: radial-gradient(circle at 50% 40%, #0C2029 0%, #070D12 52%, #04080B 100%);
+        }
+        .atn-loader-media { position: relative; width: min(300px, 72vw); aspect-ratio: 1 / 1; }
+        .atn-loader-media video, .atn-loader-media img {
+            position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;
+            -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 56%, transparent 70%);
+            mask-image: radial-gradient(circle at 50% 50%, #000 56%, transparent 70%);
+        }
+        .atn-loader-media img { z-index: 0; }
+        .atn-loader-media video { z-index: 1; }
+        .atn-loader-title { margin-top: 6px; font: 700 17px/1.3 Inter, system-ui, sans-serif; letter-spacing: -.01em; color: #F1F5F9; }
+        .atn-loader-sub { margin-top: 4px; font: 500 13.5px/1.4 Inter, system-ui, sans-serif; color: rgba(203, 213, 225, .72); }
+        .atn-loader-bar { position: relative; width: 168px; height: 3px; margin-top: 18px; border-radius: 3px; overflow: hidden; background: rgba(148, 163, 184, .16); }
+        .atn-loader-bar::after {
+            content: ""; position: absolute; top: 0; bottom: 0; left: -40%; width: 40%; border-radius: 3px;
+            background: linear-gradient(90deg, transparent, #5EC4CC, #E7CF8F, transparent);
+            animation: atnLoaderBar 1.5s ease-in-out infinite;
+        }
+        @keyframes atnLoaderBar { to { left: 100%; } }
+        @media (prefers-reduced-motion: reduce) {
+            .atn-loader-media video { display: none; }
+            .atn-loader-bar::after { animation: none; left: 30%; }
+        }
         .brand-backdrop {
             background: linear-gradient(135deg, #041C24 0%, #0A3842 48%, #127880 100%);
         }
@@ -2847,12 +2874,11 @@
             <p>Yakında App Store ve Google Play. Şimdi web.</p>
         </main>
     </noscript>
-    <div id="root"><div class="brand-backdrop" style="min-height:100vh;min-height:100dvh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden"><div class="brand-glow" aria-hidden="true"></div><div class="brand-ring brand-ring-outer" aria-hidden="true"></div><div class="brand-ring brand-ring-inner" aria-hidden="true"></div><img src="icons/atanom.png?v=18" alt="Atanly" width="96" height="96" style="position:relative;z-index:1;width:96px;height:96px;object-fit:contain;animation:bootPulse 1.6s ease-in-out infinite"></div></div>
-    <style>@keyframes bootPulse{0%,100%{opacity:.75;transform:scale(.96)}50%{opacity:1;transform:scale(1)}}</style>
+    <div id="root"><div class="atn-loader" role="status" aria-live="polite"><div class="atn-loader-media" aria-hidden="true"><img src="img/loader/atanly-loader.jpg" alt="" width="400" height="400"><video autoplay muted loop playsinline preload="auto" poster="img/loader/atanly-loader.jpg"><source src="img/loader/atanly-loader.webm" type="video/webm"><source src="img/loader/atanly-loader.mp4" type="video/mp4"></video></div><p class="atn-loader-title">İşleminiz devam ediyor</p><p class="atn-loader-sub">Lütfen bekleyin, yükleniyor…</p><div class="atn-loader-bar" aria-hidden="true"></div></div></div>
     <script>
         // js/app.jsx derlenmiş hâliyle önbellekten açılır (bkz. js/jsxLoader.js). Değişince ?v= artır.
         document.addEventListener("DOMContentLoaded", function () {
-            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=148");
+            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=149");
         });
     </script>
     <script>

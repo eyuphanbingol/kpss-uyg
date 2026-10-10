@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:253824:k9jfer*/
+/*jsx:babel-7.29.9-react-classic:254441:1c3ciu*/
 const {
   useState,
   useEffect,
@@ -322,24 +322,51 @@ function masteryLabel(m) {
     cls: "bg-stone-100 text-stone-500"
   };
 }
+
+// Tam ekran yükleme: logo animasyonu (img/loader). index.html'deki ilk ekranla aynı görünüm.
 function BrandLoad(props) {
+  const vid = useRef(null);
+  useEffect(function () {
+    var v = vid.current;
+    if (!v) return;
+    v.muted = true; // otomatik oynatma için sessiz olmalı
+    var p = v.play && v.play();
+    if (p && p.catch) p.catch(function () {});
+  }, []);
   return /*#__PURE__*/React.createElement("div", {
-    className: "brand-backdrop min-h-screen flex items-center justify-center relative overflow-hidden"
+    className: "atn-loader",
+    role: "status",
+    "aria-live": "polite"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "brand-glow",
+    className: "atn-loader-media",
     "aria-hidden": "true"
-  }), /*#__PURE__*/React.createElement("div", {
-    className: "brand-ring brand-ring-outer",
+  }, /*#__PURE__*/React.createElement("img", {
+    src: "img/loader/atanly-loader.jpg",
+    alt: "",
+    width: "400",
+    height: "400"
+  }), /*#__PURE__*/React.createElement("video", {
+    ref: vid,
+    autoPlay: true,
+    muted: true,
+    loop: true,
+    playsInline: true,
+    preload: "auto",
+    poster: "img/loader/atanly-loader.jpg"
+  }, /*#__PURE__*/React.createElement("source", {
+    src: "img/loader/atanly-loader.webm",
+    type: "video/webm"
+  }), /*#__PURE__*/React.createElement("source", {
+    src: "img/loader/atanly-loader.mp4",
+    type: "video/mp4"
+  }))), /*#__PURE__*/React.createElement("p", {
+    className: "atn-loader-title"
+  }, props.children || "İşleminiz devam ediyor"), /*#__PURE__*/React.createElement("p", {
+    className: "atn-loader-sub"
+  }, "L\xFCtfen bekleyin, y\xFCkleniyor\u2026"), /*#__PURE__*/React.createElement("div", {
+    className: "atn-loader-bar",
     "aria-hidden": "true"
-  }), /*#__PURE__*/React.createElement("div", {
-    className: "brand-ring brand-ring-inner",
-    "aria-hidden": "true"
-  }), /*#__PURE__*/React.createElement("p", {
-    className: "relative z-10 text-sm font-medium",
-    style: {
-      color: "rgba(245,235,199,0.85)"
-    }
-  }, props.children || "Yükleniyor"));
+  }));
 }
 function useStudent() {
   const [st, setSt] = useState(function () {
@@ -6502,9 +6529,7 @@ function App() {
         }
       },
       className: "px-4 py-2 rounded-xl btn-primary text-white text-sm"
-    }, "Tekrar dene")) : LazyCmp ? React.createElement(LazyCmp, toolProps) : /*#__PURE__*/React.createElement("div", {
-      className: "p-10 text-center text-zinc-500 text-sm"
-    }, "Y\xFCkleniyor\u2026")));
+    }, "Tekrar dene")) : LazyCmp ? React.createElement(LazyCmp, toolProps) : /*#__PURE__*/React.createElement(BrandLoad, null)));
   }
   return /*#__PURE__*/React.createElement("div", {
     className: "app-shell" + (!inTest ? " has-nav" : "")

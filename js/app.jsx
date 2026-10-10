@@ -77,13 +77,28 @@ function masteryLabel(m) {
     return { text: "Yeni", cls: "bg-stone-100 text-stone-500" };
 }
 
+// Tam ekran yükleme: logo animasyonu (img/loader). index.html'deki ilk ekranla aynı görünüm.
 function BrandLoad(props) {
+    const vid = useRef(null);
+    useEffect(function () {
+        var v = vid.current;
+        if (!v) return;
+        v.muted = true; // otomatik oynatma için sessiz olmalı
+        var p = v.play && v.play();
+        if (p && p.catch) p.catch(function () {});
+    }, []);
     return (
-        <div className="brand-backdrop min-h-screen flex items-center justify-center relative overflow-hidden">
-            <div className="brand-glow" aria-hidden="true"></div>
-            <div className="brand-ring brand-ring-outer" aria-hidden="true"></div>
-            <div className="brand-ring brand-ring-inner" aria-hidden="true"></div>
-            <p className="relative z-10 text-sm font-medium" style={{ color: "rgba(245,235,199,0.85)" }}>{props.children || "Yükleniyor"}</p>
+        <div className="atn-loader" role="status" aria-live="polite">
+            <div className="atn-loader-media" aria-hidden="true">
+                <img src="img/loader/atanly-loader.jpg" alt="" width="400" height="400" />
+                <video ref={vid} autoPlay muted loop playsInline preload="auto" poster="img/loader/atanly-loader.jpg">
+                    <source src="img/loader/atanly-loader.webm" type="video/webm" />
+                    <source src="img/loader/atanly-loader.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <p className="atn-loader-title">{props.children || "İşleminiz devam ediyor"}</p>
+            <p className="atn-loader-sub">Lütfen bekleyin, yükleniyor…</p>
+            <div className="atn-loader-bar" aria-hidden="true"></div>
         </div>
     );
 }
@@ -4306,7 +4321,7 @@ function App() {
                             }} className="px-4 py-2 rounded-xl btn-primary text-white text-sm">Tekrar dene</button>
                         </div>
                     ) : (LazyCmp ? React.createElement(LazyCmp, toolProps) : (
-                        <div className="p-10 text-center text-zinc-500 text-sm">Yükleniyor…</div>
+                        <BrandLoad />
                     ))}
                 </div>
             </div>
