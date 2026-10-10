@@ -6,7 +6,7 @@ import { StatusBar } from "expo-status-bar";
 import Svg, { Defs, RadialGradient, Rect, Stop } from "react-native-svg";
 import {
     ArrowRight, BookOpen, Brain, CalendarDays, Check, CheckCircle2, Flag, Flame, Map as MapIcon,
-    Medal, RotateCcw, Sparkles, Target, Timer, TrendingUp, Trophy, Users, X, Zap
+    RotateCcw, Sparkles, Target, Timer, Trophy, X, Zap
 } from "lucide-react-native";
 import { BrandBackdrop } from "./SplashScreen";
 import { Tap } from "../ui";
@@ -231,40 +231,56 @@ function ArtGames(props) {
     );
 }
 
+// Gerçek Pazar denemesi raporu (örnek veriyle çekilmiş ekranlar), kendiliğinden döner
+var RAPOR = [
+    { t: "Net", img: require("../../assets/intro/rapor-ozet.webp") },
+    { t: "Dersler", img: require("../../assets/intro/rapor-ders.webp") },
+    { t: "Çözüm", img: require("../../assets/intro/rapor-cozum.webp") },
+    { t: "Gelişim", img: require("../../assets/intro/rapor-gelisim.webp") }
+];
+
 function ArtDeneme(props) {
-    var rows = [["1", "Zeynep K.", "112,5"], ["2", "Mert A.", "109,0"], ["3", "Elif S.", "107,25"]];
-    var medal = ["#F59E0B", "#94A3B8", "#B45309"];
+    var _k = useState(0);
+    var k = _k[0];
+    var setK = _k[1];
+    var fade = useRef(new Animated.Value(1)).current;
+    var auto = useRef(true);
+    useEffect(function () {
+        if (props.still || !auto.current) return;
+        var t = setTimeout(function () { show((k + 1) % RAPOR.length, true); }, 2800);
+        return function () { clearTimeout(t); };
+    }, [k, props.still]);
+    function show(i, fromTimer) {
+        if (!fromTimer) auto.current = false;
+        if (i === k) return;
+        if (props.still) { setK(i); return; }
+        Animated.timing(fade, { toValue: 0, duration: 140, useNativeDriver: true }).start(function () {
+            setK(i);
+            Animated.timing(fade, { toValue: 1, duration: 220, useNativeDriver: true }).start();
+        });
+    }
     return (
         <View style={a.box}>
-            <Card style={{ position: "absolute", left: 14, right: 14, top: 40, padding: 16 }}>
-                <View style={a.rowBetween}>
-                    <View>
-                        <Text style={a.cardKick}>PAZAR DENEMESİ</Text>
-                        <Text style={a.cardTitle}>Türkiye sıralaması</Text>
-                    </View>
-                    <View style={a.live}><View style={a.liveDot} /><Text style={a.liveTxt}>CANLI</Text></View>
+            <View style={a.rep}>
+                <View style={a.repBar}>
+                    <View style={[a.repDot, { backgroundColor: "#F87171" }]} />
+                    <View style={[a.repDot, { backgroundColor: "#FBBF24" }]} />
+                    <View style={[a.repDot, { backgroundColor: "#34D399" }]} />
+                    <Text style={a.repBarTxt} numberOfLines={1}>Pazar Denemesi raporu</Text>
+                    <View style={a.live}><View style={a.liveDot} /><Text style={a.liveTxt}>ÖRNEK</Text></View>
                 </View>
-                {rows.map(function (r, i) {
+                <Animated.Image source={RAPOR[k].img} style={[a.repImg, { opacity: fade }]} resizeMode="cover" accessibilityLabel={"Örnek deneme raporu: " + RAPOR[k].t} />
+            </View>
+            <View style={a.repTabs}>
+                {RAPOR.map(function (r, i) {
+                    var on = i === k;
                     return (
-                        <View key={r[0]} style={a.rank}>
-                            <Medal size={18} color={medal[i]} strokeWidth={2.4} />
-                            <Text style={a.rankName}>{r[1]}</Text>
-                            <Text style={a.rankNet}>{r[2]} net</Text>
-                        </View>
+                        <Tap key={r.t} onPress={function () { show(i, false); }} style={[a.repTab, on && a.repTabOn]} accessibilityLabel={"Rapor: " + r.t} accessibilityState={{ selected: on }}>
+                            <Text style={[a.repTabTxt, on && a.repTabTxtOn]}>{r.t}</Text>
+                        </Tap>
                     );
                 })}
-                <LinearGradient colors={["#0D2C4D", "#14607a"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={a.me}>
-                    <Text style={a.meRank}>1.248.</Text>
-                    <Text style={a.meName}>Sen</Text>
-                    <Text style={a.meNet}>78,5 net</Text>
-                </LinearGradient>
-            </Card>
-            <Float still={props.still} style={{ right: 0, top: -6 }}>
-                <Chip icon={Users} top="Herkes aynı anda" val="Sonuç Pazar akşamı" bg="#DBEAFE" color="#1D4ED8" />
-            </Float>
-            <Float still={props.still} delay={500} style={{ left: -4, bottom: -14 }}>
-                <Chip icon={TrendingUp} top="Geçen haftaya göre" val="+312 sıra" bg="#DCFCE7" color="#15803D" />
-            </Float>
+            </View>
         </View>
     );
 }
@@ -298,7 +314,7 @@ var PAGES = [
         art: ArtDeneme, glow: "#F59E0B",
         kicker: "Her Pazar canlı deneme",
         title: "Türkiye geneli sıralamada yerini gör.",
-        text: "Herkes aynı anda çözer. Sıralama, net dağılımı ve konu analizi Pazar akşamı hazır."
+        text: "Sınav biter, rapor gelir: netin, Türkiye geneli sıran, ders ders analiz ve yanlış yaptığın her sorunun çözümü."
     }
 ];
 
@@ -467,17 +483,21 @@ var a = StyleSheet.create({
     gameD: { fontSize: 11.5, color: MUTED, marginTop: 2 },
     xp: Object.assign({ flexDirection: "row", alignItems: "center", gap: 5, backgroundColor: GOLD, borderRadius: 999, paddingHorizontal: 12, paddingVertical: 7 }, shadow),
     xpTxt: { fontSize: 12.5, fontWeight: "800", color: "#1F1A0E" },
+    // deneme raporu
+    rep: Object.assign({ backgroundColor: "#F8FAFC", borderRadius: 18, overflow: "hidden", borderWidth: 1, borderColor: "rgba(232,201,135,0.45)" }, shadow),
+    repBar: { flexDirection: "row", alignItems: "center", gap: 5, paddingHorizontal: 10, height: 28, backgroundColor: "#E9EEF3", borderBottomWidth: 1, borderBottomColor: "#DCE3EA" },
+    repDot: { width: 8, height: 8, borderRadius: 4 },
+    repBarTxt: { flex: 1, marginLeft: 5, fontSize: 11, fontWeight: "700", color: "#64748B" },
+    repImg: { width: ART_W - 2, height: Math.round((ART_W - 2) * 560 / 780) },
+    repTabs: { flexDirection: "row", justifyContent: "center", gap: 6, marginTop: 12 },
+    repTab: { paddingHorizontal: 12, paddingVertical: 6, borderRadius: 999, backgroundColor: "rgba(255,255,255,0.08)", borderWidth: 1, borderColor: "rgba(255,255,255,0.14)" },
+    repTabOn: { backgroundColor: GOLD, borderColor: GOLD },
+    repTabTxt: { fontSize: 12.5, fontWeight: "700", color: "rgba(255,255,255,0.85)" },
+    repTabTxtOn: { color: "#1F1A0E" },
     // deneme
     live: { flexDirection: "row", alignItems: "center", gap: 5, backgroundColor: "#FFE4E6", borderRadius: 999, paddingHorizontal: 9, paddingVertical: 4 },
     liveDot: { width: 7, height: 7, borderRadius: 4, backgroundColor: "#E11D48" },
     liveTxt: { fontSize: 10, fontWeight: "800", color: "#BE123C", letterSpacing: 0.8 },
-    rank: { flexDirection: "row", alignItems: "center", gap: 10, marginTop: 11, paddingTop: 11, borderTopWidth: 1, borderTopColor: "#F1F5F9" },
-    rankName: { flex: 1, fontSize: 13.5, fontWeight: "700", color: INK },
-    rankNet: { fontSize: 12.5, fontWeight: "700", color: MUTED },
-    me: { flexDirection: "row", alignItems: "center", gap: 10, marginTop: 12, borderRadius: 14, paddingHorizontal: 12, paddingVertical: 10 },
-    meRank: { fontSize: 13, fontWeight: "800", color: GOLD },
-    meName: { flex: 1, fontSize: 13.5, fontWeight: "800", color: "#fff" },
-    meNet: { fontSize: 13, fontWeight: "800", color: "#fff" }
 });
 
 var s = StyleSheet.create({
