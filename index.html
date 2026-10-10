@@ -121,7 +121,7 @@
     <link rel="stylesheet" href="css/tailwind.css?v=3">
 
     <script>
-        // Soru ve not dosyaları (≈2 MB). Ziyaretçide tanıtım sayfası açıldıktan SONRA, daha önce giriş yapmış
+        // Soru ve not dosyaları (≈2 MB). Ziyaretçide tanıtım sayfası çizildikten SONRA, daha önce giriş yapmış
         // kullanıcıda hemen inmeye başlar; böylece yavaş bağlantıda tanıtım sayfası içeriği beklemez.
         // Hepsi inince KpssContent hazır olur; giriş yapmış kullanıcı ekranı o zaman açılır (js/app.jsx).
         // Bir soru/not dosyası değişince aşağıdaki ?v= numarasını artır.
@@ -381,11 +381,12 @@
                 }
             } catch (e) { returning = true; }
             if (returning) start();
-            else window.addEventListener("load", function () { setTimeout(start, 200); });
+            // Ziyaretçi: tanıtım ekranı çizilince js/app.jsx başlatır; olmazsa sayfa yüklendikten 10 sn sonra
+            else window.addEventListener("load", function () { setTimeout(start, 10000); });
             return {
                 start: start,
                 isReady: function () { return ready; },
-                onReady: function (f) { start(); if (ready) f(); else fns.push(f); }
+                onReady: function (f) { if (ready) f(); else fns.push(f); }
             };
         })();
     </script>
@@ -2941,7 +2942,7 @@
     <script>
         // js/app.jsx derlenmiş hâliyle önbellekten açılır (bkz. js/jsxLoader.js). Değişince ?v= artır.
         document.addEventListener("DOMContentLoaded", function () {
-            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=157");
+            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=159");
         });
     </script>
     <script>

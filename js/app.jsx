@@ -3756,6 +3756,10 @@ function App() {
     const [LazyCmp, setLazyCmp] = useState(null);
     const [authReady, setAuthReady] = useState(false);
     const [authSession, setAuthSession] = useState(null);
+    // Oturum varsa içerik hemen gerekir (ziyaretçide tanıtım ekranı çizildikten sonra başlar)
+    useEffect(function () {
+        if (authSession && window.KpssContent) window.KpssContent.start();
+    }, [authSession]);
     const [GateAuth, setGateAuth] = useState(null);
     const [AdminCmp, setAdminCmp] = useState(null);
     const [lazyErr, setLazyErr] = useState("");
@@ -3915,6 +3919,8 @@ function App() {
         if (authReady && (!authSession || pwRecovery) && window.JsxLoader) {
             window.JsxLoader.load("AuthScreen", "js/components/AuthScreen.jsx").then(function (C) {
                 if (C) setGateAuth(function () { return C; });
+                // Ziyaretçi: tanıtım/giriş ekranı çizildi; soru ve not dosyaları şimdi arka planda insin
+                setTimeout(function () { if (window.KpssContent) window.KpssContent.start(); }, 1200);
             });
         }
     }, [authReady, authSession, pwRecovery]);
@@ -4209,7 +4215,8 @@ function App() {
         }
     }
 
-    if (!kpssData || !Object.keys(kpssData).length) {
+    // İçerik henüz iniyorsa hata değil: ziyaretçi tanıtım ekranını görür, giriş yapan aşağıda bekler
+    if (contentReady && (!kpssData || !Object.keys(kpssData).length)) {
         return (
             <div className="brand-backdrop flex flex-col items-center justify-center min-h-screen gap-4">
                 <p className="font-medium text-lg" style={{ color: "rgba(245,235,199,0.9)" }}>Veriler yüklenemedi. Sayfayı yenileyin.</p>
