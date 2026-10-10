@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Animated, Image, Text, View, StyleSheet, ActivityIndicator, ScrollView } from "react-native";
-import { AlertCircle, Check, CheckCircle2, ChevronLeft, Gift, GraduationCap, Lock, Mail, User } from "lucide-react-native";
+import { AlertCircle, Check, CheckCircle2, ChevronLeft, Gift, GraduationCap, Lock, Mail, MailCheck, User } from "lucide-react-native";
 import { SCORE_CLR, SCORE_TXT, passRules, passScore, suggestEmail, validEmail } from "../lib/authHints";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Svg, { Path } from "react-native-svg";
@@ -14,7 +14,7 @@ import { sessionStorageShim } from "../lib/storage";
 import { SITE } from "../lib/media";
 import { parseAuthUrl } from "../lib/authLinks";
 import { useApp } from "../AppProvider";
-import { Field, PrimaryButton, Tap, ThemeToggle } from "../ui";
+import { Field, GhostButton, PrimaryButton, Tap, ThemeToggle } from "../ui";
 import { needsKulvar } from "../lib/theme";
 import { BrandBackdrop } from "./SplashScreen";
 import { StatusBar } from "expo-status-bar";
@@ -97,6 +97,17 @@ export default function AuthScreen() {
     var examDate = _exam[0];
     var setExamDate = _exam[1];
     
+    // Kayıttan sonra "mailini kontrol et" ekranı (web: js/components/AuthScreen.jsx checkMail)
+    var _sentTo = useState("");
+    var sentTo = _sentTo[0], setSentTo = _sentTo[1];
+    var _resendIn = useState(0);
+    var resendIn = _resendIn[0], setResendIn = _resendIn[1];
+    var scrollRef = useRef(null);
+    useEffect(function () {
+        if (resendIn <= 0) return;
+        var t = setTimeout(function () { setResendIn(resendIn - 1); }, 1000);
+        return function () { clearTimeout(t); };
+    }, [resendIn]);
     var _kvkk = useState(false);
     var kvkk = _kvkk[0];
     var setKvkk = _kvkk[1];
@@ -198,12 +209,21 @@ export default function AuthScreen() {
                     }
                 });
                 if (up.error) throw up.error;
+                var ids = up.data.user && up.data.user.identities;
+                if (!up.data.session && Array.isArray(ids) && ids.length === 0) {
+                    // Supabase kayıtlı e-postada hata vermez ve mail de göndermez; kullanıcıya söyle
+                    switchMode("in"); setPass("");
+                    setMsg("Bu e-postayla zaten bir Atanly hesabı var. Giriş yap; şifreni hatırlamıyorsan “Şifremi unuttum”a dokun.");
+                    setBusy(false);
+                    return;
+                }
                 if (up.data.user) {
                     StudentStore.bindToUser(up.data.user.id, up.data.user.email);
                     StudentStore.consumeSignupIfNeeded(up.data.user);
                 }
                 if (!up.data.session) {
-                    setMsg("E-postanı doğrula, sonra giriş yap.");
+                    setSentTo(email.trim()); setResendIn(60); setMsg("");
+                    if (scrollRef.current && scrollRef.current.scrollTo) scrollRef.current.scrollTo({ y: 0, animated: true });
                 }
             } else {
                 var inn = await supabase.auth.signInWithPassword({ email: email, password: pass });
@@ -374,6 +394,19 @@ export default function AuthScreen() {
     var stepLabels = totalSteps === 3 ? ["Seni tanıyalım", "Kulvar", "Hesabın"] : ["Seni tanıyalım", "Hesabın"];
     var stepIdx = totalSteps === 3 ? step : (step === 3 ? 2 : 1);
 
+    async function resendConfirm() {
+        if (!sentTo || resendIn > 0 || busy) return;
+        setBusy(true); setMsg("");
+        try {
+            var r = await supabase.auth.resend({ type: "signup", email: sentTo });
+            if (r && r.error) throw r.error;
+            setMsg("✅ Yeni onay bağlantısı gönderildi."); setResendIn(60);
+        } catch (e) {
+            setMsg(trError(e, "Mail gönderilemedi."));
+        }
+        setBusy(false);
+    }
+
     function switchMode(m) {
         setMode(m); setForgot(false); setStep(1); setMsg(""); setTouched({});
     }
@@ -459,8 +492,16 @@ export default function AuthScreen() {
         );
     }
 
-    var heading = recovering ? "Yeni şifreni belirle" : forgot ? "Şifreni sıfırla" : mode === "up" ? "Hesabını oluştur" : "Tekrar hoş geldin";
+    var mailHost = (sentTo.split("@")[1] || "").toLowerCase();
+    var inboxLink = /gmail|googlemail/.test(mailHost) ? ["Gmail'i aç", "https://mail.google.com/mail/u/0/#inbox"]
+        : /hotmail|outlook|live|msn/.test(mailHost) ? ["Outlook'u aç", "https://outlook.live.com/mail/0/inbox"]
+        : /yahoo/.test(mailHost) ? ["Yahoo Mail'i aç", "https://mail.yahoo.com"]
+        : /icloud|me\.com|mac\.com/.test(mailHost) ? ["iCloud Mail'i aç", "https://www.icloud.com/mail"]
+        : /yandex/.test(mailHost) ? ["Yandex Mail'i aç", "https://mail.yandex.com.tr"] : null;
+
+    var heading = recovering ? "Yeni şifreni belirle" : sentTo ? "Mailini kontrol et" : forgot ? "Şifreni sıfırla" : mode === "up" ? "Hesabını oluştur" : "Tekrar hoş geldin";
     var sub = recovering ? "Maildeki bağlantı seni buraya getirdi. Yeni şifren en az 6 karakter olsun."
+        : sentTo ? "Hesabın hazır; açmak için tek adım kaldı."
         : forgot ? "E-postanı yaz; şifre sıfırlama bağlantısını gönderelim."
         : mode === "up" ? "Ücretsiz. Kısa birkaç adım; kart bilgisi istenmez."
         : "Programın, notların ve yanlış defterin seni bekliyor.";
@@ -486,6 +527,7 @@ export default function AuthScreen() {
                 </View>
                 <View style={[styles.sheet, dark && ns.sheetDark]}>
                     <ScrollView
+                        ref={scrollRef}
                         contentContainerStyle={ns.sheetInner}
                         keyboardShouldPersistTaps="handled"
                         keyboardDismissMode="on-drag"
@@ -507,6 +549,27 @@ export default function AuthScreen() {
                                 </Tap>
                                 <Notice />
                             </View>
+                        ) : sentTo ? (
+                            <View accessibilityLiveRegion="polite">
+                                <Notice />
+                                <View style={[ns.mailIco, dark && { backgroundColor: "rgba(20,184,166,0.14)" }]}><MailCheck size={26} color="#0F766E" /></View>
+                                <Text style={[ns.mailLead, { color: muted }]}><Text style={{ color: ink, fontWeight: "700" }}>{sentTo}</Text> adresine bir onay bağlantısı gönderdik.</Text>
+                                <View style={ns.mailStep}><View style={[ns.mailNo, dark && { backgroundColor: "#292524" }]}><Text style={[ns.mailNoTxt, { color: ink }]}>1</Text></View><Text style={[ns.mailStepTxt, { color: muted }]}>Gelen kutunu aç; konu: <Text style={{ color: ink, fontWeight: "700" }}>“Atanly hesabını onayla”</Text>.</Text></View>
+                                <View style={ns.mailStep}><View style={[ns.mailNo, dark && { backgroundColor: "#292524" }]}><Text style={[ns.mailNoTxt, { color: ink }]}>2</Text></View><Text style={[ns.mailStepTxt, { color: muted }]}><Text style={{ color: ink, fontWeight: "700" }}>Hesabımı onayla</Text> düğmesine dokun; uygulama açılır ve giriş yapılır.</Text></View>
+                                {inboxLink ? (
+                                    <PrimaryButton title={inboxLink[0]} onPress={function () { Linking.openURL(inboxLink[1]).catch(function () {}); }} style={{ marginTop: 16 }} />
+                                ) : null}
+                                <View style={[ns.mailTip, dark && { backgroundColor: "rgba(217,119,6,0.12)", borderColor: "#78350F" }]}>
+                                    <Text style={[ns.mailTipTxt, dark && { color: "#FCD34D" }]}>Birkaç dakikada gelmezse <Text style={{ fontWeight: "700" }}>Spam / Gereksiz</Text> klasörüne bak. Oradaysa “Gereksiz değil” olarak işaretle.</Text>
+                                </View>
+                                <View style={ns.row}>
+                                    <View style={{ flex: 1 }}><GhostButton title={resendIn > 0 ? "Tekrar gönder (" + resendIn + ")" : "Tekrar gönder"} disabled={resendIn > 0 || busy} busy={busy} onPress={resendConfirm} /></View>
+                                    <View style={{ flex: 1 }}><GhostButton title="E-postayı düzelt" onPress={function () { setSentTo(""); setStep(3); setMsg(""); }} /></View>
+                                </View>
+                                <Tap onPress={function () { setSentTo(""); switchMode("in"); setPass(""); }} style={ns.linkBtn}>
+                                    <Text style={ns.link}>Onayladım, giriş yap</Text>
+                                </Tap>
+                            </View>
                         ) : (
                             <View>
                                 {!forgot ? (
@@ -524,6 +587,8 @@ export default function AuthScreen() {
                                         })}
                                     </View>
                                 ) : null}
+
+                                <Notice />
 
                                 {mode === "in" && (
                                     <View>
@@ -618,7 +683,6 @@ export default function AuthScreen() {
                                     </View>
                                 )}
 
-                                <Notice />
                                 <Text style={[ns.foot, { color: muted }]}>
                                     {mode === "in" ? "İlk kez Google ile gelince ad, eğitim ve kulvar sorulur." : "Zaten hesabın var mı? Üstten \"Giriş yap\"a dokun."}
                                 </Text>
@@ -632,6 +696,14 @@ export default function AuthScreen() {
 }
 
 var ns = StyleSheet.create({
+    mailIco: { width: 56, height: 56, borderRadius: 16, backgroundColor: "#F0FDFA", alignItems: "center", justifyContent: "center", marginBottom: 16 },
+    mailLead: { fontSize: 15, lineHeight: 22, marginBottom: 14 },
+    mailStep: { flexDirection: "row", gap: 12, alignItems: "flex-start", marginBottom: 10 },
+    mailNo: { width: 24, height: 24, borderRadius: 12, backgroundColor: "#F1F5F9", alignItems: "center", justifyContent: "center" },
+    mailNoTxt: { fontSize: 12, fontWeight: "800" },
+    mailStepTxt: { flex: 1, fontSize: 14, lineHeight: 20 },
+    mailTip: { marginTop: 16, marginBottom: 16, padding: 12, borderRadius: 12, borderWidth: 1, borderColor: "#FDE68A", backgroundColor: "#FFFBEB" },
+    mailTipTxt: { fontSize: 13, lineHeight: 19, color: "#92400E" },
     top: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: 20, paddingTop: 6 },
     brandRow: { flexDirection: "row", alignItems: "center", gap: 10 },
     logo: { width: 38, height: 38 },
@@ -661,7 +733,7 @@ var ns = StyleSheet.create({
     rule: { flexDirection: "row", alignItems: "center", gap: 4 },
     ruleTxt: { fontSize: 12 },
     scoreTxt: { marginLeft: "auto", fontSize: 12, fontWeight: "700" },
-    notice: { flexDirection: "row", gap: 10, padding: 14, borderRadius: 16, marginTop: 18, alignItems: "flex-start" },
+    notice: { flexDirection: "row", gap: 10, padding: 14, borderRadius: 16, marginTop: 4, marginBottom: 16, alignItems: "flex-start" },
     noticeOk: { backgroundColor: "#ECFDF5", borderWidth: 1, borderColor: "#A7F3D0" },
     noticeErr: { backgroundColor: "#FFF1F2", borderWidth: 1, borderColor: "#FECDD3" },
     noticeTxt: { flex: 1, fontSize: 13.5, lineHeight: 19 },

@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:69815:iapioo*/
+/*jsx:babel-7.29.9-react-classic:75300:1mri36v*/
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 (function () {
   const {
@@ -348,7 +348,8 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
     ok: "M22 11.1V12a10 10 0 1 1-5.9-9.1M22 4 12 14.01l-3-3",
     back: "M15 18l-6-6 6-6",
     cap: "M2 9l10-5 10 5-10 5zm4 2.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5M22 9v5",
-    key: "M15 7a4 4 0 1 1-3.5 6L5 19.5V22H2v-3l6.5-6.5A4 4 0 0 1 15 7zm1.5-1.5h.01"
+    key: "M15 7a4 4 0 1 1-3.5 6L5 19.5V22H2v-3l6.5-6.5A4 4 0 0 1 15 7zm1.5-1.5h.01",
+    arrow: "M7 17 17 7M8 7h9v9"
   };
   function AuthIcon(props) {
     return /*#__PURE__*/React.createElement("svg", {
@@ -935,7 +936,27 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
           setMsg(window.trError ? window.trError(res.error, "Giriş yapılamadı.") : "Giriş yapılamadı.");
           if (Date.now() < loginLockUntil) setMsg(loginLockedMsg());
         } else if (mode === "up" && !(res.data && res.data.session)) {
-          setMsg("✅ Kayıt tamam! E-postanıza gelen linke tıklayarak hesabınızı doğrulayın.");
+          var ids = res.data && res.data.user && res.data.user.identities;
+          if (Array.isArray(ids) && ids.length === 0) {
+            // Supabase, kayıtlı e-postada hata vermez ve mail de göndermez; kullanıcıya söyle
+            setMode("in");
+            setStep(1);
+            setPass("");
+            setTouched({});
+            setMsg("Bu e-postayla zaten bir Atanly hesabı var. Giriş yap; şifreni hatırlamıyorsan “Şifremi unuttum”a dokun.");
+          } else {
+            setSentTo(email.trim());
+            setResendIn(60);
+            setMsg("");
+            try {
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+              });
+            } catch (e) {
+              window.scrollTo(0, 0);
+            }
+          }
         } else {
           loginFails = 0;
           loginLockUntil = 0;
@@ -944,6 +965,26 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
         }
       } catch (e) {
         setMsg(window.trError ? window.trError(e, "İşlem tamamlanamadı.") : "İşlem tamamlanamadı.");
+      }
+      setBusy(false);
+    }
+
+    // ---------- Onay mailini tekrar gönder ----------
+    async function resendConfirm() {
+      if (!sb || !sentTo || resendIn > 0 || busy) return;
+      setBusy(true);
+      setMsg("");
+      try {
+        var r = await sb.auth.resend({
+          type: "signup",
+          email: sentTo
+        });
+        if (r && r.error) setMsg(window.trError ? window.trError(r.error, "Mail gönderilemedi.") : "Mail gönderilemedi.");else {
+          setMsg("✅ Yeni onay bağlantısı gönderildi.");
+          setResendIn(60);
+        }
+      } catch (e) {
+        setMsg(window.trError ? window.trError(e, "Mail gönderilemedi.") : "Mail gönderilemedi.");
       }
       setBusy(false);
     }
@@ -1038,6 +1079,26 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
     const [touched, setTouched] = useState({});
     const [caps, setCaps] = useState(false);
     const [kvkk, setKvkk] = useState(false);
+    // Kayıttan sonra "mailini kontrol et" ekranı: gönderilen adres ve tekrar gönderme sayacı
+    const [sentTo, setSentTo] = useState("");
+    const [resendIn, setResendIn] = useState(0);
+    const noticeRef = useRef(null);
+    useEffect(function () {
+      if (resendIn <= 0) return;
+      var t = setTimeout(function () {
+        setResendIn(resendIn - 1);
+      }, 1000);
+      return function () {
+        clearTimeout(t);
+      };
+    }, [resendIn]);
+    // Yeni mesaj gelince görünür alana getir (telefonda klavye/kaydırma yüzünden kaçmasın)
+    useEffect(function () {
+      if (msg && noticeRef.current && noticeRef.current.scrollIntoView) noticeRef.current.scrollIntoView({
+        block: "nearest",
+        behavior: "smooth"
+      });
+    }, [msg]);
     function touch(k) {
       setTouched(function (t) {
         var n = Object.assign({}, t);
@@ -1452,8 +1513,9 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
 
     // ---------- MESAJ ----------
     var notice = msg ? /*#__PURE__*/React.createElement("div", {
+      ref: noticeRef,
       role: okMsg ? "status" : "alert",
-      className: "mt-5 p-4 rounded-2xl text-[13.5px] flex items-start gap-3 atn-in " + (okMsg ? "bg-emerald-50 text-emerald-800 ring-1 ring-emerald-200 dark:bg-emerald-950/30 dark:text-emerald-200 dark:ring-emerald-900" : "bg-rose-50 text-rose-800 ring-1 ring-rose-200 dark:bg-rose-950/30 dark:text-rose-200 dark:ring-rose-900")
+      className: "mb-5 p-4 rounded-2xl text-[13.5px] flex items-start gap-3 atn-in scroll-mt-6 " + (okMsg ? "bg-emerald-50 text-emerald-800 ring-1 ring-emerald-200 dark:bg-emerald-950/30 dark:text-emerald-200 dark:ring-emerald-900" : "bg-rose-50 text-rose-800 ring-1 ring-rose-200 dark:bg-rose-950/30 dark:text-rose-200 dark:ring-rose-900")
     }, /*#__PURE__*/React.createElement("span", {
       className: "shrink-0 mt-0.5"
     }, /*#__PURE__*/React.createElement(AuthIcon, {
@@ -1518,9 +1580,72 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
         if (props.onRecoveryFailed) props.onRecoveryFailed();
       }
     }, "Giri\u015Fe d\xF6n")) : null;
+    var mailHost = (sentTo.split("@")[1] || "").toLowerCase();
+    var inbox = /gmail|googlemail/.test(mailHost) ? ["Gmail'i aç", "https://mail.google.com/mail/u/0/#inbox"] : /hotmail|outlook|live|msn/.test(mailHost) ? ["Outlook'u aç", "https://outlook.live.com/mail/0/inbox"] : /yahoo/.test(mailHost) ? ["Yahoo Mail'i aç", "https://mail.yahoo.com"] : /icloud|me\.com|mac\.com/.test(mailHost) ? ["iCloud Mail'i aç", "https://www.icloud.com/mail"] : /yandex/.test(mailHost) ? ["Yandex Mail'i aç", "https://mail.yandex.com.tr"] : null;
+    var checkMail = sentTo ? /*#__PURE__*/React.createElement("div", {
+      className: "atn-in",
+      role: "status",
+      "aria-live": "polite"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "w-14 h-14 rounded-2xl bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 grid place-items-center mb-5",
+      "aria-hidden": "true"
+    }, /*#__PURE__*/React.createElement(AuthIcon, {
+      name: "mail",
+      size: 26
+    })), /*#__PURE__*/React.createElement("p", {
+      className: "text-[15px] text-slate-600 dark:text-stone-300 leading-relaxed"
+    }, /*#__PURE__*/React.createElement("b", {
+      className: "text-slate-900 dark:text-white break-all"
+    }, sentTo), " adresine bir onay ba\u011Flant\u0131s\u0131 g\xF6nderdik."), /*#__PURE__*/React.createElement("ol", {
+      className: "mt-5 space-y-3 text-[14px] text-slate-600 dark:text-stone-300"
+    }, /*#__PURE__*/React.createElement("li", {
+      className: "flex gap-3"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "shrink-0 w-6 h-6 rounded-full bg-slate-100 dark:bg-stone-800 grid place-items-center text-[12px] font-bold"
+    }, "1"), /*#__PURE__*/React.createElement("span", null, "Gelen kutunu a\xE7; konu: ", /*#__PURE__*/React.createElement("b", null, "\u201CAtanly hesab\u0131n\u0131 onayla\u201D"), ".")), /*#__PURE__*/React.createElement("li", {
+      className: "flex gap-3"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "shrink-0 w-6 h-6 rounded-full bg-slate-100 dark:bg-stone-800 grid place-items-center text-[12px] font-bold"
+    }, "2"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("b", null, "Hesab\u0131m\u0131 onayla"), " d\xFC\u011Fmesine dokun; hesab\u0131n a\xE7\u0131l\u0131r ve buraya d\xF6nersin."))), inbox ? /*#__PURE__*/React.createElement("a", {
+      href: inbox[1],
+      target: "_blank",
+      rel: "noopener",
+      className: "atn-btn mt-6 inline-flex items-center justify-center gap-2"
+    }, inbox[0], /*#__PURE__*/React.createElement(AuthIcon, {
+      name: "arrow",
+      size: 16
+    })) : null, /*#__PURE__*/React.createElement("div", {
+      className: "mt-5 p-3.5 rounded-xl bg-amber-50 dark:bg-amber-950/30 ring-1 ring-amber-200 dark:ring-amber-900 text-[13px] text-amber-800 dark:text-amber-200 leading-relaxed"
+    }, "Birka\xE7 dakikada gelmezse ", /*#__PURE__*/React.createElement("b", null, "Spam / Gereksiz"), " klas\xF6r\xFCne bak. Oradaysa \u201CGereksiz de\u011Fil\u201D olarak i\u015Faretle."), /*#__PURE__*/React.createElement("div", {
+      className: "mt-5 grid grid-cols-2 gap-2.5"
+    }, /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "atn-btn-ghost",
+      disabled: resendIn > 0 || busy,
+      onClick: resendConfirm
+    }, busy ? "Gönderiliyor…" : resendIn > 0 ? "Tekrar gönder (" + resendIn + ")" : "Tekrar gönder"), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "atn-btn-ghost",
+      onClick: function () {
+        setSentTo("");
+        setStep(3);
+        setMsg("");
+      }
+    }, "E-postay\u0131 d\xFCzelt")), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "w-full mt-3 py-2 text-[13.5px] atn-link",
+      onClick: function () {
+        setSentTo("");
+        setMode("in");
+        setStep(1);
+        setPass("");
+        setMsg("");
+        setTouched({});
+      }
+    }, "Onaylad\u0131m, giri\u015F yap")) : null;
     var form = /*#__PURE__*/React.createElement("div", {
       className: props.gate ? "" : "p-6 sm:p-8"
-    }, recovery ? recoveryForm : /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    }, recovery ? recoveryForm : sentTo ? /*#__PURE__*/React.createElement("div", null, notice, checkMail) : /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
       className: "atn-seg mb-7",
       role: "tablist",
       "aria-label": "Giri\u015F ya da kay\u0131t"
@@ -1552,7 +1677,7 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
         setPass("");
         setTouched({});
       }
-    }, "Kay\u0131t ol")), signup, loginForm), notice);
+    }, "Kay\u0131t ol")), notice, signup, loginForm), recovery ? notice : null);
     if (!props.gate) return form;
     if (showLand && !recovery) {
       return /*#__PURE__*/React.createElement(LandingPage, {
@@ -1564,8 +1689,8 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
         }
       });
     }
-    var heading = recovery ? "Yeni şifreni belirle" : mode === "up" ? "Hesabını oluştur" : "Tekrar hoş geldin";
-    var sub = recovery ? "Maildeki bağlantı seni buraya getirdi. Yeni şifren en az 6 karakter olsun." : mode === "up" ? "Ücretsiz. İki kısa adım; kart bilgisi istenmez." : "Kaldığın yerden devam et: programın, notların ve yanlış defterin seni bekliyor.";
+    var heading = recovery ? "Yeni şifreni belirle" : sentTo ? "Mailini kontrol et" : mode === "up" ? "Hesabını oluştur" : "Tekrar hoş geldin";
+    var sub = recovery ? "Maildeki bağlantı seni buraya getirdi. Yeni şifren en az 6 karakter olsun." : sentTo ? "Hesabın hazır; açmak için tek adım kaldı." : mode === "up" ? "Ücretsiz. İki kısa adım; kart bilgisi istenmez." : "Kaldığın yerden devam et: programın, notların ve yanlış defterin seni bekliyor.";
     return /*#__PURE__*/React.createElement("div", {
       className: "atn-auth min-h-screen lg:grid lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)]"
     }, /*#__PURE__*/React.createElement(BrandPanel, null), /*#__PURE__*/React.createElement("main", {
