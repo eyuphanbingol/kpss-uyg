@@ -123,6 +123,17 @@
         });
     }
 
+    // Hazır derleme bu yükleyicinin derleyicisiyle üretilmişse doğrudan kullanılır; kaynak (.jsx) indirilmez.
+    // Derlemenin kaynakla güncel olduğunu `npm test` (scripts/test-core.js) denetler.
+    function codeFor(file, url) {
+        return fetchPrebuilt(file).then(function (pre) {
+            var nl = pre ? pre.indexOf("\n") : -1;
+            var head = nl > 0 ? pre.slice(0, nl).replace(/\r$/, "") : "";
+            if (head.indexOf("/*jsx:" + COMPILER + ":") === 0) return pre.slice(nl + 1);
+            return fetchText(url).then(function (src) { return compile(src, file, null); });
+        });
+    }
+
     function fetchText(path) {
         return fetch(path, { cache: "no-cache", credentials: "same-origin" }).then(function (r) {
             if (!r.ok) throw new Error("Bileşen yüklenemedi: " + path);
@@ -134,12 +145,9 @@
         global.KpssComponents = global.KpssComponents || {};
         if (global.KpssComponents[name]) return Promise.resolve(global.KpssComponents[name]);
         if (cache[name]) return cache[name];
-        var url = new URL(path, window.location.href).href.replace(/(\?.*)?$/, "") + "?v=105";
+        var url = new URL(path, window.location.href).href.replace(/(\?.*)?$/, "") + "?v=106";
         var file = path.replace(/\?.*$/, "");
-        var pre = fetchPrebuilt(file);
-        cache[name] = fetchText(url).then(function (src) {
-            return compile(src, file, pre);
-        }).then(function (code) {
+        cache[name] = codeFor(file, url).then(function (code) {
             var runner = new Function("React", "ReactDOM", code);
             runner(global.React, global.ReactDOM);
             var C = global.KpssComponents[name];
@@ -166,10 +174,7 @@
                     + '<button onclick="location.reload()" style="padding:10px 18px;border-radius:999px;border:0;background:#F5EBC7;color:#041C24;font-weight:700">Yenile</button></div>';
             }
         }
-        var pre = fetchPrebuilt(name);
-        return fetchText(path).then(function (src) {
-            return compile(src, name, pre);
-        }).then(function (code) {
+        return codeFor(name, path).then(function (code) {
             var s = document.createElement("script");
             s.text = code + "\n//# sourceURL=" + name;
             document.body.appendChild(s);

@@ -165,4 +165,20 @@ var mobileStore = body("mobile/src/lib/store.js");
 });
 ok(JSON.stringify(cat) === body("mobile/src/content/catalog.json").trim() || JSON.parse(body("mobile/src/content/catalog.json")) && true, "mobil katalog okunabilir");
 
+// ---------------------------------------------------------------- hazır derlemeler güncel mi
+// Tarayıcı geçerli hazır derlemeyi doğrudan kullanır (kaynağı indirmez); bu yüzden derleme unutulmamalı.
+var COMPILER = (body("js/jsxLoader.js").match(/var COMPILER = "([^"]+)"/) || [])[1];
+function jsxHash(str) {
+    str = String(str).replace(/\r\n?/g, "\n");
+    var h = 2166136261;
+    for (var i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); }
+    return COMPILER + ":" + str.length + ":" + (h >>> 0).toString(36);
+}
+["js/app.jsx"].concat(fs.readdirSync(path.join(root, "js", "components")).filter(function (f) { return /\.jsx$/.test(f); }).map(function (f) { return "js/components/" + f; }))
+    .forEach(function (rel) {
+        var out = rel.replace(/^js\//, "js/compiled/").replace(/\.jsx$/, ".js");
+        var head = body(out).split("\n")[0];
+        ok(head === "/*jsx:" + jsxHash(body(rel)) + "*/", out + " güncel değil: `npm run build:jsx` çalıştır");
+    });
+
 console.log("Çekirdek birim testleri: " + n + " kontrol geçti.");
