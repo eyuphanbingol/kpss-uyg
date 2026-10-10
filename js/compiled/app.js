@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:252554:mj9lt5*/
+/*jsx:babel-7.29.9-react-classic:252975:g1o66i*/
 const {
   useState,
   useEffect,
@@ -387,6 +387,64 @@ function isTypingTarget(el) {
   if (!el) return false;
   var tag = el.tagName || "";
   return tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || !!el.isContentEditable;
+}
+
+// Mobil çizgi simgeleri (lucide-react-native ile aynı çizimler).
+const LINE_ICONS = {
+  pencil: '<path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/>',
+  map: '<path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/>',
+  shield: '<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>',
+  layers: '<path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/>',
+  timer: '<line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/>',
+  book: '<path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>',
+  chevron: '<path d="m9 18 6-6-6-6"/>',
+  check: '<path d="M20 6 9 17l-5-5"/>',
+  lock: '<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>'
+};
+function LineIcon(props) {
+  var sz = props.size || 20;
+  return /*#__PURE__*/React.createElement("svg", {
+    width: sz,
+    height: sz,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: props.sw || 2,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    "aria-hidden": "true",
+    className: props.className,
+    dangerouslySetInnerHTML: {
+      __html: LINE_ICONS[props.name] || ""
+    }
+  });
+}
+
+// Mobil AccentCard karşılığı: solda altın şerit, isteğe bağlı simge kutusu, sağda ok.
+function AccentRow(props) {
+  return /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: props.onClick,
+    disabled: props.disabled,
+    className: "m-row " + (props.className || ""),
+    style: props.accent ? {
+      "--m-accent": props.accent
+    } : undefined
+  }, props.lead ? props.lead : props.icon ? /*#__PURE__*/React.createElement("span", {
+    className: "m-ico"
+  }, /*#__PURE__*/React.createElement(LineIcon, {
+    name: props.icon
+  })) : null, /*#__PURE__*/React.createElement("span", {
+    className: "min-w-0 flex-1"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "m-row-title"
+  }, props.title), props.sub ? /*#__PURE__*/React.createElement("span", {
+    className: "m-row-sub"
+  }, props.sub) : null), props.aside || null, props.disabled ? null : /*#__PURE__*/React.createElement(LineIcon, {
+    name: "chevron",
+    size: 18,
+    className: "m-chev"
+  }));
 }
 function Shell(props) {
   return /*#__PURE__*/React.createElement("div", {
@@ -1333,7 +1391,7 @@ function PlanCalendar(props) {
   })), /*#__PURE__*/React.createElement("header", {
     className: "mb-5"
   }, /*#__PURE__*/React.createElement("h1", {
-    className: "text-3xl font-display font-black tracking-tight gradient-text"
+    className: "m-title"
   }, "KPSS program\u0131m"), /*#__PURE__*/React.createElement("p", {
     className: "text-sm text-stone-500 mt-1"
   }, props.student.profile && props.student.profile.name ? props.student.profile.name + " · " : "", "S\u0131nav ", SP.fmtDate(plan.exam), " \xB7 ", plan.daysLeft, " g\xFCn \xB7 haftada ", SP.fmtMin(plan.weekMin)), /*#__PURE__*/React.createElement("div", {
@@ -2679,9 +2737,9 @@ function Bugun(props) {
   }, /*#__PURE__*/React.createElement("span", {
     className: "h-2 w-2 rounded-full bg-emerald-400 inline-block"
   }), "Ho\u015F geldin", name ? ", " + name : ""), /*#__PURE__*/React.createElement("h1", {
-    className: "text-3xl sm:text-4xl font-display font-black tracking-tight mt-1 gradient-text"
+    className: "m-title mt-1"
   }, "Bug\xFCn"), /*#__PURE__*/React.createElement("p", {
-    className: "text-sm text-stone-400 mt-1 max-w-sm"
+    className: "m-sub max-w-sm"
   }, "Hedefine do\u011Fru her g\xFCn bir ad\u0131m.")), /*#__PURE__*/React.createElement(ThemeBtn, {
     isDark: props.isDark,
     onClick: props.toggleDark
@@ -2756,80 +2814,31 @@ function Bugun(props) {
   }) : null);
 }
 function AlistirmalarHome(props) {
+  var items = [["cloze", "pencil", "Boşluk doldurma", "Nottaki boşluğu şıklardan tamamla."], ["map", "map", "Harita oyunu", "Konuyu seç, turdaki isimleri haritaya yerleştir."], ["conquer", "shield", "Türkiye'yi Fethet", "İli seç, soruları bitir; ili boya, bölge rozeti kap."], ["tabu", "layers", "Tabu", "İpuçlarından kavrama ulaş. Az ipucu, çok puan."], ["panic", "timer", "Son 30 saniye", "Doğru +2 sn, yanlış −3 sn. Hızlı net bilgi."]];
   return /*#__PURE__*/React.createElement(Shell, null, /*#__PURE__*/React.createElement("div", {
-    className: "flex justify-between items-start mb-8"
+    className: "flex justify-between items-start mb-6"
   }, /*#__PURE__*/React.createElement("div", {
     className: "slide-up"
   }, /*#__PURE__*/React.createElement("h1", {
-    className: "text-3xl sm:text-4xl font-display font-black tracking-tight gradient-text"
+    className: "m-title"
   }, "Al\u0131\u015Ft\u0131rmalar"), /*#__PURE__*/React.createElement("p", {
-    className: "text-sm text-stone-400 mt-1"
+    className: "m-sub"
   }, "Bo\u015Fluk, harita ve oyunlar.")), /*#__PURE__*/React.createElement(ThemeBtn, {
     isDark: props.isDark,
     onClick: props.toggleDark
   })), /*#__PURE__*/React.createElement("div", {
-    className: "grid gap-4 sm:grid-cols-2"
-  }, /*#__PURE__*/React.createElement("button", {
-    type: "button",
-    onClick: function () {
-      props.onKind("cloze");
-    },
-    className: "text-left p-6 rounded-3xl glass card-hover flex flex-col items-start justify-start"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "h-14 w-14 rounded-2xl bg-teal-50 dark:bg-teal-900/40 text-2xl flex items-center justify-center mb-3"
-  }, "\u270F\uFE0F"), /*#__PURE__*/React.createElement("h2", {
-    className: "font-bold text-lg"
-  }, "Bo\u015Fluk doldurma"), /*#__PURE__*/React.createElement("p", {
-    className: "text-sm text-stone-400 mt-1"
-  }, "Nottaki bo\u015Flu\u011Fu \u015F\u0131klardan tamamla.")), /*#__PURE__*/React.createElement("button", {
-    type: "button",
-    onClick: function () {
-      props.onKind("map");
-    },
-    className: "text-left p-6 rounded-3xl glass card-hover flex flex-col items-start justify-start"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "h-14 w-14 rounded-2xl bg-amber-50 dark:bg-amber-900/40 text-2xl flex items-center justify-center mb-3"
-  }, "\uD83D\uDDFA\uFE0F"), /*#__PURE__*/React.createElement("h2", {
-    className: "font-bold text-lg"
-  }, "Harita oyunu"), /*#__PURE__*/React.createElement("p", {
-    className: "text-sm text-stone-400 mt-1"
-  }, "Konuyu se\xE7, turdaki isimleri haritaya yerle\u015Ftir.")), /*#__PURE__*/React.createElement("button", {
-    type: "button",
-    onClick: function () {
-      props.onKind("conquer");
-    },
-    className: "text-left p-6 rounded-3xl glass card-hover flex flex-col items-start justify-start"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "h-14 w-14 rounded-2xl bg-emerald-50 dark:bg-emerald-900/40 text-2xl flex items-center justify-center mb-3"
-  }, "\uD83D\uDEE1\uFE0F"), /*#__PURE__*/React.createElement("h2", {
-    className: "font-bold text-lg"
-  }, "T\xFCrkiye'yi Fethet"), /*#__PURE__*/React.createElement("p", {
-    className: "text-sm text-stone-400 mt-1"
-  }, "\u0130li se\xE7, sorular\u0131 bitir; ili boya, b\xF6lge rozeti kap.")), /*#__PURE__*/React.createElement("button", {
-    type: "button",
-    onClick: function () {
-      props.onKind("tabu");
-    },
-    className: "text-left p-6 rounded-3xl glass card-hover flex flex-col items-start justify-start"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "h-14 w-14 rounded-2xl bg-violet-50 dark:bg-violet-900/40 text-2xl flex items-center justify-center mb-3"
-  }, "\uD83C\uDCCF"), /*#__PURE__*/React.createElement("h2", {
-    className: "font-bold text-lg"
-  }, "Tabu"), /*#__PURE__*/React.createElement("p", {
-    className: "text-sm text-stone-400 mt-1"
-  }, "\u0130pu\xE7lar\u0131ndan kavrama ula\u015F. Az ipucu, \xE7ok puan.")), /*#__PURE__*/React.createElement("button", {
-    type: "button",
-    onClick: function () {
-      props.onKind("panic");
-    },
-    className: "text-left p-6 rounded-3xl glass card-hover flex flex-col items-start justify-start"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "h-14 w-14 rounded-2xl bg-rose-50 dark:bg-rose-900/40 text-2xl flex items-center justify-center mb-3"
-  }, "\u23F1\uFE0F"), /*#__PURE__*/React.createElement("h2", {
-    className: "font-bold text-lg"
-  }, "Son 30 saniye"), /*#__PURE__*/React.createElement("p", {
-    className: "text-sm text-stone-400 mt-1"
-  }, "Do\u011Fru +2 sn, yanl\u0131\u015F \u22123 sn. H\u0131zl\u0131 net bilgi."))));
+    className: "grid gap-2.5 sm:grid-cols-2"
+  }, items.map(function (it) {
+    return /*#__PURE__*/React.createElement(AccentRow, {
+      key: it[0],
+      icon: it[1],
+      title: it[2],
+      sub: it[3],
+      onClick: function () {
+        props.onKind(it[0]);
+      }
+    });
+  })));
 }
 function AlistirmaDersList(props) {
   const kpssData = props.kpssData;
@@ -2842,11 +2851,11 @@ function AlistirmaDersList(props) {
     isDark: props.isDark,
     onClick: props.toggleDark
   })), /*#__PURE__*/React.createElement("h1", {
-    className: "text-2xl font-black mb-1"
+    className: "m-title"
   }, "Bo\u015Fluk doldurma"), /*#__PURE__*/React.createElement("p", {
-    className: "text-sm text-stone-400 mb-6"
+    className: "m-sub mb-6"
   }, "Ders se\xE7, sonra konu."), /*#__PURE__*/React.createElement("div", {
-    className: "space-y-3"
+    className: "space-y-2.5"
   }, Object.keys(kpssData).map(function (ders) {
     if (window.ClozeEngine && !window.ClozeEngine.dersEnabled(ders)) return null;
     const t = themeFor(ders, props.isDark);
@@ -2854,23 +2863,14 @@ function AlistirmaDersList(props) {
       return k !== "_";
     });
     if (!konular.length) return null;
-    return /*#__PURE__*/React.createElement("button", {
+    return /*#__PURE__*/React.createElement(AccentRow, {
       key: ders,
+      title: ders,
+      sub: konular.length + " konu",
       onClick: function () {
         props.onDers(ders);
-      },
-      className: "w-full text-left p-5 rounded-3xl glass card-hover flex items-center gap-5 group"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "h-14 w-14 rounded-2xl ders-icon flex items-center justify-center text-2xl shrink-0"
-    }, t.icon), /*#__PURE__*/React.createElement("div", {
-      className: "min-w-0 flex-1"
-    }, /*#__PURE__*/React.createElement("h2", {
-      className: "font-bold text-stone-800 dark:text-stone-100 text-lg"
-    }, ders), /*#__PURE__*/React.createElement("p", {
-      className: "text-sm text-stone-400"
-    }, konular.length, " konu")), /*#__PURE__*/React.createElement("span", {
-      className: "text-stone-300 group-hover:text-indigo-500 transition-colors text-xl"
-    }, "\u2192"));
+      }
+    });
   })));
 }
 function AlistirmaKonuList(props) {
@@ -3832,13 +3832,13 @@ function DersHome(props) {
     return d;
   };
   return /*#__PURE__*/React.createElement(Shell, null, /*#__PURE__*/React.createElement("div", {
-    className: "flex justify-between items-start mb-8"
+    className: "flex justify-between items-start mb-6"
   }, /*#__PURE__*/React.createElement("div", {
     className: "slide-up"
   }, /*#__PURE__*/React.createElement("h1", {
-    className: "text-3xl sm:text-4xl font-display font-black tracking-tight gradient-text"
+    className: "m-title"
   }, "Dersler"), /*#__PURE__*/React.createElement("p", {
-    className: "text-sm text-stone-400 mt-1"
+    className: "m-sub"
   }, "Not oku, test \xE7\xF6z. T\xFCm konular a\xE7\u0131k.")), /*#__PURE__*/React.createElement(ThemeBtn, {
     isDark: props.isDark,
     onClick: props.toggleDark
@@ -3852,23 +3852,14 @@ function DersHome(props) {
         soruSayisi: 0
       };
       if (!s.konuSayisi && !s.soruSayisi) return null;
-      return /*#__PURE__*/React.createElement("button", {
+      return /*#__PURE__*/React.createElement(AccentRow, {
         key: ders,
+        title: labelOf(ders),
+        sub: s.konuSayisi + " konu · " + s.soruSayisi + " soru",
         onClick: function () {
           props.onDers(ders);
-        },
-        className: "w-full text-left p-5 rounded-3xl glass card-hover flex items-center gap-5 group"
-      }, /*#__PURE__*/React.createElement("div", {
-        className: "h-14 w-14 rounded-2xl ders-icon flex items-center justify-center text-2xl shrink-0"
-      }, t.icon), /*#__PURE__*/React.createElement("div", {
-        className: "min-w-0 flex-1"
-      }, /*#__PURE__*/React.createElement("h2", {
-        className: "font-bold text-stone-800 dark:text-stone-100 text-lg"
-      }, labelOf(ders)), /*#__PURE__*/React.createElement("p", {
-        className: "text-sm text-stone-400"
-      }, s.konuSayisi, " konu \xB7 ", s.soruSayisi, " soru")), /*#__PURE__*/React.createElement("span", {
-        className: "text-stone-300 group-hover:text-indigo-500 transition-colors text-xl"
-      }, "\u2192"));
+        }
+      });
     }).filter(Boolean);
     if (!cards.length) return null;
     return /*#__PURE__*/React.createElement("section", {
@@ -4480,25 +4471,67 @@ function Eksikler(props) {
     if (!byDers[r.ders]) byDers[r.ders] = [];
     byDers[r.ders].push(r);
   });
+  function rowDone(r) {
+    return StudentStore.topicComplete(StudentStore.getTopic(r.ders, r.konu), {
+      sorular: new Array(r.soruSayisi || 0),
+      notlar: new Array(r.notSayisi || 0)
+    });
+  }
+  var doneAll = plan.rows.filter(rowDone).length;
+  var pctAll = plan.rows.length ? Math.round(doneAll / plan.rows.length * 100) : 0;
   return /*#__PURE__*/React.createElement(Shell, null, /*#__PURE__*/React.createElement("div", {
-    className: "flex justify-between items-start mb-8"
+    className: "flex justify-between items-start mb-6"
   }, /*#__PURE__*/React.createElement("div", {
     className: "slide-up"
   }, /*#__PURE__*/React.createElement("h1", {
-    className: "text-3xl sm:text-4xl font-display font-black tracking-tight gradient-text"
+    className: "m-title"
   }, "Eksikler"), /*#__PURE__*/React.createElement("p", {
-    className: "text-sm text-stone-400 mt-1"
+    className: "m-sub"
   }, "Konu durumu. Not ve soru yaln\u0131zca Dersler\u2019den.")), /*#__PURE__*/React.createElement(ThemeBtn, {
     isDark: props.isDark,
     onClick: props.toggleDark
   })), /*#__PURE__*/React.createElement("div", {
-    className: "grid grid-cols-2 gap-3 mb-3"
+    className: "glass rounded-2xl p-4 mb-3"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center justify-between gap-3 mb-2"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "text-sm font-semibold",
+    style: {
+      color: "var(--m-ink)"
+    }
+  }, doneAll, " / ", plan.rows.length, " konu tamamland\u0131"), /*#__PURE__*/React.createElement("span", {
+    className: "text-xs font-extrabold px-2.5 py-1 rounded-full",
+    style: {
+      background: "var(--m-gold-soft)",
+      color: "var(--m-gold-ink)"
+    }
+  }, "%", pctAll)), /*#__PURE__*/React.createElement("div", {
+    className: "h-2 rounded-full overflow-hidden",
+    style: {
+      background: "var(--m-line)"
+    },
+    role: "progressbar",
+    "aria-valuemin": 0,
+    "aria-valuemax": 100,
+    "aria-valuenow": pctAll,
+    "aria-label": "Konu ilerlemesi"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "h-full rounded-full",
+    style: {
+      width: pctAll + "%",
+      background: "linear-gradient(90deg,#0D2C4D,#1D8A99)"
+    }
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "grid grid-cols-2 gap-2.5 mb-3"
   }, /*#__PURE__*/React.createElement("button", {
     onClick: function () {
       props.onReview();
     },
     disabled: !plan.due.length,
-    className: "p-4 rounded-2xl btn-primary text-white text-left disabled:opacity-40"
+    className: "p-4 rounded-2xl text-white text-left disabled:opacity-50 disabled:cursor-not-allowed transition hover:brightness-110",
+    style: {
+      background: "linear-gradient(135deg,#0D2C4D,#14607A 60%,#1D8A99)"
+    }
   }, /*#__PURE__*/React.createElement("span", {
     className: "font-semibold block"
   }, "Bug\xFCn tekrar \xB7 ", plan.due.length), /*#__PURE__*/React.createElement("span", {
@@ -4508,50 +4541,79 @@ function Eksikler(props) {
       props.onWrong();
     },
     disabled: !plan.wrong.length,
-    className: "p-4 rounded-2xl border-2 border-rose-500 text-rose-600 text-left disabled:opacity-40"
+    className: "p-4 rounded-2xl border-[1.5px] border-rose-400 text-left disabled:opacity-50 disabled:cursor-not-allowed transition hover:bg-rose-50 dark:hover:bg-rose-950/30",
+    style: {
+      background: "var(--m-card)"
+    }
   }, /*#__PURE__*/React.createElement("span", {
-    className: "font-semibold block"
+    className: "font-semibold block text-rose-600 dark:text-rose-400"
   }, "Yanl\u0131\u015F defteri \xB7 ", plan.wrong.length), /*#__PURE__*/React.createElement("span", {
-    className: "text-xs font-normal opacity-80 mt-1 block"
+    className: "text-xs font-normal mt-1 block",
+    style: {
+      color: "var(--m-muted)"
+    }
   }, "\xC7\xF6zd\xFC\u011F\xFCn soru defterden d\xFC\u015Fer. Konu kilidini a\xE7maz."))), /*#__PURE__*/React.createElement(LiveGaps, {
     student: props.student,
     kpssData: props.kpssData,
     onKonu: props.onKonu
-  }), /*#__PURE__*/React.createElement("button", {
+  }), /*#__PURE__*/React.createElement(AccentRow, {
+    className: "mb-6",
+    accent: "#127880",
+    title: "Tekrar defteri",
+    sub: "Tekrar etmek istedi\u011Fin notlar\u0131 kendine yaz. Yaln\u0131zca sen g\xF6r\xFCrs\xFCn.",
     onClick: function () {
       props.onNotebook && props.onNotebook();
-    },
-    className: "w-full mb-6 p-4 rounded-2xl glass text-left card-hover"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "font-semibold block"
-  }, "Tekrar defteri"), /*#__PURE__*/React.createElement("span", {
-    className: "text-xs text-stone-400 font-normal mt-1 block"
-  }, "Tekrar etmek istedi\u011Fin notlar\u0131 kendine yaz. Yaln\u0131zca sen g\xF6r\xFCrs\xFCn.")), Object.keys(byDers).map(function (ders) {
-    const t = themeFor(ders, props.isDark);
-    return /*#__PURE__*/React.createElement("div", {
+    }
+  }), Object.keys(byDers).map(function (ders) {
+    var rows = byDers[ders];
+    var konular = Object.keys(props.kpssData[ders] || {}).filter(function (k) {
+      return k !== "_";
+    });
+    var doneN = rows.filter(function (r) {
+      return rowDone(r);
+    }).length;
+    return /*#__PURE__*/React.createElement("section", {
       key: ders,
       className: "mb-6"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex items-center justify-between mb-2.5"
     }, /*#__PURE__*/React.createElement("h2", {
-      className: "font-black mb-2 " + t.text
-    }, t.icon, " ", ders), /*#__PURE__*/React.createElement("div", {
+      className: "text-lg font-bold",
+      style: {
+        color: "var(--m-ink)"
+      }
+    }, ders), /*#__PURE__*/React.createElement("span", {
+      className: "text-xs font-extrabold px-2.5 py-1 rounded-full",
+      style: {
+        background: "var(--m-gold-soft)",
+        color: "var(--m-gold-ink)"
+      }
+    }, doneN, "/", rows.length)), /*#__PURE__*/React.createElement("div", {
       className: "wide-grid is-tight"
-    }, byDers[ders].map(function (r) {
-      const tp = StudentStore.getTopic(r.ders, r.konu);
-      const kd = {
-        sorular: new Array(r.soruSayisi || 0),
-        notlar: new Array(r.notSayisi || 0)
-      };
-      const done = StudentStore.topicComplete(tp, kd);
-      return /*#__PURE__*/React.createElement("div", {
+    }, rows.map(function (r) {
+      var done = rowDone(r);
+      var idx = konular.indexOf(r.konu);
+      var open = idx < 0 || StudentStore.isKonuOpen(ders, konular, idx, props.kpssData);
+      return /*#__PURE__*/React.createElement(AccentRow, {
         key: r.konu,
-        className: "w-full flex justify-between items-center p-3 rounded-xl border pointer-events-none " + (done ? "bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800" : "bg-stone-50 dark:bg-stone-900 border-stone-200 dark:border-stone-800 opacity-45")
-      }, /*#__PURE__*/React.createElement("span", {
-        className: "text-sm text-left pr-2 " + (done ? "font-semibold text-emerald-800 dark:text-emerald-200" : "font-medium text-stone-500")
-      }, kLabel(r.konu)), /*#__PURE__*/React.createElement("span", {
-        className: "text-[10px] font-semibold px-2 py-0.5 rounded-full shrink-0 " + (done ? "bg-emerald-100 text-emerald-700" : "bg-stone-100 text-stone-400")
-      }, done ? "Bitti" : "Bekliyor"));
+        accent: done ? "#D97706" : "#CBD5E1",
+        title: kLabel(r.konu),
+        disabled: !open,
+        sub: open ? null : "Önce önceki konuyu bitir",
+        aside: /*#__PURE__*/React.createElement("span", {
+          className: "text-[11px] font-bold px-2 py-0.5 rounded-full shrink-0 " + (done ? "bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300" : "bg-slate-100 text-slate-500 dark:bg-slate-700 dark:text-slate-300")
+        }, done ? "Bitti" : "Bekliyor"),
+        onClick: function () {
+          props.onKonu && props.onKonu(r.ders, r.konu);
+        }
+      });
     })));
-  }));
+  }), plan.rows.length ? /*#__PURE__*/React.createElement("p", {
+    className: "text-center text-xs mt-2",
+    style: {
+      color: "var(--m-muted)"
+    }
+  }, plan.rows.length, " konu takip ediliyor") : null);
 }
 function DenemeSetup(props) {
   const dersler = Object.keys(props.kpssData);
@@ -4592,13 +4654,13 @@ function DenemeSetup(props) {
     t: "40 dk"
   }];
   return /*#__PURE__*/React.createElement(Shell, null, /*#__PURE__*/React.createElement("div", {
-    className: "flex justify-between items-start mb-8"
+    className: "flex justify-between items-start mb-6"
   }, /*#__PURE__*/React.createElement("div", {
     className: "slide-up"
   }, /*#__PURE__*/React.createElement("h1", {
-    className: "text-3xl sm:text-4xl font-display font-black tracking-tight gradient-text"
+    className: "m-title"
   }, "Deneme"), /*#__PURE__*/React.createElement("p", {
-    className: "text-sm text-stone-400 mt-1"
+    className: "m-sub"
   }, "Kar\u0131\u015F\u0131k pratik veya tam kitap\xE7\u0131k. Konu kilidini atlatmaz; rastgele soru \xE7eker.")), /*#__PURE__*/React.createElement(ThemeBtn, {
     isDark: props.isDark,
     onClick: props.toggleDark
@@ -4959,13 +5021,13 @@ function Ben(props) {
     }
   }
   return /*#__PURE__*/React.createElement(Shell, null, /*#__PURE__*/React.createElement("div", {
-    className: "flex justify-between items-start mb-8"
+    className: "flex justify-between items-start mb-6"
   }, /*#__PURE__*/React.createElement("div", {
     className: "slide-up"
   }, /*#__PURE__*/React.createElement("h1", {
-    className: "text-3xl sm:text-4xl font-display font-black tracking-tight gradient-text"
+    className: "m-title"
   }, "Profil"), /*#__PURE__*/React.createElement("p", {
-    className: "text-sm text-stone-400 mt-1"
+    className: "m-sub"
   }, up.email || "Hesap bağlı"), /*#__PURE__*/React.createElement("p", {
     className: "text-xs text-stone-400 mt-1"
   }, "Ayarlar, ara\xE7lar ve plan burada.")), /*#__PURE__*/React.createElement(ThemeBtn, {
@@ -4974,20 +5036,44 @@ function Ben(props) {
   })), /*#__PURE__*/React.createElement("div", {
     className: "ben-cols"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "grid grid-cols-2 gap-2 mb-6"
+    className: "grid grid-cols-3 gap-2 mb-6"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "p-4 rounded-2xl glass card-hover"
+    className: "py-4 px-2 rounded-2xl glass text-center"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "text-xl font-semibold gradient-text"
+    className: "text-2xl font-extrabold",
+    style: {
+      color: "var(--m-ink)"
+    }
   }, totQ), /*#__PURE__*/React.createElement("div", {
-    className: "text-xs text-stone-400 mt-1"
-  }, "Toplam soru")), /*#__PURE__*/React.createElement("div", {
-    className: "p-4 rounded-2xl glass card-hover"
+    className: "text-xs mt-1",
+    style: {
+      color: "var(--m-muted)"
+    }
+  }, "Soru")), /*#__PURE__*/React.createElement("div", {
+    className: "py-4 px-2 rounded-2xl glass text-center"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "text-xl font-semibold gradient-text"
+    className: "text-2xl font-extrabold",
+    style: {
+      color: "var(--m-ink)"
+    }
   }, "%", overall), /*#__PURE__*/React.createElement("div", {
-    className: "text-xs text-stone-400 mt-1"
-  }, "Net"))), /*#__PURE__*/React.createElement("div", {
+    className: "text-xs mt-1",
+    style: {
+      color: "var(--m-muted)"
+    }
+  }, "Net")), /*#__PURE__*/React.createElement("div", {
+    className: "py-4 px-2 rounded-2xl glass text-center"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-2xl font-extrabold",
+    style: {
+      color: "#D97706"
+    }
+  }, st.streak && st.streak.count || 0), /*#__PURE__*/React.createElement("div", {
+    className: "text-xs mt-1",
+    style: {
+      color: "var(--m-muted)"
+    }
+  }, "Seri"))), /*#__PURE__*/React.createElement("div", {
     className: "rounded-3xl glass p-5 mb-4 card-hover"
   }, /*#__PURE__*/React.createElement("div", {
     className: "flex items-center justify-between mb-1"

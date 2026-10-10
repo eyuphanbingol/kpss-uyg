@@ -122,6 +122,41 @@ function isTypingTarget(el) {
     return tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || !!el.isContentEditable;
 }
 
+// Mobil çizgi simgeleri (lucide-react-native ile aynı çizimler).
+const LINE_ICONS = {
+    pencil: '<path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/>',
+    map: '<path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/>',
+    shield: '<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>',
+    layers: '<path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/>',
+    timer: '<line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/>',
+    book: '<path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>',
+    chevron: '<path d="m9 18 6-6-6-6"/>',
+    check: '<path d="M20 6 9 17l-5-5"/>',
+    lock: '<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>'
+};
+function LineIcon(props) {
+    var sz = props.size || 20;
+    return <svg width={sz} height={sz} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={props.sw || 2}
+        strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className={props.className}
+        dangerouslySetInnerHTML={{ __html: LINE_ICONS[props.name] || "" }} />;
+}
+
+// Mobil AccentCard karşılığı: solda altın şerit, isteğe bağlı simge kutusu, sağda ok.
+function AccentRow(props) {
+    return (
+        <button type="button" onClick={props.onClick} disabled={props.disabled} className={"m-row " + (props.className || "")}
+            style={props.accent ? { "--m-accent": props.accent } : undefined}>
+            {props.lead ? props.lead : props.icon ? <span className="m-ico"><LineIcon name={props.icon} /></span> : null}
+            <span className="min-w-0 flex-1">
+                <span className="m-row-title">{props.title}</span>
+                {props.sub ? <span className="m-row-sub">{props.sub}</span> : null}
+            </span>
+            {props.aside || null}
+            {props.disabled ? null : <LineIcon name="chevron" size={18} className="m-chev" />}
+        </button>
+    );
+}
+
 function Shell(props) {
     return (
         <div className="app-page pt-6 sm:pt-10 overflow-x-hidden">
@@ -774,7 +809,7 @@ function PlanCalendar(props) {
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
             <header className="mb-5">
-                <h1 className="text-3xl font-display font-black tracking-tight gradient-text">KPSS programım</h1>
+                <h1 className="m-title">KPSS programım</h1>
                 <p className="text-sm text-stone-500 mt-1">
                     {(props.student.profile && props.student.profile.name) ? props.student.profile.name + " · " : ""}
                     Sınav {SP.fmtDate(plan.exam)} · {plan.daysLeft} gün · haftada {SP.fmtMin(plan.weekMin)}
@@ -1645,8 +1680,8 @@ function Bugun(props) {
                         <span className="h-2 w-2 rounded-full bg-emerald-400 inline-block"></span>
                         Hoş geldin{name ? ", " + name : ""}
                     </p>
-                    <h1 className="text-3xl sm:text-4xl font-display font-black tracking-tight mt-1 gradient-text">Bugün</h1>
-                    <p className="text-sm text-stone-400 mt-1 max-w-sm">Hedefine doğru her gün bir adım.</p>
+                    <h1 className="m-title mt-1">Bugün</h1>
+                    <p className="m-sub max-w-sm">Hedefine doğru her gün bir adım.</p>
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
@@ -1689,46 +1724,26 @@ function Bugun(props) {
 }
 
 function AlistirmalarHome(props) {
+    var items = [
+        ["cloze", "pencil", "Boşluk doldurma", "Nottaki boşluğu şıklardan tamamla."],
+        ["map", "map", "Harita oyunu", "Konuyu seç, turdaki isimleri haritaya yerleştir."],
+        ["conquer", "shield", "Türkiye'yi Fethet", "İli seç, soruları bitir; ili boya, bölge rozeti kap."],
+        ["tabu", "layers", "Tabu", "İpuçlarından kavrama ulaş. Az ipucu, çok puan."],
+        ["panic", "timer", "Son 30 saniye", "Doğru +2 sn, yanlış −3 sn. Hızlı net bilgi."]
+    ];
     return (
         <Shell>
-            <div className="flex justify-between items-start mb-8">
+            <div className="flex justify-between items-start mb-6">
                 <div className="slide-up">
-                    <h1 className="text-3xl sm:text-4xl font-display font-black tracking-tight gradient-text">Alıştırmalar</h1>
-                    <p className="text-sm text-stone-400 mt-1">Boşluk, harita ve oyunlar.</p>
+                    <h1 className="m-title">Alıştırmalar</h1>
+                    <p className="m-sub">Boşluk, harita ve oyunlar.</p>
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-                <button type="button" onClick={function () { props.onKind("cloze"); }}
-                    className="text-left p-6 rounded-3xl glass card-hover flex flex-col items-start justify-start">
-                    <div className="h-14 w-14 rounded-2xl bg-teal-50 dark:bg-teal-900/40 text-2xl flex items-center justify-center mb-3">✏️</div>
-                    <h2 className="font-bold text-lg">Boşluk doldurma</h2>
-                    <p className="text-sm text-stone-400 mt-1">Nottaki boşluğu şıklardan tamamla.</p>
-                </button>
-                <button type="button" onClick={function () { props.onKind("map"); }}
-                    className="text-left p-6 rounded-3xl glass card-hover flex flex-col items-start justify-start">
-                    <div className="h-14 w-14 rounded-2xl bg-amber-50 dark:bg-amber-900/40 text-2xl flex items-center justify-center mb-3">🗺️</div>
-                    <h2 className="font-bold text-lg">Harita oyunu</h2>
-                    <p className="text-sm text-stone-400 mt-1">Konuyu seç, turdaki isimleri haritaya yerleştir.</p>
-                </button>
-                <button type="button" onClick={function () { props.onKind("conquer"); }}
-                    className="text-left p-6 rounded-3xl glass card-hover flex flex-col items-start justify-start">
-                    <div className="h-14 w-14 rounded-2xl bg-emerald-50 dark:bg-emerald-900/40 text-2xl flex items-center justify-center mb-3">🛡️</div>
-                    <h2 className="font-bold text-lg">Türkiye'yi Fethet</h2>
-                    <p className="text-sm text-stone-400 mt-1">İli seç, soruları bitir; ili boya, bölge rozeti kap.</p>
-                </button>
-                <button type="button" onClick={function () { props.onKind("tabu"); }}
-                    className="text-left p-6 rounded-3xl glass card-hover flex flex-col items-start justify-start">
-                    <div className="h-14 w-14 rounded-2xl bg-violet-50 dark:bg-violet-900/40 text-2xl flex items-center justify-center mb-3">🃏</div>
-                    <h2 className="font-bold text-lg">Tabu</h2>
-                    <p className="text-sm text-stone-400 mt-1">İpuçlarından kavrama ulaş. Az ipucu, çok puan.</p>
-                </button>
-                <button type="button" onClick={function () { props.onKind("panic"); }}
-                    className="text-left p-6 rounded-3xl glass card-hover flex flex-col items-start justify-start">
-                    <div className="h-14 w-14 rounded-2xl bg-rose-50 dark:bg-rose-900/40 text-2xl flex items-center justify-center mb-3">⏱️</div>
-                    <h2 className="font-bold text-lg">Son 30 saniye</h2>
-                    <p className="text-sm text-stone-400 mt-1">Doğru +2 sn, yanlış −3 sn. Hızlı net bilgi.</p>
-                </button>
+            <div className="grid gap-2.5 sm:grid-cols-2">
+                {items.map(function (it) {
+                    return <AccentRow key={it[0]} icon={it[1]} title={it[2]} sub={it[3]} onClick={function () { props.onKind(it[0]); }} />;
+                })}
             </div>
         </Shell>
     );
@@ -1742,26 +1757,16 @@ function AlistirmaDersList(props) {
                 <BackBtn onClick={props.onBack} label="Alıştırmalar" />
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
-            <h1 className="text-2xl font-black mb-1">Boşluk doldurma</h1>
-            <p className="text-sm text-stone-400 mb-6">Ders seç, sonra konu.</p>
-            <div className="space-y-3">
+            <h1 className="m-title">Boşluk doldurma</h1>
+            <p className="m-sub mb-6">Ders seç, sonra konu.</p>
+            <div className="space-y-2.5">
                 {Object.keys(kpssData).map(function (ders) {
                     if (window.ClozeEngine && !window.ClozeEngine.dersEnabled(ders)) return null;
                     const t = themeFor(ders, props.isDark);
                     const konular = Object.keys(kpssData[ders] || {}).filter(function (k) { return k !== "_"; });
                     if (!konular.length) return null;
                     return (
-                        <button key={ders} onClick={function () { props.onDers(ders); }}
-                            className="w-full text-left p-5 rounded-3xl glass card-hover flex items-center gap-5 group">
-                            <div className="h-14 w-14 rounded-2xl ders-icon flex items-center justify-center text-2xl shrink-0">
-                                {t.icon}
-                            </div>
-                            <div className="min-w-0 flex-1">
-                                <h2 className="font-bold text-stone-800 dark:text-stone-100 text-lg">{ders}</h2>
-                                <p className="text-sm text-stone-400">{konular.length} konu</p>
-                            </div>
-                            <span className="text-stone-300 group-hover:text-indigo-500 transition-colors text-xl">→</span>
-                        </button>
+                        <AccentRow key={ders} title={ders} sub={konular.length + " konu"} onClick={function () { props.onDers(ders); }} />
                     );
                 })}
             </div>
@@ -2490,10 +2495,10 @@ function DersHome(props) {
     var labelOf = (window.AlanCatalog && window.AlanCatalog.dersLabel) ? window.AlanCatalog.dersLabel : function (d) { return d; };
     return (
         <Shell>
-            <div className="flex justify-between items-start mb-8">
+            <div className="flex justify-between items-start mb-6">
                 <div className="slide-up">
-                    <h1 className="text-3xl sm:text-4xl font-display font-black tracking-tight gradient-text">Dersler</h1>
-                    <p className="text-sm text-stone-400 mt-1">Not oku, test çöz. Tüm konular açık.</p>
+                    <h1 className="m-title">Dersler</h1>
+                    <p className="m-sub">Not oku, test çöz. Tüm konular açık.</p>
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
@@ -2504,17 +2509,7 @@ function DersHome(props) {
                         const s = stats[ders] || { konuSayisi: 0, soruSayisi: 0 };
                         if (!s.konuSayisi && !s.soruSayisi) return null;
                         return (
-                            <button key={ders} onClick={function () { props.onDers(ders); }}
-                                className="w-full text-left p-5 rounded-3xl glass card-hover flex items-center gap-5 group">
-                                <div className="h-14 w-14 rounded-2xl ders-icon flex items-center justify-center text-2xl shrink-0">
-                                    {t.icon}
-                                </div>
-                                <div className="min-w-0 flex-1">
-                                    <h2 className="font-bold text-stone-800 dark:text-stone-100 text-lg">{labelOf(ders)}</h2>
-                                    <p className="text-sm text-stone-400">{s.konuSayisi} konu · {s.soruSayisi} soru</p>
-                                </div>
-                                <span className="text-stone-300 group-hover:text-indigo-500 transition-colors text-xl">→</span>
-                            </button>
+                            <AccentRow key={ders} title={labelOf(ders)} sub={s.konuSayisi + " konu · " + s.soruSayisi + " soru"} onClick={function () { props.onDers(ders); }} />
                         );
                     }).filter(Boolean);
                     if (!cards.length) return null;
@@ -2996,62 +2991,76 @@ function Eksikler(props) {
         if (!byDers[r.ders]) byDers[r.ders] = [];
         byDers[r.ders].push(r);
     });
+    function rowDone(r) {
+        return StudentStore.topicComplete(StudentStore.getTopic(r.ders, r.konu), {
+            sorular: new Array(r.soruSayisi || 0),
+            notlar: new Array(r.notSayisi || 0)
+        });
+    }
+    var doneAll = plan.rows.filter(rowDone).length;
+    var pctAll = plan.rows.length ? Math.round(doneAll / plan.rows.length * 100) : 0;
     return (
         <Shell>
-            <div className="flex justify-between items-start mb-8">
+            <div className="flex justify-between items-start mb-6">
                 <div className="slide-up">
-                    <h1 className="text-3xl sm:text-4xl font-display font-black tracking-tight gradient-text">Eksikler</h1>
-                    <p className="text-sm text-stone-400 mt-1">Konu durumu. Not ve soru yalnızca Dersler’den.</p>
+                    <h1 className="m-title">Eksikler</h1>
+                    <p className="m-sub">Konu durumu. Not ve soru yalnızca Dersler’den.</p>
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
-            <div className="grid grid-cols-2 gap-3 mb-3">
+            <div className="glass rounded-2xl p-4 mb-3">
+                <div className="flex items-center justify-between gap-3 mb-2">
+                    <span className="text-sm font-semibold" style={{ color: "var(--m-ink)" }}>{doneAll} / {plan.rows.length} konu tamamlandı</span>
+                    <span className="text-xs font-extrabold px-2.5 py-1 rounded-full" style={{ background: "var(--m-gold-soft)", color: "var(--m-gold-ink)" }}>%{pctAll}</span>
+                </div>
+                <div className="h-2 rounded-full overflow-hidden" style={{ background: "var(--m-line)" }} role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={pctAll} aria-label="Konu ilerlemesi">
+                    <div className="h-full rounded-full" style={{ width: pctAll + "%", background: "linear-gradient(90deg,#0D2C4D,#1D8A99)" }} />
+                </div>
+            </div>
+            <div className="grid grid-cols-2 gap-2.5 mb-3">
                 <button onClick={function () { props.onReview(); }} disabled={!plan.due.length}
-                    className="p-4 rounded-2xl btn-primary text-white text-left disabled:opacity-40">
+                    className="p-4 rounded-2xl text-white text-left disabled:opacity-50 disabled:cursor-not-allowed transition hover:brightness-110"
+                    style={{ background: "linear-gradient(135deg,#0D2C4D,#14607A 60%,#1D8A99)" }}>
                     <span className="font-semibold block">Bugün tekrar · {plan.due.length}</span>
                     <span className="text-xs font-normal opacity-80 mt-1 block">Soru yanında Tekrara at dediklerin. Çözünce listeden düşer.</span>
                 </button>
                 <button onClick={function () { props.onWrong(); }} disabled={!plan.wrong.length}
-                    className="p-4 rounded-2xl border-2 border-rose-500 text-rose-600 text-left disabled:opacity-40">
-                    <span className="font-semibold block">Yanlış defteri · {plan.wrong.length}</span>
-                    <span className="text-xs font-normal opacity-80 mt-1 block">Çözdüğün soru defterden düşer. Konu kilidini açmaz.</span>
+                    className="p-4 rounded-2xl border-[1.5px] border-rose-400 text-left disabled:opacity-50 disabled:cursor-not-allowed transition hover:bg-rose-50 dark:hover:bg-rose-950/30"
+                    style={{ background: "var(--m-card)" }}>
+                    <span className="font-semibold block text-rose-600 dark:text-rose-400">Yanlış defteri · {plan.wrong.length}</span>
+                    <span className="text-xs font-normal mt-1 block" style={{ color: "var(--m-muted)" }}>Çözdüğün soru defterden düşer. Konu kilidini açmaz.</span>
                 </button>
             </div>
             <LiveGaps student={props.student} kpssData={props.kpssData} onKonu={props.onKonu} />
-            <button onClick={function () { props.onNotebook && props.onNotebook(); }}
-                className="w-full mb-6 p-4 rounded-2xl glass text-left card-hover">
-                <span className="font-semibold block">Tekrar defteri</span>
-                <span className="text-xs text-stone-400 font-normal mt-1 block">Tekrar etmek istediğin notları kendine yaz. Yalnızca sen görürsün.</span>
-            </button>
+            <AccentRow className="mb-6" accent="#127880" title="Tekrar defteri" sub="Tekrar etmek istediğin notları kendine yaz. Yalnızca sen görürsün."
+                onClick={function () { props.onNotebook && props.onNotebook(); }} />
             {Object.keys(byDers).map(function (ders) {
-                const t = themeFor(ders, props.isDark);
+                var rows = byDers[ders];
+                var konular = Object.keys(props.kpssData[ders] || {}).filter(function (k) { return k !== "_"; });
+                var doneN = rows.filter(function (r) { return rowDone(r); }).length;
                 return (
-                    <div key={ders} className="mb-6">
-                        <h2 className={"font-black mb-2 " + t.text}>{t.icon} {ders}</h2>
+                    <section key={ders} className="mb-6">
+                        <div className="flex items-center justify-between mb-2.5">
+                            <h2 className="text-lg font-bold" style={{ color: "var(--m-ink)" }}>{ders}</h2>
+                            <span className="text-xs font-extrabold px-2.5 py-1 rounded-full" style={{ background: "var(--m-gold-soft)", color: "var(--m-gold-ink)" }}>{doneN}/{rows.length}</span>
+                        </div>
                         <div className="wide-grid is-tight">
-                            {byDers[ders].map(function (r) {
-                                const tp = StudentStore.getTopic(r.ders, r.konu);
-                                const kd = {
-                                    sorular: new Array(r.soruSayisi || 0),
-                                    notlar: new Array(r.notSayisi || 0)
-                                };
-                                const done = StudentStore.topicComplete(tp, kd);
+                            {rows.map(function (r) {
+                                var done = rowDone(r);
+                                var idx = konular.indexOf(r.konu);
+                                var open = idx < 0 || StudentStore.isKonuOpen(ders, konular, idx, props.kpssData);
                                 return (
-                                    <div key={r.konu}
-                                        className={"w-full flex justify-between items-center p-3 rounded-xl border pointer-events-none " + (done
-                                            ? "bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800"
-                                            : "bg-stone-50 dark:bg-stone-900 border-stone-200 dark:border-stone-800 opacity-45")}>
-                                        <span className={"text-sm text-left pr-2 " + (done ? "font-semibold text-emerald-800 dark:text-emerald-200" : "font-medium text-stone-500")}>{kLabel(r.konu)}</span>
-                                        <span className={"text-[10px] font-semibold px-2 py-0.5 rounded-full shrink-0 " + (done ? "bg-emerald-100 text-emerald-700" : "bg-stone-100 text-stone-400")}>
-                                            {done ? "Bitti" : "Bekliyor"}
-                                        </span>
-                                    </div>
+                                    <AccentRow key={r.konu} accent={done ? "#D97706" : "#CBD5E1"} title={kLabel(r.konu)} disabled={!open}
+                                        sub={open ? null : "Önce önceki konuyu bitir"}
+                                        aside={<span className={"text-[11px] font-bold px-2 py-0.5 rounded-full shrink-0 " + (done ? "bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300" : "bg-slate-100 text-slate-500 dark:bg-slate-700 dark:text-slate-300")}>{done ? "Bitti" : "Bekliyor"}</span>}
+                                        onClick={function () { props.onKonu && props.onKonu(r.ders, r.konu); }} />
                                 );
                             })}
                         </div>
-                    </div>
+                    </section>
                 );
             })}
+            {plan.rows.length ? <p className="text-center text-xs mt-2" style={{ color: "var(--m-muted)" }}>{plan.rows.length} konu takip ediliyor</p> : null}
         </Shell>
     );
 }
@@ -3083,10 +3092,10 @@ function DenemeSetup(props) {
     ];
     return (
         <Shell>
-            <div className="flex justify-between items-start mb-8">
+            <div className="flex justify-between items-start mb-6">
                 <div className="slide-up">
-                    <h1 className="text-3xl sm:text-4xl font-display font-black tracking-tight gradient-text">Deneme</h1>
-                    <p className="text-sm text-stone-400 mt-1">Karışık pratik veya tam kitapçık. Konu kilidini atlatmaz; rastgele soru çeker.</p>
+                    <h1 className="m-title">Deneme</h1>
+                    <p className="m-sub">Karışık pratik veya tam kitapçık. Konu kilidini atlatmaz; rastgele soru çeker.</p>
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
@@ -3332,18 +3341,19 @@ function Ben(props) {
     }
     return (
         <Shell>
-            <div className="flex justify-between items-start mb-8">
+            <div className="flex justify-between items-start mb-6">
                 <div className="slide-up">
-                    <h1 className="text-3xl sm:text-4xl font-display font-black tracking-tight gradient-text">Profil</h1>
-                    <p className="text-sm text-stone-400 mt-1">{up.email || "Hesap bağlı"}</p>
+                    <h1 className="m-title">Profil</h1>
+                    <p className="m-sub">{up.email || "Hesap bağlı"}</p>
                     <p className="text-xs text-stone-400 mt-1">Ayarlar, araçlar ve plan burada.</p>
                 </div>
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
             <div className="ben-cols">
-            <div className="grid grid-cols-2 gap-2 mb-6">
-                <div className="p-4 rounded-2xl glass card-hover"><div className="text-xl font-semibold gradient-text">{totQ}</div><div className="text-xs text-stone-400 mt-1">Toplam soru</div></div>
-                <div className="p-4 rounded-2xl glass card-hover"><div className="text-xl font-semibold gradient-text">%{overall}</div><div className="text-xs text-stone-400 mt-1">Net</div></div>
+            <div className="grid grid-cols-3 gap-2 mb-6">
+                <div className="py-4 px-2 rounded-2xl glass text-center"><div className="text-2xl font-extrabold" style={{ color: "var(--m-ink)" }}>{totQ}</div><div className="text-xs mt-1" style={{ color: "var(--m-muted)" }}>Soru</div></div>
+                <div className="py-4 px-2 rounded-2xl glass text-center"><div className="text-2xl font-extrabold" style={{ color: "var(--m-ink)" }}>%{overall}</div><div className="text-xs mt-1" style={{ color: "var(--m-muted)" }}>Net</div></div>
+                <div className="py-4 px-2 rounded-2xl glass text-center"><div className="text-2xl font-extrabold" style={{ color: "#D97706" }}>{(st.streak && st.streak.count) || 0}</div><div className="text-xs mt-1" style={{ color: "var(--m-muted)" }}>Seri</div></div>
             </div>
             <div className="rounded-3xl glass p-5 mb-4 card-hover">
                 <div className="flex items-center justify-between mb-1">

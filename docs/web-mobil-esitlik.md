@@ -7,7 +7,7 @@ Durum: ✅ kapandı · 🔄 yapılıyor · ⏳ sırada · ➖ bilinçli olarak t
 
 ## Tasarım dili (kaynak: mobil `mobile/src/lib/theme.js`, `mobile/src/ui.js`, `mobile/src/kit.js`)
 
-| Öğe | Mobil | Web (önce) |
+| Öğe | Mobil | Web (önce) — şimdi ✅ mobil değerleri |
 |---|---|---|
 | Zemin | `#F8FAFC`, koyu `#211F1D` | açık gri + renkli arka plan |
 | Başlık | düz `#0F172A`, 28px kalın | renk geçişli (gradient) başlık |
@@ -18,6 +18,10 @@ Durum: ✅ kapandı · 🔄 yapılıyor · ⏳ sırada · ➖ bilinçli olarak t
 | Birincil düğme | lacivert→teal geçiş (`#0D2C4D → #14607a → #1D8A99`), 16px köşe | lacivert / indigo karışık |
 | Küçük başlık | teal `#127880`, büyük harf | teal / stone |
 | Sekme çubuğu | beyaz, seçili `#4F46E5` | benzer |
+
+Web'de `index.html` içindeki "MOBİL TASARIM DİLİ" bölümü bu değerleri `--m-*` değişkenleriyle tanımlar;
+`js/app.jsx` içindeki `AccentRow` ve `LineIcon` mobil `AccentCard` ve lucide simgelerinin karşılığıdır.
+Eksikler ekranı mobildeki gibi ilerleme çubuğu, ders başına sayaç ve tıklanabilir konu satırları gösterir.
 
 ## Özellik farkları
 
@@ -36,8 +40,8 @@ Durum: ✅ kapandı · 🔄 yapılıyor · ⏳ sırada · ➖ bilinçli olarak t
 ### Yalnız mobilde → web'e eklenecek
 | Özellik | Yer | Durum |
 |---|---|---|
-| Profilde 3 sayaç (Soru · Net · Seri) | Ben | ⏳ web'de Seri yok |
-| Eksikler sekmesinde "Canlı denemeden eksikler" | Eksikler | ⏳ web'de yalnız Bugün'de |
+| Profilde 3 sayaç (Soru · Net · Seri) | Ben | ✅ |
+| Eksikler sekmesinde "Canlı denemeden eksikler" | Eksikler | ✅ |
 | Program takviminde gün / hafta / ay ileri-geri | Program | ⏳ |
 | Notlarda "boşlukları sıfırla" | Not | ⏳ |
 | Ücretsiz deneme hakkı / 7 günlük deneme | Paywall | ⏳ |
