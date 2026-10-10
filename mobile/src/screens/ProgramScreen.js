@@ -5,6 +5,7 @@ import { StudentStore } from "../lib/store";
 import { SmartPlan as SP } from "../lib/smartPlan";
 import { konuLabel } from "../lib/konuLabels";
 import { Card, PageHeader, ScrollScreen, Tap } from "../ui";
+import { useCardImage, shareImage } from "../components/CardWorker";
 import { PLAN_ICON, PlanPhaseBar, planSettingsOf, planTaskLabel, s as ps } from "../components/SmartPlan";
 
 // ============================================================
@@ -221,6 +222,8 @@ function PlanCalendar({ navigation, onEdit }) {
     var settings = planSettingsOf(student);
     var plan = useMemo(function () { return SP.generate(app.kpssData, student, settings); }, [app.kpssData, student, settings]);
     var [weeks, setWeeks] = useState(2);
+    var [cardHost, runCard] = useCardImage();
+    var [imgBusy, setImgBusy] = useState(false);
     if (!plan || !plan.ok) {
         return (
             <ScrollScreen dark={dark}>
@@ -244,6 +247,14 @@ function PlanCalendar({ navigation, onEdit }) {
     function share() {
         Share.share({ message: SP.shareText(plan, name), title: "KPSS programım" }).catch(function () {});
     }
+    // Program görseli: web'deki "Görsel paylaş" ile aynı çizim (js/shareCard.js, CardWorker).
+    function shareImg() {
+        if (imgBusy) return;
+        setImgBusy(true);
+        runCard({ kind: "plan", model: SP.imageModel(plan, name) }).then(function (b64) {
+            return shareImage(b64, "kpss-programim.png");
+        }).catch(function () {}).then(function () { setImgBusy(false); });
+    }
     return (
         <ScrollScreen dark={dark}>
             <PageHeader dark={dark} title="KPSS programım"
@@ -255,6 +266,7 @@ function PlanCalendar({ navigation, onEdit }) {
             ) : null}
             <View style={[ps.chips, { marginBottom: 6 }]}>
                 <Chip primary label="📤 Paylaş" onPress={share} />
+                <Chip dark={dark} label={imgBusy ? "Görsel hazırlanıyor…" : "🖼 Görsel"} onPress={shareImg} />
                 <Chip dark={dark} label="Düzenle" onPress={onEdit} />
             </View>
             {groups.slice(0, weeks).map(function (g, gi) {
@@ -294,6 +306,7 @@ function PlanCalendar({ navigation, onEdit }) {
                     <Chip dark={dark} label={"Sonraki 4 haftayı göster (" + (groups.length - weeks) + " hafta kaldı)"} onPress={function () { setWeeks(weeks + 4); }} />
                 </View>
             ) : null}
+            {cardHost}
         </ScrollScreen>
     );
 }

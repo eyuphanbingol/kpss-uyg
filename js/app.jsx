@@ -697,64 +697,9 @@ function PlanWizard(props) {
 var DASH_COLORS = ["#4f46e5", "#7c3aed", "#ec4899", "#f59e0b", "#10b981", "#6366f1"];
 
 // Paylaşım görseli (1080x1350): bu haftanın programı ve dönemler.
+// Program görseli: çizim js/shareCard.js'te (mobil de aynı kodu kullanır).
 function drawPlanImage(plan, name) {
-    var SP = window.SmartPlan;
-    var W = 1080, H = 1350;
-    var c = document.createElement("canvas");
-    c.width = W; c.height = H;
-    var g = c.getContext("2d");
-    var bg = g.createLinearGradient(0, 0, W, H);
-    bg.addColorStop(0, "#0D2C4D"); bg.addColorStop(1, "#14607a");
-    g.fillStyle = bg; g.fillRect(0, 0, W, H);
-    function text(t, x, y, size, weight, color, align) {
-        g.font = (weight || 700) + " " + size + "px Inter, Manrope, system-ui, sans-serif";
-        g.fillStyle = color || "#fff"; g.textAlign = align || "left"; g.fillText(t, x, y);
-    }
-    function fit(t, max, size, weight) {
-        g.font = (weight || 600) + " " + size + "px Inter, system-ui, sans-serif";
-        if (g.measureText(t).width <= max) return t;
-        while (t.length > 4 && g.measureText(t + "…").width > max) t = t.slice(0, -1);
-        return t + "…";
-    }
-    text("KPSS PROGRAMIM", 72, 120, 30, 800, "#5eead4");
-    text(name ? name : "Akıllı çalışma takvimi", 72, 186, 58, 900);
-    text("Sınava " + plan.daysLeft + " gün · haftada " + SP.fmtMin(plan.weekMin), 72, 246, 34, 600, "rgba(255,255,255,.85)");
-    // dönem çubuğu
-    var seg = { ogrenme: 0, pekistirme: 0, son: 0 }, total = plan.days.length || 1, x = 72;
-    plan.days.forEach(function (d) { seg[d.phase]++; });
-    ["ogrenme", "pekistirme", "son"].forEach(function (k) {
-        var w = (W - 144) * seg[k] / total;
-        if (w > 0) { g.fillStyle = SP.PHASES[k].color; g.fillRect(x, 292, w, 22); x += w; }
-    });
-    var lx = 72;
-    var shortLabel = { ogrenme: "Öğrenme", pekistirme: "Pekiştirme", son: "Son dönem" };
-    ["ogrenme", "pekistirme", "son"].forEach(function (k) {
-        if (!seg[k]) return;
-        var lbl = shortLabel[k] + " " + seg[k] + " gün";
-        g.fillStyle = SP.PHASES[k].color; g.beginPath(); g.arc(lx + 9, 352, 9, 0, Math.PI * 2); g.fill();
-        text(lbl, lx + 26, 362, 26, 600, "rgba(255,255,255,.85)");
-        g.font = "600 26px Inter, Manrope, system-ui, sans-serif";
-        lx += 26 + g.measureText(lbl).width + 34;
-    });
-    // haftalık kart
-    g.fillStyle = "rgba(255,255,255,.96)";
-    var top = 410, bh = 800;
-    g.beginPath(); if (g.roundRect) g.roundRect(48, top, W - 96, bh, 36); else g.rect(48, top, W - 96, bh); g.fill();
-    text("Bu hafta", 96, top + 76, 36, 800, "#0D2C4D");
-    var rowH = (bh - 120) / 7;
-    plan.days.slice(0, 7).forEach(function (d, i) {
-        var y = top + 120 + i * rowH;
-        if (i) { g.fillStyle = "#e7e5e4"; g.fillRect(96, y - 8, W - 192, 2); }
-        text(SP.DAY_SHORT[d.weekday] + " " + SP.fmtDate(d.date), 96, y + 40, 28, 800, "#0f172a");
-        var items = d.items.slice(0, 2).map(function (it) {
-            return SP.taskTitle(it) + (it.ders ? " · " + it.ders : "");
-        });
-        if (!items.length) items = ["Dinlenme"];
-        items.forEach(function (t, j) { text(fit(t, 600, 25, 600), 340, y + 28 + j * 34, 25, 600, j ? "#57534e" : "#0f766e"); });
-        if (d.items.length) text(SP.fmtMin(d.minutes), W - 96, y + 40, 26, 700, "#78716c", "right");
-    });
-    text("atanly.com · Kendi programını 1 dakikada oluştur", W / 2, H - 56, 30, 700, "rgba(255,255,255,.9)", "center");
-    return c;
+    return window.ShareCard.drawPlan(window.SmartPlan.imageModel(plan, name));
 }
 
 function PlanCalendar(props) {

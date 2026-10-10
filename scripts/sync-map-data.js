@@ -6,6 +6,7 @@
  *   mobile/src/lib/liveExam.js  <- js/liveExam.js
  *   mobile/src/lib/trSvgData.js <- svg/tr.svg (uygulamaya gömülü; açılışta internetten indirilmez)
  *   mobile/src/lib/optikHtml.js <- optik/optik.html + betikleri + optik-form.json (tek parça; WebView çevrimdışı çalışır)
+ *   mobile/src/lib/cardHtml.js  <- js/shareCard.js (net kartı ve program görseli; gizli WebView'da çizilir)
  *   node scripts/sync-map-data.js          -> mobil dosyaları yazar
  *   node scripts/sync-map-data.js --check  -> farklıysa hata verir (yazmaz)
  */
@@ -74,11 +75,42 @@ function buildOptikHtml() {
         "export var OPTIK_HTML = " + JSON.stringify(html) + ";\n";
 }
 
+// Paylaşım görselleri: web'deki js/shareCard.js aynen gömülür; mobil CardWorker komut gönderir,
+// sayfa PNG'yi base64 olarak geri yollar.
+function buildCardHtml() {
+    var js = fs.readFileSync(path.join(root, "js", "shareCard.js"), "utf8").replace(/\r\n?/g, "\n").replace(/<\/script/gi, "<\\/script");
+    var bridge = [
+        "(function () {",
+        "    function post(m) { window.ReactNativeWebView.postMessage(JSON.stringify(m)); }",
+        "    function render(cmd, noLogo) {",
+        "        if (cmd.kind === \"plan\") return window.ShareCard.drawPlan(cmd.model).toDataURL(\"image/png\");",
+        "        return window.ShareCard.draw(Object.assign({}, cmd.opts, { noLogo: noLogo }));",
+        "    }",
+        "    window.cardCmd = function (cmd) {",
+        "        window.ShareCard.ready(function () {",
+        "            var url;",
+        "            try { url = render(cmd, false); } catch (e) {",
+        "                try { url = render(cmd, true); } catch (e2) { post({ id: cmd.id, type: \"error\", message: String((e2 && e2.message) || e2) }); return; }",
+        "            }",
+        "            post({ id: cmd.id, type: \"png\", b64: url.split(\",\")[1] });",
+        "        });",
+        "    };",
+        "    post({ type: \"ready\" });",
+        "})();"
+    ].join("\n");
+    var html = "<!doctype html><html><head><meta charset=\"utf-8\"></head><body>\n" +
+        "<script>window.KpssConfig = { logoUrl: \"https://www.atanly.com/icons/atanom.png?v=18\" };</script>\n" +
+        "<script>\n" + js + "\n</script>\n<script>\n" + bridge + "\n</script>\n</body></html>\n";
+    return "// Bu dosya scripts/sync-map-data.js ile js/shareCard.js'ten üretilir. Elle düzenleme.\n" +
+        "export var CARD_HTML = " + JSON.stringify(html) + ";\n";
+}
+
 var planOutPath = path.join(root, "mobile", "src", "lib", "smartPlan.js");
 var liveOutPath = path.join(root, "mobile", "src", "lib", "liveExam.js");
 var outputs = [[mobPath, build()], [planOutPath, buildModule("js/smartPlan.js", "SmartPlan")],
     [liveOutPath, buildModule("js/liveExam.js", "LiveExam")], [svgOutPath, buildSvg()],
-    [path.join(root, "mobile", "src", "lib", "optikHtml.js"), buildOptikHtml()]];
+    [path.join(root, "mobile", "src", "lib", "optikHtml.js"), buildOptikHtml()],
+    [path.join(root, "mobile", "src", "lib", "cardHtml.js"), buildCardHtml()]];
 if (process.argv.indexOf("--check") >= 0) {
     var stale = outputs.filter(function (o) {
         var cur = fs.existsSync(o[0]) ? fs.readFileSync(o[0], "utf8").replace(/\r\n?/g, "\n") : "";

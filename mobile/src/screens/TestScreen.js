@@ -9,6 +9,7 @@ import { colors } from "../lib/theme";
 import { questionImages } from "../lib/media";
 import { ZoomableImage } from "../components/ZoomableImage";
 import { konuLabel } from "../lib/konuLabels";
+import { useCardImage, shareImage } from "../components/CardWorker";
 
 // ============================================================
 // TEST SCREEN
@@ -53,6 +54,26 @@ export default function TestScreen({ route, navigation }) {
 
     var startedAt = useRef(Date.now());
     var finishedRef = useRef(false);
+
+    var _card = useCardImage();
+    var cardHost = _card[0], runCard = _card[1];
+    var _cardBusy = useState(false);
+    var cardBusy = _cardBusy[0], setCardBusy = _cardBusy[1];
+
+    // Net kartı: web'deki js/shareCard.js ile aynı görsel (CardWorker).
+    function shareNetCard(oran) {
+        if (cardBusy) return;
+        setCardBusy(true);
+        var st = app.student || {};
+        runCard({ kind: "net", opts: {
+            nickname: (st.userProfile && st.userProfile.nickname) || "öğrenci",
+            pct: oran, correct: scoreRef.current, total: items.length,
+            streak: (st.streak && st.streak.count) || 0,
+            caption: "Net kartı · Atanly"
+        } }).then(function (b64) {
+            return shareImage(b64, "atanly-net-karti.png");
+        }).catch(function () {}).then(function () { setCardBusy(false); });
+    }
 
     var _left = useState(seconds);
     var left = _left[0];
@@ -246,10 +267,17 @@ export default function TestScreen({ route, navigation }) {
                 </View>
 
                 <PrimaryButton 
-                    title="Kapat" 
-                    onPress={function () { navigation.popToTop(); }} 
+                    title={cardBusy ? "Kart hazırlanıyor" : "Net kartını paylaş"} 
+                    busy={cardBusy}
+                    onPress={function () { shareNetCard(oran); }} 
                     style={styles.resultBtn}
                 />
+                <GhostButton 
+                    title="Kapat" 
+                    onPress={function () { navigation.popToTop(); }} 
+                    style={{ marginTop: 10 }}
+                />
+                {cardHost}
             </ScrollScreen>
         );
     }

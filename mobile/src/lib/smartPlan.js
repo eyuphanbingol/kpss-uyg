@@ -423,6 +423,29 @@
         return { ready: true, days: days, savedAt: new Date().toISOString() };
     }
 
+    // Program görseli için düz veri; çizim js/shareCard.js drawPlan (web ve mobil WebView).
+    function imageModel(plan, name) {
+        var seg = { ogrenme: 0, pekistirme: 0, son: 0 };
+        plan.days.forEach(function (d) { seg[d.phase]++; });
+        var shortLabel = { ogrenme: "Öğrenme", pekistirme: "Pekiştirme", son: "Son dönem" };
+        return {
+            name: name || "",
+            sub: "Sınava " + plan.daysLeft + " gün · haftada " + fmtMin(plan.weekMin),
+            total: plan.days.length || 1,
+            phases: ["ogrenme", "pekistirme", "son"].map(function (k) {
+                return { days: seg[k], color: PHASES[k].color, label: shortLabel[k] + " " + seg[k] + " gün" };
+            }),
+            week: plan.days.slice(0, 7).map(function (d) {
+                var items = d.items.slice(0, 2).map(function (it) { return taskTitle(it) + (it.ders ? " · " + it.ders : ""); });
+                return {
+                    head: DAY_SHORT[d.weekday] + " " + fmtDate(d.date),
+                    lines: items.length ? items : ["Dinlenme"],
+                    min: d.items.length ? fmtMin(d.minutes) : ""
+                };
+            })
+        };
+    }
+
     function shareText(plan, name) {
         if (!plan || !plan.ok) return "";
         var lines = [];
@@ -458,6 +481,7 @@
         taskTitle: taskTitle,
         legacyStudyPlan: legacyStudyPlan,
         shareText: shareText,
+        imageModel: imageModel,
         fmtMin: fmtMin,
         fmtDate: fmtDate,
         addDays: addDays,

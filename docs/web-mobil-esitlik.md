@@ -29,8 +29,8 @@ Eksikler ekranı mobildeki gibi ilerleme çubuğu, ders başına sayaç ve tıkl
 | Özellik | Yer | Durum |
 |---|---|---|
 | Deneme ekranı (ders seçimi, soru sayısı, süre; tam deneme 40 soru · 40 dk, haftalık kota) | Bugün → "Deneme" | ✅ iki tarafta da ekran yazılıydı ama açılmıyordu; ikisi de Bugün'e bağlandı, web tam denemesi mobildeki gibi kaydedilir |
-| Net kartını indir/paylaş (test sonucu görseli) | Test sonucu | ⏳ |
-| Program: yazdır / PDF | Akıllı program | ⏳ |
+| Net kartını indir/paylaş (test sonucu görseli) | Test sonucu | ✅ mobilde paylaşım menüsüyle; çizim ortak (`js/shareCard.js` → gizli WebView) |
+| Program görseli paylaş | Akıllı program | ✅ aynı çizim (`SmartPlan.imageModel` + `ShareCard.drawPlan`); web'de ayrıca tarayıcıdan yazdır/PDF |
 | Isı haritası ayrıntıları (aktif gün, günlük ortalama, güçlü ders, fark) | Isı haritası | ⏳ |
 | Akıllı tercih (puana göre kurum eşleşmesi, arama) | Seviye/puan ekranı | ⏳ |
 | Yapay zekâ: "neden yanlış yaptım" notu, rastgele soru | Yapay zekâ | ⏳ |
@@ -42,9 +42,9 @@ Eksikler ekranı mobildeki gibi ilerleme çubuğu, ders başına sayaç ve tıkl
 |---|---|---|
 | Profilde 3 sayaç (Soru · Net · Seri) | Ben | ✅ |
 | Eksikler sekmesinde "Canlı denemeden eksikler" | Eksikler | ✅ |
-| Program takviminde gün / hafta / ay ileri-geri | Program | ⏳ |
-| Notlarda "boşlukları sıfırla" | Not | ⏳ |
-| Ücretsiz deneme hakkı / 7 günlük deneme | Paywall | ⏳ |
+| Program takviminde sonraki haftaları açma | Program | ✅ iki tarafta da vardı |
+| Konu sayfasında "boşlukları sıfırla" | Konu | ✅ web'de de vardı (denetimde yanlış işaretlenmişti) |
+| "7 günlük deneme aç" | Paywall | ➖ mobilde ödeme test modu için konmuş sahte düğme (`grantMockPremium`); web'e taşınmaz, mobilde gerçek ödeme gelince kaldırılmalı |
 
 ### Giriş, kayıt, çıkış
 | Öğe | Durum |
