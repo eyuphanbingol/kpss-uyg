@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:81073:1bmje40*/
+/*jsx:babel-7.29.9-react-classic:81172:14j4x46*/
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 (function () {
   const {
@@ -123,17 +123,17 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
     }];
     var games = [{
       i: "flag",
-      img: "img/landing/fethet.png?v=1",
+      img: "img/landing/fethet.webp?v=3",
       t: "Türkiye'yi Fethet",
       d: "İlleri soruyla boya, bölge bölge ilerle. Coğrafyayı ezber değil yer olarak öğren."
     }, {
       i: "map",
-      img: "img/landing/harita.png?v=1",
+      img: "img/landing/harita.webp?v=3",
       t: "KPSS haritaları",
       d: "Dağlar, ovalar, madenler, YHT, boru hatları. Noktayı ya da hattı haritada bul."
     }, {
       i: "target",
-      img: "img/landing/kavram.png?v=1",
+      img: "img/landing/kavram.webp?v=3",
       t: "Tabu",
       d: "Az ipucuyla kavramı yakala; ipucu açtıkça puan düşer."
     }, {
@@ -153,23 +153,23 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
       d: "Harita ve tempo oyunları aynı bankadan beslenir. Mola verdiğin an da çalışmaya sayılır."
     }];
     var shots = [{
-      src: "img/landing/hedef.png?v=1",
-      t: "Bugünün hedefi"
+      src: "img/landing/program.webp?v=3",
+      t: "Akıllı program ve sıradaki konu"
     }, {
-      src: "img/landing/istatistik.png?v=1",
-      t: "İstatistikler"
+      src: "img/landing/tarih.webp?v=3",
+      t: "Konu konu ilerleme ve net yüzdeleri"
     }, {
-      src: "img/landing/hafta.png?v=1",
-      t: "Haftalık ders dağılımı"
+      src: "img/landing/istatistik.webp?v=3",
+      t: "Seri, oturum ve haftalık süre"
     }, {
-      src: "img/landing/tarih.png?v=1",
-      t: "Konu listesi"
+      src: "img/landing/hafta.webp?v=3",
+      t: "Bu hafta ve ders dağılımı"
     }, {
-      src: "img/landing/eksikler.png?v=1",
-      t: "Eksikler"
+      src: "img/landing/eksikler.webp?v=3",
+      t: "Eksikler ve yanlış defteri"
     }, {
-      src: "img/landing/fethet.png?v=1",
-      t: "Türkiye'yi Fethet"
+      src: "img/landing/harita.webp?v=3",
+      t: "Harita oyunu: boru hatları"
     }];
     var faq = [["Atanly nedir?", "KPSS GY-GK için not, test, aralıklı tekrar ve oyunları tek programda toplayan çalışma uygulaması. Lisans, ön lisans ve ortaöğretim için."], ["Ücretsiz mi?", "Evet. Hesap açmak ücretsiz, kart bilgisi istenmez. Google veya e-posta ile girersin."], ["Hangi dersler var?", "Tarih, coğrafya, Türkçe, vatandaşlık, güncel bilgiler ve geometri."], ["Telefonda kullanabilir miyim?", "Evet. Tarayıcıdan tam Atanly açılır; iPhone ve Android uygulamaları da aynı hesapla çalışır, ilerlemen cihazlar arasında eşitlenir."], ["Her Pazar Türkiye geneli nedir?", "Pazar günleri herkesin aynı anda çözdüğü deneme: sıralama, net dağılımı ve konu analizi."]];
     function go(id) {
@@ -283,10 +283,10 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
     }, /*#__PURE__*/React.createElement("div", {
       className: "lp-device-bar"
     }, /*#__PURE__*/React.createElement("span", null), /*#__PURE__*/React.createElement("span", null), /*#__PURE__*/React.createElement("span", null)), /*#__PURE__*/React.createElement("img", {
-      src: "img/landing/hedef.png?v=1",
+      src: "img/landing/hedef.webp?v=3",
       alt: "",
-      width: "826",
-      height: "506"
+      width: "1400",
+      height: "737"
     })), /*#__PURE__*/React.createElement("div", {
       className: "lp-float lp-float-a"
     }, /*#__PURE__*/React.createElement("span", {

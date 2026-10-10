@@ -88,9 +88,9 @@
             { i: "calendar", t: "Günlük program", d: "Sınav tarihine göre tempo, günlük soru hedefi ve 30 günlük ısı haritası. Bugün ne çalışacağını uygulama söyler." }
         ];
         var games = [
-            { i: "flag", img: "img/landing/fethet.png?v=1", t: "Türkiye'yi Fethet", d: "İlleri soruyla boya, bölge bölge ilerle. Coğrafyayı ezber değil yer olarak öğren." },
-            { i: "map", img: "img/landing/harita.png?v=1", t: "KPSS haritaları", d: "Dağlar, ovalar, madenler, YHT, boru hatları. Noktayı ya da hattı haritada bul." },
-            { i: "target", img: "img/landing/kavram.png?v=1", t: "Tabu", d: "Az ipucuyla kavramı yakala; ipucu açtıkça puan düşer." },
+            { i: "flag", img: "img/landing/fethet.webp?v=3", t: "Türkiye'yi Fethet", d: "İlleri soruyla boya, bölge bölge ilerle. Coğrafyayı ezber değil yer olarak öğren." },
+            { i: "map", img: "img/landing/harita.webp?v=3", t: "KPSS haritaları", d: "Dağlar, ovalar, madenler, YHT, boru hatları. Noktayı ya da hattı haritada bul." },
+            { i: "target", img: "img/landing/kavram.webp?v=3", t: "Tabu", d: "Az ipucuyla kavramı yakala; ipucu açtıkça puan düşer." },
             { i: "bolt", timer: true, t: "Son 30 saniye", d: "Süre daralır, şıklar döner. Sınav temposuna en yakın tekrar." }
         ];
         var steps = [
@@ -99,12 +99,12 @@
             { t: "Oyunla pekiştir", d: "Harita ve tempo oyunları aynı bankadan beslenir. Mola verdiğin an da çalışmaya sayılır." }
         ];
         var shots = [
-            { src: "img/landing/hedef.png?v=1", t: "Bugünün hedefi" },
-            { src: "img/landing/istatistik.png?v=1", t: "İstatistikler" },
-            { src: "img/landing/hafta.png?v=1", t: "Haftalık ders dağılımı" },
-            { src: "img/landing/tarih.png?v=1", t: "Konu listesi" },
-            { src: "img/landing/eksikler.png?v=1", t: "Eksikler" },
-            { src: "img/landing/fethet.png?v=1", t: "Türkiye'yi Fethet" }
+            { src: "img/landing/program.webp?v=3", t: "Akıllı program ve sıradaki konu" },
+            { src: "img/landing/tarih.webp?v=3", t: "Konu konu ilerleme ve net yüzdeleri" },
+            { src: "img/landing/istatistik.webp?v=3", t: "Seri, oturum ve haftalık süre" },
+            { src: "img/landing/hafta.webp?v=3", t: "Bu hafta ve ders dağılımı" },
+            { src: "img/landing/eksikler.webp?v=3", t: "Eksikler ve yanlış defteri" },
+            { src: "img/landing/harita.webp?v=3", t: "Harita oyunu: boru hatları" }
         ];
         var faq = [
             ["Atanly nedir?", "KPSS GY-GK için not, test, aralıklı tekrar ve oyunları tek programda toplayan çalışma uygulaması. Lisans, ön lisans ve ortaöğretim için."],
@@ -163,7 +163,7 @@
                         <div className="lp-hero-art" aria-hidden="true">
                             <div className="lp-device">
                                 <div className="lp-device-bar"><span></span><span></span><span></span></div>
-                                <img src="img/landing/hedef.png?v=1" alt="" width="826" height="506" />
+                                <img src="img/landing/hedef.webp?v=3" alt="" width="1400" height="737" />
                             </div>
                             <div className="lp-float lp-float-a">
                                 <span className="lp-float-ico"><LpIcon name="target" size={18} /></span>
