@@ -1,6 +1,6 @@
 # Google Play'e yükleme rehberi (Atanly)
 
-Uygulama: **Atanly** · paket adı `app.atanly.mobile` · Expo/EAS projesi `eyphns-team/eyphn`
+Uygulama: **Atanly** · paket adı `app.atanly.mobile` · Expo/EAS projesi `eyuphan.bingol/atanly`
 Görseller bu klasörde: `docs/play-store/`
 
 ---
@@ -31,7 +31,7 @@ Play Console → **Uygulama oluştur**
 Kendi bilgisayarında, `mobile/` klasöründe:
 
 ```bash
-npx eas-cli login                 # eyphns-team hesabıyla
+npx eas-cli login                 # eyuphan.bingol hesabıyla
 npx eas-cli build -p android --profile production
 ```
 

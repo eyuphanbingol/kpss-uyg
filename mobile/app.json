@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Atanly",
-    "slug": "eyphn",
+    "slug": "atanly",
     "scheme": "atanly",
     "version": "1.0.12",
     "platforms": [
@@ -98,11 +98,6 @@
       ],
       "expo-asset"
     ],
-    "extra": {
-      "eas": {
-        "projectId": "0548f69d-e960-4d00-aadb-4f2e90a3eb3a"
-      }
-    },
-    "owner": "eyphns-team"
+    "owner": "eyuphan.bingol"
   }
 }
