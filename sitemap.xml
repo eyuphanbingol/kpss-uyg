@@ -2,43 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.atanly.com/</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.atanly.com/yasal/aydinlatma.html</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://www.atanly.com/yasal/gizlilik</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.atanly.com/yasal/hesap-silme</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.atanly.com/yasal/kullanim</loc>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://www.atanly.com/yasal/kullanim.html</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://www.atanly.com/yasal/aydinlatma</loc>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://www.atanly.com/yasal/uyelik.html</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://www.atanly.com/yasal/uyelik</loc>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.atanly.com/yasal/gizlilik.html</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://www.atanly.com/yasal/cerez.html</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://www.atanly.com/yasal/cerez</loc>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.atanly.com/yasal/basvuru.html</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://www.atanly.com/yasal/basvuru</loc>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
